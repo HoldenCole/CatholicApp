@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "signum_crucis",
+    "latinName": "Signum Crucis",
+    "englishName": "Sign of the Cross",
+    "category": "rosary",
+    "sortOrder": 1,
+    "audioFileName": "signum_crucis_ref.m4a",
+    "englishText": "In the name of the Father, and of the Son, and of the Holy Ghost. Amen.",
+    "latinText": "In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",
+    "phoneticText": "In NÓ·mi·ne PA·tris, et FÍ·li·i, et SPÍ·ri·tus SANC·ti. A·men."
+  },
+  {
+    "slug": "credo",
+    "latinName": "Symbolum Apostolorum",
+    "englishName": "Apostles' Creed",
+    "category": "rosary",
+    "sortOrder": 2,
+    "audioFileName": "credo_ref.m4a",
+    "englishText": "I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord; Who was conceived by the Holy Ghost, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell; the third day He arose again from the dead. He ascended into heaven, and sitteth at the right hand of God, the Father Almighty; from thence He shall come to judge the living and the dead. I believe in the Holy Ghost, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.",
+    "latinText": "Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ. Et in Iesum Christum, Fílium eius únicum, Dóminum nostrum, qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus, descéndit ad ínferos, tértia die resurréxit a mórtuis, ascéndit ad cælos, sedet ad déxteram Dei Patris omnipoténtis, inde ventúrus est iudicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.",
+    "phoneticText": "CRÉ·do in DÉ·um PA·trem om·ni·po·TÉN·tem, Cre·a·TÓ·rem CHÉ·li et TER·re. Et in YÉ·sum CHRÍS·tum, FÍ·li·um É·yus Ú·ni·cum, DÓ·mi·num NOS·trum, qui con·CHÉP·tus est de SPÍ·ri·tu SANC·to, NA·tus ex Ma·RÍ·a VÍR·gi·ne, PAS·sus sub PÓN·ti·o Pi·LÁ·to, cru·chi·FÍK·sus, MÓR·tu·us, et se·PÚL·tus, de·SHÉN·dit ad ÍN·fe·ros, TÉR·ti·a DÍ·e re·sur·RÉK·sit a MÓR·tu·is, a·SHÉN·dit ad CHÉ·los, SÉ·det ad DÉK·te·ram DÉ·i PA·tris om·ni·po·TÉN·tis, ÍN·de ven·TÚ·rus est yu·di·CHÁ·re VÍ·vos et MÓR·tu·os. CRÉ·do in SPÍ·ri·tum SANC·tum, SANC·tam Ec·CLÉ·si·am ca·THÓ·li·cam, sanc·TÓ·rum com·mu·ni·Ó·nem, re·mis·si·Ó·nem pec·ca·TÓ·rum, CAR·nis re·sur·rec·ti·Ó·nem, VÍ·tam e·TÉR·nam. A·men."
+  },
+  {
+    "slug": "pater_noster",
+    "latinName": "Pater Noster",
+    "englishName": "Our Father",
+    "category": "rosary",
+    "sortOrder": 3,
+    "audioFileName": "pater_noster_ref.m4a",
+    "englishText": "Our Father, Who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.",
+    "latinText": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
+    "phoneticText": "PA·ter NOS·ter, qui es in CHÉ·lis, sanc·ti·fi·CHÉ·tur NÓ·men TÚ·um. Ad·VÉ·ni·at RÉG·num TÚ·um. FÍ·at vo·LÚN·tas TÚ·a, SÍ·cut in CHÉ·lo et in TER·ra. PA·nem NOS·trum quo·ti·di·Á·num da NO·bis HÓ·di·e, et di·MÍT·te NO·bis DÉ·bi·ta NOS·tra SÍ·cut et nos di·MÍT·ti·mus de·bi·TÓ·ri·bus NOS·tris. Et ne nos in·DÚ·cas in ten·ta·ti·Ó·nem, sed LÍ·be·ra nos a MA·lo. A·men."
+  },
+  {
+    "slug": "ave_maria",
+    "latinName": "Ave Maria",
+    "englishName": "Hail Mary",
+    "category": "rosary",
+    "sortOrder": 4,
+    "audioFileName": "ave_maria_ref.m4a",
+    "englishText": "Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+    "latinText": "Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",
+    "phoneticText": "A·ve Ma·RÍ·a, GRÁ·ti·a PLÉ·na, DÓ·mi·nus TÉ·cum. Be·ne·DÍC·ta tu in mu·li·É·ri·bus, et be·ne·DÍC·tus FRUC·tus VEN·tris TÚ·i, YÉ·sus. SANC·ta Ma·RÍ·a, MA·ter DÉ·i, Ó·ra pro NÓ·bis pec·ca·TÓ·ri·bus, nunc et in HÓ·ra MOR·tis NOS·tre. A·men."
+  },
+  {
+    "slug": "gloria_patri",
+    "latinName": "Gloria Patri",
+    "englishName": "Glory Be",
+    "category": "rosary",
+    "sortOrder": 5,
+    "audioFileName": "gloria_patri_ref.m4a",
+    "englishText": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+    "latinText": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+    "phoneticText": "GLÓ·ri·a PA·tri, et FÍ·li·o, et Spi·RÍ·tu·i SANC·to. SÍ·cut É·rat in prin·CHÍ·pi·o, et nunc, et SEM·per, et in SÉ·cu·la se·cu·LÓ·rum. A·men."
+  },
+  {
+    "slug": "fatima_prayer",
+    "latinName": "O mi Iesu",
+    "englishName": "O My Jesus (Fatima Prayer)",
+    "category": "rosary",
+    "sortOrder": 6,
+    "audioFileName": "fatima_prayer_ref.m4a",
+    "englishText": "O my Jesus, forgive us our sins, save us from the fires of hell; lead all souls to heaven, especially those in most need of Thy mercy. Amen.",
+    "latinText": "O mi Iesu, dimítte nobis débita nostra, salva nos ab igne infernáli, perduc in cælum omnes ánimas, præsértim eas, quæ misericórdiæ tuæ máxime índigent. Amen.",
+    "phoneticText": "O mi YÉ·su, di·MÍT·te NÓ·bis DÉ·bi·ta NOS·tra, SAL·va nos ab ÍG·ne in·fer·NÁ·li, per·DUC in CHÉ·lum OM·nes Á·ni·mas, pre·SÉR·tim É·as, que mi·se·ri·CÓR·di·e TÚ·e MÁK·si·me ÍN·di·gent. A·men."
+  },
+  {
+    "slug": "salve_regina",
+    "latinName": "Salve Regina",
+    "englishName": "Hail Holy Queen",
+    "category": "rosary",
+    "sortOrder": 7,
+    "audioFileName": "salve_regina_ref.m4a",
+    "englishText": "Hail, Holy Queen, Mother of mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us, and after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.\n\nV. Pray for us, O holy Mother of God.\nR. That we may be made worthy of the promises of Christ.",
+    "latinText": "Salve, Regína, Mater misericórdiæ, vita, dulcédo, et spes nostra, salve. Ad te clamámus, éxsules fílii Evæ. Ad te suspirámus, geméntes et flentes in hac lacrimárum valle. Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte. Et Iesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde. O clemens, O pia, O dulcis Virgo María.\n\nV. Ora pro nobis, sancta Dei Génetrix.\nR. Ut digni efficiámur promissiónibus Christi.",
+    "phoneticText": "SAL·ve, Re·GÍ·na, MA·ter mi·se·ri·CÓR·di·e, VÍ·ta, dul·CHÉ·do, et spes NOS·tra, SAL·ve. Ad te cla·MÁ·mus, ÉK·su·les FÍ·li·i É·ve. Ad te sus·pi·RÁ·mus, ge·MÉN·tes et FLÉN·tes in hac la·cri·MÁ·rum VAL·le. É·ya ÉR·go, ad·vo·CÁ·ta NOS·tra, ÍL·los TÚ·os mi·se·ri·CÓR·des Ó·cu·los ad nos con·VÉR·te. Et YÉ·sum, be·ne·DÍC·tum FRUC·tum VEN·tris TÚ·i, NÓ·bis post hoc ek·SÍ·li·um os·TÉN·de. O CLÉ·mens, O PÍ·a, O DÚL·chis VÍR·go Ma·RÍ·a."
+  },
+  {
+    "slug": "sub_tuum",
+    "latinName": "Sub Tuum Praesidium",
+    "englishName": "We Fly to Thy Patronage",
+    "category": "rosary",
+    "sortOrder": 8,
+    "audioFileName": "sub_tuum_ref.m4a",
+    "englishText": "We fly to thy patronage, O holy Mother of God. Despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin.",
+    "latinText": "Sub tuum præsídium confúgimus, sancta Dei Génetrix. Nostras deprecatiónes ne despícias in necessitátibus, sed a perículis cunctis líbera nos semper, Virgo gloriósa et benedícta.",
+    "phoneticText": "Sub TÚ·um pre·SÍ·di·um con·FÚ·gi·mus, SANC·ta DÉ·i GÉ·ne·triks. NOS·tras de·pre·ca·ti·Ó·nes ne des·PÍ·chi·as in ne·ches·si·TÁ·ti·bus, sed a pe·RÍ·cu·lis CUNC·tis LÍ·be·ra nos SEM·per, VÍR·go glo·ri·Ó·sa et be·ne·DÍC·ta."
+  }
+]
