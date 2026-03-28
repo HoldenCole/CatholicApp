@@ -4,38 +4,47 @@ import SwiftData
 struct TodayView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var appSettings: AppSettings
-    @StateObject private var viewModel = TodayViewModel()
     @State private var todaysDevotions: [TraditionalDevotion] = []
+    @State private var showingMissalSelector = false
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: AppConstants.sectionSpacing) {
-                    // Header with date and Latin feria
+                VStack(alignment: .leading, spacing: 0) {
+                    // Header with tappable missal badge
                     headerSection
 
-                    // Pray the Rosary card
-                    rosaryLauncherCard
+                    ornamentalDivider
 
-                    // Today's Devotions
-                    if !todaysDevotions.isEmpty {
-                        devotionsSection
-                    }
+                    // Penance first
+                    penanceSection
 
-                    // Today's Mystery Set
-                    mysterySetSection
+                    ornamentalDivider
 
-                    // Saturday note if applicable
-                    if viewModel.isSaturday {
-                        saturdayNoteView
-                    }
+                    // Daily devotions (no Angelus)
+                    devotionsSection
+
+                    ornamentalDivider
+
+                    // Rosary launcher (no mysteries listed)
+                    rosarySection
+
+                    // Closing ornament
+                    Text("✿ · ✿")
+                        .frame(maxWidth: .infinity)
+                        .font(.system(size: 12))
+                        .foregroundStyle(.goldLeaf.opacity(0.4))
+                        .tracking(8)
+                        .padding(.vertical, 24)
                 }
-                .padding()
+                .padding(.horizontal, 24)
             }
             .background(Color.parchment)
             .navigationTitle("Today")
+            .sheet(isPresented: $showingMissalSelector) {
+                MissalSelectorSheet()
+            }
             .onAppear {
-                viewModel.loadMysteries(context: modelContext)
                 loadDevotions()
             }
         }
@@ -44,194 +53,246 @@ struct TodayView: View {
     // MARK: - Header
 
     private var headerSection: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: 4) {
             HStack {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(viewModel.latinFeria)
-                        .font(.latinCaption)
-                        .foregroundStyle(.goldLeaf)
-                        .tracking(1.5)
-                        .textCase(.uppercase)
-
-                    Text(viewModel.englishDay)
-                        .font(.englishDisplay)
-                        .foregroundStyle(.ink)
-
-                    Text(viewModel.dateString)
-                        .font(.englishCaption)
-                        .foregroundStyle(.secondary)
-                }
+                Text(Date().latinFeriaName)
+                    .font(.custom("Palatino-Italic", size: 13))
+                    .foregroundStyle(.goldLeaf)
+                    .tracking(3)
+                    .textCase(.uppercase)
 
                 Spacer()
 
-                // Missal rite badge
-                Text(appSettings.missalRite.displayName)
-                    .font(.uiCaption)
+                // Tappable missal badge
+                Button {
+                    showingMissalSelector = true
+                } label: {
+                    HStack(spacing: 4) {
+                        Text(appSettings.missalRite.displayName)
+                            .font(.system(size: 10, weight: .semibold))
+                        Image(systemName: "chevron.down")
+                            .font(.system(size: 8, weight: .semibold))
+                    }
                     .foregroundStyle(.goldLeaf)
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal, 10)
                     .padding(.vertical, 4)
-                    .background(Color.goldLeaf.opacity(0.1))
-                    .clipShape(Capsule())
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.goldLeaf.opacity(0.3), lineWidth: 1)
+                    )
+                }
             }
+
+            Text(Date().englishWeekdayName)
+                .font(.custom("Palatino", size: 36).weight(.bold))
+                .foregroundStyle(.ink)
+
+            Text(formattedDate)
+                .font(.custom("Palatino-Italic", size: 14))
+                .foregroundStyle(.secondary)
         }
         .padding(.bottom, 8)
     }
 
-    // MARK: - Rosary Launcher
-
-    private var rosaryLauncherCard: some View {
-        NavigationLink {
-            RosaryStartView(suggestedSet: MysteryScheduleService.todaysPrimarySet())
-        } label: {
-            HStack(spacing: 14) {
-                ZStack {
-                    Circle()
-                        .fill(Color.sanctuaryRed.opacity(0.1))
-                        .frame(width: 52, height: 52)
-                    Image(systemName: "rosette")
-                        .font(.system(size: 24))
-                        .foregroundStyle(.sanctuaryRed)
-                }
-
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Pray the Rosary")
-                        .font(.uiLabelLarge)
-                        .foregroundStyle(.ink)
-
-                    Text("\(MysteryScheduleService.todaysPrimarySet().latinName) — \(MysteryScheduleService.todaysPrimarySet().englishName)")
-                        .font(.uiCaption)
-                        .foregroundStyle(.secondary)
-                }
-
-                Spacer()
-
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(.sanctuaryRed)
-            }
-            .padding()
-            .background(Color.warmWhite)
-            .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
-            .shadow(color: .black.opacity(0.04), radius: 8, y: 2)
+    private var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d"
+        let day = Calendar.current.component(.day, from: Date())
+        let suffix: String
+        switch day {
+        case 1, 21, 31: suffix = "st"
+        case 2, 22: suffix = "nd"
+        case 3, 23: suffix = "rd"
+        default: suffix = "th"
         }
-        .buttonStyle(.plain)
+        formatter.dateFormat = "'the' d'\(suffix) of' MMMM"
+        return formatter.string(from: Date())
     }
 
-    // MARK: - Devotions Section
+    // MARK: - Ornamental Divider
+
+    private var ornamentalDivider: some View {
+        HStack {
+            Spacer()
+            Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.clear)
+                .background(
+                    LinearGradient(
+                        colors: [.clear, .goldLeaf.opacity(0.3), .clear],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+            Text("✟")
+                .font(.system(size: 11))
+                .foregroundStyle(.goldLeaf.opacity(0.5))
+            Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.clear)
+                .background(
+                    LinearGradient(
+                        colors: [.clear, .goldLeaf.opacity(0.3), .clear],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+            Spacer()
+        }
+        .padding(.vertical, 20)
+    }
+
+    // MARK: - Penance
+
+    private var penanceSection: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            sectionTitle("Penance", latin: "Pænitentia")
+
+            let penanceItems = todaysDevotions.filter { $0.isAbstinence || $0.isFasting }
+            if penanceItems.isEmpty {
+                Text("No special penance today.")
+                    .font(.custom("Palatino-Italic", size: 14))
+                    .foregroundStyle(.secondary)
+            } else {
+                ForEach(penanceItems) { item in
+                    HStack(alignment: .top, spacing: 0) {
+                        Rectangle()
+                            .fill(Color.sanctuaryRed)
+                            .frame(width: 3)
+                            .padding(.trailing, 16)
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            HStack(spacing: 6) {
+                                Text(item.title)
+                                    .font(.custom("Palatino", size: 17).weight(.semibold))
+                                    .foregroundStyle(.ink)
+
+                                if item.isAbstinence {
+                                    penanceTag("Abstinence")
+                                }
+                                if item.isFasting {
+                                    penanceTag("Fast")
+                                }
+                            }
+
+                            Text(shortDescription(item))
+                                .font(.custom("Georgia", size: 14))
+                                .foregroundStyle(.secondary)
+                                .lineSpacing(4)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                }
+            }
+        }
+    }
+
+    private func penanceTag(_ text: String) -> some View {
+        Text(text.uppercased())
+            .font(.system(size: 9, weight: .bold))
+            .foregroundStyle(.sanctuaryRed)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 1)
+            .overlay(
+                RoundedRectangle(cornerRadius: 3)
+                    .stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 1)
+            )
+    }
+
+    // MARK: - Devotions
 
     private var devotionsSection: some View {
-        VStack(alignment: .leading, spacing: AppConstants.itemSpacing) {
-            SectionHeaderView(
-                title: "Today's Devotions",
-                subtitle: "Devotiones Hodiernae"
-            )
+        VStack(alignment: .leading, spacing: 0) {
+            sectionTitle("Today's Devotions", latin: "Devotiones Hodiernæ")
 
-            ForEach(todaysDevotions) { devotion in
-                devotionCard(devotion)
+            let devotionItems = todaysDevotions.filter {
+                !$0.isAbstinence && !$0.isFasting && $0.slug != "angelus_devotion"
             }
-        }
-    }
-
-    private func devotionCard(_ devotion: TraditionalDevotion) -> some View {
-        HStack(alignment: .top, spacing: 12) {
-            // Icon
-            ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(devotion.isFasting || devotion.isAbstinence
-                          ? Color.sanctuaryRed.opacity(0.08)
-                          : Color.goldLeaf.opacity(0.1))
-                    .frame(width: 36, height: 36)
-
-                Image(systemName: devotion.category.icon)
-                    .font(.system(size: 16))
-                    .foregroundStyle(devotion.isFasting || devotion.isAbstinence
-                                    ? .sanctuaryRed : .goldLeaf)
-            }
-
-            VStack(alignment: .leading, spacing: 3) {
-                HStack(spacing: 6) {
-                    Text(devotion.title)
-                        .font(.uiLabel)
+            ForEach(devotionItems) { item in
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(item.title)
+                        .font(.custom("Palatino", size: 16).weight(.medium))
                         .foregroundStyle(.ink)
-
-                    if devotion.isAbstinence {
-                        Text("Abstinence")
-                            .font(.system(size: 9, weight: .semibold))
-                            .foregroundStyle(.sanctuaryRed)
-                            .padding(.horizontal, 6)
-                            .padding(.vertical, 2)
-                            .background(Color.sanctuaryRed.opacity(0.1))
-                            .clipShape(Capsule())
-                    }
-                    if devotion.isFasting {
-                        Text("Fast")
-                            .font(.system(size: 9, weight: .semibold))
-                            .foregroundStyle(.sanctuaryRed)
-                            .padding(.horizontal, 6)
-                            .padding(.vertical, 2)
-                            .background(Color.sanctuaryRed.opacity(0.1))
-                            .clipShape(Capsule())
-                    }
-                }
-
-                Text(devotion.description)
-                    .font(.uiCaption)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(3)
-
-                if let note = devotion.seasonalNote {
-                    Text(note)
-                        .font(.uiCaption)
+                    Text(item.latinTitle)
+                        .font(.custom("Palatino-Italic", size: 13))
                         .foregroundStyle(.goldLeaf)
                 }
-            }
-        }
-        .padding()
-        .background(Color.warmWhite)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .shadow(color: .black.opacity(0.03), radius: 6, y: 1)
-    }
-
-    // MARK: - Mystery Set
-
-    private var mysterySetSection: some View {
-        VStack(alignment: .leading, spacing: AppConstants.itemSpacing) {
-            ForEach(viewModel.todaysSetTypes) { setType in
-                VStack(alignment: .leading, spacing: AppConstants.itemSpacing) {
-                    SectionHeaderView(
-                        title: setType.latinName,
-                        subtitle: setType.englishName
-                    )
-
-                    let mysteries = viewModel.todaysMysteries.filter { $0.setType == setType }
-                    ForEach(mysteries, id: \.id) { mystery in
-                        NavigationLink {
-                            MysteryDetailView(mystery: mystery)
-                        } label: {
-                            MysteryCardView(mystery: mystery)
-                        }
-                        .buttonStyle(.plain)
-                    }
+                .padding(.vertical, 12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .overlay(alignment: .bottom) {
+                    Rectangle()
+                        .fill(Color.goldLeaf.opacity(0.08))
+                        .frame(height: 1)
                 }
             }
         }
     }
 
-    // MARK: - Saturday Note
+    // MARK: - Rosary
 
-    private var saturdayNoteView: some View {
-        HStack(alignment: .top, spacing: 10) {
-            Image(systemName: "info.circle")
-                .foregroundStyle(.goldLeaf)
-                .font(.system(size: 16))
+    private var rosarySection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            sectionTitle("The Holy Rosary", latin: "Sacratissimum Rosarium")
 
-            Text(MysteryScheduleService.saturdayNote)
-                .font(.uiCaption)
+            NavigationLink {
+                RosaryStartView(suggestedSet: MysteryScheduleService.todaysPrimarySet())
+            } label: {
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Pray the Rosary")
+                            .font(.custom("Palatino", size: 18).weight(.semibold))
+                            .foregroundStyle(.ink)
+                        Text("\(MysteryScheduleService.todaysPrimarySet().englishName) — \(MysteryScheduleService.todaysPrimarySet().latinName)")
+                            .font(.custom("Palatino-Italic", size: 14))
+                            .foregroundStyle(.sanctuaryRed)
+                    }
+                    Spacer()
+                    Text("→")
+                        .font(.system(size: 18))
+                        .foregroundStyle(.goldLeaf)
+                }
+                .padding(18)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.sanctuaryRed.opacity(0.2), lineWidth: 1)
+                )
+                .overlay(alignment: .top) {
+                    // Red-to-gold gradient top border
+                    LinearGradient(
+                        colors: [.sanctuaryRed, .goldLeaf],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                    .frame(height: 2)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    // MARK: - Helpers
+
+    private func sectionTitle(_ title: String, latin: String) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(title.uppercased())
+                .font(.custom("Palatino-Italic", size: 12).weight(.semibold))
+                .foregroundStyle(.sanctuaryRed)
+                .tracking(3)
+            Text(latin)
+                .font(.custom("Palatino-Italic", size: 13))
                 .foregroundStyle(.secondary)
         }
-        .padding()
-        .background(Color.goldLeaf.opacity(0.08))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(.bottom, 12)
+    }
+
+    private func shortDescription(_ devotion: TraditionalDevotion) -> String {
+        // Return a brief version for the home screen
+        let desc = devotion.description
+        if let firstSentence = desc.components(separatedBy: ". ").first {
+            return firstSentence + "."
+        }
+        return desc
     }
 
     // MARK: - Load Devotions
@@ -245,12 +306,106 @@ struct TodayView: View {
 
         let weekday = Calendar.current.component(.weekday, from: Date())
         todaysDevotions = allDevotions.filter { devotion in
-            // Show if applicable today (by weekday) or daily devotions
             if let days = devotion.applicableDays {
                 return days.contains(weekday)
             }
-            // Show daily devotions
             return devotion.category == .dailyDevotion
+        }
+    }
+}
+
+// MARK: - Missal Selector Sheet
+
+struct MissalSelectorSheet: View {
+    @EnvironmentObject private var appSettings: AppSettings
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Choose Your Missal")
+                        .font(.custom("Palatino", size: 24).weight(.bold))
+                        .foregroundStyle(.ink)
+
+                    Text("Select the rubrical calendar your community follows")
+                        .font(.custom("Palatino-Italic", size: 14))
+                        .foregroundStyle(.secondary)
+                        .padding(.bottom, 8)
+
+                    ForEach(MissalRite.allCases) { rite in
+                        Button {
+                            appSettings.missalRite = rite
+                        } label: {
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack {
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(rite.displayName)
+                                            .font(.custom("Palatino", size: 18).weight(.semibold))
+                                            .foregroundStyle(.ink)
+                                        Text(rite.latinName)
+                                            .font(.custom("Palatino-Italic", size: 13))
+                                            .foregroundStyle(.goldLeaf)
+                                    }
+                                    Spacer()
+                                    if appSettings.missalRite == rite {
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .foregroundStyle(.sanctuaryRed)
+                                            .font(.system(size: 22))
+                                    } else {
+                                        Circle()
+                                            .stroke(Color.goldLeaf.opacity(0.3), lineWidth: 2)
+                                            .frame(width: 22, height: 22)
+                                    }
+                                }
+
+                                Text(rite.subtitle)
+                                    .font(.custom("Georgia", size: 14))
+                                    .foregroundStyle(.secondary)
+                                    .lineSpacing(4)
+
+                                VStack(alignment: .leading, spacing: 4) {
+                                    ForEach(rite.keyDifferences, id: \.self) { diff in
+                                        HStack(alignment: .top, spacing: 8) {
+                                            Text("·")
+                                                .foregroundStyle(.goldLeaf)
+                                            Text(diff)
+                                                .font(.custom("Georgia", size: 13))
+                                                .foregroundStyle(.tertiary)
+                                        }
+                                    }
+                                }
+                                .padding(.top, 4)
+                            }
+                            .padding(18)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(
+                                        appSettings.missalRite == rite
+                                        ? Color.goldLeaf.opacity(0.4)
+                                        : Color.goldLeaf.opacity(0.1),
+                                        lineWidth: 1
+                                    )
+                            )
+                            .background(
+                                appSettings.missalRite == rite
+                                ? Color.goldLeaf.opacity(0.03)
+                                : Color.clear
+                            )
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                        }
+                    }
+                }
+                .padding(24)
+            }
+            .background(Color.parchment)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Done") { dismiss() }
+                        .foregroundStyle(.sanctuaryRed)
+                }
+            }
         }
     }
 }

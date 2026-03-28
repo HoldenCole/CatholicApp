@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad Altare Dei — Refined Design</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#3a3028;
+    padding:40px;
+    font-family:'Inter',sans-serif;
+    display:flex;
+    flex-wrap:wrap;
+    gap:48px;
+    justify-content:center;
+  }
+  h1 { width:100%; text-align:center; font-family:'Playfair Display',serif; color:#EDE8DC; font-size:28px; margin-bottom:4px; }
+  .page-sub { width:100%; text-align:center; color:#B8960C; font-size:12px; letter-spacing:3px; text-transform:uppercase; margin-bottom:32px; }
+
+  .phone {
+    width:390px; height:844px; border-radius:44px; overflow:hidden;
+    box-shadow:0 24px 80px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.05);
+    position:relative; flex-shrink:0;
+  }
+  .label { text-align:center; color:#EDE8DC; font-size:16px; font-weight:600; margin-top:14px; width:390px; }
+  .sublabel { text-align:center; color:#887766; font-size:12px; max-width:390px; margin-top:4px; line-height:1.5; }
+  .scrollable { overflow-y:auto; height:100%; -webkit-overflow-scrolling:touch; }
+
+  /* ─── Shared ornament styles ─── */
+  .orn { text-align:center; margin:20px 0; color:#B8960C; font-size:12px; letter-spacing:8px; opacity:0.5; }
+  .orn-line {
+    display:flex; align-items:center; gap:12px; margin:22px 0;
+  }
+  .orn-line::before, .orn-line::after {
+    content:''; flex:1; height:1px;
+    background:linear-gradient(90deg, transparent, #B8960C44, transparent);
+  }
+  .orn-line span { color:#B8960C; font-size:11px; opacity:0.6; }
+
+  /* ═══════════════════════════════════════════
+     LIGHT MODE — Today Tab
+     ═══════════════════════════════════════════ */
+  .light { background:#F2EBE0; }
+  .light .scrollable { padding:54px 24px 40px; }
+
+  .light .topbar {
+    display:flex; justify-content:space-between; align-items:flex-start;
+    margin-bottom:4px;
+  }
+  .light .feria {
+    font-family:'Cormorant Garamond',serif;
+    font-size:13px; font-weight:600; color:#B8960C;
+    letter-spacing:3px; text-transform:uppercase;
+  }
+  /* Tappable missal badge */
+  .missal-badge {
+    display:flex; align-items:center; gap:4px;
+    font-size:10px; font-weight:600; color:#B8960C;
+    border:1px solid #B8960C44; padding:4px 10px;
+    border-radius:4px; letter-spacing:0.5px;
+    cursor:pointer;
+  }
+  .missal-badge .arrow { font-size:8px; opacity:0.6; }
+
+  .light .day {
+    font-family:'Playfair Display',serif;
+    font-size:36px; font-weight:700; color:#1C1410;
+    line-height:1.1; margin:4px 0 2px;
+  }
+  .light .date {
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px; color:#998877; font-style:italic;
+  }
+
+  .light .section-title {
+    font-family:'Cormorant Garamond',serif;
+    font-size:12px; font-weight:700; color:#8B1A1A;
+    letter-spacing:3px; text-transform:uppercase; margin-bottom:2px;
+  }
+  .light .section-sub {
+    font-family:'Cormorant Garamond',serif;
+    font-size:13px; color:#998877; font-style:italic; margin-bottom:14px;
+  }
+
+  /* Penance block — prominent */
+  .penance-block {
+    border-left:3px solid #8B1A1A;
+    padding:14px 0 14px 16px;
+    margin-bottom:6px;
+  }
+  .penance-block .title {
+    font-family:'Playfair Display',serif;
+    font-size:17px; font-weight:600; color:#1C1410;
+  }
+  .penance-block .tag {
+    display:inline-block; font-size:9px; font-weight:700;
+    color:#8B1A1A; border:1px solid rgba(139,26,26,0.3);
+    padding:1px 6px; border-radius:3px;
+    letter-spacing:0.5px; text-transform:uppercase;
+    margin-left:6px; vertical-align:middle;
+  }
+  .penance-block .desc {
+    font-family:'EB Garamond',serif;
+    font-size:14px; color:#998877; line-height:1.6; margin-top:4px;
+  }
+
+  /* Devotion items — flowing */
+  .devotion-item {
+    padding:12px 0;
+    border-bottom:1px solid rgba(184,150,12,0.08);
+  }
+  .devotion-item:last-child { border-bottom:none; }
+  .devotion-name {
+    font-family:'Playfair Display',serif;
+    font-size:16px; color:#1C1410; font-weight:500;
+  }
+  .devotion-latin {
+    font-family:'Cormorant Garamond',serif;
+    font-size:13px; color:#B8960C; font-style:italic;
+  }
+
+  /* Rosary launcher — bordered */
+  .rosary-launcher {
+    border:1px solid #8B1A1A33;
+    border-radius:8px;
+    padding:18px;
+    position:relative;
+    cursor:pointer;
+    margin-top:4px;
+  }
+  .rosary-launcher::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, #8B1A1A, #B8960C);
+    border-radius:8px 8px 0 0;
+  }
+  .rosary-launcher h3 {
+    font-family:'Playfair Display',serif;
+    font-size:18px; font-weight:600; color:#1C1410;
+  }
+  .rosary-launcher .sub {
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px; color:#8B1A1A; font-style:italic; margin-top:2px;
+  }
+  .rosary-launcher .arrow-r {
+    position:absolute; right:18px; top:50%; transform:translateY(-50%);
+    font-size:18px; color:#B8960C;
+  }
+
+  /* ═══════════════════════════════════════════
+     MISSAL SELECTOR SHEET (overlay concept)
+     ═══════════════════════════════════════════ */
+  .dark { background:#1a1410; }
+  .dark .scrollable { padding:54px 24px 40px; }
+
+  .dark .sheet-title {
+    font-family:'Playfair Display',serif;
+    font-size:24px; font-weight:700; color:#EDE8DC;
+    margin-bottom:4px;
+  }
+  .dark .sheet-sub {
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px; color:#776655; font-style:italic;
+    margin-bottom:24px;
+  }
+
+  .rite-option {
+    padding:18px;
+    border:1px solid #B8960C22;
+    border-radius:8px;
+    margin-bottom:12px;
+    position:relative;
+    cursor:pointer;
+  }
+  .rite-option.selected {
+    border-color:#B8960C66;
+    background:#B8960C0A;
+  }
+  .rite-option .rite-name {
+    font-family:'Playfair Display',serif;
+    font-size:18px; color:#EDE8DC; font-weight:600;
+  }
+  .rite-option .rite-latin {
+    font-family:'Cormorant Garamond',serif;
+    font-size:13px; color:#B8960C; font-style:italic; margin-top:2px;
+  }
+  .rite-option .rite-desc {
+    font-family:'EB Garamond',serif;
+    font-size:14px; color:#887766; line-height:1.6; margin-top:8px;
+  }
+  .rite-option .rite-diffs {
+    margin-top:10px; padding-top:10px;
+    border-top:1px solid #B8960C15;
+  }
+  .rite-option .diff-item {
+    font-family:'EB Garamond',serif;
+    font-size:13px; color:#776655; line-height:1.6;
+    padding-left:14px; position:relative;
+  }
+  .rite-option .diff-item::before {
+    content:'·'; position:absolute; left:0; color:#B8960C;
+  }
+  .rite-check {
+    position:absolute; right:18px; top:18px;
+    width:22px; height:22px; border-radius:50%;
+    border:2px solid #B8960C44;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .rite-option.selected .rite-check {
+    background:#8B1A1A; border-color:#8B1A1A;
+    color:white; font-size:12px;
+  }
+
+  /* ═══════════════════════════════════════════
+     DARK MODE — Today Tab
+     ═══════════════════════════════════════════ */
+  .dark-today { background:#1a1410; }
+  .dark-today .scrollable { padding:54px 24px 40px; }
+
+  .dark-today .feria {
+    font-family:'Cormorant Garamond',serif;
+    font-size:13px; font-weight:600; color:#B8960C;
+    letter-spacing:3px; text-transform:uppercase;
+  }
+  .dark-today .day {
+    font-family:'Playfair Display',serif;
+    font-size:36px; font-weight:700; color:#EDE8DC;
+    line-height:1.1; margin:4px 0 2px;
+  }
+  .dark-today .date {
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px; color:#665544; font-style:italic;
+  }
+  .dark-today .section-title {
+    font-family:'Cormorant Garamond',serif;
+    font-size:12px; font-weight:700; color:#8B1A1A;
+    letter-spacing:3px; text-transform:uppercase; margin-bottom:2px;
+  }
+  .dark-today .section-sub {
+    font-family:'Cormorant Garamond',serif;
+    font-size:13px; color:#665544; font-style:italic; margin-bottom:14px;
+  }
+
+  .dark-today .penance-block {
+    border-left:3px solid #8B1A1A;
+    padding:14px 0 14px 16px; margin-bottom:6px;
+  }
+  .dark-today .penance-block .title {
+    font-family:'Playfair Display',serif;
+    font-size:17px; font-weight:600; color:#EDE8DC;
+  }
+  .dark-today .penance-block .desc {
+    font-family:'EB Garamond',serif;
+    font-size:14px; color:#776655; line-height:1.6; margin-top:4px;
+  }
+  .dark-today .devotion-item {
+    padding:12px 0; border-bottom:1px solid #B8960C0A;
+  }
+  .dark-today .devotion-name {
+    font-family:'Playfair Display',serif;
+    font-size:16px; color:#EDE8DC; font-weight:500;
+  }
+  .dark-today .devotion-latin {
+    font-family:'Cormorant Garamond',serif;
+    font-size:13px; color:#B8960C; font-style:italic;
+  }
+  .dark-today .rosary-launcher {
+    border:1px solid #8B1A1A33;
+    border-radius:8px; padding:18px;
+    position:relative;
+  }
+  .dark-today .rosary-launcher::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, #8B1A1A, #B8960C);
+    border-radius:8px 8px 0 0;
+  }
+  .dark-today .rosary-launcher h3 {
+    font-family:'Playfair Display',serif;
+    font-size:18px; font-weight:600; color:#EDE8DC;
+  }
+  .dark-today .rosary-launcher .sub {
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px; color:#8B1A1A; font-style:italic;
+  }
+  .dark-today .rosary-launcher .arrow-r {
+    position:absolute; right:18px; top:50%; transform:translateY(-50%);
+    font-size:18px; color:#B8960C;
+  }
+
+  .dark-orn-line {
+    display:flex; align-items:center; gap:12px; margin:22px 0;
+  }
+  .dark-orn-line::before, .dark-orn-line::after {
+    content:''; flex:1; height:1px;
+    background:linear-gradient(90deg, transparent, #B8960C22, transparent);
+  }
+  .dark-orn-line span { color:#B8960C; font-size:11px; opacity:0.4; }
+</style>
+</head>
+<body>
+
+<h1>Refined Design — Option D</h1>
+<p class="page-sub">Incorporating all feedback</p>
+
+<!-- ═════ LIGHT MODE TODAY ═════ -->
+<div>
+<div class="phone light">
+  <div class="scrollable">
+    <div class="topbar">
+      <div class="feria">Feria Sexta</div>
+      <div class="missal-badge">1962 Missal <span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="day">Friday</div>
+    <div class="date">the twenty-eighth of March</div>
+
+    <div class="orn-line"><span>&#10013;</span></div>
+
+    <!-- Penance first -->
+    <div class="section-title">Penance</div>
+    <div class="section-sub">Pænitentia</div>
+
+    <div class="penance-block">
+      <div class="title">Friday Abstinence <span class="tag">Abstinence</span></div>
+      <div class="desc">Abstain from meat.</div>
+    </div>
+
+    <div class="orn-line"><span>&middot;</span></div>
+
+    <!-- Daily devotions — no Angelus, yes Office & Examen -->
+    <div class="section-title">Today&rsquo;s Devotions</div>
+    <div class="section-sub">Devotiones Hodiernæ</div>
+
+    <div class="devotion-item">
+      <div class="devotion-name">The Divine Office</div>
+      <div class="devotion-latin">Officium Divinum</div>
+    </div>
+    <div class="devotion-item">
+      <div class="devotion-name">Examination of Conscience</div>
+      <div class="devotion-latin">Examen Conscientiæ</div>
+    </div>
+    <div class="devotion-item">
+      <div class="devotion-name">Morning Offering</div>
+      <div class="devotion-latin">Oblatio Matutina</div>
+    </div>
+
+    <div class="orn-line"><span>&#10013;</span></div>
+
+    <!-- Rosary — no mysteries shown, just launcher -->
+    <div class="section-title">The Holy Rosary</div>
+    <div class="section-sub">Sacratissimum Rosarium</div>
+
+    <div class="rosary-launcher">
+      <h3>Pray the Rosary</h3>
+      <div class="sub">Sorrowful Mysteries &mdash; Mysteria Dolorosa</div>
+      <div class="arrow-r">&rarr;</div>
+    </div>
+
+    <div class="orn">&#10087; &middot; &#10087;</div>
+  </div>
+</div>
+<div class="label">Today — Light Mode</div>
+<div class="sublabel">Penance first. Clean devotion list.<br>No mystery breakdown. Rosary is one tap.</div>
+</div>
+
+<!-- ═════ MISSAL SELECTOR SHEET ═════ -->
+<div>
+<div class="phone dark">
+  <div class="scrollable">
+    <div class="sheet-title">Choose Your Missal</div>
+    <div class="sheet-sub">Select the rubrical calendar your community follows</div>
+
+    <div class="rite-option selected">
+      <div class="rite-check">&#10003;</div>
+      <div class="rite-name">1962 Missal</div>
+      <div class="rite-latin">Missale Romanum 1962</div>
+      <div class="rite-desc">Post-Johannine rubrics. The most common form used by FSSP, ICKSP, and diocesan TLM communities.</div>
+      <div class="rite-diffs">
+        <div class="diff-item">Simplified rubrics from 1960 Code</div>
+        <div class="diff-item">Reduced octaves and vigils</div>
+        <div class="diff-item">Confiteor said once at Communion</div>
+        <div class="diff-item">St. Joseph added to the Canon</div>
+      </div>
+    </div>
+
+    <div class="rite-option">
+      <div class="rite-check"></div>
+      <div class="rite-name">1955 Missal</div>
+      <div class="rite-latin">Missale Romanum 1955</div>
+      <div class="rite-desc">Post-Pius XII Holy Week reform but pre-1960 rubrical changes. Used by some traditional communities.</div>
+      <div class="rite-diffs">
+        <div class="diff-item">Restored Holy Week (1955 reform)</div>
+        <div class="diff-item">Original octave system mostly intact</div>
+        <div class="diff-item">Double Confiteor at Communion</div>
+        <div class="diff-item">Pre-1960 ranking of feasts</div>
+      </div>
+    </div>
+
+    <div class="rite-option">
+      <div class="rite-check"></div>
+      <div class="rite-name">Pre-1955 Missal</div>
+      <div class="rite-latin">Missale Romanum (ante 1955)</div>
+      <div class="rite-desc">Pre-Pius XII rubrics with original Holy Week. Used by some SSPX chapels and independent traditional communities.</div>
+      <div class="rite-diffs">
+        <div class="diff-item">Original Holy Week (pre-1955)</div>
+        <div class="diff-item">Full octave system intact</div>
+        <div class="diff-item">Traditional feast ranking system</div>
+        <div class="diff-item">Palm Sunday with full procession rubrics</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="label">Missal Selector</div>
+<div class="sublabel">Tapping the badge at top opens this.<br>Explains each option so users know which to pick.</div>
+</div>
+
+<!-- ═════ DARK MODE TODAY ═════ -->
+<div>
+<div class="phone dark-today">
+  <div class="scrollable">
+    <div class="topbar" style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <div class="feria">Feria Sexta</div>
+      <div class="missal-badge" style="border-color:#B8960C33;">1962 Missal <span class="arrow">&#9660;</span></div>
+    </div>
+    <div class="day">Friday</div>
+    <div class="date">the twenty-eighth of March</div>
+
+    <div class="dark-orn-line"><span>&#10013;</span></div>
+
+    <div class="section-title">Penance</div>
+    <div class="section-sub">Pænitentia</div>
+
+    <div class="penance-block">
+      <div class="title">Friday Abstinence <span class="tag">Abstinence</span></div>
+      <div class="desc">Abstain from meat.</div>
+    </div>
+
+    <div class="dark-orn-line"><span>&middot;</span></div>
+
+    <div class="section-title">Today&rsquo;s Devotions</div>
+    <div class="section-sub">Devotiones Hodiernæ</div>
+
+    <div class="devotion-item">
+      <div class="devotion-name">The Divine Office</div>
+      <div class="devotion-latin">Officium Divinum</div>
+    </div>
+    <div class="devotion-item">
+      <div class="devotion-name">Examination of Conscience</div>
+      <div class="devotion-latin">Examen Conscientiæ</div>
+    </div>
+    <div class="devotion-item">
+      <div class="devotion-name">Morning Offering</div>
+      <div class="devotion-latin">Oblatio Matutina</div>
+    </div>
+
+    <div class="dark-orn-line"><span>&#10013;</span></div>
+
+    <div class="section-title">The Holy Rosary</div>
+    <div class="section-sub">Sacratissimum Rosarium</div>
+
+    <div class="rosary-launcher">
+      <h3>Pray the Rosary</h3>
+      <div class="sub">Sorrowful Mysteries &mdash; Mysteria Dolorosa</div>
+      <div class="arrow-r" style="color:#B8960C;">&rarr;</div>
+    </div>
+
+    <div style="text-align:center; margin:24px 0; color:#B8960C; font-size:12px; letter-spacing:8px; opacity:0.3;">&#10087; &middot; &#10087;</div>
+  </div>
+</div>
+<div class="label">Today — Dark Mode</div>
+<div class="sublabel">Same layout, warm vellum dark.<br>Gold and red accents unchanged.</div>
+</div>
+
+</body>
+</html>
