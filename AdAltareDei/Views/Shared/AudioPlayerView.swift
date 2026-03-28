@@ -5,6 +5,7 @@ import SwiftUI
 struct AudioPlayerView: View {
     let audioFileName: String
     @State private var isPlaying = false
+    @State private var barHeights: [CGFloat] = (0..<40).map { _ in CGFloat.random(in: 8...50) }
 
     var body: some View {
         VStack(spacing: 12) {
@@ -15,10 +16,10 @@ struct AudioPlayerView: View {
                 .overlay {
                     // Simulated waveform bars
                     HStack(spacing: 2) {
-                        ForEach(0..<40, id: \.self) { i in
+                        ForEach(Array(barHeights.enumerated()), id: \.offset) { _, height in
                             RoundedRectangle(cornerRadius: 1)
                                 .fill(Color.goldLeaf.opacity(isPlaying ? 0.8 : 0.4))
-                                .frame(width: 3, height: CGFloat.random(in: 8...50))
+                                .frame(width: 3, height: height)
                         }
                     }
                     .padding(.horizontal, 8)

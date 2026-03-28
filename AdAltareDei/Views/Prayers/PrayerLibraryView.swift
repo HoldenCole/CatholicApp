@@ -4,7 +4,6 @@ import SwiftData
 struct PrayerLibraryView: View {
     @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel = PrayerLibraryViewModel()
-    @State private var searchText = ""
 
     var body: some View {
         NavigationStack {

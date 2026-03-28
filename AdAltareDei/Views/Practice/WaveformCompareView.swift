@@ -6,6 +6,9 @@ struct WaveformCompareView: View {
     let referenceFileName: String
     let userRecordingFileName: String?
 
+    private static let referenceBarHeights: [CGFloat] = (0..<35).map { _ in CGFloat.random(in: 6...40) }
+    private static let userBarHeights: [CGFloat] = (0..<35).map { _ in CGFloat.random(in: 6...40) }
+
     var body: some View {
         VStack(spacing: 8) {
             // Reference waveform
@@ -14,7 +17,7 @@ struct WaveformCompareView: View {
                     .font(.uiCaption)
                     .foregroundStyle(.goldLeaf)
 
-                waveformPlaceholder(color: .goldLeaf)
+                waveformPlaceholder(color: .goldLeaf, heights: Self.referenceBarHeights)
             }
 
             Rectangle()
@@ -28,7 +31,7 @@ struct WaveformCompareView: View {
                     .foregroundStyle(.blue)
 
                 if userRecordingFileName != nil {
-                    waveformPlaceholder(color: .blue)
+                    waveformPlaceholder(color: .blue, heights: Self.userBarHeights)
                 } else {
                     Text("Record yourself to compare")
                         .font(.uiCaption)
@@ -43,16 +46,16 @@ struct WaveformCompareView: View {
         .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
     }
 
-    private func waveformPlaceholder(color: Color) -> some View {
+    private func waveformPlaceholder(color: Color, heights: [CGFloat]) -> some View {
         RoundedRectangle(cornerRadius: 6)
             .fill(color.opacity(0.1))
             .frame(height: 50)
             .overlay {
                 HStack(spacing: 2) {
-                    ForEach(0..<35, id: \.self) { _ in
+                    ForEach(Array(heights.enumerated()), id: \.offset) { _, height in
                         RoundedRectangle(cornerRadius: 1)
                             .fill(color.opacity(0.4))
-                            .frame(width: 3, height: CGFloat.random(in: 6...40))
+                            .frame(width: 3, height: height)
                     }
                 }
             }

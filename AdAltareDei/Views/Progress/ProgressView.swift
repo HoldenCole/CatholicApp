@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-struct ProgressView: View {
+struct ProgressTabView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var appSettings: AppSettings
     @StateObject private var viewModel = ProgressViewModel()
@@ -154,7 +154,7 @@ struct SettingsSheet: View {
 }
 
 #Preview {
-    ProgressView()
+    ProgressTabView()
         .environmentObject(AppSettings())
         .modelContainer(for: [Prayer.self, Mystery.self, PracticeSession.self], inMemory: true)
 }

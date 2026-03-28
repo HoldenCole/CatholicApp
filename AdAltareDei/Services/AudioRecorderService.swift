@@ -12,9 +12,7 @@ class AudioRecorderService: ObservableObject {
     private var recorder: AVAudioRecorder?
 
     func requestPermission() async {
-        if #available(iOS 17, *) {
-            permissionGranted = await AVAudioApplication.requestRecordPermission()
-        }
+        permissionGranted = await AVAudioApplication.requestRecordPermission()
     }
 
     func startRecording(fileName: String) {

@@ -13,6 +13,7 @@ class PrayerDetailViewModel: ObservableObject {
 
     var displayText: String {
         switch textMode {
+        case .missal: return prayer.latinText
         case .english: return prayer.englishText
         case .latin: return prayer.latinText
         case .phonetic: return prayer.phoneticText

@@ -17,14 +17,12 @@ class TodayViewModel: ObservableObject {
         todaysSetTypes = MysteryScheduleService.mysterySetTypes(for: today)
         isSaturday = MysteryScheduleService.isSaturdayAmbiguous(for: today)
 
-        let setTypeStrings = todaysSetTypes.map(\.rawValue)
         let descriptor = FetchDescriptor<Mystery>(
-            predicate: #Predicate<Mystery> { mystery in
-                setTypeStrings.contains(mystery.setType.rawValue)
-            },
             sortBy: [SortDescriptor(\.sortOrder)]
         )
+        let allMysteries = (try? context.fetch(descriptor)) ?? []
 
-        todaysMysteries = (try? context.fetch(descriptor)) ?? []
+        let setTypeStrings = Set(todaysSetTypes.map(\.rawValue))
+        todaysMysteries = allMysteries.filter { setTypeStrings.contains($0.setType.rawValue) }
     }
 }

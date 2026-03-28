@@ -44,7 +44,7 @@ struct ContentView: View {
                     Label("Learn", systemImage: "graduationcap")
                 }
 
-            ProgressView()
+            ProgressTabView()
                 .tabItem {
                     Label("Progress", systemImage: "chart.bar")
                 }
