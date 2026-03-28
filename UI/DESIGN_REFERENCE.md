@@ -10,24 +10,42 @@
 
 ---
 
-## Reference Apps
+## Reference Apps — Detailed Research
 
 ### Santifica (What We Like)
-- **Clean, structured layouts** — content-first, no visual clutter
-- **Strong typography** — serif fonts for sacred text, sans-serif for UI
-- **Muted, liturgical palette** — deep reds, golds, cream/parchment backgrounds
+- **Clean, structured layouts** — content-first, text-forward, no visual clutter
+- **Strong typography** — serif fonts for sacred text, sans-serif for UI chrome only
+- **Muted, liturgical palette** — warm earth tones, deep reds, golds, cream/parchment
 - **Iconography** — minimal, purposeful, not illustrative
 - **Card-based layout** — clear content hierarchy with subtle shadows
-- **Liturgical calendar integration** — today's feast, readings, saint of the day
-- **Traditional Catholic identity** — no modernist compromises on content
+- **Liturgical calendar integration** — today's feast, readings, saint of the day, completion calendar
+- **Traditional Catholic identity** — 1962 calendar, TLM-oriented, no modernist compromises
+- **Navigation:** 3-4 focused tabs (Home/Daily, Calendar, Resources, Settings)
+- **Text-first model:** Dom Gueranger's Liturgical Year as readable text with optional audio
+- **Latin/English toggle** for bilingual content (Divine Office, Bible)
+- **Users describe it as:** "the perfect companion for the Latin Mass" — feels like a digital breviary, not a consumer app
+- **Minimal gamification** — streaks OK, no trivia/challenges/campaigns
+- **No social features** — prayer is personal
+- **Free** — no aggressive monetization
 
-### Hallow (What to Avoid)
+### Hallow — Detailed Breakdown
+**Brand colors:** Deep purple `#6D0EC1`, turquoise `#40A7BF`, green `#52AA7E` — reads as "tech startup"
+
+**What to Avoid:**
 - ❌ Gradient backgrounds and ambient blur effects
-- ❌ Rounded "pill" buttons everywhere (feels wellness-app, not Catholic)
+- ❌ Deep purple branding (reads as tech, not liturgical)
+- ❌ Card/carousel layouts everywhere (Spotify for prayer feel)
 - ❌ Illustrative/cartoony saint artwork
 - ❌ Dark moody backgrounds as default (we use parchment)
-- ❌ Audio-player-centric layout (Spotify for prayer feel)
-- ❌ Gamification elements (streaks are OK, but no badges/achievements)
+- ❌ Audio-player-centric layout (guided meditation model)
+- ❌ Heavy gamification (trivia, campaigns, challenges, community reactions)
+- ❌ Celebrity partnerships as "guides" (Jonathan Roumie, Mark Wahlberg)
+- ❌ Social features (reactions, chat, group challenges, parish finder)
+- ❌ 5+ tabs with extensive sub-navigation creating overwhelm
+- ❌ Modern sans-serif type hierarchy for everything (feels generic)
+- ❌ SF Rounded / "friendly" typefaces for sacred content
+
+**Why Catholics criticize it:** "Problematic monetization and celebritization of prayer." Too much content with "no starting point or guidance." Subscription feels extractive ($70-100/year). Expanding toward generic "Christian" branding dilutes Catholic identity.
 
 ### What Hallow Does Well (Worth Borrowing)
 - ✅ Smooth animations and transitions
@@ -62,13 +80,19 @@
 | Latin / Display | Palatino | Classical, ships with iOS, evokes printed missals |
 | English / Body | Georgia | Readable, traditional serif, pairs with Palatino |
 | Phonetic | Palatino Italic | Distinguishes from plain Latin |
-| UI Labels | SF Rounded | Friendly native iOS feel for buttons/tabs |
+| UI Labels | SF Pro (default) | Clean, serious, native iOS feel for buttons/tabs |
+
+**Design Decision — SF Pro vs SF Rounded:**
+SF Rounded is associated with Duolingo, Apple Health, and Hallow — it reads as
+"friendly consumer app." SF Pro (the iOS default) is more neutral and serious,
+better matching the liturgical gravitas of the app. We use SF Pro for UI labels.
 
 **Rules:**
 - Latin text is always in Palatino — it's the language of the Church, it deserves the best type
 - English body text in Georgia for readability
-- UI chrome (tabs, buttons, captions) in SF Rounded for native iOS feel
+- UI chrome (tabs, buttons, captions) in SF Pro for a clean, native feel
 - Never use system default San Francisco for prayer text
+- Never use SF Rounded — it skews too casual for a traditional Catholic app
 
 ### Layout Principles
 1. **Generous margins** — 16-20pt padding on all sides

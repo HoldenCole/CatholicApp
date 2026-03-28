@@ -17,15 +17,15 @@ extension Font {
     static let englishBody = Font.custom("Georgia", size: 18)
     static let englishCaption = Font.custom("Georgia", size: 14)
 
-    // MARK: - UI Labels (SF Rounded)
-    static let uiLabelLarge = Font.system(size: 17, weight: .semibold, design: .rounded)
-    static let uiLabel = Font.system(size: 15, weight: .medium, design: .rounded)
-    static let uiLabelSmall = Font.system(size: 13, weight: .medium, design: .rounded)
-    static let uiCaption = Font.system(size: 11, weight: .regular, design: .rounded)
+    // MARK: - UI Labels (SF Pro — clean, serious, native iOS)
+    static let uiLabelLarge = Font.system(size: 17, weight: .semibold, design: .default)
+    static let uiLabel = Font.system(size: 15, weight: .medium, design: .default)
+    static let uiLabelSmall = Font.system(size: 13, weight: .medium, design: .default)
+    static let uiCaption = Font.system(size: 11, weight: .regular, design: .default)
 
     // MARK: - Tab Bar
-    static let tabLabel = Font.system(size: 10, weight: .medium, design: .rounded)
+    static let tabLabel = Font.system(size: 10, weight: .medium, design: .default)
 
     // MARK: - Section Headers
-    static let sectionHeader = Font.system(size: 13, weight: .semibold, design: .rounded)
+    static let sectionHeader = Font.system(size: 13, weight: .semibold, design: .default)
 }
