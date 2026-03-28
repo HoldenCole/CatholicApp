@@ -86,5 +86,104 @@
     "englishText": "We fly to thy patronage, O holy Mother of God. Despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin.",
     "latinText": "Sub tuum præsídium confúgimus, sancta Dei Génetrix. Nostras deprecatiónes ne despícias in necessitátibus, sed a perículis cunctis líbera nos semper, Virgo gloriósa et benedícta.",
     "phoneticText": "Sub TÚ·um pre·SÍ·di·um con·FÚ·gi·mus, SANC·ta DÉ·i GÉ·ne·triks. NOS·tras de·pre·ca·ti·Ó·nes ne des·PÍ·chi·as in ne·ches·si·TÁ·ti·bus, sed a pe·RÍ·cu·lis CUNC·tis LÍ·be·ra nos SEM·per, VÍR·go glo·ri·Ó·sa et be·ne·DÍC·ta."
+  },
+  {
+    "slug": "confiteor",
+    "latinName": "Confiteor",
+    "englishName": "I Confess",
+    "category": "mass",
+    "sortOrder": 9,
+    "audioFileName": "confiteor_ref.m4a",
+    "englishText": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the Saints, that I have sinned exceedingly, in thought, word, and deed: through my fault, through my fault, through my most grievous fault. Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, and all the Saints, to pray to the Lord our God for me.",
+    "latinText": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Ioánni Baptístæ, sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis, quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa. Ideo precor beátam Maríam semper Vírginem, beátum Michaélem Archángelum, beátum Ioánnem Baptístam, sanctos Apóstolos Petrum et Paulum, et omnes Sanctos, oráre pro me ad Dóminum Deum nostrum.",
+    "phoneticText": "Con·FÍ·te·or DÉ·o om·ni·po·TÉN·ti, be·Á·te Ma·RÍ·e SEM·per VÍR·gi·ni, be·Á·to Mi·cha·É·li Ar·CHÁN·ge·lo, be·Á·to Yo·ÁN·ni Bap·TÍS·te, SANC·tis A·PÓS·to·lis PÉ·tro et PÁU·lo, et ÓM·ni·bus SANC·tis, QUÍ·a pec·CÁ·vi NÍ·mis co·gi·ta·ti·Ó·ne, VER·bo et Ó·pe·re: MÉ·a CUL·pa, MÉ·a CUL·pa, MÉ·a MÁK·si·ma CUL·pa. Í·de·o PRÉ·cor be·Á·tam Ma·RÍ·am SEM·per VÍR·gi·nem, be·Á·tum Mi·cha·É·lem Ar·CHÁN·ge·lum, be·Á·tum Yo·ÁN·nem Bap·TÍS·tam, SANC·tos A·PÓS·to·los PÉ·trum et PÁU·lum, et OM·nes SANC·tos, o·RÁ·re pro me ad DÓ·mi·num DÉ·um NOS·trum."
+  },
+  {
+    "slug": "suscipiat",
+    "latinName": "Suscipiat",
+    "englishName": "May the Lord Accept",
+    "category": "mass",
+    "sortOrder": 10,
+    "audioFileName": "suscipiat_ref.m4a",
+    "englishText": "May the Lord accept the sacrifice at thy hands, for the praise and glory of His name, for our benefit, and for that of all His holy Church.",
+    "latinText": "Suscípiat Dóminus sacrifícium de mánibus tuis, ad laudem et glóriam nóminis sui, ad utilitátem quoque nostram, totiúsque Ecclésiæ suæ sanctæ.",
+    "phoneticText": "Su·SHÍ·pi·at DÓ·mi·nus sa·cri·FÍ·chi·um de MÁ·ni·bus TÚ·is, ad LAU·dem et GLÓ·ri·am NÓ·mi·nis SÚ·i, ad u·ti·li·TÁ·tem QUÓ·que NOS·tram, to·TÍ·us·que Ec·CLÉ·si·e SÚ·e SANC·te."
+  },
+  {
+    "slug": "domine_non_sum_dignus",
+    "latinName": "Domine, Non Sum Dignus",
+    "englishName": "Lord, I Am Not Worthy",
+    "category": "mass",
+    "sortOrder": 11,
+    "audioFileName": "domine_non_sum_dignus_ref.m4a",
+    "englishText": "Lord, I am not worthy that Thou shouldst enter under my roof; but only say the word, and my soul shall be healed.",
+    "latinText": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea.",
+    "phoneticText": "DÓ·mi·ne, non sum DÍG·nus, ut ÍN·tres sub TEC·tum MÉ·um: sed TAN·tum dic VER·bo, et sa·NÁ·bi·tur Á·ni·ma MÉ·a."
+  },
+  {
+    "slug": "angelus",
+    "latinName": "Angelus",
+    "englishName": "The Angelus",
+    "category": "devotional",
+    "sortOrder": 12,
+    "audioFileName": "angelus_ref.m4a",
+    "englishText": "V. The Angel of the Lord declared unto Mary.\nR. And she conceived of the Holy Ghost.\nHail Mary...\n\nV. Behold the handmaid of the Lord.\nR. Be it done unto me according to thy word.\nHail Mary...\n\nV. And the Word was made flesh.\nR. And dwelt among us.\nHail Mary...\n\nV. Pray for us, O holy Mother of God.\nR. That we may be made worthy of the promises of Christ.\n\nLet us pray. Pour forth, we beseech Thee, O Lord, Thy grace into our hearts; that we, to whom the Incarnation of Christ, Thy Son, was made known by the message of an angel, may by His Passion and Cross be brought to the glory of His Resurrection. Through the same Christ our Lord. Amen.",
+    "latinText": "V. Ángelus Dómini nuntiávit Maríæ.\nR. Et concépit de Spíritu Sancto.\nAve María...\n\nV. Ecce ancílla Dómini.\nR. Fiat mihi secúndum verbum tuum.\nAve María...\n\nV. Et Verbum caro factum est.\nR. Et habitávit in nobis.\nAve María...\n\nV. Ora pro nobis, sancta Dei Génetrix.\nR. Ut digni efficiámur promissiónibus Christi.\n\nOrémus. Grátiam tuam, quǽsumus, Dómine, méntibus nostris infúnde; ut qui, Ángelo nuntiánte, Christi Fílii tui incarnatiónem cognóvimus, per passiónem eius et crucem ad resurrectiónis glóriam perducámur. Per eúndem Christum Dóminum nostrum. Amen.",
+    "phoneticText": "Án·ge·lus DÓ·mi·ni nun·ti·Á·vit Ma·RÍ·e. Et con·CHÉ·pit de SPÍ·ri·tu SANC·to. A·ve Ma·RÍ·a... Éc·che an·CHÍ·la DÓ·mi·ni. FÍ·at MÍ·hi se·CÚN·dum VER·bum TÚ·um. A·ve Ma·RÍ·a... Et VER·bum CA·ro FAC·tum est. Et ha·bi·TÁ·vit in NÓ·bis. A·ve Ma·RÍ·a... Ó·ra pro NÓ·bis, SANC·ta DÉ·i GÉ·ne·triks. Ut DÍG·ni ef·fi·chi·Á·mur pro·mis·si·Ó·ni·bus CHRÍS·ti. O·RÉ·mus. GRÁ·ti·am TÚ·am, QUÉ·su·mus, DÓ·mi·ne, MÉN·ti·bus NOS·tris in·FÚN·de; ut qui, ÁN·ge·lo nun·ti·ÁN·te, CHRÍS·ti FÍ·li·i TÚ·i in·car·na·ti·Ó·nem cog·NÓ·vi·mus, per pas·si·Ó·nem É·yus et CRÚ·chem ad re·sur·rec·ti·Ó·nis GLÓ·ri·am per·du·CÁ·mur. Per E·ÚN·dem CHRÍS·tum DÓ·mi·num NOS·trum. A·men."
+  },
+  {
+    "slug": "regina_caeli",
+    "latinName": "Regina Cæli",
+    "englishName": "Queen of Heaven",
+    "category": "devotional",
+    "sortOrder": 13,
+    "audioFileName": "regina_caeli_ref.m4a",
+    "englishText": "Queen of Heaven, rejoice, alleluia.\nFor He whom thou didst merit to bear, alleluia.\nHath risen, as He said, alleluia.\nPray for us to God, alleluia.\n\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord hath risen indeed, alleluia.\n\nLet us pray. O God, who through the resurrection of Thy Son, our Lord Jesus Christ, didst vouchsafe to give joy to the world: grant, we beseech Thee, that through His Mother, the Virgin Mary, we may obtain the joys of everlasting life. Through the same Christ our Lord. Amen.",
+    "latinText": "Regína cæli, lætáre, allelúia.\nQuia quem meruísti portáre, allelúia.\nResurréxit, sicut dixit, allelúia.\nOra pro nobis Deum, allelúia.\n\nV. Gaude et lætáre, Virgo María, allelúia.\nR. Quia surréxit Dóminus vere, allelúia.\n\nOrémus. Deus, qui per resurrectiónem Fílii tui Dómini nostri Iesu Christi mundum lætificáre dignátus es: præsta, quǽsumus, ut per eius Genetrícem Vírginem Maríam perpétuæ capiámus gáudia vitæ. Per eúndem Christum Dóminum nostrum. Amen.",
+    "phoneticText": "Re·GÍ·na CHÉ·li, le·TÁ·re, al·le·LÚ·ya. QUÍ·a quem me·ru·ÍS·ti por·TÁ·re, al·le·LÚ·ya. Re·sur·RÉK·sit, SÍ·cut DÍK·sit, al·le·LÚ·ya. Ó·ra pro NÓ·bis DÉ·um, al·le·LÚ·ya. GÁU·de et le·TÁ·re, VÍR·go Ma·RÍ·a, al·le·LÚ·ya. QUÍ·a sur·RÉK·sit DÓ·mi·nus VÉ·re, al·le·LÚ·ya. O·RÉ·mus. DÉ·us, qui per re·sur·rec·ti·Ó·nem FÍ·li·i TÚ·i DÓ·mi·ni NOS·tri YÉ·su CHRÍS·ti MUN·dum le·ti·fi·CÁ·re dig·NÁ·tus es: PRÉS·ta, QUÉ·su·mus, ut per É·yus Ge·ne·TRÍ·chem VÍR·gi·nem Ma·RÍ·am per·PÉ·tu·e ca·pi·Á·mus GÁU·di·a VÍ·te. Per E·ÚN·dem CHRÍS·tum DÓ·mi·num NOS·trum. A·men."
+  },
+  {
+    "slug": "memorare",
+    "latinName": "Memorare",
+    "englishName": "The Memorare",
+    "category": "devotional",
+    "sortOrder": 14,
+    "audioFileName": "memorare_ref.m4a",
+    "englishText": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided. Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen.",
+    "latinText": "Memoráre, O piíssima Virgo María, non esse audítum a sǽculo, quemquam ad tua curréntem præsídia, tua implorántem auxília, tua peténtem suffrágia, esse derelíctum. Ego tali animátus confidéntia, ad te, Virgo Vírginum, Mater, curro, ad te vénio, coram te gemens peccátor assísto. Noli, Mater Verbi, verba mea despícere; sed áudi propítia et exáudi. Amen.",
+    "phoneticText": "Me·mo·RÁ·re, O pi·ÍS·si·ma VÍR·go Ma·RÍ·a, non ÉS·se au·DÍ·tum a SÉ·cu·lo, QUEM·quam ad TÚ·a cur·RÉN·tem pre·SÍ·di·a, TÚ·a im·plo·RÁN·tem auk·SÍ·li·a, TÚ·a pe·TÉN·tem suf·FRÁ·gi·a, ÉS·se de·re·LÍC·tum. É·go TÁ·li a·ni·MÁ·tus con·fi·DÉN·ti·a, ad te, VÍR·go VÍR·gi·num, MA·ter, CUR·ro, ad te VÉ·ni·o, CÓ·ram te GÉ·mens pec·CÁ·tor as·SÍS·to. NÓ·li, MA·ter VER·bi, VER·ba MÉ·a des·PÍ·che·re; sed ÁU·di pro·PÍ·ti·a et ek·ÁU·di. A·men."
+  },
+  {
+    "slug": "act_of_contrition",
+    "latinName": "Actus Contritionis",
+    "englishName": "Act of Contrition",
+    "category": "devotional",
+    "sortOrder": 15,
+    "audioFileName": "act_of_contrition_ref.m4a",
+    "englishText": "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of heaven and the pains of hell; but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen.",
+    "latinText": "Deus meus, ex toto corde pǽnitet me ómnium meórum peccatórum, éaque detéstor, quia peccándo, non solum pœnas a te iuste statútas proméritus sum, sed præsértim quia offéndi te, summum bonum, ac dignum qui super ómnia diligáris. Ideo fírmiter propóno, adiuvánte grátia tua, de cétero me non peccatúrum peccandíque occasiónes próximas fugitúrum. Amen.",
+    "phoneticText": "DÉ·us MÉ·us, eks TÓ·to COR·de PÉ·ni·tet me ÓM·ni·um me·Ó·rum pec·ca·TÓ·rum, É·a·que de·TÉS·tor, QUÍ·a pec·CÁN·do, non SÓ·lum PÉ·nas a te YÚS·te sta·TÚ·tas pro·MÉ·ri·tus sum, sed pre·SÉR·tim QUÍ·a of·FÉN·di te, SUM·mum BÓ·num, ac DÍG·num qui SÚ·per ÓM·ni·a di·li·GÁ·ris. Í·de·o FÍR·mi·ter pro·PÓ·no, ad·yu·VÁN·te GRÁ·ti·a TÚ·a, de CHÉ·te·ro me non pec·ca·TÚ·rum pec·can·DÍ·que oc·ca·si·Ó·nes PRÓX·si·mas fu·gi·TÚ·rum. A·men."
+  },
+  {
+    "slug": "alma_redemptoris",
+    "latinName": "Alma Redemptoris Mater",
+    "englishName": "Loving Mother of the Redeemer",
+    "category": "devotional",
+    "sortOrder": 16,
+    "audioFileName": "alma_redemptoris_ref.m4a",
+    "englishText": "Loving Mother of the Redeemer, gate of heaven, star of the sea, assist thy people who have fallen yet strive to rise again. To the wonderment of nature thou bore thy Creator, yet remained a virgin after as before. Thou who received Gabriel's joyful greeting, have pity on us poor sinners.",
+    "latinText": "Alma Redemptóris Mater, quæ pérvia cæli porta manes, et stella maris, succúrre cadénti, súrgere qui curat, pópulo: tu quæ genuísti, natúra miránte, tuum sanctum Genitórem, Virgo prius ac postérius, Gabriélis ab ore sumens illud Ave, peccatórum miserére.",
+    "phoneticText": "AL·ma Re·demp·TÓ·ris MA·ter, que PÉR·vi·a CHÉ·li POR·ta MA·nes, et STEL·la MA·ris, suc·CÚR·re ca·DÉN·ti, SÚR·ge·re qui CÚ·rat, PÓ·pu·lo: tu que ge·nu·ÍS·ti, na·TÚ·ra mi·RÁN·te, TÚ·um SANC·tum Ge·ni·TÓ·rem, VÍR·go PRÍ·us ac pos·TÉ·ri·us, Ga·bri·É·lis ab Ó·re SÚ·mens ÍL·lud A·ve, pec·ca·TÓ·rum mi·se·RÉ·re."
+  },
+  {
+    "slug": "ave_regina_caelorum",
+    "latinName": "Ave Regina Cælorum",
+    "englishName": "Hail, Queen of Heaven",
+    "category": "devotional",
+    "sortOrder": 17,
+    "audioFileName": "ave_regina_caelorum_ref.m4a",
+    "englishText": "Hail, Queen of the Heavens. Hail, Mistress of the Angels. Hail, holy root. Hail, gate of heaven, from whom came light for the world. Rejoice, glorious Virgin, beautiful above all others. Hail, most beautiful, and pray for us to Christ.",
+    "latinText": "Ave Regína cælórum, ave Dómina angelórum, salve radix, salve porta, ex qua mundo lux est orta. Gaude Virgo gloriósa, super omnes speciósa. Vale, o valde decóra, et pro nobis Christum exóra.",
+    "phoneticText": "A·ve Re·GÍ·na che·LÓ·rum, A·ve DÓ·mi·na an·ge·LÓ·rum, SAL·ve RÁ·diks, SAL·ve POR·ta, eks qua MUN·do luks est OR·ta. GÁU·de VÍR·go glo·ri·Ó·sa, SÚ·per OM·nes spe·chi·Ó·sa. VA·le, o VAL·de de·CÓ·ra, et pro NÓ·bis CHRÍS·tum ek·SÓ·ra."
   }
 ]

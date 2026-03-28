@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "ecclesiastical_vowels",
+    "title": "Ecclesiastical Vowels",
+    "latinTitle": "Vocales Ecclesiasticæ",
+    "description": "Learn the five Latin vowels as pronounced in Ecclesiastical (Church) Latin. Master the key difference: 'ae' says 'ay', not 'eye'.",
+    "category": "pronunciation",
+    "sortOrder": 1,
+    "isPremium": false,
+    "estimatedMinutes": 5
+  },
+  {
+    "slug": "consonant_rules",
+    "title": "Consonant Rules",
+    "latinTitle": "Regulæ Consonantium",
+    "description": "The six consonant rules that distinguish Ecclesiastical Latin from Classical: soft C, soft G, V as 'v', TI as 'tsee', GN as 'ny', and doubled consonants.",
+    "category": "pronunciation",
+    "sortOrder": 2,
+    "isPremium": false,
+    "estimatedMinutes": 8
+  },
+  {
+    "slug": "stress_accent",
+    "title": "Stress & Accent",
+    "latinTitle": "Accentus",
+    "description": "Learn the three rules of Latin word stress: the penultimate rule, the antepenultimate rule, and how to identify long vowels.",
+    "category": "pronunciation",
+    "sortOrder": 3,
+    "isPremium": false,
+    "estimatedMinutes": 6
+  },
+  {
+    "slug": "noun_declensions",
+    "title": "First & Second Declensions",
+    "latinTitle": "Declinationes I et II",
+    "description": "Understand the basic noun endings you encounter in every prayer — nominative, genitive, dative, accusative, ablative. Recognize them in the Our Father and Hail Mary.",
+    "category": "grammar",
+    "sortOrder": 4,
+    "isPremium": true,
+    "estimatedMinutes": 15
+  },
+  {
+    "slug": "verb_basics",
+    "title": "Verb Basics: Present & Imperative",
+    "latinTitle": "Verba: Præsens et Imperativus",
+    "description": "Learn the verb forms you hear at Mass — 'ora' (pray), 'credo' (I believe), 'laudamus' (we praise). Understand conjugation patterns.",
+    "category": "grammar",
+    "sortOrder": 5,
+    "isPremium": true,
+    "estimatedMinutes": 12
+  },
+  {
+    "slug": "common_vocabulary",
+    "title": "50 Most Common Prayer Words",
+    "latinTitle": "Vocabularium Frequentissimum",
+    "description": "Master the 50 Latin words that appear most often across traditional prayers. Includes Deus, Dominus, sanctus, gloria, gratia, and more.",
+    "category": "grammar",
+    "sortOrder": 6,
+    "isPremium": true,
+    "estimatedMinutes": 20
+  },
+  {
+    "slug": "ave_maria_course",
+    "title": "Master the Ave Maria",
+    "latinTitle": "Cursus: Ave Maria",
+    "description": "A guided course to fully understand and pronounce the Hail Mary in Latin. Word-by-word breakdown with grammar notes, pronunciation drills, and AI practice.",
+    "category": "prayers",
+    "sortOrder": 7,
+    "isPremium": true,
+    "estimatedMinutes": 25
+  },
+  {
+    "slug": "pater_noster_course",
+    "title": "Master the Pater Noster",
+    "latinTitle": "Cursus: Pater Noster",
+    "description": "Deep dive into the Our Father. Learn every word's meaning, grammatical role, and perfect your pronunciation with AI-guided practice sessions.",
+    "category": "prayers",
+    "sortOrder": 8,
+    "isPremium": true,
+    "estimatedMinutes": 30
+  },
+  {
+    "slug": "mass_server_responses",
+    "title": "Altar Server Responses",
+    "latinTitle": "Responsa Ministranti",
+    "description": "Learn every response an altar server gives during the Traditional Latin Mass. Perfect for those preparing to serve at the altar.",
+    "category": "mass_responses",
+    "sortOrder": 9,
+    "isPremium": true,
+    "estimatedMinutes": 35
+  },
+  {
+    "slug": "congregation_responses",
+    "title": "Congregation Responses",
+    "latinTitle": "Responsa Fidelium",
+    "description": "All the responses the faithful give during a Missa Cantata or dialogue Mass. 'Et cum spiritu tuo', 'Amen', 'Deo gratias', and more.",
+    "category": "mass_responses",
+    "sortOrder": 10,
+    "isPremium": false,
+    "estimatedMinutes": 10
+  },
+  {
+    "slug": "reading_psalms",
+    "title": "Reading Latin Psalms",
+    "latinTitle": "Lectio Psalmorum",
+    "description": "Build fluency by reading selected Psalms in Latin. AI coaching helps with pronunciation and comprehension of the Vulgate text.",
+    "category": "reading",
+    "sortOrder": 11,
+    "isPremium": true,
+    "estimatedMinutes": 30
+  },
+  {
+    "slug": "reading_scripture",
+    "title": "Reading the Vulgate",
+    "latinTitle": "Lectio Vulgatæ",
+    "description": "Practice reading passages from the Latin Vulgate Bible. Start with familiar Gospel passages and build confidence reading sacred Latin text.",
+    "category": "reading",
+    "sortOrder": 12,
+    "isPremium": true,
+    "estimatedMinutes": 30
+  }
+]

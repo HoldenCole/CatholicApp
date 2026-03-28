@@ -9,7 +9,8 @@ struct TextModeToggle: View {
         HStack(spacing: 0) {
             ForEach(TextMode.allCases) { mode in
                 let isDisabled = (mode == .latin && !hasLatin) ||
-                                 (mode == .phonetic && !hasPhonetic)
+                                 (mode == .phonetic && !hasPhonetic) ||
+                                 (mode == .missal && !hasLatin)
                 let isSelected = selectedMode == mode
 
                 Button {

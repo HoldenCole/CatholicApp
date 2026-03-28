@@ -1,10 +1,11 @@
 import SwiftUI
 
 class AppSettings: ObservableObject {
-    @AppStorage("defaultTextMode") var defaultTextMode: TextMode = .english
+    @AppStorage("defaultTextMode") var defaultTextMode: TextMode = .missal
     @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
     @AppStorage("currentStreak") var currentStreak = 0
     @AppStorage("lastPracticeDate") var lastPracticeDate = ""
+    @AppStorage("isPremium") var isPremium = false
 
     func recordPractice() {
         let today = Date().dateKey
@@ -21,6 +22,7 @@ class AppSettings: ObservableObject {
 }
 
 enum TextMode: String, CaseIterable, Identifiable {
+    case missal
     case english
     case latin
     case phonetic
@@ -29,6 +31,7 @@ enum TextMode: String, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
+        case .missal: return "Missal"
         case .english: return "English"
         case .latin: return "Latin"
         case .phonetic: return "Phonetic"

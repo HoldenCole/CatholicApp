@@ -1,0 +1,57 @@
+name: AdAltareDei
+options:
+  bundleIdPrefix: com.adaltaredei
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.2.0"
+    CURRENT_PROJECT_VERSION: 1
+    GENERATE_INFOPLIST_FILE: true
+    INFOPLIST_FILE: AdAltareDei/Supporting/Info.plist
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  AdAltareDei:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: AdAltareDei
+        excludes:
+          - "**/*.xcassets"
+    resources:
+      - path: AdAltareDei/Resources
+      - path: AdAltareDei/Assets.xcassets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.adaltaredei.app
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "Ad Altare Dei records your voice so you can compare your Latin pronunciation to the reference recording."
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    dependencies:
+      - package: DSWaveformImage
+
+packages:
+  DSWaveformImage:
+    url: https://github.com/dmrschmidt/DSWaveformImage
+    from: "14.0.0"
+
+schemes:
+  AdAltareDei:
+    build:
+      targets:
+        AdAltareDei: all
+    run:
+      config: Debug
+    archive:
+      config: Release

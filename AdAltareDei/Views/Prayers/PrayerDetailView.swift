@@ -46,6 +46,22 @@ struct PrayerDetailView: View {
                 if let session = viewModel.latestSession {
                     comfortBadge(session.comfortRating)
                 }
+
+                // Practice button
+                NavigationLink {
+                    PracticeView(prayer: viewModel.prayer)
+                } label: {
+                    HStack {
+                        Image(systemName: "mic.fill")
+                        Text("Practice This Prayer")
+                    }
+                    .font(.uiLabelLarge)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .background(Color.sanctuaryRed)
+                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                }
             }
             .padding()
         }
@@ -84,6 +100,14 @@ struct PrayerDetailView: View {
     @ViewBuilder
     private var prayerTextSection: some View {
         switch viewModel.textMode {
+        case .missal:
+            if viewModel.hasLatinText {
+                MissalTextView(
+                    latinText: viewModel.prayer.latinText,
+                    englishText: viewModel.prayer.englishText
+                )
+            }
+
         case .english:
             Text(viewModel.prayer.englishText)
                 .font(.englishBody)
