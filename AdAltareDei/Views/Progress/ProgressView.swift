@@ -110,6 +110,38 @@ struct SettingsSheet: View {
                     .pickerStyle(.segmented)
                 }
 
+                Section {
+                    ForEach(MissalRite.allCases) { rite in
+                        Button {
+                            appSettings.missalRite = rite
+                        } label: {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(rite.displayName)
+                                        .font(.uiLabel)
+                                        .foregroundStyle(.ink)
+                                    Text(rite.latinName)
+                                        .font(.latinCaption)
+                                        .foregroundStyle(.goldLeaf)
+                                    Text(rite.subtitle)
+                                        .font(.uiCaption)
+                                        .foregroundStyle(.secondary)
+                                        .lineLimit(2)
+                                }
+                                Spacer()
+                                if appSettings.missalRite == rite {
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .foregroundStyle(.sanctuaryRed)
+                                }
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Missal Rubrics")
+                } footer: {
+                    Text("Choose which rubrical calendar and ceremonial to follow. This affects the liturgical calendar, feast rankings, and certain Mass texts.")
+                }
+
                 Section("About") {
                     HStack {
                         Text("App")
@@ -128,7 +160,7 @@ struct SettingsSheet: View {
                     HStack {
                         Text("Rite")
                         Spacer()
-                        Text("Traditional Latin Mass (1962)")
+                        Text(appSettings.missalRite.displayName)
                             .foregroundStyle(.secondary)
                     }
                 }
