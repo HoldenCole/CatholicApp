@@ -262,5 +262,49 @@
     "englishText": "Blessed be God.\nBlessed be His Holy Name.\nBlessed be Jesus Christ, true God and true Man.\nBlessed be the Name of Jesus.\nBlessed be His Most Sacred Heart.\nBlessed be His Most Precious Blood.\nBlessed be Jesus in the Most Holy Sacrament of the Altar.\nBlessed be the Holy Spirit, the Paraclete.\nBlessed be the great Mother of God, Mary most Holy.\nBlessed be her Holy and Immaculate Conception.\nBlessed be her Glorious Assumption.\nBlessed be the name of Mary, Virgin and Mother.\nBlessed be St. Joseph, her most chaste spouse.\nBlessed be God in His Angels and in His Saints.",
     "latinText": "Benedíctus Deus.\nBenedíctum Nomen Sanctum eius.\nBenedíctus Iesus Christus, verus Deus et verus homo.\nBenedíctum Nomen Iesu.\nBenedíctum Cor eius sacratíssimum.\nBenedíctus Sanguis eius pretiosíssimus.\nBenedíctus Iesus in sanctíssimo altáris Sacraménto.\nBenedíctus Sanctus Spíritus, Paráclitus.\nBenedícta excelsa Mater Dei, María sanctíssima.\nBenedícta sancta eius et immaculáta Concéptio.\nBenedícta gloriósa eius Assúmptio.\nBenedíctum nomen Maríæ, Vírginis et Matris.\nBenedíctus Sanctus Ioseph, eius castíssimus Sponsus.\nBenedíctus Deus in Angelis suis et in Sanctis suis.",
     "phoneticText": "Be·ne·DÍC·tus DÉ·us. Be·ne·DÍC·tum NÓ·men SANC·tum É·yus. Be·ne·DÍC·tus YÉ·sus CHRÍS·tus, VÉ·rus DÉ·us et VÉ·rus HÓ·mo."
+  },
+  {
+    "slug": "anima_christi",
+    "latinName": "Anima Christi",
+    "englishName": "Soul of Christ",
+    "category": "devotional",
+    "sortOrder": 25,
+    "audioFileName": "anima_christi_ref.m4a",
+    "englishText": "Soul of Christ, sanctify me.\nBody of Christ, save me.\nBlood of Christ, inebriate me.\nWater from the side of Christ, wash me.\nPassion of Christ, strengthen me.\nO good Jesus, hear me.\nWithin Thy wounds hide me.\nSuffer me not to be separated from Thee.\nFrom the malicious enemy defend me.\nIn the hour of my death call me.\nAnd bid me come unto Thee.\nThat with Thy Saints I may praise Thee.\nForever and ever. Amen.",
+    "latinText": "Anima Christi, sanctífica me.\nCorpus Christi, salva me.\nSanguis Christi, inébria me.\nAqua láteris Christi, lava me.\nPássio Christi, confórta me.\nO bone Iesu, exáudi me.\nIntra tua vúlnera abscónde me.\nNe permíttas me separári a te.\nAb hoste malígno defénde me.\nIn hora mortis meæ voca me.\nEt iube me veníre ad te.\nUt cum Sanctis tuis laudem te.\nIn sǽcula sæculórum. Amen.",
+    "phoneticText": "Á·ni·ma CHRÍS·ti, sanc·TÍ·fi·ca me. COR·pus CHRÍS·ti, SAL·va me. SAN·guis CHRÍS·ti, in·É·bri·a me. Á·qua LÁ·te·ris CHRÍS·ti, LA·va me. PÁS·si·o CHRÍS·ti, con·FÓR·ta me. O BÓ·ne YÉ·su, ek·SÁU·di me. ÍN·tra TÚ·a VÚL·ne·ra abs·CÓN·de me. Ne per·MÍT·tas me se·pa·RÁ·ri a te. Ab HÓS·te ma·LÍG·no de·FÉN·de me. In HÓ·ra MOR·tis MÉ·e VÓ·ca me. Et YÚ·be me ve·NÍ·re ad te. Ut cum SANC·tis TÚ·is LAU·dem te. In SÉ·cu·la se·cu·LÓ·rum. A·men."
+  },
+  {
+    "slug": "tantum_ergo",
+    "latinName": "Tantum Ergo",
+    "englishName": "Therefore So Great a Sacrament",
+    "category": "devotional",
+    "sortOrder": 26,
+    "audioFileName": "tantum_ergo_ref.m4a",
+    "englishText": "Therefore so great a Sacrament\nLet us venerate with bowed heads;\nAnd let the old practice\nGive way to the new rite;\nLet faith provide a supplement\nFor the failure of the senses.\n\nTo the Begetter and the Begotten\nBe praise and jubilation,\nSalvation, honor, virtue also,\nAnd blessing too;\nTo Him Who proceeds from Both\nLet there be equal praise. Amen.",
+    "latinText": "Tantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\n\nGenitóri, Genitóque\nLaus et iubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio. Amen.",
+    "phoneticText": "TAN·tum ÉR·go Sa·cra·MÉN·tum ve·ne·RÉ·mur CHÉR·nu·i: et an·TÍ·quum do·cu·MÉN·tum NÓ·vo CHÉ·dat RÍ·tu·i: PRÉS·tet FÍ·des sup·ple·MÉN·tum SÉN·su·um de·FÉC·tu·i. Ge·ni·TÓ·ri, Ge·ni·TÓ·que laus et yu·bi·LÁ·ti·o, SA·lus, HÓ·nor, VÍR·tus QUÓ·que sit et be·ne·DÍC·ti·o: Pro·che·DÉN·ti ab u·TRÓ·que COM·par sit lau·DÁ·ti·o. A·men."
+  },
+  {
+    "slug": "o_salutaris",
+    "latinName": "O Salutaris Hostia",
+    "englishName": "O Saving Victim",
+    "category": "devotional",
+    "sortOrder": 27,
+    "audioFileName": "o_salutaris_ref.m4a",
+    "englishText": "O saving Victim, opening wide\nThe gate of heaven to man below;\nOur foes press on from every side;\nThine aid supply, Thy strength bestow.\n\nTo Thy great name be endless praise,\nImmortal Godhead, One in Three;\nOh, grant us endless length of days\nIn our true native land with Thee. Amen.",
+    "latinText": "O salutáris Hóstia,\nQuæ cæli pandis óstium:\nBella premunt hostília,\nDa robur, fer auxílium.\n\nUni trinóque Dómino\nSit sempitérna glória,\nQui vitam sine término\nNobis donet in pátria. Amen.",
+    "phoneticText": "O sa·lu·TÁ·ris HÓS·ti·a, que CHÉ·li PAN·dis ÓS·ti·um: BÉL·la PRÉ·munt hos·TÍ·li·a, da RÓ·bur, fer auk·SÍ·li·um. Ú·ni tri·NÓ·que DÓ·mi·no sit sem·pi·TÉR·na GLÓ·ri·a, qui VÍ·tam SÍ·ne TÉR·mi·no NÓ·bis DÓ·net in PÁ·tri·a. A·men."
+  },
+  {
+    "slug": "stabat_mater",
+    "latinName": "Stabat Mater",
+    "englishName": "The Mother Was Standing",
+    "category": "devotional",
+    "sortOrder": 28,
+    "audioFileName": "stabat_mater_ref.m4a",
+    "englishText": "At the Cross her station keeping,\nStood the mournful Mother weeping,\nClose to Jesus to the last.\nThrough her heart, His sorrow sharing,\nAll His bitter anguish bearing,\nNow at length the sword had passed.\n\nOh, how sad and sore distressed\nWas that Mother highly blest\nOf the sole-begotten One!\nChrist above in torment hangs;\nShe beneath beholds the pangs\nOf her dying glorious Son.",
+    "latinText": "Stabat mater dolorósa\nIuxta crucem lacrimósa,\nDum pendébat Fílius.\nCuius ánimam geméntem,\nContristátam et doléntem\nPertransívit gládius.\n\nO quam tristis et afflícta\nFuit illa benedícta\nMater Unigéniti!\nQuæ mærébat et dolébat,\nPia mater, dum vidébat\nNati pœnas íncliti.",
+    "phoneticText": "STA·bat MA·ter do·lo·RÓ·sa YUKS·ta CRÚ·chem la·cri·MÓ·sa, dum pen·DÉ·bat FÍ·li·us. CÚ·yus Á·ni·mam ge·MÉN·tem, con·tris·TÁ·tam et do·LÉN·tem per·tran·SÍ·vit GLÁ·di·us. O quam TRÍS·tis et af·FLÍC·ta FÚ·it ÍL·la be·ne·DÍC·ta MA·ter U·ni·GÉ·ni·ti! Que me·RÉ·bat et do·LÉ·bat, PÍ·a MA·ter, dum vi·DÉ·bat NA·ti PÉ·nas ÍN·cli·ti."
   }
 ]
