@@ -339,5 +339,71 @@
     "englishText": "Out of the depths I have cried to Thee, O Lord: Lord, hear my voice.\nLet Thy ears be attentive to the voice of my supplication.\nIf Thou, O Lord, shalt observe iniquities: Lord, who shall endure it?\nFor with Thee there is merciful forgiveness: and by reason of Thy law I have waited for Thee, O Lord.\nMy soul hath relied on His word: my soul hath hoped in the Lord.\nFrom the morning watch even until night, let Israel hope in the Lord.\nBecause with the Lord there is mercy: and with Him plentiful redemption.\nAnd He shall redeem Israel from all his iniquities.\n\nV. Eternal rest grant unto them, O Lord.\nR. And let perpetual light shine upon them.\nV. May they rest in peace.\nR. Amen.",
     "latinText": "De profúndis clamávi ad te, Dómine: Dómine, exáudi vocem meam.\nFiant aures tuæ intendéntes in vocem deprecatiónis meæ.\nSi iniquitátes observáveris, Dómine: Dómine, quis sustinébit?\nQuia apud te propitátio est: et propter legem tuam sustínui te, Dómine.\nSustínuit ánima mea in verbo eius: sperávit ánima mea in Dómino.\nA custódia matutína usque ad noctem: speret Israël in Dómino.\nQuia apud Dóminum misericórdia: et copiósa apud eum redémptio.\nEt ipse rédimet Israël ex ómnibus iniquitátibus eius.\n\nV. Réquiem ætérnam dona eis, Dómine.\nR. Et lux perpétua lúceat eis.\nV. Requiéscant in pace.\nR. Amen.",
     "phoneticText": "De pro·FÚN·dis cla·MÁ·vi ad te, DÓ·mi·ne: DÓ·mi·ne, ek·SÁU·di VÓ·chem MÉ·am. FÍ·ant ÁU·res TÚ·e in·ten·DÉN·tes in VÓ·chem de·pre·ca·ti·Ó·nis MÉ·e."
+  },
+  {
+    "slug": "morning_offering",
+    "latinName": "Oblatio Matutina",
+    "englishName": "Morning Offering",
+    "category": "devotional",
+    "sortOrder": 32,
+    "audioFileName": "morning_offering_ref.m4a",
+    "englishText": "O Jesus, through the Immaculate Heart of Mary, I offer Thee my prayers, works, joys, and sufferings of this day, for all the intentions of Thy Sacred Heart, in union with the Holy Sacrifice of the Mass throughout the world, in reparation for my sins, for the intentions of all our associates, and in particular for the intention recommended this month by the Holy Father. Amen.",
+    "latinText": "Dómine Iesu, per Cor Immaculátum Maríæ, óffero Tibi oratiónes, ópera, gáudia et dolóres huius diéi, pro ómnibus intentónibus Córdis Tui Sacratíssimi, in unióne cum Sancto Sacrifício Missæ per totum orbem, in reparatiónem peccatórum meórum, pro intentiónibus ómnium sodálium nostrórum, et in spécie pro intentióne a Summo Pontífice hoc mense commendáta. Amen.",
+    "phoneticText": "DÓ·mi·ne YÉ·su, per Cor Im·ma·cu·LÁ·tum Ma·RÍ·e, ÓF·fe·ro TÍ·bi o·ra·ti·Ó·nes, Ó·pe·ra, GÁU·di·a et do·LÓ·res HÚ·yus di·É·i."
+  },
+  {
+    "slug": "st_michael_prayer",
+    "latinName": "Oratio ad Sanctum Michaëlem",
+    "englishName": "Prayer to St. Michael",
+    "category": "devotional",
+    "sortOrder": 33,
+    "audioFileName": "st_michael_ref.m4a",
+    "englishText": "Saint Michael the Archangel, defend us in battle; be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray: and do thou, O Prince of the heavenly host, by the power of God, thrust into hell Satan and all the evil spirits who prowl about the world seeking the ruin of souls. Amen.",
+    "latinText": "Sancte Michaël Archángele, defénde nos in prǽlio; contra nequítiam et insídias diáboli esto præsídium. Imperet illi Deus, súpplices deprecámur: tuque, Princeps milítiæ cæléstis, Sátanam aliósque spíritus malígnos, qui ad perditiónem animárum pervagántur in mundo, divína virtúte in inférnum detrúde. Amen.",
+    "phoneticText": "SANC·te Mi·cha·ël Ar·CHÁN·ge·le, de·FÉN·de nos in PRÉ·li·o; CON·tra ne·QUÍ·ti·am et in·SÍ·di·as di·Á·bo·li ÉS·to pre·SÍ·di·um. ÍM·pe·ret ÍL·li DÉ·us, SÚP·pli·ches de·pre·CÁ·mur: TÚ·que, PRÍN·cheps mi·LÍ·ti·e che·LÉS·tis, SÁ·ta·nam a·li·ÓS·que SPÍ·ri·tus ma·LÍG·nos, qui ad per·di·ti·Ó·nem a·ni·MÁ·rum per·va·GÁN·tur in MUN·do, di·VÍ·na vir·TÚ·te in in·FÉR·num de·TRÚ·de. A·men."
+  },
+  {
+    "slug": "grace_before_meals",
+    "latinName": "Benedictio Mensæ",
+    "englishName": "Grace Before Meals",
+    "category": "devotional",
+    "sortOrder": 34,
+    "audioFileName": "grace_before_ref.m4a",
+    "englishText": "Bless us, O Lord, and these Thy gifts, which we are about to receive from Thy bounty, through Christ our Lord. Amen.",
+    "latinText": "Bénedic, Dómine, nos et hæc tua dona quæ de tua largitáte sumus sumptúri. Per Christum Dóminum nostrum. Amen.",
+    "phoneticText": "BÉ·ne·dic, DÓ·mi·ne, nos et hec TÚ·a DÓ·na que de TÚ·a lar·gi·TÁ·te SÚ·mus sump·TÚ·ri. Per CHRÍS·tum DÓ·mi·num NOS·trum. A·men."
+  },
+  {
+    "slug": "grace_after_meals",
+    "latinName": "Gratiæ Post Mensam",
+    "englishName": "Grace After Meals",
+    "category": "devotional",
+    "sortOrder": 35,
+    "audioFileName": "grace_after_ref.m4a",
+    "englishText": "We give Thee thanks, almighty God, for all Thy benefits, Who livest and reignest, world without end. Amen.\n\nV. May the souls of the faithful departed, through the mercy of God, rest in peace.\nR. Amen.",
+    "latinText": "Agimus tibi grátias, omnípotens Deus, pro univérsis benefíciis tuis, qui vivis et regnas in sǽcula sæculórum. Amen.\n\nV. Fidélium ánimæ, per misericórdiam Dei, requiéscant in pace.\nR. Amen.",
+    "phoneticText": "Á·gi·mus TÍ·bi GRÁ·ti·as, om·NÍ·po·tens DÉ·us, pro u·ni·VÉR·sis be·ne·FÍ·chi·is TÚ·is, qui VÍ·vis et RÉG·nas in SÉ·cu·la se·cu·LÓ·rum. A·men."
+  },
+  {
+    "slug": "guardian_angel",
+    "latinName": "Angele Dei",
+    "englishName": "Prayer to the Guardian Angel",
+    "category": "devotional",
+    "sortOrder": 36,
+    "audioFileName": "guardian_angel_ref.m4a",
+    "englishText": "Angel of God, my guardian dear, to whom God's love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen.",
+    "latinText": "Ángele Dei, qui custos es mei, me, tibi commíssum pietáte supérna, illúmina, custódi, rege et gubérna. Amen.",
+    "phoneticText": "ÁN·ge·le DÉ·i, qui CUS·tos es MÉ·i, me, TÍ·bi com·MÍS·sum pi·e·TÁ·te su·PÉR·na, il·LÚ·mi·na, cus·TÓ·di, RÉ·ge et gu·BÉR·na. A·men."
+  },
+  {
+    "slug": "eternal_rest",
+    "latinName": "Requiem Æternam",
+    "englishName": "Eternal Rest",
+    "category": "devotional",
+    "sortOrder": 37,
+    "audioFileName": "eternal_rest_ref.m4a",
+    "englishText": "Eternal rest grant unto them, O Lord, and let perpetual light shine upon them. May they rest in peace. Amen.",
+    "latinText": "Réquiem ætérnam dona eis, Dómine, et lux perpétua lúceat eis. Requiéscant in pace. Amen.",
+    "phoneticText": "RÉ·qui·em e·TÉR·nam DÓ·na É·is, DÓ·mi·ne, et luks per·PÉ·tu·a LÚ·che·at É·is. Re·qui·ÉS·cant in PÁ·che. A·men."
   }
 ]
