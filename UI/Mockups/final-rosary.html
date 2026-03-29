@@ -102,143 +102,105 @@
       Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.
     </div>
 
-    <!-- FULL ROSARY MAP -->
+    <!-- ROSARY SHAPE VISUALIZATION -->
     <div class="rosary-map">
       <div class="rosary-map-title">Your Position</div>
-      <div class="rosary-visual">
+      <svg viewBox="0 0 300 280" width="300" height="280" style="display:block;margin:0 auto">
+        <!-- Rosary loop (oval) -->
+        <!-- Decade I — top, 10 o'clock to 12 o'clock (completed) -->
+        <circle cx="72" cy="68" r="5" fill="#B8960C"/> <!-- OF -->
+        <circle cx="58" cy="82" r="4" fill="#8B1A1A"/>
+        <circle cx="48" cy="97" r="4" fill="#8B1A1A"/>
+        <circle cx="42" cy="113" r="4" fill="#8B1A1A"/>
+        <circle cx="40" cy="129" r="4" fill="#8B1A1A"/>
+        <circle cx="42" cy="145" r="4" fill="#8B1A1A"/>
+        <circle cx="40" cy="129" r="4" fill="#8B1A1A"/>
+        <circle cx="48" cy="161" r="4" fill="#8B1A1A"/>
+        <circle cx="42" cy="145" r="4" fill="#8B1A1A"/>
+        <circle cx="48" cy="97" r="4" fill="#8B1A1A"/>
+        <circle cx="58" cy="177" r="4" fill="#8B1A1A"/>
+        <circle cx="72" cy="190" r="4" fill="#8B1A1A"/>
+        <circle cx="88" cy="198" r="4" fill="#8B1A1A"/>
 
-        <!-- Opening: Cross + Creed + 1 OF + 3 HM + 1 GB -->
-        <div class="opening-row">
-          <span style="font-size:10px;color:#B8960C44">✟</span>
-          <div class="map-bead done"></div>
-          <div class="map-bead pater done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-        </div>
+        <!-- Decade II — bottom left to bottom (in progress, 4/10 done) -->
+        <circle cx="106" cy="204" r="5" fill="#B8960C"/> <!-- OF -->
+        <circle cx="115" cy="210" r="4" fill="#8B1A1A"/>
+        <circle cx="125" cy="214" r="4" fill="#8B1A1A"/>
+        <circle cx="136" cy="216" r="4" fill="#8B1A1A"/>
+        <circle cx="147" cy="216" r="5" fill="#8B1A1A" style="filter:drop-shadow(0 0 6px rgba(139,26,26,0.7))"/> <!-- CURRENT -->
+        <circle cx="158" cy="216" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="169" cy="214" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="179" cy="210" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="189" cy="205" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="197" cy="198" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="204" cy="190" r="4" fill="#8B1A1A" opacity="0.2"/>
 
-        <!-- Decade I — completed -->
-        <div class="decade-row">
-          <div class="decade-label">I</div>
-          <div class="map-bead pater done"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-        </div>
+        <!-- Decade III — bottom right going up (not started) -->
+        <circle cx="215" cy="178" r="5" fill="#B8960C" opacity="0.2"/> <!-- OF -->
+        <circle cx="224" cy="164" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="230" cy="149" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="232" cy="134" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="232" cy="119" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="230" cy="104" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="224" cy="90" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="216" cy="78" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="206" cy="68" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="194" cy="60" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="182" cy="55" r="4" fill="#8B1A1A" opacity="0.2"/>
 
-        <!-- Decade II — in progress (4 of 10 done) -->
-        <div class="decade-row">
-          <div class="decade-label">II</div>
-          <div class="map-bead pater done"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead done"></div>
-          <div class="map-bead active"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-        </div>
+        <!-- Decade IV — top right (not started) -->
+        <circle cx="168" cy="48" r="5" fill="#B8960C" opacity="0.2"/>
+        <circle cx="157" cy="44" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="147" cy="42" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="137" cy="42" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="127" cy="44" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="117" cy="48" r="4" fill="#8B1A1A" opacity="0.2"/>
 
-        <!-- Decade III — not started -->
-        <div class="decade-row">
-          <div class="decade-label">III</div>
-          <div class="map-bead pater"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-        </div>
+        <!-- Decade V — top left back to start (not started) -->
+        <circle cx="107" cy="48" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="97" cy="52" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="88" cy="56" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="80" cy="62" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="72" cy="54" r="5" fill="#B8960C" opacity="0.2"/>
 
-        <!-- Decade IV -->
-        <div class="decade-row">
-          <div class="decade-label">IV</div>
-          <div class="map-bead pater"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-        </div>
+        <!-- CENTER PIECE / junction at top -->
+        <circle cx="90" cy="48" r="6" fill="none" stroke="#B8960C" stroke-width="1" opacity="0.3"/>
 
-        <!-- Decade V -->
-        <div class="decade-row">
-          <div class="decade-label">V</div>
-          <div class="map-bead pater"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-          <div class="decade-gap"></div>
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-        </div>
+        <!-- TAIL — hanging down from center -->
+        <!-- 3 Hail Marys + Our Father + Creed (all completed) -->
+        <line x1="90" y1="54" x2="90" y2="80" stroke="#B8960C" stroke-width="0.5" opacity="0.2"/>
+        <circle cx="90" cy="66" r="4" fill="#8B1A1A"/> <!-- HM -->
+        <circle cx="90" cy="78" r="4" fill="#8B1A1A"/> <!-- HM -->
+        <circle cx="90" cy="90" r="4" fill="#8B1A1A"/> <!-- HM -->
+        <line x1="90" y1="94" x2="90" y2="112" stroke="#B8960C" stroke-width="0.5" opacity="0.2"/>
+        <circle cx="90" cy="104" r="5" fill="#B8960C"/> <!-- OF -->
+        <circle cx="90" cy="116" r="4" fill="#8B1A1A"/> <!-- Creed -->
 
-        <!-- Closing -->
-        <div class="opening-row" style="margin-top:4px">
-          <div class="map-bead"></div>
-          <div class="map-bead"></div>
-        </div>
+        <!-- CRUCIFIX at bottom of tail -->
+        <line x1="90" y1="120" x2="90" y2="145" stroke="#B8960C" stroke-width="1" opacity="0.4"/>
+        <line x1="82" y1="132" x2="98" y2="132" stroke="#B8960C" stroke-width="1" opacity="0.4"/>
 
-      </div>
+        <!-- Decade labels around the loop -->
+        <text x="28" y="130" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">I</text>
+        <text x="140" y="232" font-family="Cormorant Garamond,serif" font-size="9" fill="#B8960C" font-style="italic">II</text>
+        <text x="244" y="130" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">III</text>
+        <text x="168" y="35" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">IV</text>
+        <text x="60" y="35" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">V</text>
+      </svg>
 
       <!-- Legend -->
-      <div style="display:flex;justify-content:center;gap:16px;margin-top:12px">
+      <div style="display:flex;justify-content:center;gap:16px;margin-top:8px">
         <div style="display:flex;align-items:center;gap:4px">
           <div style="width:6px;height:6px;border-radius:50%;background:#8B1A1A"></div>
-          <span style="font-size:9px;color:#665544">Hail Mary</span>
+          <span style="font-size:9px;color:#665544">Completed</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:6px;height:6px;border-radius:50%;background:#8B1A1A;box-shadow:0 0 6px rgba(139,26,26,0.6)"></div>
+          <span style="font-size:9px;color:#665544">You are here</span>
         </div>
         <div style="display:flex;align-items:center;gap:4px">
           <div style="width:8px;height:8px;border-radius:50%;background:#B8960C"></div>
           <span style="font-size:9px;color:#665544">Our Father</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:4px">
-          <div style="width:6px;height:6px;border-radius:50%;background:#8B1A1A;box-shadow:0 0 6px rgba(139,26,26,0.5)"></div>
-          <span style="font-size:9px;color:#665544">You are here</span>
         </div>
       </div>
     </div>
