@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guided Rosary — Final</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0;background:#1a1410}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+  .scroll{overflow-y:auto;height:100%;-webkit-overflow-scrolling:touch;padding:54px 24px 120px}
+
+  /* Progress */
+  .progress-bar{height:2px;background:#B8960C15;border-radius:1px;margin-bottom:6px}
+  .progress-fill{height:2px;background:#8B1A1A;border-radius:1px;width:35%}
+  .progress-meta{display:flex;justify-content:space-between;margin-bottom:28px}
+  .progress-meta span{font-size:11px;font-family:'Cormorant Garamond',serif;font-style:italic}
+  .progress-meta .left{color:#B8960C}
+  .progress-meta .right{color:#665544}
+
+  /* Step header */
+  .step-center{text-align:center;margin-bottom:20px}
+  .step-name{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:#EDE8DC}
+  .step-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#776655;font-style:italic;margin-top:4px}
+
+  /* Decade beads */
+  .beads{display:flex;justify-content:center;gap:7px;margin:20px 0}
+  .bead{width:8px;height:8px;border-radius:50%;background:#8B1A1A33}
+  .bead.filled{background:#8B1A1A}
+  .bead.current{background:#8B1A1A;width:12px;height:12px;margin-top:-2px;box-shadow:0 0 12px rgba(139,26,26,0.4)}
+
+  /* Prayer text */
+  .prayer-text{font-family:'Playfair Display',serif;font-size:18px;color:#EDE8DC;line-height:1.9;text-align:center;margin:20px 0;opacity:0.9}
+  .prayer-eng{font-family:'EB Garamond',serif;font-size:14px;color:#665544;font-style:italic;text-align:center;line-height:1.7;margin-top:16px;padding-top:16px;border-top:1px solid #B8960C15}
+
+  /* ═══ FULL ROSARY MAP ═══ */
+  .rosary-map{margin-top:28px;padding-top:20px;border-top:1px solid #B8960C15}
+  .rosary-map-title{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;color:#B8960C;letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:14px}
+
+  .rosary-visual{display:flex;flex-direction:column;align-items:center;gap:8px}
+
+  /* Opening beads row */
+  .opening-row{display:flex;align-items:center;gap:4px;justify-content:center}
+  .map-bead{width:6px;height:6px;border-radius:50%;background:#8B1A1A22}
+  .map-bead.done{background:#8B1A1A}
+  .map-bead.active{background:#8B1A1A;box-shadow:0 0 6px rgba(139,26,26,0.5)}
+  .map-bead.pater{width:8px;height:8px;border-radius:50%;background:#B8960C22}
+  .map-bead.pater.done{background:#B8960C}
+
+  /* Decade rows */
+  .decade-row{display:flex;align-items:center;gap:3px;justify-content:center}
+  .decade-label{font-family:'Cormorant Garamond',serif;font-size:9px;color:#665544;width:14px;text-align:right;margin-right:4px;flex-shrink:0;font-style:italic}
+  .decade-gap{width:8px}
+
+  /* Navigation */
+  .nav-bar{position:absolute;bottom:0;left:0;right:0;padding:16px 24px 40px;background:linear-gradient(transparent,#1a1410 30%);display:flex;gap:16px;align-items:center}
+  .nav-back{width:50px;height:50px;border-radius:50%;border:1px solid #B8960C22;display:flex;align-items:center;justify-content:center;font-size:18px;color:#EDE8DC;flex-shrink:0;cursor:pointer}
+  .nav-next{flex:1;background:#8B1A1A;color:white;text-align:center;padding:14px;border-radius:6px;font-size:15px;font-weight:600;border:none;cursor:pointer}
+</style>
+</head>
+<body>
+
+<h1>Guided Rosary — Final Design</h1>
+<div class="sub">Dark, immersive, with full rosary position map</div>
+
+<div>
+<div class="phone">
+  <div class="scroll">
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <div class="progress-meta"><span class="left">Decade II of V</span><span class="right">25 of 72</span></div>
+
+    <div class="step-center">
+      <div class="step-name">Ave Maria</div>
+      <div class="step-sub">Hail Mary — iv of x</div>
+    </div>
+
+    <!-- Decade beads -->
+    <div class="beads">
+      <div class="bead filled"></div>
+      <div class="bead filled"></div>
+      <div class="bead filled"></div>
+      <div class="bead current"></div>
+      <div class="bead"></div>
+      <div class="bead"></div>
+      <div class="bead"></div>
+      <div class="bead"></div>
+      <div class="bead"></div>
+      <div class="bead"></div>
+    </div>
+
+    <!-- Prayer text -->
+    <div class="prayer-text">
+      Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.
+    </div>
+
+    <div class="prayer-eng">
+      Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.
+    </div>
+
+    <!-- FULL ROSARY MAP -->
+    <div class="rosary-map">
+      <div class="rosary-map-title">Your Position</div>
+      <div class="rosary-visual">
+
+        <!-- Opening: Cross + Creed + 1 OF + 3 HM + 1 GB -->
+        <div class="opening-row">
+          <span style="font-size:10px;color:#B8960C44">✟</span>
+          <div class="map-bead done"></div>
+          <div class="map-bead pater done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+        </div>
+
+        <!-- Decade I — completed -->
+        <div class="decade-row">
+          <div class="decade-label">I</div>
+          <div class="map-bead pater done"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+        </div>
+
+        <!-- Decade II — in progress (4 of 10 done) -->
+        <div class="decade-row">
+          <div class="decade-label">II</div>
+          <div class="map-bead pater done"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead done"></div>
+          <div class="map-bead active"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+        </div>
+
+        <!-- Decade III — not started -->
+        <div class="decade-row">
+          <div class="decade-label">III</div>
+          <div class="map-bead pater"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+        </div>
+
+        <!-- Decade IV -->
+        <div class="decade-row">
+          <div class="decade-label">IV</div>
+          <div class="map-bead pater"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+        </div>
+
+        <!-- Decade V -->
+        <div class="decade-row">
+          <div class="decade-label">V</div>
+          <div class="map-bead pater"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+          <div class="decade-gap"></div>
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+        </div>
+
+        <!-- Closing -->
+        <div class="opening-row" style="margin-top:4px">
+          <div class="map-bead"></div>
+          <div class="map-bead"></div>
+        </div>
+
+      </div>
+
+      <!-- Legend -->
+      <div style="display:flex;justify-content:center;gap:16px;margin-top:12px">
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:6px;height:6px;border-radius:50%;background:#8B1A1A"></div>
+          <span style="font-size:9px;color:#665544">Hail Mary</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:8px;height:8px;border-radius:50%;background:#B8960C"></div>
+          <span style="font-size:9px;color:#665544">Our Father</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:6px;height:6px;border-radius:50%;background:#8B1A1A;box-shadow:0 0 6px rgba(139,26,26,0.5)"></div>
+          <span style="font-size:9px;color:#665544">You are here</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="nav-bar">
+    <div class="nav-back">‹</div>
+    <div class="nav-next">Next →</div>
+  </div>
+</div>
+<div class="lbl">Guided Rosary</div>
+<div class="desc">Dark immersive. Glowing current bead. English below.<br>Full rosary map at bottom shows your exact position<br>across all 5 decades. Roman numeral labels. Legend.</div>
+</div>
+
+</body>
+</html>
