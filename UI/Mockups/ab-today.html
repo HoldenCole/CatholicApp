@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/B — Today Tab</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+  .scroll{overflow-y:auto;height:calc(100% - 84px);-webkit-overflow-scrolling:touch}
+
+  .tab-bar{position:absolute;bottom:0;left:0;right:0;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px}
+  .tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500}
+  .tab-item.active{color:#8B1A1A}
+  .tab-icon{font-size:20px}
+
+  /* Shared */
+  .orn-line{display:flex;align-items:center;gap:12px;margin:20px 0}
+  .orn-line::before,.orn-line::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}
+  .orn-line span{color:#B8960C;font-size:11px;opacity:0.5}
+
+  .missal-badge{display:flex;align-items:center;gap:4px;font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:4px 10px;border-radius:4px;cursor:pointer}
+
+  .sec-title{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
+  .sec-sub{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:12px}
+
+  .penance-block{border-left:3px solid #8B1A1A;padding:12px 0 12px 16px;margin-bottom:4px}
+  .penance-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#1C1410}
+  .penance-tag{display:inline-block;font-size:9px;font-weight:700;color:#8B1A1A;border:1px solid rgba(139,26,26,0.3);padding:1px 6px;border-radius:3px;letter-spacing:0.5px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
+  .penance-desc{font-family:'EB Garamond',serif;font-size:14px;color:#998877;margin-top:3px}
+
+  .devotion-row{padding:11px 0;border-bottom:1px solid rgba(184,150,12,0.08)}
+  .devotion-name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
+  .devotion-latin{font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic}
+
+  .rosary-box{border:1px solid #8B1A1A33;border-radius:8px;padding:18px;position:relative;cursor:pointer}
+  .rosary-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8B1A1A,#B8960C);border-radius:8px 8px 0 0}
+  .rosary-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:600}
+  .rosary-sub{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;margin-top:2px}
+  .rosary-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:18px;color:#B8960C}
+
+  /* ═══ A — Full Parchment ═══ */
+  .opt-a{background:#F2EBE0}
+  .opt-a .scroll{padding:54px 24px 20px}
+  .opt-a .feria{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:#B8960C;letter-spacing:3px;text-transform:uppercase}
+  .opt-a .day{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#1C1410;line-height:1.1;margin:4px 0 2px}
+  .opt-a .date{font-family:'Cormorant Garamond',serif;font-size:14px;color:#998877;font-style:italic}
+  .opt-a .rosary-title{color:#1C1410}
+  .opt-a .rosary-sub{color:#8B1A1A}
+  .opt-a .tab-bar{background:#FDFAF4}
+
+  /* ═══ B — Dark Header ═══ */
+  .opt-b{background:#F2EBE0}
+  .opt-b .header-band{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 22px;margin-bottom:0}
+  .opt-b .feria{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:#B8960C;letter-spacing:3px;text-transform:uppercase}
+  .opt-b .day{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#EDE8DC;line-height:1.1;margin:4px 0 2px}
+  .opt-b .date{font-family:'Cormorant Garamond',serif;font-size:14px;color:#776655;font-style:italic}
+  .opt-b .missal-badge{border-color:#B8960C33}
+  .opt-b .content{padding:16px 24px 20px}
+  .opt-b .rosary-title{color:#1C1410}
+  .opt-b .rosary-sub{color:#8B1A1A}
+  .opt-b .tab-bar{background:#FDFAF4}
+</style>
+</head>
+<body>
+
+<h1>Today Tab — A/B Test</h1>
+<div class="sub">Home dashboard layout</div>
+
+<!-- ═════ A — Full Parchment ═════ -->
+<div>
+<div class="phone opt-a">
+  <div class="scroll">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px">
+      <div class="feria">Feria Sexta</div>
+      <div class="missal-badge">1962 Missal <span style="font-size:8px;opacity:0.6">▾</span></div>
+    </div>
+    <div class="day">Friday</div>
+    <div class="date">the twenty-eighth of March</div>
+
+    <div class="orn-line"><span>✟</span></div>
+
+    <div class="sec-title">Penance</div>
+    <div class="sec-sub">Pænitentia</div>
+    <div class="penance-block">
+      <div class="penance-title">Friday Abstinence <span class="penance-tag">Abstinence</span></div>
+      <div class="penance-desc">Abstain from meat.</div>
+    </div>
+
+    <div class="orn-line"><span>·</span></div>
+
+    <div class="sec-title">Today's Devotions</div>
+    <div class="sec-sub">Devotiones Hodiernæ</div>
+    <div class="devotion-row"><div class="devotion-name">The Divine Office</div><div class="devotion-latin">Officium Divinum</div></div>
+    <div class="devotion-row"><div class="devotion-name">Examination of Conscience</div><div class="devotion-latin">Examen Conscientiæ</div></div>
+    <div class="devotion-row" style="border:none"><div class="devotion-name">Morning Offering</div><div class="devotion-latin">Oblatio Matutina</div></div>
+
+    <div class="orn-line"><span>✟</span></div>
+
+    <div class="sec-title">The Holy Rosary</div>
+    <div class="sec-sub">Sacratissimum Rosarium</div>
+    <div class="rosary-box">
+      <div class="rosary-title">Pray the Rosary</div>
+      <div class="rosary-sub">Sorrowful Mysteries — Mysteria Dolorosa</div>
+      <div class="rosary-arrow">→</div>
+    </div>
+
+    <div style="text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab-item active"><div class="tab-icon">☀</div>Today</div>
+    <div class="tab-item"><div class="tab-icon">☰</div>Missal</div>
+    <div class="tab-item"><div class="tab-icon">📖</div>Prayers</div>
+    <div class="tab-item"><div class="tab-icon">📕</div>Reference</div>
+    <div class="tab-item"><div class="tab-icon">🎓</div>Learn</div>
+  </div>
+</div>
+<div class="lbl">A — Full Parchment</div>
+<div class="desc">Entire screen is parchment. Feria and day<br>flow at the top. Clean and book-like throughout.</div>
+</div>
+
+<!-- ═════ B — Dark Header Band ═════ -->
+<div>
+<div class="phone opt-b">
+  <div class="header-band">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px">
+      <div class="feria">Feria Sexta</div>
+      <div class="missal-badge">1962 Missal <span style="font-size:8px;opacity:0.6">▾</span></div>
+    </div>
+    <div class="day">Friday</div>
+    <div class="date">the twenty-eighth of March</div>
+  </div>
+  <div class="scroll" style="height:calc(100% - 84px);overflow-y:auto">
+    <div class="content">
+      <div class="sec-title" style="margin-top:4px">Penance</div>
+      <div class="sec-sub">Pænitentia</div>
+      <div class="penance-block">
+        <div class="penance-title">Friday Abstinence <span class="penance-tag">Abstinence</span></div>
+        <div class="penance-desc">Abstain from meat.</div>
+      </div>
+
+      <div class="orn-line"><span>·</span></div>
+
+      <div class="sec-title">Today's Devotions</div>
+      <div class="sec-sub">Devotiones Hodiernæ</div>
+      <div class="devotion-row"><div class="devotion-name">The Divine Office</div><div class="devotion-latin">Officium Divinum</div></div>
+      <div class="devotion-row"><div class="devotion-name">Examination of Conscience</div><div class="devotion-latin">Examen Conscientiæ</div></div>
+      <div class="devotion-row" style="border:none"><div class="devotion-name">Morning Offering</div><div class="devotion-latin">Oblatio Matutina</div></div>
+
+      <div class="orn-line"><span>✟</span></div>
+
+      <div class="sec-title">The Holy Rosary</div>
+      <div class="sec-sub">Sacratissimum Rosarium</div>
+      <div class="rosary-box">
+        <div class="rosary-title">Pray the Rosary</div>
+        <div class="rosary-sub">Sorrowful Mysteries — Mysteria Dolorosa</div>
+        <div class="rosary-arrow">→</div>
+      </div>
+
+      <div style="text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
+    </div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab-item active"><div class="tab-icon">☀</div>Today</div>
+    <div class="tab-item"><div class="tab-icon">☰</div>Missal</div>
+    <div class="tab-item"><div class="tab-icon">📖</div>Prayers</div>
+    <div class="tab-item"><div class="tab-icon">📕</div>Reference</div>
+    <div class="tab-item"><div class="tab-icon">🎓</div>Learn</div>
+  </div>
+</div>
+<div class="lbl">B — Dark Header Band</div>
+<div class="desc">Day and feria in dark band at top (matches<br>prayer detail style). Content below on parchment.</div>
+</div>
+
+</body>
+</html>
