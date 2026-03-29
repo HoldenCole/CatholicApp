@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayer Detail — Final</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0;background:#F2EBE0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+  .scroll{overflow-y:auto;height:100%;-webkit-overflow-scrolling:touch}
+
+  /* Dark header band */
+  .header-band{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 22px}
+  .prayer-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#EDE8DC}
+  .prayer-eng{font-family:'Cormorant Garamond',serif;font-size:16px;color:#B8960C;font-style:italic;margin-top:2px}
+  .cat-badge{display:inline-block;font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:3px 10px;border-radius:3px;letter-spacing:1px;text-transform:uppercase;margin-top:8px}
+
+  .content{padding:16px 24px 40px}
+
+  /* Toggle */
+  .toggle-wrap{text-align:center;margin:16px 0}
+  .toggle{display:inline-flex;border:1px solid #B8960C33;border-radius:4px;overflow:hidden}
+  .toggle-btn{font-size:12px;font-weight:500;padding:7px 14px;border:none;cursor:pointer;background:transparent;color:#1C1410;font-family:'Inter',sans-serif}
+  .toggle-btn.active{background:#8B1A1A;color:white}
+
+  /* Gold fade divider */
+  .gold-fade{height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent);margin:16px 0}
+
+  /* Missal columns — open, not boxed */
+  .col-head{display:flex;padding-bottom:8px;border-bottom:2px solid #B8960C22;margin-bottom:10px}
+  .col-head span{flex:1;text-align:center;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+  .col-head .lat{color:#8B1A1A}
+  .col-head .eng{color:#998877}
+  .missal-row{display:flex;gap:0;padding:8px 0;border-bottom:1px solid #B8960C08}
+  .missal-col{flex:1}
+  .missal-col.left{padding-right:12px;border-right:1px solid #B8960C22}
+  .missal-col.right{padding-left:12px}
+  .lat-text{font-family:'Playfair Display',serif;font-size:15px;color:#1C1410;line-height:1.7}
+  .eng-text{font-family:'EB Garamond',serif;font-size:15px;color:#998877;line-height:1.7}
+
+  /* Phonetic with aligned English */
+  .phonetic-row{display:flex;gap:0;padding:10px 0;border-bottom:1px solid #B8960C08;align-items:flex-start}
+  .phonetic-col{flex:1;padding-right:12px;border-right:1px solid #B8960C22}
+  .english-col{flex:0.85;padding-left:12px}
+  .phonetic{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.9}
+  .stressed{color:#8B1A1A;font-weight:600}
+  .dot{color:#B8960C}
+  .un{color:#1C1410}
+  .eng-side{font-family:'EB Garamond',serif;font-size:14px;color:#998877;font-style:italic;line-height:1.9}
+
+  /* CTA — stands out */
+  .cta{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:8px;font-size:15px;font-weight:600;margin-top:24px;background:#8B1A1A;color:white;cursor:pointer;position:relative;overflow:hidden}
+  .cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8B1A1A,#B8960C)}
+</style>
+</head>
+<body>
+
+<h1>Prayer Detail — Final Design</h1>
+<div class="sub">Missal mode &amp; Phonetic mode</div>
+
+<!-- ═════ MISSAL MODE ═════ -->
+<div>
+<div class="phone">
+  <div class="scroll">
+    <div class="header-band">
+      <div class="prayer-name">Ave María</div>
+      <div class="prayer-eng">Hail Mary</div>
+      <div class="cat-badge">Rosarium</div>
+    </div>
+    <div class="content">
+      <div class="toggle-wrap">
+        <div class="toggle">
+          <button class="toggle-btn active">Missal</button>
+          <button class="toggle-btn">English</button>
+          <button class="toggle-btn">Latin</button>
+          <button class="toggle-btn">Phonetic</button>
+        </div>
+      </div>
+
+      <div class="gold-fade"></div>
+
+      <div class="col-head"><span class="lat">Latina</span><span class="eng">English</span></div>
+
+      <div class="missal-row">
+        <div class="missal-col left"><div class="lat-text">Ave María, grátia plena, Dóminus tecum.</div></div>
+        <div class="missal-col right"><div class="eng-text">Hail Mary, full of grace, the Lord is with thee.</div></div>
+      </div>
+      <div class="missal-row">
+        <div class="missal-col left"><div class="lat-text">Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus.</div></div>
+        <div class="missal-col right"><div class="eng-text">Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus.</div></div>
+      </div>
+      <div class="missal-row">
+        <div class="missal-col left"><div class="lat-text">Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.</div></div>
+        <div class="missal-col right"><div class="eng-text">Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div></div>
+      </div>
+
+      <div class="cta">☩ Practice This Prayer</div>
+    </div>
+  </div>
+</div>
+<div class="lbl">Missal Mode</div>
+<div class="desc">Dark header. Open columns with gold divider.<br>Visible red CTA button. Not boxed in.</div>
+</div>
+
+<!-- ═════ PHONETIC MODE ═════ -->
+<div>
+<div class="phone">
+  <div class="scroll">
+    <div class="header-band">
+      <div class="prayer-name">Ave María</div>
+      <div class="prayer-eng">Hail Mary</div>
+      <div class="cat-badge">Rosarium</div>
+    </div>
+    <div class="content">
+      <div class="toggle-wrap">
+        <div class="toggle">
+          <button class="toggle-btn">Missal</button>
+          <button class="toggle-btn">English</button>
+          <button class="toggle-btn">Latin</button>
+          <button class="toggle-btn active">Phonetic</button>
+        </div>
+      </div>
+
+      <div class="gold-fade"></div>
+
+      <div class="col-head"><span class="lat">Phonetic</span><span class="eng">English</span></div>
+
+      <!-- Row 1 — lines aligned -->
+      <div class="phonetic-row">
+        <div class="phonetic-col">
+          <div class="phonetic">
+            <span class="un">A</span><span class="dot">·</span><span class="un">ve</span>
+            <span class="un">Ma</span><span class="dot">·</span><span class="stressed">RÍ</span><span class="dot">·</span><span class="un">a,</span>
+            <span class="stressed">GRÁ</span><span class="dot">·</span><span class="un">ti</span><span class="dot">·</span><span class="un">a</span>
+            <span class="stressed">PLÉ</span><span class="dot">·</span><span class="un">na,</span>
+            <span class="stressed">DÓ</span><span class="dot">·</span><span class="un">mi</span><span class="dot">·</span><span class="un">nus</span>
+            <span class="stressed">TÉ</span><span class="dot">·</span><span class="un">cum.</span>
+          </div>
+        </div>
+        <div class="english-col">
+          <div class="eng-side">Hail Mary, full of grace, the Lord is with thee.</div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="phonetic-row">
+        <div class="phonetic-col">
+          <div class="phonetic">
+            <span class="un">Be</span><span class="dot">·</span><span class="un">ne</span><span class="dot">·</span><span class="stressed">DÍC</span><span class="dot">·</span><span class="un">ta</span>
+            <span class="un">tu in</span>
+            <span class="un">mu</span><span class="dot">·</span><span class="un">li</span><span class="dot">·</span><span class="stressed">É</span><span class="dot">·</span><span class="un">ri</span><span class="dot">·</span><span class="un">bus,</span>
+            <span class="un">et</span>
+            <span class="un">be</span><span class="dot">·</span><span class="un">ne</span><span class="dot">·</span><span class="stressed">DÍC</span><span class="dot">·</span><span class="un">tus</span>
+            <span class="stressed">FRUC</span><span class="dot">·</span><span class="un">tus</span>
+            <span class="stressed">VEN</span><span class="dot">·</span><span class="un">tris</span>
+            <span class="stressed">TÚ</span><span class="dot">·</span><span class="un">i,</span>
+            <span class="stressed">YÉ</span><span class="dot">·</span><span class="un">sus.</span>
+          </div>
+        </div>
+        <div class="english-col">
+          <div class="eng-side">Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus.</div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="phonetic-row">
+        <div class="phonetic-col">
+          <div class="phonetic">
+            <span class="stressed">SANC</span><span class="dot">·</span><span class="un">ta</span>
+            <span class="un">Ma</span><span class="dot">·</span><span class="stressed">RÍ</span><span class="dot">·</span><span class="un">a,</span>
+            <span class="stressed">MA</span><span class="dot">·</span><span class="un">ter</span>
+            <span class="stressed">DÉ</span><span class="dot">·</span><span class="un">i,</span>
+            <span class="stressed">Ó</span><span class="dot">·</span><span class="un">ra</span>
+            <span class="un">pro</span>
+            <span class="stressed">NÓ</span><span class="dot">·</span><span class="un">bis</span>
+            <span class="un">pec</span><span class="dot">·</span><span class="un">ca</span><span class="dot">·</span><span class="stressed">TÓ</span><span class="dot">·</span><span class="un">ri</span><span class="dot">·</span><span class="un">bus,</span>
+            <span class="un">nunc et in</span>
+            <span class="stressed">HÓ</span><span class="dot">·</span><span class="un">ra</span>
+            <span class="stressed">MOR</span><span class="dot">·</span><span class="un">tis</span>
+            <span class="stressed">NOS</span><span class="dot">·</span><span class="un">tre.</span>
+            <span class="un">A</span><span class="dot">·</span><span class="un">men.</span>
+          </div>
+        </div>
+        <div class="english-col">
+          <div class="eng-side">Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+        </div>
+      </div>
+
+      <div class="cta">☩ Practice This Prayer</div>
+    </div>
+  </div>
+</div>
+<div class="lbl">Phonetic Mode</div>
+<div class="desc">English aligned row-by-row with phonetic.<br>Same column headers and gold divider.<br>Each sentence pair stays together.</div>
+</div>
+
+</body>
+</html>
