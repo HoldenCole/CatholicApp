@@ -28,6 +28,17 @@ struct MissalSectionDetailView: View {
                                 .font(.uiCaption)
                                 .foregroundStyle(.goldLeaf)
                         }
+
+                        if let posture = section.posture {
+                            Text("·")
+                                .foregroundStyle(.goldLeaf)
+                            Image(systemName: postureIcon(posture))
+                                .font(.system(size: 12))
+                                .foregroundStyle(.goldLeaf)
+                            Text(posture.capitalized)
+                                .font(.uiCaption)
+                                .foregroundStyle(.goldLeaf)
+                        }
                     }
                 }
 
@@ -58,5 +69,14 @@ struct MissalSectionDetailView: View {
         }
         .background(Color.parchment)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func postureIcon(_ posture: String) -> String {
+        switch posture {
+        case "stand": return "figure.stand"
+        case "sit": return "figure.seated.side.right"
+        case "kneel": return "figure.mind.and.body"
+        default: return "figure.stand"
+        }
     }
 }

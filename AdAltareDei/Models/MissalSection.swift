@@ -9,9 +9,10 @@ struct MissalSection: Identifiable, Codable {
     let rubric: String
     let latinText: String
     let englishText: String
-    let isProper: Bool  // true = changes daily (Introit, Collect, etc.)
+    let isProper: Bool     // true = changes daily (Introit, Collect, etc.)
     let sortOrder: Int
     let part: MassPart
+    let posture: String?   // "stand", "sit", "kneel", or nil
 }
 
 enum MassPart: String, Codable, CaseIterable, Identifiable {

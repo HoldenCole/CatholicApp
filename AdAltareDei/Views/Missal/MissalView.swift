@@ -80,9 +80,20 @@ struct MissalSectionRow: View {
                     .font(.latinBody)
                     .foregroundStyle(.ink)
 
-                Text(section.title)
-                    .font(.englishCaption)
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 6) {
+                    Text(section.title)
+                        .font(.englishCaption)
+                        .foregroundStyle(.secondary)
+
+                    if let posture = section.posture {
+                        Text("·")
+                            .font(.englishCaption)
+                            .foregroundStyle(.goldLeaf.opacity(0.4))
+                        Text(posture.capitalized)
+                            .font(.uiCaption)
+                            .foregroundStyle(.goldLeaf)
+                    }
+                }
             }
 
             Spacer()
