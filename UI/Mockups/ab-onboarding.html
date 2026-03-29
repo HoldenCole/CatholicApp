@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/B — Onboarding</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+
+  /* ═══ A — Dark, Dramatic ═══ */
+  .opt-a{background:#1a1410;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:80px 32px 60px}
+
+  .opt-a .top{text-align:center}
+  .opt-a .cross{font-size:56px;color:#B8960C;opacity:0.7;margin-bottom:20px}
+  .opt-a .app-name{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#EDE8DC}
+  .opt-a .app-latin{font-family:'Cormorant Garamond',serif;font-size:16px;color:#B8960C;font-style:italic;letter-spacing:2px;margin-top:4px}
+  .opt-a .tagline{font-family:'EB Garamond',serif;font-size:16px;color:#776655;margin-top:20px;line-height:1.7;text-align:center}
+
+  .opt-a .middle{text-align:center}
+  .opt-a .features{display:flex;flex-direction:column;gap:16px;margin-top:0}
+  .opt-a .feature{display:flex;align-items:center;gap:12px;text-align:left}
+  .opt-a .feature-icon{font-size:18px;color:#B8960C;width:28px;text-align:center;flex-shrink:0}
+  .opt-a .feature-text{font-family:'EB Garamond',serif;font-size:15px;color:#998877;line-height:1.5}
+
+  .opt-a .bottom{width:100%;text-align:center}
+  .opt-a .cta{background:#8B1A1A;color:white;font-size:16px;font-weight:600;padding:16px;border-radius:8px;width:100%;text-align:center;margin-bottom:16px;cursor:pointer}
+  .opt-a .dots{display:flex;gap:8px;justify-content:center}
+  .opt-a .dot{width:8px;height:8px;border-radius:50%;background:#B8960C33}
+  .opt-a .dot.active{background:#8B1A1A;transform:scale(1.2)}
+
+  /* ═══ B — Parchment, Elegant ═══ */
+  .opt-b{background:#F2EBE0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:80px 32px 60px}
+
+  .opt-b .top{text-align:center}
+  .opt-b .cross-ornament{color:#B8960C;font-size:14px;letter-spacing:12px;opacity:0.5;margin-bottom:24px}
+  .opt-b .app-name{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#1C1410}
+  .opt-b .app-latin{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;letter-spacing:3px;text-transform:uppercase;margin-top:6px}
+  .opt-b .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,#B8960C44,transparent);margin:24px auto}
+  .opt-b .tagline{font-family:'EB Garamond',serif;font-size:17px;color:#998877;line-height:1.7;text-align:center;font-style:italic}
+
+  .opt-b .middle{text-align:center;width:100%}
+  .opt-b .features{display:flex;flex-direction:column;gap:0;width:100%}
+  .opt-b .feature{padding:14px 0;border-bottom:1px solid #B8960C0D;display:flex;align-items:baseline;gap:12px}
+  .opt-b .feature:last-child{border:none}
+  .opt-b .feature-num{font-family:'Playfair Display',serif;font-size:20px;font-weight:300;color:#8B1A1A;opacity:0.4;width:24px;text-align:right;flex-shrink:0}
+  .opt-b .feature-content{}
+  .opt-b .feature-title{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
+  .opt-b .feature-desc{font-family:'EB Garamond',serif;font-size:13px;color:#998877;margin-top:2px}
+
+  .opt-b .bottom{width:100%;text-align:center}
+  .opt-b .cta{background:#8B1A1A;color:white;font-size:16px;font-weight:600;padding:16px;border-radius:8px;width:100%;text-align:center;margin-bottom:12px;cursor:pointer}
+  .opt-b .skip{font-family:'EB Garamond',serif;font-size:14px;color:#998877;cursor:pointer}
+  .opt-b .dots{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
+  .opt-b .dot{width:8px;height:8px;border-radius:50%;background:#B8960C33}
+  .opt-b .dot.active{background:#8B1A1A;transform:scale(1.2)}
+
+  /* ═══ A Page 2 ═══ */
+  .opt-a2{background:#1a1410;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:80px 32px 60px}
+  .opt-a2 .rite-card{border:1px solid #B8960C33;border-radius:8px;padding:18px;width:100%;cursor:pointer;margin-bottom:10px}
+  .opt-a2 .rite-card.selected{border-color:#B8960C66;background:#B8960C0A}
+  .opt-a2 .rite-name{font-family:'Playfair Display',serif;font-size:17px;color:#EDE8DC;font-weight:600}
+  .opt-a2 .rite-latin{font-family:'Cormorant Garamond',serif;font-size:12px;color:#B8960C;font-style:italic}
+  .opt-a2 .rite-desc{font-family:'EB Garamond',serif;font-size:13px;color:#776655;margin-top:4px;line-height:1.5}
+  .opt-a2 .rite-check{float:right;width:20px;height:20px;border-radius:50%;border:2px solid #B8960C44;margin-top:2px}
+  .opt-a2 .rite-card.selected .rite-check{background:#8B1A1A;border-color:#8B1A1A}
+</style>
+</head>
+<body>
+
+<h1>Onboarding — A/B Test</h1>
+<div class="sub">First launch experience</div>
+
+<!-- ═════ A — Dark Welcome ═════ -->
+<div>
+<div class="phone opt-a">
+  <div class="top">
+    <div class="cross">✟</div>
+    <div class="app-name">Ad Altare Dei</div>
+    <div class="app-latin">To the Altar of God</div>
+    <div class="tagline">Learn to pray the traditional Catholic prayers in the sacred language of the Church.</div>
+  </div>
+  <div class="middle">
+    <div class="features">
+      <div class="feature"><div class="feature-icon">📖</div><div class="feature-text">Side-by-side Latin and English like a hand missal</div></div>
+      <div class="feature"><div class="feature-icon">✦</div><div class="feature-text">Phonetic guides with stressed syllables highlighted</div></div>
+      <div class="feature"><div class="feature-icon">☩</div><div class="feature-text">Full Ordinary of the Traditional Latin Mass</div></div>
+      <div class="feature"><div class="feature-icon">✿</div><div class="feature-text">Guided Rosary with bead-by-bead progress</div></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="cta">Begin →</div>
+    <div class="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div>
+  </div>
+</div>
+<div class="lbl">A — Dark Welcome</div>
+<div class="desc">Dark background. Gold cross. Feature list<br>with icons. Dramatic, immersive first impression.</div>
+</div>
+
+<!-- ═════ B — Parchment Welcome ═════ -->
+<div>
+<div class="phone opt-b">
+  <div class="top">
+    <div class="cross-ornament">✟ · ✟ · ✟</div>
+    <div class="app-name">Ad Altare Dei</div>
+    <div class="app-latin">To the Altar of God</div>
+    <div class="divider"></div>
+    <div class="tagline">"I will go unto the altar of God:<br>to God, Who giveth joy to my youth."</div>
+  </div>
+  <div class="middle">
+    <div class="features">
+      <div class="feature"><div class="feature-num">I</div><div class="feature-content"><div class="feature-title">Pray</div><div class="feature-desc">38 traditional prayers in Latin, English, and phonetic</div></div></div>
+      <div class="feature"><div class="feature-num">II</div><div class="feature-content"><div class="feature-title">Learn</div><div class="feature-desc">Side-by-side missal text and pronunciation guides</div></div></div>
+      <div class="feature"><div class="feature-num">III</div><div class="feature-content"><div class="feature-title">Follow</div><div class="feature-desc">The full Ordinary of the Mass and guided Rosary</div></div></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div>
+    <div class="cta">Continue</div>
+    <div class="skip">Skip</div>
+  </div>
+</div>
+<div class="lbl">B — Parchment Welcome</div>
+<div class="desc">Warm parchment. Psalm quote. Numbered features<br>with Roman numerals. Ornamental crosses. Skip option.</div>
+</div>
+
+<!-- ═════ A Page 2 — Missal Selection ═════ -->
+<div>
+<div class="phone opt-a2">
+  <div class="top" style="text-align:center;width:100%">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:12px;color:#B8960C;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px">Choose Your Missal</div>
+    <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC">Which calendar does<br>your community follow?</div>
+  </div>
+  <div class="middle" style="width:100%">
+    <div class="rite-card selected">
+      <div class="rite-check"></div>
+      <div class="rite-name">1962 Missal</div>
+      <div class="rite-latin">Missale Romanum 1962</div>
+      <div class="rite-desc">FSSP, ICKSP, and most diocesan TLM communities.</div>
+    </div>
+    <div class="rite-card">
+      <div class="rite-check"></div>
+      <div class="rite-name">1955 Missal</div>
+      <div class="rite-latin">Missale Romanum 1955</div>
+      <div class="rite-desc">Post-Holy Week reform, pre-1960 rubrics.</div>
+    </div>
+    <div class="rite-card">
+      <div class="rite-check"></div>
+      <div class="rite-name">Pre-1955 Missal</div>
+      <div class="rite-latin">Missale Romanum (ante 1955)</div>
+      <div class="rite-desc">Original Holy Week. Full octave system.</div>
+    </div>
+    <div style="font-family:'EB Garamond',serif;font-size:13px;color:#665544;font-style:italic;text-align:center;margin-top:12px">You can change this anytime in settings.</div>
+  </div>
+  <div class="bottom" style="width:100%">
+    <div class="cta" style="background:#8B1A1A;color:white;font-size:16px;font-weight:600;padding:16px;border-radius:8px;width:100%;text-align:center;cursor:pointer">Begin Praying →</div>
+    <div class="dots" style="display:flex;gap:8px;justify-content:center;margin-top:16px"><div class="dot" style="width:8px;height:8px;border-radius:50%;background:#B8960C33"></div><div class="dot" style="width:8px;height:8px;border-radius:50%;background:#B8960C33"></div><div class="dot active" style="width:8px;height:8px;border-radius:50%;background:#8B1A1A;transform:scale(1.2)"></div></div>
+  </div>
+</div>
+<div class="lbl">A/B Page 3 — Missal Selection</div>
+<div class="desc">Part of onboarding flow. User picks their<br>missal before entering the app. Dark background.</div>
+</div>
+
+</body>
+</html>
