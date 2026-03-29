@@ -155,33 +155,38 @@ struct TodayView: View {
                     .foregroundStyle(.secondary)
             } else {
                 ForEach(penanceItems) { item in
-                    HStack(alignment: .top, spacing: 0) {
-                        Rectangle()
-                            .fill(Color.sanctuaryRed)
-                            .frame(width: 3)
-                            .padding(.trailing, 16)
+                    NavigationLink {
+                        destinationForDevotion(item)
+                    } label: {
+                        HStack(alignment: .top, spacing: 0) {
+                            Rectangle()
+                                .fill(Color.sanctuaryRed)
+                                .frame(width: 3)
+                                .padding(.trailing, 16)
 
-                        VStack(alignment: .leading, spacing: 4) {
-                            HStack(spacing: 6) {
-                                Text(item.title)
-                                    .font(.custom("Palatino", size: 17).weight(.semibold))
-                                    .foregroundStyle(.ink)
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack(spacing: 6) {
+                                    Text(item.title)
+                                        .font(.custom("Palatino", size: 17).weight(.semibold))
+                                        .foregroundStyle(.ink)
 
-                                if item.isAbstinence {
-                                    penanceTag("Abstinence")
+                                    if item.isAbstinence {
+                                        penanceTag("Abstinence")
+                                    }
+                                    if item.isFasting {
+                                        penanceTag("Fast")
+                                    }
                                 }
-                                if item.isFasting {
-                                    penanceTag("Fast")
-                                }
+
+                                Text(shortDescription(item))
+                                    .font(.custom("Georgia", size: 14))
+                                    .foregroundStyle(.secondary)
+                                    .lineSpacing(4)
                             }
-
-                            Text(shortDescription(item))
-                                .font(.custom("Georgia", size: 14))
-                                .foregroundStyle(.secondary)
-                                .lineSpacing(4)
                         }
+                        .padding(.vertical, 4)
                     }
-                    .padding(.vertical, 4)
+                    .buttonStyle(.plain)
                 }
             }
         }
@@ -209,18 +214,12 @@ struct TodayView: View {
                 !$0.isAbstinence && !$0.isFasting && $0.slug != "angelus_devotion"
             }
             ForEach(devotionItems) { item in
-                Group {
-                    if item.slug == "divine_office" {
-                        NavigationLink {
-                            DivineOfficeView()
-                        } label: {
-                            devotionRowContent(item)
-                        }
-                        .buttonStyle(.plain)
-                    } else {
-                        devotionRowContent(item)
-                    }
+                NavigationLink {
+                    destinationForDevotion(item)
+                } label: {
+                    devotionRowContent(item)
                 }
+                .buttonStyle(.plain)
             }
         }
     }
@@ -298,6 +297,18 @@ struct TodayView: View {
             Rectangle()
                 .fill(Color.goldLeaf.opacity(0.08))
                 .frame(height: 1)
+        }
+    }
+
+    /// Routes each devotion to the appropriate detail view.
+    @ViewBuilder
+    private func destinationForDevotion(_ devotion: TraditionalDevotion) -> some View {
+        switch devotion.slug {
+        case "divine_office":
+            DivineOfficeView()
+        default:
+            // Link to reference entry for explanation, history, etc.
+            DevotionDetailView(devotion: devotion)
         }
     }
 
