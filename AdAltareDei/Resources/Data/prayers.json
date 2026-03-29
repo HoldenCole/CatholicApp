@@ -218,5 +218,49 @@
     "englishText": "Lamb of God, Who takest away the sins of the world, have mercy on us.\nLamb of God, Who takest away the sins of the world, have mercy on us.\nLamb of God, Who takest away the sins of the world, grant us peace.",
     "latinText": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.\nAgnus Dei, qui tollis peccáta mundi: miserére nobis.\nAgnus Dei, qui tollis peccáta mundi: dona nobis pacem.",
     "phoneticText": "AG·nus DÉ·i, qui TOL·lis pec·CÁ·ta MUN·di: mi·se·RÉ·re NÓ·bis. AG·nus DÉ·i, qui TOL·lis pec·CÁ·ta MUN·di: mi·se·RÉ·re NÓ·bis. AG·nus DÉ·i, qui TOL·lis pec·CÁ·ta MUN·di: DÓ·na NÓ·bis PA·chem."
+  },
+  {
+    "slug": "credo_nicene",
+    "latinName": "Credo (Nicæno-Constantinopolitanum)",
+    "englishName": "Nicene Creed",
+    "category": "mass",
+    "sortOrder": 21,
+    "audioFileName": "credo_nicene_ref.m4a",
+    "englishText": "I believe in one God, the Father almighty, maker of heaven and earth, and of all things visible and invisible. And in one Lord Jesus Christ, the only-begotten Son of God. Born of the Father before all ages. God of God, light of light, true God of true God. Begotten, not made, consubstantial with the Father: by Whom all things were made. Who for us men and for our salvation came down from heaven. AND WAS INCARNATE BY THE HOLY GHOST OF THE VIRGIN MARY: AND WAS MADE MAN. He was crucified also for us: suffered under Pontius Pilate, and was buried. And the third day He rose again according to the Scriptures. And ascended into heaven: sitteth at the right hand of the Father. And He shall come again with glory to judge the living and the dead: of Whose kingdom there shall be no end. And in the Holy Ghost, the Lord and giver of life: Who proceedeth from the Father and the Son. Who with the Father and the Son is equally adored and glorified: Who spoke by the Prophets. And one, holy, catholic and apostolic Church. I confess one baptism for the remission of sins. And I look for the resurrection of the dead. And the life of the world to come. Amen.",
+    "latinText": "Credo in unum Deum, Patrem omnipoténtem, factórem cæli et terræ, visibílium ómnium et invisibílium. Et in unum Dóminum Iesum Christum, Fílium Dei unigénitum. Et ex Patre natum ante ómnia sǽcula. Deum de Deo, lumen de lúmine, Deum verum de Deo vero. Génitum, non factum, consubstantiálem Patri: per quem ómnia facta sunt. Qui propter nos hómines et propter nostram salútem descéndit de cælis. ET INCARNÁTUS EST DE SPÍRITU SANCTO EX MARÍA VÍRGINE: ET HOMO FACTUS EST. Crucifíxus étiam pro nobis: sub Póntio Piláto passus, et sepúltus est. Et resurréxit tértia die, secúndum Scriptúras. Et ascéndit in cælum: sedet ad déxteram Patris. Et íterum ventúrus est cum glória iudicáre vivos et mórtuos: cuius regni non erit finis. Et in Spíritum Sanctum, Dóminum et vivificántem: qui ex Patre Filióque procédit. Qui cum Patre et Fílio simul adorátur et conglorificátur: qui locútus est per Prophétas. Et unam, sanctam, cathólicam et apostólicam Ecclésiam. Confíteor unum baptísma in remissiónem peccatórum. Et exspécto resurrectiónem mortuórum. Et vitam ventúri sǽculi. Amen.",
+    "phoneticText": "CRÉ·do in Ú·num DÉ·um, PA·trem om·ni·po·TÉN·tem, fac·TÓ·rem CHÉ·li et TER·re, vi·si·BÍ·li·um ÓM·ni·um et in·vi·si·BÍ·li·um."
+  },
+  {
+    "slug": "kyrie",
+    "latinName": "Kyrie Eleison",
+    "englishName": "Lord, Have Mercy",
+    "category": "mass",
+    "sortOrder": 22,
+    "audioFileName": "kyrie_ref.m4a",
+    "englishText": "Lord, have mercy. Lord, have mercy. Lord, have mercy.\nChrist, have mercy. Christ, have mercy. Christ, have mercy.\nLord, have mercy. Lord, have mercy. Lord, have mercy.",
+    "latinText": "Kýrie, eléison. Kýrie, eléison. Kýrie, eléison.\nChriste, eléison. Christe, eléison. Christe, eléison.\nKýrie, eléison. Kýrie, eléison. Kýrie, eléison.",
+    "phoneticText": "KÍ·ri·e, e·LÉ·i·son. KÍ·ri·e, e·LÉ·i·son. KÍ·ri·e, e·LÉ·i·son. CHRÍS·te, e·LÉ·i·son. CHRÍS·te, e·LÉ·i·son. CHRÍS·te, e·LÉ·i·son. KÍ·ri·e, e·LÉ·i·son. KÍ·ri·e, e·LÉ·i·son. KÍ·ri·e, e·LÉ·i·son."
+  },
+  {
+    "slug": "preface_dialogue",
+    "latinName": "Dialogus Praefationis",
+    "englishName": "Preface Dialogue",
+    "category": "mass",
+    "sortOrder": 23,
+    "audioFileName": "preface_dialogue_ref.m4a",
+    "englishText": "V. The Lord be with you.\nR. And with thy spirit.\nV. Lift up your hearts.\nR. We have lifted them up to the Lord.\nV. Let us give thanks to the Lord our God.\nR. It is meet and just.",
+    "latinText": "V. Dóminus vobíscum.\nR. Et cum spíritu tuo.\nV. Sursum corda.\nR. Habémus ad Dóminum.\nV. Grátias agámus Dómino Deo nostro.\nR. Dignum et iustum est.",
+    "phoneticText": "DÓ·mi·nus vo·BÍS·cum. Et cum SPÍ·ri·tu TÚ·o. SUR·sum COR·da. Ha·BÉ·mus ad DÓ·mi·num. GRÁ·ti·as a·GÁ·mus DÓ·mi·no DÉ·o NOS·tro. DÍG·num et YÚS·tum est."
+  },
+  {
+    "slug": "divine_praises",
+    "latinName": "Laudes Divinae",
+    "englishName": "The Divine Praises",
+    "category": "mass",
+    "sortOrder": 24,
+    "audioFileName": "divine_praises_ref.m4a",
+    "englishText": "Blessed be God.\nBlessed be His Holy Name.\nBlessed be Jesus Christ, true God and true Man.\nBlessed be the Name of Jesus.\nBlessed be His Most Sacred Heart.\nBlessed be His Most Precious Blood.\nBlessed be Jesus in the Most Holy Sacrament of the Altar.\nBlessed be the Holy Spirit, the Paraclete.\nBlessed be the great Mother of God, Mary most Holy.\nBlessed be her Holy and Immaculate Conception.\nBlessed be her Glorious Assumption.\nBlessed be the name of Mary, Virgin and Mother.\nBlessed be St. Joseph, her most chaste spouse.\nBlessed be God in His Angels and in His Saints.",
+    "latinText": "Benedíctus Deus.\nBenedíctum Nomen Sanctum eius.\nBenedíctus Iesus Christus, verus Deus et verus homo.\nBenedíctum Nomen Iesu.\nBenedíctum Cor eius sacratíssimum.\nBenedíctus Sanguis eius pretiosíssimus.\nBenedíctus Iesus in sanctíssimo altáris Sacraménto.\nBenedíctus Sanctus Spíritus, Paráclitus.\nBenedícta excelsa Mater Dei, María sanctíssima.\nBenedícta sancta eius et immaculáta Concéptio.\nBenedícta gloriósa eius Assúmptio.\nBenedíctum nomen Maríæ, Vírginis et Matris.\nBenedíctus Sanctus Ioseph, eius castíssimus Sponsus.\nBenedíctus Deus in Angelis suis et in Sanctis suis.",
+    "phoneticText": "Be·ne·DÍC·tus DÉ·us. Be·ne·DÍC·tum NÓ·men SANC·tum É·yus. Be·ne·DÍC·tus YÉ·sus CHRÍS·tus, VÉ·rus DÉ·us et VÉ·rus HÓ·mo."
   }
 ]
