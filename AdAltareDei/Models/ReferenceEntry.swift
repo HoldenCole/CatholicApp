@@ -12,9 +12,17 @@ struct ReferenceEntry: Identifiable, Codable {
     let history: String           // Historical background
     let explanation: String       // What it is and why it matters
     let practice: String?         // How/when to do it
-    let scriptureRefs: [String]?  // Relevant scripture
-    let churchTeaching: String?   // Magisterial references
-    let relatedEntries: [String]? // Slugs of related entries
+    let scriptureRefs: [String]?           // Relevant scripture references
+    let scriptureExplanation: String?      // Why this is biblical / scripture context
+    let theologianQuotes: [TheologianQuote]? // What saints and theologians say
+    let churchTeaching: String?            // Magisterial references
+    let relatedEntries: [String]?          // Slugs of related entries
+}
+
+struct TheologianQuote: Codable {
+    let author: String
+    let quote: String
+    let source: String?
 }
 
 enum ReferenceCategory: String, Codable, CaseIterable, Identifiable {

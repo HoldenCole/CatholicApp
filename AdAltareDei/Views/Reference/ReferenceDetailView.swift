@@ -40,18 +40,68 @@ struct ReferenceDetailView: View {
                     section(title: "How to Practice", latin: "Praxis", content: practice)
                 }
 
-                // Scripture (if available)
+                // Biblical Foundation (if available)
                 if let refs = entry.scriptureRefs, !refs.isEmpty {
                     ornamentalDivider
                     VStack(alignment: .leading, spacing: 8) {
-                        sectionHeader("Scripture", latin: "Sacra Scriptura")
+                        sectionHeader("Biblical Foundation", latin: "Fundamentum Biblicum")
+
+                        if let explanation = entry.scriptureExplanation {
+                            Text(explanation)
+                                .font(.custom("Georgia", size: 16))
+                                .foregroundStyle(.ink)
+                                .lineSpacing(6)
+                                .padding(.bottom, 4)
+                        }
+
                         ForEach(refs, id: \.self) { ref in
-                            HStack(spacing: 8) {
+                            HStack(alignment: .top, spacing: 8) {
                                 Text("·")
                                     .foregroundStyle(.goldLeaf)
                                 Text(ref)
                                     .font(.custom("Palatino-Italic", size: 15))
                                     .foregroundStyle(.ink)
+                            }
+                        }
+                    }
+                    .padding(.vertical, 16)
+                }
+
+                // Theologians (if available)
+                if let quotes = entry.theologianQuotes, !quotes.isEmpty {
+                    ornamentalDivider
+                    VStack(alignment: .leading, spacing: 12) {
+                        sectionHeader("The Theologians", latin: "Doctores Ecclesiæ")
+
+                        ForEach(Array(quotes.enumerated()), id: \.offset) { _, quote in
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack(alignment: .top, spacing: 0) {
+                                    Rectangle()
+                                        .fill(Color.sanctuaryRed)
+                                        .frame(width: 3)
+                                        .padding(.trailing, 16)
+
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("\"\(quote.quote)\"")
+                                            .font(.custom("Georgia-Italic", size: 15))
+                                            .foregroundStyle(.ink)
+                                            .lineSpacing(4)
+                                        HStack(spacing: 4) {
+                                            Text("—")
+                                                .foregroundStyle(.sanctuaryRed)
+                                            Text(quote.author)
+                                                .font(.custom("Palatino-Italic", size: 13))
+                                                .foregroundStyle(.sanctuaryRed)
+                                            if let source = quote.source {
+                                                Text("·")
+                                                    .foregroundStyle(.goldLeaf)
+                                                Text(source)
+                                                    .font(.custom("Palatino-Italic", size: 12))
+                                                    .foregroundStyle(.secondary)
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
