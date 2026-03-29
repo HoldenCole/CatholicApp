@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "ref_rosary",
+    "title": "The Holy Rosary",
+    "latinTitle": "Sacratissimum Rosarium",
+    "category": "prayers",
+    "sortOrder": 1,
+    "summary": "The most powerful prayer after the Holy Sacrifice of the Mass.",
+    "history": "The Rosary as we know it developed over centuries. Tradition attributes its origin to St. Dominic in the 13th century, who received it from Our Lady during the Albigensian heresy. The 150 Hail Marys mirror the 150 Psalms, making it the 'Psalter of the laity.' Pope St. Pius V standardized the form after the Battle of Lepanto in 1571, when the Christian fleet's victory over the Ottoman navy was attributed to the Rosary. He established the Feast of Our Lady of the Rosary (October 7) in thanksgiving. Every pope since has strongly promoted this devotion.",
+    "explanation": "The Rosary is a meditative prayer combining vocal prayer (Our Fathers, Hail Marys, Glory Bes) with meditation on the mysteries of Christ's life. It is divided into three sets of five decades: the Joyful, Sorrowful, and Glorious Mysteries. The traditional practice uses only these three sets — the Luminous Mysteries were added in 2002 and are not part of the traditional form. Each decade consists of one Our Father, ten Hail Marys, and one Glory Be, followed by the Fatima Prayer.",
+    "practice": "Traditionally, specific mystery sets are assigned to each day of the week: Joyful on Monday and Thursday, Sorrowful on Tuesday and Friday, and Glorious on Wednesday, Sunday, and Saturday (though Saturday practice varies). The Rosary should be prayed slowly and devoutly, with genuine meditation on each mystery. Our Lady of Fatima requested the daily Rosary for the conversion of sinners and world peace.",
+    "scriptureRefs": ["Lk 1:28", "Lk 1:42", "Mt 6:9-13"],
+    "churchTeaching": "Pope Leo XIII issued eleven encyclicals on the Rosary. Pope Pius XI called it 'the compendium of the entire Gospel.' Our Lady of Fatima (1917) urgently requested its daily recitation.",
+    "relatedEntries": ["ref_ave_maria", "ref_pater_noster", "ref_mysteries"]
+  },
+  {
+    "slug": "ref_ave_maria",
+    "title": "The Hail Mary",
+    "latinTitle": "Ave Maria",
+    "category": "prayers",
+    "sortOrder": 2,
+    "summary": "The angelic salutation and the Church's most beloved Marian prayer.",
+    "history": "The first half of the Hail Mary comes directly from Sacred Scripture: the Angel Gabriel's greeting to Mary at the Annunciation ('Hail, full of grace, the Lord is with thee' — Lk 1:28) and Elizabeth's greeting at the Visitation ('Blessed art thou amongst women, and blessed is the fruit of thy womb' — Lk 1:42). The name 'Jesus' was added later. The second half ('Holy Mary, Mother of God, pray for us sinners...') was composed by the Church and officially added by Pope St. Pius V in 1568 in the Roman Breviary.",
+    "explanation": "The Ave Maria is both a scriptural prayer and a petition. The first half praises Our Lady with the very words God chose to greet her through His angel. The second half acknowledges her as Theotokos (Mother of God, defined at the Council of Ephesus in 431) and asks for her intercession now and at the hour of death — the two moments when we most need her help.",
+    "practice": "The Hail Mary is prayed individually, in the Rosary (ten per decade), in the Angelus (three times), and throughout countless devotions. In Ecclesiastical Latin, the prayer begins 'Ave María, grátia plena, Dóminus tecum.'",
+    "scriptureRefs": ["Lk 1:28", "Lk 1:42-43"],
+    "churchTeaching": "The Council of Ephesus (431 AD) defined Mary as Theotokos, the foundation for the title 'Mother of God' in the prayer. St. Louis de Montfort called the Hail Mary 'the most beautiful prayer after the Our Father.'",
+    "relatedEntries": ["ref_rosary", "ref_angelus"]
+  },
+  {
+    "slug": "ref_pater_noster",
+    "title": "The Our Father",
+    "latinTitle": "Pater Noster",
+    "category": "prayers",
+    "sortOrder": 3,
+    "summary": "The prayer taught by Christ Himself to His Apostles.",
+    "history": "The Our Father is the only prayer directly taught by Jesus Christ, recorded in Matthew 6:9-13 and Luke 11:2-4. It has been central to Christian worship since the earliest days of the Church. The Didache (c. 70 AD) instructs Christians to pray it three times daily. In the Traditional Latin Mass, it is chanted solemnly by the priest alone after the Canon, with the congregation responding only 'Sed libera nos a malo' (But deliver us from evil).",
+    "explanation": "The Pater Noster contains seven petitions arranged in perfect order: three concerning God's glory (hallowed be Thy name, Thy kingdom come, Thy will be done) and four concerning our needs (daily bread, forgiveness, temptation, evil). St. Thomas Aquinas called it 'the most perfect of prayers' because it asks for everything we can rightly desire, in the order we should desire it.",
+    "practice": "Prayed at every Mass, at the beginning of each Rosary decade, in the Divine Office, and privately. The traditional form uses 'trespasses' rather than 'debts' and concludes with 'but deliver us from evil. Amen.' — the doxology ('For Thine is the kingdom...') is not part of the Catholic form.",
+    "scriptureRefs": ["Mt 6:9-13", "Lk 11:2-4"],
+    "churchTeaching": "St. Thomas Aquinas, Summa Theologica II-II, Q. 83, A. 9: 'The Lord's Prayer is the most perfect of all prayers... In it we ask, not only for all the things we can rightly desire, but also in the order in which they should be desired.'",
+    "relatedEntries": ["ref_rosary"]
+  },
+  {
+    "slug": "ref_salve_regina",
+    "title": "The Hail Holy Queen",
+    "latinTitle": "Salve Regina",
+    "category": "prayers",
+    "sortOrder": 4,
+    "summary": "The great Marian antiphon prayed at the close of the Rosary and Compline.",
+    "history": "The Salve Regina is one of the four seasonal Marian antiphons of the Divine Office, traditionally attributed to Hermann of Reichenau (1013-1054), a Benedictine monk. It became the closing prayer of the Rosary and is sung at Compline (Night Prayer) from Trinity Sunday until Advent. The Salve Regina was the last prayer of Columbus's crew before sighting the New World. It is also traditionally sung at the deathbed of Dominican friars.",
+    "explanation": "The Salve Regina is a prayer of tender confidence addressed to Our Lady as 'Mother of mercy, our life, our sweetness, and our hope.' It acknowledges our exile as 'poor banished children of Eve' in this 'valley of tears' and begs Mary to show us Jesus ('the blessed fruit of thy womb') after this life. The three closing acclamations — 'O clement, O loving, O sweet Virgin Mary' — were added by St. Bernard of Clairvaux.",
+    "practice": "Prayed at the end of every Rosary, after the five decades. Also chanted at Compline from Trinity Sunday to the Saturday before the first Sunday of Advent. In many traditional communities, the Salve Regina is sung after Low Mass.",
+    "scriptureRefs": ["Gen 3:15", "Rev 12:1"],
+    "churchTeaching": null,
+    "relatedEntries": ["ref_rosary", "ref_ave_maria"]
+  },
+  {
+    "slug": "ref_confiteor",
+    "title": "The Confiteor",
+    "latinTitle": "Confiteor",
+    "category": "prayers",
+    "sortOrder": 5,
+    "summary": "The great prayer of confession recited at the foot of the altar.",
+    "history": "The Confiteor dates to at least the 11th century in its current form, though prayers of confession at the beginning of Mass are attested much earlier. In the Traditional Latin Mass, the Confiteor is said twice: once by the priest and once by the server (representing the congregation) during the Prayers at the Foot of the Altar. In the 1962 rubrics, the second Confiteor before Communion was suppressed; in the pre-1962 form, it is retained.",
+    "explanation": "The Confiteor is a public confession of sinfulness addressed to God, the Blessed Virgin Mary, the angels and saints, and the assembled faithful. The triple 'mea culpa, mea culpa, mea maxima culpa' (through my fault, through my fault, through my most grievous fault), accompanied by striking the breast three times, expresses genuine contrition. It invokes the intercession of the same heavenly court as witnesses.",
+    "practice": "Recited at the beginning of Mass during the Prayers at the Foot of the Altar. Also said in Night Prayers and as part of the preparation for Confession. The breast is struck three times at 'mea culpa, mea culpa, mea maxima culpa.'",
+    "scriptureRefs": ["Ps 50:3-5", "Lk 18:13"],
+    "churchTeaching": null,
+    "relatedEntries": ["ref_tlm"]
+  }
+]

@@ -39,14 +39,14 @@ struct ContentView: View {
                     Label("Prayers", systemImage: "book.pages")
                 }
 
+            ReferenceView()
+                .tabItem {
+                    Label("Reference", systemImage: "text.book.closed")
+                }
+
             LearnView()
                 .tabItem {
                     Label("Learn", systemImage: "graduationcap")
-                }
-
-            ProgressTabView()
-                .tabItem {
-                    Label("Progress", systemImage: "chart.bar")
                 }
         }
         .tint(.sanctuaryRed)
