@@ -306,5 +306,38 @@
     "englishText": "At the Cross her station keeping,\nStood the mournful Mother weeping,\nClose to Jesus to the last.\nThrough her heart, His sorrow sharing,\nAll His bitter anguish bearing,\nNow at length the sword had passed.\n\nOh, how sad and sore distressed\nWas that Mother highly blest\nOf the sole-begotten One!\nChrist above in torment hangs;\nShe beneath beholds the pangs\nOf her dying glorious Son.",
     "latinText": "Stabat mater dolorósa\nIuxta crucem lacrimósa,\nDum pendébat Fílius.\nCuius ánimam geméntem,\nContristátam et doléntem\nPertransívit gládius.\n\nO quam tristis et afflícta\nFuit illa benedícta\nMater Unigéniti!\nQuæ mærébat et dolébat,\nPia mater, dum vidébat\nNati pœnas íncliti.",
     "phoneticText": "STA·bat MA·ter do·lo·RÓ·sa YUKS·ta CRÚ·chem la·cri·MÓ·sa, dum pen·DÉ·bat FÍ·li·us. CÚ·yus Á·ni·mam ge·MÉN·tem, con·tris·TÁ·tam et do·LÉN·tem per·tran·SÍ·vit GLÁ·di·us. O quam TRÍS·tis et af·FLÍC·ta FÚ·it ÍL·la be·ne·DÍC·ta MA·ter U·ni·GÉ·ni·ti! Que me·RÉ·bat et do·LÉ·bat, PÍ·a MA·ter, dum vi·DÉ·bat NA·ti PÉ·nas ÍN·cli·ti."
+  },
+  {
+    "slug": "veni_creator",
+    "latinName": "Veni Creator Spiritus",
+    "englishName": "Come, Creator Spirit",
+    "category": "devotional",
+    "sortOrder": 29,
+    "audioFileName": "veni_creator_ref.m4a",
+    "englishText": "Come, Holy Ghost, Creator blest,\nAnd in our hearts take up Thy rest;\nCome with Thy grace and heavenly aid\nTo fill the hearts which Thou hast made.\n\nO Comforter, to Thee we cry,\nThou heavenly gift of God most high;\nThou fount of life, and fire of love,\nAnd sweet anointing from above.\n\nPraise be to Thee, Father and Son\nAnd Holy Spirit, Three in One;\nAnd may the Son on us bestow\nThe gifts that from the Spirit flow. Amen.",
+    "latinText": "Veni, Creátor Spíritus,\nMentes tuórum vísita,\nImple supérna grátia\nQuæ tu creásti péctora.\n\nQui díceris Paráclitus,\nAltíssimi donum Dei,\nFons vivus, ignis, cáritas,\nEt spiritális únctio.\n\nDeo Patri sit glória,\nEt Fílio, qui a mórtuis\nSurréxit, ac Paráclito,\nIn sæculórum sǽcula. Amen.",
+    "phoneticText": "VÉ·ni, Cre·Á·tor SPÍ·ri·tus, MÉN·tes tu·Ó·rum VÍ·si·ta, ÍM·ple su·PÉR·na GRÁ·ti·a que tu cre·ÁS·ti PÉC·to·ra. Qui DÍ·che·ris Pa·RÁ·cli·tus, al·TÍS·si·mi DÓ·num DÉ·i, fons VÍ·vus, ÍG·nis, CÁ·ri·tas, et spi·ri·TÁ·lis ÚNC·ti·o. DÉ·o PA·tri sit GLÓ·ri·a, et FÍ·li·o, qui a MÓR·tu·is sur·RÉK·sit, ac Pa·RÁ·cli·to, in se·cu·LÓ·rum SÉ·cu·la. A·men."
+  },
+  {
+    "slug": "te_deum",
+    "latinName": "Te Deum",
+    "englishName": "We Praise Thee, O God",
+    "category": "devotional",
+    "sortOrder": 30,
+    "audioFileName": "te_deum_ref.m4a",
+    "englishText": "We praise Thee, O God: we acknowledge Thee to be the Lord.\nAll the earth doth worship Thee, the Father everlasting.\nTo Thee all Angels cry aloud, the Heavens and all the Powers therein.\nTo Thee Cherubim and Seraphim continually do cry:\nHoly, Holy, Holy, Lord God of Hosts.\nHeaven and earth are full of the Majesty of Thy glory.\nThe glorious company of the Apostles praise Thee.\nThe goodly fellowship of the Prophets praise Thee.\nThe noble army of Martyrs praise Thee.\nThe holy Church throughout all the world doth acknowledge Thee:\nThe Father of an infinite Majesty;\nThine adorable, true, and only Son;\nAlso the Holy Ghost, the Comforter.",
+    "latinText": "Te Deum laudámus: te Dóminum confitémur.\nTe ætérnum Patrem omnis terra venerátur.\nTibi omnes Ángeli, tibi cæli et univérsæ potestátes:\nTibi Chérubim et Séraphim incessábili voce proclámant:\nSanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.\nPleni sunt cæli et terra maiestátis glóriæ tuæ.\nTe gloriósus Apostolórum chorus,\nTe Prophetárum laudábilis númerus,\nTe Mártyrum candidátus laudat exércitus.\nTe per orbem terrárum sancta confitétur Ecclésia,\nPatrem imménsæ maiestátis;\nVenerándum tuum verum et únicum Fílium;\nSanctum quoque Paráclitum Spíritum.",
+    "phoneticText": "Te DÉ·um lau·DÁ·mus: te DÓ·mi·num con·fi·TÉ·mur. Te e·TÉR·num PA·trem OM·nis TER·ra ve·ne·RÁ·tur. TÍ·bi OM·nes ÁN·ge·li, TÍ·bi CHÉ·li et u·ni·VÉR·se po·tes·TÁ·tes."
+  },
+  {
+    "slug": "de_profundis",
+    "latinName": "De Profundis",
+    "englishName": "Out of the Depths (Psalm 129)",
+    "category": "devotional",
+    "sortOrder": 31,
+    "audioFileName": "de_profundis_ref.m4a",
+    "englishText": "Out of the depths I have cried to Thee, O Lord: Lord, hear my voice.\nLet Thy ears be attentive to the voice of my supplication.\nIf Thou, O Lord, shalt observe iniquities: Lord, who shall endure it?\nFor with Thee there is merciful forgiveness: and by reason of Thy law I have waited for Thee, O Lord.\nMy soul hath relied on His word: my soul hath hoped in the Lord.\nFrom the morning watch even until night, let Israel hope in the Lord.\nBecause with the Lord there is mercy: and with Him plentiful redemption.\nAnd He shall redeem Israel from all his iniquities.\n\nV. Eternal rest grant unto them, O Lord.\nR. And let perpetual light shine upon them.\nV. May they rest in peace.\nR. Amen.",
+    "latinText": "De profúndis clamávi ad te, Dómine: Dómine, exáudi vocem meam.\nFiant aures tuæ intendéntes in vocem deprecatiónis meæ.\nSi iniquitátes observáveris, Dómine: Dómine, quis sustinébit?\nQuia apud te propitátio est: et propter legem tuam sustínui te, Dómine.\nSustínuit ánima mea in verbo eius: sperávit ánima mea in Dómino.\nA custódia matutína usque ad noctem: speret Israël in Dómino.\nQuia apud Dóminum misericórdia: et copiósa apud eum redémptio.\nEt ipse rédimet Israël ex ómnibus iniquitátibus eius.\n\nV. Réquiem ætérnam dona eis, Dómine.\nR. Et lux perpétua lúceat eis.\nV. Requiéscant in pace.\nR. Amen.",
+    "phoneticText": "De pro·FÚN·dis cla·MÁ·vi ad te, DÓ·mi·ne: DÓ·mi·ne, ek·SÁU·di VÓ·chem MÉ·am. FÍ·ant ÁU·res TÚ·e in·ten·DÉN·tes in VÓ·chem de·pre·ca·ti·Ó·nis MÉ·e."
   }
 ]
