@@ -3,181 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/B — Missal Tab</title>
+<title>Revised — Missal (Continuous Scroll)</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
   h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
   .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
-  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0;background:#F2EBE0}
   .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
   .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
   .scroll{overflow-y:auto;height:calc(100% - 84px);-webkit-overflow-scrolling:touch}
-
   .tab-bar{position:absolute;bottom:0;left:0;right:0;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px}
   .tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500}
   .tab-item.active{color:#8B1A1A}
   .tab-icon{font-size:20px}
 
-  .orn-line{display:flex;align-items:center;gap:12px;margin:20px 0}
-  .orn-line::before,.orn-line::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}
-  .orn-line span{color:#B8960C;font-size:11px;opacity:0.5}
+  /* Dark header */
+  .missal-header{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 20px 18px}
+  .missal-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:4px 10px;border-radius:4px;cursor:pointer}
 
-  .sec-title{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
-  .sec-sub{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
+  /* Part divider */
+  .part-divider{text-align:center;padding:20px 0}
+  .part-divider .line{height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent);margin-bottom:6px}
+  .part-divider .latin{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
+  .part-divider .eng{font-family:'Cormorant Garamond',serif;font-size:12px;color:#998877;font-style:italic}
 
-  .proper-tag{display:inline-block;font-size:9px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:1px 6px;border-radius:3px;letter-spacing:0.5px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
+  /* Posture badge */
+  .posture{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;color:#B8960C;letter-spacing:1.5px;text-transform:uppercase;background:#B8960C0A;padding:5px 12px;border-radius:4px;margin-bottom:8px}
 
-  /* ═══ A — Book Index Style ═══ */
-  .opt-a{background:#F2EBE0}
-  .opt-a .scroll{padding:54px 24px 20px}
-  .opt-a .page-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#1C1410}
-  .opt-a .page-sub{font-family:'Cormorant Garamond',serif;font-size:15px;color:#998877;font-style:italic;margin-bottom:4px}
-  .opt-a .rite-line{font-size:11px;color:#B8960C;margin-bottom:0}
+  /* Section title */
+  .sec-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:600;color:#1C1410}
+  .sec-eng{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:8px}
 
-  .opt-a .mass-row{display:flex;align-items:baseline;gap:0;padding:11px 0;border-bottom:1px solid #B8960C0D;cursor:pointer}
-  .opt-a .mass-latin{font-family:'Playfair Display',serif;font-size:17px;color:#1C1410;flex:1}
-  .opt-a .mass-eng{font-family:'EB Garamond',serif;font-size:14px;color:#998877;font-style:italic;text-align:right}
+  /* Rubric */
+  .rubric{font-family:'EB Garamond',serif;font-size:13px;color:rgba(139,26,26,0.65);font-style:italic;line-height:1.5;margin-bottom:10px}
 
-  /* ═══ B — Structured with accent bars ═══ */
-  .opt-b{background:#F2EBE0}
-  .opt-b .header-band{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 22px}
-  .opt-b .page-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#EDE8DC}
-  .opt-b .page-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
-  .opt-b .rite-badge{display:inline-block;font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:3px 10px;border-radius:3px;letter-spacing:1px;text-transform:uppercase;margin-top:8px}
+  /* Missal columns */
+  .missal-row{display:flex;gap:0;padding:5px 0}
+  .m-col{flex:1}
+  .m-col.left{padding-right:10px;border-right:1px solid #B8960C22}
+  .m-col.right{padding-left:10px}
+  .lat{font-family:'Playfair Display',serif;font-size:14px;color:#1C1410;line-height:1.7}
+  .eng{font-family:'EB Garamond',serif;font-size:14px;color:#998877;line-height:1.7}
 
-  .opt-b .content{padding:16px 20px 20px}
-  .opt-b .mass-row{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px solid #B8960C0A;cursor:pointer}
-  .opt-b .accent-bar{width:3px;height:36px;border-radius:2px;flex-shrink:0;background:#8B1A1A}
-  .opt-b .accent-bar.proper{background:#B8960C}
-  .opt-b .mass-latin{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410}
-  .opt-b .mass-eng{font-family:'EB Garamond',serif;font-size:13px;color:#998877}
-  .opt-b .arrow{color:#B8960C;font-size:14px;margin-left:auto;flex-shrink:0;opacity:0.4}
+  /* Gold fade */
+  .gold-fade{height:1px;background:linear-gradient(90deg,transparent,#B8960C22,transparent);margin:16px 0}
+
+  /* Proper placeholder */
+  .proper-box{text-align:center;padding:16px;background:#B8960C05;border-radius:8px;margin:4px 0}
+  .proper-box .icon{font-size:18px;color:#B8960C;opacity:0.4;margin-bottom:4px}
+  .proper-box .label{font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic;opacity:0.6}
 </style>
 </head>
 <body>
 
-<h1>Missal Tab — A/B Test</h1>
-<div class="sub">Mass Ordinary section list</div>
+<h1>Missal — Revised (Continuous Scroll)</h1>
+<div class="sub">Open tab → scroll through entire Mass</div>
 
-<!-- ═════ A — Book Index ═════ -->
 <div>
-<div class="phone opt-a">
+<div class="phone">
   <div class="scroll">
-    <div class="page-title">Ordo Missæ</div>
-    <div class="page-sub">Ordinary of the Traditional Latin Mass</div>
-    <div class="rite-line">1962 Missale Romanum</div>
+    <!-- Dark header -->
+    <div class="missal-header">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC">Ordo Missæ</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#776655;font-style:italic;margin-top:2px">Saturday, March 29, 2026</div>
+        </div>
+        <div class="missal-badge">1962 Missal <span style="font-size:8px;opacity:0.6">▾</span></div>
+      </div>
+    </div>
 
-    <div class="orn-line"><span>✟</span></div>
+    <div style="padding:0 20px">
+      <!-- PREPARATORY -->
+      <div class="part-divider">
+        <div class="line"></div>
+        <div class="latin">Preces Præparatoriæ</div>
+        <div class="eng">Preparatory Prayers</div>
+        <div class="line" style="margin-top:6px;margin-bottom:0"></div>
+      </div>
 
-    <div class="sec-title">Preces Præparatoriæ</div>
-    <div class="sec-sub">Preparatory Prayers</div>
-    <div class="mass-row"><div class="mass-latin">Preces ad Imum Altaris</div><div class="mass-eng">Prayers at the Foot</div></div>
-    <div class="mass-row"><div class="mass-latin">Confiteor</div><div class="mass-eng">The Confiteor</div></div>
+      <div class="posture">☩ Stand</div>
+      <div class="sec-title">Preces ad Imum Altaris</div>
+      <div class="sec-eng">Prayers at the Foot of the Altar</div>
+      <div class="rubric">The priest, vested and at the foot of the altar, makes the Sign of the Cross and begins:</div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">P. In nómine Patris, ✠ et Fílii, et Spíritus Sancti. Amen.</div></div><div class="m-col right"><div class="eng">P. In the name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen.</div></div></div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">P. Introíbo ad altáre Dei.</div></div><div class="m-col right"><div class="eng">P. I will go unto the altar of God.</div></div></div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">S. Ad Deum qui lætíficat iuventútem meam.</div></div><div class="m-col right"><div class="eng">S. To God, Who giveth joy to my youth.</div></div></div>
 
-    <div class="orn-line"><span>·</span></div>
+      <div class="gold-fade"></div>
 
-    <div class="sec-title">Missa Catechumenorum</div>
-    <div class="sec-sub">Mass of the Catechumens</div>
-    <div class="mass-row"><div class="mass-latin">Introitus</div><div class="mass-eng">Introit <span class="proper-tag">Proper</span></div></div>
-    <div class="mass-row"><div class="mass-latin">Kyrie Eleison</div><div class="mass-eng">Kyrie</div></div>
-    <div class="mass-row"><div class="mass-latin">Gloria in Excelsis Deo</div><div class="mass-eng">Gloria</div></div>
-    <div class="mass-row"><div class="mass-latin">Collecta</div><div class="mass-eng">Collect <span class="proper-tag">Proper</span></div></div>
-    <div class="mass-row"><div class="mass-latin">Credo</div><div class="mass-eng">The Creed</div></div>
+      <div class="posture">☩ Stand</div>
+      <div class="sec-title">Confiteor</div>
+      <div class="sec-eng">The Confiteor</div>
+      <div class="rubric">The priest bows deeply and says the Confiteor.</div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">P. Confíteor Deo omnipoténti... mea culpa, mea culpa, mea máxima culpa...</div></div><div class="m-col right"><div class="eng">P. I confess to almighty God... through my fault, through my fault, through my most grievous fault...</div></div></div>
 
-    <div class="orn-line"><span>·</span></div>
+      <div class="gold-fade"></div>
 
-    <div class="sec-title">Missa Fidelium</div>
-    <div class="sec-sub">Mass of the Faithful</div>
-    <div class="mass-row"><div class="mass-latin">Offertorium</div><div class="mass-eng">Offertory</div></div>
-    <div class="mass-row"><div class="mass-latin">Sanctus</div><div class="mass-eng">Sanctus</div></div>
+      <!-- MASS OF CATECHUMENS -->
+      <div class="part-divider">
+        <div class="line"></div>
+        <div class="latin">Missa Catechumenorum</div>
+        <div class="eng">Mass of the Catechumens</div>
+        <div class="line" style="margin-top:6px;margin-bottom:0"></div>
+      </div>
 
-    <div class="orn-line"><span>·</span></div>
+      <div class="posture">☩ Stand</div>
+      <div class="sec-title">Introitus</div>
+      <div class="sec-eng">Introit</div>
+      <div class="proper-box">
+        <div class="icon">📅</div>
+        <div class="label">Proper — changes daily</div>
+      </div>
 
-    <div class="sec-title">Communio</div>
-    <div class="sec-sub">Communion</div>
-    <div class="mass-row"><div class="mass-latin">Pater Noster</div><div class="mass-eng">Our Father</div></div>
-    <div class="mass-row"><div class="mass-latin">Agnus Dei</div><div class="mass-eng">Lamb of God</div></div>
-    <div class="mass-row"><div class="mass-latin">Domine, Non Sum Dignus</div><div class="mass-eng">Lord, I Am Not Worthy</div></div>
+      <div class="gold-fade"></div>
 
-    <div class="orn-line"><span>·</span></div>
+      <div class="posture">✦ Kneel</div>
+      <div class="sec-title">Kyrie Eleison</div>
+      <div class="sec-eng">Kyrie</div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">P. Kýrie, eléison.<br>S. Kýrie, eléison.<br>P. Kýrie, eléison.</div></div><div class="m-col right"><div class="eng">P. Lord, have mercy.<br>S. Lord, have mercy.<br>P. Lord, have mercy.</div></div></div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">S. Christe, eléison.<br>P. Christe, eléison.<br>S. Christe, eléison.</div></div><div class="m-col right"><div class="eng">S. Christ, have mercy.<br>P. Christ, have mercy.<br>S. Christ, have mercy.</div></div></div>
 
-    <div class="sec-title">Conclusio</div>
-    <div class="sec-sub">Conclusion</div>
-    <div class="mass-row"><div class="mass-latin">Ultimum Evangelium</div><div class="mass-eng">Last Gospel</div></div>
+      <div class="gold-fade"></div>
 
-    <div style="text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
-  </div>
-  <div class="tab-bar">
-    <div class="tab-item"><div class="tab-icon">☀</div>Today</div>
-    <div class="tab-item active"><div class="tab-icon">☰</div>Missal</div>
-    <div class="tab-item"><div class="tab-icon">📖</div>Prayers</div>
-    <div class="tab-item"><div class="tab-icon">📕</div>Reference</div>
-    <div class="tab-item"><div class="tab-icon">🎓</div>Learn</div>
-  </div>
-</div>
-<div class="lbl">A — Book Index</div>
-<div class="desc">Full parchment. Latin left, English right.<br>Gold ornamental dividers. Proper tags inline.</div>
-</div>
+      <div class="posture">☩ Stand</div>
+      <div class="sec-title">Gloria in Excelsis Deo</div>
+      <div class="sec-eng">Gloria</div>
+      <div class="rubric">Said on Sundays (outside Advent/Lent), feasts, and certain other days.</div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">Glória in excélsis Deo, et in terra pax homínibus bonæ voluntátis. Laudámus te. Benedícimus te. Adorámus te. Glorificámus te...</div></div><div class="m-col right"><div class="eng">Glory be to God on high, and on earth peace to men of good will. We praise Thee. We bless Thee. We adore Thee. We glorify Thee...</div></div></div>
 
-<!-- ═════ B — Dark Header + Accent Bars ═════ -->
-<div>
-<div class="phone opt-b">
-  <div class="header-band">
-    <div class="page-title">Ordo Missæ</div>
-    <div class="page-sub">Ordinary of the Traditional Latin Mass</div>
-    <div class="rite-badge">1962 Missale Romanum</div>
-  </div>
-  <div class="scroll" style="height:calc(100% - 84px)">
-    <div class="content">
-      <div class="sec-title">Preces Præparatoriæ</div>
-      <div class="sec-sub">Preparatory Prayers</div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Preces ad Imum Altaris</div><div class="mass-eng">Prayers at the Foot of the Altar</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Confiteor</div><div class="mass-eng">The Confiteor</div></div><div class="arrow">→</div></div>
+      <div class="gold-fade"></div>
 
-      <div class="orn-line"><span>·</span></div>
+      <!-- MASS OF FAITHFUL -->
+      <div class="part-divider">
+        <div class="line"></div>
+        <div class="latin">Missa Fidelium</div>
+        <div class="eng">Mass of the Faithful</div>
+        <div class="line" style="margin-top:6px;margin-bottom:0"></div>
+      </div>
 
-      <div class="sec-title">Missa Catechumenorum</div>
-      <div class="sec-sub">Mass of the Catechumens</div>
-      <div class="mass-row"><div class="accent-bar proper"></div><div><div class="mass-latin">Introitus <span class="proper-tag">Proper</span></div><div class="mass-eng">Introit</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Kyrie Eleison</div><div class="mass-eng">Kyrie</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Gloria in Excelsis Deo</div><div class="mass-eng">Gloria</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar proper"></div><div><div class="mass-latin">Collecta <span class="proper-tag">Proper</span></div><div class="mass-eng">Collect</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Credo</div><div class="mass-eng">The Creed</div></div><div class="arrow">→</div></div>
+      <div class="posture">✦ Kneel</div>
+      <div class="sec-title">Sanctus</div>
+      <div class="sec-eng">Holy, Holy, Holy</div>
+      <div class="rubric">All kneel as the bells ring.</div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.</div></div><div class="m-col right"><div class="eng">Holy, Holy, Holy, Lord God of Hosts.</div></div></div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">Pleni sunt cæli et terra glória tua. Hosánna in excélsis.</div></div><div class="m-col right"><div class="eng">Heaven and earth are full of Thy glory. Hosanna in the highest.</div></div></div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">✠ Benedíctus qui venit in nómine Dómini. Hosánna in excélsis.</div></div><div class="m-col right"><div class="eng">✠ Blessed is He Who cometh in the name of the Lord. Hosanna in the highest.</div></div></div>
 
-      <div class="orn-line"><span>·</span></div>
+      <div class="gold-fade"></div>
 
-      <div class="sec-title">Missa Fidelium</div>
-      <div class="sec-sub">Mass of the Faithful</div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Offertorium</div><div class="mass-eng">Offertory</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Sanctus</div><div class="mass-eng">Holy, Holy, Holy</div></div><div class="arrow">→</div></div>
+      <!-- COMMUNION -->
+      <div class="part-divider">
+        <div class="line"></div>
+        <div class="latin">Communio</div>
+        <div class="eng">Communion</div>
+        <div class="line" style="margin-top:6px;margin-bottom:0"></div>
+      </div>
 
-      <div class="orn-line"><span>·</span></div>
+      <div class="posture">✦ Kneel</div>
+      <div class="sec-title">Agnus Dei</div>
+      <div class="sec-eng">Lamb of God</div>
+      <div class="rubric">The priest strikes his breast three times.</div>
+      <div class="missal-row"><div class="m-col left"><div class="lat">Agnus Dei, qui tollis peccáta mundi: miserére nobis.<br>Agnus Dei, qui tollis peccáta mundi: miserére nobis.<br>Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.</div></div><div class="m-col right"><div class="eng">Lamb of God, Who takest away the sins of the world: have mercy on us.<br>Lamb of God, Who takest away the sins of the world: have mercy on us.<br>Lamb of God, Who takest away the sins of the world: grant us peace.</div></div></div>
 
-      <div class="sec-title">Communio</div>
-      <div class="sec-sub">Communion</div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Pater Noster</div><div class="mass-eng">Our Father</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Agnus Dei</div><div class="mass-eng">Lamb of God</div></div><div class="arrow">→</div></div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Domine, Non Sum Dignus</div><div class="mass-eng">Lord, I Am Not Worthy</div></div><div class="arrow">→</div></div>
-
-      <div class="orn-line"><span>·</span></div>
-
-      <div class="sec-title">Conclusio</div>
-      <div class="sec-sub">Conclusion</div>
-      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Ultimum Evangelium</div><div class="mass-eng">Last Gospel</div></div><div class="arrow">→</div></div>
+      <div style="text-align:center;margin:28px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
     </div>
   </div>
   <div class="tab-bar">
     <div class="tab-item"><div class="tab-icon">☀</div>Today</div>
     <div class="tab-item active"><div class="tab-icon">☰</div>Missal</div>
     <div class="tab-item"><div class="tab-icon">📖</div>Prayers</div>
-    <div class="tab-item"><div class="tab-icon">📕</div>Reference</div>
     <div class="tab-item"><div class="tab-icon">🎓</div>Learn</div>
+    <div class="tab-item"><div class="tab-icon">📕</div>Reference</div>
   </div>
 </div>
-<div class="lbl">B — Dark Header + Accent Bars</div>
-<div class="desc">Dark header with rite badge. Red accent bars<br>for ordinary, gold for propers. English below Latin.</div>
+<div class="lbl">Missal — Continuous Scroll</div>
+<div class="desc">Open tab → entire Mass flows top to bottom.<br>Dark header with tappable rite selector. Posture<br>badges. Latin left, English right. Rubrics in red.</div>
 </div>
 
 </body>
