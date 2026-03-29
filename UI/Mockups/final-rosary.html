@@ -105,87 +105,75 @@
     <!-- ROSARY SHAPE VISUALIZATION -->
     <div class="rosary-map">
       <div class="rosary-map-title">Your Position</div>
-      <svg viewBox="0 0 300 280" width="300" height="280" style="display:block;margin:0 auto">
-        <!-- Rosary loop (oval) -->
-        <!-- Decade I — top, 10 o'clock to 12 o'clock (completed) -->
-        <circle cx="72" cy="68" r="5" fill="#B8960C"/> <!-- OF -->
-        <circle cx="58" cy="82" r="4" fill="#8B1A1A"/>
-        <circle cx="48" cy="97" r="4" fill="#8B1A1A"/>
-        <circle cx="42" cy="113" r="4" fill="#8B1A1A"/>
-        <circle cx="40" cy="129" r="4" fill="#8B1A1A"/>
-        <circle cx="42" cy="145" r="4" fill="#8B1A1A"/>
-        <circle cx="40" cy="129" r="4" fill="#8B1A1A"/>
-        <circle cx="48" cy="161" r="4" fill="#8B1A1A"/>
-        <circle cx="42" cy="145" r="4" fill="#8B1A1A"/>
-        <circle cx="48" cy="97" r="4" fill="#8B1A1A"/>
-        <circle cx="58" cy="177" r="4" fill="#8B1A1A"/>
-        <circle cx="72" cy="190" r="4" fill="#8B1A1A"/>
-        <circle cx="88" cy="198" r="4" fill="#8B1A1A"/>
+      <svg viewBox="0 0 260 320" width="260" height="320" style="display:block;margin:0 auto">
+        <!-- Rosary chain (the oval loop) -->
+        <ellipse cx="130" cy="130" rx="100" ry="80" fill="none" stroke="#B8960C" stroke-width="0.5" opacity="0.15"/>
 
-        <!-- Decade II — bottom left to bottom (in progress, 4/10 done) -->
-        <circle cx="106" cy="204" r="5" fill="#B8960C"/> <!-- OF -->
-        <circle cx="115" cy="210" r="4" fill="#8B1A1A"/>
-        <circle cx="125" cy="214" r="4" fill="#8B1A1A"/>
-        <circle cx="136" cy="216" r="4" fill="#8B1A1A"/>
-        <circle cx="147" cy="216" r="5" fill="#8B1A1A" style="filter:drop-shadow(0 0 6px rgba(139,26,26,0.7))"/> <!-- CURRENT -->
-        <circle cx="158" cy="216" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="169" cy="214" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="179" cy="210" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="189" cy="205" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="197" cy="198" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="204" cy="190" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <!-- Chain for the tail -->
+        <line x1="130" y1="210" x2="130" y2="295" stroke="#B8960C" stroke-width="0.5" opacity="0.15"/>
 
-        <!-- Decade III — bottom right going up (not started) -->
-        <circle cx="215" cy="178" r="5" fill="#B8960C" opacity="0.2"/> <!-- OF -->
-        <circle cx="224" cy="164" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="230" cy="149" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="232" cy="134" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="232" cy="119" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="230" cy="104" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="224" cy="90" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="216" cy="78" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="206" cy="68" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="194" cy="60" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="182" cy="55" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <!-- CRUCIFIX at bottom -->
+        <line x1="130" y1="285" x2="130" y2="310" stroke="#B8960C" stroke-width="1.5" opacity="0.4"/>
+        <line x1="120" y1="295" x2="140" y2="295" stroke="#B8960C" stroke-width="1.5" opacity="0.4"/>
+        <circle cx="130" cy="285" r="2" fill="#B8960C" opacity="0.4"/>
 
-        <!-- Decade IV — top right (not started) -->
-        <circle cx="168" cy="48" r="5" fill="#B8960C" opacity="0.2"/>
-        <circle cx="157" cy="44" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="147" cy="42" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="137" cy="42" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="127" cy="44" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="117" cy="48" r="4" fill="#8B1A1A" opacity="0.2"/>
+        <!-- TAIL BEADS (bottom up): Creed, Our Father, 3 Hail Marys, Glory Be — all completed -->
+        <circle cx="130" cy="275" r="4" fill="#8B1A1A"/><!-- Creed -->
+        <circle cx="130" cy="260" r="5" fill="#B8960C"/><!-- Our Father -->
+        <circle cx="130" cy="247" r="4" fill="#8B1A1A"/><!-- HM 1 -->
+        <circle cx="130" cy="235" r="4" fill="#8B1A1A"/><!-- HM 2 -->
+        <circle cx="130" cy="223" r="4" fill="#8B1A1A"/><!-- HM 3 -->
+        <circle cx="130" cy="211" r="4" fill="#8B1A1A"/><!-- Glory Be -->
+        <!-- === DECADE I (left side, going down) — COMPLETED === -->
+        <circle cx="120" cy="52" r="5" fill="#B8960C"/><!-- OF -->
+        <circle cx="102" cy="55" r="3.5" fill="#8B1A1A"/>
+        <circle cx="86" cy="62" r="3.5" fill="#8B1A1A"/>
+        <circle cx="72" cy="72" r="3.5" fill="#8B1A1A"/>
+        <circle cx="60" cy="85" r="3.5" fill="#8B1A1A"/>
+        <circle cx="52" cy="100" r="3.5" fill="#8B1A1A"/>
+        <circle cx="47" cy="116" r="3.5" fill="#8B1A1A"/>
+        <circle cx="46" cy="132" r="3.5" fill="#8B1A1A"/>
+        <circle cx="50" cy="148" r="3.5" fill="#8B1A1A"/>
+        <circle cx="57" cy="162" r="3.5" fill="#8B1A1A"/>
+        <circle cx="68" cy="174" r="3.5" fill="#8B1A1A"/>
 
-        <!-- Decade V — top left back to start (not started) -->
-        <circle cx="107" cy="48" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="97" cy="52" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="88" cy="56" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="80" cy="62" r="4" fill="#8B1A1A" opacity="0.2"/>
-        <circle cx="72" cy="54" r="5" fill="#B8960C" opacity="0.2"/>
+        <!-- === DECADE II (bottom, going right) — IN PROGRESS 4/10 === -->
+        <circle cx="82" cy="184" r="5" fill="#B8960C"/><!-- OF -->
+        <circle cx="95" cy="192" r="3.5" fill="#8B1A1A"/>
+        <circle cx="108" cy="198" r="3.5" fill="#8B1A1A"/>
+        <circle cx="121" cy="202" r="3.5" fill="#8B1A1A"/>
+        <circle cx="134" cy="203" r="5" fill="#8B1A1A" style="filter:drop-shadow(0 0 8px rgba(139,26,26,0.8))"/><!-- CURRENT -->
+        <circle cx="147" cy="202" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="160" cy="198" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="172" cy="192" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="183" cy="184" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="192" cy="174" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="199" cy="162" r="3.5" fill="#8B1A1A" opacity="0.2"/>
 
-        <!-- CENTER PIECE / junction at top -->
-        <circle cx="90" cy="48" r="6" fill="none" stroke="#B8960C" stroke-width="1" opacity="0.3"/>
+        <!-- === DECADE III (right side, going up) — NOT STARTED === -->
+        <circle cx="205" cy="148" r="5" fill="#B8960C" opacity="0.2"/><!-- OF -->
+        <circle cx="210" cy="132" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="212" cy="116" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="210" cy="100" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="204" cy="85" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="195" cy="72" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="184" cy="62" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="171" cy="55" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="157" cy="50" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="143" cy="48" r="3.5" fill="#8B1A1A" opacity="0.2"/>
+        <circle cx="130" cy="50" r="3.5" fill="#8B1A1A" opacity="0.2"/>
 
-        <!-- TAIL — hanging down from center -->
-        <!-- 3 Hail Marys + Our Father + Creed (all completed) -->
-        <line x1="90" y1="54" x2="90" y2="80" stroke="#B8960C" stroke-width="0.5" opacity="0.2"/>
-        <circle cx="90" cy="66" r="4" fill="#8B1A1A"/> <!-- HM -->
-        <circle cx="90" cy="78" r="4" fill="#8B1A1A"/> <!-- HM -->
-        <circle cx="90" cy="90" r="4" fill="#8B1A1A"/> <!-- HM -->
-        <line x1="90" y1="94" x2="90" y2="112" stroke="#B8960C" stroke-width="0.5" opacity="0.2"/>
-        <circle cx="90" cy="104" r="5" fill="#B8960C"/> <!-- OF -->
-        <circle cx="90" cy="116" r="4" fill="#8B1A1A"/> <!-- Creed -->
+        <!-- === DECADE IV & V are hidden on the back — show as the top arc dimmed === -->
+        <!-- These would appear as user progresses. For now just the medal/junction -->
 
-        <!-- CRUCIFIX at bottom of tail -->
-        <line x1="90" y1="120" x2="90" y2="145" stroke="#B8960C" stroke-width="1" opacity="0.4"/>
-        <line x1="82" y1="132" x2="98" y2="132" stroke="#B8960C" stroke-width="1" opacity="0.4"/>
+        <!-- CENTER MEDAL at top of loop -->
+        <circle cx="130" cy="50" r="7" fill="none" stroke="#B8960C" stroke-width="1" opacity="0.25"/>
+        <text x="130" y="53" text-anchor="middle" font-family="Playfair Display,serif" font-size="8" fill="#B8960C" opacity="0.4">M</text>
 
-        <!-- Decade labels around the loop -->
-        <text x="28" y="130" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">I</text>
-        <text x="140" y="232" font-family="Cormorant Garamond,serif" font-size="9" fill="#B8960C" font-style="italic">II</text>
-        <text x="244" y="130" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">III</text>
-        <text x="168" y="35" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">IV</text>
-        <text x="60" y="35" font-family="Cormorant Garamond,serif" font-size="9" fill="#665544" font-style="italic">V</text>
+        <!-- Decade labels -->
+        <text x="22" y="120" font-family="Cormorant Garamond,serif" font-size="10" fill="#665544" font-style="italic">I</text>
+        <text x="128" y="220" font-family="Cormorant Garamond,serif" font-size="10" fill="#B8960C" font-style="italic" text-anchor="middle">II</text>
+        <text x="228" y="120" font-family="Cormorant Garamond,serif" font-size="10" fill="#665544" font-style="italic">III</text>
       </svg>
 
       <!-- Legend -->
