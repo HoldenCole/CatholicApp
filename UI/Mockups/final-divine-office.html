@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final — Divine Office</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0;background:#F2EBE0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+  .scroll{overflow-y:auto;height:100%;-webkit-overflow-scrolling:touch}
+  .orn-line{display:flex;align-items:center;gap:12px;margin:18px 0}
+  .orn-line::before,.orn-line::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}
+  .orn-line span{color:#B8960C;font-size:11px;opacity:0.5}
+</style>
+</head>
+<body>
+
+<h1>Divine Office — Final</h1>
+<div class="sub">Tapped from Today tab → select an hour to pray</div>
+
+<div>
+<div class="phone">
+  <div class="scroll">
+    <!-- Dark header -->
+    <div style="background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#EDE8DC">The Divine Office</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px">Officium Divinum</div>
+    </div>
+
+    <div style="padding:0 24px 40px">
+
+      <div class="orn-line"><span>✟</span></div>
+
+      <!-- Night hours -->
+      <div style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase">Horæ Nocturnæ</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px">Night Hours</div>
+
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="width:3px;height:32px;border-radius:2px;background:rgba(184,150,12,0.2);flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">Matins</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Matutinum</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">During the night · Psalms, readings, and responsories</div>
+        </div>
+      </div>
+
+      <div class="orn-line"><span>·</span></div>
+
+      <!-- Day hours -->
+      <div style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase">Horæ Diurnæ</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px">Day Hours</div>
+
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="width:3px;height:32px;border-radius:2px;background:rgba(184,150,12,0.2);flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">Lauds</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Laudes</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">Dawn · Morning praise</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="width:3px;height:32px;border-radius:2px;background:rgba(184,150,12,0.2);flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">Prime</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Prima</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">~6:00 AM · The first hour</div>
+        </div>
+      </div>
+
+      <!-- Terce — suggested NOW since ~9am -->
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="width:3px;height:32px;border-radius:2px;background:#8B1A1A;flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">Terce <span style="font-size:9px;font-weight:700;color:#8B1A1A;border:1px solid rgba(139,26,26,0.3);padding:1px 6px;border-radius:3px;letter-spacing:0.5px;text-transform:uppercase;margin-left:4px;vertical-align:middle;font-family:'Inter',sans-serif">NOW</span></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Tertia</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">~9:00 AM · The Holy Ghost descended at Terce</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="width:3px;height:32px;border-radius:2px;background:rgba(184,150,12,0.2);flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">Sext</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Sexta</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">~12:00 PM · Our Lord was crucified at Sext</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="width:3px;height:32px;border-radius:2px;background:rgba(184,150,12,0.2);flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">None</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Nona</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">~3:00 PM · Our Lord died on the Cross at None</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="width:3px;height:32px;border-radius:2px;background:rgba(184,150,12,0.2);flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">Vespers</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Vesperæ</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">Evening · The most solemn of the day hours</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:0;padding:12px 0">
+        <div style="width:3px;height:32px;border-radius:2px;background:rgba(184,150,12,0.2);flex-shrink:0;margin-right:14px"></div>
+        <div style="flex:1">
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500">Compline</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic">Completorium</div>
+          <div style="font-family:'EB Garamond',serif;font-size:12px;color:#998877;margin-top:2px">Before sleep · Ends with a Marian antiphon</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
+    </div>
+  </div>
+</div>
+<div class="lbl">Divine Office</div>
+<div class="desc">Dark header. Grouped by Night/Day hours.<br>Current hour highlighted with red accent + NOW badge.<br>All tappable, no arrows. Brief descriptions.</div>
+</div>
+
+</body>
+</html>
