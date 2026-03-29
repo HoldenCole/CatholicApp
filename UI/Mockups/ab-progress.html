@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/B/C — Progress (Revised)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0;background:#F2EBE0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+  .scroll{overflow-y:auto;height:100%;-webkit-overflow-scrolling:touch}
+  .orn{display:flex;align-items:center;gap:12px;margin:18px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
+  .sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
+  .sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
+  .p-row{display:flex;align-items:center;padding:11px 0;border-bottom:1px solid rgba(184,150,12,0.08)}
+  .p-bar{width:3px;height:28px;border-radius:2px;flex-shrink:0;margin-right:14px}
+  .p-name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410}
+  .p-latin{font-family:'Cormorant Garamond',serif;font-size:12px;color:#B8960C;font-style:italic}
+  .p-st{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic}
+</style>
+</head>
+<body>
+
+<h1>Progress — A/B/C (Revised)</h1>
+<div class="sub">Making option B less bland</div>
+
+<!-- ═════ A — Dark header ring + stats, streak below ═════ -->
+<div>
+<div class="phone">
+  <div class="scroll">
+    <div style="background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 24px;text-align:center">
+      <svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="rgba(184,150,12,0.15)" stroke-width="8"/><circle cx="60" cy="60" r="50" fill="none" stroke="url(#rg)" stroke-width="8" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="126" transform="rotate(-90 60 60)"/><defs><linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#8B1A1A"/><stop offset="100%" style="stop-color:#B8960C"/></linearGradient></defs><text x="60" y="56" text-anchor="middle" font-family="Playfair Display,serif" font-size="22" font-weight="600" fill="#EDE8DC">60%</text><text x="60" y="72" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="10" fill="#B8960C" font-style="italic">Mastery</text></svg>
+      <div style="display:flex;gap:0;text-align:center;margin-top:12px">
+        <div style="flex:1"><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#2E7D32">3</div><div style="font-size:10px;color:#776655">Mastered</div></div>
+        <div style="flex:1"><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#B8960C">4</div><div style="font-size:10px;color:#776655">Familiar</div></div>
+        <div style="flex:1"><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:rgba(139,26,26,0.7)">3</div><div style="font-size:10px;color:#776655">Learning</div></div>
+      </div>
+    </div>
+    <div style="padding:0 24px 40px">
+      <div style="border-left:3px solid #8B1A1A;padding:12px 0 12px 16px;margin:16px 0"><div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#1C1410">7-Day Streak</div><div style="font-family:'EB Garamond',serif;font-size:14px;color:#998877">Keep practicing daily.</div></div>
+      <div class="orn"><span>✟</span></div>
+      <div class="sec-t">All Prayers</div><div class="sec-s">Omnes Orationes</div>
+      <div class="p-row"><div class="p-bar" style="background:#2E7D32"></div><div style="flex:1"><div class="p-name">Signum Crucis</div><div class="p-latin">Sign of the Cross</div></div><div class="p-st" style="color:#2E7D32">Mastered</div></div>
+      <div class="p-row"><div class="p-bar" style="background:#2E7D32"></div><div style="flex:1"><div class="p-name">Ave Maria</div><div class="p-latin">Hail Mary</div></div><div class="p-st" style="color:#2E7D32">Mastered</div></div>
+      <div class="p-row"><div class="p-bar" style="background:#B8960C"></div><div style="flex:1"><div class="p-name">Pater Noster</div><div class="p-latin">Our Father</div></div><div class="p-st" style="color:#B8960C">Familiar</div></div>
+      <div class="p-row"><div class="p-bar" style="background:rgba(139,26,26,0.5)"></div><div style="flex:1"><div class="p-name">Symbolum Apostolorum</div><div class="p-latin">Apostles' Creed</div></div><div class="p-st" style="color:rgba(139,26,26,0.7)">Learning</div></div>
+      <div class="p-row"><div class="p-bar" style="background:rgba(0,0,0,0.1)"></div><div style="flex:1"><div class="p-name">Confiteor</div><div class="p-latin">I Confess</div></div><div class="p-st" style="color:#998877">Not Started</div></div>
+    </div>
+  </div>
+</div>
+<div class="lbl">A — Dark Header (Previous B)</div>
+<div class="desc">Ring + stats in dark header. Streak below<br>with red accent. Color-coded prayer list.</div>
+</div>
+
+<!-- ═════ B — Same but with horizontal progress bars per prayer ═════ -->
+<div>
+<div class="phone">
+  <div class="scroll">
+    <div style="background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 24px;text-align:center">
+      <svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="rgba(184,150,12,0.15)" stroke-width="8"/><circle cx="60" cy="60" r="50" fill="none" stroke="url(#rg2)" stroke-width="8" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="126" transform="rotate(-90 60 60)"/><defs><linearGradient id="rg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#8B1A1A"/><stop offset="100%" style="stop-color:#B8960C"/></linearGradient></defs><text x="60" y="56" text-anchor="middle" font-family="Playfair Display,serif" font-size="22" font-weight="600" fill="#EDE8DC">60%</text><text x="60" y="72" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="10" fill="#B8960C" font-style="italic">Mastery</text></svg>
+      <div style="display:flex;gap:0;text-align:center;margin-top:12px">
+        <div style="flex:1"><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#2E7D32">3</div><div style="font-size:10px;color:#776655">Mastered</div></div>
+        <div style="flex:1"><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#B8960C">4</div><div style="font-size:10px;color:#776655">Familiar</div></div>
+        <div style="flex:1"><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:rgba(139,26,26,0.7)">3</div><div style="font-size:10px;color:#776655">Learning</div></div>
+      </div>
+    </div>
+    <div style="padding:0 24px 40px">
+      <div style="border-left:3px solid #8B1A1A;padding:12px 0 12px 16px;margin:16px 0"><div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#1C1410">7-Day Streak</div><div style="font-family:'EB Garamond',serif;font-size:14px;color:#998877">Keep practicing daily.</div></div>
+      <div class="orn"><span>✟</span></div>
+      <div class="sec-t">All Prayers</div><div class="sec-s">Omnes Orationes</div>
+
+      <!-- With mini progress bars -->
+      <div style="padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div class="p-name">Signum Crucis</div><div class="p-st" style="color:#2E7D32">Mastered</div></div>
+        <div class="p-latin">Sign of the Cross</div>
+        <div style="height:3px;background:rgba(184,150,12,0.08);border-radius:2px;margin-top:6px"><div style="height:3px;background:#2E7D32;border-radius:2px;width:100%"></div></div>
+      </div>
+
+      <div style="padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div class="p-name">Ave Maria</div><div class="p-st" style="color:#2E7D32">Mastered</div></div>
+        <div class="p-latin">Hail Mary</div>
+        <div style="height:3px;background:rgba(184,150,12,0.08);border-radius:2px;margin-top:6px"><div style="height:3px;background:#2E7D32;border-radius:2px;width:100%"></div></div>
+      </div>
+
+      <div style="padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div class="p-name">Pater Noster</div><div class="p-st" style="color:#B8960C">Familiar</div></div>
+        <div class="p-latin">Our Father</div>
+        <div style="height:3px;background:rgba(184,150,12,0.08);border-radius:2px;margin-top:6px"><div style="height:3px;background:#B8960C;border-radius:2px;width:66%"></div></div>
+      </div>
+
+      <div style="padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div class="p-name">Symbolum Apostolorum</div><div class="p-st" style="color:rgba(139,26,26,0.7)">Learning</div></div>
+        <div class="p-latin">Apostles' Creed</div>
+        <div style="height:3px;background:rgba(184,150,12,0.08);border-radius:2px;margin-top:6px"><div style="height:3px;background:#8B1A1A;border-radius:2px;width:33%"></div></div>
+      </div>
+
+      <div style="padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div class="p-name">Confiteor</div><div class="p-st" style="color:#998877">Not Started</div></div>
+        <div class="p-latin">I Confess</div>
+        <div style="height:3px;background:rgba(184,150,12,0.08);border-radius:2px;margin-top:6px"><div style="height:3px;background:rgba(0,0,0,0.05);border-radius:2px;width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lbl">B — With Progress Bars</div>
+<div class="desc">Same dark header. Each prayer gets a mini<br>progress bar (100%=green, 66%=gold, 33%=red,<br>0%=empty). More visual interest per row.</div>
+</div>
+
+</body>
+</html>
