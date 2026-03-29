@@ -55,6 +55,17 @@
     "isFasting": true
   },
   {
+    "slug": "divine_office",
+    "title": "The Divine Office",
+    "latinTitle": "Officium Divinum",
+    "description": "The official prayer of the Church, sanctifying every hour of the day with Psalms, hymns, and readings.",
+    "category": "daily_devotion",
+    "applicableDays": null,
+    "seasonalNote": null,
+    "isAbstinence": false,
+    "isFasting": false
+  },
+  {
     "slug": "morning_offering",
     "title": "Morning Offering",
     "latinTitle": "Oblatio Matutina",

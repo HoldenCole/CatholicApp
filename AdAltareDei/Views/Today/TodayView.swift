@@ -209,20 +209,17 @@ struct TodayView: View {
                 !$0.isAbstinence && !$0.isFasting && $0.slug != "angelus_devotion"
             }
             ForEach(devotionItems) { item in
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(timeAwareTitle(for: item))
-                        .font(.custom("Palatino", size: 16).weight(.medium))
-                        .foregroundStyle(.ink)
-                    Text(timeAwareLatinTitle(for: item))
-                        .font(.custom("Palatino-Italic", size: 13))
-                        .foregroundStyle(.goldLeaf)
-                }
-                .padding(.vertical, 12)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .overlay(alignment: .bottom) {
-                    Rectangle()
-                        .fill(Color.goldLeaf.opacity(0.08))
-                        .frame(height: 1)
+                Group {
+                    if item.slug == "divine_office" {
+                        NavigationLink {
+                            DivineOfficeView()
+                        } label: {
+                            devotionRowContent(item)
+                        }
+                        .buttonStyle(.plain)
+                    } else {
+                        devotionRowContent(item)
+                    }
                 }
             }
         }
@@ -284,6 +281,24 @@ struct TodayView: View {
                 .foregroundStyle(.secondary)
         }
         .padding(.bottom, 12)
+    }
+
+    private func devotionRowContent(_ item: TraditionalDevotion) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(timeAwareTitle(for: item))
+                .font(.custom("Palatino", size: 16).weight(.medium))
+                .foregroundStyle(.ink)
+            Text(timeAwareLatinTitle(for: item))
+                .font(.custom("Palatino-Italic", size: 13))
+                .foregroundStyle(.goldLeaf)
+        }
+        .padding(.vertical, 12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .overlay(alignment: .bottom) {
+            Rectangle()
+                .fill(Color.goldLeaf.opacity(0.08))
+                .frame(height: 1)
+        }
     }
 
     /// Returns time-appropriate title for devotions that change by time of day.
