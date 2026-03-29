@@ -210,10 +210,10 @@ struct TodayView: View {
             }
             ForEach(devotionItems) { item in
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(item.title)
+                    Text(timeAwareTitle(for: item))
                         .font(.custom("Palatino", size: 16).weight(.medium))
                         .foregroundStyle(.ink)
-                    Text(item.latinTitle)
+                    Text(timeAwareLatinTitle(for: item))
                         .font(.custom("Palatino-Italic", size: 13))
                         .foregroundStyle(.goldLeaf)
                 }
@@ -284,6 +284,23 @@ struct TodayView: View {
                 .foregroundStyle(.secondary)
         }
         .padding(.bottom, 12)
+    }
+
+    /// Returns time-appropriate title for devotions that change by time of day.
+    private func timeAwareTitle(for devotion: TraditionalDevotion) -> String {
+        guard devotion.slug == "morning_offering" else { return devotion.title }
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return "Morning Offering" }
+        else if hour < 17 { return "Afternoon Offering" }
+        else { return "Evening Offering" }
+    }
+
+    private func timeAwareLatinTitle(for devotion: TraditionalDevotion) -> String {
+        guard devotion.slug == "morning_offering" else { return devotion.latinTitle }
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return "Oblatio Matutina" }
+        else if hour < 17 { return "Oblatio Meridiana" }
+        else { return "Oblatio Vespertina" }
     }
 
     private func shortDescription(_ devotion: TraditionalDevotion) -> String {
