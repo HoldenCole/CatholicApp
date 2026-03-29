@@ -81,7 +81,7 @@ struct ReferenceView: View {
     }
 
     private func loadEntries() {
-        let files = ["reference_prayers", "reference_mass", "reference_devotions", "reference_penance", "reference_calendar", "reference_latin"]
+        let files = ["reference_prayers", "reference_mass", "reference_devotions", "reference_penance", "reference_calendar", "reference_latin", "reference_sacramentals"]
         var all: [ReferenceEntry] = []
         for file in files {
             if let url = Bundle.main.url(forResource: file, withExtension: "json"),
