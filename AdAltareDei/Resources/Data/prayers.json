@@ -185,5 +185,38 @@
     "englishText": "Hail, Queen of the Heavens. Hail, Mistress of the Angels. Hail, holy root. Hail, gate of heaven, from whom came light for the world. Rejoice, glorious Virgin, beautiful above all others. Hail, most beautiful, and pray for us to Christ.",
     "latinText": "Ave Regína cælórum, ave Dómina angelórum, salve radix, salve porta, ex qua mundo lux est orta. Gaude Virgo gloriósa, super omnes speciósa. Vale, o valde decóra, et pro nobis Christum exóra.",
     "phoneticText": "A·ve Re·GÍ·na che·LÓ·rum, A·ve DÓ·mi·na an·ge·LÓ·rum, SAL·ve RÁ·diks, SAL·ve POR·ta, eks qua MUN·do luks est OR·ta. GÁU·de VÍR·go glo·ri·Ó·sa, SÚ·per OM·nes spe·chi·Ó·sa. VA·le, o VAL·de de·CÓ·ra, et pro NÓ·bis CHRÍS·tum ek·SÓ·ra."
+  },
+  {
+    "slug": "gloria_in_excelsis",
+    "latinName": "Gloria in Excelsis Deo",
+    "englishName": "Glory to God in the Highest",
+    "category": "mass",
+    "sortOrder": 18,
+    "audioFileName": "gloria_in_excelsis_ref.m4a",
+    "englishText": "Glory be to God on high, and on earth peace to men of good will. We praise Thee. We bless Thee. We adore Thee. We glorify Thee. We give Thee thanks for Thy great glory. O Lord God, heavenly King, God the Father almighty. O Lord Jesus Christ, the only-begotten Son. O Lord God, Lamb of God, Son of the Father. Thou Who takest away the sins of the world, have mercy on us. Thou Who takest away the sins of the world, receive our prayer. Thou Who sittest at the right hand of the Father, have mercy on us. For Thou alone art holy. Thou alone art the Lord. Thou alone art the most high, Jesus Christ. With the Holy Ghost, in the glory of God the Father. Amen.",
+    "latinText": "Glória in excélsis Deo, et in terra pax homínibus bonæ voluntátis. Laudámus te. Benedícimus te. Adorámus te. Glorificámus te. Grátias ágimus tibi propter magnam glóriam tuam. Dómine Deus, Rex cæléstis, Deus Pater omnípotens. Dómine Fili Unigénite, Iesu Christe. Dómine Deus, Agnus Dei, Fílius Patris. Qui tollis peccáta mundi, miserére nobis. Qui tollis peccáta mundi, súscipe deprecatiónem nostram. Qui sedes ad déxteram Patris, miserére nobis. Quóniam tu solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, Iesu Christe. Cum Sancto Spíritu, in glória Dei Patris. Amen.",
+    "phoneticText": "GLÓ·ri·a in ek·SHÉL·sis DÉ·o, et in TER·ra paks ho·MÍ·ni·bus BÓ·ne vo·lun·TÁ·tis. Lau·DÁ·mus te. Be·ne·DÍ·chi·mus te. A·do·RÁ·mus te. Glo·ri·fi·CÁ·mus te. GRÁ·ti·as Á·gi·mus TÍ·bi PROP·ter MAG·nam GLÓ·ri·am TÚ·am. DÓ·mi·ne DÉ·us, Reks che·LÉS·tis, DÉ·us PA·ter om·NÍ·po·tens. DÓ·mi·ne FÍ·li U·ni·GÉ·ni·te, YÉ·su CHRÍS·te. DÓ·mi·ne DÉ·us, AG·nus DÉ·i, FÍ·li·us PA·tris. Qui TOL·lis pec·CÁ·ta MUN·di, mi·se·RÉ·re NÓ·bis. Qui TOL·lis pec·CÁ·ta MUN·di, SÚ·shi·pe de·pre·ca·ti·Ó·nem NOS·tram. Qui SÉ·des ad DÉK·te·ram PA·tris, mi·se·RÉ·re NÓ·bis. QUÓ·ni·am tu SO·lus SANC·tus. Tu SO·lus DÓ·mi·nus. Tu SO·lus Al·TÍS·si·mus, YÉ·su CHRÍS·te. Cum SANC·to SPÍ·ri·tu, in GLÓ·ri·a DÉ·i PA·tris. A·men."
+  },
+  {
+    "slug": "sanctus",
+    "latinName": "Sanctus",
+    "englishName": "Holy, Holy, Holy",
+    "category": "mass",
+    "sortOrder": 19,
+    "audioFileName": "sanctus_ref.m4a",
+    "englishText": "Holy, Holy, Holy, Lord God of Hosts. Heaven and earth are full of Thy glory. Hosanna in the highest. Blessed is He Who cometh in the name of the Lord. Hosanna in the highest.",
+    "latinText": "Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth. Pleni sunt cæli et terra glória tua. Hosánna in excélsis. Benedíctus qui venit in nómine Dómini. Hosánna in excélsis.",
+    "phoneticText": "SANC·tus, SANC·tus, SANC·tus, DÓ·mi·nus DÉ·us SÁ·ba·ot. PLÉ·ni sunt CHÉ·li et TER·ra GLÓ·ri·a TÚ·a. Ho·SÁN·na in ek·SHÉL·sis. Be·ne·DÍC·tus qui VÉ·nit in NÓ·mi·ne DÓ·mi·ni. Ho·SÁN·na in ek·SHÉL·sis."
+  },
+  {
+    "slug": "agnus_dei",
+    "latinName": "Agnus Dei",
+    "englishName": "Lamb of God",
+    "category": "mass",
+    "sortOrder": 20,
+    "audioFileName": "agnus_dei_ref.m4a",
+    "englishText": "Lamb of God, Who takest away the sins of the world, have mercy on us.\nLamb of God, Who takest away the sins of the world, have mercy on us.\nLamb of God, Who takest away the sins of the world, grant us peace.",
+    "latinText": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.\nAgnus Dei, qui tollis peccáta mundi: miserére nobis.\nAgnus Dei, qui tollis peccáta mundi: dona nobis pacem.",
+    "phoneticText": "AG·nus DÉ·i, qui TOL·lis pec·CÁ·ta MUN·di: mi·se·RÉ·re NÓ·bis. AG·nus DÉ·i, qui TOL·lis pec·CÁ·ta MUN·di: mi·se·RÉ·re NÓ·bis. AG·nus DÉ·i, qui TOL·lis pec·CÁ·ta MUN·di: DÓ·na NÓ·bis PA·chem."
   }
 ]
