@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/B — Missal Tab</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+  .scroll{overflow-y:auto;height:calc(100% - 84px);-webkit-overflow-scrolling:touch}
+
+  .tab-bar{position:absolute;bottom:0;left:0;right:0;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px}
+  .tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500}
+  .tab-item.active{color:#8B1A1A}
+  .tab-icon{font-size:20px}
+
+  .orn-line{display:flex;align-items:center;gap:12px;margin:20px 0}
+  .orn-line::before,.orn-line::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}
+  .orn-line span{color:#B8960C;font-size:11px;opacity:0.5}
+
+  .sec-title{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
+  .sec-sub{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
+
+  .proper-tag{display:inline-block;font-size:9px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:1px 6px;border-radius:3px;letter-spacing:0.5px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
+
+  /* ═══ A — Book Index Style ═══ */
+  .opt-a{background:#F2EBE0}
+  .opt-a .scroll{padding:54px 24px 20px}
+  .opt-a .page-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#1C1410}
+  .opt-a .page-sub{font-family:'Cormorant Garamond',serif;font-size:15px;color:#998877;font-style:italic;margin-bottom:4px}
+  .opt-a .rite-line{font-size:11px;color:#B8960C;margin-bottom:0}
+
+  .opt-a .mass-row{display:flex;align-items:baseline;gap:0;padding:11px 0;border-bottom:1px solid #B8960C0D;cursor:pointer}
+  .opt-a .mass-latin{font-family:'Playfair Display',serif;font-size:17px;color:#1C1410;flex:1}
+  .opt-a .mass-eng{font-family:'EB Garamond',serif;font-size:14px;color:#998877;font-style:italic;text-align:right}
+
+  /* ═══ B — Structured with accent bars ═══ */
+  .opt-b{background:#F2EBE0}
+  .opt-b .header-band{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 22px}
+  .opt-b .page-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#EDE8DC}
+  .opt-b .page-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
+  .opt-b .rite-badge{display:inline-block;font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:3px 10px;border-radius:3px;letter-spacing:1px;text-transform:uppercase;margin-top:8px}
+
+  .opt-b .content{padding:16px 20px 20px}
+  .opt-b .mass-row{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px solid #B8960C0A;cursor:pointer}
+  .opt-b .accent-bar{width:3px;height:36px;border-radius:2px;flex-shrink:0;background:#8B1A1A}
+  .opt-b .accent-bar.proper{background:#B8960C}
+  .opt-b .mass-latin{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410}
+  .opt-b .mass-eng{font-family:'EB Garamond',serif;font-size:13px;color:#998877}
+  .opt-b .arrow{color:#B8960C;font-size:14px;margin-left:auto;flex-shrink:0;opacity:0.4}
+</style>
+</head>
+<body>
+
+<h1>Missal Tab — A/B Test</h1>
+<div class="sub">Mass Ordinary section list</div>
+
+<!-- ═════ A — Book Index ═════ -->
+<div>
+<div class="phone opt-a">
+  <div class="scroll">
+    <div class="page-title">Ordo Missæ</div>
+    <div class="page-sub">Ordinary of the Traditional Latin Mass</div>
+    <div class="rite-line">1962 Missale Romanum</div>
+
+    <div class="orn-line"><span>✟</span></div>
+
+    <div class="sec-title">Preces Præparatoriæ</div>
+    <div class="sec-sub">Preparatory Prayers</div>
+    <div class="mass-row"><div class="mass-latin">Preces ad Imum Altaris</div><div class="mass-eng">Prayers at the Foot</div></div>
+    <div class="mass-row"><div class="mass-latin">Confiteor</div><div class="mass-eng">The Confiteor</div></div>
+
+    <div class="orn-line"><span>·</span></div>
+
+    <div class="sec-title">Missa Catechumenorum</div>
+    <div class="sec-sub">Mass of the Catechumens</div>
+    <div class="mass-row"><div class="mass-latin">Introitus</div><div class="mass-eng">Introit <span class="proper-tag">Proper</span></div></div>
+    <div class="mass-row"><div class="mass-latin">Kyrie Eleison</div><div class="mass-eng">Kyrie</div></div>
+    <div class="mass-row"><div class="mass-latin">Gloria in Excelsis Deo</div><div class="mass-eng">Gloria</div></div>
+    <div class="mass-row"><div class="mass-latin">Collecta</div><div class="mass-eng">Collect <span class="proper-tag">Proper</span></div></div>
+    <div class="mass-row"><div class="mass-latin">Credo</div><div class="mass-eng">The Creed</div></div>
+
+    <div class="orn-line"><span>·</span></div>
+
+    <div class="sec-title">Missa Fidelium</div>
+    <div class="sec-sub">Mass of the Faithful</div>
+    <div class="mass-row"><div class="mass-latin">Offertorium</div><div class="mass-eng">Offertory</div></div>
+    <div class="mass-row"><div class="mass-latin">Sanctus</div><div class="mass-eng">Sanctus</div></div>
+
+    <div class="orn-line"><span>·</span></div>
+
+    <div class="sec-title">Communio</div>
+    <div class="sec-sub">Communion</div>
+    <div class="mass-row"><div class="mass-latin">Pater Noster</div><div class="mass-eng">Our Father</div></div>
+    <div class="mass-row"><div class="mass-latin">Agnus Dei</div><div class="mass-eng">Lamb of God</div></div>
+    <div class="mass-row"><div class="mass-latin">Domine, Non Sum Dignus</div><div class="mass-eng">Lord, I Am Not Worthy</div></div>
+
+    <div class="orn-line"><span>·</span></div>
+
+    <div class="sec-title">Conclusio</div>
+    <div class="sec-sub">Conclusion</div>
+    <div class="mass-row"><div class="mass-latin">Ultimum Evangelium</div><div class="mass-eng">Last Gospel</div></div>
+
+    <div style="text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab-item"><div class="tab-icon">☀</div>Today</div>
+    <div class="tab-item active"><div class="tab-icon">☰</div>Missal</div>
+    <div class="tab-item"><div class="tab-icon">📖</div>Prayers</div>
+    <div class="tab-item"><div class="tab-icon">📕</div>Reference</div>
+    <div class="tab-item"><div class="tab-icon">🎓</div>Learn</div>
+  </div>
+</div>
+<div class="lbl">A — Book Index</div>
+<div class="desc">Full parchment. Latin left, English right.<br>Gold ornamental dividers. Proper tags inline.</div>
+</div>
+
+<!-- ═════ B — Dark Header + Accent Bars ═════ -->
+<div>
+<div class="phone opt-b">
+  <div class="header-band">
+    <div class="page-title">Ordo Missæ</div>
+    <div class="page-sub">Ordinary of the Traditional Latin Mass</div>
+    <div class="rite-badge">1962 Missale Romanum</div>
+  </div>
+  <div class="scroll" style="height:calc(100% - 84px)">
+    <div class="content">
+      <div class="sec-title">Preces Præparatoriæ</div>
+      <div class="sec-sub">Preparatory Prayers</div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Preces ad Imum Altaris</div><div class="mass-eng">Prayers at the Foot of the Altar</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Confiteor</div><div class="mass-eng">The Confiteor</div></div><div class="arrow">→</div></div>
+
+      <div class="orn-line"><span>·</span></div>
+
+      <div class="sec-title">Missa Catechumenorum</div>
+      <div class="sec-sub">Mass of the Catechumens</div>
+      <div class="mass-row"><div class="accent-bar proper"></div><div><div class="mass-latin">Introitus <span class="proper-tag">Proper</span></div><div class="mass-eng">Introit</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Kyrie Eleison</div><div class="mass-eng">Kyrie</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Gloria in Excelsis Deo</div><div class="mass-eng">Gloria</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar proper"></div><div><div class="mass-latin">Collecta <span class="proper-tag">Proper</span></div><div class="mass-eng">Collect</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Credo</div><div class="mass-eng">The Creed</div></div><div class="arrow">→</div></div>
+
+      <div class="orn-line"><span>·</span></div>
+
+      <div class="sec-title">Missa Fidelium</div>
+      <div class="sec-sub">Mass of the Faithful</div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Offertorium</div><div class="mass-eng">Offertory</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Sanctus</div><div class="mass-eng">Holy, Holy, Holy</div></div><div class="arrow">→</div></div>
+
+      <div class="orn-line"><span>·</span></div>
+
+      <div class="sec-title">Communio</div>
+      <div class="sec-sub">Communion</div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Pater Noster</div><div class="mass-eng">Our Father</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Agnus Dei</div><div class="mass-eng">Lamb of God</div></div><div class="arrow">→</div></div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Domine, Non Sum Dignus</div><div class="mass-eng">Lord, I Am Not Worthy</div></div><div class="arrow">→</div></div>
+
+      <div class="orn-line"><span>·</span></div>
+
+      <div class="sec-title">Conclusio</div>
+      <div class="sec-sub">Conclusion</div>
+      <div class="mass-row"><div class="accent-bar"></div><div><div class="mass-latin">Ultimum Evangelium</div><div class="mass-eng">Last Gospel</div></div><div class="arrow">→</div></div>
+    </div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab-item"><div class="tab-icon">☀</div>Today</div>
+    <div class="tab-item active"><div class="tab-icon">☰</div>Missal</div>
+    <div class="tab-item"><div class="tab-icon">📖</div>Prayers</div>
+    <div class="tab-item"><div class="tab-icon">📕</div>Reference</div>
+    <div class="tab-item"><div class="tab-icon">🎓</div>Learn</div>
+  </div>
+</div>
+<div class="lbl">B — Dark Header + Accent Bars</div>
+<div class="desc">Dark header with rite badge. Red accent bars<br>for ordinary, gold for propers. English below Latin.</div>
+</div>
+
+</body>
+</html>
