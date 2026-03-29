@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/B — Prayer Library</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center;font-family:'Inter',sans-serif}
+  h1{width:100%;text-align:center;font-family:'Playfair Display',serif;color:#EDE8DC;font-size:24px}
+  .sub{width:100%;text-align:center;color:#B8960C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;flex-shrink:0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5}
+  .scroll{overflow-y:auto;height:100%;-webkit-overflow-scrolling:touch}
+
+  .orn-line{display:flex;align-items:center;gap:12px;margin:20px 0}
+  .orn-line::before,.orn-line::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}
+  .orn-line span{color:#B8960C;font-size:11px;opacity:0.5}
+
+  /* ═══ A — Flowing Book Index ═══ */
+  .opt-a{background:#F2EBE0}
+  .opt-a .scroll{padding:54px 24px 40px}
+  .opt-a .title{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#1C1410;margin-bottom:4px}
+  .opt-a .sec-head{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
+  .opt-a .sec-sub{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
+
+  .opt-a .prayer-row{display:flex;align-items:baseline;gap:0;padding:11px 0;border-bottom:1px solid #B8960C0D;cursor:pointer}
+  .opt-a .prayer-latin{font-family:'Playfair Display',serif;font-size:17px;color:#1C1410;flex:1}
+  .opt-a .prayer-eng{font-family:'EB Garamond',serif;font-size:14px;color:#998877;font-style:italic;text-align:right}
+
+  /* ═══ B — Structured with left accent ═══ */
+  .opt-b{background:#F5F0E8}
+  .opt-b .scroll{padding:54px 20px 40px}
+  .opt-b .title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#1C1410;margin-bottom:16px}
+
+  .opt-b .search{background:rgba(28,20,16,0.04);border:1px solid #B8960C15;border-radius:6px;padding:10px 14px;display:flex;align-items:center;gap:8px;margin-bottom:20px}
+  .opt-b .search span{color:#aaa;font-size:14px}
+
+  .opt-b .sec-head{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
+  .opt-b .sec-sub{font-family:'Cormorant Garamond',serif;font-size:12px;color:#998877;font-style:italic;margin-bottom:10px}
+
+  .opt-b .prayer-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #B8960C0A;cursor:pointer}
+  .opt-b .accent-bar{width:3px;height:36px;border-radius:2px;flex-shrink:0}
+  .opt-b .accent-bar.rosary{background:#8B1A1A}
+  .opt-b .accent-bar.mass{background:#B8960C}
+  .opt-b .accent-bar.devotional{background:#2E7D32}
+  .opt-b .prayer-latin{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410}
+  .opt-b .prayer-eng{font-family:'EB Garamond',serif;font-size:13px;color:#998877}
+  .opt-b .arrow{color:#B8960C;font-size:14px;margin-left:auto;flex-shrink:0;opacity:0.5}
+</style>
+</head>
+<body>
+
+<h1>Prayer Library — A/B Test</h1>
+<div class="sub">How to list and browse prayers</div>
+
+<!-- ═════ A — Book Index ═════ -->
+<div>
+<div class="phone opt-a">
+  <div class="scroll">
+    <div class="title">Prayers</div>
+
+    <div class="orn-line"><span>✟</span></div>
+
+    <div class="sec-head">Rosarium</div>
+    <div class="sec-sub">Rosary</div>
+
+    <div class="prayer-row"><div class="prayer-latin">Signum Crucis</div><div class="prayer-eng">Sign of the Cross</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Symbolum Apostolorum</div><div class="prayer-eng">Apostles' Creed</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Pater Noster</div><div class="prayer-eng">Our Father</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Ave Maria</div><div class="prayer-eng">Hail Mary</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Gloria Patri</div><div class="prayer-eng">Glory Be</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Salve Regina</div><div class="prayer-eng">Hail Holy Queen</div></div>
+
+    <div class="orn-line"><span>·</span></div>
+
+    <div class="sec-head">Missa</div>
+    <div class="sec-sub">Mass</div>
+
+    <div class="prayer-row"><div class="prayer-latin">Confiteor</div><div class="prayer-eng">I Confess</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Suscipiat</div><div class="prayer-eng">May the Lord Accept</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Domine, Non Sum Dignus</div><div class="prayer-eng">Lord, I Am Not Worthy</div></div>
+
+    <div class="orn-line"><span>·</span></div>
+
+    <div class="sec-head">Devotiones</div>
+    <div class="sec-sub">Devotional</div>
+
+    <div class="prayer-row"><div class="prayer-latin">Angelus</div><div class="prayer-eng">The Angelus</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Memorare</div><div class="prayer-eng">The Memorare</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Actus Contritionis</div><div class="prayer-eng">Act of Contrition</div></div>
+    <div class="prayer-row"><div class="prayer-latin">Alma Redemptoris Mater</div><div class="prayer-eng">Loving Mother of the Redeemer</div></div>
+
+    <div style="text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
+  </div>
+</div>
+<div class="lbl">A — Book Index</div>
+<div class="desc">Latin name left, English right aligned.<br>No icons. Ornamental dividers between categories.<br>Feels like a table of contents.</div>
+</div>
+
+<!-- ═════ B — Left Accent Bars ═════ -->
+<div>
+<div class="phone opt-b">
+  <div class="scroll">
+    <div class="title">Prayers</div>
+
+    <div class="search"><span>🔍</span><span style="color:#aaa;font-size:14px">Search prayers...</span></div>
+
+    <div class="sec-head">Rosarium</div>
+    <div class="sec-sub">Rosary</div>
+
+    <div class="prayer-row"><div class="accent-bar rosary"></div><div><div class="prayer-latin">Signum Crucis</div><div class="prayer-eng">Sign of the Cross</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar rosary"></div><div><div class="prayer-latin">Symbolum Apostolorum</div><div class="prayer-eng">Apostles' Creed</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar rosary"></div><div><div class="prayer-latin">Pater Noster</div><div class="prayer-eng">Our Father</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar rosary"></div><div><div class="prayer-latin">Ave Maria</div><div class="prayer-eng">Hail Mary</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar rosary"></div><div><div class="prayer-latin">Gloria Patri</div><div class="prayer-eng">Glory Be</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar rosary"></div><div><div class="prayer-latin">Salve Regina</div><div class="prayer-eng">Hail Holy Queen</div></div><div class="arrow">→</div></div>
+
+    <div style="margin-top:20px">
+      <div class="sec-head">Missa</div>
+      <div class="sec-sub">Mass</div>
+    </div>
+
+    <div class="prayer-row"><div class="accent-bar mass"></div><div><div class="prayer-latin">Confiteor</div><div class="prayer-eng">I Confess</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar mass"></div><div><div class="prayer-latin">Suscipiat</div><div class="prayer-eng">May the Lord Accept</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar mass"></div><div><div class="prayer-latin">Domine, Non Sum Dignus</div><div class="prayer-eng">Lord, I Am Not Worthy</div></div><div class="arrow">→</div></div>
+
+    <div style="margin-top:20px">
+      <div class="sec-head">Devotiones</div>
+      <div class="sec-sub">Devotional</div>
+    </div>
+
+    <div class="prayer-row"><div class="accent-bar devotional"></div><div><div class="prayer-latin">Angelus</div><div class="prayer-eng">The Angelus</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar devotional"></div><div><div class="prayer-latin">Memorare</div><div class="prayer-eng">The Memorare</div></div><div class="arrow">→</div></div>
+    <div class="prayer-row"><div class="accent-bar devotional"></div><div><div class="prayer-latin">Actus Contritionis</div><div class="prayer-eng">Act of Contrition</div></div><div class="arrow">→</div></div>
+  </div>
+</div>
+<div class="lbl">B — Color-Coded Accent Bars</div>
+<div class="desc">Red = Rosary, Gold = Mass, Green = Devotional.<br>Search bar. Arrows indicate tappable. Left accent bars<br>give color-coding without icons or cards.</div>
+</div>
+
+</body>
+</html>
