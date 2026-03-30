@@ -588,10 +588,17 @@ Building on AdAltareDei v1.3, implement v1.4: voice recording and comparison.
 
 | Version | Module | Description |
 |---|---|---|
-| v2.0 | TLM Rubrics Guide | Interactive animated breakdown of every gesture/posture at Mass |
-| v2.1 | Schola Trainer | Gregorian chant square notation sight-reading for propers |
-| v3.0 | Ordo Generator | Daily Mass ordo: rank, color, commemorations, feria/feast logic |
-| v3.1 | Benedictional | Traditional blessings from the Rituale Romanum |
+| v2.0 | Daily Readings | Epistle and Gospel for the day from the 1962 lectionary, side-by-side Latin/English |
+| v2.1 | Examination of Conscience | Structured guide by the Ten Commandments for Confession preparation |
+| v2.2 | How to Pray the Rosary | Interactive step-by-step tutorial with bead-by-bead visual guide for beginners |
+| v2.3 | How to Attend the TLM | First-timer's guide: what to expect, when to stand/kneel/sit, what a hand missal is, common questions |
+| v2.4 | Latin Pronunciation Practice | Interactive drills with phonetic feedback, beyond the static guides |
+| v2.5 | Confession Guide | Complete guide: before (examination), during (what to say, Act of Contrition), after (penance, thanksgiving) |
+| v2.6 | Stations of the Cross | Interactive 14-station devotion with meditations (St. Alphonsus Liguori), step-by-step like the Rosary flow |
+| v3.0 | TLM Rubrics Guide | Interactive animated breakdown of every gesture/posture at Mass |
+| v3.1 | Schola Trainer | Gregorian chant square notation sight-reading for propers |
+| v3.2 | Ordo Generator | Daily Mass ordo: rank, color, commemorations, feria/feast logic |
+| v3.3 | Benedictional | Traditional blessings from the Rituale Romanum |
 
 ---
 
