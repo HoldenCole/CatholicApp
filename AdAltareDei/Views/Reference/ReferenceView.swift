@@ -21,22 +21,30 @@ struct ReferenceView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    ForEach(groupedEntries, id: \.0) { category, items in
+                    ForEach(Array(groupedEntries.enumerated()), id: \.offset) { index, group in
+                        let (category, items) = group
                         VStack(alignment: .leading, spacing: 0) {
-                            // Section header
-                            HStack(spacing: 10) {
-                                Image(systemName: category.icon)
-                                    .font(.system(size: 14))
-                                    .foregroundStyle(.sanctuaryRed)
-                                VStack(alignment: .leading, spacing: 1) {
-                                    Text(category.displayName.uppercased())
-                                        .font(.custom("Palatino-Italic", size: 12).weight(.semibold))
-                                        .foregroundStyle(.sanctuaryRed)
-                                        .tracking(3)
-                                    Text(category.latinName)
-                                        .font(.custom("Palatino-Italic", size: 13))
-                                        .foregroundStyle(.secondary)
+                            // Ornamental divider between sections
+                            if index > 0 {
+                                HStack {
+                                    Spacer()
+                                    Rectangle().frame(height: 1).foregroundStyle(.clear).background(LinearGradient(colors: [.clear, .goldLeaf.opacity(0.3), .clear], startPoint: .leading, endPoint: .trailing))
+                                    Text("✟").font(.system(size: 11)).foregroundStyle(.goldLeaf.opacity(0.5))
+                                    Rectangle().frame(height: 1).foregroundStyle(.clear).background(LinearGradient(colors: [.clear, .goldLeaf.opacity(0.3), .clear], startPoint: .leading, endPoint: .trailing))
+                                    Spacer()
                                 }
+                                .padding(.bottom, 18)
+                            }
+
+                            // Section header — no icon
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(category.displayName.uppercased())
+                                    .font(.custom("Palatino-Italic", size: 12).weight(.semibold))
+                                    .foregroundStyle(.sanctuaryRed)
+                                    .tracking(3)
+                                Text(category.latinName)
+                                    .font(.custom("Palatino-Italic", size: 13))
+                                    .foregroundStyle(.secondary)
                             }
                             .padding(.bottom, 12)
 
