@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final — Learn Tab</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#3a3028;padding:40px;display:flex;flex-wrap:wrap;gap:48px;justify-content:center}
+  .phone{width:390px;height:844px;border-radius:44px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);background:#F2EBE0}
+  .lbl{text-align:center;color:#EDE8DC;font-size:16px;font-weight:600;margin-top:14px;width:390px;font-family:'Playfair Display',serif}
+  .desc{text-align:center;color:#887766;font-size:12px;max-width:390px;margin-top:4px;line-height:1.5;font-family:'Inter',sans-serif}
+  .scroll{overflow-y:auto;height:calc(100% - 84px);-webkit-overflow-scrolling:touch}
+  .tab-bar{position:absolute;bottom:0;left:0;right:0;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px;font-family:'Inter',sans-serif}
+  .tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500}
+  .tab-item.active{color:#8B1A1A}
+  .tab-icon{font-size:20px}
+  .orn{display:flex;align-items:center;gap:12px;margin:18px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
+
+  .lesson{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08);align-items:flex-start}
+  .num{font-family:'Playfair Display',serif;font-size:22px;font-weight:300;color:#8B1A1A;opacity:0.35;min-width:32px;text-align:right;flex-shrink:0;padding-top:2px}
+  .lesson-info{flex:1;min-width:0}
+  .l-title{font-family:'Playfair Display',serif;font-size:15px;color:#1C1410;font-weight:500}
+  .l-latin{font-family:'Cormorant Garamond',serif;font-size:12px;color:#B8960C;font-style:italic}
+  .l-right{text-align:right;flex-shrink:0;padding-top:2px}
+  .l-status{font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic}
+  .l-time{font-size:9px;color:#998877}
+</style>
+</head>
+<body>
+
+<div>
+<div class="phone" style="position:relative">
+  <div class="scroll">
+    <div style="background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#EDE8DC">Discere Latínam</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px">Learn Ecclesiastical Latin</div>
+    </div>
+    <div style="padding:0 24px 20px">
+
+      <!-- Overall progress bar -->
+      <div style="margin:16px 0">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-family:'Cormorant Garamond',serif;font-size:11px;color:#8B1A1A;font-style:italic">Your progress</span><span style="font-family:'Cormorant Garamond',serif;font-size:11px;color:#998877;font-style:italic">2 of 10 complete</span></div>
+        <div style="height:3px;background:rgba(184,150,12,0.12);border-radius:2px"><div style="height:3px;background:linear-gradient(90deg,#8B1A1A,#B8960C);border-radius:2px;width:20%"></div></div>
+      </div>
+
+      <div class="orn"><span>✟</span></div>
+
+      <div style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase">Pronuntiatio</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px">Pronunciation</div>
+
+      <div class="lesson"><div class="num">I</div><div class="lesson-info"><div class="l-title">Ecclesiastical Vowels</div><div class="l-latin">Vocales Ecclesiasticæ</div></div><div class="l-right"><div class="l-status" style="color:#2E7D32">Completed</div><div class="l-time">5 min</div></div></div>
+      <div class="lesson"><div class="num">II</div><div class="lesson-info"><div class="l-title">Consonant Rules</div><div class="l-latin">Regulæ Consonantium</div></div><div class="l-right"><div class="l-status" style="color:#B8960C">In Progress</div><div class="l-time">8 min</div></div></div>
+      <div class="lesson"><div class="num">III</div><div class="lesson-info"><div class="l-title">Stress &amp; Accent</div><div class="l-latin">Accentus</div></div><div class="l-right"><div class="l-time">6 min</div></div></div>
+
+      <div class="orn"><span>·</span></div>
+
+      <div style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase">Grammatica</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px">Grammar Basics</div>
+
+      <div class="lesson"><div class="num">IV</div><div class="lesson-info"><div class="l-title">First &amp; Second Declensions</div><div class="l-latin">Declinationes I et II</div></div><div class="l-right"><div class="l-time">15 min</div></div></div>
+      <div class="lesson"><div class="num">V</div><div class="lesson-info"><div class="l-title">Verb Basics</div><div class="l-latin">Verba: Præsens et Imperativus</div></div><div class="l-right"><div class="l-time">12 min</div></div></div>
+      <div class="lesson"><div class="num">VI</div><div class="lesson-info"><div class="l-title">50 Common Prayer Words</div><div class="l-latin">Vocabularium Frequentissimum</div></div><div class="l-right"><div class="l-time">20 min</div></div></div>
+
+      <div class="orn"><span>·</span></div>
+
+      <div style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase">Orationes</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px">Prayer Courses</div>
+
+      <div class="lesson"><div class="num">VII</div><div class="lesson-info"><div class="l-title">Master the Ave Maria</div><div class="l-latin">Cursus: Ave Maria</div></div><div class="l-right"><div class="l-time">25 min</div></div></div>
+      <div class="lesson"><div class="num">VIII</div><div class="lesson-info"><div class="l-title">Master the Pater Noster</div><div class="l-latin">Cursus: Pater Noster</div></div><div class="l-right"><div class="l-time">30 min</div></div></div>
+
+      <div class="orn"><span>·</span></div>
+
+      <div style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase">Lectio Latina</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px">Latin Reading</div>
+
+      <div class="lesson"><div class="num">IX</div><div class="lesson-info"><div class="l-title">Reading Latin Psalms</div><div class="l-latin">Lectio Psalmorum</div></div><div class="l-right"><div class="l-time">30 min</div></div></div>
+      <div class="lesson"><div class="num">X</div><div class="lesson-info"><div class="l-title">Reading the Vulgate</div><div class="l-latin">Lectio Vulgatæ</div></div><div class="l-right"><div class="l-time">30 min</div></div></div>
+
+      <div style="text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3">✿ · ✿</div>
+    </div>
+  </div>
+  <div class="tab-bar"><div class="tab-item"><div class="tab-icon">☀</div>Today</div><div class="tab-item"><div class="tab-icon">☰</div>Missal</div><div class="tab-item"><div class="tab-icon">📖</div>Prayers</div><div class="tab-item active"><div class="tab-icon">🎓</div>Learn</div><div class="tab-item"><div class="tab-icon">📕</div>Reference</div></div>
+</div>
+<div class="lbl">Learn Tab — Final</div>
+<div class="desc">Roman numeral chapters with fixed spacing.<br>Progress bar at top. Completion status on right.<br>All courses free. 10 courses across 4 categories.</div>
+</div>
+
+</body>
+</html>
