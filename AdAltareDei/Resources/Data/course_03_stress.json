@@ -1,0 +1,55 @@
+{
+  "slug": "stress_accent",
+  "title": "Stress & Accent",
+  "latinTitle": "Accentus",
+  "courseNumber": 3,
+  "estimatedMinutes": 6,
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Knowing which syllable to stress is what makes Latin sound natural rather than halting. Latin stress follows three simple rules — no exceptions. Once you learn them, you will never mispronounce a Latin word again."
+    },
+    {
+      "type": "lesson",
+      "title": "Rule 1: Two-Syllable Words",
+      "content": "If a word has only two syllables, the stress always falls on the first syllable. Always.\n\n• DÉ-us (God)\n• NÓ-men (name)\n• PÁ-ter (Father)\n• SÁL-ve (hail)\n• Á-ve (hail)\n• VÍ-ta (life)"
+    },
+    {
+      "type": "lesson",
+      "title": "Rule 2: The Penultimate Rule",
+      "content": "If a word has three or more syllables, look at the second-to-last syllable (the 'penultimate'). If it is LONG, it gets the stress.\n\nA syllable is long if:\n• It contains a diphthong (ae, oe, au)\n• It is followed by two consonants\n• The vowel is marked with a macron (ā) or accent (á) in your missal\n\nExamples of penultimate stress:\n• Ma-RÍ-a (the I is long)\n• pec-CÁ-ta (CC = two consonants after A)\n• ae-TÉR-nam (two consonants after E)\n• om-NÍ-bus (two consonants after I)"
+    },
+    {
+      "type": "lesson",
+      "title": "Rule 3: The Antepenultimate Rule",
+      "content": "If the penultimate syllable is SHORT, the stress moves back one more to the antepenultimate (third from the end).\n\nExamples:\n• DÓ-mi-nus (penultimate 'mi' is short → stress 'DO')\n• FÍ-li-us (penultimate 'li' is short → stress 'FI')\n• GRÁ-ti-a (penultimate 'ti' is short → stress 'GRA')\n• SÉ-cu-la (penultimate 'cu' is short → stress 'SE')\n• GLÓ-ri-a (penultimate 'ri' is short → stress 'GLO')"
+    },
+    {
+      "type": "tip",
+      "content": "In practice, your missal will mark the accent for you with an acute mark (á, é, í, ó, ú). The phonetic guides in this app also highlight stressed syllables in red. But understanding WHY the stress falls where it does helps you read unfamiliar words with confidence."
+    },
+    {
+      "type": "lesson",
+      "title": "The Last Syllable Is Never Stressed",
+      "content": "Latin words are NEVER stressed on the final syllable. If you hear someone say 'a-MEN' with stress on the last syllable, they are using English pronunciation. The Latin pronunciation is 'AH-men' — stress on the first syllable.\n\nMore examples:\n• sæculórum — se-cu-LÓH-room (not sæculorÚM)\n• Amen — ÁH-men (not a-MÉN)\n• Dóminus — DÓH-mee-noos (not DominÚS)"
+    },
+    {
+      "type": "practice",
+      "title": "Stress These Words",
+      "items": [
+        {"latin": "Deus", "phonetic": "DÉ-us", "meaning": "God", "rule": "2 syllables → first"},
+        {"latin": "María", "phonetic": "Ma-RÍ-a", "meaning": "Mary", "rule": "Penultimate long"},
+        {"latin": "Dóminus", "phonetic": "DÓ-mi-nus", "meaning": "Lord", "rule": "Penultimate short → antepenultimate"},
+        {"latin": "benedícta", "phonetic": "be-ne-DÍC-ta", "meaning": "blessed", "rule": "Penultimate long (CT = 2 consonants)"},
+        {"latin": "peccatóribus", "phonetic": "pec-ca-TÓ-ri-bus", "meaning": "sinners", "rule": "Penultimate short → antepenultimate"},
+        {"latin": "misericórdia", "phonetic": "mi-se-ri-CÓR-dia", "meaning": "mercy", "rule": "Penultimate long (RD = 2 consonants)"},
+        {"latin": "sǽcula", "phonetic": "SÉ-cu-la", "meaning": "ages", "rule": "Penultimate short → antepenultimate"},
+        {"latin": "ætérnam", "phonetic": "e-TÉR-nam", "meaning": "eternal", "rule": "Penultimate long (RN = 2 consonants)"}
+      ]
+    },
+    {
+      "type": "summary",
+      "content": "Three rules: (1) Two syllables → stress the first. (2) Three+ syllables with long penultimate → stress the penultimate. (3) Short penultimate → stress the antepenultimate. The last syllable is never stressed. Combined with Courses I and II, you can now read any Latin prayer aloud with correct pronunciation and stress."
+    }
+  ]
+}
