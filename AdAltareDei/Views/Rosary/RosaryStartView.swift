@@ -24,6 +24,21 @@ struct RosaryStartView: View {
                 }
                 .padding(.top, 8)
 
+                // Tutorial link for beginners
+                NavigationLink {
+                    RosaryTutorialView()
+                } label: {
+                    HStack(spacing: 8) {
+                        Image(systemName: "questionmark.circle")
+                            .font(.system(size: 14))
+                            .foregroundStyle(.goldLeaf)
+                        Text("How to Pray the Rosary")
+                            .font(.custom("Palatino-Italic", size: 14))
+                            .foregroundStyle(.goldLeaf)
+                    }
+                }
+                .buttonStyle(.plain)
+
                 // Suggested
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Today's Mysteries")
