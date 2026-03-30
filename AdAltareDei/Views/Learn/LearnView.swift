@@ -33,13 +33,10 @@ struct LearnView: View {
                             .padding(.horizontal)
 
                             ForEach(categoryLessons) { lesson in
-                                Button {
-                                    if lesson.isPremium && !appSettings.isPremium {
-                                        showingPaywall = true
-                                    }
-                                    // Future: navigate to lesson
+                                NavigationLink {
+                                    CourseDetailView(courseSlug: lesson.slug)
                                 } label: {
-                                    LessonRowView(lesson: lesson, isLocked: lesson.isPremium && !appSettings.isPremium)
+                                    LessonRowView(lesson: lesson, isLocked: false)
                                 }
                                 .buttonStyle(.plain)
                                 .padding(.horizontal)
