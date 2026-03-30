@@ -5,8 +5,6 @@ struct ProgressTabView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var appSettings: AppSettings
     @StateObject private var viewModel = ProgressViewModel()
-    @State private var showingSettings = false
-
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -28,19 +26,6 @@ struct ProgressTabView: View {
             }
             .background(Color.parchment)
             .navigationTitle("Progress")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showingSettings = true
-                    } label: {
-                        Image(systemName: "gearshape")
-                            .foregroundStyle(.goldLeaf)
-                    }
-                }
-            }
-            .sheet(isPresented: $showingSettings) {
-                SettingsSheet()
-            }
             .onAppear {
                 viewModel.loadData(context: modelContext)
             }
@@ -86,99 +71,6 @@ struct ProgressTabView: View {
                 ) { newLevel in
                     viewModel.updateComfortLevel(for: prayer, to: newLevel, context: modelContext)
                     appSettings.recordPractice()
-                }
-            }
-        }
-    }
-}
-
-// MARK: - Settings Sheet
-
-struct SettingsSheet: View {
-    @EnvironmentObject private var appSettings: AppSettings
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationStack {
-            List {
-                Section("Default Text Mode") {
-                    Picker("Text Mode", selection: $appSettings.defaultTextMode) {
-                        ForEach(TextMode.allCases) { mode in
-                            Text(mode.displayName).tag(mode)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                }
-
-                Section {
-                    ForEach(MissalRite.allCases) { rite in
-                        Button {
-                            appSettings.missalRite = rite
-                        } label: {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(rite.displayName)
-                                        .font(.uiLabel)
-                                        .foregroundStyle(.ink)
-                                    Text(rite.latinName)
-                                        .font(.latinCaption)
-                                        .foregroundStyle(.goldLeaf)
-                                    Text(rite.subtitle)
-                                        .font(.uiCaption)
-                                        .foregroundStyle(.secondary)
-                                        .lineLimit(2)
-                                }
-                                Spacer()
-                                if appSettings.missalRite == rite {
-                                    Image(systemName: "checkmark.circle.fill")
-                                        .foregroundStyle(.sanctuaryRed)
-                                }
-                            }
-                        }
-                    }
-                } header: {
-                    Text("Missal Rubrics")
-                } footer: {
-                    Text("Choose which rubrical calendar and ceremonial to follow. This affects the liturgical calendar, feast rankings, and certain Mass texts.")
-                }
-
-                Section("About") {
-                    HStack {
-                        Text("App")
-                        Spacer()
-                        Text("Ad Altare Dei")
-                            .foregroundStyle(.secondary)
-                    }
-
-                    HStack {
-                        Text("Version")
-                        Spacer()
-                        Text("1.2")
-                            .foregroundStyle(.secondary)
-                    }
-
-                    HStack {
-                        Text("Rite")
-                        Spacer()
-                        Text(appSettings.missalRite.displayName)
-                            .foregroundStyle(.secondary)
-                    }
-                }
-
-                Section {
-                    Text("All data is stored locally on your device. No analytics, no accounts, no ads.")
-                        .font(.uiCaption)
-                        .foregroundStyle(.secondary)
-                } header: {
-                    Text("Privacy")
-                }
-            }
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
                 }
             }
         }

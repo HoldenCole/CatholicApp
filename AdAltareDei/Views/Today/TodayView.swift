@@ -6,6 +6,7 @@ struct TodayView: View {
     @EnvironmentObject private var appSettings: AppSettings
     @State private var todaysDevotions: [TraditionalDevotion] = []
     @State private var showingMissalSelector = false
+    @State private var showingSettings = false
 
     var body: some View {
         NavigationStack {
@@ -41,8 +42,21 @@ struct TodayView: View {
             }
             .background(Color.parchment)
             .navigationTitle("Today")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showingSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .foregroundStyle(.goldLeaf)
+                    }
+                }
+            }
             .sheet(isPresented: $showingMissalSelector) {
                 MissalSelectorSheet()
+            }
+            .sheet(isPresented: $showingSettings) {
+                SettingsSheet()
             }
             .onAppear {
                 loadDevotions()
