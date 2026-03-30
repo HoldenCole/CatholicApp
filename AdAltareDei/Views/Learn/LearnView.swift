@@ -12,125 +12,171 @@ struct LearnView: View {
         }
     }
 
+    private var totalLessons: Int { lessons.count }
+
+    /// Roman numeral for course number
+    private func romanNumeral(_ n: Int) -> String {
+        let values = [(10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")]
+        var result = ""
+        var remaining = n
+        for (value, numeral) in values {
+            while remaining >= value {
+                result += numeral
+                remaining -= value
+            }
+        }
+        return result
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: AppConstants.sectionSpacing) {
-                    // Header
-                    learnHeader
+                VStack(alignment: .leading, spacing: 0) {
+                    // Dark header
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Discere Latínam")
+                            .font(.custom("Palatino", size: 26).weight(.bold))
+                            .foregroundStyle(.white)
+                        Text("Learn Ecclesiastical Latin")
+                            .font(.custom("Palatino-Italic", size: 14))
+                            .foregroundStyle(.goldLeaf)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 20)
+                    .background(
+                        LinearGradient(
+                            colors: [Color(hex: "1C1410"), Color(hex: "2a2118")],
+                            startPoint: .top, endPoint: .bottom
+                        )
+                    )
 
-                    // Lesson categories
-                    ForEach(groupedLessons, id: \.0) { category, categoryLessons in
-                        VStack(alignment: .leading, spacing: AppConstants.itemSpacing) {
-                            SectionHeaderView(
-                                title: category.latinName,
-                                subtitle: category.displayName
-                            )
-                            .padding(.horizontal)
+                    VStack(alignment: .leading, spacing: 0) {
+                        // Progress bar
+                        HStack {
+                            Text("Your progress")
+                                .font(.custom("Palatino-Italic", size: 11))
+                                .foregroundStyle(.sanctuaryRed)
+                            Spacer()
+                            Text("0 of \(totalLessons) complete")
+                                .font(.custom("Palatino-Italic", size: 11))
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.top, 16)
+                        .padding(.bottom, 4)
 
+                        GeometryReader { geo in
+                            ZStack(alignment: .leading) {
+                                RoundedRectangle(cornerRadius: 2)
+                                    .fill(Color.goldLeaf.opacity(0.12))
+                                    .frame(height: 3)
+                                // Progress would be dynamic
+                            }
+                        }
+                        .frame(height: 3)
+                        .padding(.bottom, 4)
+
+                        // Courses by category
+                        ForEach(Array(groupedLessons.enumerated()), id: \.offset) { index, group in
+                            let (category, categoryLessons) = group
+
+                            ornamentalDivider
+
+                            // Section header
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(category.latinName.uppercased())
+                                    .font(.custom("Palatino-Italic", size: 12).weight(.semibold))
+                                    .foregroundStyle(.sanctuaryRed)
+                                    .tracking(3)
+                                Text(category.displayName)
+                                    .font(.custom("Palatino-Italic", size: 13))
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding(.bottom, 10)
+
+                            // Lesson rows with Roman numerals
                             ForEach(categoryLessons) { lesson in
                                 NavigationLink {
                                     CourseDetailView(courseSlug: lesson.slug)
                                 } label: {
-                                    LessonRowView(lesson: lesson, isLocked: false)
+                                    HStack(alignment: .top, spacing: 12) {
+                                        Text(romanNumeral(lesson.sortOrder))
+                                            .font(.custom("Palatino", size: 22).weight(.light))
+                                            .foregroundStyle(.sanctuaryRed.opacity(0.35))
+                                            .frame(minWidth: 32, alignment: .trailing)
+
+                                        VStack(alignment: .leading, spacing: 2) {
+                                            Text(lesson.title)
+                                                .font(.custom("Palatino", size: 15).weight(.medium))
+                                                .foregroundStyle(.ink)
+                                            Text(lesson.latinTitle)
+                                                .font(.custom("Palatino-Italic", size: 12))
+                                                .foregroundStyle(.goldLeaf)
+                                        }
+
+                                        Spacer()
+
+                                        VStack(spacing: 0) {
+                                            Text("\(lesson.estimatedMinutes)")
+                                                .font(.custom("Palatino", size: 16))
+                                                .foregroundStyle(.sanctuaryRed)
+                                            Text("min")
+                                                .font(.system(size: 9))
+                                                .foregroundStyle(.secondary)
+                                        }
+                                        .padding(.top, 4)
+                                    }
+                                    .padding(.vertical, 12)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .overlay(alignment: .bottom) {
+                                        Rectangle()
+                                            .fill(Color.goldLeaf.opacity(0.06))
+                                            .frame(height: 1)
+                                    }
                                 }
                                 .buttonStyle(.plain)
-                                .padding(.horizontal)
                             }
                         }
+
+                        // Closing ornament
+                        Text("✿ · ✿")
+                            .frame(maxWidth: .infinity)
+                            .font(.system(size: 12))
+                            .foregroundStyle(.goldLeaf.opacity(0.4))
+                            .tracking(8)
+                            .padding(.vertical, 28)
                     }
+                    .padding(.horizontal, 24)
                 }
-                .padding(.vertical)
             }
             .background(Color.parchment)
             .navigationTitle("Learn")
-            .onAppear {
-                loadLessons()
-            }
+            .onAppear { loadLessons() }
         }
     }
 
-    // MARK: - Header
-
-    private var learnHeader: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text("Discere Latínam")
-                .font(.latinDisplay)
-                .foregroundStyle(.ink)
-
-            Text("Learn Ecclesiastical Latin")
-                .font(.englishCaption)
-                .foregroundStyle(.secondary)
+    private var ornamentalDivider: some View {
+        HStack {
+            Spacer()
+            Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.clear)
+                .background(
+                    LinearGradient(
+                        colors: [.clear, .goldLeaf.opacity(0.25), .clear],
+                        startPoint: .leading, endPoint: .trailing
+                    )
+                )
+            Spacer()
         }
-        .padding(.horizontal)
+        .padding(.vertical, 12)
     }
-
-
 
     private func loadLessons() {
         guard let url = Bundle.main.url(forResource: "lessons", withExtension: "json"),
               let data = try? Data(contentsOf: url),
-              let decoded = try? JSONDecoder().decode([LatinLesson].self, from: data) else {
-            return
-        }
+              let decoded = try? JSONDecoder().decode([LatinLesson].self, from: data) else { return }
         lessons = decoded
-    }
-}
-
-// MARK: - Lesson Row
-
-struct LessonRowView: View {
-    let lesson: LatinLesson
-    var isLocked: Bool = false
-
-    var body: some View {
-        HStack(spacing: 14) {
-            // Category icon
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.sanctuaryRed.opacity(0.08))
-                    .frame(width: 44, height: 44)
-
-                Image(systemName: lesson.category.icon)
-                    .font(.system(size: 18))
-                    .foregroundStyle(.sanctuaryRed)
-            }
-
-            VStack(alignment: .leading, spacing: 3) {
-                HStack(spacing: 6) {
-                    Text(lesson.title)
-                        .font(.uiLabel)
-                        .foregroundStyle(isLocked ? .secondary : .ink)
-
-                    if isLocked {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 10))
-                            .foregroundStyle(.goldLeaf)
-                    }
-                }
-
-                Text(lesson.description)
-                    .font(.uiCaption)
-                    .foregroundStyle(.tertiary)
-                    .lineLimit(2)
-            }
-
-            Spacer()
-
-            VStack(spacing: 2) {
-                Text("\(lesson.estimatedMinutes)")
-                    .font(.uiLabelLarge)
-                    .foregroundStyle(isLocked ? .secondary : .sanctuaryRed)
-                Text("min")
-                    .font(.uiCaption)
-                    .foregroundStyle(.tertiary)
-            }
-        }
-        .padding()
-        .background(Color.warmWhite)
-        .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
-        .shadow(color: .black.opacity(0.04), radius: 8, y: 2)
-        .opacity(isLocked ? 0.85 : 1.0)
     }
 }
 
