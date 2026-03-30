@@ -1,0 +1,48 @@
+{
+  "slug": "ave_maria_course",
+  "title": "Master the Ave Maria",
+  "latinTitle": "Cursus: Ave Maria",
+  "courseNumber": 7,
+  "estimatedMinutes": 25,
+  "sections": [
+    {
+      "type": "intro",
+      "content": "The Hail Mary is the perfect prayer to master first in Latin. It is short, you already know it by heart in English, and you will pray it more than any other prayer in the Rosary. By the end of this course, you will understand every word."
+    },
+    {
+      "type": "lesson",
+      "title": "Part 1: The Angelic Greeting",
+      "content": "Ave María, grátia plena, Dóminus tecum.\n\n• Ave = Hail (a greeting, like 'rejoice')\n• María = Mary\n• grátia = grace (ablative case: 'with grace')\n• plena = full (feminine, agreeing with María)\n• Dóminus = the Lord\n• tecum = with thee (te + cum = 'you' + 'with')\n\nThese words come directly from the Angel Gabriel in Luke 1:28. God chose these exact words to greet the woman who would bear His Son. When you say 'Ave María,' you are repeating the words of an Archangel."
+    },
+    {
+      "type": "lesson",
+      "title": "Part 2: Elizabeth's Greeting",
+      "content": "Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus.\n\n• Benedícta = blessed (feminine — describing Mary)\n• tu = thou/you\n• in muliéribus = among women (in + ablative plural)\n• et = and\n• benedíctus = blessed (masculine — describing the fruit)\n• fructus = fruit\n• ventris = of the womb (genitive of 'venter')\n• tui = thy/your (genitive)\n• Iesus = Jesus\n\nThese words come from Elizabeth at the Visitation (Luke 1:42). Filled with the Holy Ghost, she cried out the same truth the Angel proclaimed. The name 'Jesus' was added by the Church to complete the scriptural greeting."
+    },
+    {
+      "type": "lesson",
+      "title": "Part 3: The Church's Petition",
+      "content": "Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.\n\n• Sancta = holy (feminine)\n• María = Mary\n• Mater = Mother\n• Dei = of God (genitive of Deus)\n• ora = pray! (imperative command)\n• pro = for\n• nobis = us\n• peccatóribus = sinners (dative plural — 'for us sinners')\n• nunc = now\n• et = and\n• in hora = in the hour (in + ablative)\n• mortis = of death (genitive of 'mors')\n• nostræ = our (genitive feminine, agreeing with 'hora')\n• Amen = so be it\n\nThis part was composed by the Church and added officially by Pope St. Pius V in 1568. It asks for Mary's intercession at the two moments we need it most: now, and at the hour of our death."
+    },
+    {
+      "type": "practice",
+      "title": "Pray It Word by Word",
+      "items": [
+        {"latin": "Ave", "phonetic": "AH-vay", "meaning": "Hail"},
+        {"latin": "María", "phonetic": "mah-REE-ah", "meaning": "Mary"},
+        {"latin": "grátia plena", "phonetic": "GRAH-tsee-ah PLAY-nah", "meaning": "full of grace"},
+        {"latin": "Dóminus tecum", "phonetic": "DOH-mee-noos TAY-koom", "meaning": "the Lord is with thee"},
+        {"latin": "Benedícta tu", "phonetic": "bay-nay-DEEK-tah too", "meaning": "blessed art thou"},
+        {"latin": "in muliéribus", "phonetic": "in moo-lee-AY-ree-boos", "meaning": "among women"},
+        {"latin": "fructus ventris tui", "phonetic": "FROOK-toos VEN-trees TOO-ee", "meaning": "the fruit of thy womb"},
+        {"latin": "Sancta María, Mater Dei", "phonetic": "SAHNK-tah mah-REE-ah, MAH-ter DAY-ee", "meaning": "Holy Mary, Mother of God"},
+        {"latin": "ora pro nobis peccatóribus", "phonetic": "OH-rah pro NOH-bees pek-kah-TOH-ree-boos", "meaning": "pray for us sinners"},
+        {"latin": "nunc et in hora mortis nostræ", "phonetic": "noonk et in HOH-rah MOR-tees NOS-tray", "meaning": "now and at the hour of our death"}
+      ]
+    },
+    {
+      "type": "summary",
+      "content": "You now understand every word of the Ave Maria. The first half is pure Scripture — the Angel's greeting and Elizabeth's exclamation. The second half is the Church's petition for intercession. Pray it slowly in Latin tonight before bed. Within a week of daily repetition, it will be as natural as the English."
+    }
+  ]
+}
