@@ -1,0 +1,36 @@
+{
+  "slug": "reading_psalms",
+  "title": "Reading Latin Psalms",
+  "latinTitle": "Lectio Psalmorum",
+  "courseNumber": 9,
+  "estimatedMinutes": 30,
+  "sections": [
+    {
+      "type": "intro",
+      "content": "The Psalms are the prayer book of the Church. They form the backbone of the Divine Office and appear throughout the Mass. Reading them in Latin builds fluency while praying the very words Christ Himself prayed. We will work through three beloved Psalms used in the liturgy."
+    },
+    {
+      "type": "lesson",
+      "title": "Psalm 22 (23): Dóminus Regit Me",
+      "content": "The most beloved psalm — the Good Shepherd. Used at funerals and in the Office.\n\nDóminus regit me, et nihil mihi déerit.\nThe Lord ruleth me, and I shall want nothing.\n\nIn loco páscuæ ibi me collocávit.\nHe hath set me in a place of pasture.\n\nSuper aquam refectiónis educávit me;\nHe hath brought me up on the water of refreshment;\n\nánimam meam convértit.\nHe hath converted my soul.\n\nDedúxit me super sémitas iustítiæ, propter nomen suum.\nHe hath led me on the paths of justice, for His own name's sake.\n\nNam, etsi ambulávero in médio umbræ mortis, non timébo mala, quóniam tu mecum es.\nFor though I should walk in the midst of the shadow of death, I will fear no evils, for Thou art with me.\n\nVirga tua et báculus tuus, ipsa me consoláta sunt.\nThy rod and Thy staff, they have comforted me."
+    },
+    {
+      "type": "lesson",
+      "title": "Psalm 50 (51): Miserere",
+      "content": "The great penitential psalm. Prayed at Lauds on Fridays and throughout Lent. The opening verses:\n\nMiserére mei, Deus, secúndum magnam misericórdiam tuam.\nHave mercy on me, O God, according to Thy great mercy.\n\nEt secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.\nAnd according to the multitude of Thy tender mercies, blot out my iniquity.\n\nAmplius lava me ab iniquitáte mea: et a peccáto meo munda me.\nWash me yet more from my iniquity: and cleanse me from my sin.\n\nQuóniam iniquitátem meam ego cognósco: et peccátum meum contra me est semper.\nFor I know my iniquity: and my sin is always before me.\n\nTibi soli peccávi, et malum coram te feci.\nTo Thee only have I sinned, and have done evil before Thee.\n\nCor mundum crea in me, Deus: et spíritum rectum ínnova in viscéribus meis.\nCreate a clean heart in me, O God: and renew a right spirit within my bowels."
+    },
+    {
+      "type": "lesson",
+      "title": "Psalm 129 (130): De Profundis",
+      "content": "The psalm for the dead. Prayed for the Holy Souls in Purgatory.\n\nDe profúndis clamávi ad te, Dómine: Dómine, exáudi vocem meam.\nOut of the depths I have cried to Thee, O Lord: Lord, hear my voice.\n\nFiant aures tuæ intendéntes in vocem deprecatiónis meæ.\nLet Thy ears be attentive to the voice of my supplication.\n\nSi iniquitátes observáveris, Dómine: Dómine, quis sustinébit?\nIf Thou, O Lord, shalt observe iniquities: Lord, who shall endure it?\n\nQuia apud te propitiátio est: et propter legem tuam sustínui te, Dómine.\nFor with Thee there is merciful forgiveness: and by reason of Thy law I have waited for Thee, O Lord.\n\nSustínuit ánima mea in verbo eius: sperávit ánima mea in Dómino.\nMy soul hath relied on His word: my soul hath hoped in the Lord."
+    },
+    {
+      "type": "tip",
+      "content": "When reading Latin Psalms, do not try to translate word-by-word as you go. Read the Latin line aloud, then glance at the English to confirm your understanding. Over time, the Latin will begin to speak directly to your mind without needing the English bridge."
+    },
+    {
+      "type": "summary",
+      "content": "These three Psalms — the Good Shepherd (22), the Miserere (50), and the De Profundis (129) — are among the most frequently prayed in the Church. You will encounter them in the Office, at funerals, during Lent, and in private devotion. Reading them in Latin is the beginning of praying the Psalter as the Church has for centuries."
+    }
+  ]
+}
