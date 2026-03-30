@@ -1,0 +1,60 @@
+[
+  {
+    "hour": "vespers",
+    "title": "Vespers",
+    "latinTitle": "Vesperae",
+    "time": "Evening",
+    "description": "Evening prayer. The most solemn of the day hours, often chanted publicly in parishes.",
+    "sections": [
+      {
+        "slug": "vespers_opening",
+        "title": "Opening",
+        "rubric": null,
+        "latinText": "V. Deus, in adiutórium meum inténde.\nR. Dómine, ad adiuvándum me festína.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen. Allelúia.",
+        "englishText": "V. O God, come to my assistance.\nR. O Lord, make haste to help me.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.",
+        "posture": "stand"
+      },
+      {
+        "slug": "vespers_psalms",
+        "title": "Psalms",
+        "rubric": "Five psalms with proper antiphons. The psalms of Sunday Vespers: Psalms 109, 110, 111, 112, and either Psalm 113 or a proper psalm for the feast.",
+        "latinText": "[Proper — five psalms with antiphons, varying by day and feast]",
+        "englishText": "[Proper — five psalms with antiphons, varying by day and feast]",
+        "posture": "sit",
+        "isProper": true
+      },
+      {
+        "slug": "vespers_chapter",
+        "title": "Short Chapter",
+        "rubric": "The chapter varies by season and feast.",
+        "latinText": "[Proper — changes by season]\n\nOutside special seasons (2 Corinthians 1:3-4):\nBenedíctus Deus et Pater Dómini nostri Iesu Christi, Pater misericordiárum, et Deus totíus consolatiónis, qui consolátur nos in omni tribulatióne nostra.\nR. Deo grátias.",
+        "englishText": "[Proper — changes by season]\n\nOutside special seasons (2 Corinthians 1:3-4):\nBlessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all comfort, who comforteth us in all our tribulation.\nR. Thanks be to God.",
+        "posture": "sit"
+      },
+      {
+        "slug": "vespers_hymn",
+        "title": "Hymn",
+        "rubric": "The hymn varies by day and season. On Sunday outside special seasons:",
+        "latinText": "Lucis Creátor óptime,\nLucem diérum próferens,\nPrimórdiis lucis novæ\nMundi parans oríginem:\n\nQui mane iunctum vésperi\nDiem vocári prǽcipis:\nIllábatur tetrum chaos,\nAudi preces cum flétibus.\n\nNe mens graváta crímine\nVitæ sit exsul múnere,\nDum nil perénne cógitat,\nSéseque culpis ílligat.\n\nCælórum pulset íntimum,\nVitále tollat prǽmium:\nVitémus omne nóxium,\nPurgémus omne péssimum.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\nCum Spíritu Paráclito\nRegnans per omne sǽculum. Amen.",
+        "englishText": "O blest Creator of the light,\nWho mak'st the day with radiance bright,\nAnd o'er the forming world didst call\nThe light from chaos first of all;\n\nWhose wisdom joined in meet array\nThe morn and eve, and named them day:\nNight comes with all its darkling fears;\nRegard Thy people's prayers and tears,\n\nLest, sunk in sin, and whelmed with strife,\nThey lose the gift of endless life;\nWhile thinking but the thoughts of time,\nThey weave new chains of guilt and crime.\n\nBut grant them grace that they may strain\nThe heavenly gate and prize to gain:\nEach harmful lure aside to cast,\nAnd purge away each error past.\n\nAlmighty Father, hear our cry,\nThrough Jesus Christ, our Lord most high,\nWho, with the Holy Ghost and Thee,\nDoth live and reign eternally. Amen.",
+        "posture": "stand"
+      },
+      {
+        "slug": "vespers_magnificat",
+        "title": "Canticle of Our Lady: Magnificat",
+        "rubric": "Luke 1:46-55. All make the Sign of the Cross at the beginning. The altar is incensed during the Magnificat at solemn Vespers. This canticle is the climax of Vespers.",
+        "latinText": "Magníficat ánima mea Dóminum:\nEt exsultávit spíritus meus in Deo salutári meo.\nQuia respéxit humilitátem ancíllæ suæ: ecce enim ex hoc beátam me dicent omnes generatiónes.\nQuia fecit mihi magna qui potens est: et sanctum nomen eius.\nEt misericórdia eius a progénie in progénies timéntibus eum.\nFecit poténtiam in bráchio suo: dispérsit supérbos mente cordis sui.\nDepósuit poténtes de sede, et exaltávit húmiles.\nEsuriéntes implévit bonis: et dívites dimísit inánes.\nSuscépit Israël púerum suum, recordátus misericórdiæ suæ.\nSicut locútus est ad patres nostros, Abraham et sémini eius in sǽcula.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "englishText": "My soul doth magnify the Lord:\nAnd my spirit hath rejoiced in God my Savior.\nBecause He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed.\nBecause He that is mighty hath done great things to me: and holy is His name.\nAnd His mercy is from generation unto generations, to them that fear Him.\nHe hath showed might in His arm: He hath scattered the proud in the conceit of their heart.\nHe hath put down the mighty from their seat, and hath exalted the humble.\nHe hath filled the hungry with good things: and the rich He hath sent empty away.\nHe hath received Israel His servant, being mindful of His mercy.\nAs He spoke to our fathers, to Abraham and to his seed for ever.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+        "posture": "stand"
+      },
+      {
+        "slug": "vespers_closing",
+        "title": "Closing Prayers",
+        "rubric": null,
+        "latinText": "V. Dóminus vobíscum. R. Et cum spíritu tuo.\nOrémus.\n[Proper collect of the day]\nR. Amen.\nV. Dóminus vobíscum. R. Et cum spíritu tuo.\nV. Benedicámus Dómino. R. Deo grátias.\nV. Fidélium ánimæ, per misericórdiam Dei, requiéscant in pace. R. Amen.",
+        "englishText": "V. The Lord be with you. R. And with thy spirit.\nLet us pray.\n[Proper collect of the day]\nR. Amen.\nV. The Lord be with you. R. And with thy spirit.\nV. Let us bless the Lord. R. Thanks be to God.\nV. May the souls of the faithful departed, through the mercy of God, rest in peace. R. Amen.",
+        "posture": "stand"
+      }
+    ]
+  }
+]
