@@ -1,0 +1,24 @@
+{
+  "description": "Daily readings structure for the 1962 lectionary. Each day has an Epistle and Gospel proper to the Mass. This file shows the structure with sample readings. A full implementation would require the complete 1962 lectionary cycle.",
+  "readings": [
+    {
+      "occasion": "Dominica I Quadragesimæ",
+      "occasionEnglish": "First Sunday of Lent",
+      "rank": "I Class",
+      "color": "violet",
+      "epistle": {
+        "reference": "2 Cor 6:1-10",
+        "latinText": "Fratres: Exhortámur vos, ne in vácuum grátiam Dei recipiátis. Ait enim: Témpore accépto exaudívi te, et in die salútis adiúvi te. Ecce nunc tempus acceptábile, ecce nunc dies salútis. Némini dantes ullam offensiónem, ut non vituperétur ministérium nostrum: sed in ómnibus exhibeámus nosmetípsos sicut Dei minístros, in multa patiéntia, in tribulatiónibus, in necessitátibus, in angústiis, in plagis, in carcéribus, in seditiónibus, in labóribus, in vigíliis, in ieiúniis, in castitáte, in sciéntia, in longanimitáte, in suavitáte, in Spíritu Sancto, in caritáte non ficta, in verbo veritátis, in virtúte Dei, per arma iustítiæ a dextris et a sinístris: per glóriam et ignobilitátem: per infámiam et bonam famam: ut seductóres et veráces: sicut qui ignóti et cógniti: quasi moriéntes et ecce vívimus: ut castigáti et non mortificáti: quasi tristes, semper autem gaudéntes: sicut egéntes, multos autem locupletántes: tamquam nihil habéntes et ómnia possidéntes.",
+        "englishText": "Brethren: We exhort you that you receive not the grace of God in vain. For He saith: In an accepted time have I heard thee, and in the day of salvation have I helped thee. Behold, now is the acceptable time; behold, now is the day of salvation. Giving no offence to any man, that our ministry be not blamed; but in all things let us exhibit ourselves as the ministers of God, in much patience, in tribulation, in necessities, in distresses, in stripes, in prisons, in seditions, in labors, in watchings, in fastings, in chastity, in knowledge, in long-suffering, in sweetness, in the Holy Ghost, in charity unfeigned, in the word of truth, in the power of God, by the armor of justice on the right hand and on the left; by honor and dishonor; by evil report and good report; as deceivers, and yet true; as unknown, and yet known; as dying, and behold we live; as chastised, and not killed; as sorrowful, yet always rejoicing; as needy, yet enriching many; as having nothing, and possessing all things."
+      },
+      "gospel": {
+        "reference": "Mt 4:1-11",
+        "latinText": "In illo témpore: Ductus est Iesus in desértum a Spíritu, ut tentarétur a diábolo. Et cum ieiunásset quadragínta diébus et quadragínta nóctibus, póstea esúriit. Et accédens tentátor dixit ei: Si Fílius Dei es, dic ut lápides isti panes fiant. Qui respóndens dixit: Scriptum est: Non in solo pane vivit homo, sed in omni verbo quod procédit de ore Dei.",
+        "englishText": "At that time, Jesus was led by the Spirit into the desert, to be tempted by the devil. And when He had fasted forty days and forty nights, afterwards He was hungry. And the tempter coming said to Him: If Thou be the Son of God, command that these stones be made bread. Who answered and said: It is written: Not in bread alone doth man live, but in every word that proceedeth from the mouth of God."
+      }
+    }
+  ],
+  "structure": {
+    "note": "The 1962 lectionary follows a one-year cycle. Sundays and major feasts have fixed readings. Ferial (weekday) Masses in Lent have their own readings. Outside of Lent, ferial Masses typically use the readings from the preceding Sunday. A complete implementation would require approximately 365 sets of readings covering the entire liturgical year."
+  }
+}
