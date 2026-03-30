@@ -30,6 +30,46 @@ struct TodayView: View {
                     // Rosary launcher (no mysteries listed)
                     rosarySection
 
+                    ornamentalDivider
+
+                    // More devotions
+                    sectionTitle("More", latin: "Amplius")
+
+                    NavigationLink {
+                        StationsView()
+                    } label: {
+                        devotionLink("Stations of the Cross", latin: "Via Crucis")
+                    }
+                    .buttonStyle(.plain)
+
+                    NavigationLink {
+                        GuideView(jsonFileName: "confession_guide")
+                    } label: {
+                        devotionLink("Guide to Confession", latin: "De Sacramento Pænitentiæ")
+                    }
+                    .buttonStyle(.plain)
+
+                    NavigationLink {
+                        ExaminationView()
+                    } label: {
+                        devotionLink("Examination of Conscience", latin: "Examen Conscientiæ")
+                    }
+                    .buttonStyle(.plain)
+
+                    NavigationLink {
+                        GuideView(jsonFileName: "tlm_guide")
+                    } label: {
+                        devotionLink("How to Attend the TLM", latin: "Quomodo Missam Latinam Audire")
+                    }
+                    .buttonStyle(.plain)
+
+                    NavigationLink {
+                        DailyReadingsView()
+                    } label: {
+                        devotionLink("Daily Readings", latin: "Lectiones Diurnæ")
+                    }
+                    .buttonStyle(.plain)
+
                     // Closing ornament
                     Text("✿ · ✿")
                         .frame(maxWidth: .infinity)
@@ -314,14 +354,31 @@ struct TodayView: View {
         }
     }
 
+    private func devotionLink(_ title: String, latin: String) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(title)
+                .font(.custom("Palatino", size: 16).weight(.medium))
+                .foregroundStyle(.ink)
+            Text(latin)
+                .font(.custom("Palatino-Italic", size: 13))
+                .foregroundStyle(.goldLeaf)
+        }
+        .padding(.vertical, 12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .overlay(alignment: .bottom) {
+            Rectangle().fill(Color.goldLeaf.opacity(0.08)).frame(height: 1)
+        }
+    }
+
     /// Routes each devotion to the appropriate detail view.
     @ViewBuilder
     private func destinationForDevotion(_ devotion: TraditionalDevotion) -> some View {
         switch devotion.slug {
         case "divine_office":
             DivineOfficeView()
+        case "night_prayers":
+            ExaminationView()
         default:
-            // Link to reference entry for explanation, history, etc.
             DevotionDetailView(devotion: devotion)
         }
     }
