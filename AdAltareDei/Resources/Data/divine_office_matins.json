@@ -1,0 +1,54 @@
+[
+  {
+    "hour": "matins",
+    "title": "Matins",
+    "latinTitle": "Matutinum",
+    "time": "During the night or early morning",
+    "description": "The longest and most solemn hour of the Office. Consists of the Invitatory, Hymn, and either one or three Nocturns of psalms and readings.",
+    "sections": [
+      {
+        "slug": "matins_invitatory",
+        "title": "Invitatory",
+        "rubric": "Matins begins with the Invitatory Psalm (Psalm 94), framed by an antiphon proper to the day or season. The Invitatory is the call to prayer that opens the entire Office each day.",
+        "latinText": "V. Dómine, lábia mea apéries.\nR. Et os meum annuntiábit laudem tuam.\nV. Deus, in adiutórium meum inténde.\nR. Dómine, ad adiuvándum me festína.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen. Allelúia.\n\n[Proper antiphon]\n\nVeníte, exsultémus Dómino, iubilémus Deo, salutári nostro: præoccupémus fáciem eius in confessióne, et in psalmis iubilémus ei.\nQuóniam Deus magnus Dóminus, et Rex magnus super omnes deos: quóniam non repéllet Dóminus plebem suam, quia in manu eius sunt omnes fines terræ, et altitúdines móntium ipse cónspicit.\nQuóniam ipsíus est mare, et ipse fecit illud, et áridam fundavérunt manus eius: veníte, adorémus, et procidámus ante Deum: plorémus coram Dómino, qui fecit nos, quia ipse est Dóminus Deus noster; nos autem pópulus eius, et oves páscuæ eius.\nHódie si vocem eius audiéritis, nolíte obduráre corda vestra, sicut in exacerbatióne secúndum diem tentatiónis in desérto: ubi tentavérunt me patres vestri, probavérunt et vidérunt ópera mea.\nQuadragínta annis próximus fui generatióni huic, et dixi: Semper hi errant corde, ipsi vero non cognovérunt vias meas: quibus iurávi in ira mea: Si introíbunt in réquiem meam.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "englishText": "V. O Lord, Thou wilt open my lips.\nR. And my tongue shall announce Thy praise.\nV. O God, come to my assistance.\nR. O Lord, make haste to help me.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.\n\n[Proper antiphon]\n\nCome, let us praise the Lord with joy: let us joyfully sing to God our Savior. Let us come before His presence with thanksgiving, and make a joyful noise to Him with psalms.\nFor the Lord is a great God, and a great King above all gods: for the Lord will not cast off His people, for in His hand are all the ends of the earth, and the heights of the mountains are His.\nFor the sea is His, and He made it, and His hands formed the dry land. Come, let us adore and fall down before God: let us weep before the Lord that made us, for He is the Lord our God; and we are the people of His pasture, and the sheep of His hand.\nToday if ye shall hear His voice, harden not your hearts, as in the provocation, according to the day of temptation in the wilderness: where your fathers tempted Me, they proved Me, and saw My works.\nForty years long was I near to this generation, and I said: These always err in heart, and they have not known My ways: so I swore in My wrath: They shall not enter into My rest.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+        "posture": "stand"
+      },
+      {
+        "slug": "matins_hymn",
+        "title": "Hymn",
+        "rubric": "The hymn varies by day and season. On Sunday outside special seasons:",
+        "latinText": "Primo die, quo Trínitas\nBeáta mundum cóndidit,\nVel quo resúrgens Cónditor\nNos, morte victa, líberat.\n\nPulsis procul torpóribus\nSurgámus omnes ócyus,\nEt nócte quærámus pium,\nSicut Prophétam nóvimus.\n\nNostras preces ut áudiat,\nSuámque dextram pórrigat,\nEt expiátos sórdibus\nReddat polórum sédibus.\n\nUt, quique sacratíssimum\nHuius diéi núntium\nConátur in precátibus,\nDetur beáta pátria.\n\nDeo Patri sit glória,\nEiúsque soli Fílio,\nCum Spíritu Paráclito,\nIn sempitérna sǽcula. Amen.",
+        "englishText": "On this the first of days, whereon\nThe blessed Trinity began\nThe world's creation, or the Son\nRising, o'ercame the reign of death:\n\nShaking off drowsy slothfulness,\nLet all rise up in haste to pray,\nAnd in the night-time seek the Lord,\nAs the old Prophet teaches us.\n\nSo may He hear our suppliant voice,\nAnd stretch to us His saving hand,\nAnd cleansed from every stain of guilt,\nRestore us to our heavenly home.\n\nThat all who keep with hallowed rite\nThe solemn vigil of this day,\nDevoutly praying through the night,\nMay win the blessed fatherland.\n\nTo God the Father, glory great,\nAnd glory to the Son divine,\nWith the Holy Paraclete,\nForever and forever. Amen.",
+        "posture": "stand"
+      },
+      {
+        "slug": "matins_nocturn1",
+        "title": "First Nocturn",
+        "rubric": "On Sundays and major feasts, Matins has three Nocturns. On ferias (weekdays), it has one Nocturn. Each Nocturn consists of psalms with antiphons, a versicle, and readings with responsories. The psalms and readings are proper to the day.",
+        "latinText": "[Proper — psalms, versicle, and three readings with responsories, varying by day and feast]\n\nV. Pater noster. (secreto)\n\nAbsolutio. Exáudi, Dómine Iesu Christe, preces servórum tuórum, et miserére nobis: Qui cum Patre et Spíritu Sancto vivis et regnas in sǽcula sæculórum. R. Amen.",
+        "englishText": "[Proper — psalms, versicle, and three readings with responsories, varying by day and feast]\n\nV. Our Father. (silently)\n\nAbsolution. Graciously hear, O Lord Jesus Christ, the prayers of Thy servants, and have mercy upon us: Who with the Father and the Holy Ghost livest and reignest world without end. R. Amen.",
+        "posture": "sit",
+        "isProper": true
+      },
+      {
+        "slug": "matins_nocturn2",
+        "title": "Second Nocturn",
+        "rubric": "The Second Nocturn typically contains readings from the Fathers of the Church or from the life of the saint of the day.",
+        "latinText": "[Proper — psalms, versicle, and three patristic readings with responsories]",
+        "englishText": "[Proper — psalms, versicle, and three patristic readings with responsories]",
+        "posture": "sit",
+        "isProper": true
+      },
+      {
+        "slug": "matins_nocturn3",
+        "title": "Third Nocturn",
+        "rubric": "The Third Nocturn contains a Gospel reading with a homily from a Father of the Church. The Te Deum is sung after the last responsory on Sundays and feasts.",
+        "latinText": "[Proper — psalms, versicle, Gospel homily, and responsories]\n\nOn Sundays and feasts, the Te Deum follows:\nTe Deum laudámus: te Dóminum confitémur...",
+        "englishText": "[Proper — psalms, versicle, Gospel homily, and responsories]\n\nOn Sundays and feasts, the Te Deum follows:\nWe praise Thee, O God: we acknowledge Thee to be the Lord...",
+        "posture": "sit",
+        "isProper": true
+      }
+    ]
+  }
+]
