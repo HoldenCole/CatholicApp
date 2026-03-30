@@ -19,9 +19,6 @@ struct LearnView: View {
                     // Header
                     learnHeader
 
-                    // AI badge
-                    aiBadge
-
                     // Lesson categories
                     ForEach(groupedLessons, id: \.0) { category, categoryLessons in
                         VStack(alignment: .leading, spacing: AppConstants.itemSpacing) {
@@ -68,36 +65,7 @@ struct LearnView: View {
         .padding(.horizontal)
     }
 
-    // MARK: - AI Badge
 
-    private var aiBadge: some View {
-        HStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(Color.goldLeaf.opacity(0.15))
-                    .frame(width: 48, height: 48)
-
-                Image(systemName: "brain.head.profile")
-                    .font(.system(size: 22))
-                    .foregroundStyle(.goldLeaf)
-            }
-
-            VStack(alignment: .leading, spacing: 3) {
-                Text("AI-Powered Latin Tutor")
-                    .font(.uiLabelLarge)
-                    .foregroundStyle(.ink)
-
-                Text("Personalized courses adapt to your skill level. Practice pronunciation, grammar, and reading with intelligent feedback.")
-                    .font(.uiCaption)
-                    .foregroundStyle(.secondary)
-                    .lineSpacing(2)
-            }
-        }
-        .padding()
-        .background(Color.goldLeaf.opacity(0.06))
-        .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
-        .padding(.horizontal)
-    }
 
     private func loadLessons() {
         guard let url = Bundle.main.url(forResource: "lessons", withExtension: "json"),
