@@ -5,24 +5,112 @@ struct ProgressTabView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var appSettings: AppSettings
     @StateObject private var viewModel = ProgressViewModel()
+
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: AppConstants.sectionSpacing) {
-                    // Mastery ring
-                    MasteryRingView(percentage: viewModel.masteryPercentage)
-                        .frame(maxWidth: .infinity)
+                VStack(alignment: .leading, spacing: 0) {
+                    // Dark header with mastery ring and stats
+                    VStack(spacing: 12) {
+                        MasteryRingView(percentage: viewModel.masteryPercentage)
 
-                    // Streak
-                    StreakView(streak: appSettings.currentStreak)
+                        HStack(spacing: 0) {
+                            statItem(count: viewModel.masteredCount, label: "Mastered", color: .comfortMastered)
+                            statItem(count: viewModel.familiarCount, label: "Familiar", color: .comfortFamiliar)
+                            statItem(count: viewModel.learningCount, label: "Learning", color: .comfortLearning)
+                        }
+                    }
+                    .padding(.horizontal, 24)
+                    .padding(.top, 16)
+                    .padding(.bottom, 24)
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        LinearGradient(
+                            colors: [Color(hex: "1C1410"), Color(hex: "2a2118")],
+                            startPoint: .top, endPoint: .bottom
+                        )
+                    )
 
-                    // Stats summary
-                    statsSection
+                    // Content on parchment
+                    VStack(alignment: .leading, spacing: 0) {
+                        // Streak
+                        HStack(alignment: .top, spacing: 0) {
+                            Rectangle()
+                                .fill(Color.sanctuaryRed)
+                                .frame(width: 3)
+                                .padding(.trailing, 16)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("\(appSettings.currentStreak)-Day Streak")
+                                    .font(.custom("Palatino", size: 17).weight(.semibold))
+                                    .foregroundStyle(.ink)
+                                Text("Keep practicing daily.")
+                                    .font(.custom("Georgia", size: 14))
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .padding(.vertical, 16)
 
-                    // Prayer mastery list
-                    prayerListSection
+                        ornamentalDivider
+
+                        // Prayer list header
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("ALL PRAYERS")
+                                .font(.custom("Palatino-Italic", size: 12).weight(.semibold))
+                                .foregroundStyle(.sanctuaryRed)
+                                .tracking(3)
+                            Text("Omnes Orationes")
+                                .font(.custom("Palatino-Italic", size: 13))
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.bottom, 12)
+
+                        // Prayer mastery list with progress bars
+                        ForEach(viewModel.prayers, id: \.id) { prayer in
+                            let level = viewModel.comfortLevel(for: prayer)
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack {
+                                    Text(prayer.latinName)
+                                        .font(.custom("Palatino", size: 16))
+                                        .foregroundStyle(.ink)
+                                    Spacer()
+                                    Text(level.label)
+                                        .font(.custom("Palatino-Italic", size: 12))
+                                        .foregroundStyle(comfortColor(level))
+                                }
+                                Text(prayer.englishName)
+                                    .font(.custom("Palatino-Italic", size: 12))
+                                    .foregroundStyle(.goldLeaf)
+
+                                // Mini progress bar
+                                GeometryReader { geo in
+                                    ZStack(alignment: .leading) {
+                                        RoundedRectangle(cornerRadius: 2)
+                                            .fill(Color.goldLeaf.opacity(0.08))
+                                            .frame(height: 3)
+                                        RoundedRectangle(cornerRadius: 2)
+                                            .fill(comfortColor(level))
+                                            .frame(width: geo.size.width * progressWidth(level), height: 3)
+                                    }
+                                }
+                                .frame(height: 3)
+                            }
+                            .padding(.vertical, 12)
+                            .overlay(alignment: .bottom) {
+                                Rectangle()
+                                    .fill(Color.goldLeaf.opacity(0.06))
+                                    .frame(height: 1)
+                            }
+                        }
+
+                        Text("✿ · ✿")
+                            .frame(maxWidth: .infinity)
+                            .font(.system(size: 12))
+                            .foregroundStyle(.goldLeaf.opacity(0.4))
+                            .tracking(8)
+                            .padding(.vertical, 28)
+                    }
+                    .padding(.horizontal, 24)
                 }
-                .padding()
             }
             .background(Color.parchment)
             .navigationTitle("Progress")
@@ -32,48 +120,47 @@ struct ProgressTabView: View {
         }
     }
 
-    // MARK: - Stats
-
-    private var statsSection: some View {
-        HStack(spacing: 16) {
-            statCard(count: viewModel.masteredCount, label: "Mastered", color: .comfortMastered)
-            statCard(count: viewModel.familiarCount, label: "Familiar", color: .comfortFamiliar)
-            statCard(count: viewModel.learningCount, label: "Learning", color: .comfortLearning)
-        }
-    }
-
-    private func statCard(count: Int, label: String, color: Color) -> some View {
-        VStack(spacing: 6) {
+    private func statItem(count: Int, label: String, color: Color) -> some View {
+        VStack(spacing: 2) {
             Text("\(count)")
-                .font(.englishDisplay)
+                .font(.custom("Palatino", size: 20).weight(.semibold))
                 .foregroundStyle(color)
-
             Text(label)
-                .font(.uiCaption)
-                .foregroundStyle(.secondary)
+                .font(.custom("Palatino-Italic", size: 10))
+                .foregroundStyle(.white.opacity(0.5))
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 16)
-        .background(Color.warmWhite)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 
-    // MARK: - Prayer List
-
-    private var prayerListSection: some View {
-        VStack(alignment: .leading, spacing: AppConstants.itemSpacing) {
-            SectionHeaderView(title: "All Prayers", subtitle: "Omnes Orationes")
-
-            ForEach(viewModel.prayers, id: \.id) { prayer in
-                PrayerMasteryRowView(
-                    prayer: prayer,
-                    comfortLevel: viewModel.comfortLevel(for: prayer)
-                ) { newLevel in
-                    viewModel.updateComfortLevel(for: prayer, to: newLevel, context: modelContext)
-                    appSettings.recordPractice()
-                }
-            }
+    private func comfortColor(_ level: ComfortLevel) -> Color {
+        switch level {
+        case .notStarted: return .secondary.opacity(0.3)
+        case .learning: return .sanctuaryRed
+        case .familiar: return .goldLeaf
+        case .mastered: return .comfortMastered
         }
+    }
+
+    private func progressWidth(_ level: ComfortLevel) -> Double {
+        switch level {
+        case .notStarted: return 0
+        case .learning: return 0.33
+        case .familiar: return 0.66
+        case .mastered: return 1.0
+        }
+    }
+
+    private var ornamentalDivider: some View {
+        HStack {
+            Spacer()
+            Rectangle().frame(height: 1).foregroundStyle(.clear)
+                .background(LinearGradient(colors: [.clear, .goldLeaf.opacity(0.25), .clear], startPoint: .leading, endPoint: .trailing))
+            Text("✟").font(.system(size: 11)).foregroundStyle(.goldLeaf.opacity(0.5))
+            Rectangle().frame(height: 1).foregroundStyle(.clear)
+                .background(LinearGradient(colors: [.clear, .goldLeaf.opacity(0.25), .clear], startPoint: .leading, endPoint: .trailing))
+            Spacer()
+        }
+        .padding(.vertical, 16)
     }
 }
 
