@@ -1,0 +1,45 @@
+{
+  "slug": "ecclesiastical_vowels",
+  "title": "Ecclesiastical Vowels",
+  "latinTitle": "Vocales Ecclesiasticæ",
+  "courseNumber": 1,
+  "estimatedMinutes": 5,
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Ecclesiastical Latin has five vowels, just like English. The good news: they are simpler and more consistent than English vowels. Each vowel has one sound, and that sound never changes regardless of the word."
+    },
+    {
+      "type": "lesson",
+      "title": "The Five Vowels",
+      "content": "A — always 'ah' as in 'father.' Never 'ay' as in 'cake.'\n\nE — always 'eh' as in 'met.' Never 'ee' as in 'me.'\n\nI — always 'ee' as in 'machine.' Never 'eye' as in 'mine.'\n\nO — always 'oh' as in 'more.' Never 'uh' as in 'come.'\n\nU — always 'oo' as in 'rule.' Never 'uh' as in 'cut.'"
+    },
+    {
+      "type": "tip",
+      "content": "Think of Italian vowels — they are identical. If you can say 'pizza' and 'pasta' with an Italian accent, you already know how to pronounce Latin vowels."
+    },
+    {
+      "type": "lesson",
+      "title": "The Critical Difference: AE and OE",
+      "content": "This is the single most important rule that separates Ecclesiastical from Classical Latin.\n\nAE — pronounced 'ay' as in 'they.' NOT 'eye' as in Classical Latin.\nExample: 'cælum' (heaven) = 'CHAY-loom,' not 'KYE-loom.'\nExample: 'præsidium' = 'pray-SEE-dee-oom.'\n\nOE — also pronounced 'ay' as in 'they.'\nExample: 'pœnitentia' (penance) = 'pay-nee-TEN-tsee-ah.'\n\nIf you learn nothing else from this course, learn this: AE and OE say 'ay.' This one rule will immediately make your Latin sound like Church Latin rather than classroom Latin."
+    },
+    {
+      "type": "practice",
+      "title": "Practice Words",
+      "items": [
+        {"latin": "María", "phonetic": "mah-REE-ah", "meaning": "Mary"},
+        {"latin": "Deus", "phonetic": "DEH-oos", "meaning": "God"},
+        {"latin": "Fílius", "phonetic": "FEE-lee-oos", "meaning": "Son"},
+        {"latin": "cælum", "phonetic": "CHAY-loom", "meaning": "heaven"},
+        {"latin": "terræ", "phonetic": "TEHR-ray", "meaning": "of the earth"},
+        {"latin": "grátia", "phonetic": "GRAH-tsee-ah", "meaning": "grace"},
+        {"latin": "Dóminus", "phonetic": "DOH-mee-noos", "meaning": "Lord"},
+        {"latin": "peccátum", "phonetic": "peh-KAH-toom", "meaning": "sin"}
+      ]
+    },
+    {
+      "type": "summary",
+      "content": "Five vowels, five sounds, no exceptions: A=ah, E=eh, I=ee, O=oh, U=oo. AE and OE both say 'ay.' Master these and you have the foundation for everything that follows."
+    }
+  ]
+}
