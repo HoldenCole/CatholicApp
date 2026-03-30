@@ -50,12 +50,10 @@ struct DivineOfficeView: View {
                     let isSuggested = officeHour.name == suggestedHour
 
                     NavigationLink {
-                        // Future: OfficeHourDetailView
-                        Text("Coming soon: \(officeHour.latinName)")
-                            .font(.custom("Palatino-Italic", size: 16))
-                            .foregroundStyle(.secondary)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color.parchment)
+                        OfficeHourPrayerView(
+                            hourSlug: officeHour.name.lowercased(),
+                            hourTitle: officeHour.name
+                        )
                     } label: {
                         HStack(alignment: .top, spacing: 0) {
                             // Accent bar
