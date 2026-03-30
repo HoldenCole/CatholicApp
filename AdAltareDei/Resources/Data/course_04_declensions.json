@@ -1,0 +1,43 @@
+{
+  "slug": "noun_declensions",
+  "title": "First & Second Declensions",
+  "latinTitle": "Declinationes I et II",
+  "courseNumber": 4,
+  "estimatedMinutes": 15,
+  "sections": [
+    {
+      "type": "intro",
+      "content": "You do not need to master Latin grammar to pray in Latin. But understanding noun endings helps you recognize what role a word plays in a prayer — is it the subject? The object? Is something being offered TO someone? This course covers the two most common noun patterns."
+    },
+    {
+      "type": "lesson",
+      "title": "Why Endings Matter",
+      "content": "In English, word order tells you who does what: 'God loves man' vs 'Man loves God.' In Latin, ENDINGS tell you who does what. Word order is flexible.\n\n'Deus hóminem amat' = God loves man\n'Hóminem Deus amat' = God loves man (same meaning, different order)\n\nThe ending '-em' on 'hominem' tells you it is the object. The ending '-us' on 'Deus' tells you it is the subject. You will see these patterns in every prayer."
+    },
+    {
+      "type": "lesson",
+      "title": "First Declension (-a words)",
+      "content": "Most first declension nouns are feminine. They are the '-a' words you hear constantly in prayers.\n\nSingular:\n• María (Mary) — subject\n• Maríam — object ('Hail Mary' / addressing Mary)\n• Maríæ — 'of Mary' or 'to Mary'\n\nCommon first declension words in prayers:\n• grátia (grace) → grátiam, grátiæ\n• glória (glory) → glóriam, glóriæ\n• vita (life) → vitam, vitæ\n• terra (earth) → terram, terræ\n• Ecclésia (Church) → Ecclésiam, Ecclésiæ\n• misericórdia (mercy) → misericórdiam\n\nWhen you see '-am,' something is being done TO that thing.\nWhen you see '-æ,' it means 'of' or 'to' that thing."
+    },
+    {
+      "type": "lesson",
+      "title": "Second Declension (-us words)",
+      "content": "Most second declension nouns are masculine. They are the '-us' words.\n\nSingular:\n• Dóminus (Lord) — subject\n• Dóminum — object\n• Dómini — 'of the Lord'\n• Dómino — 'to/for the Lord'\n\nCommon second declension words:\n• Deus (God) → Deum, Dei, Deo\n• Fílius (Son) → Fílium, Fílii, Fílio\n• Christus → Christum, Christi, Christo\n• peccátum (sin) → peccáta (plural!)\n• cælum (heaven) → cæli, cælo\n• verbum (word) → verbi, verbo\n\nNote: '-um' words (like peccátum, cælum, verbum) are neuter — they follow the same pattern but their plural ends in '-a': peccáta (sins), sǽcula (ages)."
+    },
+    {
+      "type": "practice",
+      "title": "Spot the Endings in Prayers",
+      "items": [
+        {"latin": "Sancta María, Mater Dei", "meaning": "Holy Mary, Mother of God", "note": "María = subject (1st decl), Dei = 'of God' (2nd decl genitive)"},
+        {"latin": "dimítte nobis débita nostra", "meaning": "forgive us our debts", "note": "débita = neuter plural object (2nd decl), nostra = 'our'"},
+        {"latin": "in remissiónem peccatórum", "meaning": "unto the remission of sins", "note": "remissiónem = object (-em), peccatórum = 'of sins' (genitive plural)"},
+        {"latin": "vitam ætérnam", "meaning": "life everlasting", "note": "vitam = object (1st decl -am), ætérnam = adjective matching"},
+        {"latin": "ad Deum qui lætíficat", "meaning": "to God who gives joy", "note": "Deum = object of 'ad' (2nd decl -um)"}
+      ]
+    },
+    {
+      "type": "summary",
+      "content": "First declension: -a words (mostly feminine). -am = object, -æ = of/to. Second declension: -us words (masculine), -um words (neuter). -um = object, -i = of, -o = to/for. You do not need to memorize charts — just recognize these endings when you see them in prayers, and the meaning becomes clearer."
+    }
+  ]
+}

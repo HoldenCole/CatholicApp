@@ -1,0 +1,59 @@
+{
+  "slug": "common_vocabulary",
+  "title": "50 Most Common Prayer Words",
+  "latinTitle": "Vocabularium Frequentissimum",
+  "courseNumber": 6,
+  "estimatedMinutes": 20,
+  "sections": [
+    {
+      "type": "intro",
+      "content": "These 50 words appear again and again across every traditional prayer, the Mass, and the Divine Office. Learning them is the single fastest way to begin understanding Latin at Mass. You do not need to memorize them all at once — revisit this list regularly and they will become second nature."
+    },
+    {
+      "type": "lesson",
+      "title": "God and the Trinity",
+      "content": "• Deus — God\n• Dóminus — Lord\n• Christus — Christ\n• Iesus — Jesus\n• Pater — Father\n• Fílius — Son\n• Spíritus Sanctus — Holy Ghost/Spirit\n• omnípotens — almighty\n• ætérnus — eternal"
+    },
+    {
+      "type": "lesson",
+      "title": "Our Lady and the Saints",
+      "content": "• María — Mary\n• Virgo — Virgin\n• Mater — Mother\n• Regína — Queen\n• beátus/beáta — blessed\n• Sanctus/Sancta — holy, saint\n• Ángelus — Angel\n• Apóstolus — Apostle"
+    },
+    {
+      "type": "lesson",
+      "title": "Prayer and Worship",
+      "content": "• oráre — to pray\n• laudáre — to praise\n• adoráre — to adore\n• benedícere — to bless\n• credo — I believe\n• grátia — grace\n• glória — glory\n• misericórdia — mercy\n• pax — peace\n• amen — so be it"
+    },
+    {
+      "type": "lesson",
+      "title": "Sin, Salvation, and the Spiritual Life",
+      "content": "• peccátum — sin\n• peccátor — sinner\n• salus — salvation\n• redemptio — redemption\n• remíssio — forgiveness\n• mors — death\n• vita — life\n• lux — light\n• veritas — truth\n• fides — faith"
+    },
+    {
+      "type": "lesson",
+      "title": "Essential Small Words",
+      "content": "These tiny words appear dozens of times in every Mass:\n\n• et — and\n• in — in\n• cum — with\n• pro — for\n• ad — to, toward\n• per — through\n• qui — who\n• quia — because\n• sed — but\n• nunc — now\n• semper — always\n• nobis — to us, for us\n• tuus/tua — your, thy\n• noster/nostra — our\n• meus/mea — my"
+    },
+    {
+      "type": "lesson",
+      "title": "Mass-Specific Words",
+      "content": "• Missa — Mass\n• altáre — altar\n• sacrifícium — sacrifice\n• hóstia — host (victim/offering)\n• cæli/cælum — heaven\n• terra — earth\n• corpus — body\n• sanguis — blood\n• panis — bread\n• verbum — word"
+    },
+    {
+      "type": "practice",
+      "title": "Translate These Phrases",
+      "items": [
+        {"latin": "Dóminus vobíscum", "meaning": "The Lord (be) with you", "note": "Dóminus = Lord, vobíscum = with you"},
+        {"latin": "Et cum spíritu tuo", "meaning": "And with thy spirit", "note": "et = and, cum = with, spíritu = spirit, tuo = thy"},
+        {"latin": "Glória Patri et Fílio", "meaning": "Glory to the Father and to the Son", "note": "Glória = glory, Patri = to the Father, Fílio = to the Son"},
+        {"latin": "Agnus Dei qui tollis peccáta mundi", "meaning": "Lamb of God who takes away the sins of the world", "note": "Agnus = Lamb, Dei = of God, peccáta = sins, mundi = of the world"},
+        {"latin": "Dona nobis pacem", "meaning": "Grant us peace", "note": "Dona = grant, nobis = to us, pacem = peace"},
+        {"latin": "Sancta María, Mater Dei, ora pro nobis", "meaning": "Holy Mary, Mother of God, pray for us", "note": "Every word from our vocabulary list"}
+      ]
+    },
+    {
+      "type": "summary",
+      "content": "These 50 words cover roughly 80% of the vocabulary in the prayers and the Mass Ordinary. You do not need to learn them all at once. Start with the Mass-Specific and Essential Small Words — these are the ones you will hear every Sunday. The rest will come naturally with repeated exposure."
+    }
+  ]
+}
