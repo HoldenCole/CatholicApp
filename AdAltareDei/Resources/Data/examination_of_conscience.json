@@ -1,0 +1,147 @@
+{
+  "title": "Examination of Conscience",
+  "latinTitle": "Examen Conscientiæ",
+  "introduction": "Use this guide before Confession to examine your conscience thoroughly. Each commandment is listed with common sins to consider. Be honest with yourself — God already knows your sins. The purpose is for YOU to recognize them, confess them, and resolve to amend your life.",
+  "preparatoryPrayer": "Come, Holy Ghost, enlighten my mind that I may clearly know my sins. Move my heart that I may be sincerely sorry for them, confess them honestly, and firmly resolve to amend my life. O Blessed Virgin Mary, Mother of God, pray for me. My Guardian Angel, help me to make a good examination of conscience.",
+  "commandments": [
+    {
+      "number": 1,
+      "commandment": "I am the Lord thy God; thou shalt not have strange gods before Me.",
+      "latinText": "Non habébis deos aliénos coram me.",
+      "sins": [
+        "Have I doubted or denied the existence of God?",
+        "Have I failed to pray daily?",
+        "Have I put anything before God — money, career, pleasures, another person?",
+        "Have I believed in or consulted horoscopes, fortune tellers, or the occult?",
+        "Have I received Holy Communion in a state of mortal sin?",
+        "Have I despaired of God's mercy, or presumed upon it?",
+        "Have I been ungrateful for God's blessings?"
+      ]
+    },
+    {
+      "number": 2,
+      "commandment": "Thou shalt not take the name of the Lord thy God in vain.",
+      "latinText": "Non assúmes nomen Dómini Dei tui in vanum.",
+      "sins": [
+        "Have I used God's name carelessly or in anger?",
+        "Have I cursed or used profane language?",
+        "Have I sworn a false oath or broken a vow?",
+        "Have I spoken disrespectfully of sacred things, the saints, or the Church?",
+        "Have I murmured against God when things went wrong?"
+      ]
+    },
+    {
+      "number": 3,
+      "commandment": "Remember to keep holy the Lord's Day.",
+      "latinText": "Meménto ut diem sábbati sanctifíces.",
+      "sins": [
+        "Have I missed Mass on Sundays or Holy Days of Obligation without grave reason?",
+        "Have I arrived late or left early from Mass through my own fault?",
+        "Have I been willfully distracted during Mass?",
+        "Have I done unnecessary servile work on Sundays?",
+        "Have I failed to make Sunday a day of rest and worship?"
+      ]
+    },
+    {
+      "number": 4,
+      "commandment": "Honor thy father and thy mother.",
+      "latinText": "Honóra patrem tuum et matrem tuam.",
+      "sins": [
+        "Have I been disobedient or disrespectful to my parents?",
+        "Have I neglected my duties to my family?",
+        "Have I failed to care for aging parents?",
+        "Have I failed to raise my children in the Catholic faith?",
+        "Have I given scandal to my children by my bad example?",
+        "Have I been disrespectful to legitimate authority?"
+      ]
+    },
+    {
+      "number": 5,
+      "commandment": "Thou shalt not kill.",
+      "latinText": "Non occídes.",
+      "sins": [
+        "Have I taken a human life or assisted in doing so?",
+        "Have I had or encouraged an abortion?",
+        "Have I entertained thoughts of hatred, revenge, or violence?",
+        "Have I held grudges or refused to forgive?",
+        "Have I harmed another by word or deed?",
+        "Have I given scandal — leading another into sin?",
+        "Have I abused alcohol or drugs?",
+        "Have I been reckless with my own health or safety?"
+      ]
+    },
+    {
+      "number": 6,
+      "commandment": "Thou shalt not commit adultery.",
+      "latinText": "Non mœcháberis.",
+      "sins": [
+        "Have I been unfaithful in marriage, in thought or deed?",
+        "Have I engaged in impure actions, alone or with others?",
+        "Have I willfully entertained impure thoughts or desires?",
+        "Have I viewed pornography or other impure images?",
+        "Have I dressed immodestly or acted in a way to tempt others?",
+        "Have I used artificial contraception?"
+      ]
+    },
+    {
+      "number": 7,
+      "commandment": "Thou shalt not steal.",
+      "latinText": "Non furtum fácies.",
+      "sins": [
+        "Have I stolen anything, large or small?",
+        "Have I cheated anyone or been dishonest in business?",
+        "Have I failed to pay my debts?",
+        "Have I damaged another's property?",
+        "Have I been wasteful with money or resources?",
+        "Have I failed to give to the poor according to my means?",
+        "Have I failed to tithe or support the Church?"
+      ]
+    },
+    {
+      "number": 8,
+      "commandment": "Thou shalt not bear false witness against thy neighbor.",
+      "latinText": "Non loquéris contra próximum tuum falsum testimónium.",
+      "sins": [
+        "Have I lied?",
+        "Have I gossiped or spoken ill of others behind their back?",
+        "Have I revealed another's faults or sins without just cause?",
+        "Have I judged others rashly or uncharitably?",
+        "Have I failed to defend someone's good name when I could?",
+        "Have I flattered others insincerely for selfish reasons?"
+      ]
+    },
+    {
+      "number": 9,
+      "commandment": "Thou shalt not covet thy neighbor's wife.",
+      "latinText": "Non concupísces uxórem próximi tui.",
+      "sins": [
+        "Have I willfully entertained impure thoughts about another person?",
+        "Have I failed to guard my eyes and imagination?",
+        "Have I put myself in occasions of sin against purity?",
+        "Have I been jealous of another's relationship or family?"
+      ]
+    },
+    {
+      "number": 10,
+      "commandment": "Thou shalt not covet thy neighbor's goods.",
+      "latinText": "Non concupísces rem próximi tui.",
+      "sins": [
+        "Have I been envious of what others have?",
+        "Have I been greedy or materialistic?",
+        "Have I been discontent with what God has given me?",
+        "Have I wished harm or misfortune on others out of jealousy?"
+      ]
+    }
+  ],
+  "precepts": {
+    "title": "Precepts of the Church",
+    "items": [
+      "Have I failed to attend Mass on Sundays and Holy Days?",
+      "Have I failed to confess my sins at least once a year?",
+      "Have I failed to receive Holy Communion during the Easter season?",
+      "Have I failed to observe the prescribed days of fasting and abstinence?",
+      "Have I failed to contribute to the support of the Church?"
+    ]
+  },
+  "closingPrayer": "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of heaven and the pains of hell; but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen."
+}
