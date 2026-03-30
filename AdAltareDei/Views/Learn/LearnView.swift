@@ -2,7 +2,6 @@ import SwiftUI
 
 struct LearnView: View {
     @State private var lessons: [LatinLesson] = []
-    @State private var showingPaywall = false
     @EnvironmentObject private var appSettings: AppSettings
 
     private var groupedLessons: [(LessonCategory, [LatinLesson])] {
@@ -48,9 +47,6 @@ struct LearnView: View {
             }
             .background(Color.parchment)
             .navigationTitle("Learn")
-            .sheet(isPresented: $showingPaywall) {
-                PaywallView()
-            }
             .onAppear {
                 loadLessons()
             }
@@ -117,19 +113,19 @@ struct LearnView: View {
 
 struct LessonRowView: View {
     let lesson: LatinLesson
-    let isLocked: Bool
+    var isLocked: Bool = false
 
     var body: some View {
         HStack(spacing: 14) {
             // Category icon
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(isLocked ? Color.gray.opacity(0.08) : Color.sanctuaryRed.opacity(0.08))
+                    .fill(Color.sanctuaryRed.opacity(0.08))
                     .frame(width: 44, height: 44)
 
                 Image(systemName: lesson.category.icon)
                     .font(.system(size: 18))
-                    .foregroundStyle(isLocked ? .gray : .sanctuaryRed)
+                    .foregroundStyle(.sanctuaryRed)
             }
 
             VStack(alignment: .leading, spacing: 3) {

@@ -5,8 +5,7 @@ class AppSettings: ObservableObject {
     @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
     @AppStorage("currentStreak") var currentStreak = 0
     @AppStorage("lastPracticeDate") var lastPracticeDate = ""
-    @AppStorage("isPremium") var isPremium = false
-    @AppStorage("missalRite") var missalRite: MissalRite = .rubrics1962
+@AppStorage("missalRite") var missalRite: MissalRite = .rubrics1962
 
     func recordPractice() {
         let today = Date().dateKey
