@@ -32,6 +32,18 @@ struct TodayView: View {
 
                     ornamentalDivider
 
+                    // Practices of the Saints
+                    sectionTitle("Practices of the Saints", latin: "Praxes Sanctorum")
+
+                    NavigationLink {
+                        SaintSelectorView()
+                    } label: {
+                        devotionLink("Follow a Saint's Rule of Life", latin: "Sequere Regulam Sancti")
+                    }
+                    .buttonStyle(.plain)
+
+                    ornamentalDivider
+
                     // More devotions
                     sectionTitle("More", latin: "Amplius")
 
