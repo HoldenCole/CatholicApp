@@ -1,0 +1,94 @@
+{
+  "slug": "therese",
+  "name": "St. Thérèse of Lisieux",
+  "latinName": "Sancta Teresia a Iesu Infante",
+  "title": "Doctor of the Church, The Little Flower",
+  "feastDay": "October 1",
+  "era": "1873–1897",
+  "charism": "The 'Little Way' — doing small things with great love, total confidence in God's mercy, and spiritual childhood.",
+  "biography": "St. Thérèse of Lisieux entered the Carmelite convent at age 15 and died of tuberculosis at 24. In her short life, she developed the 'Little Way' — a path to holiness through small, hidden acts of love and total abandonment to God's mercy. Her autobiography, Story of a Soul, became one of the most widely read spiritual books in history. She was declared a Doctor of the Church in 1997, the youngest person to receive the title. She is patroness of missionaries despite never leaving her convent.",
+  "dailyPractices": [
+    {
+      "slug": "th_morning_offering",
+      "title": "Morning Offering of Love",
+      "description": "Begin the day by offering everything to God with childlike trust. Thérèse prayed: 'My God, I offer Thee all my actions of this day for the intentions and for the glory of the Sacred Heart of Jesus.'",
+      "timeOfDay": "morning",
+      "isRequired": true
+    },
+    {
+      "slug": "th_small_sacrifices",
+      "title": "Hidden Sacrifices",
+      "description": "Throughout the day, make small hidden sacrifices with love. Let someone go ahead of you. Eat what you dislike without complaint. Bear an annoyance in silence. Thérèse said: 'Miss no single opportunity of making some small sacrifice, here by a smiling look, there by a kindly word; always doing the smallest things right and doing it all for love.'",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "th_divine_office",
+      "title": "Pray Part of the Divine Office",
+      "description": "As a Carmelite, Thérèse prayed the full Divine Office. Follow her example by praying at least one hour — Lauds or Compline are most accessible.",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "th_rosary",
+      "title": "Daily Rosary",
+      "description": "Thérèse found the Rosary difficult at times but prayed it faithfully. She said: 'I feel that I say the Rosary so badly! I try in vain to meditate on the mysteries; I cannot fix my mind on them.' Yet she persevered. Pray even when it feels dry.",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "th_spiritual_reading",
+      "title": "Spiritual Reading",
+      "description": "Read from Scripture or a spiritual classic. Thérèse drew her spirituality primarily from the Gospels and the writings of St. John of the Cross. She said: 'Above all, the Gospels sustain me during my hours of prayer.'",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "th_acts_of_charity",
+      "title": "Deliberate Acts of Charity",
+      "description": "Seek out the person who annoys you most and show them particular kindness. Thérèse deliberately chose to be kind to the sister in the convent who irritated her most — and that sister never knew it was an effort.",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "th_act_of_trust",
+      "title": "Act of Confidence in God's Mercy",
+      "description": "When you fail or sin, do not despair. Run immediately to God like a child runs to a parent. Thérèse said: 'Even if I had on my conscience all the sins that can be committed, I would go, my heart broken with sorrow, and throw myself into Jesus' arms.'",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "th_evening_prayer",
+      "title": "Evening Prayer & Abandonment",
+      "description": "Before sleep, place yourself entirely in God's hands. Thérèse's last words were: 'My God, I love Thee!' End your day the same way — with a simple act of love.",
+      "timeOfDay": "evening",
+      "isRequired": true
+    }
+  ],
+  "penances": [
+    {
+      "slug": "th_accept_dryness",
+      "title": "Accept Spiritual Dryness",
+      "description": "When prayer feels empty and God feels distant, continue faithfully. This was Thérèse's great trial — she spent the last 18 months of her life in spiritual darkness. She taught that fidelity in dryness is more meritorious than prayer in consolation.",
+      "timeOfDay": null,
+      "isRequired": true
+    },
+    {
+      "slug": "th_hidden_mortification",
+      "title": "Hidden Mortifications",
+      "description": "Practice small penances that no one notices: sitting in an uncomfortable position without shifting, eating less of a food you enjoy, not scratching an itch. The key is that no one sees. Thérèse's penances were so hidden that her sisters were shocked to learn of them after her death.",
+      "timeOfDay": null,
+      "isRequired": false
+    }
+  ],
+  "quotes": [
+    {"quote": "Miss no single opportunity of making some small sacrifice, here by a smiling look, there by a kindly word; always doing the smallest things right and doing it all for love.", "source": "Story of a Soul"},
+    {"quote": "My vocation is love! In the heart of the Church, my Mother, I shall be love.", "source": "Story of a Soul"},
+    {"quote": "You know well enough that Our Lord does not look so much at the greatness of our actions, nor even at their difficulty, but at the love with which we do them.", "source": "Story of a Soul"},
+    {"quote": "The only way I can prove my love is by scattering flowers, and these flowers are every little sacrifice, every glance and word, and the doing of the least actions for love.", "source": "Story of a Soul"},
+    {"quote": "I have not the courage to force myself to seek out beautiful prayers in books. Not knowing which to choose, I do like children who cannot read — I say quite simply to God what I want to say, and He always understands me.", "source": "Story of a Soul"},
+    {"quote": "I want to spend my heaven doing good on earth.", "source": "Last Conversations"},
+    {"quote": "Everything is grace.", "source": "Last words"}
+  ],
+  "relatedPrayers": ["ave_maria", "morning_offering", "act_of_contrition"]
+}
