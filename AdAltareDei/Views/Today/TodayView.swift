@@ -7,6 +7,7 @@ struct TodayView: View {
     @State private var todaysDevotions: [TraditionalDevotion] = []
     @State private var showingMissalSelector = false
     @State private var showingSettings = false
+    @State private var showingPenanceSelector = false
 
     var body: some View {
         NavigationStack {
@@ -110,6 +111,9 @@ struct TodayView: View {
             .sheet(isPresented: $showingSettings) {
                 SettingsSheet()
             }
+            .sheet(isPresented: $showingPenanceSelector) {
+                PenanceDisciplineSheet()
+            }
             .onAppear {
                 loadDevotions()
             }
@@ -212,47 +216,72 @@ struct TodayView: View {
 
     private var penanceSection: some View {
         VStack(alignment: .leading, spacing: 2) {
-            sectionTitle("Penance", latin: "Pænitentia")
+            // Tappable header to change discipline
+            HStack {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("PENANCE")
+                        .font(.custom("Palatino-Italic", size: 12).weight(.semibold))
+                        .foregroundStyle(.sanctuaryRed)
+                        .tracking(3)
+                    Text("Pænitentia")
+                        .font(.custom("Palatino-Italic", size: 13))
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+                Button {
+                    showingPenanceSelector = true
+                } label: {
+                    HStack(spacing: 4) {
+                        Text(appSettings.penanceDiscipline.displayName)
+                            .font(.system(size: 10, weight: .semibold))
+                        Image(systemName: "chevron.down")
+                            .font(.system(size: 8, weight: .semibold))
+                    }
+                    .foregroundStyle(.goldLeaf)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.goldLeaf.opacity(0.3), lineWidth: 1)
+                    )
+                }
+            }
+            .padding(.bottom, 12)
 
-            let penanceItems = todaysDevotions.filter { $0.isAbstinence || $0.isFasting }
+            let penanceItems = appSettings.penanceDiscipline.penancesForToday()
             if penanceItems.isEmpty {
                 Text("No special penance today.")
                     .font(.custom("Palatino-Italic", size: 14))
                     .foregroundStyle(.secondary)
             } else {
-                ForEach(penanceItems) { item in
-                    NavigationLink {
-                        destinationForDevotion(item)
-                    } label: {
-                        HStack(alignment: .top, spacing: 0) {
-                            Rectangle()
-                                .fill(Color.sanctuaryRed)
-                                .frame(width: 3)
-                                .padding(.trailing, 16)
+                ForEach(Array(penanceItems.enumerated()), id: \.offset) { _, item in
+                    HStack(alignment: .top, spacing: 0) {
+                        Rectangle()
+                            .fill(Color.sanctuaryRed)
+                            .frame(width: 3)
+                            .padding(.trailing, 16)
 
-                            VStack(alignment: .leading, spacing: 4) {
-                                HStack(spacing: 6) {
-                                    Text(item.title)
-                                        .font(.custom("Palatino", size: 17).weight(.semibold))
-                                        .foregroundStyle(.ink)
+                        VStack(alignment: .leading, spacing: 4) {
+                            HStack(spacing: 6) {
+                                Text(item.title)
+                                    .font(.custom("Palatino", size: 17).weight(.semibold))
+                                    .foregroundStyle(.ink)
 
-                                    if item.isAbstinence {
-                                        penanceTag("Abstinence")
-                                    }
-                                    if item.isFasting {
-                                        penanceTag("Fast")
-                                    }
+                                if item.isAbstinence {
+                                    penanceTag("Abstinence")
                                 }
-
-                                Text(shortDescription(item))
-                                    .font(.custom("Georgia", size: 14))
-                                    .foregroundStyle(.secondary)
-                                    .lineSpacing(4)
+                                if item.isFasting {
+                                    penanceTag("Fast")
+                                }
                             }
+
+                            Text(item.description)
+                                .font(.custom("Georgia", size: 14))
+                                .foregroundStyle(.secondary)
+                                .lineSpacing(4)
                         }
-                        .padding(.vertical, 4)
                     }
-                    .buttonStyle(.plain)
+                    .padding(.vertical, 4)
                 }
             }
         }

@@ -5,7 +5,8 @@ class AppSettings: ObservableObject {
     @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
     @AppStorage("currentStreak") var currentStreak = 0
     @AppStorage("lastPracticeDate") var lastPracticeDate = ""
-@AppStorage("missalRite") var missalRite: MissalRite = .rubrics1962
+    @AppStorage("missalRite") var missalRite: MissalRite = .rubrics1962
+    @AppStorage("penanceDiscipline") var penanceDiscipline: PenanceDiscipline = .modern1962
 
     func recordPractice() {
         let today = Date().dateKey
@@ -98,4 +99,88 @@ enum TextMode: String, CaseIterable, Identifiable {
         case .phonetic: return "Phonetic"
         }
     }
+}
+
+// MARK: - Penance Discipline
+
+enum PenanceDiscipline: String, CaseIterable, Identifiable {
+    case modern1962 = "1962"
+    case traditional1917 = "1917"
+    case strict = "strict"
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .modern1962: return "1962 Discipline"
+        case .traditional1917: return "1917 Code"
+        case .strict: return "Strict Traditional"
+        }
+    }
+
+    var latinName: String {
+        switch self {
+        case .modern1962: return "Disciplina 1962"
+        case .traditional1917: return "Codex Iuris Canonici 1917"
+        case .strict: return "Disciplina Stricta"
+        }
+    }
+
+    var subtitle: String {
+        switch self {
+        case .modern1962:
+            return "Friday abstinence from meat. Fasting on Ash Wednesday and Good Friday. The minimum discipline observed by most traditional Catholics today."
+        case .traditional1917:
+            return "The full 1917 Code of Canon Law discipline: Friday abstinence year-round, Lenten fasting all weekdays, Ember Days, Vigil fasts. The discipline binding before 1966."
+        case .strict:
+            return "The most rigorous traditional practice: all 1917 Code penances plus Wednesday and Saturday abstinence, additional vigil fasts, and following the penance practices of your chosen saint."
+        }
+    }
+
+    /// Returns the penance items applicable for today under this discipline.
+    func penancesForToday(date: Date = Date()) -> [PenanceItem] {
+        let weekday = Calendar.current.component(.weekday, from: date)
+        // 1=Sun, 2=Mon, 3=Tue, 4=Wed, 5=Thu, 6=Fri, 7=Sat
+        var items: [PenanceItem] = []
+
+        // Friday abstinence — all disciplines
+        if weekday == 6 {
+            items.append(PenanceItem(
+                title: "Friday Abstinence",
+                latinTitle: "Abstinentia Feriæ Sextæ",
+                description: "Abstain from meat.",
+                isAbstinence: true, isFasting: false
+            ))
+        }
+
+        // Wednesday abstinence — strict only
+        if weekday == 4 && self == .strict {
+            items.append(PenanceItem(
+                title: "Wednesday Abstinence",
+                latinTitle: "Abstinentia Feriæ Quartæ",
+                description: "Abstain from meat.",
+                isAbstinence: true, isFasting: false
+            ))
+        }
+
+        // Saturday partial abstinence — 1917 and strict
+        if weekday == 7 && (self == .traditional1917 || self == .strict) {
+            items.append(PenanceItem(
+                title: "Saturday Abstinence",
+                latinTitle: "Abstinentia Sabbati",
+                description: "Partial abstinence — meat permitted only at the principal meal.",
+                isAbstinence: true, isFasting: false
+            ))
+        }
+
+        return items
+    }
+}
+
+struct PenanceItem {
+    let title: String
+    let latinTitle: String
+    let description: String
+    let isAbstinence: Bool
+    let isFasting: Bool
 }
