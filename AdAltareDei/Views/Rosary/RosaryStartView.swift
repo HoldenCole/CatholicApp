@@ -74,51 +74,43 @@ struct RosaryStartView: View {
         NavigationLink {
             RosaryFlowView(mysterySetType: setType)
         } label: {
-            HStack(spacing: 14) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(isSuggested ? Color.sanctuaryRed.opacity(0.1) : Color.goldLeaf.opacity(0.1))
-                        .frame(width: 44, height: 44)
-
-                    Image(systemName: "rosette")
-                        .font(.system(size: 20))
-                        .foregroundStyle(isSuggested ? .sanctuaryRed : .goldLeaf)
-                }
+            HStack(alignment: .top, spacing: 0) {
+                Rectangle()
+                    .fill(isSuggested ? Color.sanctuaryRed : Color.goldLeaf.opacity(0.2))
+                    .frame(width: 3)
+                    .padding(.trailing, 14)
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(setType.latinName)
-                        .font(.latinBody)
-                        .foregroundStyle(.ink)
-
+                    HStack {
+                        Text(setType.latinName)
+                            .font(.custom("Palatino", size: 16).weight(.medium))
+                            .foregroundStyle(.ink)
+                        if isSuggested {
+                            Text("TODAY")
+                                .font(.system(size: 9, weight: .bold))
+                                .foregroundStyle(.sanctuaryRed)
+                                .padding(.horizontal, 6)
+                                .padding(.vertical, 1)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 3)
+                                        .stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 1)
+                                )
+                        }
+                    }
                     Text(setType.englishName)
-                        .font(.englishCaption)
-                        .foregroundStyle(.secondary)
-
-                    Text("Traditional days: \(setType.traditionalDays)")
-                        .font(.uiCaption)
+                        .font(.custom("Palatino-Italic", size: 13))
                         .foregroundStyle(.goldLeaf)
+                    Text("Traditional days: \(setType.traditionalDays)")
+                        .font(.custom("Georgia", size: 12))
+                        .foregroundStyle(.secondary)
                 }
-
                 Spacer()
-
-                if isSuggested {
-                    Text("Today")
-                        .font(.uiCaption)
-                        .foregroundStyle(.sanctuaryRed)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 3)
-                        .background(Color.sanctuaryRed.opacity(0.1))
-                        .clipShape(Capsule())
-                }
-
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 12, weight: .semibold))
-                    .foregroundStyle(.tertiary)
             }
-            .padding()
-            .background(Color.warmWhite)
-            .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
-            .shadow(color: .black.opacity(0.04), radius: 8, y: 2)
+            .padding(.vertical, 14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .overlay(alignment: .bottom) {
+                Rectangle().fill(Color.goldLeaf.opacity(0.06)).frame(height: 1)
+            }
         }
         .buttonStyle(.plain)
     }

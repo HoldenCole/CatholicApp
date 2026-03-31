@@ -1,8 +1,6 @@
 import SwiftUI
 import SwiftData
 
-/// Practice view — full coaching loop (v1.4 will add recording).
-/// Currently supports comfort rating and reference audio playback.
 struct PracticeView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var appSettings: AppSettings
@@ -15,64 +13,84 @@ struct PracticeView: View {
 
     var body: some View {
         ScrollView {
-            VStack(spacing: AppConstants.sectionSpacing) {
-                // Prayer header
-                VStack(spacing: 6) {
+            VStack(alignment: .leading, spacing: 0) {
+                // Dark header
+                VStack(alignment: .leading, spacing: 4) {
                     Text(viewModel.prayer.latinName)
-                        .font(.latinTitle)
-                        .foregroundStyle(.ink)
-
-                    Text(viewModel.prayer.englishName)
-                        .font(.englishCaption)
-                        .foregroundStyle(.secondary)
-                }
-
-                // Reference audio
-                if !viewModel.prayer.audioFileName.isEmpty {
-                    AudioPlayerView(audioFileName: viewModel.prayer.audioFileName)
-                }
-
-                // Recording placeholder (v1.4)
-                recordingSection
-
-                // Comfort rating
-                ComfortRatingView(selectedLevel: $viewModel.comfortRating)
-
-                // Save button
-                Button {
-                    viewModel.saveSession(context: modelContext)
-                    appSettings.recordPractice()
-                    dismiss()
-                } label: {
-                    Text("Save Practice")
-                        .font(.uiLabelLarge)
+                        .font(.custom("Palatino", size: 24).weight(.bold))
                         .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(Color.sanctuaryRed)
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                    Text(viewModel.prayer.englishName)
+                        .font(.custom("Palatino-Italic", size: 14))
+                        .foregroundStyle(.goldLeaf)
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 24)
+                .padding(.vertical, 20)
+                .background(
+                    LinearGradient(
+                        colors: [Color(hex: "1C1410"), Color(hex: "2a2118")],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
+
+                VStack(alignment: .leading, spacing: 0) {
+                    // Audio placeholder
+                    if !viewModel.prayer.audioFileName.isEmpty {
+                        AudioPlayerView(audioFileName: viewModel.prayer.audioFileName)
+                            .padding(.vertical, 16)
+                    }
+
+                    ornamentalDivider
+
+                    // Comfort rating
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("HOW COMFORTABLE ARE YOU?")
+                            .font(.custom("Palatino-Italic", size: 12).weight(.semibold))
+                            .foregroundStyle(.sanctuaryRed)
+                            .tracking(3)
+                    }
+                    .padding(.bottom, 12)
+
+                    ComfortRatingView(selectedLevel: $viewModel.comfortRating)
+
+                    ornamentalDivider
+
+                    // Save button
+                    Button {
+                        viewModel.saveSession(context: modelContext)
+                        appSettings.recordPractice()
+                        dismiss()
+                    } label: {
+                        Text("Save Practice")
+                            .font(.custom("Palatino", size: 16).weight(.semibold))
+                            .foregroundStyle(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .background(Color.sanctuaryRed)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    }
+
+                    Text("✿ · ✿")
+                        .frame(maxWidth: .infinity)
+                        .font(.system(size: 12))
+                        .foregroundStyle(.goldLeaf.opacity(0.4))
+                        .tracking(8)
+                        .padding(.vertical, 28)
+                }
+                .padding(.horizontal, 24)
             }
-            .padding()
         }
         .background(Color.parchment)
-        .navigationTitle("Practice")
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    private var recordingSection: some View {
-        VStack(spacing: 12) {
-            Image(systemName: "mic.circle")
-                .font(.system(size: 56))
-                .foregroundStyle(.sanctuaryRed.opacity(0.3))
-
-            Text("Recording will be available in a future update")
-                .font(.uiCaption)
-                .foregroundStyle(.secondary)
+    private var ornamentalDivider: some View {
+        HStack {
+            Spacer()
+            Rectangle().frame(height: 1).foregroundStyle(.clear)
+                .background(LinearGradient(colors: [.clear, .goldLeaf.opacity(0.25), .clear], startPoint: .leading, endPoint: .trailing))
+            Spacer()
         }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 24)
-        .background(Color.warmWhite)
-        .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
+        .padding(.vertical, 16)
     }
 }
