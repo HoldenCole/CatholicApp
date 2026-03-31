@@ -107,7 +107,7 @@ struct SaintSelectorView: View {
     }
 
     private func loadSaints() {
-        let files = ["saint_padre_pio", "saint_therese", "saint_thomas_aquinas"]
+        let files = ["saint_padre_pio", "saint_therese", "saint_thomas_aquinas", "saint_benedict", "saint_teresa_avila", "saint_escriva", "saint_francis_de_sales"]
         saints = files.compactMap { file in
             guard let url = Bundle.main.url(forResource: file, withExtension: "json"),
                   let data = try? Data(contentsOf: url),
