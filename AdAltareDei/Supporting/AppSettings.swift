@@ -7,6 +7,7 @@ class AppSettings: ObservableObject {
     @AppStorage("lastPracticeDate") var lastPracticeDate = ""
     @AppStorage("missalRite") var missalRite: MissalRite = .rubrics1962
     @AppStorage("penanceDiscipline") var penanceDiscipline: PenanceDiscipline = .modern1962
+    @AppStorage("darkModeEnabled") var darkModeEnabled = false
 
     // Course completion tracking
     var completedCourses: Set<String> {

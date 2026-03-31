@@ -9,6 +9,7 @@ struct AdAltareDeiApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(appSettings)
+                .preferredColorScheme(appSettings.darkModeEnabled ? .dark : .light)
         }
         .modelContainer(for: [Prayer.self, Mystery.self, PracticeSession.self])
     }

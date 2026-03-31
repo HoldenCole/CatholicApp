@@ -92,17 +92,9 @@ struct SettingsSheet: View {
                                 .foregroundStyle(.secondary)
                         }
                         Spacer()
-                        // Toggle placeholder — SwiftUI Toggle would go here
-                        RoundedRectangle(cornerRadius: 13)
-                            .fill(Color.goldLeaf.opacity(0.2))
-                            .frame(width: 44, height: 26)
-                            .overlay(alignment: .leading) {
-                                Circle()
-                                    .fill(.white)
-                                    .frame(width: 22, height: 22)
-                                    .shadow(color: .black.opacity(0.15), radius: 2, y: 1)
-                                    .padding(.leading, 2)
-                            }
+                        Toggle("", isOn: $appSettings.darkModeEnabled)
+                            .labelsHidden()
+                            .tint(.sanctuaryRed)
                     }
                     .padding(.vertical, 12)
 
