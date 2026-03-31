@@ -1,0 +1,101 @@
+{
+  "slug": "teresa_avila",
+  "name": "St. Teresa of Ávila",
+  "latinName": "Sancta Teresia Abulensis",
+  "title": "Doctor of the Church, Mystic, Reformer",
+  "feastDay": "October 15",
+  "era": "1515–1582",
+  "charism": "Deep interior prayer progressing through stages toward divine union, combined with practical common sense, holy friendship, and tireless reform.",
+  "biography": "St. Teresa of Ávila was a Carmelite nun who reformed her order, founded seventeen convents, and wrote some of the greatest mystical treatises in Church history. Her Interior Castle maps the soul's journey through seven 'mansions' toward union with God. Her Way of Perfection is a practical guide to prayer for her sisters. Despite profound mystical experiences — including the transverberation of her heart — she was earthy, humorous, and deeply practical. She is one of only four women declared Doctor of the Church.",
+  "dailyPractices": [
+    {
+      "slug": "ta_mental_prayer",
+      "title": "Mental Prayer (30 minutes minimum)",
+      "description": "Teresa insisted that mental prayer is essential and non-negotiable. She said: 'He who does not practice mental prayer needs no devil to carry him to hell; he goes there of his own accord.' Sit in silence with God. Speak to Him as a friend. Do not worry about method — just be present.",
+      "timeOfDay": "morning",
+      "isRequired": true
+    },
+    {
+      "slug": "ta_mass",
+      "title": "Attend Holy Mass",
+      "description": "Teresa had profound mystical experiences during Mass. She taught that the Eucharist is where Christ is most intimately present to us. Attend with deep recollection and remain after for thanksgiving.",
+      "timeOfDay": "morning",
+      "isRequired": true
+    },
+    {
+      "slug": "ta_recollection",
+      "title": "Practice of Recollection",
+      "description": "Throughout the day, withdraw interiorly to the 'castle' of your soul where God dwells. Teresa called this 'the prayer of recollection.' Pause several times today, close your eyes for a moment, and acknowledge God's presence within you. You do not need to go anywhere — He is already there.",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "ta_divine_office",
+      "title": "Pray the Divine Office",
+      "description": "As a Carmelite, Teresa chanted the full Office. Pray at least Lauds and Compline. She said the Psalms are an inexhaustible source of prayer.",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "ta_spiritual_reading",
+      "title": "Spiritual Reading",
+      "description": "Teresa was transformed by reading the Confessions of St. Augustine. Read from Scripture, the lives of the saints, or a spiritual classic today. She said: 'I was more helped by books than by anything else.'",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "ta_friendship",
+      "title": "Holy Friendship",
+      "description": "Teresa valued true friendships deeply. She said: 'It is a great advantage for us to be able to consult someone who knows us, so that we may learn to know ourselves.' Invest in a friendship today — reach out, encourage, be honest. Avoid gossip and superficiality.",
+      "timeOfDay": "anytime",
+      "isRequired": false
+    },
+    {
+      "slug": "ta_determination",
+      "title": "Determined Determination",
+      "description": "Teresa's key teaching: approach prayer with 'determined determination' — a firm resolve never to give up, no matter how many times you fail. Renew your resolve today. If you missed morning prayer, pray now. Never say 'I'll start tomorrow.'",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "ta_humility_check",
+      "title": "Evening Examination on Humility",
+      "description": "Teresa considered humility the foundation of all prayer. Before sleep, ask: Was I honest about my faults today? Did I seek praise? Did I accept correction? Did I compare myself to others? Humility is truth — seeing yourself as God sees you.",
+      "timeOfDay": "evening",
+      "isRequired": true
+    }
+  ],
+  "penances": [
+    {
+      "slug": "ta_detachment",
+      "title": "Practice Detachment",
+      "description": "Teresa taught that attachment to anything — even good things — hinders prayer. Let go of one thing today: an opinion, a comfort, a plan. Hold everything loosely. 'Let nothing disturb you, let nothing frighten you. All things pass away. God never changes.'",
+      "timeOfDay": null,
+      "isRequired": true
+    },
+    {
+      "slug": "ta_persevere_dryness",
+      "title": "Persevere in Dry Prayer",
+      "description": "Teresa compared prayer in dryness to watering a garden by carrying buckets from a well — exhausting but fruitful. When prayer feels empty, do not stop. Sit with God anyway. The effort itself is the prayer.",
+      "timeOfDay": null,
+      "isRequired": true
+    },
+    {
+      "slug": "ta_no_complaints",
+      "title": "Do Not Complain",
+      "description": "Teresa told her sisters to bear inconveniences without complaining. Practice this today: when something goes wrong, accept it silently and offer it to God.",
+      "timeOfDay": null,
+      "isRequired": false
+    }
+  ],
+  "quotes": [
+    {"quote": "Let nothing disturb you, let nothing frighten you. All things pass away. God never changes. Patience obtains all things. Whoever has God lacks nothing. God alone suffices.", "source": "Bookmark found in her breviary"},
+    {"quote": "Mental prayer is nothing else than an intimate sharing between friends; it means taking time frequently to be alone with Him who we know loves us.", "source": "The Life of Teresa of Jesus"},
+    {"quote": "Christ has no body now on earth but yours, no hands but yours, no feet but yours. Yours are the eyes through which Christ's compassion looks out on the world.", "source": "Attributed"},
+    {"quote": "The important thing is not to think much but to love much; and so do that which best stirs you to love.", "source": "Interior Castle"},
+    {"quote": "God has been very good to me, for I never linger over anything I do not understand.", "source": null},
+    {"quote": "We can only learn to know ourselves and do what we can — namely, surrender our will and fulfill God's will in us.", "source": "Interior Castle"},
+    {"quote": "From silly devotions and sour-faced saints, good Lord, deliver us!", "source": "Attributed"}
+  ],
+  "relatedPrayers": ["ave_maria", "pater_noster", "act_of_contrition"]
+}
