@@ -197,9 +197,7 @@ struct RosaryFlowView: View {
                     }
                 }
             }
-            .padding()
-            .background(Color.warmWhite)
-            .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
+            .padding(.vertical, 8)
         }
     }
 
@@ -240,9 +238,7 @@ struct RosaryFlowView: View {
                         .multilineTextAlignment(.center)
                         .lineSpacing(4)
                 }
-                .padding()
-                .background(Color.warmWhite)
-                .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
+                .padding(.vertical, 8)
             }
         }
     }
@@ -257,9 +253,10 @@ struct RosaryFlowView: View {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundStyle(viewModel.currentStepIndex > 0 ? .ink : .clear)
-                    .frame(width: 56, height: 56)
-                    .background(Color.warmWhite)
-                    .clipShape(Circle())
+                    .frame(width: 50, height: 50)
+                    .overlay(
+                        Circle().stroke(Color.goldLeaf.opacity(0.2), lineWidth: 1)
+                    )
             }
             .disabled(viewModel.currentStepIndex == 0)
 

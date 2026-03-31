@@ -75,10 +75,7 @@ struct MissalTextView: View {
                 }
             }
         }
-        .padding()
-        .background(Color.warmWhite)
-        .clipShape(RoundedRectangle(cornerRadius: AppConstants.cardCornerRadius))
-        .shadow(color: .black.opacity(0.04), radius: 8, y: 2)
+        .padding(.vertical, 4)
     }
 
     /// Splits prayer text into sentences for line-by-line alignment.

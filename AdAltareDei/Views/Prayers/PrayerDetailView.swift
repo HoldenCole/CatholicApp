@@ -171,9 +171,7 @@ struct PrayerDetailView: View {
                 .font(.latinCaption)
                 .foregroundStyle(.goldLeaf)
         }
-        .padding()
-        .background(Color.warmWhite)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(.vertical, 12)
     }
 
     private func comfortColor(_ level: ComfortLevel) -> Color {
