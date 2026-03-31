@@ -33,7 +33,7 @@ struct SaintSelectorView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(saints) { saint in
                         NavigationLink {
-                            SaintDailyView(saint: saint)
+                            SaintProfileView(saint: saint)
                         } label: {
                             HStack(alignment: .top, spacing: 0) {
                                 Rectangle()
