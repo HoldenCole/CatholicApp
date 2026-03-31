@@ -6,6 +6,21 @@ struct SaintDailyView: View {
     @State private var completedPractices: Set<String> = []
     @State private var dailyQuote: SaintQuote?
 
+    /// UserDefaults key for today's completed practices for this saint
+    private var storageKey: String {
+        "saint_\(saint.slug)_\(Date().dateKey)"
+    }
+
+    private func loadCompleted() {
+        if let saved = UserDefaults.standard.array(forKey: storageKey) as? [String] {
+            completedPractices = Set(saved)
+        }
+    }
+
+    private func saveCompleted() {
+        UserDefaults.standard.set(Array(completedPractices), forKey: storageKey)
+    }
+
     private var progress: Double {
         guard !saint.dailyPractices.isEmpty else { return 0 }
         return Double(completedPractices.count) / Double(saint.dailyPractices.count)
@@ -117,10 +132,10 @@ struct SaintDailyView: View {
         .background(Color.parchment)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            // Pick a random quote for today (seeded by date for consistency)
             let dayOfYear = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 0
             let index = dayOfYear % saint.quotes.count
             dailyQuote = saint.quotes[index]
+            loadCompleted()
         }
     }
 
@@ -185,6 +200,7 @@ struct SaintDailyView: View {
                 } else {
                     completedPractices.insert(practice.slug)
                 }
+                saveCompleted()
             }
         } label: {
             HStack(alignment: .top, spacing: 14) {

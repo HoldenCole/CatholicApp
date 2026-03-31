@@ -58,7 +58,7 @@ struct LearnView: View {
                                 .font(.custom("Palatino-Italic", size: 11))
                                 .foregroundStyle(.sanctuaryRed)
                             Spacer()
-                            Text("0 of \(totalLessons) complete")
+                            Text("\(appSettings.completedCourses.count) of \(totalLessons) complete")
                                 .font(.custom("Palatino-Italic", size: 11))
                                 .foregroundStyle(.secondary)
                         }
@@ -70,7 +70,9 @@ struct LearnView: View {
                                 RoundedRectangle(cornerRadius: 2)
                                     .fill(Color.goldLeaf.opacity(0.12))
                                     .frame(height: 3)
-                                // Progress would be dynamic
+                                RoundedRectangle(cornerRadius: 2)
+                                    .fill(LinearGradient(colors: [.sanctuaryRed, .goldLeaf], startPoint: .leading, endPoint: .trailing))
+                                    .frame(width: totalLessons > 0 ? geo.size.width * CGFloat(appSettings.completedCourses.count) / CGFloat(totalLessons) : 0, height: 3)
                             }
                         }
                         .frame(height: 3)
@@ -117,12 +119,18 @@ struct LearnView: View {
                                         Spacer()
 
                                         VStack(spacing: 0) {
-                                            Text("\(lesson.estimatedMinutes)")
-                                                .font(.custom("Palatino", size: 16))
-                                                .foregroundStyle(.sanctuaryRed)
-                                            Text("min")
-                                                .font(.system(size: 9))
-                                                .foregroundStyle(.secondary)
+                                            if appSettings.isCourseCompleted(lesson.slug) {
+                                                Text("✓")
+                                                    .font(.system(size: 14, weight: .bold))
+                                                    .foregroundStyle(.comfortMastered)
+                                            } else {
+                                                Text("\(lesson.estimatedMinutes)")
+                                                    .font(.custom("Palatino", size: 16))
+                                                    .foregroundStyle(.sanctuaryRed)
+                                                Text("min")
+                                                    .font(.system(size: 9))
+                                                    .foregroundStyle(.secondary)
+                                            }
                                         }
                                         .padding(.top, 4)
                                     }

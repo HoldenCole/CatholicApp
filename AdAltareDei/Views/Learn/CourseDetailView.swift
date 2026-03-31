@@ -4,6 +4,7 @@ import SwiftUI
 struct CourseDetailView: View {
     let courseSlug: String
     @State private var courseData: CourseData?
+    @EnvironmentObject private var appSettings: AppSettings
 
     var body: some View {
         ScrollView {
@@ -36,6 +37,31 @@ struct CourseDetailView: View {
                     VStack(alignment: .leading, spacing: 0) {
                         ForEach(Array(course.sections.enumerated()), id: \.offset) { _, section in
                             courseSectionView(section)
+                        }
+
+                        // Mark complete button
+                        if !appSettings.isCourseCompleted(courseSlug) {
+                            Button {
+                                appSettings.markCourseCompleted(courseSlug)
+                            } label: {
+                                Text("Mark as Completed")
+                                    .font(.custom("Palatino", size: 16).weight(.semibold))
+                                    .foregroundStyle(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 14)
+                                    .background(Color.sanctuaryRed)
+                                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                            }
+                        } else {
+                            HStack(spacing: 8) {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundStyle(.comfortMastered)
+                                Text("Completed")
+                                    .font(.custom("Palatino-Italic", size: 15))
+                                    .foregroundStyle(.comfortMastered)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
                         }
 
                         Text("✿ · ✿")

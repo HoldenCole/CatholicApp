@@ -8,6 +8,27 @@ class AppSettings: ObservableObject {
     @AppStorage("missalRite") var missalRite: MissalRite = .rubrics1962
     @AppStorage("penanceDiscipline") var penanceDiscipline: PenanceDiscipline = .modern1962
 
+    // Course completion tracking
+    var completedCourses: Set<String> {
+        get {
+            Set(UserDefaults.standard.stringArray(forKey: "completedCourses") ?? [])
+        }
+        set {
+            UserDefaults.standard.set(Array(newValue), forKey: "completedCourses")
+            objectWillChange.send()
+        }
+    }
+
+    func markCourseCompleted(_ slug: String) {
+        var courses = completedCourses
+        courses.insert(slug)
+        completedCourses = courses
+    }
+
+    func isCourseCompleted(_ slug: String) -> Bool {
+        completedCourses.contains(slug)
+    }
+
     func recordPractice() {
         let today = Date().dateKey
         if lastPracticeDate == today { return }
