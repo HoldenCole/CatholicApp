@@ -1,0 +1,100 @@
+{
+  "slug": "benedict",
+  "name": "St. Benedict of Nursia",
+  "latinName": "Sanctus Benedictus Nursinus",
+  "title": "Father of Western Monasticism",
+  "feastDay": "July 11",
+  "era": "480–547",
+  "charism": "Ora et Labora — a balanced life of prayer, work, and holy reading, ordered by a stable daily rhythm that sanctifies every hour.",
+  "biography": "St. Benedict is the founder of Western monasticism and author of the Rule of St. Benedict, which has governed monastic life for 1,500 years. His Rule is remarkable for its balance, moderation, and wisdom. He established the monastery of Monte Cassino in Italy. His motto 'Ora et Labora' (Pray and Work) captures the essence of his spirituality: every moment of the day, whether in prayer or labor, is offered to God. His Rule has been adapted by laypeople for centuries through Benedictine Oblates. He is the patron of Europe.",
+  "dailyPractices": [
+    {
+      "slug": "ben_lauds",
+      "title": "Morning Prayer (Lauds)",
+      "description": "Begin the day with prayer at dawn. Benedict structured the entire day around the Divine Office. Pray Lauds or, at minimum, offer a morning prayer consecrating the day to God. The first words of the day should be directed to Him.",
+      "timeOfDay": "morning",
+      "isRequired": true
+    },
+    {
+      "slug": "ben_lectio",
+      "title": "Lectio Divina (30 minutes)",
+      "description": "Sacred reading of Scripture — not study, but slow, prayerful reading. Benedict assigned several hours daily to lectio. Read a short passage (a few verses), meditate on it, pray from it, rest in God's presence. The four movements: Lectio (read), Meditatio (reflect), Oratio (pray), Contemplatio (rest).",
+      "timeOfDay": "morning",
+      "isRequired": true
+    },
+    {
+      "slug": "ben_mass",
+      "title": "Attend Holy Mass",
+      "description": "The Eucharist is the source and summit of the monastic day. Attend Mass daily if possible, or at minimum on Sundays and Holy Days. Approach it with the reverence Benedict demanded — 'that our mind may be in harmony with our voice.'",
+      "timeOfDay": "morning",
+      "isRequired": true
+    },
+    {
+      "slug": "ben_work",
+      "title": "Sanctify Your Work",
+      "description": "Benedict taught that manual labor is not opposed to prayer but is itself a form of prayer when done for God's glory. Whatever your work today — office, home, school — do it attentively, humbly, and as an offering. 'Idleness is the enemy of the soul.'",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "ben_midday",
+      "title": "Midday Prayer",
+      "description": "Pause at midday to pray. Even a brief prayer interrupts the rhythm of work and reorients your heart to God. Pray the Angelus, a decade of the Rosary, or simply pause in silence for two minutes.",
+      "timeOfDay": "midday",
+      "isRequired": true
+    },
+    {
+      "slug": "ben_silence",
+      "title": "Practice Silence",
+      "description": "Benedict prized silence as essential to the spiritual life. After Compline (night prayer), monks observe the 'Great Silence' until morning. Practice periods of intentional silence today — turn off music, avoid unnecessary conversation, let your mind rest in God.",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "ben_obedience",
+      "title": "Act of Obedience",
+      "description": "Benedict placed obedience first among the monastic virtues. For laypeople: obey your legitimate superiors cheerfully, fulfill your duties before your preferences, submit to the obligations of your state in life without complaint.",
+      "timeOfDay": "anytime",
+      "isRequired": true
+    },
+    {
+      "slug": "ben_hospitality",
+      "title": "Practice Hospitality",
+      "description": "Benedict's Rule commands: 'Let all guests who arrive be received as Christ.' Show kindness to everyone you encounter today. Receive interruptions gracefully. Be generous with your time and attention.",
+      "timeOfDay": "anytime",
+      "isRequired": false
+    },
+    {
+      "slug": "ben_compline",
+      "title": "Night Prayer (Compline)",
+      "description": "End the day with Compline — the beautiful night prayer of the Church. Examine your conscience, commend your soul to God, and enter the Great Silence. 'Before all things and above all things, care must be taken of the sick' — including the sickness of a restless soul that needs rest in God.",
+      "timeOfDay": "evening",
+      "isRequired": true
+    }
+  ],
+  "penances": [
+    {
+      "slug": "ben_moderation",
+      "title": "Moderation in All Things",
+      "description": "Benedict's Rule is famous for its moderation — not extreme fasting but disciplined eating. Eat simply today. Do not overindulge. Leave the table slightly hungry. 'Nothing is so contrary to a Christian as overindulgence.'",
+      "timeOfDay": null,
+      "isRequired": true
+    },
+    {
+      "slug": "ben_stability",
+      "title": "Stability",
+      "description": "Monks vow stability — staying in one place, one community, one commitment. Resist the urge to distract yourself today. Stay present. Finish what you start. Do not flee from difficulty. Bloom where you are planted.",
+      "timeOfDay": null,
+      "isRequired": true
+    }
+  ],
+  "quotes": [
+    {"quote": "Idleness is the enemy of the soul. Therefore, the brothers should be occupied at certain times in manual labor, and again at fixed hours in sacred reading.", "source": "Rule of St. Benedict, Ch. 48"},
+    {"quote": "Listen carefully, my child, to your master's precepts, and incline the ear of your heart.", "source": "Rule of St. Benedict, Prologue"},
+    {"quote": "Let all guests who arrive be received as Christ, for He will say: 'I was a stranger and you took me in.'", "source": "Rule of St. Benedict, Ch. 53"},
+    {"quote": "We must prepare our hearts and bodies for the battle of holy obedience to His instructions.", "source": "Rule of St. Benedict, Prologue"},
+    {"quote": "Prefer nothing whatever to Christ.", "source": "Rule of St. Benedict, Ch. 72"},
+    {"quote": "Let them prefer nothing whatever to Christ, and may He bring us all together to everlasting life.", "source": "Rule of St. Benedict, Ch. 72"}
+  ],
+  "relatedPrayers": ["pater_noster", "gloria_patri", "eternal_rest"]
+}
