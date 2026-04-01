@@ -1,5 +1,4 @@
 import SwiftUI
-import SwiftData
 
 struct SettingsSheet: View {
     @EnvironmentObject private var appSettings: AppSettings

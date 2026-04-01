@@ -80,33 +80,13 @@
     "estimatedMinutes": 30
   },
   {
-    "slug": "mass_server_responses",
-    "title": "Altar Server Responses",
-    "latinTitle": "Responsa Ministranti",
-    "description": "Learn every response an altar server gives during the Traditional Latin Mass. Perfect for those preparing to serve at the altar.",
-    "category": "mass_responses",
-    "sortOrder": 9,
-    "isPremium": true,
-    "estimatedMinutes": 35
-  },
-  {
-    "slug": "congregation_responses",
-    "title": "Congregation Responses",
-    "latinTitle": "Responsa Fidelium",
-    "description": "All the responses the faithful give during a Missa Cantata or dialogue Mass. 'Et cum spiritu tuo', 'Amen', 'Deo gratias', and more.",
-    "category": "mass_responses",
-    "sortOrder": 10,
-    "isPremium": false,
-    "estimatedMinutes": 10
-  },
-  {
     "slug": "reading_psalms",
     "title": "Reading Latin Psalms",
     "latinTitle": "Lectio Psalmorum",
-    "description": "Build fluency by reading selected Psalms in Latin. AI coaching helps with pronunciation and comprehension of the Vulgate text.",
+    "description": "Build fluency by reading selected Psalms in Latin with side-by-side translation and pronunciation guides.",
     "category": "reading",
-    "sortOrder": 11,
-    "isPremium": true,
+    "sortOrder": 9,
+    "isPremium": false,
     "estimatedMinutes": 30
   },
   {
@@ -115,8 +95,8 @@
     "latinTitle": "Lectio Vulgatæ",
     "description": "Practice reading passages from the Latin Vulgate Bible. Start with familiar Gospel passages and build confidence reading sacred Latin text.",
     "category": "reading",
-    "sortOrder": 12,
-    "isPremium": true,
+    "sortOrder": 10,
+    "isPremium": false,
     "estimatedMinutes": 30
   }
 ]
