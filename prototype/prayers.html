@@ -2,148 +2,90 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Prayers — Ad Altare Dei</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ad Altare Dei — Prayers</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{font-family:'Georgia',serif;background:#F2EBE0;color:#1C1410;max-width:430px;margin:0 auto;min-height:100vh;padding-bottom:90px}
-.top-bar{position:sticky;top:0;z-index:10;background:#F2EBE0;padding:12px 24px 8px}
-.top-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700}
-.search{background:rgba(28,20,16,0.04);border:1px solid rgba(184,150,12,0.15);border-radius:6px;padding:10px 14px;margin:8px 0 0;font-size:14px;width:100%;font-family:'Georgia',serif;color:#998877}
-.content{padding:0 24px}
-.orn{display:flex;align-items:center;gap:12px;margin:18px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.3),transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Georgia',serif;background:#F2EBE0;max-width:430px;margin:0 auto;min-height:100vh;padding:54px 24px 100px}
+h1{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#1C1410;margin-bottom:16px}
+.search{background:rgba(28,20,16,0.04);border:1px solid #B8960C15;border-radius:6px;padding:10px 14px;display:flex;align-items:center;gap:8px;margin-bottom:24px;color:#aaa;font-size:14px}
+.orn{display:flex;align-items:center;gap:12px;margin:18px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
 .sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
 .sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
-.prayer-row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.06);cursor:pointer;text-decoration:none;color:inherit}
-.accent{width:3px;height:36px;border-radius:2px;flex-shrink:0}
-.p-name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
-.p-eng{font-family:'Georgia',serif;font-size:13px;color:#998877}
-.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:80px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px;z-index:20}
-.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500;cursor:pointer;text-decoration:none;font-family:'Georgia',serif}
-.tab.active{color:#8B1A1A}
-.tab-icon{font-size:18px}
-.end-orn{text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3}
-/* Detail overlay */
+.row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.06);cursor:pointer}
+.bar{width:3px;height:36px;border-radius:2px;flex-shrink:0}
+.bar.r{background:#8B1A1A}.bar.m{background:#B8960C}.bar.d{background:#2E7D32}
+.name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
+.eng{font-family:'Georgia',serif;font-size:13px;color:#998877}
+.end{text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3}
 .overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100%;background:#F2EBE0;z-index:30;overflow-y:auto}
 .overlay.show{display:block}
-.dark-hdr{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px;position:relative}
-.back-btn{position:absolute;top:16px;left:16px;color:#B8960C;font-size:24px;cursor:pointer;text-decoration:none;z-index:5}
-.hdr-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC}
-.hdr-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
-.marian{position:absolute;top:50px;right:24px;font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:#B8960C;opacity:0.15}
-.toggle-bar{display:flex;border:1px solid rgba(184,150,12,0.3);border-radius:4px;overflow:hidden;margin:16px 24px}
-.toggle-btn{flex:1;text-align:center;font-size:12px;font-weight:500;padding:7px 0;cursor:pointer;font-family:'Georgia',serif}
-.toggle-btn.active{background:#8B1A1A;color:white}
-.prayer-text{padding:16px 24px;font-family:'Playfair Display',serif;font-size:16px;line-height:1.8}
-.missal-row{display:flex;gap:0;padding:6px 0}
-.m-left{flex:1;padding-right:10px;border-right:1px solid rgba(184,150,12,0.2);font-family:'Playfair Display',serif;font-size:15px;color:#1C1410;line-height:1.7}
-.m-right{flex:1;padding-left:10px;font-family:'Georgia',serif;font-size:15px;color:#998877;line-height:1.7}
-.phonetic{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:2}
-.stressed{color:#8B1A1A;font-weight:600}
-.dot{color:#B8960C}
+.dh{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px;position:relative}
+.dh .back{position:absolute;top:54px;left:16px;color:#B8960C;font-size:24px;cursor:pointer}
+.dh h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC}
+.dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
+.dh .cat{display:inline-block;font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:3px 10px;border-radius:3px;margin-top:8px}
+.dh .mr{position:absolute;top:50px;right:24px;font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:#B8960C;opacity:0.15}
+.db{padding:16px 24px 40px}
+.gf{height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent);margin:16px 0}
+.mc{display:flex;gap:0;padding:5px 0}
+.ml{flex:1;padding-right:10px;border-right:1px solid #B8960C22}
+.mri{flex:1;padding-left:10px}
+.lt{font-family:'Playfair Display',serif;font-size:15px;color:#1C1410;line-height:1.7}
+.et{font-family:'EB Garamond',serif;font-size:15px;color:#998877;line-height:1.7}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:8px;font-size:15px;font-weight:600;margin-top:24px;background:#8B1A1A;color:white;cursor:pointer;font-family:'Playfair Display',serif}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px;z-index:20}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500;text-decoration:none}
+.tab.active{color:#8B1A1A}
 </style>
 </head>
 <body>
+<h1>Prayers</h1>
+<div class="search">🔍 Search prayers...</div>
+<div class="sec-t">Rosarium</div><div class="sec-s">Rosary</div>
+<div class="row" onclick="show('ave')"><div class="bar r"></div><div><div class="name">Signum Crucis</div><div class="eng">Sign of the Cross</div></div></div>
+<div class="row" onclick="show('ave')"><div class="bar r"></div><div><div class="name">Pater Noster</div><div class="eng">Our Father</div></div></div>
+<div class="row" onclick="show('ave')"><div class="bar r"></div><div><div class="name">Ave Maria</div><div class="eng">Hail Mary</div></div></div>
+<div class="row"><div class="bar r"></div><div><div class="name">Gloria Patri</div><div class="eng">Glory Be</div></div></div>
+<div class="row"><div class="bar r"></div><div><div class="name">Salve Regina</div><div class="eng">Hail Holy Queen</div></div></div>
+<div class="orn"><span>✟</span></div>
+<div class="sec-t">Missa</div><div class="sec-s">Mass</div>
+<div class="row"><div class="bar m"></div><div><div class="name">Confiteor</div><div class="eng">I Confess</div></div></div>
+<div class="row"><div class="bar m"></div><div><div class="name">Gloria in Excelsis Deo</div><div class="eng">Glory to God in the Highest</div></div></div>
+<div class="row"><div class="bar m"></div><div><div class="name">Sanctus</div><div class="eng">Holy, Holy, Holy</div></div></div>
+<div class="row"><div class="bar m"></div><div><div class="name">Agnus Dei</div><div class="eng">Lamb of God</div></div></div>
+<div class="row"><div class="bar m"></div><div><div class="name">Kyrie Eleison</div><div class="eng">Lord, Have Mercy</div></div></div>
+<div class="orn"><span>·</span></div>
+<div class="sec-t">Devotiones</div><div class="sec-s">Devotional</div>
+<div class="row"><div class="bar d"></div><div><div class="name">Memorare</div><div class="eng">The Memorare</div></div></div>
+<div class="row"><div class="bar d"></div><div><div class="name">Actus Contritionis</div><div class="eng">Act of Contrition</div></div></div>
+<div class="row"><div class="bar d"></div><div><div class="name">Anima Christi</div><div class="eng">Soul of Christ</div></div></div>
+<div class="row"><div class="bar d"></div><div><div class="name">Tantum Ergo</div><div class="eng">Therefore So Great a Sacrament</div></div></div>
+<div class="row"><div class="bar d"></div><div><div class="name">Oratio ad S. Michaëlem</div><div class="eng">Prayer to St. Michael</div></div></div>
+<div class="end">✿ · ✿</div>
 
-<div class="top-bar">
-<div class="top-title">Prayers</div>
-<input class="search" placeholder="Search prayers..." oninput="filterPrayers(this.value)">
-</div>
-
-<div class="content" id="prayerList"></div>
-
-<!-- Prayer Detail Overlay -->
-<div class="overlay" id="detail">
-<div class="dark-hdr">
-<a class="back-btn" onclick="closeDetail()">‹</a>
-<div class="hdr-title" id="detailTitle"></div>
-<div class="hdr-sub" id="detailSub"></div>
-<div class="marian">M<div style="font-size:10px;margin-top:-6px">✦</div></div>
-</div>
-<div class="toggle-bar">
-<div class="toggle-btn active" onclick="setMode('missal')">Missal</div>
-<div class="toggle-btn" onclick="setMode('english')">English</div>
-<div class="toggle-btn" onclick="setMode('latin')">Latin</div>
-<div class="toggle-btn" onclick="setMode('phonetic')">Phonetic</div>
-</div>
-<div id="detailContent" class="prayer-text"></div>
-<div style="text-align:center;padding:16px 24px"><div style="background:#8B1A1A;color:white;padding:14px;border-radius:8px;font-family:'Playfair Display',serif;font-size:15px;font-weight:600">☩ Practice This Prayer</div></div>
-</div>
-
-<div class="tab-bar">
-<a class="tab" href="index.html"><div class="tab-icon">☀</div>Today</a>
-<a class="tab" href="missal.html"><div class="tab-icon">☰</div>Missal</a>
-<a class="tab active" href="prayers.html"><div class="tab-icon">📖</div>Prayers</a>
-<a class="tab" href="learn.html"><div class="tab-icon">🎓</div>Learn</a>
-<a class="tab" href="reference.html"><div class="tab-icon">📕</div>Reference</a>
-</div>
+<!-- Ave Maria Detail -->
+<div class="overlay" id="o-ave">
+<div class="dh"><a class="back" onclick="hide()">‹</a><div class="mr">M</div><h2>Ave María</h2><div class="sub">Hail Mary</div><div class="cat">Rosarium</div></div>
+<div class="db">
+<div class="gf"></div>
+<div class="mc"><div class="ml"><div class="lt">Ave María, grátia plena, Dóminus tecum.</div></div><div class="mri"><div class="et">Hail Mary, full of grace, the Lord is with thee.</div></div></div>
+<div class="mc"><div class="ml"><div class="lt">Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus.</div></div><div class="mri"><div class="et">Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus.</div></div></div>
+<div class="mc"><div class="ml"><div class="lt">Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.</div></div><div class="mri"><div class="et">Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div></div></div>
+<div class="cta">☩ Practice This Prayer</div>
+</div></div>
 
 <script>
-const prayers=[
-{cat:"rosary",latin:"Signum Crucis",eng:"Sign of the Cross",lt:"In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",et:"In the name of the Father, and of the Son, and of the Holy Ghost. Amen.",ph:"In NÓ·mi·ne PA·tris, et FÍ·li·i, et SPÍ·ri·tus SANC·ti. A·men."},
-{cat:"rosary",latin:"Pater Noster",eng:"Our Father",lt:"Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",et:"Our Father, Who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.",ph:"PA·ter NOS·ter, qui es in CHÉ·lis, sanc·ti·fi·CHÉ·tur NÓ·men TÚ·um."},
-{cat:"rosary",latin:"Ave Maria",eng:"Hail Mary",lt:"Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",et:"Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",ph:"A·ve Ma·RÍ·a, GRÁ·ti·a PLÉ·na, DÓ·mi·nus TÉ·cum. Be·ne·DÍC·ta tu in mu·li·É·ri·bus, et be·ne·DÍC·tus FRUC·tus VEN·tris TÚ·i, YÉ·sus. SANC·ta Ma·RÍ·a, MA·ter DÉ·i, Ó·ra pro NÓ·bis pec·ca·TÓ·ri·bus, nunc et in HÓ·ra MOR·tis NOS·tre. A·men."},
-{cat:"rosary",latin:"Gloria Patri",eng:"Glory Be",lt:"Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",et:"Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",ph:"GLÓ·ri·a PA·tri, et FÍ·li·o, et Spi·RÍ·tu·i SANC·to."},
-{cat:"rosary",latin:"Salve Regina",eng:"Hail Holy Queen",lt:"Salve, Regína, Mater misericórdiæ, vita, dulcédo, et spes nostra, salve.",et:"Hail, Holy Queen, Mother of mercy, our life, our sweetness, and our hope.",ph:"SAL·ve, Re·GÍ·na, MA·ter mi·se·ri·CÓR·di·e."},
-{cat:"mass",latin:"Confiteor",eng:"I Confess",lt:"Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini...",et:"I confess to almighty God, to blessed Mary ever Virgin...",ph:"Con·FÍ·te·or DÉ·o om·ni·po·TÉN·ti..."},
-{cat:"mass",latin:"Sanctus",eng:"Holy, Holy, Holy",lt:"Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth. Pleni sunt cæli et terra glória tua. Hosánna in excélsis. Benedíctus qui venit in nómine Dómini. Hosánna in excélsis.",et:"Holy, Holy, Holy, Lord God of Hosts. Heaven and earth are full of Thy glory. Hosanna in the highest. Blessed is He Who cometh in the name of the Lord. Hosanna in the highest.",ph:"SANC·tus, SANC·tus, SANC·tus, DÓ·mi·nus DÉ·us SÁ·ba·ot."},
-{cat:"mass",latin:"Agnus Dei",eng:"Lamb of God",lt:"Agnus Dei, qui tollis peccáta mundi: miserére nobis.\nAgnus Dei, qui tollis peccáta mundi: miserére nobis.\nAgnus Dei, qui tollis peccáta mundi: dona nobis pacem.",et:"Lamb of God, Who takest away the sins of the world: have mercy on us.\nLamb of God, Who takest away the sins of the world: have mercy on us.\nLamb of God, Who takest away the sins of the world: grant us peace.",ph:"AG·nus DÉ·i, qui TOL·lis pec·CÁ·ta MUN·di: mi·se·RÉ·re NÓ·bis."},
-{cat:"devotional",latin:"Memorare",eng:"The Memorare",lt:"Memoráre, O piíssima Virgo María, non esse audítum a sǽculo...",et:"Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection...",ph:"Me·mo·RÁ·re, O pi·ÍS·si·ma VÍR·go Ma·RÍ·a..."},
-{cat:"devotional",latin:"Actus Contritionis",eng:"Act of Contrition",lt:"Deus meus, ex toto corde pǽnitet me ómnium meórum peccatórum...",et:"O my God, I am heartily sorry for having offended Thee, and I detest all my sins...",ph:"DÉ·us MÉ·us, eks TÓ·to COR·de PÉ·ni·tet me..."},
-{cat:"devotional",latin:"Anima Christi",eng:"Soul of Christ",lt:"Anima Christi, sanctífica me. Corpus Christi, salva me. Sanguis Christi, inébria me.",et:"Soul of Christ, sanctify me. Body of Christ, save me. Blood of Christ, inebriate me.",ph:"Á·ni·ma CHRÍS·ti, sanc·TÍ·fi·ca me."},
-{cat:"devotional",latin:"Oratio ad S. Michaëlem",eng:"Prayer to St. Michael",lt:"Sancte Michaël Archángele, defénde nos in prǽlio...",et:"Saint Michael the Archangel, defend us in battle...",ph:"SANC·te Mi·cha·ël Ar·CHÁN·ge·le..."}
-];
-const catColors={rosary:'#8B1A1A',mass:'#B8960C',devotional:'#2E7D32'};
-const catNames={rosary:['Rosarium','Rosary'],mass:['Missa','Mass'],devotional:['Devotiones','Devotional']};
-let currentPrayer=null;
-let currentMode='missal';
-function renderPrayers(filter=''){
-const list=document.getElementById('prayerList');
-let html='';
-let lastCat='';
-const f=filter.toLowerCase();
-prayers.forEach(p=>{
-if(f&&!p.latin.toLowerCase().includes(f)&&!p.eng.toLowerCase().includes(f))return;
-if(p.cat!==lastCat){
-if(lastCat)html+='<div class="orn"><span>✟</span></div>';
-html+='<div class="sec-t">'+catNames[p.cat][0].toUpperCase()+'</div><div class="sec-s">'+catNames[p.cat][1]+'</div>';
-lastCat=p.cat;
-}
-html+='<div class="prayer-row" onclick="openDetail('+prayers.indexOf(p)+')"><div class="accent" style="background:'+catColors[p.cat]+'"></div><div><div class="p-name">'+p.latin+'</div><div class="p-eng">'+p.eng+'</div></div></div>';
-});
-html+='<div class="end-orn">✿ · ✿</div>';
-list.innerHTML=html;
-}
-function openDetail(i){
-currentPrayer=prayers[i];
-document.getElementById('detailTitle').textContent=currentPrayer.latin;
-document.getElementById('detailSub').textContent=currentPrayer.eng;
-setMode('missal');
-document.getElementById('detail').classList.add('show');
-}
-function closeDetail(){document.getElementById('detail').classList.remove('show');}
-function setMode(mode){
-currentMode=mode;
-document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));
-event.target.classList.add('active');
-const c=document.getElementById('detailContent');
-if(mode==='missal'){
-const lLines=currentPrayer.lt.split('\n');
-const eLines=currentPrayer.et.split('\n');
-const max=Math.max(lLines.length,eLines.length);
-let h='';
-for(let i=0;i<max;i++){h+='<div class="missal-row"><div class="m-left">'+(lLines[i]||'')+'</div><div class="m-right">'+(eLines[i]||'')+'</div></div>';}
-c.innerHTML=h;
-}else if(mode==='english'){c.innerHTML='<div style="color:#1C1410;line-height:1.8">'+currentPrayer.et.replace(/\n/g,'<br>')+'</div>';
-}else if(mode==='latin'){c.innerHTML='<div style="color:#1C1410;line-height:1.8">'+currentPrayer.lt.replace(/\n/g,'<br>')+'</div>';
-}else{
-let ph=currentPrayer.ph.replace(/([A-ZÁÉÍÓÚ]{2,})/g,'<span class="stressed">$1</span>').replace(/·/g,'<span class="dot">·</span>');
-c.innerHTML='<div class="phonetic">'+ph+'</div>';
-}
-}
-function filterPrayers(v){renderPrayers(v);}
-renderPrayers();
+function show(id){document.getElementById('o-'+id).classList.add('show');window.scrollTo(0,0)}
+function hide(){document.querySelectorAll('.overlay').forEach(o=>o.classList.remove('show'))}
 </script>
-</body>
-</html>
+
+<div class="tab-bar">
+<a class="tab" href="today.html">☀<br><span style="font-size:10px">Today</span></a>
+<a class="tab" href="missal.html">☰<br><span style="font-size:10px">Missal</span></a>
+<a class="tab active" href="#">📖<br><span style="font-size:10px">Prayers</span></a>
+<a class="tab" href="#">🎓<br><span style="font-size:10px">Learn</span></a>
+<a class="tab" href="#">📕<br><span style="font-size:10px">Reference</span></a>
+</div>
+</body></html>
