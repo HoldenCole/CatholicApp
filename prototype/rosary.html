@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ad Altare Dei — Guided Rosary</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Georgia',serif;background:#1a1410;max-width:430px;margin:0 auto;min-height:100vh;color:#EDE8DC}
+.screen{display:none;min-height:100vh}
+.screen.active{display:flex;flex-direction:column}
+/* START SCREEN */
+#start{background:#F2EBE0;color:#1C1410}
+#start .dh{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px}
+#start .dh h1{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC}
+#start .dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
+#start .ct{padding:16px 24px;flex:1;overflow-y:auto}
+.orn{display:flex;align-items:center;gap:12px;margin:14px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
+.sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
+.sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
+.mystery-row{display:flex;gap:0;padding:14px 0;border-bottom:1px solid rgba(184,150,12,0.08);cursor:pointer}
+.mystery-bar{width:3px;border-radius:2px;flex-shrink:0;margin-right:14px}
+.mystery-bar.suggested{background:#8B1A1A}
+.mystery-bar.other{background:rgba(184,150,12,0.2)}
+.m-name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
+.m-latin{font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic}
+.m-days{font-family:'Georgia',serif;font-size:12px;color:#998877;margin-top:2px}
+.today-tag{display:inline-block;font-size:9px;font-weight:700;color:#8B1A1A;border:1px solid rgba(139,26,26,0.3);padding:1px 6px;border-radius:3px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
+/* PRAY SCREEN */
+#pray{padding:54px 24px 120px}
+.progress{margin-bottom:6px}
+.progress .bar{height:2px;background:rgba(184,150,12,0.1);border-radius:1px}
+.progress .fill{height:2px;background:#8B1A1A;border-radius:1px;transition:width 0.3s}
+.progress .meta{display:flex;justify-content:space-between;margin-top:4px}
+.progress .meta span{font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic}
+.progress .meta .l{color:#B8960C}
+.progress .meta .r{color:#665544}
+.step-center{text-align:center;margin:28px 0 20px}
+.step-name{font-family:'Playfair Display',serif;font-size:28px;font-weight:600}
+.step-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#776655;font-style:italic;margin-top:4px}
+.beads{display:flex;justify-content:center;gap:7px;margin:20px 0}
+.bead{width:8px;height:8px;border-radius:50%;background:rgba(139,26,26,0.2);transition:all 0.3s}
+.bead.filled{background:#8B1A1A}
+.bead.current{background:#8B1A1A;width:12px;height:12px;margin-top:-2px;box-shadow:0 0 12px rgba(139,26,26,0.4)}
+.prayer-text{font-family:'Playfair Display',serif;font-size:18px;color:#EDE8DC;line-height:1.9;text-align:center;margin:20px 0;opacity:0.9}
+.prayer-eng{font-family:'EB Garamond',serif;font-size:14px;color:#665544;font-style:italic;text-align:center;line-height:1.7;margin-top:16px;padding-top:16px;border-top:1px solid rgba(184,150,12,0.15)}
+.nav-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:16px 24px 40px;background:linear-gradient(transparent,#1a1410 30%);display:flex;gap:16px;align-items:center}
+.nav-back{width:50px;height:50px;border-radius:50%;border:1px solid #B8960C22;display:flex;align-items:center;justify-content:center;font-size:18px;color:#EDE8DC;flex-shrink:0;cursor:pointer}
+.nav-next{flex:1;background:#8B1A1A;color:white;text-align:center;padding:14px;border-radius:6px;font-size:15px;font-weight:600;font-family:'Playfair Display',serif;cursor:pointer}
+/* COMPLETE SCREEN */
+#complete{align-items:center;justify-content:center;text-align:center;padding:40px}
+#complete .icon{font-size:48px;color:#B8960C;margin-bottom:16px}
+#complete h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:8px}
+#complete p{font-family:'EB Garamond',serif;font-size:16px;color:#776655;margin-bottom:32px}
+#complete .btn{background:#8B1A1A;color:white;padding:14px 40px;border-radius:8px;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;cursor:pointer;display:inline-block}
+</style>
+</head>
+<body>
+
+<!-- START SCREEN -->
+<div class="screen active" id="start">
+<div class="dh">
+<h1>Sacratissimum Rosarium</h1>
+<div class="sub">The Most Holy Rosary</div>
+</div>
+<div class="ct">
+<div class="orn"><span>✟</span></div>
+<div class="sec-t">Today's Mysteries</div>
+<div class="sec-s">Recommended for Friday</div>
+<div class="mystery-row" onclick="beginRosary()">
+<div class="mystery-bar suggested"></div>
+<div>
+<div class="m-name">Sorrowful Mysteries <span class="today-tag">Today</span></div>
+<div class="m-latin">Mysteria Dolorosa</div>
+<div class="m-days">Traditional days: Tuesday, Friday</div>
+</div>
+</div>
+
+<div class="orn"><span>·</span></div>
+<div class="sec-t">Or Choose</div>
+<div class="sec-s" style="margin-bottom:0"></div>
+
+<div class="mystery-row" onclick="beginRosary()">
+<div class="mystery-bar other"></div>
+<div>
+<div class="m-name">Joyful Mysteries</div>
+<div class="m-latin">Mysteria Gaudiosa</div>
+<div class="m-days">Traditional days: Monday, Thursday</div>
+</div>
+</div>
+<div class="mystery-row" onclick="beginRosary()">
+<div class="mystery-bar other"></div>
+<div>
+<div class="m-name">Glorious Mysteries</div>
+<div class="m-latin">Mysteria Gloriosa</div>
+<div class="m-days">Traditional days: Wednesday, Sunday</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PRAY SCREEN -->
+<div class="screen" id="pray">
+<div class="progress">
+<div class="bar"><div class="fill" id="prog-fill" style="width:0%"></div></div>
+<div class="meta"><span class="l" id="decade-label">Opening</span><span class="r" id="step-label">1 of 8</span></div>
+</div>
+
+<div class="step-center">
+<div class="step-name" id="s-name">Signum Crucis</div>
+<div class="step-sub" id="s-sub">Sign of the Cross</div>
+</div>
+
+<div class="beads" id="beads-container"></div>
+
+<div class="prayer-text" id="s-latin">In nómine Patris, et Fílii, et Spíritus Sancti. Amen.</div>
+<div class="prayer-eng" id="s-english">In the name of the Father, and of the Son, and of the Holy Ghost. Amen.</div>
+
+<div class="nav-bar">
+<div class="nav-back" onclick="prevStep()">‹</div>
+<div class="nav-next" onclick="nextStep()">Next →</div>
+</div>
+</div>
+
+<!-- COMPLETE SCREEN -->
+<div class="screen" id="complete">
+<div class="icon">✟</div>
+<h2>Deo Grátias</h2>
+<p>You have completed the Sorrowful Mysteries.</p>
+<div class="btn" onclick="goHome()">Return Home</div>
+</div>
+
+<script>
+var steps=[
+{name:"Signum Crucis",sub:"Sign of the Cross",lat:"In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",eng:"In the name of the Father, and of the Son, and of the Holy Ghost. Amen.",decade:"Opening",beads:0},
+{name:"Symbolum Apostolorum",sub:"Apostles' Creed",lat:"Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ...",eng:"I believe in God, the Father Almighty, Creator of heaven and earth...",decade:"Opening",beads:0},
+{name:"Pater Noster",sub:"Our Father — for the Holy Father's intentions",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum...",eng:"Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come...",decade:"Opening",beads:0},
+{name:"Ave Maria",sub:"Hail Mary 1 of 3 — for Faith",lat:"Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",eng:"Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",decade:"Opening",beads:3,current:1},
+{name:"Ave Maria",sub:"Hail Mary 2 of 3 — for Hope",lat:"Ave María, grátia plena, Dóminus tecum...",eng:"Hail Mary, full of grace, the Lord is with thee...",decade:"Opening",beads:3,current:2},
+{name:"Ave Maria",sub:"Hail Mary 3 of 3 — for Charity",lat:"Ave María, grátia plena, Dóminus tecum...",eng:"Hail Mary, full of grace, the Lord is with thee...",decade:"Opening",beads:3,current:3},
+{name:"Agonia in Horto",sub:"First Mystery — The Agony in the Garden",lat:"Lk 22:39–46. Jesus falls prostrate in prayer in the Garden of Gethsemane, knowing the full weight of suffering that awaits Him.",eng:"",decade:"Decade I",beads:0,isMystery:true},
+{name:"Pater Noster",sub:"Decade I — Our Father",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum...",eng:"Our Father, Who art in heaven, hallowed be Thy name...",decade:"Decade I",beads:0,isOF:true}
+];
+var idx=0,total=steps.length;
+function render(){
+var s=steps[idx];
+document.getElementById('s-name').textContent=s.name;
+document.getElementById('s-sub').textContent=s.sub;
+document.getElementById('s-latin').textContent=s.lat;
+document.getElementById('s-english').textContent=s.eng||'';
+document.getElementById('s-english').style.display=s.eng?'block':'none';
+document.getElementById('decade-label').textContent=s.decade;
+document.getElementById('step-label').textContent=(idx+1)+' of '+total;
+document.getElementById('prog-fill').style.width=Math.round((idx+1)/total*100)+'%';
+// Beads
+var bc=document.getElementById('beads-container');
+bc.innerHTML='';
+if(s.beads>0){
+for(var i=1;i<=s.beads;i++){
+var b=document.createElement('div');
+b.className='bead';
+if(i<s.current)b.className='bead filled';
+else if(i===s.current)b.className='bead current';
+bc.appendChild(b);
+}
+}
+if(s.isOF){
+var b=document.createElement('div');
+b.style.cssText='width:14px;height:14px;border-radius:50%;background:#B8960C';
+bc.appendChild(b);
+}
+document.querySelector('.nav-next').textContent=idx<total-1?'Next →':'Finish';
+}
+function nextStep(){
+if(idx<total-1){idx++;render()}
+else{showScreen('complete')}
+}
+function prevStep(){if(idx>0){idx--;render()}}
+function beginRosary(){showScreen('pray');idx=0;render()}
+function goHome(){window.location.href='today.html'}
+function showScreen(id){
+document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+
+</body></html>
