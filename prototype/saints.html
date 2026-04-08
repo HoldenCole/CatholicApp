@@ -3,270 +3,649 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Ad Altare Dei — Practices of the Saints</title>
+<title>Ad Altare Dei — Praxes Sanctorum</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Georgia',serif;background:#F2EBE0;max-width:430px;margin:0 auto;min-height:100vh;padding-bottom:84px}
-.dh{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px;position:relative}
-.dh .back{position:absolute;top:54px;left:16px;color:#B8960C;font-size:24px;cursor:pointer;text-decoration:none}
-.dh h1{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC}
-.dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
-.dh .desc{font-family:'Georgia',serif;font-size:13px;color:rgba(255,255,255,0.4);margin-top:4px}
-.dh .prog{margin-top:12px}
-.dh .prog-row{display:flex;justify-content:space-between;margin-bottom:4px}
-.dh .prog-row span{font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic}
-.dh .prog-row .l{color:#B8960C}.dh .prog-row .r{color:#776655}
-.dh .prog-bar{height:4px;background:rgba(184,150,12,0.15);border-radius:2px}
-.dh .prog-fill{height:4px;background:linear-gradient(90deg,#8B1A1A,#B8960C);border-radius:2px;transition:width 0.4s}
-.ct{padding:0 24px 40px}
-.orn{display:flex;align-items:center;gap:12px;margin:14px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
-.quote-block{padding:16px 0}
-.quote-bar{display:flex;gap:0}
-.quote-line{width:2px;background:#B8960C;flex-shrink:0;margin-right:16px}
-.quote-label{font-family:'Cormorant Garamond',serif;font-size:10px;color:#B8960C;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
-.quote-text{font-family:'Georgia',serif;font-size:16px;color:#1C1410;font-style:italic;line-height:1.6}
-.quote-attr{font-family:'Cormorant Garamond',serif;font-size:13px;color:#8B1A1A;font-style:italic;margin-top:4px}
-.sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
-.sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
-.practice{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.06);cursor:pointer}
-.checkbox{width:22px;height:22px;border-radius:4px;border:1.5px solid #B8960C44;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;transition:all 0.2s}
-.checkbox.done{background:#2E7D32;border-color:#2E7D32;color:white;font-size:12px;font-weight:bold}
-.p-title{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500;transition:all 0.2s}
-.p-title.done{color:#998877;text-decoration:line-through}
-.p-desc{font-family:'Georgia',serif;font-size:13px;color:#998877;line-height:1.5;margin-top:3px;transition:all 0.2s}
-.p-desc.done{display:none}
-.end{text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3}
-/* Selector page */
-.selector{padding:0 24px 40px}
-.saint-row{display:flex;gap:0;padding:18px 0;border-bottom:1px solid rgba(184,150,12,0.1);cursor:pointer}
-.saint-bar{width:3px;background:#8B1A1A;flex-shrink:0;margin-right:16px;border-radius:2px}
-.saint-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#1C1410}
-.saint-title{font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic}
-.saint-charism{font-family:'Georgia',serif;font-size:13px;color:#998877;line-height:1.5;margin-top:4px}
-.saint-meta{font-family:'Georgia',serif;font-size:11px;color:#998877;margin-top:6px}
-.saint-meta b{color:#8B1A1A;font-weight:normal}
-.overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100%;background:#F2EBE0;z-index:30;overflow-y:auto}
-.overlay.show{display:block}
-.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px;z-index:20}
-.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500;text-decoration:none}
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px,11px 11px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+/* ===== Dark walnut header ===== */
+.header{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;overflow:hidden;
+}
+.header::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.header::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.h-back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  z-index:6;
+}
+.h-feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.h-title{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.h-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:4px;
+}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 0}
+.h-rule::before,.h-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+main{position:relative;z-index:2;padding:0 28px 40px}
+
+.intro{
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  margin:24px 16px 8px;
+  line-height:1.5;
+}
+.intro::after{
+  content:'✦';
+  display:block;
+  color:#B8960C;
+  font-size:11px;
+  margin-top:10px;
+  opacity:0.55;
+}
+
+/* ===== Saint entry: illuminated, not card ===== */
+.saint{
+  position:relative;
+  padding:22px 0 22px 64px;
+  cursor:pointer;
+  border-bottom:0.5px solid rgba(184,150,12,0.22);
+}
+.saint:last-of-type{border-bottom:none}
+.saint .init{
+  position:absolute;
+  left:0;top:18px;
+  width:48px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:54px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+  text-align:center;
+}
+.saint .init::after{
+  content:'';display:block;
+  width:32px;height:0.5px;
+  background:#B8960C;
+  margin:6px auto 0;
+}
+.saint .name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:600;
+  color:#1C1410;
+  line-height:1.1;
+}
+.saint .title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#8B1A1A;
+  margin-top:1px;
+  letter-spacing:0.3px;
+}
+.saint .charism{
+  font-family:'EB Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.5;
+  margin-top:6px;
+}
+.saint .meta{
+  display:flex;
+  gap:14px;
+  margin-top:8px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#9A8670;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.saint .meta .red{color:#8B1A1A}
+.saint .meta .sep{color:#B8960C;opacity:0.6}
+
+.end{
+  text-align:center;
+  margin:32px 0 14px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  letter-spacing:10px;
+  opacity:0.45;
+}
+
+/* ===== Tab bar ===== */
+.tab-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;
+  z-index:20;
+}
+.tab-bar::before{
+  content:'';position:absolute;
+  top:22px;left:32px;right:32px;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-style:normal;font-weight:400;
+  line-height:1;color:#B8960C;opacity:0.75;
+}
 .tab.active{color:#8B1A1A}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
+
+/* ===== Daily practice overlay ===== */
+.overlay{
+  display:none;
+  position:fixed;
+  top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:100%;
+  background:#F2E8D0;
+  z-index:30;overflow-y:auto;
+}
+.overlay.show{display:block}
+.overlay::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+
+.dh-saint{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:60px 28px 24px;
+  z-index:5;overflow:hidden;
+}
+.dh-saint::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.dh-saint::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.dh-saint .back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  cursor:pointer;
+  z-index:6;
+}
+.dh-saint .label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3px;text-transform:uppercase;
+  text-align:center;margin-bottom:6px;
+}
+.dh-saint h1{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.dh-saint .stitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:3px;
+}
+
+/* Rosary-bead progress (not a bar) */
+.beads{
+  display:flex;justify-content:center;align-items:center;
+  gap:7px;
+  margin:18px 8px 4px;
+}
+.bead{
+  width:8px;height:8px;border-radius:50%;
+  border:0.5px solid rgba(184,150,12,0.55);
+  background:transparent;
+  transition:all 0.3s;
+}
+.bead.done{
+  background:#8B1A1A;
+  border-color:#8B1A1A;
+  box-shadow:0 0 0 1.5px rgba(139,26,26,0.2);
+}
+.bead.cross{
+  width:auto;height:auto;border:none;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  color:#B8960C;
+  background:transparent;
+  box-shadow:none;
+}
+.beads-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;text-transform:uppercase;
+  text-align:center;
+  margin-top:6px;
+}
+.beads-label .red{color:#B8960C}
+
+/* Daily quote */
+.quote{
+  position:relative;
+  padding:24px 18px 22px;
+  margin:24px -4px;
+  text-align:center;
+}
+.quote::before,.quote::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:75%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.quote::before{top:0}
+.quote::after{bottom:0}
+.quote-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.quote-text{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-style:italic;
+  color:#1C1410;
+  line-height:1.5;
+}
+.quote-text::before{content:'\201C';color:#8B1A1A;margin-right:2px}
+.quote-text::after{content:'\201D';color:#8B1A1A;margin-left:2px}
+.quote-attr{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:1.5px;
+  margin-top:8px;
+}
+
+/* Practice section labels */
+.psec{
+  text-align:center;
+  margin:28px -4px 14px;
+  padding:12px 0 10px;
+  position:relative;
+}
+.psec::before,.psec::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:55%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.4),transparent);
+}
+.psec::before{top:0}
+.psec::after{bottom:0}
+.psec .lat{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-weight:600;font-style:italic;
+  color:#1C1410;
+}
+.psec .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-style:italic;font-weight:600;
+  color:#9A8670;
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-top:1px;
+}
+
+/* Practice item: ornamental cross checkbox */
+.practice{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:13px 0;
+  border-bottom:0.5px dotted rgba(184,150,12,0.35);
+  cursor:pointer;
+}
+.practice:last-child{border-bottom:none}
+.cb{
+  width:22px;height:22px;
+  flex-shrink:0;
+  border:0.5px solid rgba(139,26,26,0.4);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  color:transparent;
+  margin-top:3px;
+  transition:all 0.25s;
+}
+.cb.done{
+  background:rgba(139,26,26,0.08);
+  border-color:#8B1A1A;
+  color:#8B1A1A;
+}
+.cb.done::before{content:'✠'}
+.p-title{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-weight:500;
+  color:#1C1410;
+  line-height:1.2;
+  transition:all 0.25s;
+}
+.p-title.done{
+  color:#9A8670;
+  font-style:italic;
+}
+.p-desc{
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.5;
+  margin-top:3px;
+  transition:all 0.25s;
+}
+.p-desc.done{display:none}
 </style>
 </head>
 <body>
 
-<!-- SELECTOR PAGE -->
-<div class="dh">
-<a class="back" href="today.html">‹</a>
-<h1>Practices of the Saints</h1>
-<div class="sub">Praxes Sanctorum</div>
-<div class="desc">Choose a saint to follow their rule of life.</div>
+<div class="frame"></div>
+
+<header class="header">
+  <a class="h-back" href="today.html">‹ &nbsp; Hodie</a>
+  <div class="h-feria">✠ &nbsp; Praxes &nbsp; ✠</div>
+  <div class="h-title">Praxes Sanctórum</div>
+  <div class="h-eng">Practices of the Saints</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+</header>
+
+<main>
+
+<div class="intro">Choose a saint whose rule of life will be your own.<br>Each day, follow their practices and pray with them.</div>
+
+<div class="saint" onclick="showDaily()">
+  <div class="init">P</div>
+  <div class="name">St. Padre Pio</div>
+  <div class="title">Mystic, Stigmatist, Confessor</div>
+  <div class="charism">A life of suffering united to Christ's Passion, intense prayer, and tireless service in the confessional.</div>
+  <div class="meta"><span class="red">Sept. 23</span> <span class="sep">·</span> <span>1887–1968</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
 </div>
 
-<div class="selector">
-<div class="orn"><span>✟</span></div>
-
-<div class="saint-row" onclick="showDaily()">
-<div class="saint-bar"></div>
-<div>
-<div class="saint-name">St. Padre Pio</div>
-<div class="saint-title">Mystic, Stigmatist, Confessor</div>
-<div class="saint-charism">A life of suffering united to Christ's Passion, intense prayer, and tireless service in the confessional.</div>
-<div class="saint-meta">September 23 · 1887–1968 · <b>8 daily practices</b></div>
-</div>
+<div class="saint">
+  <div class="init">T</div>
+  <div class="name">St. Thérèse of Lisieux</div>
+  <div class="title">Doctor of the Church · The Little Flower</div>
+  <div class="charism">The "Little Way" — doing small things with great love, total confidence in God's mercy.</div>
+  <div class="meta"><span class="red">Oct. 1</span> <span class="sep">·</span> <span>1873–1897</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
 </div>
 
-<div class="saint-row">
-<div class="saint-bar"></div>
-<div>
-<div class="saint-name">St. Thérèse of Lisieux</div>
-<div class="saint-title">Doctor of the Church, The Little Flower</div>
-<div class="saint-charism">The "Little Way" — doing small things with great love, total confidence in God's mercy.</div>
-<div class="saint-meta">October 1 · 1873–1897 · <b>8 daily practices</b></div>
-</div>
+<div class="saint">
+  <div class="init">T</div>
+  <div class="name">St. Thomas Aquinas</div>
+  <div class="title">Doctor of the Church · Doctor Angelicus</div>
+  <div class="charism">The union of prayer and study — seeking God through the intellect illumined by faith.</div>
+  <div class="meta"><span class="red">Jan. 28</span> <span class="sep">·</span> <span>1225–1274</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
 </div>
 
-<div class="saint-row">
-<div class="saint-bar"></div>
-<div>
-<div class="saint-name">St. Thomas Aquinas</div>
-<div class="saint-title">Doctor of the Church, the Angelic Doctor</div>
-<div class="saint-charism">The union of prayer and study — seeking God through the intellect illuminated by faith.</div>
-<div class="saint-meta">January 28 · 1225–1274 · <b>8 daily practices</b></div>
-</div>
+<div class="saint">
+  <div class="init">B</div>
+  <div class="name">St. Benedict of Nursia</div>
+  <div class="title">Father of Western Monasticism</div>
+  <div class="charism">Ora et Labora — a balanced life of prayer, work, and holy reading.</div>
+  <div class="meta"><span class="red">July 11</span> <span class="sep">·</span> <span>480–547</span> <span class="sep">·</span> <span>Nine practices daily</span></div>
 </div>
 
-<div class="saint-row">
-<div class="saint-bar"></div>
-<div>
-<div class="saint-name">St. Benedict of Nursia</div>
-<div class="saint-title">Father of Western Monasticism</div>
-<div class="saint-charism">Ora et Labora — a balanced life of prayer, work, and holy reading.</div>
-<div class="saint-meta">July 11 · 480–547 · <b>9 daily practices</b></div>
-</div>
+<div class="saint">
+  <div class="init">T</div>
+  <div class="name">St. Teresa of Ávila</div>
+  <div class="title">Doctor of the Church · Mystic, Reformer</div>
+  <div class="charism">Deep interior prayer toward divine union, joined to practical common sense.</div>
+  <div class="meta"><span class="red">Oct. 15</span> <span class="sep">·</span> <span>1515–1582</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
 </div>
 
-<div class="saint-row">
-<div class="saint-bar"></div>
-<div>
-<div class="saint-name">St. Teresa of Ávila</div>
-<div class="saint-title">Doctor of the Church, Mystic, Reformer</div>
-<div class="saint-charism">Deep interior prayer progressing toward divine union, combined with practical common sense.</div>
-<div class="saint-meta">October 15 · 1515–1582 · <b>8 daily practices</b></div>
-</div>
+<div class="saint">
+  <div class="init">J</div>
+  <div class="name">St. Josemaría Escrivá</div>
+  <div class="title">Founder of Opus Dei</div>
+  <div class="charism">Sanctification of ordinary work and daily life — finding God in the middle of the world.</div>
+  <div class="meta"><span class="red">June 26</span> <span class="sep">·</span> <span>1902–1975</span> <span class="sep">·</span> <span>Ten practices daily</span></div>
 </div>
 
-<div class="saint-row">
-<div class="saint-bar"></div>
-<div>
-<div class="saint-name">St. Josemaría Escrivá</div>
-<div class="saint-title">Founder of Opus Dei</div>
-<div class="saint-charism">Sanctification of ordinary work and daily life — finding God in the middle of the world.</div>
-<div class="saint-meta">June 26 · 1902–1975 · <b>10 daily practices</b></div>
-</div>
+<div class="saint">
+  <div class="init">F</div>
+  <div class="name">St. Francis de Sales</div>
+  <div class="title">Doctor of the Church · Bishop of Geneva</div>
+  <div class="charism">Gentle devotion for laypeople — holiness through sweetness, patience, and love.</div>
+  <div class="meta"><span class="red">Jan. 24</span> <span class="sep">·</span> <span>1567–1622</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
 </div>
 
-<div class="saint-row">
-<div class="saint-bar"></div>
-<div>
-<div class="saint-name">St. Francis de Sales</div>
-<div class="saint-title">Doctor of the Church, Bishop of Geneva</div>
-<div class="saint-charism">Gentle devotion for laypeople — holiness through sweetness, patience, and love.</div>
-<div class="saint-meta">January 24 · 1567–1622 · <b>8 daily practices</b></div>
-</div>
-</div>
+<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
 
-<div class="end">✿ · ✿</div>
-</div>
+</main>
 
-<!-- DAILY PRACTICE OVERLAY (Padre Pio) -->
+<!-- ===== DAILY PRACTICE OVERLAY ===== -->
 <div class="overlay" id="daily">
-<div class="dh">
-<a class="back" onclick="hideDaily()">‹</a>
-<h1>St. Padre Pio</h1>
-<div class="sub">Mystic, Stigmatist, Confessor</div>
-<div class="prog">
-<div class="prog-row"><span class="l" id="count-label">0 of 8</span><span class="r" id="pct-label">0%</span></div>
-<div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
-</div>
-</div>
-<div class="ct">
-<!-- Quote -->
-<div class="quote-block">
-<div class="quote-bar">
-<div class="quote-line"></div>
-<div>
-<div class="quote-label">Today's Word</div>
-<div class="quote-text">"Pray, hope, and don't worry. Worry is useless. God is merciful and will hear your prayer."</div>
-<div class="quote-attr">— St. Padre Pio</div>
-</div>
-</div>
-</div>
+  <div class="frame"></div>
 
-<div class="orn"><span>✟</span></div>
+  <div class="dh-saint">
+    <a class="back" onclick="hideDaily()">‹ &nbsp; Praxes</a>
+    <div class="label">✠ &nbsp; Regula Vitæ &nbsp; ✠</div>
+    <h1>St. Padre Pio</h1>
+    <div class="stitle">Mystic, Stigmatist, Confessor</div>
 
-<div class="sec-t">Morning</div>
-<div class="sec-s">Mane</div>
+    <div class="beads" id="beads"></div>
+    <div class="beads-label"><span id="count">0</span> &nbsp;of&nbsp; 8 &nbsp;<span class="red">·</span>&nbsp; <span id="pct">0%</span></div>
+  </div>
 
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Morning Offering</div><div class="p-desc">Upon waking, immediately offer your day to God. "Lord, I offer Thee all my prayers, works, joys, and sufferings of this day."</div></div>
-</div>
+  <main>
+    <div class="quote">
+      <div class="quote-label">Verbum Hodiernum &nbsp;·&nbsp; Today's Word</div>
+      <div class="quote-text">Pray, hope, and don't worry. Worry is useless. God is merciful and will hear your prayer.</div>
+      <div class="quote-attr">— St. Padre Pio</div>
+    </div>
 
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Attend Holy Mass</div><div class="p-desc">Padre Pio's Mass was the center of his life, often lasting two hours. Attend Mass daily if possible.</div></div>
-</div>
+    <div class="psec">
+      <div class="lat">Mane</div>
+      <div class="eng">Morning</div>
+    </div>
 
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Mental Prayer (30 minutes)</div><div class="p-desc">Spend thirty minutes in silent mental prayer, meditating on the Passion of Christ.</div></div>
-</div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Morning Offering</div><div class="p-desc">Upon waking, immediately offer your day to God. "Lord, I offer Thee all my prayers, works, joys, and sufferings of this day."</div></div>
+    </div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Attend Holy Mass</div><div class="p-desc">Padre Pio's Mass was the centre of his life, often lasting two hours. Attend Mass daily if possible.</div></div>
+    </div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Mental Prayer (30 minutes)</div><div class="p-desc">Spend half an hour in silent meditation upon the Passion of Our Lord.</div></div>
+    </div>
 
-<div class="orn"><span>·</span></div>
+    <div class="psec">
+      <div class="lat">Per Diem</div>
+      <div class="eng">Throughout the Day</div>
+    </div>
 
-<div class="sec-t">Throughout the Day</div>
-<div class="sec-s">Per Diem</div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Pray the Full Rosary</div><div class="p-desc">Padre Pio called it "the weapon." Pray at least five decades each day.</div></div>
+    </div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Spiritual Reading</div><div class="p-desc">Read fifteen minutes from the Imitation of Christ, the lives of the saints, or St. John of the Cross.</div></div>
+    </div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Visit to the Blessed Sacrament</div><div class="p-desc">Sit or kneel before Jesus in the tabernacle, in silence.</div></div>
+    </div>
 
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Pray the Full Rosary</div><div class="p-desc">Padre Pio called it "the weapon." Pray at least five decades daily.</div></div>
-</div>
+    <div class="psec">
+      <div class="lat">Vésperæ</div>
+      <div class="eng">Evening</div>
+    </div>
 
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Spiritual Reading (15 minutes)</div><div class="p-desc">Read from The Imitation of Christ, the lives of the saints, or St. John of the Cross.</div></div>
-</div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Examination of Conscience</div><div class="p-desc">Before sleep, examine the day's faults and offer them to God's mercy.</div></div>
+    </div>
 
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Visit to the Blessed Sacrament</div><div class="p-desc">Sit or kneel before Jesus in the tabernacle in silence.</div></div>
-</div>
+    <div class="psec">
+      <div class="lat">Pænitentiæ</div>
+      <div class="eng">Penances</div>
+    </div>
 
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Pray the Angelus</div><div class="p-desc">Pray the Angelus at noon (or the Regina Caeli during Eastertide).</div></div>
-</div>
+    <div class="practice" onclick="togglePractice(this)">
+      <div class="cb"></div>
+      <div><div class="p-title">Offer Daily Sufferings</div><div class="p-desc">Unite every pain and difficulty to the Passion of Christ — "Co-redemption."</div></div>
+    </div>
 
-<div class="orn"><span>·</span></div>
-
-<div class="sec-t">Evening</div>
-<div class="sec-s">Vespere</div>
-
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Examination of Conscience</div><div class="p-desc">Before sleep, examine your conscience on the day's sins and failings.</div></div>
-</div>
-
-<div class="orn"><span>✟</span></div>
-
-<div class="sec-t">Penances</div>
-<div class="sec-s">Pænitentiæ</div>
-
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Friday Fasting & Abstinence</div><div class="p-desc">Abstain from meat every Friday. Fast if health permits.</div></div>
-</div>
-
-<div class="practice" onclick="togglePractice(this)">
-<div class="checkbox"></div>
-<div><div class="p-title">Offer Daily Sufferings</div><div class="p-desc">Unite every pain or difficulty to Christ's Passion.</div></div>
-</div>
-
-<div class="end">✿ · ✿</div>
-</div>
+    <div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+  </main>
 </div>
 
 <script>
+// Build rosary-bead progress (8 beads + center cross)
+(function(){
+  var beads=document.getElementById('beads');
+  if(!beads)return;
+  for(var i=0;i<4;i++){var b=document.createElement('span');b.className='bead';beads.appendChild(b)}
+  var cross=document.createElement('span');cross.className='bead cross';cross.textContent='✠';beads.appendChild(cross);
+  for(var i=0;i<4;i++){var b=document.createElement('span');b.className='bead';beads.appendChild(b)}
+})();
+
 var total=8, done=0;
 function togglePractice(el){
-var cb=el.querySelector('.checkbox');
-var title=el.querySelector('.p-title');
-var desc=el.querySelector('.p-desc');
-if(cb.classList.contains('done')){
-cb.classList.remove('done');cb.textContent='';
-title.classList.remove('done');
-if(desc)desc.classList.remove('done');
-done--;
-}else{
-cb.classList.add('done');cb.textContent='✓';
-title.classList.add('done');
-if(desc)desc.classList.add('done');
-done++;
-}
-document.getElementById('count-label').textContent=done+' of '+total;
-document.getElementById('pct-label').textContent=Math.round(done/total*100)+'%';
-document.getElementById('prog-fill').style.width=Math.round(done/total*100)+'%';
+  var cb=el.querySelector('.cb');
+  var title=el.querySelector('.p-title');
+  var desc=el.querySelector('.p-desc');
+  if(cb.classList.contains('done')){
+    cb.classList.remove('done');title.classList.remove('done');
+    if(desc)desc.classList.remove('done');
+    done--;
+  }else{
+    cb.classList.add('done');title.classList.add('done');
+    if(desc)desc.classList.add('done');
+    done++;
+  }
+  document.getElementById('count').textContent=done;
+  document.getElementById('pct').textContent=Math.round(done/total*100)+'%';
+  // light up beads (skip the cross at index 4)
+  var allBeads=document.querySelectorAll('#beads .bead:not(.cross)');
+  allBeads.forEach(function(b,i){
+    if(i<done)b.classList.add('done');else b.classList.remove('done');
+  });
 }
 function showDaily(){document.getElementById('daily').classList.add('show');window.scrollTo(0,0)}
 function hideDaily(){document.getElementById('daily').classList.remove('show')}
 </script>
 
-<div class="tab-bar">
-<a class="tab" href="today.html">☀<br><span style="font-size:10px">Today</span></a>
-<a class="tab" href="missal.html">☰<br><span style="font-size:10px">Missal</span></a>
-<a class="tab" href="prayers.html">📖<br><span style="font-size:10px">Prayers</span></a>
-<a class="tab" href="#">🎓<br><span style="font-size:10px">Learn</span></a>
-<a class="tab" href="#">📕<br><span style="font-size:10px">Reference</span></a>
-</div>
-</body></html>
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="#"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+</body>
+</html>
