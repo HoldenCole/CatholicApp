@@ -5,139 +5,412 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Ad Altare Dei — Today</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Georgia',serif;background:#F2EBE0;max-width:430px;margin:0 auto;min-height:100vh;padding:54px 24px 100px}
-.topbar{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px}
-.feria{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:#B8960C;letter-spacing:3px;text-transform:uppercase}
-.badge{font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:4px 10px;border-radius:4px}
-.day{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#1C1410;line-height:1.1;margin:4px 0 2px}
-.date{font-family:'Cormorant Garamond',serif;font-size:14px;color:#998877;font-style:italic}
-.orn{display:flex;align-items:center;gap:12px;margin:20px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
-.sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
-.sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:12px}
-.penance{border-left:3px solid #8B1A1A;padding:12px 0 12px 16px;margin-bottom:4px}
-.p-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#1C1410}
-.p-tag{display:inline-block;font-size:9px;font-weight:700;color:#8B1A1A;border:1px solid rgba(139,26,26,0.3);padding:1px 6px;border-radius:3px;letter-spacing:0.5px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
-.p-desc{font-family:'EB Garamond',serif;font-size:14px;color:#998877;margin-top:3px}
-.dev-row{padding:11px 0;border-bottom:1px solid rgba(184,150,12,0.08)}
-.dev-name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
-.dev-latin{font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic}
-.rosary-box{border:1px solid rgba(139,26,26,0.2);border-radius:8px;padding:18px;position:relative;overflow:hidden;margin-top:4px}
-.rosary-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8B1A1A,#B8960C)}
-.rosary-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#1C1410}
-.rosary-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#8B1A1A;font-style:italic;margin-top:2px}
-.rosary-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:18px;color:#B8960C}
-.more-link{padding:11px 0;border-bottom:1px solid rgba(184,150,12,0.08)}
-.end{text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3}
-.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px;z-index:20}
-.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500;text-decoration:none}
+
+/* Parchment page — warmer vellum, subtle grain */
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;
+  margin:0 auto;
+  min-height:100vh;
+  padding:56px 28px 110px;
+  position:relative;
+}
+
+/* Subtle paper grain overlay */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  max-width:430px;
+  margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px,11px 11px;
+  z-index:1;
+  mix-blend-mode:multiply;
+  opacity:0.7;
+}
+
+/* Double-rule gold page frame (like a printed missal page) */
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.35);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.22);
+}
+
+/* Content above grain */
+main{position:relative;z-index:2}
+
+/* ---------- Top matter ---------- */
+.feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.day{
+  font-family:'Playfair Display',serif;
+  font-size:42px;font-weight:600;
+  color:#1C1410;
+  line-height:0.95;
+  letter-spacing:-0.5px;
+  margin-bottom:2px;
+}
+.date{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-style:italic;
+  color:#7A6A58;
+  margin-bottom:10px;
+}
+
+/* Missal rite — tappable italic line, not a pill */
+.rite{
+  display:inline-block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;font-weight:600;
+  color:#8B1A1A;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding-bottom:2px;
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+}
+.rite .sep{color:#B8960C;margin:0 6px;font-style:normal}
+.rite .caret{font-size:9px;margin-left:4px;opacity:0.6}
+
+/* ---------- Ornamental dividers ---------- */
+.orn{
+  display:flex;align-items:center;gap:14px;
+  margin:26px 0 20px;
+}
+.orn::before,.orn::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.orn .glyph{
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;
+  font-size:13px;
+  opacity:0.7;
+}
+.orn.major .glyph{font-size:16px;opacity:0.85}
+
+/* ---------- Section labels ---------- */
+.sec-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  margin-bottom:1px;
+}
+.sec-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  margin-bottom:14px;
+}
+
+/* ---------- Penance ---------- */
+.sec-head{display:flex;justify-content:space-between;align-items:baseline}
+.penance-entry{
+  position:relative;
+  padding:6px 0 8px 20px;
+}
+.penance-entry::before{
+  content:'';position:absolute;
+  left:0;top:8px;bottom:10px;
+  width:2px;background:#8B1A1A;
+}
+.rubric{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:3px;
+}
+.p-title{
+  font-family:'Playfair Display',serif;
+  font-size:18px;font-weight:500;
+  color:#1C1410;
+  line-height:1.25;
+}
+.p-desc{
+  font-family:'EB Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  margin-top:4px;
+  line-height:1.4;
+}
+
+/* ---------- Devotions list ---------- */
+.dev-row{
+  padding:13px 0 13px 0;
+  border-bottom:0.5px solid rgba(184,150,12,0.2);
+  position:relative;
+}
+.dev-row:last-child{border-bottom:none}
+.dev-name{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:500;
+  color:#1C1410;
+  line-height:1.2;
+}
+.dev-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  margin-top:2px;
+}
+.dev-row::after{
+  content:'›';
+  position:absolute;
+  right:0;top:50%;
+  transform:translateY(-50%);
+  color:#B8960C;
+  font-size:18px;
+  opacity:0.5;
+  font-family:'Playfair Display',serif;
+}
+
+/* ---------- Rosary: flowing, no card ---------- */
+.rosary{
+  position:relative;
+  padding:4px 0 4px 44px;
+  margin-top:6px;
+}
+.rosary .dropcap{
+  position:absolute;
+  left:0;top:-8px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:56px;
+  font-weight:500;
+  color:#8B1A1A;
+  line-height:1;
+}
+.rosary .dropcap::after{
+  content:'';position:absolute;
+  left:2px;bottom:4px;
+  width:30px;height:0.5px;
+  background:#B8960C;
+}
+.rosary-title{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-weight:500;
+  color:#1C1410;
+  line-height:1.2;
+}
+.rosary-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  margin-top:2px;
+}
+.rosary-link{
+  display:inline-block;
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.rosary-link .cross{color:#B8960C;margin:0 6px;font-style:normal}
+
+/* ---------- End mark ---------- */
+.end{
+  text-align:center;
+  margin:34px 0 10px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  letter-spacing:10px;
+  opacity:0.45;
+}
+
+/* ---------- Gear ---------- */
+.gear{
+  position:fixed;top:56px;right:28px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  color:#8B1A1A;
+  opacity:0.7;
+  text-decoration:none;
+  z-index:5;
+}
+
+/* ---------- Tab bar ---------- */
+.tab-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;
+  z-index:20;
+}
+.tab-bar::before{
+  content:'';
+  position:absolute;
+  top:22px;left:32px;right:32px;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+  font-style:normal;
+  font-weight:400;
+  line-height:1;
+  color:#B8960C;
+  opacity:0.75;
+}
 .tab.active{color:#8B1A1A}
-.gear{position:fixed;top:54px;right:24px;font-size:20px;color:#B8960C;z-index:5;text-decoration:none}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
 </style>
 </head>
 <body>
 
-<a class="gear" href="#">⚙</a>
+<div class="frame"></div>
 
-<div class="topbar">
-<div class="feria">Feria Sexta</div>
-<div class="badge">1962 Missal ▾</div>
-</div>
+<a class="gear" href="#">✦</a>
+
+<main>
+
+<div class="feria">✠ &nbsp; Feria Sexta in Quadragesima</div>
 <div class="day">Friday</div>
 <div class="date">the twenty-eighth of March</div>
+<a href="#" class="rite">Ritus <span class="sep">·</span> Missale Romanum 1962 <span class="caret">▾</span></a>
 
-<div class="orn"><span>✟</span></div>
+<div class="orn major"><span class="glyph">✠</span></div>
 
 <!-- Penance -->
-<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
-<div><div class="sec-t">Penance</div><div class="sec-s" style="margin-bottom:0">Pænitentia</div></div>
-<div class="badge">1962 Discipline ▾</div>
+<div class="sec-head">
+  <div>
+    <div class="sec-label">Pænitentia</div>
+    <div class="sec-latin">The day's penance</div>
+  </div>
+  <a href="#" class="rite" style="font-size:10px;letter-spacing:1.4px">Codex 1962 <span class="caret">▾</span></a>
 </div>
 
-<div class="penance">
-<div class="p-title">Friday Abstinence <span class="p-tag">Abstinence</span></div>
-<div class="p-desc">Abstain from meat.</div>
+<div class="penance-entry">
+  <div class="rubric">℟. &nbsp; Feria Sexta</div>
+  <div class="p-title">Abstinence from flesh-meat</div>
+  <div class="p-desc">All the faithful who have reached the age of reason abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.</div>
 </div>
 
-<div class="orn"><span>·</span></div>
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
 
 <!-- Devotions -->
-<div class="sec-t">Today's Devotions</div>
-<div class="sec-s">Devotiones Hodiernæ</div>
+<div class="sec-label">Devotiones Hodiernæ</div>
+<div class="sec-latin">Today's devotions</div>
 
 <div class="dev-row">
-<div class="dev-name">The Divine Office</div>
-<div class="dev-latin">Officium Divinum</div>
+  <div class="dev-name">The Divine Office</div>
+  <div class="dev-latin">Officium Divinum — Lauds &amp; Vespers</div>
 </div>
 <div class="dev-row">
-<div class="dev-name">Examination of Conscience</div>
-<div class="dev-latin">Examen Conscientiæ</div>
+  <div class="dev-name">Examination of Conscience</div>
+  <div class="dev-latin">Examen Conscientiæ</div>
 </div>
 <div class="dev-row">
-<div class="dev-name">Morning Offering</div>
-<div class="dev-latin">Oblatio Matutina</div>
+  <div class="dev-name">Morning Offering</div>
+  <div class="dev-latin">Oblatio Matutina</div>
 </div>
 
-<div class="orn"><span>✟</span></div>
+<div class="orn major"><span class="glyph">✠</span></div>
 
 <!-- Rosary -->
-<div class="sec-t">The Holy Rosary</div>
-<div class="sec-s">Sacratissimum Rosarium</div>
+<div class="sec-label">Sacratissimum Rosarium</div>
+<div class="sec-latin">The Most Holy Rosary</div>
 
-<div class="rosary-box">
-<div class="rosary-title">Pray the Rosary</div>
-<div class="rosary-sub">Sorrowful Mysteries — Mysteria Dolorosa</div>
-<div class="rosary-arrow">→</div>
+<div class="rosary">
+  <span class="dropcap">P</span>
+  <div class="rosary-title">Pray the Mysteries</div>
+  <div class="rosary-sub">Mysteria Dolorosa &nbsp;—&nbsp; Sorrowful, for Friday</div>
+  <a href="rosary.html" class="rosary-link">Incipiat Oratio <span class="cross">✠</span> Begin</a>
 </div>
 
-<div class="orn"><span>✟</span></div>
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
 
 <!-- Saints -->
-<div class="sec-t">Practices of the Saints</div>
-<div class="sec-s">Praxes Sanctorum</div>
+<div class="sec-label">Praxes Sanctorum</div>
+<div class="sec-latin">Practices of the Saints</div>
 
-<div class="more-link">
-<div class="dev-name">Follow a Saint's Rule of Life</div>
-<div class="dev-latin">Sequere Regulam Sancti</div>
+<div class="dev-row">
+  <div class="dev-name">Follow a Saint's Rule of Life</div>
+  <div class="dev-latin">Sequere Regulam Sancti</div>
 </div>
 
-<div class="orn"><span>✟</span></div>
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
 
 <!-- More -->
-<div class="sec-t">More</div>
-<div class="sec-s">Amplius</div>
+<div class="sec-label">Amplius</div>
+<div class="sec-latin">Further devotions &amp; guides</div>
 
-<div class="more-link">
-<div class="dev-name">Stations of the Cross</div>
-<div class="dev-latin">Via Crucis</div>
+<div class="dev-row">
+  <div class="dev-name">Stations of the Cross</div>
+  <div class="dev-latin">Via Crucis</div>
 </div>
-<div class="more-link">
-<div class="dev-name">Guide to Confession</div>
-<div class="dev-latin">De Sacramento Pænitentiæ</div>
+<div class="dev-row">
+  <div class="dev-name">Guide to Confession</div>
+  <div class="dev-latin">De Sacramento Pænitentiæ</div>
 </div>
-<div class="more-link">
-<div class="dev-name">Examination of Conscience</div>
-<div class="dev-latin">Examen Conscientiæ</div>
+<div class="dev-row">
+  <div class="dev-name">How to Attend the Latin Mass</div>
+  <div class="dev-latin">Quomodo Missam Latinam Audire</div>
 </div>
-<div class="more-link">
-<div class="dev-name">How to Attend the TLM</div>
-<div class="dev-latin">Quomodo Missam Latinam Audire</div>
-</div>
-<div class="more-link">
-<div class="dev-name">Daily Readings</div>
-<div class="dev-latin">Lectiones Diurnæ</div>
+<div class="dev-row">
+  <div class="dev-name">Daily Readings</div>
+  <div class="dev-latin">Lectiones Diurnæ</div>
 </div>
 
-<div class="end">✿ · ✿</div>
+<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
 
-<div class="tab-bar">
-<a class="tab active" href="#">☀<br><span style="font-size:10px">Today</span></a>
-<a class="tab" href="missal.html">☰<br><span style="font-size:10px">Missal</span></a>
-<a class="tab" href="#">📖<br><span style="font-size:10px">Prayers</span></a>
-<a class="tab" href="#">🎓<br><span style="font-size:10px">Learn</span></a>
-<a class="tab" href="#">📕<br><span style="font-size:10px">Reference</span></a>
-</div>
+</main>
+
+<nav class="tab-bar">
+  <a class="tab active" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="#"><span class="glyph">✦</span>Liber</a>
+</nav>
 
 </body>
 </html>
