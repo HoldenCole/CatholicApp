@@ -316,21 +316,34 @@ User uploaded 6 screenshots (`download*.png` on `main` branch) of a competing Ca
 
 ## 9. Current State (as of last session)
 
-### In progress
-- **Differentiation pass** on the 5 web prototypes to distance them from the competing Catholic app (see §8). User approved the plan and is waiting for the applied result. Order: `today.html` → `missal.html` → `prayers.html` → `saints.html` → `rosary.html`.
+### Just completed
+- **Differentiation pass applied to ALL 5 web prototypes** — distinguished from the competing Catholic app (see §8). Each one now uses the unified design language:
+  - Dark walnut header (`#1A130C → #2C2015` gradient) with double-rule gold inner frame and gold-letterpress title
+  - Warm parchment body (`#F2E8D0`) with subtle radial-dot paper grain
+  - Fixed double-rule gold page frame (10px inset)
+  - Sanctuary red as primary accent; gold demoted to ornaments only
+  - Real glyph tab bar with Latin labels: Hodie / Missa / Oratio / Schola / Liber
+  - Drop caps (italic red Playfair) on prayer first letters
+  - Red `℟.` `℣.` rubric marks in prayer text
+  - Ornamental chapter-break dividers between major sections
+
+- **today.html** — illuminated `P` drop cap on Rosary section, no badges/cards, ornamental dividers between sections
+- **missal.html** — sticky horizontal **Mass progress path** (interactive scrollable nodes for the 11 main parts), marginal Roman numerals (i–xiii), italic posture labels in margin, three **illuminated moments** with radial gold glow + bordered rules for *Et Incarnátus*, *Hoc est enim Corpus meum*, *Et Verbum caro factum est*, "Ite, Missa est" end mark
+- **prayers.html** — **Featured Oratio Hodierna** at top with large illuminated `A` drop cap, three illuminated chapters (Rosárium / Missa / Devotiónes), index-style entries with leader-dot gold separators, redesigned Ave Maria detail overlay with dark walnut header + drop cap + rubric marks
+- **saints.html** — saint entries are illuminated initials (no cards), redesigned daily practice overlay with **rosary-bead progress** (8 small beads + center cross that light up red as practices complete), gold-cross checkmark (✠) inside red square instead of green check
+- **rosary.html** — Start screen has illuminated J/S/G mystery initials; **Pray screen is fully dark walnut** (candlelit church ambience) with visible **animated rosary chaplet** (current bead pulses gold), large italic Latin step name, illuminated mystery-moment panels at each new decade, italic small-caps "Sequens / Finis" nav button; Complete screen has parchment Deo Grátias mark
 
 ### Pending
-- Build remaining web prototypes: **Learn**, **Reference**, and possibly standalone screens for **Stations**, **Examination of Conscience**, **Confession Guide**
+- Build remaining web prototypes: **Learn**, **Reference**, possibly standalone screens for **Stations**, **Examination of Conscience**, **Confession Guide**
 - Propagate the new design language back into the Swift views once the user approves the updated prototypes
-- User-specific per-screen feedback on the 5 existing prototypes (the user paused feedback to point out the competing app first)
+- User-specific per-screen feedback round on the 5 finalized prototypes
+- (Possibly) build Office hours prototype
 
 ### Known gaps / not yet built
 - AI practice / voice pronunciation feedback (Practice tab scaffolding exists)
 - Real audio recordings for prayers (spec pending — user open to TTS or volunteer recordings)
-- Latin/English baseline grid alignment in missal view
-- Paper grain texture
-- Double-rule page frame
-- Red rubrics (`℟.` `℣.`) in any view yet
+- Latin/English baseline grid alignment in missal view (current two-column is close but not perfectly aligned)
+- Swift views still use old design language — need a migration pass after prototype approval
 
 ---
 
