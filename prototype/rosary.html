@@ -3,187 +3,675 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Ad Altare Dei — Guided Rosary</title>
+<title>Ad Altare Dei — Sacratissimum Rosarium</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Georgia',serif;background:#1a1410;max-width:430px;margin:0 auto;min-height:100vh;color:#EDE8DC}
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  max-width:430px;margin:0 auto;
+  min-height:100vh;
+}
+
 .screen{display:none;min-height:100vh}
 .screen.active{display:flex;flex-direction:column}
-/* START SCREEN */
-#start{background:#F2EBE0;color:#1C1410}
-#start .dh{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px}
-#start .dh h1{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC}
-#start .dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
-#start .ct{padding:16px 24px;flex:1;overflow-y:auto}
-.orn{display:flex;align-items:center;gap:12px;margin:14px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
-.sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
-.sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
-.mystery-row{display:flex;gap:0;padding:14px 0;border-bottom:1px solid rgba(184,150,12,0.08);cursor:pointer}
-.mystery-bar{width:3px;border-radius:2px;flex-shrink:0;margin-right:14px}
-.mystery-bar.suggested{background:#8B1A1A}
-.mystery-bar.other{background:rgba(184,150,12,0.2)}
-.m-name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
-.m-latin{font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic}
-.m-days{font-family:'Georgia',serif;font-size:12px;color:#998877;margin-top:2px}
-.today-tag{display:inline-block;font-size:9px;font-weight:700;color:#8B1A1A;border:1px solid rgba(139,26,26,0.3);padding:1px 6px;border-radius:3px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
-/* PRAY SCREEN */
-#pray{padding:54px 24px 120px}
-.progress{margin-bottom:6px}
-.progress .bar{height:2px;background:rgba(184,150,12,0.1);border-radius:1px}
-.progress .fill{height:2px;background:#8B1A1A;border-radius:1px;transition:width 0.3s}
-.progress .meta{display:flex;justify-content:space-between;margin-top:4px}
-.progress .meta span{font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic}
-.progress .meta .l{color:#B8960C}
-.progress .meta .r{color:#665544}
-.step-center{text-align:center;margin:28px 0 20px}
-.step-name{font-family:'Playfair Display',serif;font-size:28px;font-weight:600}
-.step-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#776655;font-style:italic;margin-top:4px}
-.beads{display:flex;justify-content:center;gap:7px;margin:20px 0}
-.bead{width:8px;height:8px;border-radius:50%;background:rgba(139,26,26,0.2);transition:all 0.3s}
-.bead.filled{background:#8B1A1A}
-.bead.current{background:#8B1A1A;width:12px;height:12px;margin-top:-2px;box-shadow:0 0 12px rgba(139,26,26,0.4)}
-.prayer-text{font-family:'Playfair Display',serif;font-size:18px;color:#EDE8DC;line-height:1.9;text-align:center;margin:20px 0;opacity:0.9}
-.prayer-eng{font-family:'EB Garamond',serif;font-size:14px;color:#665544;font-style:italic;text-align:center;line-height:1.7;margin-top:16px;padding-top:16px;border-top:1px solid rgba(184,150,12,0.15)}
-.nav-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:16px 24px 40px;background:linear-gradient(transparent,#1a1410 30%);display:flex;gap:16px;align-items:center}
-.nav-back{width:50px;height:50px;border-radius:50%;border:1px solid #B8960C22;display:flex;align-items:center;justify-content:center;font-size:18px;color:#EDE8DC;flex-shrink:0;cursor:pointer}
-.nav-next{flex:1;background:#8B1A1A;color:white;text-align:center;padding:14px;border-radius:6px;font-size:15px;font-weight:600;font-family:'Playfair Display',serif;cursor:pointer}
-/* COMPLETE SCREEN */
-#complete{align-items:center;justify-content:center;text-align:center;padding:40px}
-#complete .icon{font-size:48px;color:#B8960C;margin-bottom:16px}
-#complete h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:8px}
-#complete p{font-family:'EB Garamond',serif;font-size:16px;color:#776655;margin-bottom:32px}
-#complete .btn{background:#8B1A1A;color:white;padding:14px 40px;border-radius:8px;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;cursor:pointer;display:inline-block}
+
+/* ===== Shared parchment background ===== */
+.parchment{
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  position:relative;
+}
+.parchment::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px,11px 11px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+/* ===== Dark walnut header ===== */
+.dh{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:60px 28px 26px;
+  z-index:5;overflow:hidden;
+}
+.dh::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.dh::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.dh .back{
+  position:absolute;top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;
+  z-index:6;
+}
+.dh .label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.dh h1{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.dh .sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:4px;
+}
+.dh .h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 0}
+.dh .h-rule::before,.dh .h-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.dh .h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+/* ===== Start screen ===== */
+#start .ct{position:relative;z-index:2;padding:0 28px 60px;flex:1}
+
+.intro{
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  margin:24px 16px 6px;
+  line-height:1.5;
+}
+
+.mystery{
+  position:relative;
+  padding:24px 0 22px 64px;
+  cursor:pointer;
+  border-bottom:0.5px solid rgba(184,150,12,0.22);
+}
+.mystery:last-of-type{border-bottom:none}
+.mystery .init{
+  position:absolute;
+  left:0;top:22px;
+  width:48px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:54px;font-weight:500;
+  color:rgba(139,26,26,0.45);
+  line-height:0.85;
+  text-align:center;
+  transition:color 0.3s;
+}
+.mystery .init::after{
+  content:'';display:block;
+  width:32px;height:0.5px;
+  background:#B8960C;
+  margin:6px auto 0;
+  opacity:0.5;
+}
+.mystery.today .init{color:#8B1A1A}
+.mystery.today .init::after{opacity:1}
+.mystery .badge{
+  display:inline-block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:4px;
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+  padding-bottom:1px;
+}
+.mystery .name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:600;
+  color:#1C1410;
+  line-height:1.1;
+}
+.mystery .latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#8B1A1A;
+  margin-top:1px;
+}
+.mystery .days{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#9A8670;
+  letter-spacing:0.5px;
+  margin-top:6px;
+}
+
+.divider{
+  text-align:center;
+  margin:30px 0 8px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;
+  opacity:0.6;
+  letter-spacing:8px;
+}
+.divider .text{
+  display:block;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+  opacity:0.9;
+}
+
+/* ===== PRAY SCREEN — dark walnut, candlelit ===== */
+#pray{
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.08), transparent 70%),
+    radial-gradient(ellipse at 50% 100%, rgba(139,26,26,0.05), transparent 80%),
+    linear-gradient(180deg,#1A130C 0%,#1F160E 50%,#241A11 100%);
+  color:#E8DFC9;
+  padding:0 0 130px;
+  position:relative;
+  overflow:hidden;
+}
+#pray::before{
+  content:'';position:fixed;
+  top:0;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(184,150,12,0.04) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(184,150,12,0.03) 0 1px, transparent 1px);
+  background-size:9px 9px,15px 15px;
+  z-index:1;
+}
+#pray .frame-dark{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.35);
+  z-index:2;
+}
+#pray .frame-dark::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+#pray .pray-inner{position:relative;z-index:5;padding:54px 28px 0}
+
+/* Top: which decade & step */
+.decade-bar{
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.decade-bar .l{color:#B8960C}
+.decade-bar .r{color:#7A6A58}
+
+.decade-rule{
+  display:flex;align-items:center;gap:14px;
+  margin:0 0 26px;
+}
+.decade-rule::before,.decade-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.decade-rule .glyph{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;color:#B8960C;
+}
+
+/* Step name (drop cap style — large italic Latin) */
+.step-center{text-align:center;margin:18px 0 22px}
+.step-name{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:34px;font-weight:600;
+  color:#E8DFC9;
+  letter-spacing:0.5px;
+  line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.step-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#B8960C;
+  margin-top:6px;
+  letter-spacing:0.5px;
+}
+
+/* Rosary chaplet — current bead glows */
+.chaplet{
+  display:flex;justify-content:center;align-items:center;
+  gap:9px;
+  margin:22px 0 28px;
+  flex-wrap:nowrap;
+}
+.chaplet .b{
+  width:9px;height:9px;border-radius:50%;
+  border:0.5px solid rgba(184,150,12,0.55);
+  background:transparent;
+  flex-shrink:0;
+  transition:all 0.3s;
+}
+.chaplet .b.done{
+  background:#8B1A1A;
+  border-color:#8B1A1A;
+}
+.chaplet .b.now{
+  background:#B8960C;
+  border-color:#B8960C;
+  width:14px;height:14px;
+  box-shadow:
+    0 0 0 1.5px rgba(184,150,12,0.25),
+    0 0 18px rgba(184,150,12,0.55);
+  animation:glow 1.8s ease-in-out infinite;
+}
+.chaplet .of{
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;
+  font-size:18px;
+  background:transparent;
+  border:none;
+  width:auto;
+  flex-shrink:0;
+}
+.chaplet .of.now{
+  text-shadow:0 0 12px rgba(184,150,12,0.7);
+}
+@keyframes glow{
+  0%,100%{box-shadow:0 0 0 1.5px rgba(184,150,12,0.25),0 0 18px rgba(184,150,12,0.55)}
+  50%{box-shadow:0 0 0 1.5px rgba(184,150,12,0.4),0 0 24px rgba(184,150,12,0.8)}
+}
+
+/* Prayer text */
+.prayer-text{
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  color:#E8DFC9;
+  line-height:1.85;
+  text-align:center;
+  margin:0 8px 18px;
+}
+.prayer-text .cap{
+  font-style:italic;
+  font-size:48px;
+  color:#B8960C;
+  float:left;
+  line-height:0.85;
+  padding:8px 6px 0 0;
+}
+.prayer-rule{
+  width:60px;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.6),transparent);
+  margin:14px auto;
+}
+.prayer-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13.5px;font-style:italic;
+  color:#9A8670;
+  text-align:center;
+  line-height:1.7;
+  margin:0 8px;
+}
+
+/* Mystery moment (when entering a new decade) */
+.mystery-moment{
+  text-align:center;
+  margin:28px 0;
+  padding:24px 12px;
+  position:relative;
+}
+.mystery-moment::before,.mystery-moment::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:80%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.mystery-moment::before{top:0}
+.mystery-moment::after{bottom:0}
+.mystery-moment .num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.mystery-moment .title{
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:600;font-style:italic;
+  color:#E8DFC9;
+  line-height:1.2;
+}
+.mystery-moment .ref{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#8B6A1A;
+  margin-top:6px;
+  letter-spacing:1px;
+}
+.mystery-moment .body{
+  font-family:'EB Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  line-height:1.6;
+  margin-top:14px;
+}
+
+/* Bottom nav */
+.nav-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  padding:24px 28px 36px;
+  background:linear-gradient(180deg,rgba(26,19,12,0) 0%,#1A130C 35%);
+  display:flex;gap:18px;align-items:center;
+  z-index:20;
+}
+.nav-back{
+  width:46px;height:46px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  color:#B8960C;
+  flex-shrink:0;cursor:pointer;
+}
+.nav-next{
+  flex:1;
+  text-align:center;
+  padding:14px 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3px;text-transform:uppercase;
+  cursor:pointer;
+  border:0.5px solid rgba(184,150,12,0.45);
+  background:rgba(184,150,12,0.05);
+}
+.nav-next .cross{margin:0 8px;color:#B8960C}
+
+/* ===== COMPLETE SCREEN ===== */
+#complete{align-items:center;justify-content:center;text-align:center}
+#complete .ct{
+  position:relative;z-index:2;
+  padding:60px 40px;
+  text-align:center;
+}
+#complete .icon{
+  font-family:'Cormorant Garamond',serif;
+  font-size:64px;
+  color:#8B1A1A;
+  line-height:1;
+  margin-bottom:8px;
+}
+#complete .icon::after{
+  content:'';display:block;
+  width:48px;height:0.5px;
+  background:#B8960C;
+  margin:14px auto 0;
+}
+#complete h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;font-weight:600;font-style:italic;
+  color:#1C1410;
+  margin-top:18px;
+}
+#complete .h-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;font-weight:600;
+  color:#9A8670;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-top:6px;
+}
+#complete p{
+  font-family:'EB Garamond',serif;
+  font-size:15px;font-style:italic;
+  color:#7A6A58;
+  margin-top:24px;
+  line-height:1.6;
+}
+#complete .home-link{
+  display:inline-block;
+  margin-top:32px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-top:0.5px solid rgba(139,26,26,0.45);
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding:12px 22px;
+  cursor:pointer;
+}
+#complete .home-link .cross{color:#B8960C;margin:0 8px}
 </style>
 </head>
 <body>
 
-<!-- START SCREEN -->
-<div class="screen active" id="start">
-<div class="dh">
-<h1>Sacratissimum Rosarium</h1>
-<div class="sub">The Most Holy Rosary</div>
-</div>
-<div class="ct">
-<div class="orn"><span>✟</span></div>
-<div class="sec-t">Today's Mysteries</div>
-<div class="sec-s">Recommended for Friday</div>
-<div class="mystery-row" onclick="beginRosary()">
-<div class="mystery-bar suggested"></div>
-<div>
-<div class="m-name">Sorrowful Mysteries <span class="today-tag">Today</span></div>
-<div class="m-latin">Mysteria Dolorosa</div>
-<div class="m-days">Traditional days: Tuesday, Friday</div>
-</div>
+<!-- ===== START SCREEN ===== -->
+<div class="screen active parchment" id="start">
+
+  <div class="frame"></div>
+
+  <div class="dh">
+    <a class="back" href="today.html">‹ &nbsp; Hodie</a>
+    <div class="label">✠ &nbsp; Rosárium &nbsp; ✠</div>
+    <h1>Sacratíssimum<br>Rosárium</h1>
+    <div class="sub">The Most Holy Rosary</div>
+    <div class="h-rule"><span class="glyph">✦</span></div>
+  </div>
+
+  <div class="ct">
+    <div class="intro">Choose the Mysteries you will pray.<br>Today calls for the <em>Sorrowful</em>, traditional for Friday.</div>
+
+    <div class="mystery today" onclick="beginRosary('sorrowful')">
+      <div class="init">S</div>
+      <div class="badge">Hodie &nbsp;·&nbsp; Today</div>
+      <div class="name">The Sorrowful Mysteries</div>
+      <div class="latin">Mystéria Dolorósa</div>
+      <div class="days">Tuesday &nbsp;·&nbsp; Friday</div>
+    </div>
+
+    <div class="mystery" onclick="beginRosary('joyful')">
+      <div class="init">J</div>
+      <div class="name">The Joyful Mysteries</div>
+      <div class="latin">Mystéria Gaudiósa</div>
+      <div class="days">Monday &nbsp;·&nbsp; Thursday</div>
+    </div>
+
+    <div class="mystery" onclick="beginRosary('glorious')">
+      <div class="init">G</div>
+      <div class="name">The Glorious Mysteries</div>
+      <div class="latin">Mystéria Gloriósa</div>
+      <div class="days">Wednesday &nbsp;·&nbsp; Saturday &nbsp;·&nbsp; Sunday</div>
+    </div>
+
+    <div class="divider"><span class="text">Quindecim Mystéria</span>✦ &nbsp; ✠ &nbsp; ✦</div>
+  </div>
 </div>
 
-<div class="orn"><span>·</span></div>
-<div class="sec-t">Or Choose</div>
-<div class="sec-s" style="margin-bottom:0"></div>
-
-<div class="mystery-row" onclick="beginRosary()">
-<div class="mystery-bar other"></div>
-<div>
-<div class="m-name">Joyful Mysteries</div>
-<div class="m-latin">Mysteria Gaudiosa</div>
-<div class="m-days">Traditional days: Monday, Thursday</div>
-</div>
-</div>
-<div class="mystery-row" onclick="beginRosary()">
-<div class="mystery-bar other"></div>
-<div>
-<div class="m-name">Glorious Mysteries</div>
-<div class="m-latin">Mysteria Gloriosa</div>
-<div class="m-days">Traditional days: Wednesday, Sunday</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- PRAY SCREEN -->
+<!-- ===== PRAY SCREEN ===== -->
 <div class="screen" id="pray">
-<div class="progress">
-<div class="bar"><div class="fill" id="prog-fill" style="width:0%"></div></div>
-<div class="meta"><span class="l" id="decade-label">Opening</span><span class="r" id="step-label">1 of 8</span></div>
+  <div class="frame-dark"></div>
+
+  <div class="pray-inner">
+    <div class="decade-bar">
+      <span class="l" id="decade-label">Initium</span>
+      <span class="r" id="step-label">i &nbsp;·&nbsp; viii</span>
+    </div>
+    <div class="decade-rule"><span class="glyph">✠</span></div>
+
+    <div class="step-center">
+      <div class="step-name" id="s-name">Signum Crucis</div>
+      <div class="step-sub" id="s-sub">The Sign of the Cross</div>
+    </div>
+
+    <div class="chaplet" id="chaplet"></div>
+
+    <div class="prayer-text" id="s-latin">In nómine Patris, et Fílii, et Spíritus Sancti. Amen.</div>
+    <div class="prayer-rule"></div>
+    <div class="prayer-eng" id="s-english">In the name of the Father, and of the Son, and of the Holy Ghost. Amen.</div>
+
+    <div class="mystery-moment" id="m-moment" style="display:none">
+      <div class="num" id="m-num">First Mystery</div>
+      <div class="title" id="m-title">The Agony in the Garden</div>
+      <div class="ref" id="m-ref">Lk 22:39–46</div>
+      <div class="body" id="m-body">Jesus falls prostrate in prayer in the Garden of Gethsemane, knowing the full weight of the suffering that awaits Him.</div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div class="nav-back" onclick="prevStep()">‹</div>
+    <div class="nav-next" onclick="nextStep()"><span id="next-label">Sequens <span class="cross">✠</span> Next</span></div>
+  </div>
 </div>
 
-<div class="step-center">
-<div class="step-name" id="s-name">Signum Crucis</div>
-<div class="step-sub" id="s-sub">Sign of the Cross</div>
-</div>
-
-<div class="beads" id="beads-container"></div>
-
-<div class="prayer-text" id="s-latin">In nómine Patris, et Fílii, et Spíritus Sancti. Amen.</div>
-<div class="prayer-eng" id="s-english">In the name of the Father, and of the Son, and of the Holy Ghost. Amen.</div>
-
-<div class="nav-bar">
-<div class="nav-back" onclick="prevStep()">‹</div>
-<div class="nav-next" onclick="nextStep()">Next →</div>
-</div>
-</div>
-
-<!-- COMPLETE SCREEN -->
-<div class="screen" id="complete">
-<div class="icon">✟</div>
-<h2>Deo Grátias</h2>
-<p>You have completed the Sorrowful Mysteries.</p>
-<div class="btn" onclick="goHome()">Return Home</div>
+<!-- ===== COMPLETE SCREEN ===== -->
+<div class="screen parchment" id="complete">
+  <div class="frame"></div>
+  <div class="ct">
+    <div class="icon">✠</div>
+    <h2>Deo Grátias</h2>
+    <div class="h-eng">Thanks Be to God</div>
+    <p>You have completed the Sorrowful Mysteries.<br>May the prayers of the Blessed Virgin obtain for you the graces you have asked.</p>
+    <a class="home-link" onclick="goHome()">Reverti <span class="cross">✠</span> Return Home</a>
+  </div>
 </div>
 
 <script>
+// ===== Rosary steps (demo: Opening + first decade) =====
 var steps=[
-{name:"Signum Crucis",sub:"Sign of the Cross",lat:"In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",eng:"In the name of the Father, and of the Son, and of the Holy Ghost. Amen.",decade:"Opening",beads:0},
-{name:"Symbolum Apostolorum",sub:"Apostles' Creed",lat:"Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ...",eng:"I believe in God, the Father Almighty, Creator of heaven and earth...",decade:"Opening",beads:0},
-{name:"Pater Noster",sub:"Our Father — for the Holy Father's intentions",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum...",eng:"Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come...",decade:"Opening",beads:0},
-{name:"Ave Maria",sub:"Hail Mary 1 of 3 — for Faith",lat:"Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",eng:"Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",decade:"Opening",beads:3,current:1},
-{name:"Ave Maria",sub:"Hail Mary 2 of 3 — for Hope",lat:"Ave María, grátia plena, Dóminus tecum...",eng:"Hail Mary, full of grace, the Lord is with thee...",decade:"Opening",beads:3,current:2},
-{name:"Ave Maria",sub:"Hail Mary 3 of 3 — for Charity",lat:"Ave María, grátia plena, Dóminus tecum...",eng:"Hail Mary, full of grace, the Lord is with thee...",decade:"Opening",beads:3,current:3},
-{name:"Agonia in Horto",sub:"First Mystery — The Agony in the Garden",lat:"Lk 22:39–46. Jesus falls prostrate in prayer in the Garden of Gethsemane, knowing the full weight of suffering that awaits Him.",eng:"",decade:"Decade I",beads:0,isMystery:true},
-{name:"Pater Noster",sub:"Decade I — Our Father",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum...",eng:"Our Father, Who art in heaven, hallowed be Thy name...",decade:"Decade I",beads:0,isOF:true}
+  {name:"Signum Crucis",sub:"The Sign of the Cross",lat:"In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",eng:"In the name of the Father, and of the Son, and of the Holy Ghost. Amen.",decade:"Initium",chaplet:{type:"opening",bead:0}},
+  {name:"Credo",sub:"The Apostles' Creed",lat:"Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ…",eng:"I believe in God, the Father Almighty, Creator of heaven and earth…",decade:"Initium",chaplet:{type:"opening",bead:0}},
+  {name:"Pater Noster",sub:"For the intentions of the Holy Father",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum…",eng:"Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come…",decade:"Initium",chaplet:{type:"opening",bead:0}},
+  {name:"Ave María",sub:"For the gift of Faith",lat:"Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",eng:"Hail Mary, full of grace, the Lord is with thee…",decade:"Initium",chaplet:{type:"opening",bead:1}},
+  {name:"Ave María",sub:"For the gift of Hope",lat:"Ave María, grátia plena, Dóminus tecum…",eng:"Hail Mary, full of grace, the Lord is with thee…",decade:"Initium",chaplet:{type:"opening",bead:2}},
+  {name:"Ave María",sub:"For the gift of Charity",lat:"Ave María, grátia plena, Dóminus tecum…",eng:"Hail Mary, full of grace, the Lord is with thee…",decade:"Initium",chaplet:{type:"opening",bead:3}},
+  {name:"Glória Patri",sub:"Glory Be",lat:"Glória Patri, et Fílio, et Spirítui Sancto…",eng:"Glory be to the Father, and to the Son, and to the Holy Ghost…",decade:"Initium",chaplet:{type:"opening",bead:0}},
+  {isMystery:true,decade:"Mystérium I",num:"First Sorrowful Mystery",title:"Agonía in Horto",ref:"Lk 22:39–46",body:"Jesus falls prostrate in prayer in the Garden of Gethsemane, knowing the full weight of the suffering that awaits Him.",chaplet:{type:"decade",bead:0}},
+  {name:"Pater Noster",sub:"Decade I — Our Father",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum…",eng:"Our Father, Who art in heaven…",decade:"Mystérium I",chaplet:{type:"decade",bead:0}}
 ];
+
 var idx=0,total=steps.length;
+
+function buildChaplet(state){
+  var c=document.getElementById('chaplet');
+  c.innerHTML='';
+  // Opening: 3 ave beads + center cross + 0 decade beads (simple representation)
+  if(state.type==='opening'){
+    for(var i=1;i<=3;i++){
+      var b=document.createElement('span');
+      b.className='b'+(i<state.bead?' done':(i===state.bead?' now':''));
+      c.appendChild(b);
+    }
+    var cr=document.createElement('span');
+    cr.className='of';cr.textContent='✠';
+    c.appendChild(cr);
+  } else {
+    // Decade: 1 OF (large) + 10 ave beads
+    var of=document.createElement('span');
+    of.className='of'+(state.bead===0?' now':'');
+    of.textContent='✠';
+    c.appendChild(of);
+    for(var i=1;i<=10;i++){
+      var b=document.createElement('span');
+      b.className='b'+(i<state.bead?' done':(i===state.bead?' now':''));
+      c.appendChild(b);
+    }
+  }
+}
+
 function render(){
-var s=steps[idx];
-document.getElementById('s-name').textContent=s.name;
-document.getElementById('s-sub').textContent=s.sub;
-document.getElementById('s-latin').textContent=s.lat;
-document.getElementById('s-english').textContent=s.eng||'';
-document.getElementById('s-english').style.display=s.eng?'block':'none';
-document.getElementById('decade-label').textContent=s.decade;
-document.getElementById('step-label').textContent=(idx+1)+' of '+total;
-document.getElementById('prog-fill').style.width=Math.round((idx+1)/total*100)+'%';
-// Beads
-var bc=document.getElementById('beads-container');
-bc.innerHTML='';
-if(s.beads>0){
-for(var i=1;i<=s.beads;i++){
-var b=document.createElement('div');
-b.className='bead';
-if(i<s.current)b.className='bead filled';
-else if(i===s.current)b.className='bead current';
-bc.appendChild(b);
+  var s=steps[idx];
+  var moment=document.getElementById('m-moment');
+  var stepCenter=document.querySelector('.step-center');
+  var prayerText=document.getElementById('s-latin');
+  var prayerRule=document.querySelector('.prayer-rule');
+  var prayerEng=document.getElementById('s-english');
+
+  if(s.isMystery){
+    stepCenter.style.display='none';
+    prayerText.style.display='none';
+    prayerRule.style.display='none';
+    prayerEng.style.display='none';
+    moment.style.display='block';
+    document.getElementById('m-num').textContent=s.num;
+    document.getElementById('m-title').textContent=s.title;
+    document.getElementById('m-ref').textContent=s.ref;
+    document.getElementById('m-body').textContent=s.body;
+  } else {
+    stepCenter.style.display='block';
+    prayerText.style.display='block';
+    prayerRule.style.display='block';
+    prayerEng.style.display='block';
+    moment.style.display='none';
+    document.getElementById('s-name').textContent=s.name;
+    document.getElementById('s-sub').textContent=s.sub;
+    prayerText.textContent=s.lat;
+    prayerEng.textContent=s.eng||'';
+  }
+
+  document.getElementById('decade-label').textContent=s.decade;
+  // roman numeral step indicator
+  var roman=['i','ii','iii','iv','v','vi','vii','viii','ix','x','xi','xii','xiii','xiv','xv'];
+  document.getElementById('step-label').textContent=(roman[idx]||(idx+1))+' \u00b7 '+(roman[total-1]||total);
+
+  buildChaplet(s.chaplet);
+
+  document.getElementById('next-label').innerHTML=(idx<total-1)
+    ?'Sequens <span class="cross">✠</span> Next'
+    :'Finis <span class="cross">✠</span> Finish';
 }
-}
-if(s.isOF){
-var b=document.createElement('div');
-b.style.cssText='width:14px;height:14px;border-radius:50%;background:#B8960C';
-bc.appendChild(b);
-}
-document.querySelector('.nav-next').textContent=idx<total-1?'Next →':'Finish';
-}
-function nextStep(){
-if(idx<total-1){idx++;render()}
-else{showScreen('complete')}
-}
-function prevStep(){if(idx>0){idx--;render()}}
+
+function nextStep(){if(idx<total-1){idx++;render();window.scrollTo(0,0)}else{showScreen('complete')}}
+function prevStep(){if(idx>0){idx--;render();window.scrollTo(0,0)}}
 function beginRosary(){showScreen('pray');idx=0;render()}
 function goHome(){window.location.href='today.html'}
 function showScreen(id){
-document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-window.scrollTo(0,0);
+  document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
 }
 </script>
 
-</body></html>
+</body>
+</html>
