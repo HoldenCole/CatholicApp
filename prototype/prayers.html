@@ -3,89 +3,540 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Ad Altare Dei — Prayers</title>
+<title>Ad Altare Dei — Liber Orationum</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Georgia',serif;background:#F2EBE0;max-width:430px;margin:0 auto;min-height:100vh;padding:54px 24px 100px}
-h1{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:#1C1410;margin-bottom:16px}
-.search{background:rgba(28,20,16,0.04);border:1px solid #B8960C15;border-radius:6px;padding:10px 14px;display:flex;align-items:center;gap:8px;margin-bottom:24px;color:#aaa;font-size:14px}
-.orn{display:flex;align-items:center;gap:12px;margin:18px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
-.sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
-.sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:10px}
-.row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.06);cursor:pointer}
-.bar{width:3px;height:36px;border-radius:2px;flex-shrink:0}
-.bar.r{background:#8B1A1A}.bar.m{background:#B8960C}.bar.d{background:#2E7D32}
-.name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
-.eng{font-family:'Georgia',serif;font-size:13px;color:#998877}
-.end{text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3}
-.overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100%;background:#F2EBE0;z-index:30;overflow-y:auto}
-.overlay.show{display:block}
-.dh{background:linear-gradient(180deg,#1C1410,#2a2118);padding:54px 24px 20px;position:relative}
-.dh .back{position:absolute;top:54px;left:16px;color:#B8960C;font-size:24px;cursor:pointer}
-.dh h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#EDE8DC}
-.dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C;font-style:italic;margin-top:2px}
-.dh .cat{display:inline-block;font-size:10px;font-weight:600;color:#B8960C;border:1px solid #B8960C44;padding:3px 10px;border-radius:3px;margin-top:8px}
-.dh .mr{position:absolute;top:50px;right:24px;font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:#B8960C;opacity:0.15}
-.db{padding:16px 24px 40px}
-.gf{height:1px;background:linear-gradient(90deg,transparent,#B8960C33,transparent);margin:16px 0}
-.mc{display:flex;gap:0;padding:5px 0}
-.ml{flex:1;padding-right:10px;border-right:1px solid #B8960C22}
-.mri{flex:1;padding-left:10px}
-.lt{font-family:'Playfair Display',serif;font-size:15px;color:#1C1410;line-height:1.7}
-.et{font-family:'EB Garamond',serif;font-size:15px;color:#998877;line-height:1.7}
-.cta{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:8px;font-size:15px;font-weight:600;margin-top:24px;background:#8B1A1A;color:white;cursor:pointer;font-family:'Playfair Display',serif}
-.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:84px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px;z-index:20}
-.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500;text-decoration:none}
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;
+  margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+
+body::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px,11px 11px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+
+/* ===== Dark walnut header ===== */
+.header{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;
+  overflow:hidden;
+}
+.header::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.header::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.h-feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.h-title{
+  font-family:'Playfair Display',serif;
+  font-size:32px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.h-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:4px;
+}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 10px}
+.h-rule::before,.h-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+.h-search{
+  display:block;text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:600;
+  color:#B8960C;
+  letter-spacing:2.2px;text-transform:uppercase;
+  text-decoration:none;
+}
+
+/* ===== Page frame ===== */
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+main{position:relative;z-index:2;padding:0 28px 40px}
+
+/* ===== Featured prayer of the day ===== */
+.featured{
+  margin:28px -4px 8px;
+  padding:24px 18px 22px;
+  position:relative;
+  text-align:center;
+}
+.featured::before,.featured::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:88%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.featured::before{top:0}
+.featured::after{bottom:0}
+.featured-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:10px;
+}
+.featured-cap{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:62px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+  margin-bottom:6px;
+}
+.featured-cap::after{
+  content:'';display:block;
+  width:36px;height:0.5px;
+  background:#B8960C;
+  margin:6px auto 0;
+}
+.featured-name{
+  font-family:'Playfair Display',serif;
+  font-size:24px;font-weight:600;
+  color:#1C1410;
+  line-height:1.1;
+}
+.featured-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  margin-top:2px;
+}
+.featured-line{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:14px;
+  color:#7A6A58;
+  margin:14px 12px 14px;
+  line-height:1.5;
+}
+.featured-link{
+  display:inline-block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.featured-link .cross{color:#B8960C;margin:0 6px}
+
+/* ===== Chapter breaks (like missal parts) ===== */
+.chapter{
+  text-align:center;
+  margin:30px -4px 14px;
+  padding:14px 0 12px;
+  position:relative;
+}
+.chapter::before,.chapter::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:65%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.chapter::before{top:0}
+.chapter::after{bottom:0}
+.chapter .cross{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  color:#8B1A1A;
+  margin-bottom:4px;
+}
+.chapter .lat{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:600;font-style:italic;
+  color:#1C1410;
+}
+.chapter .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-style:italic;font-weight:600;
+  color:#9A8670;
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-top:1px;
+}
+
+/* ===== Prayer index entries ===== */
+.entry{
+  display:flex;align-items:baseline;
+  padding:11px 0 11px;
+  position:relative;
+  cursor:pointer;
+  border-bottom:0.5px dotted rgba(184,150,12,0.35);
+}
+.entry:last-child{border-bottom:none}
+.entry .init{
+  flex:0 0 30px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:24px;font-weight:500;
+  color:#8B1A1A;
+  line-height:1;
+  text-align:left;
+}
+.entry .body{flex:1;min-width:0}
+.entry .name{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:500;
+  color:#1C1410;
+  line-height:1.15;
+}
+.entry .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  margin-top:1px;
+}
+.entry .meta{
+  flex:0 0 auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:1.8px;text-transform:uppercase;
+  padding-left:10px;
+  opacity:0.7;
+}
+.entry::after{
+  content:'›';
+  position:absolute;
+  right:-2px;top:50%;
+  transform:translateY(-55%);
+  color:#B8960C;
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  opacity:0.4;
+}
+
+/* ===== End mark ===== */
+.end{
+  text-align:center;
+  margin:38px 0 14px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  letter-spacing:10px;
+  opacity:0.45;
+}
+
+/* ===== Tab bar ===== */
+.tab-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;
+  z-index:20;
+}
+.tab-bar::before{
+  content:'';position:absolute;
+  top:22px;left:32px;right:32px;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-style:normal;font-weight:400;
+  line-height:1;color:#B8960C;opacity:0.75;
+}
 .tab.active{color:#8B1A1A}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
+
+/* ===== Detail overlay ===== */
+.overlay{
+  display:none;
+  position:fixed;
+  top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  height:100%;
+  background:#F2E8D0;
+  z-index:30;
+  overflow-y:auto;
+}
+.overlay.show{display:block}
+.overlay::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+
+.dh{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 26px;
+  z-index:5;overflow:hidden;
+}
+.dh::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.dh::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.dh .back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  cursor:pointer;
+  z-index:6;
+}
+.dh .cat{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.dh h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.dh .sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:4px;
+}
+.dh .h-rule{margin:14px 8px 0}
+
+.db{
+  position:relative;z-index:2;
+  padding:24px 28px 60px;
+}
+.db .lead-cap{
+  float:left;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:64px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+  padding:6px 8px 0 0;
+}
+.mc{display:flex;gap:0;padding:6px 0;clear:none}
+.ml{flex:1;padding-right:11px;border-right:0.5px solid rgba(184,150,12,0.25)}
+.mri{flex:1;padding-left:11px}
+.lt{
+  font-family:'Playfair Display',serif;
+  font-size:15px;color:#1C1410;
+  line-height:1.7;
+}
+.et{
+  font-family:'EB Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.7;
+}
+.rmark{color:#8B1A1A;font-weight:600;margin-right:3px}
+
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:30px;
+  padding:14px 26px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-top:0.5px solid rgba(139,26,26,0.45);
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+}
+.cta .cross{color:#B8960C}
+.cta-wrap{text-align:center;clear:both}
 </style>
 </head>
 <body>
-<h1>Prayers</h1>
-<div class="search">🔍 Search prayers...</div>
-<div class="sec-t">Rosarium</div><div class="sec-s">Rosary</div>
-<div class="row" onclick="show('ave')"><div class="bar r"></div><div><div class="name">Signum Crucis</div><div class="eng">Sign of the Cross</div></div></div>
-<div class="row" onclick="show('ave')"><div class="bar r"></div><div><div class="name">Pater Noster</div><div class="eng">Our Father</div></div></div>
-<div class="row" onclick="show('ave')"><div class="bar r"></div><div><div class="name">Ave Maria</div><div class="eng">Hail Mary</div></div></div>
-<div class="row"><div class="bar r"></div><div><div class="name">Gloria Patri</div><div class="eng">Glory Be</div></div></div>
-<div class="row"><div class="bar r"></div><div><div class="name">Salve Regina</div><div class="eng">Hail Holy Queen</div></div></div>
-<div class="orn"><span>✟</span></div>
-<div class="sec-t">Missa</div><div class="sec-s">Mass</div>
-<div class="row"><div class="bar m"></div><div><div class="name">Confiteor</div><div class="eng">I Confess</div></div></div>
-<div class="row"><div class="bar m"></div><div><div class="name">Gloria in Excelsis Deo</div><div class="eng">Glory to God in the Highest</div></div></div>
-<div class="row"><div class="bar m"></div><div><div class="name">Sanctus</div><div class="eng">Holy, Holy, Holy</div></div></div>
-<div class="row"><div class="bar m"></div><div><div class="name">Agnus Dei</div><div class="eng">Lamb of God</div></div></div>
-<div class="row"><div class="bar m"></div><div><div class="name">Kyrie Eleison</div><div class="eng">Lord, Have Mercy</div></div></div>
-<div class="orn"><span>·</span></div>
-<div class="sec-t">Devotiones</div><div class="sec-s">Devotional</div>
-<div class="row"><div class="bar d"></div><div><div class="name">Memorare</div><div class="eng">The Memorare</div></div></div>
-<div class="row"><div class="bar d"></div><div><div class="name">Actus Contritionis</div><div class="eng">Act of Contrition</div></div></div>
-<div class="row"><div class="bar d"></div><div><div class="name">Anima Christi</div><div class="eng">Soul of Christ</div></div></div>
-<div class="row"><div class="bar d"></div><div><div class="name">Tantum Ergo</div><div class="eng">Therefore So Great a Sacrament</div></div></div>
-<div class="row"><div class="bar d"></div><div><div class="name">Oratio ad S. Michaëlem</div><div class="eng">Prayer to St. Michael</div></div></div>
-<div class="end">✿ · ✿</div>
 
-<!-- Ave Maria Detail -->
+<div class="frame"></div>
+
+<header class="header">
+  <div class="h-feria">✠ &nbsp; Liber &nbsp; ✠</div>
+  <div class="h-title">Liber Orationum</div>
+  <div class="h-eng">The Book of Prayers</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+  <a href="#" class="h-search">Quærere &nbsp;·&nbsp; Search</a>
+</header>
+
+<main>
+
+<!-- Featured prayer of the day -->
+<div class="featured" onclick="show('ave')">
+  <div class="featured-label">Oratio Hodierna &nbsp;·&nbsp; Today's Prayer</div>
+  <div class="featured-cap">A</div>
+  <div class="featured-name">Ave María</div>
+  <div class="featured-eng">The Hail Mary</div>
+  <div class="featured-line">Ave María, grátia plena, Dóminus tecum…</div>
+  <a class="featured-link" onclick="show('ave');event.stopPropagation()">Aperi <span class="cross">✠</span> Open</a>
+</div>
+
+<!-- Rosarium -->
+<div class="chapter">
+  <span class="cross">✠</span>
+  <div class="lat">Rosárium</div>
+  <div class="eng">Of the Rosary</div>
+</div>
+
+<div class="entry"><div class="init">S</div><div class="body"><div class="name">Signum Crucis</div><div class="eng">The Sign of the Cross</div></div></div>
+<div class="entry" onclick="show('ave')"><div class="init">P</div><div class="body"><div class="name">Pater Noster</div><div class="eng">The Lord's Prayer</div></div><div class="meta">Daily</div></div>
+<div class="entry" onclick="show('ave')"><div class="init">A</div><div class="body"><div class="name">Ave María</div><div class="eng">Hail Mary</div></div><div class="meta">Daily</div></div>
+<div class="entry"><div class="init">G</div><div class="body"><div class="name">Glória Patri</div><div class="eng">Glory Be to the Father</div></div></div>
+<div class="entry"><div class="init">S</div><div class="body"><div class="name">Salve Regína</div><div class="eng">Hail Holy Queen</div></div></div>
+<div class="entry"><div class="init">C</div><div class="body"><div class="name">Credo Apostolórum</div><div class="eng">The Apostles' Creed</div></div></div>
+<div class="entry"><div class="init">O</div><div class="body"><div class="name">Oratio Fátimæ</div><div class="eng">Fatima Prayer</div></div></div>
+
+<!-- Missa -->
+<div class="chapter">
+  <span class="cross">✠</span>
+  <div class="lat">Missa</div>
+  <div class="eng">Of the Holy Mass</div>
+</div>
+
+<div class="entry"><div class="init">C</div><div class="body"><div class="name">Confíteor</div><div class="eng">I Confess to Almighty God</div></div></div>
+<div class="entry"><div class="init">K</div><div class="body"><div class="name">Kýrie Eléison</div><div class="eng">Lord, Have Mercy</div></div></div>
+<div class="entry"><div class="init">G</div><div class="body"><div class="name">Glória in Excélsis</div><div class="eng">Glory to God in the Highest</div></div></div>
+<div class="entry"><div class="init">S</div><div class="body"><div class="name">Sanctus</div><div class="eng">Holy, Holy, Holy</div></div></div>
+<div class="entry"><div class="init">A</div><div class="body"><div class="name">Agnus Dei</div><div class="eng">Lamb of God</div></div></div>
+<div class="entry"><div class="init">D</div><div class="body"><div class="name">Dómine, Non Sum Dignus</div><div class="eng">Lord, I Am Not Worthy</div></div></div>
+
+<!-- Devotiones -->
+<div class="chapter">
+  <span class="cross">✠</span>
+  <div class="lat">Devotiónes</div>
+  <div class="eng">Devotional Prayers</div>
+</div>
+
+<div class="entry"><div class="init">M</div><div class="body"><div class="name">Memoráre</div><div class="eng">Remember, O Most Gracious Virgin</div></div></div>
+<div class="entry"><div class="init">A</div><div class="body"><div class="name">Actus Contritiónis</div><div class="eng">Act of Contrition</div></div></div>
+<div class="entry"><div class="init">A</div><div class="body"><div class="name">Ánima Christi</div><div class="eng">Soul of Christ</div></div></div>
+<div class="entry"><div class="init">T</div><div class="body"><div class="name">Tantum Ergo</div><div class="eng">Therefore So Great a Sacrament</div></div></div>
+<div class="entry"><div class="init">O</div><div class="body"><div class="name">Oratio ad S. Michaélem</div><div class="eng">Prayer to St. Michael</div></div></div>
+<div class="entry"><div class="init">A</div><div class="body"><div class="name">Adóro Te Devóte</div><div class="eng">I Devoutly Adore Thee</div></div></div>
+
+<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+
+</main>
+
+<!-- Ave Maria detail overlay -->
 <div class="overlay" id="o-ave">
-<div class="dh"><a class="back" onclick="hide()">‹</a><div class="mr">M</div><h2>Ave María</h2><div class="sub">Hail Mary</div><div class="cat">Rosarium</div></div>
-<div class="db">
-<div class="gf"></div>
-<div class="mc"><div class="ml"><div class="lt">Ave María, grátia plena, Dóminus tecum.</div></div><div class="mri"><div class="et">Hail Mary, full of grace, the Lord is with thee.</div></div></div>
-<div class="mc"><div class="ml"><div class="lt">Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus.</div></div><div class="mri"><div class="et">Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus.</div></div></div>
-<div class="mc"><div class="ml"><div class="lt">Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.</div></div><div class="mri"><div class="et">Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div></div></div>
-<div class="cta">☩ Practice This Prayer</div>
-</div></div>
+  <div class="dh">
+    <a class="back" onclick="hide()">‹ &nbsp; Liber</a>
+    <div class="cat">✠ &nbsp; Rosárium &nbsp; ✠</div>
+    <h2>Ave María</h2>
+    <div class="sub">The Hail Mary</div>
+    <div class="h-rule"><span class="glyph">✦</span></div>
+  </div>
+  <div class="db">
+    <div class="mc">
+      <div class="ml"><div class="lt"><span class="lead-cap">A</span>ve María, grátia plena, Dóminus tecum.</div></div>
+      <div class="mri"><div class="et">Hail Mary, full of grace, the Lord is with thee.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus.</div></div>
+      <div class="mri"><div class="et">Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt"><span class="rmark">℟.</span>Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. <em>Amen.</em></div></div>
+      <div class="mri"><div class="et"><span class="rmark">℟.</span>Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. <em>Amen.</em></div></div>
+    </div>
+    <div class="cta-wrap">
+      <a class="cta" href="#">Practica <span class="cross">✠</span> Practice This Prayer</a>
+    </div>
+  </div>
+</div>
 
 <script>
 function show(id){document.getElementById('o-'+id).classList.add('show');window.scrollTo(0,0)}
 function hide(){document.querySelectorAll('.overlay').forEach(o=>o.classList.remove('show'))}
 </script>
 
-<div class="tab-bar">
-<a class="tab" href="today.html">☀<br><span style="font-size:10px">Today</span></a>
-<a class="tab" href="missal.html">☰<br><span style="font-size:10px">Missal</span></a>
-<a class="tab active" href="#">📖<br><span style="font-size:10px">Prayers</span></a>
-<a class="tab" href="#">🎓<br><span style="font-size:10px">Learn</span></a>
-<a class="tab" href="#">📕<br><span style="font-size:10px">Reference</span></a>
-</div>
-</body></html>
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab active" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="#"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+</body>
+</html>
