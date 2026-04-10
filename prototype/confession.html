@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ad Altare Dei — De Confessione</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px,11px 11px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);z-index:3;
+}
+.frame::before{content:'';position:absolute;inset:3px;border:0.5px solid rgba(184,150,12,0.18)}
+
+.header{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;z-index:5;overflow:hidden;
+}
+.header::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
+.header::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
+.h-back{position:absolute;top:60px;left:24px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;text-decoration:none;z-index:6}
+.h-feria{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
+.h-title{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.h-eng{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 0}
+.h-rule::before,.h-rule::after{content:'';flex:1;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent)}
+.h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+main{position:relative;z-index:2;padding:0 28px 40px}
+
+/* ===== Two paths selector ===== */
+.intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#7A6A58;margin:26px 12px 8px;line-height:1.5}
+
+.path{
+  position:relative;
+  padding:28px 18px 24px 72px;
+  margin-top:22px;
+  cursor:pointer;
+  border-top:0.5px solid rgba(184,150,12,0.35);
+  border-bottom:0.5px solid rgba(184,150,12,0.35);
+}
+.path+.path{margin-top:24px}
+.path .init{
+  position:absolute;left:10px;top:24px;
+  width:48px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-size:54px;font-weight:500;
+  color:#8B1A1A;line-height:0.85;text-align:center;
+}
+.path .init::after{content:'';display:block;width:32px;height:0.5px;background:#B8960C;margin:6px auto 0}
+.path .label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;letter-spacing:2.5px;text-transform:uppercase;
+  margin-bottom:4px;
+}
+.path .name{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#1C1410;line-height:1.1}
+.path .latin{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#8B1A1A;margin-top:2px}
+.path .desc{font-family:'EB Garamond',serif;font-size:13px;font-style:italic;color:#7A6A58;line-height:1.5;margin-top:8px}
+.path .link{
+  display:inline-block;margin-top:12px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;letter-spacing:2.5px;text-transform:uppercase;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);padding-bottom:2px;
+}
+.path .link .cross{color:#B8960C;margin:0 6px}
+
+.divider{text-align:center;margin:30px 0 4px;color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px;opacity:0.45;letter-spacing:10px}
+
+/* ===== Overlay shared ===== */
+.overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100%;background:#F2E8D0;z-index:30;overflow-y:auto}
+.overlay.show{display:block}
+.overlay::before{content:'';position:fixed;inset:0;max-width:430px;margin:0 auto;pointer-events:none;background-image:radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);background-size:7px 7px,13px 13px;z-index:1;mix-blend-mode:multiply;opacity:0.7}
+
+.dh{position:relative;background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);padding:62px 28px 26px;z-index:5;overflow:hidden}
+.dh::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
+.dh::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
+.dh .back{position:absolute;top:60px;left:24px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;cursor:pointer;z-index:6}
+.dh .cat{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
+.dh h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1.05;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
+
+.db{position:relative;z-index:2;padding:24px 28px 60px}
+
+/* ===== Basic guide styles ===== */
+.phase{text-align:center;margin:28px -4px 16px;padding:14px 0 12px;position:relative}
+.phase::before,.phase::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:60%;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
+.phase::before{top:0}.phase::after{bottom:0}
+.phase .cross{display:block;font-family:'Cormorant Garamond',serif;font-size:18px;color:#8B1A1A;margin-bottom:4px}
+.phase .lat{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;font-style:italic;color:#1C1410}
+.phase .eng{font-family:'Cormorant Garamond',serif;font-size:10px;font-style:italic;font-weight:600;color:#9A8670;letter-spacing:2.5px;text-transform:uppercase;margin-top:1px}
+
+.step{position:relative;padding:14px 0 14px 36px;border-bottom:0.5px dotted rgba(184,150,12,0.3)}
+.step:last-child{border-bottom:none}
+.step .num{position:absolute;left:0;top:16px;font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;font-style:italic;color:#8B1A1A}
+.step .s-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#1C1410;line-height:1.2}
+.step .s-body{font-family:'EB Garamond',serif;font-size:14px;color:#7A6A58;line-height:1.6;margin-top:4px;font-style:italic}
+
+/* Formula block (what to say) */
+.formula{
+  margin:12px 0 8px;padding:14px 16px;
+  background:
+    radial-gradient(ellipse at center, rgba(184,150,12,0.08), transparent 80%);
+  border-top:0.5px solid rgba(184,150,12,0.35);
+  border-bottom:0.5px solid rgba(184,150,12,0.35);
+}
+.formula .lat{font-family:'Playfair Display',serif;font-size:14px;color:#1C1410;line-height:1.65;font-style:italic}
+.formula .eng{font-family:'EB Garamond',serif;font-size:13px;color:#7A6A58;line-height:1.65;font-style:italic;margin-top:6px}
+.formula .mark{color:#8B1A1A;font-weight:600}
+
+/* Examination expandable */
+.cmd{cursor:pointer;padding:12px 0 12px 32px;border-bottom:0.5px dotted rgba(184,150,12,0.3);position:relative}
+.cmd .num{position:absolute;left:0;top:14px;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:700;font-style:italic;color:#8B1A1A}
+.cmd .c-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;color:#1C1410}
+.cmd .c-latin{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A8670}
+.cmd .arrow{position:absolute;right:0;top:50%;transform:translateY(-50%) rotate(0deg);font-family:'Playfair Display',serif;font-size:16px;color:#B8960C;opacity:0.5;transition:transform 0.3s}
+.cmd.open .arrow{transform:translateY(-50%) rotate(90deg);opacity:0.8}
+.cmd-q{display:none;padding:6px 0 10px 32px}
+.cmd-q.open{display:block}
+.cmd-q li{font-family:'EB Garamond',serif;font-size:14px;color:#7A6A58;font-style:italic;line-height:1.6;margin-bottom:6px;list-style:none;position:relative;padding-left:16px}
+.cmd-q li::before{content:'·';position:absolute;left:0;color:#8B1A1A;font-weight:bold}
+
+/* ===== St. Catherine styles ===== */
+.cath-step{position:relative;padding:22px 0 20px 46px;border-bottom:0.5px solid rgba(184,150,12,0.22)}
+.cath-step:last-of-type{border-bottom:none}
+.cath-step .roman{
+  position:absolute;left:0;top:22px;
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:600;font-style:italic;
+  color:#8B1A1A;
+  width:34px;text-align:right;
+}
+.cath-step .text{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#1C1410;line-height:1.55}
+
+.prayer-block{
+  text-align:center;
+  margin:32px -4px 20px;
+  padding:28px 18px;
+  position:relative;
+}
+.prayer-block::before,.prayer-block::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:80%;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
+.prayer-block::before{top:0}.prayer-block::after{bottom:0}
+.prayer-label{font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+.prayer-text{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:#1C1410;line-height:1.7;text-align:center}
+.prayer-attr{font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic;color:#9A8670;margin-top:16px;line-height:1.5}
+.prayer-attr .red{color:#8B1A1A}
+
+.end{text-align:center;margin:34px 0 14px;color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:10px;opacity:0.45}
+
+/* ===== Tab bar ===== */
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:88px;background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);padding:22px 12px 28px;display:flex;justify-content:space-around;align-items:center;z-index:20}
+.tab-bar::before{content:'';position:absolute;top:22px;left:32px;right:32px;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
+.tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#9A8670;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.tab .glyph{font-family:'Playfair Display',serif;font-size:19px;font-style:normal;font-weight:400;line-height:1;color:#B8960C;opacity:0.75}
+.tab.active{color:#8B1A1A}.tab.active .glyph{color:#8B1A1A;opacity:1}
+</style>
+</head>
+<body>
+
+<div class="frame"></div>
+
+<header class="header">
+  <a class="h-back" href="today.html">‹ &nbsp; Hodie</a>
+  <div class="h-feria">✠ &nbsp; Sacramentum &nbsp; ✠</div>
+  <div class="h-title">De Confessione</div>
+  <div class="h-eng">Preparation for Holy Confession</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+</header>
+
+<main>
+
+<div class="intro">Two ways to prepare your soul for the Sacrament of Penance. Choose the path that suits your need.</div>
+
+<div class="path" onclick="showOverlay('basic')">
+  <div class="init">I</div>
+  <div class="label">Liber Primus</div>
+  <div class="name">Guided Confession</div>
+  <div class="latin">De Sacramento Pænitentiæ</div>
+  <div class="desc">A step-by-step walkthrough of the sacrament — what to do before, during, and after, with the examination of conscience by commandment.</div>
+  <div class="link">Aperi <span class="cross">✠</span> Open Guide</div>
+</div>
+
+<div class="path" onclick="showOverlay('catherine')">
+  <div class="init">II</div>
+  <div class="label">Liber Secundus</div>
+  <div class="name">After St. Catherine of Siena</div>
+  <div class="latin">Præparatio Profundior</div>
+  <div class="desc">Five steps of deeper preparation — meditating on the Passion, cultivating true contrition and humility, with St. Catherine's own prayer.</div>
+  <div class="link">Aperi <span class="cross">✠</span> Begin Preparation</div>
+</div>
+
+<div class="divider">✦ &nbsp; ✠ &nbsp; ✦</div>
+
+</main>
+
+<!-- OVERLAYS PLACEHOLDER -->
+
+<!-- ===== BASIC GUIDED CONFESSION ===== -->
+<div class="overlay" id="o-basic">
+  <div class="frame"></div>
+  <div class="dh">
+    <a class="back" onclick="hideOverlay()">‹ &nbsp; De Confessione</a>
+    <div class="cat">✠ &nbsp; Liber Primus &nbsp; ✠</div>
+    <h2>Guide to Confession</h2>
+    <div class="sub">De Sacramento Pænitentiæ</div>
+  </div>
+  <div class="db">
+
+    <div class="phase"><span class="cross">✠</span><div class="lat">Ante Confessionem</div><div class="eng">Before Confession</div></div>
+
+    <div class="step"><div class="num">i.</div><div class="s-title">Examine Your Conscience</div><div class="s-body">Recall your sins since your last confession. Use the examination below, going through each commandment quietly and honestly.</div></div>
+    <div class="step"><div class="num">ii.</div><div class="s-title">Make an Act of Contrition</div><div class="s-body">Be truly sorry for having offended God — not merely from fear of punishment, but from love of Him who is all good and deserving of all your love.</div></div>
+    <div class="step"><div class="num">iii.</div><div class="s-title">Resolve to Amend Your Life</div><div class="s-body">Firmly resolve to avoid sin and the near occasions of sin. Without this firm purpose of amendment, absolution cannot be validly received.</div></div>
+
+    <div class="phase"><span class="cross">✠</span><div class="lat">In Confessione</div><div class="eng">During Confession</div></div>
+
+    <div class="step"><div class="num">iv.</div><div class="s-title">Approach the Confessional</div><div class="s-body">Kneel and make the Sign of the Cross. Begin with the words:</div>
+      <div class="formula">
+        <div class="lat"><span class="mark">℣.</span> Bless me, Father, for I have sinned. It has been [time] since my last confession. These are my sins:</div>
+        <div class="eng"><span class="mark">℟.</span> Confess your sins simply, clearly, and completely. State the kind and number of each mortal sin. You may also confess venial sins.</div>
+      </div>
+    </div>
+    <div class="step"><div class="num">v.</div><div class="s-title">Listen to the Priest's Counsel</div><div class="s-body">The priest may offer guidance and assign a penance. Listen attentively — he speaks in the person of Christ.</div></div>
+    <div class="step"><div class="num">vi.</div><div class="s-title">Pray the Act of Contrition</div>
+      <div class="formula">
+        <div class="lat"><span class="mark">℣.</span> O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of Heaven and the pains of Hell; but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen.</div>
+      </div>
+    </div>
+    <div class="step"><div class="num">vii.</div><div class="s-title">Receive Absolution</div><div class="s-body">The priest extends his hand and pronounces the words of absolution:</div>
+      <div class="formula">
+        <div class="lat"><span class="mark">℟.</span> <em>Ego te absólvo a peccátis tuis, in nómine Patris, et Fílii, ✠ et Spíritus Sancti. Amen.</em></div>
+        <div class="eng"><span class="mark">℟.</span> I absolve thee from thy sins, in the name of the Father, and of the Son, ✠ and of the Holy Ghost. Amen.</div>
+      </div>
+    </div>
+
+    <div class="phase"><span class="cross">✠</span><div class="lat">Post Confessionem</div><div class="eng">After Confession</div></div>
+
+    <div class="step"><div class="num">viii.</div><div class="s-title">Perform Your Penance</div><div class="s-body">Complete the penance assigned by the priest as soon as possible — it is part of the sacrament.</div></div>
+    <div class="step"><div class="num">ix.</div><div class="s-title">Give Thanks to God</div><div class="s-body">Spend a moment in thanksgiving. Your soul has been washed clean in the Precious Blood of Christ.</div></div>
+    <div class="step"><div class="num">x.</div><div class="s-title">Avoid the Occasions of Sin</div><div class="s-body">Guard the grace you have received. Flee from persons, places, and things that lead you into temptation.</div></div>
+
+    <!-- Examination of Conscience -->
+    <div class="phase"><span class="cross">✠</span><div class="lat">Examen Conscientiæ</div><div class="eng">Examination of Conscience</div></div>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">I.</div><div class="c-title">I am the Lord thy God</div><div class="c-latin">Non habébis deos aliénos coram me</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I doubted or denied the truths of the faith?</li><li>Have I put my trust in superstition, fortune-telling, or the occult?</li><li>Have I received Holy Communion in a state of mortal sin?</li><li>Have I neglected my daily prayers?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">II.</div><div class="c-title">Thou shalt not take the name of the Lord in vain</div><div class="c-latin">Non assúmes nomen Dómini Dei tui in vanum</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I used God's name irreverently or in anger?</li><li>Have I cursed or used profane language?</li><li>Have I broken a vow or oath made to God?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">III.</div><div class="c-title">Remember to keep holy the Lord's Day</div><div class="c-latin">Meménto ut diem sábbati sanctifíces</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I missed Mass on Sundays or Holy Days without just cause?</li><li>Have I done unnecessary servile work on Sundays?</li><li>Have I been inattentive or irreverent at Mass?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">IV.</div><div class="c-title">Honour thy father and thy mother</div><div class="c-latin">Honóra patrem tuum et matrem tuam</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I been disobedient or disrespectful to my parents?</li><li>Have I neglected my duties to my family?</li><li>Have I failed to care for aged or infirm parents?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">V.</div><div class="c-title">Thou shalt not kill</div><div class="c-latin">Non occídes</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I borne hatred, anger, or resentment toward anyone?</li><li>Have I refused to forgive?</li><li>Have I harmed another by word or deed?</li><li>Have I given scandal or led others into sin?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">VI.</div><div class="c-title">Thou shalt not commit adultery</div><div class="c-latin">Non mœcháberis</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I entertained impure thoughts willingly?</li><li>Have I committed impure acts, alone or with others?</li><li>Have I been unfaithful to my state in life?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">VII.</div><div class="c-title">Thou shalt not steal</div><div class="c-latin">Non furtum fácies</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I taken what does not belong to me?</li><li>Have I damaged another's property?</li><li>Have I failed to make restitution for theft?</li><li>Have I been dishonest in business?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">VIII.</div><div class="c-title">Thou shalt not bear false witness</div><div class="c-latin">Non loquéris contra próximum tuum falsum testimónium</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I lied or deceived others?</li><li>Have I engaged in gossip, detraction, or calumny?</li><li>Have I rashly judged others?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">IX.</div><div class="c-title">Thou shalt not covet thy neighbour's wife</div><div class="c-latin">Non concupísces uxórem próximi tui</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I wilfully entertained impure desires toward another?</li><li>Have I failed to guard my eyes, imagination, or reading?</li></ul>
+
+    <div class="cmd" onclick="toggleCmd(this)"><div class="num">X.</div><div class="c-title">Thou shalt not covet thy neighbour's goods</div><div class="c-latin">Non concupísces rem próximi tui</div><span class="arrow">›</span></div>
+    <ul class="cmd-q"><li>Have I been envious of what others possess?</li><li>Have I been greedy or excessively attached to material things?</li></ul>
+
+    <div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+  </div>
+</div>
+
+<!-- ===== ST. CATHERINE OF SIENA ===== -->
+<div class="overlay" id="o-catherine">
+  <div class="frame"></div>
+  <div class="dh">
+    <a class="back" onclick="hideOverlay()">‹ &nbsp; De Confessione</a>
+    <div class="cat">✠ &nbsp; Liber Secundus &nbsp; ✠</div>
+    <h2>After St. Catherine<br>of Siena</h2>
+    <div class="sub">Præparatio Profundior</div>
+  </div>
+  <div class="db">
+
+    <div class="phase"><span class="cross">✠</span><div class="lat">Quinque Gradus</div><div class="eng">Five Steps of Preparation</div></div>
+
+    <div class="cath-step">
+      <div class="roman">I.</div>
+      <div class="text">Let your love arise from meditating on the sufferings of Jesus.</div>
+    </div>
+
+    <div class="cath-step">
+      <div class="roman">II.</div>
+      <div class="text">See that He suffered because of us, and have true contrition because of Jesus, not because of ourselves.</div>
+    </div>
+
+    <div class="cath-step">
+      <div class="roman">III.</div>
+      <div class="text">Cultivate true humility, acknowledging: "I deserve suffering and punishment."</div>
+    </div>
+
+    <div class="cath-step">
+      <div class="roman">IV.</div>
+      <div class="text">Behold His Most Precious Blood, and let it kindle a supernatural love, a longing to share in His suffering.</div>
+    </div>
+
+    <div class="cath-step">
+      <div class="roman">V.</div>
+      <div class="text">Be sorry not only for your own sins, but also for the sins of all people against God.</div>
+    </div>
+
+    <div class="prayer-block">
+      <div class="prayer-label">Oratio S. Catharinæ &nbsp;·&nbsp; A Prayer of St. Catherine</div>
+      <div class="prayer-text">
+        Holy Spirit, come into my heart,<br>
+        by your power I journey to You, God,<br>
+        and grant me charity with fear.<br><br>
+        Protect me, O Christ, from every evil thought;<br>
+        warm me with your sweet love,<br>
+        so that each burden seems light to me.<br><br>
+        My holy Father and my sweet Lord,<br>
+        help me always in all my endeavours.<br>
+        Christ love, Christ love.
+      </div>
+      <div class="prayer-attr">
+        Composed by <span class="red">St. Catherine of Siena</span><br>
+        at Rocca d'Orcia, 1377<br>
+        <em>after miraculously having learned to write</em>
+      </div>
+    </div>
+
+    <div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+  </div>
+</div>
+
+<script>
+function showOverlay(id){
+  document.getElementById('o-'+id).classList.add('show');
+  window.scrollTo(0,0);
+}
+function hideOverlay(){
+  document.querySelectorAll('.overlay').forEach(function(o){o.classList.remove('show')});
+}
+function toggleCmd(el){
+  el.classList.toggle('open');
+  var q=el.nextElementSibling;
+  if(q && q.classList.contains('cmd-q')) q.classList.toggle('open');
+}
+</script>
+
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+</body>
+</html>
