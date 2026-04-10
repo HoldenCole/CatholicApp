@@ -128,11 +128,15 @@ CatholicApp/
 │   └── Assets.xcassets
 ├── prototype/                      # Web prototypes (HTML mockups)
 │   ├── index.html
-│   ├── today.html
-│   ├── missal.html
-│   ├── prayers.html
-│   ├── saints.html
-│   └── rosary.html
+│   ├── today.html              # Today dashboard
+│   ├── missal.html             # Mass Ordinary (dark header + progress path)
+│   ├── prayers.html            # Prayer library (Liber Orationum)
+│   ├── saints.html             # Practices of the Saints (bead progress)
+│   ├── rosary.html             # Guided Rosary (candlelit pray screen)
+│   ├── reference.html          # Reference Library (expandable chapters)
+│   ├── learn.html              # Schola Latina (interactive cards)
+│   ├── confession.html         # Two-tier: Basic + St. Catherine
+│   └── stations.html           # Via Crucis (14-station guided)
 ├── UI/
 │   ├── DESIGN_REFERENCE.md
 │   └── Final/                      # 14 finalized HTML mockups
@@ -333,11 +337,15 @@ User uploaded 6 screenshots (`download*.png` on `main` branch) of a competing Ca
 - **saints.html** — saint entries are illuminated initials (no cards), redesigned daily practice overlay with **rosary-bead progress** (8 small beads + center cross that light up red as practices complete), gold-cross checkmark (✠) inside red square instead of green check
 - **rosary.html** — Start screen has illuminated J/S/G mystery initials; **Pray screen is fully dark walnut** (candlelit church ambience) with visible **animated rosary chaplet** (current bead pulses gold), large italic Latin step name, illuminated mystery-moment panels at each new decade, italic small-caps "Sequens / Finis" nav button; Complete screen has parchment Deo Grátias mark
 
+- **reference.html** — 7 expandable category chapters (Calendar, Mass, Prayers, Devotions, Penance, Sacramentals, Latin) with 37 entries across them. Sample detail overlay (Advent) with drop cap and scripture reference.
+- **learn.html** — Schola Latina with 10 lessons in 4 chapters (Pronuntiatio, Grammatica, Orationes, Lectio). Journey progress dots at top. Interactive course overlay (Vowels demo) with tappable practice cards that flip to reveal phonetic/meaning.
+- **confession.html** — Two-tier design: Liber I (Guided Confession — Before/During/After with 10 steps, formula blocks for what to say, full Examination of Conscience by the Ten Commandments expandable) and Liber II (After St. Catherine of Siena — five steps of deeper preparation + her prayer from Rocca d'Orcia, 1377).
+- **stations.html** — Via Crucis guided three-screen experience: Start (14 station preview list), Pray (dark walnut candlelit with 14-dot progress path, Latin ordinals, versicle/response rubrics, meditation, Stabat Mater prayer), Complete (Consummatum Est).
+
 ### Pending
-- Build remaining web prototypes: **Learn**, **Reference**, possibly standalone screens for **Stations**, **Examination of Conscience**, **Confession Guide**
 - Propagate the new design language back into the Swift views once the user approves the updated prototypes
-- User-specific per-screen feedback round on the 5 finalized prototypes
-- (Possibly) build Office hours prototype
+- User-specific per-screen feedback round on all prototypes
+- (Possibly) build Divine Office hours prototype
 
 ### Known gaps / not yet built
 - AI practice / voice pronunciation feedback (Practice tab scaffolding exists)
