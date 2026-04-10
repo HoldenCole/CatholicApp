@@ -34,14 +34,95 @@ body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min
 
 /* ===== Start screen ===== */
 #start .ct{position:relative;z-index:2;padding:28px 28px 110px;flex:1}
-.intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#7A6A58;margin:0 12px 24px;line-height:1.6}
+.intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#7A6A58;margin:0 12px 20px;line-height:1.6}
 
-/* Station preview list */
-.preview{position:relative;padding:10px 0 10px 40px;border-bottom:0.5px dotted rgba(184,150,12,0.3)}
-.preview:last-child{border-bottom:none}
-.preview .num{position:absolute;left:0;top:12px;font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:500;color:rgba(139,26,26,0.5);width:30px;text-align:right}
-.preview .name{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;color:#1C1410;line-height:1.2}
-.preview .latin{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A8670}
+/* Winding pilgrimage path */
+.via{
+  position:relative;
+  padding:10px 0 20px;
+}
+.via::before{
+  content:'';
+  position:absolute;
+  left:50%;top:0;bottom:0;
+  width:1px;
+  background:linear-gradient(180deg,transparent 0%,rgba(139,26,26,0.35) 4%,rgba(139,26,26,0.35) 96%,transparent 100%);
+  transform:translateX(-50%);
+}
+
+.stop{
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  margin:0 0 6px;
+  cursor:pointer;
+}
+.stop:nth-child(odd){flex-direction:row;padding-right:54%}
+.stop:nth-child(even){flex-direction:row-reverse;padding-left:54%}
+
+.stop .marker{
+  position:absolute;
+  left:50%;top:6px;
+  transform:translateX(-50%);
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  background:#F2E8D0;
+  border:0.5px solid rgba(139,26,26,0.4);
+  z-index:2;
+  transition:all 0.3s;
+}
+.stop:hover .marker{
+  background:rgba(139,26,26,0.08);
+  box-shadow:0 0 0 3px rgba(139,26,26,0.08);
+}
+
+.stop .content{
+  padding:4px 14px;
+  flex:1;
+}
+.stop:nth-child(odd) .content{text-align:right}
+.stop:nth-child(even) .content{text-align:left}
+.stop .s-name{
+  font-family:'Playfair Display',serif;
+  font-size:14px;font-weight:500;
+  color:#1C1410;line-height:1.2;
+}
+.stop .s-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#9A8670;
+  margin-top:1px;
+}
+
+/* Calvary marker at the end */
+.calvary{
+  text-align:center;
+  margin:10px 0 0;
+  position:relative;
+  z-index:2;
+}
+.calvary .cross-big{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  color:#8B1A1A;
+  line-height:1;
+}
+.calvary .cross-big::after{
+  content:'';display:block;
+  width:40px;height:0.5px;
+  background:#B8960C;
+  margin:8px auto 0;
+}
+.calvary .text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-top:6px;
+}
 
 .begin-wrap{text-align:center;margin-top:30px}
 .begin{
@@ -73,24 +154,70 @@ body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min
 @keyframes glow{0%,100%{box-shadow:0 0 12px rgba(184,150,12,0.6)}50%{box-shadow:0 0 20px rgba(184,150,12,0.9)}}
 .way-label{text-align:center;font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:600;font-style:italic;color:#9A8670;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
 
-/* Station header */
-.st-num{text-align:center;font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:6px}
-.st-title{text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:26px;font-weight:600;color:#E8DFC9;line-height:1.1;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+/* Large illuminated Roman numeral — the visual anchor */
+.st-big-num{
+  text-align:center;
+  margin:8px 0 6px;
+}
+.st-big-num span{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:90px;
+  font-weight:600;
+  color:rgba(139,26,26,0.18);
+  line-height:0.85;
+  text-shadow:0 0 40px rgba(139,26,26,0.12);
+  display:inline-block;
+  transition:color 0.5s;
+}
+/* Mood: Station XII (Death) — deeper red glow */
+.st-big-num.mood-death span{color:rgba(139,26,26,0.28);text-shadow:0 0 60px rgba(139,26,26,0.25)}
+/* Mood: Station IV (Mother) — warmer gold */
+.st-big-num.mood-mother span{color:rgba(184,150,12,0.18);text-shadow:0 0 50px rgba(184,150,12,0.15)}
+/* Mood: Station XIV (Tomb) — deep shadow */
+.st-big-num.mood-tomb span{color:rgba(92,60,30,0.15);text-shadow:0 0 50px rgba(26,19,12,0.3)}
+
+.st-label{text-align:center;font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:4px}
+
+.st-title{text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:24px;font-weight:600;color:#E8DFC9;line-height:1.15;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
 .st-latin{text-align:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#B8960C;margin-top:4px}
 
-.st-rule{display:flex;align-items:center;gap:14px;margin:20px 8px}
+.st-rule{display:flex;align-items:center;gap:14px;margin:18px 8px}
 .st-rule::before,.st-rule::after{content:'';flex:1;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
 .st-rule .glyph{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C}
 
-/* Versicle/Response */
-.versicle{text-align:center;margin:18px 8px;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#E8DFC9;line-height:1.6}
-.versicle .mark{color:#8B1A1A;font-weight:700;font-style:normal;margin-right:4px}
+/* Versicle/Response — call-and-response layout */
+.versicle{margin:16px 0;padding:0 8px}
+.v-line{display:flex;gap:8px;margin:4px 0;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#E8DFC9;line-height:1.5}
+.v-line .mark{flex:0 0 auto;color:#8B1A1A;font-weight:700;font-style:normal}
+.v-line .text{flex:1}
+.v-line.response .text{color:#9A8670}
 
-/* Meditation */
-.meditation{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:#E8DFC9;line-height:1.75;text-align:center;margin:22px 8px;opacity:0.9}
+/* Meditation — with ornamental quote marks */
+.meditation{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-style:italic;
+  color:#E8DFC9;
+  line-height:1.8;
+  text-align:center;
+  margin:20px 4px;
+  padding:18px 12px;
+  position:relative;
+  opacity:0.92;
+}
+.meditation::before{
+  content:'\201C';
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:48px;font-weight:300;font-style:normal;
+  color:#B8960C;
+  opacity:0.4;
+  line-height:0.5;
+  margin-bottom:10px;
+}
 
 /* Station prayer */
-.st-prayer{text-align:center;margin:22px 0;padding:18px 12px;position:relative}
+.st-prayer{text-align:center;margin:18px 0;padding:16px 12px;position:relative}
 .st-prayer::before,.st-prayer::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:70%;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.4),transparent)}
 .st-prayer::before{top:0}.st-prayer::after{bottom:0}
 .st-prayer .pr-label{font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:8px}
@@ -133,24 +260,31 @@ body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min
     <div class="h-rule"><span class="glyph">✦</span></div>
   </div>
   <div class="ct">
-    <div class="intro">Walk with Our Lord on the road to Calvary. Fourteen stations of prayer and meditation upon the Passion.</div>
+    <div class="intro">Walk with Our Lord on the road to Calvary.<br>Fourteen stations of prayer and meditation upon the Passion.</div>
 
-    <div class="preview"><div class="num">I.</div><div class="name">Jesus Is Condemned to Death</div><div class="latin">Iesus ad mortem condemnatur</div></div>
-    <div class="preview"><div class="num">II.</div><div class="name">Jesus Carries His Cross</div><div class="latin">Iesus crucem suam baiulat</div></div>
-    <div class="preview"><div class="num">III.</div><div class="name">Jesus Falls the First Time</div><div class="latin">Iesus prima vice cadit</div></div>
-    <div class="preview"><div class="num">IV.</div><div class="name">Jesus Meets His Mother</div><div class="latin">Iesus Matrem suam occurrit</div></div>
-    <div class="preview"><div class="num">V.</div><div class="name">Simon Helps Carry the Cross</div><div class="latin">Simon Cyrenæus crucem portat</div></div>
-    <div class="preview"><div class="num">VI.</div><div class="name">Veronica Wipes His Face</div><div class="latin">Veronica faciem Iesu abstergit</div></div>
-    <div class="preview"><div class="num">VII.</div><div class="name">Jesus Falls a Second Time</div><div class="latin">Iesus secunda vice cadit</div></div>
-    <div class="preview"><div class="num">VIII.</div><div class="name">Jesus Meets the Women</div><div class="latin">Iesus mulieres Ierusalem alloquitur</div></div>
-    <div class="preview"><div class="num">IX.</div><div class="name">Jesus Falls a Third Time</div><div class="latin">Iesus tertia vice cadit</div></div>
-    <div class="preview"><div class="num">X.</div><div class="name">Jesus Is Stripped</div><div class="latin">Iesus vestimentis exuitur</div></div>
-    <div class="preview"><div class="num">XI.</div><div class="name">Jesus Is Nailed to the Cross</div><div class="latin">Iesus cruci affigitur</div></div>
-    <div class="preview"><div class="num">XII.</div><div class="name">Jesus Dies on the Cross</div><div class="latin">Iesus in cruce moritur</div></div>
-    <div class="preview"><div class="num">XIII.</div><div class="name">Jesus Is Taken Down</div><div class="latin">Iesus de cruce deponitur</div></div>
-    <div class="preview"><div class="num">XIV.</div><div class="name">Jesus Is Laid in the Tomb</div><div class="latin">Iesus in sepulcro ponitur</div></div>
+    <div class="via">
+      <div class="stop" onclick="beginAt(0)"><div class="marker">I</div><div class="content"><div class="s-name">Condemned to Death</div><div class="s-latin">Ad mortem condemnatur</div></div></div>
+      <div class="stop" onclick="beginAt(1)"><div class="marker">II</div><div class="content"><div class="s-name">Carries His Cross</div><div class="s-latin">Crucem baiulat</div></div></div>
+      <div class="stop" onclick="beginAt(2)"><div class="marker">III</div><div class="content"><div class="s-name">Falls the First Time</div><div class="s-latin">Prima vice cadit</div></div></div>
+      <div class="stop" onclick="beginAt(3)"><div class="marker">IV</div><div class="content"><div class="s-name">Meets His Mother</div><div class="s-latin">Matrem occurrit</div></div></div>
+      <div class="stop" onclick="beginAt(4)"><div class="marker">V</div><div class="content"><div class="s-name">Simon Carries the Cross</div><div class="s-latin">Simon crucem portat</div></div></div>
+      <div class="stop" onclick="beginAt(5)"><div class="marker">VI</div><div class="content"><div class="s-name">Veronica Wipes His Face</div><div class="s-latin">Veronica faciem abstergit</div></div></div>
+      <div class="stop" onclick="beginAt(6)"><div class="marker">VII</div><div class="content"><div class="s-name">Falls a Second Time</div><div class="s-latin">Secunda vice cadit</div></div></div>
+      <div class="stop" onclick="beginAt(7)"><div class="marker">VIII</div><div class="content"><div class="s-name">Meets the Women</div><div class="s-latin">Mulieres alloquitur</div></div></div>
+      <div class="stop" onclick="beginAt(8)"><div class="marker">IX</div><div class="content"><div class="s-name">Falls a Third Time</div><div class="s-latin">Tertia vice cadit</div></div></div>
+      <div class="stop" onclick="beginAt(9)"><div class="marker">X</div><div class="content"><div class="s-name">Stripped of Garments</div><div class="s-latin">Vestimentis exuitur</div></div></div>
+      <div class="stop" onclick="beginAt(10)"><div class="marker">XI</div><div class="content"><div class="s-name">Nailed to the Cross</div><div class="s-latin">Cruci affigitur</div></div></div>
+      <div class="stop" onclick="beginAt(11)"><div class="marker">XII</div><div class="content"><div class="s-name">Dies on the Cross</div><div class="s-latin">In cruce moritur</div></div></div>
+      <div class="stop" onclick="beginAt(12)"><div class="marker">XIII</div><div class="content"><div class="s-name">Taken Down</div><div class="s-latin">De cruce deponitur</div></div></div>
+      <div class="stop" onclick="beginAt(13)"><div class="marker">XIV</div><div class="content"><div class="s-name">Laid in the Tomb</div><div class="s-latin">In sepulcro ponitur</div></div></div>
+    </div>
 
-    <div class="begin-wrap"><div class="begin" onclick="beginWay()">Incipiamus <span class="cross">✠</span> Begin the Way</div></div>
+    <div class="calvary">
+      <div class="cross-big">✠</div>
+      <div class="text">Golgotha</div>
+    </div>
+
+    <div class="begin-wrap"><div class="begin" onclick="beginAt(0)">Incipiamus <span class="cross">✠</span> Begin the Way</div></div>
   </div>
 </div>
 
@@ -161,15 +295,16 @@ body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min
     <div class="way" id="way"></div>
     <div class="way-label" id="way-label">Statio I &nbsp;·&nbsp; XIV</div>
 
-    <div class="st-num" id="st-num">Statio Prima</div>
+    <div class="st-big-num" id="st-bignum"><span id="st-roman">I</span></div>
+    <div class="st-label" id="st-label">Statio Prima</div>
     <div class="st-title" id="st-title">Jesus Is Condemned to Death</div>
     <div class="st-latin" id="st-latin">Iesus ad mortem condemnatur</div>
 
     <div class="st-rule"><span class="glyph">✠</span></div>
 
-    <div class="versicle" id="versicle">
-      <span class="mark">℣.</span> Adorámus te, Christe, et benedícimus tibi.<br>
-      <span class="mark">℟.</span> Quia per sanctam Crucem tuam redemísti mundum.
+    <div class="versicle">
+      <div class="v-line"><span class="mark">℣.</span><span class="text">Adorámus te, Christe, et benedícimus tibi.</span></div>
+      <div class="v-line response"><span class="mark">℟.</span><span class="text">Quia per sanctam Crucem tuam redemísti mundum.</span></div>
     </div>
 
     <div class="meditation" id="meditation">Consider how Jesus, after having been scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.</div>
@@ -200,21 +335,23 @@ body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min
 </div>
 
 <script>
+var roman=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV'];
+var labels=['Prima','Secunda','Tertia','Quarta','Quinta','Sexta','Septima','Octava','Nona','Decima','Undecima','Duodecima','Tertiadecima','Quartadecima'];
 var stations=[
-  {num:"Statio Prima",title:"Jesus Is Condemned to Death",latin:"Iesus ad mortem condemnatur",med:"Consider how Jesus, after having been scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross."},
-  {num:"Statio Secunda",title:"Jesus Carries His Cross",latin:"Iesus crucem suam baiulat",med:"Consider how Jesus, bearing His Cross, went forth to the place of sacrifice, like a meek lamb led to the slaughter."},
-  {num:"Statio Tertia",title:"Jesus Falls the First Time",latin:"Iesus prima vice cadit",med:"Consider the first fall of Jesus under the weight of the Cross. The weight of our sins pressed Him to the ground."},
-  {num:"Statio Quarta",title:"Jesus Meets His Mother",latin:"Iesus Matrem suam occurrit",med:"Consider the meeting of the Son with His Mother. Their eyes met, and their hearts were pierced with sorrow — hers for His suffering, His for her grief."},
-  {num:"Statio Quinta",title:"Simon Helps Carry the Cross",latin:"Simon Cyrenæus crucem portat",med:"Consider how the soldiers, fearing Jesus would die before reaching Calvary, forced Simon of Cyrene to carry the Cross behind Him."},
-  {num:"Statio Sexta",title:"Veronica Wipes the Face of Jesus",latin:"Veronica faciem Iesu abstergit",med:"Consider how the holy woman Veronica, seeing Jesus in such distress, wiped His face with her veil, upon which was left the imprint of His Sacred Face."},
-  {num:"Statio Septima",title:"Jesus Falls a Second Time",latin:"Iesus secunda vice cadit",med:"Consider the second fall of Jesus beneath the Cross — a fall caused by our repeated sins, our return to evil after repentance."},
-  {num:"Statio Octava",title:"Jesus Meets the Women of Jerusalem",latin:"Iesus mulieres Ierusalem alloquitur",med:"Consider how the pious women wept at the sight of Jesus. He turned to them and said: 'Weep not for Me, but for yourselves and for your children.'"},
-  {num:"Statio Nona",title:"Jesus Falls a Third Time",latin:"Iesus tertia vice cadit",med:"Consider the third fall. Jesus, utterly exhausted, falls again beneath the Cross — teaching us never to despair, but to rise again after every fall."},
-  {num:"Statio Decima",title:"Jesus Is Stripped of His Garments",latin:"Iesus vestimentis exuitur",med:"Consider the violence with which the soldiers stripped Jesus. His inner garments adhered to His torn flesh, renewing every wound."},
-  {num:"Statio Undecima",title:"Jesus Is Nailed to the Cross",latin:"Iesus cruci affigitur",med:"Consider how Jesus was thrown upon the Cross and nailed through His hands and feet. He offered not a cry of pain, but a prayer for His executioners."},
-  {num:"Statio Duodecima",title:"Jesus Dies on the Cross",latin:"Iesus in cruce moritur",med:"Consider how Jesus, after three hours of agony on the Cross, cried out: 'It is finished,' and bowing His head, gave up His spirit."},
-  {num:"Statio Tertiadecima",title:"Jesus Is Taken Down from the Cross",latin:"Iesus de cruce deponitur",med:"Consider how the sacred body was taken down from the Cross and placed in the arms of His afflicted Mother, who received Him with inexpressible tenderness."},
-  {num:"Statio Quartadecima",title:"Jesus Is Laid in the Tomb",latin:"Iesus in sepulcro ponitur",med:"Consider how the disciples carried the body of Jesus to the sepulchre, and the stone was rolled before its entrance. There, in silence, we await the Resurrection."}
+  {title:"Jesus Is Condemned to Death",latin:"Iesus ad mortem condemnatur",med:"Consider how Jesus, after having been scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.",mood:""},
+  {title:"Jesus Carries His Cross",latin:"Iesus crucem suam baiulat",med:"Consider how Jesus, bearing His Cross, went forth to the place of sacrifice, like a meek lamb led to the slaughter.",mood:""},
+  {title:"Jesus Falls the First Time",latin:"Iesus prima vice cadit",med:"Consider the first fall of Jesus under the weight of the Cross. The weight of our sins pressed Him to the ground.",mood:""},
+  {title:"Jesus Meets His Blessed Mother",latin:"Iesus Matrem suam occurrit",med:"Consider the meeting of the Son with His Mother. Their eyes met, and their hearts were pierced with sorrow — hers for His suffering, His for her grief.",mood:"mood-mother"},
+  {title:"Simon Helps Carry the Cross",latin:"Simon Cyrenæus crucem portat",med:"Consider how the soldiers, fearing Jesus would die before reaching Calvary, forced Simon of Cyrene to carry the Cross behind Him.",mood:""},
+  {title:"Veronica Wipes the Face of Jesus",latin:"Veronica faciem Iesu abstergit",med:"Consider how the holy woman Veronica, seeing Jesus in such distress, wiped His face with her veil, upon which was left the imprint of His Sacred Face.",mood:""},
+  {title:"Jesus Falls a Second Time",latin:"Iesus secunda vice cadit",med:"Consider the second fall of Jesus beneath the Cross — a fall caused by our repeated sins, our return to evil after repentance.",mood:""},
+  {title:"Jesus Meets the Women of Jerusalem",latin:"Iesus mulieres Ierusalem alloquitur",med:"Consider how the pious women wept at the sight of Jesus. He turned to them and said: 'Weep not for Me, but for yourselves and for your children.'",mood:""},
+  {title:"Jesus Falls a Third Time",latin:"Iesus tertia vice cadit",med:"Consider the third fall. Jesus, utterly exhausted, falls again beneath the Cross — teaching us never to despair, but to rise again after every fall.",mood:""},
+  {title:"Jesus Is Stripped of His Garments",latin:"Iesus vestimentis exuitur",med:"Consider the violence with which the soldiers stripped Jesus. His inner garments adhered to His torn flesh, renewing every wound.",mood:""},
+  {title:"Jesus Is Nailed to the Cross",latin:"Iesus cruci affigitur",med:"Consider how Jesus was thrown upon the Cross and nailed through His hands and feet. He offered not a cry of pain, but a prayer for His executioners.",mood:"mood-death"},
+  {title:"Jesus Dies on the Cross",latin:"Iesus in cruce moritur",med:"Consider how Jesus, after three hours of agony on the Cross, cried out: 'It is finished,' and bowing His head, gave up His spirit.",mood:"mood-death"},
+  {title:"Jesus Is Taken Down from the Cross",latin:"Iesus de cruce deponitur",med:"Consider how the sacred body was taken down from the Cross and placed in the arms of His afflicted Mother, who received Him with inexpressible tenderness.",mood:"mood-mother"},
+  {title:"Jesus Is Laid in the Tomb",latin:"Iesus in sepulcro ponitur",med:"Consider how the disciples carried the body of Jesus to the sepulchre, and the stone was rolled before its entrance. There, in silence, we await the Resurrection.",mood:"mood-tomb"}
 ];
 
 var idx=0;
@@ -232,12 +369,15 @@ function buildWay(){
 function render(){
   var s=stations[idx];
   buildWay();
-  var roman=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV'];
   document.getElementById('way-label').textContent='Statio '+roman[idx]+' \u00b7 XIV';
-  document.getElementById('st-num').textContent=s.num;
+  document.getElementById('st-roman').textContent=roman[idx];
+  document.getElementById('st-label').textContent='Statio '+labels[idx];
   document.getElementById('st-title').textContent=s.title;
   document.getElementById('st-latin').textContent=s.latin;
   document.getElementById('meditation').textContent=s.med;
+  // Set mood class on big numeral
+  var bn=document.getElementById('st-bignum');
+  bn.className='st-big-num'+(s.mood?' '+s.mood:'');
   document.getElementById('next-label').innerHTML=(idx<13)
     ?'Sequens <span class="cross">✠</span> Next Station'
     :'Finis <span class="cross">✠</span> Finish';
@@ -245,7 +385,7 @@ function render(){
 
 function nextStation(){if(idx<13){idx++;render();window.scrollTo(0,0)}else{showScreen('complete')}}
 function prevStation(){if(idx>0){idx--;render();window.scrollTo(0,0)}}
-function beginWay(){showScreen('pray');idx=0;render()}
+function beginAt(i){showScreen('pray');idx=i;render()}
 function goHome(){window.location.href='today.html'}
 function showScreen(id){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
 </script>
