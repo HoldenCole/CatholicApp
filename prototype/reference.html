@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ad Altare Dei — Liber Referentiarum</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px,11px 11px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+/* ===== Dark walnut header ===== */
+.header{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;z-index:5;overflow:hidden;
+}
+.header::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);pointer-events:none;
+}
+.header::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);pointer-events:none;
+}
+.h-feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.h-title{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.h-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;text-align:center;margin-top:4px;
+}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 10px}
+.h-rule::before,.h-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+.h-count{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:600;
+  color:#B8960C;letter-spacing:2.2px;text-transform:uppercase;
+  text-align:center;
+}
+
+main{position:relative;z-index:2;padding:0 28px 40px}
+
+.intro{
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  margin:24px 12px 8px;
+  line-height:1.5;
+}
+
+/* ===== Category chapter (expandable) ===== */
+.chapter{
+  position:relative;
+  padding:22px 0 18px 64px;
+  cursor:pointer;
+  border-bottom:0.5px solid rgba(184,150,12,0.22);
+}
+.chapter .init{
+  position:absolute;left:0;top:18px;
+  width:48px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-size:54px;font-weight:500;
+  color:#8B1A1A;line-height:0.85;text-align:center;
+  transition:color 0.3s;
+}
+.chapter .init::after{
+  content:'';display:block;
+  width:32px;height:0.5px;
+  background:#B8960C;margin:6px auto 0;
+}
+.chapter .name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:600;
+  color:#1C1410;line-height:1.1;
+}
+.chapter .latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#8B1A1A;margin-top:1px;
+}
+.chapter .desc{
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;line-height:1.5;
+  margin-top:5px;
+}
+.chapter .count{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#9A8670;letter-spacing:1.5px;text-transform:uppercase;
+  margin-top:8px;
+}
+.chapter .count .sep{color:#B8960C;opacity:0.6}
+.chapter .arrow{
+  position:absolute;right:0;top:50%;
+  transform:translateY(-50%) rotate(0deg);
+  font-family:'Playfair Display',serif;
+  font-size:18px;color:#B8960C;opacity:0.5;
+  transition:transform 0.3s;
+}
+.chapter.open .arrow{transform:translateY(-50%) rotate(90deg);opacity:0.8}
+
+/* Entries inside a chapter (hidden by default) */
+.entries{
+  display:none;
+  padding:0 0 8px 20px;
+  border-bottom:0.5px solid rgba(184,150,12,0.22);
+}
+.entries.open{display:block}
+.entry{
+  display:flex;align-items:baseline;
+  padding:11px 0;
+  cursor:pointer;
+  border-bottom:0.5px dotted rgba(184,150,12,0.3);
+  position:relative;
+}
+.entry:last-child{border-bottom:none}
+.entry .e-init{
+  flex:0 0 26px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-size:20px;font-weight:500;
+  color:rgba(139,26,26,0.5);
+  line-height:1;
+}
+.entry .e-body{flex:1;min-width:0}
+.entry .e-name{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-weight:500;
+  color:#1C1410;line-height:1.15;
+}
+.entry .e-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;
+  color:#9A8670;margin-top:1px;
+}
+.entry::after{
+  content:'›';position:absolute;
+  right:-4px;top:50%;transform:translateY(-55%);
+  color:#B8960C;font-family:'Playfair Display',serif;
+  font-size:16px;opacity:0.4;
+}
+
+.end{
+  text-align:center;margin:34px 0 14px;
+  color:#B8960C;font-family:'Cormorant Garamond',serif;
+  font-size:14px;letter-spacing:10px;opacity:0.45;
+}
+
+/* ===== Detail overlay ===== */
+.overlay{
+  display:none;position:fixed;
+  top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:100%;
+  background:#F2E8D0;z-index:30;overflow-y:auto;
+}
+.overlay.show{display:block}
+.overlay::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+
+.dh{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 26px;z-index:5;overflow:hidden;
+}
+.dh::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);pointer-events:none;
+}
+.dh::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);pointer-events:none;
+}
+.dh .back{
+  position:absolute;top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;letter-spacing:2px;text-transform:uppercase;
+  cursor:pointer;z-index:6;
+}
+.dh .cat{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.dh h2{
+  font-family:'Playfair Display',serif;
+  font-size:28px;font-weight:600;
+  color:#E8DFC9;text-align:center;
+  letter-spacing:1px;line-height:1.05;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.dh .sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;text-align:center;margin-top:4px;
+}
+.dh .h-rule{margin:14px 8px 0}
+
+.db{position:relative;z-index:2;padding:24px 28px 60px}
+.db .sec-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;letter-spacing:3px;text-transform:uppercase;
+  margin:22px 0 8px;
+}
+.db .sec-label:first-child{margin-top:0}
+.db p{
+  font-family:'EB Garamond',serif;
+  font-size:15px;color:#1C1410;
+  line-height:1.7;margin-bottom:14px;
+}
+.db p .dropcap{
+  float:left;
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-size:48px;font-weight:500;
+  color:#8B1A1A;line-height:0.85;
+  padding:6px 6px 0 0;
+}
+.db .scripture{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:1px;
+  margin-top:16px;
+  padding-top:12px;
+  border-top:0.5px solid rgba(184,150,12,0.35);
+}
+
+/* ===== Tab bar ===== */
+.tab-bar{
+  position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;z-index:20;
+}
+.tab-bar::before{
+  content:'';position:absolute;
+  top:22px;left:32px;right:32px;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-style:normal;font-weight:400;
+  line-height:1;color:#B8960C;opacity:0.75;
+}
+.tab.active{color:#8B1A1A}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
+</style>
+</head>
+<body>
+
+<div class="frame"></div>
+
+<header class="header">
+  <div class="h-feria">✠ &nbsp; Liber &nbsp; ✠</div>
+  <div class="h-title">Liber Referentiarum</div>
+  <div class="h-eng">Reference Library</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+  <div class="h-count">VII Capitula &nbsp;·&nbsp; XXXVII Articuli</div>
+</header>
+
+<main>
+
+<div class="intro">An encyclopædia of the faith — the calendar, the sacraments, the prayers, penance, devotions, and the sacred tongue.</div>
+
+<!-- I. Liturgical Calendar -->
+<div class="chapter" onclick="toggle(this)">
+  <div class="init">C</div>
+  <div class="name">Liturgical Calendar</div>
+  <div class="latin">Calendarium Liturgicum</div>
+  <div class="desc">The seasons, ranks, and feasts of the Roman Rite year.</div>
+  <div class="count">VII entries <span class="sep">·</span> Seasons, ranks, feasts</div>
+  <span class="arrow">›</span>
+</div>
+<div class="entries" id="e-cal">
+  <div class="entry" onclick="showDetail('cal-advent')"><div class="e-init">A</div><div class="e-body"><div class="e-name">Advent</div><div class="e-sub">Adventus Domini — Preparation for Christmas</div></div></div>
+  <div class="entry"><div class="e-init">C</div><div class="e-body"><div class="e-name">Christmastide</div><div class="e-sub">Tempus Nativitatis — From Vigil to Epiphany</div></div></div>
+  <div class="entry"><div class="e-init">L</div><div class="e-body"><div class="e-name">Lent</div><div class="e-sub">Quadragesima — Forty days of penance</div></div></div>
+  <div class="entry"><div class="e-init">H</div><div class="e-body"><div class="e-name">Holy Week</div><div class="e-sub">Hebdomada Sancta — The Paschal Triduum</div></div></div>
+  <div class="entry"><div class="e-init">E</div><div class="e-body"><div class="e-name">Eastertide</div><div class="e-sub">Tempus Paschale — Fifty days of Easter</div></div></div>
+  <div class="entry"><div class="e-init">O</div><div class="e-body"><div class="e-name">Ordinary Time</div><div class="e-sub">Tempus per Annum — After Pentecost</div></div></div>
+  <div class="entry"><div class="e-init">F</div><div class="e-body"><div class="e-name">Feast Ranks</div><div class="e-sub">Doubles, Semi-doubles, Simples, Octaves</div></div></div>
+</div>
+
+<!-- II. Mass & Sacraments -->
+<div class="chapter" onclick="toggle(this)">
+  <div class="init">M</div>
+  <div class="name">Mass & Sacraments</div>
+  <div class="latin">Missa et Sacramenta</div>
+  <div class="desc">The Holy Sacrifice of the Mass and the seven sacraments.</div>
+  <div class="count">IV entries <span class="sep">·</span> Mass, baptism, confirmation, orders</div>
+  <span class="arrow">›</span>
+</div>
+<div class="entries">
+  <div class="entry"><div class="e-init">M</div><div class="e-body"><div class="e-name">The Holy Mass</div><div class="e-sub">Sacrosanctum Missæ Sacrificium</div></div></div>
+  <div class="entry"><div class="e-init">B</div><div class="e-body"><div class="e-name">Baptism</div><div class="e-sub">Sacramentum Baptismi</div></div></div>
+  <div class="entry"><div class="e-init">C</div><div class="e-body"><div class="e-name">Confirmation</div><div class="e-sub">Sacramentum Confirmationis</div></div></div>
+  <div class="entry"><div class="e-init">H</div><div class="e-body"><div class="e-name">Holy Orders</div><div class="e-sub">Sacramentum Ordinis</div></div></div>
+</div>
+
+<!-- III. Prayers -->
+<div class="chapter" onclick="toggle(this)">
+  <div class="init">O</div>
+  <div class="name">Prayers</div>
+  <div class="latin">De Orationibus</div>
+  <div class="desc">The nature, types, and practice of Christian prayer.</div>
+  <div class="count">V entries <span class="sep">·</span> Vocal, mental, contemplative</div>
+  <span class="arrow">›</span>
+</div>
+<div class="entries">
+  <div class="entry"><div class="e-init">V</div><div class="e-body"><div class="e-name">Vocal Prayer</div><div class="e-sub">Oratio Vocalis — Speaking to God</div></div></div>
+  <div class="entry"><div class="e-init">M</div><div class="e-body"><div class="e-name">Mental Prayer</div><div class="e-sub">Oratio Mentalis — Meditation</div></div></div>
+  <div class="entry"><div class="e-init">C</div><div class="e-body"><div class="e-name">Contemplation</div><div class="e-sub">Contemplatio — Resting in God</div></div></div>
+  <div class="entry"><div class="e-init">L</div><div class="e-body"><div class="e-name">Lectio Divina</div><div class="e-sub">Sacred Reading of Scripture</div></div></div>
+  <div class="entry"><div class="e-init">R</div><div class="e-body"><div class="e-name">The Rosary</div><div class="e-sub">Sacratissimum Rosarium — History &amp; method</div></div></div>
+</div>
+
+<!-- IV. Devotions -->
+<div class="chapter" onclick="toggle(this)">
+  <div class="init">D</div>
+  <div class="name">Devotions</div>
+  <div class="latin">Devotiones</div>
+  <div class="desc">Traditional Catholic devotional practices and their origins.</div>
+  <div class="count">V entries <span class="sep">·</span> Sacred Heart, Adoration, Scapular</div>
+  <span class="arrow">›</span>
+</div>
+<div class="entries">
+  <div class="entry"><div class="e-init">S</div><div class="e-body"><div class="e-name">Sacred Heart</div><div class="e-sub">Sacratissimum Cor Iesu</div></div></div>
+  <div class="entry"><div class="e-init">A</div><div class="e-body"><div class="e-name">Eucharistic Adoration</div><div class="e-sub">Adoratio Eucharistica</div></div></div>
+  <div class="entry"><div class="e-init">S</div><div class="e-body"><div class="e-name">The Brown Scapular</div><div class="e-sub">Scapulare B. M. V. de Monte Carmelo</div></div></div>
+  <div class="entry"><div class="e-init">F</div><div class="e-body"><div class="e-name">First Fridays</div><div class="e-sub">Feriæ Sextæ Primæ — The Nine Fridays</div></div></div>
+  <div class="entry"><div class="e-init">F</div><div class="e-body"><div class="e-name">First Saturdays</div><div class="e-sub">Sabbata Prima — Fatima devotion</div></div></div>
+</div>
+
+<!-- V. Penance -->
+<div class="chapter" onclick="toggle(this)">
+  <div class="init">P</div>
+  <div class="name">Penance & Fasting</div>
+  <div class="latin">De Pænitentia et Ieiunio</div>
+  <div class="desc">The laws of fasting and abstinence under the 1917 and 1962 codes.</div>
+  <div class="count">IV entries <span class="sep">·</span> Fasting, abstinence, Ember Days</div>
+  <span class="arrow">›</span>
+</div>
+<div class="entries">
+  <div class="entry"><div class="e-init">F</div><div class="e-body"><div class="e-name">Fasting</div><div class="e-sub">Ieiunium — One meal and two collations</div></div></div>
+  <div class="entry"><div class="e-init">A</div><div class="e-body"><div class="e-name">Abstinence</div><div class="e-sub">Abstinentia — Flesh-meat prohibition</div></div></div>
+  <div class="entry"><div class="e-init">E</div><div class="e-body"><div class="e-name">Ember Days</div><div class="e-sub">Quattuor Anni Témpora</div></div></div>
+  <div class="entry"><div class="e-init">V</div><div class="e-body"><div class="e-name">Vigils</div><div class="e-sub">Vigiliæ — Eve-of-feast penance</div></div></div>
+</div>
+
+<!-- VI. Sacramentals -->
+<div class="chapter" onclick="toggle(this)">
+  <div class="init">S</div>
+  <div class="name">Sacramentals</div>
+  <div class="latin">De Sacramentalibus</div>
+  <div class="desc">Blessed objects, holy water, medals, and their proper use.</div>
+  <div class="count">VIII entries <span class="sep">·</span> Holy water, medals, blessings</div>
+  <span class="arrow">›</span>
+</div>
+<div class="entries">
+  <div class="entry"><div class="e-init">H</div><div class="e-body"><div class="e-name">Holy Water</div><div class="e-sub">Aqua Benedicta</div></div></div>
+  <div class="entry"><div class="e-init">C</div><div class="e-body"><div class="e-name">Crucifixes</div><div class="e-sub">Cruces et Crucifixi</div></div></div>
+  <div class="entry"><div class="e-init">R</div><div class="e-body"><div class="e-name">The Rosary</div><div class="e-sub">Corona Precatoria — The object itself</div></div></div>
+  <div class="entry"><div class="e-init">M</div><div class="e-body"><div class="e-name">Miraculous Medal</div><div class="e-sub">Numisma Miraculosum</div></div></div>
+  <div class="entry"><div class="e-init">C</div><div class="e-body"><div class="e-name">Candles</div><div class="e-sub">Candela Benedicta</div></div></div>
+  <div class="entry"><div class="e-init">I</div><div class="e-body"><div class="e-name">Incense</div><div class="e-sub">Thus — Liturgical use</div></div></div>
+  <div class="entry"><div class="e-init">B</div><div class="e-body"><div class="e-name">Blessings</div><div class="e-sub">Benedictiones — Types and effects</div></div></div>
+  <div class="entry"><div class="e-init">E</div><div class="e-body"><div class="e-name">Exorcisms</div><div class="e-sub">Exorcismi — Minor and major</div></div></div>
+</div>
+
+<!-- VII. Latin -->
+<div class="chapter" onclick="toggle(this)">
+  <div class="init">L</div>
+  <div class="name">Latin</div>
+  <div class="latin">De Lingua Latina Ecclesiastica</div>
+  <div class="desc">Ecclesiastical Latin pronunciation, grammar, and key vocabulary.</div>
+  <div class="count">IV entries <span class="sep">·</span> Pronunciation, grammar, vocab</div>
+  <span class="arrow">›</span>
+</div>
+<div class="entries">
+  <div class="entry"><div class="e-init">P</div><div class="e-body"><div class="e-name">Pronunciation</div><div class="e-sub">Pronuntiatio — Ecclesiastical vs. Classical</div></div></div>
+  <div class="entry"><div class="e-init">G</div><div class="e-body"><div class="e-name">Basic Grammar</div><div class="e-sub">Grammatica — Cases, declensions, conjugations</div></div></div>
+  <div class="entry"><div class="e-init">V</div><div class="e-body"><div class="e-name">Prayer Vocabulary</div><div class="e-sub">Vocabularium — 50 essential prayer words</div></div></div>
+  <div class="entry"><div class="e-init">A</div><div class="e-body"><div class="e-name">Abbreviations</div><div class="e-sub">Abbreviationes — V., R., S., P., etc.</div></div></div>
+</div>
+
+<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+
+</main>
+
+<!-- ===== Sample detail overlay (Advent) ===== -->
+<div class="overlay" id="o-cal-advent">
+  <div class="frame"></div>
+  <div class="dh">
+    <a class="back" onclick="hideDetail()">‹ &nbsp; Liber</a>
+    <div class="cat">✠ &nbsp; Calendarium &nbsp; ✠</div>
+    <h2>Advent</h2>
+    <div class="sub">Adventus Domini</div>
+    <div class="h-rule"><span class="glyph">✦</span></div>
+  </div>
+  <div class="db">
+    <div class="sec-label">Summary</div>
+    <p><span class="dropcap">A</span>dvent is the liturgical season of preparation for the Nativity of Our Lord Jesus Christ. It begins four Sundays before Christmas and ends at the Vigil of Christmas. It is a time of joyful expectation, penitential preparation, and spiritual renewal.</p>
+
+    <div class="sec-label">History</div>
+    <p>The observance of Advent dates to at least the fourth century in the Western Church. Originally a period of fasting comparable to Lent, the Council of Tours (567) prescribed a fast three times weekly from the feast of St. Martin (November 11) to Christmas.</p>
+
+    <div class="sec-label">Practice</div>
+    <p>The faithful are encouraged to prepare through increased prayer, fasting, almsgiving, and attendance at the Rorate Masses celebrated in the early morning by candlelight. The Advent wreath, with its four candles, marks the passing weeks.</p>
+
+    <div class="sec-label">Liturgical Notes</div>
+    <p>Violet vestments are worn. The Gloria is omitted. The organ is silent except to sustain singing. The third Sunday, Gaudete, permits rose vestments and the organ, signifying joy at the approaching feast.</p>
+
+    <div class="scripture">℟. &nbsp; Isaias 7:14 &nbsp;·&nbsp; "Ecce virgo concipiet, et pariet filium, et vocabitur nomen eius Emmanuel." &nbsp;·&nbsp; "Behold a virgin shall conceive, and bear a son, and his name shall be called Emmanuel."</div>
+  </div>
+</div>
+
+<script>
+function toggle(el){
+  el.classList.toggle('open');
+  var entries=el.nextElementSibling;
+  if(entries && entries.classList.contains('entries')){
+    entries.classList.toggle('open');
+  }
+}
+function showDetail(id){
+  var o=document.getElementById('o-'+id);
+  if(o)o.classList.add('show');
+  window.scrollTo(0,0);
+}
+function hideDetail(){
+  document.querySelectorAll('.overlay').forEach(function(o){o.classList.remove('show')});
+}
+</script>
+
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab active" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+</body>
+</html>
