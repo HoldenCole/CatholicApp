@@ -236,6 +236,154 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
 .psalm-block{margin:14px 0;padding:14px 16px;background:radial-gradient(ellipse at center, rgba(184,150,12,0.06), transparent 80%);border-top:0.5px solid rgba(184,150,12,0.35);border-bottom:0.5px solid rgba(184,150,12,0.35)}
 .psalm-block .psalm-label{font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center}
 
+/* Part section labels (between Office parts) */
+.part-rule{
+  display:flex;align-items:center;gap:14px;
+  margin:24px 0 8px;
+}
+.part-rule::before,.part-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.part-rule .name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.part-eng{
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#9A8670;
+  margin-top:-2px;margin-bottom:8px;
+  letter-spacing:0.5px;
+}
+
+/* Hymn block — italic verse with title */
+.hymn{
+  margin:6px 0 12px;
+  padding:0 6px;
+  text-align:center;
+}
+.hymn .htitle{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:15px;font-weight:600;
+  color:#8B1A1A;
+  margin-bottom:8px;
+}
+.hymn .hlat{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:14px;
+  color:#1C1410;
+  line-height:1.7;
+}
+.hymn .heng{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:12px;
+  color:#7A6A58;
+  line-height:1.5;
+  margin-top:6px;
+}
+
+/* Psalm verses */
+.psalm-verses .verse{
+  margin:6px 0;
+  padding:4px 0 4px 14px;
+  border-left:0.5px solid rgba(139,26,26,0.3);
+}
+.psalm-verses .verse .vlat{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:14px;
+  color:#1C1410;
+  line-height:1.6;
+}
+.psalm-verses .verse .veng{
+  font-family:'EB Garamond',serif;
+  font-style:italic;
+  font-size:12.5px;
+  color:#7A6A58;
+  line-height:1.55;
+  margin-top:2px;
+}
+
+/* Antiphon — small italic, set apart */
+.antiphon{
+  text-align:center;
+  margin:12px 0;
+  padding:8px 12px;
+  border-top:0.5px dotted rgba(139,26,26,0.3);
+  border-bottom:0.5px dotted rgba(139,26,26,0.3);
+}
+.antiphon .alabel{
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:4px;
+}
+.antiphon .alat{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:14px;
+  color:#1C1410;
+}
+.antiphon .aeng{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:11px;
+  color:#9A8670;
+  margin-top:2px;
+}
+
+/* Capitulum (short reading) */
+.capitulum{
+  margin:6px 0 12px;
+  padding:10px 14px;
+  background:rgba(184,150,12,0.04);
+}
+.capitulum .cref{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  text-align:center;
+  margin-bottom:6px;
+}
+.capitulum .clat{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:14px;
+  color:#1C1410;
+  line-height:1.6;
+}
+.capitulum .ceng{
+  font-family:'EB Garamond',serif;
+  font-style:italic;
+  font-size:12.5px;
+  color:#7A6A58;
+  line-height:1.55;
+  margin-top:4px;
+}
+
+/* Pater Noster marker — minimal */
+.pater-marker{
+  text-align:center;
+  margin:14px 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:600;
+  color:#9A8670;
+  letter-spacing:2px;
+}
+.pater-marker::before,.pater-marker::after{content:'· ';color:#B8960C}
+
 .end{text-align:center;margin:34px 0 14px;color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:10px;opacity:0.45}
 
 /* ===== Tab bar ===== */
@@ -299,63 +447,161 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
 <script>
 // ===== Eight canonical hours with sample content =====
 // Each hour has approximate canonical clock time, name, glyph, and sample prayer content
+// Common opening V/R for the day hours
+var DAY_OPENING={lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."};
+var DAY_RESPONSE={lat:"Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",eng:"O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."};
+var COLLECT_GENERIC={lat:"Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",eng:"O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."};
+
 var HOURS={
   matutinum:{name:"Matutínum",eng:"Matins",time:"in the night",hour:3,minute:0,glyph:"M",order:1,
-    intro:"The night Office — historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels.",
-    invitatory:{lat:"Dómine, lábia mea apéries.",eng:"O Lord, Thou wilt open my lips."},
-    response:{lat:"Et os meum annuntiábit laudem tuam.",eng:"And my mouth shall declare Thy praise."},
-    psalm:"Veníte, exsultémus Dómino, jubilémus Deo salutári nostro: præoccupémus fáciem ejus in confessióne, et in psalmis jubilémus ei.",
-    psalmEng:"Come, let us praise the Lord with joy, let us joyfully sing to God our Saviour. Let us come before His presence with thanksgiving, and make a joyful noise to Him with psalms.",
-    psalmRef:"Psalm 94 — Invitatorium"},
+    intro:"The night Office — historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels, the longest and most ancient of the hours.",
+    parts:[
+      {type:"vr",label:"Versicle & Response",lat:"Dómine, lábia mea apéries.",eng:"O Lord, Thou wilt open my lips.",latR:"Et os meum annuntiábit laudem tuam.",engR:"And my mouth shall declare Thy praise."},
+      {type:"hymn",label:"Hymn",title:"Æterne rerum Cónditor",lat:"Ætérne rerum Cónditor,<br>noctem diémque qui regis,<br>et témporum das témpora,<br>ut álleves fastídium.",eng:"Eternal Maker of all things,<br>Who governest both night and day,<br>and grantest us the changing hours<br>to ease the labours of our way."},
+      {type:"antiphon",label:"Invitatory Antiphon",lat:"Veníte, adorémus Dóminum, quóniam ipse fecit nos.",eng:"Come, let us adore the Lord, for He hath made us."},
+      {type:"psalm",label:"Psalm 94 — Venite",ref:"Invitatorium",verses:[
+        {lat:"Veníte, exsultémus Dómino: jubilémus Deo, salutári nostro:",eng:"Come, let us praise the Lord with joy: let us joyfully sing to God our Saviour."},
+        {lat:"Præoccupémus fáciem ejus in confessióne, et in psalmis jubilémus ei.",eng:"Let us come before His presence with thanksgiving, and make a joyful noise to Him with psalms."},
+        {lat:"Quóniam Deus magnus Dóminus, et Rex magnus super omnes deos.",eng:"For the Lord is a great God, and a great King above all gods."},
+        {lat:"Veníte, adorémus, et procidámus ante Deum: plorémus coram Dómino, qui fecit nos.",eng:"Come, let us adore and fall down: and weep before the Lord that made us."}
+      ]},
+      {type:"capitulum",label:"Capitulum",ref:"Jeremiah 14:9",lat:"Tu autem in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine Deus noster.",eng:"But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God."},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:"Omnípotens sempitérne Deus, qui vivórum domináris simul et mortuórum, omniúmque miseréris, quos tuos fide et ópere futúros esse prænóscis: te súpplices exorámus. Per Dóminum nostrum Iesum Christum. Amen.",eng:"Almighty, everlasting God, who hast dominion over both the living and the dead, and hast mercy on all whom Thou knowest will be Thine by faith and good works: we humbly beseech Thee. Through our Lord Jesus Christ. Amen."},
+      {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
+    ]},
   laudes:{name:"Laudes",eng:"Lauds",time:"at daybreak",hour:6,minute:0,glyph:"L",order:2,
-    intro:"The morning praise — the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary.",
-    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
-    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
-    psalm:"Benedíctus Dóminus Deus Israël, quia visitávit et fecit redemptiónem plebis suæ, et eréxit cornu salútis nobis in domo David púeri sui.",
-    psalmEng:"Blessed be the Lord God of Israel, because He hath visited and wrought the redemption of His people, and hath raised up an horn of salvation to us in the house of David His servant.",
-    psalmRef:"Canticum Zachariæ — Lk 1:68–79"},
+    intro:"The morning praise — the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary, sung as the sun rises.",
+    parts:[
+      {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
+      {type:"hymn",label:"Hymn",title:"Splendor patérnæ glóriæ",lat:"Splendor patérnæ glóriæ,<br>de luce lucem próferens,<br>lux lucis et fons lúminis,<br>diem dies illúminans.",eng:"O splendour of God's glory bright,<br>O Thou that bringest light from light,<br>O Light of light, light's living spring,<br>O Day, all days illumining."},
+      {type:"antiphon",label:"Antiphon",lat:"Allelúja, allelúja, allelúja.",eng:"Alleluia, alleluia, alleluia."},
+      {type:"psalm",label:"Psalm 62 — Deus, Deus meus",ref:"Pro mane",verses:[
+        {lat:"Deus, Deus meus, ad te de luce vígilo.",eng:"O God, my God, to Thee do I watch at break of day."},
+        {lat:"Sitívit in te ánima mea, quam multiplíciter tibi caro mea.",eng:"For Thee my soul hath thirsted; for Thee my flesh, O how many ways!"},
+        {lat:"Sic in sancto appárui tibi, ut vidérem virtútem tuam et glóriam tuam.",eng:"So in the sanctuary have I come before Thee, to see Thy power and Thy glory."},
+        {lat:"Quóniam mélior est misericórdia tua super vitas: lábia mea laudábunt te.",eng:"For Thy mercy is better than lives: thee my lips shall praise."}
+      ]},
+      {type:"capitulum",label:"Capitulum",ref:"Romans 13:12",lat:"Nox præcéssit, dies autem appropinquávit. Abjiciámus ergo ópera tenebrárum, et induámur arma lucis.",eng:"The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light."},
+      {type:"canticle",label:"Canticum Zachariæ — Benedictus",ref:"Lk 1:68–75",verses:[
+        {lat:"Benedíctus Dóminus Deus Israël, quia visitávit et fecit redemptiónem plebis suæ:",eng:"Blessed be the Lord God of Israel, because He hath visited and wrought the redemption of His people:"},
+        {lat:"Et eréxit cornu salútis nobis in domo David púeri sui.",eng:"And hath raised up an horn of salvation to us, in the house of David His servant."},
+        {lat:"Sicut locútus est per os sanctórum, qui a sǽculo sunt, prophetárum ejus:",eng:"As He spoke by the mouth of His holy prophets, who are from the beginning:"},
+        {lat:"Salútem ex inimícis nostris, et de manu ómnium qui odérunt nos.",eng:"Salvation from our enemies, and from the hand of all that hate us."}
+      ]},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
+      {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
+    ]},
   prima:{name:"Prima",eng:"Prime",time:"at the first hour",hour:6,minute:30,glyph:"I",order:3,
     intro:"The first daylight hour. A short hour to sanctify the day's work and offer the day's actions to God.",
-    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
-    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
-    psalm:"Iam lucis orto sídere, Deum precémur súpplices, ut in diúrnis áctibus nos servet a nocéntibus.",
-    psalmEng:"Now in the sun's new dawning ray, lowly of heart we Thee implore: that in our every deed this day Thou keep us free from evil's power.",
-    psalmRef:"Hymnus — Iam lucis orto sidere"},
+    parts:[
+      {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
+      {type:"hymn",label:"Hymn",title:"Iam lucis orto sídere",lat:"Iam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.",eng:"Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power."},
+      {type:"antiphon",label:"Antiphon",lat:"Allelúja, allelúja, allelúja.",eng:"Alleluia, alleluia, alleluia."},
+      {type:"psalm",label:"Psalm 53 — Deus, in nómine tuo",ref:"Pro Prima",verses:[
+        {lat:"Deus, in nómine tuo salvum me fac: et in virtúte tua júdica me.",eng:"Save me, O God, by Thy name, and judge me in Thy strength."},
+        {lat:"Deus, exáudi oratiónem meam: áuribus pércipe verba oris mei.",eng:"O God, hear my prayer: give ear to the words of my mouth."},
+        {lat:"Ecce enim Deus ádjuvat me: et Dóminus suscéptor est ánimæ meæ.",eng:"For behold God is my helper: and the Lord is the protector of my soul."}
+      ]},
+      {type:"capitulum",label:"Capitulum",ref:"1 Tim 1:17",lat:"Regi sæculórum immortáli et invisíbili, soli Deo honor et glória in sǽcula sæculórum. Amen.",eng:"To the King of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen."},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
+      {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
+    ]},
   tertia:{name:"Tértia",eng:"Terce",time:"at the third hour",hour:9,minute:0,glyph:"III",order:4,
     intro:"The third hour — when the Holy Ghost descended upon the Apostles at Pentecost. Pray for the gifts of the Holy Spirit.",
-    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
-    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
-    psalm:"Nunc, Sancte, nobis Spíritus, unum Patri cum Fílio, dignáre promptus íngeri nostro refúsus péctori.",
-    psalmEng:"Come, Holy Ghost, who ever One reignest with Father and with Son, it is the hour, our souls possess with Thy full flood of holiness.",
-    psalmRef:"Hymnus — Nunc Sancte nobis Spiritus"},
+    parts:[
+      {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
+      {type:"hymn",label:"Hymn",title:"Nunc, Sancte, nobis Spíritus",lat:"Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.",eng:"Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness."},
+      {type:"antiphon",label:"Antiphon",lat:"Allelúja, allelúja, allelúja.",eng:"Alleluia, alleluia, alleluia."},
+      {type:"psalm",label:"Psalm 118 — Beáti immaculáti",ref:"Pro Tertia",verses:[
+        {lat:"Beáti immaculáti in via, qui ámbulant in lege Dómini.",eng:"Blessed are the undefiled in the way, who walk in the law of the Lord."},
+        {lat:"Beáti qui scrutántur testimónia ejus: in toto corde exquírunt eum.",eng:"Blessed are they that search His testimonies: that seek Him with their whole heart."},
+        {lat:"Non enim qui operántur iniquitátem, in viis ejus ambulavérunt.",eng:"For they that work iniquity, have not walked in His ways."}
+      ]},
+      {type:"capitulum",label:"Capitulum",ref:"Jer 17:14",lat:"Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",eng:"Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
+      {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
+    ]},
   sexta:{name:"Sexta",eng:"Sext",time:"at midday",hour:12,minute:0,glyph:"VI",order:5,
     intro:"The sixth hour — noon. The hour at which Our Lord was nailed to the Cross. A pause in the day's work to remember His sacrifice.",
-    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
-    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
-    psalm:"Rector potens, verax Deus, qui témperas rerum vices, splendóre mane illúminas, et ígnibus merídiem.",
-    psalmEng:"O God of truth, O Lord of might, who orderest time and change aright, who sendest the early morning ray, and lightest with splendour all the day.",
-    psalmRef:"Hymnus — Rector potens, verax Deus"},
+    parts:[
+      {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
+      {type:"hymn",label:"Hymn",title:"Rector potens, verax Deus",lat:"Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.",eng:"O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day."},
+      {type:"antiphon",label:"Antiphon",lat:"Allelúja, allelúja, allelúja.",eng:"Alleluia, alleluia, alleluia."},
+      {type:"psalm",label:"Psalm 122 — Ad te levávi óculos meos",ref:"Pro Sexta",verses:[
+        {lat:"Ad te levávi óculos meos, qui hábitas in cælis.",eng:"To Thee have I lifted up my eyes, who dwellest in heaven."},
+        {lat:"Ecce sicut óculi servórum in mánibus dominórum suórum, ita óculi nostri ad Dóminum Deum nostrum.",eng:"Behold as the eyes of servants are on the hands of their masters, so are our eyes unto the Lord our God."},
+        {lat:"Miserére nostri, Dómine, miserére nostri.",eng:"Have mercy on us, O Lord, have mercy on us."}
+      ]},
+      {type:"capitulum",label:"Capitulum",ref:"Gal 6:2",lat:"Alter altérius ónera portáte, et sic adimplébitis legem Christi.",eng:"Bear ye one another's burdens; and so you shall fulfil the law of Christ."},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
+      {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
+    ]},
   nona:{name:"Nona",eng:"None",time:"at the ninth hour",hour:15,minute:0,glyph:"IX",order:6,
     intro:"The ninth hour — three in the afternoon. The hour at which Our Lord died upon the Cross. Adore Him with the centurion: 'Truly this was the Son of God.'",
-    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
-    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
-    psalm:"Rerum Deus tenax vigor, immótus in te pérmanens, lucis diúrnæ témpora succéssibus detérminans.",
-    psalmEng:"O strength and stay upholding all creation, who ever dost Thyself unmoved abide, yet day by day the light in due gradation from hour to hour through all its changes guide.",
-    psalmRef:"Hymnus — Rerum Deus tenax vigor"},
+    parts:[
+      {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
+      {type:"hymn",label:"Hymn",title:"Rerum Deus tenax vigor",lat:"Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.",eng:"O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide."},
+      {type:"antiphon",label:"Antiphon",lat:"Allelúja, allelúja, allelúja.",eng:"Alleluia, alleluia, alleluia."},
+      {type:"psalm",label:"Psalm 125 — In converténdo",ref:"Pro Nona",verses:[
+        {lat:"In converténdo Dóminus captivitátem Sion: facti sumus sicut consoláti.",eng:"When the Lord brought back the captivity of Sion, we became like men comforted."},
+        {lat:"Tunc replétum est gáudio os nostrum: et lingua nostra exsultatióne.",eng:"Then was our mouth filled with gladness; and our tongue with joy."},
+        {lat:"Magnificávit Dóminus fácere nobíscum: facti sumus lætántes.",eng:"The Lord hath done great things for us: we are become joyful."}
+      ]},
+      {type:"capitulum",label:"Capitulum",ref:"Deut 4:31",lat:"Quia Deus miséricors Dóminus Deus tuus est: non dimíttet te, nec omníno discoóperit, neque obliviscétur testaménti, in quo jurávit pátribus tuis.",eng:"For the Lord thy God is a merciful God: He will not leave thee, nor altogether destroy thee, nor forget the covenant by which He swore to thy fathers."},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
+      {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
+    ]},
   vesperae:{name:"Vésperæ",eng:"Vespers",time:"at sunset",hour:18,minute:0,glyph:"V",order:7,
-    intro:"The evening hour — when the sun sets and the lamps are lit. The Church sings the Magnificat, Our Lady's canticle of praise.",
-    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
-    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
-    psalm:"Magníficat ánima mea Dóminum: et exsultávit spíritus meus in Deo salutári meo. Quia respéxit humilitátem ancíllæ suæ: ecce enim ex hoc beátam me dicent omnes generatiónes.",
-    psalmEng:"My soul doth magnify the Lord: and my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed.",
-    psalmRef:"Canticum Mariæ — Lk 1:46–55"},
+    intro:"The evening hour — when the sun sets and the lamps are lit. The Church sings the Magnificat, Our Lady's canticle of praise, the second great hinge-hour of the day.",
+    parts:[
+      {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
+      {type:"hymn",label:"Hymn",title:"Lucis Creátor óptime",lat:"Lucis Creátor óptime,<br>lucem diérum próferens,<br>primórdiis lucis novæ,<br>mundi parans oríginem.",eng:"O blest Creator of the light,<br>who mak'st the day with radiance bright,<br>and o'er the forming world didst call<br>the light from chaos first of all."},
+      {type:"antiphon",label:"Antiphon",lat:"Dirigátur, Dómine, orátio mea, sicut incénsum in conspéctu tuo.",eng:"Let my prayer be directed, O Lord, as incense in Thy sight."},
+      {type:"psalm",label:"Psalm 109 — Dixit Dóminus",ref:"Vesperæ Dominicæ",verses:[
+        {lat:"Dixit Dóminus Dómino meo: Sede a dextris meis.",eng:"The Lord said to my Lord: Sit Thou at my right hand."},
+        {lat:"Donec ponam inimícos tuos, scabéllum pedum tuórum.",eng:"Until I make Thy enemies Thy footstool."},
+        {lat:"Virgam virtútis tuæ emíttet Dóminus ex Sion: domináre in médio inimicórum tuórum.",eng:"The Lord will send forth the sceptre of Thy power out of Sion: rule Thou in the midst of Thy enemies."}
+      ]},
+      {type:"capitulum",label:"Capitulum",ref:"2 Cor 1:3–4",lat:"Benedíctus Deus, et Pater Dómini nostri Iesu Christi, Pater misericordiárum, et Deus totíus consolatiónis, qui consolátur nos in omni tribulatióne nostra.",eng:"Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort, who comforteth us in all our tribulation."},
+      {type:"canticle",label:"Canticum Mariæ — Magnificat",ref:"Lk 1:46–55",verses:[
+        {lat:"Magníficat ánima mea Dóminum:",eng:"My soul doth magnify the Lord:"},
+        {lat:"Et exsultávit spíritus meus in Deo salutári meo.",eng:"And my spirit hath rejoiced in God my Saviour."},
+        {lat:"Quia respéxit humilitátem ancíllæ suæ: ecce enim ex hoc beátam me dicent omnes generatiónes.",eng:"Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed."},
+        {lat:"Quia fecit mihi magna qui potens est: et sanctum nomen ejus.",eng:"Because He that is mighty hath done great things to me: and holy is His name."},
+        {lat:"Et misericórdia ejus a progénie in progénies timéntibus eum.",eng:"And His mercy is from generation unto generations, to them that fear Him."}
+      ]},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
+      {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
+    ]},
   completorium:{name:"Completórium",eng:"Compline",time:"before sleep",hour:21,minute:0,glyph:"C",order:8,
-    intro:"The night prayer — the Church's last word before sleep. We commend our souls to God and ask protection from the terrors of the night.",
-    invitatory:{lat:"Iube, dómne, benedícere.",eng:"Pray, sir, a blessing."},
-    response:{lat:"Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. Amen.",eng:"May the almighty Lord grant us a quiet night and a perfect end. Amen."},
-    psalm:"In manus tuas, Dómine, comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",
-    psalmEng:"Into Thy hands, O Lord, I commend my spirit: Thou hast redeemed me, O Lord, the God of truth.",
-    psalmRef:"Psalm 30:6 — Nunc Dimittis approach"}
+    intro:"The night prayer — the Church's last word before sleep. We commend our souls to God and ask protection from the terrors of the night. Compline ends with the Salve Regina or another Marian antiphon according to the season.",
+    parts:[
+      {type:"vr",label:"Blessing",lat:"Iube, dómne, benedícere.",eng:"Pray, sir, a blessing.",latR:"Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. Amen.",engR:"May the almighty Lord grant us a quiet night and a perfect end. Amen."},
+      {type:"vr",label:"Examination",lat:"Frátres: sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret.",eng:"Brethren: be sober and watch; for your adversary the devil, as a roaring lion, goeth about seeking whom he may devour.",latR:"Tu autem, Dómine, miserére nobis. Deo grátias.",engR:"But Thou, O Lord, have mercy on us. Thanks be to God."},
+      {type:"hymn",label:"Hymn",title:"Te lucis ante términum",lat:"Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.",eng:"To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now."},
+      {type:"antiphon",label:"Antiphon",lat:"Miserére mihi, Dómine, et exáudi oratiónem meam.",eng:"Have mercy on me, O Lord, and hear my prayer."},
+      {type:"psalm",label:"Psalm 30 — In te, Dómine, sperávi",ref:"Pro Completorio",verses:[
+        {lat:"In te, Dómine, sperávi, non confúndar in ætérnum: in justítia tua líbera me.",eng:"In Thee, O Lord, have I hoped, let me never be confounded: deliver me in Thy justice."},
+        {lat:"Inclína ad me aurem tuam, accélera ut éruas me.",eng:"Bow down Thy ear to me: make haste to deliver me."},
+        {lat:"In manus tuas comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",eng:"Into Thy hands I commend my spirit: Thou hast redeemed me, O Lord, the God of truth."}
+      ]},
+      {type:"canticle",label:"Canticum Simeónis — Nunc Dimittis",ref:"Lk 2:29–32",verses:[
+        {lat:"Nunc dimíttis servum tuum, Dómine, secúndum verbum tuum in pace:",eng:"Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace:"},
+        {lat:"Quia vidérunt óculi mei salutáre tuum,",eng:"Because my eyes have seen Thy salvation,"},
+        {lat:"Quod parásti ante fáciem ómnium populórum:",eng:"Which Thou hast prepared before the face of all peoples:"},
+        {lat:"Lumen ad revelatiónem géntium, et glóriam plebis tuæ Israël.",eng:"A light to the revelation of the Gentiles, and the glory of Thy people Israel."}
+      ]},
+      {type:"pater"},
+      {type:"collect",label:"Collect",lat:"Vísita, quǽsumus, Dómine, habitatiónem istam, et omnes insídias inimíci ab ea longe repélle: Angeli tui sancti hábitent in ea, qui nos in pace custódiant. Per Dóminum nostrum Iesum Christum. Amen.",eng:"Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy: let Thy holy Angels dwell herein, to preserve us in peace. Through our Lord Jesus Christ. Amen."},
+      {type:"closing",label:"Marian Antiphon",lat:"Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve.",eng:"Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope, hail."}
+    ]}
 };
 
 var HOUR_KEYS=['matutinum','laudes','prima','tertia','sexta','nona','vesperae','completorium'];
@@ -442,6 +688,78 @@ function highlightCurrent(){
   }
 }
 
+// ===== Render a single Office part =====
+function renderPart(p){
+  switch(p.type){
+    case 'vr':
+      return '<div class="part-rule"><span class="name">'+escapeHtml(p.label||'Versicle &amp; Response')+'</span></div>'+
+        '<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℣.</span>'+escapeHtml(p.lat)+'</div>'+
+          '<div class="eng"><span class="mark">℣.</span>'+escapeHtml(p.eng)+'</div>'+
+        '</div>'+
+        '<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℟.</span>'+escapeHtml(p.latR)+'</div>'+
+          '<div class="eng"><span class="mark">℟.</span>'+escapeHtml(p.engR)+'</div>'+
+        '</div>';
+    case 'hymn':
+      return '<div class="part-rule"><span class="name">Hymnus</span></div>'+
+        '<div class="part-eng">'+escapeHtml(p.label||'Hymn')+'</div>'+
+        '<div class="hymn">'+
+          '<div class="htitle">'+escapeHtml(p.title)+'</div>'+
+          '<div class="hlat">'+p.lat+'</div>'+
+          '<div class="heng">'+p.eng+'</div>'+
+        '</div>';
+    case 'antiphon':
+      return '<div class="antiphon">'+
+        '<div class="alabel">Antiphona</div>'+
+        '<div class="alat">'+escapeHtml(p.lat)+'</div>'+
+        '<div class="aeng">'+escapeHtml(p.eng)+'</div>'+
+      '</div>';
+    case 'psalm':
+      var html='<div class="part-rule"><span class="name">Psalmus</span></div>'+
+        '<div class="part-eng">'+escapeHtml(p.label)+(p.ref?' · '+escapeHtml(p.ref):'')+'</div>'+
+        '<div class="psalm-verses">';
+      p.verses.forEach(function(v){
+        html+='<div class="verse"><div class="vlat">'+escapeHtml(v.lat)+'</div><div class="veng">'+escapeHtml(v.eng)+'</div></div>';
+      });
+      html+='</div>';
+      return html;
+    case 'capitulum':
+      return '<div class="part-rule"><span class="name">Capítulum</span></div>'+
+        '<div class="part-eng">Short Reading</div>'+
+        '<div class="capitulum">'+
+          '<div class="cref">'+escapeHtml(p.ref)+'</div>'+
+          '<div class="clat">'+escapeHtml(p.lat)+'</div>'+
+          '<div class="ceng">'+escapeHtml(p.eng)+'</div>'+
+        '</div>';
+    case 'canticle':
+      var ch='<div class="part-rule"><span class="name">Cánticum</span></div>'+
+        '<div class="part-eng">'+escapeHtml(p.label)+(p.ref?' · '+escapeHtml(p.ref):'')+'</div>'+
+        '<div class="psalm-verses">';
+      p.verses.forEach(function(v){
+        ch+='<div class="verse"><div class="vlat">'+escapeHtml(v.lat)+'</div><div class="veng">'+escapeHtml(v.eng)+'</div></div>';
+      });
+      ch+='</div>';
+      return ch;
+    case 'pater':
+      return '<div class="pater-marker">Pater Noster &nbsp; · &nbsp; Ave María (sub silentio)</div>';
+    case 'collect':
+      return '<div class="part-rule"><span class="name">Oratio</span></div>'+
+        '<div class="part-eng">Collect</div>'+
+        '<div class="bilingual">'+
+          '<div class="lat">'+escapeHtml(p.lat)+'</div>'+
+          '<div class="eng">'+escapeHtml(p.eng)+'</div>'+
+        '</div>';
+    case 'closing':
+      return '<div class="part-rule"><span class="name">'+escapeHtml(p.label||'Conclusio')+'</span></div>'+
+        '<div class="bilingual">'+
+          '<div class="lat">'+escapeHtml(p.lat)+'</div>'+
+          '<div class="eng">'+escapeHtml(p.eng)+'</div>'+
+        '</div>';
+  }
+  return '';
+}
+
 // ===== Hour overlay =====
 function showHour(key){
   var h=HOURS[key];
@@ -451,26 +769,11 @@ function showHour(key){
   document.getElementById('h-eng').textContent=h.eng;
   document.getElementById('h-time').textContent=h.time;
   var body=document.getElementById('h-body');
-  body.innerHTML=
-    '<div class="sec-label">Introit · Opening</div>'+
-    '<p style="font-family:\'EB Garamond\',serif;font-size:14px;color:#1C1410;line-height:1.65;font-style:italic;margin-bottom:14px"><span style="float:left;font-family:\'Playfair Display\',serif;font-size:46px;font-weight:500;color:#8B1A1A;line-height:0.85;padding:6px 6px 0 0">'+h.intro.charAt(0)+'</span>'+escapeHtml(h.intro.slice(1))+'</p>'+
-    '<div class="sec-label">Versicle &amp; Response</div>'+
-    '<div class="bilingual">'+
-      '<div class="lat"><span class="mark">℣.</span>'+escapeHtml(h.invitatory.lat)+'</div>'+
-      '<div class="eng"><span class="mark">℣.</span>'+escapeHtml(h.invitatory.eng)+'</div>'+
-    '</div>'+
-    '<div class="bilingual">'+
-      '<div class="lat"><span class="mark">℟.</span>'+escapeHtml(h.response.lat)+'</div>'+
-      '<div class="eng"><span class="mark">℟.</span>'+escapeHtml(h.response.eng)+'</div>'+
-    '</div>'+
-    '<div class="psalm-block">'+
-      '<div class="psalm-label">'+escapeHtml(h.psalmRef)+'</div>'+
-      '<div class="bilingual">'+
-        '<div class="lat">'+escapeHtml(h.psalm)+'</div>'+
-        '<div class="eng">'+escapeHtml(h.psalmEng)+'</div>'+
-      '</div>'+
-    '</div>'+
-    '<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>';
+  var html=
+    '<p style="font-family:\'EB Garamond\',serif;font-size:14px;color:#1C1410;line-height:1.65;font-style:italic;margin-bottom:8px"><span style="float:left;font-family:\'Playfair Display\',serif;font-size:46px;font-weight:500;color:#8B1A1A;line-height:0.85;padding:6px 6px 0 0">'+h.intro.charAt(0)+'</span>'+escapeHtml(h.intro.slice(1))+'</p>';
+  (h.parts||[]).forEach(function(p){html+=renderPart(p)});
+  html+='<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>';
+  body.innerHTML=html;
   document.getElementById('o-hour').classList.add('show');
   window.scrollTo(0,0);
 }
