@@ -520,7 +520,7 @@ var DAY_RESPONSE={lat:"Dómine, ad adjuvándum me festína. Glória Patri, et F�
 var COLLECT_GENERIC={lat:"Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",eng:"O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."};
 
 var HOURS={
-  matutinum:{name:"Matutínum",eng:"Matins",time:"in the night",hour:3,minute:0,glyph:"M",order:1,
+  matutinum:{name:"Matutínum",eng:"Matins",time:"at midnight",hour:0,minute:0,glyph:"M",order:1,
     intro:"The night Office — historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels, the longest and most ancient of the hours.",
     parts:[
       {type:"vr",label:"Versicle & Response",lat:"Dómine, lábia mea apéries.",eng:"O Lord, Thou wilt open my lips.",latR:"Et os meum annuntiábit laudem tuam.",engR:"And my mouth shall declare Thy praise."},
@@ -551,7 +551,7 @@ var HOURS={
       {type:"collect",label:"Collect",lat:"Omnípotens sempitérne Deus, qui vivórum domináris simul et mortuórum, omniúmque miseréris, quos tuos fide et ópere futúros esse prænóscis: te súpplices exorámus. Per Dóminum nostrum Iesum Christum. Amen.",eng:"Almighty, everlasting God, who hast dominion over both the living and the dead, and hast mercy on all whom Thou knowest will be Thine by faith and good works: we humbly beseech Thee. Through our Lord Jesus Christ. Amen."},
       {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
     ]},
-  laudes:{name:"Laudes",eng:"Lauds",time:"at daybreak",hour:5,minute:0,glyph:"L",order:2,
+  laudes:{name:"Laudes",eng:"Lauds",time:"before dawn",hour:3,minute:0,glyph:"L",order:2,
     intro:"The morning praise — the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary, sung as the sun rises.",
     parts:[
       {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
@@ -574,7 +574,7 @@ var HOURS={
       {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
       {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
     ]},
-  prima:{name:"Prima",eng:"Prime",time:"at the first hour",hour:7,minute:0,glyph:"I",order:3,
+  prima:{name:"Prima",eng:"Prime",time:"at the first hour of daylight",hour:6,minute:0,glyph:"I",order:3,
     intro:"The first daylight hour. A short hour to sanctify the day's work and offer the day's actions to God.",
     parts:[
       {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
