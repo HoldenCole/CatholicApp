@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ad Altare Dei — Officium Divinum</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px,11px 11px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);z-index:3;
+}
+.frame::before{content:'';position:absolute;inset:3px;border:0.5px solid rgba(184,150,12,0.18)}
+
+/* Dark walnut header */
+.header{
+  position:relative;
+  background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 26px;z-index:5;overflow:hidden;
+}
+.header::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
+.header::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
+.h-back{position:absolute;top:60px;left:24px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;text-decoration:none;z-index:6}
+.h-feria{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
+.h-title{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.h-eng{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 0}
+.h-rule::before,.h-rule::after{content:'';flex:1;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent)}
+.h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+main{position:relative;z-index:2;padding:20px 28px 40px}
+.intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#7A6A58;margin:0 12px 16px;line-height:1.5}
+
+/* ===== 24-hour canonical clock dial ===== */
+.dial-wrap{
+  position:relative;
+  width:340px;height:340px;
+  margin:30px auto 24px;
+}
+.dial-ring{
+  position:absolute;inset:0;
+  border-radius:50%;
+  border:0.5px solid rgba(184,150,12,0.5);
+}
+.dial-ring::before{
+  content:'';position:absolute;inset:6px;border-radius:50%;
+  border:0.5px solid rgba(184,150,12,0.25);
+}
+.dial-ring::after{
+  content:'';position:absolute;inset:50px;border-radius:50%;
+  border:0.5px dashed rgba(139,26,26,0.18);
+}
+
+/* 24 tiny tick marks around the outer ring */
+.tick{
+  position:absolute;
+  left:50%;top:0;
+  width:1px;height:8px;
+  background:rgba(184,150,12,0.4);
+  transform-origin:center 170px;
+  margin-left:-0.5px;
+}
+.tick.major{height:14px;background:rgba(139,26,26,0.55);width:1.5px;margin-left:-0.75px}
+
+/* Center cross — the still point */
+.dial-center{
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:120px;text-align:center;
+}
+.dial-center .clock-time{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+.dial-center .clock-roman{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:42px;font-weight:600;
+  color:#8B1A1A;
+  line-height:0.95;
+  margin:4px 0 2px;
+}
+.dial-center .clock-cross{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  color:#B8960C;
+  margin:6px 0 2px;
+}
+.dial-center .now-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* Hour nodes — positioned absolutely with --angle CSS variable */
+.hour{
+  position:absolute;
+  left:50%;top:50%;
+  width:0;height:0;
+  cursor:pointer;
+}
+.hour .node{
+  position:absolute;
+  left:0;top:0;
+  width:48px;height:48px;
+  margin-left:-24px;margin-top:-24px;
+  border-radius:50%;
+  background:#F2E8D0;
+  border:0.5px solid rgba(184,150,12,0.55);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  transition:all 0.3s;
+}
+.hour:hover .node{background:rgba(139,26,26,0.06);border-color:rgba(139,26,26,0.55)}
+.hour.now .node{
+  background:rgba(184,150,12,0.12);
+  border-color:#B8960C;
+  border-width:1px;
+  box-shadow:0 0 0 3px rgba(184,150,12,0.18),0 0 24px rgba(184,150,12,0.4);
+  animation:hourGlow 2.4s ease-in-out infinite;
+}
+@keyframes hourGlow{
+  0%,100%{box-shadow:0 0 0 3px rgba(184,150,12,0.18),0 0 24px rgba(184,150,12,0.4)}
+  50%{box-shadow:0 0 0 4px rgba(184,150,12,0.28),0 0 32px rgba(184,150,12,0.6)}
+}
+.hour .h-glyph{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:18px;font-weight:600;
+  color:#8B1A1A;
+  line-height:1;
+}
+.hour .h-time{
+  font-family:'Cormorant Garamond',serif;
+  font-size:8px;font-weight:600;font-style:italic;
+  color:#9A8670;
+  letter-spacing:0.5px;
+  margin-top:1px;
+}
+.hour.now .h-glyph{color:#8B1A1A}
+.hour.now .h-time{color:#8B1A1A}
+
+/* Hour label — name shown outside the dot */
+.hour .label{
+  position:absolute;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#1C1410;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  white-space:nowrap;
+  text-align:center;
+}
+.hour .label-eng{
+  display:block;
+  font-size:9px;font-weight:600;
+  color:#9A8670;
+  letter-spacing:1px;
+  text-transform:none;
+  font-style:italic;
+  margin-top:1px;
+}
+
+/* Hour list (bottom legend, alternative to dial) */
+.legend{
+  margin-top:12px;
+  padding:0 16px;
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-style:italic;
+  color:#9A8670;
+  letter-spacing:0.5px;
+  line-height:1.5;
+}
+.legend em{color:#8B1A1A}
+
+/* ===== Hour overlay (shared, dynamic) ===== */
+.overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100%;background:#F2E8D0;z-index:30;overflow-y:auto}
+.overlay.show{display:block}
+.overlay::before{content:'';position:fixed;inset:0;max-width:430px;margin:0 auto;pointer-events:none;background-image:radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);background-size:7px 7px,13px 13px;z-index:1;mix-blend-mode:multiply;opacity:0.7}
+.dh{position:relative;background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);padding:62px 28px 26px;z-index:5;overflow:hidden}
+.dh::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
+.dh::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
+.dh .back{position:absolute;top:60px;left:24px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;cursor:pointer;z-index:6}
+.dh .label{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
+.dh h2{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
+.dh .time{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;text-align:center;margin-top:8px;letter-spacing:1.5px;text-transform:uppercase}
+
+.db{position:relative;z-index:2;padding:24px 28px 60px}
+.sec-label{font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase;margin:24px 0 8px}
+.sec-label:first-child{margin-top:0}
+
+.bilingual{margin:6px 0 12px}
+.bilingual .lat{font-family:'Playfair Display',serif;font-size:15px;color:#1C1410;line-height:1.65;font-style:italic}
+.bilingual .lat .dropcap{float:left;font-family:'Playfair Display',serif;font-style:italic;font-size:46px;font-weight:500;color:#8B1A1A;line-height:0.85;padding:6px 6px 0 0}
+.bilingual .eng{font-family:'EB Garamond',serif;font-size:13px;font-style:italic;color:#7A6A58;line-height:1.6;margin-top:6px}
+.bilingual .mark{color:#8B1A1A;font-weight:600;margin-right:3px}
+
+.psalm-block{margin:14px 0;padding:14px 16px;background:radial-gradient(ellipse at center, rgba(184,150,12,0.06), transparent 80%);border-top:0.5px solid rgba(184,150,12,0.35);border-bottom:0.5px solid rgba(184,150,12,0.35)}
+.psalm-block .psalm-label{font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center}
+
+.end{text-align:center;margin:34px 0 14px;color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:10px;opacity:0.45}
+
+/* ===== Tab bar ===== */
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:88px;background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);padding:22px 12px 28px;display:flex;justify-content:space-around;align-items:center;z-index:20}
+.tab-bar::before{content:'';position:absolute;top:22px;left:32px;right:32px;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
+.tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#9A8670;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.tab .glyph{font-family:'Playfair Display',serif;font-size:19px;font-style:normal;font-weight:400;line-height:1;color:#B8960C;opacity:0.75}
+.tab.active{color:#8B1A1A}.tab.active .glyph{color:#8B1A1A;opacity:1}
+</style>
+</head>
+<body>
+
+<div class="frame"></div>
+
+<header class="header">
+  <a class="h-back" href="today.html">‹ &nbsp; Hodie</a>
+  <div class="h-feria">✠ &nbsp; Officium &nbsp; ✠</div>
+  <div class="h-title">Officium Divinum</div>
+  <div class="h-eng">The Divine Office &nbsp;·&nbsp; Liturgy of the Hours</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+</header>
+
+<main>
+  <div class="intro">The seven hours of prayer that sanctify the day, marked since the time of David: <em>Septies in die laudem dixi tibi.</em><br>"Seven times a day I have given praise to Thee."</div>
+
+  <div class="dial-wrap" id="dial">
+    <div class="dial-ring"></div>
+    <!-- 24 ticks generated by JS -->
+    <!-- 8 hours generated by JS -->
+    <div class="dial-center">
+      <div class="clock-time" id="clock-time">— : —</div>
+      <div class="clock-roman" id="clock-roman">✠</div>
+      <div class="now-label" id="now-label">Hora hæc</div>
+    </div>
+  </div>
+
+  <div class="legend">Tap any hour to enter its prayer.<br>The current hour glows.</div>
+</main>
+
+<!-- ===== Hour overlay ===== -->
+<div class="overlay" id="o-hour">
+  <div class="frame"></div>
+  <div class="dh">
+    <a class="back" onclick="hideHour()">‹ &nbsp; Officium</a>
+    <div class="label" id="h-label">✠ &nbsp; Hora &nbsp; ✠</div>
+    <h2 id="h-name">Lauds</h2>
+    <div class="sub" id="h-eng">Laudes Matutinæ</div>
+    <div class="time" id="h-time">at daybreak</div>
+  </div>
+  <div class="db" id="h-body"></div>
+</div>
+
+<nav class="tab-bar">
+  <a class="tab active" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+<script>
+// ===== Eight canonical hours with sample content =====
+// Each hour has approximate canonical clock time, name, glyph, and sample prayer content
+var HOURS={
+  matutinum:{name:"Matutínum",eng:"Matins",time:"in the night",hour:3,minute:0,glyph:"M",order:1,
+    intro:"The night Office — historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels.",
+    invitatory:{lat:"Dómine, lábia mea apéries.",eng:"O Lord, Thou wilt open my lips."},
+    response:{lat:"Et os meum annuntiábit laudem tuam.",eng:"And my mouth shall declare Thy praise."},
+    psalm:"Veníte, exsultémus Dómino, jubilémus Deo salutári nostro: præoccupémus fáciem ejus in confessióne, et in psalmis jubilémus ei.",
+    psalmEng:"Come, let us praise the Lord with joy, let us joyfully sing to God our Saviour. Let us come before His presence with thanksgiving, and make a joyful noise to Him with psalms.",
+    psalmRef:"Psalm 94 — Invitatorium"},
+  laudes:{name:"Laudes",eng:"Lauds",time:"at daybreak",hour:6,minute:0,glyph:"L",order:2,
+    intro:"The morning praise — the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary.",
+    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
+    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
+    psalm:"Benedíctus Dóminus Deus Israël, quia visitávit et fecit redemptiónem plebis suæ, et eréxit cornu salútis nobis in domo David púeri sui.",
+    psalmEng:"Blessed be the Lord God of Israel, because He hath visited and wrought the redemption of His people, and hath raised up an horn of salvation to us in the house of David His servant.",
+    psalmRef:"Canticum Zachariæ — Lk 1:68–79"},
+  prima:{name:"Prima",eng:"Prime",time:"at the first hour",hour:6,minute:30,glyph:"I",order:3,
+    intro:"The first daylight hour. A short hour to sanctify the day's work and offer the day's actions to God.",
+    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
+    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
+    psalm:"Iam lucis orto sídere, Deum precémur súpplices, ut in diúrnis áctibus nos servet a nocéntibus.",
+    psalmEng:"Now in the sun's new dawning ray, lowly of heart we Thee implore: that in our every deed this day Thou keep us free from evil's power.",
+    psalmRef:"Hymnus — Iam lucis orto sidere"},
+  tertia:{name:"Tértia",eng:"Terce",time:"at the third hour",hour:9,minute:0,glyph:"III",order:4,
+    intro:"The third hour — when the Holy Ghost descended upon the Apostles at Pentecost. Pray for the gifts of the Holy Spirit.",
+    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
+    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
+    psalm:"Nunc, Sancte, nobis Spíritus, unum Patri cum Fílio, dignáre promptus íngeri nostro refúsus péctori.",
+    psalmEng:"Come, Holy Ghost, who ever One reignest with Father and with Son, it is the hour, our souls possess with Thy full flood of holiness.",
+    psalmRef:"Hymnus — Nunc Sancte nobis Spiritus"},
+  sexta:{name:"Sexta",eng:"Sext",time:"at midday",hour:12,minute:0,glyph:"VI",order:5,
+    intro:"The sixth hour — noon. The hour at which Our Lord was nailed to the Cross. A pause in the day's work to remember His sacrifice.",
+    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
+    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
+    psalm:"Rector potens, verax Deus, qui témperas rerum vices, splendóre mane illúminas, et ígnibus merídiem.",
+    psalmEng:"O God of truth, O Lord of might, who orderest time and change aright, who sendest the early morning ray, and lightest with splendour all the day.",
+    psalmRef:"Hymnus — Rector potens, verax Deus"},
+  nona:{name:"Nona",eng:"None",time:"at the ninth hour",hour:15,minute:0,glyph:"IX",order:6,
+    intro:"The ninth hour — three in the afternoon. The hour at which Our Lord died upon the Cross. Adore Him with the centurion: 'Truly this was the Son of God.'",
+    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
+    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
+    psalm:"Rerum Deus tenax vigor, immótus in te pérmanens, lucis diúrnæ témpora succéssibus detérminans.",
+    psalmEng:"O strength and stay upholding all creation, who ever dost Thyself unmoved abide, yet day by day the light in due gradation from hour to hour through all its changes guide.",
+    psalmRef:"Hymnus — Rerum Deus tenax vigor"},
+  vesperae:{name:"Vésperæ",eng:"Vespers",time:"at sunset",hour:18,minute:0,glyph:"V",order:7,
+    intro:"The evening hour — when the sun sets and the lamps are lit. The Church sings the Magnificat, Our Lady's canticle of praise.",
+    invitatory:{lat:"Deus, in adjutórium meum inténde.",eng:"O God, come to my assistance."},
+    response:{lat:"Dómine, ad adjuvándum me festína.",eng:"O Lord, make haste to help me."},
+    psalm:"Magníficat ánima mea Dóminum: et exsultávit spíritus meus in Deo salutári meo. Quia respéxit humilitátem ancíllæ suæ: ecce enim ex hoc beátam me dicent omnes generatiónes.",
+    psalmEng:"My soul doth magnify the Lord: and my spirit hath rejoiced in God my Saviour. Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed.",
+    psalmRef:"Canticum Mariæ — Lk 1:46–55"},
+  completorium:{name:"Completórium",eng:"Compline",time:"before sleep",hour:21,minute:0,glyph:"C",order:8,
+    intro:"The night prayer — the Church's last word before sleep. We commend our souls to God and ask protection from the terrors of the night.",
+    invitatory:{lat:"Iube, dómne, benedícere.",eng:"Pray, sir, a blessing."},
+    response:{lat:"Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. Amen.",eng:"May the almighty Lord grant us a quiet night and a perfect end. Amen."},
+    psalm:"In manus tuas, Dómine, comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",
+    psalmEng:"Into Thy hands, O Lord, I commend my spirit: Thou hast redeemed me, O Lord, the God of truth.",
+    psalmRef:"Psalm 30:6 — Nunc Dimittis approach"}
+};
+
+var HOUR_KEYS=['matutinum','laudes','prima','tertia','sexta','nona','vesperae','completorium'];
+var ROMAN=['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'];
+
+// ===== Build the dial =====
+function buildDial(){
+  var dial=document.getElementById('dial');
+  // Add 24 tick marks (one per hour of the day)
+  for(var i=0;i<24;i++){
+    var tick=document.createElement('div');
+    tick.className='tick'+(i%6===0?' major':'');
+    tick.style.transform='rotate('+(i*15)+'deg)';
+    dial.appendChild(tick);
+  }
+  // Add 8 hour nodes
+  HOUR_KEYS.forEach(function(k){
+    var h=HOURS[k];
+    // Convert hour:minute to angle on 24-hour clock (midnight at top = 0deg)
+    var totalMin=h.hour*60+h.minute;
+    var angle=(totalMin/(24*60))*360;
+    var angleRad=(angle-90)*Math.PI/180;
+    var radius=130; // px from center
+    var x=Math.cos(angleRad)*radius;
+    var y=Math.sin(angleRad)*radius;
+    var hourEl=document.createElement('div');
+    hourEl.className='hour';
+    hourEl.setAttribute('data-key',k);
+    hourEl.style.transform='translate('+x+'px,'+y+'px)';
+    hourEl.innerHTML='<div class="node"><div class="h-glyph">'+h.glyph+'</div><div class="h-time">'+formatTime(h.hour,h.minute)+'</div></div>';
+    // Place a label outside the node
+    var labelAngle=angleRad;
+    var labelX=Math.cos(labelAngle)*52;
+    var labelY=Math.sin(labelAngle)*52;
+    var labelEl=document.createElement('div');
+    labelEl.className='label';
+    labelEl.style.left=(labelX-30)+'px';
+    labelEl.style.top=(labelY-6)+'px';
+    labelEl.style.width='60px';
+    labelEl.innerHTML=h.name+'<span class="label-eng">'+h.eng+'</span>';
+    hourEl.appendChild(labelEl);
+    hourEl.onclick=(function(key){return function(){showHour(key)}})(k);
+    dial.appendChild(hourEl);
+  });
+}
+
+function formatTime(h,m){
+  var hh=h%12||12;
+  var mm=m<10?'0'+m:m;
+  var suffix=h<12?'AM':'PM';
+  return hh+':'+mm+' '+suffix;
+}
+
+// ===== Highlight current hour =====
+function highlightCurrent(){
+  var now=new Date();
+  var nowH=now.getHours(),nowM=now.getMinutes();
+  // Display current time in center
+  document.getElementById('clock-time').textContent=formatTime(nowH,nowM);
+  // Find the closest preceding canonical hour
+  var nowMin=nowH*60+nowM;
+  var bestKey=null,bestDiff=Infinity;
+  HOUR_KEYS.forEach(function(k){
+    var h=HOURS[k];
+    var hMin=h.hour*60+h.minute;
+    var diff=nowMin-hMin;
+    // Use the hour if it's <= 3 hours past now (still "current" until next hour)
+    if(diff>=0 && diff<bestDiff){
+      bestDiff=diff;
+      bestKey=k;
+    }
+  });
+  // Wrap-around: if before Matins at 3am, the current hour is yesterday's Compline
+  if(!bestKey)bestKey='completorium';
+  document.querySelectorAll('.hour').forEach(function(el){
+    if(el.getAttribute('data-key')===bestKey)el.classList.add('now');
+    else el.classList.remove('now');
+  });
+  // Center label
+  if(bestKey){
+    var h=HOURS[bestKey];
+    document.getElementById('clock-roman').textContent=h.glyph;
+    document.getElementById('now-label').textContent='Hora '+h.name;
+  }
+}
+
+// ===== Hour overlay =====
+function showHour(key){
+  var h=HOURS[key];
+  if(!h)return;
+  document.getElementById('h-label').innerHTML='✠ &nbsp; Hora '+ROMAN[h.order]+' &nbsp; ✠';
+  document.getElementById('h-name').textContent=h.name;
+  document.getElementById('h-eng').textContent=h.eng;
+  document.getElementById('h-time').textContent=h.time;
+  var body=document.getElementById('h-body');
+  body.innerHTML=
+    '<div class="sec-label">Introit · Opening</div>'+
+    '<p style="font-family:\'EB Garamond\',serif;font-size:14px;color:#1C1410;line-height:1.65;font-style:italic;margin-bottom:14px"><span style="float:left;font-family:\'Playfair Display\',serif;font-size:46px;font-weight:500;color:#8B1A1A;line-height:0.85;padding:6px 6px 0 0">'+h.intro.charAt(0)+'</span>'+escapeHtml(h.intro.slice(1))+'</p>'+
+    '<div class="sec-label">Versicle &amp; Response</div>'+
+    '<div class="bilingual">'+
+      '<div class="lat"><span class="mark">℣.</span>'+escapeHtml(h.invitatory.lat)+'</div>'+
+      '<div class="eng"><span class="mark">℣.</span>'+escapeHtml(h.invitatory.eng)+'</div>'+
+    '</div>'+
+    '<div class="bilingual">'+
+      '<div class="lat"><span class="mark">℟.</span>'+escapeHtml(h.response.lat)+'</div>'+
+      '<div class="eng"><span class="mark">℟.</span>'+escapeHtml(h.response.eng)+'</div>'+
+    '</div>'+
+    '<div class="psalm-block">'+
+      '<div class="psalm-label">'+escapeHtml(h.psalmRef)+'</div>'+
+      '<div class="bilingual">'+
+        '<div class="lat">'+escapeHtml(h.psalm)+'</div>'+
+        '<div class="eng">'+escapeHtml(h.psalmEng)+'</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>';
+  document.getElementById('o-hour').classList.add('show');
+  window.scrollTo(0,0);
+}
+function hideHour(){document.getElementById('o-hour').classList.remove('show')}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
+// Init
+buildDial();
+highlightCurrent();
+// Refresh the clock every minute
+setInterval(highlightCurrent,60000);
+</script>
+
+</body>
+</html>
