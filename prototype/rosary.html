@@ -572,25 +572,97 @@ body{
     <div class="icon">✠</div>
     <h2>Deo Grátias</h2>
     <div class="h-eng">Thanks Be to God</div>
-    <p>You have completed the Sorrowful Mysteries.<br>May the prayers of the Blessed Virgin obtain for you the graces you have asked.</p>
+    <p>You have completed the <span id="complete-set">Sorrowful Mysteries</span>.<br>May the prayers of the Blessed Virgin obtain for you the graces you have asked.</p>
     <a class="home-link" onclick="goHome()">Reverti <span class="cross">✠</span> Return Home</a>
   </div>
 </div>
 
 <script>
-// ===== Rosary steps (demo: Opening + first decade) =====
-var steps=[
-  {name:"Signum Crucis",sub:"The Sign of the Cross",lat:"In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",eng:"In the name of the Father, and of the Son, and of the Holy Ghost. Amen.",decade:"Initium",chaplet:{type:"opening",bead:0}},
-  {name:"Credo",sub:"The Apostles' Creed",lat:"Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ…",eng:"I believe in God, the Father Almighty, Creator of heaven and earth…",decade:"Initium",chaplet:{type:"opening",bead:0}},
-  {name:"Pater Noster",sub:"For the intentions of the Holy Father",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum…",eng:"Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come…",decade:"Initium",chaplet:{type:"opening",bead:0}},
-  {name:"Ave María",sub:"For the gift of Faith",lat:"Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",eng:"Hail Mary, full of grace, the Lord is with thee…",decade:"Initium",chaplet:{type:"opening",bead:1}},
-  {name:"Ave María",sub:"For the gift of Hope",lat:"Ave María, grátia plena, Dóminus tecum…",eng:"Hail Mary, full of grace, the Lord is with thee…",decade:"Initium",chaplet:{type:"opening",bead:2}},
-  {name:"Ave María",sub:"For the gift of Charity",lat:"Ave María, grátia plena, Dóminus tecum…",eng:"Hail Mary, full of grace, the Lord is with thee…",decade:"Initium",chaplet:{type:"opening",bead:3}},
-  {name:"Glória Patri",sub:"Glory Be",lat:"Glória Patri, et Fílio, et Spirítui Sancto…",eng:"Glory be to the Father, and to the Son, and to the Holy Ghost…",decade:"Initium",chaplet:{type:"opening",bead:0}},
-  {isMystery:true,decade:"Mystérium I",num:"First Sorrowful Mystery",title:"Agonía in Horto",ref:"Lk 22:39–46",body:"Jesus falls prostrate in prayer in the Garden of Gethsemane, knowing the full weight of the suffering that awaits Him.",chaplet:{type:"decade",bead:0}},
-  {name:"Pater Noster",sub:"Decade I — Our Father",lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum…",eng:"Our Father, Who art in heaven…",decade:"Mystérium I",chaplet:{type:"decade",bead:0}}
-];
+// ===== Full Rosary prayer texts =====
+var PRAYERS={
+  signum:{lat:"In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",eng:"In the name of the Father, and of the Son, and of the Holy Ghost. Amen."},
+  credo:{lat:"Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ. Et in Iesum Christum, Fílium eius únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a mórtuis; ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis: inde ventúrus est iudicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.",eng:"I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord, Who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell; the third day He rose again from the dead; He ascended into heaven, and sitteth at the right hand of God the Father almighty; from thence He shall come to judge the living and the dead. I believe in the Holy Ghost, the Holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen."},
+  pater:{lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen.",eng:"Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen."},
+  ave:{lat:"Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",eng:"Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."},
+  gloria:{lat:"Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",eng:"Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."},
+  fatima:{lat:"Dómine Iesu, dimítte nobis débita nostra, líbera nos ab igne inférni, conduc in cælum omnes ánimas, præsértim eas, quæ misericórdiæ tuæ máxime indigent.",eng:"O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those in most need of Thy mercy."},
+  salve:{lat:"Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve. Ad te clamámus, éxsules fílii Hevæ. Ad te suspirámus, geméntes et flentes in hac lacrimárum valle. Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte. Et Iesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde. O clemens, o pia, o dulcis Virgo María.",eng:"Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us, and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary!"}
+};
 
+// ===== Mystery sets =====
+var MYSTERY_SETS={
+  sorrowful:{
+    name:"Mystéria Dolorósa",
+    english:"Sorrowful Mysteries",
+    mysteries:[
+      {num:"Mystérium Primum",title:"Agonía in Horto",eng:"The Agony in the Garden",ref:"Lk 22:39–46",body:"Jesus falls prostrate in prayer in the Garden of Gethsemane, knowing the full weight of the suffering that awaits Him. His sweat becomes as drops of blood falling to the ground.",fruit:"Sorrow for sin"},
+      {num:"Mystérium Secúndum",title:"Flagellátio",eng:"The Scourging at the Pillar",ref:"Jn 19:1",body:"Jesus is bound to a pillar and scourged by the Roman soldiers. His innocent flesh is torn for our sins of the flesh.",fruit:"Purity"},
+      {num:"Mystérium Tértium",title:"Coronátio Spinis",eng:"The Crowning with Thorns",ref:"Mt 27:28–30",body:"A crown of thorns is pressed upon the head of Jesus, and the soldiers mock Him as King of the Jews. He bears humiliation in silence.",fruit:"Moral courage"},
+      {num:"Mystérium Quartum",title:"Bajulátio Crucis",eng:"The Carrying of the Cross",ref:"Jn 19:17",body:"Jesus carries His Cross along the road to Calvary, falling beneath its weight, meeting His Blessed Mother along the way.",fruit:"Patience in suffering"},
+      {num:"Mystérium Quintum",title:"Crucifíxio",eng:"The Crucifixion",ref:"Lk 23:33–46",body:"Jesus is nailed to the Cross and dies after three hours of agony. His last words: 'Father, into Thy hands I commend My spirit.'",fruit:"Perseverance"}
+    ]
+  },
+  joyful:{
+    name:"Mystéria Gaudiósa",
+    english:"Joyful Mysteries",
+    mysteries:[
+      {num:"Mystérium Primum",title:"Annuntiátio",eng:"The Annunciation",ref:"Lk 1:26–38",body:"The Archangel Gabriel announces to the Virgin Mary that she will conceive and bear the Son of God. She answers: 'Behold the handmaid of the Lord.'",fruit:"Humility"},
+      {num:"Mystérium Secúndum",title:"Visitátio",eng:"The Visitation",ref:"Lk 1:39–56",body:"Mary visits her cousin Elizabeth, who greets her: 'Blessed art thou among women.' Mary responds with the Magnificat.",fruit:"Charity"},
+      {num:"Mystérium Tértium",title:"Natívitas",eng:"The Nativity",ref:"Lk 2:1–20",body:"Jesus is born in a stable in Bethlehem. Shepherds come to adore Him; angels sing 'Gloria in excelsis Deo.'",fruit:"Poverty of spirit"},
+      {num:"Mystérium Quartum",title:"Præsentátio",eng:"The Presentation",ref:"Lk 2:22–38",body:"Mary and Joseph present the infant Jesus in the Temple. Simeon recognizes Him as the Messiah and prophesies the sword that will pierce Mary's heart.",fruit:"Obedience"},
+      {num:"Mystérium Quintum",title:"Invéntio in Templo",eng:"The Finding in the Temple",ref:"Lk 2:41–52",body:"After three days of anxious searching, Mary and Joseph find the twelve-year-old Jesus in the Temple, teaching the doctors.",fruit:"Piety"}
+    ]
+  },
+  glorious:{
+    name:"Mystéria Gloriósa",
+    english:"Glorious Mysteries",
+    mysteries:[
+      {num:"Mystérium Primum",title:"Resurréctio",eng:"The Resurrection",ref:"Mk 16:1–7",body:"On the third day, Jesus rises from the dead, victorious over sin and death. The women at the tomb are greeted by an angel: 'He is not here, He is risen.'",fruit:"Faith"},
+      {num:"Mystérium Secúndum",title:"Ascénsio",eng:"The Ascension",ref:"Acts 1:9–11",body:"Forty days after His Resurrection, Jesus ascends into Heaven in the sight of His Apostles, promising to send the Holy Spirit.",fruit:"Hope"},
+      {num:"Mystérium Tértium",title:"Descénsus Spíritus Sancti",eng:"The Descent of the Holy Spirit",ref:"Acts 2:1–4",body:"On Pentecost, the Holy Spirit descends upon the Apostles in the form of tongues of fire. The Church is born.",fruit:"Love of God"},
+      {num:"Mystérium Quartum",title:"Assúmptio",eng:"The Assumption",ref:"Rev 12:1",body:"The Blessed Virgin Mary, at the end of her earthly life, is assumed body and soul into Heaven.",fruit:"Grace of a happy death"},
+      {num:"Mystérium Quintum",title:"Coronátio",eng:"The Coronation",ref:"Rev 12:1",body:"Mary is crowned Queen of Heaven and earth by her Divine Son, reigning in glory as intercessor for all mankind.",fruit:"Trust in Mary"}
+    ]
+  }
+};
+
+// ===== Build full step list for a mystery set =====
+function buildSteps(setKey){
+  var set=MYSTERY_SETS[setKey];
+  var s=[];
+  // OPENING (7 steps)
+  s.push({name:"Signum Crucis",sub:"The Sign of the Cross",lat:PRAYERS.signum.lat,eng:PRAYERS.signum.eng,decade:"Initium",chaplet:{type:"opening",bead:0}});
+  s.push({name:"Credo",sub:"The Apostles' Creed",lat:PRAYERS.credo.lat,eng:PRAYERS.credo.eng,decade:"Initium",chaplet:{type:"opening",bead:0}});
+  s.push({name:"Pater Noster",sub:"For the intentions of the Holy Father",lat:PRAYERS.pater.lat,eng:PRAYERS.pater.eng,decade:"Initium",chaplet:{type:"opening",bead:0}});
+  s.push({name:"Ave María",sub:"For the gift of Faith",lat:PRAYERS.ave.lat,eng:PRAYERS.ave.eng,decade:"Initium",chaplet:{type:"opening",bead:1}});
+  s.push({name:"Ave María",sub:"For the gift of Hope",lat:PRAYERS.ave.lat,eng:PRAYERS.ave.eng,decade:"Initium",chaplet:{type:"opening",bead:2}});
+  s.push({name:"Ave María",sub:"For the gift of Charity",lat:PRAYERS.ave.lat,eng:PRAYERS.ave.eng,decade:"Initium",chaplet:{type:"opening",bead:3}});
+  s.push({name:"Glória Patri",sub:"Glory Be to the Father",lat:PRAYERS.gloria.lat,eng:PRAYERS.gloria.eng,decade:"Initium",chaplet:{type:"opening",bead:0}});
+  // FIVE MYSTERIES (14 steps each)
+  for(var m=0;m<5;m++){
+    var myst=set.mysteries[m];
+    var decLabel=myst.num;
+    // Announce
+    s.push({isMystery:true,decade:decLabel,num:myst.num+" — Fruit: "+myst.fruit,title:myst.title+" — "+myst.eng,ref:myst.ref,body:myst.body,chaplet:{type:"decade",bead:0}});
+    // OF
+    s.push({name:"Pater Noster",sub:"Decade "+(m+1)+" — Our Father",lat:PRAYERS.pater.lat,eng:PRAYERS.pater.eng,decade:decLabel,chaplet:{type:"decade",bead:0}});
+    // 10 Aves
+    for(var a=1;a<=10;a++){
+      s.push({name:"Ave María",sub:"Ave "+a+" of 10",lat:PRAYERS.ave.lat,eng:PRAYERS.ave.eng,decade:decLabel,chaplet:{type:"decade",bead:a}});
+    }
+    // Gloria
+    s.push({name:"Glória Patri",sub:"Glory Be",lat:PRAYERS.gloria.lat,eng:PRAYERS.gloria.eng,decade:decLabel,chaplet:{type:"decade",bead:10}});
+    // Fatima
+    s.push({name:"Oratio Fátimæ",sub:"Fatima Prayer",lat:PRAYERS.fatima.lat,eng:PRAYERS.fatima.eng,decade:decLabel,chaplet:{type:"decade",bead:10}});
+  }
+  // CLOSING (2 steps)
+  s.push({name:"Salve Regína",sub:"Hail Holy Queen",lat:PRAYERS.salve.lat,eng:PRAYERS.salve.eng,decade:"Conclúsio",chaplet:{type:"opening",bead:0}});
+  s.push({name:"Signum Crucis",sub:"Closing Sign of the Cross",lat:PRAYERS.signum.lat,eng:PRAYERS.signum.eng,decade:"Conclúsio",chaplet:{type:"opening",bead:0}});
+  return s;
+}
+
+var steps=buildSteps('sorrowful');
+var currentSet='sorrowful';
 var idx=0,total=steps.length;
 
 function buildChaplet(state){
@@ -662,9 +734,20 @@ function render(){
     :'Finis <span class="cross">✠</span> Finish';
 }
 
-function nextStep(){if(idx<total-1){idx++;render();window.scrollTo(0,0)}else{showScreen('complete')}}
+function nextStep(){if(idx<total-1){idx++;render();window.scrollTo(0,0)}else{showScreen('complete');setCompleteLabel()}}
 function prevStep(){if(idx>0){idx--;render();window.scrollTo(0,0)}}
-function beginRosary(){showScreen('pray');idx=0;render()}
+function beginRosary(setKey){
+  currentSet=setKey||'sorrowful';
+  steps=buildSteps(currentSet);
+  total=steps.length;
+  idx=0;
+  showScreen('pray');
+  render();
+}
+function setCompleteLabel(){
+  var el=document.getElementById('complete-set');
+  if(el)el.textContent=MYSTERY_SETS[currentSet].english;
+}
 function goHome(){window.location.href='today.html'}
 function showScreen(id){
   document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});
