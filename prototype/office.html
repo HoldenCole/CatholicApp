@@ -63,7 +63,7 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
 /* ===== 24-hour canonical clock dial ===== */
 .dial-wrap{
   position:relative;
-  width:340px;height:340px;
+  width:300px;height:300px;
   margin:30px auto 24px;
 }
 .dial-ring{
@@ -76,7 +76,7 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
   border:0.5px solid rgba(184,150,12,0.25);
 }
 .dial-ring::after{
-  content:'';position:absolute;inset:50px;border-radius:50%;
+  content:'';position:absolute;inset:46px;border-radius:50%;
   border:0.5px dashed rgba(139,26,26,0.18);
 }
 
@@ -86,7 +86,7 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
   left:50%;top:0;
   width:1px;height:8px;
   background:rgba(184,150,12,0.4);
-  transform-origin:center 170px;
+  transform-origin:center 150px;
   margin-left:-0.5px;
 }
 .tick.major{height:14px;background:rgba(139,26,26,0.55);width:1.5px;margin-left:-0.75px}
@@ -470,7 +470,7 @@ var HOURS={
       {type:"collect",label:"Collect",lat:"Omnípotens sempitérne Deus, qui vivórum domináris simul et mortuórum, omniúmque miseréris, quos tuos fide et ópere futúros esse prænóscis: te súpplices exorámus. Per Dóminum nostrum Iesum Christum. Amen.",eng:"Almighty, everlasting God, who hast dominion over both the living and the dead, and hast mercy on all whom Thou knowest will be Thine by faith and good works: we humbly beseech Thee. Through our Lord Jesus Christ. Amen."},
       {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
     ]},
-  laudes:{name:"Laudes",eng:"Lauds",time:"at daybreak",hour:6,minute:0,glyph:"L",order:2,
+  laudes:{name:"Laudes",eng:"Lauds",time:"at daybreak",hour:5,minute:0,glyph:"L",order:2,
     intro:"The morning praise — the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary, sung as the sun rises.",
     parts:[
       {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
@@ -493,7 +493,7 @@ var HOURS={
       {type:"collect",label:"Collect",lat:COLLECT_GENERIC.lat,eng:COLLECT_GENERIC.eng},
       {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
     ]},
-  prima:{name:"Prima",eng:"Prime",time:"at the first hour",hour:6,minute:30,glyph:"I",order:3,
+  prima:{name:"Prima",eng:"Prime",time:"at the first hour",hour:7,minute:0,glyph:"I",order:3,
     intro:"The first daylight hour. A short hour to sanctify the day's work and offer the day's actions to God.",
     parts:[
       {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
@@ -624,7 +624,7 @@ function buildDial(){
     var totalMin=h.hour*60+h.minute;
     var angle=(totalMin/(24*60))*360;
     var angleRad=(angle-90)*Math.PI/180;
-    var radius=130; // px from center
+    var radius=110; // px from center (smaller to fit inside the 300px ring)
     var x=Math.cos(angleRad)*radius;
     var y=Math.sin(angleRad)*radius;
     var hourEl=document.createElement('div');
@@ -632,15 +632,14 @@ function buildDial(){
     hourEl.setAttribute('data-key',k);
     hourEl.style.transform='translate('+x+'px,'+y+'px)';
     hourEl.innerHTML='<div class="node"><div class="h-glyph">'+h.glyph+'</div><div class="h-time">'+formatTime(h.hour,h.minute)+'</div></div>';
-    // Place a label outside the node
-    var labelAngle=angleRad;
-    var labelX=Math.cos(labelAngle)*52;
-    var labelY=Math.sin(labelAngle)*52;
+    // Place a label INSIDE the dial (toward center) so it never gets clipped
+    var labelX=-Math.cos(angleRad)*38;
+    var labelY=-Math.sin(angleRad)*38;
     var labelEl=document.createElement('div');
     labelEl.className='label';
-    labelEl.style.left=(labelX-30)+'px';
+    labelEl.style.left=(labelX-32)+'px';
     labelEl.style.top=(labelY-6)+'px';
-    labelEl.style.width='60px';
+    labelEl.style.width='64px';
     labelEl.innerHTML=h.name+'<span class="label-eng">'+h.eng+'</span>';
     hourEl.appendChild(labelEl);
     hourEl.onclick=(function(key){return function(){showHour(key)}})(k);
