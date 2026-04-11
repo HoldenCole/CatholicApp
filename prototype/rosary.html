@@ -794,7 +794,7 @@ function showScreen(id){
   });
   var pretty={joyful:'Joyful',sorrowful:'Sorrowful',glorious:'Glorious'}[c.mystery];
   var intro=document.getElementById('r-intro');
-  if(intro)intro.innerHTML='Choose the Mysteries you will pray.<br>Today calls for the <em>'+pretty+'</em>, traditional for '+c.feriaEng+'.';
+  if(intro)intro.innerHTML='Choose the Mysteries you will pray.<br>Today calls for the <em>'+escapeHtml(pretty)+'</em>, traditional for '+escapeHtml(c.feriaEng)+'.';
 })();
 </script>
 

@@ -426,6 +426,174 @@ main{position:relative;z-index:2}
   color:#7A6A58;
   line-height:1.4;
 }
+
+/* ---------- Settings overlay ---------- */
+.settings-overlay{
+  display:none;
+  position:fixed;
+  top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  height:100%;
+  background:#F2E8D0;
+  z-index:30;
+  overflow-y:auto;
+}
+.settings-overlay.show{display:block}
+.settings-overlay::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px;
+  z-index:1;
+  mix-blend-mode:multiply;
+  opacity:0.7;
+}
+
+.settings-overlay .s-head{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;
+  overflow:hidden;
+}
+.settings-overlay .s-head::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.settings-overlay .s-head::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.settings-overlay .back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  cursor:pointer;
+  z-index:6;
+}
+.settings-overlay .s-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;
+  margin-bottom:8px;
+}
+.settings-overlay h2{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;
+  line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.settings-overlay .s-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;
+  margin-top:4px;
+}
+.settings-overlay .s-body{
+  position:relative;z-index:2;
+  padding:24px 28px 60px;
+}
+.settings-overlay .s-sec{
+  margin-bottom:28px;
+  padding-top:14px;
+  position:relative;
+}
+.settings-overlay .s-sec::before{
+  content:'';
+  position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:70%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.settings-overlay .s-sec:first-child{padding-top:0}
+.settings-overlay .s-sec:first-child::before{display:none}
+.settings-overlay .s-sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3px;text-transform:uppercase;
+  text-align:center;
+  margin-bottom:4px;
+}
+.settings-overlay .s-sec-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  text-align:center;
+  margin-bottom:14px;
+}
+.settings-overlay .s-option{
+  display:flex;
+  align-items:center;
+  padding:12px 4px;
+  border-bottom:0.5px dotted rgba(184,150,12,0.3);
+  cursor:pointer;
+}
+.settings-overlay .s-option:last-child{border-bottom:none}
+.settings-overlay .s-option .check{
+  flex:0 0 24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  color:transparent;
+  text-align:left;
+}
+.settings-overlay .s-option.selected .check{color:#8B1A1A}
+.settings-overlay .s-option .s-opt-name{
+  flex:1;
+  font-family:'Playfair Display',serif;
+  font-size:15px;
+  color:#1C1410;
+}
+.settings-overlay .s-option.selected .s-opt-name{
+  color:#8B1A1A;
+  font-weight:500;
+}
+.settings-overlay .s-option .s-opt-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;
+  color:#9A8670;
+  margin-left:8px;
+}
+.settings-overlay .s-reset{
+  display:inline-block;
+  margin:10px 0 0;
+  padding:10px 20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.45);
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  cursor:pointer;
+  text-decoration:none;
+}
+.settings-overlay .s-reset .cross{color:#B8960C;margin:0 6px}
+.settings-overlay .s-about{
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.6;
+  text-align:center;
+}
 </style>
 <script src="lit-context.js"></script>
 <script src="ui-helpers.js"></script>
@@ -434,14 +602,14 @@ main{position:relative;z-index:2}
 
 <div class="frame"></div>
 
-<a class="gear" href="#">✦</a>
+<a class="gear" href="#" onclick="openSettings('general');return false" aria-label="Settings">✦</a>
 
 <main>
 
 <div class="feria" id="t-feria">✠ &nbsp; Feria Sexta in Quadragesima</div>
 <div class="day" id="t-day">Friday</div>
 <div class="date" id="t-date">the twenty-eighth of March</div>
-<a href="#" class="rite">Ritus <span class="sep">·</span> Missale Romanum 1962 <span class="caret">▾</span></a>
+<a href="#" class="rite" id="t-rite-link" onclick="openSettings('rite');return false">Ritus <span class="sep">·</span> <span id="t-rite-label">Missale Romanum 1962</span> <span class="caret">▾</span></a>
 
 <div class="orn major"><span class="glyph">✠</span></div>
 
@@ -451,7 +619,7 @@ main{position:relative;z-index:2}
     <div class="sec-label">Pænitentia</div>
     <div class="sec-latin">The day's penance</div>
   </div>
-  <a href="#" class="rite" style="font-size:11px;letter-spacing:1.4px">Codex 1962 <span class="caret">▾</span></a>
+  <a href="#" class="rite" style="font-size:11px;letter-spacing:1.4px" id="t-penance-link" onclick="openSettings('penance');return false"><span id="t-penance-label">Codex 1962</span> <span class="caret">▾</span></a>
 </div>
 
 <div class="penance-entry">
@@ -474,7 +642,7 @@ main{position:relative;z-index:2}
   <div class="dev-name">The Divine Office</div>
   <div class="dev-latin">Officium Divinum — Lauds &amp; Vespers</div>
 </div>
-<div class="dev-row" onclick="location.href='confession.html'">
+<div class="dev-row" onclick="location.href='confession.html#examen'">
   <div class="dev-name">Examination of Conscience</div>
   <div class="dev-latin">Examen Conscientiæ</div>
 </div>
@@ -557,6 +725,77 @@ main{position:relative;z-index:2}
   <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
   <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
 </nav>
+
+<!-- ===== Settings overlay ===== -->
+<div class="settings-overlay" id="settings">
+  <div class="frame"></div>
+  <div class="s-head">
+    <a class="back" onclick="closeSettings()">‹ &nbsp; Hodie</a>
+    <div class="s-label">✠ &nbsp; Consilia &nbsp; ✠</div>
+    <h2>Settings</h2>
+    <div class="s-sub">Consilia &amp; Præferentiæ</div>
+  </div>
+  <div class="s-body">
+
+    <div class="s-sec" id="sec-rite">
+      <div class="s-sec-title">Missal Rite</div>
+      <div class="s-sec-latin">Ritus Missalis</div>
+      <div class="s-option" data-rite="1962" onclick="setRite('1962')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Missale Romanum 1962</div>
+        <div class="s-opt-latin">Editio typica 1962</div>
+      </div>
+      <div class="s-option" data-rite="1955" onclick="setRite('1955')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Missale Romanum 1955</div>
+        <div class="s-opt-latin">Pius XII Holy Week reforms</div>
+      </div>
+      <div class="s-option" data-rite="pre1955" onclick="setRite('pre1955')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Pre-1955 Missal</div>
+        <div class="s-opt-latin">Full traditional Holy Week</div>
+      </div>
+    </div>
+
+    <div class="s-sec" id="sec-penance">
+      <div class="s-sec-title">Penance Discipline</div>
+      <div class="s-sec-latin">Codex Pænitentiæ</div>
+      <div class="s-option" data-penance="1962" onclick="setPenance('1962')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Codex 1962</div>
+        <div class="s-opt-latin">Friday abstinence + Lenten fast</div>
+      </div>
+      <div class="s-option" data-penance="1917" onclick="setPenance('1917')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Codex 1917</div>
+        <div class="s-opt-latin">Stricter — all Fridays + Ember Days</div>
+      </div>
+      <div class="s-option" data-penance="strict" onclick="setPenance('strict')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Strict Traditional</div>
+        <div class="s-opt-latin">Wednesday + Friday + Saturday in Lent</div>
+      </div>
+    </div>
+
+    <div class="s-sec" id="sec-reset">
+      <div class="s-sec-title">Reset</div>
+      <div class="s-sec-latin">Clear all local progress</div>
+      <div style="text-align:center">
+        <a class="s-reset" onclick="resetAll();return false" href="#">Reset <span class="cross">✠</span> Clear Data</a>
+      </div>
+    </div>
+
+    <div class="s-sec" id="sec-about">
+      <div class="s-sec-title">About</div>
+      <div class="s-sec-latin">De Applicatione</div>
+      <div class="s-about">
+        <em>Ad Altáre Dei</em> &nbsp;·&nbsp; To the Altar of God<br>
+        A free prayer companion for traditional Catholics.<br>
+        No accounts, no tracking, no ads. All data is stored locally on your device.
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 // ===== Minimal saint data (mirror of saints.html, just what Today needs) =====
@@ -646,7 +885,7 @@ function renderLiturgicalContext(){
   var c=LitContext.get(new Date());
 
   // Header feria + day + date
-  document.getElementById('t-feria').innerHTML='✠ &nbsp; '+c.feriaLat+' &nbsp;·&nbsp; '+c.latName;
+  document.getElementById('t-feria').innerHTML='✠ &nbsp; '+escapeHtml(c.feriaLat)+' &nbsp;·&nbsp; '+escapeHtml(c.latName);
   document.getElementById('t-feria').style.color=c.colourHex;
   document.getElementById('t-day').textContent=c.feriaEng;
   document.getElementById('t-date').textContent=LitContext.formatLongDate(new Date());
@@ -663,14 +902,79 @@ function renderLiturgicalContext(){
   }
 
   // Rosary mystery for today
-  var ms=c.mysteryLat+' &nbsp;—&nbsp; '+c.mysteryEng.replace(' Mysteries','')+', for '+c.feriaEng;
+  var ms=escapeHtml(c.mysteryLat)+' &nbsp;—&nbsp; '+escapeHtml(c.mysteryEng.replace(' Mysteries',''))+', for '+escapeHtml(c.feriaEng);
   document.getElementById('t-rosarysub').innerHTML=ms;
+}
+
+// ===== Settings overlay =====
+var RITE_LABELS={'1962':'Missale Romanum 1962','1955':'Missale Romanum 1955','pre1955':'Pre-1955 Missal'};
+var PENANCE_LABELS={'1962':'Codex 1962','1917':'Codex 1917','strict':'Strict Traditional'};
+
+function getRite(){return getLS('aad.settings.rite','1962')}
+function getPenanceDiscipline(){return getLS('aad.settings.penance','1962')}
+
+function openSettings(section){
+  renderSettings();
+  var overlay=document.getElementById('settings');
+  overlay.classList.add('show');
+  window.scrollTo(0,0);
+  if(section){
+    // Scroll to the requested section after overlay opens
+    setTimeout(function(){
+      var id={'rite':'sec-rite','penance':'sec-penance','general':''}[section];
+      if(id){
+        var el=document.getElementById(id);
+        if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    },50);
+  }
+}
+function closeSettings(){
+  document.getElementById('settings').classList.remove('show');
+}
+function renderSettings(){
+  var rite=getRite(), pen=getPenanceDiscipline();
+  document.querySelectorAll('.s-option[data-rite]').forEach(function(el){
+    if(el.getAttribute('data-rite')===rite)el.classList.add('selected');
+    else el.classList.remove('selected');
+  });
+  document.querySelectorAll('.s-option[data-penance]').forEach(function(el){
+    if(el.getAttribute('data-penance')===pen)el.classList.add('selected');
+    else el.classList.remove('selected');
+  });
+}
+function setRite(rite){
+  try{localStorage.setItem('aad.settings.rite',rite)}catch(e){}
+  updateRiteLabels();
+  renderSettings();
+}
+function setPenance(pen){
+  try{localStorage.setItem('aad.settings.penance',pen)}catch(e){}
+  updateRiteLabels();
+  renderSettings();
+}
+function updateRiteLabels(){
+  var rite=getRite(), pen=getPenanceDiscipline();
+  var riteLabel=document.getElementById('t-rite-label');
+  var penLabel=document.getElementById('t-penance-label');
+  if(riteLabel)riteLabel.textContent=RITE_LABELS[rite]||RITE_LABELS['1962'];
+  if(penLabel)penLabel.textContent=PENANCE_LABELS[pen]||PENANCE_LABELS['1962'];
+}
+function resetAll(){
+  if(!confirm('Clear all local progress? This removes the saint you are following, your Rosary history, and Schola mastery.'))return;
+  try{
+    Object.keys(localStorage).forEach(function(k){
+      if(k.indexOf('aad.')===0)localStorage.removeItem(k);
+    });
+  }catch(e){}
+  location.reload();
 }
 
 renderLiturgicalContext();
 renderSaintSection();
 renderSchola();
 renderRosaryBadge();
+updateRiteLabels();
 </script>
 
 </body>

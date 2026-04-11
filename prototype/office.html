@@ -516,7 +516,7 @@ var LIT_CTX=LitContext.get(new Date());
   document.getElementById('ctx-season').textContent=c.latName;
   document.getElementById('ctx-season').style.color=({violet:'#6A359A',rose:'#a04860',white:'#7a5a0e',red:'#8B1A1A',green:'#3a5d28'})[c.colour]||'#8B1A1A';
   document.getElementById('ctx-feria').textContent=c.feriaLat;
-  document.getElementById('ctx-eng').innerHTML=c.feriaEng+' <span class="colour-pip '+c.colour+'"></span> '+c.colour.charAt(0).toUpperCase()+c.colour.slice(1);
+  document.getElementById('ctx-eng').innerHTML=escapeHtml(c.feriaEng)+' <span class="colour-pip '+c.colour+'"></span> '+c.colour.charAt(0).toUpperCase()+c.colour.slice(1);
   // Tint the dial
   var dial=document.getElementById('dial');
   if(dial)dial.classList.add('season-'+c.colour);
@@ -575,7 +575,7 @@ function buildDial(){
     labelEl.style.left=(labelX-32)+'px';
     labelEl.style.top=(labelY-6)+'px';
     labelEl.style.width='64px';
-    labelEl.innerHTML=h.name+'<span class="label-eng">'+h.eng+'</span>';
+    labelEl.innerHTML=escapeHtml(h.name)+'<span class="label-eng">'+escapeHtml(h.eng)+'</span>';
     hourEl.appendChild(labelEl);
     hourEl.onclick=(function(key){return function(){showHour(key)}})(k);
     dial.appendChild(hourEl);

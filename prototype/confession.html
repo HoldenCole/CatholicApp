@@ -289,7 +289,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
     <div class="step"><div class="num">x.</div><div class="s-title">Avoid the Occasions of Sin</div><div class="s-body">Guard the grace you have received. Flee from persons, places, and things that lead you into temptation.</div></div>
 
     <!-- Examination of Conscience -->
-    <div class="phase"><span class="cross">✠</span><div class="lat">Examen Conscientiæ</div><div class="eng">Examination of Conscience</div></div>
+    <div id="examen-section" class="phase"><span class="cross">✠</span><div class="lat">Examen Conscientiæ</div><div class="eng">Examination of Conscience</div></div>
 
     <div class="cmd" onclick="toggleCmd(this)"><div class="num">I.</div><div class="c-title">I am the Lord thy God</div><div class="c-latin">Non habébis deos aliénos coram me</div><span class="arrow">›</span></div>
     <ul class="cmd-q"><li>Have I doubted or denied the truths of the faith?</li><li>Have I put my trust in superstition, fortune-telling, or the occult?</li><li>Have I received Holy Communion in a state of mortal sin?</li><li>Have I neglected my daily prayers?</li></ul>
@@ -408,6 +408,21 @@ function toggleCmd(el){
   if(c.indulgences && c.indulgences.crucifix){
     var f=document.getElementById('c-lent-flag');
     if(f)f.classList.add('show');
+  }
+})();
+
+// Deep link: /confession.html#examen auto-opens Liber I and scrolls to
+// the Examen Conscientiae section. Lets today.html link directly to
+// the examination without making it a visually separate feature.
+(function(){
+  var hash=(location.hash||'').replace('#','');
+  if(hash==='examen'){
+    showOverlay('basic');
+    // Scroll the overlay to the examination section after it opens
+    setTimeout(function(){
+      var target=document.getElementById('examen-section');
+      if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+    },100);
   }
 })();
 </script>

@@ -674,7 +674,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 (function(){
   if(typeof LitContext==='undefined')return;
   var c=LitContext.get(new Date());
-  document.getElementById('m-feria').innerHTML='✠ &nbsp; '+c.feriaLat+' &nbsp;·&nbsp; '+c.latName+' &nbsp; ✠';
+  document.getElementById('m-feria').innerHTML='✠ &nbsp; '+escapeHtml(c.feriaLat)+' &nbsp;·&nbsp; '+escapeHtml(c.latName)+' &nbsp; ✠';
   document.getElementById('m-feria').style.color=c.colourHex;
   document.getElementById('m-eng').textContent=c.feriaEng+' · '+c.engName;
 })();
