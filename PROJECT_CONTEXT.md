@@ -227,12 +227,19 @@ NOT pure OLED black. **Deep walnut** `#1A130C` background with **antique ivory**
 - XcodeGen `project.yml` at repo root
 
 ### Web prototypes (`/prototype/`)
-Five interactive HTML files reviewed by user:
-1. `today.html` — Today dashboard
-2. `missal.html` — Mass Ordinary
-3. `prayers.html` — Prayer library (with Ave Maria detail overlay)
-4. `saints.html` — Padre Pio daily practices demo
-5. `rosary.html` — Three-screen guided Rosary (start → pray → complete)
+**Ten interactive HTML files + one shared library** — all on `claude/catholic-app-build-VJGnO`:
+
+1. `today.html` — Today dashboard (dynamic feria, penance, mystery hint, saint follow, schola progress, rosary badge)
+2. `missal.html` — Mass Ordinary with sticky Mass progress path, illuminated moments, dynamic feria header
+3. `prayers.html` — Liber Orationum with featured Oratio Hodierna + expandable chapters + 4 detail overlays (Ave, Pater, Anima Christi, Crucifix)
+4. `saints.html` — Praxes Sanctorum with all 7 saints' full practices, Follow/Sequor button, Roman-numeral streak, rosary-bead progress
+5. `rosary.html` — Sacratissimum Rosarium with **full 80-step flow** for all 3 mystery sets, dark walnut candlelit pray screen, animated bead chaplet, auto-selects today's mystery
+6. `reference.html` — Liber Referentiarum with 7 expandable chapters / 37 entries, sample Advent detail
+7. `learn.html` — Schola Latina with 10 lessons in 4 chapters, journey dots, interactive practice cards
+8. `confession.html` — De Confessione two-tier design: Liber I (Guided, 10 steps + Examination by Commandment) + Liber II (St. Catherine of Siena 5 steps + her 1377 prayer); Lenten Friday plenary indulgence flag
+9. `stations.html` — Via Crucis with winding pilgrimage path start + dark walnut guided pray screen with 90px illuminated Roman numerals; Lenten Friday prominence badge
+10. `office.html` — **Traditional Roman Breviary (1962)** with 24-hour 8-point octagonal dial (hours at exact 3-hour / 45° intervals starting midnight), time-of-day glow, full seasonal awareness
+11. `lit-context.js` — **shared library** (Computus + season detection + Marian antiphons + mystery picker + penance rules); loaded via `<script src>` by today / missal / rosary / stations / confession / office
 
 Plus `UI/Final/` has 14 finalized HTML mockups from the earlier design exploration phase.
 
@@ -318,40 +325,68 @@ User uploaded 6 screenshots (`download*.png` on `main` branch) of a competing Ca
 
 ---
 
-## 9. Current State (as of last session)
+## 9. Current State
 
-### Just completed
-- **Differentiation pass applied to ALL 5 web prototypes** — distinguished from the competing Catholic app (see §8). Each one now uses the unified design language:
-  - Dark walnut header (`#1A130C → #2C2015` gradient) with double-rule gold inner frame and gold-letterpress title
-  - Warm parchment body (`#F2E8D0`) with subtle radial-dot paper grain
-  - Fixed double-rule gold page frame (10px inset)
-  - Sanctuary red as primary accent; gold demoted to ornaments only
-  - Real glyph tab bar with Latin labels: Hodie / Missa / Oratio / Schola / Liber
-  - Drop caps (italic red Playfair) on prayer first letters
-  - Red `℟.` `℣.` rubric marks in prayer text
-  - Ornamental chapter-break dividers between major sections
+The prototype side is **effectively complete**. The web prototypes are the current source of truth for design and interaction. Swift code has not yet been migrated to match.
 
-- **today.html** — illuminated `P` drop cap on Rosary section, no badges/cards, ornamental dividers between sections
-- **missal.html** — sticky horizontal **Mass progress path** (interactive scrollable nodes for the 11 main parts), marginal Roman numerals (i–xiii), italic posture labels in margin, three **illuminated moments** with radial gold glow + bordered rules for *Et Incarnátus*, *Hoc est enim Corpus meum*, *Et Verbum caro factum est*, "Ite, Missa est" end mark
-- **prayers.html** — **Featured Oratio Hodierna** at top with large illuminated `A` drop cap, three illuminated chapters (Rosárium / Missa / Devotiónes), index-style entries with leader-dot gold separators, redesigned Ave Maria detail overlay with dark walnut header + drop cap + rubric marks
-- **saints.html** — saint entries are illuminated initials (no cards), redesigned daily practice overlay with **rosary-bead progress** (8 small beads + center cross that light up red as practices complete), gold-cross checkmark (✠) inside red square instead of green check
-- **rosary.html** — Start screen has illuminated J/S/G mystery initials; **Pray screen is fully dark walnut** (candlelit church ambience) with visible **animated rosary chaplet** (current bead pulses gold), large italic Latin step name, illuminated mystery-moment panels at each new decade, italic small-caps "Sequens / Finis" nav button; Complete screen has parchment Deo Grátias mark
+### The 10 prototypes all share a unified design language
+Every screen uses:
+- Dark walnut header (`#1A130C → #2C2015` gradient) with double-rule gold inner frame and gold-letterpress title
+- Warm parchment body (`#F2E8D0`) with subtle radial-dot paper grain
+- Fixed double-rule gold page frame (10px inset)
+- Sanctuary red as primary accent; gold demoted to ornaments only
+- Real glyph tab bar with Latin labels: Hodie / Missa / Oratio / Schola / Liber
+- Drop caps (italic red Playfair) on prayer first letters
+- Red `℟.` `℣.` rubric marks
+- Ornamental chapter-break dividers between major sections
 
-- **reference.html** — 7 expandable category chapters (Calendar, Mass, Prayers, Devotions, Penance, Sacramentals, Latin) with 37 entries across them. Sample detail overlay (Advent) with drop cap and scripture reference.
-- **learn.html** — Schola Latina with 10 lessons in 4 chapters (Pronuntiatio, Grammatica, Orationes, Lectio). Journey progress dots at top. Interactive course overlay (Vowels demo) with tappable practice cards that flip to reveal phonetic/meaning.
-- **confession.html** — Two-tier design: Liber I (Guided Confession — Before/During/After with 10 steps, formula blocks for what to say, full Examination of Conscience by the Ten Commandments expandable) and Liber II (After St. Catherine of Siena — five steps of deeper preparation + her prayer from Rocca d'Orcia, 1377).
-- **stations.html** — Via Crucis guided three-screen experience: Start (14 station preview list), Pray (dark walnut candlelit with 14-dot progress path, Latin ordinals, versicle/response rubrics, meditation, Stabat Mater prayer), Complete (Consummatum Est).
+### What each prototype does now
+
+**today.html** — Dynamic feria header (driven by `lit-context.js`), illuminated `P` drop cap on Rosary section, no badges/cards. Live personalization:
+- Saints section transforms into the followed saint's card (initial drop cap + name + quote + streak in Roman numerals) when one is followed, falls back to the "Follow a Saint" CTA otherwise
+- Schola progress section with 10 dots mirroring `learn.html`'s journey, showing `III of X · lessons mastered` state
+- Rosary "Oratum Hodie" badge appears below the launcher after completing a rosary today
+- Rosary sub-line auto-shows today's mystery set + feria name
+- Penance section fully dynamic by day + season (Lenten Friday / Lenten weekday / Friday / Advent Wed-Fri-Sat / Sunday / other)
+- Plenary indulgence row appears beneath the penance on Lenten Fridays pointing to the Crucifix prayer
+
+**missal.html** — Sticky horizontal **Mass progress path** (interactive scrollable nodes for the 11 main parts), marginal Roman numerals (i–xiii), italic posture labels in margin, three **illuminated moments** with radial gold glow for *Et Incarnátus*, *Hoc est enim Corpus meum*, *Et Verbum caro factum est*, "Ite, Missa est" end mark. Header feria is now dynamic (e.g. *"Feria Sexta · Quadragesima"* in season colour).
+
+**prayers.html** — **Featured Oratio Hodierna** at top with large illuminated drop cap. Three illuminated chapters (Rosárium / Missa / Devotiónes), index-style entries with leader-dot separators, `.preview` style for entries without detail overlays. **Four full detail overlays wired:** Ave Maria, Pater Noster (uses Ave overlay for demo), **Anima Christi** (13-line full bilingual breakdown), and **En Ego, O Bone Iesu — Prayer Before a Crucifix** (with indulgence rubric and Psalm 21:17–18 closing).
+
+**saints.html** — All 7 saints now have **full daily practices** (previously only Padre Pio). Each saint has 7–10 practices organized into Mane / Per Diem / Vésperæ / Pænitentiæ sections, plus a hand-picked signature quote. **Follow/Sequor system**: tap `Sequere ✠ Follow` in any saint's overlay → saint slug persists to localStorage, the selector shows a "Sequor" pill on the followed saint, completing all daily practices bumps a consecutive-day streak. Streak displays in Roman numerals. Rosary-bead progress auto-adjusts to each saint's total count.
+
+**rosary.html** — **Full 80-step flow** for all 3 mystery sets (Joyful, Sorrowful, Glorious), built from a generator (`buildSteps(setKey)`):
+- Opening (7 steps): Signum Crucis → Credo Apostolorum → Pater (Holy Father intentions) → 3× Ave (Faith/Hope/Charity) → Gloria Patri
+- Each mystery (14 steps): announce → Pater → 10× Ave → Gloria → Fatima Prayer
+- Closing (2 steps): Salve Regina → Signum Crucis
+- Full Latin + English prayer texts for Signum, Credo, Pater, Ave, Gloria, Fatima, Salve
+- Dark walnut candlelit Pray screen with animated rosary chaplet (current bead pulses gold), illuminated mystery-moment panels at each new decade
+- Start screen **auto-highlights today's mystery set** based on day-of-week with Sunday seasonal overrides (Advent Sun → Joyful, Lent Sun → Sorrowful), gold "Hodie · Today" badge
+- Completion writes `rosaryLastDate` + `rosaryLastSet` to localStorage so today.html picks up the "prayed today" state
+
+**reference.html** — 7 expandable chapters / 37 entries with Advent detail sample. Auto-marks unlinked entries as `.preview` via tiny IIFE.
+
+**learn.html** — Schola Latina with 10 lessons across 4 chapters, journey dots, interactive flip cards in the Vowels detail overlay.
+
+**confession.html** — Two-tier design: **Liber I** (Guided, 10 steps + full Examination of Conscience by the Ten Commandments expandable) and **Liber II** (St. Catherine of Siena's 5-step preparation + her prayer from Rocca d'Orcia, 1377). Lenten Friday plenary indulgence notice appears between the intro and the two paths.
+
+**stations.html** — Winding vertical pilgrimage path on the start screen (14 stations zigzag left/right of a central hairline, ending at a Golgotha cross). Dark walnut pray screen with a **massive 90px illuminated Roman numeral** behind each station, mood-tinted per station (red glow for Crucifixion/Death, warmer gold for Mother/Deposition, deep shadow for Tomb). Lenten Friday prominence badge.
+
+**office.html** — **Traditional 1962 Roman Breviary** (explicitly labelled — see §13). Unique **24-hour octagonal clock dial**: all 8 canonical hours at exact 3-hour / 45° intervals starting at midnight (Matins 00:00, Lauds 03:00, Prime 06:00, Terce 09:00, Sext 12:00, None 15:00, Vespers 18:00, Compline 21:00). Time-of-day glow animation on the current hour. Each hour overlay flows through the full traditional Office structure (V/R → Hymn → Antiphon → Psalm → Capitulum → Canticle where applicable → Pater → Collect → Closing). Full seasonal awareness via `lit-context.js`: the four seasonal Marian antiphons swap into Compline, a season banner shows in the header, the dial tints by liturgical colour, Lent/Passiontide/Advent appends the "Alleluia omitted" note. **Matins has the Te Deum** restored (omitted in Lent/Passiontide) and **Compline has the full traditional structure** — Confiteor, Jer 14:9 capitulum *"Tu autem in nobis es Domine"*, and the *"In manus tuas Domine"* short responsory before Nunc Dimittis (14 parts, canonical order).
 
 ### Pending
-- Propagate the new design language back into the Swift views once the user approves the updated prototypes
-- User-specific per-screen feedback round on all prototypes
-- (Possibly) build Divine Office hours prototype
+- **Swift migration** — all 9+ iOS views still use the old design language. Nothing in `/AdAltareDei/` has been touched in this round of prototype work.
+- User per-screen feedback round on the finalized prototypes
+- Saint of the Day feature (content-heavy — needs a sanctorale / ~250 saint entries)
+- Audio (pronunciation + chant)
 
 ### Known gaps / not yet built
 - AI practice / voice pronunciation feedback (Practice tab scaffolding exists)
 - Real audio recordings for prayers (spec pending — user open to TTS or volunteer recordings)
-- Latin/English baseline grid alignment in missal view (current two-column is close but not perfectly aligned)
-- Swift views still use old design language — need a migration pass after prototype approval
+- Latin/English baseline grid alignment in missal view
+- Daily Mass Propers (Introit/Collect/Epistle/Gospel/Secret/Communion/Postcommunion) — needs per-feast content
+- Swift views still use old design language — migration pending user go-ahead
 
 ---
 
@@ -397,12 +432,162 @@ If you're a fresh Claude picking this up:
 
 1. **Read this file first.** It's the ground truth.
 2. **Skim** `AdAltareDei_Plan.md` (original spec) and `UI/DESIGN_REFERENCE.md` (design tokens).
-3. **Open** the 5 prototypes in `/prototype/` in order: today → missal → prayers → saints → rosary.
-4. **Check** §9 for where we left off.
-5. **Ask the user** what they want to work on next, and confirm before touching Swift files — prototypes are the current truth, Swift catches up after.
-6. Remember the user has **no Mac** — you cannot run the iOS app. Validate everything visually in the web prototypes.
-7. Work in **small batches** to avoid timeouts on large file operations.
+3. **Open all 10 prototypes** in `/prototype/` — they are the current design and content truth:
+   today → missal → prayers → saints → rosary → reference → learn → confession → stations → office
+4. **Also read** `/prototype/lit-context.js` — it's the shared library every page loads for day/season awareness.
+5. **Check** §9 for where we left off and §13 for how the liturgical context system works.
+6. **Ask the user** what they want to work on next, and confirm before touching Swift files — prototypes are the current truth, Swift catches up after.
+7. Remember the user has **no Mac** — you cannot run the iOS app. Validate everything visually in the web prototypes.
+8. Work in **small batches** to avoid timeouts on large file operations.
+9. For any date/season/feria/penance/mystery/antiphon/indulgence question, call `LitContext.get(new Date())` — don't inline Computus anywhere.
 
 ---
 
-*Last updated: current session. Update §9 whenever the in-progress/pending state changes.*
+## 13. Liturgical Context System
+
+A shared JavaScript library drives all day- and season-aware behaviour across the prototypes.
+
+### File
+`prototype/lit-context.js` — loaded by every page that cares, via `<script src="lit-context.js"></script>` in `<head>`. Sets `window.LitContext`.
+
+### Public API
+```js
+LitContext.get(date)          // returns rich context object (see below)
+LitContext.easterFor(year)    // anonymous Gregorian algorithm
+LitContext.formatLongDate(d)  // "the twenty-eighth of March"
+LitContext.COLOUR_HEX         // { violet, rose, white, red, green }
+```
+
+### Context object shape
+```js
+{
+  season:      'advent' | 'christmas' | 'lent' | 'passion' | 'easter' |
+               'pentecost' | 'per_annum',
+  colour:      'violet' | 'rose' | 'white' | 'red' | 'green',
+  colourHex:   '#6A359A',
+  latName:     'Tempus Advéntus',
+  engName:     'Advent',
+  feriaLat:    'Domínica' | 'Feria Secúnda' | ... | 'Sábbato',
+  feriaEng:    'Sunday' | ... | 'Saturday',
+  dow:         0-6,
+  isSunday:    true/false,
+  isFriday:    true/false,
+  isLent:      true/false,  // includes Passiontide
+  marian:      'alma' | 'ave' | 'regina' | 'salve',
+  mystery:     'joyful' | 'sorrowful' | 'glorious',
+  mysteryLat:  'Mystéria Dolorósa',
+  mysteryEng:  'Sorrowful Mysteries',
+  penance: {
+    title:   'Lenten Friday' | 'Lenten Fast' | 'Friday Abstinence' |
+             'Advent Penance' | 'Day of the Lord' | 'No obligatory penance',
+    latin:   'Feria Sexta in Quadragésima',
+    desc:    '...',
+    rubric:  '℟. Feria Sexta',
+    strict:  true/false
+  },
+  indulgences: {
+    crucifix: true  // only on Lenten Fridays — Prayer Before a Crucifix plenary
+  },
+  easter, ashWed, pentecost, trinity, advent1  // computed Date objects
+}
+```
+
+### Season boundaries (Computus-derived)
+| Season | Start | End | Colour |
+|---|---|---|---|
+| Tempus Advéntus | Advent I (4th Sun before Christmas) | Dec 24 | violet |
+| Tempus Nativitátis | Dec 25 | Feb 1 | white |
+| Tempus post Epiphaníam | Feb 2 (Candlemas) | Ash Wed − 1 | green |
+| Quadragésima | Ash Wed | Passion Sun − 1 | violet |
+| Tempus Passiónis | Passion Sun (Easter − 14) | Holy Sat | violet |
+| Tempus Paschále | Easter | Trinity Sat (Easter + 55) | white |
+| Pentecóste | Pentecost Sun only (Easter + 49) | — | red |
+| Tempus post Pentecósten | Trinity Sun (Easter + 56) | Advent I − 1 | green |
+
+Eastertide intentionally extends through the **Pentecost Octave** (Trinity Saturday) per the 1962 usage — Salve Regina doesn't take over until Trinity Sunday.
+
+### Mystery-by-day-of-week
+- Sunday → Glorious (or Joyful in Advent, Sorrowful in Lent/Passion — seasonal override)
+- Monday → Joyful
+- Tuesday → Sorrowful
+- Wednesday → Glorious
+- Thursday → Joyful
+- Friday → Sorrowful
+- Saturday → Glorious
+
+Traditional 1962 schedule, no Luminous.
+
+### Marian antiphon windows (for Compline)
+- **Alma Redemptóris Mater** — Advent I through Feb 1 (spans year boundary)
+- **Ave Regína Cælórum** — Feb 2 (Candlemas) through Holy Wednesday
+- **Regína Cæli** — Easter Vigil through Friday after Pentecost (Trinity Sat inclusive)
+- **Salve Regína** — Trinity Sunday through Saturday before Advent I
+
+### Penance rules (1962 norms)
+| Condition | Title | Description |
+|---|---|---|
+| Lenten Friday | Lenten Friday | Abstinence + fast (one meal + two collations) |
+| Lenten weekday | Lenten Fast | Fast for those of fasting age (21–59) |
+| Friday outside Lent | Friday Abstinence | Abstain from flesh of warm-blooded animals |
+| Advent Wed/Fri/Sat | Advent Penance | Voluntary fast reminder |
+| Sunday | Day of the Lord | No obligation, rest + Mass |
+| Other | No obligatory penance | Voluntary mortifications always meritorious |
+
+### Wired pages
+| Page | Uses context for |
+|---|---|
+| `today.html` | Feria + date + season-coloured header, dynamic penance entry, plenary indulgence row, today's mystery sub-line |
+| `missal.html` | Header feria + season name in liturgical colour |
+| `rosary.html` | Auto-selects today's mystery set with `Hodie · Today` badge, intro line |
+| `stations.html` | Lenten Friday prominence badge |
+| `confession.html` | Lenten Friday plenary indulgence notice |
+| `office.html` | Season banner, dial tinting, Compline Marian antiphon swap, Lent/Passion/Advent Alleluia note |
+
+### Known edge cases handled
+- Year boundary (Advent → Christmastide): Alma uses OR not AND
+- Pentecost Octave: Eastertide extends to Trinity Saturday (Pentecost Sunday has its own label)
+- Pre-Lent: the Candlemas → Ash Wed gap is labelled "Tempus post Epiphaníam" (not "post Pentecósten")
+
+### Known gaps
+- No Septuagesima / Sexagesima / Quinquagesima distinction (merged into post Epiphaníam)
+- No specific Ember Days logic (currently merged with "Advent Penance" heuristic)
+- No sanctorale (Saint of the Day feature not yet built)
+- No feast-of-the-day detection (would override the seasonal label)
+
+---
+
+## 14. Traditional Roman Breviary Audit Trail
+
+The Divine Office prototype was audited against LOTH (Novus Ordo Liturgy of the Hours) to ensure it is the **traditional 1962 Roman Breviary**, not the reformed 1970 LOTH.
+
+### Things explicitly checked
+| Check | Result |
+|---|---|
+| 8 hours including **Prime** (LOTH suppressed Prime) | ✓ All 8 hours present |
+| Hymns correctly assigned per hour | ✓ All 8 correct for 1962 |
+| Psalms correctly assigned per hour | ✓ Ps 94 Matins invitatory, Ps 62 Lauds, Ps 53 Prime, Ps 118 Terce, Ps 122 Sext, Ps 125 None, Ps 109 Vespers, Ps 30 Compline |
+| Canticles use **Vulgate** (not Neo-Vulgate) | ✓ Benedictus / Magnificat / Nunc Dimittis all Vulgate |
+| Matins opens with "Dómine, lábia mea apéries" (traditional) | ✓ |
+| Compline opens with "Iube, dómne, benedícere" (traditional) | ✓ |
+| **Te Deum** at end of Matins (omitted in Lent/Passiontide) | ✓ Present |
+| **Confiteor** in Compline | ✓ Present (three-part: Confiteor / Misereatur / Indulgentiam) |
+| Jer 14:9 capitulum "Tu autem in nobis es Domine" in Compline | ✓ Present |
+| "In manus tuas Domine" short responsory in Compline | ✓ Present (V1/R1/V2/R2) |
+| Header does NOT say "Liturgy of the Hours" | ✓ Says "Breviárium Románum · 1962 Roman Breviary" |
+| Seasonal Marian antiphons use traditional 1962 windows | ✓ |
+| Hour times follow traditional 3-hour cadence | ✓ 00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00 |
+
+### Part sequence per hour
+**Matins** (9 parts): V/R → Hymn → Antiphon → Psalm → Capitulum → Canticle (Te Deum) → Pater → Collect → Closing
+
+**Lauds** (9 parts): V/R → Hymn → Antiphon → Psalm → Capitulum → Canticle (Benedictus) → Pater → Collect → Closing
+
+**Prime / Terce / Sext / None** (8 parts each): V/R → Hymn → Antiphon → Psalm → Capitulum → Pater → Collect → Closing
+
+**Vespers** (9 parts): V/R → Hymn → Antiphon → Psalm → Capitulum → Canticle (Magnificat) → Pater → Collect → Closing
+
+**Compline** (14 parts, most traditional): Blessing → Short Reading (1 Pet 5:8–9) → Confiteor → Supplication (Converte nos Deus) → Deus in adjutorium → Antiphon → Psalm → Hymn → Capitulum (Jer 14:9) → Responsory (In manus tuas) → Canticle (Nunc Dimittis) → Pater → Collect (Visita quæsumus) → Marian Antiphon (seasonal)
+
+---
+
+*Last updated: end of prototype phase. Update §9 and §13 whenever the in-progress/pending state changes. Update §14 if any Office content is touched.*
