@@ -76,7 +76,9 @@ body::before{display:none}
   z-index:2;
   transition:all 0.3s;
 }
-.stop:hover .marker{
+.stop:hover .marker,
+.stop:active .marker,
+.stop:focus-visible .marker{
   background:rgba(139,26,26,0.08);
   box-shadow:0 0 0 3px rgba(139,26,26,0.08);
 }
