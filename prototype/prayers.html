@@ -262,6 +262,10 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   font-size:18px;
   opacity:0.4;
 }
+/* Preview-only entries (no detail overlay yet) */
+.entry.preview{cursor:default;opacity:0.7}
+.entry.preview::after{display:none}
+.entry.preview .init{color:rgba(139,26,26,0.45)}
 
 /* ===== End mark ===== */
 .end{
@@ -457,13 +461,13 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   <div class="eng">Of the Rosary</div>
 </div>
 
-<div class="entry"><div class="init">S</div><div class="body"><div class="name">Signum Crucis</div><div class="eng">The Sign of the Cross</div></div></div>
+<div class="entry preview"><div class="init">S</div><div class="body"><div class="name">Signum Crucis</div><div class="eng">The Sign of the Cross</div></div></div>
 <div class="entry" onclick="show('ave')"><div class="init">P</div><div class="body"><div class="name">Pater Noster</div><div class="eng">The Lord's Prayer</div></div><div class="meta">Daily</div></div>
 <div class="entry" onclick="show('ave')"><div class="init">A</div><div class="body"><div class="name">Ave María</div><div class="eng">Hail Mary</div></div><div class="meta">Daily</div></div>
-<div class="entry"><div class="init">G</div><div class="body"><div class="name">Glória Patri</div><div class="eng">Glory Be to the Father</div></div></div>
-<div class="entry"><div class="init">S</div><div class="body"><div class="name">Salve Regína</div><div class="eng">Hail Holy Queen</div></div></div>
-<div class="entry"><div class="init">C</div><div class="body"><div class="name">Credo Apostolórum</div><div class="eng">The Apostles' Creed</div></div></div>
-<div class="entry"><div class="init">O</div><div class="body"><div class="name">Oratio Fátimæ</div><div class="eng">Fatima Prayer</div></div></div>
+<div class="entry preview"><div class="init">G</div><div class="body"><div class="name">Glória Patri</div><div class="eng">Glory Be to the Father</div></div></div>
+<div class="entry preview"><div class="init">S</div><div class="body"><div class="name">Salve Regína</div><div class="eng">Hail Holy Queen</div></div></div>
+<div class="entry preview"><div class="init">C</div><div class="body"><div class="name">Credo Apostolórum</div><div class="eng">The Apostles' Creed</div></div></div>
+<div class="entry preview"><div class="init">O</div><div class="body"><div class="name">Oratio Fátimæ</div><div class="eng">Fatima Prayer</div></div></div>
 
 <!-- Missa -->
 <div class="chapter">
@@ -472,12 +476,12 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   <div class="eng">Of the Holy Mass</div>
 </div>
 
-<div class="entry"><div class="init">C</div><div class="body"><div class="name">Confíteor</div><div class="eng">I Confess to Almighty God</div></div></div>
-<div class="entry"><div class="init">K</div><div class="body"><div class="name">Kýrie Eléison</div><div class="eng">Lord, Have Mercy</div></div></div>
-<div class="entry"><div class="init">G</div><div class="body"><div class="name">Glória in Excélsis</div><div class="eng">Glory to God in the Highest</div></div></div>
-<div class="entry"><div class="init">S</div><div class="body"><div class="name">Sanctus</div><div class="eng">Holy, Holy, Holy</div></div></div>
-<div class="entry"><div class="init">A</div><div class="body"><div class="name">Agnus Dei</div><div class="eng">Lamb of God</div></div></div>
-<div class="entry"><div class="init">D</div><div class="body"><div class="name">Dómine, Non Sum Dignus</div><div class="eng">Lord, I Am Not Worthy</div></div></div>
+<div class="entry preview"><div class="init">C</div><div class="body"><div class="name">Confíteor</div><div class="eng">I Confess to Almighty God</div></div></div>
+<div class="entry preview"><div class="init">K</div><div class="body"><div class="name">Kýrie Eléison</div><div class="eng">Lord, Have Mercy</div></div></div>
+<div class="entry preview"><div class="init">G</div><div class="body"><div class="name">Glória in Excélsis</div><div class="eng">Glory to God in the Highest</div></div></div>
+<div class="entry preview"><div class="init">S</div><div class="body"><div class="name">Sanctus</div><div class="eng">Holy, Holy, Holy</div></div></div>
+<div class="entry preview"><div class="init">A</div><div class="body"><div class="name">Agnus Dei</div><div class="eng">Lamb of God</div></div></div>
+<div class="entry preview"><div class="init">D</div><div class="body"><div class="name">Dómine, Non Sum Dignus</div><div class="eng">Lord, I Am Not Worthy</div></div></div>
 
 <!-- Devotiones -->
 <div class="chapter">
@@ -486,13 +490,13 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   <div class="eng">Devotional Prayers</div>
 </div>
 
-<div class="entry"><div class="init">M</div><div class="body"><div class="name">Memoráre</div><div class="eng">Remember, O Most Gracious Virgin</div></div></div>
-<div class="entry"><div class="init">A</div><div class="body"><div class="name">Actus Contritiónis</div><div class="eng">Act of Contrition</div></div></div>
+<div class="entry preview"><div class="init">M</div><div class="body"><div class="name">Memoráre</div><div class="eng">Remember, O Most Gracious Virgin</div></div></div>
+<div class="entry preview"><div class="init">A</div><div class="body"><div class="name">Actus Contritiónis</div><div class="eng">Act of Contrition</div></div></div>
 <div class="entry" onclick="show('anima')"><div class="init">A</div><div class="body"><div class="name">Ánima Christi</div><div class="eng">Soul of Christ</div></div></div>
 <div class="entry" onclick="show('crucifix')"><div class="init">E</div><div class="body"><div class="name">En Ego, O Bone Iesu</div><div class="eng">Prayer Before a Crucifix</div></div></div>
-<div class="entry"><div class="init">T</div><div class="body"><div class="name">Tantum Ergo</div><div class="eng">Therefore So Great a Sacrament</div></div></div>
-<div class="entry"><div class="init">O</div><div class="body"><div class="name">Oratio ad S. Michaélem</div><div class="eng">Prayer to St. Michael</div></div></div>
-<div class="entry"><div class="init">A</div><div class="body"><div class="name">Adóro Te Devóte</div><div class="eng">I Devoutly Adore Thee</div></div></div>
+<div class="entry preview"><div class="init">T</div><div class="body"><div class="name">Tantum Ergo</div><div class="eng">Therefore So Great a Sacrament</div></div></div>
+<div class="entry preview"><div class="init">O</div><div class="body"><div class="name">Oratio ad S. Michaélem</div><div class="eng">Prayer to St. Michael</div></div></div>
+<div class="entry preview"><div class="init">A</div><div class="body"><div class="name">Adóro Te Devóte</div><div class="eng">I Devoutly Adore Thee</div></div></div>
 
 <div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
 
@@ -667,8 +671,8 @@ function hide(){document.querySelectorAll('.overlay').forEach(o=>o.classList.rem
   <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
   <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
   <a class="tab active" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
-  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
-  <a class="tab" href="#"><span class="glyph">✦</span>Liber</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
 </nav>
 
 </body>

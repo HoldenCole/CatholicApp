@@ -195,6 +195,9 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   color:#B8960C;font-family:'Playfair Display',serif;
   font-size:16px;opacity:0.4;
 }
+.entry.preview{cursor:default;opacity:0.7}
+.entry.preview::after{display:none}
+.entry.preview .e-init{color:rgba(139,26,26,0.4)}
 
 .end{
   text-align:center;margin:34px 0 14px;
@@ -507,13 +510,17 @@ function showDetail(id){
 function hideDetail(){
   document.querySelectorAll('.overlay').forEach(function(o){o.classList.remove('show')});
 }
+// Mark entries without onclick handlers as preview-only (visually subdued)
+document.querySelectorAll('.entries .entry').forEach(function(el){
+  if(!el.getAttribute('onclick'))el.classList.add('preview');
+});
 </script>
 
 <nav class="tab-bar">
   <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
   <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
   <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
-  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
   <a class="tab active" href="reference.html"><span class="glyph">✦</span>Liber</a>
 </nav>
 
