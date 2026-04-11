@@ -111,6 +111,55 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 .sec-summary .sum-label{font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px}
 .sec-summary p{font-family:'EB Garamond',serif;font-size:14px;color:#1C1410;line-height:1.6}
 
+/* Phrase breakdown table (for prayer courses) */
+.phrase{margin:10px 0;padding:10px 14px;border-left:2px solid rgba(139,26,26,0.35)}
+.phrase .lat{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-style:italic}
+.phrase .phon{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#8B1A1A;margin-top:2px;letter-spacing:0.3px}
+.phrase .eng{font-family:'EB Garamond',serif;font-size:13px;color:#7A6A58;margin-top:3px;font-style:italic}
+
+/* Declension / verb table */
+.table{margin:12px 0;border-top:0.5px solid rgba(184,150,12,0.35);border-bottom:0.5px solid rgba(184,150,12,0.35)}
+.trow{display:flex;padding:7px 4px;border-bottom:0.5px dotted rgba(184,150,12,0.25);font-family:'EB Garamond',serif;font-size:13px}
+.trow:last-child{border-bottom:none}
+.trow.head{font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:2px;text-transform:uppercase;background:rgba(184,150,12,0.05)}
+.trow .cell{flex:1;padding:0 6px}
+.trow .cell.lat{font-family:'Playfair Display',serif;color:#1C1410;font-style:italic}
+.trow .cell.eng{font-style:italic;color:#7A6A58}
+
+/* Mastered button + state */
+.master-wrap{text-align:center;margin:28px 0 10px}
+.master-btn{
+  display:inline-block;
+  padding:14px 28px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;
+  border-top:0.5px solid rgba(139,26,26,0.45);
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  transition:all 0.3s;
+}
+.master-btn .cross{margin:0 8px;color:#B8960C}
+.master-btn.mastered{
+  color:#E8DFC9;
+  background:rgba(139,26,26,0.7);
+  border-color:rgba(139,26,26,0.8);
+}
+.master-btn.mastered .cross{color:#E8DFC9}
+
+/* Journey dot & lesson mastered state */
+.journey .dot.done{background:#8B1A1A;border-color:#8B1A1A}
+.lesson.mastered .num{color:#8B1A1A}
+.lesson.mastered::before{
+  content:'✠';
+  position:absolute;
+  left:18px;top:16px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  color:#B8960C;
+}
+
 /* ===== Tab bar ===== */
 .tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:88px;background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);padding:22px 12px 28px;display:flex;justify-content:space-around;align-items:center;z-index:20}
 .tab-bar::before{content:'';position:absolute;top:22px;left:32px;right:32px;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
@@ -152,21 +201,21 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 <!-- I. Pronunciation -->
 <div class="chapter"><span class="cross">✠</span><div class="lat">Pronuntiatio</div><div class="eng">Pronunciation</div></div>
 
-<div class="lesson" onclick="showCourse()">
+<div class="lesson" data-slug="vowels" onclick="showCourse('vowels')">
   <div class="num">1</div>
   <div class="l-title">Ecclesiastical Vowels</div>
   <div class="l-latin">De Vocalibus Ecclesiasticis</div>
   <div class="l-desc">How Latin vowels sound in the Roman pronunciation used by the Church.</div>
   <div class="l-meta"><span>10 min</span> <span class="sep">·</span> <span>6 practice words</span></div>
 </div>
-<div class="lesson">
+<div class="lesson" data-slug="consonants" onclick="showCourse('consonants')">
   <div class="num">2</div>
   <div class="l-title">Consonant Rules</div>
   <div class="l-latin">De Regulis Consonantium</div>
   <div class="l-desc">The key consonant differences from English: c, g, gn, sc, ti, and more.</div>
   <div class="l-meta"><span>12 min</span> <span class="sep">·</span> <span>8 practice words</span></div>
 </div>
-<div class="lesson">
+<div class="lesson" data-slug="stress" onclick="showCourse('stress')">
   <div class="num">3</div>
   <div class="l-title">Stress & Accent</div>
   <div class="l-latin">De Accentu et Íctu</div>
@@ -177,39 +226,39 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 <!-- II. Grammar -->
 <div class="chapter"><span class="cross">✠</span><div class="lat">Grammática</div><div class="eng">Grammar</div></div>
 
-<div class="lesson">
+<div class="lesson" data-slug="declensions" onclick="showCourse('declensions')">
   <div class="num">4</div>
   <div class="l-title">First & Second Declensions</div>
   <div class="l-latin">Declinatio Prima et Secunda</div>
   <div class="l-desc">The two most common noun patterns — -a and -us endings you'll see in every prayer.</div>
   <div class="l-meta"><span>15 min</span> <span class="sep">·</span> <span>Nouns &amp; cases</span></div>
 </div>
-<div class="lesson">
+<div class="lesson" data-slug="verbs" onclick="showCourse('verbs')">
   <div class="num">5</div>
   <div class="l-title">Verb Basics</div>
   <div class="l-latin">Elementa Verborum</div>
   <div class="l-desc">Present tense conjugation and the four conjugation groups.</div>
   <div class="l-meta"><span>15 min</span> <span class="sep">·</span> <span>Conjugations</span></div>
 </div>
-<div class="lesson">
+<div class="lesson" data-slug="vocab50" onclick="showCourse('vocab50')">
   <div class="num">6</div>
   <div class="l-title">50 Common Prayer Words</div>
   <div class="l-latin">Quinquaginta Verba Communia</div>
   <div class="l-desc">The essential vocabulary of the Latin Mass and the Rosary.</div>
-  <div class="l-meta"><span>20 min</span> <span class="sep">·</span> <span>50 flashcards</span></div>
+  <div class="l-meta"><span>20 min</span> <span class="sep">·</span> <span>10 flashcards</span></div>
 </div>
 
 <!-- III. Prayers -->
 <div class="chapter"><span class="cross">✠</span><div class="lat">Oratiónes</div><div class="eng">Master the Prayers</div></div>
 
-<div class="lesson">
+<div class="lesson" data-slug="ave" onclick="showCourse('ave')">
   <div class="num">7</div>
   <div class="l-title">Master the Ave Maria</div>
   <div class="l-latin">Ad Perdiscendam Ave Mariam</div>
   <div class="l-desc">Word-by-word breakdown of the Hail Mary with pronunciation and meaning.</div>
   <div class="l-meta"><span>12 min</span> <span class="sep">·</span> <span>Phrase by phrase</span></div>
 </div>
-<div class="lesson">
+<div class="lesson" data-slug="pater" onclick="showCourse('pater')">
   <div class="num">8</div>
   <div class="l-title">Master the Pater Noster</div>
   <div class="l-latin">Ad Perdiscendum Pater Noster</div>
@@ -220,14 +269,14 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 <!-- IV. Reading -->
 <div class="chapter"><span class="cross">✠</span><div class="lat">Léctio</div><div class="eng">Reading Latin</div></div>
 
-<div class="lesson">
+<div class="lesson" data-slug="psalms" onclick="showCourse('psalms')">
   <div class="num">9</div>
   <div class="l-title">Reading Latin Psalms</div>
   <div class="l-latin">Quomodo Psalmos Legere</div>
   <div class="l-desc">Approach the Psalter with confidence — structure, parallelism, and recurring phrases.</div>
   <div class="l-meta"><span>15 min</span> <span class="sep">·</span> <span>Psalm 22</span></div>
 </div>
-<div class="lesson">
+<div class="lesson" data-slug="vulgate" onclick="showCourse('vulgate')">
   <div class="num">10</div>
   <div class="l-title">Reading the Vulgate</div>
   <div class="l-latin">Quomodo Vulgatam Legere</div>
@@ -239,88 +288,331 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 
 </main>
 
-<!-- ===== Course overlay: Ecclesiastical Vowels ===== -->
+<!-- ===== Course overlay (dynamic) ===== -->
 <div class="overlay" id="o-course">
   <div class="frame"></div>
   <div class="dh">
     <a class="back" onclick="hideCourse()">‹ &nbsp; Schola</a>
-    <div class="cat">✠ &nbsp; Lectio I &nbsp; ✠</div>
-    <h2>Ecclesiastical Vowels</h2>
-    <div class="sub">De Vocalibus Ecclesiasticis</div>
+    <div class="cat" id="c-cat">✠ &nbsp; Lectio I &nbsp; ✠</div>
+    <h2 id="c-title">Ecclesiastical Vowels</h2>
+    <div class="sub" id="c-latin">De Vocalibus Ecclesiasticis</div>
     <div class="h-rule"><span class="glyph">✦</span></div>
   </div>
-  <div class="db">
-
-    <div class="sec-intro"><span class="dropcap">T</span>he pronunciation of Latin used in the Roman Church differs from the Classical pronunciation taught in universities. Ecclesiastical Latin is the living tongue of the liturgy — it is how the saints prayed, and how the Mass is sung today.</div>
-
-    <div class="sec-label">The Five Vowels</div>
-    <div class="sec-lesson">
-      <p><strong>A</strong> — always "ah" as in <em>father</em>, never "ay" as in <em>fate</em>.<br>
-      <strong>E</strong> — always "eh" as in <em>bed</em>, never "ee" as in <em>me</em>.<br>
-      <strong>I</strong> — always "ee" as in <em>machine</em>, never "eye".<br>
-      <strong>O</strong> — always "oh" as in <em>note</em>, never "uh".<br>
-      <strong>U</strong> — always "oo" as in <em>food</em>, never "yoo".</p>
-    </div>
-
-    <div class="sec-tip">
-      <div class="tip-label">Nota Bene &nbsp;·&nbsp; Take Note</div>
-      The key rule: Latin vowels are <em>pure</em>. English speakers diphthongise (glide between sounds) — in Latin, hold each vowel steady. "Amen" is <em>AH-men</em>, not <em>AY-men</em>.
-    </div>
-
-    <div class="sec-label">Practica &nbsp;·&nbsp; Practice</div>
-    <p style="font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A8670;margin-bottom:10px">Tap each word to reveal pronunciation and meaning.</p>
-
-    <div class="cards">
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="c-latin">Dóminus</div>
-        <div class="c-phonetic">DOH-mee-noos</div>
-        <div class="c-meaning">Lord, Master</div>
-        <span class="c-tap">Tap</span>
-      </div>
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="c-latin">María</div>
-        <div class="c-phonetic">mah-REE-ah</div>
-        <div class="c-meaning">Mary</div>
-        <span class="c-tap">Tap</span>
-      </div>
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="c-latin">Glória</div>
-        <div class="c-phonetic">GLOH-ree-ah</div>
-        <div class="c-meaning">Glory</div>
-        <span class="c-tap">Tap</span>
-      </div>
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="c-latin">Pater</div>
-        <div class="c-phonetic">PAH-tehr</div>
-        <div class="c-meaning">Father</div>
-        <span class="c-tap">Tap</span>
-      </div>
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="c-latin">Fílius</div>
-        <div class="c-phonetic">FEE-lee-oos</div>
-        <div class="c-meaning">Son</div>
-        <span class="c-tap">Tap</span>
-      </div>
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="c-latin">Spíritus</div>
-        <div class="c-phonetic">SPEE-ree-toos</div>
-        <div class="c-meaning">Spirit</div>
-        <span class="c-tap">Tap</span>
-      </div>
-    </div>
-
-    <div class="sec-summary">
-      <div class="sum-label">Summarium &nbsp;·&nbsp; Summary</div>
-      <p>Latin vowels are pure and stable: A = ah, E = eh, I = ee, O = oh, U = oo. Never diphthongise. Practice with common prayer words until the sounds feel natural.</p>
-    </div>
-
-    <div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+  <div class="db" id="c-body">
+    <!-- Dynamically rendered -->
   </div>
 </div>
 
 <script>
-function showCourse(){document.getElementById('o-course').classList.add('show');window.scrollTo(0,0)}
+// ===== Full course content for all 10 lessons =====
+var COURSES={
+  vowels:{num:1,title:"Ecclesiastical Vowels",latin:"De Vocalibus Ecclesiasticis",intro:"The pronunciation of Latin used in the Roman Church differs from the Classical pronunciation taught in universities. Ecclesiastical Latin is the living tongue of the liturgy — it is how the saints prayed, and how the Mass is sung today.",
+    sections:[
+      {type:"lesson",label:"The Five Vowels",html:"<p><strong>A</strong> — always \"ah\" as in <em>father</em>, never \"ay\".<br><strong>E</strong> — always \"eh\" as in <em>bed</em>, never \"ee\".<br><strong>I</strong> — always \"ee\" as in <em>machine</em>, never \"eye\".<br><strong>O</strong> — always \"oh\" as in <em>note</em>, never \"uh\".<br><strong>U</strong> — always \"oo\" as in <em>food</em>, never \"yoo\".</p>"},
+      {type:"tip",label:"Nota Bene · Take Note",html:"The key rule: Latin vowels are <em>pure</em>. English speakers diphthongise (glide between sounds) — in Latin, hold each vowel steady. \"Amen\" is <em>AH-men</em>, not <em>AY-men</em>."},
+      {type:"cards",label:"Practica · Practice",note:"Tap each word to reveal pronunciation and meaning.",items:[
+        {lat:"Dóminus",phon:"DOH-mee-noos",eng:"Lord, Master"},
+        {lat:"María",phon:"mah-REE-ah",eng:"Mary"},
+        {lat:"Glória",phon:"GLOH-ree-ah",eng:"Glory"},
+        {lat:"Pater",phon:"PAH-tehr",eng:"Father"},
+        {lat:"Fílius",phon:"FEE-lee-oos",eng:"Son"},
+        {lat:"Spíritus",phon:"SPEE-ree-toos",eng:"Spirit"}
+      ]},
+      {type:"summary",label:"Summarium · Summary",html:"<p>Latin vowels are pure and stable: A = ah, E = eh, I = ee, O = oh, U = oo. Never diphthongise. Practise with common prayer words until the sounds feel natural.</p>"}
+    ]},
+  consonants:{num:2,title:"Consonant Rules",latin:"De Regulis Consonantium",intro:"Most Latin consonants sound as in English — but a handful follow rules that transform familiar words. Master these, and every Latin prayer opens before you.",
+    sections:[
+      {type:"lesson",label:"The Key Rules",html:"<p><strong>C</strong> — hard (k) before a, o, u, or a consonant (<em>caelum</em> = CHEH-loom wait — before e/i it softens to <em>ch</em>).<br><strong>C + e/i</strong> — soft \"ch\" as in <em>church</em> (<em>Cǽlum</em> = CHEH-loom).<br><strong>G + e/i</strong> — soft \"j\" as in <em>gem</em> (<em>regina</em> = reh-JEE-nah).<br><strong>Gn</strong> — \"ny\" as in <em>canyon</em> (<em>Agnus</em> = AH-nyoos).<br><strong>Sc + e/i</strong> — \"sh\" (<em>suscipe</em> = SOO-shee-peh).<br><strong>Ti + vowel</strong> — \"tsee\" (<em>gratia</em> = GRAH-tsee-ah).</p>"},
+      {type:"tip",label:"Mnemonic",html:"\"Cherubim sing gently: <em>Agnus Dei</em>\" — <strong>c</strong>herubim (ch), <strong>g</strong>ently (soft g), A<strong>gn</strong>us (ny)."},
+      {type:"cards",label:"Practica · Practice",note:"Tap each word to reveal pronunciation and meaning.",items:[
+        {lat:"Cǽlum",phon:"CHEH-loom",eng:"Heaven"},
+        {lat:"Regína",phon:"reh-JEE-nah",eng:"Queen"},
+        {lat:"Agnus",phon:"AH-nyoos",eng:"Lamb"},
+        {lat:"Súscipe",phon:"SOO-shee-peh",eng:"Receive"},
+        {lat:"Grátia",phon:"GRAH-tsee-ah",eng:"Grace"},
+        {lat:"Ecclésia",phon:"eh-KLEH-see-ah",eng:"Church"},
+        {lat:"Génitum",phon:"JEH-nee-toom",eng:"Begotten"},
+        {lat:"Excélsis",phon:"eck-SHELL-seess",eng:"The highest"}
+      ]},
+      {type:"summary",label:"Summarium · Summary",html:"<p>Six rules unlock nearly every Latin consonant: <strong>c/g + e/i soften, gn = ny, sc + e/i = sh, ti + vowel = tsee</strong>. Everything else is English.</p>"}
+    ]},
+  stress:{num:3,title:"Stress & Accent",latin:"De Accentu et Íctu",intro:"Latin words have one stressed syllable. Get the stress right and you sound fluent — get it wrong and you sound foreign. Thankfully, the rule is simple.",
+    sections:[
+      {type:"lesson",label:"The Penultimate Rule",html:"<p>The stress falls on the <strong>second-to-last syllable</strong> (penult) <em>unless</em> it is short — in which case it falls on the third-to-last (antepenult).</p><p>You'll see an acute accent in this app (Dómi­nus, Glória) — that mark shows you exactly which syllable to stress. Follow the mark and you cannot err.</p>"},
+      {type:"tip",label:"Shortcut",html:"If the word has an accent mark printed above a vowel, stress THAT vowel. No guessing required."},
+      {type:"cards",label:"Practica · Practice",note:"Tap each word. Stress is ALL-CAPS in the phonetic.",items:[
+        {lat:"Dóminus",phon:"DOH-mee-noos",eng:"Lord (stress on first)"},
+        {lat:"Glória",phon:"GLOH-ree-ah",eng:"Glory (stress on first)"},
+        {lat:"Credo",phon:"CRAY-doh",eng:"I believe (stress on first)"},
+        {lat:"Amen",phon:"AH-men",eng:"Amen (stress on first)"},
+        {lat:"Sanctus",phon:"SAHNK-toos",eng:"Holy (stress on first)"}
+      ]},
+      {type:"summary",label:"Summarium · Summary",html:"<p>Stress the syllable with the acute accent. When in doubt, stress the second-to-last syllable. This rule covers 95% of all Latin words.</p>"}
+    ]},
+  declensions:{num:4,title:"First & Second Declensions",latin:"Declinátio Prima et Secunda",intro:"Latin nouns change their endings to show their job in the sentence — subject, object, possession, direction. This is called declension. The two most common patterns give you hundreds of prayer words.",
+    sections:[
+      {type:"lesson",label:"First Declension (-a)",html:"<p>First-declension nouns are usually feminine and end in <strong>-a</strong> in the nominative: <em>María, grátia, vita, gloria, córona</em>. The case endings follow a predictable pattern.</p>"},
+      {type:"table",label:"María (f.) — 1st Declension",rows:[
+        ["Case","Singular","English"],
+        ["Nom","María","Mary (subject)"],
+        ["Gen","Maríæ","of Mary"],
+        ["Dat","Maríæ","to/for Mary"],
+        ["Acc","Maríam","Mary (object)"],
+        ["Abl","María","by/with Mary"]
+      ]},
+      {type:"lesson",label:"Second Declension (-us / -um)",html:"<p>Second-declension nouns are usually masculine (in -us) or neuter (in -um): <em>Dóminus, Christus, Iesus, verbum, sæculum</em>.</p>"},
+      {type:"table",label:"Dóminus (m.) — 2nd Declension",rows:[
+        ["Case","Singular","English"],
+        ["Nom","Dóminus","Lord (subject)"],
+        ["Gen","Dómini","of the Lord"],
+        ["Dat","Dómino","to/for the Lord"],
+        ["Acc","Dóminum","Lord (object)"],
+        ["Abl","Dómino","by/with the Lord"]
+      ]},
+      {type:"tip",label:"Look for the Ending",html:"In the Mass you'll see phrases like <em>per Dóminum nostrum</em> (accusative — 'through our Lord') and <em>Glória Dómini</em> (genitive — 'glory of the Lord'). The ending tells you the meaning."},
+      {type:"summary",label:"Summarium · Summary",html:"<p>1st declension: -a / -æ / -æ / -am / -a. 2nd declension: -us / -i / -o / -um / -o. These two patterns cover most nouns in prayer.</p>"}
+    ]},
+  verbs:{num:5,title:"Verb Basics",latin:"Elementa Verbórum",intro:"Latin verbs conjugate — they change their endings by person and number. The good news: for reading prayers, you only need the present tense and a handful of endings to understand most of what you'll encounter.",
+    sections:[
+      {type:"lesson",label:"Four Conjugation Groups",html:"<p>Latin verbs are grouped by the vowel of their stem:</p><p><strong>I:</strong> -āre (<em>laudáre</em> — to praise)<br><strong>II:</strong> -ēre (<em>vidére</em> — to see)<br><strong>III:</strong> -ere (<em>dúcere</em> — to lead)<br><strong>IV:</strong> -īre (<em>audíre</em> — to hear)</p>"},
+      {type:"table",label:"Laudáre — 1st Conjugation (present)",rows:[
+        ["Person","Latin","English"],
+        ["I","laudo","I praise"],
+        ["You (sg)","laudas","you praise"],
+        ["He/She/It","laudat","he praises"],
+        ["We","laudámus","we praise"],
+        ["You (pl)","laudátis","you praise"],
+        ["They","laudant","they praise"]
+      ]},
+      {type:"tip",label:"The Endings Are the Key",html:"-o, -s, -t, -mus, -tis, -nt — learn these six endings and you can identify the subject of nearly any Latin verb. <em>Laudámus te</em> = 'We praise Thee' (the -mus ending IS 'we')."},
+      {type:"cards",label:"Common Prayer Verbs",note:"Tap to reveal meaning.",items:[
+        {lat:"laudámus",phon:"lou-DAH-moos",eng:"we praise"},
+        {lat:"benedícimus",phon:"beh-neh-DEE-chee-moos",eng:"we bless"},
+        {lat:"adorámus",phon:"ah-doh-RAH-moos",eng:"we adore"},
+        {lat:"glorificámus",phon:"gloh-ree-fee-CAH-moos",eng:"we glorify"},
+        {lat:"miserére",phon:"mee-seh-REH-reh",eng:"have mercy"},
+        {lat:"ora",phon:"OH-rah",eng:"pray"}
+      ]},
+      {type:"summary",label:"Summarium · Summary",html:"<p>Learn the six present-tense endings (-o, -s, -t, -mus, -tis, -nt) and you can decode the subject of any verb in prayer.</p>"}
+    ]},
+  vocab50:{num:6,title:"50 Common Prayer Words",latin:"Quinquagínta Verba Commúnia",intro:"Learn these ten essential words and you will recognize over half of what you hear in the Mass and the Rosary. Start here.",
+    sections:[
+      {type:"cards",label:"The Ten Most Common Words",note:"Tap to reveal meaning and an example.",items:[
+        {lat:"Dóminus",phon:"DOH-mee-noos",eng:"Lord · Dominus vobiscum"},
+        {lat:"Deus",phon:"DEH-oos",eng:"God · Deo gratias"},
+        {lat:"Pater",phon:"PAH-tehr",eng:"Father · Pater noster"},
+        {lat:"Fílius",phon:"FEE-lee-oos",eng:"Son · Fílius Dei"},
+        {lat:"Spíritus",phon:"SPEE-ree-toos",eng:"Spirit · Spiritus Sancti"},
+        {lat:"Sanctus",phon:"SAHNK-toos",eng:"Holy · Sanctus, Sanctus, Sanctus"},
+        {lat:"Ámen",phon:"AH-men",eng:"Amen · So be it"},
+        {lat:"Glória",phon:"GLOH-ree-ah",eng:"Glory · Gloria in excelsis"},
+        {lat:"Pax",phon:"PAHKS",eng:"Peace · Pax vobiscum"},
+        {lat:"Vita",phon:"VEE-tah",eng:"Life · vita ætérna"}
+      ]},
+      {type:"tip",label:"Build on These",html:"Dóminus + Deus + Pater + Fílius + Spíritus + Sanctus = the vocabulary of the opening of almost every prayer. Master these first."},
+      {type:"summary",label:"Summarium · Summary",html:"<p>Ten words is a huge head start. Each one appears dozens of times across the Mass, the Office, and the Rosary. Flip these cards daily for a week.</p>"}
+    ]},
+  ave:{num:7,title:"Master the Ave María",latin:"Ad Perdiscéndam Ave Maríam",intro:"The Hail Mary is the most-prayed prayer of the Rosary — 50 times in every chaplet, hundreds of times in a lifetime. Let's break it down phrase by phrase until every word is known.",
+    sections:[
+      {type:"lesson",label:"The Origin",html:"<p>The first half comes directly from Scripture: the angel Gabriel's greeting at the Annunciation (Lk 1:28) and Elizabeth's blessing at the Visitation (Lk 1:42). The second half is the Church's response, added gradually from the 15th century.</p>"},
+      {type:"phrase",items:[
+        {lat:"Ave María,",phon:"AH-veh mah-REE-ah",eng:"Hail Mary,"},
+        {lat:"grátia plena,",phon:"GRAH-tsee-ah PLEH-nah",eng:"full of grace,"},
+        {lat:"Dóminus tecum.",phon:"DOH-mee-noos TEH-koom",eng:"the Lord is with thee."},
+        {lat:"Benedícta tu in muliéribus,",phon:"beh-neh-DEEK-tah too in moo-lee-EH-ree-boos",eng:"Blessed art thou amongst women,"},
+        {lat:"et benedíctus fructus ventris tui, Iesus.",phon:"et beh-neh-DEEK-toos FROOK-toos VEN-trees TOO-ee, YEH-soos",eng:"and blessed is the fruit of thy womb, Jesus."},
+        {lat:"Sancta María, Mater Dei,",phon:"SAHNK-tah mah-REE-ah, MAH-tehr DEH-ee",eng:"Holy Mary, Mother of God,"},
+        {lat:"ora pro nobis peccatóribus,",phon:"OH-rah proh NOH-bees pek-kah-TOH-ree-boos",eng:"pray for us sinners,"},
+        {lat:"nunc et in hora mortis nostræ.",phon:"noonk et in OH-rah MOHR-tees NOHS-treh",eng:"now and at the hour of our death."},
+        {lat:"Ámen.",phon:"AH-men",eng:"Amen."}
+      ]},
+      {type:"tip",label:"Pray It Slowly",html:"The Rosary is not a race. Pray the Ave deliberately, letting each phrase settle. Even one Ave said with full attention is worth more than a hundred rushed."},
+      {type:"summary",label:"Summarium · Summary",html:"<p>The Ave María has two halves: the Scriptural greeting (Ave Maria… fructus ventris tui, Iesus) and the Church's plea (Sancta Maria… in hora mortis nostræ). Each phrase is a scriptural echo.</p>"}
+    ]},
+  pater:{num:8,title:"Master the Pater Noster",latin:"Ad Perdiscéndum Pater Noster",intro:"The Lord's own prayer. Every phrase came from Our Lord's own lips. Know it in Latin and you pray with the Church of every century.",
+    sections:[
+      {type:"lesson",label:"The Seven Petitions",html:"<p>The Pater Noster contains seven petitions: the first three concerning God's glory (Name, Kingdom, Will), the last four concerning our needs (bread, forgiveness, temptation, evil). It is the perfect prayer.</p>"},
+      {type:"phrase",items:[
+        {lat:"Pater noster,",phon:"PAH-tehr NOS-tehr",eng:"Our Father,"},
+        {lat:"qui es in cælis,",phon:"kwee ess in CHEH-leess",eng:"Who art in heaven,"},
+        {lat:"sanctificétur nomen tuum.",phon:"sahnk-tee-fee-CHEH-toor NOH-men TOO-oom",eng:"hallowed be Thy name."},
+        {lat:"Advéniat regnum tuum.",phon:"ahd-VEH-nee-aht REG-noom TOO-oom",eng:"Thy kingdom come."},
+        {lat:"Fiat volúntas tua,",phon:"FEE-aht voh-LOON-tahs TOO-ah",eng:"Thy will be done,"},
+        {lat:"sicut in cælo et in terra.",phon:"SEE-koot in CHEH-loh et in TEHR-rah",eng:"on earth as it is in heaven."},
+        {lat:"Panem nostrum quotidiánum",phon:"PAH-nem NOS-troom kwoh-tee-dee-AH-noom",eng:"Our daily bread"},
+        {lat:"da nobis hódie,",phon:"dah NOH-bees HOH-dee-eh",eng:"give us this day,"},
+        {lat:"et dimítte nobis débita nostra,",phon:"et dee-MEET-teh NOH-bees DEH-bee-tah NOS-trah",eng:"and forgive us our trespasses,"},
+        {lat:"sicut et nos dimíttimus debitóribus nostris.",phon:"SEE-koot et nohs dee-MEET-tee-moos deh-bee-TOH-ree-boos NOS-treess",eng:"as we forgive those who trespass against us."},
+        {lat:"Et ne nos indúcas in tentatiónem,",phon:"et neh nohs in-DOO-kahs in ten-tah-tsee-OH-nem",eng:"And lead us not into temptation,"},
+        {lat:"sed líbera nos a malo. Ámen.",phon:"sed LEE-beh-rah nohs ah MAH-loh. AH-men",eng:"but deliver us from evil. Amen."}
+      ]},
+      {type:"tip",label:"Pray It Daily in Latin",html:"Pray the Pater Noster in Latin once a day for a week. By the end you'll have it memorized — and you'll carry the Church's prayer in the Church's tongue for life."},
+      {type:"summary",label:"Summarium · Summary",html:"<p>Seven petitions, taught by Our Lord Himself. The Pater Noster is the centre of the Mass, the Rosary, and the Divine Office. Know it in Latin.</p>"}
+    ]},
+  psalms:{num:9,title:"Reading Latin Psalms",latin:"Quómodo Psalmos Légere",intro:"The Psalms are the prayer book of the Church. Once you know their structure, you can read them in Latin even with modest vocabulary. The secret is parallelism.",
+    sections:[
+      {type:"lesson",label:"Hebrew Parallelism",html:"<p>Every psalm verse has two (or sometimes three) parallel halves that say the same thing in different words. Once you recognize this, the second half often explains the first.</p><p><em>Example from Psalm 22 (The Lord is my Shepherd):</em></p>"},
+      {type:"phrase",items:[
+        {lat:"Dóminus regit me,",phon:"DOH-mee-noos REH-jeet meh",eng:"The Lord ruleth me,"},
+        {lat:"et nihil mihi déerit.",phon:"et NEE-heel MEE-hee DEH-eh-reet",eng:"and I shall want nothing."},
+        {lat:"In loco páscuæ ibi me collocávit,",phon:"in LOH-koh PAHS-kweh EE-bee meh kol-loh-KAH-veet",eng:"In a place of pasture He hath set me,"},
+        {lat:"super aquam refectiónis educávit me.",phon:"SOO-pehr AH-kwahm reh-fek-tsee-OH-nees eh-doo-KAH-veet meh",eng:"He hath brought me up on the water of refreshment."}
+      ]},
+      {type:"tip",label:"Read It Aloud",html:"Read the Latin aloud first, slowly. Even without understanding every word, the rhythm and parallelism will carry you. Then consult the English."},
+      {type:"summary",label:"Summarium · Summary",html:"<p>Parallelism is your key. When you don't understand the first line, look at the second — it says the same thing in different words.</p>"}
+    ]},
+  vulgate:{num:10,title:"Reading the Vulgate",latin:"Quómodo Vulgátam Légere",intro:"St. Jerome's Latin Bible — the Vulgate — is the Bible of the Church. With the grammar and vocabulary you've learned, you can now open it and read. Begin with John 1.",
+    sections:[
+      {type:"lesson",label:"John 1:1–5",html:"<p>The Prologue of John is the most famous opening in Scripture — and the Last Gospel of the Latin Mass. Read it with the phrase-by-phrase breakdown below.</p>"},
+      {type:"phrase",items:[
+        {lat:"In princípio erat Verbum,",phon:"in preen-CHEE-pee-oh EH-raht VEHR-boom",eng:"In the beginning was the Word,"},
+        {lat:"et Verbum erat apud Deum,",phon:"et VEHR-boom EH-raht AH-pood DEH-oom",eng:"and the Word was with God,"},
+        {lat:"et Deus erat Verbum.",phon:"et DEH-oos EH-raht VEHR-boom",eng:"and the Word was God."},
+        {lat:"Hoc erat in princípio apud Deum.",phon:"hok EH-raht in preen-CHEE-pee-oh AH-pood DEH-oom",eng:"The same was in the beginning with God."},
+        {lat:"Ómnia per ipsum facta sunt,",phon:"OHM-nee-ah pehr EEP-soom FAHK-tah soont",eng:"All things were made through Him,"},
+        {lat:"et sine ipso factum est nihil quod factum est.",phon:"et SEE-neh EEP-soh FAHK-toom est NEE-heel kwohd FAHK-toom est",eng:"and without Him was made nothing that was made."},
+        {lat:"In ipso vita erat,",phon:"in EEP-soh VEE-tah EH-raht",eng:"In Him was life,"},
+        {lat:"et vita erat lux hóminum.",phon:"et VEE-tah EH-raht looks HOH-mee-noom",eng:"and the life was the light of men."},
+        {lat:"Et lux in ténebris lucet,",phon:"et looks in TEH-neh-breess LOO-chet",eng:"And the light shineth in darkness,"},
+        {lat:"et ténebræ eam non comprehendérunt.",phon:"et TEH-neh-breh EH-ahm nohn kom-preh-hen-DEH-roont",eng:"and the darkness did not comprehend it."}
+      ]},
+      {type:"tip",label:"Next Steps",html:"Once you can read John 1, try Psalm 50 (the Miserere) and the beginning of Genesis. The Vulgate is now yours for life."},
+      {type:"summary",label:"Summarium · Summary",html:"<p>You can now read the Vulgate. St. Jerome's Latin is at your fingertips — the same Bible the saints and scholars of a thousand years prayed from.</p>"}
+    ]}
+};
+
+// ===== Order of lessons (for journey dot mapping) =====
+var LESSON_ORDER=['vowels','consonants','stress','declensions','verbs','vocab50','ave','pater','psalms','vulgate'];
+
+// ===== Mastery tracking (localStorage) =====
+function getMastered(){try{return JSON.parse(localStorage.getItem('masteredLessons')||'[]')}catch(e){return []}}
+function isMastered(slug){return getMastered().indexOf(slug)>-1}
+function setMastered(slug,on){
+  var m=getMastered();
+  var i=m.indexOf(slug);
+  if(on && i===-1)m.push(slug);
+  if(!on && i>-1)m.splice(i,1);
+  try{localStorage.setItem('masteredLessons',JSON.stringify(m))}catch(e){}
+}
+function toggleMastered(slug){
+  setMastered(slug,!isMastered(slug));
+  renderSelector();
+  // Update the in-overlay button
+  var btn=document.getElementById('master-btn');
+  if(btn){
+    if(isMastered(slug)){btn.classList.add('mastered');btn.innerHTML='Magister <span class="cross">✠</span> Mastered'}
+    else{btn.classList.remove('mastered');btn.innerHTML='Magister <span class="cross">✠</span> Mark as Mastered'}
+  }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
+function renderSection(sec){
+  if(sec.type==='lesson'){
+    return '<div class="sec-label">'+escapeHtml(sec.label)+'</div><div class="sec-lesson">'+sec.html+'</div>';
+  }
+  if(sec.type==='tip'){
+    return '<div class="sec-tip"><div class="tip-label">'+escapeHtml(sec.label)+'</div>'+sec.html+'</div>';
+  }
+  if(sec.type==='cards'){
+    var h='<div class="sec-label">'+escapeHtml(sec.label)+'</div>';
+    if(sec.note)h+='<p style="font-family:\'Cormorant Garamond\',serif;font-size:12px;font-style:italic;color:#9A8670;margin-bottom:10px">'+escapeHtml(sec.note)+'</p>';
+    h+='<div class="cards">';
+    sec.items.forEach(function(it){
+      h+='<div class="card" onclick="this.classList.toggle(\'flipped\')">'+
+        '<div class="c-latin">'+escapeHtml(it.lat)+'</div>'+
+        '<div class="c-phonetic">'+escapeHtml(it.phon)+'</div>'+
+        '<div class="c-meaning">'+escapeHtml(it.eng)+'</div>'+
+        '<span class="c-tap">Tap</span>'+
+      '</div>';
+    });
+    h+='</div>';
+    return h;
+  }
+  if(sec.type==='phrase'){
+    var h=sec.label?'<div class="sec-label">'+escapeHtml(sec.label)+'</div>':'';
+    sec.items.forEach(function(it){
+      h+='<div class="phrase"><div class="lat">'+escapeHtml(it.lat)+'</div><div class="phon">'+escapeHtml(it.phon)+'</div><div class="eng">'+escapeHtml(it.eng)+'</div></div>';
+    });
+    return h;
+  }
+  if(sec.type==='table'){
+    var h='<div class="sec-label">'+escapeHtml(sec.label)+'</div><div class="table">';
+    sec.rows.forEach(function(row,i){
+      h+='<div class="trow'+(i===0?' head':'')+'">';
+      row.forEach(function(cell,j){
+        var cls=(i===0)?'':(j===1?'cell lat':(j===2?'cell eng':'cell'));
+        h+='<div class="'+(cls||'cell')+'">'+escapeHtml(cell)+'</div>';
+      });
+      h+='</div>';
+    });
+    h+='</div>';
+    return h;
+  }
+  if(sec.type==='summary'){
+    return '<div class="sec-summary"><div class="sum-label">'+escapeHtml(sec.label)+'</div>'+sec.html+'</div>';
+  }
+  return '';
+}
+
+var currentCourseSlug=null;
+function showCourse(slug){
+  var c=COURSES[slug];
+  if(!c)return;
+  currentCourseSlug=slug;
+  document.getElementById('c-title').textContent=c.title;
+  document.getElementById('c-latin').textContent=c.latin;
+  var rom=['','I','II','III','IV','V','VI','VII','VIII','IX','X'];
+  document.getElementById('c-cat').textContent='✠   Lectio '+rom[c.num]+'   ✠';
+
+  var body=document.getElementById('c-body');
+  var html='<div class="sec-intro"><span class="dropcap">'+c.intro.charAt(0)+'</span>'+escapeHtml(c.intro.slice(1))+'</div>';
+  c.sections.forEach(function(sec){html+=renderSection(sec)});
+  // Mastery button
+  var mastered=isMastered(slug);
+  html+='<div class="master-wrap"><a class="master-btn'+(mastered?' mastered':'')+'" id="master-btn" onclick="toggleMastered(\''+slug+'\')">Magister <span class="cross">✠</span> '+(mastered?'Mastered':'Mark as Mastered')+'</a></div>';
+  html+='<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>';
+  body.innerHTML=html;
+
+  document.getElementById('o-course').classList.add('show');
+  window.scrollTo(0,0);
+}
 function hideCourse(){document.querySelectorAll('.overlay').forEach(function(o){o.classList.remove('show')})}
+
+// ===== Update journey dots + lesson entries from mastered state =====
+function renderSelector(){
+  var mastered=getMastered();
+  // Journey dots
+  var dots=document.querySelectorAll('.journey .dot');
+  var idx=0;
+  dots.forEach(function(dot,i){
+    var slug=LESSON_ORDER[i];
+    dot.classList.remove('done','current');
+    if(slug && mastered.indexOf(slug)>-1)dot.classList.add('done');
+  });
+  // First non-mastered dot becomes "current"
+  for(var i=0;i<LESSON_ORDER.length;i++){
+    if(mastered.indexOf(LESSON_ORDER[i])===-1){
+      if(dots[i])dots[i].classList.add('current');
+      // Update label
+      var label=document.querySelector('.journey-label');
+      if(label){
+        var rom=['I','II','III','IV','V','VI','VII','VIII','IX','X'];
+        label.innerHTML='Léctio '+rom[i]+' &nbsp;·&nbsp; X';
+      }
+      break;
+    }
+  }
+  // Lesson entries
+  document.querySelectorAll('.lesson').forEach(function(el){
+    var slug=el.getAttribute('data-slug');
+    if(slug && mastered.indexOf(slug)>-1)el.classList.add('mastered');
+    else el.classList.remove('mastered');
+  });
+}
+
+// Initial
+renderSelector();
 </script>
 
 <nav class="tab-bar">
