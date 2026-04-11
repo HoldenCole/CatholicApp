@@ -167,6 +167,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 .tab .glyph{font-family:'Playfair Display',serif;font-size:19px;font-style:normal;font-weight:400;line-height:1;color:#B8960C;opacity:0.75}
 .tab.active{color:#8B1A1A}.tab.active .glyph{color:#8B1A1A;opacity:1}
 </style>
+<script src="ui-helpers.js"></script>
 </head>
 <body>
 
@@ -484,15 +485,15 @@ var COURSES={
 // ===== Order of lessons (for journey dot mapping) =====
 var LESSON_ORDER=['vowels','consonants','stress','declensions','verbs','vocab50','ave','pater','psalms','vulgate'];
 
-// ===== Mastery tracking (localStorage) =====
-function getMastered(){try{return JSON.parse(localStorage.getItem('masteredLessons')||'[]')}catch(e){return []}}
+// ===== Mastery tracking (localStorage, namespaced under aad.) =====
+function getMastered(){try{return JSON.parse(localStorage.getItem('aad.learn.mastered')||'[]')}catch(e){return []}}
 function isMastered(slug){return getMastered().indexOf(slug)>-1}
 function setMastered(slug,on){
   var m=getMastered();
   var i=m.indexOf(slug);
   if(on && i===-1)m.push(slug);
   if(!on && i>-1)m.splice(i,1);
-  try{localStorage.setItem('masteredLessons',JSON.stringify(m))}catch(e){}
+  try{localStorage.setItem('aad.learn.mastered',JSON.stringify(m))}catch(e){}
 }
 function toggleMastered(slug){
   setMastered(slug,!isMastered(slug));
@@ -505,7 +506,7 @@ function toggleMastered(slug){
   }
 }
 
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+// escapeHtml comes from ui-helpers.js (loaded via <script src> in <head>)
 
 function renderSection(sec){
   if(sec.type==='lesson'){

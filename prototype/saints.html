@@ -497,6 +497,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 .saint.following .following-badge{display:block}
 .saint.following .init{color:#8B1A1A}
 </style>
+<script src="ui-helpers.js"></script>
 </head>
 <body>
 
@@ -728,13 +729,14 @@ var SAINTS={
 };
 
 // ===== State: follow + streak =====
-function getFollowed(){try{return localStorage.getItem('followedSaint')||null}catch(e){return null}}
-function setFollowed(slug){try{localStorage.setItem('followedSaint',slug);if(slug){bumpStreak(slug)}}catch(e){}}
-function getStreak(slug){try{var d=localStorage.getItem('streak_'+slug);return d?parseInt(d,10):0}catch(e){return 0}}
+// localStorage keys namespaced under 'aad.' (Ad Altare Dei)
+function getFollowed(){try{return localStorage.getItem('aad.saints.followed')||null}catch(e){return null}}
+function setFollowed(slug){try{localStorage.setItem('aad.saints.followed',slug);if(slug){bumpStreak(slug)}}catch(e){}}
+function getStreak(slug){try{var d=localStorage.getItem('aad.saints.streak.'+slug);return d?parseInt(d,10):0}catch(e){return 0}}
 function bumpStreak(slug){
   try{
     var today=new Date().toISOString().slice(0,10);
-    var lastDay=localStorage.getItem('streak_last_'+slug);
+    var lastDay=localStorage.getItem('aad.saints.streakLast.'+slug);
     if(lastDay===today)return;
     var cur=getStreak(slug);
     if(lastDay){
@@ -742,8 +744,8 @@ function bumpStreak(slug){
       var y=yesterday.toISOString().slice(0,10);
       cur=(lastDay===y)?cur+1:1;
     }else{cur=1}
-    localStorage.setItem('streak_'+slug,String(cur));
-    localStorage.setItem('streak_last_'+slug,today);
+    localStorage.setItem('aad.saints.streak.'+slug,String(cur));
+    localStorage.setItem('aad.saints.streakLast.'+slug,today);
   }catch(e){}
 }
 
@@ -813,11 +815,7 @@ function renderSaint(slug){
   body.innerHTML=html;
 }
 
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-function toRoman(n){
-  var r=['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX','XXI','XXII','XXIII','XXIV','XXV','XXVI','XXVII','XXVIII','XXIX','XXX'];
-  return n<r.length?r[n]:n;
-}
+// escapeHtml + toRoman come from ui-helpers.js (loaded via <script src> in <head>)
 
 function togglePractice(el){
   var cb=el.querySelector('.cb');
@@ -847,7 +845,7 @@ function toggleFollow(){
   var cur=getFollowed();
   if(cur===currentSlug){
     setFollowed('');
-    try{localStorage.removeItem('followedSaint')}catch(e){}
+    try{localStorage.removeItem('aad.saints.followed')}catch(e){}
   }else{
     setFollowed(currentSlug);
   }

@@ -500,6 +500,7 @@ body{
 .mystery.today .init{color:#8B1A1A}
 </style>
 <script src="lit-context.js"></script>
+<script src="ui-helpers.js"></script>
 </head>
 <body>
 
@@ -756,8 +757,8 @@ function nextStep(){if(idx<total-1){idx++;render();window.scrollTo(0,0)}else{mar
 function markRosaryComplete(){
   try{
     var today=new Date().toISOString().slice(0,10);
-    localStorage.setItem('rosaryLastDate',today);
-    localStorage.setItem('rosaryLastSet',currentSet);
+    localStorage.setItem('aad.rosary.lastDate',today);
+    localStorage.setItem('aad.rosary.lastSet',currentSet);
   }catch(e){}
 }
 function prevStep(){if(idx>0){idx--;render();window.scrollTo(0,0)}}

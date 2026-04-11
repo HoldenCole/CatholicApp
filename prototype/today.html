@@ -448,6 +448,7 @@ main{position:relative;z-index:2}
 }
 </style>
 <script src="lit-context.js"></script>
+<script src="ui-helpers.js"></script>
 </head>
 <body>
 
@@ -591,15 +592,11 @@ var SAINT_INFO={
 
 function getLS(key,fallback){try{var v=localStorage.getItem(key);return v==null?fallback:v}catch(e){return fallback}}
 function getLSJson(key,fallback){try{return JSON.parse(localStorage.getItem(key)||'null')||fallback}catch(e){return fallback}}
-function toRoman(n){
-  var r=['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX','XXI','XXII','XXIII','XXIV','XXV','XXVI','XXVII','XXVIII','XXIX','XXX'];
-  return n<r.length?r[n]:String(n);
-}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+// toRoman + escapeHtml come from ui-helpers.js (loaded via <script src> in <head>)
 
 // ===== Render followed-saint section =====
 function renderSaintSection(){
-  var slug=getLS('followedSaint','');
+  var slug=getLS('aad.saints.followed','');
   var section=document.getElementById('saints-section');
   var subtitle=document.getElementById('saints-subtitle');
   if(!slug || !SAINT_INFO[slug]){
@@ -608,7 +605,7 @@ function renderSaintSection(){
     return;
   }
   var s=SAINT_INFO[slug];
-  var streak=parseInt(getLS('streak_'+slug,'0'),10)||0;
+  var streak=parseInt(getLS('aad.saints.streak.'+slug,'0'),10)||0;
   subtitle.textContent='You are following';
   var streakLine=streak>0
     ? '<a class="streak-line" href="saints.html">'+toRoman(streak)+' consecutive day'+(streak===1?'':'s')+' <span class="cross">✠</span> Open Practices</a>'
@@ -626,7 +623,7 @@ function renderSaintSection(){
 // ===== Render Schola mastery progress =====
 var LESSON_ORDER=['vowels','consonants','stress','declensions','verbs','vocab50','ave','pater','psalms','vulgate'];
 function renderSchola(){
-  var mastered=getLSJson('masteredLessons',[]);
+  var mastered=getLSJson('aad.learn.mastered',[]);
   var dots=document.getElementById('schola-dots');
   var count=document.getElementById('schola-count');
   var html='';
@@ -652,8 +649,8 @@ function renderSchola(){
 // ===== Render Rosary "prayed today" badge =====
 function renderRosaryBadge(){
   var today=new Date().toISOString().slice(0,10);
-  var lastDate=getLS('rosaryLastDate','');
-  var lastSet=getLS('rosaryLastSet','');
+  var lastDate=getLS('aad.rosary.lastDate','');
+  var lastSet=getLS('aad.rosary.lastSet','');
   var el=document.getElementById('rosary-prayed');
   if(lastDate===today && lastSet){
     var setName={sorrowful:'Sorrowful',joyful:'Joyful',glorious:'Glorious'}[lastSet]||lastSet;
