@@ -772,7 +772,7 @@ function renderSaint(slug){
   var btn=document.getElementById('follow-btn');
   if(followed===slug){
     btn.classList.add('following');
-    btn.innerHTML='Sequor <span class="cross">✠</span> Following';
+    btn.innerHTML='Desine <span class="cross">✠</span> Unfollow';
     var streakEl=document.getElementById('streak');
     var n=getStreak(slug);
     if(n>0){streakEl.textContent=toRoman(n)+' consecutive day'+(n===1?'':'s');streakEl.classList.add('show')}
@@ -876,7 +876,7 @@ renderSelector();
 </script>
 
 <nav class="tab-bar">
-  <a class="tab active" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
   <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
   <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
   <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>

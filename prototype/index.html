@@ -2,134 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Ad Altare Dei</title>
+<meta http-equiv="refresh" content="0; url=today.html">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{font-family:'Georgia',serif;background:#F2EBE0;color:#1C1410;max-width:430px;margin:0 auto;min-height:100vh;padding-bottom:90px}
-.top-bar{position:sticky;top:0;z-index:10;background:#F2EBE0;padding:12px 24px 8px;display:flex;justify-content:space-between;align-items:center}
-.top-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#1C1410}
-.gear{font-size:20px;color:#B8960C;cursor:pointer;text-decoration:none}
-.content{padding:0 24px}
-.feria{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:#B8960C;letter-spacing:3px;text-transform:uppercase}
-.day{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#1C1410;line-height:1.1;margin:4px 0 2px}
-.date{font-family:'Cormorant Garamond',serif;font-size:14px;color:#998877;font-style:italic}
-.badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;color:#B8960C;border:1px solid rgba(184,150,12,0.3);padding:4px 10px;border-radius:4px;cursor:pointer}
-.orn{display:flex;align-items:center;gap:12px;margin:20px 0}.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.3),transparent)}.orn span{color:#B8960C;font-size:11px;opacity:0.5}
-.sec-t{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase}
-.sec-s{font-family:'Cormorant Garamond',serif;font-size:13px;color:#998877;font-style:italic;margin-bottom:12px}
-.penance-block{border-left:3px solid #8B1A1A;padding:12px 0 12px 16px;margin-bottom:4px}
-.penance-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#1C1410}
-.penance-tag{display:inline-block;font-size:9px;font-weight:700;color:#8B1A1A;border:1px solid rgba(139,26,26,0.3);padding:1px 6px;border-radius:3px;letter-spacing:0.5px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
-.penance-desc{font-family:'EB Garamond',serif;font-size:14px;color:#998877;margin-top:3px}
-.dev-row{padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08);cursor:pointer}
-.dev-name{font-family:'Playfair Display',serif;font-size:16px;color:#1C1410;font-weight:500}
-.dev-latin{font-family:'Cormorant Garamond',serif;font-size:13px;color:#B8960C;font-style:italic}
-.rosary-box{border:1px solid rgba(139,26,26,0.2);border-radius:8px;padding:18px;position:relative;cursor:pointer;overflow:hidden}
-.rosary-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8B1A1A,#B8960C)}
-.rosary-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#1C1410}
-.rosary-sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#8B1A1A;font-style:italic;margin-top:2px}
-.rosary-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:18px;color:#B8960C}
-.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:80px;background:#FDFAF4;border-top:1px solid rgba(184,150,12,0.12);display:flex;justify-content:space-around;align-items:flex-start;padding-top:10px;z-index:20}
-.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:#aaa;font-weight:500;cursor:pointer;text-decoration:none;font-family:'Georgia',serif}
-.tab.active{color:#8B1A1A}
-.tab-icon{font-size:18px}
-.end-orn{text-align:center;margin:24px 0;color:#B8960C;font-size:12px;letter-spacing:8px;opacity:0.3}
-.link-row{padding:12px 0;border-bottom:1px solid rgba(184,150,12,0.08);cursor:pointer;text-decoration:none;display:block;color:inherit}
+body{font-family:'Georgia',serif;background:#F2E8D0;color:#1C1410;max-width:430px;margin:0 auto;min-height:100vh;padding:80px 28px;text-align:center}
+h1{font-family:serif;font-size:28px;font-style:italic;color:#8B1A1A;margin-bottom:8px}
+p{font-family:serif;font-size:14px;font-style:italic;color:#7A6A58;margin-bottom:22px;line-height:1.5}
+a{display:inline-block;font-family:serif;font-size:11px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;border-top:0.5px solid rgba(139,26,26,0.45);border-bottom:0.5px solid rgba(139,26,26,0.45);padding:12px 24px}
+a .cross{color:#B8960C;margin:0 8px}
 </style>
 </head>
 <body>
-
-<div class="top-bar">
-<div class="top-title">Today</div>
-<a class="gear" href="settings.html">⚙</a>
-</div>
-
-<div class="content">
-<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px">
-<div class="feria" id="feria"></div>
-<div class="badge" onclick="alert('Missal selector: Choose 1962, 1955, or Pre-1955')">1962 Missal ▾</div>
-</div>
-<div class="day" id="dayName"></div>
-<div class="date" id="dateStr"></div>
-
-<div class="orn"><span>✟</span></div>
-
-<div style="display:flex;justify-content:space-between;align-items:flex-start">
-<div><div class="sec-t">Penance</div><div class="sec-s">Pænitentia</div></div>
-<div class="badge" onclick="alert('Penance discipline selector: Choose 1962, 1917 Code, or Strict Traditional')">1962 Discipline ▾</div>
-</div>
-<div id="penanceArea"></div>
-
-<div class="orn"><span>·</span></div>
-
-<div class="sec-t">Today's Devotions</div>
-<div class="sec-s">Devotiones Hodiernæ</div>
-
-<a class="link-row" href="office.html"><div class="dev-name">The Divine Office</div><div class="dev-latin">Officium Divinum</div></a>
-<a class="link-row" href="examination.html"><div class="dev-name">Examination of Conscience</div><div class="dev-latin">Examen Conscientiæ</div></a>
-<div class="dev-row"><div class="dev-name" id="offeringName">Morning Offering</div><div class="dev-latin" id="offeringLatin">Oblatio Matutina</div></div>
-
-<div class="orn"><span>✟</span></div>
-
-<div class="sec-t">The Holy Rosary</div>
-<div class="sec-s">Sacratissimum Rosarium</div>
-<a href="rosary.html" style="text-decoration:none;color:inherit">
-<div class="rosary-box">
-<div class="rosary-title">Pray the Rosary</div>
-<div class="rosary-sub" id="mysterySet"></div>
-<div class="rosary-arrow">→</div>
-</div>
-</a>
-
-<div class="orn"><span>✟</span></div>
-
-<div class="sec-t">Practices of the Saints</div>
-<div class="sec-s">Praxes Sanctorum</div>
-<a class="link-row" href="saints.html"><div class="dev-name">Follow a Saint's Rule of Life</div><div class="dev-latin">Sequere Regulam Sancti</div></a>
-
-<div class="orn"><span>✟</span></div>
-
-<div class="sec-t">More</div>
-<div class="sec-s">Amplius</div>
-<a class="link-row" href="stations.html"><div class="dev-name">Stations of the Cross</div><div class="dev-latin">Via Crucis</div></a>
-<a class="link-row" href="confession.html"><div class="dev-name">Guide to Confession</div><div class="dev-latin">De Sacramento Pænitentiæ</div></a>
-<a class="link-row" href="examination.html"><div class="dev-name">Examination of Conscience</div><div class="dev-latin">Examen Conscientiæ</div></a>
-<a class="link-row" href="tlm-guide.html"><div class="dev-name">How to Attend the TLM</div><div class="dev-latin">Quomodo Missam Latinam Audire</div></a>
-
-<div class="end-orn">✿ · ✿</div>
-</div>
-
-<div class="tab-bar">
-<a class="tab active" href="index.html"><div class="tab-icon">☀</div>Today</a>
-<a class="tab" href="missal.html"><div class="tab-icon">☰</div>Missal</a>
-<a class="tab" href="prayers.html"><div class="tab-icon">📖</div>Prayers</a>
-<a class="tab" href="learn.html"><div class="tab-icon">🎓</div>Learn</a>
-<a class="tab" href="reference.html"><div class="tab-icon">📕</div>Reference</a>
-</div>
-
-<script>
-const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const feria=['Dominica','Feria Secunda','Feria Tertia','Feria Quarta','Feria Quinta','Feria Sexta','Sabbato'];
-const mysteries=[['Glorious','Mysteria Gloriosa'],['Joyful','Mysteria Gaudiosa'],['Sorrowful','Mysteria Dolorosa'],['Glorious','Mysteria Gloriosa'],['Joyful','Mysteria Gaudiosa'],['Sorrowful','Mysteria Dolorosa'],['Joyful','Mysteria Gaudiosa']];
-const d=new Date();
-const wd=d.getDay();
-const hr=d.getHours();
-document.getElementById('feria').textContent=feria[wd];
-document.getElementById('dayName').textContent=days[wd];
-const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
-const day=d.getDate();
-const suf=day===1||day===21||day===31?'st':day===2||day===22?'nd':day===3||day===23?'rd':'th';
-document.getElementById('dateStr').textContent='the '+day+suf+' of '+months[d.getMonth()];
-document.getElementById('mysterySet').textContent=mysteries[wd][0]+' Mysteries — '+mysteries[wd][1];
-if(hr<12){document.getElementById('offeringName').textContent='Morning Offering';document.getElementById('offeringLatin').textContent='Oblatio Matutina';}
-else if(hr<17){document.getElementById('offeringName').textContent='Afternoon Offering';document.getElementById('offeringLatin').textContent='Oblatio Meridiana';}
-else{document.getElementById('offeringName').textContent='Evening Offering';document.getElementById('offeringLatin').textContent='Oblatio Vespertina';}
-const pa=document.getElementById('penanceArea');
-if(wd===5){pa.innerHTML='<div class="penance-block"><div class="penance-title">Friday Abstinence <span class="penance-tag">Abstinence</span></div><div class="penance-desc">Abstain from meat.</div></div>';}
-else if(wd===6){pa.innerHTML='<div style="font-family:Cormorant Garamond,serif;font-size:14px;color:#998877;font-style:italic">No special penance today.</div>';}
-else{pa.innerHTML='<div style="font-family:Cormorant Garamond,serif;font-size:14px;color:#998877;font-style:italic">No special penance today.</div>';}
-</script>
+<h1>Ad Altáre Dei</h1>
+<p>To the Altar of God<br>— redirecting —</p>
+<a href="today.html">Ad Hodie <span class="cross">✠</span> Continue</a>
 </body>
 </html>

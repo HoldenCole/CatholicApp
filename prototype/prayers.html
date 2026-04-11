@@ -490,6 +490,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   <div class="eng">Devotional Prayers</div>
 </div>
 
+<div class="entry" onclick="show('morning')"><div class="init">O</div><div class="body"><div class="name">Oblátio Matutína</div><div class="eng">Morning Offering</div></div><div class="meta">Daily</div></div>
 <div class="entry" onclick="show('memorare')"><div class="init">M</div><div class="body"><div class="name">Memoráre</div><div class="eng">Remember, O Most Gracious Virgin</div></div></div>
 <div class="entry" onclick="show('actusContr')"><div class="init">A</div><div class="body"><div class="name">Actus Contritiónis</div><div class="eng">Act of Contrition</div></div></div>
 <div class="entry" onclick="show('anima')"><div class="init">A</div><div class="body"><div class="name">Ánima Christi</div><div class="eng">Soul of Christ</div></div></div>
@@ -620,6 +621,15 @@ var PRAYERS={
     {lat:"<em>(Said three times.)</em>",eng:"<em>(Said three times.)</em>"}
   ]},
   // ===== DEVOTIONES =====
+  morning:{title:"Oblátio Matutína",eng:"Morning Offering",category:"Devotiónes",note:"Traditionally said upon rising, to consecrate the day's prayers, works, joys, and sufferings to the Sacred Heart of Jesus through the Immaculate Heart of Mary.",lines:[
+    {lat:"O Iesu, per Cor Immaculátum Maríæ,",eng:"O Jesus, through the Immaculate Heart of Mary,"},
+    {lat:"óffero tibi oratiónes, ópera, gáudia et labóres huius diéi",eng:"I offer Thee the prayers, works, joys, and sufferings of this day"},
+    {lat:"in satisfactiónem pro peccátis nostris,",eng:"in satisfaction for our sins,"},
+    {lat:"in ómnibus Missis Sacrificiis hódie per orbem celebrátis,",eng:"in union with all the Holy Sacrifices of the Mass celebrated throughout the world today,"},
+    {lat:"pro ómnibus intentiónibus Sacratíssimi Cordis tui,",eng:"for all the intentions of Thy Most Sacred Heart,"},
+    {lat:"pro unióne christianórum, pro conversióne peccatórum,",eng:"for the reunion of all Christians, for the conversion of sinners,"},
+    {lat:"ac pro intentiónibus Summi Pontíficis hoc mense. <em>Amen.</em>",eng:"and for the intentions of our Holy Father this month. <em>Amen.</em>"}
+  ]},
   memorare:{title:"Memoráre",eng:"Remember, O Most Gracious Virgin",category:"Devotiónes",note:"A prayer to Our Lady by St. Bernard of Clairvaux (12th century).",lines:[
     {lat:"Memoráre, O piíssima Virgo María, non esse audítum a sǽculo,",eng:"Remember, O most gracious Virgin Mary, that never was it known"},
     {lat:"quemquam ad tua curréntem præsídia, tua implorántem auxília, tua peténtem suffrágia,",eng:"that anyone who fled to thy protection, implored thy help, or sought thine intercession,"},
@@ -738,6 +748,12 @@ function show(slug){
   window.scrollTo(0,0);
 }
 function hide(){document.querySelectorAll('.overlay').forEach(function(o){o.classList.remove('show')})}
+
+// Deep link: /prayers.html#slug opens that prayer directly
+(function(){
+  var slug=(location.hash||'').replace('#','');
+  if(slug && PRAYERS[slug])show(slug);
+})();
 </script>
 
 <nav class="tab-bar">

@@ -193,6 +193,8 @@ main{position:relative;z-index:2}
   opacity:0.5;
   font-family:'Playfair Display',serif;
 }
+.dev-row.preview{cursor:default;opacity:0.55}
+.dev-row.preview::after{display:none}
 
 /* ---------- Rosary: flowing, no card ---------- */
 .rosary{
@@ -491,11 +493,11 @@ main{position:relative;z-index:2}
   <div class="dev-name">The Divine Office</div>
   <div class="dev-latin">Officium Divinum — Lauds &amp; Vespers</div>
 </div>
-<div class="dev-row">
+<div class="dev-row" onclick="location.href='confession.html'">
   <div class="dev-name">Examination of Conscience</div>
   <div class="dev-latin">Examen Conscientiæ</div>
 </div>
-<div class="dev-row">
+<div class="dev-row" onclick="location.href='prayers.html#morning'">
   <div class="dev-name">Morning Offering</div>
   <div class="dev-latin">Oblatio Matutina</div>
 </div>
@@ -546,19 +548,19 @@ main{position:relative;z-index:2}
 <div class="sec-label">Amplius</div>
 <div class="sec-latin">Further devotions &amp; guides</div>
 
-<div class="dev-row">
+<div class="dev-row" onclick="location.href='stations.html'">
   <div class="dev-name">Stations of the Cross</div>
   <div class="dev-latin">Via Crucis</div>
 </div>
-<div class="dev-row">
+<div class="dev-row" onclick="location.href='confession.html'">
   <div class="dev-name">Guide to Confession</div>
   <div class="dev-latin">De Sacramento Pænitentiæ</div>
 </div>
-<div class="dev-row">
+<div class="dev-row" onclick="location.href='reference.html'">
   <div class="dev-name">How to Attend the Latin Mass</div>
   <div class="dev-latin">Quomodo Missam Latinam Audire</div>
 </div>
-<div class="dev-row">
+<div class="dev-row preview">
   <div class="dev-name">Daily Readings</div>
   <div class="dev-latin">Lectiones Diurnæ</div>
 </div>
