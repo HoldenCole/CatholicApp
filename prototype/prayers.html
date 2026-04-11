@@ -488,7 +488,8 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 
 <div class="entry"><div class="init">M</div><div class="body"><div class="name">Memoráre</div><div class="eng">Remember, O Most Gracious Virgin</div></div></div>
 <div class="entry"><div class="init">A</div><div class="body"><div class="name">Actus Contritiónis</div><div class="eng">Act of Contrition</div></div></div>
-<div class="entry"><div class="init">A</div><div class="body"><div class="name">Ánima Christi</div><div class="eng">Soul of Christ</div></div></div>
+<div class="entry" onclick="show('anima')"><div class="init">A</div><div class="body"><div class="name">Ánima Christi</div><div class="eng">Soul of Christ</div></div></div>
+<div class="entry" onclick="show('crucifix')"><div class="init">E</div><div class="body"><div class="name">En Ego, O Bone Iesu</div><div class="eng">Prayer Before a Crucifix</div></div></div>
 <div class="entry"><div class="init">T</div><div class="body"><div class="name">Tantum Ergo</div><div class="eng">Therefore So Great a Sacrament</div></div></div>
 <div class="entry"><div class="init">O</div><div class="body"><div class="name">Oratio ad S. Michaélem</div><div class="eng">Prayer to St. Michael</div></div></div>
 <div class="entry"><div class="init">A</div><div class="body"><div class="name">Adóro Te Devóte</div><div class="eng">I Devoutly Adore Thee</div></div></div>
@@ -519,6 +520,138 @@ main{position:relative;z-index:2;padding:0 28px 40px}
       <div class="ml"><div class="lt"><span class="rmark">℟.</span>Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. <em>Amen.</em></div></div>
       <div class="mri"><div class="et"><span class="rmark">℟.</span>Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. <em>Amen.</em></div></div>
     </div>
+    <div class="cta-wrap">
+      <a class="cta" href="#">Practica <span class="cross">✠</span> Practice This Prayer</a>
+    </div>
+  </div>
+</div>
+
+<!-- Anima Christi detail overlay -->
+<div class="overlay" id="o-anima">
+  <div class="dh">
+    <a class="back" onclick="hide()">‹ &nbsp; Liber</a>
+    <div class="cat">✠ &nbsp; Devotiónes &nbsp; ✠</div>
+    <h2>Ánima Christi</h2>
+    <div class="sub">Soul of Christ</div>
+    <div class="h-rule"><span class="glyph">✦</span></div>
+  </div>
+  <div class="db">
+    <div class="mc">
+      <div class="ml"><div class="lt"><span class="lead-cap">Á</span>nima Christi, sanctífica me.</div></div>
+      <div class="mri"><div class="et">Soul of Christ, sanctify me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Corpus Christi, salva me.</div></div>
+      <div class="mri"><div class="et">Body of Christ, save me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Sanguis Christi, inébria me.</div></div>
+      <div class="mri"><div class="et">Blood of Christ, inebriate me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Aqua láteris Christi, lava me.</div></div>
+      <div class="mri"><div class="et">Water from the side of Christ, wash me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Pássio Christi, confórta me.</div></div>
+      <div class="mri"><div class="et">Passion of Christ, strengthen me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">O bone Iesu, exáudi me.</div></div>
+      <div class="mri"><div class="et">O good Jesus, hear me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Intra tua vúlnera abscónde me.</div></div>
+      <div class="mri"><div class="et">Within Thy wounds hide me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Ne permíttas me separári a te.</div></div>
+      <div class="mri"><div class="et">Permit me not to be separated from Thee.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Ab hoste malígno defénde me.</div></div>
+      <div class="mri"><div class="et">From the malignant enemy defend me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">In hora mortis meæ voca me.</div></div>
+      <div class="mri"><div class="et">In the hour of my death call me.</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">Et iube me veníre ad te,</div></div>
+      <div class="mri"><div class="et">And bid me come unto Thee,</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">ut cum Sanctis tuis laudem te,</div></div>
+      <div class="mri"><div class="et">that with Thy saints I may praise Thee,</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt"><span class="rmark">℟.</span>in sǽcula sæculórum. <em>Amen.</em></div></div>
+      <div class="mri"><div class="et"><span class="rmark">℟.</span>for ever and ever. <em>Amen.</em></div></div>
+    </div>
+    <div class="cta-wrap">
+      <a class="cta" href="#">Practica <span class="cross">✠</span> Practice This Prayer</a>
+    </div>
+  </div>
+</div>
+
+<!-- Prayer Before a Crucifix detail overlay -->
+<div class="overlay" id="o-crucifix">
+  <div class="dh">
+    <a class="back" onclick="hide()">‹ &nbsp; Liber</a>
+    <div class="cat">✠ &nbsp; Ante Crucifíxum &nbsp; ✠</div>
+    <h2>En Ego,<br>O Bone Iesu</h2>
+    <div class="sub">Prayer Before a Crucifix</div>
+    <div class="h-rule"><span class="glyph">✦</span></div>
+  </div>
+  <div class="db">
+
+    <p style="font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A8670;text-align:center;margin:0 12px 16px;line-height:1.5">To be said after Communion, kneeling before a crucifix.<br>A plenary indulgence may be gained on any Friday in Lent.</p>
+
+    <div class="mc">
+      <div class="ml"><div class="lt"><span class="lead-cap">E</span>n ego, o bone et dulcíssime Iesu, ante conspéctum tuum génibus me provólvo,</div></div>
+      <div class="mri"><div class="et">Behold, O good and most sweet Jesus, I cast myself upon my knees in Thy sight,</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">ac máximo ánimi ardóre te oro atque obtéstor,</div></div>
+      <div class="mri"><div class="et">and with the most fervent desire of my soul I pray and beseech Thee</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">ut meum in cor vívidos fídei, spei et caritátis sensus,</div></div>
+      <div class="mri"><div class="et">that Thou wouldst impress upon my heart lively sentiments of faith, hope, and charity,</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">atque veram peccatórum meórum pæniténtiam,</div></div>
+      <div class="mri"><div class="et">with true contrition for my sins,</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">éaque emendándi firmíssimam voluntátem velis imprímere;</div></div>
+      <div class="mri"><div class="et">and a firm purpose of amendment;</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">dum magno ánimi afféctu et dolóre</div></div>
+      <div class="mri"><div class="et">while with deep affection and grief of soul</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">tua quinque vúlnera mecum ipse consídero,</div></div>
+      <div class="mri"><div class="et">I ponder within myself and mentally contemplate Thy five most precious wounds,</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">ac mente contémplor,</div></div>
+      <div class="mri"><div class="et">having before my eyes</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt">illud præ óculis habens, quod iam in ore ponébat tuo David Prophéta de te, o bone Iesu:</div></div>
+      <div class="mri"><div class="et">that which Thy prophet David spake concerning Thee, O good Jesus:</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt"><em>Fodérunt manus meas et pedes meos: dinumeravérunt ómnia ossa mea.</em></div></div>
+      <div class="mri"><div class="et"><em>They have pierced my hands and my feet; they have numbered all my bones.</em> (Ps 21:17–18)</div></div>
+    </div>
+    <div class="mc">
+      <div class="ml"><div class="lt"><span class="rmark">℟.</span><em>Amen.</em></div></div>
+      <div class="mri"><div class="et"><span class="rmark">℟.</span><em>Amen.</em></div></div>
+    </div>
+
     <div class="cta-wrap">
       <a class="cta" href="#">Practica <span class="cross">✠</span> Practice This Prayer</a>
     </div>
