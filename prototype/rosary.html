@@ -734,7 +734,14 @@ function render(){
     :'Finis <span class="cross">✠</span> Finish';
 }
 
-function nextStep(){if(idx<total-1){idx++;render();window.scrollTo(0,0)}else{showScreen('complete');setCompleteLabel()}}
+function nextStep(){if(idx<total-1){idx++;render();window.scrollTo(0,0)}else{markRosaryComplete();showScreen('complete');setCompleteLabel()}}
+function markRosaryComplete(){
+  try{
+    var today=new Date().toISOString().slice(0,10);
+    localStorage.setItem('rosaryLastDate',today);
+    localStorage.setItem('rosaryLastSet',currentSet);
+  }catch(e){}
+}
 function prevStep(){if(idx>0){idx--;render();window.scrollTo(0,0)}}
 function beginRosary(setKey){
   currentSet=setKey||'sorrowful';

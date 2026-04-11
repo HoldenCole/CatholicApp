@@ -302,6 +302,118 @@ main{position:relative;z-index:2}
 }
 .tab.active{color:#8B1A1A}
 .tab.active .glyph{color:#8B1A1A;opacity:1}
+
+/* ---------- Saint-being-followed ---------- */
+.saint-follow{
+  position:relative;
+  padding:6px 0 8px 58px;
+  margin-top:4px;
+  cursor:pointer;
+}
+.saint-follow .dropcap{
+  position:absolute;
+  left:0;top:-4px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:50px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+}
+.saint-follow .dropcap::after{
+  content:'';display:block;
+  width:28px;height:0.5px;
+  background:#B8960C;
+  margin:4px auto 0;
+}
+.saint-follow .name{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-weight:500;
+  color:#1C1410;
+  line-height:1.15;
+}
+.saint-follow .role{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#8B1A1A;
+  margin-top:1px;
+}
+.saint-follow .quote{
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  margin-top:8px;
+  line-height:1.5;
+  padding-left:10px;
+  border-left:0.5px solid rgba(139,26,26,0.35);
+}
+.saint-follow .streak-line{
+  display:inline-block;
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.saint-follow .streak-line .cross{color:#B8960C;margin:0 6px}
+
+/* ---------- Schola mastery progress ---------- */
+.schola{margin-top:6px;padding:4px 0}
+.schola .dots{
+  display:flex;align-items:center;gap:6px;
+  margin:6px 0 8px;
+  flex-wrap:nowrap;
+}
+.schola .dot{
+  width:7px;height:7px;border-radius:50%;
+  border:0.5px solid rgba(184,150,12,0.55);
+  background:transparent;
+  flex-shrink:0;
+  transition:all 0.3s;
+}
+.schola .dot.done{background:#8B1A1A;border-color:#8B1A1A}
+.schola .dot.current{background:#B8960C;border-color:#B8960C;box-shadow:0 0 0 1.5px rgba(184,150,12,0.25)}
+.schola .dots .cx{
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;font-size:12px;
+  flex-shrink:0;opacity:0.7;
+}
+.schola .count-line{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#9A8670;
+  letter-spacing:0.3px;
+}
+.schola .count-line .red{color:#8B1A1A;font-weight:600}
+.schola .go-link{
+  display:inline-block;
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.schola .go-link .cross{color:#B8960C;margin:0 6px}
+
+/* ---------- Prayed-today badge on Rosary ---------- */
+.prayed-badge{
+  display:inline-block;
+  margin-top:8px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.2px;text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.4);
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+  padding:3px 10px;
+}
+.prayed-badge::before{content:'✠ '}
+.prayed-badge::after{content:' ✠'}
 </style>
 </head>
 <body>
@@ -364,17 +476,33 @@ main{position:relative;z-index:2}
   <div class="rosary-title">Pray the Mysteries</div>
   <div class="rosary-sub">Mysteria Dolorosa &nbsp;—&nbsp; Sorrowful, for Friday</div>
   <a href="rosary.html" class="rosary-link">Incipiat Oratio <span class="cross">✠</span> Begin</a>
+  <div id="rosary-prayed"></div>
 </div>
 
 <div class="orn"><span class="glyph">· ✦ ·</span></div>
 
 <!-- Saints -->
 <div class="sec-label">Praxes Sanctorum</div>
-<div class="sec-latin">Practices of the Saints</div>
+<div class="sec-latin" id="saints-subtitle">Practices of the Saints</div>
 
-<div class="dev-row">
-  <div class="dev-name">Follow a Saint's Rule of Life</div>
-  <div class="dev-latin">Sequere Regulam Sancti</div>
+<div id="saints-section">
+  <!-- Populated by script: either a "Follow a Saint" CTA or the followed saint's daily view -->
+  <div class="dev-row" onclick="location.href='saints.html'">
+    <div class="dev-name">Follow a Saint's Rule of Life</div>
+    <div class="dev-latin">Sequere Regulam Sancti</div>
+  </div>
+</div>
+
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
+
+<!-- Schola -->
+<div class="sec-label">Schola Latina</div>
+<div class="sec-latin">Your Latin journey</div>
+
+<div class="schola" onclick="location.href='learn.html'">
+  <div class="dots" id="schola-dots"></div>
+  <div class="count-line" id="schola-count"><span class="red">Nondum incépisti</span> &nbsp;·&nbsp; 0 of X lessons mastered</div>
+  <a href="learn.html" class="go-link">Ad Scholam <span class="cross">✠</span> Go to Schola</a>
 </div>
 
 <div class="orn"><span class="glyph">· ✦ ·</span></div>
@@ -408,9 +536,100 @@ main{position:relative;z-index:2}
   <a class="tab active" href="today.html"><span class="glyph">☉</span>Hodie</a>
   <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
   <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
-  <a class="tab" href="#"><span class="glyph">𝔏</span>Schola</a>
-  <a class="tab" href="#"><span class="glyph">✦</span>Liber</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
 </nav>
+
+<script>
+// ===== Minimal saint data (mirror of saints.html, just what Today needs) =====
+var SAINT_INFO={
+  pio:{name:"St. Padre Pio",role:"Mystic, Stigmatist, Confessor",initial:"P",quote:"Pray, hope, and don't worry. Worry is useless. God is merciful and will hear your prayer."},
+  therese:{name:"St. Thérèse of Lisieux",role:"Doctor of the Church · The Little Flower",initial:"T",quote:"Miss no single opportunity of making some small sacrifice, here by a smiling look, there by a kindly word."},
+  aquinas:{name:"St. Thomas Aquinas",role:"Doctor of the Church · Doctor Angelicus",initial:"T",quote:"To one who has faith, no explanation is necessary. To one without faith, no explanation is possible."},
+  benedict:{name:"St. Benedict of Nursia",role:"Father of Western Monasticism",initial:"B",quote:"Ora et labora — Pray and work. Let nothing be preferred to the Work of God."},
+  teresa:{name:"St. Teresa of Ávila",role:"Doctor of the Church · Mystic, Reformer",initial:"T",quote:"Let nothing disturb thee, nothing affright thee; all things are passing; God never changeth."},
+  escriva:{name:"St. Josemaría Escrivá",role:"Founder of Opus Dei",initial:"J",quote:"Do everything for Love. Thus there will be no little things: everything will be big."},
+  desales:{name:"St. Francis de Sales",role:"Doctor of the Church · Bishop of Geneva",initial:"F",quote:"Nothing is so strong as gentleness; nothing so gentle as real strength."}
+};
+
+function getLS(key,fallback){try{var v=localStorage.getItem(key);return v==null?fallback:v}catch(e){return fallback}}
+function getLSJson(key,fallback){try{return JSON.parse(localStorage.getItem(key)||'null')||fallback}catch(e){return fallback}}
+function toRoman(n){
+  var r=['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX','XXI','XXII','XXIII','XXIV','XXV','XXVI','XXVII','XXVIII','XXIX','XXX'];
+  return n<r.length?r[n]:String(n);
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
+// ===== Render followed-saint section =====
+function renderSaintSection(){
+  var slug=getLS('followedSaint','');
+  var section=document.getElementById('saints-section');
+  var subtitle=document.getElementById('saints-subtitle');
+  if(!slug || !SAINT_INFO[slug]){
+    // Not following anyone — leave the default CTA
+    subtitle.textContent='Practices of the Saints';
+    return;
+  }
+  var s=SAINT_INFO[slug];
+  var streak=parseInt(getLS('streak_'+slug,'0'),10)||0;
+  subtitle.textContent='You are following';
+  var streakLine=streak>0
+    ? '<a class="streak-line" href="saints.html">'+toRoman(streak)+' consecutive day'+(streak===1?'':'s')+' <span class="cross">✠</span> Open Practices</a>'
+    : '<a class="streak-line" href="saints.html">Today\'s Practices <span class="cross">✠</span> Open</a>';
+  section.innerHTML=
+    '<div class="saint-follow" onclick="location.href=\'saints.html\'">'+
+      '<span class="dropcap">'+s.initial+'</span>'+
+      '<div class="name">'+escapeHtml(s.name)+'</div>'+
+      '<div class="role">'+escapeHtml(s.role)+'</div>'+
+      '<div class="quote">'+escapeHtml(s.quote)+'</div>'+
+      streakLine+
+    '</div>';
+}
+
+// ===== Render Schola mastery progress =====
+var LESSON_ORDER=['vowels','consonants','stress','declensions','verbs','vocab50','ave','pater','psalms','vulgate'];
+function renderSchola(){
+  var mastered=getLSJson('masteredLessons',[]);
+  var dots=document.getElementById('schola-dots');
+  var count=document.getElementById('schola-count');
+  var html='';
+  var firstUnmastered=-1;
+  for(var i=0;i<10;i++){
+    if(i===5){html+='<span class="cx">✠</span>'}
+    var done=mastered.indexOf(LESSON_ORDER[i])>-1;
+    var cls='dot'+(done?' done':'');
+    if(!done && firstUnmastered===-1){firstUnmastered=i;cls='dot current'}
+    html+='<span class="'+cls+'"></span>';
+  }
+  dots.innerHTML=html;
+  var n=mastered.length;
+  if(n===0){
+    count.innerHTML='<span class="red">Nondum incépisti</span> &nbsp;·&nbsp; Begin your Latin journey';
+  }else if(n===10){
+    count.innerHTML='<span class="red">Consummátum</span> &nbsp;·&nbsp; All X lessons mastered';
+  }else{
+    count.innerHTML='<span class="red">'+toRoman(n)+' of X</span> &nbsp;·&nbsp; lessons mastered';
+  }
+}
+
+// ===== Render Rosary "prayed today" badge =====
+function renderRosaryBadge(){
+  var today=new Date().toISOString().slice(0,10);
+  var lastDate=getLS('rosaryLastDate','');
+  var lastSet=getLS('rosaryLastSet','');
+  var el=document.getElementById('rosary-prayed');
+  if(lastDate===today && lastSet){
+    var setName={sorrowful:'Sorrowful',joyful:'Joyful',glorious:'Glorious'}[lastSet]||lastSet;
+    el.innerHTML='<div class="prayed-badge">Orátum Hódie &nbsp;·&nbsp; Prayed Today ('+setName+')</div>';
+  }else{
+    el.innerHTML='';
+  }
+}
+
+renderSaintSection();
+renderSchola();
+renderRosaryBadge();
+</script>
 
 </body>
 </html>
