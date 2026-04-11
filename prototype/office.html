@@ -453,6 +453,7 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
 .tab .glyph{font-family:'Playfair Display',serif;font-size:19px;font-style:normal;font-weight:400;line-height:1;color:#B8960C;opacity:0.75}
 .tab.active{color:#8B1A1A}.tab.active .glyph{color:#8B1A1A;opacity:1}
 </style>
+<script src="lit-context.js"></script>
 </head>
 <body>
 
@@ -704,108 +705,8 @@ var MARIAN_ANTIPHONS={
   }
 };
 
-// ===== Liturgical Computus =====
-function easterFor(year){
-  // Anonymous Gregorian algorithm for the date of Easter Sunday
-  var a=year%19, b=Math.floor(year/100), c=year%100;
-  var d=Math.floor(b/4), e=b%4;
-  var f=Math.floor((b+8)/25);
-  var g=Math.floor((b-f+1)/3);
-  var h=(19*a+b-d-g+15)%30;
-  var i=Math.floor(c/4), k=c%4;
-  var l=(32+2*e+2*i-h-k)%7;
-  var m=Math.floor((a+11*h+22*l)/451);
-  var month=Math.floor((h+l-7*m+114)/31);
-  var day=((h+l-7*m+114)%31)+1;
-  return new Date(year,month-1,day);
-}
-
-function dateAdd(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x}
-function sameOrAfter(a,b){return a.getTime()>=b.getTime()}
-function sameOrBefore(a,b){return a.getTime()<=b.getTime()}
-
-function getLiturgicalContext(now){
-  var year=now.getFullYear();
-  var easter=easterFor(year);
-  var ashWed=dateAdd(easter,-46);          // Lent begins
-  var holyWed=dateAdd(easter,-4);          // Wed of Holy Week
-  var pentecost=dateAdd(easter,49);        // Pentecost Sunday
-  var trinity=dateAdd(easter,56);          // Trinity Sunday (Sun after Pentecost)
-  var christmas=new Date(year,11,25);
-  var candlemas=new Date(year,1,2);        // Feb 2
-  // Advent I = 4th Sunday before Christmas
-  var advent1=new Date(year,11,25);
-  while(advent1.getDay()!==0)advent1=dateAdd(advent1,-1);
-  advent1=dateAdd(advent1,-21);            // 3 weeks back from the Sunday before Christmas
-
-  // Determine season
-  var season,colour,latName,engName;
-  if(sameOrAfter(now,advent1) && sameOrBefore(now,dateAdd(christmas,-1))){
-    season='advent';colour='violet';latName='Tempus Advéntus';engName='Advent';
-  } else if(sameOrAfter(now,christmas) || sameOrBefore(now,dateAdd(candlemas,-1))){
-    // Christmastide: Dec 25 through Feb 1 (eve of Candlemas)
-    if(sameOrBefore(now,new Date(year,0,5)) || sameOrAfter(now,christmas)){
-      season='christmas';colour='white';latName='Tempus Nativitátis';engName='Christmastide';
-    } else {
-      season='christmas';colour='white';latName='Tempus Nativitátis';engName='Christmastide';
-    }
-  } else if(sameOrAfter(now,ashWed) && sameOrBefore(now,dateAdd(easter,-1))){
-    // Lent (Ash Wednesday through Holy Saturday)
-    var passionStart=dateAdd(easter,-14);  // Passion Sunday (2 weeks before Easter)
-    if(sameOrAfter(now,passionStart)){
-      season='passion';colour='violet';latName='Tempus Passiónis';engName='Passiontide';
-    } else {
-      season='lent';colour='violet';latName='Quadragésima';engName='Lent';
-    }
-  } else if(sameOrAfter(now,easter) && sameOrBefore(now,pentecost)){
-    season='easter';colour='white';latName='Tempus Paschále';engName='Eastertide';
-  } else if(now.getTime()===pentecost.getTime()){
-    season='pentecost';colour='red';latName='Pentecóste';engName='Pentecost';
-  } else if(sameOrAfter(now,trinity)){
-    season='per_annum';colour='green';latName='Tempus post Pentecósten';engName='Time after Pentecost';
-  } else {
-    // Between Candlemas and Ash Wednesday — Time after Epiphany / Septuagesima
-    season='per_annum';colour='green';latName='Tempus post Epiphaníam';engName='Time after Epiphany';
-  }
-
-  // Day of week
-  var feriaLat=['Domínica','Feria Secúnda','Feria Tértia','Feria Quarta','Feria Quinta','Feria Sexta','Sábbato'];
-  var feriaEng=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  var dow=now.getDay();
-
-  // Pick the seasonal Marian antiphon for Compline.
-  // Alma: Advent I (Nov/Dec) through Feb 1 (eve of Candlemas) — spans the year boundary
-  // Ave:  Feb 2 (Candlemas) through Holy Wednesday
-  // Regina: Easter Vigil through Friday after Pentecost
-  // Salve: Trinity Saturday through Friday before Advent I
-  var marian;
-  if(sameOrAfter(now,advent1) || sameOrBefore(now,dateAdd(candlemas,-1))){
-    marian='alma';
-  } else if(sameOrAfter(now,candlemas) && sameOrBefore(now,holyWed)){
-    marian='ave';
-  } else if(sameOrAfter(now,easter) && sameOrBefore(now,dateAdd(trinity,-1))){
-    marian='regina';
-  } else {
-    marian='salve';
-  }
-
-  return {
-    season:season,
-    colour:colour,
-    latName:latName,
-    engName:engName,
-    feriaLat:feriaLat[dow],
-    feriaEng:feriaEng[dow],
-    dow:dow,
-    isSunday:dow===0,
-    marian:marian,
-    advent1:advent1,
-    easter:easter,
-    pentecost:pentecost
-  };
-}
-
-var LIT_CTX=getLiturgicalContext(new Date());
+// Use the shared liturgical context library (loaded via lit-context.js in <head>)
+var LIT_CTX=LitContext.get(new Date());
 
 // Apply context to header banner + swap Compline's seasonal Marian antiphon
 (function(){

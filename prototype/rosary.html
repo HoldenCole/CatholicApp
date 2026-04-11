@@ -483,7 +483,23 @@ body{
   cursor:pointer;
 }
 #complete .home-link .cross{color:#B8960C;margin:0 8px}
+.mystery .badge{
+  display:none;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:4px;
+  border-top:0.5px solid rgba(139,26,26,0.4);
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+  padding:2px 0;
+  width:fit-content;
+}
+.mystery .badge::before{content:'✠ '}
+.mystery .badge::after{content:' ✠'}
+.mystery.today .badge{display:block}
+.mystery.today .init{color:#8B1A1A}
 </style>
+<script src="lit-context.js"></script>
 </head>
 <body>
 
@@ -501,25 +517,27 @@ body{
   </div>
 
   <div class="ct">
-    <div class="intro">Choose the Mysteries you will pray.<br>Today calls for the <em>Sorrowful</em>, traditional for Friday.</div>
+    <div class="intro" id="r-intro">Choose the Mysteries you will pray.<br>Today calls for the <em>Sorrowful</em>, traditional for Friday.</div>
 
-    <div class="mystery today" onclick="beginRosary('sorrowful')">
+    <div class="mystery" data-set="sorrowful" onclick="beginRosary('sorrowful')">
       <div class="init">S</div>
-      <div class="badge">Hodie &nbsp;·&nbsp; Today</div>
+      <div class="badge">Hodie · Today</div>
       <div class="name">The Sorrowful Mysteries</div>
       <div class="latin">Mystéria Dolorósa</div>
       <div class="days">Tuesday &nbsp;·&nbsp; Friday</div>
     </div>
 
-    <div class="mystery" onclick="beginRosary('joyful')">
+    <div class="mystery" data-set="joyful" onclick="beginRosary('joyful')">
       <div class="init">J</div>
+      <div class="badge">Hodie · Today</div>
       <div class="name">The Joyful Mysteries</div>
       <div class="latin">Mystéria Gaudiósa</div>
       <div class="days">Monday &nbsp;·&nbsp; Thursday</div>
     </div>
 
-    <div class="mystery" onclick="beginRosary('glorious')">
+    <div class="mystery" data-set="glorious" onclick="beginRosary('glorious')">
       <div class="init">G</div>
+      <div class="badge">Hodie · Today</div>
       <div class="name">The Glorious Mysteries</div>
       <div class="latin">Mystéria Gloriósa</div>
       <div class="days">Wednesday &nbsp;·&nbsp; Saturday &nbsp;·&nbsp; Sunday</div>
@@ -761,6 +779,19 @@ function showScreen(id){
   document.getElementById(id).classList.add('active');
   window.scrollTo(0,0);
 }
+
+// ===== Auto-mark today's mystery set =====
+(function(){
+  if(typeof LitContext==='undefined')return;
+  var c=LitContext.get(new Date());
+  document.querySelectorAll('.mystery').forEach(function(el){
+    if(el.getAttribute('data-set')===c.mystery)el.classList.add('today');
+    else el.classList.remove('today');
+  });
+  var pretty={joyful:'Joyful',sorrowful:'Sorrowful',glorious:'Glorious'}[c.mystery];
+  var intro=document.getElementById('r-intro');
+  if(intro)intro.innerHTML='Choose the Mysteries you will pray.<br>Today calls for the <em>'+pretty+'</em>, traditional for '+c.feriaEng+'.';
+})();
 </script>
 
 </body>

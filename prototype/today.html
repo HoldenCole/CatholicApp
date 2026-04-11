@@ -414,7 +414,38 @@ main{position:relative;z-index:2}
 }
 .prayed-badge::before{content:'✠ '}
 .prayed-badge::after{content:' ✠'}
+
+/* ---------- Lent Friday indulgence flag ---------- */
+.indulgence-row{
+  display:none;
+  align-items:flex-start;
+  gap:10px;
+  padding:10px 0 10px;
+  margin-top:6px;
+}
+.indulgence-row.show{display:flex}
+.indulgence-row .pip{
+  flex:0 0 auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.2px;text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.4);
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+  padding:2px 8px;
+  margin-top:1px;
+}
+.indulgence-row .pip::before{content:'✠ '}
+.indulgence-row .pip::after{content:' ✠'}
+.indulgence-row .text{
+  flex:1;
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.4;
+}
 </style>
+<script src="lit-context.js"></script>
 </head>
 <body>
 
@@ -424,9 +455,9 @@ main{position:relative;z-index:2}
 
 <main>
 
-<div class="feria">✠ &nbsp; Feria Sexta in Quadragesima</div>
-<div class="day">Friday</div>
-<div class="date">the twenty-eighth of March</div>
+<div class="feria" id="t-feria">✠ &nbsp; Feria Sexta in Quadragesima</div>
+<div class="day" id="t-day">Friday</div>
+<div class="date" id="t-date">the twenty-eighth of March</div>
 <a href="#" class="rite">Ritus <span class="sep">·</span> Missale Romanum 1962 <span class="caret">▾</span></a>
 
 <div class="orn major"><span class="glyph">✠</span></div>
@@ -441,9 +472,13 @@ main{position:relative;z-index:2}
 </div>
 
 <div class="penance-entry">
-  <div class="rubric">℟. &nbsp; Feria Sexta</div>
-  <div class="p-title">Abstinence from flesh-meat</div>
-  <div class="p-desc">All the faithful who have reached the age of reason abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.</div>
+  <div class="rubric" id="t-prubric">℟. &nbsp; Feria Sexta</div>
+  <div class="p-title" id="t-ptitle">Abstinence from flesh-meat</div>
+  <div class="p-desc" id="t-pdesc">All the faithful who have reached the age of reason abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.</div>
+  <div class="indulgence-row" id="t-indulg">
+    <div class="pip">Indulgentia Plenária</div>
+    <div class="text">Today the Prayer Before a Crucifix may be prayed for a plenary indulgence (Lenten Friday after Communion).</div>
+  </div>
 </div>
 
 <div class="orn"><span class="glyph">· ✦ ·</span></div>
@@ -474,7 +509,7 @@ main{position:relative;z-index:2}
 <div class="rosary">
   <span class="dropcap">P</span>
   <div class="rosary-title">Pray the Mysteries</div>
-  <div class="rosary-sub">Mysteria Dolorosa &nbsp;—&nbsp; Sorrowful, for Friday</div>
+  <div class="rosary-sub" id="t-rosarysub">Mysteria Dolorosa &nbsp;—&nbsp; Sorrowful, for Friday</div>
   <a href="rosary.html" class="rosary-link">Incipiat Oratio <span class="cross">✠</span> Begin</a>
   <div id="rosary-prayed"></div>
 </div>
@@ -626,6 +661,34 @@ function renderRosaryBadge(){
   }
 }
 
+// ===== Liturgical context (feria, season, penance, today's mystery) =====
+function renderLiturgicalContext(){
+  if(typeof LitContext==='undefined')return;
+  var c=LitContext.get(new Date());
+
+  // Header feria + day + date
+  document.getElementById('t-feria').innerHTML='✠ &nbsp; '+c.feriaLat+' &nbsp;·&nbsp; '+c.latName;
+  document.getElementById('t-feria').style.color=c.colourHex;
+  document.getElementById('t-day').textContent=c.feriaEng;
+  document.getElementById('t-date').textContent=LitContext.formatLongDate(new Date());
+
+  // Penance
+  var p=c.penance;
+  document.getElementById('t-prubric').innerHTML=p.rubric.replace(/℟\./,'<span style="color:#8B1A1A">℟.</span>');
+  document.getElementById('t-ptitle').textContent=p.title;
+  document.getElementById('t-pdesc').textContent=p.desc;
+
+  // Lenten Friday plenary indulgence flag
+  if(c.indulgences && c.indulgences.crucifix){
+    document.getElementById('t-indulg').classList.add('show');
+  }
+
+  // Rosary mystery for today
+  var ms=c.mysteryLat+' &nbsp;—&nbsp; '+c.mysteryEng.replace(' Mysteries','')+', for '+c.feriaEng;
+  document.getElementById('t-rosarysub').innerHTML=ms;
+}
+
+renderLiturgicalContext();
 renderSaintSection();
 renderSchola();
 renderRosaryBadge();

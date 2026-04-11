@@ -394,15 +394,16 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 .tab.active{color:#8B1A1A}
 .tab.active .glyph{color:#8B1A1A;opacity:1}
 </style>
+<script src="lit-context.js"></script>
 </head>
 <body>
 
 <div class="frame"></div>
 
 <header class="header">
-  <div class="h-feria">✠ &nbsp; Missa Lecta &nbsp; ✠</div>
+  <div class="h-feria" id="m-feria">✠ &nbsp; Missa Lecta &nbsp; ✠</div>
   <div class="h-title">Ordo Missæ</div>
-  <div class="h-eng">The Order of Mass</div>
+  <div class="h-eng" id="m-eng">The Order of Mass</div>
   <div class="h-rule"><span class="glyph">✦</span></div>
   <a href="#" class="h-rite">Ritus <span class="sep">·</span> Missale Romanum 1962 <span style="font-size:8px">▾</span></a>
 </header>
@@ -681,6 +682,16 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
   <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
 </nav>
+
+<script>
+(function(){
+  if(typeof LitContext==='undefined')return;
+  var c=LitContext.get(new Date());
+  document.getElementById('m-feria').innerHTML='✠ &nbsp; '+c.feriaLat+' &nbsp;·&nbsp; '+c.latName+' &nbsp; ✠';
+  document.getElementById('m-feria').style.color=c.colourHex;
+  document.getElementById('m-eng').textContent=c.feriaEng+' · '+c.engName;
+})();
+</script>
 
 </body>
 </html>

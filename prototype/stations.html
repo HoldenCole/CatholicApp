@@ -246,6 +246,7 @@ body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min
 .tab .glyph{font-family:'Playfair Display',serif;font-size:19px;font-style:normal;font-weight:400;line-height:1;color:#B8960C;opacity:0.75}
 .tab.active{color:#8B1A1A}.tab.active .glyph{color:#8B1A1A;opacity:1}
 </style>
+<script src="lit-context.js"></script>
 </head>
 <body>
 
@@ -260,7 +261,8 @@ body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min
     <div class="h-rule"><span class="glyph">✦</span></div>
   </div>
   <div class="ct">
-    <div class="intro">Walk with Our Lord on the road to Calvary.<br>Fourteen stations of prayer and meditation upon the Passion.</div>
+    <div class="intro" id="s-intro">Walk with Our Lord on the road to Calvary.<br>Fourteen stations of prayer and meditation upon the Passion.</div>
+    <div id="s-lent-flag" style="display:none;text-align:center;margin:0 14px 16px;padding:10px 0;border-top:0.5px solid rgba(139,26,26,0.4);border-bottom:0.5px solid rgba(139,26,26,0.4);font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic;color:#8B1A1A;letter-spacing:1.5px"><strong style="font-weight:700;letter-spacing:2.5px;text-transform:uppercase">Hódie · Today</strong><br><span style="color:#7A6A58">A Lenten Friday — the Way of the Cross is particularly recommended.<br>A plenary indulgence may be obtained on this day.</span></div>
 
     <div class="via">
       <div class="stop" onclick="beginAt(0)"><div class="marker">I</div><div class="content"><div class="s-name">Condemned to Death</div><div class="s-latin">Ad mortem condemnatur</div></div></div>
@@ -422,6 +424,16 @@ function prevStation(){if(idx>0){idx--;render();window.scrollTo(0,0)}}
 function beginAt(i){showScreen('pray');idx=i;render()}
 function goHome(){window.location.href='today.html'}
 function showScreen(id){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+
+// Show Lenten Friday flag if applicable
+(function(){
+  if(typeof LitContext==='undefined')return;
+  var c=LitContext.get(new Date());
+  if(c.isFriday && c.isLent){
+    var f=document.getElementById('s-lent-flag');
+    if(f)f.style.display='block';
+  }
+})();
 </script>
 
 <nav class="tab-bar">
