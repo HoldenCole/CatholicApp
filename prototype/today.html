@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
 <title>Ad Altare Dei — Today</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+/* fonts, * reset, and body::before come from styles.css */
 
-*{margin:0;padding:0;box-sizing:border-box}
-
-/* Parchment page — warmer vellum, subtle grain */
+/* Page-specific body padding */
 body{
-  font-family:'EB Garamond','Georgia',serif;
   background:
     radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
     radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
@@ -22,24 +20,6 @@ body{
   min-height:100vh;
   padding:56px 28px 110px;
   position:relative;
-}
-
-/* Subtle paper grain overlay */
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  max-width:430px;
-  margin:0 auto;
-  pointer-events:none;
-  background-image:
-    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
-    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),
-    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
-  background-size:7px 7px,13px 13px,11px 11px;
-  z-index:1;
-  mix-blend-mode:multiply;
-  opacity:0.7;
 }
 
 /* Double-rule gold page frame (like a printed missal page) */

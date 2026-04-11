@@ -1,0 +1,39 @@
+/* ===== Ad Altare Dei — shared design system =====
+ * Load via <link rel="stylesheet" href="styles.css"> in <head>
+ * BEFORE any page-specific <style> block so per-page rules can
+ * override where needed.
+ *
+ * Conservative extraction: only the blocks that were byte-for-byte
+ * identical across all 10 prototypes. Page-specific variations
+ * (body padding, frame alpha, dark headers, tab bars, drop caps,
+ * overlays) stay in each file's local <style>.
+ */
+
+/* ----- Fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+/* ----- Universal reset ----- */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ----- Paper grain overlay -----
+ * Three-layer radial-dot pattern with multiply blend, applied to
+ * every parchment page as subtle tactile texture. This sits on top
+ * of the page background but beneath content via z-index:1 +
+ * pointer-events:none. Pages must set their content to
+ * position:relative; z-index:2 to stay above it.
+ */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  max-width:430px;
+  margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02)  0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);
+  background-size:7px 7px, 13px 13px, 11px 11px;
+  z-index:1;
+  mix-blend-mode:multiply;
+  opacity:0.7;
+}

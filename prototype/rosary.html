@@ -3,17 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
 <title>Ad Altare Dei — Sacratissimum Rosarium</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 
-*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:'EB Garamond','Georgia',serif;
   max-width:430px;margin:0 auto;
   min-height:100vh;
 }
+/* Opt out of shared body::before grain — rosary has multi-screen flow
+   (parchment Start, dark-walnut Pray, parchment Complete). Grain is
+   scoped to .parchment::before only. */
+body::before{display:none}
 
 .screen{display:none;min-height:100vh}
 .screen.active{display:flex;flex-direction:column}
