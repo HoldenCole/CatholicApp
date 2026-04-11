@@ -461,9 +461,9 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
 
 <header class="header">
   <a class="h-back" href="today.html">‹ &nbsp; Hodie</a>
-  <div class="h-feria">✠ &nbsp; Officium &nbsp; ✠</div>
+  <div class="h-feria">✠ &nbsp; Breviárium Románum &nbsp; ✠</div>
   <div class="h-title">Officium Divinum</div>
-  <div class="h-eng">The Divine Office &nbsp;·&nbsp; Liturgy of the Hours</div>
+  <div class="h-eng">The Divine Office &nbsp;·&nbsp; 1962 Roman Breviary</div>
   <div class="h-rule"><span class="glyph">✦</span></div>
 </header>
 
@@ -533,6 +533,20 @@ var HOURS={
         {lat:"Veníte, adorémus, et procidámus ante Deum: plorémus coram Dómino, qui fecit nos.",eng:"Come, let us adore and fall down: and weep before the Lord that made us."}
       ]},
       {type:"capitulum",label:"Capitulum",ref:"Jeremiah 14:9",lat:"Tu autem in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine Deus noster.",eng:"But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God."},
+      {type:"canticle",label:"Hymnus Ambrosianus — Te Deum",ref:"Sundays and Feasts (omitted in Lent & Passiontide)",verses:[
+        {lat:"Te Deum laudámus: te Dóminum confitémur.",eng:"We praise Thee, O God: we acknowledge Thee to be the Lord."},
+        {lat:"Te ætérnum Patrem omnis terra venerátur.",eng:"All the earth doth worship Thee, the Father everlasting."},
+        {lat:"Tibi omnes Angeli, tibi Cæli et univérsæ Potestátes:",eng:"To Thee all Angels cry aloud, the Heavens and all the Powers therein."},
+        {lat:"Tibi Chérubim et Séraphim incessábili voce proclámant:",eng:"To Thee Cherubim and Seraphim continually do cry:"},
+        {lat:"Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.",eng:"Holy, Holy, Holy, Lord God of Hosts."},
+        {lat:"Pleni sunt cæli et terra majestátis glóriæ tuæ.",eng:"Heaven and earth are full of the majesty of Thy glory."},
+        {lat:"Te gloriósus Apostolórum chorus, te Prophetárum laudábilis númerus,",eng:"The glorious company of the Apostles praise Thee, the goodly fellowship of the Prophets praise Thee,"},
+        {lat:"Te Mártyrum candidátus laudat exércitus.",eng:"The noble army of Martyrs praise Thee."},
+        {lat:"Te per orbem terrárum sancta confitétur Ecclésia:",eng:"The holy Church throughout all the world doth acknowledge Thee:"},
+        {lat:"Patrem imménsæ majestátis; venerándum tuum verum et únicum Fílium; Sanctum quoque Paráclitum Spíritum.",eng:"The Father of an infinite majesty; Thine honourable, true and only Son; also the Holy Ghost, the Comforter."},
+        {lat:"Tu Rex glóriæ, Christe. Tu Patris sempitérnus es Fílius.",eng:"Thou art the King of Glory, O Christ. Thou art the everlasting Son of the Father."},
+        {lat:"In te, Dómine, sperávi: non confúndar in ætérnum.",eng:"O Lord, in Thee have I trusted: let me never be confounded."}
+      ]},
       {type:"pater"},
       {type:"collect",label:"Collect",lat:"Omnípotens sempitérne Deus, qui vivórum domináris simul et mortuórum, omniúmque miseréris, quos tuos fide et ópere futúros esse prænóscis: te súpplices exorámus. Per Dóminum nostrum Iesum Christum. Amen.",eng:"Almighty, everlasting God, who hast dominion over both the living and the dead, and hast mercy on all whom Thou knowest will be Thine by faith and good works: we humbly beseech Thee. Through our Lord Jesus Christ. Amen."},
       {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
@@ -648,17 +662,22 @@ var HOURS={
       {type:"closing",label:"Conclusion",lat:"Benedicámus Dómino. Deo grátias.",eng:"Let us bless the Lord. Thanks be to God."}
     ]},
   completorium:{name:"Completórium",eng:"Compline",time:"before sleep",hour:21,minute:0,glyph:"C",order:8,
-    intro:"The night prayer — the Church's last word before sleep. We commend our souls to God and ask protection from the terrors of the night. Compline ends with the Salve Regina or another Marian antiphon according to the season.",
+    intro:"The night prayer — the Church's last word before sleep. Traditional Roman Compline opens with a blessing and the Confiteor, then moves through psalmody to the Nunc Dimittis and the seasonal Marian antiphon. The hour ends with the soul commended into God's hands.",
     parts:[
       {type:"vr",label:"Blessing",lat:"Iube, dómne, benedícere.",eng:"Pray, sir, a blessing.",latR:"Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. Amen.",engR:"May the almighty Lord grant us a quiet night and a perfect end. Amen."},
-      {type:"vr",label:"Examination",lat:"Frátres: sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret.",eng:"Brethren: be sober and watch; for your adversary the devil, as a roaring lion, goeth about seeking whom he may devour.",latR:"Tu autem, Dómine, miserére nobis. Deo grátias.",engR:"But Thou, O Lord, have mercy on us. Thanks be to God."},
-      {type:"hymn",label:"Hymn",title:"Te lucis ante términum",lat:"Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.",eng:"To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now."},
+      {type:"vr",label:"Short Reading (1 Peter 5:8–9)",lat:"Frátres: sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret: cui resístite fortes in fide.",eng:"Brethren: be sober and watch; for your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Resist ye him, strong in faith.",latR:"Tu autem, Dómine, miserére nobis. Deo grátias.",engR:"But Thou, O Lord, have mercy on us. Thanks be to God."},
+      {type:"confiteor",label:"Confiteor"},
+      {type:"vr",label:"Supplication",lat:"Convérte nos, Deus, salutáris noster.",eng:"Convert us, O God our Saviour.",latR:"Et avérte iram tuam a nobis.",engR:"And turn away Thine anger from us."},
+      {type:"vr",label:"Opening",lat:DAY_OPENING.lat,eng:DAY_OPENING.eng,latR:DAY_RESPONSE.lat,engR:DAY_RESPONSE.eng},
       {type:"antiphon",label:"Antiphon",lat:"Miserére mihi, Dómine, et exáudi oratiónem meam.",eng:"Have mercy on me, O Lord, and hear my prayer."},
       {type:"psalm",label:"Psalm 30 — In te, Dómine, sperávi",ref:"Pro Completorio",verses:[
         {lat:"In te, Dómine, sperávi, non confúndar in ætérnum: in justítia tua líbera me.",eng:"In Thee, O Lord, have I hoped, let me never be confounded: deliver me in Thy justice."},
         {lat:"Inclína ad me aurem tuam, accélera ut éruas me.",eng:"Bow down Thy ear to me: make haste to deliver me."},
         {lat:"In manus tuas comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",eng:"Into Thy hands I commend my spirit: Thou hast redeemed me, O Lord, the God of truth."}
       ]},
+      {type:"hymn",label:"Hymn",title:"Te lucis ante términum",lat:"Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.",eng:"To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now."},
+      {type:"capitulum",label:"Capitulum",ref:"Jeremiah 14:9",lat:"Tu autem in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine Deus noster.",eng:"But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God."},
+      {type:"responsory",label:"Responsory",ref:"In manus tuas — Psalm 30:6",v1Lat:"In manus tuas, Dómine, comméndo spíritum meum.",v1Eng:"Into Thy hands, O Lord, I commend my spirit.",r1Lat:"Redemísti nos, Dómine, Deus veritátis.",r1Eng:"Thou hast redeemed us, O Lord, the God of truth.",v2Lat:"Custódi nos, Dómine, ut pupíllam óculi.",v2Eng:"Keep us, O Lord, as the apple of Thine eye.",r2Lat:"Sub umbra alárum tuárum prótege nos.",r2Eng:"Protect us under the shadow of Thy wings."},
       {type:"canticle",label:"Canticum Simeónis — Nunc Dimittis",ref:"Lk 2:29–32",verses:[
         {lat:"Nunc dimíttis servum tuum, Dómine, secúndum verbum tuum in pace:",eng:"Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace:"},
         {lat:"Quia vidérunt óculi mei salutáre tuum,",eng:"Because my eyes have seen Thy salvation,"},
@@ -896,6 +915,40 @@ function renderPart(p){
           '<div class="hlat">'+escapeHtml(p.lat)+'</div>'+
           '<div class="heng">'+escapeHtml(p.engBody)+'</div>'+
         '</div>';
+    case 'confiteor':
+      return '<div class="part-rule"><span class="name">Confíteor</span></div>'+
+        '<div class="part-eng">The Confession of Sins</div>'+
+        '<div class="bilingual">'+
+          '<div class="lat"><em>Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Ioánni Baptístæ, sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis, quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa. Ideo precor beátam Maríam semper Vírginem, beátum Michaélem Archángelum, beátum Ioánnem Baptístam, sanctos Apóstolos Petrum et Paulum, et omnes Sanctos, oráre pro me ad Dóminum Deum nostrum.</em></div>'+
+          '<div class="eng"><em>I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the Saints, that I have sinned exceedingly in thought, word, and deed: through my fault, through my fault, through my most grievous fault. Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, and all the Saints, to pray for me to the Lord our God.</em></div>'+
+        '</div>'+
+        '<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℟.</span>Misereátur tui omnípotens Deus, et, dimíssis peccátis tuis, perdúcat te ad vitam ætérnam. <em>Amen.</em></div>'+
+          '<div class="eng"><span class="mark">℟.</span>May almighty God have mercy upon thee, forgive thee thy sins, and bring thee to life everlasting. <em>Amen.</em></div>'+
+        '</div>'+
+        '<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℟.</span>Indulgéntiam, absolutiónem, et remissiónem peccatórum nostrórum tríbuat nobis omnípotens et miséricors Dóminus. <em>Amen.</em></div>'+
+          '<div class="eng"><span class="mark">℟.</span>May the almighty and merciful Lord grant us pardon, absolution, and remission of our sins. <em>Amen.</em></div>'+
+        '</div>';
+    case 'responsory':
+      return '<div class="part-rule"><span class="name">Responsórium Breve</span></div>'+
+        '<div class="part-eng">Short Responsory · '+escapeHtml(p.ref||'')+'</div>'+
+        '<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℣.</span>'+escapeHtml(p.v1Lat)+'</div>'+
+          '<div class="eng"><span class="mark">℣.</span>'+escapeHtml(p.v1Eng)+'</div>'+
+        '</div>'+
+        '<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℟.</span>'+escapeHtml(p.r1Lat)+'</div>'+
+          '<div class="eng"><span class="mark">℟.</span>'+escapeHtml(p.r1Eng)+'</div>'+
+        '</div>'+
+        (p.v2Lat?'<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℣.</span>'+escapeHtml(p.v2Lat)+'</div>'+
+          '<div class="eng"><span class="mark">℣.</span>'+escapeHtml(p.v2Eng)+'</div>'+
+        '</div>':'')+
+        (p.r2Lat?'<div class="bilingual">'+
+          '<div class="lat"><span class="mark">℟.</span>'+escapeHtml(p.r2Lat)+'</div>'+
+          '<div class="eng"><span class="mark">℟.</span>'+escapeHtml(p.r2Eng)+'</div>'+
+        '</div>':'');
   }
   return '';
 }
