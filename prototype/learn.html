@@ -66,14 +66,14 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 .overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100%;background:#F2E8D0;z-index:30;overflow-y:auto}
 .overlay.show{display:block}
 .overlay::before{content:'';position:fixed;inset:0;max-width:430px;margin:0 auto;pointer-events:none;background-image:radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);background-size:7px 7px,13px 13px;z-index:1;mix-blend-mode:multiply;opacity:0.7}
-.dh{position:relative;background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);padding:62px 28px 26px;z-index:5;overflow:hidden}
+.dh{position:relative;background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);padding:62px 28px 28px;z-index:5;overflow:hidden}
 .dh::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
 .dh::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
 .dh .back{position:absolute;top:60px;left:24px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;cursor:pointer;z-index:6}
 .dh .cat{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
 .dh h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1.05;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
 .dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
-.dh .h-rule{margin:14px 8px 0}
+.dh .h-rule{margin:14px 8px 10px}
 
 .db{position:relative;z-index:2;padding:24px 28px 60px}
 
@@ -82,6 +82,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 .sec-intro .dropcap{float:left;font-family:'Playfair Display',serif;font-style:italic;font-size:48px;font-weight:500;color:#8B1A1A;line-height:0.85;padding:6px 6px 0 0}
 
 .sec-label{font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase;margin:24px 0 10px}
+.sec-note{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A8670;margin-bottom:10px}
 
 .sec-lesson p{font-family:'EB Garamond',serif;font-size:15px;color:#1C1410;line-height:1.7;margin-bottom:10px}
 
@@ -516,7 +517,7 @@ function renderSection(sec){
   }
   if(sec.type==='cards'){
     var h='<div class="sec-label">'+escapeHtml(sec.label)+'</div>';
-    if(sec.note)h+='<p style="font-family:\'Cormorant Garamond\',serif;font-size:12px;font-style:italic;color:#9A8670;margin-bottom:10px">'+escapeHtml(sec.note)+'</p>';
+    if(sec.note)h+='<p class="sec-note">'+escapeHtml(sec.note)+'</p>';
     h+='<div class="cards">';
     sec.items.forEach(function(it){
       h+='<div class="card" onclick="this.classList.toggle(\'flipped\')">'+

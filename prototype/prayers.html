@@ -327,7 +327,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   background:
     radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
     linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
-  padding:62px 28px 26px;
+  padding:62px 28px 28px;
   z-index:5;overflow:hidden;
 }
 .dh::before{
@@ -372,12 +372,14 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   color:#9A8670;
   text-align:center;margin-top:4px;
 }
-.dh .h-rule{margin:14px 8px 0}
+.dh .h-rule{margin:14px 8px 10px}
 
 .db{
   position:relative;z-index:2;
   padding:24px 28px 60px;
 }
+/* Prayer detail liturgical note (e.g. 'Said daily', 'Plenary indulgence...') */
+.prayer-note{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A8670;text-align:center;margin:0 12px 16px;line-height:1.5}
 .db .lead-cap{
   float:left;
   font-family:'Playfair Display',serif;
@@ -706,7 +708,7 @@ function show(slug){
   var body='';
   // Optional liturgical note
   if(p.note){
-    body+='<p style="font-family:\'Cormorant Garamond\',serif;font-size:12px;font-style:italic;color:#9A8670;text-align:center;margin:0 12px 16px;line-height:1.5">'+p.note+'</p>';
+    body+='<p class="prayer-note">'+p.note+'</p>';
   }
   // Prayer lines, with a drop cap on the first line
   p.lines.forEach(function(line,i){

@@ -30,7 +30,7 @@ body{
   background:
     radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
     linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
-  padding:62px 28px 26px;
+  padding:62px 28px 28px;
   z-index:5;
   overflow:hidden;
 }
@@ -98,6 +98,7 @@ body{
   text-decoration:none;
 }
 .h-rite .sep{color:#B8960C;margin:0 6px}
+.h-rite-caret{font-size:8px}
 
 /* ===== Mass progress path ===== */
 .path{
@@ -250,6 +251,9 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 }
 .rubric .mark{font-weight:700;margin-right:4px}
 
+/* ℟. and ℣. response/versicle rubric marks inside bilingual prayer text */
+.rmark{color:#8B1A1A;font-weight:600}
+
 /* ===== Two-column bilingual ===== */
 .row{display:flex;gap:0;padding:4px 0}
 .col{flex:1}
@@ -392,7 +396,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   <div class="h-title">Ordo Missæ</div>
   <div class="h-eng" id="m-eng">The Order of Mass</div>
   <div class="h-rule"><span class="glyph">✦</span></div>
-  <a href="#" class="h-rite">Ritus <span class="sep">·</span> Missale Romanum 1962 <span style="font-size:8px">▾</span></a>
+  <a href="#" class="h-rite">Ritus <span class="sep">·</span> Missale Romanum 1962 <span class="h-rite-caret">▾</span></a>
 </header>
 
 <nav class="path">
@@ -432,12 +436,12 @@ main{position:relative;z-index:2;padding:0 28px 40px}
     <div class="col r"><div class="eng">In the name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen.</div></div>
   </div>
   <div class="row">
-    <div class="col l"><div class="lat"><span style="color:#8B1A1A;font-weight:600">℣.</span> Introíbo ad altáre Dei.</div></div>
-    <div class="col r"><div class="eng"><span style="color:#8B1A1A;font-weight:600">℣.</span> I will go unto the altar of God.</div></div>
+    <div class="col l"><div class="lat"><span class="rmark">℣.</span> Introíbo ad altáre Dei.</div></div>
+    <div class="col r"><div class="eng"><span class="rmark">℣.</span> I will go unto the altar of God.</div></div>
   </div>
   <div class="row">
-    <div class="col l"><div class="lat"><span style="color:#8B1A1A;font-weight:600">℟.</span> Ad Deum qui lætíficat iuventútem meam.</div></div>
-    <div class="col r"><div class="eng"><span style="color:#8B1A1A;font-weight:600">℟.</span> To God, Who giveth joy to my youth.</div></div>
+    <div class="col l"><div class="lat"><span class="rmark">℟.</span> Ad Deum qui lætíficat iuventútem meam.</div></div>
+    <div class="col r"><div class="eng"><span class="rmark">℟.</span> To God, Who giveth joy to my youth.</div></div>
   </div>
 </div>
 
@@ -474,7 +478,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   <div class="sec-eng">Lord, Have Mercy</div>
   <div class="rubric">Said three times in alternation, in three groups of three.</div>
   <div class="row">
-    <div class="col l"><div class="lat"><span style="color:#8B1A1A;font-weight:600">℣.</span> Kýrie, eléison. <span style="color:#8B1A1A;font-weight:600">℟.</span> Kýrie, eléison.<br><span style="color:#8B1A1A;font-weight:600">℣.</span> Kýrie, eléison.<br><br><span style="color:#8B1A1A;font-weight:600">℣.</span> Christe, eléison. <span style="color:#8B1A1A;font-weight:600">℟.</span> Christe, eléison.<br><span style="color:#8B1A1A;font-weight:600">℣.</span> Christe, eléison.<br><br><span style="color:#8B1A1A;font-weight:600">℣.</span> Kýrie, eléison. <span style="color:#8B1A1A;font-weight:600">℟.</span> Kýrie, eléison.<br><span style="color:#8B1A1A;font-weight:600">℣.</span> Kýrie, eléison.</div></div>
+    <div class="col l"><div class="lat"><span class="rmark">℣.</span> Kýrie, eléison. <span class="rmark">℟.</span> Kýrie, eléison.<br><span class="rmark">℣.</span> Kýrie, eléison.<br><br><span class="rmark">℣.</span> Christe, eléison. <span class="rmark">℟.</span> Christe, eléison.<br><span class="rmark">℣.</span> Christe, eléison.<br><br><span class="rmark">℣.</span> Kýrie, eléison. <span class="rmark">℟.</span> Kýrie, eléison.<br><span class="rmark">℣.</span> Kýrie, eléison.</div></div>
     <div class="col r"><div class="eng">Lord, have mercy. Lord, have mercy.<br>Lord, have mercy.<br><br>Christ, have mercy. Christ, have mercy.<br>Christ, have mercy.<br><br>Lord, have mercy. Lord, have mercy.<br>Lord, have mercy.</div></div>
   </div>
 </div>
@@ -594,8 +598,8 @@ main{position:relative;z-index:2;padding:0 28px 40px}
     <div class="col r"><div class="eng">Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation.</div></div>
   </div>
   <div class="row">
-    <div class="col l"><div class="lat"><span style="color:#8B1A1A;font-weight:600">℟.</span> Sed líbera nos a malo. <em>Amen.</em></div></div>
-    <div class="col r"><div class="eng"><span style="color:#8B1A1A;font-weight:600">℟.</span> But deliver us from evil. <em>Amen.</em></div></div>
+    <div class="col l"><div class="lat"><span class="rmark">℟.</span> Sed líbera nos a malo. <em>Amen.</em></div></div>
+    <div class="col r"><div class="eng"><span class="rmark">℟.</span> But deliver us from evil. <em>Amen.</em></div></div>
   </div>
 </div>
 
@@ -650,8 +654,8 @@ main{position:relative;z-index:2;padding:0 28px 40px}
   </div>
 
   <div class="row">
-    <div class="col l"><div class="lat">Et vídimus glóriam eius, glóriam quasi Unigéniti a Patre, plenum grátiæ et veritátis.<br><br><span style="color:#8B1A1A;font-weight:600">℟.</span> Deo grátias.</div></div>
-    <div class="col r"><div class="eng">And we saw His glory, the glory as it were of the only-begotten of the Father, full of grace and truth.<br><br><span style="color:#8B1A1A;font-weight:600">℟.</span> Thanks be to God.</div></div>
+    <div class="col l"><div class="lat">Et vídimus glóriam eius, glóriam quasi Unigéniti a Patre, plenum grátiæ et veritátis.<br><br><span class="rmark">℟.</span> Deo grátias.</div></div>
+    <div class="col r"><div class="eng">And we saw His glory, the glory as it were of the only-begotten of the Father, full of grace and truth.<br><br><span class="rmark">℟.</span> Thanks be to God.</div></div>
   </div>
 </div>
 

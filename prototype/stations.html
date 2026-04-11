@@ -30,13 +30,19 @@ body::before{display:none}
 .dh .label{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
 .dh h1{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
 .dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
-.dh .h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 0}
+.dh .h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 10px}
 .dh .h-rule::before,.dh .h-rule::after{content:'';flex:1;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent)}
 .dh .h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
 
 /* ===== Start screen ===== */
 #start .ct{position:relative;z-index:2;padding:28px 28px 110px;flex:1}
 .intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#7A6A58;margin:0 12px 20px;line-height:1.6}
+
+/* Lenten Friday plenary indulgence flag */
+.lent-flag{display:none;text-align:center;margin:0 14px 16px;padding:10px 0;border-top:0.5px solid rgba(139,26,26,0.4);border-bottom:0.5px solid rgba(139,26,26,0.4);font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic;color:#8B1A1A;letter-spacing:1.5px}
+.lent-flag.show{display:block}
+.lent-flag-label{font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
+.lent-flag-body{color:#7A6A58}
 
 /* Winding pilgrimage path */
 .via{
@@ -226,6 +232,8 @@ body::before{display:none}
 .st-prayer::before{top:0}.st-prayer::after{bottom:0}
 .st-prayer .pr-label{font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:8px}
 .st-prayer p{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#9A8670;line-height:1.5;margin-bottom:4px}
+.st-prayer .stabat-lat{margin-top:10px}
+.st-prayer .stabat-eng{font-size:11px;margin-top:4px;color:#7A6A58}
 
 /* Nav */
 .nav-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:24px 28px 36px;background:linear-gradient(180deg,rgba(26,19,12,0) 0%,#1A130C 35%);display:flex;gap:18px;align-items:center;z-index:20}
@@ -267,7 +275,10 @@ body::before{display:none}
   </div>
   <div class="ct">
     <div class="intro" id="s-intro">Walk with Our Lord on the road to Calvary.<br>Fourteen stations of prayer and meditation upon the Passion.</div>
-    <div id="s-lent-flag" style="display:none;text-align:center;margin:0 14px 16px;padding:10px 0;border-top:0.5px solid rgba(139,26,26,0.4);border-bottom:0.5px solid rgba(139,26,26,0.4);font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic;color:#8B1A1A;letter-spacing:1.5px"><strong style="font-weight:700;letter-spacing:2.5px;text-transform:uppercase">Hódie · Today</strong><br><span style="color:#7A6A58">A Lenten Friday — the Way of the Cross is particularly recommended.<br>A plenary indulgence may be obtained on this day.</span></div>
+    <div id="s-lent-flag" class="lent-flag">
+      <strong class="lent-flag-label">Hódie · Today</strong><br>
+      <span class="lent-flag-body">A Lenten Friday — the Way of the Cross is particularly recommended.<br>A plenary indulgence may be obtained on this day.</span>
+    </div>
 
     <div class="via">
       <div class="stop" onclick="beginAt(0)"><div class="marker">I</div><div class="content"><div class="s-name">Condemned to Death</div><div class="s-latin">Ad mortem condemnatur</div></div></div>
@@ -319,8 +330,8 @@ body::before{display:none}
     <div class="st-prayer">
       <div class="pr-label">Oratio &nbsp;·&nbsp; Prayer</div>
       <p>Pater noster &nbsp;·&nbsp; Ave María &nbsp;·&nbsp; Glória Patri</p>
-      <p id="stabat" style="margin-top:10px"><em>Stabat Mater dolorósa,<br>iuxta Crucem lacrimósa,<br>dum pendébat Fílius.</em></p>
-      <p id="stabat-eng" style="font-size:11px;margin-top:4px;color:#7A6A58">At the Cross her station keeping,<br>stood the mournful Mother weeping,<br>close to Jesus to the last.</p>
+      <p id="stabat" class="stabat-lat"><em>Stabat Mater dolorósa,<br>iuxta Crucem lacrimósa,<br>dum pendébat Fílius.</em></p>
+      <p id="stabat-eng" class="stabat-eng">At the Cross her station keeping,<br>stood the mournful Mother weeping,<br>close to Jesus to the last.</p>
     </div>
   </div>
 
@@ -436,7 +447,7 @@ function showScreen(id){document.querySelectorAll('.screen').forEach(function(s)
   var c=LitContext.get(new Date());
   if(c.isFriday && c.isLent){
     var f=document.getElementById('s-lent-flag');
-    if(f)f.style.display='block';
+    if(f)f.classList.add('show');
   }
 })();
 </script>

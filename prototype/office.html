@@ -34,7 +34,7 @@ body{
 .header{
   position:relative;
   background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
-  padding:62px 28px 26px;z-index:5;overflow:hidden;
+  padding:62px 28px 28px;z-index:5;overflow:hidden;
 }
 .header::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
 .header::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
@@ -42,12 +42,12 @@ body{
 .h-feria{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
 .h-title{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
 .h-eng{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
-.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 0}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 10px}
 .h-rule::before,.h-rule::after{content:'';flex:1;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent)}
 .h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
 
-main{position:relative;z-index:2;padding:20px 28px 40px}
-.intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#7A6A58;margin:0 12px 16px;line-height:1.5}
+main{position:relative;z-index:2;padding:0 28px 40px}
+.intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#7A6A58;margin:20px 12px 16px;line-height:1.5}
 
 /* ===== Liturgical context banner ===== */
 .context{
@@ -263,7 +263,7 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
 .overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100%;background:#F2E8D0;z-index:30;overflow-y:auto}
 .overlay.show{display:block}
 .overlay::before{content:'';position:fixed;inset:0;max-width:430px;margin:0 auto;pointer-events:none;background-image:radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);background-size:7px 7px,13px 13px;z-index:1;mix-blend-mode:multiply;opacity:0.7}
-.dh{position:relative;background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);padding:62px 28px 26px;z-index:5;overflow:hidden}
+.dh{position:relative;background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);padding:62px 28px 28px;z-index:5;overflow:hidden}
 .dh::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
 .dh::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
 .dh .back{position:absolute;top:60px;left:24px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;cursor:pointer;z-index:6}
@@ -273,6 +273,9 @@ main{position:relative;z-index:2;padding:20px 28px 40px}
 .dh .time{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;text-align:center;margin-top:8px;letter-spacing:1.5px;text-transform:uppercase}
 
 .db{position:relative;z-index:2;padding:24px 28px 60px}
+/* Hour overlay intro paragraph (drop cap + italic prose) */
+.hour-intro{font-family:'EB Garamond',serif;font-size:14px;color:#1C1410;line-height:1.65;font-style:italic;margin-bottom:8px}
+.hour-intro-cap{float:left;font-family:'Playfair Display',serif;font-size:48px;font-weight:500;color:#8B1A1A;line-height:0.85;padding:6px 6px 0 0}
 .sec-label{font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:3px;text-transform:uppercase;margin:24px 0 8px}
 .sec-label:first-child{margin-top:0}
 
@@ -746,7 +749,7 @@ function showHour(key){
   document.getElementById('h-time').textContent=h.time;
   var body=document.getElementById('h-body');
   var html=
-    '<p style="font-family:\'EB Garamond\',serif;font-size:14px;color:#1C1410;line-height:1.65;font-style:italic;margin-bottom:8px"><span style="float:left;font-family:\'Playfair Display\',serif;font-size:46px;font-weight:500;color:#8B1A1A;line-height:0.85;padding:6px 6px 0 0">'+h.intro.charAt(0)+'</span>'+escapeHtml(h.intro.slice(1))+'</p>';
+    '<p class="hour-intro"><span class="hour-intro-cap">'+escapeHtml(h.intro.charAt(0))+'</span>'+escapeHtml(h.intro.slice(1))+'</p>';
   (h.parts||[]).forEach(function(p){html+=renderPart(p)});
   html+='<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>';
   body.innerHTML=html;

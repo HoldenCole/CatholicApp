@@ -77,6 +77,7 @@ main{position:relative;z-index:2}
 }
 .rite .sep{color:#B8960C;margin:0 6px;font-style:normal}
 .rite .caret{font-size:9px;margin-left:4px;opacity:0.6}
+.rite--small{font-size:11px;letter-spacing:1.4px}
 
 /* ---------- Ornamental dividers ---------- */
 .orn{
@@ -130,6 +131,7 @@ main{position:relative;z-index:2}
   text-transform:uppercase;
   margin-bottom:3px;
 }
+.rmark{color:#8B1A1A}
 .p-title{
   font-family:'Playfair Display',serif;
   font-size:18px;font-weight:500;
@@ -195,7 +197,7 @@ main{position:relative;z-index:2}
 .rosary .dropcap::after{
   content:'';position:absolute;
   left:2px;bottom:4px;
-  width:30px;height:0.5px;
+  width:32px;height:0.5px;
   background:#B8960C;
 }
 .rosary-title{
@@ -303,7 +305,7 @@ main{position:relative;z-index:2}
 }
 .saint-follow .dropcap::after{
   content:'';display:block;
-  width:28px;height:0.5px;
+  width:32px;height:0.5px;
   background:#B8960C;
   margin:4px auto 0;
 }
@@ -573,6 +575,7 @@ main{position:relative;z-index:2}
   color:#9A8670;
   margin-left:8px;
 }
+.settings-overlay .s-reset-wrap{text-align:center}
 .settings-overlay .s-reset{
   display:inline-block;
   margin:10px 0 0;
@@ -619,7 +622,7 @@ main{position:relative;z-index:2}
     <div class="sec-label">Pænitentia</div>
     <div class="sec-latin">The day's penance</div>
   </div>
-  <a href="#" class="rite" style="font-size:11px;letter-spacing:1.4px" id="t-penance-link" onclick="openSettings('penance');return false"><span id="t-penance-label">Codex 1962</span> <span class="caret">▾</span></a>
+  <a href="#" class="rite rite--small" id="t-penance-link" onclick="openSettings('penance');return false"><span id="t-penance-label">Codex 1962</span> <span class="caret">▾</span></a>
 </div>
 
 <div class="penance-entry">
@@ -780,7 +783,7 @@ main{position:relative;z-index:2}
     <div class="s-sec" id="sec-reset">
       <div class="s-sec-title">Reset</div>
       <div class="s-sec-latin">Clear all local progress</div>
-      <div style="text-align:center">
+      <div class="s-reset-wrap">
         <a class="s-reset" onclick="resetAll();return false" href="#">Reset <span class="cross">✠</span> Clear Data</a>
       </div>
     </div>
@@ -892,7 +895,7 @@ function renderLiturgicalContext(){
 
   // Penance
   var p=c.penance;
-  document.getElementById('t-prubric').innerHTML=p.rubric.replace(/℟\./,'<span style="color:#8B1A1A">℟.</span>');
+  document.getElementById('t-prubric').innerHTML=p.rubric.replace(/℟\./,'<span class="rmark">℟.</span>');
   document.getElementById('t-ptitle').textContent=p.title;
   document.getElementById('t-pdesc').textContent=p.desc;
 
