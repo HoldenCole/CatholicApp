@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad Altare Dei — Icon Concept A Refinements</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Cormorant Garamond',serif;
+  background:#2C2015;
+  color:#E8DFC9;
+  padding:40px 20px;
+  min-height:100vh;
+}
+h1{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;text-align:center;margin-bottom:6px}
+.sub{text-align:center;font-size:13px;font-style:italic;color:#9A8670;margin-bottom:40px}
+.row{display:flex;flex-wrap:wrap;gap:50px;justify-content:center;margin-bottom:60px}
+.concept{text-align:center}
+.concept h3{font-family:'Playfair Display',serif;font-size:14px;font-weight:500;color:#B8960C;margin-bottom:4px;font-style:italic}
+.concept p{font-size:11px;font-style:italic;color:#7A6A58;margin-bottom:12px;max-width:280px}
+.sizes{display:flex;gap:16px;align-items:flex-end;justify-content:center}
+.size-label{font-size:9px;color:#7A6A58;margin-top:6px;letter-spacing:1px}
+
+.icon{
+  border-radius:22%;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ===== A1: Filigree corners + richer parchment ===== */
+.icon-a1{
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(184,150,12,0.12), transparent 50%),
+    radial-gradient(ellipse at 30% 20%, rgba(139,26,26,0.06), transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(92,60,30,0.08), transparent 50%),
+    #F2E8D0;
+}
+.icon-a1::before{
+  content:'';position:absolute;inset:6%;
+  border:1.5px solid rgba(184,150,12,0.55);
+  border-radius:16%;
+}
+.icon-a1::after{
+  content:'';position:absolute;inset:9%;
+  border:0.5px solid rgba(184,150,12,0.3);
+  border-radius:13%;
+}
+.icon-a1 .letter{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  line-height:0.82;
+  position:relative;z-index:2;
+}
+.icon-a1 .cross-top{
+  position:absolute;top:8%;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;z-index:2;
+}
+.icon-a1 .underline{
+  position:absolute;bottom:20%;left:50%;transform:translateX(-50%);
+  height:1.5px;
+  background:linear-gradient(90deg,transparent,#B8960C,transparent);
+  z-index:2;
+}
+/* Corner ornaments */
+.icon-a1 .corner{
+  position:absolute;
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;
+  z-index:2;
+  opacity:0.7;
+}
+.icon-a1 .corner.tl{top:10%;left:10%}
+.icon-a1 .corner.tr{top:10%;right:10%}
+.icon-a1 .corner.bl{bottom:10%;left:10%}
+.icon-a1 .corner.br{bottom:10%;right:10%}
+
+/* ===== A2: Radiant glory (monstrance rays) ===== */
+.icon-a2{
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(184,150,12,0.18), transparent 45%),
+    radial-gradient(ellipse at 50% 48%, rgba(139,26,26,0.08), transparent 60%),
+    #F2E8D0;
+}
+.icon-a2::before{
+  content:'';position:absolute;inset:5%;
+  border:1.5px solid rgba(184,150,12,0.5);
+  border-radius:16%;
+}
+.icon-a2::after{
+  content:'';position:absolute;inset:8%;
+  border:0.5px solid rgba(184,150,12,0.25);
+  border-radius:14%;
+}
+.icon-a2 .rays{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-48%);
+  z-index:1;
+}
+.icon-a2 .ray{
+  position:absolute;
+  left:50%;top:50%;
+  transform-origin:center center;
+  background:linear-gradient(180deg,rgba(184,150,12,0.25),transparent);
+  border-radius:1px;
+}
+.icon-a2 .letter{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  line-height:0.82;
+  position:relative;z-index:3;
+  text-shadow:0 2px 8px rgba(139,26,26,0.15);
+}
+.icon-a2 .cross-top{
+  position:absolute;top:8%;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;z-index:3;
+}
+.icon-a2 .underline{
+  position:absolute;bottom:18%;left:50%;transform:translateX(-50%);
+  height:1px;
+  background:linear-gradient(90deg,transparent,#B8960C,transparent);
+  z-index:3;
+}
+
+/* ===== A3: Gothic arch frame ===== */
+.icon-a3{
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(184,150,12,0.10), transparent 55%),
+    #F2E8D0;
+}
+.icon-a3::before{
+  content:'';position:absolute;inset:5%;
+  border:1.5px solid rgba(184,150,12,0.5);
+  border-radius:16%;
+}
+.icon-a3 .arch{
+  position:absolute;
+  top:12%;left:50%;
+  transform:translateX(-50%);
+  z-index:1;
+}
+.icon-a3 .arch-side{
+  position:absolute;
+  background:rgba(184,150,12,0.45);
+}
+.icon-a3 .arch-top{
+  position:absolute;
+  left:50%;transform:translateX(-50%);
+  border-left:solid rgba(184,150,12,0.45);
+  border-right:solid rgba(184,150,12,0.45);
+  border-top:solid rgba(184,150,12,0.45);
+  border-bottom:none;
+}
+.icon-a3 .letter{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  line-height:0.82;
+  position:relative;z-index:2;
+}
+.icon-a3 .cross-top{
+  position:absolute;top:6%;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;z-index:2;
+}
+.icon-a3 .base-line{
+  position:absolute;bottom:16%;left:50%;transform:translateX(-50%);
+  height:1.5px;
+  background:rgba(184,150,12,0.5);
+  z-index:2;
+}
+
+/* ===== A4: AD monogram ===== */
+.icon-a4{
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(184,150,12,0.10), transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(139,26,26,0.06), transparent 55%),
+    #F2E8D0;
+}
+.icon-a4::before{
+  content:'';position:absolute;inset:5%;
+  border:1.5px solid rgba(184,150,12,0.5);
+  border-radius:16%;
+}
+.icon-a4::after{
+  content:'';position:absolute;inset:8%;
+  border:0.5px solid rgba(184,150,12,0.25);
+  border-radius:14%;
+}
+.icon-a4 .monogram{
+  position:relative;z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.icon-a4 .mono-a{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  line-height:0.82;
+}
+.icon-a4 .mono-d{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:400;
+  color:rgba(184,150,12,0.55);
+  line-height:0.82;
+  position:absolute;
+}
+.icon-a4 .cross-top{
+  position:absolute;top:7%;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;z-index:2;
+}
+.icon-a4 .underline{
+  position:absolute;bottom:18%;left:50%;transform:translateX(-50%);
+  height:1px;
+  background:linear-gradient(90deg,transparent,#B8960C,transparent);
+  z-index:2;
+}
+
+/* ===== A5: Vignette + warm glow ===== */
+.icon-a5{
+  background:
+    radial-gradient(ellipse at 50% 46%, rgba(255,248,235,0.4) 20%, transparent 55%),
+    radial-gradient(ellipse at 50% 46%, rgba(184,150,12,0.15) 10%, transparent 45%),
+    radial-gradient(ellipse at 0% 0%, rgba(92,60,30,0.15), transparent 40%),
+    radial-gradient(ellipse at 100% 0%, rgba(92,60,30,0.12), transparent 40%),
+    radial-gradient(ellipse at 0% 100%, rgba(92,60,30,0.15), transparent 40%),
+    radial-gradient(ellipse at 100% 100%, rgba(92,60,30,0.12), transparent 40%),
+    #F2E8D0;
+}
+.icon-a5::before{
+  content:'';position:absolute;inset:5%;
+  border:1.5px solid rgba(184,150,12,0.6);
+  border-radius:16%;
+}
+.icon-a5::after{
+  content:'';position:absolute;inset:8%;
+  border:0.5px solid rgba(184,150,12,0.3);
+  border-radius:14%;
+}
+.icon-a5 .letter{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  line-height:0.82;
+  position:relative;z-index:2;
+  text-shadow:
+    0 0 20px rgba(139,26,26,0.12),
+    0 2px 4px rgba(92,60,30,0.1);
+}
+.icon-a5 .cross-top{
+  position:absolute;top:8%;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;z-index:2;
+  text-shadow:0 0 12px rgba(184,150,12,0.3);
+}
+.icon-a5 .sub-text{
+  position:absolute;bottom:16%;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-weight:600;
+  color:#B8960C;z-index:2;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.icon-a5 .rule-top,.icon-a5 .rule-bot{
+  position:absolute;
+  left:50%;transform:translateX(-50%);
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.6),transparent);
+  z-index:2;
+}
+</style>
+</head>
+<body>
+
+<h1>Concept A — Refined</h1>
+<div class="sub">Five richer variations of the illuminated initial. Each at 256px + 120px + 60px.</div>
+
+<!-- A1: Filigree corners -->
+<div class="concept">
+  <h3>A1 — Filigree Corners</h3>
+  <p>Corner ornaments (✦) in gold, thicker outer frame, richer warm gradients in the parchment, heavier letter weight.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon icon-a1" style="width:256px;height:256px">
+        <span class="corner tl" style="font-size:16px">✦</span>
+        <span class="corner tr" style="font-size:16px">✦</span>
+        <span class="corner bl" style="font-size:16px">✦</span>
+        <span class="corner br" style="font-size:16px">✦</span>
+        <span class="cross-top" style="font-size:28px">✠</span>
+        <span class="letter" style="font-size:150px">A</span>
+        <span class="underline" style="width:90px"></span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon icon-a1" style="width:120px;height:120px">
+        <span class="corner tl" style="font-size:7px">✦</span>
+        <span class="corner tr" style="font-size:7px">✦</span>
+        <span class="corner bl" style="font-size:7px">✦</span>
+        <span class="corner br" style="font-size:7px">✦</span>
+        <span class="cross-top" style="font-size:13px">✠</span>
+        <span class="letter" style="font-size:70px">A</span>
+        <span class="underline" style="width:42px"></span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon icon-a1" style="width:60px;height:60px">
+        <span class="cross-top" style="font-size:6px">✠</span>
+        <span class="letter" style="font-size:34px">A</span>
+        <span class="underline" style="width:20px"></span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<div style="height:50px"></div>
+
+<!-- A2: Radiant glory -->
+<div class="concept">
+  <h3>A2 — Radiant Glory</h3>
+  <p>Thin gold rays emanating from behind the letter, like a monstrance or the Sacred Host. The "A" glows with a subtle red shadow. Liturgical radiance.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon icon-a2" style="width:256px;height:256px">
+        <div class="rays" style="width:200px;height:200px">
+          <div class="ray" style="width:1.5px;height:90px;transform:rotate(0deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1px;height:80px;transform:rotate(22.5deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1.5px;height:90px;transform:rotate(45deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1px;height:80px;transform:rotate(67.5deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1.5px;height:90px;transform:rotate(90deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1px;height:80px;transform:rotate(112.5deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1.5px;height:90px;transform:rotate(135deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1px;height:80px;transform:rotate(157.5deg) translateY(-50%)"></div>
+        </div>
+        <span class="cross-top" style="font-size:26px">✠</span>
+        <span class="letter" style="font-size:150px">A</span>
+        <span class="underline" style="width:85px"></span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon icon-a2" style="width:120px;height:120px">
+        <div class="rays" style="width:90px;height:90px">
+          <div class="ray" style="width:1px;height:42px;transform:rotate(0deg) translateY(-50%)"></div>
+          <div class="ray" style="width:0.5px;height:36px;transform:rotate(30deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1px;height:42px;transform:rotate(60deg) translateY(-50%)"></div>
+          <div class="ray" style="width:0.5px;height:36px;transform:rotate(90deg) translateY(-50%)"></div>
+          <div class="ray" style="width:1px;height:42px;transform:rotate(120deg) translateY(-50%)"></div>
+          <div class="ray" style="width:0.5px;height:36px;transform:rotate(150deg) translateY(-50%)"></div>
+        </div>
+        <span class="cross-top" style="font-size:12px">✠</span>
+        <span class="letter" style="font-size:70px">A</span>
+        <span class="underline" style="width:40px"></span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon icon-a2" style="width:60px;height:60px">
+        <span class="cross-top" style="font-size:6px">✠</span>
+        <span class="letter" style="font-size:34px">A</span>
+        <span class="underline" style="width:20px"></span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<div style="height:50px"></div>
+
+<!-- A3: Gothic arch -->
+<div class="concept">
+  <h3>A3 — Gothic Arch</h3>
+  <p>The "A" sits inside a pointed Gothic arch silhouette, like a cathedral window. The arch is a thin gold line. Cross sits at the apex. Architectural, solemn.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon icon-a3" style="width:256px;height:256px">
+        <svg class="arch" width="130" height="180" viewBox="0 0 130 180" fill="none" style="top:8%">
+          <path d="M10 178 L10 80 Q10 20 65 10 Q120 20 120 80 L120 178" stroke="rgba(184,150,12,0.5)" stroke-width="1.5" fill="none"/>
+        </svg>
+        <span class="cross-top" style="font-size:18px;top:3%">✠</span>
+        <span class="letter" style="font-size:130px;margin-top:14px">A</span>
+        <span class="base-line" style="width:110px"></span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon icon-a3" style="width:120px;height:120px">
+        <svg class="arch" width="62" height="84" viewBox="0 0 130 180" fill="none" style="top:8%">
+          <path d="M10 178 L10 80 Q10 20 65 10 Q120 20 120 80 L120 178" stroke="rgba(184,150,12,0.5)" stroke-width="2.5" fill="none"/>
+        </svg>
+        <span class="cross-top" style="font-size:8px;top:3%">✠</span>
+        <span class="letter" style="font-size:60px;margin-top:6px">A</span>
+        <span class="base-line" style="width:52px"></span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon icon-a3" style="width:60px;height:60px">
+        <svg class="arch" width="30" height="42" viewBox="0 0 130 180" fill="none" style="top:8%">
+          <path d="M10 178 L10 80 Q10 20 65 10 Q120 20 120 80 L120 178" stroke="rgba(184,150,12,0.5)" stroke-width="5" fill="none"/>
+        </svg>
+        <span class="letter" style="font-size:30px;margin-top:4px">A</span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<div style="height:50px"></div>
+
+<!-- A4: AD monogram -->
+<div class="concept">
+  <h3>A4 — AD Monogram</h3>
+  <p>The "A" (red, bold) and "D" (gold, lighter) overlap in a medieval monogram. The two letters of "Ad" intertwined, with the cross above. Distinctive, heraldic.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon icon-a4" style="width:256px;height:256px">
+        <span class="cross-top" style="font-size:24px">✠</span>
+        <div class="monogram">
+          <span class="mono-a" style="font-size:150px">A</span>
+          <span class="mono-d" style="font-size:120px;margin-left:30px;margin-top:8px">D</span>
+        </div>
+        <span class="underline" style="width:90px"></span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon icon-a4" style="width:120px;height:120px">
+        <span class="cross-top" style="font-size:11px">✠</span>
+        <div class="monogram">
+          <span class="mono-a" style="font-size:70px">A</span>
+          <span class="mono-d" style="font-size:56px;margin-left:14px;margin-top:4px">D</span>
+        </div>
+        <span class="underline" style="width:42px"></span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon icon-a4" style="width:60px;height:60px">
+        <div class="monogram">
+          <span class="mono-a" style="font-size:34px">A</span>
+          <span class="mono-d" style="font-size:28px;margin-left:7px;margin-top:2px">D</span>
+        </div>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<div style="height:50px"></div>
+
+<!-- A5: Vignette + warm glow + "AD" text -->
+<div class="concept">
+  <h3>A5 — Warm Glow with "AD" Subtitle</h3>
+  <p>Parchment with dark vignette at the corners (like an old manuscript page). Warm golden glow behind the letter. Small "AD" in gold small-caps below the underline. The richest, most layered option.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon icon-a5" style="width:256px;height:256px">
+        <span class="cross-top" style="font-size:24px">✠</span>
+        <span class="rule-top" style="top:18%;width:100px"></span>
+        <span class="letter" style="font-size:140px">A</span>
+        <span class="rule-bot" style="bottom:24%;width:100px"></span>
+        <span class="sub-text" style="font-size:14px;bottom:16%">A · D</span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon icon-a5" style="width:120px;height:120px">
+        <span class="cross-top" style="font-size:11px">✠</span>
+        <span class="rule-top" style="top:18%;width:48px"></span>
+        <span class="letter" style="font-size:66px">A</span>
+        <span class="rule-bot" style="bottom:24%;width:48px"></span>
+        <span class="sub-text" style="font-size:7px;bottom:16%">A · D</span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon icon-a5" style="width:60px;height:60px">
+        <span class="cross-top" style="font-size:5px">✠</span>
+        <span class="letter" style="font-size:32px">A</span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<div style="height:40px"></div>
+<div style="text-align:center;font-size:12px;font-style:italic;color:#7A6A58;line-height:1.5">
+  All variations use the established palette (parchment #F2E8D0, sanctuary red #8B1A1A, gold #B8960C).<br>
+  At 60px the details simplify gracefully — corner ornaments and rays drop, leaving just the "A" + cross.
+</div>
+
+</body>
+</html>
