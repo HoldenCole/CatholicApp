@@ -62,6 +62,21 @@
     }
   };
 
+  // ---- Dark mode auto-apply ----
+  // Reads aad.settings.darkMode from localStorage and applies
+  // body.dark class immediately (before first paint if possible).
+  function applyDarkMode(){
+    if (typeof document === 'undefined') return;
+    var dark = Storage.get('aad.settings.darkMode','false') === 'true';
+    if (dark) document.body.classList.add('dark');
+    else document.body.classList.remove('dark');
+  }
+  function toggleDarkMode(){
+    var cur = Storage.get('aad.settings.darkMode','false') === 'true';
+    Storage.set('aad.settings.darkMode', cur ? 'false' : 'true');
+    applyDarkMode();
+  }
+
   // ---- Global ESC key handler ----
   if (typeof document !== 'undefined') {
     document.addEventListener('keydown', function(e){
@@ -69,6 +84,12 @@
         Overlay.close();
       }
     });
+    // Apply dark mode on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applyDarkMode);
+    } else {
+      applyDarkMode();
+    }
   }
 
   // Export
@@ -76,4 +97,6 @@
   global.toRoman = toRoman;
   global.Overlay = Overlay;
   global.Storage = Storage;
+  global.applyDarkMode = applyDarkMode;
+  global.toggleDarkMode = toggleDarkMode;
 })(typeof window !== 'undefined' ? window : this);

@@ -37,3 +37,118 @@ body::before{
   mix-blend-mode:multiply;
   opacity:0.7;
 }
+
+/* ===== Dark mode: deep walnut + antique ivory =====
+ * Activated by adding class="dark" to <body>.
+ * Feels like candlelit vellum, not techy OLED black.
+ * The dark walnut headers (#1A130C) are already dark, so they
+ * barely change — only the parchment body flips.
+ */
+body.dark{
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.06), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.04), transparent 60%),
+    #1A130C;
+  color:#E8DFC9;
+}
+/* Grain overlay shifts to gold dots on dark background */
+body.dark::before{
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(184,150,12,0.04) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(184,150,12,0.03) 0 1px, transparent 1px),
+    radial-gradient(circle at 42% 88%, rgba(184,150,12,0.025) 0 1px, transparent 1px);
+  mix-blend-mode:screen;
+}
+/* Page frame dims slightly */
+body.dark .frame{border-color:rgba(184,150,12,0.25)}
+body.dark .frame::before{border-color:rgba(184,150,12,0.14)}
+
+/* Text overrides */
+body.dark .dev-name,
+body.dark .p-title,
+body.dark .rosary-title,
+body.dark .name,
+body.dark .e-name,
+body.dark .s-name,
+body.dark .s-opt-name,
+body.dark .c-title,
+body.dark .l-title,
+body.dark .c-latin{color:#E8DFC9}
+
+body.dark .dev-latin,
+body.dark .sec-latin,
+body.dark .p-desc,
+body.dark .date,
+body.dark .dev-row::after,
+body.dark .entry::after,
+body.dark .s-opt-latin,
+body.dark .l-desc,
+body.dark .l-latin,
+body.dark .intro,
+body.dark .e-sub,
+body.dark .s-latin,
+body.dark .charism{color:#9A8670}
+
+body.dark .feria{color:#B8960C}
+body.dark .day{color:#E8DFC9}
+
+/* Drop caps in dark mode — gold instead of red */
+body.dark .rosary .dropcap,
+body.dark .saint-follow .dropcap,
+body.dark .entry .init,
+body.dark .chapter .init{color:#B8960C}
+
+/* Penance entry bar */
+body.dark .penance-entry::before{background:#B8960C}
+
+/* Ornamental dividers stay gold (already work on dark) */
+/* Tab bar gradient fades into dark instead of parchment */
+body.dark .tab-bar{
+  background:linear-gradient(180deg,rgba(26,19,12,0) 0%,#1A130C 28%);
+}
+body.dark .tab-bar::before{
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.35),transparent);
+}
+
+/* Section labels — red stays vivid on dark */
+body.dark .sec-label{color:#B8960C}
+
+/* Entry + dev-row borders dim */
+body.dark .entry{border-bottom-color:rgba(184,150,12,0.18)}
+body.dark .dev-row{border-bottom-color:rgba(184,150,12,0.15)}
+
+/* Preview entries even dimmer */
+body.dark .dev-row.preview{opacity:0.4}
+
+/* Schola dots */
+body.dark .schola .dot{border-color:rgba(184,150,12,0.4)}
+
+/* Saint follow quote */
+body.dark .saint-follow .quote{border-left-color:rgba(184,150,12,0.3);color:#9A8670}
+
+/* Settings overlay */
+body.dark .settings-overlay{background:#1A130C}
+body.dark .settings-overlay .s-body{color:#E8DFC9}
+body.dark .settings-overlay .s-option .s-opt-name{color:#E8DFC9}
+
+/* Prayer detail overlay */
+body.dark .overlay{background:#1A130C}
+body.dark .overlay .db{color:#E8DFC9}
+body.dark .overlay .lt{color:#E8DFC9}
+body.dark .overlay .et{color:#9A8670}
+body.dark .overlay .prayer-note{color:#7A6A58}
+
+/* Multi-screen pages (rosary, stations) use .parchment class instead of body */
+body.dark .parchment{
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.06), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.04), transparent 60%),
+    #1A130C;
+  color:#E8DFC9;
+}
+body.dark .parchment .intro{color:#9A8670}
+body.dark .parchment .mystery .name,
+body.dark .parchment .s-name,
+body.dark .parchment .preview .name{color:#E8DFC9}
+body.dark .parchment .mystery .latin,
+body.dark .parchment .mystery .days{color:#9A8670}

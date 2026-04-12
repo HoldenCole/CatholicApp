@@ -780,6 +780,16 @@ main{position:relative;z-index:2}
       </div>
     </div>
 
+    <div class="s-sec" id="sec-display">
+      <div class="s-sec-title">Display</div>
+      <div class="s-sec-latin">Præsentátio</div>
+      <div class="s-option" id="dark-toggle" onclick="toggleDarkMode();renderSettings()">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Dark Mode</div>
+        <div class="s-opt-latin">Modus Tenebrosus — candlelit vellum</div>
+      </div>
+    </div>
+
     <div class="s-sec" id="sec-reset">
       <div class="s-sec-title">Reset</div>
       <div class="s-sec-latin">Clear all local progress</div>
@@ -945,6 +955,13 @@ function renderSettings(){
     if(el.getAttribute('data-penance')===pen)el.classList.add('selected');
     else el.classList.remove('selected');
   });
+  // Dark mode toggle state
+  var isDark=Storage.get('aad.settings.darkMode','false')==='true';
+  var toggle=document.getElementById('dark-toggle');
+  if(toggle){
+    if(isDark)toggle.classList.add('selected');
+    else toggle.classList.remove('selected');
+  }
 }
 function setRite(rite){
   try{localStorage.setItem('aad.settings.rite',rite)}catch(e){}
