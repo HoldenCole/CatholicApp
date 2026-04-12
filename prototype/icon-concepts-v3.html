@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad Altare Dei — Icon A4 Symmetrical Refinements</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cormorant Garamond',serif;background:#2C2015;color:#E8DFC9;padding:40px 20px;min-height:100vh}
+h1{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;text-align:center;margin-bottom:6px}
+.sub{text-align:center;font-size:13px;font-style:italic;color:#9A8670;margin-bottom:40px}
+.concept{text-align:center;margin-bottom:60px}
+.concept h3{font-family:'Playfair Display',serif;font-size:14px;font-weight:500;color:#B8960C;margin-bottom:4px;font-style:italic}
+.concept p{font-size:11px;font-style:italic;color:#7A6A58;margin:0 auto 14px;max-width:340px;line-height:1.5}
+.sizes{display:flex;gap:20px;align-items:flex-end;justify-content:center}
+.size-label{font-size:9px;color:#7A6A58;margin-top:6px;letter-spacing:1px}
+
+.icon{border-radius:22%;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+
+/* ===== Shared parchment base ===== */
+.parch{
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(184,150,12,0.10), transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(139,26,26,0.05), transparent 55%),
+    radial-gradient(ellipse at 0% 0%, rgba(92,60,30,0.12), transparent 40%),
+    radial-gradient(ellipse at 100% 0%, rgba(92,60,30,0.10), transparent 40%),
+    radial-gradient(ellipse at 0% 100%, rgba(92,60,30,0.12), transparent 40%),
+    radial-gradient(ellipse at 100% 100%, rgba(92,60,30,0.10), transparent 40%),
+    #F2E8D0;
+}
+.parch::before{content:'';position:absolute;inset:5%;border:1.5px solid rgba(184,150,12,0.55);border-radius:16%}
+.parch::after{content:'';position:absolute;inset:8%;border:0.5px solid rgba(184,150,12,0.28);border-radius:13%}
+
+/* ===== A4a: Stacked A over D, all centered ===== */
+.icon-a .stack{
+  display:flex;flex-direction:column;align-items:center;
+  position:relative;z-index:2;
+}
+.icon-a .big-a{
+  font-family:'Playfair Display',serif;
+  font-weight:700;color:#8B1A1A;line-height:0.78;
+}
+.icon-a .small-d{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:600;
+  color:#B8960C;line-height:0.85;
+  letter-spacing:4px;
+}
+.icon-a .cross-top{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;color:#B8960C;z-index:2;
+}
+.icon-a .rule{
+  position:absolute;left:50%;transform:translateX(-50%);
+  height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.65),transparent);z-index:2;
+}
+
+/* ===== A4b: D-arc wraps around A ===== */
+.icon-b .center{position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
+.icon-b .big-a{
+  font-family:'Playfair Display',serif;
+  font-weight:700;color:#8B1A1A;line-height:0.82;
+}
+.icon-b .arc{position:absolute;z-index:1}
+.icon-b .cross-top{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;color:#B8960C;z-index:3;
+}
+.icon-b .rule{
+  position:absolute;left:50%;transform:translateX(-50%);
+  height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.6),transparent);z-index:2;
+}
+
+/* ===== A4c: A inside circular D ring ===== */
+.icon-c .ring{
+  position:absolute;
+  border-radius:50%;
+  border:solid rgba(184,150,12,0.5);
+  z-index:1;
+}
+.icon-c .big-a{
+  font-family:'Playfair Display',serif;
+  font-weight:700;color:#8B1A1A;line-height:0.82;
+  position:relative;z-index:2;
+}
+.icon-c .cross-top{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;color:#B8960C;z-index:3;
+}
+.icon-c .d-label{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;
+  color:#B8960C;z-index:3;
+  letter-spacing:8px;text-transform:uppercase;
+}
+
+/* ===== A4d: Symmetrical seal — A centered with AD · flanking ===== */
+.icon-d .big-a{
+  font-family:'Playfair Display',serif;
+  font-weight:700;color:#8B1A1A;line-height:0.82;
+  position:relative;z-index:2;
+}
+.icon-d .cross-top{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;color:#B8960C;z-index:3;
+}
+.icon-d .flank{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;
+  color:#B8960C;z-index:2;
+  letter-spacing:6px;
+  white-space:nowrap;
+}
+.icon-d .rule{
+  position:absolute;left:50%;transform:translateX(-50%);
+  height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);z-index:2;
+}
+.icon-d .dots{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;z-index:2;opacity:0.5;
+  letter-spacing:6px;
+}
+
+/* ===== A4e: Christogram-style — vertical A with D-curve halo ===== */
+.icon-e .big-a{
+  font-family:'Playfair Display',serif;
+  font-weight:700;color:#8B1A1A;line-height:0.82;
+  position:relative;z-index:2;
+}
+.icon-e .halo{
+  position:absolute;
+  border-radius:50%;
+  z-index:1;
+}
+.icon-e .halo-inner{
+  border:solid rgba(184,150,12,0.45);
+}
+.icon-e .halo-outer{
+  border:solid rgba(184,150,12,0.25);
+}
+.icon-e .cross-top{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;color:#B8960C;z-index:3;
+}
+.icon-e .tick{
+  position:absolute;left:50%;
+  transform:translateX(-50%);
+  height:1px;width:1px;
+  background:rgba(184,150,12,0.45);
+  z-index:1;
+}
+</style>
+</head>
+<body>
+
+<h1>A4 Monogram — Symmetrical Variations</h1>
+<div class="sub">Five ways to make the AD monogram bilaterally symmetrical on the vertical axis.</div>
+
+<!-- A4a: Stacked -->
+<div class="concept">
+  <h3>A4a — Stacked Vertical</h3>
+  <p>Large upright "A" in red over a smaller italic "D" in gold, both perfectly centered. Cross above, hairlines framing. Clean vertical symmetry — like a missal spine.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon parch" style="width:256px;height:256px">
+        <span class="cross-top" style="font-size:20px;top:8%">✠</span>
+        <span class="rule" style="top:17%;width:80px"></span>
+        <div class="stack" style="margin-top:6px">
+          <span class="big-a" style="font-size:120px">A</span>
+          <span class="small-d" style="font-size:32px;margin-top:-8px">D</span>
+        </div>
+        <span class="rule" style="bottom:14%;width:80px"></span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-a" style="width:120px;height:120px">
+        <span class="cross-top" style="font-size:9px;top:8%">✠</span>
+        <span class="rule" style="top:17%;width:38px"></span>
+        <div class="stack" style="margin-top:2px">
+          <span class="big-a" style="font-size:56px">A</span>
+          <span class="small-d" style="font-size:15px;margin-top:-4px;letter-spacing:2px">D</span>
+        </div>
+        <span class="rule" style="bottom:14%;width:38px"></span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-a" style="width:60px;height:60px">
+        <span class="cross-top" style="font-size:5px;top:8%">✠</span>
+        <div class="stack">
+          <span class="big-a" style="font-size:28px">A</span>
+          <span class="small-d" style="font-size:8px;margin-top:-2px;letter-spacing:1px">D</span>
+        </div>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<!-- A4b: D-arc wraps around A -->
+<div class="concept">
+  <h3>A4b — D as Embracing Arc</h3>
+  <p>The curve of the "D" becomes a symmetrical golden arc (like a mandorla or a chalice bowl) cradling the "A" from below. The letter sits inside the embrace of the arc — "Ad" as a visual gesture of going toward.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon parch icon-b" style="width:256px;height:256px">
+        <span class="cross-top" style="font-size:22px;top:7%">✠</span>
+        <svg class="arc" width="160" height="100" viewBox="0 0 160 100" style="bottom:16%;left:50%;transform:translateX(-50%)">
+          <path d="M10 10 Q80 100 150 10" stroke="rgba(184,150,12,0.5)" stroke-width="1.5" fill="none"/>
+        </svg>
+        <span class="big-a" style="font-size:140px;margin-top:4px">A</span>
+        <span class="rule" style="bottom:13%;width:100px"></span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-b" style="width:120px;height:120px">
+        <span class="cross-top" style="font-size:10px;top:7%">✠</span>
+        <svg class="arc" width="76" height="46" viewBox="0 0 160 100" style="bottom:16%;left:50%;transform:translateX(-50%)">
+          <path d="M10 10 Q80 100 150 10" stroke="rgba(184,150,12,0.5)" stroke-width="3" fill="none"/>
+        </svg>
+        <span class="big-a" style="font-size:66px;margin-top:2px">A</span>
+        <span class="rule" style="bottom:13%;width:46px"></span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-b" style="width:60px;height:60px">
+        <span class="cross-top" style="font-size:5px;top:7%">✠</span>
+        <span class="big-a" style="font-size:32px">A</span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<!-- A4c: A inside circular D ring -->
+<div class="concept">
+  <h3>A4c — A Inside the Ring of D</h3>
+  <p>The "D"'s curve becomes a full gold circle — a liturgical ring or halo — with the "A" centered inside. Small "A · D" lettering at the bottom of the ring. Seal-like, symmetrical, solemn.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon parch icon-c" style="width:256px;height:256px">
+        <div class="ring halo-inner" style="width:170px;height:170px;border-width:1.5px"></div>
+        <div class="ring halo-outer" style="width:186px;height:186px;border-width:0.5px"></div>
+        <span class="cross-top" style="font-size:18px;top:10%">✠</span>
+        <span class="big-a" style="font-size:110px">A</span>
+        <span class="d-label" style="font-size:11px;bottom:16%;letter-spacing:12px">A · D</span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-c" style="width:120px;height:120px">
+        <div class="ring halo-inner" style="width:80px;height:80px;border-width:1px"></div>
+        <div class="ring halo-outer" style="width:88px;height:88px;border-width:0.5px"></div>
+        <span class="cross-top" style="font-size:8px;top:10%">✠</span>
+        <span class="big-a" style="font-size:52px">A</span>
+        <span class="d-label" style="font-size:5px;bottom:15%;letter-spacing:6px">A · D</span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-c" style="width:60px;height:60px">
+        <div class="ring halo-inner" style="width:40px;height:40px;border-width:0.5px"></div>
+        <span class="big-a" style="font-size:26px">A</span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<!-- A4d: Symmetrical seal -->
+<div class="concept">
+  <h3>A4d — Symmetrical Seal</h3>
+  <p>Large centered "A" with "✦ A · D ✦" flanking below in small-caps gold, framed by top and bottom hairlines. Ornamental dots at the quarters. Like an ecclesiastical seal or a bishop's stamp. Perfectly balanced.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon parch icon-d" style="width:256px;height:256px">
+        <span class="cross-top" style="font-size:22px;top:7%">✠</span>
+        <span class="rule" style="top:16%;width:100px"></span>
+        <span class="big-a" style="font-size:130px;margin-top:6px">A</span>
+        <span class="rule" style="bottom:22%;width:100px"></span>
+        <span class="flank" style="font-size:13px;bottom:15%">✦ &nbsp; A · D &nbsp; ✦</span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-d" style="width:120px;height:120px">
+        <span class="cross-top" style="font-size:10px;top:7%">✠</span>
+        <span class="rule" style="top:16%;width:48px"></span>
+        <span class="big-a" style="font-size:60px;margin-top:4px">A</span>
+        <span class="rule" style="bottom:22%;width:48px"></span>
+        <span class="flank" style="font-size:6px;bottom:15%;letter-spacing:3px">✦ A·D ✦</span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-d" style="width:60px;height:60px">
+        <span class="cross-top" style="font-size:5px;top:7%">✠</span>
+        <span class="big-a" style="font-size:30px">A</span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<!-- A4e: Christogram halo -->
+<div class="concept">
+  <h3>A4e — Christogram Halo</h3>
+  <p>The "A" sits at the center of a golden nimbus (double circle) with the cross emerging from the top of the halo — like a crucifix halo in an icon painting. Four small gold tick marks at the cardinal points of the circle. Sacred geometry, perfectly symmetrical.</p>
+  <div class="sizes">
+    <div>
+      <div class="icon parch icon-e" style="width:256px;height:256px">
+        <div class="halo halo-inner" style="width:160px;height:160px;border-width:1.5px;border-color:rgba(184,150,12,0.45)"></div>
+        <div class="halo halo-outer" style="width:180px;height:180px;border-width:0.5px;border-color:rgba(184,150,12,0.22)"></div>
+        <!-- Cardinal ticks -->
+        <div style="position:absolute;top:14.5%;left:50%;transform:translateX(-50%);width:1px;height:10px;background:rgba(184,150,12,0.45)"></div>
+        <div style="position:absolute;bottom:14.5%;left:50%;transform:translateX(-50%);width:1px;height:10px;background:rgba(184,150,12,0.45)"></div>
+        <div style="position:absolute;left:14.5%;top:50%;transform:translateY(-50%);width:10px;height:1px;background:rgba(184,150,12,0.45)"></div>
+        <div style="position:absolute;right:14.5%;top:50%;transform:translateY(-50%);width:10px;height:1px;background:rgba(184,150,12,0.45)"></div>
+        <span class="cross-top" style="font-size:24px;top:4%">✠</span>
+        <span class="big-a" style="font-size:120px">A</span>
+      </div>
+      <div class="size-label">256px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-e" style="width:120px;height:120px">
+        <div class="halo halo-inner" style="width:76px;height:76px;border-width:1px;border-color:rgba(184,150,12,0.45)"></div>
+        <div class="halo halo-outer" style="width:84px;height:84px;border-width:0.5px;border-color:rgba(184,150,12,0.22)"></div>
+        <div style="position:absolute;top:14%;left:50%;transform:translateX(-50%);width:0.5px;height:5px;background:rgba(184,150,12,0.45)"></div>
+        <div style="position:absolute;bottom:14%;left:50%;transform:translateX(-50%);width:0.5px;height:5px;background:rgba(184,150,12,0.45)"></div>
+        <div style="position:absolute;left:14%;top:50%;transform:translateY(-50%);width:5px;height:0.5px;background:rgba(184,150,12,0.45)"></div>
+        <div style="position:absolute;right:14%;top:50%;transform:translateY(-50%);width:5px;height:0.5px;background:rgba(184,150,12,0.45)"></div>
+        <span class="cross-top" style="font-size:11px;top:4%">✠</span>
+        <span class="big-a" style="font-size:56px">A</span>
+      </div>
+      <div class="size-label">120px</div>
+    </div>
+    <div>
+      <div class="icon parch icon-e" style="width:60px;height:60px">
+        <div class="halo halo-inner" style="width:38px;height:38px;border-width:0.5px;border-color:rgba(184,150,12,0.45)"></div>
+        <span class="cross-top" style="font-size:5px;top:5%">✠</span>
+        <span class="big-a" style="font-size:28px">A</span>
+      </div>
+      <div class="size-label">60px</div>
+    </div>
+  </div>
+</div>
+
+<div style="height:30px"></div>
+<div style="text-align:center;font-size:12px;font-style:italic;color:#7A6A58;line-height:1.5">
+  All five are bilaterally symmetrical on the vertical axis.<br>
+  At 60px, ornamental details (ticks, rings, flanking text) gracefully drop,<br>
+  leaving just the essential: ✠ + A on parchment.
+</div>
+
+</body>
+</html>
