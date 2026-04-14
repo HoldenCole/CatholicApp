@@ -1,4 +1,4 @@
-// ===== Shared UI helpers for Ad Altare Dei prototypes =====
+// ===== Shared UI helpers for Introibo prototypes =====
 // Load via <script src="ui-helpers.js"></script> in <head>.
 //
 // Provides:

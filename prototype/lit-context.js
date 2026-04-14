@@ -1,4 +1,4 @@
-// ===== Shared Liturgical Context for Ad Altare Dei prototypes =====
+// ===== Shared Liturgical Context for Introibo prototypes =====
 // Provides getLiturgicalContext(date) and a few helpers used across pages.
 // All prototypes that care about feria / season / colour / mystery / Marian
 // antiphon / Lenten state should <script src="lit-context.js"></script> this.

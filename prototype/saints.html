@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="styles.css">
-<title>Ad Altare Dei — Praxes Sanctorum</title>
+<title>Introibo — Praxes Sanctorum</title>
 <style>
 
 
@@ -718,7 +718,7 @@ var SAINTS={
 };
 
 // ===== State: follow + streak =====
-// localStorage keys namespaced under 'aad.' (Ad Altare Dei)
+// localStorage keys namespaced under 'aad.' (Introibo — legacy namespace kept for continuity)
 function getFollowed(){try{return localStorage.getItem('aad.saints.followed')||null}catch(e){return null}}
 function setFollowed(slug){try{localStorage.setItem('aad.saints.followed',slug);if(slug){bumpStreak(slug)}}catch(e){}}
 function getStreak(slug){try{var d=localStorage.getItem('aad.saints.streak.'+slug);return d?parseInt(d,10):0}catch(e){return 0}}

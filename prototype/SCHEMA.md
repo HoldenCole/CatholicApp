@@ -1,4 +1,4 @@
-# Ad Altare Dei — Prototype Data Schema
+# Introibo — Prototype Data Schema
 
 > Documents every data object, localStorage key, and shared library
 > used across the 10 HTML prototypes. Consult before adding new data.
