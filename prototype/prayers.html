@@ -420,6 +420,7 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 .cta .cross{color:#B8960C}
 .cta-wrap{text-align:center;clear:both}
 </style>
+<script src="lit-context.js"></script>
 <script src="ui-helpers.js"></script>
 </head>
 <body>
@@ -436,14 +437,14 @@ main{position:relative;z-index:2;padding:0 28px 40px}
 
 <main>
 
-<!-- Featured prayer of the day -->
-<div class="featured" onclick="show('ave')">
-  <div class="featured-label">Oratio Hodierna &nbsp;·&nbsp; Today's Prayer</div>
-  <div class="featured-cap">A</div>
-  <div class="featured-name">Ave María</div>
-  <div class="featured-eng">The Hail Mary</div>
-  <div class="featured-line">Ave María, grátia plena, Dóminus tecum…</div>
-  <a class="featured-link" onclick="show('ave');event.stopPropagation()">Aperi <span class="cross">✠</span> Open</a>
+<!-- Featured prayer of the day — populated by pickDailyPrayer() below -->
+<div class="featured" id="featured" onclick="openFeatured()">
+  <div class="featured-label" id="featured-label">Oratio Hodierna &nbsp;·&nbsp; Today's Prayer</div>
+  <div class="featured-cap" id="featured-cap">A</div>
+  <div class="featured-name" id="featured-name">Ave María</div>
+  <div class="featured-eng" id="featured-eng">The Hail Mary</div>
+  <div class="featured-line" id="featured-line">Ave María, grátia plena, Dóminus tecum…</div>
+  <a class="featured-link" onclick="openFeatured();event.stopPropagation()">Aperi <span class="cross">✠</span> Open</a>
 </div>
 
 <!-- Rosarium -->
@@ -740,6 +741,56 @@ function show(slug){
   window.scrollTo(0,0);
 }
 function hide(){document.querySelectorAll('.overlay').forEach(function(o){o.classList.remove('show')})}
+
+// ===== Daily prayer rotation =====
+// Anchored to the traditional devotional week, with season overrides.
+// Sunday: Credo (Creed) — the day of faith professed
+// Monday: Pater Noster — the Lord's Prayer to begin the week
+// Tuesday: St. Michael — the Leonine prayer against evil
+// Wednesday: Anima Christi — Ignatian prayer at the mid-week
+// Thursday: Adoro Te Devote — Eucharistic, echoing Maundy Thursday
+// Friday: Crucifix (En Ego) — the day of the Cross
+// Saturday: Salve Regina — traditional Marian Saturday
+var WEEKDAY_PRAYER = ['credoApost','pater','michael','anima','adoroTe','crucifix','salve'];
+// Seasonal overrides take precedence over the weekday mapping.
+var SEASON_PRAYER = {
+  advent:   'memorare',       // Marian anticipation
+  lent:     'confiteor',      // Penitential
+  passion:  'actusContr',     // Act of Contrition as Holy Week nears
+  easter:   'gloriaExcelsis'  // The Gloria, suppressed in Lent, returns
+};
+
+function pickDailyPrayer(){
+  try {
+    var now = new Date();
+    var slug = WEEKDAY_PRAYER[now.getDay()];
+    if (typeof LitContext !== 'undefined') {
+      var ctx = LitContext.get(now);
+      if (ctx && SEASON_PRAYER[ctx.season] && PRAYERS[SEASON_PRAYER[ctx.season]]) {
+        slug = SEASON_PRAYER[ctx.season];
+      }
+    }
+    if (!PRAYERS[slug]) slug = 'ave';
+    var p = PRAYERS[slug];
+    // Strip leading HTML tags from first line for the preview
+    var preview = (p.lines[0].lat || '').replace(/<[^>]*>/g,'');
+    // Truncate preview at ~46 chars for layout
+    if (preview.length > 48) preview = preview.slice(0,46).replace(/\s\S*$/,'') + '…';
+    else preview = preview + '…';
+    var firstChar = (p.title || 'A').replace(/<[^>]*>/g,'').charAt(0);
+
+    document.getElementById('featured').setAttribute('data-slug', slug);
+    document.getElementById('featured-cap').textContent = firstChar;
+    document.getElementById('featured-name').innerHTML = p.title;
+    document.getElementById('featured-eng').textContent = p.eng;
+    document.getElementById('featured-line').textContent = preview;
+  } catch (e) { /* fall back to static markup */ }
+}
+function openFeatured(){
+  var slug = document.getElementById('featured').getAttribute('data-slug') || 'ave';
+  show(slug);
+}
+pickDailyPrayer();
 
 // Deep link: /prayers.html#slug opens that prayer directly
 (function(){

@@ -236,10 +236,12 @@ body::before{display:none}
 .st-prayer .stabat-eng{font-size:11px;margin-top:4px;color:#7A6A58}
 
 /* Nav */
-.nav-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:24px 28px 36px;background:linear-gradient(180deg,rgba(26,19,12,0) 0%,#1A130C 35%);display:flex;gap:18px;align-items:center;z-index:20}
-.nav-back{width:46px;height:46px;border:0.5px solid rgba(184,150,12,0.45);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px;color:#B8960C;flex-shrink:0;cursor:pointer}
-.nav-next{flex:1;text-align:center;padding:14px 0;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border:0.5px solid rgba(184,150,12,0.45);background:rgba(184,150,12,0.05)}
-.nav-next .cross{margin:0 8px;color:#B8960C}
+.nav-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:24px 28px 36px;background:linear-gradient(180deg,rgba(26,19,12,0) 0%,#1A130C 30%,#1A130C 100%);display:flex;gap:18px;align-items:center;z-index:20}
+.nav-back{width:52px;height:52px;border:1px solid rgba(184,150,12,0.55);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:#B8960C;flex-shrink:0;cursor:pointer;background:rgba(184,150,12,0.04)}
+.nav-back:hover,.nav-back:active{background:rgba(184,150,12,0.12);border-color:#B8960C}
+.nav-next{flex:1;text-align:center;padding:17px 0;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:700;font-style:italic;color:#E8DFC9;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border:1px solid #B8960C;background:rgba(184,150,12,0.12);box-shadow:0 0 18px rgba(184,150,12,0.15)}
+.nav-next:hover,.nav-next:active{background:rgba(184,150,12,0.22);box-shadow:0 0 24px rgba(184,150,12,0.28)}
+.nav-next .cross{margin:0 10px;color:#B8960C}
 
 /* ===== Complete screen ===== */
 #complete .ct{position:relative;z-index:2;padding:60px 36px;text-align:center}
