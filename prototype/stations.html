@@ -164,6 +164,23 @@ body::before{display:none}
 @keyframes glow{0%,100%{box-shadow:0 0 12px rgba(184,150,12,0.6)}50%{box-shadow:0 0 20px rgba(184,150,12,0.9)}}
 .way-label{text-align:center;font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:600;font-style:italic;color:#9A8670;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
 
+/* Tiepolo engraving — illuminated frontispiece for each station.
+   Source: Giandomenico Tiepolo, Via Crucis (1749), Smithsonian Open Access. */
+.st-art{
+  display:block;
+  width:calc(100% - 4px);
+  max-width:340px;
+  margin:0 auto 14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  padding:2px;
+  background:rgba(242,232,208,0.04);
+  box-shadow:0 0 24px rgba(0,0,0,0.4),inset 0 0 0 1px rgba(184,150,12,0.12);
+}
+.st-art-frame{position:relative;text-align:center}
+.st-art-frame::before,.st-art-frame::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:60%;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.4),transparent)}
+.st-art-frame::before{top:-10px}
+.st-art-frame::after{bottom:-2px}
+
 /* Large illuminated Roman numeral — the visual anchor */
 .st-big-num{
   text-align:center;
@@ -315,6 +332,10 @@ body::before{display:none}
     <div class="way" id="way"></div>
     <div class="way-label" id="way-label">Statio I &nbsp;·&nbsp; XIV</div>
 
+    <div class="st-art-frame">
+      <img class="st-art" id="st-art" alt="" />
+    </div>
+
     <div class="st-big-num" id="st-bignum"><span id="st-roman">I</span></div>
     <div class="st-label" id="st-label">Statio Prima</div>
     <div class="st-title" id="st-title">Jesus Is Condemned to Death</div>
@@ -420,6 +441,12 @@ function render(){
   buildWay();
   document.getElementById('way-label').textContent='Statio '+roman[idx]+' \u00b7 XIV';
   document.getElementById('st-roman').textContent=roman[idx];
+  // Tiepolo engraving for this station (i.jpg through xiv.jpg)
+  var art=document.getElementById('st-art');
+  if(art){
+    art.src='stations-art/'+roman[idx].toLowerCase()+'.jpg';
+    art.alt=s.title+' — Giandomenico Tiepolo, 1749';
+  }
   document.getElementById('st-label').textContent='Statio '+labels[idx];
   document.getElementById('st-title').textContent=s.title;
   document.getElementById('st-latin').textContent=s.latin;
