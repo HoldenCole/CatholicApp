@@ -12,7 +12,7 @@ struct ContentView: View {
             PrayersView()
                 .tabItem { Label("Orátio", systemImage: "book.pages") }
 
-            PlaceholderScreen(title: "Schola", subtitle: "Learn")
+            LearnView()
                 .tabItem { Label("Schola", systemImage: "graduationcap") }
 
             ReferenceView()

@@ -10,14 +10,16 @@ import SwiftUI
 final class ContentStore {
     static let shared = ContentStore()
 
-    private(set) var prayers: [Prayer] = []
+    private(set) var prayers:   [Prayer]         = []
     private(set) var reference: [ReferenceEntry] = []
-    private(set) var saints: [Saint] = []
+    private(set) var saints:    [Saint]          = []
+    private(set) var courses:   [Course]         = []
 
     init() {
-        prayers  = load("prayers",   as: [Prayer].self)         ?? []
+        prayers   = load("prayers",   as: [Prayer].self)         ?? []
         reference = load("reference", as: [ReferenceEntry].self) ?? []
-        saints   = load("saints",    as: [Saint].self)          ?? []
+        saints    = load("saints",    as: [Saint].self)          ?? []
+        courses   = load("courses",   as: [Course].self)         ?? []
     }
 
     // MARK: - Generic bundle loader
