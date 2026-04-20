@@ -17,7 +17,6 @@ jobs:
 
       - name: Select Xcode
         run: |
-          # List available and select latest
           ls /Applications/ | grep Xcode || true
           XCODE_PATH=$(ls -d /Applications/Xcode_15*.app /Applications/Xcode_16*.app 2>/dev/null | sort -V | tail -1)
           if [ -n "$XCODE_PATH" ]; then
@@ -33,19 +32,12 @@ jobs:
       - name: Generate Xcode Project
         run: xcodegen generate
 
-      - name: Resolve Swift Packages
-        run: |
-          xcodebuild -resolvePackageDependencies \
-            -project AdAltareDei.xcodeproj \
-            -scheme AdAltareDei
-
       - name: Build for iOS Simulator
         run: |
-          # Try iPhone 15 first (more widely available), fall back to any iPhone
           DEST='platform=iOS Simulator,name=iPhone 15,OS=latest'
           xcodebuild build \
-            -project AdAltareDei.xcodeproj \
-            -scheme AdAltareDei \
+            -project Introibo.xcodeproj \
+            -scheme Introibo \
             -destination "$DEST" \
             -configuration Debug \
             CODE_SIGN_IDENTITY="" \
@@ -54,4 +46,4 @@ jobs:
 
       - name: Build Summary
         if: always()
-        run: echo "Build completed for Ad Altare Dei"
+        run: echo "Build completed for Introibo"
