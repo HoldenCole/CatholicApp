@@ -9,7 +9,7 @@ struct ContentView: View {
             PlaceholderScreen(title: "Missa", subtitle: "Missal")
                 .tabItem { Label("Missa", systemImage: "book.closed") }
 
-            PlaceholderScreen(title: "Orátio", subtitle: "Prayers")
+            PrayersView()
                 .tabItem { Label("Orátio", systemImage: "book.pages") }
 
             PlaceholderScreen(title: "Schola", subtitle: "Learn")
