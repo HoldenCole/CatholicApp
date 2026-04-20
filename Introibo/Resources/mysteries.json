@@ -1,0 +1,143 @@
+[
+  {
+    "slug": "joyful",
+    "name": "Mystéria Gaudiósa",
+    "english": "Joyful Mysteries",
+    "mysteries": [
+      {
+        "num": "Mystérium Primum",
+        "title": "Annuntiátio",
+        "eng": "The Annunciation",
+        "ref": "Lk 1:26–38",
+        "body": "The Archangel Gabriel announces to the Virgin Mary that she will conceive and bear the Son of God. She answers: 'Behold the handmaid of the Lord.'",
+        "fruit": "Humility"
+      },
+      {
+        "num": "Mystérium Secúndum",
+        "title": "Visitátio",
+        "eng": "The Visitation",
+        "ref": "Lk 1:39–56",
+        "body": "Mary visits her cousin Elizabeth, who greets her: 'Blessed art thou among women.' Mary responds with the Magnificat.",
+        "fruit": "Charity"
+      },
+      {
+        "num": "Mystérium Tértium",
+        "title": "Natívitas",
+        "eng": "The Nativity",
+        "ref": "Lk 2:1–20",
+        "body": "Jesus is born in a stable in Bethlehem. Shepherds come to adore Him; angels sing 'Gloria in excelsis Deo.'",
+        "fruit": "Poverty of spirit"
+      },
+      {
+        "num": "Mystérium Quartum",
+        "title": "Præsentátio",
+        "eng": "The Presentation",
+        "ref": "Lk 2:22–38",
+        "body": "Mary and Joseph present the infant Jesus in the Temple. Simeon recognizes Him as the Messiah and prophesies the sword that will pierce Mary's heart.",
+        "fruit": "Obedience"
+      },
+      {
+        "num": "Mystérium Quintum",
+        "title": "Invéntio in Templo",
+        "eng": "The Finding in the Temple",
+        "ref": "Lk 2:41–52",
+        "body": "After three days of anxious searching, Mary and Joseph find the twelve-year-old Jesus in the Temple, teaching the doctors.",
+        "fruit": "Piety"
+      }
+    ]
+  },
+  {
+    "slug": "sorrowful",
+    "name": "Mystéria Dolorósa",
+    "english": "Sorrowful Mysteries",
+    "mysteries": [
+      {
+        "num": "Mystérium Primum",
+        "title": "Agonía in Horto",
+        "eng": "The Agony in the Garden",
+        "ref": "Lk 22:39–46",
+        "body": "Jesus falls prostrate in prayer in the Garden of Gethsemane, knowing the full weight of the suffering that awaits Him. His sweat becomes as drops of blood falling to the ground.",
+        "fruit": "Sorrow for sin"
+      },
+      {
+        "num": "Mystérium Secúndum",
+        "title": "Flagellátio",
+        "eng": "The Scourging at the Pillar",
+        "ref": "Jn 19:1",
+        "body": "Jesus is bound to a pillar and scourged by the Roman soldiers. His innocent flesh is torn for our sins of the flesh.",
+        "fruit": "Purity"
+      },
+      {
+        "num": "Mystérium Tértium",
+        "title": "Coronátio Spinis",
+        "eng": "The Crowning with Thorns",
+        "ref": "Mt 27:28–30",
+        "body": "A crown of thorns is pressed upon the head of Jesus, and the soldiers mock Him as King of the Jews. He bears humiliation in silence.",
+        "fruit": "Moral courage"
+      },
+      {
+        "num": "Mystérium Quartum",
+        "title": "Bajulátio Crucis",
+        "eng": "The Carrying of the Cross",
+        "ref": "Jn 19:17",
+        "body": "Jesus carries His Cross along the road to Calvary, falling beneath its weight, meeting His Blessed Mother along the way.",
+        "fruit": "Patience in suffering"
+      },
+      {
+        "num": "Mystérium Quintum",
+        "title": "Crucifíxio",
+        "eng": "The Crucifixion",
+        "ref": "Lk 23:33–46",
+        "body": "Jesus is nailed to the Cross and dies after three hours of agony. His last words: 'Father, into Thy hands I commend My spirit.'",
+        "fruit": "Perseverance"
+      }
+    ]
+  },
+  {
+    "slug": "glorious",
+    "name": "Mystéria Gloriósa",
+    "english": "Glorious Mysteries",
+    "mysteries": [
+      {
+        "num": "Mystérium Primum",
+        "title": "Resurréctio",
+        "eng": "The Resurrection",
+        "ref": "Mk 16:1–7",
+        "body": "On the third day, Jesus rises from the dead, victorious over sin and death. The women at the tomb are greeted by an angel: 'He is not here, He is risen.'",
+        "fruit": "Faith"
+      },
+      {
+        "num": "Mystérium Secúndum",
+        "title": "Ascénsio",
+        "eng": "The Ascension",
+        "ref": "Acts 1:9–11",
+        "body": "Forty days after His Resurrection, Jesus ascends into Heaven in the sight of His Apostles, promising to send the Holy Spirit.",
+        "fruit": "Hope"
+      },
+      {
+        "num": "Mystérium Tértium",
+        "title": "Descénsus Spíritus Sancti",
+        "eng": "The Descent of the Holy Spirit",
+        "ref": "Acts 2:1–4",
+        "body": "On Pentecost, the Holy Spirit descends upon the Apostles in the form of tongues of fire. The Church is born.",
+        "fruit": "Love of God"
+      },
+      {
+        "num": "Mystérium Quartum",
+        "title": "Assúmptio",
+        "eng": "The Assumption",
+        "ref": "Rev 12:1",
+        "body": "The Blessed Virgin Mary, at the end of her earthly life, is assumed body and soul into Heaven.",
+        "fruit": "Grace of a happy death"
+      },
+      {
+        "num": "Mystérium Quintum",
+        "title": "Coronátio",
+        "eng": "The Coronation",
+        "ref": "Rev 12:1",
+        "body": "Mary is crowned Queen of Heaven and earth by her Divine Son, reigning in glory as intercessor for all mankind.",
+        "fruit": "Trust in Mary"
+      }
+    ]
+  }
+]

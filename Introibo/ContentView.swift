@@ -15,7 +15,7 @@ struct ContentView: View {
             PlaceholderScreen(title: "Schola", subtitle: "Learn")
                 .tabItem { Label("Schola", systemImage: "graduationcap") }
 
-            PlaceholderScreen(title: "Liber", subtitle: "Reference")
+            ReferenceView()
                 .tabItem { Label("Liber", systemImage: "text.book.closed") }
         }
         .tint(.sanctuaryRed)

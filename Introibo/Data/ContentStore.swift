@@ -11,23 +11,28 @@ final class ContentStore {
     static let shared = ContentStore()
 
     private(set) var prayers: [Prayer] = []
+    private(set) var reference: [ReferenceEntry] = []
+    private(set) var saints: [Saint] = []
 
     init() {
-        loadPrayers()
+        prayers  = load("prayers",   as: [Prayer].self)         ?? []
+        reference = load("reference", as: [ReferenceEntry].self) ?? []
+        saints   = load("saints",    as: [Saint].self)          ?? []
     }
 
-    // MARK: - Loaders
+    // MARK: - Generic bundle loader
 
-    private func loadPrayers() {
-        guard let url = Bundle.main.url(forResource: "prayers", withExtension: "json") else {
-            assertionFailure("prayers.json missing from bundle")
-            return
+    private func load<T: Decodable>(_ name: String, as type: T.Type) -> T? {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "json") else {
+            assertionFailure("\(name).json missing from bundle")
+            return nil
         }
         do {
             let data = try Data(contentsOf: url)
-            self.prayers = try JSONDecoder().decode([Prayer].self, from: data)
+            return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            assertionFailure("Failed to decode prayers.json: \(error)")
+            assertionFailure("Failed to decode \(name).json: \(error)")
+            return nil
         }
     }
 

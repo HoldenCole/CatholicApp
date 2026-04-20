@@ -1,0 +1,128 @@
+[
+  {
+    "station": "I",
+    "title": "Jesus Is Condemned to Death",
+    "latin": "Iesus ad mortem condemnatur",
+    "med": "Consider how Jesus, after having been scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.",
+    "mood": "",
+    "stabat_lat": "Stabat Mater dolorósa,<br>iuxta Crucem lacrimósa,<br>dum pendébat Fílius.",
+    "stabat_eng": "At the Cross her station keeping,<br>stood the mournful Mother weeping,<br>close to Jesus to the last."
+  },
+  {
+    "station": "II",
+    "title": "Jesus Carries His Cross",
+    "latin": "Iesus crucem suam baiulat",
+    "med": "Consider how Jesus, bearing His Cross, went forth to the place of sacrifice, like a meek lamb led to the slaughter.",
+    "mood": "",
+    "stabat_lat": "Cuius ánimam geméntem,<br>contristátam et doléntem,<br>pertransívit gládius.",
+    "stabat_eng": "Through her heart, His sorrow sharing,<br>all His bitter anguish bearing,<br>now at length the sword had pass'd."
+  },
+  {
+    "station": "III",
+    "title": "Jesus Falls the First Time",
+    "latin": "Iesus prima vice cadit",
+    "med": "Consider the first fall of Jesus under the weight of the Cross. The weight of our sins pressed Him to the ground.",
+    "mood": "",
+    "stabat_lat": "O quam tristis et afflícta<br>fuit illa benedícta<br>Mater Unigéniti!",
+    "stabat_eng": "Oh, how sad and sore distress'd<br>was that Mother highly blest<br>of the sole-begotten One!"
+  },
+  {
+    "station": "IV",
+    "title": "Jesus Meets His Blessed Mother",
+    "latin": "Iesus Matrem suam occurrit",
+    "med": "Consider the meeting of the Son with His Mother. Their eyes met, and their hearts were pierced with sorrow — hers for His suffering, His for her grief.",
+    "mood": "mood-mother",
+    "stabat_lat": "Quæ mœrébat et dolébat,<br>pia Mater, dum vidébat<br>nati pœnas ínclyti.",
+    "stabat_eng": "Christ above in torment hangs;<br>she beneath beholds the pangs<br>of her dying glorious Son."
+  },
+  {
+    "station": "V",
+    "title": "Simon Helps Carry the Cross",
+    "latin": "Simon Cyrenæus crucem portat",
+    "med": "Consider how the soldiers, fearing Jesus would die before reaching Calvary, forced Simon of Cyrene to carry the Cross behind Him.",
+    "mood": "",
+    "stabat_lat": "Quis est homo qui non fleret,<br>Matrem Christi si vidéret<br>in tanto supplício?",
+    "stabat_eng": "Is there one who would not weep,<br>whelm'd in miseries so deep,<br>Christ's dear Mother to behold?"
+  },
+  {
+    "station": "VI",
+    "title": "Veronica Wipes the Face of Jesus",
+    "latin": "Veronica faciem Iesu abstergit",
+    "med": "Consider how the holy woman Veronica, seeing Jesus in such distress, wiped His face with her veil, upon which was left the imprint of His Sacred Face.",
+    "mood": "",
+    "stabat_lat": "Quis non posset contristári<br>Christi Matrem contemplári<br>doléntem cum Fílio?",
+    "stabat_eng": "Can the human heart refrain<br>from partaking in her pain,<br>in that Mother's pain untold?"
+  },
+  {
+    "station": "VII",
+    "title": "Jesus Falls a Second Time",
+    "latin": "Iesus secunda vice cadit",
+    "med": "Consider the second fall of Jesus beneath the Cross — a fall caused by our repeated sins, our return to evil after repentance.",
+    "mood": "",
+    "stabat_lat": "Pro peccátis suæ gentis<br>vidit Iesum in torméntis,<br>et flagéllis súbditum.",
+    "stabat_eng": "Bruised, derided, curs'd, defiled,<br>she beheld her tender Child,<br>all with bloody scourges rent."
+  },
+  {
+    "station": "VIII",
+    "title": "Jesus Meets the Women of Jerusalem",
+    "latin": "Iesus mulieres Ierusalem alloquitur",
+    "med": "Consider how the pious women wept at the sight of Jesus. He turned to them and said: 'Weep not for Me, but for yourselves and for your children.'",
+    "mood": "",
+    "stabat_lat": "Vidit suum dulcem natum<br>moriéntem, desolátum,<br>dum emísit spíritum.",
+    "stabat_eng": "For the sins of His own nation,<br>she saw Jesus wracked with torments,<br>all with scourges rent."
+  },
+  {
+    "station": "IX",
+    "title": "Jesus Falls a Third Time",
+    "latin": "Iesus tertia vice cadit",
+    "med": "Consider the third fall. Jesus, utterly exhausted, falls again beneath the Cross — teaching us never to despair, but to rise again after every fall.",
+    "mood": "",
+    "stabat_lat": "Eia, Mater, fons amóris,<br>me sentíre vim dolóris<br>fac, ut tecum lúgeam.",
+    "stabat_eng": "O thou Mother, fount of love,<br>touch my spirit from above,<br>make my heart with thine accord."
+  },
+  {
+    "station": "X",
+    "title": "Jesus Is Stripped of His Garments",
+    "latin": "Iesus vestimentis exuitur",
+    "med": "Consider the violence with which the soldiers stripped Jesus. His inner garments adhered to His torn flesh, renewing every wound.",
+    "mood": "",
+    "stabat_lat": "Fac ut árdeat cor meum<br>in amándo Christum Deum,<br>ut sibi compláceam.",
+    "stabat_eng": "Make me feel as thou hast felt;<br>make my soul to glow and melt<br>with the love of Christ my Lord."
+  },
+  {
+    "station": "XI",
+    "title": "Jesus Is Nailed to the Cross",
+    "latin": "Iesus cruci affigitur",
+    "med": "Consider how Jesus was thrown upon the Cross and nailed through His hands and feet. He offered not a cry of pain, but a prayer for His executioners.",
+    "mood": "mood-death",
+    "stabat_lat": "Sancta Mater, istud agas,<br>Crucifíxi fige plagas<br>cordi meo válide.",
+    "stabat_eng": "Holy Mother, pierce me through;<br>in my heart each wound renew<br>of my Saviour crucified."
+  },
+  {
+    "station": "XII",
+    "title": "Jesus Dies on the Cross",
+    "latin": "Iesus in cruce moritur",
+    "med": "Consider how Jesus, after three hours of agony on the Cross, cried out: 'It is finished,' and bowing His head, gave up His spirit.",
+    "mood": "mood-death",
+    "stabat_lat": "Tui Nati vulneráti,<br>tam dignáti pro me pati,<br>pœnas mecum dívide.",
+    "stabat_eng": "Let me share with thee His pain,<br>who for all my sins was slain,<br>who for me in torments died."
+  },
+  {
+    "station": "XIII",
+    "title": "Jesus Is Taken Down from the Cross",
+    "latin": "Iesus de cruce deponitur",
+    "med": "Consider how the sacred body was taken down from the Cross and placed in the arms of His afflicted Mother, who received Him with inexpressible tenderness.",
+    "mood": "mood-mother",
+    "stabat_lat": "Fac me vere tecum flere,<br>Crucifíxo condolére,<br>donec ego víxero.",
+    "stabat_eng": "Let me mingle tears with thee,<br>mourning Him who mourn'd for me,<br>all the days that I may live."
+  },
+  {
+    "station": "XIV",
+    "title": "Jesus Is Laid in the Tomb",
+    "latin": "Iesus in sepulcro ponitur",
+    "med": "Consider how the disciples carried the body of Jesus to the sepulchre, and the stone was rolled before its entrance. There, in silence, we await the Resurrection.",
+    "mood": "mood-tomb",
+    "stabat_lat": "Quando corpus moriétur,<br>fac ut ánimæ donétur<br>paradísi glória. Amen.",
+    "stabat_eng": "While my body here decays,<br>may my soul Thy goodness praise,<br>safe in paradise with Thee. Amen."
+  }
+]
