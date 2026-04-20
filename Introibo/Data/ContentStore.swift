@@ -20,18 +20,22 @@ final class ContentStore {
     private(set) var stations:       [Station]             = []
     private(set) var hours:          [Hour]                = []
     private(set) var marianAntiphons:[MarianAntiphonData]  = []
+    private(set) var examen:         [ExamenEntry]         = []
+    private(set) var confessionGuides:[ConfessionGuide]    = []
 
     init() {
-        prayers         = load("prayers",          as: [Prayer].self)              ?? []
-        reference       = load("reference",        as: [ReferenceEntry].self)      ?? []
-        saints          = load("saints",           as: [Saint].self)               ?? []
-        courses         = load("courses",          as: [Course].self)              ?? []
-        missal          = load("missal",           as: [MissalSection].self)       ?? []
-        mysterySets     = load("mysteries",        as: [MysterySetData].self)      ?? []
-        rosaryPrayers   = load("rosary_prayers",   as: [RosaryPrayer].self)        ?? []
-        stations        = load("stations",         as: [Station].self)             ?? []
-        hours           = load("hours",            as: [Hour].self)                ?? []
-        marianAntiphons = load("marian_antiphons", as: [MarianAntiphonData].self)  ?? []
+        prayers           = load("prayers",            as: [Prayer].self)              ?? []
+        reference         = load("reference",          as: [ReferenceEntry].self)      ?? []
+        saints            = load("saints",             as: [Saint].self)               ?? []
+        courses           = load("courses",            as: [Course].self)              ?? []
+        missal            = load("missal",             as: [MissalSection].self)       ?? []
+        mysterySets       = load("mysteries",          as: [MysterySetData].self)      ?? []
+        rosaryPrayers     = load("rosary_prayers",     as: [RosaryPrayer].self)        ?? []
+        stations          = load("stations",           as: [Station].self)             ?? []
+        hours             = load("hours",              as: [Hour].self)                ?? []
+        marianAntiphons   = load("marian_antiphons",   as: [MarianAntiphonData].self)  ?? []
+        examen            = load("confession_examen", as: [ExamenEntry].self)          ?? []
+        confessionGuides  = load("confession_guides", as: [ConfessionGuide].self)      ?? []
     }
 
     func hour(slug: String) -> Hour? {
