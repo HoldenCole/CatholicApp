@@ -139,14 +139,18 @@ struct TodayView: View {
         VStack(alignment: .leading, spacing: 14) {
             sectionLabel("Devotiónes Hodiérnæ", subtitle: "Today's devotions")
 
+            NavigationLink(destination: OfficeView()) {
+                devotionRow("The Divine Office",
+                            latin: "Officium Divínum — Laudes & Vespers")
+            }
+            .buttonStyle(.plain)
+
             NavigationLink(destination: StationsView()) {
                 devotionRow("Stations of the Cross",
                             latin: "Via Crucis — XIV statiónes")
             }
             .buttonStyle(.plain)
 
-            devotionRow("The Divine Office",
-                        latin: "Officium Divínum — Laudes & Vespers")
             devotionRow("Examination of Conscience",
                         latin: "Exámen Consciéntiæ")
             devotionRow("Morning Offering",

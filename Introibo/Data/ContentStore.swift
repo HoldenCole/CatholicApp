@@ -17,17 +17,25 @@ final class ContentStore {
     private(set) var missal:         [MissalSection]   = []
     private(set) var mysterySets:    [MysterySetData]  = []
     private(set) var rosaryPrayers:  [RosaryPrayer]    = []
-    private(set) var stations:       [Station]         = []
+    private(set) var stations:       [Station]             = []
+    private(set) var hours:          [Hour]                = []
+    private(set) var marianAntiphons:[MarianAntiphonData]  = []
 
     init() {
-        prayers       = load("prayers",         as: [Prayer].self)         ?? []
-        reference     = load("reference",       as: [ReferenceEntry].self) ?? []
-        saints        = load("saints",          as: [Saint].self)          ?? []
-        courses       = load("courses",         as: [Course].self)         ?? []
-        missal        = load("missal",          as: [MissalSection].self)  ?? []
-        mysterySets   = load("mysteries",       as: [MysterySetData].self) ?? []
-        rosaryPrayers = load("rosary_prayers",  as: [RosaryPrayer].self)   ?? []
-        stations      = load("stations",        as: [Station].self)        ?? []
+        prayers         = load("prayers",          as: [Prayer].self)              ?? []
+        reference       = load("reference",        as: [ReferenceEntry].self)      ?? []
+        saints          = load("saints",           as: [Saint].self)               ?? []
+        courses         = load("courses",          as: [Course].self)              ?? []
+        missal          = load("missal",           as: [MissalSection].self)       ?? []
+        mysterySets     = load("mysteries",        as: [MysterySetData].self)      ?? []
+        rosaryPrayers   = load("rosary_prayers",   as: [RosaryPrayer].self)        ?? []
+        stations        = load("stations",         as: [Station].self)             ?? []
+        hours           = load("hours",            as: [Hour].self)                ?? []
+        marianAntiphons = load("marian_antiphons", as: [MarianAntiphonData].self)  ?? []
+    }
+
+    func hour(slug: String) -> Hour? {
+        hours.first { $0.slug == slug }
     }
 
     func mysterySet(slug: String) -> MysterySetData? {
