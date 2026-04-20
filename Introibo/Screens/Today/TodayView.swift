@@ -165,28 +165,32 @@ struct TodayView: View {
     // MARK: - Rosary
 
     private var rosaryCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            sectionLabel("Sacratíssimum Rosárium", subtitle: "of the Rosary")
+        NavigationLink(destination: RosaryView()) {
+            VStack(alignment: .leading, spacing: 8) {
+                sectionLabel("Sacratíssimum Rosárium", subtitle: "of the Rosary")
 
-            Text(ctx.mystery.latinName)
-                .font(.titleM)
-                .italic()
-                .foregroundStyle(.primaryText)
-            Text(ctx.mystery.englishName)
-                .font(.captionSm)
-                .italic()
-                .foregroundStyle(.secondaryText)
-
-            if let lastDate = UserProgress.rosaryLastDate() {
-                let fmt = DateFormatter()
-                let _ = fmt.dateStyle = .medium
-                Text("Last prayed: \(fmt.string(from: lastDate))")
+                Text(ctx.mystery.latinName)
+                    .font(.titleM)
+                    .italic()
+                    .foregroundStyle(.primaryText)
+                Text(ctx.mystery.englishName)
                     .font(.captionSm)
-                    .foregroundStyle(.tertiaryText)
-                    .padding(.top, 4)
+                    .italic()
+                    .foregroundStyle(.secondaryText)
+
+                if let lastDate = UserProgress.rosaryLastDate() {
+                    let fmt = DateFormatter()
+                    let _ = fmt.dateStyle = .medium
+                    Text("Last prayed: \(fmt.string(from: lastDate))")
+                        .font(.captionSm)
+                        .foregroundStyle(.tertiaryText)
+                        .padding(.top, 4)
+                }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .buttonStyle(.plain)
     }
 
     // MARK: - Saint

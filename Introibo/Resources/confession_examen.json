@@ -1,0 +1,103 @@
+[
+  {
+    "num": "I",
+    "commandment": "I am the Lord thy God",
+    "latin": "Non habébis deos aliénos coram me",
+    "questions": [
+      "Have I doubted or denied the truths of the faith?",
+      "Have I put my trust in superstition, fortune-telling, or the occult?",
+      "Have I received Holy Communion in a state of mortal sin?",
+      "Have I neglected my daily prayers?"
+    ]
+  },
+  {
+    "num": "II",
+    "commandment": "Thou shalt not take the name of the Lord in vain",
+    "latin": "Non assúmes nomen Dómini Dei tui in vanum",
+    "questions": [
+      "Have I used God's name irreverently or in anger?",
+      "Have I cursed or used profane language?",
+      "Have I broken a vow or oath made to God?"
+    ]
+  },
+  {
+    "num": "III",
+    "commandment": "Remember to keep holy the Lord's Day",
+    "latin": "Meménto ut diem sábbati sanctifíces",
+    "questions": [
+      "Have I missed Mass on Sundays or Holy Days without just cause?",
+      "Have I done unnecessary servile work on Sundays?",
+      "Have I been inattentive or irreverent at Mass?"
+    ]
+  },
+  {
+    "num": "IV",
+    "commandment": "Honour thy father and thy mother",
+    "latin": "Honóra patrem tuum et matrem tuam",
+    "questions": [
+      "Have I been disobedient or disrespectful to my parents?",
+      "Have I neglected my duties to my family?",
+      "Have I failed to care for aged or infirm parents?"
+    ]
+  },
+  {
+    "num": "V",
+    "commandment": "Thou shalt not kill",
+    "latin": "Non occídes",
+    "questions": [
+      "Have I borne hatred, anger, or resentment toward anyone?",
+      "Have I refused to forgive?",
+      "Have I harmed another by word or deed?",
+      "Have I given scandal or led others into sin?"
+    ]
+  },
+  {
+    "num": "VI",
+    "commandment": "Thou shalt not commit adultery",
+    "latin": "Non mœcháberis",
+    "questions": [
+      "Have I entertained impure thoughts willingly?",
+      "Have I committed impure acts, alone or with others?",
+      "Have I been unfaithful to my state in life?"
+    ]
+  },
+  {
+    "num": "VII",
+    "commandment": "Thou shalt not steal",
+    "latin": "Non furtum fácies",
+    "questions": [
+      "Have I taken what does not belong to me?",
+      "Have I damaged another's property?",
+      "Have I failed to make restitution for theft?",
+      "Have I been dishonest in business?"
+    ]
+  },
+  {
+    "num": "VIII",
+    "commandment": "Thou shalt not bear false witness",
+    "latin": "Non loquéris contra próximum tuum falsum testimónium",
+    "questions": [
+      "Have I lied or deceived others?",
+      "Have I engaged in gossip, detraction, or calumny?",
+      "Have I rashly judged others?"
+    ]
+  },
+  {
+    "num": "IX",
+    "commandment": "Thou shalt not covet thy neighbour's wife",
+    "latin": "Non concupísces uxórem próximi tui",
+    "questions": [
+      "Have I wilfully entertained impure desires toward another?",
+      "Have I failed to guard my eyes, imagination, or reading?"
+    ]
+  },
+  {
+    "num": "X",
+    "commandment": "Thou shalt not covet thy neighbour's goods",
+    "latin": "Non concupísces rem próximi tui",
+    "questions": [
+      "Have I been envious of what others possess?",
+      "Have I been greedy or excessively attached to material things?"
+    ]
+  }
+]

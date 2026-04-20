@@ -10,18 +10,26 @@ import SwiftUI
 final class ContentStore {
     static let shared = ContentStore()
 
-    private(set) var prayers:   [Prayer]         = []
-    private(set) var reference: [ReferenceEntry] = []
-    private(set) var saints:    [Saint]          = []
-    private(set) var courses:   [Course]         = []
-    private(set) var missal:    [MissalSection]  = []
+    private(set) var prayers:        [Prayer]          = []
+    private(set) var reference:      [ReferenceEntry]  = []
+    private(set) var saints:         [Saint]           = []
+    private(set) var courses:        [Course]          = []
+    private(set) var missal:         [MissalSection]   = []
+    private(set) var mysterySets:    [MysterySetData]  = []
+    private(set) var rosaryPrayers:  [RosaryPrayer]    = []
 
     init() {
-        prayers   = load("prayers",   as: [Prayer].self)         ?? []
-        reference = load("reference", as: [ReferenceEntry].self) ?? []
-        saints    = load("saints",    as: [Saint].self)          ?? []
-        courses   = load("courses",   as: [Course].self)         ?? []
-        missal    = load("missal",    as: [MissalSection].self)  ?? []
+        prayers       = load("prayers",         as: [Prayer].self)         ?? []
+        reference     = load("reference",       as: [ReferenceEntry].self) ?? []
+        saints        = load("saints",          as: [Saint].self)          ?? []
+        courses       = load("courses",         as: [Course].self)         ?? []
+        missal        = load("missal",          as: [MissalSection].self)  ?? []
+        mysterySets   = load("mysteries",       as: [MysterySetData].self) ?? []
+        rosaryPrayers = load("rosary_prayers",  as: [RosaryPrayer].self)   ?? []
+    }
+
+    func mysterySet(slug: String) -> MysterySetData? {
+        mysterySets.first { $0.slug == slug }
     }
 
     // MARK: - Generic bundle loader
