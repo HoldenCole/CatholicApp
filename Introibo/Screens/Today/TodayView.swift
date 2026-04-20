@@ -192,26 +192,32 @@ struct TodayView: View {
     // MARK: - Saint
 
     private var saintCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            sectionLabel("Praxes Sanctórum", subtitle: "Daily practices")
+        NavigationLink(destination: SaintsView()) {
+            VStack(alignment: .leading, spacing: 8) {
+                sectionLabel("Praxes Sanctórum", subtitle: "Daily practices")
 
-            if let slug = UserProgress.followedSaint() {
-                let streak = UserProgress.saintStreak(slug: slug)
-                Text("Following: \(slug.capitalized)")
-                    .font(.body)
-                    .foregroundStyle(.primaryText)
-                if streak > 0 {
-                    Text("Streak: \(streak) day\(streak == 1 ? "" : "s")")
-                        .font(.captionSm)
-                        .foregroundStyle(.goldLeaf)
+                if let slug = UserProgress.followedSaint(),
+                   let saint = ContentStore.shared.saints.first(where: { $0.slug == slug }) {
+                    let streak = UserProgress.saintStreak(slug: slug)
+                    Text(saint.name)
+                        .font(.titleM)
+                        .italic()
+                        .foregroundStyle(.primaryText)
+                    if streak > 0 {
+                        Text("\(streak) day\(streak == 1 ? "" : "s")  ·  Continuing")
+                            .font(.captionSm)
+                            .foregroundStyle(.goldLeaf)
+                    }
+                } else {
+                    Text("Choose a saint to follow")
+                        .font(.bodyIt)
+                        .foregroundStyle(.secondaryText)
                 }
-            } else {
-                Text("Choose a saint to follow")
-                    .font(.bodyIt)
-                    .foregroundStyle(.secondaryText)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .buttonStyle(.plain)
     }
 
     // MARK: - Schola
