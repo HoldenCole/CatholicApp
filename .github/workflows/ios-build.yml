@@ -32,7 +32,7 @@ jobs:
       - name: Generate Xcode Project
         run: xcodegen generate
 
-      - name: Build for iOS Simulator
+      - name: Build for Simulator
         run: |
           DEST='platform=iOS Simulator,name=iPhone 15,OS=latest'
           xcodebuild build \
@@ -44,6 +44,43 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO 2>&1 | tail -100
 
-      - name: Build Summary
-        if: always()
-        run: echo "Build completed for Introibo"
+  # TestFlight upload — only runs on main branch when secrets are set.
+  # Branches get the build check above; main gets the full deploy.
+  deploy:
+    runs-on: macos-14
+    timeout-minutes: 30
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          XCODE_PATH=$(ls -d /Applications/Xcode_15*.app /Applications/Xcode_16*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$XCODE_PATH" ]; then
+            sudo xcode-select -s "$XCODE_PATH/Contents/Developer"
+          fi
+
+      - name: Install tools
+        run: |
+          brew install xcodegen
+          gem install fastlane --no-document
+
+      - name: Generate Xcode Project
+        run: xcodegen generate
+
+      - name: Deploy to TestFlight
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          if [ -z "$ASC_KEY_ID" ]; then
+            echo "⚠️  TestFlight secrets not configured — skipping deploy."
+            echo "Add APPLE_TEAM_ID, ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 to GitHub Secrets."
+            exit 0
+          fi
+          fastlane beta
