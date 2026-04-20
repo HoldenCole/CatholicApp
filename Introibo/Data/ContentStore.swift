@@ -17,6 +17,7 @@ final class ContentStore {
     private(set) var missal:         [MissalSection]   = []
     private(set) var mysterySets:    [MysterySetData]  = []
     private(set) var rosaryPrayers:  [RosaryPrayer]    = []
+    private(set) var stations:       [Station]         = []
 
     init() {
         prayers       = load("prayers",         as: [Prayer].self)         ?? []
@@ -26,6 +27,7 @@ final class ContentStore {
         missal        = load("missal",          as: [MissalSection].self)  ?? []
         mysterySets   = load("mysteries",       as: [MysterySetData].self) ?? []
         rosaryPrayers = load("rosary_prayers",  as: [RosaryPrayer].self)   ?? []
+        stations      = load("stations",        as: [Station].self)        ?? []
     }
 
     func mysterySet(slug: String) -> MysterySetData? {

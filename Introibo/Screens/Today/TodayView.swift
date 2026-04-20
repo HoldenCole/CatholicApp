@@ -139,6 +139,12 @@ struct TodayView: View {
         VStack(alignment: .leading, spacing: 14) {
             sectionLabel("Devotiónes Hodiérnæ", subtitle: "Today's devotions")
 
+            NavigationLink(destination: StationsView()) {
+                devotionRow("Stations of the Cross",
+                            latin: "Via Crucis — XIV statiónes")
+            }
+            .buttonStyle(.plain)
+
             devotionRow("The Divine Office",
                         latin: "Officium Divínum — Laudes & Vespers")
             devotionRow("Examination of Conscience",
@@ -160,6 +166,7 @@ struct TodayView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 4)
+        .contentShape(Rectangle())
     }
 
     // MARK: - Rosary
