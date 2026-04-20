@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "pio",
+    "name": "St. Padre Pio",
+    "title": "Mystic, Stigmatist, Confessor",
+    "quote": "Pray, hope, and don't worry. Worry is useless. God is merciful and will hear your prayer.",
+    "sections": [
+      {
+        "lat": "Mane",
+        "eng": "Morning",
+        "practices": [
+          {
+            "t": "Morning Offering",
+            "d": "Upon waking, immediately offer your day to God. 'Lord, I offer Thee all my prayers, works, joys, and sufferings of this day.'"
+          },
+          {
+            "t": "Attend Holy Mass",
+            "d": "Padre Pio's Mass was the centre of his life, often lasting two hours. Attend Mass daily if possible."
+          },
+          {
+            "t": "Mental Prayer (30 min)",
+            "d": "Spend half an hour in silent meditation upon the Passion of Our Lord."
+          }
+        ]
+      },
+      {
+        "lat": "Per Diem",
+        "eng": "Throughout the Day",
+        "practices": [
+          {
+            "t": "Pray the Full Rosary",
+            "d": "Padre Pio called it 'the weapon.' Pray at least five decades each day."
+          },
+          {
+            "t": "Spiritual Reading",
+            "d": "Read fifteen minutes from the Imitation of Christ, the lives of the saints, or St. John of the Cross."
+          },
+          {
+            "t": "Visit to the Blessed Sacrament",
+            "d": "Sit or kneel before Jesus in the tabernacle, in silence."
+          }
+        ]
+      },
+      {
+        "lat": "Vésperæ",
+        "eng": "Evening",
+        "practices": [
+          {
+            "t": "Examination of Conscience",
+            "d": "Before sleep, examine the day's faults and offer them to God's mercy."
+          }
+        ]
+      },
+      {
+        "lat": "Pænitentiæ",
+        "eng": "Penances",
+        "practices": [
+          {
+            "t": "Offer Daily Sufferings",
+            "d": "Unite every pain and difficulty to the Passion of Christ — 'Co-redemption.'"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "therese",
+    "name": "St. Thérèse of Lisieux",
+    "title": "Doctor of the Church · The Little Flower",
+    "quote": "Miss no single opportunity of making some small sacrifice, here by a smiling look, there by a kindly word; always doing the smallest right, and doing it all for love.",
+    "sections": [
+      {
+        "lat": "Mane",
+        "eng": "Morning",
+        "practices": [
+          {
+            "t": "Morning Offering to Love",
+            "d": "Offer your day as a 'little sacrifice of love' to Jesus. Aspire to please Him in every small thing."
+          },
+          {
+            "t": "Attend Mass",
+            "d": "Receive Holy Communion with total trust and childlike confidence."
+          },
+          {
+            "t": "Pray the Angelus",
+            "d": "Recall the mystery of the Incarnation three times a day — morning, noon, and evening."
+          }
+        ]
+      },
+      {
+        "lat": "Per Diem",
+        "eng": "Throughout the Day",
+        "practices": [
+          {
+            "t": "Do Small Things with Great Love",
+            "d": "Seek out tiny acts of kindness — a smiling look, a kind word, a cheerfully-borne inconvenience."
+          },
+          {
+            "t": "Accept Every Cross",
+            "d": "Receive every small annoyance as a gift from God. Never complain."
+          },
+          {
+            "t": "Silent Interior Sacrifice",
+            "d": "Make hidden sacrifices known only to God. Do not seek recognition."
+          }
+        ]
+      },
+      {
+        "lat": "Vésperæ",
+        "eng": "Evening",
+        "practices": [
+          {
+            "t": "Act of Abandonment",
+            "d": "Before sleep, abandon yourself into the merciful arms of Our Heavenly Father, as a little child."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "aquinas",
+    "name": "St. Thomas Aquinas",
+    "title": "Doctor of the Church · Doctor Angelicus",
+    "quote": "To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.",
+    "sections": [
+      {
+        "lat": "Mane",
+        "eng": "Morning",
+        "practices": [
+          {
+            "t": "Prayer Before Study",
+            "d": "Pray: 'Creator of all things, true source of light and wisdom, deign to shed upon the darkness of my understanding the brightness of Thy light.'"
+          },
+          {
+            "t": "Attend Mass",
+            "d": "Thomas celebrated Mass daily with profound reverence — he wept at the Consecration."
+          },
+          {
+            "t": "Mental Prayer (30 min)",
+            "d": "Silent meditation upon a single truth of faith. Simplicity is higher than complexity."
+          }
+        ]
+      },
+      {
+        "lat": "Per Diem",
+        "eng": "Throughout the Day",
+        "practices": [
+          {
+            "t": "Study Theology (1 hour)",
+            "d": "Read slowly from the Summa, Scripture, or the Church Fathers. Study is a form of prayer."
+          },
+          {
+            "t": "Pray the Rosary",
+            "d": "Thomas loved the Rosary for its simplicity — 'all the theology of the Incarnation in 50 beads.'"
+          },
+          {
+            "t": "Visit to the Blessed Sacrament",
+            "d": "Adore Christ truly present — the centre of all theology."
+          }
+        ]
+      },
+      {
+        "lat": "Vésperæ",
+        "eng": "Evening",
+        "practices": [
+          {
+            "t": "Compline & Silence",
+            "d": "Pray the last hour of the Divine Office and retire in contemplative silence."
+          },
+          {
+            "t": "Examine the Day's Thoughts",
+            "d": "Ask: 'Did I think of God? Did my study lead me to love Him more?'"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "benedict",
+    "name": "St. Benedict of Nursia",
+    "title": "Father of Western Monasticism",
+    "quote": "Ora et labora — Pray and work. Let nothing be preferred to the Work of God.",
+    "sections": [
+      {
+        "lat": "Mane",
+        "eng": "Morning (Vigils & Lauds)",
+        "practices": [
+          {
+            "t": "Rise Before Dawn",
+            "d": "Benedict's monks rose in the night for Vigils. Begin your day early, before the world demands your attention."
+          },
+          {
+            "t": "Pray Lauds",
+            "d": "The Divine Office at daybreak. Offer the day's first hours to God."
+          },
+          {
+            "t": "Lectio Divina (30 min)",
+            "d": "Sacred reading of Scripture — read, meditate, pray, contemplate."
+          }
+        ]
+      },
+      {
+        "lat": "Per Diem",
+        "eng": "The Day's Work",
+        "practices": [
+          {
+            "t": "Labour with Prayer",
+            "d": "Work with your hands or mind, but keep your heart fixed on God. Offer each task as a prayer."
+          },
+          {
+            "t": "Pray the Minor Hours",
+            "d": "Prime, Terce, Sext, None — short interruptions to remember God throughout the day."
+          },
+          {
+            "t": "Hospitality",
+            "d": "Receive every person as Christ Himself. 'I was a stranger and you took me in.'"
+          }
+        ]
+      },
+      {
+        "lat": "Vésperæ",
+        "eng": "Evening",
+        "practices": [
+          {
+            "t": "Pray Vespers",
+            "d": "The Magnificat at dusk. Thank God for the day's gifts and sorrows."
+          },
+          {
+            "t": "Silent Supper",
+            "d": "Eat simply, in silence, with a reading from Scripture or the saints."
+          },
+          {
+            "t": "Pray Compline",
+            "d": "The Church's night prayer. Ask protection from the terrors of the night."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "teresa",
+    "name": "St. Teresa of Ávila",
+    "title": "Doctor of the Church · Mystic, Reformer",
+    "quote": "Let nothing disturb thee, nothing affright thee; all things are passing; God never changeth; patient endurance attaineth to all things; whoso God possesseth, in nothing is wanting; alone God sufficeth.",
+    "sections": [
+      {
+        "lat": "Mane",
+        "eng": "Morning",
+        "practices": [
+          {
+            "t": "Morning Mental Prayer (1 hour)",
+            "d": "Enter the 'interior castle' — turn within to the soul's centre, where Christ dwells."
+          },
+          {
+            "t": "Attend Mass",
+            "d": "Receive Our Lord with the deepest recollection."
+          },
+          {
+            "t": "Spiritual Reading",
+            "d": "Read from Teresa's Interior Castle, Way of Perfection, or Scripture."
+          }
+        ]
+      },
+      {
+        "lat": "Per Diem",
+        "eng": "Throughout the Day",
+        "practices": [
+          {
+            "t": "Pray the Rosary",
+            "d": "Meditate on the mysteries. Teresa used the Rosary to steady her soul."
+          },
+          {
+            "t": "Practise Recollection",
+            "d": "Even in work or conversation, keep the soul gently turned toward God."
+          },
+          {
+            "t": "Offer Small Sacrifices",
+            "d": "Accept every inconvenience with patient endurance — 'patience attains all things.'"
+          }
+        ]
+      },
+      {
+        "lat": "Vésperæ",
+        "eng": "Evening",
+        "practices": [
+          {
+            "t": "Evening Mental Prayer (30 min)",
+            "d": "Return again to the interior castle. Rest silently in God's presence."
+          },
+          {
+            "t": "Examination & Act of Contrition",
+            "d": "Review the day's faults with humility. Trust in God's mercy."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "escriva",
+    "name": "St. Josemaría Escrivá",
+    "title": "Founder of Opus Dei",
+    "quote": "Do everything for Love. Thus there will be no little things: everything will be big. Perseverance in the little things for Love is heroism.",
+    "sections": [
+      {
+        "lat": "Mane",
+        "eng": "Morning",
+        "practices": [
+          {
+            "t": "Heroic Minute",
+            "d": "At the sound of the alarm, jump out of bed immediately. Consecrate the first minute of the day to Our Lord."
+          },
+          {
+            "t": "Morning Offering",
+            "d": "'Serviam' — I will serve. Offer the whole day to God through Mary."
+          },
+          {
+            "t": "Attend Holy Mass",
+            "d": "The Mass is the centre and root of the interior life. Receive Communion daily."
+          },
+          {
+            "t": "Mental Prayer (30 min)",
+            "d": "Spend half an hour in silent conversation with Our Lord."
+          }
+        ]
+      },
+      {
+        "lat": "Per Diem",
+        "eng": "Work as Prayer",
+        "practices": [
+          {
+            "t": "Sanctify Your Work",
+            "d": "Work well, for the love of God. Turn every task into prayer. This is Opus Dei — 'the Work of God.'"
+          },
+          {
+            "t": "Pray the Angelus",
+            "d": "Pause at noon to remember the Incarnation."
+          },
+          {
+            "t": "Pray the Rosary",
+            "d": "Five decades daily. 'The Rosary is the most powerful weapon to conquer Satan.'"
+          },
+          {
+            "t": "Visit to the Blessed Sacrament",
+            "d": "A brief visit in the midst of the day's work, even if only for a minute."
+          }
+        ]
+      },
+      {
+        "lat": "Vésperæ",
+        "eng": "Evening",
+        "practices": [
+          {
+            "t": "Spiritual Reading (15 min)",
+            "d": "Read from The Way, Furrow, or the Gospels."
+          },
+          {
+            "t": "Particular Examination",
+            "d": "Examine yourself on one specific virtue you are working to acquire."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "desales",
+    "name": "St. Francis de Sales",
+    "title": "Doctor of the Church · Bishop of Geneva",
+    "quote": "Nothing is so strong as gentleness; nothing so gentle as real strength.",
+    "sections": [
+      {
+        "lat": "Mane",
+        "eng": "Morning",
+        "practices": [
+          {
+            "t": "Preparation of the Day",
+            "d": "Place yourself in God's presence. Foresee what the day will bring and resolve how to meet each thing with gentleness."
+          },
+          {
+            "t": "Attend Mass if Possible",
+            "d": "Unite yourself with Christ's Sacrifice. Receive Communion with sweet devotion."
+          },
+          {
+            "t": "Meditation (30 min)",
+            "d": "A simple, affective meditation on a scene from the Gospels. Speak to Our Lord as a friend."
+          }
+        ]
+      },
+      {
+        "lat": "Per Diem",
+        "eng": "Throughout the Day",
+        "practices": [
+          {
+            "t": "Spiritual Bouquets",
+            "d": "Gather 'little bouquets' of devout thoughts throughout the day. Return to them often."
+          },
+          {
+            "t": "Practise Gentleness",
+            "d": "Above all, be gentle — with others, with yourself, with circumstances. 'Nothing is so strong as gentleness.'"
+          },
+          {
+            "t": "Pray the Rosary",
+            "d": "Francis loved the Rosary as a family prayer — slow, affectionate, meditative."
+          }
+        ]
+      },
+      {
+        "lat": "Vésperæ",
+        "eng": "Evening",
+        "practices": [
+          {
+            "t": "Examination of Conscience",
+            "d": "Review the day kindly. Thank God for graces, ask pardon for faults, resolve to amend."
+          },
+          {
+            "t": "Short Spiritual Reading",
+            "d": "Read from the Introduction to the Devout Life or the Treatise on the Love of God."
+          }
+        ]
+      }
+    ]
+  }
+]
