@@ -18,7 +18,7 @@ struct ContentView: View {
             PlaceholderScreen(title: "Liber", subtitle: "Reference")
                 .tabItem { Label("Liber", systemImage: "text.book.closed") }
         }
-        .tint(Color(red: 139/255, green: 26/255, blue: 26/255))
+        .tint(.sanctuaryRed)
     }
 }
 
@@ -27,17 +27,21 @@ private struct PlaceholderScreen: View {
     let subtitle: String
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 12) {
+            Spacer()
             Text(title)
-                .font(.system(size: 32, weight: .semibold, design: .serif))
-                .italic()
+                .font(.pageTitle)
+                .foregroundStyle(.primaryText)
             Text(subtitle)
-                .font(.system(size: 13, weight: .regular, design: .serif))
-                .italic()
-                .foregroundStyle(.secondary)
-                .textCase(.uppercase)
-                .tracking(2)
+                .smallLabel()
+            Spacer()
+            Text("Under construction")
+                .font(.captionSm)
+                .foregroundStyle(.tertiaryText)
+                .padding(.bottom, 40)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .pageChrome()
     }
 }
 
