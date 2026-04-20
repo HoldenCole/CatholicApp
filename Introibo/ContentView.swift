@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            PlaceholderScreen(title: "Hódie", subtitle: "Today")
+            TodayView()
                 .tabItem { Label("Hódie", systemImage: "sun.horizon") }
 
             PlaceholderScreen(title: "Missa", subtitle: "Missal")

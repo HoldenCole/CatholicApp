@@ -1,0 +1,449 @@
+[
+  {
+    "slug": "cal-advent",
+    "title": "Advent",
+    "latin": "Adventus Domini",
+    "cat": "Calendarium",
+    "summary": "The liturgical season of preparation for the Nativity of Our Lord Jesus Christ. It begins four Sundays before Christmas and ends at the Vigil of Christmas. A time of joyful expectation, penitential preparation, and spiritual renewal.",
+    "history": "The observance of Advent dates to at least the fourth century. The Council of Tours (567) prescribed a fast three times weekly from the feast of St. Martin (November 11) to Christmas.",
+    "practice": "Increased prayer, fasting, and almsgiving. Attend the Rorate Masses celebrated in the early morning by candlelight. The Advent wreath with its four candles marks the passing weeks.",
+    "notes": "Violet vestments are worn. The Gloria is omitted. The organ is silent except to sustain singing. The third Sunday, Gaudete, permits rose vestments.",
+    "scripture": {
+      "ref": "Isaias 7:14",
+      "lat": "Ecce virgo concipiet, et pariet filium, et vocabitur nomen eius Emmanuel.",
+      "eng": "Behold a virgin shall conceive, and bear a son, and his name shall be called Emmanuel."
+    }
+  },
+  {
+    "slug": "cal-christmas",
+    "title": "Christmastide",
+    "latin": "Tempus Nativitatis",
+    "cat": "Calendarium",
+    "summary": "The season celebrating the birth of Our Lord, from the Vigil of Christmas (December 24) through February 2 (Candlemas, the Purification of Our Lady). Twelve days of festival culminating in the Epiphany.",
+    "history": "The feast of the Nativity was fixed on December 25 by the fourth century, displacing the pagan feast of Sol Invictus. The Octave of Christmas includes Holy Innocents (Dec 28), St. Stephen (Dec 26), and St. John (Dec 27).",
+    "practice": "The faithful sing carols, set up the Nativity scene (crèche), attend Midnight Mass, and keep the Christmas Octave with joy. Christmas vestments are worn through Candlemas.",
+    "notes": "White vestments throughout. The Gloria and Te Deum return. The Marian antiphon Alma Redemptoris Mater is sung at Compline.",
+    "scripture": {
+      "ref": "Lk 2:11",
+      "lat": "Natus est vobis hodie Salvator, qui est Christus Dominus.",
+      "eng": "For this day is born to you a Saviour, who is Christ the Lord."
+    }
+  },
+  {
+    "slug": "cal-lent",
+    "title": "Lent",
+    "latin": "Quadragesima",
+    "cat": "Calendarium",
+    "summary": "Forty days of penitential preparation for Easter, beginning on Ash Wednesday and ending on Holy Saturday. A season of fasting, abstinence, increased prayer, and almsgiving, commemorating Our Lord's forty days in the desert.",
+    "history": "The forty-day fast is attested from at least the second century. The word 'Lent' derives from the Anglo-Saxon lencten (spring). The 1962 Code mandates the Lenten fast for those aged 21-59.",
+    "practice": "Give alms, pray more, fast, and abstain. Attend daily Mass when possible. Pray the Stations of the Cross, especially on Fridays. Make a good Confession before Easter.",
+    "notes": "Violet vestments. The Gloria and Alleluia are suppressed. The organ is silent except to sustain singing. Images and crucifixes are veiled beginning with Passion Sunday.",
+    "scripture": {
+      "ref": "Joel 2:12",
+      "lat": "Convertimini ad me in toto corde vestro, in ieiunio, et in fletu, et in planctu.",
+      "eng": "Be converted to me with all your heart, in fasting, and in weeping, and in mourning."
+    }
+  },
+  {
+    "slug": "cal-holyweek",
+    "title": "Holy Week",
+    "latin": "Hebdomada Sancta",
+    "cat": "Calendarium",
+    "summary": "The most sacred week of the liturgical year, from Palm Sunday through Holy Saturday. It contains the Paschal Triduum — Maundy Thursday, Good Friday, and Holy Saturday — during which the Passion, Death, and Resurrection of Our Lord are commemorated.",
+    "history": "The observance of Holy Week dates to the earliest centuries. The rites of the Triduum were reformed in 1955 under Pius XII, and again in 1962.",
+    "practice": "Attend all available liturgies: Palm Sunday procession, Chrism Mass, Mass of the Lord's Supper with the washing of feet, the Good Friday liturgy with veneration of the Cross, the Easter Vigil. Keep strict silence from Gloria Thursday through the Vigil.",
+    "notes": "Violet then Red on Palm Sunday; White on Maundy Thursday; Red for Good Friday; the tabernacle is empty from after the Mass of the Lord's Supper until the Easter Vigil.",
+    "scripture": {
+      "ref": "Phil 2:8",
+      "lat": "Humiliavit semetipsum factus obediens usque ad mortem, mortem autem crucis.",
+      "eng": "He humbled Himself, becoming obedient unto death, even to the death of the cross."
+    }
+  },
+  {
+    "slug": "cal-easter",
+    "title": "Eastertide",
+    "latin": "Tempus Paschale",
+    "cat": "Calendarium",
+    "summary": "The fifty days from Easter Sunday to Pentecost, during which the Church celebrates the Resurrection of Our Lord. The Alleluia is restored and sung repeatedly; the Paschal Candle burns at all Masses.",
+    "history": "Eastertide is older than Lent, dating to the earliest days of the Church. The Octave of Easter was considered one continuous day of joy.",
+    "practice": "Receive Holy Communion (the Easter Duty obliges Communion at least once between Ash Wednesday and Trinity Sunday). Greet one another with 'Christ is risen — He is truly risen.'",
+    "notes": "White vestments throughout. Alleluia added to antiphons. The Marian antiphon is the Regina Caeli. Pentecost ends the season with red vestments.",
+    "scripture": {
+      "ref": "Mt 28:6",
+      "lat": "Non est hic; surrexit enim, sicut dixit.",
+      "eng": "He is not here, for He is risen, as He said."
+    }
+  },
+  {
+    "slug": "cal-ordinary",
+    "title": "Ordinary Time",
+    "latin": "Tempus per Annum",
+    "cat": "Calendarium",
+    "summary": "The weeks outside the major seasons — Time after Epiphany (from Candlemas to Ash Wednesday) and Time after Pentecost (from Trinity Sunday to Advent I). In the 1962 calendar these are counted as Sundays after Epiphany and Sundays after Pentecost.",
+    "history": "The term 'Ordinary Time' is a Novus Ordo coinage; traditionally these weeks were simply 'after Epiphany' or 'after Pentecost'. The 1962 calendar typically counts 24 Sundays after Pentecost.",
+    "practice": "A time for steady spiritual growth, daily Mass, the Rosary, and the deepening of virtue. Many important feasts fall within this period — Corpus Christi, Sacred Heart, Assumption, and All Saints.",
+    "notes": "Green vestments. The Salve Regina is the Marian antiphon.",
+    "scripture": null
+  },
+  {
+    "slug": "cal-ranks",
+    "title": "Feast Ranks",
+    "latin": "Gradus Festorum",
+    "cat": "Calendarium",
+    "summary": "In the 1962 calendar, feasts are ranked to determine precedence when two fall on the same day. The classes are: First Class, Second Class, Third Class, Fourth Class (commemoration), and the Common of feasts.",
+    "history": "The system was simplified in 1960 under John XXIII from the older system of Doubles of the First Class, Doubles of the Second Class, Greater Doubles, Doubles, Semidoubles, and Simples.",
+    "practice": "The rank of the day determines the Office and Mass said. First Class feasts override almost everything and have proper Offices. Second Class have proper Offices but yield to First Class feasts.",
+    "notes": "First Class feasts are marked with a red cross in traditional missals and are observed with the greatest solemnity.",
+    "scripture": null
+  },
+  {
+    "slug": "mass-mass",
+    "title": "The Holy Mass",
+    "latin": "Sacrosanctum Missae Sacrificium",
+    "cat": "Missa et Sacramenta",
+    "summary": "The unbloody re-presentation of the Sacrifice of Calvary — the source and summit of the Christian life. In the Mass, Our Lord Himself is both the Priest offering and the Victim offered, by means of the ministry of the ordained priest.",
+    "history": "The Roman Rite of Mass took shape gradually over the first millennium and was codified by Pope St. Pius V in 1570 after the Council of Trent. The Missale Romanum of 1962 preserves this rite in its final traditional form.",
+    "practice": "Sunday and Holy Day attendance is a grave obligation. Receive Our Lord worthily in the state of grace, having fasted from midnight (1962 rules) or at least one hour (current discipline). Make a proper thanksgiving after Mass.",
+    "notes": "The Mass has two principal parts: the Mass of the Catechumens (from the Prayers at the Foot of the Altar through the Credo) and the Mass of the Faithful (Offertory through Last Gospel). The Canon is said silently.",
+    "scripture": {
+      "ref": "1 Cor 11:26",
+      "lat": "Quotiescumque enim manducabitis panem hunc et calicem bibetis, mortem Domini annuntiabitis donec veniat.",
+      "eng": "For as often as you shall eat this bread, and drink the chalice, you shall show the death of the Lord, until He come."
+    }
+  },
+  {
+    "slug": "mass-baptism",
+    "title": "Baptism",
+    "latin": "Sacramentum Baptismi",
+    "cat": "Missa et Sacramenta",
+    "summary": "The first of the seven sacraments, by which original sin is remitted and the soul is regenerated into the life of grace. Baptism is necessary for salvation. It imprints an indelible spiritual character.",
+    "history": "Instituted by Our Lord after His Resurrection (Mt 28:19). The traditional Roman rite includes exorcisms, the giving of salt, the Ephphatha, and triple pouring with water.",
+    "practice": "Infants should be baptized as soon as possible. The proper minister is the priest, though in danger of death any person may baptize with the correct form and intention.",
+    "notes": "Form: 'I baptize thee in the name of the Father, and of the Son, and of the Holy Ghost.' Matter: natural water poured on the head.",
+    "scripture": {
+      "ref": "Mk 16:16",
+      "lat": "Qui crediderit, et baptizatus fuerit, salvus erit.",
+      "eng": "He that believeth and is baptized, shall be saved."
+    }
+  },
+  {
+    "slug": "mass-confirmation",
+    "title": "Confirmation",
+    "latin": "Sacramentum Confirmationis",
+    "cat": "Missa et Sacramenta",
+    "summary": "The sacrament by which the baptized are strengthened by the Holy Ghost to confess the Faith boldly. The bishop anoints the forehead with Chrism and says: 'I sign thee with the sign of the Cross, and confirm thee with the Chrism of salvation.'",
+    "history": "The laying on of hands is apostolic (Acts 8:17). The use of Chrism dates to at least the third century. Traditionally conferred around the age of reason or later.",
+    "practice": "Each Catholic should be confirmed. The sacrament imprints a character and gives the seven gifts of the Holy Ghost: Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord.",
+    "notes": null,
+    "scripture": {
+      "ref": "Acts 8:17",
+      "lat": "Tunc imponebant manus super illos, et accipiebant Spiritum Sanctum.",
+      "eng": "Then they laid their hands upon them, and they received the Holy Ghost."
+    }
+  },
+  {
+    "slug": "mass-orders",
+    "title": "Holy Orders",
+    "latin": "Sacramentum Ordinis",
+    "cat": "Missa et Sacramenta",
+    "summary": "The sacrament by which a man is configured to Christ the High Priest and empowered to offer the Holy Sacrifice of the Mass and forgive sins. The three degrees are deacon, priest, and bishop.",
+    "history": "Instituted by Our Lord at the Last Supper when He said 'Do this in remembrance of Me.' The apostolic succession preserves the unbroken line from the Twelve to every validly ordained bishop today.",
+    "practice": "Pray daily for priests and for vocations. A priest's hands are consecrated to offer the Mass; the faithful traditionally kiss the newly ordained priest's hands to receive a First Blessing.",
+    "notes": "Only a baptized male may validly receive Holy Orders. The sacrament imprints an indelible character and confers specific powers.",
+    "scripture": null
+  },
+  {
+    "slug": "pray-vocal",
+    "title": "Vocal Prayer",
+    "latin": "Oratio Vocalis",
+    "cat": "De Orationibus",
+    "summary": "Prayer said aloud or interiorly with the lips, using fixed words — the Our Father, the Hail Mary, the Psalms, the Office, the Rosary. The simplest and most universal form of prayer, taught by Our Lord Himself.",
+    "history": null,
+    "practice": "Pray vocal prayers with attention and devotion. Avoid racing through them. Let the words shape the heart, not merely pass the lips.",
+    "notes": "Vocal prayer is the foundation; from it the soul can grow into mental prayer and, with grace, contemplation.",
+    "scripture": null
+  },
+  {
+    "slug": "pray-mental",
+    "title": "Mental Prayer",
+    "latin": "Oratio Mentalis",
+    "cat": "De Orationibus",
+    "summary": "Interior prayer in which the soul raises heart and mind to God through meditation and affective conversation. The traditional method combines consideration of a truth of faith with acts of the will — love, sorrow, resolve.",
+    "history": "Systematized especially by St. Ignatius of Loyola in the Spiritual Exercises and by St. Teresa of Ávila in her writings.",
+    "practice": "Set aside a fixed time each day (fifteen to thirty minutes). Choose a Gospel scene or mystery. Place yourself in God's presence, consider, speak with Him, resolve on some concrete fruit.",
+    "notes": "St. Teresa called mental prayer 'a friendly intercourse, and frequent solitary conversation with Him who we know loves us.'",
+    "scripture": null
+  },
+  {
+    "slug": "pray-contemplation",
+    "title": "Contemplation",
+    "latin": "Contemplatio",
+    "cat": "De Orationibus",
+    "summary": "The highest form of prayer, in which the soul rests in God's presence without discursive thought — a pure gaze of love. Contemplation is a grace, not a technique; it is given, not achieved.",
+    "history": "The mystics — St. John of the Cross, St. Teresa of Ávila, St. Bernard, the Rhineland mystics — describe the ascent from meditation to infused contemplation.",
+    "practice": "Dispose yourself by fidelity in mental prayer, detachment from creatures, and obedience to God's will. Contemplation cannot be forced; it is God's gift to the soul He has prepared.",
+    "notes": null,
+    "scripture": null
+  },
+  {
+    "slug": "pray-lectio",
+    "title": "Lectio Divina",
+    "latin": "Lectio Divina",
+    "cat": "De Orationibus",
+    "summary": "Sacred reading — the ancient monastic practice of prayerful meditation on the Scriptures. The four traditional steps are Lectio (read), Meditatio (meditate), Oratio (pray), Contemplatio (contemplate).",
+    "history": "Described by Guigo II the Carthusian in his Scala Claustralium ('The Ladder of Monks'). A central practice in the Benedictine tradition since the sixth century.",
+    "practice": "Choose a short Scripture passage. Read it slowly several times. Meditate on a word or phrase that strikes the heart. Speak to God about it. Rest in His presence. Fifteen to thirty minutes daily.",
+    "notes": null,
+    "scripture": null
+  },
+  {
+    "slug": "pray-rosary",
+    "title": "The Rosary",
+    "latin": "Sacratissimum Rosarium",
+    "cat": "De Orationibus",
+    "summary": "A Marian prayer meditating on the life, death, and glory of Our Lord through the eyes of His Blessed Mother. Fifteen mysteries in three sets of five (Joyful, Sorrowful, Glorious), each decade consisting of an Our Father, ten Hail Marys, and a Glory Be.",
+    "history": "The traditional form was given to St. Dominic by Our Lady in the thirteenth century to combat the Albigensian heresy. Pope St. Pius V attributed the victory of Lepanto (1571) to the Rosary. The five Luminous Mysteries added in 2002 are NOT part of the traditional Rosary.",
+    "practice": "Pray at least five decades daily. Meditate on the mystery as you say the Aves. Conclude with the Hail Holy Queen and the Rosary prayers.",
+    "notes": "Padre Pio called the Rosary 'the weapon.' Sister Lucia of Fatima said that Our Lady has given greater power to the Rosary than to any other prayer in recent times.",
+    "scripture": {
+      "ref": "Lk 1:48",
+      "lat": "Ecce enim ex hoc beatam me dicent omnes generationes.",
+      "eng": "For behold from henceforth all generations shall call me blessed."
+    }
+  },
+  {
+    "slug": "dev-sacred-heart",
+    "title": "Sacred Heart",
+    "latin": "Sacratissimum Cor Iesu",
+    "cat": "Devotiones",
+    "summary": "Devotion to the physical Heart of Jesus Christ as the symbol of His boundless love for mankind, revealed especially to St. Margaret Mary Alacoque at Paray-le-Monial in 1673-75.",
+    "history": "The devotion has patristic roots but became explicit in the writings of St. Gertrude, St. John Eudes, and St. Margaret Mary. The feast was extended to the universal Church in 1856.",
+    "practice": "First Friday devotions: nine consecutive First Fridays of Communion of reparation. Consecration of self, family, and home to the Sacred Heart. Enthronement of the Sacred Heart in the home.",
+    "notes": "The feast of the Sacred Heart falls on the Friday after Corpus Christi. Twelve promises were made by Our Lord to St. Margaret Mary for those who honour His Heart.",
+    "scripture": {
+      "ref": "Jn 19:34",
+      "lat": "Unus militum lancea latus eius aperuit, et continuo exivit sanguis et aqua.",
+      "eng": "One of the soldiers with a spear opened His side, and immediately there came out blood and water."
+    }
+  },
+  {
+    "slug": "dev-adoration",
+    "title": "Eucharistic Adoration",
+    "latin": "Adoratio Eucharistica",
+    "cat": "Devotiones",
+    "summary": "The adoration of Our Lord Jesus Christ truly present — body, blood, soul, and divinity — in the Most Holy Sacrament of the Altar, whether in the tabernacle or exposed in the monstrance.",
+    "history": "Eucharistic adoration developed in the thirteenth century alongside the feast of Corpus Christi (instituted 1264). Perpetual adoration communities have existed since the seventeenth century.",
+    "practice": "Make a holy hour before the Blessed Sacrament. Assist at Benediction. Genuflect on passing a tabernacle. Strive to receive Communion frequently, even daily, in the state of grace.",
+    "notes": "During exposition, all normal business of the parish must cease. A priest or deacon in surplice and stole gives the Benediction.",
+    "scripture": null
+  },
+  {
+    "slug": "dev-scapular",
+    "title": "The Brown Scapular",
+    "latin": "Scapulare B.M.V. de Monte Carmelo",
+    "cat": "Devotiones",
+    "summary": "A sacramental of the Carmelite Order — two small pieces of brown cloth joined by strings and worn over the shoulders. A sign of consecration to Our Lady and a pledge of her protection.",
+    "history": "Given by Our Lady to St. Simon Stock, General of the Carmelites, in 1251. She promised that whoever dies wearing it 'shall not suffer eternal fire.'",
+    "practice": "Be enrolled by a priest. Wear the scapular day and night. Observe chastity according to one's state. Pray a daily Marian prayer (the Little Office of Our Lady, or the seven Our Fathers, seven Hail Marys, and seven Glory Bes).",
+    "notes": "The Sabbatine privilege: Our Lady promised to deliver souls from Purgatory on the first Saturday after death, for those who wear the scapular and fulfill its conditions.",
+    "scripture": null
+  },
+  {
+    "slug": "dev-first-fridays",
+    "title": "First Fridays",
+    "latin": "Feriae Sextae Primae",
+    "cat": "Devotiones",
+    "summary": "The devotion of receiving Holy Communion on nine consecutive First Fridays of the month in honour of the Sacred Heart of Jesus, promised by Our Lord to grant the grace of final perseverance.",
+    "history": "The promise was made by Our Lord to St. Margaret Mary Alacoque as the twelfth and greatest of the promises of the Sacred Heart.",
+    "practice": "Receive Holy Communion worthily on nine consecutive First Fridays. Offer the Mass in reparation to the Sacred Heart. Many add a Holy Hour before the Blessed Sacrament.",
+    "notes": "The Twelfth Promise: 'I promise thee, in the excessive mercy of My Heart, that My all-powerful love will grant to all those who receive Communion on nine First Fridays consecutively, the grace of final penitence; they shall not die in My disgrace.'",
+    "scripture": null
+  },
+  {
+    "slug": "dev-first-saturdays",
+    "title": "First Saturdays",
+    "latin": "Sabbata Prima",
+    "cat": "Devotiones",
+    "summary": "The devotion of reparation to the Immaculate Heart of Mary on five consecutive First Saturdays, requested by Our Lady at Fatima in 1925 through Sister Lucia.",
+    "history": "Revealed at Pontevedra on December 10, 1925, as a response to the blasphemies and ingratitudes offered against the Immaculate Heart of Mary.",
+    "practice": "On five consecutive First Saturdays: Confession (within eight days), Communion, five decades of the Rosary, and fifteen minutes of meditation on the mysteries — all offered in reparation to the Immaculate Heart.",
+    "notes": "Our Lady promised to assist at the hour of death, with all the graces necessary for salvation, those who fulfill these conditions.",
+    "scripture": null
+  },
+  {
+    "slug": "pen-fasting",
+    "title": "Fasting",
+    "latin": "Ieiunium",
+    "cat": "De Paenitentia",
+    "summary": "The discipline of restricting food as an act of penance. Under the 1962 rules, fasting means one full meal plus two small collations (meals which together are smaller than the main meal) in a single day. Water and medicine may be taken freely.",
+    "history": "Fasting is of apostolic and patristic origin. Mosaic Law required fasting on the Day of Atonement. Our Lord fasted forty days in the desert. The Church has prescribed fasts throughout history.",
+    "practice": "The 1962 Code binds all Catholics aged 21 to 59 to the Lenten fast on all weekdays of Lent, on Ember Days, and on the Vigils of certain feasts. The current discipline (post-1966) only binds on Ash Wednesday and Good Friday.",
+    "notes": "Traditional Catholics often follow the older, stricter discipline — fasting on all weekdays of Lent and on Ember Days as a matter of devotion.",
+    "scripture": null
+  },
+  {
+    "slug": "pen-abstinence",
+    "title": "Abstinence",
+    "latin": "Abstinentia",
+    "cat": "De Paenitentia",
+    "summary": "The discipline of abstaining from the flesh of warm-blooded animals as an act of penance. Fish, eggs, dairy, and fats of land animals are permitted under traditional rules.",
+    "history": "Friday abstinence in memory of the Passion has been observed since apostolic times. The 1962 Code requires abstinence on all Fridays of the year.",
+    "practice": "Abstain from meat every Friday (perpetual obligation). During Lent, also abstain on Ash Wednesday and on Wednesdays if following traditional discipline. The abstinence begins at midnight and continues to midnight.",
+    "notes": "Those aged 7 and older are bound. 'Meat' means the flesh of mammals and birds; marine mammals (whales, porpoises) are traditionally counted as fish.",
+    "scripture": null
+  },
+  {
+    "slug": "pen-ember",
+    "title": "Ember Days",
+    "latin": "Quattuor Anni Tempora",
+    "cat": "De Paenitentia",
+    "summary": "Four sets of three days (Wednesday, Friday, Saturday) each quarter of the year, observed with fasting and abstinence as a consecration of each season to God and in thanksgiving for the fruits of the earth.",
+    "history": "Of Roman origin, the Ember Days have been observed since at least the third century. They fall in the weeks of St. Lucy (December), the first week of Lent, Pentecost Octave, and after the feast of the Holy Cross (September).",
+    "practice": "Fast and abstain on each Ember Day. Pray for those to be ordained — Ember Saturdays were the traditional days for conferring Holy Orders. Pray for priests and for vocations.",
+    "notes": "The Ember Day Masses have proper chants and readings that reflect the season of the year.",
+    "scripture": null
+  },
+  {
+    "slug": "pen-vigils",
+    "title": "Vigils",
+    "latin": "Vigiliae",
+    "cat": "De Paenitentia",
+    "summary": "The day before a major feast, traditionally kept with fasting and abstinence as a spiritual preparation for the feast itself. Vigils have their own Mass and Office.",
+    "history": "Vigils originated from night-long prayer services before great feasts. The fast was added to prepare the body and soul for the coming celebration.",
+    "practice": "Traditionally observed as fast days: the Vigils of Christmas, Pentecost, the Assumption, All Saints. Those who observe the 1962 discipline keep these vigils as days of fast and abstinence.",
+    "notes": "The Easter Vigil is the greatest of all vigils — the 'mother of all holy vigils' (St. Augustine).",
+    "scripture": null
+  },
+  {
+    "slug": "sac-holywater",
+    "title": "Holy Water",
+    "latin": "Aqua Benedicta",
+    "cat": "De Sacramentalibus",
+    "summary": "Water blessed by a priest with prayers of exorcism and consecration, used for the blessing of persons, places, and objects, and for the remission of venial sin and the putting to flight of evil spirits.",
+    "history": "The use of blessed water is attested from the earliest centuries. The traditional rite for blessing water is found in the Rituale Romanum.",
+    "practice": "Bless yourself with holy water on entering the church. Keep a holy-water font at the entrance of your home. Sprinkle rooms for protection. Bless yourself before sleep.",
+    "notes": "The Asperges at the Sunday Mass is a sprinkling of the congregation with holy water, recalling Baptism.",
+    "scripture": null
+  },
+  {
+    "slug": "sac-crucifix",
+    "title": "Crucifixes",
+    "latin": "Cruces et Crucifixi",
+    "cat": "De Sacramentalibus",
+    "summary": "A cross bearing the figure (corpus) of the crucified Christ. The central image of Christian devotion, placed in every church, over every altar, and in every Catholic home.",
+    "history": "The crucifix developed as the definitive Christian image in the fifth and sixth centuries, replacing earlier symbolic depictions of the Cross.",
+    "practice": "Display a crucifix prominently in every room. Kiss the crucifix on the Rosary at the beginning and end. Kneel before the crucifix to pray.",
+    "notes": "Crucifixes should be blessed by a priest before use. The blessed crucifix grants a plenary indulgence at the hour of death, under the usual conditions.",
+    "scripture": null
+  },
+  {
+    "slug": "sac-rosary",
+    "title": "The Rosary (Sacramental)",
+    "latin": "Corona Precatoria",
+    "cat": "De Sacramentalibus",
+    "summary": "The physical Rosary itself — the string of beads used to count the prayers of the Rosary devotion. When blessed by a priest, it is a sacramental conveying many indulgences.",
+    "history": "Counting devices for prayers existed in ancient Christianity and even earlier in non-Christian traditions. The form of the Dominican Rosary (15 decades) was set in the sixteenth century.",
+    "practice": "Have your Rosary blessed by a priest. Carry it with you. Wear it or keep it near you at death.",
+    "notes": "A Dominican Rosary blessed by a Dominican priest carries additional indulgences proper to the Order.",
+    "scripture": null
+  },
+  {
+    "slug": "sac-medal",
+    "title": "Miraculous Medal",
+    "latin": "Numisma Miraculosum",
+    "cat": "De Sacramentalibus",
+    "summary": "The medal struck after the apparition of Our Lady to St. Catherine Labouré at the Rue du Bac, Paris, in 1830. The front shows Mary standing on the globe with the inscription 'O Mary, conceived without sin, pray for us who have recourse to thee.'",
+    "history": "Our Lady appeared to St. Catherine on November 27, 1830, showing her the design and asking that medals be struck and distributed. Countless miracles followed — hence the name.",
+    "practice": "Wear the medal with devotion. Distribute it to those in need of grace. Pray daily the prayer inscribed on it.",
+    "notes": "Wearing the Miraculous Medal is considered a mini-consecration to the Immaculate Conception.",
+    "scripture": null
+  },
+  {
+    "slug": "sac-candles",
+    "title": "Blessed Candles",
+    "latin": "Candela Benedicta",
+    "cat": "De Sacramentalibus",
+    "summary": "Candles of beeswax blessed by the Church, used at Mass, at funerals, at the sickbed, and during storms as protection against evil.",
+    "history": "Candles are blessed especially on Candlemas (February 2), the feast of the Presentation, commemorating Simeon's words: 'a light to the revelation of the Gentiles.'",
+    "practice": "Receive blessed candles on Candlemas and keep them in your home. Light one during storms. Light one at the bedside of the sick and dying. Two blessed candles are lit at the Viaticum.",
+    "notes": "Candles used at Mass must be of pure beeswax (at least 51% in the Paschal Candle and main altar candles).",
+    "scripture": null
+  },
+  {
+    "slug": "sac-incense",
+    "title": "Incense",
+    "latin": "Thus",
+    "cat": "De Sacramentalibus",
+    "summary": "A fragrant resin (olibanum from the boswellia tree), burned on charcoal to produce a sweet-smelling smoke. Used in the liturgy as a symbol of prayer rising to God and of the worship due to Christ present on the altar.",
+    "history": "Incense has been offered in divine worship since Old Testament times (Ex 30:7-8). It was adopted into Christian worship by at least the fourth century.",
+    "practice": "Used at solemn Masses and at Benediction. Five grains of incense are placed in the Paschal Candle at the Easter Vigil.",
+    "notes": "Three swings of the thurible express reverence to the altar, the Cross, and the Blessed Sacrament.",
+    "scripture": null
+  },
+  {
+    "slug": "sac-blessings",
+    "title": "Blessings",
+    "latin": "Benedictiones",
+    "cat": "De Sacramentalibus",
+    "summary": "Prayers of the Church invoking God's favour and protection upon persons, objects, places, or occasions. The Rituale Romanum contains blessings for nearly every aspect of Catholic life.",
+    "history": "Liturgical blessings have been part of the Church's life from the beginning. The Rituale Romanum was codified after Trent and contains hundreds of blessings.",
+    "practice": "Ask the priest for blessings — of houses, cars, medals, religious articles, food, expectant mothers, children. Many blessings are sacramentals that dispose the soul to grace.",
+    "notes": "A priest's blessing has its own power. Receive the priest's blessing at the end of Mass with reverence.",
+    "scripture": null
+  },
+  {
+    "slug": "sac-exorcisms",
+    "title": "Exorcisms",
+    "latin": "Exorcismi",
+    "cat": "De Sacramentalibus",
+    "summary": "Prayers commanding evil spirits to depart. Minor exorcisms are found in the rite of Baptism and in many blessings. Major exorcism (the cast of a possessed person) is reserved to a priest with the explicit permission of his bishop.",
+    "history": "Our Lord cast out demons (Mt 8:28-34). The power was given to the Apostles (Mt 10:1) and through them to the Church. The rite of exorcism is preserved in the Rituale Romanum.",
+    "practice": "The faithful may pray the Prayer to St. Michael and the Leonine Exorcism as private prayers of protection. Only a priest with faculties may perform the solemn exorcism.",
+    "notes": "Pope Leo XIII composed a short exorcism and the St. Michael prayer after a vision of spiritual battles to come.",
+    "scripture": null
+  },
+  {
+    "slug": "lat-pronunciation",
+    "title": "Pronunciation",
+    "latin": "Pronuntiatio",
+    "cat": "De Lingua Latina",
+    "summary": "Ecclesiastical Latin pronunciation (the 'Italianate' pronunciation) differs from the Classical or reconstructed pronunciation taught in universities. Ecclesiastical Latin is the living tongue of the Roman Rite.",
+    "history": null,
+    "practice": "A = 'ah' (father), E = 'eh' (bed), I = 'ee' (machine), O = 'oh' (note), U = 'oo' (food). C before e/i/y/ae/oe = 'ch' (as in 'church'). G before e/i = 'j'. Gn = 'ny'. Ti before a vowel = 'tsee'.",
+    "notes": "See the Learn tab (Schola Latina) for full courses on pronunciation and grammar.",
+    "scripture": null
+  },
+  {
+    "slug": "lat-grammar",
+    "title": "Basic Grammar",
+    "latin": "Grammatica",
+    "cat": "De Lingua Latina",
+    "summary": "Latin is an inflected language — words change form to show grammatical role (case, number, gender, tense, mood). There are five noun declensions, four verb conjugations, and six primary cases (nominative, genitive, dative, accusative, ablative, vocative).",
+    "history": null,
+    "practice": "For the Rosary and Mass, focus on recognising the common prayer forms. 'Dominus' (Lord) vs 'Domino' (to the Lord) vs 'Domini' (of the Lord).",
+    "notes": "The Learn tab has full courses on declensions, conjugations, and reading.",
+    "scripture": null
+  },
+  {
+    "slug": "lat-vocab",
+    "title": "Prayer Vocabulary",
+    "latin": "Vocabularium",
+    "cat": "De Lingua Latina",
+    "summary": "The most common words of the Latin Mass and Rosary: Dominus (Lord), Deus (God), Pater (Father), Filius (Son), Spiritus (Spirit), Sanctus (Holy), Maria (Mary), Iesus (Jesus), gratia (grace), et (and), in (in).",
+    "history": null,
+    "practice": "Learn fifty prayer words and you can follow eighty percent of the Mass. Flash cards, repetition, and praying the Rosary in Latin are the traditional methods.",
+    "notes": null,
+    "scripture": null
+  },
+  {
+    "slug": "lat-abbrev",
+    "title": "Abbreviations",
+    "latin": "Abbreviationes",
+    "cat": "De Lingua Latina",
+    "summary": "Common abbreviations in the missal and breviary: ℣. (Versiculus, Versicle — the celebrant), ℟. (Responsum, Response — the faithful), S. (Sacerdos / Sanctus), P. (Pater), M. (Minister).",
+    "history": null,
+    "practice": null,
+    "notes": "Red text in the missal is called 'rubric' (from ruber, red) and gives the directions. Black text is to be spoken aloud.",
+    "scripture": null
+  }
+]
