@@ -1,13 +1,22 @@
 [
   {
-    "slug": "introit",
+    "slug": "preces",
     "label": "Preces Præparatoriæ",
     "title": "Preces ad Imum Altaris",
     "english": "Prayers at the Foot of the Altar",
     "body": [
-      { "lat": "In nómine Patris, ✠ et Fílii, et Spíritus Sancti. Amen.", "eng": "In the name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen." },
-      { "lat": "℣. Introíbo ad altáre Dei.", "eng": "℣. I will go unto the altar of God." },
-      { "lat": "℟. Ad Deum qui lætíficat iuventútem meam.", "eng": "℟. To God, Who giveth joy to my youth." }
+      {
+        "lat": "In nómine Patris, ✠ et Fílii, et Spíritus Sancti. Amen.",
+        "eng": "In the name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen."
+      },
+      {
+        "lat": "℣. Introíbo ad altáre Dei.",
+        "eng": "℣. I will go unto the altar of God."
+      },
+      {
+        "lat": "℟. Ad Deum qui lætíficat iuventútem meam.",
+        "eng": "℟. To God, Who giveth joy to my youth."
+      }
     ]
   },
   {
@@ -16,50 +25,86 @@
     "title": "Confíteor",
     "english": "The Confession",
     "body": [
-      { "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Ioánni Baptístæ, sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis, quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa.", "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the Saints, that I have sinned exceedingly in thought, word, and deed: through my fault, through my fault, through my most grievous fault." }
+      {
+        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Ioánni Baptístæ, sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis, quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa.",
+        "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the Saints, that I have sinned exceedingly in thought, word, and deed: through my fault, through my fault, through my most grievous fault."
+      }
+    ]
+  },
+  {
+    "slug": "introit",
+    "label": "Missa Catechumenorum",
+    "title": "Introitus",
+    "english": "Introit · Entrance Antiphon",
+    "body": [
+      {
+        "lat": "Proprium — varies by feast",
+        "eng": "Proper — varies by feast"
+      }
     ]
   },
   {
     "slug": "kyrie",
     "label": "Missa Catechumenorum",
-    "title": "Introitus",
-    "english": "Introit · Entrance Antiphon",
+    "title": "Kýrie Eléison",
+    "english": "Lord, Have Mercy",
     "body": [
-      { "lat": "Proprium — varies by feast", "eng": "Proper — varies by feast" }
+      {
+        "lat": "℣. Kýrie, eléison. ℟. Kýrie, eléison.",
+        "eng": "Lord, have mercy. Lord, have mercy."
+      },
+      {
+        "lat": "℣. Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "℣. Christe, eléison. ℟. Christe, eléison.",
+        "eng": "Christ, have mercy. Christ, have mercy."
+      },
+      {
+        "lat": "℣. Christe, eléison.",
+        "eng": "Christ, have mercy."
+      },
+      {
+        "lat": "℣. Kýrie, eléison. ℟. Kýrie, eléison.",
+        "eng": "Lord, have mercy. Lord, have mercy."
+      },
+      {
+        "lat": "℣. Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      }
     ]
   },
   {
     "slug": "gloria",
     "label": "Missa Catechumenorum",
-    "title": "Kýrie Eléison",
-    "english": "Lord, Have Mercy",
+    "title": "Glória in Excélsis Deo",
+    "english": "Glory to God in the Highest",
     "body": [
-      { "lat": "℣. Kýrie, eléison. ℟. Kýrie, eléison.", "eng": "Lord, have mercy. Lord, have mercy." },
-      { "lat": "℣. Kýrie, eléison.", "eng": "Lord, have mercy." },
-      { "lat": "℣. Christe, eléison. ℟. Christe, eléison.", "eng": "Christ, have mercy. Christ, have mercy." },
-      { "lat": "℣. Christe, eléison.", "eng": "Christ, have mercy." },
-      { "lat": "℣. Kýrie, eléison. ℟. Kýrie, eléison.", "eng": "Lord, have mercy. Lord, have mercy." },
-      { "lat": "℣. Kýrie, eléison.", "eng": "Lord, have mercy." }
+      {
+        "lat": "Glória in excélsis Deo, et in terra pax homínibus bonæ voluntátis. Laudámus te. Benedícimus te. Adorámus te. Glorificámus te. Grátias ágimus tibi propter magnam glóriam tuam.",
+        "eng": "Glory be to God on high, and on earth peace to men of good will. We praise Thee. We bless Thee. We adore Thee. We glorify Thee. We give Thee thanks for Thy great glory."
+      },
+      {
+        "lat": "Dómine Deus, Rex cæléstis, Deus Pater omnípotens. Dómine Fili Unigénite, Iesu Christe. Dómine Deus, Agnus Dei, Fílius Patris.",
+        "eng": "O Lord God, heavenly King, God the Father almighty. O Lord Jesus Christ, the only-begotten Son. O Lord God, Lamb of God, Son of the Father."
+      },
+      {
+        "lat": "Quóniam tu solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, Iesu Christe. Cum Sancto Spíritu, in glória Dei Patris. Amen.",
+        "eng": "For Thou alone art holy. Thou alone art the Lord. Thou alone art the most high, Jesus Christ. With the Holy Ghost, in the glory of God the Father. Amen."
+      }
     ]
   },
   {
     "slug": "collecta",
     "label": "Missa Catechumenorum",
-    "title": "Glória in Excélsis Deo",
-    "english": "Glory to God in the Highest",
-    "body": [
-      { "lat": "Glória in excélsis Deo, et in terra pax homínibus bonæ voluntátis. Laudámus te. Benedícimus te. Adorámus te. Glorificámus te. Grátias ágimus tibi propter magnam glóriam tuam.", "eng": "Glory be to God on high, and on earth peace to men of good will. We praise Thee. We bless Thee. We adore Thee. We glorify Thee. We give Thee thanks for Thy great glory." },
-      { "lat": "Dómine Deus, Rex cæléstis, Deus Pater omnípotens. Dómine Fili Unigénite, Iesu Christe. Dómine Deus, Agnus Dei, Fílius Patris.", "eng": "O Lord God, heavenly King, God the Father almighty. O Lord Jesus Christ, the only-begotten Son. O Lord God, Lamb of God, Son of the Father." },
-      { "lat": "Quóniam tu solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, Iesu Christe. Cum Sancto Spíritu, in glória Dei Patris. Amen.", "eng": "For Thou alone art holy. Thou alone art the Lord. Thou alone art the most high, Jesus Christ. With the Holy Ghost, in the glory of God the Father. Amen." }
-    ]
-  },
-  {
-    "slug": "epistola",
-    "label": "Missa Catechumenorum",
     "title": "Collécta",
     "english": "The Collect",
     "body": [
-      { "lat": "Proprium — varies by feast", "eng": "Proper — varies by feast" }
+      {
+        "lat": "Proprium — varies by feast",
+        "eng": "Proper — varies by feast"
+      }
     ]
   },
   {
@@ -68,10 +113,22 @@
     "title": "Credo",
     "english": "The Nicene Creed",
     "body": [
-      { "lat": "Credo in unum Deum, Patrem omnipoténtem, factórem cæli et terræ, visibílium ómnium et invisibílium.", "eng": "I believe in one God, the Father almighty, maker of heaven and earth, and of all things visible and invisible." },
-      { "lat": "Et in unum Dóminum Iesum Christum, Fílium Dei unigénitum. Et ex Patre natum ante ómnia sǽcula. Deum de Deo, lumen de lúmine, Deum verum de Deo vero.", "eng": "And in one Lord Jesus Christ, the only-begotten Son of God. Born of the Father before all ages. God of God, light of light, true God of true God." },
-      { "lat": "Et incarnátus est de Spíritu Sancto ex María Vírgine: et homo factus est.", "eng": "And was incarnate by the Holy Ghost of the Virgin Mary, and was made man." },
-      { "lat": "Crucifíxus étiam pro nobis: sub Póntio Piláto passus, et sepúltus est. Et resurréxit tértia die, secúndum Scriptúras. Et ascéndit in cælum: sedet ad déxteram Patris.", "eng": "He was crucified also for us: suffered under Pontius Pilate, and was buried. And the third day He rose again according to the Scriptures. And ascended into heaven: sitteth at the right hand of the Father." }
+      {
+        "lat": "Credo in unum Deum, Patrem omnipoténtem, factórem cæli et terræ, visibílium ómnium et invisibílium.",
+        "eng": "I believe in one God, the Father almighty, maker of heaven and earth, and of all things visible and invisible."
+      },
+      {
+        "lat": "Et in unum Dóminum Iesum Christum, Fílium Dei unigénitum. Et ex Patre natum ante ómnia sǽcula. Deum de Deo, lumen de lúmine, Deum verum de Deo vero.",
+        "eng": "And in one Lord Jesus Christ, the only-begotten Son of God. Born of the Father before all ages. God of God, light of light, true God of true God."
+      },
+      {
+        "lat": "Et incarnátus est de Spíritu Sancto ex María Vírgine: et homo factus est.",
+        "eng": "And was incarnate by the Holy Ghost of the Virgin Mary, and was made man."
+      },
+      {
+        "lat": "Crucifíxus étiam pro nobis: sub Póntio Piláto passus, et sepúltus est. Et resurréxit tértia die, secúndum Scriptúras. Et ascéndit in cælum: sedet ad déxteram Patris.",
+        "eng": "He was crucified also for us: suffered under Pontius Pilate, and was buried. And the third day He rose again according to the Scriptures. And ascended into heaven: sitteth at the right hand of the Father."
+      }
     ]
   },
   {
@@ -80,9 +137,18 @@
     "title": "Sanctus",
     "english": "Holy, Holy, Holy",
     "body": [
-      { "lat": "Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.", "eng": "Holy, Holy, Holy, Lord God of Hosts." },
-      { "lat": "Pleni sunt cæli et terra glória tua. Hosánna in excélsis.", "eng": "Heaven and earth are full of Thy glory. Hosanna in the highest." },
-      { "lat": "✠ Benedíctus qui venit in nómine Dómini. Hosánna in excélsis.", "eng": "✠ Blessed is He Who cometh in the name of the Lord. Hosanna in the highest." }
+      {
+        "lat": "Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.",
+        "eng": "Holy, Holy, Holy, Lord God of Hosts."
+      },
+      {
+        "lat": "Pleni sunt cæli et terra glória tua. Hosánna in excélsis.",
+        "eng": "Heaven and earth are full of Thy glory. Hosanna in the highest."
+      },
+      {
+        "lat": "✠ Benedíctus qui venit in nómine Dómini. Hosánna in excélsis.",
+        "eng": "✠ Blessed is He Who cometh in the name of the Lord. Hosanna in the highest."
+      }
     ]
   },
   {
@@ -91,8 +157,14 @@
     "title": "Canon Missæ",
     "english": "The Roman Canon · Consecration",
     "body": [
-      { "lat": "Hoc est enim Corpus meum.", "eng": "For this is My Body." },
-      { "lat": "Hic est enim Calix Sánguinis mei.", "eng": "For this is the Chalice of My Blood." }
+      {
+        "lat": "Hoc est enim Corpus meum.",
+        "eng": "For this is My Body."
+      },
+      {
+        "lat": "Hic est enim Calix Sánguinis mei.",
+        "eng": "For this is the Chalice of My Blood."
+      }
     ]
   },
   {
@@ -101,9 +173,18 @@
     "title": "Pater Noster",
     "english": "The Lord's Prayer",
     "body": [
-      { "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra.", "eng": "Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven." },
-      { "lat": "Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem.", "eng": "Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation." },
-      { "lat": "℟. Sed líbera nos a malo. Amen.", "eng": "℟. But deliver us from evil. Amen." }
+      {
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra.",
+        "eng": "Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven."
+      },
+      {
+        "lat": "Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem.",
+        "eng": "Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation."
+      },
+      {
+        "lat": "℟. Sed líbera nos a malo. Amen.",
+        "eng": "℟. But deliver us from evil. Amen."
+      }
     ]
   },
   {
@@ -112,18 +193,30 @@
     "title": "Agnus Dei",
     "english": "Lamb of God",
     "body": [
-      { "lat": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.", "eng": "Lamb of God, Who takest away the sins of the world: have mercy on us." },
-      { "lat": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.", "eng": "Lamb of God, Who takest away the sins of the world: have mercy on us." },
-      { "lat": "Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.", "eng": "Lamb of God, Who takest away the sins of the world: grant us peace." }
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.",
+        "eng": "Lamb of God, Who takest away the sins of the world: have mercy on us."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.",
+        "eng": "Lamb of God, Who takest away the sins of the world: have mercy on us."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.",
+        "eng": "Lamb of God, Who takest away the sins of the world: grant us peace."
+      }
     ]
   },
   {
-    "slug": "communio",
+    "slug": "domine",
     "label": "Commúnio",
     "title": "Dómine, Non Sum Dignus",
     "english": "Lord, I Am Not Worthy",
     "body": [
-      { "lat": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea. (×3)", "eng": "Lord, I am not worthy that Thou shouldst enter under my roof: but only say the word, and my soul shall be healed. (×3)" }
+      {
+        "lat": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea. (×3)",
+        "eng": "Lord, I am not worthy that Thou shouldst enter under my roof: but only say the word, and my soul shall be healed. (×3)"
+      }
     ]
   },
   {
@@ -132,11 +225,26 @@
     "title": "Últimum Evangélium",
     "english": "The Last Gospel · Prologue of St. John",
     "body": [
-      { "lat": "In princípio erat Verbum, et Verbum erat apud Deum, et Deus erat Verbum. Hoc erat in princípio apud Deum.", "eng": "In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God." },
-      { "lat": "Ómnia per ipsum facta sunt: et sine ipso factum est nihil, quod factum est. In ipso vita erat, et vita erat lux hóminum: et lux in ténebris lucet, et ténebræ eam non comprehendérunt.", "eng": "All things were made by Him: and without Him was made nothing that was made. In Him was life, and the life was the light of men: and the light shineth in darkness, and the darkness did not comprehend it." },
-      { "lat": "Et Verbum caro factum est, et habitávit in nobis.", "eng": "And the Word was made Flesh, and dwelt among us." },
-      { "lat": "Et vídimus glóriam eius, glóriam quasi Unigéniti a Patre, plenum grátiæ et veritátis.", "eng": "And we saw His glory, the glory as it were of the only-begotten of the Father, full of grace and truth." },
-      { "lat": "℟. Deo grátias.", "eng": "℟. Thanks be to God." }
+      {
+        "lat": "In princípio erat Verbum, et Verbum erat apud Deum, et Deus erat Verbum. Hoc erat in princípio apud Deum.",
+        "eng": "In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God."
+      },
+      {
+        "lat": "Ómnia per ipsum facta sunt: et sine ipso factum est nihil, quod factum est. In ipso vita erat, et vita erat lux hóminum: et lux in ténebris lucet, et ténebræ eam non comprehendérunt.",
+        "eng": "All things were made by Him: and without Him was made nothing that was made. In Him was life, and the life was the light of men: and the light shineth in darkness, and the darkness did not comprehend it."
+      },
+      {
+        "lat": "Et Verbum caro factum est, et habitávit in nobis.",
+        "eng": "And the Word was made Flesh, and dwelt among us."
+      },
+      {
+        "lat": "Et vídimus glóriam eius, glóriam quasi Unigéniti a Patre, plenum grátiæ et veritátis.",
+        "eng": "And we saw His glory, the glory as it were of the only-begotten of the Father, full of grace and truth."
+      },
+      {
+        "lat": "℟. Deo grátias.",
+        "eng": "℟. Thanks be to God."
+      }
     ]
   }
 ]

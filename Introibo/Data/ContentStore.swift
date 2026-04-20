@@ -14,12 +14,14 @@ final class ContentStore {
     private(set) var reference: [ReferenceEntry] = []
     private(set) var saints:    [Saint]          = []
     private(set) var courses:   [Course]         = []
+    private(set) var missal:    [MissalSection]  = []
 
     init() {
         prayers   = load("prayers",   as: [Prayer].self)         ?? []
         reference = load("reference", as: [ReferenceEntry].self) ?? []
         saints    = load("saints",    as: [Saint].self)          ?? []
         courses   = load("courses",   as: [Course].self)         ?? []
+        missal    = load("missal",    as: [MissalSection].self)  ?? []
     }
 
     // MARK: - Generic bundle loader

@@ -6,7 +6,7 @@ struct ContentView: View {
             TodayView()
                 .tabItem { Label("Hódie", systemImage: "sun.horizon") }
 
-            PlaceholderScreen(title: "Missa", subtitle: "Missal")
+            MissalView()
                 .tabItem { Label("Missa", systemImage: "book.closed") }
 
             PrayersView()
@@ -22,29 +22,4 @@ struct ContentView: View {
     }
 }
 
-private struct PlaceholderScreen: View {
-    let title: String
-    let subtitle: String
-
-    var body: some View {
-        VStack(spacing: 12) {
-            Spacer()
-            Text(title)
-                .font(.pageTitle)
-                .foregroundStyle(.primaryText)
-            Text(subtitle)
-                .smallLabel()
-            Spacer()
-            Text("Under construction")
-                .font(.captionSm)
-                .foregroundStyle(.tertiaryText)
-                .padding(.bottom, 40)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .pageChrome()
-    }
-}
-
-#Preview {
-    ContentView()
-}
+#Preview { ContentView() }
