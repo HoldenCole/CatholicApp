@@ -1,0 +1,779 @@
+[
+  {
+    "slug": "matutinum",
+    "name": "Matutínum",
+    "eng": "Matins",
+    "time": "at midnight",
+    "hour": 0,
+    "minute": 0,
+    "glyph": "M",
+    "order": 1,
+    "intro": "The night Office — historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels, the longest and most ancient of the hours.",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Versicle & Response",
+        "lat": "Dómine, lábia mea apéries.",
+        "eng": "O Lord, Thou wilt open my lips.",
+        "latR": "Et os meum annuntiábit laudem tuam.",
+        "engR": "And my mouth shall declare Thy praise."
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Æterne rerum Cónditor",
+        "lat": "Ætérne rerum Cónditor,<br>noctem diémque qui regis,<br>et témporum das témpora,<br>ut álleves fastídium.",
+        "eng": "Eternal Maker of all things,<br>Who governest both night and day,<br>and grantest us the changing hours<br>to ease the labours of our way."
+      },
+      {
+        "type": "antiphon",
+        "label": "Invitatory Antiphon",
+        "lat": "Veníte, adorémus Dóminum, quóniam ipse fecit nos.",
+        "eng": "Come, let us adore the Lord, for He hath made us."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 94 — Venite",
+        "ref": "Invitatorium",
+        "verses": [
+          {
+            "lat": "Veníte, exsultémus Dómino: jubilémus Deo, salutári nostro:",
+            "eng": "Come, let us praise the Lord with joy: let us joyfully sing to God our Saviour."
+          },
+          {
+            "lat": "Præoccupémus fáciem ejus in confessióne, et in psalmis jubilémus ei.",
+            "eng": "Let us come before His presence with thanksgiving, and make a joyful noise to Him with psalms."
+          },
+          {
+            "lat": "Quóniam Deus magnus Dóminus, et Rex magnus super omnes deos.",
+            "eng": "For the Lord is a great God, and a great King above all gods."
+          },
+          {
+            "lat": "Veníte, adorémus, et procidámus ante Deum: plorémus coram Dómino, qui fecit nos.",
+            "eng": "Come, let us adore and fall down: and weep before the Lord that made us."
+          }
+        ]
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "Jeremiah 14:9",
+        "lat": "Tu autem in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine Deus noster.",
+        "eng": "But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God."
+      },
+      {
+        "type": "canticle",
+        "label": "Hymnus Ambrosianus — Te Deum",
+        "ref": "Sundays and Feasts (omitted in Lent & Passiontide)",
+        "verses": [
+          {
+            "lat": "Te Deum laudámus: te Dóminum confitémur.",
+            "eng": "We praise Thee, O God: we acknowledge Thee to be the Lord."
+          },
+          {
+            "lat": "Te ætérnum Patrem omnis terra venerátur.",
+            "eng": "All the earth doth worship Thee, the Father everlasting."
+          },
+          {
+            "lat": "Tibi omnes Angeli, tibi Cæli et univérsæ Potestátes:",
+            "eng": "To Thee all Angels cry aloud, the Heavens and all the Powers therein."
+          },
+          {
+            "lat": "Tibi Chérubim et Séraphim incessábili voce proclámant:",
+            "eng": "To Thee Cherubim and Seraphim continually do cry:"
+          },
+          {
+            "lat": "Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.",
+            "eng": "Holy, Holy, Holy, Lord God of Hosts."
+          },
+          {
+            "lat": "Pleni sunt cæli et terra majestátis glóriæ tuæ.",
+            "eng": "Heaven and earth are full of the majesty of Thy glory."
+          },
+          {
+            "lat": "Te gloriósus Apostolórum chorus, te Prophetárum laudábilis númerus,",
+            "eng": "The glorious company of the Apostles praise Thee, the goodly fellowship of the Prophets praise Thee,"
+          },
+          {
+            "lat": "Te Mártyrum candidátus laudat exércitus.",
+            "eng": "The noble army of Martyrs praise Thee."
+          },
+          {
+            "lat": "Te per orbem terrárum sancta confitétur Ecclésia:",
+            "eng": "The holy Church throughout all the world doth acknowledge Thee:"
+          },
+          {
+            "lat": "Patrem imménsæ majestátis; venerándum tuum verum et únicum Fílium; Sanctum quoque Paráclitum Spíritum.",
+            "eng": "The Father of an infinite majesty; Thine honourable, true and only Son; also the Holy Ghost, the Comforter."
+          },
+          {
+            "lat": "Tu Rex glóriæ, Christe. Tu Patris sempitérnus es Fílius.",
+            "eng": "Thou art the King of Glory, O Christ. Thou art the everlasting Son of the Father."
+          },
+          {
+            "lat": "In te, Dómine, sperávi: non confúndar in ætérnum.",
+            "eng": "O Lord, in Thee have I trusted: let me never be confounded."
+          }
+        ]
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Omnípotens sempitérne Deus, qui vivórum domináris simul et mortuórum, omniúmque miseréris, quos tuos fide et ópere futúros esse prænóscis: te súpplices exorámus. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "Almighty, everlasting God, who hast dominion over both the living and the dead, and hast mercy on all whom Thou knowest will be Thine by faith and good works: we humbly beseech Thee. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Conclusion",
+        "lat": "Benedicámus Dómino. Deo grátias.",
+        "eng": "Let us bless the Lord. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "laudes",
+    "name": "Laudes",
+    "eng": "Lauds",
+    "time": "before dawn",
+    "hour": 3,
+    "minute": 0,
+    "glyph": "L",
+    "order": 2,
+    "intro": "The morning praise — the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary, sung as the sun rises.",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Opening",
+        "lat": "Deus, in adjutórium meum inténde.",
+        "eng": "O God, come to my assistance.",
+        "latR": "Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Splendor patérnæ glóriæ",
+        "lat": "Splendor patérnæ glóriæ,<br>de luce lucem próferens,<br>lux lucis et fons lúminis,<br>diem dies illúminans.",
+        "eng": "O splendour of God's glory bright,<br>O Thou that bringest light from light,<br>O Light of light, light's living spring,<br>O Day, all days illumining."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon",
+        "lat": "Allelúja, allelúja, allelúja.",
+        "eng": "Alleluia, alleluia, alleluia."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 62 — Deus, Deus meus",
+        "ref": "Pro mane",
+        "verses": [
+          {
+            "lat": "Deus, Deus meus, ad te de luce vígilo.",
+            "eng": "O God, my God, to Thee do I watch at break of day."
+          },
+          {
+            "lat": "Sitívit in te ánima mea, quam multiplíciter tibi caro mea.",
+            "eng": "For Thee my soul hath thirsted; for Thee my flesh, O how many ways!"
+          },
+          {
+            "lat": "Sic in sancto appárui tibi, ut vidérem virtútem tuam et glóriam tuam.",
+            "eng": "So in the sanctuary have I come before Thee, to see Thy power and Thy glory."
+          },
+          {
+            "lat": "Quóniam mélior est misericórdia tua super vitas: lábia mea laudábunt te.",
+            "eng": "For Thy mercy is better than lives: thee my lips shall praise."
+          }
+        ]
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "Romans 13:12",
+        "lat": "Nox præcéssit, dies autem appropinquávit. Abjiciámus ergo ópera tenebrárum, et induámur arma lucis.",
+        "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light."
+      },
+      {
+        "type": "canticle",
+        "label": "Canticum Zachariæ — Benedictus",
+        "ref": "Lk 1:68–75",
+        "verses": [
+          {
+            "lat": "Benedíctus Dóminus Deus Israël, quia visitávit et fecit redemptiónem plebis suæ:",
+            "eng": "Blessed be the Lord God of Israel, because He hath visited and wrought the redemption of His people:"
+          },
+          {
+            "lat": "Et eréxit cornu salútis nobis in domo David púeri sui.",
+            "eng": "And hath raised up an horn of salvation to us, in the house of David His servant."
+          },
+          {
+            "lat": "Sicut locútus est per os sanctórum, qui a sǽculo sunt, prophetárum ejus:",
+            "eng": "As He spoke by the mouth of His holy prophets, who are from the beginning:"
+          },
+          {
+            "lat": "Salútem ex inimícis nostris, et de manu ómnium qui odérunt nos.",
+            "eng": "Salvation from our enemies, and from the hand of all that hate us."
+          }
+        ]
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Conclusion",
+        "lat": "Benedicámus Dómino. Deo grátias.",
+        "eng": "Let us bless the Lord. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "prima",
+    "name": "Prima",
+    "eng": "Prime",
+    "time": "at the first hour of daylight",
+    "hour": 6,
+    "minute": 0,
+    "glyph": "I",
+    "order": 3,
+    "intro": "The first daylight hour. A short hour to sanctify the day's work and offer the day's actions to God.",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Opening",
+        "lat": "Deus, in adjutórium meum inténde.",
+        "eng": "O God, come to my assistance.",
+        "latR": "Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Iam lucis orto sídere",
+        "lat": "Iam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.",
+        "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon",
+        "lat": "Allelúja, allelúja, allelúja.",
+        "eng": "Alleluia, alleluia, alleluia."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 53 — Deus, in nómine tuo",
+        "ref": "Pro Prima",
+        "verses": [
+          {
+            "lat": "Deus, in nómine tuo salvum me fac: et in virtúte tua júdica me.",
+            "eng": "Save me, O God, by Thy name, and judge me in Thy strength."
+          },
+          {
+            "lat": "Deus, exáudi oratiónem meam: áuribus pércipe verba oris mei.",
+            "eng": "O God, hear my prayer: give ear to the words of my mouth."
+          },
+          {
+            "lat": "Ecce enim Deus ádjuvat me: et Dóminus suscéptor est ánimæ meæ.",
+            "eng": "For behold God is my helper: and the Lord is the protector of my soul."
+          }
+        ]
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "1 Tim 1:17",
+        "lat": "Regi sæculórum immortáli et invisíbili, soli Deo honor et glória in sǽcula sæculórum. Amen.",
+        "eng": "To the King of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen."
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Conclusion",
+        "lat": "Benedicámus Dómino. Deo grátias.",
+        "eng": "Let us bless the Lord. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "tertia",
+    "name": "Tértia",
+    "eng": "Terce",
+    "time": "at the third hour",
+    "hour": 9,
+    "minute": 0,
+    "glyph": "III",
+    "order": 4,
+    "intro": "The third hour — when the Holy Ghost descended upon the Apostles at Pentecost. Pray for the gifts of the Holy Spirit.",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Opening",
+        "lat": "Deus, in adjutórium meum inténde.",
+        "eng": "O God, come to my assistance.",
+        "latR": "Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Nunc, Sancte, nobis Spíritus",
+        "lat": "Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.",
+        "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon",
+        "lat": "Allelúja, allelúja, allelúja.",
+        "eng": "Alleluia, alleluia, alleluia."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 118 — Beáti immaculáti",
+        "ref": "Pro Tertia",
+        "verses": [
+          {
+            "lat": "Beáti immaculáti in via, qui ámbulant in lege Dómini.",
+            "eng": "Blessed are the undefiled in the way, who walk in the law of the Lord."
+          },
+          {
+            "lat": "Beáti qui scrutántur testimónia ejus: in toto corde exquírunt eum.",
+            "eng": "Blessed are they that search His testimonies: that seek Him with their whole heart."
+          },
+          {
+            "lat": "Non enim qui operántur iniquitátem, in viis ejus ambulavérunt.",
+            "eng": "For they that work iniquity, have not walked in His ways."
+          }
+        ]
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "Jer 17:14",
+        "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
+        "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Conclusion",
+        "lat": "Benedicámus Dómino. Deo grátias.",
+        "eng": "Let us bless the Lord. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "sexta",
+    "name": "Sexta",
+    "eng": "Sext",
+    "time": "at midday",
+    "hour": 12,
+    "minute": 0,
+    "glyph": "VI",
+    "order": 5,
+    "intro": "The sixth hour — noon. The hour at which Our Lord was nailed to the Cross. A pause in the day's work to remember His sacrifice.",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Opening",
+        "lat": "Deus, in adjutórium meum inténde.",
+        "eng": "O God, come to my assistance.",
+        "latR": "Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Rector potens, verax Deus",
+        "lat": "Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.",
+        "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon",
+        "lat": "Allelúja, allelúja, allelúja.",
+        "eng": "Alleluia, alleluia, alleluia."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 122 — Ad te levávi óculos meos",
+        "ref": "Pro Sexta",
+        "verses": [
+          {
+            "lat": "Ad te levávi óculos meos, qui hábitas in cælis.",
+            "eng": "To Thee have I lifted up my eyes, who dwellest in heaven."
+          },
+          {
+            "lat": "Ecce sicut óculi servórum in mánibus dominórum suórum, ita óculi nostri ad Dóminum Deum nostrum.",
+            "eng": "Behold as the eyes of servants are on the hands of their masters, so are our eyes unto the Lord our God."
+          },
+          {
+            "lat": "Miserére nostri, Dómine, miserére nostri.",
+            "eng": "Have mercy on us, O Lord, have mercy on us."
+          }
+        ]
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "Gal 6:2",
+        "lat": "Alter altérius ónera portáte, et sic adimplébitis legem Christi.",
+        "eng": "Bear ye one another's burdens; and so you shall fulfil the law of Christ."
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Conclusion",
+        "lat": "Benedicámus Dómino. Deo grátias.",
+        "eng": "Let us bless the Lord. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "nona",
+    "name": "Nona",
+    "eng": "None",
+    "time": "at the ninth hour",
+    "hour": 15,
+    "minute": 0,
+    "glyph": "IX",
+    "order": 6,
+    "intro": "The ninth hour — three in the afternoon. The hour at which Our Lord died upon the Cross. Adore Him with the centurion: 'Truly this was the Son of God.'",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Opening",
+        "lat": "Deus, in adjutórium meum inténde.",
+        "eng": "O God, come to my assistance.",
+        "latR": "Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Rerum Deus tenax vigor",
+        "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.",
+        "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon",
+        "lat": "Allelúja, allelúja, allelúja.",
+        "eng": "Alleluia, alleluia, alleluia."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 125 — In converténdo",
+        "ref": "Pro Nona",
+        "verses": [
+          {
+            "lat": "In converténdo Dóminus captivitátem Sion: facti sumus sicut consoláti.",
+            "eng": "When the Lord brought back the captivity of Sion, we became like men comforted."
+          },
+          {
+            "lat": "Tunc replétum est gáudio os nostrum: et lingua nostra exsultatióne.",
+            "eng": "Then was our mouth filled with gladness; and our tongue with joy."
+          },
+          {
+            "lat": "Magnificávit Dóminus fácere nobíscum: facti sumus lætántes.",
+            "eng": "The Lord hath done great things for us: we are become joyful."
+          }
+        ]
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "Deut 4:31",
+        "lat": "Quia Deus miséricors Dóminus Deus tuus est: non dimíttet te, nec omníno discoóperit, neque obliviscétur testaménti, in quo jurávit pátribus tuis.",
+        "eng": "For the Lord thy God is a merciful God: He will not leave thee, nor altogether destroy thee, nor forget the covenant by which He swore to thy fathers."
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Conclusion",
+        "lat": "Benedicámus Dómino. Deo grátias.",
+        "eng": "Let us bless the Lord. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "vesperae",
+    "name": "Vésperæ",
+    "eng": "Vespers",
+    "time": "at sunset",
+    "hour": 18,
+    "minute": 0,
+    "glyph": "V",
+    "order": 7,
+    "intro": "The evening hour — when the sun sets and the lamps are lit. The Church sings the Magnificat, Our Lady's canticle of praise, the second great hinge-hour of the day.",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Opening",
+        "lat": "Deus, in adjutórium meum inténde.",
+        "eng": "O God, come to my assistance.",
+        "latR": "Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Lucis Creátor óptime",
+        "lat": "Lucis Creátor óptime,<br>lucem diérum próferens,<br>primórdiis lucis novæ,<br>mundi parans oríginem.",
+        "eng": "O blest Creator of the light,<br>who mak'st the day with radiance bright,<br>and o'er the forming world didst call<br>the light from chaos first of all."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon",
+        "lat": "Dirigátur, Dómine, orátio mea, sicut incénsum in conspéctu tuo.",
+        "eng": "Let my prayer be directed, O Lord, as incense in Thy sight."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 109 — Dixit Dóminus",
+        "ref": "Vesperæ Dominicæ",
+        "verses": [
+          {
+            "lat": "Dixit Dóminus Dómino meo: Sede a dextris meis.",
+            "eng": "The Lord said to my Lord: Sit Thou at my right hand."
+          },
+          {
+            "lat": "Donec ponam inimícos tuos, scabéllum pedum tuórum.",
+            "eng": "Until I make Thy enemies Thy footstool."
+          },
+          {
+            "lat": "Virgam virtútis tuæ emíttet Dóminus ex Sion: domináre in médio inimicórum tuórum.",
+            "eng": "The Lord will send forth the sceptre of Thy power out of Sion: rule Thou in the midst of Thy enemies."
+          }
+        ]
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "2 Cor 1:3–4",
+        "lat": "Benedíctus Deus, et Pater Dómini nostri Iesu Christi, Pater misericordiárum, et Deus totíus consolatiónis, qui consolátur nos in omni tribulatióne nostra.",
+        "eng": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort, who comforteth us in all our tribulation."
+      },
+      {
+        "type": "canticle",
+        "label": "Canticum Mariæ — Magnificat",
+        "ref": "Lk 1:46–55",
+        "verses": [
+          {
+            "lat": "Magníficat ánima mea Dóminum:",
+            "eng": "My soul doth magnify the Lord:"
+          },
+          {
+            "lat": "Et exsultávit spíritus meus in Deo salutári meo.",
+            "eng": "And my spirit hath rejoiced in God my Saviour."
+          },
+          {
+            "lat": "Quia respéxit humilitátem ancíllæ suæ: ecce enim ex hoc beátam me dicent omnes generatiónes.",
+            "eng": "Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed."
+          },
+          {
+            "lat": "Quia fecit mihi magna qui potens est: et sanctum nomen ejus.",
+            "eng": "Because He that is mighty hath done great things to me: and holy is His name."
+          },
+          {
+            "lat": "Et misericórdia ejus a progénie in progénies timéntibus eum.",
+            "eng": "And His mercy is from generation unto generations, to them that fear Him."
+          }
+        ]
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Conclusion",
+        "lat": "Benedicámus Dómino. Deo grátias.",
+        "eng": "Let us bless the Lord. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "completorium",
+    "name": "Completórium",
+    "eng": "Compline",
+    "time": "before sleep",
+    "hour": 21,
+    "minute": 0,
+    "glyph": "C",
+    "order": 8,
+    "intro": "The night prayer — the Church's last word before sleep. Traditional Roman Compline opens with a blessing and the Confiteor, then moves through psalmody to the Nunc Dimittis and the seasonal Marian antiphon. The hour ends with the soul commended into God's hands.",
+    "parts": [
+      {
+        "type": "vr",
+        "label": "Blessing",
+        "lat": "Iube, dómne, benedícere.",
+        "eng": "Pray, sir, a blessing.",
+        "latR": "Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. Amen.",
+        "engR": "May the almighty Lord grant us a quiet night and a perfect end. Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Short Reading (1 Peter 5:8–9)",
+        "lat": "Frátres: sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret: cui resístite fortes in fide.",
+        "eng": "Brethren: be sober and watch; for your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Resist ye him, strong in faith.",
+        "latR": "Tu autem, Dómine, miserére nobis. Deo grátias.",
+        "engR": "But Thou, O Lord, have mercy on us. Thanks be to God."
+      },
+      {
+        "type": "confiteor",
+        "label": "Confiteor"
+      },
+      {
+        "type": "vr",
+        "label": "Supplication",
+        "lat": "Convérte nos, Deus, salutáris noster.",
+        "eng": "Convert us, O God our Saviour.",
+        "latR": "Et avérte iram tuam a nobis.",
+        "engR": "And turn away Thine anger from us."
+      },
+      {
+        "type": "vr",
+        "label": "Opening",
+        "lat": "Deus, in adjutórium meum inténde.",
+        "eng": "O God, come to my assistance.",
+        "latR": "Dómine, ad adjuvándum me festína. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon",
+        "lat": "Miserére mihi, Dómine, et exáudi oratiónem meam.",
+        "eng": "Have mercy on me, O Lord, and hear my prayer."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 30 — In te, Dómine, sperávi",
+        "ref": "Pro Completorio",
+        "verses": [
+          {
+            "lat": "In te, Dómine, sperávi, non confúndar in ætérnum: in justítia tua líbera me.",
+            "eng": "In Thee, O Lord, have I hoped, let me never be confounded: deliver me in Thy justice."
+          },
+          {
+            "lat": "Inclína ad me aurem tuam, accélera ut éruas me.",
+            "eng": "Bow down Thy ear to me: make haste to deliver me."
+          },
+          {
+            "lat": "In manus tuas comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",
+            "eng": "Into Thy hands I commend my spirit: Thou hast redeemed me, O Lord, the God of truth."
+          }
+        ]
+      },
+      {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Te lucis ante términum",
+        "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.",
+        "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now."
+      },
+      {
+        "type": "capitulum",
+        "label": "Capitulum",
+        "ref": "Jeremiah 14:9",
+        "lat": "Tu autem in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine Deus noster.",
+        "eng": "But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsory",
+        "ref": "In manus tuas — Psalm 30:6",
+        "v1Lat": "In manus tuas, Dómine, comméndo spíritum meum.",
+        "v1Eng": "Into Thy hands, O Lord, I commend my spirit.",
+        "r1Lat": "Redemísti nos, Dómine, Deus veritátis.",
+        "r1Eng": "Thou hast redeemed us, O Lord, the God of truth.",
+        "v2Lat": "Custódi nos, Dómine, ut pupíllam óculi.",
+        "v2Eng": "Keep us, O Lord, as the apple of Thine eye.",
+        "r2Lat": "Sub umbra alárum tuárum prótege nos.",
+        "r2Eng": "Protect us under the shadow of Thy wings."
+      },
+      {
+        "type": "canticle",
+        "label": "Canticum Simeónis — Nunc Dimittis",
+        "ref": "Lk 2:29–32",
+        "verses": [
+          {
+            "lat": "Nunc dimíttis servum tuum, Dómine, secúndum verbum tuum in pace:",
+            "eng": "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace:"
+          },
+          {
+            "lat": "Quia vidérunt óculi mei salutáre tuum,",
+            "eng": "Because my eyes have seen Thy salvation,"
+          },
+          {
+            "lat": "Quod parásti ante fáciem ómnium populórum:",
+            "eng": "Which Thou hast prepared before the face of all peoples:"
+          },
+          {
+            "lat": "Lumen ad revelatiónem géntium, et glóriam plebis tuæ Israël.",
+            "eng": "A light to the revelation of the Gentiles, and the glory of Thy people Israel."
+          }
+        ]
+      },
+      {
+        "type": "pater"
+      },
+      {
+        "type": "collect",
+        "label": "Collect",
+        "lat": "Vísita, quǽsumus, Dómine, habitatiónem istam, et omnes insídias inimíci ab ea longe repélle: Angeli tui sancti hábitent in ea, qui nos in pace custódiant. Per Dóminum nostrum Iesum Christum. Amen.",
+        "eng": "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy: let Thy holy Angels dwell herein, to preserve us in peace. Through our Lord Jesus Christ. Amen."
+      },
+      {
+        "type": "closing",
+        "label": "Marian Antiphon",
+        "lat": "Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve.",
+        "eng": "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope, hail."
+      }
+    ]
+  }
+]

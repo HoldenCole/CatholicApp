@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
+<title>Introibo — Today</title>
+<style>
+/* fonts, * reset, and body::before come from styles.css */
+
+/* Page-specific body padding */
+body{
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;
+  margin:0 auto;
+  min-height:100vh;
+  padding:56px 28px 110px;
+  position:relative;
+}
+
+/* Double-rule gold page frame (like a printed missal page) */
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.35);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.22);
+}
+
+/* Content above grain */
+main{position:relative;z-index:2}
+
+/* ---------- Top matter ---------- */
+.feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.day{
+  font-family:'Playfair Display',serif;
+  font-size:42px;font-weight:600;
+  color:#1C1410;
+  line-height:0.95;
+  letter-spacing:-0.5px;
+  margin-bottom:2px;
+}
+.date{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-style:italic;
+  color:#7A6A58;
+  margin-bottom:10px;
+}
+
+/* Missal rite — tappable italic line, not a pill */
+.rite{
+  display:inline-block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;font-weight:600;
+  color:#8B1A1A;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding-bottom:2px;
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+}
+.rite .sep{color:#B8960C;margin:0 6px;font-style:normal}
+.rite .caret{font-size:9px;margin-left:4px;opacity:0.6}
+.rite--small{font-size:11px;letter-spacing:1.4px}
+
+/* ---------- Ornamental dividers ---------- */
+.orn{
+  display:flex;align-items:center;gap:14px;
+  margin:26px 0 20px;
+}
+.orn::before,.orn::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.orn .glyph{
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;
+  font-size:13px;
+  opacity:0.7;
+}
+.orn.major .glyph{font-size:16px;opacity:0.85}
+
+/* ---------- Section labels ---------- */
+.sec-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  margin-bottom:1px;
+}
+.sec-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  margin-bottom:14px;
+}
+
+/* ---------- Penance ---------- */
+.sec-head{display:flex;justify-content:space-between;align-items:baseline}
+.penance-entry{
+  position:relative;
+  padding:6px 0 8px 20px;
+}
+.penance-entry::before{
+  content:'';position:absolute;
+  left:0;top:8px;bottom:10px;
+  width:2px;background:#8B1A1A;
+}
+.rubric{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:3px;
+}
+.rmark{color:#8B1A1A}
+.p-title{
+  font-family:'Playfair Display',serif;
+  font-size:18px;font-weight:500;
+  color:#1C1410;
+  line-height:1.25;
+}
+.p-desc{
+  font-family:'EB Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  margin-top:4px;
+  line-height:1.4;
+}
+
+/* ---------- Devotions list ---------- */
+.dev-row{
+  padding:13px 0 13px 0;
+  border-bottom:0.5px solid rgba(184,150,12,0.2);
+  position:relative;
+}
+.dev-row:last-child{border-bottom:none}
+.dev-name{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:500;
+  color:#1C1410;
+  line-height:1.2;
+}
+.dev-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  margin-top:2px;
+}
+.dev-row::after{
+  content:'›';
+  position:absolute;
+  right:0;top:50%;
+  transform:translateY(-50%);
+  color:#B8960C;
+  font-size:18px;
+  opacity:0.5;
+  font-family:'Playfair Display',serif;
+}
+.dev-row.preview{cursor:default;opacity:0.55}
+.dev-row.preview::after{display:none}
+
+/* ---------- Rosary: flowing, no card ---------- */
+.rosary{
+  position:relative;
+  padding:4px 0 4px 44px;
+  margin-top:6px;
+}
+.rosary .dropcap{
+  position:absolute;
+  left:0;top:-8px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:54px;
+  font-weight:500;
+  color:#8B1A1A;
+  line-height:1;
+}
+.rosary .dropcap::after{
+  content:'';position:absolute;
+  left:2px;bottom:4px;
+  width:32px;height:0.5px;
+  background:#B8960C;
+}
+.rosary-title{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-weight:500;
+  color:#1C1410;
+  line-height:1.2;
+}
+.rosary-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  margin-top:2px;
+}
+.rosary-link{
+  display:inline-block;
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.rosary-link .cross{color:#B8960C;margin:0 6px;font-style:normal}
+
+/* ---------- End mark ---------- */
+.end{
+  text-align:center;
+  margin:34px 0 10px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  letter-spacing:10px;
+  opacity:0.45;
+}
+
+/* ---------- Gear ---------- */
+.gear{
+  position:fixed;top:56px;right:28px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  color:#8B1A1A;
+  opacity:0.7;
+  text-decoration:none;
+  z-index:5;
+}
+
+/* ---------- Tab bar ---------- */
+.tab-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;
+  z-index:20;
+}
+.tab-bar::before{
+  content:'';
+  position:absolute;
+  top:22px;left:32px;right:32px;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+  font-style:normal;
+  font-weight:400;
+  line-height:1;
+  color:#B8960C;
+  opacity:0.75;
+}
+.tab.active{color:#8B1A1A}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
+
+/* ---------- Saint-being-followed ---------- */
+.saint-follow{
+  position:relative;
+  padding:6px 0 8px 58px;
+  margin-top:4px;
+  cursor:pointer;
+}
+.saint-follow .dropcap{
+  position:absolute;
+  left:0;top:-4px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:54px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+}
+.saint-follow .dropcap::after{
+  content:'';display:block;
+  width:32px;height:0.5px;
+  background:#B8960C;
+  margin:4px auto 0;
+}
+.saint-follow .name{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-weight:500;
+  color:#1C1410;
+  line-height:1.15;
+}
+.saint-follow .role{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#8B1A1A;
+  margin-top:1px;
+}
+.saint-follow .quote{
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  margin-top:8px;
+  line-height:1.5;
+  padding-left:10px;
+  border-left:0.5px solid rgba(139,26,26,0.35);
+}
+.saint-follow .streak-line{
+  display:inline-block;
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.saint-follow .streak-line .cross{color:#B8960C;margin:0 6px}
+
+/* ---------- Schola mastery progress ---------- */
+.schola{margin-top:6px;padding:4px 0}
+.schola .dots{
+  display:flex;align-items:center;gap:6px;
+  margin:6px 0 8px;
+  flex-wrap:nowrap;
+}
+.schola .dot{
+  width:7px;height:7px;border-radius:50%;
+  border:0.5px solid rgba(184,150,12,0.55);
+  background:transparent;
+  flex-shrink:0;
+  transition:all 0.3s;
+}
+.schola .dot.done{background:#8B1A1A;border-color:#8B1A1A}
+.schola .dot.current{background:#B8960C;border-color:#B8960C;box-shadow:0 0 0 1.5px rgba(184,150,12,0.25)}
+.schola .dots .cx{
+  font-family:'Cormorant Garamond',serif;
+  color:#B8960C;font-size:12px;
+  flex-shrink:0;opacity:0.7;
+}
+.schola .count-line{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#9A8670;
+  letter-spacing:0.3px;
+}
+.schola .count-line .red{color:#8B1A1A;font-weight:600}
+.schola .go-link{
+  display:inline-block;
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.schola .go-link .cross{color:#B8960C;margin:0 6px}
+
+/* ---------- Prayed-today badge on Rosary ---------- */
+.prayed-badge{
+  display:inline-block;
+  margin-top:8px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.2px;text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.4);
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+  padding:3px 10px;
+}
+.prayed-badge::before{content:'✠ '}
+.prayed-badge::after{content:' ✠'}
+
+/* ---------- Lent Friday indulgence flag ---------- */
+.indulgence-row{
+  display:none;
+  align-items:flex-start;
+  gap:10px;
+  padding:10px 0 10px;
+  margin-top:6px;
+}
+.indulgence-row.show{display:flex}
+.indulgence-row .pip{
+  flex:0 0 auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.2px;text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.4);
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+  padding:2px 8px;
+  margin-top:1px;
+}
+.indulgence-row .pip::before{content:'✠ '}
+.indulgence-row .pip::after{content:' ✠'}
+.indulgence-row .text{
+  flex:1;
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.4;
+}
+
+/* ---------- Settings overlay ---------- */
+.settings-overlay{
+  display:none;
+  position:fixed;
+  top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  height:100%;
+  background:#F2E8D0;
+  z-index:30;
+  overflow-y:auto;
+}
+.settings-overlay.show{display:block}
+.settings-overlay::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px;
+  z-index:1;
+  mix-blend-mode:multiply;
+  opacity:0.7;
+}
+
+.settings-overlay .s-head{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;
+  overflow:hidden;
+}
+.settings-overlay .s-head::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.settings-overlay .s-head::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.settings-overlay .back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  cursor:pointer;
+  z-index:6;
+}
+.settings-overlay .s-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;
+  margin-bottom:8px;
+}
+.settings-overlay h2{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;
+  line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.settings-overlay .s-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;
+  margin-top:4px;
+}
+.settings-overlay .s-body{
+  position:relative;z-index:2;
+  padding:24px 28px 60px;
+}
+.settings-overlay .s-sec{
+  margin-bottom:28px;
+  padding-top:14px;
+  position:relative;
+}
+.settings-overlay .s-sec::before{
+  content:'';
+  position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:70%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.settings-overlay .s-sec:first-child{padding-top:0}
+.settings-overlay .s-sec:first-child::before{display:none}
+.settings-overlay .s-sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3px;text-transform:uppercase;
+  text-align:center;
+  margin-bottom:4px;
+}
+.settings-overlay .s-sec-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  text-align:center;
+  margin-bottom:14px;
+}
+.settings-overlay .s-option{
+  display:flex;
+  align-items:center;
+  padding:12px 4px;
+  border-bottom:0.5px dotted rgba(184,150,12,0.3);
+  cursor:pointer;
+}
+.settings-overlay .s-option:last-child{border-bottom:none}
+.settings-overlay .s-option .check{
+  flex:0 0 24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  color:transparent;
+  text-align:left;
+}
+.settings-overlay .s-option.selected .check{color:#8B1A1A}
+.settings-overlay .s-option .s-opt-name{
+  flex:1;
+  font-family:'Playfair Display',serif;
+  font-size:15px;
+  color:#1C1410;
+}
+.settings-overlay .s-option.selected .s-opt-name{
+  color:#8B1A1A;
+  font-weight:500;
+}
+.settings-overlay .s-option .s-opt-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;
+  color:#9A8670;
+  margin-left:8px;
+}
+.settings-overlay .s-reset-wrap{text-align:center}
+.settings-overlay .s-reset{
+  display:inline-block;
+  margin:10px 0 0;
+  padding:10px 20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.45);
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  cursor:pointer;
+  text-decoration:none;
+}
+.settings-overlay .s-reset .cross{color:#B8960C;margin:0 6px}
+.settings-overlay .s-about{
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.6;
+  text-align:center;
+}
+</style>
+<script src="lit-context.js"></script>
+<script src="ui-helpers.js"></script>
+</head>
+<body>
+
+<div class="frame"></div>
+
+<a class="gear" href="#" onclick="openSettings('general');return false" aria-label="Settings">✦</a>
+
+<main>
+
+<div class="feria" id="t-feria">✠ &nbsp; Feria Sexta in Quadragesima</div>
+<div class="day" id="t-day">Friday</div>
+<div class="date" id="t-date">the twenty-eighth of March</div>
+<a href="#" class="rite" id="t-rite-link" onclick="openSettings('rite');return false">Ritus <span class="sep">·</span> <span id="t-rite-label">Missale Romanum 1962</span> <span class="caret">▾</span></a>
+
+<div class="orn major"><span class="glyph">✠</span></div>
+
+<!-- Penance -->
+<div class="sec-head">
+  <div>
+    <div class="sec-label">Pænitentia</div>
+    <div class="sec-latin">The day's penance</div>
+  </div>
+  <a href="#" class="rite rite--small" id="t-penance-link" onclick="openSettings('penance');return false"><span id="t-penance-label">Codex 1962</span> <span class="caret">▾</span></a>
+</div>
+
+<div class="penance-entry">
+  <div class="rubric" id="t-prubric">℟. &nbsp; Feria Sexta</div>
+  <div class="p-title" id="t-ptitle">Abstinence from flesh-meat</div>
+  <div class="p-desc" id="t-pdesc">All the faithful who have reached the age of reason abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.</div>
+  <div class="indulgence-row" id="t-indulg">
+    <div class="pip">Indulgentia Plenária</div>
+    <div class="text">Today the Prayer Before a Crucifix may be prayed for a plenary indulgence (Lenten Friday after Communion).</div>
+  </div>
+</div>
+
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
+
+<!-- Devotions -->
+<div class="sec-label">Devotiones Hodiernæ</div>
+<div class="sec-latin">Today's devotions</div>
+
+<div class="dev-row" onclick="location.href='office.html'">
+  <div class="dev-name">The Divine Office</div>
+  <div class="dev-latin">Officium Divinum — Lauds &amp; Vespers</div>
+</div>
+<div class="dev-row" onclick="location.href='confession.html#examen'">
+  <div class="dev-name">Examination of Conscience</div>
+  <div class="dev-latin">Examen Conscientiæ</div>
+</div>
+<div class="dev-row" onclick="location.href='prayers.html#morning'">
+  <div class="dev-name">Morning Offering</div>
+  <div class="dev-latin">Oblatio Matutina</div>
+</div>
+
+<div class="orn major"><span class="glyph">✠</span></div>
+
+<!-- Rosary -->
+<div class="sec-label">Sacratissimum Rosarium</div>
+<div class="sec-latin">The Most Holy Rosary</div>
+
+<div class="rosary">
+  <span class="dropcap">P</span>
+  <div class="rosary-title">Pray the Mysteries</div>
+  <div class="rosary-sub" id="t-rosarysub">Mysteria Dolorosa &nbsp;—&nbsp; Sorrowful, for Friday</div>
+  <a href="rosary.html" class="rosary-link">Incipiat Oratio <span class="cross">✠</span> Begin</a>
+  <div id="rosary-prayed"></div>
+</div>
+
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
+
+<!-- Saints -->
+<div class="sec-label">Praxes Sanctorum</div>
+<div class="sec-latin" id="saints-subtitle">Practices of the Saints</div>
+
+<div id="saints-section">
+  <!-- Populated by script: either a "Follow a Saint" CTA or the followed saint's daily view -->
+  <div class="dev-row" onclick="location.href='saints.html'">
+    <div class="dev-name">Follow a Saint's Rule of Life</div>
+    <div class="dev-latin">Sequere Regulam Sancti</div>
+  </div>
+</div>
+
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
+
+<!-- Schola -->
+<div class="sec-label">Schola Latina</div>
+<div class="sec-latin">Your Latin journey</div>
+
+<div class="schola" onclick="location.href='learn.html'">
+  <div class="dots" id="schola-dots"></div>
+  <div class="count-line" id="schola-count"><span class="red">Nondum incépisti</span> &nbsp;·&nbsp; 0 of X lessons mastered</div>
+  <a href="learn.html" class="go-link">Ad Scholam <span class="cross">✠</span> Go to Schola</a>
+</div>
+
+<div class="orn"><span class="glyph">· ✦ ·</span></div>
+
+<!-- More -->
+<div class="sec-label">Amplius</div>
+<div class="sec-latin">Further devotions &amp; guides</div>
+
+<div class="dev-row" onclick="location.href='stations.html'">
+  <div class="dev-name">Stations of the Cross</div>
+  <div class="dev-latin">Via Crucis</div>
+</div>
+<div class="dev-row" onclick="location.href='confession.html'">
+  <div class="dev-name">Guide to Confession</div>
+  <div class="dev-latin">De Sacramento Pænitentiæ</div>
+</div>
+<div class="dev-row" onclick="location.href='reference.html'">
+  <div class="dev-name">How to Attend the Latin Mass</div>
+  <div class="dev-latin">Quomodo Missam Latinam Audire</div>
+</div>
+<div class="dev-row preview">
+  <div class="dev-name">Daily Readings</div>
+  <div class="dev-latin">Lectiones Diurnæ</div>
+</div>
+
+<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+
+</main>
+
+<nav class="tab-bar">
+  <a class="tab active" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+<!-- ===== Settings overlay ===== -->
+<div class="settings-overlay" id="settings">
+  <div class="frame"></div>
+  <div class="s-head">
+    <a class="back" onclick="closeSettings()">‹ &nbsp; Hodie</a>
+    <div class="s-label">✠ &nbsp; Consilia &nbsp; ✠</div>
+    <h2>Settings</h2>
+    <div class="s-sub">Consilia &amp; Præferentiæ</div>
+  </div>
+  <div class="s-body">
+
+    <div class="s-sec" id="sec-rite">
+      <div class="s-sec-title">Missal Rite</div>
+      <div class="s-sec-latin">Ritus Missalis</div>
+      <div class="s-option" data-rite="1962" onclick="setRite('1962')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Missale Romanum 1962</div>
+        <div class="s-opt-latin">Editio typica 1962</div>
+      </div>
+      <div class="s-option" data-rite="1955" onclick="setRite('1955')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Missale Romanum 1955</div>
+        <div class="s-opt-latin">Pius XII Holy Week reforms</div>
+      </div>
+      <div class="s-option" data-rite="pre1955" onclick="setRite('pre1955')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Pre-1955 Missal</div>
+        <div class="s-opt-latin">Full traditional Holy Week</div>
+      </div>
+    </div>
+
+    <div class="s-sec" id="sec-penance">
+      <div class="s-sec-title">Penance Discipline</div>
+      <div class="s-sec-latin">Codex Pænitentiæ</div>
+      <div class="s-option" data-penance="1962" onclick="setPenance('1962')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Codex 1962</div>
+        <div class="s-opt-latin">Friday abstinence + Lenten fast</div>
+      </div>
+      <div class="s-option" data-penance="1917" onclick="setPenance('1917')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Codex 1917</div>
+        <div class="s-opt-latin">Stricter — all Fridays + Ember Days</div>
+      </div>
+      <div class="s-option" data-penance="strict" onclick="setPenance('strict')">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Strict Traditional</div>
+        <div class="s-opt-latin">Wednesday + Friday + Saturday in Lent</div>
+      </div>
+    </div>
+
+    <div class="s-sec" id="sec-display">
+      <div class="s-sec-title">Display</div>
+      <div class="s-sec-latin">Præsentátio</div>
+      <div class="s-option" id="dark-toggle" onclick="toggleDarkMode();renderSettings()">
+        <div class="check">✠</div>
+        <div class="s-opt-name">Dark Mode</div>
+        <div class="s-opt-latin">Modus Tenebrosus — candlelit vellum</div>
+      </div>
+    </div>
+
+    <div class="s-sec" id="sec-reset">
+      <div class="s-sec-title">Reset</div>
+      <div class="s-sec-latin">Clear all local progress</div>
+      <div class="s-reset-wrap">
+        <a class="s-reset" onclick="resetAll();return false" href="#">Reset <span class="cross">✠</span> Clear Data</a>
+      </div>
+    </div>
+
+    <div class="s-sec" id="sec-about">
+      <div class="s-sec-title">About</div>
+      <div class="s-sec-latin">De Applicatione</div>
+      <div class="s-about">
+        <em>Introíbo</em> &nbsp;·&nbsp; <em>Ad altáre Dei</em> — To the Altar of God<br>
+        A free prayer companion for traditional Catholics.<br>
+        No accounts, no tracking, no ads. All data is stored locally on your device.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== Minimal saint data (mirror of saints.html, just what Today needs) =====
+var SAINT_INFO={
+  pio:{name:"St. Padre Pio",role:"Mystic, Stigmatist, Confessor",initial:"P",quote:"Pray, hope, and don't worry. Worry is useless. God is merciful and will hear your prayer."},
+  therese:{name:"St. Thérèse of Lisieux",role:"Doctor of the Church · The Little Flower",initial:"T",quote:"Miss no single opportunity of making some small sacrifice, here by a smiling look, there by a kindly word."},
+  aquinas:{name:"St. Thomas Aquinas",role:"Doctor of the Church · Doctor Angelicus",initial:"T",quote:"To one who has faith, no explanation is necessary. To one without faith, no explanation is possible."},
+  benedict:{name:"St. Benedict of Nursia",role:"Father of Western Monasticism",initial:"B",quote:"Ora et labora — Pray and work. Let nothing be preferred to the Work of God."},
+  teresa:{name:"St. Teresa of Ávila",role:"Doctor of the Church · Mystic, Reformer",initial:"T",quote:"Let nothing disturb thee, nothing affright thee; all things are passing; God never changeth."},
+  escriva:{name:"St. Josemaría Escrivá",role:"Founder of Opus Dei",initial:"J",quote:"Do everything for Love. Thus there will be no little things: everything will be big."},
+  desales:{name:"St. Francis de Sales",role:"Doctor of the Church · Bishop of Geneva",initial:"F",quote:"Nothing is so strong as gentleness; nothing so gentle as real strength."}
+};
+
+function getLS(key,fallback){try{var v=localStorage.getItem(key);return v==null?fallback:v}catch(e){return fallback}}
+function getLSJson(key,fallback){try{return JSON.parse(localStorage.getItem(key)||'null')||fallback}catch(e){return fallback}}
+// toRoman + escapeHtml come from ui-helpers.js (loaded via <script src> in <head>)
+
+// ===== Render followed-saint section =====
+function renderSaintSection(){
+  var slug=getLS('aad.saints.followed','');
+  var section=document.getElementById('saints-section');
+  var subtitle=document.getElementById('saints-subtitle');
+  if(!slug || !SAINT_INFO[slug]){
+    // Not following anyone — leave the default CTA
+    subtitle.textContent='Practices of the Saints';
+    return;
+  }
+  var s=SAINT_INFO[slug];
+  var streak=parseInt(getLS('aad.saints.streak.'+slug,'0'),10)||0;
+  subtitle.textContent='You are following';
+  var streakLine=streak>0
+    ? '<a class="streak-line" href="saints.html">'+toRoman(streak)+' consecutive day'+(streak===1?'':'s')+' <span class="cross">✠</span> Open Practices</a>'
+    : '<a class="streak-line" href="saints.html">Today\'s Practices <span class="cross">✠</span> Open</a>';
+  section.innerHTML=
+    '<div class="saint-follow" onclick="location.href=\'saints.html\'">'+
+      '<span class="dropcap">'+s.initial+'</span>'+
+      '<div class="name">'+escapeHtml(s.name)+'</div>'+
+      '<div class="role">'+escapeHtml(s.role)+'</div>'+
+      '<div class="quote">'+escapeHtml(s.quote)+'</div>'+
+      streakLine+
+    '</div>';
+}
+
+// ===== Render Schola mastery progress =====
+var LESSON_ORDER=['vowels','consonants','stress','declensions','verbs','vocab50','ave','pater','psalms','vulgate'];
+function renderSchola(){
+  var mastered=getLSJson('aad.learn.mastered',[]);
+  var dots=document.getElementById('schola-dots');
+  var count=document.getElementById('schola-count');
+  var html='';
+  var firstUnmastered=-1;
+  for(var i=0;i<10;i++){
+    if(i===5){html+='<span class="cx">✠</span>'}
+    var done=mastered.indexOf(LESSON_ORDER[i])>-1;
+    var cls='dot'+(done?' done':'');
+    if(!done && firstUnmastered===-1){firstUnmastered=i;cls='dot current'}
+    html+='<span class="'+cls+'"></span>';
+  }
+  dots.innerHTML=html;
+  var n=mastered.length;
+  if(n===0){
+    count.innerHTML='<span class="red">Nondum incépisti</span> &nbsp;·&nbsp; Begin your Latin journey';
+  }else if(n===10){
+    count.innerHTML='<span class="red">Consummátum</span> &nbsp;·&nbsp; All X lessons mastered';
+  }else{
+    count.innerHTML='<span class="red">'+toRoman(n)+' of X</span> &nbsp;·&nbsp; lessons mastered';
+  }
+}
+
+// ===== Render Rosary "prayed today" badge =====
+function renderRosaryBadge(){
+  var today=new Date().toISOString().slice(0,10);
+  var lastDate=getLS('aad.rosary.lastDate','');
+  var lastSet=getLS('aad.rosary.lastSet','');
+  var el=document.getElementById('rosary-prayed');
+  if(lastDate===today && lastSet){
+    var setName={sorrowful:'Sorrowful',joyful:'Joyful',glorious:'Glorious'}[lastSet]||lastSet;
+    el.innerHTML='<div class="prayed-badge">Orátum Hódie &nbsp;·&nbsp; Prayed Today ('+setName+')</div>';
+  }else{
+    el.innerHTML='';
+  }
+}
+
+// ===== Liturgical context (feria, season, penance, today's mystery) =====
+function renderLiturgicalContext(){
+  if(typeof LitContext==='undefined')return;
+  var c=LitContext.get(new Date());
+
+  // Header feria + day + date
+  document.getElementById('t-feria').innerHTML='✠ &nbsp; '+escapeHtml(c.feriaLat)+' &nbsp;·&nbsp; '+escapeHtml(c.latName);
+  document.getElementById('t-feria').style.color=c.colourHex;
+  document.getElementById('t-day').textContent=c.feriaEng;
+  document.getElementById('t-date').textContent=LitContext.formatLongDate(new Date());
+
+  // Penance
+  var p=c.penance;
+  document.getElementById('t-prubric').innerHTML=p.rubric.replace(/℟\./,'<span class="rmark">℟.</span>');
+  document.getElementById('t-ptitle').textContent=p.title;
+  document.getElementById('t-pdesc').textContent=p.desc;
+
+  // Lenten Friday plenary indulgence flag
+  if(c.indulgences && c.indulgences.crucifix){
+    document.getElementById('t-indulg').classList.add('show');
+  }
+
+  // Rosary mystery for today
+  var ms=escapeHtml(c.mysteryLat)+' &nbsp;—&nbsp; '+escapeHtml(c.mysteryEng.replace(' Mysteries',''))+', for '+escapeHtml(c.feriaEng);
+  document.getElementById('t-rosarysub').innerHTML=ms;
+}
+
+// ===== Settings overlay =====
+var RITE_LABELS={'1962':'Missale Romanum 1962','1955':'Missale Romanum 1955','pre1955':'Pre-1955 Missal'};
+var PENANCE_LABELS={'1962':'Codex 1962','1917':'Codex 1917','strict':'Strict Traditional'};
+
+function getRite(){return getLS('aad.settings.rite','1962')}
+function getPenanceDiscipline(){return getLS('aad.settings.penance','1962')}
+
+function openSettings(section){
+  renderSettings();
+  var overlay=document.getElementById('settings');
+  overlay.classList.add('show');
+  window.scrollTo(0,0);
+  if(section){
+    // Scroll to the requested section after overlay opens
+    setTimeout(function(){
+      var id={'rite':'sec-rite','penance':'sec-penance','general':''}[section];
+      if(id){
+        var el=document.getElementById(id);
+        if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    },50);
+  }
+}
+function closeSettings(){
+  document.getElementById('settings').classList.remove('show');
+}
+function renderSettings(){
+  var rite=getRite(), pen=getPenanceDiscipline();
+  document.querySelectorAll('.s-option[data-rite]').forEach(function(el){
+    if(el.getAttribute('data-rite')===rite)el.classList.add('selected');
+    else el.classList.remove('selected');
+  });
+  document.querySelectorAll('.s-option[data-penance]').forEach(function(el){
+    if(el.getAttribute('data-penance')===pen)el.classList.add('selected');
+    else el.classList.remove('selected');
+  });
+  // Dark mode toggle state
+  var isDark=Storage.get('aad.settings.darkMode','false')==='true';
+  var toggle=document.getElementById('dark-toggle');
+  if(toggle){
+    if(isDark)toggle.classList.add('selected');
+    else toggle.classList.remove('selected');
+  }
+}
+function setRite(rite){
+  try{localStorage.setItem('aad.settings.rite',rite)}catch(e){}
+  updateRiteLabels();
+  renderSettings();
+}
+function setPenance(pen){
+  try{localStorage.setItem('aad.settings.penance',pen)}catch(e){}
+  updateRiteLabels();
+  renderSettings();
+}
+function updateRiteLabels(){
+  var rite=getRite(), pen=getPenanceDiscipline();
+  var riteLabel=document.getElementById('t-rite-label');
+  var penLabel=document.getElementById('t-penance-label');
+  if(riteLabel)riteLabel.textContent=RITE_LABELS[rite]||RITE_LABELS['1962'];
+  if(penLabel)penLabel.textContent=PENANCE_LABELS[pen]||PENANCE_LABELS['1962'];
+}
+function resetAll(){
+  if(!confirm('Clear all local progress? This removes the saint you are following, your Rosary history, and Schola mastery.'))return;
+  try{
+    Object.keys(localStorage).forEach(function(k){
+      if(k.indexOf('aad.')===0)localStorage.removeItem(k);
+    });
+  }catch(e){}
+  location.reload();
+}
+
+renderLiturgicalContext();
+renderSaintSection();
+renderSchola();
+renderRosaryBadge();
+updateRiteLabels();
+</script>
+
+</body>
+</html>

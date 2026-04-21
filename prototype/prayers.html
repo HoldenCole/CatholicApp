@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
+<title>Introibo — Liber Orationum</title>
+<style>
+
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;
+  margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+
+/* body::before grain comes from styles.css */
+
+/* ===== Dark walnut header ===== */
+.header{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;
+  overflow:hidden;
+}
+.header::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.header::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.h-feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.h-title{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.h-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:4px;
+}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 10px}
+.h-rule::before,.h-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+.h-search{
+  display:block;text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:600;
+  color:#B8960C;
+  letter-spacing:2.2px;text-transform:uppercase;
+  text-decoration:none;
+}
+
+/* ===== Page frame ===== */
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+main{position:relative;z-index:2;padding:0 28px 40px}
+
+/* ===== Featured prayer of the day ===== */
+.featured{
+  margin:28px -4px 8px;
+  padding:24px 18px 22px;
+  position:relative;
+  text-align:center;
+}
+.featured::before,.featured::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:88%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.featured::before{top:0}
+.featured::after{bottom:0}
+.featured-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:10px;
+}
+.featured-cap{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:54px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+  margin-bottom:6px;
+}
+.featured-cap::after{
+  content:'';display:block;
+  width:36px;height:0.5px;
+  background:#B8960C;
+  margin:6px auto 0;
+}
+.featured-name{
+  font-family:'Playfair Display',serif;
+  font-size:24px;font-weight:600;
+  color:#1C1410;
+  line-height:1.1;
+}
+.featured-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  margin-top:2px;
+}
+.featured-line{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:14px;
+  color:#7A6A58;
+  margin:14px 12px 14px;
+  line-height:1.5;
+}
+.featured-link{
+  display:inline-block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:700;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+  padding-bottom:2px;
+}
+.featured-link .cross{color:#B8960C;margin:0 6px}
+
+/* ===== Chapter breaks (like missal parts) ===== */
+.chapter{
+  text-align:center;
+  margin:30px -4px 14px;
+  padding:14px 0 12px;
+  position:relative;
+}
+.chapter::before,.chapter::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:70%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.chapter::before{top:0}
+.chapter::after{bottom:0}
+.chapter .cross{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  color:#8B1A1A;
+  margin-bottom:4px;
+}
+.chapter .lat{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:600;font-style:italic;
+  color:#1C1410;
+}
+.chapter .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-style:italic;font-weight:600;
+  color:#9A8670;
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-top:1px;
+}
+
+/* ===== Prayer index entries ===== */
+.entry{
+  display:flex;align-items:baseline;
+  padding:11px 0 11px;
+  position:relative;
+  cursor:pointer;
+  border-bottom:0.5px dotted rgba(184,150,12,0.35);
+}
+.entry:last-child{border-bottom:none}
+.entry .init{
+  flex:0 0 30px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:24px;font-weight:500;
+  color:#8B1A1A;
+  line-height:1;
+  text-align:left;
+}
+.entry .body{flex:1;min-width:0}
+.entry .name{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:500;
+  color:#1C1410;
+  line-height:1.15;
+}
+.entry .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  margin-top:1px;
+}
+.entry .meta{
+  flex:0 0 auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:1.8px;text-transform:uppercase;
+  padding-left:10px;
+  opacity:0.7;
+}
+.entry::after{
+  content:'›';
+  position:absolute;
+  right:-2px;top:50%;
+  transform:translateY(-55%);
+  color:#B8960C;
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  opacity:0.4;
+}
+/* Preview-only entries (no detail overlay yet) */
+.entry.preview{cursor:default;opacity:0.7}
+.entry.preview::after{display:none}
+.entry.preview .init{color:rgba(139,26,26,0.45)}
+
+/* ===== End mark ===== */
+.end{
+  text-align:center;
+  margin:38px 0 14px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  letter-spacing:10px;
+  opacity:0.45;
+}
+
+/* ===== Tab bar ===== */
+.tab-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;
+  z-index:20;
+}
+.tab-bar::before{
+  content:'';position:absolute;
+  top:22px;left:32px;right:32px;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-style:normal;font-weight:400;
+  line-height:1;color:#B8960C;opacity:0.75;
+}
+.tab.active{color:#8B1A1A}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
+
+/* ===== Detail overlay ===== */
+.overlay{
+  display:none;
+  position:fixed;
+  top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  height:100%;
+  background:#F2E8D0;
+  z-index:30;
+  overflow-y:auto;
+}
+.overlay.show{display:block}
+.overlay::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+
+.dh{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;overflow:hidden;
+}
+.dh::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.dh::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.dh .back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  cursor:pointer;
+  z-index:6;
+}
+.dh .cat{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.dh h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.dh .sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:4px;
+}
+.dh .h-rule{margin:14px 8px 10px}
+
+.db{
+  position:relative;z-index:2;
+  padding:24px 28px 60px;
+}
+/* Prayer detail liturgical note (e.g. 'Said daily', 'Plenary indulgence...') */
+.prayer-note{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:#9A8670;text-align:center;margin:0 12px 16px;line-height:1.5}
+.db .lead-cap{
+  float:left;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:48px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+  padding:6px 8px 0 0;
+}
+.mc{display:flex;gap:0;padding:6px 0;clear:none}
+.ml{flex:1;padding-right:11px;border-right:0.5px solid rgba(184,150,12,0.25)}
+.mri{flex:1;padding-left:11px}
+.lt{
+  font-family:'Playfair Display',serif;
+  font-size:15px;color:#1C1410;
+  line-height:1.7;
+}
+.et{
+  font-family:'EB Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.7;
+}
+.rmark{color:#8B1A1A;font-weight:600;margin-right:3px}
+
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:30px;
+  padding:14px 26px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-top:0.5px solid rgba(139,26,26,0.45);
+  border-bottom:0.5px solid rgba(139,26,26,0.45);
+}
+.cta .cross{color:#B8960C}
+.cta-wrap{text-align:center;clear:both}
+</style>
+<script src="lit-context.js"></script>
+<script src="ui-helpers.js"></script>
+</head>
+<body>
+
+<div class="frame"></div>
+
+<header class="header">
+  <div class="h-feria">✠ &nbsp; Liber &nbsp; ✠</div>
+  <div class="h-title">Liber Orationum</div>
+  <div class="h-eng">The Book of Prayers</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+  <a href="#" class="h-search">Quærere &nbsp;·&nbsp; Search</a>
+</header>
+
+<main>
+
+<!-- Featured prayer of the day — populated by pickDailyPrayer() below -->
+<div class="featured" id="featured" onclick="openFeatured()">
+  <div class="featured-label" id="featured-label">Oratio Hodierna &nbsp;·&nbsp; Today's Prayer</div>
+  <div class="featured-cap" id="featured-cap">A</div>
+  <div class="featured-name" id="featured-name">Ave María</div>
+  <div class="featured-eng" id="featured-eng">The Hail Mary</div>
+  <div class="featured-line" id="featured-line">Ave María, grátia plena, Dóminus tecum…</div>
+  <a class="featured-link" onclick="openFeatured();event.stopPropagation()">Aperi <span class="cross">✠</span> Open</a>
+</div>
+
+<!-- Rosarium -->
+<div class="chapter">
+  <span class="cross">✠</span>
+  <div class="lat">Rosárium</div>
+  <div class="eng">Of the Rosary</div>
+</div>
+
+<div class="entry" onclick="show('signum')"><div class="init">S</div><div class="body"><div class="name">Signum Crucis</div><div class="eng">The Sign of the Cross</div></div></div>
+<div class="entry" onclick="show('pater')"><div class="init">P</div><div class="body"><div class="name">Pater Noster</div><div class="eng">The Lord's Prayer</div></div><div class="meta">Daily</div></div>
+<div class="entry" onclick="show('ave')"><div class="init">A</div><div class="body"><div class="name">Ave María</div><div class="eng">Hail Mary</div></div><div class="meta">Daily</div></div>
+<div class="entry" onclick="show('gloriaPatri')"><div class="init">G</div><div class="body"><div class="name">Glória Patri</div><div class="eng">Glory Be to the Father</div></div></div>
+<div class="entry" onclick="show('salve')"><div class="init">S</div><div class="body"><div class="name">Salve Regína</div><div class="eng">Hail Holy Queen</div></div></div>
+<div class="entry" onclick="show('credoApost')"><div class="init">C</div><div class="body"><div class="name">Credo Apostolórum</div><div class="eng">The Apostles' Creed</div></div></div>
+<div class="entry" onclick="show('fatima')"><div class="init">O</div><div class="body"><div class="name">Oratio Fátimæ</div><div class="eng">Fatima Prayer</div></div></div>
+
+<!-- Missa -->
+<div class="chapter">
+  <span class="cross">✠</span>
+  <div class="lat">Missa</div>
+  <div class="eng">Of the Holy Mass</div>
+</div>
+
+<div class="entry" onclick="show('confiteor')"><div class="init">C</div><div class="body"><div class="name">Confíteor</div><div class="eng">I Confess to Almighty God</div></div></div>
+<div class="entry" onclick="show('kyrie')"><div class="init">K</div><div class="body"><div class="name">Kýrie Eléison</div><div class="eng">Lord, Have Mercy</div></div></div>
+<div class="entry" onclick="show('gloriaExcelsis')"><div class="init">G</div><div class="body"><div class="name">Glória in Excélsis</div><div class="eng">Glory to God in the Highest</div></div></div>
+<div class="entry" onclick="show('sanctus')"><div class="init">S</div><div class="body"><div class="name">Sanctus</div><div class="eng">Holy, Holy, Holy</div></div></div>
+<div class="entry" onclick="show('agnus')"><div class="init">A</div><div class="body"><div class="name">Agnus Dei</div><div class="eng">Lamb of God</div></div></div>
+<div class="entry" onclick="show('domineNSD')"><div class="init">D</div><div class="body"><div class="name">Dómine, Non Sum Dignus</div><div class="eng">Lord, I Am Not Worthy</div></div></div>
+
+<!-- Devotiones -->
+<div class="chapter">
+  <span class="cross">✠</span>
+  <div class="lat">Devotiónes</div>
+  <div class="eng">Devotional Prayers</div>
+</div>
+
+<div class="entry" onclick="show('morning')"><div class="init">O</div><div class="body"><div class="name">Oblátio Matutína</div><div class="eng">Morning Offering</div></div><div class="meta">Daily</div></div>
+<div class="entry" onclick="show('memorare')"><div class="init">M</div><div class="body"><div class="name">Memoráre</div><div class="eng">Remember, O Most Gracious Virgin</div></div></div>
+<div class="entry" onclick="show('actusContr')"><div class="init">A</div><div class="body"><div class="name">Actus Contritiónis</div><div class="eng">Act of Contrition</div></div></div>
+<div class="entry" onclick="show('anima')"><div class="init">A</div><div class="body"><div class="name">Ánima Christi</div><div class="eng">Soul of Christ</div></div></div>
+<div class="entry" onclick="show('crucifix')"><div class="init">E</div><div class="body"><div class="name">En Ego, O Bone Iesu</div><div class="eng">Prayer Before a Crucifix</div></div></div>
+<div class="entry" onclick="show('tantumErgo')"><div class="init">T</div><div class="body"><div class="name">Tantum Ergo</div><div class="eng">Therefore So Great a Sacrament</div></div></div>
+<div class="entry" onclick="show('michael')"><div class="init">O</div><div class="body"><div class="name">Oratio ad S. Michaélem</div><div class="eng">Prayer to St. Michael</div></div></div>
+<div class="entry" onclick="show('adoroTe')"><div class="init">A</div><div class="body"><div class="name">Adóro Te Devóte</div><div class="eng">I Devoutly Adore Thee</div></div></div>
+
+<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+
+</main>
+
+<!-- Dynamic prayer detail overlay (populated by show(slug)) -->
+<div class="overlay" id="o-detail">
+  <div class="dh">
+    <a class="back" onclick="hide()">‹ &nbsp; Liber</a>
+    <div class="cat">✠ &nbsp; Rosárium &nbsp; ✠</div>
+    <h2>Ave María</h2>
+    <div class="sub">The Hail Mary</div>
+    <div class="h-rule"><span class="glyph">✦</span></div>
+  </div>
+  <div class="db"></div>
+</div>
+
+
+<script>
+// ===== Full prayer content =====
+var PRAYERS={
+  signum:{title:"Signum Crucis",eng:"The Sign of the Cross",category:"Rosárium",lines:[
+    {lat:"In nómine Patris, et Fílii, et Spíritus Sancti.",eng:"In the name of the Father, and of the Son, and of the Holy Ghost."},
+    {lat:"<em>Amen.</em>",eng:"<em>Amen.</em>"}
+  ]},
+  pater:{title:"Pater Noster",eng:"The Lord's Prayer",category:"Rosárium",lines:[
+    {lat:"Pater noster, qui es in cælis, sanctificétur nomen tuum.",eng:"Our Father, Who art in heaven, hallowed be Thy name."},
+    {lat:"Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra.",eng:"Thy kingdom come. Thy will be done on earth as it is in heaven."},
+    {lat:"Panem nostrum quotidiánum da nobis hódie,",eng:"Give us this day our daily bread,"},
+    {lat:"et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris.",eng:"and forgive us our trespasses, as we forgive those who trespass against us."},
+    {lat:"Et ne nos indúcas in tentatiónem: sed líbera nos a malo.",eng:"And lead us not into temptation, but deliver us from evil."},
+    {lat:"<span class=\"rmark\">℟.</span><em>Amen.</em>",eng:"<span class=\"rmark\">℟.</span><em>Amen.</em>"}
+  ]},
+  ave:{title:"Ave María",eng:"The Hail Mary",category:"Rosárium",lines:[
+    {lat:"Ave María, grátia plena, Dóminus tecum.",eng:"Hail Mary, full of grace, the Lord is with thee."},
+    {lat:"Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus.",eng:"Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus."},
+    {lat:"<span class=\"rmark\">℟.</span>Sancta María, Mater Dei, ora pro nobis peccatóribus,",eng:"<span class=\"rmark\">℟.</span>Holy Mary, Mother of God, pray for us sinners,"},
+    {lat:"nunc et in hora mortis nostræ. <em>Amen.</em>",eng:"now and at the hour of our death. <em>Amen.</em>"}
+  ]},
+  gloriaPatri:{title:"Glória Patri",eng:"Glory Be to the Father",category:"Rosárium",lines:[
+    {lat:"Glória Patri, et Fílio, et Spirítui Sancto.",eng:"Glory be to the Father, and to the Son, and to the Holy Ghost."},
+    {lat:"Sicut erat in princípio, et nunc, et semper,",eng:"As it was in the beginning, is now, and ever shall be,"},
+    {lat:"et in sǽcula sæculórum. <em>Amen.</em>",eng:"world without end. <em>Amen.</em>"}
+  ]},
+  fatima:{title:"Oratio Fátimæ",eng:"The Fatima Prayer",category:"Rosárium",note:"Added after each Gloria Patri in the Rosary, as revealed by Our Lady at Fatima in 1917.",lines:[
+    {lat:"O mi Iesu, dimítte nobis débita nostra,",eng:"O my Jesus, forgive us our sins,"},
+    {lat:"líbera nos ab igne inférni,",eng:"save us from the fires of hell,"},
+    {lat:"perduc in cælum omnes ánimas,",eng:"lead all souls to Heaven,"},
+    {lat:"præsértim eas, quæ misericórdiæ tuæ máxime índigent. <em>Amen.</em>",eng:"especially those most in need of Thy mercy. <em>Amen.</em>"}
+  ]},
+  salve:{title:"Salve Regína",eng:"Hail Holy Queen",category:"Rosárium",note:"Said at the end of the Rosary, and as the Marian antiphon of Compline from Trinity Sunday through Advent.",lines:[
+    {lat:"Salve, Regína, Mater misericórdiæ,",eng:"Hail, holy Queen, Mother of Mercy,"},
+    {lat:"vita, dulcédo et spes nostra, salve.",eng:"our life, our sweetness, and our hope, hail."},
+    {lat:"Ad te clamámus, éxsules fílii Hevæ.",eng:"To thee do we cry, poor banished children of Eve."},
+    {lat:"Ad te suspirámus, geméntes et flentes in hac lacrimárum valle.",eng:"To thee do we send up our sighs, mourning and weeping in this valley of tears."},
+    {lat:"Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte.",eng:"Turn then, most gracious Advocate, thine eyes of mercy toward us."},
+    {lat:"Et Iesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde.",eng:"And after this our exile, show unto us the blessed fruit of thy womb, Jesus."},
+    {lat:"O clemens, o pia, o dulcis Virgo María. <em>Amen.</em>",eng:"O clement, O loving, O sweet Virgin Mary. <em>Amen.</em>"}
+  ]},
+  credoApost:{title:"Credo Apostolórum",eng:"The Apostles' Creed",category:"Rosárium",note:"Said at the beginning of the Rosary, holding the crucifix.",lines:[
+    {lat:"Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ.",eng:"I believe in God, the Father Almighty, Creator of heaven and earth."},
+    {lat:"Et in Iesum Christum, Fílium eius únicum, Dóminum nostrum:",eng:"And in Jesus Christ, His only Son, our Lord:"},
+    {lat:"qui concéptus est de Spíritu Sancto, natus ex María Vírgine,",eng:"Who was conceived by the Holy Ghost, born of the Virgin Mary,"},
+    {lat:"passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus:",eng:"suffered under Pontius Pilate, was crucified, died, and was buried."},
+    {lat:"descéndit ad ínferos; tértia die resurréxit a mórtuis;",eng:"He descended into hell; the third day He rose again from the dead;"},
+    {lat:"ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis:",eng:"He ascended into heaven, and sitteth at the right hand of God the Father Almighty:"},
+    {lat:"inde ventúrus est iudicáre vivos et mórtuos.",eng:"from thence He shall come to judge the living and the dead."},
+    {lat:"Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam,",eng:"I believe in the Holy Ghost, the Holy Catholic Church,"},
+    {lat:"Sanctórum communiónem, remissiónem peccatórum,",eng:"the communion of Saints, the forgiveness of sins,"},
+    {lat:"carnis resurrectiónem, vitam ætérnam. <em>Amen.</em>",eng:"the resurrection of the body, and life everlasting. <em>Amen.</em>"}
+  ]},
+  // ===== MISSA =====
+  confiteor:{title:"Confíteor",eng:"I Confess",category:"Missa",note:"Said at the foot of the altar at the beginning of Mass, and at Compline.",lines:[
+    {lat:"Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini,",eng:"I confess to almighty God, to blessed Mary ever Virgin,"},
+    {lat:"beáto Michaéli Archángelo, beáto Ioánni Baptístæ,",eng:"to blessed Michael the Archangel, to blessed John the Baptist,"},
+    {lat:"sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis,",eng:"to the holy Apostles Peter and Paul, and to all the Saints,"},
+    {lat:"quia peccávi nimis cogitatióne, verbo et ópere:",eng:"that I have sinned exceedingly in thought, word, and deed:"},
+    {lat:"<em>mea culpa, mea culpa, mea máxima culpa.</em>",eng:"<em>through my fault, through my fault, through my most grievous fault.</em>"},
+    {lat:"Ideo precor beátam Maríam semper Vírginem, beátum Michaélem Archángelum,",eng:"Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel,"},
+    {lat:"beátum Ioánnem Baptístam, sanctos Apóstolos Petrum et Paulum, et omnes Sanctos,",eng:"blessed John the Baptist, the holy Apostles Peter and Paul, and all the Saints,"},
+    {lat:"oráre pro me ad Dóminum Deum nostrum. <em>Amen.</em>",eng:"to pray for me to the Lord our God. <em>Amen.</em>"}
+  ]},
+  kyrie:{title:"Kýrie Eléison",eng:"Lord, Have Mercy",category:"Missa",note:"Said in three groups of three at the beginning of Mass.",lines:[
+    {lat:"Kýrie, eléison.",eng:"Lord, have mercy."},
+    {lat:"Kýrie, eléison.",eng:"Lord, have mercy."},
+    {lat:"Kýrie, eléison.",eng:"Lord, have mercy."},
+    {lat:"Christe, eléison.",eng:"Christ, have mercy."},
+    {lat:"Christe, eléison.",eng:"Christ, have mercy."},
+    {lat:"Christe, eléison.",eng:"Christ, have mercy."},
+    {lat:"Kýrie, eléison.",eng:"Lord, have mercy."},
+    {lat:"Kýrie, eléison.",eng:"Lord, have mercy."},
+    {lat:"Kýrie, eléison.",eng:"Lord, have mercy."}
+  ]},
+  gloriaExcelsis:{title:"Glória in Excélsis Deo",eng:"Glory to God in the Highest",category:"Missa",note:"The Greater Doxology. Sung at Mass on Sundays (outside Advent and Lent), feasts, and within octaves.",lines:[
+    {lat:"Glória in excélsis Deo, et in terra pax homínibus bonæ voluntátis.",eng:"Glory be to God on high, and on earth peace to men of good will."},
+    {lat:"Laudámus te. Benedícimus te. Adorámus te. Glorificámus te.",eng:"We praise Thee. We bless Thee. We adore Thee. We glorify Thee."},
+    {lat:"Grátias ágimus tibi propter magnam glóriam tuam.",eng:"We give Thee thanks for Thy great glory."},
+    {lat:"Dómine Deus, Rex cæléstis, Deus Pater omnípotens.",eng:"O Lord God, heavenly King, God the Father almighty."},
+    {lat:"Dómine Fili Unigénite, Iesu Christe. Dómine Deus, Agnus Dei, Fílius Patris.",eng:"O Lord Jesus Christ, the only-begotten Son. O Lord God, Lamb of God, Son of the Father."},
+    {lat:"Qui tollis peccáta mundi, miserére nobis.",eng:"Thou Who takest away the sins of the world, have mercy on us."},
+    {lat:"Qui tollis peccáta mundi, súscipe deprecatiónem nostram.",eng:"Thou Who takest away the sins of the world, receive our prayer."},
+    {lat:"Qui sedes ad déxteram Patris, miserére nobis.",eng:"Thou Who sittest at the right hand of the Father, have mercy on us."},
+    {lat:"Quóniam tu solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, Iesu Christe.",eng:"For Thou alone art holy. Thou alone art the Lord. Thou alone art the most high, Jesus Christ."},
+    {lat:"Cum Sancto Spíritu, in glória Dei Patris. <em>Amen.</em>",eng:"With the Holy Ghost, in the glory of God the Father. <em>Amen.</em>"}
+  ]},
+  sanctus:{title:"Sanctus",eng:"Holy, Holy, Holy",category:"Missa",note:"Sung at every Mass before the Canon. All kneel.",lines:[
+    {lat:"Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.",eng:"Holy, Holy, Holy, Lord God of Hosts."},
+    {lat:"Pleni sunt cæli et terra glória tua.",eng:"Heaven and earth are full of Thy glory."},
+    {lat:"Hosánna in excélsis.",eng:"Hosanna in the highest."},
+    {lat:"✠ Benedíctus qui venit in nómine Dómini.",eng:"✠ Blessed is He Who cometh in the name of the Lord."},
+    {lat:"Hosánna in excélsis.",eng:"Hosanna in the highest."}
+  ]},
+  agnus:{title:"Agnus Dei",eng:"Lamb of God",category:"Missa",note:"Said before Communion.",lines:[
+    {lat:"Agnus Dei, qui tollis peccáta mundi: miserére nobis.",eng:"Lamb of God, Who takest away the sins of the world: have mercy on us."},
+    {lat:"Agnus Dei, qui tollis peccáta mundi: miserére nobis.",eng:"Lamb of God, Who takest away the sins of the world: have mercy on us."},
+    {lat:"Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.",eng:"Lamb of God, Who takest away the sins of the world: grant us peace."}
+  ]},
+  domineNSD:{title:"Dómine, Non Sum Dignus",eng:"Lord, I Am Not Worthy",category:"Missa",note:"Said three times before receiving Holy Communion, striking the breast at each repetition.",lines:[
+    {lat:"Dómine, non sum dignus, ut intres sub tectum meum:",eng:"Lord, I am not worthy that Thou shouldst enter under my roof:"},
+    {lat:"sed tantum dic verbo, et sanábitur ánima mea.",eng:"but only say the word, and my soul shall be healed."},
+    {lat:"<em>(Said three times.)</em>",eng:"<em>(Said three times.)</em>"}
+  ]},
+  // ===== DEVOTIONES =====
+  morning:{title:"Oblátio Matutína",eng:"Morning Offering",category:"Devotiónes",note:"Traditionally said upon rising, to consecrate the day's prayers, works, joys, and sufferings to the Sacred Heart of Jesus through the Immaculate Heart of Mary.",lines:[
+    {lat:"O Iesu, per Cor Immaculátum Maríæ,",eng:"O Jesus, through the Immaculate Heart of Mary,"},
+    {lat:"óffero tibi oratiónes, ópera, gáudia et labóres huius diéi",eng:"I offer Thee the prayers, works, joys, and sufferings of this day"},
+    {lat:"in satisfactiónem pro peccátis nostris,",eng:"in satisfaction for our sins,"},
+    {lat:"in ómnibus Missis Sacrificiis hódie per orbem celebrátis,",eng:"in union with all the Holy Sacrifices of the Mass celebrated throughout the world today,"},
+    {lat:"pro ómnibus intentiónibus Sacratíssimi Cordis tui,",eng:"for all the intentions of Thy Most Sacred Heart,"},
+    {lat:"pro unióne christianórum, pro conversióne peccatórum,",eng:"for the reunion of all Christians, for the conversion of sinners,"},
+    {lat:"ac pro intentiónibus Summi Pontíficis hoc mense. <em>Amen.</em>",eng:"and for the intentions of our Holy Father this month. <em>Amen.</em>"}
+  ]},
+  memorare:{title:"Memoráre",eng:"Remember, O Most Gracious Virgin",category:"Devotiónes",note:"A prayer to Our Lady by St. Bernard of Clairvaux (12th century).",lines:[
+    {lat:"Memoráre, O piíssima Virgo María, non esse audítum a sǽculo,",eng:"Remember, O most gracious Virgin Mary, that never was it known"},
+    {lat:"quemquam ad tua curréntem præsídia, tua implorántem auxília, tua peténtem suffrágia,",eng:"that anyone who fled to thy protection, implored thy help, or sought thine intercession,"},
+    {lat:"esse derelíctum.",eng:"was left unaided."},
+    {lat:"Ego tali animátus confidéntia, ad te, Virgo Vírginum, Mater, curro,",eng:"Inspired by this confidence, I fly unto thee, O Virgin of virgins, my Mother;"},
+    {lat:"ad te vénio, coram te gemens peccátor assísto.",eng:"to thee do I come, before thee I stand, sinful and sorrowful."},
+    {lat:"Noli, Mater Verbi, verba mea despícere,",eng:"O Mother of the Word Incarnate, despise not my petitions,"},
+    {lat:"sed áudi propítia et exáudi. <em>Amen.</em>",eng:"but in thy mercy hear and answer me. <em>Amen.</em>"}
+  ]},
+  actusContr:{title:"Actus Contritiónis",eng:"Act of Contrition",category:"Devotiónes",note:"The traditional Latin Act of Contrition, distinct from the English form ('O my God, I am heartily sorry…') but equally valid. Said daily and in the Sacrament of Penance.",lines:[
+    {lat:"Deus meus, ex toto corde pǽnitet me ómnium meórum peccatórum,",eng:"My God, with my whole heart I repent of all my sins,"},
+    {lat:"éaque detéstor, quia peccándo,",eng:"and I detest them, because by sinning"},
+    {lat:"non solum pœnas a te iuste statútas proméritus sum,",eng:"I have not only deserved the punishments justly decreed by Thee,"},
+    {lat:"sed præsértim quia offéndi te, summum bonum, ac dignum qui super ómnia diligáris.",eng:"but above all because I have offended Thee, the supreme good, worthy to be loved above all things."},
+    {lat:"Ideo fírmiter propóno, adiuvánte grátia tua,",eng:"Therefore I firmly resolve, with the help of Thy grace,"},
+    {lat:"de cétero me non peccatúrum peccandíque occasiónes próximas fugitúrum. <em>Amen.</em>",eng:"henceforth to sin no more and to flee the near occasions of sin. <em>Amen.</em>"}
+  ]},
+  anima:{title:"Ánima Christi",eng:"Soul of Christ",category:"Devotiónes",note:"A prayer of thanksgiving after Holy Communion, often attributed to St. Ignatius of Loyola.",lines:[
+    {lat:"Ánima Christi, sanctífica me.",eng:"Soul of Christ, sanctify me."},
+    {lat:"Corpus Christi, salva me.",eng:"Body of Christ, save me."},
+    {lat:"Sanguis Christi, inébria me.",eng:"Blood of Christ, inebriate me."},
+    {lat:"Aqua láteris Christi, lava me.",eng:"Water from the side of Christ, wash me."},
+    {lat:"Pássio Christi, confórta me.",eng:"Passion of Christ, strengthen me."},
+    {lat:"O bone Iesu, exáudi me.",eng:"O good Jesus, hear me."},
+    {lat:"Intra tua vúlnera abscónde me.",eng:"Within Thy wounds hide me."},
+    {lat:"Ne permíttas me separári a te.",eng:"Permit me not to be separated from Thee."},
+    {lat:"Ab hoste malígno defénde me.",eng:"From the malignant enemy defend me."},
+    {lat:"In hora mortis meæ voca me.",eng:"In the hour of my death call me."},
+    {lat:"Et iube me veníre ad te,",eng:"And bid me come unto Thee,"},
+    {lat:"ut cum Sanctis tuis laudem te,",eng:"that with Thy saints I may praise Thee,"},
+    {lat:"<span class=\"rmark\">℟.</span>in sǽcula sæculórum. <em>Amen.</em>",eng:"<span class=\"rmark\">℟.</span>for ever and ever. <em>Amen.</em>"}
+  ]},
+  crucifix:{title:"En Ego, O Bone Iesu",eng:"Prayer Before a Crucifix",category:"Ante Crucifíxum",note:"To be said after Communion, kneeling before a crucifix. A plenary indulgence may be gained on any Friday in Lent.",lines:[
+    {lat:"En ego, o bone et dulcíssime Iesu, ante conspéctum tuum génibus me provólvo,",eng:"Behold, O good and most sweet Jesus, I cast myself upon my knees in Thy sight,"},
+    {lat:"ac máximo ánimi ardóre te oro atque obtéstor,",eng:"and with the most fervent desire of my soul I pray and beseech Thee"},
+    {lat:"ut meum in cor vívidos fídei, spei et caritátis sensus,",eng:"that Thou wouldst impress upon my heart lively sentiments of faith, hope, and charity,"},
+    {lat:"atque veram peccatórum meórum pæniténtiam,",eng:"with true contrition for my sins,"},
+    {lat:"éaque emendándi firmíssimam voluntátem velis imprímere;",eng:"and a firm purpose of amendment;"},
+    {lat:"dum magno ánimi afféctu et dolóre tua quinque vúlnera mecum ipse consídero,",eng:"while with deep affection and grief of soul I ponder within myself and mentally contemplate Thy five most precious wounds,"},
+    {lat:"illud præ óculis habens, quod iam in ore ponébat tuo David Prophéta de te, o bone Iesu:",eng:"having before my eyes that which Thy prophet David spake concerning Thee, O good Jesus:"},
+    {lat:"<em>Fodérunt manus meas et pedes meos: dinumeravérunt ómnia ossa mea.</em> (Ps 21:17–18)",eng:"<em>They have pierced my hands and my feet; they have numbered all my bones.</em> (Ps 21:17–18)"},
+    {lat:"<span class=\"rmark\">℟.</span><em>Amen.</em>",eng:"<span class=\"rmark\">℟.</span><em>Amen.</em>"}
+  ]},
+  tantumErgo:{title:"Tantum Ergo Sacraméntum",eng:"Therefore So Great a Sacrament",category:"Devotiónes",note:"The last two stanzas of the Pange Lingua by St. Thomas Aquinas. Sung at Benediction of the Blessed Sacrament.",lines:[
+    {lat:"Tantum ergo Sacraméntum venerémur cérnui:",eng:"Therefore we, before Him bending, this great Sacrament revere:"},
+    {lat:"et antíquum documéntum novo cedat rítui:",eng:"types and shadows have their ending, for the newer rite is here."},
+    {lat:"præstet fides suppleméntum sénsuum deféctui.",eng:"Faith, our outward sense befriending, makes our inward vision clear."},
+    {lat:"Genitóri, Genitóque laus et iubilátio,",eng:"Glory let us give, and blessing, to the Father and the Son;"},
+    {lat:"salus, honor, virtus quoque sit et benedíctio:",eng:"honour, might, and praise addressing, while eternal ages run;"},
+    {lat:"procedénti ab utróque compar sit laudátio. <em>Amen.</em>",eng:"ever too His love confessing, Who from both with both is One. <em>Amen.</em>"},
+    {lat:"<span class=\"rmark\">℣.</span> Panem de cælo præstitísti eis.",eng:"<span class=\"rmark\">℣.</span> Thou hast given them bread from Heaven."},
+    {lat:"<span class=\"rmark\">℟.</span> Omne delectaméntum in se habéntem.",eng:"<span class=\"rmark\">℟.</span> Containing in itself all sweetness."}
+  ]},
+  michael:{title:"Oratio ad Sanctum Michaélem",eng:"Prayer to St. Michael the Archangel",category:"Devotiónes",note:"Composed by Pope Leo XIII in 1886 after a vision of the spiritual warfare facing the Church. Said after Low Mass until 1965, and widely revived today.",lines:[
+    {lat:"Sancte Míchaël Archángele, defénde nos in prǽlio;",eng:"St. Michael the Archangel, defend us in battle;"},
+    {lat:"contra nequítiam et insídias diáboli esto præsídium.",eng:"be our protection against the wickedness and snares of the devil."},
+    {lat:"Ímperet illi Deus, súpplices deprecámur:",eng:"May God rebuke him, we humbly pray:"},
+    {lat:"tuque, Princeps milítiæ cæléstis,",eng:"and do thou, O Prince of the heavenly host,"},
+    {lat:"Sátanam aliósque spíritus malígnos,",eng:"by the power of God cast into hell Satan"},
+    {lat:"qui ad perditiónem animárum pervagántur in mundo,",eng:"and all the evil spirits who prowl about the world"},
+    {lat:"divína virtúte, in inférnum detrúde. <em>Amen.</em>",eng:"seeking the ruin of souls. <em>Amen.</em>"}
+  ]},
+  adoroTe:{title:"Adóro Te Devóte",eng:"I Devoutly Adore Thee",category:"Devotiónes",note:"A Eucharistic hymn by St. Thomas Aquinas, said in thanksgiving after Communion.",lines:[
+    {lat:"Adóro te devóte, latens Déitas,",eng:"I devoutly adore Thee, O hidden God,"},
+    {lat:"quæ sub his figúris vere látitas:",eng:"truly hidden beneath these appearances:"},
+    {lat:"tibi se cor meum totum súbiicit,",eng:"My whole heart submits to Thee,"},
+    {lat:"quia te contémplans totum déficit.",eng:"and in contemplating Thee, it surrenders itself completely."},
+    {lat:"Visus, tactus, gustus in te fállitur,",eng:"Sight, touch, taste are all deceived in their judgment of Thee,"},
+    {lat:"sed audítu solo tuto créditur:",eng:"but hearing suffices firmly to believe:"},
+    {lat:"credo quidquid dixit Dei Fílius;",eng:"I believe all that the Son of God has spoken;"},
+    {lat:"nil hoc verbo veritátis vérius.",eng:"there is nothing truer than this Word of Truth."},
+    {lat:"In cruce latébat sola Déitas,",eng:"On the cross only the Divinity was hidden,"},
+    {lat:"at hic latet simul et humánitas:",eng:"but here the Humanity is also concealed:"},
+    {lat:"ambo tamen credens atque cónfitens,",eng:"yet believing and confessing both,"},
+    {lat:"peto quod petívit latro pǽnitens. <em>Amen.</em>",eng:"I ask for what the penitent thief asked. <em>Amen.</em>"}
+  ]}
+};
+
+function escapeHtmlP(s){return String(s)}  // prayers may include inline em/span markup we want to keep
+
+function show(slug){
+  var p=PRAYERS[slug];
+  if(!p)return;
+  var body='';
+  // Optional liturgical note
+  if(p.note){
+    body+='<p class="prayer-note">'+p.note+'</p>';
+  }
+  // Prayer lines, with a drop cap on the first line
+  p.lines.forEach(function(line,i){
+    var lat=line.lat, eng=line.eng;
+    if(i===0){
+      // Inject drop cap on the first letter of the Latin
+      var firstChar=lat.charAt(0);
+      var rest=lat.slice(1);
+      // Skip if first char is a tag
+      if(firstChar==='<'){
+        lat='<span class="lead-cap">'+lat.charAt(1)+'</span>'+lat.slice(2).replace(/^[^>]*>/,'');
+      } else {
+        lat='<span class="lead-cap">'+firstChar+'</span>'+rest;
+      }
+    }
+    body+='<div class="mc">'+
+      '<div class="ml"><div class="lt">'+lat+'</div></div>'+
+      '<div class="mri"><div class="et">'+eng+'</div></div>'+
+    '</div>';
+  });
+  body+='<div class="cta-wrap"><a class="cta" href="#">Practica <span class="cross">✠</span> Practice This Prayer</a></div>';
+
+  var overlay=document.getElementById('o-detail');
+  overlay.querySelector('.cat').innerHTML='✠ &nbsp; '+p.category+' &nbsp; ✠';
+  overlay.querySelector('h2').innerHTML=p.title;
+  overlay.querySelector('.sub').textContent=p.eng;
+  overlay.querySelector('.db').innerHTML=body;
+  overlay.classList.add('show');
+  window.scrollTo(0,0);
+}
+function hide(){document.querySelectorAll('.overlay').forEach(function(o){o.classList.remove('show')})}
+
+// ===== Daily prayer rotation =====
+// Anchored to the traditional devotional week, with season overrides.
+// Sunday: Credo (Creed) — the day of faith professed
+// Monday: Pater Noster — the Lord's Prayer to begin the week
+// Tuesday: St. Michael — the Leonine prayer against evil
+// Wednesday: Anima Christi — Ignatian prayer at the mid-week
+// Thursday: Adoro Te Devote — Eucharistic, echoing Maundy Thursday
+// Friday: Crucifix (En Ego) — the day of the Cross
+// Saturday: Salve Regina — traditional Marian Saturday
+var WEEKDAY_PRAYER = ['credoApost','pater','michael','anima','adoroTe','crucifix','salve'];
+// Seasonal overrides take precedence over the weekday mapping.
+var SEASON_PRAYER = {
+  advent:   'memorare',       // Marian anticipation
+  lent:     'confiteor',      // Penitential
+  passion:  'actusContr',     // Act of Contrition as Holy Week nears
+  easter:   'gloriaExcelsis'  // The Gloria, suppressed in Lent, returns
+};
+
+function pickDailyPrayer(){
+  try {
+    var now = new Date();
+    var slug = WEEKDAY_PRAYER[now.getDay()];
+    if (typeof LitContext !== 'undefined') {
+      var ctx = LitContext.get(now);
+      if (ctx && SEASON_PRAYER[ctx.season] && PRAYERS[SEASON_PRAYER[ctx.season]]) {
+        slug = SEASON_PRAYER[ctx.season];
+      }
+    }
+    if (!PRAYERS[slug]) slug = 'ave';
+    var p = PRAYERS[slug];
+    // Strip leading HTML tags from first line for the preview
+    var preview = (p.lines[0].lat || '').replace(/<[^>]*>/g,'');
+    // Truncate preview at ~46 chars for layout
+    if (preview.length > 48) preview = preview.slice(0,46).replace(/\s\S*$/,'') + '…';
+    else preview = preview + '…';
+    var firstChar = (p.title || 'A').replace(/<[^>]*>/g,'').charAt(0);
+
+    document.getElementById('featured').setAttribute('data-slug', slug);
+    document.getElementById('featured-cap').textContent = firstChar;
+    document.getElementById('featured-name').innerHTML = p.title;
+    document.getElementById('featured-eng').textContent = p.eng;
+    document.getElementById('featured-line').textContent = preview;
+  } catch (e) { /* fall back to static markup */ }
+}
+function openFeatured(){
+  var slug = document.getElementById('featured').getAttribute('data-slug') || 'ave';
+  show(slug);
+}
+pickDailyPrayer();
+
+// Deep link: /prayers.html#slug opens that prayer directly
+(function(){
+  var slug=(location.hash||'').replace('#','');
+  if(slug && PRAYERS[slug])show(slug);
+})();
+</script>
+
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab active" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+</body>
+</html>

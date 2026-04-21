@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
+<title>Introibo — Via Crucis</title>
+<style>
+
+body{font-family:'EB Garamond','Georgia',serif;max-width:430px;margin:0 auto;min-height:100vh}
+/* Opt out of shared body::before grain — stations has multi-screen flow,
+   grain is scoped to .parchment::before only. */
+body::before{display:none}
+
+.screen{display:none;min-height:100vh}
+.screen.active{display:flex;flex-direction:column}
+
+.parchment{
+  background:radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),#F2E8D0;
+  color:#1C1410;position:relative;
+}
+.parchment::before{content:'';position:fixed;inset:0;max-width:430px;margin:0 auto;pointer-events:none;background-image:radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px),radial-gradient(circle at 42% 88%, rgba(92,60,30,0.018) 0 1px, transparent 1px);background-size:7px 7px,13px 13px,11px 11px;z-index:1;mix-blend-mode:multiply;opacity:0.7}
+.frame{position:fixed;top:10px;bottom:10px;left:50%;transform:translateX(-50%);width:calc(100% - 20px);max-width:410px;pointer-events:none;border:0.5px solid rgba(184,150,12,0.3);z-index:3}
+.frame::before{content:'';position:absolute;inset:3px;border:0.5px solid rgba(184,150,12,0.18)}
+
+.dh{position:relative;background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);padding:62px 28px 28px;z-index:5;overflow:hidden}
+.dh::before{content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:0.5px solid rgba(184,150,12,0.45);pointer-events:none}
+.dh::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:0.5px solid rgba(184,150,12,0.22);pointer-events:none}
+.dh .back{position:absolute;top:60px;left:24px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2px;text-transform:uppercase;text-decoration:none;z-index:6}
+.dh .label{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:600;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;text-align:center;margin-bottom:8px}
+.dh h1{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:#E8DFC9;text-align:center;letter-spacing:1px;line-height:1;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.dh .sub{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8670;text-align:center;margin-top:4px}
+.dh .h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 10px}
+.dh .h-rule::before,.dh .h-rule::after{content:'';flex:1;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent)}
+.dh .h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+/* ===== Start screen ===== */
+#start .ct{position:relative;z-index:2;padding:28px 28px 110px;flex:1}
+.intro{text-align:center;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#7A6A58;margin:0 12px 20px;line-height:1.6}
+
+/* Lenten Friday plenary indulgence flag */
+.lent-flag{display:none;text-align:center;margin:0 14px 16px;padding:10px 0;border-top:0.5px solid rgba(139,26,26,0.4);border-bottom:0.5px solid rgba(139,26,26,0.4);font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic;color:#8B1A1A;letter-spacing:1.5px}
+.lent-flag.show{display:block}
+.lent-flag-label{font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
+.lent-flag-body{color:#7A6A58}
+
+/* Winding pilgrimage path */
+.via{
+  position:relative;
+  padding:10px 0 20px;
+}
+.via::before{
+  content:'';
+  position:absolute;
+  left:50%;top:0;bottom:0;
+  width:1px;
+  background:linear-gradient(180deg,transparent 0%,rgba(139,26,26,0.35) 4%,rgba(139,26,26,0.35) 96%,transparent 100%);
+  transform:translateX(-50%);
+}
+
+.stop{
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  margin:0 0 6px;
+  cursor:pointer;
+}
+.stop:nth-child(odd){flex-direction:row;padding-right:54%}
+.stop:nth-child(even){flex-direction:row-reverse;padding-left:54%}
+
+.stop .marker{
+  position:absolute;
+  left:50%;top:6px;
+  transform:translateX(-50%);
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  background:#F2E8D0;
+  border:0.5px solid rgba(139,26,26,0.4);
+  z-index:2;
+  transition:all 0.3s;
+}
+.stop:hover .marker,
+.stop:active .marker,
+.stop:focus-visible .marker{
+  background:rgba(139,26,26,0.08);
+  box-shadow:0 0 0 3px rgba(139,26,26,0.08);
+}
+
+.stop .content{
+  padding:4px 14px;
+  flex:1;
+}
+.stop:nth-child(odd) .content{text-align:right}
+.stop:nth-child(even) .content{text-align:left}
+.stop .s-name{
+  font-family:'Playfair Display',serif;
+  font-size:14px;font-weight:500;
+  color:#1C1410;line-height:1.2;
+}
+.stop .s-latin{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#9A8670;
+  margin-top:1px;
+}
+
+/* Calvary marker at the end */
+.calvary{
+  text-align:center;
+  margin:10px 0 0;
+  position:relative;
+  z-index:2;
+}
+.calvary .cross-big{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  color:#8B1A1A;
+  line-height:1;
+}
+.calvary .cross-big::after{
+  content:'';display:block;
+  width:40px;height:0.5px;
+  background:#B8960C;
+  margin:8px auto 0;
+}
+.calvary .text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-top:6px;
+}
+
+.begin-wrap{text-align:center;margin-top:30px}
+.begin{
+  display:inline-block;padding:14px 26px;
+  font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;
+  color:#8B1A1A;letter-spacing:2.5px;text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.45);border-bottom:0.5px solid rgba(139,26,26,0.45);
+  cursor:pointer;
+}
+.begin .cross{color:#B8960C;margin:0 8px}
+
+/* ===== Pray screen — dark walnut ===== */
+#pray{
+  background:radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.08), transparent 70%),radial-gradient(ellipse at 50% 100%, rgba(139,26,26,0.05), transparent 80%),linear-gradient(180deg,#1A130C 0%,#1F160E 50%,#241A11 100%);
+  color:#E8DFC9;padding:0 0 130px;position:relative;overflow:hidden;
+}
+#pray::before{content:'';position:fixed;top:0;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;pointer-events:none;background-image:radial-gradient(circle at 17% 23%, rgba(184,150,12,0.04) 0 1px, transparent 1px),radial-gradient(circle at 63% 71%, rgba(184,150,12,0.03) 0 1px, transparent 1px);background-size:9px 9px,15px 15px;z-index:1}
+.frame-dark{position:fixed;top:10px;bottom:10px;left:50%;transform:translateX(-50%);width:calc(100% - 20px);max-width:410px;pointer-events:none;border:0.5px solid rgba(184,150,12,0.35);z-index:2}
+.frame-dark::before{content:'';position:absolute;inset:3px;border:0.5px solid rgba(184,150,12,0.18)}
+
+.pray-inner{position:relative;z-index:5;padding:54px 28px 0}
+
+/* Station progress: 14 dots with crosses */
+.way{display:flex;justify-content:center;align-items:center;gap:4px;margin:0 0 6px;flex-wrap:nowrap}
+.way .w{width:6px;height:6px;border-radius:50%;border:0.5px solid rgba(184,150,12,0.5);background:transparent;flex-shrink:0;transition:all 0.3s}
+.way .w.done{background:#8B1A1A;border-color:#8B1A1A}
+.way .w.now{background:#B8960C;border-color:#B8960C;width:10px;height:10px;box-shadow:0 0 12px rgba(184,150,12,0.6);animation:glow 1.8s ease-in-out infinite}
+.way .cx{font-family:'Cormorant Garamond',serif;font-size:10px;color:#B8960C;flex-shrink:0;opacity:0.7}
+@keyframes glow{0%,100%{box-shadow:0 0 12px rgba(184,150,12,0.6)}50%{box-shadow:0 0 20px rgba(184,150,12,0.9)}}
+.way-label{text-align:center;font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:600;font-style:italic;color:#9A8670;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+
+/* Large illuminated Roman numeral — the visual anchor */
+.st-big-num{
+  text-align:center;
+  margin:8px 0 6px;
+}
+.st-big-num span{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:90px;
+  font-weight:600;
+  color:rgba(139,26,26,0.18);
+  line-height:0.85;
+  text-shadow:0 0 40px rgba(139,26,26,0.12);
+  display:inline-block;
+  transition:color 0.5s;
+}
+/* Mood: Station XII (Death) — deeper red glow */
+.st-big-num.mood-death span{color:rgba(139,26,26,0.28);text-shadow:0 0 60px rgba(139,26,26,0.25)}
+/* Mood: Station IV (Mother) — warmer gold */
+.st-big-num.mood-mother span{color:rgba(184,150,12,0.18);text-shadow:0 0 50px rgba(184,150,12,0.15)}
+/* Mood: Station XIV (Tomb) — deep shadow */
+.st-big-num.mood-tomb span{color:rgba(92,60,30,0.15);text-shadow:0 0 50px rgba(26,19,12,0.3)}
+
+.st-label{text-align:center;font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:4px}
+
+.st-title{text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:24px;font-weight:600;color:#E8DFC9;line-height:1.15;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.st-latin{text-align:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#B8960C;margin-top:4px}
+
+.st-rule{display:flex;align-items:center;gap:14px;margin:18px 8px}
+.st-rule::before,.st-rule::after{content:'';flex:1;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
+.st-rule .glyph{font-family:'Cormorant Garamond',serif;font-size:14px;color:#B8960C}
+
+/* Versicle/Response — call-and-response layout */
+.versicle{margin:16px 0;padding:0 8px}
+.v-line{display:flex;gap:8px;margin:4px 0;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#E8DFC9;line-height:1.5}
+.v-line .mark{flex:0 0 auto;color:#8B1A1A;font-weight:700;font-style:normal}
+.v-line .text{flex:1}
+.v-line.response .text{color:#9A8670}
+
+/* Meditation — with ornamental quote marks */
+.meditation{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-style:italic;
+  color:#E8DFC9;
+  line-height:1.8;
+  text-align:center;
+  margin:20px 4px;
+  padding:18px 12px;
+  position:relative;
+  opacity:0.92;
+}
+.meditation::before{
+  content:'\201C';
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:48px;font-weight:300;font-style:normal;
+  color:#B8960C;
+  opacity:0.4;
+  line-height:0.5;
+  margin-bottom:10px;
+}
+
+/* Station prayer */
+.st-prayer{text-align:center;margin:18px 0;padding:16px 12px;position:relative}
+.st-prayer::before,.st-prayer::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:70%;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.4),transparent)}
+.st-prayer::before{top:0}.st-prayer::after{bottom:0}
+.st-prayer .pr-label{font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#B8960C;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:8px}
+.st-prayer p{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#9A8670;line-height:1.5;margin-bottom:4px}
+.st-prayer .stabat-lat{margin-top:10px}
+.st-prayer .stabat-eng{font-size:11px;margin-top:4px;color:#7A6A58}
+
+/* Nav */
+.nav-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:24px 28px 36px;background:linear-gradient(180deg,rgba(26,19,12,0) 0%,#1A130C 30%,#1A130C 100%);display:flex;gap:18px;align-items:center;z-index:20}
+.nav-back{width:52px;height:52px;border:1px solid rgba(184,150,12,0.55);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:#B8960C;flex-shrink:0;cursor:pointer;background:rgba(184,150,12,0.04)}
+.nav-back:hover,.nav-back:active{background:rgba(184,150,12,0.12);border-color:#B8960C}
+.nav-next{flex:1;text-align:center;padding:17px 0;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:700;font-style:italic;color:#E8DFC9;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border:1px solid #B8960C;background:rgba(184,150,12,0.12);box-shadow:0 0 18px rgba(184,150,12,0.15)}
+.nav-next:hover,.nav-next:active{background:rgba(184,150,12,0.22);box-shadow:0 0 24px rgba(184,150,12,0.28)}
+.nav-next .cross{margin:0 10px;color:#B8960C}
+
+/* ===== Complete screen ===== */
+#complete .ct{position:relative;z-index:2;padding:60px 36px;text-align:center}
+#complete .icon{font-family:'Cormorant Garamond',serif;font-size:64px;color:#8B1A1A;line-height:1;margin-bottom:8px}
+#complete .icon::after{content:'';display:block;width:48px;height:0.5px;background:#B8960C;margin:14px auto 0}
+#complete h2{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;font-style:italic;color:#1C1410;margin-top:18px}
+#complete .h-eng{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;font-weight:600;color:#9A8670;letter-spacing:3px;text-transform:uppercase;margin-top:6px}
+#complete p{font-family:'EB Garamond',serif;font-size:15px;font-style:italic;color:#7A6A58;margin-top:24px;line-height:1.6}
+#complete .home-link{display:inline-block;margin-top:32px;font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;font-style:italic;color:#8B1A1A;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;border-top:0.5px solid rgba(139,26,26,0.45);border-bottom:0.5px solid rgba(139,26,26,0.45);padding:12px 22px;cursor:pointer}
+#complete .home-link .cross{color:#B8960C;margin:0 8px}
+
+/* ===== Tab bar ===== */
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:88px;background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);padding:22px 12px 28px;display:flex;justify-content:space-around;align-items:center;z-index:20}
+.tab-bar::before{content:'';position:absolute;top:22px;left:32px;right:32px;height:0.5px;background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent)}
+.tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;font-style:italic;color:#9A8670;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.tab .glyph{font-family:'Playfair Display',serif;font-size:19px;font-style:normal;font-weight:400;line-height:1;color:#B8960C;opacity:0.75}
+.tab.active{color:#8B1A1A}.tab.active .glyph{color:#8B1A1A;opacity:1}
+</style>
+<script src="lit-context.js"></script>
+<script src="ui-helpers.js"></script>
+</head>
+<body>
+
+<!-- ===== START SCREEN ===== -->
+<div class="screen active parchment" id="start">
+  <div class="frame"></div>
+  <div class="dh">
+    <a class="back" href="today.html">‹ &nbsp; Hodie</a>
+    <div class="label">✠ &nbsp; Devotio &nbsp; ✠</div>
+    <h1>Via Crucis</h1>
+    <div class="sub">The Stations of the Cross</div>
+    <div class="h-rule"><span class="glyph">✦</span></div>
+  </div>
+  <div class="ct">
+    <div class="intro" id="s-intro">Walk with Our Lord on the road to Calvary.<br>Fourteen stations of prayer and meditation upon the Passion.</div>
+    <div id="s-lent-flag" class="lent-flag">
+      <strong class="lent-flag-label">Hódie · Today</strong><br>
+      <span class="lent-flag-body">A Lenten Friday — the Way of the Cross is particularly recommended.<br>A plenary indulgence may be obtained on this day.</span>
+    </div>
+
+    <div class="via">
+      <div class="stop" onclick="beginAt(0)"><div class="marker">I</div><div class="content"><div class="s-name">Condemned to Death</div><div class="s-latin">Ad mortem condemnatur</div></div></div>
+      <div class="stop" onclick="beginAt(1)"><div class="marker">II</div><div class="content"><div class="s-name">Carries His Cross</div><div class="s-latin">Crucem baiulat</div></div></div>
+      <div class="stop" onclick="beginAt(2)"><div class="marker">III</div><div class="content"><div class="s-name">Falls the First Time</div><div class="s-latin">Prima vice cadit</div></div></div>
+      <div class="stop" onclick="beginAt(3)"><div class="marker">IV</div><div class="content"><div class="s-name">Meets His Mother</div><div class="s-latin">Matrem occurrit</div></div></div>
+      <div class="stop" onclick="beginAt(4)"><div class="marker">V</div><div class="content"><div class="s-name">Simon Carries the Cross</div><div class="s-latin">Simon crucem portat</div></div></div>
+      <div class="stop" onclick="beginAt(5)"><div class="marker">VI</div><div class="content"><div class="s-name">Veronica Wipes His Face</div><div class="s-latin">Veronica faciem abstergit</div></div></div>
+      <div class="stop" onclick="beginAt(6)"><div class="marker">VII</div><div class="content"><div class="s-name">Falls a Second Time</div><div class="s-latin">Secunda vice cadit</div></div></div>
+      <div class="stop" onclick="beginAt(7)"><div class="marker">VIII</div><div class="content"><div class="s-name">Meets the Women</div><div class="s-latin">Mulieres alloquitur</div></div></div>
+      <div class="stop" onclick="beginAt(8)"><div class="marker">IX</div><div class="content"><div class="s-name">Falls a Third Time</div><div class="s-latin">Tertia vice cadit</div></div></div>
+      <div class="stop" onclick="beginAt(9)"><div class="marker">X</div><div class="content"><div class="s-name">Stripped of Garments</div><div class="s-latin">Vestimentis exuitur</div></div></div>
+      <div class="stop" onclick="beginAt(10)"><div class="marker">XI</div><div class="content"><div class="s-name">Nailed to the Cross</div><div class="s-latin">Cruci affigitur</div></div></div>
+      <div class="stop" onclick="beginAt(11)"><div class="marker">XII</div><div class="content"><div class="s-name">Dies on the Cross</div><div class="s-latin">In cruce moritur</div></div></div>
+      <div class="stop" onclick="beginAt(12)"><div class="marker">XIII</div><div class="content"><div class="s-name">Taken Down</div><div class="s-latin">De cruce deponitur</div></div></div>
+      <div class="stop" onclick="beginAt(13)"><div class="marker">XIV</div><div class="content"><div class="s-name">Laid in the Tomb</div><div class="s-latin">In sepulcro ponitur</div></div></div>
+    </div>
+
+    <div class="calvary">
+      <div class="cross-big">✠</div>
+      <div class="text">Golgotha</div>
+    </div>
+
+    <div class="begin-wrap"><div class="begin" onclick="beginAt(0)">Incipiamus <span class="cross">✠</span> Begin the Way</div></div>
+  </div>
+</div>
+
+<!-- ===== PRAY SCREEN ===== -->
+<div class="screen" id="pray">
+  <div class="frame-dark"></div>
+  <div class="pray-inner">
+    <div class="way" id="way"></div>
+    <div class="way-label" id="way-label">Statio I &nbsp;·&nbsp; XIV</div>
+
+    <div class="st-big-num" id="st-bignum"><span id="st-roman">I</span></div>
+    <div class="st-label" id="st-label">Statio Prima</div>
+    <div class="st-title" id="st-title">Jesus Is Condemned to Death</div>
+    <div class="st-latin" id="st-latin">Iesus ad mortem condemnatur</div>
+
+    <div class="st-rule"><span class="glyph">✠</span></div>
+
+    <div class="versicle">
+      <div class="v-line"><span class="mark">℣.</span><span class="text">Adorámus te, Christe, et benedícimus tibi.</span></div>
+      <div class="v-line response"><span class="mark">℟.</span><span class="text">Quia per sanctam Crucem tuam redemísti mundum.</span></div>
+    </div>
+
+    <div class="meditation" id="meditation">Consider how Jesus, after having been scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.</div>
+
+    <div class="st-prayer">
+      <div class="pr-label">Oratio &nbsp;·&nbsp; Prayer</div>
+      <p>Pater noster &nbsp;·&nbsp; Ave María &nbsp;·&nbsp; Glória Patri</p>
+      <p id="stabat" class="stabat-lat"><em>Stabat Mater dolorósa,<br>iuxta Crucem lacrimósa,<br>dum pendébat Fílius.</em></p>
+      <p id="stabat-eng" class="stabat-eng">At the Cross her station keeping,<br>stood the mournful Mother weeping,<br>close to Jesus to the last.</p>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div class="nav-back" onclick="prevStation()">‹</div>
+    <div class="nav-next" onclick="nextStation()"><span id="next-label">Sequens <span class="cross">✠</span> Next Station</span></div>
+  </div>
+</div>
+
+<!-- ===== COMPLETE SCREEN ===== -->
+<div class="screen parchment" id="complete">
+  <div class="frame"></div>
+  <div class="ct">
+    <div class="icon">✠</div>
+    <h2>Consummátum Est</h2>
+    <div class="h-eng">It Is Finished</div>
+    <p>You have walked the Way of the Cross with Our Lord. May His Passion bring you closer to Him and kindle in your heart a deeper love for His Most Sacred Heart.</p>
+    <a class="home-link" onclick="goHome()">Reverti <span class="cross">✠</span> Return Home</a>
+  </div>
+</div>
+
+<script>
+var roman=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV'];
+var labels=['Prima','Secunda','Tertia','Quarta','Quinta','Sexta','Septima','Octava','Nona','Decima','Undecima','Duodecima','Tertiadecima','Quartadecima'];
+var stations=[
+  {title:"Jesus Is Condemned to Death",latin:"Iesus ad mortem condemnatur",med:"Consider how Jesus, after having been scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.",mood:"",
+    stabat_lat:"Stabat Mater dolorósa,<br>iuxta Crucem lacrimósa,<br>dum pendébat Fílius.",
+    stabat_eng:"At the Cross her station keeping,<br>stood the mournful Mother weeping,<br>close to Jesus to the last."},
+  {title:"Jesus Carries His Cross",latin:"Iesus crucem suam baiulat",med:"Consider how Jesus, bearing His Cross, went forth to the place of sacrifice, like a meek lamb led to the slaughter.",mood:"",
+    stabat_lat:"Cuius ánimam geméntem,<br>contristátam et doléntem,<br>pertransívit gládius.",
+    stabat_eng:"Through her heart, His sorrow sharing,<br>all His bitter anguish bearing,<br>now at length the sword had pass'd."},
+  {title:"Jesus Falls the First Time",latin:"Iesus prima vice cadit",med:"Consider the first fall of Jesus under the weight of the Cross. The weight of our sins pressed Him to the ground.",mood:"",
+    stabat_lat:"O quam tristis et afflícta<br>fuit illa benedícta<br>Mater Unigéniti!",
+    stabat_eng:"Oh, how sad and sore distress'd<br>was that Mother highly blest<br>of the sole-begotten One!"},
+  {title:"Jesus Meets His Blessed Mother",latin:"Iesus Matrem suam occurrit",med:"Consider the meeting of the Son with His Mother. Their eyes met, and their hearts were pierced with sorrow — hers for His suffering, His for her grief.",mood:"mood-mother",
+    stabat_lat:"Quæ mœrébat et dolébat,<br>pia Mater, dum vidébat<br>nati pœnas ínclyti.",
+    stabat_eng:"Christ above in torment hangs;<br>she beneath beholds the pangs<br>of her dying glorious Son."},
+  {title:"Simon Helps Carry the Cross",latin:"Simon Cyrenæus crucem portat",med:"Consider how the soldiers, fearing Jesus would die before reaching Calvary, forced Simon of Cyrene to carry the Cross behind Him.",mood:"",
+    stabat_lat:"Quis est homo qui non fleret,<br>Matrem Christi si vidéret<br>in tanto supplício?",
+    stabat_eng:"Is there one who would not weep,<br>whelm'd in miseries so deep,<br>Christ's dear Mother to behold?"},
+  {title:"Veronica Wipes the Face of Jesus",latin:"Veronica faciem Iesu abstergit",med:"Consider how the holy woman Veronica, seeing Jesus in such distress, wiped His face with her veil, upon which was left the imprint of His Sacred Face.",mood:"",
+    stabat_lat:"Quis non posset contristári<br>Christi Matrem contemplári<br>doléntem cum Fílio?",
+    stabat_eng:"Can the human heart refrain<br>from partaking in her pain,<br>in that Mother's pain untold?"},
+  {title:"Jesus Falls a Second Time",latin:"Iesus secunda vice cadit",med:"Consider the second fall of Jesus beneath the Cross — a fall caused by our repeated sins, our return to evil after repentance.",mood:"",
+    stabat_lat:"Pro peccátis suæ gentis<br>vidit Iesum in torméntis,<br>et flagéllis súbditum.",
+    stabat_eng:"Bruised, derided, curs'd, defiled,<br>she beheld her tender Child,<br>all with bloody scourges rent."},
+  {title:"Jesus Meets the Women of Jerusalem",latin:"Iesus mulieres Ierusalem alloquitur",med:"Consider how the pious women wept at the sight of Jesus. He turned to them and said: 'Weep not for Me, but for yourselves and for your children.'",mood:"",
+    stabat_lat:"Vidit suum dulcem natum<br>moriéntem, desolátum,<br>dum emísit spíritum.",
+    stabat_eng:"For the sins of His own nation,<br>she saw Jesus wracked with torments,<br>all with scourges rent."},
+  {title:"Jesus Falls a Third Time",latin:"Iesus tertia vice cadit",med:"Consider the third fall. Jesus, utterly exhausted, falls again beneath the Cross — teaching us never to despair, but to rise again after every fall.",mood:"",
+    stabat_lat:"Eia, Mater, fons amóris,<br>me sentíre vim dolóris<br>fac, ut tecum lúgeam.",
+    stabat_eng:"O thou Mother, fount of love,<br>touch my spirit from above,<br>make my heart with thine accord."},
+  {title:"Jesus Is Stripped of His Garments",latin:"Iesus vestimentis exuitur",med:"Consider the violence with which the soldiers stripped Jesus. His inner garments adhered to His torn flesh, renewing every wound.",mood:"",
+    stabat_lat:"Fac ut árdeat cor meum<br>in amándo Christum Deum,<br>ut sibi compláceam.",
+    stabat_eng:"Make me feel as thou hast felt;<br>make my soul to glow and melt<br>with the love of Christ my Lord."},
+  {title:"Jesus Is Nailed to the Cross",latin:"Iesus cruci affigitur",med:"Consider how Jesus was thrown upon the Cross and nailed through His hands and feet. He offered not a cry of pain, but a prayer for His executioners.",mood:"mood-death",
+    stabat_lat:"Sancta Mater, istud agas,<br>Crucifíxi fige plagas<br>cordi meo válide.",
+    stabat_eng:"Holy Mother, pierce me through;<br>in my heart each wound renew<br>of my Saviour crucified."},
+  {title:"Jesus Dies on the Cross",latin:"Iesus in cruce moritur",med:"Consider how Jesus, after three hours of agony on the Cross, cried out: 'It is finished,' and bowing His head, gave up His spirit.",mood:"mood-death",
+    stabat_lat:"Tui Nati vulneráti,<br>tam dignáti pro me pati,<br>pœnas mecum dívide.",
+    stabat_eng:"Let me share with thee His pain,<br>who for all my sins was slain,<br>who for me in torments died."},
+  {title:"Jesus Is Taken Down from the Cross",latin:"Iesus de cruce deponitur",med:"Consider how the sacred body was taken down from the Cross and placed in the arms of His afflicted Mother, who received Him with inexpressible tenderness.",mood:"mood-mother",
+    stabat_lat:"Fac me vere tecum flere,<br>Crucifíxo condolére,<br>donec ego víxero.",
+    stabat_eng:"Let me mingle tears with thee,<br>mourning Him who mourn'd for me,<br>all the days that I may live."},
+  {title:"Jesus Is Laid in the Tomb",latin:"Iesus in sepulcro ponitur",med:"Consider how the disciples carried the body of Jesus to the sepulchre, and the stone was rolled before its entrance. There, in silence, we await the Resurrection.",mood:"mood-tomb",
+    stabat_lat:"Quando corpus moriétur,<br>fac ut ánimæ donétur<br>paradísi glória. Amen.",
+    stabat_eng:"While my body here decays,<br>may my soul Thy goodness praise,<br>safe in paradise with Thee. Amen."}
+];
+
+var idx=0;
+
+function buildWay(){
+  var w=document.getElementById('way');w.innerHTML='';
+  for(var i=0;i<14;i++){
+    if(i===7){var cx=document.createElement('span');cx.className='cx';cx.textContent='✠';w.appendChild(cx)}
+    var d=document.createElement('span');
+    d.className='w'+(i<idx?' done':(i===idx?' now':''));
+    w.appendChild(d);
+  }
+}
+
+function render(){
+  var s=stations[idx];
+  buildWay();
+  document.getElementById('way-label').textContent='Statio '+roman[idx]+' \u00b7 XIV';
+  document.getElementById('st-roman').textContent=roman[idx];
+  document.getElementById('st-label').textContent='Statio '+labels[idx];
+  document.getElementById('st-title').textContent=s.title;
+  document.getElementById('st-latin').textContent=s.latin;
+  document.getElementById('meditation').textContent=s.med;
+  // Swap Stabat Mater verse per station
+  var sm=document.getElementById('stabat');
+  var sme=document.getElementById('stabat-eng');
+  if(sm)sm.innerHTML='<em>'+s.stabat_lat+'</em>';
+  if(sme)sme.innerHTML=s.stabat_eng;
+  // Set mood class on big numeral
+  var bn=document.getElementById('st-bignum');
+  bn.className='st-big-num'+(s.mood?' '+s.mood:'');
+  document.getElementById('next-label').innerHTML=(idx<13)
+    ?'Sequens <span class="cross">✠</span> Next Station'
+    :'Finis <span class="cross">✠</span> Finish';
+}
+
+function nextStation(){if(idx<13){idx++;render();window.scrollTo(0,0)}else{showScreen('complete')}}
+function prevStation(){if(idx>0){idx--;render();window.scrollTo(0,0)}}
+function beginAt(i){showScreen('pray');idx=i;render()}
+function goHome(){window.location.href='today.html'}
+function showScreen(id){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+
+// Show Lenten Friday flag if applicable
+(function(){
+  if(typeof LitContext==='undefined')return;
+  var c=LitContext.get(new Date());
+  if(c.isFriday && c.isLent){
+    var f=document.getElementById('s-lent-flag');
+    if(f)f.classList.add('show');
+  }
+})();
+</script>
+
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+</body>
+</html>

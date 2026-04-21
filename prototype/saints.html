@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
+<title>Introibo — Praxes Sanctorum</title>
+<style>
+
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+/* body::before grain comes from styles.css */
+
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+/* ===== Dark walnut header ===== */
+.header{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;overflow:hidden;
+}
+.header::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.header::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.h-back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  z-index:6;
+}
+.h-feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;text-transform:uppercase;
+  text-align:center;margin-bottom:8px;
+}
+.h-title{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.h-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:4px;
+}
+.h-rule{display:flex;align-items:center;gap:14px;margin:14px 8px 10px}
+.h-rule::before,.h-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.h-rule .glyph{color:#B8960C;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+main{position:relative;z-index:2;padding:0 28px 40px}
+
+.intro{
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  margin:24px 16px 8px;
+  line-height:1.5;
+}
+.intro::after{
+  content:'✦';
+  display:block;
+  color:#B8960C;
+  font-size:11px;
+  margin-top:10px;
+  opacity:0.55;
+}
+
+/* ===== Saint entry: illuminated, not card ===== */
+.saint{
+  position:relative;
+  padding:22px 0 22px 64px;
+  cursor:pointer;
+  border-bottom:0.5px solid rgba(184,150,12,0.22);
+}
+.saint:last-of-type{border-bottom:none}
+.saint .init{
+  position:absolute;
+  left:0;top:18px;
+  width:48px;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:54px;font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+  text-align:center;
+}
+.saint .init::after{
+  content:'';display:block;
+  width:32px;height:0.5px;
+  background:#B8960C;
+  margin:6px auto 0;
+}
+.saint .name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:600;
+  color:#1C1410;
+  line-height:1.1;
+}
+.saint .title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#8B1A1A;
+  margin-top:1px;
+  letter-spacing:0.3px;
+}
+.saint .charism{
+  font-family:'EB Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.5;
+  margin-top:6px;
+}
+.saint .meta{
+  display:flex;
+  gap:14px;
+  margin-top:8px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#9A8670;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.saint .meta .red{color:#8B1A1A}
+.saint .meta .sep{color:#B8960C;opacity:0.6}
+
+.end{
+  text-align:center;
+  margin:32px 0 14px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  letter-spacing:10px;
+  opacity:0.45;
+}
+
+/* ===== Tab bar ===== */
+.tab-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;
+  z-index:20;
+}
+.tab-bar::before{
+  content:'';position:absolute;
+  top:22px;left:32px;right:32px;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-style:normal;font-weight:400;
+  line-height:1;color:#B8960C;opacity:0.75;
+}
+.tab.active{color:#8B1A1A}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
+
+/* ===== Daily practice overlay ===== */
+.overlay{
+  display:none;
+  position:fixed;
+  top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;height:100%;
+  background:#F2E8D0;
+  z-index:30;overflow-y:auto;
+}
+.overlay.show{display:block}
+.overlay::before{
+  content:'';position:fixed;inset:0;
+  max-width:430px;margin:0 auto;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(92,60,30,0.025) 0 1px, transparent 1px),
+    radial-gradient(circle at 63% 71%, rgba(92,60,30,0.02) 0 1px, transparent 1px);
+  background-size:7px 7px,13px 13px;
+  z-index:1;mix-blend-mode:multiply;opacity:0.7;
+}
+
+.dh-saint{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;overflow:hidden;
+}
+.dh-saint::before{
+  content:'';position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.dh-saint::after{
+  content:'';position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+.dh-saint .back{
+  position:absolute;
+  top:60px;left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  cursor:pointer;
+  z-index:6;
+}
+.dh-saint .label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3px;text-transform:uppercase;
+  text-align:center;margin-bottom:6px;
+}
+.dh-saint h1{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.dh-saint .stitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  text-align:center;margin-top:3px;
+}
+
+/* Rosary-bead progress (not a bar) */
+.beads{
+  display:flex;justify-content:center;align-items:center;
+  gap:7px;
+  margin:18px 8px 4px;
+}
+.bead{
+  width:8px;height:8px;border-radius:50%;
+  border:0.5px solid rgba(184,150,12,0.55);
+  background:transparent;
+  transition:all 0.3s;
+}
+.bead.done{
+  background:#8B1A1A;
+  border-color:#8B1A1A;
+  box-shadow:0 0 0 1.5px rgba(139,26,26,0.2);
+}
+.bead.cross{
+  width:auto;height:auto;border:none;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  color:#B8960C;
+  background:transparent;
+  box-shadow:none;
+}
+.beads-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;text-transform:uppercase;
+  text-align:center;
+  margin-top:6px;
+}
+.beads-label .red{color:#B8960C}
+
+/* Daily quote */
+.quote{
+  position:relative;
+  padding:24px 18px 22px;
+  margin:24px -4px;
+  text-align:center;
+}
+.quote::before,.quote::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:75%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.quote::before{top:0}
+.quote::after{bottom:0}
+.quote-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.quote-text{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-style:italic;
+  color:#1C1410;
+  line-height:1.5;
+}
+.quote-text::before{content:'\201C';color:#8B1A1A;margin-right:2px}
+.quote-text::after{content:'\201D';color:#8B1A1A;margin-left:2px}
+.quote-attr{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:1.5px;
+  margin-top:8px;
+}
+
+/* Practice section labels */
+.psec{
+  text-align:center;
+  margin:28px -4px 14px;
+  padding:12px 0 10px;
+  position:relative;
+}
+.psec::before,.psec::after{
+  content:'';position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:55%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.4),transparent);
+}
+.psec::before{top:0}
+.psec::after{bottom:0}
+.psec .lat{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-weight:600;font-style:italic;
+  color:#1C1410;
+}
+.psec .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-style:italic;font-weight:600;
+  color:#9A8670;
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-top:1px;
+}
+
+/* Practice item: ornamental cross checkbox */
+.practice{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:13px 0;
+  border-bottom:0.5px dotted rgba(184,150,12,0.35);
+  cursor:pointer;
+}
+.practice:last-child{border-bottom:none}
+.cb{
+  width:22px;height:22px;
+  flex-shrink:0;
+  border:0.5px solid rgba(139,26,26,0.4);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  color:transparent;
+  margin-top:3px;
+  transition:all 0.25s;
+}
+.cb.done{
+  background:rgba(139,26,26,0.08);
+  border-color:#8B1A1A;
+  color:#8B1A1A;
+}
+.cb.done::before{content:'✠'}
+.p-title{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-weight:500;
+  color:#1C1410;
+  line-height:1.2;
+  transition:all 0.25s;
+}
+.p-title.done{
+  color:#9A8670;
+  font-style:italic;
+}
+.p-desc{
+  font-family:'EB Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.5;
+  margin-top:3px;
+  transition:all 0.25s;
+}
+.p-desc.done{display:none}
+
+/* Follow button + streak */
+.follow-wrap{text-align:center;margin:16px 0 8px;position:relative;z-index:6}
+.follow-btn{
+  display:inline-block;
+  padding:10px 20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:700;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;
+  border-top:0.5px solid rgba(184,150,12,0.45);
+  border-bottom:0.5px solid rgba(184,150,12,0.45);
+  cursor:pointer;
+  transition:all 0.3s;
+}
+.follow-btn .cross{margin:0 6px;color:#B8960C}
+.follow-btn.following{
+  color:#E8DFC9;
+  background:rgba(139,26,26,0.25);
+  border-color:rgba(139,26,26,0.55);
+}
+.follow-btn.following .cross{color:#E8DFC9}
+.streak{
+  display:none;
+  margin-top:8px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.streak.show{display:block}
+
+/* Following badge on selector */
+.saint .following-badge{
+  display:none;
+  margin-top:6px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.2px;
+  text-transform:uppercase;
+  border-top:0.5px solid rgba(139,26,26,0.4);
+  border-bottom:0.5px solid rgba(139,26,26,0.4);
+  padding:3px 0;
+  width:fit-content;
+}
+.saint .following-badge::before{content:'✠ '}
+.saint .following-badge::after{content:' ✠'}
+.saint.following .following-badge{display:block}
+.saint.following .init{color:#8B1A1A}
+</style>
+<script src="ui-helpers.js"></script>
+</head>
+<body>
+
+<div class="frame"></div>
+
+<header class="header">
+  <a class="h-back" href="today.html">‹ &nbsp; Hodie</a>
+  <div class="h-feria">✠ &nbsp; Praxes &nbsp; ✠</div>
+  <div class="h-title">Praxes Sanctórum</div>
+  <div class="h-eng">Practices of the Saints</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+</header>
+
+<main>
+
+<div class="intro">Choose a saint whose rule of life will be your own.<br>Each day, follow their practices and pray with them.</div>
+
+<div class="saint" data-slug="pio" onclick="showDaily('pio')">
+  <div class="init">P</div>
+  <div class="name">St. Padre Pio</div>
+  <div class="title">Mystic, Stigmatist, Confessor</div>
+  <div class="charism">A life of suffering united to Christ's Passion, intense prayer, and tireless service in the confessional.</div>
+  <div class="meta"><span class="red">Sept. 23</span> <span class="sep">·</span> <span>1887–1968</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
+  <div class="following-badge">Sequor</div>
+</div>
+
+<div class="saint" data-slug="therese" onclick="showDaily('therese')">
+  <div class="init">T</div>
+  <div class="name">St. Thérèse of Lisieux</div>
+  <div class="title">Doctor of the Church · The Little Flower</div>
+  <div class="charism">The "Little Way" — doing small things with great love, total confidence in God's mercy.</div>
+  <div class="meta"><span class="red">Oct. 1</span> <span class="sep">·</span> <span>1873–1897</span> <span class="sep">·</span> <span>Seven practices daily</span></div>
+  <div class="following-badge">Sequor</div>
+</div>
+
+<div class="saint" data-slug="aquinas" onclick="showDaily('aquinas')">
+  <div class="init">T</div>
+  <div class="name">St. Thomas Aquinas</div>
+  <div class="title">Doctor of the Church · Doctor Angelicus</div>
+  <div class="charism">The union of prayer and study — seeking God through the intellect illumined by faith.</div>
+  <div class="meta"><span class="red">Jan. 28</span> <span class="sep">·</span> <span>1225–1274</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
+  <div class="following-badge">Sequor</div>
+</div>
+
+<div class="saint" data-slug="benedict" onclick="showDaily('benedict')">
+  <div class="init">B</div>
+  <div class="name">St. Benedict of Nursia</div>
+  <div class="title">Father of Western Monasticism</div>
+  <div class="charism">Ora et Labora — a balanced life of prayer, work, and holy reading.</div>
+  <div class="meta"><span class="red">July 11</span> <span class="sep">·</span> <span>480–547</span> <span class="sep">·</span> <span>Nine practices daily</span></div>
+  <div class="following-badge">Sequor</div>
+</div>
+
+<div class="saint" data-slug="teresa" onclick="showDaily('teresa')">
+  <div class="init">T</div>
+  <div class="name">St. Teresa of Ávila</div>
+  <div class="title">Doctor of the Church · Mystic, Reformer</div>
+  <div class="charism">Deep interior prayer toward divine union, joined to practical common sense.</div>
+  <div class="meta"><span class="red">Oct. 15</span> <span class="sep">·</span> <span>1515–1582</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
+  <div class="following-badge">Sequor</div>
+</div>
+
+<div class="saint" data-slug="escriva" onclick="showDaily('escriva')">
+  <div class="init">J</div>
+  <div class="name">St. Josemaría Escrivá</div>
+  <div class="title">Founder of Opus Dei</div>
+  <div class="charism">Sanctification of ordinary work and daily life — finding God in the middle of the world.</div>
+  <div class="meta"><span class="red">June 26</span> <span class="sep">·</span> <span>1902–1975</span> <span class="sep">·</span> <span>Ten practices daily</span></div>
+  <div class="following-badge">Sequor</div>
+</div>
+
+<div class="saint" data-slug="desales" onclick="showDaily('desales')">
+  <div class="init">F</div>
+  <div class="name">St. Francis de Sales</div>
+  <div class="title">Doctor of the Church · Bishop of Geneva</div>
+  <div class="charism">Gentle devotion for laypeople — holiness through sweetness, patience, and love.</div>
+  <div class="meta"><span class="red">Jan. 24</span> <span class="sep">·</span> <span>1567–1622</span> <span class="sep">·</span> <span>Eight practices daily</span></div>
+  <div class="following-badge">Sequor</div>
+</div>
+
+<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+
+</main>
+
+<!-- ===== DAILY PRACTICE OVERLAY (dynamic) ===== -->
+<div class="overlay" id="daily">
+  <div class="frame"></div>
+
+  <div class="dh-saint">
+    <a class="back" onclick="hideDaily()">‹ &nbsp; Praxes</a>
+    <div class="label" id="saint-label">✠ &nbsp; Regula Vitæ &nbsp; ✠</div>
+    <h1 id="saint-name">St. Padre Pio</h1>
+    <div class="stitle" id="saint-title">Mystic, Stigmatist, Confessor</div>
+
+    <div class="follow-wrap">
+      <a class="follow-btn" id="follow-btn" onclick="toggleFollow()">Séquere <span class="cross">✠</span> Follow</a>
+      <div class="streak" id="streak"></div>
+    </div>
+
+    <div class="beads" id="beads"></div>
+    <div class="beads-label"><span id="count">0</span> &nbsp;of&nbsp; <span id="total-label">8</span> &nbsp;<span class="red">·</span>&nbsp; <span id="pct">0%</span></div>
+  </div>
+
+  <main id="saint-body">
+    <!-- Dynamically rendered -->
+    <div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>
+  </main>
+</div>
+
+<script>
+// ===== Full saint data: all 7 saints with complete practices =====
+var SAINTS={
+  pio:{name:"St. Padre Pio",title:"Mystic, Stigmatist, Confessor",quote:"Pray, hope, and don't worry. Worry is useless. God is merciful and will hear your prayer.",sections:[
+    {lat:"Mane",eng:"Morning",practices:[
+      {t:"Morning Offering",d:"Upon waking, immediately offer your day to God. 'Lord, I offer Thee all my prayers, works, joys, and sufferings of this day.'"},
+      {t:"Attend Holy Mass",d:"Padre Pio's Mass was the centre of his life, often lasting two hours. Attend Mass daily if possible."},
+      {t:"Mental Prayer (30 min)",d:"Spend half an hour in silent meditation upon the Passion of Our Lord."}
+    ]},
+    {lat:"Per Diem",eng:"Throughout the Day",practices:[
+      {t:"Pray the Full Rosary",d:"Padre Pio called it 'the weapon.' Pray at least five decades each day."},
+      {t:"Spiritual Reading",d:"Read fifteen minutes from the Imitation of Christ, the lives of the saints, or St. John of the Cross."},
+      {t:"Visit to the Blessed Sacrament",d:"Sit or kneel before Jesus in the tabernacle, in silence."}
+    ]},
+    {lat:"Vésperæ",eng:"Evening",practices:[
+      {t:"Examination of Conscience",d:"Before sleep, examine the day's faults and offer them to God's mercy."}
+    ]},
+    {lat:"Pænitentiæ",eng:"Penances",practices:[
+      {t:"Offer Daily Sufferings",d:"Unite every pain and difficulty to the Passion of Christ — 'Co-redemption.'"}
+    ]}
+  ]},
+  therese:{name:"St. Thérèse of Lisieux",title:"Doctor of the Church · The Little Flower",quote:"Miss no single opportunity of making some small sacrifice, here by a smiling look, there by a kindly word; always doing the smallest right, and doing it all for love.",sections:[
+    {lat:"Mane",eng:"Morning",practices:[
+      {t:"Morning Offering to Love",d:"Offer your day as a 'little sacrifice of love' to Jesus. Aspire to please Him in every small thing."},
+      {t:"Attend Mass",d:"Receive Holy Communion with total trust and childlike confidence."},
+      {t:"Pray the Angelus",d:"Recall the mystery of the Incarnation three times a day — morning, noon, and evening."}
+    ]},
+    {lat:"Per Diem",eng:"Throughout the Day",practices:[
+      {t:"Do Small Things with Great Love",d:"Seek out tiny acts of kindness — a smiling look, a kind word, a cheerfully-borne inconvenience."},
+      {t:"Accept Every Cross",d:"Receive every small annoyance as a gift from God. Never complain."},
+      {t:"Silent Interior Sacrifice",d:"Make hidden sacrifices known only to God. Do not seek recognition."}
+    ]},
+    {lat:"Vésperæ",eng:"Evening",practices:[
+      {t:"Act of Abandonment",d:"Before sleep, abandon yourself into the merciful arms of Our Heavenly Father, as a little child."}
+    ]}
+  ]},
+  aquinas:{name:"St. Thomas Aquinas",title:"Doctor of the Church · Doctor Angelicus",quote:"To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.",sections:[
+    {lat:"Mane",eng:"Morning",practices:[
+      {t:"Prayer Before Study",d:"Pray: 'Creator of all things, true source of light and wisdom, deign to shed upon the darkness of my understanding the brightness of Thy light.'"},
+      {t:"Attend Mass",d:"Thomas celebrated Mass daily with profound reverence — he wept at the Consecration."},
+      {t:"Mental Prayer (30 min)",d:"Silent meditation upon a single truth of faith. Simplicity is higher than complexity."}
+    ]},
+    {lat:"Per Diem",eng:"Throughout the Day",practices:[
+      {t:"Study Theology (1 hour)",d:"Read slowly from the Summa, Scripture, or the Church Fathers. Study is a form of prayer."},
+      {t:"Pray the Rosary",d:"Thomas loved the Rosary for its simplicity — 'all the theology of the Incarnation in 50 beads.'"},
+      {t:"Visit to the Blessed Sacrament",d:"Adore Christ truly present — the centre of all theology."}
+    ]},
+    {lat:"Vésperæ",eng:"Evening",practices:[
+      {t:"Compline & Silence",d:"Pray the last hour of the Divine Office and retire in contemplative silence."},
+      {t:"Examine the Day's Thoughts",d:"Ask: 'Did I think of God? Did my study lead me to love Him more?'"}
+    ]}
+  ]},
+  benedict:{name:"St. Benedict of Nursia",title:"Father of Western Monasticism",quote:"Ora et labora — Pray and work. Let nothing be preferred to the Work of God.",sections:[
+    {lat:"Mane",eng:"Morning (Vigils & Lauds)",practices:[
+      {t:"Rise Before Dawn",d:"Benedict's monks rose in the night for Vigils. Begin your day early, before the world demands your attention."},
+      {t:"Pray Lauds",d:"The Divine Office at daybreak. Offer the day's first hours to God."},
+      {t:"Lectio Divina (30 min)",d:"Sacred reading of Scripture — read, meditate, pray, contemplate."}
+    ]},
+    {lat:"Per Diem",eng:"The Day's Work",practices:[
+      {t:"Labour with Prayer",d:"Work with your hands or mind, but keep your heart fixed on God. Offer each task as a prayer."},
+      {t:"Pray the Minor Hours",d:"Prime, Terce, Sext, None — short interruptions to remember God throughout the day."},
+      {t:"Hospitality",d:"Receive every person as Christ Himself. 'I was a stranger and you took me in.'"}
+    ]},
+    {lat:"Vésperæ",eng:"Evening",practices:[
+      {t:"Pray Vespers",d:"The Magnificat at dusk. Thank God for the day's gifts and sorrows."},
+      {t:"Silent Supper",d:"Eat simply, in silence, with a reading from Scripture or the saints."},
+      {t:"Pray Compline",d:"The Church's night prayer. Ask protection from the terrors of the night."}
+    ]}
+  ]},
+  teresa:{name:"St. Teresa of Ávila",title:"Doctor of the Church · Mystic, Reformer",quote:"Let nothing disturb thee, nothing affright thee; all things are passing; God never changeth; patient endurance attaineth to all things; whoso God possesseth, in nothing is wanting; alone God sufficeth.",sections:[
+    {lat:"Mane",eng:"Morning",practices:[
+      {t:"Morning Mental Prayer (1 hour)",d:"Enter the 'interior castle' — turn within to the soul's centre, where Christ dwells."},
+      {t:"Attend Mass",d:"Receive Our Lord with the deepest recollection."},
+      {t:"Spiritual Reading",d:"Read from Teresa's Interior Castle, Way of Perfection, or Scripture."}
+    ]},
+    {lat:"Per Diem",eng:"Throughout the Day",practices:[
+      {t:"Pray the Rosary",d:"Meditate on the mysteries. Teresa used the Rosary to steady her soul."},
+      {t:"Practise Recollection",d:"Even in work or conversation, keep the soul gently turned toward God."},
+      {t:"Offer Small Sacrifices",d:"Accept every inconvenience with patient endurance — 'patience attains all things.'"}
+    ]},
+    {lat:"Vésperæ",eng:"Evening",practices:[
+      {t:"Evening Mental Prayer (30 min)",d:"Return again to the interior castle. Rest silently in God's presence."},
+      {t:"Examination & Act of Contrition",d:"Review the day's faults with humility. Trust in God's mercy."}
+    ]}
+  ]},
+  escriva:{name:"St. Josemaría Escrivá",title:"Founder of Opus Dei",quote:"Do everything for Love. Thus there will be no little things: everything will be big. Perseverance in the little things for Love is heroism.",sections:[
+    {lat:"Mane",eng:"Morning",practices:[
+      {t:"Heroic Minute",d:"At the sound of the alarm, jump out of bed immediately. Consecrate the first minute of the day to Our Lord."},
+      {t:"Morning Offering",d:"'Serviam' — I will serve. Offer the whole day to God through Mary."},
+      {t:"Attend Holy Mass",d:"The Mass is the centre and root of the interior life. Receive Communion daily."},
+      {t:"Mental Prayer (30 min)",d:"Spend half an hour in silent conversation with Our Lord."}
+    ]},
+    {lat:"Per Diem",eng:"Work as Prayer",practices:[
+      {t:"Sanctify Your Work",d:"Work well, for the love of God. Turn every task into prayer. This is Opus Dei — 'the Work of God.'"},
+      {t:"Pray the Angelus",d:"Pause at noon to remember the Incarnation."},
+      {t:"Pray the Rosary",d:"Five decades daily. 'The Rosary is the most powerful weapon to conquer Satan.'"},
+      {t:"Visit to the Blessed Sacrament",d:"A brief visit in the midst of the day's work, even if only for a minute."}
+    ]},
+    {lat:"Vésperæ",eng:"Evening",practices:[
+      {t:"Spiritual Reading (15 min)",d:"Read from The Way, Furrow, or the Gospels."},
+      {t:"Particular Examination",d:"Examine yourself on one specific virtue you are working to acquire."}
+    ]}
+  ]},
+  desales:{name:"St. Francis de Sales",title:"Doctor of the Church · Bishop of Geneva",quote:"Nothing is so strong as gentleness; nothing so gentle as real strength.",sections:[
+    {lat:"Mane",eng:"Morning",practices:[
+      {t:"Preparation of the Day",d:"Place yourself in God's presence. Foresee what the day will bring and resolve how to meet each thing with gentleness."},
+      {t:"Attend Mass if Possible",d:"Unite yourself with Christ's Sacrifice. Receive Communion with sweet devotion."},
+      {t:"Meditation (30 min)",d:"A simple, affective meditation on a scene from the Gospels. Speak to Our Lord as a friend."}
+    ]},
+    {lat:"Per Diem",eng:"Throughout the Day",practices:[
+      {t:"Spiritual Bouquets",d:"Gather 'little bouquets' of devout thoughts throughout the day. Return to them often."},
+      {t:"Practise Gentleness",d:"Above all, be gentle — with others, with yourself, with circumstances. 'Nothing is so strong as gentleness.'"},
+      {t:"Pray the Rosary",d:"Francis loved the Rosary as a family prayer — slow, affectionate, meditative."}
+    ]},
+    {lat:"Vésperæ",eng:"Evening",practices:[
+      {t:"Examination of Conscience",d:"Review the day kindly. Thank God for graces, ask pardon for faults, resolve to amend."},
+      {t:"Short Spiritual Reading",d:"Read from the Introduction to the Devout Life or the Treatise on the Love of God."}
+    ]}
+  ]}
+};
+
+// ===== State: follow + streak =====
+// localStorage keys namespaced under 'aad.' (Introibo — legacy namespace kept for continuity)
+function getFollowed(){try{return localStorage.getItem('aad.saints.followed')||null}catch(e){return null}}
+function setFollowed(slug){try{localStorage.setItem('aad.saints.followed',slug);if(slug){bumpStreak(slug)}}catch(e){}}
+function getStreak(slug){try{var d=localStorage.getItem('aad.saints.streak.'+slug);return d?parseInt(d,10):0}catch(e){return 0}}
+function bumpStreak(slug){
+  try{
+    var today=new Date().toISOString().slice(0,10);
+    var lastDay=localStorage.getItem('aad.saints.streakLast.'+slug);
+    if(lastDay===today)return;
+    var cur=getStreak(slug);
+    if(lastDay){
+      var yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);
+      var y=yesterday.toISOString().slice(0,10);
+      cur=(lastDay===y)?cur+1:1;
+    }else{cur=1}
+    localStorage.setItem('aad.saints.streak.'+slug,String(cur));
+    localStorage.setItem('aad.saints.streakLast.'+slug,today);
+  }catch(e){}
+}
+
+// ===== Build bead progress (total + center cross) =====
+function buildBeads(total){
+  var beads=document.getElementById('beads');
+  beads.innerHTML='';
+  var half=Math.floor(total/2);
+  for(var i=0;i<half;i++){var b=document.createElement('span');b.className='bead';beads.appendChild(b)}
+  var cross=document.createElement('span');cross.className='bead cross';cross.textContent='✠';beads.appendChild(cross);
+  var remainder=total-half;
+  for(var i=0;i<remainder;i++){var b=document.createElement('span');b.className='bead';beads.appendChild(b)}
+}
+
+// ===== Render a saint's daily view =====
+var currentSlug='pio', currentTotal=0, currentDone=0;
+function renderSaint(slug){
+  currentSlug=slug;
+  var s=SAINTS[slug];
+  if(!s)return;
+  document.getElementById('saint-name').textContent=s.name;
+  document.getElementById('saint-title').textContent=s.title;
+
+  // Follow button state
+  var followed=getFollowed();
+  var btn=document.getElementById('follow-btn');
+  if(followed===slug){
+    btn.classList.add('following');
+    btn.innerHTML='Desine <span class="cross">✠</span> Unfollow';
+    var streakEl=document.getElementById('streak');
+    var n=getStreak(slug);
+    if(n>0){streakEl.textContent=toRoman(n)+' consecutive day'+(n===1?'':'s');streakEl.classList.add('show')}
+    else{streakEl.classList.remove('show')}
+  }else{
+    btn.classList.remove('following');
+    btn.innerHTML='Séquere <span class="cross">✠</span> Follow';
+    document.getElementById('streak').classList.remove('show');
+  }
+
+  // Count total practices
+  var total=0;
+  s.sections.forEach(function(sec){total+=sec.practices.length});
+  currentTotal=total;
+  currentDone=0;
+  document.getElementById('total-label').textContent=total;
+  document.getElementById('count').textContent='0';
+  document.getElementById('pct').textContent='0%';
+  buildBeads(total);
+
+  // Build body
+  var body=document.getElementById('saint-body');
+  var html='<div class="quote">'+
+    '<div class="quote-label">Verbum Hodiernum &nbsp;·&nbsp; Today\'s Word</div>'+
+    '<div class="quote-text">'+escapeHtml(s.quote)+'</div>'+
+    '<div class="quote-attr">— '+escapeHtml(s.name)+'</div>'+
+  '</div>';
+  s.sections.forEach(function(sec){
+    html+='<div class="psec"><div class="lat">'+escapeHtml(sec.lat)+'</div><div class="eng">'+escapeHtml(sec.eng)+'</div></div>';
+    sec.practices.forEach(function(p){
+      html+='<div class="practice" onclick="togglePractice(this)">'+
+        '<div class="cb"></div>'+
+        '<div><div class="p-title">'+escapeHtml(p.t)+'</div><div class="p-desc">'+escapeHtml(p.d)+'</div></div>'+
+      '</div>';
+    });
+  });
+  html+='<div class="end">✦ &nbsp; ✠ &nbsp; ✦</div>';
+  body.innerHTML=html;
+}
+
+// escapeHtml + toRoman come from ui-helpers.js (loaded via <script src> in <head>)
+
+function togglePractice(el){
+  var cb=el.querySelector('.cb');
+  var title=el.querySelector('.p-title');
+  var desc=el.querySelector('.p-desc');
+  if(cb.classList.contains('done')){
+    cb.classList.remove('done');title.classList.remove('done');
+    if(desc)desc.classList.remove('done');
+    currentDone--;
+  }else{
+    cb.classList.add('done');title.classList.add('done');
+    if(desc)desc.classList.add('done');
+    currentDone++;
+    // If they complete all, and they're following, bump streak
+    if(currentDone===currentTotal && getFollowed()===currentSlug){bumpStreak(currentSlug);renderSaint(currentSlug)}
+  }
+  document.getElementById('count').textContent=currentDone;
+  document.getElementById('pct').textContent=Math.round(currentDone/currentTotal*100)+'%';
+  // Light up beads
+  var allBeads=document.querySelectorAll('#beads .bead:not(.cross)');
+  allBeads.forEach(function(b,i){
+    if(i<currentDone)b.classList.add('done');else b.classList.remove('done');
+  });
+}
+
+function toggleFollow(){
+  var cur=getFollowed();
+  if(cur===currentSlug){
+    setFollowed('');
+    try{localStorage.removeItem('aad.saints.followed')}catch(e){}
+  }else{
+    setFollowed(currentSlug);
+  }
+  renderSaint(currentSlug);
+  renderSelector();
+}
+
+function renderSelector(){
+  var followed=getFollowed();
+  document.querySelectorAll('.saint').forEach(function(el){
+    var slug=el.getAttribute('data-slug');
+    if(slug===followed)el.classList.add('following');
+    else el.classList.remove('following');
+  });
+}
+
+function showDaily(slug){
+  renderSaint(slug||'pio');
+  document.getElementById('daily').classList.add('show');
+  window.scrollTo(0,0);
+}
+function hideDaily(){document.getElementById('daily').classList.remove('show')}
+
+// Initial render
+renderSelector();
+</script>
+
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
+<title>Introibo — Missal</title>
+<style>
+
+
+body{
+  font-family:'EB Garamond','Georgia',serif;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(184,150,12,0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(139,26,26,0.03), transparent 60%),
+    #F2E8D0;
+  color:#1C1410;
+  max-width:430px;
+  margin:0 auto;
+  min-height:100vh;
+  padding-bottom:110px;
+  position:relative;
+}
+
+/* body::before grain comes from styles.css */
+
+/* ===== Dark walnut header ===== */
+.header{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,150,12,0.18), transparent 70%),
+    linear-gradient(180deg,#1A130C 0%,#241A11 60%,#2C2015 100%);
+  padding:62px 28px 28px;
+  z-index:5;
+  overflow:hidden;
+}
+.header::before{
+  content:'';
+  position:absolute;
+  top:14px;left:14px;right:14px;bottom:14px;
+  border:0.5px solid rgba(184,150,12,0.45);
+  pointer-events:none;
+}
+.header::after{
+  content:'';
+  position:absolute;
+  top:17px;left:17px;right:17px;bottom:17px;
+  border:0.5px solid rgba(184,150,12,0.22);
+  pointer-events:none;
+}
+
+.h-feria{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-weight:600;font-style:italic;
+  color:#B8960C;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  text-align:center;
+  margin-bottom:8px;
+}
+.h-title{
+  font-family:'Playfair Display',serif;
+  font-size:30px;font-weight:600;
+  color:#E8DFC9;
+  text-align:center;
+  letter-spacing:1px;
+  line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.5);
+}
+.h-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:#9A8670;
+  text-align:center;
+  margin-top:4px;
+}
+.h-rule{
+  display:flex;align-items:center;gap:14px;
+  margin:14px 8px 12px;
+}
+.h-rule::before,.h-rule::after{
+  content:'';flex:1;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.55),transparent);
+}
+.h-rule .glyph{
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+}
+.h-rite{
+  display:block;
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:600;
+  color:#B8960C;
+  letter-spacing:2.2px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.h-rite .sep{color:#B8960C;margin:0 6px}
+.h-rite-caret{font-size:8px}
+
+/* ===== Mass progress path ===== */
+.path{
+  position:sticky;top:0;
+  background:#F2E8D0;
+  padding:14px 0 12px;
+  z-index:8;
+  border-bottom:0.5px solid rgba(184,150,12,0.25);
+}
+.path-scroll{
+  display:flex;
+  gap:0;
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding:0 22px;
+}
+.path-scroll::-webkit-scrollbar{display:none}
+.path-node{
+  flex:0 0 auto;
+  display:flex;flex-direction:column;align-items:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  text-decoration:none;
+  position:relative;
+  padding:0 14px;
+}
+.path-node .dot{
+  width:6px;height:6px;
+  border:0.5px solid #B8960C;
+  background:#F2E8D0;
+  border-radius:50%;
+  margin-bottom:5px;
+}
+.path-node.active{color:#8B1A1A}
+.path-node.active .dot{
+  background:#8B1A1A;
+  border-color:#8B1A1A;
+  box-shadow:0 0 0 2px rgba(139,26,26,0.15);
+}
+.path-line{
+  position:absolute;
+  top:14px;left:0;right:0;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent 0,rgba(184,150,12,0.4) 8%,rgba(184,150,12,0.4) 92%,transparent 100%);
+  z-index:-1;
+}
+
+/* ===== Page frame ===== */
+.frame{
+  position:fixed;
+  top:10px;bottom:10px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 20px);max-width:410px;
+  pointer-events:none;
+  border:0.5px solid rgba(184,150,12,0.3);
+  z-index:3;
+}
+.frame::before{
+  content:'';position:absolute;inset:3px;
+  border:0.5px solid rgba(184,150,12,0.18);
+}
+
+main{position:relative;z-index:2;padding:0 28px 40px}
+
+/* ===== Part dividers (illuminated chapter breaks) ===== */
+.part{
+  text-align:center;
+  margin:32px -8px 22px;
+  padding:18px 0 14px;
+  position:relative;
+}
+.part::before,.part::after{
+  content:'';
+  position:absolute;
+  left:50%;transform:translateX(-50%);
+  width:70%;height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.part::before{top:0}
+.part::after{bottom:0}
+.part .cross{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  color:#8B1A1A;
+  margin-bottom:6px;
+}
+.part .lat{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:600;font-style:italic;
+  color:#1C1410;
+  letter-spacing:0.5px;
+}
+.part .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;font-weight:600;
+  color:#9A8670;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-top:2px;
+}
+
+/* ===== Section ===== */
+.section{position:relative;margin:22px 0;padding-left:24px}
+.section .num{
+  position:absolute;
+  left:0;top:6px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-style:italic;
+  color:#B8960C;
+  letter-spacing:1px;
+  width:18px;
+  text-align:right;
+  padding-right:4px;
+  border-right:0.5px solid rgba(184,150,12,0.3);
+}
+.posture{
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  display:flex;align-items:center;gap:6px;
+}
+.posture .g{font-size:11px;color:#B8960C;font-style:normal}
+
+.sec-title{
+  font-family:'Playfair Display',serif;
+  font-size:21px;font-weight:600;
+  color:#1C1410;
+  line-height:1.15;
+}
+.sec-eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#9A8670;
+  margin-top:1px;
+  margin-bottom:8px;
+}
+.rubric{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:#8B1A1A;
+  opacity:0.85;
+  line-height:1.45;
+  margin:6px 0 10px;
+}
+.rubric .mark{font-weight:700;margin-right:4px}
+
+/* ℟. and ℣. response/versicle rubric marks inside bilingual prayer text */
+.rmark{color:#8B1A1A;font-weight:600}
+
+/* ===== Two-column bilingual ===== */
+.row{display:flex;gap:0;padding:4px 0}
+.col{flex:1}
+.col.l{padding-right:11px;border-right:0.5px solid rgba(184,150,12,0.25)}
+.col.r{padding-left:11px}
+.lat{
+  font-family:'Playfair Display',serif;
+  font-size:14px;
+  color:#1C1410;
+  line-height:1.65;
+}
+.eng{
+  font-family:'EB Garamond',serif;
+  font-size:13.5px;font-style:italic;
+  color:#7A6A58;
+  line-height:1.65;
+}
+
+/* Drop cap on first prayer line of a section */
+.dropcap{
+  float:left;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:48px;
+  font-weight:500;
+  color:#8B1A1A;
+  line-height:0.85;
+  padding:6px 6px 0 0;
+}
+
+/* Proper marker (changes daily) */
+.proper{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;
+  color:#9A8670;
+  text-align:center;
+  padding:10px 0;
+  letter-spacing:1.2px;
+}
+.proper::before,.proper::after{content:'· · · ';color:#B8960C;opacity:0.5}
+
+/* Illuminated highlight for special moments (Et Incarnatus, Verbum Caro) */
+.illumine{
+  margin:14px -4px;
+  padding:14px 12px;
+  text-align:center;
+  background:
+    radial-gradient(ellipse at center, rgba(184,150,12,0.10), transparent 75%);
+  border-top:0.5px solid rgba(184,150,12,0.4);
+  border-bottom:0.5px solid rgba(184,150,12,0.4);
+}
+.illumine .lat{
+  font-family:'Playfair Display',serif;
+  font-size:15px;font-weight:600;font-style:italic;
+  color:#8B1A1A;
+  line-height:1.4;
+  letter-spacing:0.5px;
+}
+.illumine .eng{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;font-style:italic;
+  color:#7A6A58;
+  margin-top:4px;
+}
+.illumine .genuflect{
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#8B1A1A;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-top:8px;
+}
+
+/* End mark */
+.end{
+  text-align:center;
+  margin:38px 0 14px;
+  color:#B8960C;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  letter-spacing:10px;
+  opacity:0.45;
+}
+.end .deo{
+  display:block;
+  font-size:12px;
+  font-style:italic;
+  letter-spacing:3px;
+  color:#8B1A1A;
+  opacity:0.7;
+  margin-bottom:6px;
+}
+
+/* ===== Tab bar ===== */
+.tab-bar{
+  position:fixed;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:430px;
+  height:88px;
+  background:linear-gradient(180deg,rgba(242,232,208,0) 0%,#F2E8D0 28%);
+  padding:22px 12px 28px;
+  display:flex;justify-content:space-around;align-items:center;
+  z-index:20;
+}
+.tab-bar::before{
+  content:'';
+  position:absolute;
+  top:22px;left:32px;right:32px;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,12,0.5),transparent);
+}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:9px;font-weight:700;font-style:italic;
+  color:#9A8670;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.tab .glyph{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-style:normal;font-weight:400;
+  line-height:1;
+  color:#B8960C;
+  opacity:0.75;
+}
+.tab.active{color:#8B1A1A}
+.tab.active .glyph{color:#8B1A1A;opacity:1}
+</style>
+<script src="lit-context.js"></script>
+<script src="ui-helpers.js"></script>
+</head>
+<body>
+
+<div class="frame"></div>
+
+<header class="header">
+  <div class="h-feria" id="m-feria">✠ &nbsp; Missa Lecta &nbsp; ✠</div>
+  <div class="h-title">Ordo Missæ</div>
+  <div class="h-eng" id="m-eng">The Order of Mass</div>
+  <div class="h-rule"><span class="glyph">✦</span></div>
+  <a href="#" class="h-rite">Ritus <span class="sep">·</span> Missale Romanum 1962 <span class="h-rite-caret">▾</span></a>
+</header>
+
+<nav class="path">
+  <div class="path-scroll">
+    <div class="path-line"></div>
+    <a class="path-node active" href="#preces"><span class="dot"></span>Preces</a>
+    <a class="path-node" href="#kyrie"><span class="dot"></span>Kyrie</a>
+    <a class="path-node" href="#gloria"><span class="dot"></span>Gloria</a>
+    <a class="path-node" href="#collecta"><span class="dot"></span>Collecta</a>
+    <a class="path-node" href="#credo"><span class="dot"></span>Credo</a>
+    <a class="path-node" href="#sanctus"><span class="dot"></span>Sanctus</a>
+    <a class="path-node" href="#canon"><span class="dot"></span>Canon</a>
+    <a class="path-node" href="#pater"><span class="dot"></span>Pater</a>
+    <a class="path-node" href="#agnus"><span class="dot"></span>Agnus</a>
+    <a class="path-node" href="#communio"><span class="dot"></span>Communio</a>
+    <a class="path-node" href="#ultimum"><span class="dot"></span>Ultimum</a>
+  </div>
+</nav>
+
+<main>
+
+<div class="part" id="preces">
+  <span class="cross">✠</span>
+  <div class="lat">Preces Præparatoriæ</div>
+  <div class="eng">Preparatory Prayers</div>
+</div>
+
+<div class="section">
+  <div class="num">i</div>
+  <div class="posture"><span class="g">†</span> Stat &nbsp;·&nbsp; Stand</div>
+  <div class="sec-title">Preces ad Imum Altaris</div>
+  <div class="sec-eng">Prayers at the Foot of the Altar</div>
+  <div class="rubric">The priest, vested and at the foot of the altar, makes the Sign of the Cross and begins.</div>
+
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">I</span>n nómine Patris, ✠ et Fílii, et Spíritus Sancti. Amen.</div></div>
+    <div class="col r"><div class="eng">In the name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="rmark">℣.</span> Introíbo ad altáre Dei.</div></div>
+    <div class="col r"><div class="eng"><span class="rmark">℣.</span> I will go unto the altar of God.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="rmark">℟.</span> Ad Deum qui lætíficat iuventútem meam.</div></div>
+    <div class="col r"><div class="eng"><span class="rmark">℟.</span> To God, Who giveth joy to my youth.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="num">ii</div>
+  <div class="posture"><span class="g">†</span> Stat &nbsp;·&nbsp; Stand, deeply bowed</div>
+  <div class="sec-title">Confíteor</div>
+  <div class="sec-eng">The Confession</div>
+  <div class="rubric">The priest bows profoundly and strikes his breast at <em>mea culpa</em>.</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">C</span>onfíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Ioánni Baptístæ, sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis, quia peccávi nimis cogitatióne, verbo et ópere: <em>mea culpa, mea culpa, mea máxima culpa.</em></div></div>
+    <div class="col r"><div class="eng">I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the Saints, that I have sinned exceedingly in thought, word, and deed: <em>through my fault, through my fault, through my most grievous fault.</em></div></div>
+  </div>
+</div>
+
+<div class="part" id="kyrie">
+  <span class="cross">✠</span>
+  <div class="lat">Missa Catechumenorum</div>
+  <div class="eng">Mass of the Catechumens</div>
+</div>
+
+<div class="section">
+  <div class="num">iii</div>
+  <div class="posture"><span class="g">†</span> Stat &nbsp;·&nbsp; Stand</div>
+  <div class="sec-title">Introitus</div>
+  <div class="sec-eng">Introit · Entrance Antiphon</div>
+  <div class="proper">Proprium &nbsp;—&nbsp; varies by feast</div>
+</div>
+
+<div class="section">
+  <div class="num">iv</div>
+  <div class="posture"><span class="g">⌇</span> Genuflectitur &nbsp;·&nbsp; Kneel</div>
+  <div class="sec-title">Kýrie Eléison</div>
+  <div class="sec-eng">Lord, Have Mercy</div>
+  <div class="rubric">Said three times in alternation, in three groups of three.</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="rmark">℣.</span> Kýrie, eléison. <span class="rmark">℟.</span> Kýrie, eléison.<br><span class="rmark">℣.</span> Kýrie, eléison.<br><br><span class="rmark">℣.</span> Christe, eléison. <span class="rmark">℟.</span> Christe, eléison.<br><span class="rmark">℣.</span> Christe, eléison.<br><br><span class="rmark">℣.</span> Kýrie, eléison. <span class="rmark">℟.</span> Kýrie, eléison.<br><span class="rmark">℣.</span> Kýrie, eléison.</div></div>
+    <div class="col r"><div class="eng">Lord, have mercy. Lord, have mercy.<br>Lord, have mercy.<br><br>Christ, have mercy. Christ, have mercy.<br>Christ, have mercy.<br><br>Lord, have mercy. Lord, have mercy.<br>Lord, have mercy.</div></div>
+  </div>
+</div>
+
+<div class="section" id="gloria">
+  <div class="num">v</div>
+  <div class="posture"><span class="g">†</span> Stat &nbsp;·&nbsp; Stand</div>
+  <div class="sec-title">Glória in Excélsis Deo</div>
+  <div class="sec-eng">Glory to God in the Highest</div>
+  <div class="rubric">Said on Sundays outside Advent and Lent, on feasts, and within octaves.</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">G</span>lória in excélsis Deo, et in terra pax homínibus bonæ voluntátis. Laudámus te. Benedícimus te. Adorámus te. Glorificámus te. Grátias ágimus tibi propter magnam glóriam tuam.</div></div>
+    <div class="col r"><div class="eng">Glory be to God on high, and on earth peace to men of good will. We praise Thee. We bless Thee. We adore Thee. We glorify Thee. We give Thee thanks for Thy great glory.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat">Dómine Deus, Rex cæléstis, Deus Pater omnípotens. Dómine Fili Unigénite, Iesu Christe. Dómine Deus, Agnus Dei, Fílius Patris.</div></div>
+    <div class="col r"><div class="eng">O Lord God, heavenly King, God the Father almighty. O Lord Jesus Christ, the only-begotten Son. O Lord God, Lamb of God, Son of the Father.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat">Quóniam tu solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, Iesu Christe. Cum Sancto Spíritu, in glória Dei Patris. Amen.</div></div>
+    <div class="col r"><div class="eng">For Thou alone art holy. Thou alone art the Lord. Thou alone art the most high, Jesus Christ. With the Holy Ghost, in the glory of God the Father. Amen.</div></div>
+  </div>
+</div>
+
+<div class="section" id="collecta">
+  <div class="num">vi</div>
+  <div class="posture"><span class="g">†</span> Stat &nbsp;·&nbsp; Stand</div>
+  <div class="sec-title">Collécta</div>
+  <div class="sec-eng">The Collect</div>
+  <div class="proper">Proprium &nbsp;—&nbsp; varies by feast</div>
+</div>
+
+<div class="section" id="credo">
+  <div class="num">vii</div>
+  <div class="posture"><span class="g">†</span> Stat &nbsp;·&nbsp; Stand</div>
+  <div class="sec-title">Credo</div>
+  <div class="sec-eng">The Nicene Creed</div>
+  <div class="rubric">Said on Sundays, within octaves, on feasts of Our Lord, Our Lady, the Apostles and Doctors.</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">C</span>redo in unum Deum, Patrem omnipoténtem, factórem cæli et terræ, visibílium ómnium et invisibílium.</div></div>
+    <div class="col r"><div class="eng">I believe in one God, the Father almighty, maker of heaven and earth, and of all things visible and invisible.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat">Et in unum Dóminum Iesum Christum, Fílium Dei unigénitum. Et ex Patre natum ante ómnia sǽcula. Deum de Deo, lumen de lúmine, Deum verum de Deo vero.</div></div>
+    <div class="col r"><div class="eng">And in one Lord Jesus Christ, the only-begotten Son of God. Born of the Father before all ages. God of God, light of light, true God of true God.</div></div>
+  </div>
+
+  <div class="illumine">
+    <div class="lat">Et incarnátus est de Spíritu Sancto<br>ex María Vírgine: et homo factus est.</div>
+    <div class="eng">And was incarnate by the Holy Ghost of the Virgin Mary, and was made man.</div>
+    <div class="genuflect">✠ &nbsp; Hic genuflectitur &nbsp; ✠</div>
+  </div>
+
+  <div class="row">
+    <div class="col l"><div class="lat">Crucifíxus étiam pro nobis: sub Póntio Piláto passus, et sepúltus est. Et resurréxit tértia die, secúndum Scriptúras. Et ascéndit in cælum: sedet ad déxteram Patris.</div></div>
+    <div class="col r"><div class="eng">He was crucified also for us: suffered under Pontius Pilate, and was buried. And the third day He rose again according to the Scriptures. And ascended into heaven: sitteth at the right hand of the Father.</div></div>
+  </div>
+</div>
+
+<div class="part" id="sanctus">
+  <span class="cross">✠</span>
+  <div class="lat">Missa Fidélium</div>
+  <div class="eng">Mass of the Faithful</div>
+</div>
+
+<div class="section">
+  <div class="num">viii</div>
+  <div class="posture"><span class="g">⌇</span> Genuflectitur &nbsp;·&nbsp; Kneel as the bells ring</div>
+  <div class="sec-title">Sanctus</div>
+  <div class="sec-eng">Holy, Holy, Holy</div>
+  <div class="rubric">All kneel. The server rings the bells thrice.</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">S</span>anctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.</div></div>
+    <div class="col r"><div class="eng">Holy, Holy, Holy, Lord God of Hosts.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat">Pleni sunt cæli et terra glória tua. Hosánna in excélsis.</div></div>
+    <div class="col r"><div class="eng">Heaven and earth are full of Thy glory. Hosanna in the highest.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat">✠ Benedíctus qui venit in nómine Dómini. Hosánna in excélsis.</div></div>
+    <div class="col r"><div class="eng">✠ Blessed is He Who cometh in the name of the Lord. Hosanna in the highest.</div></div>
+  </div>
+</div>
+
+<div class="section" id="canon">
+  <div class="num">ix</div>
+  <div class="posture"><span class="g">⌇</span> Genuflectitur &nbsp;·&nbsp; Kneel in silence</div>
+  <div class="sec-title">Canon Missæ</div>
+  <div class="sec-eng">The Roman Canon &nbsp;·&nbsp; Consecration</div>
+  <div class="rubric">℟. The priest now offers the Holy Sacrifice in silence. The faithful unite themselves in adoration as Christ becomes truly present upon the altar.</div>
+
+  <div class="illumine">
+    <div class="lat">Hoc est enim Corpus meum.<br>Hic est enim Calix Sánguinis mei.</div>
+    <div class="eng">For this is My Body. &nbsp; · &nbsp; For this is the Chalice of My Blood.</div>
+    <div class="genuflect">✠ &nbsp; Adoramus te, Christe &nbsp; ✠</div>
+  </div>
+</div>
+
+<div class="part" id="pater">
+  <span class="cross">✠</span>
+  <div class="lat">Commúnio</div>
+  <div class="eng">Holy Communion</div>
+</div>
+
+<div class="section">
+  <div class="num">x</div>
+  <div class="posture"><span class="g">⌇</span> Genuflectitur &nbsp;·&nbsp; Kneel</div>
+  <div class="sec-title">Pater Noster</div>
+  <div class="sec-eng">The Lord's Prayer</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">P</span>ater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra.</div></div>
+    <div class="col r"><div class="eng">Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat">Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem.</div></div>
+    <div class="col r"><div class="eng">Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="rmark">℟.</span> Sed líbera nos a malo. <em>Amen.</em></div></div>
+    <div class="col r"><div class="eng"><span class="rmark">℟.</span> But deliver us from evil. <em>Amen.</em></div></div>
+  </div>
+</div>
+
+<div class="section" id="agnus">
+  <div class="num">xi</div>
+  <div class="posture"><span class="g">⌇</span> Genuflectitur &nbsp;·&nbsp; Kneel, striking the breast thrice</div>
+  <div class="sec-title">Agnus Dei</div>
+  <div class="sec-eng">Lamb of God</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">A</span>gnus Dei, qui tollis peccáta mundi: miserére nobis.<br>Agnus Dei, qui tollis peccáta mundi: miserére nobis.<br>Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.</div></div>
+    <div class="col r"><div class="eng">Lamb of God, Who takest away the sins of the world: have mercy on us.<br>Lamb of God, Who takest away the sins of the world: have mercy on us.<br>Lamb of God, Who takest away the sins of the world: grant us peace.</div></div>
+  </div>
+</div>
+
+<div class="section" id="communio">
+  <div class="num">xii</div>
+  <div class="posture"><span class="g">⌇</span> Genuflectitur &nbsp;·&nbsp; Kneel, striking the breast thrice</div>
+  <div class="sec-title">Dómine, Non Sum Dignus</div>
+  <div class="sec-eng">Lord, I Am Not Worthy</div>
+  <div class="rubric">Said three times, the breast struck at each repetition.</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">D</span>ómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea. <em>(×3)</em></div></div>
+    <div class="col r"><div class="eng">Lord, I am not worthy that Thou shouldst enter under my roof: but only say the word, and my soul shall be healed. <em>(×3)</em></div></div>
+  </div>
+</div>
+
+<div class="part" id="ultimum">
+  <span class="cross">✠</span>
+  <div class="lat">Conclúsio</div>
+  <div class="eng">Conclusion</div>
+</div>
+
+<div class="section">
+  <div class="num">xiii</div>
+  <div class="posture"><span class="g">†</span> Stat &nbsp;·&nbsp; Stand</div>
+  <div class="sec-title">Últimum Evangélium</div>
+  <div class="sec-eng">The Last Gospel &nbsp;·&nbsp; Prologue of St. John</div>
+  <div class="rubric">The priest goes to the Gospel side and reads the beginning of the Holy Gospel according to St. John.</div>
+  <div class="row">
+    <div class="col l"><div class="lat"><span class="dropcap">I</span>n princípio erat Verbum, et Verbum erat apud Deum, et Deus erat Verbum. Hoc erat in princípio apud Deum.</div></div>
+    <div class="col r"><div class="eng">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God.</div></div>
+  </div>
+  <div class="row">
+    <div class="col l"><div class="lat">Ómnia per ipsum facta sunt: et sine ipso factum est nihil, quod factum est. In ipso vita erat, et vita erat lux hóminum: et lux in ténebris lucet, et ténebræ eam non comprehendérunt.</div></div>
+    <div class="col r"><div class="eng">All things were made by Him: and without Him was made nothing that was made. In Him was life, and the life was the light of men: and the light shineth in darkness, and the darkness did not comprehend it.</div></div>
+  </div>
+
+  <div class="illumine">
+    <div class="lat">Et Verbum caro factum est,<br>et habitávit in nobis.</div>
+    <div class="eng">And the Word was made Flesh, and dwelt among us.</div>
+    <div class="genuflect">✠ &nbsp; Hic genuflectitur &nbsp; ✠</div>
+  </div>
+
+  <div class="row">
+    <div class="col l"><div class="lat">Et vídimus glóriam eius, glóriam quasi Unigéniti a Patre, plenum grátiæ et veritátis.<br><br><span class="rmark">℟.</span> Deo grátias.</div></div>
+    <div class="col r"><div class="eng">And we saw His glory, the glory as it were of the only-begotten of the Father, full of grace and truth.<br><br><span class="rmark">℟.</span> Thanks be to God.</div></div>
+  </div>
+</div>
+
+<div class="end">
+  <span class="deo">Ite, Missa est</span>
+  ✦ &nbsp; ✠ &nbsp; ✦
+</div>
+
+</main>
+
+<nav class="tab-bar">
+  <a class="tab" href="today.html"><span class="glyph">☉</span>Hodie</a>
+  <a class="tab active" href="missal.html"><span class="glyph">✠</span>Missa</a>
+  <a class="tab" href="prayers.html"><span class="glyph">℟</span>Oratio</a>
+  <a class="tab" href="learn.html"><span class="glyph">𝔏</span>Schola</a>
+  <a class="tab" href="reference.html"><span class="glyph">✦</span>Liber</a>
+</nav>
+
+<script>
+(function(){
+  if(typeof LitContext==='undefined')return;
+  var c=LitContext.get(new Date());
+  document.getElementById('m-feria').innerHTML='✠ &nbsp; '+escapeHtml(c.feriaLat)+' &nbsp;·&nbsp; '+escapeHtml(c.latName)+' &nbsp; ✠';
+  document.getElementById('m-feria').style.color=c.colourHex;
+  document.getElementById('m-eng').textContent=c.feriaEng+' · '+c.engName;
+})();
+</script>
+
+</body>
+</html>
