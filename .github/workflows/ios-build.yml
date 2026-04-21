@@ -1,4 +1,4 @@
-name: iOS Build
+name: iOS Build & Deploy
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: macos-14
     timeout-minutes: 30
 
@@ -32,7 +32,7 @@ jobs:
       - name: Generate Xcode Project
         run: xcodegen generate
 
-      - name: Build for Simulator
+      - name: Build for Simulator (verify compilation)
         run: |
           DEST='platform=iOS Simulator,name=iPhone 15,OS=latest'
           xcodebuild build \
@@ -42,45 +42,42 @@ jobs:
             -configuration Debug \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO 2>&1 | tail -100
-
-  # TestFlight upload — only runs on main branch when secrets are set.
-  # Branches get the build check above; main gets the full deploy.
-  deploy:
-    runs-on: macos-14
-    timeout-minutes: 30
-    needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Select Xcode
-        run: |
-          XCODE_PATH=$(ls -d /Applications/Xcode_15*.app /Applications/Xcode_16*.app 2>/dev/null | sort -V | tail -1)
-          if [ -n "$XCODE_PATH" ]; then
-            sudo xcode-select -s "$XCODE_PATH/Contents/Developer"
-          fi
-
-      - name: Install tools
-        run: |
-          brew install xcodegen
-          gem install fastlane --no-document
-
-      - name: Generate Xcode Project
-        run: xcodegen generate
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tail -50
 
       - name: Deploy to TestFlight
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         env:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
         run: |
+          echo "=== Checking secrets ==="
           if [ -z "$ASC_KEY_ID" ]; then
-            echo "⚠️  TestFlight secrets not configured — skipping deploy."
-            echo "Add APPLE_TEAM_ID, ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 to GitHub Secrets."
-            exit 0
+            echo "❌ ASC_KEY_ID is empty — secret not found"
+            echo "Add ASC_KEY_ID to GitHub Secrets at: Settings > Secrets > Actions"
+            exit 1
           fi
+          if [ -z "$ASC_ISSUER_ID" ]; then
+            echo "❌ ASC_ISSUER_ID is empty"
+            exit 1
+          fi
+          if [ -z "$ASC_KEY_P8" ]; then
+            echo "❌ ASC_KEY_P8 is empty"
+            exit 1
+          fi
+          if [ -z "$APPLE_TEAM_ID" ]; then
+            echo "❌ APPLE_TEAM_ID is empty"
+            exit 1
+          fi
+          echo "✅ All 4 secrets found"
+          echo "  ASC_KEY_ID: ${ASC_KEY_ID:0:4}..."
+          echo "  ASC_ISSUER_ID: ${ASC_ISSUER_ID:0:8}..."
+          echo "  APPLE_TEAM_ID: ${APPLE_TEAM_ID:0:4}..."
+          echo "  ASC_KEY_P8: (${#ASC_KEY_P8} chars)"
+          echo ""
+          echo "=== Installing fastlane ==="
+          gem install fastlane --no-document
+          echo ""
+          echo "=== Running fastlane beta ==="
           fastlane beta
