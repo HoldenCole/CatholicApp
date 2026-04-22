@@ -34,16 +34,16 @@ struct ReferenceView: View {
             Text(entry.title)
                 .font(.titleM)
                 .italic()
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
             if let latin = entry.latin {
                 Text(latin)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
             }
             Text(entry.summary)
                 .font(.captionSm)
-                .foregroundStyle(.tertiaryText)
+                .foregroundStyle(Color.tertiaryText)
                 .lineLimit(1)
                 .padding(.top, 2)
         }

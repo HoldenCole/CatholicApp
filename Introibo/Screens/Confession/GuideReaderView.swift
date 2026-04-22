@@ -17,7 +17,7 @@ struct GuideReaderView: View {
                         if let sub = guide.subtitle {
                             Text(sub)
                                 .font(.bodyIt)
-                                .foregroundStyle(.secondaryText)
+                                .foregroundStyle(Color.secondaryText)
                                 .lineSpacing(4)
                                 .padding(.leading, 14)
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -40,7 +40,7 @@ struct GuideReaderView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
         }
@@ -49,16 +49,16 @@ struct GuideReaderView: View {
     private var header: some View {
         VStack(spacing: 8) {
             Text("✠  \(guide.name)  ✠")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(guide.title)
                 .font(.pageTitle)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             Text("Sacraméntum Pæniténtiæ")
                 .font(.caption)
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             Rectangle()
@@ -68,7 +68,7 @@ struct GuideReaderView: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
     }
 
@@ -78,24 +78,24 @@ struct GuideReaderView: View {
                 Text(step.num)
                     .font(.titleL)
                     .italic()
-                    .foregroundStyle(.sanctuaryRed)
+                    .foregroundStyle(Color.sanctuaryRed)
                     .frame(width: 44, alignment: .leading)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(step.title)
                         .font(.titleM)
                         .italic()
-                        .foregroundStyle(.primaryText)
+                        .foregroundStyle(Color.primaryText)
                     if let latin = step.latin {
                         Text(latin)
                             .font(.captionSm)
                             .italic()
-                            .foregroundStyle(.secondaryText)
+                            .foregroundStyle(Color.secondaryText)
                     }
                 }
             }
             Text(step.body)
                 .font(.bodySm)
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
                 .padding(.leading, 56)
         }

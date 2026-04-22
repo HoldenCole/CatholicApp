@@ -36,7 +36,7 @@ struct MysteryReaderView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
         }
@@ -47,15 +47,15 @@ struct MysteryReaderView: View {
     private var header: some View {
         VStack(spacing: 8) {
             Text("✠  Sacratíssimum Rosárium  ✠")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(set.name)
                 .font(.pageTitle)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
             Text(set.english)
                 .font(.caption)
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             Rectangle()
@@ -65,7 +65,7 @@ struct MysteryReaderView: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
     }
 
@@ -74,10 +74,10 @@ struct MysteryReaderView: View {
     private var openingBlock: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("Inítium  ·  Opening Prayers")
-                .smallLabel(color: .sanctuaryRed)
+                .smallLabel(color: Color.sanctuaryRed)
             Text("Signum Crucis  ·  Credo  ·  Pater Noster  ·  tria Ave María  ·  Glória Patri")
                 .font(.bodyIt)
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
         }
     }
 
@@ -88,7 +88,7 @@ struct MysteryReaderView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("\(m.num)  ·  \(index) of 5")
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
@@ -96,30 +96,30 @@ struct MysteryReaderView: View {
                 Text(m.title)
                     .font(.titleL)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 Text(m.eng)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
                 Text(m.ref)
                     .font(.captionSm)
-                    .foregroundStyle(.goldLeaf)
+                    .foregroundStyle(Color.goldLeaf)
                     .padding(.top, 2)
             }
             Text(m.body)
                 .font(.body)
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
                 .lineSpacing(4)
                 .padding(.top, 4)
             HStack {
                 Text("Fructus")
-                    .smallLabel(color: .goldLeaf)
+                    .smallLabel(color: Color.goldLeaf)
                 Text("·")
-                    .foregroundStyle(.tertiaryText)
+                    .foregroundStyle(Color.tertiaryText)
                 Text(m.fruit)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
             }
             .padding(.top, 4)
         }
@@ -132,13 +132,13 @@ struct MysteryReaderView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("Finis  ·  Closing Prayers")
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             Text("Salve Regína  ·  Orátio ad Fátima  ·  Signum Crucis")
                 .font(.bodyIt)
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
         }
     }
 
@@ -150,7 +150,7 @@ struct MysteryReaderView: View {
             didMark = true
         } label: {
             Text(didMark ? "✠ Marked as prayed today" : "Mark as prayed today")
-                .smallLabel(color: didMark ? .goldLeaf : .sanctuaryRed, tracking: 3)
+                .smallLabel(color: didMark ? Color.goldLeaf : Color.sanctuaryRed, tracking: 3)
                 .padding(.vertical, 14)
                 .frame(maxWidth: .infinity)
                 .overlay(Rectangle().stroke(

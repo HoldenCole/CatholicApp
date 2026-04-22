@@ -30,15 +30,15 @@ struct RosaryView: View {
     private var header: some View {
         VStack(spacing: 4) {
             Text("\(ctx.feriaLatin)  ·  \(ctx.latinName)")
-                .smallLabel(color: .sanctuaryRed)
+                .smallLabel(color: Color.sanctuaryRed)
             Text("Oratio per Rosárium")
                 .font(.titleL)
                 .italic()
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
             Text("Pray the Rosary")
                 .font(.captionSm)
                 .italic()
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
                 .textCase(.uppercase)
                 .tracking(2)
         }
@@ -51,20 +51,20 @@ struct RosaryView: View {
             Button { selection = todaySet } label: {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Mystéria Hodiérna  ·  Today's Mysteries")
-                        .smallLabel(color: .goldLeaf)
+                        .smallLabel(color: Color.goldLeaf)
                     Text(todaySet.name)
                         .font(.pageTitle)
-                        .foregroundStyle(.primaryText)
+                        .foregroundStyle(Color.primaryText)
                     Text(todaySet.english)
                         .font(.caption)
                         .italic()
-                        .foregroundStyle(.secondaryText)
+                        .foregroundStyle(Color.secondaryText)
                         .textCase(.uppercase)
                         .tracking(2)
                     HStack {
                         Spacer()
                         Text("Incipiámus  ✠  Begin")
-                            .smallLabel(color: .sanctuaryRed)
+                            .smallLabel(color: Color.sanctuaryRed)
                     }
                     .padding(.top, 6)
                 }
@@ -81,7 +81,7 @@ struct RosaryView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("Ália Mystéria")
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
@@ -92,16 +92,16 @@ struct RosaryView: View {
                             Text(set.name)
                                 .font(.titleM)
                                 .italic()
-                                .foregroundStyle(.primaryText)
+                                .foregroundStyle(Color.primaryText)
                             Text(set.english)
                                 .font(.captionSm)
                                 .italic()
-                                .foregroundStyle(.secondaryText)
+                                .foregroundStyle(Color.secondaryText)
                         }
                         Spacer()
                         Text("›")
                             .font(.titleL)
-                            .foregroundStyle(.goldLeaf)
+                            .foregroundStyle(Color.goldLeaf)
                     }
                     .padding(.vertical, 10)
                     .contentShape(Rectangle())

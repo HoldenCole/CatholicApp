@@ -42,15 +42,15 @@ struct ConfessionView: View {
     private var header: some View {
         VStack(spacing: 4) {
             Text("Sacraméntum Pæniténtiæ")
-                .smallLabel(color: .sanctuaryRed)
+                .smallLabel(color: Color.sanctuaryRed)
             Text("The Sacrament of Penance")
                 .font(.titleL)
                 .italic()
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
             Text("Two guided paths, plus the Examination of Conscience.")
                 .font(.captionSm)
                 .italic()
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
                 .padding(.top, 2)
         }
@@ -62,19 +62,19 @@ struct ConfessionView: View {
         Button { showExamen = true } label: {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Exámen Consciéntiæ")
-                    .smallLabel(color: .goldLeaf)
+                    .smallLabel(color: Color.goldLeaf)
                 Text("Examination of Conscience")
                     .font(.titleL)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 Text("Walk through the Ten Commandments with traditional questions for each.")
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
                 HStack {
                     Spacer()
                     Text("Incipiámus  ✠  Begin")
-                        .smallLabel(color: .sanctuaryRed)
+                        .smallLabel(color: Color.sanctuaryRed)
                 }
                 .padding(.top, 4)
             }
@@ -90,7 +90,7 @@ struct ConfessionView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("Libri Duo  ·  Two Paths")
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
@@ -112,22 +112,22 @@ struct ConfessionView: View {
                 Text(g.name)
                     .font(.titleM)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 Text(g.title)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
                 if let sub = g.subtitle {
                     Text(sub)
                         .font(.captionSm)
                         .italic()
-                        .foregroundStyle(.tertiaryText)
+                        .foregroundStyle(Color.tertiaryText)
                         .lineLimit(1)
                         .padding(.top, 2)
                 }
             }
             Spacer()
-            Text("›").font(.titleL).foregroundStyle(.goldLeaf)
+            Text("›").font(.titleL).foregroundStyle(Color.goldLeaf)
         }
         .padding(.vertical, 10)
         .contentShape(Rectangle())

@@ -33,7 +33,7 @@ struct SaintDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
             .onAppear { streak = UserProgress.saintStreak(slug: saint.slug) }
@@ -45,16 +45,16 @@ struct SaintDetailView: View {
     private var header: some View {
         VStack(spacing: 8) {
             Text("✠  Praxes Sanctórum  ✠")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(saint.name)
                 .font(.pageTitle)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             Text(saint.title)
                 .font(.caption)
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
                 .multilineTextAlignment(.center)
@@ -67,7 +67,7 @@ struct SaintDetailView: View {
                     if streak > 7 {
                         Text("+ \(streak - 7)")
                             .font(.captionSm)
-                            .foregroundStyle(.goldLeaf)
+                            .foregroundStyle(Color.goldLeaf)
                     }
                 }
                 .padding(.top, 6)
@@ -79,7 +79,7 @@ struct SaintDetailView: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
     }
 
@@ -88,7 +88,7 @@ struct SaintDetailView: View {
     private var quoteBlock: some View {
         Text("\u{201C}\(saint.quote)\u{201D}")
             .font(.bodyIt)
-            .foregroundStyle(.secondaryText)
+            .foregroundStyle(Color.secondaryText)
             .lineSpacing(4)
             .padding(.leading, 14)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -113,7 +113,7 @@ struct SaintDetailView: View {
             }
         } label: {
             Text(isFollowed ? "Unfollow" : "Follow this Saint")
-                .smallLabel(color: isFollowed ? .secondaryText : .sanctuaryRed, tracking: 3)
+                .smallLabel(color: isFollowed ? Color.secondaryText : Color.sanctuaryRed, tracking: 3)
                 .padding(.vertical, 14)
                 .frame(maxWidth: .infinity)
                 .overlay(Rectangle().stroke(
@@ -133,16 +133,16 @@ struct SaintDetailView: View {
                 Text(section.lat)
                     .font(.caption)
                     .italic()
-                    .foregroundStyle(.sanctuaryRed)
+                    .foregroundStyle(Color.sanctuaryRed)
                     .textCase(.uppercase)
                     .tracking(3)
                     .fixedSize()
                 Text("·")
-                    .foregroundStyle(.tertiaryText)
+                    .foregroundStyle(Color.tertiaryText)
                 Text(section.eng)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.3)).frame(height: 0.5)
             }
@@ -152,10 +152,10 @@ struct SaintDetailView: View {
                     Text(p.t)
                         .font(.titleM)
                         .italic()
-                        .foregroundStyle(.primaryText)
+                        .foregroundStyle(Color.primaryText)
                     Text(p.d)
                         .font(.bodySm)
-                        .foregroundStyle(.secondaryText)
+                        .foregroundStyle(Color.secondaryText)
                         .lineSpacing(3)
                 }
                 .padding(.vertical, 4)

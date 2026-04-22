@@ -31,9 +31,9 @@ struct MissalView: View {
                         Text("Ordo Missæ")
                             .font(.titleM)
                             .italic()
-                            .foregroundStyle(.primaryText)
+                            .foregroundStyle(Color.primaryText)
                         Text(rite.short)
-                            .smallLabel(color: .goldLeaf, tracking: 2)
+                            .smallLabel(color: Color.goldLeaf, tracking: 2)
                     }
                 }
             }
@@ -46,7 +46,7 @@ struct MissalView: View {
                 HStack(spacing: 10) {
                     Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                     Text(label)
-                        .smallLabel(color: .sanctuaryRed)
+                        .smallLabel(color: Color.sanctuaryRed)
                         .fixedSize()
                     Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 }
@@ -55,12 +55,12 @@ struct MissalView: View {
                 Text(section.title)
                     .font(.titleL)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 if let english = section.english {
                     Text(english)
                         .font(.captionSm)
                         .italic()
-                        .foregroundStyle(.secondaryText)
+                        .foregroundStyle(Color.secondaryText)
                 }
             }
 
@@ -69,12 +69,12 @@ struct MissalView: View {
                     VStack(alignment: .leading, spacing: 3) {
                         Text(line.lat.strippingEm)
                             .font(.body)
-                            .foregroundStyle(.primaryText)
+                            .foregroundStyle(Color.primaryText)
                             .lineSpacing(3)
                         Text(line.eng.strippingEm)
                             .font(.bodySm)
                             .italic()
-                            .foregroundStyle(.secondaryText)
+                            .foregroundStyle(Color.secondaryText)
                             .lineSpacing(2)
                     }
                 }

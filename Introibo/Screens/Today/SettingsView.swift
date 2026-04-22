@@ -24,7 +24,7 @@ struct SettingsView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
         }

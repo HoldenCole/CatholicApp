@@ -28,7 +28,7 @@ struct ReferenceDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
         }
@@ -37,17 +37,17 @@ struct ReferenceDetailView: View {
     private var header: some View {
         VStack(spacing: 8) {
             Text("✠  \(entry.cat)  ✠")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(entry.title)
                 .font(.pageTitle)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             if let latin = entry.latin {
                 Text(latin)
                     .font(.caption)
                     .italic()
-                    .foregroundStyle(.muted)
+                    .foregroundStyle(Color.muted)
                     .textCase(.uppercase)
                     .tracking(2.5)
             }
@@ -58,7 +58,7 @@ struct ReferenceDetailView: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
     }
 
@@ -66,7 +66,7 @@ struct ReferenceDetailView: View {
         let stripped = text.strippingEm
         return Text(stripped)
             .font(.body)
-            .foregroundStyle(.primaryText)
+            .foregroundStyle(Color.primaryText)
             .lineSpacing(4)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -74,10 +74,10 @@ struct ReferenceDetailView: View {
     private func section(_ title: String, body: String) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .smallLabel(color: .sanctuaryRed)
+                .smallLabel(color: Color.sanctuaryRed)
             Text(body.strippingEm)
                 .font(.bodySm)
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -86,14 +86,14 @@ struct ReferenceDetailView: View {
     private func scriptureBlock(_ s: ReferenceEntry.Scripture) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("Scriptura  ·  \(s.ref)")
-                .smallLabel(color: .sanctuaryRed)
+                .smallLabel(color: Color.sanctuaryRed)
             Text(s.lat)
                 .font(.bodyIt)
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
             Text(s.eng)
                 .font(.captionSm)
                 .italic()
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
         }
         .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)

@@ -40,11 +40,11 @@ struct LearnView: View {
     private var progressBanner: some View {
         VStack(spacing: 4) {
             Text("Mastered")
-                .smallLabel(color: .sanctuaryRed)
+                .smallLabel(color: Color.sanctuaryRed)
             Text("\(mastered.count)  /  10")
                 .font(.system(size: 38, weight: .semibold, design: .serif))
                 .italic()
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 18)
@@ -56,24 +56,24 @@ struct LearnView: View {
             Text(roman(c.num))
                 .font(.titleL)
                 .italic()
-                .foregroundStyle(.sanctuaryRed)
+                .foregroundStyle(Color.sanctuaryRed)
                 .frame(width: 40, alignment: .leading)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(c.title)
                     .font(.titleM)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 Text(c.latin)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
             }
 
             Spacer()
             if mastered.contains(c.slug) {
                 Image(systemName: "checkmark.seal")
-                    .foregroundStyle(.goldLeaf)
+                    .foregroundStyle(Color.goldLeaf)
                     .font(.system(size: 18))
             }
         }

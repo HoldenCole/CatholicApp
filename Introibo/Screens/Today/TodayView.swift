@@ -36,7 +36,7 @@ struct TodayView: View {
                 Spacer()
                 Button { showSettings = true } label: {
                     Image(systemName: "gearshape")
-                        .foregroundStyle(.goldLeaf)
+                        .foregroundStyle(Color.goldLeaf)
                         .font(.system(size: 16))
                 }
             }
@@ -44,17 +44,17 @@ struct TodayView: View {
             .padding(.trailing, 6)
 
             Text("\(ctx.feriaLatin)  ·  \(ctx.latinName)")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 4)
 
             Text(ctx.feriaEnglish)
                 .font(.system(size: 34, weight: .semibold, design: .serif))
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
 
             Text(LongDateFormatter.format(ctx.date))
                 .font(.system(size: 15, weight: .regular, design: .serif))
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
 
             riteLabel
                 .padding(.top, 8)
@@ -69,7 +69,7 @@ struct TodayView: View {
         .padding(.bottom, 22)
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
     }
 
@@ -77,10 +77,10 @@ struct TodayView: View {
         Button { showSettings = true } label: {
             HStack(spacing: 6) {
                 Text("Ritus  ·  \(rite.short)")
-                    .smallLabel(color: .goldLeaf, tracking: 2)
+                    .smallLabel(color: Color.goldLeaf, tracking: 2)
                 Text("›")
                     .font(.system(size: 8))
-                    .foregroundStyle(.goldLeaf)
+                    .foregroundStyle(Color.goldLeaf)
             }
         }
         .buttonStyle(.plain)
@@ -107,27 +107,27 @@ struct TodayView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text("Pæniténtia")
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
                 Spacer()
                 Button { showSettings = true } label: {
                     Text(discipline.short)
-                        .smallLabel(color: .goldLeaf)
+                        .smallLabel(color: Color.goldLeaf)
                 }
                 .buttonStyle(.plain)
             }
             Text(ctx.penance.rubric)
                 .font(.captionSm)
-                .foregroundStyle(.tertiaryText)
+                .foregroundStyle(Color.tertiaryText)
 
             Text(ctx.penance.title)
                 .font(.titleM)
                 .italic()
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
                 .padding(.top, 4)
 
             Text(ctx.penance.desc)
                 .font(.bodySm)
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -166,11 +166,11 @@ struct TodayView: View {
         VStack(alignment: .leading, spacing: 2) {
             Text(title)
                 .font(.titleM)
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
             Text(latin)
                 .font(.captionSm)
                 .italic()
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 4)
@@ -187,18 +187,18 @@ struct TodayView: View {
                 Text(ctx.mystery.latinName)
                     .font(.titleM)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 Text(ctx.mystery.englishName)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
 
                 if let lastDate = UserProgress.rosaryLastDate() {
                     let fmt = DateFormatter()
                     let _ = fmt.dateStyle = .medium
                     Text("Last prayed: \(fmt.string(from: lastDate))")
                         .font(.captionSm)
-                        .foregroundStyle(.tertiaryText)
+                        .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
                 }
             }
@@ -221,16 +221,16 @@ struct TodayView: View {
                     Text(saint.name)
                         .font(.titleM)
                         .italic()
-                        .foregroundStyle(.primaryText)
+                        .foregroundStyle(Color.primaryText)
                     if streak > 0 {
                         Text("\(streak) day\(streak == 1 ? "" : "s")  ·  Continuing")
                             .font(.captionSm)
-                            .foregroundStyle(.goldLeaf)
+                            .foregroundStyle(Color.goldLeaf)
                     }
                 } else {
                     Text("Choose a saint to follow")
                         .font(.bodyIt)
-                        .foregroundStyle(.secondaryText)
+                        .foregroundStyle(Color.secondaryText)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -247,7 +247,7 @@ struct TodayView: View {
             sectionLabel("Schola", subtitle: "Latin learning")
             Text("Mastered: \(mastered.count) of 10 lessons")
                 .font(.bodySm)
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -257,11 +257,11 @@ struct TodayView: View {
     private func sectionLabel(_ title: String, subtitle: String) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(title)
-                .smallLabel(color: .sanctuaryRed)
+                .smallLabel(color: Color.sanctuaryRed)
             Text(subtitle)
                 .font(.captionSm)
                 .italic()
-                .foregroundStyle(.tertiaryText)
+                .foregroundStyle(Color.tertiaryText)
         }
     }
 }

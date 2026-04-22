@@ -57,7 +57,7 @@ extension Font {
 // Convenience view modifier for the common "small uppercase italic label"
 // pattern that repeats all over the prototype.
 struct SmallLabelStyle: ViewModifier {
-    var color: Color = .tertiaryText
+    var color: Color = Color.tertiaryText
     var tracking: CGFloat = 2.5
 
     func body(content: Content) -> some View {
@@ -73,7 +73,7 @@ extension View {
     /// Applies the "small uppercase italic label" styling — gold/muted,
     /// tracked letter-spacing, italic serif. Use for rubric labels, meta
     /// rows, category captions.
-    func smallLabel(color: Color = .tertiaryText, tracking: CGFloat = 2.5) -> some View {
+    func smallLabel(color: Color = Color.tertiaryText, tracking: CGFloat = 2.5) -> some View {
         modifier(SmallLabelStyle(color: color, tracking: tracking))
     }
 }

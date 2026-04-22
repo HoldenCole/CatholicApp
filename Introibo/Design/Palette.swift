@@ -75,7 +75,7 @@ enum LiturgicalColour: String {
         case .violet: return Color(red: 106/255, green:  53/255, blue: 154/255)
         case .rose:   return Color(red: 160/255, green:  72/255, blue:  96/255)
         case .white:  return Color(red: 122/255, green:  90/255, blue:  14/255)
-        case .red:    return .sanctuaryRed
+        case .red:    return Color.sanctuaryRed
         case .green:  return Color(red:  58/255, green:  93/255, blue:  40/255)
         }
     }

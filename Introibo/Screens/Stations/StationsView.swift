@@ -37,12 +37,12 @@ struct StationsView: View {
                 Text("Stations of the Cross")
                     .font(.titleL)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                     .padding(.top, 8)
                 Text("XIV statiónes Viæ Crucis")
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
                     .textCase(.uppercase)
                     .tracking(2)
 
@@ -55,7 +55,7 @@ struct StationsView: View {
 
                 Button { activeIndex = 0 } label: {
                     Text("Incipiámus  ✠  Begin the Way")
-                        .smallLabel(color: .sanctuaryRed, tracking: 3)
+                        .smallLabel(color: Color.sanctuaryRed, tracking: 3)
                         .padding(.vertical, 16)
                         .frame(maxWidth: .infinity)
                         .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.6), lineWidth: 0.5))
@@ -74,17 +74,17 @@ struct StationsView: View {
             Text(s.station)
                 .font(.titleL)
                 .italic()
-                .foregroundStyle(.sanctuaryRed)
+                .foregroundStyle(Color.sanctuaryRed)
                 .frame(width: 48, alignment: .leading)
             VStack(alignment: .leading, spacing: 2) {
                 Text(s.title)
                     .font(.titleM)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 Text(s.latin)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
             }
             Spacer()
         }
@@ -109,7 +109,7 @@ private struct PrayStationView: View {
             ScrollView {
                 VStack(alignment: .center, spacing: 18) {
                     Text("Státio \(station.station)  ·  \(index + 1) of 14")
-                        .smallLabel(color: .goldLeaf)
+                        .smallLabel(color: Color.goldLeaf)
                         .padding(.top, 12)
                     Text(station.station)
                         .font(.system(size: 96, weight: .semibold, design: .serif))
@@ -119,12 +119,12 @@ private struct PrayStationView: View {
                     Text(station.title)
                         .font(.titleL)
                         .italic()
-                        .foregroundStyle(.ivory)
+                        .foregroundStyle(Color.ivory)
                         .multilineTextAlignment(.center)
                     Text(station.latin)
                         .font(.caption)
                         .italic()
-                        .foregroundStyle(.muted)
+                        .foregroundStyle(Color.muted)
                         .textCase(.uppercase)
                         .tracking(2.5)
                         .multilineTextAlignment(.center)
@@ -136,7 +136,7 @@ private struct PrayStationView: View {
 
                     Text(station.med)
                         .font(.body)
-                        .foregroundStyle(.ivory)
+                        .foregroundStyle(Color.ivory)
                         .lineSpacing(4)
                         .padding(.top, 10)
 
@@ -152,13 +152,13 @@ private struct PrayStationView: View {
             navBar
         }
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
         )
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button("‹ Via") { onClose() }
-                    .foregroundStyle(.goldLeaf)
+                    .foregroundStyle(Color.goldLeaf)
             }
         }
     }
@@ -167,10 +167,10 @@ private struct PrayStationView: View {
         VStack(alignment: .leading, spacing: 6) {
             Text("℣. Adorámus te, Christe, et benedícimus tibi.")
                 .font(.bodyIt)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
             Text("℟. Quia per sanctam Crucem tuam redemísti mundum.")
                 .font(.bodyIt)
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -178,15 +178,15 @@ private struct PrayStationView: View {
     private var stabatBlock: some View {
         VStack(alignment: .center, spacing: 8) {
             Text("Orátio  ·  Stabat Mater")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
             Text(htmlToMultiline(station.stabat_lat))
                 .font(.bodyIt)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             Text(htmlToMultiline(station.stabat_eng))
                 .font(.captionSm)
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
                 .multilineTextAlignment(.center)
                 .padding(.top, 2)
         }
@@ -199,7 +199,7 @@ private struct PrayStationView: View {
             } label: {
                 Text("‹")
                     .font(.system(size: 22, design: .serif))
-                    .foregroundStyle(.goldLeaf)
+                    .foregroundStyle(Color.goldLeaf)
                     .frame(width: 52, height: 52)
                     .overlay(Rectangle().stroke(Color.goldLeaf.opacity(0.55), lineWidth: 1))
             }
@@ -211,7 +211,7 @@ private struct PrayStationView: View {
                 onNext()
             } label: {
                 Text(index + 1 < 14 ? "Sequens  ✠  Next Station" : "Finis  ✠  Finish")
-                    .smallLabel(color: .ivory, tracking: 3)
+                    .smallLabel(color: Color.ivory, tracking: 3)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 17)
                     .background(Color.goldLeaf.opacity(0.12))
@@ -223,14 +223,14 @@ private struct PrayStationView: View {
         .padding(.top, 24)
         .padding(.bottom, 36)
         .background(
-            LinearGradient(colors: [.walnut.opacity(0), .walnut], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut.opacity(0), Color.walnut], startPoint: .top, endPoint: .bottom)
         )
     }
 
     private var numeralColor: Color {
         switch station.mood {
-        case "mood-death": return .sanctuaryRed
-        case "mood-mother": return .goldLeaf
+        case "mood-death": return Color.sanctuaryRed
+        case "mood-mother": return Color.goldLeaf
         case "mood-tomb": return Color.gray
         default: return Color.sanctuaryRed.opacity(0.5)
         }

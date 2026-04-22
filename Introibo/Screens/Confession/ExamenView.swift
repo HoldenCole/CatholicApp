@@ -27,7 +27,7 @@ struct ExamenView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
         }
@@ -36,15 +36,15 @@ struct ExamenView: View {
     private var header: some View {
         VStack(spacing: 8) {
             Text("✠  Exámen Consciéntiæ  ✠")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text("Examination of Conscience")
                 .font(.pageTitle)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
             Text("Decálogus  ·  The Ten Commandments")
                 .font(.caption)
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             Rectangle()
@@ -54,14 +54,14 @@ struct ExamenView: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
     }
 
     private var introBlock: some View {
         Text("Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush — but do not dwell past what is useful.")
             .font(.bodyIt)
-            .foregroundStyle(.secondaryText)
+            .foregroundStyle(Color.secondaryText)
             .lineSpacing(4)
             .padding(.leading, 14)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -79,17 +79,17 @@ struct ExamenView: View {
                 Text(e.num)
                     .font(.titleL)
                     .italic()
-                    .foregroundStyle(.sanctuaryRed)
+                    .foregroundStyle(Color.sanctuaryRed)
                     .frame(width: 44, alignment: .leading)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(e.commandment)
                         .font(.titleM)
                         .italic()
-                        .foregroundStyle(.primaryText)
+                        .foregroundStyle(Color.primaryText)
                     Text(e.latin)
                         .font(.captionSm)
                         .italic()
-                        .foregroundStyle(.secondaryText)
+                        .foregroundStyle(Color.secondaryText)
                 }
             }
             VStack(alignment: .leading, spacing: 8) {
@@ -97,10 +97,10 @@ struct ExamenView: View {
                     HStack(alignment: .firstTextBaseline, spacing: 8) {
                         Text("•")
                             .font(.body)
-                            .foregroundStyle(.goldLeaf)
+                            .foregroundStyle(Color.goldLeaf)
                         Text(q)
                             .font(.bodySm)
-                            .foregroundStyle(.secondaryText)
+                            .foregroundStyle(Color.secondaryText)
                             .lineSpacing(2)
                     }
                 }
@@ -116,13 +116,13 @@ struct ExamenView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("Post Exámen")
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             Text("Make an Act of Contrition. Resolve to avoid the occasions of sin. Proceed to confession.")
                 .font(.bodyIt)
-                .foregroundStyle(.secondaryText)
+                .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
         }
     }

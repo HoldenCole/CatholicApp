@@ -18,7 +18,7 @@ struct ContentView: View {
             ReferenceView()
                 .tabItem { Label("Liber", systemImage: "text.book.closed") }
         }
-        .tint(.sanctuaryRed)
+        .tint(Color.sanctuaryRed)
     }
 }
 

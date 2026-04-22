@@ -32,7 +32,7 @@ struct CourseDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
             .onAppear { isMastered = UserProgress.masteredLessons().contains(course.slug) }
@@ -44,17 +44,17 @@ struct CourseDetailView: View {
     private var header: some View {
         VStack(spacing: 8) {
             Text("✠  Lésson \(roman(course.num))  ✠")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(course.title)
                 .font(.pageTitle)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 28)
             Text(course.latin)
                 .font(.caption)
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             Rectangle()
@@ -64,7 +64,7 @@ struct CourseDetailView: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(colors: [.walnut, .walnutHi], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
     }
 
@@ -73,7 +73,7 @@ struct CourseDetailView: View {
     private var introBlock: some View {
         Text(course.intro)
             .font(.body)
-            .foregroundStyle(.primaryText)
+            .foregroundStyle(Color.primaryText)
             .lineSpacing(4)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -94,12 +94,12 @@ struct CourseDetailView: View {
         VStack(alignment: .leading, spacing: 10) {
             if let label = s.label {
                 Text(label)
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
             }
             if let html = s.html {
                 Text(plainText(from: html))
                     .font(.body)
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                     .lineSpacing(4)
             }
         }
@@ -110,13 +110,13 @@ struct CourseDetailView: View {
         VStack(alignment: .leading, spacing: 10) {
             if let label = s.label {
                 Text(label)
-                    .smallLabel(color: .sanctuaryRed)
+                    .smallLabel(color: Color.sanctuaryRed)
             }
             if let note = s.note {
                 Text(note)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
             }
             if let items = s.items {
                 VStack(alignment: .leading, spacing: 10) {
@@ -136,18 +136,18 @@ struct CourseDetailView: View {
                 Text(c.lat ?? "")
                     .font(.titleM)
                     .italic()
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
                 if let phon = c.phon, !phon.isEmpty {
                     Text("[\(phon)]")
                         .font(.captionSm)
-                        .foregroundStyle(.tertiaryText)
+                        .foregroundStyle(Color.tertiaryText)
                 }
             }
             if let eng = c.eng {
                 Text(eng)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
             }
         }
         .padding(.vertical, 4)
@@ -163,7 +163,7 @@ struct CourseDetailView: View {
             onMasteryChange()
         } label: {
             Text(isMastered ? "Marked as Mastered  ✠  Unmark" : "Mark as Mastered")
-                .smallLabel(color: isMastered ? .goldLeaf : .sanctuaryRed, tracking: 3)
+                .smallLabel(color: isMastered ? Color.goldLeaf : Color.sanctuaryRed, tracking: 3)
                 .padding(.vertical, 14)
                 .frame(maxWidth: .infinity)
                 .overlay(Rectangle().stroke(
