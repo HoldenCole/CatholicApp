@@ -24,16 +24,23 @@ targets:
     sources:
       - path: Introibo
         excludes:
-          - "**/*.xcassets"
           - "Info.plist"
-    resources:
-      - path: Introibo/Resources
-        optional: true
-      - path: Introibo/Assets.xcassets
     info:
       path: Introibo/Info.plist
       properties:
+        CFBundleDisplayName: Introibo
+        CFBundleName: $(PRODUCT_NAME)
         CFBundleIconName: AppIcon
+        LSRequiresIPhoneOS: true
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: app.introibo.Introibo
