@@ -81,4 +81,9 @@ jobs:
           gem install fastlane --no-document
           echo ""
           echo "=== Running fastlane beta ==="
-          fastlane beta
+          fastlane beta || (
+            echo ""
+            echo "=== fastlane build log (last 200 lines) ==="
+            find ./fastlane-buildlog -name '*.log' -exec tail -200 {} \;
+            exit 1
+          )

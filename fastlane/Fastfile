@@ -27,6 +27,8 @@ platform :ios do
       export_method: "app-store",
       destination: "generic/platform=iOS",
       xcargs: "-allowProvisioningUpdates",
+      verbose: true,
+      buildlog_path: "./fastlane-buildlog",
     )
 
     upload_to_testflight(
