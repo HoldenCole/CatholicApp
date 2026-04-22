@@ -29,6 +29,10 @@ platform :ios do
       xcargs: "-allowProvisioningUpdates",
       verbose: true,
       buildlog_path: "./fastlane-buildlog",
+      export_options: {
+        signingStyle: "automatic",
+        teamID: ENV["APPLE_TEAM_ID"]
+      }
     )
 
     upload_to_testflight(
