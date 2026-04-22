@@ -5,7 +5,6 @@ platform :ios do
   lane :beta do
     setup_ci
 
-    # App Store Connect API key from GitHub Secrets.
     api_key = app_store_connect_api_key(
       key_id: ENV["ASC_KEY_ID"],
       issuer_id: ENV["ASC_ISSUER_ID"],
@@ -14,7 +13,11 @@ platform :ios do
       in_house: false,
     )
 
-    # Let Xcode handle signing automatically via the API key.
+    # Write the API key to a file so xcodebuild can use it for
+    # automatic provisioning during both archive and export.
+    key_path = File.join(Dir.tmpdir, "AuthKey_#{ENV['ASC_KEY_ID']}.p8")
+    File.write(key_path, ENV["ASC_KEY_P8"])
+
     update_code_signing_settings(
       use_automatic_signing: true,
       team_id: ENV["APPLE_TEAM_ID"],
@@ -26,13 +29,11 @@ platform :ios do
       scheme: "Introibo",
       export_method: "app-store",
       destination: "generic/platform=iOS",
-      xcargs: "-allowProvisioningUpdates",
-      verbose: true,
-      buildlog_path: "./fastlane-buildlog",
+      xcargs: "-allowProvisioningUpdates -authenticationKeyPath '#{key_path}' -authenticationKeyID '#{ENV['ASC_KEY_ID']}' -authenticationKeyIssuerID '#{ENV['ASC_ISSUER_ID']}'",
       export_options: {
         signingStyle: "automatic",
-        teamID: ENV["APPLE_TEAM_ID"]
-      }
+        teamID: ENV["APPLE_TEAM_ID"],
+      },
     )
 
     upload_to_testflight(
