@@ -13,8 +13,6 @@ settings:
     MARKETING_VERSION: "0.1.0"
     CURRENT_PROJECT_VERSION: 1
     DEVELOPMENT_TEAM: ""
-    GENERATE_INFOPLIST_FILE: NO
-    INFOPLIST_FILE: Introibo/Info.plist
     SWIFT_TREAT_WARNINGS_AS_ERRORS: NO
     ENABLE_USER_SCRIPT_SANDBOXING: NO
 
@@ -32,6 +30,10 @@ targets:
       - path: Introibo/Resources
         optional: true
       - path: Introibo/Assets.xcassets
+    info:
+      path: Introibo/Info.plist
+      properties:
+        CFBundleIconName: AppIcon
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: app.introibo.Introibo
