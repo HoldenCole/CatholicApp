@@ -43,9 +43,15 @@ struct TodayView: View {
             .padding(.top, 12)
             .padding(.trailing, 6)
 
-            Text("\(ctx.feriaLatin)  ·  \(ctx.latinName)")
-                .smallLabel(color: Color.goldLeaf)
-                .padding(.top, 4)
+            // Liturgical colour pip + season
+            HStack(spacing: 8) {
+                Circle()
+                    .fill(ctx.colour.swiftUIColor)
+                    .frame(width: 8, height: 8)
+                Text("\(ctx.feriaLatin)  ·  \(ctx.latinName)")
+                    .smallLabel(color: Color.goldLeaf)
+            }
+            .padding(.top, 4)
 
             Text(ctx.feriaEnglish)
                 .font(.system(size: 34, weight: .semibold, design: .serif))
@@ -59,10 +65,45 @@ struct TodayView: View {
             riteLabel
                 .padding(.top, 8)
 
+            // Seasonal note (countdown, octave, etc)
+            if let note = ctx.seasonalNote {
+                Text(note)
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.goldLeaf)
+                    .padding(.top, 6)
+            }
+
+            // First Friday / First Saturday / Ember day flags
+            if ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay {
+                HStack(spacing: 12) {
+                    if ctx.isFirstFriday {
+                        Text("First Friday")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                    if ctx.isFirstSaturday {
+                        Text("First Saturday")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                    if ctx.isEmberDay {
+                        Text("Ember Day")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                }
+                .padding(.top, 4)
+            }
+
+            // Liturgical colour bar
             Rectangle()
-                .fill(Color.goldLeaf.opacity(0.4))
-                .frame(height: 0.5)
-                .padding(.horizontal, 28)
+                .fill(ctx.colour.swiftUIColor.opacity(0.5))
+                .frame(height: 2)
+                .padding(.horizontal, 60)
                 .padding(.top, 14)
         }
         .padding(.horizontal, 28)
@@ -90,6 +131,7 @@ struct TodayView: View {
 
     private var mainContent: some View {
         VStack(spacing: 24) {
+            dailyPsalmCard
             penanceCard
             devotionsSection
             rosaryCard
@@ -99,6 +141,34 @@ struct TodayView: View {
         .padding(.horizontal, 28)
         .padding(.top, 24)
         .padding(.bottom, 40)
+    }
+
+    // MARK: - Daily Psalm
+
+    private var dailyPsalmCard: some View {
+        let verse = DailyPsalm.verse()
+        return VStack(alignment: .leading, spacing: 8) {
+            Text("Psalmus Hodiérnus")
+                .smallLabel(color: Color.sanctuaryRed)
+            Text(verse.ref)
+                .font(.captionSm)
+                .foregroundStyle(Color.goldLeaf)
+            Text(verse.latin)
+                .font(.bodyIt)
+                .foregroundStyle(Color.primaryText)
+                .lineSpacing(4)
+                .padding(.top, 2)
+            Text(verse.english)
+                .font(.bodySm)
+                .italic()
+                .foregroundStyle(Color.secondaryText)
+                .lineSpacing(3)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .overlay(
+            Rectangle().stroke(Color.frameLine, lineWidth: 0.5)
+        )
     }
 
     // MARK: - Penance card

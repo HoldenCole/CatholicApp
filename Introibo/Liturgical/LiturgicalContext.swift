@@ -283,3 +283,78 @@ enum LongDateFormatter {
         return "the \(ordinals[day]) of \(months[month - 1])"
     }
 }
+
+// Seasonal countdown and contextual flags for the Today screen.
+extension LiturgicalContext {
+    var seasonalNote: String? {
+        let cal = Calendar.liturgical
+        let today = cal.startOfDay(for: date)
+
+        // Lent/Passion countdown to Easter
+        if season == .lent || season == .passion {
+            let days = cal.dateComponents([.day], from: today, to: cal.startOfDay(for: easter)).day ?? 0
+            if days == 0 { return nil }
+            return "\(days) day\(days == 1 ? "" : "s") until Easter Sunday"
+        }
+
+        // Advent countdown to Christmas
+        if season == .advent {
+            var comps = DateComponents()
+            comps.year = cal.component(.year, from: date)
+            comps.month = 12; comps.day = 25
+            let christmas = cal.date(from: comps)!
+            let days = cal.dateComponents([.day], from: today, to: cal.startOfDay(for: christmas)).day ?? 0
+            if days == 0 { return "Christmas Day" }
+            return "\(days) day\(days == 1 ? "" : "s") until Christmas"
+        }
+
+        // Easter octave
+        if season == .easter {
+            let daysSinceEaster = cal.dateComponents([.day], from: cal.startOfDay(for: easter), to: today).day ?? 0
+            if daysSinceEaster >= 0 && daysSinceEaster <= 7 {
+                return "Octave of Easter — Day \(daysSinceEaster + 1)"
+            }
+            let daysToPentecost = cal.dateComponents([.day], from: today, to: cal.startOfDay(for: pentecost)).day ?? 0
+            if daysToPentecost > 0 && daysToPentecost <= 10 {
+                return "\(daysToPentecost) day\(daysToPentecost == 1 ? "" : "s") until Pentecost"
+            }
+        }
+
+        return nil
+    }
+
+    var isFirstFriday: Bool {
+        let cal = Calendar.liturgical
+        guard cal.component(.weekday, from: date) == 6 else { return false }
+        return cal.component(.day, from: date) <= 7
+    }
+
+    var isFirstSaturday: Bool {
+        let cal = Calendar.liturgical
+        guard cal.component(.weekday, from: date) == 7 else { return false }
+        return cal.component(.day, from: date) <= 7
+    }
+
+    var isEmberDay: Bool {
+        // Simplified: Ember days fall on Wed/Fri/Sat of the Ember weeks
+        // (after 3rd Sunday of Advent, after Ash Wed, after Pentecost, after Sept 14)
+        let dow = dayOfWeek
+        guard dow == 3 || dow == 5 || dow == 6 else { return false }
+        let cal = Calendar.liturgical
+        let weekOfYear = cal.component(.weekOfYear, from: date)
+
+        // Advent ember: 3rd week of Advent
+        if season == .advent {
+            let advent1Week = cal.component(.weekOfYear, from: firstAdvent)
+            if weekOfYear == advent1Week + 2 { return true }
+        }
+
+        // Lent ember: week after Ash Wednesday
+        if season == .lent {
+            let ashWeek = cal.component(.weekOfYear, from: ashWednesday)
+            if weekOfYear == ashWeek { return true }
+        }
+
+        return false
+    }
+}
