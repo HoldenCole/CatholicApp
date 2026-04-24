@@ -17,6 +17,7 @@ struct ReferenceView: View {
                                 row(entry)
                             }
                             .buttonStyle(.plain)
+                            .listRowBackground(Color.pageBackground)
                         }
                     }
                 }
