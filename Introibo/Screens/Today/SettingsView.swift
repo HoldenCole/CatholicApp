@@ -38,13 +38,19 @@ struct SettingsView: View {
 
     private var riteSection: some View {
         Section {
-            Picker("Missal Rite", selection: $riteRaw) {
-                ForEach(MissalRite.allCases) { r in
-                    Text(r.label).tag(r.rawValue)
+            ForEach(MissalRite.allCases) { r in
+                HStack {
+                    Text(r.label)
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    if riteRaw == r.rawValue {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
                 }
+                .contentShape(Rectangle())
+                .onTapGesture { riteRaw = r.rawValue }
             }
-            .pickerStyle(.inline)
-            .labelsHidden()
         } header: {
             Text("Ritus · Missal Rite")
         } footer: {
@@ -56,13 +62,19 @@ struct SettingsView: View {
 
     private var penanceSection: some View {
         Section {
-            Picker("Penance Discipline", selection: $penanceRaw) {
-                ForEach(PenanceDiscipline.allCases) { d in
-                    Text(d.label).tag(d.rawValue)
+            ForEach(PenanceDiscipline.allCases) { d in
+                HStack {
+                    Text(d.label)
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    if penanceRaw == d.rawValue {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
                 }
+                .contentShape(Rectangle())
+                .onTapGesture { penanceRaw = d.rawValue }
             }
-            .pickerStyle(.inline)
-            .labelsHidden()
         } header: {
             Text("Pæniténtia · Penance Discipline")
         } footer: {
@@ -74,13 +86,19 @@ struct SettingsView: View {
 
     private var languageSection: some View {
         Section {
-            Picker("Language", selection: $languageRaw) {
-                ForEach(LanguageMode.allCases) { l in
-                    Text(l.label).tag(l.rawValue)
+            ForEach(LanguageMode.allCases) { l in
+                HStack {
+                    Text(l.label)
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    if languageRaw == l.rawValue {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
                 }
+                .contentShape(Rectangle())
+                .onTapGesture { languageRaw = l.rawValue }
             }
-            .pickerStyle(.inline)
-            .labelsHidden()
         } header: {
             Text("Lingua · Language")
         } footer: {
@@ -92,13 +110,19 @@ struct SettingsView: View {
 
     private var displaySection: some View {
         Section {
-            Picker("Theme", selection: $themeRaw) {
-                ForEach(AppTheme.allCases) { t in
-                    Text(t.label).tag(t.rawValue)
+            ForEach(AppTheme.allCases) { t in
+                HStack {
+                    Text(t.label)
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    if themeRaw == t.rawValue {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
                 }
+                .contentShape(Rectangle())
+                .onTapGesture { themeRaw = t.rawValue }
             }
-            .pickerStyle(.inline)
-            .labelsHidden()
         } header: {
             Text("Appáritus · Appearance")
         } footer: {

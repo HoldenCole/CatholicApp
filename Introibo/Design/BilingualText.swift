@@ -10,8 +10,12 @@ struct BilingualLine: View {
 
     private var mode: LanguageMode { .current() }
 
+    private var isShort: Bool {
+        lat.count + eng.count < 120
+    }
+
     var body: some View {
-        if sideBySide && mode == .both {
+        if sideBySide && mode == .both && isShort {
             HStack(alignment: .firstTextBaseline, spacing: 14) {
                 Text(lat)
                     .font(.body)
