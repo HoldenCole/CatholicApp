@@ -11,6 +11,7 @@ struct CourseDetailView: View {
     let onMasteryChange: () -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var isMastered: Bool = false
+    @State private var showQuiz = false
 
     var body: some View {
         NavigationStack {
@@ -22,6 +23,7 @@ struct CourseDetailView: View {
                         ForEach(Array(course.sections.enumerated()), id: \.offset) { _, s in
                             sectionView(s)
                         }
+                        quizButton
                         masteryButton
                     }
                     .padding(.horizontal, 28)
@@ -131,26 +133,35 @@ struct CourseDetailView: View {
     }
 
     private func cardRow(_ c: Course.Section.Card) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
-            HStack(alignment: .firstTextBaseline, spacing: 10) {
-                Text(c.lat ?? "")
-                    .font(.titleM)
-                    .italic()
-                    .foregroundStyle(Color.primaryText)
-                if let phon = c.phon, !phon.isEmpty {
-                    Text("[\(phon)]")
-                        .font(.captionSm)
-                        .foregroundStyle(Color.tertiaryText)
+        FlashCard(card: c)
+    }
+
+    // MARK: - Quiz button
+
+    private var allCards: [Course.Section.Card] {
+        course.sections.compactMap { $0.items }.flatMap { $0 }.filter { $0.lat != nil && $0.eng != nil }
+    }
+
+    @ViewBuilder
+    private var quizButton: some View {
+        if allCards.count >= 4 {
+            Button { showQuiz = true } label: {
+                HStack {
+                    Image(systemName: "questionmark.circle")
+                        .foregroundStyle(Color.goldLeaf)
+                    Text("Test Yourself")
+                        .smallLabel(color: Color.goldLeaf, tracking: 3)
                 }
+                .padding(.vertical, 14)
+                .frame(maxWidth: .infinity)
+                .overlay(Rectangle().stroke(Color.goldLeaf.opacity(0.6), lineWidth: 0.5))
             }
-            if let eng = c.eng {
-                Text(eng)
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
+            .buttonStyle(.plain)
+            .padding(.top, 12)
+            .sheet(isPresented: $showQuiz) {
+                QuizView(cards: allCards, lessonTitle: course.title)
             }
         }
-        .padding(.vertical, 4)
     }
 
     // MARK: - Mastery button
