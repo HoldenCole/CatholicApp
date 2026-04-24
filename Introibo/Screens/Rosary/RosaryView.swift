@@ -23,7 +23,7 @@ struct RosaryView: View {
         .navigationTitle("Sacratíssimum Rosárium")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(item: $selection) { set in
-            MysteryReaderView(set: set)
+            RosaryFlowView(set: set)
         }
     }
 
