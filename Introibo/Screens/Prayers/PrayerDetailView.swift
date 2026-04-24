@@ -76,19 +76,7 @@ struct PrayerDetailView: View {
 
     @ViewBuilder
     private func lineBlock(_ line: Prayer.Line, isFirst: Bool) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 14) {
-            // Latin (left column)
-            Text(line.lat.strippingEm)
-                .font(isFirst ? .body : .body)
-                .foregroundStyle(Color.primaryText)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            // English (right column)
-            Text(line.eng.strippingEm)
-                .font(.bodySm)
-                .italic()
-                .foregroundStyle(Color.secondaryText)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
+        BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
     }
 }
 

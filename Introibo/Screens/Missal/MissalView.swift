@@ -66,17 +66,7 @@ struct MissalView: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(Array(section.body.enumerated()), id: \.offset) { _, line in
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text(line.lat.strippingEm)
-                            .font(.body)
-                            .foregroundStyle(Color.primaryText)
-                            .lineSpacing(3)
-                        Text(line.eng.strippingEm)
-                            .font(.bodySm)
-                            .italic()
-                            .foregroundStyle(Color.secondaryText)
-                            .lineSpacing(2)
-                    }
+                    BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
                 }
             }
             .padding(.top, 4)

@@ -9,6 +9,7 @@ struct TodayView: View {
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
     @State private var showSettings = false
+    @State private var morningOfferingTapped = false
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var discipline: PenanceDiscipline { PenanceDiscipline(rawValue: penanceRaw) ?? .discipline1962 }
@@ -24,6 +25,11 @@ struct TodayView: View {
             .background(Color.pageBackground.ignoresSafeArea())
             .sheet(isPresented: $showSettings) {
                 SettingsView()
+            }
+            .sheet(isPresented: $morningOfferingTapped) {
+                if let prayer = ContentStore.shared.prayer(slug: "morning") {
+                    PrayerDetailView(prayer: prayer)
+                }
             }
         }
     }
@@ -265,7 +271,7 @@ struct TodayView: View {
 
             NavigationLink(destination: OfficeView()) {
                 devotionRow("The Divine Office",
-                            latin: "Officium Divínum — Laudes & Vespers")
+                            latin: "Officium Divínum — VIII Horæ Canónicæ")
             }
             .buttonStyle(.plain)
 
@@ -281,8 +287,14 @@ struct TodayView: View {
             }
             .buttonStyle(.plain)
 
-            devotionRow("Morning Offering",
-                        latin: "Oblátio Matutína")
+            Button {
+                // Navigate to Morning Offering prayer
+                morningOfferingTapped = true
+            } label: {
+                devotionRow("Morning Offering",
+                            latin: "Oblátio Matutína")
+            }
+            .buttonStyle(.plain)
         }
     }
 

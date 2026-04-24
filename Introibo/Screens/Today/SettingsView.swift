@@ -7,6 +7,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @State private var showResetConfirm = false
     @Environment(\.dismiss) private var dismiss
 
@@ -15,6 +16,7 @@ struct SettingsView: View {
             List {
                 riteSection
                 penanceSection
+                languageSection
                 displaySection
                 resetSection
                 aboutSection
@@ -42,8 +44,9 @@ struct SettingsView: View {
                 }
             }
             .pickerStyle(.inline)
+            .labelsHidden()
         } header: {
-            Text("Ritus")
+            Text("Ritus · Missal Rite")
         } footer: {
             Text("Controls the rubrics displayed in the Missal. Most traditional parishes use the 1962 Missal.")
         }
@@ -59,10 +62,29 @@ struct SettingsView: View {
                 }
             }
             .pickerStyle(.inline)
+            .labelsHidden()
         } header: {
-            Text("Pæniténtia")
+            Text("Pæniténtia · Penance Discipline")
         } footer: {
             Text("Determines which fasting and abstinence obligations appear on the Today screen.")
+        }
+    }
+
+    // MARK: - Language
+
+    private var languageSection: some View {
+        Section {
+            Picker("Language", selection: $languageRaw) {
+                ForEach(LanguageMode.allCases) { l in
+                    Text(l.label).tag(l.rawValue)
+                }
+            }
+            .pickerStyle(.inline)
+            .labelsHidden()
+        } header: {
+            Text("Lingua · Language")
+        } footer: {
+            Text("Choose which text to display in prayers, the Missal, and the Divine Office.")
         }
     }
 
@@ -76,6 +98,7 @@ struct SettingsView: View {
                 }
             }
             .pickerStyle(.inline)
+            .labelsHidden()
         } header: {
             Text("Appáritus · Appearance")
         } footer: {

@@ -59,6 +59,28 @@ enum SettingsKey {
     static let penance   = "settings.penance"
     static let darkMode  = "settings.darkMode"
     static let theme     = "settings.theme"
+    static let language  = "settings.language"
+}
+
+enum LanguageMode: String, CaseIterable, Identifiable {
+    case both      = "both"
+    case latinOnly = "latin"
+    case vernacular = "vernacular"
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .both:       return "Latin & English"
+        case .latinOnly:  return "Latin Only"
+        case .vernacular: return "English Only"
+        }
+    }
+
+    static func current() -> LanguageMode {
+        let raw = UserDefaults.standard.string(forKey: SettingsKey.language) ?? "both"
+        return LanguageMode(rawValue: raw) ?? .both
+    }
 }
 
 // App theme: parchment (warm default), white (clean), dark (walnut).
