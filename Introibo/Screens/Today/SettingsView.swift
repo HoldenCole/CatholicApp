@@ -161,14 +161,14 @@ struct SettingsView: View {
                     .italic()
             }
             LabeledContent("") {
-                Text("Ad altáre Dei — To the Altar of God")
+                Text("Ad altáre Dei")
                     .font(.caption)
                     .italic()
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Color.secondaryText)
             }
-            Text("A free prayer companion for traditional Catholics. No accounts, no tracking, no ads. All data is stored locally on your device.")
+            Text("A prayer companion for traditional Catholics. Ad free. Works offline.")
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Color.secondaryText)
         } header: {
             Text("About")
         }
