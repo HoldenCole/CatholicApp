@@ -43,15 +43,30 @@ struct OnboardingView: View {
                     .padding(.top, 12)
 
                     // Principles
-                    VStack(spacing: 6) {
-                        Text("Free forever. No accounts. No tracking. No ads.")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.tertiaryText)
-                        Text("All data stored locally on your device.")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.tertiaryText)
+                    HStack(spacing: 16) {
+                        VStack(spacing: 6) {
+                            Text("Ad free")
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.primaryText)
+                            Text("Latin first")
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.primaryText)
+                        }
+                        Rectangle()
+                            .fill(Color.goldLeaf.opacity(0.3))
+                            .frame(width: 0.5, height: 30)
+                        VStack(spacing: 6) {
+                            Text("1962 Calendar")
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.primaryText)
+                            Text("Works offline")
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.primaryText)
+                        }
                     }
                     .padding(.top, 16)
 
