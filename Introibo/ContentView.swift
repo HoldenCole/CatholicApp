@@ -1,6 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+
+    private var theme: AppTheme { AppTheme(rawValue: themeRaw) ?? .parchment }
+
     var body: some View {
         TabView {
             TodayView()
@@ -19,14 +23,23 @@ struct ContentView: View {
                 .tabItem { Label("Liber", systemImage: "text.book.closed") }
         }
         .tint(Color.sanctuaryRed)
-        .onAppear {
-            // Parchment tab bar background instead of default white
-            let appearance = UITabBarAppearance()
-            appearance.configureWithOpaqueBackground()
+        .onAppear { updateTabBar() }
+        .onChange(of: themeRaw) { _, _ in updateTabBar() }
+    }
+
+    private func updateTabBar() {
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        switch theme {
+        case .parchment:
             appearance.backgroundColor = UIColor(Color.parchment)
-            UITabBar.appearance().standardAppearance = appearance
-            UITabBar.appearance().scrollEdgeAppearance = appearance
+        case .white:
+            appearance.backgroundColor = UIColor(Color.walnut)
+        case .dark:
+            appearance.backgroundColor = UIColor(Color.walnut)
         }
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
     }
 }
 

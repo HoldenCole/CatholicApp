@@ -2,12 +2,12 @@ import SwiftUI
 
 @main
 struct IntroiboApp: App {
-    @AppStorage("settings.darkMode") private var darkMode = false
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .preferredColorScheme(darkMode ? .dark : .light)
+                .preferredColorScheme(themeRaw == "dark" ? .dark : .light)
         }
     }
 }

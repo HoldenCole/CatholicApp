@@ -30,40 +30,49 @@ extension Color {
     // These pick light/dark variants automatically based on the user's
     // interface style. Views should prefer these over the raw palette.
 
-    /// Page background — parchment in light, walnut in dark.
-    static let pageBackground = Color(uiColor: UIColor { trait in
-        trait.userInterfaceStyle == .dark
-            ? UIColor(red:  26/255, green:  19/255, blue:  12/255, alpha: 1)
-            : UIColor(red: 242/255, green: 232/255, blue: 208/255, alpha: 1)
-    })
+    /// Page background — parchment (default), white (clean), or walnut (dark).
+    static var pageBackground: Color {
+        switch AppTheme.current() {
+        case .parchment: return parchment
+        case .white:     return Color.white
+        case .dark:      return walnut
+        }
+    }
 
-    /// Primary text — ink in light, ivory in dark.
-    static let primaryText = Color(uiColor: UIColor { trait in
-        trait.userInterfaceStyle == .dark
-            ? UIColor(red: 232/255, green: 223/255, blue: 201/255, alpha: 1)
-            : UIColor(red:  28/255, green:  20/255, blue:  16/255, alpha: 1)
-    })
+    /// Primary text — ink on light backgrounds, ivory on dark.
+    static var primaryText: Color {
+        switch AppTheme.current() {
+        case .parchment: return ink
+        case .white:     return ink
+        case .dark:      return ivory
+        }
+    }
 
-    /// Secondary text — sepia in light, muted in dark.
-    static let secondaryText = Color(uiColor: UIColor { trait in
-        trait.userInterfaceStyle == .dark
-            ? UIColor(red: 154/255, green: 134/255, blue: 112/255, alpha: 1)
-            : UIColor(red: 122/255, green: 106/255, blue:  88/255, alpha: 1)
-    })
+    /// Secondary text — sepia on light, muted on dark.
+    static var secondaryText: Color {
+        switch AppTheme.current() {
+        case .parchment: return sepia
+        case .white:     return sepia
+        case .dark:      return muted
+        }
+    }
 
-    /// Muted meta/label text — the Latin subtitles, date stamps, etc.
-    static let tertiaryText = Color(uiColor: UIColor { trait in
-        trait.userInterfaceStyle == .dark
-            ? UIColor(red: 122/255, green: 106/255, blue:  88/255, alpha: 1)
-            : UIColor(red: 154/255, green: 134/255, blue: 112/255, alpha: 1)
-    })
+    /// Muted meta/label text.
+    static var tertiaryText: Color {
+        switch AppTheme.current() {
+        case .parchment: return muted
+        case .white:     return muted
+        case .dark:      return sepia
+        }
+    }
 
-    /// Page frame hairline — gold, dimmer in dark mode.
-    static let frameLine = Color(uiColor: UIColor { trait in
-        trait.userInterfaceStyle == .dark
-            ? UIColor(red: 184/255, green: 150/255, blue:  12/255, alpha: 0.25)
-            : UIColor(red: 184/255, green: 150/255, blue:  12/255, alpha: 0.3)
-    })
+    /// Page frame hairline.
+    static var frameLine: Color {
+        switch AppTheme.current() {
+        case .dark: return goldLeaf.opacity(0.25)
+        default:    return goldLeaf.opacity(0.3)
+        }
+    }
 }
 
 // Liturgical colours (not theme-aware — always the same hue).

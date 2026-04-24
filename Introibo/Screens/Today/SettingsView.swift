@@ -6,7 +6,7 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
-    @AppStorage(SettingsKey.darkMode) private var darkMode = false
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var showResetConfirm = false
     @Environment(\.dismiss) private var dismiss
 
@@ -70,9 +70,16 @@ struct SettingsView: View {
 
     private var displaySection: some View {
         Section {
-            Toggle("Dark Mode", isOn: $darkMode)
+            Picker("Theme", selection: $themeRaw) {
+                ForEach(AppTheme.allCases) { t in
+                    Text(t.label).tag(t.rawValue)
+                }
+            }
+            .pickerStyle(.inline)
         } header: {
-            Text("Display")
+            Text("Appáritus · Appearance")
+        } footer: {
+            Text("Parchment: warm vellum background. Clean White: modern white with walnut tab bar. Dark: deep walnut for low light.")
         }
     }
 
