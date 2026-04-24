@@ -33,50 +33,107 @@ struct StationsView: View {
 
     private var startList: some View {
         ScrollView {
-            VStack(spacing: 14) {
-                Text("Stations of the Cross")
-                    .font(.titleL)
-                    .italic()
-                    .foregroundStyle(Color.primaryText)
-                    .padding(.top, 8)
-                Text("XIV statiónes Viæ Crucis")
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
-                    .textCase(.uppercase)
-                    .tracking(2)
-
-                ForEach(Array(store.stations.enumerated()), id: \.offset) { idx, s in
-                    Button { activeIndex = idx } label: {
-                        stationRow(s)
-                    }
-                    .buttonStyle(.plain)
+            VStack(spacing: 0) {
+                // Dark walnut header
+                VStack(spacing: 10) {
+                    Text("✠")
+                        .font(.system(size: 36))
+                        .foregroundStyle(Color.sanctuaryRed.opacity(0.6))
+                        .padding(.top, 24)
+                    Text("Via Crucis")
+                        .font(.pageTitle)
+                        .foregroundStyle(Color.ivory)
+                    Text("The Way of the Cross")
+                        .font(.caption)
+                        .italic()
+                        .foregroundStyle(Color.muted)
+                        .textCase(.uppercase)
+                        .tracking(2.5)
+                    Text("XIV Statiónes")
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.muted)
+                        .padding(.top, 2)
+                    Rectangle()
+                        .fill(Color.sanctuaryRed.opacity(0.4))
+                        .frame(width: 60, height: 1)
+                        .padding(.top, 14)
+                        .padding(.bottom, 18)
                 }
+                .frame(maxWidth: .infinity)
+                .background(
+                    LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
+                )
 
+                // Pilgrimage path
+                VStack(spacing: 0) {
+                    ForEach(Array(store.stations.enumerated()), id: \.offset) { idx, s in
+                        Button { activeIndex = idx } label: {
+                            pathStop(s, index: idx)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(.vertical, 24)
+                .padding(.horizontal, 28)
+
+                // Begin button
                 Button { activeIndex = 0 } label: {
-                    Text("Incipiámus  ✠  Begin the Way")
-                        .smallLabel(color: Color.sanctuaryRed, tracking: 3)
-                        .padding(.vertical, 16)
-                        .frame(maxWidth: .infinity)
-                        .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.6), lineWidth: 0.5))
+                    VStack(spacing: 8) {
+                        Text("✠")
+                            .font(.titleL)
+                            .foregroundStyle(Color.sanctuaryRed)
+                        Text("Incipiámus")
+                            .font(.titleL)
+                            .italic()
+                            .foregroundStyle(Color.sanctuaryRed)
+                        Text("Begin the Way of the Cross")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                            .textCase(.uppercase)
+                            .tracking(2)
+                    }
+                    .padding(.vertical, 24)
+                    .frame(maxWidth: .infinity)
+                    .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 0.5))
                 }
                 .buttonStyle(.plain)
-                .padding(.top, 14)
+                .padding(.horizontal, 28)
+                .padding(.bottom, 40)
             }
-            .padding(.horizontal, 28)
-            .padding(.bottom, 40)
         }
         .background(Color.pageBackground.ignoresSafeArea())
     }
 
-    private func stationRow(_ s: Station) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 14) {
-            Text(s.station)
-                .font(.titleL)
-                .italic()
-                .foregroundStyle(Color.sanctuaryRed)
-                .frame(width: 48, alignment: .leading)
-            VStack(alignment: .leading, spacing: 2) {
+    private func pathStop(_ s: Station, index: Int) -> some View {
+        HStack(alignment: .top, spacing: 0) {
+            // Left: vertical line + circle marker
+            VStack(spacing: 0) {
+                Rectangle()
+                    .fill(index == 0 ? Color.clear : Color.sanctuaryRed.opacity(0.2))
+                    .frame(width: 1, height: 14)
+                ZStack {
+                    Circle()
+                        .fill(Color.pageBackground)
+                        .frame(width: 28, height: 28)
+                    Circle()
+                        .stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 1)
+                        .frame(width: 28, height: 28)
+                    Text(s.station)
+                        .font(.system(size: 10, weight: .semibold, design: .serif))
+                        .italic()
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+                Rectangle()
+                    .fill(index == store.stations.count - 1 ? Color.clear : Color.sanctuaryRed.opacity(0.2))
+                    .frame(width: 1)
+                    .frame(maxHeight: .infinity)
+            }
+            .frame(width: 36)
+
+            // Right: station info
+            VStack(alignment: .leading, spacing: 3) {
                 Text(s.title)
                     .font(.titleM)
                     .italic()
@@ -86,9 +143,16 @@ struct StationsView: View {
                     .italic()
                     .foregroundStyle(Color.secondaryText)
             }
+            .padding(.leading, 14)
+            .padding(.vertical, 10)
+
             Spacer()
+
+            Text("›")
+                .font(.titleM)
+                .foregroundStyle(Color.goldLeaf.opacity(0.5))
+                .padding(.top, 12)
         }
-        .padding(.vertical, 8)
         .contentShape(Rectangle())
     }
 }
