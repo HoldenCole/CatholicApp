@@ -7,7 +7,8 @@
       "Have I doubted or denied the truths of the faith?",
       "Have I put my trust in superstition, fortune-telling, or the occult?",
       "Have I received Holy Communion in a state of mortal sin?",
-      "Have I neglected my daily prayers?"
+      "Have I neglected my daily prayers?",
+      "Have I been ungrateful for God's blessings?"
     ]
   },
   {
@@ -17,7 +18,9 @@
     "questions": [
       "Have I used God's name irreverently or in anger?",
       "Have I cursed or used profane language?",
-      "Have I broken a vow or oath made to God?"
+      "Have I broken a vow or oath made to God?",
+      "Have I used God's name carelessly in conversation?",
+      "Have I broken a solemn promise or vow?"
     ]
   },
   {
@@ -27,7 +30,9 @@
     "questions": [
       "Have I missed Mass on Sundays or Holy Days without just cause?",
       "Have I done unnecessary servile work on Sundays?",
-      "Have I been inattentive or irreverent at Mass?"
+      "Have I been inattentive or irreverent at Mass?",
+      "Have I done unnecessary servile work on Sundays?",
+      "Have I failed to keep days of obligation?"
     ]
   },
   {
@@ -37,7 +42,9 @@
     "questions": [
       "Have I been disobedient or disrespectful to my parents?",
       "Have I neglected my duties to my family?",
-      "Have I failed to care for aged or infirm parents?"
+      "Have I failed to care for aged or infirm parents?",
+      "Have I neglected my duties to my family?",
+      "Have I failed to forgive a family member?"
     ]
   },
   {
@@ -48,6 +55,7 @@
       "Have I borne hatred, anger, or resentment toward anyone?",
       "Have I refused to forgive?",
       "Have I harmed another by word or deed?",
+      "Have I given scandal or led others into sin?",
       "Have I given scandal or led others into sin?"
     ]
   },
@@ -58,7 +66,9 @@
     "questions": [
       "Have I entertained impure thoughts willingly?",
       "Have I committed impure acts, alone or with others?",
-      "Have I been unfaithful to my state in life?"
+      "Have I been unfaithful to my state in life?",
+      "Have I failed to guard my eyes from impure images?",
+      "Have I kept company that occasions sin against purity?"
     ]
   },
   {
@@ -69,7 +79,8 @@
       "Have I taken what does not belong to me?",
       "Have I damaged another's property?",
       "Have I failed to make restitution for theft?",
-      "Have I been dishonest in business?"
+      "Have I been dishonest in business?",
+      "Have I been wasteful with what God has given me?"
     ]
   },
   {
@@ -79,7 +90,9 @@
     "questions": [
       "Have I lied or deceived others?",
       "Have I engaged in gossip, detraction, or calumny?",
-      "Have I rashly judged others?"
+      "Have I rashly judged others?",
+      "Have I gossiped about or detracted the reputation of others?",
+      "Have I failed to defend someone's good name when I could have?"
     ]
   },
   {
@@ -88,7 +101,10 @@
     "latin": "Non concupísces uxórem próximi tui",
     "questions": [
       "Have I wilfully entertained impure desires toward another?",
-      "Have I failed to guard my eyes, imagination, or reading?"
+      "Have I failed to guard my eyes, imagination, or reading?",
+      "Have I entertained impure thoughts deliberately?",
+      "Have I failed to dismiss temptations against purity promptly?",
+      "Have I placed myself in occasions of sin against this commandment?"
     ]
   },
   {
@@ -97,7 +113,10 @@
     "latin": "Non concupísces rem próximi tui",
     "questions": [
       "Have I been envious of what others possess?",
-      "Have I been greedy or excessively attached to material things?"
+      "Have I been greedy or excessively attached to material things?",
+      "Have I been envious of others' success or good fortune?",
+      "Have I been discontented with my state in life?",
+      "Have I failed to practice generosity and almsgiving?"
     ]
   }
 ]

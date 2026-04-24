@@ -19,6 +19,8 @@ struct SettingsView: View {
                 resetSection
                 aboutSection
             }
+            .scrollContentBackground(.hidden)
+            .background(Color.pageBackground.ignoresSafeArea())
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

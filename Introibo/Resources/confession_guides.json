@@ -17,7 +17,7 @@
           {
             "num": "ii",
             "title": "Make an Act of Contrition",
-            "body": "Be truly sorry for having offended God — not merely from fear of punishment, but from love of Him who is all good and deserving of all your love."
+            "body": "Be truly sorry for having offended God; not merely from fear of punishment, but from love of Him who is all good and deserving of all your love."
           },
           {
             "num": "iii",
@@ -42,7 +42,7 @@
           {
             "num": "v",
             "title": "Listen to the Priest's Counsel",
-            "body": "The priest may offer guidance and assign a penance. Listen attentively — he speaks in the person of Christ."
+            "body": "The priest may offer guidance and assign a penance. Listen attentively; he speaks in the person of Christ."
           },
           {
             "num": "vi",
@@ -70,7 +70,7 @@
           {
             "num": "viii",
             "title": "Perform Your Penance",
-            "body": "Complete the penance assigned by the priest as soon as possible — it is part of the sacrament."
+            "body": "Complete the penance assigned by the priest as soon as possible; it is part of the sacrament."
           },
           {
             "num": "ix",
@@ -87,13 +87,13 @@
     ],
     "steps": [
       {"num": "i", "title": "Examine Your Conscience", "latin": "Ante Confessionem", "body": "Recall your sins since your last confession. Use the examination below, going through each commandment quietly and honestly."},
-      {"num": "ii", "title": "Make an Act of Contrition", "latin": "Ante Confessionem", "body": "Be truly sorry for having offended God — not merely from fear of punishment, but from love of Him who is all good and deserving of all your love."},
+      {"num": "ii", "title": "Make an Act of Contrition", "latin": "Ante Confessionem", "body": "Be truly sorry for having offended God; not merely from fear of punishment, but from love of Him who is all good and deserving of all your love."},
       {"num": "iii", "title": "Resolve to Amend Your Life", "latin": "Ante Confessionem", "body": "Firmly resolve to avoid sin and the near occasions of sin. Without this firm purpose of amendment, absolution cannot be validly received."},
       {"num": "iv", "title": "Approach the Confessional", "latin": "In Confessione", "body": "Kneel and make the Sign of the Cross. Begin with the words: ℣. Bless me, Father, for I have sinned. It has been [time] since my last confession. These are my sins: ℟. Confess your sins simply, clearly, and completely. State the kind and number of each mortal sin. You may also confess venial sins."},
-      {"num": "v", "title": "Listen to the Priest's Counsel", "latin": "In Confessione", "body": "The priest may offer guidance and assign a penance. Listen attentively — he speaks in the person of Christ."},
+      {"num": "v", "title": "Listen to the Priest's Counsel", "latin": "In Confessione", "body": "The priest may offer guidance and assign a penance. Listen attentively; he speaks in the person of Christ."},
       {"num": "vi", "title": "Pray the Act of Contrition", "latin": "In Confessione", "body": "℣. O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of Heaven and the pains of Hell; but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen."},
-      {"num": "vii", "title": "Receive Absolution", "latin": "In Confessione", "body": "The priest extends his hand and pronounces the words of absolution: Ego te absólvo a peccátis tuis, in nómine Patris, et Fílii, ✠ et Spíritus Sancti. Amen. — I absolve thee from thy sins, in the name of the Father, and of the Son, ✠ and of the Holy Ghost. Amen."},
-      {"num": "viii", "title": "Perform Your Penance", "latin": "Post Confessionem", "body": "Complete the penance assigned by the priest as soon as possible — it is part of the sacrament."},
+      {"num": "vii", "title": "Receive Absolution", "latin": "In Confessione", "body": "The priest extends his hand and pronounces the words of absolution: Ego te absólvo a peccátis tuis, in nómine Patris, et Fílii, ✠ et Spíritus Sancti. Amen.; I absolve thee from thy sins, in the name of the Father, and of the Son, ✠ and of the Holy Ghost. Amen."},
+      {"num": "viii", "title": "Perform Your Penance", "latin": "Post Confessionem", "body": "Complete the penance assigned by the priest as soon as possible; it is part of the sacrament."},
       {"num": "ix", "title": "Give Thanks to God", "latin": "Post Confessionem", "body": "Spend a moment in thanksgiving. Your soul has been washed clean in the Precious Blood of Christ."},
       {"num": "x", "title": "Avoid the Occasions of Sin", "latin": "Post Confessionem", "body": "Guard the grace you have received. Flee from persons, places, and things that lead you into temptation."}
     ]

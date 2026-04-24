@@ -38,8 +38,8 @@
     "english": "Introit · Entrance Antiphon",
     "body": [
       {
-        "lat": "Proprium — varies by feast",
-        "eng": "Proper — varies by feast"
+        "lat": "Proprium; varies by feast",
+        "eng": "Proper; varies by feast"
       }
     ]
   },
@@ -102,8 +102,8 @@
     "english": "The Collect",
     "body": [
       {
-        "lat": "Proprium — varies by feast",
-        "eng": "Proper — varies by feast"
+        "lat": "Proprium; varies by feast",
+        "eng": "Proper; varies by feast"
       }
     ]
   },

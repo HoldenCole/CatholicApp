@@ -19,6 +19,14 @@ struct ContentView: View {
                 .tabItem { Label("Liber", systemImage: "text.book.closed") }
         }
         .tint(Color.sanctuaryRed)
+        .onAppear {
+            // Parchment tab bar background instead of default white
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(Color.parchment)
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
 }
 

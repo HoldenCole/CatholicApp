@@ -22,6 +22,7 @@ struct ReferenceView: View {
                 }
             }
             .listStyle(.plain)
+            .scrollContentBackground(.hidden)
             .background(Color.pageBackground.ignoresSafeArea())
             .navigationTitle("Líber Referentiárum")
             .navigationBarTitleDisplayMode(.inline)

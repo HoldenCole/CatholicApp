@@ -8,7 +8,7 @@
     "minute": 0,
     "glyph": "M",
     "order": 1,
-    "intro": "The night Office — historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels, the longest and most ancient of the hours.",
+    "intro": "The night Office; historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels, the longest and most ancient of the hours.",
     "parts": [
       {
         "type": "vr",
@@ -33,7 +33,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 94 — Venite",
+        "label": "Psalm 94; Venite",
         "ref": "Invitatorium",
         "verses": [
           {
@@ -63,7 +63,7 @@
       },
       {
         "type": "canticle",
-        "label": "Hymnus Ambrosianus — Te Deum",
+        "label": "Hymnus Ambrosianus; Te Deum",
         "ref": "Sundays and Feasts (omitted in Lent & Passiontide)",
         "verses": [
           {
@@ -142,7 +142,7 @@
     "minute": 0,
     "glyph": "L",
     "order": 2,
-    "intro": "The morning praise — the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary, sung as the sun rises.",
+    "intro": "The morning praise; the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary, sung as the sun rises.",
     "parts": [
       {
         "type": "vr",
@@ -167,7 +167,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 62 — Deus, Deus meus",
+        "label": "Psalm 62; Deus, Deus meus",
         "ref": "Pro mane",
         "verses": [
           {
@@ -197,7 +197,7 @@
       },
       {
         "type": "canticle",
-        "label": "Canticum Zachariæ — Benedictus",
+        "label": "Canticum Zachariæ; Benedictus",
         "ref": "Lk 1:68–75",
         "verses": [
           {
@@ -269,7 +269,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 53 — Deus, in nómine tuo",
+        "label": "Psalm 53; Deus, in nómine tuo",
         "ref": "Pro Prima",
         "verses": [
           {
@@ -319,7 +319,7 @@
     "minute": 0,
     "glyph": "III",
     "order": 4,
-    "intro": "The third hour — when the Holy Ghost descended upon the Apostles at Pentecost. Pray for the gifts of the Holy Spirit.",
+    "intro": "The third hour; when the Holy Ghost descended upon the Apostles at Pentecost. Pray for the gifts of the Holy Spirit.",
     "parts": [
       {
         "type": "vr",
@@ -344,7 +344,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 118 — Beáti immaculáti",
+        "label": "Psalm 118; Beáti immaculáti",
         "ref": "Pro Tertia",
         "verses": [
           {
@@ -394,7 +394,7 @@
     "minute": 0,
     "glyph": "VI",
     "order": 5,
-    "intro": "The sixth hour — noon. The hour at which Our Lord was nailed to the Cross. A pause in the day's work to remember His sacrifice.",
+    "intro": "The sixth hour; noon. The hour at which Our Lord was nailed to the Cross. A pause in the day's work to remember His sacrifice.",
     "parts": [
       {
         "type": "vr",
@@ -419,7 +419,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 122 — Ad te levávi óculos meos",
+        "label": "Psalm 122; Ad te levávi óculos meos",
         "ref": "Pro Sexta",
         "verses": [
           {
@@ -469,7 +469,7 @@
     "minute": 0,
     "glyph": "IX",
     "order": 6,
-    "intro": "The ninth hour — three in the afternoon. The hour at which Our Lord died upon the Cross. Adore Him with the centurion: 'Truly this was the Son of God.'",
+    "intro": "The ninth hour; three in the afternoon. The hour at which Our Lord died upon the Cross. Adore Him with the centurion: 'Truly this was the Son of God.'",
     "parts": [
       {
         "type": "vr",
@@ -494,7 +494,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 125 — In converténdo",
+        "label": "Psalm 125; In converténdo",
         "ref": "Pro Nona",
         "verses": [
           {
@@ -544,7 +544,7 @@
     "minute": 0,
     "glyph": "V",
     "order": 7,
-    "intro": "The evening hour — when the sun sets and the lamps are lit. The Church sings the Magnificat, Our Lady's canticle of praise, the second great hinge-hour of the day.",
+    "intro": "The evening hour; when the sun sets and the lamps are lit. The Church sings the Magnificat, Our Lady's canticle of praise, the second great hinge-hour of the day.",
     "parts": [
       {
         "type": "vr",
@@ -569,7 +569,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 109 — Dixit Dóminus",
+        "label": "Psalm 109; Dixit Dóminus",
         "ref": "Vesperæ Dominicæ",
         "verses": [
           {
@@ -595,7 +595,7 @@
       },
       {
         "type": "canticle",
-        "label": "Canticum Mariæ — Magnificat",
+        "label": "Canticum Mariæ; Magnificat",
         "ref": "Lk 1:46–55",
         "verses": [
           {
@@ -646,7 +646,7 @@
     "minute": 0,
     "glyph": "C",
     "order": 8,
-    "intro": "The night prayer — the Church's last word before sleep. Traditional Roman Compline opens with a blessing and the Confiteor, then moves through psalmody to the Nunc Dimittis and the seasonal Marian antiphon. The hour ends with the soul commended into God's hands.",
+    "intro": "The night prayer; the Church's last word before sleep. Traditional Roman Compline opens with a blessing and the Confiteor, then moves through psalmody to the Nunc Dimittis and the seasonal Marian antiphon. The hour ends with the soul commended into God's hands.",
     "parts": [
       {
         "type": "vr",
@@ -692,7 +692,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalm 30 — In te, Dómine, sperávi",
+        "label": "Psalm 30; In te, Dómine, sperávi",
         "ref": "Pro Completorio",
         "verses": [
           {
@@ -726,7 +726,7 @@
       {
         "type": "responsory",
         "label": "Responsory",
-        "ref": "In manus tuas — Psalm 30:6",
+        "ref": "In manus tuas; Psalm 30:6",
         "v1Lat": "In manus tuas, Dómine, comméndo spíritum meum.",
         "v1Eng": "Into Thy hands, O Lord, I commend my spirit.",
         "r1Lat": "Redemísti nos, Dómine, Deus veritátis.",
@@ -738,7 +738,7 @@
       },
       {
         "type": "canticle",
-        "label": "Canticum Simeónis — Nunc Dimittis",
+        "label": "Canticum Simeónis; Nunc Dimittis",
         "ref": "Lk 2:29–32",
         "verses": [
           {

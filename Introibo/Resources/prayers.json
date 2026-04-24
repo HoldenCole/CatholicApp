@@ -759,5 +759,38 @@
         "eng": "I ask for what the penitent thief asked. <em>Amen.</em>"
       }
     ]
+  },
+  {
+    "slug": "suscipe",
+    "title": "Súscipe",
+    "eng": "The Suscipe (Take, Lord, and Receive)",
+    "category": "Devotiónes",
+    "note": "The prayer of total self-offering by St. Ignatius of Loyola, from the Spiritual Exercises. One of the most radical acts of surrender in the Catholic tradition.",
+    "lines": [
+      {
+        "lat": "Súscipe, Dómine, univérsam meam libertátem.",
+        "eng": "Take, Lord, and receive all my liberty,"
+      },
+      {
+        "lat": "Accipe memóriam, intelléctum atque voluntátem omnem.",
+        "eng": "my memory, my understanding, and my entire will,"
+      },
+      {
+        "lat": "Quidquid hábeo vel possídeo, mihi largítus es;",
+        "eng": "all that I have and possess."
+      },
+      {
+        "lat": "id tibi totum restítuo, ac tuæ prorsus voluntáti trado gubernándum.",
+        "eng": "You have given all to me; to You, Lord, I return it."
+      },
+      {
+        "lat": "Amórem tui solum cum grátia tua mihi dones,",
+        "eng": "Give me only Your love and Your grace;"
+      },
+      {
+        "lat": "et dives sum satis, nec áliud quidquam ultra posco.",
+        "eng": "that is enough for me, and I ask for nothing more."
+      }
+    ]
   }
 ]

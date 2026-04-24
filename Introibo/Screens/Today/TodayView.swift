@@ -151,9 +151,9 @@ struct TodayView: View {
             }
             .buttonStyle(.plain)
 
-            NavigationLink(destination: ConfessionView(openExamen: true)) {
-                devotionRow("Examination of Conscience",
-                            latin: "Exámen Consciéntiæ")
+            NavigationLink(destination: ConfessionView()) {
+                devotionRow("Confession Guide",
+                            latin: "De Confessióne")
             }
             .buttonStyle(.plain)
 

@@ -4,17 +4,17 @@
     "num": 1,
     "title": "Ecclesiastical Vowels",
     "latin": "De Vocalibus Ecclesiasticis",
-    "intro": "The pronunciation of Latin used in the Roman Church differs from the Classical pronunciation taught in universities. Ecclesiastical Latin is the living tongue of the liturgy — it is how the saints prayed, and how the Mass is sung today.",
+    "intro": "The pronunciation of Latin used in the Roman Church differs from the Classical pronunciation taught in universities. Ecclesiastical Latin is the living tongue of the liturgy; it is how the saints prayed, and how the Mass is sung today.",
     "sections": [
       {
         "type": "lesson",
         "label": "The Five Vowels",
-        "html": "<p><strong>A</strong> — always \"ah\" as in <em>father</em>, never \"ay\".<br><strong>E</strong> — always \"eh\" as in <em>bed</em>, never \"ee\".<br><strong>I</strong> — always \"ee\" as in <em>machine</em>, never \"eye\".<br><strong>O</strong> — always \"oh\" as in <em>note</em>, never \"uh\".<br><strong>U</strong> — always \"oo\" as in <em>food</em>, never \"yoo\".</p>"
+        "html": "<p><strong>A</strong>; always \"ah\" as in <em>father</em>, never \"ay\".<br><strong>E</strong>; always \"eh\" as in <em>bed</em>, never \"ee\".<br><strong>I</strong>; always \"ee\" as in <em>machine</em>, never \"eye\".<br><strong>O</strong>; always \"oh\" as in <em>note</em>, never \"uh\".<br><strong>U</strong>; always \"oo\" as in <em>food</em>, never \"yoo\".</p>"
       },
       {
         "type": "tip",
         "label": "Nota Bene · Take Note",
-        "html": "The key rule: Latin vowels are <em>pure</em>. English speakers diphthongise (glide between sounds) — in Latin, hold each vowel steady. \"Amen\" is <em>AH-men</em>, not <em>AY-men</em>."
+        "html": "The key rule: Latin vowels are <em>pure</em>. English speakers diphthongise (glide between sounds); in Latin, hold each vowel steady. \"Amen\" is <em>AH-men</em>, not <em>AY-men</em>."
       },
       {
         "type": "cards",
@@ -65,17 +65,17 @@
     "num": 2,
     "title": "Consonant Rules",
     "latin": "De Regulis Consonantium",
-    "intro": "Most Latin consonants sound as in English — but a handful follow rules that transform familiar words. Master these, and every Latin prayer opens before you.",
+    "intro": "Most Latin consonants sound as in English; but a handful follow rules that transform familiar words. Master these, and every Latin prayer opens before you.",
     "sections": [
       {
         "type": "lesson",
         "label": "The Key Rules",
-        "html": "<p><strong>C</strong> — hard (k) before a, o, u, or a consonant (<em>caelum</em> = CHEH-loom wait — before e/i it softens to <em>ch</em>).<br><strong>C + e/i</strong> — soft \"ch\" as in <em>church</em> (<em>Cǽlum</em> = CHEH-loom).<br><strong>G + e/i</strong> — soft \"j\" as in <em>gem</em> (<em>regina</em> = reh-JEE-nah).<br><strong>Gn</strong> — \"ny\" as in <em>canyon</em> (<em>Agnus</em> = AH-nyoos).<br><strong>Sc + e/i</strong> — \"sh\" (<em>suscipe</em> = SOO-shee-peh).<br><strong>Ti + vowel</strong> — \"tsee\" (<em>gratia</em> = GRAH-tsee-ah).</p>"
+        "html": "<p><strong>C</strong>; hard (k) before a, o, u, or a consonant (<em>caelum</em> = CHEH-loom wait; before e/i it softens to <em>ch</em>).<br><strong>C + e/i</strong>; soft \"ch\" as in <em>church</em> (<em>Cǽlum</em> = CHEH-loom).<br><strong>G + e/i</strong>; soft \"j\" as in <em>gem</em> (<em>regina</em> = reh-JEE-nah).<br><strong>Gn</strong>; \"ny\" as in <em>canyon</em> (<em>Agnus</em> = AH-nyoos).<br><strong>Sc + e/i</strong>; \"sh\" (<em>suscipe</em> = SOO-shee-peh).<br><strong>Ti + vowel</strong>; \"tsee\" (<em>gratia</em> = GRAH-tsee-ah).</p>"
       },
       {
         "type": "tip",
         "label": "Mnemonic",
-        "html": "\"Cherubim sing gently: <em>Agnus Dei</em>\" — <strong>c</strong>herubim (ch), <strong>g</strong>ently (soft g), A<strong>gn</strong>us (ny)."
+        "html": "\"Cherubim sing gently: <em>Agnus Dei</em>\"; <strong>c</strong>herubim (ch), <strong>g</strong>ently (soft g), A<strong>gn</strong>us (ny)."
       },
       {
         "type": "cards",
@@ -136,12 +136,12 @@
     "num": 3,
     "title": "Stress & Accent",
     "latin": "De Accentu et Íctu",
-    "intro": "Latin words have one stressed syllable. Get the stress right and you sound fluent — get it wrong and you sound foreign. Thankfully, the rule is simple.",
+    "intro": "Latin words have one stressed syllable. Get the stress right and you sound fluent; get it wrong and you sound foreign. Thankfully, the rule is simple.",
     "sections": [
       {
         "type": "lesson",
         "label": "The Penultimate Rule",
-        "html": "<p>The stress falls on the <strong>second-to-last syllable</strong> (penult) <em>unless</em> it is short — in which case it falls on the third-to-last (antepenult).</p><p>You'll see an acute accent in this app (Dómi­nus, Glória) — that mark shows you exactly which syllable to stress. Follow the mark and you cannot err.</p>"
+        "html": "<p>The stress falls on the <strong>second-to-last syllable</strong> (penult) <em>unless</em> it is short; in which case it falls on the third-to-last (antepenult).</p><p>You'll see an acute accent in this app (Dómi­nus, Glória); that mark shows you exactly which syllable to stress. Follow the mark and you cannot err.</p>"
       },
       {
         "type": "tip",
@@ -192,7 +192,7 @@
     "num": 4,
     "title": "First & Second Declensions",
     "latin": "Declinátio Prima et Secunda",
-    "intro": "Latin nouns change their endings to show their job in the sentence — subject, object, possession, direction. This is called declension. The two most common patterns give you hundreds of prayer words.",
+    "intro": "Latin nouns change their endings to show their job in the sentence; subject, object, possession, direction. This is called declension. The two most common patterns give you hundreds of prayer words.",
     "sections": [
       {
         "type": "lesson",
@@ -201,7 +201,7 @@
       },
       {
         "type": "table",
-        "label": "María (f.) — 1st Declension",
+        "label": "María (f.); 1st Declension",
         "rows": [
           [
             "Case",
@@ -242,7 +242,7 @@
       },
       {
         "type": "table",
-        "label": "Dóminus (m.) — 2nd Declension",
+        "label": "Dóminus (m.); 2nd Declension",
         "rows": [
           [
             "Case",
@@ -279,7 +279,7 @@
       {
         "type": "tip",
         "label": "Look for the Ending",
-        "html": "In the Mass you'll see phrases like <em>per Dóminum nostrum</em> (accusative — 'through our Lord') and <em>Glória Dómini</em> (genitive — 'glory of the Lord'). The ending tells you the meaning."
+        "html": "In the Mass you'll see phrases like <em>per Dóminum nostrum</em> (accusative; 'through our Lord') and <em>Glória Dómini</em> (genitive; 'glory of the Lord'). The ending tells you the meaning."
       },
       {
         "type": "summary",
@@ -293,16 +293,16 @@
     "num": 5,
     "title": "Verb Basics",
     "latin": "Elementa Verbórum",
-    "intro": "Latin verbs conjugate — they change their endings by person and number. The good news: for reading prayers, you only need the present tense and a handful of endings to understand most of what you'll encounter.",
+    "intro": "Latin verbs conjugate; they change their endings by person and number. The good news: for reading prayers, you only need the present tense and a handful of endings to understand most of what you'll encounter.",
     "sections": [
       {
         "type": "lesson",
         "label": "Four Conjugation Groups",
-        "html": "<p>Latin verbs are grouped by the vowel of their stem:</p><p><strong>I:</strong> -āre (<em>laudáre</em> — to praise)<br><strong>II:</strong> -ēre (<em>vidére</em> — to see)<br><strong>III:</strong> -ere (<em>dúcere</em> — to lead)<br><strong>IV:</strong> -īre (<em>audíre</em> — to hear)</p>"
+        "html": "<p>Latin verbs are grouped by the vowel of their stem:</p><p><strong>I:</strong> -āre (<em>laudáre</em>; to praise)<br><strong>II:</strong> -ēre (<em>vidére</em>; to see)<br><strong>III:</strong> -ere (<em>dúcere</em>; to lead)<br><strong>IV:</strong> -īre (<em>audíre</em>; to hear)</p>"
       },
       {
         "type": "table",
-        "label": "Laudáre — 1st Conjugation (present)",
+        "label": "Laudáre; 1st Conjugation (present)",
         "rows": [
           [
             "Person",
@@ -344,7 +344,7 @@
       {
         "type": "tip",
         "label": "The Endings Are the Key",
-        "html": "-o, -s, -t, -mus, -tis, -nt — learn these six endings and you can identify the subject of nearly any Latin verb. <em>Laudámus te</em> = 'We praise Thee' (the -mus ending IS 'we')."
+        "html": "-o, -s, -t, -mus, -tis, -nt; learn these six endings and you can identify the subject of nearly any Latin verb. <em>Laudámus te</em> = 'We praise Thee' (the -mus ending IS 'we')."
       },
       {
         "type": "cards",
@@ -393,8 +393,8 @@
   {
     "slug": "vocab50",
     "num": 6,
-    "title": "50 Common Prayer Words",
-    "latin": "Quinquagínta Verba Commúnia",
+    "title": "Core Prayer Vocabulary",
+    "latin": "Verba Oratiónis Commúnia",
     "intro": "Learn these ten essential words and you will recognize over half of what you hear in the Mass and the Rosary. Start here.",
     "sections": [
       {
@@ -471,7 +471,7 @@
     "num": 7,
     "title": "Master the Ave María",
     "latin": "Ad Perdiscéndam Ave Maríam",
-    "intro": "The Hail Mary is the most-prayed prayer of the Rosary — 50 times in every chaplet, hundreds of times in a lifetime. Let's break it down phrase by phrase until every word is known.",
+    "intro": "The Hail Mary is the most-prayed prayer of the Rosary; 50 times in every chaplet, hundreds of times in a lifetime. Let's break it down phrase by phrase until every word is known.",
     "sections": [
       {
         "type": "lesson",
@@ -620,7 +620,7 @@
       {
         "type": "tip",
         "label": "Pray It Daily in Latin",
-        "html": "Pray the Pater Noster in Latin once a day for a week. By the end you'll have it memorized — and you'll carry the Church's prayer in the Church's tongue for life."
+        "html": "Pray the Pater Noster in Latin once a day for a week. By the end you'll have it memorized; and you'll carry the Church's prayer in the Church's tongue for life."
       },
       {
         "type": "summary",
@@ -674,7 +674,7 @@
       {
         "type": "summary",
         "label": "Summarium · Summary",
-        "html": "<p>Parallelism is your key. When you don't understand the first line, look at the second — it says the same thing in different words.</p>"
+        "html": "<p>Parallelism is your key. When you don't understand the first line, look at the second; it says the same thing in different words.</p>"
       }
     ]
   },
@@ -683,12 +683,12 @@
     "num": 10,
     "title": "Reading the Vulgate",
     "latin": "Quómodo Vulgátam Légere",
-    "intro": "St. Jerome's Latin Bible — the Vulgate — is the Bible of the Church. With the grammar and vocabulary you've learned, you can now open it and read. Begin with John 1.",
+    "intro": "St. Jerome's Latin Bible; the Vulgate; is the Bible of the Church. With the grammar and vocabulary you've learned, you can now open it and read. Begin with John 1.",
     "sections": [
       {
         "type": "lesson",
         "label": "John 1:1–5",
-        "html": "<p>The Prologue of John is the most famous opening in Scripture — and the Last Gospel of the Latin Mass. Read it with the phrase-by-phrase breakdown below.</p>"
+        "html": "<p>The Prologue of John is the most famous opening in Scripture; and the Last Gospel of the Latin Mass. Read it with the phrase-by-phrase breakdown below.</p>"
       },
       {
         "type": "phrase",
@@ -753,7 +753,7 @@
       {
         "type": "summary",
         "label": "Summarium · Summary",
-        "html": "<p>You can now read the Vulgate. St. Jerome's Latin is at your fingertips — the same Bible the saints and scholars of a thousand years prayed from.</p>"
+        "html": "<p>You can now read the Vulgate. St. Jerome's Latin is at your fingertips; the same Bible the saints and scholars of a thousand years prayed from.</p>"
       }
     ]
   }

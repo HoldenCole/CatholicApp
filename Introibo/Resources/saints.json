@@ -57,7 +57,7 @@
         "practices": [
           {
             "t": "Offer Daily Sufferings",
-            "d": "Unite every pain and difficulty to the Passion of Christ — 'Co-redemption.'"
+            "d": "Unite every pain and difficulty to the Passion of Christ; 'Co-redemption.'"
           }
         ]
       }
@@ -83,7 +83,7 @@
           },
           {
             "t": "Pray the Angelus",
-            "d": "Recall the mystery of the Incarnation three times a day — morning, noon, and evening."
+            "d": "Recall the mystery of the Incarnation three times a day; morning, noon, and evening."
           }
         ]
       },
@@ -93,7 +93,7 @@
         "practices": [
           {
             "t": "Do Small Things with Great Love",
-            "d": "Seek out tiny acts of kindness — a smiling look, a kind word, a cheerfully-borne inconvenience."
+            "d": "Seek out tiny acts of kindness; a smiling look, a kind word, a cheerfully-borne inconvenience."
           },
           {
             "t": "Accept Every Cross",
@@ -133,7 +133,7 @@
           },
           {
             "t": "Attend Mass",
-            "d": "Thomas celebrated Mass daily with profound reverence — he wept at the Consecration."
+            "d": "Thomas celebrated Mass daily with profound reverence; he wept at the Consecration."
           },
           {
             "t": "Mental Prayer (30 min)",
@@ -151,11 +151,11 @@
           },
           {
             "t": "Pray the Rosary",
-            "d": "Thomas loved the Rosary for its simplicity — 'all the theology of the Incarnation in 50 beads.'"
+            "d": "Thomas loved the Rosary for its simplicity; 'all the theology of the Incarnation in 50 beads.'"
           },
           {
             "t": "Visit to the Blessed Sacrament",
-            "d": "Adore Christ truly present — the centre of all theology."
+            "d": "Adore Christ truly present; the centre of all theology."
           }
         ]
       },
@@ -179,7 +179,7 @@
     "slug": "benedict",
     "name": "St. Benedict of Nursia",
     "title": "Father of Western Monasticism",
-    "quote": "Ora et labora — Pray and work. Let nothing be preferred to the Work of God.",
+    "quote": "Ora et labora; Pray and work. Let nothing be preferred to the Work of God.",
     "sections": [
       {
         "lat": "Mane",
@@ -195,7 +195,7 @@
           },
           {
             "t": "Lectio Divina (30 min)",
-            "d": "Sacred reading of Scripture — read, meditate, pray, contemplate."
+            "d": "Sacred reading of Scripture; read, meditate, pray, contemplate."
           }
         ]
       },
@@ -209,7 +209,7 @@
           },
           {
             "t": "Pray the Minor Hours",
-            "d": "Prime, Terce, Sext, None — short interruptions to remember God throughout the day."
+            "d": "Prime, Terce, Sext, None; short interruptions to remember God throughout the day."
           },
           {
             "t": "Hospitality",
@@ -249,7 +249,7 @@
         "practices": [
           {
             "t": "Morning Mental Prayer (1 hour)",
-            "d": "Enter the 'interior castle' — turn within to the soul's centre, where Christ dwells."
+            "d": "Enter the 'interior castle'; turn within to the soul's centre, where Christ dwells."
           },
           {
             "t": "Attend Mass",
@@ -275,7 +275,7 @@
           },
           {
             "t": "Offer Small Sacrifices",
-            "d": "Accept every inconvenience with patient endurance — 'patience attains all things.'"
+            "d": "Accept every inconvenience with patient endurance; 'patience attains all things.'"
           }
         ]
       },
@@ -311,7 +311,7 @@
           },
           {
             "t": "Morning Offering",
-            "d": "'Serviam' — I will serve. Offer the whole day to God through Mary."
+            "d": "'Serviam'; I will serve. Offer the whole day to God through Mary."
           },
           {
             "t": "Attend Holy Mass",
@@ -329,7 +329,7 @@
         "practices": [
           {
             "t": "Sanctify Your Work",
-            "d": "Work well, for the love of God. Turn every task into prayer. This is Opus Dei — 'the Work of God.'"
+            "d": "Work well, for the love of God. Turn every task into prayer. This is Opus Dei; 'the Work of God.'"
           },
           {
             "t": "Pray the Angelus",
@@ -395,11 +395,11 @@
           },
           {
             "t": "Practise Gentleness",
-            "d": "Above all, be gentle — with others, with yourself, with circumstances. 'Nothing is so strong as gentleness.'"
+            "d": "Above all, be gentle; with others, with yourself, with circumstances. 'Nothing is so strong as gentleness.'"
           },
           {
             "t": "Pray the Rosary",
-            "d": "Francis loved the Rosary as a family prayer — slow, affectionate, meditative."
+            "d": "Francis loved the Rosary as a family prayer; slow, affectionate, meditative."
           }
         ]
       },

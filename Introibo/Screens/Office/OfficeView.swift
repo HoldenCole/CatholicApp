@@ -36,7 +36,8 @@ struct OfficeView: View {
                         if let h = store.hour(slug: slug) { selectedHour = h }
                     }
                 )
-                .frame(width: 320, height: 320)
+                .frame(maxWidth: .infinity)
+                .aspectRatio(1, contentMode: .fit)
                 .padding(.top, 12)
 
                 Text("Tap any hour to enter its prayer.")
