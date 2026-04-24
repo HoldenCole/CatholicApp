@@ -76,32 +76,18 @@ struct PrayerDetailView: View {
 
     @ViewBuilder
     private func lineBlock(_ line: Prayer.Line, isFirst: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            latinText(line.lat.strippingEm, isFirst: isFirst)
+        HStack(alignment: .firstTextBaseline, spacing: 14) {
+            // Latin (left column)
+            Text(line.lat.strippingEm)
+                .font(isFirst ? .body : .body)
+                .foregroundStyle(Color.primaryText)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            // English (right column)
             Text(line.eng.strippingEm)
                 .font(.bodySm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
-        }
-    }
-
-    @ViewBuilder
-    private func latinText(_ lat: String, isFirst: Bool) -> some View {
-        if isFirst, let first = lat.first {
-            // Drop cap on first character.
-            HStack(alignment: .firstTextBaseline, spacing: 2) {
-                Text(String(first))
-                    .font(.custom("Georgia", size: 48).italic())
-                    .foregroundStyle(Color.sanctuaryRed)
-                    .baselineOffset(-6)
-                Text(String(lat.dropFirst()))
-                    .font(.body)
-                    .foregroundStyle(Color.primaryText)
-            }
-        } else {
-            Text(lat)
-                .font(.body)
-                .foregroundStyle(Color.primaryText)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }

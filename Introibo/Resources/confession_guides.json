@@ -86,16 +86,66 @@
       }
     ],
     "steps": [
-      {"num": "i", "title": "Examine Your Conscience", "latin": "Ante Confessionem", "body": "Recall your sins since your last confession. Use the examination below, going through each commandment quietly and honestly."},
-      {"num": "ii", "title": "Make an Act of Contrition", "latin": "Ante Confessionem", "body": "Be truly sorry for having offended God; not merely from fear of punishment, but from love of Him who is all good and deserving of all your love."},
-      {"num": "iii", "title": "Resolve to Amend Your Life", "latin": "Ante Confessionem", "body": "Firmly resolve to avoid sin and the near occasions of sin. Without this firm purpose of amendment, absolution cannot be validly received."},
-      {"num": "iv", "title": "Approach the Confessional", "latin": "In Confessione", "body": "Kneel and make the Sign of the Cross. Begin with the words: ℣. Bless me, Father, for I have sinned. It has been [time] since my last confession. These are my sins: ℟. Confess your sins simply, clearly, and completely. State the kind and number of each mortal sin. You may also confess venial sins."},
-      {"num": "v", "title": "Listen to the Priest's Counsel", "latin": "In Confessione", "body": "The priest may offer guidance and assign a penance. Listen attentively; he speaks in the person of Christ."},
-      {"num": "vi", "title": "Pray the Act of Contrition", "latin": "In Confessione", "body": "℣. O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of Heaven and the pains of Hell; but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen."},
-      {"num": "vii", "title": "Receive Absolution", "latin": "In Confessione", "body": "The priest extends his hand and pronounces the words of absolution: Ego te absólvo a peccátis tuis, in nómine Patris, et Fílii, ✠ et Spíritus Sancti. Amen.; I absolve thee from thy sins, in the name of the Father, and of the Son, ✠ and of the Holy Ghost. Amen."},
-      {"num": "viii", "title": "Perform Your Penance", "latin": "Post Confessionem", "body": "Complete the penance assigned by the priest as soon as possible; it is part of the sacrament."},
-      {"num": "ix", "title": "Give Thanks to God", "latin": "Post Confessionem", "body": "Spend a moment in thanksgiving. Your soul has been washed clean in the Precious Blood of Christ."},
-      {"num": "x", "title": "Avoid the Occasions of Sin", "latin": "Post Confessionem", "body": "Guard the grace you have received. Flee from persons, places, and things that lead you into temptation."}
+      {
+        "num": "i",
+        "title": "Examine Your Conscience",
+        "latin": "Ante Confessionem",
+        "body": "Recall your sins since your last confession. Use the examination below, going through each commandment quietly and honestly."
+      },
+      {
+        "num": "ii",
+        "title": "Make an Act of Contrition",
+        "latin": "Ante Confessionem",
+        "body": "Be truly sorry for having offended God; not merely from fear of punishment, but from love of Him who is all good and deserving of all your love."
+      },
+      {
+        "num": "iii",
+        "title": "Resolve to Amend Your Life",
+        "latin": "Ante Confessionem",
+        "body": "Firmly resolve to avoid sin and the near occasions of sin. Without this firm purpose of amendment, absolution cannot be validly received."
+      },
+      {
+        "num": "iv",
+        "title": "Approach the Confessional",
+        "latin": "In Confessione",
+        "body": "Kneel and make the Sign of the Cross. Begin with the words: ℣. Bless me, Father, for I have sinned. It has been [time] since my last confession. These are my sins: ℟. Confess your sins simply, clearly, and completely. State the kind and number of each mortal sin. You may also confess venial sins."
+      },
+      {
+        "num": "v",
+        "title": "Listen to the Priest's Counsel",
+        "latin": "In Confessione",
+        "body": "The priest may offer guidance and assign a penance. Listen attentively; he speaks in the person of Christ."
+      },
+      {
+        "num": "vi",
+        "title": "Pray the Act of Contrition",
+        "latin": "In Confessione",
+        "body": "℣. O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of Heaven and the pains of Hell; but most of all because they offend Thee, my God, Who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen."
+      },
+      {
+        "num": "vii",
+        "title": "Receive Absolution",
+        "latin": "In Confessione",
+        "body": "The priest extends his hand and pronounces the words of absolution: Ego te absólvo a peccátis tuis, in nómine Patris, et Fílii, ✠ et Spíritus Sancti. Amen.; I absolve thee from thy sins, in the name of the Father, and of the Son, ✠ and of the Holy Ghost. Amen."
+      },
+      {
+        "num": "viii",
+        "title": "Perform Your Penance",
+        "latin": "Post Confessionem",
+        "body": "Complete the penance assigned by the priest as soon as possible; it is part of the sacrament."
+      },
+      {
+        "num": "ix",
+        "title": "Give Thanks to God",
+        "latin": "Post Confessionem",
+        "body": "Spend a moment in thanksgiving. Your soul has been washed clean in the Precious Blood of Christ."
+      },
+      {
+        "num": "x",
+        "title": "Avoid the Occasions of Sin",
+        "latin": "Post Confessionem",
+        "body": "Guard the grace you have received. Flee from persons, places, and things that lead you into temptation."
+      }
     ]
   },
   {
@@ -108,20 +158,71 @@
         "latin": "Quinque Gradus",
         "english": "Five Steps of Preparation",
         "steps": [
-          {"num": "I", "title": "Let your love arise from meditating on the sufferings of Jesus.", "body": ""},
-          {"num": "II", "title": "See that He suffered because of us, and have true contrition because of Jesus, not because of ourselves.", "body": ""},
-          {"num": "III", "title": "Cultivate true humility, acknowledging: \"I deserve suffering and punishment.\"", "body": ""},
-          {"num": "IV", "title": "Behold His Most Precious Blood, and let it kindle a supernatural love, a longing to share in His suffering.", "body": ""},
-          {"num": "V", "title": "Be sorry not only for your own sins, but also for the sins of all people against God.", "body": ""}
+          {
+            "num": "I",
+            "title": "Let your love arise from meditating on the sufferings of Jesus.",
+            "body": ""
+          },
+          {
+            "num": "II",
+            "title": "See that He suffered because of us, and have true contrition because of Jesus, not because of ourselves.",
+            "body": ""
+          },
+          {
+            "num": "III",
+            "title": "Cultivate true humility, acknowledging: \"I deserve suffering and punishment.\"",
+            "body": ""
+          },
+          {
+            "num": "IV",
+            "title": "Behold His Most Precious Blood, and let it kindle a supernatural love, a longing to share in His suffering.",
+            "body": ""
+          },
+          {
+            "num": "V",
+            "title": "Be sorry not only for your own sins, but also for the sins of all people against God.",
+            "body": ""
+          }
         ]
       }
     ],
     "steps": [
-      {"num": "I", "title": "Let your love arise from meditating on the sufferings of Jesus.", "latin": "Quinque Gradus", "body": ""},
-      {"num": "II", "title": "See that He suffered because of us, and have true contrition because of Jesus, not because of ourselves.", "latin": "Quinque Gradus", "body": ""},
-      {"num": "III", "title": "Cultivate true humility, acknowledging: \"I deserve suffering and punishment.\"", "latin": "Quinque Gradus", "body": ""},
-      {"num": "IV", "title": "Behold His Most Precious Blood, and let it kindle a supernatural love, a longing to share in His suffering.", "latin": "Quinque Gradus", "body": ""},
-      {"num": "V", "title": "Be sorry not only for your own sins, but also for the sins of all people against God.", "latin": "Quinque Gradus", "body": ""}
+      {
+        "num": "I",
+        "title": "Let your love arise from meditating on the sufferings of Jesus.",
+        "latin": "Quinque Gradus",
+        "body": ""
+      },
+      {
+        "num": "II",
+        "title": "See that He suffered because of us, and have true contrition because of Jesus, not because of ourselves.",
+        "latin": "Quinque Gradus",
+        "body": ""
+      },
+      {
+        "num": "III",
+        "title": "Cultivate true humility, acknowledging: \"I deserve suffering and punishment.\"",
+        "latin": "Quinque Gradus",
+        "body": ""
+      },
+      {
+        "num": "IV",
+        "title": "Behold His Most Precious Blood, and let it kindle a supernatural love, a longing to share in His suffering.",
+        "latin": "Quinque Gradus",
+        "body": ""
+      },
+      {
+        "num": "V",
+        "title": "Be sorry not only for your own sins, but also for the sins of all people against God.",
+        "latin": "Quinque Gradus",
+        "body": ""
+      },
+      {
+        "num": "W",
+        "title": "Prayer of St. Catherine of Siena",
+        "latin": "Oratio S. Catharinae Senensis",
+        "body": "O eternal God, O eternal Trinity, through the union of Thy divine nature Thou hast made so precious the Blood of Thine only-begotten Son! O eternal Trinity, Thou art a deep sea in which the more I seek, the more I find; and the more I find, the more I seek Thee. Thou art the fire that ever burns without being consumed. Thou art the fire that consumes in Thy heat every form of self-love in the soul. O eternal Trinity, O Godhead! Thou, O abyss of charity, art mad with love for Thy creature. O eternal Truth, O eternal Fire, O eternal Wisdom! Grant that my soul may ever praise Thee. Clothe me, clothe me with Thyself, O eternal Truth, that I may run the course of this mortal life in true obedience and in the light of most holy faith. Amen."
+      }
     ],
     "prayer": {
       "label": "Oratio S. Catharinæ · A Prayer of St. Catherine",

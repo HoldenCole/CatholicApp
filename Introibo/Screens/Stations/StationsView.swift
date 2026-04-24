@@ -164,13 +164,32 @@ private struct PrayStationView: View {
     }
 
     private var versicle: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text("℣. Adorámus te, Christe, et benedícimus tibi.")
-                .font(.bodyIt)
-                .foregroundStyle(Color.ivory)
-            Text("℟. Quia per sanctam Crucem tuam redemísti mundum.")
-                .font(.bodyIt)
-                .foregroundStyle(Color.muted)
+        VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("℣. Adorámus te, Christe, et benedícimus tibi.")
+                    .font(.bodyIt)
+                    .foregroundStyle(Color.ivory)
+                Text("We adore Thee, O Christ, and we bless Thee.")
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.muted)
+            }
+            VStack(alignment: .leading, spacing: 2) {
+                Text("℟. Quia per sanctam Crucem tuam redemísti mundum.")
+                    .font(.bodyIt)
+                    .foregroundStyle(Color.ivory)
+                Text("Because by Thy holy Cross Thou hast redeemed the world.")
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.muted)
+            }
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Pater Noster  ·  Ave María  ·  Glória Patri")
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.goldLeaf)
+                    .padding(.top, 4)
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
