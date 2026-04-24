@@ -153,6 +153,66 @@
     "scripture": null
   },
   {
+    "slug": "mass-eucharist",
+    "title": "The Holy Eucharist",
+    "latin": "Sanctíssima Eucharístia",
+    "cat": "Missa et Sacramenta",
+    "summary": "The Sacrament of the Body and Blood, Soul and Divinity of Our Lord Jesus Christ, under the appearances of bread and wine. The Holy Eucharist is the source and summit of the Christian life. In it Christ is truly, really, and substantially present; not merely symbolically, but with His entire Person. It is both a sacrifice (the Mass) and a sacrament (Holy Communion).",
+    "history": "Instituted by Our Lord at the Last Supper on the night before He suffered: \"This is My Body... This is My Blood of the new covenant\" (Mt 26:26-28). The Apostles understood this literally, as did the entire Church for fifteen centuries without dispute. The Council of Trent (1551) defined the doctrine of transubstantiation: the substance of bread and wine is changed into the substance of the Body and Blood of Christ, while the appearances (accidents) remain.",
+    "practice": "To receive Holy Communion worthily: (1) Be in a state of grace; if conscious of mortal sin, go to Confession first. (2) Observe the Eucharistic fast: one hour before receiving (water and medicine excepted). Under the 1917 Code, the fast was from midnight. (3) Approach the altar with reverence. In the Traditional Mass, Communion is received kneeling, on the tongue, from the priest. (4) After receiving, return to your place and spend time in thanksgiving; at least 10-15 minutes. St. Alphonsus Liguori considered the thanksgiving after Communion more important than the preparation before.",
+    "notes": "The Church obliges the faithful to receive Holy Communion at least once a year, during the Easter season (the \"Easter Duty\"). Daily Communion is encouraged for those properly disposed. Spiritual Communion; desiring to receive when unable; also confers grace.",
+    "scripture": {
+      "ref": "Jn 6:55-56",
+      "lat": "Caro enim mea vere est cibus, et sanguis meus vere est potus. Qui mandúcat meam carnem et bibit meum sánguinem, in me manet et ego in illo.",
+      "eng": "For My flesh is food indeed, and My blood is drink indeed. He who eats My flesh and drinks My blood abides in Me, and I in him."
+    }
+  },
+  {
+    "slug": "mass-penance",
+    "title": "Penance (Confession)",
+    "latin": "Sacraméntum Pæniténtiæ",
+    "cat": "Missa et Sacramenta",
+    "summary": "The sacrament by which sins committed after Baptism are forgiven through the absolution of a priest who acts in the person of Christ. It is also called Confession (from the telling of sins) and Reconciliation (from the restoration of friendship with God). Christ gave this power to the Apostles on Easter Sunday: \"Whose sins you shall forgive, they are forgiven them\" (Jn 20:23).",
+    "history": "In the early Church, public penance was imposed for grave sins, sometimes lasting years. By the 6th century, Irish monks developed private confession as we know it today, spreading the practice across Europe. The Fourth Lateran Council (1215) required annual confession for those in mortal sin. The Council of Trent defined the sacrament's essential elements: contrition, confession, satisfaction, and absolution.",
+    "practice": "How to make a good Confession: (1) Examine your conscience using the Ten Commandments (see the Examen in this app). (2) Be sorry for your sins; perfect contrition (sorrow from love of God) or imperfect contrition (sorrow from fear of punishment) suffices with the sacrament. (3) Confess all mortal sins in kind and number to the priest. Venial sins, though not required, are recommended. (4) Accept the penance assigned. (5) Pray the Act of Contrition. (6) Receive absolution. (7) Perform your penance promptly. Frequency: Monthly confession is the minimum recommended by spiritual directors; weekly is ideal for those seeking holiness.",
+    "notes": "The seal of Confession is absolute: a priest may never reveal what is confessed, under any circumstances, even under threat of death. This has been the law and practice of the Church since the beginning.",
+    "scripture": {
+      "ref": "Jn 20:22-23",
+      "lat": "Accípite Spíritum Sanctum: quorum remiséritis peccáta, remittúntur eis; et quorum retinuéritis, reténta sunt.",
+      "eng": "Receive the Holy Spirit. Whose sins you shall forgive, they are forgiven them; and whose sins you shall retain, they are retained."
+    }
+  },
+  {
+    "slug": "mass-matrimony",
+    "title": "Holy Matrimony",
+    "latin": "Sacraméntum Matrimónii",
+    "cat": "Missa et Sacramenta",
+    "summary": "The sacrament by which a baptised man and a baptised woman bind themselves for life in a lawful marriage and receive the grace to fulfil the duties of their state. The spouses are the ministers of the sacrament to each other; the priest is the official witness of the Church. Christian marriage is indissoluble: what God has joined, no human power can separate.",
+    "history": "Our Lord elevated natural marriage to a sacrament, restoring it to its original dignity as created by God in Eden. He performed His first miracle at the wedding feast of Cana (Jn 2:1-11). St. Paul teaches that marriage signifies the union of Christ and His Church (Eph 5:25-32). The Council of Trent required the presence of a priest and two witnesses for validity (the decree Tametsi, 1563).",
+    "practice": "Preparation for Catholic marriage: (1) Contact your parish priest well in advance (6-12 months). (2) Complete Pre-Cana or marriage preparation as required by the diocese. (3) Receive the Sacrament of Penance before the wedding. (4) A Nuptial Mass is the ideal setting, with the bride and groom receiving Holy Communion together. (5) The couple should pray together daily from the engagement onward. The traditional Nuptial Blessing asks God to give the wife the virtues of the holy women of Scripture and to bless the couple with children.",
+    "notes": "The three goods of marriage (St. Augustine): children (proles), fidelity (fides), and the sacramental bond (sacramentum). Artificial contraception is gravely sinful; Natural Family Planning, used for serious reasons, respects God's design.",
+    "scripture": {
+      "ref": "Mt 19:6",
+      "lat": "Quod ergo Deus coniúnxit, homo non séparet.",
+      "eng": "What therefore God has joined together, let not man put asunder."
+    }
+  },
+  {
+    "slug": "mass-anointing",
+    "title": "Anointing of the Sick",
+    "latin": "Unctio Infirmórum",
+    "cat": "Missa et Sacramenta",
+    "summary": "The sacrament by which a priest anoints the seriously ill or dying with holy oil, praying for their spiritual and bodily healing. Traditionally called Extreme Unction (\"last anointing\"), it prepares the soul for death by remitting sins (especially those the person cannot confess), strengthening against final temptations, and sometimes restoring bodily health if God wills.",
+    "history": "The sacrament has its origin in the practice of the Apostles: \"Is any man sick among you? Let him bring in the priests of the Church, and let them pray over him, anointing him with oil in the name of the Lord\" (Jas 5:14). The Council of Trent confirmed it as a true sacrament instituted by Christ and promulgated by St. James. In the traditional rite, the priest anoints the five senses (eyes, ears, nostrils, mouth, hands, and optionally feet), asking God's forgiveness for sins committed through each.",
+    "practice": "When to call the priest: Do not wait until the person is unconscious or at the very last moment. The sacrament is most fruitful when received with awareness and devotion. Call the priest when a person is seriously ill, facing major surgery, or in danger of death from age or illness. The priest will hear Confession (if possible), administer Anointing, and give Holy Viaticum (the last Communion). Keep blessed candles and holy water at the bedside.",
+    "notes": "The grace of Extreme Unction includes: remission of venial sins and the remnants of sin; remission of mortal sin if the person is contrite but unable to confess; strength against despair and the temptations of the devil in the final agony; bodily health, if it is conducive to salvation.",
+    "scripture": {
+      "ref": "Jas 5:14-15",
+      "lat": "Infirmátur quis in vobis? Indúcat presbyteros Ecclésiæ, et orent super eum, ungéntes eum óleo in nómine Dómini.",
+      "eng": "Is any man sick among you? Let him bring in the priests of the Church, and let them pray over him, anointing him with oil in the name of the Lord."
+    }
+  },
+  {
     "slug": "pray-vocal",
     "title": "Vocal Prayer",
     "latin": "Oratio Vocalis",
