@@ -8,6 +8,8 @@ struct Saint: Identifiable, Decodable, Hashable {
     let name: String
     let title: String
     let quote: String
+    let penance: String?
+    let penanceLatin: String?
     let sections: [Section]
 
     var id: String { slug }

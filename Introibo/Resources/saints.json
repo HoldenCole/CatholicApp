@@ -61,7 +61,9 @@
           }
         ]
       }
-    ]
+    ],
+    "penance": "Offer up a physical suffering today without complaint, uniting it to the Passion of Christ.",
+    "penanceLatin": "Per Crucem ad Lucem"
   },
   {
     "slug": "therese",
@@ -115,7 +117,9 @@
           }
         ]
       }
-    ]
+    ],
+    "penance": "Perform a small hidden sacrifice that no one will notice, offering it as a flower to Jesus.",
+    "penanceLatin": "Via Parvulórum"
   },
   {
     "slug": "aquinas",
@@ -173,7 +177,9 @@
           }
         ]
       }
-    ]
+    ],
+    "penance": "Fast from unnecessary words today. Speak only what is true, necessary, and kind.",
+    "penanceLatin": "Siléntium Sanctum"
   },
   {
     "slug": "benedict",
@@ -235,7 +241,9 @@
           }
         ]
       }
-    ]
+    ],
+    "penance": "Eat simply today: one full meal and two small collations, in the spirit of the Rule.",
+    "penanceLatin": "Regula et Vita"
   },
   {
     "slug": "teresa",
@@ -293,7 +301,9 @@
           }
         ]
       }
-    ]
+    ],
+    "penance": "Deny yourself one comfort you normally enjoy, offering it for the conversion of sinners.",
+    "penanceLatin": "Nada te turbe"
   },
   {
     "slug": "escriva",
@@ -359,7 +369,9 @@
           }
         ]
       }
-    ]
+    ],
+    "penance": "Sanctify your ordinary work today by offering each task to God before beginning it.",
+    "penanceLatin": "Sanctificátio Óperis"
   },
   {
     "slug": "desales",
@@ -417,6 +429,8 @@
           }
         ]
       }
-    ]
+    ],
+    "penance": "Practice gentleness with everyone you meet today, especially those who irritate you.",
+    "penanceLatin": "Mansuetúdo Cordis"
   }
 ]

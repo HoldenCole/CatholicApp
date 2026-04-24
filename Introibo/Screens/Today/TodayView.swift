@@ -103,6 +103,8 @@ struct TodayView: View {
 
     // MARK: - Penance card
 
+    @State private var showPenanceSheet = false
+
     private var penanceCard: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
@@ -129,8 +131,60 @@ struct TodayView: View {
                 .font(.bodySm)
                 .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
+
+            // Saint-specific penance
+            if let slug = UserProgress.followedSaint(),
+               let saint = ContentStore.shared.saints.first(where: { $0.slug == slug }),
+               let saintPenance = saint.penance {
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack(spacing: 6) {
+                        Text(saint.penanceLatin ?? "Praxis Sancti")
+                            .smallLabel(color: Color.goldLeaf)
+                        Text("·")
+                            .foregroundStyle(Color.tertiaryText)
+                        Text(saint.name)
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                    }
+                    Text(saintPenance)
+                        .font(.bodySm)
+                        .italic()
+                        .foregroundStyle(Color.primaryText)
+                        .lineSpacing(3)
+                }
+                .padding(.top, 8)
+            }
+
+            // Optional penances
+            let selected = OptionalPenances.selected()
+            if !selected.isEmpty {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Pæniténtiæ Voluntáriæ")
+                        .smallLabel(color: Color.goldLeaf)
+                        .padding(.top, 4)
+                    ForEach(selected) { p in
+                        Text("· \(p.title)")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.primaryText)
+                    }
+                }
+            }
+
+            Button { showPenanceSheet = true } label: {
+                Text(selected.isEmpty ? "Choose optional penances" : "Edit penances")
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.sanctuaryRed)
+                    .padding(.top, 6)
+            }
+            .buttonStyle(.plain)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .sheet(isPresented: $showPenanceSheet) {
+            OptionalPenanceSheet()
+        }
     }
 
     // MARK: - Devotions
