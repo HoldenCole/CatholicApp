@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Fetches 1962 Missal propers from DivinumOfficium GitHub repo
-and converts them to Introibo's propers.json format.
+Fetches ALL 1962 Missal propers from DivinumOfficium GitHub repo
+(Temporale: Sundays + weekdays) and converts to Introibo's propers.json.
 """
 import json, re, sys, time
 from urllib.request import urlopen, Request
@@ -9,101 +9,16 @@ from urllib.error import URLError
 
 BASE = "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/master/web/www/missa"
 
-# Map DO filenames to our slugs and metadata
-SUNDAYS = [
-    # Eastertide
-    ("Pasc0-0", "easter-sunday", "Domínica Resurrectiónis", "Easter Sunday", "white", "easter"),
-    ("Pasc1-0", "easter-1", "Domínica in Albis", "Low Sunday", "white", "easter"),
-    ("Pasc2-0", "easter-2", "Domínica II post Pascha", "Second Sunday after Easter", "white", "easter"),
-    ("Pasc3-0", "easter-3", "Domínica III post Pascha", "Third Sunday after Easter", "white", "easter"),
-    ("Pasc4-0", "easter-4", "Domínica IV post Pascha", "Fourth Sunday after Easter", "white", "easter"),
-    ("Pasc5-0", "easter-5", "Domínica V post Pascha", "Fifth Sunday after Easter (Rogation)", "white", "easter"),
-    ("Pasc6-0", "easter-6", "Domínica post Ascensiónem", "Sunday after the Ascension", "white", "easter"),
-    ("Pasc7-0", "pentecost-sunday", "Domínica Pentecóstes", "Pentecost Sunday", "red", "easter"),
-    # Pre-Lent
-    ("Quadp1-0", "septuagesima", "Domínica in Septuagésima", "Septuagesima Sunday", "violet", "perAnnum"),
-    ("Quadp2-0", "sexagesima", "Domínica in Sexagésima", "Sexagesima Sunday", "violet", "perAnnum"),
-    ("Quadp3-0", "quinquagesima", "Domínica in Quinquagésima", "Quinquagesima Sunday", "violet", "perAnnum"),
-    # Lent
-    ("Quad1-0", "lent-1", "Domínica I in Quadragésima", "First Sunday of Lent", "violet", "lent"),
-    ("Quad2-0", "lent-2", "Domínica II in Quadragésima", "Second Sunday of Lent", "violet", "lent"),
-    ("Quad3-0", "lent-3", "Domínica III in Quadragésima", "Third Sunday of Lent", "violet", "lent"),
-    ("Quad4-0", "lent-4", "Domínica IV in Quadragésima", "Fourth Sunday of Lent (Laetare)", "rose", "lent"),
-    ("Quad5-0", "passion-sunday", "Domínica Passiónis", "Passion Sunday", "violet", "passion"),
-    ("Quad6-0", "palm-sunday", "Domínica in Palmis", "Palm Sunday", "violet", "passion"),
-    # Post-Pentecost
-    ("Pent01-0", "trinity-sunday", "Festum Sanctíssimæ Trinitátis", "Trinity Sunday", "white", "perAnnum"),
-    ("Pent02-0", "pentecost-2", "Domínica II post Pentecósten", "Second Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent03-0", "pentecost-3", "Domínica III post Pentecósten", "Third Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent04-0", "pentecost-4", "Domínica IV post Pentecósten", "Fourth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent05-0", "pentecost-5", "Domínica V post Pentecósten", "Fifth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent06-0", "pentecost-6", "Domínica VI post Pentecósten", "Sixth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent07-0", "pentecost-7", "Domínica VII post Pentecósten", "Seventh Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent08-0", "pentecost-8", "Domínica VIII post Pentecósten", "Eighth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent09-0", "pentecost-9", "Domínica IX post Pentecósten", "Ninth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent10-0", "pentecost-10", "Domínica X post Pentecósten", "Tenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent11-0", "pentecost-11", "Domínica XI post Pentecósten", "Eleventh Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent12-0", "pentecost-12", "Domínica XII post Pentecósten", "Twelfth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent13-0", "pentecost-13", "Domínica XIII post Pentecósten", "Thirteenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent14-0", "pentecost-14", "Domínica XIV post Pentecósten", "Fourteenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent15-0", "pentecost-15", "Domínica XV post Pentecósten", "Fifteenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent16-0", "pentecost-16", "Domínica XVI post Pentecósten", "Sixteenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent17-0", "pentecost-17", "Domínica XVII post Pentecósten", "Seventeenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent18-0", "pentecost-18", "Domínica XVIII post Pentecósten", "Eighteenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent19-0", "pentecost-19", "Domínica XIX post Pentecósten", "Nineteenth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent20-0", "pentecost-20", "Domínica XX post Pentecósten", "Twentieth Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent21-0", "pentecost-21", "Domínica XXI post Pentecósten", "Twenty-first Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent22-0", "pentecost-22", "Domínica XXII post Pentecósten", "Twenty-second Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent23-0", "pentecost-23", "Domínica XXIII post Pentecósten", "Twenty-third Sunday after Pentecost", "green", "perAnnum"),
-    ("Pent24-0", "pentecost-24", "Domínica XXIV post Pentecósten", "Last Sunday after Pentecost", "green", "perAnnum"),
-    # Advent
-    ("Adv1-0", "advent-1", "Domínica I Advéntus", "First Sunday of Advent", "violet", "advent"),
-    ("Adv2-0", "advent-2", "Domínica II Advéntus", "Second Sunday of Advent", "violet", "advent"),
-    ("Adv3-0", "advent-3", "Domínica III Advéntus", "Third Sunday of Advent (Gaudete)", "rose", "advent"),
-    ("Adv4-0", "advent-4", "Domínica IV Advéntus", "Fourth Sunday of Advent", "violet", "advent"),
-    # Epiphany
-    ("Epi1-0", "epiphany-1", "Domínica I post Epiphaníam", "First Sunday after Epiphany", "green", "perAnnum"),
-    ("Epi2-0", "epiphany-2", "Domínica II post Epiphaníam", "Second Sunday after Epiphany", "green", "perAnnum"),
-    ("Epi3-0", "epiphany-3", "Domínica III post Epiphaníam", "Third Sunday after Epiphany", "green", "perAnnum"),
-    ("Epi4-0", "epiphany-4", "Domínica IV post Epiphaníam", "Fourth Sunday after Epiphany", "green", "perAnnum"),
-    ("Epi5-0", "epiphany-5", "Domínica V post Epiphaníam", "Fifth Sunday after Epiphany", "green", "perAnnum"),
-    ("Epi6-0", "epiphany-6", "Domínica VI post Epiphaníam", "Sixth Sunday after Epiphany", "green", "perAnnum"),
-]
-
 def fetch(url):
-    try:
-        req = Request(url, headers={"User-Agent": "Introibo/1.0"})
-        return urlopen(req, timeout=15).read().decode("utf-8", errors="replace")
-    except Exception as e:
-        print(f"  WARN: {e}", file=sys.stderr)
-        return None
-
-def fetch_with_redirects(lang, do_file):
-    url = f"{BASE}/{lang}/Tempora/{do_file}.txt"
-    text = fetch(url)
-    if not text:
-        return None
-    # Follow @Tempora/ redirects
-    first_line = text.strip().split("\n")[0].strip()
-    if first_line.startswith("@Tempora/"):
-        redirect = first_line.replace("@Tempora/", "").strip()
-        if not redirect.endswith(".txt"):
-            redirect += ".txt"
-        redirect_url = f"{BASE}/{lang}/Tempora/{redirect}"
-        redirected = fetch(redirect_url)
-        if redirected:
-            # Merge: redirected file is the base, original file overrides
-            base_sections = parse_sections(redirected)
-            override_sections = parse_sections(text)
-            base_sections.update({k: v for k, v in override_sections.items() if v.strip()})
-            # Reconstruct as text
-            lines = []
-            for k, v in base_sections.items():
-                lines.append(f"[{k}]")
-                lines.append(v)
-                lines.append("")
-            return "\n".join(lines)
-    return text
+    for attempt in range(3):
+        try:
+            req = Request(url, headers={"User-Agent": "Introibo/1.0"})
+            return urlopen(req, timeout=15).read().decode("utf-8", errors="replace")
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(1)
+            else:
+                return None
 
 def parse_sections(text):
     sections = {}
@@ -122,8 +37,34 @@ def parse_sections(text):
         sections[current] = "\n".join(lines).strip()
     return sections
 
+def fetch_with_redirects(lang, path):
+    url = f"{BASE}/{lang}/{path}.txt"
+    text = fetch(url)
+    if not text:
+        return None
+    first_line = text.strip().split("\n")[0].strip()
+    if first_line.startswith("@"):
+        redirect = first_line[1:].strip()
+        if ":" in redirect:
+            redirect = redirect.split(":")[0]
+        if not redirect.endswith(".txt"):
+            redirect_url = f"{BASE}/{lang}/{redirect}.txt"
+        else:
+            redirect_url = f"{BASE}/{lang}/{redirect}"
+        redirected = fetch(redirect_url)
+        if redirected:
+            base_sections = parse_sections(redirected)
+            override_sections = parse_sections(text)
+            base_sections.update({k: v for k, v in override_sections.items() if v.strip()})
+            lines = []
+            for k, v in base_sections.items():
+                lines.append(f"[{k}]")
+                lines.append(v)
+                lines.append("")
+            return "\n".join(lines)
+    return text
+
 def resolve_at_ref(text, lang):
-    """If text contains @Path/File lines, fetch and inline them."""
     if not text:
         return text
     resolved_lines = []
@@ -133,8 +74,7 @@ def resolve_at_ref(text, lang):
             ref_path = stripped[1:]
             if ":" in ref_path:
                 ref_path = ref_path.split(":")[0]
-            ref_url = f"{BASE}/{lang}/{ref_path}.txt"
-            fetched = fetch(ref_url)
+            fetched = fetch(f"{BASE}/{lang}/{ref_path}.txt")
             if fetched:
                 resolved_lines.append(fetched)
             continue
@@ -147,26 +87,25 @@ def clean_text(text):
     lines = []
     for line in text.split("\n"):
         line = line.strip()
-        if not line:
+        if not line: continue
+        if line.startswith("@"): continue
+        if line.startswith("!"): continue
+        if line.startswith("$"): continue
+        if line.startswith("&"): continue
+        if line.startswith("//"): continue
+        if line.startswith("_"): line = line.strip("_")
+        if line.startswith("v. "): line = line[3:]
+        elif line.startswith("v."): line = line[2:].lstrip()
+        if line.startswith("r. "): line = line[3:]
+        elif line.startswith("r."): line = line[2:].lstrip()
+        # Remove ++ cross markers
+        line = line.replace("++", "").replace("+ ", "").strip()
+        if line.startswith("Continuation  of"):
             continue
-        if line.startswith("@"):
+        if line.startswith("Continuation of"):
             continue
-        if line.startswith("!"):
+        if line.startswith("Sequéntia") or line.startswith("Léctio") or line.startswith("Lesson from"):
             continue
-        if line.startswith("$"):
-            continue
-        if line.startswith("&"):
-            continue
-        if line.startswith("_"):
-            line = line.strip("_")
-        if line.startswith("v. "):
-            line = line[3:]
-        elif line.startswith("v."):
-            line = line[2:].lstrip()
-        if line.startswith("r. "):
-            line = line[3:]
-        elif line.startswith("r."):
-            line = line[2:].lstrip()
         lines.append(line)
     return " ".join(lines).strip()
 
@@ -187,113 +126,261 @@ def get_section(sections, *keys):
             return sections[k]
     return ""
 
-def get_preface(season, slug):
-    if "easter" in slug or "pasc" in slug.lower():
-        return "easter"
-    if "pentecost" in slug:
-        return "holy-ghost"
-    if "trinity" in slug:
-        return "trinity"
-    if "advent" in slug:
-        return None
-    if "lent" in slug or "passion" in slug or "palm" in slug:
-        return None
-    if "septuagesima" in slug or "sexagesima" in slug or "quinquagesima" in slug:
-        return None
-    return None
+DOW_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+DOW_LATIN = ["Domínica", "Feria II", "Feria III", "Feria IV", "Feria V", "Feria VI", "Sábbato"]
 
-def build_proper(do_file, slug, title, english, color, season):
-    lat_text = fetch_with_redirects("Latin", do_file)
-    eng_text = fetch_with_redirects("English", do_file)
+def slug_from_filename(filename):
+    """Convert DO filename to our slug format."""
+    name = filename.replace(".txt", "")
 
+    # Pasc = Easter season
+    m = re.match(r'Pasc(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if week == 0 and dow == 0: return "easter-sunday"
+        if dow == 0: return f"easter-{week}"
+        return f"easter-{week}-{dow}"
+
+    # Quad = Lent, Quadp = Pre-Lent
+    m = re.match(r'Quadp(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        names = {1: "septuagesima", 2: "sexagesima", 3: "quinquagesima"}
+        if dow == 0: return names.get(week, f"prelent-{week}")
+        return f"{names.get(week, f'prelent-{week}')}-{dow}"
+
+    m = re.match(r'Quad(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if week == 6 and dow == 0: return "palm-sunday"
+        if week == 5 and dow == 0: return "passion-sunday"
+        if dow == 0: return f"lent-{week}"
+        if week == 6: return f"holy-week-{dow}"
+        return f"lent-{week}-{dow}"
+
+    # Pent = Post-Pentecost
+    m = re.match(r'Pent(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if week == 1 and dow == 0: return "trinity-sunday"
+        if dow == 0: return f"pentecost-{week}"
+        return f"pentecost-{week}-{dow}"
+
+    # Adv = Advent
+    m = re.match(r'Adv(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if dow == 0: return f"advent-{week}"
+        return f"advent-{week}-{dow}"
+
+    # Epi = Epiphany
+    m = re.match(r'Epi(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if dow == 0: return f"epiphany-{week}"
+        return f"epiphany-{week}-{dow}"
+
+    # Numbered (Ember days etc)
+    m = re.match(r'(\d+)-(\d+)', name)
+    if m:
+        return f"ember-{m.group(1)}-{m.group(2)}"
+
+    return name.lower()
+
+def title_from_filename(filename, lang="latin"):
+    name = filename.replace(".txt", "")
+
+    m = re.match(r'Pasc(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if week == 0 and dow == 0:
+            return ("Domínica Resurrectiónis", "Easter Sunday")
+        if dow == 0:
+            return (f"Domínica {['','I','II','III','IV','V','VI','VII'][week]} post Pascha",
+                    f"{'Low Sunday' if week==1 else ['','1st','2nd','3rd','4th','5th','6th','7th'][week]+' Sunday after Easter'}")
+        return (f"{DOW_LATIN[dow]} post Dom. {['','I','II','III','IV','V','VI','VII'][week]} post Pascha",
+                f"{DOW_NAMES[dow]} after {['','1st','2nd','3rd','4th','5th','6th','7th'][week]} Sunday after Easter")
+
+    m = re.match(r'Quadp(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        names_lat = {1: "Septuagésima", 2: "Sexagésima", 3: "Quinquagésima"}
+        names_eng = {1: "Septuagesima", 2: "Sexagesima", 3: "Quinquagesima"}
+        if dow == 0:
+            return (f"Domínica in {names_lat[week]}", f"{names_eng[week]} Sunday")
+        return (f"{DOW_LATIN[dow]} post {names_lat[week]}", f"{DOW_NAMES[dow]} after {names_eng[week]}")
+
+    m = re.match(r'Quad(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        week_roman = ['','I','II','III','IV','V','VI'][week]
+        if week == 6 and dow == 0: return ("Domínica in Palmis", "Palm Sunday")
+        if week == 5 and dow == 0: return ("Domínica Passiónis", "Passion Sunday")
+        if dow == 0: return (f"Domínica {week_roman} in Quadragésima", f"{'Laetare' if week==4 else ''} {'Sunday' if week!=4 else 'Sunday'} of Lent {week_roman}".strip())
+        if week == 6:
+            hw_eng = {1:"Monday of Holy Week",2:"Tuesday of Holy Week",3:"Spy Wednesday",4:"Holy Thursday",5:"Good Friday",6:"Holy Saturday"}
+            hw_lat = {1:"Feria II Hebdomadæ Sanctæ",2:"Feria III Hebdomadæ Sanctæ",3:"Feria IV Hebdomadæ Sanctæ",4:"Feria V in Cena Dómini",5:"Feria VI in Passióne Dómini",6:"Sábbato Sancto"}
+            return (hw_lat.get(dow, f"Hebdomada Sancta {dow}"), hw_eng.get(dow, f"Holy Week Day {dow}"))
+        return (f"{DOW_LATIN[dow]} post Dom. {week_roman} Quadragésimæ", f"{DOW_NAMES[dow]} of Lent Week {week}")
+
+    m = re.match(r'Pent(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if week == 1 and dow == 0: return ("Festum Sanctíssimæ Trinitátis", "Trinity Sunday")
+        if dow == 0:
+            return (f"Domínica {week} post Pentecósten", f"{'Last' if week==24 else ''} {week}{'st' if week==1 else 'nd' if week==2 else 'rd' if week==3 else 'th'} Sunday after Pentecost".strip())
+        return (f"{DOW_LATIN[dow]} post Dom. {week} post Pent.", f"{DOW_NAMES[dow]} after {week}{'th' if week>3 else ['st','nd','rd'][week-1]} Sunday after Pentecost")
+
+    m = re.match(r'Adv(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        week_roman = ['','I','II','III','IV'][week]
+        if dow == 0:
+            return (f"Domínica {week_roman} Advéntus", f"{'Gaudete' if week==3 else ''} {week_roman} Sunday of Advent".strip())
+        return (f"{DOW_LATIN[dow]} Hebd. {week_roman} Advéntus", f"{DOW_NAMES[dow]} of Advent Week {week}")
+
+    m = re.match(r'Epi(\d+)-(\d+)', name)
+    if m:
+        week, dow = int(m.group(1)), int(m.group(2))
+        if dow == 0:
+            return (f"Domínica {week} post Epiphaníam", f"{week}{'st' if week==1 else 'nd' if week==2 else 'rd' if week==3 else 'th'} Sunday after Epiphany")
+        return (f"{DOW_LATIN[dow]} post Dom. {week} post Epiph.", f"{DOW_NAMES[dow]} after {week}{'th' if week>3 else ['st','nd','rd'][week-1]} Sunday after Epiphany")
+
+    return (name, name)
+
+def color_from_filename(filename):
+    name = filename.replace(".txt","")
+    if "Pasc" in name: return "white"
+    if "Quad" in name and "Quadp" not in name: return "violet"
+    if name == "Quad4-0": return "rose"
+    if "Adv" in name: return "violet"
+    if name == "Adv3-0": return "rose"
+    if "Pent" in name:
+        m = re.match(r'Pent01-0', name)
+        if m: return "white"
+        return "green"
+    return "green"
+
+def season_from_filename(filename):
+    name = filename.replace(".txt","")
+    if "Pasc" in name: return "easter"
+    if "Quadp" in name: return "perAnnum"
+    if "Quad" in name:
+        m = re.match(r'Quad(\d+)', name)
+        if m and int(m.group(1)) >= 5: return "passion"
+        return "lent"
+    if "Pent" in name: return "perAnnum"
+    if "Adv" in name: return "advent"
+    if "Epi" in name: return "perAnnum"
+    return "perAnnum"
+
+def build_proper(do_path, slug, title_lat, title_eng, color, season):
+    lat_text = fetch_with_redirects("Latin", do_path)
+    eng_text = fetch_with_redirects("English", do_path)
     if not lat_text or not eng_text:
         return None
 
     lat = parse_sections(lat_text)
     eng = parse_sections(eng_text)
 
-    # Resolve any @ references in each section
     for key in list(lat.keys()):
         lat[key] = resolve_at_ref(lat[key], "Latin")
     for key in list(eng.keys()):
         eng[key] = resolve_at_ref(eng[key], "English")
 
-    introit_lat = clean_text(get_section(lat, "Introitus"))
-    introit_eng = clean_text(get_section(eng, "Introitus"))
+    def txt(section_name):
+        return (clean_text(get_section(lat, section_name)),
+                clean_text(get_section(eng, section_name)))
 
-    collect_lat = clean_text(get_section(lat, "Oratio"))
-    collect_eng = clean_text(get_section(eng, "Oratio"))
+    introit = txt("Introitus")
+    collect = txt("Oratio")
+    epistle = txt("Lectio")
+    gradual = txt("Graduale")
+    gospel = txt("Evangelium")
+    offertory = txt("Offertorium")
+    secret = txt("Secreta")
+    communion = txt("Communio")
+    postcomm = txt("Postcommunio")
+    tract = txt("Tractus")
 
-    epistle_lat = clean_text(get_section(lat, "Lectio"))
-    epistle_eng = clean_text(get_section(eng, "Lectio"))
-    epistle_ref = extract_ref(get_section(lat, "Lectio"))
+    ep_ref = extract_ref(get_section(lat, "Lectio"))
+    go_ref = extract_ref(get_section(lat, "Evangelium"))
 
-    gradual_lat = clean_text(get_section(lat, "Graduale"))
-    gradual_eng = clean_text(get_section(eng, "Graduale"))
-
-    gospel_lat = clean_text(get_section(lat, "Evangelium"))
-    gospel_eng = clean_text(get_section(eng, "Evangelium"))
-    gospel_ref = extract_ref(get_section(lat, "Evangelium"))
-
-    offertory_lat = clean_text(get_section(lat, "Offertorium"))
-    offertory_eng = clean_text(get_section(eng, "Offertorium"))
-
-    secret_lat = clean_text(get_section(lat, "Secreta"))
-    secret_eng = clean_text(get_section(eng, "Secreta"))
-
-    communion_lat = clean_text(get_section(lat, "Communio"))
-    communion_eng = clean_text(get_section(eng, "Communio"))
-
-    postcomm_lat = clean_text(get_section(lat, "Postcommunio"))
-    postcomm_eng = clean_text(get_section(eng, "Postcommunio"))
-
-    # Check for Tractus (Lent) vs Alleluia (Easter)
-    tractus_lat = clean_text(get_section(lat, "Tractus"))
-    tractus_eng = clean_text(get_section(eng, "Tractus"))
+    # Skip if essential parts are empty
+    if not introit[0] and not collect[0] and not epistle[0]:
+        return None
 
     proper = {
         "slug": slug,
-        "title": title,
-        "english": english,
-        "rank": 1,
+        "title": title_lat,
+        "english": title_eng,
+        "rank": 1 if "-0" in do_path or "sunday" in slug else 3,
         "color": color,
         "season": season,
-        "introit": {"lat": introit_lat, "eng": introit_eng},
-        "collect": {"lat": collect_lat, "eng": collect_eng},
-        "epistle": {"ref": epistle_ref, "lat": epistle_lat, "eng": epistle_eng},
-        "gradual": {"lat": gradual_lat, "eng": gradual_eng} if gradual_lat else None,
+        "introit": {"lat": introit[0], "eng": introit[1]},
+        "collect": {"lat": collect[0], "eng": collect[1]},
+        "epistle": {"ref": ep_ref, "lat": epistle[0], "eng": epistle[1]},
+        "gradual": {"lat": gradual[0], "eng": gradual[1]} if gradual[0] else None,
         "alleluia": None,
-        "tract": {"lat": tractus_lat, "eng": tractus_eng} if tractus_lat else None,
+        "tract": {"lat": tract[0], "eng": tract[1]} if tract[0] else None,
         "sequence": None,
-        "gospel": {"ref": gospel_ref, "lat": gospel_lat, "eng": gospel_eng},
-        "offertory": {"lat": offertory_lat, "eng": offertory_eng},
-        "secret": {"lat": secret_lat, "eng": secret_eng},
-        "communion": {"lat": communion_lat, "eng": communion_eng},
-        "postcommunion": {"lat": postcomm_lat, "eng": postcomm_eng},
-        "preface": get_preface(season, slug)
+        "gospel": {"ref": go_ref, "lat": gospel[0], "eng": gospel[1]},
+        "offertory": {"lat": offertory[0], "eng": offertory[1]},
+        "secret": {"lat": secret[0], "eng": secret[1]},
+        "communion": {"lat": communion[0], "eng": communion[1]},
+        "postcommunion": {"lat": postcomm[0], "eng": postcomm[1]},
+        "preface": None
     }
-
     return proper
 
 def main():
-    propers = []
-    total = len(SUNDAYS)
+    # Get all Tempora files from the repo
+    print("Fetching file list...")
+    tree_url = "https://api.github.com/repos/DivinumOfficium/divinum-officium/git/trees/master?recursive=1"
+    tree_text = fetch(tree_url)
+    if not tree_text:
+        print("Failed to fetch repo tree")
+        sys.exit(1)
 
-    for i, (do_file, slug, title, english, color, season) in enumerate(SUNDAYS):
-        print(f"[{i+1}/{total}] {slug}...", end=" ", flush=True)
-        proper = build_proper(do_file, slug, title, english, color, season)
+    tree = json.loads(tree_text)
+    tempora_files = sorted(set([
+        t['path'].split('/')[-1].replace('.txt','')
+        for t in tree.get('tree', [])
+        if 'missa/Latin/Tempora/' in t['path']
+        and t['path'].endswith('.txt')
+        and 'r.txt' not in t['path']  # skip redirect-only files
+        and 'o.txt' not in t['path']  # skip old-rite variants
+    ]))
+
+    print(f"Found {len(tempora_files)} Tempora files")
+
+    propers = []
+    failed = []
+
+    for i, filename in enumerate(tempora_files):
+        slug = slug_from_filename(filename + ".txt")
+        title_lat, title_eng = title_from_filename(filename + ".txt")
+        color = color_from_filename(filename + ".txt")
+        season = season_from_filename(filename + ".txt")
+        do_path = f"Tempora/{filename}"
+
+        print(f"[{i+1}/{len(tempora_files)}] {slug}...", end=" ", flush=True)
+        proper = build_proper(do_path, slug, title_lat, title_eng, color, season)
         if proper:
             propers.append(proper)
             print("OK")
         else:
-            print("FAILED")
-        time.sleep(0.3)  # rate limit
+            failed.append(slug)
+            print("SKIP")
+        time.sleep(0.15)
 
     out_path = "Introibo/Resources/propers.json"
     with open(out_path, "w") as f:
         json.dump(propers, f, indent=2, ensure_ascii=False)
 
-    print(f"\nDone: {len(propers)} propers written to {out_path}")
+    print(f"\nDone: {len(propers)} propers written ({len(failed)} skipped)")
+    if failed:
+        print(f"Skipped: {failed[:20]}{'...' if len(failed)>20 else ''}")
 
 if __name__ == "__main__":
     main()
