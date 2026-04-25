@@ -9,16 +9,18 @@ struct BilingualLine: View {
     var sideBySide: Bool = false
 
     private var mode: LanguageMode { .current() }
+    private var cleanLat: String { lat.strippingEm }
+    private var cleanEng: String { eng.strippingEm }
 
     var body: some View {
         if sideBySide && mode == .both {
             HStack(alignment: .firstTextBaseline, spacing: 14) {
-                Text(lat)
+                Text(cleanLat)
                     .font(.body)
                     .foregroundStyle(Color.primaryText)
                     .lineSpacing(3)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(eng)
+                Text(cleanEng)
                     .font(.bodySm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
@@ -28,13 +30,13 @@ struct BilingualLine: View {
         } else {
             VStack(alignment: .leading, spacing: 3) {
                 if mode != .vernacular {
-                    Text(lat)
+                    Text(cleanLat)
                         .font(.body)
                         .foregroundStyle(Color.primaryText)
                         .lineSpacing(3)
                 }
                 if mode != .latinOnly {
-                    Text(eng)
+                    Text(cleanEng)
                         .font(.bodySm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)

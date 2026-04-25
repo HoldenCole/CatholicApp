@@ -5,7 +5,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
-    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @State private var showResetConfirm = false
     @Environment(\.dismiss) private var dismiss
 
@@ -134,23 +134,28 @@ struct SettingsView: View {
 
     private var fontSizeSection: some View {
         Section {
-            ForEach(FontSizeOption.allCases) { f in
+            VStack(spacing: 12) {
+                Text("Introíbo ad altáre Dei")
+                    .font(.system(size: 16 * fontScale, design: .serif))
+                    .italic()
+                    .foregroundStyle(Color.primaryText)
+                    .frame(maxWidth: .infinity)
                 HStack {
-                    Text(f.label)
-                        .foregroundStyle(Color.primaryText)
-                    Text("Introíbo ad altáre Dei")
-                        .font(.system(size: 14 * f.scale, design: .serif))
-                        .italic()
-                        .foregroundStyle(Color.secondaryText)
-                    Spacer()
-                    if fontSizeRaw == f.rawValue {
-                        Image(systemName: "checkmark")
-                            .foregroundStyle(Color.sanctuaryRed)
-                    }
+                    Text("A")
+                        .font(.system(size: 12, design: .serif))
+                        .foregroundStyle(Color.tertiaryText)
+                    Slider(
+                        value: $fontScale,
+                        in: FontSizeScale.min...FontSizeScale.max,
+                        step: 0.05
+                    )
+                    .tint(Color.sanctuaryRed)
+                    Text("A")
+                        .font(.system(size: 22, design: .serif))
+                        .foregroundStyle(Color.tertiaryText)
                 }
-                .contentShape(Rectangle())
-                .onTapGesture { fontSizeRaw = f.rawValue }
             }
+            .padding(.vertical, 4)
         } header: {
             Text("Littera · Text Size")
         } footer: {

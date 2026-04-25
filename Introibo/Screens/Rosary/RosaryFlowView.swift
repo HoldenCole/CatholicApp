@@ -12,7 +12,7 @@ struct RosaryFlowView: View {
     @State private var steps: [RosaryStep] = []
     @State private var didMark = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
-    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
 
     private let store = ContentStore.shared
 

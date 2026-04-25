@@ -9,7 +9,7 @@ struct MissalView: View {
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
-    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
 

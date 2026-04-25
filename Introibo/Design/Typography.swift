@@ -36,7 +36,7 @@ extension Font {
     }
 
     private static func scaledSerif(family: String, size: CGFloat, weight: Font.Weight, italic: Bool) -> Font {
-        let scale = FontSizeOption.current().scale
+        let scale = FontSizeScale.current()
         let scaled = size * scale
         if USE_BUNDLED_FONTS {
             return .custom(family, size: scaled)

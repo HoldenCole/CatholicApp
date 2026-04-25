@@ -5,7 +5,7 @@ struct HourView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
-    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
 
     var body: some View {
         NavigationStack {
