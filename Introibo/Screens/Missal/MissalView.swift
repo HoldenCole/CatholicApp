@@ -2,7 +2,6 @@ import SwiftUI
 
 struct MissalView: View {
     @State private var store = ContentStore.shared
-    @State private var selectedProper: MassProper?
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
@@ -11,17 +10,19 @@ struct MissalView: View {
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var ctx: LiturgicalContext { .current() }
 
+    private var todayProper: MassProper? {
+        guard let slug = ctx.properSlug else { return nil }
+        return store.proper(slug: slug)
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 28) {
-                    todayProperCard
-                    if !otherPropers.isEmpty {
-                        otherPropersSection
-                    }
-                    ordinaryHeader
-                    ForEach(store.missal) { section in
-                        sectionBlock(section)
+                VStack(spacing: 24) {
+                    if let proper = todayProper {
+                        interleavedMass(proper)
+                    } else {
+                        ordinaryOnly
                     }
                 }
                 .padding(.horizontal, 20)
@@ -34,7 +35,7 @@ struct MissalView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     VStack(spacing: 2) {
-                        Text("Ordo Missæ")
+                        Text(todayProper?.english ?? "Ordo Missæ")
                             .font(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
@@ -43,136 +44,91 @@ struct MissalView: View {
                     }
                 }
             }
-            .sheet(item: $selectedProper) { proper in
-                ProperView(proper: proper)
-            }
         }
     }
 
-    // MARK: - Today's Proper
-
-    private var todayProper: MassProper? {
-        guard let slug = ctx.properSlug else { return nil }
-        return store.proper(slug: slug)
-    }
-
-    private var otherPropers: [MassProper] {
-        let todaySlug = ctx.properSlug
-        return store.propers.filter { $0.slug != todaySlug }
-    }
+    // MARK: - Interleaved Mass (Ordinary + Propers)
 
     @ViewBuilder
-    private var todayProperCard: some View {
-        if let proper = todayProper {
-            Button { selectedProper = proper } label: {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Próprium Hodiérnum  ·  Today's Proper")
-                        .smallLabel(color: Color.goldLeaf)
-                    Text(proper.title)
-                        .font(.titleL)
-                        .italic()
-                        .foregroundStyle(Color.primaryText)
-                    Text(proper.english)
-                        .font(.captionSm)
-                        .italic()
-                        .foregroundStyle(Color.secondaryText)
-                    Text(proper.introit.lat.strippingEm)
-                        .font(.bodyIt)
-                        .foregroundStyle(Color.tertiaryText)
-                        .lineLimit(2)
-                        .padding(.top, 2)
-                    HStack {
-                        Spacer()
-                        Text("Aperi  ✠  Open")
-                            .smallLabel(color: Color.sanctuaryRed)
-                    }
-                    .padding(.top, 4)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(20)
-                .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
-            }
-            .buttonStyle(.plain)
+    private func interleavedMass(_ proper: MassProper) -> some View {
+        // Prayers at the Foot of the Altar
+        ordinarySection("preces")
+        ordinarySection("confiteor")
+
+        // INTROIT (proper)
+        properSection("Introitus", subtitle: "Introit", text: proper.introit)
+
+        // Kyrie, Gloria
+        ordinarySection("kyrie")
+        ordinarySection("gloria")
+
+        // COLLECT (proper)
+        properSection("Orátio", subtitle: "Collect", text: proper.collect)
+
+        // EPISTLE (proper)
+        readingSection("Léctio", subtitle: "Epistle", reading: proper.epistle)
+
+        // GRADUAL (proper)
+        if let gradual = proper.gradual {
+            properSection("Graduále", subtitle: "Gradual", text: gradual)
+        }
+        if let tract = proper.tract {
+            properSection("Tractus", subtitle: "Tract", text: tract)
+        }
+        if let sequence = proper.sequence {
+            properSection("Sequéntia", subtitle: "Sequence", text: sequence)
+        }
+
+        // GOSPEL (proper)
+        readingSection("Evangélium", subtitle: "Gospel", reading: proper.gospel)
+
+        // Credo
+        ordinarySection("credo")
+
+        // OFFERTORY (proper)
+        properSection("Offertórium", subtitle: "Offertory", text: proper.offertory)
+
+        // SECRET (proper)
+        properSection("Secréta", subtitle: "Secret", text: proper.secret)
+
+        // Sanctus, Canon, Pater Noster
+        ordinarySection("sanctus")
+        ordinarySection("canon")
+        ordinarySection("pater")
+
+        // Agnus Dei
+        ordinarySection("agnus")
+
+        // COMMUNION (proper)
+        properSection("Commúnio", subtitle: "Communion", text: proper.communion)
+
+        ordinarySection("domine")
+
+        // POSTCOMMUNION (proper)
+        properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
+
+        // Last Gospel
+        ordinarySection("ultimum")
+    }
+
+    // MARK: - Ordinary-only fallback
+
+    private var ordinaryOnly: some View {
+        ForEach(store.missal) { section in
+            ordinarySectionBlock(section)
         }
     }
 
-    // MARK: - Other Propers
+    // MARK: - Ordinary section by slug
 
-    private var otherPropersSection: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 10) {
-                Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
-                Text("Própria")
-                    .font(.titleM)
-                    .italic()
-                    .foregroundStyle(Color.sanctuaryRed)
-                    .textCase(.uppercase)
-                    .tracking(2)
-                    .fixedSize()
-                Text("·")
-                    .foregroundStyle(Color.tertiaryText)
-                Text("Propers")
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
-                    .fixedSize()
-                Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
-            }
-            ForEach(otherPropers) { proper in
-                Button { selectedProper = proper } label: {
-                    HStack(alignment: .firstTextBaseline) {
-                        VStack(alignment: .leading, spacing: 3) {
-                            Text(proper.title)
-                                .font(.titleM)
-                                .italic()
-                                .foregroundStyle(Color.primaryText)
-                            Text(proper.english)
-                                .font(.captionSm)
-                                .italic()
-                                .foregroundStyle(Color.secondaryText)
-                        }
-                        Spacer()
-                        Text("›")
-                            .font(.titleL)
-                            .foregroundStyle(Color.goldLeaf.opacity(0.5))
-                    }
-                    .padding(.vertical, 6)
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                if proper.slug != otherPropers.last?.slug {
-                    Divider().background(Color.frameLine)
-                }
-            }
+    @ViewBuilder
+    private func ordinarySection(_ slug: String) -> some View {
+        if let section = store.missal.first(where: { $0.slug == slug }) {
+            ordinarySectionBlock(section)
         }
     }
 
-    // MARK: - Ordinary header
-
-    private var ordinaryHeader: some View {
-        HStack(spacing: 10) {
-            Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
-            Text("Ordinárium")
-                .font(.titleM)
-                .italic()
-                .foregroundStyle(Color.sanctuaryRed)
-                .textCase(.uppercase)
-                .tracking(2)
-                .fixedSize()
-            Text("·")
-                .foregroundStyle(Color.tertiaryText)
-            Text("Ordinary")
-                .font(.captionSm)
-                .italic()
-                .foregroundStyle(Color.secondaryText)
-                .fixedSize()
-            Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
-        }
-    }
-
-    // MARK: - Ordinary sections
-
-    private func sectionBlock(_ section: MissalSection) -> some View {
+    private func ordinarySectionBlock(_ section: MissalSection) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             if let label = section.label {
                 HStack(spacing: 10) {
@@ -195,15 +151,65 @@ struct MissalView: View {
                         .foregroundStyle(Color.secondaryText)
                 }
             }
-
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(Array(section.body.enumerated()), id: \.offset) { _, line in
-                    BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
+                    BilingualLine(lat: line.lat, eng: line.eng, sideBySide: true)
                 }
             }
             .padding(.top, 4)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    // MARK: - Proper sections
+
+    private func properSection(_ latin: String, subtitle: String, text: ProperText) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 10) {
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
+                Text("\(latin)  ·  \(subtitle)")
+                    .smallLabel(color: Color.sanctuaryRed)
+                    .fixedSize()
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
+            }
+            BilingualLine(lat: text.lat, eng: text.eng, sideBySide: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.vertical, 4)
+        .padding(.leading, 4)
+        .overlay(
+            Rectangle()
+                .fill(Color.sanctuaryRed.opacity(0.15))
+                .frame(width: 2)
+            , alignment: .leading
+        )
+    }
+
+    private func readingSection(_ latin: String, subtitle: String, reading: ProperReading) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 10) {
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
+                Text("\(latin)  ·  \(subtitle)")
+                    .smallLabel(color: Color.sanctuaryRed)
+                    .fixedSize()
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
+            }
+            if !reading.ref.isEmpty {
+                Text(reading.ref)
+                    .font(.captionSm)
+                    .foregroundStyle(Color.goldLeaf)
+            }
+            BilingualLine(lat: reading.lat, eng: reading.eng, sideBySide: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.vertical, 4)
+        .padding(.leading, 4)
+        .overlay(
+            Rectangle()
+                .fill(Color.sanctuaryRed.opacity(0.15))
+                .frame(width: 2)
+            , alignment: .leading
+        )
     }
 }
 

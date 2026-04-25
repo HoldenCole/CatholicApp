@@ -11,6 +11,7 @@ struct TodayView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var showSettings = false
     @State private var morningOfferingTapped = false
+    @State private var showProper = false
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var discipline: PenanceDiscipline { PenanceDiscipline(rawValue: penanceRaw) ?? .discipline1962 }
@@ -30,6 +31,12 @@ struct TodayView: View {
             .sheet(isPresented: $morningOfferingTapped) {
                 if let prayer = ContentStore.shared.prayer(slug: "morning") {
                     PrayerDetailView(prayer: prayer)
+                }
+            }
+            .sheet(isPresented: $showProper) {
+                if let slug = ctx.properSlug,
+                   let proper = ContentStore.shared.proper(slug: slug) {
+                    ProperView(proper: proper)
                 }
             }
         }
@@ -139,6 +146,7 @@ struct TodayView: View {
     private var mainContent: some View {
         VStack(spacing: 24) {
             dailyPsalmCard
+            propersCard
             penanceCard
             devotionsSection
             rosaryCard
@@ -176,6 +184,66 @@ struct TodayView: View {
         .overlay(
             Rectangle().stroke(Color.frameLine, lineWidth: 0.5)
         )
+    }
+
+    // MARK: - Propers of the Day
+
+    @ViewBuilder
+    private var propersCard: some View {
+        if let slug = ctx.properSlug,
+           let proper = ContentStore.shared.proper(slug: slug) {
+            Button { showProper = true } label: {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Próprium Missæ  ·  Today's Propers")
+                        .smallLabel(color: Color.goldLeaf)
+                    Text(proper.title)
+                        .font(.titleM)
+                        .italic()
+                        .foregroundStyle(Color.primaryText)
+                    Text(proper.english)
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+
+                    if !proper.epistle.ref.isEmpty || !proper.gospel.ref.isEmpty {
+                        HStack(spacing: 12) {
+                            if !proper.epistle.ref.isEmpty {
+                                HStack(spacing: 4) {
+                                    Text("Ep.")
+                                        .font(.captionSm)
+                                        .foregroundStyle(Color.sanctuaryRed)
+                                    Text(proper.epistle.ref)
+                                        .font(.captionSm)
+                                        .foregroundStyle(Color.tertiaryText)
+                                }
+                            }
+                            if !proper.gospel.ref.isEmpty {
+                                HStack(spacing: 4) {
+                                    Text("Ev.")
+                                        .font(.captionSm)
+                                        .foregroundStyle(Color.sanctuaryRed)
+                                    Text(proper.gospel.ref)
+                                        .font(.captionSm)
+                                        .foregroundStyle(Color.tertiaryText)
+                                }
+                            }
+                        }
+                        .padding(.top, 2)
+                    }
+
+                    HStack {
+                        Spacer()
+                        Text("Léctio Hodiérna  ✠  Read")
+                            .smallLabel(color: Color.sanctuaryRed)
+                    }
+                    .padding(.top, 4)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(16)
+                .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
+            }
+            .buttonStyle(.plain)
+        }
     }
 
     // MARK: - Penance card
