@@ -9,6 +9,9 @@ import SwiftUI
 struct PrayerDetailView: View {
     let prayer: Prayer
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
 
     var body: some View {
         NavigationStack {
@@ -18,7 +21,7 @@ struct PrayerDetailView: View {
                     if let note = prayer.note, !note.isEmpty {
                         Text(note.strippingEm)
                             .font(.bodyIt)
-                            .foregroundStyle(Color.secondaryText)
+                            .foregroundStyle(.secondaryText)
                             .padding(.horizontal, 28)
                             .padding(.bottom, 4)
                     }
@@ -34,7 +37,7 @@ struct PrayerDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(Color.sanctuaryRed)
+                        .foregroundStyle(.sanctuaryRed)
                 }
             }
         }
@@ -45,16 +48,16 @@ struct PrayerDetailView: View {
     private var header: some View {
         VStack(spacing: 10) {
             Text("✠  \(prayer.category)  ✠")
-                .smallLabel(color: Color.goldLeaf)
+                .smallLabel(color: .goldLeaf)
                 .padding(.top, 28)
             Text(prayer.title.strippingEm)
                 .font(.pageTitle)
-                .foregroundStyle(Color.ivory)
+                .foregroundStyle(.ivory)
                 .multilineTextAlignment(.center)
             Text(prayer.eng)
                 .font(.caption)
                 .italic()
-                .foregroundStyle(Color.muted)
+                .foregroundStyle(.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             Rectangle()
@@ -66,7 +69,7 @@ struct PrayerDetailView: View {
         .frame(maxWidth: .infinity)
         .background(
             LinearGradient(
-                colors: [Color.walnut, Color.walnutHi],
+                colors: [.walnut, .walnutHi],
                 startPoint: .top, endPoint: .bottom
             )
         )
@@ -76,7 +79,35 @@ struct PrayerDetailView: View {
 
     @ViewBuilder
     private func lineBlock(_ line: Prayer.Line, isFirst: Bool) -> some View {
-        BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
+        if isFirst {
+            VStack(alignment: .leading, spacing: 4) {
+                latinText(line.lat.strippingEm)
+                if LanguageMode.current() != .latinOnly {
+                    Text(line.eng.strippingEm)
+                        .font(.bodySm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                }
+            }
+        } else {
+            BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
+        }
+    }
+
+    @ViewBuilder
+    private func latinText(_ lat: String) -> some View {
+        let mode = LanguageMode.current()
+        if mode != .vernacular, let first = lat.first {
+            HStack(alignment: .firstTextBaseline, spacing: 2) {
+                Text(String(first))
+                    .font(.custom("Georgia", size: 48).italic())
+                    .foregroundStyle(Color.sanctuaryRed)
+                    .baselineOffset(-6)
+                Text(String(lat.dropFirst()))
+                    .font(.body)
+                    .foregroundStyle(Color.primaryText)
+            }
+        }
     }
 }
 

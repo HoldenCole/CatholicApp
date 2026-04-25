@@ -6,6 +6,7 @@ import SwiftUI
 struct FlashCard: View {
     let card: Course.Section.Card
     @State private var isFlipped = false
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         Button { withAnimation(.easeInOut(duration: 0.3)) { isFlipped.toggle() } } label: {

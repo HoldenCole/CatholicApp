@@ -60,6 +60,36 @@ enum SettingsKey {
     static let darkMode  = "settings.darkMode"
     static let theme     = "settings.theme"
     static let language  = "settings.language"
+    static let fontSize  = "settings.fontSize"
+}
+
+enum FontSizeOption: String, CaseIterable, Identifiable {
+    case small   = "small"
+    case medium  = "medium"
+    case large   = "large"
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .small:  return "Small"
+        case .medium: return "Standard"
+        case .large:  return "Large"
+        }
+    }
+
+    var scale: CGFloat {
+        switch self {
+        case .small:  return 0.85
+        case .medium: return 1.0
+        case .large:  return 1.2
+        }
+    }
+
+    static func current() -> FontSizeOption {
+        let raw = UserDefaults.standard.string(forKey: SettingsKey.fontSize) ?? "medium"
+        return FontSizeOption(rawValue: raw) ?? .medium
+    }
 }
 
 enum LanguageMode: String, CaseIterable, Identifiable {

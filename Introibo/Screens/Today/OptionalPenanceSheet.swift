@@ -2,6 +2,7 @@ import SwiftUI
 
 struct OptionalPenanceSheet: View {
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var selected: Set<String> = OptionalPenances.selectedIDs()
 
     var body: some View {

@@ -25,10 +25,9 @@ struct Prayer: Identifiable, Decodable, Hashable {
 extension String {
     var strippingEm: String {
         var out = self
-        out = out.replacingOccurrences(of: "<em>", with: "")
-        out = out.replacingOccurrences(of: "</em>", with: "")
-        out = out.replacingOccurrences(of: "<span class=\"init\">", with: "")
-        out = out.replacingOccurrences(of: "</span>", with: "")
+        out = out.replacingOccurrences(of: #"<[^>]+>"#, with: "", options: .regularExpression)
+        out = out.replacingOccurrences(of: "&amp;", with: "&")
+        out = out.replacingOccurrences(of: "&nbsp;", with: " ")
         return out
     }
 }

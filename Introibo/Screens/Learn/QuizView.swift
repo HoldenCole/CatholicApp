@@ -7,6 +7,7 @@ struct QuizView: View {
     let cards: [Course.Section.Card]
     let lessonTitle: String
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     @State private var questionIndex = 0
     @State private var score = 0

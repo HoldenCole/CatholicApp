@@ -7,6 +7,7 @@ import SwiftUI
 struct GuideReaderView: View {
     let guide: ConfessionGuide
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {

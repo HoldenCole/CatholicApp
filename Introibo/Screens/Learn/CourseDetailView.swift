@@ -12,6 +12,7 @@ struct CourseDetailView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var isMastered: Bool = false
     @State private var showQuiz = false
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {

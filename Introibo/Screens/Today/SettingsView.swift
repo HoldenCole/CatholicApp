@@ -1,13 +1,11 @@
 import SwiftUI
 
-// Settings sheet — mirrors the settings overlay from prototype/today.html.
-// Sections: Rite, Penance Discipline, Display (dark mode), Reset, About.
-
 struct SettingsView: View {
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
     @State private var showResetConfirm = false
     @Environment(\.dismiss) private var dismiss
 
@@ -18,6 +16,8 @@ struct SettingsView: View {
                 penanceSection
                 languageSection
                 displaySection
+                fontSizeSection
+                feedbackSection
                 resetSection
                 aboutSection
             }
@@ -127,6 +127,55 @@ struct SettingsView: View {
             Text("Appáritus · Appearance")
         } footer: {
             Text("Parchment: warm vellum background. Clean White: modern white with walnut tab bar. Dark: deep walnut for low light.")
+        }
+    }
+
+    // MARK: - Font Size
+
+    private var fontSizeSection: some View {
+        Section {
+            ForEach(FontSizeOption.allCases) { f in
+                HStack {
+                    Text(f.label)
+                        .foregroundStyle(Color.primaryText)
+                    Text("Introíbo ad altáre Dei")
+                        .font(.system(size: 14 * f.scale, design: .serif))
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                    Spacer()
+                    if fontSizeRaw == f.rawValue {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                }
+                .contentShape(Rectangle())
+                .onTapGesture { fontSizeRaw = f.rawValue }
+            }
+        } header: {
+            Text("Littera · Text Size")
+        } footer: {
+            Text("Adjusts the size of prayer text, the Missal, and the Divine Office.")
+        }
+    }
+
+    // MARK: - Feedback
+
+    private var feedbackSection: some View {
+        Section {
+            Link(destination: URL(string: "mailto:feedback@introibo.app?subject=Introibo%20Feedback")!) {
+                HStack {
+                    Label("Send Feedback", systemImage: "envelope")
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .font(.captionSm)
+                        .foregroundStyle(Color.tertiaryText)
+                }
+            }
+        } header: {
+            Text("Ópinor · Feedback")
+        } footer: {
+            Text("Report issues, suggest features, or share your experience.")
         }
     }
 

@@ -7,6 +7,7 @@ import SwiftUI
 struct RosaryView: View {
     @State private var store = ContentStore.shared
     @State private var selection: MysterySetData?
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     private let ctx = LiturgicalContext.current()
 
     var body: some View {

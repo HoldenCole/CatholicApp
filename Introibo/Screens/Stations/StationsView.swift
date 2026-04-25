@@ -1,14 +1,9 @@
 import SwiftUI
 
-// Stations of the Cross — Via Crucis.
-// Two-screen flow on one view:
-//   • Start: list of all 14 stations, with a "Begin the Way" button.
-//   • Pray:  one station at a time with back/next navigation.
-// Mirrors prototype/stations.html.
-
 struct StationsView: View {
     @State private var store = ContentStore.shared
     @State private var activeIndex: Int? = nil
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         Group {
@@ -29,12 +24,9 @@ struct StationsView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    // MARK: - Start list
-
     private var startList: some View {
         ScrollView {
             VStack(spacing: 0) {
-                // Dark walnut header
                 VStack(spacing: 10) {
                     Text("✠")
                         .font(.system(size: 36))
@@ -65,19 +57,18 @@ struct StationsView: View {
                     LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
                 )
 
-                // Pilgrimage path
+                // Winding path
                 VStack(spacing: 0) {
                     ForEach(Array(store.stations.enumerated()), id: \.offset) { idx, s in
                         Button { activeIndex = idx } label: {
-                            pathStop(s, index: idx)
+                            windingStop(s, index: idx)
                         }
                         .buttonStyle(.plain)
                     }
                 }
-                .padding(.vertical, 24)
-                .padding(.horizontal, 28)
+                .padding(.vertical, 28)
+                .padding(.horizontal, 20)
 
-                // Begin button
                 Button { activeIndex = 0 } label: {
                     VStack(spacing: 8) {
                         Text("✠")
@@ -106,54 +97,102 @@ struct StationsView: View {
         .background(Color.pageBackground.ignoresSafeArea())
     }
 
-    private func pathStop(_ s: Station, index: Int) -> some View {
-        HStack(alignment: .top, spacing: 0) {
-            // Left: vertical line + circle marker
-            VStack(spacing: 0) {
-                Rectangle()
-                    .fill(index == 0 ? Color.clear : Color.sanctuaryRed.opacity(0.2))
-                    .frame(width: 1, height: 14)
-                ZStack {
-                    Circle()
-                        .fill(Color.pageBackground)
-                        .frame(width: 28, height: 28)
-                    Circle()
-                        .stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 1)
-                        .frame(width: 28, height: 28)
-                    Text(s.station)
-                        .font(.system(size: 10, weight: .semibold, design: .serif))
-                        .italic()
-                        .foregroundStyle(Color.sanctuaryRed)
+    private func windingStop(_ s: Station, index: Int) -> some View {
+        let isLeft = index % 2 == 0
+        let moodColor = stationColor(s)
+
+        return HStack(spacing: 0) {
+            if !isLeft { Spacer(minLength: 0) }
+
+            HStack(spacing: 14) {
+                if isLeft {
+                    stationMarker(s, index: index, color: moodColor)
+                    stationInfo(s, alignment: .leading)
+                } else {
+                    stationInfo(s, alignment: .trailing)
+                    stationMarker(s, index: index, color: moodColor)
                 }
-                Rectangle()
-                    .fill(index == store.stations.count - 1 ? Color.clear : Color.sanctuaryRed.opacity(0.2))
-                    .frame(width: 1)
-                    .frame(maxHeight: .infinity)
             }
-            .frame(width: 36)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
+            .frame(maxWidth: UIScreen.main.bounds.width * 0.78, alignment: isLeft ? .leading : .trailing)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(moodColor.opacity(0.06))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(moodColor.opacity(0.2), lineWidth: 0.5)
+            )
 
-            // Right: station info
-            VStack(alignment: .leading, spacing: 3) {
-                Text(s.title)
-                    .font(.titleM)
-                    .italic()
-                    .foregroundStyle(Color.primaryText)
-                Text(s.latin)
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
-            }
-            .padding(.leading, 14)
-            .padding(.vertical, 10)
-
-            Spacer()
-
-            Text("›")
-                .font(.titleM)
-                .foregroundStyle(Color.goldLeaf.opacity(0.5))
-                .padding(.top, 12)
+            if isLeft { Spacer(minLength: 0) }
         }
-        .contentShape(Rectangle())
+        .overlay(
+            pathConnector(index: index)
+        )
+        .padding(.bottom, 4)
+    }
+
+    private func stationMarker(_ s: Station, index: Int, color: Color) -> some View {
+        ZStack {
+            Circle()
+                .fill(color.opacity(0.12))
+                .frame(width: 48, height: 48)
+            Circle()
+                .stroke(color.opacity(0.6), lineWidth: 1.5)
+                .frame(width: 48, height: 48)
+            Text(s.station)
+                .font(.system(size: 16, weight: .bold, design: .serif))
+                .italic()
+                .foregroundStyle(color)
+        }
+    }
+
+    private func stationInfo(_ s: Station, alignment: HorizontalAlignment) -> some View {
+        VStack(alignment: alignment, spacing: 3) {
+            Text(s.title)
+                .font(.titleM)
+                .italic()
+                .foregroundStyle(Color.primaryText)
+                .multilineTextAlignment(alignment == .leading ? .leading : .trailing)
+            Text(s.latin)
+                .font(.captionSm)
+                .italic()
+                .foregroundStyle(Color.secondaryText)
+                .multilineTextAlignment(alignment == .leading ? .leading : .trailing)
+        }
+    }
+
+    @ViewBuilder
+    private func pathConnector(index: Int) -> some View {
+        if index < store.stations.count - 1 {
+            let isLeft = index % 2 == 0
+            GeometryReader { geo in
+                Path { path in
+                    let startX = isLeft ? geo.size.width * 0.3 : geo.size.width * 0.7
+                    let endX = isLeft ? geo.size.width * 0.7 : geo.size.width * 0.3
+                    path.move(to: CGPoint(x: startX, y: geo.size.height))
+                    path.addQuadCurve(
+                        to: CGPoint(x: endX, y: geo.size.height + 8),
+                        control: CGPoint(x: geo.size.width * 0.5, y: geo.size.height + 14)
+                    )
+                }
+                .stroke(
+                    Color.sanctuaryRed.opacity(0.2),
+                    style: StrokeStyle(lineWidth: 1, dash: [4, 3])
+                )
+            }
+            .allowsHitTesting(false)
+        }
+    }
+
+    private func stationColor(_ s: Station) -> Color {
+        switch s.mood {
+        case "mood-death":  return Color.sanctuaryRed
+        case "mood-mother": return Color.goldLeaf
+        case "mood-tomb":   return Color.gray
+        default:            return Color.sanctuaryRed.opacity(0.7)
+        }
     }
 }
 
@@ -210,7 +249,7 @@ private struct PrayStationView: View {
                     stabatBlock
                 }
                 .padding(.horizontal, 28)
-                .padding(.bottom, 120)   // room for the nav bar
+                .padding(.bottom, 120)
             }
 
             navBar

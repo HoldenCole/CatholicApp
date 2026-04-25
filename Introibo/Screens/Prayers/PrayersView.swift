@@ -7,6 +7,9 @@ import SwiftUI
 struct PrayersView: View {
     @State private var store = ContentStore.shared
     @State private var selection: Prayer?
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
 
     private var ctx: LiturgicalContext { .current() }
 

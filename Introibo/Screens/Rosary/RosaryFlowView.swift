@@ -11,6 +11,8 @@ struct RosaryFlowView: View {
     @State private var stepIndex = 0
     @State private var steps: [RosaryStep] = []
     @State private var didMark = false
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
 
     private let store = ContentStore.shared
 
@@ -37,19 +39,28 @@ struct RosaryFlowView: View {
                     beadProgress
                         .padding(.top, 12)
 
-                    // Mystery context (if in a decade)
+                    // Mystery context (persistent throughout decade)
                     if let mystery = step.mystery {
-                        VStack(spacing: 4) {
+                        VStack(spacing: 6) {
                             Text(mystery.title)
-                                .font(.titleM)
+                                .font(.titleL)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
+                                .multilineTextAlignment(.center)
                             Text(mystery.eng)
                                 .font(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.secondaryText)
+                            Text("Fruit: \(mystery.fruit)")
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.goldLeaf)
+                                .padding(.top, 2)
                         }
                         .padding(.horizontal, 28)
+                        .padding(.vertical, 10)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.frameLine.opacity(0.3))
                     }
 
                     // Step label
