@@ -71,6 +71,8 @@ struct LiturgicalContext {
     let mystery: MysterySet
     let penance: Penance
 
+    let properSlug: String?
+
     // Key dates of the liturgical year — useful for other views.
     let easter: Date
     let ashWednesday: Date
@@ -246,6 +248,7 @@ struct LiturgicalContext {
             marian: marian,
             mystery: mystery,
             penance: penance,
+            properSlug: ProperCalendar.properSlug(for: now),
             easter: easter,
             ashWednesday: ashWed,
             pentecost: pentecost,

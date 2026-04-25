@@ -9,17 +9,17 @@ struct MissalView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
+    private var ctx: LiturgicalContext { .current() }
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 28) {
-                    if !store.propers.isEmpty {
-                        propersCard
+                    todayProperCard
+                    if !otherPropers.isEmpty {
+                        otherPropersSection
                     }
-
                     ordinaryHeader
-
                     ForEach(store.missal) { section in
                         sectionBlock(section)
                     }
@@ -49,13 +49,60 @@ struct MissalView: View {
         }
     }
 
-    // MARK: - Propers card
+    // MARK: - Today's Proper
 
-    private var propersCard: some View {
+    private var todayProper: MassProper? {
+        guard let slug = ctx.properSlug else { return nil }
+        return store.proper(slug: slug)
+    }
+
+    private var otherPropers: [MassProper] {
+        let todaySlug = ctx.properSlug
+        return store.propers.filter { $0.slug != todaySlug }
+    }
+
+    @ViewBuilder
+    private var todayProperCard: some View {
+        if let proper = todayProper {
+            Button { selectedProper = proper } label: {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Próprium Hodiérnum  ·  Today's Proper")
+                        .smallLabel(color: Color.goldLeaf)
+                    Text(proper.title)
+                        .font(.titleL)
+                        .italic()
+                        .foregroundStyle(Color.primaryText)
+                    Text(proper.english)
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                    Text(proper.introit.lat.strippingEm)
+                        .font(.bodyIt)
+                        .foregroundStyle(Color.tertiaryText)
+                        .lineLimit(2)
+                        .padding(.top, 2)
+                    HStack {
+                        Spacer()
+                        Text("Aperi  ✠  Open")
+                            .smallLabel(color: Color.sanctuaryRed)
+                    }
+                    .padding(.top, 4)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(20)
+                .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    // MARK: - Other Propers
+
+    private var otherPropersSection: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
-                Text("Próprium")
+                Text("Própria")
                     .font(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
@@ -71,8 +118,7 @@ struct MissalView: View {
                     .fixedSize()
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
             }
-
-            ForEach(store.propers) { proper in
+            ForEach(otherPropers) { proper in
                 Button { selectedProper = proper } label: {
                     HStack(alignment: .firstTextBaseline) {
                         VStack(alignment: .leading, spacing: 3) {
@@ -94,7 +140,7 @@ struct MissalView: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                if proper.slug != store.propers.last?.slug {
+                if proper.slug != otherPropers.last?.slug {
                     Divider().background(Color.frameLine)
                 }
             }
