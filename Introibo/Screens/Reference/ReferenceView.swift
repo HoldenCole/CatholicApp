@@ -1,27 +1,33 @@
 import SwiftUI
 
-// The Liber tab — Liber Referentiarum. Browse 37 entries across 7
-// categories. Mirrors prototype/reference.html.
-
 struct ReferenceView: View {
     @State private var store = ContentStore.shared
     @State private var selection: ReferenceEntry?
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(groupedByCategory(), id: \.category) { group in
-                    Section(header: Text(group.category)) {
-                        ForEach(group.items) { entry in
-                            Button { selection = entry } label: {
-                                row(entry)
+            ScrollView {
+                VStack(spacing: 28) {
+                    ForEach(groupedByCategory(), id: \.category) { group in
+                        VStack(alignment: .leading, spacing: 14) {
+                            categoryHeader(group.category)
+                            ForEach(group.items) { entry in
+                                Button { selection = entry } label: {
+                                    row(entry)
+                                }
+                                .buttonStyle(.plain)
+                                if entry.slug != group.items.last?.slug {
+                                    Divider().background(Color.frameLine)
+                                }
                             }
-                            .buttonStyle(.plain)
                         }
                     }
                 }
+                .padding(.horizontal, 28)
+                .padding(.top, 24)
+                .padding(.bottom, 40)
             }
-            .listStyle(.plain)
             .background(Color.pageBackground.ignoresSafeArea())
             .navigationTitle("Líber Referentiárum")
             .navigationBarTitleDisplayMode(.inline)
@@ -29,21 +35,36 @@ struct ReferenceView: View {
         }
     }
 
+    private func categoryHeader(_ category: String) -> some View {
+        HStack(spacing: 10) {
+            Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+            Text(category)
+                .font(.titleM)
+                .italic()
+                .foregroundStyle(Color.sanctuaryRed)
+                .textCase(.uppercase)
+                .tracking(2)
+                .fixedSize()
+            Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+        }
+        .padding(.top, 8)
+    }
+
     private func row(_ entry: ReferenceEntry) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(entry.title)
                 .font(.titleM)
                 .italic()
-                .foregroundStyle(.primaryText)
+                .foregroundStyle(Color.primaryText)
             if let latin = entry.latin {
                 Text(latin)
                     .font(.captionSm)
                     .italic()
-                    .foregroundStyle(.secondaryText)
+                    .foregroundStyle(Color.secondaryText)
             }
             Text(entry.summary)
                 .font(.captionSm)
-                .foregroundStyle(.tertiaryText)
+                .foregroundStyle(Color.tertiaryText)
                 .lineLimit(1)
                 .padding(.top, 2)
         }

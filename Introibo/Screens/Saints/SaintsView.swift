@@ -8,6 +8,7 @@ struct SaintsView: View {
     @State private var store = ContentStore.shared
     @State private var selection: Saint?
     @AppStorage(ProgressKey.followedSaint) private var followedSlug: String = ""
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {

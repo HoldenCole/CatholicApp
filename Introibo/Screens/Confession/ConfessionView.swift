@@ -10,6 +10,7 @@ struct ConfessionView: View {
     @State private var store = ContentStore.shared
     @State private var selectedGuide: ConfessionGuide?
     @State private var showExamen = false
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     init(openExamen: Bool = false) {
         self.openExamen = openExamen

@@ -8,6 +8,7 @@ struct TodayView: View {
     private let ctx = LiturgicalContext.current()
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var showSettings = false
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }

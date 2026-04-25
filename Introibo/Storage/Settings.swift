@@ -58,6 +58,91 @@ enum SettingsKey {
     static let rite      = "settings.rite"
     static let penance   = "settings.penance"
     static let darkMode  = "settings.darkMode"
+    static let theme     = "settings.theme"
+    static let language  = "settings.language"
+    static let fontSize  = "settings.fontSize"
+}
+
+enum FontSizeOption: String, CaseIterable, Identifiable {
+    case small   = "small"
+    case medium  = "medium"
+    case large   = "large"
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .small:  return "Small"
+        case .medium: return "Standard"
+        case .large:  return "Large"
+        }
+    }
+
+    var scale: CGFloat {
+        switch self {
+        case .small:  return 0.85
+        case .medium: return 1.0
+        case .large:  return 1.2
+        }
+    }
+
+    static func current() -> FontSizeOption {
+        let raw = UserDefaults.standard.string(forKey: SettingsKey.fontSize) ?? "medium"
+        return FontSizeOption(rawValue: raw) ?? .medium
+    }
+}
+
+enum LanguageMode: String, CaseIterable, Identifiable {
+    case both      = "both"
+    case latinOnly = "latin"
+    case vernacular = "vernacular"
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .both:       return "Latin & English"
+        case .latinOnly:  return "Latin Only"
+        case .vernacular: return "English Only"
+        }
+    }
+
+    static func current() -> LanguageMode {
+        let raw = UserDefaults.standard.string(forKey: SettingsKey.language) ?? "both"
+        return LanguageMode(rawValue: raw) ?? .both
+    }
+}
+
+// App theme: parchment (warm default), white (clean), dark (walnut).
+enum AppTheme: String, CaseIterable, Identifiable {
+    case parchment = "parchment"
+    case white     = "white"
+    case dark      = "dark"
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .parchment: return "Parchment"
+        case .white:     return "Clean White"
+        case .dark:      return "Dark (Walnut)"
+        }
+    }
+
+    var latin: String {
+        switch self {
+        case .parchment: return "Membrana"
+        case .white:     return "Candida"
+        case .dark:      return "Obscura"
+        }
+    }
+
+    static func current() -> AppTheme {
+        // Check legacy dark mode key first for backwards compatibility
+        let legacy = UserDefaults.standard.bool(forKey: SettingsKey.darkMode)
+        let raw = UserDefaults.standard.string(forKey: SettingsKey.theme) ?? (legacy ? "dark" : "parchment")
+        return AppTheme(rawValue: raw) ?? .parchment
+    }
 }
 
 // Property-wrapper helpers. Usage inside a View:

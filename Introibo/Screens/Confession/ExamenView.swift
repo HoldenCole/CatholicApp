@@ -6,6 +6,7 @@ import SwiftUI
 struct ExamenView: View {
     @State private var store = ContentStore.shared
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {

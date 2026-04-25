@@ -7,6 +7,9 @@ import SwiftUI
 struct MissalView: View {
     @State private var store = ContentStore.shared
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
 
@@ -66,17 +69,7 @@ struct MissalView: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(Array(section.body.enumerated()), id: \.offset) { _, line in
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text(line.lat.strippingEm)
-                            .font(.body)
-                            .foregroundStyle(.primaryText)
-                            .lineSpacing(3)
-                        Text(line.eng.strippingEm)
-                            .font(.bodySm)
-                            .italic()
-                            .foregroundStyle(.secondaryText)
-                            .lineSpacing(2)
-                    }
+                    BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
                 }
             }
             .padding(.top, 4)

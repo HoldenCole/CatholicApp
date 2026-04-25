@@ -9,6 +9,9 @@ import SwiftUI
 struct PrayerDetailView: View {
     let prayer: Prayer
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontSizeRaw = FontSizeOption.medium.rawValue
 
     var body: some View {
         NavigationStack {
@@ -76,32 +79,34 @@ struct PrayerDetailView: View {
 
     @ViewBuilder
     private func lineBlock(_ line: Prayer.Line, isFirst: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            latinText(line.lat.strippingEm, isFirst: isFirst)
-            Text(line.eng.strippingEm)
-                .font(.bodySm)
-                .italic()
-                .foregroundStyle(.secondaryText)
+        if isFirst {
+            VStack(alignment: .leading, spacing: 4) {
+                latinText(line.lat.strippingEm)
+                if LanguageMode.current() != .latinOnly {
+                    Text(line.eng.strippingEm)
+                        .font(.bodySm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                }
+            }
+        } else {
+            BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
         }
     }
 
     @ViewBuilder
-    private func latinText(_ lat: String, isFirst: Bool) -> some View {
-        if isFirst, let first = lat.first {
-            // Drop cap on first character.
+    private func latinText(_ lat: String) -> some View {
+        let mode = LanguageMode.current()
+        if mode != .vernacular, let first = lat.first {
             HStack(alignment: .firstTextBaseline, spacing: 2) {
                 Text(String(first))
                     .font(.custom("Georgia", size: 48).italic())
-                    .foregroundStyle(.sanctuaryRed)
+                    .foregroundStyle(Color.sanctuaryRed)
                     .baselineOffset(-6)
                 Text(String(lat.dropFirst()))
                     .font(.body)
-                    .foregroundStyle(.primaryText)
+                    .foregroundStyle(Color.primaryText)
             }
-        } else {
-            Text(lat)
-                .font(.body)
-                .foregroundStyle(.primaryText)
         }
     }
 }

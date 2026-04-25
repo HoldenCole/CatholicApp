@@ -8,6 +8,7 @@ import SwiftUI
 struct OfficeView: View {
     @State private var store = ContentStore.shared
     @State private var selectedHour: Hour?
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     private let ctx = LiturgicalContext.current()
 
     var body: some View {
@@ -166,7 +167,7 @@ private struct ClockDial: View {
                     .foregroundStyle(.tertiaryText)
             }
             .frame(width: 48, height: 48)
-            .background(isNow ? Color.goldLeaf.opacity(0.12) : Color.parchment)
+            .background(isNow ? Color.goldLeaf.opacity(0.12) : Color.pageBackground)
             .overlay(
                 Circle().stroke(
                     isNow ? Color.goldLeaf : Color.goldLeaf.opacity(0.55),

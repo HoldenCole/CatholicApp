@@ -7,6 +7,7 @@ import SwiftUI
 struct ReferenceDetailView: View {
     let entry: ReferenceEntry
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {

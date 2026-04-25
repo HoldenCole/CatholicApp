@@ -9,6 +9,7 @@ struct SaintDetailView: View {
     let saint: Saint
     @Environment(\.dismiss) private var dismiss
     @AppStorage(ProgressKey.followedSaint) private var followedSlug: String = ""
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var streak: Int = 0
 
     private var isFollowed: Bool { followedSlug == saint.slug }

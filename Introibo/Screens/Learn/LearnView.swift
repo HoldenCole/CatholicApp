@@ -7,6 +7,7 @@ struct LearnView: View {
     @State private var store = ContentStore.shared
     @State private var selection: Course?
     @State private var mastered: Set<String> = UserProgress.masteredLessons()
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {
