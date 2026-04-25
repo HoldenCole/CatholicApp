@@ -14,7 +14,7 @@ struct BilingualLine: View {
 
     var body: some View {
         if sideBySide && mode == .both {
-            HStack(alignment: .firstTextBaseline, spacing: 14) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
                 Text(cleanLat)
                     .font(.body)
                     .foregroundStyle(Color.primaryText)

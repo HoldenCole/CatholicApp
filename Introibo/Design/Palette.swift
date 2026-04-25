@@ -18,7 +18,7 @@ extension Color {
     // MARK: - Raw tokens
     static let parchment = Color(red: 242/255, green: 232/255, blue: 208/255)
     static let ink       = Color(red:  28/255, green:  20/255, blue:  16/255)
-    static let sepia     = Color(red: 122/255, green: 106/255, blue:  88/255)
+    static let sepia     = Color(red:  90/255, green:  74/255, blue:  58/255)
     static let muted     = Color(red: 154/255, green: 134/255, blue: 112/255)
     static let sanctuaryRed = Color(red: 139/255, green:  26/255, blue:  26/255)
     static let goldLeaf    = Color(red: 184/255, green: 150/255, blue:  12/255)

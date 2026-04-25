@@ -21,7 +21,7 @@ struct MissalView: View {
                         sectionBlock(section)
                     }
                 }
-                .padding(.horizontal, 28)
+                .padding(.horizontal, 20)
                 .padding(.top, 24)
                 .padding(.bottom, 40)
             }

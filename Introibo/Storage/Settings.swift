@@ -66,7 +66,7 @@ enum SettingsKey {
 enum FontSizeScale {
     static let min: Double = 0.8
     static let max: Double = 1.4
-    static let defaultValue: Double = 1.0
+    static let defaultValue: Double = 1.15
 
     static func current() -> CGFloat {
         let val = UserDefaults.standard.double(forKey: SettingsKey.fontSize)

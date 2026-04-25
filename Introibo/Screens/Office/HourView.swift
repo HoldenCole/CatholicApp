@@ -18,7 +18,7 @@ struct HourView: View {
                             partView(part)
                         }
                     }
-                    .padding(.horizontal, 28)
+                    .padding(.horizontal, 20)
                     .padding(.vertical, 24)
                 }
             }
