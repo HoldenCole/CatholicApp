@@ -21,7 +21,7 @@ struct PrayerDetailView: View {
                     if let note = prayer.note, !note.isEmpty {
                         Text(note.strippingEm)
                             .font(.bodyIt)
-                            .foregroundStyle(.secondaryText)
+                            .foregroundStyle(Color.secondaryText)
                             .padding(.horizontal, 28)
                             .padding(.bottom, 4)
                     }
@@ -37,7 +37,7 @@ struct PrayerDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(.sanctuaryRed)
+                        .foregroundStyle(Color.sanctuaryRed)
                 }
             }
         }
@@ -48,16 +48,16 @@ struct PrayerDetailView: View {
     private var header: some View {
         VStack(spacing: 10) {
             Text("✠  \(prayer.category)  ✠")
-                .smallLabel(color: .goldLeaf)
+                .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(prayer.title.strippingEm)
                 .font(.pageTitle)
-                .foregroundStyle(.ivory)
+                .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             Text(prayer.eng)
                 .font(.caption)
                 .italic()
-                .foregroundStyle(.muted)
+                .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             Rectangle()
@@ -69,7 +69,7 @@ struct PrayerDetailView: View {
         .frame(maxWidth: .infinity)
         .background(
             LinearGradient(
-                colors: [.walnut, .walnutHi],
+                colors: [Color.walnut, Color.walnutHi],
                 startPoint: .top, endPoint: .bottom
             )
         )

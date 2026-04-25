@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
-    private var theme: AppTheme { AppTheme(rawValue: themeRaw) ?? .parchment }
+    private var theme: AppTheme { AppTheme(rawValue: themeRaw) ?? Color.parchment }
 
     var body: some View {
         TabView {
@@ -31,7 +31,7 @@ struct ContentView: View {
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         switch theme {
-        case .parchment:
+        case Color.parchment:
             appearance.backgroundColor = UIColor(Color.parchment)
         case .white:
             appearance.backgroundColor = UIColor(Color.walnut)
