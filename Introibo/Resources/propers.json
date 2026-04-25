@@ -1,0 +1,108 @@
+[
+  {
+    "slug": "easter-3",
+    "title": "Domínica III post Pascha",
+    "english": "Third Sunday after Easter",
+    "rank": 1,
+    "color": "white",
+    "season": "easter",
+    "introit": {
+      "lat": "Jubiláte Deo omnis terra, allelúja: psalmum dícite nómini ejus, allelúja: date glóriam laudi ejus, allelúja, allelúja, allelúja.",
+      "eng": "Shout with joy to God, all the earth, alleluia; sing ye a psalm to His Name, alleluia; give glory to His praise, alleluia, alleluia, alleluia."
+    },
+    "collect": {
+      "lat": "Deus, qui errántibus, ut in viam possint redíre justítiæ, veritátis tuæ lumen osténdis: da cunctis qui christiána professióne censéntur, et illa respúere, quæ huic inimíca sunt nómini; et ea quæ sunt apta sectári. Per Dóminum.",
+      "eng": "O God, Who dost show to them that are in error the light of Thy truth, that they may return into the way of righteousness: grant unto all those who are admitted into the fellowship of Christ's religion, that they may avoid those things that are contrary to their profession, and follow all such things as are agreeable to the same. Through our Lord."
+    },
+    "epistle": {
+      "ref": "1 Pet. 2:11-19",
+      "lat": "Caríssimi: Obsecro vos tamquam ádvenas et peregrínos abstinére vos a carnálibus desidériis, quæ mílitant advérsus ánimam, conversatiónem vestram inter gentes habéntes bonam: ut in eo, quod detréctant de vobis tamquam de malefactóribus, ex bonis opéribus vos considerántes, gloríficent Deum in die visitatiónis.",
+      "eng": "Dearly beloved: I beseech you, as strangers and pilgrims, to refrain yourselves from carnal desires, which war against the soul, having your conversation good among the Gentiles: that whereas they speak against you as evildoers, they may, by the good works which they shall behold in you, glorify God in the day of visitation."
+    },
+    "gradual": {
+      "lat": "Allelúja, allelúja. Redemptiónem misit Dóminus pópulo suo. Allelúja.",
+      "eng": "Alleluia, alleluia. The Lord hath sent redemption to His people. Alleluia."
+    },
+    "alleluia": {
+      "lat": "Allelúja. Opórtet vos nasci dénuo. Allelúja.",
+      "eng": "Alleluia. You must be born again. Alleluia."
+    },
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Joann. 16:16-22",
+      "lat": "In illo témpore: Dixit Jesus discípulis suis: Módicum, et jam non vidébitis me: et íterum módicum, et vidébitis me: quia vado ad Patrem.",
+      "eng": "At that time, Jesus said to His disciples: A little while, and now you shall not see Me: and again a little while, and you shall see Me: because I go to the Father."
+    },
+    "offertory": {
+      "lat": "Lauda, ánima mea, Dóminum: laudábo Dóminum in vita mea: psallam Deo meo, quámdiu ero, allelúja.",
+      "eng": "Praise the Lord, O my soul; in my life I will praise the Lord: I will sing to my God as long as I shall be, alleluia."
+    },
+    "secret": {
+      "lat": "His nobis, Dómine, mystériis conferátur, quo, terréna desidéria mitigántes, discámus amáre cæléstia. Per Dóminum.",
+      "eng": "By these mysteries, O Lord, may it be granted us, that, moderating our earthly desires, we may learn to love things heavenly. Through our Lord."
+    },
+    "communion": {
+      "lat": "Módicum, et non vidébitis me, allelúja: íterum módicum, et vidébitis me, quia vado ad Patrem, allelúja, allelúja.",
+      "eng": "A little while, and you shall not see Me, alleluia: and again a little while, and you shall see Me, because I go to the Father, alleluia, alleluia."
+    },
+    "postcommunion": {
+      "lat": "Sacraménta quæ súmpsimus, quǽsumus, Dómine: et spirituálibus nos instáurent aliméntis, et corporálibus tueántur auxíliis. Per Dóminum.",
+      "eng": "May the Sacraments which we have received, we beseech Thee, O Lord, refresh us with spiritual nourishment, and defend us with bodily protection. Through our Lord."
+    },
+    "preface": "easter"
+  },
+  {
+    "slug": "easter-4",
+    "title": "Domínica IV post Pascha",
+    "english": "Fourth Sunday after Easter",
+    "rank": 1,
+    "color": "white",
+    "season": "easter",
+    "introit": {
+      "lat": "Cantáte Dómino cánticum novum, allelúja: quia mirabília fecit Dóminus, allelúja: ante conspéctum géntium revelávit justítiam suam, allelúja, allelúja, allelúja.",
+      "eng": "Sing ye to the Lord a new canticle, alleluia: because the Lord hath done wonderful things, alleluia: He hath revealed His justice in the sight of the Gentiles, alleluia, alleluia, alleluia."
+    },
+    "collect": {
+      "lat": "Deus, qui fidélium mentes uníus éfficis voluntátis: da pópulis tuis id amáre quod prǽcipis, id desideráre quod promíttis; ut inter mundánas varietátes ibi nostra fixa sint corda, ubi vera sunt gáudia. Per Dóminum.",
+      "eng": "O God, Who makest the minds of the faithful to be of one will: grant unto Thy people to love that which Thou commandest, and to desire that which Thou dost promise; that, amidst the uncertain things of this world, our hearts may there be fixed where true joys are to be found. Through our Lord."
+    },
+    "epistle": {
+      "ref": "Jac. 1:17-21",
+      "lat": "Caríssimi: Omne datum óptimum, et omne donum perféctum desúrsum est, descéndens a Patre lúminum, apud quem non est transmutátio nec vicissitúdinis obumbrátio.",
+      "eng": "Dearly beloved: Every best gift and every perfect gift is from above, coming down from the Father of lights, with Whom there is no change nor shadow of alteration."
+    },
+    "gradual": {
+      "lat": "Allelúja, allelúja. Dextera Dei fecit virtútem, déxtera Dómini exaltávit me. Allelúja.",
+      "eng": "Alleluia, alleluia. The right hand of God hath wrought strength: the right hand of the Lord hath exalted me. Alleluia."
+    },
+    "alleluia": {
+      "lat": "Allelúja. Christus resúrgens ex mórtuis, jam non móritur: mors illi ultra non dominábitur. Allelúja.",
+      "eng": "Alleluia. Christ, rising again from the dead, dieth now no more: death shall no more have dominion over Him. Alleluia."
+    },
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Joann. 16:5-14",
+      "lat": "In illo témpore: Dixit Jesus discípulis suis: Vado ad eum, qui misit me: et nemo ex vobis intérrogat me: Quo vadis?",
+      "eng": "At that time, Jesus said to His disciples: I go to Him that sent Me: and none of you asketh Me: Whither goest Thou?"
+    },
+    "offertory": {
+      "lat": "Jubiláte Deo univérsa terra, psalmum dícite nómini ejus: veníte et audíte, et narrábo vobis, omnes qui timétis Deum, quanta fecit Dóminus ánimæ meæ, allelúja.",
+      "eng": "Shout with joy to God, all the earth, sing ye a psalm to His Name: come and hear, and I will tell you, all ye that fear God, what great things the Lord hath done for my soul, alleluia."
+    },
+    "secret": {
+      "lat": "Deus, qui nos per hujus sacrifícii veneránda commércia, uníus summæ divinitátis partícipes éfficis: præsta, quǽsumus; ut, sicut tuam cognóscimus veritátem, sic eam dignis móribus assequámur. Per Dóminum.",
+      "eng": "O God, Who, by the adorable communion of this Sacrifice, dost make us partakers of the one supreme Godhead: grant, we beseech Thee, that, as we know Thy truth, so we may follow it up by a worthy life. Through our Lord."
+    },
+    "communion": {
+      "lat": "Cum vénerit Paráclitus Spíritus veritátis, ille árguet mundum de peccáto, et de justítia, et de judício, allelúja, allelúja.",
+      "eng": "When the Paraclete, the Spirit of truth, is come, He will convince the world of sin, and of justice, and of judgment, alleluia, alleluia."
+    },
+    "postcommunion": {
+      "lat": "Adésto nobis, Dómine Deus noster: ut per hæc, quæ fidéliter súmpsimus, et purgémur a vítiis et a perículis ómnibus eruámur. Per Dóminum.",
+      "eng": "Be present with us, O Lord our God: that by these things which we have faithfully received, we may be cleansed from our vices, and delivered from all dangers. Through our Lord."
+    },
+    "preface": "easter"
+  }
+]

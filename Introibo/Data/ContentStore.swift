@@ -22,6 +22,7 @@ final class ContentStore {
     private(set) var marianAntiphons:[MarianAntiphonData]  = []
     private(set) var examen:         [ExamenEntry]         = []
     private(set) var confessionGuides:[ConfessionGuide]    = []
+    private(set) var propers:         [MassProper]          = []
 
     init() {
         prayers           = load("prayers",            as: [Prayer].self)              ?? []
@@ -36,6 +37,11 @@ final class ContentStore {
         marianAntiphons   = load("marian_antiphons",   as: [MarianAntiphonData].self)  ?? []
         examen            = load("confession_examen", as: [ExamenEntry].self)          ?? []
         confessionGuides  = load("confession_guides", as: [ConfessionGuide].self)      ?? []
+        propers           = load("propers",            as: [MassProper].self)          ?? []
+    }
+
+    func proper(slug: String) -> MassProper? {
+        propers.first { $0.slug == slug }
     }
 
     func hour(slug: String) -> Hour? {

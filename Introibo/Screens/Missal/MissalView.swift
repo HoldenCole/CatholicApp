@@ -1,11 +1,8 @@
 import SwiftUI
 
-// The Missa tab — the Ordinary of the Mass. Mirrors prototype/missal.html.
-// Shows all 13 sections in order, each with a section label, Latin +
-// English title, and line-by-line Latin/English text.
-
 struct MissalView: View {
     @State private var store = ContentStore.shared
+    @State private var selectedProper: MassProper?
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
@@ -17,6 +14,12 @@ struct MissalView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 28) {
+                    if !store.propers.isEmpty {
+                        propersCard
+                    }
+
+                    ordinaryHeader
+
                     ForEach(store.missal) { section in
                         sectionBlock(section)
                     }
@@ -40,8 +43,88 @@ struct MissalView: View {
                     }
                 }
             }
+            .sheet(item: $selectedProper) { proper in
+                ProperView(proper: proper)
+            }
         }
     }
+
+    // MARK: - Propers card
+
+    private var propersCard: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 10) {
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+                Text("Próprium")
+                    .font(.titleM)
+                    .italic()
+                    .foregroundStyle(Color.sanctuaryRed)
+                    .textCase(.uppercase)
+                    .tracking(2)
+                    .fixedSize()
+                Text("·")
+                    .foregroundStyle(Color.tertiaryText)
+                Text("Propers")
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.secondaryText)
+                    .fixedSize()
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+            }
+
+            ForEach(store.propers) { proper in
+                Button { selectedProper = proper } label: {
+                    HStack(alignment: .firstTextBaseline) {
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text(proper.title)
+                                .font(.titleM)
+                                .italic()
+                                .foregroundStyle(Color.primaryText)
+                            Text(proper.english)
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.secondaryText)
+                        }
+                        Spacer()
+                        Text("›")
+                            .font(.titleL)
+                            .foregroundStyle(Color.goldLeaf.opacity(0.5))
+                    }
+                    .padding(.vertical, 6)
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                if proper.slug != store.propers.last?.slug {
+                    Divider().background(Color.frameLine)
+                }
+            }
+        }
+    }
+
+    // MARK: - Ordinary header
+
+    private var ordinaryHeader: some View {
+        HStack(spacing: 10) {
+            Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+            Text("Ordinárium")
+                .font(.titleM)
+                .italic()
+                .foregroundStyle(Color.sanctuaryRed)
+                .textCase(.uppercase)
+                .tracking(2)
+                .fixedSize()
+            Text("·")
+                .foregroundStyle(Color.tertiaryText)
+            Text("Ordinary")
+                .font(.captionSm)
+                .italic()
+                .foregroundStyle(Color.secondaryText)
+                .fixedSize()
+            Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+        }
+    }
+
+    // MARK: - Ordinary sections
 
     private func sectionBlock(_ section: MissalSection) -> some View {
         VStack(alignment: .leading, spacing: 12) {
