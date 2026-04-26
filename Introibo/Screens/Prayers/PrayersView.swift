@@ -119,15 +119,15 @@ struct PrayersView: View {
     private func offeringSlug() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
         if hour < 12 { return DailyPrayer.slug(for: ctx) }
-        if hour < 18 { return "angelus" }
-        return "salve"
+        if hour < 18 { return "salve" }
+        return "suscipe"
     }
 
     private func offeringLabel() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
         if hour < 12 { return "Oratio Matutína  ·  Morning Prayer" }
         if hour < 18 { return "Oratio Meridiána  ·  Afternoon Prayer" }
-        return "Oratio Vespertína  ·  Evening Prayer"
+        return "Oratio Nocturna  ·  Night Prayer"
     }
 
     private func categorySection(_ category: String, items: [Prayer]) -> some View {
