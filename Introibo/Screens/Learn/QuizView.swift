@@ -52,17 +52,14 @@ struct QuizView: View {
         let q = questions[questionIndex]
         return ScrollView {
             VStack(spacing: 24) {
-                // Progress
                 Text("Question \(questionIndex + 1) of \(questions.count)")
                     .smallLabel(color: Color.sanctuaryRed)
                     .padding(.top, 24)
 
-                // Score
                 Text("Score: \(score)")
                     .font(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
 
-                // Prompt
                 VStack(spacing: 8) {
                     Text(q.promptLabel)
                         .smallLabel(color: Color.goldLeaf)
@@ -74,15 +71,13 @@ struct QuizView: View {
                 }
                 .padding(.vertical, 20)
 
-                // Choices
                 VStack(spacing: 10) {
-                    ForEach(q.choices, id: \.self) { choice in
+                    ForEach(Array(q.choices.enumerated()), id: \.offset) { _, choice in
                         choiceButton(choice, correct: q.correct)
                     }
                 }
                 .padding(.horizontal, 28)
 
-                // Next button after answering
                 if selectedAnswer != nil {
                     Button {
                         if questionIndex + 1 < questions.count {
@@ -105,6 +100,7 @@ struct QuizView: View {
             }
             .padding(.bottom, 40)
         }
+        .id(questionIndex)
     }
 
     private func choiceButton(_ choice: String, correct: String) -> some View {

@@ -79,33 +79,40 @@ struct PrayerDetailView: View {
 
     @ViewBuilder
     private func lineBlock(_ line: Prayer.Line, isFirst: Bool) -> some View {
-        if isFirst {
-            VStack(alignment: .leading, spacing: 4) {
-                latinText(line.lat.strippingEm)
-                if LanguageMode.current() != .latinOnly {
-                    Text(line.eng.strippingEm)
+        let mode = LanguageMode.current()
+        if isFirst && mode != .vernacular {
+            let lat = line.lat.strippingEm
+            let eng = line.eng.strippingEm
+            if mode == .both {
+                HStack(alignment: .firstTextBaseline, spacing: 12) {
+                    dropCapText(lat)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(eng)
                         .font(.bodySm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
+                        .lineSpacing(2)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
+            } else {
+                dropCapText(lat)
             }
         } else {
             BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
         }
     }
 
-    @ViewBuilder
-    private func latinText(_ lat: String) -> some View {
-        let mode = LanguageMode.current()
-        if mode != .vernacular, let first = lat.first {
-            HStack(alignment: .firstTextBaseline, spacing: 2) {
+    private func dropCapText(_ lat: String) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 2) {
+            if let first = lat.first {
                 Text(String(first))
-                    .font(.custom("Georgia", size: 48).italic())
+                    .font(.custom("Georgia", size: 42).italic())
                     .foregroundStyle(Color.sanctuaryRed)
-                    .baselineOffset(-6)
+                    .baselineOffset(-4)
                 Text(String(lat.dropFirst()))
                     .font(.body)
                     .foregroundStyle(Color.primaryText)
+                    .lineSpacing(3)
             }
         }
     }

@@ -1,25 +1,64 @@
 import SwiftUI
 
-// The Orátio tab — Liber Orationum.
-// Top: "Oratio Hodierna" featured prayer of the day.
-// Below: the full 21-prayer library, grouped by category.
-
 struct PrayersView: View {
     @State private var store = ContentStore.shared
     @State private var selection: Prayer?
+    @State private var sortMode: PrayerSort = .byCategory
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
 
     private var ctx: LiturgicalContext { .current() }
 
+    enum PrayerSort: String, CaseIterable {
+        case byCategory = "By Type"
+        case alphabetical = "A–Z"
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 28) {
                     featuredCard
-                    ForEach(store.prayersByCategory(), id: \.category) { group in
-                        categorySection(group.category, items: group.items)
+
+                    HStack {
+                        Spacer()
+                        Menu {
+                            ForEach(PrayerSort.allCases, id: \.rawValue) { mode in
+                                Button {
+                                    sortMode = mode
+                                } label: {
+                                    HStack {
+                                        Text(mode.rawValue)
+                                        if sortMode == mode {
+                                            Image(systemName: "checkmark")
+                                        }
+                                    }
+                                }
+                            }
+                        } label: {
+                            HStack(spacing: 4) {
+                                Text(sortMode.rawValue)
+                                    .font(.captionSm)
+                                    .foregroundStyle(Color.sanctuaryRed)
+                                Image(systemName: "chevron.down")
+                                    .font(.system(size: 8))
+                                    .foregroundStyle(Color.sanctuaryRed)
+                            }
+                        }
+                    }
+
+                    switch sortMode {
+                    case .byCategory:
+                        ForEach(store.prayersByCategory(), id: \.category) { group in
+                            categorySection(group.category, items: group.items)
+                        }
+                    case .alphabetical:
+                        let sorted = store.prayers.sorted { $0.title.strippingEm < $1.title.strippingEm }
+                        ForEach(sorted) { p in
+                            Button { selection = p } label: { prayerRow(p) }
+                                .buttonStyle(.plain)
+                        }
                     }
                 }
                 .padding(.horizontal, 28)
@@ -39,10 +78,10 @@ struct PrayersView: View {
 
     @ViewBuilder
     private var featuredCard: some View {
-        if let featured = store.prayer(slug: DailyPrayer.slug(for: ctx)) {
+        if let featured = store.prayer(slug: offeringSlug()) {
             Button { selection = featured } label: {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Oratio Hodiérna  ·  Today's Prayer")
+                    Text(offeringLabel())
                         .smallLabel(color: Color.goldLeaf)
                     Text(String(featured.title.prefix(1)))
                         .font(.custom("Georgia", size: 54).italic())
@@ -75,6 +114,20 @@ struct PrayersView: View {
             }
             .buttonStyle(.plain)
         }
+    }
+
+    private func offeringSlug() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return DailyPrayer.slug(for: ctx) }
+        if hour < 18 { return "angelus" }
+        return "salve"
+    }
+
+    private func offeringLabel() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return "Oratio Matutína  ·  Morning Prayer" }
+        if hour < 18 { return "Oratio Meridiána  ·  Afternoon Prayer" }
+        return "Oratio Vespertína  ·  Evening Prayer"
     }
 
     private func categorySection(_ category: String, items: [Prayer]) -> some View {
@@ -122,23 +175,18 @@ struct PrayersView: View {
                     .foregroundStyle(Color.secondaryText)
             }
             Spacer()
-            if p.note?.lowercased().contains("daily") ?? false {
-                Text("Daily")
-                    .smallLabel(color: Color.goldLeaf, tracking: 2)
-            }
         }
         .contentShape(Rectangle())
     }
 
     private func previewLine(_ p: Prayer) -> String {
         let first = p.lines.first?.lat.strippingEm ?? ""
-        if first.count <= 48 { return first + "…" }
+        if first.count <= 48 { return first + "..." }
         let cut = String(first.prefix(46))
-        // Break at last whitespace so we don't split a word.
         if let idx = cut.lastIndex(of: " ") {
-            return String(cut[..<idx]) + "…"
+            return String(cut[..<idx]) + "..."
         }
-        return cut + "…"
+        return cut + "..."
     }
 }
 
