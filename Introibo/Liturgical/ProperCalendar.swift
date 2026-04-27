@@ -157,7 +157,10 @@ enum ProperCalendar {
         let month = cal.component(.month, from: date)
         let day = cal.component(.day, from: date)
         let key = month * 100 + day
-        return fixedFeasts[key]
+        if let feast = fixedFeasts[key] {
+            return feast
+        }
+        return String(format: "sancti-%02d-%02d", month, day)
     }
 
     private static let fixedFeasts: [Int: String] = [
