@@ -5998,5 +5998,155 @@
       "eng": "Grant us, we beseech You, O Lord, that all the evil in our hearts may be cured by the healing power of the sacrament we have received."
     },
     "preface": null
+  },
+  {
+    "slug": "holy-thursday",
+    "title": "Feria V in Cena Dómini",
+    "english": "Holy Thursday — Mass of the Lord's Supper",
+    "rank": 1,
+    "color": "white",
+    "season": "passion",
+    "introit": {
+      "lat": "Nos autem gloriári opórtet in Cruce Dómini nostri Jesu Christi: in quo est salus, vita et resurréctio nostra: per quem salváti et liberáti sumus.",
+      "eng": "But it behooves us to glory in the Cross of our Lord Jesus Christ: in Whom is our salvation, life, and resurrection: by Whom we are saved and delivered."
+    },
+    "collect": {
+      "lat": "Deus, a quo et Judas reátus sui poenam, et confessiónis suæ latro prǽmium sumpsit: concéde nobis tuæ propitiatiónis efféctum; ut, sicut in passióne sua Jesus Christus Dóminus noster divérsa utrísque íntulit stipéndia meritórum: ita nobis, abláto vetustátis erróre, resurrectiónis suæ grátiam largiátur.",
+      "eng": "O God, from Whom Judas received the punishment of his guilt, and the thief the reward of his confession: grant unto us the fruit of Thy clemency; that as our Lord Jesus Christ in His Passion gave to each a different recompense according to his merits, so having cleared away our old sins, He may bestow on us the grace of His Resurrection."
+    },
+    "epistle": {
+      "ref": "1 Cor. 11:20-32",
+      "lat": "Fratres: Convenléntibus vobis in unum, jam non est Domínicam cenam manducáre. Unusquísque enim suam cenam præsúmit ad manducándum. Et álius quidem ésurit, álius autem ébrius est.",
+      "eng": "Brethren: When you come together into one place, it is not now to eat the Lord's supper. For every one taketh before his own supper to eat. And one indeed is hungry, and another is drunk."
+    },
+    "gradual": {
+      "lat": "Christus factus est pro nobis obédiens usque ad mortem, mortem autem crucis. Propter quod et Deus exaltávit illum: et dedit illi nomen, quod est super omne nomen.",
+      "eng": "Christ became obedient for us unto death, even to the death of the cross. For which cause God also hath exalted Him: and hath given Him a Name which is above all names."
+    },
+    "alleluia": null,
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Joann. 13:1-15",
+      "lat": "Ante diem festum Paschæ, sciens Jesus, quia venit hora ejus, ut tránseat ex hoc mundo ad Patrem: cum dilexísset suos, qui erant in mundo, in finem diléxit eos.",
+      "eng": "Before the festival day of the Pasch, Jesus knowing that His hour was come, that He should pass out of this world to the Father: having loved His own who were in the world, He loved them unto the end."
+    },
+    "offertory": {
+      "lat": "Déxtera Dómini fecit virtútem, déxtera Dómini exaltávit me: non móriar, sed vivam, et narrábo ópera Dómini.",
+      "eng": "The right hand of the Lord hath wrought strength: the right hand of the Lord hath exalted me. I shall not die, but live: and shall declare the works of the Lord."
+    },
+    "secret": {
+      "lat": "Ipse tibi, quǽsumus, Dómine sancte, Pater omnípotens, ætérne Deus, sacrifícium nostrum reddat accéptum, qui discípulis suis in sui commemoratiónem hoc fíeri hodiérna traditióne monstrávit, Jesus Christus, Fílius tuus, Dóminus noster.",
+      "eng": "We beseech Thee, O holy Lord, almighty Father, eternal God, that our Sacrifice may be made acceptable to Thee by Him, Who on this day taught His disciples to do this in remembrance of Him, Jesus Christ, Thy Son, our Lord."
+    },
+    "communion": {
+      "lat": "Dóminus Jesus, postquam cenávit cum discípulis suis, lavit pedes eórum, et ait illis: Scitis, quid fécerim vobis ego, Dóminus et Magíster? Exémplum dedi vobis, ut et vos ita faciátis.",
+      "eng": "The Lord Jesus, after He had supped with His disciples, washed their feet, and said to them: Know you what I, your Lord and Master, have done to you? I have given you an example, that so you also should do."
+    },
+    "postcommunion": {
+      "lat": "Refécti vitálibus aliméntis, quǽsumus, Dómine Deus noster: ut, quod témpore nostræ mortalitátis exséquimur, immortalitátis tuæ múnere consequámur. Per Dóminum.",
+      "eng": "Refreshed with the food of life, we humbly beseech Thee, O Lord our God, that what we perform in the time of our mortality, we may obtain by the gift of Thy immortality. Through our Lord."
+    },
+    "preface": null
+  },
+  {
+    "slug": "good-friday",
+    "title": "Feria VI in Passióne et Morte Dómini",
+    "english": "Good Friday — Celebration of the Lord's Passion",
+    "rank": 1,
+    "color": "black",
+    "season": "passion",
+    "introit": {
+      "lat": "Dómine, audívi audítum tuum et tímui: considerávi ópera tua, et expávi. In médio duórum animálium innotescéris: dum appropinquáverint anni, cognoscéris: dum advénerit tempus, ostendéris.",
+      "eng": "O Lord, I have heard Thy hearing, and was afraid: I considered Thy works, and trembled. In the midst of two animals Thou shalt be made known: when the years shall draw nigh, Thou shalt be known: when the time shall come, Thou shalt be manifested."
+    },
+    "collect": {
+      "lat": "Deus, qui peccáti véteris hereditáriam mortem, in qua posteritátis genus omne succésserat, Christi tui, Dómini nostri, passióne solvísti: da, ut, confórmes eídem facti; sicut imáginem terréni, natúra necessitáte portávimus, ita imáginem cæléstis, grátia sanctificatióne portemus. Per eúndem Dóminum.",
+      "eng": "O God, Who by the Passion of Christ Thy Son, our Lord, hast loosed the bonds of death, the heritage of the first sin, to which all men of later time did succeed: make us so conformed to Him that, as we must needs have borne the likeness of earthly nature, so we may by sanctification bear the likeness of heavenly grace. Through the same Lord."
+    },
+    "epistle": {
+      "ref": "Exod. 12:1-11",
+      "lat": "In diébus illis: Dixit Dóminus ad Móysen et Aaron in terra Ægýpti: Mensis iste vobis princípium ménsium: primus erit in ménsibus anni.",
+      "eng": "In those days: The Lord said to Moses and Aaron in the land of Egypt: This month shall be to you the beginning of months: it shall be the first in the months of the year."
+    },
+    "gradual": {
+      "lat": "Dómine, exáudi oratiónem meam: et clamor meus ad te pervéniat. Ne avértas fáciem tuam a me: in quacúmque die tríbulor, inclína ad me aurem tuam. In quacúmque die invocávero te, velóciter exáudi me.",
+      "eng": "O Lord, hear my prayer: and let my cry come unto Thee. Turn not away Thy face from me: in the day when I am in trouble, incline Thy ear to me. In what day soever I shall call upon Thee, hear me speedily."
+    },
+    "alleluia": null,
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Joann. 18:1—19:42",
+      "lat": "In illo témpore: Egréssus est Jesus cum discípulis suis trans torréntem Cedron, ubi erat hortus, in quem introívit ipse et discípuli ejus.",
+      "eng": "At that time: Jesus went forth with His disciples over the brook Cedron, where there was a garden, into which He entered with His disciples."
+    },
+    "offertory": {
+      "lat": "Improperium exspectávit cor meum et misériam: et sustínui, qui simul mecum contristarétur, et non fuit: consolántem me quæsívi, et non invéni: et dedérunt in escam meam fel, et in siti mea potavérunt me acéto.",
+      "eng": "My heart hath expected reproach and misery: and I looked for one that would grieve together with me, and there was none: I sought for one that would comfort me, and I found none: and they gave me gall for my food, and in my thirst they gave me vinegar to drink."
+    },
+    "secret": {
+      "lat": "",
+      "eng": ""
+    },
+    "communion": {
+      "lat": "",
+      "eng": ""
+    },
+    "postcommunion": {
+      "lat": "Omnípotens et miséricors Deus, qui nos Christi tui beáta passióne et morte reparásti: consérva in nobis óperam misericórdiæ tuæ; ut hujus mystérii participatióne, perpétua devotióne vivámus. Per eúndem Dóminum.",
+      "eng": "Almighty and merciful God, Who hast renewed us by the blessed Passion and death of Thy Christ: preserve in us the work of Thy mercy; that by our partaking of this mystery, we may live in perpetual devotion. Through the same Lord."
+    },
+    "preface": null
+  },
+  {
+    "slug": "holy-saturday",
+    "title": "Sábbato Sancto",
+    "english": "Holy Saturday — The Easter Vigil",
+    "rank": 1,
+    "color": "white",
+    "season": "passion",
+    "introit": {
+      "lat": "",
+      "eng": ""
+    },
+    "collect": {
+      "lat": "Deus, qui hanc sacratíssimam noctem glória Domínicæ Resurrectiónis illústras: consérva in nova famíliæ tuæ progénie adoptiónis spíritum, quem dedísti; ut, córpore et mente renováti, puram tibi exhibeant servitútem. Per eúndem Dóminum.",
+      "eng": "O God, Who dost illuminate this most holy night by the glory of our Lord's Resurrection: preserve in the new children of Thy family the spirit of adoption which Thou hast given; that, renewed in body and mind, they may render to Thee a pure service. Through the same Lord."
+    },
+    "epistle": {
+      "ref": "Col. 3:1-4",
+      "lat": "Fratres: Si consurrexístis cum Christo, quæ sursum sunt quǽrite, ubi Christus est in déxtera Dei sedens. Quæ sursum sunt sápite, non quæ super terram.",
+      "eng": "Brethren: If you be risen with Christ, seek the things that are above, where Christ is sitting at the right hand of God. Mind the things that are above, not the things that are upon the earth."
+    },
+    "gradual": {
+      "lat": "Allelúja, allelúja, allelúja.",
+      "eng": "Alleluia, alleluia, alleluia."
+    },
+    "alleluia": null,
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Matt. 28:1-7",
+      "lat": "Véspere autem sábbati, quæ lucéscit in prima sábbati, venit María Magdaléne, et áltera María, vidére sepúlcrum. Et ecce terræmótus factus est magnus.",
+      "eng": "And in the end of the sabbath, when it began to dawn towards the first day of the week, came Mary Magdalen and the other Mary, to see the sepulchre. And behold there was a great earthquake."
+    },
+    "offertory": {
+      "lat": "",
+      "eng": ""
+    },
+    "secret": {
+      "lat": "Súscipe, quǽsumus, Dómine, preces pópuli tui cum oblatiónibus hostiárum: ut, Paschálibus initiáta mystériis, ad æternitátis nobis medélam, te operánte, profíciant. Per Dóminum.",
+      "eng": "Accept, we beseech Thee, O Lord, the prayers of Thy people together with the sacrifice they offer: that what has been begun by the Paschal Mysteries, may by Thy working profit us unto eternal healing. Through our Lord."
+    },
+    "communion": {
+      "lat": "",
+      "eng": ""
+    },
+    "postcommunion": {
+      "lat": "Spíritum nobis, Dómine, tuæ caritátis infúnde: ut, quos sacraméntis Paschálibus satiásti, tua fácias pietáte concórdes. Per Dóminum.",
+      "eng": "Pour forth upon us, O Lord, the spirit of Thy love: that those whom Thou hast satisfied with the Paschal Sacraments, may by Thy goodness be made of one mind. Through our Lord."
+    },
+    "preface": "easter"
   }
 ]
