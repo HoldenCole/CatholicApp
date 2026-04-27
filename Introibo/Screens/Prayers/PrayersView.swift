@@ -9,6 +9,7 @@ struct PrayersView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
 
     private var ctx: LiturgicalContext { .current() }
+    private var sortedPrayers: [Prayer] { store.prayers.sorted { $0.title.strippingEm < $1.title.strippingEm } }
 
     enum PrayerSort: String, CaseIterable {
         case byCategory = "By Type"
@@ -48,16 +49,14 @@ struct PrayersView: View {
                         }
                     }
 
-                    switch sortMode {
-                    case .byCategory:
-                        ForEach(store.prayersByCategory(), id: \.category) { group in
-                            categorySection(group.category, items: group.items)
-                        }
-                    case .alphabetical:
-                        let sorted = store.prayers.sorted { $0.title.strippingEm < $1.title.strippingEm }
-                        ForEach(sorted) { p in
+                    if sortMode == .alphabetical {
+                        ForEach(sortedPrayers) { p in
                             Button { selection = p } label: { prayerRow(p) }
                                 .buttonStyle(.plain)
+                        }
+                    } else {
+                        ForEach(store.prayersByCategory(), id: \.category) { group in
+                            categorySection(group.category, items: group.items)
                         }
                     }
                 }

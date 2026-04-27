@@ -79,41 +79,35 @@ struct PrayerDetailView: View {
 
     @ViewBuilder
     private func lineBlock(_ line: Prayer.Line, isFirst: Bool) -> some View {
-        let mode = LanguageMode.current()
-        if isFirst && mode != .vernacular {
-            let lat = line.lat.strippingEm
-            let eng = line.eng.strippingEm
-            if mode == .both {
-                HStack(alignment: .firstTextBaseline, spacing: 12) {
-                    dropCapText(lat)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(eng)
-                        .font(.bodySm)
-                        .italic()
-                        .foregroundStyle(Color.secondaryText)
-                        .lineSpacing(2)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-            } else {
-                dropCapText(lat)
+        if isFirst && LanguageMode.current() == .both {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                dropCapText(line.lat.strippingEm)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(line.eng.strippingEm)
+                    .font(.bodySm)
+                    .italic()
+                    .foregroundStyle(Color.secondaryText)
+                    .lineSpacing(2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
+        } else if isFirst && LanguageMode.current() == .latinOnly {
+            dropCapText(line.lat.strippingEm)
         } else {
             BilingualLine(lat: line.lat.strippingEm, eng: line.eng.strippingEm, sideBySide: true)
         }
     }
 
+    @ViewBuilder
     private func dropCapText(_ lat: String) -> some View {
         HStack(alignment: .firstTextBaseline, spacing: 2) {
-            if let first = lat.first {
-                Text(String(first))
-                    .font(.custom("Georgia", size: 42).italic())
-                    .foregroundStyle(Color.sanctuaryRed)
-                    .baselineOffset(-4)
-                Text(String(lat.dropFirst()))
-                    .font(.body)
-                    .foregroundStyle(Color.primaryText)
-                    .lineSpacing(3)
-            }
+            Text(String(lat.prefix(1)))
+                .font(.custom("Georgia", size: 42).italic())
+                .foregroundStyle(Color.sanctuaryRed)
+                .baselineOffset(-4)
+            Text(String(lat.dropFirst()))
+                .font(.body)
+                .foregroundStyle(Color.primaryText)
+                .lineSpacing(3)
         }
     }
 }
