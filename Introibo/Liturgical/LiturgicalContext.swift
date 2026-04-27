@@ -248,7 +248,7 @@ struct LiturgicalContext {
             marian: marian,
             mystery: mystery,
             penance: penance,
-            properSlug: ProperCalendar.properSlug(for: now),
+            properSlug: ProperCalendar.properSlugWithFallback(for: now, store: ContentStore.shared.propers.map { $0.slug }),
             easter: easter,
             ashWednesday: ashWed,
             pentecost: pentecost,

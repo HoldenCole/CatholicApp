@@ -12,7 +12,26 @@ enum ProperCalendar {
             return slug
         }
 
-        return temporaleSlug(date: today, easter: easter, year: year, cal: cal)
+        if let slug = temporaleSlug(date: today, easter: easter, year: year, cal: cal) {
+            return slug
+        }
+
+        return nil
+    }
+
+    static func properSlugWithFallback(for date: Date, store: [String]) -> String? {
+        if let slug = properSlug(for: date), store.contains(slug) {
+            return slug
+        }
+        let cal = Calendar.liturgical
+        let dow = cal.component(.weekday, from: date) - 1
+        if dow > 0 {
+            let lastSunday = date.addingDays(-dow)
+            if let slug = properSlug(for: lastSunday), store.contains(slug) {
+                return slug
+            }
+        }
+        return properSlug(for: date)
     }
 
     private static func temporaleSlug(date: Date, easter: Date, year: Int, cal: Calendar) -> String? {
