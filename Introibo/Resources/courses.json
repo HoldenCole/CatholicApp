@@ -282,6 +282,73 @@
         "html": "In the Mass you'll see phrases like <em>per Dóminum nostrum</em> (accusative; 'through our Lord') and <em>Glória Dómini</em> (genitive; 'glory of the Lord'). The ending tells you the meaning."
       },
       {
+        "type": "cards",
+        "label": "Vocabula · Vocabulary",
+        "note": "Common 1st and 2nd declension nouns from the Mass.",
+        "items": [
+          {
+            "lat": "ecclésia",
+            "phon": "ek-KLEH-zee-ah",
+            "eng": "church (1st decl.)"
+          },
+          {
+            "lat": "grátia",
+            "phon": "GRAH-tsee-ah",
+            "eng": "grace (1st decl.)"
+          },
+          {
+            "lat": "glória",
+            "phon": "GLOH-ree-ah",
+            "eng": "glory (1st decl.)"
+          },
+          {
+            "lat": "víta",
+            "phon": "VEE-tah",
+            "eng": "life (1st decl.)"
+          },
+          {
+            "lat": "ánima",
+            "phon": "AH-nee-mah",
+            "eng": "soul (1st decl.)"
+          },
+          {
+            "lat": "terra",
+            "phon": "TEHR-rah",
+            "eng": "earth (1st decl.)"
+          },
+          {
+            "lat": "Dóminus",
+            "phon": "DOH-mee-noos",
+            "eng": "Lord (2nd decl.)"
+          },
+          {
+            "lat": "fílius",
+            "phon": "FEE-lee-oos",
+            "eng": "son (2nd decl.)"
+          },
+          {
+            "lat": "cælum",
+            "phon": "CHEH-loom",
+            "eng": "heaven (2nd decl.)"
+          },
+          {
+            "lat": "verbum",
+            "phon": "VEHR-boom",
+            "eng": "word (2nd decl.)"
+          },
+          {
+            "lat": "regnum",
+            "phon": "REHG-noom",
+            "eng": "kingdom (2nd decl.)"
+          },
+          {
+            "lat": "sacraméntum",
+            "phon": "sah-krah-MEN-toom",
+            "eng": "sacrament (2nd decl.)"
+          }
+        ]
+      },
+      {
         "type": "summary",
         "label": "Summarium · Summary",
         "html": "<p>1st declension: -a / -æ / -æ / -am / -a. 2nd declension: -us / -i / -o / -um / -o. These two patterns cover most nouns in prayer.</p>"
@@ -529,6 +596,68 @@
         ]
       },
       {
+        "type": "cards",
+        "label": "Vocabula · Key Phrases",
+        "note": "Master each phrase of the Hail Mary.",
+        "items": [
+          {
+            "lat": "Ave",
+            "phon": "AH-veh",
+            "eng": "Hail"
+          },
+          {
+            "lat": "grátia plena",
+            "phon": "GRAH-tsee-ah PLEH-nah",
+            "eng": "full of grace"
+          },
+          {
+            "lat": "Dóminus tecum",
+            "phon": "DOH-mee-noos TEH-koom",
+            "eng": "the Lord is with thee"
+          },
+          {
+            "lat": "benedícta tu",
+            "phon": "beh-neh-DEEK-tah too",
+            "eng": "blessed art thou"
+          },
+          {
+            "lat": "in muliéribus",
+            "phon": "een moo-lee-EH-ree-boos",
+            "eng": "among women"
+          },
+          {
+            "lat": "fructus ventris tui",
+            "phon": "FROOK-toos VEN-trees TOO-ee",
+            "eng": "the fruit of thy womb"
+          },
+          {
+            "lat": "Sancta María",
+            "phon": "SAHNK-tah mah-REE-ah",
+            "eng": "Holy Mary"
+          },
+          {
+            "lat": "Mater Dei",
+            "phon": "MAH-tehr DEH-ee",
+            "eng": "Mother of God"
+          },
+          {
+            "lat": "ora pro nobis",
+            "phon": "OH-rah proh NOH-bees",
+            "eng": "pray for us"
+          },
+          {
+            "lat": "peccatóribus",
+            "phon": "pek-kah-TOH-ree-boos",
+            "eng": "sinners"
+          },
+          {
+            "lat": "in hora mortis nostræ",
+            "phon": "een OH-rah MOR-tees NOS-treh",
+            "eng": "at the hour of our death"
+          }
+        ]
+      },
+      {
         "type": "tip",
         "label": "Pray It Slowly",
         "html": "The Rosary is not a race. Pray the Ave deliberately, letting each phrase settle. Even one Ave said with full attention is worth more than a hundred rushed."
@@ -618,6 +747,73 @@
         ]
       },
       {
+        "type": "cards",
+        "label": "Vocabula · The Seven Petitions",
+        "note": "Learn each petition of the Our Father.",
+        "items": [
+          {
+            "lat": "Pater noster",
+            "phon": "PAH-tehr NOS-tehr",
+            "eng": "Our Father"
+          },
+          {
+            "lat": "qui es in cælis",
+            "phon": "kwee es een CHEH-lees",
+            "eng": "Who art in heaven"
+          },
+          {
+            "lat": "sanctificétur nomen tuum",
+            "phon": "sahnk-tee-fee-CHEH-toor NOH-men TOO-oom",
+            "eng": "hallowed be Thy Name"
+          },
+          {
+            "lat": "advéniat regnum tuum",
+            "phon": "ahd-VEH-nee-aht REHG-noom TOO-oom",
+            "eng": "Thy kingdom come"
+          },
+          {
+            "lat": "fiat volúntas tua",
+            "phon": "FEE-aht voh-LOON-tahs TOO-ah",
+            "eng": "Thy will be done"
+          },
+          {
+            "lat": "panem nostrum",
+            "phon": "PAH-nem NOS-troom",
+            "eng": "our bread"
+          },
+          {
+            "lat": "quotidiánum",
+            "phon": "kwoh-tee-dee-AH-noom",
+            "eng": "daily"
+          },
+          {
+            "lat": "dimítte nobis",
+            "phon": "dee-MEET-teh NOH-bees",
+            "eng": "forgive us"
+          },
+          {
+            "lat": "débita nostra",
+            "phon": "DEH-bee-tah NOS-trah",
+            "eng": "our trespasses"
+          },
+          {
+            "lat": "ne nos indúcas",
+            "phon": "neh nohs een-DOO-kahs",
+            "eng": "lead us not"
+          },
+          {
+            "lat": "in tentatiónem",
+            "phon": "een ten-tah-tsee-OH-nem",
+            "eng": "into temptation"
+          },
+          {
+            "lat": "líbera nos a malo",
+            "phon": "LEE-beh-rah nohs ah MAH-loh",
+            "eng": "deliver us from evil"
+          }
+        ]
+      },
+      {
         "type": "tip",
         "label": "Pray It Daily in Latin",
         "html": "Pray the Pater Noster in Latin once a day for a week. By the end you'll have it memorized; and you'll carry the Church's prayer in the Church's tongue for life."
@@ -663,6 +859,63 @@
             "lat": "super aquam refectiónis educávit me.",
             "phon": "SOO-pehr AH-kwahm reh-fek-tsee-OH-nees eh-doo-KAH-veet meh",
             "eng": "He hath brought me up on the water of refreshment."
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "label": "Vocabula · Psalm Vocabulary",
+        "note": "Words that appear constantly in the psalms.",
+        "items": [
+          {
+            "lat": "Dómine",
+            "phon": "DOH-mee-neh",
+            "eng": "O Lord (vocative)"
+          },
+          {
+            "lat": "miserére",
+            "phon": "mee-zeh-REH-reh",
+            "eng": "have mercy"
+          },
+          {
+            "lat": "exáudi",
+            "phon": "eg-ZOW-dee",
+            "eng": "hear, listen to"
+          },
+          {
+            "lat": "laudáte",
+            "phon": "low-DAH-teh",
+            "eng": "praise ye"
+          },
+          {
+            "lat": "ætérnum",
+            "phon": "eh-TEHR-noom",
+            "eng": "eternal, for ever"
+          },
+          {
+            "lat": "misericórdia",
+            "phon": "mee-zeh-ree-KOR-dee-ah",
+            "eng": "mercy"
+          },
+          {
+            "lat": "justítia",
+            "phon": "yoos-TEE-tsee-ah",
+            "eng": "justice, righteousness"
+          },
+          {
+            "lat": "inimícus",
+            "phon": "ee-nee-MEE-koos",
+            "eng": "enemy"
+          },
+          {
+            "lat": "clamávi",
+            "phon": "klah-MAH-vee",
+            "eng": "I have cried out"
+          },
+          {
+            "lat": "salvum me fac",
+            "phon": "SAHL-voom meh fahk",
+            "eng": "save me"
           }
         ]
       },
@@ -742,6 +995,68 @@
             "lat": "et ténebræ eam non comprehendérunt.",
             "phon": "et TEH-neh-breh EH-ahm nohn kom-preh-hen-DEH-roont",
             "eng": "and the darkness did not comprehend it."
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "label": "Vocabula · John 1 Vocabulary",
+        "note": "Key words from the Prologue of St. John's Gospel.",
+        "items": [
+          {
+            "lat": "In princípio",
+            "phon": "een preen-CHEE-pee-oh",
+            "eng": "In the beginning"
+          },
+          {
+            "lat": "Verbum",
+            "phon": "VEHR-boom",
+            "eng": "the Word"
+          },
+          {
+            "lat": "apud Deum",
+            "phon": "AH-pood DEH-oom",
+            "eng": "with God"
+          },
+          {
+            "lat": "vita",
+            "phon": "VEE-tah",
+            "eng": "life"
+          },
+          {
+            "lat": "lux",
+            "phon": "looks",
+            "eng": "light"
+          },
+          {
+            "lat": "ténebræ",
+            "phon": "TEH-neh-breh",
+            "eng": "darkness"
+          },
+          {
+            "lat": "comprehendérunt",
+            "phon": "kom-preh-hen-DEH-roont",
+            "eng": "comprehended, overcame"
+          },
+          {
+            "lat": "mundus",
+            "phon": "MOON-doos",
+            "eng": "the world"
+          },
+          {
+            "lat": "caro factum est",
+            "phon": "KAH-roh FAHK-toom est",
+            "eng": "was made flesh"
+          },
+          {
+            "lat": "habitávit in nobis",
+            "phon": "hah-bee-TAH-veet een NOH-bees",
+            "eng": "dwelt among us"
+          },
+          {
+            "lat": "grátia et véritas",
+            "phon": "GRAH-tsee-ah et VEH-ree-tahs",
+            "eng": "grace and truth"
           }
         ]
       },
