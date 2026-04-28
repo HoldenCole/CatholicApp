@@ -86,12 +86,16 @@
         "eng": "Glory be to God on high, and on earth peace to men of good will. We praise Thee. We bless Thee. We adore Thee. We glorify Thee. We give Thee thanks for Thy great glory."
       },
       {
-        "lat": "Dómine Deus, Rex cæléstis, Deus Pater omnípotens. Dómine Fili Unigénite, Iesu Christe. Dómine Deus, Agnus Dei, Fílius Patris.",
+        "lat": "Dómine Deus, Rex cæléstis, Deus Pater omnípotens. Dómine Fili Unigénite, Jesu Christe. Dómine Deus, Agnus Dei, Fílius Patris.",
         "eng": "O Lord God, heavenly King, God the Father almighty. O Lord Jesus Christ, the only-begotten Son. O Lord God, Lamb of God, Son of the Father."
       },
       {
-        "lat": "Quóniam tu solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, Iesu Christe. Cum Sancto Spíritu, in glória Dei Patris. Amen.",
-        "eng": "For Thou alone art holy. Thou alone art the Lord. Thou alone art the most high, Jesus Christ. With the Holy Ghost, in the glory of God the Father. Amen."
+        "lat": "Qui tollis peccáta mundi, miserére nobis. Qui tollis peccáta mundi, súscipe deprecatiónem nostram. Qui sedes ad déxteram Patris, miserére nobis.",
+        "eng": "Who takest away the sins of the world, have mercy on us. Who takest away the sins of the world, receive our prayer. Who sittest at the right hand of the Father, have mercy on us."
+      },
+      {
+        "lat": "Quóniam tu solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, Jesu Christe. Cum Sancto Spíritu, in glória Dei Patris. Amen.",
+        "eng": "For Thou alone art holy. Thou alone art the Lord. Thou alone art the Most High, Jesus Christ. With the Holy Ghost, in the glory of God the Father. Amen."
       }
     ]
   },
@@ -115,19 +119,27 @@
     "body": [
       {
         "lat": "Credo in unum Deum, Patrem omnipoténtem, factórem cæli et terræ, visibílium ómnium et invisibílium.",
-        "eng": "I believe in one God, the Father almighty, maker of heaven and earth, and of all things visible and invisible."
+        "eng": "I believe in one God, the Father almighty, Maker of heaven and earth, and of all things visible and invisible."
       },
       {
-        "lat": "Et in unum Dóminum Iesum Christum, Fílium Dei unigénitum. Et ex Patre natum ante ómnia sǽcula. Deum de Deo, lumen de lúmine, Deum verum de Deo vero.",
-        "eng": "And in one Lord Jesus Christ, the only-begotten Son of God. Born of the Father before all ages. God of God, light of light, true God of true God."
+        "lat": "Et in unum Dóminum Jesum Christum, Fílium Dei unigénitum. Et ex Patre natum ante ómnia sǽcula. Deum de Deo, lumen de lúmine, Deum verum de Deo vero. Génitum, non factum, consubstantiálem Patri: per quem ómnia facta sunt.",
+        "eng": "And in one Lord Jesus Christ, the only-begotten Son of God. Born of the Father before all ages. God of God, light of light, true God of true God. Begotten, not made, consubstantial with the Father: by Whom all things were made."
       },
       {
-        "lat": "Et incarnátus est de Spíritu Sancto ex María Vírgine: et homo factus est.",
-        "eng": "And was incarnate by the Holy Ghost of the Virgin Mary, and was made man."
+        "lat": "Qui propter nos hómines et propter nostram salútem descéndit de cælis. Et incarnátus est de Spíritu Sancto ex María Vírgine: et homo factus est.",
+        "eng": "Who for us men and for our salvation came down from heaven. And was incarnate by the Holy Ghost of the Virgin Mary: and was made man."
       },
       {
-        "lat": "Crucifíxus étiam pro nobis: sub Póntio Piláto passus, et sepúltus est. Et resurréxit tértia die, secúndum Scriptúras. Et ascéndit in cælum: sedet ad déxteram Patris.",
-        "eng": "He was crucified also for us: suffered under Pontius Pilate, and was buried. And the third day He rose again according to the Scriptures. And ascended into heaven: sitteth at the right hand of the Father."
+        "lat": "Crucifíxus étiam pro nobis: sub Póntio Piláto passus, et sepúltus est. Et resurréxit tértia die, secúndum Scriptúras. Et ascéndit in cælum: sedet ad déxteram Patris. Et íterum ventúrus est cum glória judicáre vivos et mórtuos: cujus regni non erit finis.",
+        "eng": "He was crucified also for us: suffered under Pontius Pilate, and was buried. And the third day He rose again according to the Scriptures. And ascended into heaven: sitteth at the right hand of the Father. And He shall come again with glory to judge the living and the dead: of Whose kingdom there shall be no end."
+      },
+      {
+        "lat": "Et in Spíritum Sanctum, Dóminum et vivificántem: qui ex Patre Filióque procédit. Qui cum Patre et Fílio simul adorátur et conglorificátur: qui locútus est per Prophétas.",
+        "eng": "And in the Holy Ghost, the Lord and Giver of life: Who proceedeth from the Father and the Son. Who together with the Father and the Son is adored and glorified: Who spoke by the Prophets."
+      },
+      {
+        "lat": "Et unam, sanctam, cathólicam et apostólicam Ecclésiam. Confíteor unum baptísma in remissiónem peccatórum. Et exspécto resurrectiónem mortuórum. Et vitam ventúri sǽculi. Amen.",
+        "eng": "And one, holy, Catholic, and Apostolic Church. I confess one Baptism for the remission of sins. And I look for the resurrection of the dead. And the life of the world to come. Amen."
       }
     ]
   },
