@@ -1617,8 +1617,8 @@
       "eng": "Forsake me not, O Lord; my God, be not far from me! Hasten to help me, O Lord, my salvation! O Lord, in Your anger punish me not, in Your wrath chastise me not. Forsake me not, O Lord; my God, be not far from me! Hasten to help me, O Lord, my salvation!"
     },
     "collect": {
-      "lat": "Pópulum tuum, quǽsumus, Dómine, propítius réspice: et, quos ab escis carnálibus prǽcipis abstinére, a nóxiis quoque vítiis cessáre concéde.",
-      "eng": "Look mercifully upon Your people, we beseech You, O Lord, and grant that they whom You command to abstain from food, may also refrain from harmful vices."
+      "lat": "Pópulum tuum, quǽsumus, Dómine, propítius réspice: atque ab eo flagélla tuæ iracúndiæ cleménter avérte. Per Dóminum.",
+      "eng": "Look mercifully upon Thy people, we beseech Thee, O Lord: and in Thy clemency turn away from them the scourges of Thy wrath. Through our Lord."
     },
     "epistle": {
       "ref": "Esth 13:8-11; 13:15-17",
@@ -4563,8 +4563,8 @@
     "color": "white",
     "season": "perAnnum",
     "introit": {
-      "lat": "Os justi meditabitur sapientiam, et lingua ejus loquetur judicium: lex Dei ejus in corde ipsius.",
-      "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
+      "lat": "Benedícta sit sancta Trínitas atque indivísa Unitas: confitébimur ei, quia fecit nobíscum misericórdiam suam.",
+      "eng": "Blessed be the Holy Trinity and undivided Unity: we will give glory to Him, because He hath shown His mercy to us."
     },
     "collect": {
       "lat": "Omnípotens sempitérne Deus, qui dedísti fámulis tuis in confessióne veræ fídei, ætérnæ Trinitátis glóriam agnóscere, et in poténtia majestátis adoráre Unitátem: quǽsumus; ut, ejúsdem fídei firmitáte, ab ómnibus semper muniámur advérsis.",
@@ -5527,9 +5527,9 @@
     "tract": null,
     "sequence": null,
     "gospel": {
-      "ref": "Luc. 12:35-40",
-      "lat": "In illo tempore: Dixit Jesus discipulis suis: Sint lumbi vestri praecincti, et lucernae ardentes in manibus vestris.",
-      "eng": "At that time: Jesus said to His disciples: Let your loins be girt, and lamps burning in your hands."
+      "ref": "Luc. 7:11-16",
+      "lat": "In illo témpore: Ibat Jesus in civitátem, quæ vocátur Naim: et ibant cum eo discípuli ejus et turba copiósa. Cum autem appropinquáret portæ civitátis, ecce defúnctus efferebátur fílius únicus matris suæ: et hæc vídua erat: et turba civitátis multa cum illa. Quam cum vidísset Dóminus, misericórdia motus super eam, dixit illi: Noli flere. Et accéssit et tétigit lóculum. Hi autem, qui portábant, stetérunt. Et ait: Adoléscens, tibi dico, surge. Et resédit, qui erat mórtuus, et cœpit loqui. Et dedit illum matri suæ. Accépit autem omnes timor: et magnificábant Deum, dicéntes: Quia Prophéta magnus surréxit in nobis: et quia Deus visitávit plebem suam.",
+      "eng": "At that time: Jesus went into a city called Naim: and there went with Him His disciples, and a great multitude. And when He came nigh to the gate of the city, behold a dead man was carried out, the only son of his mother, and she was a widow: and a great multitude of the city was with her. Whom when the Lord had seen, being moved with mercy towards her, He said to her: Weep not. And He came near and touched the bier. And they that carried it stood still. And He said: Young man, I say to thee, arise. And he that was dead sat up, and began to speak. And He gave him to his mother. And there came a fear on them all: and they glorified God, saying: A great prophet is risen up among us: and God hath visited His people."
     },
     "offertory": {
       "lat": "Exspéctans exspectávi Dóminum, et respéxit me: et exaudívit deprecatiónem meam: et immísit in os meum cánticum novum, hymnum Deo nostro.",
@@ -6157,12 +6157,12 @@
     "color": "white",
     "season": "sanctorale",
     "introit": {
-      "lat": "Os justi meditabitur sapientiam, et lingua ejus loquetur judicium: lex Dei ejus in corde ipsius.",
-      "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
+      "lat": "Puer natus est nobis, et fílius datus est nobis: cujus impérium super húmerum ejus: et vocábitur nomen ejus magni consílii Angelus.",
+      "eng": "A Child is born to us, and a Son is given to us: Whose government is upon His shoulder: and His Name shall be called the Angel of great counsel."
     },
     "collect": {
-      "lat": "Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda, humáno géneri prǽmia præstitísti: tríbue, quǽsumus; ut ipsam pro nobis intercédere sentiámus, per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum, Fílium tuum. Per eúndem Dóminum.",
-      "eng": "O God, Who by the fruitful virginity of blessed Mary, have bestowed upon mankind the reward of eternal salvation, grant, we beseech You, that we may enjoy the intercession of her through whom we have been found worthy to receive among us the author of life, our Lord Jesus Christ, Your Son,"
+      "lat": "Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda, humáno géneri prǽmia præstitísti: tríbue, quǽsumus; ut ipsam pro nobis intercédere sentiámus, per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum, Fílium tuum.",
+      "eng": "O God, Who by the fruitful virginity of blessed Mary, hast given to mankind the rewards of eternal salvation: grant, we beseech Thee, that we may experience her intercession for us, through whom we have been made worthy to receive the Author of life, our Lord Jesus Christ, Thy Son."
     },
     "epistle": {
       "ref": "Tit 2:11-15",
@@ -17187,8 +17187,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti: concéde propítius; ut, qui jam te ex fide cognóvimus, usque ad contemplándam spéciem tuæ celsitúdinis perducámur.",
+      "eng": "O God, You Who by the guidance of a star this day revealed Your only-begotten Son to the Gentiles; mercifully grant that we who know You now by faith, may come to behold You in glory."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -17235,8 +17235,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Hilarii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Hilarii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -17283,8 +17283,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Pauli Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Pauli Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -17331,8 +17331,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Antonii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Antonii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -17379,8 +17379,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Fabiani Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Fabiani Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -17427,8 +17427,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Timothei Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Timothei Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -17475,8 +17475,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Polycarpi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Polycarpi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -17523,8 +17523,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Ignatii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Ignatii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -17571,8 +17571,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Blasii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Blasii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -17619,8 +17619,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Romualdi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Romualdi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -17667,8 +17667,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Faustini Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Faustini Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -17715,8 +17715,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Simeonis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Simeonis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -17763,8 +17763,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Benedicti Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Benedicti Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -17811,8 +17811,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Isidori Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Isidori Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -17859,8 +17859,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Leonis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Leonis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -17907,8 +17907,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Aniceti Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Aniceti Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -17955,8 +17955,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Anselmi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Anselmi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -18003,8 +18003,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Athanasii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Athanasii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -18051,8 +18051,8 @@
       "eng": "Thou hast loved justice, and hated iniquity: therefore God, Thy God, hath anointed Thee with the oil of gladness above Thy fellows."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Monicæ Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Monicæ Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Cor. 10:17-18; 11:1-2",
@@ -18099,8 +18099,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Gregorii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Gregorii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -18147,8 +18147,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Joannis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Joannis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -18195,8 +18195,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Felicis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Felicis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -18243,8 +18243,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Basilii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Basilii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -18291,8 +18291,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Silverii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Silverii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -18339,8 +18339,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Leonis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Leonis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -18387,8 +18387,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Pii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Pii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -18435,8 +18435,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Joannis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Joannis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -18483,8 +18483,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Anacleti Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Anacleti Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -18531,8 +18531,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Bonaventuræ Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Bonaventuræ Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -18579,8 +18579,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Alexii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Alexii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -18627,8 +18627,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Praxedis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Praxedis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -18675,8 +18675,8 @@
       "eng": "To me, Thy friends, O God, are made exceedingly honourable: their principality is exceedingly strengthened."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Jacobi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Jacobi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eph. 2:19-22",
@@ -18723,8 +18723,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Pantaleonis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Pantaleonis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -18771,8 +18771,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Marthæ Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Marthæ Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -18819,8 +18819,8 @@
       "eng": "Hail, holy Mother, who didst bring forth the King Who ruleth heaven and earth for ever and ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Mariæ Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Mariæ Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 24:14-16",
@@ -18867,8 +18867,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Cyriaci Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Cyriaci Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -18915,8 +18915,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Claræ Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Claræ Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -18963,8 +18963,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Hyacinthi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Hyacinthi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -19011,8 +19011,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Bernardi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Bernardi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -19059,8 +19059,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Zephyrini Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Zephyrini Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -19107,8 +19107,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Ægidii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Ægidii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -19155,8 +19155,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Laurentii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Laurentii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -19203,8 +19203,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Adésto, Dómine, supplicatiónibus nostris, quas in beáti Nicolái Confessóris tui solemnitáte deférimus: ut, qui nostræ justítiæ fidúciam non habémus, ejus, qui tibi plácuit, précibus adjuvémur. Per Dóminum.",
+      "eng": "Give ear, O Lord, to our supplications, which we offer on the solemnity of blessed Nicholas Thy Confessor: that we who have no confidence in our own righteousness, may be helped by the prayers of him who was pleasing to Thee. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -19251,8 +19251,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Cornelii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Cornelii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -19299,8 +19299,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Januarii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Januarii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -19347,8 +19347,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Eustachii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Eustachii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -19395,8 +19395,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Lini Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Lini Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -19443,8 +19443,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Remigii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Remigii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -19491,8 +19491,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Placidi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Placidi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -19539,8 +19539,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Hilarionis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Hilarionis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -19587,8 +19587,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Evaristi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Evaristi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -19635,8 +19635,8 @@
       "eng": "Thou hast loved justice, and hated iniquity: therefore God, Thy God, hath anointed Thee with the oil of gladness above Thy fellows."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Salvatoris Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Salvatoris Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Cor. 10:17-18; 11:1-2",
@@ -19683,8 +19683,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Martini Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Martini Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -19731,8 +19731,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Gregorii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Gregorii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -19779,8 +19779,8 @@
       "eng": "Thou hast loved justice, and hated iniquity: therefore God, Thy God, hath anointed Thee with the oil of gladness above Thy fellows."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Apostolorum Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Apostolorum Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Cor. 10:17-18; 11:1-2",
@@ -19827,8 +19827,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Clementis Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Clementis Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -19875,8 +19875,8 @@
       "eng": "To me, Thy friends, O God, are made exceedingly honourable: their principality is exceedingly strengthened."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Andreæ Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Andreæ Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eph. 2:19-22",
@@ -19923,8 +19923,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Sabbæ Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Sabbæ Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -19971,8 +19971,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Ambrosii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Ambrosii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -20019,8 +20019,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Damasi Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Damasi Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -20067,8 +20067,8 @@
       "eng": "Let the sighing of the prisoners come in before Thee, O Lord: render to our neighbours sevenfold in their bosom: avenge the blood of Thy Saints, which hath been shed."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Eusebii Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Eusebii Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Sap. 3:1-8",
@@ -20115,8 +20115,8 @@
       "eng": "The Lord made to him a covenant of peace, and made him a prince: that the dignity of priesthood should be to him for ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N. Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Silvestri Confessóris tui méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Silvestri Thy Confessor: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 44:16-27; 45:3-20",
@@ -20163,8 +20163,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Stéphani méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Stéphani: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -20211,8 +20211,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Joánnis méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Joánnis: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -20259,8 +20259,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Innocéntium méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Innocéntium: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -20307,8 +20307,8 @@
       "eng": "Hail, holy Mother, who didst bring forth the King Who ruleth heaven and earth for ever and ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti: concéde propítius; ut, qui jam te ex fide cognóvimus, usque ad contemplándam spéciem tuæ celsitúdinis perducámur.",
+      "eng": "O God, You Who by the guidance of a star this day revealed Your only-begotten Son to the Gentiles; mercifully grant that we who know You now by faith, may come to behold You in glory."
     },
     "epistle": {
       "ref": "Eccli. 24:14-16",
@@ -20355,8 +20355,8 @@
       "eng": "Hail, holy Mother, who didst bring forth the King Who ruleth heaven and earth for ever and ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti: concéde propítius; ut, qui jam te ex fide cognóvimus, usque ad contemplándam spéciem tuæ celsitúdinis perducámur.",
+      "eng": "O God, You Who by the guidance of a star this day revealed Your only-begotten Son to the Gentiles; mercifully grant that we who know You now by faith, may come to behold You in glory."
     },
     "epistle": {
       "ref": "Eccli. 24:14-16",
@@ -20403,8 +20403,8 @@
       "eng": "Hail, holy Mother, who didst bring forth the King Who ruleth heaven and earth for ever and ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti: concéde propítius; ut, qui jam te ex fide cognóvimus, usque ad contemplándam spéciem tuæ celsitúdinis perducámur.",
+      "eng": "O God, You Who by the guidance of a star this day revealed Your only-begotten Son to the Gentiles; mercifully grant that we who know You now by faith, may come to behold You in glory."
     },
     "epistle": {
       "ref": "Eccli. 24:14-16",
@@ -20451,8 +20451,8 @@
       "eng": "Hail, holy Mother, who didst bring forth the King Who ruleth heaven and earth for ever and ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti: concéde propítius; ut, qui jam te ex fide cognóvimus, usque ad contemplándam spéciem tuæ celsitúdinis perducámur.",
+      "eng": "O God, You Who by the guidance of a star this day revealed Your only-begotten Son to the Gentiles; mercifully grant that we who know You now by faith, may come to behold You in glory."
     },
     "epistle": {
       "ref": "Eccli. 24:14-16",
@@ -20499,8 +20499,8 @@
       "eng": "Hail, holy Mother, who didst bring forth the King Who ruleth heaven and earth for ever and ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti: concéde propítius; ut, qui jam te ex fide cognóvimus, usque ad contemplándam spéciem tuæ celsitúdinis perducámur.",
+      "eng": "O God, You Who by the guidance of a star this day revealed Your only-begotten Son to the Gentiles; mercifully grant that we who know You now by faith, may come to behold You in glory."
     },
     "epistle": {
       "ref": "Eccli. 24:14-16",
@@ -20547,8 +20547,8 @@
       "eng": "Thou hast loved justice, and hated iniquity: therefore God, Thy God, hath anointed Thee with the oil of gladness above Thy fellows."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Martínæ méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Martínæ: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Cor. 10:17-18; 11:1-2",
@@ -20595,8 +20595,8 @@
       "eng": "Thou hast loved justice, and hated iniquity: therefore God, Thy God, hath anointed Thee with the oil of gladness above Thy fellows."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Agathæ méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Agathæ: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Cor. 10:17-18; 11:1-2",
@@ -20643,8 +20643,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Perpétuæ méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Perpétuæ: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -20691,8 +20691,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Sotéris méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Sotéris: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -20739,8 +20739,8 @@
       "eng": "In Thy strength, O Lord, the just man shall joy: and in Thy salvation he shall rejoice exceedingly: Thou hast given him his heart's desire."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Cleti méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Cleti: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Tim. 2:8-10; 3:10-12",
@@ -20787,8 +20787,8 @@
       "eng": "The mouth of the just shall meditate wisdom, and his tongue shall speak judgment: the law of his God is in his heart."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Ómnium méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Ómnium: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 31:8-11",
@@ -20835,8 +20835,8 @@
       "eng": "Thou hast loved justice, and hated iniquity: therefore God, Thy God, hath anointed Thee with the oil of gladness above Thy fellows."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Lúciæ méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Lúciæ: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "2 Cor. 10:17-18; 11:1-2",
@@ -20883,8 +20883,8 @@
       "eng": "Hail, holy Mother, who didst bring forth the King Who ruleth heaven and earth for ever and ever."
     },
     "collect": {
-      "lat": "Orémus. Deus, qui nos beáti N. méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
-      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed N.: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
+      "lat": "Orémus. Deus, qui nos beáti Immaculátæ méritis et intercessióne lætíficas: concéde propítius; ut, qui ejus benefícia póscimus, dono tuæ grátiæ consequámur. Per Dóminum.",
+      "eng": "Let us pray. O God, Who dost gladden us by the merits and intercession of blessed Immaculátæ: mercifully grant that we who ask for his good offices, may obtain the gift of Thy grace. Through our Lord."
     },
     "epistle": {
       "ref": "Eccli. 24:14-16",
@@ -20915,6 +20915,56 @@
     "postcommunion": {
       "lat": "Sumptis, Domine, salutis nostrae subsidiis: da, quaesumus, beatae Mariae semper Virginis patrociniis nos ubique protegi. Per Dominum.",
       "eng": "Having received the aids of our salvation, O Lord, grant that we may be protected by the patronage of blessed Mary ever Virgin. Through our Lord."
+    },
+    "preface": null
+  },
+  {
+    "slug": "pentecost-sunday",
+    "title": "Domínica Pentecóstes",
+    "english": "Pentecost Sunday",
+    "rank": 1,
+    "color": "red",
+    "season": "easter",
+    "introit": {
+      "lat": "Spíritus Dómini replévit orbem terrárum, allelúja: et hoc quod cóntinet ómnia, sciéntiam habet vocis, allelúja, allelúja, allelúja. Exsúrgat Deus, et dissipéntur inimíci ejus: et fúgiant, qui odérunt eum, a fácie ejus. Spíritus Dómini replévit orbem terrárum, allelúja: et hoc quod cóntinet ómnia, sciéntiam habet vocis, allelúja, allelúja, allelúja.",
+      "eng": "The Spirit of the Lord fills the world, alleluia, is all-embracing, and knows man’s utterance, alleluia, alleluia, alleluia. God arises; His enemies are scattered, and those who hate Him flee before Him. The Spirit of the Lord fills the world, alleluia, is all-embracing, and knows man’s utterance, alleluia, alleluia, alleluia."
+    },
+    "collect": {
+      "lat": "Deus, qui hodiérna die corda fidélium Sancti Spíritus illustratióne docuísti: da nobis in eódem Spíritu recta sápere; et de ejus semper consolatióne gaudére.",
+      "eng": "O God, You Who on this day have taught the hearts of the faithful by the light of the Holy Spirit, grant us by that Holy Spirit Himself, to know what is right and ever to rejoice in His help."
+    },
+    "epistle": {
+      "ref": "Acts 2:1-11",
+      "lat": "Cum compleréntur dies Pentecóstes, erant omnes discípuli pariter in eódem loco: et factus est repénte de cœlo sonus, tamquam adveniéntis spíritus veheméntis: et replévit totam domum, ubi erant sedentes. Et apparuérunt illis dispertítæ linguæ tamquam ignis, sedítque supra síngulos eórum: et repléti sunt omnes Spíritu Sancto, et cœpérunt loqui váriis linguis, prout Spíritus Sanctus dabat éloqui illis. Erant autem in Jerúsalem habitántes Judǽi, viri religiósi ex omni natióne, quæ sub cœlo est. Facta autem hac voce, convénit multitúdo, et mente confúsa est, quóniam audiébat unusquísque lingua sua illos loquéntes. Stupébant autem omnes et mirabántur, dicéntes: Nonne ecce omnes isti, qui loquúntur, Galilǽi sunt? Et quómodo nos audívimus unusquísque linguam nostram, in qua nati sumus? Parthi et Medi et Ælamítæ et qui hábitant Mesopotámiam, Judǽam et Cappadóciam, Pontum et Asiam, Phrýgiam et Pamphýliam, Ægýptum et partes Líbyæ, quæ est circa Cyrénen, et ádvenæ Románi, Judǽi quoque et Prosélyti, Cretes et Arabes: audívimus eos loquéntes nostris linguis magnália Dei.",
+      "eng": "When the days of Pentecost were drawing to a close, they were all together in one place. And suddenly there came a sound from heaven, as of a violent wind blowing, and it filled the whole house where they were sitting. And there appeared to them parted tongues as of fire, which settled upon each of them. And they were all filled with the Holy spirit and began to speak in foreign tongues, even as the Holy Spirit prompted them to speak. Now there were staying at Jerusalem, devout Jews, from every nation under heaven. And when this sound was heard, the multitude gathered and were bewildered in mind, because each heard them speaking in his own language. But they were all amazed and marvelled saying, Behold, are not all these that are speaking Galileans? And how have we heard each his own language in which he was born? Parthians and Medes and Elamites, and inhabitants of Mesopotamia, Judea, and Cappadocia, Pontus and Asia, Phrygia and Pamphilia, Egypt and the parts of Libya about Cyrene, and visitors from Rome, Jews also and proselytes, Cretens and Arabians, we have heard them speaking in our own languages of the wonderful works of God."
+    },
+    "gradual": {
+      "lat": "Allelúja, allelúja. Emítte Spíritum tuum, et creabúntur, et renovábis fáciem terræ. Allelúja. (Hic genuflectitur) V. Veni, Sancte Spíritus, reple tuórum corda fidélium: et tui amóris in eis ignem accénde.",
+      "eng": "Alleluia, alleluia. V. Send forth Your Spirit, and they shall be created: and You shall renew the face of the earth. Alleluia. (Kneel.) V. Come, O Holy Spirit, fill the hearts of Your faithful: and kindle in them the fire of Your love."
+    },
+    "alleluia": null,
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Joannes 14:23-31",
+      "lat": "In illo témpore: Dixit Jesus discípulis suis: Si quis díligit me, sermónem meum servábit, et Pater meus díliget eum, et ad eum veniémus et mansiónem apud eum faciémus: qui non díligit me, sermónes meos non servat. Et sermónem quem audístis, non est meus: sed ejus, qui misit me, Patris. Hæc locútus sum vobis, apud vos manens. Paráclitus autem Spíritus Sanctus, quem mittet Pater in nómine meo, ille vos docébit ómnia et súggeret vobis ómnia, quæcúmque díxero vobis. Pacem relínquo vobis, pacem meam do vobis: non quómodo mundus dat, ego do vobis. Non turbétur cor vestrum neque formídet. Audístis, quia ego dixi vobis: Vado et vénio ad vos. Si diligerétis me, gauderétis útique, quia vado ad Patrem: quia Pater major me est. Et nunc dixi vobis, priúsquam fiat: ut, cum factum fúerit, credátis. Jam non multa loquar vobíscum. Venit enim princeps mundi hujus, et in me non habet quidquam. Sed ut cognóscat mundus, quia díligo Patrem, et sicut mandátum dedit mihi Pater, sic fácio.",
+      "eng": "At that time, Jesus said to His disciples: If anyone love Me, he will keep My word, and My Father will love him, and We will come to him and make Our abode with him. He who does not love Me, does not keep My words. And the word that you have heard is not Mine, but the Father’s Who sent Me. These things I have spoken to you while yet dwelling with you. But the Advocate, the Holy Spirit, Whom the Father will send in My Name, He will teach you all things, and bring to your mind whatever I have said to you. Peace I leave with you, My peace I give to you; not as the world gives do I give to you. Do not let your heart be troubled, or be afraid. You have heard Me say to you, ‘I go away and I am coming to you.’ If you loved Me, you would indeed rejoice that I am going to the Father, for the Father is greater than I. And now I have told you before it comes to pass, that when it has come to pass you may believe. I will no longer speak much with you, for the prince of the world is coming and in Me he has nothing. But he comes that the world may know that I love the Father, and that I do as the Father has commanded Me."
+    },
+    "offertory": {
+      "lat": "Confírma hoc, Deus, quod operátus es in nobis: a templo tuo, quod est in Jerúsalem, tibi ófferent reges múnera, allelúja.",
+      "eng": "Confirm, O God, what You have wrought in us; from Your temple, which is in Jerusalem, kings shall offer gifts to You. Alleluia."
+    },
+    "secret": {
+      "lat": "Múnera, quǽsumus, Dómine, obláta sanctífica: et corda nostra Sancti Spíritus illustratióne emúnda.",
+      "eng": "Sanctify these offerings, we beseech You, O Lord, and cleanse our hearts by the light of the Holy Spirit."
+    },
+    "communion": {
+      "lat": "Factus est repénte de cœlo sonus, tamquam adveniéntis spíritus veheméntis, ubi erant sedéntes, allelúja: et repléti sunt omnes Spíritu Sancto, loquéntes magnália Dei, allelúja, allelúja.",
+      "eng": "Suddenly there came a sound from heaven, as of a violent wind blowing, where they were sitting, alleluia: and they were all filled with the Holy Spirit, speaking of the wonderful works of God, alleluia, alleluia."
+    },
+    "postcommunion": {
+      "lat": "Sancti Spíritus, Dómine, corda nostra mundet infúsio: et sui roris íntima aspersióne fecúndet.",
+      "eng": "May the inpouring of the Holy Spirit cleanse our hearts, O Lord, and make them fertile through the dew He sprinkles upon them."
     },
     "preface": null
   }
