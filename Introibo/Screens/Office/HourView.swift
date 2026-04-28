@@ -134,10 +134,10 @@ struct HourView: View {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
             } else {
                 if let lat = p.lat {
-                    Text(lat).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
+                    Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
                 }
                 if let eng = p.eng {
-                    Text(eng).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
+                    Text(eng.strippingEm).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
                 }
             }
         }
@@ -156,10 +156,10 @@ struct HourView: View {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
             } else {
                 if let lat = p.lat {
-                    Text(lat).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
+                    Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
                 }
                 if let eng = p.eng {
-                    Text(eng).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
+                    Text(eng.strippingEm).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
                 }
             }
         }
