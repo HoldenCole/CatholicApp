@@ -7,15 +7,63 @@
     "body": [
       {
         "lat": "In nómine Patris, ✠ et Fílii, et Spíritus Sancti. Amen.",
-        "eng": "In the name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen."
+        "eng": "In the Name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen."
       },
       {
         "lat": "℣. Introíbo ad altáre Dei.",
-        "eng": "℣. I will go unto the altar of God."
+        "eng": "℣. I will go in unto the altar of God."
       },
       {
-        "lat": "℟. Ad Deum qui lætíficat iuventútem meam.",
+        "lat": "℟. Ad Deum qui lætíficat juventútem meam.",
         "eng": "℟. To God, Who giveth joy to my youth."
+      },
+      {
+        "lat": "℣. Júdica me, Deus, et discérne causam meam de gente non sancta: ab hómine iníquo et dolóso érue me.",
+        "eng": "℣. Judge me, O God, and distinguish my cause from the nation which is not holy: deliver me from the unjust and deceitful man."
+      },
+      {
+        "lat": "℟. Quia tu es, Deus, fortitúdo mea: quare me repulísti, et quare tristis incédo, dum afflígit me inimícus?",
+        "eng": "℟. For Thou, O God, art my strength: why hast Thou cast me off? and why go I sorrowful whilst the enemy afflicteth me?"
+      },
+      {
+        "lat": "℣. Emítte lucem tuam et veritátem tuam: ipsa me deduxérunt et adduxérunt in montem sanctum tuum, et in tabernácula tua.",
+        "eng": "℣. Send forth Thy light and Thy truth: they have conducted me and brought me unto Thy holy mount, and into Thy tabernacles."
+      },
+      {
+        "lat": "℟. Et introíbo ad altáre Dei: ad Deum qui lætíficat juventútem meam.",
+        "eng": "℟. And I will go in unto the altar of God: to God, Who giveth joy to my youth."
+      },
+      {
+        "lat": "℣. Confitébor tibi in cíthara, Deus, Deus meus: quare tristis es, ánima mea, et quare contúrbas me?",
+        "eng": "℣. To Thee, O God, my God, I will give praise upon the harp: why art thou sad, O my soul, and why dost thou disquiet me?"
+      },
+      {
+        "lat": "℟. Spera in Deo, quóniam adhuc confitébor illi: salutáre vultus mei, et Deus meus.",
+        "eng": "℟. Hope in God, for I will still give praise to Him: the salvation of my countenance, and my God."
+      },
+      {
+        "lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
+        "eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "lat": "℟. Sicut erat in princípio, et nunc, et semper: et in sǽcula sæculórum. Amen.",
+        "eng": "℟. As it was in the beginning, is now, and ever shall be: world without end. Amen."
+      },
+      {
+        "lat": "℣. Introíbo ad altáre Dei.",
+        "eng": "℣. I will go in unto the altar of God."
+      },
+      {
+        "lat": "℟. Ad Deum qui lætíficat juventútem meam.",
+        "eng": "℟. To God, Who giveth joy to my youth."
+      },
+      {
+        "lat": "℣. Adjutórium nostrum ✠ in nómine Dómini.",
+        "eng": "℣. Our help ✠ is in the Name of the Lord."
+      },
+      {
+        "lat": "℟. Qui fecit cælum et terram.",
+        "eng": "℟. Who made heaven and earth."
       }
     ]
   },
@@ -26,8 +74,28 @@
     "english": "The Confession",
     "body": [
       {
-        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Ioánni Baptístæ, sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis, quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa.",
-        "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the Saints, that I have sinned exceedingly in thought, word, and deed: through my fault, through my fault, through my most grievous fault."
+        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Joánni Baptístæ, sanctis Apóstolis Petro et Paulo, ómnibus Sanctis, et tibi, pater: quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa.",
+        "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, Father: that I have sinned exceedingly, in thought, word, and deed: through my fault, through my fault, through my most grievous fault."
+      },
+      {
+        "lat": "Ideo precor beátam Maríam semper Vírginem, beátum Michaélem Archángelum, beátum Joánnem Baptístam, sanctos Apóstolos Petrum et Paulum, omnes Sanctos, et te, pater, oráre pro me ad Dóminum Deum nostrum.",
+        "eng": "Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, all the Saints, and you, Father, to pray to the Lord our God for me."
+      },
+      {
+        "lat": "℣. Misereátur tui omnípotens Deus, et dimíssis peccátis tuis, perdúcat te ad vitam ætérnam.",
+        "eng": "℣. May almighty God have mercy on thee, and forgiving thee thy sins, bring thee to everlasting life."
+      },
+      {
+        "lat": "℟. Amen.",
+        "eng": "℟. Amen."
+      },
+      {
+        "lat": "℣. Indulgéntiam, ✠ absolutiónem, et remissiónem peccatórum nostrórum, tríbuat nobis omnípotens et miséricors Dóminus.",
+        "eng": "℣. May the almighty and merciful Lord grant us pardon, ✠ absolution, and remission of our sins."
+      },
+      {
+        "lat": "℟. Amen.",
+        "eng": "℟. Amen."
       }
     ]
   },
@@ -170,12 +238,64 @@
     "english": "The Roman Canon · Consecration",
     "body": [
       {
-        "lat": "Hoc est enim Corpus meum.",
-        "eng": "For this is My Body."
+        "lat": "Te ígitur, clementíssime Pater, per Jesum Christum Fílium tuum, Dóminum nostrum, súpplices rogámus ac pétimus, uti accépta hábeas et benedícas hæc ✠ dona, hæc ✠ múnera, hæc ✠ sancta sacrifícia illibáta.",
+        "eng": "We therefore humbly pray and beseech Thee, most merciful Father, through Jesus Christ Thy Son, our Lord, that Thou wouldst vouchsafe to accept and bless these ✠ gifts, these ✠ presents, these ✠ holy unspotted Sacrifices."
       },
       {
-        "lat": "Hic est enim Calix Sánguinis mei.",
-        "eng": "For this is the Chalice of My Blood."
+        "lat": "Meménto, Dómine, famulórum famularúmque tuárum, et ómnium circumstántium, quorum tibi fides cógnita est et nota devótio.",
+        "eng": "Be mindful, O Lord, of Thy servants and handmaids, and of all here present, whose faith and devotion are known unto Thee."
+      },
+      {
+        "lat": "Commúnicántes, et memóriam venerántes, in primis gloriósæ semper Vírginis Maríæ, Genetrícis Dei et Dómini nostri Jesu Christi.",
+        "eng": "In communion with, and honouring the memory in the first place of the glorious ever Virgin Mary, Mother of our God and Lord Jesus Christ."
+      },
+      {
+        "lat": "Hanc ígitur oblatiónem servitútis nostræ, sed et cunctæ famíliæ tuæ, quǽsumus, Dómine, ut placátus accípias.",
+        "eng": "We therefore beseech Thee, O Lord, graciously to accept this oblation of our service, as also of Thy whole family."
+      },
+      {
+        "lat": "Quam oblatiónem tu, Deus, in ómnibus, quǽsumus, benedíctam, adscríptam, ratam, rationábilem, acceptabilémque fácere dignéris: ut nobis Corpus et Sanguis fiat dilectíssimi Fílii tui Dómini nostri Jesu Christi.",
+        "eng": "Which oblation, we beseech Thee, O God, vouchsafe in all things to make blessed, approved, ratified, reasonable, and acceptable: that it may become for us the Body and Blood of Thy most beloved Son our Lord Jesus Christ."
+      },
+      {
+        "lat": "Qui prídie quam paterétur, accépit panem in sanctas ac venerábiles manus suas, et elevátis óculis in cælum, ad te Deum Patrem suum omnipoténtem, tibi grátias agens, benedíxit, fregit, dedítque discípulis suis, dicens: Accípite, et manducáte ex hoc omnes:",
+        "eng": "Who the day before He suffered, took bread into His holy and venerable hands, and with His eyes lifted up towards heaven, unto Thee, God, His almighty Father, giving thanks to Thee, He blessed, broke, and gave it to His disciples, saying: Take, and eat ye all of this:"
+      },
+      {
+        "lat": "HOC EST ENIM CORPUS MEUM.",
+        "eng": "FOR THIS IS MY BODY."
+      },
+      {
+        "lat": "Símili modo postquam cenátum est, accípiens et hunc præclárum Cálicem in sanctas ac venerábiles manus suas: item tibi grátias agens, benedíxit, dedítque discípulis suis, dicens: Accípite, et bíbite ex eo omnes:",
+        "eng": "In like manner, after He had supped, taking also this excellent Chalice into His holy and venerable hands: and giving thanks to Thee, He blessed, and gave it to His disciples, saying: Take, and drink ye all of this:"
+      },
+      {
+        "lat": "HIC EST ENIM CALIX SÁNGUINIS MEI, NOVI ET ÆTÉRNI TESTAMÉNTI: MYSTÉRIUM FÍDEI: QUI PRO VOBIS ET PRO MULTIS EFFUNDÉTUR IN REMISSIÓNEM PECCATÓRUM.",
+        "eng": "FOR THIS IS THE CHALICE OF MY BLOOD, OF THE NEW AND ETERNAL TESTAMENT: THE MYSTERY OF FAITH: WHICH SHALL BE SHED FOR YOU AND FOR MANY UNTO THE REMISSION OF SINS."
+      },
+      {
+        "lat": "Hæc quotiescúmque fecéritis, in mei memóriam faciétis.",
+        "eng": "As often as ye shall do these things, ye shall do them in remembrance of Me."
+      },
+      {
+        "lat": "Unde et mémores, Dómine, nos servi tui, sed et plebs tua sancta, ejúsdem Christi Fílii tui Dómini nostri tam beátæ passiónis, nec non et ab ínferis resurrectiónis, sed et in cælos gloriósæ ascensiónis.",
+        "eng": "Wherefore, O Lord, we Thy servants, as also Thy holy people, calling to mind the blessed Passion of the same Christ Thy Son our Lord, His Resurrection from the dead, and His glorious Ascension into heaven."
+      },
+      {
+        "lat": "Nobis quoque peccatóribus fámulis tuis, de multitúdine miseratiónum tuárum sperántibus, partem áliquam et societátem donáre dignéris, cum tuis sanctis Apóstolis et Martýribus.",
+        "eng": "To us also, Thy sinful servants, confiding in the multitude of Thy mercies, vouchsafe to grant some part and fellowship with Thy holy Apostles and Martyrs."
+      },
+      {
+        "lat": "Per quem hæc ómnia, Dómine, semper bona creas, sanctí✠ficas, viví✠ficas, bene✠dícis, et præstas nobis.",
+        "eng": "By Whom, O Lord, Thou dost always create, sanc✠tify, quick✠en, ble✠ss, and bestow upon us all these good things."
+      },
+      {
+        "lat": "Per ip✠sum, et cum ip✠so, et in ip✠so, est tibi Deo Patri ✠ omnipoténti, in unitáte Spíritus ✠ Sancti, omnis honor et glória.",
+        "eng": "Through ✠ Him, and with ✠ Him, and in ✠ Him, is unto Thee, God the Father ✠ almighty, in the unity of the Holy ✠ Ghost, all honour and glory."
+      },
+      {
+        "lat": "Per ómnia sǽcula sæculórum. ℟. Amen.",
+        "eng": "World without end. ℟. Amen."
       }
     ]
   },
@@ -187,15 +307,19 @@
     "body": [
       {
         "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra.",
-        "eng": "Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven."
+        "eng": "Our Father, Who art in heaven, hallowed be Thy Name. Thy kingdom come. Thy will be done on earth as it is in heaven."
       },
       {
         "lat": "Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem.",
         "eng": "Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation."
       },
       {
-        "lat": "℟. Sed líbera nos a malo. Amen.",
-        "eng": "℟. But deliver us from evil. Amen."
+        "lat": "℟. Sed líbera nos a malo.",
+        "eng": "℟. But deliver us from evil."
+      },
+      {
+        "lat": "℣. Amen.",
+        "eng": "℣. Amen."
       }
     ]
   },
@@ -238,6 +362,10 @@
     "english": "The Last Gospel · Prologue of St. John",
     "body": [
       {
+        "lat": "℣. Dóminus vobíscum. ℟. Et cum spíritu tuo. Inítium sancti Evangélii secúndum Joánnem. ℟. Glória tibi, Dómine.",
+        "eng": "℣. The Lord be with you. ℟. And with thy spirit. The beginning of the holy Gospel according to John. ℟. Glory be to Thee, O Lord."
+      },
+      {
         "lat": "In princípio erat Verbum, et Verbum erat apud Deum, et Deus erat Verbum. Hoc erat in princípio apud Deum.",
         "eng": "In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God."
       },
@@ -246,12 +374,20 @@
         "eng": "All things were made by Him: and without Him was made nothing that was made. In Him was life, and the life was the light of men: and the light shineth in darkness, and the darkness did not comprehend it."
       },
       {
-        "lat": "Et Verbum caro factum est, et habitávit in nobis.",
-        "eng": "And the Word was made Flesh, and dwelt among us."
+        "lat": "Fuit homo missus a Deo, cui nomen erat Joánnes. Hic venit in testimónium, ut testimónium perhibéret de lúmine, ut omnes créderent per illum. Non erat ille lux, sed ut testimónium perhibéret de lúmine.",
+        "eng": "There was a man sent from God, whose name was John. This man came for a witness, to give testimony of the light, that all men might believe through him. He was not the light, but was to give testimony of the light."
       },
       {
-        "lat": "Et vídimus glóriam eius, glóriam quasi Unigéniti a Patre, plenum grátiæ et veritátis.",
-        "eng": "And we saw His glory, the glory as it were of the only-begotten of the Father, full of grace and truth."
+        "lat": "Erat lux vera, quæ illúminat omnem hóminem veniéntem in hunc mundum. In mundo erat, et mundus per ipsum factus est, et mundus eum non cognóvit.",
+        "eng": "That was the true light, which enlighteneth every man that cometh into this world. He was in the world, and the world was made by Him, and the world knew Him not."
+      },
+      {
+        "lat": "In própria venit, et sui eum non recepérunt. Quotquot autem recepérunt eum, dedit eis potestátem fílios Dei fíeri, his qui credunt in nómine ejus: qui non ex sanguínibus, neque ex voluntáte carnis, neque ex voluntáte viri, sed ex Deo nati sunt.",
+        "eng": "He came unto His own, and His own received Him not. But as many as received Him, He gave them power to be made the sons of God, to them that believe in His Name: who are born, not of blood, nor of the will of the flesh, nor of the will of man, but of God."
+      },
+      {
+        "lat": "Et Verbum caro factum est, et habitávit in nobis: et vídimus glóriam ejus, glóriam quasi Unigéniti a Patre, plenum grátiæ et veritátis.",
+        "eng": "And the Word was made flesh, and dwelt among us: and we saw His glory, the glory as it were of the Only-begotten of the Father, full of grace and truth."
       },
       {
         "lat": "℟. Deo grátias.",
