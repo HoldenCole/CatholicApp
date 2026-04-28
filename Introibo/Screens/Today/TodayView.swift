@@ -29,7 +29,7 @@ struct TodayView: View {
                 SettingsView()
             }
             .sheet(isPresented: $morningOfferingTapped) {
-                if let prayer = ContentStore.shared.prayer(slug: "morning") {
+                if let prayer = ContentStore.shared.prayer(slug: offeringSlug()) {
                     PrayerDetailView(prayer: prayer)
                 }
             }
@@ -357,14 +357,33 @@ struct TodayView: View {
             .buttonStyle(.plain)
 
             Button {
-                // Navigate to Morning Offering prayer
                 morningOfferingTapped = true
             } label: {
-                devotionRow("Morning Offering",
-                            latin: "Oblátio Matutína")
+                devotionRow(offeringTitle(), latin: offeringLatin())
             }
             .buttonStyle(.plain)
         }
+    }
+
+    private func offeringSlug() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return "morning" }
+        if hour < 18 { return "salve" }
+        return "suscipe"
+    }
+
+    private func offeringTitle() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return "Morning Offering" }
+        if hour < 18 { return "Afternoon Prayer" }
+        return "Night Prayer"
+    }
+
+    private func offeringLatin() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return "Oblátio Matutína" }
+        if hour < 18 { return "Salve Regína" }
+        return "Súscipe, Dómine"
     }
 
     private func devotionRow(_ title: String, latin: String) -> some View {
