@@ -5,12 +5,12 @@ import SwiftUI
 // followed-saint card, and schola progress. Mirrors prototype/today.html.
 
 struct TodayView: View {
-    private let ctx = LiturgicalContext.current()
+    private var ctx: LiturgicalContext { .current() }
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var showSettings = false
-    @State private var morningOfferingTapped = false
+    @State private var offeringTapped = false
     @State private var showProper = false
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
@@ -28,7 +28,7 @@ struct TodayView: View {
             .sheet(isPresented: $showSettings) {
                 SettingsView()
             }
-            .sheet(isPresented: $morningOfferingTapped) {
+            .sheet(isPresented: $offeringTapped) {
                 if let prayer = ContentStore.shared.prayer(slug: offeringSlug()) {
                     PrayerDetailView(prayer: prayer)
                 }
@@ -87,6 +87,13 @@ struct TodayView: View {
                     .foregroundStyle(Color.goldLeaf)
                     .padding(.top, 6)
             }
+
+            // Marian antiphon
+            Text(ctx.marian.title)
+                .font(.captionSm)
+                .italic()
+                .foregroundStyle(Color.muted)
+                .padding(.top, 2)
 
             // First Friday / First Saturday / Ember day flags
             if ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay {
@@ -357,7 +364,7 @@ struct TodayView: View {
             .buttonStyle(.plain)
 
             Button {
-                morningOfferingTapped = true
+                offeringTapped = true
             } label: {
                 devotionRow(offeringTitle(), latin: offeringLatin())
             }
@@ -418,9 +425,7 @@ struct TodayView: View {
                     .foregroundStyle(Color.secondaryText)
 
                 if let lastDate = UserProgress.rosaryLastDate() {
-                    let fmt = DateFormatter()
-                    let _ = fmt.dateStyle = .medium
-                    Text("Last prayed: \(fmt.string(from: lastDate))")
+                    Text("Last prayed: \(Self.dateFmt.string(from: lastDate))")
                         .font(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
@@ -466,15 +471,25 @@ struct TodayView: View {
     // MARK: - Schola
 
     private var scholaCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            let mastered = UserProgress.masteredLessons()
-            sectionLabel("Schola", subtitle: "Latin learning")
-            Text("Mastered: \(mastered.count) of 10 lessons")
-                .font(.bodySm)
-                .foregroundStyle(Color.secondaryText)
+        NavigationLink(destination: LearnView()) {
+            VStack(alignment: .leading, spacing: 8) {
+                let mastered = UserProgress.masteredLessons()
+                sectionLabel("Schola", subtitle: "Latin learning")
+                Text("Mastered: \(mastered.count) of 10 lessons")
+                    .font(.bodySm)
+                    .foregroundStyle(Color.secondaryText)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .buttonStyle(.plain)
     }
+
+    private static let dateFmt: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        return f
+    }()
 
     // MARK: - Helpers
 
