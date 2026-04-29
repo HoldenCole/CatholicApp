@@ -1031,5 +1031,30 @@
         "eng": "I forgive all who have injured me, and I ask pardon of all whom I have injured. Amen."
       }
     ]
+  },
+  {
+    "slug": "angeleCustode",
+    "title": "Angele Dei",
+    "eng": "Prayer to the Guardian Angel",
+    "category": "Devotiónes",
+    "note": "A traditional prayer asking for the protection and guidance of one's Guardian Angel. Often taught to children as one of the first prayers learned.",
+    "lines": [
+      {
+        "lat": "Angele Dei, qui custos es mei,",
+        "eng": "Angel of God, my guardian dear,"
+      },
+      {
+        "lat": "me tibi commíssum pietáte supérna,",
+        "eng": "to whom God's love commits me here,"
+      },
+      {
+        "lat": "hodie illúmina, custódi, rege et gubérna.",
+        "eng": "ever this day be at my side,"
+      },
+      {
+        "lat": "Amen.",
+        "eng": "to light and guard, to rule and guide. Amen."
+      }
+    ]
   }
 ]
