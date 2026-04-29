@@ -21,6 +21,7 @@ struct SettingsView: View {
                 resetSection
                 aboutSection
             }
+            .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden)
             .background(Color.pageBackground.ignoresSafeArea())
             .navigationTitle("Settings")
@@ -50,6 +51,7 @@ struct SettingsView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture { riteRaw = r.rawValue }
+                .listRowBackground(Color.pageBackground)
             }
         } header: {
             Text("Ritus · Missal Rite")
@@ -74,9 +76,10 @@ struct SettingsView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture { penanceRaw = d.rawValue }
+                .listRowBackground(Color.pageBackground)
             }
         } header: {
-            Text("Pæniténtia · Penance Discipline")
+            Text("Paenitentia · Penance Discipline")
         } footer: {
             Text("Determines which fasting and abstinence obligations appear on the Today screen.")
         }
@@ -98,6 +101,7 @@ struct SettingsView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture { languageRaw = l.rawValue }
+                .listRowBackground(Color.pageBackground)
             }
         } header: {
             Text("Lingua · Language")
@@ -122,9 +126,10 @@ struct SettingsView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture { themeRaw = t.rawValue }
+                .listRowBackground(Color.pageBackground)
             }
         } header: {
-            Text("Appáritus · Appearance")
+            Text("Apparitus · Appearance")
         } footer: {
             Text("Parchment: warm vellum background. Clean White: modern white with walnut tab bar. Dark: deep walnut for low light.")
         }
@@ -135,7 +140,7 @@ struct SettingsView: View {
     private var fontSizeSection: some View {
         Section {
             VStack(spacing: 12) {
-                Text("Introíbo ad altáre Dei")
+                Text("Introibo ad altare Dei")
                     .font(.system(size: 16 * fontScale, design: .serif))
                     .italic()
                     .foregroundStyle(Color.primaryText)
@@ -156,6 +161,7 @@ struct SettingsView: View {
                 }
             }
             .padding(.vertical, 4)
+            .listRowBackground(Color.pageBackground)
         } header: {
             Text("Littera · Text Size")
         } footer: {
@@ -177,8 +183,9 @@ struct SettingsView: View {
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
+            .listRowBackground(Color.pageBackground)
         } header: {
-            Text("Ópinor · Feedback")
+            Text("Opinor · Feedback")
         } footer: {
             Text("Report issues, suggest features, or share your experience.")
         }
@@ -193,6 +200,7 @@ struct SettingsView: View {
             } label: {
                 Label("Reset All Progress", systemImage: "arrow.counterclockwise")
             }
+            .listRowBackground(Color.pageBackground)
             .confirmationDialog("Clear all local progress?", isPresented: $showResetConfirm) {
                 Button("Reset", role: .destructive) {
                     UserProgress.resetAll()
@@ -202,7 +210,7 @@ struct SettingsView: View {
                 Text("This will clear your followed saint, streaks, rosary history, and mastered lessons. Settings are preserved.")
             }
         } footer: {
-            Text("Clears all local progress. Settings (rite, penance, dark mode) are not affected.")
+            Text("Clears all local progress. Settings (rite, penance, theme) are not affected.")
         }
     }
 
@@ -214,15 +222,18 @@ struct SettingsView: View {
                 Text("Introibo")
                     .italic()
             }
+            .listRowBackground(Color.pageBackground)
             LabeledContent("") {
-                Text("Ad altáre Dei")
+                Text("Ad altare Dei")
                     .font(.caption)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
             }
+            .listRowBackground(Color.pageBackground)
             Text("A prayer companion for traditional Catholics. Ad free. Works offline.")
                 .font(.caption)
                 .foregroundStyle(Color.secondaryText)
+                .listRowBackground(Color.pageBackground)
         } header: {
             Text("About")
         }
