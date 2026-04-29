@@ -339,7 +339,7 @@
       {
         "type": "canticle",
         "label": "Canticum Zachariæ; Benedictus",
-        "ref": "Lk 1:68–75",
+        "ref": "Lk 1:68-75",
         "verses": [
           {
             "lat": "Benedíctus Dóminus Deus Israël, quia visitávit et fecit redemptiónem plebis suæ:",
@@ -899,7 +899,7 @@
       {
         "type": "capitulum",
         "label": "Capitulum",
-        "ref": "2 Cor 1:3–4",
+        "ref": "2 Cor 1:3-4",
         "lat": "Benedíctus Deus, et Pater Dómini nostri Iesu Christi, Pater misericordiárum, et Deus totíus consolatiónis, qui consolátur nos in omni tribulatióne nostra.",
         "eng": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort, who comforteth us in all our tribulation."
       },
@@ -991,7 +991,7 @@
       {
         "type": "canticle",
         "label": "Canticum Mariæ; Magnificat",
-        "ref": "Lk 1:46–55",
+        "ref": "Lk 1:46-55",
         "verses": [
           {
             "lat": "Magníficat ánima mea Dóminum:",
@@ -1053,7 +1053,7 @@
       },
       {
         "type": "vr",
-        "label": "Short Reading (1 Peter 5:8–9)",
+        "label": "Short Reading (1 Peter 5:8-9)",
         "lat": "Frátres: sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret: cui resístite fortes in fide.",
         "eng": "Brethren: be sober and watch; for your adversary the devil, as a roaring lion, goeth about seeking whom he may devour. Resist ye him, strong in faith.",
         "latR": "Tu autem, Dómine, miserére nobis. Deo grátias.",
@@ -1215,7 +1215,7 @@
       {
         "type": "canticle",
         "label": "Canticum Simeónis; Nunc Dimittis",
-        "ref": "Lk 2:29–32",
+        "ref": "Lk 2:29-32",
         "verses": [
           {
             "lat": "Nunc dimíttis servum tuum, Dómine, secúndum verbum tuum in pace:",

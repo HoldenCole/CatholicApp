@@ -6,6 +6,8 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
+    @AppStorage(SettingsKey.textDarkness) private var textDarkness = 0.0
     @State private var showResetConfirm = false
     @Environment(\.dismiss) private var dismiss
 
@@ -17,6 +19,7 @@ struct SettingsView: View {
                 languageSection
                 displaySection
                 fontSizeSection
+                textDarknessSection
                 feedbackSection
                 resetSection
                 aboutSection
@@ -137,35 +140,88 @@ struct SettingsView: View {
 
     // MARK: - Font Size
 
+    private var currentRange: FontRange {
+        FontRange(rawValue: fontRangeRaw) ?? .normal
+    }
+
     private var fontSizeSection: some View {
         Section {
             VStack(spacing: 12) {
                 Text("Introibo ad altare Dei")
                     .font(.system(size: 16 * fontScale, design: .serif))
                     .italic()
-                    .foregroundStyle(Color.primaryText)
+                    .foregroundStyle(Color.primaryText.opacity(1.0 + textDarkness))
                     .frame(maxWidth: .infinity)
                 HStack {
                     Text("A")
-                        .font(.system(size: 12, design: .serif))
+                        .font(.system(size: 10, design: .serif))
                         .foregroundStyle(Color.tertiaryText)
                     Slider(
                         value: $fontScale,
-                        in: FontSizeScale.min...FontSizeScale.max,
+                        in: currentRange.min...currentRange.max,
                         step: 0.05
                     )
                     .tint(Color.sanctuaryRed)
                     Text("A")
-                        .font(.system(size: 22, design: .serif))
+                        .font(.system(size: 24, design: .serif))
+                        .foregroundStyle(Color.tertiaryText)
+                }
+            }
+            .padding(.vertical, 4)
+            .listRowBackground(Color.pageBackground)
+
+            HStack {
+                ForEach(FontRange.allCases) { r in
+                    Button {
+                        fontRangeRaw = r.rawValue
+                        if fontScale < r.min || fontScale > r.max {
+                            fontScale = r.defaultVal
+                        }
+                    } label: {
+                        Text(r.label)
+                            .font(.captionSm)
+                            .foregroundStyle(fontRangeRaw == r.rawValue ? Color.sanctuaryRed : Color.tertiaryText)
+                            .padding(.vertical, 8)
+                            .frame(maxWidth: .infinity)
+                            .background(fontRangeRaw == r.rawValue ? Color.sanctuaryRed.opacity(0.08) : Color.clear)
+                            .cornerRadius(6)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .listRowBackground(Color.pageBackground)
+        } header: {
+            Text("Littera · Text Size")
+        } footer: {
+            Text("Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility.")
+        }
+    }
+
+    private var textDarknessSection: some View {
+        Section {
+            VStack(spacing: 8) {
+                Text("Introibo ad altare Dei")
+                    .font(.system(size: 14, design: .serif))
+                    .italic()
+                    .foregroundStyle(Color.secondaryText.opacity(1.0 + textDarkness))
+                    .frame(maxWidth: .infinity)
+                HStack {
+                    Image(systemName: "sun.max")
+                        .font(.system(size: 10))
+                        .foregroundStyle(Color.tertiaryText)
+                    Slider(value: $textDarkness, in: 0.0...0.5, step: 0.05)
+                        .tint(Color.sanctuaryRed)
+                    Image(systemName: "sun.max.fill")
+                        .font(.system(size: 14))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
             .padding(.vertical, 4)
             .listRowBackground(Color.pageBackground)
         } header: {
-            Text("Littera · Text Size")
+            Text("Obscuritas · Text Darkness")
         } footer: {
-            Text("Adjusts the size of prayer text, the Missal, and the Divine Office.")
+            Text("Darken the English and secondary text for better readability.")
         }
     }
 

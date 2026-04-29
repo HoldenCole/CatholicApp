@@ -61,11 +61,58 @@ enum SettingsKey {
     static let theme     = "settings.theme"
     static let language  = "settings.language"
     static let fontSize  = "settings.fontSize"
+    static let fontRange = "settings.fontRange"
+    static let textDarkness = "settings.textDarkness"
+}
+
+enum FontRange: String, CaseIterable, Identifiable {
+    case smaller = "smaller"
+    case normal  = "normal"
+    case bigger  = "bigger"
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .smaller: return "Smaller"
+        case .normal:  return "Normal"
+        case .bigger:  return "Bigger"
+        }
+    }
+
+    var min: Double {
+        switch self {
+        case .smaller: return 0.7
+        case .normal:  return 1.0
+        case .bigger:  return 1.3
+        }
+    }
+
+    var max: Double {
+        switch self {
+        case .smaller: return 1.1
+        case .normal:  return 1.5
+        case .bigger:  return 2.0
+        }
+    }
+
+    var defaultVal: Double {
+        switch self {
+        case .smaller: return 0.85
+        case .normal:  return 1.15
+        case .bigger:  return 1.5
+        }
+    }
+
+    static func current() -> FontRange {
+        let raw = UserDefaults.standard.string(forKey: SettingsKey.fontRange) ?? "normal"
+        return FontRange(rawValue: raw) ?? .normal
+    }
 }
 
 enum FontSizeScale {
-    static let min: Double = 0.8
-    static let max: Double = 1.4
+    static let min: Double = 0.7
+    static let max: Double = 2.0
     static let defaultValue: Double = 1.15
 
     static func current() -> CGFloat {
