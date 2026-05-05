@@ -36,6 +36,7 @@ platform :ios do
       export_method: "app-store",
       destination: "generic/platform=iOS",
       xcargs: "-allowProvisioningUpdates -authenticationKeyPath '#{key_path}' -authenticationKeyID '#{ENV['ASC_KEY_ID']}' -authenticationKeyIssuerID '#{ENV['ASC_ISSUER_ID']}'",
+      export_xcargs: "-allowProvisioningUpdates -authenticationKeyPath '#{key_path}' -authenticationKeyID '#{ENV['ASC_KEY_ID']}' -authenticationKeyIssuerID '#{ENV['ASC_ISSUER_ID']}'",
       export_options: {
         signingStyle: "automatic",
         teamID: ENV["APPLE_TEAM_ID"],
