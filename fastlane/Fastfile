@@ -13,8 +13,6 @@ platform :ios do
       in_house: false,
     )
 
-    # Write the API key to a file so xcodebuild can use it for
-    # automatic provisioning during both archive and export.
     key_path = File.join(Dir.tmpdir, "AuthKey_#{ENV['ASC_KEY_ID']}.p8")
     File.write(key_path, ENV["ASC_KEY_P8"])
 
@@ -24,40 +22,61 @@ platform :ios do
       path: "Introibo.xcodeproj",
     )
 
-    # Auto-increment build number above whatever App Store Connect has
     latest = latest_testflight_build_number(api_key: api_key, app_identifier: "app.introibo.Introibo") rescue 0
     new_build = latest + 1
     increment_build_number(build_number: new_build, xcodeproj: "Introibo.xcodeproj")
     UI.message("Build number: #{new_build}")
 
-    build_app(
-      project: "Introibo.xcodeproj",
-      scheme: "Introibo",
-      export_method: "app-store",
-      destination: "generic/platform=iOS",
-      xcargs: "-allowProvisioningUpdates -authenticationKeyPath '#{key_path}' -authenticationKeyID '#{ENV['ASC_KEY_ID']}' -authenticationKeyIssuerID '#{ENV['ASC_ISSUER_ID']}'",
-      export_xcargs: "-allowProvisioningUpdates -authenticationKeyPath '#{key_path}' -authenticationKeyID '#{ENV['ASC_KEY_ID']}' -authenticationKeyIssuerID '#{ENV['ASC_ISSUER_ID']}'",
-      export_options: {
-        signingStyle: "automatic",
-        teamID: ENV["APPLE_TEAM_ID"],
-      },
+    archive_path = File.join(Dir.tmpdir, "Introibo.xcarchive")
+
+    # Archive
+    sh(
+      "xcodebuild",
+      "-project", "../Introibo.xcodeproj",
+      "-scheme", "Introibo",
+      "-destination", "generic/platform=iOS",
+      "-archivePath", archive_path,
+      "-allowProvisioningUpdates",
+      "-authenticationKeyPath", key_path,
+      "-authenticationKeyID", ENV["ASC_KEY_ID"],
+      "-authenticationKeyIssuerID", ENV["ASC_ISSUER_ID"],
+      "archive",
+    )
+
+    # Write export options plist
+    export_plist = File.join(Dir.tmpdir, "ExportOptions.plist")
+    File.write(export_plist, <<~PLIST)
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>method</key>
+        <string>app-store</string>
+        <key>signingStyle</key>
+        <string>automatic</string>
+        <key>teamID</key>
+        <string>#{ENV["APPLE_TEAM_ID"]}</string>
+      </dict>
+      </plist>
+    PLIST
+
+    # Export
+    sh(
+      "xcodebuild",
+      "-exportArchive",
+      "-archivePath", archive_path,
+      "-exportPath", "..",
+      "-exportOptionsPlist", export_plist,
+      "-allowProvisioningUpdates",
+      "-authenticationKeyPath", key_path,
+      "-authenticationKeyID", ENV["ASC_KEY_ID"],
+      "-authenticationKeyIssuerID", ENV["ASC_ISSUER_ID"],
     )
 
     upload_to_testflight(
       api_key: api_key,
+      ipa: "../Introibo.ipa",
       skip_waiting_for_build_processing: true,
-    )
-  end
-
-  desc "Build only (CI check, no upload)"
-  lane :build_only do
-    build_app(
-      project: "Introibo.xcodeproj",
-      scheme: "Introibo",
-      destination: "platform=iOS Simulator,name=iPhone 15,OS=latest",
-      configuration: "Debug",
-      skip_archive: true,
-      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO",
     )
   end
 end
