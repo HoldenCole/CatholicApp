@@ -73,9 +73,14 @@ platform :ios do
       "-authenticationKeyIssuerID", ENV["ASC_ISSUER_ID"],
     )
 
+    # Find the exported IPA
+    ipa_path = File.join("..", "Introibo.ipa")
+    ipa_abs = File.expand_path(ipa_path)
+    UI.message("Looking for IPA at: #{ipa_abs}")
+
     upload_to_testflight(
       api_key: api_key,
-      ipa: "../Introibo.ipa",
+      ipa: ipa_abs,
       skip_waiting_for_build_processing: true,
     )
   end
