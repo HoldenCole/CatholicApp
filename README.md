@@ -10,7 +10,7 @@ No accounts. No tracking. No ads. Works completely offline. All data stored loca
 
 ## Overview
 
-Introibo puts the complete 1962 Missale Romanum in your pocket with daily Propers automatically interleaved with the Ordinary in correct liturgical order, so you can follow along at Mass from the Prayers at the Foot of the Altar through the Last Gospel. Beyond the Missal, it is a full daily companion with the Divine Office, an interactive bead-by-bead Rosary, Stations of the Cross, 22 traditional prayers, a Latin school, and a reference library, all in side-by-side Latin and English.
+Introibo puts the complete 1962 Missale Romanum in your pocket with daily Propers automatically interleaved with the Ordinary in correct liturgical order, so you can follow along at Mass from the Prayers at the Foot of the Altar through the Last Gospel. Beyond the Missal, it is a full daily companion with the Divine Office, an interactive bead-by-bead Rosary, Stations of the Cross, 30 traditional prayers, a Latin school, and a reference library, all in side-by-side Latin and English.
 
 Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, and diocesan TLM parishes.
 
@@ -20,8 +20,8 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Missal
 
-- **120+ daily Propers** (Introit, Collect, Epistle, Gradual, Gospel, Offertory, Secret, Communion, Postcommunion) imported from the [DivinumOfficium](https://github.com/DivinumOfficium/divinum-officium) open-source database
-- **Calendar engine** resolving the correct proper for any date via Temporale (Easter-relative moveable feasts covering every Sunday and major weekday) and Sanctorale (18 fixed-date feasts including Christmas, Epiphany, Assumption, Immaculate Conception)
+- **422 daily Propers** (Introit, Collect, Epistle, Gradual, Gospel, Offertory, Secret, Communion, Postcommunion) imported from the [DivinumOfficium](https://github.com/DivinumOfficium/divinum-officium) open-source database
+- **Calendar engine** resolving the correct proper for any date via Temporale (Easter-relative moveable feasts covering every Sunday and major weekday) and Sanctorale (285 saints feast days including Christmas, Epiphany, Assumption, Immaculate Conception)
 - **Interleaved Mass view** weaving Ordinary and Propers together automatically in correct liturgical order: Preces, Introit, Kyrie, Gloria, Collect, Epistle, Gradual, Gospel, Credo, Offertory, Secret, Sanctus, Canon, Communion, Postcommunion, Last Gospel
 - Proper sections visually distinguished with a red left border
 - Toolbar displays today's feast name
@@ -44,7 +44,7 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Prayers
 
-- **22 traditional prayers** in Latin and English with decorative drop cap on the first line
+- **30 traditional prayers** in Latin and English with decorative drop cap on the first line
 - **Time-aware featured prayer**: Morning Offering (before noon), Salve Regina (noon to 6pm), Suscipe (after 6pm)
 - **Sort and filter dropdown**: By Type (grouped by liturgical category) or A to Z (alphabetical)
 - Categories: Rosarium, Missa, Devotiones, Ante Crucifixum
@@ -217,9 +217,9 @@ Introibo/
     Computus.swift                Easter date algorithm
     ProperCalendar.swift          Date to proper slug resolver
   Resources/                     Bundled JSON content
-    propers.json                  120+ Mass proper formularies
+    propers.json                  422 Mass proper formularies
     missal.json                   13 Ordinary sections
-    prayers.json                  22 traditional prayers
+    prayers.json                  30 traditional prayers
     hours.json                    8 canonical hours
     mysteries.json, rosary_prayers.json, stations.json, saints.json,
     courses.json, reference.json, marian_antiphons.json,
