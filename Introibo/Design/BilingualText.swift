@@ -21,10 +21,10 @@ struct BilingualLine: View {
                     .lineSpacing(3)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Text(cleanEng)
-                    .font(.bodySm)
+                    .font(.body)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
-                    .lineSpacing(2)
+                    .lineSpacing(3)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         } else {
@@ -37,10 +37,10 @@ struct BilingualLine: View {
                 }
                 if mode != .latinOnly {
                     Text(cleanEng)
-                        .font(.bodySm)
+                        .font(.body)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
-                        .lineSpacing(2)
+                        .lineSpacing(3)
                 }
             }
         }
