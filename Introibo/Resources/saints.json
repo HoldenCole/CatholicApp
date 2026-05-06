@@ -19,7 +19,7 @@
           },
           {
             "t": "Mental Prayer (30 min)",
-            "d": "Spend half an hour in silent meditation upon the Passion of Our Lord."
+            "d": "Spend thirty minutes in silent mental prayer before the Blessed Sacrament. Padre Pio spent hours in contemplation; even thirty minutes follows his spirit."
           }
         ]
       },
@@ -37,7 +37,7 @@
           },
           {
             "t": "Visit to the Blessed Sacrament",
-            "d": "Sit or kneel before Jesus in the tabernacle, in silence."
+            "d": "Make a visit to the Blessed Sacrament during the day, even if brief. Padre Pio said that Jesus in the tabernacle waits for us with infinite patience and love."
           }
         ]
       },
@@ -47,17 +47,15 @@
         "practices": [
           {
             "t": "Examination of Conscience",
-            "d": "Before sleep, examine the day's faults and offer them to God's mercy."
-          }
-        ]
-      },
-      {
-        "lat": "Pænitentiæ",
-        "eng": "Penances",
-        "practices": [
+            "d": "Before sleep, examine your conscience honestly. Ask God to show you where you have failed in charity, patience, and faithfulness to your duties of state."
+          },
           {
-            "t": "Offer Daily Sufferings",
-            "d": "Unite every pain and difficulty to the Passion of Christ; 'Co-redemption.'"
+            "t": "Pray Three Hail Marys",
+            "d": "Before sleep, pray three Hail Marys for the grace of purity, invoking Our Lady's protection through the night."
+          },
+          {
+            "t": "Spiritual Reading (15 min)",
+            "d": "Read from the lives of the saints or the Imitation of Christ, as Padre Pio recommended to his spiritual children."
           }
         ]
       }
@@ -114,6 +112,14 @@
           {
             "t": "Act of Abandonment",
             "d": "Before sleep, abandon yourself into the merciful arms of Our Heavenly Father, as a little child."
+          },
+          {
+            "t": "Review the Day's Little Sacrifices",
+            "d": "Before bed, recall the small hidden sacrifices you offered throughout the day. Thank God for each one, no matter how small."
+          },
+          {
+            "t": "Prayer to the Holy Face",
+            "d": "Pray before a crucifix or image of the Holy Face, offering reparation for sins against faith and the profanation of Sundays."
           }
         ]
       }
@@ -159,7 +165,7 @@
           },
           {
             "t": "Visit to the Blessed Sacrament",
-            "d": "Adore Christ truly present; the centre of all theology."
+            "d": "Make a visit to the Blessed Sacrament to adore Christ truly present. St. Thomas composed the Tantum Ergo and Adoro Te Devote; let his Eucharistic devotion inspire your own."
           }
         ]
       },
@@ -197,11 +203,11 @@
           },
           {
             "t": "Pray Lauds",
-            "d": "The Divine Office at daybreak. Offer the day's first hours to God."
+            "d": "Pray the hour of Lauds from the Divine Office, greeting the new day with the Church's morning praise. If the full hour is not possible, pray at least one psalm."
           },
           {
             "t": "Lectio Divina (30 min)",
-            "d": "Sacred reading of Scripture; read, meditate, pray, contemplate."
+            "d": "Read Sacred Scripture slowly and prayerfully, lingering over words and phrases. Let the Word of God sink into your heart before beginning the day's labour."
           }
         ]
       },
@@ -229,15 +235,15 @@
         "practices": [
           {
             "t": "Pray Vespers",
-            "d": "The Magnificat at dusk. Thank God for the day's gifts and sorrows."
+            "d": "As the sun sets, pray Vespers to consecrate the evening hours to God. The Magnificat at Vespers is the great song of thanksgiving for the day's graces."
           },
           {
             "t": "Silent Supper",
-            "d": "Eat simply, in silence, with a reading from Scripture or the saints."
+            "d": "Eat your evening meal in silence or with spiritual reading, following the monastic custom of nourishing body and soul together at table."
           },
           {
             "t": "Pray Compline",
-            "d": "The Church's night prayer. Ask protection from the terrors of the night."
+            "d": "End the day with Compline, the Church's night prayer. The Nunc Dimittis and final blessing place the night's rest under God's protection."
           }
         ]
       }
@@ -261,7 +267,7 @@
           },
           {
             "t": "Attend Mass",
-            "d": "Receive Our Lord with the deepest recollection."
+            "d": "Attend Holy Mass with interior recollection. As St. Teresa taught, the Mass is the greatest prayer; be fully present to the Sacred Mysteries."
           },
           {
             "t": "Spiritual Reading",
@@ -279,7 +285,7 @@
           },
           {
             "t": "Practise Recollection",
-            "d": "Even in work or conversation, keep the soul gently turned toward God."
+            "d": "Throughout the day, withdraw briefly into the interior castle of your soul. Even amid work and conversation, maintain awareness of God's presence within you."
           },
           {
             "t": "Offer Small Sacrifices",
@@ -329,7 +335,7 @@
           },
           {
             "t": "Mental Prayer (30 min)",
-            "d": "Spend half an hour in silent conversation with Our Lord."
+            "d": "Dedicate thirty minutes to silent mental prayer in the presence of the Blessed Sacrament or before a crucifix. Speak to God as a friend speaks to a friend."
           }
         ]
       },
@@ -343,7 +349,7 @@
           },
           {
             "t": "Pray the Angelus",
-            "d": "Pause at noon to remember the Incarnation."
+            "d": "At noon, pause whatever you are doing and pray the Angelus. This brief interruption sanctifies the middle of the workday and honours the Incarnation."
           },
           {
             "t": "Pray the Rosary",
@@ -361,7 +367,7 @@
         "practices": [
           {
             "t": "Spiritual Reading (15 min)",
-            "d": "Read from The Way, Furrow, or the Gospels."
+            "d": "Read from a spiritual classic for at least fifteen minutes. St. Josemaria called this nourishment for the soul, as necessary as food for the body."
           },
           {
             "t": "Particular Examination",
