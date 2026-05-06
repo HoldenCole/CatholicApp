@@ -347,13 +347,13 @@ struct TodayView: View {
 
             NavigationLink(destination: OfficeView()) {
                 devotionRow("The Divine Office",
-                            latin: "Officium Divínum — VIII Horæ Canónicæ")
+                            latin: "Officium Divínum, VIII Horæ Canónicæ")
             }
             .buttonStyle(.plain)
 
             NavigationLink(destination: StationsView()) {
                 devotionRow("Stations of the Cross",
-                            latin: "Via Crucis — XIV statiónes")
+                            latin: "Via Crucis, XIV statiónes")
             }
             .buttonStyle(.plain)
 

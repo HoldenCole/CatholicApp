@@ -60,7 +60,7 @@ struct ExamenView: View {
     }
 
     private var introBlock: some View {
-        Text("Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush — but do not dwell past what is useful.")
+        Text("Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush, but do not dwell past what is useful.")
             .font(.bodyIt)
             .foregroundStyle(Color.secondaryText)
             .lineSpacing(4)

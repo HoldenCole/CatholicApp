@@ -195,7 +195,7 @@ struct LiturgicalContext {
             penance = Penance(
                 title: "Lenten Fast",
                 latin: "Ieiúnium Quadragesimále",
-                desc: "Those of fasting age (21–59) observe the Lenten fast: one full meal and two small collations. Wednesdays in Lent are also days of abstinence.",
+                desc: "Those of fasting age (21-59) observe the Lenten fast: one full meal and two small collations. Wednesdays in Lent are also days of abstinence.",
                 rubric: "℟. \(Self.feriaLatin[dow]) in Quadragésima",
                 strict: true
             )
@@ -227,7 +227,7 @@ struct LiturgicalContext {
             penance = Penance(
                 title: "No obligatory penance",
                 latin: "Nulla pænitentia obligatória",
-                desc: "A free day. Voluntary mortifications are always meritorious — choose a small sacrifice as your daily offering.",
+                desc: "A free day. Voluntary mortifications are always meritorious, choose a small sacrifice as your daily offering.",
                 rubric: "℟. \(Self.feriaLatin[dow])",
                 strict: false
             )
@@ -315,7 +315,7 @@ extension LiturgicalContext {
         if season == .easter {
             let daysSinceEaster = cal.dateComponents([.day], from: cal.startOfDay(for: easter), to: today).day ?? 0
             if daysSinceEaster >= 0 && daysSinceEaster <= 7 {
-                return "Octave of Easter — Day \(daysSinceEaster + 1)"
+                return "Octave of Easter, Day \(daysSinceEaster + 1)"
             }
             let daysToPentecost = cal.dateComponents([.day], from: today, to: cal.startOfDay(for: pentecost)).day ?? 0
             if daysToPentecost > 0 && daysToPentecost <= 10 {

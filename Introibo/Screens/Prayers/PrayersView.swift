@@ -13,7 +13,7 @@ struct PrayersView: View {
 
     enum PrayerSort: String, CaseIterable {
         case byCategory = "By Type"
-        case alphabetical = "A–Z"
+        case alphabetical = "A-Z"
     }
 
     var body: some View {
