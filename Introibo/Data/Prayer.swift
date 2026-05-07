@@ -5,10 +5,11 @@ import Foundation
 
 struct Prayer: Identifiable, Decodable, Hashable {
     let slug: String
-    let title: String       // Latin title, may contain diacritics
-    let eng: String         // English name
-    let category: String    // Rosárium | Missa | Devotiónes | Ante Crucifíxum
-    let note: String?       // Optional liturgical note / indulgence info
+    let title: String
+    let eng: String
+    let category: String
+    let note: String?
+    let occasions: [String]?
     let lines: [Line]
 
     var id: String { slug }
