@@ -153,6 +153,7 @@ struct TodayView: View {
     private var mainContent: some View {
         VStack(spacing: 24) {
             saintCard
+            prayerRuleCard
             dailyPsalmCard
             propersCard
             penanceCard
@@ -163,6 +164,56 @@ struct TodayView: View {
         .padding(.horizontal, 28)
         .padding(.top, 24)
         .padding(.bottom, 40)
+    }
+
+    // MARK: - Prayer Rule Card
+
+    @ViewBuilder
+    private var prayerRuleCard: some View {
+        if !UserProgress.prayerRule().isEmpty {
+            NavigationLink(destination: PrayersView()) {
+                HStack(spacing: 14) {
+                    let rule = UserProgress.prayerRule()
+                    let done = UserProgress.completedPrayers().intersection(Set(rule.allSlugs)).count
+                    let total = rule.totalCount
+                    let progress = total > 0 ? Double(done) / Double(total) : 0
+
+                    ZStack {
+                        Circle()
+                            .stroke(Color.frameLine, lineWidth: 3)
+                            .frame(width: 44, height: 44)
+                        Circle()
+                            .trim(from: 0, to: progress)
+                            .stroke(progress >= 1.0 ? Color.goldLeaf : Color.sanctuaryRed, style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                            .frame(width: 44, height: 44)
+                            .rotationEffect(.degrees(-90))
+                        Text("\(done)")
+                            .font(.titleM)
+                            .foregroundStyle(Color.primaryText)
+                    }
+
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Prayer Rule")
+                            .font(.titleM)
+                            .italic()
+                            .foregroundStyle(Color.primaryText)
+                        Text(progress >= 1.0 ? "All prayers complete" : "\(done) of \(total) prayers today")
+                            .font(.captionSm)
+                            .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
+                    }
+
+                    Spacer()
+
+                    Text("Open")
+                        .font(.captionSm)
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+                .padding(14)
+                .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+        }
     }
 
     // MARK: - Daily Psalm

@@ -13,7 +13,9 @@ enum ProgressKey {
     static let saintStreakLast = "saints.streakLast" // prefix: saints.streakLast.<slug>
     static let saintChecklist = "saints.checklist"   // prefix: saints.checklist.<date>
 
-    // Rosary
+    // Prayer Rule
+    static let prayerRule = "prayers.rule"           // JSON-encoded {morning: [slug], midday: [slug], evening: [slug]}
+    static let prayerChecklist = "prayers.checklist"  // prefix: prayers.checklist.<date>
     static let rosaryLastDate = "rosary.lastDate"   // ISO date of last completion
     static let rosaryLastSet = "rosary.lastSet"     // mystery set key
 
@@ -105,6 +107,76 @@ enum UserProgress {
         if mastered { current.insert(slug) } else { current.remove(slug) }
         if let data = try? JSONEncoder().encode(Array(current).sorted()) {
             defaults.set(data, forKey: ProgressKey.learnMastered)
+        }
+    }
+
+    // MARK: - Prayer Rule
+
+    struct PrayerRule: Codable {
+        var morning: [String]
+        var midday: [String]
+        var evening: [String]
+
+        var allSlugs: [String] { morning + midday + evening }
+        var totalCount: Int { allSlugs.count }
+        var isEmpty: Bool { morning.isEmpty && midday.isEmpty && evening.isEmpty }
+    }
+
+    static func prayerRule() -> PrayerRule {
+        guard let data = defaults.data(forKey: ProgressKey.prayerRule),
+              let rule = try? JSONDecoder().decode(PrayerRule.self, from: data) else {
+            return PrayerRule(morning: [], midday: [], evening: [])
+        }
+        return rule
+    }
+
+    static func savePrayerRule(_ rule: PrayerRule) {
+        if let data = try? JSONEncoder().encode(rule) {
+            defaults.set(data, forKey: ProgressKey.prayerRule)
+        }
+    }
+
+    static func addToRule(_ slug: String, period: String) {
+        var rule = prayerRule()
+        switch period {
+        case "morning": if !rule.morning.contains(slug) { rule.morning.append(slug) }
+        case "midday": if !rule.midday.contains(slug) { rule.midday.append(slug) }
+        case "evening": if !rule.evening.contains(slug) { rule.evening.append(slug) }
+        default: break
+        }
+        savePrayerRule(rule)
+    }
+
+    static func removeFromRule(_ slug: String) {
+        var rule = prayerRule()
+        rule.morning.removeAll { $0 == slug }
+        rule.midday.removeAll { $0 == slug }
+        rule.evening.removeAll { $0 == slug }
+        savePrayerRule(rule)
+    }
+
+    private static func prayerChecklistKey(for date: Date = Date()) -> String {
+        let day = ISO8601DateFormatter.dayOnly.string(from: date)
+        return "\(ProgressKey.prayerChecklist).\(day)"
+    }
+
+    static func completedPrayers(for date: Date = Date()) -> Set<String> {
+        guard let data = defaults.data(forKey: prayerChecklistKey(for: date)),
+              let arr = try? JSONDecoder().decode([String].self, from: data) else {
+            return []
+        }
+        return Set(arr)
+    }
+
+    static func togglePrayer(_ slug: String, for date: Date = Date()) {
+        var current = completedPrayers(for: date)
+        if current.contains(slug) {
+            current.remove(slug)
+        } else {
+            current.insert(slug)
+        }
+        if let data = try? JSONEncoder().encode(Array(current).sorted()) {
+            defaults.set(data, forKey: prayerChecklistKey(for: date))
         }
     }
 
