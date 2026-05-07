@@ -11,6 +11,7 @@ enum ProgressKey {
     static let followedSaint = "saints.followed"
     static let saintStreak = "saints.streak"        // prefix: saints.streak.<slug>
     static let saintStreakLast = "saints.streakLast" // prefix: saints.streakLast.<slug>
+    static let saintChecklist = "saints.checklist"   // prefix: saints.checklist.<date>
 
     // Rosary
     static let rosaryLastDate = "rosary.lastDate"   // ISO date of last completion
@@ -107,13 +108,50 @@ enum UserProgress {
         }
     }
 
+    // MARK: - Saint Daily Checklist
+
+    private static func checklistKey(for date: Date = Date()) -> String {
+        let day = ISO8601DateFormatter.dayOnly.string(from: date)
+        return "\(ProgressKey.saintChecklist).\(day)"
+    }
+
+    static func completedPractices(for date: Date = Date()) -> Set<String> {
+        guard let data = defaults.data(forKey: checklistKey(for: date)),
+              let arr = try? JSONDecoder().decode([String].self, from: data) else {
+            return []
+        }
+        return Set(arr)
+    }
+
+    static func togglePractice(_ id: String, for date: Date = Date()) {
+        var current = completedPractices(for: date)
+        if current.contains(id) {
+            current.remove(id)
+        } else {
+            current.insert(id)
+        }
+        if let data = try? JSONEncoder().encode(Array(current).sorted()) {
+            defaults.set(data, forKey: checklistKey(for: date))
+        }
+    }
+
+    static func practiceCompleted(_ id: String, for date: Date = Date()) -> Bool {
+        completedPractices(for: date).contains(id)
+    }
+
+    static func dailyProgress(totalPractices: Int, for date: Date = Date()) -> Double {
+        let done = completedPractices(for: date).count
+        guard totalPractices > 0 else { return 0 }
+        return Double(done) / Double(totalPractices)
+    }
+
     // MARK: - Reset
 
     /// Wipes every Introibo-managed key. Used by the "Reset all progress"
     /// button in Settings. Does not touch system keys.
     static func resetAll() {
         for key in defaults.dictionaryRepresentation().keys {
-            if key.hasPrefix("saints.") || key.hasPrefix("rosary.") || key.hasPrefix("learn.") {
+            if key.hasPrefix("saints.") || key.hasPrefix("rosary.") || key.hasPrefix("learn.") || key.hasPrefix("saints.checklist") {
                 defaults.removeObject(forKey: key)
             }
         }

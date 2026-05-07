@@ -1,18 +1,16 @@
 import SwiftUI
 
-// Saint detail sheet. Shows name, title, quote, charism, and the daily
-// practice schedule (Morning / Throughout Day / Evening) with a
-// follow/unfollow button and streak counter. Mirrors the overlay
-// from prototype/saints.html.
-
 struct SaintDetailView: View {
     let saint: Saint
     @Environment(\.dismiss) private var dismiss
     @AppStorage(ProgressKey.followedSaint) private var followedSlug: String = ""
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var streak: Int = 0
+    @State private var completed: Set<String> = []
 
     private var isFollowed: Bool { followedSlug == saint.slug }
+    private var totalPractices: Int { saint.sections.flatMap { $0.practices }.count }
+    private var progress: Double { totalPractices > 0 ? Double(completed.count) / Double(totalPractices) : 0 }
 
     var body: some View {
         NavigationStack {
@@ -22,6 +20,9 @@ struct SaintDetailView: View {
                     VStack(alignment: .leading, spacing: 24) {
                         quoteBlock
                         followButton
+                        if isFollowed {
+                            progressCard
+                        }
                         ForEach(Array(saint.sections.enumerated()), id: \.offset) { _, section in
                             sectionBlock(section)
                         }
@@ -37,7 +38,10 @@ struct SaintDetailView: View {
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
-            .onAppear { streak = UserProgress.saintStreak(slug: saint.slug) }
+            .onAppear {
+                streak = UserProgress.saintStreak(slug: saint.slug)
+                completed = UserProgress.completedPractices()
+            }
         }
     }
 
@@ -45,7 +49,7 @@ struct SaintDetailView: View {
 
     private var header: some View {
         VStack(spacing: 8) {
-            Text("✠  Praxes Sanctórum  ✠")
+            Text("✠  Praxes Sanctorum  ✠")
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(saint.name)
@@ -82,6 +86,39 @@ struct SaintDetailView: View {
         .background(
             LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
+    }
+
+    // MARK: - Progress card
+
+    private var progressCard: some View {
+        VStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .stroke(Color.frameLine, lineWidth: 4)
+                    .frame(width: 70, height: 70)
+                Circle()
+                    .trim(from: 0, to: progress)
+                    .stroke(Color.sanctuaryRed, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                    .frame(width: 70, height: 70)
+                    .rotationEffect(.degrees(-90))
+                Text("\(completed.count)/\(totalPractices)")
+                    .font(.titleM)
+                    .italic()
+                    .foregroundStyle(Color.primaryText)
+            }
+            Text(progress >= 1.0 ? "Perfect day" : "Today's progress")
+                .font(.captionSm)
+                .italic()
+                .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.tertiaryText)
+            if streak > 0 {
+                Text("\(streak) day streak")
+                    .font(.captionSm)
+                    .foregroundStyle(Color.goldLeaf)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 16)
+        .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
     }
 
     // MARK: - Quote
@@ -125,7 +162,7 @@ struct SaintDetailView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: - Section
+    // MARK: - Section with checkboxes
 
     private func sectionBlock(_ section: Saint.Section) -> some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -138,7 +175,7 @@ struct SaintDetailView: View {
                     .textCase(.uppercase)
                     .tracking(3)
                     .fixedSize()
-                Text("·")
+                Text(".")
                     .foregroundStyle(Color.tertiaryText)
                 Text(section.eng)
                     .font(.captionSm)
@@ -149,21 +186,51 @@ struct SaintDetailView: View {
             }
 
             ForEach(Array(section.practices.enumerated()), id: \.offset) { idx, p in
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(p.t)
-                        .font(.titleM)
-                        .italic()
-                        .foregroundStyle(Color.primaryText)
-                    Text(p.d)
-                        .font(.bodySm)
-                        .foregroundStyle(Color.secondaryText)
-                        .lineSpacing(3)
-                }
-                .padding(.vertical, 4)
+                practiceRow(p, sectionLat: section.lat, index: idx)
                 if idx < section.practices.count - 1 {
                     Divider().background(Color.frameLine.opacity(0.5))
                 }
             }
         }
+    }
+
+    private func practiceRow(_ p: Saint.Practice, sectionLat: String, index: Int) -> some View {
+        let practiceId = "\(saint.slug).\(sectionLat).\(index)"
+        let isDone = completed.contains(practiceId)
+
+        return Button {
+            if isFollowed {
+                UserProgress.togglePractice(practiceId)
+                completed = UserProgress.completedPractices()
+                if completed.count == totalPractices {
+                    UserProgress.bumpSaintStreak(slug: saint.slug)
+                    streak = UserProgress.saintStreak(slug: saint.slug)
+                }
+            }
+        } label: {
+            HStack(alignment: .top, spacing: 12) {
+                if isFollowed {
+                    Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
+                        .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
+                        .font(.system(size: 20))
+                        .padding(.top, 2)
+                }
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(p.t)
+                        .font(.titleM)
+                        .italic()
+                        .foregroundStyle(isDone ? Color.tertiaryText : Color.primaryText)
+                        .strikethrough(isDone, color: Color.tertiaryText)
+                    Text(p.d)
+                        .font(.bodySm)
+                        .foregroundStyle(isDone ? Color.tertiaryText : Color.secondaryText)
+                        .lineSpacing(3)
+                }
+            }
+            .padding(.vertical, 4)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .disabled(!isFollowed)
     }
 }

@@ -447,14 +447,35 @@ struct TodayView: View {
                 if let slug = UserProgress.followedSaint(),
                    let saint = ContentStore.shared.saints.first(where: { $0.slug == slug }) {
                     let streak = UserProgress.saintStreak(slug: slug)
-                    Text(saint.name)
-                        .font(.titleM)
-                        .italic()
-                        .foregroundStyle(Color.primaryText)
-                    if streak > 0 {
-                        Text("\(streak) day\(streak == 1 ? "" : "s")  ·  Continuing")
-                            .font(.captionSm)
-                            .foregroundStyle(Color.goldLeaf)
+                    let total = saint.sections.flatMap { $0.practices }.count
+                    let done = UserProgress.completedPractices().count
+
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(saint.name)
+                                .font(.titleM)
+                                .italic()
+                                .foregroundStyle(Color.primaryText)
+                            if streak > 0 {
+                                Text("\(streak) day streak")
+                                    .font(.captionSm)
+                                    .foregroundStyle(Color.goldLeaf)
+                            }
+                            Text("\(done)/\(total) practices today")
+                                .font(.captionSm)
+                                .foregroundStyle(done == total ? Color.goldLeaf : Color.tertiaryText)
+                        }
+                        Spacer()
+                        ZStack {
+                            Circle()
+                                .stroke(Color.frameLine, lineWidth: 3)
+                                .frame(width: 40, height: 40)
+                            Circle()
+                                .trim(from: 0, to: total > 0 ? Double(done) / Double(total) : 0)
+                                .stroke(Color.sanctuaryRed, style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                                .frame(width: 40, height: 40)
+                                .rotationEffect(.degrees(-90))
+                        }
                     }
                 } else {
                     Text("Choose a saint to follow")
