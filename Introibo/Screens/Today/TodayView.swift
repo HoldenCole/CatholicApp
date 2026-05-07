@@ -152,12 +152,12 @@ struct TodayView: View {
 
     private var mainContent: some View {
         VStack(spacing: 24) {
+            saintCard
             dailyPsalmCard
             propersCard
             penanceCard
             devotionsSection
             rosaryCard
-            saintCard
             scholaCard
         }
         .padding(.horizontal, 28)
@@ -441,49 +441,74 @@ struct TodayView: View {
 
     private var saintCard: some View {
         NavigationLink(destination: SaintsView()) {
-            VStack(alignment: .leading, spacing: 8) {
-                sectionLabel("Praxes Sanctórum", subtitle: "Daily practices")
-
+            VStack(spacing: 12) {
                 if let slug = UserProgress.followedSaint(),
                    let saint = ContentStore.shared.saints.first(where: { $0.slug == slug }) {
                     let streak = UserProgress.saintStreak(slug: slug)
                     let total = saint.sections.flatMap { $0.practices }.count
                     let done = UserProgress.completedPractices().count
+                    let progress = total > 0 ? Double(done) / Double(total) : 0
 
-                    HStack {
+                    HStack(spacing: 16) {
+                        ZStack {
+                            Circle()
+                                .stroke(Color.frameLine, lineWidth: 4)
+                                .frame(width: 56, height: 56)
+                            Circle()
+                                .trim(from: 0, to: progress)
+                                .stroke(progress >= 1.0 ? Color.goldLeaf : Color.sanctuaryRed, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                                .frame(width: 56, height: 56)
+                                .rotationEffect(.degrees(-90))
+                            Text("\(done)")
+                                .font(.titleL)
+                                .foregroundStyle(Color.primaryText)
+                        }
+
                         VStack(alignment: .leading, spacing: 4) {
                             Text(saint.name)
-                                .font(.titleM)
+                                .font(.titleL)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
+                            Text(progress >= 1.0 ? "All practices complete" : "\(done) of \(total) practices today")
+                                .font(.captionSm)
+                                .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                             if streak > 0 {
                                 Text("\(streak) day streak")
                                     .font(.captionSm)
                                     .foregroundStyle(Color.goldLeaf)
                             }
-                            Text("\(done)/\(total) practices today")
-                                .font(.captionSm)
-                                .foregroundStyle(done == total ? Color.goldLeaf : Color.tertiaryText)
                         }
+
                         Spacer()
-                        ZStack {
-                            Circle()
-                                .stroke(Color.frameLine, lineWidth: 3)
-                                .frame(width: 40, height: 40)
-                            Circle()
-                                .trim(from: 0, to: total > 0 ? Double(done) / Double(total) : 0)
-                                .stroke(Color.sanctuaryRed, style: StrokeStyle(lineWidth: 3, lineCap: .round))
-                                .frame(width: 40, height: 40)
-                                .rotationEffect(.degrees(-90))
-                        }
+
+                        Text("Open")
+                            .font(.captionSm)
+                            .foregroundStyle(Color.sanctuaryRed)
                     }
                 } else {
-                    Text("Choose a saint to follow")
-                        .font(.bodyIt)
-                        .foregroundStyle(Color.secondaryText)
+                    VStack(spacing: 8) {
+                        Text("✠")
+                            .font(.titleL)
+                            .foregroundStyle(Color.sanctuaryRed)
+                        Text("Follow a Saint")
+                            .font(.titleM)
+                            .italic()
+                            .foregroundStyle(Color.primaryText)
+                        Text("Choose a patron saint and track daily practices")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                            .multilineTextAlignment(.center)
+                        Text("Begin")
+                            .smallLabel(color: Color.sanctuaryRed)
+                            .padding(.top, 4)
+                    }
+                    .frame(maxWidth: .infinity)
                 }
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(16)
+            .frame(maxWidth: .infinity)
+            .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 1))
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
