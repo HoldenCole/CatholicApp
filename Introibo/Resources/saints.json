@@ -61,7 +61,21 @@
       }
     ],
     "penance": "Offer up a physical suffering today without complaint, uniting it to the Passion of Christ.",
-    "penanceLatin": "Per Crucem ad Lucem"
+    "penanceLatin": "Per Crucem ad Lucem",
+    "prayers": [
+      {
+        "title": "Prayer After Holy Communion",
+        "latin": "Mane nobiscum, Domine, quoniam advesperascit. Mane nobiscum, et esto nostra consolatio. Mane nobiscum, sol occasus nesciens.",
+        "eng": "Stay with us, Lord, for evening is coming. Stay with us and be our consolation. Stay with us, O Sun that knows no setting.",
+        "note": "Composed by St. Padre Pio, prayed after receiving Holy Communion."
+      },
+      {
+        "title": "Prayer for the Five Wounds",
+        "latin": null,
+        "eng": "O Lord Jesus Christ, Who didst submit to the nailing of Thy sacred hands and feet: grant me to love Thee with all my strength, and to find in Thy wounds my refuge and my peace. Amen.",
+        "note": "Padre Pio bore the stigmata for 50 years."
+      }
+    ]
   },
   {
     "slug": "therese",
@@ -125,7 +139,21 @@
       }
     ],
     "penance": "Perform a small hidden sacrifice that no one will notice, offering it as a flower to Jesus.",
-    "penanceLatin": "Via Parvulórum"
+    "penanceLatin": "Via Parvulórum",
+    "prayers": [
+      {
+        "title": "Act of Oblation to Merciful Love",
+        "latin": null,
+        "eng": "O my God, most Blessed Trinity, I desire to love Thee and to make Thee loved, to work for the glory of Holy Church by saving souls on earth and liberating those suffering in Purgatory. I offer Thee all the merits of the saints, with my own merits and those which Thy infinite goodness has placed in my hands. Amen.",
+        "note": "St. Therese made this offering on June 9, 1895, the feast of the Most Holy Trinity."
+      },
+      {
+        "title": "Prayer of Confidence",
+        "latin": null,
+        "eng": "My God, I thank Thee for all the graces Thou hast granted me, especially for having purified me in the crucible of suffering. I shall look upon Thee with joy at the last day, bearing the sceptre of the Cross. Since Thou didst deign to give me this precious Cross, I hope to resemble Thee in heaven and to see the sacred wounds of Thy Passion shine upon my glorified body. Amen.",
+        "note": "From the last writings of St. Therese."
+      }
+    ]
   },
   {
     "slug": "aquinas",
@@ -185,7 +213,21 @@
       }
     ],
     "penance": "Fast from unnecessary words today. Speak only what is true, necessary, and kind.",
-    "penanceLatin": "Siléntium Sanctum"
+    "penanceLatin": "Siléntium Sanctum",
+    "prayers": [
+      {
+        "title": "Prayer Before Study",
+        "latin": "Creator ineffabilis, qui de thesauris sapientiae tuae tres Angelorum hierarchias designasti et eas super caelum empyreum miro ordine collocasti: concede mihi intelligentiam. Amen.",
+        "eng": "O Creator beyond words, Who from the treasures of Thy wisdom didst appoint three hierarchies of Angels and set them in wonderful order above the heavens: grant me understanding. Amen.",
+        "note": "St. Thomas prayed this before every study session."
+      },
+      {
+        "title": "Adoro Te Devote",
+        "latin": "Adoro te devote, latens Deitas, quae sub his figuris vere latitas: tibi se cor meum totum subjicit, quia te contemplans totum deficit.",
+        "eng": "I devoutly adore Thee, O hidden Godhead, truly hidden beneath these appearances: my whole heart submits to Thee, for in contemplating Thee it wholly fails.",
+        "note": "Composed by St. Thomas Aquinas for the feast of Corpus Christi."
+      }
+    ]
   },
   {
     "slug": "benedict",
@@ -249,7 +291,21 @@
       }
     ],
     "penance": "Eat simply today: one full meal and two small collations, in the spirit of the Rule.",
-    "penanceLatin": "Regula et Vita"
+    "penanceLatin": "Regula et Vita",
+    "prayers": [
+      {
+        "title": "Prayer for a Happy Death",
+        "latin": "O Domine Deus meus, ne tradas me in manus inimici: sed fac me victorem in hora mortis meae.",
+        "eng": "O Lord my God, deliver me not into the hands of the enemy: but make me victorious in the hour of my death.",
+        "note": "St. Benedict died standing, supported by his monks, arms raised in prayer."
+      },
+      {
+        "title": "The Medal Prayer",
+        "latin": "Crux sacra sit mihi lux. Non draco sit mihi dux. Vade retro satana. Numquam suade mihi vana. Sunt mala quae libas. Ipse venena bibas.",
+        "eng": "Let the Holy Cross be my light. Let not the dragon be my guide. Begone, Satan. Never tempt me with vanities. What you offer is evil. Drink your own poison.",
+        "note": "Inscribed on the St. Benedict Medal, a powerful sacramental."
+      }
+    ]
   },
   {
     "slug": "teresa",
@@ -309,7 +365,21 @@
       }
     ],
     "penance": "Deny yourself one comfort you normally enjoy, offering it for the conversion of sinners.",
-    "penanceLatin": "Nada te turbe"
+    "penanceLatin": "Nada te turbe",
+    "prayers": [
+      {
+        "title": "Bookmark Prayer",
+        "latin": "Nada te turbe, nada te espante, todo se pasa. Dios no se muda. La paciencia todo lo alcanza. Quien a Dios tiene nada le falta. Solo Dios basta.",
+        "eng": "Let nothing disturb thee, nothing affright thee. All things are passing. God never changes. Patience attains all things. He who possesses God lacks nothing. God alone suffices.",
+        "note": "Found in the breviary of St. Teresa after her death. Originally in Spanish."
+      },
+      {
+        "title": "Prayer of Self-Offering",
+        "latin": null,
+        "eng": "I am Thine, O Lord. I was born for Thee. What is Thy will for me? Let me be rich or beggared, exulting or repining, comforted or lonely. Since Thou art my King, what is Thy will for me? Speak, Lord, for Thy servant heareth. Amen.",
+        "note": "From the writings of St. Teresa of Avila."
+      }
+    ]
   },
   {
     "slug": "escriva",
@@ -377,7 +447,21 @@
       }
     ],
     "penance": "Sanctify your ordinary work today by offering each task to God before beginning it.",
-    "penanceLatin": "Sanctificátio Óperis"
+    "penanceLatin": "Sanctificátio Óperis",
+    "prayers": [
+      {
+        "title": "Prayer for Sanctifying Work",
+        "latin": null,
+        "eng": "Lord, grant me the grace to see my ordinary work as the material for my sanctification. Help me to turn every task, every conversation, every moment of this day into a prayer, so that at its end I may offer it all to Thee as something worthy of Thy love. Amen.",
+        "note": "Inspired by the spirit of Opus Dei, the sanctification of ordinary life."
+      },
+      {
+        "title": "Prayer to the Guardian Angels",
+        "latin": null,
+        "eng": "Holy Guardian Angels of those in my care: help me always to be aware that God is watching, and to serve Him in them with fidelity and love. Defend me from the evil one, and lead me along the paths of peace. Amen.",
+        "note": "St. Josemaria had a great devotion to the Guardian Angels."
+      }
+    ]
   },
   {
     "slug": "desales",
@@ -437,6 +521,20 @@
       }
     ],
     "penance": "Practice gentleness with everyone you meet today, especially those who irritate you.",
-    "penanceLatin": "Mansuetúdo Cordis"
+    "penanceLatin": "Mansuetúdo Cordis",
+    "prayers": [
+      {
+        "title": "Prayer of Gentle Trust",
+        "latin": null,
+        "eng": "Do not look forward to the changes and chances of this life in fear; rather look to them with full hope that, as they arise, God, whose you are, will deliver you out of them. He has kept you hitherto; hold fast to His hand, and He will lead you safely through all things. Amen.",
+        "note": "Adapted from the letters of St. Francis de Sales."
+      },
+      {
+        "title": "Prayer for a Devout Life",
+        "latin": null,
+        "eng": "My God, I give Thee my whole will. I desire to begin this day for Thy honour and glory. I offer Thee all the actions of this day, and I pray Thee to give me the grace to do nothing that is contrary to Thy will. Enlighten my understanding, strengthen my will, purify my heart, and sanctify my soul. Amen.",
+        "note": "Inspired by the Introduction to the Devout Life."
+      }
+    ]
   }
 ]

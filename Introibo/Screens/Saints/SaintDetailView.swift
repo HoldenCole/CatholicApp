@@ -26,6 +26,9 @@ struct SaintDetailView: View {
                         ForEach(Array(saint.sections.enumerated()), id: \.offset) { _, section in
                             sectionBlock(section)
                         }
+                        if let prayers = saint.prayers, !prayers.isEmpty {
+                            saintPrayersBlock(prayers)
+                        }
                     }
                     .padding(.horizontal, 28)
                     .padding(.vertical, 24)
@@ -232,5 +235,68 @@ struct SaintDetailView: View {
         }
         .buttonStyle(.plain)
         .disabled(!isFollowed)
+    }
+
+    // MARK: - Saint prayers
+
+    private func saintPrayersBlock(_ prayers: [Saint.SaintPrayer]) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 10) {
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+                Text("Orationes")
+                    .font(.caption)
+                    .italic()
+                    .foregroundStyle(Color.sanctuaryRed)
+                    .textCase(.uppercase)
+                    .tracking(3)
+                    .fixedSize()
+                Text(".")
+                    .foregroundStyle(Color.tertiaryText)
+                Text("Prayers")
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.secondaryText)
+                    .fixedSize()
+                Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
+            }
+
+            ForEach(prayers) { prayer in
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(prayer.title)
+                        .font(.titleM)
+                        .italic()
+                        .foregroundStyle(Color.primaryText)
+
+                    if let note = prayer.note {
+                        Text(note)
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.goldLeaf)
+                    }
+
+                    if let latin = prayer.latin {
+                        Text(latin)
+                            .font(.body)
+                            .foregroundStyle(Color.primaryText)
+                            .lineSpacing(3)
+                    }
+
+                    Text(prayer.eng)
+                        .font(.body)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                        .lineSpacing(3)
+                }
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .overlay(
+                    Rectangle()
+                        .fill(Color.sanctuaryRed.opacity(0.15))
+                        .frame(width: 2)
+                    , alignment: .leading
+                )
+            }
+        }
     }
 }

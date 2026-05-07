@@ -11,6 +11,7 @@ struct Saint: Identifiable, Decodable, Hashable {
     let penance: String?
     let penanceLatin: String?
     let sections: [Section]
+    let prayers: [SaintPrayer]?
 
     var id: String { slug }
 
@@ -21,7 +22,16 @@ struct Saint: Identifiable, Decodable, Hashable {
     }
 
     struct Practice: Decodable, Hashable {
-        let t: String   // title
-        let d: String   // description
+        let t: String
+        let d: String
+    }
+
+    struct SaintPrayer: Decodable, Hashable, Identifiable {
+        let title: String
+        let latin: String?
+        let eng: String
+        let note: String?
+
+        var id: String { title }
     }
 }
