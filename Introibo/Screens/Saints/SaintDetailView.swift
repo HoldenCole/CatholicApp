@@ -274,18 +274,7 @@ struct SaintDetailView: View {
                             .foregroundStyle(Color.goldLeaf)
                     }
 
-                    if let latin = prayer.latin {
-                        Text(latin)
-                            .font(.body)
-                            .foregroundStyle(Color.primaryText)
-                            .lineSpacing(3)
-                    }
-
-                    Text(prayer.eng)
-                        .font(.body)
-                        .italic()
-                        .foregroundStyle(Color.secondaryText)
-                        .lineSpacing(3)
+                    BilingualLine(lat: prayer.latin ?? "", eng: prayer.eng, sideBySide: true)
                 }
                 .padding(.vertical, 8)
                 .padding(.horizontal, 12)
