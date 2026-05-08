@@ -76,7 +76,7 @@ struct LearnView: View {
             c.sections.filter { $0.type == "cards" }.flatMap { $0.items ?? [] }
         }.filter { $0.lat != nil && $0.eng != nil }
 
-        let dayIndex = Calendar.current.component(.dayOfYear, from: Date()) % max(allCards.count, 1)
+        let dayIndex = (Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1) % max(allCards.count, 1)
         let card = allCards.isEmpty ? nil : allCards[dayIndex]
 
         return Group {

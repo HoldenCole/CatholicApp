@@ -226,7 +226,7 @@ struct PropersSearchView: View {
             $0.english.lowercased().contains(q) ||
             $0.epistle.ref.lowercased().contains(q) ||
             $0.gospel.ref.lowercased().contains(q) ||
-            ($0.date ?? "").contains(q)
+            $0.slug.lowercased().contains(q)
         }
     }
 
