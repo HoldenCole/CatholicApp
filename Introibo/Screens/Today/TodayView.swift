@@ -583,8 +583,6 @@ struct TodayView: View {
         .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 1))
         .contentShape(Rectangle())
     }
-        .buttonStyle(.plain)
-    }
 
     // MARK: - Schola
 
