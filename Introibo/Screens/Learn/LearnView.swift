@@ -29,6 +29,8 @@ struct LearnView: View {
         }
     }
 
+    // MARK: - Header with progress
+
     private var header: some View {
         VStack(spacing: 14) {
             ZStack {
@@ -67,6 +69,8 @@ struct LearnView: View {
         .padding(.vertical, 20)
     }
 
+    // MARK: - Daily flashcard
+
     private var dailyCard: some View {
         let allCards = store.courses.flatMap { c in
             c.sections.filter { $0.type == "cards" }.flatMap { $0.items ?? [] }
@@ -100,6 +104,8 @@ struct LearnView: View {
             }
         }
     }
+
+    // MARK: - Lessons
 
     private var lessonsSection: some View {
         VStack(alignment: .leading, spacing: 0) {
