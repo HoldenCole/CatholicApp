@@ -152,11 +152,11 @@ struct TodayView: View {
 
     private var mainContent: some View {
         VStack(spacing: 24) {
-            saintCard
-            prayerRuleCard
             dailyPsalmCard
             propersCard
             penanceCard
+            saintCard
+            prayerRuleCard
             devotionsSection
             rosaryCard
             scholaCard
@@ -490,78 +490,99 @@ struct TodayView: View {
 
     // MARK: - Saint
 
+    @State private var showSaintDetail = false
+
     private var saintCard: some View {
-        NavigationLink(destination: SaintsView()) {
-            VStack(spacing: 12) {
-                if let slug = UserProgress.followedSaint(),
-                   let saint = ContentStore.shared.saints.first(where: { $0.slug == slug }) {
-                    let streak = UserProgress.saintStreak(slug: slug)
-                    let total = saint.sections.flatMap { $0.practices }.count
-                    let done = UserProgress.completedPractices().count
-                    let progress = total > 0 ? Double(done) / Double(total) : 0
+        Group {
+            if let slug = UserProgress.followedSaint(),
+               let saint = ContentStore.shared.saints.first(where: { $0.slug == slug }) {
+                Button { showSaintDetail = true } label: {
+                    saintCardFollowing(saint)
+                }
+                .buttonStyle(.plain)
+                .sheet(isPresented: $showSaintDetail) {
+                    SaintDetailView(saint: saint)
+                }
+            } else {
+                NavigationLink(destination: SaintsView()) {
+                    saintCardEmpty
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
 
-                    HStack(spacing: 16) {
-                        ZStack {
-                            Circle()
-                                .stroke(Color.frameLine, lineWidth: 4)
-                                .frame(width: 56, height: 56)
-                            Circle()
-                                .trim(from: 0, to: progress)
-                                .stroke(progress >= 1.0 ? Color.goldLeaf : Color.sanctuaryRed, style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                                .frame(width: 56, height: 56)
-                                .rotationEffect(.degrees(-90))
-                            Text("\(done)")
-                                .font(.titleL)
-                                .foregroundStyle(Color.primaryText)
-                        }
+    private func saintCardFollowing(_ saint: Saint) -> some View {
+        let streak = UserProgress.saintStreak(slug: saint.slug)
+        let total = saint.sections.flatMap { $0.practices }.count
+        let done = UserProgress.completedPractices().count
+        let progress = total > 0 ? Double(done) / Double(total) : 0
 
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(saint.name)
-                                .font(.titleL)
-                                .italic()
-                                .foregroundStyle(Color.primaryText)
-                            Text(progress >= 1.0 ? "All practices complete" : "\(done) of \(total) practices today")
-                                .font(.captionSm)
-                                .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
-                            if streak > 0 {
-                                Text("\(streak) day streak")
-                                    .font(.captionSm)
-                                    .foregroundStyle(Color.goldLeaf)
-                            }
-                        }
+        return HStack(spacing: 16) {
+            ZStack {
+                Circle()
+                    .stroke(Color.frameLine, lineWidth: 4)
+                    .frame(width: 56, height: 56)
+                Circle()
+                    .trim(from: 0, to: progress)
+                    .stroke(progress >= 1.0 ? Color.goldLeaf : Color.sanctuaryRed, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                    .frame(width: 56, height: 56)
+                    .rotationEffect(.degrees(-90))
+                Text("\(done)")
+                    .font(.titleL)
+                    .foregroundStyle(Color.primaryText)
+            }
 
-                        Spacer()
-
-                        Text("Open")
-                            .font(.captionSm)
-                            .foregroundStyle(Color.sanctuaryRed)
-                    }
-                } else {
-                    VStack(spacing: 8) {
-                        Text("✠")
-                            .font(.titleL)
-                            .foregroundStyle(Color.sanctuaryRed)
-                        Text("Follow a Saint")
-                            .font(.titleM)
-                            .italic()
-                            .foregroundStyle(Color.primaryText)
-                        Text("Choose a patron saint and track daily practices")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.secondaryText)
-                            .multilineTextAlignment(.center)
-                        Text("Begin")
-                            .smallLabel(color: Color.sanctuaryRed)
-                            .padding(.top, 4)
-                    }
-                    .frame(maxWidth: .infinity)
+            VStack(alignment: .leading, spacing: 4) {
+                Text(saint.name)
+                    .font(.titleL)
+                    .italic()
+                    .foregroundStyle(Color.primaryText)
+                Text(progress >= 1.0 ? "All practices complete" : "\(done) of \(total) practices today")
+                    .font(.captionSm)
+                    .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
+                if streak > 0 {
+                    Text("\(streak) day streak")
+                        .font(.captionSm)
+                        .foregroundStyle(Color.goldLeaf)
                 }
             }
-            .padding(16)
-            .frame(maxWidth: .infinity)
-            .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 1))
-            .contentShape(Rectangle())
+
+            Spacer()
+
+            Text("Open")
+                .font(.captionSm)
+                .foregroundStyle(Color.sanctuaryRed)
         }
+        .padding(16)
+        .frame(maxWidth: .infinity)
+        .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 1))
+        .contentShape(Rectangle())
+    }
+
+    private var saintCardEmpty: some View {
+        VStack(spacing: 8) {
+            Text("✠")
+                .font(.titleL)
+                .foregroundStyle(Color.sanctuaryRed)
+            Text("Follow a Saint")
+                .font(.titleM)
+                .italic()
+                .foregroundStyle(Color.primaryText)
+            Text("Choose a patron saint and track daily practices")
+                .font(.captionSm)
+                .italic()
+                .foregroundStyle(Color.secondaryText)
+                .multilineTextAlignment(.center)
+            Text("Begin")
+                .smallLabel(color: Color.sanctuaryRed)
+                .padding(.top, 4)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(16)
+        .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 1))
+        .contentShape(Rectangle())
+    }
         .buttonStyle(.plain)
     }
 
