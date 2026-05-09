@@ -150,7 +150,7 @@ struct SettingsView: View {
                 Text("Introibo ad altare Dei")
                     .font(.system(size: 16 * fontScale, design: .serif))
                     .italic()
-                    .foregroundStyle(Color.primaryText.opacity(1.0 + textDarkness))
+                    .foregroundStyle(Color.primaryText)
                     .frame(maxWidth: .infinity)
                 HStack {
                     Text("A")
@@ -203,7 +203,7 @@ struct SettingsView: View {
                 Text("Introibo ad altare Dei")
                     .font(.system(size: 14, design: .serif))
                     .italic()
-                    .foregroundStyle(Color.secondaryText.opacity(1.0 + textDarkness))
+                    .foregroundStyle(Color.secondaryText)
                     .frame(maxWidth: .infinity)
                 HStack {
                     Image(systemName: "sun.max")

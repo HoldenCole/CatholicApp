@@ -20,17 +20,26 @@ extension Color {
     static let ink       = Color(red:  28/255, green:  20/255, blue:  16/255)
     static let sepia     = Color(red:  90/255, green:  74/255, blue:  58/255)
     static let muted     = Color(red: 154/255, green: 134/255, blue: 112/255)
-    static let sanctuaryRed = Color(red: 139/255, green:  26/255, blue:  26/255)
     static let goldLeaf    = Color(red: 184/255, green: 150/255, blue:  12/255)
     static let walnut      = Color(red:  26/255, green:  19/255, blue:  12/255)
     static let walnutHi    = Color(red:  44/255, green:  32/255, blue:  21/255)
     static let ivory       = Color(red: 232/255, green: 223/255, blue: 201/255)
 
-    // MARK: - Semantic tokens (dark-mode aware)
-    // These pick light/dark variants automatically based on the user's
-    // interface style. Views should prefer these over the raw palette.
+    private static var darkness: Double {
+        UserDefaults.standard.double(forKey: "settings.textDarkness")
+    }
 
-    /// Page background — parchment (default), white (clean), or walnut (dark).
+    // MARK: - Theme-aware accent
+    static var sanctuaryRed: Color {
+        switch AppTheme.current() {
+        case .dark: return Color(red: 210/255, green: 80/255, blue: 80/255)
+        default:    return Color(red: 139/255, green: 26/255, blue: 26/255)
+        }
+    }
+
+    // MARK: - Semantic tokens (dark-mode aware)
+
+    /// Page background
     static var pageBackground: Color {
         switch AppTheme.current() {
         case .parchment: return parchment
@@ -39,21 +48,23 @@ extension Color {
         }
     }
 
-    /// Primary text — ink on light backgrounds, ivory on dark.
+    /// Primary text — darkness slider makes it bolder on light, brighter on dark.
     static var primaryText: Color {
+        let d = darkness
         switch AppTheme.current() {
-        case .parchment: return ink
-        case .white:     return ink
-        case .dark:      return Color(red: 240/255, green: 233/255, blue: 215/255)
+        case .parchment: return Color(red: max(28 - d * 56, 0)/255, green: max(20 - d * 40, 0)/255, blue: max(16 - d * 32, 0)/255)
+        case .white:     return Color(red: max(28 - d * 56, 0)/255, green: max(20 - d * 40, 0)/255, blue: max(16 - d * 32, 0)/255)
+        case .dark:      return Color(red: min(240 + d * 30, 255)/255, green: min(233 + d * 30, 255)/255, blue: min(215 + d * 30, 255)/255)
         }
     }
 
-    /// Secondary text — sepia on light, brighter muted on dark.
+    /// Secondary text
     static var secondaryText: Color {
+        let d = darkness
         switch AppTheme.current() {
-        case .parchment: return sepia
-        case .white:     return sepia
-        case .dark:      return Color(red: 185/255, green: 168/255, blue: 145/255)
+        case .parchment: return Color(red: max(90 - d * 80, 20)/255, green: max(74 - d * 66, 14)/255, blue: max(58 - d * 52, 10)/255)
+        case .white:     return Color(red: max(90 - d * 80, 20)/255, green: max(74 - d * 66, 14)/255, blue: max(58 - d * 52, 10)/255)
+        case .dark:      return Color(red: min(185 + d * 40, 230)/255, green: min(168 + d * 36, 220)/255, blue: min(145 + d * 30, 200)/255)
         }
     }
 
