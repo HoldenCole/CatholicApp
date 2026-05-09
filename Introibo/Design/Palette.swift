@@ -32,7 +32,7 @@ extension Color {
     // MARK: - Theme-aware accent
     static var sanctuaryRed: Color {
         switch AppTheme.current() {
-        case .dark: return Color(red: 210/255, green: 80/255, blue: 80/255)
+        case .dark: return Color(red: 220/255, green: 90/255, blue: 90/255)
         default:    return Color(red: 139/255, green: 26/255, blue: 26/255)
         }
     }
@@ -73,7 +73,7 @@ extension Color {
         switch AppTheme.current() {
         case .parchment: return muted
         case .white:     return muted
-        case .dark:      return Color(red: 140/255, green: 122/255, blue: 100/255)
+        case .dark:      return Color(red: 155/255, green: 137/255, blue: 115/255)
         }
     }
 
