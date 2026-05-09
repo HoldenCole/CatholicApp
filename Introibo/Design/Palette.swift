@@ -25,10 +25,6 @@ extension Color {
     static let walnutHi    = Color(red:  44/255, green:  32/255, blue:  21/255)
     static let ivory       = Color(red: 232/255, green: 223/255, blue: 201/255)
 
-    private static var darkness: Double {
-        UserDefaults.standard.double(forKey: "settings.textDarkness")
-    }
-
     // MARK: - Theme-aware accent
     static var sanctuaryRed: Color {
         switch AppTheme.current() {
@@ -48,23 +44,21 @@ extension Color {
         }
     }
 
-    /// Primary text — darkness slider makes it bolder on light, brighter on dark.
+    /// Primary text
     static var primaryText: Color {
-        let d = darkness
         switch AppTheme.current() {
-        case .parchment: return Color(red: max(28 - d * 56, 0)/255, green: max(20 - d * 40, 0)/255, blue: max(16 - d * 32, 0)/255)
-        case .white:     return Color(red: max(28 - d * 56, 0)/255, green: max(20 - d * 40, 0)/255, blue: max(16 - d * 32, 0)/255)
-        case .dark:      return Color(red: min(240 + d * 30, 255)/255, green: min(233 + d * 30, 255)/255, blue: min(215 + d * 30, 255)/255)
+        case .parchment: return ink
+        case .white:     return ink
+        case .dark:      return Color(red: 240/255, green: 233/255, blue: 215/255)
         }
     }
 
     /// Secondary text
     static var secondaryText: Color {
-        let d = darkness
         switch AppTheme.current() {
-        case .parchment: return Color(red: max(90 - d * 80, 20)/255, green: max(74 - d * 66, 14)/255, blue: max(58 - d * 52, 10)/255)
-        case .white:     return Color(red: max(90 - d * 80, 20)/255, green: max(74 - d * 66, 14)/255, blue: max(58 - d * 52, 10)/255)
-        case .dark:      return Color(red: min(185 + d * 40, 230)/255, green: min(168 + d * 36, 220)/255, blue: min(145 + d * 30, 200)/255)
+        case .parchment: return sepia
+        case .white:     return sepia
+        case .dark:      return Color(red: 195/255, green: 178/255, blue: 155/255)
         }
     }
 

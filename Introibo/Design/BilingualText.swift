@@ -9,7 +9,6 @@ struct BilingualLine: View {
     var sideBySide: Bool = false
 
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
-    @AppStorage(SettingsKey.textDarkness) private var textDarkness = 0.0
     private var mode: LanguageMode { .current() }
     private var cleanLat: String { lat.strippingEm }
     private var cleanEng: String { eng.strippingEm }

@@ -7,7 +7,6 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
-    @AppStorage(SettingsKey.textDarkness) private var textDarkness = 0.0
     @State private var showResetConfirm = false
     @Environment(\.dismiss) private var dismiss
 
@@ -19,7 +18,6 @@ struct SettingsView: View {
                 languageSection
                 displaySection
                 fontSizeSection
-                textDarknessSection
                 feedbackSection
                 resetSection
                 aboutSection
@@ -194,34 +192,6 @@ struct SettingsView: View {
             Text("Littera · Text Size")
         } footer: {
             Text("Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility.")
-        }
-    }
-
-    private var textDarknessSection: some View {
-        Section {
-            VStack(spacing: 8) {
-                Text("Introibo ad altare Dei")
-                    .font(.system(size: 14, design: .serif))
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
-                    .frame(maxWidth: .infinity)
-                HStack {
-                    Image(systemName: "sun.max")
-                        .font(.system(size: 10))
-                        .foregroundStyle(Color.tertiaryText)
-                    Slider(value: $textDarkness, in: 0.0...0.5, step: 0.05)
-                        .tint(Color.sanctuaryRed)
-                    Image(systemName: "sun.max.fill")
-                        .font(.system(size: 14))
-                        .foregroundStyle(Color.tertiaryText)
-                }
-            }
-            .padding(.vertical, 4)
-            .listRowBackground(Color.pageBackground)
-        } header: {
-            Text("Obscuritas · Text Darkness")
-        } footer: {
-            Text("Darken the English and secondary text for better readability.")
         }
     }
 
