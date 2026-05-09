@@ -194,18 +194,17 @@ struct PrayersView: View {
                 ForEach(occasions, id: \.self) { occasion in
                     let count = store.prayers.filter { ($0.occasions ?? []).contains(occasion) }.count
                     NavigationLink(destination: OccasionView(occasion: occasion, prayers: store.prayers.filter { ($0.occasions ?? []).contains(occasion) })) {
-                        VStack(spacing: 6) {
+                        VStack(spacing: 4) {
                             Text(occasion)
-                                .font(.titleM)
-                                .italic()
+                                .font(.captionSm)
                                 .foregroundStyle(Color.primaryText)
                                 .multilineTextAlignment(.center)
-                            Text("\(count) prayers")
+                            Text("\(count)")
                                 .font(.captionSm)
                                 .foregroundStyle(Color.tertiaryText)
                         }
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 18)
+                        .padding(.vertical, 14)
                         .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
                         .contentShape(Rectangle())
                     }
