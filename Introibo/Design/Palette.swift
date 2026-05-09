@@ -44,16 +44,16 @@ extension Color {
         switch AppTheme.current() {
         case .parchment: return ink
         case .white:     return ink
-        case .dark:      return ivory
+        case .dark:      return Color(red: 240/255, green: 233/255, blue: 215/255)
         }
     }
 
-    /// Secondary text — sepia on light, muted on dark.
+    /// Secondary text — sepia on light, brighter muted on dark.
     static var secondaryText: Color {
         switch AppTheme.current() {
         case .parchment: return sepia
         case .white:     return sepia
-        case .dark:      return muted
+        case .dark:      return Color(red: 185/255, green: 168/255, blue: 145/255)
         }
     }
 
@@ -62,7 +62,7 @@ extension Color {
         switch AppTheme.current() {
         case .parchment: return muted
         case .white:     return muted
-        case .dark:      return sepia
+        case .dark:      return Color(red: 140/255, green: 122/255, blue: 100/255)
         }
     }
 

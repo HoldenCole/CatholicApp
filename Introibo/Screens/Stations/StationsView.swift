@@ -57,6 +57,30 @@ struct StationsView: View {
                     LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
                 )
 
+                Button { activeIndex = 0 } label: {
+                    HStack(spacing: 10) {
+                        Text("✠")
+                            .font(.titleM)
+                            .foregroundStyle(Color.sanctuaryRed)
+                        Text("Incipiámus")
+                            .font(.titleM)
+                            .italic()
+                            .foregroundStyle(Color.sanctuaryRed)
+                        Text("·  Begin")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                            .textCase(.uppercase)
+                            .tracking(2)
+                    }
+                    .padding(.vertical, 14)
+                    .frame(maxWidth: .infinity)
+                    .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 0.5))
+                }
+                .buttonStyle(.plain)
+                .padding(.horizontal, 28)
+                .padding(.top, 20)
+
                 // Winding path
                 VStack(spacing: 0) {
                     ForEach(Array(store.stations.enumerated()), id: \.offset) { idx, s in
@@ -66,31 +90,8 @@ struct StationsView: View {
                         .buttonStyle(.plain)
                     }
                 }
-                .padding(.vertical, 28)
+                .padding(.vertical, 20)
                 .padding(.horizontal, 20)
-
-                Button { activeIndex = 0 } label: {
-                    VStack(spacing: 8) {
-                        Text("✠")
-                            .font(.titleL)
-                            .foregroundStyle(Color.sanctuaryRed)
-                        Text("Incipiámus")
-                            .font(.titleL)
-                            .italic()
-                            .foregroundStyle(Color.sanctuaryRed)
-                        Text("Begin the Way of the Cross")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.secondaryText)
-                            .textCase(.uppercase)
-                            .tracking(2)
-                    }
-                    .padding(.vertical, 24)
-                    .frame(maxWidth: .infinity)
-                    .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 0.5))
-                }
-                .buttonStyle(.plain)
-                .padding(.horizontal, 28)
                 .padding(.bottom, 40)
             }
         }

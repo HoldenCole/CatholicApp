@@ -8,6 +8,7 @@ struct PrayersView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @State private var sortAlphabetical = false
 
     private var ctx: LiturgicalContext { .current() }
     private var rule: UserProgress.PrayerRule { UserProgress.prayerRule() }
@@ -193,18 +194,20 @@ struct PrayersView: View {
                 ForEach(occasions, id: \.self) { occasion in
                     let count = store.prayers.filter { ($0.occasions ?? []).contains(occasion) }.count
                     NavigationLink(destination: OccasionView(occasion: occasion, prayers: store.prayers.filter { ($0.occasions ?? []).contains(occasion) })) {
-                        VStack(spacing: 4) {
+                        VStack(spacing: 6) {
                             Text(occasion)
-                                .font(.captionSm)
+                                .font(.titleM)
+                                .italic()
                                 .foregroundStyle(Color.primaryText)
                                 .multilineTextAlignment(.center)
-                            Text("\(count)")
+                            Text("\(count) prayers")
                                 .font(.captionSm)
                                 .foregroundStyle(Color.tertiaryText)
                         }
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
+                        .padding(.vertical, 18)
                         .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
+                        .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
                 }
@@ -213,6 +216,13 @@ struct PrayersView: View {
     }
 
     // MARK: - Full Library
+
+    private var sortedPrayers: [Prayer] {
+        if sortAlphabetical {
+            return store.prayers.sorted { $0.title.strippingEm.localizedCaseInsensitiveCompare($1.title.strippingEm) == .orderedAscending }
+        }
+        return store.prayers
+    }
 
     private var fullLibrarySection: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -226,7 +236,26 @@ struct PrayersView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
 
-            ForEach(store.prayers) { p in
+            HStack {
+                Spacer()
+                Button {
+                    sortAlphabetical.toggle()
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: sortAlphabetical ? "textformat.abc" : "list.number")
+                            .font(.system(size: 11))
+                        Text(sortAlphabetical ? "A - Z" : "Custom")
+                            .font(.captionSm)
+                    }
+                    .foregroundStyle(Color.sanctuaryRed)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 0.5))
+                }
+                .buttonStyle(.plain)
+            }
+
+            ForEach(sortedPrayers) { p in
                 Button { selection = p } label: {
                     HStack(alignment: .firstTextBaseline, spacing: 14) {
                         Text(String(p.title.strippingEm.prefix(1)))
@@ -249,7 +278,7 @@ struct PrayersView: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                if p.slug != store.prayers.last?.slug {
+                if p.slug != sortedPrayers.last?.slug {
                     Divider().background(Color.frameLine)
                 }
             }

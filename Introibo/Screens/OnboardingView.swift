@@ -167,12 +167,12 @@ struct OnboardingView: View {
                         desc: "Every prayer in Ecclesiastical Latin with faithful English translation. Latin is never hidden or secondary."
                     )
                     traditionRow(
-                        title: "No Luminous Mysteries",
-                        desc: "The traditional three sets of mysteries: Joyful, Sorrowful, Glorious. As it has always been."
-                    )
-                    traditionRow(
                         title: "Traditional Penance",
                         desc: "Friday abstinence, Lenten fast, Ember Days. Choose 1962, 1917, or stricter pre-Pius XII discipline."
+                    )
+                    traditionRow(
+                        title: "Follow a Patron Saint",
+                        desc: "Daily practice checklists, streak tracking, and prayers for 7 patron saints of the traditional life."
                     )
                 }
                 .padding(.horizontal, 32)
@@ -205,13 +205,13 @@ struct OnboardingView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     featureRow(icon: "sun.horizon", title: "Liturgical Today", desc: "Daily psalm, penance, season, feast days, and today's Mass propers.")
                     featureRow(icon: "book.closed", title: "1962 Missal", desc: "Complete Ordinary and 422 daily Propers interleaved in correct Mass order.")
-                    featureRow(icon: "book.pages", title: "30 Prayers", desc: "Every essential prayer in Latin and English, from the Pater Noster to the Angelus.")
+                    featureRow(icon: "book.pages", title: "38 Prayers", desc: "Every essential prayer in Latin and English with a personal prayer rule.")
                     featureRow(icon: "cross", title: "Rosary & Stations", desc: "Interactive bead-by-bead Rosary. 14 Stations with meditations.")
                     featureRow(icon: "clock", title: "Divine Office", desc: "All 8 canonical hours of the 1962 Breviary.")
                     featureRow(icon: "heart", title: "Confession Guide", desc: "Examination of conscience and two guided confession paths.")
-                    featureRow(icon: "person.fill", title: "Follow a Saint", desc: "7 patron saints with daily practice schedules.")
+                    featureRow(icon: "person.fill", title: "Follow a Saint", desc: "7 patron saints with daily practices and streak tracking.")
                     featureRow(icon: "graduationcap", title: "Learn Latin", desc: "10 lessons with 91 flashcards and quizzes.")
-                    featureRow(icon: "text.book.closed", title: "Reference Library", desc: "41 articles on the calendar, sacraments, and devotions.")
+                    featureRow(icon: "text.book.closed", title: "Reference Library", desc: "41 articles, 422 searchable propers, TLM history, and glossary.")
                 }
                 .padding(.horizontal, 28)
                 .padding(.top, 8)
