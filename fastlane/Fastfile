@@ -22,7 +22,7 @@ platform :ios do
       path: "Introibo.xcodeproj",
     )
 
-    new_build = Time.now.strftime("%y%m%d%H%M").to_i
+    new_build = Time.now.to_i - 1700000000
     increment_build_number(build_number: new_build, xcodeproj: "Introibo.xcodeproj")
     UI.message("Build number: #{new_build}")
 

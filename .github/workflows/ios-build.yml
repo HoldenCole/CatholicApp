@@ -60,7 +60,6 @@ jobs:
           echo "APPLE_TEAM_ID length: ${#APPLE_TEAM_ID}"
           echo "ASC_KEY_P8 length:    ${#ASC_KEY_P8}"
           echo "ASC_KEY_P8 line count: $(echo "$ASC_KEY_P8" | wc -l)"
-          echo "ASC_KEY_P8 first 30 chars: ${ASC_KEY_P8:0:30}"
           echo "ASC_KEY_P8 starts with BEGIN: $(echo "$ASC_KEY_P8" | grep -c 'BEGIN PRIVATE KEY')"
           echo "ASC_KEY_P8 ends with END:     $(echo "$ASC_KEY_P8" | grep -c 'END PRIVATE KEY')"
           echo ""
