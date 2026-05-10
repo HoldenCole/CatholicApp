@@ -216,20 +216,21 @@ struct QuizView: View {
 
         for i in 0..<count {
             let card = shuffled[i]
+            guard let cardLat = card.lat, let cardEng = card.eng else { continue }
             let latinToEnglish = Bool.random()
 
             if latinToEnglish {
-                let correct = card.eng!
-                var wrongs = usable.filter { $0.eng != correct }.shuffled().prefix(3).map { $0.eng! }
+                let correct = cardEng
+                let wrongs = usable.filter { $0.eng != correct }.shuffled().prefix(3).compactMap { $0.eng }
                 var choices = wrongs + [correct]
                 choices.shuffle()
-                qs.append(Question(prompt: card.lat!, promptLabel: "What does this mean?", correct: correct, choices: choices))
+                qs.append(Question(prompt: cardLat, promptLabel: "What does this mean?", correct: correct, choices: choices))
             } else {
-                let correct = card.lat!
-                var wrongs = usable.filter { $0.lat != correct }.shuffled().prefix(3).map { $0.lat! }
+                let correct = cardLat
+                let wrongs = usable.filter { $0.lat != correct }.shuffled().prefix(3).compactMap { $0.lat }
                 var choices = wrongs + [correct]
                 choices.shuffle()
-                qs.append(Question(prompt: card.eng!, promptLabel: "What is the Latin?", correct: correct, choices: choices))
+                qs.append(Question(prompt: cardEng, promptLabel: "What is the Latin?", correct: correct, choices: choices))
             }
         }
 

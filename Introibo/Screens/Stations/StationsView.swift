@@ -116,7 +116,7 @@ struct StationsView: View {
             }
             .padding(.vertical, 8)
             .padding(.horizontal, 16)
-            .frame(maxWidth: 320, alignment: isLeft ? .leading : .trailing)
+            .frame(maxWidth: .infinity, alignment: isLeft ? .leading : .trailing)
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .fill(moodColor.opacity(0.06))

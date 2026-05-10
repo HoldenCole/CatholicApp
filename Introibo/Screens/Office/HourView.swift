@@ -63,7 +63,8 @@ struct HourView: View {
     }
 
     private func romanOrder() -> String {
-        ["","I","II","III","IV","V","VI","VII","VIII"][hour.order]
+        let numerals = ["","I","II","III","IV","V","VI","VII","VIII"]
+        return hour.order < numerals.count ? numerals[hour.order] : "\(hour.order)"
     }
 
     private var intro: some View {

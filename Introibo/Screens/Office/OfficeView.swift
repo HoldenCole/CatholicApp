@@ -96,7 +96,7 @@ private struct ClockDial: View {
             let size = min(proxy.size.width, proxy.size.height)
             let c = CGPoint(x: size / 2, y: size / 2)
             let ringR = size / 2 - 8
-            let nodeR = size / 2 - 52
+            let nodeR = size / 2 * 0.65
 
             ZStack {
                 // Outer ring
