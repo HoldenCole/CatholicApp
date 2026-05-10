@@ -143,7 +143,7 @@ struct StationsView: View {
                 .stroke(color.opacity(0.6), lineWidth: 1.5)
                 .frame(width: 48, height: 48)
             Text(s.station)
-                .font(.system(size: 16, weight: .bold, design: .serif))
+                .font(.titleM)
                 .italic()
                 .foregroundStyle(color)
         }

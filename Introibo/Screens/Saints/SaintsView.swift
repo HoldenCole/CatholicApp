@@ -55,6 +55,7 @@ struct SaintsView: View {
                 .lineSpacing(3)
                 .padding(.top, 4)
                 .lineLimit(3)
+                .minimumScaleFactor(0.8)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)

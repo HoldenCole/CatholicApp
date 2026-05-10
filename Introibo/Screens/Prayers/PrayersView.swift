@@ -311,6 +311,7 @@ struct OccasionView: View {
                                     .font(.captionSm)
                                     .foregroundStyle(Color.tertiaryText)
                                     .lineLimit(2)
+                                    .minimumScaleFactor(0.8)
                                     .padding(.top, 2)
                             }
                         }
