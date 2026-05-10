@@ -124,6 +124,7 @@ struct ConfessionView: View {
                         .italic()
                         .foregroundStyle(Color.tertiaryText)
                         .lineLimit(1)
+                .minimumScaleFactor(0.8)
                         .padding(.top, 2)
                 }
             }

@@ -194,6 +194,7 @@ struct ReferenceListView: View {
                 .font(.captionSm)
                 .foregroundStyle(Color.tertiaryText)
                 .lineLimit(1)
+                .minimumScaleFactor(0.8)
                 .padding(.top, 2)
         }
         .padding(.vertical, 6)

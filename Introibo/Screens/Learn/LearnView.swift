@@ -44,7 +44,7 @@ struct LearnView: View {
                     .rotationEffect(.degrees(-90))
                 VStack(spacing: 0) {
                     Text("\(mastered.count)")
-                        .font(.system(size: 28, weight: .semibold, design: .serif))
+                        .font(.titleXL)
                         .foregroundStyle(Color.primaryText)
                     Text("of 10")
                         .font(.captionSm)

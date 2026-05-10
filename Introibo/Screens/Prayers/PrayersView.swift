@@ -116,7 +116,7 @@ struct PrayersView: View {
                         HStack(spacing: 12) {
                             Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                                 .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
-                                .font(.system(size: 18))
+                                .font(.titleM)
                             VStack(alignment: .leading, spacing: 1) {
                                 Text(prayer.title.strippingEm)
                                     .font(.titleM)

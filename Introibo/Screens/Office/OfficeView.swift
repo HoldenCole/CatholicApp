@@ -159,7 +159,7 @@ private struct ClockDial: View {
         return Button { onTap(hour.slug) } label: {
             VStack(spacing: 1) {
                 Text(hour.glyph)
-                    .font(.system(size: 18, weight: .semibold, design: .serif))
+                    .font(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                 Text(formatTime(h: hour.hour, m: hour.minute))
