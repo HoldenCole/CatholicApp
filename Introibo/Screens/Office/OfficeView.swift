@@ -9,7 +9,7 @@ struct OfficeView: View {
     @State private var store = ContentStore.shared
     @State private var selectedHour: Hour?
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
-    private let ctx = LiturgicalContext.current()
+    private var ctx: LiturgicalContext { .current() }
 
     var body: some View {
         ScrollView {

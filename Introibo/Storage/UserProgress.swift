@@ -223,7 +223,7 @@ enum UserProgress {
     /// button in Settings. Does not touch system keys.
     static func resetAll() {
         for key in defaults.dictionaryRepresentation().keys {
-            if key.hasPrefix("saints.") || key.hasPrefix("rosary.") || key.hasPrefix("learn.") || key.hasPrefix("saints.checklist") {
+            if key.hasPrefix("saints.") || key.hasPrefix("rosary.") || key.hasPrefix("learn.") || key.hasPrefix("prayers.") {
                 defaults.removeObject(forKey: key)
             }
         }

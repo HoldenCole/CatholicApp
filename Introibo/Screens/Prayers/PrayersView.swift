@@ -291,6 +291,7 @@ struct OccasionView: View {
     let occasion: String
     let prayers: [Prayer]
     @State private var selection: Prayer?
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         ScrollView {
@@ -343,6 +344,7 @@ struct PrayerRuleEditor: View {
     @Environment(\.dismiss) private var dismiss
     @State private var rule = UserProgress.prayerRule()
     @State private var store = ContentStore.shared
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {
