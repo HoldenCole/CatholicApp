@@ -96,7 +96,7 @@ private struct ClockDial: View {
             let size = min(proxy.size.width, proxy.size.height)
             let c = CGPoint(x: size / 2, y: size / 2)
             let ringR = size / 2 - 8
-            let nodeR = size / 2 * 0.65
+            let nodeR = size / 2 * 0.78
 
             ZStack {
                 // Outer ring
@@ -157,17 +157,17 @@ private struct ClockDial: View {
         let y = center.y + sin(angleRad) * radius
 
         return Button { onTap(hour.slug) } label: {
-            VStack(spacing: 1) {
+            VStack(spacing: 0) {
                 Text(hour.glyph)
-                    .font(.titleM)
+                    .font(.caption)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                 Text(formatTime(h: hour.hour, m: hour.minute))
-                    .font(.system(size: 8, weight: .semibold, design: .serif))
+                    .font(.system(size: 6, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
             }
-            .frame(width: 48, height: 48)
+            .frame(width: 36, height: 36)
             .background(isNow ? Color.goldLeaf.opacity(0.12) : Color.pageBackground)
             .overlay(
                 Circle().stroke(
