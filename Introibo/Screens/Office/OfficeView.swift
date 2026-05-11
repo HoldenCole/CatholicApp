@@ -130,8 +130,8 @@ private struct ClockDial: View {
                 }
 
                 // 8 hour nodes
-                ForEach(hours) { hour in
-                    hourNode(hour, radius: nodeR, center: c, isNow: hour.slug == currentKey)
+                ForEach(Array(hours.enumerated()), id: \.element.id) { idx, hour in
+                    hourNode(hour, radius: nodeR, center: c, isNow: hour.slug == currentKey, index: idx, total: hours.count)
                 }
             }
             .frame(width: size, height: size)
@@ -148,9 +148,8 @@ private struct ClockDial: View {
             .position(x: center.x, y: center.y)
     }
 
-    private func hourNode(_ hour: Hour, radius: CGFloat, center: CGPoint, isNow: Bool) -> some View {
-        let totalMin = Double(hour.hour * 60 + hour.minute)
-        let angleDeg = (totalMin / (24.0 * 60.0)) * 360.0 - 90.0
+    private func hourNode(_ hour: Hour, radius: CGFloat, center: CGPoint, isNow: Bool, index: Int, total: Int) -> some View {
+        let angleDeg = (Double(index) / Double(total)) * 360.0 - 90.0
         let angleRad = angleDeg * .pi / 180.0
         let x = center.x + cos(angleRad) * radius
         let y = center.y + sin(angleRad) * radius
