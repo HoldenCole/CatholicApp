@@ -10,6 +10,7 @@ struct PrayersView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @State private var sortAlphabetical = false
     @State private var showRuleNotification = false
+    @State private var searchText = ""
 
     private var ctx: LiturgicalContext { .current() }
     private var rule: UserProgress.PrayerRule { UserProgress.prayerRule() }
@@ -234,10 +235,18 @@ struct PrayersView: View {
     // MARK: - Full Library
 
     private var sortedPrayers: [Prayer] {
-        if sortAlphabetical {
-            return store.prayers.sorted { $0.title.strippingEm.localizedCaseInsensitiveCompare($1.title.strippingEm) == .orderedAscending }
+        var list = store.prayers
+        if !searchText.isEmpty {
+            let q = searchText.lowercased()
+            list = list.filter {
+                $0.title.strippingEm.lowercased().contains(q) ||
+                $0.eng.lowercased().contains(q)
+            }
         }
-        return store.prayers
+        if sortAlphabetical {
+            list.sort { $0.title.strippingEm.localizedCaseInsensitiveCompare($1.title.strippingEm) == .orderedAscending }
+        }
+        return list
     }
 
     private var fullLibrarySection: some View {
@@ -251,6 +260,24 @@ struct PrayersView: View {
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
+
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(Color.tertiaryText)
+                    .font(.system(size: 14))
+                TextField("Search prayers", text: $searchText)
+                    .font(.body)
+                if !searchText.isEmpty {
+                    Button { searchText = "" } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(Color.tertiaryText)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(10)
+            .background(Color.frameLine.opacity(0.3))
+            .cornerRadius(8)
 
             HStack {
                 Spacer()
