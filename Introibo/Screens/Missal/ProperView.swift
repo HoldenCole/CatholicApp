@@ -119,6 +119,7 @@ struct ProperView: View {
         addReading("Evangelium", ref: proper.gospel.ref, lat: proper.gospel.lat, eng: proper.gospel.eng)
         addSection("Offertorium", lat: proper.offertory.lat, eng: proper.offertory.eng)
         addSection("Secreta", lat: proper.secret.lat, eng: proper.secret.eng)
+        if let p = proper.preface { lines.append("Preface: \(p.capitalized)"); lines.append("") }
         addSection("Communio", lat: proper.communion.lat, eng: proper.communion.eng)
         addSection("Postcommunio", lat: proper.postcommunion.lat, eng: proper.postcommunion.eng)
 

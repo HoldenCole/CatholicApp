@@ -81,6 +81,9 @@ struct MissalView: View {
         if let gradual = proper.gradual {
             properSection("Graduále", subtitle: "Gradual", text: gradual)
         }
+        if let alleluia = proper.alleluia {
+            properSection("Allelúja", subtitle: "Alleluia", text: alleluia)
+        }
         if let tract = proper.tract {
             properSection("Tractus", subtitle: "Tract", text: tract)
         }

@@ -90,8 +90,8 @@ struct NotificationScheduleSheet: View {
                 ForEach(1...7, id: \.self) { day in
                     let isSelected = selectedDays.contains(day)
                     Button {
-                        if isSelected { selectedDays.remove(day) }
-                        else { selectedDays.insert(day) }
+                        if isSelected && selectedDays.count > 1 { selectedDays.remove(day) }
+                        else if !isSelected { selectedDays.insert(day) }
                     } label: {
                         Text(dayNames[day - 1])
                             .font(.captionSm)

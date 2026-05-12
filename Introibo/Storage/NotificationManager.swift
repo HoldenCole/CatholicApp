@@ -17,8 +17,16 @@ enum PrayerNotificationManager {
 
     static func scheduleAll() {
         let center = UNUserNotificationCenter.current()
-        let store = ContentStore.shared
         let schedules = NotificationStore.all().filter { $0.isEnabled }
+
+        var prayerCache: [String: Prayer] = [:]
+        let store = ContentStore.shared
+        for s in schedules {
+            if s.id.hasPrefix("prayer.") {
+                let slug = String(s.id.dropFirst(7))
+                prayerCache[slug] = store.prayer(slug: slug)
+            }
+        }
 
         center.getPendingNotificationRequests { existing in
             let introiboIds = existing.map(\.identifier).filter { $0.hasPrefix("introibo.") }
@@ -26,7 +34,7 @@ enum PrayerNotificationManager {
 
             for schedule in schedules {
                 let prayerSlug = schedule.id.hasPrefix("prayer.") ? String(schedule.id.dropFirst(7)) : nil
-                let prayer = prayerSlug.flatMap { store.prayer(slug: $0) }
+                let prayer = prayerSlug.flatMap { prayerCache[$0] }
 
                 let rulePeriod = schedule.id.hasPrefix("rule.") ? String(schedule.id.dropFirst(5)) : nil
                 let ruleTitle = rulePeriod.map { period -> String in
@@ -34,7 +42,8 @@ enum PrayerNotificationManager {
                     case "morning": return "Morning Prayer Rule"
                     case "midday":  return "Midday Prayer Rule"
                     case "evening": return "Evening Prayer Rule"
-                    default: return "Prayer Rule"
+                    case "daily":   return "Daily Prayer Rule"
+                    default:        return "Prayer Rule"
                     }
                 }
 
