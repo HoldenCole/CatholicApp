@@ -44,6 +44,12 @@ struct ProperView: View {
                     Button("Done") { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ShareLink(item: properAsText()) {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                }
             }
         }
     }
@@ -80,6 +86,43 @@ struct ProperView: View {
         .background(
             LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
         )
+    }
+
+    private func properAsText() -> String {
+        var lines: [String] = []
+        lines.append(proper.title)
+        lines.append(proper.english)
+        lines.append("")
+
+        func addSection(_ label: String, lat: String, eng: String) {
+            lines.append("— \(label) —")
+            lines.append(lat)
+            lines.append(eng)
+            lines.append("")
+        }
+
+        func addReading(_ label: String, ref: String, lat: String, eng: String) {
+            lines.append("— \(label) —")
+            if !ref.isEmpty { lines.append(ref) }
+            lines.append(lat)
+            lines.append(eng)
+            lines.append("")
+        }
+
+        addSection("Introitus", lat: proper.introit.lat, eng: proper.introit.eng)
+        addSection("Oratio", lat: proper.collect.lat, eng: proper.collect.eng)
+        addReading("Lectio", ref: proper.epistle.ref, lat: proper.epistle.lat, eng: proper.epistle.eng)
+        if let g = proper.gradual { addSection("Graduale", lat: g.lat, eng: g.eng) }
+        if let a = proper.alleluia { addSection("Alleluia", lat: a.lat, eng: a.eng) }
+        if let t = proper.tract { addSection("Tractus", lat: t.lat, eng: t.eng) }
+        if let s = proper.sequence { addSection("Sequentia", lat: s.lat, eng: s.eng) }
+        addReading("Evangelium", ref: proper.gospel.ref, lat: proper.gospel.lat, eng: proper.gospel.eng)
+        addSection("Offertorium", lat: proper.offertory.lat, eng: proper.offertory.eng)
+        addSection("Secreta", lat: proper.secret.lat, eng: proper.secret.eng)
+        addSection("Communio", lat: proper.communion.lat, eng: proper.communion.eng)
+        addSection("Postcommunio", lat: proper.postcommunion.lat, eng: proper.postcommunion.eng)
+
+        return lines.joined(separator: "\n")
     }
 
     private func properSection(_ latin: String, subtitle: String, text: ProperText) -> some View {
