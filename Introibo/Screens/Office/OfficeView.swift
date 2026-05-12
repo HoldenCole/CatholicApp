@@ -8,6 +8,7 @@ import SwiftUI
 struct OfficeView: View {
     @State private var store = ContentStore.shared
     @State private var selectedHour: Hour?
+    @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     private var ctx: LiturgicalContext { .current() }
 
@@ -58,8 +59,19 @@ struct OfficeView: View {
         .background(Color.pageBackground.ignoresSafeArea())
         .navigationTitle("Officium Divinum")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button { showNotification = true } label: {
+                    Image(systemName: NotificationStore.schedule(for: "devotion.office")?.isEnabled == true ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+            }
+        }
         .sheet(item: $selectedHour) { hour in
             HourView(hour: hour)
+        }
+        .sheet(isPresented: $showNotification) {
+            NotificationScheduleSheet(scheduleId: "devotion.office", title: "Divine Office", subtitle: "Remind me to pray the Office")
         }
     }
 

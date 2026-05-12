@@ -7,6 +7,7 @@ import SwiftUI
 struct RosaryView: View {
     @State private var store = ContentStore.shared
     @State private var selection: MysterySetData?
+    @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     private var ctx: LiturgicalContext { .current() }
 
@@ -23,8 +24,19 @@ struct RosaryView: View {
         .background(Color.pageBackground.ignoresSafeArea())
         .navigationTitle("Sacratíssimum Rosárium")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button { showNotification = true } label: {
+                    Image(systemName: NotificationStore.schedule(for: "devotion.rosary")?.isEnabled == true ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+            }
+        }
         .sheet(item: $selection) { set in
             RosaryFlowView(set: set)
+        }
+        .sheet(isPresented: $showNotification) {
+            NotificationScheduleSheet(scheduleId: "devotion.rosary", title: "The Holy Rosary", subtitle: "Remind me to pray the Rosary")
         }
     }
 

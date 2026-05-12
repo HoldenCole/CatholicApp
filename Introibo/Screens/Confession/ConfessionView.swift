@@ -10,6 +10,7 @@ struct ConfessionView: View {
     @State private var store = ContentStore.shared
     @State private var selectedGuide: ConfessionGuide?
     @State private var showExamen = false
+    @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     init(openExamen: Bool = false) {
@@ -29,11 +30,22 @@ struct ConfessionView: View {
         .background(Color.pageBackground.ignoresSafeArea())
         .navigationTitle("De Confessióne")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button { showNotification = true } label: {
+                    Image(systemName: NotificationStore.schedule(for: "devotion.confession")?.isEnabled == true ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+            }
+        }
         .sheet(item: $selectedGuide) { guide in
             GuideReaderView(guide: guide)
         }
         .sheet(isPresented: $showExamen) {
             ExamenView()
+        }
+        .sheet(isPresented: $showNotification) {
+            NotificationScheduleSheet(scheduleId: "devotion.confession", title: "Confession", subtitle: "Remind me to go to Confession")
         }
         .onAppear {
             if openExamen { showExamen = true }

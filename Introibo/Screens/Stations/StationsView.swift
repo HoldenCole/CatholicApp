@@ -3,6 +3,7 @@ import SwiftUI
 struct StationsView: View {
     @State private var store = ContentStore.shared
     @State private var activeIndex: Int? = nil
+    @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
@@ -22,6 +23,17 @@ struct StationsView: View {
         }
         .navigationTitle("Via Crucis")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button { showNotification = true } label: {
+                    Image(systemName: NotificationStore.schedule(for: "devotion.stations")?.isEnabled == true ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+            }
+        }
+        .sheet(isPresented: $showNotification) {
+            NotificationScheduleSheet(scheduleId: "devotion.stations", title: "Via Crucis", subtitle: "Remind me to pray the Stations")
+        }
     }
 
     private var startList: some View {
