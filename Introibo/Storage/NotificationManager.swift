@@ -1,4 +1,5 @@
 import UserNotifications
+import SwiftUI
 
 enum PrayerNotificationManager {
 
