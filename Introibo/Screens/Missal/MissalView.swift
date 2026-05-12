@@ -52,6 +52,12 @@ struct MissalView: View {
                             .smallLabel(color: Color.goldLeaf, tracking: 2)
                     }
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ShareLink(item: fullMassText()) {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                }
             }
         }
     }
@@ -128,6 +134,105 @@ struct MissalView: View {
 
         // Last Gospel
         ordinarySection("ultimum")
+    }
+
+    // MARK: - Export full Mass as text
+
+    private func fullMassText() -> String {
+        var lines: [String] = []
+        let proper = todayProper
+
+        if let proper = proper {
+            lines.append(proper.title)
+            lines.append(proper.english)
+            lines.append(rite.short)
+            lines.append("")
+        } else {
+            lines.append("Ordo Missæ")
+            lines.append(rite.short)
+            lines.append("")
+        }
+
+        func addOrdinary(_ slug: String) {
+            if let section = store.missal.first(where: { $0.slug == slug }) {
+                lines.append("═══ \(section.title) ═══")
+                if let eng = section.english { lines.append(eng) }
+                lines.append("")
+                for line in section.body {
+                    lines.append(line.lat)
+                    lines.append(line.eng)
+                    lines.append("")
+                }
+            }
+        }
+
+        func addProper(_ label: String, lat: String, eng: String) {
+            lines.append("─── \(label) ───")
+            lines.append(lat)
+            lines.append(eng)
+            lines.append("")
+        }
+
+        func addReading(_ label: String, ref: String, lat: String, eng: String) {
+            lines.append("─── \(label) ───")
+            if !ref.isEmpty { lines.append(ref) }
+            lines.append(lat)
+            lines.append(eng)
+            lines.append("")
+        }
+
+        addOrdinary("preces")
+        addOrdinary("confiteor")
+
+        if let p = proper {
+            addProper("Introitus · Introit", lat: p.introit.lat, eng: p.introit.eng)
+        }
+
+        addOrdinary("kyrie")
+        addOrdinary("gloria")
+
+        if let p = proper {
+            addProper("Oratio · Collect", lat: p.collect.lat, eng: p.collect.eng)
+            addReading("Lectio · Epistle", ref: p.epistle.ref, lat: p.epistle.lat, eng: p.epistle.eng)
+            if let g = p.gradual { addProper("Graduale · Gradual", lat: g.lat, eng: g.eng) }
+            if let a = p.alleluia { addProper("Alleluia", lat: a.lat, eng: a.eng) }
+            if let t = p.tract { addProper("Tractus · Tract", lat: t.lat, eng: t.eng) }
+            if let s = p.sequence { addProper("Sequentia · Sequence", lat: s.lat, eng: s.eng) }
+            addReading("Evangelium · Gospel", ref: p.gospel.ref, lat: p.gospel.lat, eng: p.gospel.eng)
+        }
+
+        addOrdinary("credo")
+
+        if let p = proper {
+            addProper("Offertorium · Offertory", lat: p.offertory.lat, eng: p.offertory.eng)
+        }
+
+        addOrdinary("offertory_prayers")
+
+        if let p = proper {
+            addProper("Secreta · Secret", lat: p.secret.lat, eng: p.secret.eng)
+        }
+
+        addOrdinary("preface")
+        addOrdinary("sanctus")
+        addOrdinary("canon")
+        addOrdinary("pater")
+        addOrdinary("agnus")
+
+        if let p = proper {
+            addProper("Communio · Communion", lat: p.communion.lat, eng: p.communion.eng)
+        }
+
+        addOrdinary("domine")
+
+        if let p = proper {
+            addProper("Postcommunio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
+        }
+
+        addOrdinary("placeat")
+        addOrdinary("ultimum")
+
+        return lines.joined(separator: "\n")
     }
 
     // MARK: - Ordinary-only fallback
