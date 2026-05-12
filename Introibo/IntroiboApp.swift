@@ -17,6 +17,7 @@ struct IntroiboApp: App {
             } else {
                 ContentView()
                     .preferredColorScheme(themeRaw == "dark" ? .dark : .light)
+                    .onAppear { PrayerNotificationManager.scheduleAll() }
             }
         }
     }

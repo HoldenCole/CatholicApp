@@ -9,9 +9,13 @@ struct PrayersView: View {
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @State private var sortAlphabetical = false
+    @State private var showRuleNotification = false
 
     private var ctx: LiturgicalContext { .current() }
     private var rule: UserProgress.PrayerRule { UserProgress.prayerRule() }
+    private var hasActiveRuleNotification: Bool {
+        NotificationStore.all().contains { $0.id.hasPrefix("rule.") && $0.isEnabled }
+    }
 
     private let occasions = [
         "Morning", "Before Mass", "After Mass", "Meals",
@@ -43,6 +47,13 @@ struct PrayersView: View {
             }
             .sheet(isPresented: $showRuleEditor) {
                 PrayerRuleEditor()
+            }
+            .sheet(isPresented: $showRuleNotification) {
+                NotificationScheduleSheet(
+                    scheduleId: "rule.daily",
+                    title: "Prayer Rule Reminder",
+                    subtitle: "Get reminded to pray your daily rule"
+                )
             }
             .onAppear {
                 completedPrayers = UserProgress.completedPrayers()
@@ -79,6 +90,12 @@ struct PrayersView: View {
                         .font(.titleM)
                         .foregroundStyle(Color.primaryText)
                 }
+                Button { showRuleNotification = true } label: {
+                    Image(systemName: hasActiveRuleNotification ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                        .font(.system(size: 14))
+                }
+                .buttonStyle(.plain)
                 Button { showRuleEditor = true } label: {
                     Image(systemName: "pencil")
                         .foregroundStyle(Color.sanctuaryRed)

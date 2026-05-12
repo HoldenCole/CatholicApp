@@ -12,6 +12,11 @@ struct PrayerDetailView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @State private var showNotification = false
+
+    private var hasNotification: Bool {
+        NotificationStore.schedule(for: "prayer.\(prayer.slug)")?.isEnabled ?? false
+    }
 
     var body: some View {
         NavigationStack {
@@ -39,6 +44,19 @@ struct PrayerDetailView: View {
                     Button("Done") { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button { showNotification = true } label: {
+                        Image(systemName: hasNotification ? "bell.fill" : "bell")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                }
+            }
+            .sheet(isPresented: $showNotification) {
+                NotificationScheduleSheet(
+                    scheduleId: "prayer.\(prayer.slug)",
+                    title: prayer.title.strippingEm,
+                    subtitle: prayer.eng
+                )
             }
         }
     }
