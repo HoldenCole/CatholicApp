@@ -97,10 +97,14 @@ struct MissalView: View {
         // OFFERTORY (proper)
         properSection("Offertórium", subtitle: "Offertory", text: proper.offertory)
 
+        // Offertory prayers (Ordinary)
+        ordinarySection("offertory_prayers")
+
         // SECRET (proper)
         properSection("Secréta", subtitle: "Secret", text: proper.secret)
 
-        // Sanctus, Canon, Pater Noster
+        // Preface, Sanctus, Canon, Pater Noster
+        ordinarySection("preface")
         ordinarySection("sanctus")
         ordinarySection("canon")
         ordinarySection("pater")
@@ -115,6 +119,9 @@ struct MissalView: View {
 
         // POSTCOMMUNION (proper)
         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
+
+        // Placeat, Blessing
+        ordinarySection("placeat")
 
         // Last Gospel
         ordinarySection("ultimum")
