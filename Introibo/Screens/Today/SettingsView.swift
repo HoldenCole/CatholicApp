@@ -8,6 +8,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
     @State private var showResetConfirm = false
+    @State private var showTutorial = false
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -18,6 +19,7 @@ struct SettingsView: View {
                 languageSection
                 displaySection
                 fontSizeSection
+                tutorialSection
                 feedbackSection
                 resetSection
                 aboutSection
@@ -192,6 +194,30 @@ struct SettingsView: View {
             Text("Littera · Text Size")
         } footer: {
             Text("Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility.")
+        }
+    }
+
+    // MARK: - Tutorial
+
+    private var tutorialSection: some View {
+        Section {
+            Button {
+                showTutorial = true
+            } label: {
+                HStack {
+                    Label("App Tutorial", systemImage: "questionmark.circle")
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12))
+                        .foregroundStyle(Color.tertiaryText)
+                }
+            }
+            .buttonStyle(.plain)
+            .listRowBackground(Color.pageBackground)
+        }
+        .fullScreenCover(isPresented: $showTutorial) {
+            TutorialView()
         }
     }
 

@@ -3,6 +3,7 @@ import SwiftUI
 struct OnboardingView: View {
     @Binding var hasCompletedOnboarding: Bool
     @State private var page = 0
+    @State private var showTutorial = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -31,10 +32,10 @@ struct OnboardingView: View {
                     if page < 2 {
                         withAnimation { page += 1 }
                     } else {
-                        hasCompletedOnboarding = true
+                        showTutorial = true
                     }
                 } label: {
-                    Text(page < 2 ? "Continue" : "Introíbo ad altáre Dei  ✠")
+                    Text(page < 2 ? "Continue" : "Take a Quick Tour  ✠")
                         .font(.system(size: 14, weight: .semibold, design: .serif))
                         .italic()
                         .foregroundStyle(Color.ivory)
@@ -46,22 +47,23 @@ struct OnboardingView: View {
                 .buttonStyle(.plain)
                 .padding(.horizontal, 28)
 
-                // Skip (on first two pages only)
-                if page < 2 {
-                    Button {
-                        hasCompletedOnboarding = true
-                    } label: {
-                        Text("Skip")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.tertiaryText)
-                    }
-                    .buttonStyle(.plain)
+                Button {
+                    hasCompletedOnboarding = true
+                } label: {
+                    Text(page < 2 ? "Skip" : "Skip Tutorial")
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.tertiaryText)
                 }
+                .buttonStyle(.plain)
             }
             .padding(.bottom, 36)
         }
         .background(Color.pageBackground.ignoresSafeArea())
+        .fullScreenCover(isPresented: $showTutorial) {
+            TutorialView()
+                .onDisappear { hasCompletedOnboarding = true }
+        }
     }
 
     // MARK: - Page 1: Welcome
