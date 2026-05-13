@@ -53,6 +53,7 @@ jobs:
 
       - name: Deploy to TestFlight
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        continue-on-error: true
         env:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
