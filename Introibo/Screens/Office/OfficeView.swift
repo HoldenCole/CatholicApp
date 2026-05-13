@@ -35,7 +35,7 @@ struct OfficeView: View {
                     hours: store.hours,
                     currentKey: currentHourKey(),
                     onTap: { slug in
-                        if let h = store.hour(slug: slug) { selectedHour = h }
+                        if let h = store.hourForToday(slug: slug) { selectedHour = h }
                     }
                 )
                 .frame(maxWidth: .infinity)

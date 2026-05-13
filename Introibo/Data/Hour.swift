@@ -41,6 +41,7 @@ struct Hour: Identifiable, Decodable, Hashable {
         // marian antiphon
         let season: String?
         let engBody: String?
+        let variationKey: String?
 
         struct Verse: Decodable, Hashable {
             let lat: String
