@@ -15,5 +15,6 @@ struct MissalSection: Identifiable, Decodable, Hashable {
     struct Line: Decodable, Hashable {
         let lat: String
         let eng: String
+        var rubric: String? = nil
     }
 }

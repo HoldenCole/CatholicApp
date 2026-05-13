@@ -74,16 +74,45 @@
     "english": "The Confession",
     "body": [
       {
-        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Joánni Baptístæ, sanctis Apóstolis Petro et Paulo, ómnibus Sanctis, et tibi, pater: quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa.",
-        "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, Father: that I have sinned exceedingly, in thought, word, and deed: through my fault, through my fault, through my most grievous fault."
+        "rubric": "The priest, bowing low, says:",
+        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Joánni Baptístæ, sanctis Apóstolis Petro et Paulo, ómnibus Sanctis, et vobis, fratres: quia peccávi nimis cogitatióne, verbo et ópere:",
+        "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, brethren: that I have sinned exceedingly, in thought, word, and deed:"
+      },
+      {
+        "rubric": "He strikes his breast three times:",
+        "lat": "mea culpa, mea culpa, mea máxima culpa.",
+        "eng": "through my fault, through my fault, through my most grievous fault."
+      },
+      {
+        "lat": "Ideo precor beátam Maríam semper Vírginem, beátum Michaélem Archángelum, beátum Joánnem Baptístam, sanctos Apóstolos Petrum et Paulum, omnes Sanctos, et vos, fratres, oráre pro me ad Dóminum Deum nostrum.",
+        "eng": "Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, all the Saints, and you, brethren, to pray to the Lord our God for me."
+      },
+      {
+        "rubric": "The servers respond:",
+        "lat": "℟. Misereátur tui omnípotens Deus, et dimíssis peccátis tuis, perdúcat te ad vitam ætérnam.",
+        "eng": "℟. May almighty God have mercy on thee, and forgiving thee thy sins, bring thee to everlasting life."
+      },
+      {
+        "lat": "℣. Amen.",
+        "eng": "℣. Amen."
+      },
+      {
+        "rubric": "The servers say the Confiteor:",
+        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Joánni Baptístæ, sanctis Apóstolis Petro et Paulo, ómnibus Sanctis, et tibi, pater: quia peccávi nimis cogitatióne, verbo et ópere:",
+        "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, Father: that I have sinned exceedingly, in thought, word, and deed:"
+      },
+      {
+        "lat": "mea culpa, mea culpa, mea máxima culpa.",
+        "eng": "through my fault, through my fault, through my most grievous fault."
       },
       {
         "lat": "Ideo precor beátam Maríam semper Vírginem, beátum Michaélem Archángelum, beátum Joánnem Baptístam, sanctos Apóstolos Petrum et Paulum, omnes Sanctos, et te, pater, oráre pro me ad Dóminum Deum nostrum.",
         "eng": "Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, all the Saints, and you, Father, to pray to the Lord our God for me."
       },
       {
-        "lat": "℣. Misereátur tui omnípotens Deus, et dimíssis peccátis tuis, perdúcat te ad vitam ætérnam.",
-        "eng": "℣. May almighty God have mercy on thee, and forgiving thee thy sins, bring thee to everlasting life."
+        "rubric": "The priest responds:",
+        "lat": "℣. Misereátur vestri omnípotens Deus, et dimíssis peccátis vestris, perdúcat vos ad vitam ætérnam.",
+        "eng": "℣. May almighty God have mercy on you, and forgiving you your sins, bring you to everlasting life."
       },
       {
         "lat": "℟. Amen.",
