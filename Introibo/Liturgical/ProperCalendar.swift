@@ -8,6 +8,11 @@ enum ProperCalendar {
         let easter = Computus.easterSunday(year: year)
         let today = cal.startOfDay(for: date)
 
+        // High-priority moveable feasts override the sanctorale
+        if let slug = moveableSlug(date: today, easter: easter, cal: cal) {
+            return slug
+        }
+
         if let slug = sanctoraleSlug(date: today, year: year, cal: cal) {
             return slug
         }
@@ -32,6 +37,21 @@ enum ProperCalendar {
             }
         }
         return properSlug(for: date)
+    }
+
+    // Moveable feasts that take precedence over fixed sanctorale entries
+    private static func moveableSlug(date: Date, easter: Date, cal: Calendar) -> String? {
+        let easterStart = cal.startOfDay(for: easter)
+        let diff = cal.dateComponents([.day], from: easterStart, to: date).day ?? 0
+
+        switch diff {
+        case 38:  return "vigil-ascension"
+        case 39:  return "ascension"
+        case 48:  return "vigil-pentecost"
+        case 60:  return "corpus-christi"
+        case 68:  return "sacred-heart"
+        default:  return nil
+        }
     }
 
     private static func temporaleSlug(date: Date, easter: Date, year: Int, cal: Calendar) -> String? {

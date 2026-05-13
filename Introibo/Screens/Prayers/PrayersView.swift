@@ -8,9 +8,15 @@ struct PrayersView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @State private var sortAlphabetical = false
+    @State private var showRuleNotification = false
+    @State private var searchText = ""
 
     private var ctx: LiturgicalContext { .current() }
     private var rule: UserProgress.PrayerRule { UserProgress.prayerRule() }
+    private var hasActiveRuleNotification: Bool {
+        NotificationStore.all().contains { $0.id.hasPrefix("rule.") && $0.isEnabled }
+    }
 
     private let occasions = [
         "Morning", "Before Mass", "After Mass", "Meals",
@@ -78,6 +84,19 @@ struct PrayersView: View {
                         .font(.titleM)
                         .foregroundStyle(Color.primaryText)
                 }
+                Button { showRuleNotification = true } label: {
+                    Image(systemName: hasActiveRuleNotification ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                        .font(.system(size: 14))
+                }
+                .buttonStyle(.plain)
+                .sheet(isPresented: $showRuleNotification) {
+                    NotificationScheduleSheet(
+                        scheduleId: "rule.daily",
+                        title: "Prayer Rule Reminder",
+                        subtitle: "Get reminded to pray your daily rule"
+                    )
+                }
                 Button { showRuleEditor = true } label: {
                     Image(systemName: "pencil")
                         .foregroundStyle(Color.sanctuaryRed)
@@ -115,7 +134,7 @@ struct PrayersView: View {
                         HStack(spacing: 12) {
                             Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                                 .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
-                                .font(.system(size: 18))
+                                .font(.titleM)
                             VStack(alignment: .leading, spacing: 1) {
                                 Text(prayer.title.strippingEm)
                                     .font(.titleM)
@@ -135,6 +154,35 @@ struct PrayersView: View {
                                     .font(.system(size: 14))
                             }
                             .buttonStyle(.plain)
+                        }
+                        .padding(.vertical, 4)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                } else if slug.hasPrefix("office-"), let h = store.hour(slug: String(slug.dropFirst(7))) {
+                    let isDone = completedPrayers.contains(slug)
+                    Button {
+                        UserProgress.togglePrayer(slug)
+                        completedPrayers = UserProgress.completedPrayers()
+                    } label: {
+                        HStack(spacing: 12) {
+                            Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
+                                .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
+                                .font(.titleM)
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(h.name)
+                                    .font(.titleM)
+                                    .italic()
+                                    .foregroundStyle(isDone ? Color.tertiaryText : Color.primaryText)
+                                    .strikethrough(isDone, color: Color.tertiaryText)
+                                Text("\(h.eng) — \(h.time)")
+                                    .font(.captionSm)
+                                    .foregroundStyle(isDone ? Color.tertiaryText : Color.secondaryText)
+                            }
+                            Spacer()
+                            Image(systemName: "clock")
+                                .foregroundStyle(Color.sanctuaryRed)
+                                .font(.system(size: 14))
                         }
                         .padding(.vertical, 4)
                         .contentShape(Rectangle())
@@ -205,6 +253,7 @@ struct PrayersView: View {
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 14)
                         .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
+                        .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
                 }
@@ -213,6 +262,21 @@ struct PrayersView: View {
     }
 
     // MARK: - Full Library
+
+    private var sortedPrayers: [Prayer] {
+        var list = store.prayers
+        if !searchText.isEmpty {
+            let q = searchText.lowercased()
+            list = list.filter {
+                $0.title.strippingEm.lowercased().contains(q) ||
+                $0.eng.lowercased().contains(q)
+            }
+        }
+        if sortAlphabetical {
+            list.sort { $0.title.strippingEm.localizedCaseInsensitiveCompare($1.title.strippingEm) == .orderedAscending }
+        }
+        return list
+    }
 
     private var fullLibrarySection: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -226,7 +290,44 @@ struct PrayersView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
 
-            ForEach(store.prayers) { p in
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(Color.tertiaryText)
+                    .font(.system(size: 14))
+                TextField("Search prayers", text: $searchText)
+                    .font(.body)
+                if !searchText.isEmpty {
+                    Button { searchText = "" } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(Color.tertiaryText)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(10)
+            .background(Color.frameLine.opacity(0.3))
+            .cornerRadius(8)
+
+            HStack {
+                Spacer()
+                Button {
+                    sortAlphabetical.toggle()
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: sortAlphabetical ? "textformat.abc" : "list.number")
+                            .font(.system(size: 11))
+                        Text(sortAlphabetical ? "A - Z" : "Custom")
+                            .font(.captionSm)
+                    }
+                    .foregroundStyle(Color.sanctuaryRed)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.sanctuaryRed.opacity(0.3), lineWidth: 0.5))
+                }
+                .buttonStyle(.plain)
+            }
+
+            ForEach(sortedPrayers) { p in
                 Button { selection = p } label: {
                     HStack(alignment: .firstTextBaseline, spacing: 14) {
                         Text(String(p.title.strippingEm.prefix(1)))
@@ -249,7 +350,7 @@ struct PrayersView: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                if p.slug != store.prayers.last?.slug {
+                if p.slug != sortedPrayers.last?.slug {
                     Divider().background(Color.frameLine)
                 }
             }
@@ -263,6 +364,7 @@ struct OccasionView: View {
     let occasion: String
     let prayers: [Prayer]
     @State private var selection: Prayer?
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         ScrollView {
@@ -283,6 +385,7 @@ struct OccasionView: View {
                                     .font(.captionSm)
                                     .foregroundStyle(Color.tertiaryText)
                                     .lineLimit(2)
+                                    .minimumScaleFactor(0.8)
                                     .padding(.top, 2)
                             }
                         }
@@ -314,6 +417,7 @@ struct PrayerRuleEditor: View {
     @Environment(\.dismiss) private var dismiss
     @State private var rule = UserProgress.prayerRule()
     @State private var store = ContentStore.shared
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
         NavigationStack {

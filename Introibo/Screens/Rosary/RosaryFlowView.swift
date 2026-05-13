@@ -151,7 +151,7 @@ struct RosaryFlowView: View {
                 if stepIndex > 0 { stepIndex -= 1 }
             } label: {
                 Text("‹")
-                    .font(.system(size: 22, design: .serif))
+                    .font(.titleL)
                     .foregroundStyle(Color.sanctuaryRed)
                     .frame(width: 52, height: 52)
                     .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.4), lineWidth: 0.5))

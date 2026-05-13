@@ -10,20 +10,20 @@ private enum FontFamily {
 
 extension Font {
     // MARK: - Display (Playfair Display)
-    static let pageTitle = serif(family: FontFamily.display, size: 34, weight: .semibold, italic: true)
-    static let titleXL   = serif(family: FontFamily.display, size: 28, weight: .semibold, italic: false)
-    static let titleL    = serif(family: FontFamily.display, size: 22, weight: .semibold, italic: false)
-    static let titleM    = serif(family: FontFamily.display, size: 18, weight: .medium,   italic: false)
+    static var pageTitle: Font { scaledSerif(family: FontFamily.display, size: 34, weight: .semibold, italic: true) }
+    static var titleXL: Font   { scaledSerif(family: FontFamily.display, size: 28, weight: .semibold, italic: false) }
+    static var titleL: Font    { scaledSerif(family: FontFamily.display, size: 22, weight: .semibold, italic: false) }
+    static var titleM: Font    { scaledSerif(family: FontFamily.display, size: 18, weight: .medium,   italic: false) }
 
-    // MARK: - Body (EB Garamond) — scaled by font size preference
+    // MARK: - Body (EB Garamond)
     static var body: Font     { scaledSerif(family: FontFamily.body, size: 16, weight: .regular, italic: false) }
     static var bodyIt: Font   { scaledSerif(family: FontFamily.body, size: 16, weight: .regular, italic: true) }
     static var bodySm: Font   { scaledSerif(family: FontFamily.body, size: 14, weight: .regular, italic: false) }
 
     // MARK: - Labels (Cormorant Garamond)
-    static let label    = serif(family: FontFamily.label, size: 11, weight: .bold,   italic: true)
-    static let caption  = serif(family: FontFamily.label, size: 12, weight: .regular, italic: true)
-    static let captionSm = serif(family: FontFamily.label, size: 10, weight: .regular, italic: true)
+    static var label: Font    { scaledSerif(family: FontFamily.label, size: 11, weight: .bold,   italic: true) }
+    static var caption: Font  { scaledSerif(family: FontFamily.label, size: 12, weight: .regular, italic: true) }
+    static var captionSm: Font { scaledSerif(family: FontFamily.label, size: 10, weight: .regular, italic: true) }
 
     // MARK: - Helpers
     private static func serif(family: String, size: CGFloat, weight: Font.Weight, italic: Bool) -> Font {

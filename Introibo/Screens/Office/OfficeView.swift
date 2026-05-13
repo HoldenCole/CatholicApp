@@ -8,8 +8,9 @@ import SwiftUI
 struct OfficeView: View {
     @State private var store = ContentStore.shared
     @State private var selectedHour: Hour?
+    @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
-    private let ctx = LiturgicalContext.current()
+    private var ctx: LiturgicalContext { .current() }
 
     var body: some View {
         ScrollView {
@@ -34,7 +35,7 @@ struct OfficeView: View {
                     hours: store.hours,
                     currentKey: currentHourKey(),
                     onTap: { slug in
-                        if let h = store.hour(slug: slug) { selectedHour = h }
+                        if let h = store.hourForToday(slug: slug) { selectedHour = h }
                     }
                 )
                 .frame(maxWidth: .infinity)
@@ -58,6 +59,17 @@ struct OfficeView: View {
         .background(Color.pageBackground.ignoresSafeArea())
         .navigationTitle("Officium Divinum")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button { showNotification = true } label: {
+                    Image(systemName: NotificationStore.schedule(for: "devotion.office")?.isEnabled == true ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+                .sheet(isPresented: $showNotification) {
+                    NotificationScheduleSheet(scheduleId: "devotion.office", title: "Divine Office", subtitle: "Remind me to pray the Office")
+                }
+            }
+        }
         .sheet(item: $selectedHour) { hour in
             HourView(hour: hour)
         }
@@ -96,7 +108,7 @@ private struct ClockDial: View {
             let size = min(proxy.size.width, proxy.size.height)
             let c = CGPoint(x: size / 2, y: size / 2)
             let ringR = size / 2 - 8
-            let nodeR: CGFloat = 110
+            let nodeR = size / 2 * 0.72
 
             ZStack {
                 // Outer ring
@@ -130,8 +142,8 @@ private struct ClockDial: View {
                 }
 
                 // 8 hour nodes
-                ForEach(hours) { hour in
-                    hourNode(hour, radius: nodeR, center: c, isNow: hour.slug == currentKey)
+                ForEach(Array(hours.enumerated()), id: \.element.id) { idx, hour in
+                    hourNode(hour, radius: nodeR, center: c, isNow: hour.slug == currentKey, index: idx, total: hours.count)
                 }
             }
             .frame(width: size, height: size)
@@ -148,10 +160,8 @@ private struct ClockDial: View {
             .position(x: center.x, y: center.y)
     }
 
-    private func hourNode(_ hour: Hour, radius: CGFloat, center: CGPoint, isNow: Bool) -> some View {
-        // Convert hour:minute to angle (0 = top, clockwise).
-        let totalMin = Double(hour.hour * 60 + hour.minute)
-        let angleDeg = (totalMin / (24.0 * 60.0)) * 360.0 - 90.0
+    private func hourNode(_ hour: Hour, radius: CGFloat, center: CGPoint, isNow: Bool, index: Int, total: Int) -> some View {
+        let angleDeg = (Double(index) / Double(total)) * 360.0 - 90.0
         let angleRad = angleDeg * .pi / 180.0
         let x = center.x + cos(angleRad) * radius
         let y = center.y + sin(angleRad) * radius
@@ -159,7 +169,7 @@ private struct ClockDial: View {
         return Button { onTap(hour.slug) } label: {
             VStack(spacing: 1) {
                 Text(hour.glyph)
-                    .font(.system(size: 18, weight: .semibold, design: .serif))
+                    .font(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                 Text(formatTime(h: hour.hour, m: hour.minute))

@@ -29,6 +29,8 @@ struct LearnView: View {
         }
     }
 
+    // MARK: - Header with progress
+
     private var header: some View {
         VStack(spacing: 14) {
             ZStack {
@@ -42,7 +44,7 @@ struct LearnView: View {
                     .rotationEffect(.degrees(-90))
                 VStack(spacing: 0) {
                     Text("\(mastered.count)")
-                        .font(.system(size: 28, weight: .semibold, design: .serif))
+                        .font(.titleXL)
                         .foregroundStyle(Color.primaryText)
                     Text("of 10")
                         .font(.captionSm)
@@ -67,12 +69,14 @@ struct LearnView: View {
         .padding(.vertical, 20)
     }
 
+    // MARK: - Daily flashcard
+
     private var dailyCard: some View {
         let allCards = store.courses.flatMap { c in
             c.sections.filter { $0.type == "cards" }.flatMap { $0.items ?? [] }
         }.filter { $0.lat != nil && $0.eng != nil }
 
-        let dayIndex = Calendar.current.component(.dayOfYear, from: Date()) % max(allCards.count, 1)
+        let dayIndex = (Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1) % max(allCards.count, 1)
         let card = allCards.isEmpty ? nil : allCards[dayIndex]
 
         return Group {
@@ -100,6 +104,8 @@ struct LearnView: View {
             }
         }
     }
+
+    // MARK: - Lessons
 
     private var lessonsSection: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -184,7 +190,8 @@ struct LearnView: View {
     }
 
     private func roman(_ n: Int) -> String {
-        ["","I","II","III","IV","V","VI","VII","VIII","IX","X"][n]
+        let numerals = ["","I","II","III","IV","V","VI","VII","VIII","IX","X"]
+        return n < numerals.count ? numerals[n] : "\(n)"
     }
 }
 

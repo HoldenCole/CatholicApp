@@ -8,7 +8,10 @@ struct BilingualLine: View {
     let eng: String
     var sideBySide: Bool = false
 
-    private var mode: LanguageMode { .current() }
+    @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var cleanLat: String { lat.strippingEm }
     private var cleanEng: String { eng.strippingEm }
 

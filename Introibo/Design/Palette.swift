@@ -20,17 +20,22 @@ extension Color {
     static let ink       = Color(red:  28/255, green:  20/255, blue:  16/255)
     static let sepia     = Color(red:  90/255, green:  74/255, blue:  58/255)
     static let muted     = Color(red: 154/255, green: 134/255, blue: 112/255)
-    static let sanctuaryRed = Color(red: 139/255, green:  26/255, blue:  26/255)
     static let goldLeaf    = Color(red: 184/255, green: 150/255, blue:  12/255)
     static let walnut      = Color(red:  26/255, green:  19/255, blue:  12/255)
     static let walnutHi    = Color(red:  44/255, green:  32/255, blue:  21/255)
     static let ivory       = Color(red: 232/255, green: 223/255, blue: 201/255)
 
-    // MARK: - Semantic tokens (dark-mode aware)
-    // These pick light/dark variants automatically based on the user's
-    // interface style. Views should prefer these over the raw palette.
+    // MARK: - Theme-aware accent
+    static var sanctuaryRed: Color {
+        switch AppTheme.current() {
+        case .dark: return Color(red: 220/255, green: 90/255, blue: 90/255)
+        default:    return Color(red: 139/255, green: 26/255, blue: 26/255)
+        }
+    }
 
-    /// Page background — parchment (default), white (clean), or walnut (dark).
+    // MARK: - Semantic tokens (dark-mode aware)
+
+    /// Page background
     static var pageBackground: Color {
         switch AppTheme.current() {
         case .parchment: return parchment
@@ -39,21 +44,21 @@ extension Color {
         }
     }
 
-    /// Primary text — ink on light backgrounds, ivory on dark.
+    /// Primary text
     static var primaryText: Color {
         switch AppTheme.current() {
         case .parchment: return ink
         case .white:     return ink
-        case .dark:      return ivory
+        case .dark:      return Color(red: 240/255, green: 233/255, blue: 215/255)
         }
     }
 
-    /// Secondary text — sepia on light, muted on dark.
+    /// Secondary text
     static var secondaryText: Color {
         switch AppTheme.current() {
         case .parchment: return sepia
         case .white:     return sepia
-        case .dark:      return muted
+        case .dark:      return Color(red: 195/255, green: 178/255, blue: 155/255)
         }
     }
 
@@ -62,7 +67,7 @@ extension Color {
         switch AppTheme.current() {
         case .parchment: return muted
         case .white:     return muted
-        case .dark:      return sepia
+        case .dark:      return Color(red: 155/255, green: 137/255, blue: 115/255)
         }
     }
 

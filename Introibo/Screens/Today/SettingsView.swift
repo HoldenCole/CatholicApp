@@ -7,8 +7,8 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
-    @AppStorage(SettingsKey.textDarkness) private var textDarkness = 0.0
     @State private var showResetConfirm = false
+    @State private var showTutorial = false
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -19,7 +19,7 @@ struct SettingsView: View {
                 languageSection
                 displaySection
                 fontSizeSection
-                textDarknessSection
+                tutorialSection
                 feedbackSection
                 resetSection
                 aboutSection
@@ -150,7 +150,7 @@ struct SettingsView: View {
                 Text("Introibo ad altare Dei")
                     .font(.system(size: 16 * fontScale, design: .serif))
                     .italic()
-                    .foregroundStyle(Color.primaryText.opacity(1.0 + textDarkness))
+                    .foregroundStyle(Color.primaryText)
                     .frame(maxWidth: .infinity)
                 HStack {
                     Text("A")
@@ -197,31 +197,27 @@ struct SettingsView: View {
         }
     }
 
-    private var textDarknessSection: some View {
+    // MARK: - Tutorial
+
+    private var tutorialSection: some View {
         Section {
-            VStack(spacing: 8) {
-                Text("Introibo ad altare Dei")
-                    .font(.system(size: 14, design: .serif))
-                    .italic()
-                    .foregroundStyle(Color.secondaryText.opacity(1.0 + textDarkness))
-                    .frame(maxWidth: .infinity)
+            Button {
+                showTutorial = true
+            } label: {
                 HStack {
-                    Image(systemName: "sun.max")
-                        .font(.system(size: 10))
-                        .foregroundStyle(Color.tertiaryText)
-                    Slider(value: $textDarkness, in: 0.0...0.5, step: 0.05)
-                        .tint(Color.sanctuaryRed)
-                    Image(systemName: "sun.max.fill")
-                        .font(.system(size: 14))
+                    Label("App Tutorial", systemImage: "questionmark.circle")
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
-            .padding(.vertical, 4)
+            .buttonStyle(.plain)
             .listRowBackground(Color.pageBackground)
-        } header: {
-            Text("Obscuritas · Text Darkness")
-        } footer: {
-            Text("Darken the English and secondary text for better readability.")
+        }
+        .fullScreenCover(isPresented: $showTutorial) {
+            TutorialView()
         }
     }
 
@@ -229,7 +225,7 @@ struct SettingsView: View {
 
     private var feedbackSection: some View {
         Section {
-            Link(destination: URL(string: "mailto:feedback@introibo.app?subject=Introibo%20Feedback")!) {
+            Link(destination: URL(string: "mailto:contact@lampstandhq.com?subject=Introibo%20Feedback") ?? URL(string: "mailto:")!) {
                 HStack {
                     Label("Send Feedback", systemImage: "envelope")
                         .foregroundStyle(Color.primaryText)

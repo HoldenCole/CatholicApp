@@ -68,11 +68,11 @@ struct TodayView: View {
             .padding(.top, 4)
 
             Text(ctx.feriaEnglish)
-                .font(.system(size: 34, weight: .semibold, design: .serif))
+                .font(.pageTitle)
                 .foregroundStyle(Color.ivory)
 
             Text(LongDateFormatter.format(ctx.date))
-                .font(.system(size: 15, weight: .regular, design: .serif))
+                .font(.bodySm)
                 .italic()
                 .foregroundStyle(Color.muted)
 

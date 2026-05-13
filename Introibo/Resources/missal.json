@@ -212,6 +212,62 @@
     ]
   },
   {
+    "slug": "offertory_prayers",
+    "title": "Preces Offertórii",
+    "english": "Offertory Prayers",
+    "label": "Oblátio",
+    "body": [
+      {
+        "lat": "Súscipe, sancte Pater, omnípotens ætérne Deus, hanc immaculátam hóstiam, quam ego indígnus fámulus tuus óffero tibi, Deo meo vivo et vero, pro innumerabílibus peccátis, et offensiónibus, et negligéntiis meis, et pro ómnibus circumstántibus, sed et pro ómnibus fidélibus christiánis vivis atque defúnctis: ut mihi et illis profíciat ad salútem in vitam ætérnam. Amen.",
+        "eng": "Accept, O holy Father, almighty and eternal God, this spotless host, which I, Your unworthy servant, offer to You, my living and true God, for my innumerable sins, offenses, and negligences, and for all here present, as also for all faithful Christians living and dead, that it may profit me and them unto salvation unto life eternal. Amen."
+      },
+      {
+        "lat": "Deus, qui humánæ substántiæ dignitátem mirabíliter condidísti et mirabílius reformásti: da nobis per hujus aquæ et vini mystérium, ejus divinitátis esse consórtes, qui humanitátis nostræ fíeri dignátus est párticeps, Jesus Christus, Fílius tuus, Dóminus noster. Amen.",
+        "eng": "O God, who in creating human nature, did wonderfully dignify it, and still more wonderfully restore it, grant that by the mystery of this water and wine, we may be made partakers of His divinity, who vouchsafed to become partaker of our humanity, Jesus Christ, Your Son, our Lord. Amen."
+      },
+      {
+        "lat": "Offérimus tibi, Dómine, cálicem salutáris, tuam deprecántes cleméntiam: ut in conspéctu divínæ majestátis tuæ, pro nostra et totíus mundi salúte, cum odóre suavitátis ascéndat. Amen.",
+        "eng": "We offer to You, O Lord, the chalice of salvation, humbly begging of Your mercy that it may arise before Your divine Majesty, with a pleasing fragrance, for our salvation and for that of the whole world. Amen."
+      },
+      {
+        "lat": "In spíritu humilitátis et in ánimo contríto suscipiámur a te, Dómine: et sic fiat sacrifícium nostrum in conspéctu tuo hódie, ut pláceat tibi, Dómine Deus.",
+        "eng": "In a humble spirit and with a contrite heart, may we be accepted by You, O Lord, and may our sacrifice so be offered in Your sight this day as to please You, O Lord God."
+      },
+      {
+        "lat": "Veni, Sanctificátor omnípotens ætérne Deus: et bénedic hoc sacrifícium, tuo sancto nómini præparátum.",
+        "eng": "Come, O Sanctifier, almighty and eternal God, and bless this sacrifice prepared for Your holy name."
+      },
+      {
+        "lat": "Lavábo inter innocéntes manus meas: et circúmdabo altáre tuum, Dómine. Ut áudiam vocem laudis, et enárrem univérsa mirabília tua. Dómine, diléxi decórem domus tuæ, et locum habitatiónis glóriæ tuæ. Ne perdas cum ímpiis, Deus, ánimam meam, et cum viris sánguinum vitam meam. In quorum mánibus iniquitátes sunt: déxtera eórum repléta est munéribus. Ego autem in innocéntia mea ingréssus sum: rédime me, et miserére mei. Pes meus stetit in dirécto: in ecclésiis benedícam te, Dómine. Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "I will wash my hands among the innocent: and will compass Your altar, O Lord. That I may hear the voice of Your praise, and tell of all Your wondrous works. I have loved, O Lord, the beauty of Your house, and the place where Your glory dwells. Take not away my soul, O God, with the wicked, nor my life with bloodthirsty men. In whose hands are iniquities: their right hand is filled with gifts. But as for me, I have walked in my innocence: redeem me, and have mercy on me. My foot has stood in the direct way: in the churches I will bless You, O Lord. Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      },
+      {
+        "lat": "Súscipe, sancta Trínitas, hanc oblatiónem, quam tibi offérimus ob memóriam passiónis, resurrectiónis, et ascensiónis Jesu Christi, Dómini nostri: et in honórem beátæ Maríæ semper Vírginis, et beáti Joánnis Baptístæ, et sanctórum Apostolórum Petri et Pauli, et istórum et ómnium Sanctórum: ut illis profíciat ad honórem, nobis autem ad salútem: et illi pro nobis intercédere dignéntur in cælis, quorum memóriam ágimus in terris. Per eúndem Christum Dóminum nostrum. Amen.",
+        "eng": "Receive, O holy Trinity, this oblation which we make to You in remembrance of the Passion, Resurrection, and Ascension of Jesus Christ, our Lord, and in honour of blessed Mary, ever Virgin, blessed John the Baptist, the holy Apostles Peter and Paul, and of these, and of all the Saints; that it may avail unto their honour and our salvation: and may they vouchsafe to intercede in heaven for us who honour their memory here on earth. Through the same Christ our Lord. Amen."
+      },
+      {
+        "lat": "℣. Oráte, fratres: ut meum ac vestrum sacrifícium acceptábile fiat apud Deum Patrem omnipoténtem.\n℟. Suscípiat Dóminus sacrifícium de mánibus tuis ad laudem et glóriam nóminis sui, ad utilitátem quoque nostram, totiúsque Ecclésiæ suæ sanctæ.",
+        "eng": "℣. Pray, brethren, that my sacrifice and yours may become acceptable to God the Father almighty.\n℟. May the Lord accept this sacrifice at your hands for the praise and glory of His name, for our advantage, and that of all His holy Church."
+      }
+    ]
+  },
+  {
+    "slug": "preface",
+    "title": "Præfátio",
+    "english": "Preface",
+    "label": "Præfátio Commúnis",
+    "body": [
+      {
+        "lat": "℣. Per ómnia sǽcula sæculórum. ℟. Amen.\n℣. Dóminus vobíscum. ℟. Et cum spíritu tuo.\n℣. Sursum corda. ℟. Habémus ad Dóminum.\n℣. Grátias agámus Dómino Deo nostro. ℟. Dignum et justum est.",
+        "eng": "℣. World without end. ℟. Amen.\n℣. The Lord be with you. ℟. And with your spirit.\n℣. Lift up your hearts. ℟. We have lifted them up to the Lord.\n℣. Let us give thanks to the Lord our God. ℟. It is right and just."
+      },
+      {
+        "lat": "Vere dignum et justum est, ǽquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum. Per quem majestátem tuam laudant Angeli, adórant Dominatiónes, tremunt Potestátes. Cæli cælorúmque Virtútes, ac beáta Séraphim, sócia exsultatióne concélebrant. Cum quibus et nostras voces ut admítti júbeas, deprecámur, súpplici confessióne dicéntes:",
+        "eng": "It is truly meet and just, right and for our salvation, that we should at all times and in all places give thanks unto You, O holy Lord, Father almighty, eternal God, through Christ our Lord. Through whom the Angels praise Your Majesty, the Dominations worship it, the Powers stand in awe. The Heavens and the heavenly hosts together with the blessed Seraphim in triumphant chorus unite to celebrate it. Together with them we entreat You, that You may bid our voices also to be admitted, while we say in lowly praise:"
+      }
+    ]
+  },
+  {
     "slug": "sanctus",
     "label": "Missa Fidélium",
     "title": "Sanctus",
@@ -352,6 +408,21 @@
       {
         "lat": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea. (×3)",
         "eng": "Lord, I am not worthy that Thou shouldst enter under my roof: but only say the word, and my soul shall be healed. (×3)"
+      }
+    ]
+  },
+  {
+    "slug": "placeat",
+    "title": "Placeat Tibi",
+    "english": "May It Please You",
+    "body": [
+      {
+        "lat": "Pláceat tibi, sancta Trínitas, obséquium servitútis meæ: et præsta; ut sacrifícium, quod óculis tuæ majestátis indígnus óbtuli, tibi sit acceptábile, mihíque et ómnibus, pro quibus illud óbtuli, sit, te miseránte, propitiábile. Per Christum Dóminum nostrum. Amen.",
+        "eng": "May the tribute of my worship be pleasing to You, Most Holy Trinity, and grant that the sacrifice which I, all unworthy, have offered in the presence of Your Majesty, may be acceptable to You, and through Your mercy obtain forgiveness for me and all for whom I have offered it. Through Christ our Lord. Amen."
+      },
+      {
+        "lat": "℣. Benedicat vos omnípotens Deus, Pater, et Fílius, ✠ et Spíritus Sanctus. ℟. Amen.",
+        "eng": "℣. May almighty God bless you, the Father, and the Son, ✠ and the Holy Spirit. ℟. Amen."
       }
     ]
   },

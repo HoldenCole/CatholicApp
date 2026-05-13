@@ -3,6 +3,7 @@ import SwiftUI
 struct StationsView: View {
     @State private var store = ContentStore.shared
     @State private var activeIndex: Int? = nil
+    @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
@@ -22,6 +23,17 @@ struct StationsView: View {
         }
         .navigationTitle("Via Crucis")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button { showNotification = true } label: {
+                    Image(systemName: NotificationStore.schedule(for: "devotion.stations")?.isEnabled == true ? "bell.fill" : "bell")
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+            }
+        }
+        .sheet(isPresented: $showNotification) {
+            NotificationScheduleSheet(scheduleId: "devotion.stations", title: "Via Crucis", subtitle: "Remind me to pray the Stations")
+        }
     }
 
     private var startList: some View {
@@ -57,6 +69,30 @@ struct StationsView: View {
                     LinearGradient(colors: [Color.walnut, Color.walnutHi], startPoint: .top, endPoint: .bottom)
                 )
 
+                Button { activeIndex = 0 } label: {
+                    HStack(spacing: 10) {
+                        Text("✠")
+                            .font(.titleM)
+                            .foregroundStyle(Color.sanctuaryRed)
+                        Text("Incipiámus")
+                            .font(.titleM)
+                            .italic()
+                            .foregroundStyle(Color.sanctuaryRed)
+                        Text("·  Begin")
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                            .textCase(.uppercase)
+                            .tracking(2)
+                    }
+                    .padding(.vertical, 14)
+                    .frame(maxWidth: .infinity)
+                    .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 0.5))
+                }
+                .buttonStyle(.plain)
+                .padding(.horizontal, 28)
+                .padding(.top, 20)
+
                 // Winding path
                 VStack(spacing: 0) {
                     ForEach(Array(store.stations.enumerated()), id: \.offset) { idx, s in
@@ -66,31 +102,8 @@ struct StationsView: View {
                         .buttonStyle(.plain)
                     }
                 }
-                .padding(.vertical, 28)
+                .padding(.vertical, 20)
                 .padding(.horizontal, 20)
-
-                Button { activeIndex = 0 } label: {
-                    VStack(spacing: 8) {
-                        Text("✠")
-                            .font(.titleL)
-                            .foregroundStyle(Color.sanctuaryRed)
-                        Text("Incipiámus")
-                            .font(.titleL)
-                            .italic()
-                            .foregroundStyle(Color.sanctuaryRed)
-                        Text("Begin the Way of the Cross")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.secondaryText)
-                            .textCase(.uppercase)
-                            .tracking(2)
-                    }
-                    .padding(.vertical, 24)
-                    .frame(maxWidth: .infinity)
-                    .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 0.5))
-                }
-                .buttonStyle(.plain)
-                .padding(.horizontal, 28)
                 .padding(.bottom, 40)
             }
         }
@@ -115,7 +128,7 @@ struct StationsView: View {
             }
             .padding(.vertical, 8)
             .padding(.horizontal, 16)
-            .frame(maxWidth: 320, alignment: isLeft ? .leading : .trailing)
+            .frame(maxWidth: .infinity, alignment: isLeft ? .leading : .trailing)
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .fill(moodColor.opacity(0.06))
@@ -142,7 +155,7 @@ struct StationsView: View {
                 .stroke(color.opacity(0.6), lineWidth: 1.5)
                 .frame(width: 48, height: 48)
             Text(s.station)
-                .font(.system(size: 16, weight: .bold, design: .serif))
+                .font(.titleM)
                 .italic()
                 .foregroundStyle(color)
         }

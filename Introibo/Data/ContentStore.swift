@@ -23,6 +23,7 @@ final class ContentStore {
     private(set) var examen:         [ExamenEntry]         = []
     private(set) var confessionGuides:[ConfessionGuide]    = []
     private(set) var propers:         [MassProper]          = []
+    private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], marianAntiphons: [])
 
     init() {
         prayers           = load("prayers",            as: [Prayer].self)              ?? []
@@ -38,6 +39,14 @@ final class ContentStore {
         examen            = load("confession_examen", as: [ExamenEntry].self)          ?? []
         confessionGuides  = load("confession_guides", as: [ConfessionGuide].self)      ?? []
         propers           = load("propers",            as: [MassProper].self)          ?? []
+
+        let psalter = load("psalter_weekly",   as: [String: [String: Hour.Part]].self) ?? [:]
+        let hymns   = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
+        officeAssembler = OfficeAssembler(
+            weeklyPsalter: psalter,
+            seasonalHymns: hymns,
+            marianAntiphons: marianAntiphons
+        )
     }
 
     func proper(slug: String) -> MassProper? {
@@ -46,6 +55,11 @@ final class ContentStore {
 
     func hour(slug: String) -> Hour? {
         hours.first { $0.slug == slug }
+    }
+
+    func hourForToday(slug: String) -> Hour? {
+        guard let template = hour(slug: slug) else { return nil }
+        return officeAssembler.assemble(template: template, context: .current())
     }
 
     func mysterySet(slug: String) -> MysterySetData? {

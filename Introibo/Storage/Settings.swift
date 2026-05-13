@@ -117,7 +117,7 @@ enum FontSizeScale {
 
     static func current() -> CGFloat {
         let val = UserDefaults.standard.double(forKey: SettingsKey.fontSize)
-        if val < Self.min { return Self.defaultValue }
+        if val < Self.min || val > Self.max { return Self.defaultValue }
         return CGFloat(val)
     }
 }

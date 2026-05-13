@@ -10,7 +10,7 @@ No accounts. No tracking. No ads. Works completely offline. All data stored loca
 
 ## Overview
 
-Introibo puts the complete 1962 Missale Romanum in your pocket with daily Propers automatically interleaved with the Ordinary in correct liturgical order, so you can follow along at Mass from the Prayers at the Foot of the Altar through the Last Gospel. Beyond the Missal, it is a full daily companion with the Divine Office, an interactive bead-by-bead Rosary, Stations of the Cross, 30 traditional prayers, a Latin school, and a reference library, all in side-by-side Latin and English.
+Introibo puts the complete 1962 Missale Romanum in your pocket with daily Propers automatically interleaved with the Ordinary in correct liturgical order, so you can follow along at Mass from the Prayers at the Foot of the Altar through the Last Gospel. Beyond the Missal, it is a full daily companion with the Divine Office, an interactive bead-by-bead Rosary, Stations of the Cross, 38 traditional prayers with a customisable personal prayer rule, patron saint tracking with daily practice checklists, a Latin school, and a reference library with searchable propers, TLM history timeline, and liturgical glossary, all in side-by-side Latin and English.
 
 Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, and diocesan TLM parishes.
 
@@ -39,17 +39,19 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 - First Friday, First Saturday, and Ember Day flags
 - Devotion links: Divine Office, Stations of the Cross, Examination of Conscience, Morning Offering
 - Rosary card with today's mystery set and last-prayed date
-- Saint card with follow status and daily streak
+- Prayer rule progress card with daily completion tracking
+- Saint card opening directly to followed saint's detail view with daily streak
 - Schola card showing lesson mastery progress
 
 ### Prayers
 
-- **30 traditional prayers** in Latin and English with decorative drop cap on the first line
+- **38 traditional prayers** in Latin and English with decorative drop cap on the first line
+- **Personal Prayer Rule**: customisable morning, midday, and evening prayer schedule with daily checklist and progress ring
+- **11 occasion categories**: Morning, Before Mass, After Mass, Meals, Marian, Eucharistic, Before Confession, For the Departed, In Temptation, For Protection, Evening
+- **Sort toggle**: Custom order or alphabetical (A-Z)
 - **Time-aware featured prayer**: Morning Offering (before noon), Salve Regina (noon to 6pm), Suscipe (after 6pm)
-- **Sort and filter dropdown**: By Type (grouped by liturgical category) or A to Z (alphabetical)
-- Categories: Rosarium, Missa, Devotiones, Ante Crucifixum
 - All prayers respect the language mode setting (Latin only, English only, or both side-by-side)
-- Prayers include: Sign of the Cross, Our Father, Hail Mary, Glory Be, Fatima Prayer, Salve Regina, Apostles' Creed, Confiteor, Kyrie, Gloria in Excelsis, Sanctus, Agnus Dei, Domine Non Sum Dignus, Morning Offering, Memorare, Act of Contrition, Anima Christi, Prayer Before a Crucifix, Tantum Ergo, St. Michael Prayer, Adoro Te Devote, Suscipe
+- Prayers include: Sign of the Cross, Our Father, Hail Mary, Glory Be, Fatima Prayer, Salve Regina, Apostles' Creed, Confiteor, Kyrie, Gloria in Excelsis, Sanctus, Agnus Dei, Domine Non Sum Dignus, Morning Offering, Memorare, Act of Contrition, Anima Christi, Prayer Before a Crucifix, Tantum Ergo, St. Michael Prayer, Adoro Te Devote, Suscipe, Grace Before Meals, Grace After Meals, Miserere, Requiem Aeternam, Veni Creator Spiritus, Psalm 102 Thanksgiving, and more
 
 ### Rosary
 
@@ -90,26 +92,34 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 ### Latin School
 
 - **10 progressive lessons** from vowels and pronunciation through reading the Vulgate
+- **Progress ring header** with mastery count and lesson dot indicators
+- **Daily Latin word** (Verbum Hodie) rotating from flashcard pool
 - **Interactive flip-card flashcards** showing Latin front, tap to reveal English translation and phonetic pronunciation
 - **Multiple-choice quizzes** (5 questions each) testing both Latin-to-English and English-to-Latin, with randomized choices, score tracking, and try-again option
-- Lessons with intro text, section types (lesson, tip, cards, phrase, table, summary)
+- Visual lesson rows with Roman numeral circles, card counts, and mastery badges
 - Mastery tracking per lesson with checkmark seal indicator
 - Overall mastery count displayed on Learn tab and Today screen
 
 ### Reference Library
 
-- **37 entries across 7 categories** covering Catholic doctrine, sacraments, devotional practice, and tradition
-- Bold red section headers with decorative lines
+- **Knowledge hub** with four sections: References, Propers, History, and Glossary
+- **41 reference articles across 7 categories** covering Catholic doctrine, sacraments, devotional practice, and tradition
+- **Propers search**: full-text search across 422 Mass proper formularies by saint name, date, or scripture reference
+- **TLM History timeline**: 20 key events from the Last Supper (33 AD) through present day
+- **Liturgical Glossary**: 25 essential terms with Latin, English, and definitions
+- Quick reference links to key articles (Holy Mass, Baptism, Eucharist, Penance, Rosary)
 - Detail view with dark walnut header, drop cap summary, History Practice Notes sections, and scripture block with Latin and English
-- ScrollView layout with dividers
 
 ### Saints
 
-- **7 patron saints** with detailed practice schedules
+- **7 patron saints** with detailed daily practice schedules and 14 saint-specific prayers (2 per saint, Latin and English)
+- **Interactive daily checklist** with tappable checkboxes for each practice, progress ring showing completion
 - Follow or unfollow a saint with daily streak tracking (resets if a day is skipped)
 - Quote block, charism description, and three practice periods: Morning, Throughout Day, Evening
+- Completing all daily practices bumps the streak counter
 - Streak counter with gold dots in header
 - Saint-specific penance displayed on Today screen when following
+- Saint card on Today screen opens directly to followed saint's detail view
 
 ### App Experience
 
@@ -134,7 +144,7 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Data Layer
 
-- **ContentStore** singleton (`@Observable`) loading 13 bundled JSON files on first access: prayers, reference, saints, courses, missal, mysteries, rosary_prayers, stations, hours, marian_antiphons, examen, confession_guides, propers
+- **ContentStore** singleton (`@Observable`) loading 14 bundled JSON files on first access: prayers, reference, saints, courses, missal, mysteries, rosary_prayers, stations, hours, marian_antiphons, examen, confession_guides, propers, communes
 - **LiturgicalContext** engine computing full liturgical date info for any date: season, colour, feria, Marian antiphon, Rosary mystery, penance obligations, proper slug
 - **Computus** algorithm (Anonymous Gregorian) for Easter date calculation
 - **ProperCalendar** resolving any date to a proper slug via Temporale (Easter-relative offsets) and Sanctorale (fixed-date feast table)
@@ -152,7 +162,7 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 - **GitHub Actions** workflow on `macos-15` runner
 - Builds on push to `main` and `claude/**` branches
 - Simulator build for compilation verification on all pushes
-- **Fastlane** `beta` lane for TestFlight deployment on main-branch pushes
+- **Fastlane** `beta` lane for TestFlight deployment on main and claude/* branch pushes
 - App Store Connect API key authentication via `-authenticationKeyPath` flags
 - Automatic code signing with team ID from secrets
 
@@ -182,11 +192,11 @@ Build target: iOS 17.0+. No code signing required for local simulator builds.
 
 ### CI Deployment
 
-Push to `main` triggers the GitHub Actions workflow which:
+Push to `main` or `claude/*` triggers the GitHub Actions workflow which:
 1. Selects the latest available Xcode
 2. Generates the Xcode project via XcodeGen
 3. Builds for simulator (compilation check)
-4. Archives and uploads to TestFlight via Fastlane (main branch only)
+4. Archives and uploads to TestFlight via Fastlane
 
 Required GitHub Secrets: `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8`, `APPLE_TEAM_ID`
 
@@ -219,7 +229,7 @@ Introibo/
   Resources/                     Bundled JSON content
     propers.json                  422 Mass proper formularies
     missal.json                   13 Ordinary sections
-    prayers.json                  30 traditional prayers
+    prayers.json                  38 traditional prayers
     hours.json                    8 canonical hours
     mysteries.json, rosary_prayers.json, stations.json, saints.json,
     courses.json, reference.json, marian_antiphons.json,

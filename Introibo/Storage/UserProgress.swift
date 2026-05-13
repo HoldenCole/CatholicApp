@@ -222,8 +222,9 @@ enum UserProgress {
     /// Wipes every Introibo-managed key. Used by the "Reset all progress"
     /// button in Settings. Does not touch system keys.
     static func resetAll() {
+        PrayerNotificationManager.cancelAll()
         for key in defaults.dictionaryRepresentation().keys {
-            if key.hasPrefix("saints.") || key.hasPrefix("rosary.") || key.hasPrefix("learn.") || key.hasPrefix("saints.checklist") {
+            if key.hasPrefix("saints.") || key.hasPrefix("rosary.") || key.hasPrefix("learn.") || key.hasPrefix("prayers.") || key.hasPrefix("notifications.") {
                 defaults.removeObject(forKey: key)
             }
         }
