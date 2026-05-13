@@ -2194,5 +2194,2777 @@
         }
       ]
     }
+  },
+  "friday": {
+    "matutinum.psalm1": {
+      "type": "psalm",
+      "label": "Psalmus 26",
+      "ref": "Ps 26",
+      "variationKey": "matutinum.psalm1",
+      "verses": [
+        {
+          "lat": "Dóminus illuminátio mea et salus mea, quem timébo? Dóminus protéctor vitæ meæ, a quo trepidábo?",
+          "eng": "The Lord is my light and my salvation, whom shall I fear? The Lord is the protector of my life, of whom shall I be afraid?"
+        },
+        {
+          "lat": "Dum apprópiant super me nocéntes, ut edant carnes meas: Qui tríbulant me inimíci mei, ipsi infirmáti sunt et cecidérunt.",
+          "eng": "Whilst the wicked draw near against me, to eat my flesh: My enemies that trouble me, have themselves been weakened and have fallen."
+        },
+        {
+          "lat": "Si consístant advérsum me castra, non timébit cor meum. Si exsúrgat advérsum me prǽlium, in hoc ego sperábo.",
+          "eng": "If armies in camp should stand together against me, my heart shall not fear. If a battle should rise up against me, in this will I be confident."
+        },
+        {
+          "lat": "Unam pétii a Dómino, hanc requíram: ut inhábitem in domo Dómini ómnibus diébus vitæ meæ: Ut vídeam voluptátem Dómini, et vísitem templum ejus.",
+          "eng": "One thing I have asked of the Lord, this will I seek after; that I may dwell in the house of the Lord all the days of my life. That I may see the delight of the Lord, and may visit His temple."
+        },
+        {
+          "lat": "Quóniam abscóndit me in tabernáculo suo: in die malórum protéxit me in abscóndito tabernáculi sui.",
+          "eng": "For He hath hidden me in His tabernacle; in the day of evils, He hath protected me in the secret place of His tabernacle."
+        },
+        {
+          "lat": "In petra exaltávit me: et nunc exaltávit caput meum super inimícos meos. Circuívi, et immolávi in tabernáculo ejus hóstiam vociferatiónis: cantábo, et psalmum dicam Dómino.",
+          "eng": "He hath exalted me upon a rock: and now He hath lifted up my head above my enemies. I have gone round, and have offered up in His tabernacle a sacrifice of jubilation: I will sing, and recite a psalm to the Lord."
+        },
+        {
+          "lat": "Exáudi, Dómine, vocem meam, qua clamávi ad te: miserére mei, et exáudi me.",
+          "eng": "Hear, O Lord, my voice, with which I have cried to Thee: have mercy on me, and hear me."
+        },
+        {
+          "lat": "Tibi dixit cor meum, exquisívit te fácies mea: fáciem tuam, Dómine, requíram.",
+          "eng": "My heart hath said to Thee: My face hath sought Thee: Thy face, O Lord, will I still seek."
+        },
+        {
+          "lat": "Ne avértas fáciem tuam a me: ne declínes in ira a servo tuo. Adjútor meus esto: ne derelínquas me, neque despícias me, Deus, salutáris meus.",
+          "eng": "Turn not away Thy face from me; decline not in Thy wrath from Thy servant. Be Thou my helper, forsake me not; do not Thou despise me, O God my Saviour."
+        },
+        {
+          "lat": "Quóniam pater meus et mater mea dereliquérunt me: Dóminus autem assúmpsit me.",
+          "eng": "For my father and my mother have left me: but the Lord hath taken me up."
+        },
+        {
+          "lat": "Legem pone mihi, Dómine, in via tua: et dírige me in sémitam rectam propter inimícos meos.",
+          "eng": "Set me, O Lord, a law in Thy way, and guide me in the right path, because of my enemies."
+        },
+        {
+          "lat": "Ne tradíderis me in ánimas tribulántium me: quóniam insurrexérunt in me testes iníqui, et mentíta est iníquitas sibi.",
+          "eng": "Deliver me not over to the will of them that trouble me; for unjust witnesses have risen up against me, and iniquity hath lied to itself."
+        },
+        {
+          "lat": "Credo vidére bona Dómini in terra vivéntium.",
+          "eng": "I believe to see the good things of the Lord in the land of the living."
+        },
+        {
+          "lat": "Exspécta Dóminum, viríliter age: et confortétur cor tuum, et sústine Dóminum.",
+          "eng": "Expect the Lord, do manfully: and let thy heart take courage, and wait thou for the Lord."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm2": {
+      "type": "psalm",
+      "label": "Psalmus 27",
+      "ref": "Ps 27",
+      "variationKey": "matutinum.psalm2",
+      "verses": [
+        {
+          "lat": "Ad te, Dómine, clamábo, Deus meus, ne síleas a me: nequándo táceas a me, et assimilábor descendéntibus in lacum.",
+          "eng": "Unto Thee will I cry, O Lord: O my God, be not Thou silent to me: lest if Thou be silent to me, I become like them that go down into the pit."
+        },
+        {
+          "lat": "Exáudi, Dómine, vocem deprecatiónis meæ dum oro ad te: dum extóllo manus meas ad templum sanctum tuum.",
+          "eng": "Hear, O Lord, the voice of my supplication, when I pray to Thee; when I lift up my hands to Thy holy temple."
+        },
+        {
+          "lat": "Ne simul trahas me cum peccatóribus: et cum operántibus iniquitátem ne perdas me: Qui loquúntur pacem cum próximo suo, mala autem in córdibus eórum.",
+          "eng": "Draw me not away together with the wicked; and with the workers of iniquity destroy me not: Who speak peace with their neighbour, but evils are in their hearts."
+        },
+        {
+          "lat": "Da illis secúndum ópera eórum, et secúndum nequítiam adinventiónum ipsórum. Secúndum ópera mánuum eórum tríbue illis: redde retributiónem eórum ipsis.",
+          "eng": "Give them according to their works, and according to the wickedness of their inventions. According to the works of their hands give Thou to them: render to them their reward."
+        },
+        {
+          "lat": "Quóniam non intellexérunt ópera Dómini, et in ópera mánuum ejus: déstrues illos, et non ædificábis eos.",
+          "eng": "Because they have not understood the works of the Lord, and the operations of His hands: Thou shalt destroy them, and shalt not build them up."
+        },
+        {
+          "lat": "Benedíctus Dóminus: quóniam exaudívit vocem deprecatiónis meæ.",
+          "eng": "Blessed be the Lord, for He hath heard the voice of my supplication."
+        },
+        {
+          "lat": "Dóminus adjútor meus, et protéctor meus: in ipso sperávit cor meum, et adjútus sum. Et reflóruit caro mea: et ex voluntáte mea confitébor ei.",
+          "eng": "The Lord is my helper and my protector: in Him hath my heart confided, and I have been helped. And my flesh hath flourished again: and with my will I will give praise to Him."
+        },
+        {
+          "lat": "Dóminus fortitúdo plebis suæ: et protéctor salvatiónum christi sui est.",
+          "eng": "The Lord is the strength of His people, and the protector of the salvation of His anointed."
+        },
+        {
+          "lat": "Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ: et rege eos, et extólle illos usque in ætérnum.",
+          "eng": "Save, O Lord, Thy people, and bless Thy inheritance: and rule them, and exalt them for ever."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm3": {
+      "type": "psalm",
+      "label": "Psalmus 29",
+      "ref": "Ps 29",
+      "variationKey": "matutinum.psalm3",
+      "verses": [
+        {
+          "lat": "Exaltábo te, Dómine, quóniam suscepísti me: nec delectásti inimícos meos super me.",
+          "eng": "I will extol Thee, O Lord, for Thou hast upheld me: and hast not made my enemies to rejoice over me."
+        },
+        {
+          "lat": "Dómine, Deus meus, clamávi ad te, et sanásti me.",
+          "eng": "O Lord my God, I have cried to Thee, and Thou hast healed me."
+        },
+        {
+          "lat": "Dómine, eduxísti ab inférno ánimam meam: salvásti me a descendéntibus in lacum.",
+          "eng": "Thou hast brought forth, O Lord, my soul from hell: Thou hast saved me from them that go down into the pit."
+        },
+        {
+          "lat": "Psállite Dómino, sancti ejus: et confitémini memóriæ sanctitátis ejus.",
+          "eng": "Sing to the Lord, O ye His saints: and give praise to the memory of His holiness."
+        },
+        {
+          "lat": "Quóniam ira in indignatióne ejus: et vita in voluntáte ejus. Ad vésperam demorábitur fletus: et ad matutínum lætítia.",
+          "eng": "For wrath is in His indignation; and life in His good will. In the evening weeping shall have place, and in the morning gladness."
+        },
+        {
+          "lat": "Ego autem dixi in abundántia mea: Non movébor in ætérnum.",
+          "eng": "And in my abundance I said: I shall never be moved."
+        },
+        {
+          "lat": "Dómine, in voluntáte tua, præstitísti decóri meo virtútem. Avertísti fáciem tuam a me, et factus sum conturbátus.",
+          "eng": "O Lord, in Thy favour, Thou gavest strength to my beauty. Thou turnedst away Thy face from me, and I became troubled."
+        },
+        {
+          "lat": "Ad te, Dómine, clamábo: et ad Deum meum deprecábor.",
+          "eng": "To Thee, O Lord, will I cry: and I will make supplication to my God."
+        },
+        {
+          "lat": "Quæ utílitas in sánguine meo, dum descéndo in corruptiónem? Numquid confitébitur tibi pulvis, aut annuntiábit veritátem tuam?",
+          "eng": "What profit is there in my blood, whilst I go down to corruption? Shall dust confess to Thee, or declare Thy truth?"
+        },
+        {
+          "lat": "Audívit Dóminus, et misértus est mei: Dóminus factus est adjútor meus.",
+          "eng": "The Lord hath heard, and hath had mercy on me: the Lord became my helper."
+        },
+        {
+          "lat": "Convertísti planctum meum in gáudium mihi: conscidísti saccum meum, et circumdedísti me lætítia:",
+          "eng": "Thou hast turned for me my mourning into joy: Thou hast cut my sackcloth, and hast compassed me with gladness:"
+        },
+        {
+          "lat": "Ut cantet tibi glória mea, et non compúngar: Dómine, Deus meus, in ætérnum confitébor tibi.",
+          "eng": "To the end that my glory may sing to Thee, and I may not regret: O Lord my God, I will give praise to Thee for ever."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm4": {
+      "type": "psalm",
+      "label": "Psalmus 30",
+      "ref": "Ps 30",
+      "variationKey": "matutinum.psalm4",
+      "verses": [
+        {
+          "lat": "In te, Dómine, sperávi, non confúndar in ætérnum: in justítia tua líbera me.",
+          "eng": "In Thee, O Lord, have I hoped, let me never be confounded: deliver me in Thy justice."
+        },
+        {
+          "lat": "Inclína ad me aurem tuam, accélera ut éruas me. Esto mihi in Deum protectórem, et in domum refúgii, ut salvum me fácias.",
+          "eng": "Bow down Thy ear to me: make haste to deliver me. Be Thou unto me a God, a protector, and a house of refuge, to save me."
+        },
+        {
+          "lat": "Quóniam fortitúdo mea et refúgium meum es tu: et propter nomen tuum dedúces me, et enútries me.",
+          "eng": "For Thou art my strength and my refuge; and for Thy name's sake Thou wilt lead me and nourish me."
+        },
+        {
+          "lat": "Edúces me de láqueo hoc, quem abscondérunt mihi: quóniam tu es protéctor meus.",
+          "eng": "Thou wilt bring me out of this snare, which they have hidden for me: for Thou art my protector."
+        },
+        {
+          "lat": "In manus tuas comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",
+          "eng": "Into Thy hands I commend my spirit: Thou hast redeemed me, O Lord, the God of truth."
+        },
+        {
+          "lat": "Odísti observántes vanitátes supervácue. Ego autem in Dómino sperávi:",
+          "eng": "Thou hast hated them that regard vanities to no purpose. But I have hoped in the Lord:"
+        },
+        {
+          "lat": "Exsultábo et lætábor in misericórdia tua. Quóniam respexísti humilitátem meam, salvásti de necessitátibus ánimam meam.",
+          "eng": "I will be glad and rejoice in Thy mercy. For Thou hast regarded my humility, Thou hast saved my soul out of distresses."
+        },
+        {
+          "lat": "Nec conclusísti me in mánibus inimíci: statuísti in loco spatióso pedes meos.",
+          "eng": "And Thou hast not shut me up in the hands of the enemy: Thou hast set my feet in a spacious place."
+        },
+        {
+          "lat": "Miserére mei, Dómine, quóniam tríbulor: conturbátus est in ira óculus meus, ánima mea, et venter meus.",
+          "eng": "Have mercy on me, O Lord, for I am afflicted: my eye is troubled with wrath, my soul, and my belly."
+        },
+        {
+          "lat": "Quóniam defécit in dolóre vita mea: et anni mei in gemítibus. Infirmáta est in paupertáte virtus mea: et ossa mea conturbáta sunt.",
+          "eng": "For my life is wasted with grief: and my years in sighs. My strength is weakened through poverty: and my bones are disturbed."
+        },
+        {
+          "lat": "Super omnes inimícos meos factus sum oppróbrium et vicínis meis valde: et timor notis meis. Qui vidébant me, foras fugérunt a me.",
+          "eng": "I am become a reproach among all my enemies, and very much to my neighbours: and a fear to my acquaintance. They that saw me without fled from me."
+        },
+        {
+          "lat": "Oblívioni datus sum, tamquam mórtuus a corde. Factus sum tamquam vas pérditum:",
+          "eng": "I am forgotten as one dead from the heart. I am become as a vessel that is destroyed."
+        },
+        {
+          "lat": "Quóniam audívi vituperatiónem multórum commorántium in circúitu: in eo dum convenírent simul advérsum me, accípere ánimam meam consiliáti sunt.",
+          "eng": "For I have heard the blame of many that dwell round about: while they assembled together against me, they consulted to take away my life."
+        },
+        {
+          "lat": "Ego autem in te sperávi, Dómine: dixi: Deus meus es tu: in mánibus tuis sortes meæ.",
+          "eng": "But I have put my trust in Thee, O Lord: I said: Thou art my God. My lots are in Thy hands."
+        },
+        {
+          "lat": "Eripe me de manu inimicórum meórum, et a persequéntibus me.",
+          "eng": "Deliver me out of the hands of my enemies; and from them that persecute me."
+        },
+        {
+          "lat": "Illústra fáciem tuam super servum tuum, salvum me fac in misericórdia tua: Dómine, non confúndar, quóniam invocávi te.",
+          "eng": "Make Thy face to shine upon Thy servant; save me in Thy mercy. Let me not be confounded, O Lord, for I have called upon Thee."
+        },
+        {
+          "lat": "Erubéscant ímpii, et deducántur in inférnum: muta fiant lábia dolósa.",
+          "eng": "Let the wicked be ashamed, and be brought down to hell. Let deceitful lips be made dumb."
+        },
+        {
+          "lat": "Quæ loquúntur advérsus justum iniquitátem: in supérbia, et in abusióne.",
+          "eng": "Which speak iniquity against the just, with pride and abuse."
+        },
+        {
+          "lat": "Quam magna multitúdo dulcédinis tuæ, Dómine, quam abscondísti timéntibus te! Perfecísti eis, qui sperant in te, in conspéctu filiórum hóminum.",
+          "eng": "O how great is the multitude of Thy sweetness, O Lord, which Thou hast hidden for them that fear Thee! Which Thou hast wrought for them that hope in Thee, in the sight of the sons of men."
+        },
+        {
+          "lat": "Abscóndes eos in abscóndito faciéi tuæ a conturbatióne hóminum. Próteges eos in tabernáculo tuo a contradictióne linguárum.",
+          "eng": "Thou shalt hide them in the secret of Thy face, from the disturbance of men. Thou shalt protect them in Thy tabernacle from the contradiction of tongues."
+        },
+        {
+          "lat": "Benedíctus Dóminus: quóniam mirificávit misericórdiam suam mihi in civitáte muníta.",
+          "eng": "Blessed be the Lord, for He hath shown His wonderful mercy to me in a fortified city."
+        },
+        {
+          "lat": "Ego autem dixi in excéssu mentis meæ: Projéctus sum a fácie oculórum tuórum. Ideo exaudísti vocem oratiónis meæ, dum clamárem ad te.",
+          "eng": "But I said in the excess of my mind: I am cast away from before Thy eyes. Therefore Thou hast heard the voice of my prayer, when I cried to Thee."
+        },
+        {
+          "lat": "Dilígite Dóminum, omnes sancti ejus: quóniam veritátem requíret Dóminus, et retríbuet abundánter faciéntibus supérbiam.",
+          "eng": "O love the Lord, all ye His saints: for the Lord will require truth, and will repay them abundantly that act proudly."
+        },
+        {
+          "lat": "Viríliter ágite, et confortétur cor vestrum, omnes qui sperátis in Dómino.",
+          "eng": "Do ye manfully, and let your heart be strengthened, all ye that hope in the Lord."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm5": {
+      "type": "psalm",
+      "label": "Psalmus 34",
+      "ref": "Ps 34",
+      "variationKey": "matutinum.psalm5",
+      "verses": [
+        {
+          "lat": "Júdica, Dómine, nocéntes me, expúgna impugnántes me.",
+          "eng": "Judge thou, O Lord, them that wrong me: overthrow them that fight against me."
+        },
+        {
+          "lat": "Apprehénde arma et scutum: et exsúrge in adjutórium mihi.",
+          "eng": "Take hold of arms and shield: and rise up to help me."
+        },
+        {
+          "lat": "Effúnde frámeam, et conclúde advérsus eos qui persequúntur me: dic ánimæ meæ: Salus tua ego sum.",
+          "eng": "Bring out the sword, and shut up the way against them that persecute me: say to my soul: I am thy salvation."
+        },
+        {
+          "lat": "Confundántur et revereántur, quæréntes ánimam meam. Avertántur retrórsum, et confundántur cogitántes mihi mala.",
+          "eng": "Let them be confounded and ashamed that seek after my soul. Let them be turned back and be confounded that devise evil against me."
+        },
+        {
+          "lat": "Fiant tamquam pulvis ante fáciem venti: et Ángelus Dómini coárctans eos.",
+          "eng": "Let them become as dust before the wind: and let the Angel of the Lord straiten them."
+        },
+        {
+          "lat": "Fiat via illórum ténebræ et lúbricum: et Ángelus Dómini pérsequens eos.",
+          "eng": "Let their way become dark and slippery: and let the Angel of the Lord pursue them."
+        },
+        {
+          "lat": "Quóniam gratis abscondérunt mihi intéritum láquei sui: supervácue exprobravérunt ánimam meam.",
+          "eng": "For without cause they have hidden their net for me unto destruction: without cause they have upbraided my soul."
+        },
+        {
+          "lat": "Véniat illi láqueus quem ignórat: et cáptio quam abscóndit, apprehéndat eum: et in láqueum cadat in ipsum.",
+          "eng": "Let the snare which he knoweth not come upon him: and let the net which he hath hidden catch him: and into that very snare let him fall."
+        },
+        {
+          "lat": "Ánima autem mea exsultábit in Dómino: et delectábitur super salutári suo.",
+          "eng": "But my soul shall rejoice in the Lord; and shall be delighted in His salvation."
+        },
+        {
+          "lat": "Ómnia ossa mea dicent: Dómine, quis símilis tibi? Erípiens ínopem de manu fortiórum ejus: egénum et páuperem a diripiéntibus eum.",
+          "eng": "All my bones shall say: Lord, who is like to Thee? Who deliverest the poor from the hand of them that are stronger than he; the needy and the poor from them that strip him."
+        },
+        {
+          "lat": "Surgéntes testes iníqui, quæ ignorábam interrogábant me.",
+          "eng": "Unjust witnesses rising up, asked me things I knew not."
+        },
+        {
+          "lat": "Retribuébant mihi mala pro bonis: sterilitátem ánimæ meæ.",
+          "eng": "They repaid me evil for good: to the depriving me of my soul."
+        },
+        {
+          "lat": "Ego autem, cum mihi molésti essent, induébar cilício. Humiliábam in jejúnio ánimam meam: et orátio mea in sinu meo convertétur.",
+          "eng": "But as for me, when they were troublesome to me, I was clothed with haircloth. I humbled my soul with fasting; and my prayer shall be turned into my bosom."
+        },
+        {
+          "lat": "Quasi próximum, et quasi fratrem nostrum sic compla­cébam: quasi lugens et contristátus sic humiliábar.",
+          "eng": "As a neighbour, and as an own brother, so did I please: as one mourning and sorrowful so was I humbled."
+        },
+        {
+          "lat": "Et advérsum me lætáti sunt, et convenérunt: congregáta sunt super me flagélla, et ignorávi.",
+          "eng": "But they rejoiced against me, and came together: scourges were gathered together upon me, and I knew not."
+        },
+        {
+          "lat": "Dissipáti sunt, nec compúncti, tentavérunt me, subsannavérunt me subsannatióne: fremuérunt super me déntibus suis.",
+          "eng": "They were separated, and repented not: they tempted me, they scoffed at me with scorn: they gnashed upon me with their teeth."
+        },
+        {
+          "lat": "Dómine, quando respícies? Restítue ánimam meam a malignitáte eórum, a leónibus únicam meam.",
+          "eng": "Lord, when wilt Thou look upon me? Rescue my soul from their malice: my only one from the lions."
+        },
+        {
+          "lat": "Confitébor tibi in ecclésia magna, in pópulo gravi laudábo te.",
+          "eng": "I will give thanks to Thee in a great church; I will praise Thee in a strong people."
+        },
+        {
+          "lat": "Non supergáudeant mihi qui adversántur mihi iníque: qui odérunt me gratis et ánnuunt óculis.",
+          "eng": "Let not them that are my enemies wrongfully rejoice over me: who have hated me without cause, and wink with the eyes."
+        },
+        {
+          "lat": "Quóniam mihi quidem pacífice loquebántur: et in iracúndia terræ loquéntes, dolos cogitábant.",
+          "eng": "For they spoke indeed peaceably to me; and speaking in the anger of the earth they devised guile."
+        },
+        {
+          "lat": "Et dilatavérunt super me os suum: dixérunt: Euge, euge, vidérunt óculi nostri.",
+          "eng": "And they opened their mouth wide against me; they said: Well done, well done, our eyes have seen it."
+        },
+        {
+          "lat": "Vidísti, Dómine, ne síleas: Dómine, ne discédas a me.",
+          "eng": "Thou hast seen, O Lord, be not Thou silent: O Lord, depart not from me."
+        },
+        {
+          "lat": "Exsúrge et inténde judício meo: Deus meus, et Dóminus meus, in causam meam.",
+          "eng": "Arise, and be attentive to my judgment: to my cause, my God, and my Lord."
+        },
+        {
+          "lat": "Júdica me secúndum justítiam tuam, Dómine, Deus meus, et non supergáudeant mihi.",
+          "eng": "Judge me, O Lord my God, according to Thy justice, and let them not rejoice over me."
+        },
+        {
+          "lat": "Non dicant in córdibus suis: Euge, euge, ánimæ nostræ: nec dicant: Devorávimus eum.",
+          "eng": "Let them not say in their hearts: It is well, it is well, to our mind: neither let them say: We have swallowed him up."
+        },
+        {
+          "lat": "Erubéscant et revereántur simul, qui gratulántur malis meis. Induántur confusióne et reveréntia, qui magna loquúntur super me.",
+          "eng": "Let them blush and be ashamed together, who rejoice at my evils. Let them be clothed with confusion and shame, who speak great things against me."
+        },
+        {
+          "lat": "Exsúltent et læténtur qui volunt justítiam meam: et dicant semper: Magnificétur Dóminus, qui volunt pacem servi ejus.",
+          "eng": "Let them rejoice and be glad, who are well pleased with my justice, and let them say always: The Lord be magnified, who delights in the peace of His servant."
+        },
+        {
+          "lat": "Et lingua mea meditábitur justítiam tuam, tota die laudem tuam.",
+          "eng": "And my tongue shall meditate Thy justice, Thy praise all the day long."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm6": {
+      "type": "psalm",
+      "label": "Psalmus 36",
+      "ref": "Ps 36",
+      "variationKey": "matutinum.psalm6",
+      "verses": [
+        {
+          "lat": "Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.",
+          "eng": "Be not emulous of evildoers; nor envy them that work iniquity."
+        },
+        {
+          "lat": "Quóniam tamquam fænum velóciter aréscent: et quemádmodum ólera herbárum cito décident.",
+          "eng": "For they shall shortly wither away as grass, and as the green herbs shall quickly fall."
+        },
+        {
+          "lat": "Spera in Dómino, et fac bonitátem: et inhábita terram, et pascéris in divítiis ejus.",
+          "eng": "Trust in the Lord, and do good, and dwell in the land, and thou shalt be fed with its riches."
+        },
+        {
+          "lat": "Delectáre in Dómino: et dabit tibi petitiónes cordis tui.",
+          "eng": "Delight in the Lord, and He will give thee the requests of thy heart."
+        },
+        {
+          "lat": "Revéla Dómino viam tuam, et spera in eo: et ipse fáciet.",
+          "eng": "Commit thy way to the Lord, and trust in Him, and He will do it."
+        },
+        {
+          "lat": "Et edúcet quasi lumen justítiam tuam: et judícium tuum tamquam merídiem: súbditus esto Dómino, et ora eum.",
+          "eng": "And He will bring forth thy justice as the light, and thy judgment as the noonday. Be subject to the Lord and pray to Him."
+        },
+        {
+          "lat": "Noli æmulári in eo, qui prosperátur in via sua: in hómine faciénte injustítias.",
+          "eng": "Envy not the man who prospereth in his way; the man who doth unjust things."
+        },
+        {
+          "lat": "Désine ab ira, et derelínque furórem: noli æmulári ut malignéris.",
+          "eng": "Cease from anger, and leave rage; have no emulation to do evil."
+        },
+        {
+          "lat": "Quóniam qui malignántur, exterminabúntur: sustinéntes autem Dóminum, ipsi hereditábunt terram.",
+          "eng": "For evildoers shall be cut off: but they that wait upon the Lord shall inherit the land."
+        },
+        {
+          "lat": "Et adhuc pusíllum, et non erit peccátor: et quæres locum ejus, et non invénies.",
+          "eng": "For yet a little while, and the wicked shall not be: and thou shalt seek his place, and shalt not find it."
+        },
+        {
+          "lat": "Mansuéti autem hereditábunt terram: et delectabúntur in multitúdine pacis.",
+          "eng": "But the meek shall inherit the land, and shall delight in abundance of peace."
+        },
+        {
+          "lat": "Observábit peccátor justum: et stridébit super eum déntibus suis.",
+          "eng": "The sinner shall watch the just man: and shall gnash upon him with his teeth."
+        },
+        {
+          "lat": "Dóminus autem irridébit eum: quóniam próspicit quod véniet dies ejus.",
+          "eng": "But the Lord shall laugh at him: for He foreseeth that his day shall come."
+        },
+        {
+          "lat": "Gládium evaginavérunt peccatóres: intendérunt arcum suum, Ut dejíciant páuperem et ínopem: ut trucídent rectos corde.",
+          "eng": "The wicked have drawn out the sword: they have bent their bow, to cast down the poor and needy, to kill the upright of heart."
+        },
+        {
+          "lat": "Gládius eórum intret in corda ipsórum: et arcus eórum confringátur.",
+          "eng": "Let their sword enter into their own hearts, and let their bow be broken."
+        },
+        {
+          "lat": "Mélius est módicum justo, super divítias peccatórum multas.",
+          "eng": "Better is a little to the just, than the great riches of the wicked."
+        },
+        {
+          "lat": "Quóniam bráchia peccatórum conteréntur: confírmat autem justos Dóminus.",
+          "eng": "For the arms of the wicked shall be broken in pieces; but the Lord strengtheneth the just."
+        },
+        {
+          "lat": "Novit Dóminus dies immaculatórum: et heréditas eórum in ætérnum erit.",
+          "eng": "The Lord knoweth the days of the undefiled; and their inheritance shall be for ever."
+        },
+        {
+          "lat": "Non confundéntur in témpore malo, et in diébus famis saturabúntur: quia peccatóres períbunt.",
+          "eng": "They shall not be confounded in the evil time; and in the days of famine they shall be filled: because the wicked shall perish."
+        },
+        {
+          "lat": "Inimíci vero Dómini, mox ut honorificáti fúerint et exaltáti: deficiéntes, quemádmodum fumus defícient.",
+          "eng": "But the enemies of the Lord, presently after they shall be honoured and exalted, shall come to nothing and vanish like smoke."
+        },
+        {
+          "lat": "Mutuábitur peccátor, et non solvet: justus autem miserétur et tríbuet.",
+          "eng": "The sinner shall borrow, and not pay again; but the just showeth mercy and shall give."
+        },
+        {
+          "lat": "Quia benedicéntes ei hereditábunt terram: maledicéntes autem ei disperíbunt.",
+          "eng": "For such as bless Him shall inherit the land: but such as curse Him shall perish."
+        },
+        {
+          "lat": "Apud Dóminum gressus hóminis dirigéntur: et viam ejus volet.",
+          "eng": "The steps of a man shall be directed by the Lord: and He shall like well his way."
+        },
+        {
+          "lat": "Cum cecíderit, non collidétur: quia Dóminus suppónit manum suam.",
+          "eng": "When he shall fall he shall not be bruised, for the Lord putteth His hand under him."
+        },
+        {
+          "lat": "Júnior fui, étenim sénui: et non vidi justum derelíctum, nec semen ejus quærens panem.",
+          "eng": "I have been young, and now am old; and I have not seen the just forsaken, nor his seed seeking bread."
+        },
+        {
+          "lat": "Tota die miserétur et cómmodat: et semen illíus in benedictióne erit.",
+          "eng": "He showeth mercy, and lendeth all the day long; and his seed shall be in blessing."
+        },
+        {
+          "lat": "Declína a malo, et fac bonum: et inhábita in sǽculum sǽculi.",
+          "eng": "Decline from evil and do good, and dwell for ever and ever."
+        },
+        {
+          "lat": "Quia Dóminus amat judícium, et non derelínquet sanctos suos: in ætérnum conservabúntur. Injústi puniéntur: et semen impiórum períbit.",
+          "eng": "For the Lord loveth judgment, and will not forsake His saints: they shall be preserved for ever. The unjust shall be punished, and the seed of the wicked shall perish."
+        },
+        {
+          "lat": "Justi autem hereditábunt terram: et inhabitábunt in sǽculum sǽculi super eam.",
+          "eng": "But the just shall inherit the land, and shall dwell therein for evermore."
+        },
+        {
+          "lat": "Os justi meditábitur sapiéntiam: et lingua ejus loquétur judícium.",
+          "eng": "The mouth of the just shall meditate wisdom: and his tongue shall speak judgment."
+        },
+        {
+          "lat": "Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus.",
+          "eng": "The law of his God is in his heart, and his steps shall not be supplanted."
+        },
+        {
+          "lat": "Consíderat peccátor justum: et quærit mortificáre eum.",
+          "eng": "The wicked watcheth the just man, and seeketh to put him to death."
+        },
+        {
+          "lat": "Dóminus autem non derelínquet eum in mánibus ejus: nec damnábit eum cum judicábitur illi.",
+          "eng": "But the Lord will not leave him in his hands; nor condemn him when he shall be judged."
+        },
+        {
+          "lat": "Exspécta Dóminum, et custódi viam ejus: et exaltábit te ut hereditáte cápias terram: cum períerint peccatóres, vidébis.",
+          "eng": "Expect the Lord and keep His way: and He will exalt thee to inherit the land: when the sinners shall perish thou shalt see."
+        },
+        {
+          "lat": "Vidi ímpium superexaltátum, et elevátum sicut cedros Líbani.",
+          "eng": "I have seen the wicked highly exalted, and lifted up like the cedars of Libanus."
+        },
+        {
+          "lat": "Et transívi, et ecce non erat: et quæsívi eum, et non est invéntus locus ejus.",
+          "eng": "And I passed by, and lo, he was not: and I sought him and his place was not found."
+        },
+        {
+          "lat": "Custódi innocéntiam, et vide æquitátem: quóniam sunt relíquiæ hómini pacífico.",
+          "eng": "Keep innocence, and behold justice: for there are remnants for the peaceable man."
+        },
+        {
+          "lat": "Injústi autem disperíbunt simul: relíquiæ impiórum interíbunt.",
+          "eng": "But the unjust shall be destroyed together: the remnants of the wicked shall perish."
+        },
+        {
+          "lat": "Salus autem justórum a Dómino: et protéctor eórum in témpore tribulatiónis.",
+          "eng": "But the salvation of the just is from the Lord, and He is their protector in the time of trouble."
+        },
+        {
+          "lat": "Et adjuvábit eos Dóminus, et liberábit eos: et éruet eos a peccatóribus, et salvábit eos: quia speravérunt in eo.",
+          "eng": "And the Lord will help them and deliver them: and He will rescue them from the wicked, and save them, because they have hoped in Him."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm7": {
+      "type": "psalm",
+      "label": "Psalmus 37",
+      "ref": "Ps 37",
+      "variationKey": "matutinum.psalm7",
+      "verses": [
+        {
+          "lat": "Dómine, ne in furóre tuo árguas me, neque in ira tua corrípias me.",
+          "eng": "O Lord, rebuke me not in Thy indignation, nor chastise me in Thy wrath."
+        },
+        {
+          "lat": "Quóniam sagíttæ tuæ infíxæ sunt mihi: et confirmásti super me manum tuam.",
+          "eng": "For Thy arrows are fastened in me: and Thy hand hath been strong upon me."
+        },
+        {
+          "lat": "Non est sánitas in carne mea a fácie iræ tuæ: non est pax óssibus meis a fácie peccatórum meórum.",
+          "eng": "There is no health in my flesh, because of Thy wrath: there is no peace for my bones, because of my sins."
+        },
+        {
+          "lat": "Quóniam iniquitátes meæ supergréssæ sunt caput meum: et sicut onus grave gravátæ sunt super me.",
+          "eng": "For my iniquities are gone over my head: and as a heavy burden are become heavy upon me."
+        },
+        {
+          "lat": "Putruérunt et corrúptæ sunt cicatríces meæ, a fácie insipiéntiæ meæ.",
+          "eng": "My sores are putrified and corrupted, because of my foolishness."
+        },
+        {
+          "lat": "Miser factus sum, et curvátus sum usque in finem: tota die contristátus ingrediébar.",
+          "eng": "I am become miserable, and am bowed down even to the end: I walked sorrowful all the day long."
+        },
+        {
+          "lat": "Quóniam lumbi mei impléti sunt illusiónibus: et non est sánitas in carne mea.",
+          "eng": "For my loins are filled with illusions; and there is no health in my flesh."
+        },
+        {
+          "lat": "Afflíctus sum, et humiliátus sum nimis: rugiébam a gémitu cordis mei.",
+          "eng": "I am afflicted and humbled exceedingly: I roared with the groaning of my heart."
+        },
+        {
+          "lat": "Dómine, ante te omne desidérium meum: et gémitus meus a te non est abscónditus.",
+          "eng": "Lord, all my desire is before Thee, and my groaning is not hidden from Thee."
+        },
+        {
+          "lat": "Cor meum conturbátum est, derelíquit me virtus mea: et lumen oculórum meórum, et ipsum non est mecum.",
+          "eng": "My heart is troubled, my strength hath left me, and the light of my eyes itself is not with me."
+        },
+        {
+          "lat": "Amíci mei et próximi mei advérsum me appropinquavérunt, et stetérunt. Et qui juxta me erant, de longe stetérunt: et vim faciébant qui quærébant ánimam meam.",
+          "eng": "My friends and my neighbours have drawn near, and stood against me. And they that were near me stood afar off: and they that sought my soul used violence."
+        },
+        {
+          "lat": "Et qui inquirébant mala mihi, locúti sunt vanitátes: et dolos tota die meditabántur.",
+          "eng": "And they that sought evils to me spoke vain things, and studied deceits all the day long."
+        },
+        {
+          "lat": "Ego autem tamquam surdus non audiébam: et sicut mutus non apériens os suum.",
+          "eng": "But I, as a deaf man, heard not: and as a dumb man not opening his mouth."
+        },
+        {
+          "lat": "Et factus sum sicut homo non áudiens: et non habens in ore suo redargutiónes.",
+          "eng": "And I became as a man that heareth not: and that hath no reproofs in his mouth."
+        },
+        {
+          "lat": "Quóniam in te, Dómine, sperávi: tu exáudies, Dómine, Deus meus.",
+          "eng": "For in Thee, O Lord, have I hoped: Thou wilt hear me, O Lord my God."
+        },
+        {
+          "lat": "Quia dixi: Nequándo supergáudeant mihi inimíci mei: et dum commovéntur pedes mei, super me magna locúti sunt.",
+          "eng": "For I said: Lest at any time my enemies rejoice over me: and whilst my feet are moved, they speak great things against me."
+        },
+        {
+          "lat": "Quóniam ego in flagélla parátus sum: et dolor meus in conspéctu meo semper.",
+          "eng": "For I am ready for scourges: and my sorrow is continually before me."
+        },
+        {
+          "lat": "Quóniam iniquitátem meam annuntiábo: et cogitábo pro peccáto meo.",
+          "eng": "For I will declare my iniquity: and I will think for my sin."
+        },
+        {
+          "lat": "Inimíci autem mei vivunt, et confirmáti sunt super me: et multiplicáti sunt qui odérunt me iníque.",
+          "eng": "But my enemies live, and are stronger than I: and they that hate me wrongfully are multiplied."
+        },
+        {
+          "lat": "Qui retríbuunt mala pro bonis, detrahébant mihi: quóniam sequébar bonitátem.",
+          "eng": "They that render evil for good, have detracted me, because I followed goodness."
+        },
+        {
+          "lat": "Ne derelínquas me, Dómine, Deus meus: ne discésseris a me.",
+          "eng": "Forsake me not, O Lord my God: do not Thou depart from me."
+        },
+        {
+          "lat": "Inténde in adjutórium meum, Dómine, Deus salútis meæ.",
+          "eng": "Attend unto my help, O Lord, the God of my salvation."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm8": {
+      "type": "psalm",
+      "label": "Psalmus 38",
+      "ref": "Ps 38",
+      "variationKey": "matutinum.psalm8",
+      "verses": [
+        {
+          "lat": "Dixi: Custódiam vias meas: ut non delínquam in lingua mea. Pósui ori meo custódiam, cum consísteret peccátor advérsum me.",
+          "eng": "I said: I will take heed to my ways: that I sin not with my tongue. I set a guard to my mouth, when the sinner stood against me."
+        },
+        {
+          "lat": "Obmútui, et humiliátus sum, et sílui a bonis: et dolor meus renovátus est.",
+          "eng": "I was dumb, and was humbled, and kept silence from good things: and my sorrow was renewed."
+        },
+        {
+          "lat": "Concáluit cor meum intra me: et in meditatióne mea exardéscet ignis.",
+          "eng": "My heart grew hot within me: and in my meditation a fire shall flame out."
+        },
+        {
+          "lat": "Locútus sum in lingua mea: Notum fac mihi, Dómine, finem meum. Et númerum diérum meórum quis est: ut sciam quid desit mihi.",
+          "eng": "I spoke with my tongue: O Lord, make me know my end. And what is the number of my days: that I may know what is wanting to me."
+        },
+        {
+          "lat": "Ecce mensurábiles posuísti dies meos: et substántia mea tamquam níhilum ante te. Verúmtamen univérsa vánitas, omnis homo vivens.",
+          "eng": "Behold Thou hast made my days measurable: and my substance is as nothing before Thee. And indeed all things are vanity: every man living."
+        },
+        {
+          "lat": "Verúmtamen in imágine pertránsit homo: sed et frustra conturbátur. Thesaurízat: et ignórat cui congregábit ea.",
+          "eng": "Surely man passeth as an image: yea, and he is disquieted in vain. He storeth up: and he knoweth not for whom he shall gather these things."
+        },
+        {
+          "lat": "Et nunc quæ est exspectátio mea? nonne Dóminus? et substántia mea apud te est.",
+          "eng": "And now what is my hope? Is it not the Lord? And my substance is with Thee."
+        },
+        {
+          "lat": "Ab ómnibus iniquitátibus meis érue me: oppróbrium insipiénti dedísti me.",
+          "eng": "Deliver Thou me from all my iniquities: Thou hast made me a reproach to the fool."
+        },
+        {
+          "lat": "Obmútui, et non apérui os meum, quóniam tu fecísti: ámove a me plagas tuas.",
+          "eng": "I was dumb, and I opened not my mouth, because Thou hast done it. Remove Thy scourges from me."
+        },
+        {
+          "lat": "A fortitúdine manus tuæ ego deféci in increpatió­nibus: propter iniquitátem corripuísti hóminem. Et tabéscere fecísti sicut aráneam ánimam ejus: verúmtamen vane conturbátur omnis homo.",
+          "eng": "The strength of Thy hand hath made me faint in rebukes: Thou hast corrected man for iniquity. And Thou hast made his soul to waste away like a spider: surely in vain is any man disquieted."
+        },
+        {
+          "lat": "Exáudi oratiónem meam, Dómine, et deprecatiónem meam: áuribus pércipe lácrimas meas. Ne síleas: quóniam ádvena ego sum apud te, et peregrínus, sicut omnes patres mei.",
+          "eng": "Hear my prayer, O Lord, and my supplication: give ear to my tears. Be not silent: for I am a stranger with Thee, and a sojourner as all my fathers were."
+        },
+        {
+          "lat": "Remítte mihi, ut refrígerer priúsquam ábeam, et ámplius non ero.",
+          "eng": "O forgive me, that I may be refreshed, before I go hence, and be no more."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm9": {
+      "type": "psalm",
+      "label": "Psalmus 40",
+      "ref": "Ps 40",
+      "variationKey": "matutinum.psalm9",
+      "verses": [
+        {
+          "lat": "Beátus qui intéllegit super egénum et páuperem: in die mala liberábit eum Dóminus.",
+          "eng": "Blessed is he that understandeth concerning the needy and the poor: the Lord will deliver him in the evil day."
+        },
+        {
+          "lat": "Dóminus consérvet eum, et vivíficet eum, et beátum fáciat eum in terra: et non tradat eum in ánimam inimicórum ejus.",
+          "eng": "The Lord preserve him and give him life, and make him blessed upon the earth: and deliver him not up to the will of his enemies."
+        },
+        {
+          "lat": "Dóminus opem ferat illi super lectum dolóris ejus: univérsum stratum ejus versásti in infirmitáte ejus.",
+          "eng": "The Lord help him on his bed of sorrow: Thou hast turned all his couch in his sickness."
+        },
+        {
+          "lat": "Ego dixi: Dómine, miserére mei: sana ánimam meam, quia peccávi tibi.",
+          "eng": "I said: O Lord, be Thou merciful to me: heal my soul, for I have sinned against Thee."
+        },
+        {
+          "lat": "Inimíci mei dixérunt mala mihi: Quando moriétur, et períbit nomen ejus?",
+          "eng": "My enemies have spoken evils against me: When shall he die, and his name perish?"
+        },
+        {
+          "lat": "Et si ingrediebátur ut vidéret, vana loquebátur, cor ejus congregávit iniquitátem sibi. Egredie­bátur foras, et loquebátur in idípsum.",
+          "eng": "And if he came in to see me, he spoke vain things: his heart gathered together iniquity to itself. He went out and spoke to the same purpose."
+        },
+        {
+          "lat": "Advérsum me susurrábant omnes inimíci mei: advérsum me cogitábant mala mihi.",
+          "eng": "All my enemies whispered together against me: they devised evils to me."
+        },
+        {
+          "lat": "Verbum iníquum constituérunt advérsum me: Numquid qui dormit non adjíciet ut resúrgat?",
+          "eng": "They determined against me an unjust word: shall he that sleepeth rise again no more?"
+        },
+        {
+          "lat": "Etenim homo pacis meæ, in quo sperávi: qui edébat panes meos, magnificávit super me supplanta­tiónem.",
+          "eng": "For even the man of my peace, in whom I trusted, who ate my bread, hath greatly supplanted me."
+        },
+        {
+          "lat": "Tu autem, Dómine, miserére mei, et resúscita me: et retríbuam eis.",
+          "eng": "But Thou, O Lord, have mercy on me, and raise me up again: and I will requite them."
+        },
+        {
+          "lat": "In hoc cognóvi quóniam voluísti me: quóniam non gaudébit inimícus meus super me.",
+          "eng": "By this I know that Thou hast had a good will for me: because my enemy shall not rejoice over me."
+        },
+        {
+          "lat": "Me autem propter innocéntiam suscepísti: et confirmásti me in conspéctu tuo in ætérnum.",
+          "eng": "But Thou hast upheld me by reason of my innocence: and hast established me in Thy sight for ever."
+        },
+        {
+          "lat": "Benedíctus Dóminus, Deus Israël, a sǽculo et usque in sǽculum. Fiat, fiat.",
+          "eng": "Blessed be the Lord the God of Israel, from eternity to eternity. So be it. So be it."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "laudes.psalm1": {
+      "type": "psalm",
+      "label": "Psalmus 50",
+      "ref": "Ps 50",
+      "variationKey": "laudes.psalm1",
+      "verses": [
+        {
+          "lat": "Miserére mei, Deus, secúndum magnam misericórdiam tuam. Et secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.",
+          "eng": "Have mercy on me, O God, according to Thy great mercy. And according to the multitude of Thy tender mercies blot out my iniquity."
+        },
+        {
+          "lat": "Ámplius lava me ab iniquitáte mea: et a peccáto meo munda me.",
+          "eng": "Wash me yet more from my iniquity, and cleanse me from my sin."
+        },
+        {
+          "lat": "Quóniam iniquitátem meam ego cognósco: et peccátum meum contra me est semper.",
+          "eng": "For I know my iniquity, and my sin is always before me."
+        },
+        {
+          "lat": "Tibi soli peccávi, et malum coram te feci: ut justificéris in sermónibus tuis, et vincas cum judicáris.",
+          "eng": "To Thee only have I sinned, and have done evil before Thee: that Thou mayst be justified in Thy words, and mayst overcome when Thou art judged."
+        },
+        {
+          "lat": "Ecce enim in iniquitátibus concéptus sum: et in peccátis concépit me mater mea.",
+          "eng": "For behold I was conceived in iniquities; and in sins did my mother conceive me."
+        },
+        {
+          "lat": "Ecce enim veritátem dilexísti: incérta et occúlta sapiéntiæ tuæ manifestásti mihi.",
+          "eng": "For behold Thou hast loved truth: the uncertain and hidden things of Thy wisdom Thou hast made manifest to me."
+        },
+        {
+          "lat": "Aspérges me hyssópo, et mundábor: lavábis me, et super nivem dealbábor.",
+          "eng": "Thou shalt sprinkle me with hyssop, and I shall be cleansed: Thou shalt wash me, and I shall be made whiter than snow."
+        },
+        {
+          "lat": "Audítui meo dabis gáudium et lætítiam: et exsultábunt ossa humiliáta.",
+          "eng": "To my hearing Thou shalt give joy and gladness: and the bones that have been humbled shall rejoice."
+        },
+        {
+          "lat": "Avérte fáciem tuam a peccátis meis: et omnes iniquitátes meas dele.",
+          "eng": "Turn away Thy face from my sins, and blot out all my iniquities."
+        },
+        {
+          "lat": "Cor mundum crea in me, Deus: et spíritum rectum ínnova in viscéribus meis.",
+          "eng": "Create a clean heart in me, O God: and renew a right spirit within my bowels."
+        },
+        {
+          "lat": "Ne projícias me a fácie tua: et spíritum sanctum tuum ne áuferas a me.",
+          "eng": "Cast me not away from Thy face; and take not Thy holy spirit from me."
+        },
+        {
+          "lat": "Redde mihi lætítiam salutáris tui: et spíritu principáli confírma me.",
+          "eng": "Restore unto me the joy of Thy salvation, and strengthen me with a perfect spirit."
+        },
+        {
+          "lat": "Docébo iníquos vias tuas: et ímpii ad te converténtur.",
+          "eng": "I will teach the unjust Thy ways: and the wicked shall be converted to Thee."
+        },
+        {
+          "lat": "Líbera me de sanguínibus, Deus, Deus salútis meæ: et exsultábit lingua mea justítiam tuam.",
+          "eng": "Deliver me from blood, O God, Thou God of my salvation: and my tongue shall extol Thy justice."
+        },
+        {
+          "lat": "Dómine, lábia mea apéries: et os meum annuntiábit laudem tuam.",
+          "eng": "O Lord, Thou wilt open my lips: and my mouth shall declare Thy praise."
+        },
+        {
+          "lat": "Quóniam si voluísses sacrifícium, dedíssem útique: holocáustis non delectáberis.",
+          "eng": "For if Thou hadst desired sacrifice, I would indeed have given it: with burnt offerings Thou wilt not be delighted."
+        },
+        {
+          "lat": "Sacrifícium Deo spíritus contribulátus: cor contrítum et humiliátum, Deus, non despícies.",
+          "eng": "A sacrifice to God is an afflicted spirit: a contrite and humbled heart, O God, Thou wilt not despise."
+        },
+        {
+          "lat": "Benígne fac, Dómine, in bona voluntáte tua Sion: ut ædificéntur muri Jerúsalem.",
+          "eng": "Deal favourably, O Lord, in Thy good will with Sion; that the walls of Jerusalem may be built up."
+        },
+        {
+          "lat": "Tunc acceptábis sacrifícium justítiæ, oblatiónes et holocáusta: tunc impónent super altáre tuum vítulos.",
+          "eng": "Then shalt Thou accept the sacrifice of justice, oblations and whole burnt offerings: then shall they lay calves upon Thy altar."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "laudes.psalm2": {
+      "type": "psalm",
+      "label": "Psalmus 142",
+      "ref": "Ps 142",
+      "variationKey": "laudes.psalm2",
+      "verses": [
+        {
+          "lat": "Dómine, exáudi oratiónem meam: áuribus pércipe obsecratiónem meam in veritáte tua: exáudi me in tua justítia.",
+          "eng": "Hear, O Lord, my prayer: give ear to my supplication in Thy truth: hear me in Thy justice."
+        },
+        {
+          "lat": "Et non intres in judícium cum servo tuo: quia non justificábitur in conspéctu tuo omnis vivens.",
+          "eng": "And enter not into judgment with Thy servant: for in Thy sight no man living shall be justified."
+        },
+        {
+          "lat": "Quia persecútus est inimícus ánimam meam: humiliávit in terra vitam meam. Collocávit me in obscúris sicut mórtuos sǽculi:",
+          "eng": "For the enemy hath persecuted my soul: he hath brought down my life to the earth. He hath made me to dwell in darkness as those that have been dead of old:"
+        },
+        {
+          "lat": "et anxiátus est super me spíritus meus, in me turbátum est cor meum.",
+          "eng": "and my spirit is in anguish within me: my heart within me is troubled."
+        },
+        {
+          "lat": "Memor fui diérum antiquórum, meditátus sum in ómnibus opéribus tuis: in factis mánuum tuárum meditábar.",
+          "eng": "I remembered the days of old, I meditated on all Thy works: I meditated upon the works of Thy hands."
+        },
+        {
+          "lat": "Expándi manus meas ad te: ánima mea sicut terra sine aqua tibi.",
+          "eng": "I stretched forth my hands to Thee: my soul is as earth without water unto Thee."
+        },
+        {
+          "lat": "Velóciter exáudi me, Dómine: defécit spíritus meus. Non avértas fáciem tuam a me: et símilis ero descendéntibus in lacum.",
+          "eng": "Hear me speedily, O Lord: my spirit hath fainted away. Turn not away Thy face from me, lest I be like unto them that go down into the pit."
+        },
+        {
+          "lat": "Audítam fac mihi mane misericórdiam tuam: quia in te sperávi. Notam fac mihi viam in qua ámbulem: quia ad te levávi ánimam meam.",
+          "eng": "Cause me to hear Thy mercy in the morning; for in Thee have I hoped. Make the way known to me wherein I should walk: for I have lifted up my soul to Thee."
+        },
+        {
+          "lat": "Eripe me de inimícis meis, Dómine, ad te confúgi: doce me fácere voluntátem tuam, quia Deus meus es tu.",
+          "eng": "Deliver me from my enemies, O Lord, to Thee have I fled: teach me to do Thy will, for Thou art my God."
+        },
+        {
+          "lat": "Spíritus tuus bonus dedúcet me in terram rectam: propter nomen tuum, Dómine, vivificábis me, in æquitáte tua. Edúces de tribulatióne ánimam meam:",
+          "eng": "Thy good spirit shall lead me into the right land: for Thy name's sake, O Lord, Thou wilt quicken me in Thy justice. Thou wilt bring my soul out of trouble:"
+        },
+        {
+          "lat": "et in misericórdia tua dispérdes inimícos meos. Et perdes omnes qui tríbulant ánimam meam: quóniam ego servus tuus sum.",
+          "eng": "and in Thy mercy Thou wilt destroy my enemies. And Thou wilt cut off all them that afflict my soul: for I am Thy servant."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "laudes.canticle1": {
+      "type": "psalm",
+      "label": "Canticum Habacuc",
+      "ref": "Hab 3:2-19",
+      "variationKey": "laudes.canticle1",
+      "verses": [
+        {
+          "lat": "Dómine, audívi auditiónem tuam, et tímui. Dómine, opus tuum, in médio annórum vivífica illud.",
+          "eng": "O Lord, I have heard Thy hearing, and was afraid. O Lord, Thy work, in the midst of the years bring it to life."
+        },
+        {
+          "lat": "In médio annórum notum fácies: cum irátus fúeris, misericórdiæ recordáberis.",
+          "eng": "In the midst of the years Thou shalt make it known: when Thou art angry, Thou wilt remember mercy."
+        },
+        {
+          "lat": "Deus ab Austro véniet, et Sanctus de monte Pharan. Opéruit cælos glória ejus: et laudis ejus plena est terra.",
+          "eng": "God will come from the south, and the Holy One from mount Pharan. His glory covered the heavens: and the earth is full of His praise."
+        },
+        {
+          "lat": "Splendor ejus ut lux erit: córnua in mánibus ejus. Ibi abscóndita est fortitúdo ejus:",
+          "eng": "His brightness shall be as the light; horns are in His hands: There is His strength hid:"
+        },
+        {
+          "lat": "ante fáciem ejus ibit mors. Et egrediétur diábolus ante pedes ejus.",
+          "eng": "Death shall go before His face. And the devil shall go forth before His feet."
+        },
+        {
+          "lat": "Stetit, et mensus est terram. Aspéxit, et dissólvit gentes: et contríti sunt montes sǽculi. Incurváti sunt colles mundi, ab itinéribus æternitátis ejus.",
+          "eng": "He stood and measured the earth. He beheld, and melted the nations: and the ancient mountains were crushed to pieces. The hills of the world were bowed down by the journeys of His eternity."
+        },
+        {
+          "lat": "Pro iniquitáte vidi tentória Æthíopiæ, turbabúntur pelles terræ Mádian.",
+          "eng": "I saw the tents of Ethiopia for their iniquity, the curtains of the land of Madian shall be troubled."
+        },
+        {
+          "lat": "Numquid in flumínibus irátus es, Dómine? aut in flumínibus furor tuus? vel in mari indignátio tua? Qui ascéndes super equos tuos: et quadrígæ tuæ salvátio.",
+          "eng": "Wast Thou angry, O Lord, with the rivers? or was Thy wrath upon the rivers? or Thy indignation in the sea? Who wilt ride upon Thy horses: and Thy chariots are salvation."
+        },
+        {
+          "lat": "Súscitans suscitábis arcum tuum: juraménta tríbubus quæ locútus es. Flúvios scindes terræ:",
+          "eng": "Thou wilt surely take up Thy bow: according to the oaths which Thou hast spoken to the tribes. Thou wilt divide the rivers of the earth."
+        },
+        {
+          "lat": "vidérunt te, et doluérunt montes: gurges aquárum tránsiit. Dedit abýssus vocem suam: altitúdo manus suas levávit.",
+          "eng": "The mountains saw Thee, and were grieved: the great body of waters passed away. The deep put forth its voice: the deep lifted up its hands."
+        },
+        {
+          "lat": "Sol et luna stetérunt in habitáculo suo, in luce sagittárum tuárum, ibunt in splendóre fulgurántis hastæ tuæ.",
+          "eng": "The sun and the moon stood still in their habitation, in the light of Thy arrows, they shall go in the brightness of Thy glittering spear."
+        },
+        {
+          "lat": "In frémitu conculcábis terram: in furóre obstupefácies gentes.",
+          "eng": "In Thy anger Thou wilt tread the earth under foot: in Thy wrath Thou wilt astonish the nations."
+        },
+        {
+          "lat": "Egréssus es in salútem pópuli tui: in salútem cum christo tuo. Percussísti caput de domo ímpii: denudásti fundaméntum ejus usque ad collum.",
+          "eng": "Thou wentest forth for the salvation of Thy people: for salvation with Thy Christ. Thou struckest the head of the house of the wicked: thou hast laid bare his foundation even to the neck."
+        },
+        {
+          "lat": "Maledixísti sceptris ejus, cápiti bellatórum ejus, veniéntibus ut turbo ad dispergéndum me. Exsultátio eórum sicut ejus, qui dévorat páuperem in abscóndito.",
+          "eng": "Thou hast cursed his sceptres, the head of his warriors, them that came out as a whirlwind to scatter me. Their joy was like that of him that devoureth the poor man in secret."
+        },
+        {
+          "lat": "Viam fecísti in mari equis tuis, in luto aquárum multárum.",
+          "eng": "Thou madest a way in the sea for Thy horses, in the mud of many waters."
+        },
+        {
+          "lat": "Audívi, et conturbátus est venter meus: a voce contremuérunt lábia mea. Ingrediátur putrédo in óssibus meis, et subter me scáteat.",
+          "eng": "I have heard and my bowels were troubled: my lips trembled at the voice. Let rottenness enter into my bones, and swarm under me."
+        },
+        {
+          "lat": "Ut requiéscam in die tribulatiónis: ut ascéndam ad pópulum accínctum nostrum.",
+          "eng": "That I may rest in the day of tribulation: that I may go up to our people that are girded."
+        },
+        {
+          "lat": "Ficus enim non florébit: et non erit germen in víneis. Mentiétur opus olívæ: et arva non ádferent cibum. Abscindétur de ovíli pecus: et non erit arméntum in præsépibus.",
+          "eng": "For the fig tree shall not blossom: and there shall be no spring in the vines. The labour of the olive tree shall fail: and the fields shall yield no food. The flock shall be cut off from the fold, and there shall be no herd in the stalls."
+        },
+        {
+          "lat": "Ego autem in Dómino gaudébo: et exsultábo in Deo Jesu meo.",
+          "eng": "But I will rejoice in the Lord: and I will joy in God my Jesus."
+        },
+        {
+          "lat": "Deus Dóminus fortitúdo mea: et ponet pedes meos quasi cervórum. Et super excélsa mea dedúcet me victor in psalmis canéntem.",
+          "eng": "The Lord God is my strength: and He will make my feet like the feet of harts: and He the conqueror will lead me upon my high places singing psalms."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm1": {
+      "type": "psalm",
+      "label": "Psalmus 137",
+      "ref": "Ps 137",
+      "variationKey": "vesperae.psalm1",
+      "verses": [
+        {
+          "lat": "Confitébor tibi, Dómine, in toto corde meo: quóniam audísti verba oris mei. In conspéctu Angelórum psallam tibi:",
+          "eng": "I will praise Thee, O Lord, with my whole heart: for Thou hast heard the words of my mouth. I will sing praise to Thee in the sight of the Angels:"
+        },
+        {
+          "lat": "adorábo ad templum sanctum tuum, et confitébor nómini tuo. Super misericórdia tua et veritáte tua: quóniam magnificásti super omne, nomen sanctum tuum.",
+          "eng": "I will worship towards Thy holy temple, and I will give glory to Thy name. For Thy mercy, and for Thy truth: for Thou hast magnified Thy holy name above all."
+        },
+        {
+          "lat": "In quacúmque die invocávero te, exáudi me: multiplicábis in ánima mea virtútem.",
+          "eng": "In what day soever I shall call upon Thee, hear me: Thou shalt multiply strength in my soul."
+        },
+        {
+          "lat": "Confiteántur tibi, Dómine, omnes reges terræ: quia audiérunt ómnia verba oris tui:",
+          "eng": "May all the kings of the earth give glory to Thee: for they have heard all the words of Thy mouth:"
+        },
+        {
+          "lat": "Et cantent in viis Dómini: quóniam magna est glória Dómini.",
+          "eng": "And let them sing in the ways of the Lord: for great is the glory of the Lord."
+        },
+        {
+          "lat": "Quóniam excélsus Dóminus, et humília réspicit: et alta a longe cognóscit.",
+          "eng": "For the Lord is high, and looketh on the low: and the high He knoweth afar off."
+        },
+        {
+          "lat": "Si ambulávero in médio tribulatiónis, vivificábis me: et super iram inimicórum meórum extendísti manum tuam, et salvum me fecit déxtera tua.",
+          "eng": "If I shall walk in the midst of tribulation, Thou wilt quicken me: and Thou hast stretched forth Thy hand against the wrath of my enemies: and Thy right hand hath saved me."
+        },
+        {
+          "lat": "Dóminus retríbuet pro me: Dómine, misericórdia tua in sǽculum: ópera mánuum tuárum ne despícias.",
+          "eng": "The Lord will repay for me: Thy mercy, O Lord, endureth for ever: O despise not the works of Thy hands."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm2": {
+      "type": "psalm",
+      "label": "Psalmus 138A",
+      "ref": "Ps 138:1-14",
+      "variationKey": "vesperae.psalm2",
+      "verses": [
+        {
+          "lat": "Dómine, probásti me, et cognovísti me: tu cognovísti sessiónem meam et resurrectiónem meam.",
+          "eng": "Lord, Thou hast proved me, and known me: Thou hast known my sitting down and my rising up."
+        },
+        {
+          "lat": "Intellexísti cogitatiónes meas de longe: sémitam meam et funículum meum investigásti.",
+          "eng": "Thou hast understood my thoughts afar off: my path and my line Thou hast searched out."
+        },
+        {
+          "lat": "Et omnes vias meas prævidísti: quia non est sermo in lingua mea.",
+          "eng": "And Thou hast foreseen all my ways: for there is no speech in my tongue."
+        },
+        {
+          "lat": "Ecce, Dómine, tu cognovísti ómnia novíssima et antíqua: tu formásti me, et posuísti super me manum tuam.",
+          "eng": "Behold, O Lord, Thou hast known all things, the last and those of old: Thou hast formed me, and hast laid Thy hand upon me."
+        },
+        {
+          "lat": "Mirábilis facta est sciéntia tua ex me: confortáta est, et non pótero ad eam.",
+          "eng": "Thy knowledge is become wonderful to me: it is high, and I cannot reach to it."
+        },
+        {
+          "lat": "Quo ibo a spíritu tuo? et quo a fácie tua fúgiam?",
+          "eng": "Whither shall I go from Thy spirit? or whither shall I flee from Thy face?"
+        },
+        {
+          "lat": "Si ascéndero in cælum, tu illic es: si descéndero in inférnum, ades.",
+          "eng": "If I ascend into heaven, Thou art there: if I descend into hell, Thou art present."
+        },
+        {
+          "lat": "Si súmpsero pennas meas dilúculo, et habitávero in extrémis maris:",
+          "eng": "If I take my wings early in the morning, and dwell in the uttermost parts of the sea:"
+        },
+        {
+          "lat": "Etenim illuc manus tua dedúcet me: et tenébit me déxtera tua.",
+          "eng": "Even there also shall Thy hand lead me: and Thy right hand shall hold me."
+        },
+        {
+          "lat": "Et dixi: Fórsitan ténebræ conculcábunt me: et nox illuminátio mea in delíciis meis.",
+          "eng": "And I said: Perhaps darkness shall cover me: and night shall be my light in my pleasures."
+        },
+        {
+          "lat": "Quia ténebræ non obscurabúntur a te, et nox sicut dies illuminábitur: sicut ténebræ ejus, ita et lumen ejus.",
+          "eng": "But darkness shall not be dark to Thee, and night shall be light as the day: the darkness thereof, and the light thereof are alike to Thee."
+        },
+        {
+          "lat": "Quia tu possedísti renes meos: suscepísti me de útero matris meæ.",
+          "eng": "For Thou hast possessed my reins: Thou hast protected me from my mother's womb."
+        },
+        {
+          "lat": "Confitébor tibi quia terribíliter magnificátus es: mirabília ópera tua, et ánima mea cognóscit nimis.",
+          "eng": "I will praise Thee, for Thou art fearfully magnified: wonderful are Thy works, and my soul knoweth right well."
+        },
+        {
+          "lat": "Non est occultátum os meum a te, quod fecísti in occúlto: et substántia mea in inferióribus terræ.",
+          "eng": "My bone is not hidden from Thee, which Thou hast made in secret: and my substance in the lower parts of the earth."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm3": {
+      "type": "psalm",
+      "label": "Psalmus 138B",
+      "ref": "Ps 138:15-24",
+      "variationKey": "vesperae.psalm3",
+      "verses": [
+        {
+          "lat": "Imperféctum meum vidérunt óculi tui, et in libro tuo omnes scribéntur: dies formabúntur, et nemo in eis.",
+          "eng": "Thy eyes did see my imperfect being, and in Thy book all shall be written: days shall be formed, and no one in them."
+        },
+        {
+          "lat": "Mihi autem nimis honorificáti sunt amíci tui, Deus: nimis confortátus est principátus eórum.",
+          "eng": "But to me Thy friends, O God, are made exceedingly honourable: their principality is exceedingly strengthened."
+        },
+        {
+          "lat": "Dinumerábo eos, et super arénam multiplicabúntur: exsurréxi, et adhuc sum tecum.",
+          "eng": "I will number them, and they shall be multiplied above the sand: I rose up, and am still with Thee."
+        },
+        {
+          "lat": "Si occíderis, Deus, peccatóres: viri sánguinum, declináte a me.",
+          "eng": "If Thou wilt kill the wicked, O God: ye men of blood, depart from me."
+        },
+        {
+          "lat": "Quia dícitis in cogitatióne: Accípient in vanitáte civitátes tuas.",
+          "eng": "Because you say in thought: They shall receive Thy cities in vain."
+        },
+        {
+          "lat": "Nonne qui odérunt te, Dómine, óderam? et super inimícos tuos tabescébam?",
+          "eng": "Have I not hated them, O Lord, that hated Thee: and pined away because of Thy enemies?"
+        },
+        {
+          "lat": "Perfécto ódio óderam illos: et inimíci facti sunt mihi.",
+          "eng": "I have hated them with a perfect hatred: and they are become enemies to me."
+        },
+        {
+          "lat": "Proba me, Deus, et scito cor meum: intérroga me, et cognósce sémitas meas.",
+          "eng": "Prove me, O God, and know my heart: examine me, and know my paths."
+        },
+        {
+          "lat": "Et vide, si via iniquitátis in me est: et deduc me in via ætérna.",
+          "eng": "And see if there be in me the way of iniquity: and lead me in the eternal way."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm4": {
+      "type": "psalm",
+      "label": "Psalmus 139",
+      "ref": "Ps 139",
+      "variationKey": "vesperae.psalm4",
+      "verses": [
+        {
+          "lat": "Eripe me, Dómine, ab hómine malo: a viro iníquo éripe me.",
+          "eng": "Deliver me, O Lord, from the evil man: rescue me from the unjust man."
+        },
+        {
+          "lat": "Qui cogitavérunt iniquitátes in corde: tota die constituébant prǽlia.",
+          "eng": "Who have devised iniquities in their hearts: all the day long they designed battles."
+        },
+        {
+          "lat": "Acuérunt linguas suas sicut serpéntis: venénum áspidum sub lábiis eórum.",
+          "eng": "They have sharpened their tongues like a serpent: the venom of asps is under their lips."
+        },
+        {
+          "lat": "Custódi me, Dómine, de manu peccatóris: et ab homínibus iníquis éripe me. Qui cogitavérunt supplantáre gressus meos:",
+          "eng": "Keep me, O Lord, from the hand of the wicked: and from unjust men deliver me. Who have proposed to supplant my steps."
+        },
+        {
+          "lat": "abscondérunt supérbi láqueum mihi: Et funes extendérunt in láqueum: juxta iter scándalum posuérunt mihi.",
+          "eng": "The proud have hidden a net for me. And they have stretched out cords for a snare: they have laid for me a stumbling block by the wayside."
+        },
+        {
+          "lat": "Dixi Dómino: Deus meus es tu: exáudi, Dómine, vocem deprecatiónis meæ.",
+          "eng": "I said to the Lord: Thou art my God: hear, O Lord, the voice of my supplication."
+        },
+        {
+          "lat": "Dómine, Dómine, virtus salútis meæ: obumbrásti super caput meum in die belli.",
+          "eng": "O Lord, Lord, the strength of my salvation: Thou hast overshadowed my head in the day of battle."
+        },
+        {
+          "lat": "Ne tradas me, Dómine, a desidério meo peccatóri: cogitavérunt contra me, ne derelínquas me, ne forte exalténtur.",
+          "eng": "Give me not up, O Lord, from my desire to the wicked: they have plotted against me; do not Thou forsake me, lest they should triumph."
+        },
+        {
+          "lat": "Caput circúitus eórum: labor labiórum ipsórum opériet eos.",
+          "eng": "The head of them compassing me about: the labour of their lips shall overwhelm them."
+        },
+        {
+          "lat": "Cadent super eos carbónes, in ignem dejícies eos: in misériis non subsístent.",
+          "eng": "Burning coals shall fall upon them; Thou wilt cast them down into the fire: in miseries they shall not be able to stand."
+        },
+        {
+          "lat": "Vir linguósus non dirigétur in terra: virum injústum mala cápient in intéritu.",
+          "eng": "A man full of tongue shall not be established in the earth: evil shall catch the unjust man unto destruction."
+        },
+        {
+          "lat": "Cognóvi quia fáciet Dóminus judícium ínopis: et vindíctam páuperum.",
+          "eng": "I know that the Lord will do justice to the needy, and will revenge the poor."
+        },
+        {
+          "lat": "Verúmtamen justi confitebúntur nómini tuo: et habitábunt recti cum vultu tuo.",
+          "eng": "But as for the just, they shall give glory to Thy name: and the upright shall dwell with Thy countenance."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    }
+  },
+  "saturday": {
+    "matutinum.psalm1": {
+      "type": "psalm",
+      "label": "Psalmus 101",
+      "ref": "Ps 101",
+      "variationKey": "matutinum.psalm1",
+      "verses": [
+        {
+          "lat": "Dómine, exáudi oratiónem meam: et clamor meus ad te véniat.",
+          "eng": "Hear, O Lord, my prayer: and let my cry come to Thee."
+        },
+        {
+          "lat": "Non avértas fáciem tuam a me: in quacúmque die tríbulor, inclína ad me aurem tuam. In quacúmque die invocávero te, velóciter exáudi me.",
+          "eng": "Turn not away Thy face from me: in the day when I am in trouble, incline Thy ear to me. In what day soever I shall call upon Thee, hear me speedily."
+        },
+        {
+          "lat": "Quia defecérunt sicut fumus dies mei: et ossa mea sicut crémium aruérunt.",
+          "eng": "For my days are vanished like smoke: and my bones are grown dry like fuel for the fire."
+        },
+        {
+          "lat": "Percússus sum ut fænum, et áruit cor meum: quia oblítus sum comédere panem meum.",
+          "eng": "I am smitten as grass, and my heart is withered: because I forgot to eat my bread."
+        },
+        {
+          "lat": "A voce gémitus mei adhǽsit os meum carni meæ.",
+          "eng": "Through the voice of my groaning, my bone hath cleaved to my flesh."
+        },
+        {
+          "lat": "Símilis factus sum pellicáno solitúdinis: factus sum sicut nycticórax in domicílio.",
+          "eng": "I am become like to a pelican of the wilderness: I am like a night raven in the house."
+        },
+        {
+          "lat": "Vigilávi, et factus sum sicut passer solitárius in tecto.",
+          "eng": "I have watched, and am become as a sparrow all alone on the housetop."
+        },
+        {
+          "lat": "Tota die exprobrábant mihi inimíci mei: et qui laudábant me, advérsum me jurábant.",
+          "eng": "All the day long my enemies reproached me: and they that praised me did swear against me."
+        },
+        {
+          "lat": "Quia cínerem tamquam panem manducábam, et potum meum cum fletu miscébam.",
+          "eng": "For I did eat ashes like bread, and mingled my drink with weeping."
+        },
+        {
+          "lat": "A fácie iræ et indignatiónis tuæ: quia élevans allisísti me.",
+          "eng": "Because of Thy anger and indignation: for having lifted me up Thou hast thrown me down."
+        },
+        {
+          "lat": "Dies mei sicut umbra declinavérunt: et ego sicut fænum árui.",
+          "eng": "My days have declined like a shadow, and I am withered like grass."
+        },
+        {
+          "lat": "Tu autem, Dómine, in ætérnum pérmanes: et memoriále tuum in generatiónem et generatiónem.",
+          "eng": "But Thou, O Lord, endurest for ever: and Thy memorial to all generations."
+        },
+        {
+          "lat": "Tu exsúrgens miseréberis Sion: quia tempus miseréndi ejus, quia venit tempus.",
+          "eng": "Thou shalt arise and have mercy on Sion: for it is time to have mercy on it, for the time is come."
+        },
+        {
+          "lat": "Quóniam placuérunt servis tuis lápides ejus: et terræ ejus miserebúntur.",
+          "eng": "For the stones thereof have pleased Thy servants: and they shall have pity on the earth thereof."
+        },
+        {
+          "lat": "Et timébunt gentes nomen tuum, Dómine, et omnes reges terræ glóriam tuam.",
+          "eng": "And the Gentiles shall fear Thy name, O Lord, and all the kings of the earth Thy glory."
+        },
+        {
+          "lat": "Quia ædificávit Dóminus Sion: et vidébitur in glória sua.",
+          "eng": "For the Lord hath built up Sion: and He shall be seen in His glory."
+        },
+        {
+          "lat": "Respéxit in oratiónem humílium: et non sprevit precem eórum.",
+          "eng": "He hath had regard to the prayer of the humble: and He hath not despised their petition."
+        },
+        {
+          "lat": "Scribántur hæc in generatióne áltera: et pópulus qui creábitur laudábit Dóminum:",
+          "eng": "Let these things be written unto another generation: and the people that shall be created shall praise the Lord:"
+        },
+        {
+          "lat": "Quia prospéxit de excélso sancto suo: Dóminus de cælo in terram aspéxit:",
+          "eng": "Because He hath looked forth from His high sanctuary: from heaven the Lord hath looked upon the earth."
+        },
+        {
+          "lat": "Ut audíret gémitus compeditórum: ut sólveret fílios interemptórum:",
+          "eng": "That He might hear the groans of them that are in fetters: that He might release the children of the slain:"
+        },
+        {
+          "lat": "Ut annúntient in Sion nomen Dómini: et laudem ejus in Jerúsalem.",
+          "eng": "That they may declare the name of the Lord in Sion: and His praise in Jerusalem."
+        },
+        {
+          "lat": "In conveniéndo pópulos in unum, et reges, ut sérviant Dómino.",
+          "eng": "When the people assemble together, and kings, to serve the Lord."
+        },
+        {
+          "lat": "Respóndit ei in via virtútis suæ: Paucitátem diérum meórum núntia mihi.",
+          "eng": "He answered him in the way of his strength: Declare unto me the fewness of my days."
+        },
+        {
+          "lat": "Ne révoces me in dimídio diérum meórum: in generatiónem et generatiónem anni tui.",
+          "eng": "Call me not away in the midst of my days: Thy years are unto generation and generation."
+        },
+        {
+          "lat": "Inítio tu, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
+          "eng": "In the beginning, O Lord, Thou foundedst the earth: and the heavens are the works of Thy hands."
+        },
+        {
+          "lat": "Ipsi períbunt, tu autem pérmanes: et omnes sicut vestiméntum veteráscent. Et sicut opertórium mutábis eos, et mutabúntur:",
+          "eng": "They shall perish but Thou remainest: and all of them shall grow old like a garment. And as a vesture Thou shalt change them, and they shall be changed:"
+        },
+        {
+          "lat": "tu autem idem ipse es, et anni tui non defícient.",
+          "eng": "but Thou art always the selfsame, and Thy years shall not fail."
+        },
+        {
+          "lat": "Fílii servórum tuórum habitábunt: et semen eórum in sǽculum dirigétur.",
+          "eng": "The children of Thy servants shall continue: and their seed shall be directed for ever."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm2": {
+      "type": "psalm",
+      "label": "Psalmus 102",
+      "ref": "Ps 102",
+      "variationKey": "matutinum.psalm2",
+      "verses": [
+        {
+          "lat": "Bénedic, ánima mea, Dómino: et ómnia quæ intra me sunt, nómini sancto ejus.",
+          "eng": "Bless the Lord, O my soul: and let all that is within me bless His holy name."
+        },
+        {
+          "lat": "Bénedic, ánima mea, Dómino: et noli oblivisci omnes retributiónes ejus.",
+          "eng": "Bless the Lord, O my soul, and never forget all He hath done for thee."
+        },
+        {
+          "lat": "Qui propitiátur ómnibus iniquitátibus tuis: qui sanat omnes infirmitátes tuas.",
+          "eng": "Who forgiveth all thy iniquities: who healeth all thy diseases."
+        },
+        {
+          "lat": "Qui rédimit de intéritu vitam tuam: qui corónat te in misericórdia et miseratiónibus.",
+          "eng": "Who redeemeth thy life from destruction: who crowneth thee with mercy and compassion."
+        },
+        {
+          "lat": "Qui replet in bonis desidérium tuum: renovábitur ut áquilæ juvéntus tua.",
+          "eng": "Who satisfieth thy desire with good things: thy youth shall be renewed like the eagle's."
+        },
+        {
+          "lat": "Fáciens misericórdias Dóminus: et judícium ómnibus injúriam patiéntibus.",
+          "eng": "The Lord doth mercies, and judgment for all that suffer wrong."
+        },
+        {
+          "lat": "Notas fecit vias suas Móysi, fíliis Israël voluntátes suas.",
+          "eng": "He hath made His ways known to Moses, His wills to the children of Israel."
+        },
+        {
+          "lat": "Miserátor et miséricors Dóminus: longánimis et multum miséricors.",
+          "eng": "The Lord is compassionate and merciful: longsuffering and plenteous in mercy."
+        },
+        {
+          "lat": "Non in perpétuum irascétur: neque in ætérnum comminábitur.",
+          "eng": "He will not always be angry: nor will He threaten for ever."
+        },
+        {
+          "lat": "Non secúndum peccáta nostra fecit nobis: neque secúndum iniquitátes nostras retríbuit nobis.",
+          "eng": "He hath not dealt with us according to our sins: nor rewarded us according to our iniquities."
+        },
+        {
+          "lat": "Quóniam secúndum altitúdinem cæli a terra: corroborávit misericórdiam suam super timéntes se.",
+          "eng": "For according to the height of the heaven above the earth: He hath strengthened His mercy towards them that fear Him."
+        },
+        {
+          "lat": "Quantum distat ortus ab occidénte: longe fecit a nobis iniquitátes nostras.",
+          "eng": "As far as the east is from the west, so far hath He removed our iniquities from us."
+        },
+        {
+          "lat": "Quómodo miserétur pater filiórum, misértus est Dóminus timéntibus se: quóniam ipse cognóvit figméntum nostrum.",
+          "eng": "As a father hath compassion on his children, so hath the Lord compassion on them that fear Him: for He knoweth our frame."
+        },
+        {
+          "lat": "Recordátus est quóniam pulvis sumus: homo, sicut fænum dies ejus, tamquam flos agri sic efflorébit.",
+          "eng": "He remembereth that we are dust: man's days are as grass, as the flower of the field so shall he flourish."
+        },
+        {
+          "lat": "Quóniam spíritus pertransíbit in illo, et non subsístet: et non cognóscet ámplius locum suum.",
+          "eng": "For the spirit shall pass in him, and he shall not be: and he shall know his place no more."
+        },
+        {
+          "lat": "Misericórdia autem Dómini ab ætérno, et usque in ætérnum super timéntes eum. Et justítia illíus in fílios filiórum,",
+          "eng": "But the mercy of the Lord is from eternity and unto eternity upon them that fear Him. And His justice unto children's children,"
+        },
+        {
+          "lat": "his qui servant testaméntum ejus: Et mémores sunt mandatórum ipsíus ad faciéndum ea.",
+          "eng": "to such as keep His covenant, and are mindful of His commandments to do them."
+        },
+        {
+          "lat": "Dóminus in cælo parávit sedem suam: et regnum ipsíus ómnibus dominábitur.",
+          "eng": "The Lord hath prepared His throne in heaven: and His kingdom shall rule over all."
+        },
+        {
+          "lat": "Benedícite Dómino, omnes Ángeli ejus: poténtes virtúte, faciéntes verbum illíus, ad audiéndam vocem sermónum ejus.",
+          "eng": "Bless the Lord, all ye His Angels: you that are mighty in strength, and execute His word, hearkening to the voice of His orders."
+        },
+        {
+          "lat": "Benedícite Dómino, omnes virtútes ejus: minístri ejus, qui fácitis voluntátem ejus.",
+          "eng": "Bless the Lord, all ye His hosts: you ministers of His that do His will."
+        },
+        {
+          "lat": "Benedícite Dómino, ómnia ópera ejus: in omni loco dominatiónis ejus, bénedic, ánima mea, Dómino.",
+          "eng": "Bless the Lord, all His works: in every place of His dominion, O my soul, bless thou the Lord."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm3": {
+      "type": "psalm",
+      "label": "Psalmus 103A",
+      "ref": "Ps 103:1-23",
+      "variationKey": "matutinum.psalm3",
+      "verses": [
+        {
+          "lat": "Bénedic, ánima mea, Dómino: Dómine, Deus meus, magnificátus es veheménter. Confessiónem et decórem induísti:",
+          "eng": "Bless the Lord, O my soul: O Lord my God, Thou art exceedingly great. Thou hast put on praise and beauty:"
+        },
+        {
+          "lat": "amíctus lúmine sicut vestiménto. Exténdens cælum sicut pellem:",
+          "eng": "and art clothed with light as with a garment. Who stretchest out the heaven like a pavilion:"
+        },
+        {
+          "lat": "qui tegis aquis superióra ejus. Qui ponis nubem ascénsum tuum: qui ámbulas super pennas ventórum.",
+          "eng": "who coverest the higher rooms thereof with water. Who makest the clouds Thy chariot: who walkest upon the wings of the winds."
+        },
+        {
+          "lat": "Qui facis ángelos tuos spíritus: et minístros tuos ignem uréntem.",
+          "eng": "Who makest Thy angels spirits: and Thy ministers a burning fire."
+        },
+        {
+          "lat": "Qui fundásti terram super stabilitátem suam: non inclinábitur in sǽculum sǽculi.",
+          "eng": "Who hast founded the earth upon its own bases: it shall not be moved for ever and ever."
+        },
+        {
+          "lat": "Abýssus sicut vestiméntum amíctus ejus: super montes stabunt aquæ.",
+          "eng": "The deep like a garment is its clothing: above the mountains shall the waters stand."
+        },
+        {
+          "lat": "Ab increpatióne tua fúgient: a voce tonítrui tui formidábunt.",
+          "eng": "At Thy rebuke they shall flee: at the voice of Thy thunder they shall fear."
+        },
+        {
+          "lat": "Ascéndunt montes, et descéndunt campi in locum quem fundásti eis.",
+          "eng": "The mountains ascend, and the plains descend into the place which Thou hast founded for them."
+        },
+        {
+          "lat": "Términum posuísti, quem non transgrediéntur: neque converténtur operíre terram.",
+          "eng": "Thou hast set a bound which they shall not pass over; neither shall they return to cover the earth."
+        },
+        {
+          "lat": "Qui emíttis fontes in convállibus: inter médium móntium pertransíbunt aquæ.",
+          "eng": "Thou sendest forth springs in the vales: between the midst of the hills the waters shall pass."
+        },
+        {
+          "lat": "Potábunt omnes béstiæ agri: exspectábunt ónagri in siti sua.",
+          "eng": "All the beasts of the field shall drink: the wild asses shall expect in their thirst."
+        },
+        {
+          "lat": "Super ea vólucres cæli habitábunt: de médio petrárum dabunt voces.",
+          "eng": "Over them the birds of the air shall dwell: from the midst of the rocks they shall give forth their voices."
+        },
+        {
+          "lat": "Rigans montes de superióribus suis: de fructu óperum tuórum satiábitur terra:",
+          "eng": "Thou waterest the hills from Thy upper rooms: the earth shall be filled with the fruit of Thy works:"
+        },
+        {
+          "lat": "Prodúcens fænum juméntis, et herbam servitúti hóminum: Ut edúcas panem de terra:",
+          "eng": "Bringing forth grass for cattle, and herb for the service of men. That Thou mayst bring bread out of the earth:"
+        },
+        {
+          "lat": "et vinum lætíficet cor hóminis: Ut exhílaret fáciem in óleo: et panis cor hóminis confírmet.",
+          "eng": "and that wine may cheer the heart of man. That he may make the face cheerful with oil: and that bread may strengthen man's heart."
+        },
+        {
+          "lat": "Saturabúntur ligna campi, et cedri Líbani, quas plantávit: illic pásseres nidificábunt.",
+          "eng": "The trees of the field shall be filled, and the cedars of Libanus which He hath planted: there the sparrows shall make their nests."
+        },
+        {
+          "lat": "Heródii domus dux est eórum: montes excélsi cervis: petra refúgium herináciis.",
+          "eng": "The heron's house is the highest of them: the high hills are a refuge for the harts, the rock for the irchins."
+        },
+        {
+          "lat": "Fecit lunam in témpora: sol cognóvit occásum suum.",
+          "eng": "He hath made the moon for seasons: the sun knoweth his going down."
+        },
+        {
+          "lat": "Posuísti ténebras, et facta est nox: in ipsa pertransíbunt omnes béstiæ silvæ.",
+          "eng": "Thou hast appointed darkness, and it is night: in it shall all the beasts of the woods go about."
+        },
+        {
+          "lat": "Cátuli leónum rugiéntes, ut rápiant, et quærant a Deo escam sibi.",
+          "eng": "The young lions roaring after their prey, and seeking their meat from God."
+        },
+        {
+          "lat": "Ortus est sol, et congregáti sunt: et in cubílibus suis collocabúntur.",
+          "eng": "The sun ariseth, and they are gathered together: and they shall lie down in their dens."
+        },
+        {
+          "lat": "Exíbit homo ad opus suum: et ad operatiónem suam usque ad vésperam.",
+          "eng": "Man shall go forth to his work, and to his labour until the evening."
+        },
+        {
+          "lat": "Quam magnificáta sunt ópera tua, Dómine! ómnia in sapiéntia fecísti: impléta est terra possessióne tua.",
+          "eng": "How great are Thy works, O Lord! Thou hast made all things in wisdom: the earth is filled with Thy riches."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm4": {
+      "type": "psalm",
+      "label": "Psalmus 103B",
+      "ref": "Ps 103:24-35",
+      "variationKey": "matutinum.psalm4",
+      "verses": [
+        {
+          "lat": "Hoc mare magnum et spatiósum mánibus: illic reptília, quorum non est númerus. Animália pusílla cum magnis:",
+          "eng": "So is this great sea, which stretcheth wide its arms: there are creeping things without number. Creatures little and great:"
+        },
+        {
+          "lat": "illic naves pertransíbunt: draco iste, quem formásti ad illudéndum ei.",
+          "eng": "there the ships shall go. This sea dragon which Thou hast formed to play therein."
+        },
+        {
+          "lat": "Ómnia a te exspéctant ut des illis escam in témpore.",
+          "eng": "All expect of Thee that Thou give them food in season."
+        },
+        {
+          "lat": "Dante te illis, cólligent: aperiénte te manum tuam, ómnia implebúntur bonitáte.",
+          "eng": "What Thou givest to them they shall gather up: when Thou openest Thy hand, they shall all be filled with good."
+        },
+        {
+          "lat": "Averténte autem te fáciem, turbabúntur: áuferes spíritum eórum, et defícient, et in púlverem suum reverténtur.",
+          "eng": "But if Thou turnest away Thy face, they shall be troubled: Thou shalt take away their breath, and they shall fail, and shall return to their dust."
+        },
+        {
+          "lat": "Emíttes spíritum tuum, et creabúntur: et renovábis fáciem terræ.",
+          "eng": "Thou shalt send forth Thy spirit, and they shall be created: and Thou shalt renew the face of the earth."
+        },
+        {
+          "lat": "Sit glória Dómini in sǽculum: lætábitur Dóminus in opéribus suis.",
+          "eng": "May the glory of the Lord endure for ever: the Lord shall rejoice in His works."
+        },
+        {
+          "lat": "Qui réspicit terram, et facit eam trémere: qui tangit montes, et fúmigant.",
+          "eng": "He looketh upon the earth, and maketh it tremble: He toucheth the mountains, and they smoke."
+        },
+        {
+          "lat": "Cantábo Dómino in vita mea: psallam Deo meo quámdiu sum.",
+          "eng": "I will sing to the Lord as long as I live: I will sing praise to my God while I have my being."
+        },
+        {
+          "lat": "Jucúndum sit ei elóquium meum: ego vero delectábor in Dómino.",
+          "eng": "Let my speech be acceptable to Him: but I will take delight in the Lord."
+        },
+        {
+          "lat": "Defíciant peccatóres a terra, et iníqui ita ut non sint: bénedic, ánima mea, Dómino.",
+          "eng": "Let sinners be consumed out of the earth, and the unjust, so that they be no more: O my soul, bless thou the Lord."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm5": {
+      "type": "psalm",
+      "label": "Psalmus 104A",
+      "ref": "Ps 104:1-25",
+      "variationKey": "matutinum.psalm5",
+      "verses": [
+        {
+          "lat": "Confitémini Dómino, et invocáte nomen ejus: annuntiáte inter gentes ópera ejus.",
+          "eng": "Give glory to the Lord, and call upon His name: declare His deeds among the Gentiles."
+        },
+        {
+          "lat": "Cantáte ei, et psállite ei: narráte ómnia mirabília ejus.",
+          "eng": "Sing to Him, yea sing praises to Him: relate all His wondrous works."
+        },
+        {
+          "lat": "Laudámini in nómine sancto ejus: lætétur cor quæréntium Dóminum.",
+          "eng": "Glory ye in His holy name: let the heart of them rejoice that seek the Lord."
+        },
+        {
+          "lat": "Quǽrite Dóminum et confirmámini: quǽrite fáciem ejus semper.",
+          "eng": "Seek ye the Lord, and be strengthened: seek His face evermore."
+        },
+        {
+          "lat": "Meméntote mirabílium ejus, quæ fecit: prodígia ejus, et judícia oris ejus.",
+          "eng": "Remember His marvellous works which He hath done; His wonders, and the judgments of His mouth."
+        },
+        {
+          "lat": "Semen Abraham, servi ejus: fílii Jacob, elécti ejus.",
+          "eng": "O ye seed of Abraham His servant; ye sons of Jacob His chosen."
+        },
+        {
+          "lat": "Ipse Dóminus Deus noster: in univérsa terra judícia ejus.",
+          "eng": "He is the Lord our God: His judgments are in all the earth."
+        },
+        {
+          "lat": "Memor fuit in sǽculum testaménti sui: verbi, quod mandávit in mille generatiónes:",
+          "eng": "He hath remembered His covenant for ever: the word which He commanded to a thousand generations."
+        },
+        {
+          "lat": "Quod dispósuit ad Abraham: et juraménti sui ad Isaac.",
+          "eng": "Which He made to Abraham: and His oath to Isaac."
+        },
+        {
+          "lat": "Et státuit illud Jacob in præcéptum: et Israël in testaméntum ætérnum:",
+          "eng": "And He appointed it to Jacob for a law: and to Israel for an everlasting testament:"
+        },
+        {
+          "lat": "Dicens: Tibi dabo terram Chánaan: funículum hereditátis vestræ.",
+          "eng": "Saying: To thee will I give the land of Chanaan, the lot of your inheritance."
+        },
+        {
+          "lat": "Cum essent número brevi, paucíssimi, et íncolæ ejus:",
+          "eng": "When they were but a small number: yea very few, and sojourners therein."
+        },
+        {
+          "lat": "Et pertransiérunt de gente in gentem, et de regno ad pópulum álterum.",
+          "eng": "And they passed from nation to nation, and from one kingdom to another people."
+        },
+        {
+          "lat": "Non relíquit hóminem nocére eis: et corrípuit pro eis reges.",
+          "eng": "He suffered no man to hurt them: and He reproved kings for their sakes."
+        },
+        {
+          "lat": "Nolíte tangere christos meos: et in prophétis meis nolíte malignári.",
+          "eng": "Touch ye not My anointed: and do no evil to My prophets."
+        },
+        {
+          "lat": "Et vocávit famem super terram: et omne firmaméntum panis contrívit.",
+          "eng": "And He called a famine upon the land: and He destroyed all the provision of bread."
+        },
+        {
+          "lat": "Misit ante eos virum: in servum venúndatus est Joseph.",
+          "eng": "He sent a man before them: Joseph, who was sold for a slave."
+        },
+        {
+          "lat": "Humiliavérunt in compédibus pedes ejus, ferrum pertránsiit ánimam ejus, donec veníret verbum ejus.",
+          "eng": "They humbled his feet in fetters: the iron pierced his soul, until his word came."
+        },
+        {
+          "lat": "Elóquium Dómini inflammávit eum: misit rex, et sólvit eum: princeps populórum, et dimísit eum.",
+          "eng": "The word of the Lord inflamed him: the king sent and released him: the ruler of the people, and he set him at liberty."
+        },
+        {
+          "lat": "Constítuit eum dóminum domus suæ: et príncipem omnis possessiónis suæ:",
+          "eng": "He made him master of his house, and ruler of all his possession."
+        },
+        {
+          "lat": "Ut erudíret príncipes ejus sicut semetípsum: et senes ejus prudéntiam docéret.",
+          "eng": "That he might instruct his princes as himself, and teach his ancients wisdom."
+        },
+        {
+          "lat": "Et intrávit Israël in Ægýptum: et Jacob áccola fuit in terra Cham.",
+          "eng": "And Israel went into Egypt: and Jacob was a sojourner in the land of Cham."
+        },
+        {
+          "lat": "Et auxit pópulum suum veheménter: et firmávit eum super inimícos ejus.",
+          "eng": "And He increased His people exceedingly: and strengthened them over their enemies."
+        },
+        {
+          "lat": "Convértit cor eórum ut odírent pópulum ejus: et dolum fácerent in servos ejus.",
+          "eng": "He turned their heart to hate His people: and to deal deceitfully with His servants."
+        },
+        {
+          "lat": "Misit Móysen, servum suum: Aaron, quem elégit ipsum.",
+          "eng": "He sent Moses His servant: Aaron the man whom He had chosen."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm6": {
+      "type": "psalm",
+      "label": "Psalmus 104B",
+      "ref": "Ps 104:26-45",
+      "variationKey": "matutinum.psalm6",
+      "verses": [
+        {
+          "lat": "Pósuit in eis verba signórum suórum, et prodigiórum in terra Cham.",
+          "eng": "He gave them power to show His signs, and His wonders in the land of Cham."
+        },
+        {
+          "lat": "Misit ténebras, et obscurávit: et non exacerbávit sermónes suos.",
+          "eng": "He sent darkness, and made it obscure: and grieved not His words."
+        },
+        {
+          "lat": "Convértit aquas eórum in sánguinem: et occídit pisces eórum.",
+          "eng": "He turned their waters into blood, and destroyed their fish."
+        },
+        {
+          "lat": "Édidit terra eórum ranas: in penetrálibus regum ipsórum.",
+          "eng": "Their land brought forth frogs, in the inner chambers of their kings."
+        },
+        {
+          "lat": "Dixit, et venit cœnomýia: et cínifes in ómnibus fínibus eórum.",
+          "eng": "He spoke, and there came divers sorts of flies and sciniphs in all their coasts."
+        },
+        {
+          "lat": "Pósuit plúvias eórum grándinem: ignem comburéntem in terra ipsórum.",
+          "eng": "He gave them hail for rain, a burning fire in the land."
+        },
+        {
+          "lat": "Et percússit víneas eórum, et ficúlneas eórum: et contrívit lignum fínium eórum.",
+          "eng": "And He destroyed their vineyards and their fig trees: and He broke in pieces the trees of their coasts."
+        },
+        {
+          "lat": "Dixit, et venit locústa, et bruchus, cujus non erat númerus:",
+          "eng": "He spoke, and the locust came, and the bruchus, of which there was no number:"
+        },
+        {
+          "lat": "Et comédit omne fænum in terra eórum: et comédit omnem fructum terræ eórum.",
+          "eng": "And they devoured all the grass in their land, and consumed all the fruit of their ground."
+        },
+        {
+          "lat": "Et percússit omne primogénitum in terra eórum: primítias omnis labóris eórum.",
+          "eng": "And He slew all the firstborn in their land: the firstfruits of all their labour."
+        },
+        {
+          "lat": "Et edúxit eos cum argénto et auro: et non erat in tríbubus eórum infírmus.",
+          "eng": "And He brought them out with silver and gold: and there was not among their tribes one that was feeble."
+        },
+        {
+          "lat": "Lætáta est Ægýptus in profectióne eórum: quia incúbuit timor eórum super eos.",
+          "eng": "Egypt was glad when they departed: for the fear of them lay upon them."
+        },
+        {
+          "lat": "Expándit nubem in protectiónem eórum, et ignem ut lucéret eis per noctem.",
+          "eng": "He spread a cloud for their protection, and fire to give them light in the night."
+        },
+        {
+          "lat": "Petiérunt, et venit cotúrnix: et pane cæli saturávit eos.",
+          "eng": "They asked, and the quail came: and He filled them with the bread of heaven."
+        },
+        {
+          "lat": "Dirúpit petram, et fluxérunt aquæ: abiérunt in sicco flúmina.",
+          "eng": "He opened the rock, and waters flowed: rivers ran down in the dry land."
+        },
+        {
+          "lat": "Quóniam memor fuit verbi sancti sui, quod hábuit ad Abraham, púerum suum.",
+          "eng": "Because He remembered His holy word, which He had spoken to His servant Abraham."
+        },
+        {
+          "lat": "Et edúxit pópulum suum in exsultatióne, et eléctos suos in lætítia.",
+          "eng": "And He brought forth His people with joy, and His chosen with gladness."
+        },
+        {
+          "lat": "Et dedit illis regiónes géntium: et labóres populórum possedérunt:",
+          "eng": "And He gave them the lands of the Gentiles: and they possessed the labours of the people:"
+        },
+        {
+          "lat": "Ut custódiant justificatiónes ejus, et legem ejus requírant.",
+          "eng": "That they might observe His justifications, and seek after His law."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm7": {
+      "type": "psalm",
+      "label": "Psalmus 105A",
+      "ref": "Ps 105:1-23",
+      "variationKey": "matutinum.psalm7",
+      "verses": [
+        {
+          "lat": "Confitémini Dómino, quóniam bonus: quóniam in sǽculum misericórdia ejus.",
+          "eng": "Give glory to the Lord, for He is good: for His mercy endureth for ever."
+        },
+        {
+          "lat": "Quis loquétur poténtias Dómini: audítas fáciet omnes laudes ejus?",
+          "eng": "Who shall declare the powers of the Lord? who shall set forth all His praises?"
+        },
+        {
+          "lat": "Beáti, qui custódiunt judícium, et fáciunt justítiam in omni témpore.",
+          "eng": "Blessed are they that keep judgment, and do justice at all times."
+        },
+        {
+          "lat": "Meménto nostri, Dómine, in beneplácito pópuli tui: vísita nos in salutári tuo:",
+          "eng": "Remember us, O Lord, in the favour of Thy people: visit us with Thy salvation."
+        },
+        {
+          "lat": "Ad vidéndum in bonitáte electórum tuórum, ad lætándum in lætítia gentis tuæ: ut laudéris cum hereditáte tua.",
+          "eng": "That we may see the good of Thy chosen, that we may rejoice in the joy of Thy nation: that Thou mayst be praised with Thy inheritance."
+        },
+        {
+          "lat": "Peccávimus cum pátribus nostris: injúste égimus, iniquitátem fécimus.",
+          "eng": "We have sinned with our fathers: we have acted unjustly, we have wrought iniquity."
+        },
+        {
+          "lat": "Patres nostri in Ægýpto non intellexérunt mirabília tua: non fuérunt mémores multitúdinis misericórdiæ tuæ. Et irritavérunt ascendéntes in mare, Mare Rubrum.",
+          "eng": "Our fathers understood not Thy wonders in Egypt: they remembered not the multitude of Thy mercies. And they provoked to wrath going up to the sea, even the Red Sea."
+        },
+        {
+          "lat": "Et salvávit eos propter nomen suum: ut notam fáceret poténtiam suam.",
+          "eng": "And He saved them for His own name's sake: that He might make His power known."
+        },
+        {
+          "lat": "Et incrépuit Mare Rubrum, et exsiccátum est: et dedúxit eos in abýssis sicut in desérto.",
+          "eng": "And He rebuked the Red Sea, and it was dried up: and He led them through the depths, as in a wilderness."
+        },
+        {
+          "lat": "Et salvávit eos de manu odiéntium: et redémit eos de manu inimíci.",
+          "eng": "And He saved them from the hand of them that hated them: and He redeemed them from the hand of the enemy."
+        },
+        {
+          "lat": "Et opéruit aqua tribulántes eos: unus ex eis non remánsit.",
+          "eng": "And the water covered them that afflicted them: there was not one of them left."
+        },
+        {
+          "lat": "Et credidérunt verbis ejus: et laudavérunt laudem ejus.",
+          "eng": "And they believed His words: and they sang His praises."
+        },
+        {
+          "lat": "Cito fecérunt, oblíti sunt óperum ejus: et non sustinuérunt consílium ejus.",
+          "eng": "They soon forgot His works: and they waited not for His counsel."
+        },
+        {
+          "lat": "Et concupiérunt concupiscéntiam in desérto: et tentavérunt Deum in inaquóso.",
+          "eng": "And they coveted their desire in the desert: and they tempted God in the place without water."
+        },
+        {
+          "lat": "Et dedit eis petitiónem ipsórum: et misit saturitátem in ánimas eórum.",
+          "eng": "And He gave them their request: and sent fulness into their souls."
+        },
+        {
+          "lat": "Et irritavérunt Móysen in castris: Aaron, sanctum Dómini.",
+          "eng": "And they provoked Moses in the camp, Aaron the holy one of the Lord."
+        },
+        {
+          "lat": "Apérta est terra, et deglutívit Dathan: et opéruit super congregatiónem Abíron.",
+          "eng": "The earth opened and swallowed up Dathan: and covered the congregation of Abiron."
+        },
+        {
+          "lat": "Et exársit ignis in synagóga eórum: flamma combússit peccatóres.",
+          "eng": "And a fire was kindled in their congregation: the flame burned the wicked."
+        },
+        {
+          "lat": "Et fecérunt vítulum in Horeb: et adoravérunt scúlptile.",
+          "eng": "They made also a calf in Horeb: and they adored the graven thing."
+        },
+        {
+          "lat": "Et mutavérunt glóriam suam in similitúdinem vítuli comedéntis fænum.",
+          "eng": "And they changed their glory into the likeness of a calf that eateth grass."
+        },
+        {
+          "lat": "Oblíti sunt Deum, qui salvávit eos, qui fecit magnália in Ægýpto, mirabília in terra Cham: terribília in Mari Rubro.",
+          "eng": "They forgot God, who saved them, who had done great things in Egypt, wondrous works in the land of Cham: terrible things in the Red Sea."
+        },
+        {
+          "lat": "Et dixit ut dispérderet eos: si non Móyses, eléctus ejus, stetísset in confractióne in conspéctu ejus: Ut avérteret iram ejus ne dispérderet eos:",
+          "eng": "And He said that He would destroy them: had not Moses His chosen stood before Him in the breach: To turn away His wrath, lest He should destroy them:"
+        },
+        {
+          "lat": "et pro níhilo habuérunt terram desiderá­bilem. Non credidérunt verbo ejus,",
+          "eng": "and they set at nought the desirable land. They believed not His word,"
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm8": {
+      "type": "psalm",
+      "label": "Psalmus 105B",
+      "ref": "Ps 105:24-48",
+      "variationKey": "matutinum.psalm8",
+      "verses": [
+        {
+          "lat": "et murmuravérunt in tabernáculis suis: non exaudiérunt vocem Dómini.",
+          "eng": "and they murmured in their tents: they hearkened not to the voice of the Lord."
+        },
+        {
+          "lat": "Et elevávit manum suam super eos: ut prostérneret eos in desérto:",
+          "eng": "And He lifted up His hand over them: to overthrow them in the desert:"
+        },
+        {
+          "lat": "Et ut dejíceret semen eórum in natiónibus: et dispérgeret eos in regiónibus.",
+          "eng": "And to cast down their seed among the nations, and to scatter them in the countries."
+        },
+        {
+          "lat": "Et initiáti sunt Beélphegor: et comedérunt sacrifícia mortuórum.",
+          "eng": "They also were initiated to Beelphegor: and ate the sacrifices of the dead."
+        },
+        {
+          "lat": "Et irritavérunt eum in adinventiónibus suis: et multiplicáta est in eis ruína.",
+          "eng": "And they provoked Him with their inventions: and destruction was multiplied among them."
+        },
+        {
+          "lat": "Et stetit Phínees, et placávit: et cessávit quassátio.",
+          "eng": "Then Phinees stood up, and pacified Him: and the slaughter ceased."
+        },
+        {
+          "lat": "Et reputátum est ei in justítiam: in generatiónem et generatiónem usque in sempitérnum.",
+          "eng": "And it was reputed to him unto justice, to generation and generation for evermore."
+        },
+        {
+          "lat": "Et irritavérunt eum ad Aquas contradictiónis: et vexátus est Móyses propter eos: quia exacerbavérunt spíritum ejus.",
+          "eng": "They provoked Him also at the waters of contradiction: and Moses was afflicted for their sakes: because they exasperated his spirit."
+        },
+        {
+          "lat": "Et distínxit in lábiis suis: non disperdidérunt gentes, quas dixit Dóminus illis.",
+          "eng": "And he distinguished with his lips: they did not destroy the nations of which the Lord spoke unto them."
+        },
+        {
+          "lat": "Et commíxti sunt inter gentes, et didicérunt ópera eórum: et serviérunt sculptílibus eórum: et factum est illis in scándalum.",
+          "eng": "And they were mingled among the heathens, and learned their works: and served their idols, and it became a stumbling block to them."
+        },
+        {
+          "lat": "Et immolavérunt fílios suos et fílias suas dæmóniis.",
+          "eng": "And they sacrificed their sons and their daughters to devils."
+        },
+        {
+          "lat": "Et effudérunt sánguinem innocéntem: sánguinem filiórum suórum et filiárum suárum, quas sacrificavérunt sculptílibus Chánaan. Et infécta est terra in sanguínibus,",
+          "eng": "And they shed innocent blood: the blood of their sons and of their daughters which they sacrificed to the idols of Chanaan. And the land was polluted with blood,"
+        },
+        {
+          "lat": "et contamináta est in opéribus eórum: et fornicáti sunt in adinventiónibus suis.",
+          "eng": "and was defiled with their works: and they went aside after their own inventions."
+        },
+        {
+          "lat": "Et irátus est furóre Dóminus in pópulum suum: et abominátus est hereditátem suam.",
+          "eng": "And the Lord was exceedingly angry with His people: and He abhorred His inheritance."
+        },
+        {
+          "lat": "Et trádidit eos in manus géntium: et domináti sunt eórum qui odérunt eos.",
+          "eng": "And He delivered them into the hands of the nations: and they that hated them had dominion over them."
+        },
+        {
+          "lat": "Et tribulavérunt eos inimíci eórum, et humiliáti sunt sub mánibus eórum: sǽpe liberávit eos.",
+          "eng": "And their enemies afflicted them, and they were humbled under their hands: many times did He deliver them."
+        },
+        {
+          "lat": "Ipsi autem exacerbavérunt eum in consílio suo: et humiliáti sunt in iniquitátibus suis.",
+          "eng": "But they provoked Him with their counsel: and they were brought low by their iniquities."
+        },
+        {
+          "lat": "Et vidit cum tribularéntur: et audívit oratiónem eórum.",
+          "eng": "And He saw when they were in tribulation: and He heard their prayer."
+        },
+        {
+          "lat": "Et memor fuit testaménti sui: et pœnítuit eum secúndum multitúdinem misericórdiæ suæ.",
+          "eng": "And He was mindful of His covenant: and repented according to the multitude of His mercies."
+        },
+        {
+          "lat": "Et dedit eos in misericórdias in conspéctu ómnium qui céperant eos.",
+          "eng": "And He gave them unto mercies, in the sight of all those that had made them captives."
+        },
+        {
+          "lat": "Salvos nos fac, Dómine, Deus noster: et cóngrega nos de natiónibus: Ut confiteámur nómini sancto tuo: et gloriémur in laude tua.",
+          "eng": "Save us, O Lord, our God: and gather us from among the nations: That we may give thanks to Thy holy name, and may glory in Thy praise."
+        },
+        {
+          "lat": "Benedíctus Dóminus, Deus Israël, a sǽculo et usque in sǽculum: et dicet omnis pópulus: Fiat, fiat.",
+          "eng": "Blessed be the Lord the God of Israel, from everlasting to everlasting: and let all the people say: So be it, so be it."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "matutinum.psalm9": {
+      "type": "psalm",
+      "label": "Psalmus 106",
+      "ref": "Ps 106",
+      "variationKey": "matutinum.psalm9",
+      "verses": [
+        {
+          "lat": "Confitémini Dómino, quóniam bonus: quóniam in sǽculum misericórdia ejus.",
+          "eng": "Give glory to the Lord, for He is good: for His mercy endureth for ever."
+        },
+        {
+          "lat": "Dicant qui redémpti sunt a Dómino, quos redémit de manu inimíci: et de regiónibus congregávit eos:",
+          "eng": "Let them say so that have been redeemed by the Lord, whom He hath redeemed from the hand of the enemy: and gathered out of the countries."
+        },
+        {
+          "lat": "A solis ortu et occásu: ab aquilóne et mari.",
+          "eng": "From the rising and the setting of the sun, from the north and from the sea."
+        },
+        {
+          "lat": "Erravérunt in solitúdine in inaquóso: viam civitátis habitáculi non invenérunt.",
+          "eng": "They wandered in a wilderness, in a place without water: they found not the way of a city for their habitation."
+        },
+        {
+          "lat": "Esuriéntes et sitiéntes: ánima eórum in ipsis defécit.",
+          "eng": "They were hungry and thirsty: their soul fainted in them."
+        },
+        {
+          "lat": "Et clamavérunt ad Dóminum cum tribularéntur: et de necessitátibus eórum erípuit eos.",
+          "eng": "And they cried to the Lord in their tribulation: and He delivered them out of their distresses."
+        },
+        {
+          "lat": "Et dedúxit eos in viam rectam: ut irent in civitátem habitatiónis.",
+          "eng": "And He led them into the right way: that they might go to a city of habitation."
+        },
+        {
+          "lat": "Confiteántur Dómino misericórdiæ ejus: et mirabília ejus fíliis hóminum.",
+          "eng": "Let the mercies of the Lord give glory to Him: and His wonderful works to the children of men."
+        },
+        {
+          "lat": "Quia satiávit ánimam inánem: et ánimam esuriéntem satiávit bonis.",
+          "eng": "For He hath satisfied the empty soul, and hath filled the hungry soul with good things."
+        },
+        {
+          "lat": "Sedéntes in ténebris et umbra mortis: vinctos in mendicitáte et ferro.",
+          "eng": "Such as sat in darkness and in the shadow of death: bound in want and in iron."
+        },
+        {
+          "lat": "Quia exacerbavérunt elóquia Dei: et consílium Altíssimi irritavérunt.",
+          "eng": "Because they had exasperated the words of God: and provoked the counsel of the Most High."
+        },
+        {
+          "lat": "Et humiliátum est in labóribus cor eórum: infirmáti sunt, nec fuit qui adjuváret.",
+          "eng": "And their heart was humbled with labours: they were weakened, and there was none to help them."
+        },
+        {
+          "lat": "Et clamavérunt ad Dóminum cum tribularéntur: et de necessitátibus eórum liberávit eos.",
+          "eng": "Then they cried to the Lord in their affliction: and He delivered them out of their distresses."
+        },
+        {
+          "lat": "Et edúxit eos de ténebris et umbra mortis: et víncula eórum dirúpit.",
+          "eng": "And He brought them out of darkness, and the shadow of death; and broke their bonds in sunder."
+        },
+        {
+          "lat": "Confiteántur Dómino misericórdiæ ejus: et mirabília ejus fíliis hóminum.",
+          "eng": "Let the mercies of the Lord give glory to Him, and His wonderful works to the children of men."
+        },
+        {
+          "lat": "Quia contrívit portas ǽreas: et vectes férreos confrégit.",
+          "eng": "Because He hath broken gates of brass, and burst iron bars."
+        },
+        {
+          "lat": "Suscépit eos de via iniquitátis eórum: propter injustítias enim suas humiliáti sunt.",
+          "eng": "He took them out of the way of their iniquity: for they were brought low for their injustices."
+        },
+        {
+          "lat": "Omnem escam abomináta est ánima eórum: et appropinquavérunt usque ad portas mortis.",
+          "eng": "Their soul abhorred all manner of meat: and they drew nigh even to the gates of death."
+        },
+        {
+          "lat": "Et clamavérunt ad Dóminum cum tribularéntur: et de necessitátibus eórum liberávit eos.",
+          "eng": "And they cried to the Lord in their affliction: and He delivered them out of their distresses."
+        },
+        {
+          "lat": "Misit verbum suum, et sanávit eos: et erípuit eos de interitiónibus eórum.",
+          "eng": "He sent His word, and healed them: and delivered them from their destructions."
+        },
+        {
+          "lat": "Confiteántur Dómino misericórdiæ ejus: et mirabília ejus fíliis hóminum.",
+          "eng": "Let the mercies of the Lord give glory to Him: and His wonderful works to the children of men."
+        },
+        {
+          "lat": "Et sacrifícent sacrifícium laudis: et annúntient ópera ejus in exsultatióne.",
+          "eng": "And let them sacrifice the sacrifice of praise: and declare His works with joy."
+        },
+        {
+          "lat": "Qui descéndunt mare in návibus, faciéntes operatiónem in aquis multis.",
+          "eng": "They that go down to the sea in ships, doing business in the great waters:"
+        },
+        {
+          "lat": "Ipsi vidérunt ópera Dómini, et mirabília ejus in profúndo.",
+          "eng": "These have seen the works of the Lord, and His wonders in the deep."
+        },
+        {
+          "lat": "Dixit, et stetit spíritus procéllæ: et exaltáti sunt fluctus ejus.",
+          "eng": "He said the word, and there arose a storm of wind: and the waves thereof were lifted up."
+        },
+        {
+          "lat": "Ascéndunt usque ad cælos, et descéndunt usque ad abýssos: ánima eórum in malis tabescébat.",
+          "eng": "They mount up to the heavens, and they go down to the depths: their soul pined away with evils."
+        },
+        {
+          "lat": "Turbáti sunt, et moti sunt sicut ébrius: et omnis sapiéntia eórum devoráta est.",
+          "eng": "They were troubled, and reeled like a drunken man; and all their wisdom was swallowed up."
+        },
+        {
+          "lat": "Et clamavérunt ad Dóminum cum tribularéntur: et de necessitátibus eórum edúxit eos.",
+          "eng": "And they cried to the Lord in their affliction: and He brought them out of their distresses."
+        },
+        {
+          "lat": "Et státuit procéllam ejus in auram: et siluérunt fluctus ejus.",
+          "eng": "And He turned the storm into a breeze: and its waves were still."
+        },
+        {
+          "lat": "Et lætáti sunt quia siluérunt: et dedúxit eos in portum voluntátis eórum.",
+          "eng": "And they rejoiced because they were still: and He brought them to the haven which they wished for."
+        },
+        {
+          "lat": "Confiteántur Dómino misericórdiæ ejus: et mirabília ejus fíliis hóminum.",
+          "eng": "Let the mercies of the Lord give glory to Him, and His wonderful works to the children of men."
+        },
+        {
+          "lat": "Et exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum.",
+          "eng": "And let them exalt Him in the church of the people: and praise Him in the chair of the ancients."
+        },
+        {
+          "lat": "Pósuit flúmina in desértum: et éxitus aquárum in sitim.",
+          "eng": "He hath turned rivers into a wilderness: and the sources of waters into dry ground."
+        },
+        {
+          "lat": "Terram fructíferam in salsúginem: a malítia inhabitántium in ea.",
+          "eng": "A fruitful land into barrenness, for the wickedness of them that dwell therein."
+        },
+        {
+          "lat": "Pósuit desértum in stagna aquárum: et terram sine aqua in éxitus aquárum.",
+          "eng": "He hath turned a wilderness into pools of waters, and a dry land into water springs."
+        },
+        {
+          "lat": "Et collocávit illic esuriéntes: et constituérunt civitátem habitatiónis.",
+          "eng": "And there He placed the hungry; and they made a city for their habitation."
+        },
+        {
+          "lat": "Et seminavérunt agros, et plantavérunt víneas: et fecérunt fructum nativitátis.",
+          "eng": "And they sowed fields, and planted vineyards: and they yielded fruit of birth."
+        },
+        {
+          "lat": "Et benedíxit eis, et multiplicáti sunt nimis: et juménta eórum non minorávit.",
+          "eng": "And He blessed them, and they were multiplied exceedingly: and their cattle He diminished not."
+        },
+        {
+          "lat": "Et pauci facti sunt: et vexáti sunt a tribulatióne malórum et dolóre.",
+          "eng": "Then they were brought to be few: and they were afflicted through the trouble of evils and sorrow."
+        },
+        {
+          "lat": "Effúsa est contémptio super príncipes: et erráre fecit eos in ínvio, et non in via.",
+          "eng": "Contempt was poured forth upon their princes: and He caused them to wander where there is no passing, and out of the way."
+        },
+        {
+          "lat": "Et adjúvit páuperem de inópia: et pósuit sicut oves famílias.",
+          "eng": "And He helped the poor out of poverty: and made him families like a flock of sheep."
+        },
+        {
+          "lat": "Vidébunt recti, et lætabúntur: et omnis iníquitas oppilábit os suum.",
+          "eng": "The just shall see, and shall rejoice, and all iniquity shall stop her mouth."
+        },
+        {
+          "lat": "Quis sápiens et custódiet hæc? et intélleget misericórdias Dómini?",
+          "eng": "Who is wise, and will keep these things: and will understand the mercies of the Lord?"
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "laudes.psalm1": {
+      "type": "psalm",
+      "label": "Psalmus 50",
+      "ref": "Ps 50",
+      "variationKey": "laudes.psalm1",
+      "verses": [
+        {
+          "lat": "Miserére mei, Deus, secúndum magnam misericórdiam tuam. Et secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.",
+          "eng": "Have mercy on me, O God, according to Thy great mercy. And according to the multitude of Thy tender mercies blot out my iniquity."
+        },
+        {
+          "lat": "Ámplius lava me ab iniquitáte mea: et a peccáto meo munda me.",
+          "eng": "Wash me yet more from my iniquity, and cleanse me from my sin."
+        },
+        {
+          "lat": "Quóniam iniquitátem meam ego cognósco: et peccátum meum contra me est semper.",
+          "eng": "For I know my iniquity, and my sin is always before me."
+        },
+        {
+          "lat": "Tibi soli peccávi, et malum coram te feci: ut justificéris in sermónibus tuis, et vincas cum judicáris.",
+          "eng": "To Thee only have I sinned, and have done evil before Thee: that Thou mayst be justified in Thy words, and mayst overcome when Thou art judged."
+        },
+        {
+          "lat": "Ecce enim in iniquitátibus concéptus sum: et in peccátis concépit me mater mea.",
+          "eng": "For behold I was conceived in iniquities; and in sins did my mother conceive me."
+        },
+        {
+          "lat": "Ecce enim veritátem dilexísti: incérta et occúlta sapiéntiæ tuæ manifestásti mihi.",
+          "eng": "For behold Thou hast loved truth: the uncertain and hidden things of Thy wisdom Thou hast made manifest to me."
+        },
+        {
+          "lat": "Aspérges me hyssópo, et mundábor: lavábis me, et super nivem dealbábor.",
+          "eng": "Thou shalt sprinkle me with hyssop, and I shall be cleansed: Thou shalt wash me, and I shall be made whiter than snow."
+        },
+        {
+          "lat": "Audítui meo dabis gáudium et lætítiam: et exsultábunt ossa humiliáta.",
+          "eng": "To my hearing Thou shalt give joy and gladness: and the bones that have been humbled shall rejoice."
+        },
+        {
+          "lat": "Avérte fáciem tuam a peccátis meis: et omnes iniquitátes meas dele.",
+          "eng": "Turn away Thy face from my sins, and blot out all my iniquities."
+        },
+        {
+          "lat": "Cor mundum crea in me, Deus: et spíritum rectum ínnova in viscéribus meis.",
+          "eng": "Create a clean heart in me, O God: and renew a right spirit within my bowels."
+        },
+        {
+          "lat": "Ne projícias me a fácie tua: et spíritum sanctum tuum ne áuferas a me.",
+          "eng": "Cast me not away from Thy face; and take not Thy holy spirit from me."
+        },
+        {
+          "lat": "Redde mihi lætítiam salutáris tui: et spíritu principáli confírma me.",
+          "eng": "Restore unto me the joy of Thy salvation, and strengthen me with a perfect spirit."
+        },
+        {
+          "lat": "Docébo iníquos vias tuas: et ímpii ad te converténtur.",
+          "eng": "I will teach the unjust Thy ways: and the wicked shall be converted to Thee."
+        },
+        {
+          "lat": "Líbera me de sanguínibus, Deus, Deus salútis meæ: et exsultábit lingua mea justítiam tuam.",
+          "eng": "Deliver me from blood, O God, Thou God of my salvation: and my tongue shall extol Thy justice."
+        },
+        {
+          "lat": "Dómine, lábia mea apéries: et os meum annuntiábit laudem tuam.",
+          "eng": "O Lord, Thou wilt open my lips: and my mouth shall declare Thy praise."
+        },
+        {
+          "lat": "Quóniam si voluísses sacrifícium, dedíssem útique: holocáustis non delectáberis.",
+          "eng": "For if Thou hadst desired sacrifice, I would indeed have given it: with burnt offerings Thou wilt not be delighted."
+        },
+        {
+          "lat": "Sacrifícium Deo spíritus contribulátus: cor contrítum et humiliátum, Deus, non despícies.",
+          "eng": "A sacrifice to God is an afflicted spirit: a contrite and humbled heart, O God, Thou wilt not despise."
+        },
+        {
+          "lat": "Benígne fac, Dómine, in bona voluntáte tua Sion: ut ædificéntur muri Jerúsalem.",
+          "eng": "Deal favourably, O Lord, in Thy good will with Sion; that the walls of Jerusalem may be built up."
+        },
+        {
+          "lat": "Tunc acceptábis sacrifícium justítiæ, oblatiónes et holocáusta: tunc impónent super altáre tuum vítulos.",
+          "eng": "Then shalt Thou accept the sacrifice of justice, oblations and whole burnt offerings: then shall they lay calves upon Thy altar."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "laudes.psalm2": {
+      "type": "psalm",
+      "label": "Psalmus 91",
+      "ref": "Ps 91",
+      "variationKey": "laudes.psalm2",
+      "verses": [
+        {
+          "lat": "Bonum est confitéri Dómino: et psállere nómini tuo, Altíssime.",
+          "eng": "It is good to give praise to the Lord: and to sing to Thy name, O Most High."
+        },
+        {
+          "lat": "Ad annuntiándum mane misericórdiam tuam: et veritátem tuam per noctem.",
+          "eng": "To show forth Thy mercy in the morning, and Thy truth in the night."
+        },
+        {
+          "lat": "In decachórdo, psaltério: cum cántico, in cíthara.",
+          "eng": "Upon an instrument of ten strings, upon the psaltery: with a canticle upon the harp."
+        },
+        {
+          "lat": "Quia delectásti me, Dómine, in factúra tua: et in opéribus mánuum tuárum exsultábo.",
+          "eng": "For Thou hast given me, O Lord, a delight in Thy doings: and in the works of Thy hands I shall rejoice."
+        },
+        {
+          "lat": "Quam magnificáta sunt ópera tua, Dómine! nimis profúndæ factæ sunt cogitatiónes tuæ.",
+          "eng": "O Lord, how great are Thy works! Thy thoughts are exceeding deep."
+        },
+        {
+          "lat": "Vir insípiens non cognóscet: et stultus non intélleget hæc.",
+          "eng": "The senseless man shall not know: nor will the fool understand these things."
+        },
+        {
+          "lat": "Cum exórti fúerint peccatóres sicut fænum: et apparúerint omnes qui operántur iniquitátem: Ut intéreant in sǽculum sǽculi:",
+          "eng": "When the wicked shall spring up as grass: and all the workers of iniquity shall appear: That they may perish for ever and ever:"
+        },
+        {
+          "lat": "tu autem Altíssimus in ætérnum, Dómine.",
+          "eng": "but Thou, O Lord, art Most High for evermore."
+        },
+        {
+          "lat": "Quóniam ecce inimíci tui, Dómine, quóniam ecce inimíci tui períbunt: et dispergéntur omnes qui operántur iniquitátem.",
+          "eng": "For behold Thy enemies, O Lord, for behold Thy enemies shall perish: and all the workers of iniquity shall be scattered."
+        },
+        {
+          "lat": "Et exaltábitur sicut unicórnis cornu meum: et senéctus mea in misericórdia úberi.",
+          "eng": "But my horn shall be exalted like that of the unicorn: and my old age in plentiful mercy."
+        },
+        {
+          "lat": "Et despéxit óculus meus inimícos meos: et in insurgéntibus in me malignántibus áudiet auris mea.",
+          "eng": "My eye also hath looked down upon my enemies: and my ear shall hear of the downfall of the malignant that rise up against me."
+        },
+        {
+          "lat": "Justus ut palma florébit: sicut cedrus Líbani multiplicábitur.",
+          "eng": "The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus."
+        },
+        {
+          "lat": "Plantáti in domo Dómini, in átriis domus Dei nostri florébunt.",
+          "eng": "They that are planted in the house of the Lord shall flourish in the courts of the house of our God."
+        },
+        {
+          "lat": "Adhuc multiplicabúntur in senécta úberi: et bene patiéntes erunt, ut annúntient:",
+          "eng": "They shall still increase in a fruitful old age: and shall be well treated, that they may show:"
+        },
+        {
+          "lat": "Quóniam rectus Dóminus, Deus noster: et non est iníquitas in eo.",
+          "eng": "That the Lord our God is righteous, and there is no iniquity in Him."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "laudes.canticle1": {
+      "type": "psalm",
+      "label": "Canticum Moysis",
+      "ref": "Dt 32:1-43",
+      "variationKey": "laudes.canticle1",
+      "verses": [
+        {
+          "lat": "Audíte, cæli, quæ loquor: áudiat terra verba oris mei.",
+          "eng": "Hear, O ye heavens, the things I speak: let the earth give ear to the words of my mouth."
+        },
+        {
+          "lat": "Concrescat ut plúvia doctrína mea, fluat ut ros elóquium meum, quasi imber super herbam, et quasi stillæ super grámina.",
+          "eng": "Let my doctrine gather as the rain, let my speech distil as the dew, as a shower upon the herb, and as drops upon the grass."
+        },
+        {
+          "lat": "Quia nomen Dómini invocábo: date magnificéntiam Deo nostro.",
+          "eng": "Because I will invoke the name of the Lord: give ye magnificence to our God."
+        },
+        {
+          "lat": "Dei perfécta sunt ópera, et omnes viæ ejus judícia: Deus fidélis, et absque ulla iniquitáte, justus et rectus.",
+          "eng": "The works of God are perfect, and all His ways are judgments: God is faithful and without any iniquity, He is just and right."
+        },
+        {
+          "lat": "Peccavérunt ei, et non fílii ejus in sórdibus: generátio prava atque pervérsa.",
+          "eng": "They have sinned against Him, and are none of His children in their filth: they are a wicked and perverse generation."
+        },
+        {
+          "lat": "Hǽccine reddis Dómino, pópule stulte et insípiens? numquid non ipse est pater tuus, qui possédit te, et fecit, et creávit te?",
+          "eng": "Is this the return thou makest to the Lord, O foolish and senseless people? Is not He thy Father, that hath possessed thee, and made thee, and created thee?"
+        },
+        {
+          "lat": "Meménto diérum antiquórum, cógita generatiónes síngulas: intérroga patrem tuum, et annuntiábit tibi, majóres tuos, et dicent tibi.",
+          "eng": "Remember the days of old, think upon every generation: ask thy father, and he will declare to thee: thy elders, and they will tell thee."
+        },
+        {
+          "lat": "Quando dividébat Altíssimus gentes, quando separábat fílios Adam, constítuit términos populórum juxta númerum filiórum Israël.",
+          "eng": "When the Most High divided the nations, when He separated the sons of Adam, He appointed the bounds of people according to the number of the children of Israel."
+        },
+        {
+          "lat": "Pars autem Dómini, pópulus ejus: Jacob funículus hereditátis ejus.",
+          "eng": "But the Lord's portion is His people: Jacob the lot of His inheritance."
+        },
+        {
+          "lat": "Invénit eum in terra desérta, in loco horróris et vastæ solitúdinis: circúmduxit eum, et dócuit: et custodívit quasi pupíllam óculi sui.",
+          "eng": "He found him in a desert land, in a place of horror and of vast wilderness: He led him about, and taught him: and He kept him as the apple of His eye."
+        },
+        {
+          "lat": "Sicut áquila próvocans ad volándum pullos suos, et super eos vólitans, expándit alas suas, et assúmpsit eum, atque portávit in húmeris suis.",
+          "eng": "As the eagle enticing her young to fly, and hovering over them, He spread His wings, and hath taken him and carried him on His shoulders."
+        },
+        {
+          "lat": "Dóminus solus dux ejus fuit: et non erat cum eo deus aliénus.",
+          "eng": "The Lord alone was his leader: and there was no strange god with him."
+        },
+        {
+          "lat": "Constítuit eum super excélsam terram: ut coméderet fructus agrórum, ut súgeret mel de petra, oleúmque de saxo duríssimo.",
+          "eng": "He set him upon high land: that he might eat the fruits of the fields, that he might suck honey out of the rock, and oil out of the hardest stone."
+        },
+        {
+          "lat": "Butýrum de arménto, et lac de óvibus, cum ádipe agnórum, et aríetum filiórum Basan: et hircos cum medúlla trítici, et sánguinem uvæ bíberet meracíssimum.",
+          "eng": "Butter of the herd, and milk of the sheep with the fat of lambs, and of rams of the breed of Basan: and goats with the marrow of wheat, and might drink the purest blood of the grape."
+        },
+        {
+          "lat": "Incrassátus est diléctus, et recalcitrávit: incrassátus, impinguátus, dilatátus, derelíquit Deum factórem suum, et recéssit a Deo salutári suo.",
+          "eng": "The beloved grew fat, and kicked: he grew fat, and thick and gross: he forsook God who made him, and departed from God his Saviour."
+        },
+        {
+          "lat": "Provocavérunt eum in diis aliénis, et in abominatiónibus ad iracúndiam concitavérunt.",
+          "eng": "They provoked Him with strange gods, and stirred Him up to anger with their abominations."
+        },
+        {
+          "lat": "Immolavérunt dæmóniis, et non Deo, diis quos ignorábant: novi recentésque venérunt, quos non coluérunt patres eórum.",
+          "eng": "They sacrificed to devils and not to God, to gods whom they knew not: that were newly come up, whom their fathers worshipped not."
+        },
+        {
+          "lat": "Deum qui te génuit dereliquísti, et oblítus es Dómini creatóris tui.",
+          "eng": "Thou hast forsaken the God that begot thee, and hast forgotten the Lord that created thee."
+        },
+        {
+          "lat": "Vidit Dóminus, et ad iracúndiam concitátus est: quia provocavérunt eum fílii sui et fíliæ.",
+          "eng": "The Lord saw, and was moved to wrath, because His own sons and daughters provoked Him."
+        },
+        {
+          "lat": "Et ait: Abscóndam fáciem meam ab eis, et considerábo novíssima eórum: generátio enim pervérsa est, et infidéles fílii.",
+          "eng": "And He said: I will hide My face from them, and will consider what their last end shall be: for it is a perverse generation, and unfaithful children."
+        },
+        {
+          "lat": "Ipsi me provocavérunt in eo, qui non erat Deus, et irritavérunt in vanitátibus suis: et ego provocábo eos in eo, qui non est pópulus, et in gente stulta irritábo illos.",
+          "eng": "They have provoked Me with that which was no god, and have angered Me with their vanities: and I will provoke them with that which is no people, and will vex them with a foolish nation."
+        },
+        {
+          "lat": "Ignis succénsus est in furóre meo, et ardébit usque ad inférni novíssima: devorábítque terram cum gérmine suo, et móntium fundaménta combúret.",
+          "eng": "A fire is kindled in My wrath, and shall burn even to the lowest hell: and shall devour the earth with her increase, and shall burn the foundations of the mountains."
+        },
+        {
+          "lat": "Congregábo super eos mala, et sagíttas meas complébo in eis.",
+          "eng": "I will heap evils upon them, and will spend My arrows among them."
+        },
+        {
+          "lat": "Consuméntur fame, et devorábunt eos aves morsu amaríssimo: dentes bestiárum immíttam in eos, cum furóre trahéntium super terram, atque serpéntium.",
+          "eng": "They shall be consumed with famine, and birds shall devour them with a most bitter bite: I will send the teeth of beasts upon them, with the fury of creatures that trail upon the ground, and of serpents."
+        },
+        {
+          "lat": "Foris vastábit eos gládius, et intus pavor, júvenem simul ac vírginem, lacténtem cum hómine sene.",
+          "eng": "Without, the sword shall lay them waste, and terror within: the young man and the virgin together, the suckling with the man in years."
+        },
+        {
+          "lat": "Dixi: Ubínam sunt? cessáre fáciam ex homínibus memóriam eórum.",
+          "eng": "I said: Where are they? I will make the memory of them to cease from among men."
+        },
+        {
+          "lat": "Sed propter iram inimicórum dístuli: ne forte superbírent hostes eórum. Et dícerent: Manus nostra excélsa, et non Dóminus, fecit hæc ómnia.",
+          "eng": "But for the wrath of the enemies I have deferred it: lest perhaps their enemies might be proud, and should say: Our mighty hand, and not the Lord, hath done all these things."
+        },
+        {
+          "lat": "Gens absque consílio est, et sine prudéntia. Utínam sáperent et intellégerent, ac novíssima providérent!",
+          "eng": "They are a nation without counsel, and without wisdom. O that they would be wise and would understand, and would provide for their last end."
+        },
+        {
+          "lat": "Quómodo persequátur unus mille, et duo fugent decem míllia? nonne ídeo, quia Deus suus véndidit eos, et Dóminus conclúsit illos?",
+          "eng": "How should one pursue after a thousand, and two chase ten thousand? Was it not because their God had sold them, and the Lord had shut them up?"
+        },
+        {
+          "lat": "Non enim est Deus noster ut dii eórum: et inimíci nostri sunt júdices.",
+          "eng": "For our God is not as their gods: our enemies themselves are judges."
+        },
+        {
+          "lat": "De vínea Sodomórum, vínea eórum, et de suburbánis Gomórrhæ: uva eórum uva fellis, et botri amaríssimi.",
+          "eng": "Their vine is of the vineyard of Sodom, and of the suburbs of Gomorrha: their grapes are grapes of gall, and their clusters most bitter."
+        },
+        {
+          "lat": "Fel dracónum vinum eórum: et venénum áspidum insanábile.",
+          "eng": "Their wine is the gall of dragons, and the venom of asps, which is incurable."
+        },
+        {
+          "lat": "Nonne hæc cóndita sunt apud me, et signáta in thesáuris meis?",
+          "eng": "Are not these things stored up with Me, and sealed up in My treasures?"
+        },
+        {
+          "lat": "Mea est últio, et ego retríbuam in témpore, ut labátur pes eórum: juxta est dies perditiónis, et adésse festínant témpora.",
+          "eng": "Revenge is Mine, and I will repay them in due time, that their foot may slide: the day of destruction is at hand, and the time makes haste to come."
+        },
+        {
+          "lat": "Judicábit Dóminus pópulum suum, et in servis suis misereábitur: vidébit quod infirmáta sit manus, et clausi quoque defecérunt, residuíque consúmpti sunt.",
+          "eng": "The Lord will judge His people, and will have mercy on His servants: He shall see that their hand is weakened, and that they who were shut up have also failed, and they that remained are consumed."
+        },
+        {
+          "lat": "Et dicet: Ubi sunt dii eórum, in quibus habébant fidúciam?",
+          "eng": "And He shall say: Where are their gods, in whom they trusted?"
+        },
+        {
+          "lat": "De quorum víctimis comedébant ádipes, et bibébant vinum libáminum: surgant, et opituléntur vobis, et in necessitáte vos prótegant.",
+          "eng": "Of whose victims they ate the fat, and drank the wine of their drink offerings: let them arise and help you, and protect you in your distress."
+        },
+        {
+          "lat": "Vidéte quod ego sim solus, et non sit álius Deus præter me: ego occídam, et ego vívere fáciam: percútiam, et ego sanábo, et non est qui de manu mea possit erúere.",
+          "eng": "See ye that I alone am, and there is no other God besides Me: I will kill and I will make to live: I will strike, and I will heal, and there is none that can deliver out of My hand."
+        },
+        {
+          "lat": "Levábo ad cælum manum meam, et dicam: Vivo ego in ætérnum.",
+          "eng": "I will lift up My hand to heaven, and I will say: I live for ever."
+        },
+        {
+          "lat": "Si acúero ut fulgur gládium meum, et arrípuerit judícium manus mea: reddam ultiónem hóstibus meis, et his qui odérunt me retríbuam.",
+          "eng": "If I shall whet My sword as the lightning, and My hand take hold on judgment: I will render vengeance to My enemies, and repay them that hate Me."
+        },
+        {
+          "lat": "Inebriábo sagíttas meas sánguine, et gládius meus devorábit carnes, de cruóre occisórum, et de captivitáte, nudáti inimicórum cápitis.",
+          "eng": "I will make My arrows drunk with blood, and My sword shall devour flesh, of the blood of the slain and of the captivity, of the bare head of the enemies."
+        },
+        {
+          "lat": "Laudáte, gentes, pópulum ejus, quia sánguinem servórum suórum ulciscétur: et vindíctam retríbuet in hostes eórum, et propítius erit terræ pópuli sui.",
+          "eng": "Praise His people, ye nations, for He will avenge the blood of His servants: and will render vengeance to their enemies, and He will be merciful to the land of His people."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm1": {
+      "type": "psalm",
+      "label": "Psalmus 143A",
+      "ref": "Ps 143:1-8",
+      "variationKey": "vesperae.psalm1",
+      "verses": [
+        {
+          "lat": "Benedíctus Dóminus, Deus meus, qui docet manus meas ad prǽlium, et dígitos meos ad bellum.",
+          "eng": "Blessed be the Lord my God, who teacheth my hands to fight, and my fingers to war."
+        },
+        {
+          "lat": "Misericórdia mea et refúgium meum: suscéptor meus et liberátor meus: Protéctor meus, et in ipso sperávi: qui subdit pópulum meum sub me.",
+          "eng": "My mercy and my refuge: my support and my deliverer: My protector, and I have hoped in Him: who subdueth my people under me."
+        },
+        {
+          "lat": "Dómine, quid est homo, quia innotuísti ei? aut fílius hóminis, quia réputas eum?",
+          "eng": "Lord, what is man, that Thou art made known to him? or the son of man, that Thou makest account of him?"
+        },
+        {
+          "lat": "Homo vanitáti símilis factus est: dies ejus sicut umbra prætéreunt.",
+          "eng": "Man is like to vanity: his days pass away like a shadow."
+        },
+        {
+          "lat": "Dómine, inclína cælos tuos, et descénde: tange montes, et fumigábunt.",
+          "eng": "Lord, bow down Thy heavens and descend: touch the mountains and they shall smoke."
+        },
+        {
+          "lat": "Fúlgura coruscatiónem, et dissipábis eos: emítte sagíttas tuas, et conturbábis eos.",
+          "eng": "Send forth lightning, and Thou shalt scatter them: shoot out Thy arrows, and Thou shalt trouble them."
+        },
+        {
+          "lat": "Emítte manum tuam de alto, éripe me, et líbera me de aquis multis: de manu filiórum alienórum.",
+          "eng": "Put forth Thy hand from on high, take me out, and deliver me from many waters: from the hand of strange children."
+        },
+        {
+          "lat": "Quorum os locútum est vanitátem: et déxtera eórum, déxtera iniquitátis.",
+          "eng": "Whose mouth hath spoken vanity: and their right hand is the right hand of iniquity."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm2": {
+      "type": "psalm",
+      "label": "Psalmus 143B",
+      "ref": "Ps 143:9-15",
+      "variationKey": "vesperae.psalm2",
+      "verses": [
+        {
+          "lat": "Deus, cánticum novum cantábo tibi: in psaltério decachórdo psallam tibi.",
+          "eng": "To Thee, O God, I will sing a new canticle: on the psaltery and an instrument of ten strings I will sing praises to Thee."
+        },
+        {
+          "lat": "Qui das salútem régibus: qui redemísti David, servum tuum, de gládio malígno: éripe me.",
+          "eng": "Who givest salvation to kings: who hast redeemed Thy servant David from the malicious sword: Deliver me."
+        },
+        {
+          "lat": "Et érue me de manu filiórum alienórum, quorum os locútum est vanitátem: et déxtera eórum, déxtera iniquitátis:",
+          "eng": "And rescue me out of the hand of strange children, whose mouth hath spoken vanity: and their right hand is the right hand of iniquity:"
+        },
+        {
+          "lat": "Quorum fílii sicut novéllæ plantatiónes in juventúte sua. Fíliæ eórum compósitæ: circumornátæ ut similitúdo templi.",
+          "eng": "Whose sons are as new plants in their youth: Their daughters decked out, adorned round about after the similitude of a temple."
+        },
+        {
+          "lat": "Promptuária eórum plena, eructántia ex hoc in illud. Oves eórum fœtósæ, abundántes in egréssibus suis: boves eórum crassæ.",
+          "eng": "Their storehouses full, flowing out of this into that. Their sheep fruitful in young, abounding in their goings forth: their oxen fat."
+        },
+        {
+          "lat": "Non est ruína macériæ, neque tránsitus: neque clamor in platéis eórum.",
+          "eng": "There is no breach of wall, nor passage, nor crying out in their streets."
+        },
+        {
+          "lat": "Beátum dixérunt pópulum, cui hæc sunt: beátus pópulus, cujus Dóminus Deus ejus.",
+          "eng": "They have called the people happy that hath these things: but happy is that people whose God is the Lord."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm3": {
+      "type": "psalm",
+      "label": "Psalmus 144A",
+      "ref": "Ps 144:1-13",
+      "variationKey": "vesperae.psalm3",
+      "verses": [
+        {
+          "lat": "Exaltábo te, Deus meus, Rex: et benedícam nómini tuo in sǽculum et in sǽculum sǽculi.",
+          "eng": "I will extol Thee, O God my King: and I will bless Thy name for ever; yea, for ever and ever."
+        },
+        {
+          "lat": "Per síngulos dies benedícam tibi: et laudábo nomen tuum in sǽculum et in sǽculum sǽculi.",
+          "eng": "Every day I will bless Thee: and I will praise Thy name for ever; yea, for ever and ever."
+        },
+        {
+          "lat": "Magnus Dóminus et laudábilis nimis: et magnitúdinis ejus non est finis.",
+          "eng": "Great is the Lord, and greatly to be praised: and of His greatness there is no end."
+        },
+        {
+          "lat": "Generátio et generátio laudábit ópera tua: et poténtiam tuam pronuntiábunt.",
+          "eng": "Generation and generation shall praise Thy works: and they shall declare Thy power."
+        },
+        {
+          "lat": "Magnificéntiam glóriæ sanctitátis tuæ loquéntur: et mirabília tua narrábunt.",
+          "eng": "They shall speak of the magnificence of the glory of Thy holiness: and shall tell Thy wondrous works."
+        },
+        {
+          "lat": "Et virtútem terribílium tuórum dicent: et magnitúdinem tuam narrábunt.",
+          "eng": "And they shall speak of the might of Thy terrible acts: and shall declare Thy greatness."
+        },
+        {
+          "lat": "Memóriam abundántiæ suavitátis tuæ eructábunt: et justítia tua exsultábunt.",
+          "eng": "They shall publish the memory of the abundance of Thy sweetness: and shall rejoice in Thy justice."
+        },
+        {
+          "lat": "Miserátor et miséricors Dóminus: pátiens et multum miséricors.",
+          "eng": "The Lord is gracious and merciful: patient and plenteous in mercy."
+        },
+        {
+          "lat": "Suávis Dóminus univérsis: et miseratiónes ejus super ómnia ópera ejus.",
+          "eng": "The Lord is sweet to all: and His tender mercies are over all His works."
+        },
+        {
+          "lat": "Confiteántur tibi, Dómine, ómnia ópera tua: et sancti tui benedícant tibi.",
+          "eng": "Let all Thy works, O Lord, praise Thee: and let Thy saints bless Thee."
+        },
+        {
+          "lat": "Glóriam regni tui dicent: et poténtiam tuam loquéntur:",
+          "eng": "They shall speak of the glory of Thy kingdom: and shall tell of Thy power:"
+        },
+        {
+          "lat": "Ut notam fáciant fíliis hóminum poténtiam tuam: et glóriam magnificéntiæ regni tui.",
+          "eng": "To make Thy might known to the sons of men: and the glory of the magnificence of Thy kingdom."
+        },
+        {
+          "lat": "Regnum tuum regnum ómnium sæculórum: et dominátio tua in omni generatióne et generatiónem.",
+          "eng": "Thy kingdom is a kingdom of all ages: and Thy dominion endureth throughout all generations."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    },
+    "vesperae.psalm4": {
+      "type": "psalm",
+      "label": "Psalmus 144B",
+      "ref": "Ps 144:14-21",
+      "variationKey": "vesperae.psalm4",
+      "verses": [
+        {
+          "lat": "Fidélis Dóminus in ómnibus verbis suis: et sanctus in ómnibus opéribus suis.",
+          "eng": "The Lord is faithful in all His words: and holy in all His works."
+        },
+        {
+          "lat": "Allevat Dóminus omnes qui córruunt: et érigit omnes elísos.",
+          "eng": "The Lord lifteth up all that fall: and setteth up all that are cast down."
+        },
+        {
+          "lat": "Óculi ómnium in te sperant, Dómine: et tu das escam illórum in témpore opportúno.",
+          "eng": "The eyes of all hope in Thee, O Lord: and Thou givest them meat in due season."
+        },
+        {
+          "lat": "Áperis tu manum tuam: et imples omne ánimal benedictióne.",
+          "eng": "Thou openest Thy hand, and fillest with blessing every living creature."
+        },
+        {
+          "lat": "Justus Dóminus in ómnibus viis suis: et sanctus in ómnibus opéribus suis.",
+          "eng": "The Lord is just in all His ways: and holy in all His works."
+        },
+        {
+          "lat": "Prope est Dóminus ómnibus invocántibus eum: ómnibus invocántibus eum in veritáte.",
+          "eng": "The Lord is nigh unto all them that call upon Him: to all that call upon Him in truth."
+        },
+        {
+          "lat": "Voluntátem timéntium se fáciet: et deprecatiónem eórum exáudiet, et salvos fáciet eos.",
+          "eng": "He will do the will of them that fear Him: and He will hear their prayer, and save them."
+        },
+        {
+          "lat": "Custódit Dóminus omnes diligéntes se: et omnes peccatóres dispérdet.",
+          "eng": "The Lord keepeth all them that love Him: but all the wicked He will destroy."
+        },
+        {
+          "lat": "Laudatiónem Dómini loquétur os meum: et benedícat omnis caro nómini sancto ejus in sǽculum et in sǽculum sǽculi.",
+          "eng": "My mouth shall speak the praise of the Lord: and let all flesh bless His holy name for ever; yea, for ever and ever."
+        },
+        {
+          "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+          "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        }
+      ]
+    }
   }
 }
