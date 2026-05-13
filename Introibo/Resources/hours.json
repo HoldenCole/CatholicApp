@@ -23,13 +23,15 @@
         "label": "Hymn",
         "title": "Æterne rerum Cónditor",
         "lat": "Ætérne rerum Cónditor,\nnoctem diémque qui regis,\net témporum das témpora,\nut álleves fastídium.\n\nPræco diéi jam sonat,\nnoctis profúndæ pérvigil,\nnoctúrna lux viántibus,\na nocte noctem ségregans.\n\nHoc excitátus lúcifer\nsolvit polum calígine;\nhoc omnis errónum chorus\nvias nocéndi déserit.\n\nHoc nauta vires cólligit,\npontíque mitéscunt freta;\nhoc, ipsa petra Ecclésiæ,\ncanénte, culpam díluit.\n\nSurgámus ergo strénnue;\ngallus jacéntes éxcitat,\net somnoléntus íncrepat;\ngallus negántes árguit.\n\nGallo canénte, spes redit,\nægris salus refúnditur,\nmucro latrónis cónditur,\nlápsis fides revértitur.\n\nIesu, labántes réspice,\net nos vidéndo córrige;\nsi réspicis, lapsus cadunt,\nfletúque culpa sólvitur.\n\nDeo Patri sit glória,\nejúsque soli Fílio,\ncum Spíritu Paráclito,\nnunc et per omne sǽculum. Amen.",
-        "eng": "Eternal Maker of all things,\nWho governest both night and day,\nand grantest us the changing hours\nto ease the labours of our way.\n\nNow sounds the herald of the morn,\nthe sleepless watchman of the night,\na torch to travellers in the dark,\ndividing darkness from the light.\n\nAt this the morning-star awakes\nand frees the heavens from gloom;\nat this all evil-roaming bands\nforsake their paths of harm.\n\nAt this the sailor gathers strength,\nand calmer grow the waves of sea;\nat this the Rock on which the Church\nis built, in tears washed sin away.\n\nArise we, then, with vigour new;\nthe cock upbraids all drowsy men,\nrebukes the slothful with his cry,\nconvicts the faithless of their sin.\n\nAt cockcrow hope returns again,\nhealth to the sick is given anew,\nthe robber sheathes his lawless blade,\nand faith revives in those who fell.\n\nJesu, regard us as we fall,\nand by Thy look correct our ways;\nif Thou but look, our sins depart,\nand tears dissolve the stain of guilt.\n\nTo God the Father glory be,\nand to His only Son,\ntogether with the Paraclete,\nnow and through every age. Amen."
+        "eng": "Eternal Maker of all things,\nWho governest both night and day,\nand grantest us the changing hours\nto ease the labours of our way.\n\nNow sounds the herald of the morn,\nthe sleepless watchman of the night,\na torch to travellers in the dark,\ndividing darkness from the light.\n\nAt this the morning-star awakes\nand frees the heavens from gloom;\nat this all evil-roaming bands\nforsake their paths of harm.\n\nAt this the sailor gathers strength,\nand calmer grow the waves of sea;\nat this the Rock on which the Church\nis built, in tears washed sin away.\n\nArise we, then, with vigour new;\nthe cock upbraids all drowsy men,\nrebukes the slothful with his cry,\nconvicts the faithless of their sin.\n\nAt cockcrow hope returns again,\nhealth to the sick is given anew,\nthe robber sheathes his lawless blade,\nand faith revives in those who fell.\n\nJesu, regard us as we fall,\nand by Thy look correct our ways;\nif Thou but look, our sins depart,\nand tears dissolve the stain of guilt.\n\nTo God the Father glory be,\nand to His only Son,\ntogether with the Paraclete,\nnow and through every age. Amen.",
+        "variationKey": "matutinum.hymn"
       },
       {
         "type": "antiphon",
         "label": "Invitatory Antiphon",
         "lat": "Veníte, adorémus Dóminum, quóniam ipse fecit nos.",
-        "eng": "Come, let us adore the Lord, for He hath made us."
+        "eng": "Come, let us adore the Lord, for He hath made us.",
+        "variationKey": "matutinum.invitatory"
       },
       {
         "type": "psalm",
@@ -80,7 +82,8 @@
             "lat": "Quibus jurávi in ira mea: Si introíbunt in réquiem meam.",
             "eng": "So I swore in My wrath: They shall not enter into My rest."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm1"
       },
       {
         "type": "heading",
@@ -90,7 +93,8 @@
         "type": "antiphon",
         "label": "Antiphon I",
         "lat": "Beátus vir qui non ábiit in consílio impiórum.",
-        "eng": "Blessed is the man who hath not walked in the counsel of the ungodly."
+        "eng": "Blessed is the man who hath not walked in the counsel of the ungodly.",
+        "variationKey": "matutinum.antiphon1"
       },
       {
         "type": "psalm",
@@ -129,7 +133,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm2"
       },
       {
         "type": "psalm",
@@ -192,7 +197,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm3"
       },
       {
         "type": "psalm",
@@ -235,7 +241,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm4"
       },
       {
         "type": "vr",
@@ -309,7 +316,8 @@
         "type": "antiphon",
         "label": "Antiphon IV",
         "lat": "Cum invocárem, exaudívit me Deus justítiæ meæ.",
-        "eng": "When I called upon Him, the God of my justice heard me."
+        "eng": "When I called upon Him, the God of my justice heard me.",
+        "variationKey": "matutinum.antiphon2"
       },
       {
         "type": "psalm",
@@ -356,7 +364,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm5"
       },
       {
         "type": "psalm",
@@ -427,7 +436,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm6"
       },
       {
         "type": "psalm",
@@ -478,7 +488,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm7"
       },
       {
         "type": "vr",
@@ -552,7 +563,8 @@
         "type": "antiphon",
         "label": "Antiphon VII",
         "lat": "Dómine Deus meus, in te sperávi.",
-        "eng": "O Lord my God, in Thee have I put my trust."
+        "eng": "O Lord my God, in Thee have I put my trust.",
+        "variationKey": "matutinum.antiphon3"
       },
       {
         "type": "psalm",
@@ -635,7 +647,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm8"
       },
       {
         "type": "psalm",
@@ -686,7 +699,8 @@
             "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "matutinum.psalm9"
       },
       {
         "type": "vr",
@@ -932,13 +946,15 @@
         "label": "Hymn",
         "title": "Splendor patérnæ glóriæ",
         "lat": "Splendor patérnæ glóriæ,<br>de luce lucem próferens,<br>lux lucis et fons lúminis,<br>diem dies illúminans.\n\nVerúsque sol, illábere,<br>micans nitóre pérpeti,<br>jubárque Sancti Spíritus<br>infúnde nostris sénsibus.\n\nVotis vocémus et Patrem,<br>Patrem perénnis glóriæ,<br>Patrem poténtis grátiæ,<br>culpam reléget lúbricam.\n\nInfórmet actus strénuos,<br>dentem retúndat ínvidi,<br>casus secúndet ásperos,<br>donet geréndi grátiam.\n\nMentem gubérnet et regat<br>casto, fidéli córpore;<br>fides calóre férveat,<br>fraudis venéna nésciat.\n\nChristúsque nobis sit cibus,<br>potúsque noster sit fides;<br>læti bibámus sóbriam<br>ebrietátem Spíritus.\n\nLætus dies hic tránseat;<br>pudor sit ut dilúculum,<br>fides velut merídies,<br>crepúsculum mens nésciat.\n\nAuróra cursus próvehit:<br>Auróra totus pródeat,<br>in Patre totus Fílius,<br>et totus in Verbo Pater.\n\nDeo Patri sit glória,<br>ejúsque soli Fílio,<br>cum Spíritu Paráclito,<br>nunc et per omne sǽculum. Amen.",
-        "eng": "O splendour of God's glory bright,<br>O Thou that bringest light from light,<br>O Light of light, light's living spring,<br>O Day, all days illumining.\n\nO Thou true Sun, on us Thy glance<br>let fall in royal radiance;<br>the Spirit's sanctifying beam<br>upon our earthly senses stream.\n\nThe Father, too, our prayers implore,<br>Father of glory evermore,<br>the Father of all grace and might,<br>to banish sin from our delight.\n\nMay He our actions deign to bless,<br>and loose the wiles of wickedness;<br>from stumbling may He keep our feet,<br>and give us grace all ill to meet.\n\nMay He our minds direct and rule,<br>with bodies chaste and faithful still;<br>may faith in fervour burn the heart,<br>and know not poison's treacherous art.\n\nAnd Christ to us for food shall be,<br>from Him our drink of faith have we;<br>the Spirit's wine that maketh whole,<br>and mocking not, exalts the soul.\n\nRejoicing may this day go hence;<br>like to the dawn our innocence,<br>like noonday glow our faith remain,<br>nor know the twilight of the brain.\n\nDawn speeds her course along the way:<br>O Dawn in fullness, come and stay,<br>all in the Father is the Son,<br>and all the Father in the Word.\n\nTo God the Father glory be,<br>and to His only Son on high,<br>together with the Paraclete,<br>both now and through eternity. Amen."
+        "eng": "O splendour of God's glory bright,<br>O Thou that bringest light from light,<br>O Light of light, light's living spring,<br>O Day, all days illumining.\n\nO Thou true Sun, on us Thy glance<br>let fall in royal radiance;<br>the Spirit's sanctifying beam<br>upon our earthly senses stream.\n\nThe Father, too, our prayers implore,<br>Father of glory evermore,<br>the Father of all grace and might,<br>to banish sin from our delight.\n\nMay He our actions deign to bless,<br>and loose the wiles of wickedness;<br>from stumbling may He keep our feet,<br>and give us grace all ill to meet.\n\nMay He our minds direct and rule,<br>with bodies chaste and faithful still;<br>may faith in fervour burn the heart,<br>and know not poison's treacherous art.\n\nAnd Christ to us for food shall be,<br>from Him our drink of faith have we;<br>the Spirit's wine that maketh whole,<br>and mocking not, exalts the soul.\n\nRejoicing may this day go hence;<br>like to the dawn our innocence,<br>like noonday glow our faith remain,<br>nor know the twilight of the brain.\n\nDawn speeds her course along the way:<br>O Dawn in fullness, come and stay,<br>all in the Father is the Son,<br>and all the Father in the Word.\n\nTo God the Father glory be,<br>and to His only Son on high,<br>together with the Paraclete,<br>both now and through eternity. Amen.",
+        "variationKey": "laudes.hymn"
       },
       {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia."
+        "eng": "Alleluia, alleluia, alleluia.",
+        "variationKey": "laudes.antiphon"
       },
       {
         "type": "psalm",
@@ -993,7 +1009,8 @@
             "lat": "Rex vero lætábitur in Deo; laudabúntur omnes qui jurant in eo, quia obstrúctum est os loquéntium iníqua.",
             "eng": "But the king shall rejoice in God; all they shall be praised that swear by Him, because the mouth is stopped of them that speak wicked things."
           }
-        ]
+        ],
+        "variationKey": "laudes.psalm1"
       },
       {
         "type": "psalm",
@@ -1024,7 +1041,8 @@
             "lat": "Benedícat nos Deus, Deus noster, benedícat nos Deus; et métuant eum omnes fines terræ.",
             "eng": "May God, our God, bless us, may God bless us; and may all the ends of the earth fear Him."
           }
-        ]
+        ],
+        "variationKey": "laudes.psalm2"
       },
       {
         "type": "capitulum",
@@ -1118,7 +1136,8 @@
             "lat": "Benedíctus es, Dómine, in firmaménto cæli: et laudábilis, et gloriósus, et superexaltátus in sǽcula.",
             "eng": "Blessed art Thou, O Lord, in the firmament of heaven: and worthy of praise, and glorious, and highly exalted for ever."
           }
-        ]
+        ],
+        "variationKey": "laudes.canticle1"
       },
       {
         "type": "canticle",
@@ -1173,7 +1192,8 @@
             "lat": "Illumináre his qui in ténebris et in umbra mortis sedent, ad dirigéndos pedes nostros in viam pacis.",
             "eng": "To enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace."
           }
-        ]
+        ],
+        "variationKey": "laudes.canticle2"
       },
       {
         "type": "pater"
@@ -1216,13 +1236,15 @@
         "label": "Hymn",
         "title": "Iam lucis orto sídere",
         "lat": "Jam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.\n\nLinguam refrénans témperet,<br>ne litis horror ínsonet;<br>visum fovéndo cóntegat,<br>ne vanitátes háuriat.\n\nSint pura cordis íntima,<br>absístat et vecórdia;<br>carnis terat supérbiam<br>potus cibíque párcitas.\n\nUt cum dies abscésserit,<br>noctémque sors redúxerit,<br>mundi per abstinéntiam<br>ipsi canámus glóriam.\n\nDeo Patri sit glória,<br>ejúsque soli Fílio,<br>cum Spíritu Paráclito,<br>nunc et per omne sǽculum. Amen.",
-        "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power.\n\nMay He our tongues in order hold,<br>that discord's horror sound not here;<br>and guard our eyes from sights untold,<br>that vanities may not appear.\n\nO may the inmost heart be pure,<br>and folly's grasp be far removed;<br>let abstinence in food endure,<br>that pride of flesh be reproved.\n\nSo when the daylight fades away,<br>and night in turn again draws near,<br>through abstinence from worldly sway<br>we sing His glory without fear.\n\nTo God the Father glory be,<br>and to His only Son on high,<br>together with the Paraclete,<br>both now and through eternity. Amen."
+        "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power.\n\nMay He our tongues in order hold,<br>that discord's horror sound not here;<br>and guard our eyes from sights untold,<br>that vanities may not appear.\n\nO may the inmost heart be pure,<br>and folly's grasp be far removed;<br>let abstinence in food endure,<br>that pride of flesh be reproved.\n\nSo when the daylight fades away,<br>and night in turn again draws near,<br>through abstinence from worldly sway<br>we sing His glory without fear.\n\nTo God the Father glory be,<br>and to His only Son on high,<br>together with the Paraclete,<br>both now and through eternity. Amen.",
+        "variationKey": "prima.hymn"
       },
       {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia."
+        "eng": "Alleluia, alleluia, alleluia.",
+        "variationKey": "prima.antiphon"
       },
       {
         "type": "psalm",
@@ -1345,7 +1367,8 @@
             "lat": "Confitémini Dómino, quóniam bonus, quóniam in sǽculum misericórdia ejus.",
             "eng": "O praise ye the Lord, for He is good, for His mercy endureth for ever."
           }
-        ]
+        ],
+        "variationKey": "prima.psalm1"
       },
       {
         "type": "psalm",
@@ -1380,7 +1403,8 @@
             "lat": "Quóniam ex omni tribulatióne eripuísti me: et super inimícos meos despéxit óculus meus.",
             "eng": "For Thou hast delivered me out of all trouble: and my eye hath looked down upon my enemies."
           }
-        ]
+        ],
+        "variationKey": "prima.psalm2"
       },
       {
         "type": "capitulum",
@@ -1430,13 +1454,15 @@
         "label": "Hymn",
         "title": "Nunc, Sancte, nobis Spíritus",
         "lat": "Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.\n\nOs, lingua, mens, sensus, vigor,<br>confessiónem pérsonent;<br>flamméscat igne cáritas,<br>accéndat ardor próximos.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
-        "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness.\n\nLet mouth and tongue, mind, strength, and will,<br>sound forth our witness to Thy name;<br>and charity's devouring flame<br>set all our being in a glow.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen."
+        "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness.\n\nLet mouth and tongue, mind, strength, and will,<br>sound forth our witness to Thy name;<br>and charity's devouring flame<br>set all our being in a glow.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
+        "variationKey": "tertia.hymn"
       },
       {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia."
+        "eng": "Alleluia, alleluia, alleluia.",
+        "variationKey": "tertia.antiphon"
       },
       {
         "type": "psalm",
@@ -1475,7 +1501,8 @@
             "lat": "Viam mandatórum tuórum cucúrri, cum dilatásti cor meum.",
             "eng": "I have run the way of Thy commandments, when Thou didst enlarge my heart."
           }
-        ]
+        ],
+        "variationKey": "tertia.psalm1"
       },
       {
         "type": "psalm",
@@ -1514,7 +1541,8 @@
             "lat": "Ecce concupívi mandáta tua: in æquitáte tua vivífica me.",
             "eng": "Behold I have longed after Thy precepts: quicken me in Thy justice."
           }
-        ]
+        ],
+        "variationKey": "tertia.psalm2"
       },
       {
         "type": "psalm",
@@ -1553,7 +1581,8 @@
             "lat": "Et levávi manus meas ad mandáta tua quæ diléxi, et exercébar in justificatiónibus tuis.",
             "eng": "And I lifted up my hands to Thy commandments, which I loved, and I was exercised in Thy justifications."
           }
-        ]
+        ],
+        "variationKey": "tertia.psalm3"
       },
       {
         "type": "capitulum",
@@ -1603,13 +1632,15 @@
         "label": "Hymn",
         "title": "Rector potens, verax Deus",
         "lat": "Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.\n\nExstíngue flammas lítium,<br>aufer calórem nóxium,<br>confer salútem córporum,<br>verámque pacem córdium.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
-        "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day.\n\nExtinguish Thou each sinful fire,<br>and banish every ill desire;<br>and while Thou keepest the body whole,<br>shed forth Thy peace upon the soul.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen."
+        "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day.\n\nExtinguish Thou each sinful fire,<br>and banish every ill desire;<br>and while Thou keepest the body whole,<br>shed forth Thy peace upon the soul.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
+        "variationKey": "sexta.hymn"
       },
       {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia."
+        "eng": "Alleluia, alleluia, alleluia.",
+        "variationKey": "sexta.antiphon"
       },
       {
         "type": "psalm",
@@ -1636,7 +1667,8 @@
             "lat": "Quia multum repléta est ánima nostra; oppróbrium abundántibus, et despéctio supérbis.",
             "eng": "For our soul is greatly filled: we are a reproach to the rich, and contempt to the proud."
           }
-        ]
+        ],
+        "variationKey": "sexta.psalm1"
       },
       {
         "type": "psalm",
@@ -1679,7 +1711,8 @@
             "lat": "Adjutórium nostrum in nómine Dómini, qui fecit cælum et terram.",
             "eng": "Our help is in the name of the Lord, who made heaven and earth."
           }
-        ]
+        ],
+        "variationKey": "sexta.psalm2"
       },
       {
         "type": "psalm",
@@ -1706,7 +1739,8 @@
             "lat": "Declinátes autem in obligatiónes addúcet Dóminus cum operántibus iniquitátem: pax super Israel.",
             "eng": "But such as turn aside into bonds, the Lord shall lead out with the workers of iniquity: peace upon Israel."
           }
-        ]
+        ],
+        "variationKey": "sexta.psalm3"
       },
       {
         "type": "capitulum",
@@ -1756,13 +1790,15 @@
         "label": "Hymn",
         "title": "Rerum Deus tenax vigor",
         "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
-        "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen."
+        "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
+        "variationKey": "nona.hymn"
       },
       {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia."
+        "eng": "Alleluia, alleluia, alleluia.",
+        "variationKey": "nona.antiphon"
       },
       {
         "type": "psalm",
@@ -1801,7 +1837,8 @@
             "lat": "Veniéntes autem vénient cum exsultatióne, portántes manípulos suos.",
             "eng": "But coming they shall come with joyfulness, carrying their sheaves."
           }
-        ]
+        ],
+        "variationKey": "nona.psalm1"
       },
       {
         "type": "psalm",
@@ -1832,7 +1869,8 @@
             "lat": "Beátus vir qui implévit desidérium suum ex ipsis: non confundétur cum loquétur inimícis suis in porta.",
             "eng": "Blessed is the man that hath filled the desire with them: he shall not be confounded when he shall speak to his enemies in the gate."
           }
-        ]
+        ],
+        "variationKey": "nona.psalm2"
       },
       {
         "type": "psalm",
@@ -1867,7 +1905,8 @@
             "lat": "Et vídeas fílios filiórum tuórum: pacem super Israel.",
             "eng": "And mayst thou see thy children's children: peace upon Israel."
           }
-        ]
+        ],
+        "variationKey": "nona.psalm3"
       },
       {
         "type": "capitulum",
@@ -1917,13 +1956,15 @@
         "label": "Hymn",
         "title": "Lucis Creátor óptime",
         "lat": "Lucis Creátor óptime,<br>lucem diérum próferens,<br>primórdiis lucis novæ,<br>mundi parans oríginem.\n\nQui mane junctum vésperi<br>diem vocári prǽcipis:<br>illǽbitur tetrum chaos,<br>audi preces cum flétibus.\n\nNe mens graváta crímine<br>vitæ sit exsul múnere,<br>dum nil perénne cógitat,<br>sesé que culpis ílligat.\n\nCæléstem pulsent jánuam,<br>vitále tollant prǽmium;<br>vitémus omne nóxium,<br>purgémus omne péssimum.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
-        "eng": "O blest Creator of the light,<br>who mak'st the day with radiance bright,<br>and o'er the forming world didst call<br>the light from chaos first of all.\n\nWhose wisdom joined in meet array<br>the morn and eve, and named them day:<br>night comes with all its darkling fears,<br>regard Thy people's prayers and tears.\n\nLest, sunk in sin, and whelmed with strife,<br>they lose the gift of endless life;<br>while thinking but the thoughts of time,<br>they weave new chains of woe and crime.\n\nBut grant them grace that they may strain<br>the heavenly gate and prize to gain;<br>each harmful lure aside to cast,<br>and purge away each error past.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen."
+        "eng": "O blest Creator of the light,<br>who mak'st the day with radiance bright,<br>and o'er the forming world didst call<br>the light from chaos first of all.\n\nWhose wisdom joined in meet array<br>the morn and eve, and named them day:<br>night comes with all its darkling fears,<br>regard Thy people's prayers and tears.\n\nLest, sunk in sin, and whelmed with strife,<br>they lose the gift of endless life;<br>while thinking but the thoughts of time,<br>they weave new chains of woe and crime.\n\nBut grant them grace that they may strain<br>the heavenly gate and prize to gain;<br>each harmful lure aside to cast,<br>and purge away each error past.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
+        "variationKey": "vesperae.hymn"
       },
       {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Dirigátur, Dómine, orátio mea, sicut incénsum in conspéctu tuo.",
-        "eng": "Let my prayer be directed, O Lord, as incense in Thy sight."
+        "eng": "Let my prayer be directed, O Lord, as incense in Thy sight.",
+        "variationKey": "vesperae.antiphon"
       },
       {
         "type": "psalm",
@@ -1962,7 +2003,8 @@
             "lat": "De torrénte in via bibet: proptérea exaltábit caput.",
             "eng": "He shall drink of the torrent in the way: therefore shall He lift up the head."
           }
-        ]
+        ],
+        "variationKey": "vesperae.psalm1"
       },
       {
         "type": "psalm",
@@ -2009,7 +2051,8 @@
             "lat": "Intelléctus bonus ómnibus faciéntibus eum: laudátio ejus manet in sǽculum sǽculi.",
             "eng": "A good understanding to all that do it: His praise continueth for ever and ever."
           }
-        ]
+        ],
+        "variationKey": "vesperae.psalm2"
       },
       {
         "type": "psalm",
@@ -2052,7 +2095,8 @@
             "lat": "Peccátor vidébit et irascétur; déntibus suis fremet et tabéscet: desidérium peccatórum períbit.",
             "eng": "The wicked shall see and shall be angry; he shall gnash with his teeth and pine away: the desire of the wicked shall perish."
           }
-        ]
+        ],
+        "variationKey": "vesperae.psalm3"
       },
       {
         "type": "psalm",
@@ -2091,7 +2135,8 @@
             "lat": "Qui habitáre facit stérilem in domo, matrem filiórum lætántem.",
             "eng": "Who maketh a barren woman to dwell in a house, the joyful mother of children."
           }
-        ]
+        ],
+        "variationKey": "vesperae.psalm4"
       },
       {
         "type": "capitulum",
@@ -2153,7 +2198,8 @@
             "lat": "Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
             "eng": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
-        ]
+        ],
+        "variationKey": "vesperae.canticle"
       },
       {
         "type": "pater"
@@ -2223,7 +2269,8 @@
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Miserére mihi, Dómine, et exáudi oratiónem meam.",
-        "eng": "Have mercy on me, O Lord, and hear my prayer."
+        "eng": "Have mercy on me, O Lord, and hear my prayer.",
+        "variationKey": "completorium.antiphon"
       },
       {
         "type": "psalm",
@@ -2270,7 +2317,8 @@
             "lat": "Quóniam tu, Dómine, singuláriter in spe constituísti me.",
             "eng": "For Thou, O Lord, singularly hast settled me in hope."
           }
-        ]
+        ],
+        "variationKey": "completorium.psalm1"
       },
       {
         "type": "psalm",
@@ -2301,7 +2349,8 @@
             "lat": "In manus tuas comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",
             "eng": "Into Thy hands I commend my spirit: Thou hast redeemed me, O Lord, the God of truth."
           }
-        ]
+        ],
+        "variationKey": "completorium.psalm2"
       },
       {
         "type": "psalm",
@@ -2372,7 +2421,8 @@
             "lat": "Longitúdine diérum replébo eum, et osténdam illi salutáre meum.",
             "eng": "I will fill him with length of days, and I will show him My salvation."
           }
-        ]
+        ],
+        "variationKey": "completorium.psalm3"
       },
       {
         "type": "psalm",
@@ -2395,14 +2445,16 @@
             "lat": "Benedícat te Dóminus ex Sion, qui fecit cælum et terram.",
             "eng": "May the Lord out of Sion bless thee, He that made heaven and earth."
           }
-        ]
+        ],
+        "variationKey": "completorium.psalm4"
       },
       {
         "type": "hymn",
         "label": "Hymn",
         "title": "Te lucis ante términum",
         "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.\n\nProcul recédant sómnia,<br>et nóctium phantásmata;<br>hostémque nostrum cómprime,<br>ne polluántur córpora.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
-        "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen."
+        "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
+        "variationKey": "completorium.hymn"
       },
       {
         "type": "capitulum",
@@ -2445,7 +2497,8 @@
             "lat": "Lumen ad revelatiónem géntium, et glóriam plebis tuæ Israël.",
             "eng": "A light to the revelation of the Gentiles, and the glory of Thy people Israel."
           }
-        ]
+        ],
+        "variationKey": "completorium.canticle"
       },
       {
         "type": "pater"
@@ -2460,7 +2513,8 @@
         "type": "marian",
         "label": "Marian Antiphon; Salve Regína",
         "lat": "Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve. Ad te clamámus, éxsules fílii Hevæ. Ad te suspirámus, geméntes et flentes in hac lacrimárum valle. Eja ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte. Et Jesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde. O clemens, o pia, o dulcis Virgo María.",
-        "eng": "Hail, holy Queen, Mother of mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us. And after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary."
+        "eng": "Hail, holy Queen, Mother of mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us. And after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
+        "variationKey": "completorium.marian"
       }
     ]
   }
