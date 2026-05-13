@@ -154,6 +154,11 @@ struct PrayersView: View {
                                     .font(.system(size: 14))
                             }
                             .buttonStyle(.plain)
+                        }
+                        .padding(.vertical, 4)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
                 } else if slug.hasPrefix("office-"), let h = store.hour(slug: String(slug.dropFirst(7))) {
                     let isDone = completedPrayers.contains(slug)
                     Button {
