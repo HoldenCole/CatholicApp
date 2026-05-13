@@ -277,14 +277,15 @@ struct MissalView: View {
             }
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(Array(section.body.enumerated()), id: \.offset) { _, line in
-                    if let rubric = line.rubric {
-                        Text(rubric)
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.sanctuaryRed)
-                            .padding(.top, 4)
+                    VStack(alignment: .leading, spacing: 4) {
+                        if let rubric = line.rubric {
+                            Text(rubric)
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.sanctuaryRed)
+                        }
+                        BilingualLine(lat: line.lat, eng: line.eng, sideBySide: true)
                     }
-                    BilingualLine(lat: line.lat, eng: line.eng, sideBySide: true)
                 }
             }
             .padding(.top, 4)
