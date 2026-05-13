@@ -1138,11 +1138,11 @@
     }
   },
   "tuesday": {
-    "matutinum.psalm2": {
+    "matutinum.psalm1": {
       "type": "psalm",
       "label": "Psalmus 23; Dómini est terra",
       "ref": "Ps 23",
-      "variationKey": "matutinum.psalm2",
+      "variationKey": "matutinum.psalm1",
       "verses": [
         {
           "lat": "Dómini est terra, et plenitúdo ejus: orbis terrárum, et univérsi qui hábitant in eo.",
@@ -1190,11 +1190,11 @@
         }
       ]
     },
-    "matutinum.psalm3": {
+    "matutinum.psalm2": {
       "type": "psalm",
       "label": "Psalmus 25; Júdica me, Dómine",
       "ref": "Ps 25",
-      "variationKey": "matutinum.psalm3",
+      "variationKey": "matutinum.psalm2",
       "verses": [
         {
           "lat": "Júdica me, Dómine, quóniam ego in innocéntia mea ingréssus sum: et in Dómino sperans non infirmábor.",
@@ -1250,11 +1250,11 @@
         }
       ]
     },
-    "matutinum.psalm4": {
+    "matutinum.psalm3": {
       "type": "psalm",
       "label": "Psalmus 28; Afférte Dómino",
       "ref": "Ps 28",
-      "variationKey": "matutinum.psalm4",
+      "variationKey": "matutinum.psalm3",
       "verses": [
         {
           "lat": "Afférte Dómino, fílii Dei: afférte Dómino fílios aríetum.",
@@ -1306,11 +1306,11 @@
         }
       ]
     },
-    "matutinum.psalm5": {
+    "matutinum.psalm4": {
       "type": "psalm",
       "label": "Psalmus 31; Beáti quorum",
       "ref": "Ps 31",
-      "variationKey": "matutinum.psalm5",
+      "variationKey": "matutinum.psalm4",
       "verses": [
         {
           "lat": "Beáti quorum remíssæ sunt iniquitátes: et quorum tecta sunt peccáta.",
@@ -1374,11 +1374,11 @@
         }
       ]
     },
-    "matutinum.psalm6": {
+    "matutinum.psalm5": {
       "type": "psalm",
       "label": "Psalmus 33; Benedícam Dóminum",
       "ref": "Ps 33",
-      "variationKey": "matutinum.psalm6",
+      "variationKey": "matutinum.psalm5",
       "verses": [
         {
           "lat": "Benedícam Dóminum in omni témpore: semper laus ejus in ore meo.",
@@ -1474,11 +1474,11 @@
         }
       ]
     },
-    "matutinum.psalm7": {
+    "matutinum.psalm6": {
       "type": "psalm",
       "label": "Psalmus 35; Dixit injústus",
       "ref": "Ps 35",
-      "variationKey": "matutinum.psalm7",
+      "variationKey": "matutinum.psalm6",
       "verses": [
         {
           "lat": "Dixit injústus ut delínquat in semetipso: non est timor Dei ante óculos ejus.",
@@ -1538,11 +1538,11 @@
         }
       ]
     },
-    "matutinum.psalm8": {
+    "matutinum.psalm7": {
       "type": "psalm",
       "label": "Psalmus 36A; Noli æmulári (vv. 1–29)",
       "ref": "Ps 36:1-29",
-      "variationKey": "matutinum.psalm8",
+      "variationKey": "matutinum.psalm7",
       "verses": [
         {
           "lat": "Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.",
@@ -1674,11 +1674,11 @@
         }
       ]
     },
-    "matutinum.psalm9": {
+    "matutinum.psalm8": {
       "type": "psalm",
       "label": "Psalmus 36B; Noli æmulári (vv. 30–40)",
       "ref": "Ps 36:30-40",
-      "variationKey": "matutinum.psalm9",
+      "variationKey": "matutinum.psalm8",
       "verses": [
         {
           "lat": "Os justi meditábitur sapiéntiam: et lingua ejus loquétur judícium.",
@@ -1730,11 +1730,11 @@
         }
       ]
     },
-    "matutinum.psalm10": {
+    "matutinum.psalm9": {
       "type": "psalm",
       "label": "Psalmus 37; Dómine, ne in furóre",
       "ref": "Ps 37",
-      "variationKey": "matutinum.psalm10",
+      "variationKey": "matutinum.psalm9",
       "verses": [
         {
           "lat": "Dómine, ne in furóre tuo árguas me, neque in ira tua corrípias me.",
@@ -4315,7 +4315,7 @@
       ]
     },
     "laudes.canticle1": {
-      "type": "psalm",
+      "type": "canticle",
       "label": "Canticum Habacuc",
       "ref": "Hab 3:2-19",
       "variationKey": "laudes.canticle1",
@@ -5761,7 +5761,7 @@
       ]
     },
     "laudes.canticle1": {
-      "type": "psalm",
+      "type": "canticle",
       "label": "Canticum Moysis",
       "ref": "Dt 32:1-43",
       "variationKey": "laudes.canticle1",
