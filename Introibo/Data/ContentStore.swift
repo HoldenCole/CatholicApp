@@ -23,7 +23,7 @@ final class ContentStore {
     private(set) var examen:         [ExamenEntry]         = []
     private(set) var confessionGuides:[ConfessionGuide]    = []
     private(set) var propers:         [MassProper]          = []
-    private var officeAssembler: OfficeAssembler!
+    private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], marianAntiphons: [])
 
     init() {
         prayers           = load("prayers",            as: [Prayer].self)              ?? []
