@@ -185,13 +185,16 @@ struct HourView: View {
                     .foregroundStyle(Color.primaryText)
             }
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
-            } else {
-                if let lat = p.lat {
-                    Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
-                }
-                if let eng = p.eng {
-                    Text(eng.strippingEm).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
+                let latStanzas = lat.components(separatedBy: "\n\n")
+                let engStanzas = eng.components(separatedBy: "\n\n")
+                let count = max(latStanzas.count, engStanzas.count)
+                VStack(alignment: .leading, spacing: 14) {
+                    ForEach(0..<count, id: \.self) { i in
+                        BilingualLine(
+                            lat: i < latStanzas.count ? latStanzas[i] : "",
+                            eng: i < engStanzas.count ? engStanzas[i] : ""
+                        )
+                    }
                 }
             }
         }
@@ -207,7 +210,7 @@ struct HourView: View {
                     .foregroundStyle(Color.goldLeaf)
             }
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                BilingualLine(lat: lat, eng: eng)
             } else {
                 if let lat = p.lat {
                     Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
@@ -236,7 +239,7 @@ struct HourView: View {
             if let verses = p.verses {
                 VStack(alignment: .leading, spacing: 12) {
                     ForEach(Array(verses.enumerated()), id: \.offset) { _, v in
-                        BilingualLine(lat: v.lat, eng: v.eng, sideBySide: true)
+                        BilingualLine(lat: v.lat, eng: v.eng)
                     }
                 }
             }
@@ -309,7 +312,7 @@ struct HourView: View {
             }
             if let lat = p.lat {
                 let eng = p.engBody ?? p.eng ?? ""
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                BilingualLine(lat: lat, eng: eng)
             }
         }
     }
@@ -337,7 +340,7 @@ struct HourView: View {
                     .foregroundStyle(Color.goldLeaf)
             }
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                BilingualLine(lat: lat, eng: eng)
             } else {
                 if let lat = p.lat {
                     Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
