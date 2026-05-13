@@ -275,6 +275,11 @@ struct SettingsView: View {
                     .italic()
             }
             .listRowBackground(Color.pageBackground)
+            LabeledContent("Version") {
+                Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.2")
+                    .foregroundStyle(Color.secondaryText)
+            }
+            .listRowBackground(Color.pageBackground)
             LabeledContent("") {
                 Text("Ad altare Dei")
                     .font(.caption)

@@ -206,14 +206,14 @@ struct OnboardingView: View {
 
                 VStack(alignment: .leading, spacing: 16) {
                     featureRow(icon: "sun.horizon", title: "Liturgical Today", desc: "Daily psalm, penance, season, feast days, and today's Mass propers.")
-                    featureRow(icon: "book.closed", title: "1962 Missal", desc: "Complete Ordinary and 422 daily Propers interleaved in correct Mass order.")
+                    featureRow(icon: "book.closed", title: "1962 Missal", desc: "Complete Ordinary and 424 daily Propers interleaved in correct Mass order.")
                     featureRow(icon: "book.pages", title: "38 Prayers", desc: "Every essential prayer in Latin and English with a personal prayer rule.")
                     featureRow(icon: "cross", title: "Rosary & Stations", desc: "Interactive bead-by-bead Rosary. 14 Stations with meditations.")
                     featureRow(icon: "clock", title: "Divine Office", desc: "All 8 canonical hours of the 1962 Breviary.")
                     featureRow(icon: "heart", title: "Confession Guide", desc: "Examination of conscience and two guided confession paths.")
                     featureRow(icon: "person.fill", title: "Follow a Saint", desc: "7 patron saints with daily practices and streak tracking.")
                     featureRow(icon: "graduationcap", title: "Learn Latin", desc: "10 lessons with 91 flashcards and quizzes.")
-                    featureRow(icon: "text.book.closed", title: "Reference Library", desc: "41 articles, 422 searchable propers, TLM history, and glossary.")
+                    featureRow(icon: "text.book.closed", title: "Reference Library", desc: "41 articles, 424 searchable propers, TLM history, and glossary.")
                 }
                 .padding(.horizontal, 28)
                 .padding(.top, 8)

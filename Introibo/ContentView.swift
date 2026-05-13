@@ -2,9 +2,6 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
-    @AppStorage("hasSeenTutorialOffer") private var hasSeenTutorialOffer = false
-    @State private var showTutorialOffer = false
-    @State private var showTutorial = false
 
     private var theme: AppTheme { AppTheme(rawValue: themeRaw) ?? .parchment }
 
@@ -26,23 +23,8 @@ struct ContentView: View {
                 .tabItem { Label("Liber", systemImage: "text.book.closed") }
         }
         .tint(Color.sanctuaryRed)
-        .onAppear {
-            updateTabBar()
-            if !hasSeenTutorialOffer {
-                hasSeenTutorialOffer = true
-                showTutorialOffer = true
-            }
-        }
+        .onAppear { updateTabBar() }
         .onChange(of: themeRaw) { _, _ in updateTabBar() }
-        .alert("Welcome to Introibo", isPresented: $showTutorialOffer) {
-            Button("Take a Tour") { showTutorial = true }
-            Button("No Thanks", role: .cancel) { }
-        } message: {
-            Text("Would you like a quick walkthrough of the app?")
-        }
-        .fullScreenCover(isPresented: $showTutorial) {
-            TutorialView()
-        }
     }
 
     private func updateTabBar() {
