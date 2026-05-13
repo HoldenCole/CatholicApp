@@ -38,7 +38,7 @@ struct LearnView: View {
                     .stroke(Color.frameLine, lineWidth: 5)
                     .frame(width: 80, height: 80)
                 Circle()
-                    .trim(from: 0, to: Double(mastered.count) / 10.0)
+                    .trim(from: 0, to: store.courses.isEmpty ? 0 : Double(mastered.count) / Double(store.courses.count))
                     .stroke(Color.sanctuaryRed, style: StrokeStyle(lineWidth: 5, lineCap: .round))
                     .frame(width: 80, height: 80)
                     .rotationEffect(.degrees(-90))
@@ -46,7 +46,7 @@ struct LearnView: View {
                     Text("\(mastered.count)")
                         .font(.titleXL)
                         .foregroundStyle(Color.primaryText)
-                    Text("of 10")
+                    Text("of \(store.courses.count)")
                         .font(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                 }

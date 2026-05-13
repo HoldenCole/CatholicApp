@@ -13,7 +13,7 @@ struct TutorialView: View {
             ("hands.sparkles", "Prayer rule progress and devotion links update throughout the day"),
         ]),
         ("book.closed", "The Missal", [
-            ("text.book.closed", "Complete 1962 Missale Romanum with 422 daily Propers"),
+            ("text.book.closed", "Complete 1962 Missale Romanum with 424 daily Propers"),
             ("arrow.up.arrow.down", "Ordinary and Propers interleaved in correct liturgical order"),
             ("list.bullet", "Full Offertory prayers, Preface, Canon, and Last Gospel included"),
             ("square.and.arrow.up", "Tap the share icon to save or send any proper as text"),
