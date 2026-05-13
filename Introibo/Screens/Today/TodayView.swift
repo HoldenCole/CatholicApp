@@ -591,7 +591,7 @@ struct TodayView: View {
             VStack(alignment: .leading, spacing: 8) {
                 let mastered = UserProgress.masteredLessons()
                 sectionLabel("Schola", subtitle: "Latin learning")
-                Text("Mastered: \(mastered.count) of \(store.courses.count) lessons")
+                Text("Mastered: \(mastered.count) of \(ContentStore.shared.courses.count) lessons")
                     .font(.bodySm)
                     .foregroundStyle(Color.secondaryText)
             }
