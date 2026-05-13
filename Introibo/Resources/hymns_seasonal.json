@@ -49,6 +49,38 @@
       "lat": "Audi benígne Cónditor<br>nostras preces cum flétibus<br>in hoc sacro jejúnio<br>fusas quadragenário.\n\nScrutátor alme córdium,<br>infírma tu scis vírium;<br>ad te revérsis éxhibe<br>remissiónis grátiam.\n\nMultum quidem peccávimus,<br>sed parce confiténtibus;<br>ad nóminis laudem tui<br>confer medélam lánguidis.\n\nSic corpus extra cónteri<br>dona per abstinéntiam,<br>jejúnet ut mens sóbria<br>a labe prorsus críminum.\n\nPræsta, beáta Trínitas,<br>concéde, simplex Únitas,<br>ut fructuósa sint tuis<br>jejuniórum múnera. Amen.",
       "eng": "O kind Creator, bow Thine ear<br>to mark the cry of fervent prayer,<br>in this our solemn fasting time<br>of forty days from sin set free.\n\nO searcher of the hearts of men,<br>Thou knowest well our weakness still;<br>to us who turn to Thee again<br>pour forth the grace of pardon's thrill.\n\nFull oft indeed have we transgressed,<br>yet spare us, Lord, who now confess;<br>and for the glory of Thy Name,<br>bestow upon our sick souls' rest.\n\nGrant that the flesh may be subdued<br>by gift of outward abstinence,<br>that so the sober mind may fast<br>from every stain of sinfulness.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
       "variationKey": "vesperae.hymn"
+    },
+    "prima.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Iam lucis orto sídere",
+      "lat": "Jam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.\n\nLinguam refrénans témperet,<br>ne litis horror ínsonet;<br>visum fovéndo cóntegat,<br>ne vanitátes háuriat.\n\nSint pura cordis íntima,<br>absístat et vecórdia;<br>carnis terat supérbiam<br>potus cibíque párcitas.\n\nUt cum dies abscésserit,<br>noctémque sors redúxerit,<br>mundi per abstinéntiam<br>ipsi canámus glóriam.\n\nPræsta, beáta Trínitas,<br>concéde, simplex Únitas,<br>ut fructuósa sint tuis<br>jejuniórum múnera. Amen.",
+      "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power.\n\nMay He our tongues in order hold,<br>that discord's horror sound not here;<br>and guard our eyes from sights untold,<br>that vanities may not appear.\n\nO may the inmost heart be pure,<br>and folly's grasp be far removed;<br>let abstinence in food endure,<br>that pride of flesh be reproved.\n\nSo when the daylight fades away,<br>and night in turn again draws near,<br>through abstinence from worldly sway<br>we sing His glory without fear.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
+      "variationKey": "prima.hymn"
+    },
+    "tertia.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Nunc, Sancte, nobis Spíritus",
+      "lat": "Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.\n\nOs, lingua, mens, sensus, vigor,<br>confessiónem pérsonent;<br>flamméscat igne cáritas,<br>accéndat ardor próximos.\n\nPræsta, beáta Trínitas,<br>concéde, simplex Únitas,<br>ut fructuósa sint tuis<br>jejuniórum múnera. Amen.",
+      "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness.\n\nLet mouth and tongue, mind, strength, and will,<br>sound forth our witness to Thy name;<br>and charity's devouring flame<br>set all our being in a glow.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
+      "variationKey": "tertia.hymn"
+    },
+    "sexta.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rector potens, verax Deus",
+      "lat": "Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.\n\nExstíngue flammas lítium,<br>aufer calórem nóxium,<br>confer salútem córporum,<br>verámque pacem córdium.\n\nPræsta, beáta Trínitas,<br>concéde, simplex Únitas,<br>ut fructuósa sint tuis<br>jejuniórum múnera. Amen.",
+      "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day.\n\nExtinguish Thou each sinful fire,<br>and banish every ill desire;<br>and while Thou keepest the body whole,<br>shed forth Thy peace upon the soul.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
+      "variationKey": "sexta.hymn"
+    },
+    "nona.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rerum Deus tenax vigor",
+      "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nPræsta, beáta Trínitas,<br>concéde, simplex Únitas,<br>ut fructuósa sint tuis<br>jejuniórum múnera. Amen.",
+      "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
+      "variationKey": "nona.hymn"
     }
   },
   "passion": {
@@ -75,6 +107,38 @@
       "lat": "Vexílla Regis pródeunt,<br>fulget Crucis mystérium,<br>quo carne carnis Cónditor<br>suspénsus est patíbulo.\n\nQuo vulnerátus ínsuper<br>mucróne diro lánceæ,<br>ut nos laváret crímine,<br>manávit unda et sánguine.\n\nImpleta sunt quæ cóncinit<br>David fidéli cármine,<br>dicens: In natiónibus<br>regnávit a ligno Deus.\n\nArbor decóra et fúlgida,<br>ornáta Regis púrpura,<br>elécta digno stípite<br>tam sancta membra tángere.\n\nBeáta cujus bráchiis<br>sǽcli pepéndit prétium,<br>statéra facta córporis,<br>prædámque tulit tártari.\n\nO Crux, ave, spes única,<br>hoc Passiónis témpore:<br>auge piis justítiam,<br>reísque dona véniam.\n\nTe, fons salútis, Trínitas,<br>colláudet omnis spíritus;<br>quos per Crucis mystérium<br>salvas, fove per sǽcula. Amen.",
       "eng": "The royal banners forward go,<br>the Cross shines forth in mystic glow,<br>where He, the Life, did death endure,<br>and yet by death did life procure.\n\nWhere deep for us the spear was dyed,<br>life's torrent rushing from His side,<br>to wash us in that precious flood<br>where mingled Water flowed and Blood.\n\nFulfilled is all that David told<br>in true prophetic song of old;<br>amidst the nations, God, saith he,<br>hath reigned and triumphed from the Tree.\n\nO Tree of beauty, Tree of light,<br>O Tree with royal purple dight,<br>elect on whose triumphal breast<br>those holy limbs should find their rest.\n\nBlest Tree, whose happy branches bore<br>the wealth that did the world restore,<br>the beam that weighed the Body's price<br>and snatched the spoil from sacrifice.\n\nO Cross, our one reliance, hail!<br>In this our Passion-season frail,<br>grant to the just increase of grace,<br>and every sinner's guilt efface.\n\nBlest Trinity, salvation's spring,<br>may every soul Thy praises sing;<br>to those Thou grantest conquest by<br>the holy Cross, rewards supply. Amen.",
       "variationKey": "vesperae.hymn"
+    },
+    "prima.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Iam lucis orto sídere",
+      "lat": "Jam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.\n\nLinguam refrénans témperet,<br>ne litis horror ínsonet;<br>visum fovéndo cóntegat,<br>ne vanitátes háuriat.\n\nSint pura cordis íntima,<br>absístat et vecórdia;<br>carnis terat supérbiam<br>potus cibíque párcitas.\n\nUt cum dies abscésserit,<br>noctémque sors redúxerit,<br>mundi per abstinéntiam<br>ipsi canámus glóriam.\n\nGlória tibi, Dómine,<br>qui passus es pro ímpiis,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power.\n\nMay He our tongues in order hold,<br>that discord's horror sound not here;<br>and guard our eyes from sights untold,<br>that vanities may not appear.\n\nO may the inmost heart be pure,<br>and folly's grasp be far removed;<br>let abstinence in food endure,<br>that pride of flesh be reproved.\n\nSo when the daylight fades away,<br>and night in turn again draws near,<br>through abstinence from worldly sway<br>we sing His glory without fear.\n\nAll glory, Lord, to Thee we pay,<br>who didst for sinners suffer loss,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "prima.hymn"
+    },
+    "tertia.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Nunc, Sancte, nobis Spíritus",
+      "lat": "Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.\n\nOs, lingua, mens, sensus, vigor,<br>confessiónem pérsonent;<br>flamméscat igne cáritas,<br>accéndat ardor próximos.\n\nGlória tibi, Dómine,<br>qui passus es pro ímpiis,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness.\n\nLet mouth and tongue, mind, strength, and will,<br>sound forth our witness to Thy name;<br>and charity's devouring flame<br>set all our being in a glow.\n\nAll glory, Lord, to Thee we pay,<br>who didst for sinners suffer loss,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "tertia.hymn"
+    },
+    "sexta.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rector potens, verax Deus",
+      "lat": "Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.\n\nExstíngue flammas lítium,<br>aufer calórem nóxium,<br>confer salútem córporum,<br>verámque pacem córdium.\n\nGlória tibi, Dómine,<br>qui passus es pro ímpiis,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day.\n\nExtinguish Thou each sinful fire,<br>and banish every ill desire;<br>and while Thou keepest the body whole,<br>shed forth Thy peace upon the soul.\n\nAll glory, Lord, to Thee we pay,<br>who didst for sinners suffer loss,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "sexta.hymn"
+    },
+    "nona.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rerum Deus tenax vigor",
+      "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nGlória tibi, Dómine,<br>qui passus es pro ímpiis,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nAll glory, Lord, to Thee we pay,<br>who didst for sinners suffer loss,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "nona.hymn"
     }
   },
   "easter": {
@@ -109,6 +173,38 @@
       "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.\n\nProcul recédant sómnia,<br>et nóctium phantásmata;<br>hostémque nostrum cómprime,<br>ne polluántur córpora.\n\nJesu, tibi sit glória,<br>qui surrexísti a mórtuis,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
       "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nAll praise, O risen Lord, to Thee,<br>who from the dead didst rise again,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
       "variationKey": "completorium.hymn"
+    },
+    "prima.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Iam lucis orto sídere",
+      "lat": "Jam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.\n\nLinguam refrénans témperet,<br>ne litis horror ínsonet;<br>visum fovéndo cóntegat,<br>ne vanitátes háuriat.\n\nSint pura cordis íntima,<br>absístat et vecórdia;<br>carnis terat supérbiam<br>potus cibíque párcitas.\n\nUt cum dies abscésserit,<br>noctémque sors redúxerit,<br>mundi per abstinéntiam<br>ipsi canámus glóriam.\n\nDeo Patri sit glória,<br>et Fílio, qui a mórtuis<br>surréxit, ac Paráclito,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power.\n\nMay He our tongues in order hold,<br>that discord's horror sound not here;<br>and guard our eyes from sights untold,<br>that vanities may not appear.\n\nO may the inmost heart be pure,<br>and folly's grasp be far removed;<br>let abstinence in food endure,<br>that pride of flesh be reproved.\n\nSo when the daylight fades away,<br>and night in turn again draws near,<br>through abstinence from worldly sway<br>we sing His glory without fear.\n\nTo God the Father glory be,<br>and to the Son, who from the dead<br>arose, and to the Paraclete,<br>through everlasting ages. Amen.",
+      "variationKey": "prima.hymn"
+    },
+    "tertia.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Nunc, Sancte, nobis Spíritus",
+      "lat": "Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.\n\nOs, lingua, mens, sensus, vigor,<br>confessiónem pérsonent;<br>flamméscat igne cáritas,<br>accéndat ardor próximos.\n\nDeo Patri sit glória,<br>et Fílio, qui a mórtuis<br>surréxit, ac Paráclito,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness.\n\nLet mouth and tongue, mind, strength, and will,<br>sound forth our witness to Thy name;<br>and charity's devouring flame<br>set all our being in a glow.\n\nTo God the Father glory be,<br>and to the Son, who from the dead<br>arose, and to the Paraclete,<br>through everlasting ages. Amen.",
+      "variationKey": "tertia.hymn"
+    },
+    "sexta.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rector potens, verax Deus",
+      "lat": "Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.\n\nExstíngue flammas lítium,<br>aufer calórem nóxium,<br>confer salútem córporum,<br>verámque pacem córdium.\n\nDeo Patri sit glória,<br>et Fílio, qui a mórtuis<br>surréxit, ac Paráclito,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day.\n\nExtinguish Thou each sinful fire,<br>and banish every ill desire;<br>and while Thou keepest the body whole,<br>shed forth Thy peace upon the soul.\n\nTo God the Father glory be,<br>and to the Son, who from the dead<br>arose, and to the Paraclete,<br>through everlasting ages. Amen.",
+      "variationKey": "sexta.hymn"
+    },
+    "nona.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rerum Deus tenax vigor",
+      "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nDeo Patri sit glória,<br>et Fílio, qui a mórtuis<br>surréxit, ac Paráclito,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nTo God the Father glory be,<br>and to the Son, who from the dead<br>arose, and to the Paraclete,<br>through everlasting ages. Amen.",
+      "variationKey": "nona.hymn"
     }
   }
 }
