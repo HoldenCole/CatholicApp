@@ -6424,6 +6424,52 @@
     "preface": null
   },
   {
+    "slug": "vigil-ascension",
+    "title": "In Vigilia Ascensionis",
+    "english": "Vigil of the Ascension",
+    "rank": 2,
+    "color": "white",
+    "season": "temporale",
+    "introit": {
+      "lat": "Omnes gentes, plaudite manibus: jubilate Deo in voce exsultationis, alleluia. Quoniam Dominus excelsus, terribilis: Rex magnus super omnem terram.",
+      "eng": "O clap your hands, all ye nations: shout unto God with the voice of joy, alleluia. For the Lord is most high, He is terrible: He is a great King over all the earth."
+    },
+    "collect": {
+      "lat": "Praesta, quaesumus, omnipotens Deus: ut nostrae mentis intentio, quo iam praecessit Auctor noster Unigenitus tuus Jesus Christus Dominus noster, eo jugiter dirigatur. Qui tecum vivit et regnat.",
+      "eng": "Grant, we beseech Thee, almighty God, that as we believe Thine only-begotten Son, our Redeemer, to have this day ascended into heaven, so we may also in mind dwell amid heavenly things. Who liveth and reigneth."
+    },
+    "epistle": {
+      "ref": "Eph 4:7-13",
+      "lat": "Fratres: Unicuique nostrum data est gratia secundum mensuram donationis Christi. Propter quod dicit: Ascendens in altum, captivam duxit captivitatem: dedit dona hominibus.",
+      "eng": "Brethren: To every one of us is given grace, according to the measure of the giving of Christ. Wherefore He saith: Ascending on high, He led captivity captive: He gave gifts to men."
+    },
+    "gradual": {
+      "lat": "Alleluia, alleluia. Regnavit Dominus super omnes gentes: Deus sedet super sedem sanctam suam. Alleluia.",
+      "eng": "Alleluia, alleluia. The Lord hath reigned over all the nations: God sitteth on His holy throne. Alleluia."
+    },
+    "gospel": {
+      "ref": "Jn 17:1-11",
+      "lat": "In illo tempore: Sublevatis Jesus oculis in caelum, dixit: Pater, venit hora, clarifica Filium tuum, ut Filius tuus clarificet te.",
+      "eng": "At that time: Jesus lifting up His eyes to heaven, said: Father, the hour is come; glorify Thy Son, that Thy Son may glorify Thee."
+    },
+    "offertory": {
+      "lat": "Ascendit Deus in jubilatione, et Dominus in voce tubae, alleluia.",
+      "eng": "God is ascended with jubilee, and the Lord with the sound of trumpet, alleluia."
+    },
+    "secret": {
+      "lat": "Sacrificium, Domine, pro Filii tui supplices venerabili nunc Ascensione deferimus: praesta, quaesumus; ut his commerciis sacrosanctis, ad caelestia consurgamus. Per eumdem Dominum.",
+      "eng": "We offer unto Thee, O Lord, a sacrifice in honor of the venerable Ascension of Thy Son: grant, we beseech Thee, that by this sacred exchange we may rise to heavenly things. Through the same Lord."
+    },
+    "communion": {
+      "lat": "Psallite Domino, qui ascendit super caelos caelorum ad Orientem, alleluia.",
+      "eng": "Sing ye to the Lord, who mounteth above the heaven of heavens to the east, alleluia."
+    },
+    "postcommunion": {
+      "lat": "Praesta nobis, quaesumus, omnipotens et misericors Deus: ut, quae visibilibus mysteriis sumenda percepimus, invisibili consequamur effectu. Per Dominum.",
+      "eng": "Grant us, we beseech Thee, almighty and merciful God, that what we have received in visible mysteries, we may obtain in invisible effect. Through our Lord."
+    }
+  },
+  {
     "slug": "ascension",
     "title": "In Ascensióne Dómini",
     "english": "Ascension of Our Lord",

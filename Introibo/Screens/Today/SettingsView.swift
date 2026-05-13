@@ -225,7 +225,7 @@ struct SettingsView: View {
 
     private var feedbackSection: some View {
         Section {
-            Link(destination: URL(string: "mailto:feedback@introibo.app?subject=Introibo%20Feedback") ?? URL(string: "mailto:")!) {
+            Link(destination: URL(string: "mailto:contact@lampstandhq.com?subject=Introibo%20Feedback") ?? URL(string: "mailto:")!) {
                 HStack {
                     Label("Send Feedback", systemImage: "envelope")
                         .foregroundStyle(Color.primaryText)
