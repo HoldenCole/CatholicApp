@@ -76,38 +76,3 @@ struct OfficeAssembler {
         "thursday", "friday", "saturday"
     ]
 }
-
-// MARK: - Memberwise initializers for assembly
-
-extension Hour {
-    init(slug: String, name: String, eng: String, time: String,
-         hour: Int, minute: Int, glyph: String, order: Int,
-         intro: String, parts: [Part]) {
-        self.slug = slug; self.name = name; self.eng = eng
-        self.time = time; self.hour = hour; self.minute = minute
-        self.glyph = glyph; self.order = order; self.intro = intro
-        self.parts = parts
-    }
-}
-
-extension Hour.Part {
-    init(type: String, label: String? = nil, title: String? = nil,
-         ref: String? = nil, lat: String? = nil, eng: String? = nil,
-         latR: String? = nil, engR: String? = nil,
-         v1Lat: String? = nil, v1Eng: String? = nil,
-         r1Lat: String? = nil, r1Eng: String? = nil,
-         v2Lat: String? = nil, v2Eng: String? = nil,
-         r2Lat: String? = nil, r2Eng: String? = nil,
-         verses: [Verse]? = nil, season: String? = nil,
-         engBody: String? = nil, variationKey: String? = nil) {
-        self.type = type; self.label = label; self.title = title
-        self.ref = ref; self.lat = lat; self.eng = eng
-        self.latR = latR; self.engR = engR
-        self.v1Lat = v1Lat; self.v1Eng = v1Eng
-        self.r1Lat = r1Lat; self.r1Eng = r1Eng
-        self.v2Lat = v2Lat; self.v2Eng = v2Eng
-        self.r2Lat = r2Lat; self.r2Eng = r2Eng
-        self.verses = verses; self.season = season
-        self.engBody = engBody; self.variationKey = variationKey
-    }
-}
