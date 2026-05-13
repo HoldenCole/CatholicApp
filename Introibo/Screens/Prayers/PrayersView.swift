@@ -49,13 +49,6 @@ struct PrayersView: View {
             .sheet(isPresented: $showRuleEditor) {
                 PrayerRuleEditor()
             }
-            .sheet(isPresented: $showRuleNotification) {
-                NotificationScheduleSheet(
-                    scheduleId: "rule.daily",
-                    title: "Prayer Rule Reminder",
-                    subtitle: "Get reminded to pray your daily rule"
-                )
-            }
             .onAppear {
                 completedPrayers = UserProgress.completedPrayers()
             }
@@ -97,6 +90,13 @@ struct PrayersView: View {
                         .font(.system(size: 14))
                 }
                 .buttonStyle(.plain)
+                .sheet(isPresented: $showRuleNotification) {
+                    NotificationScheduleSheet(
+                        scheduleId: "rule.daily",
+                        title: "Prayer Rule Reminder",
+                        subtitle: "Get reminded to pray your daily rule"
+                    )
+                }
                 Button { showRuleEditor = true } label: {
                     Image(systemName: "pencil")
                         .foregroundStyle(Color.sanctuaryRed)

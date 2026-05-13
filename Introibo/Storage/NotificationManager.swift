@@ -47,6 +47,18 @@ enum PrayerNotificationManager {
                     }
                 }
 
+                let devotionTitle: String? = {
+                    guard schedule.id.hasPrefix("devotion.") else { return nil }
+                    let key = String(schedule.id.dropFirst(9))
+                    switch key {
+                    case "office":     return "Divine Office"
+                    case "rosary":     return "The Holy Rosary"
+                    case "stations":   return "Stations of the Cross"
+                    case "confession": return "Confession"
+                    default:           return "Devotion"
+                    }
+                }()
+
                 let content = UNMutableNotificationContent()
                 if let prayer = prayer {
                     content.title = prayer.title.strippingEm
@@ -54,6 +66,9 @@ enum PrayerNotificationManager {
                 } else if let ruleTitle = ruleTitle {
                     content.title = ruleTitle
                     content.body = "Time for your prayers."
+                } else if let devotionTitle = devotionTitle {
+                    content.title = devotionTitle
+                    content.body = "Time for your devotion."
                 }
                 content.sound = .default
 

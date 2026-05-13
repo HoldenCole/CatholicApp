@@ -65,13 +65,13 @@ struct OfficeView: View {
                     Image(systemName: NotificationStore.schedule(for: "devotion.office")?.isEnabled == true ? "bell.fill" : "bell")
                         .foregroundStyle(Color.sanctuaryRed)
                 }
+                .sheet(isPresented: $showNotification) {
+                    NotificationScheduleSheet(scheduleId: "devotion.office", title: "Divine Office", subtitle: "Remind me to pray the Office")
+                }
             }
         }
         .sheet(item: $selectedHour) { hour in
             HourView(hour: hour)
-        }
-        .sheet(isPresented: $showNotification) {
-            NotificationScheduleSheet(scheduleId: "devotion.office", title: "Divine Office", subtitle: "Remind me to pray the Office")
         }
     }
 

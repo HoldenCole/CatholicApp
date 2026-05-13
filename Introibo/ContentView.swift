@@ -52,7 +52,7 @@ struct ContentView: View {
         case .parchment:
             appearance.backgroundColor = UIColor(Color.parchment)
         case .white:
-            appearance.backgroundColor = UIColor(Color.walnut)
+            appearance.backgroundColor = UIColor(.white)
         case .dark:
             appearance.backgroundColor = UIColor(Color.walnut)
         }

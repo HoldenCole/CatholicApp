@@ -30,13 +30,13 @@ struct RosaryView: View {
                     Image(systemName: NotificationStore.schedule(for: "devotion.rosary")?.isEnabled == true ? "bell.fill" : "bell")
                         .foregroundStyle(Color.sanctuaryRed)
                 }
+                .sheet(isPresented: $showNotification) {
+                    NotificationScheduleSheet(scheduleId: "devotion.rosary", title: "The Holy Rosary", subtitle: "Remind me to pray the Rosary")
+                }
             }
         }
         .sheet(item: $selection) { set in
             RosaryFlowView(set: set)
-        }
-        .sheet(isPresented: $showNotification) {
-            NotificationScheduleSheet(scheduleId: "devotion.rosary", title: "The Holy Rosary", subtitle: "Remind me to pray the Rosary")
         }
     }
 
