@@ -192,7 +192,8 @@ struct HourView: View {
                     ForEach(0..<count, id: \.self) { i in
                         BilingualLine(
                             lat: i < latStanzas.count ? latStanzas[i] : "",
-                            eng: i < engStanzas.count ? engStanzas[i] : ""
+                            eng: i < engStanzas.count ? engStanzas[i] : "",
+                            sideBySide: true
                         )
                     }
                 }
@@ -210,7 +211,7 @@ struct HourView: View {
                     .foregroundStyle(Color.goldLeaf)
             }
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng)
+                BilingualLine(lat: lat, eng: eng, sideBySide: true)
             } else {
                 if let lat = p.lat {
                     Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
@@ -239,7 +240,7 @@ struct HourView: View {
             if let verses = p.verses {
                 VStack(alignment: .leading, spacing: 12) {
                     ForEach(Array(verses.enumerated()), id: \.offset) { _, v in
-                        BilingualLine(lat: v.lat, eng: v.eng)
+                        BilingualLine(lat: v.lat, eng: v.eng, sideBySide: true)
                     }
                 }
             }
@@ -312,7 +313,7 @@ struct HourView: View {
             }
             if let lat = p.lat {
                 let eng = p.engBody ?? p.eng ?? ""
-                BilingualLine(lat: lat, eng: eng)
+                BilingualLine(lat: lat, eng: eng, sideBySide: true)
             }
         }
     }
@@ -340,7 +341,7 @@ struct HourView: View {
                     .foregroundStyle(Color.goldLeaf)
             }
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng)
+                BilingualLine(lat: lat, eng: eng, sideBySide: true)
             } else {
                 if let lat = p.lat {
                     Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
