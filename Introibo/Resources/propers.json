@@ -4209,6 +4209,52 @@
     "preface": null
   },
   {
+    "slug": "vigil-pentecost",
+    "title": "In Vigilia Pentecostes",
+    "english": "Vigil of Pentecost",
+    "rank": 1,
+    "color": "red",
+    "season": "temporale",
+    "introit": {
+      "lat": "Cum sanctificatus fuero in vobis, congregabo vos de universis terris: et effundam super vos aquam mundam, et mundabimini ab omnibus inquinamentis vestris: et dabo vobis spiritum novum, alleluia, alleluia.",
+      "eng": "When I shall be sanctified in you, I will gather you together out of all the countries: and I will pour upon you clean water, and you shall be cleansed from all your filthiness: and I will give you a new spirit, alleluia, alleluia."
+    },
+    "collect": {
+      "lat": "Praesta, quaesumus, omnipotens Deus: ut claritatis tuae super nos splendor effulgeat; et lux tuae lucis corda eorum, qui per gratiam tuam renati sunt, Sancti Spiritus illustratione confirmet. Per Dominum nostrum... in unitate ejusdem Spiritus Sancti.",
+      "eng": "Grant, we beseech Thee, almighty God, that the splendor of Thy brightness may shine upon us, and that the light of Thy light may, by the illumination of the Holy Spirit, confirm the hearts of those who have been born again by Thy grace. Through our Lord... in the unity of the same Holy Spirit."
+    },
+    "epistle": {
+      "ref": "Acts 19:1-8",
+      "lat": "In diebus illis: Factum est cum Apollo esset Corinthi, ut Paulus, peragratis superioribus partibus, veniret Ephesum, et inveniret quosdam discipulos.",
+      "eng": "In those days: It came to pass while Apollo was at Corinth, that Paul, having passed through the upper coasts, came to Ephesus and found certain disciples."
+    },
+    "gradual": {
+      "lat": "Alleluia. Emitte Spiritum tuum, et creabuntur, et renovabis faciem terrae. Alleluia.",
+      "eng": "Alleluia. Send forth Thy Spirit, and they shall be created, and Thou shalt renew the face of the earth. Alleluia."
+    },
+    "gospel": {
+      "ref": "Jn 14:15-21",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Si diligitis me, mandata mea servate. Et ego rogabo Patrem, et alium Paraclitum dabit vobis, ut maneat vobiscum in aeternum.",
+      "eng": "At that time: Jesus said to His disciples: If you love Me, keep My commandments. And I will ask the Father, and He shall give you another Paraclete, that He may abide with you for ever."
+    },
+    "offertory": {
+      "lat": "Emitte Spiritum tuum, et creabuntur, et renovabis faciem terrae: sit gloria Domini in saecula, alleluia.",
+      "eng": "Send forth Thy Spirit, and they shall be created, and Thou shalt renew the face of the earth: let the glory of the Lord endure for ever, alleluia."
+    },
+    "secret": {
+      "lat": "Munera, quaesumus, Domine, oblata sanctifica: et corda nostra Sancti Spiritus illustratione emunda. Per Dominum... in unitate ejusdem.",
+      "eng": "Sanctify, we beseech Thee, O Lord, the gifts we offer: and cleanse our hearts by the illumination of the Holy Spirit. Through our Lord... in the unity of the same."
+    },
+    "communion": {
+      "lat": "Ultimo festivitatis die dicebat Jesus: Qui credit in me, flumina de ventre ejus fluent aquae vivae. Hoc autem dixit de Spiritu, quem accepturi erant credentes in eum, alleluia, alleluia.",
+      "eng": "On the last day of the feast, Jesus said: He that believeth in Me, out of his belly shall flow rivers of living water. Now this He said of the Spirit which they should receive who believed in Him, alleluia, alleluia."
+    },
+    "postcommunion": {
+      "lat": "Sancti Spiritus, Domine, corda nostra mundet infusio: et sui roris intima aspersione fecundet. Per Dominum... in unitate ejusdem.",
+      "eng": "May the outpouring of the Holy Spirit, O Lord, cleanse our hearts: and make them fruitful by the inward sprinkling of His dew. Through our Lord... in the unity of the same."
+    }
+  },
+  {
     "slug": "easter-7",
     "title": "Domínica VII post Pascha",
     "english": "7th Sunday after Easter",

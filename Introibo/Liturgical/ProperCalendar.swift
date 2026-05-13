@@ -48,7 +48,7 @@ enum ProperCalendar {
         case 38:  return "vigil-ascension"
         case 39:  return "ascension"
         case 48:  return "vigil-pentecost"
-        case 59:  return "corpus-christi"
+        case 60:  return "corpus-christi"
         case 68:  return "sacred-heart"
         default:  return nil
         }
