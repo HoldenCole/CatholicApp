@@ -903,7 +903,8 @@
             "lat": "In te, Dómine, sperávi: non confúndar in ætérnum.",
             "eng": "O Lord, in Thee have I trusted: let me never be confounded."
           }
-        ]
+        ],
+        "variationKey": "matutinum.canticle"
       },
       {
         "type": "pater"
@@ -1248,6 +1249,42 @@
       },
       {
         "type": "psalm",
+        "label": "Psalm 53; Deus, in nómine tuo",
+        "ref": "Pro Prima",
+        "verses": [
+          {
+            "lat": "Deus, in nómine tuo salvum me fac: et in virtúte tua júdica me.",
+            "eng": "Save me, O God, by Thy name, and judge me in Thy strength."
+          },
+          {
+            "lat": "Deus, exáudi oratiónem meam: áuribus pércipe verba oris mei.",
+            "eng": "O God, hear my prayer: give ear to the words of my mouth."
+          },
+          {
+            "lat": "Quóniam aliéni insurrexérunt advérsum me, et fortes quæsiérunt ánimam meam: et non proposuérunt Deum ante conspéctum suum.",
+            "eng": "For strangers have risen up against me, and the mighty have sought after my soul: and they have not set God before their eyes."
+          },
+          {
+            "lat": "Ecce enim Deus ádjuvat me: et Dóminus suscéptor est ánimæ meæ.",
+            "eng": "For behold God is my helper: and the Lord is the protector of my soul."
+          },
+          {
+            "lat": "Avérte mala inimícis meis: et in veritáte tua dispérde illos.",
+            "eng": "Turn back the evils upon my enemies: and cut them off in Thy truth."
+          },
+          {
+            "lat": "Voluntárie sacrificábo tibi, et confitébor nómini tuo, Dómine: quóniam bonum est.",
+            "eng": "I will freely sacrifice to Thee, and will give praise, O God, to Thy name: because it is good."
+          },
+          {
+            "lat": "Quóniam ex omni tribulatióne eripuísti me: et super inimícos meos despéxit óculus meus.",
+            "eng": "For Thou hast delivered me out of all trouble: and my eye hath looked down upon my enemies."
+          }
+        ],
+        "variationKey": "prima.psalm1"
+      },
+      {
+        "type": "psalm",
         "label": "Psalmus 117",
         "ref": "Ps 117",
         "verses": [
@@ -1366,42 +1403,6 @@
           {
             "lat": "Confitémini Dómino, quóniam bonus, quóniam in sǽculum misericórdia ejus.",
             "eng": "O praise ye the Lord, for He is good, for His mercy endureth for ever."
-          }
-        ],
-        "variationKey": "prima.psalm1"
-      },
-      {
-        "type": "psalm",
-        "label": "Psalm 53; Deus, in nómine tuo",
-        "ref": "Pro Prima",
-        "verses": [
-          {
-            "lat": "Deus, in nómine tuo salvum me fac: et in virtúte tua júdica me.",
-            "eng": "Save me, O God, by Thy name, and judge me in Thy strength."
-          },
-          {
-            "lat": "Deus, exáudi oratiónem meam: áuribus pércipe verba oris mei.",
-            "eng": "O God, hear my prayer: give ear to the words of my mouth."
-          },
-          {
-            "lat": "Quóniam aliéni insurrexérunt advérsum me, et fortes quæsiérunt ánimam meam: et non proposuérunt Deum ante conspéctum suum.",
-            "eng": "For strangers have risen up against me, and the mighty have sought after my soul: and they have not set God before their eyes."
-          },
-          {
-            "lat": "Ecce enim Deus ádjuvat me: et Dóminus suscéptor est ánimæ meæ.",
-            "eng": "For behold God is my helper: and the Lord is the protector of my soul."
-          },
-          {
-            "lat": "Avérte mala inimícis meis: et in veritáte tua dispérde illos.",
-            "eng": "Turn back the evils upon my enemies: and cut them off in Thy truth."
-          },
-          {
-            "lat": "Voluntárie sacrificábo tibi, et confitébor nómini tuo, Dómine: quóniam bonum est.",
-            "eng": "I will freely sacrifice to Thee, and will give praise, O God, to Thy name: because it is good."
-          },
-          {
-            "lat": "Quóniam ex omni tribulatióne eripuísti me: et super inimícos meos despéxit óculus meus.",
-            "eng": "For Thou hast delivered me out of all trouble: and my eye hath looked down upon my enemies."
           }
         ],
         "variationKey": "prima.psalm2"
