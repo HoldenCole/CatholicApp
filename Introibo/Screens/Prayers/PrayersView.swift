@@ -154,6 +154,30 @@ struct PrayersView: View {
                                     .font(.system(size: 14))
                             }
                             .buttonStyle(.plain)
+                } else if slug.hasPrefix("office-"), let h = store.hour(slug: String(slug.dropFirst(7))) {
+                    let isDone = completedPrayers.contains(slug)
+                    Button {
+                        UserProgress.togglePrayer(slug)
+                        completedPrayers = UserProgress.completedPrayers()
+                    } label: {
+                        HStack(spacing: 12) {
+                            Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
+                                .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
+                                .font(.titleM)
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(h.name)
+                                    .font(.titleM)
+                                    .italic()
+                                    .foregroundStyle(isDone ? Color.tertiaryText : Color.primaryText)
+                                    .strikethrough(isDone, color: Color.tertiaryText)
+                                Text("\(h.eng) — \(h.time)")
+                                    .font(.captionSm)
+                                    .foregroundStyle(isDone ? Color.tertiaryText : Color.secondaryText)
+                            }
+                            Spacer()
+                            Image(systemName: "clock")
+                                .foregroundStyle(Color.sanctuaryRed)
+                                .font(.system(size: 14))
                         }
                         .padding(.vertical, 4)
                         .contentShape(Rectangle())

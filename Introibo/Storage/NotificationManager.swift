@@ -48,15 +48,25 @@ enum PrayerNotificationManager {
                 }
 
                 let devotionTitle: String? = {
-                    guard schedule.id.hasPrefix("devotion.") else { return nil }
-                    let key = String(schedule.id.dropFirst(9))
-                    switch key {
-                    case "office":     return "Divine Office"
-                    case "rosary":     return "The Holy Rosary"
-                    case "stations":   return "Stations of the Cross"
-                    case "confession": return "Confession"
-                    default:           return "Devotion"
+                    if schedule.id.hasPrefix("devotion.") {
+                        let key = String(schedule.id.dropFirst(9))
+                        switch key {
+                        case "office":     return "Divine Office"
+                        case "rosary":     return "The Holy Rosary"
+                        case "stations":   return "Stations of the Cross"
+                        case "confession": return "Confession"
+                        default:           return "Devotion"
+                        }
+                    } else if schedule.id.hasPrefix("office.") {
+                        let slug = String(schedule.id.dropFirst(7))
+                        let hourNames: [String: String] = [
+                            "matutinum": "Matins", "laudes": "Lauds", "prima": "Prime",
+                            "tertia": "Terce", "sexta": "Sext", "nona": "None",
+                            "vesperae": "Vespers", "completorium": "Compline"
+                        ]
+                        return hourNames[slug] ?? "Divine Office"
                     }
+                    return nil
                 }()
 
                 let content = UNMutableNotificationContent()

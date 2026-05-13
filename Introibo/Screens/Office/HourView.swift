@@ -6,6 +6,12 @@ struct HourView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @State private var showNotification = false
+    @State private var showAddToRule = false
+
+    private var hasNotification: Bool {
+        NotificationStore.schedule(for: "office.\(hour.slug)")?.isEnabled ?? false
+    }
 
     var body: some View {
         NavigationStack {
@@ -28,8 +34,53 @@ struct HourView: View {
                     Button("Done") { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack(spacing: 16) {
+                        Button { showAddToRule = true } label: {
+                            Image(systemName: isInRule ? "bookmark.fill" : "bookmark")
+                                .foregroundStyle(Color.sanctuaryRed)
+                        }
+                        Button { showNotification = true } label: {
+                            Image(systemName: hasNotification ? "bell.fill" : "bell")
+                                .foregroundStyle(Color.sanctuaryRed)
+                        }
+                        .sheet(isPresented: $showNotification) {
+                            NotificationScheduleSheet(
+                                scheduleId: "office.\(hour.slug)",
+                                title: hour.name,
+                                subtitle: "\(hour.eng) — \(hour.time)"
+                            )
+                        }
+                    }
+                }
+            }
+            .confirmationDialog("Add to Prayer Rule", isPresented: $showAddToRule) {
+                Button("Morning") { addToRule("morning") }
+                Button("Midday") { addToRule("midday") }
+                Button("Evening") { addToRule("evening") }
+                if isInRule {
+                    Button("Remove from Rule", role: .destructive) { removeFromRule() }
+                }
+                Button("Cancel", role: .cancel) { }
+            } message: {
+                Text("Add \(hour.eng) to your prayer rule")
             }
         }
+    }
+
+    private var ruleSlug: String { "office-\(hour.slug)" }
+
+    private var isInRule: Bool {
+        let rule = UserProgress.prayerRule()
+        return rule.allSlugs.contains(ruleSlug)
+    }
+
+    private func addToRule(_ period: String) {
+        UserProgress.addToRule(ruleSlug, period: period)
+    }
+
+    private func removeFromRule() {
+        UserProgress.removeFromRule(ruleSlug)
     }
 
     private var header: some View {
