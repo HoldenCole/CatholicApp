@@ -28,6 +28,7 @@ struct HourView: View {
                     .padding(.vertical, 24)
                 }
             }
+            .clipped()
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -175,7 +176,7 @@ struct HourView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.label ?? "Hymnus")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(1)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             if let title = p.title {
@@ -229,7 +230,7 @@ struct HourView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.label ?? "Psalmus")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(1)
                 if let ref = p.ref {
                     Text(ref)
                         .font(.captionSm)
@@ -302,7 +303,7 @@ struct HourView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.title ?? "Antíphona Mariana")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(1)
                 if let season = p.season {
                     Text("(\(season))")
                         .font(.captionSm)
@@ -325,7 +326,7 @@ struct HourView: View {
                 .font(.titleM)
                 .italic()
                 .foregroundStyle(Color.sanctuaryRed)
-                .fixedSize()
+                .lineLimit(1)
             Rectangle().fill(Color.sanctuaryRed.opacity(0.3)).frame(height: 0.5)
         }
         .padding(.top, 10)
