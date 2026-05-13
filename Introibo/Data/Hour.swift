@@ -20,28 +20,26 @@ struct Hour: Identifiable, Decodable, Hashable {
     // Heterogeneous parts. We decode into a sum-type-ish struct that
     // carries whichever fields are present; views switch on `type`.
     struct Part: Decodable, Hashable {
-        let type: String    // vr|hymn|antiphon|psalm|capitulum|canticle|pater|
-                            // collect|closing|confiteor|responsory|marian
-        let label: String?
-        let title: String?
-        let ref: String?
-        let lat: String?
-        let eng: String?
-        let latR: String?   // response pair for vr / responsory
-        let engR: String?
-        let v1Lat: String?
-        let v1Eng: String?
-        let r1Lat: String?
-        let r1Eng: String?
-        let v2Lat: String?
-        let v2Eng: String?
-        let r2Lat: String?
-        let r2Eng: String?
-        let verses: [Verse]?
-        // marian antiphon
-        let season: String?
-        let engBody: String?
-        let variationKey: String?
+        let type: String
+        var label: String? = nil
+        var title: String? = nil
+        var ref: String? = nil
+        var lat: String? = nil
+        var eng: String? = nil
+        var latR: String? = nil
+        var engR: String? = nil
+        var v1Lat: String? = nil
+        var v1Eng: String? = nil
+        var r1Lat: String? = nil
+        var r1Eng: String? = nil
+        var v2Lat: String? = nil
+        var v2Eng: String? = nil
+        var r2Lat: String? = nil
+        var r2Eng: String? = nil
+        var verses: [Verse]? = nil
+        var season: String? = nil
+        var engBody: String? = nil
+        var variationKey: String? = nil
 
         struct Verse: Decodable, Hashable {
             let lat: String
