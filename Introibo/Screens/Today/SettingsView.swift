@@ -288,6 +288,10 @@ struct SettingsView: View {
                 .listRowBackground(Color.pageBackground)
         } header: {
             Text("About")
+        } footer: {
+            Text("Built by Lampstand")
+                .frame(maxWidth: .infinity)
+                .padding(.top, 12)
         }
     }
 }
