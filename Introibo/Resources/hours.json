@@ -8,7 +8,7 @@
     "minute": 0,
     "glyph": "M",
     "order": 1,
-    "intro": "The night Office; historically prayed in the dark hours before dawn. The Church watches with the prophets and the angels, the longest and most ancient of the hours.",
+    "intro": "The night Office, prayed in the dark hours before dawn. The longest and most ancient of the hours, with three nocturns of psalms, readings, and responsories. Sunday psalter.",
     "parts": [
       {
         "type": "vr",
@@ -917,7 +917,7 @@
     "minute": 0,
     "glyph": "L",
     "order": 2,
-    "intro": "The morning praise; the first hour of light. The Church greets the new day with the Benedictus, the canticle of Zachary, sung as the sun rises.",
+    "intro": "The morning praise at first light. The Church greets the new day with the Benedictus of Zachary and the Benedicite canticle. Sunday psalter.",
     "parts": [
       {
         "type": "vr",
@@ -1201,7 +1201,7 @@
     "minute": 0,
     "glyph": "I",
     "order": 3,
-    "intro": "The first daylight hour. A short hour to sanctify the day's work and offer the day's actions to God.",
+    "intro": "The first daylight hour, sanctifying the day's work. A short office of psalms and a chapter reading. Sunday psalter.",
     "parts": [
       {
         "type": "vr",
@@ -1415,7 +1415,7 @@
     "minute": 0,
     "glyph": "III",
     "order": 4,
-    "intro": "The third hour; when the Holy Ghost descended upon the Apostles at Pentecost. Pray for the gifts of the Holy Spirit.",
+    "intro": "The third hour, when the Holy Ghost descended at Pentecost. The psalmody of Psalm 118 continues through the Little Hours.",
     "parts": [
       {
         "type": "vr",
@@ -1588,7 +1588,7 @@
     "minute": 0,
     "glyph": "VI",
     "order": 5,
-    "intro": "The sixth hour; noon. The hour at which Our Lord was nailed to the Cross. A pause in the day's work to remember His sacrifice.",
+    "intro": "The sixth hour — noon. Our Lord was nailed to the Cross at this hour. A pause in the day to remember His sacrifice.",
     "parts": [
       {
         "type": "vr",
@@ -1741,7 +1741,7 @@
     "minute": 0,
     "glyph": "IX",
     "order": 6,
-    "intro": "The ninth hour; three in the afternoon. The hour at which Our Lord died upon the Cross. Adore Him with the centurion: 'Truly this was the Son of God.'",
+    "intro": "The ninth hour — three in the afternoon. Our Lord died upon the Cross at this hour.",
     "parts": [
       {
         "type": "vr",
@@ -1902,7 +1902,7 @@
     "minute": 0,
     "glyph": "V",
     "order": 7,
-    "intro": "The evening hour; when the sun sets and the lamps are lit. The Church sings the Magnificat, Our Lady's canticle of praise, the second great hinge-hour of the day.",
+    "intro": "The evening hour, when the lamps are lit. The second great hinge-hour of the day, crowned by the Magnificat of Our Lady. Sunday psalter.",
     "parts": [
       {
         "type": "vr",
@@ -2181,7 +2181,7 @@
     "minute": 0,
     "glyph": "C",
     "order": 8,
-    "intro": "The night prayer; the Church's last word before sleep. Traditional Roman Compline opens with a blessing and the Confiteor, then moves through psalmody to the Nunc Dimittis and the seasonal Marian antiphon. The hour ends with the soul commended into God's hands.",
+    "intro": "The night prayer and the Church's last word before sleep. Opens with the Confiteor, moves through psalmody to the Nunc Dimittis and the Marian antiphon. The same psalms are prayed every night.",
     "parts": [
       {
         "type": "vr",
