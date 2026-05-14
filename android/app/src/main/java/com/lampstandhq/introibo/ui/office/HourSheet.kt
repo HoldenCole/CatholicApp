@@ -3,6 +3,8 @@ package com.lampstandhq.introibo.ui.office
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -48,10 +50,12 @@ fun HourSheet(
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val scope = rememberCoroutineScope()
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        sheetState = sheetState,
         containerColor = colors.pageBackground,
         dragHandle = null,
     ) {
@@ -66,7 +70,9 @@ fun HourSheet(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
             ) {
-                TextButton(onClick = onDismiss) {
+                TextButton(onClick = {
+                    scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
+                }) {
                     Text("Done", color = colors.sanctuaryRed, style = type.body)
                 }
             }
