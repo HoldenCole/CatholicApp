@@ -45,16 +45,19 @@ fun ExamenScreen(
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val scope = rememberCoroutineScope()
+
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        sheetState = sheetState,
         containerColor = colors.pageBackground,
         dragHandle = null,
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
             // Done button
             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
-                TextButton(onClick = onDismiss) {
+                TextButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
                     Text("Done", color = colors.sanctuaryRed, style = type.body)
                 }
             }

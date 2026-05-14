@@ -25,6 +25,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -102,15 +104,18 @@ fun QuizScreen(
         generateQuestions()
     }
 
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val scope = rememberCoroutineScope()
+
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        sheetState = sheetState,
         containerColor = colors.pageBackground,
         dragHandle = null,
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
-                TextButton(onClick = onDismiss) {
+                TextButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
                     Text("Done", color = colors.sanctuaryRed, style = type.body)
                 }
             }
@@ -165,7 +170,7 @@ fun QuizScreen(
                         }
 
                         Spacer(modifier = Modifier.height(8.dp))
-                        TextButton(onClick = onDismiss) {
+                        TextButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
                             Text(
                                 text = "Done",
                                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
