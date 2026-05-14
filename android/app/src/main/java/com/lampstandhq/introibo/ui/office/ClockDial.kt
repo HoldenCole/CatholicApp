@@ -2,7 +2,7 @@ package com.lampstandhq.introibo.ui.office
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
@@ -153,7 +153,7 @@ fun ClockDial(
 }
 
 @Composable
-private fun Box.HourNode(
+private fun BoxScope.HourNode(
     hour: Hour,
     isNow: Boolean,
     index: Int,
