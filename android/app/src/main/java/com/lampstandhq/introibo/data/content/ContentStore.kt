@@ -2,8 +2,19 @@ package com.lampstandhq.introibo.data.content
 
 import android.content.Context
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
+import com.lampstandhq.introibo.data.model.ConfessionGuide
+import com.lampstandhq.introibo.data.model.Course
+import com.lampstandhq.introibo.data.model.ExamenEntry
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.MarianAntiphonData
+import com.lampstandhq.introibo.data.model.MassProper
+import com.lampstandhq.introibo.data.model.MissalSection
+import com.lampstandhq.introibo.data.model.MysterySetData
+import com.lampstandhq.introibo.data.model.Prayer
+import com.lampstandhq.introibo.data.model.ReferenceEntry
+import com.lampstandhq.introibo.data.model.RosaryPrayer
+import com.lampstandhq.introibo.data.model.Saint
+import com.lampstandhq.introibo.data.model.Station
 import kotlinx.serialization.json.Json
 
 /**
@@ -141,42 +152,4 @@ object ContentStore {
     }
 }
 
-// ---------------------------------------------------------------------------
-// Placeholder model types -- replace these with full definitions as they
-// are ported from iOS. They need to be @Serializable for JSON decoding.
-// Prayer and Hour/MarianAntiphonData already live in data.model.
-// ---------------------------------------------------------------------------
-
-// Re-export Prayer from the model package so callers importing content.*
-// don't need a separate import.
-typealias Prayer = com.lampstandhq.introibo.data.model.Prayer
-
-@kotlinx.serialization.Serializable
-data class ReferenceEntry(val slug: String, val title: String = "", val body: String = "")
-
-@kotlinx.serialization.Serializable
-data class Saint(val slug: String, val name: String = "", val feast: String = "")
-
-@kotlinx.serialization.Serializable
-data class Course(val slug: String, val title: String = "")
-
-@kotlinx.serialization.Serializable
-data class MissalSection(val slug: String, val title: String = "")
-
-@kotlinx.serialization.Serializable
-data class MysterySetData(val slug: String, val title: String = "")
-
-@kotlinx.serialization.Serializable
-data class RosaryPrayer(val slug: String, val title: String = "")
-
-@kotlinx.serialization.Serializable
-data class Station(val slug: String, val title: String = "")
-
-@kotlinx.serialization.Serializable
-data class ExamenEntry(val slug: String, val title: String = "")
-
-@kotlinx.serialization.Serializable
-data class ConfessionGuide(val slug: String, val title: String = "")
-
-@kotlinx.serialization.Serializable
-data class MassProper(val slug: String, val title: String = "")
+// Model types now live in data.model.* — no more placeholders needed.
