@@ -71,7 +71,6 @@ fun CourseDetailScreen(
         .filter { it.lat != null && it.eng != null }
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val scope = rememberCoroutineScope()
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
