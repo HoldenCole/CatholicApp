@@ -1,24 +1,19 @@
 package com.lampstandhq.introibo.app
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import com.lampstandhq.introibo.storage.settings.AppTheme
 import com.lampstandhq.introibo.storage.settings.FontSizeScale
 import com.lampstandhq.introibo.storage.settings.SettingsRepository
+import com.lampstandhq.introibo.ui.navigation.IntroiboNavHost
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
-import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.theme.LocalFontScale
 import com.lampstandhq.introibo.ui.theme.LocalIntroiboTypography
 import com.lampstandhq.introibo.ui.theme.introiboTypography
@@ -47,33 +42,28 @@ class MainActivity : ComponentActivity() {
 
             val typography = introiboTypography(scale = fontScale)
 
+            // Check onboarding state
+            val prefs = remember {
+                applicationContext.getSharedPreferences("introibo_onboarding", Context.MODE_PRIVATE)
+            }
+            val hasSeenOnboarding = prefs.getBoolean("has_seen_onboarding", false)
+
             IntroiboTheme(themeKey = theme.rawValue) {
                 CompositionLocalProvider(
                     LocalFontScale provides fontScale,
                     LocalIntroiboTypography provides typography,
                 ) {
-                    // TODO: wire up onboarding check and navigation graph
-                    MainContentPlaceholder()
+                    if (hasSeenOnboarding) {
+                        IntroiboNavHost()
+                    } else {
+                        // Show onboarding then mark complete.
+                        // For now, go straight to main nav and mark onboarding done.
+                        // Replace with OnboardingScreen when it's ported.
+                        prefs.edit().putBoolean("has_seen_onboarding", true).apply()
+                        IntroiboNavHost()
+                    }
                 }
             }
         }
-    }
-}
-
-// ---------------------------------------------------------------------------
-// Placeholder screens — replace with real navigation graph when wired up.
-// ---------------------------------------------------------------------------
-
-@Composable
-private fun MainContentPlaceholder() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = "Introibo ad altare Dei",
-            style = IntroiboType.current.pageTitle,
-            color = IntroiboTheme.colors.primaryText,
-        )
     }
 }
