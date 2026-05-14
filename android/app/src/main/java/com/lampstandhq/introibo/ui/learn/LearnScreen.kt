@@ -28,7 +28,9 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -66,6 +68,8 @@ fun LearnScreen() {
 
     val progressRepo = remember { UserProgressRepository(context) }
     val mastered by progressRepo.masteredLessons.collectAsState(initial = emptySet())
+
+    var selectedCourse by remember { mutableStateOf<Course?>(null) }
 
     val courses = ContentStore.courses
     val progress = if (courses.isNotEmpty()) mastered.size.toFloat() / courses.size else 0f
@@ -216,11 +220,23 @@ fun LearnScreen() {
             }
 
             items(courses) { course ->
-                LessonRow(course = course, isMastered = course.slug in mastered)
+                LessonRow(
+                    course = course,
+                    isMastered = course.slug in mastered,
+                    onClick = { selectedCourse = course },
+                )
             }
 
             item { Spacer(Modifier.height(40.dp)) }
         }
+    }
+
+    // Course detail bottom sheet
+    selectedCourse?.let { course ->
+        CourseDetailScreen(
+            course = course,
+            onDismiss = { selectedCourse = null },
+        )
     }
 }
 
@@ -280,7 +296,7 @@ private fun DailyFlashcard(courses: List<Course>) {
 // ---------------------------------------------------------------------------
 
 @Composable
-private fun LessonRow(course: Course, isMastered: Boolean) {
+private fun LessonRow(course: Course, isMastered: Boolean, onClick: () -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
     val cardCount = course.sections.filter { it.type == "cards" }.sumOf { (it.items ?: emptyList()).size }
@@ -289,7 +305,7 @@ private fun LessonRow(course: Course, isMastered: Boolean) {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { /* TODO: open course detail */ }
+            .clickable { onClick() }
             .padding(vertical = 12.dp, horizontal = 8.dp),
     ) {
         // Roman numeral badge

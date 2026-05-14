@@ -26,12 +26,17 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.data.model.ReferenceEntry
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -52,6 +57,9 @@ private val quickLinkTitles = listOf(
 fun ReferenceScreen() {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
+
+    var selectedEntry by remember { mutableStateOf<ReferenceEntry?>(null) }
+    var selectedSection by remember { mutableStateOf<String?>(null) }
 
     Column(
         modifier = Modifier
@@ -81,16 +89,45 @@ fun ReferenceScreen() {
 
             // ---- Sections Grid ----
             item {
-                SectionsGrid()
+                SectionsGrid(onSectionClick = { section -> selectedSection = section })
             }
 
             // ---- Quick Links ----
             item {
-                QuickLinksSection()
+                QuickLinksSection(onEntryClick = { entry -> selectedEntry = entry })
             }
 
             item { Spacer(Modifier.height(40.dp)) }
         }
+    }
+
+    // Section filter: show first entry from that section category
+    selectedSection?.let { section ->
+        val entries = when (section) {
+            "References" -> ContentStore.reference
+            "Propers" -> ContentStore.reference.filter { it.cat.contains("Mass", ignoreCase = true) }
+            "History" -> ContentStore.reference.filter { it.cat.contains("History", ignoreCase = true) }
+            "Glossary" -> ContentStore.reference.filter { it.cat.contains("Glossar", ignoreCase = true) }
+            else -> emptyList()
+        }
+        val entry = entries.firstOrNull()
+        if (entry != null) {
+            ReferenceDetailScreen(
+                entry = entry,
+                onDismiss = { selectedSection = null },
+            )
+        } else {
+            // Fallback: clear selection if no matching entries
+            selectedSection = null
+        }
+    }
+
+    // Reference detail bottom sheet
+    selectedEntry?.let { entry ->
+        ReferenceDetailScreen(
+            entry = entry,
+            onDismiss = { selectedEntry = null },
+        )
     }
 }
 
@@ -99,7 +136,7 @@ fun ReferenceScreen() {
 // ---------------------------------------------------------------------------
 
 @Composable
-private fun SectionsGrid() {
+private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
     val colors = IntroiboTheme.colors
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -112,6 +149,7 @@ private fun SectionsGrid() {
                 title = "References",
                 latin = "Encyclopaedia",
                 count = "${ContentStore.reference.size} articles",
+                onClick = { onSectionClick("References") },
                 modifier = Modifier.weight(1f),
             )
             SectionCard(
@@ -119,6 +157,7 @@ private fun SectionsGrid() {
                 title = "Propers",
                 latin = "Propria Missae",
                 count = "${ContentStore.propers.size} formularies",
+                onClick = { onSectionClick("Propers") },
                 modifier = Modifier.weight(1f),
             )
         }
@@ -131,6 +170,7 @@ private fun SectionsGrid() {
                 title = "History",
                 latin = "Historia Missae",
                 count = "Timeline",
+                onClick = { onSectionClick("History") },
                 modifier = Modifier.weight(1f),
             )
             SectionCard(
@@ -138,6 +178,7 @@ private fun SectionsGrid() {
                 title = "Glossary",
                 latin = "Glossarium",
                 count = "Liturgical terms",
+                onClick = { onSectionClick("Glossary") },
                 modifier = Modifier.weight(1f),
             )
         }
@@ -150,6 +191,7 @@ private fun SectionCard(
     title: String,
     latin: String,
     count: String,
+    onClick: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val colors = IntroiboTheme.colors
@@ -159,7 +201,7 @@ private fun SectionCard(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
             .border(0.5.dp, colors.frameLine)
-            .clickable { /* TODO: navigate to section */ }
+            .clickable { onClick() }
             .padding(vertical = 20.dp),
     ) {
         Icon(
@@ -194,7 +236,7 @@ private fun SectionCard(
 // ---------------------------------------------------------------------------
 
 @Composable
-private fun QuickLinksSection() {
+private fun QuickLinksSection(onEntryClick: (ReferenceEntry) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -233,7 +275,7 @@ private fun QuickLinksSection() {
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clickable { /* TODO: open reference detail */ }
+                        .clickable { onEntryClick(entry) }
                         .padding(vertical = 8.dp),
                 ) {
                     Text(
