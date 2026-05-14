@@ -116,6 +116,11 @@ private fun liturgicalColor(colour: LiturgicalColour): Color = when (colour) {
 fun TodayScreen(
     vm: TodayViewModel = viewModel(),
     onNavigateSettings: (() -> Unit)? = null,
+    onNavigateOffice: (() -> Unit)? = null,
+    onNavigateStations: (() -> Unit)? = null,
+    onNavigateConfession: (() -> Unit)? = null,
+    onNavigateRosary: (() -> Unit)? = null,
+    onNavigateSaints: (() -> Unit)? = null,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -341,6 +346,9 @@ fun TodayScreen(
         item {
             DevotionsSection(
                 vm = vm,
+                onNavigateOffice = onNavigateOffice,
+                onNavigateStations = onNavigateStations,
+                onNavigateConfession = onNavigateConfession,
                 modifier = Modifier.padding(horizontal = 28.dp),
             )
         }
@@ -678,6 +686,9 @@ private fun PrayerRuleCard(
 @Composable
 private fun DevotionsSection(
     vm: TodayViewModel,
+    onNavigateOffice: (() -> Unit)? = null,
+    onNavigateStations: (() -> Unit)? = null,
+    onNavigateConfession: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     val colors = IntroiboTheme.colors
@@ -687,9 +698,9 @@ private fun DevotionsSection(
         SectionLabel(title = "Devotiones Hodiernae", subtitle = "Today's devotions")
         Spacer(Modifier.height(14.dp))
 
-        DevotionRow(title = "The Divine Office", latin = "Officium Divinum, VIII Horae Canonicae")
-        DevotionRow(title = "Stations of the Cross", latin = "Via Crucis, XIV stationes")
-        DevotionRow(title = "Confession Guide", latin = "De Confessione")
+        DevotionRow(title = "The Divine Office", latin = "Officium Divinum, VIII Horae Canonicae", onClick = onNavigateOffice)
+        DevotionRow(title = "Stations of the Cross", latin = "Via Crucis, XIV stationes", onClick = onNavigateStations)
+        DevotionRow(title = "Confession Guide", latin = "De Confessione", onClick = onNavigateConfession)
         DevotionRow(title = vm.offeringTitle(), latin = vm.offeringLatin())
     }
 }
@@ -698,6 +709,7 @@ private fun DevotionsSection(
 private fun DevotionRow(
     title: String,
     latin: String,
+    onClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     val colors = IntroiboTheme.colors
@@ -706,6 +718,7 @@ private fun DevotionRow(
     Column(
         modifier = modifier
             .fillMaxWidth()
+            .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier)
             .padding(vertical = 4.dp),
     ) {
         Text(

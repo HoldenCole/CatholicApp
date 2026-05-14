@@ -30,11 +30,17 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.lampstandhq.introibo.ui.confession.ConfessionScreen
 import com.lampstandhq.introibo.ui.learn.LearnScreen
 import com.lampstandhq.introibo.ui.missal.MissalScreen
+import com.lampstandhq.introibo.ui.office.OfficeScreen
 import com.lampstandhq.introibo.ui.prayers.PrayersScreen
 import com.lampstandhq.introibo.ui.reference.ReferenceScreen
+import com.lampstandhq.introibo.ui.rosary.RosaryScreen
+import com.lampstandhq.introibo.ui.saints.SaintsScreen
+import com.lampstandhq.introibo.ui.stations.StationsScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
+import com.lampstandhq.introibo.ui.today.SettingsScreen
 import com.lampstandhq.introibo.ui.today.TodayScreen
 
 // ---------------------------------------------------------------------------
@@ -128,8 +134,21 @@ fun IntroiboNavHost() {
             exitTransition = { ExitTransition.None },
         ) {
             composable(Screen.Today.route) {
-                TodayScreen()
+                TodayScreen(
+                    onNavigateSettings = { navController.navigate(Screen.Settings.route) },
+                    onNavigateOffice = { navController.navigate(Screen.Office.route) },
+                    onNavigateStations = { navController.navigate(Screen.Stations.route) },
+                    onNavigateConfession = { navController.navigate(Screen.Confession.route) },
+                    onNavigateRosary = { navController.navigate(Screen.Rosary.route) },
+                    onNavigateSaints = { navController.navigate(Screen.Saints.route) },
+                )
             }
+            composable(Screen.Settings.route) { SettingsScreen(onDismiss = { navController.popBackStack() }) }
+            composable(Screen.Office.route) { OfficeScreen(onBack = { navController.popBackStack() }) }
+            composable(Screen.Stations.route) { StationsScreen(onBack = { navController.popBackStack() }) }
+            composable(Screen.Confession.route) { ConfessionScreen(onBack = { navController.popBackStack() }) }
+            composable(Screen.Rosary.route) { RosaryScreen(onBack = { navController.popBackStack() }) }
+            composable(Screen.Saints.route) { SaintsScreen(onBack = { navController.popBackStack() }) }
             composable(Screen.Missal.route) {
                 MissalScreen()
             }
