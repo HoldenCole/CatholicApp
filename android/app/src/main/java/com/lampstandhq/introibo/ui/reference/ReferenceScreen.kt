@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -20,13 +21,13 @@ import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.LibraryBooks
 import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.rememberCoroutineScope
 import com.lampstandhq.introibo.ui.components.SmallLabel
@@ -166,12 +167,12 @@ private fun SectionListSheet(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                SmallLabel(text = title, color = colors.sanctuaryRed)
-                TextButton(onClick = {
+                IconButton(onClick = {
                     scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
                 }) {
-                    Text("Done", color = colors.sanctuaryRed, style = type.body)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
                 }
+                SmallLabel(text = title, color = colors.sanctuaryRed)
             }
             LazyColumn(
                 modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp),
@@ -341,6 +342,7 @@ private fun QuickLinksSection(onEntryClick: (ReferenceEntry) -> Unit = {}) {
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .fillMaxWidth()
+                        .defaultMinSize(minHeight = 48.dp)
                         .clickable { onEntryClick(entry) }
                         .padding(vertical = 8.dp),
                 ) {

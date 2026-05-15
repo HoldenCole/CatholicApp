@@ -8,10 +8,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -64,7 +66,7 @@ import kotlinx.coroutines.launch
  * feedback, reset, and about.
  */
 @Composable
-fun SettingsScreen(onDismiss: () -> Unit = {}) {
+fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = null) {
     val context = LocalContext.current
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -81,6 +83,7 @@ fun SettingsScreen(onDismiss: () -> Unit = {}) {
     val fontRange by settingsRepo.fontRange.collectAsState(initial = FontRange.NORMAL)
 
     var showResetConfirm by remember { mutableStateOf(false) }
+    var showTutorial by remember { mutableStateOf(false) }
     var localFontScale by remember(fontScale) { mutableFloatStateOf(fontScale) }
 
     Column(
@@ -107,10 +110,11 @@ fun SettingsScreen(onDismiss: () -> Unit = {}) {
                 text = "Settings",
                 style = type.titleM.copy(fontStyle = FontStyle.Italic),
                 color = colors.primaryText,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.weight(1f),
             )
-            TextButton(onClick = onDismiss) {
-                Text(text = "Done", color = colors.sanctuaryRed)
-            }
+            // Spacer to balance the layout (back arrow is on the left)
+            Spacer(modifier = Modifier.size(48.dp))
         }
 
         LazyColumn(
@@ -292,7 +296,13 @@ fun SettingsScreen(onDismiss: () -> Unit = {}) {
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clickable { /* TODO: open tutorial */ }
+                        .clickable {
+                            if (onOpenTutorial != null) {
+                                onOpenTutorial()
+                            } else {
+                                showTutorial = true
+                            }
+                        }
                         .padding(vertical = 12.dp),
                 ) {
                     Icon(
@@ -448,6 +458,18 @@ fun SettingsScreen(onDismiss: () -> Unit = {}) {
             },
         )
     }
+
+    // Tutorial dialog
+    if (showTutorial) {
+        androidx.compose.ui.window.Dialog(
+            onDismissRequest = { showTutorial = false },
+            properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false),
+        ) {
+            com.lampstandhq.introibo.ui.onboarding.TutorialScreen(
+                onDismiss = { showTutorial = false },
+            )
+        }
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -493,6 +515,7 @@ private fun SettingsRadioRow(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
+            .defaultMinSize(minHeight = 48.dp)
             .clickable(onClick = onClick)
             .padding(vertical = 10.dp),
     ) {

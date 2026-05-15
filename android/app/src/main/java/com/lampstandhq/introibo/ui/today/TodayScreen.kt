@@ -167,7 +167,7 @@ fun TodayScreen(
                         .padding(top = 12.dp),
                     horizontalArrangement = Arrangement.End,
                 ) {
-                    IconButton(onClick = { showSettings = true }) {
+                    IconButton(onClick = { onNavigateSettings?.invoke() ?: run { showSettings = true } }) {
                         Icon(
                             imageVector = Icons.Filled.Settings,
                             contentDescription = "Settings",
@@ -216,7 +216,7 @@ fun TodayScreen(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .padding(top = 8.dp)
-                        .clickable { showSettings = true },
+                        .clickable { onNavigateSettings?.invoke() ?: run { showSettings = true } },
                 ) {
                     SmallLabel(
                         text = "Ritus  ·  ${rite.short}",
@@ -907,7 +907,10 @@ private fun ProgressRing(
 @Composable
 private fun SettingsSheet(onDismiss: () -> Unit) {
     // Using a full-screen dialog approach for the settings sheet
-    androidx.compose.ui.window.Dialog(onDismissRequest = onDismiss) {
+    androidx.compose.ui.window.Dialog(
+        onDismissRequest = onDismiss,
+        properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false),
+    ) {
         Box(
             modifier = Modifier
                 .fillMaxSize()

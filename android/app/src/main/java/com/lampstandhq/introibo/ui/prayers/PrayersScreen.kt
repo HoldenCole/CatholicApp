@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,6 +20,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
@@ -448,6 +450,7 @@ private fun OccasionsSection(onOccasionClick: (String) -> Unit = {}) {
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier
                             .weight(1f)
+                            .defaultMinSize(minHeight = 48.dp)
                             .border(0.5.dp, colors.frameLine)
                             .clickable { onOccasionClick(occasion) }
                             .padding(vertical = 14.dp),
@@ -584,6 +587,7 @@ private fun FullLibrarySection(
                         colors.sanctuaryRed.copy(alpha = 0.3f),
                         RoundedCornerShape(4.dp),
                     )
+                    .defaultMinSize(minHeight = 48.dp)
                     .clickable(onClick = onToggleSort)
                     .padding(horizontal = 10.dp, vertical = 6.dp),
             ) {
@@ -610,6 +614,7 @@ private fun FullLibrarySection(
                 verticalAlignment = Alignment.Top,
                 modifier = Modifier
                     .fillMaxWidth()
+                    .defaultMinSize(minHeight = 48.dp)
                     .clickable { onSelectPrayer(prayer) }
                     .padding(vertical = 4.dp),
             ) {
@@ -671,10 +676,10 @@ private fun OccasionPrayerSheet(
         Column(modifier = Modifier.fillMaxSize()) {
             // Done button
             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
-                androidx.compose.material3.TextButton(
+                IconButton(
                     onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }
                 ) {
-                    Text("Done", color = colors.sanctuaryRed, style = type.body)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
                 }
             }
 

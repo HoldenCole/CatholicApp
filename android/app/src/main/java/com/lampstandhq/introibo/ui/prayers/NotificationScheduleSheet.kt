@@ -15,12 +15,17 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -164,6 +169,7 @@ fun NotificationScheduleSheet(
                         val isSelected = day in selectedDays
                         Box(
                             modifier = Modifier
+                                .defaultMinSize(minWidth = 48.dp, minHeight = 48.dp)
                                 .size(38.dp)
                                 .clip(CircleShape)
                                 .background(if (isSelected) colors.sanctuaryRed else colors.pageBackground)
@@ -260,7 +266,7 @@ fun NotificationScheduleSheet(
                     .weight(1f)
                     .background(colors.sanctuaryRed.copy(alpha = 0.1f)),
             ) {
-                Text("Done", color = colors.sanctuaryRed, style = type.body)
+                Text("Save", color = colors.sanctuaryRed, style = type.body)
             }
         }
     }
