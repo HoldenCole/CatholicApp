@@ -121,10 +121,11 @@ struct MissalView: View {
         // Agnus Dei
         ordinarySection("agnus")
 
+        // Domine non sum dignus
+        ordinarySection("domine")
+
         // COMMUNION (proper)
         properSection("Commúnio", subtitle: "Communion", text: proper.communion)
-
-        ordinarySection("domine")
 
         // POSTCOMMUNION (proper)
         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
@@ -218,12 +219,11 @@ struct MissalView: View {
         addOrdinary("canon")
         addOrdinary("pater")
         addOrdinary("agnus")
+        addOrdinary("domine")
 
         if let p = proper {
             addProper("Communio · Communion", lat: p.communion.lat, eng: p.communion.eng)
         }
-
-        addOrdinary("domine")
 
         if let p = proper {
             addProper("Postcommunio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
