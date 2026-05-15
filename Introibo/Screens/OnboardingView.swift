@@ -194,8 +194,8 @@ struct OnboardingView: View {
                     }
 
                     selectionCard(
-                        title: "1955 (Div\u{00ED}no Affl\u{00E1}t\u{00FA})",
-                        description: "Pre-Holy Week reform. Retains the older Holy Week ceremonies.",
+                        title: "1955 Holy Week",
+                        description: "Before the 1955 Holy Week reforms. Retains the older Palm Sunday, Good Friday, and Easter Vigil.",
                         isSelected: selectedRite == MissalRite.rite1955.rawValue
                     ) {
                         selectedRite = MissalRite.rite1955.rawValue
@@ -352,6 +352,7 @@ struct OnboardingView: View {
                         ) {
                             if selectedSaint == saint.slug {
                                 selectedSaint = nil
+                                UserProgress.setFollowedSaint(nil)
                             } else {
                                 selectedSaint = saint.slug
                                 UserProgress.setFollowedSaint(saint.slug)
