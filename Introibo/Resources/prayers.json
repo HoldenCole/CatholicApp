@@ -1366,5 +1366,72 @@
         "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. Amen."
       }
     ]
+  },
+  {
+    "slug": "stJoseph",
+    "title": "Ad te, beáte Joseph",
+    "eng": "Prayer to St. Joseph",
+    "category": "Marian",
+    "occasions": [
+      "Morning",
+      "For Protection"
+    ],
+    "note": "Ordered by Pope Leo XIII to be said after the Rosary in October.",
+    "lines": [
+      {
+        "lat": "Ad te, beáte Joseph, in tribulatióne nostra confúgimus, atque, imploráto Sponsæ tuæ sanctíssimæ auxílio, patrocínium quoque tuum fidénter expóscimus.",
+        "eng": "To thee, O blessed Joseph, we have recourse in our tribulation, and having implored the help of thy most holy Spouse, we now, with hearts filled with confidence, earnestly beg thee also to take us under thy protection."
+      },
+      {
+        "lat": "Per eam, quǽsumus, quæ te cum immaculáta Vírgine Dei Genitríce conjúnxit, caritátem, perque patérnum, quo Púerum Jesum ampléxus es, amórem, súpplices deprecámur,",
+        "eng": "Through that charity wherewith thou wast united to the Immaculate Virgin Mother of God, and through that fatherly love with which thou didst embrace the Child Jesus, we humbly beg thee"
+      },
+      {
+        "lat": "ut benignus respícias hereditátem, quam Jesus Christus sánguine suo acquisívit, et necessitátibus nostris tua virtúte et ope succúrras.",
+        "eng": "to look graciously upon the beloved inheritance which Jesus Christ purchased by His blood, and to aid us in our necessities with thy power and strength."
+      },
+      {
+        "lat": "Tuére, o Custos providentíssime divínæ Famíliæ, Jesu Christi sóbolem eléctam; próhibe a nobis, amantíssime Pater, omnem érrórum ac corruptelárum luem;",
+        "eng": "Defend, O most watchful guardian of the Holy Family, the chosen children of Jesus Christ; keep from us, O most loving father, every contagion of error and corrupting influence;"
+      },
+      {
+        "lat": "propítius nobis, sospitátor noster fortíssime, in pugna cum potestáte tenebrárum de cælo adésto;",
+        "eng": "mercifully assist us from heaven, O most powerful protector, in our struggle with the power of darkness;"
+      },
+      {
+        "lat": "et sicut olim Púerum Jesum e summo erípuisti vitæ discrímine, ita nunc Ecclésiam sanctam Dei ab hostílibus insídiis atque ab omni adversitáte defénde:",
+        "eng": "and as once thou didst rescue the Child Jesus from deadly peril, so now protect God's Holy Church from the snares of the enemy and from all adversity;"
+      },
+      {
+        "lat": "nosque síngulos perpétuo tege patrocínio, ut ad tui exémplum et ope tua suffúlti, sancte vívere, pie émori, sempiternamque in cælis beatitúdinem ássequi possímus. Amen.",
+        "eng": "shield, too, each one of us by thy constant protection, so that, supported by thy example and thy aid, we may be able to live piously, to die in holiness, and to obtain eternal happiness in heaven. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "communioSpiritualis",
+    "title": "Commúnio Spirituális",
+    "eng": "Spiritual Communion",
+    "category": "Eucharistic",
+    "occasions": [
+      "Before Mass",
+      "After Mass",
+      "Eucharistic"
+    ],
+    "note": "Attributed to St. Alphonsus Liguori. Prayed when unable to receive Holy Communion sacramentally.",
+    "lines": [
+      {
+        "lat": "Mi Jesu, credo te in Sanctíssimo Sacraménto præséntem esse. Amo te super ómnia et desídero te in ánimam meam.",
+        "eng": "My Jesus, I believe that Thou art present in the Most Blessed Sacrament. I love Thee above all things, and I desire to receive Thee into my soul."
+      },
+      {
+        "lat": "Cum te sacramentáliter recípere non possum, veni saltem spirituáliter in cor meum.",
+        "eng": "Since I cannot now receive Thee sacramentally, come at least spiritually into my heart."
+      },
+      {
+        "lat": "Quasi jam advéneris, compléctor te et totum me tibi únio; ne permíttas me a te umquam separári. Amen.",
+        "eng": "I embrace Thee as if Thou wert already there, and unite myself wholly to Thee. Never permit me to be separated from Thee. Amen."
+      }
+    ]
   }
 ]

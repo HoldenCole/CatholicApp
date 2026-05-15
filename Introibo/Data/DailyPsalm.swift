@@ -1,6 +1,6 @@
 import Foundation
 
-// A rotating daily psalm verse. Picks from a curated set of 30
+// A rotating daily psalm verse. Picks from a curated set of 45
 // psalm verses, cycling by day-of-year so the same verse appears
 // on the same date each year.
 
@@ -48,5 +48,19 @@ enum DailyPsalm {
         PsalmVerse(ref: "Ps 29:12", latin: "Convertísti planctum meum in gáudium mihi; conscidísti saccum meum, et circumdedísti me lætítia.", english: "Thou hast turned for me my mourning into joy; Thou hast cut my sackcloth, and hast compassed me with gladness."),
         PsalmVerse(ref: "Ps 76:14-15", latin: "Deus, in sancto via tua; quis Deus magnus sicut Deus noster? Tu es Deus qui facis mirabília.", english: "Thy way, O God, is in the holy place; who is the great God like our God? Thou art the God that dost wonders."),
         PsalmVerse(ref: "Ps 116:1-2", latin: "Laudáte Dóminum, omnes gentes; laudáte eum, omnes pópuli. Quóniam confirmáta est super nos misericórdia ejus.", english: "O praise the Lord, all ye nations; praise Him, all ye people. For His mercy is confirmed upon us."),
+        PsalmVerse(ref: "Ps 30:6", latin: "In manus tuas comméndo spíritum meum; redemísti me, Dómine, Deus veritátis.", english: "Into Thy hands I commend my spirit; Thou hast redeemed me, O Lord, the God of truth."),
+        PsalmVerse(ref: "Ps 90:1-2", latin: "Qui hábitat in adjutório Altíssimi, in protectióne Dei cæli commorábitur. Dicet Dómino: Suscéptor meus es tu et refúgium meum.", english: "He that dwelleth in the aid of the Most High shall abide under the protection of the God of heaven. He shall say to the Lord: Thou art my protector and my refuge."),
+        PsalmVerse(ref: "Ps 39:2-3", latin: "Exspéctans exspectávi Dóminum, et inténdit mihi. Et exaudívit preces meas, et edúxit me de lacu misériæ.", english: "With expectation I have waited for the Lord, and He was attentive to me. And He heard my prayers, and brought me out of the pit of misery."),
+        PsalmVerse(ref: "Ps 24:4-5", latin: "Vias tuas, Dómine, demónstra mihi, et sémitas tuas édoce me. Dírige me in veritáte tua et doce me.", english: "Show me Thy ways, O Lord, and teach me Thy paths. Direct me in Thy truth and teach me."),
+        PsalmVerse(ref: "Ps 33:19", latin: "Juxta est Dóminus iis qui tribulántur corde, et húmiles spíritu salvábit.", english: "The Lord is nigh unto them that are of a contrite heart, and He will save the humble of spirit."),
+        PsalmVerse(ref: "Ps 46:2", latin: "Omnes gentes, pláudite mánibus; jubiláte Deo in voce exsultatiónis.", english: "O clap your hands, all ye nations; shout unto God with the voice of joy."),
+        PsalmVerse(ref: "Ps 95:1", latin: "Cantáte Dómino cánticum novum; cantáte Dómino, omnis terra.", english: "Sing ye to the Lord a new canticle; sing to the Lord, all the earth."),
+        PsalmVerse(ref: "Ps 102:2-3", latin: "Bénedic, ánima mea, Dómino, et noli oblivísci omnes retributiónes ejus. Qui propitiátur ómnibus iniquitátibus tuis, qui sanat omnes infirmitátes tuas.", english: "Bless the Lord, O my soul, and never forget all He hath done for thee. Who forgiveth all thy iniquities, who healeth all thy diseases."),
+        PsalmVerse(ref: "Ps 118:1", latin: "Beáti immaculáti in via, qui ámbulant in lege Dómini.", english: "Blessed are the undefiled in the way, who walk in the law of the Lord."),
+        PsalmVerse(ref: "Ps 112:1-2", latin: "Laudáte, púeri, Dóminum; laudáte nomen Dómini. Sit nomen Dómini benedíctum, ex hoc nunc et usque in sǽculum.", english: "Praise the Lord, ye children; praise ye the name of the Lord. Blessed be the name of the Lord, from henceforth now and for ever."),
+        PsalmVerse(ref: "Ps 103:24", latin: "Quam magnificáta sunt ópera tua, Dómine! Omnia in sapiéntia fecísti; impléta est terra possessióne tua.", english: "How great are Thy works, O Lord! Thou hast made all things in wisdom; the earth is filled with Thy riches."),
+        PsalmVerse(ref: "Ps 22:4", latin: "Nam et si ambulávero in médio umbræ mortis, non timébo mala, quóniam tu mecum es.", english: "For though I should walk in the midst of the shadow of death, I will fear no evils, for Thou art with me."),
+        PsalmVerse(ref: "Ps 91:2-3", latin: "Bonum est confitéri Dómino, et psállere nómini tuo, Altíssime. Ad annuntiándum mane misericórdiam tuam, et veritátem tuam per noctem.", english: "It is good to give praise to the Lord, and to sing to Thy name, O Most High. To show forth Thy mercy in the morning, and Thy truth in the night."),
+        PsalmVerse(ref: "Ps 148:1-2", latin: "Laudáte Dóminum de cælis; laudáte eum in excélsis. Laudáte eum, omnes Ángeli ejus; laudáte eum, omnes virtútes ejus.", english: "Praise ye the Lord from the heavens; praise Him in the high places. Praise ye Him, all His angels; praise ye Him, all His hosts."),
     ]
 }
