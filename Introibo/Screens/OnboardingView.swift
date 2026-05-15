@@ -2,182 +2,378 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var hasCompletedOnboarding: Bool
+
     @State private var page = 0
-    @State private var showTutorial = false
+    @AppStorage(SettingsKey.rite) private var selectedRite: String = MissalRite.rite1962.rawValue
+    @AppStorage(SettingsKey.penance) private var selectedPenance: String = PenanceDiscipline.discipline1962.rawValue
+    @AppStorage(SettingsKey.language) private var selectedLanguage: String = LanguageMode.both.rawValue
+    @State private var selectedSaint: String? = nil
+    @State private var notifLiturgical = false
+    @State private var notifPrayerRule = false
+    @State private var notifOffice = false
+
+    private let totalPages = 8
+
+    // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Page content
-            TabView(selection: $page) {
-                welcomePage.tag(0)
-                traditionPage.tag(1)
-                featuresPage.tag(2)
+        ZStack(alignment: .top) {
+            // Background — walnut gradient for first and last, parchment for middle
+            Group {
+                if page == 0 || page == 7 {
+                    LinearGradient(
+                        colors: [Color.walnut, Color.walnutHi],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                } else {
+                    Color.pageBackground
+                }
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .animation(.easeInOut, value: page)
+            .ignoresSafeArea()
 
-            // Page dots + button
+            VStack(spacing: 0) {
+                // Top bar: back button
+                HStack {
+                    if page > 0 {
+                        Button {
+                            withAnimation { page -= 1 }
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundStyle(page == 7 ? Color.ivory : Color.secondaryText)
+                                .padding(12)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                    Spacer()
+                }
+                .frame(height: 44)
+                .padding(.horizontal, 12)
+
+                // Page content
+                TabView(selection: $page) {
+                    welcomeScreen.tag(0)
+                    whatIsScreen.tag(1)
+                    riteScreen.tag(2)
+                    penanceScreen.tag(3)
+                    languageScreen.tag(4)
+                    saintScreen.tag(5)
+                    notificationsScreen.tag(6)
+                    finalScreen.tag(7)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .animation(.easeInOut, value: page)
+
+                // Bottom: dots + button (hidden on final screen)
+                if page < 7 {
+                    VStack(spacing: 16) {
+                        // Progress dots
+                        HStack(spacing: 6) {
+                            ForEach(0..<totalPages, id: \.self) { i in
+                                Circle()
+                                    .fill(i == page ? Color.sanctuaryRed : Color.frameLine)
+                                    .frame(width: 7, height: 7)
+                            }
+                        }
+
+                        // Continue button
+                        Button {
+                            withAnimation { page += 1 }
+                        } label: {
+                            Text("Continue")
+                                .font(.system(size: 15, weight: .semibold, design: .serif))
+                                .italic()
+                                .foregroundStyle(Color.ivory)
+                                .tracking(1.5)
+                                .padding(.vertical, 18)
+                                .frame(maxWidth: .infinity)
+                                .background(Color.sanctuaryRed)
+                        }
+                        .buttonStyle(.plain)
+                        .padding(.horizontal, 28)
+                    }
+                    .padding(.bottom, 36)
+                }
+            }
+        }
+    }
+
+    // MARK: - Screen 0: Welcome
+
+    private var welcomeScreen: some View {
+        VStack(spacing: 20) {
+            Spacer()
+
+            monstranceIcon
+                .frame(width: 100, height: 100)
+
+            VStack(spacing: 8) {
+                Text("Intro\u{00ED}bo")
+                    .font(.pageTitle)
+                    .foregroundStyle(Color.ivory)
+
+                Text("Ad alt\u{00E1}re Dei")
+                    .font(.caption)
+                    .foregroundStyle(Color.muted)
+                    .textCase(.uppercase)
+                    .tracking(3)
+
+                Rectangle()
+                    .fill(Color.goldLeaf.opacity(0.5))
+                    .frame(width: 40, height: 1)
+                    .padding(.top, 8)
+            }
+
+            Spacer()
+            Spacer()
+        }
+    }
+
+    // MARK: - Screen 1: What Is Introibo
+
+    private var whatIsScreen: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 20) {
+                Spacer(minLength: 60)
+
+                Text("\u{2720}")
+                    .font(.system(size: 48))
+                    .foregroundStyle(Color.sanctuaryRed)
+
+                Text("A companion for the\ntraditional Catholic life.")
+                    .font(.titleL)
+                    .italic()
+                    .foregroundStyle(Color.primaryText)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                Rectangle()
+                    .fill(Color.sanctuaryRed.opacity(0.4))
+                    .frame(width: 40, height: 1)
+
+                Text("The complete 1962 Missal, the Roman Breviary, 40 prayers in Latin and English, daily propers, confession guides, and the traditional liturgical calendar \u{2014} all in one place, working offline.")
+                    .font(.body)
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(4)
+                    .padding(.horizontal, 32)
+
+                Spacer(minLength: 60)
+            }
+        }
+    }
+
+    // MARK: - Screen 2: Rite Selection
+
+    private var riteScreen: some View {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
-                // Dots
-                HStack(spacing: 8) {
-                    ForEach(0..<3, id: \.self) { i in
-                        Circle()
-                            .fill(i == page ? Color.sanctuaryRed : Color.frameLine)
-                            .frame(width: 8, height: 8)
-                    }
-                }
+                Spacer(minLength: 40)
 
-                // Button
-                Button {
-                    if page < 2 {
-                        withAnimation { page += 1 }
-                    } else {
-                        showTutorial = true
+                Text("MISSALE ROMANUM")
+                    .smallLabel(color: Color.sanctuaryRed)
+
+                Text("Choose your rite")
+                    .font(.titleL)
+                    .foregroundStyle(Color.primaryText)
+
+                Text("This determines your liturgical calendar and rubrics.")
+                    .font(.bodySm)
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                VStack(spacing: 12) {
+                    selectionCard(
+                        title: "1962 Roman Missal",
+                        description: "The standard traditional rite. Used by FSSP, ICKSP, and most traditional parishes.",
+                        isSelected: selectedRite == MissalRite.rite1962.rawValue
+                    ) {
+                        selectedRite = MissalRite.rite1962.rawValue
                     }
-                } label: {
-                    Text(page < 2 ? "Continue" : "Take a Quick Tour  ✠")
-                        .font(.system(size: 14, weight: .semibold, design: .serif))
-                        .italic()
-                        .foregroundStyle(Color.ivory)
-                        .tracking(2)
-                        .padding(.vertical, 18)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.sanctuaryRed)
+
+                    selectionCard(
+                        title: "1955 (Div\u{00ED}no Affl\u{00E1}t\u{00FA})",
+                        description: "Pre-Holy Week reform. Retains the older Holy Week ceremonies.",
+                        isSelected: selectedRite == MissalRite.rite1955.rawValue
+                    ) {
+                        selectedRite = MissalRite.rite1955.rawValue
+                    }
+
+                    selectionCard(
+                        title: "Pre-1955 Rubrics",
+                        description: "The fullest traditional rubrics before any 20th-century simplifications.",
+                        isSelected: selectedRite == MissalRite.pre1955.rawValue
+                    ) {
+                        selectedRite = MissalRite.pre1955.rawValue
+                    }
                 }
-                .buttonStyle(.plain)
                 .padding(.horizontal, 28)
+                .padding(.top, 8)
 
+                Spacer(minLength: 40)
+            }
+        }
+    }
+
+    // MARK: - Screen 3: Penance Discipline
+
+    private var penanceScreen: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
+                Spacer(minLength: 40)
+
+                Text("DE P\u{00C6}NIT\u{00C9}NTIA")
+                    .smallLabel(color: Color.sanctuaryRed)
+
+                Text("Choose your penance discipline")
+                    .font(.titleL)
+                    .foregroundStyle(Color.primaryText)
+
+                Text("The app will show your daily obligations automatically.")
+                    .font(.bodySm)
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                VStack(spacing: 12) {
+                    selectionCard(
+                        title: "1962 Code",
+                        description: "Friday abstinence. Lenten fast (ages 21\u{2013}59). The standard traditional discipline.",
+                        isSelected: selectedPenance == PenanceDiscipline.discipline1962.rawValue
+                    ) {
+                        selectedPenance = PenanceDiscipline.discipline1962.rawValue
+                    }
+
+                    selectionCard(
+                        title: "1917 Code",
+                        description: "Stricter. Includes Advent fasting, vigil fasts, and broader abstinence rules.",
+                        isSelected: selectedPenance == PenanceDiscipline.discipline1917.rawValue
+                    ) {
+                        selectedPenance = PenanceDiscipline.discipline1917.rawValue
+                    }
+
+                    selectionCard(
+                        title: "Full Traditional",
+                        description: "The strictest observance. Ember Day fasts, all traditional vigils, Saturday abstinence.",
+                        isSelected: selectedPenance == PenanceDiscipline.strict.rawValue
+                    ) {
+                        selectedPenance = PenanceDiscipline.strict.rawValue
+                    }
+                }
+                .padding(.horizontal, 28)
+                .padding(.top, 8)
+
+                Spacer(minLength: 40)
+            }
+        }
+    }
+
+    // MARK: - Screen 4: Language
+
+    private var languageScreen: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
+                Spacer(minLength: 40)
+
+                Text("LINGUA")
+                    .smallLabel(color: Color.sanctuaryRed)
+
+                Text("Choose your language")
+                    .font(.titleL)
+                    .foregroundStyle(Color.primaryText)
+
+                Text("Every prayer appears in Ecclesiastical Latin. Choose how you\u{2019}d like to see it.")
+                    .font(.bodySm)
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                VStack(spacing: 12) {
+                    selectionCard(
+                        title: "Latin & English",
+                        description: "Side by side. See both languages together.",
+                        isSelected: selectedLanguage == LanguageMode.both.rawValue
+                    ) {
+                        selectedLanguage = LanguageMode.both.rawValue
+                    }
+
+                    selectionCard(
+                        title: "Latin Only",
+                        description: "Immerse yourself in the sacred language.",
+                        isSelected: selectedLanguage == LanguageMode.latinOnly.rawValue
+                    ) {
+                        selectedLanguage = LanguageMode.latinOnly.rawValue
+                    }
+
+                    selectionCard(
+                        title: "English Only",
+                        description: "Read in the vernacular.",
+                        isSelected: selectedLanguage == LanguageMode.vernacular.rawValue
+                    ) {
+                        selectedLanguage = LanguageMode.vernacular.rawValue
+                    }
+                }
+                .padding(.horizontal, 28)
+                .padding(.top, 8)
+
+                Spacer(minLength: 40)
+            }
+        }
+    }
+
+    // MARK: - Screen 5: Follow a Saint
+
+    private var saintScreen: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
+                Spacer(minLength: 40)
+
+                Text("SANCTI PATRONI")
+                    .smallLabel(color: Color.sanctuaryRed)
+
+                Text("Follow a patron saint")
+                    .font(.titleL)
+                    .foregroundStyle(Color.primaryText)
+
+                Text("Track daily practices, build streaks, and grow in holiness with a patron\u{2019}s guidance.")
+                    .font(.bodySm)
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                VStack(spacing: 10) {
+                    ForEach(saintOptions, id: \.slug) { saint in
+                        saintCard(
+                            name: saint.name,
+                            motto: saint.motto,
+                            isSelected: selectedSaint == saint.slug
+                        ) {
+                            if selectedSaint == saint.slug {
+                                selectedSaint = nil
+                            } else {
+                                selectedSaint = saint.slug
+                                UserProgress.setFollowedSaint(saint.slug)
+                            }
+                        }
+                    }
+                }
+                .padding(.horizontal, 28)
+                .padding(.top, 8)
+
+                // Skip option
                 Button {
-                    hasCompletedOnboarding = true
+                    selectedSaint = nil
+                    UserProgress.setFollowedSaint(nil)
+                    withAnimation { page += 1 }
                 } label: {
-                    Text(page < 2 ? "Skip" : "Skip Tutorial")
+                    Text("Skip for now")
                         .font(.captionSm)
                         .italic()
                         .foregroundStyle(Color.tertiaryText)
                 }
                 .buttonStyle(.plain)
-            }
-            .padding(.bottom, 36)
-        }
-        .background(Color.pageBackground.ignoresSafeArea())
-        .fullScreenCover(isPresented: $showTutorial) {
-            TutorialView()
-                .onDisappear { hasCompletedOnboarding = true }
-        }
-    }
-
-    // MARK: - Page 1: Welcome
-
-    private var welcomePage: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                Spacer(minLength: 60)
-
-                // Monstrance icon
-                monstranceIcon
-                    .frame(width: 100, height: 100)
-
-                // Title
-                VStack(spacing: 8) {
-                    Text("Introíbo")
-                        .font(.system(size: 44, weight: .semibold, design: .serif))
-                        .italic()
-                        .foregroundStyle(Color.primaryText)
-                    Text("Ad altáre Dei")
-                        .font(.caption)
-                        .italic()
-                        .foregroundStyle(Color.secondaryText)
-                        .textCase(.uppercase)
-                        .tracking(3)
-                    Rectangle()
-                        .fill(Color.sanctuaryRed.opacity(0.4))
-                        .frame(width: 40, height: 1)
-                        .padding(.top, 8)
-                }
-
-                Text("A prayer companion for\ntraditional Catholics")
-                    .font(.titleM)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 8)
-
-                // Principles
-                HStack(spacing: 16) {
-                    VStack(spacing: 6) {
-                        Text("Ad free")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.primaryText)
-                        Text("Latin first")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.primaryText)
-                    }
-                    Rectangle()
-                        .fill(Color.goldLeaf.opacity(0.3))
-                        .frame(width: 0.5, height: 30)
-                    VStack(spacing: 6) {
-                        Text("1962 Calendar")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.primaryText)
-                        Text("Works offline")
-                            .font(.captionSm)
-                            .italic()
-                            .foregroundStyle(Color.primaryText)
-                    }
-                }
-                .padding(.top, 20)
-
-                Spacer(minLength: 40)
-            }
-        }
-    }
-
-    // MARK: - Page 2: Tradition First
-
-    private var traditionPage: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                Spacer(minLength: 60)
-
-                Text("✠")
-                    .font(.system(size: 48))
-                    .foregroundStyle(Color.sanctuaryRed)
-
-                Text("Tradition First")
-                    .font(.system(size: 34, weight: .semibold, design: .serif))
-                    .italic()
-                    .foregroundStyle(Color.primaryText)
-
-                Rectangle()
-                    .fill(Color.sanctuaryRed.opacity(0.4))
-                    .frame(width: 40, height: 1)
-
-                VStack(alignment: .leading, spacing: 18) {
-                    traditionRow(
-                        title: "The 1962 Missal",
-                        desc: "Every prayer, rubric, and response of the Traditional Latin Mass. No Novus Ordo."
-                    )
-                    traditionRow(
-                        title: "The Roman Breviary",
-                        desc: "All eight canonical hours as they were prayed before the reforms. Not the Liturgy of the Hours."
-                    )
-                    traditionRow(
-                        title: "Latin Always",
-                        desc: "Every prayer in Ecclesiastical Latin with faithful English translation. Latin is never hidden or secondary."
-                    )
-                    traditionRow(
-                        title: "Traditional Penance",
-                        desc: "Friday abstinence, Lenten fast, Ember Days. Choose 1962, 1917, or stricter pre-Pius XII discipline."
-                    )
-                    traditionRow(
-                        title: "Follow a Patron Saint",
-                        desc: "Daily practice checklists, streak tracking, and prayers for 7 patron saints of the traditional life."
-                    )
-                }
-                .padding(.horizontal, 32)
                 .padding(.top, 8)
 
                 Spacer(minLength: 40)
@@ -185,48 +381,225 @@ struct OnboardingView: View {
         }
     }
 
-    // MARK: - Page 3: Features
+    // MARK: - Screen 6: Notifications
 
-    private var featuresPage: some View {
-        ScrollView {
-            VStack(spacing: 20) {
+    private var notificationsScreen: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
                 Spacer(minLength: 40)
 
-                monstranceIcon
-                    .frame(width: 60, height: 60)
+                Text("NOTIFICATIONES")
+                    .smallLabel(color: Color.sanctuaryRed)
 
-                Text("Everything You Need")
-                    .font(.system(size: 28, weight: .semibold, design: .serif))
-                    .italic()
+                Text("Stay on schedule")
+                    .font(.titleL)
                     .foregroundStyle(Color.primaryText)
 
-                Rectangle()
-                    .fill(Color.sanctuaryRed.opacity(0.4))
-                    .frame(width: 40, height: 1)
+                Text("Introibo can remind you to pray at the traditional hours.")
+                    .font(.bodySm)
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
 
-                VStack(alignment: .leading, spacing: 16) {
-                    featureRow(icon: "sun.horizon", title: "Liturgical Today", desc: "Daily psalm, penance, season, feast days, and today's Mass propers.")
-                    featureRow(icon: "book.closed", title: "1962 Missal", desc: "Complete Ordinary and 424 daily Propers interleaved in correct Mass order.")
-                    featureRow(icon: "book.pages", title: "40 Prayers", desc: "Every essential prayer in Latin and English with a personal prayer rule.")
-                    featureRow(icon: "cross", title: "Rosary & Stations", desc: "Interactive bead-by-bead Rosary. 14 Stations with meditations.")
-                    featureRow(icon: "clock", title: "Divine Office", desc: "All 8 canonical hours of the 1962 Breviary.")
-                    featureRow(icon: "heart", title: "Confession Guide", desc: "Examination of conscience and two guided confession paths.")
-                    featureRow(icon: "person.fill", title: "Follow a Saint", desc: "7 patron saints with daily practices and streak tracking.")
-                    featureRow(icon: "graduationcap", title: "Learn Latin", desc: "10 lessons with 91 flashcards and quizzes.")
-                    featureRow(icon: "text.book.closed", title: "Reference Library", desc: "41 articles, 424 searchable propers, TLM history, and glossary.")
+                VStack(spacing: 14) {
+                    notificationToggle(
+                        title: "Daily liturgical update",
+                        description: "What feast it is, penance obligations, today\u{2019}s propers.",
+                        isOn: $notifLiturgical
+                    )
+
+                    notificationToggle(
+                        title: "Prayer rule reminders",
+                        description: "Morning, midday, and evening prayer nudges.",
+                        isOn: $notifPrayerRule
+                    )
+
+                    notificationToggle(
+                        title: "Divine Office bells",
+                        description: "Notifications at the canonical hours.",
+                        isOn: $notifOffice
+                    )
                 }
                 .padding(.horizontal, 28)
                 .padding(.top, 8)
 
+                // Skip option
+                Button {
+                    withAnimation { page += 1 }
+                } label: {
+                    Text("I\u{2019}ll set this up later")
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.tertiaryText)
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 12)
+
                 Spacer(minLength: 40)
             }
         }
     }
 
-    // MARK: - Components
+    // MARK: - Screen 7: Final
+
+    private var finalScreen: some View {
+        VStack(spacing: 20) {
+            Spacer()
+
+            Text("\u{2720}")
+                .font(.system(size: 56))
+                .foregroundStyle(Color.goldLeaf)
+
+            Text("Intro\u{00ED}bo ad alt\u{00E1}re Dei")
+                .font(.pageTitle)
+                .foregroundStyle(Color.ivory)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+
+            Text("Ad Deum qui l\u{00E6}t\u{00ED}ficat juvent\u{00FA}tem meam.")
+                .font(.caption)
+                .foregroundStyle(Color.muted)
+                .italic()
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 40)
+
+            Rectangle()
+                .fill(Color.goldLeaf.opacity(0.5))
+                .frame(width: 40, height: 1)
+                .padding(.top, 4)
+
+            Spacer()
+
+            // Begin button
+            Button {
+                hasCompletedOnboarding = true
+            } label: {
+                Text("Begin")
+                    .font(.system(size: 17, weight: .semibold, design: .serif))
+                    .italic()
+                    .foregroundStyle(Color.ivory)
+                    .tracking(2)
+                    .padding(.vertical, 20)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.sanctuaryRed)
+            }
+            .buttonStyle(.plain)
+            .padding(.horizontal, 28)
+            .padding(.bottom, 48)
+        }
+    }
+
+    // MARK: - Reusable Components
+
+    private func selectionCard(
+        title: String,
+        description: String,
+        isSelected: Bool,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            HStack(alignment: .top, spacing: 14) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(title)
+                        .font(.titleM)
+                        .italic()
+                        .foregroundStyle(Color.primaryText)
+                    Text(description)
+                        .font(.captionSm)
+                        .foregroundStyle(Color.secondaryText)
+                        .lineSpacing(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer()
+                if isSelected {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.system(size: 20))
+                        .foregroundStyle(Color.sanctuaryRed)
+                        .padding(.top, 2)
+                }
+            }
+            .padding(16)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(
+                        isSelected ? Color.sanctuaryRed : Color.frameLine,
+                        lineWidth: isSelected ? 2 : 0.5
+                    )
+            )
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func saintCard(
+        name: String,
+        motto: String,
+        isSelected: Bool,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            HStack(spacing: 14) {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(name)
+                        .font(.titleM)
+                        .italic()
+                        .foregroundStyle(Color.primaryText)
+                    Text(motto)
+                        .font(.captionSm)
+                        .foregroundStyle(Color.secondaryText)
+                        .italic()
+                }
+                Spacer()
+                if isSelected {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.system(size: 20))
+                        .foregroundStyle(Color.goldLeaf)
+                        .padding(.top, 2)
+                }
+            }
+            .padding(14)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(
+                        isSelected ? Color.goldLeaf : Color.frameLine,
+                        lineWidth: isSelected ? 2 : 0.5
+                    )
+            )
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func notificationToggle(
+        title: String,
+        description: String,
+        isOn: Binding<Bool>
+    ) -> some View {
+        HStack(alignment: .top, spacing: 14) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.titleM)
+                    .italic()
+                    .foregroundStyle(Color.primaryText)
+                Text(description)
+                    .font(.captionSm)
+                    .foregroundStyle(Color.secondaryText)
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer()
+            Toggle("", isOn: isOn)
+                .labelsHidden()
+                .tint(Color.sanctuaryRed)
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.frameLine, lineWidth: 0.5)
+        )
+    }
+
+    // MARK: - Monstrance Icon
 
     private var monstranceIcon: some View {
-        // SVG-style monstrance rendered with SwiftUI shapes
         ZStack {
             // Outer ring
             Circle()
@@ -284,35 +657,21 @@ struct OnboardingView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 
-    private func featureRow(icon: String, title: String, desc: String) -> some View {
-        HStack(alignment: .top, spacing: 16) {
-            Image(systemName: icon)
-                .font(.system(size: 18))
-                .foregroundStyle(Color.sanctuaryRed)
-                .frame(width: 24)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(title)
-                    .font(.titleM)
-                    .italic()
-                    .foregroundStyle(Color.primaryText)
-                Text(desc)
-                    .font(.captionSm)
-                    .foregroundStyle(Color.secondaryText)
-                    .lineSpacing(2)
-            }
-        }
+    // MARK: - Saint Data
+
+    private struct SaintOption {
+        let slug: String
+        let name: String
+        let motto: String
     }
 
-    private func traditionRow(title: String, desc: String) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(title)
-                .font(.titleM)
-                .italic()
-                .foregroundStyle(Color.sanctuaryRed)
-            Text(desc)
-                .font(.bodySm)
-                .foregroundStyle(Color.secondaryText)
-                .lineSpacing(3)
-        }
-    }
+    private let saintOptions: [SaintOption] = [
+        SaintOption(slug: "pio", name: "St. Padre Pio", motto: "Pray, hope, and don\u{2019}t worry."),
+        SaintOption(slug: "therese", name: "St. Th\u{00E9}r\u{00E8}se of Lisieux", motto: "My vocation is love."),
+        SaintOption(slug: "aquinas", name: "St. Thomas Aquinas", motto: "Doctor Ang\u{00E9}licus"),
+        SaintOption(slug: "benedict", name: "St. Benedict of Nursia", motto: "Ora et Lab\u{00F3}ra"),
+        SaintOption(slug: "teresa", name: "St. Teresa of \u{00C1}vila", motto: "Nada te turbe"),
+        SaintOption(slug: "escriva", name: "St. Josemar\u{00ED}a Escriv\u{00E1}", motto: "Sanctify ordinary work"),
+        SaintOption(slug: "desales", name: "St. Francis de Sales", motto: "Doctor of charity"),
+    ]
 }
