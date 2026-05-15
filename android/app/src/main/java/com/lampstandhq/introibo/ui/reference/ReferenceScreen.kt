@@ -114,9 +114,9 @@ fun ReferenceScreen() {
     selectedSection?.let { section ->
         val entries = when (section) {
             "References" -> ContentStore.reference
-            "Propers" -> ContentStore.reference.filter { it.cat.contains("Mass", ignoreCase = true) }
-            "History" -> ContentStore.reference.filter { it.cat.contains("History", ignoreCase = true) }
-            "Glossary" -> ContentStore.reference.filter { it.cat.contains("Glossar", ignoreCase = true) }
+            "Propers" -> ContentStore.reference.filter { it.cat == "Missa et Sacramenta" }
+            "History" -> ContentStore.reference.filter { it.cat == "Calendarium" }
+            "Glossary" -> ContentStore.reference.filter { it.cat == "De Lingua Latina" }
             else -> emptyList()
         }
         if (entries.isNotEmpty()) {
@@ -222,8 +222,8 @@ private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
             SectionCard(
                 icon = Icons.Filled.Book,
                 title = "Propers",
-                latin = "Propria Missae",
-                count = "${ContentStore.propers.size} formularies",
+                latin = "Missa et Sacramenta",
+                count = "${ContentStore.reference.count { it.cat == "Missa et Sacramenta" }} articles",
                 onClick = { onSectionClick("Propers") },
                 modifier = Modifier.weight(1f),
             )
@@ -234,17 +234,17 @@ private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
         ) {
             SectionCard(
                 icon = Icons.Filled.History,
-                title = "History",
-                latin = "Historia Missae",
-                count = "Timeline",
+                title = "Calendar",
+                latin = "Calendarium",
+                count = "${ContentStore.reference.count { it.cat == "Calendarium" }} articles",
                 onClick = { onSectionClick("History") },
                 modifier = Modifier.weight(1f),
             )
             SectionCard(
                 icon = Icons.Filled.LibraryBooks,
-                title = "Glossary",
-                latin = "Glossarium",
-                count = "Liturgical terms",
+                title = "Latin",
+                latin = "De Lingua Latina",
+                count = "${ContentStore.reference.count { it.cat == "De Lingua Latina" }} articles",
                 onClick = { onSectionClick("Glossary") },
                 modifier = Modifier.weight(1f),
             )
