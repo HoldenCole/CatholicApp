@@ -2,6 +2,7 @@ package com.lampstandhq.introibo.ui.missal
 
 import android.content.Intent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,7 +26,9 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -58,6 +61,8 @@ fun MissalScreen() {
     val settingsRepo = remember { SettingsRepository(context) }
     val rite by settingsRepo.missalRite.collectAsState(initial = MissalRite.RITE_1962)
 
+    var showProperDetail by remember { mutableStateOf(false) }
+
     val ctx = remember { LiturgicalContext.current() }
     val todayProper = remember {
         ctx.properSlug?.let { ContentStore.proper(it) }
@@ -80,7 +85,25 @@ fun MissalScreen() {
                         style = type.titleM.copy(fontStyle = FontStyle.Italic),
                         color = colors.primaryText,
                     )
-                    SmallLabel(text = rite.short, color = colors.goldLeaf)
+                    Row(
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        SmallLabel(text = rite.short, color = colors.goldLeaf)
+                        if (todayProper != null) {
+                            Text(
+                                text = "  ·  ",
+                                style = type.captionSm,
+                                color = colors.tertiaryText,
+                            )
+                            Text(
+                                text = "View Propers",
+                                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                                color = colors.sanctuaryRed,
+                                modifier = Modifier.clickable { showProperDetail = true },
+                            )
+                        }
+                    }
                 }
             },
             actions = {
@@ -127,6 +150,19 @@ fun MissalScreen() {
             }
 
             item { Spacer(Modifier.height(40.dp)) }
+        }
+    }
+
+    // Proper detail dialog
+    if (showProperDetail && todayProper != null) {
+        androidx.compose.ui.window.Dialog(
+            onDismissRequest = { showProperDetail = false },
+            properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false),
+        ) {
+            ProperScreen(
+                proper = todayProper,
+                onDismiss = { showProperDetail = false },
+            )
         }
     }
 }

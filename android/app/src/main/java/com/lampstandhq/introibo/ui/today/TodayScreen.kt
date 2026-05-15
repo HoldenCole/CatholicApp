@@ -44,7 +44,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
 import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
+import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.theme.RawPalette
@@ -135,6 +137,7 @@ fun TodayScreen(
     val rosaryLastDate by vm.rosaryLastDate.collectAsState()
 
     var showSettings by remember { mutableStateOf(false) }
+    var showProper by remember { mutableStateOf<MassProper?>(null) }
 
     val litColor = liturgicalColor(ctx.colour)
 
@@ -302,6 +305,7 @@ fun TodayScreen(
             item {
                 PropersCard(
                     proper = proper,
+                    onClick = { showProper = proper },
                     modifier = Modifier.padding(horizontal = 28.dp),
                 )
             }
@@ -324,6 +328,7 @@ fun TodayScreen(
         item {
             SaintCard(
                 followedSaint = followedSaint,
+                onNavigateSaints = onNavigateSaints,
                 modifier = Modifier.padding(horizontal = 28.dp),
             )
         }
@@ -360,6 +365,7 @@ fun TodayScreen(
             RosaryCard(
                 ctx = ctx,
                 rosaryLastDate = rosaryLastDate,
+                onNavigateRosary = onNavigateRosary,
                 modifier = Modifier.padding(horizontal = 28.dp),
             )
         }
@@ -380,6 +386,19 @@ fun TodayScreen(
     // Settings bottom sheet / dialog
     if (showSettings) {
         SettingsSheet(onDismiss = { showSettings = false })
+    }
+
+    // Proper detail dialog
+    showProper?.let { properData ->
+        androidx.compose.ui.window.Dialog(
+            onDismissRequest = { showProper = null },
+            properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false),
+        ) {
+            ProperScreen(
+                proper = properData,
+                onDismiss = { showProper = null },
+            )
+        }
     }
 }
 
@@ -426,6 +445,7 @@ private fun DailyPsalmCard(modifier: Modifier = Modifier) {
 @Composable
 private fun PropersCard(
     proper: com.lampstandhq.introibo.data.model.MassProper,
+    onClick: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val colors = IntroiboTheme.colors
@@ -435,6 +455,7 @@ private fun PropersCard(
         modifier = modifier
             .fillMaxWidth()
             .border(0.5.dp, colors.frameLine)
+            .clickable { onClick() }
             .padding(16.dp),
     ) {
         SmallLabel(
@@ -566,6 +587,7 @@ private fun PenanceCard(
 @Composable
 private fun SaintCard(
     followedSaint: String?,
+    onNavigateSaints: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     val colors = IntroiboTheme.colors
@@ -580,6 +602,7 @@ private fun SaintCard(
                 modifier = modifier
                     .fillMaxWidth()
                     .border(1.dp, colors.sanctuaryRed.copy(alpha = 0.3f))
+                    .then(if (onNavigateSaints != null) Modifier.clickable { onNavigateSaints() } else Modifier)
                     .padding(16.dp),
             ) {
                 // Progress ring
@@ -612,6 +635,7 @@ private fun SaintCard(
             modifier = modifier
                 .fillMaxWidth()
                 .border(1.dp, colors.sanctuaryRed.copy(alpha = 0.3f))
+                .then(if (onNavigateSaints != null) Modifier.clickable { onNavigateSaints() } else Modifier)
                 .padding(16.dp),
         ) {
             Text(
@@ -738,12 +762,17 @@ private fun DevotionRow(
 private fun RosaryCard(
     ctx: com.lampstandhq.introibo.data.liturgical.LiturgicalContext,
     rosaryLastDate: LocalDate?,
+    onNavigateRosary: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
-    Column(modifier = modifier.fillMaxWidth()) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .then(if (onNavigateRosary != null) Modifier.clickable { onNavigateRosary() } else Modifier),
+    ) {
         SectionLabel(title = "Sacratissimum Rosarium", subtitle = "of the Rosary")
         Spacer(Modifier.height(8.dp))
 
