@@ -48,6 +48,7 @@ enum ProperCalendar {
         case 38:  return "vigil-ascension"
         case 39:  return "ascension"
         case 48:  return "vigil-pentecost"
+        case 49:  return "pentecost-sunday"
         case 60:  return "corpus-christi"
         case 68:  return "sacred-heart"
         default:  return nil
@@ -176,6 +177,23 @@ enum ProperCalendar {
     private static func sanctoraleSlug(date: Date, year: Int, cal: Calendar) -> String? {
         let month = cal.component(.month, from: date)
         let day = cal.component(.day, from: date)
+        let dow = cal.component(.weekday, from: date) // 1=Sun..7=Sat
+
+        // Christ the King: last Sunday of October (rank 1, overrides sanctorale)
+        if month == 10 && dow == 1 && day >= 25 {
+            return "christ-king"
+        }
+
+        // Sundays after Christmas
+        // 1st Sunday after Christmas: the Sunday in the Dec 26–31 window
+        if month == 12 && day >= 26 && dow == 1 {
+            return "christmas-1"
+        }
+        // 2nd Sunday after Christmas: the Sunday between Jan 2–5
+        if month == 1 && day >= 2 && day <= 5 && dow == 1 {
+            return "christmas-2"
+        }
+
         let key = month * 100 + day
         if let feast = fixedFeasts[key] {
             return feast

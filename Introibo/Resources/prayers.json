@@ -47,9 +47,12 @@
         "eng": "And lead us not into temptation, but deliver us from evil."
       },
       {
-        "lat": "℟.Amen.",
-        "eng": "℟.Amen."
+        "lat": "℟. Amen.",
+        "eng": "℟. Amen."
       }
+    ],
+    "occasions": [
+      "Before Mass"
     ]
   },
   {
@@ -68,8 +71,8 @@
         "eng": "Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus."
       },
       {
-        "lat": "℟.Sancta María, Mater Dei, ora pro nobis peccatóribus,",
-        "eng": "℟.Holy Mary, Mother of God, pray for us sinners,"
+        "lat": "℟. Sancta María, Mater Dei, ora pro nobis peccatóribus,",
+        "eng": "℟. Holy Mary, Mother of God, pray for us sinners,"
       },
       {
         "lat": "nunc et in hora mortis nostræ. Amen.",
@@ -99,6 +102,9 @@
         "lat": "et in sǽcula sæculórum. Amen.",
         "eng": "world without end. Amen."
       }
+    ],
+    "occasions": [
+      "Before Mass"
     ]
   },
   {
@@ -124,6 +130,9 @@
         "lat": "præsértim eas, quæ misericórdiæ tuæ máxime índigent. Amen.",
         "eng": "especially those most in need of Thy mercy. Amen."
       }
+    ],
+    "occasions": [
+      "Before Mass"
     ]
   },
   {
@@ -306,6 +315,9 @@
         "lat": "Kýrie, eléison.",
         "eng": "Lord, have mercy."
       }
+    ],
+    "occasions": [
+      "Before Mass"
     ]
   },
   {
@@ -355,6 +367,9 @@
         "lat": "Cum Sancto Spíritu, in glória Dei Patris. Amen.",
         "eng": "With the Holy Ghost, in the glory of God the Father. Amen."
       }
+    ],
+    "occasions": [
+      "Before Mass"
     ]
   },
   {
@@ -384,6 +399,9 @@
         "lat": "Hosánna in excélsis.",
         "eng": "Hosanna in the highest."
       }
+    ],
+    "occasions": [
+      "Before Mass"
     ]
   },
   {
@@ -405,6 +423,9 @@
         "lat": "Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.",
         "eng": "Lamb of God, Who takest away the sins of the world: grant us peace."
       }
+    ],
+    "occasions": [
+      "Before Mass"
     ]
   },
   {
@@ -426,6 +447,10 @@
         "lat": "(Said three times.)",
         "eng": "(Said three times.)"
       }
+    ],
+    "occasions": [
+      "Before Mass",
+      "Eucharistic"
     ]
   },
   {
@@ -603,8 +628,8 @@
         "eng": "that with Thy saints I may praise Thee,"
       },
       {
-        "lat": "℟.in sǽcula sæculórum. Amen.",
-        "eng": "℟.for ever and ever. Amen."
+        "lat": "℟. in sǽcula sæculórum. Amen.",
+        "eng": "℟. for ever and ever. Amen."
       }
     ],
     "occasions": [
@@ -652,8 +677,8 @@
         "eng": "They have pierced my hands and my feet; they have numbered all my bones. (Ps 21:17-18)"
       },
       {
-        "lat": "℟.Amen.",
-        "eng": "℟.Amen."
+        "lat": "℟. Amen.",
+        "eng": "℟. Amen."
       }
     ],
     "occasions": [
@@ -763,7 +788,7 @@
       },
       {
         "lat": "tibi se cor meum totum súbiicit,",
-        "eng": "My whole heart submits to Thee,"
+        "eng": "my whole heart submits to Thee,"
       },
       {
         "lat": "quia te contémplans totum déficit.",
@@ -798,8 +823,72 @@
         "eng": "yet believing and confessing both,"
       },
       {
-        "lat": "peto quod petívit latro pǽnitens. Amen.",
-        "eng": "I ask for what the penitent thief asked. Amen."
+        "lat": "peto quod petívit latro pǽnitens.",
+        "eng": "I ask for what the penitent thief asked."
+      },
+      {
+        "lat": "Plagas, sicut Thomas, non intúeor:",
+        "eng": "I do not see the wounds, as Thomas did,"
+      },
+      {
+        "lat": "Deum tamen meum te confíteor.",
+        "eng": "yet I confess Thee to be my God."
+      },
+      {
+        "lat": "Fac me tibi semper magis crédere,",
+        "eng": "Make me believe Thee ever more and more,"
+      },
+      {
+        "lat": "in te spem habére, te dilígere.",
+        "eng": "place all my hope in Thee, and love Thee with all my heart."
+      },
+      {
+        "lat": "O memoriále mortis Dómini!",
+        "eng": "O memorial of our Lord's death!"
+      },
+      {
+        "lat": "Panis vivus, vitam præstans hómini!",
+        "eng": "Living Bread, that givest life to man!"
+      },
+      {
+        "lat": "Præsta meæ menti de te vívere,",
+        "eng": "Grant my soul henceforth on Thee to live,"
+      },
+      {
+        "lat": "et te illi semper dulce sápere.",
+        "eng": "and ever a sweet savour of Thee to have."
+      },
+      {
+        "lat": "Pie pellicáne, Iesu Dómine,",
+        "eng": "O loving Pelican, O Jesus Lord,"
+      },
+      {
+        "lat": "me immúndum munda tuo sánguine:",
+        "eng": "unclean I am, but cleanse me in Thy blood:"
+      },
+      {
+        "lat": "cuius una stilla salvum fácere",
+        "eng": "of which a single drop, for sinners spilt,"
+      },
+      {
+        "lat": "totum mundum quit ab ómni scélere.",
+        "eng": "can purge the entire world from all its guilt."
+      },
+      {
+        "lat": "Iesu, quem velátum nunc aspício,",
+        "eng": "O Jesus, Whom for the present veiled I see,"
+      },
+      {
+        "lat": "oro, fiat illud quod tam sítio:",
+        "eng": "what I so thirst for, oh, vouchsafe to me:"
+      },
+      {
+        "lat": "ut te reveláta cernens fácie,",
+        "eng": "that I may see Thy countenance unfolding,"
+      },
+      {
+        "lat": "visu sim beátus tuæ glóriæ. Amen.",
+        "eng": "and may be blest Thy glory in beholding. Amen."
       }
     ],
     "occasions": [
@@ -824,15 +913,15 @@
       },
       {
         "lat": "Quidquid hábeo vel possídeo, mihi largítus es;",
-        "eng": "all that I have and possess."
+        "eng": "all that I have and possess. Thou hast given it all to me;"
       },
       {
         "lat": "id tibi totum restítuo, ac tuæ prorsus voluntáti trado gubernándum.",
-        "eng": "You have given all to me; to You, Lord, I return it."
+        "eng": "to Thee, O Lord, I return it. All is Thine; dispose of it wholly according to Thy will."
       },
       {
         "lat": "Amórem tui solum cum grátia tua mihi dones,",
-        "eng": "Give me only Your love and Your grace;"
+        "eng": "Give me only Thy love and Thy grace;"
       },
       {
         "lat": "et dives sum satis, nec áliud quidquam ultra posco.",
@@ -860,7 +949,7 @@
         "eng": "℟. And she conceived of the Holy Ghost."
       },
       {
-        "lat": "Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",
+        "lat": "Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",
         "eng": "Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
       },
       {
@@ -896,7 +985,7 @@
         "eng": "℟. That we may be made worthy of the promises of Christ."
       },
       {
-        "lat": "Orémus. Grátiam tuam, quǽsumus, Dómine, méntibus nostris infúnde; ut qui, Angelo nuntiánte, Christi Fílii tui incarnatiónem cognóvimus, per passiónem ejus et crucem ad resurrectiónis glóriam perducámur. Per eúndem Christum Dóminum nostrum. Amen.",
+        "lat": "Orémus. Grátiam tuam, quǽsumus, Dómine, méntibus nostris infúnde; ut qui, Angelo nuntiánte, Christi Fílii tui incarnatiónem cognóvimus, per passiónem eius et crucem ad resurrectiónis glóriam perducámur. Per eúndem Christum Dóminum nostrum. Amen.",
         "eng": "Let us pray. Pour forth, we beseech Thee, O Lord, Thy grace into our hearts; that we, to whom the Incarnation of Christ, Thy Son, was made known by the message of an Angel, may by His Passion and Cross be brought to the glory of His Resurrection. Through the same Christ our Lord. Amen."
       }
     ],
@@ -937,7 +1026,7 @@
         "eng": "℟. For the Lord has truly risen, alleluia."
       },
       {
-        "lat": "Orémus. Deus, qui per resurrectiónem Fílii tui Dómini nostri Jesu Christi mundum lætificáre dignátus es: præsta, quǽsumus; ut per ejus Genetrícem Vírginem Maríam perpétuæ capiámus gáudia vitæ. Per eúndem Christum Dóminum nostrum. Amen.",
+        "lat": "Orémus. Deus, qui per resurrectiónem Fílii tui Dómini nostri Iesu Christi mundum lætificáre dignátus es: præsta, quǽsumus; ut per eius Genetrícem Vírginem Maríam perpétuæ capiámus gáudia vitæ. Per eúndem Christum Dóminum nostrum. Amen.",
         "eng": "Let us pray. O God, Who through the Resurrection of Thy Son our Lord Jesus Christ didst vouchsafe to give joy to the world: grant, we beseech Thee, that through His Mother, the Virgin Mary, we may obtain the joys of everlasting life. Through the same Christ our Lord. Amen."
       }
     ],
@@ -1002,7 +1091,7 @@
         "eng": "For with Thee there is merciful forgiveness: and by reason of Thy law, I have waited for Thee, O Lord."
       },
       {
-        "lat": "Sustínuit ánima mea in verbo ejus: sperávit ánima mea in Dómino.",
+        "lat": "Sustínuit ánima mea in verbo eius: sperávit ánima mea in Dómino.",
         "eng": "My soul hath relied on His word: my soul hath hoped in the Lord."
       },
       {
@@ -1014,7 +1103,7 @@
         "eng": "Because with the Lord there is mercy: and with Him plentiful redemption."
       },
       {
-        "lat": "Et ipse rédimet Israel ex ómnibus iniquitátibus ejus.",
+        "lat": "Et ipse rédimet Israel ex ómnibus iniquitátibus eius.",
         "eng": "And He shall redeem Israel from all his iniquities."
       },
       {
@@ -1039,7 +1128,7 @@
         "eng": "O my God, I firmly believe that Thou art one God in three divine Persons, Father, Son, and Holy Ghost."
       },
       {
-        "lat": "Credo Jesum Christum, Fílium Dei, incarnátum esse et mortuum pro nobis,",
+        "lat": "Credo Iesum Christum, Fílium Dei, incarnátum esse et mortuum pro nobis,",
         "eng": "I believe that Jesus Christ, the Son of God, became man and died for us,"
       },
       {
@@ -1064,7 +1153,7 @@
     "note": "One of the three theological virtue acts, expressing trust in God's promises.",
     "lines": [
       {
-        "lat": "O Deus, sperans in promissiónibus tuis, confído te datúrum mihi, per mérita Jesu Christi,",
+        "lat": "O Deus, sperans in promissiónibus tuis, confído te datúrum mihi, per mérita Iesu Christi,",
         "eng": "O my God, relying on Thy promises, I trust that Thou wilt grant me, through the merits of Jesus Christ,"
       },
       {
@@ -1141,17 +1230,17 @@
   },
   {
     "slug": "blessingMeal",
-    "title": "Benedictio Mensae",
+    "title": "Benedíctio Mensæ",
     "eng": "Grace Before Meals",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "note": "The traditional Latin grace said before meals.",
     "lines": [
       {
-        "lat": "Benedic, Domine, nos et haec tua dona, quae de tua largitate sumus sumpturi.",
+        "lat": "Bénedic, Dómine, nos et hæc tua dona, quæ de tua largitáte sumus sumptúri.",
         "eng": "Bless us, O Lord, and these Thy gifts, which we are about to receive from Thy bounty."
       },
       {
-        "lat": "Per Christum Dominum nostrum. Amen.",
+        "lat": "Per Christum Dóminum nostrum. Amen.",
         "eng": "Through Christ our Lord. Amen."
       }
     ],
@@ -1161,13 +1250,13 @@
   },
   {
     "slug": "gratiasPost",
-    "title": "Gratiarum Actio Post Cibum",
+    "title": "Gratiárum Actio Post Cibum",
     "eng": "Grace After Meals",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "note": "The traditional thanksgiving said after meals.",
     "lines": [
       {
-        "lat": "Agimus tibi gratias, omnipotens Deus, pro universis beneficiis tuis, qui vivis et regnas in saecula saeculorum.",
+        "lat": "Ágimus tibi grátias, omnípotens Deus, pro univérsis benefíciis tuis, qui vivis et regnas in sǽcula sæculórum.",
         "eng": "We give Thee thanks, almighty God, for all Thy benefits, Who livest and reignest for ever and ever."
       },
       {
@@ -1175,7 +1264,7 @@
         "eng": "Amen."
       },
       {
-        "lat": "Fidelium animae, per misericordiam Dei, requiescant in pace.",
+        "lat": "Fidélium ánimæ, per misericórdiam Dei, requiéscant in pace.",
         "eng": "May the souls of the faithful departed, through the mercy of God, rest in peace."
       },
       {
@@ -1191,39 +1280,39 @@
     "slug": "miserere",
     "title": "Miserere",
     "eng": "Psalm 50: Have Mercy On Me",
-    "category": "Devotiones",
-    "note": "The great Penitential Psalm, prayed before confession and throughout Lent. The psalm of King David after his sin.",
+    "category": "Devotiónes",
+    "note": "Selected verses from the great Penitential Psalm (Psalm 50), prayed before confession and throughout Lent. The psalm of King David after his sin.",
     "lines": [
       {
-        "lat": "Miserere mei, Deus, secundum magnam misericordiam tuam.",
+        "lat": "Miserére mei, Deus, secúndum magnam misericórdiam tuam.",
         "eng": "Have mercy on me, O God, according to Thy great mercy."
       },
       {
-        "lat": "Et secundum multitudinem miserationum tuarum, dele iniquitatem meam.",
+        "lat": "Et secúndum multitúdinem miseratiónium tuárum, dele iniquitátem meam.",
         "eng": "And according to the multitude of Thy tender mercies, blot out my iniquity."
       },
       {
-        "lat": "Amplius lava me ab iniquitate mea, et a peccato meo munda me.",
+        "lat": "Ámplius lava me ab iniquitáte mea, et a peccáto meo munda me.",
         "eng": "Wash me yet more from my iniquity, and cleanse me from my sin."
       },
       {
-        "lat": "Quoniam iniquitatem meam ego cognosco, et peccatum meum contra me est semper.",
+        "lat": "Quóniam iniquitátem meam ego cognósco, et peccátum meum contra me est semper.",
         "eng": "For I know my iniquity, and my sin is always before me."
       },
       {
-        "lat": "Tibi soli peccavi, et malum coram te feci.",
+        "lat": "Tibi soli peccávi, et malum coram te feci.",
         "eng": "To Thee only have I sinned, and have done evil before Thee."
       },
       {
-        "lat": "Cor mundum crea in me, Deus, et spiritum rectum innova in visceribus meis.",
+        "lat": "Cor mundum crea in me, Deus, et spíritum rectum ínnova in viscéribus meis.",
         "eng": "Create a clean heart in me, O God, and renew a right spirit within me."
       },
       {
-        "lat": "Ne proiicias me a facie tua, et Spiritum Sanctum tuum ne auferas a me.",
+        "lat": "Ne proícias me a fácie tua, et Spíritum Sanctum tuum ne áuferas a me.",
         "eng": "Cast me not away from Thy face, and take not Thy Holy Spirit from me."
       },
       {
-        "lat": "Redde mihi laetitiam salutaris tui, et spiritu principali confirma me.",
+        "lat": "Redde mihi lætítiam salutáris tui, et spíritu principáli confírma me.",
         "eng": "Restore unto me the joy of Thy salvation, and strengthen me with a perfect spirit."
       }
     ],
@@ -1233,21 +1322,21 @@
   },
   {
     "slug": "requiem",
-    "title": "Requiem Aeternam",
+    "title": "Réquiem Ætérnam",
     "eng": "Eternal Rest",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "note": "The traditional prayer for the faithful departed, said after the Rosary and at the end of prayers for the dead.",
     "lines": [
       {
-        "lat": "Requiem aeternam dona eis, Domine.",
+        "lat": "Réquiem ætérnam dona eis, Dómine.",
         "eng": "Eternal rest grant unto them, O Lord."
       },
       {
-        "lat": "Et lux perpetua luceat eis.",
+        "lat": "Et lux perpétua lúceat eis.",
         "eng": "And let perpetual light shine upon them."
       },
       {
-        "lat": "Requiescant in pace.",
+        "lat": "Requiéscant in pace.",
         "eng": "May they rest in peace."
       },
       {
@@ -1261,13 +1350,13 @@
   },
   {
     "slug": "pieFidelium",
-    "title": "Pie Fidelium",
+    "title": "Pie Fidélium",
     "eng": "Prayer for All the Faithful Departed",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "note": "A brief prayer for all the holy souls in Purgatory.",
     "lines": [
       {
-        "lat": "Fidelium animae, per misericordiam Dei, requiescant in pace.",
+        "lat": "Fidélium ánimæ, per misericórdiam Dei, requiéscant in pace.",
         "eng": "May the souls of all the faithful departed, through the mercy of God, rest in peace."
       },
       {
@@ -1281,29 +1370,29 @@
   },
   {
     "slug": "animaChristi2",
-    "title": "Aspirationes in Tentatione",
+    "title": "Aspiratiónes in Tentatióne",
     "eng": "Short Prayers in Temptation",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "note": "Brief ejaculatory prayers traditionally recommended for moments of temptation.",
     "lines": [
       {
-        "lat": "Jesu, Maria, Joseph, assistite mihi in ultima agonia.",
+        "lat": "Iesu, María, Ioseph, assístite mihi in última agónia.",
         "eng": "Jesus, Mary, Joseph, assist me in my last agony."
       },
       {
-        "lat": "Sancte Michael Archangele, defende nos in proelio.",
+        "lat": "Sancte Míchaël Archángele, defénde nos in prǽlio.",
         "eng": "St. Michael the Archangel, defend us in battle."
       },
       {
-        "lat": "Cor Jesu sacratissimum, miserere nobis.",
+        "lat": "Cor Iesu sacratíssimum, miserére nobis.",
         "eng": "Most Sacred Heart of Jesus, have mercy on us."
       },
       {
-        "lat": "Refugium peccatorum, ora pro nobis.",
+        "lat": "Refúgium peccatórum, ora pro nobis.",
         "eng": "Refuge of sinners, pray for us."
       },
       {
-        "lat": "Domine, adjuva me.",
+        "lat": "Dómine, ádiuva me.",
         "eng": "Lord, help me."
       }
     ],
@@ -1313,26 +1402,38 @@
   },
   {
     "slug": "veniCreator",
-    "title": "Veni Creator Spiritus",
+    "title": "Veni Creátor Spíritus",
     "eng": "Come, Creator Spirit",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "note": "Ancient hymn invoking the Holy Ghost, sung at Pentecost, ordinations, and before important decisions.",
     "lines": [
       {
-        "lat": "Veni, Creator Spiritus, mentes tuorum visita, imple superna gratia, quae tu creasti pectora.",
+        "lat": "Veni, Creátor Spíritus, mentes tuórum vísita, imple supérna grátia, quæ tu creásti péctora.",
         "eng": "Come, Holy Ghost, Creator blest, and in our hearts take up Thy rest; come with Thy grace and heavenly aid, to fill the hearts which Thou hast made."
       },
       {
-        "lat": "Qui diceris Paraclitus, altissimi donum Dei, fons vivus, ignis, caritas, et spiritalis unctio.",
+        "lat": "Qui díceris Paráclitus, altíssimi donum Dei, fons vivus, ignis, cáritas, et spiritális únctio.",
         "eng": "O Comforter, to Thee we cry, Thou heavenly gift of God most high, Thou fount of life, and fire of love, and sweet anointing from above."
       },
       {
-        "lat": "Accende lumen sensibus, infunde amorem cordibus, infirma nostri corporis virtute firmans perpeti.",
-        "eng": "O grant that nothing in our soul may dwell but Thy pure love alone; O may Thy love inflame our hearts, and others win to share Thy love."
+        "lat": "Tu septifórmis múnere, dígitus patérnæ déxteræ, tu rite promíssum Patris, sermóne ditans gúttura.",
+        "eng": "Thou in Thy sevenfold gifts art known, the finger of God's hand we own; the promise of the Father, Thou, Who dost the tongue with power endow."
       },
       {
-        "lat": "Deo Patri sit gloria, et Filio, qui a mortuis surrexit, ac Paraclito, in saeculorum saecula. Amen.",
-        "eng": "Praise be to Thee, Father and Son, and Holy Spirit, Three in One; and may the Son on us bestow the gifts that from the Spirit flow. Amen."
+        "lat": "Hostem repéllas lóngius, pacémque dones prótinus; ductóre sic te prǽvio, vitémus omne nóxium.",
+        "eng": "Drive far away our ghostly foe, and Thine abiding peace bestow; if Thou be our preventing guide, no evil can our steps betide."
+      },
+      {
+        "lat": "Per te sciámus da Patrem, noscámus atque Fílium; teque utriúsque Spíritum, credámus omni témpore.",
+        "eng": "Oh, may Thy grace on us bestow the Father and the Son to know, and Thee through endless times confessed, of both the eternal Spirit blest."
+      },
+      {
+        "lat": "Accénde lumen sénsibus, infúnde amórem córdibus, infírma nostri córporis virtúte firmans pérpeti.",
+        "eng": "Kindle our senses from above, and make our hearts o'erflow with love; with patience firm and virtue high the weakness of our flesh supply."
+      },
+      {
+        "lat": "Deo Patri sit glória, et Fílio, qui a mórtuis surréxit, ac Paráclito, in sæculórum sǽcula. Amen.",
+        "eng": "Praise be to Thee, Father and Son, and Holy Spirit, with them one; and may the Son on us bestow the gifts that from the Spirit flow. Amen."
       }
     ],
     "occasions": [
@@ -1341,28 +1442,28 @@
   },
   {
     "slug": "benediciteDominum",
-    "title": "Benedic, Anima Mea, Domino",
+    "title": "Bénedic, Ánima Mea, Dómino",
     "eng": "Bless the Lord, O My Soul",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "note": "A short thanksgiving from Psalm 102, suitable as a grace or general thanksgiving.",
     "occasions": [
       "Meals"
     ],
     "lines": [
       {
-        "lat": "Benedic, anima mea, Domino, et omnia quae intra me sunt nomini sancto ejus.",
+        "lat": "Bénedic, ánima mea, Dómino, et ómnia quæ intra me sunt nómini sancto eius.",
         "eng": "Bless the Lord, O my soul, and let all that is within me bless His holy name."
       },
       {
-        "lat": "Benedic, anima mea, Domino, et noli oblivisci omnes retributiones ejus.",
+        "lat": "Bénedic, ánima mea, Dómino, et noli oblivísci omnes retributiónes eius.",
         "eng": "Bless the Lord, O my soul, and never forget all He hath done for thee."
       },
       {
-        "lat": "Qui replet in bonis desiderium tuum: renovabitur ut aquilae juventus tua.",
+        "lat": "Qui replet in bonis desidérium tuum: renovábitur ut áquilæ iuvéntus tua.",
         "eng": "Who satisfieth thy desire with good things: thy youth shall be renewed like the eagle's."
       },
       {
-        "lat": "Gloria Patri, et Filio, et Spiritui Sancto. Amen.",
+        "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Amen.",
         "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. Amen."
       }
     ]
@@ -1371,7 +1472,7 @@
     "slug": "stJoseph",
     "title": "Ad te, beáte Joseph",
     "eng": "Prayer to St. Joseph",
-    "category": "Devotiones",
+    "category": "Devotiónes",
     "occasions": [
       "Morning",
       "For Protection",
@@ -1384,15 +1485,15 @@
         "eng": "To thee, O blessed Joseph, we have recourse in our tribulation, and having implored the help of thy most holy Spouse, we now, with hearts filled with confidence, earnestly beg thee also to take us under thy protection."
       },
       {
-        "lat": "Per eam, quǽsumus, quæ te cum immaculáta Vírgine Dei Genitríce conjúnxit, caritátem, perque patérnum, quo Púerum Jesum ampléxus es, amórem, súpplices deprecámur,",
+        "lat": "Per eam, quǽsumus, quæ te cum immaculáta Vírgine Dei Genitríce conjúnxit, caritátem, perque patérnum, quo Púerum Iesum ampléxus es, amórem, súpplices deprecámur,",
         "eng": "Through that charity wherewith thou wast united to the Immaculate Virgin Mother of God, and through that fatherly love with which thou didst embrace the Child Jesus, we humbly beg thee"
       },
       {
-        "lat": "ut benignus respícias hereditátem, quam Jesus Christus sánguine suo acquisívit, et necessitátibus nostris tua virtúte et ope succúrras.",
+        "lat": "ut benignus respícias hereditátem, quam Iesus Christus sánguine suo acquisívit, et necessitátibus nostris tua virtúte et ope succúrras.",
         "eng": "to look graciously upon the beloved inheritance which Jesus Christ purchased by His blood, and to aid us in our necessities with thy power and strength."
       },
       {
-        "lat": "Tuére, o Custos providentíssime divínæ Famíliæ, Jesu Christi sóbolem eléctam; próhibe a nobis, amantíssime Pater, omnem érrórum ac corruptelárum luem;",
+        "lat": "Tuére, o Custos providentíssime divínæ Famíliæ, Iesu Christi sóbolem eléctam; próhibe a nobis, amantíssime Pater, omnem érrórum ac corruptelárum luem;",
         "eng": "Defend, O most watchful guardian of the Holy Family, the chosen children of Jesus Christ; keep from us, O most loving father, every contagion of error and corrupting influence;"
       },
       {
@@ -1400,7 +1501,7 @@
         "eng": "mercifully assist us from heaven, O most powerful protector, in our struggle with the power of darkness;"
       },
       {
-        "lat": "et sicut olim Púerum Jesum e summo erípuisti vitæ discrímine, ita nunc Ecclésiam sanctam Dei ab hostílibus insídiis atque ab omni adversitáte defénde:",
+        "lat": "et sicut olim Púerum Iesum e summo erípuisti vitæ discrímine, ita nunc Ecclésiam sanctam Dei ab hostílibus insídiis atque ab omni adversitáte defénde:",
         "eng": "and as once thou didst rescue the Child Jesus from deadly peril, so now protect God's Holy Church from the snares of the enemy and from all adversity;"
       },
       {
@@ -1413,7 +1514,7 @@
     "slug": "communioSpiritualis",
     "title": "Commúnio Spirituális",
     "eng": "Spiritual Communion",
-    "category": "Eucharistic",
+    "category": "Devotiónes",
     "occasions": [
       "Before Mass",
       "After Mass",
@@ -1422,7 +1523,7 @@
     "note": "Attributed to St. Alphonsus Liguori. Prayed when unable to receive Holy Communion sacramentally.",
     "lines": [
       {
-        "lat": "Mi Jesu, credo te in Sanctíssimo Sacraménto præséntem esse. Amo te super ómnia et desídero te in ánimam meam.",
+        "lat": "Mi Iesu, credo te in Sanctíssimo Sacraménto præséntem esse. Amo te super ómnia et desídero te in ánimam meam.",
         "eng": "My Jesus, I believe that Thou art present in the Most Blessed Sacrament. I love Thee above all things, and I desire to receive Thee into my soul."
       },
       {
