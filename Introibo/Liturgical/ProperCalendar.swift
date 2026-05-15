@@ -21,7 +21,10 @@ enum ProperCalendar {
             return slug
         }
 
-        return nil
+        // Final fallback: generic sanctorale slug for the calendar date
+        let month = cal.component(.month, from: today)
+        let day = cal.component(.day, from: today)
+        return String(format: "sancti-%02d-%02d", month, day)
     }
 
     static func properSlugWithFallback(for date: Date, store: [String]) -> String? {
@@ -198,12 +201,13 @@ enum ProperCalendar {
         if let feast = fixedFeasts[key] {
             return feast
         }
-        return String(format: "sancti-%02d-%02d", month, day)
+        return nil
     }
 
     private static let fixedFeasts: [Int: String] = [
          101: "circumcision",
          106: "epiphany",
+         501: "st-joseph-worker",
          202: "purification",
          319: "st-joseph",
          325: "annunciation",

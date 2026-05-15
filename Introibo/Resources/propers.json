@@ -22146,5 +22146,51 @@
       "eng": "May the inpouring of the Holy Spirit cleanse our hearts, O Lord, and make them fertile through the dew He sprinkles upon them."
     },
     "preface": null
+  },
+  {
+    "slug": "st-joseph-worker",
+    "title": "S. Ioseph Opificis",
+    "english": "St. Joseph the Worker",
+    "rank": 1,
+    "color": "white",
+    "season": "sanctorale",
+    "introit": {
+      "lat": "Sapientia reddidit iustis mercedem laborum suorum, et deduxit illos in via mirabili, et fuit illis in velamento diei, et in luce stellarum per noctem, alleluia.",
+      "eng": "Wisdom rendered to the just the wages of their labours, and conducted them in a wonderful way; and was to them for a covert by day, and for the light of stars by night, alleluia."
+    },
+    "collect": {
+      "lat": "Rerum conditor Deus, qui legem laboris humano generi statuisti: concede propitius; ut, sancti Ioseph exemplo et patrocinio, opera perficiamus quae praecipis, et praemia consequamur quae promittis. Per Dominum.",
+      "eng": "O God, Creator of all things, who hast imposed upon mankind the law of labour: graciously grant that, by the example and patronage of St. Joseph, we may accomplish the works Thou dost command, and obtain the rewards Thou dost promise. Through our Lord."
+    },
+    "epistle": {
+      "ref": "Col 3:14-15, 17, 23-24",
+      "lat": "Fratres: Super omnia autem haec, caritatem habete, quod est vinculum perfectionis. Et pax Christi exsultet in cordibus vestris, in qua et vocati estis in uno corpore: et grati estote.",
+      "eng": "Brethren: Above all these things have charity, which is the bond of perfection. And let the peace of Christ rejoice in your hearts, wherein also you are called in one body: and be ye thankful."
+    },
+    "gradual": {
+      "lat": "Alleluia, alleluia. De quacumque tribulatione clamaverint ad me, exaudiam eos, et ero protector eorum semper. Alleluia.",
+      "eng": "Alleluia, alleluia. In whatever tribulation they shall cry to Me, I will hear them, and I will be their protector always. Alleluia."
+    },
+    "gospel": {
+      "ref": "Mt 13:54-58",
+      "lat": "In illo tempore: Veniens Iesus in patriam suam, docebat eos in synagogis eorum, ita ut mirarentur, et dicerent: Unde huic sapientia haec, et virtutes?",
+      "eng": "At that time: Jesus coming into His own country, taught them in their synagogues, so that they wondered and said: How came this man by this wisdom and miracles?"
+    },
+    "offertory": {
+      "lat": "Benedictus es, Domine, qui exsultas super omnes gentes: et in altissimis habitas, et humilia respicis, alleluia.",
+      "eng": "Blessed art Thou, O Lord, who dost rejoice over all nations: and who dwellest in the highest, and hast regard to the lowly, alleluia."
+    },
+    "secret": {
+      "lat": "Quae de tuis donis offerimus, oblata, Domine, sanctifica: et, intercedente beato Ioseph, nos per ea purifica. Per Dominum.",
+      "eng": "Sanctify, O Lord, the gifts we offer from Thy bounty: and by the intercession of blessed Joseph, cleanse us through them. Through our Lord."
+    },
+    "communion": {
+      "lat": "Quodcumque facitis in verbo aut in opere, omnia in nomine Domini Iesu Christi, gratias agentes Deo et Patri per ipsum, alleluia.",
+      "eng": "All whatsoever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God and the Father by Him, alleluia."
+    },
+    "postcommunion": {
+      "lat": "Adesto nobis, quaesumus, misericors Deus: et, intercedente pro nobis beato Ioseph Confessore, tua circa nos propitiatus dona custodi. Per Dominum.",
+      "eng": "Be present with us, we beseech Thee, O merciful God: and by the intercession of blessed Joseph, Confessor, graciously guard Thy gifts bestowed upon us. Through our Lord."
+    }
   }
 ]

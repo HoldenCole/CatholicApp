@@ -358,6 +358,19 @@ extension LiturgicalContext {
             if weekOfYear == ashWeek { return true }
         }
 
+        // Pentecost ember: week after Pentecost
+        let pentecostWeek = cal.component(.weekOfYear, from: pentecost)
+        if weekOfYear == pentecostWeek { return true }
+
+        // September ember: week containing the Wednesday after Sept 14
+        var sept14Comps = DateComponents()
+        sept14Comps.year = cal.component(.year, from: date)
+        sept14Comps.month = 9; sept14Comps.day = 14
+        if let sept14 = cal.date(from: sept14Comps) {
+            let sept14Week = cal.component(.weekOfYear, from: sept14)
+            if weekOfYear == sept14Week + 1 { return true }
+        }
+
         return false
     }
 }
