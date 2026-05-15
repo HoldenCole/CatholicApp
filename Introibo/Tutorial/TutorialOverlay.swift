@@ -73,14 +73,17 @@ struct TutorialOverlay: View {
             }
             .contentShape(Rectangle())
             .onTapGesture {
+                let isLastStep = manager.currentStepIndex >= manager.currentSteps.count - 1
                 withAnimation(.easeOut(duration: 0.3)) {
                     visible = false
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    withAnimation(.easeIn(duration: 0.3)) {
-                        visible = true
-                    }
                     manager.advance()
+                    if !isLastStep {
+                        withAnimation(.easeIn(duration: 0.3)) {
+                            visible = true
+                        }
+                    }
                 }
             }
             .opacity(visible ? 1 : 0)
