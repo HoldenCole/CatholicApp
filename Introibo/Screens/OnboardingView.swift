@@ -207,7 +207,7 @@ struct OnboardingView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     featureRow(icon: "sun.horizon", title: "Liturgical Today", desc: "Daily psalm, penance, season, feast days, and today's Mass propers.")
                     featureRow(icon: "book.closed", title: "1962 Missal", desc: "Complete Ordinary and 424 daily Propers interleaved in correct Mass order.")
-                    featureRow(icon: "book.pages", title: "38 Prayers", desc: "Every essential prayer in Latin and English with a personal prayer rule.")
+                    featureRow(icon: "book.pages", title: "40 Prayers", desc: "Every essential prayer in Latin and English with a personal prayer rule.")
                     featureRow(icon: "cross", title: "Rosary & Stations", desc: "Interactive bead-by-bead Rosary. 14 Stations with meditations.")
                     featureRow(icon: "clock", title: "Divine Office", desc: "All 8 canonical hours of the 1962 Breviary.")
                     featureRow(icon: "heart", title: "Confession Guide", desc: "Examination of conscience and two guided confession paths.")
