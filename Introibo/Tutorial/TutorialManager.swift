@@ -28,6 +28,11 @@ final class TutorialManager {
     var currentSteps: [TutorialStep] = []
     var currentStepIndex = 0
 
+    /// Which tab to navigate to when a feature tutorial starts (nil = stay)
+    var targetTabIndex: Int? = nil
+    /// Which sub-screen to navigate to from Today (nil = stay on Today)
+    var targetSubScreen: String? = nil
+
     /// Identifier for the current tour type, used to determine which
     /// completion flag to set when the tour finishes.
     private var activeTourType: TourType = .main
@@ -75,6 +80,41 @@ final class TutorialManager {
         currentSteps = feature.steps
         currentStepIndex = 0
         persistedStepIndex = 0
+
+        // Navigate to the correct screen
+        switch feature {
+        case .homeNavigation:
+            targetTabIndex = 0
+            targetSubScreen = nil
+        case .office:
+            targetTabIndex = 0
+            targetSubScreen = "office"
+        case .missal:
+            targetTabIndex = 1
+            targetSubScreen = nil
+        case .prayers:
+            targetTabIndex = 2
+            targetSubScreen = nil
+        case .rosary:
+            targetTabIndex = 0
+            targetSubScreen = "rosary"
+        case .stations:
+            targetTabIndex = 0
+            targetSubScreen = "stations"
+        case .saints:
+            targetTabIndex = 0
+            targetSubScreen = "saints"
+        case .learn:
+            targetTabIndex = 3
+            targetSubScreen = nil
+        case .confession:
+            targetTabIndex = 0
+            targetSubScreen = "confession"
+        case .reference:
+            targetTabIndex = 4
+            targetSubScreen = nil
+        }
+
         isShowingTutorial = true
     }
 
@@ -101,6 +141,8 @@ final class TutorialManager {
         currentSteps = []
         currentStepIndex = 0
         persistedStepIndex = 0
+        targetTabIndex = nil
+        targetSubScreen = nil
 
         switch activeTourType {
         case .main:

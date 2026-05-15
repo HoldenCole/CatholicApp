@@ -12,6 +12,8 @@ struct TodayView: View {
     @State private var showSettings = false
     @State private var offeringTapped = false
     @State private var showProper = false
+    @State private var tutorialNavTarget: String? = nil
+    private var tutorial: TutorialManager { TutorialManager.shared }
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var discipline: PenanceDiscipline { PenanceDiscipline(rawValue: penanceRaw) ?? .discipline1962 }
@@ -22,6 +24,23 @@ struct TodayView: View {
                 VStack(spacing: 0) {
                     header
                     mainContent
+                }
+            }
+            .navigationDestination(item: $tutorialNavTarget) { target in
+                switch target {
+                case "office":     OfficeView()
+                case "stations":   StationsView()
+                case "rosary":     RosaryView()
+                case "confession": ConfessionView()
+                case "saints":     SaintsView()
+                default:           EmptyView()
+                }
+            }
+            .onChange(of: tutorial.targetSubScreen) { _, newTarget in
+                if let target = newTarget {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        tutorialNavTarget = target
+                    }
                 }
             }
             .background(Color.pageBackground.ignoresSafeArea())

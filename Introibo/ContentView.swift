@@ -7,24 +7,30 @@ struct ContentView: View {
     private var theme: AppTheme { AppTheme(rawValue: themeRaw) ?? .parchment }
 
     @State private var spotlightFrames: [String: CGRect] = [:]
+    @State private var selectedTab = 0
 
     var body: some View {
         ZStack {
-            TabView {
+            TabView(selection: $selectedTab) {
                 TodayView()
                     .tabItem { Label("Hodie", systemImage: "sun.horizon") }
+                    .tag(0)
 
                 MissalView()
                     .tabItem { Label("Missa", systemImage: "book.closed") }
+                    .tag(1)
 
                 PrayersView()
                     .tabItem { Label("Oratio", systemImage: "book.pages") }
+                    .tag(2)
 
                 LearnView()
                     .tabItem { Label("Schola", systemImage: "graduationcap") }
+                    .tag(3)
 
                 ReferenceView()
                     .tabItem { Label("Liber", systemImage: "text.book.closed") }
+                    .tag(4)
             }
             .tint(Color.sanctuaryRed)
             .onPreferenceChange(SpotlightFrameKey.self) { frames in
@@ -38,6 +44,11 @@ struct ContentView: View {
         }
         .onAppear { updateTabBar() }
         .onChange(of: themeRaw) { _, _ in updateTabBar() }
+        .onChange(of: tutorialManager.targetTabIndex) { _, newTab in
+            if let tab = newTab {
+                withAnimation { selectedTab = tab }
+            }
+        }
     }
 
     private func updateTabBar() {
