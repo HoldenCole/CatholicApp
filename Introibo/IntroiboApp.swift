@@ -6,6 +6,17 @@ struct IntroiboApp: App {
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var splashFinished = false
 
+    init() {
+        // Migration: existing users who already have settings should skip onboarding
+        if !UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
+            if UserDefaults.standard.string(forKey: SettingsKey.rite) != nil
+                || UserDefaults.standard.string(forKey: SettingsKey.language) != nil
+                || UserDefaults.standard.string(forKey: SettingsKey.theme) != nil {
+                UserDefaults.standard.set(true, forKey: "hasCompletedOnboarding")
+            }
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             if !hasCompletedOnboarding {

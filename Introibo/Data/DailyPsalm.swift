@@ -1,6 +1,6 @@
 import Foundation
 
-// A rotating daily psalm verse. Picks from a curated set of 45
+// A rotating daily psalm verse. Picks from a curated set of 44
 // psalm verses, cycling by day-of-year so the same verse appears
 // on the same date each year.
 
