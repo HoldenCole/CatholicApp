@@ -199,42 +199,30 @@ struct SettingsView: View {
 
     // MARK: - Tutorial
 
+    @State private var showTutorials = false
+
     private var tutorialSection: some View {
         Section {
-            ForEach(FeatureTutorial.allCases) { feature in
-                Button {
-                    dismiss()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                        TutorialManager.shared.startFeatureTutorial(feature)
-                    }
-                } label: {
-                    HStack(spacing: 12) {
-                        Image(systemName: feature.systemImage)
-                            .font(.system(size: 14))
-                            .foregroundStyle(Color.sanctuaryRed)
-                            .frame(width: 24, alignment: .center)
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(feature.label)
-                                .font(.body)
-                                .foregroundStyle(Color.primaryText)
-                            Text(feature.latinLabel)
-                                .font(.captionSm)
-                                .italic()
-                                .foregroundStyle(Color.tertiaryText)
-                        }
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .font(.system(size: 12))
-                            .foregroundStyle(Color.tertiaryText)
-                    }
+            Button { showTutorials = true } label: {
+                HStack {
+                    Label("Tutorials", systemImage: "questionmark.circle")
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    Text("\(FeatureTutorial.allCases.count)")
+                        .font(.captionSm)
+                        .foregroundStyle(Color.tertiaryText)
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12))
+                        .foregroundStyle(Color.tertiaryText)
                 }
-                .buttonStyle(.plain)
-                .listRowBackground(Color.pageBackground)
+            }
+            .buttonStyle(.plain)
+            .listRowBackground(Color.pageBackground)
+            .sheet(isPresented: $showTutorials) {
+                TutorialsListView()
             }
         } header: {
             Text("Tutoriales")
-        } footer: {
-            Text("Per-feature tutorials can be re-run anytime.")
         }
     }
 
