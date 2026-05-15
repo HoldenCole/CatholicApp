@@ -45,6 +45,8 @@ import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
 import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
 import com.lampstandhq.introibo.data.model.MassProper
+import com.lampstandhq.introibo.data.model.Prayer
+import com.lampstandhq.introibo.ui.prayers.PrayerDetailSheet
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -138,6 +140,7 @@ fun TodayScreen(
 
     var showSettings by remember { mutableStateOf(false) }
     var showProper by remember { mutableStateOf<MassProper?>(null) }
+    var showOfferingPrayer by remember { mutableStateOf<Prayer?>(null) }
 
     val litColor = liturgicalColor(ctx.colour)
 
@@ -399,6 +402,14 @@ fun TodayScreen(
                 onDismiss = { showProper = null },
             )
         }
+    }
+
+    // Offering prayer detail
+    showOfferingPrayer?.let { prayer ->
+        PrayerDetailSheet(
+            prayer = prayer,
+            onDismiss = { showOfferingPrayer = null },
+        )
     }
 }
 
@@ -725,7 +736,9 @@ private fun DevotionsSection(
         DevotionRow(title = "The Divine Office", latin = "Officium Divinum, VIII Horae Canonicae", onClick = onNavigateOffice)
         DevotionRow(title = "Stations of the Cross", latin = "Via Crucis, XIV stationes", onClick = onNavigateStations)
         DevotionRow(title = "Confession Guide", latin = "De Confessione", onClick = onNavigateConfession)
-        DevotionRow(title = vm.offeringTitle(), latin = vm.offeringLatin())
+        DevotionRow(title = vm.offeringTitle(), latin = vm.offeringLatin(), onClick = {
+            ContentStore.prayer(vm.offeringSlug())?.let { showOfferingPrayer = it }
+        })
     }
 }
 
