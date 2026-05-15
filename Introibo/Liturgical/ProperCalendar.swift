@@ -14,24 +14,42 @@ enum ProperCalendar {
         let year = cal.component(.year, from: date)
         let easter = Computus.easterSunday(year: year)
         let today = cal.startOfDay(for: date)
+        let dow = cal.component(.weekday, from: today) - 1 // 0=Sun..6=Sat
 
-        // High-priority moveable feasts override the sanctorale
+        // High-priority moveable feasts override everything
         if let slug = moveableSlug(date: today, easter: easter, cal: cal) {
             return slug
         }
 
+        // Fixed sanctorale feasts (high-rank saints in fixedFeasts dictionary)
         if let slug = sanctoraleSlug(date: today, year: year, cal: cal, rite: rite) {
             return slug
         }
 
+        // On Sundays, the temporal cycle takes precedence over generic saints
+        if dow == 0 {
+            if let slug = temporaleSlug(date: today, easter: easter, year: year, cal: cal) {
+                return slug
+            }
+        }
+
+        // On weekdays, check if a saint's feast proper exists for this date
+        // Saints' feasts override ferial days in the temporal cycle
+        let month = cal.component(.month, from: today)
+        let day = cal.component(.day, from: today)
+        let sanctiSlug = String(format: "sancti-%02d-%02d", month, day)
+        let propers = ContentStore.shared.propers
+        if propers.contains(where: { $0.slug == sanctiSlug }) {
+            return sanctiSlug
+        }
+
+        // Temporal cycle for weekdays without a saint's feast
         if let slug = temporaleSlug(date: today, easter: easter, year: year, cal: cal) {
             return slug
         }
 
-        // Final fallback: generic sanctorale slug for the calendar date
-        let month = cal.component(.month, from: today)
-        let day = cal.component(.day, from: today)
-        return String(format: "sancti-%02d-%02d", month, day)
+        // Final fallback
+        return sanctiSlug
     }
 
     static func properSlugWithFallback(for date: Date, store: [String], rite: MissalRite = .rite1962) -> String? {
