@@ -371,11 +371,14 @@ struct OnboardingView: View {
                     withAnimation { page += 1 }
                 } label: {
                     Text("I\u{2019}ll choose later")
-                        .font(.captionSm)
-                        .foregroundStyle(Color.tertiaryText)
+                        .font(.body)
+                        .foregroundStyle(Color.secondaryText)
+                        .padding(.vertical, 12)
+                        .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.plain)
-                .padding(.top, 16)
+                .padding(.horizontal, 28)
+                .padding(.top, 12)
 
                 Spacer(minLength: 40)
             }
@@ -431,10 +434,13 @@ struct OnboardingView: View {
                     withAnimation { page += 1 }
                 } label: {
                     Text("I\u{2019}ll set this up later")
-                        .font(.captionSm)
-                        .foregroundStyle(Color.tertiaryText)
+                        .font(.body)
+                        .foregroundStyle(Color.secondaryText)
+                        .padding(.vertical, 12)
+                        .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.plain)
+                .padding(.horizontal, 28)
 
                 Spacer(minLength: 40)
             }
