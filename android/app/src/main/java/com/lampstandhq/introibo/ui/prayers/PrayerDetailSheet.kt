@@ -16,8 +16,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -58,17 +56,16 @@ fun PrayerDetailSheet(
                 .fillMaxSize()
                 .background(colors.pageBackground),
         ) {
-            TopAppBar(
-                title = {},
-                navigationIcon = {
-                    TextButton(onClick = onDismiss) {
-                        Text("Done", color = colors.sanctuaryRed, style = type.body)
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = colors.walnut,
-                ),
-            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(colors.walnut)
+                    .padding(horizontal = 8.dp, vertical = 4.dp),
+            ) {
+                TextButton(onClick = onDismiss) {
+                    Text("Done", color = colors.sanctuaryRed, style = type.body)
+                }
+            }
 
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 // Header

@@ -20,9 +20,17 @@ import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.LibraryBooks
 import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.runtime.rememberCoroutineScope
+import com.lampstandhq.introibo.ui.components.SmallLabel
+import kotlinx.coroutines.launch
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -101,7 +109,7 @@ fun ReferenceScreen() {
         }
     }
 
-    // Section filter: show first entry from that section category
+    // Section filter: show filtered list from that category
     selectedSection?.let { section ->
         val entries = when (section) {
             "References" -> ContentStore.reference
@@ -110,14 +118,17 @@ fun ReferenceScreen() {
             "Glossary" -> ContentStore.reference.filter { it.cat.contains("Glossar", ignoreCase = true) }
             else -> emptyList()
         }
-        val entry = entries.firstOrNull()
-        if (entry != null) {
-            ReferenceDetailScreen(
-                entry = entry,
+        if (entries.isNotEmpty()) {
+            SectionListSheet(
+                title = section,
+                entries = entries,
+                onSelectEntry = { entry ->
+                    selectedSection = null
+                    selectedEntry = entry
+                },
                 onDismiss = { selectedSection = null },
             )
         } else {
-            // Fallback: clear selection if no matching entries
             selectedSection = null
         }
     }
@@ -128,6 +139,61 @@ fun ReferenceScreen() {
             entry = entry,
             onDismiss = { selectedEntry = null },
         )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SectionListSheet(
+    title: String,
+    entries: List<ReferenceEntry>,
+    onSelectEntry: (ReferenceEntry) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val scope = rememberCoroutineScope()
+
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = sheetState,
+        containerColor = colors.pageBackground,
+    ) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                SmallLabel(text = title, color = colors.sanctuaryRed)
+                TextButton(onClick = {
+                    scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
+                }) {
+                    Text("Done", color = colors.sanctuaryRed, style = type.body)
+                }
+            }
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                items(entries.size) { i ->
+                    val entry = entries[i]
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onSelectEntry(entry) }
+                            .padding(vertical = 8.dp),
+                    ) {
+                        Text(entry.title, style = type.titleM, color = colors.primaryText, fontStyle = FontStyle.Italic)
+                        if (entry.latin != null) {
+                            Text(entry.latin, style = type.captionSm, color = colors.secondaryText, fontStyle = FontStyle.Italic)
+                        }
+                    }
+                    if (i < entries.size - 1) HorizontalDivider(color = colors.frameLine)
+                }
+            }
+        }
     }
 }
 
