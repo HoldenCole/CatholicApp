@@ -23,6 +23,38 @@
       "lat": "Cónditor alme síderum,<br>ætérna lux credéntium,<br>Christe, Redémptor ómnium,<br>exáudi preces súpplicum.\n\nQui cóndolens intéritu<br>mortis períre sǽculum,<br>salvásti mundum lánguidum,<br>donans reis remédium.\n\nVergénte mundi véspere,<br>uti sponsus de thálamo,<br>egréssus honestíssima<br>Vírginis matris cláusula.\n\nCujus forti poténtiæ<br>genu curvántur ómnia;<br>cæléstia, terréstria,<br>nutu faténtur súbdita.\n\nTe, Sancte, fide quǽsumus,<br>ventúre Judex sǽculi,<br>consérva nos in témpore<br>hostis a telo pérfidi.\n\nLaus, honor, virtus, glória<br>Deo Patri cum Fílio,<br>Sancto simul Paráclito,<br>in sæculórum sǽcula. Amen.",
       "eng": "Creator of the starry height,<br>Thy people's everlasting light,<br>O Christ, Redeemer of us all,<br>we pray Thee, hear us when we call.\n\nThou, grieving that the ancient curse<br>should doom to death a universe,<br>hast found the healing, full of grace,<br>to cure and save our ruined race.\n\nThou cam'st, the Bridegroom of the bride,<br>as drew the world to eventide;<br>proceeding from a virgin shrine,<br>the spotless Victim all divine.\n\nAt whose dread Name, majestic now,<br>all knees must bend, all hearts must bow;<br>all things celestial Thee shall own,<br>and things terrestrial, Lord, alone.\n\nO Thou, whose coming is with dread<br>to judge the living and the dead,<br>preserve us, while we dwell below,<br>from every insult of the foe.\n\nAll praise and honour, power and might,<br>to God the Father and the Son,<br>together with the Paraclete,<br>through everlasting ages. Amen.",
       "variationKey": "vesperae.hymn"
+    },
+    "prima.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Iam lucis orto sídere",
+      "lat": "Jam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.\n\nLinguam refrénans témperet,<br>ne litis horror ínsonet;<br>visum fovéndo cóntegat,<br>ne vanitátes háuriat.\n\nSint pura cordis íntima,<br>absístat et vecórdia;<br>carnis terat supérbiam<br>potus cibíque párcitas.\n\nUt cum dies abscésserit,<br>noctémque sors redúxerit,<br>mundi per abstinéntiam<br>ipsi canámus glóriam.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power.\n\nMay He our tongues in order hold,<br>that discord's horror sound not here;<br>and guard our eyes from sights untold,<br>that vanities may not appear.\n\nO may the inmost heart be pure,<br>and folly's grasp be far removed;<br>let abstinence in food endure,<br>that pride of flesh be reproved.\n\nSo when the daylight fades away,<br>and night in turn again draws near,<br>through abstinence from worldly sway<br>we sing His glory without fear.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "prima.hymn"
+    },
+    "tertia.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Nunc, Sancte, nobis Spíritus",
+      "lat": "Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.\n\nOs, lingua, mens, sensus, vigor,<br>confessiónem pérsonent;<br>flamméscat igne cáritas,<br>accéndat ardor próximos.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness.\n\nLet mouth and tongue, mind, strength, and will,<br>sound forth our witness to Thy name;<br>and charity's devouring flame<br>set all our being in a glow.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "tertia.hymn"
+    },
+    "sexta.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rector potens, verax Deus",
+      "lat": "Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.\n\nExstíngue flammas lítium,<br>aufer calórem nóxium,<br>confer salútem córporum,<br>verámque pacem córdium.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day.\n\nExtinguish Thou each sinful fire,<br>and banish every ill desire;<br>and while Thou keepest the body whole,<br>shed forth Thy peace upon the soul.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "sexta.hymn"
+    },
+    "nona.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rerum Deus tenax vigor",
+      "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "nona.hymn"
     }
   },
   "lent": {
@@ -81,6 +113,14 @@
       "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nPræsta, beáta Trínitas,<br>concéde, simplex Únitas,<br>ut fructuósa sint tuis<br>jejuniórum múnera. Amen.",
       "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
       "variationKey": "nona.hymn"
+    },
+    "completorium.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Te lucis ante términum",
+      "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.\n\nProcul recédant sómnia,<br>et nóctium phantásmata;<br>hostémque nostrum cómprime,<br>ne polluántur córpora.\n\nPræsta, beáta Trínitas,<br>concéde, simplex Únitas,<br>ut fructuósa sint tuis<br>jejuniórum múnera. Amen.",
+      "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
+      "variationKey": "completorium.hymn"
     }
   },
   "passion": {
@@ -139,6 +179,14 @@
       "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nGlória tibi, Dómine,<br>qui passus es pro ímpiis,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
       "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nAll glory, Lord, to Thee we pay,<br>who didst for sinners suffer loss,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
       "variationKey": "nona.hymn"
+    },
+    "completorium.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Te lucis ante términum",
+      "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.\n\nProcul recédant sómnia,<br>et nóctium phantásmata;<br>hostémque nostrum cómprime,<br>ne polluántur córpora.\n\nGlória tibi, Dómine,<br>qui passus es pro ímpiis,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nAll glory, Lord, to Thee we pay,<br>who didst for sinners suffer loss,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "completorium.hymn"
     }
   },
   "easter": {
@@ -204,6 +252,72 @@
       "title": "Rerum Deus tenax vigor",
       "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nDeo Patri sit glória,<br>et Fílio, qui a mórtuis<br>surréxit, ac Paráclito,<br>in sempitérna sǽcula. Amen.",
       "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nTo God the Father glory be,<br>and to the Son, who from the dead<br>arose, and to the Paraclete,<br>through everlasting ages. Amen.",
+      "variationKey": "nona.hymn"
+    }
+  },
+  "christmas": {
+    "matutinum.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Jesu Redémptor ómnium",
+      "lat": "Jesu Redémptor ómnium,<br>quem lucis ante oríginem<br>parem patérnæ glóriæ<br>Pater suprémus édidit.\n\nTu lumen et splendor Patris,<br>tu spes perénnis ómnium,<br>inténde quas fundunt preces<br>tui per orbem sérvuli.\n\nMeménto, rerum Cónditor,<br>nostri quod olim córporis,<br>sacráta ab alvo Vírginis<br>nascéndo formam súmpseris.\n\nTestátur hoc præsens dies,<br>currens per anni círculum,<br>quod solus e sinu Patris<br>mundi salus advéneris.\n\nHunc astra, tellus, ǽquora,<br>hunc omne quod cælo subest,<br>salútis auctórem novæ<br>novo salútat cántico.\n\nEt nos, beáta quos sacri<br>rigávit unda sánguinis,<br>natális ob diem tui<br>hymni tribútum sólvimus.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Jesu, Redeemer of the world,<br>whom, ere the earliest dawn of light,<br>the Father from His bosom sent,<br>co-equal in His glorious might.\n\nThou brightness of the Father's face,<br>Thou hope of all who live on earth,<br>give ear to all who cry to Thee,<br>Thy servants scattered o'er the world.\n\nRemember, Maker of all things,<br>that Thou didst once our nature take,<br>born of a Virgin's spotless womb,<br>and clothed in our poor mortal frame.\n\nThis present day doth testify,<br>revolving in its yearly course,<br>that from the Father's throne alone<br>Thou camest for the world's release.\n\nHim heaven and earth, Him ocean's deep,<br>Him all that dwell beneath the sky,<br>the Author of the new salvation,<br>with a new song do glorify.\n\nAnd we, whom Thy most sacred Blood<br>hath washed and cleansed from every stain,<br>upon Thy birthday offer here<br>the tribute of our grateful strain.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "matutinum.hymn"
+    },
+    "laudes.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "A solis ortus cárdine",
+      "lat": "A solis ortus cárdine<br>ad usque terræ límitem,<br>Christum canámus Príncipem,<br>natum María Vírgine.\n\nBeátus auctor sǽculi<br>servíle corpus índuit,<br>ut carne carnem líberans<br>ne pérderet quos cóndidit.\n\nCastæ Paréntis víscera<br>cæléstis intrat grátia,<br>venter Puéllæ bájulat<br>secréta quæ non nóverat.\n\nDomus pudíci péctoris<br>templum repénte fit Dei;<br>intácta nésciens virum<br>concépit alvo Fílium.\n\nEnítitur puérpera<br>quem Gábriel prǽdíxerat,<br>quem ventre Matris géstiens<br>Baptísta clausum sénserat.\n\nFœno jacére pértulit,<br>præsépe non abhórruit,<br>et lacte módico pastus est<br>per quem nec ales ésurit.\n\nGaudet chorus cæléstium<br>et Ángeli canunt Deo,<br>palámque fit pastóribus<br>Pastor, Creátor ómnium.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "From lands that see the sun arise<br>to earth's remotest boundaries,<br>the Virgin-born we sing to praise,<br>the Christ, the Prince of endless days.\n\nThe world's great Author, rich in grace,<br>a servant's form did not disdain,<br>that, flesh by flesh from sin set free,<br>He might save those His hands had framed.\n\nWithin a spotless Mother's breast<br>the grace of heaven found its nest,<br>a maiden's womb in secret bore<br>a mystery unknown before.\n\nThe mansion of the modest heart<br>becomes a temple, set apart;<br>a Virgin, knowing not a man,<br>conceived a Son by heaven's plan.\n\nThe noble Mother brought to birth<br>Him Gabriel's promise told to earth,<br>whom John, while in his mother's womb,<br>had leapt with joy to greet and own.\n\nHe bore to lie upon the hay,<br>a manger-bed He did not spurn,<br>and He was fed on drops of milk<br>by whom the birds are taught to eat.\n\nThe heavenly choir rejoice and sing,<br>the Angels chant their God and King;<br>and Him the shepherds come to see,<br>the Shepherd, Maker of us all.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "laudes.hymn"
+    },
+    "vesperae.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Christe Redémptor ómnium",
+      "lat": "Christe Redémptor ómnium,<br>ex Patre Patris Únice,<br>solus ante princípium<br>natus ineffabíliter.\n\nTu lumen, tu splendor Patris,<br>tu spes perénnis ómnium,<br>inténde quas fundunt preces<br>tui per orbem fámuli.\n\nMeménto, salútis Auctor,<br>quod nostri quondam córporis,<br>ex illibáta Vírgine<br>nascéndo, formam súmpseris.\n\nHic præsens testátur dies,<br>currens per anni círculum,<br>quod solus a sede Patris<br>mundi salus advéneris.\n\nHunc cælum, terra, hunc mare,<br>hunc omne quod in eis est,<br>auctórem advéntus tui<br>laudat exsúltans cántico.\n\nNos quoque, qui sancto tuo<br>redémpti sumus sánguine,<br>ob diem natális tui<br>hymnum novum concínimus.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O Christ, Redeemer of us all,<br>the Father's only Son alone,<br>who, ere the worlds began to be,<br>wast born in ways beyond our thought.\n\nThou art the Father's light and gleam,<br>the hope of all who live on earth;<br>give ear unto the prayers we pour<br>from every corner of the world.\n\nRemember, Author of our health,<br>that once, of Virgin Mother born,<br>Thou tookest on Thee mortal form<br>to save the race Thyself hadst made.\n\nThis present day doth testify,<br>revolving in its yearly course,<br>that Thou, from Thy Father's throne alone,<br>didst come to save a ruined world.\n\nHim heaven and earth, Him ocean's deep,<br>Him all that dwell beneath the sky,<br>the Author of Thine advent here<br>with joyful song do magnify.\n\nAnd we as well, whom Thy dear Blood<br>hath cleansed and ransomed from all sin,<br>upon Thy birthday sing to Thee<br>a new and joyful hymn of praise.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "vesperae.hymn"
+    },
+    "completorium.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Te lucis ante términum",
+      "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.\n\nProcul recédant sómnia,<br>et nóctium phantásmata;<br>hostémque nostrum cómprime,<br>ne polluántur córpora.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "completorium.hymn"
+    },
+    "prima.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Iam lucis orto sídere",
+      "lat": "Jam lucis orto sídere,<br>Deum precémur súpplices,<br>ut in diúrnis áctibus<br>nos servet a nocéntibus.\n\nLinguam refrénans témperet,<br>ne litis horror ínsonet;<br>visum fovéndo cóntegat,<br>ne vanitátes háuriat.\n\nSint pura cordis íntima,<br>absístat et vecórdia;<br>carnis terat supérbiam<br>potus cibíque párcitas.\n\nUt cum dies abscésserit,<br>noctémque sors redúxerit,<br>mundi per abstinéntiam<br>ipsi canámus glóriam.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Now in the sun's new dawning ray,<br>lowly of heart we Thee implore:<br>that in our every deed this day<br>Thou keep us free from evil's power.\n\nMay He our tongues in order hold,<br>that discord's horror sound not here;<br>and guard our eyes from sights untold,<br>that vanities may not appear.\n\nO may the inmost heart be pure,<br>and folly's grasp be far removed;<br>let abstinence in food endure,<br>that pride of flesh be reproved.\n\nSo when the daylight fades away,<br>and night in turn again draws near,<br>through abstinence from worldly sway<br>we sing His glory without fear.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "prima.hymn"
+    },
+    "tertia.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Nunc, Sancte, nobis Spíritus",
+      "lat": "Nunc, Sancte, nobis Spíritus,<br>unum Patri cum Fílio,<br>dignáre promptus íngeri<br>nostro refúsus péctori.\n\nOs, lingua, mens, sensus, vigor,<br>confessiónem pérsonent;<br>flamméscat igne cáritas,<br>accéndat ardor próximos.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "Come, Holy Ghost, who ever One<br>reignest with Father and with Son,<br>it is the hour, our souls possess<br>with Thy full flood of holiness.\n\nLet mouth and tongue, mind, strength, and will,<br>sound forth our witness to Thy name;<br>and charity's devouring flame<br>set all our being in a glow.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "tertia.hymn"
+    },
+    "sexta.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rector potens, verax Deus",
+      "lat": "Rector potens, verax Deus,<br>qui témperas rerum vices,<br>splendóre mane illúminas,<br>et ígnibus merídiem.\n\nExstíngue flammas lítium,<br>aufer calórem nóxium,<br>confer salútem córporum,<br>verámque pacem córdium.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O God of truth, O Lord of might,<br>who orderest time and change aright,<br>who sendest the early morning ray,<br>and lightest with splendour all the day.\n\nExtinguish Thou each sinful fire,<br>and banish every ill desire;<br>and while Thou keepest the body whole,<br>shed forth Thy peace upon the soul.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
+      "variationKey": "sexta.hymn"
+    },
+    "nona.hymn": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Rerum Deus tenax vigor",
+      "lat": "Rerum Deus tenax vigor,<br>immótus in te pérmanens,<br>lucis diúrnæ témpora<br>succéssibus detérminans.\n\nLargíre clarum véspere,<br>quo vita nusquam décidat,<br>sed prǽmium mortis sacræ<br>perénnis instet glória.\n\nJesu, tibi sit glória,<br>qui natus es de Vírgine,<br>cum Patre et almo Spíritu,<br>in sempitérna sǽcula. Amen.",
+      "eng": "O strength and stay upholding all creation,<br>who ever dost Thyself unmoved abide,<br>yet day by day the light in due gradation<br>from hour to hour through all its changes guide.\n\nGrant to life's day a calm unclouded ending,<br>an eve untouched by shadows of decay,<br>the brightness of a holy deathbed blending<br>with dawning glories of th'eternal day.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
       "variationKey": "nona.hymn"
     }
   }

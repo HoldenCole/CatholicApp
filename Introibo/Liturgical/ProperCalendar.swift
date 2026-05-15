@@ -2,7 +2,14 @@ import Foundation
 
 enum ProperCalendar {
 
-    static func properSlug(for date: Date) -> String? {
+    // NOTE: Feast transfers (Item 28) — Full transfer logic for impeded
+    // feasts (e.g. when a 2nd-class feast falls on a 1st-class Sunday) is
+    // not yet implemented. This requires a multi-day look-ahead algorithm
+    // that evaluates rank precedence and finds the next open slot. Planned
+    // for a future release. For now, the higher-ranked day simply wins and
+    // the impeded feast is omitted.
+
+    static func properSlug(for date: Date, rite: MissalRite = .rite1962) -> String? {
         let cal = Calendar.liturgical
         let year = cal.component(.year, from: date)
         let easter = Computus.easterSunday(year: year)
@@ -13,7 +20,7 @@ enum ProperCalendar {
             return slug
         }
 
-        if let slug = sanctoraleSlug(date: today, year: year, cal: cal) {
+        if let slug = sanctoraleSlug(date: today, year: year, cal: cal, rite: rite) {
             return slug
         }
 
@@ -27,19 +34,19 @@ enum ProperCalendar {
         return String(format: "sancti-%02d-%02d", month, day)
     }
 
-    static func properSlugWithFallback(for date: Date, store: [String]) -> String? {
-        if let slug = properSlug(for: date), store.contains(slug) {
+    static func properSlugWithFallback(for date: Date, store: [String], rite: MissalRite = .rite1962) -> String? {
+        if let slug = properSlug(for: date, rite: rite), store.contains(slug) {
             return slug
         }
         let cal = Calendar.liturgical
         let dow = cal.component(.weekday, from: date) - 1
         if dow > 0 {
             let lastSunday = date.addingDays(-dow)
-            if let slug = properSlug(for: lastSunday), store.contains(slug) {
+            if let slug = properSlug(for: lastSunday, rite: rite), store.contains(slug) {
                 return slug
             }
         }
-        return properSlug(for: date)
+        return properSlug(for: date, rite: rite)
     }
 
     // Moveable feasts that take precedence over fixed sanctorale entries
@@ -177,7 +184,7 @@ enum ProperCalendar {
         return nil
     }
 
-    private static func sanctoraleSlug(date: Date, year: Int, cal: Calendar) -> String? {
+    private static func sanctoraleSlug(date: Date, year: Int, cal: Calendar, rite: MissalRite = .rite1962) -> String? {
         let month = cal.component(.month, from: date)
         let day = cal.component(.day, from: date)
         let dow = cal.component(.weekday, from: date) // 1=Sun..7=Sat
@@ -198,6 +205,13 @@ enum ProperCalendar {
         }
 
         let key = month * 100 + day
+
+        // Pre-1955: St. Joseph the Worker (May 1) did not exist; instead
+        // May 1 was the feast of Sts. Philip and James, Apostles.
+        if key == 501 && rite == .pre1955 {
+            return "sts-philip-james"
+        }
+
         if let feast = fixedFeasts[key] {
             return feast
         }

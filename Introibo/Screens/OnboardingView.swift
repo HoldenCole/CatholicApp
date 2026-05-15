@@ -3,7 +3,7 @@ import SwiftUI
 struct OnboardingView: View {
     @Binding var hasCompletedOnboarding: Bool
 
-    @State private var page = 0
+    @SceneStorage("onboarding.page") private var page = 0
     @AppStorage(SettingsKey.rite) private var selectedRite: String = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var selectedPenance: String = PenanceDiscipline.discipline1962.rawValue
     @AppStorage(SettingsKey.language) private var selectedLanguage: String = LanguageMode.both.rawValue

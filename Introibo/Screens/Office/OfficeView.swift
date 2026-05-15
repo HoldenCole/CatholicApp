@@ -10,26 +10,43 @@ struct OfficeView: View {
     @State private var selectedHour: Hour?
     @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
+    private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var ctx: LiturgicalContext { .current() }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 14) {
-                Text("Officium Divínum")
+                Text(“Officium Divínum”)
                     .font(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
-                Text("The Divine Office  ·  1962 Roman Breviary")
+                Text(“The Divine Office  ·  \(rite.short)”)
                     .font(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .textCase(.uppercase)
                     .tracking(2)
-                Text("“\(ctx.feriaLatin)  ·  \(ctx.latinName)”")
+                Text(“”\(ctx.feriaLatin)  ·  \(ctx.latinName)””)
                     .font(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
                     .padding(.top, 6)
+                if rite == .pre1955 {
+                    Text(“Note: Under pre-1955 rubrics the Holy Week Office follows the older Triduum rites (e.g. Tenebrae on the mornings of the Sacred Triduum). Full pre-1955 Office texts are forthcoming.”)
+                        .font(.captionSm)
+                        .foregroundStyle(Color.sanctuaryRed.opacity(0.8))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 8)
+                        .padding(.top, 4)
+                } else if rite == .rite1955 {
+                    Text(“Note: Using 1955 Holy Week rubrics. The Office of the Sacred Triduum follows the pre-reform arrangement.”)
+                        .font(.captionSm)
+                        .foregroundStyle(Color.sanctuaryRed.opacity(0.8))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 8)
+                        .padding(.top, 4)
+                }
 
                 ClockDial(
                     hours: store.hours,

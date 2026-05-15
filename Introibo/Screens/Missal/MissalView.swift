@@ -17,7 +17,7 @@ struct MissalView: View {
         let dow = cal.component(.weekday, from: Date()) - 1
         if dow > 0 {
             let lastSunday = Date().addingDays(-dow)
-            if let sundaySlug = ProperCalendar.properSlug(for: lastSunday) {
+            if let sundaySlug = ProperCalendar.properSlug(for: lastSunday, rite: rite) {
                 return store.proper(slug: sundaySlug)
             }
         }
@@ -135,6 +135,9 @@ struct MissalView: View {
 
         // Last Gospel
         ordinarySection("ultimum")
+
+        // Leonine Prayers (after Low Mass)
+        ordinarySection("leonine")
     }
 
     // MARK: - Export full Mass as text
@@ -231,6 +234,7 @@ struct MissalView: View {
 
         addOrdinary("placeat")
         addOrdinary("ultimum")
+        addOrdinary("leonine")
 
         return lines.joined(separator: "\n")
     }

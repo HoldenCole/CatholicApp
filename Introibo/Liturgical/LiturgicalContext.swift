@@ -81,10 +81,12 @@ struct LiturgicalContext {
     let firstAdvent: Date
 
     static func current() -> LiturgicalContext {
-        .for(date: Date())
+        let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? MissalRite.rite1962.rawValue
+        let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
+        return .for(date: Date(), rite: rite)
     }
 
-    static func `for`(date now: Date) -> LiturgicalContext {
+    static func `for`(date now: Date, rite: MissalRite = .rite1962) -> LiturgicalContext {
         let cal = Calendar.liturgical
         let year = cal.component(.year, from: now)
 
@@ -248,7 +250,7 @@ struct LiturgicalContext {
             marian: marian,
             mystery: mystery,
             penance: penance,
-            properSlug: ProperCalendar.properSlug(for: now),
+            properSlug: ProperCalendar.properSlug(for: now, rite: rite),
             easter: easter,
             ashWednesday: ashWed,
             pentecost: pentecost,
