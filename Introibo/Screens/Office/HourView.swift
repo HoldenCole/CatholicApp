@@ -15,7 +15,7 @@ struct HourView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 0) {
                     header
                     VStack(alignment: .leading, spacing: 22) {
@@ -27,8 +27,9 @@ struct HourView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 24)
                 }
+                .frame(maxWidth: .infinity)
             }
-            .clipped()
+            .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
