@@ -106,16 +106,17 @@ struct OnboardingView: View {
             Spacer()
 
             monstranceIcon
-                .frame(width: 100, height: 100)
+                .frame(width: 80, height: 80)
 
             VStack(spacing: 8) {
                 Text("Intro\u{00ED}bo")
-                    .font(.pageTitle)
+                    .font(.system(size: 48, weight: .semibold, design: .serif))
+                    .italic()
                     .foregroundStyle(Color.ivory)
 
                 Text("Ad alt\u{00E1}re Dei")
                     .font(.caption)
-                    .foregroundStyle(Color.muted)
+                    .foregroundStyle(Color.ivory.opacity(0.6))
                     .textCase(.uppercase)
                     .tracking(3)
 
@@ -152,7 +153,7 @@ struct OnboardingView: View {
                     .fill(Color.sanctuaryRed.opacity(0.4))
                     .frame(width: 40, height: 1)
 
-                Text("The complete 1962 Missal, the Roman Breviary, 40 prayers in Latin and English, daily propers, confession guides, and the traditional liturgical calendar \u{2014} all in one place, working offline.")
+                Text("The complete 1962 Missal, the Roman Breviary, traditional prayers in Latin and English, daily propers, confession guides, and the traditional liturgical calendar. All in one place, working offline.")
                     .font(.body)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -175,7 +176,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your rite")
-                    .font(.titleL)
+                    .font(.system(size: 26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("This determines your liturgical calendar and rubrics.")
@@ -228,7 +229,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your penance discipline")
-                    .font(.titleL)
+                    .font(.system(size: 26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("The app will show your daily obligations automatically.")
@@ -281,7 +282,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your language")
-                    .font(.titleL)
+                    .font(.system(size: 26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Every prayer appears in Ecclesiastical Latin. Choose how you\u{2019}d like to see it.")
@@ -334,7 +335,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Follow a patron saint")
-                    .font(.titleL)
+                    .font(.system(size: 26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Track daily practices, build streaks, and grow in holiness with a patron\u{2019}s guidance.")
@@ -369,13 +370,12 @@ struct OnboardingView: View {
                     UserProgress.setFollowedSaint(nil)
                     withAnimation { page += 1 }
                 } label: {
-                    Text("Skip for now")
+                    Text("I\u{2019}ll choose later")
                         .font(.captionSm)
-                        .italic()
                         .foregroundStyle(Color.tertiaryText)
                 }
                 .buttonStyle(.plain)
-                .padding(.top, 8)
+                .padding(.top, 16)
 
                 Spacer(minLength: 40)
             }
@@ -393,7 +393,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Stay on schedule")
-                    .font(.titleL)
+                    .font(.system(size: 26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Introibo can remind you to pray at the traditional hours.")
@@ -424,17 +424,17 @@ struct OnboardingView: View {
                 .padding(.horizontal, 28)
                 .padding(.top, 8)
 
-                // Skip option
+                Spacer(minLength: 16)
+
+                // Skip option — visually distinct from toggles
                 Button {
                     withAnimation { page += 1 }
                 } label: {
                     Text("I\u{2019}ll set this up later")
                         .font(.captionSm)
-                        .italic()
                         .foregroundStyle(Color.tertiaryText)
                 }
                 .buttonStyle(.plain)
-                .padding(.top, 12)
 
                 Spacer(minLength: 40)
             }
