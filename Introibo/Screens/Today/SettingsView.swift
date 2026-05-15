@@ -201,32 +201,41 @@ struct SettingsView: View {
 
     private var tutorialSection: some View {
         Section {
-            tutorialRow("Tour the home and navigation", feature: .homeNavigation)
-            tutorialRow("The Divine Office", feature: .divineOffice)
-            tutorialRow("The Mass and daily Propers", feature: .massPropers)
-            tutorialRow("Following a saint", feature: .followingSaint)
-            tutorialRow("Setting up notifications", feature: .notifications)
-            tutorialRow("Changing rite, language, and penance", feature: .riteLanguage)
+            ForEach(FeatureTutorial.allCases) { feature in
+                Button {
+                    dismiss()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        TutorialManager.shared.startFeatureTutorial(feature)
+                    }
+                } label: {
+                    HStack(spacing: 12) {
+                        Image(systemName: feature.systemImage)
+                            .font(.system(size: 14))
+                            .foregroundStyle(Color.sanctuaryRed)
+                            .frame(width: 24, alignment: .center)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(feature.label)
+                                .font(.body)
+                                .foregroundStyle(Color.primaryText)
+                            Text(feature.latinLabel)
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.tertiaryText)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 12))
+                            .foregroundStyle(Color.tertiaryText)
+                    }
+                }
+                .buttonStyle(.plain)
+                .listRowBackground(Color.pageBackground)
+            }
         } header: {
             Text("Tutoriales")
+        } footer: {
+            Text("Per-feature tutorials can be re-run anytime.")
         }
-    }
-
-    private func tutorialRow(_ title: String, feature: FeatureTutorial) -> some View {
-        Button {
-            TutorialManager.shared.startFeatureTutorial(feature)
-        } label: {
-            HStack {
-                Text(title)
-                    .foregroundStyle(Color.primaryText)
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 12))
-                    .foregroundStyle(Color.tertiaryText)
-            }
-        }
-        .buttonStyle(.plain)
-        .listRowBackground(Color.pageBackground)
     }
 
     // MARK: - Feedback

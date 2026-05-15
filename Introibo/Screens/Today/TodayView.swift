@@ -53,6 +53,7 @@ struct TodayView: View {
                         .foregroundStyle(Color.goldLeaf)
                         .font(.system(size: 16))
                 }
+                .spotlightAnchor("settingsButton")
             }
             .padding(.top, 12)
             .padding(.trailing, 6)
@@ -301,6 +302,7 @@ struct TodayView: View {
                 .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
             }
             .buttonStyle(.plain)
+            .spotlightAnchor("propersCard")
         }
     }
 
@@ -421,6 +423,7 @@ struct TodayView: View {
             }
             .buttonStyle(.plain)
         }
+        .spotlightAnchor("devotionsSection")
     }
 
     private func offeringSlug() -> String {
