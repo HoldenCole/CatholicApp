@@ -5,6 +5,8 @@ struct IntroiboApp: App {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var splashFinished = false
+    @State private var showUpgradeModal = false
+    private var tutorial: TutorialManager { TutorialManager.shared }
 
     init() {
         // Migration: existing users who already have settings should skip onboarding
@@ -28,7 +30,27 @@ struct IntroiboApp: App {
             } else {
                 ContentView()
                     .preferredColorScheme(themeRaw == "dark" ? .dark : .light)
-                    .onAppear { PrayerNotificationManager.scheduleAll() }
+                    .onAppear {
+                        PrayerNotificationManager.scheduleAll()
+                        // New user: start main tutorial after 2s delay
+                        if !tutorial.mainTutorialCompleted {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                tutorial.startMainTutorial()
+                            }
+                        }
+                        // Existing user: show upgrade modal after a brief delay
+                        else if !tutorial.upgradeTutorialPrompted {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                showUpgradeModal = true
+                            }
+                        }
+                    }
+                    .alert("Introibo has been improved throughout.", isPresented: $showUpgradeModal) {
+                        Button("Take the tour") { tutorial.startUpgradeTutorial() }
+                        Button("Skip", role: .cancel) { tutorial.upgradeTutorialPrompted = true }
+                    } message: {
+                        Text("Would you like a quick tour of what\u{2019}s new?")
+                    }
             }
         }
     }

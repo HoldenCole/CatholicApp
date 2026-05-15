@@ -2,27 +2,40 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    private var tutorialManager: TutorialManager { TutorialManager.shared }
 
     private var theme: AppTheme { AppTheme(rawValue: themeRaw) ?? .parchment }
 
+    @State private var spotlightFrames: [String: CGRect] = [:]
+
     var body: some View {
-        TabView {
-            TodayView()
-                .tabItem { Label("Hódie", systemImage: "sun.horizon") }
+        ZStack {
+            TabView {
+                TodayView()
+                    .tabItem { Label("Hodie", systemImage: "sun.horizon") }
 
-            MissalView()
-                .tabItem { Label("Missa", systemImage: "book.closed") }
+                MissalView()
+                    .tabItem { Label("Missa", systemImage: "book.closed") }
 
-            PrayersView()
-                .tabItem { Label("Orátio", systemImage: "book.pages") }
+                PrayersView()
+                    .tabItem { Label("Oratio", systemImage: "book.pages") }
 
-            LearnView()
-                .tabItem { Label("Schola", systemImage: "graduationcap") }
+                LearnView()
+                    .tabItem { Label("Schola", systemImage: "graduationcap") }
 
-            ReferenceView()
-                .tabItem { Label("Liber", systemImage: "text.book.closed") }
+                ReferenceView()
+                    .tabItem { Label("Liber", systemImage: "text.book.closed") }
+            }
+            .tint(Color.sanctuaryRed)
+            .onPreferenceChange(SpotlightFrameKey.self) { frames in
+                spotlightFrames = frames
+            }
+
+            TutorialOverlay(
+                manager: tutorialManager,
+                spotlightFrames: spotlightFrames
+            )
         }
-        .tint(Color.sanctuaryRed)
         .onAppear { updateTabBar() }
         .onChange(of: themeRaw) { _, _ in updateTabBar() }
     }

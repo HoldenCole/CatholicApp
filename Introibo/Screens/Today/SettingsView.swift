@@ -8,7 +8,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
     @State private var showResetConfirm = false
-    @State private var showTutorial = false
+
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -201,24 +201,32 @@ struct SettingsView: View {
 
     private var tutorialSection: some View {
         Section {
-            Button {
-                showTutorial = true
-            } label: {
-                HStack {
-                    Label("App Tutorial", systemImage: "questionmark.circle")
-                        .foregroundStyle(Color.primaryText)
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 12))
-                        .foregroundStyle(Color.tertiaryText)
-                }
+            tutorialRow("Tour the home and navigation", feature: .homeNavigation)
+            tutorialRow("The Divine Office", feature: .divineOffice)
+            tutorialRow("The Mass and daily Propers", feature: .massPropers)
+            tutorialRow("Following a saint", feature: .followingSaint)
+            tutorialRow("Setting up notifications", feature: .notifications)
+            tutorialRow("Changing rite, language, and penance", feature: .riteLanguage)
+        } header: {
+            Text("Tutoriales")
+        }
+    }
+
+    private func tutorialRow(_ title: String, feature: FeatureTutorial) -> some View {
+        Button {
+            TutorialManager.shared.startFeatureTutorial(feature)
+        } label: {
+            HStack {
+                Text(title)
+                    .foregroundStyle(Color.primaryText)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12))
+                    .foregroundStyle(Color.tertiaryText)
             }
-            .buttonStyle(.plain)
-            .listRowBackground(Color.pageBackground)
         }
-        .fullScreenCover(isPresented: $showTutorial) {
-            TutorialView()
-        }
+        .buttonStyle(.plain)
+        .listRowBackground(Color.pageBackground)
     }
 
     // MARK: - Feedback
