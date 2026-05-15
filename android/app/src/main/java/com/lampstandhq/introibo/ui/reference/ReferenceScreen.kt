@@ -44,8 +44,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.data.model.ReferenceEntry
+import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -110,27 +114,48 @@ fun ReferenceScreen() {
         }
     }
 
+    var selectedProper by remember { mutableStateOf<MassProper?>(null) }
+
     // Section filter: show filtered list from that category
     selectedSection?.let { section ->
-        val entries = when (section) {
-            "References" -> ContentStore.reference
-            "Propers" -> ContentStore.reference.filter { it.cat == "Missa et Sacramenta" }
-            "History" -> ContentStore.reference.filter { it.cat == "Calendarium" }
-            "Glossary" -> ContentStore.reference.filter { it.cat == "De Lingua Latina" }
-            else -> emptyList()
-        }
-        if (entries.isNotEmpty()) {
-            SectionListSheet(
-                title = section,
-                entries = entries,
-                onSelectEntry = { entry ->
+        if (section == "Propers") {
+            PropersListSheet(
+                onSelectProper = { proper ->
                     selectedSection = null
-                    selectedEntry = entry
+                    selectedProper = proper
                 },
                 onDismiss = { selectedSection = null },
             )
         } else {
-            selectedSection = null
+            val entries = when (section) {
+                "References" -> ContentStore.reference
+                "History" -> ContentStore.reference.filter { it.cat == "Calendarium" }
+                "Glossary" -> ContentStore.reference.filter { it.cat == "De Lingua Latina" }
+                else -> emptyList()
+            }
+            if (entries.isNotEmpty()) {
+                SectionListSheet(
+                    title = section,
+                    entries = entries,
+                    onSelectEntry = { entry ->
+                        selectedSection = null
+                        selectedEntry = entry
+                    },
+                    onDismiss = { selectedSection = null },
+                )
+            } else {
+                selectedSection = null
+            }
+        }
+    }
+
+    // Proper detail
+    selectedProper?.let { proper ->
+        Dialog(
+            onDismissRequest = { selectedProper = null },
+            properties = DialogProperties(usePlatformDefaultWidth = false),
+        ) {
+            ProperScreen(proper = proper, onDismiss = { selectedProper = null })
         }
     }
 
@@ -358,6 +383,84 @@ private fun QuickLinksSection(onEntryClick: (ReferenceEntry) -> Unit = {}) {
                         tint = colors.tertiaryText,
                         modifier = Modifier.size(12.dp),
                     )
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Propers List Sheet
+// ---------------------------------------------------------------------------
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun PropersListSheet(
+    onSelectProper: (MassProper) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val scope = rememberCoroutineScope()
+    var search by remember { mutableStateOf("") }
+
+    val propers = if (search.isBlank()) {
+        ContentStore.propers
+    } else {
+        val q = search.lowercase()
+        ContentStore.propers.filter {
+            it.title.lowercase().contains(q) ||
+            (it.english?.lowercase()?.contains(q) == true) ||
+            it.slug.lowercase().contains(q)
+        }
+    }
+
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = sheetState,
+        containerColor = colors.pageBackground,
+    ) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                IconButton(onClick = {
+                    scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
+                }) {
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                }
+                SmallLabel(text = "Propers · ${propers.size}", color = colors.sanctuaryRed)
+            }
+
+            androidx.compose.material3.TextField(
+                value = search,
+                onValueChange = { search = it },
+                placeholder = { Text("Search propers…", style = type.body, color = colors.tertiaryText) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 4.dp),
+            )
+
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                items(propers.size) { i ->
+                    val proper = propers[i]
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .defaultMinSize(minHeight = 48.dp)
+                            .clickable { onSelectProper(proper) }
+                            .padding(vertical = 8.dp),
+                    ) {
+                        Text(proper.title, style = type.titleM, color = colors.primaryText, fontStyle = FontStyle.Italic)
+                        proper.english?.let { eng ->
+                            Text(eng, style = type.captionSm, color = colors.secondaryText, fontStyle = FontStyle.Italic)
+                        }
+                    }
+                    if (i < propers.size - 1) HorizontalDivider(color = colors.frameLine)
                 }
             }
         }
