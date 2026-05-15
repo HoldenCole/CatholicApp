@@ -39,6 +39,13 @@ class OfficeAssembler(
             part
         }
 
+        // Post-assembly filtering for Matins nocturn structure and Te Deum.
+        val finalParts = if (template.slug == "matutinum") {
+            filterMatinsParts(assembledParts, context)
+        } else {
+            assembledParts
+        }
+
         return Hour(
             slug = template.slug,
             name = template.name,
@@ -49,8 +56,118 @@ class OfficeAssembler(
             glyph = template.glyph,
             order = template.order,
             intro = template.intro,
-            parts = assembledParts,
+            parts = finalParts,
         )
+    }
+
+    // ---- Matins: 1-Nocturn vs 3-Nocturn filtering (Item 1 & Item 4) ----
+    //
+    // 1962 Breviary rules:
+    //   3 Nocturns (9 psalms, 9 readings, Te Deum): Sundays, feasts rank 1-3
+    //   1 Nocturn  (3 psalms, 3 readings, NO Te Deum): Ferial days (weekdays without a feast)
+    //
+    // Simplified logic (no full feast-rank system yet):
+    //   Sunday (dayOfWeek == 0): always 3 nocturns
+    //   Weekday (dayOfWeek 1-6): 1 nocturn (keep only Nocturn I material)
+    //
+    // Te Deum is also omitted on Sundays during:
+    //   - Septuagesima, Sexagesima, Quinquagesima (pre-Lent Sundays)
+    //   - Sundays in Lent
+    //   - Passion Sunday and Palm Sunday
+    //
+    // TODO (Item 7): Feast-day psalm overrides are a future enhancement.
+    // The current day-of-week psalter system is correct for the ferial office.
+    // When a feast-rank system is added, feasts of rank 1-3 on weekdays should
+    // restore 3 nocturns and substitute proper feast psalms/readings.
+
+    private fun filterMatinsParts(parts: List<Hour.Part>, context: LiturgicalContext): List<Hour.Part> {
+        val isWeekday = context.dayOfWeek != 0 // 0 = Sunday
+
+        return if (isWeekday) {
+            // 1-Nocturn Matins: keep everything before "In II Nocturno",
+            // skip Nocturns II & III and the Te Deum, keep the closing
+            // elements (capitulum, collect, conclusion).
+            filterToOneNocturn(parts)
+        } else {
+            // 3-Nocturn Matins (Sunday): keep all nocturns but check
+            // whether the Te Deum should be omitted for this Sunday.
+            if (shouldOmitTeDeum(context)) {
+                parts.filter { !isTeDeum(it) }
+            } else {
+                parts
+            }
+        }
+    }
+
+    /**
+     * Reduce Matins to 1 nocturn by removing everything from the
+     * "In II Nocturno" heading through the Te Deum (inclusive).
+     * Keeps: Invitatory, Hymn, Nocturn I, Capitulum, Collect, Closing.
+     */
+    private fun filterToOneNocturn(parts: List<Hour.Part>): List<Hour.Part> {
+        // Find the index of "In II Nocturno" heading.
+        val nocturn2Index = parts.indexOfFirst { part ->
+            part.type == "heading" && (part.label ?: "").contains("II Noct")
+        }
+        if (nocturn2Index == -1) {
+            // Template doesn't have Nocturn II — nothing to remove.
+            return parts
+        }
+
+        // Find the Te Deum (canticle with "Te Deum" in label).
+        val teDeumIndex = parts.indexOfFirst { isTeDeum(it) }
+
+        // Keep parts before Nocturn II.
+        val kept = parts.subList(0, nocturn2Index).toMutableList()
+
+        // Append parts after Te Deum (or after Nocturn III's last element
+        // if Te Deum is somehow missing). The Te Deum itself is omitted
+        // in 1-nocturn Matins.
+        if (teDeumIndex != -1) {
+            // Everything after the Te Deum line
+            if (teDeumIndex + 1 < parts.size) {
+                kept.addAll(parts.subList(teDeumIndex + 1, parts.size))
+            }
+        } else {
+            // Fallback: find the end of Nocturn III by looking for the
+            // capitulum, collect, or closing elements.
+            val capIndex = parts.indexOfFirst { part ->
+                part.type == "capitulum" || part.type == "collect" || part.type == "closing"
+            }
+            if (capIndex != -1 && capIndex >= nocturn2Index) {
+                kept.addAll(parts.subList(capIndex, parts.size))
+            }
+        }
+
+        return kept
+    }
+
+    /**
+     * Te Deum is omitted on Sundays during Septuagesima-tide, Lent, and Passiontide.
+     * Septuagesima/Sexagesima/Quinquagesima Sundays are detected via properSlug.
+     */
+    private fun shouldOmitTeDeum(context: LiturgicalContext): Boolean {
+        // Lent and Passion Sundays: always omit
+        if (context.season == LiturgicalSeason.LENT || context.season == LiturgicalSeason.PASSION) {
+            return true
+        }
+
+        // Pre-Lent Sundays (Septuagesima, Sexagesima, Quinquagesima)
+        // are in PER_ANNUM by the season detector but have distinctive
+        // properSlug values.
+        val slug = context.properSlug
+        if (slug != null) {
+            val preLentSlugs = listOf("septuagesima", "sexagesima", "quinquagesima")
+            if (slug in preLentSlugs) {
+                return true
+            }
+        }
+
+        return false
+    }
+
+    private fun isTeDeum(part: Hour.Part): Boolean {
+        return part.type == "canticle" && (part.label ?: "").contains("Te Deum")
     }
 
     private fun seasonString(season: LiturgicalSeason): String = when (season) {
@@ -58,7 +175,7 @@ class OfficeAssembler(
         LiturgicalSeason.LENT -> "lent"
         LiturgicalSeason.PASSION -> "passion"
         LiturgicalSeason.EASTER -> "easter"
-        LiturgicalSeason.CHRISTMAS -> "ordinary"
+        LiturgicalSeason.CHRISTMAS -> "christmas"
         LiturgicalSeason.PENTECOST -> "ordinary"
         LiturgicalSeason.PER_ANNUM -> "ordinary"
     }
