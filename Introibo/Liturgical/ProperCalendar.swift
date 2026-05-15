@@ -25,6 +25,13 @@ enum ProperCalendar {
         }
 
         if let slug = temporaleSlug(date: today, easter: easter, year: year, cal: cal) {
+            // 1962 Rubric: On Saturdays per annum (outside Lent, Advent, Holy
+            // Week, Easter Octave and Pentecost Octave), when only a III-class
+            // feria would be celebrated, the Mass of the Blessed Virgin Mary
+            // (Officium Beatae Mariae in Sabbato) is said instead.
+            if isSaturdayBVMEligible(date: today, slug: slug, cal: cal) {
+                return "saturday-bvm"
+            }
             return slug
         }
 
@@ -32,6 +39,22 @@ enum ProperCalendar {
         let month = cal.component(.month, from: today)
         let day = cal.component(.day, from: today)
         return String(format: "sancti-%02d-%02d", month, day)
+    }
+
+    /// True when `slug` is a Saturday ferial slug for which the BVM Mass should
+    /// be substituted under 1962 rubrics.
+    private static func isSaturdayBVMEligible(date: Date, slug: String, cal: Calendar) -> Bool {
+        // Must be Saturday (weekday component = 7 in Calendar, dayOfWeek = 6)
+        let dow = cal.component(.weekday, from: date) - 1
+        guard dow == 6 else { return false }
+
+        // Eligible only for III-class Saturday ferias in Tempus per Annum:
+        //   "pentecost-N-6" (Saturdays after Trinity Sunday)
+        //   "epiphany-N-6" (Saturdays after Epiphany, before Septuagesima)
+        // Excluded: Saturdays in Advent, Lent, Holy Week, Easter octave,
+        // Pentecost octave (their slugs don't match these patterns).
+        return slug.range(of: #"^(pentecost|epiphany)-\d+-6$"#,
+                          options: .regularExpression) != nil
     }
 
     static func properSlugWithFallback(for date: Date, store: [String], rite: MissalRite = .rite1962) -> String? {

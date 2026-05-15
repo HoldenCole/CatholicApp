@@ -66,22 +66,42 @@ struct OfficeAssembler {
     //   - Sundays in Lent
     //   - Passion Sunday and Palm Sunday
     //
-    // TODO (Item 7): Feast-day psalm overrides are a future enhancement.
-    // The current day-of-week psalter system is correct for the ferial office.
-    // When a feast-rank system is added, feasts of rank 1-3 on weekdays should
-    // restore 3 nocturns and substitute proper feast psalms/readings.
+    // Class I and II weekday feasts: when these fall on a weekday they have
+    // 3-nocturn Matins with Te Deum, just like a Sunday. The current data
+    // ranks Sundays + these feasts as rank 1 in propers.json.
+    private static let highRankWeekdayFeasts: Set<String> = [
+        // Christmas cycle
+        "christmas", "circumcision", "epiphany", "purification",
+        "st-stephen", "st-john-evangelist", "holy-innocents",
+        // Easter octave (Mon–Sat)
+        "easter-0-1", "easter-0-2", "easter-0-3", "easter-0-4", "easter-0-5", "easter-0-6",
+        // Pentecost octave (Mon–Sat)
+        "easter-7-1", "easter-7-2", "easter-7-3", "easter-7-4", "easter-7-5", "easter-7-6",
+        // Major moveable feasts on weekdays
+        "ascension", "corpus-christi", "sacred-heart",
+        // Sanctorale Class I/II that often fall on weekdays
+        "st-joseph", "annunciation", "st-joseph-worker",
+        "sts-peter-paul", "nativity-john-baptist",
+        "assumption", "nativity-bvm", "holy-rosary",
+        "all-saints", "all-souls", "immaculate-conception",
+        // Holy Week / Triduum
+        "holy-thursday", "good-friday", "holy-saturday",
+    ]
 
     private func filterMatinsParts(_ parts: [Hour.Part], context: LiturgicalContext) -> [Hour.Part] {
         let isWeekday = context.dayOfWeek != 0  // 0 = Sunday
+        let isHighRankFeast = isWeekday
+            && (context.properSlug.map { Self.highRankWeekdayFeasts.contains($0) } ?? false)
+        let useThreeNocturns = !isWeekday || isHighRankFeast
 
-        if isWeekday {
+        if !useThreeNocturns {
             // 1-Nocturn Matins: keep everything before "In II Nocturno",
             // skip Nocturns II & III and the Te Deum, keep the closing
             // elements (capitulum, collect, conclusion).
             return filterToOneNocturn(parts)
         } else {
-            // 3-Nocturn Matins (Sunday): keep all nocturns but check
-            // whether the Te Deum should be omitted for this Sunday.
+            // 3-Nocturn Matins (Sunday or Class I/II weekday feast): keep
+            // all nocturns but omit Te Deum on penitential Sundays.
             if shouldOmitTeDeum(context: context) {
                 return parts.filter { !isTeDeum($0) }
             }
