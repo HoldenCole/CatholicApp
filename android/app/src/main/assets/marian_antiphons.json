@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "alma",
+    "title": "Alma Redemptóris Mater",
+    "eng": "Loving Mother of the Redeemer",
+    "season": "Advent through Candlemas",
+    "lat": "Alma Redemptóris Mater, quæ pérvia cæli porta manes, et stella maris, succúrre cadénti, súrgere qui curat pópulo: Tu quæ genuísti, natúra miránte, tuum sanctum Genitórem: Virgo prius ac postérius, Gabriélis ab ore sumens illud Ave, peccatórum miserére.",
+    "engBody": "Loving Mother of the Redeemer, gate of heaven, star of the sea, hasten to aid thy fallen people who strive to rise once more. Thou who brought forth thy holy Creator, while all nature marvelled, Virgin before and after receiving that Ave from the mouth of Gabriel, have mercy on us sinners."
+  },
+  {
+    "slug": "ave",
+    "title": "Ave Regína Cælórum",
+    "eng": "Hail, Queen of Heaven",
+    "season": "Candlemas through Holy Wednesday",
+    "lat": "Ave Regína cælórum, Ave Dómina Angelórum: Salve radix, salve porta, ex qua mundo lux est orta. Gaude Virgo gloriósa, super omnes speciósa: Vale, o valde decóra, et pro nobis Christum exóra.",
+    "engBody": "Hail, O Queen of Heaven enthron'd! Hail, by angels Mistress own'd! Root of Jesse, Gate of morn, whence the world's true light was born. Glorious Virgin, joy to thee, loveliest whom in heaven they see; fairest thou where all are fair, plead with Christ our sins to spare."
+  },
+  {
+    "slug": "regina",
+    "title": "Regína Cæli",
+    "eng": "Queen of Heaven",
+    "season": "Eastertide",
+    "lat": "Regína cæli, lætáre, allelúja: Quia quem meruísti portáre, allelúja, Resurréxit, sicut dixit, allelúja, Ora pro nobis Deum, allelúja.",
+    "engBody": "Queen of Heaven, rejoice, alleluia: For He whom thou didst merit to bear, alleluia, Hath risen, as He said, alleluia. Pray for us to God, alleluia."
+  },
+  {
+    "slug": "salve",
+    "title": "Salve Regína",
+    "eng": "Hail Holy Queen",
+    "season": "Trinity Sunday through Advent",
+    "lat": "Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve. Ad te clamámus, éxsules fílii Hevæ. Ad te suspirámus, geméntes et flentes in hac lacrimárum valle. Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte. Et Iesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde. O clemens, o pia, o dulcis Virgo María.",
+    "engBody": "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us, and after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary."
+  }
+]

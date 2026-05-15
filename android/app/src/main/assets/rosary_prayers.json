@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "signum",
+    "title": "Signum Crucis",
+    "eng": "Sign of the Cross",
+    "lines": [
+      {
+        "lat": "In nómine Patris, et Fílii, et Spíritus Sancti. Amen.",
+        "eng": "In the name of the Father, and of the Son, and of the Holy Ghost. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "credo",
+    "title": "Credo",
+    "eng": "Apostles' Creed",
+    "lines": [
+      {
+        "lat": "Credo in Deum Patrem omnipoténtem, Creatórem cæli et terræ. Et in Iesum Christum, Fílium eius únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a mórtuis; ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis: inde ventúrus est iudicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.",
+        "eng": "I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord, Who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell; the third day He rose again from the dead; He ascended into heaven, and sitteth at the right hand of God the Father almighty; from thence He shall come to judge the living and the dead. I believe in the Holy Ghost, the Holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "pater",
+    "title": "Pater Noster",
+    "eng": "Our Father",
+    "lines": [
+      {
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen.",
+        "eng": "Our Father, Who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "ave",
+    "title": "Ave Maria",
+    "eng": "Hail Mary",
+    "lines": [
+      {
+        "lat": "Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",
+        "eng": "Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "gloria",
+    "title": "Gloria Patri",
+    "eng": "Glory Be",
+    "lines": [
+      {
+        "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "fatima",
+    "title": "Oratio Fatimæ",
+    "eng": "Fatima Prayer",
+    "lines": [
+      {
+        "lat": "O mi Iesu, dimítte nobis débita nostra, líbera nos ab igne inférni, perduc in cælum omnes ánimas, præsértim eas, quæ misericórdiæ tuæ máxime índigent.",
+        "eng": "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those in most need of Thy mercy."
+      }
+    ]
+  },
+  {
+    "slug": "salve",
+    "title": "Salve Regina",
+    "eng": "Hail Holy Queen",
+    "lines": [
+      {
+        "lat": "Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve. Ad te clamámus, éxsules fílii Hevæ. Ad te suspirámus, geméntes et flentes in hac lacrimárum valle. Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte. Et Iesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde. O clemens, o pia, o dulcis Virgo María.",
+        "eng": "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us, and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary!"
+      }
+    ]
+  }
+]
