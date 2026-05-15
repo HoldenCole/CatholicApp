@@ -8,24 +8,18 @@ import SwiftUI
 final class TutorialManager {
     static let shared = TutorialManager()
 
-    // MARK: - Persisted state
+    // MARK: - Persisted state (backed by UserDefaults, synced on read/write)
 
-    /// True once the main (new-user) tutorial has been completed or skipped.
-    var mainTutorialCompleted: Bool {
-        get { UserDefaults.standard.bool(forKey: "tutorial.mainCompleted") }
-        set { UserDefaults.standard.set(newValue, forKey: "tutorial.mainCompleted") }
+    var mainTutorialCompleted = UserDefaults.standard.bool(forKey: "tutorial.mainCompleted") {
+        didSet { UserDefaults.standard.set(mainTutorialCompleted, forKey: "tutorial.mainCompleted") }
     }
 
-    /// True once the upgrade tour prompt has been shown (regardless of choice).
-    var upgradeTutorialPrompted: Bool {
-        get { UserDefaults.standard.bool(forKey: "tutorial.upgradePrompted") }
-        set { UserDefaults.standard.set(newValue, forKey: "tutorial.upgradePrompted") }
+    var upgradeTutorialPrompted = UserDefaults.standard.bool(forKey: "tutorial.upgradePrompted") {
+        didSet { UserDefaults.standard.set(upgradeTutorialPrompted, forKey: "tutorial.upgradePrompted") }
     }
 
-    /// Persisted step index for resume on force-quit.
-    private var persistedStepIndex: Int {
-        get { UserDefaults.standard.integer(forKey: "tutorial.currentStep") }
-        set { UserDefaults.standard.set(newValue, forKey: "tutorial.currentStep") }
+    private var persistedStepIndex = UserDefaults.standard.integer(forKey: "tutorial.currentStep") {
+        didSet { UserDefaults.standard.set(persistedStepIndex, forKey: "tutorial.currentStep") }
     }
 
     // MARK: - Runtime state
