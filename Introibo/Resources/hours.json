@@ -1257,6 +1257,10 @@
     "intro": "The morning praise at first light. The Church greets the new day with the Benedictus of Zachary and the Benedicite canticle. Sunday psalter.",
     "parts": [
       {
+        "type": "pater",
+        "label": "Pater Noster & Ave María"
+      },
+      {
         "type": "vr",
         "label": "Opening",
         "lat": "Deus, in adjutórium meum inténde.",
@@ -1671,6 +1675,10 @@
     "intro": "The first daylight hour, sanctifying the day's work. A short office of psalms and a chapter reading. Sunday psalter.",
     "parts": [
       {
+        "type": "pater",
+        "label": "Pater Noster & Ave María"
+      },
+      {
         "type": "vr",
         "label": "Opening",
         "lat": "Deus, in adjutórium meum inténde.",
@@ -1889,6 +1897,10 @@
     "intro": "The third hour, when the Holy Ghost descended at Pentecost. The psalmody of Psalm 118 continues through the Little Hours.",
     "parts": [
       {
+        "type": "pater",
+        "label": "Pater Noster & Ave María"
+      },
+      {
         "type": "vr",
         "label": "Opening",
         "lat": "Deus, in adjutórium meum inténde.",
@@ -2066,6 +2078,10 @@
     "order": 5,
     "intro": "The sixth hour — noon. Our Lord was nailed to the Cross at this hour. A pause in the day to remember His sacrifice.",
     "parts": [
+      {
+        "type": "pater",
+        "label": "Pater Noster & Ave María"
+      },
       {
         "type": "vr",
         "label": "Opening",
@@ -2245,6 +2261,10 @@
     "intro": "The ninth hour — three in the afternoon. Our Lord died upon the Cross at this hour.",
     "parts": [
       {
+        "type": "pater",
+        "label": "Pater Noster & Ave María"
+      },
+      {
         "type": "vr",
         "label": "Opening",
         "lat": "Deus, in adjutórium meum inténde.",
@@ -2422,6 +2442,10 @@
     "order": 7,
     "intro": "The evening hour, when the lamps are lit. The second great hinge-hour of the day, crowned by the Magnificat of Our Lady. Sunday psalter.",
     "parts": [
+      {
+        "type": "pater",
+        "label": "Pater Noster & Ave María"
+      },
       {
         "type": "vr",
         "label": "Opening",
@@ -2776,6 +2800,14 @@
         "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
       },
       {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Te lucis ante términum",
+        "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.\n\nProcul recédant sómnia,<br>et nóctium phantásmata;<br>hostémque nostrum cómprime,<br>ne polluántur córpora.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
+        "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
+        "variationKey": "completorium.hymn"
+      },
+      {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Miserére mihi, Dómine, et exáudi oratiónem meam.",
@@ -2957,14 +2989,6 @@
           }
         ],
         "variationKey": "completorium.psalm4"
-      },
-      {
-        "type": "hymn",
-        "label": "Hymn",
-        "title": "Te lucis ante términum",
-        "lat": "Te lucis ante términum,<br>rerum Creátor, póscimus,<br>ut pro tua cleméntia<br>sis præsul et custódia.\n\nProcul recédant sómnia,<br>et nóctium phantásmata;<br>hostémque nostrum cómprime,<br>ne polluántur córpora.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
-        "eng": "To Thee before the close of day,<br>Creator of the world, we pray:<br>that with Thy wonted favour Thou<br>wouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,<br>from fears and terrors of the night;<br>withhold from us our ghostly foe,<br>that spot of sin we may not know.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
-        "variationKey": "completorium.hymn"
       },
       {
         "type": "capitulum",
