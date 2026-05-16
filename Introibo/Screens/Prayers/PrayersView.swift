@@ -19,7 +19,7 @@ struct PrayersView: View {
     }
 
     private let occasions = [
-        "Morning", "Before Mass", "After Mass", "Meals",
+        "Morning", "Before Mass", "During Mass", "After Mass", "Meals",
         "Marian", "Eucharistic", "Before Confession",
         "For the Departed", "In Temptation", "For Protection", "Evening"
     ]

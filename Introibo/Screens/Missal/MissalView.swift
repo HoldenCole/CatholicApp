@@ -8,7 +8,16 @@ struct MissalView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
+    private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var ctx: LiturgicalContext { .current() }
+
+    private func sectionLabel(_ latin: String, _ english: String) -> String {
+        switch mode {
+        case .latinOnly: return latin
+        case .vernacular: return english
+        case .both: return "\(latin)  \u{00B7}  \(english)"
+        }
+    }
 
     private var todayProper: MassProper? {
         guard let slug = ctx.properSlug else { return nil }
@@ -303,7 +312,7 @@ struct MissalView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
-                Text("\(latin)  ·  \(subtitle)")
+                Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
@@ -325,7 +334,7 @@ struct MissalView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
-                Text("\(latin)  ·  \(subtitle)")
+                Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)

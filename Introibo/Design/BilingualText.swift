@@ -16,7 +16,7 @@ struct BilingualLine: View {
     private var cleanEng: String { eng.strippingEm }
 
     var body: some View {
-        if sideBySide && mode == .both {
+        if sideBySide && mode == .both && fontScale <= 1.4 {
             HStack(alignment: .top, spacing: 12) {
                 Text(cleanLat)
                     .font(.body)

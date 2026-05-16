@@ -269,7 +269,8 @@
       }
     ],
     "occasions": [
-      "Before Confession"
+      "Before Confession",
+      "During Mass"
     ]
   },
   {
@@ -317,7 +318,7 @@
       }
     ],
     "occasions": [
-      "Before Mass"
+      "During Mass"
     ]
   },
   {
@@ -369,7 +370,7 @@
       }
     ],
     "occasions": [
-      "Before Mass"
+      "During Mass"
     ]
   },
   {
@@ -401,7 +402,7 @@
       }
     ],
     "occasions": [
-      "Before Mass"
+      "During Mass"
     ]
   },
   {
@@ -425,7 +426,7 @@
       }
     ],
     "occasions": [
-      "Before Mass"
+      "During Mass"
     ]
   },
   {
@@ -449,8 +450,8 @@
       }
     ],
     "occasions": [
-      "Before Mass",
-      "Eucharistic"
+      "Eucharistic",
+      "During Mass"
     ]
   },
   {

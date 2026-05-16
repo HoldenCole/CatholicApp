@@ -126,11 +126,21 @@ struct ProperView: View {
         return lines.joined(separator: "\n")
     }
 
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
+    private func sectionLabel(_ latin: String, _ english: String) -> String {
+        switch mode {
+        case .latinOnly: return latin
+        case .vernacular: return english
+        case .both: return "\(latin)  \u{00B7}  \(english)"
+        }
+    }
+
     private func properSection(_ latin: String, subtitle: String, text: ProperText) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
-                Text("\(latin)  ·  \(subtitle)")
+                Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
@@ -143,7 +153,7 @@ struct ProperView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
-                Text("\(latin)  ·  \(subtitle)")
+                Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
                     .fixedSize()
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
