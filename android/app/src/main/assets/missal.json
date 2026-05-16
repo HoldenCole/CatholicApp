@@ -380,12 +380,27 @@
         "eng": "As often as ye shall do these things, ye shall do them in remembrance of Me."
       },
       {
-        "lat": "Unde et mémores, Dómine, nos servi tui, sed et plebs tua sancta, ejúsdem Christi Fílii tui Dómini nostri tam beátæ passiónis, nec non et ab ínferis resurrectiónis, sed et in cælos gloriósæ ascensiónis.",
-        "eng": "Wherefore, O Lord, we Thy servants, as also Thy holy people, calling to mind the blessed Passion of the same Christ Thy Son our Lord, His Resurrection from the dead, and His glorious Ascension into heaven."
+        "lat": "Unde et mémores, Dómine, nos servi tui, sed et plebs tua sancta, ejúsdem Christi Fílii tui Dómini nostri tam beátæ passiónis, nec non et ab ínferis resurrectiónis, sed et in cælos gloriósæ ascensiónis: offérimus præcláræ majestáti tuæ de tuis donis ac datis, hóstiam ✠ puram, hóstiam ✠ sanctam, hóstiam ✠ immaculátam, Panem ✠ sanctum vitæ ætérnæ, et Cálicem ✠ salútis perpétuæ.",
+        "eng": "Wherefore, O Lord, we Thy servants, as also Thy holy people, calling to mind the blessed Passion of the same Christ Thy Son our Lord, His Resurrection from the dead, and His glorious Ascension into heaven, do offer unto Thy most excellent Majesty of Thine own gifts and grants, a pure ✠ Host, a holy ✠ Host, an unspotted ✠ Host, the holy ✠ Bread of eternal life, and the ✠ Chalice of everlasting salvation."
       },
       {
-        "lat": "Nobis quoque peccatóribus fámulis tuis, de multitúdine miseratiónum tuárum sperántibus, partem áliquam et societátem donáre dignéris, cum tuis sanctis Apóstolis et Martýribus.",
-        "eng": "To us also, Thy sinful servants, confiding in the multitude of Thy mercies, vouchsafe to grant some part and fellowship with Thy holy Apostles and Martyrs."
+        "lat": "Supra quæ propítio ac seréno vultu respícere dignéris: et accépta habére, sícuti accépta habére dignátus es múnera púeri tui justi Abel, et sacrifícium Patriárchæ nostri Abrahæ: et quod tibi óbtulit summus sacérdos tuus Melchísedech, sanctum sacrifícium, immaculátam hóstiam.",
+        "eng": "Upon which vouchsafe to look with a propitious and serene countenance, and to accept them, as Thou wert graciously pleased to accept the gifts of Thy just servant Abel, and the sacrifice of our Patriarch Abraham, and that which Thy high priest Melchisedech offered to Thee, a holy Sacrifice, an unspotted Host.",
+        "rubric": "Bowing low:"
+      },
+      {
+        "lat": "Súpplices te rogámus, omnípotens Deus: jube hæc perférri per manus sancti Angeli tui in sublíme altáre tuum, in conspéctu divínæ majestátis tuæ: ut, quotquot ex hac altáris participatióne sacrosánctum Fílii tui Cor✠pus et Sán✠guinem sumpsérimus, omni benedictióne cælésti et grátia repleámur. Per eúndem Christum Dóminum nostrum. Amen.",
+        "eng": "We most humbly beseech Thee, almighty God, command these things to be borne by the hands of Thy holy Angel to Thine altar on high, in the sight of Thy divine Majesty, that as many of us as, by participation at this altar, shall receive the most sacred Bo✠dy and Bl✠ood of Thy Son, may be filled with every heavenly blessing and grace. Through the same Christ our Lord. Amen."
+      },
+      {
+        "lat": "Meménto étiam, Dómine, famulórum famularúmque tuárum, qui nos præcessérunt cum signo fídei, et dórmiunt in somno pacis. Ipsis, Dómine, et ómnibus in Christo quiescéntibus, locum refrigérii, lucis et pacis, ut indúlgeas, deprecámur. Per eúndem Christum Dóminum nostrum. Amen.",
+        "eng": "Be mindful also, O Lord, of Thy servants and handmaids who have gone before us with the sign of faith, and rest in the sleep of peace. To these, O Lord, and to all that rest in Christ, grant, we beseech Thee, a place of refreshment, light, and peace. Through the same Christ our Lord. Amen.",
+        "rubric": "Commemoration of the Dead:"
+      },
+      {
+        "lat": "Nobis quoque peccatóribus fámulis tuis, de multitúdine miseratiónum tuárum sperántibus, partem áliquam et societátem donáre dignéris, cum tuis sanctis Apóstolis et Martýribus: cum Joánne, Stéphano, Matthía, Bárnaba, Ignátio, Alexándro, Marcellíno, Petro, Felicitáte, Perpétua, Agatha, Lúcia, Agnéte, Cæcília, Anastásia, et ómnibus Sanctis tuis: intra quorum nos consórtium, non æstimátor mériti, sed véniæ, quǽsumus, largítor admítte. Per Christum Dóminum nostrum.",
+        "eng": "To us also, Thy sinful servants, confiding in the multitude of Thy mercies, vouchsafe to grant some part and fellowship with Thy holy Apostles and Martyrs: with John, Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus, Peter, Felicitas, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia, and all Thy Saints: into whose company, we beseech Thee, admit us, not weighing our merits, but freely granting us pardon. Through Christ our Lord.",
+        "rubric": "Striking his breast, the priest says aloud:"
       },
       {
         "lat": "Per quem hæc ómnia, Dómine, semper bona creas, sanctí✠ficas, viví✠ficas, bene✠dícis, et præstas nobis.",
@@ -463,6 +478,7 @@
   },
   {
     "slug": "placeat",
+    "label": "Conclúsio",
     "title": "Placeat Tibi",
     "english": "May It Please You",
     "body": [
@@ -475,6 +491,22 @@
         "lat": "℣. Benedicat vos omnípotens Deus, Pater, et Fílius, ✠ et Spíritus Sanctus. ℟. Amen.",
         "eng": "℣. May almighty God bless you, the Father, and the Son, ✠ and the Holy Spirit. ℟. Amen.",
         "rubric": "The priest blesses the people:"
+      }
+    ]
+  },
+  {
+    "slug": "ite",
+    "title": "Ite, Missa Est",
+    "english": "Go, the Mass Is Ended",
+    "body": [
+      {
+        "rubric": "The deacon (or priest at Low Mass) sings or says:",
+        "lat": "℣. Ite, Missa est.",
+        "eng": "℣. Go, the Mass is ended."
+      },
+      {
+        "lat": "℟. Deo grátias.",
+        "eng": "℟. Thanks be to God."
       }
     ]
   },
@@ -516,6 +548,43 @@
       {
         "lat": "℟. Deo grátias.",
         "eng": "℟. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "leonine",
+    "label": "Preces Leonínæ",
+    "title": "Preces Leonínæ",
+    "english": "Leonine Prayers",
+    "body": [
+      {
+        "rubric": "After Low Mass, the priest and faithful kneel and say three Hail Marys:",
+        "lat": "Ave María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Iesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen. (×3)",
+        "eng": "Hail Mary, full of grace, the Lord is with thee. Blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen. (×3)"
+      },
+      {
+        "rubric": "Then the Salve Regina:",
+        "lat": "Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve. Ad te clamámus, éxsules fílii Hevæ. Ad te suspirámus, geméntes et flentes in hac lacrimárum valle. Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte. Et Iesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde. O clemens, o pia, o dulcis Virgo María.",
+        "eng": "Hail, holy Queen, Mother of mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us. And after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary."
+      },
+      {
+        "rubric": "Then:",
+        "lat": "℣. Ora pro nobis, sancta Dei Génetrix.\n℟. Ut digni efficiámur promissiónibus Christi.",
+        "eng": "℣. Pray for us, O holy Mother of God.\n℟. That we may be made worthy of the promises of Christ."
+      },
+      {
+        "rubric": "The priest says the Collect:",
+        "lat": "Orémus. Deus, refúgium nostrum et virtus, pópulum ad te clamántem propítius réspice; et intercedénte gloriósa et immaculáta Vírgine Dei Genitríce María, cum beáto Joseph eius Sponso, ac beátis Apóstolis tuis Petro et Paulo, et ómnibus Sanctis, quas pro conversióne peccatórum, pro libertáte et exaltatióne sanctæ Matris Ecclésiæ, preces effúndimus, miséricors et benígnus exáudi. Per eúndem Christum Dóminum nostrum. Amen.",
+        "eng": "Let us pray. O God, our refuge and our strength, look down in mercy on Thy people who cry to Thee; and by the intercession of the glorious and immaculate Virgin Mary, Mother of God, of St. Joseph her Spouse, of Thy blessed Apostles Peter and Paul, and of all the Saints, in mercy and goodness hear our prayers for the conversion of sinners, and for the liberty and exaltation of our holy Mother the Church. Through the same Christ our Lord. Amen."
+      },
+      {
+        "rubric": "Prayer to St. Michael the Archangel:",
+        "lat": "Sancte Míchaël Archángele, defénde nos in prǽlio; contra nequítiam et insídias diáboli esto præsídium. Ímperet illi Deus, súpplices deprecámur: tuque, Princeps milítiæ cæléstis, Sátanam aliósque spíritus malígnos, qui ad perditiónem animárum pervagántur in mundo, divína virtúte, in inférnum detrúde. Amen.",
+        "eng": "St. Michael the Archangel, defend us in battle; be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray: and do thou, O Prince of the heavenly host, by the power of God cast into hell Satan and all the evil spirits who prowl about the world seeking the ruin of souls. Amen."
+      },
+      {
+        "lat": "Cor Iesu sacratíssimum, miserére nobis. (×3)",
+        "eng": "Most Sacred Heart of Jesus, have mercy on us. (×3)"
       }
     ]
   }

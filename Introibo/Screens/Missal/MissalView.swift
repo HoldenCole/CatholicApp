@@ -82,9 +82,15 @@ struct MissalView: View {
         // INTROIT (proper)
         properSection("Introitus", subtitle: "Introit", text: proper.introit)
 
-        // Kyrie, Gloria
+        // Kyrie
         ordinarySection("kyrie")
-        ordinarySection("gloria")
+
+        // Gloria — omitted in Advent, Lent, Passion, and pre-Lent;
+        // shown on Sundays in ordinary time, Easter, Christmas,
+        // and on fixed sanctorale feasts in any season.
+        if showGloria(proper) {
+            ordinarySection("gloria")
+        }
 
         // COLLECT (proper)
         properSection("Orátio", subtitle: "Collect", text: proper.collect)
@@ -109,8 +115,10 @@ struct MissalView: View {
         // GOSPEL (proper)
         readingSection("Evangélium", subtitle: "Gospel", reading: proper.gospel)
 
-        // Credo
-        ordinarySection("credo")
+        // Credo — said on all Sundays and on major feasts (rank 1)
+        if showCredo(proper) {
+            ordinarySection("credo")
+        }
 
         // OFFERTORY (proper)
         properSection("Offertórium", subtitle: "Offertory", text: proper.offertory)
@@ -142,11 +150,39 @@ struct MissalView: View {
         // Placeat, Blessing
         ordinarySection("placeat")
 
+        // Ite, Missa Est
+        ordinarySection("ite")
+
         // Last Gospel
         ordinarySection("ultimum")
 
         // Leonine Prayers (after Low Mass)
         ordinarySection("leonine")
+    }
+
+    // MARK: - Rubric helpers
+
+    /// Gloria is omitted during penitential seasons (Advent, Lent, Passion,
+    /// pre-Lent) on ferial days. It IS said on fixed feasts even in those
+    /// seasons, and always during Easter and Christmas seasons.
+    private func showGloria(_ proper: MassProper) -> Bool {
+        let season = ctx.season
+        if season == .easter || season == .christmas { return true }
+        if proper.color == "violet" || proper.color == "black" {
+            return false
+        }
+        if ctx.isSunday {
+            let preLent = ["septuagesima", "sexagesima", "quinquagesima"]
+            if let slug = ctx.properSlug, preLent.contains(slug) { return false }
+            return season != .advent && season != .lent && season != .passion
+        }
+        return proper.rank == 1
+    }
+
+    /// Credo is said on all Sundays and on major feasts (rank 1 in data).
+    private func showCredo(_ proper: MassProper) -> Bool {
+        if ctx.isSunday { return true }
+        return proper.rank == 1
     }
 
     // MARK: - Export full Mass as text
