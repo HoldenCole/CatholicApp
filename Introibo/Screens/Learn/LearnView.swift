@@ -5,6 +5,8 @@ struct LearnView: View {
     @State private var selection: Course?
     @State private var mastered: Set<String> = UserProgress.masteredLessons()
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
     var body: some View {
         NavigationStack {
@@ -154,10 +156,12 @@ struct LearnView: View {
                     .font(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
-                Text(c.latin)
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
+                if langMode != .vernacular {
+                    Text(c.latin)
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                }
                 HStack(spacing: 8) {
                     HStack(spacing: 3) {
                         Image(systemName: "rectangle.on.rectangle")

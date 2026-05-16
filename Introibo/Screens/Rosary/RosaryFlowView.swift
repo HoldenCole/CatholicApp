@@ -13,6 +13,8 @@ struct RosaryFlowView: View {
     @State private var didMark = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
     private let store = ContentStore.shared
 
@@ -69,17 +71,7 @@ struct RosaryFlowView: View {
                         .padding(.top, 8)
 
                     // Prayer text
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(step.latin)
-                            .font(.body)
-                            .foregroundStyle(Color.primaryText)
-                            .lineSpacing(4)
-                        Text(step.english)
-                            .font(.bodySm)
-                            .italic()
-                            .foregroundStyle(Color.secondaryText)
-                            .lineSpacing(3)
-                    }
+                    BilingualLine(lat: step.latin, eng: step.english)
                     .padding(.horizontal, 28)
                     .padding(.top, 8)
 

@@ -13,6 +13,8 @@ struct CourseDetailView: View {
     @State private var isMastered: Bool = false
     @State private var showQuiz = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
     var body: some View {
         NavigationStack {
@@ -54,12 +56,14 @@ struct CourseDetailView: View {
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 28)
-            Text(course.latin)
-                .font(.caption)
-                .italic()
-                .foregroundStyle(Color.muted)
-                .textCase(.uppercase)
-                .tracking(2.5)
+            if langMode != .vernacular {
+                Text(course.latin)
+                    .font(.caption)
+                    .italic()
+                    .foregroundStyle(Color.muted)
+                    .textCase(.uppercase)
+                    .tracking(2.5)
+            }
             Rectangle()
                 .fill(Color.goldLeaf.opacity(0.4))
                 .frame(width: 60, height: 0.5)

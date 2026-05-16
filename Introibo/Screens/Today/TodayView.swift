@@ -243,20 +243,12 @@ struct TodayView: View {
     private var dailyPsalmCard: some View {
         let verse = DailyPsalm.verse()
         return VStack(alignment: .leading, spacing: 8) {
-            Text("Psalmus Hodiérnus")
+            LanguageAwareText(latin: "Psalmus Hodiérnus", english: "Daily Psalm")
                 .smallLabel(color: Color.sanctuaryRed)
             Text(verse.ref)
                 .font(.captionSm)
                 .foregroundStyle(Color.goldLeaf)
-            Text(verse.latin)
-                .font(.bodyIt)
-                .foregroundStyle(Color.primaryText)
-                .lineSpacing(4)
-                .padding(.top, 2)
-            Text(verse.english)
-                .font(.bodySm)
-                .italic()
-                .foregroundStyle(Color.secondaryText)
+            BilingualLine(lat: verse.latin, eng: verse.english)
                 .lineSpacing(3)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -490,14 +482,18 @@ struct TodayView: View {
             VStack(alignment: .leading, spacing: 8) {
                 sectionLabel("Sacratíssimum Rosárium", subtitle: "of the Rosary")
 
-                Text(ctx.mystery.latinName)
-                    .font(.titleM)
-                    .italic()
-                    .foregroundStyle(Color.primaryText)
-                Text(ctx.mystery.englishName)
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
+                if langMode != .vernacular {
+                    Text(ctx.mystery.latinName)
+                        .font(.titleM)
+                        .italic()
+                        .foregroundStyle(Color.primaryText)
+                }
+                if langMode != .latinOnly {
+                    Text(ctx.mystery.englishName)
+                        .font(langMode == .vernacular ? .titleM : .captionSm)
+                        .italic()
+                        .foregroundStyle(langMode == .vernacular ? Color.primaryText : Color.secondaryText)
+                }
 
                 if let lastDate = UserProgress.rosaryLastDate() {
                     Text("Last prayed: \(Self.dateFmt.string(from: lastDate))")

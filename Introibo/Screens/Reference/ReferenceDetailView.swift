@@ -7,6 +7,8 @@ import SwiftUI
 struct ReferenceDetailView: View {
     let entry: ReferenceEntry
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     var body: some View {
@@ -44,7 +46,7 @@ struct ReferenceDetailView: View {
                 .font(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
-            if let latin = entry.latin {
+            if let latin = entry.latin, langMode != .vernacular {
                 Text(latin)
                     .font(.caption)
                     .italic()
@@ -86,13 +88,12 @@ struct ReferenceDetailView: View {
 
     private func scriptureBlock(_ s: ReferenceEntry.Scripture) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text("Scriptura  ·  \(s.ref)")
+            LanguageAwareText(latin: "Scriptura", english: "Scripture")
                 .smallLabel(color: Color.sanctuaryRed)
-            Text(s.lat)
-                .font(.bodyIt)
-                .foregroundStyle(Color.primaryText)
-            Text(s.eng)
+            Text(s.ref)
                 .font(.captionSm)
+                .foregroundStyle(Color.goldLeaf)
+            BilingualLine(lat: s.lat, eng: s.eng)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
         }

@@ -5,6 +5,8 @@ struct StationsView: View {
     @State private var activeIndex: Int? = nil
     @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
     var body: some View {
         Group {
@@ -168,11 +170,13 @@ struct StationsView: View {
                 .italic()
                 .foregroundStyle(Color.primaryText)
                 .multilineTextAlignment(alignment == .leading ? .leading : .trailing)
-            Text(s.latin)
-                .font(.captionSm)
-                .italic()
-                .foregroundStyle(Color.secondaryText)
-                .multilineTextAlignment(alignment == .leading ? .leading : .trailing)
+            if langMode != .vernacular {
+                Text(s.latin)
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(alignment == .leading ? .leading : .trailing)
+            }
         }
     }
 
@@ -237,13 +241,15 @@ private struct PrayStationView: View {
                         .italic()
                         .foregroundStyle(Color.ivory)
                         .multilineTextAlignment(.center)
-                    Text(station.latin)
-                        .font(.caption)
-                        .italic()
-                        .foregroundStyle(Color.muted)
-                        .textCase(.uppercase)
-                        .tracking(2.5)
-                        .multilineTextAlignment(.center)
+                    if langMode != .vernacular {
+                        Text(station.latin)
+                            .font(.caption)
+                            .italic()
+                            .foregroundStyle(Color.muted)
+                            .textCase(.uppercase)
+                            .tracking(2.5)
+                            .multilineTextAlignment(.center)
+                    }
 
                     Divider().background(Color.goldLeaf.opacity(0.3))
                         .padding(.vertical, 8)
