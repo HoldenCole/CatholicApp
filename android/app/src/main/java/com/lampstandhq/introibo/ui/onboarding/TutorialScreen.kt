@@ -57,7 +57,7 @@ private val tutorialSteps = listOf(
     TutorialStep(
         title = "The Missal",
         items = listOf(
-            "Complete 1962 Missale Romanum with 424 daily Propers",
+            "Complete 1962 Missale Romanum with 426 daily Propers",
             "Ordinary and Propers interleaved in correct liturgical order",
             "Full Offertory prayers, Preface, Canon, and Last Gospel included",
             "Tap the share icon to save or send any proper as text",

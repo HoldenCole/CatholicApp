@@ -2991,7 +2991,7 @@
           "eng": "Have mercy on me, O God, according to Thy great mercy."
         },
         {
-          "lat": "Et secúndum multitúdinem miseratiónuam tuárum, dele iniquitátem meam.",
+          "lat": "Et secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.",
           "eng": "And according to the multitude of Thy tender mercies blot out my iniquity."
         },
         {
@@ -4177,8 +4177,12 @@
       "variationKey": "laudes.psalm1",
       "verses": [
         {
-          "lat": "Miserére mei, Deus, secúndum magnam misericórdiam tuam. Et secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.",
-          "eng": "Have mercy on me, O God, according to Thy great mercy. And according to the multitude of Thy tender mercies blot out my iniquity."
+          "lat": "Miserére mei, Deus, secúndum magnam misericórdiam tuam.",
+          "eng": "Have mercy on me, O God, according to Thy great mercy."
+        },
+        {
+          "lat": "Et secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.",
+          "eng": "And according to the multitude of Thy tender mercies blot out my iniquity."
         },
         {
           "lat": "Ámplius lava me ab iniquitáte mea: et a peccáto meo munda me.",
@@ -5607,8 +5611,12 @@
       "variationKey": "laudes.psalm1",
       "verses": [
         {
-          "lat": "Miserére mei, Deus, secúndum magnam misericórdiam tuam. Et secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.",
-          "eng": "Have mercy on me, O God, according to Thy great mercy. And according to the multitude of Thy tender mercies blot out my iniquity."
+          "lat": "Miserére mei, Deus, secúndum magnam misericórdiam tuam.",
+          "eng": "Have mercy on me, O God, according to Thy great mercy."
+        },
+        {
+          "lat": "Et secúndum multitúdinem miseratiónum tuárum, dele iniquitátem meam.",
+          "eng": "And according to the multitude of Thy tender mercies blot out my iniquity."
         },
         {
           "lat": "Ámplius lava me ab iniquitáte mea: et a peccáto meo munda me.",

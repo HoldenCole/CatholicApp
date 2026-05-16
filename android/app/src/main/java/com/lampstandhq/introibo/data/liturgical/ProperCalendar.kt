@@ -9,18 +9,46 @@ import java.time.temporal.ChronoUnit
  */
 object ProperCalendar {
 
-    fun properSlug(date: LocalDate): String? {
+    fun properSlug(date: LocalDate, propers: List<String> = emptyList()): String? {
         val year = date.year
         val easter = Computus.easterSunday(year)
+        val dow = LiturgicalContext.dayOfWeekIndex(date) // 0=Sun..6=Sat
 
-        // High-priority moveable feasts override the sanctorale
+        // High-priority moveable feasts override everything
         moveableSlug(date, easter)?.let { return it }
 
-        sanctoraleSlug(date)?.let { return it }
+        // Fixed sanctorale feasts (high-rank saints in fixedFeasts dictionary)
+        fixedFeastSlug(date)?.let { return it }
 
-        temporaleSlug(date, easter, year)?.let { return it }
+        // On Sundays, the temporal cycle takes precedence over generic saints
+        if (dow == 0) {
+            temporaleSlug(date, easter, year)?.let { return it }
+        }
 
-        return null
+        // On weekdays, check if a saint's feast proper exists for this date
+        val month = date.monthValue
+        val day = date.dayOfMonth
+        val sanctiSlug = String.format("sancti-%02d-%02d", month, day)
+        if (propers.contains(sanctiSlug)) {
+            return sanctiSlug
+        }
+
+        // Temporal cycle for weekdays without a saint's feast
+        temporaleSlug(date, easter, year)?.let { slug ->
+            if (isSaturdayBVMEligible(date, slug)) {
+                return "saturday-bvm"
+            }
+            return slug
+        }
+
+        // Final fallback
+        return sanctiSlug
+    }
+
+    private fun isSaturdayBVMEligible(date: LocalDate, slug: String): Boolean {
+        val dow = LiturgicalContext.dayOfWeekIndex(date)
+        if (dow != 6) return false
+        return slug.matches(Regex("^(pentecost|epiphany)-\\d+-6$"))
     }
 
     fun properSlugWithFallback(date: LocalDate, store: List<String>): String? {
@@ -47,6 +75,7 @@ object ProperCalendar {
             38 -> "vigil-ascension"
             39 -> "ascension"
             48 -> "vigil-pentecost"
+            49 -> "pentecost-sunday"
             60 -> "corpus-christi"
             68 -> "sacred-heart"
             else -> null
@@ -175,12 +204,14 @@ object ProperCalendar {
 
     // ---- Sanctorale (fixed cycle) ----
 
-    private fun sanctoraleSlug(date: LocalDate): String? {
+    private fun fixedFeastSlug(date: LocalDate): String? {
         val month = date.monthValue
         val day = date.dayOfMonth
+        val dow = date.dayOfWeek.value % 7 // 0=Sun..6=Sat
+        // Christ the King: last Sunday of October
+        if (month == 10 && dow == 0 && day >= 25) return "christ-king"
         val key = month * 100 + day
-        fixedFeasts[key]?.let { return it }
-        return String.format("sancti-%02d-%02d", month, day)
+        return fixedFeasts[key]
     }
 
     private val fixedFeasts: Map<Int, String> = mapOf(

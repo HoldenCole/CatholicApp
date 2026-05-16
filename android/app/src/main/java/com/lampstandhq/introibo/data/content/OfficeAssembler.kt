@@ -75,22 +75,15 @@ class OfficeAssembler(
     //   - Sundays in Lent
     //   - Passion Sunday and Palm Sunday
     //
-    // TODO (Item 7): Feast-day psalm overrides are a future enhancement.
-    // The current day-of-week psalter system is correct for the ferial office.
-    // When a feast-rank system is added, feasts of rank 1-3 on weekdays should
-    // restore 3 nocturns and substitute proper feast psalms/readings.
-
     private fun filterMatinsParts(parts: List<Hour.Part>, context: LiturgicalContext): List<Hour.Part> {
-        val isWeekday = context.dayOfWeek != 0 // 0 = Sunday
+        val isWeekday = context.dayOfWeek != 0
+        val isHighRankFeast = isWeekday
+            && context.properSlug?.let { it in HIGH_RANK_WEEKDAY_FEASTS } == true
+        val useThreeNocturns = !isWeekday || isHighRankFeast
 
-        return if (isWeekday) {
-            // 1-Nocturn Matins: keep everything before "In II Nocturno",
-            // skip Nocturns II & III and the Te Deum, keep the closing
-            // elements (capitulum, collect, conclusion).
+        return if (!useThreeNocturns) {
             filterToOneNocturn(parts)
         } else {
-            // 3-Nocturn Matins (Sunday): keep all nocturns but check
-            // whether the Te Deum should be omitted for this Sunday.
             if (shouldOmitTeDeum(context)) {
                 parts.filter { !isTeDeum(it) }
             } else {
@@ -199,6 +192,19 @@ class OfficeAssembler(
         private val dayKeys = listOf(
             "sunday", "monday", "tuesday", "wednesday",
             "thursday", "friday", "saturday",
+        )
+
+        private val HIGH_RANK_WEEKDAY_FEASTS = setOf(
+            "christmas", "circumcision", "epiphany", "purification",
+            "st-stephen", "st-john-evangelist", "holy-innocents",
+            "easter-0-1", "easter-0-2", "easter-0-3", "easter-0-4", "easter-0-5", "easter-0-6",
+            "easter-7-1", "easter-7-2", "easter-7-3", "easter-7-4", "easter-7-5", "easter-7-6",
+            "ascension", "corpus-christi", "sacred-heart",
+            "st-joseph", "annunciation", "st-joseph-worker",
+            "sts-peter-paul", "nativity-john-baptist",
+            "assumption", "nativity-bvm", "holy-rosary",
+            "all-saints", "all-souls", "immaculate-conception",
+            "holy-thursday", "good-friday", "holy-saturday",
         )
     }
 }
