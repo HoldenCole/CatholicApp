@@ -77,9 +77,9 @@ struct RosaryView: View {
                             .font(langMode == .vernacular ? .pageTitle : .caption)
                             .italic()
                             .foregroundStyle(langMode == .vernacular ? Color.primaryText : Color.secondaryText)
-                        .foregroundStyle(Color.secondaryText)
-                        .textCase(.uppercase)
-                        .tracking(2)
+                            .textCase(.uppercase)
+                            .tracking(2)
+                    }
                     HStack {
                         Spacer()
                         Text("Incipiámus  ✠  Begin")
