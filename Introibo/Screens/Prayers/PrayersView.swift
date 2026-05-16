@@ -233,7 +233,8 @@ struct PrayersView: View {
                     .foregroundStyle(Color.sanctuaryRed)
                     .textCase(.uppercase)
                     .tracking(2)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
             }
 
@@ -286,7 +287,8 @@ struct PrayersView: View {
                     .font(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
 

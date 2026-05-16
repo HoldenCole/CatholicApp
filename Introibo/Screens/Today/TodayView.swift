@@ -266,7 +266,7 @@ struct TodayView: View {
            let proper = ContentStore.shared.proper(slug: slug) {
             Button { showProper = true } label: {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Próprium Missæ  ·  Today's Propers")
+                    LanguageAwareText(latin: "Próprium Missæ", english: "Today\u{2019}s Propers")
                         .smallLabel(color: Color.goldLeaf)
                     Text(proper.title)
                         .font(.titleM)

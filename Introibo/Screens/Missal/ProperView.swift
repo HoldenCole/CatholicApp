@@ -158,9 +158,11 @@ struct ProperView: View {
                     .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
-            Text(reading.ref)
-                .font(.captionSm)
-                .foregroundStyle(Color.goldLeaf)
+            if !reading.ref.isEmpty {
+                Text(reading.ref)
+                    .font(.captionSm)
+                    .foregroundStyle(Color.goldLeaf)
+            }
             BilingualLine(lat: reading.lat, eng: reading.eng, sideBySide: true)
         }
     }

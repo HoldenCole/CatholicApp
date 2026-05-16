@@ -101,7 +101,8 @@ struct RosaryView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("Ália Mystéria")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             ForEach(store.mysterySets.filter { $0.slug != ctx.mystery.rawValue }) { set in

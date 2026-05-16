@@ -118,7 +118,8 @@ struct ExamenView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("Post Exámen")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             Text("Make an Act of Contrition. Resolve to avoid the occasions of sin. Proceed to confession.")
