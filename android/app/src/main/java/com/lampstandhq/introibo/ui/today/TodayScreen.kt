@@ -362,6 +362,7 @@ fun TodayScreen(
                 onNavigateOffice = onNavigateOffice,
                 onNavigateStations = onNavigateStations,
                 onNavigateConfession = onNavigateConfession,
+                onOfferingClick = { showOfferingPrayer = it },
                 modifier = Modifier.padding(horizontal = 28.dp),
             )
         }
@@ -724,11 +725,13 @@ private fun PrayerRuleCard(
 }
 
 @Composable
+@Composable
 private fun DevotionsSection(
     vm: TodayViewModel,
     onNavigateOffice: (() -> Unit)? = null,
     onNavigateStations: (() -> Unit)? = null,
     onNavigateConfession: (() -> Unit)? = null,
+    onOfferingClick: (Prayer) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val colors = IntroiboTheme.colors
@@ -742,7 +745,7 @@ private fun DevotionsSection(
         DevotionRow(title = "Stations of the Cross", latin = "Via Crucis, XIV stationes", onClick = onNavigateStations)
         DevotionRow(title = "Confession Guide", latin = "De Confessione", onClick = onNavigateConfession)
         DevotionRow(title = vm.offeringTitle(), latin = vm.offeringLatin(), onClick = {
-            ContentStore.prayer(vm.offeringSlug())?.let { showOfferingPrayer = it }
+            ContentStore.prayer(vm.offeringSlug())?.let { onOfferingClick(it) }
         })
     }
 }
