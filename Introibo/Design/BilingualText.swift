@@ -56,15 +56,18 @@ struct LanguageAwareText: View {
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
-    var resolved: String {
-        switch mode {
-        case .latinOnly: return latin
-        case .vernacular: return english
-        case .both: return "\(latin)\(separator)\(english)"
-        }
-    }
-
     var body: some View {
-        Text(resolved)
+        switch mode {
+        case .latinOnly:
+            Text(latin)
+        case .vernacular:
+            Text(english)
+        case .both:
+            VStack(spacing: 2) {
+                Text(latin)
+                Text(english)
+                    .foregroundStyle(Color.secondaryText)
+            }
+        }
     }
 }
