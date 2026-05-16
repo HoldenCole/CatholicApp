@@ -121,6 +121,7 @@ fun OfficeScreen(
             LanguageAwareLabel(
                 latin = "“${ctx.feriaLatin}  ·  ${ctx.latinName}”",
                 english = "“${ctx.feriaEnglish}  ·  ${ctx.englishName}”",
+                color = colors.tertiaryText,
             )
 
             Spacer(modifier = Modifier.height(12.dp))

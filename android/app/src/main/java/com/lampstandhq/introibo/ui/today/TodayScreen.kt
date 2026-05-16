@@ -196,10 +196,10 @@ fun TodayScreen(
                             .background(litColor),
                     )
                     Spacer(Modifier.width(8.dp))
-                    val langMode = currentLanguageMode()
                     LanguageAwareLabel(
                         latin = "${ctx.feriaLatin}  ·  ${ctx.latinName}",
                         english = "${ctx.feriaEnglish}  ·  ${ctx.englishName}",
+                        color = colors.goldLeaf,
                     )
                 }
 
