@@ -9,6 +9,8 @@ struct TodayView: View {
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     @State private var showSettings = false
     @State private var offeringTapped = false
     @State private var showProper = false
@@ -82,7 +84,7 @@ struct TodayView: View {
                 Circle()
                     .fill(ctx.colour.swiftUIColor)
                     .frame(width: 8, height: 8)
-                Text("\(ctx.feriaLatin)  ·  \(ctx.latinName)")
+                LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)", separator: "")
                     .smallLabel(color: Color.goldLeaf)
             }
             .padding(.top, 4)

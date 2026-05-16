@@ -16,21 +16,39 @@ struct BilingualLine: View {
     private var cleanEng: String { eng.strippingEm }
 
     var body: some View {
-        if sideBySide && mode == .both && fontScale <= 1.4 {
-            HStack(alignment: .top, spacing: 12) {
-                Text(cleanLat)
-                    .font(.body)
-                    .foregroundStyle(Color.primaryText)
-                    .lineSpacing(3)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(cleanEng)
-                    .font(.body)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
-                    .lineSpacing(3)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
+        if sideBySide && mode == .both {
+            if fontScale > 1.4 {
+                ScrollView(.horizontal, showsIndicators: true) {
+                    HStack(alignment: .top, spacing: 16) {
+                        Text(cleanLat)
+                            .font(.body)
+                            .foregroundStyle(Color.primaryText)
+                            .lineSpacing(3)
+                            .frame(width: UIScreen.main.bounds.width * 0.78, alignment: .leading)
+                        Text(cleanEng)
+                            .font(.body)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                            .lineSpacing(3)
+                            .frame(width: UIScreen.main.bounds.width * 0.78, alignment: .leading)
+                    }
+                }
+            } else {
+                HStack(alignment: .top, spacing: 12) {
+                    Text(cleanLat)
+                        .font(.body)
+                        .foregroundStyle(Color.primaryText)
+                        .lineSpacing(3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(cleanEng)
+                        .font(.body)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                        .lineSpacing(3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
         } else {
             VStack(alignment: .leading, spacing: 3) {
@@ -49,5 +67,28 @@ struct BilingualLine: View {
                 }
             }
         }
+    }
+}
+
+/// Helper to conditionally show Latin and/or English text based on
+/// the user's language preference. Use anywhere that raw Text() is
+/// shown for bilingual content instead of BilingualLine.
+struct LanguageAwareText: View {
+    let latin: String
+    let english: String
+    var separator: String = "  \u{00B7}  "
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
+
+    var resolved: String {
+        switch mode {
+        case .latinOnly: return latin
+        case .vernacular: return english
+        case .both: return "\(latin)\(separator)\(english)"
+        }
+    }
+
+    var body: some View {
+        Text(resolved)
     }
 }

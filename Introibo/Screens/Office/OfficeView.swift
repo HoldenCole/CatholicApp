@@ -11,6 +11,7 @@ struct OfficeView: View {
     @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var ctx: LiturgicalContext { .current() }
 
@@ -27,7 +28,7 @@ struct OfficeView: View {
                     .foregroundStyle(Color.secondaryText)
                     .textCase(.uppercase)
                     .tracking(2)
-                Text("\u{201C}\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)\u{201D}")
+                LanguageAwareText(latin: "\u{201C}\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)\u{201D}", english: "\u{201C}\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)\u{201D}", separator: "")
                     .font(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)

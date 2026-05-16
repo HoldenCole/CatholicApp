@@ -9,6 +9,8 @@ struct RosaryView: View {
     @State private var selection: MysterySetData?
     @State private var showNotification = false
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var ctx: LiturgicalContext { .current() }
 
     var body: some View {
@@ -42,7 +44,7 @@ struct RosaryView: View {
 
     private var header: some View {
         VStack(spacing: 4) {
-            Text("\(ctx.feriaLatin)  ·  \(ctx.latinName)")
+            LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)", separator: "")
                 .smallLabel(color: Color.sanctuaryRed)
             Text("Oratio per Rosárium")
                 .font(.titleL)
@@ -63,14 +65,18 @@ struct RosaryView: View {
         if let todaySet = store.mysterySet(slug: ctx.mystery.rawValue) {
             Button { selection = todaySet } label: {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Mystéria Hodiérna  ·  Today's Mysteries")
+                    LanguageAwareText(latin: "Mystéria Hodiérna", english: "Today\u{2019}s Mysteries")
                         .smallLabel(color: Color.goldLeaf)
-                    Text(todaySet.name)
-                        .font(.pageTitle)
-                        .foregroundStyle(Color.primaryText)
-                    Text(todaySet.english)
-                        .font(.caption)
-                        .italic()
+                    if langMode != .vernacular {
+                        Text(todaySet.name)
+                            .font(.pageTitle)
+                            .foregroundStyle(Color.primaryText)
+                    }
+                    if langMode != .latinOnly {
+                        Text(todaySet.english)
+                            .font(langMode == .vernacular ? .pageTitle : .caption)
+                            .italic()
+                            .foregroundStyle(langMode == .vernacular ? Color.primaryText : Color.secondaryText)
                         .foregroundStyle(Color.secondaryText)
                         .textCase(.uppercase)
                         .tracking(2)
