@@ -39,7 +39,10 @@ import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.model.MysterySetData
+import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -97,7 +100,10 @@ fun RosaryScreen(
         ) {
             // Header
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                SmallLabel(text = "${ctx.feriaLatin}  ·  ${ctx.latinName}", color = colors.sanctuaryRed)
+                LanguageAwareLabel(
+                    latin = "${ctx.feriaLatin}  ·  ${ctx.latinName}",
+                    english = "${ctx.feriaEnglish}  ·  ${ctx.englishName}",
+                )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     text = "Oratio per Rosárium",
@@ -123,15 +129,23 @@ fun RosaryScreen(
                         .padding(20.dp),
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
-                        SmallLabel(text = "Mystéria Hodiérna  ·  Today's Mysteries", color = colors.goldLeaf)
-                        Spacer(modifier = Modifier.height(10.dp))
-                        Text(text = todaySet.name, style = type.pageTitle, color = colors.primaryText)
-                        Text(
-                            text = todaySet.english.uppercase(),
-                            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                            color = colors.secondaryText,
-                            letterSpacing = 2.sp,
+                        val rosaryLang = currentLanguageMode()
+                        LanguageAwareLabel(
+                            latin = "Mystéria Hodiérna",
+                            english = "Today's Mysteries",
                         )
+                        Spacer(modifier = Modifier.height(10.dp))
+                        if (rosaryLang != LanguageMode.VERNACULAR) {
+                            Text(text = todaySet.name, style = type.pageTitle, color = colors.primaryText)
+                        }
+                        if (rosaryLang != LanguageMode.LATIN_ONLY) {
+                            Text(
+                                text = todaySet.english.uppercase(),
+                                style = if (rosaryLang == LanguageMode.VERNACULAR) type.pageTitle else type.captionSm.copy(fontStyle = FontStyle.Italic),
+                                color = if (rosaryLang == LanguageMode.VERNACULAR) colors.primaryText else colors.secondaryText,
+                                letterSpacing = 2.sp,
+                            )
+                        }
                         Spacer(modifier = Modifier.height(10.dp))
                         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                             SmallLabel(text = "Incipiámus  ✠  Begin", color = colors.sanctuaryRed)
@@ -168,16 +182,21 @@ fun RosaryScreen(
                         verticalAlignment = Alignment.Top,
                     ) {
                         Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = set.name,
-                                style = type.titleM.copy(fontStyle = FontStyle.Italic),
-                                color = colors.primaryText,
-                            )
-                            Text(
-                                text = set.english,
-                                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                                color = colors.secondaryText,
-                            )
+                            val listLang = currentLanguageMode()
+                            if (listLang != LanguageMode.VERNACULAR) {
+                                Text(
+                                    text = set.name,
+                                    style = type.titleM.copy(fontStyle = FontStyle.Italic),
+                                    color = colors.primaryText,
+                                )
+                            }
+                            if (listLang != LanguageMode.LATIN_ONLY) {
+                                Text(
+                                    text = set.english,
+                                    style = if (listLang == LanguageMode.VERNACULAR) type.titleM.copy(fontStyle = FontStyle.Italic) else type.captionSm.copy(fontStyle = FontStyle.Italic),
+                                    color = if (listLang == LanguageMode.VERNACULAR) colors.primaryText else colors.secondaryText,
+                                )
+                            }
                         }
                         Text(
                             text = "›",

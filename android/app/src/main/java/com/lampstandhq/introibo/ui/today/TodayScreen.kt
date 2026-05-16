@@ -52,6 +52,9 @@ import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.theme.RawPalette
+import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import java.time.LocalDate
 import java.util.Calendar
 
@@ -193,15 +196,17 @@ fun TodayScreen(
                             .background(litColor),
                     )
                     Spacer(Modifier.width(8.dp))
-                    SmallLabel(
-                        text = "${ctx.feriaLatin}  ·  ${ctx.latinName}",
-                        color = colors.goldLeaf,
+                    val langMode = currentLanguageMode()
+                    LanguageAwareLabel(
+                        latin = "${ctx.feriaLatin}  ·  ${ctx.latinName}",
+                        english = "${ctx.feriaEnglish}  ·  ${ctx.englishName}",
                     )
                 }
 
-                // English day name
+                // Day name — respects language mode
+                val langMode = currentLanguageMode()
                 Text(
-                    text = ctx.feriaEnglish,
+                    text = if (langMode == LanguageMode.LATIN_ONLY) ctx.feriaLatin else ctx.feriaEnglish,
                     style = type.pageTitle,
                     color = colors.ivory,
                     modifier = Modifier.padding(top = 4.dp),
@@ -789,16 +794,21 @@ private fun RosaryCard(
         SectionLabel(title = "Sacratissimum Rosarium", subtitle = "of the Rosary")
         Spacer(Modifier.height(8.dp))
 
-        Text(
-            text = ctx.mystery.latinName,
-            style = type.titleM.copy(fontStyle = FontStyle.Italic),
-            color = colors.primaryText,
-        )
-        Text(
-            text = ctx.mystery.englishName,
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-            color = colors.secondaryText,
-        )
+        val rosaryLang = currentLanguageMode()
+        if (rosaryLang != LanguageMode.VERNACULAR) {
+            Text(
+                text = ctx.mystery.latinName,
+                style = type.titleM.copy(fontStyle = FontStyle.Italic),
+                color = colors.primaryText,
+            )
+        }
+        if (rosaryLang != LanguageMode.LATIN_ONLY) {
+            Text(
+                text = ctx.mystery.englishName,
+                style = if (rosaryLang == LanguageMode.VERNACULAR) type.titleM.copy(fontStyle = FontStyle.Italic) else type.captionSm.copy(fontStyle = FontStyle.Italic),
+                color = if (rosaryLang == LanguageMode.VERNACULAR) colors.primaryText else colors.secondaryText,
+            )
+        }
 
         if (rosaryLastDate != null) {
             val fmt = remember {

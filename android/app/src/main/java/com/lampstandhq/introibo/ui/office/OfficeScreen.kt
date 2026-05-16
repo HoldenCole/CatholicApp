@@ -36,6 +36,7 @@ import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
 import java.util.Calendar
 
 /**
@@ -117,10 +118,9 @@ fun OfficeScreen(
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            Text(
-                text = "“${ctx.feriaLatin}  ·  ${ctx.latinName}”",
-                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                color = colors.tertiaryText,
+            LanguageAwareLabel(
+                latin = "“${ctx.feriaLatin}  ·  ${ctx.latinName}”",
+                english = "“${ctx.feriaEnglish}  ·  ${ctx.englishName}”",
             )
 
             Spacer(modifier = Modifier.height(12.dp))
