@@ -36,7 +36,7 @@ struct SplashView: View {
 
                 Spacer()
 
-                Text("A prayer companion for traditional Catholics")
+                Text("A prayer companion for the traditional Catholic life")
                     .font(.system(size: 11, design: .serif))
                     .italic()
                     .foregroundStyle(Color.muted)
