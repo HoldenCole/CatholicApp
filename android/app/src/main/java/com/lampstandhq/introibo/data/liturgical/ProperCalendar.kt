@@ -208,8 +208,14 @@ object ProperCalendar {
         val month = date.monthValue
         val day = date.dayOfMonth
         val dow = date.dayOfWeek.value % 7 // 0=Sun..6=Sat
+
         // Christ the King: last Sunday of October
         if (month == 10 && dow == 0 && day >= 25) return "christ-king"
+
+        // Sundays after Christmas
+        if (month == 12 && day >= 26 && dow == 0) return "christmas-1"
+        if (month == 1 && day in 2..5 && dow == 0) return "christmas-2"
+
         val key = month * 100 + day
         return fixedFeasts[key]
     }
@@ -220,6 +226,7 @@ object ProperCalendar {
         202 to "purification",
         319 to "st-joseph",
         325 to "annunciation",
+        501 to "st-joseph-worker",
         624 to "nativity-john-baptist",
         629 to "sts-peter-paul",
         815 to "assumption",
