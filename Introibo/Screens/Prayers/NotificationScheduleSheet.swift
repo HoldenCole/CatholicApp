@@ -96,7 +96,7 @@ struct NotificationScheduleSheet: View {
                         Text(dayNames[day - 1])
                             .font(.captionSm)
                             .foregroundStyle(isSelected ? Color.ivory : Color.primaryText)
-                            .frame(width: 38, height: 38)
+                            .frame(width: 44, height: 44)
                             .background(isSelected ? Color.sanctuaryRed : Color.clear)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(isSelected ? Color.sanctuaryRed : Color.frameLine, lineWidth: 0.5))

@@ -119,7 +119,7 @@ struct PrayerDetailView: View {
     private func dropCapText(_ lat: String) -> some View {
         HStack(alignment: .firstTextBaseline, spacing: 2) {
             Text(String(lat.prefix(1)))
-                .font(.system(size: 42 * FontSizeScale.current(), weight: .regular, design: .serif).italic())
+                .font(.system(size: min(42 * FontSizeScale.current(), 60), weight: .regular, design: .serif).italic())
                 .foregroundStyle(Color.sanctuaryRed)
                 .baselineOffset(-4)
             Text(String(lat.dropFirst()))

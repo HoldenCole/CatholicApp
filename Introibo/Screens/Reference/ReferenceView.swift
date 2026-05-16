@@ -5,6 +5,8 @@ struct ReferenceView: View {
     @State private var selection: ReferenceEntry?
     @State private var searchText = ""
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
     var body: some View {
         NavigationStack {
@@ -72,10 +74,12 @@ struct ReferenceView: View {
                     .font(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
-                Text(latin)
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.secondaryText)
+                if langMode != .vernacular {
+                    Text(latin)
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                }
                 Text(count)
                     .font(.captionSm)
                     .foregroundStyle(Color.tertiaryText)
