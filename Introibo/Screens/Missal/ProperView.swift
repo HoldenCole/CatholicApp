@@ -6,6 +6,14 @@ struct ProperView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
+    private func sectionLabel(_ latin: String, _ english: String) -> String {
+        switch mode {
+        case .latinOnly: return latin
+        case .vernacular: return english
+        case .both: return "\(latin)  \u{00B7}  \(english)"
+        }
+    }
 
     var body: some View {
         NavigationStack {
@@ -124,16 +132,6 @@ struct ProperView: View {
         addSection("Postcommunio", lat: proper.postcommunion.lat, eng: proper.postcommunion.eng)
 
         return lines.joined(separator: "\n")
-    }
-
-    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
-    private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
-    private func sectionLabel(_ latin: String, _ english: String) -> String {
-        switch mode {
-        case .latinOnly: return latin
-        case .vernacular: return english
-        case .both: return "\(latin)  \u{00B7}  \(english)"
-        }
     }
 
     private func properSection(_ latin: String, subtitle: String, text: ProperText) -> some View {
