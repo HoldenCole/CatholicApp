@@ -9,7 +9,7 @@
       {
         "type": "lesson",
         "label": "The Five Vowels",
-        "html": "<p><strong>A</strong>; always \"ah\" as in <em>father</em>, never \"ay\".<br><strong>E</strong>; always \"eh\" as in <em>bed</em>, never \"ee\".<br><strong>I</strong>; always \"ee\" as in <em>machine</em>, never \"eye\".<br><strong>O</strong>; always \"oh\" as in <em>note</em>, never \"uh\".<br><strong>U</strong>; always \"oo\" as in <em>food</em>, never \"yoo\".</p>"
+        "html": "<p><strong>A</strong>: always \"ah\" as in <em>father</em>, never \"ay\".<br><strong>E</strong>: always \"eh\" as in <em>bed</em>, never \"ee\".<br><strong>I</strong>: always \"ee\" as in <em>machine</em>, never \"eye\".<br><strong>O</strong>: always \"oh\" as in <em>note</em>, never \"uh\".<br><strong>U</strong>: always \"oo\" as in <em>food</em>, never \"yoo\".</p>"
       },
       {
         "type": "tip",
@@ -70,7 +70,7 @@
       {
         "type": "lesson",
         "label": "The Key Rules",
-        "html": "<p><strong>C</strong>; hard (k) before a, o, u, or a consonant (<em>caelum</em> = CHEH-loom wait; before e/i it softens to <em>ch</em>).<br><strong>C + e/i</strong>; soft \"ch\" as in <em>church</em> (<em>Cǽlum</em> = CHEH-loom).<br><strong>G + e/i</strong>; soft \"j\" as in <em>gem</em> (<em>regina</em> = reh-JEE-nah).<br><strong>Gn</strong>; \"ny\" as in <em>canyon</em> (<em>Agnus</em> = AH-nyoos).<br><strong>Sc + e/i</strong>; \"sh\" (<em>suscipe</em> = SOO-shee-peh).<br><strong>Ti + vowel</strong>; \"tsee\" (<em>gratia</em> = GRAH-tsee-ah).</p>"
+        "html": "<p><strong>C</strong>; hard (k) before a, o, u, or a consonant (<em>cantáre</em> = kahn-TAH-reh).<br><strong>C + e/i/ae</strong>; soft \"ch\" as in <em>church</em> (<em>caelum</em> = CHEH-loom, <em>Dómine</em> = DOH-mee-neh).<br><strong>G + e/i</strong>; soft \"j\" as in <em>gem</em> (<em>regina</em> = reh-JEE-nah).<br><strong>Gn</strong>; \"ny\" as in <em>canyon</em> (<em>Agnus</em> = AH-nyoos).<br><strong>Sc + e/i</strong>; \"sh\" (<em>suscipe</em> = SOO-shee-peh).<br><strong>Ti + vowel</strong>; \"tsee\" (<em>gratia</em> = GRAH-tsee-ah).</p>"
       },
       {
         "type": "tip",

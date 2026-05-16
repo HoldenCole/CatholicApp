@@ -94,8 +94,6 @@ struct ReferenceDetailView: View {
                 .font(.captionSm)
                 .foregroundStyle(Color.goldLeaf)
             BilingualLine(lat: s.lat, eng: s.eng)
-                .italic()
-                .foregroundStyle(Color.secondaryText)
         }
         .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)
