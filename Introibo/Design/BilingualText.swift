@@ -66,7 +66,6 @@ struct LanguageAwareText: View {
             VStack(spacing: 2) {
                 Text(latin)
                 Text(english)
-                    .foregroundStyle(Color.secondaryText)
             }
         }
     }
