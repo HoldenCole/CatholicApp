@@ -28,7 +28,7 @@ struct OfficeView: View {
                     .foregroundStyle(Color.secondaryText)
                     .textCase(.uppercase)
                     .tracking(2)
-                LanguageAwareText(latin: "\u{201C}\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)\u{201D}", english: "\u{201C}\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)\u{201D}", separator: "")
+                LanguageAwareText(latin: "\u{201C}\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)\u{201D}", english: "\u{201C}\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)\u{201D}")
                     .font(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)

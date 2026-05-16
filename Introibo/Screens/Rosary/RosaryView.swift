@@ -44,7 +44,7 @@ struct RosaryView: View {
 
     private var header: some View {
         VStack(spacing: 4) {
-            LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)", separator: "")
+            LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)")
                 .smallLabel(color: Color.sanctuaryRed)
             Text("Oratio per Rosárium")
                 .font(.titleL)
@@ -109,14 +109,18 @@ struct RosaryView: View {
                 Button { selection = set } label: {
                     HStack(alignment: .firstTextBaseline) {
                         VStack(alignment: .leading, spacing: 2) {
-                            Text(set.name)
-                                .font(.titleM)
-                                .italic()
-                                .foregroundStyle(Color.primaryText)
-                            Text(set.english)
-                                .font(.captionSm)
-                                .italic()
-                                .foregroundStyle(Color.secondaryText)
+                            if langMode != .vernacular {
+                                Text(set.name)
+                                    .font(.titleM)
+                                    .italic()
+                                    .foregroundStyle(Color.primaryText)
+                            }
+                            if langMode != .latinOnly {
+                                Text(set.english)
+                                    .font(langMode == .vernacular ? .titleM : .captionSm)
+                                    .italic()
+                                    .foregroundStyle(langMode == .vernacular ? Color.primaryText : Color.secondaryText)
+                            }
                         }
                         Spacer()
                         Text("›")

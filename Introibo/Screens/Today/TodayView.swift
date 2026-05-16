@@ -84,12 +84,12 @@ struct TodayView: View {
                 Circle()
                     .fill(ctx.colour.swiftUIColor)
                     .frame(width: 8, height: 8)
-                LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)", separator: "")
+                LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)")
                     .smallLabel(color: Color.goldLeaf)
             }
             .padding(.top, 4)
 
-            Text(ctx.feriaEnglish)
+            Text(langMode == .latinOnly ? ctx.feriaLatin : ctx.feriaEnglish)
                 .font(.pageTitle)
                 .foregroundStyle(Color.ivory)
 

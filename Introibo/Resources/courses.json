@@ -9,7 +9,7 @@
       {
         "type": "lesson",
         "label": "The Five Vowels",
-        "html": "<p><strong>A</strong>: always \"ah\" as in <em>father</em>, never \"ay\".<br><strong>E</strong>: always \"eh\" as in <em>bed</em>, never \"ee\".<br><strong>I</strong>: always \"ee\" as in <em>machine</em>, never \"eye\".<br><strong>O</strong>: always \"oh\" as in <em>note</em>, never \"uh\".<br><strong>U</strong>: always \"oo\" as in <em>food</em>, never \"yoo\".</p>"
+        "html": "<p><strong>A</strong> — always “ah” as in <em>father</em>. Never the flat English “ay”.<br><em>Example:</em> <strong>Sancta</strong> = SAHNK-tah (not SANK-tuh)</p><p><strong>E</strong> — always “eh” as in <em>bed</em>. Never the long English “ee”.<br><em>Example:</em> <strong>Deus</strong> = DEH-oos (not DEE-us)</p><p><strong>I</strong> — always “ee” as in <em>machine</em>. Never the English “eye”.<br><em>Example:</em> <strong>Fili</strong> = FEE-lee (not FY-ly)</p><p><strong>O</strong> — always “oh” as in <em>note</em>. Never the dull “uh”.<br><em>Example:</em> <strong>Dominus</strong> = DOH-mee-noos (not DUH-mih-nus)</p><p><strong>U</strong> — always “oo” as in <em>food</em>. Never the English “yoo”.<br><em>Example:</em> <strong>Unum</strong> = OO-noom (not YOO-num)</p><h3>Diphthongs</h3><p><strong>AE / OE</strong> — pronounced “eh” (like E). <em>Caelum</em> = CHEH-loom, <em>Poenae</em> = PEH-neh.<br><strong>AU</strong> — “ow” as in <em>house</em>. <em>Laudate</em> = low-DAH-teh.</p>"
       },
       {
         "type": "tip",
@@ -23,40 +23,70 @@
         "items": [
           {
             "lat": "Dóminus",
-            "phon": "DOH-mee-noos",
-            "eng": "Lord, Master"
+            "eng": "Lord, Master",
+            "phon": "DOH-mee-noos"
           },
           {
             "lat": "María",
-            "phon": "mah-REE-ah",
-            "eng": "Mary"
+            "eng": "Mary",
+            "phon": "mah-REE-ah"
           },
           {
             "lat": "Glória",
-            "phon": "GLOH-ree-ah",
-            "eng": "Glory"
+            "eng": "Glory",
+            "phon": "GLOH-ree-ah"
           },
           {
             "lat": "Pater",
-            "phon": "PAH-tehr",
-            "eng": "Father"
+            "eng": "Father",
+            "phon": "PAH-tehr"
           },
           {
             "lat": "Fílius",
-            "phon": "FEE-lee-oos",
-            "eng": "Son"
+            "eng": "Son",
+            "phon": "FEE-lee-oos"
           },
           {
             "lat": "Spíritus",
-            "phon": "SPEE-ree-toos",
-            "eng": "Spirit"
+            "eng": "Spirit",
+            "phon": "SPEE-ree-toos"
+          },
+          {
+            "lat": "Deus",
+            "eng": "God",
+            "phon": "DEH-oos"
+          },
+          {
+            "lat": "Sancta",
+            "eng": "Holy (fem.)",
+            "phon": "SAHNK-tah"
+          },
+          {
+            "lat": "Unum",
+            "eng": "One",
+            "phon": "OO-noom"
+          },
+          {
+            "lat": "Caelum",
+            "eng": "Heaven",
+            "phon": "CHEH-loom"
+          },
+          {
+            "lat": "Laudáte",
+            "eng": "Praise (ye)",
+            "phon": "low-DAH-teh"
+          },
+          {
+            "lat": "Ámen",
+            "eng": "Amen",
+            "phon": "AH-men"
           }
         ]
       },
       {
         "type": "summary",
         "label": "Summarium · Summary",
-        "html": "<p>Latin vowels are pure and stable: A = ah, E = eh, I = ee, O = oh, U = oo. Never diphthongise. Practise with common prayer words until the sounds feel natural.</p>"
+        "html": "<p>Latin vowels are <em>pure</em> and <em>stable</em>: A = ah, E = eh, I = ee, O = oh, U = oo. Hold each vowel steady — never glide or diphthongise as in English. The diphthongs AE and OE both sound like “eh”; AU sounds like “ow.” Practise with common prayer words until the sounds feel natural.</p>"
       }
     ]
   },
