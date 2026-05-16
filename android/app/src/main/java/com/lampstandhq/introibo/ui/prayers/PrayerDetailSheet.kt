@@ -180,7 +180,7 @@ private fun DropCapLine(lat: String, eng: String) {
                 Text(
                     text = lat.take(1),
                     style = type.body.copy(
-                        fontSize = minOf(type.body.fontSize * 2.8f, 60.sp),
+                        fontSize = (type.body.fontSize.value * 2.8f).coerceAtMost(60f).sp,
                         fontStyle = FontStyle.Italic,
                     ),
                     color = colors.sanctuaryRed,

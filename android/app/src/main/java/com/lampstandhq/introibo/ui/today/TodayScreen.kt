@@ -725,7 +725,6 @@ private fun PrayerRuleCard(
 }
 
 @Composable
-@Composable
 private fun DevotionsSection(
     vm: TodayViewModel,
     onNavigateOffice: (() -> Unit)? = null,
