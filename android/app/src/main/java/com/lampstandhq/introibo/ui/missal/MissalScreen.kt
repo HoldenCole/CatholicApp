@@ -138,7 +138,7 @@ fun MissalScreen() {
 
             if (todayProper != null) {
                 // Interleaved Mass: Ordinary + Propers
-                interleavedMassItems(todayProper)
+                interleavedMassItems(todayProper, ctx)
             } else {
                 // Ordinary only
                 items(
@@ -173,6 +173,7 @@ fun MissalScreen() {
 
 private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     proper: MassProper,
+    ctx: LiturgicalContext,
 ) {
     // Prayers at the Foot of the Altar
     ordinaryItem("preces")
@@ -181,9 +182,13 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     // Introit
     item { ProperSection(latin = "Introitus", subtitle = "Introit", text = proper.introit) }
 
-    // Kyrie, Gloria
+    // Kyrie
     ordinaryItem("kyrie")
-    ordinaryItem("gloria")
+
+    // Gloria — omitted in Advent, Lent, Passion, pre-Lent, violet/black
+    if (showGloria(proper, ctx)) {
+        ordinaryItem("gloria")
+    }
 
     // Collect
     item { ProperSection(latin = "Oratio", subtitle = "Collect", text = proper.collect) }
@@ -200,8 +205,10 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     // Gospel
     item { ReadingSection(latin = "Evangelium", subtitle = "Gospel", reading = proper.gospel) }
 
-    // Credo
-    ordinaryItem("credo")
+    // Credo — Sundays and rank-1 feasts only
+    if (showCredo(proper, ctx)) {
+        ordinaryItem("credo")
+    }
 
     // Offertory
     item { ProperSection(latin = "Offertorium", subtitle = "Offertory", text = proper.offertory) }
@@ -229,9 +236,29 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     // Postcommunion
     item { ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion) }
 
-    // Placeat, Last Gospel
+    // Placeat, Ite Missa Est, Last Gospel
     ordinaryItem("placeat")
+    ordinaryItem("ite")
     ordinaryItem("ultimum")
+}
+
+private fun showGloria(proper: MassProper, ctx: LiturgicalContext): Boolean {
+    if (ctx.season == com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.EASTER ||
+        ctx.season == com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.CHRISTMAS) return true
+    if (proper.color == "violet" || proper.color == "black") return false
+    if (ctx.isSunday) {
+        val preLent = listOf("septuagesima", "sexagesima", "quinquagesima")
+        if (ctx.properSlug in preLent) return false
+        return ctx.season != com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.ADVENT &&
+               ctx.season != com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.LENT &&
+               ctx.season != com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.PASSION
+    }
+    return proper.rank == 1
+}
+
+private fun showCredo(proper: MassProper, ctx: LiturgicalContext): Boolean {
+    if (ctx.isSunday) return true
+    return proper.rank == 1
 }
 
 private fun androidx.compose.foundation.lazy.LazyListScope.ordinaryItem(slug: String) {

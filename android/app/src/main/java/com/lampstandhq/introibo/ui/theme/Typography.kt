@@ -65,22 +65,22 @@ fun introiboTypography(scale: Float = FontSizeScale.DEFAULT_VALUE): IntroiboTypo
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.SemiBold,
             fontStyle = FontStyle.Italic,
-            fontSize = scaled(34f),
+            fontSize = 34.sp,
         ),
         titleXL = TextStyle(
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.SemiBold,
-            fontSize = scaled(28f),
+            fontSize = 28.sp,
         ),
         titleL = TextStyle(
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.SemiBold,
-            fontSize = scaled(22f),
+            fontSize = 22.sp,
         ),
         titleM = TextStyle(
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.Medium,
-            fontSize = scaled(18f),
+            fontSize = 18.sp,
         ),
         body = TextStyle(
             fontFamily = BodyFamily,
@@ -102,13 +102,13 @@ fun introiboTypography(scale: Float = FontSizeScale.DEFAULT_VALUE): IntroiboTypo
             fontFamily = LabelFamily,
             fontWeight = FontWeight.Normal,
             fontStyle = FontStyle.Italic,
-            fontSize = scaled(10f),
+            fontSize = 10.sp,
         ),
         smallLabel = TextStyle(
             fontFamily = LabelFamily,
             fontWeight = FontWeight.Bold,
             fontStyle = FontStyle.Italic,
-            fontSize = scaled(11f),
+            fontSize = 11.sp,
             letterSpacing = 2.5.sp,
         ),
     )
