@@ -140,7 +140,8 @@ struct ProperView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             BilingualLine(lat: text.lat, eng: text.eng, sideBySide: true)
@@ -153,7 +154,8 @@ struct ProperView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             Text(reading.ref)

@@ -308,7 +308,8 @@ struct MissalView: View {
                     Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                     Text(label)
                         .smallLabel(color: Color.sanctuaryRed)
-                        .fixedSize()
+                        .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                     Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 }
             }
@@ -350,7 +351,8 @@ struct MissalView: View {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
                 Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
             }
             BilingualLine(lat: text.lat, eng: text.eng, sideBySide: true)
@@ -372,7 +374,8 @@ struct MissalView: View {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
                 Text(sectionLabel(latin, subtitle))
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize()
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.5)).frame(height: 1)
             }
             if !reading.ref.isEmpty {
