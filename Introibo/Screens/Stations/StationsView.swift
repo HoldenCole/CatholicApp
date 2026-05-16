@@ -222,6 +222,8 @@ private struct PrayStationView: View {
     let onNext:  () -> Void
     let onClose: () -> Void
 
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var station: Station { stations[index] }
 
     var body: some View {
