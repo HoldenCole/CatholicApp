@@ -15,21 +15,22 @@ struct HourView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView(.vertical, showsIndicators: true) {
-                VStack(spacing: 0) {
-                    header
-                    VStack(alignment: .leading, spacing: 22) {
-                        intro
-                        ForEach(Array(hour.parts.enumerated()), id: \.offset) { _, part in
-                            partView(part)
+            GeometryReader { geo in
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack(spacing: 0) {
+                        header
+                        VStack(alignment: .leading, spacing: 22) {
+                            intro
+                            ForEach(Array(hour.parts.enumerated()), id: \.offset) { _, part in
+                                partView(part)
+                            }
                         }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 24)
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 24)
+                    .frame(width: geo.size.width)
                 }
-                .frame(maxWidth: .infinity)
             }
-            .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
