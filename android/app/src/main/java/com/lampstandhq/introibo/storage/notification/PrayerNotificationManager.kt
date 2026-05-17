@@ -6,6 +6,7 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import com.lampstandhq.introibo.app.IntroiboApp
 import java.util.Calendar
 
 /**
@@ -20,10 +21,6 @@ import java.util.Calendar
 class PrayerNotificationManager(private val context: Context) {
 
     companion object {
-        const val CHANNEL_ID = "introibo_prayer_reminders"
-        private const val CHANNEL_NAME = "Prayer Reminders"
-        private const val CHANNEL_DESCRIPTION = "Scheduled reminders for prayers and devotions"
-
         // Intent extras
         const val EXTRA_TITLE = "extra_title"
         const val EXTRA_BODY = "extra_body"
@@ -40,6 +37,21 @@ class PrayerNotificationManager(private val context: Context) {
             "vesperae" to "Vespers",
             "completorium" to "Compline",
         )
+
+        /**
+         * Returns the appropriate notification channel ID for a given schedule ID.
+         * Routes:
+         *   - "rule.*"      -> Prayer Rule Reminders (IMPORTANCE_HIGH)
+         *   - "office.*"    -> Divine Office (IMPORTANCE_DEFAULT)
+         *   - "devotion.*"  -> Devotion Reminders (IMPORTANCE_DEFAULT)
+         *   - anything else -> Prayer Rule Reminders (fallback)
+         */
+        fun channelForSchedule(scheduleId: String): String = when {
+            scheduleId.startsWith("rule.") -> IntroiboApp.CHANNEL_PRAYER_RULE
+            scheduleId.startsWith("office.") -> IntroiboApp.CHANNEL_OFFICE_BELLS
+            scheduleId.startsWith("devotion.") -> IntroiboApp.CHANNEL_DEVOTIONS
+            else -> IntroiboApp.CHANNEL_PRAYER_RULE
+        }
     }
 
     private val alarmManager: AlarmManager =
@@ -54,15 +66,35 @@ class PrayerNotificationManager(private val context: Context) {
     // -----------------------------------------------------------------------
 
     private fun createNotificationChannel() {
-        val channel = NotificationChannel(
-            CHANNEL_ID,
-            CHANNEL_NAME,
+        val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        val prayerRuleChannel = NotificationChannel(
+            IntroiboApp.CHANNEL_PRAYER_RULE,
+            "Prayer Rule Reminders",
             NotificationManager.IMPORTANCE_HIGH,
         ).apply {
-            description = CHANNEL_DESCRIPTION
+            description = "Daily prayer rule reminders"
         }
-        val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        nm.createNotificationChannel(channel)
+
+        val officeBellsChannel = NotificationChannel(
+            IntroiboApp.CHANNEL_OFFICE_BELLS,
+            "Divine Office",
+            NotificationManager.IMPORTANCE_DEFAULT,
+        ).apply {
+            description = "Divine Office hour bells"
+        }
+
+        val devotionsChannel = NotificationChannel(
+            IntroiboApp.CHANNEL_DEVOTIONS,
+            "Devotion Reminders",
+            NotificationManager.IMPORTANCE_DEFAULT,
+        ).apply {
+            description = "Rosary, stations, confession reminders"
+        }
+
+        nm.createNotificationChannels(
+            listOf(prayerRuleChannel, officeBellsChannel, devotionsChannel)
+        )
     }
 
     // -----------------------------------------------------------------------

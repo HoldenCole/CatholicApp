@@ -30,6 +30,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -59,8 +60,8 @@ fun ConfessionScreen(
     val type = IntroiboType.current
 
     var selectedGuide by remember { mutableStateOf<ConfessionGuide?>(null) }
-    var showExamen by remember { mutableStateOf(false) }
-    var showNotification by remember { mutableStateOf(false) }
+    var showExamen by rememberSaveable { mutableStateOf(false) }
+    var showNotification by rememberSaveable { mutableStateOf(false) }
 
     LaunchedEffect(openExamen) {
         if (openExamen) showExamen = true

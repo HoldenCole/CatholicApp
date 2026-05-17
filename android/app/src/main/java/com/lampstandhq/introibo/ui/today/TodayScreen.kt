@@ -26,6 +26,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -141,7 +142,7 @@ fun TodayScreen(
     val followedSaint by vm.followedSaint.collectAsState()
     val rosaryLastDate by vm.rosaryLastDate.collectAsState()
 
-    var showSettings by remember { mutableStateOf(false) }
+    var showSettings by rememberSaveable { mutableStateOf(false) }
     var showProper by remember { mutableStateOf<MassProper?>(null) }
     var showOfferingPrayer by remember { mutableStateOf<Prayer?>(null) }
 

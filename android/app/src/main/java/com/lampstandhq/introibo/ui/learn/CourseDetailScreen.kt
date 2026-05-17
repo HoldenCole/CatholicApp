@@ -28,6 +28,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -67,7 +68,7 @@ fun CourseDetailScreen(
     val masteredSet by progressRepo.masteredLessons.collectAsState(initial = emptySet())
     val isMastered = course.slug in masteredSet
 
-    var showQuiz by remember { mutableStateOf(false) }
+    var showQuiz by rememberSaveable { mutableStateOf(false) }
 
     val allCards = course.sections
         .mapNotNull { it.items }
