@@ -8,23 +8,21 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import com.lampstandhq.introibo.storage.settings.AppTheme
 import com.lampstandhq.introibo.storage.settings.FontSizeScale
 import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.navigation.IntroiboNavHost
+import com.lampstandhq.introibo.ui.onboarding.OnboardingScreen
+import com.lampstandhq.introibo.ui.onboarding.SplashScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.LocalFontScale
 import com.lampstandhq.introibo.ui.theme.LocalIntroiboTypography
 import com.lampstandhq.introibo.ui.theme.introiboTypography
 
-/**
- * Single-activity host for the Introibo Compose UI.
- *
- * Reads persisted preferences (theme, font scale, onboarding state) via
- * [SettingsRepository] and provides the design-system tokens via
- * [IntroiboTheme] before rendering the screen graph.
- */
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +32,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             val settingsRepo = remember { SettingsRepository(applicationContext) }
 
-            // Observe settings reactively.
             val theme by settingsRepo.appTheme.collectAsState(initial = AppTheme.PARCHMENT)
             val fontScale by settingsRepo.fontScale.collectAsState(
                 initial = FontSizeScale.DEFAULT_VALUE
@@ -42,25 +39,32 @@ class MainActivity : ComponentActivity() {
 
             val typography = introiboTypography(scale = fontScale)
 
-            // Check onboarding state
             val prefs = remember {
                 applicationContext.getSharedPreferences("introibo_onboarding", Context.MODE_PRIVATE)
             }
             val hasSeenOnboarding = prefs.getBoolean("has_seen_onboarding", false)
+
+            var showSplash by rememberSaveable { mutableStateOf(true) }
+            var onboardingDone by rememberSaveable { mutableStateOf(hasSeenOnboarding) }
 
             IntroiboTheme(themeKey = theme.rawValue) {
                 CompositionLocalProvider(
                     LocalFontScale provides fontScale,
                     LocalIntroiboTypography provides typography,
                 ) {
-                    if (hasSeenOnboarding) {
-                        IntroiboNavHost()
-                    } else {
-                        // Show onboarding then mark complete.
-                        // For now, go straight to main nav and mark onboarding done.
-                        // Replace with OnboardingScreen when it's ported.
-                        prefs.edit().putBoolean("has_seen_onboarding", true).apply()
-                        IntroiboNavHost()
+                    when {
+                        showSplash -> {
+                            SplashScreen(onFinished = { showSplash = false })
+                        }
+                        !onboardingDone -> {
+                            OnboardingScreen(onComplete = {
+                                prefs.edit().putBoolean("has_seen_onboarding", true).apply()
+                                onboardingDone = true
+                            })
+                        }
+                        else -> {
+                            IntroiboNavHost()
+                        }
                     }
                 }
             }
