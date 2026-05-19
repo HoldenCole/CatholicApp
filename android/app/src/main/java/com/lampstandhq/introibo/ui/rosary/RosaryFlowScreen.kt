@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.Mystery
 import com.lampstandhq.introibo.data.model.MysterySetData
+import com.lampstandhq.introibo.ui.components.BilingualLine
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -177,18 +178,7 @@ fun RosaryFlowScreen(
                                 verticalArrangement = Arrangement.spacedBy(10.dp),
                                 horizontalAlignment = Alignment.Start,
                             ) {
-                                Text(
-                                    text = step.latin,
-                                    style = type.body,
-                                    color = colors.primaryText,
-                                    lineHeight = type.body.fontSize * 1.25f,
-                                )
-                                Text(
-                                    text = step.english,
-                                    style = type.bodySm.copy(fontStyle = FontStyle.Italic),
-                                    color = colors.secondaryText,
-                                    lineHeight = type.bodySm.fontSize * 1.2f,
-                                )
+                                BilingualLine(lat = step.latin, eng = step.english)
                             }
 
                             // Meditation

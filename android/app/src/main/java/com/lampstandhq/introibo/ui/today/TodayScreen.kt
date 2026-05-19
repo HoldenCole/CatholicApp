@@ -53,6 +53,7 @@ import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.theme.RawPalette
+import com.lampstandhq.introibo.ui.components.BilingualLine
 import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.storage.settings.LanguageMode
@@ -443,20 +444,8 @@ private fun DailyPsalmCard(modifier: Modifier = Modifier) {
             color = colors.goldLeaf,
             modifier = Modifier.padding(top = 4.dp),
         )
-        Text(
-            text = verse.latin,
-            style = type.bodyIt,
-            color = colors.primaryText,
-            lineHeight = type.bodyIt.fontSize * 1.25f,
-            modifier = Modifier.padding(top = 6.dp),
-        )
-        Text(
-            text = verse.english,
-            style = type.bodySm.copy(fontStyle = FontStyle.Italic),
-            color = colors.secondaryText,
-            lineHeight = type.bodySm.fontSize * 1.2f,
-            modifier = Modifier.padding(top = 4.dp),
-        )
+        Spacer(modifier = Modifier.height(6.dp))
+        BilingualLine(lat = verse.latin, eng = verse.english)
     }
 }
 
@@ -486,11 +475,13 @@ private fun PropersCard(
             color = colors.primaryText,
             modifier = Modifier.padding(top = 4.dp),
         )
-        Text(
-            text = proper.english,
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-            color = colors.secondaryText,
-        )
+        if (currentLanguageMode() != LanguageMode.LATIN_ONLY) {
+            Text(
+                text = proper.english,
+                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                color = colors.secondaryText,
+            )
+        }
 
         if (proper.epistle.ref.isNotEmpty() || proper.gospel.ref.isNotEmpty()) {
             Row(
@@ -771,11 +762,13 @@ private fun DevotionRow(
             style = type.titleM,
             color = colors.primaryText,
         )
-        Text(
-            text = latin,
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-            color = colors.secondaryText,
-        )
+        if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+            Text(
+                text = latin,
+                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                color = colors.secondaryText,
+            )
+        }
     }
 }
 

@@ -52,7 +52,9 @@ import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.Station
 import com.lampstandhq.introibo.data.model.strippingEm
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -272,12 +274,14 @@ private fun StationInfo(station: Station, alignment: Alignment.Horizontal) {
             color = colors.primaryText,
             textAlign = textAlign,
         )
-        Text(
-            text = station.latin,
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-            color = colors.secondaryText,
-            textAlign = textAlign,
-        )
+        if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+            Text(
+                text = station.latin,
+                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                color = colors.secondaryText,
+                textAlign = textAlign,
+            )
+        }
     }
 }
 
