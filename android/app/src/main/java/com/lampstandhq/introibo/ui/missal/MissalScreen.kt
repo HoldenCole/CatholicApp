@@ -37,6 +37,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
+import com.lampstandhq.introibo.data.liturgical.LiturgicalSeason
 import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.data.model.MissalSection
 import com.lampstandhq.introibo.data.model.ProperReading
@@ -177,7 +178,10 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     ctx: LiturgicalContext,
 ) {
     // Prayers at the Foot of the Altar
-    ordinaryItem("preces")
+    // Omitted in Passiontide and Requiem Masses
+    if (ctx.season != LiturgicalSeason.PASSION && proper.color != "black") {
+        ordinaryItem("preces")
+    }
     ordinaryItem("confiteor")
 
     // Introit
@@ -220,39 +224,76 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     // Secret
     item { ProperSection(latin = "Secreta", subtitle = "Secret", text = proper.secret) }
 
-    // Preface, Sanctus, Canon, Pater Noster
-    ordinaryItem("preface")
+    // Proper Preface selection
+    val prefaceSlug = prefaceSlug(proper, ctx)
+    if (ContentStore.missal.any { it.slug == prefaceSlug }) {
+        ordinaryItem(prefaceSlug)
+    } else {
+        ordinaryItem("preface")
+    }
     ordinaryItem("sanctus")
     ordinaryItem("canon")
     ordinaryItem("pater")
 
-    // Agnus Dei
-    ordinaryItem("agnus")
+    // Agnus Dei (Requiem form when color is black)
+    if (proper.color == "black") {
+        ordinaryItem("agnus-requiem")
+    } else {
+        ordinaryItem("agnus")
+    }
+
+    ordinaryItem("domine")
 
     // Communion
     item { ProperSection(latin = "Communio", subtitle = "Communion", text = proper.communion) }
 
-    ordinaryItem("domine")
-
     // Postcommunion
     item { ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion) }
 
-    // Placeat, Ite Missa Est, Last Gospel
-    ordinaryItem("placeat")
-    ordinaryItem("ite")
+    // Placeat + Blessing (omitted in Requiem)
+    if (proper.color != "black") {
+        ordinaryItem("placeat")
+    }
+
+    // Dismissal
+    if (proper.color == "black") {
+        ordinaryItem("requiescant")
+    } else if (showGloria(proper, ctx)) {
+        ordinaryItem("ite")
+    } else {
+        ordinaryItem("benedicamus")
+    }
+
+    // Last Gospel
     ordinaryItem("ultimum")
+
+    // Leonine Prayers
+    ordinaryItem("leonine")
+}
+
+private fun prefaceSlug(proper: MassProper, ctx: LiturgicalContext): String {
+    val explicit = proper.preface
+    if (!explicit.isNullOrEmpty()) return "preface-$explicit"
+    return when (ctx.season) {
+        LiturgicalSeason.ADVENT -> "preface-advent"
+        LiturgicalSeason.CHRISTMAS -> "preface-nativity"
+        LiturgicalSeason.LENT -> "preface-lent"
+        LiturgicalSeason.PASSION -> "preface-cross"
+        LiturgicalSeason.EASTER -> "preface-easter"
+        LiturgicalSeason.PENTECOST -> "preface-pentecost"
+        LiturgicalSeason.PER_ANNUM -> "preface"
+    }
 }
 
 private fun showGloria(proper: MassProper, ctx: LiturgicalContext): Boolean {
-    if (ctx.season == com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.EASTER ||
-        ctx.season == com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.CHRISTMAS) return true
+    if (ctx.season == LiturgicalSeason.EASTER || ctx.season == LiturgicalSeason.CHRISTMAS) return true
     if (proper.color == "violet" || proper.color == "black") return false
     if (ctx.isSunday) {
         val preLent = listOf("septuagesima", "sexagesima", "quinquagesima")
         if (ctx.properSlug in preLent) return false
-        return ctx.season != com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.ADVENT &&
-               ctx.season != com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.LENT &&
-               ctx.season != com.lampstandhq.introibo.data.liturgical.LiturgicalSeason.PASSION
+        return ctx.season != LiturgicalSeason.ADVENT &&
+               ctx.season != LiturgicalSeason.LENT &&
+               ctx.season != LiturgicalSeason.PASSION
     }
     return proper.rank == 1
 }
