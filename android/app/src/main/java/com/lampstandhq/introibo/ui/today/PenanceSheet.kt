@@ -32,6 +32,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.penance.OptionalPenances
+import com.lampstandhq.introibo.storage.settings.LanguageMode
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -123,11 +125,13 @@ fun PenanceSheet(
                                 style = type.titleM.copy(fontStyle = FontStyle.Italic),
                                 color = colors.primaryText,
                             )
-                            Text(
-                                text = penance.latin,
-                                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                                color = colors.goldLeaf,
-                            )
+                            if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+                                Text(
+                                    text = penance.latin,
+                                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                                    color = colors.goldLeaf,
+                                )
+                            }
                             Text(
                                 text = penance.desc,
                                 style = type.captionSm,

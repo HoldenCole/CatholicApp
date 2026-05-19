@@ -45,7 +45,9 @@ import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.Course
 import com.lampstandhq.introibo.storage.progress.UserProgressRepository
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import java.util.Calendar
@@ -340,12 +342,14 @@ private fun LessonRow(course: Course, isMastered: Boolean, onClick: () -> Unit =
                 style = type.titleM.copy(fontStyle = FontStyle.Italic),
                 color = colors.primaryText,
             )
-            Text(
-                text = course.latin,
-                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                color = colors.secondaryText,
-                modifier = Modifier.padding(top = 2.dp),
-            )
+            if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+                Text(
+                    text = course.latin,
+                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.secondaryText,
+                    modifier = Modifier.padding(top = 2.dp),
+                )
+            }
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.padding(top = 4.dp),

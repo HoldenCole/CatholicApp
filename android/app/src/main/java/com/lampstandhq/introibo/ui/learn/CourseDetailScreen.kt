@@ -41,7 +41,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.Course
 import com.lampstandhq.introibo.storage.progress.UserProgressRepository
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.BilingualLine
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -117,12 +119,14 @@ fun CourseDetailScreen(
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 28.dp),
                     )
-                    Text(
-                        text = course.latin.uppercase(),
-                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                        color = colors.muted,
-                        letterSpacing = 2.5.sp,
-                    )
+                    if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+                        Text(
+                            text = course.latin.uppercase(),
+                            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                            color = colors.muted,
+                            letterSpacing = 2.5.sp,
+                        )
+                    }
                     Spacer(modifier = Modifier.height(14.dp))
                     Box(
                         modifier = Modifier

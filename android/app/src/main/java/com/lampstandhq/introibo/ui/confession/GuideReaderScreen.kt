@@ -31,7 +31,9 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.ConfessionGuide
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -162,12 +164,14 @@ private fun StepBlock(step: ConfessionGuide.Step) {
                     style = type.titleM.copy(fontStyle = FontStyle.Italic),
                     color = colors.primaryText,
                 )
-                step.latin?.let { latin ->
-                    Text(
-                        text = latin,
-                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                        color = colors.secondaryText,
-                    )
+                if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+                    step.latin?.let { latin ->
+                        Text(
+                            text = latin,
+                            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                            color = colors.secondaryText,
+                        )
+                    }
                 }
             }
         }

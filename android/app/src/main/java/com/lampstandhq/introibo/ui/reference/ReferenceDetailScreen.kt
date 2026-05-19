@@ -34,7 +34,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.ReferenceEntry
 import com.lampstandhq.introibo.data.model.strippingEm
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -92,13 +94,15 @@ fun ReferenceDetailScreen(
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 28.dp),
                     )
-                    entry.latin?.let { latin ->
-                        Text(
-                            text = latin.uppercase(),
-                            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                            color = colors.muted,
-                            letterSpacing = 2.5.sp,
-                        )
+                    if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+                        entry.latin?.let { latin ->
+                            Text(
+                                text = latin.uppercase(),
+                                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                                color = colors.muted,
+                                letterSpacing = 2.5.sp,
+                            )
+                        }
                     }
                     Spacer(modifier = Modifier.height(14.dp))
                     Box(

@@ -32,7 +32,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.ExamenEntry
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -188,11 +190,13 @@ private fun CommandmentBlock(e: ExamenEntry) {
                     style = type.titleM.copy(fontStyle = FontStyle.Italic),
                     color = colors.primaryText,
                 )
-                Text(
-                    text = e.latin,
-                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                    color = colors.secondaryText,
-                )
+                if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+                    Text(
+                        text = e.latin,
+                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                        color = colors.secondaryText,
+                    )
+                }
             }
         }
 

@@ -58,7 +58,9 @@ import androidx.compose.ui.window.DialogProperties
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.data.model.ReferenceEntry
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.SmallLabel
+import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -284,7 +286,7 @@ private fun ReferenceListSheet(
                                     style = type.titleM.copy(fontStyle = FontStyle.Italic),
                                     color = colors.primaryText,
                                 )
-                                if (entry.latin != null) {
+                                if (entry.latin != null && currentLanguageMode() != LanguageMode.VERNACULAR) {
                                     Text(
                                         text = entry.latin,
                                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
@@ -426,12 +428,14 @@ private fun PropersListSheet(
                             style = type.titleM.copy(fontStyle = FontStyle.Italic),
                             color = colors.primaryText,
                         )
-                        Text(
-                            text = proper.english,
-                            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                            color = colors.secondaryText,
-                            modifier = Modifier.padding(top = 3.dp),
-                        )
+                        if (currentLanguageMode() != LanguageMode.LATIN_ONLY) {
+                            Text(
+                                text = proper.english,
+                                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                                color = colors.secondaryText,
+                                modifier = Modifier.padding(top = 3.dp),
+                            )
+                        }
                         if (proper.epistle.ref.isNotEmpty() || proper.gospel.ref.isNotEmpty()) {
                             Row(
                                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -840,12 +844,14 @@ private fun SectionCard(
             color = colors.primaryText,
             modifier = Modifier.padding(top = 8.dp),
         )
-        Text(
-            text = latin,
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-            color = colors.secondaryText,
-            modifier = Modifier.padding(top = 2.dp),
-        )
+        if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+            Text(
+                text = latin,
+                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                color = colors.secondaryText,
+                modifier = Modifier.padding(top = 2.dp),
+            )
+        }
         Text(
             text = count,
             style = type.captionSm,

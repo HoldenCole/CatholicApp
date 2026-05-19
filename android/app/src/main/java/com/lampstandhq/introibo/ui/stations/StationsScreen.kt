@@ -346,13 +346,15 @@ private fun PrayStationView(
                 textAlign = TextAlign.Center,
             )
 
-            Text(
-                text = station.latin.uppercase(),
-                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                color = colors.muted,
-                letterSpacing = 2.5.sp,
-                textAlign = TextAlign.Center,
-            )
+            if (currentLanguageMode() != LanguageMode.VERNACULAR) {
+                Text(
+                    text = station.latin.uppercase(),
+                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.muted,
+                    letterSpacing = 2.5.sp,
+                    textAlign = TextAlign.Center,
+                )
+            }
 
             HorizontalDivider(color = colors.goldLeaf.copy(alpha = 0.3f))
 
