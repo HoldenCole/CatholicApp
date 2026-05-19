@@ -195,25 +195,31 @@ struct MissalView: View {
         return proper.rank == 1
     }
 
+    /// Determine the correct Preface slug for the season/feast.
+    /// 1. If the proper has an explicit preface field, use "preface-{value}".
+    /// 2. Otherwise, derive from the liturgical season.
+    /// 3. Fall back to the Common Preface ("preface").
+    private func prefaceSlug(for proper: MassProper?) -> String {
+        if let explicit = proper?.preface, !explicit.isEmpty {
+            return "preface-\(explicit)"
+        }
+        switch ctx.season {
+        case .advent:    return "preface-advent"
+        case .christmas: return "preface-nativity"
+        case .lent:      return "preface-lent"
+        case .passion:   return "preface-cross"
+        case .easter:    return "preface-easter"
+        case .pentecost: return "preface-pentecost"
+        case .perAnnum:  return "preface"
+        }
+    }
+
     /// Select the correct Preface for the season/feast.
     @ViewBuilder
     private func properPreface(_ proper: MassProper) -> some View {
-        let prefaceSlug: String
-        if let explicit = proper.preface, !explicit.isEmpty {
-            prefaceSlug = "preface-\(explicit)"
-        } else {
-            switch ctx.season {
-            case .advent:    prefaceSlug = "preface-advent"
-            case .christmas: prefaceSlug = "preface-nativity"
-            case .lent:      prefaceSlug = "preface-lent"
-            case .passion:   prefaceSlug = "preface-cross"
-            case .easter:    prefaceSlug = "preface-easter"
-            case .pentecost: prefaceSlug = "preface-trinity"
-            case .perAnnum:  prefaceSlug = "preface"
-            }
-        }
-        if store.missal.contains(where: { $0.slug == prefaceSlug }) {
-            ordinarySection(prefaceSlug)
+        let slug = prefaceSlug(for: proper)
+        if store.missal.contains(where: { $0.slug == slug }) {
+            ordinarySection(slug)
         } else {
             ordinarySection("preface")
         }
@@ -348,7 +354,12 @@ struct MissalView: View {
             addProper("Secreta · Secret", lat: p.secret.lat, eng: p.secret.eng)
         }
 
-        addOrdinary("preface")
+        let resolvedPreface = prefaceSlug(for: proper)
+        if store.missal.contains(where: { $0.slug == resolvedPreface }) {
+            addOrdinary(resolvedPreface)
+        } else {
+            addOrdinary("preface")
+        }
         addOrdinary("sanctus")
         addOrdinary("canon")
         addOrdinary("pater")
@@ -386,8 +397,18 @@ struct MissalView: View {
 
     // MARK: - Ordinary-only fallback
 
+    /// Proper preface slugs that should only appear when selected for a
+    /// specific season/feast -- never in the generic ordinary-only view.
+    private static let properPrefaceSlugs: Set<String> = [
+        "preface-advent", "preface-nativity", "preface-epiphany",
+        "preface-lent", "preface-cross", "preface-easter",
+        "preface-ascension", "preface-pentecost", "preface-trinity",
+        "preface-bvm", "preface-joseph", "preface-apostles",
+        "preface-requiem"
+    ]
+
     private var ordinaryOnly: some View {
-        ForEach(store.missal) { section in
+        ForEach(store.missal.filter { !Self.properPrefaceSlugs.contains($0.slug) }) { section in
             ordinarySectionBlock(section)
         }
     }
