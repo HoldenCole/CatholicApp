@@ -66,6 +66,21 @@ final class ContentStore {
         mysterySets.first { $0.slug == slug }
     }
 
+    // MARK: - Canon variants
+
+    private lazy var canonVariants: [String: [String: [String: String]]]? = {
+        load("canon_variants", as: [String: [String: [String: String]]].self)
+    }()
+
+    func canonVariant(_ type: String, key: String) -> (lat: String, eng: String)? {
+        guard let variants = canonVariants,
+              let group = variants[type],
+              let entry = group[key],
+              let lat = entry["lat"],
+              let eng = entry["eng"] else { return nil }
+        return (lat, eng)
+    }
+
     // MARK: - Generic bundle loader
 
     private func load<T: Decodable>(_ name: String, as type: T.Type) -> T? {

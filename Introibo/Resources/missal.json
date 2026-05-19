@@ -698,6 +698,43 @@
     ]
   },
   {
+    "slug": "agnus-requiem",
+    "label": "Commúnio",
+    "title": "Agnus Dei",
+    "english": "Lamb of God (Requiem)",
+    "body": [
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi: dona eis réquiem.",
+        "eng": "Lamb of God, Who takest away the sins of the world: grant them rest.",
+        "rubric": "The priest strikes his breast, all say:"
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi: dona eis réquiem.",
+        "eng": "Lamb of God, Who takest away the sins of the world: grant them rest."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi: dona eis réquiem sempitérnam.",
+        "eng": "Lamb of God, Who takest away the sins of the world: grant them eternal rest."
+      }
+    ]
+  },
+  {
+    "slug": "confiteor-communion",
+    "title": "Confíteor ante Commúnionem",
+    "english": "Confiteor Before Communion",
+    "body": [
+      {
+        "rubric": "Before distributing Holy Communion, the server recites the Confiteor on behalf of the people:",
+        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Joánni Baptístæ, sanctis Apóstolis Petro et Paulo, ómnibus Sanctis, et tibi, Pater: quia peccávi nimis cogitatióne, verbo et ópere: mea culpa, mea culpa, mea máxima culpa.",
+        "eng": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, Father: that I have sinned exceedingly in thought, word and deed: through my fault, through my fault, through my most grievous fault."
+      },
+      {
+        "lat": "Misereátur vestri omnípotens Deus, et dimíssis peccátis vestris, perdúcat vos ad vitam ætérnam. ℟. Amen.\nIndulgéntiam, absolutiónem, et remissiónem peccatórum vestrórum tríbuat vobis omnípotens et miséricors Dóminus. ℟. Amen.",
+        "eng": "May almighty God have mercy upon you, forgive you your sins, and bring you to everlasting life. ℟. Amen.\nMay the almighty and merciful Lord grant you pardon, absolution, and remission of your sins. ℟. Amen."
+      }
+    ]
+  },
+  {
     "slug": "domine",
     "label": "Commúnio",
     "title": "Dómine, Non Sum Dignus",

@@ -144,7 +144,16 @@ struct MissalView: View {
         ordinarySection("pater")
 
         // Agnus Dei
-        ordinarySection("agnus")
+        if proper.color == "black" {
+            ordinarySection("agnus-requiem")
+        } else {
+            ordinarySection("agnus")
+        }
+
+        // Confiteor before Communion (pre-1955 rite; suppressed in 1962)
+        if rite == .pre1955 {
+            ordinarySection("confiteor-communion")
+        }
 
         // Domine non sum dignus
         ordinarySection("domine")
@@ -155,8 +164,10 @@ struct MissalView: View {
         // POSTCOMMUNION (proper)
         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
 
-        // Placeat, Blessing
-        ordinarySection("placeat")
+        // Placeat, Blessing (omitted in Requiem Masses)
+        if proper.color != "black" {
+            ordinarySection("placeat")
+        }
 
         // Dismissal: "Ite, missa est" when Gloria was said;
         // "Benedicamus Domino" when Gloria was not said;
@@ -229,7 +240,30 @@ struct MissalView: View {
     /// for Christmas, Epiphany, Easter, Ascension, Pentecost.
     @ViewBuilder
     private func canonWithProperInsertions() -> some View {
-        ordinarySection("canon")
+        if let variantKey = canonVariantKey(),
+           let section = store.missal.first(where: { $0.slug == "canon" }) {
+            let modified: [MissalSection.Line] = section.body.map { line in
+                var mutable = line
+                if line.lat.hasPrefix("Commúnicántes"),
+                   let variant = store.canonVariant("communicantes", key: variantKey) {
+                    mutable.lat = variant.lat
+                    mutable.eng = variant.eng
+                }
+                if line.lat.hasPrefix("Hanc ígitur"),
+                   let variant = store.canonVariant("hanc_igitur", key: variantKey) {
+                    mutable.lat = variant.lat
+                    mutable.eng = variant.eng
+                }
+                return mutable
+            }
+            ordinarySectionBlock(
+                MissalSection(slug: section.slug, label: section.label,
+                              title: section.title, english: section.english,
+                              body: modified)
+            )
+        } else {
+            ordinarySection("canon")
+        }
     }
 
     private func canonVariantKey() -> String? {
@@ -373,7 +407,11 @@ struct MissalView: View {
         addOrdinary("sanctus")
         addOrdinary("canon")
         addOrdinary("pater")
-        addOrdinary("agnus")
+        if proper?.color == "black" {
+            addOrdinary("agnus-requiem")
+        } else {
+            addOrdinary("agnus")
+        }
         addOrdinary("domine")
 
         if let p = proper {
@@ -384,7 +422,9 @@ struct MissalView: View {
             addProper("Postcommunio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
         }
 
-        addOrdinary("placeat")
+        if proper?.color != "black" {
+            addOrdinary("placeat")
+        }
 
         // Dismissal
         if let p = proper {
@@ -407,14 +447,15 @@ struct MissalView: View {
 
     // MARK: - Ordinary-only fallback
 
-    /// Proper preface slugs that should only appear when selected for a
-    /// specific season/feast -- never in the generic ordinary-only view.
+    /// Slugs that should only appear when selected for a specific
+    /// season/feast/rite -- never in the generic ordinary-only view.
     private static let properPrefaceSlugs: Set<String> = [
         "preface-advent", "preface-nativity", "preface-epiphany",
         "preface-lent", "preface-cross", "preface-easter",
         "preface-ascension", "preface-pentecost", "preface-trinity",
         "preface-bvm", "preface-joseph", "preface-apostles",
-        "preface-requiem"
+        "preface-requiem",
+        "agnus-requiem"
     ]
 
     private var ordinaryOnly: some View {
