@@ -254,12 +254,6 @@ struct HourView: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(p.label ?? "Pater Noster")
                 .smallLabel(color: Color.sanctuaryRed)
-            if let rubric = p.rubric {
-                Text(rubric)
-                    .font(.captionSm)
-                    .italic()
-                    .foregroundStyle(Color.tertiaryText)
-            }
             if let lat = p.lat, let eng = p.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
             }
