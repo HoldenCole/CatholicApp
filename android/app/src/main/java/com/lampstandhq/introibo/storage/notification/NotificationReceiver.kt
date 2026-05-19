@@ -23,8 +23,9 @@ class NotificationReceiver : BroadcastReceiver() {
         val scheduleId = intent.getStringExtra(PrayerNotificationManager.EXTRA_SCHEDULE_ID).orEmpty()
 
         val notificationId = scheduleId.hashCode()
+        val channelId = PrayerNotificationManager.channelForSchedule(scheduleId)
 
-        val notification = NotificationCompat.Builder(context, PrayerNotificationManager.CHANNEL_ID)
+        val notification = NotificationCompat.Builder(context, channelId)
             .setSmallIcon(android.R.drawable.ic_popup_reminder)
             .setContentTitle(title)
             .apply { if (body.isNotEmpty()) setContentText(body) }

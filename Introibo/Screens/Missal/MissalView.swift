@@ -76,11 +76,19 @@ struct MissalView: View {
     @ViewBuilder
     private func interleavedMass(_ proper: MassProper) -> some View {
         // Prayers at the Foot of the Altar
-        ordinarySection("preces")
+        // In Passiontide and Requiem Masses, Psalm 42 (Judica me) is omitted;
+        // the priest goes directly to the Confiteor.
+        if ctx.season != .passion && proper.color != "black" {
+            ordinarySection("preces")
+        }
         ordinarySection("confiteor")
 
         // INTROIT (proper)
-        properSection("Introitus", subtitle: "Introit", text: proper.introit)
+        // In Passiontide the Gloria Patri is omitted from the Introit.
+        properSection("Introitus", subtitle: "Introit",
+                       text: ctx.season == .passion
+                           ? stripGloriaPatri(proper.introit)
+                           : proper.introit)
 
         // Kyrie
         ordinarySection("kyrie")
@@ -130,13 +138,22 @@ struct MissalView: View {
         properSection("Secréta", subtitle: "Secret", text: proper.secret)
 
         // Preface, Sanctus, Canon, Pater Noster
-        ordinarySection("preface")
+        properPreface(proper)
         ordinarySection("sanctus")
-        ordinarySection("canon")
+        canonWithProperInsertions()
         ordinarySection("pater")
 
         // Agnus Dei
-        ordinarySection("agnus")
+        if proper.color == "black" {
+            ordinarySection("agnus-requiem")
+        } else {
+            ordinarySection("agnus")
+        }
+
+        // Confiteor before Communion (pre-1955 rite; suppressed in 1962)
+        if rite == .pre1955 {
+            ordinarySection("confiteor-communion")
+        }
 
         // Domine non sum dignus
         ordinarySection("domine")
@@ -147,11 +164,21 @@ struct MissalView: View {
         // POSTCOMMUNION (proper)
         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
 
-        // Placeat, Blessing
-        ordinarySection("placeat")
+        // Placeat, Blessing (omitted in Requiem Masses)
+        if proper.color != "black" {
+            ordinarySection("placeat")
+        }
 
-        // Ite, Missa Est
-        ordinarySection("ite")
+        // Dismissal: "Ite, missa est" when Gloria was said;
+        // "Benedicamus Domino" when Gloria was not said;
+        // "Requiescant in pace" at Requiem Masses.
+        if proper.color == "black" {
+            ordinarySection("requiescant")
+        } else if showGloria(proper) {
+            ordinarySection("ite")
+        } else {
+            ordinarySection("benedicamus")
+        }
 
         // Last Gospel
         ordinarySection("ultimum")
@@ -179,10 +206,106 @@ struct MissalView: View {
         return proper.rank == 1
     }
 
+    /// Determine the correct Preface slug for the season/feast.
+    /// 1. If the proper has an explicit preface field, use "preface-{value}".
+    /// 2. Otherwise, derive from the liturgical season.
+    /// 3. Fall back to the Common Preface ("preface").
+    private func prefaceSlug(for proper: MassProper?) -> String {
+        if let explicit = proper?.preface, !explicit.isEmpty {
+            return "preface-\(explicit)"
+        }
+        switch ctx.season {
+        case .advent:    return "preface-advent"
+        case .christmas: return "preface-nativity"
+        case .lent:      return "preface-lent"
+        case .passion:   return "preface-cross"
+        case .easter:    return "preface-easter"
+        case .pentecost: return "preface-pentecost"
+        case .perAnnum:  return "preface"
+        }
+    }
+
+    /// Select the correct Preface for the season/feast.
+    @ViewBuilder
+    private func properPreface(_ proper: MassProper) -> some View {
+        let slug = prefaceSlug(for: proper)
+        if store.missal.contains(where: { $0.slug == slug }) {
+            ordinarySection(slug)
+        } else {
+            ordinarySection("preface")
+        }
+    }
+
+    /// Render the Canon, substituting proper Communicantes/Hanc igitur
+    /// for Christmas, Epiphany, Easter, Ascension, Pentecost.
+    @ViewBuilder
+    private func canonWithProperInsertions() -> some View {
+        if let variantKey = canonVariantKey(),
+           let section = store.missal.first(where: { $0.slug == "canon" }) {
+            let modified: [MissalSection.Line] = section.body.map { line in
+                var mutable = line
+                if line.lat.hasPrefix("Commúnicántes"),
+                   let variant = store.canonVariant("communicantes", key: variantKey) {
+                    mutable.lat = variant.lat
+                    mutable.eng = variant.eng
+                }
+                if line.lat.hasPrefix("Hanc ígitur"),
+                   let variant = store.canonVariant("hanc_igitur", key: variantKey) {
+                    mutable.lat = variant.lat
+                    mutable.eng = variant.eng
+                }
+                return mutable
+            }
+            ordinarySectionBlock(
+                MissalSection(slug: section.slug, label: section.label,
+                              title: section.title, english: section.english,
+                              body: modified)
+            )
+        } else {
+            ordinarySection("canon")
+        }
+    }
+
+    private func canonVariantKey() -> String? {
+        guard let slug = ctx.properSlug else { return nil }
+        if slug == "christmas" || slug.hasPrefix("christmas-") { return "christmas" }
+        if slug == "epiphany" { return "epiphany" }
+        if slug == "easter-sunday" || slug.hasPrefix("easter-0") { return "easter" }
+        if slug == "ascension" { return "ascension" }
+        if slug == "pentecost-sunday" || slug.hasPrefix("easter-7") { return "pentecost" }
+        return nil
+    }
+
     /// Credo is said on all Sundays and on major feasts (rank 1 in data).
     private func showCredo(_ proper: MassProper) -> Bool {
         if ctx.isSunday { return true }
         return proper.rank == 1
+    }
+
+    /// Strip the Gloria Patri doxology from an introit text.
+    /// The doxology may appear as the abbreviated "℣. Glória Patri." or
+    /// the full "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat …"
+    /// along with the English equivalent.
+    private func stripGloriaPatri(_ text: ProperText) -> ProperText {
+        let latStripped = text.lat
+            .replacingOccurrences(
+                of: #"\s*℣\.?\s*Glória Patri[^℣]*$"#,
+                with: "",
+                options: .regularExpression)
+            .replacingOccurrences(
+                of: #"\s*Glória Patri,\s*et Fílio.*?(Amen\.|Sancto\.)"#,
+                with: "",
+                options: .regularExpression)
+        let engStripped = text.eng
+            .replacingOccurrences(
+                of: #"\s*℣\.?\s*Glory be to the Father[^℣]*$"#,
+                with: "",
+                options: .regularExpression)
+            .replacingOccurrences(
+                of: #"\s*Glory be to the Father,?\s*and to the Son.*?(Amen\.|Ghost\.)"#,
+                with: "",
+                options: .regularExpression)
+        return ProperText(lat: latStripped, eng: engStripped)
     }
 
     // MARK: - Export full Mass as text
@@ -230,15 +353,28 @@ struct MissalView: View {
             lines.append("")
         }
 
-        addOrdinary("preces")
+        if let p = proper {
+            // Psalm 42 omitted in Passiontide and Requiem Masses
+            if ctx.season != .passion && p.color != "black" {
+                addOrdinary("preces")
+            }
+        } else {
+            addOrdinary("preces")
+        }
         addOrdinary("confiteor")
 
         if let p = proper {
-            addProper("Introitus · Introit", lat: p.introit.lat, eng: p.introit.eng)
+            // Strip Gloria Patri from introit in Passiontide
+            let introit = ctx.season == .passion ? stripGloriaPatri(p.introit) : p.introit
+            addProper("Introitus · Introit", lat: introit.lat, eng: introit.eng)
         }
 
         addOrdinary("kyrie")
-        addOrdinary("gloria")
+        if let p = proper, showGloria(p) {
+            addOrdinary("gloria")
+        } else if proper == nil {
+            addOrdinary("gloria")
+        }
 
         if let p = proper {
             addProper("Oratio · Collect", lat: p.collect.lat, eng: p.collect.eng)
@@ -262,11 +398,20 @@ struct MissalView: View {
             addProper("Secreta · Secret", lat: p.secret.lat, eng: p.secret.eng)
         }
 
-        addOrdinary("preface")
+        let resolvedPreface = prefaceSlug(for: proper)
+        if store.missal.contains(where: { $0.slug == resolvedPreface }) {
+            addOrdinary(resolvedPreface)
+        } else {
+            addOrdinary("preface")
+        }
         addOrdinary("sanctus")
         addOrdinary("canon")
         addOrdinary("pater")
-        addOrdinary("agnus")
+        if proper?.color == "black" {
+            addOrdinary("agnus-requiem")
+        } else {
+            addOrdinary("agnus")
+        }
         addOrdinary("domine")
 
         if let p = proper {
@@ -277,7 +422,23 @@ struct MissalView: View {
             addProper("Postcommunio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
         }
 
-        addOrdinary("placeat")
+        if proper?.color != "black" {
+            addOrdinary("placeat")
+        }
+
+        // Dismissal
+        if let p = proper {
+            if p.color == "black" {
+                addOrdinary("requiescant")
+            } else if showGloria(p) {
+                addOrdinary("ite")
+            } else {
+                addOrdinary("benedicamus")
+            }
+        } else {
+            addOrdinary("ite")
+        }
+
         addOrdinary("ultimum")
         addOrdinary("leonine")
 
@@ -286,8 +447,19 @@ struct MissalView: View {
 
     // MARK: - Ordinary-only fallback
 
+    /// Slugs that should only appear when selected for a specific
+    /// season/feast/rite -- never in the generic ordinary-only view.
+    private static let properPrefaceSlugs: Set<String> = [
+        "preface-advent", "preface-nativity", "preface-epiphany",
+        "preface-lent", "preface-cross", "preface-easter",
+        "preface-ascension", "preface-pentecost", "preface-trinity",
+        "preface-bvm", "preface-joseph", "preface-apostles",
+        "preface-requiem",
+        "agnus-requiem"
+    ]
+
     private var ordinaryOnly: some View {
-        ForEach(store.missal) { section in
+        ForEach(store.missal.filter { !Self.properPrefaceSlugs.contains($0.slug) }) { section in
             ordinarySectionBlock(section)
         }
     }

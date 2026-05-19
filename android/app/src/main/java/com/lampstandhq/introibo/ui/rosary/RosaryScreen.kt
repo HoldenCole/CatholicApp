@@ -103,6 +103,7 @@ fun RosaryScreen(
                 LanguageAwareLabel(
                     latin = "${ctx.feriaLatin}  ·  ${ctx.latinName}",
                     english = "${ctx.feriaEnglish}  ·  ${ctx.englishName}",
+                    color = colors.sanctuaryRed,
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
@@ -133,6 +134,8 @@ fun RosaryScreen(
                         LanguageAwareLabel(
                             latin = "Mystéria Hodiérna",
                             english = "Today's Mysteries",
+                            color = colors.goldLeaf,
+                            style = type.smallLabel,
                         )
                         Spacer(modifier = Modifier.height(10.dp))
                         if (rosaryLang != LanguageMode.VERNACULAR) {

@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.liturgical
 
+import com.lampstandhq.introibo.storage.settings.MissalRite
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
@@ -9,7 +10,7 @@ import java.time.temporal.ChronoUnit
  */
 object ProperCalendar {
 
-    fun properSlug(date: LocalDate, propers: List<String> = emptyList()): String? {
+    fun properSlug(date: LocalDate, propers: List<String> = emptyList(), rite: MissalRite = MissalRite.RITE_1962): String? {
         val year = date.year
         val easter = Computus.easterSunday(year)
         val dow = LiturgicalContext.dayOfWeekIndex(date) // 0=Sun..6=Sat
@@ -18,7 +19,7 @@ object ProperCalendar {
         moveableSlug(date, easter)?.let { return it }
 
         // Fixed sanctorale feasts (high-rank saints in fixedFeasts dictionary)
-        fixedFeastSlug(date)?.let { return it }
+        fixedFeastSlug(date, rite)?.let { return it }
 
         // On Sundays, the temporal cycle takes precedence over generic saints
         if (dow == 0) {
@@ -204,13 +205,22 @@ object ProperCalendar {
 
     // ---- Sanctorale (fixed cycle) ----
 
-    private fun fixedFeastSlug(date: LocalDate): String? {
+    private fun fixedFeastSlug(date: LocalDate, rite: MissalRite = MissalRite.RITE_1962): String? {
         val month = date.monthValue
         val day = date.dayOfMonth
         val dow = date.dayOfWeek.value % 7 // 0=Sun..6=Sat
+
         // Christ the King: last Sunday of October
         if (month == 10 && dow == 0 && day >= 25) return "christ-king"
+
+        // Sundays after Christmas
+        if (month == 12 && day >= 26 && dow == 0) return "christmas-1"
+        if (month == 1 && day in 2..5 && dow == 0) return "christmas-2"
+
+        // Pre-1955: May 1 is Sts. Philip & James, not St. Joseph Worker
         val key = month * 100 + day
+        if (key == 501 && rite == MissalRite.PRE_1955) return "sts-philip-james"
+
         return fixedFeasts[key]
     }
 
@@ -220,6 +230,7 @@ object ProperCalendar {
         202 to "purification",
         319 to "st-joseph",
         325 to "annunciation",
+        501 to "st-joseph-worker",
         624 to "nativity-john-baptist",
         629 to "sts-peter-paul",
         815 to "assumption",

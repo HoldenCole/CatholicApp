@@ -13,8 +13,8 @@ struct MissalSection: Identifiable, Decodable, Hashable {
     var id: String { slug }
 
     struct Line: Decodable, Hashable {
-        let lat: String
-        let eng: String
+        var lat: String
+        var eng: String
         var rubric: String? = nil
     }
 }

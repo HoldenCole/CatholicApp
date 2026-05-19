@@ -86,22 +86,22 @@ fun BilingualLine(
 /**
  * Shows Latin and/or English label text based on language mode.
  * In Both mode, shows Latin on top and English below.
+ * Inherits color from LocalContentColor so it works on any background.
  */
 @Composable
 fun LanguageAwareLabel(
     latin: String,
     english: String,
     modifier: Modifier = Modifier,
+    style: androidx.compose.ui.text.TextStyle = IntroiboType.current.captionSm.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic),
+    color: androidx.compose.ui.graphics.Color = androidx.compose.material3.LocalContentColor.current,
 ) {
-    val mode = currentLanguageMode()
-    val colors = IntroiboTheme.colors
-
-    when (mode) {
-        LanguageMode.LATIN_ONLY -> Text(latin, modifier = modifier)
-        LanguageMode.VERNACULAR -> Text(english, modifier = modifier)
+    when (currentLanguageMode()) {
+        LanguageMode.LATIN_ONLY -> Text(latin, style = style, color = color, modifier = modifier)
+        LanguageMode.VERNACULAR -> Text(english, style = style, color = color, modifier = modifier)
         LanguageMode.BOTH -> Column(modifier = modifier) {
-            Text(latin)
-            Text(english)
+            Text(latin, style = style, color = color)
+            Text(english, style = style, color = color)
         }
     }
 }

@@ -25,19 +25,41 @@ class IntroiboApp : Application() {
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channel = NotificationChannel(
-                CHANNEL_ID,
-                "Prayer Reminders",
+            val manager = getSystemService(NotificationManager::class.java)
+
+            val prayerRuleChannel = NotificationChannel(
+                CHANNEL_PRAYER_RULE,
+                "Prayer Rule Reminders",
+                NotificationManager.IMPORTANCE_HIGH,
+            ).apply {
+                description = "Daily prayer rule reminders"
+            }
+
+            val officeBellsChannel = NotificationChannel(
+                CHANNEL_OFFICE_BELLS,
+                "Divine Office",
                 NotificationManager.IMPORTANCE_DEFAULT,
             ).apply {
-                description = "Daily prayer and devotion reminders"
+                description = "Divine Office hour bells"
             }
-            val manager = getSystemService(NotificationManager::class.java)
-            manager.createNotificationChannel(channel)
+
+            val devotionsChannel = NotificationChannel(
+                CHANNEL_DEVOTIONS,
+                "Devotion Reminders",
+                NotificationManager.IMPORTANCE_DEFAULT,
+            ).apply {
+                description = "Rosary, stations, confession reminders"
+            }
+
+            manager.createNotificationChannels(
+                listOf(prayerRuleChannel, officeBellsChannel, devotionsChannel)
+            )
         }
     }
 
     companion object {
-        const val CHANNEL_ID = "introibo_reminders"
+        const val CHANNEL_PRAYER_RULE = "introibo_prayer_rule"
+        const val CHANNEL_OFFICE_BELLS = "introibo_office_bells"
+        const val CHANNEL_DEVOTIONS = "introibo_devotions"
     }
 }

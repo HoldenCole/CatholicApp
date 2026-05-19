@@ -22323,5 +22323,111 @@
       "eng": "Having received the aids of our salvation, grant, we beseech Thee, O Lord, that we may be everywhere protected by the patronage of blessed Mary ever Virgin, in whose honour we have offered these gifts to Thy Majesty. Through our Lord."
     },
     "preface": "bvm"
+  },
+  {
+    "slug": "christmas-midnight",
+    "title": "In Nativitáte Dómini — Ad Missam in Nocte",
+    "english": "The Nativity of Our Lord — Mass at Midnight",
+    "rank": 1,
+    "color": "white",
+    "season": "christmas",
+    "introit": {
+      "lat": "Dóminus dixit ad me: Fílius meus es tu, ego hódie génui te. ℣. Quare fremuérunt gentes: et pópuli meditáti sunt inánia? ℣. Glória Patri.",
+      "eng": "The Lord said to Me: Thou art My Son, this day have I begotten Thee. ℣. Why have the Gentiles raged, and the people devised vain things? ℣. Glory be to the Father."
+    },
+    "collect": {
+      "lat": "Deus, qui hanc sacratíssimam noctem veri lúminis fecísti illustratióne claréscere: da, quǽsumus; ut, cujus lucis mystéria in terra cognóvimus, ejus quoque gáudiis in cælo perfruámur. Qui tecum vivit.",
+      "eng": "O God, who hast made this most sacred night to shine forth with the brightness of the true Light: grant, we beseech Thee, that we who have known the mysteries of His light on earth, may also enjoy His happiness in heaven. Who liveth and reigneth."
+    },
+    "epistle": {
+      "ref": "Titus 2:11-15",
+      "lat": "Caríssime: Appáruit grátia Dei Salvatóris nostri ómnibus homínibus, erúdiens nos, ut, abnegántes impietátem et sæculária desidéria, sóbrie et juste et pie vivámus in hoc sǽculo.",
+      "eng": "Dearly beloved: The grace of God our Saviour hath appeared to all men, instructing us, that, denying ungodliness and worldly desires, we should live soberly, and justly, and godly in this world."
+    },
+    "gradual": {
+      "lat": "Tecum princípium in die virtútis tuæ: in splendóribus sanctórum, ex útero ante lucíferum génui te.",
+      "eng": "With Thee is the principality in the day of Thy strength: in the brightness of the saints, from the womb before the day star I begot Thee."
+    },
+    "alleluia": {
+      "lat": "Allelúja, allelúja. ℣. Dóminus dixit ad me: Fílius meus es tu, ego hódie génui te. Allelúja.",
+      "eng": "Alleluia, alleluia. ℣. The Lord said to Me: Thou art My Son, this day have I begotten Thee. Alleluia."
+    },
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Luke 2:1-14",
+      "lat": "In illo témpore: Exíit edíctum a Cǽsare Augústo, ut describétur univérsus orbis.",
+      "eng": "At that time there went out a decree from Caesar Augustus that the whole world should be enrolled."
+    },
+    "offertory": {
+      "lat": "Læténtur cæli, et exsúltet terra ante fáciem Dómini: quóniam venit.",
+      "eng": "Let the heavens rejoice, and let the earth be glad before the face of the Lord: because He cometh."
+    },
+    "secret": {
+      "lat": "Accépta tibi sit, Dómine, quǽsumus, hodiérnæ festivitátis oblátio: ut, tua gratia largiénte, per hæc sacrosáncta commércia, in illíus inveniámur forma, in quo tecum est nostra substántia.",
+      "eng": "May the oblation of this day's feast be pleasing to Thee, O Lord: that, Thy grace bestowing bountifully, through these sacred dealings we may be found in the likeness of Him in whom our substance is with Thee."
+    },
+    "communion": {
+      "lat": "In splendóribus Sanctórum, ex útero ante lucíferum génui te.",
+      "eng": "In the brightness of the Saints, from the womb before the day star I begot Thee."
+    },
+    "postcommunion": {
+      "lat": "Da nobis, quǽsumus, Dómine Deus noster: ut, qui Nativitátem Dómini nostri Jesu Christi mystériis nos frequentáre gaudémus; dignis conversatiónibus ad ejus mereámur perveníre consórtium.",
+      "eng": "Grant us, we beseech Thee, O Lord our God, that we who joyfully celebrate the Nativity of our Lord Jesus Christ, may by worthy conduct attain to fellowship with Him."
+    },
+    "preface": "nativity"
+  },
+  {
+    "slug": "christmas-dawn",
+    "title": "In Nativitáte Dómini — Ad Missam in Auróra",
+    "english": "The Nativity of Our Lord — Mass at Dawn",
+    "rank": 1,
+    "color": "white",
+    "season": "christmas",
+    "introit": {
+      "lat": "Lux fulgébit hódie super nos: quia natus est nobis Dóminus: et vocábitur Admirábilis, Deus, Princeps pacis, Pater futúri sǽculi: cujus regni non erit finis. ℣. Dóminus regnávit, decórem indútus est: indútus est Dóminus fortitúdinem, et præcínxit se. ℣. Glória Patri.",
+      "eng": "A light shall shine upon us this day: for the Lord is born to us: and He shall be called Wonderful, God, the Prince of Peace, the Father of the world to come: of whose reign there shall be no end. ℣. The Lord hath reigned, He is clothed with beauty: the Lord is clothed with strength, and hath girded Himself. ℣. Glory be to the Father."
+    },
+    "collect": {
+      "lat": "Da nobis, quǽsumus, omnípotens Deus: ut, qui nova incarnáti Verbi tui luce perfúndimur; hoc in nostro respléndeat ópere, quod per fidem fulget in mente.",
+      "eng": "Grant, we beseech Thee, almighty God, that we, who are bathed in the new light of Thine incarnate Word, may show forth in our works that which by faith shineth in our minds."
+    },
+    "epistle": {
+      "ref": "Titus 3:4-7",
+      "lat": "Caríssime: Appáruit benígnitas et humánitas Salvatóris nostri Dei.",
+      "eng": "Dearly beloved: The goodness and kindness of God our Saviour appeared."
+    },
+    "gradual": {
+      "lat": "Benedíctus qui venit in nómine Dómini: Deus Dóminus, et illúxit nobis.",
+      "eng": "Blessed is He that cometh in the name of the Lord: the Lord is God, and He hath shone upon us."
+    },
+    "alleluia": {
+      "lat": "Allelúja, allelúja. ℣. Dóminus regnávit, decórem índuit: índuit Dóminus fortitúdinem, et præcínxit se virtúte. Allelúja.",
+      "eng": "Alleluia, alleluia. ℣. The Lord hath reigned, He is clothed with beauty: the Lord is clothed with strength, and hath girded Himself with power. Alleluia."
+    },
+    "tract": null,
+    "sequence": null,
+    "gospel": {
+      "ref": "Luke 2:15-20",
+      "lat": "In illo témpore: Pastóres loquebántur ad ínvicem: Transeámus usque Béthlehem.",
+      "eng": "At that time the shepherds said one to another: Let us go over to Bethlehem."
+    },
+    "offertory": {
+      "lat": "Deus enim firmávit orbem terræ, qui non commovébitur: paráta sedes tua, Deus, ex tunc, a sǽculo tu es.",
+      "eng": "For God hath established the world, which shall not be moved: Thy throne, O God, is prepared from of old; Thou art from everlasting."
+    },
+    "secret": {
+      "lat": "Múnera nostra, quǽsumus, Dómine, Nativitátis hodiérnæ mystériis apta provéniant, et pacem nobis semper infúndant.",
+      "eng": "May our offerings, we beseech Thee, O Lord, be fitting for the mysteries of this day's Nativity, and ever pour forth peace upon us."
+    },
+    "communion": {
+      "lat": "Exsúlta, fília Sion, lauda, fília Jerúsalem: ecce Rex tuus venit sanctus et Salvátor mundi.",
+      "eng": "Rejoice, O daughter of Sion, praise, O daughter of Jerusalem: behold, thy King cometh, the Holy One and Saviour of the world."
+    },
+    "postcommunion": {
+      "lat": "Hujus nos, Dómine, sacraménti semper nóvitas natális instáuret: cujus Natívitas singuláris humánam repúlit vetustátem.",
+      "eng": "May the new birth of this sacrament ever restore us, O Lord, whose singular Nativity hath banished the old estate of man."
+    },
+    "preface": "nativity"
   }
 ]

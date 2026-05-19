@@ -106,7 +106,7 @@ fun SplashScreen(
             Spacer(modifier = Modifier.weight(1f))
 
             Text(
-                text = "A prayer companion for traditional Catholics",
+                text = "A prayer companion for the traditional Catholic life",
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.muted,
                 textAlign = TextAlign.Center,
