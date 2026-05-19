@@ -255,7 +255,18 @@ struct HourView: View {
             Text(p.label ?? "Pater Noster")
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                let latParts = lat.components(separatedBy: "\n\n")
+                let engParts = eng.components(separatedBy: "\n\n")
+                let count = max(latParts.count, engParts.count)
+                VStack(alignment: .leading, spacing: 12) {
+                    ForEach(0..<count, id: \.self) { i in
+                        BilingualLine(
+                            lat: i < latParts.count ? latParts[i] : "",
+                            eng: i < engParts.count ? engParts[i] : "",
+                            sideBySide: true
+                        )
+                    }
+                }
             }
         }
     }
@@ -265,7 +276,18 @@ struct HourView: View {
             Text(p.label ?? "Confíteor")
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                let latParts = lat.components(separatedBy: "\n\n")
+                let engParts = eng.components(separatedBy: "\n\n")
+                let count = max(latParts.count, engParts.count)
+                VStack(alignment: .leading, spacing: 12) {
+                    ForEach(0..<count, id: \.self) { i in
+                        BilingualLine(
+                            lat: i < latParts.count ? latParts[i] : "",
+                            eng: i < engParts.count ? engParts[i] : "",
+                            sideBySide: true
+                        )
+                    }
+                }
             }
         }
     }
