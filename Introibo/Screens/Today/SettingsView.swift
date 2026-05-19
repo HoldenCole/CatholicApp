@@ -281,7 +281,7 @@ struct SettingsView: View {
             }
             .listRowBackground(Color.pageBackground)
             LabeledContent("Version") {
-                Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.6")
+                Text("1.1.6")
                     .foregroundStyle(Color.secondaryText)
             }
             .listRowBackground(Color.pageBackground)
