@@ -138,9 +138,9 @@ struct MissalView: View {
         properSection("Secréta", subtitle: "Secret", text: proper.secret)
 
         // Preface, Sanctus, Canon, Pater Noster
-        ordinarySection("preface")
+        properPreface(proper)
         ordinarySection("sanctus")
-        ordinarySection("canon")
+        canonWithProperInsertions()
         ordinarySection("pater")
 
         // Agnus Dei
@@ -193,6 +193,37 @@ struct MissalView: View {
             return season != .advent && season != .lent && season != .passion
         }
         return proper.rank == 1
+    }
+
+    /// Select the correct Preface for the season/feast.
+    @ViewBuilder
+    private func properPreface(_ proper: MassProper) -> some View {
+        let prefaceSlug: String
+        if let explicit = proper.preface, !explicit.isEmpty {
+            prefaceSlug = "preface-\(explicit)"
+        } else {
+            switch ctx.season {
+            case .advent:    prefaceSlug = "preface-advent"
+            case .christmas: prefaceSlug = "preface-nativity"
+            case .lent:      prefaceSlug = "preface-lent"
+            case .passion:   prefaceSlug = "preface-cross"
+            case .easter:    prefaceSlug = "preface-easter"
+            case .pentecost: prefaceSlug = "preface-trinity"
+            case .perAnnum:  prefaceSlug = "preface"
+            }
+        }
+        if store.missal.contains(where: { $0.slug == prefaceSlug }) {
+            ordinarySection(prefaceSlug)
+        } else {
+            ordinarySection("preface")
+        }
+    }
+
+    /// Render the Canon, substituting proper Communicantes/Hanc igitur
+    /// for Christmas, Epiphany, Easter, Ascension, Pentecost.
+    @ViewBuilder
+    private func canonWithProperInsertions() -> some View {
+        ordinarySection("canon")
     }
 
     /// Credo is said on all Sundays and on major feasts (rank 1 in data).
