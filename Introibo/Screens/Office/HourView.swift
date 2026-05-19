@@ -251,26 +251,28 @@ struct HourView: View {
     }
 
     private func pateInlineBlock(_ p: Hour.Part) -> some View {
-        HStack {
-            Text("Pater Noster")
+        VStack(alignment: .leading, spacing: 6) {
+            Text(p.label ?? "Pater Noster")
                 .smallLabel(color: Color.sanctuaryRed)
-            Spacer()
-            Text("silently")
-                .font(.captionSm)
-                .italic()
-                .foregroundStyle(Color.tertiaryText)
+            if let rubric = p.rubric {
+                Text(rubric)
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.tertiaryText)
+            }
+            if let lat = p.lat, let eng = p.eng {
+                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+            }
         }
     }
 
     private func confiteorBlock(_ p: Hour.Part) -> some View {
-        HStack {
+        VStack(alignment: .leading, spacing: 6) {
             Text(p.label ?? "Confíteor")
                 .smallLabel(color: Color.sanctuaryRed)
-            Spacer()
-            Text("In the customary form")
-                .font(.captionSm)
-                .italic()
-                .foregroundStyle(Color.tertiaryText)
+            if let lat = p.lat, let eng = p.eng {
+                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+            }
         }
     }
 
