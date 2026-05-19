@@ -22,7 +22,7 @@ Pray all eight canonical hours of the 1962 Roman Breviary at the proper time: Ma
 Build a personal prayer rule for morning, midday, and evening. Browse 12 occasion categories: Morning, Before Mass, During Mass, After Mass, Meals, Marian, Eucharistic, Before Confession, For the Departed, In Temptation, For Protection, and Evening. Every prayer in Latin and English. The complete Rosary bead by bead. Fourteen Stations of the Cross with Tiepolo's 1749 engravings. Examination of conscience and confession preparation.
 
 LEARN LATIN
-Ten lessons in Ecclesiastical pronunciation: vowels, diphthongs, consonants, stress, declensions, verbs, prayer vocabulary, and word-by-word mastery of the Ave Maria and Pater Noster. 97 flashcards. Reading exercises from the Psalms and Vulgate.
+Ten lessons in Ecclesiastical pronunciation: vowels, diphthongs, consonants, stress, declensions, verbs, and word-by-word mastery of the Ave Maria and Pater Noster. 97 flashcards. Psalms and Vulgate reading exercises.
 
 REFERENCE LIBRARY
 41 articles. 428 searchable Propers. Mass history timeline. Liturgical glossary. Quick reference for the Holy Mass, Baptism, Eucharist, Penance, and Rosary.
