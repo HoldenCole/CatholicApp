@@ -1862,11 +1862,79 @@
         "variationKey": "prima.psalm2"
       },
       {
+        "type": "psalm",
+        "label": "Psalmus 118:1-8; Beáti immaculáti",
+        "variationKey": "prima.psalm3",
+        "verses": [
+          {
+            "lat": "Beáti immaculáti in via: * qui ámbulant in lege Dómini.",
+            "eng": "Blessed are the undefiled in the way, * who walk in the law of the Lord."
+          },
+          {
+            "lat": "Beáti, qui scrutántur testimónia ejus: * in toto corde exquírunt eum.",
+            "eng": "Blessed are they that search His testimonies: * that seek Him with their whole heart."
+          },
+          {
+            "lat": "Non enim qui operántur iniquitátem, * in viis ejus ambula vérunt.",
+            "eng": "For they that work iniquity * have not walked in His ways."
+          },
+          {
+            "lat": "Tu mandásti * mandáta tua custódi nimis.",
+            "eng": "Thou hast commanded * Thy commandments to be kept most diligently."
+          },
+          {
+            "lat": "Glória Patri, et Fílio, * et Spirítui Sancto.",
+            "eng": "Glory be to the Father, and to the Son, * and to the Holy Ghost."
+          },
+          {
+            "lat": "Sicut erat in princípio, et nunc, et semper, * et in sæcula sæculórum. Amen.",
+            "eng": "As it was in the beginning, is now, and ever shall be, * world without end. Amen."
+          }
+        ]
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 118:9-16; In quo córrigit",
+        "variationKey": "prima.psalm4",
+        "verses": [
+          {
+            "lat": "In quo córrigit adolescéntior viam suam? * In custodiéndo sermónes tuos.",
+            "eng": "By what doth a young man correct his way? * By observing Thy words."
+          },
+          {
+            "lat": "In toto corde meo exquisívi te: * ne repéllas me a mandátis tuis.",
+            "eng": "With my whole heart have I sought after Thee: * let me not stray from Thy commandments."
+          },
+          {
+            "lat": "In corde meo abscóndi elóquia tua: * ut non peccem tibi.",
+            "eng": "Thy words have I hidden in my heart, * that I may not sin against Thee."
+          },
+          {
+            "lat": "Benedíctus es, Dómine: * doce me justificatiónes tuas.",
+            "eng": "Blessed art Thou, O Lord: * teach me Thy justifications."
+          },
+          {
+            "lat": "Glória Patri, et Fílio, * et Spirítui Sancto.",
+            "eng": "Glory be to the Father, and to the Son, * and to the Holy Ghost."
+          },
+          {
+            "lat": "Sicut erat in princípio, et nunc, et semper, * et in sæcula sæculórum. Amen.",
+            "eng": "As it was in the beginning, is now, and ever shall be, * world without end. Amen."
+          }
+        ]
+      },
+      {
         "type": "capitulum",
         "label": "Capitulum",
         "ref": "1 Tim 1:17",
         "lat": "Regi sæculórum immortáli et invisíbili, soli Deo honor et glória in sǽcula sæculórum. Amen.",
         "eng": "To the King of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsorium Breve",
+        "lat": "℟.br. Christe, Fili Dei vivi, * miserére nobis.\n℣. Qui sedes ad déxteram Patris.\n℟. Miserére nobis.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Christe, Fili Dei vivi, miserére nobis.",
+        "eng": "℟.br. Christ, Son of the living God, * have mercy on us.\n℣. Who sittest at the right hand of the Father.\n℟. Have mercy on us.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Christ, Son of the living God, have mercy on us."
       },
       {
         "type": "pater"
@@ -2051,6 +2119,12 @@
         "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
       },
       {
+        "type": "responsory",
+        "label": "Responsorium Breve",
+        "lat": "℟.br. Inclína cor meum, Deus, * in testimónia tua.\n℣. Avérte óculos meos ne vídeant vanitátem.\n℟. In testimónia tua.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Inclína cor meum, Deus, in testimónia tua.",
+        "eng": "℟.br. Incline my heart, O God, * unto Thy testimonies.\n℣. Turn away my eyes that they may not behold vanity.\n℟. Unto Thy testimonies.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Incline my heart, O God, unto Thy testimonies."
+      },
+      {
         "type": "pater"
       },
       {
@@ -2233,6 +2307,12 @@
         "eng": "Bear ye one another's burdens; and so you shall fulfil the law of Christ."
       },
       {
+        "type": "responsory",
+        "label": "Responsorium Breve",
+        "lat": "℟.br. In ætérnum, Dómine, * pérmanet verbum tuum.\n℣. In sæculum sæculi véritas tua.\n℟. Pérmanet verbum tuum.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. In ætérnum, Dómine, pérmanet verbum tuum.",
+        "eng": "℟.br. For ever, O Lord, * Thy word standeth firm.\n℣. Thy truth endureth to all generations.\n℟. Thy word standeth firm.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. For ever, O Lord, Thy word standeth firm."
+      },
+      {
         "type": "pater"
       },
       {
@@ -2413,6 +2493,12 @@
         "ref": "Deut 4:31",
         "lat": "Quia Deus miséricors Dóminus Deus tuus est: non dimíttet te, nec omníno discoóperit, neque obliviscétur testaménti, in quo jurávit pátribus tuis.",
         "eng": "For the Lord thy God is a merciful God: He will not leave thee, nor altogether destroy thee, nor forget the covenant by which He swore to thy fathers."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsorium Breve",
+        "lat": "℟.br. Clamávi et exaudísti me, Dómine, * custódi me.\n℣. A lábiis iníquis et a lingua dolósa.\n℟. Custódi me.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Clamávi et exaudísti me, Dómine, custódi me.",
+        "eng": "℟.br. I cried and Thou didst hear me, O Lord, * guard me.\n℣. From wicked lips and a deceitful tongue.\n℟. Guard me.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I cried and Thou didst hear me, O Lord, guard me."
       },
       {
         "type": "pater"
@@ -2632,6 +2718,41 @@
           }
         ],
         "variationKey": "vesperae.psalm4"
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 113; In éxitu Israël",
+        "variationKey": "vesperae.psalm5",
+        "verses": [
+          {
+            "lat": "In éxitu Israël de Ægýpto, * domus Jacob de pópulo bárbaro.",
+            "eng": "When Israel went out of Egypt, * the house of Jacob from a barbarous people."
+          },
+          {
+            "lat": "Facta est Judæa sanctificátio ejus, * Israël potéstas ejus.",
+            "eng": "Judea was made His sanctuary, * Israel His dominion."
+          },
+          {
+            "lat": "Mare vidit et fugit: * Jordánis convérsus est retrórsum.",
+            "eng": "The sea saw and fled: * Jordan was turned back."
+          },
+          {
+            "lat": "Montes exsulta vérunt ut aríetes: * et colles sicut agni óvium.",
+            "eng": "The mountains skipped like rams, * and the hills like the lambs of the flock."
+          },
+          {
+            "lat": "Non nobis, Dómine, non nobis: * sed nómini tuo da glóriam.",
+            "eng": "Not to us, O Lord, not to us: * but to Thy name give glory."
+          },
+          {
+            "lat": "Glória Patri, et Fílio, * et Spirítui Sancto.",
+            "eng": "Glory be to the Father, and to the Son, * and to the Holy Ghost."
+          },
+          {
+            "lat": "Sicut erat in princípio, et nunc, et semper, * et in sæcula sæculórum. Amen.",
+            "eng": "As it was in the beginning, is now, and ever shall be, * world without end. Amen."
+          }
+        ]
       },
       {
         "type": "capitulum",
