@@ -511,6 +511,38 @@
     ]
   },
   {
+    "slug": "benedicamus",
+    "title": "Benedicámus Dómino",
+    "english": "Let Us Bless the Lord",
+    "body": [
+      {
+        "rubric": "When the Gloria was not said, the deacon (or priest) says:",
+        "lat": "℣. Benedicámus Dómino.",
+        "eng": "℣. Let us bless the Lord."
+      },
+      {
+        "lat": "℟. Deo grátias.",
+        "eng": "℟. Thanks be to God."
+      }
+    ]
+  },
+  {
+    "slug": "requiescant",
+    "title": "Requiéscant in Pace",
+    "english": "May They Rest in Peace",
+    "body": [
+      {
+        "rubric": "At Requiem Masses, instead of Ite missa est or Benedicamus Domino:",
+        "lat": "℣. Requiéscant in pace.",
+        "eng": "℣. May they rest in peace."
+      },
+      {
+        "lat": "℟. Amen.",
+        "eng": "℟. Amen."
+      }
+    ]
+  },
+  {
     "slug": "ultimum",
     "label": "Conclúsio",
     "title": "Últimum Evangélium",

@@ -76,11 +76,19 @@ struct MissalView: View {
     @ViewBuilder
     private func interleavedMass(_ proper: MassProper) -> some View {
         // Prayers at the Foot of the Altar
-        ordinarySection("preces")
+        // In Passiontide and Requiem Masses, Psalm 42 (Judica me) is omitted;
+        // the priest goes directly to the Confiteor.
+        if ctx.season != .passion && proper.color != "black" {
+            ordinarySection("preces")
+        }
         ordinarySection("confiteor")
 
         // INTROIT (proper)
-        properSection("Introitus", subtitle: "Introit", text: proper.introit)
+        // In Passiontide the Gloria Patri is omitted from the Introit.
+        properSection("Introitus", subtitle: "Introit",
+                       text: ctx.season == .passion
+                           ? stripGloriaPatri(proper.introit)
+                           : proper.introit)
 
         // Kyrie
         ordinarySection("kyrie")
@@ -150,8 +158,16 @@ struct MissalView: View {
         // Placeat, Blessing
         ordinarySection("placeat")
 
-        // Ite, Missa Est
-        ordinarySection("ite")
+        // Dismissal: "Ite, missa est" when Gloria was said;
+        // "Benedicamus Domino" when Gloria was not said;
+        // "Requiescant in pace" at Requiem Masses.
+        if proper.color == "black" {
+            ordinarySection("requiescant")
+        } else if showGloria(proper) {
+            ordinarySection("ite")
+        } else {
+            ordinarySection("benedicamus")
+        }
 
         // Last Gospel
         ordinarySection("ultimum")
@@ -183,6 +199,32 @@ struct MissalView: View {
     private func showCredo(_ proper: MassProper) -> Bool {
         if ctx.isSunday { return true }
         return proper.rank == 1
+    }
+
+    /// Strip the Gloria Patri doxology from an introit text.
+    /// The doxology may appear as the abbreviated "℣. Glória Patri." or
+    /// the full "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat …"
+    /// along with the English equivalent.
+    private func stripGloriaPatri(_ text: ProperText) -> ProperText {
+        let latStripped = text.lat
+            .replacingOccurrences(
+                of: #"\s*℣\.?\s*Glória Patri[^℣]*$"#,
+                with: "",
+                options: .regularExpression)
+            .replacingOccurrences(
+                of: #"\s*Glória Patri,\s*et Fílio.*?(Amen\.|Sancto\.)"#,
+                with: "",
+                options: .regularExpression)
+        let engStripped = text.eng
+            .replacingOccurrences(
+                of: #"\s*℣\.?\s*Glory be to the Father[^℣]*$"#,
+                with: "",
+                options: .regularExpression)
+            .replacingOccurrences(
+                of: #"\s*Glory be to the Father,?\s*and to the Son.*?(Amen\.|Ghost\.)"#,
+                with: "",
+                options: .regularExpression)
+        return ProperText(lat: latStripped, eng: engStripped)
     }
 
     // MARK: - Export full Mass as text
@@ -230,15 +272,28 @@ struct MissalView: View {
             lines.append("")
         }
 
-        addOrdinary("preces")
+        if let p = proper {
+            // Psalm 42 omitted in Passiontide and Requiem Masses
+            if ctx.season != .passion && p.color != "black" {
+                addOrdinary("preces")
+            }
+        } else {
+            addOrdinary("preces")
+        }
         addOrdinary("confiteor")
 
         if let p = proper {
-            addProper("Introitus · Introit", lat: p.introit.lat, eng: p.introit.eng)
+            // Strip Gloria Patri from introit in Passiontide
+            let introit = ctx.season == .passion ? stripGloriaPatri(p.introit) : p.introit
+            addProper("Introitus · Introit", lat: introit.lat, eng: introit.eng)
         }
 
         addOrdinary("kyrie")
-        addOrdinary("gloria")
+        if let p = proper, showGloria(p) {
+            addOrdinary("gloria")
+        } else if proper == nil {
+            addOrdinary("gloria")
+        }
 
         if let p = proper {
             addProper("Oratio · Collect", lat: p.collect.lat, eng: p.collect.eng)
@@ -278,6 +333,20 @@ struct MissalView: View {
         }
 
         addOrdinary("placeat")
+
+        // Dismissal
+        if let p = proper {
+            if p.color == "black" {
+                addOrdinary("requiescant")
+            } else if showGloria(p) {
+                addOrdinary("ite")
+            } else {
+                addOrdinary("benedicamus")
+            }
+        } else {
+            addOrdinary("ite")
+        }
+
         addOrdinary("ultimum")
         addOrdinary("leonine")
 

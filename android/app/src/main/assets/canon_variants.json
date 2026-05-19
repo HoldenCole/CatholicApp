@@ -1,0 +1,34 @@
+{
+  "communicantes": {
+    "christmas": {
+      "lat": "Communicántes, et diem sacratíssimum celebrántes, quo beátæ Maríæ intemeráta virgínitas huic mundo édidit Salvatórem: sed et memóriam venerántes, in primis ejúsdem gloriósæ semper Vírginis Maríæ, Genitrícis Dei et Dómini nostri Jesu Christi:",
+      "eng": "Communicating, and celebrating the most holy day on which the spotless virginity of blessed Mary brought forth a Saviour to this world: and also reverencing the memory, first of the same glorious Mary, ever Virgin, Mother of God and our Lord Jesus Christ:"
+    },
+    "epiphany": {
+      "lat": "Communicántes, et diem sacratíssimum celebrántes, quo Unigénitus tuus, in tua tecum glória coætérnus, in veritáte carnis nostræ visibíliter corporális appáruit: sed et memóriam venerántes, in primis gloriósæ semper Vírginis Maríæ, Genitrícis Dei et Dómini nostri Jesu Christi:",
+      "eng": "Communicating, and celebrating the most holy day on which Thine only-begotten Son, co-eternal with Thee in Thy glory, visibly appeared in the true substance of our flesh: and also reverencing the memory, first of the glorious Mary, ever Virgin, Mother of God and our Lord Jesus Christ:"
+    },
+    "easter": {
+      "lat": "Communicántes, et diem sacratíssimum celebrántes Resurrectiónis Dómini nostri Jesu Christi secúndum carnem: sed et memóriam venerántes, in primis gloriósæ semper Vírginis Maríæ, Genitrícis ejúsdem Dei et Dómini nostri Jesu Christi:",
+      "eng": "Communicating, and celebrating the most holy day of the Resurrection of our Lord Jesus Christ according to the flesh: and also reverencing the memory, first of the glorious Mary, ever Virgin, Mother of the same God and our Lord Jesus Christ:"
+    },
+    "ascension": {
+      "lat": "Communicántes, et diem sacratíssimum celebrántes, quo Dóminus noster, unigénitus Fílius tuus, unítam sibi fragilitátis nostræ substántiam in glóriæ tuæ déxtera collocávit: sed et memóriam venerántes, in primis gloriósæ semper Vírginis Maríæ, Genitrícis ejúsdem Dei et Dómini nostri Jesu Christi:",
+      "eng": "Communicating, and celebrating the most holy day on which our Lord, Thine only-begotten Son, set at the right hand of Thy glory the substance of our frail nature, which He had united to Himself: and also reverencing the memory, first of the glorious Mary, ever Virgin, Mother of the same God and our Lord Jesus Christ:"
+    },
+    "pentecost": {
+      "lat": "Communicántes, et diem sacratíssimum Pentecóstes celebrántes, quo Spíritus Sanctus Apóstolis innúmeris linguis appáruit: sed et memóriam venerántes, in primis gloriósæ semper Vírginis Maríæ, Genitrícis Dei et Dómini nostri Jesu Christi:",
+      "eng": "Communicating, and celebrating the most holy day of Pentecost, on which the Holy Ghost appeared to the Apostles in countless tongues: and also reverencing the memory, first of the glorious Mary, ever Virgin, Mother of God and our Lord Jesus Christ:"
+    }
+  },
+  "hanc_igitur": {
+    "easter": {
+      "lat": "Hanc ígitur oblatiónem servitútis nostræ, sed et cunctæ famíliæ tuæ, quam tibi offérimus pro his quoque, quos regeneráre dignátus es ex aqua et Spíritu Sancto, tríbuens eis remissiónem ómnium peccatórum, quǽsumus, Dómine, ut placátus accípias: diésque nostros in tua pace dispónas, atque ab ætérna damnatióne nos éripi, et in electórum tuórum júbeas grege numerári. Per Christum Dóminum nostrum. Amen.",
+      "eng": "We therefore beseech Thee, O Lord, graciously to accept this oblation of our service, and that of Thy whole family, which we make unto Thee on behalf of these also, whom Thou hast vouchsafed to bring to a new birth by water and the Holy Ghost, granting them remission of all their sins: and to dispose our days in Thy peace, and to command that we be saved from eternal damnation, and numbered in the flock of Thine elect. Through Christ our Lord. Amen."
+    },
+    "pentecost": {
+      "lat": "Hanc ígitur oblatiónem servitútis nostræ, sed et cunctæ famíliæ tuæ, quam tibi offérimus pro his quoque, quos regeneráre dignátus es ex aqua et Spíritu Sancto, tríbuens eis remissiónem ómnium peccatórum, quǽsumus, Dómine, ut placátus accípias: diésque nostros in tua pace dispónas, atque ab ætérna damnatióne nos éripi, et in electórum tuórum júbeas grege numerári. Per Christum Dóminum nostrum. Amen.",
+      "eng": "We therefore beseech Thee, O Lord, graciously to accept this oblation of our service, and that of Thy whole family, which we make unto Thee on behalf of these also, whom Thou hast vouchsafed to bring to a new birth by water and the Holy Ghost, granting them remission of all their sins: and to dispose our days in Thy peace, and to command that we be saved from eternal damnation, and numbered in the flock of Thine elect. Through Christ our Lord. Amen."
+    }
+  }
+}
