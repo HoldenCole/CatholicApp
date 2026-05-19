@@ -20,23 +20,25 @@ struct PrayerDetailView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    header
-                    if let note = prayer.note, !note.isEmpty {
-                        Text(note.strippingEm)
-                            .font(.bodyIt)
-                            .foregroundStyle(Color.secondaryText)
-                            .padding(.horizontal, 28)
-                            .padding(.bottom, 4)
+            GeometryReader { geo in
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack(alignment: .leading, spacing: 20) {
+                        header
+                        if let note = prayer.note, !note.isEmpty {
+                            Text(note.strippingEm)
+                                .font(.bodyIt)
+                                .foregroundStyle(Color.secondaryText)
+                                .padding(.horizontal, 28)
+                                .padding(.bottom, 4)
+                        }
+                        ForEach(Array(prayer.lines.enumerated()), id: \.offset) { idx, line in
+                            lineBlock(line, isFirst: idx == 0)
+                                .padding(.horizontal, 28)
+                        }
                     }
-                    ForEach(Array(prayer.lines.enumerated()), id: \.offset) { idx, line in
-                        lineBlock(line, isFirst: idx == 0)
-                            .padding(.horizontal, 28)
-                    }
+                    .padding(.bottom, 40)
+                    .frame(width: geo.size.width, alignment: .leading)
                 }
-                .padding(.bottom, 40)
-                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {

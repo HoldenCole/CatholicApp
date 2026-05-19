@@ -35,17 +35,20 @@ struct MissalView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 24) {
-                    if let proper = todayProper {
-                        interleavedMass(proper)
-                    } else {
-                        ordinaryOnly
+            GeometryReader { geo in
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack(spacing: 24) {
+                        if let proper = todayProper {
+                            interleavedMass(proper)
+                        } else {
+                            ordinaryOnly
+                        }
                     }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 24)
+                    .padding(.bottom, 40)
+                    .frame(width: geo.size.width)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 24)
-                .padding(.bottom, 40)
             }
             .background(Color.pageBackground.ignoresSafeArea())
             .navigationTitle("Ordo Missæ")

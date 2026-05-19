@@ -13,18 +13,21 @@ struct ReferenceDetailView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 0) {
-                    header
-                    VStack(alignment: .leading, spacing: 22) {
-                        dropCapParagraph(entry.summary)
-                        if let history = entry.history { section("Historia", body: history) }
-                        if let practice = entry.practice { section("Praxis", body: practice) }
-                        if let notes = entry.notes { section("Notandum", body: notes) }
-                        if let scripture = entry.scripture { scriptureBlock(scripture) }
+            GeometryReader { geo in
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack(spacing: 0) {
+                        header
+                        VStack(alignment: .leading, spacing: 22) {
+                            dropCapParagraph(entry.summary)
+                            if let history = entry.history { section("Historia", body: history) }
+                            if let practice = entry.practice { section("Praxis", body: practice) }
+                            if let notes = entry.notes { section("Notandum", body: notes) }
+                            if let scripture = entry.scripture { scriptureBlock(scripture) }
+                        }
+                        .padding(.horizontal, 28)
+                        .padding(.vertical, 24)
                     }
-                    .padding(.horizontal, 28)
-                    .padding(.vertical, 24)
+                    .frame(width: geo.size.width)
                 }
             }
             .background(Color.pageBackground.ignoresSafeArea())

@@ -281,7 +281,7 @@ struct SettingsView: View {
             }
             .listRowBackground(Color.pageBackground)
             LabeledContent("Version") {
-                Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.2")
+                Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.6")
                     .foregroundStyle(Color.secondaryText)
             }
             .listRowBackground(Color.pageBackground)
@@ -292,7 +292,7 @@ struct SettingsView: View {
                     .foregroundStyle(Color.secondaryText)
             }
             .listRowBackground(Color.pageBackground)
-            Text("A prayer companion for traditional Catholics. Ad free. Works offline.")
+            Text("A prayer companion for the traditional Catholic life. Ad free. Works offline.")
                 .font(.caption)
                 .foregroundStyle(Color.secondaryText)
                 .listRowBackground(Color.pageBackground)

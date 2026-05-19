@@ -17,13 +17,14 @@ struct ProperView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 0) {
-                    header
-                    VStack(alignment: .leading, spacing: 28) {
-                        properSection("Introitus", subtitle: "Introit", text: proper.introit)
-                        properSection("Orátio", subtitle: "Collect", text: proper.collect)
-                        readingSection("Léctio", subtitle: "Epistle", reading: proper.epistle)
+            GeometryReader { geo in
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack(spacing: 0) {
+                        header
+                        VStack(alignment: .leading, spacing: 28) {
+                            properSection("Introitus", subtitle: "Introit", text: proper.introit)
+                            properSection("Orátio", subtitle: "Collect", text: proper.collect)
+                            readingSection("Léctio", subtitle: "Epistle", reading: proper.epistle)
                         if let gradual = proper.gradual {
                             properSection("Graduále", subtitle: "Gradual", text: gradual)
                         }
@@ -44,6 +45,8 @@ struct ProperView: View {
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 24)
+                }
+                .frame(width: geo.size.width)
                 }
             }
             .background(Color.pageBackground.ignoresSafeArea())
