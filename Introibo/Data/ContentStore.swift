@@ -23,6 +23,7 @@ final class ContentStore {
     private(set) var examen:         [ExamenEntry]         = []
     private(set) var confessionGuides:[ConfessionGuide]    = []
     private(set) var propers:         [MassProper]          = []
+    private var canonVariants: [String: [String: [String: String]]] = [:]
     private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], marianAntiphons: [])
 
     init() {
@@ -39,6 +40,7 @@ final class ContentStore {
         examen            = load("confession_examen", as: [ExamenEntry].self)          ?? []
         confessionGuides  = load("confession_guides", as: [ConfessionGuide].self)      ?? []
         propers           = load("propers",            as: [MassProper].self)          ?? []
+        canonVariants     = load("canon_variants",     as: [String: [String: [String: String]]].self) ?? [:]
 
         let psalter = load("psalter_weekly",   as: [String: [String: Hour.Part]].self) ?? [:]
         let hymns   = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
@@ -68,13 +70,8 @@ final class ContentStore {
 
     // MARK: - Canon variants
 
-    private lazy var canonVariants: [String: [String: [String: String]]]? = {
-        load("canon_variants", as: [String: [String: [String: String]]].self)
-    }()
-
     func canonVariant(_ type: String, key: String) -> (lat: String, eng: String)? {
-        guard let variants = canonVariants,
-              let group = variants[type],
+        guard let group = canonVariants[type],
               let entry = group[key],
               let lat = entry["lat"],
               let eng = entry["eng"] else { return nil }
