@@ -1,7 +1,12 @@
 package com.lampstandhq.introibo.ui.prayers
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.provider.Settings
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -70,6 +75,25 @@ fun NotificationScheduleSheet(
     val notifManager = remember { PrayerNotificationManager(context) }
 
     var isEnabled by remember { mutableStateOf(false) }
+
+    // Request notification permission on Android 13+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            isEnabled = true
+        }
+    }
+
+    fun requestNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (context.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                return
+            }
+        }
+        isEnabled = true
+    }
     var selectedDays by remember { mutableStateOf(setOf(1, 2, 3, 4, 5, 6, 7)) }
     var selectedHour by remember { mutableIntStateOf(8) }
     var selectedMinute by remember { mutableIntStateOf(0) }
@@ -143,7 +167,7 @@ fun NotificationScheduleSheet(
             )
             Switch(
                 checked = isEnabled,
-                onCheckedChange = { isEnabled = it },
+                onCheckedChange = { if (it) requestNotificationPermission() else isEnabled = false },
                 colors = SwitchDefaults.colors(
                     checkedThumbColor = colors.sanctuaryRed,
                     checkedTrackColor = colors.sanctuaryRed.copy(alpha = 0.3f),
