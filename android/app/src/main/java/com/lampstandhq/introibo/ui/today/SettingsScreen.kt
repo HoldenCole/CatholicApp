@@ -399,7 +399,7 @@ fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = n
             item {
                 Column(modifier = Modifier.padding(vertical = 8.dp)) {
                     AboutRow(label = "App", value = "Introibo")
-                    AboutRow(label = "Version", value = "1.0")
+                    AboutRow(label = "Version", value = "1.1.6")
                     Spacer(Modifier.height(8.dp))
                     Text(
                         text = "Ad altare Dei",
@@ -410,7 +410,7 @@ fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = n
                     )
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        text = "A prayer companion for traditional Catholics. Ad free. Works offline.",
+                        text = "A prayer companion for the traditional Catholic life. Ad free. Works offline.",
                         style = type.captionSm,
                         color = colors.secondaryText,
                     )
