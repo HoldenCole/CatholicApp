@@ -349,40 +349,55 @@ private fun PsalmBlock(p: Hour.Part) {
 }
 
 @Composable
-private fun PaterInlineBlock(@Suppress("UNUSED_PARAMETER") p: Hour.Part) {
+private fun PaterInlineBlock(p: Hour.Part) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        SmallLabel(text = "Pater Noster", color = colors.sanctuaryRed)
-        Text(
-            text = "silently",
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-            color = colors.tertiaryText,
-        )
+    Column {
+        SmallLabel(text = p.label ?: "Pater Noster", color = colors.sanctuaryRed)
+        Spacer(modifier = Modifier.height(6.dp))
+        val lat = p.lat ?: ""
+        val eng = p.eng ?: ""
+        if (lat.isNotEmpty() && eng.isNotEmpty()) {
+            val latParts = lat.split("\n\n")
+            val engParts = eng.split("\n\n")
+            val count = maxOf(latParts.size, engParts.size)
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                for (i in 0 until count) {
+                    BilingualLine(
+                        lat = latParts.getOrElse(i) { "" },
+                        eng = engParts.getOrElse(i) { "" },
+                        sideBySide = true,
+                    )
+                }
+            }
+        }
     }
 }
 
 @Composable
 private fun ConfiteorBlock(p: Hour.Part) {
     val colors = IntroiboTheme.colors
-    val type = IntroiboType.current
 
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
+    Column {
         SmallLabel(text = p.label ?: "Confíteor", color = colors.sanctuaryRed)
-        Text(
-            text = "In the customary form",
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-            color = colors.tertiaryText,
-        )
+        Spacer(modifier = Modifier.height(6.dp))
+        val lat = p.lat ?: ""
+        val eng = p.eng ?: ""
+        if (lat.isNotEmpty() && eng.isNotEmpty()) {
+            val latParts = lat.split("\n\n")
+            val engParts = eng.split("\n\n")
+            val count = maxOf(latParts.size, engParts.size)
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                for (i in 0 until count) {
+                    BilingualLine(
+                        lat = latParts.getOrElse(i) { "" },
+                        eng = engParts.getOrElse(i) { "" },
+                        sideBySide = true,
+                    )
+                }
+            }
+        }
     }
 }
 
