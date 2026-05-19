@@ -232,6 +232,16 @@ struct MissalView: View {
         ordinarySection("canon")
     }
 
+    private func canonVariantKey() -> String? {
+        guard let slug = ctx.properSlug else { return nil }
+        if slug == "christmas" || slug.hasPrefix("christmas-") { return "christmas" }
+        if slug == "epiphany" { return "epiphany" }
+        if slug == "easter-sunday" || slug.hasPrefix("easter-0") { return "easter" }
+        if slug == "ascension" { return "ascension" }
+        if slug == "pentecost-sunday" || slug.hasPrefix("easter-7") { return "pentecost" }
+        return nil
+    }
+
     /// Credo is said on all Sundays and on major feasts (rank 1 in data).
     private func showCredo(_ proper: MassProper) -> Bool {
         if ctx.isSunday { return true }
