@@ -299,15 +299,15 @@ data class LiturgicalContext(
                 return "pasc${days / 7}-${days % 7}"
             }
 
-            // Lent
-            if (date >= ashWed && date < easter) {
-                val days = ChronoUnit.DAYS.between(ashWed, date).toInt()
-                val shifted = days + 4
-                return "quad${shifted / 7}-${shifted % 7}"
+            // Lent: Quad1-0 = 1st Sunday of Lent
+            val firstSunLent = ashWed.plusDays(4) // Ash Wed is always Wednesday
+            if (date >= firstSunLent && date < easter) {
+                val days = ChronoUnit.DAYS.between(firstSunLent, date).toInt()
+                return "quad${days / 7 + 1}-${days % 7}"
             }
 
-            // Pre-Lent (Septuagesima)
-            if (date >= septuagesima && date < ashWed) {
+            // Pre-Lent (Septuagesima through Sat before 1st Lent Sunday)
+            if (date >= septuagesima && date < firstSunLent) {
                 val days = ChronoUnit.DAYS.between(septuagesima, date).toInt()
                 return "quadp${days / 7 + 1}-${days % 7}"
             }

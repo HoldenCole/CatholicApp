@@ -283,36 +283,23 @@ struct LiturgicalContext {
         // Easter season: Pasc{week}-{dow}  (Easter Sunday = Pasc0-0)
         if today >= cal.startOfDay(for: easter) && today < cal.startOfDay(for: pentecost.addingDays(7)) {
             let days = cal.dateComponents([.day], from: cal.startOfDay(for: easter), to: today).day ?? 0
-            let week = days / 7
-            let day = days % 7
-            return "pasc\(week)-\(day)"
+            return "pasc\(days / 7)-\(days % 7)"
         }
 
-        // Lent (Ash Wednesday through Holy Saturday): Quad{week}-{dow}
-        // Ash Wed = Quad6-3 in DO numbering? Actually: Quad starts from Septuagesima.
-        // Simpler: Ash Wed is start of Quad1, days count from there
-        if today >= cal.startOfDay(for: ashWed) && today < cal.startOfDay(for: easter) {
-            let days = cal.dateComponents([.day], from: cal.startOfDay(for: ashWed), to: today).day ?? 0
-            // Ash Wed = day 0. First Sunday of Lent = day 4 (if Ash Wed is Wed).
-            // DO numbering: Quad1-4 = Ash Wed (Wed of week before 1st Lent Sunday)
-            // Actually in DO: Quad1-0 = 1st Sunday of Lent, Quad1-4 = Thu of 1st Lent week
-            // Ash Wednesday is 4 days before 1st Sunday of Lent
-            // So Ash Wed maps to week 0, day 3 → but files are named differently
-            // Let me use: week = (days + 4) / 7, dayInWeek = (days + 4) % 7
-            // where +4 shifts so that the following Sunday = week 1, day 0
-            let shifted = days + 4 // Ash Wed (Wed) → Sun would be +4
-            let week = shifted / 7
-            let day = shifted % 7
-            return "quad\(week)-\(day)"
+        // Pre-Lent (Septuagesima) through Lent
+        // DO numbering: Quadp1-0 = Septuagesima Sunday,
+        // Quad1-0 = 1st Sunday of Lent, Ash Wed = Quadp3-3
+        let septuagesima = ashWed.addingDays(-17)
+        let firstSunLent = ashWed.addingDays(4) // Ash Wed is always a Wednesday
+
+        if today >= cal.startOfDay(for: firstSunLent) && today < cal.startOfDay(for: easter) {
+            let days = cal.dateComponents([.day], from: cal.startOfDay(for: firstSunLent), to: today).day ?? 0
+            return "quad\(days / 7 + 1)-\(days % 7)"
         }
 
-        // Pre-Lent (Septuagesima): 3 Sundays before Ash Wednesday
-        let septuagesima = ashWed.addingDays(-17) // 17 days before Ash Wed = Septuagesima Sun
-        if today >= cal.startOfDay(for: septuagesima) && today < cal.startOfDay(for: ashWed) {
+        if today >= cal.startOfDay(for: septuagesima) && today < cal.startOfDay(for: firstSunLent) {
             let days = cal.dateComponents([.day], from: cal.startOfDay(for: septuagesima), to: today).day ?? 0
-            let week = (days / 7) + 1
-            let day = days % 7
-            return "quadp\(week)-\(day)"
+            return "quadp\(days / 7 + 1)-\(days % 7)"
         }
 
         // Advent: Adv{week}-{dow} (1st Sunday of Advent = Adv1-0)

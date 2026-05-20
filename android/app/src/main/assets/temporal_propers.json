@@ -4929,5 +4929,263 @@
       "engR": "Neither wilt Thou suffer thine Holy One to see corruption.",
       "variationKey": "laudes.versicle"
     }
+  },
+  "quadp1-0": {
+    "laudes.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 9:24)",
+      "lat": "Fratres: Nescítis quod ii qui in stádio currunt, omnes quidem currunt, sed unus áccipit bravíum? Sic cúrrite ut comprehendátis.",
+      "eng": "Brothers: Know you not that they that run in the race, all run indeed, but one receiveth the prize? So run that you may obtain.",
+      "variationKey": "laudes.capitulum"
+    },
+    "sexta.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 9:25)",
+      "lat": "Omnis autem, qui in agóne conténdit, ab ómnibus se ábstinet: et illi quidem ut corruptíbilem corónam accípiant, nos autem incorrúptam.",
+      "eng": "And every one that striveth for the mastery, refraineth himself from all things: and they indeed that they may receive a corruptible crown; but we an incorruptible one.",
+      "variationKey": "sexta.capitulum"
+    },
+    "nona.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 10:4-5)",
+      "lat": "Bibébant autem de spiritáli, consequénte eos, petra: petra autem erat Christus: sed non in plúribus eórum beneplácitum est Deo.",
+      "eng": "And all drank the same spiritual drink; and they drank of the spiritual rock that followed them, and the rock was Christ. But with most of them God was not well pleased: for they were overthrown in the desert.",
+      "variationKey": "nona.capitulum"
+    },
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Símile est * regnum cælórum hómini patrifamílias, qui éxiit primo mane condúcere operários in víneam suam, dicit Dóminus.",
+      "eng": "Thus saith the Lord: The kingdom of heaven is like unto a man that is an householder, * which went out early in the morning to hire labourers into his vineyard.",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Dixit paterfamílias * operáriis suis: Quid hic statis tota die otiósi? At illi respondéntes dixérunt: Quia nemo nos condúxit. Ite et vos in víneam meam: et quod justum fúerit, dabo vobis.",
+      "eng": "The householder saith unto his labourers: * Why stand ye here all the day idle? But they answered and said: Because no man hath hired us. Go ye also into my vineyard, and whatsoever is right, that will I give you.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "laudes.versicle": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Dómine, refúgium factus es nobis.",
+      "eng": "Lord, thou hast been our refuge.",
+      "latR": "A generatióne et progénie.",
+      "engR": "From generation to generation.",
+      "variationKey": "laudes.versicle"
+    }
+  },
+  "quadp1-1": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "@Psalterium/Special/Major Special:Feria2C Ant 3",
+      "eng": "These last have wrought but one hour, * and thou hast made them equal unto us, which have borne the burden and heat of the day.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp1-2": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Dixit autem paterfamílias: * Amíce, non fácio tibi injúriam: nonne ex denário convenísti mecum? tolle quod tuum est, et vade.",
+      "eng": "And the householder said: * Friend, I do thee no wrong didst not thou agree with me for a penny? Take that is thine, and go thy way.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp1-3": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Tolle quod tuum est, * et vade; quia ego bonus sum, dicit Dóminus.",
+      "eng": "Take that thine is, * and go thy way; for I am good, saith the Lord.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp1-4": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Non licet mihi, * quod volo, fácere? an óculus tuus nequam est? quia ego bonus sum, dicit Dóminus.",
+      "eng": "Is it not lawful for me * to do what I will? Is thine eye evil, because I am gracious?” saith the Lord.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp2-0": {
+    "laudes.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (2 Cor 11:19-20)",
+      "lat": "Fratres: Libénter suffértis insipiéntes, cum sitis ipsi sapiéntes: sustinétis enim si quis vos in servitútem rédigit, si quis dévorat, si quis áccipit, si quis extóllitur, si quis in fáciem vos cædit.",
+      "eng": "For you gladly suffer the foolish; whereas yourselves are wise. For you suffer if a man bring you into bondage, if a man devour you, if a man take from you, if a man be lifted up, if a man strike you on the face.",
+      "variationKey": "laudes.capitulum"
+    },
+    "sexta.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (2 Cor 11:25)",
+      "lat": "Ter virgis cæsus sum, semel lapidátus sum: ter naufrágium feci, nocte et die in profúndo maris fui.",
+      "eng": "Thrice was I beaten with rods, once I was stoned, thrice I suffered shipwreck, a night and a day I was in the depth of the sea.",
+      "variationKey": "sexta.capitulum"
+    },
+    "nona.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (2 Cor 12:9)",
+      "lat": "Libénter ígitur gloriábor in infirmitátibus meis, ut inhábitet in me virtus Christi.",
+      "eng": "And he said to me: My grace is sufficient for thee; for power is made perfect in infirmity. Gladly therefore will I glory in my infirmities, that the power of Christ may dwell in me.",
+      "variationKey": "nona.capitulum"
+    },
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Cum turba * plúrima convenírent ad Jesum, et de civitátibus properárent ad eum, dixit per similitúdinem: Exiit qui séminat, semináre semen suum.",
+      "eng": "When much people were gathered together to Jesus, * and were come to Him out of every city, He spoke by a parable: A sower went out to sow his seed.",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Vobis datum est * nosse mystérium regni Dei, céteris autem in parábolis, dixit Jesus discípulis suis.",
+      "eng": "Jesus said to His disciples: * Unto you it is given to know the mysteries of the kingdom of God, but to others in parables.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp2-1": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Si culmen * veri honóris quǽritis, ad illam cæléstem pátriam quantócius properáte.",
+      "eng": "If ye would be truly honourable, * strive after our Fatherland which is in heaven.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp2-2": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Semen est * verbum Dei, sator autem Christus: omnis qui invénit eum, manébit in ætérnum.",
+      "eng": "The seed is the word of God, * and the Sower is Christ; if any man find Him, he shall never be moved.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp2-3": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Quod autem cécidit * in terram bonam, hi sunt, qui in corde bono et óptimo fructum áfferunt in patiéntia.",
+      "eng": "But that on the good ground * are they which in an honest and good heart bring forth fruit with patience.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp3-0": {
+    "laudes.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 13:1)",
+      "lat": "Fratres: Si linguis hóminum loquar, et Angelórum, caritátem autem non hábeam, factus sum velut æs sonans, aut cýmbalum tínniens.",
+      "eng": "Brothers: If I speak with the tongues of men, and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal.",
+      "variationKey": "laudes.capitulum"
+    },
+    "sexta.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 13:8-9)",
+      "lat": "Cáritas nunquam éxcidit: sive prophetíæ evacuabúntur, sive linguæ cessábunt, sive sciéntia destruétur. Ex parte enim cognóscimus, et ex parte prophetámus.",
+      "eng": "Charity never falleth away: whether prophecies shall be made void, or tongues shall cease, or knowledge shall be destroyed. For we know in part, and we prophesy in part.",
+      "variationKey": "sexta.capitulum"
+    },
+    "nona.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 13:13)",
+      "lat": "Nunc autem manent fides, spes, cáritas, tria hæc: major autem horum est cáritas.",
+      "eng": "And now there remain faith, hope, and charity, these three: but the greatest of these is charity.",
+      "variationKey": "nona.capitulum"
+    },
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Ecce ascéndimus * Jerosólymam, et consummabúntur ómnia quæ scripta sunt de Fílio hóminis: tradétur enim géntibus, et illudétur, et conspuétur: et postquam flagelláverint, occídent eum, et tértia die resúrget.",
+      "eng": "Behold, we go up to Jerusalem, * and all things that are written by the Prophets concerning the Son of man shall be accomplished; for He shall be delivered unto the Gentiles, and shall be mocked and spitted on; and they shall scourge Him, and put Him to death, and the third day He shall rise again.",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Stans autem Jesus, * jussit cæcum addúci ad se, et ait illi: Quid vis ut fáciam tibi? Dómine, ut vídeam. Et Jesus ait illi: Réspice, fides tua te salvum fecit. Et conféstim vidit, et sequebátur illum, magníficans Deum.",
+      "eng": "And Jesus stood, * and commanded the blind man to be brought unto Him, and He asked him, saying: What wilt thou that I shall do unto thee? Lord, that I may receive my sight. And Jesus said unto him: Receive thy sight, thy faith hath saved thee. And immediately he received his sight, and followed Him, glorifying God.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp3-1": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Et qui præíbant, * increpábant eum ut tacéret: ipse vero multo magis clamábat: Miserére mei, Fili David.",
+      "eng": "And they that went before * rebuked him, that he should hold his peace. But he cried out so much the more: “Have mercy on me, thou Son of David.”",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp3-2": {
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Miserére mei, * Fili David. Quid vis ut fáciam tibi? Dómine, ut vídeam.",
+      "eng": "Have mercy on me, * thou Son of David. What wouldst thou that I should do unto thee? Lord, that I may receive my sight.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp3-3": {
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Cum jejunátis, * nolíte fíeri sicut hypócritæ, tristes.",
+      "eng": "When ye fast, * be not, as the hypocrites, of a sad countenance.",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Thesaurizáte vobis * thesáuros in cælo, ubi nec ærúgo, nec tínea demolítur.",
+      "eng": "Lay up for yourselves treasures in heaven, * where neither moth nor rust doth corrupt.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp3-4": {
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Dómine, * puer meus jacet paralýticus in domo, et male torquétur: Amen dico tibi, ego véniam, et curábo eum.",
+      "eng": "Lord, * my servant lieth at home sick of the palsy, and is grieviously tormented. Amen, I say unto thee, I will come and heal him.",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Dómine, * non sum dignus ut intres sub tectum meum: sed tantum dic verbo, et sanábitur puer meus.",
+      "eng": "O Lord, * I am not worthy that thou shouldst enter under my roof: but only say the word, and my servant shall be healed.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp3-5": {
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Cum facis * eleemósynam nésciat sinístra tua quid fáciat déxtera tua.",
+      "eng": "When thou dost * alms, let not thy left hand know what thy right hand doth.",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Tu autem cum oráveris, * intra in cubículum tuum: et clauso óstio, ora Patrem tuum.",
+      "eng": "But thou when thou shalt pray, * enter into thy chamber, and having shut the door, pray to thy Father.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "quadp3-6": {
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Me étenim * de die in diem quærunt, et scire vias meas volunt.",
+      "eng": "For they seek me * from day to day, and desire to know my ways.",
+      "variationKey": "laudes.antiphon.benedictus"
+    }
   }
 }
