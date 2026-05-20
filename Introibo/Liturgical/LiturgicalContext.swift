@@ -72,6 +72,7 @@ struct LiturgicalContext {
     let penance: Penance
 
     let properSlug: String?
+    let temporalKey: String?
 
     // Key dates of the liturgical year — useful for other views.
     let easter: Date
@@ -235,6 +236,13 @@ struct LiturgicalContext {
             )
         }
 
+        let temporal = Self.computeTemporalKey(
+            date: now, easter: easter, ashWed: ashWed,
+            pentecost: pentecost, trinity: trinity,
+            firstAdvent: firstAdvent, christmas: christmas,
+            candlemas: candlemas, season: season, dow: dow, cal: cal
+        )
+
         return LiturgicalContext(
             date: now,
             season: season,
@@ -251,12 +259,109 @@ struct LiturgicalContext {
             mystery: mystery,
             penance: penance,
             properSlug: ProperCalendar.properSlug(for: now, rite: rite),
+            temporalKey: temporal,
             easter: easter,
             ashWednesday: ashWed,
             pentecost: pentecost,
             trinitySunday: trinity,
             firstAdvent: firstAdvent
         )
+    }
+
+    /// Computes the DivinumOfficium-style temporal key for the given date.
+    /// Maps the liturgical calendar position to codes like "pasc5-4" (Ascension),
+    /// "adv1-0" (1st Sunday of Advent), "quad3-3" (Wednesday of Lent week 3), etc.
+    private static func computeTemporalKey(
+        date: Date, easter: Date, ashWed: Date,
+        pentecost: Date, trinity: Date,
+        firstAdvent: Date, christmas: Date,
+        candlemas: Date, season: LiturgicalSeason,
+        dow: Int, cal: Calendar
+    ) -> String? {
+        let today = cal.startOfDay(for: date)
+
+        // Easter season: Pasc{week}-{dow}  (Easter Sunday = Pasc0-0)
+        if today >= cal.startOfDay(for: easter) && today < cal.startOfDay(for: pentecost.addingDays(7)) {
+            let days = cal.dateComponents([.day], from: cal.startOfDay(for: easter), to: today).day ?? 0
+            let week = days / 7
+            let day = days % 7
+            return "pasc\(week)-\(day)"
+        }
+
+        // Lent (Ash Wednesday through Holy Saturday): Quad{week}-{dow}
+        // Ash Wed = Quad6-3 in DO numbering? Actually: Quad starts from Septuagesima.
+        // Simpler: Ash Wed is start of Quad1, days count from there
+        if today >= cal.startOfDay(for: ashWed) && today < cal.startOfDay(for: easter) {
+            let days = cal.dateComponents([.day], from: cal.startOfDay(for: ashWed), to: today).day ?? 0
+            // Ash Wed = day 0. First Sunday of Lent = day 4 (if Ash Wed is Wed).
+            // DO numbering: Quad1-4 = Ash Wed (Wed of week before 1st Lent Sunday)
+            // Actually in DO: Quad1-0 = 1st Sunday of Lent, Quad1-4 = Thu of 1st Lent week
+            // Ash Wednesday is 4 days before 1st Sunday of Lent
+            // So Ash Wed maps to week 0, day 3 → but files are named differently
+            // Let me use: week = (days + 4) / 7, dayInWeek = (days + 4) % 7
+            // where +4 shifts so that the following Sunday = week 1, day 0
+            let shifted = days + 4 // Ash Wed (Wed) → Sun would be +4
+            let week = shifted / 7
+            let day = shifted % 7
+            return "quad\(week)-\(day)"
+        }
+
+        // Pre-Lent (Septuagesima): 3 Sundays before Ash Wednesday
+        let septuagesima = ashWed.addingDays(-17) // 17 days before Ash Wed = Septuagesima Sun
+        if today >= cal.startOfDay(for: septuagesima) && today < cal.startOfDay(for: ashWed) {
+            let days = cal.dateComponents([.day], from: cal.startOfDay(for: septuagesima), to: today).day ?? 0
+            let week = (days / 7) + 1
+            let day = days % 7
+            return "quadp\(week)-\(day)"
+        }
+
+        // Advent: Adv{week}-{dow} (1st Sunday of Advent = Adv1-0)
+        if today >= cal.startOfDay(for: firstAdvent) && today < cal.startOfDay(for: christmas) {
+            let days = cal.dateComponents([.day], from: cal.startOfDay(for: firstAdvent), to: today).day ?? 0
+            let week = (days / 7) + 1
+            let day = days % 7
+            return "adv\(week)-\(day)"
+        }
+
+        // After Pentecost: Pent{week:02d}-{dow}
+        if today >= cal.startOfDay(for: trinity) && today < cal.startOfDay(for: firstAdvent) {
+            let days = cal.dateComponents([.day], from: cal.startOfDay(for: trinity), to: today).day ?? 0
+            let week = (days / 7) + 1
+            let day = days % 7
+            return String(format: "pent%02d-%d", week, day)
+        }
+
+        // After Epiphany
+        var epiComps = DateComponents()
+        epiComps.year = cal.component(.year, from: date)
+        epiComps.month = 1; epiComps.day = 6
+        let epiphany = cal.date(from: epiComps)!
+        let epi1Sun = Self.nextSunday(after: epiphany, cal: cal)
+        if today >= cal.startOfDay(for: epi1Sun) && today < cal.startOfDay(for: septuagesima) {
+            let days = cal.dateComponents([.day], from: cal.startOfDay(for: epi1Sun), to: today).day ?? 0
+            let week = (days / 7) + 1
+            let day = days % 7
+            return "epi\(week)-\(day)"
+        }
+
+        // Christmas to Epiphany
+        if today >= cal.startOfDay(for: christmas) || today < cal.startOfDay(for: epi1Sun) {
+            let christmasDay = cal.startOfDay(for: christmas)
+            if today >= christmasDay {
+                let days = cal.dateComponents([.day], from: christmasDay, to: today).day ?? 0
+                return "nat\(days)"
+            }
+        }
+
+        return nil
+    }
+
+    private static func nextSunday(after date: Date, cal: Calendar) -> Date {
+        var d = date
+        while cal.component(.weekday, from: d) != 1 {
+            d = d.addingDays(1)
+        }
+        return d
     }
 
     private static let feriaLatin = [

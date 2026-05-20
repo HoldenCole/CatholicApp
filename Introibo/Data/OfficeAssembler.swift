@@ -3,6 +3,7 @@ import Foundation
 struct OfficeAssembler {
     let weeklyPsalter: [String: [String: Hour.Part]]
     let seasonalHymns: [String: [String: Hour.Part]]
+    let temporalPropers: [String: [String: Hour.Part]]
     let marianAntiphons: [MarianAntiphonData]
 
     func assemble(template: Hour, context: LiturgicalContext) -> Hour {
@@ -10,12 +11,18 @@ struct OfficeAssembler {
         let seasonKey = seasonString(for: context.season)
         let dayOverrides = weeklyPsalter[dayKey] ?? [:]
         let seasonOverrides = seasonalHymns[seasonKey] ?? [:]
+        let temporalOverrides = context.temporalKey.flatMap { temporalPropers[$0] } ?? [:]
 
         let assembledParts = template.parts.map { part -> Hour.Part in
             guard let key = part.variationKey else { return part }
 
             if part.type == "marian" {
                 return marianPart(for: context.marian, fallback: part)
+            }
+
+            // Temporal propers (highest priority for non-psalm parts)
+            if let override = temporalOverrides[key] {
+                return override
             }
 
             if part.type == "hymn", let override = seasonOverrides[key] {

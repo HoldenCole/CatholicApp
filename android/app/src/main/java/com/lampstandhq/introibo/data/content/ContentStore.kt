@@ -90,10 +90,13 @@ object ContentStore {
             load("psalter_weekly.json") ?: emptyMap()
         val hymns: Map<String, Map<String, Hour.Part>> =
             load("hymns_seasonal.json") ?: emptyMap()
+        val temporal: Map<String, Map<String, Hour.Part>> =
+            load("temporal_propers.json") ?: emptyMap()
 
         officeAssembler = OfficeAssembler(
             weeklyPsalter = psalter,
             seasonalHymns = hymns,
+            temporalPropers = temporal,
             marianAntiphons = marianAntiphons,
         )
     }

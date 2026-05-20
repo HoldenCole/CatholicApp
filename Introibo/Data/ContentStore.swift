@@ -42,11 +42,13 @@ final class ContentStore {
         propers           = load("propers",            as: [MassProper].self)          ?? []
         canonVariants     = load("canon_variants",     as: [String: [String: [String: String]]].self) ?? [:]
 
-        let psalter = load("psalter_weekly",   as: [String: [String: Hour.Part]].self) ?? [:]
-        let hymns   = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
+        let psalter  = load("psalter_weekly",    as: [String: [String: Hour.Part]].self) ?? [:]
+        let hymns    = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
+        let temporal = load("temporal_propers",  as: [String: [String: Hour.Part]].self) ?? [:]
         officeAssembler = OfficeAssembler(
             weeklyPsalter: psalter,
             seasonalHymns: hymns,
+            temporalPropers: temporal,
             marianAntiphons: marianAntiphons
         )
     }

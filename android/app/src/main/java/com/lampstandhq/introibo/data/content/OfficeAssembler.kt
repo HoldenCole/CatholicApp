@@ -15,6 +15,7 @@ import com.lampstandhq.introibo.data.model.MarianAntiphonData
 class OfficeAssembler(
     private val weeklyPsalter: Map<String, Map<String, Hour.Part>>,
     private val seasonalHymns: Map<String, Map<String, Hour.Part>>,
+    private val temporalPropers: Map<String, Map<String, Hour.Part>> = emptyMap(),
     private val marianAntiphons: List<MarianAntiphonData>,
 ) {
     fun assemble(template: Hour, context: LiturgicalContext): Hour {
@@ -22,6 +23,7 @@ class OfficeAssembler(
         val seasonKey = seasonString(context.season)
         val dayOverrides = weeklyPsalter[dayKey] ?: emptyMap()
         val seasonOverrides = seasonalHymns[seasonKey] ?: emptyMap()
+        val temporalOverrides = context.temporalKey?.let { temporalPropers[it] } ?: emptyMap()
 
         val assembledParts = template.parts.map { part ->
             val key = part.variationKey ?: return@map part
@@ -29,6 +31,9 @@ class OfficeAssembler(
             if (part.type == "marian") {
                 return@map marianPart(context.marian, fallback = part)
             }
+
+            // Temporal propers (highest priority for non-psalm parts)
+            temporalOverrides[key]?.let { return@map it }
 
             if (part.type == "hymn") {
                 seasonOverrides[key]?.let { return@map it }

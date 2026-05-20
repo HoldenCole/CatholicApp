@@ -90,6 +90,7 @@ data class LiturgicalContext(
     val penance: Penance,
 
     val properSlug: String?,
+    val temporalKey: String? = null,
 
     // Key dates of the liturgical year
     val easter: LocalDate,
@@ -255,6 +256,10 @@ data class LiturgicalContext(
                 )
             }
 
+            val temporal = computeTemporalKey(
+                now, easter, ashWed, pentecost, trinity, firstAdvent, christmas, season, dow,
+            )
+
             return LiturgicalContext(
                 date = now,
                 season = season,
@@ -271,12 +276,64 @@ data class LiturgicalContext(
                 mystery = mystery,
                 penance = penance,
                 properSlug = ProperCalendar.properSlug(now),
+                temporalKey = temporal,
                 easter = easter,
                 ashWednesday = ashWed,
                 pentecost = pentecost,
                 trinitySunday = trinity,
                 firstAdvent = firstAdvent,
             )
+        }
+
+        private fun computeTemporalKey(
+            date: LocalDate, easter: LocalDate, ashWed: LocalDate,
+            pentecost: LocalDate, trinity: LocalDate,
+            firstAdvent: LocalDate, christmas: LocalDate,
+            season: LiturgicalSeason, dow: Int,
+        ): String? {
+            val septuagesima = ashWed.minusDays(17)
+
+            // Easter season
+            if (date >= easter && date < pentecost.plusDays(7)) {
+                val days = ChronoUnit.DAYS.between(easter, date).toInt()
+                return "pasc${days / 7}-${days % 7}"
+            }
+
+            // Lent
+            if (date >= ashWed && date < easter) {
+                val days = ChronoUnit.DAYS.between(ashWed, date).toInt()
+                val shifted = days + 4
+                return "quad${shifted / 7}-${shifted % 7}"
+            }
+
+            // Pre-Lent (Septuagesima)
+            if (date >= septuagesima && date < ashWed) {
+                val days = ChronoUnit.DAYS.between(septuagesima, date).toInt()
+                return "quadp${days / 7 + 1}-${days % 7}"
+            }
+
+            // Advent
+            if (date >= firstAdvent && date < christmas) {
+                val days = ChronoUnit.DAYS.between(firstAdvent, date).toInt()
+                return "adv${days / 7 + 1}-${days % 7}"
+            }
+
+            // After Pentecost
+            if (date >= trinity && date < firstAdvent) {
+                val days = ChronoUnit.DAYS.between(trinity, date).toInt()
+                return "pent%02d-%d".format(days / 7 + 1, days % 7)
+            }
+
+            // After Epiphany
+            val epiphany = LocalDate.of(date.year, 1, 6)
+            var epi1Sun = epiphany
+            while (epi1Sun.dayOfWeek != java.time.DayOfWeek.SUNDAY) epi1Sun = epi1Sun.plusDays(1)
+            if (date >= epi1Sun && date < septuagesima) {
+                val days = ChronoUnit.DAYS.between(epi1Sun, date).toInt()
+                return "epi${days / 7 + 1}-${days % 7}"
+            }
+
+            return null
         }
 
         // ---- Static lookup tables ----
