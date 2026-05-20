@@ -70,7 +70,10 @@ fun PrayerDetailSheet(
                 }
             }
 
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 80.dp),
+            ) {
                 // Header
                 item {
                     Column(

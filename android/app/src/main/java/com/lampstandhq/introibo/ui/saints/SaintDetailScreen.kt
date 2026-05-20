@@ -106,7 +106,8 @@ fun SaintDetailScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .verticalScroll(rememberScrollState()),
+                    .verticalScroll(rememberScrollState())
+                    .padding(bottom = 80.dp),
             ) {
                 // Header
                 Column(
