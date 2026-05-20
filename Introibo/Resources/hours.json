@@ -1287,13 +1287,6 @@
         "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
       },
       {
-        "type": "antiphon",
-        "label": "Antiphon",
-        "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia.",
-        "variationKey": "laudes.antiphon"
-      },
-      {
         "type": "psalm",
         "label": "Psalmus 92; Dóminus regnávit",
         "ref": "Ps 92",
@@ -1327,7 +1320,9 @@
             "eng": "Thy testimonies are become exceedingly credible: holiness becometh Thy house, O Lord, unto length of days."
           }
         ],
-        "variationKey": "laudes.psalm1"
+        "variationKey": "laudes.psalm1",
+        "antiphonLat": "Allelúja, * Dóminus regnávit, decórem índuit, allelúja, allelúja.",
+        "antiphonEng": "Alleluia, * The Lord hath reigned, he is clothed with beauty, alleluia, alleluia."
       },
       {
         "type": "psalm",
@@ -1355,7 +1350,58 @@
             "eng": "Praise ye His name, for the Lord is sweet: His mercy endureth for ever, and His truth to generation and generation."
           }
         ],
-        "variationKey": "laudes.psalm2"
+        "variationKey": "laudes.psalm2",
+        "antiphonLat": "Jubiláte * Deo omnis terra, allelúja.",
+        "antiphonEng": "Shout with joy to God * all the earth, alleluia."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 62; Deus, Deus meus",
+        "variationKey": "laudes.psalm3",
+        "antiphonLat": "Benedícam te * in vita mea, Dómine: et in nómine tuo levábo manus meas, allelúja.",
+        "antiphonEng": "I will bless thee all my life long * and in thy name I will lift up my hands, alleluia.",
+        "verses": [
+          {
+            "lat": "Deus, Deus meus, ad te de luce vígilo.",
+            "eng": "O God, my God, to Thee do I watch at break of day."
+          },
+          {
+            "lat": "Sitívit in te ánima mea, quam multiplíciter tibi caro mea.",
+            "eng": "For Thee my soul hath thirsted; for Thee my flesh, O how many ways!"
+          },
+          {
+            "lat": "In terra desérta, et ínvia, et inaquósa: sic in sancto appárui tibi, ut vidérem virtútem tuam et glóriam tuam.",
+            "eng": "In a desert land, and where there is no way, and no water: so in the sanctuary have I come before Thee, to see Thy power and Thy glory."
+          },
+          {
+            "lat": "Quóniam mélior est misericórdia tua super vitas: lábia mea laudábunt te.",
+            "eng": "For Thy mercy is better than lives: Thee my lips shall praise."
+          },
+          {
+            "lat": "Sic benedícam te in vita mea: et in nómine tuo levábo manus meas.",
+            "eng": "Thus will I bless Thee all my life long: and in Thy name I will lift up my hands."
+          },
+          {
+            "lat": "Sicut ádipe et pinguédine repleátur ánima mea: et lábiis exsultatiónis laudábit os meum.",
+            "eng": "Let my soul be filled as with marrow and fatness: and my mouth shall praise Thee with joyful lips."
+          },
+          {
+            "lat": "Si memor fui tui super stratum meum, in matutínis meditábor in te: quia fuísti adjútor meus.",
+            "eng": "If I have remembered Thee upon my bed, I will meditate on Thee in the morning: because Thou hast been my helper."
+          },
+          {
+            "lat": "Et in velaménto alárum tuárum exsultábo, adhǽsit ánima mea post te: me suscépit déxtera tua.",
+            "eng": "And I will rejoice under the covert of Thy wings: my soul hath stuck close to Thee: Thy right hand hath received me."
+          },
+          {
+            "lat": "Ipsi vero in vanum quæsiérunt ánimam meam, introíbunt in inferióra terræ: tradéntur in manus gládii, partes vúlpium erunt.",
+            "eng": "But they have sought my soul in vain, they shall go into the lower parts of the earth: they shall be delivered into the hands of the sword, they shall be the portions of foxes."
+          },
+          {
+            "lat": "Rex vero lætábitur in Deo, laudabúntur omnes qui jurant in eo: quia obstrúctum est os loquéntium iníqua.",
+            "eng": "But the king shall rejoice in God, all they shall be praised that swear by Him: because the mouth is stopped of them that speak wicked things."
+          }
+        ]
       },
       {
         "type": "canticle",
@@ -1443,7 +1489,9 @@
             "eng": "Blessed art Thou, O Lord, in the firmament of heaven: and worthy of praise, and glorious, and highly exalted for ever."
           }
         ],
-        "variationKey": "laudes.canticle1"
+        "variationKey": "laudes.canticle1",
+        "antiphonLat": "Tres púeri * jussu regis in fornácem missi sunt, non timéntes flammam ignis, dicéntes: Benedíctus Deus, allelúja.",
+        "antiphonEng": "The three young boys * cast into the furnace by the king, fearing not the flames of fire, said: Blessed be God, alleluia."
       },
       {
         "type": "psalm",
@@ -1567,14 +1615,17 @@
             "eng": "Let every spirit praise the Lord."
           }
         ],
-        "variationKey": "laudes.psalm3"
+        "variationKey": "laudes.psalm4",
+        "antiphonLat": "Allelúja, * laudáte Dóminum de cælis, allelúja, allelúja.",
+        "antiphonEng": "Alleluia, * praise ye the Lord from the heavens, alleluia, alleluia."
       },
       {
         "type": "capitulum",
         "label": "Capitulum",
         "ref": "Romans 13:12",
         "lat": "Nox præcéssit, dies autem appropinquávit. Abjiciámus ergo ópera tenebrárum, et induámur arma lucis.",
-        "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light."
+        "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light.",
+        "variationKey": "laudes.capitulum"
       },
       {
         "type": "hymn",
@@ -1952,13 +2003,15 @@
         "label": "Capitulum",
         "ref": "1 Tim 1:17",
         "lat": "Regi sæculórum immortáli et invisíbili, soli Deo honor et glória in sǽcula sæculórum. Amen.",
-        "eng": "To the King of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen."
+        "eng": "To the King of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen.",
+        "variationKey": "prima.capitulum"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
         "lat": "℟.br. Christe, Fili Dei vivi, * miserére nobis.\n℣. Qui sedes ad déxteram Patris.\n℟. Miserére nobis.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Christe, Fili Dei vivi, miserére nobis.",
-        "eng": "℟.br. Christ, Son of the living God, * have mercy on us.\n℣. Who sittest at the right hand of the Father.\n℟. Have mercy on us.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Christ, Son of the living God, have mercy on us."
+        "eng": "℟.br. Christ, Son of the living God, * have mercy on us.\n℣. Who sittest at the right hand of the Father.\n℟. Have mercy on us.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Christ, Son of the living God, have mercy on us.",
+        "variationKey": "prima.responsory"
       },
       {
         "type": "pater",
@@ -2146,13 +2199,15 @@
         "label": "Capitulum",
         "ref": "Jer 17:14",
         "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-        "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
+        "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise.",
+        "variationKey": "tertia.capitulum"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
         "lat": "℟.br. Inclína cor meum, Deus, * in testimónia tua.\n℣. Avérte óculos meos ne vídeant vanitátem.\n℟. In testimónia tua.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Inclína cor meum, Deus, in testimónia tua.",
-        "eng": "℟.br. Incline my heart, O God, * unto Thy testimonies.\n℣. Turn away my eyes that they may not behold vanity.\n℟. Unto Thy testimonies.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Incline my heart, O God, unto Thy testimonies."
+        "eng": "℟.br. Incline my heart, O God, * unto Thy testimonies.\n℣. Turn away my eyes that they may not behold vanity.\n℟. Unto Thy testimonies.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Incline my heart, O God, unto Thy testimonies.",
+        "variationKey": "tertia.responsory"
       },
       {
         "type": "pater",
@@ -2340,13 +2395,15 @@
         "label": "Capitulum",
         "ref": "Gal 6:2",
         "lat": "Alter altérius ónera portáte, et sic adimplébitis legem Christi.",
-        "eng": "Bear ye one another's burdens; and so you shall fulfil the law of Christ."
+        "eng": "Bear ye one another's burdens; and so you shall fulfil the law of Christ.",
+        "variationKey": "sexta.capitulum"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
         "lat": "℟.br. In ætérnum, Dómine, * pérmanet verbum tuum.\n℣. In sæculum sæculi véritas tua.\n℟. Pérmanet verbum tuum.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. In ætérnum, Dómine, pérmanet verbum tuum.",
-        "eng": "℟.br. For ever, O Lord, * Thy word standeth firm.\n℣. Thy truth endureth to all generations.\n℟. Thy word standeth firm.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. For ever, O Lord, Thy word standeth firm."
+        "eng": "℟.br. For ever, O Lord, * Thy word standeth firm.\n℣. Thy truth endureth to all generations.\n℟. Thy word standeth firm.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. For ever, O Lord, Thy word standeth firm.",
+        "variationKey": "sexta.responsory"
       },
       {
         "type": "pater",
@@ -2534,13 +2591,15 @@
         "label": "Capitulum",
         "ref": "Deut 4:31",
         "lat": "Quia Deus miséricors Dóminus Deus tuus est: non dimíttet te, nec omníno discoóperit, neque obliviscétur testaménti, in quo jurávit pátribus tuis.",
-        "eng": "For the Lord thy God is a merciful God: He will not leave thee, nor altogether destroy thee, nor forget the covenant by which He swore to thy fathers."
+        "eng": "For the Lord thy God is a merciful God: He will not leave thee, nor altogether destroy thee, nor forget the covenant by which He swore to thy fathers.",
+        "variationKey": "nona.capitulum"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
         "lat": "℟.br. Clamávi et exaudísti me, Dómine, * custódi me.\n℣. A lábiis iníquis et a lingua dolósa.\n℟. Custódi me.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Clamávi et exaudísti me, Dómine, custódi me.",
-        "eng": "℟.br. I cried and Thou didst hear me, O Lord, * guard me.\n℣. From wicked lips and a deceitful tongue.\n℟. Guard me.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I cried and Thou didst hear me, O Lord, guard me."
+        "eng": "℟.br. I cried and Thou didst hear me, O Lord, * guard me.\n℣. From wicked lips and a deceitful tongue.\n℟. Guard me.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I cried and Thou didst hear me, O Lord, guard me.",
+        "variationKey": "nona.responsory"
       },
       {
         "type": "pater",
@@ -2589,13 +2648,6 @@
         "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
       },
       {
-        "type": "antiphon",
-        "label": "Antiphon",
-        "lat": "Dirigátur, Dómine, orátio mea, sicut incénsum in conspéctu tuo.",
-        "eng": "Let my prayer be directed, O Lord, as incense in Thy sight.",
-        "variationKey": "vesperae.antiphon"
-      },
-      {
         "type": "psalm",
         "label": "Psalm 109; Dixit Dóminus",
         "ref": "Vesperæ Dominicæ",
@@ -2633,7 +2685,9 @@
             "eng": "He shall drink of the torrent in the way: therefore shall He lift up the head."
           }
         ],
-        "variationKey": "vesperae.psalm1"
+        "variationKey": "vesperae.psalm1",
+        "antiphonLat": "Dixit Dóminus * Dómino meo: Sede a dextris meis.",
+        "antiphonEng": "The Lord said to my Lord: * Sit thou at my right hand."
       },
       {
         "type": "psalm",
@@ -2681,7 +2735,9 @@
             "eng": "A good understanding to all that do it: His praise continueth for ever and ever."
           }
         ],
-        "variationKey": "vesperae.psalm2"
+        "variationKey": "vesperae.psalm2",
+        "antiphonLat": "Magna ópera Dómini: * exquisíta in omnes voluntátes ejus.",
+        "antiphonEng": "Great are the works of the Lord, * sought out according to all his wills."
       },
       {
         "type": "psalm",
@@ -2725,7 +2781,9 @@
             "eng": "The wicked shall see and shall be angry; he shall gnash with his teeth and pine away: the desire of the wicked shall perish."
           }
         ],
-        "variationKey": "vesperae.psalm3"
+        "variationKey": "vesperae.psalm3",
+        "antiphonLat": "Qui timet Dóminum, * in mandátis ejus cupit nimis.",
+        "antiphonEng": "Blessed is the man that feareth the Lord; * he shall delight exceedingly in his commandments."
       },
       {
         "type": "psalm",
@@ -2765,7 +2823,9 @@
             "eng": "Who maketh a barren woman to dwell in a house, the joyful mother of children."
           }
         ],
-        "variationKey": "vesperae.psalm4"
+        "variationKey": "vesperae.psalm4",
+        "antiphonLat": "Sit nomen Dómini * benedíctum in sǽcula.",
+        "antiphonEng": "Blessed be the name of the Lord * from henceforth now and for ever."
       },
       {
         "type": "psalm",
@@ -2800,14 +2860,17 @@
             "lat": "Sicut erat in princípio, et nunc, et semper, * et in sæcula sæculórum. Amen.",
             "eng": "As it was in the beginning, is now, and ever shall be, * world without end. Amen."
           }
-        ]
+        ],
+        "antiphonLat": "Deus autem noster * in cælo: ómnia quæcúmque vóluit, fecit.",
+        "antiphonEng": "But our God is in heaven, * he hath done all things whatsoever he would."
       },
       {
         "type": "capitulum",
         "label": "Capitulum",
         "ref": "2 Cor 1:3-4",
         "lat": "Benedíctus Deus, et Pater Dómini nostri Iesu Christi, Pater misericordiárum, et Deus totíus consolatiónis, qui consolátur nos in omni tribulatióne nostra.",
-        "eng": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort, who comforteth us in all our tribulation."
+        "eng": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort, who comforteth us in all our tribulation.",
+        "variationKey": "vesperae.capitulum"
       },
       {
         "type": "hymn",
@@ -3170,7 +3233,8 @@
         "label": "Capitulum",
         "ref": "Jeremiah 14:9",
         "lat": "Tu autem in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine Deus noster.",
-        "eng": "But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God."
+        "eng": "But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God.",
+        "variationKey": "completorium.capitulum"
       },
       {
         "type": "responsory",
@@ -3183,7 +3247,8 @@
         "v2Lat": "Custódi nos, Dómine, ut pupíllam óculi.",
         "v2Eng": "Keep us, O Lord, as the apple of Thine eye.",
         "r2Lat": "Sub umbra alárum tuárum prótege nos.",
-        "r2Eng": "Protect us under the shadow of Thy wings."
+        "r2Eng": "Protect us under the shadow of Thy wings.",
+        "variationKey": "completorium.responsory"
       },
       {
         "type": "canticle",

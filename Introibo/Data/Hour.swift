@@ -40,6 +40,8 @@ struct Hour: Identifiable, Decodable, Hashable {
         var season: String? = nil
         var engBody: String? = nil
         var variationKey: String? = nil
+        var antiphonLat: String? = nil
+        var antiphonEng: String? = nil
 
         struct Verse: Decodable, Hashable {
             let lat: String

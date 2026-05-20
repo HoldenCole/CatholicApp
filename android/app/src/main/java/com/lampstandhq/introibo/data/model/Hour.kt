@@ -44,6 +44,8 @@ data class Hour(
         val season: String? = null,
         val engBody: String? = null,
         val variationKey: String? = null,
+        val antiphonLat: String? = null,
+        val antiphonEng: String? = null,
     ) {
         @Serializable
         data class Verse(

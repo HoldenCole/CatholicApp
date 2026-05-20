@@ -228,6 +228,16 @@ struct HourView: View {
 
     private func psalmBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 8) {
+            if let antLat = p.antiphonLat, !antLat.isEmpty {
+                Text("Ant.")
+                    .smallLabel(color: Color.sanctuaryRed)
+                BilingualLine(
+                    lat: antLat,
+                    eng: p.antiphonEng ?? "",
+                    sideBySide: true
+                )
+                .padding(.bottom, 4)
+            }
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.label ?? "Psalmus")

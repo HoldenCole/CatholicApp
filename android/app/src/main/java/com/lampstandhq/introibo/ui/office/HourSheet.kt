@@ -317,7 +317,12 @@ private fun PsalmBlock(p: Hour.Part) {
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        // Decorated label with optional ref
+        if (!p.antiphonLat.isNullOrEmpty()) {
+            SmallLabel(text = "Ant.", color = colors.sanctuaryRed)
+            BilingualLine(lat = p.antiphonLat, eng = p.antiphonEng ?: "", sideBySide = true)
+            Spacer(modifier = Modifier.height(4.dp))
+        }
+
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth(),
