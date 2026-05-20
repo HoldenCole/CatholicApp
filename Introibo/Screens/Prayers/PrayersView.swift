@@ -318,7 +318,7 @@ struct PrayersView: View {
                     HStack(spacing: 4) {
                         Image(systemName: sortAlphabetical ? "textformat.abc" : "list.number")
                             .font(.system(size: 11))
-                        Text(sortAlphabetical ? "A - Z" : "Custom")
+                        Text(sortAlphabetical ? "A - Z" : "Default")
                             .font(.captionSm)
                     }
                     .foregroundStyle(Color.sanctuaryRed)

@@ -599,7 +599,7 @@ private fun FullLibrarySection(
                 )
                 Spacer(Modifier.width(4.dp))
                 Text(
-                    text = if (sortAlphabetical) "A - Z" else "Custom",
+                    text = if (sortAlphabetical) "A - Z" else "Default",
                     style = type.captionSm,
                     color = colors.sanctuaryRed,
                 )
