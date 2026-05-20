@@ -24,7 +24,7 @@ final class ContentStore {
     private(set) var confessionGuides:[ConfessionGuide]    = []
     private(set) var propers:         [MassProper]          = []
     private var canonVariants: [String: [String: [String: String]]] = [:]
-    private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], marianAntiphons: [])
+    private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], temporalPropers: [:], marianAntiphons: [])
 
     init() {
         prayers           = load("prayers",            as: [Prayer].self)              ?? []

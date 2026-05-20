@@ -240,7 +240,7 @@ struct LiturgicalContext {
             date: now, easter: easter, ashWed: ashWed,
             pentecost: pentecost, trinity: trinity,
             firstAdvent: firstAdvent, christmas: christmas,
-            candlemas: candlemas, season: season, dow: dow, cal: cal
+            cal: cal
         )
 
         return LiturgicalContext(
@@ -275,8 +275,7 @@ struct LiturgicalContext {
         date: Date, easter: Date, ashWed: Date,
         pentecost: Date, trinity: Date,
         firstAdvent: Date, christmas: Date,
-        candlemas: Date, season: LiturgicalSeason,
-        dow: Int, cal: Calendar
+        cal: Calendar
     ) -> String? {
         let today = cal.startOfDay(for: date)
 
