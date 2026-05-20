@@ -281,7 +281,7 @@ struct SettingsView: View {
             }
             .listRowBackground(Color.pageBackground)
             LabeledContent("Version") {
-                Text("1.1.6")
+                Text("1.1.7")
                     .foregroundStyle(Color.secondaryText)
             }
             .listRowBackground(Color.pageBackground)

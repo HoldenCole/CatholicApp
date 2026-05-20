@@ -399,7 +399,7 @@ fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = n
             item {
                 Column(modifier = Modifier.padding(vertical = 8.dp)) {
                     AboutRow(label = "App", value = "Introibo")
-                    AboutRow(label = "Version", value = "1.1.6")
+                    AboutRow(label = "Version", value = "1.1.7")
                     Spacer(Modifier.height(8.dp))
                     Text(
                         text = "Ad altare Dei",
