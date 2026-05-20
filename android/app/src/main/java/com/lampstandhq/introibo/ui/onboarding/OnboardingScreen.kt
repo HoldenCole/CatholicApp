@@ -21,11 +21,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.foundation.clickable
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -51,8 +54,10 @@ fun OnboardingScreen(
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    val pagerState = rememberPagerState(pageCount = { 3 })
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val settingsRepo = remember { com.lampstandhq.introibo.storage.settings.SettingsRepository(context) }
     val scope = rememberCoroutineScope()
+    val pagerState = rememberPagerState(pageCount = { 4 })
     var showTutorial by remember { mutableStateOf(false) }
 
     if (showTutorial) {
@@ -78,7 +83,8 @@ fun OnboardingScreen(
             when (page) {
                 0 -> WelcomePage()
                 1 -> TraditionPage()
-                2 -> FeaturesPage()
+                2 -> SettingsPage(settingsRepo, scope)
+                3 -> FeaturesPage()
             }
         }
 
@@ -89,7 +95,7 @@ fun OnboardingScreen(
         ) {
             // Page dots
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                for (i in 0 until 3) {
+                for (i in 0 until 4) {
                     Box(
                         modifier = Modifier
                             .size(8.dp)
@@ -104,7 +110,7 @@ fun OnboardingScreen(
             // Continue / Tour button
             TextButton(
                 onClick = {
-                    if (pagerState.currentPage < 2) {
+                    if (pagerState.currentPage < 3) {
                         scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                     } else {
                         showTutorial = true
@@ -117,7 +123,7 @@ fun OnboardingScreen(
                     .padding(vertical = 4.dp),
             ) {
                 Text(
-                    text = if (pagerState.currentPage < 2) "Continue" else "Take a Quick Tour  ✠",
+                    text = if (pagerState.currentPage < 3) "Continue" else "Take a Quick Tour  ✠",
                     style = type.bodySm.copy(
                         fontWeight = FontWeight.SemiBold,
                         fontStyle = FontStyle.Italic,
@@ -131,7 +137,7 @@ fun OnboardingScreen(
 
             TextButton(onClick = onComplete) {
                 Text(
-                    text = if (pagerState.currentPage < 2) "Skip" else "Skip Tutorial",
+                    text = if (pagerState.currentPage < 3) "Skip" else "Skip Tutorial",
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.tertiaryText,
                 )
@@ -382,5 +388,109 @@ private fun MonstranceIcon(size: Int = 100) {
             end = Offset(cx + 4f * scale, cy),
             strokeWidth = 0.8f * scale,
         )
+    }
+}
+
+@Composable
+private fun SettingsPage(
+    settingsRepo: com.lampstandhq.introibo.storage.settings.SettingsRepository,
+    scope: kotlinx.coroutines.CoroutineScope,
+) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+
+    val rite by settingsRepo.missalRite.collectAsState(initial = com.lampstandhq.introibo.storage.settings.MissalRite.RITE_1962)
+    val penance by settingsRepo.penanceDiscipline.collectAsState(initial = com.lampstandhq.introibo.storage.settings.PenanceDiscipline.DISCIPLINE_1962)
+    val language by settingsRepo.languageMode.collectAsState(initial = com.lampstandhq.introibo.storage.settings.LanguageMode.BOTH)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Spacer(modifier = Modifier.height(60.dp))
+
+        Text(text = "✠", style = type.pageTitle.copy(fontSize = 48.sp), color = colors.sanctuaryRed)
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            text = "Set Up Your Missal",
+            style = type.pageTitle.copy(fontSize = 34.sp, fontWeight = FontWeight.SemiBold),
+            color = colors.primaryText,
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Box(
+            modifier = Modifier
+                .width(40.dp)
+                .height(1.dp)
+                .background(colors.sanctuaryRed.copy(alpha = 0.4f)),
+        )
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Rite selection
+        Column(modifier = Modifier.padding(horizontal = 32.dp).fillMaxWidth()) {
+            Text("Missal Rite", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
+            Spacer(modifier = Modifier.height(8.dp))
+            com.lampstandhq.introibo.storage.settings.MissalRite.entries.forEach { r ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { scope.launch { settingsRepo.setMissalRite(r) } }
+                        .padding(vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(r.label, style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
+                    if (rite == r) {
+                        Text("✓", color = colors.sanctuaryRed, style = type.titleM)
+                    }
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Penance discipline
+        Column(modifier = Modifier.padding(horizontal = 32.dp).fillMaxWidth()) {
+            Text("Penance Discipline", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
+            Spacer(modifier = Modifier.height(8.dp))
+            com.lampstandhq.introibo.storage.settings.PenanceDiscipline.entries.forEach { d ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { scope.launch { settingsRepo.setPenanceDiscipline(d) } }
+                        .padding(vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(d.label, style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
+                    if (penance == d) {
+                        Text("✓", color = colors.sanctuaryRed, style = type.titleM)
+                    }
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Language
+        Column(modifier = Modifier.padding(horizontal = 32.dp).fillMaxWidth()) {
+            Text("Language", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
+            Spacer(modifier = Modifier.height(8.dp))
+            com.lampstandhq.introibo.storage.settings.LanguageMode.entries.forEach { l ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { scope.launch { settingsRepo.setLanguageMode(l) } }
+                        .padding(vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(l.label, style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
+                    if (language == l) {
+                        Text("✓", color = colors.sanctuaryRed, style = type.titleM)
+                    }
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(40.dp))
     }
 }
