@@ -36,12 +36,41 @@ struct OfficeAssembler {
             return part
         }
 
+        // Apply temporal per-psalm antiphon overrides.
+        // Temporal keys like "laudes.antiphon.psalm1" replace the antiphon
+        // on the corresponding psalm/canticle part.
+        let antiphonApplied = assembledParts.map { part -> Hour.Part in
+            guard let key = part.variationKey else { return part }
+            // Build the antiphon override key for this part's position
+            // e.g., "laudes.psalm1" → check "laudes.antiphon.psalm1"
+            let hourPrefix = key.components(separatedBy: ".").first ?? ""
+            let slotSuffix = key.components(separatedBy: ".").last ?? ""
+            // Map psalm/canticle slot to antiphon key index
+            let antKey: String?
+            switch key {
+            case let k where k.hasSuffix(".psalm1"): antKey = "\(hourPrefix).antiphon.psalm1"
+            case let k where k.hasSuffix(".psalm2"): antKey = "\(hourPrefix).antiphon.psalm2"
+            case let k where k.hasSuffix(".psalm3"): antKey = "\(hourPrefix).antiphon.psalm3"
+            case let k where k.hasSuffix(".canticle1"): antKey = "\(hourPrefix).antiphon.psalm4"
+            case let k where k.hasSuffix(".psalm4"): antKey = "\(hourPrefix).antiphon.psalm5"
+            default: antKey = nil
+            }
+
+            if let ak = antKey, let antOverride = temporalOverrides[ak] {
+                var modified = part
+                modified.antiphonLat = antOverride.lat
+                modified.antiphonEng = antOverride.eng
+                return modified
+            }
+            return part
+        }
+
         // Post-assembly filtering for Matins nocturn structure and Te Deum.
         let finalParts: [Hour.Part]
         if template.slug == "matutinum" {
-            finalParts = filterMatinsParts(assembledParts, context: context)
+            finalParts = filterMatinsParts(antiphonApplied, context: context)
         } else {
-            finalParts = assembledParts
+            finalParts = antiphonApplied
         }
 
         return Hour(

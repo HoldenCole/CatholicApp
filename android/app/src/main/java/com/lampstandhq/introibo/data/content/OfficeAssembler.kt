@@ -44,11 +44,31 @@ class OfficeAssembler(
             part
         }
 
+        // Apply temporal per-psalm antiphon overrides.
+        val antiphonApplied = assembledParts.map { part ->
+            val key = part.variationKey ?: return@map part
+            val hourPrefix = key.substringBefore(".")
+            val antKey = when {
+                key.endsWith(".psalm1") -> "$hourPrefix.antiphon.psalm1"
+                key.endsWith(".psalm2") -> "$hourPrefix.antiphon.psalm2"
+                key.endsWith(".psalm3") -> "$hourPrefix.antiphon.psalm3"
+                key.endsWith(".canticle1") -> "$hourPrefix.antiphon.psalm4"
+                key.endsWith(".psalm4") -> "$hourPrefix.antiphon.psalm5"
+                else -> null
+            }
+            val antOverride = antKey?.let { temporalOverrides[it] }
+            if (antOverride != null) {
+                part.copy(antiphonLat = antOverride.lat, antiphonEng = antOverride.eng)
+            } else {
+                part
+            }
+        }
+
         // Post-assembly filtering for Matins nocturn structure and Te Deum.
         val finalParts = if (template.slug == "matutinum") {
-            filterMatinsParts(assembledParts, context)
+            filterMatinsParts(antiphonApplied, context)
         } else {
-            assembledParts
+            antiphonApplied
         }
 
         return Hour(
