@@ -252,7 +252,7 @@ struct MissalView: View {
     /// for Christmas, Epiphany, Easter, Ascension, Pentecost.
     @ViewBuilder
     private func canonWithProperInsertions() -> some View {
-        if let variantKey = canonVariantKey(),
+        if let variantKey = canonVariantKey(for: rite),
            let section = store.missal.first(where: { $0.slug == "canon" }) {
             let modified: [MissalSection.Line] = section.body.map { line in
                 var mutable = line
@@ -278,21 +278,83 @@ struct MissalView: View {
         }
     }
 
-    private func canonVariantKey() -> String? {
+    /// Returns the Communicantes/Hanc igitur variant key (if any) for the
+    /// current day, gated by rite.
+    ///
+    /// Rite scope:
+    /// - **pre-1955** retains the full octaves of Easter and Pentecost: the
+    ///   proper Communicantes (and, for the two paschal octaves, the proper
+    ///   Hanc igitur) fires on every day of the octave (the feast plus six
+    ///   weekdays through the following Saturday).
+    /// - **1955** keeps the Easter and Pentecost octaves intact for Canon
+    ///   purposes — the Holy Week reforms reordered the Triduum and demoted
+    ///   the octave days' rank, but the proper inserts in the Canon were not
+    ///   suppressed until the Codex Rubricarum of 1960. Same behavior as
+    ///   pre-1955 for this gating.
+    /// - **1962** (Codex Rubricarum 1960, in force 1962) abolished the
+    ///   octaves of Easter and Pentecost as such. Only the privileged days
+    ///   keep the proper insertion: the feast day itself (Easter Sunday /
+    ///   Pentecost Sunday) and Easter Monday / Pentecost Monday. From
+    ///   Tuesday of either octave onward the standard Communicantes is used.
+    /// - Christmas, Epiphany, and Ascension behave identically across all
+    ///   three rites (their octaves either were never gated this way in our
+    ///   data or remain unaffected).
+    private func canonVariantKey(for rite: MissalRite) -> String? {
         guard let slug = ctx.properSlug else { return nil }
         if slug == "christmas" || slug.hasPrefix("christmas-") { return "christmas" }
         if slug == "epiphany" { return "epiphany" }
-        if slug == "easter-sunday" || slug.hasPrefix("easter-0") { return "easter" }
         if slug == "ascension" { return "ascension" }
-        if slug == "pentecost-sunday" || slug.hasPrefix("easter-7") { return "pentecost" }
+
+        // Easter octave: easter-sunday + easter-0-1..6 (Mon..Sat in albis)
+        if slug == "easter-sunday" { return "easter" }
+        if slug.hasPrefix("easter-0-") {
+            switch rite {
+            case .pre1955, .rite1955:
+                return "easter"
+            case .rite1962:
+                // Only Easter Monday keeps the proper insertion.
+                return slug == "easter-0-1" ? "easter" : nil
+            }
+        }
+
+        // Pentecost octave: pentecost-sunday + easter-7-1..6
+        if slug == "pentecost-sunday" { return "pentecost" }
+        if slug.hasPrefix("easter-7-") {
+            switch rite {
+            case .pre1955, .rite1955:
+                return "pentecost"
+            case .rite1962:
+                // Only Pentecost Monday keeps the proper insertion.
+                return slug == "easter-7-1" ? "pentecost" : nil
+            }
+        }
         return nil
     }
 
     /// Credo is said on all Sundays and on major feasts (rank 1 in data).
+    /// Also fires on feasts of Apostles, Evangelists, and Doctors regardless
+    /// of legacy rank, since these classes always have Credo per the rubrics
+    /// (Ritus servandus VI; cf. 1962 Rubricæ Generales nos. 475–477).
+    /// Detected from the officium string (preserved as the proper's title)
+    /// to remain conservative — only triggers on a clear textual signal.
     private func showCredo(_ proper: MassProper) -> Bool {
         if let override = proper.credoOverride { return override }
         if ctx.isSunday { return true }
-        return proper.rank == 1
+        if proper.rank == 1 { return true }
+        if isApostleEvangelistOrDoctor(proper) { return true }
+        return false
+    }
+
+    /// Returns true when the officium (proper.title) names an Apostle,
+    /// Evangelist, or Doctor of the Church. Case-insensitive Latin match.
+    private func isApostleEvangelistOrDoctor(_ proper: MassProper) -> Bool {
+        let officium = proper.title.lowercased()
+        // Latin: "Apostoli" / "Apostolorum", "Evangelistæ" (or ASCII "Evangelistae"),
+        // "Doctoris" / "Doctorum" / "Doctores".
+        let needles = ["apostoli", "apostolorum",
+                       "evangelistæ", "evangelistae", "evangelistarum",
+                       "doctoris", "doctorum", "doctores"]
+        return needles.contains(where: { officium.contains($0) })
     }
 
     /// Strip the Gloria Patri doxology from an introit text.

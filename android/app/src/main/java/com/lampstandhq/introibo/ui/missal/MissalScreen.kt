@@ -110,7 +110,7 @@ fun MissalScreen() {
             },
             actions = {
                 IconButton(onClick = {
-                    val shareText = buildFullMassText(todayProper, rite)
+                    val shareText = buildFullMassText(todayProper, rite, ctx)
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                         this.type = "text/plain"
                         putExtra(Intent.EXTRA_TEXT, shareText)
@@ -140,7 +140,7 @@ fun MissalScreen() {
 
             if (todayProper != null) {
                 // Interleaved Mass: Ordinary + Propers
-                interleavedMassItems(todayProper, ctx)
+                interleavedMassItems(todayProper, ctx, rite)
             } else {
                 // Ordinary only
                 items(
@@ -176,6 +176,7 @@ fun MissalScreen() {
 private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     proper: MassProper,
     ctx: LiturgicalContext,
+    rite: MissalRite,
 ) {
     // Prayers at the Foot of the Altar
     // Omitted in Passiontide and Requiem Masses
@@ -242,6 +243,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
         ordinaryItem("agnus")
     }
 
+    // Confiteor before Communion (pre-1955 rite; suppressed in 1962 and 1955)
+    if (rite == MissalRite.PRE_1955) {
+        ordinaryItem("confiteor-communion")
+    }
+
     ordinaryItem("domine")
 
     // Communion
@@ -264,11 +270,28 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
         ordinaryItem("benedicamus")
     }
 
-    // Last Gospel
-    ordinaryItem("ultimum")
+    // Last Gospel — Palm Sunday in the pre-1955 rite substitutes Matt 21:1-9
+    // for the standard Prologue of St. John.
+    val lastGospelSlug = lastGospelOverride(ctx, rite) ?: "ultimum"
+    ordinaryItem(lastGospelSlug)
 
     // Leonine Prayers
     ordinaryItem("leonine")
+}
+
+/**
+ * Returns an alternate Last Gospel slug when the rubrics call for substitution.
+ * Currently: Palm Sunday in the pre-1955 rite uses Matt 21 (the blessing-of-palms
+ * gospel) as the Last Gospel of the principal Mass.
+ */
+private fun lastGospelOverride(ctx: LiturgicalContext, rite: MissalRite): String? {
+    val slug = ctx.properSlug ?: ""
+    if (rite == MissalRite.PRE_1955 && (slug == "palm-sunday" || slug == "quad6-0")) {
+        return if (ContentStore.missal.any { it.slug == "ultimum-palm-sunday" }) {
+            "ultimum-palm-sunday"
+        } else null
+    }
+    return null
 }
 
 private fun prefaceSlug(proper: MassProper, ctx: LiturgicalContext): String {
@@ -300,10 +323,34 @@ private fun showGloria(proper: MassProper, ctx: LiturgicalContext): Boolean {
     return proper.rank == 1
 }
 
+/**
+ * Credo is said on all Sundays and on major feasts (rank 1 in data). Also
+ * fires on feasts of Apostles, Evangelists, and Doctors regardless of legacy
+ * rank, since these classes always have Credo per the rubrics (Ritus
+ * servandus VI; cf. 1962 Rubricæ Generales nos. 475–477). Detected from the
+ * officium string (preserved as the proper's title) to remain conservative —
+ * only triggers on a clear textual signal.
+ */
 private fun showCredo(proper: MassProper, ctx: LiturgicalContext): Boolean {
     proper.credoOverride?.let { return it }
     if (ctx.isSunday) return true
-    return proper.rank == 1
+    if (proper.rank == 1) return true
+    if (isApostleEvangelistOrDoctor(proper)) return true
+    return false
+}
+
+/**
+ * Returns true when the officium (proper.title) names an Apostle,
+ * Evangelist, or Doctor of the Church. Case-insensitive Latin match.
+ */
+private fun isApostleEvangelistOrDoctor(proper: MassProper): Boolean {
+    val officium = proper.title.lowercase()
+    val needles = listOf(
+        "apostoli", "apostolorum",
+        "evangelistæ", "evangelistae", "evangelistarum",
+        "doctoris", "doctorum", "doctores",
+    )
+    return needles.any { officium.contains(it) }
 }
 
 private fun androidx.compose.foundation.lazy.LazyListScope.ordinaryItem(slug: String) {
@@ -518,7 +565,11 @@ fun ReadingSection(
 // Full Mass text export
 // ---------------------------------------------------------------------------
 
-private fun buildFullMassText(proper: MassProper?, rite: MissalRite): String {
+private fun buildFullMassText(
+    proper: MassProper?,
+    rite: MissalRite,
+    ctx: LiturgicalContext,
+): String {
     val lines = mutableListOf<String>()
 
     if (proper != null) {
@@ -559,7 +610,14 @@ private fun buildFullMassText(proper: MassProper?, rite: MissalRite): String {
         lines.add("")
     }
 
-    addOrdinary("preces")
+    // Psalm 42 omitted in Passiontide and Requiem Masses
+    if (proper != null) {
+        if (ctx.season != LiturgicalSeason.PASSION && proper.color != "black") {
+            addOrdinary("preces")
+        }
+    } else {
+        addOrdinary("preces")
+    }
     addOrdinary("confiteor")
 
     proper?.let { p ->
@@ -567,7 +625,12 @@ private fun buildFullMassText(proper: MassProper?, rite: MissalRite): String {
     }
 
     addOrdinary("kyrie")
-    addOrdinary("gloria")
+    // Gloria — conditional via showGloria when proper is present
+    if (proper != null) {
+        if (showGloria(proper, ctx)) addOrdinary("gloria")
+    } else {
+        addOrdinary("gloria")
+    }
 
     proper?.let { p ->
         addProper("Oratio · Collect", p.collect.lat, p.collect.eng)
@@ -579,7 +642,12 @@ private fun buildFullMassText(proper: MassProper?, rite: MissalRite): String {
         addReading("Evangelium · Gospel", p.gospel.ref, p.gospel.lat, p.gospel.eng)
     }
 
-    addOrdinary("credo")
+    // Credo — conditional when proper is present (Sundays, rank-1, Apostles/Doctors/Evangelists)
+    if (proper != null) {
+        if (showCredo(proper, ctx)) addOrdinary("credo")
+    } else {
+        addOrdinary("credo")
+    }
 
     proper?.let { p ->
         addProper("Offertorium · Offertory", p.offertory.lat, p.offertory.eng)
@@ -591,24 +659,54 @@ private fun buildFullMassText(proper: MassProper?, rite: MissalRite): String {
         addProper("Secreta · Secret", p.secret.lat, p.secret.eng)
     }
 
-    addOrdinary("preface")
+    // Preface — select proper preface for the season/feast
+    val resolvedPreface = if (proper != null) {
+        prefaceSlug(proper, ctx)
+    } else {
+        "preface"
+    }
+    if (ContentStore.missal.any { it.slug == resolvedPreface }) {
+        addOrdinary(resolvedPreface)
+    } else {
+        addOrdinary("preface")
+    }
     addOrdinary("sanctus")
     addOrdinary("canon")
     addOrdinary("pater")
-    addOrdinary("agnus")
+    // Agnus Dei — Requiem form for black-color Masses
+    if (proper?.color == "black") {
+        addOrdinary("agnus-requiem")
+    } else {
+        addOrdinary("agnus")
+    }
+    addOrdinary("domine")
 
     proper?.let { p ->
         addProper("Communio · Communion", p.communion.lat, p.communion.eng)
     }
 
-    addOrdinary("domine")
-
     proper?.let { p ->
         addProper("Postcommunio · Postcommunion", p.postcommunion.lat, p.postcommunion.eng)
     }
 
-    addOrdinary("placeat")
+    // Placeat + Blessing — omitted in Requiem Masses
+    if (proper?.color != "black") {
+        addOrdinary("placeat")
+    }
+
+    // Dismissal: Requiescant for black, Ite when Gloria was said, Benedicamus otherwise.
+    if (proper != null) {
+        when {
+            proper.color == "black" -> addOrdinary("requiescant")
+            showGloria(proper, ctx) -> addOrdinary("ite")
+            else -> addOrdinary("benedicamus")
+        }
+    } else {
+        addOrdinary("ite")
+    }
+
     addOrdinary("ultimum")
+    addOrdinary("leonine")
 
     return lines.joinToString("\n")
 }
