@@ -4402,14 +4402,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-2",
+      "lat": "Eúntes in mundum, * docéte omnes gentes, baptizántes eos in nómine Patris, et Fílii, et Spíritus Sancti, allelúja.",
       "eng": "Going therefore * teach ye all nations; baptising them in the name of the Father, and of the Son, and of the Holy Ghost, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc1-2",
+      "lat": "Mercenárius autem, * cujus non sunt oves própriæ, videt lupum veniéntem, et dimíttit oves, et fugit, et lupus rapit, et dispérgit oves, allelúja.",
       "eng": "But the hireling * and he that is not the shepherd, whose own the sheep are not, seeth the wolf coming, and leaveth the sheep, and flieth: and the wolf catcheth, and scattereth the sheep, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4799,7 +4799,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc3-0",
+      "lat": "Amen dico vobis, * quia plorábitis et flébitis vos: mundus autem gaudébit, vos vero contristabímini, sed tristítia vestra convertétur in gáudium, allelúja.",
       "eng": "Amen, amen I say to you * that you shall lament and weep, but the world shall rejoice; and you shall be made sorrowful, but your sorrow shall be turned into joy.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4936,14 +4936,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-1",
+      "lat": "Nonne cor nostrum * ardens erat in nobis de Jesu, dum loquerétur nobis in via? allelúja.",
       "eng": "Did not our heart burn within us, at the thought of Jesus, * while he talked with us by the way? Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc1-1",
+      "lat": "Ego veritátem dico * vobis: éxpedit vobis ut ego vadam: si enim non abíero, Paráclitus non véniet ad vos, allelúja.",
       "eng": "I tell you the truth: * it is expedient for you that I go away, for if I go not away, the Comforter will not come unto you, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4994,7 +4994,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-2",
+      "lat": "Pax vobis, * ego sum, allelúja: nolíte timére, allelúja.",
       "eng": "Peace be unto you, * it is I, alleluia; fear not, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },

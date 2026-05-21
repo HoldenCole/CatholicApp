@@ -1167,7 +1167,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv3-0",
+      "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
       "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1225,7 +1225,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv3-0",
+      "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
       "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1334,7 +1334,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv3-0",
+      "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
       "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1643,7 +1643,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv4-0",
+      "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
       "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1694,7 +1694,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv4-0",
+      "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
       "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1745,7 +1745,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv4-0",
+      "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
       "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1796,7 +1796,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv4-0",
+      "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
       "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1847,7 +1847,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv4-0",
+      "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
       "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -1863,7 +1863,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Adv4-0",
+      "lat": "Ave, María, * grátia plena: Dóminus tecum: benedícta tu in muliéribus, allelúja.",
       "eng": "Hail, Mary, full of grace, * the Lord is with thee; blessed art thou among women. Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
@@ -1898,7 +1898,7 @@
     "laudes.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Adv4-0",
+      "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
       "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
@@ -2660,7 +2660,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Nat26",
+      "lat": "Glória in excélsis Deo, * et in terra pax homínibus bonæ voluntátis, allelúja, allelúja.",
       "eng": "Glory be to God in the highest; * and on earth, peace to men of good will, alleluia, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
@@ -2806,7 +2806,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Nat26",
+      "lat": "Glória in excélsis Deo, * et in terra pax homínibus bonæ voluntátis, allelúja, allelúja.",
       "eng": "Glory be to God in the highest; * and on earth, peace to men of good will, alleluia, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
@@ -2952,7 +2952,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Nat26",
+      "lat": "Glória in excélsis Deo, * et in terra pax homínibus bonæ voluntátis, allelúja, allelúja.",
       "eng": "Glory be to God in the highest; * and on earth, peace to men of good will, alleluia, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
@@ -3251,7 +3251,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Nat26",
+      "lat": "Glória in excélsis Deo, * et in terra pax homínibus bonæ voluntátis, allelúja, allelúja.",
       "eng": "Glory be to God in the highest; * and on earth, peace to men of good will, alleluia, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
@@ -4344,14 +4344,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-1",
+      "lat": "Eúntes in mundum, * allelúja: docéte omnes gentes, allelúja.",
       "eng": "Go * into the whole world, alleluia: and teach all the nations, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc1-1",
+      "lat": "Pastor bonus * ánimam suam ponit pro óvibus suis, allelúja.",
       "eng": "The good shepherd * gives his life to his sheep, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4402,14 +4402,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-2",
+      "lat": "Eúntes in mundum, * docéte omnes gentes, baptizántes eos in nómine Patris, et Fílii, et Spíritus Sancti, allelúja.",
       "eng": "Going therefore * teach ye all nations; baptising them in the name of the Father, and of the Son, and of the Holy Ghost, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc1-2",
+      "lat": "Mercenárius autem, * cujus non sunt oves própriæ, videt lupum veniéntem, et dimíttit oves, et fugit, et lupus rapit, et dispérgit oves, allelúja.",
       "eng": "But the hireling * and he that is not the shepherd, whose own the sheep are not, seeth the wolf coming, and leaveth the sheep, and flieth: and the wolf catcheth, and scattereth the sheep, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4799,7 +4799,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc3-0",
+      "lat": "Amen dico vobis, * quia plorábitis et flébitis vos: mundus autem gaudébit, vos vero contristabímini, sed tristítia vestra convertétur in gáudium, allelúja.",
       "eng": "Amen, amen I say to you * that you shall lament and weep, but the world shall rejoice; and you shall be made sorrowful, but your sorrow shall be turned into joy.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4936,7 +4936,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-1",
+      "lat": "Nonne cor nostrum * ardens erat in nobis de Jesu, dum loquerétur nobis in via? allelúja.",
       "eng": "Did not our heart burn within us, at the thought of Jesus, * while he talked with us by the way? Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
@@ -14954,7 +14954,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Nat26",
+      "lat": "Glória in excélsis Deo, * et in terra pax homínibus bonæ voluntátis, allelúja, allelúja.",
       "eng": "Glory be to God in the highest; * and on earth, peace to men of good will, alleluia, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
