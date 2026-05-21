@@ -16,6 +16,12 @@ data class MissalProperEntry(
     val secreta: ProperText? = null,
     val communio: ProperText? = null,
     val postcommunio: ProperText? = null,
+    // Optional propers using DO's Latin field names. Currently absent from
+    // missal_tempora.json / missal_sanctoral.json but threaded so that any
+    // future data additions surface in the rendered MassProper.
+    val alleluia: ProperText? = null,
+    val tractus: ProperText? = null,
+    val sequentia: ProperText? = null,
 ) {
     @Serializable
     data class MissalRule(
@@ -59,6 +65,9 @@ data class MissalProperEntry(
             collect = collect,
             epistle = ProperReading(ref = ep.ref ?: "", lat = ep.lat, eng = ep.eng),
             gradual = graduale,
+            alleluia = alleluia,
+            tract = tractus,
+            sequence = sequentia,
             gospel = ProperReading(ref = gosp.ref ?: "", lat = gosp.lat, eng = gosp.eng),
             offertory = off,
             secret = sec,

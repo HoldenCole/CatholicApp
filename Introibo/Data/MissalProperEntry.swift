@@ -13,6 +13,12 @@ struct MissalProperEntry: Decodable {
     let secreta: ProperText?
     let communio: ProperText?
     let postcommunio: ProperText?
+    // Optional propers using DO's Latin field names. Currently absent from
+    // missal_tempora.json / missal_sanctoral.json but threaded so that any
+    // future data additions surface in the rendered MassProper.
+    let alleluia: ProperText?
+    let tractus: ProperText?
+    let sequentia: ProperText?
 
     struct MissalRule: Decodable {
         let gloria: Bool?
@@ -52,9 +58,9 @@ struct MissalProperEntry: Decodable {
             collect: collect,
             epistle: ProperReading(ref: epistle.ref ?? "", lat: epistle.lat, eng: epistle.eng),
             gradual: graduale,
-            alleluia: nil,
-            tract: nil,
-            sequence: nil,
+            alleluia: alleluia,
+            tract: tractus,
+            sequence: sequentia,
             gospel: ProperReading(ref: gospel.ref ?? "", lat: gospel.lat, eng: gospel.eng),
             offertory: off,
             secret: sec,
