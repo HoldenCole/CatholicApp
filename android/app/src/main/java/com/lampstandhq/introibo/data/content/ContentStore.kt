@@ -194,6 +194,22 @@ object ContentStore {
         // with "-0" to get the Sunday of that week (e.g. "pent03-0").
         precedingSundayKey(entry)?.let { sundayKey ->
             missalTempora[sundayKey]?.toMassProper(sundayKey, entry)?.let { return it }
+            // The Sunday itself may be a stub with a commune redirect (e.g.
+            // pent27-0 → epi5-0 for "resumed" Sundays after Epiphany).
+            // Use a synthetic ordo entry with a non-ferial name to avoid
+            // the ferial-suppression heuristic blocking the redirect.
+            val sundayOrdo = OrdoEntry(
+                temporal = sundayKey,
+                sanctoral = entry.sanctoral,
+                winner = "temporal",
+                winnerKey = sundayKey,
+                rank = entry.rank,
+                name = missalTempora[sundayKey]?.officium ?: entry.name,
+                color = entry.color,
+                season = entry.season,
+                commemoration = entry.commemoration,
+            )
+            resolveCommuneRedirect(sundayKey, sundayOrdo)?.let { return it }
         }
 
         return null

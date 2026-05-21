@@ -190,6 +190,18 @@ final class ContentStore {
         // with "-0" to get the Sunday of that week (e.g. "pent03-0").
         if let sundayKey = precedingSundayKey(for: entry) {
             if let mp = missalTempora[sundayKey]?.toMassProper(key: sundayKey, ordo: entry) { return mp }
+            // The Sunday itself may be a stub with a commune redirect (e.g.
+            // pent27-0 → epi5-0 for "resumed" Sundays after Epiphany).
+            // Use a synthetic ordo entry with a non-ferial name to avoid
+            // the ferial-suppression heuristic blocking the redirect.
+            let sundayOrdo = OrdoEntry(
+                temporal: sundayKey, sanctoral: entry.sanctoral,
+                winner: "temporal", winnerKey: sundayKey,
+                rank: entry.rank, name: missalTempora[sundayKey]?.officium ?? entry.name,
+                color: entry.color, season: entry.season,
+                commemoration: entry.commemoration
+            )
+            if let mp = resolveCommuneRedirect(forKey: sundayKey, ordo: sundayOrdo) { return mp }
         }
 
         return nil
