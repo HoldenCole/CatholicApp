@@ -41,7 +41,7 @@ struct ReferenceView: View {
                     icon: "book.closed",
                     title: "Propers",
                     latin: "Propria Missae",
-                    count: "\(store.propers.count) formularies",
+                    count: "\(store.allPropers.count) formularies",
                     destination: AnyView(PropersSearchView())
                 )
             }
@@ -226,9 +226,9 @@ struct PropersSearchView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
     private var filtered: [MassProper] {
-        if searchText.isEmpty { return store.propers }
+        if searchText.isEmpty { return store.allPropers }
         let q = searchText.lowercased()
-        return store.propers.filter {
+        return store.allPropers.filter {
             $0.title.lowercased().contains(q) ||
             $0.english.lowercased().contains(q) ||
             $0.epistle.ref.lowercased().contains(q) ||

@@ -118,6 +118,18 @@ object ContentStore {
     fun proper(slug: String): MassProper? =
         propers.firstOrNull { it.slug == slug }
 
+    val allPropers: List<MassProper> by lazy {
+        val combined = mutableMapOf<String, MassProper>()
+        for (p in propers) combined[p.slug] = p
+        for ((key, entry) in missalTempora) {
+            entry.toMassProper(key)?.let { if (key !in combined) combined[key] = it }
+        }
+        for ((key, entry) in missalSanctoral) {
+            entry.toMassProper(key)?.let { if (key !in combined) combined[key] = it }
+        }
+        combined.values.sortedBy { it.slug }
+    }
+
     fun ordoForDate(date: java.time.LocalDate, rite: String = "1962"): OrdoEntry? {
         val key = "%04d-%02d-%02d".format(date.year, date.monthValue, date.dayOfMonth)
         return when (rite) {

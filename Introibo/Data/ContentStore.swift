@@ -119,6 +119,24 @@ final class ContentStore {
         return propers.first { $0.slug == key }
     }
 
+    // MARK: - All searchable propers (combined old + new)
+
+    lazy var allPropers: [MassProper] = {
+        var combined: [String: MassProper] = [:]
+        for p in propers { combined[p.slug] = p }
+        for (key, entry) in missalTempora {
+            if let mp = entry.toMassProper(key: key), combined[key] == nil {
+                combined[key] = mp
+            }
+        }
+        for (key, entry) in missalSanctoral {
+            if let mp = entry.toMassProper(key: key), combined[key] == nil {
+                combined[key] = mp
+            }
+        }
+        return combined.values.sorted { $0.slug < $1.slug }
+    }()
+
     // MARK: - Canon variants
 
     func canonVariant(_ type: String, key: String) -> (lat: String, eng: String)? {

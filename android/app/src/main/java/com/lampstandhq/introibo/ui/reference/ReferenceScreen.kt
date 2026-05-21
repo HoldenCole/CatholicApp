@@ -337,10 +337,10 @@ private fun PropersListSheet(
 
     val propers = remember(search) {
         if (search.isBlank()) {
-            ContentStore.propers
+            ContentStore.allPropers
         } else {
             val q = search.lowercase()
-            ContentStore.propers.filter {
+            ContentStore.allPropers.filter {
                 it.title.lowercase().contains(q) ||
                 it.english.lowercase().contains(q) ||
                 it.epistle.ref.lowercase().contains(q) ||
@@ -784,7 +784,7 @@ private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
                 icon = Icons.Filled.Book,
                 title = "Propers",
                 latin = "Propria Missae",
-                count = "${ContentStore.propers.size} formularies",
+                count = "${ContentStore.allPropers.size} formularies",
                 onClick = { onSectionClick("Propers") },
                 modifier = Modifier.weight(1f),
             )
