@@ -3302,5 +3302,1066 @@
         "variationKey": "completorium.marian"
       }
     ]
+  },
+  {
+    "slug": "office-of-the-dead",
+    "name": "Officium Defunctorum",
+    "eng": "Office of the Dead",
+    "time": "All Souls' Day, anniversaries, funerals",
+    "hour": 0,
+    "minute": 0,
+    "glyph": "✝",
+    "order": 9,
+    "intro": "The Office for the Faithful Departed (Officium Defunctorum). Prayed on All Souls' Day, anniversaries of death, and at funerals. Comprises Matins (three nocturns with nine lessons from Job and the great responsories), Lauds, and Vespers. The Gloria Patri is replaced throughout by Réquiem ætérnam.",
+    "parts": [
+      {
+        "type": "heading",
+        "label": "Matutínum — Matins"
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster, Ave María, Credo (silently)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+        "rubric": "Said silently."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle & Response",
+        "lat": "Dómine, lábia mea apéries.",
+        "eng": "O Lord, Thou wilt open my lips.",
+        "latR": "Et os meum annuntiábit laudem tuam.",
+        "engR": "And my mouth shall declare Thy praise."
+      },
+      {
+        "type": "antiphon",
+        "label": "Invitatory Antiphon",
+        "lat": "Regem, cui ómnia vivunt, * Veníte adorémus.",
+        "eng": "Unto the Eternal King all live. * O come, let us worship Him."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalm 94; Venite",
+        "ref": "Invitatorium",
+        "verses": [
+          {
+            "lat": "Veníte, exsultémus Dómino, jubilémus Deo, salutári nostro: præoccupémus fáciem ejus in confessióne, et in psalmis jubilémus ei.",
+            "eng": "Come, let us praise the Lord with joy: let us joyfully sing to God our Saviour. Let us come before His presence with thanksgiving, and make a joyful noise to Him with psalms."
+          },
+          {
+            "lat": "Quóniam Deus magnus Dóminus, et Rex magnus super omnes deos: quóniam non repéllet Dóminus plebem suam: quia in manu ejus sunt omnes fines terræ, et altitúdines móntium ipse cónspicit.",
+            "eng": "For the Lord is a great God, and a great King above all gods: for the Lord will not cast off His people: for in His hand are all the ends of the earth, and the heights of the mountains are His."
+          },
+          {
+            "lat": "Quóniam ipsíus est mare, et ipse fecit illud, et áridam fundavérunt manus ejus: veníte, adorémus, et procidámus ante Deum: plorémus coram Dómino, qui fecit nos, quia ipse est Dóminus Deus noster; nos autem pópulus ejus, et oves páscuæ ejus.",
+            "eng": "For the sea is His, and He made it, and His hands formed the dry land: come, let us adore and fall down: and weep before the Lord that made us, for He is the Lord our God; and we are the people of His pasture, and the sheep of His hand."
+          },
+          {
+            "lat": "Hódie si vocem ejus audiéritis, nolíte obduráre corda vestra, sicut in exacerbatióne secúndum diem tentatiónis in desérto: ubi tentavérunt me patres vestri, probavérunt et vidérunt ópera mea.",
+            "eng": "Today if you shall hear His voice, harden not your hearts, as in the provocation, according to the day of temptation in the wilderness: where your fathers tempted Me, they proved Me and saw My works."
+          },
+          {
+            "lat": "Quadragínta annis próximus fui generatióni huic, et dixi: Semper hi errant corde; ipsi vero non cognovérunt vias meas: quibus jurávi in ira mea: Si introíbunt in réquiem meam.",
+            "eng": "Forty years long was I offended with that generation, and I said: These always err in heart; and they have not known My ways: so I swore in My wrath: They shall not enter into My rest."
+          },
+          {
+            "lat": "Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis.",
+            "eng": "Eternal rest grant unto them, O Lord: and let perpetual light shine upon them."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "label": "In I Noctúrno"
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 5",
+        "ref": "Ps 5",
+        "antiphonLat": "Dírige, * Dómine, Deus meus, in conspéctu tuo viam meam.",
+        "antiphonEng": "Make my way straight before thy face, * O Lord my God.",
+        "verses": [
+          {
+            "lat": "Psalmus 5 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 5 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 6",
+        "ref": "Ps 6",
+        "antiphonLat": "Convértere, * Dómine, et éripe ánimam meam: quóniam non est in morte, qui memor sit tui.",
+        "antiphonEng": "Return, O Lord, deliver my soul * O save me for thy mercy's sake.",
+        "verses": [
+          {
+            "lat": "Psalmus 6 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 6 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 7",
+        "ref": "Ps 7",
+        "antiphonLat": "Nequándo rápiat * ut leo ánimam meam, dum non est qui rédimat, neque qui salvum fáciat.",
+        "antiphonEng": "Lest he tear my soul like a lion, * while there is none to deliver, or to save.",
+        "verses": [
+          {
+            "lat": "Psalmus 7 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 7 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle after Nocturn I",
+        "lat": "℣. A porta ínferi.",
+        "eng": "℣. From the gates of hell.",
+        "latR": "℟. Erue, Dómine, ánimas eórum.",
+        "engR": "℟. Deliver their souls, O Lord."
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster (silently)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+        "rubric": "Said silently."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio I",
+        "ref": "Job 7:16-21",
+        "lat": "Parce mihi, Dómine; nihil enim sunt dies mei. Quid est homo, quia magníficas eum? aut quid appónis erga eum cor tuum? Vísitas eum dilúculo, et súbito probas illum. Usquequo non parcis mihi, nec dimíttis me, ut glútiam salívam meam? Peccávi, quid fáciam tibi, o custos hóminum? quare posuísti me contrárium tibi, et factus sum mihimetípsi gravis? Cur non tollis peccátum meum, et quare non aufers iniquitátem meam? Ecce nunc in púlvere dórmiam: et, si mane me quæsíeris, non subsístam.",
+        "eng": "Spare me, for my days are nothing. What is a man that thou shouldst magnify him? or why dost thou set thy heart upon him? Thou visitest him early in the morning, and thou provest him suddenly. How long wilt thou not spare me, nor suffer me to swallow down my spittle? I have sinned: what shall I do to thee, O keeper of men? why hast thou set me opposite to thee, and I am become burdensome to myself? Why dost thou not remove my sin, and why dost thou not take away my iniquity? Behold now I shall sleep in the dust: and if thou seek me in the morning, I shall not be."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium I",
+        "v1Lat": "℟. Credo quod Redémptor meus vivit, et in novíssimo die de terra surrectúrus sum,\n* Et in carne mea vidébo Deum Salvatórem meum.",
+        "v1Eng": "℟. I believe that my Redeemer liveth, and that I shall stand up from the earth at the latter day,\n* And in my flesh shall I see God my Saviour.",
+        "r1Lat": "℣. Quem visúrus sum ego ipse, et non álius; et óculi mei conspectúri sunt.",
+        "r1Eng": "℣. Whom I shall see for myself, and mine eyes shall behold, and not another.",
+        "r2Lat": "℟. Et in carne mea vidébo Deum Salvatórem meum.",
+        "r2Eng": "℟. And in my flesh shall I see God my Saviour."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio II",
+        "ref": "Job 10:1-7",
+        "lat": "Tædet ánimam meam vitæ meæ; dimíttam advérsum me elóquium meum: loquar in amaritúdine ánimæ meæ. Dicam Deo: Noli me condemnáre; índica mihi cur me ita júdices. Numquid bonum tibi vidétur, si calumniéris me, et ópprimas me opus mánuum tuárum, et consílium impiórum ádjuves? Numquid óculi cárnei tibi sunt? aut sicut videt homo, et tu vidébis? Numquid sicut dies hóminis dies tui, et anni tui sicut humána sunt témpora, ut quæras iniquitátem meam, et peccátum meum scrutéris, et scias quia nihil ímpium fécerim, cum sit nemo qui de manu tua possit erúere?",
+        "eng": "My soul is weary of my life, I will let go my speech against myself, I will speak in the bitterness of my soul. I will say to God: Do not condemn me: tell me why thou judgest me so. Doth it seem good to thee that thou shouldst calumniate me, and oppress me, the work of thy own hands, and help the counsel of the wicked? Hast thou eyes of flesh: or, shalt thou see as man seeth? Are thy days as the days of man, and are thy years as the times of men: That thou shouldst inquire after my iniquity, and search after my sin? And shouldst know that I have done no wicked thing, whereas there is no man that can deliver out of thy hand."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium II",
+        "v1Lat": "℟. Qui Lázarum resuscitásti a monuménto fœ́tidum,\n* Tu eis, Dómine, dona réquiem, et locum indulgéntiæ.",
+        "v1Eng": "℟. Thou Who didst call up Lazarus from the grave after that he had begun to stink,\n* Do Thou, O Lord, grant them rest and a place of forgiveness.",
+        "r1Lat": "℣. Qui ventúrus es judicáre vivos et mórtuos, et sǽculum per ignem.",
+        "r1Eng": "℣. Thou Who shalt come to judge the quick and dead, and the world by fire.",
+        "r2Lat": "℟. Tu eis, Dómine, dona réquiem, et locum indulgéntiæ.",
+        "r2Eng": "℟. Do Thou, O Lord, grant them rest and a place of forgiveness."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio III",
+        "ref": "Job 10:8-12",
+        "lat": "Manus tuæ fecérunt me, et plasmavérunt me totum in circúitu: et sic repénte præcípitas me? Meménto, quæso, quod sicut lutum féceris me, et in púlverem redúces me. Nonne sicut lac mulsísti me, et sicut cáseum me coagulásti? Pelle et cárnibus vestísti me; óssibus et nervis compegísti me. Vitam et misericórdiam tribuísti mihi, et visitátio tua custodívit spíritum meum.",
+        "eng": "Thy hands have made me, and fashioned me wholly round about, and dost thou thus cast me down headlong on a sudden? Remember, I beseech thee, that thou hast made me as the clay, and thou wilt bring me into dust again. Hast thou not milked me as milk, and curdled me like cheese? Thou hast clothed me with skin and flesh: thou hast put me together with bones and sinews: Thou hast granted me life and mercy, and thy visitation hath preserved my spirit."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium III",
+        "v1Lat": "℟. Dómine, quando véneris judicáre terram, ubi me abscóndam a vultu iræ tuæ?\n* Quia peccávi nimis in vita mea.",
+        "v1Eng": "℟. Lord, when Thou comest to judge the earth, where shall I hide myself from the face of thy wrath?\n* For I have sinned greatly in my life.",
+        "r1Lat": "℣. Commíssa mea pavésco, et ante te erubésco: dum véneris judicáre, noli me condemnáre.",
+        "r1Eng": "℣. I dread my sins, I blush before thee I see the great tribunal set! In fear and terror I implore thee, Forgive when soul and Judge are met!",
+        "r2Lat": "℟. Quia peccávi nimis in vita mea.\n℣. Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis.\n℟. Quia peccávi nimis in vita mea.",
+        "r2Eng": "℟. For I have sinned greatly in my life.\n℣. Eternal rest grant unto them, O Lord, and let perpetual light shine upon them.\n℟. For I have sinned greatly in my life."
+      },
+      {
+        "type": "heading",
+        "label": "In II Noctúrno"
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 22",
+        "ref": "Ps 22",
+        "antiphonLat": "In loco páscuæ * ibi me collocávit.",
+        "antiphonEng": "He maketh me to lie down * in green pastures.",
+        "verses": [
+          {
+            "lat": "Psalmus 22 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 22 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 24",
+        "ref": "Ps 24",
+        "antiphonLat": "Delícta * juventútis meæ, et ignorántias meas ne memíneris, Dómine.",
+        "antiphonEng": "Lord, remember not the sins of my youth, * nor my transgressions.",
+        "verses": [
+          {
+            "lat": "Psalmus 24 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 24 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 26",
+        "ref": "Ps 26",
+        "antiphonLat": "Credo vidére * bona Dómini in terra vivéntium.",
+        "antiphonEng": "I believe that I shall yet see the goodness of the Lord * in the land of the living.",
+        "verses": [
+          {
+            "lat": "Psalmus 26 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 26 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle after Nocturn II",
+        "lat": "℣. Cóllocet eos Dóminus cum princípibus.",
+        "eng": "℣. May the Lord set them with princes;",
+        "latR": "℟. Cum princípibus pópuli sui.",
+        "engR": "℟. Even with the princes of his people."
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster (silently)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+        "rubric": "Said silently."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio IV",
+        "ref": "Job 13:22-28",
+        "lat": "Respónde mihi. Quantas hábeo iniquitátes et peccáta? scélera mea et delícta osténde mihi. Cur fáciem tuam abscóndis, et arbitráris me inimícum tuum? Contra fólium, quod vento rápitur, osténdis poténtiam tuam, et stípulam siccam perséqueris: scribis enim contra me amaritúdines, et consúmere me vis peccátis adolescéntiæ meæ. Posuísti in nervo pedem meum, et observásti omnes sémitas meas, et vestígia pedum meórum considerásti: qui quasi putrédo consuméndus sum, et quasi vestiméntum quod coméditur a tínea.",
+        "eng": "Answer me. How many are my iniquities and sins? make me know my crimes and offences. Why hidest thou thy face, and thinkest me thy enemy? Against a leaf, that is carried away with the wind, thou showest thy power, and thou pursuest a dry straw. For thou writest bitter things against me, and wilt consume me for the sins of my youth. Thou hast put my feet in the stocks, and hast observed all my paths, and hast considered the steps of my feet: Who am to be consumed as rottenness, and as a garment that is moth-eaten."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium IV",
+        "v1Lat": "℟. Meménto mei, Deus, quia ventus est vita mea,\n* Nec aspíciat me visus hóminis.",
+        "v1Eng": "℟. Remember, O God, that my life is wind.\n* The eye of him that hath seen me shall see me no more.",
+        "r1Lat": "℣. De profúndis clamávi ad te, Dómine: Dómine, exáudi vocem meam.",
+        "r1Eng": "℣. Out of the depths have I cried unto thee, O Lord! Lord, hear my voice.",
+        "r2Lat": "℟. Nec aspíciat me visus hóminis.",
+        "r2Eng": "℟. The eye of him that hath seen me shall see me no more."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio V",
+        "ref": "Job 14:1-6",
+        "lat": "Homo natus de mulíere, brevi vivens témpore, replétur multis misériis. Qui quasi flos egréditur et contéritur, et fugit velut umbra, et nunquam in eódem statu pérmanet. Et dignum ducis super hujuscémodi aperíre óculos tuos, et addúcere eum tecum in judícium? Quis potest fácere mundum de immúndo concéptum sémine? Nonne tu qui solus es? Breves dies hóminis sunt: númerus ménsium ejus apud te est: constituísti términos ejus, qui præteríri non póterunt. Recéde páululum ab eo, ut quiéscat, donec optáta véniat, sicut mercenárii, dies ejus.",
+        "eng": "Man born of a woman, living for a short time, is filled with many miseries. Who cometh forth like a flower, and is destroyed, and fleeth as a shadow, and never continueth in the same state. And dost thou think it meet to open thy eyes upon such an one, and to bring him into judgment with thee? Who can make him clean that is conceived of unclean seed? is it not thou who only art? The days of man are short, and the number of his months is with thee: thou hast appointed his bounds which cannot be passed. Depart a little from him, that he may rest, until his wished for day come, as that of the hireling."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium V",
+        "v1Lat": "℟. Hei mihi, Dómine, quia peccávi nimis in vita mea: Quid fáciam, miser? ubi fúgiam, nisi ad te, Deus meus?\n* Miserére mei, dum véneris in novíssimo die.",
+        "v1Eng": "℟. Woe is me, O Lord! for I have sinned greatly in my life. I am smitten what shall I do? Whither shall I flee but unto thee, O my God?\n* Have mercy upon me, when Thou comest at the latter day.",
+        "r1Lat": "℣. Anima mea turbáta est valde, sed tu, Dómine, succúrre ei.",
+        "r1Eng": "℣. My soul is sore vexed, but Thou, O Lord, help me.",
+        "r2Lat": "℟. Miserére mei, dum véneris in novíssimo die.",
+        "r2Eng": "℟. Have mercy upon me, when Thou comest at the latter day."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio VI",
+        "ref": "Job 14:13-16",
+        "lat": "Quis mihi hoc tríbuat, ut in inférno prótegas me, et abscóndas me donec pertránseat furor tuus, et constítuas mihi tempus in quo recordéris mei? Putásne mórtuus homo rursum vivat? cunctis diébus quibus nunc mílito, expécto donec véniat immutátio mea. Vocábis me, et ego respondébo tibi: óperi mánuum tuárum porríges déxteram. Tu quidem gressus meos dinumerásti: sed parce peccátis meis.",
+        "eng": "Who will grant me this, that thou mayst protect me in hell, and hide me till thy wrath pass, and appoint me a time when thou wilt remember me? Shall man that is dead, thinkest thou, live again? all the days in which I am now in warfare, I expect until my change come. Thou shalt call me, and I will answer thee: to the work of thy hands thou shalt reach out thy right hand. Thou indeed hast numbered my steps, but spare my sins."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium VI",
+        "v1Lat": "℟. Ne recordéris peccáta mea, Dómine,\n* Dum véneris judicáre sǽculum per ignem.",
+        "v1Eng": "℟. Hold not my sins in remembrance, O Lord,\n* When thou comest to judge the world by fire.",
+        "r1Lat": "℣. Dírige, Dómine, Deus meus, in conspéctu tuo viam meam.",
+        "r1Eng": "℣. Make my way straight before thy face, O Lord my God.",
+        "r2Lat": "℟. Dum véneris judicáre sǽculum per ignem.\n℣. Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis.\n℟. Dum véneris judicáre sǽculum per ignem.",
+        "r2Eng": "℟. When thou comest to judge the world by fire.\n℣. Eternal rest grant unto them, O Lord, and let perpetual light shine upon them.\n℟. When thou comest to judge the world by fire."
+      },
+      {
+        "type": "heading",
+        "label": "In III Noctúrno"
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 39",
+        "ref": "Ps 39",
+        "antiphonLat": "Compláceat * tibi, Dómine, ut erípias me: Dómine, ad adjuvándum me réspice.",
+        "antiphonEng": "Be pleased, O Lord, to deliver me * O Lord, look upon me to help me.",
+        "verses": [
+          {
+            "lat": "Psalmus 39 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 39 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 40",
+        "ref": "Ps 40",
+        "antiphonLat": "Sana, Dómine, * ánimam meam, quia peccávi tibi.",
+        "antiphonEng": "Lord, heal my soul; * for I have sinned against thee.",
+        "verses": [
+          {
+            "lat": "Psalmus 40 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 40 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 41",
+        "ref": "Ps 41",
+        "antiphonLat": "Sitívit * ánima mea ad Deum vivum: quando véniam, et apparébo ante fáciem Dómini?",
+        "antiphonEng": "My soul thirsteth for the living God; * when shall I come and appear before God?",
+        "verses": [
+          {
+            "lat": "Psalmus 41 (cum Réquiem ætérnam loco Glória Patri)",
+            "eng": "Psalm 41 (with Eternal rest in place of Glory be)"
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle after Nocturn III",
+        "lat": "℣. Ne tradas béstiis ánimas confiténtes tibi.",
+        "eng": "℣. O deliver not unto beasts the souls of them that praise thee!",
+        "latR": "℟. Et ánimas páuperum tuórum ne obliviscáris in finem.",
+        "engR": "℟. And forget not the souls of thy poor for ever."
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster (silently)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+        "rubric": "Said silently."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio VII",
+        "ref": "Job 17:1-3; 17:11-15",
+        "lat": "Spíritus meus attenuábitur; dies mei breviabúntur: et solum mihi súperest sepúlchrum. Non peccávi, et in amaritudínibus morátur óculus meus. Líbera me, Dómine, et pone me juxta te, et cujúsvis manus pugnet contra me. Dies mei transiérunt; cogitatiónes meæ dissipátæ sunt, torquéntes cor meum. Noctem vertérunt in diem, et rursum post ténebras spero lucem. Si sustinúero, inférnus domus mea est, et in ténebris stravi léctulum meum. Putrédini dixi: Pater meus es; Mater mea, et soror mea, vérmibus. Ubi est ergo nunc præstolátio mea? et patiéntiam meam quis consíderat?",
+        "eng": "My spirit shall be wasted, my days shall be shortened, and only the grave remaineth for me. I have not sinned, and my eye abideth in bitterness. Deliver me O Lord, and set me beside thee, and let any man's hand fight against me. My days have passed away, my thoughts are dissipated, tormenting my heart. They have turned night into day, and after darkness I hope for light again. If I wait hell is my house, and I have made my bed in darkness. If I have said to rottenness: thou art my father; to worms, my mother and my sister. Where is now then my expectation, and who considereth my patience?"
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium VII",
+        "v1Lat": "℟. Peccántem me cotídie, et non me pœniténtem, timor mortis contúrbat me:\n* Quia in inférno nulla est redémptio, miserére mei, Deus, et salva me.",
+        "v1Eng": "℟. Forasmuch as I sin daily, and repent not, the fear of death troubleth me.\n* O God, have mercy upon me, and save me, for in hell there is no redemption.",
+        "r1Lat": "℣. Deus, in nómine tuo salvum me fac, et in virtúte tua líbera me.",
+        "r1Eng": "℣. Save me, O God, by thy name, and judge me in thy strength.",
+        "r2Lat": "℟. Quia in inférno nulla est redémptio, miserére mei, Deus, et salva me.",
+        "r2Eng": "℟. O God, have mercy upon me, and save me, for in hell there is no redemption."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio VIII",
+        "ref": "Job 19:20-27",
+        "lat": "Pelli meæ, consúmptis cárnibus, adhǽsit os meum, et derelícta sunt tantúmmodo lábia circa dentes meos. Miserémini mei, miserémini mei saltem vos, amíci mei, quia manus Dómini tétigit me. Quare persequímini me sicut Deus, et cárnibus meis saturámini? Quis mihi tríbuat ut scribántur sermónes mei? quis mihi det ut exaréntur in libro stylo férreo et plumbi lámina, vel celte sculpántur in sílice? Scio enim quod redémptor meus vivit, et in novíssimo die de terra surrectúrus sum: et rursum circúmdabor pelle mea, et in carne mea vidébo Deum meum: quem visúrus sum ego ipse, et óculi mei conspectúri sunt, et non álius: repósita est hæc spes mea in sinu meo.",
+        "eng": "The flesh being consumed. My bone hath cleaved to my skin, and nothing but lips are left about my teeth. Have pity on me, have pity on me, at least you my friends, because the hand of the Lord hath touched me. Why do you persecute me as God, and glut yourselves with my flesh? Who will grant me that my words may be written? Who will grant me that they may be marked down in a book? With an iron pen and in a plate of lead, or else be graven with an instrument in flint stone. For I know that my Redeemer liveth, and in the last day I shall rise out of the earth. And I shall be clothed again with my skin, and in my flesh I will see my God. Whom I myself shall see, and my eyes shall behold, and not another: this my hope is laid up in my bosom."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium VIII",
+        "v1Lat": "℟. Dómine, secúndum actum meum noli me judicáre: nihil dignum in conspéctu tuo egi; ídeo déprecor majestátem tuam,\n* Ut tu, Deus, déleas iniquitátem meam.",
+        "v1Eng": "℟. O Lord, judge me not according to my works; for I have done nothing that can be counted in respect of thee. I beseech thy majesty therefore, that thou wouldest\n* Blot out my transgressions, O God.",
+        "r1Lat": "℣. Amplius lava me, Dómine, ab injustítia mea, et a delícto meo munda me.",
+        "r1Eng": "℣. Lord, wash me thoroughly from mine iniquity and cleanse me from my sin.",
+        "r2Lat": "℟. Ut tu, Deus, déleas iniquitátem meam.",
+        "r2Eng": "℟. Blot out my transgressions, O God."
+      },
+      {
+        "type": "reading",
+        "label": "Léctio IX",
+        "ref": "Job 10:18-22",
+        "lat": "Quare de vulva eduxísti me? qui útinam consúmptus essem, ne óculus me vidéret. Fuíssem quasi non essem, de útero translátus ad túmulum. Numquid non páucitas diérum meórum finiétur brevi? dimítte ergo me, ut plangam páululum dolórem meum, ántequam vadam, et non revértar, ad terram tenebrósam, et opértam mortis calígine: terram misériæ et tenebrárum, ubi umbra mortis et nullus ordo, sed sempitérnus horror inhábitat.",
+        "eng": "Why didst thou bring me forth out of the womb: O that I had been consumed that eye might not see me! I should have been as if I had not been, carried from the womb to the grave. Shall not the fewness of my days be ended shortly? suffer me, therefore, that I may lament my sorrow a little: Before I go, and return no more, to a land that is dark and covered with the mist of death: A land of misery and darkness, where the shadow of death, and no order, but everlasting horror dwelleth."
+      },
+      {
+        "type": "vr",
+        "label": "Tu autem",
+        "lat": "Tu autem, Dómine, miserére nobis.",
+        "eng": "But Thou, O Lord, have mercy upon us.",
+        "latR": "Deo grátias.",
+        "engR": "Thanks be to God."
+      },
+      {
+        "type": "responsory",
+        "label": "Responsórium IX",
+        "v1Lat": "℟. Líbera me, Dómine, de morte ætérna in die illa treménda,\n* Quando cæli movéndi sunt et terra,\n* Dum véneris judicáre sǽculum per ignem.",
+        "v1Eng": "℟. Deliver me, O Lord, from eternal death in that awful day;\n* when the heavens and the earth shall be shaken,\n* and Thou shalt come to judge the world by fire.",
+        "r1Lat": "℣. Tremens factus sum ego et tímeo, dum discússio vénerit atque ventúra ira.\n℟. Quando cæli movéndi sunt et terra.\n℣. Dies illa, dies iræ, calamitátis et misériæ, dies magna et amára valde.\n℟. Dum véneris judicáre sǽculum per ignem.\n℣. Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis.",
+        "r1Eng": "℣. Quaking and dread take hold upon me, when I look for the coming of the trial and the wrath to come.\n℟. When the heavens and the earth shall be shaken.\n℣. That day is a day of wrath, of wasteness and desolation, a great day and exceeding bitter.\n℟. When Thou shalt come to judge the world by fire.\n℣. Eternal rest grant unto them, O Lord, and let perpetual light shine upon them.",
+        "r2Lat": "℟. Líbera me, Dómine, de morte ætérna in die illa treménda, * Quando cæli movéndi sunt et terra, * Dum véneris judicáre sǽculum per ignem.",
+        "r2Eng": "℟. Deliver me, O Lord, from eternal death in that awful day, when the heavens and the earth shall be shaken, and Thou shalt come to judge the world by fire."
+      },
+      {
+        "type": "vr",
+        "label": "Conclusio",
+        "lat": "Réquiem ætérnam dona eis, Dómine.",
+        "eng": "O Lord, grant them eternal rest.",
+        "latR": "Et lux perpétua lúceat eis.",
+        "engR": "And let the everlasting light shine upon them."
+      },
+      {
+        "type": "vr",
+        "label": "Conclusio (continued)",
+        "lat": "Requiéscant in pace.",
+        "eng": "May they rest in peace.",
+        "latR": "Amen.",
+        "engR": "Amen."
+      },
+      {
+        "type": "heading",
+        "label": "Laudes — Lauds"
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster, Ave María (silently)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.\n\nAve María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.\n\nHail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+        "rubric": "Said silently."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 50; Miserére mei",
+        "ref": "50",
+        "antiphonLat": "Exsultábunt Dómino * ossa humiliáta.",
+        "antiphonEng": "The bones which thou hast broken * may rejoice.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 64; Te decet hymnus",
+        "ref": "64",
+        "antiphonLat": "Exáudi, Dómine, * oratiónem meam: ad te omnis caro véniet.",
+        "antiphonEng": "Lord, hear * my prayer; unto thee shall all flesh come.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmi 62 & 66; Deus, Deus meus / Deus misereátur",
+        "ref": "62 & 66",
+        "antiphonLat": "Me suscépit * déxtera tua, Dómine.",
+        "antiphonEng": "Thy right hand * upholdeth me.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Canticum Ezechíæ (Isaías 38:10-20); Ego dixi",
+        "ref": "Canticum Ezechíæ",
+        "antiphonLat": "A porta ínferi * érue, Dómine, ánimam meam.",
+        "antiphonEng": "From the gates of hell * deliver my soul, O Lord.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmi 148, 149, 150; Laudate Dóminum",
+        "ref": "148-149-150",
+        "antiphonLat": "Omnis spíritus * laudet Dóminum.",
+        "antiphonEng": "Let everything that hath breath * praise the Lord.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Audívi vocem de cælo dicéntem mihi.",
+        "eng": "I heard a voice from heaven, saying unto me:",
+        "latR": "Beáti mórtui qui in Dómino moriúntur.",
+        "engR": "Blessed are the dead which die in the Lord."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon ad Benedíctus",
+        "lat": "Ego sum * resurréctio et vita: qui credit in me, étiam si mórtuus fúerit, vivet; et omnis qui vivit et credit in me, non moriétur in ætérnum.",
+        "eng": "I am the resurrection and the life: * he that believeth in me, though he were dead, yet shall he live; and whosoever liveth and believeth in me shall never die."
+      },
+      {
+        "type": "canticle",
+        "label": "Canticum Zachariæ; Benedíctus",
+        "ref": "Lk 1:68-79",
+        "verses": [
+          {
+            "lat": "Benedíctus Dóminus, Deus Israël, * quia visitávit, et fecit redemptiónem plebis suæ:",
+            "eng": "Blessed be the Lord God of Israel; * because He hath visited and wrought the redemption of His people:"
+          },
+          {
+            "lat": "Et eréxit cornu salútis nobis: * in domo David, púeri sui.",
+            "eng": "And hath raised up an horn of salvation to us, * in the house of David His servant:"
+          },
+          {
+            "lat": "Sicut locútus est per os sanctórum, * qui a sǽculo sunt, prophetárum ejus:",
+            "eng": "As He spoke by the mouth of His holy Prophets, * who are from the beginning:"
+          },
+          {
+            "lat": "Salútem ex inimícis nostris, * et de manu ómnium, qui odérunt nos.",
+            "eng": "Salvation from our enemies, * and from the hand of all that hate us."
+          },
+          {
+            "lat": "Ad faciéndam misericórdiam cum pátribus nostris: * et memorári testaménti sui sancti.",
+            "eng": "To perform mercy to our fathers, * and to remember His holy testament."
+          },
+          {
+            "lat": "Jusjurándum, quod jurávit ad Abraham patrem nostrum, * datúrum se nobis:",
+            "eng": "The oath, which He swore to Abraham our father, * that He would grant to us."
+          },
+          {
+            "lat": "Ut sine timóre, de manu inimicórum nostrórum liberáti, * serviámus illi.",
+            "eng": "That being delivered from the hand of our enemies, * we may serve Him without fear."
+          },
+          {
+            "lat": "In sanctitáte et justítia coram ipso, * ómnibus diébus nostris.",
+            "eng": "In holiness and justice before Him, * all our days."
+          },
+          {
+            "lat": "Et tu, puer, Prophéta Altíssimi vocáberis: * præíbis enim ante fáciem Dómini, paráre vias ejus:",
+            "eng": "And thou, child, shalt be called the prophet of the Highest: * for thou shalt go before the face of the Lord to prepare His ways."
+          },
+          {
+            "lat": "Ad dandam sciéntiam salútis plebi ejus, * in remissiónem peccatórum eórum:",
+            "eng": "To give knowledge of salvation to His people, * unto the remission of their sins:"
+          },
+          {
+            "lat": "Per víscera misericórdiæ Dei nostri, * in quibus visitávit nos, óriens ex alto:",
+            "eng": "Through the bowels of the mercy of our God, * in which the Orient from on high hath visited us:"
+          },
+          {
+            "lat": "Illumináre his, qui in ténebris et in umbra mortis sedent: * ad dirigéndos pedes nostros in viam pacis.",
+            "eng": "To enlighten them that sit in darkness, and in the shadow of death: * to direct our feet into the way of peace."
+          },
+          {
+            "lat": "Réquiem ætérnam * dona eis, Dómine.",
+            "eng": "Eternal rest * grant unto them, O Lord."
+          },
+          {
+            "lat": "Et lux perpétua * lúceat eis.",
+            "eng": "And let perpetual light * shine upon them."
+          }
+        ]
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon ad Benedíctus (repeated)",
+        "lat": "Ego sum * resurréctio et vita: qui credit in me, étiam si mórtuus fúerit, vivet; et omnis qui vivit et credit in me, non moriétur in ætérnum.",
+        "eng": "I am the resurrection and the life: * he that believeth in me, though he were dead, yet shall he live; and whosoever liveth and believeth in me shall never die."
+      },
+      {
+        "type": "vr",
+        "label": "Kýrie",
+        "lat": "Kýrie, eléison. Christe, eléison. Kýrie, eléison.",
+        "eng": "Lord, have mercy. Christ, have mercy. Lord, have mercy."
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster (silently to ‘Et ne nos’)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+        "rubric": "Said silently to ‘Et ne nos inducas’."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Et ne nos indúcas in tentatiónem.",
+        "eng": "And lead us not into temptation.",
+        "latR": "Sed líbera nos a malo.",
+        "engR": "But deliver us from evil."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 129; De profúndis",
+        "ref": "Ps 129",
+        "verses": [
+          {
+            "lat": "De profúndis clamávi ad te, Dómine: * Dómine, exáudi vocem meam:",
+            "eng": "Out of the depths I have cried to Thee, O Lord: * Lord, hear my voice."
+          },
+          {
+            "lat": "Fiant aures tuæ intendéntes, * in vocem deprecatiónis meæ.",
+            "eng": "Let Thine ears be attentive * to the voice of my supplication."
+          },
+          {
+            "lat": "Si iniquitátes observáveris, Dómine: * Dómine, quis sustinébit?",
+            "eng": "If Thou, O Lord, wilt mark iniquities: * Lord, who shall stand it?"
+          },
+          {
+            "lat": "Quia apud te propitiátio est: * et propter legem tuam sustínui te, Dómine.",
+            "eng": "For with Thee there is merciful forgiveness: * and by reason of Thy law, I have waited for Thee, O Lord."
+          },
+          {
+            "lat": "Sustínuit ánima mea in verbo ejus: * sperávit ánima mea in Dómino.",
+            "eng": "My soul hath relied on His word: * my soul hath hoped in the Lord."
+          },
+          {
+            "lat": "A custódia matutína usque ad noctem: * speret Israël in Dómino.",
+            "eng": "From the morning watch even until night, * let Israel hope in the Lord."
+          },
+          {
+            "lat": "Quia apud Dóminum misericórdia: * et copiósa apud eum redémptio.",
+            "eng": "Because with the Lord there is mercy: * and with Him plentiful redemption."
+          },
+          {
+            "lat": "Et ipse rédimet Israël, * ex ómnibus iniquitátibus ejus.",
+            "eng": "And He shall redeem Israel * from all his iniquities."
+          },
+          {
+            "lat": "Réquiem ætérnam * dona eis, Dómine.",
+            "eng": "Eternal rest * grant unto them, O Lord."
+          },
+          {
+            "lat": "Et lux perpétua * lúceat eis.",
+            "eng": "And let perpetual light * shine upon them."
+          }
+        ]
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "A porta ínferi.",
+        "eng": "From the gates of hell.",
+        "latR": "Erue, Dómine, ánimas eórum.",
+        "engR": "Deliver their souls, O Lord."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Requiéscant in pace.",
+        "eng": "May they rest in peace.",
+        "latR": "Amen.",
+        "engR": "Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Dómine, exáudi oratiónem meam.",
+        "eng": "O Lord, hear my prayer.",
+        "latR": "Et clamor meus ad te véniat.",
+        "engR": "And let my cry come unto Thee."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Dóminus vobíscum.",
+        "eng": "The Lord be with you.",
+        "latR": "Et cum spíritu tuo.",
+        "engR": "And with thy spirit."
+      },
+      {
+        "type": "collect",
+        "label": "Collect; Fidélium, Deus",
+        "lat": "Orémus. Fidélium, Deus, ómnium Cónditor et Redémptor, animábus famulórum famularúmque tuárum remissiónem cunctórum tríbue peccatórum: ut indulgéntiam, quam semper optavérunt, piis supplicatiónibus consequántur: Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum. Amen.",
+        "eng": "Let us pray. O God, who art thyself at once the Maker and the Redeemer of all thy faithful ones, grant unto the souls of thy servants and handmaids remission of all their sins, making of our entreaties unto our great Father a mean whereby they may have that forgiveness which they have ever hoped for. Who livest and reignest with God the Father in the unity of the Holy Ghost, God, world without end. Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Réquiem ætérnam dona eis, Dómine.",
+        "eng": "O Lord, grant them eternal rest.",
+        "latR": "Et lux perpétua lúceat eis.",
+        "engR": "And let the everlasting light shine upon them."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Requiéscant in pace.",
+        "eng": "May they rest in peace.",
+        "latR": "Amen.",
+        "engR": "Amen."
+      },
+      {
+        "type": "heading",
+        "label": "Vésperæ — Vespers"
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster, Ave María (silently)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.\n\nAve María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.\n\nHail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+        "rubric": "Said silently."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 114; Diléxi",
+        "ref": "Ps 114",
+        "antiphonLat": "Placébo Dómino * in regióne vivórum.",
+        "antiphonEng": "I will walk before the Lord * in the land of the living.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 119; Ad Dóminum",
+        "ref": "Ps 119",
+        "antiphonLat": "Heu mihi Dómine, * quia incolátus meus prolongátus est.",
+        "antiphonEng": "Woe is me! O Lord, * that my sojourn is long.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 120; Levávi óculos",
+        "ref": "Ps 120",
+        "antiphonLat": "Dóminus custódit te ab omni malo: * custódiat ánimam tuam Dóminus.",
+        "antiphonEng": "The Lord shall keep thee from all evil, * the Lord shall keep thy soul.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 129; De profúndis",
+        "ref": "Ps 129",
+        "antiphonLat": "Si iniquitátes * observáveris, Dómine: Dómine, quis sustinébit?",
+        "antiphonEng": "If Thou, Lord, shouldest mark iniquities, * O Lord, who shall stand.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 137; Confitébor tibi",
+        "ref": "Ps 137",
+        "antiphonLat": "Opera * mánuum tuárum, Dómine, ne despícias.",
+        "antiphonEng": "O Lord, forsake not * the works of thine own hands.",
+        "verses": [
+          {
+            "lat": "Psalmus (cum Réquiem ætérnam loco Glória Patri).",
+            "eng": "Psalm (with Eternal rest in place of Glory be)."
+          }
+        ],
+        "rubric": "Recited in full according to the Vulgate psalter; concluded with Réquiem ætérnam dona eis, Dómine: et lux perpétua lúceat eis, in place of Glória Patri."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Audívi vocem de cælo dicéntem mihi.",
+        "eng": "I heard a voice from heaven, saying unto me:",
+        "latR": "Beáti mórtui qui in Dómino moriúntur.",
+        "engR": "Blessed are the dead which die in the Lord."
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon ad Magníficat",
+        "lat": "Omne * quod dat mihi Pater, ad me véniet; et eum qui venit ad me, non eíciam foras.",
+        "eng": "All that the Father giveth Me shall come to Me; * and him that cometh to Me I will in no wise cast out."
+      },
+      {
+        "type": "canticle",
+        "label": "Canticum Maríæ; Magníficat",
+        "ref": "Lk 1:46-55",
+        "verses": [
+          {
+            "lat": "Magníficat * ánima mea Dóminum.",
+            "eng": "My soul * doth magnify the Lord."
+          },
+          {
+            "lat": "Et exsultávit spíritus meus * in Deo, salutári meo.",
+            "eng": "And my spirit hath rejoiced * in God my Saviour."
+          },
+          {
+            "lat": "Quia respéxit humilitátem ancíllæ suæ: * ecce enim ex hoc beátam me dicent omnes generatiónes.",
+            "eng": "Because He hath regarded the humility of His handmaid: * for behold from henceforth all generations shall call me blessed."
+          },
+          {
+            "lat": "Quia fecit mihi magna qui potens est: * et sanctum nomen ejus.",
+            "eng": "Because He that is mighty hath done great things to me: * and holy is His name."
+          },
+          {
+            "lat": "Et misericórdia ejus a progénie in progénies * timéntibus eum.",
+            "eng": "And His mercy is from generation unto generations, * to them that fear Him."
+          },
+          {
+            "lat": "Fecit poténtiam in bráchio suo: * dispérsit supérbos mente cordis sui.",
+            "eng": "He hath showed might in His arm: * He hath scattered the proud in the conceit of their heart."
+          },
+          {
+            "lat": "Depósuit poténtes de sede, * et exaltávit húmiles.",
+            "eng": "He hath put down the mighty from their seat, * and hath exalted the humble."
+          },
+          {
+            "lat": "Esuriéntes implévit bonis: * et dívites dimísit inánes.",
+            "eng": "He hath filled the hungry with good things: * and the rich He hath sent empty away."
+          },
+          {
+            "lat": "Suscépit Israël púerum suum, * recordátus misericórdiæ suæ.",
+            "eng": "He hath received Israel His servant, * being mindful of His mercy."
+          },
+          {
+            "lat": "Sicut locútus est ad patres nostros, * Abraham, et sémini ejus in sǽcula.",
+            "eng": "As He spoke to our fathers, * to Abraham and to his seed for ever."
+          },
+          {
+            "lat": "Réquiem ætérnam * dona eis, Dómine.",
+            "eng": "Eternal rest * grant unto them, O Lord."
+          },
+          {
+            "lat": "Et lux perpétua * lúceat eis.",
+            "eng": "And let perpetual light * shine upon them."
+          }
+        ]
+      },
+      {
+        "type": "antiphon",
+        "label": "Antiphon ad Magníficat (repeated)",
+        "lat": "Omne * quod dat mihi Pater, ad me véniet; et eum qui venit ad me, non eíciam foras.",
+        "eng": "All that the Father giveth Me shall come to Me; * and him that cometh to Me I will in no wise cast out."
+      },
+      {
+        "type": "vr",
+        "label": "Kýrie",
+        "lat": "Kýrie, eléison. Christe, eléison. Kýrie, eléison.",
+        "eng": "Lord, have mercy. Christ, have mercy. Lord, have mercy."
+      },
+      {
+        "type": "pater",
+        "label": "Pater Noster (silently to ‘Et ne nos’)",
+        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
+        "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+        "rubric": "Said silently to ‘Et ne nos inducas’."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Et ne nos indúcas in tentatiónem.",
+        "eng": "And lead us not into temptation.",
+        "latR": "Sed líbera nos a malo.",
+        "engR": "But deliver us from evil."
+      },
+      {
+        "type": "psalm",
+        "label": "Psalmus 145; Lauda, ánima mea, Dóminum",
+        "ref": "Ps 145",
+        "verses": [
+          {
+            "lat": "Lauda, ánima mea, Dóminum, laudábo Dóminum in vita mea: * psallam Deo meo quámdiu fúero.",
+            "eng": "Praise the Lord, O my soul, in my life I will praise the Lord: * I will sing to my God as long as I shall be."
+          },
+          {
+            "lat": "Nolíte confídere in princípibus: * in fíliis hóminum, in quibus non est salus.",
+            "eng": "Put not your trust in princes: * in the children of men, in whom there is no salvation."
+          },
+          {
+            "lat": "Exíbit spíritus ejus, et revertétur in terram suam: * in illa die períbunt omnes cogitatiónes eórum.",
+            "eng": "His spirit shall go forth, and he shall return into his earth: * in that day all their thoughts shall perish."
+          },
+          {
+            "lat": "Beátus, cujus Deus Jacob adjútor ejus, spes ejus in Dómino, Deo ipsíus: * qui fecit cælum et terram, mare, et ómnia, quæ in eis sunt.",
+            "eng": "Blessed is he who hath the God of Jacob for his helper, whose hope is in the Lord his God: * who made heaven and earth, the sea, and all things that are in them."
+          },
+          {
+            "lat": "Qui custódit veritátem in sǽculum, facit judícium injúriam patiéntibus: * dat escam esuriéntibus.",
+            "eng": "Who keepeth truth for ever: who executeth judgment for them that suffer wrong: * who giveth food to the hungry."
+          },
+          {
+            "lat": "Dóminus solvit compedítos: * Dóminus illúminat cæcos.",
+            "eng": "The Lord looseth them that are fettered: * the Lord enlighteneth the blind."
+          },
+          {
+            "lat": "Dóminus érigit elísos, * Dóminus díligit justos.",
+            "eng": "The Lord lifteth up them that are cast down, * the Lord loveth the just."
+          },
+          {
+            "lat": "Dóminus custódit ádvenas, pupíllum et víduam suscípiet: * et vias peccatórum dispérdet.",
+            "eng": "The Lord keepeth the strangers, He will support the fatherless and the widow: * and the ways of sinners He will destroy."
+          },
+          {
+            "lat": "Regnábit Dóminus in sǽcula, Deus tuus, Sion, * in generatiónem et generatiónem.",
+            "eng": "The Lord shall reign for ever: thy God, O Sion, * unto generation and generation."
+          },
+          {
+            "lat": "Réquiem ætérnam * dona eis, Dómine.",
+            "eng": "Eternal rest * grant unto them, O Lord."
+          },
+          {
+            "lat": "Et lux perpétua * lúceat eis.",
+            "eng": "And let perpetual light * shine upon them."
+          }
+        ]
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "A porta ínferi.",
+        "eng": "From the gates of hell.",
+        "latR": "Erue, Dómine, ánimas eórum.",
+        "engR": "Deliver their souls, O Lord."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Requiéscant in pace.",
+        "eng": "May they rest in peace.",
+        "latR": "Amen.",
+        "engR": "Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Dómine, exáudi oratiónem meam.",
+        "eng": "O Lord, hear my prayer.",
+        "latR": "Et clamor meus ad te véniat.",
+        "engR": "And let my cry come unto Thee."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Dóminus vobíscum.",
+        "eng": "The Lord be with you.",
+        "latR": "Et cum spíritu tuo.",
+        "engR": "And with thy spirit."
+      },
+      {
+        "type": "collect",
+        "label": "Collect; Fidélium, Deus",
+        "lat": "Orémus. Fidélium, Deus, ómnium Cónditor et Redémptor, animábus famulórum famularúmque tuárum remissiónem cunctórum tríbue peccatórum: ut indulgéntiam, quam semper optavérunt, piis supplicatiónibus consequántur: Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum. Amen.",
+        "eng": "Let us pray. O God, who art thyself at once the Maker and the Redeemer of all thy faithful ones, grant unto the souls of thy servants and handmaids remission of all their sins, making of our entreaties unto our great Father a mean whereby they may have that forgiveness which they have ever hoped for. Who livest and reignest with God the Father in the unity of the Holy Ghost, God, world without end. Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Réquiem ætérnam dona eis, Dómine.",
+        "eng": "O Lord, grant them eternal rest.",
+        "latR": "Et lux perpétua lúceat eis.",
+        "engR": "And let the everlasting light shine upon them."
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Requiéscant in pace.",
+        "eng": "May they rest in peace.",
+        "latR": "Amen.",
+        "engR": "Amen."
+      }
+    ]
   }
 ]
