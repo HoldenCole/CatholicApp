@@ -118,7 +118,7 @@ enum FeatureTutorial: String, CaseIterable, Identifiable {
 
         case .prayers:
             return [
-                TutorialStep(id: "prayers.1", text: "The prayer library contains 41 traditional prayers in Latin and English, including litanies.", spotlightElementID: nil, pillPosition: .top),
+                TutorialStep(id: "prayers.1", text: "The prayer library contains 42 traditional prayers in Latin and English, including litanies.", spotlightElementID: nil, pillPosition: .top),
                 TutorialStep(id: "prayers.2", text: "Build a personal prayer rule by choosing prayers for morning, midday, and evening.", spotlightElementID: nil, pillPosition: .top),
                 TutorialStep(id: "prayers.3", text: "Your prayer rule appears on the Today screen with checkmarks as you complete each prayer.", spotlightElementID: nil, pillPosition: .center),
                 TutorialStep(id: "prayers.4", text: "Browse prayers by occasion: Before Mass, Marian, Eucharistic, For the Departed, and more.", spotlightElementID: nil, pillPosition: .center),
