@@ -61,6 +61,7 @@ final class ContentStore {
             temporalPropers: temporal,
             marianAntiphons: marianAntiphons
         )
+        buildAllPropers()
     }
 
     func proper(slug: String) -> MassProper? {
@@ -121,7 +122,9 @@ final class ContentStore {
 
     // MARK: - All searchable propers (combined old + new)
 
-    lazy var allPropers: [MassProper] = {
+    private(set) var allPropers: [MassProper] = []
+
+    private func buildAllPropers() {
         var combined: [String: MassProper] = [:]
         for p in propers { combined[p.slug] = p }
         for (key, entry) in missalTempora {
@@ -134,8 +137,8 @@ final class ContentStore {
                 combined[key] = mp
             }
         }
-        return combined.values.sorted { $0.slug < $1.slug }
-    }()
+        allPropers = combined.values.sorted { $0.slug < $1.slug }
+    }
 
     // MARK: - Canon variants
 
