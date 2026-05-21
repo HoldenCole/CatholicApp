@@ -167,10 +167,29 @@ object ContentStore {
         val key = entry.winnerKey
         if (entry.winner == "sanctoral") {
             missalSanctoral[key]?.toMassProper(key)?.let { return it }
+            // Christmas: ordo key "12-25" but Mass data is keyed by 12-25m1/m2/m3.
+            // Default to the Day Mass (m3).
+            if (key == "12-25") {
+                missalSanctoral["12-25m3"]?.toMassProper("12-25m3")?.let { return it }
+            }
         }
         missalTempora[key]?.toMassProper(key)?.let { return it }
         missalSanctoral[key]?.toMassProper(key)?.let { return it }
+        // Inheritance: octave days inherit Mass propers from their feast day
+        inheritedTemporalKey(key)?.let { parent ->
+            missalTempora[parent]?.toMassProper(parent)?.let { return it }
+        }
         return propers.firstOrNull { it.slug == key }
+    }
+
+    private fun inheritedTemporalKey(key: String): String? {
+        // Ascension octave (Pasc5-5 through Pasc6-4) inherits from Pasc5-4
+        val ascensionOctave = setOf(
+            "pasc5-5", "pasc5-6", "pasc6-0", "pasc6-1",
+            "pasc6-2", "pasc6-3", "pasc6-4"
+        )
+        if (key in ascensionOctave) return "pasc5-4"
+        return null
     }
 
     fun hour(slug: String): Hour? =

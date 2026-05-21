@@ -152,12 +152,35 @@ final class ContentStore {
 
         if entry.winner == "sanctoral" {
             if let mp = missalSanctoral[key]?.toMassProper(key: key) { return mp }
+            // Christmas: ordo key "12-25" but Mass data is keyed by 12-25m1/m2/m3.
+            // Default to the Day Mass (m3).
+            if key == "12-25", let mp = missalSanctoral["12-25m3"]?.toMassProper(key: "12-25m3") {
+                return mp
+            }
         }
         if let mp = missalTempora[key]?.toMassProper(key: key) { return mp }
         if let mp = missalSanctoral[key]?.toMassProper(key: key) { return mp }
 
+        // Try inheritance: e.g., pasc6-4 (post-Ascension Thursday) inherits from pasc5-4 (Ascension).
+        if let parent = inheritedTemporalKey(for: key),
+           let mp = missalTempora[parent]?.toMassProper(key: parent) {
+            return mp
+        }
+
         // Fallback to legacy propers.json by slug
         return propers.first { $0.slug == key }
+    }
+
+    /// Returns the inherited temporal key (e.g., octave days inherit from the feast).
+    /// Currently handles the Ascension octave: pasc5-5 through pasc6-* inherit from pasc5-4.
+    private func inheritedTemporalKey(for key: String) -> String? {
+        // Ascension octave (Pasc5-5 through Pasc6-4)
+        let ascensionOctave: Set<String> = [
+            "pasc5-5", "pasc5-6", "pasc6-0", "pasc6-1",
+            "pasc6-2", "pasc6-3", "pasc6-4"
+        ]
+        if ascensionOctave.contains(key) { return "pasc5-4" }
+        return nil
     }
 
     // MARK: - All searchable propers (combined old + new)
