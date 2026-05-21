@@ -20,17 +20,9 @@ struct MissalView: View {
     }
 
     private var todayProper: MassProper? {
+        if let proper = store.properForDate(Date(), rite: rite) { return proper }
         guard let slug = ctx.properSlug else { return nil }
-        if let proper = store.proper(slug: slug) { return proper }
-        let cal = Calendar.liturgical
-        let dow = cal.component(.weekday, from: Date()) - 1
-        if dow > 0 {
-            let lastSunday = Date().addingDays(-dow)
-            if let sundaySlug = ProperCalendar.properSlug(for: lastSunday, rite: rite) {
-                return store.proper(slug: sundaySlug)
-            }
-        }
-        return nil
+        return store.proper(slug: slug)
     }
 
     var body: some View {

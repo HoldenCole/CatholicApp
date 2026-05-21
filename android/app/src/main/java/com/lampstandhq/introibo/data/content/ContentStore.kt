@@ -8,7 +8,9 @@ import com.lampstandhq.introibo.data.model.ExamenEntry
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.MarianAntiphonData
 import com.lampstandhq.introibo.data.model.MassProper
+import com.lampstandhq.introibo.data.model.MissalProperEntry
 import com.lampstandhq.introibo.data.model.MissalSection
+import com.lampstandhq.introibo.data.model.OrdoEntry
 import com.lampstandhq.introibo.data.model.MysterySetData
 import com.lampstandhq.introibo.data.model.Prayer
 import com.lampstandhq.introibo.data.model.ReferenceEntry
@@ -62,6 +64,11 @@ object ContentStore {
     var propers: List<MassProper> = emptyList()
         private set
 
+    private var missalTempora: Map<String, MissalProperEntry> = emptyMap()
+    private var missalSanctoral: Map<String, MissalProperEntry> = emptyMap()
+    private var ordoData: Map<String, OrdoEntry> = emptyMap()
+    private var ordoData1955: Map<String, OrdoEntry> = emptyMap()
+    private var ordoDataPre1955: Map<String, OrdoEntry> = emptyMap()
     private lateinit var officeAssembler: OfficeAssembler
 
     /**
@@ -85,6 +92,11 @@ object ContentStore {
         examen           = load("confession_examen.json")  ?: emptyList()
         confessionGuides = load("confession_guides.json")  ?: emptyList()
         propers          = load("propers.json")            ?: emptyList()
+        missalTempora    = load("missal_tempora.json")    ?: emptyMap()
+        missalSanctoral  = load("missal_sanctoral.json")  ?: emptyMap()
+        ordoData         = load("ordo.json")              ?: emptyMap()
+        ordoData1955     = load("ordo_1955.json")         ?: emptyMap()
+        ordoDataPre1955  = load("ordo_pre1955.json")      ?: emptyMap()
 
         val psalter: Map<String, Map<String, Hour.Part>> =
             load("psalter_weekly.json") ?: emptyMap()
@@ -105,6 +117,26 @@ object ContentStore {
 
     fun proper(slug: String): MassProper? =
         propers.firstOrNull { it.slug == slug }
+
+    fun ordoForDate(date: java.time.LocalDate, rite: String = "1962"): OrdoEntry? {
+        val key = "%04d-%02d-%02d".format(date.year, date.monthValue, date.dayOfMonth)
+        return when (rite) {
+            "1955" -> ordoData1955[key]
+            "pre1955" -> ordoDataPre1955[key]
+            else -> ordoData[key]
+        }
+    }
+
+    fun properForDate(date: java.time.LocalDate, rite: String = "1962"): MassProper? {
+        val entry = ordoForDate(date, rite) ?: return null
+        val key = entry.winnerKey
+        if (entry.winner == "sanctoral") {
+            missalSanctoral[key]?.toMassProper(key)?.let { return it }
+        }
+        missalTempora[key]?.toMassProper(key)?.let { return it }
+        missalSanctoral[key]?.toMassProper(key)?.let { return it }
+        return propers.firstOrNull { it.slug == key }
+    }
 
     fun hour(slug: String): Hour? =
         hours.firstOrNull { it.slug == slug }

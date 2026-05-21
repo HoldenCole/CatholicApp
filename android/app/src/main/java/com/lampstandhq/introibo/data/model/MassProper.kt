@@ -32,6 +32,7 @@ data class MassProper(
 data class ProperText(
     val lat: String,
     val eng: String,
+    val ref: String? = null,
 )
 
 @Serializable
