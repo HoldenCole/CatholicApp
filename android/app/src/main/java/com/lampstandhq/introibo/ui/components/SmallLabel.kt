@@ -32,7 +32,7 @@ fun SmallLabel(
         style = type.smallLabel,
         color = color,
         letterSpacing = 2.5.sp,
-        maxLines = 1,
+        maxLines = 2,
         overflow = TextOverflow.Ellipsis,
         modifier = modifier,
     )

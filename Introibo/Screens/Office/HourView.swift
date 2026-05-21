@@ -178,7 +178,7 @@ struct HourView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.label ?? "Hymnus")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .lineLimit(1)
+                    .fixedSize(horizontal: true, vertical: false)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             if let title = p.title {
@@ -242,11 +242,12 @@ struct HourView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.label ?? "Psalmus")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .lineLimit(1)
+                    .fixedSize(horizontal: true, vertical: false)
                 if let ref = p.ref {
                     Text(ref)
                         .font(.captionSm)
                         .foregroundStyle(Color.goldLeaf)
+                        .fixedSize(horizontal: true, vertical: false)
                 }
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
