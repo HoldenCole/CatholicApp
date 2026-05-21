@@ -126,18 +126,39 @@ final class ContentStore {
 
     private func buildAllPropers() {
         var combined: [String: MassProper] = [:]
-        // DivinumOfficium data takes priority
+        // DivinumOfficium data is the source of truth
         for (key, entry) in missalTempora {
             if let mp = entry.toMassProper(key: key) { combined[key] = mp }
         }
         for (key, entry) in missalSanctoral {
             if let mp = entry.toMassProper(key: key) { combined[key] = mp }
         }
-        // Legacy propers.json fills gaps only
+        // Legacy propers.json: only add entries that have no DO equivalent
+        let doKeys = Set(combined.keys)
         for p in propers {
-            if combined[p.slug] == nil { combined[p.slug] = p }
+            if doKeys.contains(p.slug) { continue }
+            if hasDOEquivalent(slug: p.slug, doKeys: doKeys) { continue }
+            combined[p.slug] = p
         }
         allPropers = combined.values.sorted { $0.slug < $1.slug }
+    }
+
+    private func hasDOEquivalent(slug: String, doKeys: Set<String>) -> Bool {
+        if slug.hasPrefix("sancti-") {
+            return doKeys.contains(String(slug.dropFirst(7)))
+        }
+        let mappings: [(String, String)] = [
+            ("easter-", "pasc"), ("advent-", "adv"), ("lent-", "quad"),
+            ("christmas-", "nat"), ("pentecost-", "pent"), ("epiphany-", "epi"),
+            ("quinquagesima-", "quadp3-"),
+        ]
+        for (prefix, doPrefix) in mappings {
+            if slug.hasPrefix(prefix) {
+                let rest = String(slug.dropFirst(prefix.count))
+                if doKeys.contains("\(doPrefix)\(rest)") { return true }
+            }
+        }
+        return false
     }
 
     // MARK: - Canon variants

@@ -120,18 +120,34 @@ object ContentStore {
 
     val allPropers: List<MassProper> by lazy {
         val combined = mutableMapOf<String, MassProper>()
-        // DivinumOfficium data takes priority
         for ((key, entry) in missalTempora) {
             entry.toMassProper(key)?.let { combined[key] = it }
         }
         for ((key, entry) in missalSanctoral) {
             entry.toMassProper(key)?.let { combined[key] = it }
         }
-        // Legacy propers.json fills gaps only
+        val doKeys = combined.keys.toSet()
         for (p in propers) {
-            if (p.slug !in combined) combined[p.slug] = p
+            if (p.slug in doKeys) continue
+            if (hasDOEquivalent(p.slug, doKeys)) continue
+            combined[p.slug] = p
         }
         combined.values.sortedBy { it.slug }
+    }
+
+    private fun hasDOEquivalent(slug: String, doKeys: Set<String>): Boolean {
+        if (slug.startsWith("sancti-")) return slug.removePrefix("sancti-") in doKeys
+        val mappings = listOf(
+            "easter-" to "pasc", "advent-" to "adv", "lent-" to "quad",
+            "christmas-" to "nat", "pentecost-" to "pent", "epiphany-" to "epi",
+            "quinquagesima-" to "quadp3-",
+        )
+        for ((prefix, doPrefix) in mappings) {
+            if (slug.startsWith(prefix)) {
+                return "$doPrefix${slug.removePrefix(prefix)}" in doKeys
+            }
+        }
+        return false
     }
 
     fun ordoForDate(date: java.time.LocalDate, rite: String = "1962"): OrdoEntry? {
