@@ -10,7 +10,7 @@
     "notes": "Violet vestments are worn. The Gloria is omitted. The organ is silent except to sustain singing. The third Sunday, Gaudete, permits rose vestments.",
     "scripture": {
       "ref": "Isaias 7:14",
-      "lat": "Ecce virgo concipiet, et pariet filium, et vocabitur nomen eius Emmanuel.",
+      "lat": "Ecce virgo concipiet, et pariet filium, et vocabitur nomen ejus Emmanuel.",
       "eng": "Behold a virgin shall conceive, and bear a son, and his name shall be called Emmanuel."
     }
   },
@@ -274,7 +274,7 @@
   {
     "slug": "dev-sacred-heart",
     "title": "Sacred Heart",
-    "latin": "Sacratissimum Cor Iesu",
+    "latin": "Sacratissimum Cor Jesu",
     "cat": "Devotiones",
     "summary": "Devotion to the physical Heart of Jesus Christ as the symbol of His boundless love for mankind, revealed especially to St. Margaret Mary Alacoque at Paray-le-Monial in 1673-75.",
     "history": "The devotion has patristic roots but became explicit in the writings of St. Gertrude, St. John Eudes, and St. Margaret Mary. The feast was extended to the universal Church in 1856.",
@@ -282,7 +282,7 @@
     "notes": "The feast of the Sacred Heart falls on the Friday after Corpus Christi. Twelve promises were made by Our Lord to St. Margaret Mary for those who honour His Heart.",
     "scripture": {
       "ref": "Jn 19:34",
-      "lat": "Unus militum lancea latus eius aperuit, et continuo exivit sanguis et aqua.",
+      "lat": "Unus militum lancea latus ejus aperuit, et continuo exivit sanguis et aqua.",
       "eng": "One of the soldiers with a spear opened His side, and immediately there came out blood and water."
     }
   },
@@ -489,7 +489,7 @@
     "title": "Prayer Vocabulary",
     "latin": "Vocabularium",
     "cat": "De Lingua Latina",
-    "summary": "The most common words of the Latin Mass and Rosary: Dominus (Lord), Deus (God), Pater (Father), Filius (Son), Spiritus (Spirit), Sanctus (Holy), Maria (Mary), Iesus (Jesus), gratia (grace), et (and), in (in).",
+    "summary": "The most common words of the Latin Mass and Rosary: Dominus (Lord), Deus (God), Pater (Father), Filius (Son), Spiritus (Spirit), Sanctus (Holy), Maria (Mary), Jesus (Jesus), gratia (grace), et (and), in (in).",
     "history": null,
     "practice": "Learn fifty prayer words and you can follow eighty percent of the Mass. Flash cards, repetition, and praying the Rosary in Latin are the traditional methods.",
     "notes": null,
