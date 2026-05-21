@@ -1,5 +1,6 @@
 {
   "01-01": {
+    "officium": "In Circumcisione Domini",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -72,6 +73,7 @@
     }
   },
   "01-05": {
+    "officium": "In Vigilia Epiphaniæ",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -121,6 +123,7 @@
     }
   },
   "01-06": {
+    "officium": "In Epiphania Domini",
     "rank": 7,
     "rule": {
       "gloria": true,
@@ -171,6 +174,7 @@
     }
   },
   "01-11": {
+    "officium": "Sexta die infra Octavam Epiphaniæ",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -221,6 +225,7 @@
     }
   },
   "01-13": {
+    "officium": "Die Octava Epiphaniæ",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -1210,6 +1215,7 @@
     }
   },
   "02-02": {
+    "officium": "In Purificatione Beatæ Mariæ Virginis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -1649,6 +1655,7 @@
     }
   },
   "02-11": {
+    "officium": "In Apparitione Beatæ Mariæ Virginis",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -2601,6 +2608,7 @@
     }
   },
   "03-25": {
+    "officium": "In Annuntiatione Beatæ Mariæ Virginis",
     "rank": 6,
     "rule": {
       "gloria": true,
@@ -3638,6 +3646,7 @@
     }
   },
   "05-03": {
+    "officium": "In Inventione Sanctæ Crucis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -4592,6 +4601,7 @@
     }
   },
   "05-31": {
+    "officium": "Beatæ Mariæ Virginis Reginæ",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -5818,6 +5828,7 @@
     }
   },
   "07-01": {
+    "officium": "Pretiosissimi Sanguinis Domini Nostri Jesu Christi",
     "rank": 6,
     "rule": {
       "gloria": true,
@@ -5868,6 +5879,7 @@
     }
   },
   "07-02": {
+    "officium": "In Visitatione Beatæ Mariæ Virginis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -6434,6 +6446,7 @@
     }
   },
   "07-16": {
+    "officium": "Beatæ Mariæ Virginis de Monte Carmelo",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -7377,6 +7390,7 @@
     }
   },
   "08-06": {
+    "officium": "In Transfiguratione Domini Nostri Jesu Christi",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -7710,6 +7724,7 @@
     }
   },
   "08-14": {
+    "officium": "In Vigilia Assumptionis Beatæ Mariæ Virginis",
     "rank": 1,
     "rule": {
       "preface": "Communis"
@@ -7755,6 +7770,7 @@
     }
   },
   "08-15": {
+    "officium": "In Assumptione Beatæ Mariæ Virginis",
     "rank": 7,
     "rule": {
       "gloria": true,
@@ -7957,6 +7973,7 @@
     }
   },
   "08-22": {
+    "officium": "Immaculati Cordis Beatæ Mariæ Virginis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -8617,6 +8634,7 @@
     }
   },
   "09-08": {
+    "officium": "In Nativitate Beatæ Mariæ Virginis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -8813,6 +8831,7 @@
     }
   },
   "09-12": {
+    "officium": "Sanctissimi Nominis Beatæ Mariæ Virginis",
     "rank": 4,
     "rule": {
       "commune": "C11",
@@ -8862,6 +8881,7 @@
     }
   },
   "09-14": {
+    "officium": "In Exaltatione Sanctæ Crucis",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -8910,6 +8930,7 @@
     }
   },
   "09-15": {
+    "officium": "Septem Dolorum Beatæ Mariæ Virginis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -9312,6 +9333,7 @@
     }
   },
   "09-24": {
+    "officium": "Beatæ Mariæ Virginis de Mercede",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -9877,6 +9899,7 @@
     }
   },
   "10-07": {
+    "officium": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -10804,6 +10827,7 @@
     }
   },
   "10-du": {
+    "officium": "Domini Nostri Jesu Christi Regis",
     "rank": 6,
     "rule": {
       "gloria": true,
@@ -10904,6 +10928,7 @@
     }
   },
   "11-02m1": {
+    "officium": "In Commemoratione Omnium Fidelium Defunctorum — Missa I",
     "rank": 3,
     "rule": {
       "preface": "Defunctorum"
@@ -10932,6 +10957,7 @@
     }
   },
   "11-02m2": {
+    "officium": "In Commemoratione Omnium Fidelium Defunctorum — Missa II",
     "rank": 3,
     "rule": {
       "preface": "Defunctorum"
@@ -10960,6 +10986,7 @@
     }
   },
   "11-02m3": {
+    "officium": "In Commemoratione Omnium Fidelium Defunctorum — Missa III",
     "rank": 3,
     "rule": {
       "preface": "Defunctorum"
@@ -11044,6 +11071,7 @@
     }
   },
   "11-09": {
+    "officium": "In Dedicatione Basilicæ Sanctissimi Salvatoris",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -11444,6 +11472,7 @@
     }
   },
   "11-18": {
+    "officium": "In Dedicatione Basilicarum Ss. Apostolorum Petri et Pauli",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -11545,6 +11574,7 @@
     }
   },
   "11-21": {
+    "officium": "In Præsentatione Beatæ Mariæ Virginis",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -12200,6 +12230,7 @@
     }
   },
   "12-08": {
+    "officium": "In Conceptione Immaculata Beatæ Mariæ Virginis",
     "rank": 6,
     "rule": {
       "gloria": true,
@@ -12451,6 +12482,7 @@
     }
   },
   "12-24": {
+    "officium": "In Vigilia Nativitatis Domini",
     "rank": 6,
     "introitus": {
       "lat": "Hódie sciétis, quia véniet Dóminus et salvábit nos: et mane vidébitis glóriam ejus. Dómini est terra, et plenitúdo ejus: orbis terrárum, et univérsi, qui hábitant in eo. &Gloria Hódie sciétis, quia véniet Dóminus et salvábit nos: et mane vidébitis glóriam ejus.",
@@ -12496,6 +12528,7 @@
     }
   },
   "12-25m1": {
+    "officium": "In Nativitate Domini — Ad Primam Missam in Nocte",
     "rank": 7,
     "rule": {
       "gloria": true,
@@ -12597,6 +12630,7 @@
     }
   },
   "12-25m3": {
+    "officium": "In Nativitate Domini — Ad Tertiam Missam in Die",
     "rank": 7,
     "rule": {
       "gloria": true,

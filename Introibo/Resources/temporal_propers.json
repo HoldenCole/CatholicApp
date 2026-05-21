@@ -11692,5 +11692,354 @@
   "quadp1-6": {},
   "quadp2-4": {},
   "quadp2-5": {},
-  "quadp2-6": {}
+  "quadp2-6": {},
+  "nat00": {
+    "laudes.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Heb 1:1-2)",
+      "lat": "Multifáriam, multísque modis olim Deus loquens pátribus in prophétis: novíssime diébus istis locútus est nobis in Fílio, quem constítuit herédem universórum, per quem fecit et sǽcula.",
+      "eng": "",
+      "variationKey": "laudes.capitulum"
+    },
+    "sexta.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Heb 1:10)",
+      "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
+      "eng": "",
+      "variationKey": "sexta.capitulum"
+    },
+    "nona.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Heb 1:11-12)",
+      "lat": "Ipsi períbunt, tu autem permanébis; et omnes sicut vestiméntum veteráscent: et velut amíctum mutábis eos, et mutabúntur: tu autem idem ipse es, et anni tui non defícient.",
+      "eng": "",
+      "variationKey": "nona.capitulum"
+    },
+    "laudes.hymn": {
+      "type": "hymn",
+      "label": "Hymnus",
+      "lat": "Ad usque terræ límitem,\nChristum canámus Príncipem,\nNatum María Vírgine.\n\nBeátus auctor sǽculi\nServíle corpus índuit:\nUt carne carnem líberans,\nNe pérderet quos cóndidit.\n\nCastæ Paréntis víscera\nCæléstis intrat grátia:\nVenter Puéllæ bájulat\nSecréta, quæ non nóverat.\n\nDomus pudíci péctoris\nTemplum repénte fit Dei:\nIntácta nésciens virum,\nConcépit alvo Fílium.\n\nEnítitur puérpera,\nQuem Gábriel prædíxerat,\nQuem ventre Matris géstiens,\nBaptísta clausum sénserat.\n\nFœno jacére pértulit:\nPræsépe non abhórruit:\nEt lacte módico pastus est,\nPer quem nec ales ésurit.\n\nGaudet chorus cæléstium,\nEt Angeli canunt Deo;\nPalámque fit pastóribus\nPastor, Creátor ómnium.\n\nJesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+      "eng": "",
+      "variationKey": "laudes.hymn"
+    },
+    "vesperae.hymn": {
+      "type": "hymn",
+      "label": "Hymnus",
+      "lat": "Quem lucis ante oríginem\nParem patérnæ glóriæ\nPater suprémus édidit.\n\nTu lumen, et splendor Patris,\nTu spes perénnis ómnium,\nInténde quas fundunt preces\nTui per orbem sérvuli.\n\nMeménto, rerum Cónditor,\nNostri quod olim córporis,\nSacráta ab alvo Vírginis\nNascéndo, formam súmpseris.\n\nTestátur hoc præsens dies,\nCurrens per anni círculum,\nQuod solus e sinu Patris\nMundi salus advéneris.\n\nHunc astra, tellus, ǽquora,\nHunc omne, quod cælo subest,\nSalútis auctórem novæ\nNovo salútat cántico.\n\nEt nos, beáta quos sacri\nRigávit unda sánguinis,\nNatális ob diem tui\nHymni tribútum sólvimus.\n\nJesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+      "eng": "",
+      "variationKey": "vesperae.hymn"
+    },
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Verbum caro factum est, et habitávit in nobis: et vídimus glóriam ejus, glóriam quasi Unigéniti a Patre plenum grátiæ, et veritátis, allelúia, allelúia, allelúia.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Hódie * Christus natus est: hódie Salvátor appáruit: hódie in terra canunt Angeli, lætántur Archángeli: hódie exsúltant justi, dicéntes: Glória in excélsis Deo, allelúja.",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "laudes.versicle": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Puer natus est nobis.",
+      "eng": "",
+      "latR": "Fílius datus est nobis.",
+      "engR": "",
+      "variationKey": "laudes.versicle"
+    },
+    "vesperae.versicle": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Puer natus est nobis.",
+      "eng": "",
+      "latR": "Fílius datus est nobis.",
+      "engR": "",
+      "variationKey": "vesperae.versicle"
+    },
+    "laudes.antiphon.psalm1": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Quem vidístis, * pastóres? dícite, annuntiáte nobis, in terris quis appáruit? Natum vídimus, et choros Angelórum collaudántes Dóminum, allelúja, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm1"
+    },
+    "laudes.antiphon.psalm2": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Génuit puérpera * Regem, cui nomen ætérnum, et gáudia matris habens cum virginitátis honóre: nec primam símilem visa est, nec habére sequéntem, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm2"
+    },
+    "laudes.antiphon.psalm3": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Angelus ad pastóres * ait: Annúntio vobis gáudium magnum: quia natus est vobis hódie Salvátor mundi, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm3"
+    },
+    "laudes.antiphon.psalm4": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Facta est cum Angelo * multitúdo cæléstis exércitus laudántium Deum, et dicéntium: Glória in excélsis Deo, et in terra pax homínibus bonæ voluntátis, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm4"
+    },
+    "laudes.antiphon.psalm5": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Párvulus fílius * hódie natus est nobis: et vocábitur Deus, Fortis, allelúja, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.antiphon.psalm1": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Tecum princípium * in die virtútis tuæ, in splendóribus sanctórum, ex útero ante lucíferum génui te.;;109",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm1"
+    },
+    "vesperae.antiphon.psalm2": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Redemptiónem * misit Dóminus pópulo suo: mandávit in ætérnum testaméntum suum.;;110",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm2"
+    },
+    "vesperae.antiphon.psalm3": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Exórtum est * in ténebris lumen rectis corde: miséricors, et miserátor, et justus Dóminus.;;111",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm3"
+    },
+    "vesperae.antiphon.psalm4": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Apud Dóminum * misericórdia, et copiósa apud eum redémptio.;;129",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm4"
+    },
+    "vesperae.antiphon.psalm5": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm5"
+    }
+  },
+  "nat06": {
+    "laudes.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Heb 1:1-2)",
+      "lat": "Multifáriam, multísque modis olim Deus loquens pátribus in prophétis: novíssime diébus istis locútus est nobis in Fílio, quem constítuit herédem universórum, per quem fecit et sǽcula.",
+      "eng": "",
+      "variationKey": "laudes.capitulum"
+    },
+    "sexta.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Heb 1:10)",
+      "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
+      "eng": "",
+      "variationKey": "sexta.capitulum"
+    },
+    "nona.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Heb 1:11-12)",
+      "lat": "Ipsi períbunt, tu autem permanébis; et omnes sicut vestiméntum veteráscent: et velut amíctum mutábis eos, et mutabúntur: tu autem idem ipse es, et anni tui non defícient.",
+      "eng": "",
+      "variationKey": "nona.capitulum"
+    },
+    "laudes.hymn": {
+      "type": "hymn",
+      "label": "Hymnus",
+      "lat": "Ad usque terræ límitem,\nChristum canámus Príncipem,\nNatum María Vírgine.\n\nBeátus auctor sǽculi\nServíle corpus índuit:\nUt carne carnem líberans,\nNe pérderet quos cóndidit.\n\nCastæ Paréntis víscera\nCæléstis intrat grátia:\nVenter Puéllæ bájulat\nSecréta, quæ non nóverat.\n\nDomus pudíci péctoris\nTemplum repénte fit Dei:\nIntácta nésciens virum,\nConcépit alvo Fílium.\n\nEnítitur puérpera,\nQuem Gábriel prædíxerat,\nQuem ventre Matris géstiens,\nBaptísta clausum sénserat.\n\nFœno jacére pértulit:\nPræsépe non abhórruit:\nEt lacte módico pastus est,\nPer quem nec ales ésurit.\n\nGaudet chorus cæléstium,\nEt Angeli canunt Deo;\nPalámque fit pastóribus\nPastor, Creátor ómnium.\n\nJesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+      "eng": "",
+      "variationKey": "laudes.hymn"
+    },
+    "vesperae.hymn": {
+      "type": "hymn",
+      "label": "Hymnus",
+      "lat": "Quem lucis ante oríginem\nParem patérnæ glóriæ\nPater suprémus édidit.\n\nTu lumen, et splendor Patris,\nTu spes perénnis ómnium,\nInténde quas fundunt preces\nTui per orbem sérvuli.\n\nMeménto, rerum Cónditor,\nNostri quod olim córporis,\nSacráta ab alvo Vírginis\nNascéndo, formam súmpseris.\n\nTestátur hoc præsens dies,\nCurrens per anni círculum,\nQuod solus e sinu Patris\nMundi salus advéneris.\n\nHunc astra, tellus, ǽquora,\nHunc omne, quod cælo subest,\nSalútis auctórem novæ\nNovo salútat cántico.\n\nEt nos, beáta quos sacri\nRigávit unda sánguinis,\nNatális ob diem tui\nHymni tribútum sólvimus.\n\nJesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+      "eng": "",
+      "variationKey": "vesperae.hymn"
+    },
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "@Tempora/Nat26",
+      "eng": "",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Hódie * Christus natus est: hódie Salvátor appáruit: hódie in terra canunt Angeli, lætántur Archángeli: hódie exsúltant justi, dicéntes: Glória in excélsis Deo, allelúja.",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "laudes.versicle": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Puer natus est nobis.",
+      "eng": "",
+      "latR": "Fílius datus est nobis.",
+      "engR": "",
+      "variationKey": "laudes.versicle"
+    },
+    "vesperae.versicle": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Puer natus est nobis.",
+      "eng": "",
+      "latR": "Fílius datus est nobis.",
+      "engR": "",
+      "variationKey": "vesperae.versicle"
+    },
+    "laudes.antiphon.psalm1": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Quem vidístis, * pastóres? dícite, annuntiáte nobis, in terris quis appáruit? Natum vídimus, et choros Angelórum collaudántes Dóminum, allelúja, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm1"
+    },
+    "laudes.antiphon.psalm2": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Génuit puérpera * Regem, cui nomen ætérnum, et gáudia matris habens cum virginitátis honóre: nec primam símilem visa est, nec habére sequéntem, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm2"
+    },
+    "laudes.antiphon.psalm3": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Angelus ad pastóres * ait: Annúntio vobis gáudium magnum: quia natus est vobis hódie Salvátor mundi, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm3"
+    },
+    "laudes.antiphon.psalm4": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Facta est cum Angelo * multitúdo cæléstis exércitus laudántium Deum, et dicéntium: Glória in excélsis Deo, et in terra pax homínibus bonæ voluntátis, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm4"
+    },
+    "laudes.antiphon.psalm5": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Párvulus fílius * hódie natus est nobis: et vocábitur Deus, Fortis, allelúja, allelúja.",
+      "eng": "",
+      "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.antiphon.psalm1": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Tecum princípium * in die virtútis tuæ, in splendóribus sanctórum, ex útero ante lucíferum génui te.;;109",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm1"
+    },
+    "vesperae.antiphon.psalm2": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Redemptiónem * misit Dóminus pópulo suo: mandávit in ætérnum testaméntum suum.;;110",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm2"
+    },
+    "vesperae.antiphon.psalm3": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Exórtum est * in ténebris lumen rectis corde: miséricors, et miserátor, et justus Dóminus.;;111",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm3"
+    },
+    "vesperae.antiphon.psalm4": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "Apud Dóminum * misericórdia, et copiósa apud eum redémptio.;;129",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm4"
+    },
+    "vesperae.antiphon.psalm5": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
+      "eng": "",
+      "variationKey": "vesperae.antiphon.psalm5"
+    }
+  },
+  "nat13": {},
+  "nat14": {},
+  "nat15": {},
+  "nat16": {},
+  "nat17": {},
+  "pent25-0": {
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Cum vidéritis * abominatiónem desolatiónis quæ dicta est a Daniéle prophéta, stantem in loco sancto: qui legit, intéllegat.",
+      "eng": "When ye shall see the abomination of desolation, * spoken of by Daniel the Prophet, stand in the Holy Place, (whoso readeth, let him understand.)",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Amen dico vobis * quia non præteríbit generátio hæc, donec ómnia fiant: cælum et terra transíbunt, verba autem mea non transíbunt, dicit Dóminus.",
+      "eng": "Amen, I say unto you, this generation shall not pass till all these things be fulfilled; * heaven and earth shall pass away, but My words shall not pass away, saith the Lord.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "pent25-1": {},
+  "pent25-2": {},
+  "pent25-3": {},
+  "pent25-4": {},
+  "pent25-5": {},
+  "pent25-6": {},
+  "pent26-0": {
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Cum vidéritis * abominatiónem desolatiónis quæ dicta est a Daniéle prophéta, stantem in loco sancto: qui legit, intéllegat.",
+      "eng": "When ye shall see the abomination of desolation, * spoken of by Daniel the Prophet, stand in the Holy Place, (whoso readeth, let him understand.)",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Amen dico vobis * quia non præteríbit generátio hæc, donec ómnia fiant: cælum et terra transíbunt, verba autem mea non transíbunt, dicit Dóminus.",
+      "eng": "Amen, I say unto you, this generation shall not pass till all these things be fulfilled; * heaven and earth shall pass away, but My words shall not pass away, saith the Lord.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "pent26-1": {},
+  "pent26-2": {},
+  "pent26-3": {},
+  "pent26-4": {},
+  "pent26-5": {},
+  "pent26-6": {},
+  "pent27-0": {
+    "laudes.antiphon.benedictus": {
+      "type": "antiphon",
+      "label": "Ant. ad Benedictus",
+      "lat": "Cum vidéritis * abominatiónem desolatiónis quæ dicta est a Daniéle prophéta, stantem in loco sancto: qui legit, intéllegat.",
+      "eng": "When ye shall see the abomination of desolation, * spoken of by Daniel the Prophet, stand in the Holy Place, (whoso readeth, let him understand.)",
+      "variationKey": "laudes.antiphon.benedictus"
+    },
+    "vesperae.antiphon.magnificat": {
+      "type": "antiphon",
+      "label": "Ant. ad Magnificat",
+      "lat": "Amen dico vobis * quia non præteríbit generátio hæc, donec ómnia fiant: cælum et terra transíbunt, verba autem mea non transíbunt, dicit Dóminus.",
+      "eng": "Amen, I say unto you, this generation shall not pass till all these things be fulfilled; * heaven and earth shall pass away, but My words shall not pass away, saith the Lord.",
+      "variationKey": "vesperae.antiphon.magnificat"
+    }
+  },
+  "pent27-1": {},
+  "pent27-2": {},
+  "pent27-3": {},
+  "pent27-4": {},
+  "pent27-5": {},
+  "pent27-6": {}
 }
