@@ -5892,7 +5892,8 @@
     "rank": 4,
     "rule": {
       "gloria": true,
-      "preface": "Apostolis"
+      "preface": "Apostolis",
+      "credo": true
     },
     "introitus": {
       "lat": "Scio, cui crédidi, et certus sum, quia potens est depósitum meum serváre in illum diem, justus judex. Dómine, probásti me et cognovísti me: tu cognovísti sessiónem meam et resurrectiónem meam. Scio, cui crédidi, et certus sum, quia potens est depósitum meum serváre in illum diem, justus judex.",
@@ -11590,7 +11591,8 @@
     "rank": 4,
     "rule": {
       "gloria": true,
-      "preface": "Dedicatio"
+      "preface": "Dedicatio",
+      "credo": false
     },
     "oratio": {
       "lat": "Deus, qui nobis per síngulos annos hujus sancti templi tui consecratiónis réparas diem, et sacris semper mystériis repræséntas incólumes: exáudi preces pópuli tui, et præsta; ut quisquis hoc templum benefícia petitúrus ingréditur, cuncta se impetrásse lætétur.",
@@ -11987,6 +11989,9 @@
     "postcommunio": {
       "lat": "Percéptis, Dómine, sacraméntis supplíciter exorámus: ut, intercedénte beáto Andréa Apostolo tuo, quæ pro illíus veneránda gérimus passióne, nobis profíciant ad medélam.",
       "eng": "Be appeased, we beseech thee, O Lord, by the prayers of thy holy Apostle, Andrew, and grant us pardon and unfailing remedies."
+    },
+    "rule": {
+      "credo": false
     }
   },
   "11-30": {
