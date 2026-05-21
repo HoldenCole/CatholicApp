@@ -44,12 +44,20 @@ struct OfficeAssembler {
             // Build the antiphon override key for this part's position
             // e.g., "laudes.psalm1" → check "laudes.antiphon.psalm1"
             let hourPrefix = key.components(separatedBy: ".").first ?? ""
+            // Lauds has: psalm1, psalm2, psalm3, canticle1, psalm4 (canticle in middle)
+            // Vespers has: psalm1-psalm5 (all psalms)
+            // Antiphon slots are always 1-5 in order. Map accordingly.
             let antKey: String?
             if key.hasSuffix(".psalm1") { antKey = "\(hourPrefix).antiphon.psalm1" }
             else if key.hasSuffix(".psalm2") { antKey = "\(hourPrefix).antiphon.psalm2" }
             else if key.hasSuffix(".psalm3") { antKey = "\(hourPrefix).antiphon.psalm3" }
             else if key.hasSuffix(".canticle1") { antKey = "\(hourPrefix).antiphon.psalm4" }
-            else if key.hasSuffix(".psalm4") { antKey = "\(hourPrefix).antiphon.psalm5" }
+            else if key.hasSuffix(".psalm4") {
+                // Lauds psalm4 is the 5th element (after canticle1)
+                // Vespers psalm4 is the 4th element
+                antKey = hourPrefix == "laudes" ? "\(hourPrefix).antiphon.psalm5" : "\(hourPrefix).antiphon.psalm4"
+            }
+            else if key.hasSuffix(".psalm5") { antKey = "\(hourPrefix).antiphon.psalm5" }
             else { antKey = nil }
 
             if let ak = antKey, let antOverride = temporalOverrides[ak] {

@@ -48,12 +48,18 @@ class OfficeAssembler(
         val antiphonApplied = assembledParts.map { part ->
             val key = part.variationKey ?: return@map part
             val hourPrefix = key.substringBefore(".")
+            // Lauds: psalm1, psalm2, psalm3, canticle1, psalm4 (canticle in middle)
+            // Vespers: psalm1-psalm5 (all psalms). Antiphon slots are always 1-5.
             val antKey = when {
                 key.endsWith(".psalm1") -> "$hourPrefix.antiphon.psalm1"
                 key.endsWith(".psalm2") -> "$hourPrefix.antiphon.psalm2"
                 key.endsWith(".psalm3") -> "$hourPrefix.antiphon.psalm3"
                 key.endsWith(".canticle1") -> "$hourPrefix.antiphon.psalm4"
-                key.endsWith(".psalm4") -> "$hourPrefix.antiphon.psalm5"
+                key.endsWith(".psalm4") ->
+                    // Lauds psalm4 is the 5th element; Vespers psalm4 is the 4th
+                    if (hourPrefix == "laudes") "$hourPrefix.antiphon.psalm5"
+                    else "$hourPrefix.antiphon.psalm4"
+                key.endsWith(".psalm5") -> "$hourPrefix.antiphon.psalm5"
                 else -> null
             }
             val antOverride = antKey?.let { temporalOverrides[it] }
