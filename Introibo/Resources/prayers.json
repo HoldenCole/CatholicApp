@@ -233,19 +233,19 @@
     "title": "Confíteor",
     "eng": "I Confess",
     "category": "Missa",
-    "note": "Said at the foot of the altar at the beginning of Mass, and at Compline.",
+    "note": "The Mass-form Confiteor, said at the foot of the altar. The conventual phrases (et tibi, pater / et vobis, fratres) are included; omit them when praying privately.",
     "lines": [
       {
         "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini,",
         "eng": "I confess to almighty God, to blessed Mary ever Virgin,"
       },
       {
-        "lat": "beáto Michaéli Archángelo, beáto Ioánni Baptístæ,",
+        "lat": "beáto Michaéli Archángelo, beáto Joánni Baptístæ,",
         "eng": "to blessed Michael the Archangel, to blessed John the Baptist,"
       },
       {
-        "lat": "sanctis Apóstolis Petro et Paulo, et ómnibus Sanctis,",
-        "eng": "to the holy Apostles Peter and Paul, and to all the Saints,"
+        "lat": "sanctis Apóstolis Petro et Paulo, ómnibus Sanctis, et tibi, pater (et vobis, fratres):",
+        "eng": "to the holy Apostles Peter and Paul, to all the Saints, and to you, Father (and to you, brethren):"
       },
       {
         "lat": "quia peccávi nimis cogitatióne, verbo et ópere:",
@@ -260,8 +260,8 @@
         "eng": "Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel,"
       },
       {
-        "lat": "beátum Ioánnem Baptístam, sanctos Apóstolos Petrum et Paulum, et omnes Sanctos,",
-        "eng": "blessed John the Baptist, the holy Apostles Peter and Paul, and all the Saints,"
+        "lat": "beátum Joánnem Baptístam, sanctos Apóstolos Petrum et Paulum, omnes Sanctos, et te, pater (et vos, fratres),",
+        "eng": "blessed John the Baptist, the holy Apostles Peter and Paul, all the Saints, and you, Father (and you, brethren),"
       },
       {
         "lat": "oráre pro me ad Dóminum Deum nostrum. Amen.",
@@ -1535,6 +1535,179 @@
         "lat": "Quasi jam advéneris, compléctor te et totum me tibi únio; ne permíttas me a te umquam separári. Amen.",
         "eng": "I embrace Thee as if Thou wert already there, and unite myself wholly to Thee. Never permit me to be separated from Thee. Amen."
       }
+    ]
+  },
+  {
+    "slug": "athanasian-creed",
+    "title": "Symbolum Athanasianum",
+    "eng": "The Athanasian Creed",
+    "category": "Devotiónes",
+    "note": "Also called the Quicúmque vult. In the 1962 Breviary said at Prime on Trinity Sunday only; in the pre-1955 Breviary said at Prime on Sundays outside the Christmas, Easter, and Pentecost octaves. The asterisk (*) marks the half-verse division between the two choirs.",
+    "lines": [
+      {
+        "lat": "Quicúmque vult salvus esse, * ante ómnia opus est, ut téneat cathólicam fidem:",
+        "eng": "Whosoever willeth to be saved, * before all things it is necessary that he hold the Catholic faith."
+      },
+      {
+        "lat": "Quam nisi quisque íntegram inviolatámque serváverit, * absque dúbio in ætérnum períbit.",
+        "eng": "Which faith except every one do keep whole and undefiled, * without doubt he shall perish eternally."
+      },
+      {
+        "lat": "Fides autem cathólica hæc est: * ut unum Deum in Trinitáte, et Trinitátem in unitáte venerémur.",
+        "eng": "Now the Catholic faith is this, * that we worship one God in Trinity, and Trinity in Unity."
+      },
+      {
+        "lat": "Neque confundéntes persónas, * neque substántiam separántes.",
+        "eng": "Neither confounding the Persons, * nor dividing the substance."
+      },
+      {
+        "lat": "Alia est enim persóna Patris, ália Fílii, * ália Spíritus Sancti:",
+        "eng": "For there is one Person of the Father, another of the Son, * and another of the Holy Ghost."
+      },
+      {
+        "lat": "Sed Patris, et Fílii, et Spíritus Sancti una est divínitas, * æquális glória, coætérna majéstas.",
+        "eng": "But the Godhead of the Father, of the Son, and of the Holy Ghost is one, * the Glory Equal, the Majesty Co-Eternal."
+      },
+      {
+        "lat": "Qualis Pater, talis Fílius, * talis Spíritus Sanctus.",
+        "eng": "Such as the Father is, such is the Son, * and such is the Holy Ghost."
+      },
+      {
+        "lat": "Increátus Pater, increátus Fílius, * increátus Spíritus Sanctus.",
+        "eng": "The Father Uncreated, the Son Uncreated, * and the Holy Ghost Uncreated."
+      },
+      {
+        "lat": "Imménsus Pater, imménsus Fílius, * imménsus Spíritus Sanctus.",
+        "eng": "The Father Infinite, the Son Infinite, * and the Holy Ghost Infinite."
+      },
+      {
+        "lat": "Ætérnus Pater, ætérnus Fílius, * ætérnus Spíritus Sanctus.",
+        "eng": "The Father Eternal, the Son Eternal, * and the Holy Ghost Eternal."
+      },
+      {
+        "lat": "Et tamen non tres ætérni, * sed unus ætérnus.",
+        "eng": "And yet they are not three Eternals, * but one Eternal."
+      },
+      {
+        "lat": "Sicut non tres increáti, nec tres imménsi, * sed unus increátus, et unus imménsus.",
+        "eng": "As also they are not three Uncreated, nor three Infinites, * but One Uncreated, and One Infinite."
+      },
+      {
+        "lat": "Simíliter omnípotens Pater, omnípotens Fílius, * omnípotens Spíritus Sanctus.",
+        "eng": "So likewise the Father is Almighty, the Son Almighty, * and the Holy Ghost Almighty."
+      },
+      {
+        "lat": "Et tamen non tres omnipoténtes, * sed unus omnípotens.",
+        "eng": "And yet they are not three Almighties, * but One Almighty."
+      },
+      {
+        "lat": "Ita Deus Pater, Deus Fílius, * Deus Spíritus Sanctus.",
+        "eng": "So the Father is God, the Son God, * and the Holy Ghost God."
+      },
+      {
+        "lat": "Et tamen non tres Dii, * sed unus est Deus.",
+        "eng": "And yet they are not three Gods, * but One God."
+      },
+      {
+        "lat": "Ita Dóminus Pater, Dóminus Fílius, * Dóminus Spíritus Sanctus.",
+        "eng": "So the Father is Lord, the Son Lord, * and the Holy Ghost Lord."
+      },
+      {
+        "lat": "Et tamen non tres Dómini, * sed unus est Dóminus.",
+        "eng": "And yet they are not three Lords, * but One Lord."
+      },
+      {
+        "lat": "Quia, sicut singillátim unamquámque persónam Deum ac Dóminum confitéri christiána veritáte compéllimur: * ita tres Deos aut Dóminos dícere cathólica religióne prohibémur.",
+        "eng": "For, like as we are compelled by Christian truth to acknowledge every Person by Himself to be God and Lord, * so are we forbidden by the Catholic Religion to say, there be three Gods or three Lords."
+      },
+      {
+        "lat": "Pater a nullo est factus: * nec creátus, nec génitus.",
+        "eng": "The Father is made of none, * neither created, nor begotten."
+      },
+      {
+        "lat": "Fílius a Patre solo est: * non factus, nec creátus, sed génitus.",
+        "eng": "The Son is of the Father alone: * not made, nor created, but begotten."
+      },
+      {
+        "lat": "Spíritus Sanctus a Patre et Fílio: * non factus, nec creátus, nec génitus, sed procédens.",
+        "eng": "The Holy Ghost is of the Father, and the Son: * not made, nor created, nor begotten, but proceeding."
+      },
+      {
+        "lat": "Unus ergo Pater, non tres Patres: unus Fílius, non tres Fílii: * unus Spíritus Sanctus, non tres Spíritus Sancti.",
+        "eng": "So there is One Father, not three Fathers; one Son, not three Sons; * one Holy Ghost, not three Holy Ghosts."
+      },
+      {
+        "lat": "Et in hac Trinitáte nihil prius aut postérius, nihil majus aut minus: * sed totæ tres persónæ coætérnæ sibi sunt et coæquáles.",
+        "eng": "And in this Trinity is nothing afore or after, nothing is greater or less; * but the whole three Persons are Co-Eternal together, and Co-Equal."
+      },
+      {
+        "lat": "Ita ut per ómnia, sicut jam supra dictum est, * et únitas in Trinitáte, et Trínitas in unitáte veneránda sit.",
+        "eng": "So that in all things, as is aforesaid, * the Unity in Trinity, and the Trinity in Unity is to be worshipped."
+      },
+      {
+        "lat": "Qui vult ergo salvus esse, * ita de Trinitáte séntiat.",
+        "eng": "He therefore that willeth to be safe, * let him thus think of the Trinity."
+      },
+      {
+        "lat": "Sed necessárium est ad ætérnam salútem, * ut Incarnatiónem quoque Dómini nostri Jesu Christi fidéliter credat.",
+        "eng": "But it is necessary to eternal salvation, * that he also believe faithfully the Incarnation of our Lord Jesus Christ."
+      },
+      {
+        "lat": "Est ergo fides recta ut credámus et confiteámur, * quia Dóminus noster Jesus Christus, Dei Fílius, Deus et homo est.",
+        "eng": "The right Faith therefore is, that we believe and confess, * that our Lord Jesus Christ, the Son of God, is God and man."
+      },
+      {
+        "lat": "Deus est ex substántia Patris ante sǽcula génitus: * et homo est ex substántia matris in sǽculo natus.",
+        "eng": "God, of the Substance of the Father, Begotten before the worlds: * and Man, of the substance of His mother, born in the world."
+      },
+      {
+        "lat": "Perféctus Deus, perféctus homo: * ex ánima rationáli et humána carne subsístens.",
+        "eng": "Perfect God, Perfect Man, * of a reasoning soul and human flesh subsisting."
+      },
+      {
+        "lat": "Æquális Patri secúndum divinitátem: * minor Patre secúndum humanitátem.",
+        "eng": "Equal to the Father as touching His Godhead, * inferior to the Father as touching His Manhood."
+      },
+      {
+        "lat": "Qui licet Deus sit et homo, * non duo tamen, sed unus est Christus.",
+        "eng": "Who, although He be God and Man, * yet He is not two, but One Christ."
+      },
+      {
+        "lat": "Unus autem non conversióne divinitátis in carnem, * sed assumptióne humanitátis in Deum.",
+        "eng": "One, however, not by conversion of the Godhead into Flesh, * but by taking of the Manhood into God."
+      },
+      {
+        "lat": "Unus omníno, non confusióne substántiæ, * sed unitáte persónæ.",
+        "eng": "One altogether, not by confusion of Substance, * but by Unity of Person."
+      },
+      {
+        "lat": "Nam sicut ánima rationális et caro unus est homo: * ita Deus et homo unus est Christus.",
+        "eng": "For as the reasoning soul and flesh is one man, * so God and man is One Christ."
+      },
+      {
+        "lat": "Qui passus est pro salúte nostra: descéndit ad ínferos: * tértia die resurréxit a mórtuis.",
+        "eng": "Who suffered for our salvation, descended into hell, * rose again the third day from the dead."
+      },
+      {
+        "lat": "Ascéndit ad cælos, sedet ad déxteram Dei Patris omnipoténtis: * inde ventúrus est judicáre vivos et mórtuos.",
+        "eng": "He ascended into heaven, He sitteth on the right hand of the Father, God Almighty, * from whence He shall come to judge the quick and the dead."
+      },
+      {
+        "lat": "Ad cujus advéntum omnes hómines resúrgere habent cum corpóribus suis; * et redditúri sunt de factis própriis ratiónem.",
+        "eng": "At whose coming all men shall rise again with their bodies, * and shall give account for their own works."
+      },
+      {
+        "lat": "Et qui bona egérunt, ibunt in vitam ætérnam: * qui vero mala, in ignem ætérnum.",
+        "eng": "And they that have done good shall go into life eternal, * but they that have done evil into eternal fire."
+      },
+      {
+        "lat": "Hæc est fides cathólica, * quam nisi quisque fidéliter firmitérque credíderit, salvus esse non póterit.",
+        "eng": "This is the Catholic Faith, * which except a man believe faithfully and firmly, he cannot be safe."
+      }
+    ],
+    "occasions": [
+      "Office",
+      "Trinity"
     ]
   }
 ]
