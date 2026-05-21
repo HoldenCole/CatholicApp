@@ -193,6 +193,13 @@ final class ContentStore {
     ///   - "C5", "C2-1" …   → commune key lookup (handled by legacy propers if present)
     /// Returns nil if the entry has no commune redirect, the target is missing,
     /// or the target itself has no Mass propers.
+    ///
+    /// Suppression: when the ordo's `name` for the date looks ferial (begins with
+    /// "Feria " or "Sabbato ") and shares no significant lexical signal with the
+    /// redirect target's `officium`, the redirect is treated as inapplicable.
+    /// This blocks abolished-octave bleed-through (e.g. 1962 ferias inside the
+    /// former Sacred Heart octave should NOT inherit Sacred Heart Mass propers,
+    /// while pre-1955 ferias inside the still-extant octave correctly do).
     private func resolveCommuneRedirect(forKey key: String, ordo: OrdoEntry, depth: Int = 0) -> MassProper? {
         guard depth < 4 else { return nil } // safety: prevent cycles
         let stub = missalTempora[key] ?? missalSanctoral[key]
@@ -211,22 +218,107 @@ final class ContentStore {
 
         let lowerKey = bareKey.lowercased()
 
+        // Helper: take a resolved target's Mass propers but suppress the inheritance
+        // if the ordo says the day is a ferial whose liturgical name has no lexical
+        // overlap with the target's officium (i.e., the redirect points at a feast
+        // that this rite does not observe on this date).
+        func gated(_ targetKey: String, _ entry: MissalProperEntry?) -> MassProper? {
+            guard let entry = entry else { return nil }
+            if redirectShouldBeSuppressed(ordoName: ordo.name, targetOfficium: entry.officium) {
+                return nil
+            }
+            return entry.toMassProper(key: targetKey, ordo: ordo)
+        }
+
         // Try the section first if specified
         switch section {
         case "Sancti":
-            if let mp = missalSanctoral[bareKey]?.toMassProper(key: bareKey, ordo: ordo) { return mp }
+            if let mp = gated(bareKey, missalSanctoral[bareKey]) { return mp }
             // Recursively follow if the target is itself a stub.
             if let mp = resolveCommuneRedirect(forKey: bareKey, ordo: ordo, depth: depth + 1) { return mp }
         case "Tempora":
-            if let mp = missalTempora[lowerKey]?.toMassProper(key: lowerKey, ordo: ordo) { return mp }
+            if let mp = gated(lowerKey, missalTempora[lowerKey]) { return mp }
             if let mp = resolveCommuneRedirect(forKey: lowerKey, ordo: ordo, depth: depth + 1) { return mp }
         default:
-            if let mp = missalTempora[lowerKey]?.toMassProper(key: lowerKey, ordo: ordo) { return mp }
-            if let mp = missalSanctoral[bareKey]?.toMassProper(key: bareKey, ordo: ordo) { return mp }
+            if let mp = gated(lowerKey, missalTempora[lowerKey]) { return mp }
+            if let mp = gated(bareKey, missalSanctoral[bareKey]) { return mp }
             if let mp = resolveCommuneRedirect(forKey: lowerKey, ordo: ordo, depth: depth + 1) { return mp }
             if let mp = resolveCommuneRedirect(forKey: bareKey, ordo: ordo, depth: depth + 1) { return mp }
         }
         return nil
+    }
+
+    // MARK: Commune-redirect suppression heuristic
+
+    /// Words that are too generic to count as a liturgical "signal" when comparing
+    /// the ordo's day-name to a redirect target's officium. These are calendar /
+    /// structural words ("Feria", "Hebdomadam", …) that would match across
+    /// unrelated formularies and produce false positives.
+    private static let redirectSignalStopWords: Set<String> = [
+        "feria", "sabbato", "dominica", "die", "dies", "infra", "post",
+        "hebdomadam", "hebdomadæ", "hebdomadae", "octava", "octavam",
+        "octavæ", "octavae", "festo", "festum", "commemoratio", "in",
+        "ad", "ac", "et", "de", "sub", "sancti", "sanctae", "sanctæ"
+    ]
+
+    /// Returns true iff the ordo's day-name has a ferial shape AND it shares no
+    /// significant lexical signal with the redirect target's officium. In that
+    /// case the redirect is deemed inapplicable for this rite-date and should be
+    /// suppressed (caller should fall through to the next resolution step,
+    /// eventually returning nil if no other Mass is available).
+    private func redirectShouldBeSuppressed(ordoName: String, targetOfficium: String?) -> Bool {
+        guard let target = targetOfficium, !target.isEmpty else { return false }
+        let lowerName = ordoName.lowercased()
+        let isFerial = lowerName.hasPrefix("feria ") || lowerName.hasPrefix("sabbato ")
+        guard isFerial else { return false }
+        let nameTokens = Self.significantTokens(ordoName)
+        let targetTokens = Self.significantTokens(target)
+        if nameTokens.isEmpty || targetTokens.isEmpty { return false }
+        // Latin inflection tolerance: treat tokens as matching when their
+        // longest common prefix is ≥5 chars (e.g. "septuagesima" ≈ "septuagesimæ",
+        // "epiphaniam" ≈ "epiphaniæ").
+        for n in nameTokens {
+            for t in targetTokens {
+                if Self.commonPrefixLength(n, t) >= 5 { return false }
+            }
+        }
+        return true
+    }
+
+    private static func commonPrefixLength(_ a: String, _ b: String) -> Int {
+        var ai = a.startIndex
+        var bi = b.startIndex
+        var n = 0
+        while ai < a.endIndex && bi < b.endIndex && a[ai] == b[bi] {
+            n += 1
+            ai = a.index(after: ai)
+            bi = b.index(after: bi)
+        }
+        return n
+    }
+
+    /// Tokenises a Latin liturgical string into "significant" lowercased words:
+    /// strips punctuation, drops stop-words (Feria/Hebdomadam/…), drops Roman
+    /// numerals, drops short tokens (<4 chars).
+    private static func significantTokens(_ s: String) -> [String] {
+        let lower = s.lowercased()
+        var current = ""
+        var out: [String] = []
+        for ch in lower {
+            if ch.isLetter {
+                current.append(ch)
+            } else {
+                if !current.isEmpty { out.append(current); current = "" }
+            }
+        }
+        if !current.isEmpty { out.append(current) }
+        let romanRegex = #"^[ivxlcdm]+$"#
+        return out.filter { tok in
+            if tok.count < 4 { return false }
+            if redirectSignalStopWords.contains(tok) { return false }
+            if tok.range(of: romanRegex, options: .regularExpression) != nil { return false }
+            return true
+        }
     }
 
     /// Returns the inherited temporal key (e.g., octave days inherit from the feast).

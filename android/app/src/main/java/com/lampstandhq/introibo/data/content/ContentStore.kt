@@ -190,6 +190,13 @@ object ContentStore {
         return propers.firstOrNull { it.slug == key }
     }
 
+    /**
+     * Resolves a `rule.commune` redirect on a stub entry. Mirrors the iOS
+     * implementation (Introibo/Data/ContentStore.swift). See that file for
+     * the full doc-comment, including the suppression rule that blocks
+     * abolished-octave bleed-through (e.g., 1962 ferias inside the former
+     * Sacred Heart octave must NOT inherit Sacred Heart Mass propers).
+     */
     private fun resolveCommuneRedirect(key: String, ordo: OrdoEntry, depth: Int = 0): MassProper? {
         if (depth >= 4) return null
         val stub = missalTempora[key] ?: missalSanctoral[key]
@@ -206,24 +213,105 @@ object ContentStore {
 
         val lowerKey = bareKey.lowercase()
 
+        // Helper: take a resolved target's Mass propers but suppress the inheritance
+        // if the ordo says the day is a ferial whose liturgical name has no lexical
+        // overlap with the target's officium (i.e., the redirect points at a feast
+        // that this rite does not observe on this date).
+        fun gated(targetKey: String, entry: MissalProperEntry?): MassProper? {
+            if (entry == null) return null
+            if (redirectShouldBeSuppressed(ordo.name, entry.officium)) return null
+            return entry.toMassProper(targetKey, ordo)
+        }
+
         when (section) {
             "Sancti" -> {
-                missalSanctoral[bareKey]?.toMassProper(bareKey, ordo)?.let { return it }
+                gated(bareKey, missalSanctoral[bareKey])?.let { return it }
                 resolveCommuneRedirect(bareKey, ordo, depth + 1)?.let { return it }
             }
             "Tempora" -> {
-                missalTempora[lowerKey]?.toMassProper(lowerKey, ordo)?.let { return it }
+                gated(lowerKey, missalTempora[lowerKey])?.let { return it }
                 resolveCommuneRedirect(lowerKey, ordo, depth + 1)?.let { return it }
             }
             else -> {
-                missalTempora[lowerKey]?.toMassProper(lowerKey, ordo)?.let { return it }
-                missalSanctoral[bareKey]?.toMassProper(bareKey, ordo)?.let { return it }
+                gated(lowerKey, missalTempora[lowerKey])?.let { return it }
+                gated(bareKey, missalSanctoral[bareKey])?.let { return it }
                 resolveCommuneRedirect(lowerKey, ordo, depth + 1)?.let { return it }
                 resolveCommuneRedirect(bareKey, ordo, depth + 1)?.let { return it }
             }
         }
         return null
     }
+
+    // ---- Commune-redirect suppression heuristic ----
+
+    /**
+     * Returns true iff the ordo's day-name has a ferial shape AND it shares no
+     * significant lexical signal with the redirect target's officium. In that
+     * case the redirect is deemed inapplicable for this rite-date and should be
+     * suppressed (caller will fall through to the next resolution step,
+     * eventually returning null if no other Mass is available).
+     */
+    private fun redirectShouldBeSuppressed(ordoName: String, targetOfficium: String?): Boolean {
+        if (targetOfficium.isNullOrEmpty()) return false
+        val lowerName = ordoName.lowercase()
+        val isFerial = lowerName.startsWith("feria ") || lowerName.startsWith("sabbato ")
+        if (!isFerial) return false
+        val nameTokens = significantTokens(ordoName)
+        val targetTokens = significantTokens(targetOfficium)
+        if (nameTokens.isEmpty() || targetTokens.isEmpty()) return false
+        // Latin inflection tolerance: treat tokens as matching when their
+        // longest common prefix is >= 5 chars (e.g. "septuagesima" ~ "septuagesimæ",
+        // "epiphaniam" ~ "epiphaniæ").
+        for (n in nameTokens) {
+            for (t in targetTokens) {
+                if (commonPrefixLength(n, t) >= 5) return false
+            }
+        }
+        return true
+    }
+
+    private fun commonPrefixLength(a: String, b: String): Int {
+        val limit = minOf(a.length, b.length)
+        var i = 0
+        while (i < limit && a[i] == b[i]) i++
+        return i
+    }
+
+    private fun significantTokens(s: String): List<String> {
+        val lower = s.lowercase()
+        val out = mutableListOf<String>()
+        val current = StringBuilder()
+        for (ch in lower) {
+            if (ch.isLetter()) {
+                current.append(ch)
+            } else {
+                if (current.isNotEmpty()) { out.add(current.toString()); current.setLength(0) }
+            }
+        }
+        if (current.isNotEmpty()) out.add(current.toString())
+        val romanRegex = Regex("^[ivxlcdm]+$")
+        return out.filter { tok ->
+            when {
+                tok.length < 4 -> false
+                tok in redirectSignalStopWords -> false
+                romanRegex.matches(tok) -> false
+                else -> true
+            }
+        }
+    }
+
+    /**
+     * Words that are too generic to count as a liturgical "signal" when
+     * comparing the ordo's day-name to a redirect target's officium. These
+     * are calendar / structural words ("Feria", "Hebdomadam", …) that would
+     * match across unrelated formularies and produce false positives.
+     */
+    private val redirectSignalStopWords: Set<String> = setOf(
+        "feria", "sabbato", "dominica", "die", "dies", "infra", "post",
+        "hebdomadam", "hebdomadæ", "hebdomadae", "octava", "octavam",
+        "octavæ", "octavae", "festo", "festum", "commemoratio", "in",
+        "ad", "ac", "et", "de", "sub", "sancti", "sanctae", "sanctæ"
+    )
 
     private fun inheritedTemporalKey(key: String): String? {
         // Ascension octave (Pasc5-5 through Pasc6-4) inherits from Pasc5-4
