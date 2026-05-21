@@ -165,10 +165,13 @@ struct MissalView: View {
         }
 
         // Dismissal: "Ite, missa est" when Gloria was said;
+        // "Ite, missa est, alleluia, alleluia" during Easter/Pentecost octave;
         // "Benedicamus Domino" when Gloria was not said;
         // "Requiescant in pace" at Requiem Masses.
         if proper.color == "black" {
             ordinarySection("requiescant")
+        } else if isEasterOrPentecostOctave {
+            ordinarySection("ite-alleluia")
         } else if showGloria(proper) {
             ordinarySection("ite")
         } else {
@@ -198,6 +201,20 @@ struct MissalView: View {
     }
 
     // MARK: - Rubric helpers
+
+    /// Returns true when the current day is within the Easter Octave
+    /// (Easter Sunday through the following Saturday) or the Pentecost Octave
+    /// (Pentecost Sunday through the following Saturday). On those days the
+    /// dismissal uses the doubled-Alleluia form: "Ite, missa est, alleluia,
+    /// alleluia."
+    private var isEasterOrPentecostOctave: Bool {
+        guard let key = ctx.temporalKey else { return false }
+        // Easter Octave: pasc0-0 (Easter Sun) through pasc0-6 (Sat in albis)
+        if key.hasPrefix("pasc0-") { return true }
+        // Pentecost Octave: pasc7-0 (Pentecost Sun) through pasc7-6
+        if key.hasPrefix("pasc7-") { return true }
+        return false
+    }
 
     /// Gloria is omitted during penitential seasons (Advent, Lent, Passion,
     /// pre-Lent) on ferial days. It IS said on fixed feasts even in those
@@ -505,6 +522,8 @@ struct MissalView: View {
         if let p = proper {
             if p.color == "black" {
                 addOrdinary("requiescant")
+            } else if isEasterOrPentecostOctave {
+                addOrdinary("ite-alleluia")
             } else if showGloria(p) {
                 addOrdinary("ite")
             } else {
@@ -530,7 +549,8 @@ struct MissalView: View {
         "preface-ascension", "preface-pentecost", "preface-trinity",
         "preface-bvm", "preface-joseph", "preface-apostles",
         "preface-requiem",
-        "agnus-requiem"
+        "agnus-requiem",
+        "ite-alleluia"
     ]
 
     private var ordinaryOnly: some View {

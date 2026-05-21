@@ -309,6 +309,190 @@ struct OfficeAssembler {
         return part
     }
 
+    // MARK: - Preces Feriales (Lauds & Vespers)
+    //
+    // 1962 Breviary rubric: Preces are said at Lauds and Vespers on ferial
+    // days (Mon-Sat) during Advent and Lent/Passiontide, provided no feast
+    // of Double rank or higher is celebrated. They are NOT said on Sundays,
+    // feast days (rank >= 3 / high-rank weekday feasts), during the Easter
+    // or Pentecost octaves, or on days of obligation.
+
+    /// Determines whether Preces Feriales should be included in the Hour.
+    private func shouldIncludePreces(context: LiturgicalContext) -> Bool {
+        // Never on Sundays
+        guard context.dayOfWeek != 0 else { return false }
+
+        // Only during Advent, Lent, or Passiontide
+        guard context.season == .advent || context.season == .lent || context.season == .passion else {
+            return false
+        }
+
+        // Not on high-rank weekday feasts (equivalent to Double rank or higher)
+        if let slug = context.properSlug, Self.highRankWeekdayFeasts.contains(slug) {
+            return false
+        }
+
+        return true
+    }
+
+    /// Inserts the Preces Feriales parts into the assembled hour, placed
+    /// after the Collect and before the concluding "Dómine, exáudi" versicle.
+    private func insertPreces(into parts: [Hour.Part], hour: String) -> [Hour.Part] {
+        // Find insertion point: after the collect part.
+        guard let collectIndex = parts.lastIndex(where: { $0.type == "collect" }) else {
+            return parts
+        }
+
+        let insertionIndex = collectIndex + 1
+        let precesParts = Self.makePrecesParts(hour: hour)
+
+        var result = Array(parts[..<insertionIndex])
+        result.append(contentsOf: precesParts)
+        result.append(contentsOf: parts[insertionIndex...])
+        return result
+    }
+
+    /// Builds the Preces Feriales parts for the given hour (Lauds or Vespers).
+    /// Vespers uses Psalm 50 (Miserere) instead of Psalm 129 (De profundis).
+    private static func makePrecesParts(hour: String) -> [Hour.Part] {
+        var parts: [Hour.Part] = []
+
+        // Heading
+        parts.append(Hour.Part(
+            type: "heading",
+            label: "Preces Feriales"
+        ))
+
+        // Kyrie
+        parts.append(Hour.Part(
+            type: "preces",
+            label: "Kyrie",
+            lat: "Kýrie, eléison. Christe, eléison. Kýrie, eléison.",
+            eng: "Lord, have mercy. Christ, have mercy. Lord, have mercy."
+        ))
+
+        // Pater noster (said silently through "et ne nos inducas in tentationem")
+        parts.append(Hour.Part(
+            type: "preces",
+            label: "Pater Noster",
+            lat: "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris.\n℣. Et ne nos indúcas in tentatiónem.\n℟. Sed líbera nos a malo.",
+            eng: "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us.\n℣. And lead us not into temptation.\n℟. But deliver us from evil."
+        ))
+
+        // Intercession versicles
+        parts.append(Hour.Part(
+            type: "preces",
+            label: "Versicles",
+            verses: precesVersicles
+        ))
+
+        // Psalm — De profundis (129) at Lauds, Miserere (50) at Vespers
+        if hour == "laudes" {
+            parts.append(Hour.Part(
+                type: "preces",
+                label: "Psalmus 129; De profúndis",
+                lat: "De profúndis clamávi ad te, Dómine: * Dómine, exáudi vocem meam.\nFiant aures tuæ intendéntes * in vocem deprecatiónis meæ.\nSi iniquitátes observáveris, Dómine: * Dómine, quis sustinébit?\nQuia apud te propitiátio est: * et propter legem tuam sustínui te, Dómine.\nSustínuit ánima mea in verbo ejus: * sperávit ánima mea in Dómino.\nA custódia matutína usque ad noctem, * speret Israël in Dómino.\nQuia apud Dóminum misericórdia, * et copiósa apud eum redémptio.\nEt ipse rédimet Israël * ex ómnibus iniquitátibus ejus.\nGlória Patri, et Fílio, * et Spirítui Sancto.\nSicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.",
+                eng: "Out of the depths I have cried to Thee, O Lord: * Lord, hear my voice.\nLet Thine ears be attentive * to the voice of my supplication.\nIf Thou, O Lord, wilt mark iniquities: * Lord, who shall stand it?\nFor with Thee there is merciful forgiveness: * and by reason of Thy law I have waited for Thee, O Lord.\nMy soul hath relied on His word: * my soul hath hoped in the Lord.\nFrom the morning watch even until night, * let Israel hope in the Lord.\nBecause with the Lord there is mercy, * and with Him plentiful redemption.\nAnd He shall redeem Israel * from all his iniquities.\nGlory be to the Father, and to the Son, * and to the Holy Ghost.\nAs it was in the beginning, is now, and ever shall be, * world without end. Amen."
+            ))
+        } else {
+            parts.append(Hour.Part(
+                type: "preces",
+                label: "Psalmus 50; Miserére",
+                lat: "Miserére mei, Deus, * secúndum magnam misericórdiam tuam.\nEt secúndum multitúdinem miseratiónum tuárum, * dele iniquitátem meam.\nAmplius lava me ab iniquitáte mea, * et a peccáto meo munda me.\nQuóniam iniquitátem meam ego cognósco, * et peccátum meum contra me est semper.\nTibi soli peccávi, et malum coram te feci: * ut justificéris in sermónibus tuis, et vincas cum judicáris.\nEcce enim in iniquitátibus concéptus sum, * et in peccátis concépit me mater mea.\nEcce enim veritátem dilexísti: * incérta et occúlta sapiéntiæ tuæ manifestásti mihi.\nAspérges me hyssópo, et mundábor: * lavábis me, et super nivem dealbábor.\nAudítui meo dabis gáudium et lætítiam, * et exsultábunt ossa humiliáta.\nAvérte fáciem tuam a peccátis meis, * et omnes iniquitátes meas dele.\nCor mundum crea in me, Deus, * et spíritum rectum ínnova in viscéribus meis.\nNe projícias me a fácie tua, * et Spíritum Sanctum tuum ne áuferas a me.\nRedde mihi lætítiam salutáris tui, * et spíritu principáli confírma me.\nDocébo iníquos vias tuas, * et ímpii ad te converténtur.\nLíbera me de sanguínibus, Deus, Deus salútis meæ, * et exsultábit lingua mea justítiam tuam.\nDómine, lábia mea apéries, * et os meum annuntiábit laudem tuam.\nQuóniam si voluísses sacrifícium, dedíssem útique: * holocáustis non delectáberis.\nSacrificium Deo spíritus contribulátus: * cor contrítum et humiliátum, Deus, non despícies.\nBenígne fac, Dómine, in bona voluntáte tua Sion, * ut ædificéntur muri Jerúsalem.\nTunc acceptábis sacrifícium justítiæ, oblatiónes et holocáusta: * tunc impónent super altáre tuum vítulos.\nGlória Patri, et Fílio, * et Spirítui Sancto.\nSicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.",
+                eng: "Have mercy on me, O God, * according to Thy great mercy.\nAnd according to the multitude of Thy tender mercies, * blot out my iniquity.\nWash me yet more from my iniquity, * and cleanse me from my sin.\nFor I know my iniquity, * and my sin is always before me.\nTo Thee only have I sinned, and have done evil before Thee: * that Thou mayest be justified in Thy words, and mayest overcome when Thou art judged.\nFor behold I was conceived in iniquities, * and in sins did my mother conceive me.\nFor behold Thou hast loved truth: * the uncertain and hidden things of Thy wisdom Thou hast made manifest to me.\nThou shalt sprinkle me with hyssop, and I shall be cleansed: * Thou shalt wash me, and I shall be made whiter than snow.\nTo my hearing Thou shalt give joy and gladness, * and the bones that have been humbled shall rejoice.\nTurn away Thy face from my sins, * and blot out all my iniquities.\nCreate a clean heart in me, O God, * and renew a right spirit within my bowels.\nCast me not away from Thy face, * and take not Thy Holy Spirit from me.\nRestore unto me the joy of Thy salvation, * and strengthen me with a perfect spirit.\nI will teach the unjust Thy ways, * and the wicked shall be converted to Thee.\nDeliver me from blood, O God, Thou God of my salvation, * and my tongue shall extol Thy justice.\nO Lord, Thou wilt open my lips, * and my mouth shall declare Thy praise.\nFor if Thou hadst desired sacrifice, I would indeed have given it: * with burnt offerings Thou wilt not be delighted.\nA sacrifice to God is an afflicted spirit: * a contrite and humbled heart, O God, Thou wilt not despise.\nDeal favorably, O Lord, in Thy good will with Sion, * that the walls of Jerusalem may be built up.\nThen shalt Thou accept the sacrifice of justice, oblations and whole burnt offerings: * then shall they lay calves upon Thine altar.\nGlory be to the Father, and to the Son, * and to the Holy Ghost.\nAs it was in the beginning, is now, and ever shall be, * world without end. Amen."
+            ))
+        }
+
+        // Concluding versicles
+        parts.append(Hour.Part(
+            type: "preces",
+            label: "Concluding Versicles",
+            verses: concludingVersicles
+        ))
+
+        return parts
+    }
+
+    /// The intercession versicles of the Preces Feriales (common to Lauds and Vespers).
+    private static let precesVersicles: [Hour.Part.Verse] = [
+        Hour.Part.Verse(
+            lat: "℣. Ego dixi: Dómine, miserére mei.\n℟. Sana ánimam meam quia peccávi tibi.",
+            eng: "℣. I said: Lord, be merciful unto me.\n℟. Heal my soul, for I have sinned against Thee."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Convértere, Dómine, úsquequo?\n℟. Et deprecábilis esto super servos tuos.",
+            eng: "℣. Turn Thee again, O Lord; how long will it be?\n℟. And be gracious unto Thy servants."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Fiat misericórdia tua, Dómine, super nos.\n℟. Quemádmodum sperávimus in te.",
+            eng: "℣. Let Thy mercy, O Lord, be upon us.\n℟. As we have hoped in Thee."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Sacerdótes tui induántur justítiam.\n℟. Et sancti tui exsúltent.",
+            eng: "℣. Let Thy priests be clothed with justice.\n℟. And may Thy saints rejoice."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Orémus pro beatíssimo Papa nostro N.\n℟. Dóminus consérvet eum, et vivíficet eum, et beátum fáciat eum in terra, et non tradat eum in ánimam inimicórum ejus.",
+            eng: "℣. Let us pray for our most blessed Pope N.\n℟. The Lord preserve him and give him life, and make him blessed upon the earth: and deliver him not up to the will of his enemies."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Orémus et pro Antístite nostro N.\n℟. Stet et pascat in fortitúdine tua, Dómine, in sublimitáte nóminis tui.",
+            eng: "℣. Let us pray for our Bishop N.\n℟. May he stand firm and care for us in the strength of the Lord, in the might of Thy name."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ.\n℟. Et rege eos, et extólle illos usque in ætérnum.",
+            eng: "℣. O Lord, save Thy people, and bless Thine inheritance.\n℟. Govern them and lift them up for ever."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Meménto Congregatiónis tuæ.\n℟. Quam possedísti ab inítio.",
+            eng: "℣. Remember Thy congregation.\n℟. Which Thou hast possessed from the beginning."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Fiat pax in virtúte tua.\n℟. Et abundántia in túrribus tuis.",
+            eng: "℣. Let peace be in Thy strength.\n℟. And abundance in Thy towers."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Orémus pro benefactóribus nostris.\n℟. Retribúere dignáre, Dómine, ómnibus, nobis bona faciéntibus propter nomen tuum, vitam ætérnam. Amen.",
+            eng: "℣. Let us pray for our benefactors.\n℟. O Lord, for Thy name's sake, deign to reward with eternal life all who do us good. Amen."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Orémus pro fidélibus defúnctis.\n℟. Réquiem ætérnam dona eis, Dómine, et lux perpétua lúceat eis.",
+            eng: "℣. Let us pray for the faithful departed.\n℟. Eternal rest grant unto them, O Lord, and let perpetual light shine upon them."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Requiéscant in pace.\n℟. Amen.",
+            eng: "℣. May they rest in peace.\n℟. Amen."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Pro frátribus nostris abséntibus.\n℟. Salvos fac servos tuos, Deus meus, sperántes in te.",
+            eng: "℣. Let us pray for our absent brothers.\n℟. Save Thy servants, O God, who put their trust in Thee."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Pro afflíctis et captívis.\n℟. Líbera eos, Deus Israël, ex ómnibus tribulatiónibus suis.",
+            eng: "℣. Let us pray for the afflicted and imprisoned.\n℟. Deliver them, God of Israel, from all their tribulations."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Mitte eis, Dómine, auxílium de sancto.\n℟. Et de Sion tuére eos.",
+            eng: "℣. O Lord, send them help from Thy sanctuary.\n℟. And defend them out of Sion."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Dómine, exáudi oratiónem meam.\n℟. Et clamor meus ad te véniat.",
+            eng: "℣. O Lord, hear my prayer.\n℟. And let my cry come unto Thee."
+        ),
+    ]
+
+    /// Concluding versicles after the psalm in Preces Feriales.
+    private static let concludingVersicles: [Hour.Part.Verse] = [
+        Hour.Part.Verse(
+            lat: "℣. Dómine, Deus virtútum, convérte nos.\n℟. Et osténde fáciem tuam, et salvi érimus.",
+            eng: "℣. Turn us again, O Lord, God of Hosts.\n℟. Show us Thy face, and we shall be whole."
+        ),
+        Hour.Part.Verse(
+            lat: "℣. Exsúrge, Christe, ádjuva nos.\n℟. Et líbera nos propter nomen tuum.",
+            eng: "℣. Arise, O Christ, and help us.\n℟. And redeem us for Thy name's sake."
+        ),
+    ]
+
     // MARK: - Season string mapping
 
     private func seasonString(for season: LiturgicalSeason) -> String {

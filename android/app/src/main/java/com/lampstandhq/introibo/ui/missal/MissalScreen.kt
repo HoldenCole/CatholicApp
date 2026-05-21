@@ -261,9 +261,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
         ordinaryItem("placeat")
     }
 
-    // Dismissal
+    // Dismissal: doubled-Alleluia form during Easter/Pentecost Octave
     if (proper.color == "black") {
         ordinaryItem("requiescant")
+    } else if (isEasterOrPentecostOctave(ctx)) {
+        ordinaryItem("ite-alleluia")
     } else if (showGloria(proper, ctx)) {
         ordinaryItem("ite")
     } else {
@@ -292,6 +294,16 @@ private fun lastGospelOverride(ctx: LiturgicalContext, rite: MissalRite): String
         } else null
     }
     return null
+}
+
+/**
+ * Returns true when the current day is within the Easter Octave (pasc0-0
+ * through pasc0-6) or the Pentecost Octave (pasc7-0 through pasc7-6).
+ * On those days the dismissal uses the doubled-Alleluia form.
+ */
+private fun isEasterOrPentecostOctave(ctx: LiturgicalContext): Boolean {
+    val key = ctx.temporalKey ?: return false
+    return key.startsWith("pasc0-") || key.startsWith("pasc7-")
 }
 
 private fun prefaceSlug(proper: MassProper, ctx: LiturgicalContext): String {
@@ -820,10 +832,12 @@ private fun buildFullMassText(
         addOrdinary("placeat")
     }
 
-    // Dismissal: Requiescant for black, Ite when Gloria was said, Benedicamus otherwise.
+    // Dismissal: Requiescant for black, doubled-Alleluia for Easter/Pentecost
+    // Octave, Ite when Gloria was said, Benedicamus otherwise.
     if (proper != null) {
         when {
             proper.color == "black" -> addOrdinary("requiescant")
+            isEasterOrPentecostOctave(ctx) -> addOrdinary("ite-alleluia")
             showGloria(proper, ctx) -> addOrdinary("ite")
             else -> addOrdinary("benedicamus")
         }
