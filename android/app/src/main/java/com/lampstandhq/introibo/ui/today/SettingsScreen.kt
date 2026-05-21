@@ -392,6 +392,37 @@ fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = n
                 )
             }
 
+            // ---- Licenses Section ----
+            item {
+                SettingsSectionHeader(title = "Licentia · Licenses")
+            }
+            item {
+                Column(modifier = Modifier.padding(vertical = 8.dp)) {
+                    Text(
+                        text = "Divinum Officium",
+                        style = type.bodySm.copy(fontFamily = FontFamily.Serif),
+                        color = colors.primaryText,
+                    )
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = "Liturgical texts for the Divine Office and Holy Mass are sourced from the Divinum Officium project (divinumofficium.com).",
+                        style = type.captionSm,
+                        color = colors.secondaryText,
+                    )
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = "Licensed under the MIT License.",
+                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                        color = colors.tertiaryText,
+                    )
+                }
+            }
+            item {
+                SettingsSectionFooter(
+                    text = "Introibo uses open-source liturgical data to ensure accuracy.",
+                )
+            }
+
             // ---- About Section ----
             item {
                 SettingsSectionHeader(title = "About")

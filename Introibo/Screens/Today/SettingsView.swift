@@ -22,6 +22,7 @@ struct SettingsView: View {
                 tutorialSection
                 feedbackSection
                 resetSection
+                licensesSection
                 aboutSection
             }
             .listStyle(.insetGrouped)
@@ -268,6 +269,31 @@ struct SettingsView: View {
             }
         } footer: {
             Text("Clears all local progress. Settings (rite, penance, theme) are not affected.")
+        }
+    }
+
+    // MARK: - Licenses
+
+    private var licensesSection: some View {
+        Section {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Divinum Officium")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color.primaryText)
+                Text("Liturgical texts for the Divine Office and Holy Mass are sourced from the Divinum Officium project (divinumofficium.com).")
+                    .font(.caption)
+                    .foregroundStyle(Color.secondaryText)
+                Text("Licensed under the MIT License.")
+                    .font(.caption)
+                    .italic()
+                    .foregroundStyle(Color.tertiaryText)
+            }
+            .listRowBackground(Color.pageBackground)
+        } header: {
+            Text("Licentia · Licenses")
+        } footer: {
+            Text("Introibo uses open-source liturgical data to ensure accuracy.")
         }
     }
 
