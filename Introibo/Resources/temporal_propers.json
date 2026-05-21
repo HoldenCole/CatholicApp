@@ -5001,7 +5001,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc1-2",
+      "lat": "Cum vénerit * Paráclitus Spíritus veritátis, ille árguet mundum de peccáto, et de justítia, et de judício, allelúja.",
       "eng": "When the Comforter, the Spirit of truth, is come, * He will reprove the world of sin, and of righteousness, and of judgment. Alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -5052,14 +5052,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-3",
+      "lat": "Spíritus * carnem et ossa non habet, sicut me vidétis habére: jam crédite, allelúja.",
       "eng": "A spirit hath not flesh and bones, * as ye see Me to have: now believe. Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc1-3",
+      "lat": "Adhuc multa hábeo * vobis dícere, sed non potéstis portáre modo: cum autem vénerit ille Spíritus veritátis, docébit vos omnem veritátem, allelúja.",
       "eng": "I have yet many things to say unto you, but ye cannot bear them now. * Howbeit, when He, the Spirit of truth, is come, He will guide you into all truth. Alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -5110,14 +5110,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-4",
+      "lat": "Obtulérunt discípuli * Dómino partem piscis assi, et favum mellis, allelúja, allelúja.",
       "eng": "The disciples gave the Lord a piece * of a broiled fish, and of an honeycomb, alleluia, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pasc1-4",
+      "lat": "Non enim loquétur * a semetípso: sed quæcúmque áudiet, loquétur: et quæ ventúra sunt, annuntiábit vobis, allelúja.",
       "eng": "For He shall not speak of Himself; * but whatsoever He shall hear, that shall He speak and He will show you things to come, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
