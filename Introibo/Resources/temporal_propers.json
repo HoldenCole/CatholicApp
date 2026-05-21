@@ -5168,7 +5168,7 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pasc1-5",
+      "lat": "Isti sunt sermónes, * quos dicébam vobis, cum essem vobíscum, allelúja, allelúja.",
       "eng": "These are the words * which I spake unto you, while I was with you. Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
@@ -7259,7 +7259,7 @@
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
-      "lat": "@Psalterium/Special/Minor Special:Hymnus Pasc7 Tertia",
+      "lat": "/:Prima stropha hymni sequentis dicitur flexibus genibus.:/\nv. Veni Creátor Spíritus,\nMentes tuórum vísita,\nImple supérna grátia,\nQuæ tu creásti péctora.\n_\nQui díceris Paráclitus,\nAltíssimi donum Dei,\nFons vivus, ignis, cáritas,\nEt spiritális únctio.\n_\nTu septifórmis múnere,\nDígitus patérnæ déxteræ,\nTu rite promíssum Patris,\nSermóne ditans gúttura.\n_\nAccénde lumen sénsibus:\nInfúnde amórem córdibus:\nInfírma nostri córporis\nVirtúte firmans pérpeti.\n_\nHostem repéllas lóngius,\nPacémque dones prótinus:\nDuctóre sic te prǽvio\nVitémus omne nóxium.\n_\nPer te sciámus da Patrem,\nNoscámus atque Fílium,\nTeque utriúsque Spíritum\nCredámus omni témpore.\n_\n* Deo Patri sit glória,\nEt Fílio, qui a mórtuis\nSurréxit, ac Paráclito,\nIn sæculórum sǽcula.\nAmen.",
       "eng": "/:The first verse of the following hymn is said genuflecting.:/\nv. Creator Spirit, all Divine,\nCome, visit every soul of Thine,\nAnd fill with Thy celestial flame\nThe hearts which Thou Thyself didst frame.\n\nO gift of God, Thine is the sweet\nConsoling name of Paraclete\nAnd spring of life and fire and love\nAnd unction flowing from above.\n\nThe mystic sevenfold gifts are Thine,\nFinger of God's right hand divine;\nThe Father's promise sent to teach\nThe tongue a rich and heavenly speech.\n\nKindle with fire brought from above\nEach sense, and fill our hearts with love;\nAnd grant our flesh, so weak and frail,\nThe strength of Thine which cannot fail.\n\nDrive far away our deadly foe,\nAnd grant us Thy true peace to know;\nSo we, led by Thy guidance still,\nMay safely pass through every ill.\n\nTo us, through Thee, the grace be shown\nTo know the Father and the Son;\nAnd Spirit of Them both, may we\nForever rest our faith in Thee.\n\nTo Sire and Son be praises meet,\nAnd to the Holy Paraclete;\nAnd may Christ send us from above\nThat Holy Spirit's gift of love.\nAmen",
       "variationKey": "vesperae.hymn"
     },
@@ -8399,14 +8399,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pent01-5",
+      "lat": "Ego sum * panis vivus, qui de cælo descéndi: si quis manducáverit ex hoc pane, vivet in ætérnum, allelúja.",
       "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pent01-5",
+      "lat": "O sacrum convívium, * in quo Christus súmitur: recólitur memória passiónis ejus: mens implétur grátia: et futúræ glóriæ nobis pignus datur, allelúja.",
       "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -8552,14 +8552,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pent01-5",
+      "lat": "Ego sum * panis vivus, qui de cælo descéndi: si quis manducáverit ex hoc pane, vivet in ætérnum, allelúja.",
       "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pent01-5",
+      "lat": "O sacrum convívium, * in quo Christus súmitur: recólitur memória passiónis ejus: mens implétur grátia: et futúræ glóriæ nobis pignus datur, allelúja.",
       "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -8705,14 +8705,14 @@
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
-      "lat": "@Tempora/Pent01-5",
+      "lat": "Ego sum * panis vivus, qui de cælo descéndi: si quis manducáverit ex hoc pane, vivet in ætérnum, allelúja.",
       "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Tempora/Pent01-5",
+      "lat": "O sacrum convívium, * in quo Christus súmitur: recólitur memória passiónis ejus: mens implétur grátia: et futúræ glóriæ nobis pignus datur, allelúja.",
       "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -12306,7 +12306,7 @@
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
-      "lat": "@Tempora/Quad6-4",
+      "lat": "Próprio * Fílio suo non pepércit Deus, sed pro nobis ómnibus trádidit illum.",
       "eng": "God spared not His Own Son * but delivered Him up for us all.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
@@ -12477,7 +12477,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "@Psalterium/Special/Major Special:Feria2C Ant 3",
+      "lat": "Hi novíssimi * una hora fecérunt, et pares illos nobis fecísti, qui portávimus pondus diéi, et æstus.",
       "eng": "These last have wrought but one hour, * and thou hast made them equal unto us, which have borne the burden and heat of the day.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
