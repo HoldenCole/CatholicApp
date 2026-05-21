@@ -174,6 +174,13 @@ object ContentStore {
                 missalSanctoral["11-02m1"]?.toMassProper("11-02m1", entry)?.let { return it }
             }
         }
+        // Pre-1955 rite: prefer the "r" suffixed variant if present (mirrors DO's
+        // Pasc7-6r.txt / Quad6-4r.txt convention for pre-1955-specific formularies).
+        if (rite == MissalRite.PRE_1955) {
+            val rKey = "${key}r"
+            missalTempora[rKey]?.toMassProper(rKey, entry)?.let { return it }
+            missalSanctoral[rKey]?.toMassProper(rKey, entry)?.let { return it }
+        }
         missalTempora[key]?.toMassProper(key, entry)?.let { return it }
         missalSanctoral[key]?.toMassProper(key, entry)?.let { return it }
         resolveCommuneRedirect(key, entry)?.let { return it }

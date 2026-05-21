@@ -138,15 +138,15 @@ final class ContentStore {
 
     func properForToday(rite: MissalRite = .rite1962) -> MassProper? {
         let entry = ordoForDate(Date(), rite: rite)
-        return properFromOrdo(entry)
+        return properFromOrdo(entry, rite: rite)
     }
 
     func properForDate(_ date: Date, rite: MissalRite = .rite1962) -> MassProper? {
         let entry = ordoForDate(date, rite: rite)
-        return properFromOrdo(entry)
+        return properFromOrdo(entry, rite: rite)
     }
 
-    private func properFromOrdo(_ entry: OrdoEntry?) -> MassProper? {
+    private func properFromOrdo(_ entry: OrdoEntry?, rite: MissalRite = .rite1962) -> MassProper? {
         guard let entry = entry else { return nil }
         let key = entry.winnerKey
 
@@ -160,6 +160,13 @@ final class ContentStore {
             if key == "11-02", let mp = missalSanctoral["11-02m1"]?.toMassProper(key: "11-02m1", ordo: entry) {
                 return mp
             }
+        }
+        // Pre-1955 rite: prefer the "r" suffixed variant if present (mirrors DO's
+        // Pasc7-6r.txt / Quad6-4r.txt convention for pre-1955-specific formularies).
+        if rite == .pre1955 {
+            let rKey = "\(key)r"
+            if let mp = missalTempora[rKey]?.toMassProper(key: rKey, ordo: entry) { return mp }
+            if let mp = missalSanctoral[rKey]?.toMassProper(key: rKey, ordo: entry) { return mp }
         }
         if let mp = missalTempora[key]?.toMassProper(key: key, ordo: entry) { return mp }
         if let mp = missalSanctoral[key]?.toMassProper(key: key, ordo: entry) { return mp }

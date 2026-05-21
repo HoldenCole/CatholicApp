@@ -7114,6 +7114,56 @@
       "eng": "Strengthened with life-giving Food, we beseech Thee, O Lord, our God, that what we do in our mortal life may bring us to the reward of life immortal with Thee."
     }
   },
+  "quad6-4r": {
+    "officium": "Feria Quinta in Cœna Domini",
+    "rank": 7,
+    "rule": {
+      "gloria": true,
+      "preface": "Quad5"
+    },
+    "introitus": {
+      "lat": "Nos autem gloriári opórtet in Cruce Dómini nostri Jesu Christi: in quo est salus, vita et resurréctio nostra: per quem salváti et liberáti sumus. Deus misereátur nostri, et benedícat nobis: illúminet vultum suum super nos, et misereátur nostri. Nos autem gloriári opórtet in Cruce Dómini nostri Jesu Christi: in quo est salus, vita et resurréctio nostra: per quem salváti et liberáti sumus.",
+      "eng": "But it behooves us to glory in the cross of Our Lord Jesus Christ: in Whom is our salvation, life, and resurrection; by whom we are saved and delivered. May God have mercy on us, and bless us: may He cause the light of His countenance to shine upon us; and may He have mercy on us. But it behooves us to glory in the cross of Our Lord Jesus Christ: in Whom is our salvation, life, and resurrection; by whom we are saved and delivered.",
+      "ref": "Gal 6:14; Ps 66:2"
+    },
+    "oratio": {
+      "lat": "Deus, a quo et Iudas reátus sui pœnam, et confessiónis suæ latro prǽmium sumpsit, concéde novis tuæ propitiatiónis efféctum: ut sicut in passióne sua Iesus Christus Dóminus noster divérsa utrísque íntulit stipéndia meritórum; ita nobis, abláto vetustátis erróre, resurrectiónis suæ grátiam largiátur:",
+      "eng": "O God, from whom Judas received the punishment of his guilt, and the thief the reward of his confession: grant unto us the full fruit of Thy clemency; that even as in His Passion, our Lord Jesus Christ gave to each a retribution according to his merits, so having taken away our old sins, He may bestow upon us the grace of His Resurrection."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Corínthios. Fratres: Conveniéntibus vobis in unum, jam non est Domínicam cœnam manducáre. Unusquísque enim suam cenam præsúmit ad manducándum. Et alius quidem ésurit: álius autem ébrius est. Numquid domos non habétis ad manducándum et bibéndum? aut ecclésiam Dei contémnitis, et confúnditis eos, qui non habent? Quid dicam vobis? Laudo vos? In hoc non laudo. Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite, et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem. Simíliter et cálicem, postquam cœnávit, dicens: Hic calix novum Testaméntum est in meo sánguine: hoc fácite, quotiescúmque bibétis, in meam commemoratiónem. Quotiescúmque enim manducábitis panem hunc et cálicem bibétis: mortem Dómini annuntiábitis, donec véniat. Itaque quicúmque manducáverit panem hunc vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini. Probet autem seípsum homo: et sic de pane illo edat et de cálice bibat. Qui enim mandúcat et bibit indígne, judícium sibi mandúcat et bibit: non dijúdicans corpus Dómini. Ideo inter vos multi infirmi et imbecílles, et dórmiunt multi. Quod si nosmetípsos dijudicarémus, non útique judicarémur. Dum judicámur autem, a Dómino corrípimur, ut non cum hoc mundo damnémur.",
+      "eng": "Lesson from the first letter of blessed Paul the Apostle to the Corinthians. Brethren, When you come therefore into one place, it is not now to eat the Lord's supper. For every one taketh before his own supper to eat. And one indeed is hungry and another is drunk. What, have you not houses to eat and to drink in? Or despise ye the church of God and put them to shame that have not? What shall I say to you? Do I praise you? In this I praise you not. For I have received of the Lord that which I also delivered unto you, that the Lord Jesus, the same night in which He was betrayed, took bread, and giving thanks, broke and said: Take ye and eat: This is My Body, which shall be delivered for you. This do for the commemoration of Me. In like manner also the chalice, after He had supped, saying: This chalice is the new testament in My Blood. This do ye, as often as you shall drink, for the commemoration of Me. For as often as you shall eat this bread and drink the chalice, you shall show the death of the Lord, until He come. Therefore, whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the Body and the Blood of the Lord. But let a man prove himself; and so let him eat of that bread and drink of the chalice. For he that eateth and drinketh unworthily eateth and drinketh judgment to himself, not discerning the Body of the Lord. Therefore are there many infirm and weak among you: and many sleep. But if we would judge ourselves, we should not be judged. But whilst we are judged, we are chastised by the Lord, that we be not condemned with this world.",
+      "ref": "1 Cor 11:20-32"
+    },
+    "graduale": {
+      "lat": "Christus factus est pro nobis obœ́diens usque ad mortem, mortem autem crucis. Propter quod et Deus exaltávit illum: et dedit illi nomen, quod est super omne nomen.",
+      "eng": "Christ became obedient for us unto death, even to the death of the cross. V. For which cause God also exalted Him and hath given Him a Name which is above all names.",
+      "ref": "Phil 2:8-9"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem. Ante diem festum Paschæ, sciens Jesus, quia venit hora ejus, ut tránseat ex hoc mundo ad Patrem: cum dilexísset suos, qui erant in mundo, in finem diléxit eos. Et cena facta, cum diábolus jam misísset in cor, ut tráderet eum Judas Simónis Iscariótæ: sciens, quia ómnia dedit ei Pater in manus, et quia a Deo exivit, et ad Deum vadit: surgit a cena et ponit vestiménta sua: et cum accepísset línteum, præcínxit se. Deinde mittit aquam in pelvim, et cœpit laváre pedes discipulórum, et extérgere línteo, quo erat præcínctus. Venit ergo ad Simónem Petrum. Et dicit ei Petrus: Dómine, tu mihi lavas pedes? Respóndit Jesus et dixit ei: Quod ego fácio, tu nescis modo, scies autem póstea. Dicit ei Petrus: Non lavábis mihi pedes in ætérnum. Respóndit ei Jesus: Si non lávero te, non habébis partem mecum. Dicit ei Simon Petrus: Dómine, non tantum pedes meos, sed et manus et caput. Dicit ei Jesus: Qui lotus est, non índiget nisi ut pedes lavet, sed est mundus totus. Et vos mundi estis, sed non omnes. Sciébat enim, quisnam esset, qui tráderet eum: proptérea dixit: Non estis mundi omnes. Postquam ergo lavit pedes eórum et accépit vestiménta sua: cum recubuísset íterum, dixit eis: Scitis, quid fécerim vobis? Vos vocátis me Magíster et Dómine: et bene dícitis: sum étenim. Si ergo ego lavi pedes vestros, Dóminus et Magíster: et vos debétis alter altérius laváre pedes. Exémplum enim dedi vobis, ut, quemádmodum ego feci vobis, ita et vos faciátis.",
+      "eng": "Continuation ++ of the holy Gospel according to John. Before the festival-day of the Pasch, Jesus knowing that His hour was come, that He should pass out of this world to the Father, having loved His own who were in the world, He loved them unto the end. And when supper was done — the devil having now put into the heart of Judas, the son of Simon the Iscariot, to betray Him — knowing that the Father had given Him all things into His hands and that He came from God and goeth to God: He riseth from supper and layeth aside His garments and, having taken a towel, girded Himself. After that, He putteth water into a basin and began to wash the feet of the disciples and to wipe them with the towel wherewith He was girded. He cometh therefore to Simon Peter. And Peter saith to Him: Lord, dost Thou wash my feet? Jesus answered and said to him: What I do, thou knowest not now: but thou shalt know hereafter. Peter saith to Him: Thou shalt never wash my feet. Jesus answered him: If I wash thee not, thou shalt have no part with Me. Simon Peter saith to Him: Lord, not only my feet, but also my hands and my head. Jesus saith to him: He that is washed needeth not but to wash his feet, but is clean wholly. And you are clean, but not all. For He knew who he was that would betray Him; therefore He said: You are not all clean. Then after He had washed their feet and taken His garments, being set down again, He said to them: Know you what I have done to you? You call Me Master and Lord. And you say well; for so I am. If then I being your Lord and Master, have washed your feet, you also ought to wash one another's feet. For I have given you an example, that as I have done to you, so you do also.",
+      "ref": "Joann 13:1-15"
+    },
+    "offertorium": {
+      "lat": "Déxtera Dómini fecit virtútem, déxtera Dómini exaltávit me: non móriar, sed vivam, et narrábo ópera Dómini.",
+      "eng": "The right hand of the Lord hath wrought strength: the right hand of the Lord hath exalted me. I shall not die, but live, and shall declare the works of the Lord.",
+      "ref": "Ps 117:16-17"
+    },
+    "secreta": {
+      "lat": "Ipse tibi, quǽsumus, Dómine sancte, Pater omnípotens, ætérne Deus, sacrifícium nostrum reddat accéptum, qui discípulis suis in sui commemoratiónem hoc fíeri hodiérna traditióne monstrávit, Jesus Christus, Fílius tuus, Dóminus noster:",
+      "eng": "We beseech Thee, O holy Lord, Father almighty, everlasting God, that He Himself may render our Sacrifice acceptable to Thee, Who, by the tradition of today, taught His disciples to do this in remembrance of Him, Jesus Christ, Thy Son, our Lord,"
+    },
+    "communio": {
+      "lat": "Dóminus Jesus, postquam cœnávit cum discípulis suis, lavit pedes eórum, et ait illis: Scitis, quid fécerim vobis ego, Dóminus et Magíster? Exemplum dedi vobis, ut et vos ita faciátis.",
+      "eng": "The Lord Jesus, after He had supped with His disciples, washed their feet, and said to them: Know you what I, your Lord and Master, have done to you? I gave you an example, that you also may do likewise.",
+      "ref": "Joann 13:12-15"
+    },
+    "postcommunio": {
+      "lat": "Refécti vitálibus aliméntis, quǽsumus, Dómine, Deus noster: ut, quod témpore nostræ mortalitátis exséquimur, immortalitátis tuæ múnere consequámur.",
+      "eng": "Strengthened with life-giving Food, we beseech Thee, O Lord, our God, that what we do in our mortal life may bring us to the reward of life immortal with Thee."
+    }
+  },
   "quad6-5": {
     "officium": "Feria Sexta in Parasceve",
     "rank": 7

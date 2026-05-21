@@ -2578,8 +2578,8 @@
     "sanctoral": "08-22",
     "winner": "sanctoral",
     "winnerKey": "08-22",
-    "rank": 3.0,
-    "name": "In Octava Assumptionis B.M.V.",
+    "rank": 5.1,
+    "name": "Immaculati Cordis Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent13-4"
@@ -2840,13 +2840,13 @@
   "2024-09-15": {
     "temporal": "pent17-0",
     "sanctoral": "09-15",
-    "winner": "temporal",
-    "winnerKey": "pent17-0",
-    "rank": 5.0,
-    "name": "Dominica XVII Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "09-15",
+    "rank": 5.1,
+    "name": "Septem Dolorum Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "09-15"
+    "commemoration": "pent17-0"
   },
   "2024-09-16": {
     "temporal": "pent17-1",
@@ -2994,13 +2994,13 @@
   "2024-09-29": {
     "temporal": "pent19-0",
     "sanctoral": "09-29",
-    "winner": "temporal",
-    "winnerKey": "pent19-0",
-    "rank": 5.0,
-    "name": "Dominica XIX Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "09-29",
+    "rank": 6.0,
+    "name": "In Dedicatione S. Michaëlis Archangelis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "09-29"
+    "commemoration": "pent19-0"
   },
   "2024-09-30": {
     "temporal": "pent19-1",
@@ -3084,8 +3084,8 @@
     "sanctoral": "10-07",
     "winner": "sanctoral",
     "winnerKey": "10-07",
-    "rank": 1.1,
-    "name": "Simplex",
+    "rank": 5.1,
+    "name": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent20-1"
@@ -6593,8 +6593,8 @@
     "sanctoral": "08-22",
     "winner": "sanctoral",
     "winnerKey": "08-22",
-    "rank": 3.0,
-    "name": "In Octava Assumptionis B.M.V.",
+    "rank": 5.1,
+    "name": "Immaculati Cordis Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent10-5"
@@ -6857,8 +6857,8 @@
     "sanctoral": "09-15",
     "winner": "sanctoral",
     "winnerKey": "09-15",
-    "rank": 3.0,
-    "name": "In Octava Nativitatis Beatæ Mariæ Virginis",
+    "rank": 5.1,
+    "name": "Septem Dolorum Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent14-1"
@@ -7099,8 +7099,8 @@
     "sanctoral": "10-07",
     "winner": "sanctoral",
     "winnerKey": "10-07",
-    "rank": 1.1,
-    "name": "Simplex",
+    "rank": 5.1,
+    "name": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent17-2"
@@ -7460,13 +7460,13 @@
   "2025-11-09": {
     "temporal": "pent22-0",
     "sanctoral": "11-09",
-    "winner": "temporal",
-    "winnerKey": "pent22-0",
-    "rank": 5.0,
-    "name": "Dominica XXII Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "11-09",
+    "rank": 5.5,
+    "name": "In Dedicatione Archibasilicæ Ss. Salvatoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "11-09"
+    "commemoration": "pent22-0"
   },
   "2025-11-10": {
     "temporal": "pent22-1",
@@ -10309,13 +10309,13 @@
   "2026-07-26": {
     "temporal": "pent09-0",
     "sanctoral": "07-26",
-    "winner": "temporal",
-    "winnerKey": "pent09-0",
-    "rank": 5.0,
-    "name": "Dominica IX Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "07-26",
+    "rank": 5.1,
+    "name": "S. Annæ Matris B.M.V.",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "07-26"
+    "commemoration": "pent09-0"
   },
   "2026-07-27": {
     "temporal": "pent09-1",
@@ -10608,8 +10608,8 @@
     "sanctoral": "08-22",
     "winner": "sanctoral",
     "winnerKey": "08-22",
-    "rank": 3.0,
-    "name": "In Octava Assumptionis B.M.V.",
+    "rank": 5.1,
+    "name": "Immaculati Cordis Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent12-6"
@@ -10872,8 +10872,8 @@
     "sanctoral": "09-15",
     "winner": "sanctoral",
     "winnerKey": "09-15",
-    "rank": 3.0,
-    "name": "In Octava Nativitatis Beatæ Mariæ Virginis",
+    "rank": 5.1,
+    "name": "Septem Dolorum Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent16-2"
@@ -11114,8 +11114,8 @@
     "sanctoral": "10-07",
     "winner": "sanctoral",
     "winnerKey": "10-07",
-    "rank": 1.1,
-    "name": "Simplex",
+    "rank": 5.1,
+    "name": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent19-3"
@@ -14621,13 +14621,13 @@
   "2027-08-22": {
     "temporal": "pent14-0",
     "sanctoral": "08-22",
-    "winner": "temporal",
-    "winnerKey": "pent14-0",
-    "rank": 5.0,
-    "name": "Dominica XIV Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "08-22",
+    "rank": 5.1,
+    "name": "Immaculati Cordis Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "08-22"
+    "commemoration": "pent14-0"
   },
   "2027-08-23": {
     "temporal": "pent14-1",
@@ -14887,8 +14887,8 @@
     "sanctoral": "09-15",
     "winner": "sanctoral",
     "winnerKey": "09-15",
-    "rank": 3.0,
-    "name": "In Octava Nativitatis Beatæ Mariæ Virginis",
+    "rank": 5.1,
+    "name": "Septem Dolorum Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent17-3"
@@ -15129,8 +15129,8 @@
     "sanctoral": "10-07",
     "winner": "sanctoral",
     "winnerKey": "10-07",
-    "rank": 1.1,
-    "name": "Simplex",
+    "rank": 5.1,
+    "name": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent20-4"
@@ -18471,13 +18471,13 @@
   "2028-08-06": {
     "temporal": "pent09-0",
     "sanctoral": "08-06",
-    "winner": "temporal",
-    "winnerKey": "pent09-0",
-    "rank": 5.0,
-    "name": "Dominica IX Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "08-06",
+    "rank": 5.1,
+    "name": "In Transfiguratione Domini Nostri Jesu Christi",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "08-06"
+    "commemoration": "pent09-0"
   },
   "2028-08-07": {
     "temporal": "pent09-1",
@@ -18649,8 +18649,8 @@
     "sanctoral": "08-22",
     "winner": "sanctoral",
     "winnerKey": "08-22",
-    "rank": 3.0,
-    "name": "In Octava Assumptionis B.M.V.",
+    "rank": 5.1,
+    "name": "Immaculati Cordis Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent11-2"
@@ -18913,8 +18913,8 @@
     "sanctoral": "09-15",
     "winner": "sanctoral",
     "winnerKey": "09-15",
-    "rank": 3.0,
-    "name": "In Octava Nativitatis Beatæ Mariæ Virginis",
+    "rank": 5.1,
+    "name": "Septem Dolorum Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent14-5"
@@ -19155,8 +19155,8 @@
     "sanctoral": "10-07",
     "winner": "sanctoral",
     "winnerKey": "10-07",
-    "rank": 1.1,
-    "name": "Simplex",
+    "rank": 5.1,
+    "name": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent17-6"
@@ -20011,13 +20011,13 @@
   "2028-12-24": {
     "temporal": "adv4-0",
     "sanctoral": "12-24",
-    "winner": "temporal",
-    "winnerKey": "adv4-0",
+    "winner": "sanctoral",
+    "winnerKey": "12-24",
     "rank": 6.1,
-    "name": "Dominica IV Adventus",
+    "name": "In Vigilia Nativitatis Domini",
     "color": "violet",
     "season": "advent",
-    "commemoration": "12-24"
+    "commemoration": "adv4-0"
   },
   "2028-12-25": {
     "temporal": "nat00",
@@ -22090,13 +22090,13 @@
   "2029-07-01": {
     "temporal": "pent06-0",
     "sanctoral": "07-01",
-    "winner": "temporal",
-    "winnerKey": "pent06-0",
-    "rank": 5.0,
-    "name": "Dominica VI Post Pentecosten",
-    "color": "white",
+    "winner": "sanctoral",
+    "winnerKey": "07-01",
+    "rank": 6.0,
+    "name": "Pretiosissimi Sanguinis Domini Nostri Jesu Christi",
+    "color": "red",
     "season": "ordinary",
-    "commemoration": "07-01"
+    "commemoration": "pent06-0"
   },
   "2029-07-02": {
     "temporal": "pent06-1",
@@ -22664,8 +22664,8 @@
     "sanctoral": "08-22",
     "winner": "sanctoral",
     "winnerKey": "08-22",
-    "rank": 3.0,
-    "name": "In Octava Assumptionis B.M.V.",
+    "rank": 5.1,
+    "name": "Immaculati Cordis Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent13-3"
@@ -22928,8 +22928,8 @@
     "sanctoral": "09-15",
     "winner": "sanctoral",
     "winnerKey": "09-15",
-    "rank": 3.0,
-    "name": "In Octava Nativitatis Beatæ Mariæ Virginis",
+    "rank": 5.1,
+    "name": "Septem Dolorum Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent16-6"
@@ -23168,13 +23168,13 @@
   "2029-10-07": {
     "temporal": "pent20-0",
     "sanctoral": "10-07",
-    "winner": "temporal",
-    "winnerKey": "pent20-0",
-    "rank": 5.0,
-    "name": "Dominica XX Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "10-07",
+    "rank": 5.1,
+    "name": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "10-07"
+    "commemoration": "pent20-0"
   },
   "2029-10-08": {
     "temporal": "pent20-1",
@@ -26679,8 +26679,8 @@
     "sanctoral": "08-22",
     "winner": "sanctoral",
     "winnerKey": "08-22",
-    "rank": 3.0,
-    "name": "In Octava Assumptionis B.M.V.",
+    "rank": 5.1,
+    "name": "Immaculati Cordis Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent10-4"
@@ -26941,13 +26941,13 @@
   "2030-09-15": {
     "temporal": "pent14-0",
     "sanctoral": "09-15",
-    "winner": "temporal",
-    "winnerKey": "pent14-0",
-    "rank": 5.0,
-    "name": "Dominica XIV Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "09-15",
+    "rank": 5.1,
+    "name": "Septem Dolorum Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "09-15"
+    "commemoration": "pent14-0"
   },
   "2030-09-16": {
     "temporal": "pent14-1",
@@ -27095,13 +27095,13 @@
   "2030-09-29": {
     "temporal": "pent16-0",
     "sanctoral": "09-29",
-    "winner": "temporal",
-    "winnerKey": "pent16-0",
-    "rank": 5.0,
-    "name": "Dominica XVI Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "09-29",
+    "rank": 6.0,
+    "name": "In Dedicatione S. Michaëlis Archangelis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "09-29"
+    "commemoration": "pent16-0"
   },
   "2030-09-30": {
     "temporal": "pent16-1",
@@ -27185,8 +27185,8 @@
     "sanctoral": "10-07",
     "winner": "sanctoral",
     "winnerKey": "10-07",
-    "rank": 1.1,
-    "name": "Simplex",
+    "rank": 5.1,
+    "name": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent17-1"
