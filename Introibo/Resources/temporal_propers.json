@@ -32,28 +32,28 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In illa die * stillábunt montes dulcédinem, et colles fluent lac et mel, allelúja.",
-      "eng": "In that day * the mountains shall drop down sweetness, and the hills shall flow with milk and honey, alleluia.",
+      "eng": "In that day * the mountains shall drop down sweet wine, and the hills shall flow with milk and honey. Alleluia.",
       "variationKey": "prima.antiphon"
     },
     "tertia.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In illa die * stillábunt montes dulcédinem, et colles fluent lac et mel, allelúja.",
-      "eng": "In that day * the mountains shall drop down sweetness, and the hills shall flow with milk and honey, alleluia.",
+      "eng": "In that day * the mountains shall drop down sweet wine, and the hills shall flow with milk and honey. Alleluia.",
       "variationKey": "tertia.antiphon"
     },
     "sexta.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In illa die * stillábunt montes dulcédinem, et colles fluent lac et mel, allelúja.",
-      "eng": "In that day * the mountains shall drop down sweetness, and the hills shall flow with milk and honey, alleluia.",
+      "eng": "In that day * the mountains shall drop down sweet wine, and the hills shall flow with milk and honey. Alleluia.",
       "variationKey": "sexta.antiphon"
     },
     "nona.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In illa die * stillábunt montes dulcédinem, et colles fluent lac et mel, allelúja.",
-      "eng": "In that day * the mountains shall drop down sweetness, and the hills shall flow with milk and honey, alleluia.",
+      "eng": "In that day * the mountains shall drop down sweet wine, and the hills shall flow with milk and honey. Alleluia.",
       "variationKey": "nona.antiphon"
     },
     "laudes.antiphon.psalm1": {
@@ -130,7 +130,7 @@
       "type": "capitulum",
       "label": "Capitulum (Rom 13:11)",
       "lat": "Fratres: Hora est jam nos de somno súrgere: nunc enim própior est nostra salus, quam cum credídimus.",
-      "eng": "And that knowing the season; that it is now the hour for us to rise from sleep. For now our salvation is nearer than when we believed.",
+      "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
     }
   },
@@ -473,28 +473,28 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce in núbibus cæli * Dóminus véniet cum potestáte magna, allelúja.",
-      "eng": "Behold, the Lord shall come in the clouds of heaven * with great power, alleluia.",
+      "eng": "Behold, the Lord * cometh in the clouds of heaven with great power. Alleluia.",
       "variationKey": "prima.antiphon"
     },
     "tertia.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce in núbibus cæli * Dóminus véniet cum potestáte magna, allelúja.",
-      "eng": "Behold, the Lord shall come in the clouds of heaven * with great power, alleluia.",
+      "eng": "Behold, the Lord * cometh in the clouds of heaven with great power. Alleluia.",
       "variationKey": "tertia.antiphon"
     },
     "sexta.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce in núbibus cæli * Dóminus véniet cum potestáte magna, allelúja.",
-      "eng": "Behold, the Lord shall come in the clouds of heaven * with great power, alleluia.",
+      "eng": "Behold, the Lord * cometh in the clouds of heaven with great power. Alleluia.",
       "variationKey": "sexta.antiphon"
     },
     "nona.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce in núbibus cæli * Dóminus véniet cum potestáte magna, allelúja.",
-      "eng": "Behold, the Lord shall come in the clouds of heaven * with great power, alleluia.",
+      "eng": "Behold, the Lord * cometh in the clouds of heaven with great power. Alleluia.",
       "variationKey": "nona.antiphon"
     },
     "laudes.antiphon.psalm1": {
@@ -571,7 +571,7 @@
       "type": "capitulum",
       "label": "Capitulum (Rom 15:4)",
       "lat": "Fratres: Quæcúmque scripta sunt, ad nostram doctrínam scripta sunt: ut per patiéntiam, et consolatiónem Scripturárum spem habeámus.",
-      "eng": "Brothers: For what things soever were written, were written for our learning: that through patience and the comfort of the scriptures, we might have hope.",
+      "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
     }
   },
@@ -914,28 +914,28 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
-      "eng": "The Lord shall come * and shall not delay, and shall bring to light the hidden things of darkness, and shall manifest himself to all nations, alleluia.",
+      "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "prima.antiphon"
     },
     "tertia.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
-      "eng": "The Lord shall come * and shall not delay, and shall bring to light the hidden things of darkness, and shall manifest himself to all nations, alleluia.",
+      "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "tertia.antiphon"
     },
     "sexta.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
-      "eng": "The Lord shall come * and shall not delay, and shall bring to light the hidden things of darkness, and shall manifest himself to all nations, alleluia.",
+      "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "sexta.antiphon"
     },
     "nona.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
-      "eng": "The Lord shall come * and shall not delay, and shall bring to light the hidden things of darkness, and shall manifest himself to all nations, alleluia.",
+      "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "nona.antiphon"
     },
     "laudes.antiphon.psalm1": {
@@ -1012,7 +1012,7 @@
       "type": "capitulum",
       "label": "Capitulum (Phil 4:4-5)",
       "lat": "Fratres: Gaudéte in Dómino semper: íterum dico, gaudéte. Modéstia vestra nota sit ómnibus homínibus: Dóminus enim prope est.",
-      "eng": "Brothers: Rejoice in the Lord always; again, I say, rejoice. Let your modesty be known to all men. The Lord is nigh.",
+      "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
     }
   },
@@ -1269,7 +1269,7 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Omnis vallis implébitur, * et omnis mons, et collis humiliábitur, et vidébit omnis caro salutáre Dei.",
-      "eng": "Every valley shall be filled, * and every mountain and hill shall be brought low; and the crooked shall become straight, and the rough ways plain; and all flesh shall see the salvation of God.",
+      "eng": "O thou Angel of God, * how shall this be, seeing I know not a man? Hear, O Virgin Mary! the Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee!",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "prima.antiphon": {
@@ -1348,28 +1348,28 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
-      "eng": "Sound the trumpet * in Sion, for the day of the Lord is near: behold, he shall come to save us, alleluia, alleluia.",
+      "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "prima.antiphon"
     },
     "tertia.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
-      "eng": "Sound the trumpet * in Sion, for the day of the Lord is near: behold, he shall come to save us, alleluia, alleluia.",
+      "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "tertia.antiphon"
     },
     "sexta.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
-      "eng": "Sound the trumpet * in Sion, for the day of the Lord is near: behold, he shall come to save us, alleluia, alleluia.",
+      "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "sexta.antiphon"
     },
     "nona.antiphon": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
-      "eng": "Sound the trumpet * in Sion, for the day of the Lord is near: behold, he shall come to save us, alleluia, alleluia.",
+      "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "nona.antiphon"
     },
     "laudes.antiphon.psalm1": {
@@ -1446,7 +1446,7 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 4:1-2)",
       "lat": "Fratres: Sic nos exístimet homo ut minístros Christi, et dispensatóres mysteriórum Dei. Hic jam quǽritur inter dispensatóres, ut fidélis quis inveniátur.",
-      "eng": "Brothers: Let a man so account of us as of the ministers of Christ, and the dispensers of the mysteries of God. Here now it is required among the dispensers, that a man be found faithful.",
+      "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
     }
   },
@@ -1455,7 +1455,7 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Tu Béthlehem * terra Juda, non eris mínima: ex te enim éxiet Dux, qui regat pópulum meum Israël.",
-      "eng": "And thou, Bethlehem, * the land of Juda, art not the least among the princes of Juda; for out of thee shall come forth the Captain, that shall rule my people Israel.",
+      "eng": "Thus saith the Lord: * Repent ye, for the kingdom of heaven is at hand. Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "prima.antiphon": {
@@ -1543,7 +1543,7 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Non auferétur * sceptrum de Juda, et dux de fémore ejus, donec véniat qui mitténdus est: et ipse erit expectátio Géntium.",
-      "eng": "The sceptre shall not be taken away * from Juda, nor a ruler from his thigh, till he come that is to be sent; and he shall be the expectation of nations.",
+      "eng": "I will place salvation * in Zion, and My glory in Jerusalem. Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "prima.antiphon": {
@@ -1587,7 +1587,7 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Leva, Jerúsalem, * óculos et vide poténtiam Regis: Ecce Salvátor venit sólvere te a vínculo.",
-      "eng": "Lift up thine eyes, * O Jerusalem, and behold the power of the King; lo, the Saviour cometh to loose thee from thy bonds.",
+      "eng": "Comfort ye, comfort ye, * My people, saith the Lord your God.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "prima.antiphon": {
@@ -1768,7 +1768,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Ponam univérsos fílios tuos doctos a Dómino.",
-      "eng": "All thy children shall be taught of the Lord.",
+      "eng": "V. All thy children shall be taught of the Lord.\nR. And great shall be the peace of thy children.",
       "latR": "Et multitúdinem pacis fíliis tuis.",
       "engR": "And great shall be the peace of thy children.",
       "variationKey": "laudes.versicle"
@@ -1777,7 +1777,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Ponam univérsos fílios tuos doctos a Dómino.",
-      "eng": "Blessed are they that dwell in thy house, O Lord.",
+      "eng": "V. All thy children shall be taught of the Lord.\nR. And great shall be the peace of thy children.",
       "latR": "Et multitúdinem pacis fíliis tuis.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -1994,7 +1994,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Notum fecit Dóminus.",
-      "eng": "The Lord reigns, he is clothed with beauty.",
+      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
       "latR": "Salutáre suum.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -2003,7 +2003,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Notum fecit Dóminus.",
-      "eng": "The Word was made flesh, alleluia.",
+      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
       "latR": "Salutáre suum.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -2140,7 +2140,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Sit nomen Dómini benedíctum, allelúja.",
-      "eng": "Blessed be the Name of the Lord, alleluia.",
+      "eng": "V. Blessed be the Name of the Lord, alleluia.\nR. From this time forth, and for evermore, alleluia.",
       "latR": "Ex hoc nunc et usque in sǽculum, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -2235,7 +2235,7 @@
       "type": "capitulum",
       "label": "Capitulum (Heb 1:10)",
       "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
-      "eng": "And: Thou in the beginning, O Lord, didst found the earth: and the works of thy hands are the heavens.",
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
@@ -2374,7 +2374,7 @@
       "type": "capitulum",
       "label": "Capitulum (Heb 1:10)",
       "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
-      "eng": "And: Thou in the beginning, O Lord, didst found the earth: and the works of thy hands are the heavens.",
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
@@ -2513,7 +2513,7 @@
       "type": "capitulum",
       "label": "Capitulum (Heb 1:10)",
       "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
-      "eng": "And: Thou in the beginning, O Lord, didst found the earth: and the works of thy hands are the heavens.",
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
@@ -2652,7 +2652,7 @@
       "type": "capitulum",
       "label": "Capitulum (Heb 1:10)",
       "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
-      "eng": "And: Thou in the beginning, O Lord, didst found the earth: and the works of thy hands are the heavens.",
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
@@ -2819,21 +2819,21 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Glória in excélsis Deo, * et in terra pax homínibus bonæ voluntátis, allelúja, allelúja.",
-      "eng": "Glory be to God in the highest; * and on earth, peace to men of good will, alleluia, alleluia.",
+      "eng": "While all things were in quiet silence * and that night was in the midst of her swift course, thine Almighty Word, O Lord, leapt down out of thy Royal Throne.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Hódie * Christus natus est: hódie Salvátor appáruit: hódie in terra canunt Angeli, lætántur Archángeli: hódie exsúltant justi, dicéntes: Glória in excélsis Deo, allelúja.",
-      "eng": "This day the Christ is born this day the Saviour is appeared; * this day the Angels sing praise in the earth and the Archangels rejoice; this day the righteous are glad and say: Glory to God in the highest. Alleluia.",
+      "eng": "And Jesus advanced in wisdom * and age, and grace with God and men.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Puer natus est nobis.",
-      "eng": "The Lord hath made known, alleluia.",
+      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
       "latR": "Fílius datus est nobis.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -2842,7 +2842,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Puer natus est nobis.",
-      "eng": "Tomorrow the iniquity of the earth shall be blotted out.",
+      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
       "latR": "Fílius datus est nobis.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -2937,7 +2937,7 @@
       "type": "capitulum",
       "label": "Capitulum (Heb 1:10)",
       "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
-      "eng": "And: Thou in the beginning, O Lord, didst found the earth: and the works of thy hands are the heavens.",
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
@@ -3517,7 +3517,7 @@
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Post dies octo * jánuis clausis ingréssus Dóminus dixit eis: Pax vobis, allelúja, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "After eight days * came the Lord, the doors being shut, and said unto them: Peace be unto you, alleluia, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "prima.antiphon": {
@@ -3779,7 +3779,7 @@
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Post dies octo * jánuis clausis ingréssus Dóminus dixit eis: Pax vobis, allelúja, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "After eight days * came the Lord, the doors being shut, and said unto them: Peace be unto you, alleluia, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "prima.antiphon": {
@@ -4097,7 +4097,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dedísti mihi protectiónem salútis tuæ, allelúja.",
-      "eng": "Thou hast given me the shield of thy salvation, alleluia",
+      "eng": "V. Thou hast given me the shield of thy salvation, alleluia\nR. And thy right hand hath holden me up, alleluia",
       "latR": "Et déxtera tua suscépit me, allelúja.",
       "engR": "And thy right hand hath holden me up, alleluia",
       "variationKey": "laudes.versicle"
@@ -4106,7 +4106,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Sub umbra illíus, quem desideráveram, sedi, allelúja.",
-      "eng": "I sat under His shadow in Whom I delighted. Alleluia.",
+      "eng": "V. I sat under His shadow in Whom I delighted. Alleluia.\nR. To my taste. And His fruit was sweet Alleluia.",
       "latR": "Et fructus ejus dulcis gútturi meo, allelúja.",
       "engR": "To my taste. And His fruit was sweet Alleluia.",
       "variationKey": "vesperae.versicle"
@@ -4431,14 +4431,14 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Iterum autem * vidébo vos, et gaudébit cor vestrum, allelúja, et gáudium vestrum nemo tollet a vobis, allelúja.",
-      "eng": "But I will see you again, * and your heart shall rejoice, alleluia; and your joy no man shall take from you, alleluia.",
+      "eng": "I go My way to Him That sent Me, * and none of you asketh Me: Whither goest Thou? Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Vado ad eum * qui misit me: sed quia hæc locútus sum vobis, tristítia implévit cor vestrum, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "I go My way to Him That sent Me, * but because I have said this to you, sadness has filled your hearts, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "prima.antiphon": {
@@ -4700,7 +4700,7 @@
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Vado ad eum * qui misit me: sed quia hæc locútus sum vobis, tristítia implévit cor vestrum, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "I go My way to Him That sent Me, * but because I have said this to you, sadness has filled your hearts, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "prima.antiphon": {
@@ -4990,7 +4990,7 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
@@ -5004,21 +5004,21 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "The Lord in heaven, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
@@ -5027,7 +5027,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "God is ascended with jubilee, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -5171,35 +5171,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -5208,7 +5208,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -5352,35 +5352,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -5389,7 +5389,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -5533,21 +5533,21 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Cum vénerit Paráclitus, * quem ego mittam vobis Spíritum veritátis, qui a Patre procédit, ille testimónium perhibébit de me, allelúja.",
-      "eng": "But when the Comforter is come * Whom I will send unto you from the Father, even the Spirit of truth, which proceedeth from the Father, He shall testify of Me, alleluia.",
+      "eng": "But when the Comforter is come * Whom I will send unto you from the Father, He shall testify of Me, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
@@ -5561,7 +5561,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -5570,7 +5570,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -5714,35 +5714,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -5751,7 +5751,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -5895,35 +5895,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -5932,7 +5932,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -6076,35 +6076,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -6113,7 +6113,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -6257,35 +6257,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -6294,7 +6294,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -6438,35 +6438,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "The morn had spread her crimson rays,\nWhen rang the skies with shouts of praise;\nEarth joined the joyful hymn to swell,\nThat brought despair to vanquished hell.\n\nHe comes victorious from the grave,\nThe Lord omnipotent to save,\nAnd brings with him to light of day\nThe saints who long imprisoned lay.\n\nVain is the cavern’s three-fold ward —\nThe stone, the seal, the armed guard;\nO death, no more thine arm we fear,\nThe Victor’s tomb is now thy bier.\n\nLet hymns of joy to grief succeed,\nWe know that Christ is risen indeed;\nWe hear his white-robed angel’s voice,\nAnd in our risen Lord rejoice.\n\nWith Christ we died, with Christ we rose,\nWhen at the font his name we chose;\nOh, let not sin our robes defile,\nAnd turn to grief the paschal smile.\n\n* To God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Jesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\n\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\n\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\n\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\n\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
-      "eng": "At the Lamb’s high feast we sing\nPraise to our victorious King,\nWho hath washed us in the tide\nFlowing from his piercèd side.\n\nPraise we him whose love divine\nGives the guests his blood for wine,\nGives his body for the feast,\nLove the victim, love the priest.\n\nWhere the paschal blood is poured,\nDeath’s dark angel sheathes his sword;\nIsrael’s hosts triumphant go\nThrough the wave that drowns the foe.\n\nChrist, the Lamb whose blood was shed,\nPaschal victim, paschal bread;\nWith sincerity and love\nEat we manna from above.\n\nMighty victim from the sky,\nPowers of hell beneath thee lie;\nDeath is conquered in the fight;\nThou hast brought us life and light.\n\nNow thy banner thou dost wave;\nVanquished Satan and the grave;\nAngels join his praise to tell —\nSee o’erthrown the prince of hell.\n\nPaschal triumph, paschal joy,\nOnly sin can this destroy;\nFrom the death of sin set free,\nSouls re-born, dear Lord, in Thee.\n\n* Hymns of glory, songs of praise,\nFather, unto thee we raise;\nRisen Lord, all praise to thee,\nEver with the Spirit be.\nAmen.",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O Rex glóriæ, * Dómine virtútum, qui triumphátor hódie super omnes cælos ascendísti, ne derelínquas nos órphanos; sed mitte promíssum Patris in nos, Spíritum veritátis, allelúja.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "O King of glory, Lord of hosts, * Who hast this day exalted thine Own Self, with great triumph, above all the heavens, leave us not orphans but send unto us the Promise of the Father, even the Spirit of truth, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -6475,7 +6475,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Stay with us, O Lord, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -6598,14 +6598,14 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ascéndo ad Patrem meum, * et Patrem vestrum: Deum meum, et Deum vestrum, allelúja.",
-      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "eng": "I ascend to my Father * and to your Father: to my God and your God, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "Christ, in thy resurrection, alleluia.",
+      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -6679,7 +6679,7 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "@Psalterium/Special/Minor Special:Hymnus Pasc7 Tertia",
-      "eng": "Creator Spirit, all Divine,\nCome, visit every soul of Thine,\nAnd fill with Thy celestial flame\nThe hearts which Thou Thyself didst frame.\n\nO gift of God, Thine is the sweet\nConsoling name of Paraclete\nAnd spring of life and fire and love\nAnd unction flowing from above.\n\nThe mystic sevenfold gifts are Thine,\nFinger of God's right hand divine;\nThe Father's promise sent to teach\nThe tongue a rich and heavenly speech.\n\nKindle with fire brought from above\nEach sense, and fill our hearts with love;\nAnd grant our flesh, so weak and frail,\nThe strength of Thine which cannot fail.\n\nDrive far away our deadly foe,\nAnd grant us Thy true peace to know;\nSo we, led by Thy guidance still,\nMay safely pass through every ill.\n\nTo us, through Thee, the grace be shown\nTo know the Father and the Son;\nAnd Spirit of Them both, may we\nForever rest our faith in Thee.\n\nTo Sire and Son be praises meet,\nAnd to the Holy Paraclete;\nAnd may Christ send us from above\nThat Holy Spirit's gift of love.\nAmen",
+      "eng": "/:The first verse of the following hymn is said genuflecting.:/\nv. Creator Spirit, all Divine,\nCome, visit every soul of Thine,\nAnd fill with Thy celestial flame\nThe hearts which Thou Thyself didst frame.\n\nO gift of God, Thine is the sweet\nConsoling name of Paraclete\nAnd spring of life and fire and love\nAnd unction flowing from above.\n\nThe mystic sevenfold gifts are Thine,\nFinger of God's right hand divine;\nThe Father's promise sent to teach\nThe tongue a rich and heavenly speech.\n\nKindle with fire brought from above\nEach sense, and fill our hearts with love;\nAnd grant our flesh, so weak and frail,\nThe strength of Thine which cannot fail.\n\nDrive far away our deadly foe,\nAnd grant us Thy true peace to know;\nSo we, led by Thy guidance still,\nMay safely pass through every ill.\n\nTo us, through Thee, the grace be shown\nTo know the Father and the Son;\nAnd Spirit of Them both, may we\nForever rest our faith in Thee.\n\nTo Sire and Son be praises meet,\nAnd to the Holy Paraclete;\nAnd may Christ send us from above\nThat Holy Spirit's gift of love.\nAmen",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
@@ -6700,7 +6700,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Repléti sunt omnes Spíritu Sancto, allelúja.",
-      "eng": "The Lord reigns, he is clothed with beauty.",
+      "eng": "V. They were all filled with the Holy Ghost, alleluia.\nR. And began to speak, alleluia.",
       "latR": "Et cœpérunt loqui, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -6709,7 +6709,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Loquebántur váriis linguis Apóstoli, allelúja.",
-      "eng": "The Apostles spoke in diverse tongues, alleluia.",
+      "eng": "V. The Apostles spoke in diverse tongues, alleluia.\nR. The wonderful works of God, alleluia.",
       "latR": "Magnália Dei, allelúja.",
       "engR": "The wonderful works of God, alleluia.",
       "variationKey": "vesperae.versicle"
@@ -7131,7 +7131,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Benedicámus Patrem et Fílium cum Sancto Spíritu.",
-      "eng": "The Lord reigns, he is clothed with beauty.",
+      "eng": "V. Bless we the Father, and the Son, and the Holy Ghost.\nR. Let us praise Him and exalt Him above all for ever.",
       "latR": "Laudémus et superexaltémus eum in sǽcula.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -7140,7 +7140,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Benedíctus es, Dómine, in firmaménto cæli.",
-      "eng": "Bless we the Father, and the Son, and the Holy Ghost.",
+      "eng": "V. Bless we the Father, and the Son, and the Holy Ghost.\nR. Let us praise Him and exalt Him above all for ever.",
       "latR": "Et laudábilis et gloriósus in sǽcula.",
       "engR": "Let us praise Him and exalt Him above all for ever.",
       "variationKey": "vesperae.versicle"
@@ -7228,21 +7228,21 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ego sum * panis vivus, qui de cælo descéndi: si quis manducáverit ex hoc pane, vivet in ætérnum, allelúja.",
-      "eng": "In holiness * let us serve the Lord, and he will deliver us from our enemies.",
+      "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O sacrum convívium, * in quo Christus súmitur: recólitur memória passiónis ejus: mens implétur grátia: et futúræ glóriæ nobis pignus datur, allelúja.",
-      "eng": "God has shown * the power of his arm: he has scattered the proud in the imagination of their hearts.",
+      "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "He maketh peace in thy borders, alleluia.",
+      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
@@ -7251,7 +7251,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "Thou didst send them from heaven, alleluia.",
+      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -7360,35 +7360,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Nec Patris linquens déxteram,\nAd opus suum éxiens,\nVenit ad vitæ vésperam.\n\nIn mortem a discípulo\nSuis tradéndus ǽmulis,\nPrius in vitæ férculo\nSe trádidit discípulis.\n\nQuibus sub bina spécie\nCarnem dedit et sánguinem;\nUt dúplicis substántiæ\nTotum cibáret hóminem.\n\nSe nascens dedit sócium,\nConvéscens in edúlium,\nSe móriens in prétium,\nSe regnans dat in prǽmium.\n\nO salutáris hóstia,\nQuæ cæli pandis óstium,\nBella premunt hostília;\nDa robur, fer auxílium.\n\nUni trinóque Dómino,\nSit sempitérna glória:\nQui vitam sine término\nNobis donet in pátria.\nAmen.",
-      "eng": "O Christ, whose glory fills the heaven,\nOur only hope, in mercy given;\nChild of a Virgin meek and pure;\nSon of the Highest evermore:\n\nGrant us thine aid thy praise to sing,\nAs opening days new duties bring;\nThat with the light our life may be\nRenewed and sanctified by thee.\n\nThe morning star fades from the sky,\nThe sun breaks forth; night’s shadows fly:\nO Thou, true Light, upon us shine:\nOur darkness turn to light divine.\n\nWithin us grant thy light to dwell;\nAnd from our souls dark sins expel;\nCleanse thou our minds from stain of ill,\nAnd with thy peace our bosoms fill.\n\nTo us strong faith forever give,\nWith joyous hope, in thee to live;\nThat life’s rough way may ever be\nMade strong and pure by charity.\n\nAll laud to God the Father be,\nAll praise, Eternal Son, to thee:\nAll glory, as is ever meet,\nTo God the holy Paraclete,\nAmen.",
+      "eng": "The heav'nly Word proceeding forth,\nYet leaving not the Father's side,\nAnd going to his work on earth\nHad reached at length life's eventide.\n\nBy false disciple to be given\nTo foemen for his blood athirst,\nHimself, the living bread from heaven,\nHe gave to his disciples first.\n\nTo them he gave, in twofold kind,\nHis very flesh, his very blood:\nIn love's own fullness thus designed\nOf the whole man to be the food.\n\nBy birth, our fellow-man was he;\nOur meat, while sitting at the board;\nHe died, our ransomer to be;\nHe ever reigns, our great reward.\n\nO saving victim, opening wide\nThe gate of heaven to man below,\nOur foes press on from every side,\nThine aid supply, thy strength bestow.\n\nTo thy great name be endless praise,\nImmortal Godhead, One in Three;\nO grant us endless length of days\nIn our true native land, with thee.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Córporis mystérium,\nSanguinísque pretiósi,\nQuem in mundi prétium\nFructus ventris generósi\nRex effúdit géntium.\n\nNobis datus, nobis natus\nEx intácta Vírgine,\nEt in mundo conversátus,\nSparso verbi sémine,\nSui moras incolátus\nMiro clausit órdine.\n\nIn suprémæ nocte cenæ\nRecúmbens cum frátribus,\nObserváta lege plene\nCibis in legálibus,\nCibum turbæ duodénæ\nSe dat suis mánibus.\n\nVerbum caro, panem verum\nVerbo carnem éfficit;\nFitque sanguis Christi merum:\nEt si sensus déficit,\nAd firmándum cor sincérum\nSola fides súfficit.\n\n!Sequens stropha, si coram Sanctissimo exposito Officium persolvatur, dicitur flexis genibus.\n\nTantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\n\nGenitóri, Genitóque\nLaus et jubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio.\nAmen.",
-      "eng": "Maker of man, who from thy throne\nDost order all things, God alone;\nBy whose decree the teeming earth\nTo reptile and to beast gave birth:\n\nThe mighty forms that fill the land,\nInstinct with life at thy command,\nAre given subdued to humankind\nFor service in their rank assigned.\n\nFrom all thy servants drive away\nWhate’er of thought impure to-day\nHath been with open action blent,\nOr mingled with the heart’s intent.\n\nIn heaven thine endless joys bestow,\nAnd grant thy gifts of grace below;\nFrom chains of strife our souls release,\nBind fast the gentle bands of peace.\n\nGrant this, O Father, ever One\nWith Christ, thy sole-begotten Son,\nWhom, with the Spirit we adore,\nOne God, both now and evermore.\nAmen.",
+      "eng": "Sing, my tongue, the Saviour's glory,\nOf his flesh the mystery sing;\nOf the blood, all price exceeding,\nShed by our immortal King,\nDestined, for the world's redemption,\nFrom a noble womb to spring.\n\nOf a pure and spotless Virgin\nBorn for us on earth below,\nHe, as man, with man conversing,\nStayed, the seeds of truth to sow;\nThen he closed in solemn order\nWondrously his life of woe.\n\nOn the night of that last supper\nSeated with his chosen band,\nHe, the paschal victim eating,\nFirst fulfills the law's command:\nThen as food to all his brethren\nGives himself with his own hand.\n\nWord made flesh, the bread of nature\nBy his word to flesh he turns;\nWine into his blood he changes:\nWhat though sense no change discerns?\nOnly be the heart in earnest,\nFaith her lesson quickly learns.\n\n!If the Office is celebrated before the exposed Blessed Sacrament, the following verses are said on bended knee.\n\nDown in adoration falling,\nLo! the sacred Host we hail;\nLo! o'er ancient forms departing,\nNewer rites of grace prevail;\nFaith for all defects supplying,\nWhere the feeble senses fail.\n\nTo the everlasting Father,\nAnd the Son who reigns on high,\nWith the Holy Ghost proceeding\nForth from each eternally,\nBe salvation, honour, blessing,\nMight, and endless majesty.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ego sum * panis vivus, qui de cælo descéndi: si quis manducáverit ex hoc pane, vivet in ætérnum, allelúja.",
-      "eng": "In holiness * let us serve the Lord, and he will deliver us from our enemies.",
+      "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O sacrum convívium, * in quo Christus súmitur: recólitur memória passiónis ejus: mens implétur grátia: et futúræ glóriæ nobis pignus datur, allelúja.",
-      "eng": "God has shown * the power of his arm: he has scattered the proud in the imagination of their hearts.",
+      "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -7397,7 +7397,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -7506,7 +7506,7 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Nec Patris linquens déxteram,\nAd opus suum éxiens,\nVenit ad vitæ vésperam.\n\nIn mortem a discípulo\nSuis tradéndus ǽmulis,\nPrius in vitæ férculo\nSe trádidit discípulis.\n\nQuibus sub bina spécie\nCarnem dedit et sánguinem;\nUt dúplicis substántiæ\nTotum cibáret hóminem.\n\nSe nascens dedit sócium,\nConvéscens in edúlium,\nSe móriens in prétium,\nSe regnans dat in prǽmium.\n\nO salutáris hóstia,\nQuæ cæli pandis óstium,\nBella premunt hostília;\nDa robur, fer auxílium.\n\nUni trinóque Dómino,\nSit sempitérna glória:\nQui vitam sine término\nNobis donet in pátria.\nAmen.",
-      "eng": "The dawn is sprinkling in the east\nIts golden shower, as day flows in;\nFast mount the pointed shafts of light:\nFarewell to darkness and to sin!\n\nAway, ye midnight phantoms all!\nAway, despondence and despair!\nWhatever guilt the night has brought,\nNow let it vanish into air.\n\nSo, Lord, when that last morning breaks,\nLooking to which we sigh and pray,\nO may it to thy minstrels prove\nThe dawning of a better day.\n\nTo God the Father glory be,\nAnd to his sole-begotten Son;\nGlory, O Holy Ghost, to thee,\nWhile everlasting ages run,\nAmen.",
+      "eng": "The heav'nly Word proceeding forth,\nYet leaving not the Father's side,\nAnd going to his work on earth\nHad reached at length life's eventide.\n\nBy false disciple to be given\nTo foemen for his blood athirst,\nHimself, the living bread from heaven,\nHe gave to his disciples first.\n\nTo them he gave, in twofold kind,\nHis very flesh, his very blood:\nIn love's own fullness thus designed\nOf the whole man to be the food.\n\nBy birth, our fellow-man was he;\nOur meat, while sitting at the board;\nHe died, our ransomer to be;\nHe ever reigns, our great reward.\n\nO saving victim, opening wide\nThe gate of heaven to man below,\nOur foes press on from every side,\nThine aid supply, thy strength bestow.\n\nTo thy great name be endless praise,\nImmortal Godhead, One in Three;\nO grant us endless length of days\nIn our true native land, with thee.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
@@ -7520,21 +7520,21 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ego sum * panis vivus, qui de cælo descéndi: si quis manducáverit ex hoc pane, vivet in ætérnum, allelúja.",
-      "eng": "In holiness * let us serve the Lord, and he will deliver us from our enemies.",
+      "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O sacrum convívium, * in quo Christus súmitur: recólitur memória passiónis ejus: mens implétur grátia: et futúræ glóriæ nobis pignus datur, allelúja.",
-      "eng": "God has shown * the power of his arm: he has scattered the proud in the imagination of their hearts.",
+      "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -7543,7 +7543,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -7652,7 +7652,7 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Córporis mystérium,\nSanguinísque pretiósi,\nQuem in mundi prétium\nFructus ventris generósi\nRex effúdit géntium.\n\nNobis datus, nobis natus\nEx intácta Vírgine,\nEt in mundo conversátus,\nSparso verbi sémine,\nSui moras incolátus\nMiro clausit órdine.\n\nIn suprémæ nocte cenæ\nRecúmbens cum frátribus,\nObserváta lege plene\nCibis in legálibus,\nCibum turbæ duodénæ\nSe dat suis mánibus.\n\nVerbum caro, panem verum\nVerbo carnem éfficit;\nFitque sanguis Christi merum:\nEt si sensus déficit,\nAd firmándum cor sincérum\nSola fides súfficit.\n\n!Sequens stropha, si coram Sanctissimo exposito Officium persolvatur, dicitur flexis genibus.\n\nTantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\n\nGenitóri, Genitóque\nLaus et jubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio.\nAmen.",
-      "eng": "O blest Creator of the light,\nWho mak’st the day with radiance bright,\nAnd o’er the forming world didst call\nThe light from chaos first of all;\n\nWhose wisdom joined in meet array\nThe morn and eve, and named them day:\nNight comes with all its darkling fears;\nRegard thy people’s prayers and tears.\n\nLest, sunk in sin, and whelmed with strife,\nThey lose the gift of endless life;\nWhile thinking but the thoughts of time,\nThey weave new chains of woe and crime.\n\nBut grant them grace that they may strain\nThe heavenly gate and prize to gain:\nEach harmful lure aside to cast,\nAnd purge away each error past.\n\n* O Father, that we ask be done,\nThrough Jesus Christ, thine only Son;\nWho, with the Holy Ghost and thee,\nDoth live and reign eternally.\nAmen.",
+      "eng": "Sing, my tongue, the Saviour's glory,\nOf his flesh the mystery sing;\nOf the blood, all price exceeding,\nShed by our immortal King,\nDestined, for the world's redemption,\nFrom a noble womb to spring.\n\nOf a pure and spotless Virgin\nBorn for us on earth below,\nHe, as man, with man conversing,\nStayed, the seeds of truth to sow;\nThen he closed in solemn order\nWondrously his life of woe.\n\nOn the night of that last supper\nSeated with his chosen band,\nHe, the paschal victim eating,\nFirst fulfills the law's command:\nThen as food to all his brethren\nGives himself with his own hand.\n\nWord made flesh, the bread of nature\nBy his word to flesh he turns;\nWine into his blood he changes:\nWhat though sense no change discerns?\nOnly be the heart in earnest,\nFaith her lesson quickly learns.\n\n!If the Office is celebrated before the exposed Blessed Sacrament, the following verses are said on bended knee.\n\nDown in adoration falling,\nLo! the sacred Host we hail;\nLo! o'er ancient forms departing,\nNewer rites of grace prevail;\nFaith for all defects supplying,\nWhere the feeble senses fail.\n\nTo the everlasting Father,\nAnd the Son who reigns on high,\nWith the Holy Ghost proceeding\nForth from each eternally,\nBe salvation, honour, blessing,\nMight, and endless majesty.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
@@ -7673,7 +7673,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem cæli dedit eis, allelúja.",
-      "eng": "He gave them of the bread of heaven, alleluia.",
+      "eng": "V. He gave them of the bread of heaven, alleluia.\nR. Man did eat Angels' bread, alleluia.",
       "latR": "Panem Angelórum manducávit homo, allelúja.",
       "engR": "Man did eat Angels' bread, alleluia.",
       "variationKey": "laudes.versicle"
@@ -7682,7 +7682,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Cibávit illos ex ádipe fruménti, allelúja.",
-      "eng": "He fed them with the finest of the wheat. Alleluia.",
+      "eng": "V. He fed them with the finest of the wheat. Alleluia.\nR. And with honey out of the rock did He satisfy them. Alleluia.",
       "latR": "Et de petra, melle saturávit eos, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -7721,35 +7721,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Nec Patris linquens déxteram,\nAd opus suum éxiens,\nVenit ad vitæ vésperam.\n\nIn mortem a discípulo\nSuis tradéndus ǽmulis,\nPrius in vitæ férculo\nSe trádidit discípulis.\n\nQuibus sub bina spécie\nCarnem dedit et sánguinem;\nUt dúplicis substántiæ\nTotum cibáret hóminem.\n\nSe nascens dedit sócium,\nConvéscens in edúlium,\nSe móriens in prétium,\nSe regnans dat in prǽmium.\n\nO salutáris hóstia,\nQuæ cæli pandis óstium,\nBella premunt hostília;\nDa robur, fer auxílium.\n\nUni trinóque Dómino,\nSit sempitérna glória:\nQui vitam sine término\nNobis donet in pátria.\nAmen.",
-      "eng": "O splendour of God’s glory bright,\nO thou that bringest light from light,\nO light of light, light’s living spring,\nO day, all days illumining.\n\nO thou true sun, on us thy glance\nLet fall in royal radiance,\nThe Spirit’s sanctifying beam\nUpon our earthly senses stream.\n\nThe Father too our prayers implore,\nFather of glory evermore,\nThe Father of all grace and might,\nTo banish sin from our delight:\n\nTo guide whate’er we nobly do,\nWith love all envy to subdue,\nTo make ill-fortune turn to fair,\nAnd give us grace our wrongs to bear.\n\nOur mind be in his keeping placed,\nOur body true to him and chaste,\nWhere only faith her fire shall feed,\nAnd burn the tares of Satan’s seed.\n\nAnd Christ to us for food shall be,\nFrom him our drink that welleth free,\nThe Spirit’s wine, that maketh whole,\nAnd mocking not, exalts the soul.\n\nRejoicing may this day go hence,\nLike virgin dawn our innocence,\nLike fiery noon our faith appear,\nNor know the gloom of twilight drear.\n\nMorn in her rosy car is borne;\nLet him come forth our perfect morn,\nThe Word in God the Father One,\nThe Father perfect in the Son.\n\nAll laud to God the Father be;\nAll praise, Eternal Son, to thee;\nAll glory, as is ever meet,\nTo God the Holy Paraclete.\nAmen.",
+      "eng": "The heav'nly Word proceeding forth,\nYet leaving not the Father's side,\nAnd going to his work on earth\nHad reached at length life's eventide.\n\nBy false disciple to be given\nTo foemen for his blood athirst,\nHimself, the living bread from heaven,\nHe gave to his disciples first.\n\nTo them he gave, in twofold kind,\nHis very flesh, his very blood:\nIn love's own fullness thus designed\nOf the whole man to be the food.\n\nBy birth, our fellow-man was he;\nOur meat, while sitting at the board;\nHe died, our ransomer to be;\nHe ever reigns, our great reward.\n\nO saving victim, opening wide\nThe gate of heaven to man below,\nOur foes press on from every side,\nThine aid supply, thy strength bestow.\n\nTo thy great name be endless praise,\nImmortal Godhead, One in Three;\nO grant us endless length of days\nIn our true native land, with thee.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Córporis mystérium,\nSanguinísque pretiósi,\nQuem in mundi prétium\nFructus ventris generósi\nRex effúdit géntium.\n\nNobis datus, nobis natus\nEx intácta Vírgine,\nEt in mundo conversátus,\nSparso verbi sémine,\nSui moras incolátus\nMiro clausit órdine.\n\nIn suprémæ nocte cenæ\nRecúmbens cum frátribus,\nObserváta lege plene\nCibis in legálibus,\nCibum turbæ duodénæ\nSe dat suis mánibus.\n\nVerbum caro, panem verum\nVerbo carnem éfficit;\nFitque sanguis Christi merum:\nEt si sensus déficit,\nAd firmándum cor sincérum\nSola fides súfficit.\n\n!Sequens stropha, si coram Sanctissimo exposito Officium persolvatur, dicitur flexis genibus.\n\nTantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\n\nGenitóri, Genitóque\nLaus et jubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio.\nAmen.",
-      "eng": "O great Creator of the sky,\nWho wouldest not the floods on high\nWith earthly waters to confound,\nBut mad’st the firmament their bound;\n\nThe floods above thou didst ordain;\nThe floods below thou didst restrain:\nThat moisture might attemper heat,\nLest the parched earth should ruin meet.\n\nUpon our souls, good Lord, bestow\nThy gift of grace in endless flow:\nLest some renewed deceit or wile\nOf former sin should us beguile.\n\nLet faith discover heav’nly light;\nSo shall its rays direct us right:\nAnd let this faith each error chase,\nAnd never give to falsehood place.\n\nGrant this, O Father, ever One\nWith Christ, thy sole-begotten Son,\nAnd Holy Ghost, whom all adore,\nReigning and blest forevermore.\nAmen.",
+      "eng": "Sing, my tongue, the Saviour's glory,\nOf his flesh the mystery sing;\nOf the blood, all price exceeding,\nShed by our immortal King,\nDestined, for the world's redemption,\nFrom a noble womb to spring.\n\nOf a pure and spotless Virgin\nBorn for us on earth below,\nHe, as man, with man conversing,\nStayed, the seeds of truth to sow;\nThen he closed in solemn order\nWondrously his life of woe.\n\nOn the night of that last supper\nSeated with his chosen band,\nHe, the paschal victim eating,\nFirst fulfills the law's command:\nThen as food to all his brethren\nGives himself with his own hand.\n\nWord made flesh, the bread of nature\nBy his word to flesh he turns;\nWine into his blood he changes:\nWhat though sense no change discerns?\nOnly be the heart in earnest,\nFaith her lesson quickly learns.\n\n!If the Office is celebrated before the exposed Blessed Sacrament, the following verses are said on bended knee.\n\nDown in adoration falling,\nLo! the sacred Host we hail;\nLo! o'er ancient forms departing,\nNewer rites of grace prevail;\nFaith for all defects supplying,\nWhere the feeble senses fail.\n\nTo the everlasting Father,\nAnd the Son who reigns on high,\nWith the Holy Ghost proceeding\nForth from each eternally,\nBe salvation, honour, blessing,\nMight, and endless majesty.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "@Tempora/Pent01-5",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "@Tempora/Pent01-5",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -7758,7 +7758,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -7867,35 +7867,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Nec Patris linquens déxteram,\nAd opus suum éxiens,\nVenit ad vitæ vésperam.\n\nIn mortem a discípulo\nSuis tradéndus ǽmulis,\nPrius in vitæ férculo\nSe trádidit discípulis.\n\nQuibus sub bina spécie\nCarnem dedit et sánguinem;\nUt dúplicis substántiæ\nTotum cibáret hóminem.\n\nSe nascens dedit sócium,\nConvéscens in edúlium,\nSe móriens in prétium,\nSe regnans dat in prǽmium.\n\nO salutáris hóstia,\nQuæ cæli pandis óstium,\nBella premunt hostília;\nDa robur, fer auxílium.\n\nUni trinóque Dómino,\nSit sempitérna glória:\nQui vitam sine término\nNobis donet in pátria.\nAmen.",
-      "eng": "As the bird, whose clarion gay\nSounds before the dawn is grey,\nChrist, who brings the spirit’s day,\nCalls us, close at hand:\n\nWake! he cries, and for my sake,\nFrom your eyes dull slumbers shake!\nSober, righteous, chaste, awake!\nAt the door I stand!\n\nLord, to thee we lift on high\nFervent prayer and bitter cry:\nHearts aroused to pray and sigh\nMay not slumber more:\n\nBreak the sleep of death and time,\nForged by Adam’s ancient crime;\nAnd the light of Eden’s prime\nTo the world restore!\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "eng": "The heav'nly Word proceeding forth,\nYet leaving not the Father's side,\nAnd going to his work on earth\nHad reached at length life's eventide.\n\nBy false disciple to be given\nTo foemen for his blood athirst,\nHimself, the living bread from heaven,\nHe gave to his disciples first.\n\nTo them he gave, in twofold kind,\nHis very flesh, his very blood:\nIn love's own fullness thus designed\nOf the whole man to be the food.\n\nBy birth, our fellow-man was he;\nOur meat, while sitting at the board;\nHe died, our ransomer to be;\nHe ever reigns, our great reward.\n\nO saving victim, opening wide\nThe gate of heaven to man below,\nOur foes press on from every side,\nThine aid supply, thy strength bestow.\n\nTo thy great name be endless praise,\nImmortal Godhead, One in Three;\nO grant us endless length of days\nIn our true native land, with thee.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Córporis mystérium,\nSanguinísque pretiósi,\nQuem in mundi prétium\nFructus ventris generósi\nRex effúdit géntium.\n\nNobis datus, nobis natus\nEx intácta Vírgine,\nEt in mundo conversátus,\nSparso verbi sémine,\nSui moras incolátus\nMiro clausit órdine.\n\nIn suprémæ nocte cenæ\nRecúmbens cum frátribus,\nObserváta lege plene\nCibis in legálibus,\nCibum turbæ duodénæ\nSe dat suis mánibus.\n\nVerbum caro, panem verum\nVerbo carnem éfficit;\nFitque sanguis Christi merum:\nEt si sensus déficit,\nAd firmándum cor sincérum\nSola fides súfficit.\n\n!Sequens stropha, si coram Sanctissimo exposito Officium persolvatur, dicitur flexis genibus.\n\nTantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\n\nGenitóri, Genitóque\nLaus et jubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio.\nAmen.",
-      "eng": "Earth's mighty Maker, whose command\nRaised from the sea the solid land;\nAnd drove each billowy heap away,\nAnd bade the earth stand firm for aye:\n\nThat so, with flowers of golden hue,\nThe seeds of each it might renew;\nAnd fruit-trees bearing fruit might yield,\nAnd pleasant pasture of the field:\n\nOur spirit’s rankling wounds efface\nWith dewy freshness of thy grace:\nThat grief may cleanse each deed of ill,\nAnd o’er each lust may triumph still.\n\nLet every soul thy law obey,\nAnd keep from every evil way;\nRejoice each promised good to win,\nAnd flee from every mortal sin.\n\nHear thou our prayer, Almighty King!\nHear thou our praises, while we sing,\nAdoring with the heavenly host,\nThe Father, Son, and Holy Ghost!\nAmen.",
+      "eng": "Sing, my tongue, the Saviour's glory,\nOf his flesh the mystery sing;\nOf the blood, all price exceeding,\nShed by our immortal King,\nDestined, for the world's redemption,\nFrom a noble womb to spring.\n\nOf a pure and spotless Virgin\nBorn for us on earth below,\nHe, as man, with man conversing,\nStayed, the seeds of truth to sow;\nThen he closed in solemn order\nWondrously his life of woe.\n\nOn the night of that last supper\nSeated with his chosen band,\nHe, the paschal victim eating,\nFirst fulfills the law's command:\nThen as food to all his brethren\nGives himself with his own hand.\n\nWord made flesh, the bread of nature\nBy his word to flesh he turns;\nWine into his blood he changes:\nWhat though sense no change discerns?\nOnly be the heart in earnest,\nFaith her lesson quickly learns.\n\n!If the Office is celebrated before the exposed Blessed Sacrament, the following verses are said on bended knee.\n\nDown in adoration falling,\nLo! the sacred Host we hail;\nLo! o'er ancient forms departing,\nNewer rites of grace prevail;\nFaith for all defects supplying,\nWhere the feeble senses fail.\n\nTo the everlasting Father,\nAnd the Son who reigns on high,\nWith the Holy Ghost proceeding\nForth from each eternally,\nBe salvation, honour, blessing,\nMight, and endless majesty.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "@Tempora/Pent01-5",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "@Tempora/Pent01-5",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -7904,7 +7904,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -8013,35 +8013,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Nec Patris linquens déxteram,\nAd opus suum éxiens,\nVenit ad vitæ vésperam.\n\nIn mortem a discípulo\nSuis tradéndus ǽmulis,\nPrius in vitæ férculo\nSe trádidit discípulis.\n\nQuibus sub bina spécie\nCarnem dedit et sánguinem;\nUt dúplicis substántiæ\nTotum cibáret hóminem.\n\nSe nascens dedit sócium,\nConvéscens in edúlium,\nSe móriens in prétium,\nSe regnans dat in prǽmium.\n\nO salutáris hóstia,\nQuæ cæli pandis óstium,\nBella premunt hostília;\nDa robur, fer auxílium.\n\nUni trinóque Dómino,\nSit sempitérna glória:\nQui vitam sine término\nNobis donet in pátria.\nAmen.",
-      "eng": "Day is breaking, dawn is bright:\nHence, vain shadows of the night!\nMists that dim our mortal sight,\nChrist is come! Depart!\n\nDarkness routed lifts her wings\nAs the radiance upwards springs:\nThrough the world of wakened things\nLife and colour dart.\n\nThee, O Christ, alone we know:\nSinging even in our woe,\nWith pure hearts to thee we go:\nOn our senses shine!\n\nIn thy beams be purged away\nAll that leads our thoughts astray!\nThrough our spirits, King of day,\nPour thy light divine!\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "eng": "The heav'nly Word proceeding forth,\nYet leaving not the Father's side,\nAnd going to his work on earth\nHad reached at length life's eventide.\n\nBy false disciple to be given\nTo foemen for his blood athirst,\nHimself, the living bread from heaven,\nHe gave to his disciples first.\n\nTo them he gave, in twofold kind,\nHis very flesh, his very blood:\nIn love's own fullness thus designed\nOf the whole man to be the food.\n\nBy birth, our fellow-man was he;\nOur meat, while sitting at the board;\nHe died, our ransomer to be;\nHe ever reigns, our great reward.\n\nO saving victim, opening wide\nThe gate of heaven to man below,\nOur foes press on from every side,\nThine aid supply, thy strength bestow.\n\nTo thy great name be endless praise,\nImmortal Godhead, One in Three;\nO grant us endless length of days\nIn our true native land, with thee.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Córporis mystérium,\nSanguinísque pretiósi,\nQuem in mundi prétium\nFructus ventris generósi\nRex effúdit géntium.\n\nNobis datus, nobis natus\nEx intácta Vírgine,\nEt in mundo conversátus,\nSparso verbi sémine,\nSui moras incolátus\nMiro clausit órdine.\n\nIn suprémæ nocte cenæ\nRecúmbens cum frátribus,\nObserváta lege plene\nCibis in legálibus,\nCibum turbæ duodénæ\nSe dat suis mánibus.\n\nVerbum caro, panem verum\nVerbo carnem éfficit;\nFitque sanguis Christi merum:\nEt si sensus déficit,\nAd firmándum cor sincérum\nSola fides súfficit.\n\n!Sequens stropha, si coram Sanctissimo exposito Officium persolvatur, dicitur flexis genibus.\n\nTantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\n\nGenitóri, Genitóque\nLaus et jubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio.\nAmen.",
-      "eng": "O God, whose hand hath spread the sky,\nAnd all its shining hosts on high,\nAnd painting it with fiery light,\nMade it so beauteous and so bright:\n\nThou, when the fourth day was begun,\nDidst frame the circle of the sun,\nAnd set the moon for ordered change,\nAnd planets for their wider range:\n\nTo night and day, by certain line,\nTheir varying bounds thou didst assign;\nAnd gav’st a signal, known and meet,\nFor months begun and months complete.\n\nEnlighten thou the hearts of men:\nPolluted souls make pure again:\nUnloose the bands of guilt within:\nRemove the burden of our sin.\n\nGrant this, O Father, ever One\nWith Christ thy sole-begotten Son,\nWhom, with the Spirit we adore,\nOne God, both now and evermore.\nAmen.",
+      "eng": "Sing, my tongue, the Saviour's glory,\nOf his flesh the mystery sing;\nOf the blood, all price exceeding,\nShed by our immortal King,\nDestined, for the world's redemption,\nFrom a noble womb to spring.\n\nOf a pure and spotless Virgin\nBorn for us on earth below,\nHe, as man, with man conversing,\nStayed, the seeds of truth to sow;\nThen he closed in solemn order\nWondrously his life of woe.\n\nOn the night of that last supper\nSeated with his chosen band,\nHe, the paschal victim eating,\nFirst fulfills the law's command:\nThen as food to all his brethren\nGives himself with his own hand.\n\nWord made flesh, the bread of nature\nBy his word to flesh he turns;\nWine into his blood he changes:\nWhat though sense no change discerns?\nOnly be the heart in earnest,\nFaith her lesson quickly learns.\n\n!If the Office is celebrated before the exposed Blessed Sacrament, the following verses are said on bended knee.\n\nDown in adoration falling,\nLo! the sacred Host we hail;\nLo! o'er ancient forms departing,\nNewer rites of grace prevail;\nFaith for all defects supplying,\nWhere the feeble senses fail.\n\nTo the everlasting Father,\nAnd the Son who reigns on high,\nWith the Holy Ghost proceeding\nForth from each eternally,\nBe salvation, honour, blessing,\nMight, and endless majesty.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "@Tempora/Pent01-5",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "@Tempora/Pent01-5",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -8050,7 +8050,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -8159,35 +8159,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Nec Patris linquens déxteram,\nAd opus suum éxiens,\nVenit ad vitæ vésperam.\n\nIn mortem a discípulo\nSuis tradéndus ǽmulis,\nPrius in vitæ férculo\nSe trádidit discípulis.\n\nQuibus sub bina spécie\nCarnem dedit et sánguinem;\nUt dúplicis substántiæ\nTotum cibáret hóminem.\n\nSe nascens dedit sócium,\nConvéscens in edúlium,\nSe móriens in prétium,\nSe regnans dat in prǽmium.\n\nO salutáris hóstia,\nQuæ cæli pandis óstium,\nBella premunt hostília;\nDa robur, fer auxílium.\n\nUni trinóque Dómino,\nSit sempitérna glória:\nQui vitam sine término\nNobis donet in pátria.\nAmen.",
-      "eng": "See the golden sun arise!\nLet no more our darkened eyes\nSnare us, tangled by surprise\nIn the maze of sin!\n\nFrom false words and thoughts impure\nLet this light, serene and sure,\nKeep our lips without secure,\nKeep our souls within.\n\nSo may we the day-time spend,\nThat, till life’s temptations end,\nTongue, nor hand, nor eye offend!\nOne, above us all,\n\nViews in his revealing ray\nAll we do, and think, and say,\nWatching us from break of day\nTill the twilight fall.\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "eng": "The heav'nly Word proceeding forth,\nYet leaving not the Father's side,\nAnd going to his work on earth\nHad reached at length life's eventide.\n\nBy false disciple to be given\nTo foemen for his blood athirst,\nHimself, the living bread from heaven,\nHe gave to his disciples first.\n\nTo them he gave, in twofold kind,\nHis very flesh, his very blood:\nIn love's own fullness thus designed\nOf the whole man to be the food.\n\nBy birth, our fellow-man was he;\nOur meat, while sitting at the board;\nHe died, our ransomer to be;\nHe ever reigns, our great reward.\n\nO saving victim, opening wide\nThe gate of heaven to man below,\nOur foes press on from every side,\nThine aid supply, thy strength bestow.\n\nTo thy great name be endless praise,\nImmortal Godhead, One in Three;\nO grant us endless length of days\nIn our true native land, with thee.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Córporis mystérium,\nSanguinísque pretiósi,\nQuem in mundi prétium\nFructus ventris generósi\nRex effúdit géntium.\n\nNobis datus, nobis natus\nEx intácta Vírgine,\nEt in mundo conversátus,\nSparso verbi sémine,\nSui moras incolátus\nMiro clausit órdine.\n\nIn suprémæ nocte cenæ\nRecúmbens cum frátribus,\nObserváta lege plene\nCibis in legálibus,\nCibum turbæ duodénæ\nSe dat suis mánibus.\n\nVerbum caro, panem verum\nVerbo carnem éfficit;\nFitque sanguis Christi merum:\nEt si sensus déficit,\nAd firmándum cor sincérum\nSola fides súfficit.\n\n!Sequens stropha, si coram Sanctissimo exposito Officium persolvatur, dicitur flexis genibus.\n\nTantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\n\nGenitóri, Genitóque\nLaus et jubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio.\nAmen.",
-      "eng": "O sovereign Lord of nature’s might,\nWho bad’st the water’s birth divide;\nPart in the heavens to take their flight,\nAnd part in ocean’s deep to hide;\n\nThese low obscured, on airy wing\nExalted those, that either race,\nThough from one element they spring,\nMight serve thee in a different place.\n\nGrant, Lord, that we thy servants all,\nSaved by thy tide of cleansing blood,\nNo more ’neath sin's dominion fall,\nNor fear the thought of death’s dark flood!\n\nThy varied love each spirit bless,\nThe humble cheer, the high control;\nCheck in each heart its proud excess,\nBut raise the meek and contrite soul!\n\nThis boon, O Father, we entreat,\nThis blessing grant, Eternal Son,\nAnd Holy Ghost, the Paraclete,\nBoth now, and while the ages run.\nAmen.",
+      "eng": "Sing, my tongue, the Saviour's glory,\nOf his flesh the mystery sing;\nOf the blood, all price exceeding,\nShed by our immortal King,\nDestined, for the world's redemption,\nFrom a noble womb to spring.\n\nOf a pure and spotless Virgin\nBorn for us on earth below,\nHe, as man, with man conversing,\nStayed, the seeds of truth to sow;\nThen he closed in solemn order\nWondrously his life of woe.\n\nOn the night of that last supper\nSeated with his chosen band,\nHe, the paschal victim eating,\nFirst fulfills the law's command:\nThen as food to all his brethren\nGives himself with his own hand.\n\nWord made flesh, the bread of nature\nBy his word to flesh he turns;\nWine into his blood he changes:\nWhat though sense no change discerns?\nOnly be the heart in earnest,\nFaith her lesson quickly learns.\n\n!If the Office is celebrated before the exposed Blessed Sacrament, the following verses are said on bended knee.\n\nDown in adoration falling,\nLo! the sacred Host we hail;\nLo! o'er ancient forms departing,\nNewer rites of grace prevail;\nFaith for all defects supplying,\nWhere the feeble senses fail.\n\nTo the everlasting Father,\nAnd the Son who reigns on high,\nWith the Holy Ghost proceeding\nForth from each eternally,\nBe salvation, honour, blessing,\nMight, and endless majesty.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Ego sum * panis vivus, qui de cælo descéndi: si quis manducáverit ex hoc pane, vivet in ætérnum, allelúja.",
-      "eng": "In holiness * let us serve the Lord, and he will deliver us from our enemies.",
+      "eng": "I am the living Bread Which came down from heaven; * if any man eat of this Bread, he shall live for ever, alleluia.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "O sacrum convívium, * in quo Christus súmitur: recólitur memória passiónis ejus: mens implétur grátia: et futúræ glóriæ nobis pignus datur, allelúja.",
-      "eng": "God has shown * the power of his arm: he has scattered the proud in the imagination of their hearts.",
+      "eng": "Holy exceedingly is the Supper of the Lord, * wherein we do feed on Christ, do show His death till He come, do get grace abundantly to our souls, and do take pledge of the glory which shall hereafter be revealed in us, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -8196,7 +8196,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -8319,21 +8319,21 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Facta sunt * enim hæc ut Scriptúra implerétur quæ dicit: Vidébunt in quem transfixérunt.",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "For these things were done * that the Scripture should be fulfilled which saith, They shall look on him whom they pierced.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Ad Jesum autem * cum veníssent, ut vidérunt eum jam mórtuum, non fregérunt ejus crura, sed unus mílitum láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "But when they came to Jesus * and saw that he was dead already, they broke not his legs, but one of the soldiers with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "With joy shall ye draw water.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
@@ -8342,7 +8342,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "Take my yoke upon you, and learn of me.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -8451,7 +8451,7 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Cor, arca legem cóntinens\nNon servitútis véteris,\nSed grátiæ, sed véniæ,\nSed et misericórdiæ.\n\nCor, sanctuárium novi\nIntemerátum fœ́deris,\nTemplum vetústo sánctius,\nVelúmque scisso utílius.\n\nTe vulnerátum cáritas\nIctu paténti vóluit,\nAmóris invisíbilis\nUt venerémur vúlnera.\n\nHoc sub amóris sýmbolo\nPassus cruénta et mýstica,\nUtrúmque sacrifícium\nChristus sacérdos óbtulit.\n\nQuis non amántem rédamet?\nQuis non redémptus díligat,\nEt Corde in isto séligat\nÆtérna tabernácula?\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "The dawn is sprinkling in the east\nIts golden shower, as day flows in;\nFast mount the pointed shafts of light:\nFarewell to darkness and to sin!\n\nAway, ye midnight phantoms all!\nAway, despondence and despair!\nWhatever guilt the night has brought,\nNow let it vanish into air.\n\nSo, Lord, when that last morning breaks,\nLooking to which we sigh and pray,\nO may it to thy minstrels prove\nThe dawning of a better day.\n\nTo God the Father glory be,\nAnd to his sole-begotten Son;\nGlory, O Holy Ghost, to thee,\nWhile everlasting ages run,\nAmen.",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\n\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\n\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\n\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\n\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
@@ -8465,21 +8465,21 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Facta sunt * enim hæc ut Scriptúra implerétur quæ dicit: Vidébunt in quem transfixérunt.",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "For these things were done * that the Scripture should be fulfilled which saith, They shall look on him whom they pierced.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Ad Jesum autem * cum veníssent, ut vidérunt eum jam mórtuum, non fregérunt ejus crura, sed unus mílitum láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "But when they came to Jesus * and saw that he was dead already, they broke not his legs, but one of the soldiers with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -8488,7 +8488,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -8597,14 +8597,14 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Cor, arca legem cóntinens\nNon servitútis véteris,\nSed grátiæ, sed véniæ,\nSed et misericórdiæ.\n\nCor, sanctuárium novi\nIntemerátum fœ́deris,\nTemplum vetústo sánctius,\nVelúmque scisso utílius.\n\nTe vulnerátum cáritas\nIctu paténti vóluit,\nAmóris invisíbilis\nUt venerémur vúlnera.\n\nHoc sub amóris sýmbolo\nPassus cruénta et mýstica,\nUtrúmque sacrifícium\nChristus sacérdos óbtulit.\n\nQuis non amántem rédamet?\nQuis non redémptus díligat,\nEt Corde in isto séligat\nÆtérna tabernácula?\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "Lo, the dim shadows of the night are waning;\nLightsome and blushing, dawn of day returneth;\nFervent in spirit, to the world’s Creator\nPray we devoutly:\n\nThat he may pity sinners in their sighing,\nBanish all troubles, kindly health bestowing;\nAnd may he grant us, of his countless blessings,\nPeace that is endless.\n\nThis be our portion, God forever blessed,\nFather eternal, Son, and Holy Spirit,\nWhose is the glory, which through all creation\nEver resoundeth.\nAmen.",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\n\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\n\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\n\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\n\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "En, ut supérba críminum\nEt sæva nostrórum cohors\nCor sauciávit ínnocens\nMeréntis haud tale Dei!\n\nVibrántis hastam mílitis\nPeccáta nostra dírigunt,\nFerrúmque diræ cúspidis\nMortále crimen ácuit.\n\nEx Corde scisso Ecclésia,\nChristo jugáta, náscitur:\nHoc óstium arcæ in látere est\nGenti ad salútem pósitum.\n\nEx hoc perénnis grátia,\nCeu septifórmis flúvius,\nStolas ut illic sórdidas\nLavémus Agni in sánguine.\n\nTurpe est redíre ad crímina,\nQuæ Cor beátum lácerent:\nSed æmulémur córdibus\nFlammas amóris índices.\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "O blest Creator of the light,\nWho mak’st the day with radiance bright,\nAnd o’er the forming world didst call\nThe light from chaos first of all;\n\nWhose wisdom joined in meet array\nThe morn and eve, and named them day:\nNight comes with all its darkling fears;\nRegard thy people’s prayers and tears.\n\nLest, sunk in sin, and whelmed with strife,\nThey lose the gift of endless life;\nWhile thinking but the thoughts of time,\nThey weave new chains of woe and crime.\n\nBut grant them grace that they may strain\nThe heavenly gate and prize to gain:\nEach harmful lure aside to cast,\nAnd purge away each error past.\n\n* O Father, that we ask be done,\nThrough Jesus Christ, thine only Son;\nWho, with the Holy Ghost and thee,\nDoth live and reign eternally.\nAmen.",
+      "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nFather and Son supreme\nAnd Spirit, hear our cry;\nWhose is the kingdom, praise and power,\nThrough all eternity.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
@@ -8625,7 +8625,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Tóllite jugum meum super vos et díscite a me.",
-      "eng": "The Lord reigns, he is clothed with beauty.",
+      "eng": "V. Take my yoke upon you, and learn of me.\nR. For I am meek and lowly in Heart.",
       "latR": "Quia mitis sum et húmilis Corde.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -8634,7 +8634,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Memóriam fecit mirabílium suórum miserátor Dóminus.",
-      "eng": "The merciful Lord hath instituted a memorial of his wondrous deeds.",
+      "eng": "V. The merciful Lord hath instituted a memorial of his wondrous deeds.\nR. He hath given Meat unto them that fear him.",
       "latR": "Escam dedit timéntibus se.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -8743,35 +8743,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Cor, arca legem cóntinens\nNon servitútis véteris,\nSed grátiæ, sed véniæ,\nSed et misericórdiæ.\n\nCor, sanctuárium novi\nIntemerátum fœ́deris,\nTemplum vetústo sánctius,\nVelúmque scisso utílius.\n\nTe vulnerátum cáritas\nIctu paténti vóluit,\nAmóris invisíbilis\nUt venerémur vúlnera.\n\nHoc sub amóris sýmbolo\nPassus cruénta et mýstica,\nUtrúmque sacrifícium\nChristus sacérdos óbtulit.\n\nQuis non amántem rédamet?\nQuis non redémptus díligat,\nEt Corde in isto séligat\nÆtérna tabernácula?\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "O splendour of God’s glory bright,\nO thou that bringest light from light,\nO light of light, light’s living spring,\nO day, all days illumining.\n\nO thou true sun, on us thy glance\nLet fall in royal radiance,\nThe Spirit’s sanctifying beam\nUpon our earthly senses stream.\n\nThe Father too our prayers implore,\nFather of glory evermore,\nThe Father of all grace and might,\nTo banish sin from our delight:\n\nTo guide whate’er we nobly do,\nWith love all envy to subdue,\nTo make ill-fortune turn to fair,\nAnd give us grace our wrongs to bear.\n\nOur mind be in his keeping placed,\nOur body true to him and chaste,\nWhere only faith her fire shall feed,\nAnd burn the tares of Satan’s seed.\n\nAnd Christ to us for food shall be,\nFrom him our drink that welleth free,\nThe Spirit’s wine, that maketh whole,\nAnd mocking not, exalts the soul.\n\nRejoicing may this day go hence,\nLike virgin dawn our innocence,\nLike fiery noon our faith appear,\nNor know the gloom of twilight drear.\n\nMorn in her rosy car is borne;\nLet him come forth our perfect morn,\nThe Word in God the Father One,\nThe Father perfect in the Son.\n\nAll laud to God the Father be;\nAll praise, Eternal Son, to thee;\nAll glory, as is ever meet,\nTo God the Holy Paraclete.\nAmen.",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\n\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\n\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\n\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\n\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "En, ut supérba críminum\nEt sæva nostrórum cohors\nCor sauciávit ínnocens\nMeréntis haud tale Dei!\n\nVibrántis hastam mílitis\nPeccáta nostra dírigunt,\nFerrúmque diræ cúspidis\nMortále crimen ácuit.\n\nEx Corde scisso Ecclésia,\nChristo jugáta, náscitur:\nHoc óstium arcæ in látere est\nGenti ad salútem pósitum.\n\nEx hoc perénnis grátia,\nCeu septifórmis flúvius,\nStolas ut illic sórdidas\nLavémus Agni in sánguine.\n\nTurpe est redíre ad crímina,\nQuæ Cor beátum lácerent:\nSed æmulémur córdibus\nFlammas amóris índices.\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "O great Creator of the sky,\nWho wouldest not the floods on high\nWith earthly waters to confound,\nBut mad’st the firmament their bound;\n\nThe floods above thou didst ordain;\nThe floods below thou didst restrain:\nThat moisture might attemper heat,\nLest the parched earth should ruin meet.\n\nUpon our souls, good Lord, bestow\nThy gift of grace in endless flow:\nLest some renewed deceit or wile\nOf former sin should us beguile.\n\nLet faith discover heav’nly light;\nSo shall its rays direct us right:\nAnd let this faith each error chase,\nAnd never give to falsehood place.\n\nGrant this, O Father, ever One\nWith Christ, thy sole-begotten Son,\nAnd Holy Ghost, whom all adore,\nReigning and blest forevermore.\nAmen.",
+      "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nFather and Son supreme\nAnd Spirit, hear our cry;\nWhose is the kingdom, praise and power,\nThrough all eternity.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Facta sunt * enim hæc ut Scriptúra implerétur quæ dicit: Vidébunt in quem transfixérunt.",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "For these things were done * that the Scripture should be fulfilled which saith, They shall look on him whom they pierced.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Ad Jesum autem * cum veníssent, ut vidérunt eum jam mórtuum, non fregérunt ejus crura, sed unus mílitum láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "But when they came to Jesus * and saw that he was dead already, they broke not his legs, but one of the soldiers with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -8780,7 +8780,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -8889,35 +8889,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Cor, arca legem cóntinens\nNon servitútis véteris,\nSed grátiæ, sed véniæ,\nSed et misericórdiæ.\n\nCor, sanctuárium novi\nIntemerátum fœ́deris,\nTemplum vetústo sánctius,\nVelúmque scisso utílius.\n\nTe vulnerátum cáritas\nIctu paténti vóluit,\nAmóris invisíbilis\nUt venerémur vúlnera.\n\nHoc sub amóris sýmbolo\nPassus cruénta et mýstica,\nUtrúmque sacrifícium\nChristus sacérdos óbtulit.\n\nQuis non amántem rédamet?\nQuis non redémptus díligat,\nEt Corde in isto séligat\nÆtérna tabernácula?\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "As the bird, whose clarion gay\nSounds before the dawn is grey,\nChrist, who brings the spirit’s day,\nCalls us, close at hand:\n\nWake! he cries, and for my sake,\nFrom your eyes dull slumbers shake!\nSober, righteous, chaste, awake!\nAt the door I stand!\n\nLord, to thee we lift on high\nFervent prayer and bitter cry:\nHearts aroused to pray and sigh\nMay not slumber more:\n\nBreak the sleep of death and time,\nForged by Adam’s ancient crime;\nAnd the light of Eden’s prime\nTo the world restore!\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\n\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\n\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\n\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\n\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "En, ut supérba críminum\nEt sæva nostrórum cohors\nCor sauciávit ínnocens\nMeréntis haud tale Dei!\n\nVibrántis hastam mílitis\nPeccáta nostra dírigunt,\nFerrúmque diræ cúspidis\nMortále crimen ácuit.\n\nEx Corde scisso Ecclésia,\nChristo jugáta, náscitur:\nHoc óstium arcæ in látere est\nGenti ad salútem pósitum.\n\nEx hoc perénnis grátia,\nCeu septifórmis flúvius,\nStolas ut illic sórdidas\nLavémus Agni in sánguine.\n\nTurpe est redíre ad crímina,\nQuæ Cor beátum lácerent:\nSed æmulémur córdibus\nFlammas amóris índices.\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "Earth's mighty Maker, whose command\nRaised from the sea the solid land;\nAnd drove each billowy heap away,\nAnd bade the earth stand firm for aye:\n\nThat so, with flowers of golden hue,\nThe seeds of each it might renew;\nAnd fruit-trees bearing fruit might yield,\nAnd pleasant pasture of the field:\n\nOur spirit’s rankling wounds efface\nWith dewy freshness of thy grace:\nThat grief may cleanse each deed of ill,\nAnd o’er each lust may triumph still.\n\nLet every soul thy law obey,\nAnd keep from every evil way;\nRejoice each promised good to win,\nAnd flee from every mortal sin.\n\nHear thou our prayer, Almighty King!\nHear thou our praises, while we sing,\nAdoring with the heavenly host,\nThe Father, Son, and Holy Ghost!\nAmen.",
+      "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nFather and Son supreme\nAnd Spirit, hear our cry;\nWhose is the kingdom, praise and power,\nThrough all eternity.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Facta sunt * enim hæc ut Scriptúra implerétur quæ dicit: Vidébunt in quem transfixérunt.",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "For these things were done * that the Scripture should be fulfilled which saith, They shall look on him whom they pierced.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Ad Jesum autem * cum veníssent, ut vidérunt eum jam mórtuum, non fregérunt ejus crura, sed unus mílitum láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "But when they came to Jesus * and saw that he was dead already, they broke not his legs, but one of the soldiers with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -8926,7 +8926,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -9035,35 +9035,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Cor, arca legem cóntinens\nNon servitútis véteris,\nSed grátiæ, sed véniæ,\nSed et misericórdiæ.\n\nCor, sanctuárium novi\nIntemerátum fœ́deris,\nTemplum vetústo sánctius,\nVelúmque scisso utílius.\n\nTe vulnerátum cáritas\nIctu paténti vóluit,\nAmóris invisíbilis\nUt venerémur vúlnera.\n\nHoc sub amóris sýmbolo\nPassus cruénta et mýstica,\nUtrúmque sacrifícium\nChristus sacérdos óbtulit.\n\nQuis non amántem rédamet?\nQuis non redémptus díligat,\nEt Corde in isto séligat\nÆtérna tabernácula?\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "Day is breaking, dawn is bright:\nHence, vain shadows of the night!\nMists that dim our mortal sight,\nChrist is come! Depart!\n\nDarkness routed lifts her wings\nAs the radiance upwards springs:\nThrough the world of wakened things\nLife and colour dart.\n\nThee, O Christ, alone we know:\nSinging even in our woe,\nWith pure hearts to thee we go:\nOn our senses shine!\n\nIn thy beams be purged away\nAll that leads our thoughts astray!\nThrough our spirits, King of day,\nPour thy light divine!\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\n\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\n\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\n\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\n\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "En, ut supérba críminum\nEt sæva nostrórum cohors\nCor sauciávit ínnocens\nMeréntis haud tale Dei!\n\nVibrántis hastam mílitis\nPeccáta nostra dírigunt,\nFerrúmque diræ cúspidis\nMortále crimen ácuit.\n\nEx Corde scisso Ecclésia,\nChristo jugáta, náscitur:\nHoc óstium arcæ in látere est\nGenti ad salútem pósitum.\n\nEx hoc perénnis grátia,\nCeu septifórmis flúvius,\nStolas ut illic sórdidas\nLavémus Agni in sánguine.\n\nTurpe est redíre ad crímina,\nQuæ Cor beátum lácerent:\nSed æmulémur córdibus\nFlammas amóris índices.\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "O God, whose hand hath spread the sky,\nAnd all its shining hosts on high,\nAnd painting it with fiery light,\nMade it so beauteous and so bright:\n\nThou, when the fourth day was begun,\nDidst frame the circle of the sun,\nAnd set the moon for ordered change,\nAnd planets for their wider range:\n\nTo night and day, by certain line,\nTheir varying bounds thou didst assign;\nAnd gav’st a signal, known and meet,\nFor months begun and months complete.\n\nEnlighten thou the hearts of men:\nPolluted souls make pure again:\nUnloose the bands of guilt within:\nRemove the burden of our sin.\n\nGrant this, O Father, ever One\nWith Christ thy sole-begotten Son,\nWhom, with the Spirit we adore,\nOne God, both now and evermore.\nAmen.",
+      "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nFather and Son supreme\nAnd Spirit, hear our cry;\nWhose is the kingdom, praise and power,\nThrough all eternity.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Facta sunt * enim hæc ut Scriptúra implerétur quæ dicit: Vidébunt in quem transfixérunt.",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "For these things were done * that the Scripture should be fulfilled which saith, They shall look on him whom they pierced.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Ad Jesum autem * cum veníssent, ut vidérunt eum jam mórtuum, non fregérunt ejus crura, sed unus mílitum láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "But when they came to Jesus * and saw that he was dead already, they broke not his legs, but one of the soldiers with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -9072,7 +9072,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -9181,35 +9181,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Cor, arca legem cóntinens\nNon servitútis véteris,\nSed grátiæ, sed véniæ,\nSed et misericórdiæ.\n\nCor, sanctuárium novi\nIntemerátum fœ́deris,\nTemplum vetústo sánctius,\nVelúmque scisso utílius.\n\nTe vulnerátum cáritas\nIctu paténti vóluit,\nAmóris invisíbilis\nUt venerémur vúlnera.\n\nHoc sub amóris sýmbolo\nPassus cruénta et mýstica,\nUtrúmque sacrifícium\nChristus sacérdos óbtulit.\n\nQuis non amántem rédamet?\nQuis non redémptus díligat,\nEt Corde in isto séligat\nÆtérna tabernácula?\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "See the golden sun arise!\nLet no more our darkened eyes\nSnare us, tangled by surprise\nIn the maze of sin!\n\nFrom false words and thoughts impure\nLet this light, serene and sure,\nKeep our lips without secure,\nKeep our souls within.\n\nSo may we the day-time spend,\nThat, till life’s temptations end,\nTongue, nor hand, nor eye offend!\nOne, above us all,\n\nViews in his revealing ray\nAll we do, and think, and say,\nWatching us from break of day\nTill the twilight fall.\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\n\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\n\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\n\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\n\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "En, ut supérba críminum\nEt sæva nostrórum cohors\nCor sauciávit ínnocens\nMeréntis haud tale Dei!\n\nVibrántis hastam mílitis\nPeccáta nostra dírigunt,\nFerrúmque diræ cúspidis\nMortále crimen ácuit.\n\nEx Corde scisso Ecclésia,\nChristo jugáta, náscitur:\nHoc óstium arcæ in látere est\nGenti ad salútem pósitum.\n\nEx hoc perénnis grátia,\nCeu septifórmis flúvius,\nStolas ut illic sórdidas\nLavémus Agni in sánguine.\n\nTurpe est redíre ad crímina,\nQuæ Cor beátum lácerent:\nSed æmulémur córdibus\nFlammas amóris índices.\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "O sovereign Lord of nature’s might,\nWho bad’st the water’s birth divide;\nPart in the heavens to take their flight,\nAnd part in ocean’s deep to hide;\n\nThese low obscured, on airy wing\nExalted those, that either race,\nThough from one element they spring,\nMight serve thee in a different place.\n\nGrant, Lord, that we thy servants all,\nSaved by thy tide of cleansing blood,\nNo more ’neath sin's dominion fall,\nNor fear the thought of death’s dark flood!\n\nThy varied love each spirit bless,\nThe humble cheer, the high control;\nCheck in each heart its proud excess,\nBut raise the meek and contrite soul!\n\nThis boon, O Father, we entreat,\nThis blessing grant, Eternal Son,\nAnd Holy Ghost, the Paraclete,\nBoth now, and while the ages run.\nAmen.",
+      "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nFather and Son supreme\nAnd Spirit, hear our cry;\nWhose is the kingdom, praise and power,\nThrough all eternity.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Facta sunt * enim hæc ut Scriptúra implerétur quæ dicit: Vidébunt in quem transfixérunt.",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "For these things were done * that the Scripture should be fulfilled which saith, They shall look on him whom they pierced.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Ad Jesum autem * cum veníssent, ut vidérunt eum jam mórtuum, non fregérunt ejus crura, sed unus mílitum láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "But when they came to Jesus * and saw that he was dead already, they broke not his legs, but one of the soldiers with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -9218,7 +9218,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -9327,35 +9327,35 @@
       "type": "hymn",
       "label": "Hymnus",
       "lat": "Cor, arca legem cóntinens\nNon servitútis véteris,\nSed grátiæ, sed véniæ,\nSed et misericórdiæ.\n\nCor, sanctuárium novi\nIntemerátum fœ́deris,\nTemplum vetústo sánctius,\nVelúmque scisso utílius.\n\nTe vulnerátum cáritas\nIctu paténti vóluit,\nAmóris invisíbilis\nUt venerémur vúlnera.\n\nHoc sub amóris sýmbolo\nPassus cruénta et mýstica,\nUtrúmque sacrifícium\nChristus sacérdos óbtulit.\n\nQuis non amántem rédamet?\nQuis non redémptus díligat,\nEt Corde in isto séligat\nÆtérna tabernácula?\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "O Christ, whose glory fills the heaven,\nOur only hope, in mercy given;\nChild of a Virgin meek and pure;\nSon of the Highest evermore:\n\nGrant us thine aid thy praise to sing,\nAs opening days new duties bring;\nThat with the light our life may be\nRenewed and sanctified by thee.\n\nThe morning star fades from the sky,\nThe sun breaks forth; night’s shadows fly:\nO Thou, true Light, upon us shine:\nOur darkness turn to light divine.\n\nWithin us grant thy light to dwell;\nAnd from our souls dark sins expel;\nCleanse thou our minds from stain of ill,\nAnd with thy peace our bosoms fill.\n\nTo us strong faith forever give,\nWith joyous hope, in thee to live;\nThat life’s rough way may ever be\nMade strong and pure by charity.\n\nAll laud to God the Father be,\nAll praise, Eternal Son, to thee:\nAll glory, as is ever meet,\nTo God the holy Paraclete,\nAmen.",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\n\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\n\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\n\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\n\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen.",
       "variationKey": "laudes.hymn"
     },
     "vesperae.hymn": {
       "type": "hymn",
       "label": "Hymnus",
       "lat": "En, ut supérba críminum\nEt sæva nostrórum cohors\nCor sauciávit ínnocens\nMeréntis haud tale Dei!\n\nVibrántis hastam mílitis\nPeccáta nostra dírigunt,\nFerrúmque diræ cúspidis\nMortále crimen ácuit.\n\nEx Corde scisso Ecclésia,\nChristo jugáta, náscitur:\nHoc óstium arcæ in látere est\nGenti ad salútem pósitum.\n\nEx hoc perénnis grátia,\nCeu septifórmis flúvius,\nStolas ut illic sórdidas\nLavémus Agni in sánguine.\n\nTurpe est redíre ad crímina,\nQuæ Cor beátum lácerent:\nSed æmulémur córdibus\nFlammas amóris índices.\n\nJesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "Maker of man, who from thy throne\nDost order all things, God alone;\nBy whose decree the teeming earth\nTo reptile and to beast gave birth:\n\nThe mighty forms that fill the land,\nInstinct with life at thy command,\nAre given subdued to humankind\nFor service in their rank assigned.\n\nFrom all thy servants drive away\nWhate’er of thought impure to-day\nHath been with open action blent,\nOr mingled with the heart’s intent.\n\nIn heaven thine endless joys bestow,\nAnd grant thy gifts of grace below;\nFrom chains of strife our souls release,\nBind fast the gentle bands of peace.\n\nGrant this, O Father, ever One\nWith Christ, thy sole-begotten Son,\nWhom, with the Spirit we adore,\nOne God, both now and evermore.\nAmen.",
+      "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nFather and Son supreme\nAnd Spirit, hear our cry;\nWhose is the kingdom, praise and power,\nThrough all eternity.\nAmen.",
       "variationKey": "vesperae.hymn"
     },
     "laudes.antiphon.benedictus": {
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Facta sunt * enim hæc ut Scriptúra implerétur quæ dicit: Vidébunt in quem transfixérunt.",
-      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "eng": "For these things were done * that the Scripture should be fulfilled which saith, They shall look on him whom they pierced.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Ad Jesum autem * cum veníssent, ut vidérunt eum jam mórtuum, non fregérunt ejus crura, sed unus mílitum láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "eng": "But when they came to Jesus * and saw that he was dead already, they broke not his legs, but one of the soldiers with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "We are filled in the morning with thy mercy.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -9364,7 +9364,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -10652,21 +10652,21 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Cum vidísset Jesus * matrem stantem juxta crucem, et discípulum quem diligébat, dicit matri suæ: Múlier, ecce fílius tuus. Deínde dicit discípulo: Ecce Mater tua.",
-      "eng": "I will get me to the mountain of myrrh, * and to the hill of frankincense.;;115",
+      "eng": "When Jesus saw His Mother, * and the disciple whom He loved, standing by the Cross, He saith unto His Mother: Woman, behold thy Son! Then saith He to the disciple: Behold thy Mother!",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Cum vidísset Jesus * matrem stantem juxta crucem, et discípulum quem diligébat, dicit matri suæ: Múlier, ecce fílius tuus. Deínde dicit discípulo: Ecce Mater tua.",
-      "eng": "I will get me to the mountain of myrrh, * and to the hill of frankincense.;;115",
+      "eng": "When Jesus saw His Mother, * and the disciple whom He loved, standing by the Cross, He saith unto His Mother: Woman, behold thy Son! Then saith He to the disciple: Behold thy Mother!",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Ora pro nobis, Virgo dolorosíssima.",
-      "eng": "Deliver me from my enemies, O my God.",
+      "eng": "V. Pray for us, O Virgin most sorrowful.\nR. That we may be made worthy of the promises of Christ.",
       "latR": "Ut digni efficiámur promissiónibus Christi.",
       "engR": "",
       "variationKey": "laudes.versicle"
@@ -10675,7 +10675,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Ora pro nobis, Virgo dolorosíssima.",
-      "eng": "Pray for us, O Virgin most sorrowful.",
+      "eng": "V. Pray for us, O Virgin most sorrowful.\nR. That we may be made worthy of the promises of Christ.",
       "latR": "Ut digni efficiámur promissiónibus Christi.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -10816,7 +10816,7 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Non habéres * in me potestátem, nisi désuper tibi datum fuísset.",
-      "eng": "Thou couldest have no power * at all against Me, except it were given thee from above.",
+      "eng": "And now, O Father, glorify Thou Me * with thine Own Self, with the glory which I had with thee before the world was.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
@@ -10983,7 +10983,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Homo pacis meæ, in quo sperávi.",
-      "eng": "Mine own familiar friend, in whom I trusted;",
+      "eng": "V. Mine own familiar friend, in whom I trusted;\nR. Which did eat of my bread, hath lifted up his heel against me.",
       "latR": "Qui edébat panes meos, ampliávit advérsum me supplantatiónem.",
       "engR": "Which did eat of my bread, hath lifted up his heel against me.",
       "variationKey": "laudes.versicle"
@@ -11078,7 +11078,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Collocávit me in obscúris.",
-      "eng": "He hath set me in dark places.",
+      "eng": "V. He hath set me in dark places.\nR. As they that be dead of old.",
       "latR": "Sicut mórtuos sǽculi.",
       "engR": "As they that be dead of old.",
       "variationKey": "laudes.versicle"
@@ -11087,7 +11087,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Collocávit me in obscúris.",
-      "eng": "Deliver me, O Lord, from the evil man.",
+      "eng": "V. He hath set me in dark places.\nR. As they that be dead of old.",
       "latR": "Sicut mórtuos sǽculi.",
       "engR": "",
       "variationKey": "vesperae.versicle"
@@ -11131,7 +11131,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "@Tempora/Quad6-4",
-      "eng": "I will take the cup of salvation; * and call upon the Name of the Lord.",
+      "eng": "God spared not His Own Son * but delivered Him up for us all.",
       "variationKey": "vesperae.antiphon.psalm1"
     }
   },
@@ -11147,7 +11147,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Caro mea requiéscet in spe.",
-      "eng": "My flesh shall rest in hope.",
+      "eng": "V. My flesh shall rest in hope.\nR. Neither wilt Thou suffer thine Holy One to see corruption.",
       "latR": "Et non dabis Sanctum tuum vidére corruptiónem.",
       "engR": "Neither wilt Thou suffer thine Holy One to see corruption.",
       "variationKey": "laudes.versicle"
@@ -11228,7 +11228,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dómine, refúgium factus es nobis.",
-      "eng": "Lord, thou hast been our refuge.",
+      "eng": "V. Lord, thou hast been our refuge.\nR. From generation to generation.",
       "latR": "A generatióne et progénie.",
       "engR": "From generation to generation.",
       "variationKey": "laudes.versicle"
