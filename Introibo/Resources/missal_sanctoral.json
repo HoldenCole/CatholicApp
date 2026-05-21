@@ -72,6 +72,15 @@
       "preface": "Apostolis"
     }
   },
+  "01-04": {
+    "officium": "In Octava Ss. Innocentium",
+    "rank": 1.4,
+    "rule": {
+      "commune": "Sancti/12-28",
+      "gloria": true,
+      "preface": "Nat"
+    }
+  },
   "01-05": {
     "officium": "In Vigilia Epiphaniæ",
     "rank": 4,
@@ -173,6 +182,42 @@
       "eng": "Grant, we beseech You, almighty God, that, by the understanding of our minds made pure, we may grasp what we celebrate by these solemn rites."
     }
   },
+  "01-07": {
+    "officium": "Secunda die infra Octavam Epiphaniæ",
+    "rank": 1.2,
+    "rule": {
+      "commune": "Sancti/01-06",
+      "gloria": true,
+      "preface": "Epi"
+    }
+  },
+  "01-08": {
+    "officium": "Tertia die infra Octavam Epiphaniæ",
+    "rank": 1.2,
+    "rule": {
+      "commune": "Sancti/01-06",
+      "gloria": true,
+      "preface": "Epi"
+    }
+  },
+  "01-09": {
+    "officium": "Quarta die infra Octavam Epiphaniæ",
+    "rank": 1.2,
+    "rule": {
+      "commune": "Sancti/01-06",
+      "gloria": true,
+      "preface": "Epi"
+    }
+  },
+  "01-10": {
+    "officium": "Quinta die infra Octavam Epiphaniæ",
+    "rank": 1.2,
+    "rule": {
+      "commune": "Sancti/01-06",
+      "gloria": true,
+      "preface": "Epi"
+    }
+  },
   "01-11": {
     "officium": "Sexta die infra Octavam Epiphaniæ",
     "rank": 5,
@@ -222,6 +267,15 @@
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat.",
       "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity."
+    }
+  },
+  "01-12": {
+    "officium": "Septima die infra Octavam Epiphaniæ",
+    "rank": 1.8,
+    "rule": {
+      "commune": "Sancti/01-06",
+      "gloria": true,
+      "preface": "Epi"
     }
   },
   "01-13": {
@@ -1223,7 +1277,7 @@
       "ref": "Luc 2:22-32"
     },
     "offertorium": {
-      "lat": "",
+      "lat": "Diffúsa est grátia in lábiis tuis: proptérea benedíxit te Deus in ætérnum, et in sǽculum sǽculi. (Allelúja.)",
       "eng": "Grace is poured out upon your lips; thus God has blessed you forever, and for ages of ages. (Alleluja.)",
       "ref": "Ps 44:3"
     },
@@ -3511,6 +3565,56 @@
     }
   },
   "05-01": {
+    "officium": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "rank": 6,
+    "rule": {
+      "gloria": true,
+      "credo": true,
+      "preface": "Joseph"
+    },
+    "introitus": {
+      "lat": "Sapiéntia réddidit justis mercédem labórum suórum, et dedúxit illos in via mirábili, et fuit illis in velaménto diéi et in luce stellárum per noctem, allelúja, allelúja. Nisi Dóminus ædificáverit domum, in vanum labórant qui ædíficant eam. Sapiéntia réddidit justis mercédem labórum suórum, et dedúxit illos in via mirábili, et fuit illis in velaménto diéi et in luce stellárum per noctem, allelúja, allelúja.",
+      "eng": "Wisdom rendered to the just the wages of their labors, and conducted them in a wonderful way: and she was to them for a covert by day, and for the light of stars by night, alleluia, alleluia. Unless the Lord build the house, they labor in vain who build it. Wisdom rendered to the just the wages of their labors, and conducted them in a wonderful way: and she was to them for a covert by day, and for the light of stars by night, alleluia, alleluia.",
+      "ref": "Sap 10:17"
+    },
+    "oratio": {
+      "lat": "Rerum cónditor Deus, qui legem labóris humáno géneri statuísti: concéde propítius; ut, sancti Joseph exémplo et patrocínio, ópera perficiámus quæ præcipis, et præmia consequámur quæ promíttis.",
+      "eng": "O God, Creator of all things, Who imposed on man the law of work; grant in Your goodness that, by the example and patronage of blessed Joseph, we may both accomplish the work You command and attain the reward You have promised."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Colossénses. Fratres: Caritátem habéte, quod est vínculum perfectiónis, et pax Christi exsúltet in córdibus vestris, in qua et vocáti estis in uno córpore, et grati estóte. Omne quodcúmque fácitis in verbo aut in ópere, ómnia in nómine Dómini Jesu Christi, grátias agéntes Deo et Patri per ipsum. Quodcúmque fácitis, ex ánimo operámini sicut Dómino, et non homínibus, sciéntes quod a Dómino accipiétis retributiónem hereditátis. Dómino Christo servíte.",
+      "eng": "Lesson from the letter of St. Paul to the Colossians. Brethren: Have charity, which is the bond of perfection. And let the peace of Christ rejoice in your hearts, wherein also you are called in one body: and be thankful. All whatsoever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God and the Father by Him. Whatsoever you do, do it from the heart, as to the Lord, and not to men: knowing that you shall receive of the Lord the reward of inheritance. Serve the Lord Christ.",
+      "ref": "Col 3:14-15, 17, 23-24"
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja. De quacúmque tribulatióne clamáverint ad me, exáudiam eos, et ero protéctor eórum semper. Allelúja. Fac nos innócuam, Joseph, decúrrere vitam: sitque tuo semper tuta patrocínio. Allelúja.",
+      "eng": "Alleluia, alleluia. In whatever tribulation they shall cry to Me, I will hear them and be their protector always. Alleluia. Obtain for us, O Joseph, to lead an innocent life; and may it ever be safe under your patronage. Alleluia."
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum. In illo témpore: Véniens Jesus in pátriam suam, docébat eos in synagógis eórum, ita ut miraréntur et dícerent: Unde huic sapiéntia hæc et virtútes? Nonne hic est fabri fílius? Nonne mater ejus dícitur María, et fratres ejus Jacóbus et Joseph et Simon et Judas? Et soróres ejus nonne omnes apud nos sunt? Unde ergo huic ómnia ista? Et scandalizabántur in eo. Jesus autem dixit eis: Non est prophéta sine honóre nisi in pátria sua et in domo sua. Et non fecit ibi virtútes multas propter incredulitátem illórum.",
+      "eng": "Continuation + of the Holy Gospel according to Matthew. At that time, Jesus coming into His own country, taught them in their synagogues, so that they wondered and said: How came this Man by this wisdom and miracles? Is not this the carpenter's Son? Is not His mother called Mary, and His brethren James, and Joseph, and Simon, and Jude: and His sisters, are they not all with us? Whence therefore hath He all these things? And they were scandalized in His regard. But Jesus said to them: A prophet is not without honour, save in his own country, and in his own house. And He wrought not many miracles there, because of their unbelief.",
+      "ref": "Matt 13:54-58"
+    },
+    "offertorium": {
+      "lat": "Bónitas Dómini Dei nostri sit super nos, et opus mánuum nostrárum secúnda nobis, et opus mánuum nostrárum secúnda, allelúja.",
+      "eng": "Let the brightness of the Lord our God be upon us: and direct the works of our hands over us; yea, the work of our hands do direct. Alleluia.",
+      "ref": "Ps 89:17"
+    },
+    "secreta": {
+      "lat": "Quas tibi, Dómine, de opéribus mánuum nostrárum offérimus hóstias, sancti Joseph interpósito suffrágio, pignus fácias nobis unitátis et pacis.",
+      "eng": "May these gifts, the work of our hands, which we offer You, O Lord, be made for us, by the intercession of blessed Joseph, a pledge of unity and peace."
+    },
+    "communio": {
+      "lat": "Unde huic sapiéntia hæc et virtútes? Nonne hic est fabri fílius? Nonne mater ejus dícitur María? Allelúja.",
+      "eng": "How came this Man by this wisdom and miracles? Is not this the carpenter's Son? Is not His mother called Mary? Alleluia.",
+      "ref": "Matt 13:54-55"
+    },
+    "postcommunio": {
+      "lat": "Hæc sancta quæ súmpsimus, Dómine, per intercessiónem beáti Joseph; et operatiónem nostram cómpleant, et prǽmia confírment.",
+      "eng": "May these holy mysteries which we have received, O Lord, by the intercession of blessed Joseph, complete our works, and confirm the rewards."
+    }
+  },
+  "05-01-pj": {
     "officium": "Ss. Philippi et Jacobi Apostolorum",
     "rank": 5,
     "rule": {
@@ -3863,6 +3967,56 @@
       "eng": "O Lord, may the merits of St. Antoninus, Your Confessor and Bishop, help us; and just as we praise You for the wonders You have wrought in him, so may we glory in Your mercy toward us."
     }
   },
+  "05-11": {
+    "officium": "Ss. Philippi et Jacobi Apostolorum",
+    "rank": 5,
+    "rule": {
+      "gloria": true,
+      "credo": true
+    },
+    "introitus": {
+      "lat": "Clamavérunt ad te, Dómine, in témpore afflictiónis suæ, et tu de cœlo exaudísti eos, allelúja, allelúja. Exsultáte, justi, in Dómino: rectos decet collaudátio. Clamavérunt ad te, Dómine, in témpore afflictiónis suæ, et tu de cœlo exaudísti eos, allelúja, allelúja.",
+      "eng": "Esd. 9:27 In the time of their tribulation they cried to You, O Lord, and You heard them from heaven, alleluia, alleluia. Exult, you just, in the Lord; praise from the upright is fitting. In the time of their tribulation they cried to You, O Lord, and You heard them from heaven, alleluia, alleluia.",
+      "ref": "Neh 9:27"
+    },
+    "oratio": {
+      "lat": "Deus, qui nos ánnua Apostolórum tuórum Philíppi et Jacóbi sollemnitáte lætíficas: præsta, quǽsumus: ut, quorum gaudémus méritis, instruámur exémplis.",
+      "eng": "O God, Who gladden us each year by the feast of Your holy Apostles Philip and James, graciously grant that, as we rejoice in their merits, we may be inspired by their example."
+    },
+    "lectio": {
+      "lat": "Léctio libri Sapiéntiæ Stabunt justi in magna constántia advérsus eos, qui se angustiavérunt et qui abstulérunt labóres eórum. Vidéntes turbabúntur timore horríbili, et mirabúntur in subitatióne insperátæ salútis, dicéntes intra se, pœniténtiam agéntes, et præ angústia spíritus geméntes: Hi sunt, quos habúimus aliquándo in derísum et in similitúdinem impropérii. Nos insensáti vitam illórum æstimabámus insániam, et finem illórum sine honóre: ecce, quómodo computáti sunt inter fílios Dei, et inter Sanctos sors illórum est.",
+      "eng": "Lesson from the book of Wisdom The just shall stand with great assurance before their oppressors who set at nought their labors. Seeing this, these shall be shaken with dreadful fear, and amazed at the suddenness of the unlooked-for salvation. They shall say among themselves, rueful and groaning through anguish of spirit: These are they whom once we held as a laughingstock and as a type for mockery, fools that we were! Their life we deemed madness, and their death dishonored. See how they are accounted among the sons of God; how their lot is with the Saints!",
+      "ref": "Sap 5:1-5"
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja. Confitebúntur cœli mirabília tua, Dómine: etenim veritátem tuam in ecclésia sanctórum. Allelúja. Tanto témpore vobíscum sum, et non cognovístis me? Philíppe, qui videt me, videt et Patrem meum. Allelúja.",
+      "eng": "Alleluia, alleluia. V. The heavens proclaim Your wonders, O Lord, and Your faithfulness, in the assembly of the holy ones. Alleluia. V. Have I been so long a time with you, and you have not known Me? Philip, he who sees Me, sees also My Father. Alleluia.",
+      "ref": "Ps 88:6"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem In illo témpore: Dixit Jesus discípulis suis: Non turbátur cor vestrum. Creditis in Deum, et in me crédite. In domo Patris mei mansiónes multæ sunt. Si quo minus, dixíssem vobis: Quia vado paráre vobis locum. Et si abíero et præparávero vobis locum: íterum vénio et accípiam vos ad meípsum, ut, ubi sum ego, et vos sitis. Et quo ego vado, scitis, et viam scitis. Dicit ei Thomas: Dómine, nescímus, quo vadis: et quómodo póssumus viam scire? Dicit ei Jesus: Ego sum via et véritas et vita; nemo venit ad Patrem nisi per me. Si cognovissétis me, et Patrem meum útique cognovissétis: et ámodo cognoscátis eum, et vidístis eum. Dicit ei Philíppus: Dómine, osténde nobis Patrem, et sufficit nobis. Dicit ei Jesus: Tanto témpore vobíscum sum, et non cognovístis me? Philíppe, qui videt me, videt et Patrem. Quómodo tu dicis: Osténde nobis Patrem? Non créditis, quia ego in Patre, et Pater in me est? Verba, quæ ego loquor vobis, a meípso non loquor. Pater autem in me manens, ipse facit ópera. Non créditis, quia ego in Patre, et Pater in me est? Alióquin propter ópera ipsa crédite. Amen, amen, dico vobis, qui credit in me, ópera, quæ ego fácio, et ipse fáciet, et majóra horum fáciet: quia ego ad Patrem vado. Et quodcúmque petiéritis Patrem in nómine meo, hoc fáciam.",
+      "eng": "Continuation + of the Holy Gospel according to John At that time, Jesus said to His disciples, Let not your heart be troubled. You believe in God, believe also in Me. In My Father’s house there are many mansions. Were it not so, I should have told you, because I go to prepare a place for you. And if I go and prepare a place for you, I am coming again, and I will take you to Myself; that where I am, there you also may be. And where I go you know, and the way you know. Thomas said to Him, Lord! we do not know where You are going, and how can we know the way? Jesus said to him, I am the way, and the truth, and the life. No one comes to the Father but through Me. If you had known Me, you would also have known My Father. And henceforth you do know Him, and you have seen Him. Philip said to Him, Lord, show us the Father and it is enough for us. Jesus said to him, Have I been so long a time with you, and you have not known Me? Philip, he who sees Me sees also the Father. How can you say, ‘Show us the Father’? Do you not believe that I am in the Father and the Father in Me? The words that I speak to you I speak not on My own authority. But the Father dwelling in Me, it is He Who does the works. Do you believe that I am in the Father and the Father in Me? Otherwise believe because of the works themselves. Amen, amen, I say to you, he who believes in Me, the works that I do he shall do, and greater than these he shall do, because I am going to the Father. And whatever you ask in My name, that I will do.",
+      "ref": "Joannes 14:1-13"
+    },
+    "offertorium": {
+      "lat": "Confitebúntur cœli mirabília tua, Dómine: et veritátem tuam in ecclésia sanctórum, allelúja, allelúja.",
+      "eng": "The heavens proclaim Your wonders, O Lord; and Your faithfulness, in the assembly of the holy ones, alleluia, alleluia.",
+      "ref": "Ps 88:6"
+    },
+    "secreta": {
+      "lat": "Múnera, Dómine, quæ pro Apostolórum tuórum Philippi et Jacóbi sollemnitáte deférimus, propítius súscipe: et mala ómnia, quæ merémur avérte.",
+      "eng": "Graciously accept, O Lord, the offerings we bring for the feast of Your Apostles Philip and James, and ward off all the evils which we deserve."
+    },
+    "communio": {
+      "lat": "Tanto témpore vobíscum sum, et non cognovístis me? Philíppe, qui videt me, videt et Patrem meum, allelúja: non credis, quia ego in Patre, et Pater in me est? Allelúja, allelúja.",
+      "eng": ". Have I been so long a time with you, and you have not known Me? Philip, he who sees Me sees also My Father. Alleluia. Do you not believe that I am in the Father and the Father in Me? Alleluia, alleluia.",
+      "ref": "Joannes 14:9; 14:10"
+    },
+    "postcommunio": {
+      "lat": "Quǽsumus, Dómine, salutáribus repléti mystériis: ut, quorum sollémnia celebrámus, eórum oratiónibus adjuvémur.",
+      "eng": "Filled with the sacrament of salvation, we beseech You, O Lord, to help us by the prayers of those whose feast we are celebrating."
+    }
+  },
   "05-12": {
     "officium": "Ss. Nerei, Achillei et Domitillæ Virg. atque Pancratii Martyrum",
     "rank": 2,
@@ -3893,7 +4047,7 @@
       "ref": "Joannes 4:46-53"
     },
     "offertorium": {
-      "lat": "",
+      "lat": "Confitebúntur cœli mirabília tua, Dómine: et veritátem tuam in ecclésia sanctórum, allelúja, allelúja.",
       "eng": "The heavens proclaim Your wonders, O Lord, and Your faithfulness, in the assembly of the holy ones, alleluia, alleluia.",
       "ref": "Ps. 88:6"
     },
@@ -7333,6 +7487,16 @@
       "eng": "Grant, we beseech You, almighty God, that we who are heavy laden by the weight of our sins may be sustained by the spiritual help of St. Dominic, Your Confessor."
     }
   },
+  "08-05": {
+    "officium": "S. Mariæ ad Nives",
+    "rank": 4,
+    "rule": {
+      "commune": "Sancti/12-08",
+      "gloria": true,
+      "credo": true,
+      "preface": "Maria=Festivitate"
+    }
+  },
   "08-06": {
     "officium": "In Transfiguratione Domini Nostri Jesu Christi",
     "rank": 5,
@@ -7812,7 +7976,8 @@
     "officium": "S. Hyacinthi Confessoris",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Sancti/09-01"
     }
   },
   "08-19": {
@@ -8376,7 +8541,11 @@
   },
   "08-dom-oct": {
     "officium": "S. Joachim Confessoris, Patris B. M. V.",
-    "rank": 5
+    "rank": 5,
+    "rule": {
+      "gloria": true,
+      "commune": "Sancti/09-01"
+    }
   },
   "09-01": {
     "officium": "S. Ægidii Abbatis",
@@ -9122,7 +9291,8 @@
     "officium": "Ss. Eustachii et Sociorum Martyrum",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Sancti/01-19"
     }
   },
   "09-21": {
@@ -9870,7 +10040,7 @@
       "ref": "Ps 44:5; 44:11; 44:12"
     },
     "evangelium": {
-      "lat": "",
+      "lat": "In illo témpore: Missus est Angelus Gábriel a Deo in civitátem Galilææ, cui nomen Názareth, ad Vírginem desponsátam viro, cui nomen erat Joseph, de domo David, et nomen Vírginis María. Et ingréssus Angelus ad eam, dixit: Ave, grátia plena; Dóminus tecum: benedícta tu in muliéribus. Quæ cum audísset, turbáta est in sermóne ejus: et cogitábat, qualis esset ista salutátio. Et ait Angelus ei: Ne tímeas, María, invenísti enim grátiam apud Deum: ecce, concípies in útero et páries fílium, et vocábis nomen ejus Jesum. Hic erit magnus, et Fílius Altíssimi vocábitur, et dabit illi Dóminus Deus sedem David, patris ejus: et regnábit in domo Jacob in ætérnum, et regni ejus non erit finis. Dixit autem María ad Angelum: Quómodo fiet istud, quóniam virum non cognósco? Et respóndens Angelus, dixit ei: Spíritus Sanctus supervéniet in te, et virtus Altíssimi obumbrábit tibi. Ideóque et quod nascétur ex te Sanctum, vocábitur Fílius Dei. Et ecce, Elisabeth, cognáta tua, et ipsa concépit fílium in senectúte sua: et hic mensis sextus est illi, quæ vocátur stérilis: quia non erit impossíbile apud Deum omne verbum. Dixit autem María: Ecce ancílla Dómini, fiat mihi secúndum verbum tuum.",
       "eng": "Continuation + of the Holy Gospel according to Luke At that time, the angel Gabriel was sent from God to a town of Galilee called Nazareth, to a virgin betrothed to a man named Joseph, of the house of David, and the virgin’s name was Mary. And when the angel had come to her, he said, Hail, full of grace, the Lord is with you. Blessed are you among women. When she had heard him she was troubled at his word, and kept pondering what manner of greeting this might be. And the angel said to her, Do not be afraid, Mary, for you have found grace with God. Behold, you shall conceive in your womb and shall bring forth a Son; and you shall call His name Jesus. He shall be great, and shall be called the Son of the Most High; and the Lord God will give Him the throne of David His father, and He shall be king over the house of Jacob forever; and of His kingdom there shall be no end. But Mary said to the angel, How shall this happen, since I do not know man? And the angel answered and said to her, The Holy Spirit shall come upon you, and the power of the Most High shall overshadow you; and therefore the Holy One to be born shall be called the Son of God. And behold, Elizabeth your kinswoman also has conceived a son in her old age, and she who was called barren is now in her sixth month; for nothing shall be impossible with God. But Mary said, Behold the handmaid of the Lord; be it done to me according to your word.",
       "ref": "Luke 1:26-38"
     },
@@ -10650,7 +10820,7 @@
       "ref": "Ps 78:10; 78:2"
     },
     "evangelium": {
-      "lat": "",
+      "lat": "In illo témpore: Dixit Jesus discípulis suis: Ego sum vitis vera: et Pater meus agrícola est. Omnem pálmitem in me non feréntem fructum, tollet eum: et omnem, qui fert fructum, purgábit eum, ut fructum plus áfferat. Jam vos mundi estis propter sermónem, quem locútus sum vobis. Manéte in me: et ego in vobis. Sicut palmes non potest ferre fructum a semetípso, nisi mánserit in vite: sic nec vos, nisi in me manséritis. Ego sum vitis, vos pálmites: qui manet in me, et ego in eo, hic fert fructum multum: quia sine me nihil potéstis fácere. Si quis in me non mánserit, mittétur foras sicut palmes, et aréscet, et cólligent eum, et in ignem mittent, et ardet. Si manséritis in me, et verba mea in vobis mánserint: quodcúmque voluéritis, petétis, et fiet vobis.",
       "eng": "Continuation ++ of the Holy Gospel according to John In that time, Jesus said to his disciples: I am the true vine; and my Father is the husbandman. Every branch in me, that beareth not fruit, he will take away: and every one that beareth fruit, he will purge it, that it may bring forth more fruit. Now you are clean by reason of the word, which I have spoken to you. Abide in me, and I in you. As the branch cannot bear fruit of itself, unless it abide in the vine, so neither can you, unless you abide in me. I am the vine: you the branches: he that abideth in me, and I in him, the same beareth much fruit: for without me you can do nothing. If any one abide not in me, he shall be cast forth as a branch, and shall wither, and they shall gather him up, and cast him into the fire, and he burneth. If you abide in me, and my words abide in you, you shall ask whatever you will, and it shall be done unto you.",
       "ref": "John 15:1-7"
     },
@@ -12318,6 +12488,16 @@
     "postcommunio": {
       "lat": "Satiásti, Dómine, famíliam tuam munéribus sacris: ejus, quǽsumus, semper interventióne nos réfove, cujus sollémnia celebrámus.",
       "eng": "Thou hast fed thy servants, O Lord, with the holy gifts; comfort us ever we pray, by her intercession whose festival we celebrate."
+    }
+  },
+  "12-15": {
+    "officium": "In Octava Immaculatæ Conceptionis Beatæ Mariæ Virginis",
+    "rank": 4,
+    "rule": {
+      "commune": "Sancti/12-08",
+      "gloria": true,
+      "credo": true,
+      "preface": "Maria=Conceptione"
     }
   },
   "12-16": {

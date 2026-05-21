@@ -22,6 +22,10 @@ data class MissalProperEntry(
         val gloria: Boolean? = null,
         val credo: Boolean? = null,
         val preface: String? = null,
+        // Optional redirect to another formulary used as a fallback when this
+        // entry omits the Mass propers. Format: "Sancti/12-25m3", "Tempora/Epi3-0",
+        // "C5" (commune key), or a bare missal key like "epi3-0".
+        val commune: String? = null,
     )
 
     fun toMassProper(key: String, ordo: OrdoEntry? = null): MassProper? {

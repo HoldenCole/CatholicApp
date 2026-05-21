@@ -18,6 +18,10 @@ struct MissalProperEntry: Decodable {
         let gloria: Bool?
         let credo: Bool?
         let preface: String?
+        /// Optional redirect to another formulary used as a fallback when this
+        /// entry omits the Mass propers. Format: "Sancti/12-25m3", "Tempora/Epi3-0",
+        /// "C5" (commune key), or a bare missal key like "epi3-0".
+        let commune: String?
     }
 
     func toMassProper(key: String, ordo: OrdoEntry? = nil) -> MassProper? {

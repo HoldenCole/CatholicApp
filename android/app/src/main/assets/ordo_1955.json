@@ -1335,9 +1335,9 @@
     "sanctoral": "05-01",
     "winner": "sanctoral",
     "winnerKey": "05-01",
-    "rank": 5.1,
-    "name": "Ss. Philippi et Jacobi Apostolorum",
-    "color": "red",
+    "rank": 7.0,
+    "name": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "color": "white",
     "season": "easter",
     "commemoration": "pasc4-3"
   },
@@ -1443,13 +1443,13 @@
   "2024-05-11": {
     "temporal": "pasc5-6",
     "sanctoral": "05-11",
-    "winner": "temporal",
-    "winnerKey": "pasc5-6",
-    "rank": 1.0,
-    "name": "Sabbato post Ascensionem",
-    "color": "white",
+    "winner": "sanctoral",
+    "winnerKey": "05-11",
+    "rank": 5.0,
+    "name": "Ss. Philippi et Jacobi Apostolorum (transl.)",
+    "color": "red",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc5-6"
   },
   "2024-05-12": {
     "temporal": "pasc6-0",
@@ -1753,8 +1753,8 @@
     "sanctoral": "06-08",
     "winner": "temporal",
     "winnerKey": "pent02-6",
-    "rank": 2.1,
-    "name": "Die II infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam II post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -1765,10 +1765,10 @@
     "winner": "temporal",
     "winnerKey": "pent03-0",
     "rank": 5.0,
-    "name": "Dominica III Post Pentecosten infra Octavam SSmi Cordis D.N.J.C",
+    "name": "Dominica III Post Pentecosten",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "06-09"
+    "commemoration": null
   },
   "2024-06-10": {
     "temporal": "pent03-1",
@@ -2059,13 +2059,13 @@
   "2024-07-06": {
     "temporal": "pent06-6",
     "sanctoral": "07-06",
-    "winner": "sanctoral",
-    "winnerKey": "07-06",
-    "rank": 4.1,
-    "name": "In Octava Ss. Apostolorum Petri et Pauli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent06-6",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam VI post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent06-6"
+    "commemoration": null
   },
   "2024-07-07": {
     "temporal": "pent07-0",
@@ -3301,14 +3301,14 @@
   },
   "2024-10-27": {
     "temporal": "pent23-0",
-    "sanctoral": "10-27",
-    "winner": "temporal",
-    "winnerKey": "pent23-0",
-    "rank": 5.0,
-    "name": "Dominica XXIII Post Pentecosten",
+    "sanctoral": "10-du",
+    "winner": "sanctoral",
+    "winnerKey": "10-du",
+    "rank": 7.0,
+    "name": "In Festo Domini Nostri Jesu Christi Regis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "10-27"
+    "commemoration": "pent23-0"
   },
   "2024-10-28": {
     "temporal": "pent23-1",
@@ -5350,9 +5350,9 @@
     "sanctoral": "05-01",
     "winner": "sanctoral",
     "winnerKey": "05-01",
-    "rank": 5.1,
-    "name": "Ss. Philippi et Jacobi Apostolorum",
-    "color": "red",
+    "rank": 7.0,
+    "name": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "color": "white",
     "season": "easter",
     "commemoration": "pasc1-4"
   },
@@ -5458,13 +5458,13 @@
   "2025-05-11": {
     "temporal": "pasc3-0",
     "sanctoral": "05-11",
-    "winner": "temporal",
-    "winnerKey": "pasc3-0",
+    "winner": "sanctoral",
+    "winnerKey": "05-11",
     "rank": 5.0,
-    "name": "Dominica III Post Pascha",
-    "color": "white",
+    "name": "Ss. Philippi et Jacobi Apostolorum (transl.)",
+    "color": "red",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc3-0"
   },
   "2025-05-12": {
     "temporal": "pasc3-1",
@@ -7305,14 +7305,14 @@
   },
   "2025-10-26": {
     "temporal": "pent20-0",
-    "sanctoral": "10-26",
-    "winner": "temporal",
-    "winnerKey": "pent20-0",
-    "rank": 5.0,
-    "name": "Dominica XX Post Pentecosten",
+    "sanctoral": "10-du",
+    "winner": "sanctoral",
+    "winnerKey": "10-du",
+    "rank": 7.0,
+    "name": "In Festo Domini Nostri Jesu Christi Regis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "10-26"
+    "commemoration": "pent20-0"
   },
   "2025-10-27": {
     "temporal": "pent20-1",
@@ -9365,9 +9365,9 @@
     "sanctoral": "05-01",
     "winner": "sanctoral",
     "winnerKey": "05-01",
-    "rank": 5.1,
-    "name": "Ss. Philippi et Jacobi Apostolorum",
-    "color": "red",
+    "rank": 7.0,
+    "name": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "color": "white",
     "season": "easter",
     "commemoration": "pasc3-5"
   },
@@ -9473,13 +9473,13 @@
   "2026-05-11": {
     "temporal": "pasc5-1",
     "sanctoral": "05-11",
-    "winner": "temporal",
-    "winnerKey": "pasc5-1",
-    "rank": 2.1,
-    "name": "Feria Secunda in Rogationibus",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "05-11",
+    "rank": 5.0,
+    "name": "Ss. Philippi et Jacobi Apostolorum (transl.)",
+    "color": "red",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc5-1"
   },
   "2026-05-12": {
     "temporal": "pasc5-2",
@@ -9850,29 +9850,29 @@
     "winner": "temporal",
     "winnerKey": "pent03-0",
     "rank": 5.0,
-    "name": "Dominica III Post Pentecosten infra Octavam SSmi Cordis D.N.J.C",
+    "name": "Dominica III Post Pentecosten",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "06-14"
+    "commemoration": null
   },
   "2026-06-15": {
     "temporal": "pent03-1",
     "sanctoral": "06-15",
     "winner": "temporal",
     "winnerKey": "pent03-1",
-    "rank": 2.1,
-    "name": "Die IV infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Secunda infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "06-15"
+    "commemoration": null
   },
   "2026-06-16": {
     "temporal": "pent03-2",
     "sanctoral": "06-16",
     "winner": "temporal",
     "winnerKey": "pent03-2",
-    "rank": 2.1,
-    "name": "Die V infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -9882,8 +9882,8 @@
     "sanctoral": "06-17",
     "winner": "temporal",
     "winnerKey": "pent03-3",
-    "rank": 2.1,
-    "name": "Die VI infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -10089,13 +10089,13 @@
   "2026-07-06": {
     "temporal": "pent06-1",
     "sanctoral": "07-06",
-    "winner": "sanctoral",
-    "winnerKey": "07-06",
-    "rank": 4.1,
-    "name": "In Octava Ss. Apostolorum Petri et Pauli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent06-1",
+    "rank": 1.0,
+    "name": "Feria Secunda infra Hebdomadam VI post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent06-1"
+    "commemoration": null
   },
   "2026-07-07": {
     "temporal": "pent06-2",
@@ -11309,14 +11309,14 @@
   },
   "2026-10-25": {
     "temporal": "pent22-0",
-    "sanctoral": "10-25",
-    "winner": "temporal",
-    "winnerKey": "pent22-0",
-    "rank": 5.0,
-    "name": "Dominica XXII Post Pentecosten",
+    "sanctoral": "10-du",
+    "winner": "sanctoral",
+    "winnerKey": "10-du",
+    "rank": 7.0,
+    "name": "In Festo Domini Nostri Jesu Christi Regis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "10-25"
+    "commemoration": "pent22-0"
   },
   "2026-10-26": {
     "temporal": "pent22-1",
@@ -13380,9 +13380,9 @@
     "sanctoral": "05-01",
     "winner": "sanctoral",
     "winnerKey": "05-01",
-    "rank": 5.1,
-    "name": "Ss. Philippi et Jacobi Apostolorum",
-    "color": "red",
+    "rank": 7.0,
+    "name": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "color": "white",
     "season": "easter",
     "commemoration": "pasc4-6"
   },
@@ -13488,13 +13488,13 @@
   "2027-05-11": {
     "temporal": "pasc6-2",
     "sanctoral": "05-11",
-    "winner": "temporal",
-    "winnerKey": "pasc6-2",
-    "rank": 1.0,
-    "name": "Feria III post Ascensionem",
-    "color": "white",
+    "winner": "sanctoral",
+    "winnerKey": "05-11",
+    "rank": 5.0,
+    "name": "Ss. Philippi et Jacobi Apostolorum (transl.)",
+    "color": "red",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc6-2"
   },
   "2027-05-12": {
     "temporal": "pasc6-3",
@@ -13777,18 +13777,18 @@
     "winner": "temporal",
     "winnerKey": "pent03-0",
     "rank": 5.0,
-    "name": "Dominica III Post Pentecosten infra Octavam SSmi Cordis D.N.J.C",
+    "name": "Dominica III Post Pentecosten",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "06-06"
+    "commemoration": null
   },
   "2027-06-07": {
     "temporal": "pent03-1",
     "sanctoral": "06-07",
     "winner": "temporal",
     "winnerKey": "pent03-1",
-    "rank": 2.1,
-    "name": "Die IV infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Secunda infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -13798,8 +13798,8 @@
     "sanctoral": "06-08",
     "winner": "temporal",
     "winnerKey": "pent03-2",
-    "rank": 2.1,
-    "name": "Die V infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -13809,11 +13809,11 @@
     "sanctoral": "06-09",
     "winner": "temporal",
     "winnerKey": "pent03-3",
-    "rank": 2.1,
-    "name": "Die VI infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "06-09"
+    "commemoration": null
   },
   "2027-06-10": {
     "temporal": "pent03-4",
@@ -14104,13 +14104,13 @@
   "2027-07-06": {
     "temporal": "pent07-2",
     "sanctoral": "07-06",
-    "winner": "sanctoral",
-    "winnerKey": "07-06",
-    "rank": 4.1,
-    "name": "In Octava Ss. Apostolorum Petri et Pauli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent07-2",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam VII post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent07-2"
+    "commemoration": null
   },
   "2027-07-07": {
     "temporal": "pent07-3",
@@ -15390,14 +15390,14 @@
   },
   "2027-10-31": {
     "temporal": "pent24-0",
-    "sanctoral": "10-31",
-    "winner": "temporal",
-    "winnerKey": "pent24-0",
-    "rank": 5.0,
-    "name": "Dominica XXIV et ultima Post Pentecosten",
+    "sanctoral": "10-du",
+    "winner": "sanctoral",
+    "winnerKey": "10-du",
+    "rank": 7.0,
+    "name": "In Festo Domini Nostri Jesu Christi Regis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "10-31"
+    "commemoration": "pent24-0"
   },
   "2027-11-01": {
     "temporal": "pent24-1",
@@ -17406,9 +17406,9 @@
     "sanctoral": "05-01",
     "winner": "sanctoral",
     "winnerKey": "05-01",
-    "rank": 5.1,
-    "name": "Ss. Philippi et Jacobi Apostolorum",
-    "color": "red",
+    "rank": 7.0,
+    "name": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "color": "white",
     "season": "easter",
     "commemoration": "pasc2-1"
   },
@@ -17514,13 +17514,13 @@
   "2028-05-11": {
     "temporal": "pasc3-4",
     "sanctoral": "05-11",
-    "winner": "temporal",
-    "winnerKey": "pasc3-4",
-    "rank": 1.0,
-    "name": "Feria Quinta infra Hebdomadam III post Octavam Paschæ",
-    "color": "white",
+    "winner": "sanctoral",
+    "winnerKey": "05-11",
+    "rank": 5.0,
+    "name": "Ss. Philippi et Jacobi Apostolorum (transl.)",
+    "color": "red",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc3-4"
   },
   "2028-05-12": {
     "temporal": "pasc3-5",
@@ -18012,10 +18012,10 @@
     "winner": "temporal",
     "winnerKey": "pent03-0",
     "rank": 5.0,
-    "name": "Dominica III Post Pentecosten infra Octavam SSmi Cordis D.N.J.C",
+    "name": "Dominica III Post Pentecosten",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "06-25"
+    "commemoration": null
   },
   "2028-06-26": {
     "temporal": "pent03-1",
@@ -18033,8 +18033,8 @@
     "sanctoral": "06-27",
     "winner": "temporal",
     "winnerKey": "pent03-2",
-    "rank": 2.1,
-    "name": "Die V infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -18130,13 +18130,13 @@
   "2028-07-06": {
     "temporal": "pent04-4",
     "sanctoral": "07-06",
-    "winner": "sanctoral",
-    "winnerKey": "07-06",
-    "rank": 4.1,
-    "name": "In Octava Ss. Apostolorum Petri et Pauli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent04-4",
+    "rank": 1.0,
+    "name": "Feria Quinta infra Hebdomadam IV post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent04-4"
+    "commemoration": null
   },
   "2028-07-07": {
     "temporal": "pent04-5",
@@ -19394,14 +19394,14 @@
   },
   "2028-10-29": {
     "temporal": "pent21-0",
-    "sanctoral": "10-29",
-    "winner": "temporal",
-    "winnerKey": "pent21-0",
-    "rank": 5.0,
-    "name": "Dominica XXI Post Pentecosten",
+    "sanctoral": "10-du",
+    "winner": "sanctoral",
+    "winnerKey": "10-du",
+    "rank": 7.0,
+    "name": "In Festo Domini Nostri Jesu Christi Regis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent21-0"
   },
   "2028-10-30": {
     "temporal": "pent21-1",
@@ -21421,9 +21421,9 @@
     "sanctoral": "05-01",
     "winner": "sanctoral",
     "winnerKey": "05-01",
-    "rank": 5.1,
-    "name": "Ss. Philippi et Jacobi Apostolorum",
-    "color": "red",
+    "rank": 7.0,
+    "name": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "color": "white",
     "season": "easter",
     "commemoration": "pasc4-2"
   },
@@ -21529,13 +21529,13 @@
   "2029-05-11": {
     "temporal": "pasc5-5",
     "sanctoral": "05-11",
-    "winner": "temporal",
-    "winnerKey": "pasc5-5",
-    "rank": 1.0,
-    "name": "Feria VI post Ascensionem",
-    "color": "white",
+    "winner": "sanctoral",
+    "winnerKey": "05-11",
+    "rank": 5.0,
+    "name": "Ss. Philippi et Jacobi Apostolorum (transl.)",
+    "color": "red",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc5-5"
   },
   "2029-05-12": {
     "temporal": "pasc5-6",
@@ -21850,11 +21850,11 @@
     "sanctoral": "06-09",
     "winner": "temporal",
     "winnerKey": "pent02-6",
-    "rank": 2.1,
-    "name": "Die II infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam II post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "06-09"
+    "commemoration": null
   },
   "2029-06-10": {
     "temporal": "pent03-0",
@@ -21862,10 +21862,10 @@
     "winner": "temporal",
     "winnerKey": "pent03-0",
     "rank": 5.0,
-    "name": "Dominica III Post Pentecosten infra Octavam SSmi Cordis D.N.J.C",
+    "name": "Dominica III Post Pentecosten",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "06-10"
+    "commemoration": null
   },
   "2029-06-11": {
     "temporal": "pent03-1",
@@ -22145,13 +22145,13 @@
   "2029-07-06": {
     "temporal": "pent06-5",
     "sanctoral": "07-06",
-    "winner": "sanctoral",
-    "winnerKey": "07-06",
-    "rank": 4.1,
-    "name": "In Octava Ss. Apostolorum Petri et Pauli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent06-5",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam VI post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent06-5"
+    "commemoration": null
   },
   "2029-07-07": {
     "temporal": "pent06-6",
@@ -23398,14 +23398,14 @@
   },
   "2029-10-28": {
     "temporal": "pent23-0",
-    "sanctoral": "10-28",
+    "sanctoral": "10-du",
     "winner": "sanctoral",
-    "winnerKey": "10-28",
-    "rank": 5.1,
-    "name": "Ss. Simonis et Judæ Apostolorum",
-    "color": "red",
+    "winnerKey": "10-du",
+    "rank": 7.0,
+    "name": "In Festo Domini Nostri Jesu Christi Regis",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": "pent23-0"
+    "commemoration": "10-28"
   },
   "2029-10-29": {
     "temporal": "pent23-1",
@@ -25436,9 +25436,9 @@
     "sanctoral": "05-01",
     "winner": "sanctoral",
     "winnerKey": "05-01",
-    "rank": 5.1,
-    "name": "Ss. Philippi et Jacobi Apostolorum",
-    "color": "red",
+    "rank": 7.0,
+    "name": "S. Josephi Opificis Sponsi BMV Confessoris",
+    "color": "white",
     "season": "easter",
     "commemoration": "pasc1-3"
   },
@@ -25544,13 +25544,13 @@
   "2030-05-11": {
     "temporal": "pasc2-6",
     "sanctoral": "05-11",
-    "winner": "temporal",
-    "winnerKey": "pasc2-6",
-    "rank": 2.0,
-    "name": "Die IV infra Octavam Patrocinii St Joseph",
-    "color": "white",
+    "winner": "sanctoral",
+    "winnerKey": "05-11",
+    "rank": 5.0,
+    "name": "Ss. Philippi et Jacobi Apostolorum (transl.)",
+    "color": "red",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc2-6"
   },
   "2030-05-12": {
     "temporal": "pasc3-0",
@@ -26097,10 +26097,10 @@
     "winner": "temporal",
     "winnerKey": "pent03-0",
     "rank": 5.0,
-    "name": "Dominica III Post Pentecosten infra Octavam SSmi Cordis D.N.J.C",
+    "name": "Dominica III Post Pentecosten",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "06-30"
+    "commemoration": null
   },
   "2030-07-01": {
     "temporal": "pent03-1",
@@ -26140,8 +26140,8 @@
     "sanctoral": "07-04",
     "winner": "temporal",
     "winnerKey": "pent03-4",
-    "rank": 2.1,
-    "name": "Die VII infra Octavam SSmi Cordis Jesu",
+    "rank": 1.0,
+    "name": "Feria Quinta infra Hebdomadam III post Octavam Pentecostes",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -26160,13 +26160,13 @@
   "2030-07-06": {
     "temporal": "pent03-6",
     "sanctoral": "07-06",
-    "winner": "sanctoral",
-    "winnerKey": "07-06",
-    "rank": 4.1,
-    "name": "In Octava Ss. Apostolorum Petri et Pauli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent03-6",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent03-6"
+    "commemoration": null
   },
   "2030-07-07": {
     "temporal": "pent04-0",
@@ -27402,14 +27402,14 @@
   },
   "2030-10-27": {
     "temporal": "pent20-0",
-    "sanctoral": "10-27",
-    "winner": "temporal",
-    "winnerKey": "pent20-0",
-    "rank": 5.0,
-    "name": "Dominica XX Post Pentecosten",
+    "sanctoral": "10-du",
+    "winner": "sanctoral",
+    "winnerKey": "10-du",
+    "rank": 7.0,
+    "name": "In Festo Domini Nostri Jesu Christi Regis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "10-27"
+    "commemoration": "pent20-0"
   },
   "2030-10-28": {
     "temporal": "pent20-1",

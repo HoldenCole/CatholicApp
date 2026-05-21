@@ -1249,19 +1249,39 @@
   },
   "nat26": {
     "officium": "Diei II infra Octavam Nativitatis",
-    "rank": 2
+    "rank": 2,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Sancti/12-25m3"
+    }
   },
   "nat27": {
     "officium": "Diei III infra Octavam Nativitatis",
-    "rank": 2
+    "rank": 2,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Sancti/12-25m3"
+    }
   },
   "nat28": {
     "officium": "Diei IV infra Octavam Nativitatis",
-    "rank": 2
+    "rank": 2,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Sancti/12-25m3"
+    }
   },
   "nat29": {
     "officium": "Die V infra Octavam Nativitatis",
-    "rank": 2
+    "rank": 2,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Sancti/12-25m3"
+    }
   },
   "nat30": {
     "officium": "Die VI infra Octavam Nativitatis",
@@ -1316,7 +1336,12 @@
   },
   "nat31": {
     "officium": "Die VII infra Octavam Nativitatis",
-    "rank": 2
+    "rank": 2,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Sancti/12-25m3"
+    }
   },
   "pasc0-0": {
     "officium": "Dominica Resurrectionis",
@@ -4671,6 +4696,162 @@
     "officium": "Sabbato infra Hebdomadam XXIV post Octavam Pentecostes",
     "rank": 1
   },
+  "pent25-0": {
+    "officium": "Dominica XXV (Epiphaniæ resumpta) Post Pentecosten",
+    "rank": 5,
+    "rule": {
+      "commune": "Tempora/epi3-0",
+      "gloria": true,
+      "credo": true,
+      "preface": "Trinitate"
+    }
+  },
+  "pent25-1": {
+    "officium": "Feria Secunda infra Hebdomadam XXV post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi3-0"
+    }
+  },
+  "pent25-2": {
+    "officium": "Feria Tertia infra Hebdomadam XXV post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi3-0"
+    }
+  },
+  "pent25-3": {
+    "officium": "Feria Quarta infra Hebdomadam XXV post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi3-0"
+    }
+  },
+  "pent25-4": {
+    "officium": "Feria Quinta infra Hebdomadam XXV post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi3-0"
+    }
+  },
+  "pent25-5": {
+    "officium": "Feria Sexta infra Hebdomadam XXV post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi3-0"
+    }
+  },
+  "pent25-6": {
+    "officium": "Sabbato infra Hebdomadam XXV post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi3-0"
+    }
+  },
+  "pent26-0": {
+    "officium": "Dominica XXVI (Epiphaniæ resumpta) Post Pentecosten",
+    "rank": 5,
+    "rule": {
+      "commune": "Tempora/epi4-0",
+      "gloria": true,
+      "credo": true,
+      "preface": "Trinitate"
+    }
+  },
+  "pent26-1": {
+    "officium": "Feria Secunda infra Hebdomadam XXVI post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi4-0"
+    }
+  },
+  "pent26-2": {
+    "officium": "Feria Tertia infra Hebdomadam XXVI post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi4-0"
+    }
+  },
+  "pent26-3": {
+    "officium": "Feria Quarta infra Hebdomadam XXVI post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi4-0"
+    }
+  },
+  "pent26-4": {
+    "officium": "Feria Quinta infra Hebdomadam XXVI post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi4-0"
+    }
+  },
+  "pent26-5": {
+    "officium": "Feria Sexta infra Hebdomadam XXVI post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi4-0"
+    }
+  },
+  "pent26-6": {
+    "officium": "Sabbato infra Hebdomadam XXVI post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi4-0"
+    }
+  },
+  "pent27-0": {
+    "officium": "Dominica XXVII (Epiphaniæ resumpta) Post Pentecosten",
+    "rank": 5,
+    "rule": {
+      "commune": "Tempora/epi5-0",
+      "gloria": true,
+      "credo": true,
+      "preface": "Trinitate"
+    }
+  },
+  "pent27-1": {
+    "officium": "Feria Secunda infra Hebdomadam XXVII post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi5-0"
+    }
+  },
+  "pent27-2": {
+    "officium": "Feria Tertia infra Hebdomadam XXVII post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi5-0"
+    }
+  },
+  "pent27-3": {
+    "officium": "Feria Quarta infra Hebdomadam XXVII post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi5-0"
+    }
+  },
+  "pent27-4": {
+    "officium": "Feria Quinta infra Hebdomadam XXVII post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi5-0"
+    }
+  },
+  "pent27-5": {
+    "officium": "Feria Sexta infra Hebdomadam XXVII post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi5-0"
+    }
+  },
+  "pent27-6": {
+    "officium": "Sabbato infra Hebdomadam XXVII post Octavam Pentecostes",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/epi5-0"
+    }
+  },
   "pentepi3-0": {
     "officium": "Dominica III quæ superfuit Post Epiphaniam",
     "rank": 5,
@@ -6704,8 +6885,8 @@
       "ref": "Ps. 101:2-5, 14"
     },
     "evangelium": {
-      "lat": "(rubrica 1955 aut rubrica 1960 dicitur) Munda cor meum ac lábia mea, omnípotens Deus, qui lábia Isaíæ Prophétæ cálculo mundásti igníto: ita me tua grata miseratióne dignáre mundáre, ut sanctum Evangélium tuum digne váleam nuntiáre. Per Christum, Dóminum nostrum. Amen. D. Jube, domne, benedícere. S. Dóminus sit in córdibus vestris et in lábiis vestris: ut digne et competénter annuntiétis Evangélium suum: In nómine Patris, et Fílii, + et Spíritus Sancti. D. Amen. _ (deinde dicuntur semper) Pássio Dómini nostri Jesu Christi secúndum Lucam. (rubrica 1955 aut rubrica 1960 dicitur) (rubrica 1570 aut rubrica 1910 aut rubrica divino afflatu dicitur) (deinde dicuntur) In illo témpore: Appropinquábat dies festus azymórum, qui dícitur Pascha: et quærébant príncipes sacerdótum et scribæ, quómodo Jesum interfícerent: timébant vero plebem. Intrávit autem sátanas in Judam, qui cognominabátur Iscariótes, unum de duódecim. Et ábiit, et locútus est cum princípibus sacerdótum et magistrátibus, quemádmodum illum tráderet eis. Et gavísi sunt, et pacti sunt pecúniam illi dare. Et spopóndit. Et quærébat opportunitátem, ut tráderet illum sine turbis. Venit autem dies azymórum, in qua necésse erat occídi pascha. Et misit Petrum et Joánnem, dicens: J. Eúntes paráte nobis pascha, ut manducémus. C. At illi dixérunt: S. Ubi vis parémus? C. Et dixit ad eos: J. Ecce, introëúntibus vobis in civitátem, occúrret vobis homo quidam ámphoram aquæ portans: sequímini eum in domum, in quam intrat, et dicétis patrifamílias domus: Dicit tibi Magister: Ubi est diversórium, ubi pascha cum discípulis meis mandúcem? Et ipse osténdet vobis cenáculum magnum stratum, et ibi paráte. C. Eúntes autem invenérunt, sicut dixit illis, et paravérunt pascha. Et cum facta esset hora, discúbuit, et duódecim Apóstoli cum eo. Et ait illis: J. Desidério desiderávi hoc pascha manducáre vobíscum, ántequam pátiar. Dico enim vobis, quia ex hoc non manducábo illud, donec impleátur in regno Dei. C. Et accépto cálice, grátias egit, et dixit: J. Accípite, et divídite inter vos. Dico enim vobis, quod non bibam de generatióne vitis, donec regnum Dei véniat. C. Et accépto pane, grátias egit, et fregit, et dedit eis, dicens: J. Hoc est corpus meum, quod pro vobis datur: hoc fácite in meam commemoratiónem. C. Simíliter et cálicem, postquam cenávit, dicens: J. Hic est calix novum Testaméntum in sánguine meo, qui pro vobis fundétur. Verúmtamen ecce manus tradéntis me mecum est in mensa. Et quidem Fílius hóminis, secúndum quod definítum est, vadit: verúmtamen væ hómini illi, per quem tradétur. C. Et ipsi cœpérunt quærere inter se, quis esset ex eis, qui hoc factúrus esset. Facta est autem et conténtio inter eos, quis eórum viderétur esse major. Dixit autem eis: J. Reges géntium dominántur eórum: et qui potestátem habent super eos, benéfici vocántur. Vos autem non sic: sed qui major est in vobis, fiat sicut minor: et qui præcéssor est, sicut ministrátor. Nam quis major est, qui recúmbit, an qui minístrat? nonne qui recúmbit? Ego autem in médio vestrum sum, sicut qui minístrat: vos autem estis, qui permansístis mecum in tentatiónibus meis. Et ego dispóno vobis, sicut dispósuit mihi Pater meus regnum, ut edátis et bibátis super mensam meam in regno meo: et sedeátis super thronos, judicántes duódecim tribus Israël. C. Ait autem Dóminus: J. Simon, Simon, ecce, sátanas expetívit vos, ut cribráret sicut tríticum: ego autem rogávi pro te, ut non defíciat fides tua: et tu aliquándo convérsus confírma fratres tuos. C. Qui dixit ei: S. Dómine, tecum parátus sum, et in cárcerem et in mortem ire. C. At ille dixit: Dico tibi, Petre: Non cantábit hódie gallus, donec ter ábneges nosse me. C. Et dixit eis: J. Quando misi vos sine sǽculo et pera et calceaméntis, numquid aliquid défuit vobis? C. At illi dixérunt: S. Nihil. C. Dixit ergo eis: J. Sed nunc, qui habet sǽculum, tollat simíliter et peram: et qui non habet, vendat túnicam suam, et emat gládium: Dico enim vobis, quóniam adhuc hoc, quod scriptum est, oportet impléri in me: Et cum iníquis deputátus est. Etenim ea, quæ sunt de me, finem habent. C. At illi dixérunt: S. Dómine, ecce duo gládii hic. C. At ille dixit eis: J. Satis est. C. Et egréssus ibat secúndum consuetúdinem in montem Olivárum. (sed rubrica 1955 aut rubrica 1960 hæc versus omittuntur) (rubrica 1955 aut rubrica 1960 dicitur) In illo témpore: Egréssus Jesus ibat secúndum consuetúdinem in montem Olivárum. Secúti sunt autem illum et discípuli. Et cum pervenísset ad locum, dixit illis: J. Oráte, ne intrétis in tentatiónem. C. Et ipse avúlsus est ab eis, quantum jactus est lápidis, et pósitis génibus orábat, dicens: J. Pater, si vis, transfer cálicem istum a me: verúmtamen non mea volúntas, sed tua fiat. C. Appáruit autem illi Angelus de cœlo, confórtans eum. Et factus in agónia, prolíxius orábat. Et factus est sudor ejus, sicut guttæ sánguinis decurréntis in terram. Et cum surrexísset ab oratióne, et venísset ad discípulos suos, invénit eos dormiéntes præ tristítia. Et ait illis: J.Quid dormítis? súrgite, oráte, ne intrétis in tentatiónem. C. Adhuc eo loquénte, ecce turba: et qui vocabátur Judas, unus de duódecim, antecedébat eos: et appropinquávit Jesu, ut oscularétur eum. Jesus autem dixit illi: J. Juda, ósculo Fílium hóminis tradis? C. Vidéntes autem hi, qui circa ipsum erant, quod futúrum erat, dixérunt ei: S. Dómine, si percútimus in gladio? C. Et percússit unus ex illis servum príncipis sacerdótum, et amputávit aurículam ejus déxteram. Respóndens autem Jesus, ait: J. Sínite usque huc. C. Et cum tetigísset aurículam ejus, sanávit eum. Dixit autem Jesus ad eos, qui vénerant ad se, príncipes sacerdótum et magistrátus templi et senióres: J. Quasi ad latrónem exístis cum gládiis et fústibus? Cum cotídie vobíscum fúerim in templo, non extendístis manus in me: sed hæc est hora vestra et potéstas tenebrárum. C. Comprehendéntes autem eum, duxérunt ad domum príncipis sacerdótum: Petrus vero sequebátur a longe. Accénso autem igne in médio átrii, et circumsedéntibus illis, erat Petrus in médio eórum. Quem cum vidísset ancílla quædam sedéntem ad lumen, et eum fuísset intúita, dixit: S. Et hic cum illo erat. C. At ille negávit eum, dicens: S. Múlier, non novi illum. C. Et post pusíllum álius videns eum, dixit: S. Et tu de illis es. C. Petrus vero ait: S. O homo, non sum. C. Et intervállo facto quasi horæ uníus, álius quidam affirmábat, dicens: S. Vere et hic cum illo erat: nam et Galilæus est. C. Et ait Petrus: S. Homo, néscio, quid dicis. C. Et contínuo adhuc illo loquénte cantávit gallus. Et convérsus Dóminus respéxit Petrum. Et recordátus est Petrus verbi Dómini, sicut díxerat: Quia priúsquam gallus cantet, ter me negábis. Et egréssus foras Petrus flevit amáre. Et viri, qui tenébant illum, illudébant ei, cædéntes. Et velavérunt eum et percutiébant fáciem ejus: et interrogábant eum, dicéntes: S. Prophetíza, quis est, qui te percússit? C. Et alia multa blasphemántes dicébant in eum. Et ut factus est dies, convenérunt senióres plebis et príncipes sacerdótum et scribæ, et duxérunt illum in concílium suum, dicentes: S. Si tu es Christus, dic nobis. C. Et ait illis: J. Si vobis díxero, non credétis mihi: si autem et interrogávero, non respondébitis mihi, neque dimittétis. Ex hoc autem erit Fílius hóminis sedens a dextris virtútis Dei. C. Dixérunt autem omnes: S. Tu ergo es Fílius Dei? C. Qui ait: J. Vos dicitis, quia ego sum. C. At illi dixérunt: S. Quid adhuc desiderámus testimónium? Ipsi enim audívimus de ore ejus. C. Et surgens omnis multitúdo eórum, duxérunt illum ad Pilátum. Cœpérunt autem illum accusáre, dicéntes: S. Hunc invénimus subverténtem gentem nostram, et prohibéntem tribúta dare Cæsari, et dicéntem se Christum regem esse. C. Pilátus autem interrogávit eum, dicens: S. Tu es Rex Judæórum? C. At ille respóndens, ait: J. Tu dicis. C. Ait autem Pilátus ad príncipes sacerdótum et turbas: S. Nihil invénio causæ in hoc hómine. C. At illi invalescébant, dicéntes: S. Cómmovet pópulum, docens per univérsam Judæam, incípiens a Galilæa usque huc. C. Pilátus autem áudiens Galilæam, interrogávit, si homo Galilæus esset. Et ut cognóvit, quod de Heródis potestáte esset, remísit eum ad Heródem, qui et ipse Jerosólymis erat illis diébus. Heródes autem, viso Jesu, gavísus est valde. Erat enim cúpiens ex multo témpore vidére eum, eo quod audíerat multa de eo, et sperábat signum áliquod vidére ab eo fíeri. Interrogábat autem eum multis sermónibus. At ipse nihil illi respondébat. Stabant autem príncipes sacerdótum et scribæ, constánter accusántes eum. Sprevit autem illum Heródes cum exércitu suo: et illúsit indútum veste alba, et remísit ad Pilátum. Et facti sunt amíci Heródes et Pilátus in ipsa die: nam ántea inimíci erant ad ínvicem. Pilátus autem, convocátis princípibus sacerdótum et magistrátibus et plebe, dixit ad illos: S. Obtulístis mihi hunc hóminem, quasi averténtem pópulum, et ecce, ego coram vobis intérrogans, nullam causam invéni in hómine isto ex his, in quibus eum accusátis. Sed neque Heródes: nam remísi vos ad illum, et ecce, nihil dignum morte actum est ei. Emendátum ergo illum dimíttam. C. Necésse autem habébat dimíttere eis per diem festum, unum. Exclamávit autem simul univérsa turba, dicens: S. Tolle hunc, et dimítte nobis Barábbam. C. Qui erat propter seditiónem quandam fáctam in civitáte et homicídium missus in cárcerem. Iterum autem Pilátus locútus est ad eos, volens dimíttere Jesum. At illi succlamábant, dicéntes: S. Crucifíge, crucifíge eum. C. Ille autem tértio dixit ad illos: S. Quid enim mali fecit iste? Nullam causam mortis invénio in eo: corrípiam ergo illum et dimíttam. C. At illi instábant vócibus magnis, postulántes, ut crucifigerétur. Et invalescébant voces eórum. Et Pilátus adjudicávit fíeri petitiónem eórum. Dimísit autem illis eum, qui propter homicídium et seditiónem missus fúerat in cárcerem, quem petébant: Jesum vero trádidit voluntáti eórum. Et cum dúcerent eum, apprehendérunt Simónem quendam Cyrenénsem, veniéntem de villa: et imposuérunt illi crucem portáre post Jesum. Sequebátur autem illum multa turba pópuli, et mulíerum, quæ plangébant et lamentabántur eum. Convérsus autem ad illas Jesus dixit: J. Filiæ Jerúsalem, nolíte flere super me, sed super vos ipsas flete et super fílios vestros. Quóniam ecce vénient dies, in quibus dicent: Beátæ stériles, et ventres, qui non genuérunt, et úbera, quæ non lactavérunt. Tunc incípient dícere móntibus: Cádite super nos; et cóllibus: Operíte nos. Quia si in víridi ligno hæc fáciunt, in árido quid fiet? C. Ducebántur autem et alii duo nequam cum eo, ut interficeréntur. Et postquam venérunt in locum, qui vocátur Calváriæ, ibi crucifixérunt eum: et latrónes, unum a dextris et álterum a sinístris. Jesus autem dicebat: J. Pater, dimítte illis: non enim sciunt, quid fáciunt. C. Dividéntes vero vestiménta ejus, misérunt sortes. Et stabat pópulus spectans, et deridébant eum príncipes cum eis, dicéntes: S. Alios salvos fecit: se salvum fáciat, si hic est Christus Dei electus. C. Illudébant autem ei et mílites accedéntes, et acétum offeréntes ei, et dicéntes: S. Si tu es Rex Judæórum, salvum te fac. C. Erat autem et superscríptio scripta super eum lítteris græcis et latínis et hebráicis: Hic est Rex Judæórum. Unus autem de his, qui pendébant, latrónibus, blasphemábat eum, dicens: S. Si tu es Christus, salvum fac temetípsum, et nos. C. Respóndens autem alter increpábat eum, dicens: S. Neque tu times Deum, quod in eadem damnatióne es. Et nos quidem juste, nam digna factis recípimus: hic vero nihil mali gessit. C. Et dicebat ad Jesum: S. Dómine, meménto mei, cum véneris in regnum tuum. C. Et dixit illi Jesus: J. Amen, dico tibi: Hódie mecum eris in paradíso. C. Erat autem fere hora sexta, et ténebræ factæ sunt in univérsam terram usque in horam nonam. Et obscurátus est sol: et velum templi scissum est médium. Et clamans voce magna Jesus, ait: J. Pater, in manus tuas comméndo spíritum meum. C. Et hæc dicens, exspirávit. (Hic genuflectitur, et pausatur aliquántulum) Videns autem centúrio quod factum fúerat, glorificávit Deum, dicens: S. Vere hic homo justus erat. C. Et omnis turba eórum, qui simul áderant ad spectáculum istud et vidébant, quæ fiébant, percutiéntes péctora sua revertebántur. Stabant autem omnes noti ejus a longe, et mulíeres, quæ secútæ eum erant a Galilǽa, hæc vidéntes. (deinde dicuntur) _ Munda cor meum ac labia mea, omnípotens Deus, qui labia Isaíæ Prophétæ cálculo mundásti igníto: ita me tua grata miseratióne dignáre mundáre, ut sanctum Evangélium tuum digne váleam nuntiáre. Per Christum, Dóminum nostrum. Amen. D. Jube, domne, benedicere. S. Dóminus sit in corde tuo et in lábiis tuis: ut digne et competénter annúnties Evangélium suum: In nómine Patris, et Fílii, + et Spíritus Sancti. Amen. _ (sed rubrica 1955 aut rubrica 1960 hæc versus omittuntur) Et ecce, vir nómine Joseph, qui erat decúrio, vir bonus et justus: hic non consénserat consílio et áctibus eórum, ab Arimathǽa civitáte Judǽæ, qui exspectábat et ipse regnum Dei. Hic accéssit ad Pilátum et pétiit corpus Jesu: et depósitum invólvit síndone, et pósuit eum in monuménto excíso, in quo nondum quisquam pósitus fúerat.",
-      "eng": "Cleanse my heart and my lips, O almighty God, who didst cleanse the lips of the prophet Isaias with a burning coal, and vouchsafe, through Thy gracious mercy, so to purify me, that I may worthily announce Thy holy Gospel. Through Christ our Lord. Amen. D. Sir, give me thy blessing. S. The Lord be in your hearts and on your lips, that you may worthily and in a becoming manner, proclaim His holy Gospel. In the name of the Father, and of the Son, + and of the Holy Ghost. D. Amen. _ The Passion of Our Lord Jesus Christ according to Luke. !Luc 22:1-71; 23:1-53 Now the feast of unleavened bread, which is called the pasch, was at hand. And the chief priests and the scribes sought how they might put Jesus to death: but they feared the people. And Satan entered into Judas, who was surnamed Iscariot, one of the twelve. And he went, and discoursed with the chief priests and the magistrates, how he might betray him to them. And they were glad, and covenanted to give him money. And he promised. And he sought opportunity to betray him in the absence of the multitude. And the day of the unleavened bread came, on which it was necessary that the pasch should be killed. And he sent Peter and John, saying: Go, and prepare for us the pasch, that we may eat. But they said: Where wilt thou that we prepare? And he said to them: Behold, as you go into the city, there shall meet you a man carrying a pitcher of water: follow him into the house where he entereth in. And you shall say to the goodman of the house: The master saith to thee, Where is the guest chamber, where I may eat the pasch with my disciples? And he will shew you a large dining room, furnished; and there prepare. And they going, found as he had said to them, and made ready the pasch. And when the hour was come, he sat down, and the twelve apostles with him. And he said to them: With desire I have desired to eat this pasch with you, before I suffer. For I say to you, that from this time I will not eat it, till it be fulfilled in the kingdom of God. And having taken the chalice, he gave thanks, and said: Take, and divide it among you: For I say to you, that I will not drink of the fruit of the vine, till the kingdom of God come. And taking bread, he gave thanks, and brake; and gave to them, saying: This is my body, which is given for you. Do this for a commemoration of me. In like manner the chalice also, after he had supped, saying: This is the chalice, the new testament in my blood, which shall be shed for you. But yet behold, the hand of him that betrayeth me is with me on the table. And the Son of man indeed goeth, according to that which is determined: but yet, woe to that man by whom he shall be betrayed. And they began to inquire among themselves, which of them it was that should do this thing. And there was also a strife amongst them, which of them should seem to be the greater. And he said to them: The kings of the Gentiles lord it over them; and they that have power over them, are called beneficent. But you not so: but he that is the greater among you, let him become as the younger; and he that is the leader, as he that serveth. For which is greater, he that sitteth at table, or he that serveth? Is it not he that sitteth at table? But I am in the midst of you, as he that serveth: And you are they who have continued with me in my temptations: And I dispose to you, as my Father hath disposed to me, a kingdom; That you may eat and drink at my table, in my kingdom: and may sit upon thrones, judging the twelve tribes of Israel. And the Lord said: Simon, Simon, behold Satan hath desired to have you, that he may sift you as wheat: But I have prayed for thee, that thy faith fail not: and thou, being once converted, confirm thy brethren. Who said to him: Lord, I am ready to go with thee, both into prison, and to death. And he said: I say to thee, Peter, the cock shall not crow this day, till thou thrice deniest that thou knowest me. And he said to them: When I sent you without purse, and scrip, and shoes, did you want anything? But they said: Nothing. Then said he unto them: But now he that hath a purse, let him take it, and likewise a scrip; and he that hath not, let him sell his coat, and buy a sword. For I say to you, that this that is written must yet be fulfilled in me: And with the wicked was he reckoned. For the things concerning me have an end. But they said: Lord, behold here are two swords. And he said to them, It is enough. And going out, he went, according to his custom, to the mount of Olives.  (sed rubrica 1955 aut rubrica 1960 haec versus omittuntur) _ Cleanse my heart and my lips, O almighty God, who didst cleanse the lips of the prophet Isaias with a burning coal, and vouchsafe, through Thy gracious mercy, so to purify me, that I may worthily announce Thy holy Gospel. Through Christ our Lord. Amen. D. Sir, give me thy blessing. S. The Lord be in thy heart and on thy lips, that thou mayst worthily and in a becoming manner, proclaim His holy Gospel. In the name of the Father, and of the Son, + and of the Holy Ghost. Amen. _ And behold there was a man named Joseph, who was a counsellor, a good and just man, The same had not consented to their counsel and doings; of Arimathea, a city of Judea; who also himself looked for the kingdom of God. This man went to Pilate, and begged the body of Jesus. And taking him down, he wrapped him in fine linen, and laid him in a sepulchre that was hewed in stone, wherein never yet any man had been laid.",
+      "lat": "Munda cor meum ac lábia mea, omnípotens Deus, qui lábia Isaíæ Prophétæ cálculo mundásti igníto: ita me tua grata miseratióne dignáre mundáre, ut sanctum Evangélium tuum digne váleam nuntiáre. Per Christum, Dóminum nostrum. Amen. D. Jube, domne, benedícere. S. Dóminus sit in córdibus vestris et in lábiis vestris: ut digne et competénter annuntiétis Evangélium suum: In nómine Patris, et Fílii, + et Spíritus Sancti. D. Amen. _ Pássio Dómini nostri Jesu Christi secúndum Lucam. In illo témpore: Appropinquábat dies festus azymórum, qui dícitur Pascha: et quærébant príncipes sacerdótum et scribæ, quómodo Jesum interfícerent: timébant vero plebem. Intrávit autem sátanas in Judam, qui cognominabátur Iscariótes, unum de duódecim. Et ábiit, et locútus est cum princípibus sacerdótum et magistrátibus, quemádmodum illum tráderet eis. Et gavísi sunt, et pacti sunt pecúniam illi dare. Et spopóndit. Et quærébat opportunitátem, ut tráderet illum sine turbis. Venit autem dies azymórum, in qua necésse erat occídi pascha. Et misit Petrum et Joánnem, dicens: J. Eúntes paráte nobis pascha, ut manducémus. C. At illi dixérunt: S. Ubi vis parémus? C. Et dixit ad eos: J. Ecce, introëúntibus vobis in civitátem, occúrret vobis homo quidam ámphoram aquæ portans: sequímini eum in domum, in quam intrat, et dicétis patrifamílias domus: Dicit tibi Magister: Ubi est diversórium, ubi pascha cum discípulis meis mandúcem? Et ipse osténdet vobis cenáculum magnum stratum, et ibi paráte. C. Eúntes autem invenérunt, sicut dixit illis, et paravérunt pascha. Et cum facta esset hora, discúbuit, et duódecim Apóstoli cum eo. Et ait illis: J. Desidério desiderávi hoc pascha manducáre vobíscum, ántequam pátiar. Dico enim vobis, quia ex hoc non manducábo illud, donec impleátur in regno Dei. C. Et accépto cálice, grátias egit, et dixit: J. Accípite, et divídite inter vos. Dico enim vobis, quod non bibam de generatióne vitis, donec regnum Dei véniat. C. Et accépto pane, grátias egit, et fregit, et dedit eis, dicens: J. Hoc est corpus meum, quod pro vobis datur: hoc fácite in meam commemoratiónem. C. Simíliter et cálicem, postquam cenávit, dicens: J. Hic est calix novum Testaméntum in sánguine meo, qui pro vobis fundétur. Verúmtamen ecce manus tradéntis me mecum est in mensa. Et quidem Fílius hóminis, secúndum quod definítum est, vadit: verúmtamen væ hómini illi, per quem tradétur. C. Et ipsi cœpérunt quærere inter se, quis esset ex eis, qui hoc factúrus esset. Facta est autem et conténtio inter eos, quis eórum viderétur esse major. Dixit autem eis: J. Reges géntium dominántur eórum: et qui potestátem habent super eos, benéfici vocántur. Vos autem non sic: sed qui major est in vobis, fiat sicut minor: et qui præcéssor est, sicut ministrátor. Nam quis major est, qui recúmbit, an qui minístrat? nonne qui recúmbit? Ego autem in médio vestrum sum, sicut qui minístrat: vos autem estis, qui permansístis mecum in tentatiónibus meis. Et ego dispóno vobis, sicut dispósuit mihi Pater meus regnum, ut edátis et bibátis super mensam meam in regno meo: et sedeátis super thronos, judicántes duódecim tribus Israël. C. Ait autem Dóminus: J. Simon, Simon, ecce, sátanas expetívit vos, ut cribráret sicut tríticum: ego autem rogávi pro te, ut non defíciat fides tua: et tu aliquándo convérsus confírma fratres tuos. C. Qui dixit ei: S. Dómine, tecum parátus sum, et in cárcerem et in mortem ire. C. At ille dixit: Dico tibi, Petre: Non cantábit hódie gallus, donec ter ábneges nosse me. C. Et dixit eis: J. Quando misi vos sine sǽculo et pera et calceaméntis, numquid aliquid défuit vobis? C. At illi dixérunt: S. Nihil. C. Dixit ergo eis: J. Sed nunc, qui habet sǽculum, tollat simíliter et peram: et qui non habet, vendat túnicam suam, et emat gládium: Dico enim vobis, quóniam adhuc hoc, quod scriptum est, oportet impléri in me: Et cum iníquis deputátus est. Etenim ea, quæ sunt de me, finem habent. C. At illi dixérunt: S. Dómine, ecce duo gládii hic. C. At ille dixit eis: J. Satis est. C. Et egréssus ibat secúndum consuetúdinem in montem Olivárum. _ Munda cor meum ac labia mea, omnípotens Deus, qui labia Isaíæ Prophétæ cálculo mundásti igníto: ita me tua grata miseratióne dignáre mundáre, ut sanctum Evangélium tuum digne váleam nuntiáre. Per Christum, Dóminum nostrum. Amen. D. Jube, domne, benedicere. S. Dóminus sit in corde tuo et in lábiis tuis: ut digne et competénter annúnties Evangélium suum: In nómine Patris, et Fílii, + et Spíritus Sancti. Amen. _ Et ecce, vir nómine Joseph, qui erat decúrio, vir bonus et justus: hic non consénserat consílio et áctibus eórum, ab Arimathǽa civitáte Judǽæ, qui exspectábat et ipse regnum Dei. Hic accéssit ad Pilátum et pétiit corpus Jesu: et depósitum invólvit síndone, et pósuit eum in monuménto excíso, in quo nondum quisquam pósitus fúerat.",
+      "eng": "Cleanse my heart and my lips, O almighty God, who didst cleanse the lips of the prophet Isaias with a burning coal, and vouchsafe, through Thy gracious mercy, so to purify me, that I may worthily announce Thy holy Gospel. Through Christ our Lord. Amen. D. Sir, give me thy blessing. S. The Lord be in your hearts and on your lips, that you may worthily and in a becoming manner, proclaim His holy Gospel. In the name of the Father, and of the Son, + and of the Holy Ghost. D. Amen. _ The Passion of Our Lord Jesus Christ according to Luke. Now the feast of unleavened bread, which is called the pasch, was at hand. And the chief priests and the scribes sought how they might put Jesus to death: but they feared the people. And Satan entered into Judas, who was surnamed Iscariot, one of the twelve. And he went, and discoursed with the chief priests and the magistrates, how he might betray him to them. And they were glad, and covenanted to give him money. And he promised. And he sought opportunity to betray him in the absence of the multitude. And the day of the unleavened bread came, on which it was necessary that the pasch should be killed. And he sent Peter and John, saying: Go, and prepare for us the pasch, that we may eat. But they said: Where wilt thou that we prepare? And he said to them: Behold, as you go into the city, there shall meet you a man carrying a pitcher of water: follow him into the house where he entereth in. And you shall say to the goodman of the house: The master saith to thee, Where is the guest chamber, where I may eat the pasch with my disciples? And he will shew you a large dining room, furnished; and there prepare. And they going, found as he had said to them, and made ready the pasch. And when the hour was come, he sat down, and the twelve apostles with him. And he said to them: With desire I have desired to eat this pasch with you, before I suffer. For I say to you, that from this time I will not eat it, till it be fulfilled in the kingdom of God. And having taken the chalice, he gave thanks, and said: Take, and divide it among you: For I say to you, that I will not drink of the fruit of the vine, till the kingdom of God come. And taking bread, he gave thanks, and brake; and gave to them, saying: This is my body, which is given for you. Do this for a commemoration of me. In like manner the chalice also, after he had supped, saying: This is the chalice, the new testament in my blood, which shall be shed for you. But yet behold, the hand of him that betrayeth me is with me on the table. And the Son of man indeed goeth, according to that which is determined: but yet, woe to that man by whom he shall be betrayed. And they began to inquire among themselves, which of them it was that should do this thing. And there was also a strife amongst them, which of them should seem to be the greater. And he said to them: The kings of the Gentiles lord it over them; and they that have power over them, are called beneficent. But you not so: but he that is the greater among you, let him become as the younger; and he that is the leader, as he that serveth. For which is greater, he that sitteth at table, or he that serveth? Is it not he that sitteth at table? But I am in the midst of you, as he that serveth: And you are they who have continued with me in my temptations: And I dispose to you, as my Father hath disposed to me, a kingdom; That you may eat and drink at my table, in my kingdom: and may sit upon thrones, judging the twelve tribes of Israel. And the Lord said: Simon, Simon, behold Satan hath desired to have you, that he may sift you as wheat: But I have prayed for thee, that thy faith fail not: and thou, being once converted, confirm thy brethren. Who said to him: Lord, I am ready to go with thee, both into prison, and to death. And he said: I say to thee, Peter, the cock shall not crow this day, till thou thrice deniest that thou knowest me. And he said to them: When I sent you without purse, and scrip, and shoes, did you want anything? But they said: Nothing. Then said he unto them: But now he that hath a purse, let him take it, and likewise a scrip; and he that hath not, let him sell his coat, and buy a sword. For I say to you, that this that is written must yet be fulfilled in me: And with the wicked was he reckoned. For the things concerning me have an end. But they said: Lord, behold here are two swords. And he said to them, It is enough. And going out, he went, according to his custom, to the mount of Olives. _ Cleanse my heart and my lips, O almighty God, who didst cleanse the lips of the prophet Isaias with a burning coal, and vouchsafe, through Thy gracious mercy, so to purify me, that I may worthily announce Thy holy Gospel. Through Christ our Lord. Amen. D. Sir, give me thy blessing. S. The Lord be in thy heart and on thy lips, that thou mayst worthily and in a becoming manner, proclaim His holy Gospel. In the name of the Father, and of the Son, + and of the Holy Ghost. Amen. _ And behold there was a man named Joseph, who was a counsellor, a good and just man, The same had not consented to their counsel and doings; of Arimathea, a city of Judea; who also himself looked for the kingdom of God. This man went to Pilate, and begged the body of Jesus. And taking him down, he wrapped him in fine linen, and laid him in a sepulchre that was hewed in stone, wherein never yet any man had been laid.",
       "ref": "Luc 22:39-71; 23:1-53"
     },
     "offertorium": {

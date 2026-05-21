@@ -164,6 +164,11 @@ final class ContentStore {
         if let mp = missalTempora[key]?.toMassProper(key: key, ordo: entry) { return mp }
         if let mp = missalSanctoral[key]?.toMassProper(key: key, ordo: entry) { return mp }
 
+        // Follow rule.commune redirect (data-driven inheritance for stubs).
+        if let mp = resolveCommuneRedirect(forKey: key, ordo: entry) {
+            return mp
+        }
+
         // Inheritance: octave days inherit Mass propers from feast day.
         if let parent = inheritedTemporalKey(for: key),
            let mp = missalTempora[parent]?.toMassProper(key: parent, ordo: entry) {
@@ -172,6 +177,49 @@ final class ContentStore {
 
         // Fallback to legacy propers.json by slug
         return propers.first { $0.slug == key }
+    }
+
+    /// Resolves a `rule.commune` redirect on a stub entry. The redirect may be:
+    ///   - "Sancti/01-06"   → missalSanctoral["01-06"]
+    ///   - "Tempora/Epi3-0" → missalTempora["epi3-0"] (lowercased)
+    ///   - "pentepi3-0"     → tries missalTempora then missalSanctoral
+    ///   - "C5", "C2-1" …   → commune key lookup (handled by legacy propers if present)
+    /// Returns nil if the entry has no commune redirect, the target is missing,
+    /// or the target itself has no Mass propers.
+    private func resolveCommuneRedirect(forKey key: String, ordo: OrdoEntry, depth: Int = 0) -> MassProper? {
+        guard depth < 4 else { return nil } // safety: prevent cycles
+        let stub = missalTempora[key] ?? missalSanctoral[key]
+        guard let target = stub?.rule?.commune, !target.isEmpty else { return nil }
+
+        // Split "Section/Key" form
+        let parts = target.split(separator: "/", maxSplits: 1).map(String.init)
+        let section = parts.count == 2 ? parts[0] : ""
+        let bareKey = parts.count == 2 ? parts[1] : target
+
+        // Commune codes (C2, C5b, …) are handled by the legacy propers.json by slug
+        // so do nothing here — fall through to caller's legacy lookup.
+        if section.isEmpty && bareKey.hasPrefix("C") && bareKey.dropFirst().first?.isNumber == true {
+            return nil
+        }
+
+        let lowerKey = bareKey.lowercased()
+
+        // Try the section first if specified
+        switch section {
+        case "Sancti":
+            if let mp = missalSanctoral[bareKey]?.toMassProper(key: bareKey, ordo: ordo) { return mp }
+            // Recursively follow if the target is itself a stub.
+            if let mp = resolveCommuneRedirect(forKey: bareKey, ordo: ordo, depth: depth + 1) { return mp }
+        case "Tempora":
+            if let mp = missalTempora[lowerKey]?.toMassProper(key: lowerKey, ordo: ordo) { return mp }
+            if let mp = resolveCommuneRedirect(forKey: lowerKey, ordo: ordo, depth: depth + 1) { return mp }
+        default:
+            if let mp = missalTempora[lowerKey]?.toMassProper(key: lowerKey, ordo: ordo) { return mp }
+            if let mp = missalSanctoral[bareKey]?.toMassProper(key: bareKey, ordo: ordo) { return mp }
+            if let mp = resolveCommuneRedirect(forKey: lowerKey, ordo: ordo, depth: depth + 1) { return mp }
+            if let mp = resolveCommuneRedirect(forKey: bareKey, ordo: ordo, depth: depth + 1) { return mp }
+        }
+        return nil
     }
 
     /// Returns the inherited temporal key (e.g., octave days inherit from the feast).

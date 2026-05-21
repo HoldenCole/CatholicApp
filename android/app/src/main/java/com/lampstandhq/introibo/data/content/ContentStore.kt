@@ -176,10 +176,46 @@ object ContentStore {
         }
         missalTempora[key]?.toMassProper(key, entry)?.let { return it }
         missalSanctoral[key]?.toMassProper(key, entry)?.let { return it }
+        resolveCommuneRedirect(key, entry)?.let { return it }
         inheritedTemporalKey(key)?.let { parent ->
             missalTempora[parent]?.toMassProper(parent, entry)?.let { return it }
         }
         return propers.firstOrNull { it.slug == key }
+    }
+
+    private fun resolveCommuneRedirect(key: String, ordo: OrdoEntry, depth: Int = 0): MassProper? {
+        if (depth >= 4) return null
+        val stub = missalTempora[key] ?: missalSanctoral[key]
+        val target = stub?.rule?.commune
+        if (target.isNullOrEmpty()) return null
+
+        val parts = target.split('/', limit = 2)
+        val section = if (parts.size == 2) parts[0] else ""
+        val bareKey = if (parts.size == 2) parts[1] else target
+
+        if (section.isEmpty() && bareKey.startsWith("C") && bareKey.getOrNull(1)?.isDigit() == true) {
+            return null
+        }
+
+        val lowerKey = bareKey.lowercase()
+
+        when (section) {
+            "Sancti" -> {
+                missalSanctoral[bareKey]?.toMassProper(bareKey, ordo)?.let { return it }
+                resolveCommuneRedirect(bareKey, ordo, depth + 1)?.let { return it }
+            }
+            "Tempora" -> {
+                missalTempora[lowerKey]?.toMassProper(lowerKey, ordo)?.let { return it }
+                resolveCommuneRedirect(lowerKey, ordo, depth + 1)?.let { return it }
+            }
+            else -> {
+                missalTempora[lowerKey]?.toMassProper(lowerKey, ordo)?.let { return it }
+                missalSanctoral[bareKey]?.toMassProper(bareKey, ordo)?.let { return it }
+                resolveCommuneRedirect(lowerKey, ordo, depth + 1)?.let { return it }
+                resolveCommuneRedirect(bareKey, ordo, depth + 1)?.let { return it }
+            }
+        }
+        return null
     }
 
     private fun inheritedTemporalKey(key: String): String? {
