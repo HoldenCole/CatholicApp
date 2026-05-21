@@ -95,35 +95,35 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In illa die * stillábunt montes dulcédinem, et colles fluent lac et mel, allelúja.",
-      "eng": "",
+      "eng": "In that day * the mountains shall drop down sweet wine, and the hills shall flow with milk and honey. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
-      "eng": "",
+      "eng": "Sing, O daughter of Zion, * and rejoice with all the heart, O daughter of Jerusalem. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
-      "eng": "",
+      "eng": "Behold, the Lord shall come, * and all His saints with Him; and it shall come to pass in that day that the light shall be great. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Omnes sitiéntes, * veníte ad aquas: quǽrite Dóminum, dum inveníri potest, allelúja.",
-      "eng": "",
+      "eng": "Lo, every one that thirsteth * come ye to the waters: seek ye the Lord while He may be found. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
-      "eng": "",
+      "eng": "Behold, a great Prophet * shall arise, and He shall build up a new Jerusalem. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
     }
   },
@@ -529,35 +529,35 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce in núbibus cæli * Dóminus véniet cum potestáte magna, allelúja.",
-      "eng": "",
+      "eng": "Behold, the Lord * cometh in the clouds of heaven with great power. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
-      "eng": "",
+      "eng": "Our Zion is a strong city, * the Saviour will God appoint in her for walls and bulwarks; open ye the gates, for God is with us. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
-      "eng": "",
+      "eng": "Behold, the Lord * shall appear and not lie though He tarry, wait for Him, because He will come and will not tarry. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Montes et colles * cantábunt coram Deo laudem, et ómnia ligna silvárum plaudent mánibus: quóniam véniet Dominátor Dóminus in regnum ætérnum, allelúja, allelúja.",
-      "eng": "",
+      "eng": "The mountains and the hills * shall break forth before God into singing, and all the trees of the wood shall clap their hands for the Lord the Ruler cometh, and He shall reign for ever and ever. Alleluia, Alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
-      "eng": "",
+      "eng": "Behold, our Lord * cometh with power, and He shall lighten the eyes of His servants. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
     }
   },
@@ -963,35 +963,35 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
-      "eng": "",
+      "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
-      "eng": "",
+      "eng": "Rejoice greatly, O Jerusalem, * for thy Saviour cometh unto thee. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
-      "eng": "",
+      "eng": "I will place salvation in Zion, * and My glory in Jerusalem. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Montes et omnes colles * humiliabúntur: et erunt prava in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
-      "eng": "",
+      "eng": "Every mountain and hill * shall be made low, and the crooked shall be made straight, and the rough places plain; O Lord, come and make no tarrying. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
-      "eng": "",
+      "eng": "We should live * righteously and godly, looking for that blessed hope and the coming of the Lord.",
       "variationKey": "vesperae.antiphon.psalm5"
     }
   },
@@ -1390,35 +1390,35 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
-      "eng": "",
+      "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce véniet * desiderátus cunctis géntibus: et replébitur glória domus Dómini, allelúja.",
-      "eng": "",
+      "eng": "Behold, the desire * of all nations shall come; and the house of the Lord shall be filled with glory. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
-      "eng": "",
+      "eng": "The crooked * shall be made straight, and the rough places plain; O Lord, come, and make no tarrying. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Dóminus véniet, * occúrrite illi, dicéntes: Magnum princípium, et regni ejus non erit finis: Deus, Fortis, Dominátor, Princeps pacis, allelúja, allelúja.",
-      "eng": "",
+      "eng": "The Lord cometh! * Go ye out to meet Him, and say: How great is His dominion, and of His kingdom there shall be no end! He is the mighty God, the Ruler, the Prince of Peace. Alleluia, Alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
-      "eng": "",
+      "eng": "Thine Almighty Word, * O Lord, shall leap down out of thy royal throne. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
     }
   },
@@ -3097,35 +3097,35 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelus autem Dómini * descéndit de cælo, et accédens revólvit lápidem, et sedébat super eum, allelúja, allelúja.",
-      "eng": "",
+      "eng": "For an angel of the Lord * descended from heaven and coming rolled back the stone and sat upon it, alleluia, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Et ecce terræmótus * factus est magnus: Angelus enim Dómini descéndit de cælo, allelúja.",
-      "eng": "",
+      "eng": "There was a great earthquake; * For an angel of the Lord descended from heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Erat autem * aspéctus ejus sicut fulgur, vestiménta autem ejus sicut nix, allelúja, allelúja.",
-      "eng": "",
+      "eng": "And his countenance * was as lightning and his raiment as snow, alleluia, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Præ timóre autem ejus * extérriti sunt custódes, et facti sunt velut mórtui, allelúja.",
-      "eng": "",
+      "eng": "And for fear of him * the guards were struck with terror and became as dead men, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Respóndens autem Angelus, * dixit muliéribus: Nolíte timére: scio enim quod Jesum quǽritis, allelúja.",
-      "eng": "",
+      "eng": "And the angel answering * said to the women: Fear not you: for I know that you seek Jesus, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
     }
   },
