@@ -39,6 +39,7 @@ TARGET_FILES = [
     "temporal_propers.json",
     "sanctoral_propers.json",
     "communes.json",
+    "psalter.json",
 ]
 
 MAX_REF_DEPTH = 5
@@ -728,12 +729,11 @@ def import_office_tempora(dry_run: bool = False) -> dict:
         if rank is not None:
             entry["rank"] = rank
 
-        # For Office, store key sections as available
-        office_sections = ["Invitatorium", "Hymnus", "Ant 1", "Ant 2", "Ant 3",
-                          "Capitulum", "Responsory", "Oratio", "Lectio1", "Lectio2", "Lectio3"]
-
-        for sec_name in office_sections:
-            if sec_name in lat_sections:
+        skip_sections = {"Officium", "Rank", "Rule", "Name"}
+        for sec_name in lat_sections:
+            if sec_name in skip_sections:
+                continue
+            if True:
                 lat_text = process_section_text(
                     lat_sections[sec_name], lat_path, DO_HORAS_LATIN, lat_sections,
                     english=False, section_name=sec_name
@@ -793,11 +793,11 @@ def import_office_sanctoral(dry_run: bool = False) -> dict:
         if rank is not None:
             entry["rank"] = rank
 
-        office_sections = ["Invitatorium", "Hymnus", "Ant 1", "Ant 2", "Ant 3",
-                          "Capitulum", "Responsory", "Oratio", "Lectio1", "Lectio2", "Lectio3"]
-
-        for sec_name in office_sections:
-            if sec_name in lat_sections:
+        skip_sections = {"Officium", "Rank", "Rule", "Name"}
+        for sec_name in lat_sections:
+            if sec_name in skip_sections:
+                continue
+            if True:
                 lat_text = process_section_text(
                     lat_sections[sec_name], lat_path, DO_HORAS_LATIN, lat_sections,
                     english=False, section_name=sec_name
@@ -822,6 +822,57 @@ def import_office_sanctoral(dry_run: bool = False) -> dict:
         log.info(f"Office Sanctoral: processed {len(entries)} entries")
 
     return entries
+
+
+def import_psalter() -> dict:
+    """Import all 150 psalms + canticles from DO Psalterium, verse-by-verse."""
+    psalmorum_lat = DO_HORAS_LATIN / "Psalterium" / "Psalmorum"
+    psalmorum_eng = DO_HORAS_ENGLISH / "Psalterium" / "Psalmorum"
+    psalter = {}
+
+    if not psalmorum_lat.exists():
+        log.error(f"Psalterium not found: {psalmorum_lat}")
+        return psalter
+
+    for fn in sorted(os.listdir(psalmorum_lat)):
+        if not fn.endswith(".txt"):
+            continue
+        m = re.match(r'Psalm(\d+)\.txt', fn)
+        if not m:
+            # Canticles or special files
+            key = fn.replace('.txt', '').lower()
+        else:
+            key = f"psalm{m.group(1)}"
+
+        lat_path = psalmorum_lat / fn
+        eng_path = psalmorum_eng / fn
+
+        try:
+            with open(lat_path, encoding='utf-8', errors='replace') as f:
+                lat_lines = [l.rstrip() for l in f if l.strip() and not l.startswith('#') and not l.startswith('[')]
+        except Exception:
+            continue
+
+        eng_lines = []
+        if eng_path.exists():
+            try:
+                with open(eng_path, encoding='utf-8', errors='replace') as f:
+                    eng_lines = [l.rstrip() for l in f if l.strip() and not l.startswith('#') and not l.startswith('[')]
+            except Exception:
+                pass
+
+        # Clean verse lines
+        lat_verses = [strip_markup(l) for l in lat_lines if l.strip()]
+        eng_verses = [strip_markup(l) for l in eng_lines if l.strip()]
+
+        if lat_verses:
+            entry = {"lat": lat_verses}
+            if eng_verses:
+                entry["eng"] = eng_verses
+            psalter[key] = entry
+
+    log.info(f"Psalter: imported {len(psalter)} psalms/canticles")
+    return psalter
 
 
 def is_field_populated(value) -> bool:
@@ -1012,7 +1063,16 @@ def main():
         total_skipped += s
         print(f"  Created: {c}, Updated: {u}, Skipped: {s}")
 
-    # ─── Summary ────���─────────────────────────────────────────────────────────
+    # ─── Psalter Import ────────────────────────────────────────────────────────
+    if do_office:
+        print("\n--- Psalter ---")
+        psalter_data = import_psalter()
+        psalter_path = RESOURCES_DIR / "psalter.json"
+        with open(psalter_path, 'w', encoding='utf-8') as f:
+            json.dump(psalter_data, f, ensure_ascii=False, indent=2)
+        print(f"  Psalter: {len(psalter_data)} psalms/canticles written")
+
+    # ─── Summary ─────────────────────────────────────────────────────────────
     print("\n" + "=" * 60)
     print("IMPORT SUMMARY")
     print("=" * 60)
