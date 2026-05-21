@@ -2895,13 +2895,13 @@
   "2024-09-20": {
     "temporal": "pent17-5",
     "sanctoral": "09-20",
-    "winner": "sanctoral",
-    "winnerKey": "09-20",
-    "rank": 1.1,
-    "name": "Ss. Eustachii et Sociorum Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent17-5",
+    "rank": 4.9,
+    "name": "Feria Sexta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent17-5"
+    "commemoration": "09-20"
   },
   "2024-09-21": {
     "temporal": "pent17-6",
@@ -3764,13 +3764,13 @@
   "2024-12-08": {
     "temporal": "adv2-0",
     "sanctoral": "12-08",
-    "winner": "temporal",
-    "winnerKey": "adv2-0",
-    "rank": 6.01,
-    "name": "Dominica II Adventus",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "12-08",
+    "rank": 7.0,
+    "name": "In Conceptione Immaculata BMV",
+    "color": "white",
     "season": "advent",
-    "commemoration": "12-08"
+    "commemoration": "adv2-0"
   },
   "2024-12-09": {
     "temporal": "adv2-1",
@@ -6877,13 +6877,13 @@
   "2025-09-17": {
     "temporal": "pent14-3",
     "sanctoral": "09-17",
-    "winner": "sanctoral",
-    "winnerKey": "09-17",
-    "rank": 1.1,
-    "name": "Impressionis Stigmatum S. Francisci",
-    "color": "green",
+    "winner": "temporal",
+    "winnerKey": "pent14-3",
+    "rank": 4.9,
+    "name": "Feria Quarta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent14-3"
+    "commemoration": "09-17"
   },
   "2025-09-18": {
     "temporal": "pent14-4",
@@ -6910,13 +6910,13 @@
   "2025-09-20": {
     "temporal": "pent14-6",
     "sanctoral": "09-20",
-    "winner": "sanctoral",
-    "winnerKey": "09-20",
-    "rank": 1.1,
-    "name": "Ss. Eustachii et Sociorum Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent14-6",
+    "rank": 4.9,
+    "name": "Sabbato Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent14-6"
+    "commemoration": "09-20"
   },
   "2025-09-21": {
     "temporal": "pent15-0",
@@ -10881,13 +10881,13 @@
   "2026-09-16": {
     "temporal": "pent16-3",
     "sanctoral": "09-16",
-    "winner": "sanctoral",
-    "winnerKey": "09-16",
-    "rank": 1.1,
-    "name": "Ss. Cornelii Papæ et Cypriani Episcopi, Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent16-3",
+    "rank": 4.9,
+    "name": "Feria Quarta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent16-3"
+    "commemoration": "09-16"
   },
   "2026-09-17": {
     "temporal": "pent16-4",
@@ -14984,22 +14984,22 @@
   "2027-09-24": {
     "temporal": "pent18-5",
     "sanctoral": "09-24",
-    "winner": "sanctoral",
-    "winnerKey": "09-24",
-    "rank": 1.1,
-    "name": "Beatæ Mariæ Virginis de Mercede",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent18-5",
+    "rank": 4.9,
+    "name": "Feria Sexta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent18-5"
+    "commemoration": "09-24"
   },
   "2027-09-25": {
     "temporal": "pent18-6",
     "sanctoral": "09-25",
     "winner": "temporal",
     "winnerKey": "pent18-6",
-    "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XVIII post Octavam Pentecostes",
-    "color": "green",
+    "rank": 4.9,
+    "name": "Sabbato Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": null
   },
@@ -18966,13 +18966,13 @@
   "2028-09-20": {
     "temporal": "pent15-3",
     "sanctoral": "09-20",
-    "winner": "sanctoral",
-    "winnerKey": "09-20",
-    "rank": 1.1,
-    "name": "Ss. Eustachii et Sociorum Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent15-3",
+    "rank": 4.9,
+    "name": "Feria Quarta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent15-3"
+    "commemoration": "09-20"
   },
   "2028-09-21": {
     "temporal": "pent15-4",
@@ -18999,13 +18999,13 @@
   "2028-09-23": {
     "temporal": "pent15-6",
     "sanctoral": "09-23",
-    "winner": "sanctoral",
-    "winnerKey": "09-23",
-    "rank": 2.2,
-    "name": "S. Lini Papæ et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent15-6",
+    "rank": 4.9,
+    "name": "Sabbato Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent15-6"
+    "commemoration": "09-23"
   },
   "2028-09-24": {
     "temporal": "pent16-0",
@@ -26996,13 +26996,13 @@
   "2030-09-20": {
     "temporal": "pent14-5",
     "sanctoral": "09-20",
-    "winner": "sanctoral",
-    "winnerKey": "09-20",
-    "rank": 1.1,
-    "name": "Ss. Eustachii et Sociorum Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent14-5",
+    "rank": 4.9,
+    "name": "Feria Sexta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent14-5"
+    "commemoration": "09-20"
   },
   "2030-09-21": {
     "temporal": "pent14-6",
@@ -27865,13 +27865,13 @@
   "2030-12-08": {
     "temporal": "adv2-0",
     "sanctoral": "12-08",
-    "winner": "temporal",
-    "winnerKey": "adv2-0",
-    "rank": 6.01,
-    "name": "Dominica II Adventus",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "12-08",
+    "rank": 7.0,
+    "name": "In Conceptione Immaculata BMV",
+    "color": "white",
     "season": "advent",
-    "commemoration": "12-08"
+    "commemoration": "adv2-0"
   },
   "2030-12-09": {
     "temporal": "adv2-1",
