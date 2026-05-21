@@ -484,47 +484,47 @@
     "commemoration": null
   },
   "2024-02-14": {
-    "temporal": "quad1-3",
+    "temporal": "quadp3-3",
     "sanctoral": "02-14",
     "winner": "temporal",
-    "winnerKey": "quad1-3",
-    "rank": 2.1,
-    "name": "Feria Quarta Quatuor Temporum Quadragesimæ",
+    "winnerKey": "quadp3-3",
+    "rank": 6.9,
+    "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": "02-14"
   },
   "2024-02-15": {
-    "temporal": "quad1-4",
+    "temporal": "quadp3-4",
     "sanctoral": "02-15",
     "winner": "temporal",
-    "winnerKey": "quad1-4",
+    "winnerKey": "quadp3-4",
     "rank": 2.1,
-    "name": "Feria Quinta infra Hebdomadam I in Quadragesima",
+    "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": "02-15"
   },
   "2024-02-16": {
-    "temporal": "quad1-5",
+    "temporal": "quadp3-5",
     "sanctoral": "02-16",
     "winner": "temporal",
-    "winnerKey": "quad1-5",
+    "winnerKey": "quadp3-5",
     "rank": 2.1,
-    "name": "Feria Sexta Quattuor Temporum",
+    "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2024-02-17": {
-    "temporal": "quad1-6",
+    "temporal": "quadp3-6",
     "sanctoral": "02-17",
     "winner": "temporal",
-    "winnerKey": "quad1-6",
+    "winnerKey": "quadp3-6",
     "rank": 2.1,
-    "name": "Sabbato Quattuor Temporum Quadrageismæ",
+    "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2024-02-18": {
@@ -717,46 +717,46 @@
   "2024-03-06": {
     "temporal": "quad3-3",
     "sanctoral": "03-06",
-    "winner": "temporal",
-    "winnerKey": "quad3-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-06",
+    "rank": 3.0,
+    "name": "Ss. Perpetuæ et Felicitatis Martyrum",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-06"
+    "commemoration": "quad3-3"
   },
   "2024-03-07": {
     "temporal": "quad3-4",
     "sanctoral": "03-07",
-    "winner": "temporal",
-    "winnerKey": "quad3-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-07",
+    "rank": 3.0,
+    "name": "S. Thomæ de Aquino Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-07"
+    "commemoration": "quad3-4"
   },
   "2024-03-08": {
     "temporal": "quad3-5",
     "sanctoral": "03-08",
-    "winner": "temporal",
-    "winnerKey": "quad3-5",
-    "rank": 4.9,
-    "name": "Feria Sexta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-08",
+    "rank": 3.0,
+    "name": "S. Joannis de Deo Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-08"
+    "commemoration": "quad3-5"
   },
   "2024-03-09": {
     "temporal": "quad3-6",
     "sanctoral": "03-09",
-    "winner": "temporal",
-    "winnerKey": "quad3-6",
-    "rank": 4.9,
-    "name": "Sabbato infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-09",
+    "rank": 3.0,
+    "name": "S. Franciscæ Romanæ Viduæ",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-09"
+    "commemoration": "quad3-6"
   },
   "2024-03-10": {
     "temporal": "quad4-0",
@@ -783,20 +783,20 @@
   "2024-03-12": {
     "temporal": "quad4-2",
     "sanctoral": "03-12",
-    "winner": "temporal",
-    "winnerKey": "quad4-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-12",
+    "rank": 3.0,
+    "name": "S. Gregorii Papæ Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-12"
+    "commemoration": "quad4-2"
   },
   "2024-03-13": {
     "temporal": "quad4-3",
     "sanctoral": "03-13",
     "winner": "temporal",
     "winnerKey": "quad4-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -807,7 +807,7 @@
     "sanctoral": "03-14",
     "winner": "temporal",
     "winnerKey": "quad4-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -818,7 +818,7 @@
     "sanctoral": "03-15",
     "winner": "temporal",
     "winnerKey": "quad4-5",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Sexta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -829,7 +829,7 @@
     "sanctoral": "03-16",
     "winner": "temporal",
     "winnerKey": "quad4-6",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Sabbato infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -860,20 +860,20 @@
   "2024-03-19": {
     "temporal": "quad5-2",
     "sanctoral": "03-19",
-    "winner": "temporal",
-    "winnerKey": "quad5-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam Passionis",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "03-19",
+    "rank": 3.0,
+    "name": "S. Joseph Sponsi B.M.V. Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "03-19"
+    "commemoration": "quad5-2"
   },
   "2024-03-20": {
     "temporal": "quad5-3",
     "sanctoral": "03-20",
     "winner": "temporal",
     "winnerKey": "quad5-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -882,13 +882,13 @@
   "2024-03-21": {
     "temporal": "quad5-4",
     "sanctoral": "03-21",
-    "winner": "temporal",
-    "winnerKey": "quad5-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam Passionis",
+    "winner": "sanctoral",
+    "winnerKey": "03-21",
+    "rank": 4.0,
+    "name": "S. Benedicti Abbatis",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-21"
+    "commemoration": "quad5-4"
   },
   "2024-03-22": {
     "temporal": "quad5-5",
@@ -4719,48 +4719,48 @@
     "commemoration": "quadp3-2"
   },
   "2025-03-05": {
-    "temporal": "quad1-3",
+    "temporal": "quadp3-3",
     "sanctoral": "03-05",
     "winner": "temporal",
-    "winnerKey": "quad1-3",
-    "rank": 2.1,
-    "name": "Feria Quarta Quatuor Temporum Quadragesimæ",
+    "winnerKey": "quadp3-3",
+    "rank": 6.9,
+    "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2025-03-06": {
-    "temporal": "quad1-4",
+    "temporal": "quadp3-4",
     "sanctoral": "03-06",
     "winner": "sanctoral",
     "winnerKey": "03-06",
     "rank": 3.0,
     "name": "Ss. Perpetuæ et Felicitatis Martyrum",
-    "color": "violet",
-    "season": "lent",
-    "commemoration": "quad1-4"
+    "color": "green",
+    "season": "pre-lent",
+    "commemoration": "quadp3-4"
   },
   "2025-03-07": {
-    "temporal": "quad1-5",
+    "temporal": "quadp3-5",
     "sanctoral": "03-07",
     "winner": "sanctoral",
     "winnerKey": "03-07",
     "rank": 3.0,
     "name": "S. Thomæ de Aquino Confessoris",
-    "color": "violet",
-    "season": "lent",
-    "commemoration": "quad1-5"
+    "color": "green",
+    "season": "pre-lent",
+    "commemoration": "quadp3-5"
   },
   "2025-03-08": {
-    "temporal": "quad1-6",
+    "temporal": "quadp3-6",
     "sanctoral": "03-08",
     "winner": "sanctoral",
     "winnerKey": "03-08",
     "rank": 3.0,
     "name": "S. Joannis de Deo Confessoris",
-    "color": "violet",
-    "season": "lent",
-    "commemoration": "quad1-6"
+    "color": "green",
+    "season": "pre-lent",
+    "commemoration": "quadp3-6"
   },
   "2025-03-09": {
     "temporal": "quad1-0",
@@ -4954,7 +4954,7 @@
     "sanctoral": "03-26",
     "winner": "temporal",
     "winnerKey": "quad3-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -4963,31 +4963,31 @@
   "2025-03-27": {
     "temporal": "quad3-4",
     "sanctoral": "03-27",
-    "winner": "temporal",
-    "winnerKey": "quad3-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam III in Quadragesima",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "03-27",
+    "rank": 3.0,
+    "name": "S. Joannis Damasceni Confessoris et Ecclesiæ Doctoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "03-27"
+    "commemoration": "quad3-4"
   },
   "2025-03-28": {
     "temporal": "quad3-5",
     "sanctoral": "03-28",
-    "winner": "temporal",
-    "winnerKey": "quad3-5",
-    "rank": 4.9,
-    "name": "Feria Sexta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-28",
+    "rank": 2.2,
+    "name": "S. Joannis a Capistrano Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-28"
+    "commemoration": "quad3-5"
   },
   "2025-03-29": {
     "temporal": "quad3-6",
     "sanctoral": "03-29",
     "winner": "temporal",
     "winnerKey": "quad3-6",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Sabbato infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -5020,7 +5020,7 @@
     "sanctoral": "04-01",
     "winner": "temporal",
     "winnerKey": "quad4-2",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Tertia infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -5029,20 +5029,20 @@
   "2025-04-02": {
     "temporal": "quad4-3",
     "sanctoral": "04-02",
-    "winner": "temporal",
-    "winnerKey": "quad4-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "04-02",
+    "rank": 3.0,
+    "name": "S. Francisci de Paula Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "04-02"
+    "commemoration": "quad4-3"
   },
   "2025-04-03": {
     "temporal": "quad4-4",
     "sanctoral": "04-03",
     "winner": "temporal",
     "winnerKey": "quad4-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -5051,24 +5051,24 @@
   "2025-04-04": {
     "temporal": "quad4-5",
     "sanctoral": "04-04",
-    "winner": "temporal",
-    "winnerKey": "quad4-5",
-    "rank": 4.9,
-    "name": "Feria Sexta infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "04-04",
+    "rank": 3.0,
+    "name": "S. Isidori Episcopi Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "04-04"
+    "commemoration": "quad4-5"
   },
   "2025-04-05": {
     "temporal": "quad4-6",
     "sanctoral": "04-05",
-    "winner": "temporal",
-    "winnerKey": "quad4-6",
-    "rank": 4.9,
-    "name": "Sabbato infra Hebdomadam IV in Quadragesima",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "04-05",
+    "rank": 3.0,
+    "name": "S. Vincentii Ferrerii Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "04-05"
+    "commemoration": "quad4-6"
   },
   "2025-04-06": {
     "temporal": "quad5-0",
@@ -5097,7 +5097,7 @@
     "sanctoral": "04-08",
     "winner": "temporal",
     "winnerKey": "quad5-2",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Tertia infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -5108,7 +5108,7 @@
     "sanctoral": "04-09",
     "winner": "temporal",
     "winnerKey": "quad5-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -5119,7 +5119,7 @@
     "sanctoral": "04-10",
     "winner": "temporal",
     "winnerKey": "quad5-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -8569,47 +8569,47 @@
     "commemoration": null
   },
   "2026-02-18": {
-    "temporal": "quad1-3",
+    "temporal": "quadp3-3",
     "sanctoral": "02-18",
     "winner": "temporal",
-    "winnerKey": "quad1-3",
-    "rank": 2.1,
-    "name": "Feria Quarta Quatuor Temporum Quadragesimæ",
+    "winnerKey": "quadp3-3",
+    "rank": 6.9,
+    "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": "02-18"
   },
   "2026-02-19": {
-    "temporal": "quad1-4",
+    "temporal": "quadp3-4",
     "sanctoral": "02-19",
     "winner": "temporal",
-    "winnerKey": "quad1-4",
+    "winnerKey": "quadp3-4",
     "rank": 2.1,
-    "name": "Feria Quinta infra Hebdomadam I in Quadragesima",
+    "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2026-02-20": {
-    "temporal": "quad1-5",
+    "temporal": "quadp3-5",
     "sanctoral": "02-20",
     "winner": "temporal",
-    "winnerKey": "quad1-5",
+    "winnerKey": "quadp3-5",
     "rank": 2.1,
-    "name": "Feria Sexta Quattuor Temporum",
+    "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2026-02-21": {
-    "temporal": "quad1-6",
+    "temporal": "quadp3-6",
     "sanctoral": "02-21",
     "winner": "temporal",
-    "winnerKey": "quad1-6",
+    "winnerKey": "quadp3-6",
     "rank": 2.1,
-    "name": "Sabbato Quattuor Temporum Quadrageismæ",
+    "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2026-02-22": {
@@ -8804,7 +8804,7 @@
     "sanctoral": "03-11",
     "winner": "temporal",
     "winnerKey": "quad3-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -8813,20 +8813,20 @@
   "2026-03-12": {
     "temporal": "quad3-4",
     "sanctoral": "03-12",
-    "winner": "temporal",
-    "winnerKey": "quad3-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-12",
+    "rank": 3.0,
+    "name": "S. Gregorii Papæ Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-12"
+    "commemoration": "quad3-4"
   },
   "2026-03-13": {
     "temporal": "quad3-5",
     "sanctoral": "03-13",
     "winner": "temporal",
     "winnerKey": "quad3-5",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Sexta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -8837,7 +8837,7 @@
     "sanctoral": "03-14",
     "winner": "temporal",
     "winnerKey": "quad3-6",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Sabbato infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -8868,42 +8868,42 @@
   "2026-03-17": {
     "temporal": "quad4-2",
     "sanctoral": "03-17",
-    "winner": "temporal",
-    "winnerKey": "quad4-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-17",
+    "rank": 3.0,
+    "name": "S. Patricii Episcopi et Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-17"
+    "commemoration": "quad4-2"
   },
   "2026-03-18": {
     "temporal": "quad4-3",
     "sanctoral": "03-18",
-    "winner": "temporal",
-    "winnerKey": "quad4-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-18",
+    "rank": 3.0,
+    "name": "S. Cyrilli Episcopi Hierosolymitani Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-18"
+    "commemoration": "quad4-3"
   },
   "2026-03-19": {
     "temporal": "quad4-4",
     "sanctoral": "03-19",
-    "winner": "temporal",
-    "winnerKey": "quad4-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam IV in Quadragesima",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "03-19",
+    "rank": 3.0,
+    "name": "S. Joseph Sponsi B.M.V. Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "03-19"
+    "commemoration": "quad4-4"
   },
   "2026-03-20": {
     "temporal": "quad4-5",
     "sanctoral": "03-20",
     "winner": "temporal",
     "winnerKey": "quad4-5",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Sexta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -8912,13 +8912,13 @@
   "2026-03-21": {
     "temporal": "quad4-6",
     "sanctoral": "03-21",
-    "winner": "temporal",
-    "winnerKey": "quad4-6",
-    "rank": 4.9,
-    "name": "Sabbato infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-21",
+    "rank": 4.0,
+    "name": "S. Benedicti Abbatis",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-21"
+    "commemoration": "quad4-6"
   },
   "2026-03-22": {
     "temporal": "quad5-0",
@@ -8945,13 +8945,13 @@
   "2026-03-24": {
     "temporal": "quad5-2",
     "sanctoral": "03-24",
-    "winner": "temporal",
-    "winnerKey": "quad5-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam Passionis",
+    "winner": "sanctoral",
+    "winnerKey": "03-24",
+    "rank": 4.0,
+    "name": "S. Gabrielis Archangeli",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-24"
+    "commemoration": "quad5-2"
   },
   "2026-03-25": {
     "temporal": "quad5-3",
@@ -8969,7 +8969,7 @@
     "sanctoral": "03-26",
     "winner": "temporal",
     "winnerKey": "quad5-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -12496,47 +12496,47 @@
     "commemoration": "quadp3-2"
   },
   "2027-02-10": {
-    "temporal": "quad1-3",
+    "temporal": "quadp3-3",
     "sanctoral": "02-10",
-    "winner": "sanctoral",
-    "winnerKey": "02-10",
-    "rank": 4.0,
-    "name": "S. Scholasticæ Virginis",
-    "color": "white",
-    "season": "lent",
-    "commemoration": "quad1-3"
+    "winner": "temporal",
+    "winnerKey": "quadp3-3",
+    "rank": 6.9,
+    "name": "Feria IV Cinerum",
+    "color": "violet",
+    "season": "pre-lent",
+    "commemoration": "02-10"
   },
   "2027-02-11": {
-    "temporal": "quad1-4",
+    "temporal": "quadp3-4",
     "sanctoral": "02-11",
     "winner": "sanctoral",
     "winnerKey": "02-11",
     "rank": 4.0,
     "name": "In Apparitione Beatæ Mariæ Virginis",
     "color": "white",
-    "season": "lent",
-    "commemoration": "quad1-4"
+    "season": "pre-lent",
+    "commemoration": "quadp3-4"
   },
   "2027-02-12": {
-    "temporal": "quad1-5",
+    "temporal": "quadp3-5",
     "sanctoral": "02-12",
     "winner": "sanctoral",
     "winnerKey": "02-12",
     "rank": 3.0,
     "name": "Ss. Septem Fundatorum Ordinis Servorum B. M. V.",
     "color": "white",
-    "season": "lent",
-    "commemoration": "quad1-5"
+    "season": "pre-lent",
+    "commemoration": "quadp3-5"
   },
   "2027-02-13": {
-    "temporal": "quad1-6",
+    "temporal": "quadp3-6",
     "sanctoral": "02-13",
     "winner": "temporal",
-    "winnerKey": "quad1-6",
+    "winnerKey": "quadp3-6",
     "rank": 2.1,
-    "name": "Sabbato Quattuor Temporum Quadrageismæ",
+    "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2027-02-14": {
@@ -12731,7 +12731,7 @@
     "sanctoral": "03-03",
     "winner": "temporal",
     "winnerKey": "quad3-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -12740,20 +12740,20 @@
   "2027-03-04": {
     "temporal": "quad3-4",
     "sanctoral": "03-04",
-    "winner": "temporal",
-    "winnerKey": "quad3-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam III in Quadragesima",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "03-04",
+    "rank": 2.2,
+    "name": "S. Casimiri Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "03-04"
+    "commemoration": "quad3-4"
   },
   "2027-03-05": {
     "temporal": "quad3-5",
     "sanctoral": "03-05",
     "winner": "temporal",
     "winnerKey": "quad3-5",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Sexta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -12762,13 +12762,13 @@
   "2027-03-06": {
     "temporal": "quad3-6",
     "sanctoral": "03-06",
-    "winner": "temporal",
-    "winnerKey": "quad3-6",
-    "rank": 4.9,
-    "name": "Sabbato infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-06",
+    "rank": 3.0,
+    "name": "Ss. Perpetuæ et Felicitatis Martyrum",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-06"
+    "commemoration": "quad3-6"
   },
   "2027-03-07": {
     "temporal": "quad4-0",
@@ -12795,31 +12795,31 @@
   "2027-03-09": {
     "temporal": "quad4-2",
     "sanctoral": "03-09",
-    "winner": "temporal",
-    "winnerKey": "quad4-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-09",
+    "rank": 3.0,
+    "name": "S. Franciscæ Romanæ Viduæ",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-09"
+    "commemoration": "quad4-2"
   },
   "2027-03-10": {
     "temporal": "quad4-3",
     "sanctoral": "03-10",
-    "winner": "temporal",
-    "winnerKey": "quad4-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-10",
+    "rank": 2.2,
+    "name": "Ss. Quadraginta Martyrum",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-10"
+    "commemoration": "quad4-3"
   },
   "2027-03-11": {
     "temporal": "quad4-4",
     "sanctoral": "03-11",
     "winner": "temporal",
     "winnerKey": "quad4-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -12828,20 +12828,20 @@
   "2027-03-12": {
     "temporal": "quad4-5",
     "sanctoral": "03-12",
-    "winner": "temporal",
-    "winnerKey": "quad4-5",
-    "rank": 4.9,
-    "name": "Feria Sexta infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-12",
+    "rank": 3.0,
+    "name": "S. Gregorii Papæ Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-12"
+    "commemoration": "quad4-5"
   },
   "2027-03-13": {
     "temporal": "quad4-6",
     "sanctoral": "03-13",
     "winner": "temporal",
     "winnerKey": "quad4-6",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Sabbato infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -12874,7 +12874,7 @@
     "sanctoral": "03-16",
     "winner": "temporal",
     "winnerKey": "quad5-2",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Tertia infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -12883,24 +12883,24 @@
   "2027-03-17": {
     "temporal": "quad5-3",
     "sanctoral": "03-17",
-    "winner": "temporal",
-    "winnerKey": "quad5-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam Passionis",
+    "winner": "sanctoral",
+    "winnerKey": "03-17",
+    "rank": 3.0,
+    "name": "S. Patricii Episcopi et Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-17"
+    "commemoration": "quad5-3"
   },
   "2027-03-18": {
     "temporal": "quad5-4",
     "sanctoral": "03-18",
-    "winner": "temporal",
-    "winnerKey": "quad5-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam Passionis",
+    "winner": "sanctoral",
+    "winnerKey": "03-18",
+    "rank": 3.0,
+    "name": "S. Cyrilli Episcopi Hierosolymitani Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-18"
+    "commemoration": "quad5-4"
   },
   "2027-03-19": {
     "temporal": "quad5-5",
@@ -16731,48 +16731,48 @@
     "commemoration": null
   },
   "2028-03-01": {
-    "temporal": "quad1-3",
+    "temporal": "quadp3-3",
     "sanctoral": "03-01",
     "winner": "temporal",
-    "winnerKey": "quad1-3",
-    "rank": 2.1,
-    "name": "Feria Quarta Quatuor Temporum Quadragesimæ",
+    "winnerKey": "quadp3-3",
+    "rank": 6.9,
+    "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2028-03-02": {
-    "temporal": "quad1-4",
+    "temporal": "quadp3-4",
     "sanctoral": "03-02",
     "winner": "temporal",
-    "winnerKey": "quad1-4",
+    "winnerKey": "quadp3-4",
     "rank": 2.1,
-    "name": "Feria Quinta infra Hebdomadam I in Quadragesima",
+    "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2028-03-03": {
-    "temporal": "quad1-5",
+    "temporal": "quadp3-5",
     "sanctoral": "03-03",
     "winner": "temporal",
-    "winnerKey": "quad1-5",
+    "winnerKey": "quadp3-5",
     "rank": 2.1,
-    "name": "Feria Sexta Quattuor Temporum",
+    "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2028-03-04": {
-    "temporal": "quad1-6",
+    "temporal": "quadp3-6",
     "sanctoral": "03-04",
     "winner": "sanctoral",
     "winnerKey": "03-04",
     "rank": 2.2,
     "name": "S. Casimiri Confessoris",
     "color": "white",
-    "season": "lent",
-    "commemoration": "quad1-6"
+    "season": "pre-lent",
+    "commemoration": "quadp3-6"
   },
   "2028-03-05": {
     "temporal": "quad1-0",
@@ -16966,7 +16966,7 @@
     "sanctoral": "03-22",
     "winner": "temporal",
     "winnerKey": "quad3-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -16977,7 +16977,7 @@
     "sanctoral": "03-23",
     "winner": "temporal",
     "winnerKey": "quad3-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -16986,13 +16986,13 @@
   "2028-03-24": {
     "temporal": "quad3-5",
     "sanctoral": "03-24",
-    "winner": "temporal",
-    "winnerKey": "quad3-5",
-    "rank": 4.9,
-    "name": "Feria Sexta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-24",
+    "rank": 4.0,
+    "name": "S. Gabrielis Archangeli",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-24"
+    "commemoration": "quad3-5"
   },
   "2028-03-25": {
     "temporal": "quad3-6",
@@ -17030,20 +17030,20 @@
   "2028-03-28": {
     "temporal": "quad4-2",
     "sanctoral": "03-28",
-    "winner": "temporal",
-    "winnerKey": "quad4-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-28",
+    "rank": 2.2,
+    "name": "S. Joannis a Capistrano Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-28"
+    "commemoration": "quad4-2"
   },
   "2028-03-29": {
     "temporal": "quad4-3",
     "sanctoral": "03-29",
     "winner": "temporal",
     "winnerKey": "quad4-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -17054,7 +17054,7 @@
     "sanctoral": "03-30",
     "winner": "temporal",
     "winnerKey": "quad4-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -17065,7 +17065,7 @@
     "sanctoral": "03-31",
     "winner": "temporal",
     "winnerKey": "quad4-5",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Sexta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -17076,7 +17076,7 @@
     "sanctoral": "04-01",
     "winner": "temporal",
     "winnerKey": "quad4-6",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Sabbato infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -17107,31 +17107,31 @@
   "2028-04-04": {
     "temporal": "quad5-2",
     "sanctoral": "04-04",
-    "winner": "temporal",
-    "winnerKey": "quad5-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam Passionis",
+    "winner": "sanctoral",
+    "winnerKey": "04-04",
+    "rank": 3.0,
+    "name": "S. Isidori Episcopi Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "04-04"
+    "commemoration": "quad5-2"
   },
   "2028-04-05": {
     "temporal": "quad5-3",
     "sanctoral": "04-05",
-    "winner": "temporal",
-    "winnerKey": "quad5-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam Passionis",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "04-05",
+    "rank": 3.0,
+    "name": "S. Vincentii Ferrerii Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "04-05"
+    "commemoration": "quad5-3"
   },
   "2028-04-06": {
     "temporal": "quad5-4",
     "sanctoral": "04-06",
     "winner": "temporal",
     "winnerKey": "quad5-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -20581,47 +20581,47 @@
     "commemoration": null
   },
   "2029-02-14": {
-    "temporal": "quad1-3",
+    "temporal": "quadp3-3",
     "sanctoral": "02-14",
     "winner": "temporal",
-    "winnerKey": "quad1-3",
-    "rank": 2.1,
-    "name": "Feria Quarta Quatuor Temporum Quadragesimæ",
+    "winnerKey": "quadp3-3",
+    "rank": 6.9,
+    "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": "02-14"
   },
   "2029-02-15": {
-    "temporal": "quad1-4",
+    "temporal": "quadp3-4",
     "sanctoral": "02-15",
     "winner": "temporal",
-    "winnerKey": "quad1-4",
+    "winnerKey": "quadp3-4",
     "rank": 2.1,
-    "name": "Feria Quinta infra Hebdomadam I in Quadragesima",
+    "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": "02-15"
   },
   "2029-02-16": {
-    "temporal": "quad1-5",
+    "temporal": "quadp3-5",
     "sanctoral": "02-16",
     "winner": "temporal",
-    "winnerKey": "quad1-5",
+    "winnerKey": "quadp3-5",
     "rank": 2.1,
-    "name": "Feria Sexta Quattuor Temporum",
+    "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2029-02-17": {
-    "temporal": "quad1-6",
+    "temporal": "quadp3-6",
     "sanctoral": "02-17",
     "winner": "temporal",
-    "winnerKey": "quad1-6",
+    "winnerKey": "quadp3-6",
     "rank": 2.1,
-    "name": "Sabbato Quattuor Temporum Quadrageismæ",
+    "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "lent",
+    "season": "pre-lent",
     "commemoration": null
   },
   "2029-02-18": {
@@ -20814,46 +20814,46 @@
   "2029-03-07": {
     "temporal": "quad3-3",
     "sanctoral": "03-07",
-    "winner": "temporal",
-    "winnerKey": "quad3-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-07",
+    "rank": 3.0,
+    "name": "S. Thomæ de Aquino Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-07"
+    "commemoration": "quad3-3"
   },
   "2029-03-08": {
     "temporal": "quad3-4",
     "sanctoral": "03-08",
-    "winner": "temporal",
-    "winnerKey": "quad3-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-08",
+    "rank": 3.0,
+    "name": "S. Joannis de Deo Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-08"
+    "commemoration": "quad3-4"
   },
   "2029-03-09": {
     "temporal": "quad3-5",
     "sanctoral": "03-09",
-    "winner": "temporal",
-    "winnerKey": "quad3-5",
-    "rank": 4.9,
-    "name": "Feria Sexta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-09",
+    "rank": 3.0,
+    "name": "S. Franciscæ Romanæ Viduæ",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-09"
+    "commemoration": "quad3-5"
   },
   "2029-03-10": {
     "temporal": "quad3-6",
     "sanctoral": "03-10",
-    "winner": "temporal",
-    "winnerKey": "quad3-6",
-    "rank": 4.9,
-    "name": "Sabbato infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-10",
+    "rank": 2.2,
+    "name": "Ss. Quadraginta Martyrum",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-10"
+    "commemoration": "quad3-6"
   },
   "2029-03-11": {
     "temporal": "quad4-0",
@@ -20882,7 +20882,7 @@
     "sanctoral": "03-13",
     "winner": "temporal",
     "winnerKey": "quad4-2",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Tertia infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -20893,7 +20893,7 @@
     "sanctoral": "03-14",
     "winner": "temporal",
     "winnerKey": "quad4-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -20904,7 +20904,7 @@
     "sanctoral": "03-15",
     "winner": "temporal",
     "winnerKey": "quad4-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -20915,7 +20915,7 @@
     "sanctoral": "03-16",
     "winner": "temporal",
     "winnerKey": "quad4-5",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Sexta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -20924,13 +20924,13 @@
   "2029-03-17": {
     "temporal": "quad4-6",
     "sanctoral": "03-17",
-    "winner": "temporal",
-    "winnerKey": "quad4-6",
-    "rank": 4.9,
-    "name": "Sabbato infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-17",
+    "rank": 3.0,
+    "name": "S. Patricii Episcopi et Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-17"
+    "commemoration": "quad4-6"
   },
   "2029-03-18": {
     "temporal": "quad5-0",
@@ -20959,7 +20959,7 @@
     "sanctoral": "03-20",
     "winner": "temporal",
     "winnerKey": "quad5-2",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Tertia infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -20968,20 +20968,20 @@
   "2029-03-21": {
     "temporal": "quad5-3",
     "sanctoral": "03-21",
-    "winner": "temporal",
-    "winnerKey": "quad5-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam Passionis",
+    "winner": "sanctoral",
+    "winnerKey": "03-21",
+    "rank": 4.0,
+    "name": "S. Benedicti Abbatis",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-21"
+    "commemoration": "quad5-3"
   },
   "2029-03-22": {
     "temporal": "quad5-4",
     "sanctoral": "03-22",
     "winner": "temporal",
     "winnerKey": "quad5-4",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quinta infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -24167,70 +24167,70 @@
     "commemoration": "nat11"
   },
   "2030-01-06": {
-    "temporal": "nat12",
+    "temporal": "epi1-0",
     "sanctoral": "01-06",
     "winner": "sanctoral",
     "winnerKey": "01-06",
     "rank": 7.0,
     "name": "In Epiphania Domini",
     "color": "white",
-    "season": "christmas",
-    "commemoration": "nat12"
+    "season": "ordinary",
+    "commemoration": "epi1-0"
   },
   "2030-01-07": {
-    "temporal": "nat13",
+    "temporal": "epi1-1",
     "sanctoral": "01-07",
     "winner": "sanctoral",
     "winnerKey": "01-07",
     "rank": 5.6,
     "name": "Secunda die infra Octavam Epiphaniæ",
     "color": "white",
-    "season": "christmas",
-    "commemoration": null
+    "season": "ordinary",
+    "commemoration": "epi1-1"
   },
   "2030-01-08": {
-    "temporal": "nat14",
+    "temporal": "epi1-2",
     "sanctoral": "01-08",
     "winner": "sanctoral",
     "winnerKey": "01-08",
     "rank": 5.6,
     "name": "Tertia die infra Octavam Epiphaniæ",
     "color": "green",
-    "season": "christmas",
-    "commemoration": null
+    "season": "ordinary",
+    "commemoration": "epi1-2"
   },
   "2030-01-09": {
-    "temporal": "nat15",
+    "temporal": "epi1-3",
     "sanctoral": "01-09",
     "winner": "sanctoral",
     "winnerKey": "01-09",
     "rank": 5.6,
     "name": "Quarta die infra Octavam Epiphaniæ",
     "color": "green",
-    "season": "christmas",
-    "commemoration": null
+    "season": "ordinary",
+    "commemoration": "epi1-3"
   },
   "2030-01-10": {
-    "temporal": "nat16",
+    "temporal": "epi1-4",
     "sanctoral": "01-10",
     "winner": "sanctoral",
     "winnerKey": "01-10",
     "rank": 5.6,
     "name": "Quinta die infra Octavam Epiphaniæ",
     "color": "green",
-    "season": "christmas",
-    "commemoration": null
+    "season": "ordinary",
+    "commemoration": "epi1-4"
   },
   "2030-01-11": {
-    "temporal": "nat17",
+    "temporal": "epi1-5",
     "sanctoral": "01-11",
     "winner": "sanctoral",
     "winnerKey": "01-11",
     "rank": 5.6,
     "name": "Sexta die infra Octavam Epiphaniæ",
     "color": "green",
-    "season": "christmas",
-    "commemoration": null
+    "season": "ordinary",
+    "commemoration": "epi1-5"
   },
   "2030-01-12": {
     "temporal": "epi1-6",
@@ -24244,7 +24244,7 @@
     "commemoration": "epi1-6"
   },
   "2030-01-13": {
-    "temporal": "epi1-0",
+    "temporal": "epi2-0",
     "sanctoral": "01-13",
     "winner": "sanctoral",
     "winnerKey": "01-13",
@@ -24252,10 +24252,10 @@
     "name": "In Octava Epiphaniæ",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi1-0"
+    "commemoration": "epi2-0"
   },
   "2030-01-14": {
-    "temporal": "epi1-1",
+    "temporal": "epi2-1",
     "sanctoral": "01-14",
     "winner": "sanctoral",
     "winnerKey": "01-14",
@@ -24263,10 +24263,10 @@
     "name": "S. Hilarii Episcopi Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi1-1"
+    "commemoration": "epi2-1"
   },
   "2030-01-15": {
-    "temporal": "epi1-2",
+    "temporal": "epi2-2",
     "sanctoral": "01-15",
     "winner": "sanctoral",
     "winnerKey": "01-15",
@@ -24274,10 +24274,10 @@
     "name": "S. Pauli Primi Eremitæ et Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi1-2"
+    "commemoration": "epi2-2"
   },
   "2030-01-16": {
-    "temporal": "epi1-3",
+    "temporal": "epi2-3",
     "sanctoral": "01-16",
     "winner": "sanctoral",
     "winnerKey": "01-16",
@@ -24285,10 +24285,10 @@
     "name": "S. Marcelli Papæ et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi1-3"
+    "commemoration": "epi2-3"
   },
   "2030-01-17": {
-    "temporal": "epi1-4",
+    "temporal": "epi2-4",
     "sanctoral": "01-17",
     "winner": "sanctoral",
     "winnerKey": "01-17",
@@ -24296,10 +24296,10 @@
     "name": "S. Antonii Abbatis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi1-4"
+    "commemoration": "epi2-4"
   },
   "2030-01-18": {
-    "temporal": "epi1-5",
+    "temporal": "epi2-5",
     "sanctoral": "01-18",
     "winner": "sanctoral",
     "winnerKey": "01-18",
@@ -24307,10 +24307,10 @@
     "name": "Cathedræ S. Petri Romæ",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi1-5"
+    "commemoration": "epi2-5"
   },
   "2030-01-19": {
-    "temporal": "epi1-6",
+    "temporal": "epi2-6",
     "sanctoral": "01-19",
     "winner": "sanctoral",
     "winnerKey": "01-19",
@@ -24318,21 +24318,21 @@
     "name": "Ss. Marii, Marthæ, Audifacis, et Abachum Martyrum",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi1-6"
+    "commemoration": "epi2-6"
   },
   "2030-01-20": {
-    "temporal": "epi2-0",
+    "temporal": "epi3-0",
     "sanctoral": "01-20",
     "winner": "temporal",
-    "winnerKey": "epi2-0",
+    "winnerKey": "epi3-0",
     "rank": 5.0,
-    "name": "Dominica II post Epiphaniam",
+    "name": "Dominica III Post Epiphaniam",
     "color": "white",
     "season": "ordinary",
     "commemoration": "01-20"
   },
   "2030-01-21": {
-    "temporal": "epi2-1",
+    "temporal": "epi3-1",
     "sanctoral": "01-21",
     "winner": "sanctoral",
     "winnerKey": "01-21",
@@ -24340,10 +24340,10 @@
     "name": "S. Agnetis Virginis et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi2-1"
+    "commemoration": "epi3-1"
   },
   "2030-01-22": {
-    "temporal": "epi2-2",
+    "temporal": "epi3-2",
     "sanctoral": "01-22",
     "winner": "sanctoral",
     "winnerKey": "01-22",
@@ -24351,10 +24351,10 @@
     "name": "Ss. Vincentii et Anastasii Martyrum",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi2-2"
+    "commemoration": "epi3-2"
   },
   "2030-01-23": {
-    "temporal": "epi2-3",
+    "temporal": "epi3-3",
     "sanctoral": "01-23",
     "winner": "sanctoral",
     "winnerKey": "01-23",
@@ -24362,10 +24362,10 @@
     "name": "S. Raymundi de Peñafort Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi2-3"
+    "commemoration": "epi3-3"
   },
   "2030-01-24": {
-    "temporal": "epi2-4",
+    "temporal": "epi3-4",
     "sanctoral": "01-24",
     "winner": "sanctoral",
     "winnerKey": "01-24",
@@ -24373,10 +24373,10 @@
     "name": "S. Timothei Episcopi et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi2-4"
+    "commemoration": "epi3-4"
   },
   "2030-01-25": {
-    "temporal": "epi2-5",
+    "temporal": "epi3-5",
     "sanctoral": "01-25",
     "winner": "sanctoral",
     "winnerKey": "01-25",
@@ -24384,10 +24384,10 @@
     "name": "In Conversione S. Pauli Apostoli",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi2-5"
+    "commemoration": "epi3-5"
   },
   "2030-01-26": {
-    "temporal": "epi2-6",
+    "temporal": "epi3-6",
     "sanctoral": "01-26",
     "winner": "sanctoral",
     "winnerKey": "01-26",
@@ -24395,21 +24395,21 @@
     "name": "S. Polycarpi Episcopi et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi2-6"
+    "commemoration": "epi3-6"
   },
   "2030-01-27": {
-    "temporal": "epi3-0",
+    "temporal": "epi4-0",
     "sanctoral": "01-27",
     "winner": "temporal",
-    "winnerKey": "epi3-0",
+    "winnerKey": "epi4-0",
     "rank": 5.0,
-    "name": "Dominica III Post Epiphaniam",
+    "name": "Dominica IV Post Epiphaniam",
     "color": "white",
     "season": "ordinary",
     "commemoration": "01-27"
   },
   "2030-01-28": {
-    "temporal": "epi3-1",
+    "temporal": "epi4-1",
     "sanctoral": "01-28",
     "winner": "sanctoral",
     "winnerKey": "01-28",
@@ -24417,10 +24417,10 @@
     "name": "S. Petri Nolasci Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi3-1"
+    "commemoration": "epi4-1"
   },
   "2030-01-29": {
-    "temporal": "epi3-2",
+    "temporal": "epi4-2",
     "sanctoral": "01-29",
     "winner": "sanctoral",
     "winnerKey": "01-29",
@@ -24428,10 +24428,10 @@
     "name": "S. Francisci Salesii Episcopi Confessoris et Ecclesiæ Doctoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi3-2"
+    "commemoration": "epi4-2"
   },
   "2030-01-30": {
-    "temporal": "epi3-3",
+    "temporal": "epi4-3",
     "sanctoral": "01-30",
     "winner": "sanctoral",
     "winnerKey": "01-30",
@@ -24439,10 +24439,10 @@
     "name": "S. Martinæ Virginis et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi3-3"
+    "commemoration": "epi4-3"
   },
   "2030-01-31": {
-    "temporal": "epi3-4",
+    "temporal": "epi4-4",
     "sanctoral": "01-31",
     "winner": "sanctoral",
     "winnerKey": "01-31",
@@ -24450,10 +24450,10 @@
     "name": "S. Joannis Bosco Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi3-4"
+    "commemoration": "epi4-4"
   },
   "2030-02-01": {
-    "temporal": "epi3-5",
+    "temporal": "epi4-5",
     "sanctoral": "02-01",
     "winner": "sanctoral",
     "winnerKey": "02-01",
@@ -24461,10 +24461,10 @@
     "name": "S. Ignatii Episcopi et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi3-5"
+    "commemoration": "epi4-5"
   },
   "2030-02-02": {
-    "temporal": "epi3-6",
+    "temporal": "epi4-6",
     "sanctoral": "02-02",
     "winner": "sanctoral",
     "winnerKey": "02-02",
@@ -24472,21 +24472,21 @@
     "name": "In Purificatione Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi3-6"
+    "commemoration": "epi4-6"
   },
   "2030-02-03": {
-    "temporal": "epi4-0",
+    "temporal": "epi5-0",
     "sanctoral": "02-03",
     "winner": "temporal",
-    "winnerKey": "epi4-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
-    "name": "Dominica IV Post Epiphaniam",
+    "name": "Dominica V Post Epiphaniam",
     "color": "white",
     "season": "ordinary",
     "commemoration": "02-03"
   },
   "2030-02-04": {
-    "temporal": "epi4-1",
+    "temporal": "epi5-1",
     "sanctoral": "02-04",
     "winner": "sanctoral",
     "winnerKey": "02-04",
@@ -24494,10 +24494,10 @@
     "name": "S. Andreæ Corsini Episcopi et Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi4-1"
+    "commemoration": "epi5-1"
   },
   "2030-02-05": {
-    "temporal": "epi4-2",
+    "temporal": "epi5-2",
     "sanctoral": "02-05",
     "winner": "sanctoral",
     "winnerKey": "02-05",
@@ -24505,10 +24505,10 @@
     "name": "S. Agathæ Virginis et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi4-2"
+    "commemoration": "epi5-2"
   },
   "2030-02-06": {
-    "temporal": "epi4-3",
+    "temporal": "epi5-3",
     "sanctoral": "02-06",
     "winner": "sanctoral",
     "winnerKey": "02-06",
@@ -24516,10 +24516,10 @@
     "name": "S. Titi Episcopi et Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi4-3"
+    "commemoration": "epi5-3"
   },
   "2030-02-07": {
-    "temporal": "epi4-4",
+    "temporal": "epi5-4",
     "sanctoral": "02-07",
     "winner": "sanctoral",
     "winnerKey": "02-07",
@@ -24527,10 +24527,10 @@
     "name": "S. Romualdi Abbatis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi4-4"
+    "commemoration": "epi5-4"
   },
   "2030-02-08": {
-    "temporal": "epi4-5",
+    "temporal": "epi5-5",
     "sanctoral": "02-08",
     "winner": "sanctoral",
     "winnerKey": "02-08",
@@ -24538,10 +24538,10 @@
     "name": "S. Joannis de Matha Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi4-5"
+    "commemoration": "epi5-5"
   },
   "2030-02-09": {
-    "temporal": "epi4-6",
+    "temporal": "epi5-6",
     "sanctoral": "02-09",
     "winner": "sanctoral",
     "winnerKey": "02-09",
@@ -24549,21 +24549,21 @@
     "name": "S. Cyrilli Episc. Alexandrini Confessoris et Ecclesiæ Doctoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi4-6"
+    "commemoration": "epi5-6"
   },
   "2030-02-10": {
-    "temporal": "epi5-0",
+    "temporal": "epi6-0",
     "sanctoral": "02-10",
     "winner": "temporal",
-    "winnerKey": "epi5-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
-    "name": "Dominica V Post Epiphaniam",
+    "name": "Dominica VI Post Epiphaniam",
     "color": "white",
     "season": "ordinary",
     "commemoration": "02-10"
   },
   "2030-02-11": {
-    "temporal": "epi5-1",
+    "temporal": "epi6-1",
     "sanctoral": "02-11",
     "winner": "sanctoral",
     "winnerKey": "02-11",
@@ -24571,10 +24571,10 @@
     "name": "In Apparitione Beatæ Mariæ Virginis",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi5-1"
+    "commemoration": "epi6-1"
   },
   "2030-02-12": {
-    "temporal": "epi5-2",
+    "temporal": "epi6-2",
     "sanctoral": "02-12",
     "winner": "sanctoral",
     "winnerKey": "02-12",
@@ -24582,21 +24582,21 @@
     "name": "Ss. Septem Fundatorum Ordinis Servorum B. M. V.",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "epi5-2"
+    "commemoration": "epi6-2"
   },
   "2030-02-13": {
-    "temporal": "epi5-3",
+    "temporal": "epi6-3",
     "sanctoral": "02-13",
     "winner": "temporal",
-    "winnerKey": "epi5-3",
+    "winnerKey": "epi6-3",
     "rank": 1.0,
-    "name": "Feria IV infra Hebdomadam V post Epiphaniam",
+    "name": "Feria IV infra Hebdomadam VI post Epiphaniam",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
   "2030-02-14": {
-    "temporal": "epi5-4",
+    "temporal": "epi6-4",
     "sanctoral": "02-14",
     "winner": "sanctoral",
     "winnerKey": "02-14",
@@ -24604,10 +24604,10 @@
     "name": "S. Valentini Presbyteri et Martyris",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "epi5-4"
+    "commemoration": "epi6-4"
   },
   "2030-02-15": {
-    "temporal": "epi5-5",
+    "temporal": "epi6-5",
     "sanctoral": "02-15",
     "winner": "sanctoral",
     "winnerKey": "02-15",
@@ -24615,15 +24615,15 @@
     "name": "SS. Faustini et Jovitæ",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "epi5-5"
+    "commemoration": "epi6-5"
   },
   "2030-02-16": {
-    "temporal": "epi5-6",
+    "temporal": "epi6-6",
     "sanctoral": "02-16",
     "winner": "temporal",
-    "winnerKey": "epi5-6",
+    "winnerKey": "epi6-6",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam V post Epiphaniam",
+    "name": "Sabbato infra Hebdomadam VI post Epiphaniam",
     "color": "green",
     "season": "ordinary",
     "commemoration": null
@@ -24816,48 +24816,48 @@
     "commemoration": null
   },
   "2030-03-06": {
-    "temporal": "quad1-3",
+    "temporal": "quadp3-3",
     "sanctoral": "03-06",
-    "winner": "sanctoral",
-    "winnerKey": "03-06",
-    "rank": 3.0,
-    "name": "Ss. Perpetuæ et Felicitatis Martyrum",
+    "winner": "temporal",
+    "winnerKey": "quadp3-3",
+    "rank": 6.9,
+    "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "lent",
-    "commemoration": "quad1-3"
+    "season": "pre-lent",
+    "commemoration": "03-06"
   },
   "2030-03-07": {
-    "temporal": "quad1-4",
+    "temporal": "quadp3-4",
     "sanctoral": "03-07",
     "winner": "sanctoral",
     "winnerKey": "03-07",
     "rank": 3.0,
     "name": "S. Thomæ de Aquino Confessoris",
-    "color": "violet",
-    "season": "lent",
-    "commemoration": "quad1-4"
+    "color": "green",
+    "season": "pre-lent",
+    "commemoration": "quadp3-4"
   },
   "2030-03-08": {
-    "temporal": "quad1-5",
+    "temporal": "quadp3-5",
     "sanctoral": "03-08",
     "winner": "sanctoral",
     "winnerKey": "03-08",
     "rank": 3.0,
     "name": "S. Joannis de Deo Confessoris",
-    "color": "violet",
-    "season": "lent",
-    "commemoration": "quad1-5"
+    "color": "green",
+    "season": "pre-lent",
+    "commemoration": "quadp3-5"
   },
   "2030-03-09": {
-    "temporal": "quad1-6",
+    "temporal": "quadp3-6",
     "sanctoral": "03-09",
     "winner": "sanctoral",
     "winnerKey": "03-09",
     "rank": 3.0,
     "name": "S. Franciscæ Romanæ Viduæ",
-    "color": "violet",
-    "season": "lent",
-    "commemoration": "quad1-6"
+    "color": "green",
+    "season": "pre-lent",
+    "commemoration": "quadp3-6"
   },
   "2030-03-10": {
     "temporal": "quad1-0",
@@ -25049,31 +25049,31 @@
   "2030-03-27": {
     "temporal": "quad3-3",
     "sanctoral": "03-27",
-    "winner": "temporal",
-    "winnerKey": "quad3-3",
-    "rank": 4.9,
-    "name": "Feria Quarta infra Hebdomadam III in Quadragesima",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "03-27",
+    "rank": 3.0,
+    "name": "S. Joannis Damasceni Confessoris et Ecclesiæ Doctoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "03-27"
+    "commemoration": "quad3-3"
   },
   "2030-03-28": {
     "temporal": "quad3-4",
     "sanctoral": "03-28",
-    "winner": "temporal",
-    "winnerKey": "quad3-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam III in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "03-28",
+    "rank": 2.2,
+    "name": "S. Joannis a Capistrano Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "03-28"
+    "commemoration": "quad3-4"
   },
   "2030-03-29": {
     "temporal": "quad3-5",
     "sanctoral": "03-29",
     "winner": "temporal",
     "winnerKey": "quad3-5",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Sexta infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -25084,7 +25084,7 @@
     "sanctoral": "03-30",
     "winner": "temporal",
     "winnerKey": "quad3-6",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Sabbato infra Hebdomadam III in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -25115,20 +25115,20 @@
   "2030-04-02": {
     "temporal": "quad4-2",
     "sanctoral": "04-02",
-    "winner": "temporal",
-    "winnerKey": "quad4-2",
-    "rank": 4.9,
-    "name": "Feria Tertia infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "04-02",
+    "rank": 3.0,
+    "name": "S. Francisci de Paula Confessoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "04-02"
+    "commemoration": "quad4-2"
   },
   "2030-04-03": {
     "temporal": "quad4-3",
     "sanctoral": "04-03",
     "winner": "temporal",
     "winnerKey": "quad4-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -25137,31 +25137,31 @@
   "2030-04-04": {
     "temporal": "quad4-4",
     "sanctoral": "04-04",
-    "winner": "temporal",
-    "winnerKey": "quad4-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam IV in Quadragesima",
+    "winner": "sanctoral",
+    "winnerKey": "04-04",
+    "rank": 3.0,
+    "name": "S. Isidori Episcopi Confessoris et Ecclesiæ Doctoris",
     "color": "violet",
     "season": "lent",
-    "commemoration": "04-04"
+    "commemoration": "quad4-4"
   },
   "2030-04-05": {
     "temporal": "quad4-5",
     "sanctoral": "04-05",
-    "winner": "temporal",
-    "winnerKey": "quad4-5",
-    "rank": 4.9,
-    "name": "Feria Sexta infra Hebdomadam IV in Quadragesima",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "04-05",
+    "rank": 3.0,
+    "name": "S. Vincentii Ferrerii Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "04-05"
+    "commemoration": "quad4-5"
   },
   "2030-04-06": {
     "temporal": "quad4-6",
     "sanctoral": "04-06",
     "winner": "temporal",
     "winnerKey": "quad4-6",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Sabbato infra Hebdomadam IV in Quadragesima",
     "color": "violet",
     "season": "lent",
@@ -25194,7 +25194,7 @@
     "sanctoral": "04-09",
     "winner": "temporal",
     "winnerKey": "quad5-2",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Tertia infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -25205,7 +25205,7 @@
     "sanctoral": "04-10",
     "winner": "temporal",
     "winnerKey": "quad5-3",
-    "rank": 4.9,
+    "rank": 2.1,
     "name": "Feria Quarta infra Hebdomadam Passionis",
     "color": "violet",
     "season": "lent",
@@ -25214,13 +25214,13 @@
   "2030-04-11": {
     "temporal": "quad5-4",
     "sanctoral": "04-11",
-    "winner": "temporal",
-    "winnerKey": "quad5-4",
-    "rank": 4.9,
-    "name": "Feria Quinta infra Hebdomadam Passionis",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "04-11",
+    "rank": 3.0,
+    "name": "S. Leonis I Papæ Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": "04-11"
+    "commemoration": "quad5-4"
   },
   "2030-04-12": {
     "temporal": "quad5-5",
