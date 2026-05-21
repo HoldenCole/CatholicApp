@@ -1,8 +1,5 @@
 {
   "01-01": {
-    "officium": "Die Octavæ Nativitatis Domini",
-    "rank": 6.0,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -68,9 +65,6 @@
     }
   },
   "01-02": {
-    "officium": "In Octava S. Stephani Protomartyris",
-    "rank": 1.4,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -115,9 +109,6 @@
     }
   },
   "01-03": {
-    "officium": "In Octava S. Joannis Apostoli et Evangelistæ",
-    "rank": 1.4,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -162,9 +153,6 @@
     }
   },
   "01-04": {
-    "officium": "In Octava Ss. Innocentium",
-    "rank": 1.4,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -223,9 +211,6 @@
     }
   },
   "01-05": {
-    "officium": "In Vigilia Epiphaniæ",
-    "rank": 4.9,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -284,9 +269,6 @@
     }
   },
   "01-06": {
-    "officium": "In Epiphania Domini",
-    "rank": 6.5,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -352,9 +334,6 @@
     }
   },
   "01-07": {
-    "officium": "Die Septima Januarii",
-    "rank": 1.2,
-    "rankName": "Feria",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -420,9 +399,6 @@
     }
   },
   "01-08": {
-    "officium": "Die Octava Januarii",
-    "rank": 1.2,
-    "rankName": "Feria",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -488,9 +464,6 @@
     }
   },
   "01-09": {
-    "officium": "Die Nona Januarii",
-    "rank": 1.2,
-    "rankName": "Feria",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -556,9 +529,6 @@
     }
   },
   "01-10": {
-    "officium": "Die Decima Januarii",
-    "rank": 1.2,
-    "rankName": "Feria",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -624,9 +594,6 @@
     }
   },
   "01-11": {
-    "officium": "Die Undecima Januarii",
-    "rank": 1.2,
-    "rankName": "Feria",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -692,9 +659,6 @@
     }
   },
   "01-12": {
-    "officium": "Die Duodecima Januarii",
-    "rank": 1.8,
-    "rankName": "Feria",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -760,9 +724,6 @@
     }
   },
   "01-13": {
-    "officium": "In Octava Epiphaniæ",
-    "rank": 6.3,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -828,9 +789,6 @@
     }
   },
   "01-14": {
-    "officium": "S. Hilarii Episcopi Confessoris Ecclesiæ Doctoris\nS. Hilarii Episcopi Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -896,9 +854,6 @@
     }
   },
   "01-15": {
-    "officium": "S. Pauli Primi Eremitæ et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -964,9 +919,6 @@
     }
   },
   "01-16": {
-    "officium": "S. Marcelli Papæ et Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1032,9 +984,6 @@
     }
   },
   "01-17": {
-    "officium": "S. Antonii Abbatis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1100,9 +1049,6 @@
     }
   },
   "01-18": {
-    "officium": "Cathedræ S. Petri Romæ\nIn Festo Cathedræ S. Petri, qua in Romæ primum sedit",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1161,9 +1107,6 @@
     }
   },
   "01-19": {
-    "officium": "Ss. Marii, Marthæ, Audifacis, et Abachum Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1229,9 +1172,6 @@
     }
   },
   "01-20": {
-    "officium": "Ss. Fabiani et Sebastiani Martyrum",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1297,9 +1237,6 @@
     }
   },
   "01-21": {
-    "officium": "S. Agnetis Virginis et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1365,9 +1302,6 @@
     }
   },
   "01-22": {
-    "officium": "Ss. Vincentii et Anastasii Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1433,9 +1367,6 @@
     }
   },
   "01-23": {
-    "officium": "S. Raymundi de Peñafort Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1501,9 +1432,6 @@
     }
   },
   "01-24": {
-    "officium": "S. Timothei Episcopi et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1569,9 +1497,6 @@
     }
   },
   "01-25": {
-    "officium": "In Conversione S. Pauli Apostoli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1637,9 +1562,6 @@
     }
   },
   "01-26": {
-    "officium": "S. Polycarpi Episcopi et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1705,9 +1627,6 @@
     }
   },
   "01-27": {
-    "officium": "S. Joannis Chrysostomi Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1773,9 +1692,6 @@
     }
   },
   "01-28": {
-    "officium": "S. Petri Nolasci Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1841,9 +1757,6 @@
     }
   },
   "01-29": {
-    "officium": "S. Francisci Salesii Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1909,9 +1822,6 @@
     }
   },
   "01-30": {
-    "officium": "S. Martinæ Virginis et Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -1970,9 +1880,6 @@
     }
   },
   "01-31": {
-    "officium": "S. Joannis Bosco Confessoris\nS. Joannis Bosco, Confessoris (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2038,9 +1945,6 @@
     }
   },
   "02-01": {
-    "officium": "S. Ignatii Episcopi et Martyris",
-    "rank": 3.01,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2106,9 +2010,6 @@
     }
   },
   "02-02": {
-    "officium": "In Purificatione Beatæ Mariæ Virginis",
-    "rank": 5.1,
-    "rankName": "Duplex 2 class",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2174,9 +2075,6 @@
     }
   },
   "02-03": {
-    "officium": "S. Blasii Episcopi et Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2242,9 +2140,6 @@
     }
   },
   "02-04": {
-    "officium": "S. Andreæ Corsini Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2310,9 +2205,6 @@
     }
   },
   "02-05": {
-    "officium": "S. Agathæ Virginis et Martyris",
-    "rank": 3.01,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2378,9 +2270,6 @@
     }
   },
   "02-06": {
-    "officium": "S. Titi Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2446,9 +2335,6 @@
     }
   },
   "02-07": {
-    "officium": "S. Romualdi Abbatis\nS. Romualdi Abbatis O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2514,9 +2400,6 @@
     }
   },
   "02-08": {
-    "officium": "S. Joannis de Matha Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2582,9 +2465,6 @@
     }
   },
   "02-09": {
-    "officium": "S. Cyrilli Episc. Alexandrini Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2650,9 +2530,6 @@
     }
   },
   "02-10": {
-    "officium": "S. Scholasticæ Virginis\nS. Scholasticæ Virginis, Sororis S. P. N. Benedicti",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2711,9 +2588,6 @@
     }
   },
   "02-11": {
-    "officium": "In apparitione Beatae Mariae Virginis",
-    "rank": 2.0,
-    "rankName": "Duplex optional",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2779,9 +2653,6 @@
     }
   },
   "02-12": {
-    "officium": "Ss. Septem Fundatorum Ordinis Servorum B. M. V.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2847,9 +2718,6 @@
     }
   },
   "02-14": {
-    "officium": "S. Valentini Presbyteri et Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2915,9 +2783,6 @@
     }
   },
   "02-15": {
-    "officium": "SS. Faustini et Jovitæ",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -2983,9 +2848,6 @@
     }
   },
   "02-18": {
-    "officium": "S. Simeonis Episcopi et Martyris",
-    "rank": 1.0,
-    "rankName": "Commemoratio et M.",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3051,9 +2913,6 @@
     }
   },
   "02-22": {
-    "officium": "In Cathedra S. Petri Apostoli Antiochiæ\nIn Cathedra S. Petri Apostoli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3119,9 +2978,6 @@
     }
   },
   "02-24": {
-    "officium": "S. Matthiæ Apostoli",
-    "rank": 5.1,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3187,9 +3043,6 @@
     }
   },
   "02-27": {
-    "officium": "S. Gabrielis a Virgine Perdolente Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3255,9 +3108,6 @@
     }
   },
   "03-04": {
-    "officium": "S. Casimiri Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3323,9 +3173,6 @@
     }
   },
   "03-06": {
-    "officium": "Ss. Perpetuæ et Felicitatis Martyrum",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3391,9 +3238,6 @@
     }
   },
   "03-07": {
-    "officium": "S. Thomæ de Aquino Confessoris et Ecclesiæ Doctoris\nS. Thomæ de Aquino Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3452,9 +3296,6 @@
     }
   },
   "03-08": {
-    "officium": "S. Joannis de Deo Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3520,9 +3361,6 @@
     }
   },
   "03-09": {
-    "officium": "S. Franciscæ Romanæ Viduæ\nS. Franciscæ Romanæ Viduæ O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3588,9 +3426,6 @@
     }
   },
   "03-10": {
-    "officium": "Ss. Quadraginta Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3656,9 +3491,6 @@
     }
   },
   "03-12": {
-    "officium": "S. Gregorii Papæ Confessoris et Ecclesiæ Doctoris\nS. Gregorii Magni Papæ, Confessoris et Ecclesiæ Doctoris, O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3724,9 +3556,6 @@
     }
   },
   "03-17": {
-    "officium": "S. Patricii Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3792,9 +3621,6 @@
     }
   },
   "03-18": {
-    "officium": "S. Cyrilli Episcopi Hierosolymitani Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3860,9 +3686,6 @@
     }
   },
   "03-19": {
-    "officium": "S. Joseph Sponsi B.M.V. Confessoris",
-    "rank": 6.1,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3928,9 +3751,6 @@
     }
   },
   "03-21": {
-    "officium": "S. Benedicti Abbatis",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -3996,9 +3816,6 @@
     }
   },
   "03-24": {
-    "officium": "S. Gabrielis Archangeli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4064,9 +3881,6 @@
     }
   },
   "03-25": {
-    "officium": "In Annuntiatione Beatæ Mariæ Virginis",
-    "rank": 6.0,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4132,9 +3946,6 @@
     }
   },
   "03-27": {
-    "officium": "S. Joannis Damasceni Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4200,9 +4011,6 @@
     }
   },
   "03-28": {
-    "officium": "S. Joannis a Capistrano Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4268,9 +4076,6 @@
     }
   },
   "04-02": {
-    "officium": "S. Francisci de Paula Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4336,9 +4141,6 @@
     }
   },
   "04-04": {
-    "officium": "S. Isidori Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4404,9 +4206,6 @@
     }
   },
   "04-05": {
-    "officium": "S. Vincentii Ferrerii Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4472,9 +4271,6 @@
     }
   },
   "04-11": {
-    "officium": "S. Leonis I Papæ Confessoris et Ecclesiæ Doctoris\nS. Leonis <i>I.</i>, Papæ, Confessoris et Ecclesiæ Doctoris\nS. Leonis I Papæ Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4540,9 +4336,6 @@
     }
   },
   "04-13": {
-    "officium": "S. Hermenegildi Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4608,9 +4401,6 @@
     }
   },
   "04-14": {
-    "officium": "S. Justini Martyris\nS. Justini, Martyris (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4676,9 +4466,6 @@
     }
   },
   "04-17": {
-    "officium": "S. Aniceti Papæ et Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4744,9 +4531,6 @@
     }
   },
   "04-21": {
-    "officium": "S. Anselmi Episcopi Confessoris et Ecclesiæ Doctoris\nS. Anselmi Episcopi, Confessoris et Ecclesiæ Doctoris, O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4812,9 +4596,6 @@
     }
   },
   "04-22": {
-    "officium": "(rubrica 196)\nSS. Soteris et Caii Summorum Pontificum et Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4880,9 +4661,6 @@
     }
   },
   "04-23": {
-    "officium": "S. Georgii Martyris",
-    "rank": 1.0,
-    "rankName": "Commemoratio et M.",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -4948,9 +4726,6 @@
     }
   },
   "04-24": {
-    "officium": "S. Fidelis de Sigmaringa Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5016,9 +4791,6 @@
     }
   },
   "04-25": {
-    "officium": "S. Marci Evangelistæ",
-    "rank": 5.1,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5084,9 +4856,6 @@
     }
   },
   "04-26": {
-    "officium": "SS. Cleti et Marcellini Summorum Pontificum et Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5152,9 +4921,6 @@
     }
   },
   "04-27": {
-    "officium": "S. Petri Canisii Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5213,9 +4979,6 @@
     }
   },
   "04-28": {
-    "officium": "S. Pauli a Cruce Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5281,9 +5044,6 @@
     }
   },
   "04-29": {
-    "officium": "S. Petri Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5349,9 +5109,6 @@
     }
   },
   "04-30": {
-    "officium": "S. Catharinæ Senensis Virginis\nS. Catharinæ Senensis, Virginis (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5410,9 +5167,6 @@
     }
   },
   "05-01": {
-    "officium": "Ss. Philippi et Jacobi Apostolorum",
-    "rank": 5.1,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5478,9 +5232,6 @@
     }
   },
   "05-02": {
-    "officium": "S. Athanasii Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5546,9 +5297,6 @@
     }
   },
   "05-03": {
-    "officium": "Inventione Sanctæ Crucis",
-    "rank": 4.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5614,9 +5362,6 @@
     }
   },
   "05-04": {
-    "officium": "S. Monicæ Viduæ",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5682,9 +5427,6 @@
     }
   },
   "05-05": {
-    "officium": "S. Pii V Papæ et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5750,9 +5492,6 @@
     }
   },
   "05-06": {
-    "officium": "S. Joannis Apostoli ante Portam Latinam",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5818,9 +5557,6 @@
     }
   },
   "05-07": {
-    "officium": "S. Stanislai Episcopi et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5886,9 +5622,6 @@
     }
   },
   "05-08": {
-    "officium": "In Apparitione S. Michaëlis Archangeli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -5954,9 +5687,6 @@
     }
   },
   "05-09": {
-    "officium": "S. Gregorii Nazianzeni Episcopi Confessoris et Ecclesiæ Doctoris\nS. Gregorii Nazianzeni Episcopi Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6022,9 +5752,6 @@
     }
   },
   "05-10": {
-    "officium": "S. Antonini Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6090,9 +5817,6 @@
     }
   },
   "05-12": {
-    "officium": "Ss. Nerei, Achillei et Domitillæ Virg. atque Pancratii Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6158,9 +5882,6 @@
     }
   },
   "05-13": {
-    "officium": "S. Roberti Bellarmino Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6226,9 +5947,6 @@
     }
   },
   "05-14": {
-    "officium": "S. Bonifatii Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6294,9 +6012,6 @@
     }
   },
   "05-15": {
-    "officium": "S. Joannis Baptistæ de la Salle Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6362,9 +6077,6 @@
     }
   },
   "05-16": {
-    "officium": "S. Ubaldi Episcopi et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6430,9 +6142,6 @@
     }
   },
   "05-17": {
-    "officium": "S. Paschalis Baylon Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6498,9 +6207,6 @@
     }
   },
   "05-18": {
-    "officium": "S. Venantii Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6566,9 +6272,6 @@
     }
   },
   "05-19": {
-    "officium": "S. Petri Celestini Papæ et Confessoris\nS. Petri Celestini Papæ et Confessoris O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6634,9 +6337,6 @@
     }
   },
   "05-20": {
-    "officium": "S. Bernardini Senensis Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6702,9 +6402,6 @@
     }
   },
   "05-23": {
-    "officium": "S. Joannis Baptistæ de Rossi Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6770,9 +6467,6 @@
     }
   },
   "05-25": {
-    "officium": "S. Gregorii VII Papæ et Confessoris\nS. Gregorii VII Papæ et Confessoris O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6838,9 +6532,6 @@
     }
   },
   "05-26": {
-    "officium": "S. Philippi Neri Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6906,9 +6597,6 @@
     }
   },
   "05-27": {
-    "officium": "S. Bedæ Venerabilis Confessoris et Ecclesiæ Doctoris\nS. Bedæ Venerabilis, Confessoris et Ecclesiæ Doctoris, O. N.\nS. Bedæ Venerabilis, Confessoris et Ecclesiæ Doctoris (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -6967,9 +6655,6 @@
     }
   },
   "05-28": {
-    "officium": "S. Augustini Episcopi et Confessoris\nS. Augustini Episcopi et Confessoris, O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7035,9 +6720,6 @@
     }
   },
   "05-29": {
-    "officium": "S. Mariæ Magdalenæ de Pazzis Virginis",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7096,9 +6778,6 @@
     }
   },
   "05-30": {
-    "officium": "S. Felicis I Papæ et Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7164,9 +6843,6 @@
     }
   },
   "05-31": {
-    "officium": "Beatæ Mariæ Virginis Reginæ",
-    "rank": 5.0,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7218,9 +6894,6 @@
     }
   },
   "06-01": {
-    "officium": "S. Angelæ Mericiæ Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7279,9 +6952,6 @@
     }
   },
   "06-02": {
-    "officium": "Ss. Marcellini, Petri, atque Erasmi, Episcopi, Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7347,9 +7017,6 @@
     }
   },
   "06-04": {
-    "officium": "S. Francisci Caracciolo Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7415,9 +7082,6 @@
     }
   },
   "06-05": {
-    "officium": "S. Bonifatii Episcopi et Martyris\nS. Bonifatii Episcopi et Martyris O. N.\nS. Bonifatii, Episcopi et Martyris (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7483,9 +7147,6 @@
     }
   },
   "06-06": {
-    "officium": "S. Norberti Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7551,9 +7212,6 @@
     }
   },
   "06-09": {
-    "officium": "Ss. Primi et Feliciani Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7619,9 +7277,6 @@
     }
   },
   "06-10": {
-    "officium": "S. Margaritæ Reginæ Viduæ",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7687,9 +7342,6 @@
     }
   },
   "06-11": {
-    "officium": "S. Barnabæ Apostoli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7755,9 +7407,6 @@
     }
   },
   "06-12": {
-    "officium": "S. Joannis a S. Facundo Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7823,9 +7472,6 @@
     }
   },
   "06-13": {
-    "officium": "S. Antonii de Padua Confessoris\nS. Antonii de Padua Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7891,9 +7537,6 @@
     }
   },
   "06-14": {
-    "officium": "S. Basilii Magni, Episcopis Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -7959,9 +7602,6 @@
     }
   },
   "06-15": {
-    "officium": "Ss. Viti, Modesti atque Crescentiæ Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8027,9 +7667,6 @@
     }
   },
   "06-18": {
-    "officium": "S. Ephræm Syri Confessoris et Ecclesiæ Doctoris\nS. Ephræm Syri Diaconi, Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8088,9 +7725,6 @@
     }
   },
   "06-19": {
-    "officium": "S. Julianæ de Falconeriis Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8149,9 +7783,6 @@
     }
   },
   "06-20": {
-    "officium": "S. Silverii Papæ et Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8210,9 +7841,6 @@
     }
   },
   "06-21": {
-    "officium": "S. Aloisii Gonzagæ Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8278,9 +7906,6 @@
     }
   },
   "06-22": {
-    "officium": "S. Paulini Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8346,9 +7971,6 @@
     }
   },
   "06-23": {
-    "officium": "In Vigilia S. Joannis Baptistæ",
-    "rank": 1.5,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8358,9 +7980,6 @@
     }
   },
   "06-24": {
-    "officium": "In Nativitate S. Joannis Baptistæ",
-    "rank": 6.5,
-    "rankName": "Duplex I classis cum Octava communi",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8426,9 +8045,6 @@
     }
   },
   "06-25": {
-    "officium": "S. Gulielmi Abbatis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8494,9 +8110,6 @@
     }
   },
   "06-26": {
-    "officium": "Ss. Joannis et Pauli Martyrum",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8562,9 +8175,6 @@
     }
   },
   "06-28": {
-    "officium": "S. Irenæi Episcopi et Martyris\nS. Irenæi, Episcopi, Martyris et Ecclesiæ Doctoris (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8630,9 +8240,6 @@
     }
   },
   "06-29": {
-    "officium": "SS. Apostolorum Petri et Pauli",
-    "rank": 6.5,
-    "rankName": "Duplex I classis cum octava communi",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8698,9 +8305,6 @@
     }
   },
   "06-30": {
-    "officium": "In Commemoratione S. Pauli Apostoli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8766,9 +8370,6 @@
     }
   },
   "07-01": {
-    "officium": "Pretiosissimi Sanguinis Domini Nostri Jesu Christi",
-    "rank": 6.0,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8834,9 +8435,6 @@
     }
   },
   "07-02": {
-    "officium": "In Visitatione Beatæ Mariæ Virginis",
-    "rank": 6.0,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8902,9 +8500,6 @@
     }
   },
   "07-03": {
-    "officium": "S. Leonis Papæ et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -8970,9 +8565,6 @@
     }
   },
   "07-05": {
-    "officium": "S. Antonii Mariæ Zaccaria Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9038,9 +8630,6 @@
     }
   },
   "07-06": {
-    "officium": "In Octava Ss. Apostolorum Petri et Pauli",
-    "rank": 4.1,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9106,9 +8695,6 @@
     }
   },
   "07-07": {
-    "officium": "Ss. Cyrilli et Methodii Pont. et Conf.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9174,9 +8760,6 @@
     }
   },
   "07-08": {
-    "officium": "S. Elisabeth Reg. Portugaliæ Viduæ",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9242,9 +8825,6 @@
     }
   },
   "07-10": {
-    "officium": "Ss. Septem Fratrum Martyrum, ac Rufinæ et Secundæ Virginum et Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9310,9 +8890,6 @@
     }
   },
   "07-11": {
-    "officium": "S. Pii I Papæ et Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9378,9 +8955,6 @@
     }
   },
   "07-12": {
-    "officium": "S. Joannis Gualberti Abbatis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9446,9 +9020,6 @@
     }
   },
   "07-13": {
-    "officium": "S. Anacleti Papæ et Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9514,9 +9085,6 @@
     }
   },
   "07-14": {
-    "officium": "S. Bonaventuræ Episcopi Confessoris et Ecclesiæ Doctoris\nS. Bonaventuræ Episcopi Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9582,9 +9150,6 @@
     }
   },
   "07-15": {
-    "officium": "S. Henrici Imperatoris Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9650,9 +9215,6 @@
     }
   },
   "07-16": {
-    "officium": "Beatæ Mariæ Virginis de Monte Carmelo",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9704,9 +9266,6 @@
     }
   },
   "07-17": {
-    "officium": "S. Alexii Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9772,9 +9331,6 @@
     }
   },
   "07-18": {
-    "officium": "S. Camilli de Lellis Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9840,9 +9396,6 @@
     }
   },
   "07-19": {
-    "officium": "S. Vincentii a Paulo Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9908,9 +9461,6 @@
     }
   },
   "07-20": {
-    "officium": "S. Hieronymi Æmiliani Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -9976,9 +9526,6 @@
     }
   },
   "07-21": {
-    "officium": "S. Praxedis Virginis",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "vesperae.antiphons": {
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
@@ -10030,9 +9577,6 @@
     }
   },
   "07-22": {
-    "officium": "S. Mariæ Magdalenæ Pœnitentis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10098,9 +9642,6 @@
     }
   },
   "07-23": {
-    "officium": "S. Apollinaris Episcopi et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10166,9 +9707,6 @@
     }
   },
   "07-24": {
-    "officium": "In Vigilia S. Jacobi Ap.",
-    "rank": 1.5,
-    "rankName": "Vigilia",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10178,9 +9716,6 @@
     }
   },
   "07-25": {
-    "officium": "S. Jacobi Apostoli",
-    "rank": 5.2,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10246,9 +9781,6 @@
     }
   },
   "07-26": {
-    "officium": "S. Annæ Matris B.M.V.",
-    "rank": 5.1,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10314,9 +9846,6 @@
     }
   },
   "07-27": {
-    "officium": "S. Pantaleonis Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10382,9 +9911,6 @@
     }
   },
   "07-28": {
-    "officium": "Ss. Nazarii et Celsi Martyrum, Victoris I Papæ et Martyris ac Innocentii I Papæ et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10450,9 +9976,6 @@
     }
   },
   "07-29": {
-    "officium": "S. Marthæ Virginis",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "vesperae.antiphons": {
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
@@ -10504,9 +10027,6 @@
     }
   },
   "07-30": {
-    "officium": "S. Abdon et Sennen Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10572,9 +10092,6 @@
     }
   },
   "07-31": {
-    "officium": "S. Ignatii Confessoris",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10640,9 +10157,6 @@
     }
   },
   "08-01": {
-    "officium": "S. Petri ad Vincula",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10708,9 +10222,6 @@
     }
   },
   "08-02": {
-    "officium": "S. Alfonsi Mariæ de Ligorio Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10776,9 +10287,6 @@
     }
   },
   "08-03": {
-    "officium": "De Inventione S. Stephani Protomartyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10823,9 +10331,6 @@
     }
   },
   "08-04": {
-    "officium": "S. Dominici Confessoris",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10891,9 +10396,6 @@
     }
   },
   "08-05": {
-    "officium": "Sanctæ Mariæ Virginis ad Nives",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -10945,9 +10447,6 @@
     }
   },
   "08-06": {
-    "officium": "In Transfiguratione Domini Nostri Jesu Christi",
-    "rank": 4.1,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11013,9 +10512,6 @@
     }
   },
   "08-07": {
-    "officium": "S. Cajetani Confessoris\nS. Cajetani Thienæi, Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11081,9 +10577,6 @@
     }
   },
   "08-08": {
-    "officium": "Ss. Cyriaci, Largi et Smaragdi Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11149,9 +10642,6 @@
     }
   },
   "08-09": {
-    "officium": "S. Joannis Mariæ Vianney Confessoris\nS. Joannis Mariæ Vianney, Confessoris (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11217,9 +10707,6 @@
     }
   },
   "08-10": {
-    "officium": "S. Laurentii Martyris",
-    "rank": 5.0,
-    "rankName": "Duplex II classis cum octava simplici",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11285,9 +10772,6 @@
     }
   },
   "08-11": {
-    "officium": "Ss. Tiburtii et Susannæ Virginis, Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11353,9 +10837,6 @@
     }
   },
   "08-12": {
-    "officium": "S. Claræ Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "vesperae.antiphons": {
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
@@ -11407,9 +10888,6 @@
     }
   },
   "08-13": {
-    "officium": "Ss. Hippolyti et Cassiani Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11475,9 +10953,6 @@
     }
   },
   "08-14": {
-    "officium": "In Vigilia Assumptionis B.M.V.",
-    "rank": 5.0,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11487,9 +10962,6 @@
     }
   },
   "08-15": {
-    "officium": "In Assumptione Beatæ Mariæ Virginis",
-    "rank": 7.0,
-    "rankName": "Duplex I classis cum Octava Communi",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11555,9 +11027,6 @@
     }
   },
   "08-16": {
-    "officium": "S. Joachim Confessoris, Patris B. M. V.",
-    "rank": 5.1,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11623,9 +11092,6 @@
     }
   },
   "08-17": {
-    "officium": "S. Hyacinthi Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11691,9 +11157,6 @@
     }
   },
   "08-19": {
-    "officium": "S. Joannis Eudes Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11759,9 +11222,6 @@
     }
   },
   "08-20": {
-    "officium": "S. Bernardi Abbatis et Ecclesiæ Doctoris\nS. Bernardi, Abbatis et Ecclesiæ Doctoris, O. N.\nS. Bernardi Abbatis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11820,9 +11280,6 @@
     }
   },
   "08-21": {
-    "officium": "S. Joannæ Franciscæ Frémiot de Chantal Viduæ",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11888,9 +11345,6 @@
     }
   },
   "08-22": {
-    "officium": "Immaculati Cordis Beatæ Mariæ Virginis",
-    "rank": 5.0,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -11942,9 +11396,6 @@
     }
   },
   "08-23": {
-    "officium": "S. Philippi Benitii Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12010,9 +11461,6 @@
     }
   },
   "08-24": {
-    "officium": "S. Bartholomæi Apostoli",
-    "rank": 5.5,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12078,9 +11526,6 @@
     }
   },
   "08-25": {
-    "officium": "S. Ludovici Regis Franciæ Confessoris\nS. Ludovici, Regis Francorum et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12146,9 +11591,6 @@
     }
   },
   "08-26": {
-    "officium": "S. Zephyrini Papæ et Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12214,9 +11656,6 @@
     }
   },
   "08-27": {
-    "officium": "S. Josephi Calasanctii Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12282,9 +11721,6 @@
     }
   },
   "08-28": {
-    "officium": "S. Augustini Episcopi et Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12350,9 +11786,6 @@
     }
   },
   "08-29": {
-    "officium": "In Decollatione S. Joannis Baptistæ",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12418,9 +11851,6 @@
     }
   },
   "08-30": {
-    "officium": "S. Rosæ a Sancta Maria Limanæ Virginis\nS. Rosæ a Sancta Maria Limanæ, Virginis (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12479,9 +11909,6 @@
     }
   },
   "08-31": {
-    "officium": "S. Raymundi Nonnati Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12547,9 +11974,6 @@
     }
   },
   "09-01": {
-    "officium": "S. Ægidii Abbatis",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12615,9 +12039,6 @@
     }
   },
   "09-02": {
-    "officium": "S. Stephani Hungariæ Regis Confessoris\nS. Stephani, Regis Hungariæ et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12683,9 +12104,6 @@
     }
   },
   "09-03": {
-    "officium": "S. Pii X Papæ Confessoris\nS. Pii X., Papæ et Confessoris (1965)",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12751,9 +12169,6 @@
     }
   },
   "09-05": {
-    "officium": "S. Laurentii Justiniani Episcopi et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12819,9 +12234,6 @@
     }
   },
   "09-08": {
-    "officium": "In Nativitate Beatæ Mariæ Virginis",
-    "rank": 6.1,
-    "rankName": "Serm maj. cum Octava",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12887,9 +12299,6 @@
     }
   },
   "09-09": {
-    "officium": "S. Gorgonii Martyris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -12955,9 +12364,6 @@
     }
   },
   "09-10": {
-    "officium": "S. Nicolai de Tolentino Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13023,9 +12429,6 @@
     }
   },
   "09-11": {
-    "officium": "Ss. Proti et Hyacinthi Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13091,9 +12494,6 @@
     }
   },
   "09-12": {
-    "officium": "S. Nominis Beatae Mariae Virginis",
-    "rank": 2.0,
-    "rankName": "Duplex optional",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13145,9 +12545,6 @@
     }
   },
   "09-14": {
-    "officium": "In Exaltatione Sanctæ Crucis",
-    "rank": 3.0,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13213,9 +12610,6 @@
     }
   },
   "09-15": {
-    "officium": "Septem Dolorum Beatæ Mariæ Virginis",
-    "rank": 5.0,
-    "rankName": "Duplex 2nd class",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13281,9 +12675,6 @@
     }
   },
   "09-16": {
-    "officium": "Ss. Cornelii Papæ et Cypriani Episcopi, Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13349,9 +12740,6 @@
     }
   },
   "09-17": {
-    "officium": "Impressionis Stigmatum S. Francisci",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13417,9 +12805,6 @@
     }
   },
   "09-18": {
-    "officium": "S. Josephi de Cupertino Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13485,9 +12870,6 @@
     }
   },
   "09-19": {
-    "officium": "S. Januarii Episcopi et Sociorum Martyrum",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13553,9 +12935,6 @@
     }
   },
   "09-20": {
-    "officium": "Ss. Eustachii et Sociorum Martyrum",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13621,9 +13000,6 @@
     }
   },
   "09-21": {
-    "officium": "S. Matthæi Apostoli et Evangelistæ",
-    "rank": 5.1,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13689,9 +13065,6 @@
     }
   },
   "09-22": {
-    "officium": "S. Thomæ de Villanova Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13757,9 +13130,6 @@
     }
   },
   "09-23": {
-    "officium": "S. Lini Papæ et Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13825,9 +13195,6 @@
     }
   },
   "09-24": {
-    "officium": "Beatæ Mariæ Virginis de Mercede",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13879,9 +13246,6 @@
     }
   },
   "09-26": {
-    "officium": "Ss. Cypriani et Justinæ Virginis, Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -13947,9 +13311,6 @@
     }
   },
   "09-27": {
-    "officium": "Ss. Cosmæ et Damiani Martyrum",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14015,9 +13376,6 @@
     }
   },
   "09-28": {
-    "officium": "S. Wenceslai Ducis et Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14083,9 +13441,6 @@
     }
   },
   "09-29": {
-    "officium": "In Dedicatione S. Michaëlis Archangelis",
-    "rank": 6.0,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14151,9 +13506,6 @@
     }
   },
   "09-30": {
-    "officium": "S. Hieronymi Presbyteris Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14212,9 +13564,6 @@
     }
   },
   "10-01": {
-    "officium": "S. Remigii Episcopi et Confessoris",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14280,9 +13629,6 @@
     }
   },
   "10-02": {
-    "officium": "Ss. Angelorum Custodum",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14348,9 +13694,6 @@
     }
   },
   "10-03": {
-    "officium": "S. Theresiæ a Jesu Infante Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14409,9 +13752,6 @@
     }
   },
   "10-04": {
-    "officium": "S. Francisci Confessoris",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14477,9 +13817,6 @@
     }
   },
   "10-05": {
-    "officium": "Ss. Placidi et Sociorum Martyrum\nSs. Placidi et Sociorum Martyrum, O. N.",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14545,9 +13882,6 @@
     }
   },
   "10-06": {
-    "officium": "S. Brunonis Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14613,9 +13947,6 @@
     }
   },
   "10-07": {
-    "officium": "Sanctissimi Rosarii Beatæ Mariæ Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14681,9 +14012,6 @@
     }
   },
   "10-08": {
-    "officium": "S. Birgittæ Viduæ",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14749,9 +14077,6 @@
     }
   },
   "10-09": {
-    "officium": "S. Joannis Leonardi Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14817,9 +14142,6 @@
     }
   },
   "10-10": {
-    "officium": "S. Francisci Borgiæ Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14885,9 +14207,6 @@
     }
   },
   "10-11": {
-    "officium": "Maternitatis Beatæ Mariæ Virginis",
-    "rank": 5.1,
-    "rankName": "Duplex 2 classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -14953,9 +14272,6 @@
     }
   },
   "10-13": {
-    "officium": "S. Eduardi Regis Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15021,9 +14337,6 @@
     }
   },
   "10-14": {
-    "officium": "S. Callisti Papæ et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15089,9 +14402,6 @@
     }
   },
   "10-15": {
-    "officium": "S. Teresiæ Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15150,9 +14460,6 @@
     }
   },
   "10-16": {
-    "officium": "S. Hedwigis Viduæ\nS. Hedwigis, Viduæ O.N.",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15218,9 +14525,6 @@
     }
   },
   "10-17": {
-    "officium": "S. Margaritæ Mariæ Alacoque Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15279,9 +14583,6 @@
     }
   },
   "10-18": {
-    "officium": "S. Lucæ Evangelistæ",
-    "rank": 5.1,
-    "rankName": "Duplex 2 classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15347,9 +14648,6 @@
     }
   },
   "10-19": {
-    "officium": "S. Petri de Alcantara Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15415,9 +14713,6 @@
     }
   },
   "10-20": {
-    "officium": "S. Joannis Cantii Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15483,9 +14778,6 @@
     }
   },
   "10-21": {
-    "officium": "S. Hilarionis Abbatis",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15551,9 +14843,6 @@
     }
   },
   "10-24": {
-    "officium": "S. Raphaëlis Archangeli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15619,9 +14908,6 @@
     }
   },
   "10-25": {
-    "officium": "Ss. Chrysanthi et Dariæ Martyrum",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15687,9 +14973,6 @@
     }
   },
   "10-26": {
-    "officium": "S. Evaristi Papæ et Martyris",
-    "rank": 1.2,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15755,9 +15038,6 @@
     }
   },
   "10-27": {
-    "officium": "In Vigilia Ss. Simonis et Judæ Ap.",
-    "rank": 1.5,
-    "rankName": "Vigilia",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15767,9 +15047,6 @@
     }
   },
   "10-28": {
-    "officium": "Ss. Simonis et Judæ Apostolorum\nSS. Apostolorum Simonis et Judæ",
-    "rank": 5.1,
-    "rankName": "Duplex 2 classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15835,9 +15112,6 @@
     }
   },
   "10-31": {
-    "officium": "In Vigilia Omnium Sanctorum",
-    "rank": 1.5,
-    "rankName": "Vigilia",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15847,9 +15121,6 @@
     }
   },
   "11-01": {
-    "officium": "Omnium Sanctorum",
-    "rank": 6.4,
-    "rankName": "Duplex I classis cum octava communi",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15915,9 +15186,6 @@
     }
   },
   "11-02": {
-    "officium": "In Commemoratione Omnium Fidelium Defunctorum",
-    "rank": 6.0,
-    "rankName": "I. classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -15955,9 +15223,6 @@
     }
   },
   "11-04": {
-    "officium": "S. Caroli Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16023,9 +15288,6 @@
     }
   },
   "11-08": {
-    "officium": "In Octava Omnium Sanctorum",
-    "rank": 4.1,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16091,9 +15353,6 @@
     }
   },
   "11-09": {
-    "officium": "In Dedicatione Basilicæ Ss. Salvatoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16159,9 +15418,6 @@
     }
   },
   "11-10": {
-    "officium": "S. Andreæ Avellini Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16227,9 +15483,6 @@
     }
   },
   "11-11": {
-    "officium": "S. Martini Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16295,9 +15548,6 @@
     }
   },
   "11-12": {
-    "officium": "S. Martini Papæ et Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16363,9 +15613,6 @@
     }
   },
   "11-13": {
-    "officium": "S. Didaci Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16431,9 +15678,6 @@
     }
   },
   "11-14": {
-    "officium": "S. Josaphat Episcopi et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16499,9 +15743,6 @@
     }
   },
   "11-15": {
-    "officium": "S. Alberti Magni Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16567,9 +15808,6 @@
     }
   },
   "11-16": {
-    "officium": "S. Gertrudis Virginis\nS. Gertrudis Virginis O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16628,9 +15866,6 @@
     }
   },
   "11-17": {
-    "officium": "S. Gregorii Thaumaturgi Episcopi et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16696,9 +15931,6 @@
     }
   },
   "11-18": {
-    "officium": "In Dedicatione Basilicarum Ss. Apostolorum Petri et Pauli",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16764,9 +15996,6 @@
     }
   },
   "11-19": {
-    "officium": "S. Elisabeth Viduæ",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16832,9 +16061,6 @@
     }
   },
   "11-20": {
-    "officium": "S. Felicis de Valois Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16900,9 +16126,6 @@
     }
   },
   "11-21": {
-    "officium": "In Præsentatione Beatæ Mariæ Virginis",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -16954,9 +16177,6 @@
     }
   },
   "11-22": {
-    "officium": "S. Cæciliæ Virginis et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17022,9 +16242,6 @@
     }
   },
   "11-23": {
-    "officium": "S. Clementis Papæ et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17090,9 +16307,6 @@
     }
   },
   "11-24": {
-    "officium": "S. Joannis a Cruce Confessoris et Ecclesiæ Doctoris\nS. Joannis a Cruce, Confessoris et Ecclesiæ Doctoris (1965)\nS. Joannis a Cruce Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17151,9 +16365,6 @@
     }
   },
   "11-25": {
-    "officium": "S. Catharinæ Virginis et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17212,9 +16423,6 @@
     }
   },
   "11-26": {
-    "officium": "S. Silvestri Abbatis\nS. Silvestri Abbatis O. N.",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17280,9 +16488,6 @@
     }
   },
   "11-29": {
-    "officium": "In Vigilia S. Andreæ Apostoli",
-    "rank": 1.5,
-    "rankName": "Vigilia",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17292,9 +16497,6 @@
     }
   },
   "11-30": {
-    "officium": "S. Andreæ Apostoli",
-    "rank": 5.1,
-    "rankName": "Duplex 2 classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17360,9 +16562,6 @@
     }
   },
   "12-02": {
-    "officium": "S. Bibianæ Virginis et Martyris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17421,9 +16620,6 @@
     }
   },
   "12-03": {
-    "officium": "S. Francisci Xaverii Confessoris",
-    "rank": 4.0,
-    "rankName": "Duplex majus",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17489,9 +16685,6 @@
     }
   },
   "12-04": {
-    "officium": "S. Petri Chrysologi Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17557,9 +16750,6 @@
     }
   },
   "12-05": {
-    "officium": "S. Sabbæ Abbatis",
-    "rank": 1.1,
-    "rankName": "Simplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17625,9 +16815,6 @@
     }
   },
   "12-06": {
-    "officium": "S. Nicolai Episcopi et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17693,9 +16880,6 @@
     }
   },
   "12-07": {
-    "officium": "S. Ambrosii Episcopi Confessoris et Ecclesiæ Doctoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17761,9 +16945,6 @@
     }
   },
   "12-08": {
-    "officium": "In Conceptione Immaculata Beatæ Mariæ Virginis",
-    "rank": 6.01,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17829,9 +17010,6 @@
     }
   },
   "12-11": {
-    "officium": "S. Damasi Papæ et Confessoris",
-    "rank": 2.2,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17897,9 +17075,6 @@
     }
   },
   "12-13": {
-    "officium": "S. Luciæ Virginis et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -17965,9 +17140,6 @@
     }
   },
   "12-15": {
-    "officium": "In Octava Concept. Immac. Beatæ Mariæ Virginis",
-    "rank": 3.1,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18019,9 +17191,6 @@
     }
   },
   "12-16": {
-    "officium": "S. Eusebii Episcopi et Martyris\nS. Eusebii Vercellensis Episcopi et Martyris",
-    "rank": 2.5,
-    "rankName": "Semiduplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18087,9 +17256,6 @@
     }
   },
   "12-21": {
-    "officium": "S. Thomæ Apostoli",
-    "rank": 5.1,
-    "rankName": "Duplex II classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18155,9 +17321,6 @@
     }
   },
   "12-24": {
-    "officium": "In Vigilia Nativitatis Domini",
-    "rank": 6.9,
-    "rankName": "Duplex I classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18188,9 +17351,6 @@
     }
   },
   "12-25": {
-    "officium": "In Nativitate Domini",
-    "rank": 7.0,
-    "rankName": "Duplex I Classis",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18256,9 +17416,6 @@
     }
   },
   "12-26": {
-    "officium": "S. Stephani Protomartyris",
-    "rank": 5.4,
-    "rankName": "Duplex II class cum octava simplici",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18324,9 +17481,6 @@
     }
   },
   "12-27": {
-    "officium": "S. Joannis Apostoli et Evangelistæ",
-    "rank": 5.3,
-    "rankName": "Duplex II Class cum octava simplici",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18392,9 +17546,6 @@
     }
   },
   "12-28": {
-    "officium": "Ss. Innocentium",
-    "rank": 5.2,
-    "rankName": "Duplex II class cum octava simplici",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18460,9 +17611,6 @@
     }
   },
   "12-29": {
-    "officium": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
@@ -18528,9 +17676,6 @@
     }
   },
   "12-31": {
-    "officium": "S. Silvestri Papæ et Confessoris",
-    "rank": 3.0,
-    "rankName": "Duplex",
     "collect": {
       "type": "collect",
       "label": "Collect",
