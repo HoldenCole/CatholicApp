@@ -47,6 +47,54 @@
       "eng": "That which I tell you in the dark, speak ye in the light, saith the Lord: and that which you hear in the ear, preach ye upon the housetops."
     }
   },
+  "C2-1": {
+    "introit": {
+      "lat": "Sacerdotes Dei, benedicite Dominum: sancti et humiles corde, laudate Deum.",
+      "eng": "Priests of the Lord, bless the Lord; holy men of humble heart, praise God."
+    },
+    "epistle": {
+      "ref": "2 Cor. 1:3-7",
+      "lat": "Fratres: Benedictus Deus et Pater Domini nostri Jesu Christi, Pater misericordiarum, et Deus totius consolationis, qui consolatur nos in omni tribulatione nostra: ut possimus et ipsi consolari eos, qui in omni pressura sunt, per exhortationem, qua exhortamur et ipsi a Deo. Quoniam sicut abundant passiones Christi in nobis: ita et per Christum abundat consolatio nostra.",
+      "eng": "Brethren: Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all comfort, Who comforts us in all our afflictions, that we also may be able to comfort those who are in any distress by the comfort wherewith we ourselves are comforted by God. For as the sufferings of Christ abound in us, so also through Christ does our comfort abound."
+    },
+    "gospel": {
+      "ref": "Matt. 16:24-27",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Si quis vult post me venire, abneget semetipsum, et tollat crucem suam, et sequatur me. Qui enim voluerit animam suam salvam facere, perdet eam: qui autem perdiderit animam suam propter me, inveniet eam.",
+      "eng": "At that time, Jesus said to His disciples, If anyone wishes to come after Me, let him deny himself, and take up his cross, and follow Me. For he who would save his life will lose it; but he who loses his life for My sake will find it."
+    },
+    "offertory": {
+      "lat": "Inveni David servum meum, oleo sancto meo unxi eum: manus enim mea auxiliabitur ei, et brachium meum confortabit eum.",
+      "eng": "I have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong."
+    },
+    "communion": {
+      "lat": "Posuisti, Domine, in capite ejus coronam de lapide pretioso.",
+      "eng": "You placed on his head, O Lord, a crown of pure gold."
+    }
+  },
+  "C2-1b": {
+    "introit": {
+      "lat": "Sacerdotes Dei, benedicite Dominum: sancti et humiles corde, laudate Deum.",
+      "eng": "Priests of the Lord, bless the Lord; holy men of humble heart, praise God."
+    },
+    "epistle": {
+      "ref": "2 Cor. 1:3-7",
+      "lat": "Fratres: Benedictus Deus et Pater Domini nostri Jesu Christi, Pater misericordiarum, et Deus totius consolationis, qui consolatur nos in omni tribulatione nostra: ut possimus et ipsi consolari eos, qui in omni pressura sunt, per exhortationem, qua exhortamur et ipsi a Deo. Quoniam sicut abundant passiones Christi in nobis: ita et per Christum abundat consolatio nostra.",
+      "eng": "Brethren: Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all comfort, Who comforts us in all our afflictions, that we also may be able to comfort those who are in any distress by the comfort wherewith we ourselves are comforted by God. For as the sufferings of Christ abound in us, so also through Christ does our comfort abound."
+    },
+    "gospel": {
+      "ref": "Matt. 16:24-27",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Si quis vult post me venire, abneget semetipsum, et tollat crucem suam, et sequatur me. Qui enim voluerit animam suam salvam facere, perdet eam: qui autem perdiderit animam suam propter me, inveniet eam.",
+      "eng": "At that time, Jesus said to His disciples, If anyone wishes to come after Me, let him deny himself, and take up his cross, and follow Me. For he who would save his life will lose it; but he who loses his life for My sake will find it."
+    },
+    "offertory": {
+      "lat": "Inveni David servum meum, oleo sancto meo unxi eum: manus enim mea auxiliabitur ei, et brachium meum confortabit eum.",
+      "eng": "I have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong."
+    },
+    "communion": {
+      "lat": "Posuisti, Domine, in capite ejus coronam de lapide pretioso.",
+      "eng": "You placed on his head, O Lord, a crown of pure gold."
+    }
+  },
   "C3": {
     "introit": {
       "lat": "In virtute tua, Domine, laetabitur justus: et super salutare tuum exsultabit vehementer: desiderium animae ejus tribuisti ei.",
@@ -95,6 +143,78 @@
       "eng": "The faithful and wise servant, whom his lord setteth over his family: to give them their measure of wheat in due season."
     }
   },
+  "C4-1": {
+    "introit": {
+      "lat": "Sacerdotes tui, Domine, induant justitiam, et sancti tui exsultent: propter David servum tuum, non avertas faciem Christi tui.",
+      "eng": "May Your priests, O Lord, be clothed with justice; let Your faithful ones shout merrily for joy. For the sake of David, Your servant, reject not the plea of Your anointed."
+    },
+    "epistle": {
+      "ref": "Hebr. 7:23-27",
+      "lat": "Fratres: Plures facti sunt sacerdotes, idcirco quod morte prohiberentur permanere: Jesus autem, eo quod maneat in aeternum, sempiternum habet sacerdotium. Unde et salvare in perpetuum potest accedentes per semetipsum ad Deum: semper vivens ad interpellandum pro nobis.",
+      "eng": "Brethren: The priests were numerous, because they were prevented by death from continuing in office; but Jesus, because he continues forever, has an everlasting priesthood. Therefore He is able at all times to save those who come to God through Him, since He lives always to make intercession for them."
+    },
+    "gospel": {
+      "ref": "Matt. 24:42-47",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Vigilate ergo, quia nescitis qua hora Dominus vester venturus sit. Illud autem scitote, quoniam si sciret paterfamolias qua hora fur venturus esset, vigilaret utique, et non sineret perfodi domum suam.",
+      "eng": "At that time, Jesus said to His disciples, “Watch, for you do not know at what hour your Lord is to come. But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into."
+    },
+    "offertory": {
+      "lat": "Veritas mea et misericordia mea cum ipso: et in nomine meo exaltabitur cornu ejus.",
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted."
+    },
+    "communion": {
+      "lat": "Beatus servus, quem, cum venerit dominus, invenerit vigilantem: amen, dico vobis, super omnia bona sua constituet eum.",
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods."
+    }
+  },
+  "C4;mtv": {
+    "introit": {
+      "lat": "Statuit ei Dominus testamentum pacis, et principem fecit eum: ut sit illi sacerdotii dignitas in aeternum.",
+      "eng": "The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever."
+    },
+    "epistle": {
+      "ref": "Eccli. 44:16-27; 45:3-20",
+      "lat": "Ecce sacerdos magnus, qui in diebus suis placuit Deo, et inventus est justus: et in tempore iracundiae factus est reconciliatio. Non est inventus similis illi, qui conservavit legem Excelsi.",
+      "eng": "Behold, a great priest, who in his days pleased God, and was found just; and in the time of wrath he was made a reconciliation. There was not found the like to him, who kept the law of the Most High."
+    },
+    "gospel": {
+      "ref": "Matt. 25:14-23",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis parabolam hanc: Homo peregre proficiscens vocavit servos suos, et tradidit illis bona sua. Et uni dedit quinque talenta, alii autem duo, alii vero unum, unicuique secundum propriam virtutem, et profectus est statim.",
+      "eng": "At that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey."
+    },
+    "offertory": {
+      "lat": "Inveni David servum meum, oleo sancto meo unxi eum: manus enim mea auxiliabitur ei, et brachium meum confortabit eum.",
+      "eng": "I have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong."
+    },
+    "communion": {
+      "lat": "Fidelis servus et prudens, quem constituit dominus super familiam suam: ut det illis in tempore tritici mensuram.",
+      "eng": "The faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time."
+    }
+  },
+  "C4-1;mtv": {
+    "introit": {
+      "lat": "Sacerdotes tui, Domine, induant justitiam, et sancti tui exsultent: propter David servum tuum, non avertas faciem Christi tui.",
+      "eng": "May Your priests, O Lord, be clothed with justice; let Your faithful ones shout merrily for joy. For the sake of David, Your servant, reject not the plea of Your anointed."
+    },
+    "epistle": {
+      "ref": "Hebr. 7:23-27",
+      "lat": "Fratres: Plures facti sunt sacerdotes, idcirco quod morte prohiberentur permanere: Jesus autem, eo quod maneat in aeternum, sempiternum habet sacerdotium. Unde et salvare in perpetuum potest accedentes per semetipsum ad Deum: semper vivens ad interpellandum pro nobis.",
+      "eng": "Brethren: The priests were numerous, because they were prevented by death from continuing in office; but Jesus, because he continues forever, has an everlasting priesthood. Therefore He is able at all times to save those who come to God through Him, since He lives always to make intercession for them."
+    },
+    "gospel": {
+      "ref": "Matt. 24:42-47",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Vigilate ergo, quia nescitis qua hora Dominus vester venturus sit. Illud autem scitote, quoniam si sciret paterfamolias qua hora fur venturus esset, vigilaret utique, et non sineret perfodi domum suam.",
+      "eng": "At that time, Jesus said to His disciples, “Watch, for you do not know at what hour your Lord is to come. But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into."
+    },
+    "offertory": {
+      "lat": "Veritas mea et misericordia mea cum ipso: et in nomine meo exaltabitur cornu ejus.",
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted."
+    },
+    "communion": {
+      "lat": "Beatus servus, quem, cum venerit dominus, invenerit vigilantem: amen, dico vobis, super omnia bona sua constituet eum.",
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods."
+    }
+  },
   "C5": {
     "introit": {
       "lat": "Os justi meditabitur sapientiam, et lingua ejus loquetur judicium: lex Dei ejus in corde ipsius.",
@@ -119,7 +239,79 @@
       "eng": "Blessed is that servant, whom when his lord shall come he shall find watching: amen I say to you, he shall place him over all his goods."
     }
   },
+  "C5-1": {
+    "introit": {
+      "lat": "Justus ut palma florebit: sicut cedrus Libani multiplicabitur: plantatus in domo Domini: in atriis domus Dei nostri.",
+      "eng": "The just man shall flourish like the palm tree, like a cedar of Lebanon shall he grow: planted in the house of the Lord, in the courts of the house of our God."
+    },
+    "epistle": {
+      "ref": "1 Cor. 4:9-14",
+      "lat": "Fratres: Spectaculum facti sumus mundo et Angelis et hominibus. Nos stulti propter Christum, vos autem prudentes in Christo: nos infirmi, vos autem fortes: vos nobiles, nos autem ignobiles.",
+      "eng": "Brethren: We have been made a spectacle to the world, and to angels, and to men. We are fools for Christ, but you are wise in Christ!"
+    },
+    "gospel": {
+      "ref": "Luc. 12:32-34",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Nolite timere, pusillus grex, quia complacuit Patri vestro dare vobis regnum. Vendite quae possidetis, et date eleemosynam.",
+      "eng": "At that time, Jesus said to His disciples, Do not be afraid, little flock, for it has pleased your Father to give you the kingdom. Sell what you have and give alms."
+    },
+    "offertory": {
+      "lat": "In virtute tua, Domine, laetabitur justus, et super salutare tuum exsultabit vehementer: desiderium animae ejus tribuisti ei.",
+      "eng": "O Lord, in Your strength the just man is glad; in Your victory how greatly he rejoices! You have granted him his heart’s desire."
+    },
+    "communion": {
+      "lat": "Amen, dico vobis: quod vos, qui reliquistis omnia et secuti estis me, centuplum accipietis, et vitam aeternam possidebitis.",
+      "eng": "Amen I say to you that you, who have left all things and followed Me, shall receive a hundredfold, and shall possess life everlasting."
+    }
+  },
+  "C5;mtv": {
+    "introit": {
+      "lat": "Os justi meditabitur sapientiam, et lingua ejus loquetur judicium: lex Dei ejus in corde ipsius.",
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
+    },
+    "epistle": {
+      "ref": "Eccli. 31:8-11",
+      "lat": "Beatus vir, qui inventus est sine macula, et qui post aurum non abiit, nec speravit in pecunia et thesauris. Quis est hic, et laudabimus eum?",
+      "eng": "Happy the man found without fault, who turns not aside after gain, nor puts his trust in money nor in treasures! Who is he, that we may praise him?"
+    },
+    "gospel": {
+      "ref": "Luc. 12:35-40",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Sint lumbi vestri praecincti, et lucernae ardentes in manibus vestris, et vos similes hominibus exspectantibus dominum suum, quando revertatur a nuptiis: ut, cum venerit et pulsaverit, confestim aperiant ei. Beati servi illi, quos, cum venerit dominus, invenerit vigilantes: amen, dico vobis, quod praecinget se, et faciet illos discumbere, et transiens ministrabit illis.",
+      "eng": "At that time, Jesus said to His disciples, Let your loins be girt about and your lamps burning, and you yourselves like men waiting for their master’s return from the wedding; so that when he comes and knocks, they may straight-way open to him. Blessed are those servants whom the master, on his return, shall find watching."
+    },
+    "offertory": {
+      "lat": "Veritas mea et misericordia mea cum ipso: et in nomine meo exaltabitur cornu ejus.",
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted."
+    },
+    "communion": {
+      "lat": "Beatus servus, quem, cum venerit dominus, invenerit vigilantem: amen, dico vobis, super omnia bona sua constituet eum.",
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods."
+    }
+  },
   "C6": {},
+  "C6-1": {
+    "introit": {
+      "lat": "Me exspectaverunt peccatores, ut perderent me: testimonia tua, Domine, intellexi: omnis consummationis vidi finem: latum mandatum tuum nimis.",
+      "eng": "Sinners wait to destroy me, but I pay heed to Your decrees, O Lord. I see that all fulfillment has its limits; broad indeed is Your command."
+    },
+    "epistle": {
+      "ref": "Eccli. 51:13-17",
+      "lat": "Domine, Deus meus, exaltasti super terram habitationem meam, et pro morte defluente deprecata sum. Invocavi Dominum, Patrem Domini mei, ut non derelinquat me in die tribulationis meae, et in tempore superborum sine adjutorio.",
+      "eng": "O Lord, my God, You have exalted my dwelling place upon the earth, and I have prayed for death to pass away. I called upon the Lord, the Father of my Lord, that He would not abandon me in the day of my trouble, and in the time of the proud without help."
+    },
+    "gospel": {
+      "ref": "Matt. 13:44-52",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis parabolam hanc: Simile est regnum coelorum thesauro abscondito in agro: quem qui invenit homo, abscondit, et prae gaudio illius vadit, et vendit universa, quae habet, et emit agrum illum. Iterum simile est regnum coelorum homini negotiatori, quaerenti bonas margaritas.",
+      "eng": "At that time, Jesus spoke this parable to His disciples: The kingdom of heaven is like a treasure hidden in a field; he who finds it hides it, and in his joy goes and sells all that he has and buys that field. Again, the kingdom of heaven is like a merchant in search of fine pearls."
+    },
+    "offertory": {
+      "lat": "Diffusa est gratia in labiis tuis: propterea benedixit te Deus in aeternum, et in saeculum saeculi.",
+      "eng": "Grace is poured out upon your lips; thus God has blessed you forever, and for ages of ages."
+    },
+    "communion": {
+      "lat": "Feci judicium et justitiam, Domine, non calumnientur mihi superbi: ad omnia mandata tua dirigebar, omnem viam iniquitatis odio habui.",
+      "eng": "I have fulfilled just ordinances, O Lord; let not the proud oppress me. For in all Your precepts I go forward; every false way I hate."
+    }
+  },
   "C7": {
     "introit": {
       "lat": "Dilexisti justitiam, et odisti iniquitatem: propterea unxit te Deus, Deus tuus, oleo laetitiae prae consortibus tuis.",
@@ -240,6 +432,30 @@
       "eng": "That which I tell you in the dark, speak ye in the light, saith the Lord: and that which you hear in the ear, preach ye upon the housetops."
     }
   },
+  "C2a-1": {
+    "introit": {
+      "lat": "Laetabitur justus in Domino, et sperabit in eo: et laudabuntur omnes recti corde.",
+      "eng": "The just man is glad in the Lord and takes refuge in Him; all the upright of heart shall be praised."
+    },
+    "epistle": {
+      "ref": "2 Tim. 2:8-10; 3:10-12",
+      "lat": "Carissime: Memor esto, Dominum Jesum Christum resurrexisse a mortuis ex semine David, secundum Evangelium meum, in quo laboro usque ad vincula, quasi male operans: sed verbum Dei non est alligatum. Ideo omnia sustineo propter electos, ut et ipsi salutem consequantur, quae est in Christo Jesu, cum gloria coelesti.",
+      "eng": "Beloved: Remember that Jesus Christ rose from the dead and was descended from David; this is my Gospel, in which I suffer even to bonds, as a criminal. But the word of God is not bound."
+    },
+    "gospel": {
+      "ref": "Matt. 10:26-32",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Nihil est opertum, quod non revelabitur; et occultum, quod non scietur. Quod dico vobis in tenebris, dicite in lumine: et quod in aure auditis, praedicate super tecta.",
+      "eng": "At that time, Jesus said to His disciples, There is nothing concealed that will not be disclosed, and nothing hidden that will not be made known. What I tell you in darkness, speak it in the light; and what you hear whispered, preach it on the housetops."
+    },
+    "offertory": {
+      "lat": "Posuisti, Domine, in capite ejus coronam de lapide pretioso: vitam petiit a te, et tribuisti ei, alleluja.",
+      "eng": "O Lord, You placed on his head a crown of pure gold; he asked life of You, and You gave it to him."
+    },
+    "communion": {
+      "lat": "Qui mihi ministrat, me sequatur: et ubi sum ego, illic et minister meus erit.",
+      "eng": "Whoever serves Me, let him follow Me; and where I am there also shall My servant be."
+    }
+  },
   "C2b": {
     "introit": {
       "lat": "Intret in conspectu tuo, Domine, gemitus compeditorum: redde vicinis nostris septuplum in sinu eorum: vindica sanguinem Sanctorum tuorum, qui effusus est.",
@@ -264,6 +480,30 @@
       "eng": "That which I tell you in the dark, speak ye in the light, saith the Lord: and that which you hear in the ear, preach ye upon the housetops."
     }
   },
+  "C2b-1": {
+    "introit": {
+      "lat": "Sacerdotes Dei, benedicite Dominum: sancti et humiles corde, laudate Deum.",
+      "eng": "Priests of the Lord, bless the Lord; holy men of humble heart, praise God."
+    },
+    "epistle": {
+      "ref": "2 Cor. 1:3-7",
+      "lat": "Fratres: Benedictus Deus et Pater Domini nostri Jesu Christi, Pater misericordiarum, et Deus totius consolationis, qui consolatur nos in omni tribulatione nostra: ut possimus et ipsi consolari eos, qui in omni pressura sunt, per exhortationem, qua exhortamur et ipsi a Deo. Quoniam sicut abundant passiones Christi in nobis: ita et per Christum abundat consolatio nostra.",
+      "eng": "Brethren: Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all comfort, Who comforts us in all our afflictions, that we also may be able to comfort those who are in any distress by the comfort wherewith we ourselves are comforted by God. For as the sufferings of Christ abound in us, so also through Christ does our comfort abound."
+    },
+    "gospel": {
+      "ref": "Matt. 16:24-27",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Si quis vult post me venire, abneget semetipsum, et tollat crucem suam, et sequatur me. Qui enim voluerit animam suam salvam facere, perdet eam: qui autem perdiderit animam suam propter me, inveniet eam.",
+      "eng": "At that time, Jesus said to His disciples, If anyone wishes to come after Me, let him deny himself, and take up his cross, and follow Me. For he who would save his life will lose it; but he who loses his life for My sake will find it."
+    },
+    "offertory": {
+      "lat": "Inveni David servum meum, oleo sancto meo unxi eum: manus enim mea auxiliabitur ei, et brachium meum confortabit eum.",
+      "eng": "I have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong."
+    },
+    "communion": {
+      "lat": "Posuisti, Domine, in capite ejus coronam de lapide pretioso.",
+      "eng": "You placed on his head, O Lord, a crown of pure gold."
+    }
+  },
   "C3a": {
     "introit": {
       "lat": "In virtute tua, Domine, laetabitur justus: et super salutare tuum exsultabit vehementer: desiderium animae ejus tribuisti ei.",
@@ -286,6 +526,54 @@
     "communion": {
       "lat": "Qui vult venire post me, abneget semetipsum, et tollat crucem suam, et sequatur me.",
       "eng": "If any man will come after Me, let him deny himself, and take up his cross, and follow Me."
+    }
+  },
+  "C3a-1": {
+    "introit": {
+      "lat": "Salus autem justorum a Domino: et protector eorum est in tempore tribulationis.",
+      "eng": "The salvation of the just is from the Lord; He is their refuge in time of distress."
+    },
+    "epistle": {
+      "ref": "Hebr. 10:32-38",
+      "lat": "Fratres: Rememoramini pristinos dies, in quibus illuminati magnum certamen sustinuistis passionum: et in altero quidem opprobriis et tribulationibus spectaculum facti: in altero autem socii taliter conversantium effecti. Nam et vinctis compassi estis, et rapinam bonorum vestrorum cum gaudio suscepistis, cognoscentes vos habere meliorem et manentem substantiam.",
+      "eng": "Brethren: Call to mind the days gone by, in which, after you had been enlightened, you endured a great conflict of sufferings; partly by being made a public spectacle through reproaches and tribulations, and partly by making common cause with those who fared thus. For you both have had compassion on those in prison and have joyfully accepted the plundering of your own goods, knowing that you have a better possession and a lasting one."
+    },
+    "gospel": {
+      "ref": "Luc. 12:1-8",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Attendite a fermento pharisaeorum, quod est hypocrisis. Nihil autem opertum est, quod non reveletur: neque absconditum, quod non sciatur.",
+      "eng": "At that time, Jesus said to His disciples, Beware of the leaven of the Pharisees, which is hypocrisy. But there is nothing concealed that will not be disclosed, and nothing hidden that will not be made known."
+    },
+    "offertory": {
+      "lat": "Justorum animae in manu Dei sunt, et non tanget illos tormentum malitiae: visi sunt oculis insipientium mori: illi autem sunt in pace, alleluja.",
+      "eng": "The souls of the just are in the hand of God, and no torment shall touch them. They seemed, in the view of the foolish, to be dead: but they are in peace, alleluia."
+    },
+    "communion": {
+      "lat": "Quod dico vobis in tenebris, dicite in lumine, dicit Dominus: et quod in aure auditis, praedicate super tecta.",
+      "eng": "What I tell you in darkness, speak it in the light, says the Lord; and what you hear whispered, preach it on the housetops."
+    }
+  },
+  "C3b": {
+    "introit": {
+      "lat": "Intret in conspectu tuo, Domine, gemitus compeditorum: redde vicinis nostris septuplum in sinu eorum: vindica sanguinem Sanctorum tuorum, qui effusus est.",
+      "eng": "Let the prisoners’ sighing come before You, O Lord; repay our neighbors sevenfold into their bosoms; avenge the shedding of Your servants’ blood."
+    },
+    "epistle": {
+      "ref": "Sap. 3:1-8",
+      "lat": "Justorum animae in manu Dei sunt, et non tanget illos tormentum mortis. Visi sunt oculis insipientium mori: et aestimala est afflictio exitus illorum: et quod a nobis est iter, exterminium: illi autem sunt in pace.",
+      "eng": "The souls of the just are in the hands of God, and no torment of death shall touch them. They seemed, in the view of the foolish, to be dead; and their passing away was judged an affliction, and their going forth from us, utter destruction."
+    },
+    "gospel": {
+      "ref": "Luc. 21:9-19",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Cum audieritis praelia et seditiones, nolite terreri: oportet primum haec fieri, sed nondum statim finis. Tunc dicebat illis: Surget gens contra gentem, et regnum adversus regnum.",
+      "eng": "At that time, Jesus said to His disciples, When you hear of wars and insurrections, do not be terrified; these things must first come to pass, but the end will not be at once. Then He said to them, Nation will rise against nation, and kingdom against kingdom; and there will be great earthquakes in various places, and pestilences and famines, and there will be terrors and great signs from heaven."
+    },
+    "offertory": {
+      "lat": "Mirabilis Deus in Sanctis suis: Deus Israel, ipse dabit virtutem et fortitudinem plebi suae: benedictus Deus, alleluja.",
+      "eng": "God is wonderful in His Saints; the God of Israel is He Who gives power and strength to His people. Blessed be God! Alleluia."
+    },
+    "communion": {
+      "lat": "Et si coram hominibus tormenta passi sunt, Deus tentavit eos: tamquam aurum in fornace probavit eos, et quasi holocausta accepit eos.",
+      "eng": "For if before men they be punished, God tried them; as gold in the furnace, He proved them, and as sacrificial offerings He took them to Himself."
     }
   },
   "C4a": {
@@ -334,6 +622,30 @@
     "communion": {
       "lat": "Fidelis servus et prudens, quem constituit dominus super familiam suam: ut det illis in tempore tritici mensuram.",
       "eng": "The faithful and wise servant, whom his lord setteth over his family: to give them their measure of wheat in due season."
+    }
+  },
+  "C4b-1": {
+    "introit": {
+      "lat": "Sacerdotes tui, Domine, induant justitiam, et sancti tui exsultent: propter David servum tuum, non avertas faciem Christi tui.",
+      "eng": "May Your priests, O Lord, be clothed with justice; let Your faithful ones shout merrily for joy. For the sake of David, Your servant, reject not the plea of Your anointed."
+    },
+    "epistle": {
+      "ref": "Hebr. 7:23-27",
+      "lat": "Fratres: Plures facti sunt sacerdotes, idcirco quod morte prohiberentur permanere: Jesus autem, eo quod maneat in aeternum, sempiternum habet sacerdotium. Unde et salvare in perpetuum potest accedentes per semetipsum ad Deum: semper vivens ad interpellandum pro nobis.",
+      "eng": "Brethren: The priests were numerous, because they were prevented by death from continuing in office; but Jesus, because he continues forever, has an everlasting priesthood. Therefore He is able at all times to save those who come to God through Him, since He lives always to make intercession for them."
+    },
+    "gospel": {
+      "ref": "Matt. 24:42-47",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis: Vigilate ergo, quia nescitis qua hora Dominus vester venturus sit. Illud autem scitote, quoniam si sciret paterfamolias qua hora fur venturus esset, vigilaret utique, et non sineret perfodi domum suam.",
+      "eng": "At that time, Jesus said to His disciples, “Watch, for you do not know at what hour your Lord is to come. But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into."
+    },
+    "offertory": {
+      "lat": "Veritas mea et misericordia mea cum ipso: et in nomine meo exaltabitur cornu ejus.",
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted."
+    },
+    "communion": {
+      "lat": "Beatus servus, quem, cum venerit dominus, invenerit vigilantem: amen, dico vobis, super omnia bona sua constituet eum.",
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods."
     }
   },
   "C5a": {
@@ -453,6 +765,30 @@
     },
     "communion": {
       "lat": "Quinque prudentes virgines acceperunt oleum in vasis suis cum lampadibus: media autem nocte clamor factus est: Ecce sponsus venit: exite obviam Christo Domino.",
+      "eng": "The five wise virgins took oil in their vessels with the lamps: and at midnight there was a cry made: Behold the bridegroom cometh, go ye forth to meet Christ the Lord."
+    }
+  },
+  "C7b": {
+    "introit": {
+      "lat": "Me exspectaverunt peccatores, ut perderent me: testimonia tua, Domine, intellexi: omnis consummationis vidi finem: latum mandatum tuum nimis.",
+      "eng": "Sinners wait to destroy me, but I pay heed to Your decrees, O Lord. I see that all fulfillment has its limits; broad indeed is Your command."
+    },
+    "epistle": {
+      "ref": "Eccli. 51:1-8; 51:12",
+      "lat": "Confitebor tibi, Domine, Rex, et collaudabo te Deum, Salvatorem meum. Confitebor nomini tuo: quoniam adjutor et protector factus es mihi, et liberasti corpus meum a perditione, a laqueo linguae iniquae et a labiis operantium mendacium, et in conspectu astantium factus es mihi adjutor.",
+      "eng": "I will give You thanks, O Lord, O King; I will praise You, O God my Saviour! I will make known Your name; for You have preserved my body from destruction, from the scourge of a slanderous tongue, and from lips that went over to falsehood; and in the sight of those who stood by, You have been my helper."
+    },
+    "gospel": {
+      "ref": "Matt. 13:44-52",
+      "lat": "In illo tempore: Dixit Jesus discipulis suis parabolam hanc: Simile est regnum coelorum thesauro abscondito in agro: quem qui invenit homo, abscondit, et prae gaudio illius vadit, et vendit universa, quae habet, et emit agrum illum. Iterum simile est regnum coelorum homini negotiatori, quaerenti bonas margaritas.",
+      "eng": "At that time, Jesus spoke this parable to His disciples: The kingdom of heaven is like a treasure hidden in a field; he who finds it hides it, and in his joy goes and sells all that he has and buys that field. Again, the kingdom of heaven is like a merchant in search of fine pearls."
+    },
+    "offertory": {
+      "lat": "Diffusa est gratia in labiis tuis: propterea benedixit te Deus in aeternum, et in saeculum saeculi.",
+      "eng": "Grace is poured out upon your lips; thus God has blessed you forever, and for ages of ages."
+    },
+    "communion": {
+      "lat": "Principes persecuti sunt me gratis, et a verbis tuis formidavit cor meum: laetabor ego super eloqui tua, quasi qui invenit spolia multa.",
       "eng": "The five wise virgins took oil in their vessels with the lamps: and at midnight there was a cry made: Behold the bridegroom cometh, go ye forth to meet Christ the Lord."
     }
   },
