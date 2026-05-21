@@ -1768,7 +1768,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Ponam univérsos fílios tuos doctos a Dómino.",
-      "eng": "V. All thy children shall be taught of the Lord.\nR. And great shall be the peace of thy children.",
+      "eng": "All thy children shall be taught of the Lord.",
       "latR": "Et multitúdinem pacis fíliis tuis.",
       "engR": "And great shall be the peace of thy children.",
       "variationKey": "laudes.versicle"
@@ -1777,9 +1777,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Ponam univérsos fílios tuos doctos a Dómino.",
-      "eng": "V. All thy children shall be taught of the Lord.\nR. And great shall be the peace of thy children.",
+      "eng": "All thy children shall be taught of the Lord.",
       "latR": "Et multitúdinem pacis fíliis tuis.",
-      "engR": "",
+      "engR": "And great shall be the peace of thy children.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -1994,18 +1994,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Notum fecit Dóminus.",
-      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
+      "eng": "The Word was made flesh, alleluia.",
       "latR": "Salutáre suum.",
-      "engR": "",
+      "engR": "And dwelt among us, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Notum fecit Dóminus.",
-      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
+      "eng": "The Word was made flesh, alleluia.",
       "latR": "Salutáre suum.",
-      "engR": "",
+      "engR": "And dwelt among us, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -2140,9 +2140,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Sit nomen Dómini benedíctum, allelúja.",
-      "eng": "V. Blessed be the Name of the Lord, alleluia.\nR. From this time forth, and for evermore, alleluia.",
+      "eng": "Blessed be the Name of the Lord, alleluia.",
       "latR": "Ex hoc nunc et usque in sǽculum, allelúja.",
-      "engR": "",
+      "engR": "From this time forth, and for evermore, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -2833,18 +2833,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Puer natus est nobis.",
-      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
+      "eng": "The Word was made flesh, alleluia.",
       "latR": "Fílius datus est nobis.",
-      "engR": "",
+      "engR": "And dwelt among us, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Puer natus est nobis.",
-      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia.",
+      "eng": "The Word was made flesh, alleluia.",
       "latR": "Fílius datus est nobis.",
-      "engR": "",
+      "engR": "And dwelt among us, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -4097,7 +4097,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dedísti mihi protectiónem salútis tuæ, allelúja.",
-      "eng": "V. Thou hast given me the shield of thy salvation, alleluia\nR. And thy right hand hath holden me up, alleluia",
+      "eng": "Thou hast given me the shield of thy salvation, alleluia",
       "latR": "Et déxtera tua suscépit me, allelúja.",
       "engR": "And thy right hand hath holden me up, alleluia",
       "variationKey": "laudes.versicle"
@@ -4106,7 +4106,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Sub umbra illíus, quem desideráveram, sedi, allelúja.",
-      "eng": "V. I sat under His shadow in Whom I delighted. Alleluia.\nR. To my taste. And His fruit was sweet Alleluia.",
+      "eng": "I sat under His shadow in Whom I delighted. Alleluia.",
       "latR": "Et fructus ejus dulcis gútturi meo, allelúja.",
       "engR": "To my taste. And His fruit was sweet Alleluia.",
       "variationKey": "vesperae.versicle"
@@ -5018,7 +5018,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
       "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
@@ -5027,9 +5027,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -5199,18 +5199,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -5380,18 +5380,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -5561,18 +5561,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -5742,18 +5742,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -5923,18 +5923,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -6104,18 +6104,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -6285,18 +6285,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -6466,18 +6466,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "prima.antiphon": {
@@ -6605,9 +6605,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dóminus in cælo, allelúja.",
-      "eng": "V. The Lord in heaven, alleluia.\nR. Hath prepared his throne, alleluia.",
+      "eng": "The Lord in heaven, alleluia.",
       "latR": "Parávit sedem suam, allelúja.",
-      "engR": "",
+      "engR": "Hath prepared his throne, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "prima.antiphon": {
@@ -6700,16 +6700,16 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Repléti sunt omnes Spíritu Sancto, allelúja.",
-      "eng": "V. They were all filled with the Holy Ghost, alleluia.\nR. And began to speak, alleluia.",
+      "eng": "They were all filled with the Holy Ghost, alleluia.",
       "latR": "Et cœpérunt loqui, allelúja.",
-      "engR": "",
+      "engR": "And began to speak, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Loquebántur váriis linguis Apóstoli, allelúja.",
-      "eng": "V. The Apostles spoke in diverse tongues, alleluia.\nR. The wonderful works of God, alleluia.",
+      "eng": "The Apostles spoke in diverse tongues, alleluia.",
       "latR": "Magnália Dei, allelúja.",
       "engR": "The wonderful works of God, alleluia.",
       "variationKey": "vesperae.versicle"
@@ -7131,16 +7131,16 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Benedicámus Patrem et Fílium cum Sancto Spíritu.",
-      "eng": "V. Bless we the Father, and the Son, and the Holy Ghost.\nR. Let us praise Him and exalt Him above all for ever.",
+      "eng": "Bless we the Father, and the Son, and the Holy Ghost.",
       "latR": "Laudémus et superexaltémus eum in sǽcula.",
-      "engR": "",
+      "engR": "Let us praise Him and exalt Him above all for ever.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Benedíctus es, Dómine, in firmaménto cæli.",
-      "eng": "V. Bless we the Father, and the Son, and the Holy Ghost.\nR. Let us praise Him and exalt Him above all for ever.",
+      "eng": "Bless we the Father, and the Son, and the Holy Ghost.",
       "latR": "Et laudábilis et gloriósus in sǽcula.",
       "engR": "Let us praise Him and exalt Him above all for ever.",
       "variationKey": "vesperae.versicle"
@@ -7242,7 +7242,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
+      "eng": "He maketh peace in thy borders, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
       "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
@@ -7251,9 +7251,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
+      "eng": "Thou didst send them from heaven, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
-      "engR": "",
+      "engR": "Bread able to content every man's delight, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -7388,18 +7388,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
+      "eng": "He maketh peace in thy borders, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
-      "engR": "",
+      "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
+      "eng": "Thou didst send them from heaven, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
-      "engR": "",
+      "engR": "Bread able to content every man's delight, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -7534,18 +7534,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
+      "eng": "He maketh peace in thy borders, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
-      "engR": "",
+      "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
+      "eng": "Thou didst send them from heaven, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
-      "engR": "",
+      "engR": "Bread able to content every man's delight, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -7673,7 +7673,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem cæli dedit eis, allelúja.",
-      "eng": "V. He gave them of the bread of heaven, alleluia.\nR. Man did eat Angels' bread, alleluia.",
+      "eng": "He gave them of the bread of heaven, alleluia.",
       "latR": "Panem Angelórum manducávit homo, allelúja.",
       "engR": "Man did eat Angels' bread, alleluia.",
       "variationKey": "laudes.versicle"
@@ -7682,9 +7682,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Cibávit illos ex ádipe fruménti, allelúja.",
-      "eng": "V. He fed them with the finest of the wheat. Alleluia.\nR. And with honey out of the rock did He satisfy them. Alleluia.",
+      "eng": "He fed them with the finest of the wheat. Alleluia.",
       "latR": "Et de petra, melle saturávit eos, allelúja.",
-      "engR": "",
+      "engR": "And with honey out of the rock did He satisfy them. Alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "vesperae.capitulum": {
@@ -7749,18 +7749,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
+      "eng": "He maketh peace in thy borders, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
-      "engR": "",
+      "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
+      "eng": "Thou didst send them from heaven, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
-      "engR": "",
+      "engR": "Bread able to content every man's delight, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -7895,18 +7895,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
+      "eng": "He maketh peace in thy borders, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
-      "engR": "",
+      "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
+      "eng": "Thou didst send them from heaven, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
-      "engR": "",
+      "engR": "Bread able to content every man's delight, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -8041,18 +8041,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
+      "eng": "He maketh peace in thy borders, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
-      "engR": "",
+      "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
+      "eng": "Thou didst send them from heaven, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
-      "engR": "",
+      "engR": "Bread able to content every man's delight, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -8187,18 +8187,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Pósuit fines tuos pacem, allelúja.",
-      "eng": "V. He maketh peace in thy borders, alleluia.\nR. And filleth thee with the finest of wheat, alleluia.",
+      "eng": "He maketh peace in thy borders, alleluia.",
       "latR": "Et ádipe fruménti sátiat te, allelúja.",
-      "engR": "",
+      "engR": "And filleth thee with the finest of wheat, alleluia.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Panem de cælo præstitísti eis, allelúja.",
-      "eng": "V. Thou didst send them from heaven, alleluia.\nR. Bread able to content every man's delight, alleluia.",
+      "eng": "Thou didst send them from heaven, alleluia.",
       "latR": "Omne delectaméntum in se habéntem, allelúja.",
-      "engR": "",
+      "engR": "Bread able to content every man's delight, alleluia.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -8333,7 +8333,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
       "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
@@ -8342,9 +8342,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -8479,18 +8479,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -8625,18 +8625,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Tóllite jugum meum super vos et díscite a me.",
-      "eng": "V. Take my yoke upon you, and learn of me.\nR. For I am meek and lowly in Heart.",
+      "eng": "Take my yoke upon you, and learn of me.",
       "latR": "Quia mitis sum et húmilis Corde.",
-      "engR": "",
+      "engR": "For I am meek and lowly in Heart.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Memóriam fecit mirabílium suórum miserátor Dóminus.",
-      "eng": "V. The merciful Lord hath instituted a memorial of his wondrous deeds.\nR. He hath given Meat unto them that fear him.",
+      "eng": "The merciful Lord hath instituted a memorial of his wondrous deeds.",
       "latR": "Escam dedit timéntibus se.",
-      "engR": "",
+      "engR": "He hath given Meat unto them that fear him.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -8771,18 +8771,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -8917,18 +8917,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -9063,18 +9063,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -9209,18 +9209,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -9355,18 +9355,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Hauriétis aquas in gáudio.",
-      "eng": "V. With joy shall ye draw water.\nR. Out of the fountains of the Saviour.",
+      "eng": "With joy shall ye draw water.",
       "latR": "De fóntibus Salvatóris.",
-      "engR": "",
+      "engR": "Out of the fountains of the Saviour.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -10666,18 +10666,18 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Ora pro nobis, Virgo dolorosíssima.",
-      "eng": "V. Pray for us, O Virgin most sorrowful.\nR. That we may be made worthy of the promises of Christ.",
+      "eng": "Pray for us, O Virgin most sorrowful.",
       "latR": "Ut digni efficiámur promissiónibus Christi.",
-      "engR": "",
+      "engR": "That we may be made worthy of the promises of Christ.",
       "variationKey": "laudes.versicle"
     },
     "vesperae.versicle": {
       "type": "vr",
       "label": "Versicle",
       "lat": "Ora pro nobis, Virgo dolorosíssima.",
-      "eng": "V. Pray for us, O Virgin most sorrowful.\nR. That we may be made worthy of the promises of Christ.",
+      "eng": "Pray for us, O Virgin most sorrowful.",
       "latR": "Ut digni efficiámur promissiónibus Christi.",
-      "engR": "",
+      "engR": "That we may be made worthy of the promises of Christ.",
       "variationKey": "vesperae.versicle"
     },
     "vesperae.antiphon.psalm1": {
@@ -10983,7 +10983,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Homo pacis meæ, in quo sperávi.",
-      "eng": "V. Mine own familiar friend, in whom I trusted;\nR. Which did eat of my bread, hath lifted up his heel against me.",
+      "eng": "Mine own familiar friend, in whom I trusted;",
       "latR": "Qui edébat panes meos, ampliávit advérsum me supplantatiónem.",
       "engR": "Which did eat of my bread, hath lifted up his heel against me.",
       "variationKey": "laudes.versicle"
@@ -11078,7 +11078,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Collocávit me in obscúris.",
-      "eng": "V. He hath set me in dark places.\nR. As they that be dead of old.",
+      "eng": "He hath set me in dark places.",
       "latR": "Sicut mórtuos sǽculi.",
       "engR": "As they that be dead of old.",
       "variationKey": "laudes.versicle"
@@ -11087,9 +11087,9 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Collocávit me in obscúris.",
-      "eng": "V. He hath set me in dark places.\nR. As they that be dead of old.",
+      "eng": "He hath set me in dark places.",
       "latR": "Sicut mórtuos sǽculi.",
-      "engR": "",
+      "engR": "As they that be dead of old.",
       "variationKey": "vesperae.versicle"
     },
     "laudes.antiphon.psalm1": {
@@ -11147,7 +11147,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Caro mea requiéscet in spe.",
-      "eng": "V. My flesh shall rest in hope.\nR. Neither wilt Thou suffer thine Holy One to see corruption.",
+      "eng": "My flesh shall rest in hope.",
       "latR": "Et non dabis Sanctum tuum vidére corruptiónem.",
       "engR": "Neither wilt Thou suffer thine Holy One to see corruption.",
       "variationKey": "laudes.versicle"
@@ -11228,7 +11228,7 @@
       "type": "vr",
       "label": "Versicle",
       "lat": "Dómine, refúgium factus es nobis.",
-      "eng": "V. Lord, thou hast been our refuge.\nR. From generation to generation.",
+      "eng": "Lord, thou hast been our refuge.",
       "latR": "A generatióne et progénie.",
       "engR": "From generation to generation.",
       "variationKey": "laudes.versicle"
