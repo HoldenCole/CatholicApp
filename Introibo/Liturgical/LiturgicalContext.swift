@@ -162,10 +162,21 @@ struct LiturgicalContext {
         let isLent = (season == .lent || season == .passion)
 
         // ---- Marian antiphon ----
+        // Boundary rules:
+        //  - Alma covers Saturday-before-Advent-I (First Vespers) through Compline of
+        //    Feb 2 (Candlemas) inclusive; the transition to Ave happens after Candlemas.
+        //  - Triduum (Maundy Thu / Good Fri / Holy Sat) has no proper Marian antiphon at
+        //    Compline traditionally; we continue Ave (the antiphon in use through Holy
+        //    Wednesday) rather than fall through to Salve, which is liturgically wrong.
         let marian: MarianAntiphon
-        if now.isSameOrAfter(firstAdvent) || now.isSameOrBefore(candlemas.addingDays(-1)) {
+        let triduumStart = easter.addingDays(-3)   // Maundy Thursday
+        let triduumEnd = easter.addingDays(-1)     // Holy Saturday
+        let almaStart = firstAdvent.addingDays(-1) // Saturday before Advent I (First Vespers)
+        if now.isSameOrAfter(almaStart) || now.isSameOrBefore(candlemas) {
             marian = .alma
-        } else if now.isSameOrAfter(candlemas) && now.isSameOrBefore(holyWed) {
+        } else if now.isSameOrAfter(triduumStart) && now.isSameOrBefore(triduumEnd) {
+            marian = .ave   // Triduum: continue Ave rather than fall through to Salve
+        } else if now.isSameOrAfter(candlemas.addingDays(1)) && now.isSameOrBefore(holyWed) {
             marian = .ave
         } else if now.isSameOrAfter(easter) && now.isSameOrBefore(trinity.addingDays(-1)) {
             marian = .regina
