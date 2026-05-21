@@ -233,7 +233,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
         ordinaryItem("preface")
     }
     ordinaryItem("sanctus")
-    ordinaryItem("canon")
+    canonWithProperInsertions(ctx, rite)
     ordinaryItem("pater")
 
     // Agnus Dei (Requiem form when color is black)
@@ -351,6 +351,106 @@ private fun isApostleEvangelistOrDoctor(proper: MassProper): Boolean {
         "doctoris", "doctorum", "doctores",
     )
     return needles.any { officium.contains(it) }
+}
+
+/**
+ * Returns the Communicantes/Hanc igitur variant key (if any) for the
+ * current day, gated by rite.
+ *
+ * Rite scope:
+ * - **PRE_1955** retains the full octaves of Easter and Pentecost: the proper
+ *   Communicantes (and, for the two paschal octaves, the proper Hanc igitur)
+ *   fires on every day of the octave (feast + six weekdays through Saturday).
+ * - **RITE_1955** keeps the Easter and Pentecost octaves intact for Canon
+ *   purposes — same behavior as pre-1955 for this gating.
+ * - **RITE_1962** (Codex Rubricarum 1960) abolished the octaves of Easter and
+ *   Pentecost as such. Only the feast day itself (Easter/Pentecost Sunday) and
+ *   the Monday keep the proper insertion. From Tuesday onward the standard
+ *   Communicantes is used.
+ * - Christmas, Epiphany, and Ascension behave identically across all three rites.
+ */
+private fun canonVariantKey(slug: String?, rite: MissalRite): String? {
+    if (slug == null) return null
+
+    // Christmas (Dec 25 + octave days named "christmas-...")
+    if (slug == "christmas" || slug.startsWith("christmas-")) return "christmas"
+
+    // Epiphany (Jan 6)
+    if (slug == "epiphany") return "epiphany"
+
+    // Ascension Thursday
+    if (slug == "ascension") return "ascension"
+
+    // Easter octave: easter-sunday + easter-0-1..6 (Mon..Sat in albis)
+    if (slug == "easter-sunday") return "easter"
+    if (slug.startsWith("easter-0-")) {
+        return when (rite) {
+            MissalRite.PRE_1955, MissalRite.RITE_1955 -> "easter"
+            MissalRite.RITE_1962 ->
+                // Only Easter Monday keeps the proper insertion.
+                if (slug == "easter-0-1") "easter" else null
+        }
+    }
+
+    // Pentecost octave: pentecost-sunday + easter-7-1..6
+    if (slug == "pentecost-sunday") return "pentecost"
+    if (slug.startsWith("easter-7-")) {
+        return when (rite) {
+            MissalRite.PRE_1955, MissalRite.RITE_1955 -> "pentecost"
+            MissalRite.RITE_1962 ->
+                // Only Pentecost Monday keeps the proper insertion.
+                if (slug == "easter-7-1") "pentecost" else null
+        }
+    }
+
+    return null
+}
+
+/**
+ * Emit the Canon section with proper Communicantes/Hanc igitur insertions
+ * for Christmas, Epiphany, Easter, Ascension, and Pentecost. Falls back to
+ * the plain Canon when no variant applies.
+ */
+private fun androidx.compose.foundation.lazy.LazyListScope.canonWithProperInsertions(
+    ctx: LiturgicalContext,
+    rite: MissalRite,
+) {
+    val variantKey = canonVariantKey(ctx.properSlug, rite)
+    val section = ContentStore.missal.firstOrNull { it.slug == "canon" }
+
+    if (variantKey != null && section != null) {
+        val modifiedBody = section.body.map { line ->
+            var lat = line.lat
+            var eng = line.eng
+            if (line.lat.startsWith("Commúnicántes")) {
+                val variant = ContentStore.canonVariant("communicantes", variantKey)
+                if (variant != null) {
+                    lat = variant.first
+                    eng = variant.second
+                }
+            }
+            if (line.lat.startsWith("Hanc ígitur")) {
+                val variant = ContentStore.canonVariant("hanc_igitur", variantKey)
+                if (variant != null) {
+                    lat = variant.first
+                    eng = variant.second
+                }
+            }
+            MissalSection.Line(lat = lat, eng = eng, rubric = line.rubric)
+        }
+        val modifiedSection = MissalSection(
+            slug = section.slug,
+            label = section.label,
+            title = section.title,
+            english = section.english,
+            body = modifiedBody,
+        )
+        item(key = "ordinary_canon") {
+            OrdinarySectionBlock(section = modifiedSection)
+        }
+    } else {
+        ordinaryItem("canon")
+    }
 }
 
 private fun androidx.compose.foundation.lazy.LazyListScope.ordinaryItem(slug: String) {
@@ -671,7 +771,33 @@ private fun buildFullMassText(
         addOrdinary("preface")
     }
     addOrdinary("sanctus")
-    addOrdinary("canon")
+
+    // Canon — with proper Communicantes/Hanc igitur insertions when applicable
+    val variantKey = canonVariantKey(ctx.properSlug, rite)
+    val canonSection = ContentStore.missal.firstOrNull { it.slug == "canon" }
+    if (variantKey != null && canonSection != null) {
+        lines.add("=== ${canonSection.title} ===")
+        canonSection.english?.let { lines.add(it) }
+        lines.add("")
+        canonSection.body.forEach { line ->
+            var lat = line.lat
+            var eng = line.eng
+            if (line.lat.startsWith("Commúnicántes")) {
+                val variant = ContentStore.canonVariant("communicantes", variantKey)
+                if (variant != null) { lat = variant.first; eng = variant.second }
+            }
+            if (line.lat.startsWith("Hanc ígitur")) {
+                val variant = ContentStore.canonVariant("hanc_igitur", variantKey)
+                if (variant != null) { lat = variant.first; eng = variant.second }
+            }
+            lines.add(lat)
+            lines.add(eng)
+            lines.add("")
+        }
+    } else {
+        addOrdinary("canon")
+    }
+
     addOrdinary("pater")
     // Agnus Dei — Requiem form for black-color Masses
     if (proper?.color == "black") {

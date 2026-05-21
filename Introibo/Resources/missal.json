@@ -782,6 +782,22 @@
     ]
   },
   {
+    "slug": "ite-alleluia",
+    "title": "Ite, Missa Est, Allelúja, Allelúja",
+    "english": "Go, the Mass Is Ended, Alleluia, Alleluia",
+    "body": [
+      {
+        "rubric": "During the Easter and Pentecost Octaves, the dismissal receives a doubled Alleluia:",
+        "lat": "℣. Ite, Missa est, allelúja, allelúja.",
+        "eng": "℣. Go, the Mass is ended, alleluia, alleluia."
+      },
+      {
+        "lat": "℟. Deo grátias, allelúja, allelúja.",
+        "eng": "℟. Thanks be to God, alleluia, alleluia."
+      }
+    ]
+  },
+  {
     "slug": "benedicamus",
     "title": "Benedicámus Dómino",
     "english": "Let Us Bless the Lord",

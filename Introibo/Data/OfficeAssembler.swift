@@ -69,12 +69,52 @@ struct OfficeAssembler {
             return part
         }
 
-        // Post-assembly filtering for Matins nocturn structure and Te Deum.
-        let finalParts: [Hour.Part]
-        if template.slug == "matutinum" {
-            finalParts = filterMatinsParts(antiphonApplied, context: context)
+        // Septuagesima through Holy Saturday: replace trailing "Allelúja" in
+        // the "Deus in adjutorium" response with "Laus tibi, Dómine, Rex
+        // ætérnæ glóriæ." (1962 Breviarium Romanum rubric). This substitution
+        // must NOT fire during Paschal time.
+        let lausTibiApplied: [Hour.Part]
+        if Self.shouldSubstituteLausTibi(context: context) {
+            lausTibiApplied = antiphonApplied.map { part in
+                guard part.type == "vr",
+                      let latR = part.latR, latR.contains("Allelúja") else { return part }
+                var modified = part
+                modified.latR = latR
+                    .replacingOccurrences(of: "Allelúja.", with: "Laus tibi, Dómine, Rex ætérnæ glóriæ.")
+                    .replacingOccurrences(of: "Allelúja", with: "Laus tibi, Dómine, Rex ætérnæ glóriæ")
+                modified.engR = part.engR?
+                    .replacingOccurrences(of: "Alleluia.", with: "Praise be to Thee, O Lord, King of eternal glory.")
+                    .replacingOccurrences(of: "Alleluia", with: "Praise be to Thee, O Lord, King of eternal glory")
+                return modified
+            }
         } else {
-            finalParts = antiphonApplied
+            lausTibiApplied = antiphonApplied
+        }
+
+        // Post-assembly filtering for Matins nocturn structure and Te Deum.
+        let filteredParts: [Hour.Part]
+        if template.slug == "matutinum" {
+            filteredParts = filterMatinsParts(lausTibiApplied, context: context)
+        } else {
+            filteredParts = lausTibiApplied
+        }
+
+        // Insert Preces Feriales for Lauds/Vespers on qualifying ferial days.
+        let precesApplied: [Hour.Part]
+        if (template.slug == "laudes" || template.slug == "vesperae")
+            && shouldIncludePreces(context: context) {
+            precesApplied = insertPreces(into: filteredParts, hour: template.slug)
+        } else {
+            precesApplied = filteredParts
+        }
+
+        // Suppress Gloria Patri at the end of psalms during Passiontide
+        // and in the Office of the Dead.
+        let finalParts: [Hour.Part]
+        if shouldOmitGloriaPatri(context: context, hourSlug: template.slug) {
+            finalParts = precesApplied.map { stripGloriaPatriFromPsalm($0) }
+        } else {
+            finalParts = precesApplied
         }
 
         return Hour(
@@ -212,6 +252,61 @@ struct OfficeAssembler {
 
     private func isTeDeum(_ part: Hour.Part) -> Bool {
         part.type == "canticle" && (part.label ?? "").contains("Te Deum")
+    }
+
+    // MARK: - Laus tibi substitution (Septuagesima–Holy Saturday)
+    //
+    // From First Vespers of Septuagesima Sunday through Holy Saturday, the
+    // "Alleluia" at the end of the "Deus in adjutorium" versicle response is
+    // replaced by "Laus tibi, Dómine, Rex ætérnæ glóriæ."
+    // This covers: pre-Lent (temporalKey starts with "quadp"), Lent, and
+    // Passion. It must NOT fire during Paschal time (season == .easter).
+
+    static func shouldSubstituteLausTibi(context: LiturgicalContext) -> Bool {
+        // Explicit penitential seasons
+        if context.season == .lent || context.season == .passion {
+            return true
+        }
+        // Pre-Lent (Septuagesima through Saturday before Ash Wednesday):
+        // temporalKey is "quadp1-0" through "quadp3-6"
+        if let key = context.temporalKey, key.hasPrefix("quadp") {
+            return true
+        }
+        return false
+    }
+
+    // MARK: - Gloria Patri suppression (Passiontide & Office of the Dead)
+    //
+    // In the 1962 Breviary the Gloria Patri doxology at the end of psalms
+    // is omitted from Passion Sunday through Holy Saturday and throughout
+    // the Office of the Dead.
+
+    /// Returns true when the Gloria Patri should be stripped from psalm endings.
+    private func shouldOmitGloriaPatri(context: LiturgicalContext, hourSlug: String) -> Bool {
+        if context.season == .passion {
+            return true
+        }
+        if hourSlug == "office-of-the-dead" {
+            return true
+        }
+        return false
+    }
+
+    /// If the part is a psalm or canticle whose last verse is the Gloria Patri
+    /// doxology, return a copy with that verse removed.
+    private func stripGloriaPatriFromPsalm(_ part: Hour.Part) -> Hour.Part {
+        guard part.type == "psalm" || part.type == "canticle" else { return part }
+        guard var verses = part.verses, !verses.isEmpty else { return part }
+
+        let lastVerse = verses[verses.count - 1]
+        // The Gloria Patri in the data always starts with "Glória Patri"
+        if lastVerse.lat.hasPrefix("Glória Patri") {
+            verses.removeLast()
+            var modified = part
+            modified.verses = verses
+            return modified
+        }
+        return part
     }
 
     // MARK: - Season string mapping

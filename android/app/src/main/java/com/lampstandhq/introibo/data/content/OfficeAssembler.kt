@@ -70,11 +70,41 @@ class OfficeAssembler(
             }
         }
 
-        // Post-assembly filtering for Matins nocturn structure and Te Deum.
-        val finalParts = if (template.slug == "matutinum") {
-            filterMatinsParts(antiphonApplied, context)
+        // Septuagesima through Holy Saturday: replace trailing "Allelúja" in
+        // the "Deus in adjutorium" response with "Laus tibi, Dómine, Rex
+        // ætérnæ glóriæ." (1962 Breviarium Romanum rubric). Must NOT fire
+        // during Paschal time.
+        val lausTibiApplied = if (shouldSubstituteLausTibi(context)) {
+            antiphonApplied.map { part ->
+                if (part.type != "vr") return@map part
+                val latR = part.latR ?: return@map part
+                if (!latR.contains("Allelúja")) return@map part
+                part.copy(
+                    latR = latR
+                        .replace("Allelúja.", "Laus tibi, Dómine, Rex ætérnæ glóriæ.")
+                        .replace("Allelúja", "Laus tibi, Dómine, Rex ætérnæ glóriæ"),
+                    engR = part.engR
+                        ?.replace("Alleluia.", "Praise be to Thee, O Lord, King of eternal glory.")
+                        ?.replace("Alleluia", "Praise be to Thee, O Lord, King of eternal glory"),
+                )
+            }
         } else {
             antiphonApplied
+        }
+
+        // Post-assembly filtering for Matins nocturn structure and Te Deum.
+        val filteredParts = if (template.slug == "matutinum") {
+            filterMatinsParts(lausTibiApplied, context)
+        } else {
+            lausTibiApplied
+        }
+
+        // Suppress Gloria Patri at the end of psalms during Passiontide
+        // and in the Office of the Dead.
+        val finalParts = if (shouldOmitGloriaPatri(context, template.slug)) {
+            filteredParts.map { stripGloriaPatriFromPsalm(it) }
+        } else {
+            filteredParts
         }
 
         return Hour(
@@ -192,6 +222,62 @@ class OfficeAssembler(
 
     private fun isTeDeum(part: Hour.Part): Boolean {
         return part.type == "canticle" && (part.label ?: "").contains("Te Deum")
+    }
+
+    // ---- Laus tibi substitution (Septuagesima–Holy Saturday) ----
+    //
+    // From First Vespers of Septuagesima Sunday through Holy Saturday, the
+    // "Alleluia" at the end of the "Deus in adjutorium" versicle response is
+    // replaced by "Laus tibi, Dómine, Rex ætérnæ glóriæ."
+
+    private fun shouldSubstituteLausTibi(context: LiturgicalContext): Boolean {
+        if (context.season == LiturgicalSeason.LENT || context.season == LiturgicalSeason.PASSION) {
+            return true
+        }
+        // Pre-Lent (Septuagesima through Saturday before Ash Wednesday):
+        // temporalKey is "quadp1-0" through "quadp3-6"
+        val key = context.temporalKey
+        if (key != null && key.startsWith("quadp")) {
+            return true
+        }
+        return false
+    }
+
+    // ---- Gloria Patri suppression (Passiontide & Office of the Dead) ----
+    //
+    // In the 1962 Breviary the Gloria Patri doxology at the end of psalms
+    // is omitted from Passion Sunday through Holy Saturday and throughout
+    // the Office of the Dead.
+
+    /**
+     * Returns true when the Gloria Patri should be stripped from psalm endings.
+     */
+    private fun shouldOmitGloriaPatri(context: LiturgicalContext, hourSlug: String): Boolean {
+        if (context.season == LiturgicalSeason.PASSION) {
+            return true
+        }
+        if (hourSlug == "office-of-the-dead") {
+            return true
+        }
+        return false
+    }
+
+    /**
+     * If the part is a psalm or canticle whose last verse is the Gloria Patri
+     * doxology, return a copy with that verse removed.
+     */
+    private fun stripGloriaPatriFromPsalm(part: Hour.Part): Hour.Part {
+        if (part.type != "psalm" && part.type != "canticle") return part
+        val verses = part.verses ?: return part
+        if (verses.isEmpty()) return part
+
+        val lastVerse = verses.last()
+        // The Gloria Patri in the data always starts with "Glória Patri"
+        return if (lastVerse.lat.startsWith("Glória Patri")) {
+            part.copy(verses = verses.dropLast(1))
+        } else {
+            part
+        }
     }
 
     private fun seasonString(season: LiturgicalSeason): String = when (season) {

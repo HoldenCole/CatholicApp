@@ -65,6 +65,9 @@ object ContentStore {
     var propers: List<MassProper> = emptyList()
         private set
 
+    // Canon variant data: { "communicantes": { "easter": { "lat": ..., "eng": ... }, ... }, "hanc_igitur": { ... } }
+    private var canonVariants: Map<String, Map<String, Map<String, String>>> = emptyMap()
+
     private var missalTempora: Map<String, MissalProperEntry> = emptyMap()
     private var missalSanctoral: Map<String, MissalProperEntry> = emptyMap()
     private var sanctoralPropers: Map<String, Map<String, Hour.Part>> = emptyMap()
@@ -100,6 +103,7 @@ object ContentStore {
         ordoData         = load("ordo.json")              ?: emptyMap()
         ordoData1955     = load("ordo_1955.json")         ?: emptyMap()
         ordoDataPre1955  = load("ordo_pre1955.json")      ?: emptyMap()
+        canonVariants    = load("canon_variants.json")    ?: emptyMap()
 
         val psalter: Map<String, Map<String, Hour.Part>> =
             load("psalter_weekly.json") ?: emptyMap()
@@ -413,6 +417,21 @@ object ContentStore {
 
     fun prayers(category: String): List<Prayer> =
         prayers.filter { it.category == category }
+
+    // ---- Canon variant accessor ----
+
+    /**
+     * Returns the Latin/English pair for a Canon variant insertion.
+     * [type] is "communicantes" or "hanc_igitur"; [key] is the feast key
+     * (e.g. "easter", "pentecost", "christmas", "epiphany", "ascension").
+     */
+    fun canonVariant(type: String, key: String): Pair<String, String>? {
+        val group = canonVariants[type] ?: return null
+        val entry = group[key] ?: return null
+        val lat = entry["lat"] ?: return null
+        val eng = entry["eng"] ?: return null
+        return lat to eng
+    }
 
     /**
      * Returns prayers grouped by category, preserving the order in which
