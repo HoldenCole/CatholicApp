@@ -205,6 +205,13 @@ class OfficeAssembler(
     }
 
     private fun marianPart(antiphon: MarianAntiphon, fallback: Hour.Part): Hour.Part {
+        // During Triduum the Marian antiphon is suppressed entirely.
+        if (antiphon.isSuppressed) {
+            return Hour.Part(
+                type = "suppressed",
+                variationKey = "completorium.marian",
+            )
+        }
         val data = marianAntiphons.firstOrNull { it.slug == antiphon.key }
             ?: return fallback
         return Hour.Part(

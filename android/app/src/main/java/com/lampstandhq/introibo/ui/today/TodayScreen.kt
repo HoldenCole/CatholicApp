@@ -249,13 +249,15 @@ fun TodayScreen(
                     )
                 }
 
-                // Marian antiphon
-                Text(
-                    text = ctx.marian.title,
-                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                    color = colors.muted,
-                    modifier = Modifier.padding(top = 2.dp),
-                )
+                // Marian antiphon (suppressed during Triduum)
+                if (!ctx.marian.isSuppressed) {
+                    Text(
+                        text = ctx.marian.title,
+                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                        color = colors.muted,
+                        modifier = Modifier.padding(top = 2.dp),
+                    )
+                }
 
                 // First Friday / First Saturday / Ember day flags
                 if (vm.isFirstFriday() || vm.isFirstSaturday() || vm.isEmberDay()) {

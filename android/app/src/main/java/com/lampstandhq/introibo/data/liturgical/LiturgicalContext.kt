@@ -50,7 +50,8 @@ enum class MarianAntiphon(val key: String) {
     ALMA("alma"),
     AVE("ave"),
     REGINA("regina"),
-    SALVE("salve");
+    SALVE("salve"),
+    SUPPRESSED("suppressed");
 
     val title: String
         get() = when (this) {
@@ -58,7 +59,11 @@ enum class MarianAntiphon(val key: String) {
             AVE -> "Ave Regína Cælórum"
             REGINA -> "Regína Cæli"
             SALVE -> "Salve Regína"
+            SUPPRESSED -> ""
         }
+
+    /** Whether the antiphon is suppressed (Triduum — no Marian antiphon at Compline). */
+    val isSuppressed: Boolean get() = this == SUPPRESSED
 }
 
 data class Penance(
@@ -180,20 +185,22 @@ data class LiturgicalContext(
             val isLent = (season == LiturgicalSeason.LENT || season == LiturgicalSeason.PASSION)
 
             // ---- Marian antiphon ----
-            // Boundary rules:
-            //  - Alma covers Saturday-before-Advent-I (First Vespers) through Compline of
-            //    Feb 2 (Candlemas) inclusive; the transition to Ave happens after Candlemas.
-            //  - Triduum (Maundy Thu / Good Fri / Holy Sat) has no proper Marian antiphon at
-            //    Compline traditionally; we continue Ave (the antiphon in use through Holy
-            //    Wednesday) rather than fall through to Salve, which is liturgically wrong.
+            // Boundary rules (Breviary of Pius V, 1569; 1962 rubrics):
+            //  - Alma: from First Vespers of Advent I (= Saturday before Advent I)
+            //    through Compline of Feb 1. Feb 2 (Candlemas) belongs to Ave.
+            //  - Ave: from Compline of Feb 2 through Compline of Holy Wednesday.
+            //  - Triduum (Maundy Thu / Good Fri / Holy Sat): no Marian antiphon
+            //    is said at Compline (suppressed).
+            //  - Regina Caeli: Easter Sunday through the day before Trinity Sunday.
+            //  - Salve: Trinity Sunday through Friday before Advent I.
             val triduumStart = easter.addDays(-3)    // Maundy Thursday
             val triduumEnd = easter.addDays(-1)      // Holy Saturday
             val almaStart = firstAdvent.addDays(-1)  // Saturday before Advent I (First Vespers)
-            val marian: MarianAntiphon = if (now.isSameOrAfter(almaStart) || now.isSameOrBefore(candlemas)) {
+            val marian: MarianAntiphon = if (now.isSameOrAfter(triduumStart) && now.isSameOrBefore(triduumEnd)) {
+                MarianAntiphon.SUPPRESSED   // Triduum: no Marian antiphon at Compline
+            } else if (now.isSameOrAfter(almaStart) || now.isSameOrBefore(candlemas.addDays(-1))) {
                 MarianAntiphon.ALMA
-            } else if (now.isSameOrAfter(triduumStart) && now.isSameOrBefore(triduumEnd)) {
-                MarianAntiphon.AVE   // Triduum: continue Ave rather than fall through to Salve
-            } else if (now.isSameOrAfter(candlemas.addDays(1)) && now.isSameOrBefore(holyWed)) {
+            } else if (now.isSameOrAfter(candlemas) && now.isSameOrBefore(holyWed)) {
                 MarianAntiphon.AVE
             } else if (now.isSameOrAfter(easter) && now.isSameOrBefore(trinity.addDays(-1))) {
                 MarianAntiphon.REGINA

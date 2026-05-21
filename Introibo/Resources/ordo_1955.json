@@ -1181,19 +1181,19 @@
     "sanctoral": "04-17",
     "winner": "temporal",
     "winnerKey": "pasc2-3",
-    "rank": 6.0,
-    "name": "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "04-17"
+    "commemoration": null
   },
   "2024-04-18": {
     "temporal": "pasc2-4",
     "sanctoral": "04-18",
     "winner": "temporal",
     "winnerKey": "pasc2-4",
-    "rank": 2.0,
-    "name": "Die II infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quinta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -1203,8 +1203,8 @@
     "sanctoral": "04-19",
     "winner": "temporal",
     "winnerKey": "pasc2-5",
-    "rank": 2.0,
-    "name": "Die III infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -1214,8 +1214,8 @@
     "sanctoral": "04-20",
     "winner": "temporal",
     "winnerKey": "pasc2-6",
-    "rank": 2.0,
-    "name": "Die IV infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -1258,11 +1258,11 @@
     "sanctoral": "04-24",
     "winner": "temporal",
     "winnerKey": "pasc3-3",
-    "rank": 4.0,
-    "name": "Die Octava Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "04-24"
+    "commemoration": null
   },
   "2024-04-25": {
     "temporal": "pasc3-4",
@@ -1819,11 +1819,11 @@
     "sanctoral": "06-14",
     "winner": "temporal",
     "winnerKey": "pent03-5",
-    "rank": 4.0,
-    "name": "Die Octava SSmi Cordis Jesu",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "06-14"
+    "commemoration": null
   },
   "2024-06-15": {
     "temporal": "pent03-6",
@@ -3436,11 +3436,11 @@
     "sanctoral": "11-08",
     "winner": "sanctoral",
     "winnerKey": "11-08",
-    "rank": 4.1,
-    "name": "In Octava Omnium Sanctorum",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Ss. Quatuor Coronatorum Martyrum",
+    "color": "red",
     "season": "ordinary",
-    "commemoration": "pent24-5"
+    "commemoration": null
   },
   "2024-11-09": {
     "temporal": "pent24-6",
@@ -5416,11 +5416,11 @@
     "sanctoral": "05-07",
     "winner": "temporal",
     "winnerKey": "pasc2-3",
-    "rank": 6.0,
-    "name": "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-07"
+    "commemoration": null
   },
   "2025-05-08": {
     "temporal": "pasc2-4",
@@ -5493,11 +5493,11 @@
     "sanctoral": "05-14",
     "winner": "temporal",
     "winnerKey": "pasc3-3",
-    "rank": 4.0,
-    "name": "Die Octava Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-14"
+    "commemoration": null
   },
   "2025-05-15": {
     "temporal": "pasc3-4",
@@ -6054,9 +6054,9 @@
     "sanctoral": "07-04",
     "winner": "temporal",
     "winnerKey": "pent03-5",
-    "rank": 4.0,
-    "name": "Die Octava SSmi Cordis Jesu",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -7451,11 +7451,11 @@
     "sanctoral": "11-08",
     "winner": "sanctoral",
     "winnerKey": "11-08",
-    "rank": 4.1,
-    "name": "In Octava Omnium Sanctorum",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Ss. Quatuor Coronatorum Martyrum",
+    "color": "red",
     "season": "ordinary",
-    "commemoration": "pent21-6"
+    "commemoration": null
   },
   "2025-11-09": {
     "temporal": "pent22-0",
@@ -9266,11 +9266,11 @@
     "sanctoral": "04-22",
     "winner": "temporal",
     "winnerKey": "pasc2-3",
-    "rank": 6.0,
-    "name": "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "04-22"
+    "commemoration": null
   },
   "2026-04-23": {
     "temporal": "pasc2-4",
@@ -9343,11 +9343,11 @@
     "sanctoral": "04-29",
     "winner": "temporal",
     "winnerKey": "pasc3-3",
-    "rank": 4.0,
-    "name": "Die Octava Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "04-29"
+    "commemoration": null
   },
   "2026-04-30": {
     "temporal": "pasc3-4",
@@ -9904,11 +9904,11 @@
     "sanctoral": "06-19",
     "winner": "temporal",
     "winnerKey": "pent03-5",
-    "rank": 4.0,
-    "name": "Die Octava SSmi Cordis Jesu",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "06-19"
+    "commemoration": null
   },
   "2026-06-20": {
     "temporal": "pent03-6",
@@ -13193,19 +13193,19 @@
     "sanctoral": "04-14",
     "winner": "temporal",
     "winnerKey": "pasc2-3",
-    "rank": 6.0,
-    "name": "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "04-14"
+    "commemoration": null
   },
   "2027-04-15": {
     "temporal": "pasc2-4",
     "sanctoral": "04-15",
     "winner": "temporal",
     "winnerKey": "pasc2-4",
-    "rank": 2.0,
-    "name": "Die II infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quinta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -13215,8 +13215,8 @@
     "sanctoral": "04-16",
     "winner": "temporal",
     "winnerKey": "pasc2-5",
-    "rank": 2.0,
-    "name": "Die III infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -13226,11 +13226,11 @@
     "sanctoral": "04-17",
     "winner": "temporal",
     "winnerKey": "pasc2-6",
-    "rank": 2.0,
-    "name": "Die IV infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "04-17"
+    "commemoration": null
   },
   "2027-04-18": {
     "temporal": "pasc3-0",
@@ -13248,8 +13248,8 @@
     "sanctoral": "04-19",
     "winner": "temporal",
     "winnerKey": "pasc3-1",
-    "rank": 2.0,
-    "name": "Die VI infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Secunda infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -13259,8 +13259,8 @@
     "sanctoral": "04-20",
     "winner": "temporal",
     "winnerKey": "pasc3-2",
-    "rank": 2.0,
-    "name": "Die VII infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -13270,11 +13270,11 @@
     "sanctoral": "04-21",
     "winner": "temporal",
     "winnerKey": "pasc3-3",
-    "rank": 4.0,
-    "name": "Die Octava Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "04-21"
+    "commemoration": null
   },
   "2027-04-22": {
     "temporal": "pasc3-4",
@@ -13831,11 +13831,11 @@
     "sanctoral": "06-11",
     "winner": "temporal",
     "winnerKey": "pent03-5",
-    "rank": 4.0,
-    "name": "Die Octava SSmi Cordis Jesu",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "06-11"
+    "commemoration": null
   },
   "2027-06-12": {
     "temporal": "pent03-6",
@@ -15481,9 +15481,9 @@
     "sanctoral": "11-08",
     "winner": "sanctoral",
     "winnerKey": "11-08",
-    "rank": 4.1,
-    "name": "In Octava Omnium Sanctorum",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Ss. Quatuor Coronatorum Martyrum",
+    "color": "red",
     "season": "ordinary",
     "commemoration": null
   },
@@ -17428,11 +17428,11 @@
     "sanctoral": "05-03",
     "winner": "temporal",
     "winnerKey": "pasc2-3",
-    "rank": 6.0,
-    "name": "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-03"
+    "commemoration": null
   },
   "2028-05-04": {
     "temporal": "pasc2-4",
@@ -17505,11 +17505,11 @@
     "sanctoral": "05-10",
     "winner": "temporal",
     "winnerKey": "pasc3-3",
-    "rank": 4.0,
-    "name": "Die Octava Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-10"
+    "commemoration": null
   },
   "2028-05-11": {
     "temporal": "pasc3-4",
@@ -18066,11 +18066,11 @@
     "sanctoral": "06-30",
     "winner": "temporal",
     "winnerKey": "pent03-5",
-    "rank": 4.0,
-    "name": "Die Octava SSmi Cordis Jesu",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "06-30"
+    "commemoration": null
   },
   "2028-07-01": {
     "temporal": "pent03-6",
@@ -19507,11 +19507,11 @@
     "sanctoral": "11-08",
     "winner": "sanctoral",
     "winnerKey": "11-08",
-    "rank": 4.1,
-    "name": "In Octava Omnium Sanctorum",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Ss. Quatuor Coronatorum Martyrum",
+    "color": "red",
     "season": "ordinary",
-    "commemoration": "pent22-3"
+    "commemoration": null
   },
   "2028-11-09": {
     "temporal": "pent22-4",
@@ -21278,8 +21278,8 @@
     "sanctoral": "04-18",
     "winner": "temporal",
     "winnerKey": "pasc2-3",
-    "rank": 6.0,
-    "name": "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -21289,8 +21289,8 @@
     "sanctoral": "04-19",
     "winner": "temporal",
     "winnerKey": "pasc2-4",
-    "rank": 2.0,
-    "name": "Die II infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quinta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -21300,8 +21300,8 @@
     "sanctoral": "04-20",
     "winner": "temporal",
     "winnerKey": "pasc2-5",
-    "rank": 2.0,
-    "name": "Die III infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
     "commemoration": null
@@ -21916,11 +21916,11 @@
     "sanctoral": "06-15",
     "winner": "temporal",
     "winnerKey": "pent03-5",
-    "rank": 4.0,
-    "name": "Die Octava SSmi Cordis Jesu",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "06-15"
+    "commemoration": null
   },
   "2029-06-16": {
     "temporal": "pent03-6",
@@ -23522,11 +23522,11 @@
     "sanctoral": "11-08",
     "winner": "sanctoral",
     "winnerKey": "11-08",
-    "rank": 4.1,
-    "name": "In Octava Omnium Sanctorum",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Ss. Quatuor Coronatorum Martyrum",
+    "color": "red",
     "season": "ordinary",
-    "commemoration": "pent24-4"
+    "commemoration": null
   },
   "2029-11-09": {
     "temporal": "pent24-5",
@@ -25513,11 +25513,11 @@
     "sanctoral": "05-08",
     "winner": "temporal",
     "winnerKey": "pasc2-3",
-    "rank": 6.0,
-    "name": "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam II post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-08"
+    "commemoration": null
   },
   "2030-05-09": {
     "temporal": "pasc2-4",
@@ -25579,22 +25579,22 @@
     "sanctoral": "05-14",
     "winner": "temporal",
     "winnerKey": "pasc3-2",
-    "rank": 2.0,
-    "name": "Die VII infra Octavam Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-14"
+    "commemoration": null
   },
   "2030-05-15": {
     "temporal": "pasc3-3",
     "sanctoral": "05-15",
     "winner": "temporal",
     "winnerKey": "pasc3-3",
-    "rank": 4.0,
-    "name": "Die Octava Patrocinii St Joseph",
+    "rank": 1.0,
+    "name": "Feria Quarta infra Hebdomadam III post Octavam Paschæ",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-15"
+    "commemoration": null
   },
   "2030-05-16": {
     "temporal": "pasc3-4",
@@ -26151,11 +26151,11 @@
     "sanctoral": "07-05",
     "winner": "temporal",
     "winnerKey": "pent03-5",
-    "rank": 4.0,
-    "name": "Die Octava SSmi Cordis Jesu",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam III post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "07-05"
+    "commemoration": null
   },
   "2030-07-06": {
     "temporal": "pent03-6",
@@ -27537,11 +27537,11 @@
     "sanctoral": "11-08",
     "winner": "sanctoral",
     "winnerKey": "11-08",
-    "rank": 4.1,
-    "name": "In Octava Omnium Sanctorum",
-    "color": "white",
+    "rank": 1.0,
+    "name": "Ss. Quatuor Coronatorum Martyrum",
+    "color": "red",
     "season": "ordinary",
-    "commemoration": "pent21-5"
+    "commemoration": null
   },
   "2030-11-09": {
     "temporal": "pent21-6",
