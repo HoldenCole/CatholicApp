@@ -827,8 +827,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Hilárii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Hilary, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -841,7 +841,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Hilárii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -864,8 +864,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos beáti N. Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
-      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed N., Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
+      "lat": "Deus, qui nos beáti Pauli Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
+      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed Paul, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -994,8 +994,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti N. Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
-      "eng": "(ad missam)\nMay the intercession of the blessed Abbot N., commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
+      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti Antónii Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
+      "eng": "(ad missam)\nMay the intercession of the blessed Abbot Anthony, commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -1060,7 +1060,7 @@
       "type": "collect",
       "label": "Collect",
       "lat": "Deus, qui beáto Petro Apóstolo tuo, collátis clávibus regni cæléstis, ligándi atque solvéndi pontifícium tradidísti: concéde; ut, intercessiónis ejus auxílio, a peccatórum nostrórum néxibus liberémur:\n\nV. Tu es vas electiónis, sancte Paule Apóstole.\nR. Prædicátor veritátis in univérso mundo.\n\nv. Deus, qui multitúdinem géntium beáti Pauli Apóstoli prædicatióne docuísti: da nobis, quǽsumus; ut, cujus commemoratiónem cólimus, ejus apud te patrocínia sentiámus.",
-      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of N. thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
+      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of Peter thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -1189,7 +1189,7 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti N. Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti Fabiáni et Sebastiáni Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
       "eng": "Be mindful of our weakness, almighty God, and since the burden of our sins weighs heavily upon us, may the glorious intercession of thy holy Martyrs Fabian and Sebastian sustain us.",
       "variationKey": "collect"
     },
@@ -1449,8 +1449,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti N. Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
-      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed N., Your Martyr and Bishop, sustain us.",
+      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti Timothei Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed Timothy, Your Martyr and Bishop, sustain us.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -1579,8 +1579,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti N. Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
-      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed N., Your Martyr and Bishop, sustain us.",
+      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti Polycárpi Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed Polycarp, Your Martyr and Bishop, sustain us.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -1672,8 +1672,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Joánnes Chrysóstome, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, John Chrysostom, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -1686,7 +1686,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Joánnes Chrysóstome, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -1802,8 +1802,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Francísce, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Francis de Sales, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -1816,7 +1816,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Francísce, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -1839,8 +1839,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui inter cétera poténtiæ tuæ mirácula étiam in sexu frágili victóriam martýrii contulísti: concéde propítius; ut, qui beátæ N. Vírginis et Mártyris tuæ natalícia cólimus, per ejus ad te exémpla gradiámur.",
-      "eng": "O God, Who among the other miracles of thy power have bestowed the victory of martyrdom even upon the weaker sex, graciously grant that we who commemorate the anniversary of the death of blessed N., thy Virgin and Martyr, may come to thee by the path of her example.",
+      "lat": "Deus, qui inter cétera poténtiæ tuæ mirácula étiam in sexu frágili victóriam martýrii contulísti: concéde propítius; ut, qui beátæ Martínæ Vírginis et Mártyris tuæ natalícia cólimus, per ejus ad te exémpla gradiámur.",
+      "eng": "O God, Who among the other miracles of thy power have bestowed the victory of martyrdom even upon the weaker sex, graciously grant that we who commemorate the anniversary of the death of blessed Martina, thy Virgin and Martyr, may come to thee by the path of her example.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -1969,8 +1969,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti N. Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
-      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed N., Your Martyr and Bishop, sustain us.",
+      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti Ignátii Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed Ignatius, Your Martyr and Bishop, sustain us.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -2099,8 +2099,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti N. Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
-      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed N., Your Martyr and Bishop, sustain us.",
+      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti Blásii Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed Blase, Your Martyr and Bishop, sustain us.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -2229,8 +2229,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui inter cétera poténtiæ tuæ mirácula étiam in sexu frágili victóriam martýrii contulísti: concéde propítius; ut, qui beátæ N. Vírginis et Mártyris tuæ natalícia cólimus, per ejus ad te exémpla gradiámur.",
-      "eng": "O God, Who among the other miracles of thy power have bestowed the victory of martyrdom even upon the weaker sex, graciously grant that we who commemorate the anniversary of the death of blessed N., thy Virgin and Martyr, may come to thee by the path of her example.",
+      "lat": "Deus, qui inter cétera poténtiæ tuæ mirácula étiam in sexu frágili victóriam martýrii contulísti: concéde propítius; ut, qui beátæ Agathæ Vírginis et Mártyris tuæ natalícia cólimus, per ejus ad te exémpla gradiámur.",
+      "eng": "O God, Who among the other miracles of thy power have bestowed the victory of martyrdom even upon the weaker sex, graciously grant that we who commemorate the anniversary of the death of blessed Agatha, thy Virgin and Martyr, may come to thee by the path of her example.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -2359,8 +2359,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos beáti N. Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
-      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed N., Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
+      "lat": "Deus, qui nos beáti Romuáldi Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
+      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed Romuald, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -2517,8 +2517,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Cyrílle, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Cyril, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -2531,7 +2531,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Cyrílle, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -2814,8 +2814,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum N. et N. natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, N. and N., grant that we may enjoy their companionship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Faustínum et Jovítam natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, Faustinus and Jovita, grant that we may enjoy their companionship in everlasting happiness.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -2879,8 +2879,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti N. Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
-      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed N., Your Martyr and Bishop, sustain us.",
+      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti Simeónis Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed Simeon, Your Martyr and Bishop, sustain us.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -3297,7 +3297,7 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Thoma, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
@@ -3557,8 +3557,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Gregóri, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Gregory, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -3571,7 +3571,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Gregóri, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -3687,8 +3687,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Cyrílle, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Cyril, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -3701,7 +3701,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Cyrílle, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -3789,8 +3789,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti N. Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
-      "eng": "(ad missam)\nMay the intercession of the blessed Abbot N., commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
+      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti Benedícti Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
+      "eng": "(ad missam)\nMay the intercession of the blessed Abbot Benedict, commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -4207,8 +4207,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Isidóri, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Isidore, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -4221,7 +4221,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Isidóri, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4597,8 +4597,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Anselmi, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Anselm, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -4611,7 +4611,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Anselmi, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -4987,7 +4987,7 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Petre, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
@@ -5349,8 +5349,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "v. Exáudi, quǽsumus, Dómine, preces nostras, quas in beáti N. Confessóris tui atque Pontíficis solemnitáte deférimus: et, qui tibi digne méruit famulári, ejus intercedéntibus méritis, ab ómnibus nos absólve peccátis.",
-      "eng": "O God, who didst give blessed N. to be thy people’s minister in eternal salvation; grant, we pray, that we who have him for teacher of life here on earth, may also deserve now that he is in heaven, to have him for an advocate.",
+      "lat": "v. Exáudi, quǽsumus, Dómine, preces nostras, quas in beáti Athanásii Confessóris tui atque Pontíficis solemnitáte deférimus: et, qui tibi digne méruit famulári, ejus intercedéntibus méritis, ab ómnibus nos absólve peccátis.",
+      "eng": "O God, who didst give blessed Athanasius to be thy people’s minister in eternal salvation; grant, we pray, that we who have him for teacher of life here on earth, may also deserve now that he is in heaven, to have him for an advocate.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -5377,8 +5377,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Athanásii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Athanasius, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -5391,7 +5391,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Athanásii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -5832,8 +5832,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Gregórii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Gregory, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -5846,7 +5846,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Gregórii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -6092,8 +6092,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Robérte, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Robert Bellarmine, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -6106,7 +6106,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Robérte, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -6807,7 +6807,7 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Beda, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
@@ -7747,8 +7747,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "v. Exáudi, quǽsumus, Dómine, preces nostras, quas in beáti N. Confessóris tui atque Pontíficis solemnitáte deférimus: et, qui tibi digne méruit famulári, ejus intercedéntibus méritis, ab ómnibus nos absólve peccátis.",
-      "eng": "O God, who didst give blessed N. to be thy people’s minister in eternal salvation; grant, we pray, that we who have him for teacher of life here on earth, may also deserve now that he is in heaven, to have him for an advocate.",
+      "lat": "v. Exáudi, quǽsumus, Dómine, preces nostras, quas in beáti Basilíi Confessóris tui atque Pontíficis solemnitáte deférimus: et, qui tibi digne méruit famulári, ejus intercedéntibus méritis, ab ómnibus nos absólve peccátis.",
+      "eng": "O God, who didst give blessed Basil to be thy people’s minister in eternal salvation; grant, we pray, that we who have him for teacher of life here on earth, may also deserve now that he is in heaven, to have him for an advocate.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -7775,8 +7775,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Basilíi, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Basil, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -7789,7 +7789,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Basilíi, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -7905,7 +7905,7 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Ephræm, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
@@ -9186,8 +9186,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti N. Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
-      "eng": "(ad missam)\nMay the intercession of the blessed Abbot N., commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
+      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti Joánnis Gualbérti Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
+      "eng": "(ad missam)\nMay the intercession of the blessed Abbot John Gualbert, commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -9344,8 +9344,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Bonaventúræ, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Bonaventure, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -9358,7 +9358,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Bonaventúræ, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -9504,8 +9504,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos beáti N. Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
-      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed N., Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
+      "lat": "Deus, qui nos beáti Aléxii Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
+      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed Alexius, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -9959,8 +9959,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Da, quǽsumus, omnípotens Deus: ut beáti N. Apóstoli tui, quam prævenimus, veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
-      "eng": "Grant, we beseech thee, O Almighty God, that the worshipful feast of thy blessed Apostle, N. on the eve whereof we now stand, may avail us to the increase both of godliness toward thee, and of health to our own souls.",
+      "lat": "Da, quǽsumus, omnípotens Deus: ut beáti Jacóbi Apóstoli tui, quam prævenimus, veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
+      "eng": "Grant, we beseech thee, O Almighty God, that the worshipful feast of thy blessed Apostle, James on the eve whereof we now stand, may avail us to the increase both of godliness toward thee, and of health to our own souls.",
       "variationKey": "collect"
     }
   },
@@ -10098,8 +10098,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Præsta, quǽsumus, omnípotens Deus: ut, qui beáti N. Mártyris tui natalítia cólimus, intercessióne ejus in tui nóminis amóre roborémur.",
-      "eng": "Grant, we beseech thee, almighty God, that we who celebrate the martyrdom of blessed N., through his intercession be strengthened in your love.",
+      "lat": "Præsta, quǽsumus, omnípotens Deus: ut, qui beáti Pantaleónis Mártyris tui natalítia cólimus, intercessióne ejus in tui nóminis amóre roborémur.",
+      "eng": "Grant, we beseech thee, almighty God, that we who celebrate the martyrdom of blessed Pantaleon, through his intercession be strengthened in your love.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -10516,8 +10516,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Alfónse, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Alphonsus, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -10530,7 +10530,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Alfónse, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -10857,8 +10857,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum N. et N. natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, N. and N., grant that we may enjoy their companionship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Cyríacum, Largum et Smarágdum natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, Cyriacus, Largus and Smaragdus, grant that we may enjoy their companionship in everlasting happiness.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -11386,8 +11386,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos beáti N. Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
-      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed N., Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
+      "lat": "Deus, qui nos beáti Hyacínthi Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
+      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed Hyacinth, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -11544,7 +11544,7 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Bernárdi, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
@@ -12057,8 +12057,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Augustíne, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Augustine, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -12071,7 +12071,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Augustíne, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -12289,8 +12289,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti N. Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
-      "eng": "(ad missam)\nMay the intercession of the blessed Abbot N., commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
+      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti Ægídii Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
+      "eng": "(ad missam)\nMay the intercession of the blessed Abbot Giles, commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -12484,8 +12484,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "v. Da, quǽsumus, omnípotens Deus: ut beáti N. Confessóris tui atque Pontíficis veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
-      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of N. thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
+      "lat": "v. Da, quǽsumus, omnípotens Deus: ut beáti Lauréntii Confessóris tui atque Pontíficis veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
+      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of Lawrence Justinian thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -12679,8 +12679,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos beáti N. Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
-      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed N., Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
+      "lat": "Deus, qui nos beáti Nicolái Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
+      "eng": "(ad missam)\nO God, Who gladden us with the annual feast of blessed Nicholas of Tolentino, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -12997,8 +12997,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Beatórum Mártyrum paritérque Pontíficum N. et N. nos, quǽsumus, Dómine, festa tueántur: et eórum comméndet orátio veneránda.",
-      "eng": "May the feast of the blessed Martyrs and Bishops N. and N., protect us, O Lord, we beseech You, and may their holy prayer recommend us unto You.",
+      "lat": "Beatórum Mártyrum paritérque Pontíficum Cornélium et Cypriánum nos, quǽsumus, Dómine, festa tueántur: et eórum comméndet orátio veneránda.",
+      "eng": "May the feast of the blessed Martyrs and Bishops Cornelius and Cyprian, protect us, O Lord, we beseech You, and may their holy prayer recommend us unto You.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -13192,8 +13192,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum N. et N. natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, N. and N., grant that we may enjoy their companionship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Januárium et Sócios ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, Januarius and his Companions, grant that we may enjoy their companionship in everlasting happiness.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -13257,8 +13257,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum N. et N. natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, N. and N., grant that we may enjoy their companionship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Eustáchium et Sócios ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, Eustace and his Companions, grant that we may enjoy their companionship in everlasting happiness.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -13863,7 +13863,7 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Hierónyme, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
@@ -13900,8 +13900,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "v. Da, quǽsumus, omnípotens Deus: ut beáti N. Confessóris tui atque Pontíficis veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
-      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of N. thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
+      "lat": "v. Da, quǽsumus, omnípotens Deus: ut beáti Remígii Confessóris tui atque Pontíficis veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
+      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of Remigius thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -14160,8 +14160,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum N. et N. natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, N. and N., grant that we may enjoy their companionship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Plácidum et Sócios ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "(ad missam)\nO God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, Placid and his Companions, grant that we may enjoy their companionship in everlasting happiness.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -15135,8 +15135,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti N. Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
-      "eng": "(ad missam)\nMay the intercession of the blessed Abbot N., commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
+      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti Hilariónis Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
+      "eng": "(ad missam)\nMay the intercession of the blessed Abbot Hilarion, commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -16193,8 +16193,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Albérte, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Albert the Great, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -16207,7 +16207,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Albérte, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -16295,8 +16295,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "v. Da, quǽsumus, omnípotens Deus: ut beáti N. Confessóris tui atque Pontíficis veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
-      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of N. thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
+      "lat": "v. Da, quǽsumus, omnípotens Deus: ut beáti Gregórii Confessóris tui atque Pontíficis veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
+      "eng": "v. Grant, we beseech thee, almighty God, that the venerable feast of Gregory thy blessed Confessor and Bishop may increase our devotion and promote our salvation.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -16771,7 +16771,7 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Joánnes, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
@@ -16938,8 +16938,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Quǽsumus omnípotens Deus, ut beátus N. Apóstolus, cujus prævenímus festivitátem, tuum pro nobis implóret auxílium: ut a nostris reátibus absolúti a cunctis étiam perículis eruámur.",
-      "eng": "Grant, we beseech thee, O Almighty God, that the worshipful feast of thy blessed Apostle, N. on the eve whereof we now stand, may avail us to the increase both of godliness toward thee, and of health to our own souls.",
+      "lat": "Quǽsumus omnípotens Deus, ut beátus Andreæ Apóstolus, cujus prævenímus festivitátem, tuum pro nobis implóret auxílium: ut a nostris reátibus absolúti a cunctis étiam perículis eruámur.",
+      "eng": "Grant, we beseech thee, O Almighty God, that the worshipful feast of thy blessed Apostle, Andrew on the eve whereof we now stand, may avail us to the increase both of godliness toward thee, and of health to our own souls.",
       "variationKey": "collect"
     }
   },
@@ -17170,8 +17170,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Petre, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Peter Chrysologus, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -17184,7 +17184,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Petre, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -17207,8 +17207,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti N. Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
-      "eng": "(ad missam)\nMay the intercession of the blessed Abbot N., commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
+      "lat": "Intercéssio nos, quǽsumus, Dómine, beáti Sabbæ Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
+      "eng": "(ad missam)\nMay the intercession of the blessed Abbot Sabbas, commend us to You, O Lord, so that through his merits we may obtain that which we cannot accomplish by our own.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -17365,8 +17365,8 @@
     "vesperae.antiphon.magnificat1": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat (I Vesp.)",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
-      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Ambrósii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "eng": "O right excellent Teacher * Light of the Holy Church, Ambrose, blessed lover of the Divine Law, pray for us to the Son of God.",
       "variationKey": "vesperae.antiphon.magnificat1"
     },
     "laudes.antiphon.benedictus": {
@@ -17379,7 +17379,7 @@
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
-      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+      "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte Ambrósii, divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
@@ -17532,8 +17532,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Exáudi nos, Deus, salutáris noster: ut sicut de beátæ N. festivitáte gaudémus; ita piæ devotiónis erudiámur afféctu.",
-      "eng": "O God, Who among the other miracles of thy power have bestowed the victory of martyrdom even upon the weaker sex, graciously grant that we who commemorate the anniversary of the death of blessed N., thy Virgin and Martyr, may come to thee by the path of her example.",
+      "lat": "Exáudi nos, Deus, salutáris noster: ut sicut de beátæ Lúciæ festivitáte gaudémus; ita piæ devotiónis erudiámur afféctu.",
+      "eng": "O God, Who among the other miracles of thy power have bestowed the victory of martyrdom even upon the weaker sex, graciously grant that we who commemorate the anniversary of the death of blessed Lucy, thy Virgin and Martyr, may come to thee by the path of her example.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
@@ -17648,8 +17648,8 @@
     "collect": {
       "type": "collect",
       "label": "Collect",
-      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti N. Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
-      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed N., Your Martyr and Bishop, sustain us.",
+      "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti Eusébii Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+      "eng": "(ad missam)\nBe mindful of our weakness, almighty God, and because the burden of our sins weighs heavily upon us, may the glorious intercession of blessed Eusebius, Your Martyr and Bishop, sustain us.",
       "variationKey": "collect"
     },
     "vesperae.antiphons": {
