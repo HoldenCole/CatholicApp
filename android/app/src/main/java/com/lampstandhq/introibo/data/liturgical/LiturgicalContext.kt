@@ -332,6 +332,14 @@ data class LiturgicalContext(
                 return "epi${days / 7 + 1}-${days % 7}"
             }
 
+            // Christmas to Epiphany
+            if (date >= christmas || date < epi1Sun) {
+                if (date >= christmas) {
+                    val days = ChronoUnit.DAYS.between(christmas, date).toInt()
+                    return "nat$days"
+                }
+            }
+
             return null
         }
 

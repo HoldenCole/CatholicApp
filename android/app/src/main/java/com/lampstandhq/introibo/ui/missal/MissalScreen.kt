@@ -67,7 +67,7 @@ fun MissalScreen() {
 
     val ctx = remember { LiturgicalContext.current() }
     val todayProper = remember {
-        ctx.properSlug?.let { ContentStore.proper(it) }
+        ContentStore.properForDate(ctx.date) ?: ctx.properSlug?.let { ContentStore.proper(it) }
     }
 
     Column(

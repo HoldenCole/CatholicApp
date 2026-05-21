@@ -2,6 +2,7 @@ package com.lampstandhq.introibo.data.content
 
 import android.content.Context
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
+import com.lampstandhq.introibo.storage.settings.MissalRite
 import com.lampstandhq.introibo.data.model.ConfessionGuide
 import com.lampstandhq.introibo.data.model.Course
 import com.lampstandhq.introibo.data.model.ExamenEntry
@@ -152,16 +153,16 @@ object ContentStore {
         return false
     }
 
-    fun ordoForDate(date: java.time.LocalDate, rite: String = "1962"): OrdoEntry? {
+    fun ordoForDate(date: java.time.LocalDate, rite: MissalRite = MissalRite.RITE_1962): OrdoEntry? {
         val key = "%04d-%02d-%02d".format(date.year, date.monthValue, date.dayOfMonth)
         return when (rite) {
-            "1955" -> ordoData1955[key]
-            "pre1955" -> ordoDataPre1955[key]
+            MissalRite.RITE_1955 -> ordoData1955[key]
+            MissalRite.PRE_1955 -> ordoDataPre1955[key]
             else -> ordoData[key]
         }
     }
 
-    fun properForDate(date: java.time.LocalDate, rite: String = "1962"): MassProper? {
+    fun properForDate(date: java.time.LocalDate, rite: MissalRite = MissalRite.RITE_1962): MassProper? {
         val entry = ordoForDate(date, rite) ?: return null
         val key = entry.winnerKey
         if (entry.winner == "sanctoral") {
@@ -175,12 +176,11 @@ object ContentStore {
     fun hour(slug: String): Hour? =
         hours.firstOrNull { it.slug == slug }
 
-    fun hourForToday(slug: String): Hour? {
+    fun hourForToday(slug: String, rite: MissalRite = MissalRite.RITE_1962): Hour? {
         val template = hour(slug) ?: return null
         val ctx = LiturgicalContext.current()
         var assembled = officeAssembler.assemble(template, ctx)
 
-        val rite = "1962"
         val ordo = ordoForDate(ctx.date, rite)
         if (ordo != null) {
             if (ordo.winner == "sanctoral") {

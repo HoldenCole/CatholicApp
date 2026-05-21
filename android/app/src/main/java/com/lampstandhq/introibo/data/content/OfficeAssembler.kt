@@ -15,7 +15,7 @@ import com.lampstandhq.introibo.data.model.MarianAntiphonData
 class OfficeAssembler(
     private val weeklyPsalter: Map<String, Map<String, Hour.Part>>,
     private val seasonalHymns: Map<String, Map<String, Hour.Part>>,
-    private val temporalPropers: Map<String, Map<String, Hour.Part>> = emptyMap(),
+    internal val temporalPropers: Map<String, Map<String, Hour.Part>> = emptyMap(),
     private val marianAntiphons: List<MarianAntiphonData>,
 ) {
     fun assemble(template: Hour, context: LiturgicalContext): Hour {

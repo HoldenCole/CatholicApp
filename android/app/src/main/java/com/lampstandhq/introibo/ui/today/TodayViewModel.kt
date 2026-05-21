@@ -69,8 +69,10 @@ class TodayViewModel(application: Application) : AndroidViewModel(application) {
     // ---- Derived values ----
 
     fun todayProper(): MassProper? {
-        val slug = ctx.value.properSlug ?: return null
-        return ContentStore.proper(slug)
+        val context = ctx.value
+        // Use ordo-based lookup first (DivinumOfficium data), fall back to legacy
+        ContentStore.properForDate(context.date)?.let { return it }
+        return context.properSlug?.let { ContentStore.proper(it) }
     }
 
     fun seasonalNote(): String? = ctx.value.seasonalNote
