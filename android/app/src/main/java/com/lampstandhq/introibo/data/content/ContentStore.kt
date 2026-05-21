@@ -120,12 +120,16 @@ object ContentStore {
 
     val allPropers: List<MassProper> by lazy {
         val combined = mutableMapOf<String, MassProper>()
-        for (p in propers) combined[p.slug] = p
+        // DivinumOfficium data takes priority
         for ((key, entry) in missalTempora) {
-            entry.toMassProper(key)?.let { if (key !in combined) combined[key] = it }
+            entry.toMassProper(key)?.let { combined[key] = it }
         }
         for ((key, entry) in missalSanctoral) {
-            entry.toMassProper(key)?.let { if (key !in combined) combined[key] = it }
+            entry.toMassProper(key)?.let { combined[key] = it }
+        }
+        // Legacy propers.json fills gaps only
+        for (p in propers) {
+            if (p.slug !in combined) combined[p.slug] = p
         }
         combined.values.sortedBy { it.slug }
     }

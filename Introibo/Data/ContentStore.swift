@@ -126,16 +126,16 @@ final class ContentStore {
 
     private func buildAllPropers() {
         var combined: [String: MassProper] = [:]
-        for p in propers { combined[p.slug] = p }
+        // DivinumOfficium data takes priority
         for (key, entry) in missalTempora {
-            if let mp = entry.toMassProper(key: key), combined[key] == nil {
-                combined[key] = mp
-            }
+            if let mp = entry.toMassProper(key: key) { combined[key] = mp }
         }
         for (key, entry) in missalSanctoral {
-            if let mp = entry.toMassProper(key: key), combined[key] == nil {
-                combined[key] = mp
-            }
+            if let mp = entry.toMassProper(key: key) { combined[key] = mp }
+        }
+        // Legacy propers.json fills gaps only
+        for p in propers {
+            if combined[p.slug] == nil { combined[p.slug] = p }
         }
         allPropers = combined.values.sorted { $0.slug < $1.slug }
     }
