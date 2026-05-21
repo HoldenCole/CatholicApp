@@ -3173,6 +3173,48 @@
       "gloria": true,
       "credo": true,
       "preface": "Cord"
+    },
+    "introitus": {
+      "lat": "Réspice in me et miserére mei, Dómine: quóniam únicus et pauper sum ego: vide humilitátem meam et labórem meum: et dimítte ómnia peccáta mea, Deus meus. Ad te, Dómine, levávi ánimam meam: Deus meus, in te confído, non erubéscam. Réspice in me et miserére mei, Dómine: quóniam únicus et pauper sum ego: vide humilitátem meam et labórem meum: et dimítte ómnia peccáta mea, Deus meus.",
+      "eng": "Look toward me, and have pity on me, O Lord, for I am alone and afflicted. Put an end to my affliction and my suffering, and take away all my sins, O my God. To You, I lift up my soul, O Lord. In You, O my God, I trust; let me not be put to shame. Look toward me, and have pity on me, O Lord, for I am alone and afflicted. Put an end to my affliction and my suffering, and take away all my sins, O my God.",
+      "ref": "Ps 24:16; 24:18"
+    },
+    "oratio": {
+      "lat": "Protéctor in te sperántium, Deus, sine quo nihil est válidum, nihil sanctum: multíplica super nos misericórdiam tuam; ut, te rectóre, te duce, sic transeámus per bona temporália, ut non amittámus ætérna.",
+      "eng": "O God, protector of all who hope in You, without Whom nothing is strong, nothing is holy, increase Your mercy toward us, that, with Your guidance and direction we may so pass through the things of this temporal life as not to lose those of life eternal."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Humiliámini sub poténti manu Dei, ut vos exáltet in témpore visitatiónis: omnem sollicitúdinem vestram projiciéntes in eum, quóniam ipsi cura est de vobis. Sóbrii estote et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens circuit, quærens, quem dévoret: cui resístite fortes in fide: sciéntes eándem passiónem ei, quæ in mundo est, vestræ fraternitáti fíeri. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
+      "eng": "Lesson from the first letter of St. Peter the Apostle Beloved: Humble yourselves under the mighty hand of God, that He may exalt you in the time of visitation; cast all your anxiety upon Him, because He cares for you. Be sober, be watchful! For your adversary the devil, as a roaring lion, goes about seeking someone to devour. Resist him, steadfast in the faith, knowing that the same suffering befalls your brethren all over the world. But the God of all grace, Who has called us unto His eternal glory in Christ Jesus, will Himself, after we have suffered a little while, perfect, strengthen and establish us. To Him is the glory and the dominion forever and ever. Amen.",
+      "ref": "1 Pet 5:6-11"
+    },
+    "graduale": {
+      "lat": "Jacta cogitátum tuum in Dómino: et ipse te enútriet. Dum clamárem ad Dóminum, exaudívit vocem meam ab his, qui appropínquant mihi. Allelúja, allelúja. Deus judex justus, fortis et pátiens, numquid iráscitur per síngulos dies? Allelúja.",
+      "eng": "Cast your care upon the Lord, and He will support you. When I called upon the Lord, He heard my voice from those who war against me. Alleluia, alleluia. A just judge is God, strong and patient; is He angry every day? Alleluia.",
+      "ref": "Ps 54:23; 54:17; 54:19"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam In illo témpore: Erant appropinquántes ad Jesum publicáni et peccatóres, ut audírent illum. Et murmurábant pharisǽi et scribæ, dicéntes: Quia hic peccatóres recipit et mandúcat cum illis. Et ait ad illos parábolam istam, dicens: Quis ex vobis homo, qui habet centum oves: et si perdíderit unam ex illis, nonne dimíttit nonagínta novem in desérto, et vadit ad illam, quæ períerat, donec invéniat eam? Et cum invénerit eam, impónit in húmeros suos gaudens: et véniens domum, cónvocat amícos et vicínos, dicens illis: Congratulámini mihi, quia invéni ovem meam, quæ períerat? Dico vobis, quod ita gáudium erit in cœlo super uno peccatóre pœniténtiam agénte, quam super nonagínta novem justis, qui non índigent pœniténtia. Aut quæ múlier habens drachmas decem, si perdíderit drachmam unam, nonne accéndit lucérnam, et evérrit domum, et quærit diligénter, donec invéniat? Et cum invénerit, cónvocat amícas et vicínas, dicens: Congratulámini mihi, quia invéni drachmam, quam perdíderam? Ita dico vobis: gáudium erit coram Angelis Dei super uno peccatóre pœniténtiam agénte.",
+      "eng": "Continuation + of the Holy Gospel according to Luke At that time, the publicans and sinners were drawing near to Him to listen to Him. And the Pharisees and the Scribes murmured, saying, This man welcomes sinners and eats with them. But He spoke to them this parable, saying, What man of you having a hundred sheep, and losing one of them, does not leave the ninety-nine in the desert, and go after that which is lost, until he finds it? And when he has found it, he lays it upon his shoulders rejoicing. And on coming home he calls together his friends and neighbors, saying to them, 'Rejoice with me, because I have found my sheep that was lost.' I say to you that, even so, there will be joy in heaven over one sinner who repents, more then over ninety-nine just who have no need of repentance. Or what woman, having ten drachmas, if she loses one drachma, does not light a lamp and sweep the house and search carefully until she finds it? And when she has found it, she calls together her friends and neighbors, saying, 'Rejoice with me, for I have found the drachma that I had lost.' Even so, I say to you, there will be joy among the angels of God over one sinner who repents.",
+      "ref": "Luc 15:1-10"
+    },
+    "offertorium": {
+      "lat": "Sperent in te omnes, qui novérunt nomen tuum, Dómine: quóniam non derelínquis quæréntes te: psállite Dómino, qui hábitat in Sion: quóniam non est oblítus oratiónem páuperum.",
+      "eng": "They trust in You who cherish Your name, O Lord, for You forsake not those who seek You. Sing praise to the Lord enthroned in Sion, for He has not forgotten the cry of the afflicted.",
+      "ref": "Ps 9:11-13"
+    },
+    "secreta": {
+      "lat": "Réspice, Dómine, múnera supplicántis Ecclésiæ: et salúti credéntium perpétua sanctificatióne suménda concéde.",
+      "eng": "Look favorably, O Lord, upon the offerings of Your prayerful Church and grant that those who believe may, in continual holiness, partake of them for their salvation."
+    },
+    "communio": {
+      "lat": "Dico vobis: gáudium est Angelis Dei super uno peccatóre pœniténtiam agénte.",
+      "eng": "I say to you: there is joy among the angels of God over one sinner who repents.",
+      "ref": "Luc 15:10"
+    },
+    "postcommunio": {
+      "lat": "Sancta tua nos, Dómine, sumpta vivíficent: et misericórdiæ sempitérnæ prǽparent expiátos.",
+      "eng": "May the holy things of which we have partaken bring us to life and prepare for Your everlasting mercy those whom You have cleansed from sin."
     }
   },
   "pent03-1": {
@@ -4747,6 +4789,26 @@
     "postcommunio": {
       "lat": "Concéde nobis, quǽsumus, Dómine: ut per hæc sacraménta quæ súmpsimus, quidquid in nostra mente vitiósum est, ipsorum medicatiónis dono curétur.",
       "eng": "Grant us, we beseech You, O Lord, that all the evil in our hearts may be cured by the healing power of the sacrament we have received."
+    },
+    "introitus": {
+      "lat": "Dicit Dóminus: Ego cógito cogitatiónes pacis, et non afflictiónis: invocábitis me, et ego exáudiam vos: et redúcam captivitátem vestram de cunctis locis. Benedixísti, Dómine, terram tuam: avertísti captivitátem Jacob. Dicit Dóminus: Ego cógito cogitatiónes pacis, et non afflictiónis: invocábitis me, et ego exáudiam vos: et redúcam captivitátem vestram de cunctis locis.",
+      "eng": "The Lord says: \"I think thoughts of peace, and not of affliction. You shall call upon Me, and I will hear you; and I will bring back your captivity from all places.\" You have favored, O Lord, Your land; You have restored the well-being of Jacob. The Lord says: \"I think thoughts of peace, and not of affliction. You shall call upon Me, and I will hear you; and I will bring back your captivity from all places.\"",
+      "ref": "Jer 29:11; 29:12; 29:14"
+    },
+    "graduale": {
+      "lat": "Liberásti nos, Dómine, ex affligéntibus nos: et eos, qui nos odérunt, confudísti. In Deo laudábimur tota die, et in nómine tuo confitébimur in sǽcula. Allelúja, allelúja. De profúndis clamávi ad te, Dómine: Dómine, exáudi oratiónem meam. Allelúja.",
+      "eng": "You saved us, O Lord, from our foes, and those who hated us You put to shame. In God we gloried day by day; Your name we praised always. Alleluia, alleluia. Out of the depths I have cried to thee, O Lord: Lord, hear my prayer. Alleluia.",
+      "ref": "Ps 43:8-9"
+    },
+    "offertorium": {
+      "lat": "De profúndis clamávi ad te, Dómine: Dómine, exáudi oratiónem meam: de profúndis clamávi ad te, Dómine.",
+      "eng": "Out of the depths I cry to You, O Lord; Lord, hear my prayer! Out of the depths I cry to You, O Lord.",
+      "ref": "Ps 129:1-2"
+    },
+    "communio": {
+      "lat": "Amen, dico vobis, quidquid orántes pétitis, crédite, quia accipiétis, et fiet vobis.",
+      "eng": "Amen I say to you, all things whatever you ask for in prayer, believe that you shall receive, and it shall be done to you.",
+      "ref": "Marc 11:24"
     }
   },
   "pent24-1": {
@@ -4956,6 +5018,28 @@
       "lat": "Amen, dico vobis, quidquid orántes pétitis, crédite, quia accipiétis, et fiet vobis.",
       "eng": "Amen I say to you, all things whatever you ask for in prayer, believe that you shall receive, and it shall be done to you.",
       "ref": "Marc 11:24"
+    },
+    "oratio": {
+      "lat": "Omnípotens sempitérne Deus, infirmitatem nostram propítius réspice: atque, ad protegéndum nos, déxteram tuæ majestátis exténde.",
+      "eng": "Almighty and everlasting God, look with favor upon our weakness, and stretch forth the right hand of Your majesty to help and defend us."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Romános. Fratres: Nolíte esse prudéntes apud vosmetípsos: nulli malum pro malo reddéntes: providéntes bona non tantum coram Deo, sed étiam coram ómnibus homínibus. Si fíeri potest, quod ex vobis est, cum ómnibus homínibus pacem habéntes: Non vosmetípsos defendéntes, caríssimi, sed date locum iræ. Scriptum est enim: Mihi vindícta: ego retríbuam, dicit Dóminus. Sed si esuríerit inimícus tuus, ciba illum: si sitit, potum da illi: hoc enim fáciens, carbónes ignis cóngeres super caput ejus. Noli vinci a malo, sed vince in bono malum.",
+      "eng": "Lesson from the letter of St. Paul the Apostle to the Romans Brethren: Be not wise in your own conceits. To no man render evil for evil, but provide good things not only in the sight of God, but also in the sight of all men. If it be possible, as far as in you lies, be at peace with all men. Do not avenge yourselves, beloved, but give place to the wrath, for it is written, Vengeance is Mine: I will repay, says the Lord. But, If your enemy is hungry, give him food; if he is thirsty, give him drink; for by so doing you will heap coals of fire upon his head. Be not overcome by evil, but overcome evil with good.",
+      "ref": "Rom 12:16-21"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum. In illo témpore: Cum descendísset Jesus de monte, secútæ sunt eum turbæ multæ: et ecce, leprósus véniens adorábat eum, dicens: Dómine, si vis, potes me mundáre. Et exténdens Jesus manum, tétigit eum, dicens: Volo. Mundáre. Et conféstim mundáta est lepra ejus. Et ait illi Jesus: Vide, némini díxeris: sed vade, osténde te sacerdóti, et offer munus, quod præcépit Móyses, in testimónium illis. Cum autem introísset Caphárnaum, accéssit ad eum centúrio, rogans eum et dicens: Dómine, puer meus jacet in domo paralýticus, et male torquetur. Et ait illi Jesus: Ego véniam, et curábo eum. Et respóndens centúrio, ait: Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur puer meus. Nam et ego homo sum sub potestáte constitútus, habens sub me mílites, et dico huic: Vade, et vadit; et alii: Veni, et venit; et servo meo: Fac hoc, et facit. Audiens autem Jesus, mirátus est, et sequéntibus se dixit: Amen, dico vobis, non inveni tantam fidem in Israël. Dico autem vobis, quod multi ab Oriénte et Occidénte vénient, et recúmbent cum Abraham et Isaac et Jacob in regno cœlórum: fílii autem regni ejiciéntur in ténebras exterióres: ibi erit fletus et stridor déntium. Et dixit Jesus centurióni: Vade et, sicut credidísti, fiat tibi. Et sanátus est puer in illa hora.",
+      "eng": "Continuation of the Holy Gospel according to Matthew At that time, when Jesus had come down from the mountain, great crowds followed Him. And behold, a leper came up and worshipped Him, saying, Lord, if You will, You can make me clean. And stretching forth His hand Jesus touched him, saying, I will; be made clean. And immediately his leprosy was cleansed. And Jesus said to him, See that you tell no one; but go, show yourself to the priest, and offer the gift that Moses commanded, for a witness to them. Now when He had entered Capharnaum, there came to Him a centurion who entreated Him, saying, Lord, my servant is lying sick in the house, paralyzed, and is grievously afflicted. Jesus said to him, I will come and cure him. But in answer the centurion said, Lord, I am not worthy that You should come under my roof; but only say the word, and my servant will be healed. For I too am a man subject to authority, and have soldiers subject to me; and I say to one, 'Go,' and he goes; and to another, 'Come,' and he comes; and to my servant, 'Do this,' and he does it. And when Jesus heard this, He marveled, and said to those who were following Him, Amen I say to you, I have not found such great faith in Israel. And I tell you that many will come from the east and from the west and will feast with Abraham and Isaac and Jacob in the kingdom of heaven, but the children of the kingdom will be put forth into the darkness outside; there will be the weeping, and the gnashing of teeth. Then Jesus said to the centurion, Go your way; as you have believed, so be it done to you. And the servant was healed in that hour.",
+      "ref": "Matt 8:1-13"
+    },
+    "secreta": {
+      "lat": "Hæc hóstia, Dómine, quǽsumus, emúndet nostra delícta: et, ad sacrifícium celebrándum, subditórum tibi córpora mentésque sanctíficet.",
+      "eng": "May this offering, O Lord, we beseech You, wipe away our transgressions, and make holy the minds and bodies of Your servants for celebrating this sacrifice."
+    },
+    "postcommunio": {
+      "lat": "Quos tantis, Dómine, largíris uti mystériis: quǽsumus; ut efféctibus nos eórum veráciter aptáre dignéris.",
+      "eng": "O Lord, as You grant us to use this great sacrament, deign, we beseech You, to make us truly worthy of its fruits."
     }
   },
   "pentepi3-1": {
@@ -5009,6 +5093,28 @@
       "lat": "Amen, dico vobis, quidquid orántes pétitis, crédite, quia accipiétis, et fiet vobis.",
       "eng": "Amen I say to you, all things whatever you ask for in prayer, believe that you shall receive, and it shall be done to you.",
       "ref": "Marc 11:24"
+    },
+    "oratio": {
+      "lat": "Deus, qui nos, in tantis perículis constitútos, pro humána scis fragilitáte non posse subsístere: da nobis salútem mentis et córporis; ut ea, quæ pro peccátis nostris pátimur, te adjuvánte vincámus.",
+      "eng": "O God, You Who know that our human frailty cannot stand fast against the great dangers that beset us, grant us health of mind and body, that with your help we may overcome what we suffer on account of our sins."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Romános. Fratres: Némini quidquam debeátis, nisi ut ínvicem diligátis: qui enim díligit próximum, legem implévit. Nam: Non adulterábis, Non occídes, Non furáberis, Non falsum testimónium dices, Non concupísces: et si quod est áliud mandátum, in hoc verbo instaurátur: Díliges próximum tuum sicut teípsum. Diléctio próximi malum non operátur. Plenitúdo ergo legis est diléctio.",
+      "eng": "Lesson from the letter of St. Paul the Apostle to the Romans Brethren: Owe no man anything except to love one another; for he who loves his neighbor has fulfilled the Law. For You shall not commit adultery. You shall not kill. You shall not steal. You shall not bear false witness. You shall not covet; and if there is any other commandment, it is summed up in this saying, You shall love your neighbor as yourself. Love does no evil to a neighbor. Love therefore is the fulfillment of the Law.",
+      "ref": "Rom 13:8-10"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum. In illo témpore: Ascendénte Jesu in navículam, secúti sunt eum discípuli ejus: et ecce, motus magnus factus est in mari, ita ut navícula operirétur flúctibus, ipse vero dormiébat. Et accessérunt ad eum discípuli ejus, et suscitavérunt eum, dicéntes: Dómine, salva nos, perímus. Et dicit eis Jesus: Quid tímidi estis, módicæ fídei? Tunc surgens, imperávit ventis et mari, et facta est tranquíllitas magna. Porro hómines miráti sunt, dicéntes: Qualis est hic, quia venti et mare obœ́diunt ei?",
+      "eng": "Continuation of the Holy Gospel according to St. Matthew At that time, Jesus got into a boat, and His disciples followed Him. And behold, there arose a great storm on the sea, so that the boat was covered by the waves; but He was asleep. So they came and woke Him, saying, Lord, save us! we are perishing! But He said to them, Why are you fearful, O you of little faith? Then He arose and rebuked the wind and the sea, and there came a great calm. And the men marvelled, saying, What manner of Man is this, that even the wind and the sea obey Him?",
+      "ref": "Matt 8:23-27"
+    },
+    "secreta": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut hujus sacrifícii munus oblátum fragilitátem nostram ab omni malo purget semper et múniat.",
+      "eng": "Grant, we beseech You, almighty God, that the offering of this sacrifice may always cleanse and strengthen the weakness of our nature."
+    },
+    "postcommunio": {
+      "lat": "Múnera tua nos, Deus, a delectatiónibus terrenis expédiant: et cœléstibus semper instáurent aliméntis.",
+      "eng": "May Your gifts, O God, free us from the attraction of earthly pleasures and give us new strength through Your heavenly nourishment."
     }
   },
   "pentepi4-1": {
@@ -5062,6 +5168,28 @@
       "lat": "Amen, dico vobis, quidquid orántes pétitis, crédite, quia accipiétis, et fiet vobis.",
       "eng": "Amen I say to you, all things whatever you ask for in prayer, believe that you shall receive, and it shall be done to you.",
       "ref": "Marc 11:24"
+    },
+    "oratio": {
+      "lat": "Famíliam tuam, quǽsumus, Dómine, contínua pietáte custódi: ut, quæ in sola spe grátiæ cœléstis innítitur, tua semper protectióne muniátur.",
+      "eng": "O Lord, we beseech You to keep Your household continually under Your mercy: that as it leans only upon the hope of Your heavenly grace, so it may always be protected by Your mighty power."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Colossénses Fratres: Indúite vos sicut elécti Dei, sancti et dilécti, víscera misericórdiæ, benignitátem, humilitátem, modéstiam, patiéntiam: supportántes ínvicem, et donántes vobismetípsis, si quis advérsus áliquem habet querélam: sicut et Dóminus donávit vobis, ita et vos. Super ómnia autem hæc caritátem habéte, quod est vínculum perfectiónis: et pax Christi exsúltet in córdibus vestris, in qua et vocáti estis in uno córpore: et grati estóte. Verbum Christi hábitet in vobis abundánter, in omni sapiéntia, docéntes et commonéntes vosmetípsos psalmis, hymnis et cánticis spirituálibus, in grátia cantántes in córdibus vestris Deo. Omne, quodcúmque fácitis in verbo aut in ópere, ómnia in nómine Dómini Jesu Christi, grátias agéntes Deo et Patri per ipsum.",
+      "eng": "Lesson from the letter of St. Paul the Apostle to the Colossians Brethren: Put on, as God's chosen ones, holy and beloved, a heart of mercy, kindness, humility, meekness, patience. Bear with one another and forgive one another, if anyone has a grievance against any other; even as the Lord has forgiven you, so also do you forgive. But above all these things have charity, which is the bond of perfection. And may the peace of Christ reign in your hearts; unto that peace, indeed, you were called in one body. Show yourselves thankful. Let the word of Christ dwell in you abundantly: in all wisdom teach and admonish one another by psalms, hymns and spiritual songs, singing in your hearts to God by His grace. Whatever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God the Father through Jesus Christ our Lord.",
+      "ref": "Col 3:12-17"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Dixit Jesus turbis parábolam hanc: Símile factum est regnum cœlórum hómini, qui seminávit bonum semen in agro suo. Cum autem dormírent hómines, venit inimícus ejus, et superseminávit zizánia in médio trítici, et ábiit. Cum autem crevísset herba et fructum fecísset, tunc apparuérunt et zizánia. Accedéntes autem servi patrisfamílias, dixérunt ei: Dómine, nonne bonum semen seminásti in agro tuo? Unde ergo habet zizánia? Et ait illis: Inimícus homo hoc fecit. Servi autem dixérunt ei: Vis, imus, et collígimus ea? Et ait: Non: ne forte colligéntes zizánia eradicétis simul cum eis et tríticum. Sínite utráque créscere usque ad messem, et in témpore messis dicam messóribus: Collígite primum zizánia, et alligáte ea in fascículos ad comburéndum, tríticum autem congregáte in hórreum meum.",
+      "eng": "Continuation of the Holy Gospel according to St. Matthew At that time, Jesus spoke this parable to the crowds: The kingdom of heaven is like a man who sowed good seed in his field; but while men were asleep, his enemy came and sowed weeds among the wheat, and went away. And when the blade sprang up and brought forth fruit, then the weeds appeared as well. And the servants of the householder came and said to him, 'Sir, did you not sow good seed in your field? How then does it have weeds?' He said to them, 'An enemy has done this.' And the servants said to him, 'Will you have us go and gather them up?' 'No,' he said, 'lest in gathering the weeds you root up the wheat along with them. Let both grow together until the harvest; and at harvest time I will say to the reapers: Gather up the weeds first, and bind them in bundles to burn; but gather the wheat into my barns.'",
+      "ref": "Matt 13:24-30"
+    },
+    "secreta": {
+      "lat": "Hóstias tibi, Dómine, placatiónis offérimus: ut et delícta nostra miserátus absólvas, et nutántia corda tu dírigas.",
+      "eng": "We offer You, O Lord, this sacrifice of atonement, that You would mercifully absolve our sins and direct our faltering hearts."
+    },
+    "postcommunio": {
+      "lat": "Quǽsumus, omnípotens Deus: ut illíus salutáris capiámus efféctum, cujus per hæc mystéria pignus accépimus.",
+      "eng": "We pray You, almighty God, that we may obtain that salvation whose pledge we have received in this divine sacrament."
     }
   },
   "pentepi5-1": {
@@ -5115,6 +5243,28 @@
       "lat": "Amen, dico vobis, quidquid orántes pétitis, crédite, quia accipiétis, et fiet vobis.",
       "eng": "Amen I say to you, all things whatever you ask for in prayer, believe that you shall receive, and it shall be done to you.",
       "ref": "Marc 11:24"
+    },
+    "oratio": {
+      "lat": "Præsta, quǽsumus, omnípotens Deus: ut, semper rationabília meditántes, quæ tibi sunt plácita, et dictis exsequámur et factis.",
+      "eng": "Grant us, we beseech You, almighty God, ever to think of spiritual things and in every word and work always to do what is well pleasing in Your sight."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Thessalonicénses Fratres: Grátias ágimus Deo semper pro ómnibus vobis, memóriam vestri faciéntes in oratiónibus nostris sine intermissióne, mémores óperis fídei vestræ, et labóris, et caritátis, et sustinéntiæ spei Dómini nostri Jesu Christi, ante Deum et Patrem nostrum: sciéntes, fratres, dilécti a Deo. electiónem vestram: quia Evangélium nostrum non fuit ad vos in sermóne tantum, sed et in virtúte, et in Spíritu Sancto, et in plenitúdine multa, sicut scitis quales fuérimus in vobis propter vos. Et vos imitatóres nostri facti estis, et Dómini, excipiéntes verbum in tribulatióne multa, cum gáudio Spíritus Sancti: ita ut facti sitis forma ómnibus credéntibus in Macedónia et in Achája. A vobis enim diffamátus est sermo Dómini, non solum in Macedónia et in Achája, sed et in omni loco fides vestra, quæ est ad Deum, profécta est, ita ut non sit nobis necésse quidquam loqui. Ipsi enim de nobis annúntiant, qualem intróitum habuérimus ad vos: et quómodo convérsi estis ad Deum a simulácris, servíre Deo vivo et vero, et exspectáre Fílium ejus de cœlis quem suscitávit ex mórtuis Jesum, qui erípuit nos ab ira ventúra.",
+      "eng": "Lesson from the first letter of St. Paul the Apostle to the Thessalonians Brethren: We give thanks to God always for you all, continually making a remembrance of you in our prayers; being mindful before God our Father of your work of faith, and labor, and charity, and your enduring hope in our Lord Jesus Christ. We know, brethren, beloved of God, how you were chosen. For our Gospel was not delivered to you in word only, but in power also, and in the Holy Spirit, and in much fullness, as indeed you know what manner of men we have been among you for your sakes. And you became imitators of us and of the Lord, receiving the word in great tribulation, with joy of the Holy Spirit, so that you became a pattern to all the believers in Macedonia and in Achaia. For from you the word of the Lord has been spread abroad, not only in Macedonia and Achaia, but in every place your faith in God has gone forth, so that we need say nothing further. For they themselves report concerning us how we entered among you, and how you turned to God from idols, to serve the living and true God, and to await from heaven Jesus, His Son, Whom He raised from the dead, Who has delivered us from the wrath to come.",
+      "ref": "1 Thess 1:2-10"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum. In illo témpore: Dixit Jesus turbis parábolam hanc: Símile est regnum cœlórum grano sinápis, quod accípiens homo seminávit in agro suo: quod mínimum quidem est ómnibus semínibus: cum autem créverit, majus est ómnibus oléribus, et fit arbor, ita ut vólucres cœli véniant et hábitent in ramis ejus. Aliam parábolam locútus est eis: Símile est regnum cœlórum ferménto, quod accéptum múlier abscóndit in farínæ satis tribus, donec fermentátum est totum. Hæc ómnia locútus est Jesus in parábolis ad turbas: et sine parábolis non loquebátur eis: ut implerétur quod dictum erat per Prophétam dicéntem: Apériam in parábolis os meum, eructábo abscóndita a constitutióne mundi.",
+      "eng": "Continuation of the Holy Gospel according to St. Matthew At that time, Jesus spoke this parable to the crowds: The kingdom of heaven is like a grain of mustard seed, which a man took and sowed in his field. This indeed is the smallest of all the seeds; but when it grows up it is larger than any herb and becomes a tree, so that the birds of the air come and dwell in its branches. He told them another parable: The kingdom of heaven is like leaven, which a woman took and buried in three measures of flour, until all of it was leavened. All these things Jesus spoke to the crowds in parables, and without parables he did not speak to them; that what was spoken by the prophet might be fulfilled, I will open My mouth in parables, I will utter things hidden since the foundation of the world.",
+      "ref": "Matt 13:31-35"
+    },
+    "secreta": {
+      "lat": "Hæc nos oblátio, Deus, mundet, quǽsumus, et rénovet, gubérnet et prótegat.",
+      "eng": "May this offering, O God, we beseech You, cleanse and renew us, govern and protect us."
+    },
+    "postcommunio": {
+      "lat": "Cœléstibus, Dómine, pasti delíciis: quǽsumus; ut semper éadem, per quæ veráciter vívimus, appétimus.",
+      "eng": "Nourished by Your heavenly food, O Lord, we beseech You that we may always strive after those things that give us true life."
     }
   },
   "pentepi6-1": {
