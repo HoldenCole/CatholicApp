@@ -27,6 +27,7 @@ final class ContentStore {
     private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], temporalPropers: [:], marianAntiphons: [])
     private var missalTempora:   [String: MissalProperEntry] = [:]
     private var missalSanctoral: [String: MissalProperEntry] = [:]
+    private var sanctoralPropers: [String: [String: Hour.Part]] = [:]
     private var ordoData:        [String: OrdoEntry] = [:]
     private var ordoData1955:    [String: OrdoEntry] = [:]
     private var ordoDataPre1955: [String: OrdoEntry] = [:]
@@ -48,6 +49,7 @@ final class ContentStore {
         canonVariants     = load("canon_variants",     as: [String: [String: [String: String]]].self) ?? [:]
         missalTempora     = load("missal_tempora",    as: [String: MissalProperEntry].self) ?? [:]
         missalSanctoral   = load("missal_sanctoral",  as: [String: MissalProperEntry].self) ?? [:]
+        sanctoralPropers  = load("sanctoral_propers", as: [String: [String: Hour.Part]].self) ?? [:]
         ordoData          = load("ordo",              as: [String: OrdoEntry].self) ?? [:]
         ordoData1955      = load("ordo_1955",         as: [String: OrdoEntry].self) ?? [:]
         ordoDataPre1955   = load("ordo_pre1955",      as: [String: OrdoEntry].self) ?? [:]
@@ -74,7 +76,37 @@ final class ContentStore {
 
     func hourForToday(slug: String) -> Hour? {
         guard let template = hour(slug: slug) else { return nil }
-        return officeAssembler.assemble(template: template, context: .current())
+        let ctx = LiturgicalContext.current()
+        var assembled = officeAssembler.assemble(template: template, context: ctx)
+
+        // Apply sanctoral overrides (collect, antiphons) from the ordo winner
+        let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? MissalRite.rite1962.rawValue
+        let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
+        if let ordo = ordoForDate(ctx.date, rite: rite),
+           ordo.winner == "sanctoral",
+           let saint = sanctoralPropers[ordo.winnerKey] {
+            assembled = applySanctoralOverrides(assembled, saint: saint)
+        }
+
+        return assembled
+    }
+
+    private func applySanctoralOverrides(_ hour: Hour, saint: [String: Hour.Part]) -> Hour {
+        let updatedParts = hour.parts.map { part -> Hour.Part in
+            guard let key = part.variationKey else { return part }
+            if let override = saint[key] { return override }
+            // Map generic keys: "collect" in sanctoral → any collect variationKey
+            if part.type == "collect", let collect = saint["collect"] {
+                return collect
+            }
+            return part
+        }
+        return Hour(
+            slug: hour.slug, name: hour.name, eng: hour.eng,
+            time: hour.time, hour: hour.hour, minute: hour.minute,
+            glyph: hour.glyph, order: hour.order, intro: hour.intro,
+            parts: updatedParts
+        )
     }
 
     func mysterySet(slug: String) -> MysterySetData? {

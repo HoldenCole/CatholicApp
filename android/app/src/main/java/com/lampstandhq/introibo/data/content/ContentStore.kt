@@ -66,6 +66,7 @@ object ContentStore {
 
     private var missalTempora: Map<String, MissalProperEntry> = emptyMap()
     private var missalSanctoral: Map<String, MissalProperEntry> = emptyMap()
+    private var sanctoralPropers: Map<String, Map<String, Hour.Part>> = emptyMap()
     private var ordoData: Map<String, OrdoEntry> = emptyMap()
     private var ordoData1955: Map<String, OrdoEntry> = emptyMap()
     private var ordoDataPre1955: Map<String, OrdoEntry> = emptyMap()
@@ -94,6 +95,7 @@ object ContentStore {
         propers          = load("propers.json")            ?: emptyList()
         missalTempora    = load("missal_tempora.json")    ?: emptyMap()
         missalSanctoral  = load("missal_sanctoral.json")  ?: emptyMap()
+        sanctoralPropers = load("sanctoral_propers.json") ?: emptyMap()
         ordoData         = load("ordo.json")              ?: emptyMap()
         ordoData1955     = load("ordo_1955.json")         ?: emptyMap()
         ordoDataPre1955  = load("ordo_pre1955.json")      ?: emptyMap()
@@ -175,7 +177,28 @@ object ContentStore {
 
     fun hourForToday(slug: String): Hour? {
         val template = hour(slug) ?: return null
-        return officeAssembler.assemble(template, LiturgicalContext.current())
+        val ctx = LiturgicalContext.current()
+        var assembled = officeAssembler.assemble(template, ctx)
+
+        val rite = "1962" // TODO: read from settings
+        val ordo = ordoForDate(ctx.date, rite)
+        if (ordo != null && ordo.winner == "sanctoral") {
+            val saint = sanctoralPropers[ordo.winnerKey]
+            if (saint != null) {
+                assembled = applySanctoralOverrides(assembled, saint)
+            }
+        }
+        return assembled
+    }
+
+    private fun applySanctoralOverrides(hour: Hour, saint: Map<String, Hour.Part>): Hour {
+        val updatedParts = hour.parts.map { part ->
+            val key = part.variationKey
+            if (key != null && saint.containsKey(key)) return@map saint[key]!!
+            if (part.type == "collect" && saint.containsKey("collect")) return@map saint["collect"]!!
+            part
+        }
+        return hour.copy(parts = updatedParts)
     }
 
     fun mysterySet(slug: String): MysterySetData? =
