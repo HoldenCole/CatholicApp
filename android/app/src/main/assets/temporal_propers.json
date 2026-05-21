@@ -60,7 +60,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In illa die * stillábunt montes dulcédinem, et colles fluent lac et mel, allelúja.",
-      "eng": "In that day * the mountains shall drop down sweetness, and the hills shall flow with milk and honey, alleluia.",
+      "eng": "In that day * the mountains shall drop down sweet wine, and the hills shall flow with milk and honey. Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
@@ -95,7 +95,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In illa die * stillábunt montes dulcédinem, et colles fluent lac et mel, allelúja.",
-      "eng": "In that day * the mountains shall drop down sweetness, and the hills shall flow with milk and honey, alleluia.",
+      "eng": "In that day * the mountains shall drop down sweet wine, and the hills shall flow with milk and honey. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
@@ -125,6 +125,13 @@
       "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
       "eng": "Behold, a great Prophet * shall arise, and He shall build up a new Jerusalem. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Rom 13:11)",
+      "lat": "Fratres: Hora est jam nos de somno súrgere: nunc enim própior est nostra salus, quam cum credídimus.",
+      "eng": "And that knowing the season; that it is now the hour for us to rise from sleep. For now our salvation is nearer than when we believed.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "adv1-1": {
@@ -494,7 +501,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce in núbibus cæli * Dóminus véniet cum potestáte magna, allelúja.",
-      "eng": "Behold, the Lord shall come in the clouds of heaven * with great power, alleluia.",
+      "eng": "Behold, the Lord * cometh in the clouds of heaven with great power. Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
@@ -529,7 +536,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Ecce in núbibus cæli * Dóminus véniet cum potestáte magna, allelúja.",
-      "eng": "Behold, the Lord shall come in the clouds of heaven * with great power, alleluia.",
+      "eng": "Behold, the Lord * cometh in the clouds of heaven with great power. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
@@ -559,6 +566,13 @@
       "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
       "eng": "Behold, our Lord * cometh with power, and He shall lighten the eyes of His servants. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Rom 15:4)",
+      "lat": "Fratres: Quæcúmque scripta sunt, ad nostram doctrínam scripta sunt: ut per patiéntiam, et consolatiónem Scripturárum spem habeámus.",
+      "eng": "Brothers: For what things soever were written, were written for our learning: that through patience and the comfort of the scriptures, we might have hope.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "adv2-1": {
@@ -928,7 +942,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
-      "eng": "The Lord shall come * and shall not delay, and shall bring to light the hidden things of darkness, and shall manifest himself to all nations, alleluia.",
+      "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
@@ -963,7 +977,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
-      "eng": "The Lord shall come * and shall not delay, and shall bring to light the hidden things of darkness, and shall manifest himself to all nations, alleluia.",
+      "eng": "The Lord will come, * and will not tarry; He both will bring to light the hidden things of darkness, and will make Himself manifest to all people. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
@@ -993,6 +1007,13 @@
       "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
       "eng": "We should live * righteously and godly, looking for that blessed hope and the coming of the Lord.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Phil 4:4-5)",
+      "lat": "Fratres: Gaudéte in Dómino semper: íterum dico, gaudéte. Modéstia vestra nota sit ómnibus homínibus: Dóminus enim prope est.",
+      "eng": "Brothers: Rejoice in the Lord always; again, I say, rejoice. Let your modesty be known to all men. The Lord is nigh.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "adv3-1": {
@@ -1355,7 +1376,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
-      "eng": "Sound the trumpet * in Sion, for the day of the Lord is near: behold, he shall come to save us, alleluia, alleluia.",
+      "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
@@ -1390,7 +1411,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.",
-      "eng": "Sound the trumpet * in Sion, for the day of the Lord is near: behold, he shall come to save us, alleluia, alleluia.",
+      "eng": "Blow ye the trumpet * in Zion, for the day of the Lord is nigh at hand: behold, He cometh to save us! Alleluia, Alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
@@ -1420,6 +1441,13 @@
       "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
       "eng": "Thine Almighty Word, * O Lord, shall leap down out of thy royal throne. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 4:1-2)",
+      "lat": "Fratres: Sic nos exístimet homo ut minístros Christi, et dispensatóres mysteriórum Dei. Hic jam quǽritur inter dispensatóres, ut fidélis quis inveniátur.",
+      "eng": "Brothers: Let a man so account of us as of the ministers of Christ, and the dispensers of the mysteries of God. Here now it is required among the dispensers, that a man be found faithful.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "adv4-1": {
@@ -1705,7 +1733,7 @@
       "type": "capitulum",
       "label": "Capitulum (Phil 2:7)",
       "lat": "Semetípsum exinanívit formam servi accípiens, in similitúdinem hóminum factus, et hábitu invéntus ut homo.",
-      "eng": "For you are bought with a great price. Glorify and bear God in your body.",
+      "eng": "But emptied himself, taking the form of a servant, being made in the likeness of men, and in habit found as a man.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -1823,6 +1851,13 @@
       "lat": "Erat Pater ejus * et Mater mirántes super his quæ dicebántur de illo.;;147",
       "eng": "His father * and mother were wondering at those things which were spoken concerning him.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Luc 2:51)",
+      "lat": "Descéndit Jesus cum María et Joseph, et venit Názareth: et erat súbditus illis.",
+      "eng": "Jesus went down with Mary and Joseph, and came to Nazareth, and was subject to them.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "epi2-0": {
@@ -1924,7 +1959,7 @@
       "type": "capitulum",
       "label": "Capitulum (Gal 4:7)",
       "lat": "Itaque jam non est servus, sed fílius: quod si fílius, et hæres per Deum.",
-      "eng": "For you are bought with a great price. Glorify and bear God in your body.",
+      "eng": "Therefore now he is not a servant, but a son. And if a son, an heir also through God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -2042,6 +2077,13 @@
       "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
       "eng": "Of the fruit * of thy body will I set upon thy throne.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Gal 4:1-2)",
+      "lat": "Fratres: Quanto témpore heres párvulus est, nihil differt a servo, cum sit dóminus ómnium: sed sub tutóribus et actóribus est usque ad præfínitum tempus a patre.",
+      "eng": "Brothers: As long as the heir is a child, he differeth nothing from a servant, though he be lord of all; But is under tutors and governors until the time appointed by the father.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "nat2-0": {
@@ -2063,7 +2105,7 @@
       "type": "capitulum",
       "label": "Capitulum (Col 3:17)",
       "lat": "Omne quodcúmque fácitis in verbo, aut in ópere: ómnia in nómine Dómini Jesu Christi fácite, grátias agéntes Deo et Patri per ipsum.",
-      "eng": "For you are bought with a great price. Glorify and bear God in your body.",
+      "eng": "All whatsoever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God and the Father by him.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -2172,6 +2214,13 @@
       "lat": "Sacrificábo * hóstiam laudis, et nomen Dómini invocábo.",
       "eng": "I will offer * the sacrifice of thanksgiving, and will call upon the Name of the Lord.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Phil 2:8-10)",
+      "lat": "Fratres: Christus humiliávit semetípsum, factus obédiens usque ad mortem, mortem autem crucis. Propter quod et Deus exaltávit illum, et donávit illi nomen, quod est super omne nomen, ut in nómine Jesu omne genu flectátur.",
+      "eng": "He humbled himself, becoming obedient unto death, even to the death of the cross. For which cause God also hath exalted him, and hath given him a name which is above all names: That in the name of Jesus every knee should bow, of those that are in heaven, on earth, and under the earth.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "nat26": {
@@ -2735,21 +2784,21 @@
       "type": "capitulum",
       "label": "Capitulum (Heb 1:1-2)",
       "lat": "Multifáriam, multísque modis olim Deus loquens pátribus in prophétis: novíssime diébus istis locútus est nobis in Fílio, quem constítuit herédem universórum, per quem fecit et sǽcula.",
-      "eng": "God, who, at sundry times and in diverse manners, spoke in times past to the fathers by the prophets, last of all, in these days hath spoken to us by his Son, whom he hath appointed heir of all things, by whom also he made the world.",
+      "eng": "Brothers: As long as the heir is a child, he differeth nothing from a servant, though he be lord of all; But is under tutors and governors until the time appointed by the father.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Heb 1:10)",
       "lat": "Et: Tu in princípio, Dómine, terram fundásti: et ópera mánuum tuárum sunt cæli.",
-      "eng": "And: Thou in the beginning, O Lord, didst found the earth: and the works of thy hands are the heavens.",
+      "eng": "But when the fulness of the time was come, God sent his Son, made of a woman, made under the law: That he might redeem them who were under the law: that we might receive the adoption of sons.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Heb 1:11-12)",
       "lat": "Ipsi períbunt, tu autem permanébis; et omnes sicut vestiméntum veteráscent: et velut amíctum mutábis eos, et mutabúntur: tu autem idem ipse es, et anni tui non defícient.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Therefore now he is not a servant, but a son. And if a son, an heir also through God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -2867,6 +2916,13 @@
       "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
       "eng": "Of the fruit * of thy body will I set upon thy throne.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Gal 4:1-2)",
+      "lat": "Fratres: Quanto témpore heres párvulus est, nihil differt a servo, cum sit dóminus ómnium: sed sub tutóribus et actóribus est usque ad præfínitum tempus a patre.",
+      "eng": "Brothers: As long as the heir is a child, he differeth nothing from a servant, though he be lord of all; But is under tutors and governors until the time appointed by the father.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "nat31": {
@@ -3498,6 +3554,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Joann. 5:4)",
+      "lat": "Caríssimi: Omne, quod natum est ex Deo, vincit mundum: et hæc est victória, quæ vincit mundum, fides nostra.",
+      "eng": "My beloved: For whatsoever is born of God, overcometh the world: and this is the victory which overcometh the world, our faith.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc1-1": {
@@ -3869,6 +3932,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Pet 2:21-22)",
+      "lat": "Caríssimi: Christus passus est pro nobis, vobis relínquens exémplum ut sequámini vestígia ejus. Qui peccátum non fecit, nec invéntus est dolus in ore ejus.",
+      "eng": "My beloved: Christ also suffered for us, leaving you an example that you should follow his steps. Who did no sin, neither was guile found in his mouth.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc2-1": {
@@ -3992,7 +4062,7 @@
       "type": "capitulum",
       "label": "Capitulum (Gen 49:22)",
       "lat": "Fílius accréscens Joseph, fílius accréscens, et decórus aspéctu: fíliæ discurrérunt super murum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Joseph is a fruitful bough, a fruitful bough and comely to look upon, whose branches run over the wall.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -4145,6 +4215,13 @@
       "lat": "Et ipse Jesus * erat incípiens quasi annórum trigínta, ut putabátur, fílius Joseph, allelúja.",
       "eng": "And Jesus Himself began to be about thirty years of age, being (as was supposed) the Son of Joseph. Alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Gen 49:26)",
+      "lat": "Benedictiónes patris tui confortátæ sunt benedictiónibus patrum ejus, donec veníret Desidérium cóllium æternórum: fiant in cápite Joseph, et in vértice Nazarǽi inter fratres suos.",
+      "eng": "The blessings of thy father are strengthened with the blessings of his fathers: until the desire of the everlasting hills should come; may they be upon the head of Joseph, and upon the crown of the Nazarite among his brethren",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc3-0": {
@@ -4217,6 +4294,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Pet 2:11)",
+      "lat": "Caríssimi: Obsecro vos tamquam ádvenas et peregrínos abstinére vos a carnálibus desidériis, quæ mílitant advérsus ánimam.",
+      "eng": "Dearly beloved, I beseech you as strangers and pilgrims, to refrain yourselves from carnal desires which war against the soul.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc3-4": {
@@ -4391,6 +4475,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Jas 1:17)",
+      "lat": "Caríssimi: Omne datum óptimum, et omne donum perféctum desúrsum est, descéndens a Patre lúminum, apud quem non est transmutátio, nec vicissitúdinis obumbrátio.",
+      "eng": "Beloved: Every best gift, and every perfect gift, is from above, coming down from the Father of lights, with whom there is no change, nor shadow of alteration.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc4-1": {
@@ -4718,6 +4809,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Jac 1:22-24)",
+      "lat": "Caríssimi: Estóte factóres verbi, et non auditóres tantum: falléntes vosmetípsos. Quia si quis audítor est verbi, et non factor, hic comparábitur viro consideránti vultum nativitátis suæ in spéculo: considerávit enim se, et ábiit, et statim oblítus est qualis fúerit.",
+      "eng": "My beloved: But be ye doers of the word, and not hearers only, deceiving your own selves. For if a man be a hearer of the word, and not a doer, he shall be compared to a man beholding his own countenance in a glass. For he beheld himself, and went his way, and presently forgot what manner of man he was.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc5-1": {
@@ -4885,7 +4983,7 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -4973,71 +5071,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc5-5": {
@@ -5045,21 +5150,21 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:1-2)",
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
-      "eng": "Knowing that Christ rising again from the dead, dieth now no more, death shall no more have dominion over him. For in that he died to sin, he died once; but in that he liveth, he liveth unto God.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:4-5)",
       "lat": "Et convéscens, præcépit eis, ab Jerosólymis ne discéderent, sed exspectárent promissiónem Patris, quam audístis (inquit) per os meum: quia Joánnes quidem baptizávit aqua, vos autem baptizabímini Spíritu Sancto non post multos hos dies.",
-      "eng": "But now Christ is risen from the dead, the first-fruits of them that sleep: For by a man came death, and by a man the resurrection of the dead. And as in Adam all die, so also in Christ all shall be made alive.",
+      "eng": "And eating together with them, he commanded them, that they should not depart from Jerusalem, but should wait for the promise of the Father, which you have heard (saith he) by my mouth. For John indeed baptized with water, but you shall be baptized with the Holy Ghost, not many days hence.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -5147,71 +5252,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc5-6": {
@@ -5219,21 +5331,21 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:1-2)",
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
-      "eng": "Knowing that Christ rising again from the dead, dieth now no more, death shall no more have dominion over him. For in that he died to sin, he died once; but in that he liveth, he liveth unto God.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:4-5)",
       "lat": "Et convéscens, præcépit eis, ab Jerosólymis ne discéderent, sed exspectárent promissiónem Patris, quam audístis (inquit) per os meum: quia Joánnes quidem baptizávit aqua, vos autem baptizabímini Spíritu Sancto non post multos hos dies.",
-      "eng": "But now Christ is risen from the dead, the first-fruits of them that sleep: For by a man came death, and by a man the resurrection of the dead. And as in Adam all die, so also in Christ all shall be made alive.",
+      "eng": "And eating together with them, he commanded them, that they should not depart from Jerusalem, but should wait for the promise of the Father, which you have heard (saith he) by my mouth. For John indeed baptized with water, but you shall be baptized with the Holy Ghost, not many days hence.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -5321,71 +5433,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc6-0": {
@@ -5495,71 +5614,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Petri 4:7-8)",
+      "lat": "Caríssimi: Estóte prudéntes, et vigiláte in oratiónibus. Ante ómnia autem mútuam in vobismetípsis caritátem contínuam habéntes, quia cáritas óperit multitúdinem peccatórum.",
+      "eng": "My beloved: Be prudent, therefore, and watch in prayers. But before all things have a constant mutual charity among yourselves: for charity covereth a multitude of sins.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc6-1": {
@@ -5567,21 +5693,21 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:1-2)",
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
-      "eng": "Knowing that Christ rising again from the dead, dieth now no more, death shall no more have dominion over him. For in that he died to sin, he died once; but in that he liveth, he liveth unto God.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:4-5)",
       "lat": "Et convéscens, præcépit eis, ab Jerosólymis ne discéderent, sed exspectárent promissiónem Patris, quam audístis (inquit) per os meum: quia Joánnes quidem baptizávit aqua, vos autem baptizabímini Spíritu Sancto non post multos hos dies.",
-      "eng": "But now Christ is risen from the dead, the first-fruits of them that sleep: For by a man came death, and by a man the resurrection of the dead. And as in Adam all die, so also in Christ all shall be made alive.",
+      "eng": "And eating together with them, he commanded them, that they should not depart from Jerusalem, but should wait for the promise of the Father, which you have heard (saith he) by my mouth. For John indeed baptized with water, but you shall be baptized with the Holy Ghost, not many days hence.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -5669,71 +5795,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc6-2": {
@@ -5741,21 +5874,21 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:1-2)",
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
-      "eng": "Knowing that Christ rising again from the dead, dieth now no more, death shall no more have dominion over him. For in that he died to sin, he died once; but in that he liveth, he liveth unto God.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:4-5)",
       "lat": "Et convéscens, præcépit eis, ab Jerosólymis ne discéderent, sed exspectárent promissiónem Patris, quam audístis (inquit) per os meum: quia Joánnes quidem baptizávit aqua, vos autem baptizabímini Spíritu Sancto non post multos hos dies.",
-      "eng": "But now Christ is risen from the dead, the first-fruits of them that sleep: For by a man came death, and by a man the resurrection of the dead. And as in Adam all die, so also in Christ all shall be made alive.",
+      "eng": "And eating together with them, he commanded them, that they should not depart from Jerusalem, but should wait for the promise of the Father, which you have heard (saith he) by my mouth. For John indeed baptized with water, but you shall be baptized with the Holy Ghost, not many days hence.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -5843,71 +5976,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc6-3": {
@@ -5915,21 +6055,21 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:1-2)",
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
-      "eng": "Knowing that Christ rising again from the dead, dieth now no more, death shall no more have dominion over him. For in that he died to sin, he died once; but in that he liveth, he liveth unto God.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:4-5)",
       "lat": "Et convéscens, præcépit eis, ab Jerosólymis ne discéderent, sed exspectárent promissiónem Patris, quam audístis (inquit) per os meum: quia Joánnes quidem baptizávit aqua, vos autem baptizabímini Spíritu Sancto non post multos hos dies.",
-      "eng": "But now Christ is risen from the dead, the first-fruits of them that sleep: For by a man came death, and by a man the resurrection of the dead. And as in Adam all die, so also in Christ all shall be made alive.",
+      "eng": "And eating together with them, he commanded them, that they should not depart from Jerusalem, but should wait for the promise of the Father, which you have heard (saith he) by my mouth. For John indeed baptized with water, but you shall be baptized with the Holy Ghost, not many days hence.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -6017,71 +6157,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc6-4": {
@@ -6089,21 +6236,21 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:1-2)",
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
-      "eng": "Knowing that Christ rising again from the dead, dieth now no more, death shall no more have dominion over him. For in that he died to sin, he died once; but in that he liveth, he liveth unto God.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:4-5)",
       "lat": "Et convéscens, præcépit eis, ab Jerosólymis ne discéderent, sed exspectárent promissiónem Patris, quam audístis (inquit) per os meum: quia Joánnes quidem baptizávit aqua, vos autem baptizabímini Spíritu Sancto non post multos hos dies.",
-      "eng": "But now Christ is risen from the dead, the first-fruits of them that sleep: For by a man came death, and by a man the resurrection of the dead. And as in Adam all die, so also in Christ all shall be made alive.",
+      "eng": "And eating together with them, he commanded them, that they should not depart from Jerusalem, but should wait for the promise of the Father, which you have heard (saith he) by my mouth. For John indeed baptized with water, but you shall be baptized with the Holy Ghost, not many days hence.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -6191,71 +6338,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc6-5": {
@@ -6263,21 +6417,21 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 1:1-2)",
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
-      "eng": "Knowing that Christ rising again from the dead, dieth now no more, death shall no more have dominion over him. For in that he died to sin, he died once; but in that he liveth, he liveth unto God.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:4-5)",
       "lat": "Et convéscens, præcépit eis, ab Jerosólymis ne discéderent, sed exspectárent promissiónem Patris, quam audístis (inquit) per os meum: quia Joánnes quidem baptizávit aqua, vos autem baptizabímini Spíritu Sancto non post multos hos dies.",
-      "eng": "But now Christ is risen from the dead, the first-fruits of them that sleep: For by a man came death, and by a man the resurrection of the dead. And as in Adam all die, so also in Christ all shall be made alive.",
+      "eng": "And eating together with them, he commanded them, that they should not depart from Jerusalem, but should wait for the promise of the Father, which you have heard (saith he) by my mouth. For John indeed baptized with water, but you shall be baptized with the Holy Ghost, not many days hence.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Act. 1:11)",
       "lat": "Viri Galilǽi, quid statis aspiciéntes in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, quemádmodum vidístis eum eúntem in cælum.",
-      "eng": "Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit.",
+      "eng": "Ye men of Galilee, why stand you looking up to heaven? This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -6365,71 +6519,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Viri Galilǽi, * quid aspícitis in cælum? Hic Jesus qui assúmptus est a vobis in cælum, sic véniet, allelúja.",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Ye men of Galilee, * why stand ye gazing up into heaven? This same Jesus, Which is taken up from you into heaven, shall so come in like manner, alleluia.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cumque intueréntur * in cælum eúntem illum, dixérunt, allelúja.",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "And while they looked * steadfastly towards heaven, as He went up, they said, alleluia.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Elevátis mánibus, * benedíxit eis, et ferebátur in cælum, allelúja.",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "He lifted up His Hands, * and blessed them, and was carried up into heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exaltáte Regem regum, * et hymnum dícite Deo, allelúja.",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "Extol the King of kings, * and ascribe praise to God, alleluia.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vidéntibus illis, * elevátus est, et nubes suscépit eum in cælo, allelúja.",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "While they beheld, * He was taken up, and a cloud received Him in heaven, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 1:1-2)",
+      "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
+      "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc6-6": {
@@ -6504,7 +6665,7 @@
       "type": "capitulum",
       "label": "Capitulum (Act. 2:11)",
       "lat": "Judǽi quoque et Prosélyti, Cretes et Arabes: audívimus eos loquéntes nostris linguis magnália Dei.",
-      "eng": "For you are bought with a great price. Glorify and bear God in your body.",
+      "eng": "Jews also, and Proselytes, Cretes and Arabians, we do hear them speak in our tongues the wonderful works of God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -6622,6 +6783,13 @@
       "lat": "Loquebántur * váriis linguis Apóstoli magnália Dei, allelúja, allelúja, allelúja.",
       "eng": "The Apostles spoke in diverse tongues * the wonderful works of God, alleluia, alleluia, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Act. 2:1-2)",
+      "lat": "Cum compleréntur dies Pentecóstes, erant omnes discípuli páriter in eódem loco: et factus est repénte de cælo sonus, tamquam adveniéntis spíritus veheméntis, et replévit totam domum, ubi erant sedéntes.",
+      "eng": "When the day of Pentecost was fully come, the disciples were all with one accord in one place and suddenly there came a sound from heaven, as of a rushing mighty wind and it filled all the house where they were sitting.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pasc7-1": {
@@ -7011,6 +7179,13 @@
       "lat": "Ex quo ómnia, * per quem ómnia, in quo ómnia: ipsi glória in sǽcula.;;116",
       "eng": "From whom are all things, * through whom are all things, and in whom are all things: to him be glory for evermore.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Rom 11:33)",
+      "lat": "O Altitúdo divitiárum sapiéntiæ, et sciéntiæ Dei, quam incomprehensibília sunt judícia ejus, et investigábiles viæ ejus!",
+      "eng": "O the depth of the riches of the wisdom and of the knowledge of God! How incomprehensible are his judgments, and how unsearchable his ways!",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent01-4": {
@@ -7032,7 +7207,7 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:27)",
       "lat": "Quicúmque manducáverit panem hunc, vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the body and of the blood of the Lord.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -7085,71 +7260,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.",
-      "eng": "Make a joyful noise * before the Lord our King.",
+      "eng": "Wisdom hath builded her house, * she hath mingled her wine, she hath also furnished her table, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.",
-      "eng": "Lord, * thou hast been our refuge.",
+      "eng": "Thou feddest thine Own people * with Angels' food, and didst send them bread from heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Pinguis est panis * Christi, et præbébit delícias régibus, allelúja.",
-      "eng": "O Lord, * thy mercy is in heaven.",
+      "eng": "Out of Christ His bread shall be fat, * and He shall yield royal dainties, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.",
-      "eng": "My people, * said the Lord, shall be filled with good things.",
+      "eng": "The Priests shall be holy; * for the offerings of the Lord made by fire, and the bread of their God, they do offer, [therefore they shall be holy], alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vincénti dabo * manna abscónditum, et nomen novum, allelúja.",
-      "eng": "To our God * be joyful and fitting praise.",
+      "eng": "To him that overcometh will I give of the hidden manna, * and will give him a new name, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacérdos in ætérnum * Christus Dóminus secúndum órdinem Melchísedech, panem et vinum óbtulit.;;109",
-      "eng": "Behold how good * and how pleasant it is for brethren to dwell together in unity.",
+      "eng": "Christ the Lord, being made an High Priest for ever * after the order of Melchisedec, hath offered bread and wine.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miserátor Dóminus * escam dedit timéntibus se in memóriam suórum mirabílium.;;110",
-      "eng": "Give ye glory to the Lord * for his mercy endureth for ever.",
+      "eng": "He hath made His wonderful works to be remembered; * the Lord is gracious and full of compassion. He hath given meat unto them that fear Him.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cálicem salutáris * accípiam: et sacrificábo hóstiam laudis.;;115",
-      "eng": "Give ye glory to the Lord * for he was mindful of us in our affliction.",
+      "eng": "I will take the cup of salvation, * and offer the sacrifice of thanksgiving.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sicut novéllæ olivárum, * Ecclésiæ fílii sint in circúitu mensæ Dómini.;;127",
-      "eng": "Let my tongue cleave to my jaws * if I do not remember thee, Jerusalem.",
+      "eng": "Let the children of the Church be like olive-plants * round about the table of the Lord.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Qui pacem * ponit fines Ecclésiæ, fruménti ádipe sátiat nos Dóminus.;;147",
-      "eng": "I will give glory * to thy name, for thy mercy, and for thy truth.",
+      "eng": "The Lord, That maketh peace in the borders of the Church, * filleth her with the finest of the wheat.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 11:23-24)",
+      "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent01-5": {
@@ -7157,21 +7339,21 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:23-24)",
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:26)",
       "lat": "Quotiescúmque enim manducábitis panem hunc, et cálicem bibétis, mortem Dómini annuntiábitis donec véniat.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "As often as ye eat this Bread, and drink this Cup, ye do show the Lord's death till He come.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:27)",
       "lat": "Quicúmque manducáverit panem hunc, vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the body and of the blood of the Lord.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -7224,71 +7406,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.",
-      "eng": "Make a joyful noise * before the Lord our King.",
+      "eng": "Wisdom hath builded her house, * she hath mingled her wine, she hath also furnished her table, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.",
-      "eng": "Lord, * thou hast been our refuge.",
+      "eng": "Thou feddest thine Own people * with Angels' food, and didst send them bread from heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Pinguis est panis * Christi, et præbébit delícias régibus, allelúja.",
-      "eng": "O Lord, * thy mercy is in heaven.",
+      "eng": "Out of Christ His bread shall be fat, * and He shall yield royal dainties, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.",
-      "eng": "My people, * said the Lord, shall be filled with good things.",
+      "eng": "The Priests shall be holy; * for the offerings of the Lord made by fire, and the bread of their God, they do offer, [therefore they shall be holy], alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vincénti dabo * manna abscónditum, et nomen novum, allelúja.",
-      "eng": "To our God * be joyful and fitting praise.",
+      "eng": "To him that overcometh will I give of the hidden manna, * and will give him a new name, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacérdos in ætérnum * Christus Dóminus secúndum órdinem Melchísedech, panem et vinum óbtulit.;;109",
-      "eng": "Behold how good * and how pleasant it is for brethren to dwell together in unity.",
+      "eng": "Christ the Lord, being made an High Priest for ever * after the order of Melchisedec, hath offered bread and wine.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miserátor Dóminus * escam dedit timéntibus se in memóriam suórum mirabílium.;;110",
-      "eng": "Give ye glory to the Lord * for his mercy endureth for ever.",
+      "eng": "He hath made His wonderful works to be remembered; * the Lord is gracious and full of compassion. He hath given meat unto them that fear Him.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cálicem salutáris * accípiam: et sacrificábo hóstiam laudis.;;115",
-      "eng": "Give ye glory to the Lord * for he was mindful of us in our affliction.",
+      "eng": "I will take the cup of salvation, * and offer the sacrifice of thanksgiving.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sicut novéllæ olivárum, * Ecclésiæ fílii sint in circúitu mensæ Dómini.;;127",
-      "eng": "Let my tongue cleave to my jaws * if I do not remember thee, Jerusalem.",
+      "eng": "Let the children of the Church be like olive-plants * round about the table of the Lord.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Qui pacem * ponit fines Ecclésiæ, fruménti ádipe sátiat nos Dóminus.;;147",
-      "eng": "I will give glory * to thy name, for thy mercy, and for thy truth.",
+      "eng": "The Lord, That maketh peace in the borders of the Church, * filleth her with the finest of the wheat.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 11:23-24)",
+      "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent01-6": {
@@ -7296,21 +7485,21 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:23-24)",
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:26)",
       "lat": "Quotiescúmque enim manducábitis panem hunc, et cálicem bibétis, mortem Dómini annuntiábitis donec véniat.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "As often as ye eat this Bread, and drink this Cup, ye do show the Lord's death till He come.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:27)",
       "lat": "Quicúmque manducáverit panem hunc, vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the body and of the blood of the Lord.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -7363,71 +7552,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.",
-      "eng": "Make a joyful noise * before the Lord our King.",
+      "eng": "Wisdom hath builded her house, * she hath mingled her wine, she hath also furnished her table, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.",
-      "eng": "Lord, * thou hast been our refuge.",
+      "eng": "Thou feddest thine Own people * with Angels' food, and didst send them bread from heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Pinguis est panis * Christi, et præbébit delícias régibus, allelúja.",
-      "eng": "O Lord, * thy mercy is in heaven.",
+      "eng": "Out of Christ His bread shall be fat, * and He shall yield royal dainties, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.",
-      "eng": "My people, * said the Lord, shall be filled with good things.",
+      "eng": "The Priests shall be holy; * for the offerings of the Lord made by fire, and the bread of their God, they do offer, [therefore they shall be holy], alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vincénti dabo * manna abscónditum, et nomen novum, allelúja.",
-      "eng": "To our God * be joyful and fitting praise.",
+      "eng": "To him that overcometh will I give of the hidden manna, * and will give him a new name, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacérdos in ætérnum * Christus Dóminus secúndum órdinem Melchísedech, panem et vinum óbtulit.;;109",
-      "eng": "Behold how good * and how pleasant it is for brethren to dwell together in unity.",
+      "eng": "Christ the Lord, being made an High Priest for ever * after the order of Melchisedec, hath offered bread and wine.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miserátor Dóminus * escam dedit timéntibus se in memóriam suórum mirabílium.;;110",
-      "eng": "Give ye glory to the Lord * for his mercy endureth for ever.",
+      "eng": "He hath made His wonderful works to be remembered; * the Lord is gracious and full of compassion. He hath given meat unto them that fear Him.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cálicem salutáris * accípiam: et sacrificábo hóstiam laudis.;;115",
-      "eng": "Give ye glory to the Lord * for he was mindful of us in our affliction.",
+      "eng": "I will take the cup of salvation, * and offer the sacrifice of thanksgiving.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sicut novéllæ olivárum, * Ecclésiæ fílii sint in circúitu mensæ Dómini.;;127",
-      "eng": "Let my tongue cleave to my jaws * if I do not remember thee, Jerusalem.",
+      "eng": "Let the children of the Church be like olive-plants * round about the table of the Lord.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Qui pacem * ponit fines Ecclésiæ, fruménti ádipe sátiat nos Dóminus.;;147",
-      "eng": "I will give glory * to thy name, for thy mercy, and for thy truth.",
+      "eng": "The Lord, That maketh peace in the borders of the Church, * filleth her with the finest of the wheat.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 11:23-24)",
+      "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent02-0": {
@@ -7449,7 +7645,7 @@
       "type": "capitulum",
       "label": "Capitulum (1 Joann. 3:18)",
       "lat": "Filíoli mei, non diligámus verbo neque lingua, sed ópere et veritáte.",
-      "eng": "For you are bought with a great price. Glorify and bear God in your body.",
+      "eng": "My little children, let us not love in word, neither in tongue, but in deed, and in truth.",
       "variationKey": "nona.capitulum"
     },
     "vesperae.hymn": {
@@ -7490,6 +7686,13 @@
       "latR": "Et de petra, melle saturávit eos, allelúja.",
       "engR": "",
       "variationKey": "vesperae.versicle"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Joann. 3:13-14)",
+      "lat": "Caríssimi: Nolíte mirári, si odit vos mundus. Nos scimus quóniam transláti sumus de morte ad vitam, quóniam dilígimus fratres.",
+      "eng": "Wonder not, brethren, if the world hate you. We know that we have passed from death to life, because we love the brethren. He that loveth not, abideth in death.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent02-1": {
@@ -7497,21 +7700,21 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:23-24)",
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:26)",
       "lat": "Quotiescúmque enim manducábitis panem hunc, et cálicem bibétis, mortem Dómini annuntiábitis donec véniat.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "As often as ye eat this Bread, and drink this Cup, ye do show the Lord's death till He come.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:27)",
       "lat": "Quicúmque manducáverit panem hunc, vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the body and of the blood of the Lord.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -7564,71 +7767,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.",
-      "eng": "Make a joyful noise * before the Lord our King.",
+      "eng": "Wisdom hath builded her house, * she hath mingled her wine, she hath also furnished her table, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.",
-      "eng": "Lord, * thou hast been our refuge.",
+      "eng": "Thou feddest thine Own people * with Angels' food, and didst send them bread from heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Pinguis est panis * Christi, et præbébit delícias régibus, allelúja.",
-      "eng": "O Lord, * thy mercy is in heaven.",
+      "eng": "Out of Christ His bread shall be fat, * and He shall yield royal dainties, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.",
-      "eng": "My people, * said the Lord, shall be filled with good things.",
+      "eng": "The Priests shall be holy; * for the offerings of the Lord made by fire, and the bread of their God, they do offer, [therefore they shall be holy], alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vincénti dabo * manna abscónditum, et nomen novum, allelúja.",
-      "eng": "To our God * be joyful and fitting praise.",
+      "eng": "To him that overcometh will I give of the hidden manna, * and will give him a new name, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacérdos in ætérnum * Christus Dóminus secúndum órdinem Melchísedech, panem et vinum óbtulit.;;109",
-      "eng": "Behold how good * and how pleasant it is for brethren to dwell together in unity.",
+      "eng": "Christ the Lord, being made an High Priest for ever * after the order of Melchisedec, hath offered bread and wine.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miserátor Dóminus * escam dedit timéntibus se in memóriam suórum mirabílium.;;110",
-      "eng": "Give ye glory to the Lord * for his mercy endureth for ever.",
+      "eng": "He hath made His wonderful works to be remembered; * the Lord is gracious and full of compassion. He hath given meat unto them that fear Him.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cálicem salutáris * accípiam: et sacrificábo hóstiam laudis.;;115",
-      "eng": "Give ye glory to the Lord * for he was mindful of us in our affliction.",
+      "eng": "I will take the cup of salvation, * and offer the sacrifice of thanksgiving.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sicut novéllæ olivárum, * Ecclésiæ fílii sint in circúitu mensæ Dómini.;;127",
-      "eng": "Let my tongue cleave to my jaws * if I do not remember thee, Jerusalem.",
+      "eng": "Let the children of the Church be like olive-plants * round about the table of the Lord.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Qui pacem * ponit fines Ecclésiæ, fruménti ádipe sátiat nos Dóminus.;;147",
-      "eng": "I will give glory * to thy name, for thy mercy, and for thy truth.",
+      "eng": "The Lord, That maketh peace in the borders of the Church, * filleth her with the finest of the wheat.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 11:23-24)",
+      "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent02-2": {
@@ -7636,21 +7846,21 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:23-24)",
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:26)",
       "lat": "Quotiescúmque enim manducábitis panem hunc, et cálicem bibétis, mortem Dómini annuntiábitis donec véniat.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "As often as ye eat this Bread, and drink this Cup, ye do show the Lord's death till He come.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:27)",
       "lat": "Quicúmque manducáverit panem hunc, vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the body and of the blood of the Lord.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -7703,71 +7913,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.",
-      "eng": "Make a joyful noise * before the Lord our King.",
+      "eng": "Wisdom hath builded her house, * she hath mingled her wine, she hath also furnished her table, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.",
-      "eng": "Lord, * thou hast been our refuge.",
+      "eng": "Thou feddest thine Own people * with Angels' food, and didst send them bread from heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Pinguis est panis * Christi, et præbébit delícias régibus, allelúja.",
-      "eng": "O Lord, * thy mercy is in heaven.",
+      "eng": "Out of Christ His bread shall be fat, * and He shall yield royal dainties, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.",
-      "eng": "My people, * said the Lord, shall be filled with good things.",
+      "eng": "The Priests shall be holy; * for the offerings of the Lord made by fire, and the bread of their God, they do offer, [therefore they shall be holy], alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vincénti dabo * manna abscónditum, et nomen novum, allelúja.",
-      "eng": "To our God * be joyful and fitting praise.",
+      "eng": "To him that overcometh will I give of the hidden manna, * and will give him a new name, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacérdos in ætérnum * Christus Dóminus secúndum órdinem Melchísedech, panem et vinum óbtulit.;;109",
-      "eng": "Behold how good * and how pleasant it is for brethren to dwell together in unity.",
+      "eng": "Christ the Lord, being made an High Priest for ever * after the order of Melchisedec, hath offered bread and wine.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miserátor Dóminus * escam dedit timéntibus se in memóriam suórum mirabílium.;;110",
-      "eng": "Give ye glory to the Lord * for his mercy endureth for ever.",
+      "eng": "He hath made His wonderful works to be remembered; * the Lord is gracious and full of compassion. He hath given meat unto them that fear Him.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cálicem salutáris * accípiam: et sacrificábo hóstiam laudis.;;115",
-      "eng": "Give ye glory to the Lord * for he was mindful of us in our affliction.",
+      "eng": "I will take the cup of salvation, * and offer the sacrifice of thanksgiving.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sicut novéllæ olivárum, * Ecclésiæ fílii sint in circúitu mensæ Dómini.;;127",
-      "eng": "Let my tongue cleave to my jaws * if I do not remember thee, Jerusalem.",
+      "eng": "Let the children of the Church be like olive-plants * round about the table of the Lord.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Qui pacem * ponit fines Ecclésiæ, fruménti ádipe sátiat nos Dóminus.;;147",
-      "eng": "I will give glory * to thy name, for thy mercy, and for thy truth.",
+      "eng": "The Lord, That maketh peace in the borders of the Church, * filleth her with the finest of the wheat.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 11:23-24)",
+      "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent02-3": {
@@ -7775,21 +7992,21 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:23-24)",
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:26)",
       "lat": "Quotiescúmque enim manducábitis panem hunc, et cálicem bibétis, mortem Dómini annuntiábitis donec véniat.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "As often as ye eat this Bread, and drink this Cup, ye do show the Lord's death till He come.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:27)",
       "lat": "Quicúmque manducáverit panem hunc, vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the body and of the blood of the Lord.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -7842,71 +8059,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.",
-      "eng": "Make a joyful noise * before the Lord our King.",
+      "eng": "Wisdom hath builded her house, * she hath mingled her wine, she hath also furnished her table, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.",
-      "eng": "Lord, * thou hast been our refuge.",
+      "eng": "Thou feddest thine Own people * with Angels' food, and didst send them bread from heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Pinguis est panis * Christi, et præbébit delícias régibus, allelúja.",
-      "eng": "O Lord, * thy mercy is in heaven.",
+      "eng": "Out of Christ His bread shall be fat, * and He shall yield royal dainties, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.",
-      "eng": "My people, * said the Lord, shall be filled with good things.",
+      "eng": "The Priests shall be holy; * for the offerings of the Lord made by fire, and the bread of their God, they do offer, [therefore they shall be holy], alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vincénti dabo * manna abscónditum, et nomen novum, allelúja.",
-      "eng": "To our God * be joyful and fitting praise.",
+      "eng": "To him that overcometh will I give of the hidden manna, * and will give him a new name, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacérdos in ætérnum * Christus Dóminus secúndum órdinem Melchísedech, panem et vinum óbtulit.;;109",
-      "eng": "Behold how good * and how pleasant it is for brethren to dwell together in unity.",
+      "eng": "Christ the Lord, being made an High Priest for ever * after the order of Melchisedec, hath offered bread and wine.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miserátor Dóminus * escam dedit timéntibus se in memóriam suórum mirabílium.;;110",
-      "eng": "Give ye glory to the Lord * for his mercy endureth for ever.",
+      "eng": "He hath made His wonderful works to be remembered; * the Lord is gracious and full of compassion. He hath given meat unto them that fear Him.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cálicem salutáris * accípiam: et sacrificábo hóstiam laudis.;;115",
-      "eng": "Give ye glory to the Lord * for he was mindful of us in our affliction.",
+      "eng": "I will take the cup of salvation, * and offer the sacrifice of thanksgiving.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sicut novéllæ olivárum, * Ecclésiæ fílii sint in circúitu mensæ Dómini.;;127",
-      "eng": "Let my tongue cleave to my jaws * if I do not remember thee, Jerusalem.",
+      "eng": "Let the children of the Church be like olive-plants * round about the table of the Lord.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Qui pacem * ponit fines Ecclésiæ, fruménti ádipe sátiat nos Dóminus.;;147",
-      "eng": "I will give glory * to thy name, for thy mercy, and for thy truth.",
+      "eng": "The Lord, That maketh peace in the borders of the Church, * filleth her with the finest of the wheat.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 11:23-24)",
+      "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent02-4": {
@@ -7914,21 +8138,21 @@
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:23-24)",
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:26)",
       "lat": "Quotiescúmque enim manducábitis panem hunc, et cálicem bibétis, mortem Dómini annuntiábitis donec véniat.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "As often as ye eat this Bread, and drink this Cup, ye do show the Lord's death till He come.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (1 Cor 11:27)",
       "lat": "Quicúmque manducáverit panem hunc, vel bíberit cálicem Dómini indígne, reus erit córporis et sánguinis Dómini.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Whosoever shall eat this bread, or drink the chalice of the Lord unworthily, shall be guilty of the body and of the blood of the Lord.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -7981,71 +8205,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.",
-      "eng": "Make a joyful noise * before the Lord our King.",
+      "eng": "Wisdom hath builded her house, * she hath mingled her wine, she hath also furnished her table, alleluia.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Angelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.",
-      "eng": "Lord, * thou hast been our refuge.",
+      "eng": "Thou feddest thine Own people * with Angels' food, and didst send them bread from heaven, alleluia.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Pinguis est panis * Christi, et præbébit delícias régibus, allelúja.",
-      "eng": "O Lord, * thy mercy is in heaven.",
+      "eng": "Out of Christ His bread shall be fat, * and He shall yield royal dainties, alleluia.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.",
-      "eng": "My people, * said the Lord, shall be filled with good things.",
+      "eng": "The Priests shall be holy; * for the offerings of the Lord made by fire, and the bread of their God, they do offer, [therefore they shall be holy], alleluia.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Vincénti dabo * manna abscónditum, et nomen novum, allelúja.",
-      "eng": "To our God * be joyful and fitting praise.",
+      "eng": "To him that overcometh will I give of the hidden manna, * and will give him a new name, alleluia.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sacérdos in ætérnum * Christus Dóminus secúndum órdinem Melchísedech, panem et vinum óbtulit.;;109",
-      "eng": "Behold how good * and how pleasant it is for brethren to dwell together in unity.",
+      "eng": "Christ the Lord, being made an High Priest for ever * after the order of Melchisedec, hath offered bread and wine.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miserátor Dóminus * escam dedit timéntibus se in memóriam suórum mirabílium.;;110",
-      "eng": "Give ye glory to the Lord * for his mercy endureth for ever.",
+      "eng": "He hath made His wonderful works to be remembered; * the Lord is gracious and full of compassion. He hath given meat unto them that fear Him.",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Cálicem salutáris * accípiam: et sacrificábo hóstiam laudis.;;115",
-      "eng": "Give ye glory to the Lord * for he was mindful of us in our affliction.",
+      "eng": "I will take the cup of salvation, * and offer the sacrifice of thanksgiving.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Sicut novéllæ olivárum, * Ecclésiæ fílii sint in circúitu mensæ Dómini.;;127",
-      "eng": "Let my tongue cleave to my jaws * if I do not remember thee, Jerusalem.",
+      "eng": "Let the children of the Church be like olive-plants * round about the table of the Lord.",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Qui pacem * ponit fines Ecclésiæ, fruménti ádipe sátiat nos Dóminus.;;147",
-      "eng": "I will give glory * to thy name, for thy mercy, and for thy truth.",
+      "eng": "The Lord, That maketh peace in the borders of the Church, * filleth her with the finest of the wheat.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 11:23-24)",
+      "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
+      "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent02-5": {
@@ -8120,71 +8351,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 3:8-9)",
+      "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent02-6": {
@@ -8192,21 +8430,21 @@
       "type": "capitulum",
       "label": "Capitulum (Eph 3:8-9)",
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:14-17)",
       "lat": "Hujus rei grátia flecto génua mea ad Patrem Dómini nostri Jesu Christi, ut det vobis secúndum divítias glóriæ suæ virtúte corroborári per Spíritum ejus in interiórem hóminem: Christum habitáre per fidem in córdibus vestris.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man, that Christ may dwell in your hearts by faith.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:17-19)",
       "lat": "In caritáte radicáti et fundáti, ut possítis comprehéndere cum ómnibus sanctis, quæ sit latitúdo et longitúdo, et sublímitas et profúndum; scire étiam supereminéntem sciéntiæ caritátem Christi, ut impleámini in omnem plenitúdinem Dei.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Being rooted and grounded in love, may ye be able to comprehend with all saints what is the breadth and length and depth and height: and to know the love of Christ, which passeth knowledge, that ye might be filled with all the fullness of God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -8259,71 +8497,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 3:8-9)",
+      "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent03-0": {
@@ -8338,7 +8583,7 @@
       "type": "capitulum",
       "label": "Capitulum (1 Pet 5:8-9)",
       "lat": "Sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret: cui resístite fortes in fide, sciéntes eámdem passiónem ei, quæ in mundo est, vestræ fraternitáti fíeri.",
-      "eng": "Bear ye one another's burdens; and so you shall fulfill the law of Christ.",
+      "eng": "For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man, that Christ may dwell in your hearts by faith.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
@@ -8398,71 +8643,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Pet 5:6-7)",
+      "lat": "Caríssimi, humiliámini sub poténti manu Dei, ut vos exáltet in témpore visitatiónis; omnem sollicitúdinem vestram proiciéntes in eum, quóniam ipsi cura est de vobis.",
+      "eng": "Dearly beloved, humble yourselves therefore under the mighty hand of God, that he may exalt you in due time: casting all your care upon him; for he careth for you.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent03-1": {
@@ -8470,21 +8722,21 @@
       "type": "capitulum",
       "label": "Capitulum (Eph 3:8-9)",
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:14-17)",
       "lat": "Hujus rei grátia flecto génua mea ad Patrem Dómini nostri Jesu Christi, ut det vobis secúndum divítias glóriæ suæ virtúte corroborári per Spíritum ejus in interiórem hóminem: Christum habitáre per fidem in córdibus vestris.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man, that Christ may dwell in your hearts by faith.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:17-19)",
       "lat": "In caritáte radicáti et fundáti, ut possítis comprehéndere cum ómnibus sanctis, quæ sit latitúdo et longitúdo, et sublímitas et profúndum; scire étiam supereminéntem sciéntiæ caritátem Christi, ut impleámini in omnem plenitúdinem Dei.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Being rooted and grounded in love, may ye be able to comprehend with all saints what is the breadth and length and depth and height: and to know the love of Christ, which passeth knowledge, that ye might be filled with all the fullness of God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -8537,71 +8789,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 3:8-9)",
+      "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent03-2": {
@@ -8609,21 +8868,21 @@
       "type": "capitulum",
       "label": "Capitulum (Eph 3:8-9)",
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:14-17)",
       "lat": "Hujus rei grátia flecto génua mea ad Patrem Dómini nostri Jesu Christi, ut det vobis secúndum divítias glóriæ suæ virtúte corroborári per Spíritum ejus in interiórem hóminem: Christum habitáre per fidem in córdibus vestris.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man, that Christ may dwell in your hearts by faith.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:17-19)",
       "lat": "In caritáte radicáti et fundáti, ut possítis comprehéndere cum ómnibus sanctis, quæ sit latitúdo et longitúdo, et sublímitas et profúndum; scire étiam supereminéntem sciéntiæ caritátem Christi, ut impleámini in omnem plenitúdinem Dei.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Being rooted and grounded in love, may ye be able to comprehend with all saints what is the breadth and length and depth and height: and to know the love of Christ, which passeth knowledge, that ye might be filled with all the fullness of God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -8676,71 +8935,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 3:8-9)",
+      "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent03-3": {
@@ -8748,21 +9014,21 @@
       "type": "capitulum",
       "label": "Capitulum (Eph 3:8-9)",
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:14-17)",
       "lat": "Hujus rei grátia flecto génua mea ad Patrem Dómini nostri Jesu Christi, ut det vobis secúndum divítias glóriæ suæ virtúte corroborári per Spíritum ejus in interiórem hóminem: Christum habitáre per fidem in córdibus vestris.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man, that Christ may dwell in your hearts by faith.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:17-19)",
       "lat": "In caritáte radicáti et fundáti, ut possítis comprehéndere cum ómnibus sanctis, quæ sit latitúdo et longitúdo, et sublímitas et profúndum; scire étiam supereminéntem sciéntiæ caritátem Christi, ut impleámini in omnem plenitúdinem Dei.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Being rooted and grounded in love, may ye be able to comprehend with all saints what is the breadth and length and depth and height: and to know the love of Christ, which passeth knowledge, that ye might be filled with all the fullness of God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -8815,71 +9081,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 3:8-9)",
+      "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent03-4": {
@@ -8887,21 +9160,21 @@
       "type": "capitulum",
       "label": "Capitulum (Eph 3:8-9)",
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:14-17)",
       "lat": "Hujus rei grátia flecto génua mea ad Patrem Dómini nostri Jesu Christi, ut det vobis secúndum divítias glóriæ suæ virtúte corroborári per Spíritum ejus in interiórem hóminem: Christum habitáre per fidem in córdibus vestris.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man, that Christ may dwell in your hearts by faith.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:17-19)",
       "lat": "In caritáte radicáti et fundáti, ut possítis comprehéndere cum ómnibus sanctis, quæ sit latitúdo et longitúdo, et sublímitas et profúndum; scire étiam supereminéntem sciéntiæ caritátem Christi, ut impleámini in omnem plenitúdinem Dei.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Being rooted and grounded in love, may ye be able to comprehend with all saints what is the breadth and length and depth and height: and to know the love of Christ, which passeth knowledge, that ye might be filled with all the fullness of God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -8954,71 +9227,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 3:8-9)",
+      "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent03-5": {
@@ -9026,21 +9306,21 @@
       "type": "capitulum",
       "label": "Capitulum (Eph 3:8-9)",
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
-      "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "laudes.capitulum"
     },
     "sexta.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:14-17)",
       "lat": "Hujus rei grátia flecto génua mea ad Patrem Dómini nostri Jesu Christi, ut det vobis secúndum divítias glóriæ suæ virtúte corroborári per Spíritum ejus in interiórem hóminem: Christum habitáre per fidem in córdibus vestris.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
+      "eng": "For this cause I bow my knees unto the Father of our Lord Jesus Christ, of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man, that Christ may dwell in your hearts by faith.",
       "variationKey": "sexta.capitulum"
     },
     "nona.capitulum": {
       "type": "capitulum",
       "label": "Capitulum (Eph 3:17-19)",
       "lat": "In caritáte radicáti et fundáti, ut possítis comprehéndere cum ómnibus sanctis, quæ sit latitúdo et longitúdo, et sublímitas et profúndum; scire étiam supereminéntem sciéntiæ caritátem Christi, ut impleámini in omnem plenitúdinem Dei.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
+      "eng": "Being rooted and grounded in love, may ye be able to comprehend with all saints what is the breadth and length and depth and height: and to know the love of Christ, which passeth knowledge, that ye might be filled with all the fullness of God.",
       "variationKey": "nona.capitulum"
     },
     "laudes.hymn": {
@@ -9093,71 +9373,78 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.",
-      "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
+      "eng": "One of the soldiers * with a spear pierced his side, and forthwith came there out Blood and Water.",
       "variationKey": "laudes.antiphon.psalm1"
     },
     "laudes.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Stans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.",
-      "eng": "Deliver me from my enemies, * O Lord, to thee have I fled.",
+      "eng": "Jesus stood * and cried, saying, If any man thirst, let him come unto me and drink.",
       "variationKey": "laudes.antiphon.psalm2"
     },
     "laudes.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "In caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.",
-      "eng": "Lord, thou hast blessed thy land; * Thou hast forgiven the iniquity of thy people.",
+      "eng": "With an everlasting love * hath God loved us, and from the day that he was lifted up over the earth, he hath drawn us with loving-kindness unto his Heart.",
       "variationKey": "laudes.antiphon.psalm3"
     },
     "laudes.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Veníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.",
-      "eng": "In the Lord * shall all the seed of Israel be justified and praised.",
+      "eng": "Come unto me, * all ye that travail and are heavy laden, and I will refresh you.",
       "variationKey": "laudes.antiphon.psalm4"
     },
     "laudes.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Fili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
-      "eng": "Praise the Lord, * O Jerusalem.",
+      "eng": "My son, * give me thine heart, and let thine eyes observe my ways.",
       "variationKey": "laudes.antiphon.psalm5"
     },
     "vesperae.antiphon.psalm1": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Suávi jugo tuo * domináre, Dómine, in médio inimicórum tuórum.;;109",
-      "eng": "Lord, * thou hast proved me, and known me.",
+      "eng": "Put thy easy yoke * upon all mankind, O Lord, and be thou ruler, even in the midst of thine enemies.",
       "variationKey": "vesperae.antiphon.psalm1"
     },
     "vesperae.antiphon.psalm2": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Miséricors * et miserátor Dóminus: escam dedit timéntibus se.;;110",
-      "eng": "Wonderful are thy works * and my soul knoweth right well.",
+      "eng": "This merciful * and gracious Lord hath given Meat unto them that fear him..",
       "variationKey": "vesperae.antiphon.psalm2"
     },
     "vesperae.antiphon.psalm3": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Exórtum est * in ténebris lumen rectis; miséricors et miserátor Dóminus.;;111",
-      "eng": "Do not thou forsake me, * O Lord, the strength of my salvation.",
+      "eng": "Unto the godly * there ariseth up light in the darkness, even the Lord merciful and gracious.",
       "variationKey": "vesperae.antiphon.psalm3"
     },
     "vesperae.antiphon.psalm4": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Quid retríbuam * Dómino pro ómnibus quæ retríbuit mihi?;;115",
-      "eng": "I have cried to thee, * O Lord, hear me.",
+      "eng": "What reward shall I give * unto the Lord for all the benefits that he hath done unto me?",
       "variationKey": "vesperae.antiphon.psalm4"
     },
     "vesperae.antiphon.psalm5": {
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "Apud Dóminum * propitiátio est et copiósa apud eum redémptio.;;129",
-      "eng": "Bring my soul * out of prison, O Lord, that I may praise thy name.",
+      "eng": "With the Lord * there is mercy, and with him is plenteous redemption.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 3:8-9)",
+      "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
+      "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "pent04-0": {
@@ -9566,6 +9853,13 @@
       "lat": "Laudáte Deum * cæli cælórum, et aquæ omnes.",
       "eng": "Praise God, * ye heavens of heavens, and all ye waters.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (2 Cor 6:1-2)",
+      "lat": "Fratres: Hortámur vos, ne in vácuum grátiam Dei recipiátis. Ait enim: Témpore accépto exaudívi te, et in die salútis adjúvi te.",
+      "eng": "Brothers, we exhort you, that you receive not the grace of God in vain. For he saith: In an accepted time have I heard thee; and in the day of salvation have I helped thee.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quad1-1": {
@@ -9727,6 +10021,13 @@
       "lat": "Státuit ea * in ætérnum, et in sǽculum sǽculi: præcéptum pósuit, et non præteríbit.",
       "eng": "He hath established them * for ever and ever: He hath made a decree which shall not pass.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Thess 4:1)",
+      "lat": "Fratres: Rogámus vos, et obsecrámus in Dómino Jesu: ut, quemádmodum accepístis a nobis, quómodo vos opórteat ambuláre, et placére Deo, sic et ambulétis, ut abundétis magis.",
+      "eng": "For the rest therefore, brethren, we pray and beseech you in the Lord Jesus, that as you have received from us, how you ought to walk, and to please God, so also you would walk, that you may abound the more.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quad2-1": {
@@ -9895,6 +10196,13 @@
       "lat": "Lábia mea * laudábunt te in vita mea, Deus meus.",
       "eng": "My lips * shall praise, thee all my life long, my God.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Eph 5:1-2)",
+      "lat": "Fratres: Estóte imitatóres Dei, sicut fílii caríssimi: et ambuláte in dilectióne, sicut et Christus diléxit nos, et trádidit semetípsum pro nobis oblatiónem et hóstiam Deo in odórem suavitátis.",
+      "eng": "Be ye, therefore, followers of God, as most dear children; And walk in love, as Christ also hath loved us, and hath delivered himself for us, an oblation and a sacrifice to God for an odour of sweetness.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quad3-1": {
@@ -10056,6 +10364,13 @@
       "lat": "In matutínis, * Dómine, meditábor in te.",
       "eng": "In the morning * O Lord, I shall meditate upon thee.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Gal 4:22-24)",
+      "lat": "Fratres: Scriptum est, quóniam Abraham duos fílios hábuit: unum de ancílla, et unum de líbera: sed qui de ancílla, secúndum carnem natus est: qui autem de líbera, per repromissiónem: quæ sunt per allegoríam dicta.",
+      "eng": "Brothers: For it is written that Abraham had two sons: the one by a bondwoman, and the other by a free woman. But he who was of the bondwoman, was born according to the flesh: but he of the free woman, was by promise, which things are said by an allegory.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quad4-1": {
@@ -10224,6 +10539,13 @@
       "lat": "Numquid rédditur * pro bono malum, quia fodérunt fóveam ánimæ meæ.",
       "eng": "Shall evil be recompensed for good? * for they have digged a pit for My soul.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Heb 9:11-12)",
+      "lat": "Fratres: Christus assístens Póntifex futurórum bonórum, per ámplius et perféctius tabernáculum non manu factum, id est, non hujus creatiónis: neque per sánguinem hircórum aut vitulórum, sed per próprium sánguinem introívit semel in Sancta, ætérna redemptióne invénta.",
+      "eng": "But Christ, being come an high priest of the good things to come, by a greater and more perfect tabernacle not made with hand, that is, not of this creation: Neither by the blood of goats, or of calves, but by his own blood, entered once into the holies, having obtained eternal redemption.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quad5-1": {
@@ -10392,6 +10714,13 @@
       "lat": "Fulcíte me flóribus * stipáte me malis, quia amóre lángueo.;;141",
       "eng": "Revive me with flowers, * stay me up with apples, for I am swooning with love.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Isa 53:1-2)",
+      "lat": "Quis crédidit audítui nostro? et bráchium Dómini cui revelátum est? Et ascéndet sicut virgúltum coram eo, et sicut radix de terra sitiénti.",
+      "eng": "Who hath believed our report? and to whom is the arm of the Lord revealed? And he shall grow up as a tender plant before him, and as a root out of a thirsty ground.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quad5-6": {
@@ -10473,6 +10802,13 @@
       "lat": "Confundántur * qui me persequúntur, et non confúndar ego, Dómine, Deus meus.",
       "eng": "Let them be confounded that persecute me; * but let not me be confounded, O Lord my God.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (Phil 2:5-7)",
+      "lat": "Fratres: Hoc enim sentíte in vobis, quod et in Christo Jesu: qui, cum in forma Dei esset, non rapínam arbitrátus est esse se æquálem Deo: sed semetípsum exinanívit, formam servi accípiens, in similitúdinem hóminum factus, et hábitu invéntus ut homo.",
+      "eng": "Brothers: For let this mind be in you, which was also in Christ Jesus: Who being in the form of God, thought it not robbery to be equal with God: But emptied himself, taking the form of a servant, being made in the likeness of men, and in habit found as a man.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quad6-1": {
@@ -10795,7 +11131,7 @@
       "type": "antiphon",
       "label": "Antíphona",
       "lat": "@Tempora/Quad6-4",
-      "eng": "I will take the cup of salvation; * and call upon the Name of the Lord.;;115",
+      "eng": "I will take the cup of salvation; * and call upon the Name of the Lord.",
       "variationKey": "vesperae.antiphon.psalm1"
     }
   },
@@ -10931,6 +11267,13 @@
       "lat": "Laudáte * Dóminum de cælis.",
       "eng": "Praise ye the Lord * from the heavens.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 9:24)",
+      "lat": "Fratres: Nescítis quod ii qui in stádio currunt, omnes quidem currunt, sed unus áccipit bravíum? Sic cúrrite ut comprehendátis.",
+      "eng": "Brothers: Know you not that they that run in the race, all run indeed, but one receiveth the prize? So run that you may obtain.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quadp1-1": {
@@ -11039,6 +11382,13 @@
       "lat": "In excélsis, * laudáte Deum.",
       "eng": "In the high places, * praise ye God.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (2 Cor 11:19-20)",
+      "lat": "Fratres: Libénter suffértis insipiéntes, cum sitis ipsi sapiéntes: sustinétis enim si quis vos in servitútem rédigit, si quis dévorat, si quis áccipit, si quis extóllitur, si quis in fáciem vos cædit.",
+      "eng": "For you gladly suffer the foolish; whereas yourselves are wise. For you suffer if a man bring you into bondage, if a man devour you, if a man take from you, if a man be lifted up, if a man strike you on the face.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quadp2-1": {
@@ -11138,6 +11488,13 @@
       "lat": "Omnes Angeli * ejus laudáte Dóminum de cælis.",
       "eng": "Praise ye the Lord * from the heavens, all His angels.",
       "variationKey": "laudes.antiphon.psalm5"
+    },
+    "vesperae.capitulum": {
+      "type": "capitulum",
+      "label": "Capitulum (1 Cor 13:1)",
+      "lat": "Fratres: Si linguis hóminum loquar, et Angelórum, caritátem autem non hábeam, factus sum velut æs sonans, aut cýmbalum tínniens.",
+      "eng": "Brothers: If I speak with the tongues of men, and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal.",
+      "variationKey": "vesperae.capitulum"
     }
   },
   "quadp3-1": {
