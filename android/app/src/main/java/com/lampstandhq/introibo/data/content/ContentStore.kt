@@ -180,22 +180,32 @@ object ContentStore {
         val ctx = LiturgicalContext.current()
         var assembled = officeAssembler.assemble(template, ctx)
 
-        val rite = "1962" // TODO: read from settings
+        val rite = "1962"
         val ordo = ordoForDate(ctx.date, rite)
-        if (ordo != null && ordo.winner == "sanctoral") {
-            val saint = sanctoralPropers[ordo.winnerKey]
-            if (saint != null) {
-                assembled = applySanctoralOverrides(assembled, saint)
+        if (ordo != null) {
+            if (ordo.winner == "sanctoral") {
+                val saint = sanctoralPropers[ordo.winnerKey]
+                if (saint != null) {
+                    assembled = applyProperOverrides(assembled, saint)
+                }
+            } else {
+                val temporalKey = ordo.temporal
+                if (temporalKey != null) {
+                    val tempOverrides = officeAssembler.temporalPropers[temporalKey]
+                    if (tempOverrides != null) {
+                        assembled = applyProperOverrides(assembled, tempOverrides)
+                    }
+                }
             }
         }
         return assembled
     }
 
-    private fun applySanctoralOverrides(hour: Hour, saint: Map<String, Hour.Part>): Hour {
+    private fun applyProperOverrides(hour: Hour, overrides: Map<String, Hour.Part>): Hour {
         val updatedParts = hour.parts.map { part ->
             val key = part.variationKey
-            if (key != null && saint.containsKey(key)) return@map saint[key]!!
-            if (part.type == "collect" && saint.containsKey("collect")) return@map saint["collect"]!!
+            if (key != null && overrides.containsKey(key)) return@map overrides[key]!!
+            if (part.type == "collect" && overrides.containsKey("collect")) return@map overrides["collect"]!!
             part
         }
         return hour.copy(parts = updatedParts)

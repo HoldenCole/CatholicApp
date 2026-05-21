@@ -132,6 +132,13 @@
       "lat": "Fratres: Hora est jam nos de somno súrgere: nunc enim própior est nostra salus, quam cum credídimus.",
       "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Excita, quǽsumus, Dómine, poténtiam tuam, et veni: ut ab imminéntibus peccatórum nostrórum perículis, te mereámur protegénte éripi, te liberánte salvári:",
+      "eng": "Stir up, O Lord, we pray thee, thy strength, and come among us, that whereas through our sins and wickedness we do justly apprehend thy wrathful judgments hanging over us, thy bountiful grace and mercy may speedily help and deliver us;",
+      "variationKey": "collect"
     }
   },
   "adv1-1": {
@@ -573,6 +580,13 @@
       "lat": "Fratres: Quæcúmque scripta sunt, ad nostram doctrínam scripta sunt: ut per patiéntiam, et consolatiónem Scripturárum spem habeámus.",
       "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Excita, Dómine, corda nostra ad præparándas Unigéniti tui vias: ut, per ejus advéntum, purificátis tibi méntibus servíre mereámur:",
+      "eng": "Stir up our hearts, O Lord, to make ready the ways of thine Only-begotten Son, that by His coming our minds being purified, we may the more worthily give up ourselves to thy service:",
+      "variationKey": "collect"
     }
   },
   "adv2-1": {
@@ -1014,6 +1028,13 @@
       "lat": "Fratres: Gaudéte in Dómino semper: íterum dico, gaudéte. Modéstia vestra nota sit ómnibus homínibus: Dóminus enim prope est.",
       "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Aurem tuam, quǽsumus, Dómine, précibus nostris accómmoda: et mentis nostræ ténebras, grátia tuæ visitatiónis illústra:",
+      "eng": "O Lord, we beseech thee, mercifully incline thine ears unto our prayers, and lighten the darkness of our minds by the grace of thy heavenly visitation.",
+      "variationKey": "collect"
     }
   },
   "adv3-1": {
@@ -1160,6 +1181,13 @@
       "lat": "Véniet Dóminus, * et non tardábit, et illuminábit abscóndita tenebrárum, et manifestábit se ad omnes gentes, allelúja.",
       "eng": "The Lord shall come * and shall not delay, and shall bring to light the hidden things of darkness, and shall manifest himself to all nations, alleluia.",
       "variationKey": "nona.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Præsta, quǽsumus, omnípotens Deus: ut redemptiónis nostræ ventúra solémnitas et præséntis nobis vitæ subsídia cónferat, et ætérnæ beatitúdinis prǽmia largiátur.",
+      "eng": "Grant, we beseech thee, Almighty God, that the solemn Feast of our redemption, which is now at hand, may both help us in the life which now is, and further us toward the attaining of thine eternal joy in that which is to come.",
+      "variationKey": "collect"
     }
   },
   "adv3-4": {
@@ -1262,6 +1290,13 @@
       "lat": "Constántes estóte, * vidébitis auxílium Dómini super vos.",
       "eng": "Exalt ye the Lord * our God, and worship him upon his holy mountain.",
       "variationKey": "laudes.antiphon.psalm1"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Excita, quǽsumus, Dómine, poténtiam tuam, et veni: ut hi, qui in tua pietáte confídunt, ab omni cítius adversitáte liberéntur:",
+      "eng": "Stir up, O Lord, we pray thee, thy might, and come among us; that we, trusting only in thy mercy, may by thee be speedily delivered from all adversity.",
+      "variationKey": "collect"
     }
   },
   "adv3-6": {
@@ -1306,6 +1341,13 @@
       "lat": "Roráte coeli désuper, * et nubes pluant Justum : aperiátur terra, et gérminet Salvatórem.",
       "eng": "Let the children of Sion * be joyful in their king.",
       "variationKey": "laudes.antiphon.psalm1"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui cónspicis, quia ex nostra pravitáte afflígimur: concéde propítius; ut ex tua visitatióne consolémur:",
+      "eng": "O God, Who seest that by reason of our sins we are sorely afflicted, mercifully grant unto us by thy visitation effectually to be comforted.",
+      "variationKey": "collect"
     }
   },
   "adv4-0": {
@@ -1448,6 +1490,13 @@
       "lat": "Fratres: Sic nos exístimet homo ut minístros Christi, et dispensatóres mysteriórum Dei. Hic jam quǽritur inter dispensatóres, ut fidélis quis inveniátur.",
       "eng": "The sceptre shall not be taken away from Juda, nor a ruler from his thigh, till he comes that is to be sent, and he shall be the expectation of nations.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Excita, quǽsumus, Dómine, poténtiam tuam, et veni: et magna nobis virtúte succúrre; ut per auxílium grátiæ tuæ, quod nostra peccáta præpédiunt, indulgéntia tuæ propitiatiónis accéleret:",
+      "eng": "Stir up, we beseech thee, O Lord, thy power, and come; make haste to our aid with thy great might; that, by the help of thy grace, that which is hindered by our sins may be hastened by thy merciful forgiveness.",
+      "variationKey": "collect"
     }
   },
   "adv4-1": {
@@ -1858,6 +1907,13 @@
       "lat": "Descéndit Jesus cum María et Joseph, et venit Názareth: et erat súbditus illis.",
       "eng": "Jesus went down with Mary and Joseph, and came to Nazareth, and was subject to them.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Dómine Jesu Christe, qui, Maríæ et Joseph súbditus, domésticam vitam ineffabílibus virtútibus consecrásti: fac nos, utriúsque auxílio, Famíliæ sanctæ tuæ exémplis ínstrui; et consórtium cónsequi sempitérnum:",
+      "eng": "Lord Jesus Christ, who subject to Mary and Joseph, didst consecrate family life by thy unspeakable virtues, aid us by their united intercession to profit by the examples of thy Holy Family, and attain to their everlasting companionship:",
+      "variationKey": "collect"
     }
   },
   "epi2-0": {
@@ -1874,6 +1930,13 @@
       "lat": "Deficiénte vino, * jussit Jesus impléri hýdrias aqua, quæ in vinum convérsa est, allelúja.",
       "eng": "The wine failing, * Jesus commanded the water pots to be filled with water, which was changed into wine, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, qui cæléstia simul et terréna moderáris: supplicatiónes pópuli tui cleménter exáudi; et pacem tuam nostris concéde tempóribus.",
+      "eng": "Almighty and eternal God, as thou govern all things in heaven and on earth; in thy mercy hear the supplication of thy people, and grant thy peace in our times.",
+      "variationKey": "collect"
     }
   },
   "epi3-0": {
@@ -1890,6 +1953,13 @@
       "lat": "Dómine, * si vis, potes me mundáre: et ait Jesus: Volo, mundáre.",
       "eng": "Lord, if Thou wilt, * Thou canst make me clean; and Jesus saith to him: I will; be thou clean.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, infirmitátem nostram propítius réspice: atque, ad protegéndum nos, déxteram tuæ majestátis exténde.",
+      "eng": "Almighty and everlasting God, mercifully look upon our infirmities, and in all our dangers and necessities stretch forth the right hand of thy Majesty to help and defend us.",
+      "variationKey": "collect"
     }
   },
   "epi4-0": {
@@ -1906,6 +1976,13 @@
       "lat": "Dómine, salva nos, * perímus: ímpera, et fac, Deus, tranquillitátem.",
       "eng": "Lord, save us: * we perish; give the word, O God, and let there be a great calm!",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nos in tantis perículis constitútos, pro humána scis fragilitáte non posse subsístere: da nobis salútem mentis et córporis; ut ea, quæ pro peccátis nostris pátimur, te adjuvánte vincámus.",
+      "eng": "O God, Who knowest us to be set in the midst of so many and great dangers, that, by reason of the frailty of our nature, we cannot always stand upright; grant to us such health of mind and body, that by thy strength and protection we may overcome all evils, whereby for our sins we are justly afflicted.",
+      "variationKey": "collect"
     }
   },
   "epi5-0": {
@@ -1922,6 +1999,13 @@
       "lat": "Collígite * primum zizánia, et alligáte ea in fascículos ad comburéndum: tríticum autem congregáte in hórreum meum, dicit Dóminus.",
       "eng": "The master saith: Gather ye together first the tares, * and bind them in bundles to burn them; but gather the wheat into my barn.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Famíliam tuam, quǽsumus, Dómine, contínua pietáte custódi: ut, quæ in sola spe grátiæ cœléstis innítitur, tua semper protectióne muniátur.",
+      "eng": "O Lord, we beseech thee to keep thy family continually in godliness, that they who do lean only upon the hope of thine heavenly grace, may evermore be defended by thy mighty power.",
+      "variationKey": "collect"
     }
   },
   "epi6-0": {
@@ -1938,6 +2022,13 @@
       "lat": "Símile est * regnum cælórum ferménto, quod accéptum múlier abscóndit in farínæ satis tribus, donec fermentátum est totum.",
       "eng": "The kingdom of heaven * is like unto leaven, which a woman took and hid in three measures of meal till the whole was leavened.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Præsta, quǽsumus, omnípotens Deus: ut, semper rationabília meditántes, quæ tibi sunt plácita, et dictis exsequámur et factis.",
+      "eng": "Grant us, we beseech thee, O Almighty God, ever to think such things as be reasonable, and in every word and work of ours, to do always that is well pleasing in thy sight.",
+      "variationKey": "collect"
     }
   },
   "nat1-0": {
@@ -2084,6 +2175,13 @@
       "lat": "Fratres: Quanto témpore heres párvulus est, nihil differt a servo, cum sit dóminus ómnium: sed sub tutóribus et actóribus est usque ad præfínitum tempus a patre.",
       "eng": "Brothers: As long as the heir is a child, he differeth nothing from a servant, though he be lord of all; But is under tutors and governors until the time appointed by the father.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, dírige actus nostros in beneplácito tuo: ut in nómine dilécti Fílii tui mereámur bonis opéribus abundáre:",
+      "eng": "O Almighty and everlasting God, do Thou order all our actions in conformity with thy good pleasure, that through the name of thy well-beloved Son, we may worthily abound in all good works.",
+      "variationKey": "collect"
     }
   },
   "nat2-0": {
@@ -2221,6 +2319,13 @@
       "lat": "Fratres: Christus humiliávit semetípsum, factus obédiens usque ad mortem, mortem autem crucis. Propter quod et Deus exaltávit illum, et donávit illi nomen, quod est super omne nomen, ut in nómine Jesu omne genu flectátur.",
       "eng": "He humbled himself, becoming obedient unto death, even to the death of the cross. For which cause God also hath exalted him, and hath given him a name which is above all names: That in the name of Jesus every knee should bow, of those that are in heaven, on earth, and under the earth.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui unigénitum Fílium tuum constituísti humáni géneris Salvatórem, et Jesum vocári jussísti: concéde propítius; ut, cujus sanctum nomen venerámur in terris, ejus quoque aspéctu perfruámur in cælis.",
+      "eng": "O God, Who hast appointed thine Only-begotten Son to be the Saviour of mankind, and hast commanded that His Name should be called Jesus, mercifully grant that we who here on earth do worship that most Holy Name may be made glad in heaven by His Presence.",
+      "variationKey": "collect"
     }
   },
   "nat26": {
@@ -2360,6 +2465,13 @@
       "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
       "eng": "Of the fruit * of thy body will I set upon thy throne.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.",
+      "eng": "Grant, we beseech Thee, almighty God, that the new birth of Thine only-begotten Son in the flesh may set us free, who are held by the old bondage under the yoke of sin.",
+      "variationKey": "collect"
     }
   },
   "nat27": {
@@ -2499,6 +2611,13 @@
       "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
       "eng": "Of the fruit * of thy body will I set upon thy throne.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.",
+      "eng": "Grant, we beseech Thee, almighty God, that the new birth of Thine only-begotten Son in the flesh may set us free, who are held by the old bondage under the yoke of sin.",
+      "variationKey": "collect"
     }
   },
   "nat28": {
@@ -2638,6 +2757,13 @@
       "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
       "eng": "Of the fruit * of thy body will I set upon thy throne.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.",
+      "eng": "Grant, we beseech Thee, almighty God, that the new birth of Thine only-begotten Son in the flesh may set us free, who are held by the old bondage under the yoke of sin.",
+      "variationKey": "collect"
     }
   },
   "nat29": {
@@ -2777,6 +2903,13 @@
       "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
       "eng": "Of the fruit * of thy body will I set upon thy throne.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.",
+      "eng": "Grant, we beseech Thee, almighty God, that the new birth of Thine only-begotten Son in the flesh may set us free, who are held by the old bondage under the yoke of sin.",
+      "variationKey": "collect"
     }
   },
   "nat30": {
@@ -2923,6 +3056,13 @@
       "lat": "Fratres: Quanto témpore heres párvulus est, nihil differt a servo, cum sit dóminus ómnium: sed sub tutóribus et actóribus est usque ad præfínitum tempus a patre.",
       "eng": "Brothers: As long as the heir is a child, he differeth nothing from a servant, though he be lord of all; But is under tutors and governors until the time appointed by the father.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.",
+      "eng": "Grant, we beseech You, almighty God, that the new birth, in the flesh, of Your only-begotten Son may deliver us whom the bondage of old keeps under the yoke of sin.",
+      "variationKey": "collect"
     }
   },
   "nat31": {
@@ -3062,6 +3202,13 @@
       "lat": "De fructu * ventris tui ponam super sedem tuam.;;131",
       "eng": "Of the fruit * of thy body will I set upon thy throne.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.",
+      "eng": "Grant, we beseech Thee, almighty God, that the new birth of Thine only-begotten Son in the flesh may set us free, who are held by the old bondage under the yoke of sin.",
+      "variationKey": "collect"
     }
   },
   "pasc0-0": {
@@ -3183,6 +3330,13 @@
       "lat": "Respóndens autem Angelus, * dixit muliéribus: Nolíte timére: scio enim quod Jesum quǽritis, allelúja.",
       "eng": "And the angel answering * said to the women: Fear not you: for I know that you seek Jesus, alleluia.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui hodiérna die per Unigénitum tuum æternitátis nobis áditum devícta morte reserásti: vota nostra, quæ præveniéndo aspíras, étiam adjuvándo proséquere.",
+      "eng": "God, who on this day, through thy Only-begotten Son, overcame death, and opened to us the gate of everlasting life: as by thy anticipating grace, thou breathest good desires into our hearts, so also, by thy gracious help, bring them to good effect.",
+      "variationKey": "collect"
     }
   },
   "pasc0-1": {
@@ -3234,6 +3388,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui solemnitáte pascháli, mundo remédia contulísti: pópulum tuum, quǽsumus, cælésti dono proséquere; ut et perféctam libertátem cónsequi mereátur, et ad vitam profíciat sempitérnam.",
+      "eng": "O God, Who dost heal the sick world by the solemn gladness of the Passover, continue, we beseech thee, to pour forth thine heavenly gifts upon thy people, till the same shall bring them into perfect liberty, and finally avail them unto life everlasting.",
+      "variationKey": "collect"
     }
   },
   "pasc0-2": {
@@ -3285,6 +3446,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui Ecclésiam tuam novo semper fœtu multíplicas: concéde fámulis tuis; ut sacraméntum vivéndo téneant, quod fide percepérunt.",
+      "eng": "O God, Who art ever multiplying the Children of thy Church, grant unto the same thy servants that they may lead the rest of their lives according to this beginning wherein Thou hast given them faith to receive the Sacrament of the New Birth.",
+      "variationKey": "collect"
     }
   },
   "pasc0-3": {
@@ -3336,6 +3504,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nos resurrectiónis Domínicæ ánnua solemnitáte lætíficas: concéde propítius; ut per temporália festa quæ ágimus, perveníre ad gáudia ætérna mereámur.",
+      "eng": "O God, Who dost every year fill us with holy gladness for the rising-again of the Lord, mercifully grant that these Feast-days which we are now keeping here in time, may be to us a mean whereby in the end we may worthily attain unto those pleasures which are at thy right hand for evermore.",
+      "variationKey": "collect"
     }
   },
   "pasc0-4": {
@@ -3387,6 +3562,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui diversitátem géntium in confessióne tui nóminis adunásti: da, ut renátis fonte baptísmatis una sit fides méntium et píetas actiónum.",
+      "eng": "O God, Who dost make all nations, how diverse soever they be, to become one family in giving of praise to thy Name, grant unto all them that are born again in the fountain of baptism to live ever in oneness of faith, and godliness of works.",
+      "variationKey": "collect"
     }
   },
   "pasc0-5": {
@@ -3438,6 +3620,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, qui paschále sacraméntum in reconciliatiónis humánæ fœ́dere contulísti: da méntibus nostris; ut quod professióne celebrámus, imitémur efféctu.",
+      "eng": "Almighty and eternal God, in the Easter sacrament thou instituted the covenant, whereby thou forgavest mankind; grant to our souls, that what we outwardly profess we may show forth in our deeds.",
+      "variationKey": "collect"
     }
   },
   "pasc0-6": {
@@ -3482,6 +3671,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui festa paschália venerándo égimus, per hæc contíngere ad gáudia ætérna mereámur.",
+      "eng": "Grant, we beseech thee, O Almighty God, that we who have kept worshipfully the Easter solemnities, may at last worthily pass from keeping Feasts unto thee here to the everlasting jubilation hereafter.",
+      "variationKey": "collect"
     }
   },
   "pasc1-0": {
@@ -3561,6 +3757,13 @@
       "lat": "Caríssimi: Omne, quod natum est ex Deo, vincit mundum: et hæc est victória, quæ vincit mundum, fides nostra.",
       "eng": "My beloved: For whatsoever is born of God, overcometh the world: and this is the victory which overcometh the world, our faith.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Præsta, quǽsumus, omnípotens Deus: ut qui paschália festa perégimus, hæc, te largiénte, móribus et vita teneámus.",
+      "eng": "Grant, we beseech Thee, almighty God, that we who have celebrated the Paschal Feast, may, by Thy bounty, retain its fruits in our daily habits and behaviour.",
+      "variationKey": "collect"
     }
   },
   "pasc1-1": {
@@ -3939,6 +4142,13 @@
       "lat": "Caríssimi: Christus passus est pro nobis, vobis relínquens exémplum ut sequámini vestígia ejus. Qui peccátum non fecit, nec invéntus est dolus in ore ejus.",
       "eng": "My beloved: Christ also suffered for us, leaving you an example that you should follow his steps. Who did no sin, neither was guile found in his mouth.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui in Fílii tui humilitáte jacéntem mundum erexísti: fidélibus tuis perpétuam concéde lætítiam; ut, quos perpétuæ mortis eripuísti cásibus, gáudiis fácias pérfrui sempitérnis.",
+      "eng": "O God, Whose Son hath humbled Himself, and Who hast through Him raised up the whole world, grant to thy faithful people everlasting joy; and as Thou hast delivered them from the bitter pains of eternal death, make them to be glad for ever in thy presence.",
+      "variationKey": "collect"
     }
   },
   "pasc2-1": {
@@ -4222,6 +4432,13 @@
       "lat": "Benedictiónes patris tui confortátæ sunt benedictiónibus patrum ejus, donec veníret Desidérium cóllium æternórum: fiant in cápite Joseph, et in vértice Nazarǽi inter fratres suos.",
       "eng": "The blessings of thy father are strengthened with the blessings of his fathers: until the desire of the everlasting hills should come; may they be upon the head of Joseph, and upon the crown of the Nazarite among his brethren",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui ineffábili providéntia beátum Joseph sanctíssimæ Genitrícis tuæ sponsum elígere dignátus es: præsta, quǽsumus; ut quem protectórem venerámur in terris, intercessórem habére mereámur in cælis:",
+      "eng": "God, Who in thine unspeakable foreknowledge didst choose thy blessed servant Joseph to be the husband of thine Own most holy Mother; mercifully grant that now that he is in heaven with thee, we who on earth do reverence him for our Defender, may worthily be holpen by the succour of his prayers to thee on our behalf;",
+      "variationKey": "collect"
     }
   },
   "pasc3-0": {
@@ -4301,6 +4518,13 @@
       "lat": "Caríssimi: Obsecro vos tamquam ádvenas et peregrínos abstinére vos a carnálibus desidériis, quæ mílitant advérsus ánimam.",
       "eng": "Dearly beloved, I beseech you as strangers and pilgrims, to refrain yourselves from carnal desires which war against the soul.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui errántibus, ut in viam possint redíre justítiæ, veritátis tuæ lumen osténdis: da cunctis, qui christiána professióne censéntur, et illa respúere, quæ huic inimíca sunt nómini; et ea, quæ sunt apta, sectári.",
+      "eng": "Almighty God, Who showest to them that be in error the light of thy truth, to the intent that they may return into the way of righteousness grant unto all them that are admitted into the fellowship of Christ's Religion, that they may eschew those things that are contrary to their profession, and follow all such things as are agreeable to the same.",
+      "variationKey": "collect"
     }
   },
   "pasc3-4": {
@@ -4482,6 +4706,13 @@
       "lat": "Caríssimi: Omne datum óptimum, et omne donum perféctum desúrsum est, descéndens a Patre lúminum, apud quem non est transmutátio, nec vicissitúdinis obumbrátio.",
       "eng": "Beloved: Every best gift, and every perfect gift, is from above, coming down from the Father of lights, with whom there is no change, nor shadow of alteration.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui fidélium mentes uníus éfficis voluntátis: da pópulis tuis id amáre quod prǽcipis, id desideráre quod promíttis; ut inter mundánas varietátes ibi nostra fixa sint corda, ubi vera sunt gáudia.",
+      "eng": "O God, of Whom it cometh that the minds of thy faithful people be all of one will, grant unto the same thy people that they may love the thing which Thou commandest, and desire that which Thou dost promise, that so, amid the sundry and manifold changes of the world, our hearts may surely there be fixed, where true joys are to be found.",
+      "variationKey": "collect"
     }
   },
   "pasc4-1": {
@@ -4816,6 +5047,13 @@
       "lat": "Caríssimi: Estóte factóres verbi, et non auditóres tantum: falléntes vosmetípsos. Quia si quis audítor est verbi, et non factor, hic comparábitur viro consideránti vultum nativitátis suæ in spéculo: considerávit enim se, et ábiit, et statim oblítus est qualis fúerit.",
       "eng": "My beloved: But be ye doers of the word, and not hearers only, deceiving your own selves. For if a man be a hearer of the word, and not a doer, he shall be compared to a man beholding his own countenance in a glass. For he beheld himself, and went his way, and presently forgot what manner of man he was.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, a quo bona cuncta procédunt, largíre supplícibus tuis: ut cogitémus, te inspiránte, quæ recta sunt; et, te gubernánte, éadem faciámus.",
+      "eng": "O God, from Whom all good things do come, grant to us thy humble servants that by thy holy inspiration we may think those things that be good, and by thy merciful guiding may perform the same.",
+      "variationKey": "collect"
     }
   },
   "pasc5-1": {
@@ -5143,6 +5381,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc5-5": {
@@ -5324,6 +5569,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc5-6": {
@@ -5505,6 +5757,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc6-0": {
@@ -5686,6 +5945,13 @@
       "lat": "Caríssimi: Estóte prudéntes, et vigiláte in oratiónibus. Ante ómnia autem mútuam in vobismetípsis caritátem contínuam habéntes, quia cáritas óperit multitúdinem peccatórum.",
       "eng": "My beloved: Be prudent, therefore, and watch in prayers. But before all things have a constant mutual charity among yourselves: for charity covereth a multitude of sins.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus: fac nos tibi semper et devótam gérere voluntátem; et majestáti tuæ sincéro corde servíre.",
+      "eng": "O Almighty and everlasting God, grant that our will be ever meekly subject unto thy will, and our heart ever honestly ready to serve thy majesty.",
+      "variationKey": "collect"
     }
   },
   "pasc6-1": {
@@ -5867,6 +6133,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc6-2": {
@@ -6048,6 +6321,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc6-3": {
@@ -6229,6 +6509,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc6-4": {
@@ -6410,6 +6697,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc6-5": {
@@ -6591,6 +6885,13 @@
       "lat": "Primum quidem sermónem feci de ómnibus, o Theóphile, quæ cœpit Jesus fácere et docére usque in diem, qua præcípiens Apóstolis per Spíritum Sanctum, quos elégit, assúmptus est.",
       "eng": "The former treatise I made, O Theophilus, of all things which Jesus began to do and to teach, Until the day on which, giving commandments by the Holy Ghost to the apostles whom he had chosen, he was taken up.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus; ipsi quoque mente in cæléstibus habitémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that just as we do believe thine Only-Begotten Son, our Saviour, to have this day ascended into the heavens, so we may also in heart and mind thither ascend, and with Him continually dwell.",
+      "variationKey": "collect"
     }
   },
   "pasc6-6": {
@@ -6644,6 +6945,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus: fac nos tibi semper et devótam gérere voluntátem; et majestáti tuæ sincéro corde servíre.",
+      "eng": "O Almighty and everlasting God, grant that our will be ever meekly subject unto thy will, and our heart ever honestly ready to serve thy majesty.",
+      "variationKey": "collect"
     }
   },
   "pasc7-0": {
@@ -6790,6 +7098,13 @@
       "lat": "Cum compleréntur dies Pentecóstes, erant omnes discípuli páriter in eódem loco: et factus est repénte de cælo sonus, tamquam adveniéntis spíritus veheméntis, et replévit totam domum, ubi erant sedéntes.",
       "eng": "When the day of Pentecost was fully come, the disciples were all with one accord in one place and suddenly there came a sound from heaven, as of a rushing mighty wind and it filled all the house where they were sitting.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui hodiérna die corda fidélium Sancti Spíritus illustratióne docuísti: da nobis in eódem Spíritu recta sápere; et de ejus semper consolatióne gaudére.",
+      "eng": "O God, Who on this day didst teach the hearts of thy faithful people, by the sending to them the light of thine Holy Spirit, grant us by the same Spirit to have a right judgment in all things, and evermore to rejoice in His holy comfort.",
+      "variationKey": "collect"
     }
   },
   "pasc7-1": {
@@ -6841,6 +7156,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui Apóstolis tuis Sanctum dedísti Spíritum: concéde plebi tuæ piæ petitiónis efféctum; ut, quibus dedísti fidem, largiáris et pacem.",
+      "eng": "O God, Who didst give thine Holy Spirit unto thine Apostles, grant unto thy people the effectual fruit of their godly supplications, and as Thou hast given them faith, give them also peace.",
+      "variationKey": "collect"
     }
   },
   "pasc7-2": {
@@ -6892,6 +7214,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Adsit nobis, quǽsumus, Dómine, virtus Spíritus Sancti: quæ et corda nostra cleménter expúrget, et ab ómnibus tueátur advérsis.",
+      "eng": "O Lord, we beseech thee, that thy Holy Spirit may dwell in us in much power, mercifully cleansing our hearts, and shielding us from all things hurtful.",
+      "variationKey": "collect"
     }
   },
   "pasc7-3": {
@@ -6943,6 +7272,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Mentes nostras, quǽsumus, Dómine, Paráclitus, qui a te procédit, illúminet: et indúcat in omnem, sicut tuus promísit Fílius, veritátem:",
+      "eng": "O Lord, we beseech thee, that the Comforter, Which proceeded from thee, may enlighten our minds, and lead us into all truth, even as thy Son hath promised unto us.",
+      "variationKey": "collect"
     }
   },
   "pasc7-4": {
@@ -6994,6 +7330,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui hodiérna die corda fidélium Sancti Spíritus illustratióne docuísti: da nobis in eódem Spíritu recta sápere; et de ejus semper consolatióne gaudére.",
+      "eng": "O God, Who on this day didst teach the hearts of thy faithful people, by the sending to them the light of thine Holy Spirit, grant us by the same Spirit to have a right judgment in all things, and evermore to rejoice in His holy comfort.",
+      "variationKey": "collect"
     }
   },
   "pasc7-5": {
@@ -7045,6 +7388,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Da, quǽsumus, Ecclésiæ tuæ, miséricors Deus: ut, Sancto Spíritu congregáta, hostíli nullátenus incursióne turbétur.",
+      "eng": "O most merciful God, we beseech thee to grant unto thy Church that, forasmuch as she is gathered together in the Holy Ghost, no assaults of her enemies may be able to trouble her.",
+      "variationKey": "collect"
     }
   },
   "pasc7-6": {
@@ -7089,6 +7439,13 @@
       "lat": "Allelúja, * allelúja, allelúja.",
       "eng": "Alleluia, * alleluia, alleluia.",
       "variationKey": "completorium.antiphon"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Méntibus nostris, quǽsumus, Dómine, Spíritum Sanctum benígnus infúnde: cujus et sapiéntia cónditi sumus, et providéntia gubernámur.",
+      "eng": "We beseech Thee, O Lord, mercifully to pour into our hearts Thy Holy Spirit, by Whose Wisdom we have been created, and by Whose Providence all our ways are ordered.",
+      "variationKey": "collect"
     }
   },
   "pent01-0": {
@@ -7186,6 +7543,13 @@
       "lat": "O Altitúdo divitiárum sapiéntiæ, et sciéntiæ Dei, quam incomprehensibília sunt judícia ejus, et investigábiles viæ ejus!",
       "eng": "O the depth of the riches of the wisdom and of the knowledge of God! How incomprehensible are his judgments, and how unsearchable his ways!",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, qui dedísti fámulis tuis in confessióne veræ fídei, ætérnæ Trinitátis glóriam agnóscere, et in poténtia majestátis adoráre Unitátem: quǽsumus; ut, ejúsdem fídei firmitáte, ab ómnibus semper muniámur advérsis.",
+      "eng": "Almighty and everlasting God, you have given thy servants in the confession of the true faith, to acknowledge the glory of the Eternal Trinity, and to adore the unity in the power of thy Majesty; grant, that by steadfastness in this faith we may ever be defended from all adversities.",
+      "variationKey": "collect"
     }
   },
   "pent01-4": {
@@ -7332,6 +7696,13 @@
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
       "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti: tríbue, quǽsumus, ita nos Córporis, et Sánguinis tui sacra mystéria venerári; ut redemptiónis tuæ fructum in nobis júgiter sentiámus:",
+      "eng": "O God, under a marvelous sacrament you have left us the memorial of thy Passion; grant us, we beseech thee, so to venerate the sacred mysteries of thy Body and Blood, that we may ever perceive within us the fruit of thy Redemption.",
+      "variationKey": "collect"
     }
   },
   "pent01-5": {
@@ -7478,6 +7849,13 @@
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
       "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, in te sperántium fortitúdo, adésto propítius invocatiónibus nostris: et, quia sine te nihil potest mortális infírmitas, præsta auxílium grátiæ tuæ; ut, in exsequéndis mandátis tuis, et voluntáte tibi et actióne placeámus.",
+      "eng": "O God, the Strength of all them that put their trust in thee, mercifully accept our prayers, and because through the weakness of our mortal nature we can do no good thing without thee, grant us the help of thy grace, that in keeping of thy commandments we may please thee, both in will and deed.",
+      "variationKey": "collect"
     }
   },
   "pent01-6": {
@@ -7624,6 +8002,13 @@
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
       "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti: tríbue, quǽsumus, ita nos Córporis, et Sánguinis tui sacra mystéria venerári; ut redemptiónis tuæ fructum in nobis júgiter sentiámus:",
+      "eng": "O God, under a marvelous sacrament you have left us the memorial of thy Passion; grant us, we beseech thee, so to venerate the sacred mysteries of thy Body and Blood, that we may ever perceive within us the fruit of thy Redemption.",
+      "variationKey": "collect"
     }
   },
   "pent02-0": {
@@ -7693,6 +8078,13 @@
       "lat": "Caríssimi: Nolíte mirári, si odit vos mundus. Nos scimus quóniam transláti sumus de morte ad vitam, quóniam dilígimus fratres.",
       "eng": "Wonder not, brethren, if the world hate you. We know that we have passed from death to life, because we love the brethren. He that loveth not, abideth in death.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Sancti nóminis tui, Dómine, timórem páriter et amórem fac nos habére perpétuum: quia nunquam tua gubernatióne destítuis, quos in soliditáte tuæ dilectiónis instítuis.",
+      "eng": "O Lord, Who never failest to help and govern them whom Thou dost bring up in thy steadfast fear and love keep us, we beseech thee, under the protection of thy good providence, and make us to have a perpetual fear and love of thy Holy Name.",
+      "variationKey": "collect"
     }
   },
   "pent02-1": {
@@ -7839,6 +8231,13 @@
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
       "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti: tríbue, quǽsumus, ita nos Córporis, et Sánguinis tui sacra mystéria venerári; ut redemptiónis tuæ fructum in nobis júgiter sentiámus:",
+      "eng": "O God, under a marvelous sacrament you have left us the memorial of thy Passion; grant us, we beseech thee, so to venerate the sacred mysteries of thy Body and Blood, that we may ever perceive within us the fruit of thy Redemption.",
+      "variationKey": "collect"
     }
   },
   "pent02-2": {
@@ -7985,6 +8384,13 @@
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
       "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti: tríbue, quǽsumus, ita nos Córporis, et Sánguinis tui sacra mystéria venerári; ut redemptiónis tuæ fructum in nobis júgiter sentiámus:",
+      "eng": "O God, under a marvelous sacrament you have left us the memorial of thy Passion; grant us, we beseech thee, so to venerate the sacred mysteries of thy Body and Blood, that we may ever perceive within us the fruit of thy Redemption.",
+      "variationKey": "collect"
     }
   },
   "pent02-3": {
@@ -8131,6 +8537,13 @@
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
       "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti: tríbue, quǽsumus, ita nos Córporis, et Sánguinis tui sacra mystéria venerári; ut redemptiónis tuæ fructum in nobis júgiter sentiámus:",
+      "eng": "O God, under a marvelous sacrament you have left us the memorial of thy Passion; grant us, we beseech thee, so to venerate the sacred mysteries of thy Body and Blood, that we may ever perceive within us the fruit of thy Redemption.",
+      "variationKey": "collect"
     }
   },
   "pent02-4": {
@@ -8277,6 +8690,13 @@
       "lat": "Fratres: Ego enim accépi a Dómino quod et trádidi vobis, quóniam Dóminus Jesus, in qua nocte tradebátur, accépit panem, et grátias agens fregit, et dixit: Accípite et manducáte: hoc est corpus meum, quod pro vobis tradétur: hoc fácite in meam commemoratiónem.",
       "eng": "Brothers: For I have received of the Lord that which also I delivered unto you, that the Lord Jesus, the same night in which he was betrayed, took bread. And giving thanks, broke, and said: Take ye, and eat: this is my body, which shall be delivered for you: this do for the commemoration of me.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis sub Sacraménto mirábili passiónis tuæ memóriam reliquísti: tríbue, quǽsumus, ita nos Córporis, et Sánguinis tui sacra mystéria venerári; ut redemptiónis tuæ fructum in nobis júgiter sentiámus:",
+      "eng": "O God, under a marvelous sacrament you have left us the memorial of thy Passion; grant us, we beseech thee, so to venerate the sacred mysteries of thy Body and Blood, that we may ever perceive within us the fruit of thy Redemption.",
+      "variationKey": "collect"
     }
   },
   "pent02-5": {
@@ -8423,6 +8843,13 @@
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
       "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis in Corde Fílii tui, nostris vulneráto peccátis, infinítos dilectiónis thesáuros misericórditer largíri dignáris; concéde, quǽsumus, ut illi devótum pietátis nostræ præstántes obséquium, dignæ quoque satisfactiónis exhibeámus offícium.",
+      "eng": "O God, who hast suffered the Heart of thy Son to be wounded by our sins, and in that very Heart hast bestowed on us the abundant riches of thy love: grant that the devout homage of our hearts, which we render unto him, may of thy mercy be deemed a recompence acceptable in thy sight.",
+      "variationKey": "collect"
     }
   },
   "pent02-6": {
@@ -8569,6 +8996,13 @@
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
       "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis in Corde Fílii tui, nostris vulneráto peccátis, infinítos dilectiónis thesáuros misericórditer largíri dignáris; concéde, quǽsumus, ut illi devótum pietátis nostræ præstántes obséquium, dignæ quoque satisfactiónis exhibeámus offícium.",
+      "eng": "O God, who hast suffered the Heart of thy Son to be wounded by our sins, and in that very Heart hast bestowed on us the abundant riches of thy love: grant that the devout homage of our hearts, which we render unto him, may of thy mercy be deemed a recompence acceptable in thy sight.",
+      "variationKey": "collect"
     }
   },
   "pent03-0": {
@@ -8715,6 +9149,13 @@
       "lat": "Caríssimi, humiliámini sub poténti manu Dei, ut vos exáltet in témpore visitatiónis; omnem sollicitúdinem vestram proiciéntes in eum, quóniam ipsi cura est de vobis.",
       "eng": "Dearly beloved, humble yourselves therefore under the mighty hand of God, that he may exalt you in due time: casting all your care upon him; for he careth for you.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Protéctor in te sperántium, Deus, sine quo nihil est válidum, nihil sanctum; multíplica super nos misericórdiam tuam; ut, te rectóre, te duce, sic transeámus per bona temporália, ut non amittámus ætérna.",
+      "eng": "O God, the Protector of those that hope in Thee, without Whom nothing hath strength, nothing is holy, multiply upon us Thy mercy, that with Thee as ruler and guide, we may so pass through things temporal, that we lose not things eternal.",
+      "variationKey": "collect"
     }
   },
   "pent03-1": {
@@ -8861,6 +9302,13 @@
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
       "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis in Corde Fílii tui, nostris vulneráto peccátis, infinítos dilectiónis thesáuros misericórditer largíri dignáris; concéde, quǽsumus, ut illi devótum pietátis nostræ præstántes obséquium, dignæ quoque satisfactiónis exhibeámus offícium.",
+      "eng": "O God, who hast suffered the Heart of thy Son to be wounded by our sins, and in that very Heart hast bestowed on us the abundant riches of thy love: grant that the devout homage of our hearts, which we render unto him, may of thy mercy be deemed a recompence acceptable in thy sight.",
+      "variationKey": "collect"
     }
   },
   "pent03-2": {
@@ -9007,6 +9455,13 @@
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
       "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis in Corde Fílii tui, nostris vulneráto peccátis, infinítos dilectiónis thesáuros misericórditer largíri dignáris; concéde, quǽsumus, ut illi devótum pietátis nostræ præstántes obséquium, dignæ quoque satisfactiónis exhibeámus offícium.",
+      "eng": "O God, who hast suffered the Heart of thy Son to be wounded by our sins, and in that very Heart hast bestowed on us the abundant riches of thy love: grant that the devout homage of our hearts, which we render unto him, may of thy mercy be deemed a recompence acceptable in thy sight.",
+      "variationKey": "collect"
     }
   },
   "pent03-3": {
@@ -9153,6 +9608,13 @@
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
       "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis in Corde Fílii tui, nostris vulneráto peccátis, infinítos dilectiónis thesáuros misericórditer largíri dignáris; concéde, quǽsumus, ut illi devótum pietátis nostræ præstántes obséquium, dignæ quoque satisfactiónis exhibeámus offícium.",
+      "eng": "O God, who hast suffered the Heart of thy Son to be wounded by our sins, and in that very Heart hast bestowed on us the abundant riches of thy love: grant that the devout homage of our hearts, which we render unto him, may of thy mercy be deemed a recompence acceptable in thy sight.",
+      "variationKey": "collect"
     }
   },
   "pent03-4": {
@@ -9299,6 +9761,13 @@
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
       "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis in Corde Fílii tui, nostris vulneráto peccátis, infinítos dilectiónis thesáuros misericórditer largíri dignáris; concéde, quǽsumus, ut illi devótum pietátis nostræ præstántes obséquium, dignæ quoque satisfactiónis exhibeámus offícium.",
+      "eng": "O God, who hast suffered the Heart of thy Son to be wounded by our sins, and in that very Heart hast bestowed on us the abundant riches of thy love: grant that the devout homage of our hearts, which we render unto him, may of thy mercy be deemed a recompence acceptable in thy sight.",
+      "variationKey": "collect"
     }
   },
   "pent03-5": {
@@ -9445,6 +9914,13 @@
       "lat": "Fratres: Mihi ómnium sanctórum mínimo data est grátia hæc, in géntibus evangelizáre investigábiles divítias Christi; et illumináre omnes, quæ sit dispensátio sacraménti abscónditi a sǽculis in Deo.",
       "eng": "Brethren: Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ; and to make all men see what is the fellowship of the Mystery, which from the beginning of the world hath been hid in God.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui nobis in Corde Fílii tui, nostris vulneráto peccátis, infinítos dilectiónis thesáuros misericórditer largíri dignáris; concéde, quǽsumus, ut illi devótum pietátis nostræ præstántes obséquium, dignæ quoque satisfactiónis exhibeámus offícium.",
+      "eng": "O God, who hast suffered the Heart of thy Son to be wounded by our sins, and in that very Heart hast bestowed on us the abundant riches of thy love: grant that the devout homage of our hearts, which we render unto him, may of thy mercy be deemed a recompence acceptable in thy sight.",
+      "variationKey": "collect"
     }
   },
   "pent04-0": {
@@ -9461,6 +9937,13 @@
       "lat": "Præcéptor, * per totam noctem laborántes nihil cépimus; in verbo autem tuo laxábo rete.",
       "eng": "Master, we have toiled all night, * and have taken nothing; nevertheless at thy word I will let down the net.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Da nobis, quǽsumus, Dómine: ut et mundi cursus pacífice nobis tuo órdine dirigátur; et Ecclésia tua tranquílla devotióne lætétur.",
+      "eng": "Grant, O Lord, we beseech thee, that the course of this world may be so peaceably ordered by thy governance, that thy Church may joyfully serve thee in all godly quietness.",
+      "variationKey": "collect"
     }
   },
   "pent05-0": {
@@ -9477,6 +9960,13 @@
       "lat": "Si offers * munus tuum ad altáre et recordátus fúeris quia frater tuus habet áliquid advérsus te, relínque ibi munus tuum ante altáre, et vade prius reconciliári fratri tuo, et tunc véniens ófferes munus tuum, allelúja.",
       "eng": "If thou bring thy gift to the Altar, * and there rememberest that thy brother hath aught against thee, leave there thy gift before the Altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift. Alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui diligéntibus te bona invisibília præparásti: infúnde córdibus nostris tui amóris afféctum; ut te in ómnibus et super ómnia diligéntes, promissiónes tuas, quæ omne desidérium súperant, consequámur.",
+      "eng": "O God, Who hast prepared for them that love thee such good things as pass man's understanding; pour into our hearts such love toward thee, that we, loving thee in all things and above all things, may obtain thy promises, which exceed all that we can desire.",
+      "variationKey": "collect"
     }
   },
   "pent06-0": {
@@ -9493,6 +9983,13 @@
       "lat": "Miséreor * super turbam, quia ecce jam tríduo sústinent me nec habent quod mandúcent, et, si dimísero eos jejúnos, defícient in via, allelúja.",
       "eng": "I have compassion on the multitude, * because they have now been with Me three days, and have nothing to eat; and if I send them away fasting, they will faint by the way. Alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus virtútum, cujus est totum quod est óptimum: ínsere pectóribus nostris amórem tui nóminis, et præsta in nobis religiónis augméntum; ut, quæ sunt bona, nútrias, ac pietátis stúdio, quæ sunt nutríta, custódias.",
+      "eng": "Lord of all power and might, Who art the Author and Giver of all good things, graft in our hearts the love of thy Name, increase in us true religion, nourish us with all goodness, and, of thy great mercy, keep us in the same.",
+      "variationKey": "collect"
     }
   },
   "pent07-0": {
@@ -9509,6 +10006,13 @@
       "lat": "Non potest arbor * bona fructus malos fácere, nec arbor mala fructus bonos fácere. Omnis arbor quæ non facit fructum bonum, excidétur, et in ignem mittétur, allelúja.",
       "eng": "A good tree cannot bring forth evil fruit, * neither can a corrupt tree bring forth good fruit. Every tree that bringeth not forth good fruit, is hewn down and cast into the fire. Alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, cujus providéntia in sui dispositióne non fállitur: te súpplices exorámus; ut nóxia cuncta submóveas, et ómnia nobis profutúra concédas.",
+      "eng": "O God, Whose never-failing Providence ordereth all things both in heaven and earth, we humbly beseech thee to put away from us all hurtful things, and to give us those things which be profitable for us.",
+      "variationKey": "collect"
     }
   },
   "pent08-0": {
@@ -9525,6 +10029,13 @@
       "lat": "Quid fáciam, * quia dóminus meus aufert a me villicatiónem? Fódere non váleo, mendicáre erubésco. Scio quid fáciam, ut, cum amótus fúero a villicatióne, recípiant me in domos suas.",
       "eng": "What shall I do? * For my lord taketh away from me the stewardship. I cannot dig, to beg I am ashamed. I am resolved what to do, that, when I am put out of the stewardship, they may receive me into their houses.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Largíre nobis, quǽsumus, Dómine, semper spíritum cogitándi quæ recta sunt, propítius et agéndi: ut, qui sine te esse non póssumus, secúndum te vívere valeámus.",
+      "eng": "Grant to us, Lord, we beseech thee, the spirit to think and do always such things as be rightful, that we, who cannot do anything that is good without thee, may by thee be enabled to live according to thy will.",
+      "variationKey": "collect"
     }
   },
   "pent09-0": {
@@ -9541,6 +10052,13 @@
       "lat": "Scriptum est enim: * Quia domus mea domus oratiónis est cunctis géntibus; vos autem fecístis illam spelúncam latrónum. Et erat cotídie docens in templo.",
       "eng": "It is written: My house is the house of prayer * for all nations but ye have made it a den of thieves. And He taught daily in the Temple.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Páteant aures misericórdiæ tuæ, Dómine, précibus supplicántium: et, ut peténtibus desideráta concédas; fac eos, quæ tibi sunt plácita, postuláre.",
+      "eng": "Let thy merciful ears, O Lord, be open to the prayers of thy humble servants; and, that they may obtain their petitions, make them to ask such things as shall please thee.",
+      "variationKey": "collect"
     }
   },
   "pent10-0": {
@@ -9557,6 +10075,13 @@
       "lat": "Omnis * qui se exáltat, humiliábitur: et qui se humiliat, exaltábitur.",
       "eng": "This man went down to his house * justified rather than the other, for every one that exalteth himself shall be abased, and he that humbleth himself shall be exalted.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui omnipoténtiam tuam parcéndo máxime et miserándo maniféstas: multíplica super nos misericórdiam tuam; ut, ad tua promíssa curréntes, cæléstium bonórum fácias esse consórtes.",
+      "eng": "O God, Who declarest thine Almighty power most chiefly in showing mercy and pity, mercifully grant unto us such a measure of thy grace, that we, running the way of thy commandments, may obtain thy gracious promises, and be made partakers of thy heavenly treasure.",
+      "variationKey": "collect"
     }
   },
   "pent11-0": {
@@ -9573,6 +10098,13 @@
       "lat": "Bene ómnia fecit * et surdos fecit audíre et mutos loqui.",
       "eng": "He hath done all things well, * He maketh both the deaf to hear and the dumb to speak.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, qui, abundántia pietátis tuæ, et mérita súpplicum excédis et vota: effúnde super nos misericórdiam tuam; ut dimíttas quæ consciéntia métuit, et adícias quod orátio non præsúmit.",
+      "eng": "Almighty and everlasting God, Who art always more ready to hear than we to pray, and art wont to give more than either we desire or deserve, pour down upon us the abundance of thy mercy, forgiving us those things whereof our conscience is afraid, and giving us those good things which we are not worthy to ask.",
+      "variationKey": "collect"
     }
   },
   "pent12-0": {
@@ -9589,6 +10121,13 @@
       "lat": "Homo quidam * descendébat ab Jerúsalem in Jéricho et íncidit in latrónes, qui étiam despoliavérunt eum et, plagis impósitis, abiérunt semivívo relícto.",
       "eng": "A certain man went down from Jerusalem * to Jericho, and fell among thieves, which stripped him of his raiment, and wounded him, and departed, leaving him half dead.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens et miséricors Deus, de cujus múnere venit, ut tibi a fidélibus tuis digne et laudabíliter serviátur: tríbue, quǽsumus, nobis; ut ad promissiónes tuas sine offensióne currámus.",
+      "eng": "Almighty and merciful God, of Whose only gift it cometh that thy faithful people do unto thee true and laudable service, grant, we beseech thee, that we may so faithfully serve thee in this life, that we fail not finally to attain thy heavenly promises.",
+      "variationKey": "collect"
     }
   },
   "pent13-0": {
@@ -9605,6 +10144,13 @@
       "lat": "Unus autem * ex illis, ut vidit quod mundátus est, regréssus est cum magna voce magníficans Deum, allelúja.",
       "eng": "And one of them, * when he saw that he was healed, turned back, and with a loud voice glorified God, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, da nobis fídei, spei et caritátis augméntum: et, ut mereámur ássequi quod promíttis, fac nos amáre quod prǽcipis.",
+      "eng": "Almighty and everlasting God, give unto us the increase of faith, hope, and charity, and that we may worthily obtain that which Thou dost promise, make us to love that which Thou dost command.",
+      "variationKey": "collect"
     }
   },
   "pent14-0": {
@@ -9621,6 +10167,13 @@
       "lat": "Quǽrite primum * regnum Dei et justítiam ejus, et hæc ómnia adiciéntur vobis, allelúja.",
       "eng": "Seek ye first the kingdom of God * and His righteousness, and all these things shall be added unto you, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Custódi, Dómine, quǽsumus, Ecclésiam tuam propitiatióne perpétua: et quia sine te lábitur humána mortálitas; tuis semper auxíliis et abstrahátur a nóxiis et ad salutária dirigátur.",
+      "eng": "Keep, we beseech thee, O Lord, thy Church with thy perpetual mercy, and because the frailty of man without thee cannot but fall, keep us ever by thy help from all things hurtful, and lead us to all things profitable to our salvation.",
+      "variationKey": "collect"
     }
   },
   "pent15-0": {
@@ -9637,6 +10190,13 @@
       "lat": "Accépit autem omnes timor, * et magnificábant Deum, dicéntes: Quia Prophéta magnus surréxit in nobis, et quia Deus visitávit plebem suam.",
       "eng": "A great prophet is risen up among us * and God hath visited His people.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Ecclésiam tuam, Dómine, miserátio continuáta mundet et múniat: et quia sine te non potest salva consístere; tuo semper múnere gubernétur.",
+      "eng": "O Lord, we beseech thee, let thy continual pity cleanse and defend thy Church, and because it cannot continue in safety without thy succour, preserve it evermore by thy help and goodness.",
+      "variationKey": "collect"
     }
   },
   "pent16-0": {
@@ -9653,6 +10213,13 @@
       "lat": "Cum vocátus fúeris * ad núptias, recúmbe in novíssimo loco, ut dicat tibi qui te invitávit: Amíce, ascénde supérius. Et erit tibi glória coram simul discumbéntibus, allelúja.",
       "eng": "When thou art bidden * of any man to a wedding, go and sit down in the lowest room, that he that bade thee may say: Friend, go up higher, then shalt thou have worship in the presence of them that sit at meat with thee, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Tua nos, quǽsumus, Dómine, grátia semper et prævéniat et sequátur: ac bonis opéribus júgiter præstet esse inténtos.",
+      "eng": "Lord, we pray thee, that thy grace may always prevent and follow us, and make us continually to be given to all good works.",
+      "variationKey": "collect"
     }
   },
   "pent17-0": {
@@ -9669,6 +10236,13 @@
       "lat": "Quid vobis * vidétur de Christo? cujus fílius est? Dicunt ei omnes: David. Dicit eis Jesus: Quómodo David in spíritu vocat eum Dóminum dicens: Dixit Dóminus Dómino meo: Sede a dextris meis?",
       "eng": "What think ye of Christ? Whose Son is He? * They say all unto Him: The Son of David. Jesus saith unto them: How then doth David in spirit call Him Lord, saying: The Lord said unto my Lord, Sit Thou at My right hand?",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Da, quǽsumus, Dómine, pópulo tuo diabólica vitáre contágia: et te solum Deum pura mente sectári.",
+      "eng": "O Lord, we beseech thee, grant thy people grace to withstand the temptations of the devil, and with pure hearts to follow thee the only God.",
+      "variationKey": "collect"
     }
   },
   "pent18-0": {
@@ -9685,6 +10259,13 @@
       "lat": "Tulit ergo * paralýticus lectum suum, in quo jacébat, magníficans Deum: et omnis plebs, ut vidit, dedit laudem Deo.",
       "eng": "And immediately, he that had been sick of the palsy arose, * and took up his bed whereon he lay, glorifying God and all the people, when they saw it, gave praise to God.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Dírigat corda nostra, quǽsumus, Dómine, tuæ miseratiónis operátio: quia tibi sine te placére non póssumus.",
+      "eng": "Mercifully grant, O Lord, that thine effectual goodness may in all things direct our hearts, forasmuch as without thee we are not able to please thee.",
+      "variationKey": "collect"
     }
   },
   "pent19-0": {
@@ -9701,6 +10282,13 @@
       "lat": "Núptiæ * quidem parátæ sunt, sed qui invitáti erant, non fuérunt digni. Ite ergo ad éxitus viárum, et quoscúmque invenéritis, vocáte ad núptias, dicit Dóminus.",
       "eng": "And the King came in * to see the guests, and he saw there a man which had not on a wedding garment. And he saith unto him: Friend, how camest thou in hither, not having a wedding garment?",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens et miséricors Deus, univérsa nobis adversántia propitiátus exclúde: ut mente et córpore páriter expedíti, quæ tua sunt, líberis méntibus exsequámur.",
+      "eng": "O Almighty and most merciful God, of thy bountiful goodness keep us, we beseech thee, from all things that may hurt us; that we, being ready both in body and soul, may cheerfully accomplish those things that Thou wouldest have done.",
+      "variationKey": "collect"
     }
   },
   "pent20-0": {
@@ -9717,6 +10305,13 @@
       "lat": "Cognóvit autem pater * quia illa hora erat, in qua dixit Jesus: Fílius tuus vivit; et crédidit ipse et domus ejus tota.",
       "eng": "So the father knew * that it was at the same hour in which Jesus said “Thy son liveth.” And he himself believed, and his whole house.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Largíre, quǽsumus, Dómine, fidélibus tuis indulgéntiam placátus et pacem: ut páriter ab ómnibus mundéntur offénsis, et secúra tibi mente desérviant.",
+      "eng": "Grant, we beseech thee, O Lord, to thy faithful people pardon and peace, that they may be cleansed from all their sins, and serve thee with a quiet mind.",
+      "variationKey": "collect"
     }
   },
   "pent21-0": {
@@ -9733,6 +10328,13 @@
       "lat": "Serve nequam, * omne débitum dimísi tibi, quóniam rogásti me: nonne ergo opórtuit et te miseréri consérvi tui, sicut et ego tui misértus sum? dicit Dóminus.",
       "eng": "O thou wicked servant, I forgave thee all * that debt, because thou desiredst me. Shouldest not thou also have had compassion on thy fellow-servant, even as I had pity on thee, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Famíliam tuam, quǽsumus, Dómine, contínua pietáte custódi: ut a cunctis adversitátibus te protegénte, sit líbera; et in bonis áctibus tuo nómini sit devóta.",
+      "eng": "O Lord, we beseech thee to keep thine household in continual godliness, that, through thy protection, it may be free from all adversities, and devoutly given to serve thee in good works, to the glory of thy Name.",
+      "variationKey": "collect"
     }
   },
   "pent22-0": {
@@ -9749,6 +10351,13 @@
       "lat": "Réddite ergo * quæ sunt Cǽsaris Cǽsari, et quæ sunt Dei Deo, allelúja.",
       "eng": "Render therefore unto Caesar the things which are Caesar's, * and unto God the things that are God's, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, refúgium nostrum et virtus: adésto piis Ecclésiæ tuæ précibus, auctor ipse pietátis, et præsta; ut, quod fidéliter pétimus, efficáciter consequámur.",
+      "eng": "O God, our Refuge and Strength, Who art the author of all godliness, be ready, we beseech thee, to hear the devout prayers of thy Church, and grant that those things which we ask faithfully, we may obtain effectually.",
+      "variationKey": "collect"
     }
   },
   "pent23-0": {
@@ -9765,6 +10374,13 @@
       "lat": "At Jesus convérsus * et videns eam dixit: Confíde, fília, fides tua te salvam fecit, allelúja.",
       "eng": "But Jesus turned Him about, * and when He saw her, He said: Daughter, be of good comfort; thy faith hath made thee whole, alleluia.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Absólve, quǽsumus, Dómine, tuórum delícta populórum: ut a peccatórum néxibus, quæ pro nostra fragilitáte contráximus, tua benignitáte liberémur.",
+      "eng": "O Lord, we beseech thee, absolve thy people from their offences, that through thy bountiful goodness we may all be delivered from the bands of those sins, which by our frailty we have committed.",
+      "variationKey": "collect"
     }
   },
   "pent24-0": {
@@ -9781,6 +10397,13 @@
       "lat": "Amen dico vobis * quia non præteríbit generátio hæc, donec ómnia fiant: cælum et terra transíbunt, verba autem mea non transíbunt, dicit Dóminus.",
       "eng": "Amen, I say unto you, this generation shall not pass till all these things be fulfilled; * heaven and earth shall pass away, but My words shall not pass away, saith the Lord.",
       "variationKey": "vesperae.antiphon.magnificat"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Excita, quǽsumus, Dómine, tuórum fidélium voluntátes: ut, divíni óperis fructum propénsius exsequéntes; pietátis tuæ remédia majóra percípiant.",
+      "eng": "Stir up, we beseech thee, Lord, the wills of thy faithful people, that they, plenteously bringing forth the fruit of good works, may of thee be plenteously rewarded.",
+      "variationKey": "collect"
     }
   },
   "quad1-0": {
@@ -9860,6 +10483,13 @@
       "lat": "Fratres: Hortámur vos, ne in vácuum grátiam Dei recipiátis. Ait enim: Témpore accépto exaudívi te, et in die salútis adjúvi te.",
       "eng": "Brothers, we exhort you, that you receive not the grace of God in vain. For he saith: In an accepted time have I heard thee; and in the day of salvation have I helped thee.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui Ecclésiam tuam ánnua quadragesimáli observatióne puríficas: præsta famíliæ tuæ; ut, quod a te obtinére abstinéndo nítitur, hoc bonis opéribus exsequátur.",
+      "eng": "O God, Who dost every year purge thy Church by the Fast of Forty Days, grant unto this thy family, that what things soever they strive to obtain at thy hand by abstaining from meats, they may ever turn to profit by good works.",
+      "variationKey": "collect"
     }
   },
   "quad1-1": {
@@ -10028,6 +10658,13 @@
       "lat": "Fratres: Rogámus vos, et obsecrámus in Dómino Jesu: ut, quemádmodum accepístis a nobis, quómodo vos opórteat ambuláre, et placére Deo, sic et ambulétis, ut abundétis magis.",
       "eng": "For the rest therefore, brethren, we pray and beseech you in the Lord Jesus, that as you have received from us, how you ought to walk, and to please God, so also you would walk, that you may abound the more.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui cónspicis omni nos virtúte destítui: intérius exteriúsque custódi; ut ab ómnibus adversitátibus muniámur in córpore, et a pravis cogitatiónibus mundémur in mente.",
+      "eng": "O God, Who seest that we have no power of ourselves to help ourselves, keep us both outwardly in our bodies, and inwardly in our souls, that we may be defended from all adversities which may happen to the body, and from all evil thoughts which may assault and hurt the soul.",
+      "variationKey": "collect"
     }
   },
   "quad2-1": {
@@ -10203,6 +10840,13 @@
       "lat": "Fratres: Estóte imitatóres Dei, sicut fílii caríssimi: et ambuláte in dilectióne, sicut et Christus diléxit nos, et trádidit semetípsum pro nobis oblatiónem et hóstiam Deo in odórem suavitátis.",
       "eng": "Be ye, therefore, followers of God, as most dear children; And walk in love, as Christ also hath loved us, and hath delivered himself for us, an oblation and a sacrifice to God for an odour of sweetness.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Quǽsumus, omnípotens Deus, vota humílium réspice: atque ad defensiónem nostram, déxteram tuæ majestátis exténde.",
+      "eng": "We beseech You, almighty God, hear the prayers of the humble and stretch forth the right hand of Your majesty to protect us.",
+      "variationKey": "collect"
     }
   },
   "quad3-1": {
@@ -10371,6 +11015,13 @@
       "lat": "Fratres: Scriptum est, quóniam Abraham duos fílios hábuit: unum de ancílla, et unum de líbera: sed qui de ancílla, secúndum carnem natus est: qui autem de líbera, per repromissiónem: quæ sunt per allegoríam dicta.",
       "eng": "Brothers: For it is written that Abraham had two sons: the one by a bondwoman, and the other by a free woman. But he who was of the bondwoman, was born according to the flesh: but he of the free woman, was by promise, which things are said by an allegory.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut, qui ex mérito nostræ actiónis afflígimur, tuæ grátiæ consolatióne respirémus.",
+      "eng": "Grant, we beseech thee, Almighty God, that we who for our evil deeds are worthily punished, may, by the comfort of thy grace, mercifully be relieved.",
+      "variationKey": "collect"
     }
   },
   "quad4-1": {
@@ -10546,6 +11197,13 @@
       "lat": "Fratres: Christus assístens Póntifex futurórum bonórum, per ámplius et perféctius tabernáculum non manu factum, id est, non hujus creatiónis: neque per sánguinem hircórum aut vitulórum, sed per próprium sánguinem introívit semel in Sancta, ætérna redemptióne invénta.",
       "eng": "But Christ, being come an high priest of the good things to come, by a greater and more perfect tabernacle not made with hand, that is, not of this creation: Neither by the blood of goats, or of calves, but by his own blood, entered once into the holies, having obtained eternal redemption.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Quǽsumus, omnípotens Deus, famíliam tuam propítius réspice: ut, te largiénte, regátur in córpore; et, te servánte, custodiátur in mente.",
+      "eng": "We beseech thee, Almighty God, mercifully to look upon this thy family, that by thy great goodness they may be governed and preserved evermore, both in body and soul.",
+      "variationKey": "collect"
     }
   },
   "quad5-1": {
@@ -10721,6 +11379,13 @@
       "lat": "Quis crédidit audítui nostro? et bráchium Dómini cui revelátum est? Et ascéndet sicut virgúltum coram eo, et sicut radix de terra sitiénti.",
       "eng": "Who hath believed our report? and to whom is the arm of the Lord revealed? And he shall grow up as a tender plant before him, and as a root out of a thirsty ground.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, in cujus passióne, secúndum Simeónis prophetíam, dulcíssimam ánimam gloriósæ Vírginis et Matris Maríæ dolóris gládius pertransívit: concéde, propítius; ut qui transfixiónem ejus et passiónem venerándo recólimus, gloriósis méritis et précibus ómnium Sanctórum cruci fidéliter astántium intercedéntibus, passiónis tuæ efféctum felícem consequámur:",
+      "eng": "O God, at Whose Passion, according to the prophecy of Simeon, a sword of sorrow pierced through the gentle soul of the glorious Maiden and Mother Mary, mercifully grant to as many as do ever remember with awe how that her soul was pierced and Thou didst suffer, even for all such be Thou entreated, for the sake and by the prayers of all thy glorious and holy servants who stood so loyally by thy Cross, and grant unto the same, that for them thy life-giving Death may not have been in vain.",
+      "variationKey": "collect"
     }
   },
   "quad5-6": {
@@ -10809,6 +11474,13 @@
       "lat": "Fratres: Hoc enim sentíte in vobis, quod et in Christo Jesu: qui, cum in forma Dei esset, non rapínam arbitrátus est esse se æquálem Deo: sed semetípsum exinanívit, formam servi accípiens, in similitúdinem hóminum factus, et hábitu invéntus ut homo.",
       "eng": "Brothers: For let this mind be in you, which was also in Christ Jesus: Who being in the form of God, thought it not robbery to be equal with God: But emptied himself, taking the form of a servant, being made in the likeness of men, and in habit found as a man.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Omnípotens sempitérne Deus, qui humáno géneri, ad imitándum humilitátis exémplum, Salvatórem nostrum carnem súmere, et crucem subíre fecísti: concéde propítius; ut et patiéntiæ ipsíus habére documénta, et resurrectiónis consórtia mereámur.",
+      "eng": "Almighty and everlasting God, Who, of thy tender love towards mankind, hast sent thy Son our Saviour Jesus Christ to take upon Him our flesh and to suffer death upon the Cross, that all mankind should follow the example of His great humility; mercifully grant, that we may both follow the example of His patience, and also be made partakers of His resurrection.",
+      "variationKey": "collect"
     }
   },
   "quad6-1": {
@@ -11057,6 +11729,13 @@
       "lat": "Considerábam * ad déxteram, et vidébam, et non erat qui cognósceret me.;;141",
       "eng": "I looked * on my right hand and beheld: but there was no man that would know me.",
       "variationKey": "vesperae.antiphon.psalm5"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Christus factus est pro nobis obédiens usque ad mortem. _ Réspice, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum: (rubrica cisterciensis)",
+      "eng": "Christ became obedient for us unto death. _ Look down, we beseech thee, O Lord, on this thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross.",
+      "variationKey": "collect"
     }
   },
   "quad6-5": {
@@ -11274,6 +11953,13 @@
       "lat": "Fratres: Nescítis quod ii qui in stádio currunt, omnes quidem currunt, sed unus áccipit bravíum? Sic cúrrite ut comprehendátis.",
       "eng": "Brothers: Know you not that they that run in the race, all run indeed, but one receiveth the prize? So run that you may obtain.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Preces pópuli tui, quǽsumus, Dómine, cleménter exáudi: ut, qui juste pro peccátis nostris afflígimur, pro tui nóminis glória misericórditer liberémur.",
+      "eng": "O Lord, we beseech thee favourably to hear the prayers of thy people; that we, who are justly punished for our offences, may be mercifully delivered by thy goodness, for the glory of thy Name.",
+      "variationKey": "collect"
     }
   },
   "quadp1-1": {
@@ -11389,6 +12075,13 @@
       "lat": "Fratres: Libénter suffértis insipiéntes, cum sitis ipsi sapiéntes: sustinétis enim si quis vos in servitútem rédigit, si quis dévorat, si quis áccipit, si quis extóllitur, si quis in fáciem vos cædit.",
       "eng": "For you gladly suffer the foolish; whereas yourselves are wise. For you suffer if a man bring you into bondage, if a man devour you, if a man take from you, if a man be lifted up, if a man strike you on the face.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, qui cónspicis, quia ex nulla nostra actióne confídimus: concéde propítius; ut, contra advérsa ómnia Doctóris géntium protectióne muniámur.",
+      "eng": "O God, Who seest that we put not our trust in anything that we do, mercifully grant that through the protection of the Teacher of the Gentiles we may be defended against all adversity.",
+      "variationKey": "collect"
     }
   },
   "quadp2-1": {
@@ -11495,6 +12188,13 @@
       "lat": "Fratres: Si linguis hóminum loquar, et Angelórum, caritátem autem non hábeam, factus sum velut æs sonans, aut cýmbalum tínniens.",
       "eng": "Brothers: If I speak with the tongues of men, and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal.",
       "variationKey": "vesperae.capitulum"
+    },
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Preces nostras, quǽsumus, Dómine, cleménter exáudi: atque, a peccatórum vínculis absolútos, ab omni nos adversitáte custódi.",
+      "eng": "O Lord, we beseech You, mercifully hear our prayers; loose us from the chains of our sins and keep us from all adversity.",
+      "variationKey": "collect"
     }
   },
   "quadp3-1": {
@@ -11915,9 +12615,33 @@
   "nat10": {},
   "nat11": {},
   "nat12": {},
-  "pent01-1": {},
-  "pent01-2": {},
-  "pent01-3": {},
+  "pent01-1": {
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, in te sperántium fortitúdo, adésto propítius invocatiónibus nostris: et, quia sine te nihil potest mortális infírmitas, præsta auxílium grátiæ tuæ; ut, in exsequéndis mandátis tuis, et voluntáte tibi et actióne placeámus.",
+      "eng": "O God, the Strength of all them that put their trust in thee, mercifully accept our prayers, and because through the weakness of our mortal nature we can do no good thing without thee, grant us the help of thy grace, that in keeping of thy commandments we may please thee, both in will and deed.",
+      "variationKey": "collect"
+    }
+  },
+  "pent01-2": {
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, in te sperántium fortitúdo, adésto propítius invocatiónibus nostris: et, quia sine te nihil potest mortális infírmitas, præsta auxílium grátiæ tuæ; ut, in exsequéndis mandátis tuis, et voluntáte tibi et actióne placeámus.",
+      "eng": "O God, the Strength of all them that put their trust in thee, mercifully accept our prayers, and because through the weakness of our mortal nature we can do no good thing without thee, grant us the help of thy grace, that in keeping of thy commandments we may please thee, both in will and deed.",
+      "variationKey": "collect"
+    }
+  },
+  "pent01-3": {
+    "collect": {
+      "type": "collect",
+      "label": "Orátio",
+      "lat": "Deus, in te sperántium fortitúdo, adésto propítius invocatiónibus nostris: et, quia sine te nihil potest mortális infírmitas, præsta auxílium grátiæ tuæ; ut, in exsequéndis mandátis tuis, et voluntáte tibi et actióne placeámus.",
+      "eng": "O God, the Strength of all them that put their trust in thee, mercifully accept our prayers, and because through the weakness of our mortal nature we can do no good thing without thee, grant us the help of thy grace, that in keeping of thy commandments we may please thee, both in will and deed.",
+      "variationKey": "collect"
+    }
+  },
   "pent03-6": {},
   "pent04-1": {},
   "pent04-2": {},

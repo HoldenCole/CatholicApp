@@ -79,24 +79,32 @@ final class ContentStore {
         let ctx = LiturgicalContext.current()
         var assembled = officeAssembler.assemble(template: template, context: ctx)
 
-        // Apply sanctoral overrides (collect, antiphons) from the ordo winner
+        // Apply proper collect from the ordo winner (temporal or sanctoral)
         let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? MissalRite.rite1962.rawValue
         let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
-        if let ordo = ordoForDate(ctx.date, rite: rite),
-           ordo.winner == "sanctoral",
-           let saint = sanctoralPropers[ordo.winnerKey] {
-            assembled = applySanctoralOverrides(assembled, saint: saint)
+        if let ordo = ordoForDate(ctx.date, rite: rite) {
+            if ordo.winner == "sanctoral",
+               let saint = sanctoralPropers[ordo.winnerKey] {
+                assembled = applyProperOverrides(assembled, overrides: saint)
+            } else if let temporalKey = ordo.temporal,
+                      let tempOverrides = officeAssembler.temporalPropers[temporalKey] {
+                assembled = applyProperOverrides(assembled, overrides: tempOverrides)
+            }
         }
 
         return assembled
     }
 
-    private func applySanctoralOverrides(_ hour: Hour, saint: [String: Hour.Part]) -> Hour {
+    private func applyProperOverrides(_ hour: Hour, overrides: [String: Hour.Part]) -> Hour {
         let updatedParts = hour.parts.map { part -> Hour.Part in
-            guard let key = part.variationKey else { return part }
-            if let override = saint[key] { return override }
-            // Map generic keys: "collect" in sanctoral → any collect variationKey
-            if part.type == "collect", let collect = saint["collect"] {
+            guard let key = part.variationKey else {
+                if part.type == "collect", let collect = overrides["collect"] {
+                    return collect
+                }
+                return part
+            }
+            if let override = overrides[key] { return override }
+            if part.type == "collect", let collect = overrides["collect"] {
                 return collect
             }
             return part
