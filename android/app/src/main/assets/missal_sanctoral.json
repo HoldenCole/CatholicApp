@@ -60,7 +60,7 @@
     },
     "oratio": {
       "lat": "Omnípotens sempitérne Deus, qui primítias Mártyrum in beati Levítæ Stephani sánguine dedicásti: tríbue, quǽsumus; ut pro nobis intercéssor exsístat, qui pro suis étiam persecutóribus exorávit Dóminum nostrum Jesum Christum, Fílium tuum: $Qui tecum",
-      "eng": ""
+      "eng": "Grant us, we beseech thee, O Lord, so to imitate what we revere, that we may learn to love even our enemies; for we celebrate the heavenly birthday of him who knew how to pray for his very persecutors to our Lord Jesus Christ:\n$Qui tecum"
     }
   },
   "01-03": {
@@ -197,12 +197,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -216,7 +216,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -379,7 +379,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -388,36 +388,36 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "Lesson from the first letter of St Peter the Apostle\n!1 Pet 5:1-4; 5:10-11.\nDearly beloved brethren: The ancients therefore that are among you, I beseech, who am myself also an ancient, and a witness of the sufferings of Christ: as also a partaker of that glory which is to be revealed in time to come: Feed the flock of God which is among you, taking care of it, not by constraint, but willingly, according to God: not for filthy lucre's sake, but voluntarily: Neither as lording it over the clergy, but being made a pattern of the flock from the heart. And when the prince of pastors shall appear, you shall receive a never fading crown of glory. But the God of all grace, who hath called us into his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you, and confirm you, and establish you. To him be glory and empire for ever and ever. Amen.",
       "ref": "1 Pet 5:1-4; 5:10-11"
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
       "lat": "Oblátis munéribus, quǽsumus, Dómine, Ecclésiam tuam benígnus illúmina: ut, et gregis tui profíciat ubíque succéssus, et grati fiant nómini tuo, te gubernánte, pastóres. $Per Dominum",
-      "eng": ""
+      "eng": "By the offered gifts we beseech thee, O Lord, that thou kindly enlighten thy Church, so that thy flock may everywhere progress and prosper, and thy shepherds, under thy guidance may be pleasing to thy name.\n$Per Dominum"
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat. $Per Dominum",
-      "eng": ""
+      "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity.\n$Per Dominum"
     }
   },
   "01-17": {
@@ -428,7 +428,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -461,7 +461,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -480,10 +480,6 @@
       "lat": "In virtúte tua, Dómine, lætábitur justus: et super salutáre tuum exsultábit veheménter: desidérium ánimæ ejus tribuísti ei. Quóniam prævenísti eum in benedictiónibus dulcédinis: posuísti in cápite ejus corónam de lápide pretióso. &Gloria In virtúte tua, Dómine, lætábitur justus: et super salutáre tuum exsultábit veheménter: desidérium ánimæ ejus tribuísti ei.",
       "eng": " In thy strength, O Lord, the king shall joy; and in thy salvation he shall rejoice exceedingly. Thou hast given him his heart's desire.  For thou hast prevented him with blessings of sweetness: thou hast set on his head a crown of precious stones. &Gloria  In thy strength, O Lord, the king shall joy; and in thy salvation he shall rejoice exceedingly. Thou hast given him his heart's desire.",
       "ref": "Ps 20:2-3"
-    },
-    "oratio": {
-      "lat": "@:Oratio Petri (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) @:Oratio Pauli",
-      "eng": ""
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Petrus, Apóstolus Jesu Christi, eléctis ádvenis dispersiónis Ponti, Galátiæ, Cappadóciæ, Asiæ et Bithýniæ secúndum præsciéntiam Dei Patris, in sanctificatiónem Spíritus, in obœdiéntiam, et aspersiónem sánguinis Jesu Christi: grátia vobis et pax multiplicétur. Benedíctus Deus et Pater Dómini nostri Jesu Christi, qui secúndum misericórdiam suam magnam regenerávit nos in spem vivam, per resurrectiónem Jesu Christi ex mórtuis, in hereditátem incorruptíbilem et incontaminátam et immarcescíbilem, conservátam in cœlis in vobis, qui in virtúte Dei custodímini per fidem in salútem, parátam revelári in témpore novíssimo. In quo exsultábitis, módicum nunc si opórtet contristári in váriis tentatiónibus: ut probátio vestræ fídei multo pretiósior auro [quod per ignem probatur] inveniátur in laudem et glóriam et honórem, in revelatióne Jesu Christi, Dómini nostri.",
@@ -505,18 +501,10 @@
       "eng": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam: et portæ ínferi non prævalébunt advérsus eam: et tibi dabo claves regni cœlórum. (Allelúja.)",
       "ref": "Matt 16:18-19"
     },
-    "secreta": {
-      "lat": "@:Secreta Petri (deinde dicuntur semper) _ (sed rubrica 196 omittuntur) @:Secreta Pauli",
-      "eng": ""
-    },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
       "eng": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
       "ref": "Matt 16:18"
-    },
-    "postcommunio": {
-      "lat": "@:Postcommunio Petri (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) @:Postcommunio Pauli",
-      "eng": ""
     }
   },
   "01-19": {
@@ -752,7 +740,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -761,7 +749,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -832,10 +820,6 @@
       "eng": "I know Whom I have believed, and I am certain that He is able to guard the trust committed to me, against that day; being a just Judge. O Lord, You have probed me and You know me; You know when I sit and when I stand. &Gloria I know Whom I have believed, and I am certain that He is able to guard the trust committed to me, against that day; being a just Judge.",
       "ref": "2 Tim 1:12"
     },
-    "oratio": {
-      "lat": "@:Oratio Pauli (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) @:Oratio Petri",
-      "eng": ""
-    },
     "lectio": {
       "lat": "Léctio Actuum Apostolórum In diébus illis: Saulus adhuc spirans minárum et cædis in discípulos Dómini, accés sit ad príncipem sacerdótum, et pétiit ab eo epístolas in Damáscum ad synagógas: ut, si quos invenísset hujus viæ viros ac mulíeres, vinctos perdúceret in Jerúsalem. Et cum iter fáceret, cóntigit, ut appropinquáret Damásco: et súbito circumfúlsit eum lux de cœlo. Et cadens in terram, audívit vocem dicéntem sibi: Saule, Saule, quid me perséqueris? Qui dixit: Quis es, Dómine? Et ille: Ego sum Jesus, quem tu perséqueris: durum est tibi contra stímulum calcitráre. Et tremens ac stupens, dixit: Dómine, quid me vis fácere? Et Dóminus ad eum: Surge et ingrédere civitátem, et ibi dicétur tibi, quid te opórteat fácere. Viri autem illi, qui comitabántur cum eo, stabant stupefácti, audiéntes quidem vocem, néminem autem vidéntes. Surréxit autem Saulus de terra, apertísque óculis nihil vidébat. Ad manus autem illum trahéntes, introduxérunt Damáscum. Et erat ibi tribus diébus non videns, et non manducávit neque bibit. Erat autem quidam discípulus Damásci, nómine Ananías: et dixit ad illum in visu Dóminus: Ananía. At ille ait: Ecce ego, Dómine. Et Dóminus ad eum: Surge et vade in vicum, qui vocátur Rectus: et quære in domo Judæ Saulum nómine Tarsénsem: ecce enim orat. Et vidit virum, Ananíam nómine, intrœúntem et imponéntem sibi manus, ut visum recipiat. Respóndit autem Ananías: Dómine, audívi a multis de viro hoc, quanta mala fécerit sanctis tuis in Jerúsalem: et hic habet potestátem a princípibus sacerdótum alligándi omnes, qui ínvocant nomen tuum. Dixit autem ad eum Dóminus: Vade, quóniam vas electiónis est mihi iste, ut portet nomen meum coram géntibus et régibus et fíliis Israël. Ego enim osténdam illi, quanta opórteat eum pro nómine meo pati. Et ábiit Ananías et introívit in domum: et impónens ei manus, dixit: Saule frater, Dóminus misit me Jesus, qui appáruit tibi in via, qua veniébas, ut vídeas et impleáris Spíritu Sancto. Ei conféstim cecidérunt ab óculis ejus tamquam squamæ, et visum recépit: et surgens baptizátus est. Et cum accepísset cibum, confortátus est. Fuit autem cum discípulis, qui erant Damásci, per dies áliquot. Et contínuo in synagógis prædicábat Jesum, quóniam hic est Fílius Dei. Stupébant autem omnes, qui audiébant, et dicébant: Nonne hic est, qui expugnábat in Jerúsalem eos, qui invocábant nomen istud: et huc ad hoc venit, ut vinctos illos dúcere ad príncipes sacerdótum?  Saulus autem multo magis convalescébat, et confundébat Judæos, qui habitábant Damásci, affírmans, quóniam hic est Christus.",
       "eng": "Lesson from the Acts of the Apostles In those days, Saul, still breathing threats of slaughter against the disciples of the Lord, went to the high priest and asked him for letters to the synagogues at Damascus, that if he found any men or women belonging to this Way, he might bring them in bonds to Jerusalem. And as he went on his journey, it came to pass that he drew near to Damascus, when suddenly a light from heaven shone round about him; and falling to the ground, he heard a voice saying to him, Saul, Saul, why do you persecute Me? And he said, Who are You, Lord? And He said, I am Jesus, whom you are persecuting. It is hard for you to kick against the goad. And he, trembling and amazed, said, Lord, what will You have me do? And the Lord said to him, Arise and go into the city, and it will be told you what you must do. Now the men who journeyed with him stood speechless, hearing indeed the voice, but seeing no one. And Saul arose from the ground, but when his eyes were opened, he could see nothing. And leading him by the hand, they brought him into Damascus. And for three days he could not see, and he neither ate nor drank. Now there was in Damascus a certain disciple named Ananias and the Lord said to him in a vision, Ananias. And he said, Here I am, Lord. And the Lord said to him, Arise and go to the street called Straight and ask at the house of Judas for a man of Tarsus named Saul. For behold, he is praying. And he saw a man named Ananias come in and lay his hands upon him that he might recover his sight. But Ananias answered, Lord, I have heard from many about this man, how much evil he has done to Your saints in Jerusalem. And here too he has authority from the high priests to arrest all who invoke Your name. But the Lord said to him, Go, for this man is a chosen vessel to Me, to carry My name among nations and kings and the children of Israel. For I will show him how much he must suffer for My name. So Ananias departed and entered the house, and laying his hands upon him, he said, Brother Saul, the Lord has sent me - Jesus, Who appeared to you on your journey - that you may recover your sight and be filled with the Holy Spirit. And straightway there fell from his eyes something like scales, and he recovered his sight, and arose, and was baptized. And after taking some food, he regained his strength. Now for some days he joined the disciples in Damascus, and straightway in the synagogues he began to preach that Jesus is the Son of God. And all who heard him were amazed and said, Is not this he who used to make havoc in Jerusalem of those who called upon this name, and who has come here for the purpose of taking them in bonds to the chief priests? But Saul grew all the stronger and confounded the Jews who were living in Damascus, proving that this is the Christ.",
@@ -856,18 +840,10 @@
       "eng": "To me, Your friends, O God, are made exceedingly honorable; their principality is exceedingly strengthened.",
       "ref": "Ps 138:17"
     },
-    "secreta": {
-      "lat": "@:Secreta Pauli (deinde dicuntur semper) _ (sed rubrica 196 omittuntur) @:Secreta Petri",
-      "eng": ""
-    },
     "communio": {
       "lat": "Amen, dico vobis: quod vos, qui reliquístis ómnia et secúti estis me, céntuplum accipiétis, et vitam ætérnam possidébitis. (Allelúja.)",
       "eng": "Amen I say to you that you, who have left all things and followed Me, shall receive a hundredfold, and shall possess life everlasting. (Alleluia.)",
       "ref": "Matt 19:28-29"
-    },
-    "postcommunio": {
-      "lat": "@:Postcommunio Pauli (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) @:Postcommunio Petri",
-      "eng": ""
     }
   },
   "01-26": {
@@ -1324,7 +1300,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -1348,7 +1324,7 @@
     },
     "offertorium": {
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:21-22\nI have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong. (Allelúja.)",
       "ref": "Ps 88:21-22"
     },
     "secreta": {
@@ -1423,7 +1399,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -1473,7 +1449,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -1506,7 +1482,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -1547,7 +1523,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -1556,7 +1532,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -1917,10 +1893,6 @@
       "eng": " In thy strength, O Lord, the king shall joy; and in thy salvation he shall rejoice exceedingly. Thou hast given him his heart's desire.  For thou hast prevented him with blessings of sweetness: thou hast set on his head a crown of precious stones. &Gloria  In thy strength, O Lord, the king shall joy; and in thy salvation he shall rejoice exceedingly. Thou hast given him his heart's desire.",
       "ref": "Ps 20:2-3"
     },
-    "oratio": {
-      "lat": "@:Oratio Petri (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) @:Oratio Pauli",
-      "eng": ""
-    },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Petrus, Apóstolus Jesu Christi, eléctis ádvenis dispersiónis Ponti, Galátiæ, Cappadóciæ, Asiæ et Bithýniæ secúndum præsciéntiam Dei Patris, in sanctificatiónem Spíritus, in obœdiéntiam, et aspersiónem sánguinis Jesu Christi: grátia vobis et pax multiplicétur. Benedíctus Deus et Pater Dómini nostri Jesu Christi, qui secúndum misericórdiam suam magnam regenerávit nos in spem vivam, per resurrectiónem Jesu Christi ex mórtuis, in hereditátem incorruptíbilem et incontaminátam et immarcescíbilem, conservátam in cœlis in vobis, qui in virtúte Dei custodímini per fidem in salútem, parátam revelári in témpore novíssimo. In quo exsultábitis, módicum nunc si opórtet contristári in váriis tentatiónibus: ut probátio vestræ fídei multo pretiósior auro [quod per ignem probatur] inveniátur in laudem et glóriam et honórem, in revelatióne Jesu Christi, Dómini nostri.",
       "eng": "Léctio Epístolæ beáti Petri Apóstoli Petrus, Apóstolus Jesu Christi, eléctis ádvenis dispersiónis Ponti, Galátiæ, Cappadóciæ, Asiæ et Bithýniæ secúndum præsciéntiam Dei Patris, in sanctificatiónem Spíritus, in obœdiéntiam, et aspersiónem sánguinis Jesu Christi: grátia vobis et pax multiplicétur. Benedíctus Deus et Pater Dómini nostri Jesu Christi, qui secúndum misericórdiam suam magnam regenerávit nos in spem vivam, per resurrectiónem Jesu Christi ex mórtuis, in hereditátem incorruptíbilem et incontaminátam et immarcescíbilem, conservátam in cœlis in vobis, qui in virtúte Dei custodímini per fidem in salútem, parátam revelári in témpore novíssimo. In quo exsultábitis, módicum nunc si opórtet contristári in váriis tentatiónibus: ut probátio vestræ fídei multo pretiósior auro [quod per ignem probatur] inveniátur in laudem et glóriam et honórem, in revelatióne Jesu Christi, Dómini nostri.",
@@ -1941,18 +1913,10 @@
       "eng": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam: et portæ ínferi non prævalébunt advérsus eam: et tibi dabo claves regni cœlórum. (Allelúja.)",
       "ref": "Matt 16:18-19"
     },
-    "secreta": {
-      "lat": "@:Secreta Petri (deinde dicuntur semper) _ (sed rubrica 196 omittuntur) @:Secreta Pauli",
-      "eng": ""
-    },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
       "eng": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
       "ref": "Matt 16:18"
-    },
-    "postcommunio": {
-      "lat": "@:Postcommunio Petri (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) @:Postcommunio Pauli",
-      "eng": ""
     }
   },
   "02-24": {
@@ -2088,7 +2052,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -2097,7 +2061,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -2136,7 +2100,7 @@
     },
     "introitus": {
       "lat": "In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.) Bonum est confitéri Dómino: et psállere nómini tuo, Altíssime. &Gloria In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 15:5\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)\n!Ps 91:2\nv.  It is good to give thanks to the Lord, to sing praise to Your name, Most High.\n&Gloria\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)",
       "ref": "Eccli 15:5"
     },
     "oratio": {
@@ -2150,17 +2114,17 @@
     },
     "graduale": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium. Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus. Allelúja, allelúja. Amávit eum Dóminus, et ornávit eum: stolam glóriæ índuit eum. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just shall meditate wisdom and his tongue shall speak judgment.\nV. The law of his God is in his heart, and his steps shall not be supplanted. Allelúja, allelúja\n!Sir 45:9\nv. And he girded him about with a glorious girdle, and clothed him with a robe of glory, Allelúja.",
       "ref": "Ps 36:30-31"
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 5:13-19\nv.  In that time Jesus said to His disciples: You are the salt of the earth. But if the salt lose its savour, wherewith shall it be salted? It is good for nothing any more but to be cast out, and to be trodden on by men. You are the light of the world. A city seated on a mountain cannot be hid. Neither do men light a candle and put it under a bushel, but upon a candlestick, that it may shine to all that are in the house. So let your light shine before men, that they may see your good works, and glorify your Father who is in heaven. Do not think that I am come to destroy the law, or the prophets. I am not come to destroy, but to fulfill. For amen I say unto you, till heaven and earth pass, one jot, or one tittle shall not pass of the law, till all be fulfilled. He therefore that shall break one of these least commandments, and shall so teach men, shall be called the least in the kingdom of heaven. But he that shall do and teach, he shall be called great in the kingdom of heaven.",
       "ref": "Matt 5:13-19"
     },
     "offertorium": {
       "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 91:13\nv. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. (Allelúja.)",
       "ref": "Ps 91:13"
     },
     "secreta": {
@@ -2169,7 +2133,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -2210,7 +2174,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -2219,7 +2183,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -2255,7 +2219,7 @@
     },
     "secreta": {
       "lat": "Accépta tibi sit, Dómine, sacrátæ plebis oblátio pro tuórum honóre Sanctórum: quorum se méritis de tribulatióne percepísse cognóscit auxílium. $Per Dominum",
-      "eng": ""
+      "eng": "May the service of thy holy people be acceptable to Thee, O Lord, and honorable to thy saints, through whose merits we know that we have received help in trouble.\n$Per Dominum"
     },
     "communio": {
       "lat": "Dilexísti justítiam, et odísti iniquitátem: proptérea unxit te Deus, Deus tuus, óleo lætítiæ præ consórtibus tuis. (Allelúja.)",
@@ -2264,7 +2228,7 @@
     },
     "postcommunio": {
       "lat": "Satiásti, Dómine, famíliam tuam munéribus sacris: ejus, quǽsumus, semper interventióne nos réfove, cujus sollémnia celebrámus. $Per Dominum",
-      "eng": ""
+      "eng": "Thou hast fed thy servants, O Lord, with the holy gifts; comfort us ever we pray, by her intercession whose festival we celebrate.\n$Per Dominum"
     }
   },
   "03-10": {
@@ -2371,7 +2335,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -2395,7 +2359,7 @@
     },
     "offertorium": {
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:21-22\nI have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong. (Allelúja.)",
       "ref": "Ps 88:21-22"
     },
     "secreta": {
@@ -2517,7 +2481,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -2550,7 +2514,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -2580,7 +2544,7 @@
     },
     "graduale": {
       "lat": "Benedícite Dóminum, omnes Angeli ejus: poténtes virtúte, qui fácitis verbum ejus. Bénedic, ánima mea, Dóminum, et ómnia interióra mea nomen sanctum ejus. Allelúja, allelúja. Benedicite Dómino, omnes virtútes ejus: ministri ejus, qui fácitis voluntátem ejus. Allelúja.",
-      "eng": "",
+      "eng": "Alleluja, alleluja.\nV. Holy Archangel Michael, defend us in the battle, that we may not perish in the dreadful judgment. Alleluja. Alleluja.\nV. The sea was shaken and the earth trembled when archangel Michael came down from heaven. Alleluja.",
       "ref": "Ps 102:20 et 1"
     },
     "evangelium": {
@@ -2726,7 +2690,7 @@
     },
     "graduale": {
       "lat": "Qui timétis Dóminum, laudáte eum: univérsum semen Jacob, glorificáte eum. Timeat eum omne semen Israël: quóniam non sprevit, neque despéxit deprecatiónem páuperis. Allelúja, allelúja Ego autem cantábo fortitúdinem tuam: et exsultábo mane misericórdiam tuam. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 91:13; 91:14\nThe just man shall flourish like the palm tree, like a cedar of Lebanon shall he grow in the house of the Lord.\n!Ps 91:3\nV. To proclaim Your kindness at dawn and Your faithfulness throughout the night. Alleluia, alleluia.\n!Jas 1:12\nV. Blessed is the man who endures temptation; for when he has been tried, he will receive the crown of life. Alleluia.",
       "ref": "Ps 21:24-25"
     },
     "evangelium": {
@@ -2881,7 +2845,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -2890,7 +2854,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -3030,12 +2994,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 8:6-7\nYou crowned him with glory and honor.\nV. You have given him rule over the works of Your hands, O Lord. Alleluia, alleluia.\nV. This is the priest whom the Lord has crowned. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 16:24-27.\nAt that time, Jesus said to His disciples, If anyone wishes to come after Me, let him deny himself, and take up his cross, and follow Me. For he who would save his life will lose it; but he who loses his life for My sake will find it. For what does it profit a man, if he gain the whole world, but suffer the loss of his own soul? For the Son of Man is to come with His angels in the glory of His Father, and then He will render to everyone according to His conduct.",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -3049,7 +3013,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 20:4\nYou placed on his head, O Lord, a crown of pure gold.",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -3111,7 +3075,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -3120,36 +3084,36 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "Lesson from the first letter of St Peter the Apostle\n!1 Pet 5:1-4; 5:10-11.\nDearly beloved brethren: The ancients therefore that are among you, I beseech, who am myself also an ancient, and a witness of the sufferings of Christ: as also a partaker of that glory which is to be revealed in time to come: Feed the flock of God which is among you, taking care of it, not by constraint, but willingly, according to God: not for filthy lucre's sake, but voluntarily: Neither as lording it over the clergy, but being made a pattern of the flock from the heart. And when the prince of pastors shall appear, you shall receive a never fading crown of glory. But the God of all grace, who hath called us into his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you, and confirm you, and establish you. To him be glory and empire for ever and ever. Amen.",
       "ref": "1 Pet 5:1-4; 5:10-11"
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
       "lat": "Oblátis munéribus, quǽsumus, Dómine, Ecclésiam tuam benígnus illúmina: ut, et gregis tui profíciat ubíque succéssus, et grati fiant nómini tuo, te gubernánte, pastóres. $Per Dominum",
-      "eng": ""
+      "eng": "By the offered gifts we beseech thee, O Lord, that thou kindly enlighten thy Church, so that thy flock may everywhere progress and prosper, and thy shepherds, under thy guidance may be pleasing to thy name.\n$Per Dominum"
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat. $Per Dominum",
-      "eng": ""
+      "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity.\n$Per Dominum"
     }
   },
   "04-23": {
@@ -3312,7 +3276,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -3321,36 +3285,36 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "Lesson from the first letter of St Peter the Apostle\n!1 Pet 5:1-4; 5:10-11.\nDearly beloved brethren: The ancients therefore that are among you, I beseech, who am myself also an ancient, and a witness of the sufferings of Christ: as also a partaker of that glory which is to be revealed in time to come: Feed the flock of God which is among you, taking care of it, not by constraint, but willingly, according to God: not for filthy lucre's sake, but voluntarily: Neither as lording it over the clergy, but being made a pattern of the flock from the heart. And when the prince of pastors shall appear, you shall receive a never fading crown of glory. But the God of all grace, who hath called us into his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you, and confirm you, and establish you. To him be glory and empire for ever and ever. Amen.",
       "ref": "1 Pet 5:1-4; 5:10-11"
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
       "lat": "Oblátis munéribus, quǽsumus, Dómine, Ecclésiam tuam benígnus illúmina: ut, et gregis tui profíciat ubíque succéssus, et grati fiant nómini tuo, te gubernánte, pastóres. $Per Dominum",
-      "eng": ""
+      "eng": "By the offered gifts we beseech thee, O Lord, that thou kindly enlighten thy Church, so that thy flock may everywhere progress and prosper, and thy shepherds, under thy guidance may be pleasing to thy name.\n$Per Dominum"
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat. $Per Dominum",
-      "eng": ""
+      "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity.\n$Per Dominum"
     }
   },
   "04-27": {
@@ -3362,7 +3326,7 @@
     },
     "introitus": {
       "lat": "In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.) Bonum est confitéri Dómino: et psállere nómini tuo, Altíssime. &Gloria In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 15:5\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)\n!Ps 91:2\nv.  It is good to give thanks to the Lord, to sing praise to Your name, Most High.\n&Gloria\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)",
       "ref": "Eccli 15:5"
     },
     "oratio": {
@@ -3371,22 +3335,22 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum Caríssime: Testíficor coram Deo, et Jesu Christo, qui judicatúrus est vivos et mórtuos, per advéntum ipsíus et regnum ejus: prǽdica verbum, insta opportúne, importune: árgue, óbsecra, íncrepa in omni patiéntia, et doctrína. Erit enim tempus, cum sanam doctrínam non sustinébunt, sed ad sua desidéria, coacervábunt sibi magistros, pruriéntes áuribus, et a veritáte quidem audítum avértent, ad fábulas autem converténtur. Tu vero vígila, in ómnibus labóra, opus fac Evangelístæ, ministérium tuum imple. Sóbrius esto. Ego enim jam delíbor, et tempus resolutiónis meæ instat. Bonum certámen certávi, cursum consummávi, fidem servávi. In réliquo repósita est mihi coróna justítiæ, quam reddet mihi Dóminus in illa die, justus judex: non solum autem mihi, sed et iis, qui díligunt advéntum ejus.",
-      "eng": "",
+      "eng": "Lesson from the second letter of St Paul the Apostle to Timothy\n!2 Tim 4:1-8\nv. Dearly beloved: I charge thee, before God and Jesus Christ, who shall judge the living and the dead, by his coming, and his kingdom: Preach the word: be instant in season, out of season: reprove, entreat, rebuke in all patience and doctrine. For there shall be a time, when they will not endure sound doctrine; but, according to their own desires, they will heap to themselves teachers, having itching ears: And will indeed turn away their hearing from the truth, but will be turned unto fables. But be thou vigilant, labour in all things, do the work of an evangelist, fulfil thy ministry. Be sober. For I am even now ready to be sacrificed: and the time of my dissolution is at hand. I have fought a good fight, I have finished my course, I have kept the faith. As to the rest, there is laid up for me a crown of justice, which the Lord the just judge will render to me in that day: and not only to me, but to them also that love his coming.",
       "ref": "2 Tim 4:1-8"
     },
     "graduale": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium. Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus. Allelúja, allelúja. Amávit eum Dóminus, et ornávit eum: stolam glóriæ índuit eum. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just shall meditate wisdom and his tongue shall speak judgment.\nV. The law of his God is in his heart, and his steps shall not be supplanted. Allelúja, allelúja\n!Sir 45:9\nv. And he girded him about with a glorious girdle, and clothed him with a robe of glory, Allelúja.",
       "ref": "Ps 36:30-31"
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 5:13-19\nv.  In that time Jesus said to His disciples: You are the salt of the earth. But if the salt lose its savour, wherewith shall it be salted? It is good for nothing any more but to be cast out, and to be trodden on by men. You are the light of the world. A city seated on a mountain cannot be hid. Neither do men light a candle and put it under a bushel, but upon a candlestick, that it may shine to all that are in the house. So let your light shine before men, that they may see your good works, and glorify your Father who is in heaven. Do not think that I am come to destroy the law, or the prophets. I am not come to destroy, but to fulfill. For amen I say unto you, till heaven and earth pass, one jot, or one tittle shall not pass of the law, till all be fulfilled. He therefore that shall break one of these least commandments, and shall so teach men, shall be called the least in the kingdom of heaven. But he that shall do and teach, he shall be called great in the kingdom of heaven.",
       "ref": "Matt 5:13-19"
     },
     "offertorium": {
       "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 91:13\nv. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. (Allelúja.)",
       "ref": "Ps 91:13"
     },
     "secreta": {
@@ -3395,7 +3359,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -3964,7 +3928,7 @@
     },
     "graduale": {
       "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo. Non est invéntus símilis illi, qui conserváret legem Excélsi. Allelúja, allelúja. Qui ad justítiam erúdiunt multos quasi stellæ in perpétuas æternitátes. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just shall meditate wisdom and his tongue shall speak judgment.\nV. The law of his God is in his heart, and his steps shall not be supplanted. Allelúja, allelúja\n!Sir 45:9\nv. And he girded him about with a glorious girdle, and clothed him with a robe of glory, Allelúja.",
       "ref": "Eccli 44:16"
     },
     "offertorium": {
@@ -4084,7 +4048,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -4108,7 +4072,7 @@
     },
     "offertorium": {
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:21-22\nI have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong. (Allelúja.)",
       "ref": "Ps 88:21-22"
     },
     "secreta": {
@@ -4178,12 +4142,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -4197,7 +4161,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -4288,7 +4252,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -4297,7 +4261,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -4328,12 +4292,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -4347,7 +4311,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -4428,17 +4392,17 @@
     },
     "graduale": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium. Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus. Allelúja, allelúja. Amávit eum Dóminus, et ornávit eum: stolam glóriæ índuit eum. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just shall meditate wisdom and his tongue shall speak judgment.\nV. The law of his God is in his heart, and his steps shall not be supplanted. Allelúja, allelúja\n!Sir 45:9\nv. And he girded him about with a glorious girdle, and clothed him with a robe of glory, Allelúja.",
       "ref": "Ps 36:30-31"
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 5:13-19\nv.  In that time Jesus said to His disciples: You are the salt of the earth. But if the salt lose its savour, wherewith shall it be salted? It is good for nothing any more but to be cast out, and to be trodden on by men. You are the light of the world. A city seated on a mountain cannot be hid. Neither do men light a candle and put it under a bushel, but upon a candlestick, that it may shine to all that are in the house. So let your light shine before men, that they may see your good works, and glorify your Father who is in heaven. Do not think that I am come to destroy the law, or the prophets. I am not come to destroy, but to fulfill. For amen I say unto you, till heaven and earth pass, one jot, or one tittle shall not pass of the law, till all be fulfilled. He therefore that shall break one of these least commandments, and shall so teach men, shall be called the least in the kingdom of heaven. But he that shall do and teach, he shall be called great in the kingdom of heaven.",
       "ref": "Matt 5:13-19"
     },
     "offertorium": {
       "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 91:13\nv. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. (Allelúja.)",
       "ref": "Ps 91:13"
     },
     "secreta": {
@@ -4559,7 +4523,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -4568,36 +4532,36 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "Lesson from the first letter of St Peter the Apostle\n!1 Pet 5:1-4; 5:10-11.\nDearly beloved brethren: The ancients therefore that are among you, I beseech, who am myself also an ancient, and a witness of the sufferings of Christ: as also a partaker of that glory which is to be revealed in time to come: Feed the flock of God which is among you, taking care of it, not by constraint, but willingly, according to God: not for filthy lucre's sake, but voluntarily: Neither as lording it over the clergy, but being made a pattern of the flock from the heart. And when the prince of pastors shall appear, you shall receive a never fading crown of glory. But the God of all grace, who hath called us into his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you, and confirm you, and establish you. To him be glory and empire for ever and ever. Amen.",
       "ref": "1 Pet 5:1-4; 5:10-11"
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
       "lat": "Oblátis munéribus, quǽsumus, Dómine, Ecclésiam tuam benígnus illúmina: ut, et gregis tui profíciat ubíque succéssus, et grati fiant nómini tuo, te gubernánte, pastóres. $Per Dominum",
-      "eng": ""
+      "eng": "By the offered gifts we beseech thee, O Lord, that thou kindly enlighten thy Church, so that thy flock may everywhere progress and prosper, and thy shepherds, under thy guidance may be pleasing to thy name.\n$Per Dominum"
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat. $Per Dominum",
-      "eng": ""
+      "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity.\n$Per Dominum"
     }
   },
   "05-31": {
@@ -4852,7 +4816,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -4876,7 +4840,7 @@
     },
     "offertorium": {
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:21-22\nI have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong. (Allelúja.)",
       "ref": "Ps 88:21-22"
     },
     "secreta": {
@@ -4970,7 +4934,7 @@
     },
     "secreta": {
       "lat": "Accépta tibi sit, Dómine, sacrátæ plebis oblátio pro tuórum honóre Sanctórum: quorum se méritis de tribulatióne percepísse cognóscit auxílium. $Per Dominum",
-      "eng": ""
+      "eng": "May the service of thy holy people be acceptable to Thee, O Lord, and honorable to thy saints, through whose merits we know that we have received help in trouble.\n$Per Dominum"
     },
     "communio": {
       "lat": "Dilexísti justítiam, et odísti iniquitátem: proptérea unxit te Deus, Deus tuus, óleo lætítiæ præ consórtibus tuis. (Allelúja.)",
@@ -4979,7 +4943,7 @@
     },
     "postcommunio": {
       "lat": "Satiásti, Dómine, famíliam tuam munéribus sacris: ejus, quǽsumus, semper interventióne nos réfove, cujus sollémnia celebrámus. $Per Dominum",
-      "eng": ""
+      "eng": "Thou hast fed thy servants, O Lord, with the holy gifts; comfort us ever we pray, by her intercession whose festival we celebrate.\n$Per Dominum"
     }
   },
   "06-11": {
@@ -5066,7 +5030,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -5092,12 +5056,8 @@
     },
     "introitus": {
       "lat": "In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.) Bonum est confitéri Dómino: et psállere nómini tuo, Altíssime. &Gloria In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Eccli 15:5"
-    },
-    "oratio": {
-      "lat": "@:Oratio_:s/atque\\ Doctóris// (sed rubrica 195 aut rubrica 196) @:Oratio_",
-      "eng": "@:Oratio_:s/and Doctor// (sed rubrica 195 aut rubrica 196) @:Oratio_"
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum Caríssime: Testíficor coram Deo, et Jesu Christo, qui judicatúrus est vivos et mórtuos, per advéntum ipsíus et regnum ejus: prǽdica verbum, insta opportúne, importune: árgue, óbsecra, íncrepa in omni patiéntia, et doctrína. Erit enim tempus, cum sanam doctrínam non sustinébunt, sed ad sua desidéria, coacervábunt sibi magistros, pruriéntes áuribus, et a veritáte quidem audítum avértent, ad fábulas autem converténtur. Tu vero vígila, in ómnibus labóra, opus fac Evangelístæ, ministérium tuum imple. Sóbrius esto. Ego enim jam delíbor, et tempus resolutiónis meæ instat. Bonum certámen certávi, cursum consummávi, fidem servávi. In réliquo repósita est mihi coróna justítiæ, quam reddet mihi Dóminus in illa die, justus judex: non solum autem mihi, sed et iis, qui díligunt advéntum ejus.",
@@ -5106,17 +5066,17 @@
     },
     "graduale": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium. Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus. Allelúja, allelúja. Amávit eum Dóminus, et ornávit eum: stolam glóriæ índuit eum. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 91:13; 91:14\nThe just man shall flourish like the palm tree, like a cedar of Lebanon shall he grow in the house of the Lord.\n!Ps 91:3\nV. To proclaim Your kindness at dawn and Your faithfulness throughout the night. Alleluia, alleluia.\n!Jas 1:12\nV. Blessed is the man who endures temptation; for when he has been tried, he will receive the crown of life. Alleluia.",
       "ref": "Ps 36:30-31"
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Luke\n!Luke 12:35-40\nAt that time, Jesus said to His disciples, Let your loins be girt about and your lamps burning, and you yourselves like men waiting for their master’s return from the wedding; so that when he comes and knocks, they may straight-way open to him. Blessed are those servants whom the master, on his return, shall find watching. Amen I say to you, he will gird himself, and will make them recline at table, and will come and serve them. And if he comes in the second watch, and if in the third, and finds them so, blessed are those servants! But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into. You also must be ready, because at an hour that you do not expect, the Son of Man is coming.",
       "ref": "Matt 5:13-19"
     },
     "offertorium": {
       "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 91:13"
     },
     "secreta": {
@@ -5125,12 +5085,8 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Luc 12:42"
-    },
-    "postcommunio": {
-      "lat": "@:Postcommunio_:s/atque\\ Doctóris// (sed rubrica 195 aut rubrica 196) @:Postcommunio_",
-      "eng": "@:Postcommunio_:s/ and Doctor// (sed rubrica 195 aut rubrica 196) @:Postcommunio_"
     }
   },
   "06-14": {
@@ -5242,7 +5198,7 @@
     },
     "introitus": {
       "lat": "In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.) Bonum est confitéri Dómino: et psállere nómini tuo, Altíssime. &Gloria In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 15:5\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)\n!Ps 91:2\nv.  It is good to give thanks to the Lord, to sing praise to Your name, Most High.\n&Gloria\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)",
       "ref": "Eccli 15:5"
     },
     "oratio": {
@@ -5251,22 +5207,22 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum Caríssime: Testíficor coram Deo, et Jesu Christo, qui judicatúrus est vivos et mórtuos, per advéntum ipsíus et regnum ejus: prǽdica verbum, insta opportúne, importune: árgue, óbsecra, íncrepa in omni patiéntia, et doctrína. Erit enim tempus, cum sanam doctrínam non sustinébunt, sed ad sua desidéria, coacervábunt sibi magistros, pruriéntes áuribus, et a veritáte quidem audítum avértent, ad fábulas autem converténtur. Tu vero vígila, in ómnibus labóra, opus fac Evangelístæ, ministérium tuum imple. Sóbrius esto. Ego enim jam delíbor, et tempus resolutiónis meæ instat. Bonum certámen certávi, cursum consummávi, fidem servávi. In réliquo repósita est mihi coróna justítiæ, quam reddet mihi Dóminus in illa die, justus judex: non solum autem mihi, sed et iis, qui díligunt advéntum ejus.",
-      "eng": "",
+      "eng": "Lesson from the second letter of St Paul the Apostle to Timothy\n!2 Tim 4:1-8\nv. Dearly beloved: I charge thee, before God and Jesus Christ, who shall judge the living and the dead, by his coming, and his kingdom: Preach the word: be instant in season, out of season: reprove, entreat, rebuke in all patience and doctrine. For there shall be a time, when they will not endure sound doctrine; but, according to their own desires, they will heap to themselves teachers, having itching ears: And will indeed turn away their hearing from the truth, but will be turned unto fables. But be thou vigilant, labour in all things, do the work of an evangelist, fulfil thy ministry. Be sober. For I am even now ready to be sacrificed: and the time of my dissolution is at hand. I have fought a good fight, I have finished my course, I have kept the faith. As to the rest, there is laid up for me a crown of justice, which the Lord the just judge will render to me in that day: and not only to me, but to them also that love his coming.",
       "ref": "2 Tim 4:1-8"
     },
     "graduale": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium. Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus. Allelúja, allelúja. Amávit eum Dóminus, et ornávit eum: stolam glóriæ índuit eum. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just shall meditate wisdom and his tongue shall speak judgment.\nV. The law of his God is in his heart, and his steps shall not be supplanted. Allelúja, allelúja\n!Sir 45:9\nv. And he girded him about with a glorious girdle, and clothed him with a robe of glory, Allelúja.",
       "ref": "Ps 36:30-31"
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 5:13-19\nv.  In that time Jesus said to His disciples: You are the salt of the earth. But if the salt lose its savour, wherewith shall it be salted? It is good for nothing any more but to be cast out, and to be trodden on by men. You are the light of the world. A city seated on a mountain cannot be hid. Neither do men light a candle and put it under a bushel, but upon a candlestick, that it may shine to all that are in the house. So let your light shine before men, that they may see your good works, and glorify your Father who is in heaven. Do not think that I am come to destroy the law, or the prophets. I am not come to destroy, but to fulfill. For amen I say unto you, till heaven and earth pass, one jot, or one tittle shall not pass of the law, till all be fulfilled. He therefore that shall break one of these least commandments, and shall so teach men, shall be called the least in the kingdom of heaven. But he that shall do and teach, he shall be called great in the kingdom of heaven.",
       "ref": "Matt 5:13-19"
     },
     "offertorium": {
       "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 91:13\nv. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. (Allelúja.)",
       "ref": "Ps 91:13"
     },
     "secreta": {
@@ -5275,7 +5231,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -5337,7 +5293,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -5351,31 +5307,31 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
       "lat": "Oblátis munéribus, quǽsumus, Dómine, Ecclésiam tuam benígnus illúmina: ut, et gregis tui profíciat ubíque succéssus, et grati fiant nómini tuo, te gubernánte, pastóres. $Per Dominum",
-      "eng": ""
+      "eng": "By the offered gifts we beseech thee, O Lord, that thou kindly enlighten thy Church, so that thy flock may everywhere progress and prosper, and thy shepherds, under thy guidance may be pleasing to thy name.\n$Per Dominum"
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat. $Per Dominum",
-      "eng": ""
+      "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity.\n$Per Dominum"
     }
   },
   "06-21": {
@@ -5584,7 +5540,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -5617,7 +5573,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -5789,10 +5745,6 @@
       "eng": "I know Whom I have believed, and I am certain that He is able to guard the trust committed to me, against that day; being a just Judge. O Lord, You have probed me and You know me; You know when I sit and when I stand. &Gloria I know Whom I have believed, and I am certain that He is able to guard the trust committed to me, against that day; being a just Judge.",
       "ref": "2 Tim 1:12"
     },
-    "oratio": {
-      "lat": "@:Oratio Pauli (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) Deus, qui beáto Petro Apóstolo tuo, collátis clávibus regni cœléstis, ligándi atque solvéndi pontifícium tradidísti: concéde; ut, intercessiónis ejus auxílio, a peccatórum nostrórum néxibus liberémur: $Qui vivis",
-      "eng": "O God, who together with the keys of the kingdom of heaven didst bestow on thy blessed Apostle Peter the pontifical power of binding and loosing, grant that by the aid of this intercession, we may be released from the bonds of our sins. $Qui vivis"
-    },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Gálatas Fratres: Notum vobis facio Evangélium, quod evangelizátum est a me, quia non est secúndum hóminem: neque enim ego ab hómine accépi illud neque dídici, sed per revelatiónem Jesu Christi. Audístis enim conversatiónem meam aliquándo in Judaísmo: quóniam supra modum persequébar Ecclésiam Dei, et expugnábam illam, et proficiébam in Judaísmo supra multos coætáneos meos in génere meo, abundántius æmulátor exsístens paternárum mearum traditiónum. Cum autem plácuit ei, qui me segregávit ex útero matris meæ, et vocávit per grátiam suam, ut reveláret Fílium suum in me, ut evangelizárem illum in géntibus: contínuo non acquiévi carni et sánguini, neque veni Jerosólymam ad antecessóres meos Apóstolos: sed ábii in Arábiam: et íterum revérsus sum Damáscum: déinde post annos tres veni Jerosólymam vidére Petrum, et mansi apud eum diébus quíndecim: álium autem Apostolórum vidi néminem, nisi Jacóbum fratrem Dómini. Quæ autem scribo vobis, ecce coram Deo, quia non méntior.",
       "eng": "Lesson from the letter of St. Paul the Apostle to the Galatians Brethren: I give you to understand, that the gospel which was preached by me is not of man. For I did not receive it from man, nor was I taught it; but I received it by a revelation of Jesus Christ. For you have heard of my former manner of life in Judaism; how beyond all measure I persecuted the Church of God, and ravaged it. And I advanced in Judaism above many of my contemporaries in my nation, showing much more zeal for the traditions of my fathers. But when it pleased Him Who from my mother’s womb set me apart and called me by His grace, to reveal His Son in me, that I might preach Him among the Gentiles, immediately, without taking counsel with flesh and blood, and without going up to Jerusalem to those who were appointed Apostles before me, I retired into Arabia, and again returned to Damascus. Then after three years I went to Jerusalem to see Peter, and I remained with him fifteen days. But I saw none of the other Apostles, except James, the brother of the Lord. Now in what I am writing to you, behold, before God, I do not lie.",
@@ -5813,18 +5765,10 @@
       "eng": "To me, Your friends, O God, are made exceedingly honorable; their principality is exceedingly strengthened.",
       "ref": "Ps 138:17"
     },
-    "secreta": {
-      "lat": "@:Secreta Pauli (deinde dicuntur semper) _ (sed rubrica 196 omittuntur) @:Secreta Petri",
-      "eng": ""
-    },
     "communio": {
       "lat": "Amen, dico vobis: quod vos, qui reliquístis ómnia et secúti estis me, céntuplum accipiétis, et vitam ætérnam possidébitis. (Allelúja.)",
       "eng": "Amen I say to you that you, who have left all things and followed Me, shall receive a hundredfold, and shall possess life everlasting. (Alleluia.)",
       "ref": "Matt 19:28-29"
-    },
-    "postcommunio": {
-      "lat": "@:Postcommunio Pauli (deinde dicuntur semper) _ $Oremus (sed rubrica 196 omittuntur) Lætíficet nos, Dómine, munus oblátum: ut, sicut in Apóstolo tuo Petro te mirábilem prædicámus; sic per illum tuæ sumámus indulgéntiæ largitátem. $Per Dominum",
-      "eng": "O Lord, may the gift we offer bring us joy, that as we praise Your wondrous work in Your Apostle Peter, so through him may we share Your generous forgiveness. $Per Dominum"
     }
   },
   "07-01": {
@@ -5949,12 +5893,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -5968,7 +5912,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -6133,7 +6077,7 @@
     },
     "secreta": {
       "lat": "Accépta tibi sit, Dómine, sacrátæ plebis oblátio pro tuórum honóre Sanctórum: quorum se méritis de tribulatióne percepísse cognóscit auxílium. $Per Dominum",
-      "eng": ""
+      "eng": "May the service of thy holy people be acceptable to Thee, O Lord, and honorable to thy saints, through whose merits we know that we have received help in trouble.\n$Per Dominum"
     },
     "communio": {
       "lat": "Dilexísti justítiam, et odísti iniquitátem: proptérea unxit te Deus, Deus tuus, óleo lætítiæ præ consórtibus tuis. (Allelúja.)",
@@ -6142,7 +6086,7 @@
     },
     "postcommunio": {
       "lat": "Satiásti, Dómine, famíliam tuam munéribus sacris: ejus, quǽsumus, semper interventióne nos réfove, cujus sollémnia celebrámus. $Per Dominum",
-      "eng": ""
+      "eng": "Thou hast fed thy servants, O Lord, with the holy gifts; comfort us ever we pray, by her intercession whose festival we celebrate.\n$Per Dominum"
     }
   },
   "07-10": {
@@ -6204,7 +6148,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -6213,36 +6157,36 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "Lesson from the first letter of St Peter the Apostle\n!1 Pet 5:1-4; 5:10-11.\nDearly beloved brethren: The ancients therefore that are among you, I beseech, who am myself also an ancient, and a witness of the sufferings of Christ: as also a partaker of that glory which is to be revealed in time to come: Feed the flock of God which is among you, taking care of it, not by constraint, but willingly, according to God: not for filthy lucre's sake, but voluntarily: Neither as lording it over the clergy, but being made a pattern of the flock from the heart. And when the prince of pastors shall appear, you shall receive a never fading crown of glory. But the God of all grace, who hath called us into his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you, and confirm you, and establish you. To him be glory and empire for ever and ever. Amen.",
       "ref": "1 Pet 5:1-4; 5:10-11"
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
       "lat": "Oblátis munéribus, quǽsumus, Dómine, Ecclésiam tuam benígnus illúmina: ut, et gregis tui profíciat ubíque succéssus, et grati fiant nómini tuo, te gubernánte, pastóres. $Per Dominum",
-      "eng": ""
+      "eng": "By the offered gifts we beseech thee, O Lord, that thou kindly enlighten thy Church, so that thy flock may everywhere progress and prosper, and thy shepherds, under thy guidance may be pleasing to thy name.\n$Per Dominum"
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat. $Per Dominum",
-      "eng": ""
+      "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity.\n$Per Dominum"
     }
   },
   "07-12": {
@@ -6278,7 +6222,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -6318,12 +6262,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 131:16-17\nHer priests I will clothe with salvation, and her faithful ones shall shout merrily for joy.\nV. In her will I make a horn to sprout forth for David; I will place a lamp for My anointed. Alleluia, alleluia.\n!Ps 109:4\nThe Lord has sworn, and He will not repent: You are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 24:42-47.\nAt that time, Jesus said to His disciples, “Watch, for you do not know at what hour your Lord is to come. But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into. Therefore you also must be ready, because at an hour that you do not expect, the Son of Man will come. Who, do you think, is the faithful and prudent servant whom his master has set over his household to give them their food in due time? Blessed is that servant whom his master, when he comes, shall find so doing. Amen I say to you, he will set him over all his goods.”",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -6337,7 +6281,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -6428,7 +6372,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -6526,7 +6470,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -6535,7 +6479,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -7573,7 +7517,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -7582,7 +7526,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -7891,7 +7835,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 15:5\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)\n!Ps 91:2\nv.  It is good to give thanks to the Lord, to sing praise to Your name, Most High.\n&Gloria\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -7924,7 +7868,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -8413,7 +8357,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -8422,7 +8366,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -8466,7 +8410,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -8475,7 +8419,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -9241,7 +9185,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -9265,7 +9209,7 @@
     },
     "offertorium": {
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:21-22\nI have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong. (Allelúja.)",
       "ref": "Ps 88:21-22"
     },
     "secreta": {
@@ -9305,12 +9249,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 8:6-7\nYou crowned him with glory and honor.\nV. You have given him rule over the works of Your hands, O Lord. Alleluia, alleluia.\nV. This is the priest whom the Lord has crowned. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 16:24-27.\nAt that time, Jesus said to His disciples, If anyone wishes to come after Me, let him deny himself, and take up his cross, and follow Me. For he who would save his life will lose it; but he who loses his life for My sake will find it. For what does it profit a man, if he gain the whole world, but suffer the loss of his own soul? For the Son of Man is to come with His angels in the glory of His Father, and then He will render to everyone according to His conduct.",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -9324,7 +9268,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 20:4\nYou placed on his head, O Lord, a crown of pure gold.",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -9560,7 +9504,7 @@
     },
     "introitus": {
       "lat": "In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.) Bonum est confitéri Dómino: et psállere nómini tuo, Altíssime. &Gloria In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 15:5\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)\n!Ps 91:2\nv.  It is good to give thanks to the Lord, to sing praise to Your name, Most High.\n&Gloria\nv.  In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory. (Allelúja, allelúja.)",
       "ref": "Eccli 15:5"
     },
     "oratio": {
@@ -9569,22 +9513,22 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum Caríssime: Testíficor coram Deo, et Jesu Christo, qui judicatúrus est vivos et mórtuos, per advéntum ipsíus et regnum ejus: prǽdica verbum, insta opportúne, importune: árgue, óbsecra, íncrepa in omni patiéntia, et doctrína. Erit enim tempus, cum sanam doctrínam non sustinébunt, sed ad sua desidéria, coacervábunt sibi magistros, pruriéntes áuribus, et a veritáte quidem audítum avértent, ad fábulas autem converténtur. Tu vero vígila, in ómnibus labóra, opus fac Evangelístæ, ministérium tuum imple. Sóbrius esto. Ego enim jam delíbor, et tempus resolutiónis meæ instat. Bonum certámen certávi, cursum consummávi, fidem servávi. In réliquo repósita est mihi coróna justítiæ, quam reddet mihi Dóminus in illa die, justus judex: non solum autem mihi, sed et iis, qui díligunt advéntum ejus.",
-      "eng": "",
+      "eng": "Lesson from the second letter of St Paul the Apostle to Timothy\n!2 Tim 4:1-8\nv. Dearly beloved: I charge thee, before God and Jesus Christ, who shall judge the living and the dead, by his coming, and his kingdom: Preach the word: be instant in season, out of season: reprove, entreat, rebuke in all patience and doctrine. For there shall be a time, when they will not endure sound doctrine; but, according to their own desires, they will heap to themselves teachers, having itching ears: And will indeed turn away their hearing from the truth, but will be turned unto fables. But be thou vigilant, labour in all things, do the work of an evangelist, fulfil thy ministry. Be sober. For I am even now ready to be sacrificed: and the time of my dissolution is at hand. I have fought a good fight, I have finished my course, I have kept the faith. As to the rest, there is laid up for me a crown of justice, which the Lord the just judge will render to me in that day: and not only to me, but to them also that love his coming.",
       "ref": "2 Tim 4:1-8"
     },
     "graduale": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium. Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus. Allelúja, allelúja. Amávit eum Dóminus, et ornávit eum: stolam glóriæ índuit eum. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just shall meditate wisdom and his tongue shall speak judgment.\nV. The law of his God is in his heart, and his steps shall not be supplanted. Allelúja, allelúja\n!Sir 45:9\nv. And he girded him about with a glorious girdle, and clothed him with a robe of glory, Allelúja.",
       "ref": "Ps 36:30-31"
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 5:13-19\nv.  In that time Jesus said to His disciples: You are the salt of the earth. But if the salt lose its savour, wherewith shall it be salted? It is good for nothing any more but to be cast out, and to be trodden on by men. You are the light of the world. A city seated on a mountain cannot be hid. Neither do men light a candle and put it under a bushel, but upon a candlestick, that it may shine to all that are in the house. So let your light shine before men, that they may see your good works, and glorify your Father who is in heaven. Do not think that I am come to destroy the law, or the prophets. I am not come to destroy, but to fulfill. For amen I say unto you, till heaven and earth pass, one jot, or one tittle shall not pass of the law, till all be fulfilled. He therefore that shall break one of these least commandments, and shall so teach men, shall be called the least in the kingdom of heaven. But he that shall do and teach, he shall be called great in the kingdom of heaven.",
       "ref": "Matt 5:13-19"
     },
     "offertorium": {
       "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 91:13\nv. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. (Allelúja.)",
       "ref": "Ps 91:13"
     },
     "secreta": {
@@ -9593,7 +9537,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -9609,7 +9553,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -9633,7 +9577,7 @@
     },
     "offertorium": {
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:21-22\nI have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong. (Allelúja.)",
       "ref": "Ps 88:21-22"
     },
     "secreta": {
@@ -9881,7 +9825,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -9890,7 +9834,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -9977,7 +9921,7 @@
     },
     "secreta": {
       "lat": "Accépta tibi sit, Dómine, sacrátæ plebis oblátio pro tuórum honóre Sanctórum: quorum se méritis de tribulatióne percepísse cognóscit auxílium. $Per Dominum",
-      "eng": ""
+      "eng": "May the service of thy holy people be acceptable to Thee, O Lord, and honorable to thy saints, through whose merits we know that we have received help in trouble.\n$Per Dominum"
     },
     "communio": {
       "lat": "Dilexísti justítiam, et odísti iniquitátem: proptérea unxit te Deus, Deus tuus, óleo lætítiæ præ consórtibus tuis. (Allelúja.)",
@@ -9986,7 +9930,7 @@
     },
     "postcommunio": {
       "lat": "Satiásti, Dómine, famíliam tuam munéribus sacris: ejus, quǽsumus, semper interventióne nos réfove, cujus sollémnia celebrámus. $Per Dominum",
-      "eng": ""
+      "eng": "Thou hast fed thy servants, O Lord, with the holy gifts; comfort us ever we pray, by her intercession whose festival we celebrate.\n$Per Dominum"
     }
   },
   "10-09": {
@@ -10048,7 +9992,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -10081,7 +10025,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -10160,7 +10104,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -10169,22 +10113,22 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "Lesson from the first letter of St Peter the Apostle\n!1 Pet 5:1-4; 5:10-11.\nDearly beloved brethren: The ancients therefore that are among you, I beseech, who am myself also an ancient, and a witness of the sufferings of Christ: as also a partaker of that glory which is to be revealed in time to come: Feed the flock of God which is among you, taking care of it, not by constraint, but willingly, according to God: not for filthy lucre's sake, but voluntarily: Neither as lording it over the clergy, but being made a pattern of the flock from the heart. And when the prince of pastors shall appear, you shall receive a never fading crown of glory. But the God of all grace, who hath called us into his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you, and confirm you, and establish you. To him be glory and empire for ever and ever. Amen.",
       "ref": "1 Pet 5:1-4; 5:10-11"
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
@@ -10193,7 +10137,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -10274,7 +10218,7 @@
     },
     "secreta": {
       "lat": "Accépta tibi sit, Dómine, sacrátæ plebis oblátio pro tuórum honóre Sanctórum: quorum se méritis de tribulatióne percepísse cognóscit auxílium. $Per Dominum",
-      "eng": ""
+      "eng": "May the service of thy holy people be acceptable to Thee, O Lord, and honorable to thy saints, through whose merits we know that we have received help in trouble.\n$Per Dominum"
     },
     "communio": {
       "lat": "Dilexísti justítiam, et odísti iniquitátem: proptérea unxit te Deus, Deus tuus, óleo lætítiæ præ consórtibus tuis. (Allelúja.)",
@@ -10283,7 +10227,7 @@
     },
     "postcommunio": {
       "lat": "Satiásti, Dómine, famíliam tuam munéribus sacris: ejus, quǽsumus, semper interventióne nos réfove, cujus sollémnia celebrámus. $Per Dominum",
-      "eng": ""
+      "eng": "Thou hast fed thy servants, O Lord, with the holy gifts; comfort us ever we pray, by her intercession whose festival we celebrate.\n$Per Dominum"
     }
   },
   "10-17": {
@@ -10495,7 +10439,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -10528,7 +10472,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -10642,7 +10586,7 @@
     },
     "introitus": {
       "lat": "Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.) Exaltábo te, Dómine, quóniam suscepísti me, nec delectásti inimícos meos super me. &Gloria Si díligis me, Simon Petre, pasce agnos meos, pasce oves meas. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!John 21:15-17\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)\n!Ps 29:2\nv.  I will extol thee, O Lord, for thou hast upheld me: and hast not made my enemies to rejoice over me.\n&Gloria\nv. If thou lovest me, Simon Peter, feed my lambs, feed my sheep. (Allelúja, allelúja.)",
       "ref": "Joann 21:15-17"
     },
     "oratio": {
@@ -10651,36 +10595,36 @@
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "Lesson from the first letter of St Peter the Apostle\n!1 Pet 5:1-4; 5:10-11.\nDearly beloved brethren: The ancients therefore that are among you, I beseech, who am myself also an ancient, and a witness of the sufferings of Christ: as also a partaker of that glory which is to be revealed in time to come: Feed the flock of God which is among you, taking care of it, not by constraint, but willingly, according to God: not for filthy lucre's sake, but voluntarily: Neither as lording it over the clergy, but being made a pattern of the flock from the heart. And when the prince of pastors shall appear, you shall receive a never fading crown of glory. But the God of all grace, who hath called us into his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you, and confirm you, and establish you. To him be glory and empire for ever and ever. Amen.",
       "ref": "1 Pet 5:1-4; 5:10-11"
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
       "lat": "Oblátis munéribus, quǽsumus, Dómine, Ecclésiam tuam benígnus illúmina: ut, et gregis tui profíciat ubíque succéssus, et grati fiant nómini tuo, te gubernánte, pastóres. $Per Dominum",
-      "eng": ""
+      "eng": "By the offered gifts we beseech thee, O Lord, that thou kindly enlighten thy Church, so that thy flock may everywhere progress and prosper, and thy shepherds, under thy guidance may be pleasing to thy name.\n$Per Dominum"
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
       "lat": "Refectióne sancta enutrítam gubérna, quǽsumus, Dómine, tuam placátus Ecclésiam: ut, poténti moderatióne dirécta, et increménta libertátis accípiat et in religiónis integritáte persístat. $Per Dominum",
-      "eng": ""
+      "eng": "Being appeased, O Lord, guide thy Church, which has been nourished by holy refreshment, that under thy direction and powerful rule it may receive increase of liberty and may continue in religious integrity.\n$Per Dominum"
     }
   },
   "10-27": {
@@ -11116,7 +11060,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:25\nMy faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -11125,7 +11069,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Matt 24:46-47\nBlessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -11205,12 +11149,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Ps 8:6-7\nYou crowned him with glory and honor.\nV. You have given him rule over the works of Your hands, O Lord. Alleluia, alleluia.\nV. This is the priest whom the Lord has crowned. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\n!Matt 16:24-27.\nAt that time, Jesus said to His disciples, If anyone wishes to come after Me, let him deny himself, and take up his cross, and follow Me. For he who would save his life will lose it; but he who loses his life for My sake will find it. For what does it profit a man, if he gain the whole world, but suffer the loss of his own soul? For the Son of Man is to come with His angels in the glory of His Father, and then He will render to everyone according to His conduct.",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -11224,7 +11168,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 20:4\nYou placed on his head, O Lord, a crown of pure gold.",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -11430,7 +11374,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.) Meménto, Dómine, David: et omnis mansuetúdinis ejus. &Gloria Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Sir 45:30\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)\n!Ps. 131:1\nRemember, O Lord, David and all his meekness.\n&Gloria\nv. The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever. (Alléluia, alléluia.)",
       "ref": "Eccli 45:30"
     },
     "oratio": {
@@ -11454,7 +11398,7 @@
     },
     "offertorium": {
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 88:21-22\nI have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong. (Allelúja.)",
       "ref": "Ps 88:21-22"
     },
     "secreta": {
@@ -11511,7 +11455,7 @@
     },
     "secreta": {
       "lat": "Accépta tibi sit, Dómine, sacrátæ plebis oblátio pro tuórum honóre Sanctórum: quorum se méritis de tribulatióne percepísse cognóscit auxílium. $Per Dominum",
-      "eng": ""
+      "eng": "May the service of thy holy people be acceptable to Thee, O Lord, and honorable to thy saints, through whose merits we know that we have received help in trouble.\n$Per Dominum"
     },
     "communio": {
       "lat": "Dilexísti justítiam, et odísti iniquitátem: proptérea unxit te Deus, Deus tuus, óleo lætítiæ præ consórtibus tuis. (Allelúja.)",
@@ -11520,7 +11464,7 @@
     },
     "postcommunio": {
       "lat": "Satiásti, Dómine, famíliam tuam munéribus sacris: ejus, quǽsumus, semper interventióne nos réfove, cujus sollémnia celebrámus. $Per Dominum",
-      "eng": ""
+      "eng": "Thou hast fed thy servants, O Lord, with the holy gifts; comfort us ever we pray, by her intercession whose festival we celebrate.\n$Per Dominum"
     }
   },
   "11-20": {
@@ -11666,17 +11610,17 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
       "lat": "Ecce, dedi verba mea in ore tuo: ecce, constítui te super gentes et super regna, ut evéllas et déstruas, et ædífices et plantes. (Allelúja.)",
-      "eng": "",
+      "eng": "!Jer 1:9-10\nv. Behold I have given my words in thy mouth: Lo, I have set thee over the nations, and over the kingdoms, to root up, and pull down, and to waste, and to destroy, and to build, and to plant. (Allelúja.)",
       "ref": "Jer 1:9-10"
     },
     "secreta": {
@@ -11685,7 +11629,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -11705,10 +11649,6 @@
       "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.) Be not vexed over evildoers, nor jealous of those who do wrong. &Gloria The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
-    "oratio": {
-      "lat": "@:Oratio_ (sed rubrica tridentina) @:Oratio_:s/ atque Doctorem//",
-      "eng": "@:Oratio_ (sed rubrica tridentina) @:Oratio_:s/ and Doctor//"
-    },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ Beátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
       "eng": "Lesson from the book of Ecclesiasticus Happy the man found without fault, who turns not aside after gain, nor puts his trust in money nor in treasures! Who is he, that we may praise him? For he has done wonders in his life. He has been tested by gold and come off safe, and this remains his glory forever; he could have sinned but did not, could have done evil but would not, so that his possessions are secure in the Lord, and the assembly of the Saints shall recount his alms.",
@@ -11726,7 +11666,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": "",
+      "eng": "!Ps 91:13\nv. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. (Allelúja.)",
       "ref": "Ps 88:25"
     },
     "secreta": {
@@ -11735,7 +11675,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 24:46-47"
     },
     "postcommunio": {
@@ -11802,7 +11742,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -11835,7 +11775,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -11848,7 +11788,7 @@
     "rank": 1,
     "introitus": {
       "lat": "Dóminus secus mare Galilǽæ vidit duos fratres, Petrum et Andréam, et vocávit eos: Veníte post me: fáciam vos fíeri piscatóres hóminum. Cœli enárrant glóriam Dei: et ópera mánuum ejus annúntiat firmaméntum. &Gloria Dóminus secus mare Galilǽæ vidit duos fratres, Petrum et Andréam, et vocávit eos: Veníte post me: fáciam vos fíeri piscatóres hóminum.",
-      "eng": "",
+      "eng": "!Ps 51:10-11\nv. But I, as a fruitful olive tree in the house of God, have hoped in the mercy of God for ever, yea for ever and ever. I will praise thee for ever, because thou hast done it: and I will wait on thy name, for it is good in the sight of thy saints.\n!Ps 51:3\nv. Why dost thou glory in malice, thou that art mighty in iniquity?\n&Gloria\nv. But I, as a fruitful olive tree in the house of God, have hoped in the mercy of God for ever, yea for ever and ever. I will praise thee for ever, because thou hast done it: and I will wait on thy name, for it is good in the sight of thy saints.",
       "ref": "Matt 4:18; 4:19"
     },
     "oratio": {
@@ -11867,16 +11807,16 @@
     },
     "secreta": {
       "lat": "Sacrándum tibi, Dómine, munus offérimus: quo beáti Andréæ Apóstoli sollémnia recoléntes, purificatiónem quoque nostris méntibus implorámus. $Per Dominum",
-      "eng": ""
+      "eng": "Offering to thee these holy mysteries with reverence for the high dignity of the Apostleship, we beseech thee, O Lord that through the prayers of blessed N., thy Apostle, to whose feast we look forward, thy people ever may set forth their desires before thee and gain what they seek.\n$Per Dominum"
     },
     "communio": {
       "lat": "Dicit Andréas Simóni fratri suo: Invénimus Messíam, qui dícitur Christus: et addúxit eum ad Jesum.",
-      "eng": "",
+      "eng": "!Ps 20:6\nv. His glory is great in thy salvation: glory and great beauty shalt thou lay upon him.",
       "ref": "Joann 1:41; 1:42"
     },
     "postcommunio": {
       "lat": "Percéptis, Dómine, sacraméntis supplíciter exorámus: ut, intercedénte beáto Andréa Apostolo tuo, quæ pro illíus veneránda gérimus passióne, nobis profíciant ad medélam. $Per Dominum",
-      "eng": ""
+      "eng": "Be appeased, we beseech thee, O Lord, by the prayers of thy holy Apostle, N., and grant us pardon and unfailing remedies.\n$Per Dominum"
     }
   },
   "11-30": {
@@ -12088,7 +12028,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.) Noli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem. &Gloria Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": "",
+      "eng": "!Ps 36:30-31\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)\n!Ps 36:1\nBe not vexed over evildoers, nor jealous of those who do wrong.\n&Gloria\nv. The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart. (Alléluia, alléluia.)",
       "ref": "Ps 36:30-31"
     },
     "oratio": {
@@ -12121,7 +12061,7 @@
     },
     "communio": {
       "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Luc 12:42"
     },
     "postcommunio": {
@@ -12294,7 +12234,7 @@
     },
     "oratio": {
       "lat": "Exáudi, Dómine, preces nostras: et interveniénte beáto Dámaso Confessóre tuo atque Pontífice, indulgéntiam nobis tríbue placátus et pacem. $Per Dominum",
-      "eng": ""
+      "eng": "Look forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed N. thy Sovereign Pontiff, whom thou didst constitute Shepherd of the whole Church.\n$Per Dominum"
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Petri Apóstoli Caríssimi: Senióres, qui in vobis sunt, obsécro consénior et testis Christi passiónum, qui et ejus, quæ in futúro revelánda est, glóriæ communicátor: páscite qui in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndum Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in cleris, sed forma facti gregis ex ánimo. Et, cum apparúerit princeps pastórum, percipiétis immarcescíbilem glóriæ corónam. Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.",
@@ -12303,12 +12243,12 @@
     },
     "graduale": {
       "lat": "Exáltent eum in ecclésia plebis: et in cáthedra seniórum laudent eum. Confiteántur Dómino misericórdiæ ejus, et mirabília ejus fíliis hóminum. Allelúja, allelúja. Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. Allelúja.",
-      "eng": "",
+      "eng": "!Sir 44:16\nBehold, a great priest, who in his days pleased God. \n!Sir 44:20\nV. There was not found the like to him, who kept the law of the Most High.  Alleluia, alleluia. \n!Ps 109:4\nYou are a priest forever, according to the order of Melchisedec. Alleluia.",
       "ref": "Ps 106:32; 106:31."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum In illo témpore: Venit Jesus in partes Cæsaréæ Philíppi, et interrogábat discípulos suos, dicens: Quem dicunt hómines esse Fílium hóminis? At illi dixérunt: Alii Joánnem Baptístam, alii autem Elíam, álii vero Jeremíam, aut unum ex prophétis. Dicit illis Jesus: Vos autem quem me esse dícitis? Respóndens Simon Petrus, dixit: Tu es Christus, Fílius Dei vivi. Respóndens autem Jesus, dixit ei: Beátus es, Simon Bar Jona: quia caro et sanguis non revelávit tibi, sed Pater meus, qui in cœlis est. Et ego dico tibi, quia tu es Petrus, et super hanc petram ædificábo Ecclésiam meam, et portæ ínferi non prævalébunt advérsus eam. Et tibi dabo claves regni cœlórum. Et quodcúmque ligáveris super terram, erit ligátum et in cœlis: et quodcúmque sólveris super terram, erit solútum et in cœlis.",
-      "eng": "",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\n!Matt 25:14-23\nAt that time, Jesus spoke this parable to His disciples: A man going abroad, called his servants and handed over his goods to them. And to one he gave five talents, to another two, and to another one, to each according to his particular ability, and then he went on his journey. And he who had received the five talents went and traded with them, and gained five more. In like manner, he who had received the two gained two more. But he who had received the one went away and dug in the earth and hid his master’s money. Then after a long time the master of those servants came and settled accounts with them. And he who had received the five talents came and brought five other talents, saying, ‘Master, you handed over to me five talents; behold, I have gained five others in addition.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’ And he also who had received the two talents came, and said, ‘Master, you handed over to me two talents; behold, I have gained two more.’ His master said to him, ‘Well done, good and faithful servant; because you have been faithful over a few things, I will set you over many; enter into the joy of your master.’",
       "ref": "Matt 16:13-19"
     },
     "offertorium": {
@@ -12322,7 +12262,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {
@@ -12928,7 +12868,7 @@
     },
     "communio": {
       "lat": "Tu es Petrus, et super hanc petram ædificábo Ecclésiam meam. (Allelúja.)",
-      "eng": "",
+      "eng": "!Luke 12:42\nThe faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)",
       "ref": "Matt 16:18"
     },
     "postcommunio": {

@@ -103,14 +103,14 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "(rubrica cisterciensis)\nPatefáctæ sunt * jánuæ cœli Christi Mártyri Stéphano, qui in número Mártyrum invéntus est primus, et ídeo triúmphat in cœlis coronátus, allelúia.",
-      "eng": "",
+      "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Sepeliérunt Stéphanum * viri timoráti, et fecérunt planctum magnum super eum.",
-      "eng": "",
+      "eng": "If any man will come after me, * let him deny himself and take up his cross daily and follow me.",
       "variationKey": "vesperae.antiphon.magnificat"
     }
   },
@@ -150,7 +150,7 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "(rubrica cisterciensis)\nIn médio * Ecclésiæ apéruit Dóminus os ejus, et implévit eum spíritu sapiéntiæ et intelléctus, allelúia.",
-      "eng": "",
+      "eng": "You who left all * and follow me, you will receive hundredfolds, and you will have eternal life.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
@@ -197,7 +197,7 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "Hi sunt, * qui cum muliéribus non sunt coinquináti: vírgines enim sunt, et sequúntur Agnum quocúmque íerit.",
-      "eng": "",
+      "eng": "Even the very hairs of your head are all numbered: * fear not therefore; ye are of more value than many sparrows.",
       "variationKey": "laudes.antiphon.benedictus"
     },
     "vesperae.antiphon.magnificat": {
@@ -218,7 +218,7 @@
       "type": "hymn",
       "label": "Hymnus ad Vesperas",
       "lat": "v. Salvéte, flores Mártyrum,\nQuos lucis ipso in límine\nChristi insecútor sústulit,\nCeu turbo nascéntes rosas.\n\nVos prima Christi víctima,\nGrex immolatórum tener,\nAram sub ipsam símplices\nPalma et corónis lúditis.\n\nJesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. All hail, ye little Martyr flowers,\nSweet rosebuds cut in dawning hours!\nWhen Herod sought the Christ to find\nYe fell as bloom before the wind.\n_\nFirst victims of the Martyr bands,\nWith crowns and palms in tender hands,\nAround the very altar, gay\nAnd innocent, ye seem to play.\n_\nAll honor, laud, and glory be,\nO Jesu, Virgin-born to thee;\nAll glory, as is ever meet\nTo Father and to Paraclete.\nAmen.",
       "variationKey": "vesperae.hymnus"
     }
   },
@@ -239,13 +239,6 @@
       "lat": "O admirábile commércium: * Creátor géneris humáni, animátum corpus sumens, de Vírgine nasci dignátus est; et procédens homo sine sémine, largítus est nobis suam Deitátem.;;109\nQuando natus es * ineffabíliter ex Vírgine, tunc implétæ sunt Scriptúræ: sicut plúvia in vellus descendísti, ut salvum fáceres genus humánum: te laudámus, Deus noster.;;112\nRubum, quem víderat Móyses * incombústum, conservátam agnóvimus tuam laudábilem virginitátem: Dei Génetrix, intercéde pro nobis.;;121\nGerminávit radix Jesse, * orta est stella ex Jacob: Virgo péperit Salvatórem; te laudámus, Deus noster.;;126\nEcce María génuit * nobis Salvatórem, quem Joánnes videns, exclamávit, dicens: Ecce Agnus Dei, ecce qui tollit peccáta mundi, allelúja.;;147",
       "eng": "O wondrous interchange! * the Creator of mankind, taking upon him a living body, vouchsafed to be born of a pure Virgin: and by his Humanity, which was begotten in no earthly wise, hath made us partakers of his Divinity.;;109\nWhen thou wast born * all ineffably of a Virgin, then were the Scriptures fulfilled; thou camest down like the dew upon the fleece of wool, to bring salvation unto all mankind; we praise thee, O our God.;;112\nIn the bush which Moses saw * unconsumed, we recognize the preservation of thy glorious virginity: holy Mother of God, intercede for us.;;121\nThe Root of Jesse hath budded, * the Star hath come out of Jacob, the Virgin hath borne the Saviour: we praise thee, O our God.;;126\nLo, Mary hath brought forth * the Saviour of whom when John saw him, he did proclaim: Behold the Lamb of God that taketh away the sins of the world, alleluia.;;147",
       "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "O admirábile commércium: * Creátor géneris humáni, animátum corpus sumens, de Vírgine nasci dignátus est; et procédens homo sine sémine, largítus est nobis suam Deitátem.;;109\nQuando natus es * ineffabíliter ex Vírgine, tunc implétæ sunt Scriptúræ: sicut plúvia in vellus descendísti, ut salvum fáceres genus humánum: te laudámus, Deus noster.;;112\nRubum, quem víderat Móyses * incombústum, conservátam agnóvimus tuam laudábilem virginitátem: Dei Génetrix, intercéde pro nobis.;;121\nGerminávit radix Jesse, * orta est stella ex Jacob: Virgo péperit Salvatórem; te laudámus, Deus noster.;;126\nEcce María génuit * nobis Salvatórem, quem Joánnes videns, exclamávit, dicens: Ecce Agnus Dei, ecce qui tollit peccáta mundi, allelúja.;;147",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
       "type": "capitulum",
@@ -279,14 +272,14 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Asolisortus:}v. A solis ortus cárdine\nAd usque terræ límitem,\nChristum canámus Príncipem,\nNatum María Vírgine.\n\nBeátus auctor sǽculi\nServíle corpus índuit:\nUt carne carnem líberans,\nNe pérderet quos cóndidit.\n\nCastæ Paréntis víscera\nCæléstis intrat grátia:\nVenter Puéllæ bájulat\nSecréta, quæ non nóverat.\n\nDomus pudíci péctoris\nTemplum repénte fit Dei:\nIntácta nésciens virum,\nConcépit alvo Fílium.\n\nEnítitur puérpera,\nQuem Gábriel prædíxerat,\nQuem ventre Matris géstiens,\nBaptísta clausum sénserat.\n\nFœno jacére pértulit:\nPræsépe non abhórruit:\nEt lacte módico pastus est,\nPer quem nec ales ésurit.\n\nGaudet chorus cæléstium,\nEt Angeli canunt Deo;\nPalámque fit pastóribus\nPastor, Creátor ómnium.\n\nJesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. From lands that see the sun arise\nTo earth's remotest boundaries,\nThe Virgin-born today we sing,\nThe Son of Mary, Christ the King.\n_\nBlest Author of this earthly frame,\nTo take a servant's form He came,\nThat, liberating flesh by flesh,\nWhom He had made might live afresh.\n_\nIn that chaste parent's holy womb\nCelestial grace hath found its home;\nAnd she, as earthly bride unknown,\nYet calls that Offspring blest her own.\n_\nThe mansion of the modest breast\nBecomes a shrine where God shall rest:\nThe pure and undefilèd one\nConceived in her womb the Son.\n_\nThat Son, that Royal Son she bore,\nWhom Gabriel's voice had told afore;\nWhom, in His mother yet concealed,\nThe infant Baptist had revealed.\n_\nThe manger and the straw He bore,\nThe cradle did He not abhor;\nBy milk in infant portions fed,\nWho gives e'en fowls their daily bread.\n_\nThe heavenly chorus filled the sky,\nThe Angels sang to God on high,\nWhat time to shepherds, watching lone,\nThey made creation's Shepherd known.\n_\nAll honor, laud, and glory be,\nO Jesu, Virgin-born to thee:\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Vesperas",
       "lat": "{:H-Jesuredemptoromnium:}v. Jesu, Redémptor ómnium,\nQuem lucis ante oríginem\nParem patérnæ glóriæ\nPater suprémus édidit.\n\nTu lumen, et splendor Patris,\nTu spes perénnis ómnium,\nInténde quas fundunt preces\nTui per orbem sérvuli.\n\nMeménto, rerum Cónditor,\nNostri quod olim córporis,\nSacráta ab alvo Vírginis\nNascéndo, formam súmpseris.\n\nTestátur hoc præsens dies,\nCurrens per anni círculum,\nQuod solus e sinu Patris\nMundi salus advéneris.\n\nHunc astra, tellus, ǽquora,\nHunc omne, quod cælo subest,\nSalútis auctórem novæ\nNovo salútat cántico.\n\nEt nos, beáta quos sacri\nRigávit unda sánguinis,\nNatális ob diem tui\nHymni tribútum sólvimus.\n\nJesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesus, the Ransomer of man,\nWho, ere created light began,\nDidst from the sovereign Father spring,\nHis power and glory equalling.\n_\nThe Father’s Light and Splendor Thou,\nTheir endless hope to Thee that bow;\nAccept the prayers and praise to-day\nThat through the world Thy servants pay.\n_\nSalvation’s Author, call to mind\nHow, taking form of humankind,\nBorn of a Virgin undefiled,\nThou in man’s flesh becam’st a Child.\n_\nThus testifies the present day,\nThrough every year in long array,\nThat Thou, salvation’s source alone,\nProceedest from the Father’s throne.\n_\nThe heavens above, the rolling main\nAnd all that earth’s wide realms contain,\nWith joyous voice now loudly sing\nThe glory of their new-born King.\n_\nAnd we who, by Thy precious Blood\nFrom sin redeemed, are marked for God,\nOn this the day that saw Thy birth,\nSing the new song of ransomed earth.\n_\nO Lord, the Virgin-born, to Thee\nEternal praise and glory be,\nWhom with the Father we adore\nAnd Holy Ghost forevermore.\nAmen.",
       "variationKey": "vesperae.hymnus"
     }
   },
@@ -373,7 +366,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Ante lucíferum génitus, * et ante sǽcula, Dóminus Salvátor noster hódie mundo appáruit.\nVenit lumen tuum * Jerúsalem, et glória Dómini super te orta est, et ambulábunt gentes in lúmine tuo, allelúja.\nApértis thesáuris suis * obtulérunt Magi Dómino aurum, thus, et myrrham, allelúja.\nMária et flúmina * benedícite Dómino: hymnum dícite fontes Dómino, allelúja.\nStella ista * sicut flamma corúscat, et Regem regum Deum demónstrat: Magi eam vidérunt, et magno Regi múnera obtulérunt.",
-      "eng": "",
+      "eng": "The Lord our Saviour, * begotten before the day-star, and before the ages, is this day made manifest in the world.\nO Jerusalem, * thy light is come, and the glory of the Lord is risen upon thee, and the Gentiles shall walk in thy light. Alleluia.\nWhen the wise men * had opened their treasures, they presented unto the Lord gold, frankincense, and myrrh. Alleluia.\nO ye seas and floods, * bless ye the Lord. O ye wells, bless ye the Lord. Alleluia.\nThis star shineth * as a flame of fire, and pointeth out God, the King of kings: the Wise Men beheld it, and offered gifts unto the great King.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -441,7 +434,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Ante lucíferum génitus, * et ante sǽcula, Dóminus Salvátor noster hódie mundo appáruit.\nVenit lumen tuum * Jerúsalem, et glória Dómini super te orta est, et ambulábunt gentes in lúmine tuo, allelúja.\nApértis thesáuris suis * obtulérunt Magi Dómino aurum, thus, et myrrham, allelúja.\nMária et flúmina * benedícite Dómino: hymnum dícite fontes Dómino, allelúja.\nStella ista * sicut flamma corúscat, et Regem regum Deum demónstrat: Magi eam vidérunt, et magno Regi múnera obtulérunt.",
-      "eng": "",
+      "eng": "The Lord our Saviour, * begotten before the day-star, and before the ages, is this day made manifest in the world.\nO Jerusalem, * thy light is come, and the glory of the Lord is risen upon thee, and the Gentiles shall walk in thy light. Alleluia.\nWhen the wise men * had opened their treasures, they presented unto the Lord gold, frankincense, and myrrh. Alleluia.\nO ye seas and floods, * bless ye the Lord. O ye wells, bless ye the Lord. Alleluia.\nThis star shineth * as a flame of fire, and pointeth out God, the King of kings: the Wise Men beheld it, and offered gifts unto the great King.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -509,7 +502,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Ante lucíferum génitus, * et ante sǽcula, Dóminus Salvátor noster hódie mundo appáruit.\nVenit lumen tuum * Jerúsalem, et glória Dómini super te orta est, et ambulábunt gentes in lúmine tuo, allelúja.\nApértis thesáuris suis * obtulérunt Magi Dómino aurum, thus, et myrrham, allelúja.\nMária et flúmina * benedícite Dómino: hymnum dícite fontes Dómino, allelúja.\nStella ista * sicut flamma corúscat, et Regem regum Deum demónstrat: Magi eam vidérunt, et magno Regi múnera obtulérunt.",
-      "eng": "",
+      "eng": "The Lord our Saviour, * begotten before the day-star, and before the ages, is this day made manifest in the world.\nO Jerusalem, * thy light is come, and the glory of the Lord is risen upon thee, and the Gentiles shall walk in thy light. Alleluia.\nWhen the wise men * had opened their treasures, they presented unto the Lord gold, frankincense, and myrrh. Alleluia.\nO ye seas and floods, * bless ye the Lord. O ye wells, bless ye the Lord. Alleluia.\nThis star shineth * as a flame of fire, and pointeth out God, the King of kings: the Wise Men beheld it, and offered gifts unto the great King.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -577,7 +570,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Ante lucíferum génitus, * et ante sǽcula, Dóminus Salvátor noster hódie mundo appáruit.\nVenit lumen tuum * Jerúsalem, et glória Dómini super te orta est, et ambulábunt gentes in lúmine tuo, allelúja.\nApértis thesáuris suis * obtulérunt Magi Dómino aurum, thus, et myrrham, allelúja.\nMária et flúmina * benedícite Dómino: hymnum dícite fontes Dómino, allelúja.\nStella ista * sicut flamma corúscat, et Regem regum Deum demónstrat: Magi eam vidérunt, et magno Regi múnera obtulérunt.",
-      "eng": "",
+      "eng": "The Lord our Saviour, * begotten before the day-star, and before the ages, is this day made manifest in the world.\nO Jerusalem, * thy light is come, and the glory of the Lord is risen upon thee, and the Gentiles shall walk in thy light. Alleluia.\nWhen the wise men * had opened their treasures, they presented unto the Lord gold, frankincense, and myrrh. Alleluia.\nO ye seas and floods, * bless ye the Lord. O ye wells, bless ye the Lord. Alleluia.\nThis star shineth * as a flame of fire, and pointeth out God, the King of kings: the Wise Men beheld it, and offered gifts unto the great King.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -645,7 +638,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Ante lucíferum génitus, * et ante sǽcula, Dóminus Salvátor noster hódie mundo appáruit.\nVenit lumen tuum * Jerúsalem, et glória Dómini super te orta est, et ambulábunt gentes in lúmine tuo, allelúja.\nApértis thesáuris suis * obtulérunt Magi Dómino aurum, thus, et myrrham, allelúja.\nMária et flúmina * benedícite Dómino: hymnum dícite fontes Dómino, allelúja.\nStella ista * sicut flamma corúscat, et Regem regum Deum demónstrat: Magi eam vidérunt, et magno Regi múnera obtulérunt.",
-      "eng": "",
+      "eng": "The Lord our Saviour, * begotten before the day-star, and before the ages, is this day made manifest in the world.\nO Jerusalem, * thy light is come, and the glory of the Lord is risen upon thee, and the Gentiles shall walk in thy light. Alleluia.\nWhen the wise men * had opened their treasures, they presented unto the Lord gold, frankincense, and myrrh. Alleluia.\nO ye seas and floods, * bless ye the Lord. O ye wells, bless ye the Lord. Alleluia.\nThis star shineth * as a flame of fire, and pointeth out God, the King of kings: the Wise Men beheld it, and offered gifts unto the great King.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -713,7 +706,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Ante lucíferum génitus, * et ante sǽcula, Dóminus Salvátor noster hódie mundo appáruit.\nVenit lumen tuum * Jerúsalem, et glória Dómini super te orta est, et ambulábunt gentes in lúmine tuo, allelúja.\nApértis thesáuris suis * obtulérunt Magi Dómino aurum, thus, et myrrham, allelúja.\nMária et flúmina * benedícite Dómino: hymnum dícite fontes Dómino, allelúja.\nStella ista * sicut flamma corúscat, et Regem regum Deum demónstrat: Magi eam vidérunt, et magno Regi múnera obtulérunt.",
-      "eng": "",
+      "eng": "The Lord our Saviour, * begotten before the day-star, and before the ages, is this day made manifest in the world.\nO Jerusalem, * thy light is come, and the glory of the Lord is risen upon thee, and the Gentiles shall walk in thy light. Alleluia.\nWhen the wise men * had opened their treasures, they presented unto the Lord gold, frankincense, and myrrh. Alleluia.\nO ye seas and floods, * bless ye the Lord. O ye wells, bless ye the Lord. Alleluia.\nThis star shineth * as a flame of fire, and pointeth out God, the King of kings: the Wise Men beheld it, and offered gifts unto the great King.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -781,7 +774,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Ante lucíferum génitus, * et ante sǽcula, Dóminus Salvátor noster hódie mundo appáruit.\nVenit lumen tuum * Jerúsalem, et glória Dómini super te orta est, et ambulábunt gentes in lúmine tuo, allelúja.\nApértis thesáuris suis * obtulérunt Magi Dómino aurum, thus, et myrrham, allelúja.\nMária et flúmina * benedícite Dómino: hymnum dícite fontes Dómino, allelúja.\nStella ista * sicut flamma corúscat, et Regem regum Deum demónstrat: Magi eam vidérunt, et magno Regi múnera obtulérunt.",
-      "eng": "",
+      "eng": "The Lord our Saviour, * begotten before the day-star, and before the ages, is this day made manifest in the world.\nO Jerusalem, * thy light is come, and the glory of the Lord is risen upon thee, and the Gentiles shall walk in thy light. Alleluia.\nWhen the wise men * had opened their treasures, they presented unto the Lord gold, frankincense, and myrrh. Alleluia.\nO ye seas and floods, * bless ye the Lord. O ye wells, bless ye the Lord. Alleluia.\nThis star shineth * as a flame of fire, and pointeth out God, the King of kings: the Wise Men beheld it, and offered gifts unto the great King.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -1152,13 +1145,6 @@
       "eng": "Well done, thou good and faithful servant * thou hast been faithful over a few things, I will make thee ruler over many things, saith the Lord.",
       "variationKey": "laudes.antiphon.benedictus"
     },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@Commune/C4:Ant 3 summi Pontificis",
-      "eng": "The Lord loved him * and beautified him. He clothed him with a robe of glory, and crowned him at the gates of Paradise.",
-      "variationKey": "vesperae.antiphon.magnificat"
-    },
     "laudes.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Laudes",
@@ -1367,7 +1353,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -1632,21 +1618,21 @@
       "type": "antiphon",
       "label": "Ant. ad Magnificat",
       "lat": "Sancte Paule Apóstole, * prædicátor veritátis et doctor géntium, intercéde pro nobis ad Deum, qui te elégit.",
-      "eng": "",
+      "eng": "O Holy Apostle Paul, * Preacher of the truth, and Teacher of the Gentiles, pray for us to God Who hath chosen thee.",
       "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Exsultetorbisgaudiis:}v. Exsúltet orbis gáudiis:\nCælum resúltet láudibus:\nApostolórum glóriam\nTellus et astra cóncinunt.\n\nVos sæculórum júdices,\nEt vera mundi lúmina:\nVotis precámur córdium,\nAudíte voces súpplicum.\n\nQui templa cæli cláuditis,\nSerásque verbo sólvitis,\nNos a reátu nóxios\nSolvi jubéte, quǽsumus.\n\nPræcépta quorum prótinus\nLanguor salúsque séntiunt:\nSanáte mentes lánguidas:\nAugéte nos virtútibus.\n\nUt, cum redíbit árbiter\nIn fine Christus sǽculi,\nNos sempitérni gáudii\nConcédat esse cómpotes.\n\n* Patri, simúlque Fílio,\nTibíque Sancte Spíritus,\nSicut fuit, sit júgiter\nSæclum per omne glória.\nAmen.",
-      "eng": "",
+      "eng": "v. Now let the earth with joy resound,\nAnd heaven the chant re-echo round;\nNor heaven nor earth too high can raise\nThe great Apostles' glorious praise.\n_\nO ye who, throned in glory dread,\nShall judge the living and the dead,\nLights of the world forevermore!\nTo you the suppliant prayer we pour.\n_\nYe close the sacred gates on high;\nAt your command apart they fly:\nOh! loose for us the guilty chain\nWe strive to break, and strive in vain.\n_\nSickness and health your voice obey;\nAt your command they go or stay:\nFrom sin's disease our souls restore;\nIn good confirm us more and more.\n_\nSo when the world is at its end,\nAnd Christ to judgement shall descend,\nMay we be called those joys to see\nPrepared from all eternity.\n_\n* Praise to the Father, with the Son,\nAnd Holy Spirit, Three in One;\nAs ever was in ages past,\nAnd so shall be while ages last.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Vesperas",
       "lat": "v. Egrégie Doctor, Paule, mores ínstrue,\nEt nostra tecum péctora in cælum trahe;\nVeláta dum merídiem cernat fides,\nEt solis instar sola regnet cáritas.\n\nSit Trinitáti sempitérna glória,\nHonor, potéstas atque jubilátio,\nIn unitáte, quæ gubérnat ómnia,\nPer univérsa æternitátis sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Our souls' great teacher, Paul, our guide in wisdom's ways,\nTeach us, our fainting hearts, to heaven's glad clime to raise,\nTill faith in clearest light her bright meridian gains,\nAnd love with sun-like fire within each bosom reigns.\n_\nAll honour, might, and power, and hymns of joy we bring,\nWhile to the Trinity eternal praise we sing;\nHe rules the universe in wondrous Unity,\nAnd shall, throughout the days of all eternity.\nAmen.",
       "variationKey": "vesperae.hymnus"
     }
   },
@@ -1940,13 +1926,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -2141,7 +2120,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "O admirábile commércium: * Creátor géneris humáni, animátum corpus sumens, de Vírgine nasci dignátus est; et procédens homo sine sémine, largítus est nobis suam Deitátem.;;109\nQuando natus es * ineffabíliter ex Vírgine, tunc implétæ sunt Scriptúræ: sicut plúvia in vellus descendísti, ut salvum fáceres genus humánum: te laudámus, Deus noster.;;112\nRubum, quem víderat Móyses * incombústum, conservátam agnóvimus tuam laudábilem virginitátem: Dei Génetrix, intercéde pro nobis.;;121\nGerminávit radix Jesse, * orta est stella ex Jacob: Virgo péperit Salvatórem; te laudámus, Deus noster.;;126\nEcce María génuit * nobis Salvatórem, quem Joánnes videns, exclamávit, dicens: Ecce Agnus Dei, ecce qui tollit peccáta mundi, allelúja.;;147",
-      "eng": "",
+      "eng": "O wondrous interchange! * the Creator of mankind, taking upon him a living body, vouchsafed to be born of a pure Virgin: and by his Humanity, which was begotten in no earthly wise, hath made us partakers of his Divinity.;;109\nWhen thou wast born * all ineffably of a Virgin, then were the Scriptures fulfilled; thou camest down like the dew upon the fleece of wool, to bring salvation unto all mankind; we praise thee, O our God.;;112\nIn the bush which Moses saw * unconsumed, we recognize the preservation of thy glorious virginity: holy Mother of God, intercede for us.;;121\nThe Root of Jesse hath budded, * the Star hath come out of Jacob, the Virgin hath borne the Saviour: we praise thee, O our God.;;126\nLo, Mary hath brought forth * the Saviour of whom when John saw him, he did proclaim: Behold the Lamb of God that taketh away the sins of the world, alleluia.;;147",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -2387,7 +2366,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -2688,13 +2667,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -2727,7 +2699,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -3463,13 +3435,6 @@
       "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.\nServe bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.",
       "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
       "variationKey": "laudes.antiphon.benedictus"
-    },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 1",
-      "eng": "Lo, a servant of God * who esteemed but little things earthly. And by word and work laid him up treasure in heaven.",
-      "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.hymnus": {
       "type": "hymn",
@@ -5232,13 +5197,6 @@
       "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
       "variationKey": "laudes.antiphon.benedictus"
     },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 1",
-      "eng": "Lo, a servant of God * who esteemed but little things earthly. And by word and work laid him up treasure in heaven.",
-      "variationKey": "vesperae.antiphon.magnificat"
-    },
     "laudes.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Laudes",
@@ -5408,13 +5366,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -5447,7 +5398,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -5651,14 +5602,14 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Lustrasex:}v. Lustra sex qui jam perégit,\nTempus implens córporis,\nSponte líbera Redémptor\nPassióni déditus,\nAgnus in Crucis levátur\nImmolándus stípite.\n\nFelle potus ecce languet,\nSpina, clavi, láncea,\nMite corpus perforárunt,\nUnda manat, et cruor:\nTerra, pontus, astra, mundus,\nQuo lavántur flúmine!\n\nCrux fidélis, inter omnes\nArbor una nóbilis:\nSilva talem nulla profert\nFronde, flore, gérmine:\nDulce ferrum, dulce lignum\nDulce pondus sústinent.\n\nFlecte ramos, arbor alta,\nTensa laxa víscera,\nEt rigor lentéscat ille,\nQuem dedit natívitas:\nEt supérni membra Regis\nTende miti stípite.\n\nSola digna tu fuísti\nFerre mundi víctimam;\nAtque portum præparáre\nArca mundo náufrago,\nQuam sacer cruor perúnxit,\nFusus Agni córpore.\n\nSempitérna sit beátæ\nTrinitáti glória:\nÆqua Patri, Filióque,\nPar decus Paráclito:\nUníus, Triníque nomen\nLaudet univérsitas.\nAmen.",
-      "eng": "",
+      "eng": "v. Thirty years among us dwelling,\nHis appointed time fulfilled,\nBorn for this, he meets his passion,\nFor that this he freely willed:\nOn the cross the Lamb is lifted,\nWhere his life-blood shall be spilled.\n_\nHe endured the nails, the spitting,\nVinegar, and spear, and reed;\nFrom that holy body broken\nBlood and water forth proceed:\nEarth, and stars, and sky, and ocean,\nBy that flood from stain are free.\n_\nFaithful cross! above all other,\nOne and only noble tree!\nNone in foliage, none in blossom,\nNone in fruit thy peers may be;\nSweetest wood and sweetest iron!\nSweetest weight is hung on thee.\n_\nBend thy boughs, O tree of glory!\nThy relaxing sinews bend;\nFor awhile the ancient rigour,\nThat thy birth bestowed, suspend;\nAnd the King of heavenly beauty\nOn thy bosom gently tend!\n_\nThou alone wast counted worthy\nThis world's ransom to uphold;\nFor a shipwrecked race preparing\nHarbour, like the ark of old;\nWith the sacred blood anointed\nFrom the smitten Lamb that rolled.\n_\nTo the Trinity be glory\nEverlasting, as is meet;\nEqual to the Father, equal\nTo the Son, and Paraclete:\nTrinal Unity, whose praises\nAll created things repeat.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Vesperas",
       "lat": "{:H-Vexillaregis:}v. Vexílla Regis pródeunt;\nFulget Crucis mystérium,\nQua Vita mortem pértulit,\nEt morte vitam prótulit.\n\nQuæ, vulneráta lánceæ\nMucróne diro, críminum\nUt nos laváret sórdibus,\nManávit unda et sánguine.\n\nImpléta sunt quæ cóncinit\nDavid fidéli cármine,\nDicéndo natiónibus:\nRegnávit a ligno Deus.\n\nArbor decóra et fúlgida,\nOrnáta Regis púrpura,\nElécta digno stípite\nTam sancta membra tángere.\n\nBeáta, cujus brácchiis\nPrétium pepéndit sǽculi,\nStatéra facta córporis,\nTulítque prædam tártari.\n\n\nO Crux, ave, spes única,\nIn hac triúmphi glória\n(sed tempore Passionis)\nHoc Passiónis témpore\n(sed tempore Paschali)\nPaschále quæ fers gáudium\nPiis adáuge grátiam,\nReísque dele crímina.\n\nTe, fons salútis, Trínitas,\nColláudet omnis spíritus:\nQuibus Crucis victóriam\nLargíris, adde prǽmium.\nAmen.",
-      "eng": "",
+      "eng": "v. Abroad the regal banners fly,\nNow shines the cross’s mystery;\nUpon it Life did death endure,\nAnd yet by death did life procure.\n_\nWho, wounded with a direful spear,\nDid, purposely to wash us clear\nFrom stain of sin, pour out a flood\nOf precious water mixed with blood.\n_\nThat which the prophet-king of old\nHath in mysterious verse foretold,\nIs now accomplished, whilst we see\nGod ruling nations from a tree.\n_\nO lovely and refulgent tree,\nAdorned with purpled majesty;\nCulled from a worthy stock, to bear\nThose limbs which sanctifièd were.\n_\nBlest tree, whose happy branches bore\nThe wealth that did the world restore;\nThe beam that did that body weigh\nWhich raised up hell’s expected prey.\n_\n!The following verse is said on bended knee.\n_\nO Cross, our one reliance, hail!\nOn this triumphant day avail\n(sed tempore Passionis)\nThis holy Passiontide avail\n(sed tempore Paschali)\nThou joy of Eastertide, avail\nTo give fresh merit to the saint,\nAnd pardon to the penitent.\n_\nBlest Trinity, salvation’s spring,\nMay every soul thy praises sing;\nTo those thou grantest conquest by\nThe holy cross, rewards apply.\nAmen.",
       "variationKey": "vesperae.hymnus"
     }
   },
@@ -7000,13 +6951,6 @@
       "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
       "variationKey": "laudes.antiphon.benedictus"
     },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 1",
-      "eng": "Lo, a servant of God * who esteemed but little things earthly. And by word and work laid him up treasure in heaven.",
-      "variationKey": "vesperae.antiphon.magnificat"
-    },
     "laudes.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Laudes",
@@ -7108,13 +7052,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -7147,7 +7084,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -7237,20 +7174,6 @@
       "eng": "Grant, O Lord, we beseech Thee, to those who are celebrating this solemnity of the Blessed Virgin Mary our Queen: that safe in her protection we may deserve to enjoy present peace and future glory.",
       "variationKey": "collect"
     },
-    "vesperae.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Vesperas",
-      "lat": "@Commune/C7::1\n@:Ant VesperaBMV:1\n@Commune/C6:Ant Matutinum:7 s/95/121/\n@Commune/C7::3 s/121/126/\n@:Ant VesperaBMV:2",
-      "eng": "",
-      "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@Commune/C7:Ant Vespera:1 s/;;.*//g\n@:Ant VesperaBMV:1 s/;;.*//g\n@Commune/C6:Ant Matutinum:7 s/;;.*//\n@Commune/C7:Ant Vespera:3 s/;;.*//\n@:Ant VesperaBMV:2 s/;;.*//",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -7312,13 +7235,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -7351,7 +7267,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -8156,13 +8072,6 @@
       "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
       "variationKey": "laudes.antiphon.benedictus"
     },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 1",
-      "eng": "Lo, a servant of God * who esteemed but little things earthly. And by word and work laid him up treasure in heaven.",
-      "variationKey": "vesperae.antiphon.magnificat"
-    },
     "laudes.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Laudes",
@@ -8196,13 +8105,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -8235,7 +8137,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -8291,13 +8193,6 @@
       "lat": "Qui odit * ánimam suam in hoc mundo, in vitam ætérnam custódit eam.",
       "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
       "variationKey": "laudes.antiphon.benedictus"
-    },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@Commune/C2a:Ant 1",
-      "eng": "If any man will come after me, * let him deny himself and take up his cross daily and follow me.",
-      "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.hymnus": {
       "type": "hymn",
@@ -9765,20 +9660,6 @@
       "eng": "O Lord, Who hast given this excellency unto the Order of Carmel that the same should be especially styled the Order of the Most Blessed Mary, always a Virgin, thine Own Mother, mercifully grant that we who on this day do renew her memory in solemn worship, may worthily be shielded by her protection, and finally attain unto thine everlasting joy.",
       "variationKey": "collect"
     },
-    "vesperae.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Vesperas",
-      "lat": "@Commune/C7::1\n@:Ant VesperaBMV:1\n@Commune/C6:Ant Matutinum:7 s/95/121/\n@Commune/C7::3 s/121/126/\n@:Ant VesperaBMV:2",
-      "eng": "",
-      "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@Commune/C7:Ant Vespera:1 s/;;.*//g\n@:Ant VesperaBMV:1 s/;;.*//g\n@Commune/C6:Ant Matutinum:7 s/;;.*//\n@Commune/C7:Ant Vespera:3 s/;;.*//\n@:Ant VesperaBMV:2 s/;;.*//",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -10098,26 +9979,12 @@
     "officium": "S. Praxedis Virginis",
     "rank": 1.1,
     "rankName": "Simplex",
-    "collect": {
-      "type": "collect",
-      "label": "Collect",
-      "lat": "@Commune/C7a:: s/N\\./N. Vírginis tuæ/",
-      "eng": "(ad missam)\nHear us, O God, our Saviour, that as we are gladdened by the festival of blessed N. thy virgin, so we may learn from it piety and devotion.",
-      "variationKey": "collect"
-    },
     "vesperae.antiphons": {
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.;;109\nHæc est Virgo sápiens, * quam Dóminus vigilántem invénit.;;112\nHæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.;;121\nVeni, elécta mea, * et ponam in te thronum meum, allelúja.;;126\nIsta est speciósa * inter fílias Jerúsalem.;;147",
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
       "type": "capitulum",
@@ -10151,7 +10018,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -10586,26 +10453,12 @@
     "officium": "S. Marthæ Virginis",
     "rank": 2.2,
     "rankName": "Semiduplex",
-    "collect": {
-      "type": "collect",
-      "label": "Collect",
-      "lat": "@Commune/C7a:: s/N\\./N. Vírginis tuæ/",
-      "eng": "(ad missam)\nHear us, O God, our Saviour, that as we are gladdened by the festival of blessed N. thy virgin, so we may learn from it piety and devotion.",
-      "variationKey": "collect"
-    },
     "vesperae.antiphons": {
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.;;109\nHæc est Virgo sápiens, * quam Dóminus vigilántem invénit.;;112\nHæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.;;121\nVeni, elécta mea, * et ponam in te thronum meum, allelúja.;;126\nIsta est speciósa * inter fílias Jerúsalem.;;147",
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
       "type": "capitulum",
@@ -10639,7 +10492,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -10937,7 +10790,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "(rubrica cisterciensis)\nCum autem * esset Stéphanus plenus Spíritu sancto, inténdens in cœlum, vidit glóriam Dei, et Jesum stantem ad déxteram Patris.\nLapidábant * Judæi Stéphanum invocántem, et dicéntem: Dómine Jesu, áccipe spíritum meum.\nAdhǽsit ánima mea post te, * quia caro mea lapidáta est pro te, Deus meus.\nStéphanus vidit * cœlos apértos, vidit, et introívit: beátus homo, cui cœli patébant.\nPósitis autem génibus, * clamávit voce magna dicens Stéphanus: Dómine Jesu, ne státuas illis hoc peccátum.",
-      "eng": "",
+      "eng": "They stoned Stephen, * calling upon God, and saying: Lay not this sin to their charge.\nThe stones of the brook * were sweet to him; all the souls of the righteous follow him.\nO my God, my soul followeth hard after thee, * for my flesh hath been stoned for thy sake.\nStephen saw the heavens opened; * he saw and entered in; blessed is he unto whom the heavens were opened.\nBehold, I see * the heavens opened, and Jesus standing on the right hand of the power of God.",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
@@ -10965,15 +10818,8 @@
       "type": "antiphon",
       "label": "Ant. ad Benedictus",
       "lat": "(rubrica cisterciensis)\n@Sancti/12-26",
-      "eng": "",
+      "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
       "variationKey": "laudes.antiphon.benedictus"
-    },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 3_\n@:Ant 3C",
-      "eng": "",
-      "variationKey": "vesperae.antiphon.magnificat"
     }
   },
   "08-04": {
@@ -11054,20 +10900,6 @@
       "lat": "Concéde nos fámulos tuos, quǽsumus, Dómine Deus, perpétua mentis et córporis sanitáte gaudére: et, gloriósa beátæ Maríæ semper Vírginis intercessióne, a præsénti liberári tristítia, et ætérna pérfrui lætítia.",
       "eng": "(ad missam)\nGrant us, Your servants, O Lord God, we beseech You, to enjoy lasting health of mind and body; and by the intercession of glorious and blessed Mary, ever Virgin, may we be delivered from present sorrow and partake to the full of eternal happiness.",
       "variationKey": "collect"
-    },
-    "vesperae.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Vesperas",
-      "lat": "@Commune/C7::1\n@:Ant VesperaBMV:1\n@Commune/C6:Ant Matutinum:7 s/95/121/\n@Commune/C7::3 s/121/126/\n@:Ant VesperaBMV:2",
-      "eng": "",
-      "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@Commune/C7:Ant Vespera:1 s/;;.*//g\n@:Ant VesperaBMV:1 s/;;.*//g\n@Commune/C6:Ant Matutinum:7 s/;;.*//\n@Commune/C7:Ant Vespera:3 s/;;.*//\n@:Ant VesperaBMV:2 s/;;.*//",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
       "type": "capitulum",
@@ -11524,26 +11356,12 @@
     "officium": "S. Claræ Virginis",
     "rank": 3.0,
     "rankName": "Duplex",
-    "collect": {
-      "type": "collect",
-      "label": "Collect",
-      "lat": "@Commune/C7a:: s/N\\./N. Vírginis tuæ/",
-      "eng": "(ad missam)\nHear us, O God, our Saviour, that as we are gladdened by the festival of blessed N. thy virgin, so we may learn from it piety and devotion.",
-      "variationKey": "collect"
-    },
     "vesperae.antiphons": {
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.;;109\nHæc est Virgo sápiens, * quam Dóminus vigilántem invénit.;;112\nHæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.;;121\nVeni, elécta mea, * et ponam in te thronum meum, allelúja.;;126\nIsta est speciósa * inter fílias Jerúsalem.;;147",
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
       "type": "capitulum",
@@ -11577,7 +11395,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -11683,14 +11501,14 @@
       "type": "antiphons",
       "label": "Antiphonae ad Vesperas",
       "lat": "(rubrica cisterciensis)\nAssúmpta est María in cœlum: * gaudent Angeli, laudántes benedícunt Dóminum.;;109\nHódie * María Virgo cœlos ascéndit: gaudéte, quia cum Christo regnat in ætérnum.;;112\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.;;121\nExaltáta est * sancta Dei Génitrix super choros Angelórum ad cœléstia regna.;;126\nParadísi portæ * per te nobis apértæ sunt, quæ hódie gloriósa cum Angelis triúmphas.;;147",
-      "eng": "",
+      "eng": "Mary hath been taken to heaven; * the Angels rejoice; they praise and bless the Lord.;;109\nThe Virgin Mary hath been taken into the chamber on high, * where the King of kings sitteth on a throne amid the stars.;;112\nWe run after thee, on the scent of thy perfumes * the virgins love thee heartily.;;121\nBlessed of the Lord art thou, O daughter, * for by thee we have been given to eat of the fruit (of the tree) of Life.;;126\nFair and comely art thou, O daughter of Jerusalem, * terrible as a fenced camp set in battle array.;;147",
       "variationKey": "vesperae.antiphons"
     },
     "laudes.antiphons": {
       "type": "antiphons",
       "label": "Antiphonae ad Laudes",
       "lat": "(rubrica cisterciensis)\nAssúmpta est María in cœlum: * gaudent Angeli, laudántes benedícunt Dóminum.;;109\nHódie * María Virgo cœlos ascéndit: gaudéte, quia cum Christo regnat in ætérnum.;;112\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.;;121\nExaltáta est * sancta Dei Génitrix super choros Angelórum ad cœléstia regna.;;126\nParadísi portæ * per te nobis apértæ sunt, quæ hódie gloriósa cum Angelis triúmphas.;;147",
-      "eng": "",
+      "eng": "Mary hath been taken to heaven; * the Angels rejoice; they praise and bless the Lord.\nThe Virgin Mary hath been taken into the chamber on high, * where the King of kings sitteth on a throne amid the stars.\nWe run after thee, on the scent of thy perfumes * the virgins love thee heartily.\nBlessed of the Lord art thou, O daughter, * for by thee we have been given to eat of the fruit (of the tree) of Life.\nFair and comely art thou, O daughter of Jerusalem, * terrible as a fenced camp set in battle array.",
       "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
@@ -11986,13 +11804,6 @@
       "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
       "variationKey": "laudes.antiphon.benedictus"
     },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 1",
-      "eng": "Lo, a servant of God * who esteemed but little things earthly. And by word and work laid him up treasure in heaven.",
-      "variationKey": "vesperae.antiphon.magnificat"
-    },
     "laudes.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Laudes",
@@ -12086,20 +11897,6 @@
       "lat": "Omnípotens sempitérne Deus, qui in Corde beátæ Maríæ Vírginis dignum Spíritus Sancti habitáculum præparásti: concéde propítius; ut ejúsdem immaculáti Cordis festivitátem devóta mente recoléntes, secúndum Cor tuum vívere valeámus.",
       "eng": "Almighty everlasting God, who hast prepared in the heart of Blessed Virgin Mary a worthy dwelling of the Holy Ghost, grant favourably to us that we may keep the feast of the same Immaculate Heart devoutly, and may be able to live according to thy heart.",
       "variationKey": "collect"
-    },
-    "vesperae.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Vesperas",
-      "lat": "@Commune/C7::1\n@:Ant VesperaBMV:1\n@Commune/C6:Ant Matutinum:7 s/95/121/\n@Commune/C7::3 s/121/126/\n@:Ant VesperaBMV:2",
-      "eng": "",
-      "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@Commune/C7:Ant Vespera:1 s/;;.*//g\n@:Ant VesperaBMV:1 s/;;.*//g\n@Commune/C6:Ant Matutinum:7 s/;;.*//\n@Commune/C7:Ant Vespera:3 s/;;.*//\n@:Ant VesperaBMV:2 s/;;.*//",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
       "type": "capitulum",
@@ -12638,13 +12435,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -12677,7 +12467,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -13311,20 +13101,6 @@
       "eng": "Grant we beseech thee, O Almighty God, that thy faithful people, who rejoice in the Name and keeping of the most holy Virgin Mary, may by her Motherly prayers be freed from all ills upon earth, and worthily attain unto thine everlasting joy in heaven.",
       "variationKey": "collect"
     },
-    "vesperae.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Vesperas",
-      "lat": "@Commune/C7::1\n@:Ant VesperaBMV:1\n@Commune/C6:Ant Matutinum:7 s/95/121/\n@Commune/C7::3 s/121/126/\n@:Ant VesperaBMV:2",
-      "eng": "",
-      "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@Commune/C7:Ant Vespera:1 s/;;.*//g\n@:Ant VesperaBMV:1 s/;;.*//g\n@Commune/C6:Ant Matutinum:7 s/;;.*//\n@Commune/C7:Ant Vespera:3 s/;;.*//\n@:Ant VesperaBMV:2 s/;;.*//",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -13390,7 +13166,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Laudes",
       "lat": "O magnum pietátis opus: * mors mórtua tunc est, in ligno quando mórtua Vita fuit.\nSalva nos, * Christe Salvátor, per virtútem Crucis: qui salvásti Petrum in mari, miserére nobis.\nEcce Crucem Dómini, * fúgite, partes advérsæ, vicit leo de tribu Juda, radix David, allelúja.\nNos autem gloriári * opórtet in Cruce Dómini nostri Jesu Christi.\nPer signum Crucis * de inimícis nostris líbera nos, Deus noster.",
-      "eng": "",
+      "eng": "O what a work of love was that * when Life and death died together upon the Tree. (Alleluia.)\nSave us, * O Christ the Saviour, save us through the might of thy Cross Thou Who didst save Peter when he was ready to sink in the sea, have mercy upon us. (Alleluia.)\nBehold, the Cross of the Lord! * fly, ye ranks of the adversary! The Lion of the tribe of Judah, the Root of David, hath prevailed. Alleluia.\nBut us it behoveth to glory * in the Cross of our Lord Jesus Christ. (Alleluia.)\nBy thy Cross' holy sign, * Jesus, guard this soul of mine from my ghostly enemy. (Alleluia.)",
       "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
@@ -13425,14 +13201,14 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Lustrasex:}v. Lustra sex qui jam perégit,\nTempus implens córporis,\nSponte líbera Redémptor\nPassióni déditus,\nAgnus in Crucis levátur\nImmolándus stípite.\n\nFelle potus ecce languet,\nSpina, clavi, láncea,\nMite corpus perforárunt,\nUnda manat, et cruor:\nTerra, pontus, astra, mundus,\nQuo lavántur flúmine!\n\nCrux fidélis, inter omnes\nArbor una nóbilis:\nSilva talem nulla profert\nFronde, flore, gérmine:\nDulce ferrum, dulce lignum\nDulce pondus sústinent.\n\nFlecte ramos, arbor alta,\nTensa laxa víscera,\nEt rigor lentéscat ille,\nQuem dedit natívitas:\nEt supérni membra Regis\nTende miti stípite.\n\nSola digna tu fuísti\nFerre mundi víctimam;\nAtque portum præparáre\nArca mundo náufrago,\nQuam sacer cruor perúnxit,\nFusus Agni córpore.\n\nSempitérna sit beátæ\nTrinitáti glória:\nÆqua Patri, Filióque,\nPar decus Paráclito:\nUníus, Triníque nomen\nLaudet univérsitas.\nAmen.",
-      "eng": "",
+      "eng": "v. Thirty years among us dwelling,\nHis appointed time fulfilled,\nBorn for this, he meets his passion,\nFor that this he freely willed:\nOn the cross the Lamb is lifted,\nWhere his life-blood shall be spilled.\n_\nHe endured the nails, the spitting,\nVinegar, and spear, and reed;\nFrom that holy body broken\nBlood and water forth proceed:\nEarth, and stars, and sky, and ocean,\nBy that flood from stain are free.\n_\nFaithful cross! above all other,\nOne and only noble tree!\nNone in foliage, none in blossom,\nNone in fruit thy peers may be;\nSweetest wood and sweetest iron!\nSweetest weight is hung on thee.\n_\nBend thy boughs, O tree of glory!\nThy relaxing sinews bend;\nFor awhile the ancient rigour,\nThat thy birth bestowed, suspend;\nAnd the King of heavenly beauty\nOn thy bosom gently tend!\n_\nThou alone wast counted worthy\nThis world's ransom to uphold;\nFor a shipwrecked race preparing\nHarbour, like the ark of old;\nWith the sacred blood anointed\nFrom the smitten Lamb that rolled.\n_\nTo the Trinity be glory\nEverlasting, as is meet;\nEqual to the Father, equal\nTo the Son, and Paraclete:\nTrinal Unity, whose praises\nAll created things repeat.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Vesperas",
       "lat": "{:H-Vexillaregis:}v. Vexílla Regis pródeunt;\nFulget Crucis mystérium,\nQua Vita mortem pértulit,\nEt morte vitam prótulit.\n\nQuæ, vulneráta lánceæ\nMucróne diro, críminum\nUt nos laváret sórdibus,\nManávit unda et sánguine.\n\nImpléta sunt quæ cóncinit\nDavid fidéli cármine,\nDicéndo natiónibus:\nRegnávit a ligno Deus.\n\nArbor decóra et fúlgida,\nOrnáta Regis púrpura,\nElécta digno stípite\nTam sancta membra tángere.\n\nBeáta, cujus brácchiis\nPrétium pepéndit sǽculi,\nStatéra facta córporis,\nTulítque prædam tártari.\n\n\nO Crux, ave, spes única,\nIn hac triúmphi glória\n(sed tempore Passionis)\nHoc Passiónis témpore\n(sed tempore Paschali)\nPaschále quæ fers gáudium\nPiis adáuge grátiam,\nReísque dele crímina.\n\nTe, fons salútis, Trínitas,\nColláudet omnis spíritus:\nQuibus Crucis victóriam\nLargíris, adde prǽmium.\nAmen.",
-      "eng": "",
+      "eng": "v. Abroad the regal banners fly,\nNow shines the cross’s mystery;\nUpon it Life did death endure,\nAnd yet by death did life procure.\n_\nWho, wounded with a direful spear,\nDid, purposely to wash us clear\nFrom stain of sin, pour out a flood\nOf precious water mixed with blood.\n_\nThat which the prophet-king of old\nHath in mysterious verse foretold,\nIs now accomplished, whilst we see\nGod ruling nations from a tree.\n_\nO lovely and refulgent tree,\nAdorned with purpled majesty;\nCulled from a worthy stock, to bear\nThose limbs which sanctifièd were.\n_\nBlest tree, whose happy branches bore\nThe wealth that did the world restore;\nThe beam that did that body weigh\nWhich raised up hell’s expected prey.\n_\n!The following verse is said on bended knee.\n_\nO Cross, our one reliance, hail!\nOn this triumphant day avail\n(sed tempore Passionis)\nThis holy Passiontide avail\n(sed tempore Paschali)\nThou joy of Eastertide, avail\nTo give fresh merit to the saint,\nAnd pardon to the penitent.\n_\nBlest Trinity, salvation’s spring,\nMay every soul thy praises sing;\nTo those thou grantest conquest by\nThe holy cross, rewards apply.\nAmen.",
       "variationKey": "vesperae.hymnus"
     }
   },
@@ -14059,20 +13835,6 @@
       "eng": "O God, Who didst use the glorious Mother of thy Son as a mean to ransom Christ's faithful people out of the hands of the unbelievers, by enriching thy Church with yet another family, grant, we beseech thee, that we who reverently honour her as the Foundress of that great work, may for her sake and by her prayers, be redeemed from all sin and all bondage unto the evil one.",
       "variationKey": "collect"
     },
-    "vesperae.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Vesperas",
-      "lat": "@Commune/C7::1\n@:Ant VesperaBMV:1\n@Commune/C6:Ant Matutinum:7 s/95/121/\n@Commune/C7::3 s/121/126/\n@:Ant VesperaBMV:2",
-      "eng": "",
-      "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@Commune/C7:Ant Vespera:1 s/;;.*//g\n@:Ant VesperaBMV:1 s/;;.*//g\n@Commune/C6:Ant Matutinum:7 s/;;.*//\n@Commune/C7:Ant Vespera:3 s/;;.*//\n@:Ant VesperaBMV:2 s/;;.*//",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -14342,7 +14104,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Laudes",
       "lat": "Stetit Angelus * juxta aram templi, habens thuríbulum áureum in manu sua.\nDum præliarétur * Míchaël Archángelus cum dracóne, audíta est vox dicéntium: Salus Deo nostro, allelúja.\nArchángele Míchaël, * constítui te príncipem super omnes ánimas suscipiéndas.\nAngeli Dómini, * Dóminum benedícite in ætérnum.\nAngeli, Archángeli, * Throni et Dominatiónes, Principátus et Potestátes, Virtútes cælórum, laudáte Dóminum de cælis, allelúja.",
-      "eng": "",
+      "eng": "An Angel stood at the Altar * of the Temple, having a golden censer in his hand.\nWhile as the Archangel Michael fought against the dragon, * I heard voices saying: Salvation unto our God. Alleluia.\nMichael Mine Archangel, * I have appointed thee for a prince over the ingathering of souls.\nO ye Angels of the Lord, bless ye the Lord always.\nO ye Angels and Archangels, * O ye Thrones and Dominions, O ye Principalities and Powers, O ye mighty Ones of heaven, praise ye the Lord from the heavens. Alleluia.",
       "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
@@ -14433,13 +14195,6 @@
       "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.\nServe bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.",
       "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
       "variationKey": "laudes.antiphon.benedictus"
-    },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 1",
-      "eng": "Lo, a servant of God * who esteemed but little things earthly. And by word and work laid him up treasure in heaven.",
-      "variationKey": "vesperae.antiphon.magnificat"
     },
     "laudes.hymnus": {
       "type": "hymn",
@@ -14610,13 +14365,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -14649,7 +14397,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -15358,13 +15106,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -15494,13 +15235,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -15533,7 +15267,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -16310,7 +16044,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Laudes",
       "lat": "(rubrica cisterciensis)\n@CommuneCist/C3:Ant 2\n@Commune/C3:Ant 3\n@CommuneCist/C1:Ant 3\n@CommuneCist/C1:Ant Vespera:4:s/;;.*//\n@CommuneCist/C1:Ant Vespera:5",
-      "eng": "",
+      "eng": "I beheld, and, lo, great multitude, which no man could number, * of all nations, (and kindreds, and people, and tongues,) stood before the throne.\nAnd all the Angels stood round about the throne, * (and about the Elders, and the four living creatures,) and fell before the throne on their faces, and worshipped God.\nThou, O Lord God, hast redeemed us by thy Blood, * out of every kindred, and tongue, and people, and nation, and hast made us a kingdom unto our God.\nBless the Lord, all ye His chosen, * keep holiday, and extol Him.\nThe praise of all His Saints, * even of the children of Israel, a people near unto Him; this honour have all His Saints.",
       "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
@@ -16850,13 +16584,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -16889,7 +16616,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -17183,20 +16910,6 @@
       "eng": "O God, Who wast pleased that the blessed Mary always a Virgin, being herself the dwelling-place of the Holy Ghost, should, as on this day, be presented in thine earthly Temple, grant, we beseech thee, that by her prayers we may worthily be presented in the heavenly Temple of thy glory.",
       "variationKey": "collect"
     },
-    "vesperae.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Vesperas",
-      "lat": "@Commune/C7::1\n@:Ant VesperaBMV:1\n@Commune/C6:Ant Matutinum:7 s/95/121/\n@Commune/C7::3 s/121/126/\n@:Ant VesperaBMV:2",
-      "eng": "",
-      "variationKey": "vesperae.antiphons"
-    },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@Commune/C7:Ant Vespera:1 s/;;.*//g\n@:Ant VesperaBMV:1 s/;;.*//g\n@Commune/C6:Ant Matutinum:7 s/;;.*//\n@Commune/C7:Ant Vespera:3 s/;;.*//\n@:Ant VesperaBMV:2 s/;;.*//",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -17297,7 +17010,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -17422,13 +17135,6 @@
       "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
       "variationKey": "laudes.antiphon.benedictus"
     },
-    "vesperae.antiphon.magnificat": {
-      "type": "antiphon",
-      "label": "Ant. ad Magnificat",
-      "lat": "@:Ant 1",
-      "eng": "Lo, a servant of God * who esteemed but little things earthly. And by word and work laid him up treasure in heaven.",
-      "variationKey": "vesperae.antiphon.magnificat"
-    },
     "laudes.hymnus": {
       "type": "hymn",
       "label": "Hymnus ad Laudes",
@@ -17462,13 +17168,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -17501,7 +17200,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -17678,13 +17377,6 @@
       "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.;;109\nThis is one of the wise virgins, * whom the Lord found watching.;;112\nThis, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.;;121\nCome, O my chosen one, * and I will establish My throne in thee.;;126\nShe is beautiful * among the daughters of Jerusalem.;;147",
       "variationKey": "vesperae.antiphons"
     },
-    "laudes.antiphons": {
-      "type": "antiphons",
-      "label": "Antiphonae ad Laudes",
-      "lat": "@:Ant Vespera: s/;;.*//g",
-      "eng": "",
-      "variationKey": "laudes.antiphons"
-    },
     "laudes.capitulum": {
       "type": "capitulum",
       "label": "Capitulum ad Laudes",
@@ -17717,7 +17409,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -18261,7 +17953,7 @@
       "type": "hymn",
       "label": "Hymnus ad Laudes",
       "lat": "{:H-Jesucoronavirginum:}v. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\n\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\n\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\n\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
-      "eng": "",
+      "eng": "v. Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\n_\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied;\nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\n_\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\n_\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n_\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
       "variationKey": "laudes.hymnus"
     },
     "vesperae.hymnus": {
@@ -18294,7 +17986,7 @@
       "type": "antiphons",
       "label": "Antiphonae ad Laudes",
       "lat": "Tota pulchra * es, María, et mácula originális non est in te.;;109\nVestiméntum tuum * cándidum quasi nix, et fácies tua sicut sol.;;112\nTu glória Jerúsalem, * tu lætítia Israël, tu honorificéntia pópuli nostri.;;121\nBenedícta es tu, * Virgo María, a Dómino Deo excélso præ ómnibus muliéribus super terram.;;126\nTrahe nos, * Virgo immaculáta, post te currémus in odórem unguentórum tuórum.;;147",
-      "eng": "",
+      "eng": "Thou art all fair, O Mary, * there is no spot of original sin in thee.\nThy raiment * is white as snow, and thy countenance as the sun.\nThou art the exaltation of Jerusalem, * thou art the great glory of Israel, thou art the great rejoicing of our nation.\nVirgin Mary, * blessed art thou of the Most High God, above all the women upon the earth.\nDraw us, * Maiden undefiled, we will run after thee in the odour of thy perfumes.",
       "variationKey": "laudes.antiphons"
     },
     "laudes.capitulum": {
