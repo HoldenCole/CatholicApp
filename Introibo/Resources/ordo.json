@@ -149,7 +149,7 @@
     "winnerKey": "epi2-0",
     "rank": 5.0,
     "name": "Dominica II post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -226,7 +226,7 @@
     "winnerKey": "epi3-0",
     "rank": 5.0,
     "name": "Dominica III Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-21"
   },
@@ -1689,7 +1689,7 @@
     "winnerKey": "pent02-0",
     "rank": 5.0,
     "name": "Dominica II Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -1766,7 +1766,7 @@
     "winnerKey": "pent03-0",
     "rank": 5.0,
     "name": "Dominica III Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -1843,7 +1843,7 @@
     "winnerKey": "pent04-0",
     "rank": 5.0,
     "name": "Dominica IV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -1920,7 +1920,7 @@
     "winnerKey": "pent05-0",
     "rank": 5.0,
     "name": "Dominica V Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "06-23"
   },
@@ -1997,7 +1997,7 @@
     "winnerKey": "pent06-0",
     "rank": 5.0,
     "name": "Dominica VI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "06-30"
   },
@@ -2074,7 +2074,7 @@
     "winnerKey": "pent07-0",
     "rank": 5.0,
     "name": "Dominica VII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-07"
   },
@@ -2151,7 +2151,7 @@
     "winnerKey": "pent08-0",
     "rank": 5.0,
     "name": "Dominica VIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-14"
   },
@@ -2228,7 +2228,7 @@
     "winnerKey": "pent09-0",
     "rank": 5.0,
     "name": "Dominica IX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -2257,13 +2257,13 @@
   "2024-07-24": {
     "temporal": "pent09-3",
     "sanctoral": "07-24",
-    "winner": "sanctoral",
-    "winnerKey": "07-24",
-    "rank": 1.5,
-    "name": "In Vigilia S. Jacobi Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent09-3",
+    "rank": 1.0,
+    "name": "Feria IV Hebdomadæ 9 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent09-3"
+    "commemoration": null
   },
   "2024-07-25": {
     "temporal": "pent09-4",
@@ -2305,7 +2305,7 @@
     "winnerKey": "pent10-0",
     "rank": 5.0,
     "name": "Dominica X Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-28"
   },
@@ -2382,7 +2382,7 @@
     "winnerKey": "pent11-0",
     "rank": 5.0,
     "name": "Dominica XI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-04"
   },
@@ -2459,7 +2459,7 @@
     "winnerKey": "pent12-0",
     "rank": 5.0,
     "name": "Dominica XII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -2536,7 +2536,7 @@
     "winnerKey": "pent13-0",
     "rank": 5.0,
     "name": "Dominica XIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -2613,7 +2613,7 @@
     "winnerKey": "pent14-0",
     "rank": 5.0,
     "name": "Dominica XIV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-25"
   },
@@ -2690,7 +2690,7 @@
     "winnerKey": "pent15-0",
     "rank": 5.0,
     "name": "Dominica XV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -2767,7 +2767,7 @@
     "winnerKey": "pent16-0",
     "rank": 5.0,
     "name": "Dominica XVI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-08"
   },
@@ -2844,7 +2844,7 @@
     "winnerKey": "pent17-0",
     "rank": 5.0,
     "name": "Dominica XVII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-15"
   },
@@ -2921,7 +2921,7 @@
     "winnerKey": "pent18-0",
     "rank": 5.0,
     "name": "Dominica XVIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-22"
   },
@@ -3075,7 +3075,7 @@
     "winnerKey": "pent20-0",
     "rank": 5.0,
     "name": "Dominica XX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -3152,7 +3152,7 @@
     "winnerKey": "pent21-0",
     "rank": 5.0,
     "name": "Dominica XXI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-13"
   },
@@ -3229,7 +3229,7 @@
     "winnerKey": "pent22-0",
     "rank": 5.0,
     "name": "Dominica XXII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-20"
   },
@@ -3382,8 +3382,8 @@
     "winner": "temporal",
     "winnerKey": "pent24-0",
     "rank": 5.0,
-    "name": "Dominica XXIV et Ultima Post Pentecosten",
-    "color": "white",
+    "name": "Dominica XXIV Post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -3460,7 +3460,7 @@
     "winnerKey": "pent25-0",
     "rank": 5.0,
     "name": "Dominica 25 post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-10"
   },
@@ -3537,7 +3537,7 @@
     "winnerKey": "pent26-0",
     "rank": 5.0,
     "name": "Dominica 26 post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-17"
   },
@@ -3613,8 +3613,8 @@
     "winner": "temporal",
     "winnerKey": "pent27-0",
     "rank": 5.0,
-    "name": "Dominica 27 post Pentecosten",
-    "color": "white",
+    "name": "Dominica 27 et Ultima post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -3665,13 +3665,13 @@
   "2024-11-29": {
     "temporal": "pent27-5",
     "sanctoral": "11-29",
-    "winner": "sanctoral",
-    "winnerKey": "11-29",
-    "rank": 1.5,
-    "name": "In Vigilia S. Andreæ Apostoli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent27-5",
+    "rank": 1.0,
+    "name": "Feria VI Hebdomadæ 27 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent27-5"
+    "commemoration": null
   },
   "2024-11-30": {
     "temporal": "pent27-6",
@@ -3995,13 +3995,13 @@
   "2024-12-29": {
     "temporal": "nat04",
     "sanctoral": "12-29",
-    "winner": "sanctoral",
-    "winnerKey": "12-29",
-    "rank": 1.1,
-    "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat1-0",
+    "rank": 5.0,
+    "name": "Dominica Infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "12-29"
   },
   "2024-12-30": {
     "temporal": "nat05",
@@ -4009,7 +4009,7 @@
     "winner": "temporal",
     "winnerKey": "nat05",
     "rank": 1.0,
-    "name": "Ad Romános, cap. 8",
+    "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
     "commemoration": null
@@ -4230,7 +4230,7 @@
     "winnerKey": "epi2-0",
     "rank": 5.0,
     "name": "Dominica II post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -4307,7 +4307,7 @@
     "winnerKey": "epi3-0",
     "rank": 5.0,
     "name": "Dominica III Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-26"
   },
@@ -4384,7 +4384,7 @@
     "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "02-02"
   },
@@ -4461,7 +4461,7 @@
     "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -5924,7 +5924,7 @@
     "winnerKey": "pent02-0",
     "rank": 5.0,
     "name": "Dominica II Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "06-22"
   },
@@ -6078,7 +6078,7 @@
     "winnerKey": "pent04-0",
     "rank": 5.0,
     "name": "Dominica IV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-06"
   },
@@ -6155,7 +6155,7 @@
     "winnerKey": "pent05-0",
     "rank": 5.0,
     "name": "Dominica V Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-13"
   },
@@ -6232,7 +6232,7 @@
     "winnerKey": "pent06-0",
     "rank": 5.0,
     "name": "Dominica VI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-20"
   },
@@ -6272,13 +6272,13 @@
   "2025-07-24": {
     "temporal": "pent06-4",
     "sanctoral": "07-24",
-    "winner": "sanctoral",
-    "winnerKey": "07-24",
-    "rank": 1.5,
-    "name": "In Vigilia S. Jacobi Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent06-4",
+    "rank": 1.0,
+    "name": "Feria V Hebdomadæ 6 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent06-4"
+    "commemoration": null
   },
   "2025-07-25": {
     "temporal": "pent06-5",
@@ -6309,7 +6309,7 @@
     "winnerKey": "pent07-0",
     "rank": 5.0,
     "name": "Dominica VII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -6386,7 +6386,7 @@
     "winnerKey": "pent08-0",
     "rank": 5.0,
     "name": "Dominica VIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-03"
   },
@@ -6463,7 +6463,7 @@
     "winnerKey": "pent09-0",
     "rank": 5.0,
     "name": "Dominica IX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-10"
   },
@@ -6540,7 +6540,7 @@
     "winnerKey": "pent10-0",
     "rank": 5.0,
     "name": "Dominica X Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-17"
   },
@@ -6617,7 +6617,7 @@
     "winnerKey": "pent11-0",
     "rank": 5.0,
     "name": "Dominica XI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-24"
   },
@@ -6694,7 +6694,7 @@
     "winnerKey": "pent12-0",
     "rank": 5.0,
     "name": "Dominica XII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-31"
   },
@@ -6771,7 +6771,7 @@
     "winnerKey": "pent13-0",
     "rank": 5.0,
     "name": "Dominica XIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -6848,7 +6848,7 @@
     "winnerKey": "pent14-0",
     "rank": 5.0,
     "name": "Dominica XIV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-14"
   },
@@ -6925,7 +6925,7 @@
     "winnerKey": "pent15-0",
     "rank": 5.0,
     "name": "Dominica XV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-21"
   },
@@ -7002,7 +7002,7 @@
     "winnerKey": "pent16-0",
     "rank": 5.0,
     "name": "Dominica XVI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-28"
   },
@@ -7079,7 +7079,7 @@
     "winnerKey": "pent17-0",
     "rank": 5.0,
     "name": "Dominica XVII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -7156,7 +7156,7 @@
     "winnerKey": "pent18-0",
     "rank": 5.0,
     "name": "Dominica XVIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -7233,7 +7233,7 @@
     "winnerKey": "pent19-0",
     "rank": 5.0,
     "name": "Dominica XIX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-19"
   },
@@ -7317,13 +7317,13 @@
   "2025-10-27": {
     "temporal": "pent20-1",
     "sanctoral": "10-27",
-    "winner": "sanctoral",
-    "winnerKey": "10-27",
-    "rank": 1.5,
-    "name": "In Vigilia Ss. Simonis et Judæ Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent20-1",
+    "rank": 1.0,
+    "name": "Feria II Hebdomadæ 20 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent20-1"
+    "commemoration": null
   },
   "2025-10-28": {
     "temporal": "pent20-2",
@@ -7464,7 +7464,7 @@
     "winnerKey": "pent22-0",
     "rank": 5.0,
     "name": "Dominica XXII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-09"
   },
@@ -7541,7 +7541,7 @@
     "winnerKey": "pent23-0",
     "rank": 5.0,
     "name": "Dominica XXIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-16"
   },
@@ -7618,7 +7618,7 @@
     "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-23"
   },
@@ -7680,13 +7680,13 @@
   "2025-11-29": {
     "temporal": "pent24-6",
     "sanctoral": "11-29",
-    "winner": "sanctoral",
-    "winnerKey": "11-29",
-    "rank": 1.5,
-    "name": "In Vigilia S. Andreæ Apostoli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent24-6",
+    "rank": 1.0,
+    "name": "Sabbato Hebdomadæ 24 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent24-6"
+    "commemoration": null
   },
   "2025-11-30": {
     "temporal": "adv1-0",
@@ -7999,13 +7999,13 @@
   "2025-12-28": {
     "temporal": "nat03",
     "sanctoral": "12-28",
-    "winner": "sanctoral",
-    "winnerKey": "12-28",
-    "rank": 5.4,
-    "name": "Ss. Innocentium",
+    "winner": "temporal",
+    "winnerKey": "nat1-0",
+    "rank": 5.0,
+    "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "12-28"
   },
   "2025-12-29": {
     "temporal": "nat04",
@@ -8024,7 +8024,7 @@
     "winner": "temporal",
     "winnerKey": "nat05",
     "rank": 1.0,
-    "name": "Ad Romános, cap. 8",
+    "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
     "commemoration": null
@@ -8234,7 +8234,7 @@
     "winnerKey": "epi2-0",
     "rank": 5.0,
     "name": "Dominica II post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-18"
   },
@@ -8311,7 +8311,7 @@
     "winnerKey": "epi3-0",
     "rank": 5.0,
     "name": "Dominica III Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-25"
   },
@@ -9774,7 +9774,7 @@
     "winnerKey": "pent02-0",
     "rank": 5.0,
     "name": "Dominica II Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -9851,7 +9851,7 @@
     "winnerKey": "pent03-0",
     "rank": 5.0,
     "name": "Dominica III Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -9928,7 +9928,7 @@
     "winnerKey": "pent04-0",
     "rank": 5.0,
     "name": "Dominica IV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "06-21"
   },
@@ -10005,7 +10005,7 @@
     "winnerKey": "pent05-0",
     "rank": 5.0,
     "name": "Dominica V Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "06-28"
   },
@@ -10082,7 +10082,7 @@
     "winnerKey": "pent06-0",
     "rank": 5.0,
     "name": "Dominica VI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-05"
   },
@@ -10159,7 +10159,7 @@
     "winnerKey": "pent07-0",
     "rank": 5.0,
     "name": "Dominica VII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -10236,7 +10236,7 @@
     "winnerKey": "pent08-0",
     "rank": 5.0,
     "name": "Dominica VIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-19"
   },
@@ -10287,13 +10287,13 @@
   "2026-07-24": {
     "temporal": "pent08-5",
     "sanctoral": "07-24",
-    "winner": "sanctoral",
-    "winnerKey": "07-24",
-    "rank": 1.5,
-    "name": "In Vigilia S. Jacobi Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent08-5",
+    "rank": 1.0,
+    "name": "Feria VI Hebdomadæ 8 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent08-5"
+    "commemoration": null
   },
   "2026-07-25": {
     "temporal": "pent08-6",
@@ -10313,7 +10313,7 @@
     "winnerKey": "pent09-0",
     "rank": 5.0,
     "name": "Dominica IX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-26"
   },
@@ -10390,7 +10390,7 @@
     "winnerKey": "pent10-0",
     "rank": 5.0,
     "name": "Dominica X Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -10467,7 +10467,7 @@
     "winnerKey": "pent11-0",
     "rank": 5.0,
     "name": "Dominica XI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-09"
   },
@@ -10544,7 +10544,7 @@
     "winnerKey": "pent12-0",
     "rank": 5.0,
     "name": "Dominica XII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-16"
   },
@@ -10621,7 +10621,7 @@
     "winnerKey": "pent13-0",
     "rank": 5.0,
     "name": "Dominica XIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-23"
   },
@@ -10698,7 +10698,7 @@
     "winnerKey": "pent14-0",
     "rank": 5.0,
     "name": "Dominica XIV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-30"
   },
@@ -10775,7 +10775,7 @@
     "winnerKey": "pent15-0",
     "rank": 5.0,
     "name": "Dominica XV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -10852,7 +10852,7 @@
     "winnerKey": "pent16-0",
     "rank": 5.0,
     "name": "Dominica XVI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -10929,7 +10929,7 @@
     "winnerKey": "pent17-0",
     "rank": 5.0,
     "name": "Dominica XVII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -11006,7 +11006,7 @@
     "winnerKey": "pent18-0",
     "rank": 5.0,
     "name": "Dominica XVIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -11083,7 +11083,7 @@
     "winnerKey": "pent19-0",
     "rank": 5.0,
     "name": "Dominica XIX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-04"
   },
@@ -11160,7 +11160,7 @@
     "winnerKey": "pent20-0",
     "rank": 5.0,
     "name": "Dominica XX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-11"
   },
@@ -11237,7 +11237,7 @@
     "winnerKey": "pent21-0",
     "rank": 5.0,
     "name": "Dominica XXI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-18"
   },
@@ -11332,13 +11332,13 @@
   "2026-10-27": {
     "temporal": "pent22-2",
     "sanctoral": "10-27",
-    "winner": "sanctoral",
-    "winnerKey": "10-27",
-    "rank": 1.5,
-    "name": "In Vigilia Ss. Simonis et Judæ Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent22-2",
+    "rank": 1.0,
+    "name": "Feria III Hebdomadæ 22 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent22-2"
+    "commemoration": null
   },
   "2026-10-28": {
     "temporal": "pent22-3",
@@ -11467,8 +11467,8 @@
     "winner": "temporal",
     "winnerKey": "pent24-0",
     "rank": 5.0,
-    "name": "Dominica XXIV et Ultima Post Pentecosten",
-    "color": "white",
+    "name": "Dominica XXIV Post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-08"
   },
@@ -11545,7 +11545,7 @@
     "winnerKey": "pent25-0",
     "rank": 5.0,
     "name": "Dominica 25 post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-15"
   },
@@ -11621,8 +11621,8 @@
     "winner": "temporal",
     "winnerKey": "pent26-0",
     "rank": 5.0,
-    "name": "Dominica 26 post Pentecosten",
-    "color": "white",
+    "name": "Dominica 26 et Ultima post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-22"
   },
@@ -12003,13 +12003,13 @@
   "2026-12-27": {
     "temporal": "nat02",
     "sanctoral": "12-27",
-    "winner": "sanctoral",
-    "winnerKey": "12-27",
-    "rank": 5.4,
-    "name": "S. Joannis Apostoli et Evangelistæ",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat1-0",
+    "rank": 5.0,
+    "name": "Dominica Infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "12-27"
   },
   "2026-12-28": {
     "temporal": "nat03",
@@ -12039,7 +12039,7 @@
     "winner": "temporal",
     "winnerKey": "nat05",
     "rank": 1.0,
-    "name": "Ad Romános, cap. 8",
+    "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
     "commemoration": null
@@ -12238,7 +12238,7 @@
     "winnerKey": "epi2-0",
     "rank": 5.0,
     "name": "Dominica II post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-17"
   },
@@ -13701,7 +13701,7 @@
     "winnerKey": "pent02-0",
     "rank": 5.0,
     "name": "Dominica II Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -13778,7 +13778,7 @@
     "winnerKey": "pent03-0",
     "rank": 5.0,
     "name": "Dominica III Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -13855,7 +13855,7 @@
     "winnerKey": "pent04-0",
     "rank": 5.0,
     "name": "Dominica IV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -13932,7 +13932,7 @@
     "winnerKey": "pent05-0",
     "rank": 5.0,
     "name": "Dominica V Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -14009,7 +14009,7 @@
     "winnerKey": "pent06-0",
     "rank": 5.0,
     "name": "Dominica VI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -14086,7 +14086,7 @@
     "winnerKey": "pent07-0",
     "rank": 5.0,
     "name": "Dominica VII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -14163,7 +14163,7 @@
     "winnerKey": "pent08-0",
     "rank": 5.0,
     "name": "Dominica VIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -14240,7 +14240,7 @@
     "winnerKey": "pent09-0",
     "rank": 5.0,
     "name": "Dominica IX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-18"
   },
@@ -14302,13 +14302,13 @@
   "2027-07-24": {
     "temporal": "pent09-6",
     "sanctoral": "07-24",
-    "winner": "sanctoral",
-    "winnerKey": "07-24",
-    "rank": 1.5,
-    "name": "In Vigilia S. Jacobi Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent09-6",
+    "rank": 1.0,
+    "name": "Sabbato Hebdomadæ 9 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent09-6"
+    "commemoration": null
   },
   "2027-07-25": {
     "temporal": "pent10-0",
@@ -14317,7 +14317,7 @@
     "winnerKey": "pent10-0",
     "rank": 5.0,
     "name": "Dominica X Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-25"
   },
@@ -14394,7 +14394,7 @@
     "winnerKey": "pent11-0",
     "rank": 5.0,
     "name": "Dominica XI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-01"
   },
@@ -14471,7 +14471,7 @@
     "winnerKey": "pent12-0",
     "rank": 5.0,
     "name": "Dominica XII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -14625,7 +14625,7 @@
     "winnerKey": "pent14-0",
     "rank": 5.0,
     "name": "Dominica XIV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-22"
   },
@@ -14702,7 +14702,7 @@
     "winnerKey": "pent15-0",
     "rank": 5.0,
     "name": "Dominica XV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-29"
   },
@@ -14779,7 +14779,7 @@
     "winnerKey": "pent16-0",
     "rank": 5.0,
     "name": "Dominica XVI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-05"
   },
@@ -14856,7 +14856,7 @@
     "winnerKey": "pent17-0",
     "rank": 5.0,
     "name": "Dominica XVII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-12"
   },
@@ -14933,7 +14933,7 @@
     "winnerKey": "pent18-0",
     "rank": 5.0,
     "name": "Dominica XVIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-19"
   },
@@ -15010,7 +15010,7 @@
     "winnerKey": "pent19-0",
     "rank": 5.0,
     "name": "Dominica XIX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -15087,7 +15087,7 @@
     "winnerKey": "pent20-0",
     "rank": 5.0,
     "name": "Dominica XX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-03"
   },
@@ -15164,7 +15164,7 @@
     "winnerKey": "pent21-0",
     "rank": 5.0,
     "name": "Dominica XXI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-10"
   },
@@ -15241,7 +15241,7 @@
     "winnerKey": "pent22-0",
     "rank": 5.0,
     "name": "Dominica XXII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-17"
   },
@@ -15318,7 +15318,7 @@
     "winnerKey": "pent23-0",
     "rank": 5.0,
     "name": "Dominica XXIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-24"
   },
@@ -15347,13 +15347,13 @@
   "2027-10-27": {
     "temporal": "pent23-3",
     "sanctoral": "10-27",
-    "winner": "sanctoral",
-    "winnerKey": "10-27",
-    "rank": 1.5,
-    "name": "In Vigilia Ss. Simonis et Judæ Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent23-3",
+    "rank": 1.0,
+    "name": "Feria IV Hebdomadæ 23 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent23-3"
+    "commemoration": null
   },
   "2027-10-28": {
     "temporal": "pent23-4",
@@ -15472,7 +15472,7 @@
     "winnerKey": "pent25-0",
     "rank": 5.0,
     "name": "Dominica 25 post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -15549,7 +15549,7 @@
     "winnerKey": "pent26-0",
     "rank": 5.0,
     "name": "Dominica 26 post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-14"
   },
@@ -15625,8 +15625,8 @@
     "winner": "temporal",
     "winnerKey": "pent27-0",
     "rank": 5.0,
-    "name": "Dominica 27 post Pentecosten",
-    "color": "white",
+    "name": "Dominica 27 et Ultima post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-21"
   },
@@ -16007,13 +16007,13 @@
   "2027-12-26": {
     "temporal": "nat01",
     "sanctoral": "12-26",
-    "winner": "sanctoral",
-    "winnerKey": "12-26",
-    "rank": 5.4,
-    "name": "S. Stephani Protomartyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat1-0",
+    "rank": 5.0,
+    "name": "Dominica Infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-26"
   },
   "2027-12-27": {
     "temporal": "nat02",
@@ -16054,7 +16054,7 @@
     "winner": "temporal",
     "winnerKey": "nat05",
     "rank": 1.0,
-    "name": "Ad Romános, cap. 8",
+    "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
     "commemoration": null
@@ -16242,7 +16242,7 @@
     "winnerKey": "epi2-0",
     "rank": 5.0,
     "name": "Dominica II post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-16"
   },
@@ -16319,7 +16319,7 @@
     "winnerKey": "epi3-0",
     "rank": 5.0,
     "name": "Dominica III Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-23"
   },
@@ -16396,7 +16396,7 @@
     "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -16473,7 +16473,7 @@
     "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "02-06"
   },
@@ -17936,7 +17936,7 @@
     "winnerKey": "pent02-0",
     "rank": 5.0,
     "name": "Dominica II Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -18013,7 +18013,7 @@
     "winnerKey": "pent03-0",
     "rank": 5.0,
     "name": "Dominica III Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -18090,7 +18090,7 @@
     "winnerKey": "pent04-0",
     "rank": 5.0,
     "name": "Dominica IV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-02"
   },
@@ -18167,7 +18167,7 @@
     "winnerKey": "pent05-0",
     "rank": 5.0,
     "name": "Dominica V Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -18244,7 +18244,7 @@
     "winnerKey": "pent06-0",
     "rank": 5.0,
     "name": "Dominica VI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -18321,20 +18321,20 @@
     "winnerKey": "pent07-0",
     "rank": 5.0,
     "name": "Dominica VII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-23"
   },
   "2028-07-24": {
     "temporal": "pent07-1",
     "sanctoral": "07-24",
-    "winner": "sanctoral",
-    "winnerKey": "07-24",
-    "rank": 1.5,
-    "name": "In Vigilia S. Jacobi Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent07-1",
+    "rank": 1.0,
+    "name": "Feria II Hebdomadæ 7 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent07-1"
+    "commemoration": null
   },
   "2028-07-25": {
     "temporal": "pent07-2",
@@ -18398,7 +18398,7 @@
     "winnerKey": "pent08-0",
     "rank": 5.0,
     "name": "Dominica VIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -18475,7 +18475,7 @@
     "winnerKey": "pent09-0",
     "rank": 5.0,
     "name": "Dominica IX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-06"
   },
@@ -18552,7 +18552,7 @@
     "winnerKey": "pent10-0",
     "rank": 5.0,
     "name": "Dominica X Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -18629,7 +18629,7 @@
     "winnerKey": "pent11-0",
     "rank": 5.0,
     "name": "Dominica XI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-20"
   },
@@ -18706,7 +18706,7 @@
     "winnerKey": "pent12-0",
     "rank": 5.0,
     "name": "Dominica XII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-27"
   },
@@ -18783,7 +18783,7 @@
     "winnerKey": "pent13-0",
     "rank": 5.0,
     "name": "Dominica XIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-03"
   },
@@ -18860,7 +18860,7 @@
     "winnerKey": "pent14-0",
     "rank": 5.0,
     "name": "Dominica XIV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-10"
   },
@@ -18937,7 +18937,7 @@
     "winnerKey": "pent15-0",
     "rank": 5.0,
     "name": "Dominica XV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -19014,7 +19014,7 @@
     "winnerKey": "pent16-0",
     "rank": 5.0,
     "name": "Dominica XVI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -19091,7 +19091,7 @@
     "winnerKey": "pent17-0",
     "rank": 5.0,
     "name": "Dominica XVII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -19168,7 +19168,7 @@
     "winnerKey": "pent18-0",
     "rank": 5.0,
     "name": "Dominica XVIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-08"
   },
@@ -19245,7 +19245,7 @@
     "winnerKey": "pent19-0",
     "rank": 5.0,
     "name": "Dominica XIX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-15"
   },
@@ -19322,7 +19322,7 @@
     "winnerKey": "pent20-0",
     "rank": 5.0,
     "name": "Dominica XX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -19373,13 +19373,13 @@
   "2028-10-27": {
     "temporal": "pent20-5",
     "sanctoral": "10-27",
-    "winner": "sanctoral",
-    "winnerKey": "10-27",
-    "rank": 1.5,
-    "name": "In Vigilia Ss. Simonis et Judæ Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent20-5",
+    "rank": 1.0,
+    "name": "Feria VI Hebdomadæ 20 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent20-5"
+    "commemoration": null
   },
   "2028-10-28": {
     "temporal": "pent20-6",
@@ -19476,7 +19476,7 @@
     "winnerKey": "pent22-0",
     "rank": 5.0,
     "name": "Dominica XXII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -19553,7 +19553,7 @@
     "winnerKey": "pent23-0",
     "rank": 5.0,
     "name": "Dominica XXIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-12"
   },
@@ -19629,8 +19629,8 @@
     "winner": "temporal",
     "winnerKey": "pent24-0",
     "rank": 5.0,
-    "name": "Dominica XXIV et Ultima Post Pentecosten",
-    "color": "white",
+    "name": "Dominica XXIV Post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-19"
   },
@@ -19706,8 +19706,8 @@
     "winner": "temporal",
     "winnerKey": "pent25-0",
     "rank": 5.0,
-    "name": "Dominica 25 post Pentecosten",
-    "color": "white",
+    "name": "Dominica 25 et Ultima post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -19736,13 +19736,13 @@
   "2028-11-29": {
     "temporal": "pent25-3",
     "sanctoral": "11-29",
-    "winner": "sanctoral",
-    "winnerKey": "11-29",
-    "rank": 1.5,
-    "name": "In Vigilia S. Andreæ Apostoli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent25-3",
+    "rank": 1.0,
+    "name": "Feria IV Hebdomadæ 25 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent25-3"
+    "commemoration": null
   },
   "2028-11-30": {
     "temporal": "pent25-4",
@@ -20080,7 +20080,7 @@
     "winner": "temporal",
     "winnerKey": "nat05",
     "rank": 1.0,
-    "name": "Ad Romános, cap. 8",
+    "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
     "commemoration": null
@@ -20088,13 +20088,13 @@
   "2028-12-31": {
     "temporal": "nat06",
     "sanctoral": "12-31",
-    "winner": "sanctoral",
-    "winnerKey": "12-31",
-    "rank": 2.9,
-    "name": "S. Silvestri Papæ et Confessoris",
+    "winner": "temporal",
+    "winnerKey": "nat1-0",
+    "rank": 5.0,
+    "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-31"
   },
   "2029-01-01": {
     "temporal": "nat07",
@@ -20246,7 +20246,7 @@
     "winnerKey": "epi2-0",
     "rank": 5.0,
     "name": "Dominica II post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -20323,7 +20323,7 @@
     "winnerKey": "epi3-0",
     "rank": 5.0,
     "name": "Dominica III Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-21"
   },
@@ -21786,7 +21786,7 @@
     "winnerKey": "pent02-0",
     "rank": 5.0,
     "name": "Dominica II Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -21863,7 +21863,7 @@
     "winnerKey": "pent03-0",
     "rank": 5.0,
     "name": "Dominica III Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -21940,7 +21940,7 @@
     "winnerKey": "pent04-0",
     "rank": 5.0,
     "name": "Dominica IV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -22171,7 +22171,7 @@
     "winnerKey": "pent07-0",
     "rank": 5.0,
     "name": "Dominica VII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-08"
   },
@@ -22248,7 +22248,7 @@
     "winnerKey": "pent08-0",
     "rank": 5.0,
     "name": "Dominica VIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-15"
   },
@@ -22325,7 +22325,7 @@
     "winnerKey": "pent09-0",
     "rank": 5.0,
     "name": "Dominica IX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-22"
   },
@@ -22343,13 +22343,13 @@
   "2029-07-24": {
     "temporal": "pent09-2",
     "sanctoral": "07-24",
-    "winner": "sanctoral",
-    "winnerKey": "07-24",
-    "rank": 1.5,
-    "name": "In Vigilia S. Jacobi Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent09-2",
+    "rank": 1.0,
+    "name": "Feria III Hebdomadæ 9 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent09-2"
+    "commemoration": null
   },
   "2029-07-25": {
     "temporal": "pent09-3",
@@ -22402,7 +22402,7 @@
     "winnerKey": "pent10-0",
     "rank": 5.0,
     "name": "Dominica X Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-29"
   },
@@ -22479,7 +22479,7 @@
     "winnerKey": "pent11-0",
     "rank": 5.0,
     "name": "Dominica XI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-05"
   },
@@ -22556,7 +22556,7 @@
     "winnerKey": "pent12-0",
     "rank": 5.0,
     "name": "Dominica XII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-12"
   },
@@ -22633,7 +22633,7 @@
     "winnerKey": "pent13-0",
     "rank": 5.0,
     "name": "Dominica XIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-19"
   },
@@ -22710,7 +22710,7 @@
     "winnerKey": "pent14-0",
     "rank": 5.0,
     "name": "Dominica XIV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -22787,7 +22787,7 @@
     "winnerKey": "pent15-0",
     "rank": 5.0,
     "name": "Dominica XV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-02"
   },
@@ -22864,7 +22864,7 @@
     "winnerKey": "pent16-0",
     "rank": 5.0,
     "name": "Dominica XVI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -22941,7 +22941,7 @@
     "winnerKey": "pent17-0",
     "rank": 5.0,
     "name": "Dominica XVII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -23018,7 +23018,7 @@
     "winnerKey": "pent18-0",
     "rank": 5.0,
     "name": "Dominica XVIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-23"
   },
@@ -23095,7 +23095,7 @@
     "winnerKey": "pent19-0",
     "rank": 5.0,
     "name": "Dominica XIX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-30"
   },
@@ -23172,7 +23172,7 @@
     "winnerKey": "pent20-0",
     "rank": 5.0,
     "name": "Dominica XX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-07"
   },
@@ -23249,7 +23249,7 @@
     "winnerKey": "pent21-0",
     "rank": 5.0,
     "name": "Dominica XXI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -23326,7 +23326,7 @@
     "winnerKey": "pent22-0",
     "rank": 5.0,
     "name": "Dominica XXII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -23388,13 +23388,13 @@
   "2029-10-27": {
     "temporal": "pent22-6",
     "sanctoral": "10-27",
-    "winner": "sanctoral",
-    "winnerKey": "10-27",
-    "rank": 1.5,
-    "name": "In Vigilia Ss. Simonis et Judæ Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent22-6",
+    "rank": 1.0,
+    "name": "Sabbato Hebdomadæ 22 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent22-6"
+    "commemoration": null
   },
   "2029-10-28": {
     "temporal": "pent23-0",
@@ -23479,8 +23479,8 @@
     "winner": "temporal",
     "winnerKey": "pent24-0",
     "rank": 5.0,
-    "name": "Dominica XXIV et Ultima Post Pentecosten",
-    "color": "white",
+    "name": "Dominica XXIV Post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-04"
   },
@@ -23557,7 +23557,7 @@
     "winnerKey": "pent25-0",
     "rank": 5.0,
     "name": "Dominica 25 post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-11"
   },
@@ -23634,7 +23634,7 @@
     "winnerKey": "pent26-0",
     "rank": 5.0,
     "name": "Dominica 26 post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-18"
   },
@@ -23710,8 +23710,8 @@
     "winner": "temporal",
     "winnerKey": "pent27-0",
     "rank": 5.0,
-    "name": "Dominica 27 post Pentecosten",
-    "color": "white",
+    "name": "Dominica 27 et Ultima post Pentecosten",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-25"
   },
@@ -23751,13 +23751,13 @@
   "2029-11-29": {
     "temporal": "pent27-4",
     "sanctoral": "11-29",
-    "winner": "sanctoral",
-    "winnerKey": "11-29",
-    "rank": 1.5,
-    "name": "In Vigilia S. Andreæ Apostoli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent27-4",
+    "rank": 1.0,
+    "name": "Feria V Hebdomadæ 27 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent27-4"
+    "commemoration": null
   },
   "2029-11-30": {
     "temporal": "pent27-5",
@@ -24093,9 +24093,9 @@
     "temporal": "nat05",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
-    "rank": 1.0,
-    "name": "Ad Romános, cap. 8",
+    "winnerKey": "nat1-0",
+    "rank": 5.0,
+    "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
     "commemoration": null
@@ -24247,9 +24247,9 @@
     "temporal": "epi2-0",
     "sanctoral": "01-13",
     "winner": "temporal",
-    "winnerKey": "epi2-0",
+    "winnerKey": "epi1-0",
     "rank": 5.0,
-    "name": "Dominica II post Epiphaniam",
+    "name": "In Festo Sanctæ Familiæ Jesu Mariæ Joseph",
     "color": "white",
     "season": "ordinary",
     "commemoration": "01-13"
@@ -24327,7 +24327,7 @@
     "winnerKey": "epi3-0",
     "rank": 5.0,
     "name": "Dominica III Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-20"
   },
@@ -24404,7 +24404,7 @@
     "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "01-27"
   },
@@ -24481,7 +24481,7 @@
     "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -24558,7 +24558,7 @@
     "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "02-10"
   },
@@ -26021,7 +26021,7 @@
     "winnerKey": "pent02-0",
     "rank": 5.0,
     "name": "Dominica II Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "06-23"
   },
@@ -26098,7 +26098,7 @@
     "winnerKey": "pent03-0",
     "rank": 5.0,
     "name": "Dominica III Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -26175,7 +26175,7 @@
     "winnerKey": "pent04-0",
     "rank": 5.0,
     "name": "Dominica IV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-07"
   },
@@ -26252,7 +26252,7 @@
     "winnerKey": "pent05-0",
     "rank": 5.0,
     "name": "Dominica V Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-14"
   },
@@ -26329,7 +26329,7 @@
     "winnerKey": "pent06-0",
     "rank": 5.0,
     "name": "Dominica VI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -26358,13 +26358,13 @@
   "2030-07-24": {
     "temporal": "pent06-3",
     "sanctoral": "07-24",
-    "winner": "sanctoral",
-    "winnerKey": "07-24",
-    "rank": 1.5,
-    "name": "In Vigilia S. Jacobi Ap.",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent06-3",
+    "rank": 1.0,
+    "name": "Feria IV Hebdomadæ 6 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent06-3"
+    "commemoration": null
   },
   "2030-07-25": {
     "temporal": "pent06-4",
@@ -26406,7 +26406,7 @@
     "winnerKey": "pent07-0",
     "rank": 5.0,
     "name": "Dominica VII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "07-28"
   },
@@ -26483,7 +26483,7 @@
     "winnerKey": "pent08-0",
     "rank": 5.0,
     "name": "Dominica VIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-04"
   },
@@ -26560,7 +26560,7 @@
     "winnerKey": "pent09-0",
     "rank": 5.0,
     "name": "Dominica IX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -26637,7 +26637,7 @@
     "winnerKey": "pent10-0",
     "rank": 5.0,
     "name": "Dominica X Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -26714,7 +26714,7 @@
     "winnerKey": "pent11-0",
     "rank": 5.0,
     "name": "Dominica XI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "08-25"
   },
@@ -26791,7 +26791,7 @@
     "winnerKey": "pent12-0",
     "rank": 5.0,
     "name": "Dominica XII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -26868,7 +26868,7 @@
     "winnerKey": "pent13-0",
     "rank": 5.0,
     "name": "Dominica XIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-08"
   },
@@ -26945,7 +26945,7 @@
     "winnerKey": "pent14-0",
     "rank": 5.0,
     "name": "Dominica XIV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-15"
   },
@@ -27022,7 +27022,7 @@
     "winnerKey": "pent15-0",
     "rank": 5.0,
     "name": "Dominica XV Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "09-22"
   },
@@ -27176,7 +27176,7 @@
     "winnerKey": "pent17-0",
     "rank": 5.0,
     "name": "Dominica XVII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -27253,7 +27253,7 @@
     "winnerKey": "pent18-0",
     "rank": 5.0,
     "name": "Dominica XVIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-13"
   },
@@ -27330,7 +27330,7 @@
     "winnerKey": "pent19-0",
     "rank": 5.0,
     "name": "Dominica XIX Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "10-20"
   },
@@ -27484,7 +27484,7 @@
     "winnerKey": "pent21-0",
     "rank": 5.0,
     "name": "Dominica XXI Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -27561,7 +27561,7 @@
     "winnerKey": "pent22-0",
     "rank": 5.0,
     "name": "Dominica XXII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-10"
   },
@@ -27638,7 +27638,7 @@
     "winnerKey": "pent23-0",
     "rank": 5.0,
     "name": "Dominica XXIII Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": "11-17"
   },
@@ -27715,7 +27715,7 @@
     "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten",
-    "color": "white",
+    "color": "green",
     "season": "ordinary",
     "commemoration": null
   },
@@ -27766,13 +27766,13 @@
   "2030-11-29": {
     "temporal": "pent24-5",
     "sanctoral": "11-29",
-    "winner": "sanctoral",
-    "winnerKey": "11-29",
-    "rank": 1.5,
-    "name": "In Vigilia S. Andreæ Apostoli",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent24-5",
+    "rank": 1.0,
+    "name": "Feria VI Hebdomadæ 24 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent24-5"
+    "commemoration": null
   },
   "2030-11-30": {
     "temporal": "pent24-6",
@@ -28096,13 +28096,13 @@
   "2030-12-29": {
     "temporal": "nat04",
     "sanctoral": "12-29",
-    "winner": "sanctoral",
-    "winnerKey": "12-29",
-    "rank": 1.1,
-    "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat1-0",
+    "rank": 5.0,
+    "name": "Dominica Infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "12-29"
   },
   "2030-12-30": {
     "temporal": "nat05",
@@ -28110,7 +28110,7 @@
     "winner": "temporal",
     "winnerKey": "nat05",
     "rank": 1.0,
-    "name": "Ad Romános, cap. 8",
+    "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
     "commemoration": null
