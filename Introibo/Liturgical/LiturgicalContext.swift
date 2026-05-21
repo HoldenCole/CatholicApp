@@ -35,16 +35,21 @@ enum MysterySet: String {
 }
 
 enum MarianAntiphon: String {
-    case alma, ave, regina, salve
+    case alma, ave, regina, salve, suppressed
 
     var title: String {
         switch self {
-        case .alma:   return "Alma Redemptóris Mater"
-        case .ave:    return "Ave Regína Cælórum"
-        case .regina: return "Regína Cæli"
-        case .salve:  return "Salve Regína"
+        case .alma:       return "Alma Redemptóris Mater"
+        case .ave:        return "Ave Regína Cælórum"
+        case .regina:     return "Regína Cæli"
+        case .salve:      return "Salve Regína"
+        case .suppressed: return ""
         }
     }
+
+    /// Whether the antiphon should be displayed. During Triduum, no Marian
+    /// antiphon is said at Compline.
+    var isSuppressed: Bool { self == .suppressed }
 }
 
 struct Penance {
@@ -162,21 +167,23 @@ struct LiturgicalContext {
         let isLent = (season == .lent || season == .passion)
 
         // ---- Marian antiphon ----
-        // Boundary rules:
-        //  - Alma covers Saturday-before-Advent-I (First Vespers) through Compline of
-        //    Feb 2 (Candlemas) inclusive; the transition to Ave happens after Candlemas.
-        //  - Triduum (Maundy Thu / Good Fri / Holy Sat) has no proper Marian antiphon at
-        //    Compline traditionally; we continue Ave (the antiphon in use through Holy
-        //    Wednesday) rather than fall through to Salve, which is liturgically wrong.
+        // Boundary rules (Breviary of Pius V, 1569; 1962 rubrics):
+        //  - Alma: from First Vespers of Advent I (= Saturday before Advent I)
+        //    through Compline of Feb 1. Feb 2 (Candlemas) belongs to Ave.
+        //  - Ave: from Compline of Feb 2 through Compline of Holy Wednesday.
+        //  - Triduum (Maundy Thu / Good Fri / Holy Sat): no Marian antiphon
+        //    is said at Compline (suppressed).
+        //  - Regina Caeli: Easter Sunday through the day before Trinity Sunday.
+        //  - Salve: Trinity Sunday through Friday before Advent I.
         let marian: MarianAntiphon
         let triduumStart = easter.addingDays(-3)   // Maundy Thursday
         let triduumEnd = easter.addingDays(-1)     // Holy Saturday
         let almaStart = firstAdvent.addingDays(-1) // Saturday before Advent I (First Vespers)
-        if now.isSameOrAfter(almaStart) || now.isSameOrBefore(candlemas) {
+        if now.isSameOrAfter(triduumStart) && now.isSameOrBefore(triduumEnd) {
+            marian = .suppressed   // Triduum: no Marian antiphon at Compline
+        } else if now.isSameOrAfter(almaStart) || now.isSameOrBefore(candlemas.addingDays(-1)) {
             marian = .alma
-        } else if now.isSameOrAfter(triduumStart) && now.isSameOrBefore(triduumEnd) {
-            marian = .ave   // Triduum: continue Ave rather than fall through to Salve
-        } else if now.isSameOrAfter(candlemas.addingDays(1)) && now.isSameOrBefore(holyWed) {
+        } else if now.isSameOrAfter(candlemas) && now.isSameOrBefore(holyWed) {
             marian = .ave
         } else if now.isSameOrAfter(easter) && now.isSameOrBefore(trinity.addingDays(-1)) {
             marian = .regina

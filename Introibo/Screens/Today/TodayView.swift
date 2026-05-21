@@ -112,12 +112,14 @@ struct TodayView: View {
                     .padding(.top, 6)
             }
 
-            // Marian antiphon
-            Text(ctx.marian.title)
-                .font(.captionSm)
-                .italic()
-                .foregroundStyle(Color.muted)
-                .padding(.top, 2)
+            // Marian antiphon (suppressed during Triduum)
+            if !ctx.marian.isSuppressed {
+                Text(ctx.marian.title)
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.muted)
+                    .padding(.top, 2)
+            }
 
             // First Friday / First Saturday / Ember day flags
             if ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay {

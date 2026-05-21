@@ -229,6 +229,13 @@ struct OfficeAssembler {
     }
 
     private func marianPart(for antiphon: MarianAntiphon, fallback: Hour.Part) -> Hour.Part {
+        // During Triduum the Marian antiphon is suppressed entirely.
+        if antiphon.isSuppressed {
+            return Hour.Part(
+                type: "suppressed",
+                variationKey: "completorium.marian"
+            )
+        }
         guard let data = marianAntiphons.first(where: { $0.slug == antiphon.rawValue }) else {
             return fallback
         }
