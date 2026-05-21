@@ -257,7 +257,7 @@ data class LiturgicalContext(
             }
 
             val temporal = computeTemporalKey(
-                now, easter, ashWed, pentecost, trinity, firstAdvent, christmas, season, dow,
+                now, easter, ashWed, pentecost, trinity, firstAdvent, christmas,
             )
 
             return LiturgicalContext(
@@ -289,7 +289,6 @@ data class LiturgicalContext(
             date: LocalDate, easter: LocalDate, ashWed: LocalDate,
             pentecost: LocalDate, trinity: LocalDate,
             firstAdvent: LocalDate, christmas: LocalDate,
-            season: LiturgicalSeason, dow: Int,
         ): String? {
             val septuagesima = ashWed.minusDays(17)
 
