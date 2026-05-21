@@ -2439,7 +2439,7 @@
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent11-5"
+    "commemoration": "pent11-5;08-09t"
   },
   "2024-08-10": {
     "temporal": "pent11-6",
@@ -2593,7 +2593,7 @@
     "name": "S. Philippi Benitii Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent13-5"
+    "commemoration": "pent13-5;08-23o"
   },
   "2024-08-24": {
     "temporal": "pent13-6",
@@ -2901,7 +2901,7 @@
     "name": "Feria Sexta Quattuor Temporum Septembris",
     "color": "violet",
     "season": "ordinary",
-    "commemoration": "09-20"
+    "commemoration": "09-20;09-20o"
   },
   "2024-09-21": {
     "temporal": "pent17-6",
@@ -3902,7 +3902,7 @@
     "name": "Feria VI Quattuor Temporum in Adventu",
     "color": "violet",
     "season": "advent",
-    "commemoration": null
+    "commemoration": "12-20o"
   },
   "2024-12-21": {
     "temporal": "adv3-6",
@@ -6454,7 +6454,7 @@
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent08-6"
+    "commemoration": "pent08-6;08-09t"
   },
   "2025-08-10": {
     "temporal": "pent09-0",
@@ -6608,7 +6608,7 @@
     "name": "S. Philippi Benitii Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent10-6"
+    "commemoration": "pent10-6;08-23o"
   },
   "2025-08-24": {
     "temporal": "pent11-0",
@@ -6916,7 +6916,7 @@
     "name": "Sabbato Quattuor Temporum Septembris",
     "color": "violet",
     "season": "ordinary",
-    "commemoration": "09-20"
+    "commemoration": "09-20;09-20o"
   },
   "2025-09-21": {
     "temporal": "pent15-0",
@@ -7917,7 +7917,7 @@
     "name": "Sabbato Quattuor Temporum in Adventu",
     "color": "violet",
     "season": "advent",
-    "commemoration": null
+    "commemoration": "12-20o"
   },
   "2025-12-21": {
     "temporal": "adv4-0",
@@ -10469,7 +10469,7 @@
     "name": "Dominica XI Post Pentecosten",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "08-09"
+    "commemoration": "08-09;08-09t"
   },
   "2026-08-10": {
     "temporal": "pent11-1",
@@ -10623,7 +10623,7 @@
     "name": "Dominica XIII Post Pentecosten",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "08-23"
+    "commemoration": "08-23;08-23o"
   },
   "2026-08-24": {
     "temporal": "pent13-1",
@@ -10931,7 +10931,7 @@
     "name": "Dominica XVII Post Pentecosten",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "09-20"
+    "commemoration": "09-20;09-20o"
   },
   "2026-09-21": {
     "temporal": "pent17-1",
@@ -11932,7 +11932,7 @@
     "name": "Dominica IV Adventus",
     "color": "violet",
     "season": "advent",
-    "commemoration": null
+    "commemoration": "12-20o"
   },
   "2026-12-21": {
     "temporal": "adv4-1",
@@ -14484,7 +14484,7 @@
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent12-1"
+    "commemoration": "pent12-1;08-09t"
   },
   "2027-08-10": {
     "temporal": "pent12-2",
@@ -14638,7 +14638,7 @@
     "name": "S. Philippi Benitii Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent14-1"
+    "commemoration": "pent14-1;08-23o"
   },
   "2027-08-24": {
     "temporal": "pent14-2",
@@ -14946,7 +14946,7 @@
     "name": "Ss. Eustachii et Sociorum Martyrum",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "pent18-1"
+    "commemoration": "pent18-1;09-20o"
   },
   "2027-09-21": {
     "temporal": "pent18-2",
@@ -15947,7 +15947,7 @@
     "name": "Feria II infra Hebdomadam IV Adventus",
     "color": "violet",
     "season": "advent",
-    "commemoration": null
+    "commemoration": "12-20o"
   },
   "2027-12-21": {
     "temporal": "adv4-2",
@@ -18510,7 +18510,7 @@
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent09-3"
+    "commemoration": "pent09-3;08-09t"
   },
   "2028-08-10": {
     "temporal": "pent09-4",
@@ -18664,7 +18664,7 @@
     "name": "S. Philippi Benitii Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent11-3"
+    "commemoration": "pent11-3;08-23o"
   },
   "2028-08-24": {
     "temporal": "pent11-4",
@@ -18972,7 +18972,7 @@
     "name": "Feria Quarta Quattuor Temporum Septembris",
     "color": "violet",
     "season": "ordinary",
-    "commemoration": "09-20"
+    "commemoration": "09-20;09-20o"
   },
   "2028-09-21": {
     "temporal": "pent15-4",
@@ -19973,7 +19973,7 @@
     "name": "Feria IV Quattuor Temporum in Adventu",
     "color": "violet",
     "season": "advent",
-    "commemoration": null
+    "commemoration": "12-20o"
   },
   "2028-12-21": {
     "temporal": "adv3-4",
@@ -22525,7 +22525,7 @@
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent11-4"
+    "commemoration": "pent11-4;08-09t"
   },
   "2029-08-10": {
     "temporal": "pent11-5",
@@ -22679,7 +22679,7 @@
     "name": "S. Philippi Benitii Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent13-4"
+    "commemoration": "pent13-4;08-23o"
   },
   "2029-08-24": {
     "temporal": "pent13-5",
@@ -22987,7 +22987,7 @@
     "name": "Ss. Eustachii et Sociorum Martyrum",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "pent17-4"
+    "commemoration": "pent17-4;09-20o"
   },
   "2029-09-21": {
     "temporal": "pent17-5",
@@ -23988,7 +23988,7 @@
     "name": "Feria V infra Hebdomadam III Adventus",
     "color": "violet",
     "season": "advent",
-    "commemoration": null
+    "commemoration": "12-20o"
   },
   "2029-12-21": {
     "temporal": "adv3-5",
@@ -26540,7 +26540,7 @@
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent08-5"
+    "commemoration": "pent08-5;08-09t"
   },
   "2030-08-10": {
     "temporal": "pent08-6",
@@ -26694,7 +26694,7 @@
     "name": "S. Philippi Benitii Confessoris",
     "color": "white",
     "season": "ordinary",
-    "commemoration": "pent10-5"
+    "commemoration": "pent10-5;08-23o"
   },
   "2030-08-24": {
     "temporal": "pent10-6",
@@ -27002,7 +27002,7 @@
     "name": "Feria Sexta Quattuor Temporum Septembris",
     "color": "violet",
     "season": "ordinary",
-    "commemoration": "09-20"
+    "commemoration": "09-20;09-20o"
   },
   "2030-09-21": {
     "temporal": "pent14-6",
@@ -28003,7 +28003,7 @@
     "name": "Feria VI Quattuor Temporum in Adventu",
     "color": "violet",
     "season": "advent",
-    "commemoration": null
+    "commemoration": "12-20o"
   },
   "2030-12-21": {
     "temporal": "adv3-6",
