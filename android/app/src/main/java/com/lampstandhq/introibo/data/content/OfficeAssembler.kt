@@ -273,8 +273,12 @@ class OfficeAssembler(
     }
 
     /**
-     * If the part is a psalm or canticle whose last verse is the Gloria Patri
-     * doxology, return a copy with that verse removed.
+     * If the part is a psalm or canticle whose ending contains the Gloria Patri
+     * doxology, return a copy with those verses removed.
+     *
+     * The doxology may appear as:
+     *   (a) A single final verse: "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat …"
+     *   (b) Two verses: "Glória Patri …" followed by "Sicut erat …"
      */
     private fun stripGloriaPatriFromPsalm(part: Hour.Part): Hour.Part {
         if (part.type != "psalm" && part.type != "canticle") return part
@@ -282,12 +286,20 @@ class OfficeAssembler(
         if (verses.isEmpty()) return part
 
         val lastVerse = verses.last()
-        // The Gloria Patri in the data always starts with "Glória Patri"
-        return if (lastVerse.lat.startsWith("Glória Patri")) {
-            part.copy(verses = verses.dropLast(1))
-        } else {
-            part
+
+        // Case (a): single combined verse starting with "Glória Patri"
+        if (lastVerse.lat.startsWith("Glória Patri")) {
+            return part.copy(verses = verses.dropLast(1))
         }
+
+        // Case (b): "Sicut erat" is the last verse, "Glória Patri" is second-to-last
+        if (verses.size >= 2
+            && lastVerse.lat.startsWith("Sicut erat")
+            && verses[verses.size - 2].lat.startsWith("Glória Patri")) {
+            return part.copy(verses = verses.dropLast(2))
+        }
+
+        return part
     }
 
     // ---- Preces Feriales (Lauds & Vespers) ----
@@ -455,6 +467,86 @@ class OfficeAssembler(
             "assumption", "nativity-bvm", "holy-rosary",
             "all-saints", "all-souls", "immaculate-conception",
             "holy-thursday", "good-friday", "holy-saturday",
+        )
+
+        /** The intercession versicles of the Preces Feriales (common to Lauds and Vespers). */
+        private val PRECES_VERSICLES = listOf(
+            Hour.Part.Verse(
+                lat = "℣. Ego dixi: Dómine, miserére mei.\n℟. Sana ánimam meam quia peccávi tibi.",
+                eng = "℣. I said: Lord, be merciful unto me.\n℟. Heal my soul, for I have sinned against Thee.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Convértere, Dómine, úsquequo?\n℟. Et deprecábilis esto super servos tuos.",
+                eng = "℣. Turn Thee again, O Lord; how long will it be?\n℟. And be gracious unto Thy servants.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Fiat misericórdia tua, Dómine, super nos.\n℟. Quemádmodum sperávimus in te.",
+                eng = "℣. Let Thy mercy, O Lord, be upon us.\n℟. As we have hoped in Thee.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Sacerdótes tui induántur justítiam.\n℟. Et sancti tui exsúltent.",
+                eng = "℣. Let Thy priests be clothed with justice.\n℟. And may Thy saints rejoice.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Orémus pro beatíssimo Papa nostro N.\n℟. Dóminus consérvet eum, et vivíficet eum, et beátum fáciat eum in terra, et non tradat eum in ánimam inimicórum ejus.",
+                eng = "℣. Let us pray for our most blessed Pope N.\n℟. The Lord preserve him and give him life, and make him blessed upon the earth: and deliver him not up to the will of his enemies.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Orémus et pro Antístite nostro N.\n℟. Stet et pascat in fortitúdine tua, Dómine, in sublimitáte nóminis tui.",
+                eng = "℣. Let us pray for our Bishop N.\n℟. May he stand firm and care for us in the strength of the Lord, in the might of Thy name.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ.\n℟. Et rege eos, et extólle illos usque in ætérnum.",
+                eng = "℣. O Lord, save Thy people, and bless Thine inheritance.\n℟. Govern them and lift them up for ever.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Meménto Congregatiónis tuæ.\n℟. Quam possedísti ab inítio.",
+                eng = "℣. Remember Thy congregation.\n℟. Which Thou hast possessed from the beginning.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Fiat pax in virtúte tua.\n℟. Et abundántia in túrribus tuis.",
+                eng = "℣. Let peace be in Thy strength.\n℟. And abundance in Thy towers.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Orémus pro benefactóribus nostris.\n℟. Retribúere dignáre, Dómine, ómnibus, nobis bona faciéntibus propter nomen tuum, vitam ætérnam. Amen.",
+                eng = "℣. Let us pray for our benefactors.\n℟. O Lord, for Thy name's sake, deign to reward with eternal life all who do us good. Amen.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Orémus pro fidélibus defúnctis.\n℟. Réquiem ætérnam dona eis, Dómine, et lux perpétua lúceat eis.",
+                eng = "℣. Let us pray for the faithful departed.\n℟. Eternal rest grant unto them, O Lord, and let perpetual light shine upon them.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Requiéscant in pace.\n℟. Amen.",
+                eng = "℣. May they rest in peace.\n℟. Amen.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Pro frátribus nostris abséntibus.\n℟. Salvos fac servos tuos, Deus meus, sperántes in te.",
+                eng = "℣. Let us pray for our absent brothers.\n℟. Save Thy servants, O God, who put their trust in Thee.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Pro afflíctis et captívis.\n℟. Líbera eos, Deus Israël, ex ómnibus tribulatiónibus suis.",
+                eng = "℣. Let us pray for the afflicted and imprisoned.\n℟. Deliver them, God of Israel, from all their tribulations.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Mitte eis, Dómine, auxílium de sancto.\n℟. Et de Sion tuére eos.",
+                eng = "℣. O Lord, send them help from Thy sanctuary.\n℟. And defend them out of Sion.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Dómine, exáudi oratiónem meam.\n℟. Et clamor meus ad te véniat.",
+                eng = "℣. O Lord, hear my prayer.\n℟. And let my cry come unto Thee.",
+            ),
+        )
+
+        /** Concluding versicles after the psalm in Preces Feriales. */
+        private val CONCLUDING_VERSICLES = listOf(
+            Hour.Part.Verse(
+                lat = "℣. Dómine, Deus virtútum, convérte nos.\n℟. Et osténde fáciem tuam, et salvi érimus.",
+                eng = "℣. Turn us again, O Lord, God of Hosts.\n℟. Show us Thy face, and we shall be whole.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Exsúrge, Christe, ádjuva nos.\n℟. Et líbera nos propter nomen tuum.",
+                eng = "℣. Arise, O Christ, and help us.\n℟. And redeem us for Thy name's sake.",
+            ),
         )
     }
 }

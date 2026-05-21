@@ -292,20 +292,36 @@ struct OfficeAssembler {
         return false
     }
 
-    /// If the part is a psalm or canticle whose last verse is the Gloria Patri
-    /// doxology, return a copy with that verse removed.
+    /// If the part is a psalm or canticle whose ending contains the Gloria Patri
+    /// doxology, return a copy with those verses removed.
+    ///
+    /// The doxology may appear as:
+    ///   (a) A single final verse: "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat …"
+    ///   (b) Two verses: "Glória Patri …" followed by "Sicut erat …"
     private func stripGloriaPatriFromPsalm(_ part: Hour.Part) -> Hour.Part {
         guard part.type == "psalm" || part.type == "canticle" else { return part }
         guard var verses = part.verses, !verses.isEmpty else { return part }
 
         let lastVerse = verses[verses.count - 1]
-        // The Gloria Patri in the data always starts with "Glória Patri"
+
+        // Case (a): single combined verse starting with "Glória Patri"
         if lastVerse.lat.hasPrefix("Glória Patri") {
             verses.removeLast()
             var modified = part
             modified.verses = verses
             return modified
         }
+
+        // Case (b): "Sicut erat" is the last verse, "Glória Patri" is second-to-last
+        if verses.count >= 2
+            && lastVerse.lat.hasPrefix("Sicut erat")
+            && verses[verses.count - 2].lat.hasPrefix("Glória Patri") {
+            verses.removeLast(2)
+            var modified = part
+            modified.verses = verses
+            return modified
+        }
+
         return part
     }
 
