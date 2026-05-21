@@ -286,6 +286,8 @@ private fun prefaceSlug(proper: MassProper, ctx: LiturgicalContext): String {
 }
 
 private fun showGloria(proper: MassProper, ctx: LiturgicalContext): Boolean {
+    // Honor explicit DO rubric rule when present.
+    proper.glorOverride?.let { return it }
     if (ctx.season == LiturgicalSeason.EASTER || ctx.season == LiturgicalSeason.CHRISTMAS) return true
     if (proper.color == "violet" || proper.color == "black") return false
     if (ctx.isSunday) {
@@ -299,6 +301,7 @@ private fun showGloria(proper: MassProper, ctx: LiturgicalContext): Boolean {
 }
 
 private fun showCredo(proper: MassProper, ctx: LiturgicalContext): Boolean {
+    proper.credoOverride?.let { return it }
     if (ctx.isSunday) return true
     return proper.rank == 1
 }

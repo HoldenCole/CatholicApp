@@ -175,11 +175,26 @@ struct MissalView: View {
             ordinarySection("benedicamus")
         }
 
-        // Last Gospel
-        ordinarySection("ultimum")
+        // Last Gospel — Palm Sunday substitutes Matt 21:1-9 in the pre-1955 rite.
+        // Other days default to John 1:1-14 ("ultimum").
+        let lastGospelSlug = lastGospelOverride(for: proper) ?? "ultimum"
+        ordinarySection(lastGospelSlug)
 
-        // Leonine Prayers (after Low Mass)
+        // Leonine Prayers — suppressed by Inter Oecumenici (1965) but retained
+        // in 1962 and earlier rubrics as a customary appendix after Low Mass.
+        // Keep visible in all three traditional rites.
         ordinarySection("leonine")
+    }
+
+    /// Returns an alternate Last Gospel slug when the rubrics call for substitution.
+    /// Currently: Palm Sunday in the pre-1955 rite uses Matt 21 (the blessing-of-palms
+    /// gospel) as the Last Gospel of the principal Mass.
+    private func lastGospelOverride(for proper: MassProper?) -> String? {
+        let slug = ctx.properSlug ?? ""
+        if rite == .pre1955 && (slug == "palm-sunday" || slug == "quad6-0") {
+            return store.missal.first(where: { $0.slug == "ultimum-palm-sunday" })?.slug
+        }
+        return nil
     }
 
     // MARK: - Rubric helpers
@@ -188,6 +203,8 @@ struct MissalView: View {
     /// pre-Lent) on ferial days. It IS said on fixed feasts even in those
     /// seasons, and always during Easter and Christmas seasons.
     private func showGloria(_ proper: MassProper) -> Bool {
+        // Honor explicit DO rubric rule when present.
+        if let override = proper.glorOverride { return override }
         let season = ctx.season
         if season == .easter || season == .christmas { return true }
         if proper.color == "violet" || proper.color == "black" {
@@ -273,6 +290,7 @@ struct MissalView: View {
 
     /// Credo is said on all Sundays and on major feasts (rank 1 in data).
     private func showCredo(_ proper: MassProper) -> Bool {
+        if let override = proper.credoOverride { return override }
         if ctx.isSunday { return true }
         return proper.rank == 1
     }

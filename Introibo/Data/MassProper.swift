@@ -20,6 +20,10 @@ struct MassProper: Identifiable, Decodable, Hashable {
     let communion: ProperText
     let postcommunion: ProperText
     let preface: String?
+    // Optional rubric hints from DO data (rule.gloria, rule.credo).
+    // When present, override the rank-based heuristic.
+    var glorOverride: Bool? = nil
+    var credoOverride: Bool? = nil
 
     var id: String { slug }
 }

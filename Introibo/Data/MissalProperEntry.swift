@@ -20,20 +20,30 @@ struct MissalProperEntry: Decodable {
         let preface: String?
     }
 
-    func toMassProper(key: String) -> MassProper? {
+    func toMassProper(key: String, ordo: OrdoEntry? = nil) -> MassProper? {
         guard let intro = introitus, let collect = oratio,
               let epistle = lectio, let gospel = evangelium,
               let off = offertorium, let sec = secreta,
               let comm = communio, let postcomm = postcommunio else {
             return nil
         }
+        // DO rank scale: 1.0=ferial, 7.0=highest. Legacy: 1=highest, 5=ferial.
+        // Convert so existing rank-based checks behave correctly.
+        let doRank = rank ?? 0
+        let legacyRank: Int
+        if doRank >= 6.0 { legacyRank = 1 }      // 1st class
+        else if doRank >= 5.0 { legacyRank = 2 } // 2nd class
+        else if doRank >= 4.0 { legacyRank = 3 } // 3rd class
+        else if doRank >= 3.0 { legacyRank = 4 } // 4th class
+        else { legacyRank = 5 }                   // ferial / commemoration
+
         return MassProper(
             slug: key,
             title: officium ?? key,
             english: officium ?? key,
-            rank: Int(rank ?? 0),
-            color: "",
-            season: nil,
+            rank: legacyRank,
+            color: ordo?.color ?? "",
+            season: ordo?.season,
             introit: intro,
             collect: collect,
             epistle: ProperReading(ref: epistle.ref ?? "", lat: epistle.lat, eng: epistle.eng),
@@ -46,8 +56,37 @@ struct MissalProperEntry: Decodable {
             secret: sec,
             communion: comm,
             postcommunion: postcomm,
-            preface: rule?.preface
+            preface: Self.translatePrefaceCode(rule?.preface),
+            glorOverride: rule?.gloria,
+            credoOverride: rule?.credo
         )
+    }
+
+    /// Translates DivinumOfficium preface codes to the slug suffix used by missal.json.
+    /// e.g., "Nat" → "nativity", "Pasch" → "easter", "Quad" → "lent".
+    static func translatePrefaceCode(_ code: String?) -> String? {
+        guard let raw = code, !raw.isEmpty else { return nil }
+        // DO codes like "Spiritu=hodierna die" or "Joseph=Festivitáte" have suffix qualifiers.
+        // Take just the base code (before "=" or ";").
+        let base = raw.split(whereSeparator: { $0 == "=" || $0 == ";" }).first.map(String.init) ?? raw
+        let trimmed = base.trimmingCharacters(in: .whitespaces)
+        switch trimmed {
+        case "Nat", "Nativitate": return "nativity"
+        case "Pasch", "Pasc", "Paschalis", "Paschali": return "easter"
+        case "Quad", "Quadragesimale", "Quaragesimale": return "lent"
+        case "Asc", "Ascensione": return "ascension"
+        case "Spiritu", "Pentecostes": return "pentecost"
+        case "Epi", "Epiphania": return "epiphany"
+        case "Trinitate", "Trinitatis": return "trinity"
+        case "Joseph", "Josephi": return "joseph"
+        case "Maria", "BMV", "Mariae": return "bvm"
+        case "Apos", "Apostolis", "Apostolorum": return "apostles"
+        case "Cruc", "Cruce", "Crucis": return "cross"
+        case "Adv", "Adventus": return "advent"
+        case "Requiem", "Defunctorum": return "requiem"
+        case "Communis", "Common", "": return nil
+        default: return nil // unknown code → fall through to common preface
+        }
     }
 }
 

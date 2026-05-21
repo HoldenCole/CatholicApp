@@ -151,19 +151,22 @@ final class ContentStore {
         let key = entry.winnerKey
 
         if entry.winner == "sanctoral" {
-            if let mp = missalSanctoral[key]?.toMassProper(key: key) { return mp }
+            if let mp = missalSanctoral[key]?.toMassProper(key: key, ordo: entry) { return mp }
             // Christmas: ordo key "12-25" but Mass data is keyed by 12-25m1/m2/m3.
-            // Default to the Day Mass (m3).
-            if key == "12-25", let mp = missalSanctoral["12-25m3"]?.toMassProper(key: "12-25m3") {
+            if key == "12-25", let mp = missalSanctoral["12-25m3"]?.toMassProper(key: "12-25m3", ordo: entry) {
+                return mp
+            }
+            // All Souls: ordo key "11-02" but Mass data is split into 11-02m1/m2/m3.
+            if key == "11-02", let mp = missalSanctoral["11-02m1"]?.toMassProper(key: "11-02m1", ordo: entry) {
                 return mp
             }
         }
-        if let mp = missalTempora[key]?.toMassProper(key: key) { return mp }
-        if let mp = missalSanctoral[key]?.toMassProper(key: key) { return mp }
+        if let mp = missalTempora[key]?.toMassProper(key: key, ordo: entry) { return mp }
+        if let mp = missalSanctoral[key]?.toMassProper(key: key, ordo: entry) { return mp }
 
-        // Try inheritance: e.g., pasc6-4 (post-Ascension Thursday) inherits from pasc5-4 (Ascension).
+        // Inheritance: octave days inherit Mass propers from feast day.
         if let parent = inheritedTemporalKey(for: key),
-           let mp = missalTempora[parent]?.toMassProper(key: parent) {
+           let mp = missalTempora[parent]?.toMassProper(key: parent, ordo: entry) {
             return mp
         }
 

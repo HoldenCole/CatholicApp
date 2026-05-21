@@ -26,6 +26,9 @@ data class MassProper(
     val communion: ProperText,
     val postcommunion: ProperText,
     val preface: String? = null,
+    // Optional rubric hints from DO data (rule.gloria, rule.credo)
+    val glorOverride: Boolean? = null,
+    val credoOverride: Boolean? = null,
 )
 
 @Serializable

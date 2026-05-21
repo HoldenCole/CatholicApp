@@ -166,18 +166,18 @@ object ContentStore {
         val entry = ordoForDate(date, rite) ?: return null
         val key = entry.winnerKey
         if (entry.winner == "sanctoral") {
-            missalSanctoral[key]?.toMassProper(key)?.let { return it }
-            // Christmas: ordo key "12-25" but Mass data is keyed by 12-25m1/m2/m3.
-            // Default to the Day Mass (m3).
+            missalSanctoral[key]?.toMassProper(key, entry)?.let { return it }
             if (key == "12-25") {
-                missalSanctoral["12-25m3"]?.toMassProper("12-25m3")?.let { return it }
+                missalSanctoral["12-25m3"]?.toMassProper("12-25m3", entry)?.let { return it }
+            }
+            if (key == "11-02") {
+                missalSanctoral["11-02m1"]?.toMassProper("11-02m1", entry)?.let { return it }
             }
         }
-        missalTempora[key]?.toMassProper(key)?.let { return it }
-        missalSanctoral[key]?.toMassProper(key)?.let { return it }
-        // Inheritance: octave days inherit Mass propers from their feast day
+        missalTempora[key]?.toMassProper(key, entry)?.let { return it }
+        missalSanctoral[key]?.toMassProper(key, entry)?.let { return it }
         inheritedTemporalKey(key)?.let { parent ->
-            missalTempora[parent]?.toMassProper(parent)?.let { return it }
+            missalTempora[parent]?.toMassProper(parent, entry)?.let { return it }
         }
         return propers.firstOrNull { it.slug == key }
     }

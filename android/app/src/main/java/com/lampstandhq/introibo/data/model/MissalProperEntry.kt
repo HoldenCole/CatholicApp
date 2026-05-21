@@ -24,7 +24,7 @@ data class MissalProperEntry(
         val preface: String? = null,
     )
 
-    fun toMassProper(key: String): MassProper? {
+    fun toMassProper(key: String, ordo: OrdoEntry? = null): MassProper? {
         val intro = introitus ?: return null
         val collect = oratio ?: return null
         val ep = lectio ?: return null
@@ -33,12 +33,24 @@ data class MissalProperEntry(
         val sec = secreta ?: return null
         val comm = communio ?: return null
         val postcomm = postcommunio ?: return null
+
+        // DO rank scale: 1.0=ferial, 7.0=highest. Legacy: 1=highest, 5=ferial.
+        val doRank = rank ?: 0.0
+        val legacyRank = when {
+            doRank >= 6.0 -> 1
+            doRank >= 5.0 -> 2
+            doRank >= 4.0 -> 3
+            doRank >= 3.0 -> 4
+            else -> 5
+        }
+
         return MassProper(
             slug = key,
             title = officium ?: key,
             english = officium ?: key,
-            rank = rank?.toInt() ?: 0,
-            color = "",
+            rank = legacyRank,
+            color = ordo?.color ?: "",
+            season = ordo?.season,
             introit = intro,
             collect = collect,
             epistle = ProperReading(ref = ep.ref ?: "", lat = ep.lat, eng = ep.eng),
@@ -48,8 +60,35 @@ data class MissalProperEntry(
             secret = sec,
             communion = comm,
             postcommunion = postcomm,
-            preface = rule?.preface,
+            preface = translatePrefaceCode(rule?.preface),
+            glorOverride = rule?.gloria,
+            credoOverride = rule?.credo,
         )
+    }
+
+    companion object {
+        /** Translates DivinumOfficium preface codes to slug suffixes in missal.json. */
+        fun translatePrefaceCode(code: String?): String? {
+            if (code.isNullOrEmpty()) return null
+            val base = code.split('=', ';').firstOrNull()?.trim() ?: code
+            return when (base) {
+                "Nat", "Nativitate" -> "nativity"
+                "Pasch", "Pasc", "Paschalis", "Paschali" -> "easter"
+                "Quad", "Quadragesimale" -> "lent"
+                "Asc", "Ascensione" -> "ascension"
+                "Spiritu", "Pentecostes" -> "pentecost"
+                "Epi", "Epiphania" -> "epiphany"
+                "Trinitate", "Trinitatis" -> "trinity"
+                "Joseph", "Josephi" -> "joseph"
+                "Maria", "BMV", "Mariae" -> "bvm"
+                "Apos", "Apostolis", "Apostolorum" -> "apostles"
+                "Cruc", "Cruce", "Crucis" -> "cross"
+                "Adv", "Adventus" -> "advent"
+                "Requiem", "Defunctorum" -> "requiem"
+                "Communis", "Common", "" -> null
+                else -> null
+            }
+        }
     }
 }
 

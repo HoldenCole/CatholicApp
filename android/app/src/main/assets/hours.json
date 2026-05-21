@@ -1644,6 +1644,13 @@
         "engR": "The Lord is clothed with strength, and hath girded Himself with power."
       },
       {
+        "type": "antiphon",
+        "label": "Antiphon ad Benedictus",
+        "lat": "Benedíctus Dóminus Deus Israël.",
+        "eng": "Blessed be the Lord God of Israel.",
+        "variationKey": "laudes.antiphon.benedictus"
+      },
+      {
         "type": "canticle",
         "label": "Canticum Zachariæ; Benedictus",
         "ref": "Lk 1:68-79",
