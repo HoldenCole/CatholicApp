@@ -94,6 +94,8 @@ struct MissalProperEntry: Decodable {
         case "Cruc", "Cruce", "Crucis": return "cross"
         case "Adv", "Adventus": return "advent"
         case "Requiem", "Defunctorum": return "requiem"
+        case "Cord", "CordJesu", "Cordis": return "sacred-heart"
+        case "Regis", "ChristiRegis", "Rex": return "christ-king"
         case "Communis", "Common", "": return nil
         default: return nil // unknown code → fall through to common preface
         }

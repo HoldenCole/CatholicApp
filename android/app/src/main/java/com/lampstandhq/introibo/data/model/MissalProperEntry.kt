@@ -98,6 +98,8 @@ data class MissalProperEntry(
                 "Cruc", "Cruce", "Crucis" -> "cross"
                 "Adv", "Adventus" -> "advent"
                 "Requiem", "Defunctorum" -> "requiem"
+                "Cord", "CordJesu", "Cordis" -> "sacred-heart"
+                "Regis", "ChristiRegis", "Rex" -> "christ-king"
                 "Communis", "Common", "" -> null
                 else -> null
             }
