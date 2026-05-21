@@ -183,7 +183,33 @@ final class ContentStore {
         }
 
         // Fallback to legacy propers.json by slug
-        return propers.first { $0.slug == key }
+        if let mp = propers.first(where: { $0.slug == key }) { return mp }
+
+        // Last resort: ferial days use the preceding Sunday's formulary.
+        // Extract the temporal key (e.g. "pent03-4") and replace the day suffix
+        // with "-0" to get the Sunday of that week (e.g. "pent03-0").
+        if let sundayKey = precedingSundayKey(for: entry) {
+            if let mp = missalTempora[sundayKey]?.toMassProper(key: sundayKey, ordo: entry) { return mp }
+        }
+
+        return nil
+    }
+
+    /// Derives the preceding Sunday's temporal key from an ordo entry.
+    /// Given a temporal key like "pent03-4", "adv1-3", "quad2-6", "epi1-2",
+    /// replaces the trailing "-D" day suffix with "-0" (the Sunday).
+    /// Returns nil if the entry has no temporal key, is already a Sunday, or
+    /// does not match the expected format.
+    private func precedingSundayKey(for entry: OrdoEntry) -> String? {
+        guard let temporal = entry.temporal else { return nil }
+        // Match pattern: any prefix followed by "-" and a single digit (1-6)
+        guard let dashIdx = temporal.lastIndex(of: "-") else { return nil }
+        let daySuffix = temporal[temporal.index(after: dashIdx)...]
+        // Must be a single non-zero digit (weekday); "-0" is already Sunday
+        guard daySuffix.count == 1,
+              let dayNum = Int(daySuffix),
+              dayNum >= 1 && dayNum <= 6 else { return nil }
+        return String(temporal[...dashIdx]) + "0"
     }
 
     /// Resolves a `rule.commune` redirect on a stub entry. The redirect may be:

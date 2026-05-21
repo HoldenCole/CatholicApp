@@ -187,7 +187,35 @@ object ContentStore {
         inheritedTemporalKey(key)?.let { parent ->
             missalTempora[parent]?.toMassProper(parent, entry)?.let { return it }
         }
-        return propers.firstOrNull { it.slug == key }
+        propers.firstOrNull { it.slug == key }?.let { return it }
+
+        // Last resort: ferial days use the preceding Sunday's formulary.
+        // Extract the temporal key (e.g. "pent03-4") and replace the day suffix
+        // with "-0" to get the Sunday of that week (e.g. "pent03-0").
+        precedingSundayKey(entry)?.let { sundayKey ->
+            missalTempora[sundayKey]?.toMassProper(sundayKey, entry)?.let { return it }
+        }
+
+        return null
+    }
+
+    /**
+     * Derives the preceding Sunday's temporal key from an ordo entry.
+     * Given a temporal key like "pent03-4", "adv1-3", "quad2-6", "epi1-2",
+     * replaces the trailing "-D" day suffix with "-0" (the Sunday).
+     * Returns null if the entry has no temporal key, is already a Sunday, or
+     * does not match the expected format.
+     */
+    private fun precedingSundayKey(entry: OrdoEntry): String? {
+        val temporal = entry.temporal ?: return null
+        val dashIdx = temporal.lastIndexOf('-')
+        if (dashIdx < 0) return null
+        val daySuffix = temporal.substring(dashIdx + 1)
+        // Must be a single non-zero digit (weekday); "0" is already Sunday
+        if (daySuffix.length != 1) return null
+        val dayNum = daySuffix.toIntOrNull() ?: return null
+        if (dayNum < 1 || dayNum > 6) return null
+        return temporal.substring(0, dashIdx + 1) + "0"
     }
 
     /**
