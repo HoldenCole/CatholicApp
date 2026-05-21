@@ -27,6 +27,7 @@ struct MassProper: Identifiable, Decodable, Hashable {
 struct ProperText: Decodable, Hashable {
     let lat: String
     let eng: String
+    var ref: String? = nil
 }
 
 struct ProperReading: Decodable, Hashable {

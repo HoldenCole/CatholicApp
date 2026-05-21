@@ -55,8 +55,10 @@ struct TodayView: View {
                 }
             }
             .sheet(isPresented: $showProper) {
-                if let slug = ctx.properSlug,
-                   let proper = ContentStore.shared.proper(slug: slug) {
+                if let proper = ContentStore.shared.properForDate(ctx.date, rite: rite) {
+                    ProperView(proper: proper)
+                } else if let slug = ctx.properSlug,
+                          let proper = ContentStore.shared.proper(slug: slug) {
                     ProperView(proper: proper)
                 }
             }
@@ -262,8 +264,7 @@ struct TodayView: View {
 
     @ViewBuilder
     private var propersCard: some View {
-        if let slug = ctx.properSlug,
-           let proper = ContentStore.shared.proper(slug: slug) {
+        if let proper = ContentStore.shared.properForDate(ctx.date, rite: rite) ?? (ctx.properSlug.flatMap { ContentStore.shared.proper(slug: $0) }) {
             Button { showProper = true } label: {
                 VStack(alignment: .leading, spacing: 8) {
                     LanguageAwareText(latin: "Próprium Missæ", english: "Today\u{2019}s Propers")

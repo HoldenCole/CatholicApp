@@ -25,6 +25,11 @@ final class ContentStore {
     private(set) var propers:         [MassProper]          = []
     private var canonVariants: [String: [String: [String: String]]] = [:]
     private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], temporalPropers: [:], marianAntiphons: [])
+    private var missalTempora:   [String: MissalProperEntry] = [:]
+    private var missalSanctoral: [String: MissalProperEntry] = [:]
+    private var ordoData:        [String: OrdoEntry] = [:]
+    private var ordoData1955:    [String: OrdoEntry] = [:]
+    private var ordoDataPre1955: [String: OrdoEntry] = [:]
 
     init() {
         prayers           = load("prayers",            as: [Prayer].self)              ?? []
@@ -41,6 +46,11 @@ final class ContentStore {
         confessionGuides  = load("confession_guides", as: [ConfessionGuide].self)      ?? []
         propers           = load("propers",            as: [MassProper].self)          ?? []
         canonVariants     = load("canon_variants",     as: [String: [String: [String: String]]].self) ?? [:]
+        missalTempora     = load("missal_tempora",    as: [String: MissalProperEntry].self) ?? [:]
+        missalSanctoral   = load("missal_sanctoral",  as: [String: MissalProperEntry].self) ?? [:]
+        ordoData          = load("ordo",              as: [String: OrdoEntry].self) ?? [:]
+        ordoData1955      = load("ordo_1955",         as: [String: OrdoEntry].self) ?? [:]
+        ordoDataPre1955   = load("ordo_pre1955",      as: [String: OrdoEntry].self) ?? [:]
 
         let psalter  = load("psalter_weekly",    as: [String: [String: Hour.Part]].self) ?? [:]
         let hymns    = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
@@ -68,6 +78,45 @@ final class ContentStore {
 
     func mysterySet(slug: String) -> MysterySetData? {
         mysterySets.first { $0.slug == slug }
+    }
+
+    // MARK: - Ordo & Propers (DivinumOfficium)
+
+    func ordoForDate(_ date: Date, rite: MissalRite = .rite1962) -> OrdoEntry? {
+        let cal = Calendar.liturgical
+        let y = cal.component(.year, from: date)
+        let m = cal.component(.month, from: date)
+        let d = cal.component(.day, from: date)
+        let key = String(format: "%04d-%02d-%02d", y, m, d)
+        switch rite {
+        case .rite1962: return ordoData[key]
+        case .rite1955: return ordoData1955[key]
+        case .pre1955:  return ordoDataPre1955[key]
+        }
+    }
+
+    func properForToday(rite: MissalRite = .rite1962) -> MassProper? {
+        let entry = ordoForDate(Date(), rite: rite)
+        return properFromOrdo(entry)
+    }
+
+    func properForDate(_ date: Date, rite: MissalRite = .rite1962) -> MassProper? {
+        let entry = ordoForDate(date, rite: rite)
+        return properFromOrdo(entry)
+    }
+
+    private func properFromOrdo(_ entry: OrdoEntry?) -> MassProper? {
+        guard let entry = entry else { return nil }
+        let key = entry.winnerKey
+
+        if entry.winner == "sanctoral" {
+            if let mp = missalSanctoral[key]?.toMassProper(key: key) { return mp }
+        }
+        if let mp = missalTempora[key]?.toMassProper(key: key) { return mp }
+        if let mp = missalSanctoral[key]?.toMassProper(key: key) { return mp }
+
+        // Fallback to legacy propers.json by slug
+        return propers.first { $0.slug == key }
     }
 
     // MARK: - Canon variants
