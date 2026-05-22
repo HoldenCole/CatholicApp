@@ -24,7 +24,7 @@ final class ContentStore {
     private(set) var confessionGuides:[ConfessionGuide]    = []
     private(set) var propers:         [MassProper]          = []
     private var canonVariants: [String: [String: [String: String]]] = [:]
-    private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], temporalPropers: [:], marianAntiphons: [])
+    private var officeAssembler = OfficeAssembler(weeklyPsalter: [:], seasonalHymns: [:], temporalPropers: [:], marianAntiphons: [], psalter: [:])
     private var missalTempora:   [String: MissalProperEntry] = [:]
     private var missalSanctoral: [String: MissalProperEntry] = [:]
     private var sanctoralPropers: [String: [String: Hour.Part]] = [:]

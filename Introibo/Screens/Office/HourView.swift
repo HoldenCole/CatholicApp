@@ -426,7 +426,6 @@ struct HourView: View {
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = p.lat, let eng = p.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
-                    .italic()
                     .padding(.leading, 10)
             }
             if let verses = p.verses {

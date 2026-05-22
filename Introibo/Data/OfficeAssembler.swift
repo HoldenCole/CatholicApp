@@ -5,13 +5,72 @@ struct OfficeAssembler {
     let seasonalHymns: [String: [String: Hour.Part]]
     let temporalPropers: [String: [String: Hour.Part]]
     let marianAntiphons: [MarianAntiphonData]
+    let psalter: [String: [String: [String]]]  // key -> {lat: [verses], eng: [verses]}
+
+    // MARK: - Temporal-propers key translation
+    //
+    // The DivinumOfficium import produces keys like "capitulum_laudes",
+    // "hymnus_vespera", "ant_laudes", etc.  The hours.json template uses
+    // dotted variationKeys like "laudes.capitulum", "vesperae.hymn", etc.
+    // This table lets the assembler find overrides under either convention.
+    //
+    // Direction: temporal-propers key → hours.json variationKey
+    private static let temporalKeyAliases: [String: String] = [
+        // Lauds
+        "ant_laudes":               "laudes.antiphon.benedictus",
+        "capitulum_laudes":         "laudes.capitulum",
+        "hymnus_laudes":            "laudes.hymn",
+        "hymnusm_laudes":           "laudes.hymn",
+        // Vespers
+        "ant_vespera":              "vesperae.antiphon.magnificat",
+        "hymnus_vespera":           "vesperae.hymn",
+        "hymnusm_vespera":          "vesperae.hymn",
+        // Matins
+        "ant_matutinum":            "matutinum.antiphon1",
+        "hymnusm_matutinum":        "matutinum.hymn",
+        "nocturn_1_versum":         "versum_1",
+        "nocturn_2_versum":         "versum_2",
+        "nocturn_3_versum":         "versum_3",
+        // Minor hours — antiphons
+        "ant_prima":                "prima.antiphon",
+        "ant_tertia":               "tertia.antiphon",
+        "ant_sexta":                "sexta.antiphon",
+        "ant_nona":                 "nona.antiphon",
+        // Minor hours — capitula
+        "capitulum_sexta":          "sexta.capitulum",
+        "capitulum_nona":           "nona.capitulum",
+        // Minor hours — responsories
+        "responsory_breve_tertia":  "tertia.responsory",
+        "responsory_breve_sexta":   "sexta.responsory",
+        "responsory_breve_nona":    "nona.responsory",
+    ]
+
+    /// Build an expanded overrides dictionary that includes both the raw
+    /// temporal-propers keys AND their translated hours.json equivalents.
+    private static func expandedOverrides(_ raw: [String: Hour.Part]) -> [String: Hour.Part] {
+        var result = raw
+        for (tpKey, vk) in temporalKeyAliases {
+            if let part = raw[tpKey], result[vk] == nil {
+                result[vk] = part
+            }
+        }
+        // Reverse direction: if hours.json-style key exists, also expose
+        // under the DO key so downstream code can find it either way.
+        for (tpKey, vk) in temporalKeyAliases {
+            if let part = raw[vk], result[tpKey] == nil {
+                result[tpKey] = part
+            }
+        }
+        return result
+    }
 
     func assemble(template: Hour, context: LiturgicalContext) -> Hour {
         let dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
         let dayOverrides = weeklyPsalter[dayKey] ?? [:]
         let seasonOverrides = seasonalHymns[seasonKey] ?? [:]
-        let temporalOverrides = context.temporalKey.flatMap { temporalPropers[$0] } ?? [:]
+        let rawTemporalOverrides = context.temporalKey.flatMap { temporalPropers[$0] } ?? [:]
+        let temporalOverrides = Self.expandedOverrides(rawTemporalOverrides)
 
         let assembledParts = template.parts.map { part -> Hour.Part in
             guard let key = part.variationKey else { return part }
@@ -36,10 +95,14 @@ struct OfficeAssembler {
             return part
         }
 
+        // Inline psalm text from psalter.json for any psalm part that has
+        // a ref but no verses (or empty verses).
+        let psalmInlined = assembledParts.map { inlinePsalmText($0) }
+
         // Apply temporal per-psalm antiphon overrides.
         // Temporal keys like "laudes.antiphon.psalm1" replace the antiphon
         // on the corresponding psalm/canticle part.
-        let antiphonApplied = assembledParts.map { part -> Hour.Part in
+        let antiphonApplied = psalmInlined.map { part -> Hour.Part in
             guard let key = part.variationKey else { return part }
             // Build the antiphon override key for this part's position
             // e.g., "laudes.psalm1" → check "laudes.antiphon.psalm1"
@@ -508,6 +571,57 @@ struct OfficeAssembler {
             eng: "℣. Arise, O Christ, and help us.\n℟. And redeem us for Thy name's sake."
         ),
     ]
+
+    // MARK: - Psalm text inlining from psalter.json
+    //
+    // When a psalm part carries a `ref` like "Ps 109" but has no verses (or
+    // empty verses), look up the text in the loaded psalter dictionary and
+    // build a Verse array from it.
+
+    /// Convert a part's `ref` field to a psalter.json key, e.g. "Ps 109" → "psalm109".
+    /// Returns nil for refs that don't map to a single psalm (canticles, ranges, etc.).
+    private static func psalterKey(from ref: String) -> String? {
+        let trimmed = ref.trimmingCharacters(in: .whitespaces)
+        // Match "Ps N" or "Psalm N" (no sub-verse ranges like "Ps 118:25-32")
+        if trimmed.hasPrefix("Ps ") {
+            let numPart = trimmed.dropFirst(3).trimmingCharacters(in: .whitespaces)
+            // Must be a pure integer (no colon, no dash)
+            if let num = Int(numPart), num >= 1, num <= 150 {
+                return "psalm\(num)"
+            }
+        }
+        if trimmed.hasPrefix("Psalm ") {
+            let numPart = trimmed.dropFirst(6).trimmingCharacters(in: .whitespaces)
+            if let num = Int(numPart), num >= 1, num <= 150 {
+                return "psalm\(num)"
+            }
+        }
+        return nil
+    }
+
+    /// If `part` is a psalm/canticle with a psalter-matching ref and no verse
+    /// text, return a copy with verses inlined from the psalter.
+    private func inlinePsalmText(_ part: Hour.Part) -> Hour.Part {
+        guard part.type == "psalm" || part.type == "canticle" else { return part }
+        // Only inline when verses are missing or empty
+        if let existing = part.verses, !existing.isEmpty { return part }
+        guard let ref = part.ref,
+              let key = Self.psalterKey(from: ref),
+              let entry = psalter[key] else { return part }
+        let latVerses = entry["lat"] ?? []
+        let engVerses = entry["eng"] ?? []
+        let count = max(latVerses.count, engVerses.count)
+        guard count > 0 else { return part }
+        var verses: [Hour.Part.Verse] = []
+        for i in 0..<count {
+            let lat = i < latVerses.count ? latVerses[i] : ""
+            let eng = i < engVerses.count ? engVerses[i] : ""
+            verses.append(Hour.Part.Verse(lat: lat, eng: eng))
+        }
+        var modified = part
+        modified.verses = verses
+        return modified
+    }
 
     // MARK: - Season string mapping
 
