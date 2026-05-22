@@ -8,7 +8,7 @@
       "eng": "The heavenly Word proceeding forth,<br>yet leaving not the Father's side,<br>and going to His work on earth,<br>had reached at length life's eventide.\n\nEnlighten now each heart of ours,<br>and set them all on fire with Thee;<br>that, hearing Thy salvation's call,<br>our wavering steps from sin be free.\n\nWhen Thou as Judge shalt come again<br>to search the secrets of each heart,<br>repaying deeds that lie concealed,<br>and crowning just ones for their part.\n\nLet us not then be held by ills<br>proportioned to our sinful ways,<br>but with the blessed may we share<br>the endless joys of heavenly days.\n\nAll praise and honour, power and might,<br>to God the Father and the Son,<br>together with the Paraclete,<br>through everlasting ages. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Vox clara ecce íntonat",
@@ -16,7 +16,7 @@
       "eng": "Hark! a clear voice from heaven sounds,<br>rebuking all that darkness shrouds;<br>let troubled dreams be cast afar:<br>from heaven Christ shines, the Morning Star.\n\nLet torpid minds awake anew,<br>by sinful wounds laid low and few;<br>a new star gleams upon our sight<br>to take away each harmful blight.\n\nBehold, the Lamb to us is sent<br>to pardon every debt we owe;<br>together let us all with tears<br>implore His mercy here below.\n\nSo when He comes in glory bright,<br>the Judge whom every soul must fear,<br>He shall not punish us for sin,<br>but lovingly shall shield us here.\n\nAll praise and honour, power and might,<br>to God the Father and the Son,<br>together with the Paraclete,<br>through everlasting ages. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Cónditor alme síderum",
@@ -66,7 +66,7 @@
       "eng": "Once more the solemn season calls<br>a holy fast for us to keep;<br>and faithful to the sacred rite<br>the forty days of Lent we greet.\n\nThe law and prophets hallowed it<br>in former times, and Christ our Lord<br>Himself hath consecrated it,<br>the King and Maker of all worlds.\n\nMore sparing therefore let us use<br>our words, our food, our drink, our sleep,<br>our mirth; and closer let us keep<br>the watches of our outward sense.\n\nLet us avoid the harmful things<br>that undermine our wandering minds;<br>nor give our cunning enemy<br>a foothold for his tyranny.\n\nLet us bend low before the Judge<br>and weep before Him earnestly,<br>and cry aloud with suppliant voice,<br>and prostrate say with one accord:\n\nBy our offences we have sinned<br>against Thy mercy, Lord our God;<br>pour down upon us from on high,<br>O pardoning One, Thy clemency.\n\nRemember that we are Thy work,<br>though frail and fallen creatures still;<br>we pray Thee, give not to another<br>the honour of Thy holy Name.\n\nForgive the evil we have done,<br>increase the good for which we pray;<br>that we at last may please Thee well<br>both here and in eternity.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Iam Christe sol iustítiæ",
@@ -74,7 +74,7 @@
       "eng": "O Christ, Thou Sun of justice bright,<br>let darkness leave our troubled minds,<br>that virtue's light return once more<br>as Thou restorest day to earth.\n\nGrant us this season of Thy grace,<br>O fount of goodness, grant, we pray,<br>that fruitful for Thy faithful ones<br>may be the gifts of fasting days.\n\nThat minds brought low and languishing<br>may gather vigour of their sense;<br>that flesh subdued may freely yield<br>a salutary joy to all.\n\nGrant that our bodies may be crushed<br>through temperance and abstinence;<br>that hearts, from guilty feasting freed,<br>may starve the nourishment of sin.\n\nGrant this, O blessed Trinity,<br>vouchsafe it, Unity supreme,<br>that this our fast may fruitful be<br>and bring Thy servants their reward. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Audi benígne Cónditor",
@@ -132,7 +132,7 @@
       "eng": "Sing, my tongue, the Saviour's glory,<br>of His Flesh the mystery sing;<br>of the Blood, all price exceeding,<br>shed by our immortal King,<br>destined, for the world's redemption,<br>from a noble womb to spring.\n\nOf a pure and spotless Virgin<br>born for us on earth below,<br>He, as Man, with man conversing,<br>stayed, the seeds of truth to sow;<br>then He closed in solemn order<br>wondrously His life of woe.\n\nThis the plan of our salvation,<br>ordered by eternal will,<br>that the cunning of the traitor<br>should be foiled by greater skill,<br>and the healing should be given<br>whence the foe had wrought the ill.\n\nWhen at length the fullness cometh<br>of the sacred time decreed,<br>He is sent, the world's Creator,<br>from the Father's throne on high,<br>and in Virgin's womb enfleshed<br>comes to us in human guise.\n\nLo! He lies, an Infant weeping,<br>in the narrow manger pressed,<br>and His limbs the Virgin Mother<br>wraps in swaddling-bands of rest,<br>and with tender hands she bindeth<br>feet and hands and legs full fast.\n\nThirty years among us dwelling,<br>now His destined time fulfilled,<br>born for this, He meets His Passion,<br>giving Himself to be killed;<br>on the Cross the Lamb is lifted,<br>where His Blood shall all be spilled.\n\nVinegar and gall and reed here,<br>spittings, nails, and piercing spear;<br>lo, the gentle Body rended,<br>Blood and water flowing clear;<br>earth and sea and stars and heaven<br>washed within that saving mere.\n\nFaithful Cross, above all other,<br>one and only noble tree:<br>none in foliage, none in blossom,<br>none in fruit thy peer may be;<br>sweetest wood and sweetest iron,<br>sweetest weight is hung on thee.\n\nBend thy boughs, O tree of glory,<br>thy relaxing sinews bend;<br>for a while the ancient rigour<br>that thy birth bestowed, suspend,<br>and the King of heavenly beauty<br>on thy bosom gently tend.\n\nThou alone wast counted worthy<br>this world's ransom to sustain,<br>that a shipwrecked race for ever<br>should a port of refuge gain,<br>with the sacred Blood anointed<br>of the Lamb for sinners slain.\n\nGlory and honour to God<br>the most high for evermore,<br>one to the Father and the Son<br>and glorious Paraclete,<br>to whom be praise and power<br>through everlasting ages. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Lustris sex qui iam peráctis",
@@ -140,7 +140,7 @@
       "eng": "Now the thirty years accomplished<br>of His time of flesh on earth,<br>born for this, He meets His Passion,<br>giving Himself to be killed;<br>on the Cross the Lamb is lifted,<br>where His lifeblood shall be spilled.\n\nVinegar and gall and reed here,<br>spittings, nails, and piercing spear;<br>lo, the gentle Body rended,<br>Blood and water flowing clear;<br>earth and sea and stars and heaven<br>washed within that saving mere.\n\nFaithful Cross, above all other,<br>one and only noble tree:<br>none in foliage, none in blossom,<br>none in fruit thy peer may be;<br>sweetest wood and sweetest iron,<br>sweetest weight is hung on thee.\n\nBend thy boughs, O tree of glory,<br>thy relaxing sinews bend;<br>for a while the ancient rigour<br>that thy birth bestowed, suspend,<br>and the King of heavenly beauty<br>on thy bosom gently tend.\n\nThou alone wast counted worthy<br>this world's ransom to sustain,<br>that a shipwrecked race for ever<br>should a port of refuge gain,<br>with the sacred Blood anointed<br>of the Lamb for sinners slain.\n\nGlory and honour to God<br>the most high for evermore,<br>one to the Father and the Son<br>and glorious Paraclete,<br>to whom be praise and power<br>through everlasting ages. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Vexílla Regis pródeunt",
@@ -198,7 +198,7 @@
       "eng": "Dawn purples all the eastern sky,<br>the air resounds with songs of praise,<br>the world exults in triumph high,<br>and shuddering hell in horror sways.\n\nThe King, all strong and valiant, comes<br>returning from the realm of death,<br>His trophies of the victory<br>He bears before the Father's gaze.\n\nHis sepulchre was sealed with stone<br>and guarded well on every side,<br>yet He, the Victor, triumphs forth<br>and buries death within His grave.\n\nEnough of grief, enough of tears,<br>enough of sorrow and of pain;<br>the slayer of death has risen now,<br>the shining Angel cries again.\n\nThat Thou mayst be to every mind<br>our Easter joy eternally,<br>O Jesu, from the dread of sin<br>set free the souls reborn to life.\n\nTo God the Father glory be,<br>and to the Son, who from the dead<br>arose, and to the Paraclete,<br>through everlasting ages. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Sermóne blando Ángelus",
@@ -206,7 +206,7 @@
       "eng": "With gentle word the Angel bright<br>foretold unto the women there:<br>in Galilee the Lord shall be<br>seen by you all without delay.\n\nWhile hastening forth with eager speed<br>to tell the Apostles what he said,<br>they see the Lord alive once more<br>and clasp His blessed feet in prayer.\n\nTo Galilee's high mountain tops<br>the Apostles make their joyful way,<br>and there, their longing heart's desire,<br>they see their Jesu's radiant face.\n\nThat Thou mayst be to every mind<br>our Easter joy eternally,<br>O Jesu, from the dread of sin<br>set free the souls reborn to life.\n\nTo God the Father glory be,<br>and to the Son, who from the dead<br>arose, and to the Paraclete,<br>through everlasting ages. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Ad régias Agni dapes",
@@ -264,7 +264,7 @@
       "eng": "Jesu, Redeemer of the world,<br>whom, ere the earliest dawn of light,<br>the Father from His bosom sent,<br>co-equal in His glorious might.\n\nThou brightness of the Father's face,<br>Thou hope of all who live on earth,<br>give ear to all who cry to Thee,<br>Thy servants scattered o'er the world.\n\nRemember, Maker of all things,<br>that Thou didst once our nature take,<br>born of a Virgin's spotless womb,<br>and clothed in our poor mortal frame.\n\nThis present day doth testify,<br>revolving in its yearly course,<br>that from the Father's throne alone<br>Thou camest for the world's release.\n\nHim heaven and earth, Him ocean's deep,<br>Him all that dwell beneath the sky,<br>the Author of the new salvation,<br>with a new song do glorify.\n\nAnd we, whom Thy most sacred Blood<br>hath washed and cleansed from every stain,<br>upon Thy birthday offer here<br>the tribute of our grateful strain.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "A solis ortus cárdine",
@@ -272,7 +272,7 @@
       "eng": "From lands that see the sun arise<br>to earth's remotest boundaries,<br>the Virgin-born we sing to praise,<br>the Christ, the Prince of endless days.\n\nThe world's great Author, rich in grace,<br>a servant's form did not disdain,<br>that, flesh by flesh from sin set free,<br>He might save those His hands had framed.\n\nWithin a spotless Mother's breast<br>the grace of heaven found its nest,<br>a maiden's womb in secret bore<br>a mystery unknown before.\n\nThe mansion of the modest heart<br>becomes a temple, set apart;<br>a Virgin, knowing not a man,<br>conceived a Son by heaven's plan.\n\nThe noble Mother brought to birth<br>Him Gabriel's promise told to earth,<br>whom John, while in his mother's womb,<br>had leapt with joy to greet and own.\n\nHe bore to lie upon the hay,<br>a manger-bed He did not spurn,<br>and He was fed on drops of milk<br>by whom the birds are taught to eat.\n\nThe heavenly choir rejoice and sing,<br>the Angels chant their God and King;<br>and Him the shepherds come to see,<br>the Shepherd, Maker of us all.\n\nAll praise, O Jesu, be to Thee,<br>whom Virgin-born the world adores,<br>with Father and with Holy Ghost,<br>through everlasting ages. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Christe Redémptor ómnium",
@@ -330,7 +330,7 @@
       "eng": "Why, impious Herod, vainly fear<br>That Christ the Saviour cometh here?<br>He takes no earthly realms away<br>Who gives the crown that lasts for aye.\n\nTo greet His birth the Wise Men went,<br>Led by the star before them sent;<br>Called on by light, towards light they pressed,<br>And by their gifts their God confessed.\n\nIn holy Jordan's purest wave<br>The heavenly Lamb vouchsafed to lave;<br>That He, to whom was sin unknown,<br>Might cleanse His people from their own.\n\nNew miracle of power divine!<br>The water reddens into wine:<br>He spake the word: and poured the wave<br>In other streams than nature gave.\n\nAll glory, Lord, to thee we pay<br>For thine Epiphany to-day:<br>All glory, as is ever meet,<br>To Father and to Paraclete. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "O sola magnárum úrbium",
@@ -338,7 +338,7 @@
       "eng": "Bethlehem, of noblest cities<br>None can once with thee compare;<br>Thou alone the Lord from heaven<br>Didst for us incarnate bear.\n\nFairer than the sun at morning<br>Was the star that told His birth;<br>To the lands their God announcing,<br>Hid beneath a form of earth.\n\nBy its lambent beauty guided,<br>See, the eastern kings appear;<br>See them bend, their gifts to offer,<br>Gifts of incense, gold, and myrrh.\n\nSolemn things of mystic meaning:<br>Incense doth the God disclose;<br>Gold a royal child proclaimeth;<br>Myrrh a future tomb foreshows.\n\nHoly Jesu, in thy brightness<br>To the Gentile world displayed,<br>With the Father and the Spirit,<br>Endless praise to thee be paid. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Crudélis Heródes, Deum",
@@ -396,7 +396,7 @@
       "eng": "Now Christ, ascending whence he came,<br>Had mounted o'er the starry frame,<br>The Holy Ghost on man below,<br>The Father's promise, to bestow.\n\nThe solemn time was drawing nigh,<br>Replete with heav'nly mystery,<br>On seven days' sevenfold circles borne,<br>That first and blessèd Whitsun-morn.\n\nWhen the third hour shone all around,<br>There came a rushing mighty sound,<br>And told the Apostles, while in prayer,<br>That, as was promised, God was there.\n\nForth from the Father's light it came,<br>That beautiful and kindly flame:<br>To fill with fervour of his word<br>The spirits faithful to their Lord.\n\nWith joy the Apostles' breasts are fired,<br>By God the Holy Ghost inspired:<br>And straight, in diverse kinds of speech,<br>The wondrous works of God they preach.\n\nTo men of every race they speak,<br>Alike barbarian, Roman, Greek:<br>From the same lips, with awe and fear,<br>All men their native accents hear.\n\nBut Juda's sons, e'en faithless yet,<br>With mad infuriate rage beset,<br>To mock Christ's followers combine,<br>As drunken all with new-made wine.\n\nWhen lo! with signs and mighty deeds,<br>Stands Peter in the midst, and pleads;<br>Confounding their malignant lie<br>By Joel's ancient prophecy.\n\nTo God the Father let us sing,<br>To God the Son, our risen King,<br>And equally let us adore<br>The Spirit, God forevermore. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Beáta nobis gáudia",
@@ -404,7 +404,7 @@
       "eng": "Round roll the weeks our hearts to greet,<br>With blissful joy returning;<br>For lo! the Holy Paraclete<br>On twelve bright brows sits burning:\n\nWith quivering flame he lights on each,<br>In fashion like a tongue, to teach<br>That eloquent they are of speech,<br>Their hearts with true love yearning.\n\nWhile with all tongues they speak to all,<br>The nations deem them maddened,<br>And drunk with wine the prophets call,<br>Whom God's good Spirit gladdened;\n\nA marvel this—in mystery done—<br>The holy paschaltide outrun,<br>By numbers told, whose reckoning won<br>Remission for the saddened.\n\nO God most Holy, thee we pray,<br>With reverent brow low bending,<br>Grant us the Spirit's gifts today<br>The gifts from heaven descending;\n\nAnd, since, thy grace hath deigned to bide<br>Within our breasts once sanctified,<br>Deign, Lord, to cast our sins aside,<br>Henceforth calm seasons sending.\n\nTo God the Father, laud and praise,<br>Praise to the Son be given;<br>Praise to the Spirit of all grace,<br>The fount of graces seven—\n\nAs was of old, all worlds before,<br>Is now and shall be evermore,<br>When time and change are spent and o'er<br>All praise in earth and heaven. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Veni Creátor Spíritus",
@@ -462,7 +462,7 @@
       "eng": "Now, from the slumbers of the night arising,<br>Chant we the holy psalmody of David,<br>Hymns to our Master, with a voice concordant,<br>Sweetly intoning.\n\nSo may our Monarch pitifully hear us,<br>That we may merit with his saints to enter<br>Mansions eternal, therewithal possessing<br>Joy beatific.\n\nThis be our portion, God forever blessed,<br>Father eternal, Son, and Holy Spirit,<br>Whose is the glory, which through all creation<br>Ever resoundeth. Amen.",
       "variationKey": "matutinum.hymn"
     },
-    "laudes.hymn": {
+    "hymnus_laudes": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Ecce iam noctis tenuátur umbra",
@@ -470,7 +470,7 @@
       "eng": "Lo, the dim shadows of the night are waning;<br>Lightsome and blushing, dawn of day returneth;<br>Fervent in spirit, to the world's Creator<br>Pray we devoutly:\n\nThat he may pity sinners in their sighing,<br>Banish all troubles, kindly health bestowing;<br>And may he grant us, of his countless blessings,<br>Peace that is endless.\n\nThis be our portion, God forever blessed,<br>Father eternal, Son, and Holy Spirit,<br>Whose is the glory, which through all creation<br>Ever resoundeth. Amen.",
       "variationKey": "laudes.hymn"
     },
-    "vesperae.hymn": {
+    "hymnus_vespera": {
       "type": "hymn",
       "label": "Hymn",
       "title": "Lucis Creátor óptime",

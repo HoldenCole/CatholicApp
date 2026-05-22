@@ -54,14 +54,16 @@ final class ContentStore {
         ordoData1955      = load("ordo_1955",         as: [String: OrdoEntry].self) ?? [:]
         ordoDataPre1955   = load("ordo_pre1955",      as: [String: OrdoEntry].self) ?? [:]
 
-        let psalter  = load("psalter_weekly",    as: [String: [String: Hour.Part]].self) ?? [:]
-        let hymns    = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
-        let temporal = load("temporal_propers",  as: [String: [String: Hour.Part]].self) ?? [:]
+        let psalterWeekly = load("psalter_weekly",    as: [String: [String: Hour.Part]].self) ?? [:]
+        let hymns         = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
+        let temporal      = load("temporal_propers",  as: [String: [String: Hour.Part]].self) ?? [:]
+        let psalterText   = load("psalter",           as: [String: [String: [String]]].self) ?? [:]
         officeAssembler = OfficeAssembler(
-            weeklyPsalter: psalter,
+            weeklyPsalter: psalterWeekly,
             seasonalHymns: hymns,
             temporalPropers: temporal,
-            marianAntiphons: marianAntiphons
+            marianAntiphons: marianAntiphons,
+            psalter: psalterText
         )
         buildAllPropers()
     }

@@ -9,40 +9,24 @@ struct OfficeAssembler {
 
     // MARK: - Temporal-propers key translation
     //
-    // The DivinumOfficium import produces keys like "capitulum_laudes",
-    // "hymnus_vespera", "ant_laudes", etc.  The hours.json template uses
-    // dotted variationKeys like "laudes.capitulum", "vesperae.hymn", etc.
-    // This table lets the assembler find overrides under either convention.
+    // The hours.json variationKeys now use the same key format as the
+    // DivinumOfficium import (e.g. "capitulum_laudes", "hymnus_vespera",
+    // "ant_laudes").  This alias table handles variant spellings (e.g.
+    // "hymnusm_*" metre variants → canonical hymn key) and provides
+    // backward compatibility with legacy dotted keys that may still
+    // appear in psalter_weekly or hymns_seasonal.
     //
-    // Direction: temporal-propers key → hours.json variationKey
+    // Direction: source key → canonical variationKey in hours.json
     private static let temporalKeyAliases: [String: String] = [
-        // Lauds
-        "ant_laudes":               "laudes.antiphon.benedictus",
-        "capitulum_laudes":         "laudes.capitulum",
-        "hymnus_laudes":            "laudes.hymn",
-        "hymnusm_laudes":           "laudes.hymn",
-        // Vespers
-        "ant_vespera":              "vesperae.antiphon.magnificat",
-        "hymnus_vespera":           "vesperae.hymn",
-        "hymnusm_vespera":          "vesperae.hymn",
-        // Matins
-        "ant_matutinum":            "matutinum.antiphon1",
-        "hymnusm_matutinum":        "matutinum.hymn",
-        "nocturn_1_versum":         "versum_1",
-        "nocturn_2_versum":         "versum_2",
-        "nocturn_3_versum":         "versum_3",
-        // Minor hours — antiphons
-        "ant_prima":                "prima.antiphon",
-        "ant_tertia":               "tertia.antiphon",
-        "ant_sexta":                "sexta.antiphon",
-        "ant_nona":                 "nona.antiphon",
-        // Minor hours — capitula
-        "capitulum_sexta":          "sexta.capitulum",
-        "capitulum_nona":           "nona.capitulum",
-        // Minor hours — responsories
-        "responsory_breve_tertia":  "tertia.responsory",
-        "responsory_breve_sexta":   "sexta.responsory",
-        "responsory_breve_nona":    "nona.responsory",
+        // Lauds — variant hymn spelling
+        "hymnusm_laudes":           "hymnus_laudes",
+        // Vespers — variant hymn spelling
+        "hymnusm_vespera":          "hymnus_vespera",
+        // Matins — variant hymn spelling
+        "hymnusm_matutinum":        "hymnus_matutinum",
+        // Vespers — 2nd Vespers versicle falls back to the versum_2 slot
+        // when versum_2 is absent (rare; only 1 entry has versum_3 alone)
+        "versum_3":                 "versum_2",
     ]
 
     /// Build an expanded overrides dictionary that includes both the raw

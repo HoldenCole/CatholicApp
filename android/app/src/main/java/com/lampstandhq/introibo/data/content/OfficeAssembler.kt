@@ -17,35 +17,96 @@ class OfficeAssembler(
     private val seasonalHymns: Map<String, Map<String, Hour.Part>>,
     internal val temporalPropers: Map<String, Map<String, Hour.Part>> = emptyMap(),
     private val marianAntiphons: List<MarianAntiphonData>,
+    private val psalter: Map<String, Map<String, List<String>>> = emptyMap(),
 ) {
-    fun assemble(template: Hour, context: LiturgicalContext): Hour {
-        val dayKey = dayKeys[context.dayOfWeek]
-        val seasonKey = seasonString(context.season)
-        val dayOverrides = weeklyPsalter[dayKey] ?: emptyMap()
-        val seasonOverrides = seasonalHymns[seasonKey] ?: emptyMap()
-        val temporalOverrides = context.temporalKey?.let { temporalPropers[it] } ?: emptyMap()
 
-        val assembledParts = template.parts.map { part ->
-            val key = part.variationKey ?: return@map part
+    // ---- Temporal-propers key translation ----
+    //
+    // The DivinumOfficium import produces keys like "capitulum_laudes",
+    // "hymnus_vespera", "ant_laudes", etc.  The hours.json template uses
+    // dotted variationKeys like "laudes.capitulum", "vesperae.hymn", etc.
+    // This table lets the assembler find overrides under either convention.
+    //
+    // Direction: temporal-propers key -> hours.json variationKey
+    companion object {
+        private val TEMPORAL_KEY_ALIASES: Map<String, String> = mapOf(
+            // Lauds
+            "ant_laudes"               to "laudes.antiphon.benedictus",
+            "capitulum_laudes"         to "laudes.capitulum",
+            "hymnus_laudes"            to "laudes.hymn",
+            "hymnusm_laudes"           to "laudes.hymn",
+            // Vespers
+            "ant_vespera"              to "vesperae.antiphon.magnificat",
+            "hymnus_vespera"           to "vesperae.hymn",
+            "hymnusm_vespera"          to "vesperae.hymn",
+            // Matins
+            "ant_matutinum"            to "matutinum.antiphon1",
+            "hymnusm_matutinum"        to "matutinum.hymn",
+            "nocturn_1_versum"         to "versum_1",
+            "nocturn_2_versum"         to "versum_2",
+            "nocturn_3_versum"         to "versum_3",
+            // Minor hours -- antiphons
+            "ant_prima"                to "prima.antiphon",
+            "ant_tertia"               to "tertia.antiphon",
+            "ant_sexta"                to "sexta.antiphon",
+            "ant_nona"                 to "nona.antiphon",
+            // Minor hours -- capitula
+            "capitulum_sexta"          to "sexta.capitulum",
+            "capitulum_nona"           to "nona.capitulum",
+            // Minor hours -- responsories
+            "responsory_breve_tertia"  to "tertia.responsory",
+            "responsory_breve_sexta"   to "sexta.responsory",
+            "responsory_breve_nona"    to "nona.responsory",
+        )
 
-            if (part.type == "marian") {
-                return@map marianPart(context.marian, fallback = part)
+        /** Build an expanded overrides dictionary that includes both the raw
+         *  temporal-propers keys AND their translated hours.json equivalents. */
+        private fun expandedOverrides(raw: Map<String, Hour.Part>): Map<String, Hour.Part> {
+            val result = raw.toMutableMap()
+            for ((tpKey, vk) in TEMPORAL_KEY_ALIASES) {
+                raw[tpKey]?.let { if (vk !in result) result[vk] = it }
             }
-
-            // Temporal propers (highest priority for non-psalm parts)
-            temporalOverrides[key]?.let { return@map it }
-
-            if (part.type == "hymn") {
-                seasonOverrides[key]?.let { return@map it }
+            // Reverse: hours.json-style key -> DO key
+            for ((tpKey, vk) in TEMPORAL_KEY_ALIASES) {
+                raw[vk]?.let { if (tpKey !in result) result[tpKey] = it }
             }
-
-            dayOverrides[key]?.let { return@map it }
-
-            part
+            return result
         }
 
-        // Apply temporal per-psalm antiphon overrides.
-        val antiphonApplied = assembledParts.map { part ->
+        /** Convert a part's `ref` field to a psalter.json key, e.g. "Ps 109" -> "psalm109".
+         *  Returns null for refs that don't map to a single psalm (canticles, ranges, etc.). */
+        private fun psalterKey(ref: String): String? {
+            val trimmed = ref.trim()
+            val prefix = when {
+                trimmed.startsWith("Ps ") -> "Ps "
+                trimmed.startsWith("Psalm ") -> "Psalm "
+                else -> return null
+            }
+            val numPart = trimmed.removePrefix(prefix).trim()
+            val num = numPart.toIntOrNull() ?: return null
+            return if (num in 1..150) "psalm$num" else null
+        }
+
+        private val dayKeys = listOf(
+            "sunday", "monday", "tuesday", "wednesday",
+            "thursday", "friday", "saturday",
+        )
+
+        private val HIGH_RANK_WEEKDAY_FEASTS = setOf(
+            "christmas", "circumcision", "epiphany", "purification",
+            "st-stephen", "st-john-evangelist", "holy-innocents",
+            "easter-0-1", "easter-0-2", "easter-0-3", "easter-0-4", "easter-0-5", "easter-0-6",
+            "easter-7-1", "easter-7-2", "easter-7-3", "easter-7-4", "easter-7-5", "easter-7-6",
+            "ascension", "corpus-christi", "sacred-heart",
+            "st-joseph", "annunciation", "st-joseph-worker",
+            "sts-peter-paul", "nativity-john-baptist",
+            "assumption", "nativity-bvm", "holy-rosary",
+            "all-saints", "all-souls", "immaculate-conception",
+            "holy-thursday", "good-friday", "holy-saturday",
+        )
+
+        /** The intercession versicles of the Preces Feriales (common to Lauds and Vespers). */
+        private val PRECES_VERSICLES = listOf(
             val key = part.variationKey ?: return@map part
             val hourPrefix = key.substringBefore(".")
             // Lauds: psalm1, psalm2, psalm3, canticle1, psalm4 (canticle in middle)
@@ -450,103 +511,32 @@ class OfficeAssembler(
         )
     }
 
-    companion object {
-        private val dayKeys = listOf(
-            "sunday", "monday", "tuesday", "wednesday",
-            "thursday", "friday", "saturday",
-        )
+    // ---- Psalm text inlining from psalter.json ----
+    //
+    // When a psalm part carries a `ref` like "Ps 109" but has no verses (or
+    // empty verses), look up the text in the loaded psalter dictionary and
+    // build a Verse list from it.
 
-        private val HIGH_RANK_WEEKDAY_FEASTS = setOf(
-            "christmas", "circumcision", "epiphany", "purification",
-            "st-stephen", "st-john-evangelist", "holy-innocents",
-            "easter-0-1", "easter-0-2", "easter-0-3", "easter-0-4", "easter-0-5", "easter-0-6",
-            "easter-7-1", "easter-7-2", "easter-7-3", "easter-7-4", "easter-7-5", "easter-7-6",
-            "ascension", "corpus-christi", "sacred-heart",
-            "st-joseph", "annunciation", "st-joseph-worker",
-            "sts-peter-paul", "nativity-john-baptist",
-            "assumption", "nativity-bvm", "holy-rosary",
-            "all-saints", "all-souls", "immaculate-conception",
-            "holy-thursday", "good-friday", "holy-saturday",
-        )
-
-        /** The intercession versicles of the Preces Feriales (common to Lauds and Vespers). */
-        private val PRECES_VERSICLES = listOf(
+    /** If part is a psalm/canticle with a psalter-matching ref and no verse
+     *  text, return a copy with verses inlined from the psalter. */
+    private fun inlinePsalmText(part: Hour.Part): Hour.Part {
+        if (part.type != "psalm" && part.type != "canticle") return part
+        // Only inline when verses are missing or empty
+        val existing = part.verses
+        if (existing != null && existing.isNotEmpty()) return part
+        val ref = part.ref ?: return part
+        val key = psalterKey(ref) ?: return part
+        val entry = psalter[key] ?: return part
+        val latVerses = entry["lat"] ?: emptyList()
+        val engVerses = entry["eng"] ?: emptyList()
+        val count = maxOf(latVerses.size, engVerses.size)
+        if (count == 0) return part
+        val verses = (0 until count).map { i ->
             Hour.Part.Verse(
-                lat = "℣. Ego dixi: Dómine, miserére mei.\n℟. Sana ánimam meam quia peccávi tibi.",
-                eng = "℣. I said: Lord, be merciful unto me.\n℟. Heal my soul, for I have sinned against Thee.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Convértere, Dómine, úsquequo?\n℟. Et deprecábilis esto super servos tuos.",
-                eng = "℣. Turn Thee again, O Lord; how long will it be?\n℟. And be gracious unto Thy servants.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Fiat misericórdia tua, Dómine, super nos.\n℟. Quemádmodum sperávimus in te.",
-                eng = "℣. Let Thy mercy, O Lord, be upon us.\n℟. As we have hoped in Thee.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Sacerdótes tui induántur justítiam.\n℟. Et sancti tui exsúltent.",
-                eng = "℣. Let Thy priests be clothed with justice.\n℟. And may Thy saints rejoice.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Orémus pro beatíssimo Papa nostro N.\n℟. Dóminus consérvet eum, et vivíficet eum, et beátum fáciat eum in terra, et non tradat eum in ánimam inimicórum ejus.",
-                eng = "℣. Let us pray for our most blessed Pope N.\n℟. The Lord preserve him and give him life, and make him blessed upon the earth: and deliver him not up to the will of his enemies.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Orémus et pro Antístite nostro N.\n℟. Stet et pascat in fortitúdine tua, Dómine, in sublimitáte nóminis tui.",
-                eng = "℣. Let us pray for our Bishop N.\n℟. May he stand firm and care for us in the strength of the Lord, in the might of Thy name.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ.\n℟. Et rege eos, et extólle illos usque in ætérnum.",
-                eng = "℣. O Lord, save Thy people, and bless Thine inheritance.\n℟. Govern them and lift them up for ever.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Meménto Congregatiónis tuæ.\n℟. Quam possedísti ab inítio.",
-                eng = "℣. Remember Thy congregation.\n℟. Which Thou hast possessed from the beginning.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Fiat pax in virtúte tua.\n℟. Et abundántia in túrribus tuis.",
-                eng = "℣. Let peace be in Thy strength.\n℟. And abundance in Thy towers.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Orémus pro benefactóribus nostris.\n℟. Retribúere dignáre, Dómine, ómnibus, nobis bona faciéntibus propter nomen tuum, vitam ætérnam. Amen.",
-                eng = "℣. Let us pray for our benefactors.\n℟. O Lord, for Thy name's sake, deign to reward with eternal life all who do us good. Amen.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Orémus pro fidélibus defúnctis.\n℟. Réquiem ætérnam dona eis, Dómine, et lux perpétua lúceat eis.",
-                eng = "℣. Let us pray for the faithful departed.\n℟. Eternal rest grant unto them, O Lord, and let perpetual light shine upon them.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Requiéscant in pace.\n℟. Amen.",
-                eng = "℣. May they rest in peace.\n℟. Amen.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Pro frátribus nostris abséntibus.\n℟. Salvos fac servos tuos, Deus meus, sperántes in te.",
-                eng = "℣. Let us pray for our absent brothers.\n℟. Save Thy servants, O God, who put their trust in Thee.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Pro afflíctis et captívis.\n℟. Líbera eos, Deus Israël, ex ómnibus tribulatiónibus suis.",
-                eng = "℣. Let us pray for the afflicted and imprisoned.\n℟. Deliver them, God of Israel, from all their tribulations.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Mitte eis, Dómine, auxílium de sancto.\n℟. Et de Sion tuére eos.",
-                eng = "℣. O Lord, send them help from Thy sanctuary.\n℟. And defend them out of Sion.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Dómine, exáudi oratiónem meam.\n℟. Et clamor meus ad te véniat.",
-                eng = "℣. O Lord, hear my prayer.\n℟. And let my cry come unto Thee.",
-            ),
-        )
-
-        /** Concluding versicles after the psalm in Preces Feriales. */
-        private val CONCLUDING_VERSICLES = listOf(
-            Hour.Part.Verse(
-                lat = "℣. Dómine, Deus virtútum, convérte nos.\n℟. Et osténde fáciem tuam, et salvi érimus.",
-                eng = "℣. Turn us again, O Lord, God of Hosts.\n℟. Show us Thy face, and we shall be whole.",
-            ),
-            Hour.Part.Verse(
-                lat = "℣. Exsúrge, Christe, ádjuva nos.\n℟. Et líbera nos propter nomen tuum.",
-                eng = "℣. Arise, O Christ, and help us.\n℟. And redeem us for Thy name's sake.",
-            ),
-        )
+                lat = latVerses.getOrElse(i) { "" },
+                eng = engVerses.getOrElse(i) { "" },
+            )
+        }
+        return part.copy(verses = verses)
     }
 }

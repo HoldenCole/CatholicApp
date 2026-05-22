@@ -259,7 +259,7 @@
         "eng": "Arise, O Lord, help us.",
         "latR": "Et líbera nos propter nomen tuum.",
         "engR": "And deliver us for Thy name's sake.",
-        "variationKey": "versum_1"
+        "variationKey": "nocturn_1_versum"
       },
       {
         "type": "pater",
@@ -611,7 +611,7 @@
         "eng": "Lord, Thou hast been our refuge.",
         "latR": "A generatióne et progénie.",
         "engR": "From generation to generation.",
-        "variationKey": "versum_2"
+        "variationKey": "nocturn_2_versum"
       },
       {
         "type": "pater",
@@ -955,7 +955,7 @@
         "eng": "O Lord, our Lord.",
         "latR": "Quam admirábile est nomen tuum in univérsa terra.",
         "engR": "How admirable is Thy name in all the earth.",
-        "variationKey": "versum_3"
+        "variationKey": "nocturn_3_versum"
       },
       {
         "type": "pater",
@@ -1627,7 +1627,7 @@
         "ref": "Romans 13:12",
         "lat": "Nox præcéssit, dies autem appropinquávit. Abjiciámus ergo ópera tenebrárum, et induámur arma lucis.",
         "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light.",
-        "variationKey": "laudes.capitulum"
+        "variationKey": "capitulum_laudes"
       },
       {
         "type": "hymn",
@@ -1635,7 +1635,12 @@
         "title": "Splendor patérnæ glóriæ",
         "lat": "Splendor patérnæ glóriæ,<br>de luce lucem próferens,<br>lux lucis et fons lúminis,<br>diem dies illúminans.\n\nVerúsque sol, illábere,<br>micans nitóre pérpeti,<br>jubárque Sancti Spíritus<br>infúnde nostris sénsibus.\n\nVotis vocémus et Patrem,<br>Patrem perénnis glóriæ,<br>Patrem poténtis grátiæ,<br>culpam reléget lúbricam.\n\nInfórmet actus strénuos,<br>dentem retúndat ínvidi,<br>casus secúndet ásperos,<br>donet geréndi grátiam.\n\nMentem gubérnet et regat<br>casto, fidéli córpore;<br>fides calóre férveat,<br>fraudis venéna nésciat.\n\nChristúsque nobis sit cibus,<br>potúsque noster sit fides;<br>læti bibámus sóbriam<br>ebrietátem Spíritus.\n\nLætus dies hic tránseat;<br>pudor sit ut dilúculum,<br>fides velut merídies,<br>crepúsculum mens nésciat.\n\nAuróra cursus próvehit:<br>Auróra totus pródeat,<br>in Patre totus Fílius,<br>et totus in Verbo Pater.\n\nDeo Patri sit glória,<br>ejúsque soli Fílio,<br>cum Spíritu Paráclito,<br>nunc et per omne sǽculum. Amen.",
         "eng": "O splendour of God's glory bright,<br>O Thou that bringest light from light,<br>O Light of light, light's living spring,<br>O Day, all days illumining.\n\nO Thou true Sun, on us Thy glance<br>let fall in royal radiance;<br>the Spirit's sanctifying beam<br>upon our earthly senses stream.\n\nThe Father, too, our prayers implore,<br>Father of glory evermore,<br>the Father of all grace and might,<br>to banish sin from our delight.\n\nMay He our actions deign to bless,<br>and loose the wiles of wickedness;<br>from stumbling may He keep our feet,<br>and give us grace all ill to meet.\n\nMay He our minds direct and rule,<br>with bodies chaste and faithful still;<br>may faith in fervour burn the heart,<br>and know not poison's treacherous art.\n\nAnd Christ to us for food shall be,<br>from Him our drink of faith have we;<br>the Spirit's wine that maketh whole,<br>and mocking not, exalts the soul.\n\nRejoicing may this day go hence;<br>like to the dawn our innocence,<br>like noonday glow our faith remain,<br>nor know the twilight of the brain.\n\nDawn speeds her course along the way:<br>O Dawn in fullness, come and stay,<br>all in the Father is the Son,<br>and all the Father in the Word.\n\nTo God the Father glory be,<br>and to His only Son on high,<br>together with the Paraclete,<br>both now and through eternity. Amen.",
-        "variationKey": "laudes.hymn"
+        "variationKey": "hymnus_laudes"
+      },
+      {
+        "type": "doxology",
+        "label": "Doxology",
+        "variationKey": "doxology"
       },
       {
         "type": "vr",
@@ -1643,14 +1648,15 @@
         "lat": "Dóminus regnávit, decórem índuit.",
         "eng": "The Lord hath reigned, He is clothed with beauty.",
         "latR": "Índuit Dóminus fortitúdinem, et præcínxit se virtúte.",
-        "engR": "The Lord is clothed with strength, and hath girded Himself with power."
+        "engR": "The Lord is clothed with strength, and hath girded Himself with power.",
+        "variationKey": "versum_1"
       },
       {
         "type": "antiphon",
         "label": "Antiphon ad Benedictus",
         "lat": "Benedíctus Dóminus Deus Israël.",
         "eng": "Blessed be the Lord God of Israel.",
-        "variationKey": "laudes.antiphon.benedictus"
+        "variationKey": "ant_laudes"
       },
       {
         "type": "canticle",
@@ -1784,7 +1790,7 @@
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
         "eng": "Alleluia, alleluia, alleluia.",
-        "variationKey": "prima.antiphon"
+        "variationKey": "ant_prima"
       },
       {
         "type": "psalm",
@@ -2024,6 +2030,20 @@
         "variationKey": "prima.responsory"
       },
       {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "℣. Christe, Fili Dei vivi, miserére nobis.",
+        "eng": "℣. Christ, Son of the living God, have mercy on us.",
+        "latR": "℟. Christe, Fili Dei vivi, miserére nobis.",
+        "engR": "℟. Christ, Son of the living God, have mercy on us.",
+        "variationKey": "versum_prima"
+      },
+      {
+        "type": "reading",
+        "label": "Lectio Brevis",
+        "variationKey": "lectio_prima"
+      },
+      {
         "type": "pater",
         "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
         "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
@@ -2083,7 +2103,7 @@
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
         "eng": "Alleluia, alleluia, alleluia.",
-        "variationKey": "tertia.antiphon"
+        "variationKey": "ant_tertia"
       },
       {
         "type": "psalm",
@@ -2218,7 +2238,12 @@
         "label": "Responsorium Breve",
         "lat": "℟.br. Inclína cor meum, Deus, * in testimónia tua.\n℣. Avérte óculos meos ne vídeant vanitátem.\n℟. In testimónia tua.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Inclína cor meum, Deus, in testimónia tua.",
         "eng": "℟.br. Incline my heart, O God, * unto Thy testimonies.\n℣. Turn away my eyes that they may not behold vanity.\n℟. Unto Thy testimonies.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Incline my heart, O God, unto Thy testimonies.",
-        "variationKey": "tertia.responsory"
+        "variationKey": "responsory_breve_tertia"
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "variationKey": "versum_tertia"
       },
       {
         "type": "pater",
@@ -2280,7 +2305,7 @@
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
         "eng": "Alleluia, alleluia, alleluia.",
-        "variationKey": "sexta.antiphon"
+        "variationKey": "ant_sexta"
       },
       {
         "type": "psalm",
@@ -2408,14 +2433,19 @@
         "ref": "Gal 6:2",
         "lat": "Alter altérius ónera portáte, et sic adimplébitis legem Christi.",
         "eng": "Bear ye one another's burdens; and so you shall fulfil the law of Christ.",
-        "variationKey": "sexta.capitulum"
+        "variationKey": "capitulum_sexta"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
         "lat": "℟.br. In ætérnum, Dómine, * pérmanet verbum tuum.\n℣. In sæculum sæculi véritas tua.\n℟. Pérmanet verbum tuum.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. In ætérnum, Dómine, pérmanet verbum tuum.",
         "eng": "℟.br. For ever, O Lord, * Thy word standeth firm.\n℣. Thy truth endureth to all generations.\n℟. Thy word standeth firm.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. For ever, O Lord, Thy word standeth firm.",
-        "variationKey": "sexta.responsory"
+        "variationKey": "responsory_breve_sexta"
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "variationKey": "versum_sexta"
       },
       {
         "type": "pater",
@@ -2477,7 +2507,7 @@
         "label": "Antiphon",
         "lat": "Allelúja, allelúja, allelúja.",
         "eng": "Alleluia, alleluia, alleluia.",
-        "variationKey": "nona.antiphon"
+        "variationKey": "ant_nona"
       },
       {
         "type": "psalm",
@@ -2605,14 +2635,19 @@
         "ref": "Deut 4:31",
         "lat": "Quia Deus miséricors Dóminus Deus tuus est: non dimíttet te, nec omníno discoóperit, neque obliviscétur testaménti, in quo jurávit pátribus tuis.",
         "eng": "For the Lord thy God is a merciful God: He will not leave thee, nor altogether destroy thee, nor forget the covenant by which He swore to thy fathers.",
-        "variationKey": "nona.capitulum"
+        "variationKey": "capitulum_nona"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
         "lat": "℟.br. Clamávi et exaudísti me, Dómine, * custódi me.\n℣. A lábiis iníquis et a lingua dolósa.\n℟. Custódi me.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Clamávi et exaudísti me, Dómine, custódi me.",
         "eng": "℟.br. I cried and Thou didst hear me, O Lord, * guard me.\n℣. From wicked lips and a deceitful tongue.\n℟. Guard me.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I cried and Thou didst hear me, O Lord, guard me.",
-        "variationKey": "nona.responsory"
+        "variationKey": "responsory_breve_nona"
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "variationKey": "versum_nona"
       },
       {
         "type": "pater",
@@ -2887,12 +2922,22 @@
         "variationKey": "vesperae.capitulum"
       },
       {
+        "type": "responsory",
+        "label": "Responsorium Breve",
+        "variationKey": "responsory_vespera_1"
+      },
+      {
         "type": "hymn",
         "label": "Hymn",
         "title": "Lucis Creátor óptime",
         "lat": "Lucis Creátor óptime,<br>lucem diérum próferens,<br>primórdiis lucis novæ,<br>mundi parans oríginem.\n\nQui mane junctum vésperi<br>diem vocári prǽcipis:<br>illǽbitur tetrum chaos,<br>audi preces cum flétibus.\n\nNe mens graváta crímine<br>vitæ sit exsul múnere,<br>dum nil perénne cógitat,<br>sesé que culpis ílligat.\n\nCæléstem pulsent jánuam,<br>vitále tollant prǽmium;<br>vitémus omne nóxium,<br>purgémus omne péssimum.\n\nPræsta, Pater piíssime,<br>Patríque compar Únice,<br>cum Spíritu Paráclito<br>regnans per omne sǽculum. Amen.",
         "eng": "O blest Creator of the light,<br>who mak'st the day with radiance bright,<br>and o'er the forming world didst call<br>the light from chaos first of all.\n\nWhose wisdom joined in meet array<br>the morn and eve, and named them day:<br>night comes with all its darkling fears,<br>regard Thy people's prayers and tears.\n\nLest, sunk in sin, and whelmed with strife,<br>they lose the gift of endless life;<br>while thinking but the thoughts of time,<br>they weave new chains of woe and crime.\n\nBut grant them grace that they may strain<br>the heavenly gate and prize to gain;<br>each harmful lure aside to cast,<br>and purge away each error past.\n\nO Father, that we ask be done,<br>through Jesus Christ, Thine only Son,<br>who, with the Holy Ghost and Thee,<br>shall live and reign eternally. Amen.",
-        "variationKey": "vesperae.hymn"
+        "variationKey": "hymnus_vespera"
+      },
+      {
+        "type": "doxology",
+        "label": "Doxology",
+        "variationKey": "doxology"
       },
       {
         "type": "vr",
@@ -2900,14 +2945,15 @@
         "lat": "Dirigátur, Dómine, orátio mea.",
         "eng": "Let my prayer be directed, O Lord.",
         "latR": "Sicut incénsum in conspéctu tuo.",
-        "engR": "As incense in Thy sight."
+        "engR": "As incense in Thy sight.",
+        "variationKey": "versum_2"
       },
       {
         "type": "antiphon",
         "label": "Antiphon ad Magnificat",
         "lat": "Magníficat ánima mea Dóminum.",
         "eng": "My soul doth magnify the Lord.",
-        "variationKey": "vesperae.antiphon.magnificat"
+        "variationKey": "ant_vespera"
       },
       {
         "type": "canticle",
@@ -3014,6 +3060,11 @@
     "order": 8,
     "intro": "The night prayer and the Church's last word before sleep. Opens with the Confiteor, moves through psalmody to the Nunc Dimittis and the Marian antiphon. The same psalms are prayed every night.",
     "parts": [
+      {
+        "type": "special",
+        "label": "Special Compline",
+        "variationKey": "special_completorium"
+      },
       {
         "type": "vr",
         "label": "Blessing",
