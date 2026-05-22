@@ -84,6 +84,7 @@ struct MissalProperEntry: Decodable {
         case "Nat", "Nativitate": return "nativity"
         case "Pasch", "Pasc", "Paschalis", "Paschali": return "easter"
         case "Quad", "Quadragesimale", "Quaragesimale": return "lent"
+        case "Quad5": return "cross"
         case "Asc", "Ascensione": return "ascension"
         case "Spiritu", "Pentecostes": return "pentecost"
         case "Epi", "Epiphania": return "epiphany"

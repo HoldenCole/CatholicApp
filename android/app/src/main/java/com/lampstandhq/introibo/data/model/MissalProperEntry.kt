@@ -88,6 +88,7 @@ data class MissalProperEntry(
                 "Nat", "Nativitate" -> "nativity"
                 "Pasch", "Pasc", "Paschalis", "Paschali" -> "easter"
                 "Quad", "Quadragesimale" -> "lent"
+                "Quad5" -> "cross"
                 "Asc", "Ascensione" -> "ascension"
                 "Spiritu", "Pentecostes" -> "pentecost"
                 "Epi", "Epiphania" -> "epiphany"

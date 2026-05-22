@@ -2873,13 +2873,13 @@
   "2024-09-18": {
     "temporal": "pent17-3",
     "sanctoral": "09-18",
-    "winner": "sanctoral",
-    "winnerKey": "09-18",
-    "rank": 3.0,
-    "name": "S. Josephi de Cupertino Confessoris",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent17-3",
+    "rank": 4.9,
+    "name": "Feria Quarta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent17-3"
+    "commemoration": "09-18"
   },
   "2024-09-19": {
     "temporal": "pent17-4",
@@ -3944,7 +3944,7 @@
     "winnerKey": "12-24",
     "rank": 6.9,
     "name": "In Vigilia Nativitatis Domini",
-    "color": "white",
+    "color": "violet",
     "season": "advent",
     "commemoration": "adv4-2"
   },
@@ -6899,13 +6899,13 @@
   "2025-09-19": {
     "temporal": "pent14-5",
     "sanctoral": "09-19",
-    "winner": "sanctoral",
-    "winnerKey": "09-19",
-    "rank": 3.0,
-    "name": "S. Januarii Episcopi et Sociorum Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent14-5",
+    "rank": 4.9,
+    "name": "Feria Sexta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent14-5"
+    "commemoration": "09-19"
   },
   "2025-09-20": {
     "temporal": "pent14-6",
@@ -7959,7 +7959,7 @@
     "winnerKey": "12-24",
     "rank": 6.9,
     "name": "In Vigilia Nativitatis Domini",
-    "color": "white",
+    "color": "violet",
     "season": "advent",
     "commemoration": "adv4-3"
   },
@@ -10903,24 +10903,24 @@
   "2026-09-18": {
     "temporal": "pent16-5",
     "sanctoral": "09-18",
-    "winner": "sanctoral",
-    "winnerKey": "09-18",
-    "rank": 3.0,
-    "name": "S. Josephi de Cupertino Confessoris",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent16-5",
+    "rank": 4.9,
+    "name": "Feria Sexta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent16-5"
+    "commemoration": "09-18"
   },
   "2026-09-19": {
     "temporal": "pent16-6",
     "sanctoral": "09-19",
-    "winner": "sanctoral",
-    "winnerKey": "09-19",
-    "rank": 3.0,
-    "name": "S. Januarii Episcopi et Sociorum Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent16-6",
+    "rank": 4.9,
+    "name": "Feria Sabbato Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent16-6"
+    "commemoration": "09-19"
   },
   "2026-09-20": {
     "temporal": "pent17-0",
@@ -11974,7 +11974,7 @@
     "winnerKey": "12-24",
     "rank": 6.9,
     "name": "In Vigilia Nativitatis Domini",
-    "color": "white",
+    "color": "violet",
     "season": "advent",
     "commemoration": "adv4-4"
   },
@@ -14907,24 +14907,24 @@
   "2027-09-17": {
     "temporal": "pent17-5",
     "sanctoral": "09-17",
-    "winner": "sanctoral",
-    "winnerKey": "09-17",
-    "rank": 1.1,
-    "name": "Impressionis Stigmatum S. Francisci",
-    "color": "green",
+    "winner": "temporal",
+    "winnerKey": "pent17-5",
+    "rank": 4.9,
+    "name": "Feria Sexta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent17-5"
+    "commemoration": "09-17"
   },
   "2027-09-18": {
     "temporal": "pent17-6",
     "sanctoral": "09-18",
-    "winner": "sanctoral",
-    "winnerKey": "09-18",
-    "rank": 3.0,
-    "name": "S. Josephi de Cupertino Confessoris",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent17-6",
+    "rank": 4.9,
+    "name": "Feria Sabbato Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent17-6"
+    "commemoration": "09-18"
   },
   "2027-09-19": {
     "temporal": "pent18-0",
@@ -15989,7 +15989,7 @@
     "winnerKey": "12-24",
     "rank": 6.9,
     "name": "In Vigilia Nativitatis Domini",
-    "color": "white",
+    "color": "violet",
     "season": "advent",
     "commemoration": "adv4-5"
   },
@@ -18988,13 +18988,13 @@
   "2028-09-22": {
     "temporal": "pent15-5",
     "sanctoral": "09-22",
-    "winner": "sanctoral",
-    "winnerKey": "09-22",
-    "rank": 3.0,
-    "name": "S. Thomæ de Villanova Episcopi et Confessoris",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent15-5",
+    "rank": 4.9,
+    "name": "Feria Sexta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent15-5"
+    "commemoration": "09-22"
   },
   "2028-09-23": {
     "temporal": "pent15-6",
@@ -20015,7 +20015,7 @@
     "winnerKey": "12-24",
     "rank": 6.9,
     "name": "In Vigilia Nativitatis Domini",
-    "color": "white",
+    "color": "violet",
     "season": "advent",
     "commemoration": "adv4-0"
   },
@@ -22970,13 +22970,13 @@
   "2029-09-19": {
     "temporal": "pent17-3",
     "sanctoral": "09-19",
-    "winner": "sanctoral",
-    "winnerKey": "09-19",
-    "rank": 3.0,
-    "name": "S. Januarii Episcopi et Sociorum Martyrum",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent17-3",
+    "rank": 4.9,
+    "name": "Feria Quarta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent17-3"
+    "commemoration": "09-19"
   },
   "2029-09-20": {
     "temporal": "pent17-4",
@@ -23003,13 +23003,13 @@
   "2029-09-22": {
     "temporal": "pent17-6",
     "sanctoral": "09-22",
-    "winner": "sanctoral",
-    "winnerKey": "09-22",
-    "rank": 3.0,
-    "name": "S. Thomæ de Villanova Episcopi et Confessoris",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent17-6",
+    "rank": 4.9,
+    "name": "Feria Sabbato Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent17-6"
+    "commemoration": "09-22"
   },
   "2029-09-23": {
     "temporal": "pent18-0",
@@ -24030,7 +24030,7 @@
     "winnerKey": "12-24",
     "rank": 6.9,
     "name": "In Vigilia Nativitatis Domini",
-    "color": "white",
+    "color": "violet",
     "season": "advent",
     "commemoration": "adv4-1"
   },
@@ -26974,13 +26974,13 @@
   "2030-09-18": {
     "temporal": "pent14-3",
     "sanctoral": "09-18",
-    "winner": "sanctoral",
-    "winnerKey": "09-18",
-    "rank": 3.0,
-    "name": "S. Josephi de Cupertino Confessoris",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "pent14-3",
+    "rank": 4.9,
+    "name": "Feria Quarta Quattuor Temporum Septembris",
+    "color": "violet",
     "season": "ordinary",
-    "commemoration": "pent14-3"
+    "commemoration": "09-18"
   },
   "2030-09-19": {
     "temporal": "pent14-4",
@@ -28045,7 +28045,7 @@
     "winnerKey": "12-24",
     "rank": 6.9,
     "name": "In Vigilia Nativitatis Domini",
-    "color": "white",
+    "color": "violet",
     "season": "advent",
     "commemoration": "adv4-2"
   },
