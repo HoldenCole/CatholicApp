@@ -3259,7 +3259,51 @@
     "officium": "In vigilia Pentecostes",
     "rank": 7,
     "rule": {
-      "preface": "Pent"
+      "gloria": true,
+      "credo": false,
+      "preface": "Spiritu"
+    },
+    "introitus": {
+      "lat": "Cum sanctificátus fúero in vobis, congregábo vos de univérsis terris: et effúndam super vos aquam mundam, et mundabímini ab ómnibus inquinaméntis vestris: et dabo vobis spíritum novum, allelúja, allelúja\nBenedícam Dóminum in omni témpore: semper laus ejus in ore meo.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nCum sanctificátus fúero in vobis, congregábo vos de univérsis terris: et effúndam super vos aquam mundam, et mundabímini ab ómnibus inquinaméntis vestris: et dabo vobis spíritum novum, allelúja, allelúja",
+      "eng": "When I prove My holiness through you, I will gather you from all the foreign lands; and I will sprinkle clean water upon you to cleanse you from all your impurities; and I will give you a new spirit, alleluia, alleluia.\nI will bless the Lord at all times; His praise shall be ever in my mouth.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nWhen I prove My holiness through you, I will gather you from all the foreign lands; and I will sprinkle clean water upon you to cleanse you from all your impurities; and I will give you a new spirit, alleluia, alleluia.",
+      "ref": "Ezek 36:23; 36:24; 36:25-26"
+    },
+    "oratio": {
+      "lat": "Præsta, quǽsumus, omnípotens Deus: ut claritatis tuæ super nos splendor effúlgeat; et lux tuæ lucis corda eórum, qui per grátiam tuam renáti sunt, Sancti Spíritus illustratióne confírmet.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen. eiusdem",
+      "eng": "Grant, we beseech You, almighty God, that the brightness of Your glory may shine upon us, and that the light of Your light may, through the enlightenment of the Holy Spirit, strengthen the minds of those who are reborn through Your grace.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen. eiusdem"
+    },
+    "lectio": {
+      "lat": "Léctio Actuum Apostolorum.\nIn diébus illis: Factum est, cum Apóllo esset Corínthi, ut Paulus, peragrátis superióribus pártibus, veníret Ephesum et inveníret quosdam discípulos: dixítque ad eos: Si Spíritum Sanctum accepístis credéntes? At illi dixérunt ad eum: Sed neque, si Spíritus Sanctus est, audívimus. Ille vero ait: In quo ergo baptizáti estis? Qui dixérunt: In Joannis baptísmate. Dixit autem Paulus: Joánnes baptizávit baptísmo pœniténtiæ pópulum, dicens: In eum, qui ventúrus esset post ipsum, ut créderent, hoc est in Jesum. His audítis, baptizáti sunt in nómine Dómini Jesu. Et cum imposuísset illis manus Paulus, venit Spíritus Sanctus super eos, et loquebántur linguis, et prophetábant. Erant autem omnes viri fere duódecim. Introgréssus autem synagógam, cum fidúcia loquebátur per tres menses, dísputans et suádens de regno Dei.",
+      "eng": "Lesson from the Acts of Apostles\nIn those days, it was while Apollos was in Corinth that Paul, after passing through the upper districts, came to Ephesus and found certain disciples; and he said to them, Did you receive the Holy spirit when you became believers? But they said to him, We have not even heard that there is a Holy Spirit. And he said, How then were you baptized? They said, With John’s baptism. Then Paul said, John baptized the people with a baptism of repentance, telling them to believe in Him Who was to come after him, that is, in Jesus. On hearing this they were baptized in the name of the Lord Jesus; and when Paul laid his hands on them, the Holy Spirit came upon them, and they began to speak in tongues and to prophesy. There were about twelve men in all. Now for three months he used to go to the synagogue and speak confidently, holding discussions and trying to persuade them about the kingdom of God.",
+      "ref": "Acts 19:1-8"
+    },
+    "graduale": {
+      "lat": "Allelúja\nV. Confitémini Dómino, quóniam bonus: quóniam in sǽculum misericordia ejus.\nLaudáte Dóminum, omnes gentes: et collaudáte eum, omnes pópuli, \nV. Quóniam confirmáta est super nos misericórdia ejus: et véritas Dómini manet in ætérnum.",
+      "eng": "Alleluia.\nGive thanks to the Lord, for He is good, for His kindness endures forever!\nPraise the Lord, all you nations; glorify Him, all you peoples! \nV. For steadfast is His kindness toward us, and the fidelity of the Lord endures forever.",
+      "ref": "Ps 106:1"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem.\nIn illo témpore: Dixit Jesus discípulis suis: Si dilígitis me, mandáta mea serváte. Et ego rogábo Patrem, et alium Paráclitum dabit vobis, ut máneat vobíscum in ætérnum, Spíritum veritátis, quem mundus non potest accípere, quia non videt eum nec scit eum. Vos autem cognoscétis eum: quia apud vos manébit et in vobis erit. Non relínquam vos órphanos: véniam ad vos. Adhuc módicum: et mundus me jam non videt. Vos autem vidétis me, quia ego vivo, et vos vivétis. In illo die vos cognoscétis, quia ego sum in Patre meo, et vos in me, et ego in vobis. Qui habet mandáta mea et servat ea: ille est, qui díligit me. Qui autem díligit me, diligétur a Patre meo: et ego díligam eum, et manifestábo ei meípsum.",
+      "eng": "Continuation + of the Holy Gospel according to John\nAt that time, Jesus said to His disciples, If you love Me, keep My commandments. And I will ask the Father and He will give you another Advocate to dwell with you forever, the Spirit of truth Whom the world cannot receive, because it neither sees Him nor knows Him. But you shall know Him, because He will dwell with you, and be in you. I will not leave you orphans: I will come to you. Yet a little while and the world no longer sees Me. But you see Me, for I live and you shall live. In that day you will know that I am in My Father, and you in Me, and I in you. He who has My commandments and keeps them, he it is who loves Me. But he who loves Me will be loved by My Father, and I will love him and manifest Myself to him.",
+      "ref": "Joannes 14:15-21"
+    },
+    "offertorium": {
+      "lat": "Emítte Spíritum tuum, et creabúntur, et renovábis fáciem terræ: sit glória Dómini in sǽcula, allelúja.",
+      "eng": "Send forth Your Spirit, and they shall be created, and You shall renew the face of the earth. May the glory of the Lord endure forever. Alleluia.",
+      "ref": "Ps 103:30-31"
+    },
+    "secreta": {
+      "lat": "Múnera, quǽsumus, Dómine, obláta sanctífica: et corda nostra Sancti Spíritus illustratióne emúnda.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen. eiusdem.",
+      "eng": "Hallow, we beseech You, O Lord, the gifts we offer, and cleanse our minds through the enlightenment of the Holy Spirit.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen. eiusdem"
+    },
+    "communio": {
+      "lat": "Ultimo festivitátis die dicébat Jesus: Qui in me credit, flúmina de ventre ejus fluent aquæ vivæ: hoc autem dixit de Spíritu, quem acceptúri erant credéntes in eum, allelúja, allelúja.",
+      "eng": "On the last day of the feast, Jesus said, He who believes in Me, from within him there shall flow rivers of living water. He said this, however, of the Spirit, Whom they who believed in Him were to receive, alleluia, alleluia.",
+      "ref": "Joannes 7:37-39"
+    },
+    "postcommunio": {
+      "lat": "Sancti Spíritus, Dómine, corda nostra mundet infúsio: et sui roris íntima aspersióne fecúndet.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen. eiusdem",
+      "eng": "May the inpouring of the Holy Spirit cleanse our hearts, O Lord, and make them fertile through the dew He sprinkles upon them.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen. eiusdem"
     }
   },
   "pasc6-6r": {
@@ -3339,6 +3383,10 @@
       "lat": "Allelúja, allelúja.\nEmítte Spíritum tuum, et creabúntur, et renovábis fáciem terræ. Allelúja. (Hic genuflectitur)\nV. Veni, Sancte Spíritus, reple tuórum corda fidélium: et tui amóris in eis ignem accénde.",
       "eng": "Alleluia, alleluia.\nV. Send forth Your Spirit, and they shall be created: and You shall renew the face of the earth. Alleluia. (Kneel.)\nV. Come, O Holy Spirit, fill the hearts of Your faithful: and kindle in them the fire of Your love.",
       "ref": "Ps 103:30"
+    },
+    "sequentia": {
+      "lat": "Veni, Sancte Spíritus,\net emítte cælitus\nlucis tuæ rádium.\n\nVeni, pater páuperum;\nveni, dator múnerum;\nveni, lumen córdium.\n\nConsolátor óptime,\ndulcis hospes ánimæ,\ndulce refrigérium.\n\nIn labóre réquies,\nin æstu tempéries,\nin fletu solácium.\n\nO lux beatíssima,\nreple cordis íntima\ntuórum fidélium.\n\nSine tuo númine\nnihil est in hómine,\nnihil est innóxium.\n\nLava quod est sórdidum,\nriga quod est áridum,\nsana quod est sáucium.\n\nFlecte quod est rígidum,\nfove quod est frígidum,\nrege quod est dévium.\n\nDa tuis fidélibus,\nin te confidéntibus,\nsacrum septenárium.\n\nDa virtútis méritum,\nda salútis éxitum,\nda perénne gáudium.\nAmen. Allelúja.",
+      "eng": "Holy Spirit! Lord of light!\nFrom Thy clear celestial height,\nThy pure, beaming radiance give:\n\nCome, Thou, Father of the poor!\nCome, with treasures which endure!\nCome, Thou light of all that live!\n\nThou of all consolers best,\nVisiting the troubled breast,\nDost refreshing peace bestow:\n\nThou in toil art comfort sweet;\nPleasant coolness in the heat;\nSolace in the midst of woe.\n\nLight immortal! Light divine!\nVisit Thou these hearts of Thine,\nAnd our inmost being fill.\n\nIf Thou take Thy grace away,\nNothing pure in man will stay;\nAll his good is turn'd to ill.\n\nHeal our wounds - our strength renew;\nOn our dryness pour Thy dew;\nWash the stains of guilt away:\n\nBend the stubborn heart and will;\nMelt the frozen, warm the chill;\nGuide the steps that go astray.\n\nThou, on those who evermore\nThee confess and Thee adore,\nIn Thy sevenfold gifts descend.\n\nGive them comfort when they die;\nGive them life with Thee on high;\nGive them joys which never end.\nAmen. Alleluia."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus discípulis suis: Si quis díligit me, sermónem meum servábit, et Pater meus díliget eum, et ad eum veniémus et mansiónem apud eum faciémus: qui non díligit me, sermónes meos non servat. Et sermónem quem audístis, non est meus: sed ejus, qui misit me, Patris. Hæc locútus sum vobis, apud vos manens. Paráclitus autem Spíritus Sanctus, quem mittet Pater in nómine meo, ille vos docébit ómnia et súggeret vobis ómnia, quæcúmque díxero vobis. Pacem relínquo vobis, pacem meam do vobis: non quómodo mundus dat, ego do vobis. Non turbétur cor vestrum neque formídet. Audístis, quia ego dixi vobis: Vado et vénio ad vos. Si diligerétis me, gauderétis útique, quia vado ad Patrem: quia Pater major me est. Et nunc dixi vobis, priúsquam fiat: ut, cum factum fúerit, credátis. Jam non multa loquar vobíscum. Venit enim princeps mundi hujus, et in me non habet quidquam. Sed ut cognóscat mundus, quia díligo Patrem, et sicut mandátum dedit mihi Pater, sic fácio.",
@@ -4170,6 +4218,10 @@
       "lat": "Oculi ómnium in te sperant, Dómine: et tu das illis escam in témpore opportúno,\nV. Aperis tu manum tuam: et imples omne animal benedictióne. Allelúja, allelúja,\nCaro mea vere est cibus, et sanguis meus vere est potus: qui mandúcat meam carnem et bibit meum sánguinem, in me manet et ego in eo. Alleluia.",
       "eng": "The eyes of all look hopefully to You, O Lord; and You give them their food in due season.\nV. You open Your hand; and satisfy the desire of every living thing. Alleluia, alleluia. \nV. My Flesh is food indeed, and My Blood is drink indeed. He who eats My Flesh, and drinks My Blood, abides in Me and I in him.",
       "ref": "Ps 144:15-16"
+    },
+    "sequentia": {
+      "lat": "Lauda, Sion, Salvatórem,\nlauda ducem et pastórem\nin hymnis et cánticis.\n\nQuantum potes, tantum aude:\nquia major omni laude,\nnec laudáre súfficis.\n\nLaudis thema speciális,\npanis vivus et vitális\nhódie propónitur.\n\nQuem in sacræ mensa cenæ\nturbæ fratrum duodénæ\ndatum non ambígitur.\n\nSit laus plena, sit sonóra,\nsit jucúnda, sit decóra\nmentis jubilátio.\n\nDies enim sollémnis agitur,\nin qua mensæ prima recólitur\nhujus institútio.\n\nIn hac mensa novi Regis,\nnovum Pascha novæ legis\nPhase vetus términat.\n\nVetustátem nóvitas,\numbram fugat véritas,\nnoctem lux elíminat.\n\nQuod in cœna Christus gessit,\nfaciéndum hoc expréssit\nin sui memóriam.\n\nDocti sacris instítutis,\npanem, vinum in salútis\nconsecrámus hóstiam.\n\nDogma datur Christiánis,\nquod in carnem transit panis\net vinum in sánguinem.\n\nQuod non capis, quod non vides,\nanimósa fírmat fides,\npræter rerum órdinem.\n\nSub divérsis speciébus,\nsignis tantum, et non rebus,\nlatent res exímiæ.\n\nCaro cibus, sanguis potus:\nmanet tamen Christus totus\nsub utráque spécie.\n\nA suménte non concísus,\nnon confráctus, non divísus:\nínteger accípitur.\n\nSumit unus, sumunt mille:\nquantum isti, tantum ille:\nnec sumptus consúmitur.\n\nSumunt boni, sumunt mali\nsorte tamen inæquáli,\nvitæ vel intéritus.\n\nMors est malis, vita bonis:\nvide, paris sumptiónis\nquam sit dispar éxitus.\n\nFracto demum sacraménto,\nne vacílles, sed meménto,\ntantum esse sub fragménto,\nquantum toto tégitur.\n\nNulla rei fit scissúra:\nsigni tantum fit fractúra:\nqua nec status nec statúra\nsignáti minúitur.\n\nEcce panis Angelórum,\nfactus cibus viatórum:\nvere panis filiórum,\nnon mitténdus cánibus.\n\nIn figúris præsignátur,\ncum Isaac immolátur:\nagnus paschæ deputátur:\ndatur manna pátribus.\n\nBone pastor, panis vere,\nJesu, nostri miserére:\ntu nos pasce, nos tuére:\ntu nos bona fac vidére\nin terra vivéntium.\n\nTu, qui cuncta scis et vales:\nqui nos pascis hic mortáles:\ntuos ibi commensáles,\ncoherédes et sodáles\nfac sanctórum cívium.\nAmen. Allelúja.",
+      "eng": "O Sion, thy Redeemer praising,\nSongs of joy to Him upraising,\nLaud thy Pastor and thy Guide:\n\nSwell thy notes most high and daring;\nFor His praise is past declaring,\nAnd thy loftiest powers beside.\n\n'Tis a theme with praise that gloweth,\nFor the bread that life bestoweth\nGoes this day before us out;\n\nWhich, His holy supper taking,\nTo the brethren twelve His breaking\nNone hath ever called in doubt.\n\nFull, then, be our praise and sounding,\nModest and with joy abounding\nBe our mind's triumphant state;\n\nFor the festal's prosecution,\nWhen the first blest institution\nOf this feast we celebrate.\n\nIn the new King's new libation,\nIn the new law's new oblation,\nEnds the ancient Paschal rite;\n\nAncient forms new substance chaseth,\nTypic shadows truth displaceth,\nDay dispels the gloom of night.\n\nWhen He did at supper seated,\nChrist enjoined to be repeated,\nWhen His love we celebrate:\n\nThus obeying His dictation,\nBlood and wine of our salvation,\nWe the victim consecrate.\n\n'Tis for Christian faith asserted,\nBread is into flesh converted,\nInto blood the holy wine:\n\nSight and intellect transcending,\nNature's laws to marvel bending,\n'Tis confirmed by faith divine.\n\nUnder either kind remaining,\nForm, not substance, still retaining,\nWondrous things our spirit sees:\n\nFlesh and blood thy palate staining,\nYet still Christ entire remaining,\nUnder either species.\n\nAll untorn for eating given,\nUndivided and unriven,\nWhole He's taken and unrent;\n\nBe there one, or crowds surrounding,\nHe is equally abounding,\nNor, though eaten, ever spent.\n\nBoth to good and bad 'tis broken,\nBut on each a different token\nor of life, or death attends:\n\nLife to good, to bad damnation;\nLo, of one same manducation\nHow dissimilar the ends.\n\nWhen the priest the victim breaketh,\nSee thy faith in no wise shaketh,\nKnow that every fragment taketh\nAll that 'neath the whole there lies:\n\nThis in Him no fracture maketh,\n'Tis the figure only breaketh,\nForm, or state, no change there taketh\nPlace in what it signifies.\n\nBread, that angels eat in heaven,\nNow becomes the pilgrim's leaven,\nBread in truth to children given,\nThat must ne'er to dogs be thrown.\n\nHe, in ancient types disguised,\nWas the Isaac sacrificed,\nFor the feast a lamb devised,\nManna to the Fathers shown.\n\nBread, whose shepherd-care doth tend us,\nJesu Christ, Thy mercy send us,\nDo Thou feed us, Thou defend us,\nLead us where true joys attend us,\nIn the land where life is given:\n\nThou all ken and might possessing,\nMercies aye to us largessing,\nMake us share Thy cup of blessing,\nHeritage and love's caressing\nWith the denizens of heaven.\nAmen. Alleluia."
     },
     "evangelium": {
       "lat": "Sequéntia sancti Evangéli secúndum Joánnem\nIn illo témpore: Dixit Jesus turbis Judæórum: Caro mea vere est cibus et sanguis meus vere est potus. Qui mandúcat meam carnem et bibit meum sánguinem, in me manet et ego in illo. Sicut misit me vivens Pater, et ego vivo propter Patrem: et qui mandúcat me, et ipse vivet propter me. Hic est panis, qui de cœlo descéndit. Non sicut manducavérunt patres vestri manna, et mórtui sunt. Qui mandúcat hunc panem, vivet in ætérnum.",
@@ -5494,7 +5546,10 @@
   },
   "pent16-3": {
     "officium": "Feria Quarta infra Hebdomadam XVI post Octavam Pentecostes",
-    "rank": 1
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/093-3"
+    }
   },
   "pent16-4": {
     "officium": "Feria Quinta infra Hebdomadam XVI post Octavam Pentecostes",
@@ -5502,11 +5557,17 @@
   },
   "pent16-5": {
     "officium": "Feria Sexta infra Hebdomadam XVI post Octavam Pentecostes",
-    "rank": 1
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/093-5"
+    }
   },
   "pent16-6": {
     "officium": "Sabbato infra Hebdomadam XVI post Octavam Pentecostes",
-    "rank": 1
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/093-6"
+    }
   },
   "pent17-0": {
     "officium": "Dominica XVII Post Pentecosten",
