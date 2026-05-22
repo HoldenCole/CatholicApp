@@ -128,7 +128,7 @@ fun OfficeScreen(
             Spacer(modifier = Modifier.height(12.dp))
 
             ClockDial(
-                hours = ContentStore.hours,
+                hours = ContentStore.hours.filter { it.slug != "office-of-the-dead" },
                 currentKey = currentHourKey(),
                 onTap = { slug ->
                     ContentStore.hourForToday(slug)?.let { selectedHour = it }

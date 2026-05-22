@@ -50,7 +50,7 @@ struct OfficeView: View {
                 }
 
                 ClockDial(
-                    hours: store.hours,
+                    hours: store.hours.filter { $0.slug != "office-of-the-dead" },
                     currentKey: currentHourKey(),
                     onTap: { slug in
                         if let h = store.hourForToday(slug: slug) { selectedHour = h }
