@@ -245,10 +245,9 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
         ordinaryItem("agnus")
     }
 
-    // Confiteor before Communion (pre-1955 rite; suppressed in 1962 and 1955)
-    if (rite == MissalRite.PRE_1955) {
-        ordinaryItem("confiteor-communion")
-    }
+    // Confiteor before Communion — retained in all pre-1964 rites
+    // (1962 Ritus servandus VIII.6; only suppressed by Inter Oecumenici 1964)
+    ordinaryItem("confiteor-communion")
 
     ordinaryItem("domine")
 
@@ -388,8 +387,11 @@ private fun isApostleEvangelistOrDoctor(proper: MassProper): Boolean {
 private fun canonVariantKey(slug: String?, rite: MissalRite): String? {
     if (slug == null) return null
 
-    // Christmas (Dec 25 + octave days named "christmas-...")
+    // Christmas (Dec 25 + octave days Dec 26-31)
     if (slug == "christmas" || slug.startsWith("christmas-")) return "christmas"
+    if (slug == "st-stephen" || slug == "holy-innocents") return "christmas"
+    if (slug.startsWith("nat") && slug.length <= 5) return "christmas"
+    if (slug.startsWith("sancti-12-2") || slug.startsWith("sancti-12-3")) return "christmas"
 
     // Epiphany (Jan 6)
     if (slug == "epiphany") return "epiphany"

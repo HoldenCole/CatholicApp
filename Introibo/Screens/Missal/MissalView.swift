@@ -146,10 +146,9 @@ struct MissalView: View {
             ordinarySection("agnus")
         }
 
-        // Confiteor before Communion (pre-1955 rite; suppressed in 1962)
-        if rite == .pre1955 {
-            ordinarySection("confiteor-communion")
-        }
+        // Confiteor before Communion — retained in all pre-1964 rites
+        // (1962 Ritus servandus VIII.6; only suppressed by Inter Oecumenici 1964)
+        ordinarySection("confiteor-communion")
 
         // Domine non sum dignus
         ordinarySection("domine")
@@ -322,6 +321,10 @@ struct MissalView: View {
     private func canonVariantKey(for rite: MissalRite) -> String? {
         guard let slug = ctx.properSlug else { return nil }
         if slug == "christmas" || slug.hasPrefix("christmas-") { return "christmas" }
+        // Christmas octave: saints within the octave (Dec 26-31) also get proper Communicantes
+        if slug == "st-stephen" || slug == "holy-innocents" { return "christmas" }
+        if let key = ctx.temporalKey, key.hasPrefix("nat") { return "christmas" }
+        if slug.hasPrefix("sancti-12-2") || slug.hasPrefix("sancti-12-3") { return "christmas" }
         if slug == "epiphany" { return "epiphany" }
         if slug == "ascension" { return "ascension" }
 
