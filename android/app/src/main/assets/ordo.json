@@ -1080,13 +1080,13 @@
   "2024-04-08": {
     "temporal": "pasc1-1",
     "sanctoral": "04-08",
-    "winner": "temporal",
-    "winnerKey": "pasc1-1",
-    "rank": 1.0,
-    "name": "Feria Secunda infra Hebdomadam I post Octavam Paschæ",
+    "winner": "sanctoral",
+    "winnerKey": "03-25",
+    "rank": 7.0,
+    "name": "In Annuntiatione Beatissimæ Mariæ Virginis",
     "color": "white",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc1-1"
   },
   "2024-04-09": {
     "temporal": "pasc1-2",
@@ -1973,9 +1973,9 @@
     "sanctoral": "06-28",
     "winner": "sanctoral",
     "winnerKey": "06-28",
-    "rank": 3.0,
-    "name": "S. Irenæi Episcopi et Martyris",
-    "color": "red",
+    "rank": 5.0,
+    "name": "In Vigilia Ss. Petri et Pauli Apostolorum",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent05-5"
   },
@@ -2136,13 +2136,13 @@
   "2024-07-13": {
     "temporal": "pent07-6",
     "sanctoral": "07-13",
-    "winner": "sanctoral",
-    "winnerKey": "07-13",
-    "rank": 2.2,
-    "name": "S. Anacleti Papæ et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent07-6",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam VII post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent07-6"
+    "commemoration": null
   },
   "2024-07-14": {
     "temporal": "pent08-0",
@@ -2367,13 +2367,13 @@
   "2024-08-03": {
     "temporal": "pent10-6",
     "sanctoral": "08-03",
-    "winner": "sanctoral",
-    "winnerKey": "08-03",
-    "rank": 2.2,
-    "name": "De Inventione S. Stephani Protomartyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent10-6",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam X post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent10-6"
+    "commemoration": null
   },
   "2024-08-04": {
     "temporal": "pent11-0",
@@ -5425,13 +5425,13 @@
   "2025-05-08": {
     "temporal": "pasc2-4",
     "sanctoral": "05-08",
-    "winner": "sanctoral",
-    "winnerKey": "05-08",
-    "rank": 4.0,
-    "name": "In Apparitione S. Michaëlis Archangeli",
+    "winner": "temporal",
+    "winnerKey": "pasc2-4",
+    "rank": 1.0,
+    "name": "Feria Quinta infra Hebdomadam II Post Pascha",
     "color": "white",
     "season": "easter",
-    "commemoration": "pasc2-4"
+    "commemoration": null
   },
   "2025-05-09": {
     "temporal": "pasc2-5",
@@ -5988,9 +5988,9 @@
     "sanctoral": "06-28",
     "winner": "sanctoral",
     "winnerKey": "06-28",
-    "rank": 3.0,
-    "name": "S. Irenæi Episcopi et Martyris",
-    "color": "red",
+    "rank": 5.0,
+    "name": "In Vigilia Ss. Petri et Pauli Apostolorum",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent02-6"
   },
@@ -9440,13 +9440,13 @@
   "2026-05-08": {
     "temporal": "pasc4-5",
     "sanctoral": "05-08",
-    "winner": "sanctoral",
-    "winnerKey": "05-08",
-    "rank": 4.0,
-    "name": "In Apparitione S. Michaëlis Archangeli",
+    "winner": "temporal",
+    "winnerKey": "pasc4-5",
+    "rank": 1.0,
+    "name": "Feria Sexta infra Hebdomadam IV Post Pascha",
     "color": "white",
     "season": "easter",
-    "commemoration": "pasc4-5"
+    "commemoration": null
   },
   "2026-05-09": {
     "temporal": "pasc4-6",
@@ -10166,13 +10166,13 @@
   "2026-07-13": {
     "temporal": "pent07-1",
     "sanctoral": "07-13",
-    "winner": "sanctoral",
-    "winnerKey": "07-13",
-    "rank": 2.2,
-    "name": "S. Anacleti Papæ et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent07-1",
+    "rank": 1.0,
+    "name": "Feria II Hebdomadæ 7 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent07-1"
+    "commemoration": null
   },
   "2026-07-14": {
     "temporal": "pent07-2",
@@ -10397,13 +10397,13 @@
   "2026-08-03": {
     "temporal": "pent10-1",
     "sanctoral": "08-03",
-    "winner": "sanctoral",
-    "winnerKey": "08-03",
-    "rank": 2.2,
-    "name": "De Inventione S. Stephani Protomartyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent10-1",
+    "rank": 1.0,
+    "name": "Feria secunda infra Hebdomadam X post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent10-1"
+    "commemoration": null
   },
   "2026-08-04": {
     "temporal": "pent10-2",
@@ -13093,12 +13093,12 @@
     "temporal": "pasc1-1",
     "sanctoral": "04-05",
     "winner": "sanctoral",
-    "winnerKey": "04-05",
-    "rank": 3.0,
-    "name": "S. Vincentii Ferrerii Confessoris",
+    "winnerKey": "03-25",
+    "rank": 7.0,
+    "name": "In Annuntiatione Beatissimæ Mariæ Virginis",
     "color": "white",
     "season": "easter",
-    "commemoration": "pasc1-1"
+    "commemoration": "04-05"
   },
   "2027-04-06": {
     "temporal": "pasc1-2",
@@ -13455,13 +13455,13 @@
   "2027-05-08": {
     "temporal": "pasc5-6",
     "sanctoral": "05-08",
-    "winner": "sanctoral",
-    "winnerKey": "05-08",
-    "rank": 4.0,
-    "name": "In Apparitione S. Michaëlis Archangeli",
+    "winner": "temporal",
+    "winnerKey": "pasc5-6",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam V Post Pascha",
     "color": "white",
     "season": "easter",
-    "commemoration": "pasc5-6"
+    "commemoration": null
   },
   "2027-05-09": {
     "temporal": "pasc6-0",
@@ -14018,9 +14018,9 @@
     "sanctoral": "06-28",
     "winner": "sanctoral",
     "winnerKey": "06-28",
-    "rank": 3.0,
-    "name": "S. Irenæi Episcopi et Martyris",
-    "color": "red",
+    "rank": 5.0,
+    "name": "In Vigilia Ss. Petri et Pauli Apostolorum",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent06-1"
   },
@@ -14181,13 +14181,13 @@
   "2027-07-13": {
     "temporal": "pent08-2",
     "sanctoral": "07-13",
-    "winner": "sanctoral",
-    "winnerKey": "07-13",
-    "rank": 2.2,
-    "name": "S. Anacleti Papæ et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent08-2",
+    "rank": 1.0,
+    "name": "Feria Tertia Hebdomadæ 8 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent08-2"
+    "commemoration": null
   },
   "2027-07-14": {
     "temporal": "pent08-3",
@@ -14412,13 +14412,13 @@
   "2027-08-03": {
     "temporal": "pent11-2",
     "sanctoral": "08-03",
-    "winner": "sanctoral",
-    "winnerKey": "08-03",
-    "rank": 2.2,
-    "name": "De Inventione S. Stephani Protomartyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent11-2",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam XI post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent11-2"
+    "commemoration": null
   },
   "2027-08-04": {
     "temporal": "pent11-3",
@@ -16942,13 +16942,13 @@
   "2028-03-20": {
     "temporal": "quad3-1",
     "sanctoral": "03-20",
-    "winner": "temporal",
-    "winnerKey": "quad3-1",
-    "rank": 3.9,
-    "name": "Feria Secunda infra Hebdomadam III in Quadragesima",
-    "color": "violet",
+    "winner": "sanctoral",
+    "winnerKey": "03-19",
+    "rank": 6.0,
+    "name": "S. Joseph Sponsi B.M.V. Confessoris",
+    "color": "white",
     "season": "lent",
-    "commemoration": null
+    "commemoration": "quad3-1"
   },
   "2028-03-21": {
     "temporal": "quad3-2",
@@ -17481,13 +17481,13 @@
   "2028-05-08": {
     "temporal": "pasc3-1",
     "sanctoral": "05-08",
-    "winner": "sanctoral",
-    "winnerKey": "05-08",
-    "rank": 4.0,
-    "name": "In Apparitione S. Michaëlis Archangeli",
+    "winner": "temporal",
+    "winnerKey": "pasc3-1",
+    "rank": 1.0,
+    "name": "Feria Secunda infra Hebdomadam III Post Pascha",
     "color": "white",
     "season": "easter",
-    "commemoration": "pasc3-1"
+    "commemoration": null
   },
   "2028-05-09": {
     "temporal": "pasc3-2",
@@ -18044,9 +18044,9 @@
     "sanctoral": "06-28",
     "winner": "sanctoral",
     "winnerKey": "06-28",
-    "rank": 3.0,
-    "name": "S. Irenæi Episcopi et Martyris",
-    "color": "red",
+    "rank": 5.0,
+    "name": "In Vigilia Ss. Petri et Pauli Apostolorum",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent03-3"
   },
@@ -18207,13 +18207,13 @@
   "2028-07-13": {
     "temporal": "pent05-4",
     "sanctoral": "07-13",
-    "winner": "sanctoral",
-    "winnerKey": "07-13",
-    "rank": 2.2,
-    "name": "S. Anacleti Papæ et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent05-4",
+    "rank": 1.0,
+    "name": "Feria quinta infra Hebdomadam V post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent05-4"
+    "commemoration": null
   },
   "2028-07-14": {
     "temporal": "pent05-5",
@@ -18438,13 +18438,13 @@
   "2028-08-03": {
     "temporal": "pent08-4",
     "sanctoral": "08-03",
-    "winner": "sanctoral",
-    "winnerKey": "08-03",
-    "rank": 2.2,
-    "name": "De Inventione S. Stephani Protomartyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent08-4",
+    "rank": 1.0,
+    "name": "Feria Quinta Hebdomadæ 8 post Pentecosten",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent08-4"
+    "commemoration": null
   },
   "2028-08-04": {
     "temporal": "pent08-5",
@@ -21177,13 +21177,13 @@
   "2029-04-09": {
     "temporal": "pasc1-1",
     "sanctoral": "04-09",
-    "winner": "temporal",
-    "winnerKey": "pasc1-1",
-    "rank": 1.0,
-    "name": "Feria Secunda infra Hebdomadam I post Octavam Paschæ",
+    "winner": "sanctoral",
+    "winnerKey": "03-25",
+    "rank": 7.0,
+    "name": "In Annuntiatione Beatissimæ Mariæ Virginis",
     "color": "white",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc1-1"
   },
   "2029-04-10": {
     "temporal": "pasc1-2",
@@ -21496,13 +21496,13 @@
   "2029-05-08": {
     "temporal": "pasc5-2",
     "sanctoral": "05-08",
-    "winner": "sanctoral",
-    "winnerKey": "05-08",
-    "rank": 4.0,
-    "name": "In Apparitione S. Michaëlis Archangeli",
+    "winner": "temporal",
+    "winnerKey": "pasc5-2",
+    "rank": 1.0,
+    "name": "Feria Tertia infra Hebdomadam V Post Pascha",
     "color": "white",
     "season": "easter",
-    "commemoration": "pasc5-2"
+    "commemoration": null
   },
   "2029-05-09": {
     "temporal": "pasc5-3",
@@ -22059,9 +22059,9 @@
     "sanctoral": "06-28",
     "winner": "sanctoral",
     "winnerKey": "06-28",
-    "rank": 3.0,
-    "name": "S. Irenæi Episcopi et Martyris",
-    "color": "red",
+    "rank": 5.0,
+    "name": "In Vigilia Ss. Petri et Pauli Apostolorum",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent05-4"
   },
@@ -22222,13 +22222,13 @@
   "2029-07-13": {
     "temporal": "pent07-5",
     "sanctoral": "07-13",
-    "winner": "sanctoral",
-    "winnerKey": "07-13",
-    "rank": 2.2,
-    "name": "S. Anacleti Papæ et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent07-5",
+    "rank": 1.0,
+    "name": "Feria sexta infra Hebdomadam VII post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent07-5"
+    "commemoration": null
   },
   "2029-07-14": {
     "temporal": "pent07-6",
@@ -22453,13 +22453,13 @@
   "2029-08-03": {
     "temporal": "pent10-5",
     "sanctoral": "08-03",
-    "winner": "sanctoral",
-    "winnerKey": "08-03",
-    "rank": 2.2,
-    "name": "De Inventione S. Stephani Protomartyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent10-5",
+    "rank": 1.0,
+    "name": "Feria sexta infra Hebdomadam X post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent10-5"
+    "commemoration": null
   },
   "2029-08-04": {
     "temporal": "pent10-6",
@@ -24174,7 +24174,7 @@
     "rank": 6.5,
     "name": "In Epiphania Domini",
     "color": "white",
-    "season": "ordinary",
+    "season": "christmas",
     "commemoration": "epi1-0"
   },
   "2030-01-07": {
@@ -26237,13 +26237,13 @@
   "2030-07-13": {
     "temporal": "pent04-6",
     "sanctoral": "07-13",
-    "winner": "sanctoral",
-    "winnerKey": "07-13",
-    "rank": 2.2,
-    "name": "S. Anacleti Papæ et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent04-6",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam IV post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent04-6"
+    "commemoration": null
   },
   "2030-07-14": {
     "temporal": "pent05-0",
@@ -26468,13 +26468,13 @@
   "2030-08-03": {
     "temporal": "pent07-6",
     "sanctoral": "08-03",
-    "winner": "sanctoral",
-    "winnerKey": "08-03",
-    "rank": 2.2,
-    "name": "De Inventione S. Stephani Protomartyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "pent07-6",
+    "rank": 1.0,
+    "name": "Sabbato infra Hebdomadam VII post Octavam Pentecostes",
+    "color": "green",
     "season": "ordinary",
-    "commemoration": "pent07-6"
+    "commemoration": null
   },
   "2030-08-04": {
     "temporal": "pent08-0",

@@ -608,6 +608,42 @@
     ]
   },
   {
+    "slug": "preface-sacred-heart",
+    "title": "Præfátio de Sacratíssimo Corde Jesu",
+    "english": "Preface of the Sacred Heart",
+    "label": "Præfátio",
+    "body": [
+      {
+        "lat": "℣. Per ómnia sǽcula sæculórum. ℟. Amen.\n℣. Dóminus vobíscum. ℟. Et cum spíritu tuo.\n℣. Sursum corda. ℟. Habémus ad Dóminum.\n℣. Grátias agámus Dómino Deo nostro. ℟. Dignum et justum est.",
+        "eng": "℣. World without end. ℟. Amen.\n℣. The Lord be with you. ℟. And with your spirit.\n℣. Lift up your hearts. ℟. We have lifted them up to the Lord.\n℣. Let us give thanks to the Lord our God. ℟. It is right and just.",
+        "rubric": "The priest sings or says the dialogue:"
+      },
+      {
+        "lat": "Vere dignum et justum est, ǽquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine sancte, Pater omnípotens, ætérne Deus: Qui Unigénitum tuum, in Cruce pendéntem, láncea mílitis transfígi voluísti: ut apértum Cor, divínæ largitátis sacrárium, torréntes nobis fúnderet miseratiónis et grátiæ: et, quod amóre nostri flagráre numquam déstitit, piis esset réquies et pœniténtibus pater et salútis refúgium. Et ídeo cum Angelis et Archángelis, cum Thronis et Dominatiónibus cumque omni milítia cœléstis exércitus hymnum glóriæ tuæ cánimus, sine fine dicéntes:",
+        "eng": "It is truly meet and just, right and for our salvation, that we should at all times, and in all places, give thanks unto Thee, O holy Lord, Father almighty, everlasting God; Who didst will that Thine only-begotten Son, while hanging on the cross, should be pierced by a soldier’s spear, that the Heart thus opened, a shrine of divine bounty, should pour out on us streams of mercy and grace, and that what never ceased to burn with love for us, should be a resting-place to the devout, and open as a refuge of salvation to the penitent. And therefore with Angels and Archangels, with Thrones and Dominations, and with all the hosts of the heavenly army, we sing the hymn of Thy glory, evermore saying:",
+        "rubric": "The proper Preface of the Sacred Heart:"
+      }
+    ]
+  },
+  {
+    "slug": "preface-christ-king",
+    "title": "Præfátio de D.N. Jesu Christi Rege",
+    "english": "Preface of Christ the King",
+    "label": "Præfátio",
+    "body": [
+      {
+        "lat": "℣. Per ómnia sǽcula sæculórum. ℟. Amen.\n℣. Dóminus vobíscum. ℟. Et cum spíritu tuo.\n℣. Sursum corda. ℟. Habémus ad Dóminum.\n℣. Grátias agámus Dómino Deo nostro. ℟. Dignum et justum est.",
+        "eng": "℣. World without end. ℟. Amen.\n℣. The Lord be with you. ℟. And with your spirit.\n℣. Lift up your hearts. ℟. We have lifted them up to the Lord.\n℣. Let us give thanks to the Lord our God. ℟. It is right and just.",
+        "rubric": "The priest sings or says the dialogue:"
+      },
+      {
+        "lat": "Vere dignum et justum est, ǽquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine sancte, Pater omnípotens, ætérne Deus: Qui unigénitum Fílium tuum, Dóminum nostrum Jesum Christum, Sacerdótem ætérnum et universórum Regem, óleo exsultatiónis unxísti: ut, seípsum in ara crucis hóstiam immaculátam et pacíficam ófferens, redemptiónis humánæ sacraménta perágeret: et suo subjéctis império ómnibus creatúris, ætérnum et universále regnum, imménsæ tuæ tráderet Majestáti. Regnum veritátis et vitæ: regnum sanctitátis et grátiæ: regnum justítiæ, amóris et pacis. Et ídeo cum Angelis et Archángelis, cum Thronis et Dominatiónibus, cumque omni milítia cœléstis exércitus hymnum glóriæ tuæ cánimus, sine fine dicéntes:",
+        "eng": "It is meet and just, right and for our salvation, that we should at all times, and in all places, give thanks unto Thee, O holy Lord, Father almighty, everlasting God; Who didst anoint, with the oil of gladness, Thine only-begotten Son, our Lord Jesus Christ, to be the eternal Priest and King of the universe; that by offering Himself a spotless Victim and peace-offering on the altar of the Cross, He might accomplish the mysteries of man’s redemption, and that having subjected all creatures to His dominion, He might present to Thine infinite Majesty an everlasting and universal Kingdom; a kingdom of truth and life; a kingdom of holiness and grace; a kingdom of justice, love, and peace. And therefore with Angels and Archangels, with Thrones and Dominations and with all the hosts of the heavenly army, we sing the hymn of Thy glory, evermore saying:",
+        "rubric": "The proper Preface of Christ the King:"
+      }
+    ]
+  },
+  {
     "slug": "sanctus",
     "label": "Missa Fidélium",
     "title": "Sanctus",

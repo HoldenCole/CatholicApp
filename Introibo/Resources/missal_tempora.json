@@ -8914,7 +8914,11 @@
   },
   "quad6-4": {
     "officium": "Feria Quinta in Cœna Domini",
-    "rank": 7
+    "rank": 7,
+    "rule": {
+      "gloria": true,
+      "commune": "Tempora/quad6-4m2"
+    }
   },
   "quad6-4m1": {
     "officium": "De missa chrismatis",
