@@ -144,6 +144,45 @@ fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = n
                 )
             }
 
+            // ---- Leonine Prayers Section ----
+            item {
+                SettingsSectionHeader(title = "Preces Leoninae · Leonine Prayers")
+            }
+            item {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 10.dp),
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = "Leonine Prayers",
+                            style = type.body,
+                            color = colors.primaryText,
+                        )
+                        Text(
+                            text = "Prayers after Low Mass (Leo XIII, 1884)",
+                            style = type.captionSm,
+                            color = colors.secondaryText,
+                        )
+                    }
+                    Switch(
+                        checked = showLeonine,
+                        onCheckedChange = { checked ->
+                            scope.launch { settingsRepo.setShowLeoninePrayers(checked) }
+                        },
+                        colors = SwitchDefaults.colors(
+                            checkedThumbColor = colors.sanctuaryRed,
+                            checkedTrackColor = colors.sanctuaryRed.copy(alpha = 0.3f),
+                        ),
+                    )
+                }
+                SettingsSectionFooter(
+                    text = "The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice.",
+                )
+            }
+
             // ---- Penance Section ----
             item {
                 SettingsSectionHeader(title = "Paenitentia · Penance Discipline")
