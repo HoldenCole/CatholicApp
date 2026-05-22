@@ -1490,7 +1490,42 @@
     "officium": "S. Romualdi Abbatis\n(sed rubrica 1930 aut rubrica 1963)\nS. Romualdi Abbatis O. N.",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C5"
+    },
+    "introitus": {
+      "lat": "Justus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)\nBonum est confitéri Dómino: et psállere nómini tuo, Altíssime.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nJustus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)",
+      "eng": "v. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. They that are planted in the house of the Lord shall flourish in the courts of the house of our God.\nv. To shew forth thy mercy in the morning, and thy truth in the night:"
+    },
+    "oratio": {
+      "lat": "Deus, qui nos beáti Pauli Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut, cujus natalítia cólimus, étiam actiónes imitémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O God, Who gladden us with the annual feast of blessed Paul, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Philippénses\nFratres: Quæ mihi fuérunt lucra, hæc arbitrátus sum propter Christum defriménta. Verúmtamen exístimo ómnia detriméntum esse propter eminéntem sciéntiam Jesu Christi, Dómini mei: propter quem ómnia detriméntum feci et árbitror ut stércora, ut Christum lucrifáciam et invéniar in illo, non habens meam justítiam, quæ ex lege est, sed illam, quæ ex fide est Christi Jesu: quæ ex Deo est justítia in fide, ad cognoscéndum illum, et virtútem resurrectiónis ejus, et societátem passiónum illíus: configurátus morti ejus: si quo modo occúrram ad resurrectiónem, quæ est ex mórtuis: non quod jam accéperim aut jam perféctus sim: sequor autem, si quo modo comprehéndam, in quo et comprehénsus sum a Christo Jesu.",
+      "eng": "Lesson from the letter of St. Paul the Apostle to the Philippians\nBrethren: The things that were gain to me, these, for the sake of Christ, I have counted loss. Nay more, I count everything loss because of the excelling knowledge of Jesus Christ, my Lord. For His sake I have suffered the loss of all things, and I count them as dung that I may gain Christ and be found in Him, not having a justice of my own, which is from the Law, but that which is from faith in Christ, the justice from God based upon faith; so that I may know Him and the power of His Resurrection and the fellowship of His sufferings: become like to Him in death, in the hope that somehow I may attain to the resurrection from the dead. Not that I have already obtained this, or already have been made perfect, but I press on hoping that I may lay hold of that for which Christ Jesus has laid hold of me.",
+      "ref": "Philipp 3:7-12"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Respóndens Jesus, dixit: Confíteor tibi, Pater, Dómine coeli et terræ, quia abscondísti hæc a sapiéntibus et prudéntibus, et revelásti ea párvulis. Ita, Pater: quóniam sic fuit plácitum ante te. Omnia mihi trádita sunt a Patre meo. Et nemo novit Fílium nisi Pater: neque Patrem quis novit nisi Fílius, et cui volúerit Fílius reveláre. Veníte ad me, omnes, qui laborátis et oneráti estis, et ego refíciam vos. Tóllite jugum meum super vos, et díscite a me, quia mitis sum et húmilis corde: et inveniétis réquiem animábus vestris. Jugum enim meum suáve est et onus meum leve.",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\nAt that time, Jesus spoke and said, I praise You, Father, Lord of heaven and earth, that You hid these things from the wise and prudent, and revealed them to little ones. Yes, Father, for such was Your good pleasure. All things have been delivered to Me by My Father; and no one knows the Son except the Father; nor does anyone know the Father except the Son, and him to whom the Son chooses to reveal Him. Come to Me, all you who labor and are burdened, and I will give you rest. Take My yoke upon you, and learn from Me, for I am meek and humble of heart; and you will find rest for your souls. For My yoke is easy, and My burden light.",
+      "ref": "Matt 11:25-30"
+    },
+    "offertorium": {
+      "lat": "In virtúte tua, Dómine, lætábitur justus, et super salutáre tuum exsultábit veheménter: desidérium ánimæ ejus tribuísti ei. (Allelúja.)",
+      "eng": "O Lord, in Your strength the just man is glad; in Your victory how greatly he rejoices! You have granted him his heart’s desire. (Alleluia.)"
+    },
+    "secreta": {
+      "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "We offer You sacrifices of praise, O Lord, in memory of Your Saints; trusting that by them we may be delivered from both present and future evils.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "communio": {
+      "lat": "Qui mihi mínistrat, me sequátur: et ubi sum ego, illic et miníster meus erit. (Allelúja.)",
+      "eng": "Whoever serves Me, let him follow Me; and where I am there also shall My servant be."
+    },
+    "postcommunio": {
+      "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Refreshed with heavenly food and drink, we humbly pray You, our God, that we also may be helped by his prayers in memory of whom we have partaken of these gifts.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "02-08": {
@@ -2755,7 +2790,40 @@
     "officium": "S. Leonis I Papæ Confessoris et Ecclesiæ Doctoris\n(sed rubrica 1570 aut rubrica 1617)\nS. Leonis I Papæ Confessoris",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C4"
+    },
+    "introitus": {
+      "lat": "In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)\nBonum est confitéri Dómino: et psállere nómini tuo, Altíssime.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nIn médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)",
+      "eng": "In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory.\nIt is good to give thanks to the Lord, to sing praise to Your name, Most High.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nIn the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory."
+    },
+    "oratio": {
+      "lat": "Ecclésiam tuam, quǽsumus, Dómine, grátia cœléstis amplíficet: quam beáti Joánnis Chrysóstomi Confessóris tui atque Pontíficis illustráre voluísti gloriósis méritis et doctrínis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "May heavenly grace, we beseech You, O Lord, prosper Your Church, which You mercifully enlightened by the blessed virtues and teachings of glorious and blessed John Chrysostom, Your Confessor and Bishop.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum\nCaríssime: Testíficor coram Deo, et Jesu Christo, qui judicatúrus est vivos et mórtuos, per advéntum ipsíus et regnum ejus: prǽdica verbum, insta opportúne, importune: árgue, óbsecra, íncrepa in omni patiéntia, et doctrína. Erit enim tempus, cum sanam doctrínam non sustinébunt, sed ad sua desidéria, coacervábunt sibi magistros, pruriéntes áuribus, et a veritáte quidem audítum avértent, ad fábulas autem converténtur. Tu vero vígila, in ómnibus labóra, opus fac Evangelístæ, ministérium tuum ímple. Sóbrius esto. Ego enim jam delíbor, et tempus resolutiónis meæ instat. Bonum certámen certávi, cursum consummávi, fidem servávi. In réliquo repósita est mihi coróna justítiæ, quam reddet mihi Dóminus in illa die, justus judex: non solum autem mihi, sed et iis, qui díligunt advéntum ejus.",
+      "eng": "Lesson from the second letter of St. Paul the Apostle to Timothy\nBeloved: I charge you, in the sight of God and Christ Jesus, Who will judge the living and the dead by His coming and by His kingdom, preach the word, be urgent in season, out of season; reprove, entreat, rebuke with all patience and teaching. For there will come a time when they will not endure the sound doctrine; but having itching ears, will heap up to themselves teachers according to their lusts, and they will turn away their hearing from the truth and turn aside rather to fables. But be watchful in all things, bear with tribulation patiently, work as a preacher of the Gospel, fulfill your ministry. As for me, I am already being poured out in sacrifice, and the time of my deliverance is at hand. I have fought the good fight, I have finished the course, I have kept the faith. For the rest, there is laid up for me a crown of justice, which the Lord, the just Judge, will give to me in that day; yet not to me only, but also to those who love His coming."
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\nAt that time Jesus said to His disciples: “You are the salt of the earth; but if the salt loses its strength, what shall it be salted with? It is no longer of any use but to be thrown out and trodden underfoot by men. You are the light of the world. A city set on a mountain cannot be hidden. Neither do men light a lamp and put it under the measure, but upon the lampstand, so as to give light to all in the house. Even so let your light shine before men, in order that they may see your good works and give glory to your Father in heaven. Do not think that I have come to destroy the Law or the Prophets. I have not come to destroy, but to fulfill. For amen I say to you, till heaven and earth pass away, not one jot or one tittle shall be lost from the Law till all things have been accomplished. Therefore whoever does away with one of these least commandments, and so teaches men, shall be called least in the kingdom of heaven; but whoever carries them out and teaches them, he shall be called great in the kingdom of heaven."
+    },
+    "offertorium": {
+      "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
+      "eng": "The just shall flourish like the palm tree; like a cedar of Libanus shall he grow."
+    },
+    "secreta": {
+      "lat": "Sancti N. Pontíficis tui atque Doctóris nobis, Dómine, pia non desit orátio: quæ et múnera nostra concíliet; et tuam nobis indulgéntiam semper obtíneat.",
+      "eng": "May the pious prayer of holy N. thy Bishop and illustrious Doctor be not wanting to us, O Lord, but make our offerings acceptable to thee and ever win for us thy mercy."
+    },
+    "communio": {
+      "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
+      "eng": "The faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)"
+    },
+    "postcommunio": {
+      "lat": "Ut nobis, Dómine, tua sacrifícia dent salútem: beátus N. Póntifex tuus et Doctor egrégius, quǽsumus, precátor accédat.",
+      "eng": "May blessed N. thy Bishop and illustrious Doctor intercede for us, O Lord, that this thy sacrifice may obtain for us salvation."
     }
   },
   "04-13": {
@@ -8018,7 +8086,40 @@
     "rank": 4,
     "rule": {
       "gloria": true,
-      "preface": "Maria"
+      "preface": "Maria",
+      "commune": "Commune/C6"
+    },
+    "introitus": {
+      "lat": "Loquébar de testimóniis tuis in conspéctu regum, et non confundébar: et meditábar in mandátis tuis, quæ diléxi nimis. (Allelúja, allelúja.)\nBeáti immaculáti in via: qui ámbulant in lege Dómini.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nLoquébar de testimóniis tuis in conspéctu regum, et non confundébar: et meditábar in mandátis tuis, quæ diléxi nimis. (Allelúja, allelúja.)",
+      "eng": "I will speak of Your decrees before kings without being ashamed. And I will delight in Your commands, which I love exceedingly.\nHappy are they whose way is blameless, who walk in the law of the Lord.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nI will speak of Your decrees before kings without being ashamed. And I will delight in Your commands, which I love exceedingly."
+    },
+    "oratio": {
+      "lat": "Da, quǽsumus, omnípotens Deus: ut, qui beátæ Priscæ Vírginis et Mártyris tuæ natalítia cólimus; et ánnua sollemnitáte lætémur, et tantæ fídei proficiámus exémplo.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant, we beseech You, O almighty God, that we who celebrate the anniversary of the death of blessed Prisca, Your Virgin and Martyr, may rejoice on her yearly feast-day and benefit by the example of such great faith. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "lectio": {
+      "lat": "Léctio libri Sapiéntiæ\nConfitébor tibi, Dómine, Rex, et collaudábo te Deum, Salvatórem meum. Confitébor nómini tuo: quóniam adjútor et protéctor factus es mihi, et liberásti corpus meum a perditióne, a láqueo línguæ iníquæ et a lábiis operántium mendácium, et in conspéctu astántium factus es mihi adjutor. Et liberasti me secúndum multitúdinem misericórdiæ nóminis tui a rugiéntibus, præparátis ad escam, de mánibus quæréntium ánimam meam, et de portis tribulatiónum, quæ circumdedérunt me: a pressúra flammæ, quæ circúmdedit me, et in médio ignis non sum æstuáta: de altitúdine ventris inferi, et a lingua coinquináta, et a verbo mendácii, a rege iníquo, et a lingua injústa: laudábit usque ad mortem ánima mea Dóminum: quóniam éruis sustinéntes te, et líberas eos de mánibus géntium, Dómine, Deus noster.",
+      "eng": "Lesson from the book of Ecclesiasticus\nI will give You thanks, O Lord, O King; I will praise You, O God my Saviour! I will make known Your name; for You have preserved my body from destruction, from the scourge of a slanderous tongue, and from lips that went over to falsehood; and in the sight of those who stood by, You have been my helper. And You have delivered me, according to the multitude of the mercy of Your name, from those who did roar, prepared to devour; from the power of those who sought my life, and from the gates of afflictions which compassed me about; from the oppression of the flames which hemmed me in on every side, and in the midst of the fire I was not burnt; from the deep belly of the nether world, and from an unclean tongue, and from lying words, from an unjust king, and from dishonest tongues. My soul shall praise the Lord even to death; because You, O Lord, our God, save those who take refuge in You, and rescue them out of the hands of the nations."
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile erit regnum coelórum decem virgínibus: quæ, accipiéntes lámpades suas, exiérunt óbviam sponso et sponsæ. Quinque autem ex eis erant fátuæ, et quinque prudéntes: sed quinque fátuæ, accéptis lampádibus, non sumpsérunt óleum secum: prudéntes vero accepérunt óleum in vasis suis cum lampádibus. Moram autem faciénte sponso, dormitavérunt omnes et dormiérunt. Média autem nocte clamor factus est: Ecce, sponsus venit, exíte óbviam ei. Tunc surrexérunt omnes vírgines íllæ, et ornavérunt lámpades suas. Fátuæ autem sapiéntibus dixérunt: Date nobis de óleo vestro: quia lámpades nostræ exstinguúntur. Respondérunt prudéntes, dicéntes: Ne forte non suffíciat nobis et vobis, ite pótius ad vendéntes, et émite vobis. Dum autem irent émere, venit sponsus: et quæ parátæ erant, intravérunt cum eo ad núptias, et clausa est jánua. Novíssime vero véniunt et réliquæ vírgines, dicéntes: Dómine, Dómine, áperi nobis. At ille respóndens, ait: Amen, dico vobis, néscio vos. Vigiláte ítaque, quia nescítis diem neque horam.",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\nAt that time Jesus spoke this parable to His disciples: “Then will the kingdom of heaven be like ten virgins who took their lamps and went forth to meet the bridegroom and the bride. Five of them were foolish and five wise. But the five foolish, when they took their lamps, took no oil with them, while the wise did take oil in their vessels with the lamps. Then as the bridegroom was long in coming, they all became drowsy and slept. And at midnight a cry arose, 'Behold, the bridegroom is coming, go forth to meet him!' Then all those virgins arose and trimmed their lamps. And the foolish said to the wise, 'Give us some of your oil, for our lamps are going out.' The wise answered, saying, 'Lest there may not be enough for us and for you, go rather to those who sell it, and buy some for yourselves.' Now while they were gone to buy it, the bridegroom came; and those who were ready went in with him to the marriage feast, and the door was shut. Finally there came also the other virgins, who said, 'Sir, sir, open the door for us!' But he answered and said, 'Amen I say to you, I do not know you.' Watch therefore, for you know neither the day nor the hour.”"
+    },
+    "offertorium": {
+      "lat": "Afferéntur Regi Vírgines post eam: próximæ ejus afferéntur tibi in lætítia et exsultatióne: adducéntur in templum Regi Dómino. (Allelúja.)",
+      "eng": "Behind her the virgins of her train are brought to the King. They are borne in to You with gladness and joy; they enter the palace of the Lord, the King."
+    },
+    "secreta": {
+      "lat": "Hæc hóstia, quǽsumus, Dómine, quam Sanctórum tuórum natalítia recenséntes offérimus, et víncula nostræ pravitátis absólvat, et tuæ nobis misericórdiæ dona concíliet.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "We beseech You, O Lord, that this sacrificial gift which we offer in commemorating the death of Your saints, may loose the bonds of our sins and bestow upon us the gifts of Your mercy. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "communio": {
+      "lat": "Confundántur supérbi, quia injúste iniquitátem fecérunt in me: ego autem in mandátis tuis exercébor, in tuis justificatiónibus, ut non confúndar. (Allelúja.)",
+      "eng": "Let the proud be put to shame for oppressing me unjustly; I will meditate on Your precepts, on Your statutes, that I be not put to shame."
+    },
+    "postcommunio": {
+      "lat": "Quǽsumus, Dómine, salutáribus repléti mystériis: ut, cujus sollémnia celebrámus, ejus oratiónibus adjuvémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Filled with the sacrament of salvation, we beseech You, O Lord, to help us by the prayers of her whose feast we are celebrating. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "08-06": {
@@ -8477,7 +8578,40 @@
     "officium": "S. Claræ Virginis",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C6"
+    },
+    "introitus": {
+      "lat": "Loquébar de testimóniis tuis in conspéctu regum, et non confundébar: et meditábar in mandátis tuis, quæ diléxi nimis. (Allelúja, allelúja.)\nBeáti immaculáti in via: qui ámbulant in lege Dómini.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nLoquébar de testimóniis tuis in conspéctu regum, et non confundébar: et meditábar in mandátis tuis, quæ diléxi nimis. (Allelúja, allelúja.)",
+      "eng": "I will speak of Your decrees before kings without being ashamed. And I will delight in Your commands, which I love exceedingly.\nHappy are they whose way is blameless, who walk in the law of the Lord.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nI will speak of Your decrees before kings without being ashamed. And I will delight in Your commands, which I love exceedingly."
+    },
+    "oratio": {
+      "lat": "Da, quǽsumus, omnípotens Deus: ut, qui beátæ Priscæ Vírginis et Mártyris tuæ natalítia cólimus; et ánnua sollemnitáte lætémur, et tantæ fídei proficiámus exémplo.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant, we beseech You, O almighty God, that we who celebrate the anniversary of the death of blessed Prisca, Your Virgin and Martyr, may rejoice on her yearly feast-day and benefit by the example of such great faith. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "lectio": {
+      "lat": "Léctio libri Sapiéntiæ\nConfitébor tibi, Dómine, Rex, et collaudábo te Deum, Salvatórem meum. Confitébor nómini tuo: quóniam adjútor et protéctor factus es mihi, et liberásti corpus meum a perditióne, a láqueo línguæ iníquæ et a lábiis operántium mendácium, et in conspéctu astántium factus es mihi adjutor. Et liberasti me secúndum multitúdinem misericórdiæ nóminis tui a rugiéntibus, præparátis ad escam, de mánibus quæréntium ánimam meam, et de portis tribulatiónum, quæ circumdedérunt me: a pressúra flammæ, quæ circúmdedit me, et in médio ignis non sum æstuáta: de altitúdine ventris inferi, et a lingua coinquináta, et a verbo mendácii, a rege iníquo, et a lingua injústa: laudábit usque ad mortem ánima mea Dóminum: quóniam éruis sustinéntes te, et líberas eos de mánibus géntium, Dómine, Deus noster.",
+      "eng": "Lesson from the book of Ecclesiasticus\nI will give You thanks, O Lord, O King; I will praise You, O God my Saviour! I will make known Your name; for You have preserved my body from destruction, from the scourge of a slanderous tongue, and from lips that went over to falsehood; and in the sight of those who stood by, You have been my helper. And You have delivered me, according to the multitude of the mercy of Your name, from those who did roar, prepared to devour; from the power of those who sought my life, and from the gates of afflictions which compassed me about; from the oppression of the flames which hemmed me in on every side, and in the midst of the fire I was not burnt; from the deep belly of the nether world, and from an unclean tongue, and from lying words, from an unjust king, and from dishonest tongues. My soul shall praise the Lord even to death; because You, O Lord, our God, save those who take refuge in You, and rescue them out of the hands of the nations."
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile erit regnum coelórum decem virgínibus: quæ, accipiéntes lámpades suas, exiérunt óbviam sponso et sponsæ. Quinque autem ex eis erant fátuæ, et quinque prudéntes: sed quinque fátuæ, accéptis lampádibus, non sumpsérunt óleum secum: prudéntes vero accepérunt óleum in vasis suis cum lampádibus. Moram autem faciénte sponso, dormitavérunt omnes et dormiérunt. Média autem nocte clamor factus est: Ecce, sponsus venit, exíte óbviam ei. Tunc surrexérunt omnes vírgines íllæ, et ornavérunt lámpades suas. Fátuæ autem sapiéntibus dixérunt: Date nobis de óleo vestro: quia lámpades nostræ exstinguúntur. Respondérunt prudéntes, dicéntes: Ne forte non suffíciat nobis et vobis, ite pótius ad vendéntes, et émite vobis. Dum autem irent émere, venit sponsus: et quæ parátæ erant, intravérunt cum eo ad núptias, et clausa est jánua. Novíssime vero véniunt et réliquæ vírgines, dicéntes: Dómine, Dómine, áperi nobis. At ille respóndens, ait: Amen, dico vobis, néscio vos. Vigiláte ítaque, quia nescítis diem neque horam.",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\nAt that time Jesus spoke this parable to His disciples: “Then will the kingdom of heaven be like ten virgins who took their lamps and went forth to meet the bridegroom and the bride. Five of them were foolish and five wise. But the five foolish, when they took their lamps, took no oil with them, while the wise did take oil in their vessels with the lamps. Then as the bridegroom was long in coming, they all became drowsy and slept. And at midnight a cry arose, 'Behold, the bridegroom is coming, go forth to meet him!' Then all those virgins arose and trimmed their lamps. And the foolish said to the wise, 'Give us some of your oil, for our lamps are going out.' The wise answered, saying, 'Lest there may not be enough for us and for you, go rather to those who sell it, and buy some for yourselves.' Now while they were gone to buy it, the bridegroom came; and those who were ready went in with him to the marriage feast, and the door was shut. Finally there came also the other virgins, who said, 'Sir, sir, open the door for us!' But he answered and said, 'Amen I say to you, I do not know you.' Watch therefore, for you know neither the day nor the hour.”"
+    },
+    "offertorium": {
+      "lat": "Afferéntur Regi Vírgines post eam: próximæ ejus afferéntur tibi in lætítia et exsultatióne: adducéntur in templum Regi Dómino. (Allelúja.)",
+      "eng": "Behind her the virgins of her train are brought to the King. They are borne in to You with gladness and joy; they enter the palace of the Lord, the King."
+    },
+    "secreta": {
+      "lat": "Hæc hóstia, quǽsumus, Dómine, quam Sanctórum tuórum natalítia recenséntes offérimus, et víncula nostræ pravitátis absólvat, et tuæ nobis misericórdiæ dona concíliet.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "We beseech You, O Lord, that this sacrificial gift which we offer in commemorating the death of Your saints, may loose the bonds of our sins and bestow upon us the gifts of Your mercy. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "communio": {
+      "lat": "Confundántur supérbi, quia injúste iniquitátem fecérunt in me: ego autem in mandátis tuis exercébor, in tuis justificatiónibus, ut non confúndar. (Allelúja.)",
+      "eng": "Let the proud be put to shame for oppressing me unjustly; I will meditate on Your precepts, on Your statutes, that I be not put to shame."
+    },
+    "postcommunio": {
+      "lat": "Quǽsumus, Dómine, salutáribus repléti mystériis: ut, cujus sollémnia celebrámus, ejus oratiónibus adjuvémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Filled with the sacrament of salvation, we beseech You, O Lord, to help us by the prayers of her whose feast we are celebrating. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "08-12oct": {
@@ -8803,7 +8937,42 @@
     "officium": "S. Hyacinthi Confessoris",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C5"
+    },
+    "introitus": {
+      "lat": "Justus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)\nBonum est confitéri Dómino: et psállere nómini tuo, Altíssime.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nJustus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)",
+      "eng": "v. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. They that are planted in the house of the Lord shall flourish in the courts of the house of our God.\nv. To shew forth thy mercy in the morning, and thy truth in the night:"
+    },
+    "oratio": {
+      "lat": "Deus, qui nos beáti Pauli Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut, cujus natalítia cólimus, étiam actiónes imitémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O God, Who gladden us with the annual feast of blessed Paul, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Philippénses\nFratres: Quæ mihi fuérunt lucra, hæc arbitrátus sum propter Christum defriménta. Verúmtamen exístimo ómnia detriméntum esse propter eminéntem sciéntiam Jesu Christi, Dómini mei: propter quem ómnia detriméntum feci et árbitror ut stércora, ut Christum lucrifáciam et invéniar in illo, non habens meam justítiam, quæ ex lege est, sed illam, quæ ex fide est Christi Jesu: quæ ex Deo est justítia in fide, ad cognoscéndum illum, et virtútem resurrectiónis ejus, et societátem passiónum illíus: configurátus morti ejus: si quo modo occúrram ad resurrectiónem, quæ est ex mórtuis: non quod jam accéperim aut jam perféctus sim: sequor autem, si quo modo comprehéndam, in quo et comprehénsus sum a Christo Jesu.",
+      "eng": "Lesson from the letter of St. Paul the Apostle to the Philippians\nBrethren: The things that were gain to me, these, for the sake of Christ, I have counted loss. Nay more, I count everything loss because of the excelling knowledge of Jesus Christ, my Lord. For His sake I have suffered the loss of all things, and I count them as dung that I may gain Christ and be found in Him, not having a justice of my own, which is from the Law, but that which is from faith in Christ, the justice from God based upon faith; so that I may know Him and the power of His Resurrection and the fellowship of His sufferings: become like to Him in death, in the hope that somehow I may attain to the resurrection from the dead. Not that I have already obtained this, or already have been made perfect, but I press on hoping that I may lay hold of that for which Christ Jesus has laid hold of me.",
+      "ref": "Philipp 3:7-12"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Respóndens Jesus, dixit: Confíteor tibi, Pater, Dómine coeli et terræ, quia abscondísti hæc a sapiéntibus et prudéntibus, et revelásti ea párvulis. Ita, Pater: quóniam sic fuit plácitum ante te. Omnia mihi trádita sunt a Patre meo. Et nemo novit Fílium nisi Pater: neque Patrem quis novit nisi Fílius, et cui volúerit Fílius reveláre. Veníte ad me, omnes, qui laborátis et oneráti estis, et ego refíciam vos. Tóllite jugum meum super vos, et díscite a me, quia mitis sum et húmilis corde: et inveniétis réquiem animábus vestris. Jugum enim meum suáve est et onus meum leve.",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\nAt that time, Jesus spoke and said, I praise You, Father, Lord of heaven and earth, that You hid these things from the wise and prudent, and revealed them to little ones. Yes, Father, for such was Your good pleasure. All things have been delivered to Me by My Father; and no one knows the Son except the Father; nor does anyone know the Father except the Son, and him to whom the Son chooses to reveal Him. Come to Me, all you who labor and are burdened, and I will give you rest. Take My yoke upon you, and learn from Me, for I am meek and humble of heart; and you will find rest for your souls. For My yoke is easy, and My burden light.",
+      "ref": "Matt 11:25-30"
+    },
+    "offertorium": {
+      "lat": "In virtúte tua, Dómine, lætábitur justus, et super salutáre tuum exsultábit veheménter: desidérium ánimæ ejus tribuísti ei. (Allelúja.)",
+      "eng": "O Lord, in Your strength the just man is glad; in Your victory how greatly he rejoices! You have granted him his heart’s desire. (Alleluia.)"
+    },
+    "secreta": {
+      "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "We offer You sacrifices of praise, O Lord, in memory of Your Saints; trusting that by them we may be delivered from both present and future evils.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "communio": {
+      "lat": "Qui mihi mínistrat, me sequátur: et ubi sum ego, illic et miníster meus erit. (Allelúja.)",
+      "eng": "Whoever serves Me, let him follow Me; and where I am there also shall My servant be."
+    },
+    "postcommunio": {
+      "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Refreshed with heavenly food and drink, we humbly pray You, our God, that we also may be helped by his prayers in memory of whom we have partaken of these gifts.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "08-17bmv": {
@@ -9071,7 +9240,40 @@
     "officium": "S. Bernardi Abbatis et Ecclesiæ Doctoris\n(sed rubrica 1930 aut rubrica 1963)\nS. Bernardi, Abbatis et Ecclesiæ Doctoris, O. N.\n(sed rubrica 1570 aut rubrica 1617)\nS. Bernardi Abbatis",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C4a"
+    },
+    "introitus": {
+      "lat": "In médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)\nBonum est confitéri Dómino: et psállere nómini tuo, Altíssime.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nIn médio Ecclésiæ apéruit os ejus: et implévit eum Dóminus spíritu sapiéntiæ et intelléctus: stolam glóriæ índuit eum. (Allelúja, allelúja.)",
+      "eng": "In the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory.\nIt is good to give thanks to the Lord, to sing praise to Your name, Most High.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nIn the midst of the assembly he opened his mouth; and the Lord filled him with the spirit of wisdom and understanding; He clothed him with a robe of glory."
+    },
+    "oratio": {
+      "lat": "Ecclésiam tuam, quǽsumus, Dómine, grátia cœléstis amplíficet: quam beáti Joánnis Chrysóstomi Confessóris tui atque Pontíficis illustráre voluísti gloriósis méritis et doctrínis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "May heavenly grace, we beseech You, O Lord, prosper Your Church, which You mercifully enlightened by the blessed virtues and teachings of glorious and blessed John Chrysostom, Your Confessor and Bishop.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum\nCaríssime: Testíficor coram Deo, et Jesu Christo, qui judicatúrus est vivos et mórtuos, per advéntum ipsíus et regnum ejus: prǽdica verbum, insta opportúne, importune: árgue, óbsecra, íncrepa in omni patiéntia, et doctrína. Erit enim tempus, cum sanam doctrínam non sustinébunt, sed ad sua desidéria, coacervábunt sibi magistros, pruriéntes áuribus, et a veritáte quidem audítum avértent, ad fábulas autem converténtur. Tu vero vígila, in ómnibus labóra, opus fac Evangelístæ, ministérium tuum ímple. Sóbrius esto. Ego enim jam delíbor, et tempus resolutiónis meæ instat. Bonum certámen certávi, cursum consummávi, fidem servávi. In réliquo repósita est mihi coróna justítiæ, quam reddet mihi Dóminus in illa die, justus judex: non solum autem mihi, sed et iis, qui díligunt advéntum ejus.",
+      "eng": "Lesson from the second letter of St. Paul the Apostle to Timothy\nBeloved: I charge you, in the sight of God and Christ Jesus, Who will judge the living and the dead by His coming and by His kingdom, preach the word, be urgent in season, out of season; reprove, entreat, rebuke with all patience and teaching. For there will come a time when they will not endure the sound doctrine; but having itching ears, will heap up to themselves teachers according to their lusts, and they will turn away their hearing from the truth and turn aside rather to fables. But be watchful in all things, bear with tribulation patiently, work as a preacher of the Gospel, fulfill your ministry. As for me, I am already being poured out in sacrifice, and the time of my deliverance is at hand. I have fought the good fight, I have finished the course, I have kept the faith. For the rest, there is laid up for me a crown of justice, which the Lord, the just Judge, will give to me in that day; yet not to me only, but also to those who love His coming."
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis: Vos estis sal terræ. Quod si sal evanúerit, in quo saliétur? Ad níhilum valet ultra, nisi ut mittátur foras, et conculcétur ab homínibus. Vos estis lux mundi. Non potest cívitas abscóndi supra montem pósita. Neque accéndunt lucérnam, et ponunt eam sub módio, sed super candelábrum, ut lúceat ómnibus, qui in domo sunt. Sic luceat lux vestra coram homínibus, ut vídeant ópera vestra bona, et gloríficent Patrem vestrum, qui in cœlis est. Nolíte putáre, quóniam veni sólvere legem aut prophétas: non veni sólvere, sed adimplére. Amen, quippe dico vobis, donec tránseat cœlum et terra, jota unum aut unus apex non præteríbit a lege, donec ómnia fiant. Qui ergo sólverit unum de mandátis istis mínimis, et docúerit sic hómines, mínimus vocábitur in regno cœlórum: qui autem fécerit et docúerit, hic magnus vocábitur in regno cœlórum.",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\nAt that time Jesus said to His disciples: “You are the salt of the earth; but if the salt loses its strength, what shall it be salted with? It is no longer of any use but to be thrown out and trodden underfoot by men. You are the light of the world. A city set on a mountain cannot be hidden. Neither do men light a lamp and put it under the measure, but upon the lampstand, so as to give light to all in the house. Even so let your light shine before men, in order that they may see your good works and give glory to your Father in heaven. Do not think that I have come to destroy the Law or the Prophets. I have not come to destroy, but to fulfill. For amen I say to you, till heaven and earth pass away, not one jot or one tittle shall be lost from the Law till all things have been accomplished. Therefore whoever does away with one of these least commandments, and so teaches men, shall be called least in the kingdom of heaven; but whoever carries them out and teaches them, he shall be called great in the kingdom of heaven."
+    },
+    "offertorium": {
+      "lat": "Justus ut palma florébit: sicut cedrus, quæ in Líbano est, multiplicábitur. (Allelúja.)",
+      "eng": "The just shall flourish like the palm tree; like a cedar of Libanus shall he grow."
+    },
+    "secreta": {
+      "lat": "Sancti N. Pontíficis tui atque Doctóris nobis, Dómine, pia non desit orátio: quæ et múnera nostra concíliet; et tuam nobis indulgéntiam semper obtíneat.",
+      "eng": "May the pious prayer of holy N. thy Bishop and illustrious Doctor be not wanting to us, O Lord, but make our offerings acceptable to thee and ever win for us thy mercy."
+    },
+    "communio": {
+      "lat": "Fidélis servus et prudens, quem constítuit dóminus super famíliam suam: ut det illis in témpore trítici mensúram. (Allelúja.)",
+      "eng": "The faithful and prudent servant whom the master will set over his household to give them their ration of grain in due time. (Allelúja.)"
+    },
+    "postcommunio": {
+      "lat": "Ut nobis, Dómine, tua sacrifícia dent salútem: beátus N. Póntifex tuus et Doctor egrégius, quǽsumus, precátor accédat.",
+      "eng": "May blessed N. thy Bishop and illustrious Doctor intercede for us, O Lord, that this thy sacrifice may obtain for us salvation."
     }
   },
   "08-20bmv": {
@@ -10021,7 +10223,44 @@
   },
   "09-10": {
     "officium": "S. Nicolai de Tolentino Confessoris",
-    "rank": 3
+    "rank": 3,
+    "rule": {
+      "commune": "Commune/C5"
+    },
+    "introitus": {
+      "lat": "Justus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)\nBonum est confitéri Dómino: et psállere nómini tuo, Altíssime.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nJustus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)",
+      "eng": "v. The just shall flourish like the palm tree: he shall grow up like the cedar of Libanus. They that are planted in the house of the Lord shall flourish in the courts of the house of our God.\nv. To shew forth thy mercy in the morning, and thy truth in the night:"
+    },
+    "oratio": {
+      "lat": "Deus, qui nos beáti Pauli Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut, cujus natalítia cólimus, étiam actiónes imitémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O God, Who gladden us with the annual feast of blessed Paul, Your Confessor, mercifully grant that, while honoring the anniversary of his death, we may also imitate his deeds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "lectio": {
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Philippénses\nFratres: Quæ mihi fuérunt lucra, hæc arbitrátus sum propter Christum defriménta. Verúmtamen exístimo ómnia detriméntum esse propter eminéntem sciéntiam Jesu Christi, Dómini mei: propter quem ómnia detriméntum feci et árbitror ut stércora, ut Christum lucrifáciam et invéniar in illo, non habens meam justítiam, quæ ex lege est, sed illam, quæ ex fide est Christi Jesu: quæ ex Deo est justítia in fide, ad cognoscéndum illum, et virtútem resurrectiónis ejus, et societátem passiónum illíus: configurátus morti ejus: si quo modo occúrram ad resurrectiónem, quæ est ex mórtuis: non quod jam accéperim aut jam perféctus sim: sequor autem, si quo modo comprehéndam, in quo et comprehénsus sum a Christo Jesu.",
+      "eng": "Lesson from the letter of St. Paul the Apostle to the Philippians\nBrethren: The things that were gain to me, these, for the sake of Christ, I have counted loss. Nay more, I count everything loss because of the excelling knowledge of Jesus Christ, my Lord. For His sake I have suffered the loss of all things, and I count them as dung that I may gain Christ and be found in Him, not having a justice of my own, which is from the Law, but that which is from faith in Christ, the justice from God based upon faith; so that I may know Him and the power of His Resurrection and the fellowship of His sufferings: become like to Him in death, in the hope that somehow I may attain to the resurrection from the dead. Not that I have already obtained this, or already have been made perfect, but I press on hoping that I may lay hold of that for which Christ Jesus has laid hold of me.",
+      "ref": "Philipp 3:7-12"
+    },
+    "evangelium": {
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Respóndens Jesus, dixit: Confíteor tibi, Pater, Dómine coeli et terræ, quia abscondísti hæc a sapiéntibus et prudéntibus, et revelásti ea párvulis. Ita, Pater: quóniam sic fuit plácitum ante te. Omnia mihi trádita sunt a Patre meo. Et nemo novit Fílium nisi Pater: neque Patrem quis novit nisi Fílius, et cui volúerit Fílius reveláre. Veníte ad me, omnes, qui laborátis et oneráti estis, et ego refíciam vos. Tóllite jugum meum super vos, et díscite a me, quia mitis sum et húmilis corde: et inveniétis réquiem animábus vestris. Jugum enim meum suáve est et onus meum leve.",
+      "eng": "Continuation + of the Holy Gospel according to Matthew\nAt that time, Jesus spoke and said, I praise You, Father, Lord of heaven and earth, that You hid these things from the wise and prudent, and revealed them to little ones. Yes, Father, for such was Your good pleasure. All things have been delivered to Me by My Father; and no one knows the Son except the Father; nor does anyone know the Father except the Son, and him to whom the Son chooses to reveal Him. Come to Me, all you who labor and are burdened, and I will give you rest. Take My yoke upon you, and learn from Me, for I am meek and humble of heart; and you will find rest for your souls. For My yoke is easy, and My burden light.",
+      "ref": "Matt 11:25-30"
+    },
+    "offertorium": {
+      "lat": "In virtúte tua, Dómine, lætábitur justus, et super salutáre tuum exsultábit veheménter: desidérium ánimæ ejus tribuísti ei. (Allelúja.)",
+      "eng": "O Lord, in Your strength the just man is glad; in Your victory how greatly he rejoices! You have granted him his heart’s desire. (Alleluia.)"
+    },
+    "secreta": {
+      "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "We offer You sacrifices of praise, O Lord, in memory of Your Saints; trusting that by them we may be delivered from both present and future evils.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "communio": {
+      "lat": "Qui mihi mínistrat, me sequátur: et ubi sum ego, illic et miníster meus erit. (Allelúja.)",
+      "eng": "Whoever serves Me, let him follow Me; and where I am there also shall My servant be."
+    },
+    "postcommunio": {
+      "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Refreshed with heavenly food and drink, we humbly pray You, our God, that we also may be helped by his prayers in memory of whom we have partaken of these gifts.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    }
   },
   "09-10bmv": {
     "officium": "Tertia die infra Octavam S. Nativitatis Beatæ Mariæ Virginis",
@@ -10454,6 +10693,9 @@
     "introitus": {
       "lat": "Sapiéntiam Sanctórum narrent populi, et laudes eórum núntiet ecclésia: nómina autem eórum vivent in sǽculum sǽculi.\nExsultáte, justi, in Dómino: rectos decet collaudátio.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nSapiéntiam Sanctórum narrent populi, et laudes eórum núntiet ecclésia: nómina autem eórum vivent in sǽculum sǽculi.",
       "eng": "Let the people shew forth their wisdom, and the church declare their praise. Their name liveth unto generation and generation.\nRejoice in the Lord, O ye just: praise becometh the upright.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nLet the people shew forth their wisdom, and the church declare their praise. Their name liveth unto generation and generation."
+    },
+    "rule": {
+      "commune": "Commune/C3a"
     }
   },
   "09-20": {
@@ -10723,7 +10965,8 @@
     "officium": "Ss. Cypriani et Justinæ Virginis, Martyrum",
     "rank": 1,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C3a"
     },
     "oratio": {
       "lat": "Beatórum Mártyrum Cypriáni et Justínæ nos, Dómine, fóveant continuáta pæsídia: quia non désinis propítius intuéri, quos tálibus auxíliis concésseris adjuvári.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -11764,7 +12007,8 @@
     "officium": "S. Petri de Alcantara Confessoris",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C3a"
     },
     "introitus": {
       "lat": "Justus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)\nBonum est confitéri Dómino: et psállere nómini tuo, Altíssime.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nJustus ut palma florébit: sicut cedrus Líbani multiplicábitur: plantátus in domo Dómini: in átriis domus Dei nostri. (Allelúja, allelúja.)",
@@ -13250,7 +13494,8 @@
     "officium": "S. Elisabeth Viduæ",
     "rank": 3,
     "rule": {
-      "gloria": true
+      "gloria": true,
+      "commune": "Commune/C6"
     },
     "oratio": {
       "lat": "Tuórum corda fidélium, Deus miserátor, illústra: et, beátæ Elisabeth précibus gloriósis; fac nos próspera mundi despícere, et cœlésti semper consolatióne gaudére.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -13344,7 +13589,8 @@
     "rank": 4,
     "rule": {
       "gloria": true,
-      "preface": "Maria"
+      "preface": "Maria",
+      "commune": "Commune/C6"
     },
     "oratio": {
       "lat": "Deus, qui beátam Maríam semper Vírginem, Spíritus Sancti habitáculum, hodiérna die in templo præsentári voluísti: præsta, quǽsumus; ut, ejus intercessióne, in templo glóriæ tuæ præsentári mereámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen. eiusdem",

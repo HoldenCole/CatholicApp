@@ -6844,13 +6844,13 @@
   "2025-09-14": {
     "temporal": "pent14-0",
     "sanctoral": "09-14",
-    "winner": "temporal",
-    "winnerKey": "pent14-0",
-    "rank": 5.0,
-    "name": "Dominica XIV Post Pentecosten",
+    "winner": "sanctoral",
+    "winnerKey": "09-14",
+    "rank": 5.5,
+    "name": "In Exaltatione Sanctæ Crucis",
     "color": "red",
     "season": "ordinary",
-    "commemoration": "09-14"
+    "commemoration": "pent14-0"
   },
   "2025-09-15": {
     "temporal": "pent14-1",
@@ -7856,13 +7856,13 @@
   "2025-12-15": {
     "temporal": "adv3-1",
     "sanctoral": "12-15",
-    "winner": "sanctoral",
-    "winnerKey": "12-15",
-    "rank": 4.0,
-    "name": "In Octava Immaculatæ Concept. Beatæ Mariæ Virgini",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "adv3-1",
+    "rank": 1.0,
+    "name": "Feria infra Hebdomadam Adventus",
+    "color": "violet",
     "season": "advent",
-    "commemoration": "adv3-1"
+    "commemoration": null
   },
   "2025-12-16": {
     "temporal": "adv3-2",
@@ -11871,13 +11871,13 @@
   "2026-12-15": {
     "temporal": "adv3-2",
     "sanctoral": "12-15",
-    "winner": "sanctoral",
-    "winnerKey": "12-15",
-    "rank": 4.0,
-    "name": "In Octava Immaculatæ Concept. Beatæ Mariæ Virgini",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "adv3-2",
+    "rank": 1.0,
+    "name": "Feria infra Hebdomadam Adventus",
+    "color": "violet",
     "season": "advent",
-    "commemoration": "adv3-2"
+    "commemoration": null
   },
   "2026-12-16": {
     "temporal": "adv3-3",
@@ -19912,13 +19912,13 @@
   "2028-12-15": {
     "temporal": "adv2-5",
     "sanctoral": "12-15",
-    "winner": "sanctoral",
-    "winnerKey": "12-15",
-    "rank": 4.0,
-    "name": "In Octava Immaculatæ Concept. Beatæ Mariæ Virgini",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "adv2-5",
+    "rank": 1.0,
+    "name": "Feria infra Hebdomadam Adventus",
+    "color": "violet",
     "season": "advent",
-    "commemoration": "adv2-5"
+    "commemoration": null
   },
   "2028-12-16": {
     "temporal": "adv2-6",
@@ -23927,13 +23927,13 @@
   "2029-12-15": {
     "temporal": "adv2-6",
     "sanctoral": "12-15",
-    "winner": "sanctoral",
-    "winnerKey": "12-15",
-    "rank": 4.0,
-    "name": "In Octava Immaculatæ Concept. Beatæ Mariæ Virgini",
-    "color": "white",
+    "winner": "temporal",
+    "winnerKey": "adv2-6",
+    "rank": 1.0,
+    "name": "Feria infra Hebdomadam Adventus",
+    "color": "violet",
     "season": "advent",
-    "commemoration": "adv2-6"
+    "commemoration": null
   },
   "2029-12-16": {
     "temporal": "adv3-0",
