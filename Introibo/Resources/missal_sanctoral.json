@@ -336,7 +336,7 @@
     }
   },
   "01-14": {
-    "officium": "S. Hilarii Episcopi Confessoris Ecclesiæ Doctoris\n(sed rubrica 1570 aut rubrica 1617)\nS. Hilarii Episcopi Confessoris",
+    "officium": "S. Hilarii Episcopi Confessoris Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true,
@@ -426,7 +426,7 @@
     }
   },
   "01-15cc": {
-    "officium": "S. Mauri Abbatis\n(sed rubrica 1930)\nS. Mauri Abbatis O. N.",
+    "officium": "S. Mauri Abbatis",
     "rank": 1
   },
   "01-16": {
@@ -1487,7 +1487,7 @@
     }
   },
   "02-07": {
-    "officium": "S. Romualdi Abbatis\n(sed rubrica 1930 aut rubrica 1963)\nS. Romualdi Abbatis O. N.",
+    "officium": "S. Romualdi Abbatis",
     "rank": 3,
     "rule": {
       "gloria": true,
@@ -1611,7 +1611,7 @@
     "rank": 1
   },
   "02-10": {
-    "officium": "S. Scholasticæ Virginis\n(sed rubrica 1930 aut rubrica 1963)\nS. Scholasticæ Virginis, Sororis S. P. N. Benedicti",
+    "officium": "S. Scholasticæ Virginis",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -1831,7 +1831,7 @@
     "rank": 1
   },
   "02-22": {
-    "officium": "In Cathedra S. Petri Apostoli Antiochiæ\n\n[Officium] (rubrica 196 aut rubrica 1930)\nIn Cathedra S. Petri Apostoli",
+    "officium": "In Cathedra S. Petri Apostoli Antiochiæ",
     "rank": 4,
     "rule": {
       "gloria": true,
@@ -1912,7 +1912,7 @@
     }
   },
   "02-23r": {
-    "officium": "S. Petri Damiani Episcopi Confessoris et Ecclesiæ Doctoris\n(sed rubrica 1930 aut rubrica 1963)\nS. Petri Damiani Episcopi, Confessoris et Ecclesiæ Doctoris O. N.",
+    "officium": "S. Petri Damiani Episcopi Confessoris et Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -2129,7 +2129,7 @@
     }
   },
   "03-07": {
-    "officium": "S. Thomæ de Aquino Confessoris et Ecclesiæ Doctoris\n(sed rubrica 1570 aut rubrica 1617)\nS. Thomæ de Aquino Confessoris",
+    "officium": "S. Thomæ de Aquino Confessoris et Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -2208,7 +2208,7 @@
     }
   },
   "03-09": {
-    "officium": "S. Franciscæ Romanæ Viduæ\n(sed rubrica monastica)\nS. Franciscæ Romanæ Viduæ O. N.",
+    "officium": "S. Franciscæ Romanæ Viduæ",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -2787,7 +2787,7 @@
     }
   },
   "04-11": {
-    "officium": "S. Leonis I Papæ Confessoris et Ecclesiæ Doctoris\n(sed rubrica 1570 aut rubrica 1617)\nS. Leonis I Papæ Confessoris",
+    "officium": "S. Leonis I Papæ Confessoris et Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true,
@@ -3261,7 +3261,7 @@
     }
   },
   "04-30": {
-    "officium": "S. Catharinæ Senensis Virginis\n(sed rubrica cisterciensis)\nS. Catharinæ Senensis, Virginis (1965)",
+    "officium": "S. Catharinæ Senensis Virginis",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -3871,7 +3871,7 @@
     }
   },
   "05-09": {
-    "officium": "S. Gregorii Nazianzeni Episcopi Confessoris et Ecclesiæ Doctoris\n(sed rubrica tridentina)\nS. Gregorii Nazianzeni Episcopi Confessoris",
+    "officium": "S. Gregorii Nazianzeni Episcopi Confessoris et Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -4404,7 +4404,7 @@
     }
   },
   "05-25": {
-    "officium": "S. Gregorii VII Papæ et Confessoris\n(sed rubrica 1930 aut rubrica 1963)\nS. Gregorii VII Papæ et Confessoris O. N.",
+    "officium": "S. Gregorii VII Papæ et Confessoris",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -5204,7 +5204,7 @@
     }
   },
   "06-13": {
-    "officium": "S. Antonii de Padua Confessoris\n(sed rubrica 195 aut rubrica 196)\nS. Antonii de Padua Confessoris et Ecclesiæ Doctoris",
+    "officium": "S. Antonii de Padua Confessoris",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -6910,7 +6910,7 @@
     }
   },
   "07-14": {
-    "officium": "S. Bonaventuræ Episcopi Confessoris et Ecclesiæ Doctoris\n(sed rubrica 1570)\nS. Bonaventuræ Episcopi Confessoris",
+    "officium": "S. Bonaventuræ Episcopi Confessoris et Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -9237,7 +9237,7 @@
     }
   },
   "08-20": {
-    "officium": "S. Bernardi Abbatis et Ecclesiæ Doctoris\n(sed rubrica 1930 aut rubrica 1963)\nS. Bernardi, Abbatis et Ecclesiæ Doctoris, O. N.\n(sed rubrica 1570 aut rubrica 1617)\nS. Bernardi Abbatis",
+    "officium": "S. Bernardi Abbatis et Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true,
@@ -13757,7 +13757,7 @@
     }
   },
   "11-24": {
-    "officium": "S. Joannis a Cruce Confessoris et Ecclesiæ Doctoris\n(sed rubrica tridentina)\nS. Joannis a Cruce Confessoris",
+    "officium": "S. Joannis a Cruce Confessoris et Ecclesiæ Doctoris",
     "rank": 3,
     "rule": {
       "gloria": true
@@ -14561,7 +14561,7 @@
     }
   },
   "12-16": {
-    "officium": "S. Eusebii Episcopi et Martyris\n(sed rubrica 1617)\nS. Eusebii Vercellensis Episcopi et Martyris",
+    "officium": "S. Eusebii Episcopi et Martyris",
     "rank": 2,
     "rule": {
       "gloria": true

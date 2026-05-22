@@ -1153,7 +1153,7 @@
     "rank": 1
   },
   "nat02": {
-    "officium": "Ad Romános, cap. 5\n(sed rubrica 1955 aut rubrica 196 aut rubrica altovadensis)\nDie Secunda Januarii",
+    "officium": "Ad Romános, cap. 5",
     "rank": 1,
     "rule": {
       "gloria": true,
@@ -1162,7 +1162,7 @@
     }
   },
   "nat03": {
-    "officium": "Ad Romános, cap. 6\n(sed rubrica 1955 aut rubrica 196 aut rubrica altovadensis)\nDie Tertia Januarii",
+    "officium": "Ad Romános, cap. 6",
     "rank": 1,
     "rule": {
       "gloria": true,
@@ -1171,7 +1171,7 @@
     }
   },
   "nat04": {
-    "officium": "Ad Romános, cap. 7\n(sed rubrica 1955 aut rubrica 196 aut rubrica altovadensis)\nDie Quarta Januarii",
+    "officium": "Ad Romános, cap. 7",
     "rank": 1,
     "rule": {
       "gloria": true,
@@ -1180,7 +1180,7 @@
     }
   },
   "nat05": {
-    "officium": "Ad Romános, cap. 8\n(sed rubrica 1955 aut rubrica 196)\nDie Quinta Januarii",
+    "officium": "Ad Romános, cap. 8",
     "rank": 1,
     "rule": {
       "gloria": true,
@@ -2847,7 +2847,7 @@
     }
   },
   "pasc5-3": {
-    "officium": "Feria Quarta in Rogationibus, In Vigilia Ascensionis\n\n[Officium] (rubrica 196)\nIn Vigilia Ascensionis",
+    "officium": "Feria Quarta in Rogationibus, In Vigilia Ascensionis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -2948,14 +2948,14 @@
     }
   },
   "pasc5-5": {
-    "officium": "Feria VI infra Octavam Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria VI post Ascensionem",
+    "officium": "Feria VI infra Octavam Ascensionis",
     "rank": 2,
     "rule": {
       "gloria": true
     }
   },
   "pasc5-6": {
-    "officium": "Sabbato infra Octavam Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nSabbato post Ascensionem",
+    "officium": "Sabbato infra Octavam Ascensionis",
     "rank": 2,
     "rule": {
       "gloria": true
@@ -3005,7 +3005,7 @@
     }
   },
   "pasc6-0": {
-    "officium": "Dominica infra Octavam Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nDominica post Ascensionem",
+    "officium": "Dominica infra Octavam Ascensionis",
     "rank": 5,
     "rule": {
       "gloria": true,
@@ -3055,7 +3055,7 @@
     }
   },
   "pasc6-1": {
-    "officium": "Feria II infra Octavam Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria II post Ascensionem",
+    "officium": "Feria II infra Octavam Ascensionis",
     "rank": 2,
     "rule": {
       "gloria": true
@@ -3098,7 +3098,7 @@
     }
   },
   "pasc6-2": {
-    "officium": "Feria III infra Octavam Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria III post Ascensionem",
+    "officium": "Feria III infra Octavam Ascensionis",
     "rank": 2,
     "rule": {
       "gloria": true
@@ -3148,7 +3148,7 @@
     }
   },
   "pasc6-3": {
-    "officium": "Feria IV infra Octavam Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria IV post Ascensionem",
+    "officium": "Feria IV infra Octavam Ascensionis",
     "rank": 2,
     "rule": {
       "gloria": true
@@ -3191,7 +3191,7 @@
     }
   },
   "pasc6-4": {
-    "officium": "In Octava Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria V post Ascensionem",
+    "officium": "In Octava Ascensionis",
     "rank": 4,
     "rule": {
       "gloria": true
@@ -3248,7 +3248,7 @@
     }
   },
   "pasc6-5": {
-    "officium": "Feria VI post Octavam Ascensionis\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria VI infra Hebdomadam post Ascensionem",
+    "officium": "Feria VI post Octavam Ascensionis",
     "rank": 2,
     "rule": {
       "gloria": true,
@@ -4248,14 +4248,14 @@
     }
   },
   "pent01-5": {
-    "officium": "Feria Sexta infra octavam Corporis Christi\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria VI infra Hebdomadam I post Octavam Pentecostes",
+    "officium": "Feria Sexta infra octavam Corporis Christi",
     "rank": 5,
     "rule": {
       "preface": "Nat"
     }
   },
   "pent01-6": {
-    "officium": "Sabbato infra octavam Corporis Christi\n\n[Officium] (rubrica 196 aut rubrica 1955)\nSabbato infra Hebdomadam I post Octavam Pentecostes",
+    "officium": "Sabbato infra octavam Corporis Christi",
     "rank": 5,
     "rule": {
       "preface": "Nat"
@@ -4313,28 +4313,28 @@
     }
   },
   "pent02-1": {
-    "officium": "Feria Secunda infra Octavam Corporis Christi\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria II infra Hebdomadam II post Octavam Pentecostes",
+    "officium": "Feria Secunda infra Octavam Corporis Christi",
     "rank": 5,
     "rule": {
       "preface": "Nat"
     }
   },
   "pent02-2": {
-    "officium": "Feria Tertia infra Octavam Corporis Christi\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria III infra Hebdomadam II post Octavam Pentecostes",
+    "officium": "Feria Tertia infra Octavam Corporis Christi",
     "rank": 5,
     "rule": {
       "preface": "Nat"
     }
   },
   "pent02-3": {
-    "officium": "Feria Quarta infra Octavam Corporis Christi\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria IV infra Hebdomadam II post Octavam Pentecostes",
+    "officium": "Feria Quarta infra Octavam Corporis Christi",
     "rank": 5,
     "rule": {
       "preface": "Nat"
     }
   },
   "pent02-4": {
-    "officium": "In Octava Sanctissimi Corporis Christi\n\n[Officium] (rubrica 196 aut rubrica 1955)\nFeria V infra Hebdomadam II post Octavam Pentecostes",
+    "officium": "In Octava Sanctissimi Corporis Christi",
     "rank": 6,
     "rule": {
       "preface": "Nat"
@@ -9056,7 +9056,7 @@
     }
   },
   "quad6-1": {
-    "officium": "Feria Secunda Majoris Hebdomadæ\n\n[Officium] (rubrica 1955 aut rubrica 196)\nFeria Secunda Hebdomadæ Sanctæ",
+    "officium": "Feria Secunda Majoris Hebdomadæ",
     "rank": 7,
     "rule": {
       "gloria": false,
@@ -9106,7 +9106,7 @@
     }
   },
   "quad6-2": {
-    "officium": "Feria Tertia Majoris Hebdomadæ\n\n[Officium] (rubrica 1955 aut rubrica 196)\nFeria Tertia Hebdomadæ Sanctæ",
+    "officium": "Feria Tertia Majoris Hebdomadæ",
     "rank": 7,
     "rule": {
       "gloria": false,
@@ -9156,7 +9156,7 @@
     }
   },
   "quad6-3": {
-    "officium": "Feria Quarta Majoris Hebdomadæ\n\n[Officium] (rubrica 1955 aut rubrica 196)\nFeria Quarta Hebdomadæ Sanctæ",
+    "officium": "Feria Quarta Majoris Hebdomadæ",
     "rank": 7,
     "rule": {
       "gloria": false,
@@ -10253,7 +10253,7 @@
     }
   },
   "quad6-3r": {
-    "officium": "Feria Quarta Majoris Hebdomadæ\n\n[Officium] (rubrica 1955 aut rubrica 196)\nFeria Quarta Hebdomadæ Sanctæ",
+    "officium": "Feria Quarta Majoris Hebdomadæ",
     "rank": 7,
     "rule": {
       "gloria": false,
