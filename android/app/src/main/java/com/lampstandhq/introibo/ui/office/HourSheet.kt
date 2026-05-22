@@ -27,11 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.Hour
@@ -43,9 +39,10 @@ import com.lampstandhq.introibo.ui.theme.IntroiboType
 
 /**
  * Full liturgy for a single canonical hour, shown as a full-screen
- * bottom sheet. Renders all part types: vr, hymn, psalm, antiphon,
- * capitulum, canticle, pater, collect, closing, confiteor, responsory,
- * marian, heading, reading.
+ * bottom sheet. Renders all part types from the Divine Office import:
+ * vr, hymn, psalm, antiphon, capitulum, canticle, pater, collect,
+ * closing, confiteor, responsory, responsory_breve, marian, heading,
+ * reading, lectio, preces, invitatory, suppressed.
  *
  * Port of iOS Introibo/Screens/Office/HourView.swift.
  */
@@ -421,115 +418,88 @@ private fun ResponsoryBlock(p: Hour.Part) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
-    // Structured responsory (Matins-style with separate v1/r1/v2/r2 fields)
-    if (p.v1Lat != null) {
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(6.dp),
-        ) {
-            SmallLabel(text = p.label ?: "Respónsum", color = colors.sanctuaryRed)
-
-            p.ref?.let { ref ->
-                Text(text = ref, style = type.captionSm, color = colors.goldLeaf)
-            }
-
-            if (p.v1Lat != null && p.v1Eng != null) {
-                BilingualLine(lat = p.v1Lat, eng = p.v1Eng, sideBySide = true)
-            }
-            if (p.r1Lat != null && p.r1Eng != null) {
-                Spacer(modifier = Modifier.height(4.dp))
-                BilingualLine(lat = p.r1Lat, eng = p.r1Eng, sideBySide = true)
-            }
-            if (p.v2Lat != null && p.v2Eng != null) {
-                Spacer(modifier = Modifier.height(6.dp))
-                BilingualLine(lat = p.v2Lat, eng = p.v2Eng, sideBySide = true)
-            }
-            if (p.r2Lat != null && p.r2Eng != null) {
-                Spacer(modifier = Modifier.height(4.dp))
-                BilingualLine(lat = p.r2Lat, eng = p.r2Eng, sideBySide = true)
-            }
-        }
-    } else {
-        // Text-block responsory (Responsorium Breve at minor hours).
-        // Format: lines prefixed with ℟.br., ℟., ℣., or &Gloria,
-        // rendered with R. bold and V. indented.
-        ResponsoryBreveBlock(p)
-    }
-}
-
-/**
- * Short responsory (Responsorium Breve) used at Prime, Terce, Sext, None,
- * and Compline. The text arrives as a single block in [Hour.Part.lat] /
- * [Hour.Part.eng] with lines separated by newlines and prefixed with
- * ℟.br., ℟., ℣., or &Gloria markers.
- *
- * Styling: ℟ lines bold, ℣ lines indented, Gloria Patri in italic.
- */
-@Composable
-private fun ResponsoryBreveBlock(p: Hour.Part) {
-    val colors = IntroiboTheme.colors
-    val type = IntroiboType.current
-
     Column(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: "Responsorium Breve", color = colors.sanctuaryRed)
+        SmallLabel(text = p.label ?: "Responsórium", color = colors.sanctuaryRed)
 
         p.ref?.let { ref ->
             Text(text = ref, style = type.captionSm, color = colors.goldLeaf)
         }
 
-        val lat = p.lat ?: ""
-        val eng = p.eng ?: ""
-
-        if (lat.isNotEmpty() && eng.isNotEmpty()) {
-            val latLines = lat.lines().filter { it.isNotBlank() }
-            val engLines = eng.lines().filter { it.isNotBlank() }
+        // Full Matins responsory (v1/r1/v2/r2 structured fields)
+        if (p.v1Lat != null) {
+            if (p.v1Lat != null && p.v1Eng != null) {
+                ResponsoryLine(lat = p.v1Lat, eng = p.v1Eng, indent = false)
+            }
+            if (p.r1Lat != null && p.r1Eng != null) {
+                Spacer(modifier = Modifier.height(4.dp))
+                ResponsoryLine(lat = p.r1Lat, eng = p.r1Eng, indent = true)
+            }
+            if (p.v2Lat != null && p.v2Eng != null) {
+                Spacer(modifier = Modifier.height(6.dp))
+                ResponsoryLine(lat = p.v2Lat, eng = p.v2Eng, indent = true)
+            }
+            if (p.r2Lat != null && p.r2Eng != null) {
+                Spacer(modifier = Modifier.height(4.dp))
+                ResponsoryLine(lat = p.r2Lat, eng = p.r2Eng, indent = false)
+            }
+        }
+        // Short / Breve responsory (lat/eng inline with ℟./℣. lines)
+        else if (p.lat != null && p.eng != null) {
+            val latLines = p.lat.split("\n").filter { it.isNotBlank() }
+            val engLines = p.eng.split("\n").filter { it.isNotBlank() }
             val count = maxOf(latLines.size, engLines.size)
 
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 for (i in 0 until count) {
                     val latLine = latLines.getOrElse(i) { "" }
                     val engLine = engLines.getOrElse(i) { "" }
-                    val isVersicle = latLine.startsWith("℣.") || latLine.startsWith("V.")
-                    val isGloria = latLine.startsWith("&Gloria") ||
-                            latLine.contains("Glória Patri")
-
-                    Column(
-                        modifier = if (isVersicle) {
-                            Modifier.padding(start = 16.dp)
-                        } else {
-                            Modifier
-                        },
-                    ) {
-                        if (isGloria) {
-                            // Gloria Patri line in italic
-                            BilingualLine(
-                                lat = latLine.removePrefix("&Gloria").trim()
-                                    .ifEmpty { "Glória Patri, et Fílio, et Spirítui Sancto." },
-                                eng = engLine.removePrefix("&Gloria").trim()
-                                    .ifEmpty { "Glory be to the Father, and to the Son, and to the Holy Ghost." },
-                                sideBySide = true,
-                            )
-                        } else {
-                            BilingualLine(
-                                lat = latLine,
-                                eng = engLine,
-                                sideBySide = true,
-                            )
-                        }
-                    }
+                    val isVersicle = latLine.startsWith("℣") || latLine.startsWith("V.")
+                    ResponsoryLine(lat = latLine, eng = engLine, indent = isVersicle)
                 }
             }
-        } else if (lat.isNotEmpty()) {
-            Text(
-                text = lat.strippingEm,
-                style = type.body,
-                color = colors.primaryText,
-                lineHeight = type.body.fontSize * 1.2f,
-            )
         }
+    }
+}
+
+/**
+ * Short responsory (responsory_breve) at small hours. Compact R/V format
+ * with indented versicles. Mirrors iOS responsoryBreveBlock.
+ */
+@Composable
+private fun ResponsoryBreveBlock(p: Hour.Part) {
+    val colors = IntroiboTheme.colors
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        SmallLabel(text = p.label ?: "Resp. Breve", color = colors.sanctuaryRed)
+
+        if (p.lat != null && p.eng != null) {
+            val latLines = p.lat.split("\n").filter { it.isNotBlank() }
+            val engLines = p.eng.split("\n").filter { it.isNotBlank() }
+            val count = maxOf(latLines.size, engLines.size)
+
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                for (i in 0 until count) {
+                    val latLine = latLines.getOrElse(i) { "" }
+                    val engLine = engLines.getOrElse(i) { "" }
+                    val isVersicle = latLine.startsWith("℣") || latLine.startsWith("V.")
+                    ResponsoryLine(lat = latLine, eng = engLine, indent = isVersicle)
+                }
+            }
+        }
+    }
+}
+
+/** Single responsory line, optionally indented for versicles. */
+@Composable
+private fun ResponsoryLine(lat: String, eng: String, indent: Boolean) {
+    Box(modifier = if (indent) Modifier.padding(start = 16.dp) else Modifier) {
+        BilingualLine(lat = lat, eng = eng, sideBySide = true)
     }
 }
 
@@ -642,6 +612,83 @@ private fun ReadingBlock(p: Hour.Part) {
 }
 
 /**
+ * Dedicated capitulum (short chapter) rendering with scripture reference
+ * displayed in italic below the label. Mirrors iOS capitulumBlock.
+ */
+@Composable
+private fun CapitulumBlock(p: Hour.Part) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        SmallLabel(text = p.label ?: "Capítulum", color = colors.sanctuaryRed)
+
+        p.ref?.let { ref ->
+            Text(
+                text = ref,
+                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                color = colors.goldLeaf,
+            )
+        }
+
+        if (p.lat != null && p.eng != null) {
+            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true)
+        } else {
+            p.lat?.let { lat ->
+                Text(
+                    text = lat.strippingEm,
+                    style = type.body,
+                    color = colors.primaryText,
+                    lineHeight = type.body.fontSize * 1.2f,
+                )
+            }
+            p.eng?.let { eng ->
+                Text(
+                    text = eng.strippingEm,
+                    style = type.bodySm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.secondaryText,
+                    lineHeight = type.bodySm.fontSize * 1.15f,
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Invitatory rendering: antiphon + Psalm 94 with the invitatory antiphon
+ * woven between psalm sections. Falls back to simple bilingual text if the
+ * part lacks verses. Mirrors iOS invitatoryBlock.
+ */
+@Composable
+private fun InvitatoryBlock(p: Hour.Part) {
+    val colors = IntroiboTheme.colors
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        SmallLabel(text = p.label ?: "Invitatorium", color = colors.sanctuaryRed)
+
+        if (p.lat != null && p.eng != null) {
+            Box(modifier = Modifier.padding(start = 10.dp)) {
+                BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true)
+            }
+        }
+
+        p.verses?.let { verses ->
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                verses.forEach { v ->
+                    BilingualLine(lat = v.lat, eng = v.eng, sideBySide = true)
+                }
+            }
+        }
+    }
+}
+
+/**
  * Preces Feriales block — rendered for the Kyrie, Pater Noster,
  * versicle sets, psalm, and concluding versicles that the
  * [com.lampstandhq.introibo.data.content.OfficeAssembler] inserts
@@ -652,7 +699,6 @@ private fun ReadingBlock(p: Hour.Part) {
 @Composable
 private fun PrecesBlock(p: Hour.Part) {
     val colors = IntroiboTheme.colors
-    val type = IntroiboType.current
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -671,16 +717,20 @@ private fun PrecesBlock(p: Hour.Part) {
 
         // Text-mode (Kyrie, Pater Noster, psalm text)
         if (p.lat != null && p.eng != null && p.verses == null) {
-            val latParts = p.lat.split("\n\n")
-            val engParts = p.eng.split("\n\n")
-            val count = maxOf(latParts.size, engParts.size)
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            val latLines = p.lat.split("\n").filter { it.isNotBlank() }
+            val engLines = p.eng.split("\n").filter { it.isNotBlank() }
+            val count = maxOf(latLines.size, engLines.size)
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 for (i in 0 until count) {
-                    BilingualLine(
-                        lat = latParts.getOrElse(i) { "" },
-                        eng = engParts.getOrElse(i) { "" },
-                        sideBySide = true,
-                    )
+                    val latLine = latLines.getOrElse(i) { "" }
+                    val engLine = engLines.getOrElse(i) { "" }
+                    if (latLine.isNotEmpty() || engLine.isNotEmpty()) {
+                        BilingualLine(
+                            lat = latLine,
+                            eng = engLine,
+                            sideBySide = true,
+                        )
+                    }
                 }
             }
         }
