@@ -9399,5 +9399,188 @@
       "lat": "Cœléstis vitæ múnere vegetáti, quǽsumus, Dómine: ut, quod est nobis in præsénti vita mystérium, fiat æternitátis auxílium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Fortified by the Bread of Life, we beseech You, O Lord, that what is a sacrament in this life may become a help to life eternal.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
+  },
+  "nat08": {
+    "officium": "Feria infra Octavam Nativitatis",
+    "rank": 1.5,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Tempora/nat1-0"
+    }
+  },
+  "nat09": {
+    "officium": "Feria infra Octavam Nativitatis",
+    "rank": 1.5,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Tempora/nat1-0"
+    }
+  },
+  "nat10": {
+    "officium": "Feria infra Octavam Nativitatis",
+    "rank": 1.5,
+    "rule": {
+      "gloria": true,
+      "preface": "Nat",
+      "commune": "Tempora/nat1-0"
+    }
+  },
+  "pent25-0": {
+    "officium": "Dominica XXV Post Pentecosten (Epiphaniæ resumpta)",
+    "rank": 5,
+    "rule": {
+      "gloria": true,
+      "credo": true,
+      "preface": "Trinitate",
+      "commune": "Tempora/pentepi3-0"
+    }
+  },
+  "pent26-0": {
+    "officium": "Dominica XXVI Post Pentecosten (Epiphaniæ resumpta)",
+    "rank": 5,
+    "rule": {
+      "gloria": true,
+      "credo": true,
+      "preface": "Trinitate",
+      "commune": "Tempora/pentepi4-0"
+    }
+  },
+  "pent27-0": {
+    "officium": "Dominica XXVII Post Pentecosten (Epiphaniæ resumpta)",
+    "rank": 5,
+    "rule": {
+      "gloria": true,
+      "credo": true,
+      "preface": "Trinitate",
+      "commune": "Tempora/pentepi5-0"
+    }
+  },
+  "pent25-1": {
+    "officium": "Feria infra Hebdomadam 25 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent25-0"
+    }
+  },
+  "pent25-2": {
+    "officium": "Feria infra Hebdomadam 25 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent25-0"
+    }
+  },
+  "pent25-3": {
+    "officium": "Feria infra Hebdomadam 25 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent25-0"
+    }
+  },
+  "pent25-4": {
+    "officium": "Feria infra Hebdomadam 25 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent25-0"
+    }
+  },
+  "pent25-5": {
+    "officium": "Feria infra Hebdomadam 25 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent25-0"
+    }
+  },
+  "pent25-6": {
+    "officium": "Feria infra Hebdomadam 25 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent25-0"
+    }
+  },
+  "pent26-1": {
+    "officium": "Feria infra Hebdomadam 26 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent26-0"
+    }
+  },
+  "pent26-2": {
+    "officium": "Feria infra Hebdomadam 26 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent26-0"
+    }
+  },
+  "pent26-3": {
+    "officium": "Feria infra Hebdomadam 26 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent26-0"
+    }
+  },
+  "pent26-4": {
+    "officium": "Feria infra Hebdomadam 26 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent26-0"
+    }
+  },
+  "pent26-5": {
+    "officium": "Feria infra Hebdomadam 26 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent26-0"
+    }
+  },
+  "pent26-6": {
+    "officium": "Feria infra Hebdomadam 26 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent26-0"
+    }
+  },
+  "pent27-1": {
+    "officium": "Feria infra Hebdomadam 27 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent27-0"
+    }
+  },
+  "pent27-2": {
+    "officium": "Feria infra Hebdomadam 27 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent27-0"
+    }
+  },
+  "pent27-3": {
+    "officium": "Feria infra Hebdomadam 27 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent27-0"
+    }
+  },
+  "pent27-4": {
+    "officium": "Feria infra Hebdomadam 27 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent27-0"
+    }
+  },
+  "pent27-5": {
+    "officium": "Feria infra Hebdomadam 27 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent27-0"
+    }
+  },
+  "pent27-6": {
+    "officium": "Feria infra Hebdomadam 27 post Pentecosten",
+    "rank": 1,
+    "rule": {
+      "commune": "Tempora/pent27-0"
+    }
   }
 }
