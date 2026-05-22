@@ -594,8 +594,7 @@ def process_mass_file(lat_path: Path, eng_path: Optional[Path]) -> Optional[dict
             field_data = {}
             if lat_text:
                 field_data["lat"] = lat_text
-            if eng_text:
-                field_data["eng"] = eng_text
+            field_data["eng"] = eng_text if eng_text else ""
             if ref:
                 field_data["ref"] = ref
             entry[json_field] = field_data
