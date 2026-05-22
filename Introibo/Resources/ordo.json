@@ -491,7 +491,7 @@
     "rank": 7.0,
     "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2024-02-15": {
@@ -502,7 +502,7 @@
     "rank": 3.9,
     "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2024-02-16": {
@@ -513,7 +513,7 @@
     "rank": 3.9,
     "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2024-02-17": {
@@ -524,7 +524,7 @@
     "rank": 3.9,
     "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2024-02-18": {
@@ -4726,7 +4726,7 @@
     "rank": 7.0,
     "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2025-03-06": {
@@ -4737,7 +4737,7 @@
     "rank": 3.9,
     "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-06"
   },
   "2025-03-07": {
@@ -4748,7 +4748,7 @@
     "rank": 3.9,
     "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-07"
   },
   "2025-03-08": {
@@ -4759,7 +4759,7 @@
     "rank": 3.9,
     "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-08"
   },
   "2025-03-09": {
@@ -8576,7 +8576,7 @@
     "rank": 7.0,
     "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2026-02-19": {
@@ -8587,7 +8587,7 @@
     "rank": 3.9,
     "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2026-02-20": {
@@ -8598,7 +8598,7 @@
     "rank": 3.9,
     "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2026-02-21": {
@@ -8609,7 +8609,7 @@
     "rank": 3.9,
     "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2026-02-22": {
@@ -12503,7 +12503,7 @@
     "rank": 7.0,
     "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "02-10"
   },
   "2027-02-11": {
@@ -12514,7 +12514,7 @@
     "rank": 3.9,
     "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "02-11"
   },
   "2027-02-12": {
@@ -12525,7 +12525,7 @@
     "rank": 3.9,
     "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "02-12"
   },
   "2027-02-13": {
@@ -12536,7 +12536,7 @@
     "rank": 3.9,
     "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2027-02-14": {
@@ -16738,7 +16738,7 @@
     "rank": 7.0,
     "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2028-03-02": {
@@ -16749,7 +16749,7 @@
     "rank": 3.9,
     "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2028-03-03": {
@@ -16760,7 +16760,7 @@
     "rank": 3.9,
     "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2028-03-04": {
@@ -16771,7 +16771,7 @@
     "rank": 3.9,
     "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-04"
   },
   "2028-03-05": {
@@ -20588,7 +20588,7 @@
     "rank": 7.0,
     "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2029-02-15": {
@@ -20599,7 +20599,7 @@
     "rank": 3.9,
     "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2029-02-16": {
@@ -20610,7 +20610,7 @@
     "rank": 3.9,
     "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2029-02-17": {
@@ -20621,7 +20621,7 @@
     "rank": 3.9,
     "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": null
   },
   "2029-02-18": {
@@ -24823,7 +24823,7 @@
     "rank": 7.0,
     "name": "Feria IV Cinerum",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-06"
   },
   "2030-03-07": {
@@ -24834,7 +24834,7 @@
     "rank": 3.9,
     "name": "Feria V post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-07"
   },
   "2030-03-08": {
@@ -24845,7 +24845,7 @@
     "rank": 3.9,
     "name": "Feria VI post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-08"
   },
   "2030-03-09": {
@@ -24856,7 +24856,7 @@
     "rank": 3.9,
     "name": "Sabbato post Cineres",
     "color": "violet",
-    "season": "pre-lent",
+    "season": "lent",
     "commemoration": "03-09"
   },
   "2030-03-10": {

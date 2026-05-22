@@ -746,9 +746,13 @@ def import_office_tempora(dry_run: bool = False) -> dict:
 
                 field_key = sec_name.lower().replace(" ", "_")
                 if lat_text:
-                    entry[field_key] = {"lat": lat_text}
-                    if eng_text:
-                        entry[field_key]["eng"] = eng_text
+                    part_type = _infer_part_type(field_key)
+                    entry[field_key] = {
+                        "type": part_type,
+                        "variationKey": field_key,
+                        "lat": lat_text,
+                        "eng": eng_text if eng_text else "",
+                    }
 
         if entry:
             entries[slug] = entry
@@ -757,6 +761,26 @@ def import_office_tempora(dry_run: bool = False) -> dict:
         log.info(f"Office Tempora: processed {len(entries)} entries")
 
     return entries
+
+
+_PART_TYPE_MAP = {
+    'lectio': 'reading', 'responsory': 'responsory', 'ant': 'antiphon',
+    'invit': 'antiphon', 'oratio': 'collect', 'capitulum': 'capitulum',
+    'hymnus': 'hymn', 'versum': 'vr', 'nocturn': 'vr',
+    'responsory_breve': 'responsory_breve', 'scriptura': 'reading',
+    'doxology': 'hymn',
+}
+
+def _infer_part_type(key):
+    k = key.lower()
+    for prefix, t in _PART_TYPE_MAP.items():
+        if k.startswith(prefix):
+            return t
+    if 'ant' in k: return 'antiphon'
+    if 'hymn' in k: return 'hymn'
+    if 'lect' in k: return 'reading'
+    if 'resp' in k: return 'responsory'
+    return 'vr'
 
 
 def import_office_sanctoral(dry_run: bool = False) -> dict:
@@ -810,9 +834,13 @@ def import_office_sanctoral(dry_run: bool = False) -> dict:
 
                 field_key = sec_name.lower().replace(" ", "_")
                 if lat_text:
-                    entry[field_key] = {"lat": lat_text}
-                    if eng_text:
-                        entry[field_key]["eng"] = eng_text
+                    part_type = _infer_part_type(field_key)
+                    entry[field_key] = {
+                        "type": part_type,
+                        "variationKey": field_key,
+                        "lat": lat_text,
+                        "eng": eng_text if eng_text else "",
+                    }
 
         if entry:
             entries[slug] = entry

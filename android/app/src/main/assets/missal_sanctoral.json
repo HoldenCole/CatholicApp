@@ -379,8 +379,8 @@
       "eng": "O Lord, in Your strength the just man is glad; in Your victory how greatly he rejoices! You have granted him his heart’s desire. (Alleluia.)"
     },
     "communio": {
-      "lat": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a",
-      "eng": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a"
+      "lat": "Qui mihi mínistrat, me sequátur: et ubi sum ego, illic et miníster meus erit. (Allelúja.)",
+      "eng": "Whoever serves Me, let him follow Me; and where I am there also shall My servant be."
     }
   },
   "01-15cc": {
@@ -2769,7 +2769,7 @@
       "eng": "Continuation + of the Holy Gospel according to John\nAt that time, there was a certain royal official whose son was lying sick at Capharnaum. When he heard that Jesus had come from Judea into Galilee, he went to him and besought Him to come down and heal his son, for he was at the point of death. Jesus therefore said to him, Unless you see signs and wonders, you do not believe. The royal official said to Him, Sir, come down before my child dies. Jesus said to him, Go your way, your son lives. The man believed the word that Jesus spoke to him, and departed. But even as he was now going down, his servants met him and brought word saying that his son lived. He asked of them therefore the hour in which he had got better. And they told him, Yesterday, at the seventh hour, the fever left him. The father knew then that it was at that very hour in which Jesus had said to him, Your son lives. And he himself believed, and his whole household."
     },
     "offertorium": {
-      "lat": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a",
+      "lat": "Posuísti, Dómine, in cápite ejus corónam de lápide pretióso: vitam pétiit a te, et tribuísti ei, allelúja.",
       "eng": "The heavens proclaim Your wonders, O Lord, and Your faithfulness, in the assembly of the holy ones, alleluia, alleluia."
     },
     "secreta": {
@@ -4253,7 +4253,7 @@
     },
     "oratio": {
       "lat": "Deus, qui multitúdinem géntium beáti Pauli Apóstoli prædicatióne docuísti: da nobis, quǽsumus; ut, cujus natalícia cólimus, ejus apud te patrocínia sentiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen..\nOrémus.\n@Sancti/02-22:Oratio Petri",
-      "eng": "@Sancti/02-22:Oratio Petri"
+      "eng": "O God, who together with the keys of the kingdom of heaven didst bestow on thy blessed Apostle Peter the pontifical power of binding and loosing, grant that by the aid of this intercession, we may be released from the bonds of our sins.\n$Qui vivis"
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Gálatas\nFratres: Notum vobis facio Evangélium, quod evangelizátum est a me, quia non est secúndum hóminem: neque enim ego ab hómine accépi illud neque dídici, sed per revelatiónem Jesu Christi. Audístis enim conversatiónem meam aliquándo in Judaísmo: quóniam supra modum persequébar Ecclésiam Dei, et expugnábam illam, et proficiébam in Judaísmo supra multos coætáneos meos in génere meo, abundántius æmulátor exsístens paternárum mearum traditiónum. Cum autem plácuit ei, qui me segregávit ex útero matris meæ, et vocávit per grátiam suam, ut reveláret Fílium suum in me, ut evangelizárem illum in géntibus: contínuo non acquiévi carni et sánguini, neque veni Jerosólymam ad antecessóres meos Apóstolos: sed ábii in Arábiam: et íterum revérsus sum Damáscum: déinde post annos tres veni Jerosólymam vidére Petrum, et mansi apud eum diébus quíndecim: álium autem Apostolórum vidi néminem, nisi Jacóbum fratrem Dómini. Quæ autem scribo vobis, ecce coram Deo, quia non méntior.",
@@ -4283,7 +4283,7 @@
     },
     "postcommunio": {
       "lat": "Percéptis, Dómine, sacraméntis: beáto Paulo Apóstolo tuo interveniénte, deprecámur; ut, quæ pro illíus celebráta sunt glória, nobis profíciant ad medélam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.\nOrémus.\n@Sancti/02-22:Postcommunio Petri",
-      "eng": "@Sancti/02-22:Postcommunio Petri"
+      "eng": "O Lord, may the gift we offer bring us joy, that as we praise Your wondrous work in Your Apostle Peter, so through him may we share Your generous forgiveness.\n$Per Dominum"
     }
   },
   "06-30n": {
@@ -7596,8 +7596,8 @@
     "officium": "In Vigilia S. Matthæi Ap.",
     "rank": 1,
     "oratio": {
-      "lat": "@:Oratio 1 loco:s/(Apóstoli tui)/$1 et Evangelístæ/",
-      "eng": "@:Oratio 1 loco:s/(Apóstoli tui)/$1 et Evangelístæ/"
+      "lat": "Da nobis, quǽsumus, omnípotens Deus: ut beáti Matthǽi Apóstoli tui et Evangelístæ, quam prævénimus, veneránda solémnitas, et devotiónem nobis áugeat et salútem. Per Dóminum nostrum Jesum Christum. Amen.",
+      "eng": "Grant us, we beseech Thee, almighty God: that the venerable solemnity of blessed Matthew, Thine Apostle and Evangelist, which we anticipate, may both increase our devotion and advance our salvation. Through our Lord Jesus Christ. Amen."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Vidit Jesus publicánum nómine Levi, sedéntem ad telónium, et ait illi: Séquere me. Et relíctis ómnibus, surgens secútus est eum. Et fecit ei convívium magnum Levi in domo sua: et erat turba multa publicanórum et aliórum, qui cum illis erant discumbéntes. Et murmurábant pharisæi et scribæ eórum, dicéntes ad discípulos ejus: Quare cum publicánis et peccatóribus manducátis et bíbitis? Et respóndens Jesus, dixit ad illos: Non egent, qui sani sunt, médice, sed qui male habent. Non veni vocáre justos, sed peccatóres ad pœniténtiam.",
@@ -7605,12 +7605,12 @@
       "eng": "And after these things he went forth, and saw a publican named Levi, sitting at the receipt of custom, and he said to him: Follow me. And leaving all things, he rose up and followed him. And Levi made him a great feast in his own house; and there was a great company of publicans, and of others, that were at table with them. But the Pharisees and scribes murmured, saying to his disciples: Why do you eat and drink with publicans and sinners? And Jesus answering, said to them: They that are whole, need not the physician: but they that are sick. I came not to call the just, but sinners to penance."
     },
     "secreta": {
-      "lat": "@:Secreta:s/(Apóstoli tui)/$1 et Evangelístæ/",
-      "eng": "@:Secreta:s/(Apóstoli tui)/$1 et Evangelístæ/"
+      "lat": "Supplicátiónibus beáti Matthǽi Apóstoli tui et Evangelístæ, quǽsumus, Dómine, Ecclésiæ tuæ comméndetur oblátio: cujus magníficis prædicatiónibus eruditur. Per Dóminum nostrum Jesum Christum. Amen.",
+      "eng": "May the offering of Thy Church, we beseech Thee, O Lord, be commended by the prayers of blessed Matthew, Thine Apostle and Evangelist, by whose glorious preaching she is instructed. Through our Lord Jesus Christ. Amen."
     },
     "postcommunio": {
-      "lat": "@:Postcommunio:s/(Apóstoli tui)/$1 et Evangelístæ/",
-      "eng": "@:Postcommunio:s/(Apóstoli tui)/$1 et Evangelístæ/"
+      "lat": "Præsta nobis, quǽsumus, miséricors Deus: ut per hæc sancta, quæ súmpsimus, intercedénte beáto Matthǽo Apóstolo tuo et Evangelísta, véniam consequámur et pácem. Per Dóminum nostrum Jesum Christum. Amen.",
+      "eng": "Grant us, we beseech Thee, O merciful God: that through these holy mysteries which we have received, by the intercession of blessed Matthew, Thine Apostle and Evangelist, we may obtain pardon and peace. Through our Lord Jesus Christ. Amen."
     }
   },
   "09-21": {
@@ -8708,8 +8708,8 @@
       "ref": "Ps 78:10; 78:2"
     },
     "evangelium": {
-      "lat": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a",
-      "eng": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a"
+      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis: Nihil est opértum, quod non revelábitur; et occúltum, quod non sciétur. Quod dico vobis in ténebris, dícite in lúmine: et quod in aure audítis, prædicáte super tecta. Et nolíte timére eos, qui occídunt corpus, ánimam autem non possunt occídere; sed pótius timéte eum, qui potest et ánimam et corpus pérdere in gehénnam. Nonne duo pásseres asse véneunt: et unus ex illis non cadet super terram sine Patre vestro? Vestri autem capílli cápitis omnes numeráti sunt. Nolíte ergo timére: multis passéribus melióres estis vos. Omnis ergo, qui confitébitur me coram homínibus, confitébor et ego eum coram Patre meo, qui in coelis est.",
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\nAt that time, Jesus said to His disciples, There is nothing concealed that will not be disclosed, and nothing hidden that will not be made known. What I tell you in darkness, speak it in the light; and what you hear whispered, preach it on the housetops. And do not be afraid of those who kill the body but cannot kill the soul. But rather be afraid of Him Who is able to destroy both soul and body in hell. Are not two sparrows sold for a farthing? And yet not one of them will fall to the ground without your Father’s leave. But as for you, the very hairs of your head are all numbered. Therefore do not be afraid; you are of more value than many sparrows. Therefore, everyone who acknowledges Me before men, I also will acknowledge him before My Father in heaven."
     },
     "offertorium": {
       "lat": "Exsultábunt Sancti in glória, lætabúntur in cubílibus suis: exaltatiónes Dei in fáucibus eórum, allelúja.\n(sed post Septuagesimam dicitur)\neórum.",
