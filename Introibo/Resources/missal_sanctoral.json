@@ -1600,21 +1600,6 @@
       "eng": "O God, Who made Your Bishop, blessed Gregory, an equal to the saints in merit, graciously grant that we, who keep this feast in his memory, may also imitate the example given by his life.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
-  "03-15pl": {
-    "officium": "S. Clemens Maria Hofbauer, Confessor",
-    "oratio": {
-      "lat": "Deus, qui beátum Cleméntem Maríam miro fídei róbore et invíctæ constántiæ virtúte decorásti: eius méritis et exémplis fac nos, quǽsumus, ita fortes in fide et caritáte fervéntes; ut prǽmia consequámur ætérna.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui beátum Cleméntem Maríam miro fídei róbore et invíctæ constántiæ virtúte decorásti: eius méritis et exémplis fac nos, quǽsumus, ita fortes in fide et caritáte fervéntes; ut prǽmia consequámur ætérna.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "secreta": {
-      "lat": "Ille nos, quǽsumus, Dómine, devotiónis ignis accéndat: quo beátus Clemens María, dum salutárem offérret hóstiam, iúgiter flagrávit.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Ille nos, quǽsumus, Dómine, devotiónis ignis accéndat: quo beátus Clemens María, dum salutárem offérret hóstiam, iúgiter flagrávit.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "postcommunio": {
-      "lat": "Cælésti pane reféctis; concéde nobis, omnípotens Deus: ut beáti Cleméntis exémplo in fortitúdine tibi illíus usque ad montem, qui Christus est, felíciter perveniámus:\nQui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Cælésti pane reféctis; concéde nobis, omnípotens Deus: ut beáti Cleméntis exémplo in fortitúdine tibi illíus usque ad montem, qui Christus est, felíciter perveniámus:\nQui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
   "03-17": {
     "officium": "S. Patricii Episcopi et Confessoris",
     "rank": 3,
@@ -1779,7 +1764,7 @@
     "graduale": {
       "lat": "Benedícite Dóminum, omnes Angeli ejus: poténtes virtúte, qui fácitis verbum ejus. \nV. Bénedic, ánima mea, Dóminum, et ómnia interióra mea nomen sanctum ejus.\nAllelúja, allelúja.\nBenedicite Dómino, omnes virtútes ejus: ministri ejus, qui fácitis voluntátem ejus. Allelúja.",
       "ref": "Ps 102:20 et 1",
-      "eng": "Benedícite Dóminum, omnes Angeli ejus: poténtes virtúte, qui fácitis verbum ejus. \nV. Bénedic, ánima mea, Dóminum, et ómnia interióra mea nomen sanctum ejus.\nAllelúja, allelúja.\nBenedicite Dómino, omnes virtútes ejus: ministri ejus, qui fácitis voluntátem ejus. Allelúja."
+      "eng": "Bless the Lord, all ye his angels: you that are mighty in strength, and execute his word, hearkening to the voice of his orders."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Missus est Angelus Gábriel a Deo in civitátem Galilææ, cui nomen Názareth, ad Vírginem desponsátam viro, cui nomen erat Joseph, de domo David, et nomen Vírginis María. Et ingréssus Angelus ad eam, dixit: Ave, grátia plena; Dóminus tecum: benedícta tu in muliéribus. Quæ cum audísset, turbáta est in sermóne ejus: et cogitábat, qualis esset ista salutátio. Et ait Angelus ei: Ne tímeas, María, invenísti enim grátiam apud Deum: ecce, concípies in útero et páries fílium, et vocábis nomen ejus Jesum. Hic erit magnus, et Fílius Altíssimi vocábitur, et dabit illi Dóminus Deus sedem David, patris ejus: et regnábit in domo Jacob in ætérnum, et regni ejus non erit finis. Dixit autem María ad Angelum: Quómodo fiet istud, quóniam virum non cognósco? Et respóndens Angelus, dixit ei: Spíritus Sanctus supervéniet in te, et virtus Altíssimi obumbrábit tibi. Ideóque et quod nascétur ex te Sanctum, vocábitur Fílius Dei. Et ecce, Elísabeth, cognáta tua, et ipsa concépit fílium in senectúte sua: et hic mensis sextus est illi, quæ vocátur stérilis: quia non erit impossíbile apud Deum omne verbum. Dixit autem María: Ecce ancílla Dómini, fiat mihi secúndum verbum tuum.",
@@ -1915,7 +1900,7 @@
     "graduale": {
       "lat": "Qui timétis Dóminum, laudáte eum: univérsum semen Jacob, glorificáte eum.\nV. Timeat eum omne semen Israël: quóniam non sprevit, neque despéxit deprecatiónem páuperis.\nAllelúja, allelúja\nEgo autem cantábo fortitúdinem tuam: et exsultábo mane misericórdiam tuam. Allelúja.",
       "ref": "Ps 21:24-25",
-      "eng": "Qui timétis Dóminum, laudáte eum: univérsum semen Jacob, glorificáte eum.\nV. Timeat eum omne semen Israël: quóniam non sprevit, neque despéxit deprecatiónem páuperis.\nAllelúja, allelúja\nEgo autem cantábo fortitúdinem tuam: et exsultábo mane misericórdiam tuam. Allelúja."
+      "eng": "Ye that fear the Lord, praise him: all ye the seed of Jacob, glorify him. Let all the seed of Israel fear him: because he hath not slighted nor despised the supplication of the poor man. Neither hath he turned away his face from me: and when I cried to him he heard me."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Convocátis Jesus duódecim Apóstolis, dedit illis virtútem et potestátem super ómnia dæmónia, et ut languóres curárent. Et misit illos prædicáre regnum Dei et sanáre infírmos. Et ait ad illos: Nihil tuléritis in via, neque virgam, neque peram, neque panem, neque pecúniam, neque duas túnicas habeátis. Et in quamcúmque domum intravéritis, ibi manéte et inde ne exeátis. Et quicúmque non recéperint vos: exeúntes de civitáte illa, étiam púlverem pedum vestrórum excútite in testimónium supra illos. Egréssi autem circuíbant per castélla, evangelizántes et curántes ubíque.",
@@ -2109,46 +2094,6 @@
     "postcommunio": {
       "lat": "Súpplices te rogámus, omnípotens Deus: ut, quos tuis réficis sacraméntis, intercedénte beáto Geórgio Mártyre tuo, tibi étiam plácitis móribus dignánter tríbuas deservíre.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "We humbly beseech thee, almighty God, wouchsafe to grant that we, whom thou hast refreshed by thy sacraments, may be able, through the intercession of blessed George, thy martyr, to serve thee, by conduct well pleasing to thee.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
-    }
-  },
-  "04-23pl": {
-    "introitus": {
-      "lat": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a",
-      "eng": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a"
-    },
-    "oratio": {
-      "lat": "Tuam nobis indulgéntiam, quǽsumus, Dómine, beátus Adalbértus Epíscopus et Martyr implóret: ut et delícta nobis cleménter ignóscas, et benefícia desideráta concédas.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Tuam nobis indulgéntiam, quǽsumus, Dómine, beátus Adalbértus Epíscopus et Martyr implóret: ut et delícta nobis cleménter ignóscas, et benefícia desideráta concédas.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Hebræos.\nFratres: Omnis póntifex ex homínibus assúmptus, pro homínibus constitúitur in iis, quæ sunt ad Deum, ut ófferat dona, et sacrifícia pro peccátis: qui condolére possit iis, qui ígnorant et errant: quóniam et ipse circúmdatus est infirmitáte: et proptérea debet, quemádmodum pro pópulo, ita étiam et pro semetípso offérre pro peccátis. Nec quisquam sumit sibi honórem, sed qui vocátur a Deo, tamquam Aaron. Sic et Christus non semetípsum clarificávit, ut Póntifex fíeret: sed qui locútus est ad eum: Fílius meus es tu, ego hódie génui te. Quemádmodum et in álio loco dicit: Tu es sacérdos in ætérnum, secúndum órdinem Melchísedech.",
-      "eng": "Lesson from the letter of St. Paul the Apostle to the Hebrews\nBrethren: Every high priest taken from among men is appointed for men in the things pertaining to God, that he may offer gifts and sacrifices for sins. He is able to have compassion on the ignorant and erring, because he himself also is beset with weakness, and by reason thereof is obliged to offer for sins, as on behalf of the people so also for himself. And no man takes the honor to himself; he takes it who is called by God, as Aaron was. So also Christ did not glorify Himself with the high priesthood, but He Who spoke to Him, “You are My Son, I this day have Begotten You.” As He says also in another place, “You are a priest forever, according to the order of Melchisedec.”"
-    },
-    "graduale": {
-      "lat": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ. Alleluia.\nV. Tu es sacerdos in æternum, secundum ordinem Melchisedech. Alleluia.",
-      "ref": "Joann 10:14",
-      "eng": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ. Alleluia.\nV. Tu es sacerdos in æternum, secundum ordinem Melchisedech. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus pharisǽis: Ego sum pastor bonus. Bonus pastor ánimam suam dat pro óvibus suis. Mercenárius autem et qui non est pastor, cujus non sunt oves própriæ, videt lupum veniéntem, et dimíttit oves et fugit: et lupus rapit et dispérgit oves: mercenárius autem fugit, quia mercenárius est et non pértinet ad eum de óvibus. Ego sum pastor bonus: et cognósco meas et cognóscunt me meæ. Sicut novit me Pater, et ego agnósco Patrem, et ánimam meam pono pro óvibus meis. Et álias oves hábeo, quæ non sunt ex hoc ovíli: et illas opórtet me addúcere, et vocem meam áudient, et fiet unum ovíle et unus pastor.~",
-      "eng": "Continuation + of the Holy Gospel according to John\nAt that time Jesus said to the Pharisees: I am the good Shepherd. The good Shepherd giveth his life for his sheep. But the hireling, and he that is not the shepherd, whose own the sheep are not, seeth the wolf coming and leaveth the sheep and flieth: and the wolf catcheth and scattereth the sheep: and the hireling flieth, because he is a hireling, and he hath no care for the sheep. I am the good Shepherd: and I know Mine, and Mine know Me, as the Father knoweth Me, and I know the Father: and I lay down My life for My sheep. And other sheep I have that are not of this fold: them also I must bring, and they shall hear My voice, and there shall be one fold and one shepherd."
-    },
-    "offertorium": {
-      "lat": "Posuísti, Dómine, in cápite ejus corónam de lápide pretióso: vitam pétiit a te, et tribuísti ei, allelúja.",
-      "eng": "Posuísti, Dómine, in cápite ejus corónam de lápide pretióso: vitam pétiit a te, et tribuísti ei, allelúja."
-    },
-    "secreta": {
-      "lat": "Sacrifícium exhíbitum, quǽsumus, Dómine, benígnus assúme: ut, quod nómini tuo in solemnitáte beáti Adalbérti Mártyris tui atque Pontíficis deférimus, nobis prosit ad véniam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Sacrifícium exhíbitum, quǽsumus, Dómine, benígnus assúme: ut, quod nómini tuo in solemnitáte beáti Adalbérti Mártyris tui atque Pontíficis deférimus, nobis prosit ad véniam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ, alleluia, alleluia.",
-      "ref": "Joann 10:14",
-      "eng": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ, alleluia, alleluia."
-    },
-    "postcommunio": {
-      "lat": "Refécti, Dómine, munéribus sacris, súpplices te deprecámur: ut indulgéntiam tuam nobis intercéssio beáti Adalbérti Mártyris tui atque Pontíficis semper implóret.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Refécti, Dómine, munéribus sacris, súpplices te deprecámur: ut indulgéntiam tuam nobis intercéssio beáti Adalbérti Mártyris tui atque Pontíficis semper implóret.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "04-24": {
@@ -2563,51 +2508,6 @@
       "eng": "Repléti alimónia coelésti et spiritáli poculo recreáti, quaesumus, omnípotens Deus: ut ab hoste malígno deféndas, quos per lignum sanctæ Crucis Fílii tui, arma justítiæ pro salúte mundi, triumpháre jussísti.\nThrough the same our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
-  "05-03pl": {
-    "rule": {
-      "gloria": true,
-      "credo": true,
-      "preface": "Maria"
-    },
-    "introitus": {
-      "lat": "Gaudeámus omnes in Dómino, diem festum celebrántes sub honóre beátæ Maríæ Vírginis: de cujus sollemnitáte gaudent Angeli et colláudant Fílium Dei, alleluia, alleluia.\nEructávit cor meum verbum bonum: dico ego ópera mea Regi.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nGaudeámus omnes in Dómino, diem festum celebrántes sub honóre beátæ Maríæ Vírginis: de cujus sollemnitáte gaudent Angeli et colláudant Fílium Dei, alleluia, alleluia.",
-      "ref": "Ps 44:2",
-      "eng": "Gaudeámus omnes in Dómino, diem festum celebrántes sub honóre beátæ Maríæ Vírginis: de cujus sollemnitáte gaudent Angeli et colláudant Fílium Dei, alleluia, alleluia.\nEructávit cor meum verbum bonum: dico ego ópera mea Regi.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nGaudeámus omnes in Dómino, diem festum celebrántes sub honóre beátæ Maríæ Vírginis: de cujus sollemnitáte gaudent Angeli et colláudant Fílium Dei, alleluia, alleluia."
-    },
-    "oratio": {
-      "lat": "Omnípotens et miséricors Deus, qui ad defensiónem pópuli nostri, in beatíssima Vírgine María mirábile nobis auxílium constituísti: concéde propítius; ut, tali præsídio muníti, certántes in vita, victóriam de hoste malígno cónsequi valeámus in morte.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Omnípotens et miséricors Deus, qui ad defensiónem pópuli nostri, in beatíssima Vírgine María mirábile nobis auxílium constituísti: concéde propítius; ut, tali præsídio muníti, certántes in vita, victóriam de hoste malígno cónsequi valeámus in morte.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Léctio libri Judith\nBenedíxit te Dóminus in virtúte sua, quia per te ad níhilum redégit inimícos nostros. Benedícta es tu, fília, a Dómino, Deo excélso, præ ómnibus muliéribus super terram. Benedíctus Dóminus, qui creávit cœlum et terram: quia hódie nomen tuum ita magnificávit, ut non recédat laus tua de ore hóminum, qui mémores fúerint virtútis Dómini in ætérnum, pro quibus non pepercísti ánimæ tuæ propter angústias et tribulatiónem géneris tui, sed subvenísti ruínæ ante conspéctum Dei nostri.",
-      "eng": "Lesson from the book of Judith\nThe Lord has blessed you by His power, Who by you has brought our enemies to nought. Blessed are you, O daughter, by the Lord the Most High God, above all women upon the earth. Blessed be the Lord Who made heaven and earth, because He has so magnified your name this day, that your praise shall not depart out of the mouth of men, who shall be mindful of the power of the Lord forever: for you have not spared your life by reason of the distress and tribulation of your people, but have prevented our ruin in the presence of our God."
-    },
-    "graduale": {
-      "lat": "Allelúia, allelúia.\nV. Tota formósa et suávis es, fília Sion, pulchra ut luna, elécta ut sol, terríbilis ut castrórum ácies ordináta. Allelúia.\nV. Benedíxit te Dóminus in virtúte sua, quia per te ad níhilum redégit inimícos nostros. Allelúia.",
-      "ref": "Cant 6:3; 6:9",
-      "eng": "Allelúia, allelúia.\nV. Tota formósa et suávis es, fília Sion, pulchra ut luna, elécta ut sol, terríbilis ut castrórum ácies ordináta. Allelúia.\nV. Benedíxit te Dóminus in virtúte sua, quia per te ad níhilum redégit inimícos nostros. Allelúia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem\nIn illo témpore: Stabant juxta crucem Jesu mater ejus, et soror matris ejus María Cléophæ, et María Magdaléne. Cum vidísset ergo Jesus matrem, et discípulum stantem, quem diligébat, dicit matri suæ: Múlier, ecce fílius tuus. Deinde dicit discípulo: Ecce mater tua. Et ex illa hora accépit eam discípulus in sua.",
-      "eng": "Continuation + of the Holy Gospel according to John\nAt that time, there were standing by the Cross of Jesus, His Mother, and His Mother’s sister, Mary of Cleophas, and Mary Magdalen. When Jesus, therefore, saw His Mother and the disciple standing by, whom He loved, He said to His Mother, Woman, behold your son. Then He said to the disciple, Behold, your mother. And from that hour the disciple took her into his home."
-    },
-    "offertorium": {
-      "lat": "Recordáre, Virgo Mater, in conspéctu Dei, ut loquáris pro nobis bona, et ut avértat indignatiónem suam a nobis.",
-      "eng": "Remember, O Virgin Mother, to speak good things before God’s face in our behalf, so that He may turn away His wrath from us."
-    },
-    "secreta": {
-      "lat": "Súscipe, Dómine, munus quod tibi offérimus, memóriam recoléntes piíssimæ Vírginis Maríæ, quæ consolátur nos in omni tribulatióne nostra: et præsta; ut mens nostra supérno lúmine Sancti Spíritus irradiáta, terréna despíciat et ad cæléstia semper aspíret.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Súscipe, Dómine, munus quod tibi offérimus, memóriam recoléntes piíssimæ Vírginis Maríæ, quæ consolátur nos in omni tribulatióne nostra: et præsta; ut mens nostra supérno lúmine Sancti Spíritus irradiáta, terréna despíciat et ad cæléstia semper aspíret.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Regína mundi digníssima, María Virgo perpétua, intercéde pro nostra pace et salúte, quæ genuísti Christum Dóminum, Salvatórem ómnium.",
-      "eng": "Most worthy Queen of the world, Mary ever Virgin, who have borne Christ the Lord, the Saviour of all, intercede for our peace and salvation."
-    },
-    "postcommunio": {
-      "lat": "Deus, qui nobis beátam Vírginem Maríam singulárem Patrónam dedísti: concéde propítius; ut, sacris donis tuis satiáti, præsídio eiúsdem beáte Vírginis Maríæ in ómnibus adversitátibus nostris perfruámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui nobis beátam Vírginem Maríam singulárem Patrónam dedísti: concéde propítius; ut, sacris donis tuis satiáti, præsídio eiúsdem beáte Vírginis Maríæ in ómnibus adversitátibus nostris perfruámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
   "05-03r": {
     "officium": "Ss. Alexandri I Papæ, Eventii et Theoduli Mm. ac Juvenalis Ep. et Conf.",
     "rank": 1,
@@ -2683,22 +2583,6 @@
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Ibat Jesus in civitátem, quæ vocátur Naim: et ibant cum eo discípuli ejus et turba copiósa. Cum autem appropinquáret portæ civitátis, ecce, defúnctus efferebátur fílius únicus matris suæ: et hæc vídua erat, et turba civitátis multa cum illa. Quam cum vidísset Dóminus, misericórdia motus super eam, dixit illi: Noli flere. Et accéssit et tétigit lóculum. - Hi autem, qui portábant, stetérunt - Et ait: Adoléscens, tibi dico, surge. Et resédit, qui erat mórtuus, et cœpit loqui. Et dedit illum matri suæ. Accépit autem omnes timor: et magnificábant Deum, dicéntes: Quia Prophéta magnus surréxit in nobis: et quia Deus visitávit plebem suam.",
       "eng": "Continuation of the Holy Gospel according to Luke\nAt that time, Jesus went into a city called Naim; and His disciples and a large crowd went with Him. And as He drew near the gate of the town, behold, a dead man was being carried out, the only son of his mother, and she was a widow; and a large gathering from the town was with her. And the Lord, seeing her, had compassion on her, and said to her, Do not weep. And He went up and touched the stretcher; and the bearers stood still. And He said, Young man, I say to you, arise. And he who was dead, sat up, and began to speak. And He gave him to his mother. But fear seized upon all, and they began to glorify God, saying, A great prophet has risen among us, and God has visited His people."
-    }
-  },
-  "05-04pl": {
-    "officium": "S. Floriani Martyris",
-    "rank": 3,
-    "oratio": {
-      "lat": "Deus, qui nos beáti Floriáni Mártyris solemnitáte lætíficas: concéde propítius; ut, cuius gloriósum triúmphum venerámur in terris, societátis eius lætítiam adipísci mereámur in cælis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen..",
-      "eng": "Deus, qui nos beáti Floriáni Mártyris solemnitáte lætíficas: concéde propítius; ut, cuius gloriósum triúmphum venerámur in terris, societátis eius lætítiam adipísci mereámur in cælis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.."
-    },
-    "secreta": {
-      "lat": "Hanc oblatiónis hóstiam, quǽsumus, omnípotens Deus, beáti Floriáni Mártyris tui digna comméndet orátio: qui sancto caritátis tuæ devíctus amóre, própriam sui córporis hóstiam in odórem suavitátis tibi óbtulit vivam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Hanc oblatiónis hóstiam, quǽsumus, omnípotens Deus, beáti Floriáni Mártyris tui digna comméndet orátio: qui sancto caritátis tuæ devíctus amóre, própriam sui córporis hóstiam in odórem suavitátis tibi óbtulit vivam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "postcommunio": {
-      "lat": "Sancta nos, quǽsumus, Dómine, sacraménti cæléstis participátio: et ab hóstium cállido tueátur incúrsu; et sancto Floriáno intercedénte, nobis remédia salútis cónferat sempitérna.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Sancta nos, quǽsumus, Dómine, sacraménti cæléstis participátio: et ab hóstium cállido tueátur incúrsu; et sancto Floriáno intercedénte, nobis remédia salútis cónferat sempitérna.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "05-05": {
@@ -2815,40 +2699,6 @@
       "eng": "Relaying on the intercession of blessed Michael the archangel, we humbly entreat thee, O Lord, that the service we pray with our lips, we may lay hold of with our minds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
-  "05-08pl": {
-    "introitus": {
-      "lat": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a",
-      "eng": "@Commune/C2a\n@Commune/C3\n@Commune/C3\n@Commune/C3\n@Commune/C2a\n@Commune/C2a"
-    },
-    "oratio": {
-      "lat": "Deus, pro cuius honóre gloriósus Póntifex Stanisláus gládiis impiórum occúbuit: præsta, quǽsumus; ut omnes, qui eius implórant auxílium, petitiónis suæ salutárem consequántur efféctum.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, pro cuius honóre gloriósus Póntifex Stanisláus gládiis impiórum occúbuit: præsta, quǽsumus; ut omnes, qui eius implórant auxílium, petitiónis suæ salutárem consequántur efféctum.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "S. Josaphat Episcopi et Martyris\n;;Duplex;;3;;vide C2\nvide C2;\nGaudeámus omnes in Dómino, diem festum celebrántes sub honóre beáti Jósaphat Mártyris: de cujus passióne gaudent Angeli et colláudant Fílium Dei.\nExsultáte, justi, in Dómino: rectos decet collaudátio.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nGaudeámus omnes in Dómino, diem festum celebrántes sub honóre beáti Jósaphat Mártyris: de cujus passióne gaudent Angeli et colláudant Fílium Dei.\nExcita, quǽsumus, Dómine, in Ecclésia tua Spíritum, quo replétus beátus Jósaphat Martyr et Póntifex tuus ánimam suam pro óvibus pósuit: ut, eo intercedénte, nos quoque eódem Spíritu moti ac roboráti, ánimam nostram pro frátribus pónere non vereámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen. eiusdem\nLéctio Epístolæ beáti Pauli Apóstoli ad Hebræos.\nFratres: Omnis póntifex ex homínibus assúmptus, pro homínibus constitúitur in iis, quæ sunt ad Deum, ut ófferat dona, et sacrifícia pro peccátis: qui condolére possit iis, qui ígnorant et errant: quóniam et ipse circúmdatus est infirmitáte: et proptérea debet, quemádmodum pro pópulo, ita étiam et pro semetípso offérre pro peccátis. Nec quisquam sumit sibi honórem, sed qui vocátur a Deo, tamquam Aaron. Sic et Christus non semetípsum clarificávit, ut Póntifex fíeret: sed qui locútus est ad eum: Fílius meus es tu, ego hódie génui te. Quemádmodum et in álio loco dicit: Tu es sacérdos in ætérnum, secúndum órdinem Melchísedech.\nInvéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum.\nV. Nihil profíciet inimícus in eo, et fílius iniquitátis non nocébit ei. Allelúja, allelúja.\nV. Hic est sacérdos, quem coronávit Dóminus. Allelúja.\n@Tempora/Pasc2-0\nMajórem caritátem nemo habet, ut ánimam suam ponat quis pro amícis suis.\nClementíssime Deus, múnera hæc tua benedictióne perfunde, et nos in fide confírma: quam sanctus Jósaphat Martyr et Póntifex tuus, effúso sánguine, asséruit.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.\n@Tempora/Pasc2-0\nSpíritum, Dómine, fortitúdinis hæc nobis tríbuat mensa cœléstis: quæ sancti Jósaphat Mártyris tui atque Pontíficis vitam pro Ecclésiæ honóre júgiter áluit ad victóriam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Lesson from the letter of St. Paul the Apostle to the Hebrews\nBrethren: Every high priest taken from among men is appointed for men in the things pertaining to God, that he may offer gifts and sacrifices for sins. He is able to have compassion on the ignorant and erring, because he himself also is beset with weakness, and by reason thereof is obliged to offer for sins, as on behalf of the people so also for himself. And no man takes the honor to himself; he takes it who is called by God, as Aaron was. So also Christ did not glorify Himself with the high priesthood, but He Who spoke to Him, “You are My Son, I this day have Begotten You.” As He says also in another place, “You are a priest forever, according to the order of Melchisedec.”"
-    },
-    "graduale": {
-      "lat": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ. Alleluia.\nV. Tu es sacerdos in æternum, secundum ordinem Melchisedech. Alleluia.",
-      "eng": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ. Alleluia.\nV. Tu es sacerdos in æternum, secundum ordinem Melchisedech. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus pharisǽis: Ego sum pastor bonus. Bonus pastor ánimam suam dat pro óvibus suis. Mercenárius autem et qui non est pastor, cujus non sunt oves própriæ, videt lupum veniéntem, et dimíttit oves et fugit: et lupus rapit et dispérgit oves: mercenárius autem fugit, quia mercenárius est et non pértinet ad eum de óvibus. Ego sum pastor bonus: et cognósco meas et cognóscunt me meæ. Sicut novit me Pater, et ego agnósco Patrem, et ánimam meam pono pro óvibus meis. Et álias oves hábeo, quæ non sunt ex hoc ovíli: et illas opórtet me addúcere, et vocem meam áudient, et fiet unum ovíle et unus pastor.~",
-      "eng": "Continuation + of the Holy Gospel according to John\nAt that time Jesus said to the Pharisees: I am the good Shepherd. The good Shepherd giveth his life for his sheep. But the hireling, and he that is not the shepherd, whose own the sheep are not, seeth the wolf coming and leaveth the sheep and flieth: and the wolf catcheth and scattereth the sheep: and the hireling flieth, because he is a hireling, and he hath no care for the sheep. I am the good Shepherd: and I know Mine, and Mine know Me, as the Father knoweth Me, and I know the Father: and I lay down My life for My sheep. And other sheep I have that are not of this fold: them also I must bring, and they shall hear My voice, and there shall be one fold and one shepherd."
-    },
-    "offertorium": {
-      "lat": "Posuísti, Dómine, in cápite ejus corónam de lápide pretióso: vitam pétiit a te, et tribuísti ei, allelúja.",
-      "eng": "Posuísti, Dómine, in cápite ejus corónam de lápide pretióso: vitam pétiit a te, et tribuísti ei, allelúja."
-    },
-    "communio": {
-      "lat": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ, alleluia, alleluia.",
-      "eng": "Ego sum pastor bonus: et cognósco oves meas et cognóscunt me meæ, alleluia, alleluia."
-    },
-    "postcommunio": {
-      "lat": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedénte beáto Stanisláo Mártyre tuo atque Pontífice, cæléstis remédii fáciat esse consórtes.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedénte beáto Stanisláo Mártyre tuo atque Pontífice, cæléstis remédii fáciat esse consórtes.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
   "05-09": {
     "officium": "S. Gregorii Nazianzeni Episcopi Confessoris et Ecclesiæ Doctoris\n(sed rubrica tridentina)\nS. Gregorii Nazianzeni Episcopi Confessoris",
     "rank": 3,
@@ -2952,7 +2802,7 @@
     "graduale": {
       "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo.\nNon est invéntus símilis illi, qui conserváret legem Excélsi. Allelúja, allelúja.\nV. Qui ad justítiam erúdiunt multos quasi stellæ in perpétuas æternitátes. Allelúja.",
       "ref": "Eccli 44:16",
-      "eng": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo.\nNon est invéntus símilis illi, qui conserváret legem Excélsi. Allelúja, allelúja.\nV. Qui ad justítiam erúdiunt multos quasi stellæ in perpétuas æternitátes. Allelúja."
+      "eng": "Henoch pleased God, and was translated into paradise, that he may give repentance to the nations."
     },
     "offertorium": {
       "lat": "Mihi autem adhærére Deo bonum est, pónere in Dómino Deo spem meam: ut annúntiem omnes prædicatiónes tuas in portis fíliæ Sion, allelúja.",
@@ -3037,24 +2887,6 @@
   "05-16n": {
     "officium": "S. Joannis Nepomuceni Martyris",
     "rank": 3
-  },
-  "05-16pl": {
-    "oratio": {
-      "lat": "Deus, qui in confessióne veræ fídei beátum Andréam, multíplici suppliciórum génere excruciátum, illústri martýrio coronásti: præsta, quǽsumus; ut nos in eádem fide stábiles, advérsa pótius ómnia, quam ánimæ detriméntum patiámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui in confessióne veræ fídei beátum Andréam, multíplici suppliciórum génere excruciátum, illústri martýrio coronásti: præsta, quǽsumus; ut nos in eádem fide stábiles, advérsa pótius ómnia, quam ánimæ detriméntum patiámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum\nCaríssime: Memor esto, Dóminum Jesum Christum resurrexísse a mórtuis ex sémine David, secúndum Evangélium meum, in quo labóro usque ad víncula, quasi male óperans: sed verbum Dei non est alligátum. Ideo ómnia sustíneo propter eléctos, ut et ipsi salútem consequántur, quæ est in Christo Jesu, cum glória coelésti. Tu autem assecútus es meam doctrínam, institutiónem, propósitum, fidem, longanimitátem, dilectiónem, patiéntiam, persecutiónes, passiónes: quália mihi facta sunt Antiochíæ, Icónii et Lystris: quales persecutiónes sustínui, et ex ómnibus erípuit me Dóminus. Et omnes, qui pie volunt vívere in Christo Jesu, persecutiónem patiéntur.",
-      "eng": "Léctio Epístolæ beáti Pauli Apóstoli ad Timótheum\nCaríssime: Memor esto, Dóminum Jesum Christum resurrexísse a mórtuis ex sémine David, secúndum Evangélium meum, in quo labóro usque ad víncula, quasi male óperans: sed verbum Dei non est alligátum. Ideo ómnia sustíneo propter eléctos, ut et ipsi salútem consequántur, quæ est in Christo Jesu, cum glória coelésti. Tu autem assecútus es meam doctrínam, institutiónem, propósitum, fidem, longanimitátem, dilectiónem, patiéntiam, persecutiónes, passiónes: quália mihi facta sunt Antiochíæ, Icónii et Lystris: quales persecutiónes sustínui, et ex ómnibus erípuit me Dóminus. Et omnes, qui pie volunt vívere in Christo Jesu, persecutiónem patiéntur."
-    },
-    "secreta": {
-      "lat": "Offérimus tibi, Dómine, hóstiam immaculátam unigéniti Fílii tui, eníxe deprecántes, ut, quæ pro salúte nostra humíliter pétimus, beáti Andréæ Mártyris tui précibus et intercessióne consequámur.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Offérimus tibi, Dómine, hóstiam immaculátam unigéniti Fílii tui, eníxe deprecántes, ut, quæ pro salúte nostra humíliter pétimus, beáti Andréæ Mártyris tui précibus et intercessióne consequámur.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "postcommunio": {
-      "lat": "Deam, hæc sancta, Dómine, in honórem beáti Andréæ Mártyris tui de altári libávimus: concéde propítius; ut, cuius exémplis instrúimur, invíctam constántiam imitémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deam, hæc sancta, Dómine, in honórem beáti Andréæ Mártyris tui de altári libávimus: concéde propítius; ut, cuius exémplis instrúimur, invíctam constántiam imitémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
   },
   "05-17": {
     "officium": "S. Paschalis Baylon Confessoris",
@@ -3174,28 +3006,6 @@
     "oratio": {
       "lat": "Deus, qui sanctum Joánnem Baptístam Confessórem tuum in evangelizándis paupéribus caritáte et patiéntia decorásti: concéde quǽsumus; ut cujus pia mérita venerámur, virtútum quoque imitémur exémpla.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Deus, qui sanctum Joánnem Baptístam Confessórem tuum in evangelizándis paupéribus caritáte et patiéntia decorásti: concéde quǽsumus; ut cujus pia mérita venerámur, virtútum quoque imitémur exémpla.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
-  "05-24pl": {
-    "oratio": {
-      "lat": "Omnípotens et miséricors Deus, qui ad defensiónem pópuli christiáni in beatíssima Vírgine María perpétuum auxílium mirabíliter constituísti: concéde propítius; ut, tali præsídio muníti certántes in vita, victóriam de hoste malígno cónsequi valeámus in morte.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Omnípotens et miséricors Deus, qui ad defensiónem pópuli christiáni in beatíssima Vírgine María perpétuum auxílium mirabíliter constituísti: concéde propítius; ut, tali præsídio muníti certántes in vita, victóriam de hoste malígno cónsequi valeámus in morte.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "offertorium": {
-      "lat": "Ave, María, gratia plena; Dóminus tecum: benedícta tu in muliéribus, et benedíctus fructus ventris tui.",
-      "eng": "Hail, Mary, full of grace, the Lord is with you, blessed are you among women, and blessed is the fruit of your womb."
-    },
-    "secreta": {
-      "lat": "Pro religiónis christiánæ triúmpho hóstias placatiónis tibi, Dómine, immolámus: quæ ut nobis profíciant, opem auxiliátrix Virgo præstet; per quam talis perfécta est victória.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Pro religiónis christiánæ triúmpho hóstias placatiónis tibi, Dómine, immolámus: quæ ut nobis profíciant, opem auxiliátrix Virgo præstet; per quam talis perfécta est victória.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Beáta víscera Maríæ Vírginis, quæ portavérunt ætérni Patris Fílium.",
-      "eng": "Blessed is the womb of the Virgin Mary, which bore the Son of the eternal Father."
-    },
-    "postcommunio": {
-      "lat": "Adésto, Dómine, pópulis, qui participatióne Córporis et Sánguinis tui reficiúntur: ut, sanctíssima tua Genetríce auxiliánte, ab omni malo et perículo liberéntur, et in omni ópere bono custodiántur:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen.",
-      "eng": "Adésto, Dómine, pópulis, qui participatióne Córporis et Sánguinis tui reficiúntur: ut, sanctíssima tua Genetríce auxiliánte, ab omni malo et perículo liberéntur, et in omni ópere bono custodiántur:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen."
     }
   },
   "05-25": {
@@ -3654,46 +3464,6 @@
       "eng": "O God, Who made blessed Queen Margaret glorious by her remarkable charity toward the poor; grant, by her intercession and example, that Your charity may continually increase in our hearts.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
-  "06-10pl": {
-    "introitus": {
-      "lat": "Ducam eum in solitúdinem: et loquar ad cor eius.\nV. Beáti immaculáti in via, qui ámbulant in lege Dómini.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nDucam eum in solitúdinem: et loquar ad cor eius.",
-      "ref": "Osee 2:14",
-      "eng": "Ducam eum in solitúdinem: et loquar ad cor eius.\nV. Beáti immaculáti in via, qui ámbulant in lege Dómini.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nDucam eum in solitúdinem: et loquar ad cor eius."
-    },
-    "oratio": {
-      "lat": "Exáudi, quǽsumus, Dómine, pópulum tuum tota mente tibi subiéctum: et beáti Bogumili Confessóris tui atque Pontíficis supplicatióne custódi; ut, corde et córpore protéctus, quæ pie credit, iusta petíta accípiat.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Exáudi, quǽsumus, Dómine, pópulum tuum tota mente tibi subiéctum: et beáti Bogumili Confessóris tui atque Pontíficis supplicatióne custódi; ut, corde et córpore protéctus, quæ pie credit, iusta petíta accípiat.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Corínthios\nFratres: Spectáculum facti sumus mundo et Angelis et homínibus. Nos stulti propter Christum, vos autem prudéntes in Christo: nos infírmi, vos autem fortes: vos nóbiles, nos autem ignóbiles. Usque in hanc horam et esurímus, et sitímus, et nudi sumus, et cólaphis cǽdimur, et instábiles sumus, et laborámus operántes mánibus nostris: maledícimur, et benedícimus: persecutiónem pátimur, et sustinémus: blasphemámur, et obsecrámus: tamquam purgaménta hujus mundi facti sumus, ómnium peripséma usque adhuc. Non ut confúndant vos, hæc scribo, sed ut fílios meos caríssimos móneo: in Christo Jesu, Dómino nostro.",
-      "eng": "Lesson from the first letter of St Paul the Apostle to the Corinthians\nBrethren: We have been made a spectacle to the world, and to angels, and to men. We are fools for Christ, but you are wise in Christ! We are weak, but you are strong! You are honored, but we are without honor! To this very hour we hunger and thirst, and we are naked and buffeted, and have no fixed abode. And we toil, working with our own hands. We are reviled and we bless, we are persecuted and we bear with it, we are maligned and we entreat, we have become as the refuse of this world, the offscouring of all, even until now! I write these things not to put you to shame, but to admonish you as my dearest children, in Christ Jesus our Lord."
-    },
-    "graduale": {
-      "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium.\nV. Lex Dei ejus in corde ipsíus: et non supplantabúntur gressus ejus. Allelúja, allelúja.\nBeátus vir, qui timet Dóminum: in mandátis ejus cupit nimis. Allelúja.",
-      "eng": "The mouth of the just tells of wisdom, and his tongue utters what is right.\nV. The law of his God is in his heart, and his steps do not falter. Alleluia, alleluia.\nHappy the man who fears the Lord, who greatly delights in His commands. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Dixit Jesus discípulis suis: Nolíte timére, pusíllus grex, quia complácuit Patri vestro dare vobis regnum. Véndite quæ possidétis, et date eleemósynam. Fácite vobis sácculos, qui non veteráscunt, thesáurum non deficiéntem in cœlis: quo fur non apprópiat, neque tínea corrúmpit. Ubi enim thesáurus vester est, ibi et cor vestrum erit.",
-      "eng": "Continuation ++ of the Holy Gospel according to Luke\nAt that time, Jesus said to His disciples, Do not be afraid, little flock, for it has pleased your Father to give you the kingdom. Sell what you have and give alms. Make for yourselves purses that do not grow old, a treasure unfailing in heaven, where neither thief draws near nor moth destroys. For where your treasure is, there also will your heart be."
-    },
-    "offertorium": {
-      "lat": "Dirigátur, Dómine, orátio mea, sicut incénsum in conspéctu tuo.",
-      "ref": "Ps 140:2",
-      "eng": "Dirigátur, Dómine, orátio mea, sicut incénsum in conspéctu tuo."
-    },
-    "secreta": {
-      "lat": "Súscipe, Dómine, preces et múnera: quæ, ut tuo sint digna conspéctu, sancti Confessóris tui atque Pontíficis Bogumili précibus adiuvémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Súscipe, Dómine, preces et múnera: quæ, ut tuo sint digna conspéctu, sancti Confessóris tui atque Pontíficis Bogumili précibus adiuvémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Amen, dico vobis: quod vos, qui reliquístis ómnia et secúti estis me, céntuplum accipiétis, et vitam ætérnam possidébitis. (Allelúja.)",
-      "eng": "Amen, dico vobis: quod vos, qui reliquístis ómnia et secúti estis me, céntuplum accipiétis, et vitam ætérnam possidébitis. (Allelúja.)"
-    },
-    "postcommunio": {
-      "lat": "Præsta, quǽsumus, omnípotens Deus, ut, de percéptis munéribus grátias exhibéntes, intercedénte beáto Bogumilo, Confessóre tuo atque Pontífice, benefícia potióra sumámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Præsta, quǽsumus, omnípotens Deus, ut, de percéptis munéribus grátias exhibéntes, intercedénte beáto Bogumilo, Confessóre tuo atque Pontífice, benefícia potióra sumámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
   "06-11": {
     "officium": "S. Barnabæ Apostoli",
     "rank": 4,
@@ -3774,7 +3544,7 @@
     "graduale": {
       "lat": "Víndica, Dómine, sánguinem Sanctórum tuórum, qui effúsus est.\nV. Posuérunt mortália servórum tuórum escas volatílibus cœli: carnes Sanctórum tuórum béstiis terræ. \nAllelúja, allelúja.\nCórpora Sanctórum in pace sepúlta sunt: et nómina eórum vivent in generatiónem et generatiónem. Allelúja.",
       "ref": "Ps 78:10; 78:2",
-      "eng": "Víndica, Dómine, sánguinem Sanctórum tuórum, qui effúsus est.\nV. Posuérunt mortália servórum tuórum escas volatílibus cœli: carnes Sanctórum tuórum béstiis terræ. \nAllelúja, allelúja.\nCórpora Sanctórum in pace sepúlta sunt: et nómina eórum vivent in generatiónem et generatiónem. Allelúja."
+      "eng": "Lest they should say among the Gentiles: Where is their God? And let him be made known among the nations before our eyes, By the revenging the blood of thy servants, which hath been shed:"
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Sedénte Jesu super montem Olivéti, accessérunt ad eum discípuli secréto, dicéntes: Dic nobis, quando hæc erunt? et quod signum advéntus tui et consummatiónis sǽculi? Et respóndens Jesus, dixit eis: Vidéte, ne quis vos sedúcat. Multi enim vénient in nómine meo, dicéntes: Ego sum Christus: et multos sedúcent. Auditúri enim estis prælia et opiniónes prœliórum. Vidéte, ne turbémini. Opórtet enim hæc fíeri, sed nondum est finis. Consúrget enim gens in gentem, et regnum in regnum, et erunt pestiléntiæ et fames et terræmótus per loca. Hæc autem ómnia inítia sunt dolórum. Tunc tradent vos in tribulatiónem et occídent vos: et éritis odio ómnibus géntibus propter nomen meum. Et tunc scandalizabúntur multi, et ínvicem tradent, et odio habébunt ínvicem. Et multi pseudoprophétæ surgent, et sedúcent multos. Et quóniam abundávit iníquitas, refrigéscet cáritas multórum. Qui autem perseveráverit usque in finem, hic salvus erit.",
@@ -3791,7 +3561,7 @@
     "communio": {
       "lat": "Posuérunt mortália servórum tuórum, Dómine, escas volatílibus cœli, carnes Sanctórum tuórum béstiis terræ: secúndum magnitúdinem bráchii tui pósside fílios morte punitórum.",
       "ref": "Ps 78:2; 78:11",
-      "eng": "Posuérunt mortália servórum tuórum, Dómine, escas volatílibus cœli, carnes Sanctórum tuórum béstiis terræ: secúndum magnitúdinem bráchii tui pósside fílios morte punitórum."
+      "eng": "They have given the dead bodies of thy servants to be meat for the fowls of the air: the flesh of thy saints for the beasts of the earth."
     },
     "postcommunio": {
       "lat": "Semper, Dómine, sanctórum Mártyrum tuórum Basílidis, Cyríni, Nabóris atque Nazárii sollémnia celebrántes: præsta, quǽsumus; ut eórum patrocínia júgiter sentiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -3899,13 +3669,6 @@
     "postcommunio": {
       "lat": "Repléti, Dómine, benedictióne sollémni: quǽsumus; ut, per intercessiónem sanctórum Mártyrum tuórum Viti, Modésti et Crescéntiæ, medicína sacraménti et corpóribus nostris prosit et méntibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "We, who have been filled with thy solemn blessing, ask, O Lord, that, through the intercession of thy holy Martyrs Vitus, Modestus and Crescentia, this healing sacrament may benefit both our bodies and our souls.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
-    }
-  },
-  "06-15pl": {
-    "officium": "b. Jolantae Viduae",
-    "oratio": {
-      "lat": "Omnípotens sempitérne Deus, qui beátam Jolántam ab honóribus divitiísque misericórditer abstraxísti, et húmilem Fílii tui Crucem, et carnis mortificatiónem elígere fecísti: eius méritis et intercessióne concéde; ut terréna ómnia despiciámus, ac cæléstia sincéro corde quærámus.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Omnípotens sempitérne Deus, qui beátam Jolántam ab honóribus divitiísque misericórditer abstraxísti, et húmilem Fílii tui Crucem, et carnis mortificatiónem elígere fecísti: eius méritis et intercessióne concéde; ut terréna ómnia despiciámus, ac cæléstia sincéro corde quærámus.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "06-17r": {
@@ -4778,7 +4541,7 @@
     "graduale": {
       "lat": "Constítues eos príncipes super omnem terram: mémores erunt nóminis tui, Dómine.~\nV. Pro patribus tuis nati sunt tibi fílii: proptérea pópuli confitebúntur tibi. Allelúja, allelúja.\nV. Rogavi pro te, Petre, ut non defíciat fides tua: et tu aliquándo convérsus confírma fratres tuos. Allelúja.",
       "ref": "Ps 44:17; 44:18",
-      "eng": "Constítues eos príncipes super omnem terram: mémores erunt nóminis tui, Dómine.~\nV. Pro patribus tuis nati sunt tibi fílii: proptérea pópuli confitebúntur tibi. Allelúja, allelúja.\nV. Rogavi pro te, Petre, ut non defíciat fides tua: et tu aliquándo convérsus confírma fratres tuos. Allelúja."
+      "eng": "Instead of thy fathers, sons are born to thee: thou shalt make them princes over all the earth."
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Dixit Jesus discípulis suis: Nolíte timére, pusíllus grex, quia complácuit Patri vestro dare vobis regnum. Véndite quæ possidétis, et date eleemósynam. Fácite vobis sácculos, qui non veteráscunt, thesáurum non deficiéntem in cœlis: quo fur non apprópiat, neque tínea corrúmpit. Ubi enim thesáurus vester est, ibi et cor vestrum erit.",
@@ -5101,49 +4864,6 @@
       "gloria": true
     }
   },
-  "07-13pl": {
-    "introitus": {
-      "lat": "Laetetur cor quaerentium Dominum: quaerite Dominum et confirmamini: quaerite faciem eius semper. (T. P. Alleluia, alleluia)\nConfitemini Domino et invocate nomen eius: annuntiate inter gentes opera eius.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nLaetetur cor quaerentium Dominum: quaerite Dominum et confirmamini: quaerite faciem eius semper. (T. P. Alleluia, alleluia)",
-      "ref": "Ps 104:3-4",
-      "eng": "Laetetur cor quaerentium Dominum: quaerite Dominum et confirmamini: quaerite faciem eius semper. (T. P. Alleluia, alleluia)\nConfitemini Domino et invocate nomen eius: annuntiate inter gentes opera eius.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nLaetetur cor quaerentium Dominum: quaerite Dominum et confirmamini: quaerite faciem eius semper. (T. P. Alleluia, alleluia)"
-    },
-    "oratio": {
-      "lat": "Clementissime Deus, qui beatos Andream et Benedictum mira abstinentia et assidua vitae austeritate tibi soli adhaerere fecisti: da nobis, eorum intercessione, cordis nostri maculas iugi paenitentia detergere, et purificatis tibi mentibus deservire.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Clementissime Deus, qui beatos Andream et Benedictum mira abstinentia et assidua vitae austeritate tibi soli adhaerere fecisti: da nobis, eorum intercessione, cordis nostri maculas iugi paenitentia detergere, et purificatis tibi mentibus deservire.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Lectio libri Sapientiæ.\nMetuentes Dominum, sustinete misericordiam ejus: et non deflectatis ab illo, ne cadatis. Qui timetis Dominum, credite illi, et non evacuabitur merces vestra. Qui timetis Dominum, sperate in illum, et in oblectationem veniet vobis misericordia. Qui timetis Dominum, diligite illum, et illuminabuntur corda vestra. Respicite, filii, nationes hominum: et scitote quia nullus speravit in Domino et confusus est. Quis enim permansit in mandatis ejus, et derelictus est? aut quis invocavit eum, et despexit illum? Quoniam pius et misericors est Deus, et remittet in die tribulationis peccata, et protector est omnibus exquirentibus se in veritate.",
-      "ref": "Eccli 2:7-13",
-      "eng": "Lectio libri Sapientiæ.\nMetuentes Dominum, sustinete misericordiam ejus: et non deflectatis ab illo, ne cadatis. Qui timetis Dominum, credite illi, et non evacuabitur merces vestra. Qui timetis Dominum, sperate in illum, et in oblectationem veniet vobis misericordia. Qui timetis Dominum, diligite illum, et illuminabuntur corda vestra. Respicite, filii, nationes hominum: et scitote quia nullus speravit in Domino et confusus est. Quis enim permansit in mandatis ejus, et derelictus est? aut quis invocavit eum, et despexit illum? Quoniam pius et misericors est Deus, et remittet in die tribulationis peccata, et protector est omnibus exquirentibus se in veritate."
-    },
-    "graduale": {
-      "lat": "Diligite Dominum, omnes Sancti eius, quoniam veritatem requiret Dominus, et retribuet abundanter facientibus superbiam.\nV. Viriliter agite, et confortetur cor vestrum, omnes qui speratis in Domino. Alleluia, alleluia.\nV. Sperent in te, qui noverunt nomen tuum: quoniam non dereliquisti quaerentes te, Domine. Alleluia.",
-      "ref": "Ps 30:24-25",
-      "eng": "Diligite Dominum, omnes Sancti eius, quoniam veritatem requiret Dominus, et retribuet abundanter facientibus superbiam.\nV. Viriliter agite, et confortetur cor vestrum, omnes qui speratis in Domino. Alleluia, alleluia.\nV. Sperent in te, qui noverunt nomen tuum: quoniam non dereliquisti quaerentes te, Domine. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Dixit Jesus discípulis suis: Sint lumbi vestri præcíncti, et lucernæ ardéntes in mánibus vestris, et vos símiles homínibus exspectántibus dóminum suum, quando revertátur a núptiis: ut, cum vénerit et pulsáverit, conféstim apériant ei. Beáti servi illi, quos, cum vénerit dóminus, invénerit vigilántes: amen, dico vobis, quod præcínget se, et fáciet illos discúmbere, et tránsiens ministrábit illis. Et si vénerit in secúnda vigília, et si in tértia vigília vénerit, et ita invénerit, beáti sunt servi illi. Hoc autem scitóte, quóniam, si sciret paterfamílias, qua hora fur veníret, vigiláret útique, et non síneret pérfodi domum suam. Et vos estóte paráti, quia, qua hora non putátis, Fílius hóminis véniet.",
-      "eng": "Continuation ++ of the Holy Gospel according to Luke\nAt that time, Jesus said to His disciples, Let your loins be girt about and your lamps burning, and you yourselves like men waiting for their master’s return from the wedding; so that when he comes and knocks, they may straight-way open to him. Blessed are those servants whom the master, on his return, shall find watching. Amen I say to you, he will gird himself, and will make them recline at table, and will come and serve them. And if he comes in the second watch, and if in the third, and finds them so, blessed are those servants! But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into. You also must be ready, because at an hour that you do not expect, the Son of Man is coming."
-    },
-    "offertorium": {
-      "lat": "Iusti epulentur, et exsultent in conspectu Dei, et delectentur in laetitia. (T. P. Alleluia.)",
-      "ref": "Ps 67:4",
-      "eng": "Iusti epulentur, et exsultent in conspectu Dei, et delectentur in laetitia. (T. P. Alleluia.)"
-    },
-    "secreta": {
-      "lat": "Hostias ad altare tuum offerentibus, Domine, da nobis illum pietatis affectum, quem beatis Andreae et Benedicto Confessoribus tuis infudisti: ut pura mente ac fervido corde rei sacrae attendamus et sacrificium tibi placitum nobisque proficuum immolemus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Hostias ad altare tuum offerentibus, Domine, da nobis illum pietatis affectum, quem beatis Andreae et Benedicto Confessoribus tuis infudisti: ut pura mente ac fervido corde rei sacrae attendamus et sacrificium tibi placitum nobisque proficuum immolemus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Beati servi illi, quos, cum venerit Dominus, invenerit vigilantes: amen dico vobis, quod praecinget se, et faciet illos discumbere, et transiens ministrabit illis. (T. P. Alleluia.)",
-      "ref": "Luc 12:37",
-      "eng": "Beati servi illi, quos, cum venerit Dominus, invenerit vigilantes: amen dico vobis, quod praecinget se, et faciet illos discumbere, et transiens ministrabit illis. (T. P. Alleluia.)"
-    },
-    "postcommunio": {
-      "lat": "Tribuat nobis, omnipotens Deus, suffragantibus beatorum Andreae et Benedicti Confessorum tuorum precibus, refectio sacra subsidium: ut et castitatis munditiam observemus in corpore et lumen veritatis exhibeamus in opere.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Tribuat nobis, omnipotens Deus, suffragantibus beatorum Andreae et Benedicti Confessorum tuorum precibus, refectio sacra subsidium: ut et castitatis munditiam observemus in corpore et lumen veritatis exhibeamus in opere.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
   "07-14": {
     "officium": "S. Bonaventuræ Episcopi Confessoris et Ecclesiæ Doctoris\n(sed rubrica 1570)\nS. Bonaventuræ Episcopi Confessoris",
     "rank": 3,
@@ -5185,49 +4905,6 @@
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
       "eng": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)"
-    }
-  },
-  "07-15pl": {
-    "introitus": {
-      "lat": "Ego Dominus vocavi te in iustitia, et apprehendi manum tuam et dedi te in foedus populi, in lucem gentium, ut aperires oculos caecorum. (T. P. Alleluia, alleluia.)\nCantate Domino canticum novum, cantate Domino omnis terra.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nEgo Dominus vocavi te in iustitia, et apprehendi manum tuam et dedi te in foedus populi, in lucem gentium, ut aperires oculos caecorum. (T. P. Alleluia, alleluia.)",
-      "ref": "Isa 42:6",
-      "eng": "Ego Dominus vocavi te in iustitia, et apprehendi manum tuam et dedi te in foedus populi, in lucem gentium, ut aperires oculos caecorum. (T. P. Alleluia, alleluia.)\nCantate Domino canticum novum, cantate Domino omnis terra.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nEgo Dominus vocavi te in iustitia, et apprehendi manum tuam et dedi te in foedus populi, in lucem gentium, ut aperires oculos caecorum. (T. P. Alleluia, alleluia.)"
-    },
-    "oratio": {
-      "lat": "Misericordissime Deus, pro cuius fidei propagatione beatus Bruno Episcopus et Martyr in his terris sanguinem liberaliter effudit: miserere animarum populi tui, easque a culpis ac poenis liberas, in Sanctorum tuorum numerum inferas.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Misericordissime Deus, pro cuius fidei propagatione beatus Bruno Episcopus et Martyr in his terris sanguinem liberaliter effudit: miserere animarum populi tui, easque a culpis ac poenis liberas, in Sanctorum tuorum numerum inferas.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Lectio libri Sapientiæ\nAd vos ergo, reges, sunt hi sermones mei, ut discatis sapientiam, et non excidatis. Qui enim custodierint justa juste, justificabuntur; et qui didicerint ista, invenient quid respondeant. Concupiscite ergo sermones meos; diligite illos, et habebitis disciplinam. Clara est, et quæ numquam marcescit, sapientia; et facile videtur ab his qui diligunt eam, et invenitur ab his qui quærunt illam. Præoccupat qui se concupiscunt, ut illis se prior ostendat. Qui de luce vigilaverit ad illam non laborabit; assidentem enim illam foribus suis inveniet. Cogitare ergo de illa sensus est consummatus, et qui vigilaverit propter illam cito securus erit. Quoniam dignos se ipsa circuit quærens, et in viis ostendit se hilariter, et in omni providentia occurrit illis. Initium enim illius verissima est disciplinæ concupiscentia. Cura ergo disciplinæ dilectio est, et dilectio custodia legum illius est; custoditio autem legum consummatio incorruptionis est; incorruptio autem facit esse proximum Deo. Concupiscentia itaque sapientiæ deducit ad regnum perpetuum. Si ergo delectamini sedibus et sceptris, o reges populi, diligite sapientiam, ut in perpetuum regnetis:",
-      "ref": "Sap 6:10-22",
-      "eng": "Lectio libri Sapientiæ\nAd vos ergo, reges, sunt hi sermones mei, ut discatis sapientiam, et non excidatis. Qui enim custodierint justa juste, justificabuntur; et qui didicerint ista, invenient quid respondeant. Concupiscite ergo sermones meos; diligite illos, et habebitis disciplinam. Clara est, et quæ numquam marcescit, sapientia; et facile videtur ab his qui diligunt eam, et invenitur ab his qui quærunt illam. Præoccupat qui se concupiscunt, ut illis se prior ostendat. Qui de luce vigilaverit ad illam non laborabit; assidentem enim illam foribus suis inveniet. Cogitare ergo de illa sensus est consummatus, et qui vigilaverit propter illam cito securus erit. Quoniam dignos se ipsa circuit quærens, et in viis ostendit se hilariter, et in omni providentia occurrit illis. Initium enim illius verissima est disciplinæ concupiscentia. Cura ergo disciplinæ dilectio est, et dilectio custodia legum illius est; custoditio autem legum consummatio incorruptionis est; incorruptio autem facit esse proximum Deo. Concupiscentia itaque sapientiæ deducit ad regnum perpetuum. Si ergo delectamini sedibus et sceptris, o reges populi, diligite sapientiam, ut in perpetuum regnetis:"
-    },
-    "graduale": {
-      "lat": "Loquebar de testimoniis tuis in conspectu regum et non confundebar.\nV. Et meditabar in mandatis tuis, quae dilexi nimis. Alleluia, alleluia.\nV. Posui vos ut eatis, et fructum afferatis et fructus vester maneat. Alleluia.",
-      "ref": "Ps 118:46-47",
-      "eng": "Loquebar de testimoniis tuis in conspectu regum et non confundebar.\nV. Et meditabar in mandatis tuis, quae dilexi nimis. Alleluia, alleluia.\nV. Posui vos ut eatis, et fructum afferatis et fructus vester maneat. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus discípulis suis: Hoc est præcéptum meum, ut diligátis ínvicem, sicut diléxi vos. Majórem hac dilectiónem nemo habet, ut ánimam suam ponat quis pro amícis suis. Vos amíci mei estis, si fecéritis quæ ego præcípio vobis. Jam non dicam vos servos: quia servus nescit, quid fáciat dóminus ejus. Vos autem dixi amícos: quia ómnia, quæcúmque audívi a Patre meo, nota feci vobis. Non vos me elegístis: sed ego elégi vos, et pósui vos, ut eátis, et fructum afferátis: et fructus vester maneat: ut, quodcúmque petiéritis Patrem in nómine meo, det vobis.",
-      "eng": "Sequéntia ++ sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus discípulis suis: Hoc est præcéptum meum, ut diligátis ínvicem, sicut diléxi vos. Majórem hac dilectiónem nemo habet, ut ánimam suam ponat quis pro amícis suis. Vos amíci mei estis, si fecéritis quæ ego præcípio vobis. Jam non dicam vos servos: quia servus nescit, quid fáciat dóminus ejus. Vos autem dixi amícos: quia ómnia, quæcúmque audívi a Patre meo, nota feci vobis. Non vos me elegístis: sed ego elégi vos, et pósui vos, ut eátis, et fructum afferátis: et fructus vester maneat: ut, quodcúmque petiéritis Patrem in nómine meo, det vobis."
-    },
-    "offertorium": {
-      "lat": "Gaudeo in passionibus et adimpleo ea quae desunt passionum Christi in carne mea, pro corpore eius quod est Ecclesia, cuius factus sum ego minister. (T. P. Alleluia.)",
-      "ref": "Col 1:24-25",
-      "eng": "Gaudeo in passionibus et adimpleo ea quae desunt passionum Christi in carne mea, pro corpore eius quod est Ecclesia, cuius factus sum ego minister. (T. P. Alleluia.)"
-    },
-    "secreta": {
-      "lat": "Haec hostia, Domine, vincula nostri reatus absolvat, et intercedente beato Brunone Martyre tuo atque Pontifice, donum nobis gratiae caelestis acquirat.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Haec hostia, Domine, vincula nostri reatus absolvat, et intercedente beato Brunone Martyre tuo atque Pontifice, donum nobis gratiae caelestis acquirat.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Magnificabitur Christus in corpore meo, sive per vitam sive per mortem; mihi enim vivere Christus est et mori lucrum. (T. P. Alleluia.)",
-      "ref": "Phil 1:20-21",
-      "eng": "Magnificabitur Christus in corpore meo, sive per vitam sive per mortem; mihi enim vivere Christus est et mori lucrum. (T. P. Alleluia.)"
-    },
-    "postcommunio": {
-      "lat": "Caelestibus epulis refecti, te, Domine, supplices deprecamur; ut ignem in nobis spiritus tui clementer accendas, qui beatum Brunonem Martyrem tuum atque Pontificem docuit mortem pro tui nominis confessione non timere:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen.",
-      "eng": "Caelestibus epulis refecti, te, Domine, supplices deprecamur; ut ignem in nobis spiritus tui clementer accendas, qui beatum Brunonem Martyrem tuum atque Pontificem docuit mortem pro tui nominis confessione non timere:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen."
     }
   },
   "07-16": {
@@ -5347,7 +5024,7 @@
     "introitus": {
       "lat": "Clamavérunt justi, et Dóminus exaudívit eos: et ex ómnibus tribulatiónibus eórum liberávit eos.\nBenedícam Dóminum in omni témpore: semper laus ejus in ore meo. \nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nClamavérunt justi, et Dóminus exaudívit eos: et ex ómnibus tribulatiónibus eórum liberávit eos.",
       "ref": "Ps 33:18",
-      "eng": "Clamavérunt justi, et Dóminus exaudívit eos: et ex ómnibus tribulatiónibus eórum liberávit eos.\nBenedícam Dóminum in omni témpore: semper laus ejus in ore meo. \nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nClamavérunt justi, et Dóminus exaudívit eos: et ex ómnibus tribulatiónibus eórum liberávit eos."
+      "eng": "The just cried, and the Lord heard them: and delivered them out of all their troubles."
     },
     "lectio": {
       "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Hebrǽos\nFratres: Sancti per fidem vicérunt regna, operáti sunt justítiam, adépti sunt repromissiónes, obturavérunt ora leónum, exstinxérunt ímpetum ignis, effugérunt áciem gládii, convaluérunt de infirmitáte, fortes facti sunt in bello, castra vertérunt exterórum: accepérunt mulíeres de resurrectióne mórtuos suos: álii autem disténti sunt, non suscipiéntes redemptiónem, ut meliórem invenírent resurrectiónem: alii vero ludíbria et vérbera expérti, ínsuper et víncula et cárceres: lapidáti sunt, secti sunt, tentáti sunt, in occisióne gládii mórtui sunt: circuiérunt in melótis, in péllibus caprínis, egéntes, angustiáti, afflicti: quibus dignus non erat mundus: in solitudínibus errantes, in móntibus et spelúncis et in cavérnis terræ. Et hi omnes testimónio fídei probáti, invénti sunt in Christo Jesu, Dómino nostro.",
@@ -5372,12 +5049,6 @@
     "communio": {
       "lat": "Quicúmque fécerit voluntátem Patris mei, qui in cœlis est: ipse meus frater et soror et mater est, dicit Dóminus.",
       "eng": "Whoever does the will of My Father in heaven, he is My brother and sister and mother, says the Lord."
-    }
-  },
-  "07-18pl": {
-    "oratio": {
-      "lat": "Omnípotens sempitérne Deus: qui beátum Simónem Confessórem tuum evangélicæ prædicatiónis grátiam sublimásti: concéde propítius; ut eius salutáris doctrínæ pábulo nutríti, quæ tibi sunt plácita exsequéntes, per sémitas iustítiæ ad cæléstem pátriam felíciter perveníre valeámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Omnípotens sempitérne Deus: qui beátum Simónem Confessórem tuum evangélicæ prædicatiónis grátiam sublimásti: concéde propítius; ut eius salutáris doctrínæ pábulo nutríti, quæ tibi sunt plácita exsequéntes, per sémitas iustítiæ ad cæléstem pátriam felíciter perveníre valeámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "07-19": {
@@ -5449,22 +5120,6 @@
     "rank": 1,
     "rule": {
       "gloria": true
-    }
-  },
-  "07-20pl": {
-    "officium": "S. Ceslaum, Confessor",
-    "rank": 3,
-    "oratio": {
-      "lat": "Deus, qui beátum Cesláum virgíneo morum candóre prǽditum, et salútis animárum zelo succénsum, in divérsis natiónum pópulis óperum sanctitáte et fídei propagatióne mirábilem effecísti: præsta, quǽsumus; ut, eius intercessióne, simus semper in fide stábiles, et ad te, qui solus es ætérnæ salútis auctor ac largítor, misericórdiæ tuæ múnere perveníre valeámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui beátum Cesláum virgíneo morum candóre prǽditum, et salútis animárum zelo succénsum, in divérsis natiónum pópulis óperum sanctitáte et fídei propagatióne mirábilem effecísti: præsta, quǽsumus; ut, eius intercessióne, simus semper in fide stábiles, et ad te, qui solus es ætérnæ salútis auctor ac largítor, misericórdiæ tuæ múnere perveníre valeámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Designávit Dóminus et álios septuagínta duos: et misit illos binos ante fáciem suam in omnem civitátem et locum, quo erat ipse ventúrus. Et dicebat illis: Messis quidem multa, operárii autem pauci. Rogáte ergo Dóminum messis, ut mittat operários in messem suam. Ite: ecce, ego mitto vos sicut agnos inter lupos. Nolíte portáre sácculum neque peram neque calceaménta; et néminem per viam salutavéritis. In quamcúmque domum intravéritis, primum dícite: Pax huic dómui: et si ibi fúerit fílius pacis, requiéscet super illum pax vestra: sin autem, ad vos revertétur. In eádem autem domo manéte, edéntes et bibéntes quæ apud illos sunt: dignus est enim operárius mercéde sua. Nolíte transíre de domo in domum. Et in quamcúmque civitátem intravéritis, et suscéperint vos, manducáte quæ apponúntur vobis: et curáte infírmos, qui in illa sunt, et dícite illis: Appropinquávit in vos regnum Dei.",
-      "eng": "Continuation + of the Holy Gospel according to Luke\nAt that time, the Lord appointed seventy-two others, and sent them forth two by two before Him into every town and place where He Himself was about to come. And He said to them, The harvest indeed is great, but the laborers are few. Pray therefore the Lord of the harvest to send forth laborers into His harvest. Go. Behold, I send you forth as lambs in the midst of wolves. Carry neither purse, nor wallet, nor sandals, and greet no one on the way. Whatever house you enter, first say, ‘Peace to this house!’ And if a son of peace be there, your peace will rest upon him; but if not, it will return to you. And remain in the same house, eating and drinking what they have; for the laborer deserves his wages. Do not go from house to house. And whatever town you enter, and they receive you, eat what is set before you, and cure the sick who are there, and say to them, ‘The kingdom of God is at hand for you.’"
-    },
-    "offertorium": {
-      "lat": "Glória et honóre coronásti eum: et constituísti eum super ópera mánuum tuárum, Dómine.",
-      "eng": "℣. Thou hast made him a little less than the angels, thou hast crowned him with glory and honour: and hast set him over the works of thy hands."
     }
   },
   "07-21": {
@@ -5630,24 +5285,6 @@
     "rank": 2,
     "rule": {
       "gloria": true
-    }
-  },
-  "07-24pl": {
-    "oratio": {
-      "lat": "Deus, qui beátam Cunegúndem dulcédinis tuæ benedictiónibus prævenísti, ac vírginem étiam in coniúgio conservásti: præsta, quǽsumus; ut, ipsa intercedénte, per vitæ puritátem tibi iúgiter adhærére, et per eius vestígia gradiéntes, ad te perveníre felíciter mereámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui beátam Cunegúndem dulcédinis tuæ benedictiónibus prævenísti, ac vírginem étiam in coniúgio conservásti: præsta, quǽsumus; ut, ipsa intercedénte, per vitæ puritátem tibi iúgiter adhærére, et per eius vestígia gradiéntes, ad te perveníre felíciter mereámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile erit regnum coelórum decem virgínibus: quæ, accipiéntes lámpades suas, exiérunt óbviam sponso et sponsæ. Quinque autem ex eis erant fátuæ, et quinque prudéntes: sed quinque fátuæ, accéptis lampádibus, non sumpsérunt óleum secum: prudéntes vero accepérunt óleum in vasis suis cum lampádibus. Moram autem faciénte sponso, dormitavérunt omnes et dormiérunt. Média autem nocte clamor factus est: Ecce, sponsus venit, exíte óbviam ei. Tunc surrexérunt omnes vírgines íllæ, et ornavérunt lámpades suas. Fátuæ autem sapiéntibus dixérunt: Date nobis de óleo vestro: quia lámpades nostræ exstinguúntur. Respondérunt prudéntes, dicéntes: Ne forte non suffíciat nobis et vobis, ite pótius ad vendéntes, et émite vobis. Dum autem irent émere, venit sponsus: et quæ parátæ erant, intravérunt cum eo ad núptias, et clausa est jánua. Novíssime vero véniunt et réliquæ vírgines, dicéntes: Dómine, Dómine, áperi nobis. At ille respóndens, ait: Amen, dico vobis, néscio vos. Vigiláte ítaque, quia nescítis diem neque horam.",
-      "eng": "Continuation ++ of the Holy Gospel according to Matthew\nAt that time Jesus spoke this parable to His disciples: “Then will the kingdom of heaven be like ten virgins who took their lamps and went forth to meet the bridegroom and the bride. Five of them were foolish and five wise. But the five foolish, when they took their lamps, took no oil with them, while the wise did take oil in their vessels with the lamps. Then as the bridegroom was long in coming, they all became drowsy and slept. And at midnight a cry arose, 'Behold, the bridegroom is coming, go forth to meet him!' Then all those virgins arose and trimmed their lamps. And the foolish said to the wise, 'Give us some of your oil, for our lamps are going out.' The wise answered, saying, 'Lest there may not be enough for us and for you, go rather to those who sell it, and buy some for yourselves.' Now while they were gone to buy it, the bridegroom came; and those who were ready went in with him to the marriage feast, and the door was shut. Finally there came also the other virgins, who said, 'Sir, sir, open the door for us!' But he answered and said, 'Amen I say to you, I do not know you.' Watch therefore, for you know neither the day nor the hour.”"
-    },
-    "secreta": {
-      "lat": "Munéribus tibi, Dómine, pro beáte Vírginis tuæ Cunegúndis honóre dicátis, benedictiónem tuam propitiátus effúnde: ut per éadem et a vítiis ómnibus emundémur, et cæléstibus delíciis impleámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Munéribus tibi, Dómine, pro beáte Vírginis tuæ Cunegúndis honóre dicátis, benedictiónem tuam propitiátus effúnde: ut per éadem et a vítiis ómnibus emundémur, et cæléstibus delíciis impleámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "postcommunio": {
-      "lat": "Sumpta mystéria, quǽsumus, Dómine, suffragántibus beáte Cunegúndis Vírginis tuæ méritis, íncitent nos iúgiter, et illústrent: ut digne advéntum Fílii tui præstolémur, et ad supérnas eius núptias admittámur.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Sumpta mystéria, quǽsumus, Dómine, suffragántibus beáte Cunegúndis Vírginis tuæ méritis, íncitent nos iúgiter, et illústrent: ut digne advéntum Fílii tui præstolémur, et ad supérnas eius núptias admittámur.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "07-24r": {
@@ -7172,48 +6809,6 @@
       "gloria": true
     }
   },
-  "08-26pl": {
-    "introitus": {
-      "lat": "Fundaménta eius in móntibus sanctis: díligit Dóminus portas Sion super ómnia tabernácula Jacob.\nGloriósa dicta sunt de te, cívitas Dei.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nFundaménta eius in móntibus sanctis: díligit Dóminus portas Sion super ómnia tabernácula Jacob.",
-      "ref": "Ps 86:1-2",
-      "eng": "Fundaménta eius in móntibus sanctis: díligit Dóminus portas Sion super ómnia tabernácula Jacob.\nGloriósa dicta sunt de te, cívitas Dei.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nFundaménta eius in móntibus sanctis: díligit Dóminus portas Sion super ómnia tabernácula Jacob."
-    },
-    "oratio": {
-      "lat": "Omnipotens et misericors Deus, qui ad defensionem populi Polonici in beatissima Virgine Maria perpetuum auxilium mirabliliter constituisti, eiusque sacram Imaginem Claromontanam solemni fidelium veneratione insignem reddidisti: concede propitius; ut, tali præsidio muniti, certantes in vita, victoriam de hoste maligno consequi valeamus in morte.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Omnipotens et misericors Deus, qui ad defensionem populi Polonici in beatissima Virgine Maria perpetuum auxilium mirabliliter constituisti, eiusque sacram Imaginem Claromontanam solemni fidelium veneratione insignem reddidisti: concede propitius; ut, tali præsidio muniti, certantes in vita, victoriam de hoste maligno consequi valeamus in morte.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Léctio libri Sapiéntiæ.\nEgo díligentés mé díligó et quí máne vigilant ad mé invenient mé. Mécum sunt dívitiæ et glória opés superbæ et iústitiá. Melior est frúctus meus auró et pretiósó lapide et genimina mea argentó électó. In viís iústitiæ ambuló in medió sémitárum iúdicií ut dítem díligentés mé et thésaurós eórum repleam. Dóminus possédit me in inítio viárum suárum, ántequam quidquam fáceret a princípio. Ab ætérno ordináta sum et ex antíquis, ántequam terra fíeret. Nondum erant abýssi, et ego jam concépta eram. Nunc ergo, fílii, audíte me: Beáti, qui custódiunt vias meas. Audíte disciplínam, et estóte sapiéntes, et nolíte abjícere eam. Beátus homo, qui audit me et qui vígilat ad fores meas cotídie. et obsérvat ad postes óstii mei. Qui me invénerit, invéniet vitam et háuriet salútem a Dómino.",
-      "ref": "Prov 8:17-24; 8:32-35",
-      "eng": "Léctio libri Sapiéntiæ.\nEgo díligentés mé díligó et quí máne vigilant ad mé invenient mé. Mécum sunt dívitiæ et glória opés superbæ et iústitiá. Melior est frúctus meus auró et pretiósó lapide et genimina mea argentó électó. In viís iústitiæ ambuló in medió sémitárum iúdicií ut dítem díligentés mé et thésaurós eórum repleam. Dóminus possédit me in inítio viárum suárum, ántequam quidquam fáceret a princípio. Ab ætérno ordináta sum et ex antíquis, ántequam terra fíeret. Nondum erant abýssi, et ego jam concépta eram. Nunc ergo, fílii, audíte me: Beáti, qui custódiunt vias meas. Audíte disciplínam, et estóte sapiéntes, et nolíte abjícere eam. Beátus homo, qui audit me et qui vígilat ad fores meas cotídie. et obsérvat ad postes óstii mei. Qui me invénerit, invéniet vitam et háuriet salútem a Dómino."
-    },
-    "graduale": {
-      "lat": "Porta cæli et stella maris es. Virgo Maria, Regis æterni Mater ac Regina nostra.\nV. Gratos nos redde Filio tuo: quia omnis virtus et decor et gloria ex te resplendet. Alleluia, alleluia.\nLuc 1:28\nV. Ave, gratia plena: Dominus tecum, benedicta tu in mulieribus. Alleluia.",
-      "eng": "Porta cæli et stella maris es. Virgo Maria, Regis æterni Mater ac Regina nostra.\nV. Gratos nos redde Filio tuo: quia omnis virtus et decor et gloria ex te resplendet. Alleluia, alleluia.\nLuc 1:28\nV. Ave, gratia plena: Dominus tecum, benedicta tu in mulieribus. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem.\nIn illo témpore: Núptiæ factæ sunt in Cana Galilǽæ: et erat Mater Jesu ibi. Vocátus est autem et Jesus, et discípuli ejus ad núptias. Et deficiénte vino, dicit Mater Jesu ad eum: Vinum non habent. Et dicit ei Jesus: Quid mihi et tibi est, mulier? nondum venit hora mea. Dicit Mater ejus minístris: Quodcúmque díxerit vobis, fácite. Erant autem ibi lapídeæ hýdriæ sex pósitæ secúndum purificatiónem Judæórum, capiéntes síngulæ metrétas binas vel ternas. Dicit eis Jesus: Implete hýdrias aqua. Et implevérunt eas usque ad summum. Et dicit eis Jesus: Hauríte nunc, et ferte architriclíno. Et tulérunt. Ut autem gustávit architriclínus aquam vinum fáctam, et non sciébat unde esset, minístri autem sciébant, qui háuserant aquam: vocat sponsum architriclínus, et dicit ei: Omnis homo primum bonum vinum ponit: et cum inebriáti fúerint, tunc id, quod detérius est. Tu autem servásti bonum vinum usque adhuc. Hoc fecit inítium signórum Jesus in Cana Galilǽæ: et manifestávit glóriam suam, et credidérunt in eum discípuli ejus.",
-      "eng": "Continuation of the Holy Gospel according to John\nAt that time, a marriage took place at Cana of Galilee, and the mother of Jesus was there. Now Jesus too was invited to the marriage, and also His disciples. And the wine having run short, the mother of Jesus said to Him, They have no wine. And Jesus said to her, What would you have me do, woman? My hour has not yet come. His mother said to the attendants, Do whatever He tells you. Now six stone water-jars were placed there, after the Jewish manner of purification, each holding two or three measures. Jesus said to them, Fill the jars with water. And they filled them to the brim. And Jesus said to them, Draw out now, and take to the chief steward. And they took it to him. Now when the chief steward had tasted the water after it had become wine, not knowing whence it was - though the attendants who had drawn the water knew, - the chief steward called the bridegroom, and said to him, Every man at first sets forth the good wine, and when they have drunk freely, then that which is poorer. But you have kept the good wine until now. This first of His signs Jesus worked at Cana of Galilee; and He manifested His glory, and His disciples believed in Him."
-    },
-    "offertorium": {
-      "lat": "Circumdate Sion, et complectimini eam, narrate in turribus eius: pronite corda vestra in virtute eius, et distribuite domos eius, ut enarretis in progenie altera: quoniam hic est Deus.",
-      "ref": "Ps 47:13-15",
-      "eng": "Circumdate Sion, et complectimini eam, narrate in turribus eius: pronite corda vestra in virtute eius, et distribuite domos eius, ut enarretis in progenie altera: quoniam hic est Deus."
-    },
-    "secreta": {
-      "lat": "Pro religiónis christiánæ triúmpho hóstias placatiónis tibi, Dómine, immolámus: quæ ut nobis profíciant, opem auxiliátrix Virgo præstet; per quam talis perfécta est victória.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Pro religiónis christiánæ triúmpho hóstias placatiónis tibi, Dómine, immolámus: quæ ut nobis profíciant, opem auxiliátrix Virgo præstet; per quam talis perfécta est victória.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Gloriosa dicta sunt de te, civitas Dei: diligit Dominus portas Sion super omnia tabernacula Iacob.",
-      "ref": "Ps 86:3; 86:2",
-      "eng": "Gloriosa dicta sunt de te, civitas Dei: diligit Dominus portas Sion super omnia tabernacula Iacob."
-    },
-    "postcommunio": {
-      "lat": "Adésto, Dómine, pópulis, qui participatióne Córporis et Sánguinis tui reficiúntur: ut, sanctíssima tua Genetríce auxiliánte, ab omni malo et perículo liberéntur, et in omni ópere bono custodiántur:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen.",
-      "eng": "Adésto, Dómine, pópulis, qui participatióne Córporis et Sánguinis tui reficiúntur: ut, sanctíssima tua Genetríce auxiliánte, ab omni malo et perículo liberéntur, et in omni ópere bono custodiántur:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen."
-    }
-  },
   "08-27": {
     "officium": "S. Josephi Calasanctii Confessoris",
     "rank": 3,
@@ -7455,24 +7050,6 @@
       "eng": "Grant, we beseech You, almighty God, that we may follow more and more the faith of those whose memory we venerate in receiving Your sacrament.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
-  "09-01pl": {
-    "oratio": {
-      "lat": "Domine Iesu Christe, qui in humili tuæ Crucis sequela ascensiones ad te disposuisti; concede propitius; ut, exemplo beatæ Bronislavæ, cuius venerandam celebramus festivitatem, post præsentis vitæ ærumnas, gloriæ tuæ particepes esse mereamur.\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen.",
-      "eng": "Domine Iesu Christe, qui in humili tuæ Crucis sequela ascensiones ad te disposuisti; concede propitius; ut, exemplo beatæ Bronislavæ, cuius venerandam celebramus festivitatem, post præsentis vitæ ærumnas, gloriæ tuæ particepes esse mereamur.\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile erit regnum coelórum decem virgínibus: quæ, accipiéntes lámpades suas, exiérunt óbviam sponso et sponsæ. Quinque autem ex eis erant fátuæ, et quinque prudéntes: sed quinque fátuæ, accéptis lampádibus, non sumpsérunt óleum secum: prudéntes vero accepérunt óleum in vasis suis cum lampádibus. Moram autem faciénte sponso, dormitavérunt omnes et dormiérunt. Média autem nocte clamor factus est: Ecce, sponsus venit, exíte óbviam ei. Tunc surrexérunt omnes vírgines íllæ, et ornavérunt lámpades suas. Fátuæ autem sapiéntibus dixérunt: Date nobis de óleo vestro: quia lámpades nostræ exstinguúntur. Respondérunt prudéntes, dicéntes: Ne forte non suffíciat nobis et vobis, ite pótius ad vendéntes, et émite vobis. Dum autem irent émere, venit sponsus: et quæ parátæ erant, intravérunt cum eo ad núptias, et clausa est jánua. Novíssime vero véniunt et réliquæ vírgines, dicéntes: Dómine, Dómine, áperi nobis. At ille respóndens, ait: Amen, dico vobis, néscio vos. Vigiláte ítaque, quia nescítis diem neque horam.",
-      "eng": "Continuation ++ of the Holy Gospel according to Matthew\nAt that time Jesus spoke this parable to His disciples: “Then will the kingdom of heaven be like ten virgins who took their lamps and went forth to meet the bridegroom and the bride. Five of them were foolish and five wise. But the five foolish, when they took their lamps, took no oil with them, while the wise did take oil in their vessels with the lamps. Then as the bridegroom was long in coming, they all became drowsy and slept. And at midnight a cry arose, 'Behold, the bridegroom is coming, go forth to meet him!' Then all those virgins arose and trimmed their lamps. And the foolish said to the wise, 'Give us some of your oil, for our lamps are going out.' The wise answered, saying, 'Lest there may not be enough for us and for you, go rather to those who sell it, and buy some for yourselves.' Now while they were gone to buy it, the bridegroom came; and those who were ready went in with him to the marriage feast, and the door was shut. Finally there came also the other virgins, who said, 'Sir, sir, open the door for us!' But he answered and said, 'Amen I say to you, I do not know you.' Watch therefore, for you know neither the day nor the hour.”"
-    },
-    "secreta": {
-      "lat": "Virginis tuæ Bronislavæ precibus Domine Iesu Christe, plebis tuæ dona sanctifica: ut, quæ tibi tuo grata sunt instituto, gratiora fiant patrocino supplicantis:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen.",
-      "eng": "Virginis tuæ Bronislavæ precibus Domine Iesu Christe, plebis tuæ dona sanctifica: ut, quæ tibi tuo grata sunt instituto, gratiora fiant patrocino supplicantis:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen."
-    },
-    "postcommunio": {
-      "lat": "Corporis et Sanguinis tui sacra libatio, Domine, intercedente beata Virgine Bronislava, ab omnibus nos caducis rebus avertat: ut valeamus tui et sincera in terris caritate proficere, et perpetua in cælis visione gaudere:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen.",
-      "eng": "Corporis et Sanguinis tui sacra libatio, Domine, intercedente beata Virgine Bronislava, ab omnibus nos caducis rebus avertat: ut valeamus tui et sincera in terris caritate proficere, et perpetua in cælis visione gaudere:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen."
-    }
-  },
   "09-02": {
     "officium": "S. Stephani Hungariæ Regis Confessoris",
     "rank": 2,
@@ -7577,12 +7154,6 @@
       "lat": "Invéni David servum meum, óleo sancto meo unxi eum: manus enim mea auxiliábitur ei, et bráchium meum confortábit eum.",
       "eng": "I have found David, My servant; with My holy oil I have anointed him, that My hand may be always with him, and that My arm may make him strong.",
       "ref": "Ps 88:21-22"
-    }
-  },
-  "09-07pl": {
-    "oratio": {
-      "lat": "Beati Martyris tui Melchioris, quǽsumus, Domine, precibus adiuvemur; ut, cuius gloriamur triumpho, fidei constantiam imitemur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Beati Martyris tui Melchioris, quǽsumus, Domine, precibus adiuvemur; ut, cuius gloriamur triumpho, fidei constantiam imitemur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "09-08": {
@@ -8031,7 +7602,7 @@
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Vidit Jesus publicánum nómine Levi, sedéntem ad telónium, et ait illi: Séquere me. Et relíctis ómnibus, surgens secútus est eum. Et fecit ei convívium magnum Levi in domo sua: et erat turba multa publicanórum et aliórum, qui cum illis erant discumbéntes. Et murmurábant pharisæi et scribæ eórum, dicéntes ad discípulos ejus: Quare cum publicánis et peccatóribus manducátis et bíbitis? Et respóndens Jesus, dixit ad illos: Non egent, qui sani sunt, médice, sed qui male habent. Non veni vocáre justos, sed peccatóres ad pœniténtiam.",
       "ref": "Luc 5:27-32",
-      "eng": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Vidit Jesus publicánum nómine Levi, sedéntem ad telónium, et ait illi: Séquere me. Et relíctis ómnibus, surgens secútus est eum. Et fecit ei convívium magnum Levi in domo sua: et erat turba multa publicanórum et aliórum, qui cum illis erant discumbéntes. Et murmurábant pharisæi et scribæ eórum, dicéntes ad discípulos ejus: Quare cum publicánis et peccatóribus manducátis et bíbitis? Et respóndens Jesus, dixit ad illos: Non egent, qui sani sunt, médice, sed qui male habent. Non veni vocáre justos, sed peccatóres ad pœniténtiam."
+      "eng": "And after these things he went forth, and saw a publican named Levi, sitting at the receipt of custom, and he said to him: Follow me. And leaving all things, he rose up and followed him. And Levi made him a great feast in his own house; and there was a great company of publicans, and of others, that were at table with them. But the Pharisees and scribes murmured, saying to his disciples: Why do you eat and drink with publicans and sinners? And Jesus answering, said to them: They that are whole, need not the physician: but they that are sick. I came not to call the just, but sinners to penance."
     },
     "secreta": {
       "lat": "@:Secreta:s/(Apóstoli tui)/$1 et Evangelístæ/",
@@ -8167,20 +7738,6 @@
     "postcommunio": {
       "lat": "Sumptis, Dómine, salútis nostræ subsídiis: da, quǽsumus, beátæ Maríæ semper Vírginis patrocíniis nos ubíque prótegi; in cujus veneratióne hæc tuæ obtúlimus majestáti.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Having received the aids conducive to our salvation, O Lord, we beseech You, grant that we may everywhere be protected by the patronage of blessed Mary, ever Virgin, in veneration of whom we have made these offerings to Your Majesty.\n$Per Dominum"
-    }
-  },
-  "09-25pl": {
-    "oratio": {
-      "lat": "Deus, qui beatum Ladislaum religiosa perfectione voluisti omnibus prælucere: concede propitius; ut eius exemplo in virtutibus iugiter proficiamus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui beatum Ladislaum religiosa perfectione voluisti omnibus prælucere: concede propitius; ut eius exemplo in virtutibus iugiter proficiamus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "secreta": {
-      "lat": "Hostias ad altare tuum offerentibus, Domine, da nobis illum pietatis affectum, quem beato Ladislao Confessori tuo infudisti: ut pura mente ac fervido corde rei sacræ attendamus, et sacrificium tibi placitum nobisque proficuum immolemus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Hostias ad altare tuum offerentibus, Domine, da nobis illum pietatis affectum, quem beato Ladislao Confessori tuo infudisti: ut pura mente ac fervido corde rei sacræ attendamus, et sacrificium tibi placitum nobisque proficuum immolemus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "postcommunio": {
-      "lat": "Tribuat nobis, omnipotens Deus, suffragantibus beati Ladislai Confessoris tui precibus, refectio sacra subsidium: ut et castitatis munditiam observemus in corpore, et lumen veritatis exhibeamus in opere.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Tribuat nobis, omnipotens Deus, suffragantibus beati Ladislai Confessoris tui precibus, refectio sacra subsidium: ut et castitatis munditiam observemus in corpore, et lumen veritatis exhibeamus in opere.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "09-26": {
@@ -8383,12 +7940,6 @@
   "10-01": {
     "officium": "S. Remigii Episcopi et Confessoris",
     "rank": 1
-  },
-  "10-01pl": {
-    "oratio": {
-      "lat": "Deus, qui beatum Ioannem Confessorem tuum eximiæ humilitatis et patientiæ donis decorasti: concede propitius; ut, eiusdem imitantes exempla, consequamur et præmia.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui beatum Ioannem Confessorem tuum eximiæ humilitatis et patientiæ donis decorasti: concede propitius; ut, eiusdem imitantes exempla, consequamur et præmia.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
   },
   "10-02": {
     "officium": "Ss. Angelorum Custodum",
@@ -8689,13 +8240,6 @@
       "eng": "Refreshed by the holy sacrament of Your precious Body and Blood, we beseech You, O Lord, that, following the example of blessed John, Your Confessor, may we strive to profess what he believed and in our actions put into practice what he taught.\nWho livest and reignest with God the Father, in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
-  "10-09pl": {
-    "officium": "b. Vincenti Episcopi et Confessoris",
-    "oratio": {
-      "lat": "Deus, qui beatum Vincentium Confessorem tuum atque Pontificem, spretis saeculi pompis humilitatis gloria decorasti: praesta quaesumus; ut, tantae virtutis proficientes exemplo, eius meritis caelestis gloriae consortes efficiamur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui beatum Vincentium Confessorem tuum atque Pontificem, spretis saeculi pompis humilitatis gloria decorasti: praesta quaesumus; ut, tantae virtutis proficientes exemplo, eius meritis caelestis gloriae consortes efficiamur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
   "10-09t": {
     "officium": "S. Dionysii Epíscopi, Rustici et Eleutherii Martyrum",
     "rank": 2,
@@ -8733,20 +8277,6 @@
     "oratio": {
       "lat": "Dómine Jesu Christe, veræ humilitátis et exémplar et prǽmium: quǽsumus; ut, sicut beátum Francíscum in terréni honóris contémptu imitatórem tui gloriósum effecísti, ita nos eiúsdem imitatiónis et glóriæ tríbuas esse consórtes:\nQui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæcul��rum. Amen.",
       "eng": "O Lord Jesus Christ, model of true humility and its reward, we beseech Thee, that as Thou made blessed Francis one of Thy glorious imitators by his contempt for earthly honors, grant us to follow his example and to share in his glory.\nWho livest and reignest with God the Father, in the unity of the Holy Ghost, God, world without end. Amen."
-    }
-  },
-  "10-10pl": {
-    "oratio": {
-      "lat": "Deus, qui in summis regni nostri periculis, antiqua bracchii tui miracula renovasti: suscipe gratiarum actiones exsultantium populorum; et quibus tanti gaudii causam praestitisti, perpetuae fructum concede laetitiae.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui in summis regni nostri periculis, antiqua bracchii tui miracula renovasti: suscipe gratiarum actiones exsultantium populorum; et quibus tanti gaudii causam praestitisti, perpetuae fructum concede laetitiae.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "secreta": {
-      "lat": "Odorem, Domine, sacrificii huius cum gratiarum actionibus suscipe: et praesta; ut, quos exaudire, et incolumes servare dignatus es, ab omni in posterum adversitate custodias, et in tuo servitio et amore concrescant.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Odorem, Domine, sacrificii huius cum gratiarum actionibus suscipe: et praesta; ut, quos exaudire, et incolumes servare dignatus es, ab omni in posterum adversitate custodias, et in tuo servitio et amore concrescant.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "postcommunio": {
-      "lat": "Deus, qui neminem in te sperantem, nimium affligi permittis, sed pium precibus praestas auditium: pro postulationibus nostris, votisque susceptis gratias agimus, te piissime deprecantes: ut, per haec, quae sumpsimus, a cunctis eripi mereamur adversis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui neminem in te sperantem, nimium affligi permittis, sed pium precibus praestas auditium: pro postulationibus nostris, votisque susceptis gratias agimus, te piissime deprecantes: ut, per haec, quae sumpsimus, a cunctis eripi mereamur adversis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "10-11": {
@@ -9036,48 +8566,6 @@
   "10-21cc": {
     "officium": "Ss. Ursulæ et Sociarum Virg. et Mart.",
     "rank": 1
-  },
-  "10-21pl": {
-    "introitus": {
-      "lat": "Spíritus Dómini super me, eo quod únxerit Dóminus me: ad annuntiándum mansuétis misit me.\nMeménto, Dómine, David: et omnis mansuetúdinis eius.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nSpíritus Dómini super me, eo quod únxerit Dóminus me: ad annuntiándum mansuétis misit me.",
-      "ref": "Is 61:1",
-      "eng": "Spíritus Dómini super me, eo quod únxerit Dóminus me: ad annuntiándum mansuétis misit me.\nMeménto, Dómine, David: et omnis mansuetúdinis eius.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nSpíritus Dómini super me, eo quod únxerit Dóminus me: ad annuntiándum mansuétis misit me."
-    },
-    "oratio": {
-      "lat": "Deus, qui in beáto Iacóbo, Confessóre tuo atque Pontífice, apostólicum evangelizándi spíritum mirabíliter renovásti: præsta, quǽsumus; ut, ipso intercedénte, fide ac móribus tibi iúgiter adhæreámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui in beáto Iacóbo, Confessóre tuo atque Pontífice, apostólicum evangelizándi spíritum mirabíliter renovásti: præsta, quǽsumus; ut, ipso intercedénte, fide ac móribus tibi iúgiter adhæreámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Grátias ago Deo meo in omni memória vestri, semper in cunctis oratiónibus meis pro ómnibus vobis, cum gáudio deprecatiónem fáciens, super communicatióne vestra in Evangélio Christi a prima die usque nunc. Confídens hoc ipsum, quia qui cœpit in vobis opus bonum, perfíciet usque in diem Christi Jesu: sicut est mihi justum hoc sentíre pro ómnibus vobis : eo quod hábeam vos in corde, et in vínculis meis, et in defensióne, et confirmatióne Evangélii, sócios gáudii mei omnes vos esse. Testis enim mihi est Deus, quómodo cúpiam omnes vos in viscéribus Jesu Christi. Et hoc oro, ut cáritas vestra magis ac magis abúndet in sciéntia, et in omni sensu: ut probétis potióra, ut sitis sincéri, et sine offénsa in diem Christi.",
-      "ref": "Philipp 1:3-11",
-      "eng": "Grátias ago Deo meo in omni memória vestri, semper in cunctis oratiónibus meis pro ómnibus vobis, cum gáudio deprecatiónem fáciens, super communicatióne vestra in Evangélio Christi a prima die usque nunc. Confídens hoc ipsum, quia qui cœpit in vobis opus bonum, perfíciet usque in diem Christi Jesu: sicut est mihi justum hoc sentíre pro ómnibus vobis : eo quod hábeam vos in corde, et in vínculis meis, et in defensióne, et confirmatióne Evangélii, sócios gáudii mei omnes vos esse. Testis enim mihi est Deus, quómodo cúpiam omnes vos in viscéribus Jesu Christi. Et hoc oro, ut cáritas vestra magis ac magis abúndet in sciéntia, et in omni sensu: ut probétis potióra, ut sitis sincéri, et sine offénsa in diem Christi."
-    },
-    "graduale": {
-      "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo.\nV. Non est invéntus símilis illi, qui conserváret legem Excélsi. Allelúia, allelúia.\nV. Tu es sacérdos in ætérnum, secúndum órdinem Melchísedech. Allelúia.",
-      "ref": "Sir 44:16-20",
-      "eng": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo.\nV. Non est invéntus símilis illi, qui conserváret legem Excélsi. Allelúia, allelúia.\nV. Tu es sacérdos in ætérnum, secúndum órdinem Melchísedech. Allelúia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus pharisǽis: Ego sum pastor bonus. Bonus pastor ánimam suam dat pro óvibus suis. Mercenárius autem et qui non est pastor, cujus non sunt oves própriæ, videt lupum veniéntem, et dimíttit oves et fugit: et lupus rapit et dispérgit oves: mercenárius autem fugit, quia mercenárius est et non pértinet ad eum de óvibus. Ego sum pastor bonus: et cognósco meas et cognóscunt me meæ. Sicut novit me Pater, et ego agnósco Patrem, et ánimam meam pono pro óvibus meis. Et álias oves hábeo, quæ non sunt ex hoc ovíli: et illas opórtet me addúcere, et vocem meam áudient, et fiet unum ovíle et unus pastor.~",
-      "eng": "Continuation + of the Holy Gospel according to John\nAt that time Jesus said to the Pharisees: I am the good Shepherd. The good Shepherd giveth his life for his sheep. But the hireling, and he that is not the shepherd, whose own the sheep are not, seeth the wolf coming and leaveth the sheep and flieth: and the wolf catcheth and scattereth the sheep: and the hireling flieth, because he is a hireling, and he hath no care for the sheep. I am the good Shepherd: and I know Mine, and Mine know Me, as the Father knoweth Me, and I know the Father: and I lay down My life for My sheep. And other sheep I have that are not of this fold: them also I must bring, and they shall hear My voice, and there shall be one fold and one shepherd."
-    },
-    "offertorium": {
-      "lat": "Elégit eum Dóminus sacerdótem sibi, ad sacrificándum ei hóstiam laudis.",
-      "eng": "Elégit eum Dóminus sacerdótem sibi, ad sacrificándum ei hóstiam laudis."
-    },
-    "secreta": {
-      "lat": "Tua, quǽsumus, Dómine, múnera illas in nobis puríssimi amóris flammas éxcitent, quibus beátus Iacóbus éadem offeréndo tantópere flagrábat.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Tua, quǽsumus, Dómine, múnera illas in nobis puríssimi amóris flammas éxcitent, quibus beátus Iacóbus éadem offeréndo tantópere flagrábat.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Quod dico vobis in ténebris, dícite in lúmine: et quod in aure audítis, prædicáte super tecta.",
-      "ref": "Mt 10:27",
-      "eng": "Quod dico vobis in ténebris, dícite in lúmine: et quod in aure audítis, prædicáte super tecta."
-    },
-    "postcommunio": {
-      "lat": "Persevéret in córdibus nostris, piíssime Deus, percépti grátia sacraménti: ut ea roboráti, beáti Iacóbi exémplo, et hostes víncere, et incorruptíbilem glóriæ corónam ássequi valeámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Persevéret in córdibus nostris, piíssime Deus, percépti grátia sacraménti: ut ea roboráti, beáti Iacóbi exémplo, et hostes víncere, et incorruptíbilem glóriæ corónam ássequi valeámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
   },
   "10-23r": {
     "officium": "S. Antonii Mariæ Claret Episcopi et Confessoris",
@@ -9806,45 +9294,6 @@
       "gloria": true
     }
   },
-  "11-12pl": {
-    "officium": "Ss. Protomartyrum Poloniae",
-    "introitus": {
-      "lat": "Multæ tribulatiónes justórum, et de his ómnibus liberávit eos Dóminus: Dóminus custódit ómnia ossa eórum: unum ex his non conterétur.\nBenedícam Dóminum in omni témpore: semper laus ejus in ore meo. \nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nMultæ tribulatiónes justórum, et de his ómnibus liberávit eos Dóminus: Dóminus custódit ómnia ossa eórum: unum ex his non conterétur.",
-      "eng": "℣. Many are the afflictions of the just; but out of them all will the Lord deliver them. The Lord keepeth all their bones, not one of them shall be broken.\n℣. I will bless the Lord at all times, his praise shall be always in my mouth.\n&Gloria\n℣. Many are the afflictions of the just; but out of them all will the Lord deliver them. The Lord keepeth all their bones, not one of them shall be broken."
-    },
-    "oratio": {
-      "lat": "Deus, qui primítias fídei apud Polonórum gentem sanctórum Mártyrum tuórum Benedícti, Ioánnis, Matthǽi, Isáaci atque Christíni sánguine consecrásti: concéde propítius; ut ad tui nóminis confessiónem, quorum excitámur exémplis, eórum précibus adiuvémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui primítias fídei apud Polonórum gentem sanctórum Mártyrum tuórum Benedícti, Ioánnis, Matthǽi, Isáaci atque Christíni sánguine consecrásti: concéde propítius; ut ad tui nóminis confessiónem, quorum excitámur exémplis, eórum précibus adiuvémur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Léctio libri Sapiéntiæ\nHi viri misericórdiæ sunt, quorum pietátes non defuérunt: cum semine eórum pérmanent bona, heréditas sancta nepótes eórum, et in testaméntis stetit semen eórum: et fílii eórum propter illos usque in ætérnum manent: semen eórum et glória eórum non derelinquétur. Córpora ipsórum in pace sepúlta sunt, et nomen eórum vivit in generatiónem et generatiónem. Sapiéntiam ipsórum narrent pópuli, et laudem eórum núntiet Ecclésia.",
-      "eng": "Lesson from the book of Ecclesiasticus\nThese were godly men whose virtues have not been forgotten; their wealth remains in their families, their posterity are a holy inheritance, and their seed has stood in the covenants. And their children for their sakes remain forever; their seed and their glory shall not be forsaken. All these are buried in peace, but their name lives on and on. At gatherings their wisdom is retold and the assembly sings their praises."
-    },
-    "graduale": {
-      "lat": "Ecce, quam bonum et quam jucúndum, habitáre fratres in unum! \nV. Sicut unguéntum in cápite, quod descéndit in barbam, barbam Aaron. Allelúja, allelúja. \nV. Hæc est vera fratérnitas, quæ vicit mundi crímina: Christum secúta est, ínclita tenens regna cœléstia. Allelúja.",
-      "eng": "Behold, how good it is, and how pleasant, where brethren dwell as one! It is as when the precious ointment upon the head runs down over the beard, the beard of Aaron. Alleluia, alleluia.\nV. This is the true fraternal love, which conquers the wickedness of the world: holding fast to the glory of the heavenly kingdom, it has followed Christ. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Dixit Jesus discípulis suis: Atténdite a ferménto pharisæórum, quod est hypócrisis. Nihil autem opértum est, quod non revelétur: neque abscónditum, quod non sciátur. Quóniam, quæ in ténebris dixístis, in lúmine dicéntur: et quod in aurem locúti estis in cubículis, prædicábitur in tectis. Dico autem vobis amícis meis: Ne terreámini ab his, qui occídunt corpus, et post hæc non habent ámplius quid fáciant. Osténdam autem vobis, quem timeátis: timéte eum, qui postquam occíderit, habet potestátem míttere in gehénnam. Ita dico vobis: hunc timéte. Nonne quinque pásseres véneunt dipóndio, et unus ex illis non est in oblivióne coram Deo? Sed et capílli cápitis vestri omnes numeráti sunt. Nolíte ergo timére: multis passéribus pluris estis vos. Dico autem vobis: Omnis, quicúmque conféssus fúerit me coram homínibus, et Fílius hóminis confitébitur illum coram Angelis Dei.",
-      "eng": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Dixit Jesus discípulis suis: Atténdite a ferménto pharisæórum, quod est hypócrisis. Nihil autem opértum est, quod non revelétur: neque abscónditum, quod non sciátur. Quóniam, quæ in ténebris dixístis, in lúmine dicéntur: et quod in aurem locúti estis in cubículis, prædicábitur in tectis. Dico autem vobis amícis meis: Ne terreámini ab his, qui occídunt corpus, et post hæc non habent ámplius quid fáciant. Osténdam autem vobis, quem timeátis: timéte eum, qui postquam occíderit, habet potestátem míttere in gehénnam. Ita dico vobis: hunc timéte. Nonne quinque pásseres véneunt dipóndio, et unus ex illis non est in oblivióne coram Deo? Sed et capílli cápitis vestri omnes numeráti sunt. Nolíte ergo timére: multis passéribus pluris estis vos. Dico autem vobis: Omnis, quicúmque conféssus fúerit me coram homínibus, et Fílius hóminis confitébitur illum coram Angelis Dei."
-    },
-    "offertorium": {
-      "lat": "Gloriabúntur in te omnes, qui díligunt nomen tuum: quóniam tu, Dómine, benedíces justo: Dómine, ut scuto bonæ voluntátis tuæ coronásti nos.",
-      "eng": "All who love Your name shall glory in You, for You, O Lord, bless the just man; O Lord, You surround us with the shield of your good will."
-    },
-    "secreta": {
-      "lat": "Hóstias tibi, Dómine, sanctórum Mártyrum tuórum dicátas méritis, benígnus assúme: et ad perpétuum nobis tríbue proveníre subsídium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Hóstias tibi, Dómine, sanctórum Mártyrum tuórum dicátas méritis, benígnus assúme: et ad perpétuum nobis tríbue proveníre subsídium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Et si coram homínibus torménta passi sunt, Deus tentávit eos: tamquam aurum in fornáce probávit eos, et quasi holocáusta accépit eos.",
-      "eng": "For if before men they be punished, God tried them; as gold in the furnace, He proved them, and as sacrificial offerings He took them to Himself."
-    },
-    "postcommunio": {
-      "lat": "Súmpsimus, Dómine, sanctórum Mártyrum tuórum Benedícti, Ioánnis, Matthǽi, Isáaci atque Christíni solémnia celebrántes, sacraménta cæléstia: præsta, quǽsumus: ut, quod temporáliter gérimus, ætérnis gáudiis consequámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Súmpsimus, Dómine, sanctórum Mártyrum tuórum Benedícti, Ioánnis, Matthǽi, Isáaci atque Christíni solémnia celebrántes, sacraménta cæléstia: præsta, quǽsumus: ut, quod temporáliter gérimus, ætérnis gáudiis consequámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
-  },
   "11-13": {
     "officium": "S. Didaci Confessoris",
     "rank": 2,
@@ -9854,49 +9303,6 @@
     "oratio": {
       "lat": "Omnípotens sempitérne Deus, qui dispositióne mirábili infírma mundi éligis, ut fórtia quæque confúndas: concéde propítius humilitáti nostræ; ut, piis beáti Dídaci Confessóris tui précibus, ad perénnem in cœlis glóriam sublimári mereámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Almighty, eternal God, Who in Your wondrous providence choose the weak things of the world to overcome the strong, mercifully grant unto us Your humble servants that, by the loving prayers of blessed Didacus, Your Confessor, we may be found worthy to be raised unto the everlasting glory of heaven.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
-    }
-  },
-  "11-13pl": {
-    "introitus": {
-      "lat": "Consummatus in brevi explevit tempora multa: placita enim erat Deo anima illius: propter hoc properavit educere illum de medio iniquitatum.\nLaudate, pueri, Dominum: laudate nomen Domini.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nConsummatus in brevi explevit tempora multa: placita enim erat Deo anima illius: propter hoc properavit educere illum de medio iniquitatum.",
-      "ref": "Sap 4:13-14",
-      "eng": "Consummatus in brevi explevit tempora multa: placita enim erat Deo anima illius: propter hoc properavit educere illum de medio iniquitatum.\nLaudate, pueri, Dominum: laudate nomen Domini.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nConsummatus in brevi explevit tempora multa: placita enim erat Deo anima illius: propter hoc properavit educere illum de medio iniquitatum."
-    },
-    "oratio": {
-      "lat": "Deus, qui inter cetera sapientiæ tuæ miracula, etiam in tenera ætate maturæ sanctitatis gratiam contulisti: da, quǽsumus; ut, beati Stanislai exemplo, tempus instanter operando redimentes, in æternam ingredi requiem festinemus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui inter cetera sapientiæ tuæ miracula, etiam in tenera ætate maturæ sanctitatis gratiam contulisti: da, quǽsumus; ut, beati Stanislai exemplo, tempus instanter operando redimentes, in æternam ingredi requiem festinemus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "lectio": {
-      "lat": "Léctio libri Sapiéntiæ.\nIustus autem si morte præoccupatus fuerit in refrigerio erit. Senectus enim venerabilis est non diuturna neque numero annorum conputata cani sunt. Autem sensus hominibus et ætas senectutis vita inmaculata. Placens Deo factus dilectus et vivens inter peccatores translatus est. Raptus est ne malitia mutaret intellectum illius aut fictio decipiat animam illius. Fascinatio enim nugacitatis obscurat bona et inconstantia concupiscentiæ transvertit sensum sine malitia consummatus. In brevi explevit tempora multa placita. Enim erat Deo anima illius propter hoc properavit educere illum de medio iniquitatum. Populi autem videntes et non intellegentes nec ponentes in præcordiis talia quoniam gratia Dei et misericordia in sanctos illius et respectus in electos illius. Condemnat autem iustus mortuus vivos impios et iuventus celerius consummata longam vitam iniusti.",
-      "ref": "Sap 4:7-18",
-      "eng": "Léctio libri Sapiéntiæ.\nIustus autem si morte præoccupatus fuerit in refrigerio erit. Senectus enim venerabilis est non diuturna neque numero annorum conputata cani sunt. Autem sensus hominibus et ætas senectutis vita inmaculata. Placens Deo factus dilectus et vivens inter peccatores translatus est. Raptus est ne malitia mutaret intellectum illius aut fictio decipiat animam illius. Fascinatio enim nugacitatis obscurat bona et inconstantia concupiscentiæ transvertit sensum sine malitia consummatus. In brevi explevit tempora multa placita. Enim erat Deo anima illius propter hoc properavit educere illum de medio iniquitatum. Populi autem videntes et non intellegentes nec ponentes in præcordiis talia quoniam gratia Dei et misericordia in sanctos illius et respectus in electos illius. Condemnat autem iustus mortuus vivos impios et iuventus celerius consummata longam vitam iniusti."
-    },
-    "graduale": {
-      "lat": "Desiderium cordis eius tribuisti ei: et voluntate labiorum eius non fraudasti eum.\nV. Quoniam prævenisti eum in benedictionibus dulcedinis. Alleluia, alleluia.\nInitio congnovi de testimoniis tuis, quia in æternum fundasti ea. Alleluia.",
-      "ref": "Ps 20:3-4",
-      "eng": "Desiderium cordis eius tribuisti ei: et voluntate labiorum eius non fraudasti eum.\nV. Quoniam prævenisti eum in benedictionibus dulcedinis. Alleluia, alleluia.\nInitio congnovi de testimoniis tuis, quia in æternum fundasti ea. Alleluia."
-    },
-    "evangelium": {
-      "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Obláti sunt Jesu párvuli, ut manus eis impóneret et oráret. Discípuli autem increpábant eos. Jesus vero ait eis: Sínite párvulos, et nolíte eos prohibére ad me veníre: tálium est enim regnum cœlórum. Et cum imposuísset eis manus, ábiit inde. Et ecce, unus accedens, ait illi: Magíster bone, quid boni fáciam, ut hábeam vitam ætérnam? Qui dixit ei: Quid me intérrogas de bono? Unus est bonus, Deus. Si autem vis ad vitam íngredi, serva mandáta. Dicit illi: Quæ? Jesus autem dixit: Non homicídium fácies: Non adulterábis: Non fácies furtum: Non falsum testimónium dices: Hónora patrem tuum et matrem tuam, et díliges próximum tuum sicut te ipsum. Dicit illi adoléscens: Omnia hæc custodívi a juventúte mea: quid adhuc mihi deest? Ait illi Jesus: Si vis perféctus esse, vade, vende, quæ habes, et da paupéribus, et habébis thesáurum in cœlo: et veni, séquere me.",
-      "eng": "Continuation + of the Holy Gospel according to Matthew\nAt that time, little children were brought to Jesus, that He might lay His hands on them and pray; but the disciples rebuked them. But Jesus said to them, Let the little children be, and do not hinder them from coming to Me, for of such is the kingdom of heaven. And when He had laid His hands on them, He departed from that place. And behold, a certain man came to Him and said, Good Master, what good work shall I do to have eternal life? He said to him, Why do you ask Me about what is good? One there is Who is good, and He is God. But if you will enter into life, keep the commandments. He said to Him, Which? And Jesus said, You shall not kill. You shall not commit adultery. You shall not steal. You shall not bear false witness. Honor your father and mother. And, you shall love your neighbor as yourself. The young man said to Him, All these I have kept; what is yet wanting to me? Jesus said to him, If you will be perfect, go, sell what you have, and give to the poor, and you shall have treasure in heaven; and come, follow Me."
-    },
-    "offertorium": {
-      "lat": "Introibo ad altare Dei: ad Deum, qui lætificat iuventutem meam.",
-      "ref": "Ps 42:4",
-      "eng": "Introibo ad altare Dei: ad Deum, qui lætificat iuventutem meam."
-    },
-    "secreta": {
-      "lat": "Angelorum pane, quǽsumus, Domine, beati Stanislai nos intercessio dignos efficiat, qui eo meruit angelica manu recreari.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Angelorum pane, quǽsumus, Domine, beati Stanislai nos intercessio dignos efficiat, qui eo meruit angelica manu recreari.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    },
-    "communio": {
-      "lat": "Cibavit illum Dominus pane vitæ et intellectus, et aqua sapientæ salutaris potavit illum.",
-      "ref": "Eccli 15:3",
-      "eng": "Cibavit illum Dominus pane vitæ et intellectus, et aqua sapientæ salutaris potavit illum."
-    },
-    "postcommunio": {
-      "lat": "Ut nobis, Domine, cælestis, quem sumpsimus, panis sit vitæ: beato Stanislao Confessore tuo intercedente, quǽsumus; ut panis sit intellectus, et potus aqua sapientiæ salutaris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Ut nobis, Domine, cælestis, quem sumpsimus, panis sit vitæ: beato Stanislao Confessore tuo intercedente, quǽsumus; ut panis sit intellectus, et potus aqua sapientiæ salutaris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "11-14": {
@@ -9983,12 +9389,6 @@
       "lat": "Sequéntia ++ sancti Evangélii secúndum Marcum\nIn illo témpore: Respóndens Jesus discípulis suis, ait illis: Habéte fidem Dei. Amen, dico vobis, quia, quicúmque díxerit huic monti: Tóllere et míttere in mare, et non hæsitáverit in corde suo, sed credíderit, quia, quodcúmque díxerit, fiat, fiet ei. Proptérea dico vobis: Omnia quæcúmque orántes pétitis, crédite quia accipiétis, et evénient vobis.",
       "eng": "Continuation + of the Holy Gospel according to Mark\nAt that time, Jesus answered and said to His disciples, Have faith in God. Amen I say to you, whoever says to this mountain, ‘Arise, and hurl yourself into the sea,’ and does not waver in his heart, but believes that whatever he says will be done, it shall be done for him. Therefore I say to you, all things whatever you ask for in prayer, believe that you shall receive, and they shall come to you.",
       "ref": "Marc 11:22-24"
-    }
-  },
-  "11-17pl": {
-    "oratio": {
-      "lat": "Deus, qui in beata Salomea terreni regni contemptum cum virginitatis condore in connubio sociasti: concede nobis, quaesumus; ut, eius exemplo tibi casto et humili corde servientes, immarcescibilem coronam gloriae in caelis consequi mereamur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Deus, qui in beata Salomea terreni regni contemptum cum virginitatis condore in connubio sociasti: concede nobis, quaesumus; ut, eius exemplo tibi casto et humili corde servientes, immarcescibilem coronam gloriae in caelis consequi mereamur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
     }
   },
   "11-18": {
@@ -10202,7 +9602,7 @@
     "introitus": {
       "lat": "Dóminus secus mare Galilǽæ vidit duos fratres, Petrum et Andréam, et vocávit eos: Veníte post me: fáciam vos fíeri piscatóres hóminum.\nCœli enárrant glóriam Dei: et ópera mánuum ejus annúntiat firmaméntum.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nDóminus secus mare Galilǽæ vidit duos fratres, Petrum et Andréam, et vocávit eos: Veníte post me: fáciam vos fíeri piscatóres hóminum.",
       "ref": "Matt 4:18; 4:19",
-      "eng": "Dóminus secus mare Galilǽæ vidit duos fratres, Petrum et Andréam, et vocávit eos: Veníte post me: fáciam vos fíeri piscatóres hóminum.\nCœli enárrant glóriam Dei: et ópera mánuum ejus annúntiat firmaméntum.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nDóminus secus mare Galilǽæ vidit duos fratres, Petrum et Andréam, et vocávit eos: Veníte post me: fáciam vos fíeri piscatóres hóminum."
+      "eng": "And Jesus walking by the sea of Galilee, saw two brethren, Simon who is called Peter, and Andrew his brother, casting a net into the sea (for they were fishers)."
     },
     "oratio": {
       "lat": "Quǽsumus omnípotens Deus, ut beátus N. Apóstolus, cujus prævenímus festivitátem, tuum pro nobis implóret auxílium: ut a nostris reátibus absolúti a cunctis étiam perículis eruámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -10225,7 +9625,7 @@
     "communio": {
       "lat": "Dicit Andréas Simóni fratri suo: Invénimus Messíam, qui dícitur Christus: et addúxit eum ad Jesum.",
       "ref": "Joann 1:41; 1:42",
-      "eng": "Dicit Andréas Simóni fratri suo: Invénimus Messíam, qui dícitur Christus: et addúxit eum ad Jesum."
+      "eng": "He findeth first his brother Simon, and saith to him: We have found the Messias, which is, being interpreted, the Christ."
     },
     "postcommunio": {
       "lat": "Percéptis, Dómine, sacraméntis supplíciter exorámus: ut, intercedénte beáto Andréa Apostolo tuo, quæ pro illíus veneránda gérimus passióne, nobis profíciant ad medélam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -10379,13 +9779,6 @@
   "12-04o": {
     "officium": "S. Barbaræ Virginis et Martyris",
     "rank": 1
-  },
-  "12-04pl": {
-    "officium": "S. Barbaræ Virginis et Martyris",
-    "oratio": {
-      "lat": "Intercessio, quaesumus, Domine, beatae Barbarae Virginis et Martyris tuae ab omni nos adversitate protegat: ut per eius interventum gloriosissimum sacrosancti Corporis et Sanguinis Domini nostri Iesu Christi Sacramentum ante diem exitus nostri, per veram paenitentiam et puram confessionem percipere mereamur:\nQui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Intercessio, quaesumus, Domine, beatae Barbarae Virginis et Martyris tuae ab omni nos adversitate protegat: ut per eius interventum gloriosissimum sacrosancti Corporis et Sanguinis Domini nostri Iesu Christi Sacramentum ante diem exitus nostri, per veram paenitentiam et puram confessionem percipere mereamur:\nQui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
-    }
   },
   "12-05": {
     "officium": "S. Sabbæ Abbatis",
