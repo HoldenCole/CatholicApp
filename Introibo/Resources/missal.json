@@ -635,21 +635,23 @@
     "english": "The Roman Canon · Consecration",
     "body": [
       {
-        "lat": "Te ígitur, clementíssime Pater, per Jesum Christum Fílium tuum, Dóminum nostrum, súpplices rogámus ac pétimus, uti accépta hábeas et benedícas hæc ✠ dona, hæc ✠ múnera, hæc ✠ sancta sacrifícia illibáta.",
-        "eng": "We therefore humbly pray and beseech Thee, most merciful Father, through Jesus Christ Thy Son, our Lord, that Thou wouldst vouchsafe to accept and bless these ✠ gifts, these ✠ presents, these ✠ holy unspotted Sacrifices.",
+        "lat": "Te ígitur, clementíssime Pater, per Jesum Christum, Fílium tuum, Dóminum nostrum, súpplices rogámus, ac pétimus, uti accépta hábeas et benedícas, hæc ✠ dona, hæc ✠ múnera, hæc ✠ sancta sacrifícia illibáta, in primis, quæ tibi offérimus pro Ecclésia tua sancta cathólica: quam pacificáre, custodíre, adunáre et régere dignéris toto orbe terrárum: una cum fámulo tuo Papa nostro N. et Antístite nostro N. et ómnibus orthodóxis, atque cathólicæ et apostólicæ fídei cultóribus.",
+        "eng": "We therefore humbly pray and beseech Thee, most merciful Father, through Jesus Christ, Thy Son, our Lord, that Thou wouldst vouchsafe to accept and bless these ✠ gifts, these ✠ presents, these ✠ holy unspotted Sacrifices, which in the first place we offer Thee for Thy holy Catholic Church, to which vouchsafe to grant peace, as also to preserve, unite, and govern it throughout the world, together with Thy servant N. our Pope, and N. our Bishop, and all orthodox believers and professors of the Catholic and Apostolic Faith.",
         "rubric": "The priest prays silently:"
       },
       {
-        "lat": "Meménto, Dómine, famulórum famularúmque tuárum, et ómnium circumstántium, quorum tibi fides cógnita est et nota devótio.",
-        "eng": "Be mindful, O Lord, of Thy servants and handmaids, and of all here present, whose faith and devotion are known unto Thee."
+        "lat": "Meménto, Dómine, famulórum famularúmque tuárum N. et N. et ómnium circumstántium, quorum tibi fides cógnita est et nota devótio, pro quibus tibi offérimus: vel qui tibi ófferunt hoc sacrifícium laudis, pro se suísque ómnibus: pro redemptióne animárum suárum, pro spe salútis et incolumitátis suæ: tibíque reddunt vota sua ætérno Deo, vivo et vero.",
+        "eng": "Be mindful, O Lord, of Thy servants and handmaidens, N. and N., and of all here present, whose faith and devotion are known unto Thee, for whom we offer, or who offer up to Thee, this sacrifice of praise for themselves, their families and friends, for the redemption of their souls, for the health and salvation they hope for; and who now pay their vows to Thee, the everlasting, living and true God.",
+        "rubric": "Commemoration of the Living:"
       },
       {
-        "lat": "Commúnicántes, et memóriam venerántes, in primis gloriósæ semper Vírginis Maríæ, Genetrícis Dei et Dómini nostri Jesu Christi.",
-        "eng": "In communion with, and honouring the memory in the first place of the glorious ever Virgin Mary, Mother of our God and Lord Jesus Christ."
+        "lat": "Commúnicántes, et memóriam venerántes, in primis gloriósæ semper Vírginis Maríæ, Genetrícis Dei et Dómini nostri Jesu Christi: sed et beatórum Apostolórum ac Mártyrum tuórum, Petri et Pauli, Andréæ, Jacóbi, Joánnis, Thomæ, Jacóbi, Philíppi, Bartholomǽi, Matthǽi, Simónis et Thaddǽi: Lini, Cleti, Cleméntis, Xysti, Cornélii, Cypriáni, Lauréntii, Chrysógoni, Joánnis et Pauli, Cosmæ et Damiáni: et ómnium Sanctórum tuórum; quorum méritis precibúsque concédas, ut in ómnibus protectiónis tuæ muniámur auxílio. Per eúndem Christum, Dóminum nostrum. Amen.",
+        "eng": "In communion with, and honouring the memory in the first place of the glorious ever Virgin Mary, Mother of our God and Lord Jesus Christ: and also of the blessed Apostles and Martyrs, Peter and Paul, Andrew, James, John, Thomas, James, Philip, Bartholomew, Matthew, Simon, and Thaddeus; Linus, Cletus, Clement, Xystus, Cornelius, Cyprian, Lawrence, Chrysogonus, John and Paul, Cosmas and Damian, and of all Thy Saints, through whose merits and prayers, grant that we may in all things be defended by the help of Thy protection. Through the same Christ our Lord. Amen."
       },
       {
-        "lat": "Hanc ígitur oblatiónem servitútis nostræ, sed et cunctæ famíliæ tuæ, quǽsumus, Dómine, ut placátus accípias.",
-        "eng": "We therefore beseech Thee, O Lord, graciously to accept this oblation of our service, as also of Thy whole family."
+        "lat": "Hanc ígitur oblatiónem servitútis nostræ, sed et cunctæ famíliæ tuæ, quǽsumus, Dómine, ut placátus accípias: diésque nostros in tua pace dispónas, atque ab ætérna damnatióne nos éripi, et in electórum tuórum júbeas grege numerári. Per Christum, Dóminum nostrum. Amen.",
+        "eng": "We therefore beseech Thee, O Lord, graciously to accept this oblation of our service, as also of Thy whole family; and to dispose our days in Thy peace, preserve us from eternal damnation, and rank us in the number of Thine Elect. Through the same Christ our Lord. Amen.",
+        "rubric": "Spreading his hands over the oblation, the priest says:"
       },
       {
         "lat": "Quam oblatiónem tu, Deus, in ómnibus, quǽsumus, benedíctam, adscríptam, ratam, rationábilem, acceptabilémque fácere dignéris: ut nobis Corpus et Sanguis fiat dilectíssimi Fílii tui Dómini nostri Jesu Christi.",
@@ -721,9 +723,14 @@
     "english": "The Lord's Prayer",
     "body": [
       {
-        "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra.",
+        "lat": "Orémus: Præcéptis salutáribus móniti, et divína institutióne formáti, audémus dícere:",
+        "eng": "Let us pray. Instructed by Thy saving precepts, and following Thy divine institution, we are bold to say:",
+        "rubric": "The priest joins his hands and says:"
+      },
+      {
+        "lat": "Pater noster, qui es in cælis. Sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra.",
         "eng": "Our Father, Who art in heaven, hallowed be Thy Name. Thy kingdom come. Thy will be done on earth as it is in heaven.",
-        "rubric": "The priest sings or says aloud:"
+        "rubric": "Extending his hands, the priest continues:"
       },
       {
         "lat": "Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem.",
