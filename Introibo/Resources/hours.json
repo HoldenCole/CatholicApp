@@ -1764,6 +1764,11 @@
     "intro": "The first daylight hour, sanctifying the day's work. A short office of psalms and a chapter reading. Sunday psalter.",
     "parts": [
       {
+        "type": "special",
+        "label": "Special Prime",
+        "variationKey": "special_prima"
+      },
+      {
         "type": "pater",
         "label": "Pater Noster, Ave María, Credo",
         "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.\n\nAve María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.\n\nCredo in Deum, Patrem omnipoténtem, Creatórem cæli et terræ. Et in Jesum Christum, Fílium ejus únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a mórtuis; ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis: inde ventúrus est judicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.",
@@ -2077,6 +2082,11 @@
     "intro": "The third hour, when the Holy Ghost descended at Pentecost. The psalmody of Psalm 118 continues through the Little Hours.",
     "parts": [
       {
+        "type": "special",
+        "label": "Special Terce",
+        "variationKey": "special_tertia"
+      },
+      {
         "type": "pater",
         "label": "Pater Noster, Ave María, Credo",
         "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.\n\nAve María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.\n\nCredo in Deum, Patrem omnipoténtem, Creatórem cæli et terræ. Et in Jesum Christum, Fílium ejus únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a mórtuis; ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis: inde ventúrus est judicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.",
@@ -2278,6 +2288,11 @@
     "order": 5,
     "intro": "The sixth hour — noon. Our Lord was nailed to the Cross at this hour. A pause in the day to remember His sacrifice.",
     "parts": [
+      {
+        "type": "special",
+        "label": "Special Sext",
+        "variationKey": "special_sexta"
+      },
       {
         "type": "pater",
         "label": "Pater Noster, Ave María, Credo",
@@ -2481,6 +2496,11 @@
     "intro": "The ninth hour — three in the afternoon. Our Lord died upon the Cross at this hour.",
     "parts": [
       {
+        "type": "special",
+        "label": "Special None",
+        "variationKey": "special_nona"
+      },
+      {
         "type": "pater",
         "label": "Pater Noster, Ave María, Credo",
         "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.\n\nAve María, grátia plena, Dóminus tecum. Benedícta tu in muliéribus, et benedíctus fructus ventris tui, Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.\n\nCredo in Deum, Patrem omnipoténtem, Creatórem cæli et terræ. Et in Jesum Christum, Fílium ejus únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a mórtuis; ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis: inde ventúrus est judicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.",
@@ -2682,6 +2702,11 @@
     "order": 7,
     "intro": "The evening hour, when the lamps are lit. The second great hinge-hour of the day, crowned by the Magnificat of Our Lady. Sunday psalter.",
     "parts": [
+      {
+        "type": "special",
+        "label": "Special Vespers",
+        "variationKey": "special_vespera_1"
+      },
       {
         "type": "pater",
         "label": "Pater Noster, Ave María, Credo",

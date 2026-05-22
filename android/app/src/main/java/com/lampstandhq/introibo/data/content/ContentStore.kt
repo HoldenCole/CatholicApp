@@ -105,18 +105,21 @@ object ContentStore {
         ordoDataPre1955  = load("ordo_pre1955.json")      ?: emptyMap()
         canonVariants    = load("canon_variants.json")    ?: emptyMap()
 
-        val psalter: Map<String, Map<String, Hour.Part>> =
+        val psalterWeekly: Map<String, Map<String, Hour.Part>> =
             load("psalter_weekly.json") ?: emptyMap()
         val hymns: Map<String, Map<String, Hour.Part>> =
             load("hymns_seasonal.json") ?: emptyMap()
         val temporal: Map<String, Map<String, Hour.Part>> =
             load("temporal_propers.json") ?: emptyMap()
+        val psalterText: Map<String, Map<String, List<String>>> =
+            load("psalter.json") ?: emptyMap()
 
         officeAssembler = OfficeAssembler(
-            weeklyPsalter = psalter,
+            weeklyPsalter = psalterWeekly,
             seasonalHymns = hymns,
             temporalPropers = temporal,
             marianAntiphons = marianAntiphons,
+            psalter = psalterText,
         )
     }
 

@@ -18,12 +18,30 @@ struct OfficeAssembler {
     //
     // Direction: source key → canonical variationKey in hours.json
     private static let temporalKeyAliases: [String: String] = [
-        // Lauds — variant hymn spelling
+        // Lauds — variant hymn spellings / rubric variants
         "hymnusm_laudes":           "hymnus_laudes",
-        // Vespers — variant hymn spelling
+        "hymnus_laudes_":           "hymnus_laudes",
+        "ant_laudes_":              "ant_laudes",
+        "ant_laudesc":              "ant_laudes",
+        // Vespers — variant hymn spellings / rubric variants
         "hymnusm_vespera":          "hymnus_vespera",
-        // Matins — variant hymn spelling
+        "hymnus_vespera_3":         "hymnus_vespera",
+        "ant_vespera_3":            "ant_vespera",
+        "ant_vespera_3c":           "ant_vespera",
+        // Vespers — capitulum variants (sanctoral, e.g. Christmas)
+        "capitulum_vespera_1":      "vesperae.capitulum",
+        "capitulum_vespera_3":      "vesperae.capitulum",
+        // Matins — variant hymn spelling & antiphon
         "hymnusm_matutinum":        "hymnus_matutinum",
+        "hymnus_matutinum_":        "hymnus_matutinum",
+        "ant_matutinum":            "ant_1",
+        // Nocturn versum variants (trailing underscore = rubrical variant)
+        "nocturn_2_versum_":        "nocturn_2_versum",
+        "nocturn_3_versum_":        "nocturn_3_versum",
+        // Versicle variant with trailing underscore
+        "versum_1_":                "versum_1",
+        // Doxology rubric variant
+        "doxology_":                "doxology",
         // Vespers — 2nd Vespers versicle falls back to the versum_2 slot
         // when versum_2 is absent (rare; only 1 entry has versum_3 alone)
         "versum_3":                 "versum_2",
