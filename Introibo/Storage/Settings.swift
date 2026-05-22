@@ -63,6 +63,7 @@ enum SettingsKey {
     static let fontSize  = "settings.fontSize"
     static let fontRange = "settings.fontRange"
     static let textDarkness = "settings.textDarkness"
+    static let showLeoninePrayers = "settings.showLeoninePrayers"
 }
 
 enum FontRange: String, CaseIterable, Identifiable {

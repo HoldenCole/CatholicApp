@@ -6,6 +6,7 @@ struct MissalView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @AppStorage(SettingsKey.showLeoninePrayers) private var showLeoninePrayers = true
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
@@ -183,10 +184,12 @@ struct MissalView: View {
         let lastGospelSlug = lastGospelOverride(for: proper) ?? "ultimum"
         ordinarySection(lastGospelSlug)
 
-        // Leonine Prayers — suppressed by Inter Oecumenici (1965) but retained
+        // Leonine Prayers — suppressed by Inter Oecumenici (1964) but retained
         // in 1962 and earlier rubrics as a customary appendix after Low Mass.
-        // Keep visible in all three traditional rites.
-        ordinarySection("leonine")
+        // Gated by user setting (default: shown for strict 1962 observance).
+        if showLeoninePrayers {
+            ordinarySection("leonine")
+        }
     }
 
     /// Returns an alternate Last Gospel slug when the rubrics call for substitution.
@@ -534,7 +537,9 @@ struct MissalView: View {
         }
 
         addOrdinary("ultimum")
-        addOrdinary("leonine")
+        if showLeoninePrayers {
+            addOrdinary("leonine")
+        }
 
         return lines.joined(separator: "\n")
     }

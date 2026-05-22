@@ -62,6 +62,7 @@ fun MissalScreen() {
 
     val settingsRepo = remember { SettingsRepository(context) }
     val rite by settingsRepo.missalRite.collectAsState(initial = MissalRite.RITE_1962)
+    val showLeonine by settingsRepo.showLeoninePrayers.collectAsState(initial = true)
 
     var showProperDetail by rememberSaveable { mutableStateOf(false) }
 
@@ -110,7 +111,7 @@ fun MissalScreen() {
             },
             actions = {
                 IconButton(onClick = {
-                    val shareText = buildFullMassText(todayProper, rite, ctx)
+                    val shareText = buildFullMassText(todayProper, rite, ctx, showLeonine)
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                         this.type = "text/plain"
                         putExtra(Intent.EXTRA_TEXT, shareText)
@@ -140,7 +141,7 @@ fun MissalScreen() {
 
             if (todayProper != null) {
                 // Interleaved Mass: Ordinary + Propers
-                interleavedMassItems(todayProper, ctx, rite)
+                interleavedMassItems(todayProper, ctx, rite, showLeonine)
             } else {
                 // Ordinary only
                 items(
@@ -177,6 +178,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     proper: MassProper,
     ctx: LiturgicalContext,
     rite: MissalRite,
+    showLeonine: Boolean = true,
 ) {
     // Prayers at the Foot of the Altar
     // Omitted in Passiontide and Requiem Masses
@@ -277,8 +279,10 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     val lastGospelSlug = lastGospelOverride(ctx, rite) ?: "ultimum"
     ordinaryItem(lastGospelSlug)
 
-    // Leonine Prayers
-    ordinaryItem("leonine")
+    // Leonine Prayers — gated by user setting (default: shown for strict 1962 observance)
+    if (showLeonine) {
+        ordinaryItem("leonine")
+    }
 }
 
 /**
@@ -681,6 +685,7 @@ private fun buildFullMassText(
     proper: MassProper?,
     rite: MissalRite,
     ctx: LiturgicalContext,
+    showLeonine: Boolean = true,
 ): String {
     val lines = mutableListOf<String>()
 
@@ -846,7 +851,9 @@ private fun buildFullMassText(
     }
 
     addOrdinary("ultimum")
-    addOrdinary("leonine")
+    if (showLeonine) {
+        addOrdinary("leonine")
+    }
 
     return lines.joinToString("\n")
 }

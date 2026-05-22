@@ -115,4 +115,5 @@ object SettingsKey {
     const val FONT_SIZE = "settings.fontSize"
     const val FONT_RANGE = "settings.fontRange"
     const val TEXT_DARKNESS = "settings.textDarkness"
+    const val SHOW_LEONINE_PRAYERS = "settings.showLeoninePrayers"
 }

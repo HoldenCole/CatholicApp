@@ -7,6 +7,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
+    @AppStorage(SettingsKey.showLeoninePrayers) private var showLeoninePrayers = true
     @State private var showResetConfirm = false
 
     @Environment(\.dismiss) private var dismiss
@@ -15,6 +16,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 riteSection
+                leonineSection
                 penanceSection
                 languageSection
                 displaySection
@@ -61,6 +63,28 @@ struct SettingsView: View {
             Text("Ritus · Missal Rite")
         } footer: {
             Text("Controls the rubrics displayed in the Missal. Most traditional parishes use the 1962 Missal.")
+        }
+    }
+
+    // MARK: - Leonine Prayers
+
+    private var leonineSection: some View {
+        Section {
+            Toggle(isOn: $showLeoninePrayers) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Leonine Prayers")
+                        .foregroundStyle(Color.primaryText)
+                    Text("Prayers after Low Mass (Leo XIII, 1884)")
+                        .font(.caption)
+                        .foregroundStyle(Color.secondaryText)
+                }
+            }
+            .tint(Color.sanctuaryRed)
+            .listRowBackground(Color.pageBackground)
+        } header: {
+            Text("Preces Leoninae · Leonine Prayers")
+        } footer: {
+            Text("The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice.")
         }
     }
 

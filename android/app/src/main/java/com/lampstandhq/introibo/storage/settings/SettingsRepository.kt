@@ -38,6 +38,7 @@ class SettingsRepository(private val context: Context) {
         val FONT_SIZE = floatPreferencesKey(SettingsKey.FONT_SIZE)
         val FONT_RANGE = stringPreferencesKey(SettingsKey.FONT_RANGE)
         val TEXT_DARKNESS = floatPreferencesKey(SettingsKey.TEXT_DARKNESS)
+        val SHOW_LEONINE_PRAYERS = booleanPreferencesKey(SettingsKey.SHOW_LEONINE_PRAYERS)
     }
 
     // -----------------------------------------------------------------------
@@ -76,6 +77,10 @@ class SettingsRepository(private val context: Context) {
         prefs[PrefsKeys.TEXT_DARKNESS] ?: 1.0f
     }
 
+    val showLeoninePrayers: Flow<Boolean> = context.settingsDataStore.data.map { prefs ->
+        prefs[PrefsKeys.SHOW_LEONINE_PRAYERS] ?: true
+    }
+
     // -----------------------------------------------------------------------
     // Mutations
     // -----------------------------------------------------------------------
@@ -106,5 +111,9 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setTextDarkness(value: Float) {
         context.settingsDataStore.edit { it[PrefsKeys.TEXT_DARKNESS] = value.coerceIn(0f, 1f) }
+    }
+
+    suspend fun setShowLeoninePrayers(show: Boolean) {
+        context.settingsDataStore.edit { it[PrefsKeys.SHOW_LEONINE_PRAYERS] = show }
     }
 }

@@ -25,6 +25,8 @@ import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Slider
@@ -81,6 +83,7 @@ fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = n
     val language by settingsRepo.languageMode.collectAsState(initial = LanguageMode.BOTH)
     val fontScale by settingsRepo.fontScale.collectAsState(initial = FontSizeScale.DEFAULT_VALUE)
     val fontRange by settingsRepo.fontRange.collectAsState(initial = FontRange.NORMAL)
+    val showLeonine by settingsRepo.showLeoninePrayers.collectAsState(initial = true)
 
     var showResetConfirm by remember { mutableStateOf(false) }
     var showTutorial by remember { mutableStateOf(false) }
