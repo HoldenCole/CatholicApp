@@ -131,6 +131,70 @@
     ]
   },
   {
+    "slug": "versiculi",
+    "label": "Preces Præparatoriæ",
+    "title": "Versículi",
+    "english": "Versicles after the Confession",
+    "body": [
+      {
+        "rubric": "Bowing down, the priest proceeds:",
+        "lat": "℣. Deus, tu convérsus vivificábis nos.",
+        "eng": "℣. O God, Thou wilt turn again and quicken us."
+      },
+      {
+        "lat": "℟. Et plebs tua lætábitur in te.",
+        "eng": "℟. And Thy people shall rejoice in Thee."
+      },
+      {
+        "lat": "℣. Osténde nobis, Dómine, misericórdiam tuam.",
+        "eng": "℣. Show us, O Lord, Thy mercy."
+      },
+      {
+        "lat": "℟. Et salutáre tuum da nobis.",
+        "eng": "℟. And grant us Thy salvation."
+      },
+      {
+        "lat": "℣. Dómine, exáudi oratiónem meam.",
+        "eng": "℣. O Lord, hear my prayer."
+      },
+      {
+        "lat": "℟. Et clamor meus ad te véniat.",
+        "eng": "℟. And let my cry come before Thee."
+      },
+      {
+        "lat": "℣. Dóminus vobíscum.",
+        "eng": "℣. The Lord be with you."
+      },
+      {
+        "lat": "℟. Et cum spíritu tuo.",
+        "eng": "℟. And with thy spirit."
+      },
+      {
+        "rubric": "Extending, then joining his hands, the priest says aloud:",
+        "lat": "Orémus.",
+        "eng": "Let us pray."
+      }
+    ]
+  },
+  {
+    "slug": "aufer",
+    "label": "Preces Præparatoriæ",
+    "title": "Aufer a Nobis · Orámus Te",
+    "english": "Ascending Prayers",
+    "body": [
+      {
+        "rubric": "Ascending to the altar, the priest says silently:",
+        "lat": "Aufer a nobis, quǽsumus, Dómine, iniquitátes nostras: ut ad Sancta sanctórum puris mereámur méntibus introíre. Per Christum, Dóminum nostrum. Amen.",
+        "eng": "Take away from us our iniquities, we beseech Thee, O Lord, that we may be worthy to enter with pure minds into the Holy of Holies, through Christ our Lord. Amen."
+      },
+      {
+        "rubric": "His hands joined, bowing down over the altar, the priest says:",
+        "lat": "Orámus te, Dómine, per mérita Sanctórum tuórum, quorum relíquiæ hic sunt, et ómnium Sanctórum: ut indulgére dignéris ómnia peccáta mea. Amen.",
+        "eng": "We beseech Thee, O Lord, by the merits of Thy Saints, whose relics are here, and of all the Saints, that Thou wouldst vouchsafe to forgive me all my sins. Amen."
+      }
+    ]
+  },
+  {
     "slug": "introit",
     "label": "Missa Catechumenorum",
     "title": "Introitus",
@@ -253,40 +317,40 @@
     "label": "Oblátio",
     "body": [
       {
-        "lat": "Súscipe, sancte Pater, omnípotens ætérne Deus, hanc immaculátam hóstiam, quam ego indígnus fámulus tuus óffero tibi, Deo meo vivo et vero, pro innumerabílibus peccátis, et offensiónibus, et negligéntiis meis, et pro ómnibus circumstántibus, sed et pro ómnibus fidélibus christiánis vivis atque defúnctis: ut mihi et illis profíciat ad salútem in vitam ætérnam. Amen.",
-        "eng": "Accept, O holy Father, almighty and eternal God, this spotless host, which I, Your unworthy servant, offer to You, my living and true God, for my innumerable sins, offenses, and negligences, and for all here present, as also for all faithful Christians living and dead, that it may profit me and them unto salvation unto life eternal. Amen.",
+        "lat": "Súscipe, sancte Pater, omnípotens ætérne Deus, hanc immaculátam hóstiam, quam ego indígnus fámulus tuus óffero tibi Deo meo vivo et vero, pro innumerabílibus peccátis, et offensiónibus, et neglegéntiis meis, et pro ómnibus circumstántibus, sed et pro ómnibus fidélibus christiánis vivis atque defúnctis: ut mihi, et illis profíciat ad salútem in vitam ætérnam. Amen.",
+        "eng": "Accept, O holy Father, almighty and eternal God, this unspotted host, which I, Thy unworthy servant, offer unto Thee, my living and true God, for my innumerable sins, offenses, and negligences, and for all here present, as also for all faithful Christians, both living and dead, that it may avail both me and them for salvation unto life everlasting. Amen.",
         "rubric": "The priest offers the host:"
       },
       {
-        "lat": "Deus, qui humánæ substántiæ dignitátem mirabíliter condidísti et mirabílius reformásti: da nobis per hujus aquæ et vini mystérium, ejus divinitátis esse consórtes, qui humanitátis nostræ fíeri dignátus est párticeps, Jesus Christus, Fílius tuus, Dóminus noster. Amen.",
-        "eng": "O God, who in creating human nature, did wonderfully dignify it, and still more wonderfully restore it, grant that by the mystery of this water and wine, we may be made partakers of His divinity, who vouchsafed to become partaker of our humanity, Jesus Christ, Your Son, our Lord. Amen."
+        "lat": "Deus, ✠ qui humánæ substántiæ dignitátem mirabíliter condidísti, et mirabílius reformásti: da nobis per hujus aquæ et vini mystérium, ejus divinitátis esse consórtes, qui humanitátis nostræ fíeri dignátus est párticeps, Jesus Christus, Fílius tuus, Dóminus noster: Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus: per ómnia sǽcula sæculórum. Amen.",
+        "eng": "O God, who, in creating human nature, didst wonderfully dignify it, and still more wonderfully restore it, grant that, by the Mystery of this water and wine, we may be made partakers of His divine nature, who vouchsafed to be made partaker of our human nature, even Jesus Christ our Lord, Thy Son, who with Thee, liveth and reigneth in the unity of the Holy Ghost, God: world without end. Amen."
       },
       {
         "lat": "Offérimus tibi, Dómine, cálicem salutáris, tuam deprecántes cleméntiam: ut in conspéctu divínæ majestátis tuæ, pro nostra et totíus mundi salúte, cum odóre suavitátis ascéndat. Amen.",
-        "eng": "We offer to You, O Lord, the chalice of salvation, humbly begging of Your mercy that it may arise before Your divine Majesty, with a pleasing fragrance, for our salvation and for that of the whole world. Amen.",
+        "eng": "We offer unto Thee, O Lord, the chalice of salvation, beseeching Thy clemency, that it may ascend before Thy divine Majesty, as a sweet savour, for our salvation, and for that of the whole world. Amen.",
         "rubric": "The priest offers the chalice:"
       },
       {
         "lat": "In spíritu humilitátis et in ánimo contríto suscipiámur a te, Dómine: et sic fiat sacrifícium nostrum in conspéctu tuo hódie, ut pláceat tibi, Dómine Deus.",
-        "eng": "In a humble spirit and with a contrite heart, may we be accepted by You, O Lord, and may our sacrifice so be offered in Your sight this day as to please You, O Lord God."
+        "eng": "Accept us, O Lord, in the spirit of humility and contrition of heart, and grant that the sacrifice which we offer this day in Thy sight may be pleasing to Thee, O Lord God."
       },
       {
-        "lat": "Veni, Sanctificátor omnípotens ætérne Deus: et bénedic hoc sacrifícium, tuo sancto nómini præparátum.",
-        "eng": "Come, O Sanctifier, almighty and eternal God, and bless this sacrifice prepared for Your holy name."
+        "lat": "Veni, sanctificátor omnípotens ætérne Deus: et béne ✠ dic hoc sacrifícium, tuo sancto nómini præparátum.",
+        "eng": "Come, O almighty and eternal God, the Sanctifier, and bless ✠ this Sacrifice, prepared for the glory of Thy holy Name."
       },
       {
         "lat": "Lavábo inter innocéntes manus meas: et circúmdabo altáre tuum, Dómine. Ut áudiam vocem laudis, et enárrem univérsa mirabília tua. Dómine, diléxi decórem domus tuæ, et locum habitatiónis glóriæ tuæ. Ne perdas cum ímpiis, Deus, ánimam meam, et cum viris sánguinum vitam meam. In quorum mánibus iniquitátes sunt: déxtera eórum repléta est munéribus. Ego autem in innocéntia mea ingréssus sum: rédime me, et miserére mei. Pes meus stetit in dirécto: in ecclésiis benedícam te, Dómine. Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
-        "eng": "I will wash my hands among the innocent: and will compass Your altar, O Lord. That I may hear the voice of Your praise, and tell of all Your wondrous works. I have loved, O Lord, the beauty of Your house, and the place where Your glory dwells. Take not away my soul, O God, with the wicked, nor my life with bloodthirsty men. In whose hands are iniquities: their right hand is filled with gifts. But as for me, I have walked in my innocence: redeem me, and have mercy on me. My foot has stood in the direct way: in the churches I will bless You, O Lord. Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+        "eng": "I will wash my hands among the innocent: and I will compass Thine altar, O Lord. That I may hear the voice of praise: and tell of all Thy wondrous works. I have loved, O Lord, the beauty of Thy house and the place where Thy glory dwelleth. Take not away my soul, O God, with the wicked: nor my life with bloodthirsty men. In whose hands are iniquities, their right hand is filled with gifts. But I have walked in my innocence: redeem me, and have mercy on me. My foot hath stood in the direct way, in the churches I will bless Thee, O Lord. Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
         "rubric": "The priest washes his hands:"
       },
       {
         "lat": "Súscipe, sancta Trínitas, hanc oblatiónem, quam tibi offérimus ob memóriam passiónis, resurrectiónis, et ascensiónis Jesu Christi, Dómini nostri: et in honórem beátæ Maríæ semper Vírginis, et beáti Joánnis Baptístæ, et sanctórum Apostolórum Petri et Pauli, et istórum et ómnium Sanctórum: ut illis profíciat ad honórem, nobis autem ad salútem: et illi pro nobis intercédere dignéntur in cælis, quorum memóriam ágimus in terris. Per eúndem Christum Dóminum nostrum. Amen.",
-        "eng": "Receive, O holy Trinity, this oblation which we make to You in remembrance of the Passion, Resurrection, and Ascension of Jesus Christ, our Lord, and in honour of blessed Mary, ever Virgin, blessed John the Baptist, the holy Apostles Peter and Paul, and of these, and of all the Saints; that it may avail unto their honour and our salvation: and may they vouchsafe to intercede in heaven for us who honour their memory here on earth. Through the same Christ our Lord. Amen.",
+        "eng": "Receive, O holy Trinity, this oblation which we make to Thee, in memory of the Passion, Resurrection and Ascension of our Lord Jesus Christ, and in honour of blessed Mary, ever Virgin, blessed John the Baptist, the holy Apostles Peter and Paul, and of all the Saints, that it may avail unto their honour and our salvation, and may they vouchsafe to intercede for us in heaven, whose memory we celebrate on earth. Through the same Christ our Lord. Amen.",
         "rubric": "Bowing, the priest says:"
       },
       {
         "lat": "℣. Oráte, fratres: ut meum ac vestrum sacrifícium acceptábile fiat apud Deum Patrem omnipoténtem.\n℟. Suscípiat Dóminus sacrifícium de mánibus tuis ad laudem et glóriam nóminis sui, ad utilitátem quoque nostram, totiúsque Ecclésiæ suæ sanctæ.",
-        "eng": "℣. Pray, brethren, that my sacrifice and yours may become acceptable to God the Father almighty.\n℟. May the Lord accept this sacrifice at your hands for the praise and glory of His name, for our advantage, and that of all His holy Church.",
+        "eng": "℣. Brethren, pray that my Sacrifice and yours may be acceptable to God the Father almighty.\n℟. May the Lord receive the Sacrifice from thy hands, to the praise and glory of His Name, to our benefit and that of all His holy Church.",
         "rubric": "Turning to the people:"
       }
     ]
