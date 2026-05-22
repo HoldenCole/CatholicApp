@@ -748,6 +748,38 @@
     ]
   },
   {
+    "slug": "libera",
+    "label": "Commúnio",
+    "title": "Líbera Nos",
+    "english": "Deliver Us",
+    "body": [
+      {
+        "rubric": "The priest takes the paten and says silently:",
+        "lat": "Líbera nos, quǽsumus, Dómine, ab ómnibus malis, prætéritis, præséntibus et futúris: et intercedénte beáta et gloriósa semper Vírgine Dei Genetríce María, cum beátis Apóstolis tuis Petro et Paulo, atque Andréa, et ómnibus Sanctis, da propítius pacem in diébus nostris: ut, ope misericórdiæ tuæ adjúti, et a peccáto simus semper líberi et ab omni perturbatióne secúri.",
+        "eng": "Deliver us, we beseech Thee, O Lord, from all evils, past, present, and to come; and by the intercession of the Blessed and glorious ever Virgin Mary, Mother of God, and of the holy Apostles, Peter and Paul, and of Andrew, and of all the Saints, mercifully grant peace in our days, that through the assistance of Thy mercy we may be always free from sin, and secure from all disturbance."
+      },
+      {
+        "rubric": "He breaks the Host over the chalice:",
+        "lat": "Per eúndem Dóminum nostrum Jesum Christum, Fílium tuum. Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum. ℟. Amen.",
+        "eng": "Through the same Jesus Christ, Thy Son, our Lord. Who with Thee in the unity of the Holy Ghost liveth and reigneth God, world without end. ℟. Amen."
+      },
+      {
+        "rubric": "He signs with a Particle over the chalice:",
+        "lat": "℣. Pax ✠ Dómini sit ✠ semper vobís✠cum.",
+        "eng": "℣. The peace ✠ of the Lord be ✠ always with ✠ you."
+      },
+      {
+        "lat": "℟. Et cum spíritu tuo.",
+        "eng": "℟. And with thy spirit."
+      },
+      {
+        "rubric": "He drops the Particle into the chalice, saying:",
+        "lat": "Hæc commíxtio, et consecrátio Córporis et Sánguinis Dómini nostri Jesu Christi, fiat accipiéntibus nobis in vitam ætérnam. Amen.",
+        "eng": "May this mixture and consecration of the Body and Blood of our Lord Jesus Christ be to us who receive it effectual unto eternal life. Amen."
+      }
+    ]
+  },
+  {
     "slug": "agnus",
     "label": "Commúnio",
     "title": "Agnus Dei",
@@ -790,6 +822,40 @@
     ]
   },
   {
+    "slug": "orationes-ante-communionem",
+    "label": "Commúnio",
+    "title": "Oratiónes ante Commúnionem",
+    "english": "Prayers Before Communion",
+    "body": [
+      {
+        "rubric": "With his hands joined and resting on the altar, standing inclined, the priest says:",
+        "lat": "Dómine Jesu Christe, qui dixísti Apóstolis tuis: Pacem relínquo vobis, pacem meam do vobis: ne respícias peccáta mea, sed fidem Ecclésiæ tuæ; eámque secúndum voluntátem tuam pacificáre et coadunáre dignéris: Qui vivis et regnas Deus per ómnia sǽcula sæculórum. Amen.",
+        "eng": "O Lord Jesus Christ, who saidst to Thine Apostles: Peace I leave you, My peace I give you: regard not my sins, but the faith of Thy Church; and vouchsafe to grant her that peace and unity which is agreeable to Thy will: Who livest and reignest God, world without end. Amen."
+      },
+      {
+        "lat": "Dómine Jesu Christe, Fili Dei vivi, qui ex voluntáte Patris, cooperánte Spíritu Sancto, per mortem tuam mundum vivificásti: líbera me per hoc sacrosánctum Corpus et Sánguinem tuum ab ómnibus iniquitátibus meis, et univérsis malis: et fac me tuis semper inhærére mandátis, et a te numquam separári permíttas: Qui cum eódem Deo Patre et Spíritu Sancto vivis et regnas Deus in sǽcula sæculórum. Amen.",
+        "eng": "O Lord Jesus Christ, Son of the living God, who, according to the will of Thy Father, with the cooperation of the Holy Ghost, hast by Thy death given life to the world; deliver me by this Thy most sacred Body and Blood, from all my iniquities and from all evils; and make me always cleave to Thy commandments, and suffer me never to be separated from Thee, Who livest and reignest, with the same God the Father and the Holy Ghost, God, world without end. Amen."
+      },
+      {
+        "lat": "Percéptio Córporis tui, Dómine Jesu Christe, quod ego indígnus súmere præsúmo, non mihi provéniat in judícium et condemnatiónem: sed pro tua pietáte prosit mihi ad tutaméntum mentis et córporis, et ad medélam percipiéndam: Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum. Amen.",
+        "eng": "Let not the partaking of Thy Body, O Lord, Jesus Christ, which I, though unworthy, presume to receive, turn to my judgment and condemnation; but let it, through Thy mercy, become a safeguard and remedy, both for soul and body; Who with God the Father, in the unity of the Holy Ghost, livest and reignest God, world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "panem-caelestem",
+    "label": "Commúnio",
+    "title": "Panem Cæléstem",
+    "english": "The Bread of Heaven",
+    "body": [
+      {
+        "rubric": "The priest genuflects, rises, and says:",
+        "lat": "Panem cæléstem accípiam, et nomen Dómini invocábo.",
+        "eng": "I will take the Bread of heaven, and will call upon the Name of the Lord."
+      }
+    ]
+  },
+  {
     "slug": "confiteor-communion",
     "title": "Confíteor ante Commúnionem",
     "english": "Confiteor Before Communion",
@@ -812,9 +878,58 @@
     "english": "Lord, I Am Not Worthy",
     "body": [
       {
-        "lat": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea. (×3)",
-        "eng": "Lord, I am not worthy that Thou shouldst enter under my roof: but only say the word, and my soul shall be healed. (×3)",
+        "lat": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea.",
+        "eng": "Lord, I am not worthy that Thou shouldst enter under my roof; say but the word, and my soul shall be healed.",
         "rubric": "The priest says three times, striking his breast:"
+      },
+      {
+        "lat": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea.",
+        "eng": "Lord, I am not worthy that Thou shouldst enter under my roof; say but the word, and my soul shall be healed."
+      },
+      {
+        "lat": "Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea.",
+        "eng": "Lord, I am not worthy that Thou shouldst enter under my roof; say but the word, and my soul shall be healed."
+      }
+    ]
+  },
+  {
+    "slug": "communio-sacerdotis",
+    "label": "Commúnio",
+    "title": "Commúnio Sacerdótis",
+    "english": "Communion of the Priest",
+    "body": [
+      {
+        "rubric": "Making the Sign of the Cross with the Host over the paten, the priest says:",
+        "lat": "Corpus Dómini nostri Jesu Christi custódiat ánimam meam in vitam ætérnam. Amen.",
+        "eng": "The Body of our Lord Jesus Christ preserve my soul unto life everlasting. Amen."
+      },
+      {
+        "rubric": "He collects any fragments, then says:",
+        "lat": "Quid retríbuam Dómino pro ómnibus, quæ retríbuit mihi? Cálicem salutáris accípiam, et nomen Dómini invocábo. Laudans invocábo Dóminum, et ab inimícis meis salvus ero.",
+        "eng": "What return shall I make to the Lord for all He has given to me? I will take the chalice of salvation, and call upon the Name of the Lord. Praising I will call upon the Lord, and I shall be saved from my enemies."
+      },
+      {
+        "rubric": "Making the Sign of the Cross with the chalice, the priest says:",
+        "lat": "Sanguis Dómini nostri Jesu Christi custódiat ánimam meam in vitam ætérnam. Amen.",
+        "eng": "The Blood of our Lord Jesus Christ preserve my soul unto life everlasting. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "ablutiones",
+    "label": "Commúnio",
+    "title": "Ablutiónes",
+    "english": "Ablution Prayers",
+    "body": [
+      {
+        "rubric": "After receiving the Precious Blood, the priest says:",
+        "lat": "Quod ore súmpsimus, Dómine, pura mente capiámus: et de múnere temporáli fiat nobis remédium sempitérnum.",
+        "eng": "Grant, O Lord, that what we have taken with our mouth, we may receive with a pure mind; and from a temporal gift may it become to us an eternal remedy."
+      },
+      {
+        "rubric": "At the second ablution, the priest says:",
+        "lat": "Corpus tuum, Dómine, quod sumpsi, et Sanguis, quem potávi, adhǽreat viscéribus meis: et præsta; ut in me non remáneat scélerum mácula, quem pura et sancta refecérunt sacraménta: Qui vivis et regnas in sǽcula sæculórum. Amen.",
+        "eng": "May Thy Body, O Lord, which I have received, and Thy Blood which I have drunk, cleave to my bowels; and grant that no stain of sin may remain in me, who have been fed with this pure and holy Sacrament; Who livest and reignest for ever and ever. Amen."
       }
     ]
   },
@@ -825,13 +940,13 @@
     "english": "May It Please You",
     "body": [
       {
-        "lat": "Pláceat tibi, sancta Trínitas, obséquium servitútis meæ: et præsta; ut sacrifícium, quod óculis tuæ majestátis indígnus óbtuli, tibi sit acceptábile, mihíque et ómnibus, pro quibus illud óbtuli, sit, te miseránte, propitiábile. Per Christum Dóminum nostrum. Amen.",
-        "eng": "May the tribute of my worship be pleasing to You, Most Holy Trinity, and grant that the sacrifice which I, all unworthy, have offered in the presence of Your Majesty, may be acceptable to You, and through Your mercy obtain forgiveness for me and all for whom I have offered it. Through Christ our Lord. Amen.",
+        "lat": "Pláceat tibi, sancta Trínitas, obséquium servitútis meæ: et præsta; ut sacrifícium, quod óculis tuæ majestátis indígnus óbtuli, tibi sit acceptábile, mihíque et ómnibus, pro quibus illud óbtuli, sit, te miseránte, propitiábile. Per Christum, Dóminum nostrum. Amen.",
+        "eng": "May the performance of my homage be pleasing to Thee, O holy Trinity: and grant that the Sacrifice which I, though unworthy, have offered up in the sight of Thy Majesty, may be acceptable to Thee, and through Thy mercy, be a propitiation for me, and for all those for whom I have offered it. Through Christ our Lord. Amen.",
         "rubric": "The priest bows and says silently:"
       },
       {
-        "lat": "℣. Benedicat vos omnípotens Deus, Pater, et Fílius, ✠ et Spíritus Sanctus. ℟. Amen.",
-        "eng": "℣. May almighty God bless you, the Father, and the Son, ✠ and the Holy Spirit. ℟. Amen.",
+        "lat": "℣. Benedícat vos omnípotens Deus, Pater, et Fílius, ✠ et Spíritus Sanctus. ℟. Amen.",
+        "eng": "℣. May almighty God the Father, Son, ✠ and Holy Ghost, bless you. ℟. Amen.",
         "rubric": "The priest blesses the people:"
       }
     ]
