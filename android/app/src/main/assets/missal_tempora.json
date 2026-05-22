@@ -491,7 +491,7 @@
     },
     "secreta": {
       "lat": "Munéribus nostris, quǽsumus, Dómine, precibúsque suscéptis: et cœléstibus nos munda mystériis, et cleménter exáudi.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Munéribus nostris, quǽsumus, Dómine, precibúsque suscéptis: et cœléstibus nos munda mystériis, et cleménter exáudi.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "As thou hast received our gifts and prayers, O Lord, cleanse us, we ask by thy heavenly mysteries, and graciously hear us.\n$Per Dominum"
     },
     "communio": {
       "lat": "Ecce, Dóminus véniet et omnes Sancti ejus cum eo: et erit in die illa lux magna.",
@@ -1332,7 +1332,7 @@
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Pastóres loquebántur ad ínvicem: Transeámus usque Béthlehem, et videámus hoc verbum, quod factum est, quod Dóminus osténdit nobis. Et venérunt festinántes, et invenérunt Maríam, et Joseph, et Infántem pósitum in præsépio. Vidéntes autem cognovérunt de verbo, quod dictum erat illis de Púero hoc. Et omnes, qui audiérunt, miráti sunt: et de his, quæ dicta erant a pastóribus ad ipsos. María autem conservábat ómnia verba hæc, cónferens in corde suo. Et revérsi sunt pastores, glorificántes et laudántes Deum in ómnibus, quæ audíerant et víderant, sicut dictum est ad illos.",
-      "eng": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Pastóres loquebántur ad ínvicem: Transeámus usque Béthlehem, et videámus hoc verbum, quod factum est, quod Dóminus osténdit nobis. Et venérunt festinántes, et invenérunt Maríam, et Joseph, et Infántem pósitum in præsépio. Vidéntes autem cognovérunt de verbo, quod dictum erat illis de Púero hoc. Et omnes, qui audiérunt, miráti sunt: et de his, quæ dicta erant a pastóribus ad ipsos. María autem conservábat ómnia verba hæc, cónferens in corde suo. Et revérsi sunt pastores, glorificántes et laudántes Deum in ómnibus, quæ audíerant et víderant, sicut dictum est ad illos."
+      "eng": "Continuation ++ of the Holy Gospel according to Luke\nAt that time, Jesus said to His disciples, Let your loins be girt about and your lamps burning, and you yourselves like men waiting for their master’s return from the wedding; so that when he comes and knocks, they may straight-way open to him. Blessed are those servants whom the master, on his return, shall find watching. Amen I say to you, he will gird himself, and will make them recline at table, and will come and serve them. And if he comes in the second watch, and if in the third, and finds them so, blessed are those servants! But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into. You also must be ready, because at an hour that you do not expect, the Son of Man is coming."
     },
     "offertorium": {
       "lat": "Tui sunt cœli et tua est terra: orbem terrárum et plenitúdinem ejus tu fundásti: justítia et judícium præparátio sedis tuæ.",
@@ -1341,7 +1341,7 @@
     },
     "secreta": {
       "lat": "Obláta, Dómine, múnera, nova Unigéniti tui Nativitáte sanctífica: nosque a peccatórum nostrórum máculis emúnda.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Obláta, Dómine, múnera, nova Unigéniti tui Nativitáte sanctífica: nosque a peccatórum nostrórum máculis emúnda.\nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "Obláta, Dómine, múnera, nova Unigéniti tui Nativitáte sanctífica: nosque a peccatórum nostrórum máculis emúnda.\nThrough the same our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "communio": {
       "lat": "Vidérunt omnes fines terræ salutáre Dei nostri.",
@@ -1350,7 +1350,7 @@
     },
     "postcommunio": {
       "lat": "Præsta, quǽsumus, omnípotens Deus: ut natus hódie Salvátor mundi, sicut divínæ nobis generatiónis est auctor; ita et immortalitátis sit ipse largítor:\nQui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Præsta, quǽsumus, omnípotens Deus: ut natus hódie Salvátor mundi, sicut divínæ nobis generatiónis est auctor; ita et immortalitátis sit ipse largítor:\nQui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "Præsta, quǽsumus, omnípotens Deus: ut natus hódie Salvátor mundi, sicut divínæ nobis generatiónis est auctor; ita et immortalitátis sit ipse largítor:\nWho with Thee liveth and reigneth in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "nat31": {
@@ -2958,7 +2958,7 @@
     },
     "evangelium": {
       "lat": "@Tempora/Pasc5-4::s/\\!(?!M).*//",
-      "eng": "@Tempora/Pasc5-4::s/\\!(?!M).*//"
+      "eng": "Continuation + of the Holy Gospel according to Mark\nAt length he appeared to the eleven as they were at table: and he upbraided them with their incredulity and hardness of heart, because they did not believe them who had seen him after he was risen again. And he said to them: Go ye into the whole world, and preach the gospel to every creature. He that believeth and is baptized, shall be saved: but he that believeth not shall be condemned. And these signs shall follow them that believe: In my name they shall cast out devils; they shall speak with new tongues; they shall take up serpents; and if they shall drink any deadly thing, it shall not hurt them; they shall lay their hands upon the sick, and they shall recover. And the Lord Jesus, after he had spoken to them, was taken up into heaven and sitteth on the right hand of God. But they going forth preached everywhere, the Lord working withal, and confirming the word with signs that followed."
     }
   },
   "pasc5-6t": {
@@ -3026,7 +3026,7 @@
     },
     "evangelium": {
       "lat": "@Tempora/Pasc5-4::s/\\!(?!M).*//",
-      "eng": "@Tempora/Pasc5-4::s/\\!(?!M).*//"
+      "eng": "Continuation + of the Holy Gospel according to Mark\nAt length he appeared to the eleven as they were at table: and he upbraided them with their incredulity and hardness of heart, because they did not believe them who had seen him after he was risen again. And he said to them: Go ye into the whole world, and preach the gospel to every creature. He that believeth and is baptized, shall be saved: but he that believeth not shall be condemned. And these signs shall follow them that believe: In my name they shall cast out devils; they shall speak with new tongues; they shall take up serpents; and if they shall drink any deadly thing, it shall not hurt them; they shall lay their hands upon the sick, and they shall recover. And the Lord Jesus, after he had spoken to them, was taken up into heaven and sitteth on the right hand of God. But they going forth preached everywhere, the Lord working withal, and confirming the word with signs that followed."
     }
   },
   "pasc6-2": {
@@ -3037,7 +3037,7 @@
     },
     "evangelium": {
       "lat": "@Tempora/Pasc5-4::s/\\!(?!M).*//",
-      "eng": "@Tempora/Pasc5-4::s/\\!(?!M).*//"
+      "eng": "Continuation + of the Holy Gospel according to Mark\nAt length he appeared to the eleven as they were at table: and he upbraided them with their incredulity and hardness of heart, because they did not believe them who had seen him after he was risen again. And he said to them: Go ye into the whole world, and preach the gospel to every creature. He that believeth and is baptized, shall be saved: but he that believeth not shall be condemned. And these signs shall follow them that believe: In my name they shall cast out devils; they shall speak with new tongues; they shall take up serpents; and if they shall drink any deadly thing, it shall not hurt them; they shall lay their hands upon the sick, and they shall recover. And the Lord Jesus, after he had spoken to them, was taken up into heaven and sitteth on the right hand of God. But they going forth preached everywhere, the Lord working withal, and confirming the word with signs that followed."
     }
   },
   "pasc6-2t": {
@@ -3055,7 +3055,7 @@
     },
     "evangelium": {
       "lat": "@Tempora/Pasc5-4::s/\\!(?!M).*//",
-      "eng": "@Tempora/Pasc5-4::s/\\!(?!M).*//"
+      "eng": "Continuation + of the Holy Gospel according to Mark\nAt length he appeared to the eleven as they were at table: and he upbraided them with their incredulity and hardness of heart, because they did not believe them who had seen him after he was risen again. And he said to them: Go ye into the whole world, and preach the gospel to every creature. He that believeth and is baptized, shall be saved: but he that believeth not shall be condemned. And these signs shall follow them that believe: In my name they shall cast out devils; they shall speak with new tongues; they shall take up serpents; and if they shall drink any deadly thing, it shall not hurt them; they shall lay their hands upon the sick, and they shall recover. And the Lord Jesus, after he had spoken to them, was taken up into heaven and sitteth on the right hand of God. But they going forth preached everywhere, the Lord working withal, and confirming the word with signs that followed."
     }
   },
   "pasc6-4": {
@@ -3066,7 +3066,7 @@
     },
     "evangelium": {
       "lat": "@Tempora/Pasc5-4::s/\\!(?!M).*//",
-      "eng": "@Tempora/Pasc5-4::s/\\!(?!M).*//"
+      "eng": "Continuation + of the Holy Gospel according to Mark\nAt length he appeared to the eleven as they were at table: and he upbraided them with their incredulity and hardness of heart, because they did not believe them who had seen him after he was risen again. And he said to them: Go ye into the whole world, and preach the gospel to every creature. He that believeth and is baptized, shall be saved: but he that believeth not shall be condemned. And these signs shall follow them that believe: In my name they shall cast out devils; they shall speak with new tongues; they shall take up serpents; and if they shall drink any deadly thing, it shall not hurt them; they shall lay their hands upon the sick, and they shall recover. And the Lord Jesus, after he had spoken to them, was taken up into heaven and sitteth on the right hand of God. But they going forth preached everywhere, the Lord working withal, and confirming the word with signs that followed."
     }
   },
   "pasc6-4r": {
@@ -3881,11 +3881,11 @@
     },
     "secreta": {
       "lat": "Hostias nostras, quǽsumus, Dómine, tibi dicátas placátus assúme: et ad perpetuum nobis tríbue proveníre subsídium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Hostias nostras, quǽsumus, Dómine, tibi dicátas placátus assúme: et ad perpetuum nobis tríbue proveníre subsídium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "Hostias nostras, quǽsumus, Dómine, tibi dicátas placátus assúme: et ad perpetuum nobis tríbue proveníre subsídium.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "postcommunio": {
       "lat": "Tantis, Dómine, repléti munéribus: præsta, quǽsumus; ut et salutária dona capiámus, et a tua numquam laude cessémus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Tantis, Dómine, repléti munéribus: præsta, quǽsumus; ut et salutária dona capiámus, et a tua numquam laude cessémus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "Tantis, Dómine, repléti munéribus: præsta, quǽsumus; ut et salutária dona capiámus, et a tua numquam laude cessémus.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "pent01-3": {
@@ -3901,11 +3901,11 @@
     },
     "secreta": {
       "lat": "Hostias nostras, quǽsumus, Dómine, tibi dicátas placátus assúme: et ad perpetuum nobis tríbue proveníre subsídium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Hostias nostras, quǽsumus, Dómine, tibi dicátas placátus assúme: et ad perpetuum nobis tríbue proveníre subsídium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "Hostias nostras, quǽsumus, Dómine, tibi dicátas placátus assúme: et ad perpetuum nobis tríbue proveníre subsídium.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "postcommunio": {
       "lat": "Tantis, Dómine, repléti munéribus: præsta, quǽsumus; ut et salutária dona capiámus, et a tua numquam laude cessémus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Tantis, Dómine, repléti munéribus: præsta, quǽsumus; ut et salutária dona capiámus, et a tua numquam laude cessémus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "Tantis, Dómine, repléti munéribus: præsta, quǽsumus; ut et salutária dona capiámus, et a tua numquam laude cessémus.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "pent01-4": {
@@ -8192,7 +8192,7 @@
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Rogábat Jesum quidam de pharisǽis, ut manducáret cum illo. Et ingréssus domum pharisǽi, discúbuit. Et ecce múlier, quæ erat in civitáte peccátrix, ut cognóvit, quod accubuísset in domo pharisǽi, áttulit alabástrum unguénti: et stans retro secus pedes ejus, lácrimis cœpit rigáre pedes ejus, et capíllis cápitis sui tergébat, et osculabátur pedes ejus, et unguénto ungébat. Videns autem pharisǽus, qui vocáverat eum, ait intra se, dicens: Hic si esset Prophéta, sciret útique, quæ et qualis est múlier, quæ tangit eum: quia peccátrix est. Et respóndens Jesus, dixit ad illum: Simon, hábeo tibi áliquid dícere. At ille ait: Magíster, dic. Duo debitóres erant cuidam fœneratóri: unus debébat denários quingéntos, et álius quinquagínta. Non habéntibus illis, unde rédderent, donávit utrísque. Quis ergo eum plus díligit? Respóndens Simon, dixit: Æstimo, quia is, cui plus donávit. At ille dixit ei: Recte judicásti. Et convérsus ad mulíerem, dixit Simóni: Vides hanc mulíerem? Intrávi in domum tuam, aquam pédibus meis non dedísti: hæc autem lácrimis rigávit pedes meos et capíllis suis tersit. Osculum mihi non dedísti: hæc autem, ex quo intrávit, non cessávit osculári pedes meos. Oleo caput meum non unxísti: hæc autem unguénto unxit pedes meos. Propter quod dico tibi: Remittúntur ei peccáta multa, quóniam diléxit multum. Cui autem minus dimíttitur, minus díligit. Dixit autem ad illam: Remittúntur tibi peccáta. Et cœpérunt, qui simul accumbébant, dícere intra se: Quis est hic, qui étiam peccáta dimíttit? Dixit autem ad mulíerem: Fides tua te salvam fecit: vade in pace.",
-      "eng": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Rogábat Jesum quidam de pharisǽis, ut manducáret cum illo. Et ingréssus domum pharisǽi, discúbuit. Et ecce múlier, quæ erat in civitáte peccátrix, ut cognóvit, quod accubuísset in domo pharisǽi, áttulit alabástrum unguénti: et stans retro secus pedes ejus, lácrimis cœpit rigáre pedes ejus, et capíllis cápitis sui tergébat, et osculabátur pedes ejus, et unguénto ungébat. Videns autem pharisǽus, qui vocáverat eum, ait intra se, dicens: Hic si esset Prophéta, sciret útique, quæ et qualis est múlier, quæ tangit eum: quia peccátrix est. Et respóndens Jesus, dixit ad illum: Simon, hábeo tibi áliquid dícere. At ille ait: Magíster, dic. Duo debitóres erant cuidam fœneratóri: unus debébat denários quingéntos, et álius quinquagínta. Non habéntibus illis, unde rédderent, donávit utrísque. Quis ergo eum plus díligit? Respóndens Simon, dixit: Æstimo, quia is, cui plus donávit. At ille dixit ei: Recte judicásti. Et convérsus ad mulíerem, dixit Simóni: Vides hanc mulíerem? Intrávi in domum tuam, aquam pédibus meis non dedísti: hæc autem lácrimis rigávit pedes meos et capíllis suis tersit. Osculum mihi non dedísti: hæc autem, ex quo intrávit, non cessávit osculári pedes meos. Oleo caput meum non unxísti: hæc autem unguénto unxit pedes meos. Propter quod dico tibi: Remittúntur ei peccáta multa, quóniam diléxit multum. Cui autem minus dimíttitur, minus díligit. Dixit autem ad illam: Remittúntur tibi peccáta. Et cœpérunt, qui simul accumbébant, dícere intra se: Quis est hic, qui étiam peccáta dimíttit? Dixit autem ad mulíerem: Fides tua te salvam fecit: vade in pace."
+      "eng": "Continuation ++ of the Holy Gospel according to Luke\nAt that time, Jesus said to His disciples, Let your loins be girt about and your lamps burning, and you yourselves like men waiting for their master’s return from the wedding; so that when he comes and knocks, they may straight-way open to him. Blessed are those servants whom the master, on his return, shall find watching. Amen I say to you, he will gird himself, and will make them recline at table, and will come and serve them. And if he comes in the second watch, and if in the third, and finds them so, blessed are those servants! But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into. You also must be ready, because at an hour that you do not expect, the Son of Man is coming."
     },
     "offertorium": {
       "lat": "Super flúmina Babylónis illic sédimus et flévimus: dum recordarémur tui, Sion.",
@@ -8241,7 +8241,7 @@
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Rogábat Jesum quidam de pharisǽis, ut manducáret cum illo. Et ingréssus domum pharisǽi, discúbuit. Et ecce múlier, quæ erat in civitáte peccátrix, ut cognóvit, quod accubuísset in domo pharisǽi, áttulit alabástrum unguénti: et stans retro secus pedes ejus, lácrimis cœpit rigáre pedes ejus, et capíllis cápitis sui tergébat, et osculabátur pedes ejus, et unguénto ungébat. Videns autem pharisǽus, qui vocáverat eum, ait intra se, dicens: Hic si esset Prophéta, sciret útique, quæ et qualis est múlier, quæ tangit eum: quia peccátrix est. Et respóndens Jesus, dixit ad illum: Simon, hábeo tibi áliquid dícere. At ille ait: Magíster, dic. Duo debitóres erant cuidam fœneratóri: unus debébat denários quingéntos, et álius quinquagínta. Non habéntibus illis, unde rédderent, donávit utrísque. Quis ergo eum plus díligit? Respóndens Simon, dixit: Æstimo, quia is, cui plus donávit. At ille dixit ei: Recte judicásti. Et convérsus ad mulíerem, dixit Simóni: Vides hanc mulíerem? Intrávi in domum tuam, aquam pédibus meis non dedísti: hæc autem lácrimis rigávit pedes meos et capíllis suis tersit. Osculum mihi non dedísti: hæc autem, ex quo intrávit, non cessávit osculári pedes meos. Oleo caput meum non unxísti: hæc autem unguénto unxit pedes meos. Propter quod dico tibi: Remittúntur ei peccáta multa, quóniam diléxit multum. Cui autem minus dimíttitur, minus díligit. Dixit autem ad illam: Remittúntur tibi peccáta. Et cœpérunt, qui simul accumbébant, dícere intra se: Quis est hic, qui étiam peccáta dimíttit? Dixit autem ad mulíerem: Fides tua te salvam fecit: vade in pace.",
-      "eng": "Sequéntia ++ sancti Evangélii secúndum Lucam\nIn illo témpore: Rogábat Jesum quidam de pharisǽis, ut manducáret cum illo. Et ingréssus domum pharisǽi, discúbuit. Et ecce múlier, quæ erat in civitáte peccátrix, ut cognóvit, quod accubuísset in domo pharisǽi, áttulit alabástrum unguénti: et stans retro secus pedes ejus, lácrimis cœpit rigáre pedes ejus, et capíllis cápitis sui tergébat, et osculabátur pedes ejus, et unguénto ungébat. Videns autem pharisǽus, qui vocáverat eum, ait intra se, dicens: Hic si esset Prophéta, sciret útique, quæ et qualis est múlier, quæ tangit eum: quia peccátrix est. Et respóndens Jesus, dixit ad illum: Simon, hábeo tibi áliquid dícere. At ille ait: Magíster, dic. Duo debitóres erant cuidam fœneratóri: unus debébat denários quingéntos, et álius quinquagínta. Non habéntibus illis, unde rédderent, donávit utrísque. Quis ergo eum plus díligit? Respóndens Simon, dixit: Æstimo, quia is, cui plus donávit. At ille dixit ei: Recte judicásti. Et convérsus ad mulíerem, dixit Simóni: Vides hanc mulíerem? Intrávi in domum tuam, aquam pédibus meis non dedísti: hæc autem lácrimis rigávit pedes meos et capíllis suis tersit. Osculum mihi non dedísti: hæc autem, ex quo intrávit, non cessávit osculári pedes meos. Oleo caput meum non unxísti: hæc autem unguénto unxit pedes meos. Propter quod dico tibi: Remittúntur ei peccáta multa, quóniam diléxit multum. Cui autem minus dimíttitur, minus díligit. Dixit autem ad illam: Remittúntur tibi peccáta. Et cœpérunt, qui simul accumbébant, dícere intra se: Quis est hic, qui étiam peccáta dimíttit? Dixit autem ad mulíerem: Fides tua te salvam fecit: vade in pace."
+      "eng": "Continuation ++ of the Holy Gospel according to Luke\nAt that time, Jesus said to His disciples, Let your loins be girt about and your lamps burning, and you yourselves like men waiting for their master’s return from the wedding; so that when he comes and knocks, they may straight-way open to him. Blessed are those servants whom the master, on his return, shall find watching. Amen I say to you, he will gird himself, and will make them recline at table, and will come and serve them. And if he comes in the second watch, and if in the third, and finds them so, blessed are those servants! But of this be assured, that if the householder had known at what hour the thief was coming, he would certainly have watched, and not have let his house be broken into. You also must be ready, because at an hour that you do not expect, the Son of Man is coming."
     },
     "offertorium": {
       "lat": "Super flúmina Babylónis illic sédimus et flévimus: dum recordarémur tui, Sion.",
@@ -8936,7 +8936,7 @@
     },
     "secreta": {
       "lat": "Accépta sit in conspéctu tuo, Dómine, nostra devótio: et ejus nobis fiat supplicatióne salutáris, pro cujus sollemnitáte defértur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Accépta sit in conspéctu tuo, Dómine, nostra devótio: et ejus nobis fiat supplicatióne salutáris, pro cujus sollemnitáte defértur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen."
+      "eng": "May our service be acceptable in Your sight, O Lord, and may it bring us salvation through the prayers of him on whose festival it is being offered.\n$Per Dominum"
     },
     "communio": {
       "lat": "Illúmina fáciem tuam super servum tuum, et salvum me fac in tua misericórdia: Dómine, non confúndar, quóniam invocávi te.",
