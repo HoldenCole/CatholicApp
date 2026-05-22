@@ -1416,7 +1416,7 @@
     "lectio": {
       "lat": "Léctio Actuum Apostolórum\nIn diébus illis exsúrgens Petrus in médio fratrum, dixit - erat autem turba hóminum simul, fere centum vigínti -: Viri fratres, opórtet impléri Scriptúram, quam prædíxit Spíritus Sanctus per os David de Juda, qui fuit dux eórum, qui comprehendérunt Jesum: qui connumerátus erat in nobis, et sortítus est sortem ministérii hujus. Et hic quidem possédit agrum de mercéde iniquitátis, et suspénsus crépuit médius: et diffúsa sunt ómnia víscera ejus. Et notum factum est ómnibus habitántibus Jerúsalem, ita ut appellarétur ager ille, lingua eórum, Hacéldama, hoc est ager sánguinis. Scriptum est enim in libro Psalmórum: Fiat commorátio eórum desérta, et non sit, qui inhábitet in ea: et episcopátum ejus accípiat alter. Opórtet ergo ex his viris, qui nobíscum sunt congregáti in omni témpore, quo intrávit et exívit inter nos Dóminus Jesus, incípiens a baptísmate Joánnis usque in diem, qua assúmptus est a nobis, testem resurrectiónis ejus nobíscum fíeri unum ex istis. Et statuérunt duos, Joseph qui vocabátur Bársabas, qui cognominátus est Justus, et Matthíam. Et orántes dixérunt: Tu, Dómine, qui corda nosti ómnium, osténde, quem elégeris ex his duóbus unum, accípere locum ministérii hujus et apostolátus, de quo prævaricátus est Judas, ut abíret in locum suum. Et dedérunt sortes eis, et cécidit sors super Matthíam, et annumerátus est cum úndecim Apóstolis.",
       "eng": "Lesson from the Acts of Apostles\nIn those days, Peter stood up in the midst of the brethren - now the number of persons met together was about a hundred and twenty - and he said, Brethren, the Scripture must be fulfilled which the Holy Spirit declared before by the mouth of David concerning Judas, who was the guide of those who arrested Jesus; inasmuch as he had been numbered among us and was allotted his share in this ministry. And he indeed bought a field with the price of his iniquity and, being hanged, burst asunder in the midst, and all his bowels gushed out. And it became known to all the residents of Jerusalem, so that the field came to be called in their language Haceldama, that is, the Field of Blood. For it is written in the book of Psalms, ‘Let their habitation become desolate and let there be none to dwell in it.’ And, ‘His ministry let another take.’ Therefore, of these men who have been in our company all the time that the Lord Jesus moved among us, from John’s baptism until the day that He was taken up from us, of these one must become a witness with us of His Resurrection.” And they put forward two: Joseph, called Barsabbas, who was surnamed Justus, and Matthias. And they prayed and said, You, Lord, Who know the hearts of all, show which of these two You have chosen to take the place in this ministry and apostleship from which Judas fell away to go to his own place. And they drew lots between them, and the lot fell upon Matthias; and he was numbered with the eleven apostles.",
-      "ref": "Act 1, 15-26"
+      "ref": "Act 1:15-26"
     },
     "graduale": {
       "lat": "Nimis honoráti sunt amíci tui, Deus: nimis confortátus est principatus eórum.\nV. Dinumerábo eos, et super arénam multiplicabúntur.",
@@ -1461,7 +1461,7 @@
     "lectio": {
       "lat": "Léctio Epístolæ beáti Joannis Apóstoli\nCaríssimi: Scribo vobis, júvenes, quóniam fortes estis, et verbum Dei manet in vobis, et vicístis malígnum. Nolíte dilígere mundum neque ea, quæ in mundo sunt. Si quis díligit mundum, non est cáritas Patris in eo: quóniam omne, quod est in mundo, concupiscéntia carnis est, et concupiscéntia oculórum, et supérbia vitæ: quæ non est ex Patre, sed ex mundo est. Et mundus transit et concupiscéntia ejus. Qui autem facit voluntátem Dei, manet in ætérnum.",
       "eng": "Lesson from the first letter of St John the Apostle\nBeloved: I am writing to you, young men, because you are strong and the word of God abides in you, and you have conquered the evil one. Do not love the world, or the things that are in the world. If anyone loves the world, the love of the Father is not in him; because all that is in the world is the lust of the flesh, and the lust of the eyes, and the pride of life; which is not from the Father, but from the world. And the world with its lust is passing away, but he who does the will of God abides forever.",
-      "ref": "1 Joann 2, 14-17"
+      "ref": "1 Joann 2:14-17"
     },
     "graduale": {
       "lat": "Quam magna multitúdo dulcédinis tuæ, Dómine, quam abscondísti timéntibus te!\nV. Perfecísti eis, qui sperant in te, in conspéctu filiórum hóminum. Allelúja, allelúja.\nMinuísti eum, Dómine, paulo minus ab Angelis: glória et honóre coronásti eum: et constituísti eum super ópera mánuum tuárum. Allelúja.",
@@ -1817,7 +1817,7 @@
     }
   },
   "03-25": {
-    "officium": "In Annuntiatione Beate Mariæ Virgine",
+    "officium": "In Annuntiatione Beate Mariæ Virginis",
     "rank": 6,
     "rule": {
       "gloria": true,
@@ -11107,6 +11107,10 @@
     "rank": 6,
     "rule": {
       "commune": "Sancti/12-25m3"
+    },
+    "oratio": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet. \nPer eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant, we beseech You, almighty God, that the new birth, in the flesh, of Your only-begotten Son may deliver us whom the bondage of old keeps under the yoke of sin.\n$Per eumdem"
     }
   },
   "12-25m1": {
@@ -12176,6 +12180,13 @@
     "postcommunio": {
       "lat": "Sumptis, Dómine, salútis nostræ subsídiis: da, quǽsumus, beátæ Maríæ semper Vírginis patrocíniis nos ubíque prótegi; in cujus veneratióne hæc tuæ obtúlimus majestáti.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Having received the aids conducive to our salvation, O Lord, we beseech You, grant that we may everywhere be protected by the patronage of blessed Mary, ever Virgin, in veneration of whom we have made these offerings to Your Majesty.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    }
+  },
+  "05-11": {
+    "officium": "Ss. Philippi et Jacobi Apostolorum",
+    "rank": 5,
+    "rule": {
+      "commune": "Sancti/05-01"
     }
   }
 }
