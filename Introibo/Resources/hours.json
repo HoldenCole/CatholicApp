@@ -31,7 +31,7 @@
         "label": "Invitatory Antiphon",
         "lat": "Veníte, adorémus Dóminum, quóniam ipse fecit nos.",
         "eng": "Come, let us adore the Lord, for He hath made us.",
-        "variationKey": "matutinum.invitatory"
+        "variationKey": "invit"
       },
       {
         "type": "psalm",
@@ -91,7 +91,7 @@
         "title": "Æterne rerum Cónditor",
         "lat": "Ætérne rerum Cónditor,\nnoctem diémque qui regis,\net témporum das témpora,\nut álleves fastídium.\n\nPræco diéi jam sonat,\nnoctis profúndæ pérvigil,\nnoctúrna lux viántibus,\na nocte noctem ségregans.\n\nHoc excitátus lúcifer\nsolvit polum calígine;\nhoc omnis errónum chorus\nvias nocéndi déserit.\n\nHoc nauta vires cólligit,\npontíque mitéscunt freta;\nhoc, ipsa petra Ecclésiæ,\ncanénte, culpam díluit.\n\nSurgámus ergo strénnue;\ngallus jacéntes éxcitat,\net somnoléntus íncrepat;\ngallus negántes árguit.\n\nGallo canénte, spes redit,\nægris salus refúnditur,\nmucro latrónis cónditur,\nlápsis fides revértitur.\n\nIesu, labántes réspice,\net nos vidéndo córrige;\nsi réspicis, lapsus cadunt,\nfletúque culpa sólvitur.\n\nDeo Patri sit glória,\nejúsque soli Fílio,\ncum Spíritu Paráclito,\nnunc et per omne sǽculum. Amen.",
         "eng": "Eternal Maker of all things,\nWho governest both night and day,\nand grantest us the changing hours\nto ease the labours of our way.\n\nNow sounds the herald of the morn,\nthe sleepless watchman of the night,\na torch to travellers in the dark,\ndividing darkness from the light.\n\nAt this the morning-star awakes\nand frees the heavens from gloom;\nat this all evil-roaming bands\nforsake their paths of harm.\n\nAt this the sailor gathers strength,\nand calmer grow the waves of sea;\nat this the Rock on which the Church\nis built, in tears washed sin away.\n\nArise we, then, with vigour new;\nthe cock upbraids all drowsy men,\nrebukes the slothful with his cry,\nconvicts the faithless of their sin.\n\nAt cockcrow hope returns again,\nhealth to the sick is given anew,\nthe robber sheathes his lawless blade,\nand faith revives in those who fell.\n\nJesu, regard us as we fall,\nand by Thy look correct our ways;\nif Thou but look, our sins depart,\nand tears dissolve the stain of guilt.\n\nTo God the Father glory be,\nand to His only Son,\ntogether with the Paraclete,\nnow and through every age. Amen.",
-        "variationKey": "matutinum.hymn"
+        "variationKey": "hymnus_matutinum"
       },
       {
         "type": "heading",
@@ -102,7 +102,7 @@
         "label": "Antiphon I",
         "lat": "Beátus vir qui non ábiit in consílio impiórum.",
         "eng": "Blessed is the man who hath not walked in the counsel of the ungodly.",
-        "variationKey": "matutinum.antiphon1"
+        "variationKey": "ant_1"
       },
       {
         "type": "psalm",
@@ -258,7 +258,8 @@
         "lat": "Exsúrge, Dómine, ádjuva nos.",
         "eng": "Arise, O Lord, help us.",
         "latR": "Et líbera nos propter nomen tuum.",
-        "engR": "And deliver us for Thy name's sake."
+        "engR": "And deliver us for Thy name's sake.",
+        "variationKey": "versum_1"
       },
       {
         "type": "pater",
@@ -294,7 +295,8 @@
         "label": "Léctio I",
         "ref": "De Scriptura occurrente",
         "lat": "Incipit liber Génesis.\nIn princípio creávit Deus cælum et terram. Terra autem erat inánis et vácua, et ténebræ erant super fáciem abýssi: et Spíritus Dei ferebátur super aquas. Dixítque Deus: Fiat lux. Et facta est lux. Et vidit Deus lucem quod esset bona: et divísit lucem a ténebris.",
-        "eng": "Here beginneth the Book of Genesis.\nIn the beginning God created heaven and earth. And the earth was void and empty, and darkness was upon the face of the deep: and the Spirit of God moved over the waters. And God said: Be light made. And light was made. And God saw the light that it was good: and He divided the light from the darkness."
+        "eng": "Here beginneth the Book of Genesis.\nIn the beginning God created heaven and earth. And the earth was void and empty, and darkness was upon the face of the deep: and the Spirit of God moved over the waters. And God said: Be light made. And light was made. And God saw the light that it was good: and He divided the light from the darkness.",
+        "variationKey": "lectio1"
       },
       {
         "type": "vr",
@@ -314,7 +316,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Et vidit Deus lucem quod esset bona.",
-        "r2Eng": "℣. And God saw the light that it was good."
+        "r2Eng": "℣. And God saw the light that it was good.",
+        "variationKey": "responsory1"
       },
       {
         "type": "vr",
@@ -335,7 +338,8 @@
         "label": "Léctio II",
         "ref": "Gen 1:6-10",
         "lat": "Dixit quoque Deus: Fiat firmaméntum in médio aquárum: et dívidat aquas ab aquis. Et fecit Deus firmaméntum, divisítque aquas, quæ erant sub firmaménto, ab his, quæ erant super firmaméntum. Et factum est ita. Vocavítque Deus firmaméntum, Cælum: et factum est véspere et mane, dies secúndus.",
-        "eng": "God also said: Let there be a firmament made amidst the waters: and let it divide the waters from the waters. And God made a firmament, and divided the waters that were under the firmament from those that were above the firmament. And it was so. And God called the firmament, Heaven: and the evening and morning were the second day."
+        "eng": "God also said: Let there be a firmament made amidst the waters: and let it divide the waters from the waters. And God made a firmament, and divided the waters that were under the firmament from those that were above the firmament. And it was so. And God called the firmament, Heaven: and the evening and morning were the second day.",
+        "variationKey": "lectio2"
       },
       {
         "type": "vr",
@@ -355,7 +359,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Et vidit Deus quod esset bonum; et factum est véspere et mane.",
-        "r2Eng": "℣. And God saw that it was good; and there was evening and morning."
+        "r2Eng": "℣. And God saw that it was good; and there was evening and morning.",
+        "variationKey": "responsory2"
       },
       {
         "type": "vr",
@@ -376,7 +381,8 @@
         "label": "Léctio III",
         "ref": "Gen 1:11-13",
         "lat": "Dixit vero Deus: Gérminet terra herbam viréntem, et faciéntem semen, et lignum pomíferum fáciens fructum juxta genus suum, cujus semen in semetípso sit super terram. Et factum est ita. Et prótulit terra herbam viréntem, et faciéntem semen juxta genus suum, lignúmque fáciens fructum. Et vidit Deus quod esset bonum. Et factum est véspere et mane, dies tértius.",
-        "eng": "And God said: Let the earth bring forth the green herb, and such as may seed, and the fruit tree yielding fruit after its kind, which may have seed in itself upon the earth. And it was so done. And the earth brought forth the green herb, and such as yieldeth seed, and the fruit tree. And God saw that it was good. And the evening and the morning were the third day."
+        "eng": "And God said: Let the earth bring forth the green herb, and such as may seed, and the fruit tree yielding fruit after its kind, which may have seed in itself upon the earth. And it was so done. And the earth brought forth the green herb, and such as yieldeth seed, and the fruit tree. And God saw that it was good. And the evening and the morning were the third day.",
+        "variationKey": "lectio3"
       },
       {
         "type": "vr",
@@ -396,7 +402,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Et lignum pomíferum fáciens fructum juxta genus suum.",
-        "r2Eng": "℣. And the fruit tree yielding fruit after its kind."
+        "r2Eng": "℣. And the fruit tree yielding fruit after its kind.",
+        "variationKey": "responsory3"
       },
       {
         "type": "heading",
@@ -407,7 +414,7 @@
         "label": "Antiphon IV",
         "lat": "Cum invocárem, exaudívit me Deus justítiæ meæ.",
         "eng": "When I called upon Him, the God of my justice heard me.",
-        "variationKey": "matutinum.antiphon2"
+        "variationKey": "ant_2"
       },
       {
         "type": "psalm",
@@ -603,7 +610,8 @@
         "lat": "Dómine, refúgium factus es nobis.",
         "eng": "Lord, Thou hast been our refuge.",
         "latR": "A generatióne et progénie.",
-        "engR": "From generation to generation."
+        "engR": "From generation to generation.",
+        "variationKey": "versum_2"
       },
       {
         "type": "pater",
@@ -639,7 +647,8 @@
         "label": "Léctio IV",
         "ref": "Ex Homilía S. Augustíni Epíscopi",
         "lat": "Beátus vir, qui non ábiit in consílio impiórum. Hoc de Dómino nostro Jesu Christo, id est de hómine Domínico, accípi potest. Beátus vir, qui non ábiit in consílio impiórum, sicut homo terrénus, qui conséntiit serpénti et mulíeri, ut prævaricátur mandáta Dei.",
-        "eng": "Blessed is the man, who hath not walked in the counsel of the ungodly. This may be understood of our Lord Jesus Christ, the Lord made man. Blessed is the man, who hath not walked in the counsel of the ungodly, as the earthly man did, who consented unto the serpent and the woman, that he should transgress the commandment of God."
+        "eng": "Blessed is the man, who hath not walked in the counsel of the ungodly. This may be understood of our Lord Jesus Christ, the Lord made man. Blessed is the man, who hath not walked in the counsel of the ungodly, as the earthly man did, who consented unto the serpent and the woman, that he should transgress the commandment of God.",
+        "variationKey": "lectio4"
       },
       {
         "type": "vr",
@@ -659,7 +668,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Sed in lege Dómini volúntas ejus, et in lege ejus meditábitur die ac nocte.",
-        "r2Eng": "℣. But his will is in the law of the Lord, and on His law he shall meditate day and night."
+        "r2Eng": "℣. But his will is in the law of the Lord, and on His law he shall meditate day and night.",
+        "variationKey": "responsory4"
       },
       {
         "type": "vr",
@@ -680,7 +690,8 @@
         "label": "Léctio V",
         "ref": "Ex Homilía S. Augustíni Epíscopi",
         "lat": "Et in cáthedra pestiléntiæ non sedit. Cáthedra hoc loco honórem signíficat, vel étiam magistérium malam doctrínam significáre potest. Cáthedra ergo pestiléntiæ est perniciósa doctrína, cujus sermo ut cancer serpit. Sed beátus ille qui in lege Dómini meditátur die ac nocte.",
-        "eng": "Nor sat in the chair of pestilence. Chair in this place signifieth honour, or else it may signify the teaching of evil doctrine. The chair of pestilence therefore is pernicious doctrine, whose word spreadeth as doth a canker. But blessed is he who meditateth upon the law of the Lord day and night."
+        "eng": "Nor sat in the chair of pestilence. Chair in this place signifieth honour, or else it may signify the teaching of evil doctrine. The chair of pestilence therefore is pernicious doctrine, whose word spreadeth as doth a canker. But blessed is he who meditateth upon the law of the Lord day and night.",
+        "variationKey": "lectio5"
       },
       {
         "type": "vr",
@@ -700,7 +711,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Astitérunt reges terræ advérsus Dóminum, et advérsus Christum ejus.",
-        "r2Eng": "℣. The kings of the earth stood up against the Lord, and against His Christ."
+        "r2Eng": "℣. The kings of the earth stood up against the Lord, and against His Christ.",
+        "variationKey": "responsory5"
       },
       {
         "type": "vr",
@@ -721,7 +733,8 @@
         "label": "Léctio VI",
         "ref": "Ex Homilía S. Augustíni Epíscopi",
         "lat": "Et erit tamquam lignum quod plantátum est secus decúrsus aquárum. Aquárum nómine hic significántur pópuli, vel per aquas Spíritum Sanctum intellégere póssumus. Quod fructum suum dabit in témpore suo: id est, ómnia quæcúmque fáciet prosperabúntur.",
-        "eng": "And he shall be like a tree which is planted near the running waters. By the name of waters here are signified the peoples, or by the waters we may understand the Holy Spirit. Which shall bring forth its fruit in due season: that is, all whatsoever he shall do shall prosper."
+        "eng": "And he shall be like a tree which is planted near the running waters. By the name of waters here are signified the peoples, or by the waters we may understand the Holy Spirit. Which shall bring forth its fruit in due season: that is, all whatsoever he shall do shall prosper.",
+        "variationKey": "lectio6"
       },
       {
         "type": "vr",
@@ -741,7 +754,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Tu autem, Dómine, suscéptor meus es, glória mea, et exáltans caput meum.",
-        "r2Eng": "℣. But Thou, O Lord, art my protector, my glory, and the lifter up of my head."
+        "r2Eng": "℣. But Thou, O Lord, art my protector, my glory, and the lifter up of my head.",
+        "variationKey": "responsory6"
       },
       {
         "type": "heading",
@@ -752,7 +766,7 @@
         "label": "Antiphon VII",
         "lat": "Dómine Deus meus, in te sperávi.",
         "eng": "O Lord my God, in Thee have I put my trust.",
-        "variationKey": "matutinum.antiphon3"
+        "variationKey": "ant_3"
       },
       {
         "type": "psalm",
@@ -940,7 +954,8 @@
         "lat": "Dómine, Dóminus noster.",
         "eng": "O Lord, our Lord.",
         "latR": "Quam admirábile est nomen tuum in univérsa terra.",
-        "engR": "How admirable is Thy name in all the earth."
+        "engR": "How admirable is Thy name in all the earth.",
+        "variationKey": "versum_3"
       },
       {
         "type": "pater",
@@ -976,7 +991,8 @@
         "label": "Léctio VII",
         "ref": "Ex Homilía in Evangélium",
         "lat": "Léctio sancti Evangélii secúndum Matthǽum. In illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile est regnum cælórum hómini patrifamílias, qui éxiit primo mane condúcere operários in víneam suam. Et hómilia.\n\nHomo iste paterfamílias, Deus omnípotens est, qui ópera díerum et nóctium dísponit, et omnes hómines ad opus suum vocat. Vínea ejus est Ecclésia, quam plantávit in terris.",
-        "eng": "The reading of the holy Gospel according to Matthew. At that time: Jesus spoke to His disciples this parable: The kingdom of heaven is like to an householder, who went out early in the morning to hire labourers into his vineyard. And the homily.\n\nThis householder is Almighty God, who ordereth the works of days and nights, and calleth all men to His work. His vineyard is the Church, which He hath planted on earth."
+        "eng": "The reading of the holy Gospel according to Matthew. At that time: Jesus spoke to His disciples this parable: The kingdom of heaven is like to an householder, who went out early in the morning to hire labourers into his vineyard. And the homily.\n\nThis householder is Almighty God, who ordereth the works of days and nights, and calleth all men to His work. His vineyard is the Church, which He hath planted on earth.",
+        "variationKey": "lectio7"
       },
       {
         "type": "vr",
@@ -996,7 +1012,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Et líbera me, nequándo rápiat ut leo ánimam meam.",
-        "r2Eng": "℣. And deliver me, lest at any time he seize upon my soul like a lion."
+        "r2Eng": "℣. And deliver me, lest at any time he seize upon my soul like a lion.",
+        "variationKey": "responsory7"
       },
       {
         "type": "vr",
@@ -1017,7 +1034,8 @@
         "label": "Léctio VIII",
         "ref": "Ex Homilía in Evangélium",
         "lat": "Vínea ergo Dómini Sábaoth, domus Israël est, et vir Juda germen delectábile ejus. Operárii autem sunt omnes qui Deo fidéliter sérviunt, sive in órdine monastério, sive in actióne prædicatiónis. Denárius qui promíttitur, vita ætérna est.",
-        "eng": "The vineyard therefore of the Lord of Hosts is the house of Israel, and the man of Juda His pleasant plant. But the labourers are all who faithfully serve God, whether in the monastic order or in the work of preaching. The penny which is promised is life everlasting."
+        "eng": "The vineyard therefore of the Lord of Hosts is the house of Israel, and the man of Juda His pleasant plant. But the labourers are all who faithfully serve God, whether in the monastic order or in the work of preaching. The penny which is promised is life everlasting.",
+        "variationKey": "lectio8"
       },
       {
         "type": "vr",
@@ -1037,7 +1055,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Quóniam eleváta est magnificéntia tua super cælos.",
-        "r2Eng": "℣. For Thy magnificence is elevated above the heavens."
+        "r2Eng": "℣. For Thy magnificence is elevated above the heavens.",
+        "variationKey": "responsory8"
       },
       {
         "type": "vr",
@@ -1058,7 +1077,8 @@
         "label": "Léctio IX",
         "ref": "Ex Homilía in Evangélium",
         "lat": "Quod autem nóvissimi primi erunt, et primi novíssimi, osténdit quod multi qui in hoc sǽculo príncipes et poténtes videntúr, in futúro sǽculo mínimi erunt; et multi qui hic contémpti et ábjecti, in regno cælórum exaltabúntur. Non enim persónas hóminum Deus accípit, sed corda.",
-        "eng": "But that the last shall be first, and the first last, showeth that many who in this world seem princes and mighty, shall in the world to come be least; and many who here are despised and cast out, shall be exalted in the kingdom of heaven. For God is no respecter of persons, but of hearts."
+        "eng": "But that the last shall be first, and the first last, showeth that many who in this world seem princes and mighty, shall in the world to come be least; and many who here are despised and cast out, shall be exalted in the kingdom of heaven. For God is no respecter of persons, but of hearts.",
+        "variationKey": "lectio9"
       },
       {
         "type": "vr",
@@ -1078,27 +1098,8 @@
         "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
         "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
         "r2Lat": "℣. Minuísti eum paulo minus ab Ángelis, glória et honóre coronásti eum.",
-        "r2Eng": "℣. Thou hast made him a little less than the Angels, Thou hast crowned him with glory and honour."
-      },
-      {
-        "type": "responsory",
-        "label": "Responsórium",
-        "ref": "Ps 94:6",
-        "v1Lat": "℟. Veníte, adorémus, et procidámus ante Deum.",
-        "v1Eng": "℟. Come, let us adore, and fall down before God.",
-        "r1Lat": "℣. Plorémus coram Dómino, qui fecit nos.",
-        "r1Eng": "℣. Let us weep before the Lord who made us.",
-        "v2Lat": "℣. Glória Patri, et Fílio, et Spirítui Sancto.",
-        "v2Eng": "℣. Glory be to the Father, and to the Son, and to the Holy Ghost.",
-        "r2Lat": "℣. Plorémus coram Dómino, qui fecit nos.",
-        "r2Eng": "℣. Let us weep before the Lord who made us."
-      },
-      {
-        "type": "capitulum",
-        "label": "Capitulum",
-        "ref": "Jeremiah 14:9",
-        "lat": "Tu autem in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine Deus noster.",
-        "eng": "But Thou, O Lord, art among us, and Thy holy name is called upon by us: forsake us not, O Lord our God."
+        "r2Eng": "℣. Thou hast made him a little less than the Angels, Thou hast crowned him with glory and honour.",
+        "variationKey": "responsory9"
       },
       {
         "type": "canticle",
@@ -1235,7 +1236,8 @@
         "type": "collect",
         "label": "Collect",
         "lat": "Omnípotens sempitérne Deus, qui vivórum domináris simul et mortuórum, omniúmque miseréris, quos tuos fide et ópere futúros esse prænóscis: te súpplices exorámus. Per Dóminum nostrum Jesum Christum. Amen.",
-        "eng": "Almighty, everlasting God, who hast dominion over both the living and the dead, and hast mercy on all whom Thou knowest will be Thine by faith and good works: we humbly beseech Thee. Through our Lord Jesus Christ. Amen."
+        "eng": "Almighty, everlasting God, who hast dominion over both the living and the dead, and hast mercy on all whom Thou knowest will be Thine by faith and good works: we humbly beseech Thee. Through our Lord Jesus Christ. Amen.",
+        "variationKey": "oratio"
       },
       {
         "type": "vr",

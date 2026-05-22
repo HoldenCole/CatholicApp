@@ -143,7 +143,7 @@ struct HourView: View {
         case "hymn":      hymnBlock(p)
         case "antiphon":  simpleBlock(p, labelFallback: "Antíphona")
         case "psalm":     psalmBlock(p)
-        case "capitulum": simpleBlock(p, labelFallback: "Capítulum")
+        case "capitulum": capitulumBlock(p)
         case "canticle":  psalmBlock(p)
         case "pater":     pateInlineBlock(p)
         case "collect":   simpleBlock(p, labelFallback: "Collécta")
@@ -153,6 +153,11 @@ struct HourView: View {
         case "marian":    marianBlock(p)
         case "heading":   headingBlock(p)
         case "reading":   readingBlock(p)
+        case "lectio":    readingBlock(p)
+        case "preces":    precesBlock(p)
+        case "invitatory": invitatoryBlock(p)
+        case "responsory_breve": responsoryBreveBlock(p)
+        case "suppressed": EmptyView()
         default: EmptyView()
         }
     }
@@ -305,25 +310,154 @@ struct HourView: View {
 
     private func responsoryBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Respónsum")
+            Text(p.label ?? "Respons\u{00f3}rium")
                 .smallLabel(color: Color.sanctuaryRed)
             if let ref = p.ref {
                 Text(ref).font(.captionSm).foregroundStyle(Color.goldLeaf)
             }
-            if let lat = p.v1Lat, let eng = p.v1Eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+            // Full Matins responsory (v1/r1/v2/r2 fields)
+            if p.v1Lat != nil {
+                if let lat = p.v1Lat, let eng = p.v1Eng {
+                    responsoryLine(lat: lat, eng: eng, indent: false)
+                }
+                if let lat = p.r1Lat, let eng = p.r1Eng {
+                    responsoryLine(lat: lat, eng: eng, indent: true)
+                        .padding(.top, 4)
+                }
+                if let lat = p.v2Lat, let eng = p.v2Eng {
+                    responsoryLine(lat: lat, eng: eng, indent: true)
+                        .padding(.top, 6)
+                }
+                if let lat = p.r2Lat, let eng = p.r2Eng {
+                    responsoryLine(lat: lat, eng: eng, indent: false)
+                        .padding(.top, 4)
+                }
             }
-            if let lat = p.r1Lat, let eng = p.r1Eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
-                    .padding(.top, 4)
+            // Short / Breve responsory (lat/eng inline with R./V. lines)
+            else if let lat = p.lat, let eng = p.eng {
+                let latLines = lat.components(separatedBy: "\n")
+                let engLines = eng.components(separatedBy: "\n")
+                let count = max(latLines.count, engLines.count)
+                VStack(alignment: .leading, spacing: 6) {
+                    ForEach(0..<count, id: \.self) { i in
+                        let latLine = i < latLines.count ? latLines[i] : ""
+                        let engLine = i < engLines.count ? engLines[i] : ""
+                        let isVersicle = latLine.hasPrefix("\u{2123}") || latLine.hasPrefix("V.")
+                        responsoryLine(
+                            lat: latLine,
+                            eng: engLine,
+                            indent: isVersicle
+                        )
+                    }
+                }
             }
-            if let lat = p.v2Lat, let eng = p.v2Eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
-                    .padding(.top, 6)
+        }
+    }
+
+    /// Renders a single responsory line with optional indentation for versicles.
+    private func responsoryLine(lat: String, eng: String, indent: Bool) -> some View {
+        BilingualLine(lat: lat, eng: eng, sideBySide: true)
+            .padding(.leading, indent ? 16 : 0)
+    }
+
+    /// Dedicated capitulum (short chapter) rendering with scripture reference
+    /// displayed in italic below the label.
+    private func capitulumBlock(_ p: Hour.Part) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(p.label ?? "Cap\u{00ed}tulum")
+                .smallLabel(color: Color.sanctuaryRed)
+            if let ref = p.ref {
+                Text(ref)
+                    .font(.captionSm)
+                    .italic()
+                    .foregroundStyle(Color.goldLeaf)
             }
-            if let lat = p.r2Lat, let eng = p.r2Eng {
+            if let lat = p.lat, let eng = p.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
-                    .padding(.top, 4)
+            } else {
+                if let lat = p.lat {
+                    Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
+                }
+                if let eng = p.eng {
+                    Text(eng.strippingEm).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
+                }
+            }
+        }
+    }
+
+    /// Preces Feriales rendering. Handles three sub-formats produced by the
+    /// assembler: simple lat/eng text (Kyrie, Pater Noster, Psalm), and
+    /// verse-based intercession versicles.
+    private func precesBlock(_ p: Hour.Part) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(p.label ?? "Preces")
+                .smallLabel(color: Color.sanctuaryRed)
+            if let verses = p.verses {
+                // Versicle-based preces (intercessions, concluding versicles)
+                VStack(alignment: .leading, spacing: 10) {
+                    ForEach(Array(verses.enumerated()), id: \.offset) { _, v in
+                        BilingualLine(lat: v.lat, eng: v.eng, sideBySide: true)
+                    }
+                }
+            } else if let lat = p.lat, let eng = p.eng {
+                // Prose preces (Kyrie, Pater Noster, Psalm text)
+                let latParts = lat.components(separatedBy: "\n")
+                let engParts = eng.components(separatedBy: "\n")
+                let count = max(latParts.count, engParts.count)
+                VStack(alignment: .leading, spacing: 4) {
+                    ForEach(0..<count, id: \.self) { i in
+                        let latLine = i < latParts.count ? latParts[i] : ""
+                        let engLine = i < engParts.count ? engParts[i] : ""
+                        if !latLine.isEmpty || !engLine.isEmpty {
+                            BilingualLine(lat: latLine, eng: engLine, sideBySide: true)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// Invitatory rendering: antiphon + Psalm 94 with the invitatory antiphon
+    /// woven between psalm sections. Falls back to simpleBlock if the part
+    /// lacks the expected structure.
+    private func invitatoryBlock(_ p: Hour.Part) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(p.label ?? "Invitatorium")
+                .smallLabel(color: Color.sanctuaryRed)
+            if let lat = p.lat, let eng = p.eng {
+                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                    .italic()
+                    .padding(.leading, 10)
+            }
+            if let verses = p.verses {
+                VStack(alignment: .leading, spacing: 12) {
+                    ForEach(Array(verses.enumerated()), id: \.offset) { _, v in
+                        BilingualLine(lat: v.lat, eng: v.eng, sideBySide: true)
+                    }
+                }
+            }
+        }
+    }
+
+    /// Short responsory (responsory_breve) at small hours. Compact R/V format
+    /// with indented versicles.
+    private func responsoryBreveBlock(_ p: Hour.Part) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(p.label ?? "Resp. Breve")
+                .smallLabel(color: Color.sanctuaryRed)
+            if let lat = p.lat, let eng = p.eng {
+                let latLines = lat.components(separatedBy: "\n")
+                let engLines = eng.components(separatedBy: "\n")
+                let count = max(latLines.count, engLines.count)
+                VStack(alignment: .leading, spacing: 6) {
+                    ForEach(0..<count, id: \.self) { i in
+                        let latLine = i < latLines.count ? latLines[i] : ""
+                        let engLine = i < engLines.count ? engLines[i] : ""
+                        let isVersicle = latLine.hasPrefix("\u{2123}") || latLine.hasPrefix("V.")
+                        BilingualLine(lat: latLine, eng: engLine, sideBySide: true)
+                            .padding(.leading, isVersicle ? 16 : 0)
+                    }
+                }
             }
         }
     }
