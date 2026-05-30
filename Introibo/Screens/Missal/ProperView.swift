@@ -2,6 +2,9 @@ import SwiftUI
 
 struct ProperView: View {
     let proper: MassProper
+    /// Deep-link scroll anchor: a proper-element name ("collect", "gospel", …)
+    /// or "feast" (scroll to top). nil = no scroll. Mirrors SearchExtractors.
+    var initialAnchor: String? = nil
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
@@ -18,35 +21,51 @@ struct ProperView: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geo in
+                ScrollViewReader { proxy in
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack(spacing: 0) {
                         header
+                            .id("feast") // "feast" anchor → scroll to top
                         VStack(alignment: .leading, spacing: 28) {
                             properSection("Introitus", subtitle: "Introit", text: proper.introit)
+                                .id("introit")
                             properSection("Orátio", subtitle: "Collect", text: proper.collect)
+                                .id("collect")
                             readingSection("Léctio", subtitle: "Epistle", reading: proper.epistle)
+                                .id("epistle")
                         if let gradual = proper.gradual {
                             properSection("Graduále", subtitle: "Gradual", text: gradual)
+                                .id("gradual")
                         }
                         if let alleluia = proper.alleluia {
                             properSection("Allelúja", subtitle: "Alleluia", text: alleluia)
+                                .id("alleluia")
                         }
                         if let tract = proper.tract {
                             properSection("Tractus", subtitle: "Tract", text: tract)
+                                .id("tract")
                         }
                         if let sequence = proper.sequence {
                             properSection("Sequéntia", subtitle: "Sequence", text: sequence)
+                                .id("sequence")
                         }
                         readingSection("Evangélium", subtitle: "Gospel", reading: proper.gospel)
+                            .id("gospel")
                         properSection("Offertórium", subtitle: "Offertory", text: proper.offertory)
+                            .id("offertory")
                         properSection("Secréta", subtitle: "Secret", text: proper.secret)
+                            .id("secret")
                         properSection("Commúnio", subtitle: "Communion", text: proper.communion)
+                            .id("communion")
                         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
+                            .id("postcommunion")
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 24)
                 }
                 .frame(width: geo.size.width)
+                }
+                .onAppear { scrollToAnchor(proxy) }
                 }
             }
             .background(Color.pageBackground.ignoresSafeArea())
@@ -63,6 +82,14 @@ struct ProperView: View {
                 }
             }
         }
+    }
+
+    /// Scrolls to the deep-link anchor on appear. Anchor strings are the proper
+    /// element names ("introit"…"postcommunion") or "feast" (top); they match the
+    /// `.id(...)` tags above exactly. scrollTo to a missing id is a safe no-op.
+    private func scrollToAnchor(_ proxy: ScrollViewProxy) {
+        guard let anchor = initialAnchor else { return }
+        proxy.scrollTo(anchor, anchor: .top)
     }
 
     private var header: some View {

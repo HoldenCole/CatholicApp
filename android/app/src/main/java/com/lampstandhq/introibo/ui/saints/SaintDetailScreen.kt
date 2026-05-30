@@ -15,6 +15,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
@@ -63,17 +66,43 @@ import kotlinx.coroutines.launch
  *
  * Port of iOS Introibo/Screens/Saints/SaintDetailView.swift.
  */
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun SaintDetailScreen(
     saint: Saint,
     onDismiss: () -> Unit,
+    /**
+     * Deep-link scroll anchor: "section:<index>" into [Saint.sections] or
+     * "prayer:<index>" into [Saint.prayers], matching the saint search
+     * extractor. null = no scroll.
+     */
+    scrollToAnchor: String? = null,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
     val context = LocalContext.current
     val progressRepo = remember { UserProgressRepository(context) }
     val scope = rememberCoroutineScope()
+
+    // One BringIntoViewRequester per anchorable block (sections + prayers). The
+    // anchor strings ("section:<i>"/"prayer:<i>") mirror SearchExtractors.saints.
+    val sectionRequesters = remember(saint.slug) {
+        List(saint.sections.size) { BringIntoViewRequester() }
+    }
+    val prayerRequesters = remember(saint.slug) {
+        List(saint.prayers?.size ?: 0) { BringIntoViewRequester() }
+    }
+    LaunchedEffect(scrollToAnchor, saint.slug) {
+        val anchor = scrollToAnchor ?: return@LaunchedEffect
+        val requester = when {
+            anchor.startsWith("section:") ->
+                anchor.removePrefix("section:").toIntOrNull()?.let { sectionRequesters.getOrNull(it) }
+            anchor.startsWith("prayer:") ->
+                anchor.removePrefix("prayer:").toIntOrNull()?.let { prayerRequesters.getOrNull(it) }
+            else -> null
+        }
+        requester?.bringIntoView()
+    }
 
     val followedSlug by progressRepo.followedSaint.collectAsState(initial = null)
     val completed by progressRepo.completedPractices().collectAsState(initial = emptySet())
@@ -263,29 +292,33 @@ fun SaintDetailScreen(
                     }
 
                     // Sections with checkboxes
-                    saint.sections.forEach { section ->
-                        SectionBlock(
-                            saint = saint,
-                            section = section,
-                            isFollowed = isFollowed,
-                            completed = completed,
-                            onToggle = { practiceId ->
-                                scope.launch {
-                                    progressRepo.togglePractice(practiceId)
-                                    // Check if all done
-                                    val newCompleted = progressRepo.completedPractices().collect { done ->
-                                        if (done.size == totalPractices) {
-                                            progressRepo.bumpSaintStreak(saint.slug)
+                    saint.sections.forEachIndexed { index, section ->
+                        Box(
+                            modifier = Modifier.bringIntoViewRequester(sectionRequesters[index]),
+                        ) {
+                            SectionBlock(
+                                saint = saint,
+                                section = section,
+                                isFollowed = isFollowed,
+                                completed = completed,
+                                onToggle = { practiceId ->
+                                    scope.launch {
+                                        progressRepo.togglePractice(practiceId)
+                                        // Check if all done
+                                        val newCompleted = progressRepo.completedPractices().collect { done ->
+                                            if (done.size == totalPractices) {
+                                                progressRepo.bumpSaintStreak(saint.slug)
+                                            }
                                         }
                                     }
-                                }
-                            },
-                        )
+                                },
+                            )
+                        }
                     }
 
                     // Saint prayers
                     saint.prayers?.takeIf { it.isNotEmpty() }?.let { prayers ->
-                        SaintPrayersBlock(prayers)
+                        SaintPrayersBlock(prayers, prayerRequesters)
                     }
                 }
             }
@@ -385,8 +418,12 @@ private fun SectionBlock(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun SaintPrayersBlock(prayers: List<Saint.SaintPrayer>) {
+private fun SaintPrayersBlock(
+    prayers: List<Saint.SaintPrayer>,
+    requesters: List<BringIntoViewRequester> = emptyList(),
+) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -426,9 +463,12 @@ private fun SaintPrayersBlock(prayers: List<Saint.SaintPrayer>) {
             )
         }
 
-        prayers.forEach { prayer ->
+        prayers.forEachIndexed { index, prayer ->
+            val prayerModifier = requesters.getOrNull(index)
+                ?.let { Modifier.bringIntoViewRequester(it) }
+                ?: Modifier
             Column(
-                modifier = Modifier
+                modifier = prayerModifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp, horizontal = 12.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),

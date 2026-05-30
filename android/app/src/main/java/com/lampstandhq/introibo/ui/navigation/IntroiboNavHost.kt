@@ -27,16 +27,24 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.ui.confession.ConfessionScreen
 import com.lampstandhq.introibo.ui.learn.LearnScreen
 import com.lampstandhq.introibo.ui.missal.MissalScreen
+import com.lampstandhq.introibo.ui.missal.ProperScreen
+import com.lampstandhq.introibo.ui.office.HourSheet
 import com.lampstandhq.introibo.ui.office.OfficeScreen
+import com.lampstandhq.introibo.ui.prayers.PrayerDetailSheet
 import com.lampstandhq.introibo.ui.prayers.PrayersScreen
+import com.lampstandhq.introibo.ui.reference.ReferenceDetailScreen
 import com.lampstandhq.introibo.ui.reference.ReferenceScreen
 import com.lampstandhq.introibo.ui.rosary.RosaryScreen
+import com.lampstandhq.introibo.ui.saints.SaintDetailScreen
 import com.lampstandhq.introibo.ui.saints.SaintsScreen
 import com.lampstandhq.introibo.ui.search.SearchScreen
 import com.lampstandhq.introibo.ui.stations.StationsScreen
@@ -146,7 +154,16 @@ fun IntroiboNavHost() {
                 )
             }
             composable(Screen.Settings.route) { SettingsScreen(onDismiss = { navController.popBackStack() }) }
-            composable(Screen.Search.route) { SearchScreen(onDismiss = { navController.popBackStack() }) }
+            composable(Screen.Search.route) {
+                SearchScreen(
+                    onDismiss = { navController.popBackStack() },
+                    onSelectTarget = { target ->
+                        // Close search, then deep-link to the resolved destination.
+                        navController.popBackStack()
+                        DeepLinkRouter.open(navController, target)
+                    },
+                )
+            }
             composable(Screen.Office.route) { OfficeScreen(onBack = { navController.popBackStack() }) }
             composable(Screen.Stations.route) { StationsScreen(onBack = { navController.popBackStack() }) }
             composable(Screen.Confession.route) { ConfessionScreen(onBack = { navController.popBackStack() }) }
@@ -163,6 +180,98 @@ fun IntroiboNavHost() {
             }
             composable(Screen.Reference.route) {
                 ReferenceScreen()
+            }
+
+            // ---- Deep-link detail destinations ----
+            // Each resolves its slug (+ optional `pos` anchor) against
+            // ContentStore and renders the existing detail composable. Mirrors
+            // the iOS DeepLinkRouter → .sheet(item:) flow.
+
+            composable(
+                route = Screen.ProperDetail.route,
+                arguments = listOf(
+                    navArgument("slug") { type = NavType.StringType },
+                    navArgument("pos") { type = NavType.StringType; nullable = true; defaultValue = null },
+                ),
+            ) { entry ->
+                val slug = entry.arguments?.getString("slug") ?: return@composable
+                val pos = entry.arguments?.getString("pos")
+                ContentStore.anyProper(slug)?.let { proper ->
+                    ProperScreen(
+                        proper = proper,
+                        onDismiss = { navController.popBackStack() },
+                        scrollToAnchor = pos,
+                    )
+                }
+            }
+
+            composable(
+                route = Screen.PrayerDetail.route,
+                arguments = listOf(
+                    navArgument("slug") { type = NavType.StringType },
+                    navArgument("pos") { type = NavType.StringType; nullable = true; defaultValue = null },
+                ),
+            ) { entry ->
+                val slug = entry.arguments?.getString("slug") ?: return@composable
+                ContentStore.prayer(slug)?.let { prayer ->
+                    PrayerDetailSheet(
+                        prayer = prayer,
+                        onDismiss = { navController.popBackStack() },
+                    )
+                }
+            }
+
+            composable(
+                route = Screen.SaintDetail.route,
+                arguments = listOf(
+                    navArgument("slug") { type = NavType.StringType },
+                    navArgument("pos") { type = NavType.StringType; nullable = true; defaultValue = null },
+                ),
+            ) { entry ->
+                val slug = entry.arguments?.getString("slug") ?: return@composable
+                val pos = entry.arguments?.getString("pos")
+                ContentStore.saint(slug)?.let { saint ->
+                    SaintDetailScreen(
+                        saint = saint,
+                        onDismiss = { navController.popBackStack() },
+                        scrollToAnchor = pos,
+                    )
+                }
+            }
+
+            composable(
+                route = Screen.ReferenceDetail.route,
+                arguments = listOf(
+                    navArgument("slug") { type = NavType.StringType },
+                ),
+            ) { entry ->
+                val slug = entry.arguments?.getString("slug") ?: return@composable
+                ContentStore.referenceEntry(slug)?.let { entryModel ->
+                    ReferenceDetailScreen(
+                        entry = entryModel,
+                        onDismiss = { navController.popBackStack() },
+                    )
+                }
+            }
+
+            composable(
+                route = Screen.HourDetail.route,
+                arguments = listOf(
+                    navArgument("slug") { type = NavType.StringType },
+                    navArgument("pos") { type = NavType.StringType; nullable = true; defaultValue = null },
+                ),
+            ) { entry ->
+                val slug = entry.arguments?.getString("slug") ?: return@composable
+                val pos = entry.arguments?.getString("pos")
+                // Use the raw template hour (store.hours) — the same corpus the
+                // office search extractor indexes — so "part:<index>" aligns.
+                ContentStore.hour(slug)?.let { hour ->
+                    HourSheet(
+                        hour = hour,
+                        onDismiss = { navController.popBackStack() },
+                        scrollToPartIndex = pos?.removePrefix("part:")?.toIntOrNull(),
+                    )
+                }
             }
         }
     }

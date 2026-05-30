@@ -2,6 +2,9 @@ import SwiftUI
 
 struct HourView: View {
     let hour: Hour
+    /// Deep-link scroll anchor: "part:<index>" into `hour.parts`, matching the
+    /// office extractor. nil = no scroll. Mirrors SearchExtractors.hours.
+    var initialAnchor: String? = nil
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
@@ -16,19 +19,23 @@ struct HourView: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geo in
+                ScrollViewReader { proxy in
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack(spacing: 0) {
                         header
                         VStack(alignment: .leading, spacing: 22) {
                             intro
-                            ForEach(Array(hour.parts.enumerated()), id: \.offset) { _, part in
+                            ForEach(Array(hour.parts.enumerated()), id: \.offset) { offset, part in
                                 partView(part)
+                                    .id("part:\(offset)")
                             }
                         }
                         .padding(.horizontal, 20)
                         .padding(.vertical, 24)
                     }
                     .frame(width: geo.size.width)
+                }
+                .onAppear { scrollToAnchor(proxy) }
                 }
             }
             .background(Color.pageBackground.ignoresSafeArea())
@@ -69,6 +76,14 @@ struct HourView: View {
                 Text("Add \(hour.eng) to your prayer rule")
             }
         }
+    }
+
+    /// Scrolls to the deep-link anchor ("part:<index>") on appear. The index
+    /// matches the position into `hour.parts` produced by the office extractor;
+    /// scrollTo to a missing id is a safe no-op.
+    private func scrollToAnchor(_ proxy: ScrollViewProxy) {
+        guard let anchor = initialAnchor else { return }
+        proxy.scrollTo(anchor, anchor: .top)
     }
 
     private var ruleSlug: String { "office-\(hour.slug)" }

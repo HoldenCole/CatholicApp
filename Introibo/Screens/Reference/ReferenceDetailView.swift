@@ -6,6 +6,10 @@ import SwiftUI
 
 struct ReferenceDetailView: View {
     let entry: ReferenceEntry
+    /// Deep-link scroll anchor. Reference/calendar index as whole documents
+    /// (extractor emits position nil), so this is always nil today; accepted for
+    /// a uniform detail-view signature and no-ops. Mirrors SearchExtractors.
+    var initialAnchor: String? = nil
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }

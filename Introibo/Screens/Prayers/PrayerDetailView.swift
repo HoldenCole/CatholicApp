@@ -8,6 +8,10 @@ import SwiftUI
 
 struct PrayerDetailView: View {
     let prayer: Prayer
+    /// Deep-link scroll anchor. Prayers index as a whole document (extractor
+    /// emits position nil), so this is always nil today; accepted for a uniform
+    /// detail-view signature and no-ops. Mirrors SearchExtractors.prayers.
+    var initialAnchor: String? = nil
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue

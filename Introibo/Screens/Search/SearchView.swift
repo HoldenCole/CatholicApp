@@ -307,9 +307,16 @@ struct SearchView: View {
     }
 
     private func selectResult(_ result: SearchResult) {
-        // Phase 3: DeepLinkRouter.open(result.document.target)
-        print("Search tap → \(result.document.id) target=\(result.document.target)")
+        // Phase 3: close the search modal, then deep-link to the matched content.
+        // Sequencing matters: the full-screen search cover must finish dismissing
+        // before ContentView presents the destination sheet, or the two
+        // competing presentations conflict and the detail never appears. We
+        // dismiss first and stage the navigation a beat later.
+        let target = result.document.target
         dismiss()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+            DeepLinkRouter.shared.open(target)
+        }
     }
 }
 

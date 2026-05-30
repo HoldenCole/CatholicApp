@@ -435,6 +435,22 @@ object ContentStore {
     fun prayer(slug: String): Prayer? =
         prayers.firstOrNull { it.slug == slug }
 
+    /** Looks up a saint by slug (used by deep-link navigation). */
+    fun saint(slug: String): Saint? =
+        saints.firstOrNull { it.slug == slug }
+
+    /** Looks up a reference (or calendar) entry by slug (used by deep-link navigation). */
+    fun referenceEntry(slug: String): ReferenceEntry? =
+        reference.firstOrNull { it.slug == slug }
+
+    /**
+     * Looks up a Mass proper by slug across the full combined corpus, which is
+     * what the search index targets ([allPropers]). Falls back to the legacy-only
+     * [proper] set. Mirrors iOS ContentStore.anyProper(slug:).
+     */
+    fun anyProper(slug: String): MassProper? =
+        allPropers.firstOrNull { it.slug == slug } ?: proper(slug)
+
     fun prayers(category: String): List<Prayer> =
         prayers.filter { it.category == category }
 

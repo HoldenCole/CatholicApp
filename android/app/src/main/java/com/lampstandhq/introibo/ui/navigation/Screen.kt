@@ -26,12 +26,36 @@ sealed class Screen(val route: String) {
     data object Settings   : Screen("settings")
     data object Search     : Screen("search")
 
-    // ---- Detail screens with arguments ----
-    data object ProperDetail : Screen("proper/{slug}") {
-        fun createRoute(slug: String): String = "proper/$slug"
+    // ---- Detail screens with arguments (deep-link targets) ----
+    //
+    // Each carries the content slug plus an optional `pos` query arg = the
+    // DeepLinkTarget.position anchor (proper element name, "part:<i>",
+    // "section:<i>"/"prayer:<i>", or absent). The detail composable scrolls to
+    // the keyed item when `pos` is present. Mirrors the iOS DeepLinkRouter /
+    // initialAnchor contract.
+
+    data object ProperDetail : Screen("proper/{slug}?pos={pos}") {
+        fun createRoute(slug: String, pos: String? = null): String =
+            "proper/$slug" + (pos?.let { "?pos=$it" } ?: "")
     }
 
-    data object PrayerDetail : Screen("prayer/{slug}") {
-        fun createRoute(slug: String): String = "prayer/$slug"
+    data object PrayerDetail : Screen("prayer/{slug}?pos={pos}") {
+        // Prayers anchor to the whole document today; `pos` is accepted but unused.
+        fun createRoute(slug: String, pos: String? = null): String =
+            "prayer/$slug" + (pos?.let { "?pos=$it" } ?: "")
+    }
+
+    data object SaintDetail : Screen("saint/{slug}?pos={pos}") {
+        fun createRoute(slug: String, pos: String? = null): String =
+            "saint/$slug" + (pos?.let { "?pos=$it" } ?: "")
+    }
+
+    data object ReferenceDetail : Screen("reference/{slug}") {
+        fun createRoute(slug: String): String = "reference/$slug"
+    }
+
+    data object HourDetail : Screen("office/{slug}?pos={pos}") {
+        fun createRoute(slug: String, pos: String? = null): String =
+            "office/$slug" + (pos?.let { "?pos=$it" } ?: "")
     }
 }

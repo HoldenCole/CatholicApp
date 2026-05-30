@@ -2,11 +2,24 @@ import SwiftUI
 
 struct SaintDetailView: View {
     let saint: Saint
+    /// Deep-link scroll anchor: "section:<index>" into `saint.sections` or
+    /// "prayer:<index>" into `saint.prayers`, matching the saint extractor.
+    /// nil = no scroll. Mirrors SearchExtractors.saints.
+    var initialAnchor: String? = nil
     @Environment(\.dismiss) private var dismiss
     @AppStorage(ProgressKey.followedSaint) private var followedSlug: String = ""
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @State private var streak: Int = 0
     @State private var completed: Set<String> = []
+
+    /// Scrolls to the deep-link anchor ("section:<index>" or "prayer:<index>")
+    /// on appear. Indices match the positions into `saint.sections` /
+    /// `saint.prayers` produced by the saint extractor; a missing id is a safe
+    /// no-op.
+    private func scrollToAnchor(_ proxy: ScrollViewProxy) {
+        guard let anchor = initialAnchor else { return }
+        proxy.scrollTo(anchor, anchor: .top)
+    }
 
     private var isFollowed: Bool { followedSlug == saint.slug }
     private var totalPractices: Int { saint.sections.flatMap { $0.practices }.count }
@@ -14,6 +27,7 @@ struct SaintDetailView: View {
 
     var body: some View {
         NavigationStack {
+            ScrollViewReader { proxy in
             ScrollView {
                 VStack(spacing: 0) {
                     header
@@ -23,8 +37,9 @@ struct SaintDetailView: View {
                         if isFollowed {
                             progressCard
                         }
-                        ForEach(Array(saint.sections.enumerated()), id: \.offset) { _, section in
+                        ForEach(Array(saint.sections.enumerated()), id: \.offset) { offset, section in
                             sectionBlock(section)
+                                .id("section:\(offset)")
                         }
                         if let prayers = saint.prayers, !prayers.isEmpty {
                             saintPrayersBlock(prayers)
@@ -44,6 +59,8 @@ struct SaintDetailView: View {
             .onAppear {
                 streak = UserProgress.saintStreak(slug: saint.slug)
                 completed = UserProgress.completedPractices()
+                scrollToAnchor(proxy)
+            }
             }
         }
     }
@@ -264,7 +281,7 @@ struct SaintDetailView: View {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
             }
 
-            ForEach(prayers) { prayer in
+            ForEach(Array(prayers.enumerated()), id: \.offset) { idx, prayer in
                 VStack(alignment: .leading, spacing: 8) {
                     Text(prayer.title)
                         .font(.titleM)
@@ -289,6 +306,7 @@ struct SaintDetailView: View {
                         .frame(width: 2)
                     , alignment: .leading
                 )
+                .id("prayer:\(idx)")
             }
         }
     }

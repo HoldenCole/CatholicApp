@@ -13,8 +13,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Icon
@@ -24,6 +25,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -51,11 +53,26 @@ import com.lampstandhq.introibo.ui.theme.IntroiboType
 fun HourSheet(
     hour: Hour,
     onDismiss: () -> Unit,
+    /**
+     * Deep-link scroll anchor: index into [Hour.parts] (= the "part:<index>"
+     * position from the office search extractor), or null for no scroll.
+     */
+    scrollToPartIndex: Int? = null,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
+    val listState = rememberLazyListState()
+
+    // Back button + header occupy LazyColumn indices 0 and 1; parts begin at 2,
+    // so part i sits at list index i + HEADER_ITEM_COUNT.
+    LaunchedEffect(scrollToPartIndex, hour.slug) {
+        val partIndex = scrollToPartIndex ?: return@LaunchedEffect
+        if (partIndex in hour.parts.indices) {
+            listState.animateScrollToItem(partIndex + HOUR_HEADER_ITEM_COUNT)
+        }
+    }
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -63,45 +80,57 @@ fun HourSheet(
         containerColor = colors.pageBackground,
         dragHandle = null,
     ) {
-        Column(
+        LazyColumn(
+            state = listState,
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                    .padding(bottom = 80.dp),
+                .padding(bottom = 80.dp),
         ) {
-            // Back button
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp),
-            ) {
-                IconButton(onClick = {
-                    scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
-                }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+            // Back button (list index 0)
+            item(key = "back") {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                ) {
+                    IconButton(onClick = {
+                        scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
+                    }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    }
                 }
             }
 
-            // Header
-            HourHeader(hour = hour)
+            // Header + intro (list index 1)
+            item(key = "header") {
+                Column {
+                    HourHeader(hour = hour)
+                    Column(
+                        modifier = Modifier
+                            .padding(horizontal = 20.dp)
+                            .padding(top = 24.dp, bottom = 22.dp),
+                    ) {
+                        IntroBlock(text = hour.intro)
+                    }
+                }
+            }
 
-            // Content
-            Column(
-                modifier = Modifier
-                    .padding(horizontal = 20.dp, vertical = 24.dp),
-                verticalArrangement = Arrangement.spacedBy(22.dp),
-            ) {
-                // Intro
-                IntroBlock(text = hour.intro)
-
-                // Parts
-                hour.parts.forEach { part ->
+            // Parts (list index 2 onward; key "part:<i>" mirrors the extractor)
+            itemsIndexed(hour.parts, key = { i, _ -> "part:$i" }) { _, part ->
+                Column(
+                    modifier = Modifier
+                        .padding(horizontal = 20.dp)
+                        .padding(bottom = 22.dp),
+                ) {
                     PartView(part)
                 }
             }
         }
     }
 }
+
+/** Number of fixed LazyColumn items (back button, header+intro) before parts. */
+private const val HOUR_HEADER_ITEM_COUNT = 2
 
 @Composable
 private fun HourHeader(hour: Hour) {

@@ -478,6 +478,23 @@ final class ContentStore {
         prayers.filter { $0.category == category }
     }
 
+    /// Looks up a saint by slug (used by deep-link navigation).
+    func saint(slug: String) -> Saint? {
+        saints.first { $0.slug == slug }
+    }
+
+    /// Looks up a reference (or calendar) entry by slug (used by deep-link navigation).
+    func referenceEntry(slug: String) -> ReferenceEntry? {
+        reference.first { $0.slug == slug }
+    }
+
+    /// Looks up a Mass proper by slug across the full combined corpus
+    /// (DivinumOfficium + legacy), which is what the search index targets.
+    /// Falls back to the legacy-only `proper(slug:)` set.
+    func anyProper(slug: String) -> MassProper? {
+        allPropers.first { $0.slug == slug } ?? proper(slug: slug)
+    }
+
     /// Returns prayers grouped by category, preserving the order in which
     /// categories first appear in the source file (liturgically meaningful).
     func prayersByCategory() -> [(category: String, items: [Prayer])] {

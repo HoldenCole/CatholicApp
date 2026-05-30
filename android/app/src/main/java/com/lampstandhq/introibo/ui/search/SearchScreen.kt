@@ -114,6 +114,12 @@ private val searchFilters: List<SearchFilter> = listOf(
 @Composable
 fun SearchScreen(
     onDismiss: () -> Unit,
+    /**
+     * Phase 3: invoked with a tapped result's deep-link target. The host closes
+     * search and routes to the resolved destination via DeepLinkRouter. Defaults
+     * to closing search only (preview / standalone use).
+     */
+    onSelectTarget: (com.lampstandhq.introibo.data.search.DeepLinkTarget) -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -235,9 +241,9 @@ fun SearchScreen(
             query.isBlank() -> EmptyPrompt()
             results.isEmpty() -> NoResults()
             else -> ResultsList(results = results, onSelect = { result ->
-                // Phase 3: DeepLinkRouter.open(result.document.target)
-                println("Search tap → ${result.document.id} target=${result.document.target}")
-                onDismiss()
+                // Phase 3: hand the target to the host, which closes search and
+                // deep-links via DeepLinkRouter.
+                onSelectTarget(result.document.target)
             })
         }
     }

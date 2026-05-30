@@ -8,6 +8,7 @@ struct ContentView: View {
 
     @State private var spotlightFrames: [String: CGRect] = [:]
     @State private var selectedTab = 0
+    @State private var router = DeepLinkRouter.shared
 
     var body: some View {
         ZStack {
@@ -48,6 +49,36 @@ struct ContentView: View {
             if let tab = newTab {
                 withAnimation { selectedTab = tab }
             }
+        }
+        // Deep-link navigation (Phase 3): when the router stages a resolved
+        // target, switch to the owning tab and present the detail at the root.
+        .onChange(of: router.requestedTab) { _, newTab in
+            if let tab = newTab { selectedTab = tab }
+        }
+        .sheet(item: Binding(
+            get: { router.resolved },
+            set: { if $0 == nil { router.consume() } }
+        )) { resolved in
+            deepLinkDestination(resolved)
+        }
+    }
+
+    /// Maps a resolved deep link to its detail view, threading the scroll anchor.
+    @ViewBuilder
+    private func deepLinkDestination(_ resolved: DeepLinkResolved) -> some View {
+        switch resolved {
+        case .prayer(let p, let anchor):
+            PrayerDetailView(prayer: p, initialAnchor: anchor)
+        case .proper(let mp, let anchor):
+            ProperView(proper: mp, initialAnchor: anchor)
+        case .missalSection(let mp, let anchor):
+            ProperView(proper: mp, initialAnchor: anchor)
+        case .hour(let h, let anchor):
+            HourView(hour: h, initialAnchor: anchor)
+        case .reference(let e, let anchor):
+            ReferenceDetailView(entry: e, initialAnchor: anchor)
+        case .saint(let s, let anchor):
+            SaintDetailView(saint: s, initialAnchor: anchor)
         }
     }
 

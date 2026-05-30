@@ -2,7 +2,6 @@ package com.lampstandhq.introibo.ui.missal
 
 import android.content.Intent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +10,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.ui.unit.Dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Share
@@ -21,6 +23,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -37,15 +40,68 @@ import com.lampstandhq.introibo.ui.theme.IntroiboType
  * Proper detail view — displays all proper texts for a given Mass day.
  * Ported from iOS ProperView.swift.
  */
+/**
+ * Emits one keyed LazyColumn item for a proper element, with the standard
+ * 28dp inter-element top spacing (24dp above the first element after the
+ * header). The [key] doubles as the deep-link anchor name.
+ */
+private fun LazyListScope.properElementItem(
+    key: String,
+    bottomPadding: Dp = 0.dp,
+    content: @Composable () -> Unit,
+) {
+    item(key = key) {
+        Column(
+            modifier = Modifier
+                .padding(horizontal = 20.dp)
+                .padding(top = 24.dp, bottom = bottomPadding),
+        ) {
+            content()
+        }
+    }
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProperScreen(
     proper: MassProper,
     onDismiss: () -> Unit = {},
+    /**
+     * Deep-link scroll anchor: a proper-element name ("introit"…"postcommunion")
+     * or "feast" (top), matching the missal search extractor. null = no scroll.
+     */
+    scrollToAnchor: String? = null,
 ) {
     val context = LocalContext.current
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
+    val listState = rememberLazyListState()
+
+    // Ordered list of element anchors actually rendered (optional elements are
+    // dropped when absent). Index 0 = the header item ("feast"); element i sits
+    // at LazyColumn index i + 1. Keys mirror SearchExtractors element names.
+    val anchors = buildList {
+        add("introit")
+        add("collect")
+        add("epistle")
+        if (proper.gradual != null) add("gradual")
+        if (proper.alleluia != null) add("alleluia")
+        if (proper.tract != null) add("tract")
+        if (proper.sequence != null) add("sequence")
+        add("gospel")
+        add("offertory")
+        add("secret")
+        add("communion")
+        add("postcommunion")
+    }
+
+    LaunchedEffect(scrollToAnchor, proper.slug) {
+        val anchor = scrollToAnchor ?: return@LaunchedEffect
+        // "feast" (or any title-level anchor) → top (the header item at index 0).
+        val elementIndex = anchors.indexOf(anchor)
+        val target = if (elementIndex >= 0) elementIndex + 1 else 0
+        listState.animateScrollToItem(target)
+    }
 
     Column(
         modifier = Modifier
@@ -80,9 +136,12 @@ fun ProperScreen(
             ),
         )
 
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
-            // Header
-            item {
+        LazyColumn(
+            state = listState,
+            modifier = Modifier.fillMaxSize(),
+        ) {
+            // Header (list index 0; "feast" anchor scrolls here)
+            item(key = "feast") {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier
@@ -133,37 +192,53 @@ fun ProperScreen(
                 }
             }
 
-            // Proper sections
-            item {
-                Column(
-                    modifier = Modifier
-                        .padding(horizontal = 20.dp)
-                        .padding(top = 24.dp, bottom = 40.dp),
-                    verticalArrangement = Arrangement.spacedBy(28.dp),
-                ) {
-                    ProperSection(latin = "Introitus", subtitle = "Introit", text = proper.introit)
-                    ProperSection(latin = "Oratio", subtitle = "Collect", text = proper.collect)
-                    ReadingSection(latin = "Lectio", subtitle = "Epistle", reading = proper.epistle)
-
-                    proper.gradual?.let {
-                        ProperSection(latin = "Graduale", subtitle = "Gradual", text = it)
-                    }
-                    proper.alleluia?.let {
-                        ProperSection(latin = "Alleluia", subtitle = "Alleluia", text = it)
-                    }
-                    proper.tract?.let {
-                        ProperSection(latin = "Tractus", subtitle = "Tract", text = it)
-                    }
-                    proper.sequence?.let {
-                        ProperSection(latin = "Sequentia", subtitle = "Sequence", text = it)
-                    }
-
-                    ReadingSection(latin = "Evangelium", subtitle = "Gospel", reading = proper.gospel)
-                    ProperSection(latin = "Offertorium", subtitle = "Offertory", text = proper.offertory)
-                    ProperSection(latin = "Secreta", subtitle = "Secret", text = proper.secret)
-                    ProperSection(latin = "Communio", subtitle = "Communion", text = proper.communion)
-                    ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion)
+            // Proper sections — one keyed item per element so deep links can
+            // scroll to a specific element. Keys mirror the `anchors` list above
+            // and SearchExtractors element names; each element sits at list index
+            // (anchors.indexOf(key) + 1) thanks to the leading header item.
+            properElementItem("introit") {
+                ProperSection(latin = "Introitus", subtitle = "Introit", text = proper.introit)
+            }
+            properElementItem("collect") {
+                ProperSection(latin = "Oratio", subtitle = "Collect", text = proper.collect)
+            }
+            properElementItem("epistle") {
+                ReadingSection(latin = "Lectio", subtitle = "Epistle", reading = proper.epistle)
+            }
+            proper.gradual?.let { g ->
+                properElementItem("gradual") {
+                    ProperSection(latin = "Graduale", subtitle = "Gradual", text = g)
                 }
+            }
+            proper.alleluia?.let { a ->
+                properElementItem("alleluia") {
+                    ProperSection(latin = "Alleluia", subtitle = "Alleluia", text = a)
+                }
+            }
+            proper.tract?.let { t ->
+                properElementItem("tract") {
+                    ProperSection(latin = "Tractus", subtitle = "Tract", text = t)
+                }
+            }
+            proper.sequence?.let { s ->
+                properElementItem("sequence") {
+                    ProperSection(latin = "Sequentia", subtitle = "Sequence", text = s)
+                }
+            }
+            properElementItem("gospel") {
+                ReadingSection(latin = "Evangelium", subtitle = "Gospel", reading = proper.gospel)
+            }
+            properElementItem("offertory") {
+                ProperSection(latin = "Offertorium", subtitle = "Offertory", text = proper.offertory)
+            }
+            properElementItem("secret") {
+                ProperSection(latin = "Secreta", subtitle = "Secret", text = proper.secret)
+            }
+            properElementItem("communion") {
+                ProperSection(latin = "Communio", subtitle = "Communion", text = proper.communion)
+            }
+            properElementItem("postcommunion", bottomPadding = 40.dp) {
+                ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion)
             }
         }
     }
