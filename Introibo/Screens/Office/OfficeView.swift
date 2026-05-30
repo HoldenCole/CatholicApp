@@ -159,12 +159,13 @@ private struct ClockDial: View {
                         .foregroundStyle(Color.sanctuaryRed)
                 }
 
-                // 8 hour nodes
+                // 8 hour nodes — evenly spaced around the dial
                 ForEach(Array(hours.enumerated()), id: \.element.id) { idx, hour in
                     hourNode(hour, radius: nodeR, center: c, isNow: hour.slug == currentKey, index: idx, total: hours.count)
                 }
             }
             .frame(width: size, height: size)
+            .position(x: proxy.size.width / 2, y: proxy.size.height / 2)
         }
     }
 
@@ -179,6 +180,8 @@ private struct ClockDial: View {
     }
 
     private func hourNode(_ hour: Hour, radius: CGFloat, center: CGPoint, isNow: Bool, index: Int, total: Int) -> some View {
+        // Evenly space the 8 hours around the dial. Matins (index 0)
+        // sits at -90° (the 12-o'clock / top position).
         let angleDeg = (Double(index) / Double(total)) * 360.0 - 90.0
         let angleRad = angleDeg * .pi / 180.0
         let x = center.x + cos(angleRad) * radius

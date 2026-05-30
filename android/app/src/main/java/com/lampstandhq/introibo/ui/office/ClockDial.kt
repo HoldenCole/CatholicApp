@@ -131,7 +131,7 @@ fun ClockDial(
                 cx - placeables[1].width / 2,
                 cy - placeables[1].height / 2
             )
-            // Hour nodes around the circle
+            // Hour nodes — evenly spaced around the circle
             val total = hours.size
             for (i in 2 until placeables.size) {
                 val idx = i - 2
