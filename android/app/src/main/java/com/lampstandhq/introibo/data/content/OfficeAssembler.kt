@@ -20,8 +20,15 @@ class OfficeAssembler(
     private val psalter: Map<String, Map<String, List<String>>> = emptyMap(),
 ) {
     fun assemble(template: Hour, context: LiturgicalContext): Hour {
-        val dayKey = dayKeys[context.dayOfWeek]
+        var dayKey = dayKeys[context.dayOfWeek]
         val seasonKey = seasonString(context.season)
+
+        // Easter/Pentecost octave: use Sunday psalms for all hours
+        val isOctave = isEasterOrPentecostOctave(context)
+        if (isOctave && context.dayOfWeek != 0) {
+            dayKey = "sunday"
+        }
+
         val dayOverrides = weeklyPsalter[dayKey] ?: emptyMap()
         val seasonOverrides = seasonalHymns[seasonKey] ?: emptyMap()
         val rawTemporalOverrides = context.temporalKey?.let { temporalPropers[it] } ?: emptyMap()
@@ -101,16 +108,27 @@ class OfficeAssembler(
         // Post-assembly filtering for Matins nocturn structure and Te Deum.
         val filteredParts = if (template.slug == "matutinum") {
             filterMatinsParts(lausTibiApplied, context)
+        } else if (template.slug == "prima" && isOctave && context.dayOfWeek != 0) {
+            // Easter/Pentecost octave festal Prime: Ps 53, 118 pars I,
+            // 118 pars II -- drop Psalm 117 (prima.psalm2 in the template).
+            lausTibiApplied.filter { it.variationKey != "prima.psalm2" }
         } else {
             lausTibiApplied
         }
 
         // Insert Preces Feriales for Lauds/Vespers on qualifying ferial days.
+        // When Preces are not said, also remove the standalone Pater Noster
+        // that precedes the Collect (it is only said as part of the Preces).
         val precesApplied = if (
             (template.slug == "laudes" || template.slug == "vesperae")
             && shouldIncludePreces(context)
         ) {
             insertPreces(filteredParts, template.slug)
+        } else if (template.slug == "laudes" || template.slug == "vesperae") {
+            filteredParts.filter { part ->
+                !(part.type == "pater" && part.variationKey.isNullOrEmpty()
+                    && !(part.label ?: "").contains("Ave"))
+            }
         } else {
             filteredParts
         }
@@ -483,6 +501,19 @@ class OfficeAssembler(
             )
         }
         return part.copy(verses = verses)
+    }
+
+    // ---- Easter/Pentecost Octave detection ----
+    //
+    // During the octaves of Easter (pasc0-*) and Pentecost (pasc7-*), all
+    // days are I class. Rubric 172 requires Sunday psalms at all hours
+    // (Lauds, Vespers, Little Hours) and the festal Prime set (Ps 53,
+    // 118 pars I, 118 pars II -- omitting Ps 117).
+
+    /** Returns true when the current day falls within the Easter or Pentecost octave. */
+    private fun isEasterOrPentecostOctave(context: LiturgicalContext): Boolean {
+        val key = context.temporalKey ?: return false
+        return key.startsWith("pasc0-") || key.startsWith("pasc7-")
     }
 
     companion object {

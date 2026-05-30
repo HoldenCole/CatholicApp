@@ -66,9 +66,31 @@ struct OfficeAssembler {
         return result
     }
 
+    // MARK: - Easter/Pentecost Octave detection
+    //
+    // During the octaves of Easter (pasc0-*) and Pentecost (pasc7-*), all
+    // days are I class. Rubric 172 requires Sunday psalms at all hours
+    // (Lauds, Vespers, Little Hours) and the festal Prime set (Ps 53,
+    // 118 pars I, 118 pars II — omitting Ps 117).
+
+    /// Returns true when the current day falls within the Easter or Pentecost
+    /// octave (including the Sunday itself, though Sunday already uses the
+    /// Sunday psalter by default).
+    private static func isEasterOrPentecostOctave(context: LiturgicalContext) -> Bool {
+        guard let key = context.temporalKey else { return false }
+        return key.hasPrefix("pasc0-") || key.hasPrefix("pasc7-")
+    }
+
     func assemble(template: Hour, context: LiturgicalContext) -> Hour {
-        let dayKey = Self.dayKeys[context.dayOfWeek]
+        var dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
+
+        // Easter/Pentecost octave: use Sunday psalms for all hours
+        let isOctave = Self.isEasterOrPentecostOctave(context: context)
+        if isOctave && context.dayOfWeek != 0 {
+            dayKey = "sunday"
+        }
+
         let dayOverrides = weeklyPsalter[dayKey] ?? [:]
         let seasonOverrides = seasonalHymns[seasonKey] ?? [:]
         let rawTemporalOverrides = context.temporalKey.flatMap { temporalPropers[$0] } ?? [:]
@@ -160,15 +182,28 @@ struct OfficeAssembler {
         let filteredParts: [Hour.Part]
         if template.slug == "matutinum" {
             filteredParts = filterMatinsParts(lausTibiApplied, context: context)
+        } else if template.slug == "prima" && isOctave && context.dayOfWeek != 0 {
+            // Easter/Pentecost octave festal Prime: Ps 53, 118 pars I,
+            // 118 pars II — drop Psalm 117 (prima.psalm2 in the template).
+            filteredParts = lausTibiApplied.filter { part in
+                part.variationKey != "prima.psalm2"
+            }
         } else {
             filteredParts = lausTibiApplied
         }
 
         // Insert Preces Feriales for Lauds/Vespers on qualifying ferial days.
+        // When Preces are not said, also remove the standalone Pater Noster
+        // that precedes the Collect (it is only said as part of the Preces).
         let precesApplied: [Hour.Part]
         if (template.slug == "laudes" || template.slug == "vesperae")
             && shouldIncludePreces(context: context) {
             precesApplied = insertPreces(into: filteredParts, hour: template.slug)
+        } else if template.slug == "laudes" || template.slug == "vesperae" {
+            precesApplied = filteredParts.filter { part in
+                !(part.type == "pater" && (part.variationKey ?? "").isEmpty
+                  && !(part.label ?? "").contains("Ave"))
+            }
         } else {
             precesApplied = filteredParts
         }

@@ -56,7 +56,7 @@ extension Color {
     /// Secondary text
     static var secondaryText: Color {
         switch AppTheme.current() {
-        case .parchment: return sepia
+        case .parchment: return Color(red: 76/255, green: 62/255, blue: 49/255)
         case .white:     return sepia
         case .dark:      return Color(red: 195/255, green: 178/255, blue: 155/255)
         }
@@ -65,7 +65,7 @@ extension Color {
     /// Muted meta/label text.
     static var tertiaryText: Color {
         switch AppTheme.current() {
-        case .parchment: return muted
+        case .parchment: return Color(red: 126/255, green: 110/255, blue: 90/255)
         case .white:     return muted
         case .dark:      return Color(red: 155/255, green: 137/255, blue: 115/255)
         }

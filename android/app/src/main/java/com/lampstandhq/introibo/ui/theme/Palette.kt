@@ -34,6 +34,10 @@ object RawPalette {
     val RedLight  = Color(0xFF8B1A1A)
     val RedDark   = Color(0xFFDC5A5A)
 
+    // Parchment-mode semantic overrides (darker for contrast against warm vellum)
+    val ParchmentSecondaryText = Color(0xFF4C3E31)
+    val ParchmentTertiaryText  = Color(0xFF7E6E5A)
+
     // Dark-mode semantic overrides
     val DarkPrimaryText   = Color(0xFFF0E9D7)
     val DarkSecondaryText = Color(0xFFC3B29B)
@@ -76,8 +80,8 @@ data class IntroiboColorScheme(
 val parchmentColors = IntroiboColorScheme(
     pageBackground = RawPalette.Parchment,
     primaryText    = RawPalette.Ink,
-    secondaryText  = RawPalette.Sepia,
-    tertiaryText   = RawPalette.Muted,
+    secondaryText  = RawPalette.ParchmentSecondaryText,
+    tertiaryText   = RawPalette.ParchmentTertiaryText,
     sanctuaryRed   = RawPalette.RedLight,
     goldLeaf       = RawPalette.GoldLeaf,
     ivory          = RawPalette.Ivory,
