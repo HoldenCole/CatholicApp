@@ -49,3 +49,7 @@ fastlane/test_output
 .env
 .env.local
 android/.gradle/
+
+# Python (link-validation tooling)
+__pycache__/
+*.pyc
