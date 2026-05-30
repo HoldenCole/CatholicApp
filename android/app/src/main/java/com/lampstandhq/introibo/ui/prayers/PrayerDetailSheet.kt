@@ -31,8 +31,11 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.lampstandhq.introibo.data.model.Prayer
 import com.lampstandhq.introibo.data.model.strippingEm
+import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.data.search.ContentType
 import com.lampstandhq.introibo.data.search.DeepLinkTarget
 import com.lampstandhq.introibo.ui.components.BilingualLine
+import com.lampstandhq.introibo.ui.components.ReferencedBySection
 import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -166,6 +169,16 @@ fun PrayerDetailSheet(
                         modifier = Modifier
                             .padding(horizontal = 28.dp)
                             .padding(top = 12.dp),
+                    )
+                }
+
+                item {
+                    ReferencedBySection(
+                        sources = ContentStore.linkGraph.referencedBy(
+                            DeepLinkTarget(ContentType.PRAYER, prayer.slug, null)
+                        ),
+                        onLinkTap = onLinkTap,
+                        modifier = Modifier.padding(horizontal = 28.dp),
                     )
                 }
 

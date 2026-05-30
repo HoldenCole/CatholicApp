@@ -30,6 +30,9 @@ struct HourView: View {
                                     .id("part:\(offset)")
                             }
                             RelatedLinksSection(related: hour.related)
+                            ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
+                                DeepLinkTarget(type: .office, id: hour.slug, position: nil)
+                            ))
                         }
                         .padding(.horizontal, 20)
                         .padding(.vertical, 24)

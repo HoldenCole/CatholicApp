@@ -31,8 +31,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.MassProper
+import com.lampstandhq.introibo.data.search.ContentType
 import com.lampstandhq.introibo.data.search.DeepLinkTarget
+import com.lampstandhq.introibo.ui.components.ReferencedBySection
 import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -253,6 +256,17 @@ fun ProperScreen(
                             .padding(bottom = 40.dp),
                     )
                 }
+            }
+            item(key = "referencedBy") {
+                ReferencedBySection(
+                    sources = ContentStore.linkGraph.referencedBy(
+                        DeepLinkTarget(ContentType.MISSAL, proper.slug, null)
+                    ),
+                    onLinkTap = onLinkTap,
+                    modifier = Modifier
+                        .padding(horizontal = 20.dp)
+                        .padding(bottom = 40.dp),
+                )
             }
         }
     }

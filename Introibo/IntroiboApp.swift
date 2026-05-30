@@ -12,6 +12,9 @@ struct IntroiboApp: App {
         // Build the search index off the main thread so the first Search use
         // doesn't pay the fold/index cost synchronously. Idempotent.
         ContentStore.shared.prepareSearchIndex()
+        // Build the contextual-link reverse index off the main thread too, so the
+        // first "Referenced By" block doesn't pay the scan cost synchronously.
+        ContentStore.shared.prepareLinkGraph()
 
         // Migration: existing users who already have settings should skip onboarding
         if !UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {

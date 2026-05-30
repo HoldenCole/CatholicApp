@@ -60,6 +60,9 @@ struct ProperView: View {
                         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
                             .id("postcommunion")
                         RelatedLinksSection(related: proper.related)
+                        ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
+                            DeepLinkTarget(type: .missal, id: proper.slug, position: nil)
+                        ))
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 24)

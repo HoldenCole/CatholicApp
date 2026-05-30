@@ -45,6 +45,9 @@ struct SaintDetailView: View {
                             saintPrayersBlock(prayers)
                         }
                         RelatedLinksSection(related: saint.related)
+                        ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
+                            DeepLinkTarget(type: .saint, id: saint.slug, position: nil)
+                        ))
                     }
                     .padding(.horizontal, 28)
                     .padding(.vertical, 24)

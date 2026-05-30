@@ -55,8 +55,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.Saint
 import com.lampstandhq.introibo.storage.progress.UserProgressRepository
+import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.data.search.ContentType
 import com.lampstandhq.introibo.data.search.DeepLinkTarget
 import com.lampstandhq.introibo.ui.components.BilingualLine
+import com.lampstandhq.introibo.ui.components.ReferencedBySection
 import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -325,6 +328,12 @@ fun SaintDetailScreen(
                     }
 
                     RelatedLinksSection(related = saint.related, onLinkTap = onLinkTap)
+                    ReferencedBySection(
+                        sources = ContentStore.linkGraph.referencedBy(
+                            DeepLinkTarget(ContentType.SAINT, saint.slug, null)
+                        ),
+                        onLinkTap = onLinkTap,
+                    )
                 }
             }
         }

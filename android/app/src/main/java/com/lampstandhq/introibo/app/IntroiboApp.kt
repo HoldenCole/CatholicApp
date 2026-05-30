@@ -23,6 +23,10 @@ class IntroiboApp : Application() {
         // doesn't pay the fold/index cost synchronously. Idempotent.
         ContentStore.prepareSearchIndex()
 
+        // Build the contextual-link reverse index off the main thread too, so the
+        // first "Referenced By" block doesn't pay the scan cost synchronously.
+        ContentStore.prepareLinkGraph()
+
         // Create the notification channel (required on API 26+).
         createNotificationChannel()
     }

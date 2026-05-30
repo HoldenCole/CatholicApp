@@ -35,7 +35,10 @@ import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.ReferenceEntry
 import com.lampstandhq.introibo.data.model.strippingEm
 import com.lampstandhq.introibo.storage.settings.LanguageMode
+import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.data.search.ContentType
 import com.lampstandhq.introibo.data.search.DeepLinkTarget
+import com.lampstandhq.introibo.ui.components.ReferencedBySection
 import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
@@ -152,6 +155,15 @@ fun ReferenceDetailScreen(
                     }
 
                     RelatedLinksSection(related = entry.related, onLinkTap = onLinkTap)
+                    // Calendar entries (cat == "Calendarium") resolve as CALENDAR,
+                    // all others as REFERENCE — matching LinkScanners.reference.
+                    val ownType = if (entry.cat == "Calendarium") ContentType.CALENDAR else ContentType.REFERENCE
+                    ReferencedBySection(
+                        sources = ContentStore.linkGraph.referencedBy(
+                            DeepLinkTarget(ownType, entry.slug, null)
+                        ),
+                        onLinkTap = onLinkTap,
+                    )
                 }
             }
         }

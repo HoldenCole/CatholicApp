@@ -140,6 +140,24 @@ object ContentStore {
         Thread { searchIndex }.start()
     }
 
+    // ---- Link graph (Phase 3: contextual-links reverse index) ----
+    //
+    // The bidirectional "Referenced By" reverse index. Built lazily on first
+    // access, exactly like searchIndex. Owned here so the whole app shares one
+    // graph. Mirror: iOS ContentStore.linkGraph.
+    // `by lazy` is thread-safe (LazyThreadSafetyMode.SYNCHRONIZED) by default;
+    // call prepareLinkGraph() on a background thread at launch to avoid blocking
+    // the first reader.
+
+    val linkGraph: com.lampstandhq.introibo.data.links.LinkGraph by lazy {
+        com.lampstandhq.introibo.data.links.LinkGraph.build(this)
+    }
+
+    /** Eagerly builds the link graph off the main thread. Idempotent. */
+    fun prepareLinkGraph() {
+        Thread { linkGraph }.start()
+    }
+
     // ---- Convenience lookups ----
 
     fun proper(slug: String): MassProper? =

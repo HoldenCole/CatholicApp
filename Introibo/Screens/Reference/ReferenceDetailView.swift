@@ -15,6 +15,13 @@ struct ReferenceDetailView: View {
     private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
+    /// This entry's own deep-link target. Calendar entries (cat == "Calendarium")
+    /// resolve as .calendar, all others as .reference — matching SearchExtractors
+    /// and the LinkScanners reference scanner.
+    private var ownTarget: DeepLinkTarget {
+        DeepLinkTarget(type: entry.cat == "Calendarium" ? .calendar : .reference, id: entry.slug, position: nil)
+    }
+
     var body: some View {
         NavigationStack {
             GeometryReader { geo in
@@ -28,6 +35,7 @@ struct ReferenceDetailView: View {
                             if let notes = entry.notes { section("Notandum", body: notes) }
                             if let scripture = entry.scripture { scriptureBlock(scripture) }
                             RelatedLinksSection(related: entry.related)
+                            ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(ownTarget))
                         }
                         .padding(.horizontal, 28)
                         .padding(.vertical, 24)

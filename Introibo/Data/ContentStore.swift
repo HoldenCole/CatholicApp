@@ -442,6 +442,35 @@ final class ContentStore {
         }
     }
 
+    // MARK: - Link graph (Phase 3: contextual-links reverse index)
+    //
+    // The bidirectional "Referenced By" reverse index. Built lazily off the main
+    // thread on first access, exactly like searchIndex. Owned here so the whole
+    // app shares one graph. Mirror: Android ContentStore.linkGraph.
+
+    private var _linkGraph: LinkGraph?
+    private let linkGraphLock = NSLock()
+
+    /// The contextual-link reverse index. The first access builds it
+    /// (synchronously on the calling thread); call `prepareLinkGraph()` from a
+    /// background queue at launch to avoid blocking the first reader.
+    var linkGraph: LinkGraph {
+        linkGraphLock.lock()
+        defer { linkGraphLock.unlock() }
+        if let graph = _linkGraph { return graph }
+        let graph = LinkGraph.build(from: self)
+        _linkGraph = graph
+        return graph
+    }
+
+    /// Eagerly builds the link graph off the main thread. Idempotent.
+    func prepareLinkGraph() {
+        DispatchQueue.global(qos: .utility).async { [weak self] in
+            guard let self else { return }
+            _ = self.linkGraph
+        }
+    }
+
     // MARK: - Canon variants
 
     func canonVariant(_ type: String, key: String) -> (lat: String, eng: String)? {

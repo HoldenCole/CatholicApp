@@ -42,6 +42,10 @@ struct PrayerDetailView: View {
                         RelatedLinksSection(related: prayer.related)
                             .padding(.horizontal, 28)
                             .padding(.top, 12)
+                        ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
+                            DeepLinkTarget(type: .prayer, id: prayer.slug, position: nil)
+                        ))
+                            .padding(.horizontal, 28)
                     }
                     .padding(.bottom, 40)
                     .frame(width: geo.size.width, alignment: .leading)
