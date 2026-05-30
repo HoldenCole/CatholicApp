@@ -123,6 +123,23 @@ object ContentStore {
         )
     }
 
+    // ---- Search index (Phase 1: index core) ----
+    //
+    // Built lazily on first access. Owned here so the whole app shares one
+    // folded corpus. Mirror: iOS ContentStore.searchIndex.
+    // `by lazy` is thread-safe (LazyThreadSafetyMode.SYNCHRONIZED) by default;
+    // call prepareSearchIndex() on a background thread at launch to avoid
+    // blocking the first reader.
+
+    val searchIndex: com.lampstandhq.introibo.data.search.SearchIndex by lazy {
+        com.lampstandhq.introibo.data.search.SearchIndex.build(this)
+    }
+
+    /** Eagerly builds the search index off the main thread. Idempotent. */
+    fun prepareSearchIndex() {
+        Thread { searchIndex }.start()
+    }
+
     // ---- Convenience lookups ----
 
     fun proper(slug: String): MassProper? =

@@ -19,6 +19,10 @@ class IntroiboApp : Application() {
         // Load all bundled JSON content into memory.
         ContentStore.init(applicationContext)
 
+        // Build the search index off the main thread so the first Search use
+        // doesn't pay the fold/index cost synchronously. Idempotent.
+        ContentStore.prepareSearchIndex()
+
         // Create the notification channel (required on API 26+).
         createNotificationChannel()
     }

@@ -414,6 +414,34 @@ final class ContentStore {
         return false
     }
 
+    // MARK: - Search index (Phase 1: index core)
+    //
+    // Built lazily off the main thread on first access. Owned here so the
+    // whole app shares one folded corpus. Mirror: Android ContentStore.searchIndex.
+
+    private var _searchIndex: SearchIndex?
+    private let searchIndexLock = NSLock()
+
+    /// The folded, partitioned search corpus. The first access builds it
+    /// (synchronously on the calling thread); call `prepareSearchIndex()` from
+    /// a background queue at launch to avoid blocking the first reader.
+    var searchIndex: SearchIndex {
+        searchIndexLock.lock()
+        defer { searchIndexLock.unlock() }
+        if let idx = _searchIndex { return idx }
+        let idx = SearchIndex.build(from: self)
+        _searchIndex = idx
+        return idx
+    }
+
+    /// Eagerly builds the search index off the main thread. Idempotent.
+    func prepareSearchIndex() {
+        DispatchQueue.global(qos: .utility).async { [weak self] in
+            guard let self else { return }
+            _ = self.searchIndex
+        }
+    }
+
     // MARK: - Canon variants
 
     func canonVariant(_ type: String, key: String) -> (lat: String, eng: String)? {

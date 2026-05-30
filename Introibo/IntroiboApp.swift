@@ -9,6 +9,10 @@ struct IntroiboApp: App {
     private var tutorial: TutorialManager { TutorialManager.shared }
 
     init() {
+        // Build the search index off the main thread so the first Search use
+        // doesn't pay the fold/index cost synchronously. Idempotent.
+        ContentStore.shared.prepareSearchIndex()
+
         // Migration: existing users who already have settings should skip onboarding
         if !UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
             if UserDefaults.standard.string(forKey: SettingsKey.rite) != nil

@@ -1,0 +1,30 @@
+{
+  "description": "Cross-platform fold() parity fixtures. Each pair: fold(input) MUST equal expectedFolded on BOTH iOS and Android. DO NOT diverge across platform copies (Introibo/Resources + android/app/src/test/resources).",
+  "pairs": [
+    { "input": "á", "expectedFolded": "a" },
+    { "input": "Ávila", "expectedFolded": "avila" },
+    { "input": "æ", "expectedFolded": "ae" },
+    { "input": "Æterna", "expectedFolded": "aeterna" },
+    { "input": "œ", "expectedFolded": "oe" },
+    { "input": "cœli", "expectedFolded": "coeli" },
+    { "input": "Thérèse", "expectedFolded": "therese" },
+    { "input": "élévation", "expectedFolded": "elevation" },
+    { "input": "São João", "expectedFolded": "sao joao" },
+    { "input": "coração", "expectedFolded": "coracao" },
+    { "input": "Wąż", "expectedFolded": "waz" },
+    { "input": "Częstochowa", "expectedFolded": "czestochowa" },
+    { "input": "straße", "expectedFolded": "strasse" },
+    { "input": "Groß", "expectedFolded": "gross" },
+    { "input": "Wadowice Łukasz", "expectedFolded": "wadowice lukasz" },
+    { "input": "Bóg", "expectedFolded": "bog" },
+    { "input": "DOMINUS Vobíscum", "expectedFolded": "dominus vobiscum" },
+    { "input": "AGNUS DEÍ", "expectedFolded": "agnus dei" },
+    { "input": "ǽternam", "expectedFolded": "aeternam" },
+    { "input": "Ǽgidius", "expectedFolded": "aegidius" },
+    { "input": "Ångström", "expectedFolded": "angstrom" },
+    { "input": "Tantum  ergo,\nSacraméntum!", "expectedFolded": "tantum ergo sacramentum" },
+    { "input": "  æ é ã ą ß ł  ", "expectedFolded": "ae e a a ss l" },
+    { "input": "Kýrie, eléison", "expectedFolded": "kyrie eleison" },
+    { "input": "Glória <em>Patri</em>", "expectedFolded": "gloria patri" }
+  ]
+}
