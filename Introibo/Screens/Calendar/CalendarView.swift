@@ -21,6 +21,11 @@ struct CalendarView: View {
     @State private var year: Int
     @State private var month: Int
     @State private var selectedDay: CalendarDay?
+    // "View the Mass" presents ProperView as a SIBLING sheet of the day detail,
+    // chained through the day sheet's onDismiss — never a sheet nested inside a
+    // sheet (which presents unreliably under a fullScreenCover).
+    @State private var pendingProper: MassProper?
+    @State private var properToShow: MassProper?
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var store: ContentStore { .shared }
@@ -55,9 +60,24 @@ struct CalendarView: View {
             legend
         }
         .background(Color.pageBackground.ignoresSafeArea())
-        .sheet(item: $selectedDay) { day in
-            DayDetailView(day: day, rite: rite)
+        .sheet(item: $selectedDay, onDismiss: presentPendingProper) { day in
+            DayDetailView(day: day, rite: rite) { proper in
+                pendingProper = proper
+                selectedDay = nil          // dismiss → onDismiss presents the Mass
+            }
         }
+        .sheet(item: $properToShow) { proper in
+            ProperView(proper: proper)
+        }
+    }
+
+    /// Called once the day-detail sheet has fully dismissed; presents the Mass
+    /// the user requested, if any. Deferred to the next runloop tick so the two
+    /// sheet transitions never overlap.
+    private func presentPendingProper() {
+        guard let proper = pendingProper else { return }
+        pendingProper = nil
+        DispatchQueue.main.async { properToShow = proper }
     }
 
     // MARK: Chrome (title bar)
@@ -237,9 +257,11 @@ private enum CalCell: Identifiable {
 private struct DayDetailView: View {
     let day: CalendarDay
     let rite: MissalRite
+    /// Invoked when the user taps "View the Mass"; the parent dismisses this
+    /// sheet and presents the proper as a sibling sheet.
+    let onViewMass: (MassProper) -> Void
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
-    @State private var showProper = false
 
     private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var ctx: LiturgicalContext { .for(date: day.date, rite: rite) }
@@ -257,9 +279,6 @@ private struct DayDetailView: View {
             }
         }
         .background(Color.pageBackground.ignoresSafeArea())
-        .sheet(isPresented: $showProper) {
-            if let proper { ProperView(proper: proper) }
-        }
     }
 
     private var header: some View {
@@ -315,8 +334,8 @@ private struct DayDetailView: View {
                 }
             }
 
-            if proper != nil {
-                Button { showProper = true } label: {
+            if let proper {
+                Button { onViewMass(proper) } label: {
                     HStack {
                         Image(systemName: "book.closed")
                             .font(.system(size: 14))

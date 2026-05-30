@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
@@ -127,6 +128,7 @@ fun TodayScreen(
     onNavigateRosary: (() -> Unit)? = null,
     onNavigateSaints: (() -> Unit)? = null,
     onNavigateSearch: (() -> Unit)? = null,
+    onNavigateCalendar: (() -> Unit)? = null,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -172,6 +174,14 @@ fun TodayScreen(
                         .padding(top = 12.dp),
                     horizontalArrangement = Arrangement.End,
                 ) {
+                    IconButton(onClick = { onNavigateCalendar?.invoke() }) {
+                        Icon(
+                            imageVector = Icons.Filled.DateRange,
+                            contentDescription = "Calendar",
+                            tint = colors.goldLeaf,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
                     IconButton(onClick = { onNavigateSearch?.invoke() }) {
                         Icon(
                             imageVector = Icons.Filled.Search,

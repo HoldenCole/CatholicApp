@@ -41,6 +41,7 @@ import com.lampstandhq.introibo.ui.office.HourSheet
 import com.lampstandhq.introibo.ui.office.OfficeScreen
 import com.lampstandhq.introibo.ui.prayers.PrayerDetailSheet
 import com.lampstandhq.introibo.ui.prayers.PrayersScreen
+import com.lampstandhq.introibo.ui.calendar.CalendarScreen
 import com.lampstandhq.introibo.ui.reference.ReferenceDetailScreen
 import com.lampstandhq.introibo.ui.reference.ReferenceScreen
 import com.lampstandhq.introibo.ui.rosary.RosaryScreen
@@ -151,9 +152,18 @@ fun IntroiboNavHost() {
                     onNavigateRosary = { navController.navigate(Screen.Rosary.route) },
                     onNavigateSaints = { navController.navigate(Screen.Saints.route) },
                     onNavigateSearch = { navController.navigate(Screen.Search.route) },
+                    onNavigateCalendar = { navController.navigate(Screen.Calendar.route) },
                 )
             }
             composable(Screen.Settings.route) { SettingsScreen(onDismiss = { navController.popBackStack() }) }
+            composable(Screen.Calendar.route) {
+                CalendarScreen(
+                    onBack = { navController.popBackStack() },
+                    onOpenProper = { slug ->
+                        navController.navigate(Screen.ProperDetail.createRoute(slug))
+                    },
+                )
+            }
             composable(Screen.Search.route) {
                 SearchScreen(
                     onDismiss = { navController.popBackStack() },
