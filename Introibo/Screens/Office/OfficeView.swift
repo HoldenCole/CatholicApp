@@ -93,24 +93,11 @@ struct OfficeView: View {
         }
     }
 
-    /// Matches prototype logic: closest preceding canonical hour; before
-    /// Matutinum roll back to the previous day's Completorium.
+    /// Closest preceding canonical hour; before Matutinum roll back to the
+    /// previous day's Completorium. Delegates to the shared OfficeSchedule so
+    /// the Office tab and the home-screen widget never diverge.
     private func currentHourKey() -> String {
-        let cal = Calendar.liturgical
-        let now = Date()
-        let h = cal.component(.hour, from: now)
-        let m = cal.component(.minute, from: now)
-        let nowMin = h * 60 + m
-        var best: (slug: String, diff: Int)? = nil
-        for hour in store.hours {
-            let mins = hour.hour * 60 + hour.minute
-            let diff = nowMin - mins
-            if diff >= 0 {
-                if let b = best, diff >= b.diff { continue }
-                best = (hour.slug, diff)
-            }
-        }
-        return best?.slug ?? "completorium"
+        OfficeSchedule.currentHourSlug(in: store.hours)
     }
 }
 

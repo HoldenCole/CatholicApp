@@ -34,11 +34,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
+import com.lampstandhq.introibo.data.liturgical.OfficeSchedule
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
-import java.util.Calendar
 
 /**
  * The Divine Office -- Officium Divinum. Shows a 24-hour canonical clock
@@ -178,20 +178,8 @@ fun OfficeScreen(
     }
 }
 
-private fun currentHourKey(): String {
-    val cal = Calendar.getInstance()
-    val h = cal.get(Calendar.HOUR_OF_DAY)
-    val m = cal.get(Calendar.MINUTE)
-    val nowMin = h * 60 + m
-    var best: Pair<String, Int>? = null
-    for (hour in ContentStore.hours) {
-        val mins = hour.hour * 60 + hour.minute
-        val diff = nowMin - mins
-        if (diff >= 0) {
-            if (best == null || diff < best.second) {
-                best = Pair(hour.slug, diff)
-            }
-        }
-    }
-    return best?.first ?: "completorium"
-}
+// Closest preceding canonical hour; before Matutinum roll back to the previous
+// day's Completorium. Delegates to the shared OfficeSchedule so the Office tab
+// and the home-screen widget never diverge.
+private fun currentHourKey(): String =
+    OfficeSchedule.currentHourSlug(ContentStore.hours)
