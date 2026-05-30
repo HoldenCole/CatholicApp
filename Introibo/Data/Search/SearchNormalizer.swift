@@ -28,16 +28,21 @@ enum SearchNormalizer {
         // 2. NFD canonical decomposition.
         let decomposed = stripped.decomposedStringWithCanonicalMapping
 
-        // 3. Remove combining marks (Unicode category Mn), operating on
-        //    SCALARS — not graphemes. This MUST happen before the ligature map
-        //    so a combining-mark-bearing ligature (e.g. "ǽ" = æ + ´) decomposes
-        //    to bare "æ" and then maps to "ae", matching Android's
+        // 3. Remove combining marks (Unicode category Mn = Nonspacing_Mark),
+        //    operating on SCALARS — not graphemes. This MUST happen before the
+        //    ligature map so a combining-mark-bearing ligature (e.g. "ǽ" = æ + ´)
+        //    decomposes to bare "æ" and then maps to "ae", matching Android's
         //    \p{Mn}-removal-then-map order exactly. (Mapping on graphemes first
         //    would leave "ǽ" unmapped and diverge from Android.)
-        let combining = CharacterSet.combiningMarks
+        //
+        //    `generalCategory == .nonspacingMark` is the EXACT Swift equivalent
+        //    of Android's `\p{Mn}` — match precisely Mn, not the broader
+        //    CharacterSet.nonBaseCharacters (which also covers Mc/Me) so the two
+        //    platforms can never diverge.
         var noMarks = String.UnicodeScalarView()
         noMarks.reserveCapacity(decomposed.unicodeScalars.count)
-        for scalar in decomposed.unicodeScalars where !combining.contains(scalar) {
+        for scalar in decomposed.unicodeScalars
+        where scalar.properties.generalCategory != .nonspacingMark {
             noMarks.append(scalar)
         }
 
