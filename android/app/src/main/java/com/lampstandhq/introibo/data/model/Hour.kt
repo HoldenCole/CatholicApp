@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.model
 
+import com.lampstandhq.introibo.data.links.RelatedLink
 import kotlinx.serialization.Serializable
 
 /**
@@ -17,6 +18,7 @@ data class Hour(
     val order: Int,          // Roman order for Hora I/II/...
     val intro: String,       // Short prose introduction
     val parts: List<Part>,
+    val related: List<RelatedLink>? = null,
 ) {
     /**
      * Heterogeneous parts. We decode into a sum-type-ish class that

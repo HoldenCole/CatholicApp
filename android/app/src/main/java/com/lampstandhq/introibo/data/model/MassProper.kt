@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.model
 
+import com.lampstandhq.introibo.data.links.RelatedLink
 import kotlinx.serialization.Serializable
 
 /**
@@ -29,6 +30,7 @@ data class MassProper(
     // Optional rubric hints from DO data (rule.gloria, rule.credo)
     val glorOverride: Boolean? = null,
     val credoOverride: Boolean? = null,
+    val related: List<RelatedLink>? = null,
 )
 
 @Serializable

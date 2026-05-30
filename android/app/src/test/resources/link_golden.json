@@ -1,0 +1,32 @@
+{
+  "parse": [
+    {"input": "reference:confiteor", "type": "reference", "id": "confiteor", "position": null},
+    {"input": "missal:epi3-0#collect", "type": "missal", "id": "epi3-0", "position": "collect"},
+    {"input": "office:prime#part:2", "type": "office", "id": "prime", "position": "part:2"},
+    {"input": "saint:pio", "type": "saint", "id": "pio", "position": null},
+    {"input": "calendar:cal-advent", "type": "calendar", "id": "cal-advent", "position": null},
+    {"input": "invalid", "type": null, "id": null, "position": null},
+    {"input": ":empty-type", "type": null, "id": null, "position": null},
+    {"input": "prayer:", "type": null, "id": null, "position": null}
+  ],
+  "runs": [
+    {"input": "plain text", "runs": [{"kind": "text", "text": "plain text"}]},
+    {"input": "See the <link target=\"reference:confiteor\">Confíteor</link> here.", "runs": [
+      {"kind": "text", "text": "See the "},
+      {"kind": "link", "text": "Confíteor", "target": "reference:confiteor"},
+      {"kind": "text", "text": " here."}
+    ]},
+    {"input": "Text with <em>emphasis</em> only.", "runs": [{"kind": "text", "text": "Text with emphasis only."}]},
+    {"input": "<link target=\"badtarget\">broken</link> link", "runs": [
+      {"kind": "text", "text": "broken"},
+      {"kind": "text", "text": " link"}
+    ]},
+    {"input": "A <link target=\"prayer:ave\">Ave</link> and <link target=\"saint:pio\">Padre Pio</link>.", "runs": [
+      {"kind": "text", "text": "A "},
+      {"kind": "link", "text": "Ave", "target": "prayer:ave"},
+      {"kind": "text", "text": " and "},
+      {"kind": "link", "text": "Padre Pio", "target": "saint:pio"},
+      {"kind": "text", "text": "."}
+    ]}
+  ]
+}

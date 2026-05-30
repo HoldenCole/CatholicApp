@@ -14,6 +14,7 @@ struct ReferenceEntry: Identifiable, Decodable, Hashable {
     let practice: String?
     let notes: String?
     let scripture: Scripture?
+    var related: [RelatedLink]? = nil
 
     var id: String { slug }
 

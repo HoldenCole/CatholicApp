@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.model
 
+import com.lampstandhq.introibo.data.links.RelatedLink
 import kotlinx.serialization.Serializable
 
 /**
@@ -17,6 +18,7 @@ data class ReferenceEntry(
     val practice: String? = null,
     val notes: String? = null,
     val scripture: Scripture? = null,
+    val related: List<RelatedLink>? = null,
 ) {
     @Serializable
     data class Scripture(

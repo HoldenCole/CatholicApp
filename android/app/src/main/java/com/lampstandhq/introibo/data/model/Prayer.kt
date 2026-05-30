@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.model
 
+import com.lampstandhq.introibo.data.links.RelatedLink
 import kotlinx.serialization.Serializable
 
 /**
@@ -13,6 +14,7 @@ data class Prayer(
     val category: String,
     val note: String? = null,
     val occasions: List<String>? = null,
+    val related: List<RelatedLink>? = null,
     val lines: List<Line>,
 ) {
     @Serializable

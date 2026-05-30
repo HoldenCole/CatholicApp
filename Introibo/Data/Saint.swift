@@ -12,6 +12,7 @@ struct Saint: Identifiable, Decodable, Hashable {
     let penanceLatin: String?
     let sections: [Section]
     let prayers: [SaintPrayer]?
+    var related: [RelatedLink]? = nil
 
     var id: String { slug }
 

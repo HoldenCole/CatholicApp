@@ -14,6 +14,7 @@ struct Hour: Identifiable, Decodable, Hashable {
     let order: Int          // Roman order for Hora I/II/...
     let intro: String       // Short prose introduction
     let parts: [Part]
+    var related: [RelatedLink]? = nil
 
     var id: String { slug }
 

@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.model
 
+import com.lampstandhq.introibo.data.links.RelatedLink
 import kotlinx.serialization.Serializable
 
 /**
@@ -15,6 +16,7 @@ data class Saint(
     val penanceLatin: String? = null,
     val sections: List<Section>,
     val prayers: List<SaintPrayer>? = null,
+    val related: List<RelatedLink>? = null,
 ) {
     @Serializable
     data class Section(

@@ -24,6 +24,7 @@ struct MassProper: Identifiable, Decodable, Hashable {
     // When present, override the rank-based heuristic.
     var glorOverride: Bool? = nil
     var credoOverride: Bool? = nil
+    var related: [RelatedLink]? = nil
 
     var id: String { slug }
 }

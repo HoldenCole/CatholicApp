@@ -10,6 +10,7 @@ struct Prayer: Identifiable, Decodable, Hashable {
     let category: String
     let note: String?
     let occasions: [String]?
+    var related: [RelatedLink]? = nil
     let lines: [Line]
 
     var id: String { slug }
