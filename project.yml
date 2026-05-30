@@ -32,6 +32,10 @@ targets:
         CFBundleName: $(PRODUCT_NAME)
         CFBundleIconName: AppIcon
         LSRequiresIPhoneOS: true
+        CFBundleURLTypes:
+          - CFBundleURLName: app.introibo.Introibo.link
+            CFBundleURLSchemes:
+              - introibo
         UILaunchScreen:
           UIColorName: LaunchBackground
         UISupportedInterfaceOrientations:

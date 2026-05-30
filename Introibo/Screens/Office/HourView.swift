@@ -29,6 +29,7 @@ struct HourView: View {
                                 partView(part)
                                     .id("part:\(offset)")
                             }
+                            RelatedLinksSection(related: hour.related)
                         }
                         .padding(.horizontal, 20)
                         .padding(.vertical, 24)

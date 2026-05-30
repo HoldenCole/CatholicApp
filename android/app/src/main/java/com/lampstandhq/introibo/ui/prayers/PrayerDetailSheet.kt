@@ -31,7 +31,9 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.lampstandhq.introibo.data.model.Prayer
 import com.lampstandhq.introibo.data.model.strippingEm
+import com.lampstandhq.introibo.data.search.DeepLinkTarget
 import com.lampstandhq.introibo.ui.components.BilingualLine
+import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -46,6 +48,7 @@ import com.lampstandhq.introibo.ui.theme.IntroiboType
 fun PrayerDetailSheet(
     prayer: Prayer,
     onDismiss: () -> Unit,
+    onLinkTap: (DeepLinkTarget) -> Unit = {},
 ) {
     Dialog(
         onDismissRequest = onDismiss,
@@ -150,9 +153,20 @@ fun PrayerDetailSheet(
                                 lat = line.lat.strippingEm,
                                 eng = line.eng.strippingEm,
                                 sideBySide = true,
+                                onLinkTap = onLinkTap,
                             )
                         }
                     }
+                }
+
+                item {
+                    RelatedLinksSection(
+                        related = prayer.related,
+                        onLinkTap = onLinkTap,
+                        modifier = Modifier
+                            .padding(horizontal = 28.dp)
+                            .padding(top = 12.dp),
+                    )
                 }
 
                 item { Spacer(Modifier.height(40.dp)) }

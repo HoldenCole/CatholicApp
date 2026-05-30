@@ -39,6 +39,9 @@ struct PrayerDetailView: View {
                             lineBlock(line, isFirst: idx == 0)
                                 .padding(.horizontal, 28)
                         }
+                        RelatedLinksSection(related: prayer.related)
+                            .padding(.horizontal, 28)
+                            .padding(.top, 12)
                     }
                     .padding(.bottom, 40)
                     .frame(width: geo.size.width, alignment: .leading)

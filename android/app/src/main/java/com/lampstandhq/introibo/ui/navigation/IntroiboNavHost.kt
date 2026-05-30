@@ -201,6 +201,7 @@ fun IntroiboNavHost() {
                         proper = proper,
                         onDismiss = { navController.popBackStack() },
                         scrollToAnchor = pos,
+                        onLinkTap = { DeepLinkRouter.open(navController, it) },
                     )
                 }
             }
@@ -217,6 +218,7 @@ fun IntroiboNavHost() {
                     PrayerDetailSheet(
                         prayer = prayer,
                         onDismiss = { navController.popBackStack() },
+                        onLinkTap = { DeepLinkRouter.open(navController, it) },
                     )
                 }
             }
@@ -235,6 +237,7 @@ fun IntroiboNavHost() {
                         saint = saint,
                         onDismiss = { navController.popBackStack() },
                         scrollToAnchor = pos,
+                        onLinkTap = { DeepLinkRouter.open(navController, it) },
                     )
                 }
             }
@@ -250,6 +253,7 @@ fun IntroiboNavHost() {
                     ReferenceDetailScreen(
                         entry = entryModel,
                         onDismiss = { navController.popBackStack() },
+                        onLinkTap = { DeepLinkRouter.open(navController, it) },
                     )
                 }
             }
@@ -270,6 +274,7 @@ fun IntroiboNavHost() {
                         hour = hour,
                         onDismiss = { navController.popBackStack() },
                         scrollToPartIndex = pos?.removePrefix("part:")?.toIntOrNull(),
+                        onLinkTap = { DeepLinkRouter.open(navController, it) },
                     )
                 }
             }

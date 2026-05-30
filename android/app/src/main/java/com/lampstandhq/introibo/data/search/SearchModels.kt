@@ -34,7 +34,15 @@ data class DeepLinkTarget(
     val type: ContentType,
     val id: String,          // slug / section id
     val position: String? = null, // opaque stable anchor; null = document home
-)
+) {
+    /**
+     * Serializes back to the `type:id` / `type:id#position` string form — the
+     * inverse of `LinkTarget.parse`. Used as the stable tag for an inline link
+     * annotation. Mirrors iOS `DeepLinkTarget.wireString`. (Phase 2)
+     */
+    val wireString: String
+        get() = "${type.wire}:$id" + (position?.let { "#$it" } ?: "")
+}
 
 /**
  * One indexed unit. [searchText] is the folded match target; [title] and

@@ -27,6 +27,7 @@ struct ReferenceDetailView: View {
                             if let practice = entry.practice { section("Praxis", body: practice) }
                             if let notes = entry.notes { section("Notandum", body: notes) }
                             if let scripture = entry.scripture { scriptureBlock(scripture) }
+                            RelatedLinksSection(related: entry.related)
                         }
                         .padding(.horizontal, 28)
                         .padding(.vertical, 24)

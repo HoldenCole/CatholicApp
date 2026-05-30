@@ -10,9 +10,20 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.dp
+import com.lampstandhq.introibo.data.links.LinkMarkup
+import com.lampstandhq.introibo.data.links.TextRun
 import com.lampstandhq.introibo.data.model.strippingEm
+import com.lampstandhq.introibo.data.search.DeepLinkTarget
 import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -31,11 +42,16 @@ fun BilingualLine(
     eng: String,
     sideBySide: Boolean = false,
     languageMode: String = currentLanguageMode().rawValue,
+    onLinkTap: (DeepLinkTarget) -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    val cleanLat = lat.strippingEm
-    val cleanEng = eng.strippingEm
+    // Render bodies through the inline-link parser. For a body with NO `<link>`
+    // tags, LinkMarkup.runs returns a single TextRun.Text(body.strippingEm), so
+    // the AnnotatedString carries the exact same characters and no spans —
+    // i.e. visually identical to the previous plain Text(strippingEm).
+    val cleanLat = linkedAnnotatedString(lat, colors.sanctuaryRed, onLinkTap)
+    val cleanEng = linkedAnnotatedString(eng, colors.sanctuaryRed, onLinkTap)
 
     if (sideBySide && languageMode == "both") {
         Row(
@@ -78,6 +94,38 @@ fun BilingualLine(
                     color = colors.secondaryText,
                     lineHeight = type.bodyIt.fontSize * 1.2f,
                 )
+            }
+        }
+    }
+}
+
+/**
+ * Builds an [AnnotatedString] from inline `<link>` markup. Plain runs are
+ * appended verbatim; link runs are wrapped in a [LinkAnnotation.Clickable]
+ * styled sanctuary-red + underline, whose handler dispatches [onLinkTap] with
+ * the parsed [DeepLinkTarget]. A link-free body yields a single plain run
+ * identical to `body.strippingEm`. Mirrors iOS `ContextualLink.attributed`.
+ */
+private fun linkedAnnotatedString(
+    body: String,
+    linkColor: Color,
+    onLinkTap: (DeepLinkTarget) -> Unit,
+): AnnotatedString = buildAnnotatedString {
+    for (run in LinkMarkup.runs(body)) {
+        when (run) {
+            is TextRun.Text -> append(run.text)
+            is TextRun.Link -> {
+                val target = run.target
+                val link = LinkAnnotation.Clickable(
+                    tag = target.wireString,
+                    styles = TextLinkStyles(
+                        style = SpanStyle(
+                            color = linkColor,
+                            textDecoration = TextDecoration.Underline,
+                        ),
+                    ),
+                ) { onLinkTap(target) }
+                withLink(link) { append(run.text) }
             }
         }
     }

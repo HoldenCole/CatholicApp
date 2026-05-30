@@ -61,6 +61,22 @@ struct ContentView: View {
         )) { resolved in
             deepLinkDestination(resolved)
         }
+        // Inline contextual-link taps (Phase 2): BilingualLine renders links as
+        // `introibo://link?t=<wireString>` URLs. Decode the target and dispatch
+        // through the same DeepLinkRouter the search/related surfaces use.
+        .onOpenURL { url in handleDeepLinkURL(url) }
+    }
+
+    /// Resolves an `introibo://link?t=…` URL into a navigation. Ignores any URL
+    /// that isn't our scheme/host or whose `t` fails to parse — no-op on failure.
+    private func handleDeepLinkURL(_ url: URL) {
+        guard url.scheme == ContextualLink.scheme,
+              url.host == ContextualLink.host,
+              let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+              let raw = components.queryItems?.first(where: { $0.name == "t" })?.value,
+              let target = LinkTarget.parse(raw)
+        else { return }
+        DeepLinkRouter.shared.open(target)
     }
 
     /// Maps a resolved deep link to its detail view, threading the scroll anchor.

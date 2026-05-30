@@ -44,6 +44,7 @@ struct SaintDetailView: View {
                         if let prayers = saint.prayers, !prayers.isEmpty {
                             saintPrayersBlock(prayers)
                         }
+                        RelatedLinksSection(related: saint.related)
                     }
                     .padding(.horizontal, 28)
                     .padding(.vertical, 24)

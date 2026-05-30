@@ -59,6 +59,7 @@ struct ProperView: View {
                             .id("communion")
                         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
                             .id("postcommunion")
+                        RelatedLinksSection(related: proper.related)
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 24)

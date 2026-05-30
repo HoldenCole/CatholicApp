@@ -32,6 +32,8 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.model.MassProper
+import com.lampstandhq.introibo.data.search.DeepLinkTarget
+import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -71,6 +73,7 @@ fun ProperScreen(
      * or "feast" (top), matching the missal search extractor. null = no scroll.
      */
     scrollToAnchor: String? = null,
+    onLinkTap: (DeepLinkTarget) -> Unit = {},
 ) {
     val context = LocalContext.current
     val colors = IntroiboTheme.colors
@@ -239,6 +242,17 @@ fun ProperScreen(
             }
             properElementItem("postcommunion", bottomPadding = 40.dp) {
                 ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion)
+            }
+            if (!proper.related.isNullOrEmpty()) {
+                item(key = "related") {
+                    RelatedLinksSection(
+                        related = proper.related,
+                        onLinkTap = onLinkTap,
+                        modifier = Modifier
+                            .padding(horizontal = 20.dp)
+                            .padding(bottom = 40.dp),
+                    )
+                }
             }
         }
     }

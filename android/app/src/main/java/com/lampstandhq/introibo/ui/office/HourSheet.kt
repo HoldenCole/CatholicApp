@@ -34,7 +34,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.strippingEm
+import com.lampstandhq.introibo.data.search.DeepLinkTarget
 import com.lampstandhq.introibo.ui.components.BilingualLine
+import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -58,6 +60,7 @@ fun HourSheet(
      * position from the office search extractor), or null for no scroll.
      */
     scrollToPartIndex: Int? = null,
+    onLinkTap: (DeepLinkTarget) -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -122,7 +125,19 @@ fun HourSheet(
                         .padding(horizontal = 20.dp)
                         .padding(bottom = 22.dp),
                 ) {
-                    PartView(part)
+                    PartView(part, onLinkTap)
+                }
+            }
+
+            if (!hour.related.isNullOrEmpty()) {
+                item(key = "related") {
+                    RelatedLinksSection(
+                        related = hour.related,
+                        onLinkTap = onLinkTap,
+                        modifier = Modifier
+                            .padding(horizontal = 20.dp)
+                            .padding(bottom = 22.dp),
+                    )
                 }
             }
         }
@@ -219,32 +234,32 @@ private fun IntroBlock(text: String) {
 }
 
 @Composable
-private fun PartView(p: Hour.Part) {
+private fun PartView(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     when (p.type) {
-        "vr" -> VrBlock(p)
-        "hymn" -> HymnBlock(p)
-        "antiphon" -> SimpleBlock(p, labelFallback = "Antíphona")
-        "psalm" -> PsalmBlock(p)
-        "capitulum" -> CapitulumBlock(p)
-        "canticle" -> PsalmBlock(p)
-        "pater" -> PaterInlineBlock(p)
-        "collect" -> SimpleBlock(p, labelFallback = "Collécta")
-        "closing" -> SimpleBlock(p, labelFallback = "Conclúsio")
-        "confiteor" -> ConfiteorBlock(p)
-        "responsory" -> ResponsoryBlock(p)
-        "marian" -> MarianBlock(p)
+        "vr" -> VrBlock(p, onLinkTap)
+        "hymn" -> HymnBlock(p, onLinkTap)
+        "antiphon" -> SimpleBlock(p, labelFallback = "Antíphona", onLinkTap = onLinkTap)
+        "psalm" -> PsalmBlock(p, onLinkTap)
+        "capitulum" -> CapitulumBlock(p, onLinkTap)
+        "canticle" -> PsalmBlock(p, onLinkTap)
+        "pater" -> PaterInlineBlock(p, onLinkTap)
+        "collect" -> SimpleBlock(p, labelFallback = "Collécta", onLinkTap = onLinkTap)
+        "closing" -> SimpleBlock(p, labelFallback = "Conclúsio", onLinkTap = onLinkTap)
+        "confiteor" -> ConfiteorBlock(p, onLinkTap)
+        "responsory" -> ResponsoryBlock(p, onLinkTap)
+        "marian" -> MarianBlock(p, onLinkTap)
         "heading" -> HeadingBlock(p)
-        "reading" -> ReadingBlock(p)
-        "lectio" -> ReadingBlock(p)
-        "preces" -> PrecesBlock(p)
-        "invitatory" -> InvitatoryBlock(p)
-        "responsory_breve" -> ResponsoryBreveBlock(p)
+        "reading" -> ReadingBlock(p, onLinkTap)
+        "lectio" -> ReadingBlock(p, onLinkTap)
+        "preces" -> PrecesBlock(p, onLinkTap)
+        "invitatory" -> InvitatoryBlock(p, onLinkTap)
+        "responsory_breve" -> ResponsoryBreveBlock(p, onLinkTap)
         "suppressed" -> { /* Intentionally empty — suppressed parts are not rendered. */ }
     }
 }
 
 @Composable
-private fun VrBlock(p: Hour.Part) {
+private fun VrBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
 
     Column(
@@ -254,17 +269,17 @@ private fun VrBlock(p: Hour.Part) {
         SmallLabel(text = p.label ?: "Versus", color = colors.sanctuaryRed)
 
         if (p.lat != null && p.eng != null) {
-            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true)
+            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
         }
         if (p.latR != null && p.engR != null) {
             Spacer(modifier = Modifier.height(4.dp))
-            BilingualLine(lat = p.latR, eng = p.engR, sideBySide = true)
+            BilingualLine(lat = p.latR, eng = p.engR, sideBySide = true, onLinkTap = onLinkTap)
         }
     }
 }
 
 @Composable
-private fun HymnBlock(p: Hour.Part) {
+private fun HymnBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -294,6 +309,7 @@ private fun HymnBlock(p: Hour.Part) {
                         lat = latStanzas.getOrElse(i) { "" },
                         eng = engStanzas.getOrElse(i) { "" },
                         sideBySide = true,
+                        onLinkTap = onLinkTap,
                     )
                 }
             }
@@ -302,7 +318,7 @@ private fun HymnBlock(p: Hour.Part) {
 }
 
 @Composable
-private fun SimpleBlock(p: Hour.Part, labelFallback: String) {
+private fun SimpleBlock(p: Hour.Part, labelFallback: String, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -321,7 +337,7 @@ private fun SimpleBlock(p: Hour.Part, labelFallback: String) {
         }
 
         if (p.lat != null && p.eng != null) {
-            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true)
+            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
         } else {
             p.lat?.let { lat ->
                 Text(
@@ -344,7 +360,7 @@ private fun SimpleBlock(p: Hour.Part, labelFallback: String) {
 }
 
 @Composable
-private fun PsalmBlock(p: Hour.Part) {
+private fun PsalmBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -354,7 +370,7 @@ private fun PsalmBlock(p: Hour.Part) {
     ) {
         if (!p.antiphonLat.isNullOrEmpty()) {
             SmallLabel(text = "Ant.", color = colors.sanctuaryRed)
-            BilingualLine(lat = p.antiphonLat, eng = p.antiphonEng ?: "", sideBySide = true)
+            BilingualLine(lat = p.antiphonLat, eng = p.antiphonEng ?: "", sideBySide = true, onLinkTap = onLinkTap)
             Spacer(modifier = Modifier.height(4.dp))
         }
 
@@ -382,7 +398,7 @@ private fun PsalmBlock(p: Hour.Part) {
         p.verses?.let { verses ->
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 verses.forEach { v ->
-                    BilingualLine(lat = v.lat, eng = v.eng, sideBySide = true)
+                    BilingualLine(lat = v.lat, eng = v.eng, sideBySide = true, onLinkTap = onLinkTap)
                 }
             }
         }
@@ -390,7 +406,7 @@ private fun PsalmBlock(p: Hour.Part) {
 }
 
 @Composable
-private fun PaterInlineBlock(p: Hour.Part) {
+private fun PaterInlineBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -409,6 +425,7 @@ private fun PaterInlineBlock(p: Hour.Part) {
                         lat = latParts.getOrElse(i) { "" },
                         eng = engParts.getOrElse(i) { "" },
                         sideBySide = true,
+                        onLinkTap = onLinkTap,
                     )
                 }
             }
@@ -417,7 +434,7 @@ private fun PaterInlineBlock(p: Hour.Part) {
 }
 
 @Composable
-private fun ConfiteorBlock(p: Hour.Part) {
+private fun ConfiteorBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
 
     Column {
@@ -435,6 +452,7 @@ private fun ConfiteorBlock(p: Hour.Part) {
                         lat = latParts.getOrElse(i) { "" },
                         eng = engParts.getOrElse(i) { "" },
                         sideBySide = true,
+                        onLinkTap = onLinkTap,
                     )
                 }
             }
@@ -443,7 +461,7 @@ private fun ConfiteorBlock(p: Hour.Part) {
 }
 
 @Composable
-private fun ResponsoryBlock(p: Hour.Part) {
+private fun ResponsoryBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -460,19 +478,19 @@ private fun ResponsoryBlock(p: Hour.Part) {
         // Full Matins responsory (v1/r1/v2/r2 structured fields)
         if (p.v1Lat != null) {
             if (p.v1Lat != null && p.v1Eng != null) {
-                ResponsoryLine(lat = p.v1Lat, eng = p.v1Eng, indent = false)
+                ResponsoryLine(lat = p.v1Lat, eng = p.v1Eng, indent = false, onLinkTap = onLinkTap)
             }
             if (p.r1Lat != null && p.r1Eng != null) {
                 Spacer(modifier = Modifier.height(4.dp))
-                ResponsoryLine(lat = p.r1Lat, eng = p.r1Eng, indent = true)
+                ResponsoryLine(lat = p.r1Lat, eng = p.r1Eng, indent = true, onLinkTap = onLinkTap)
             }
             if (p.v2Lat != null && p.v2Eng != null) {
                 Spacer(modifier = Modifier.height(6.dp))
-                ResponsoryLine(lat = p.v2Lat, eng = p.v2Eng, indent = true)
+                ResponsoryLine(lat = p.v2Lat, eng = p.v2Eng, indent = true, onLinkTap = onLinkTap)
             }
             if (p.r2Lat != null && p.r2Eng != null) {
                 Spacer(modifier = Modifier.height(4.dp))
-                ResponsoryLine(lat = p.r2Lat, eng = p.r2Eng, indent = false)
+                ResponsoryLine(lat = p.r2Lat, eng = p.r2Eng, indent = false, onLinkTap = onLinkTap)
             }
         }
         // Short / Breve responsory (lat/eng inline with ℟./℣. lines)
@@ -486,7 +504,7 @@ private fun ResponsoryBlock(p: Hour.Part) {
                     val latLine = latLines.getOrElse(i) { "" }
                     val engLine = engLines.getOrElse(i) { "" }
                     val isVersicle = latLine.startsWith("℣") || latLine.startsWith("V.")
-                    ResponsoryLine(lat = latLine, eng = engLine, indent = isVersicle)
+                    ResponsoryLine(lat = latLine, eng = engLine, indent = isVersicle, onLinkTap = onLinkTap)
                 }
             }
         }
@@ -498,7 +516,7 @@ private fun ResponsoryBlock(p: Hour.Part) {
  * with indented versicles. Mirrors iOS responsoryBreveBlock.
  */
 @Composable
-private fun ResponsoryBreveBlock(p: Hour.Part) {
+private fun ResponsoryBreveBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
 
     Column(
@@ -517,7 +535,7 @@ private fun ResponsoryBreveBlock(p: Hour.Part) {
                     val latLine = latLines.getOrElse(i) { "" }
                     val engLine = engLines.getOrElse(i) { "" }
                     val isVersicle = latLine.startsWith("℣") || latLine.startsWith("V.")
-                    ResponsoryLine(lat = latLine, eng = engLine, indent = isVersicle)
+                    ResponsoryLine(lat = latLine, eng = engLine, indent = isVersicle, onLinkTap = onLinkTap)
                 }
             }
         }
@@ -526,14 +544,14 @@ private fun ResponsoryBreveBlock(p: Hour.Part) {
 
 /** Single responsory line, optionally indented for versicles. */
 @Composable
-private fun ResponsoryLine(lat: String, eng: String, indent: Boolean) {
+private fun ResponsoryLine(lat: String, eng: String, indent: Boolean, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     Box(modifier = if (indent) Modifier.padding(start = 16.dp) else Modifier) {
-        BilingualLine(lat = lat, eng = eng, sideBySide = true)
+        BilingualLine(lat = lat, eng = eng, sideBySide = true, onLinkTap = onLinkTap)
     }
 }
 
 @Composable
-private fun MarianBlock(p: Hour.Part) {
+private fun MarianBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -564,7 +582,7 @@ private fun MarianBlock(p: Hour.Part) {
 
         p.lat?.let { lat ->
             val eng = p.engBody ?: p.eng ?: ""
-            BilingualLine(lat = lat, eng = eng, sideBySide = true)
+            BilingualLine(lat = lat, eng = eng, sideBySide = true, onLinkTap = onLinkTap)
         }
     }
 }
@@ -603,7 +621,7 @@ private fun HeadingBlock(p: Hour.Part) {
 }
 
 @Composable
-private fun ReadingBlock(p: Hour.Part) {
+private fun ReadingBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -618,7 +636,7 @@ private fun ReadingBlock(p: Hour.Part) {
         }
 
         if (p.lat != null && p.eng != null) {
-            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true)
+            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
         } else {
             p.lat?.let { lat ->
                 Text(
@@ -645,7 +663,7 @@ private fun ReadingBlock(p: Hour.Part) {
  * displayed in italic below the label. Mirrors iOS capitulumBlock.
  */
 @Composable
-private fun CapitulumBlock(p: Hour.Part) {
+private fun CapitulumBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
@@ -664,7 +682,7 @@ private fun CapitulumBlock(p: Hour.Part) {
         }
 
         if (p.lat != null && p.eng != null) {
-            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true)
+            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
         } else {
             p.lat?.let { lat ->
                 Text(
@@ -692,7 +710,7 @@ private fun CapitulumBlock(p: Hour.Part) {
  * part lacks verses. Mirrors iOS invitatoryBlock.
  */
 @Composable
-private fun InvitatoryBlock(p: Hour.Part) {
+private fun InvitatoryBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
 
     Column(
@@ -703,14 +721,14 @@ private fun InvitatoryBlock(p: Hour.Part) {
 
         if (p.lat != null && p.eng != null) {
             Box(modifier = Modifier.padding(start = 10.dp)) {
-                BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true)
+                BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
             }
         }
 
         p.verses?.let { verses ->
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 verses.forEach { v ->
-                    BilingualLine(lat = v.lat, eng = v.eng, sideBySide = true)
+                    BilingualLine(lat = v.lat, eng = v.eng, sideBySide = true, onLinkTap = onLinkTap)
                 }
             }
         }
@@ -726,7 +744,7 @@ private fun InvitatoryBlock(p: Hour.Part) {
  * Handles both text-mode (lat/eng) and verse-mode (verses list).
  */
 @Composable
-private fun PrecesBlock(p: Hour.Part) {
+private fun PrecesBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
 
     Column(
@@ -739,7 +757,7 @@ private fun PrecesBlock(p: Hour.Part) {
         p.verses?.let { verses ->
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 verses.forEach { v ->
-                    BilingualLine(lat = v.lat, eng = v.eng, sideBySide = true)
+                    BilingualLine(lat = v.lat, eng = v.eng, sideBySide = true, onLinkTap = onLinkTap)
                 }
             }
         }
@@ -758,6 +776,7 @@ private fun PrecesBlock(p: Hour.Part) {
                             lat = latLine,
                             eng = engLine,
                             sideBySide = true,
+                            onLinkTap = onLinkTap,
                         )
                     }
                 }

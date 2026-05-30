@@ -35,6 +35,8 @@ import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.ReferenceEntry
 import com.lampstandhq.introibo.data.model.strippingEm
 import com.lampstandhq.introibo.storage.settings.LanguageMode
+import com.lampstandhq.introibo.data.search.DeepLinkTarget
+import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -50,6 +52,7 @@ import com.lampstandhq.introibo.ui.theme.IntroiboType
 fun ReferenceDetailScreen(
     entry: ReferenceEntry,
     onDismiss: () -> Unit,
+    onLinkTap: (DeepLinkTarget) -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -147,6 +150,8 @@ fun ReferenceDetailScreen(
                     entry.scripture?.let { s ->
                         ScriptureBlock(scripture = s)
                     }
+
+                    RelatedLinksSection(related = entry.related, onLinkTap = onLinkTap)
                 }
             }
         }

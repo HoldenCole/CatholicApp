@@ -22,6 +22,13 @@ struct DeepLinkTarget: Codable, Hashable {
     let type: ContentType
     let id: String          // slug / section id
     let position: String?   // opaque stable anchor; nil = document home
+
+    /// Serializes back to the `type:id` / `type:id#position` string form — the
+    /// inverse of `LinkTarget.parse`. Used to round-trip a target through the
+    /// `introibo://link?t=…` URL that inline links open. (Phase 2)
+    var wireString: String {
+        "\(type.rawValue):\(id)" + (position.map { "#\($0)" } ?? "")
+    }
 }
 
 /// One indexed unit. `searchText` is the folded match target; `title` and

@@ -55,7 +55,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.Saint
 import com.lampstandhq.introibo.storage.progress.UserProgressRepository
+import com.lampstandhq.introibo.data.search.DeepLinkTarget
 import com.lampstandhq.introibo.ui.components.BilingualLine
+import com.lampstandhq.introibo.ui.components.RelatedLinksSection
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -77,6 +79,7 @@ fun SaintDetailScreen(
      * extractor. null = no scroll.
      */
     scrollToAnchor: String? = null,
+    onLinkTap: (DeepLinkTarget) -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -318,8 +321,10 @@ fun SaintDetailScreen(
 
                     // Saint prayers
                     saint.prayers?.takeIf { it.isNotEmpty() }?.let { prayers ->
-                        SaintPrayersBlock(prayers, prayerRequesters)
+                        SaintPrayersBlock(prayers, prayerRequesters, onLinkTap)
                     }
+
+                    RelatedLinksSection(related = saint.related, onLinkTap = onLinkTap)
                 }
             }
         }
@@ -423,6 +428,7 @@ private fun SectionBlock(
 private fun SaintPrayersBlock(
     prayers: List<Saint.SaintPrayer>,
     requesters: List<BringIntoViewRequester> = emptyList(),
+    onLinkTap: (DeepLinkTarget) -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -501,6 +507,7 @@ private fun SaintPrayersBlock(
                             lat = prayer.latin ?: "",
                             eng = prayer.eng,
                             sideBySide = true,
+                            onLinkTap = onLinkTap,
                         )
                     }
                 }
