@@ -1,0 +1,29 @@
+{
+  "description": "Cross-platform SearchMatcher parity fixtures. Each case runs SearchMatcher.search(query, ContentStore.searchIndex) and asserts: at least `minExpectedResultCount` results, AND (if present) some result's document id CONTAINS `mustContainDocId`, AND (if present) some result's document type equals `mustMatchType`. Mirror copy lives at android/app/src/test/resources/search_query_golden.json — keep them identical.",
+  "cases": [
+    {
+      "query": "ave maria",
+      "minExpectedResultCount": 1,
+      "mustContainDocId": "prayer:ave"
+    },
+    {
+      "query": "kyrie",
+      "minExpectedResultCount": 1,
+      "mustContainDocId": "kyrie"
+    },
+    {
+      "query": "kyrie eleison",
+      "minExpectedResultCount": 1,
+      "mustMatchType": "missal"
+    },
+    {
+      "query": "magnificat",
+      "minExpectedResultCount": 1,
+      "mustMatchType": "office"
+    },
+    {
+      "query": "magn",
+      "minExpectedResultCount": 1
+    }
+  ]
+}

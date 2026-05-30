@@ -24,6 +24,7 @@ sealed class Screen(val route: String) {
     data object Onboarding : Screen("onboarding")
     data object Tutorial   : Screen("tutorial")
     data object Settings   : Screen("settings")
+    data object Search     : Screen("search")
 
     // ---- Detail screens with arguments ----
     data object ProperDetail : Screen("proper/{slug}") {
