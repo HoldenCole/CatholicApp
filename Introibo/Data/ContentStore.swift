@@ -138,6 +138,22 @@ final class ContentStore {
         }
     }
 
+    /// Inclusive `[min, max]` year span actually covered by the bundled ordo
+    /// for `rite`. The liturgical calendar uses this to bound month navigation
+    /// so a user can never page into a year with no ordo data. Computed from the
+    /// table keys ("yyyy-MM-dd") so it self-corrects if the data range changes.
+    func ordoYearRange(rite: MissalRite = .rite1962) -> ClosedRange<Int> {
+        let data: [String: OrdoEntry]
+        switch rite {
+        case .rite1962: data = ordoData
+        case .rite1955: data = ordoData1955
+        case .pre1955:  data = ordoDataPre1955
+        }
+        let years = data.keys.compactMap { Int($0.prefix(4)) }
+        guard let lo = years.min(), let hi = years.max() else { return 2024...2030 }
+        return lo...hi
+    }
+
     func properForToday(rite: MissalRite = .rite1962) -> MassProper? {
         let entry = ordoForDate(Date(), rite: rite)
         return properFromOrdo(entry, rite: rite)

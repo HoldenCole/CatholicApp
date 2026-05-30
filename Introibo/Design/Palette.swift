@@ -82,7 +82,7 @@ extension Color {
 
 // Liturgical colours (not theme-aware — always the same hue).
 enum LiturgicalColour: String {
-    case violet, rose, white, red, green
+    case violet, rose, white, red, green, black
 
     var swiftUIColor: Color {
         switch self {
@@ -91,6 +91,15 @@ enum LiturgicalColour: String {
         case .white:  return Color(red: 122/255, green:  90/255, blue:  14/255)
         case .red:    return Color.sanctuaryRed
         case .green:  return Color(red:  58/255, green:  93/255, blue:  40/255)
+        case .black:  return Color(red:  42/255, green:  37/255, blue:  33/255)
         }
+    }
+
+    /// Resolves an ordo `color` string (as stored in ordo.json) to a colour.
+    /// Unknown strings fall back to `.green` (ferial per annum), matching the
+    /// Android `LiturgicalColour.from(_:)` mirror so calendar cells never crash
+    /// on an unexpected value.
+    static func from(ordoColor raw: String) -> LiturgicalColour {
+        LiturgicalColour(rawValue: raw) ?? .green
     }
 }

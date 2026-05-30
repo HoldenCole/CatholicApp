@@ -24,6 +24,18 @@ enum class LiturgicalColour(val key: String) {
     WHITE("white"),
     RED("red"),
     GREEN("green"),
+    BLACK("black");
+
+    companion object {
+        /**
+         * Resolves an ordo `color` string (as stored in ordo.json) to a colour.
+         * Unknown strings fall back to [GREEN] (ferial per annum), mirroring the
+         * iOS `LiturgicalColour.from(ordoColor:)` so calendar cells never crash
+         * on an unexpected value.
+         */
+        fun from(key: String): LiturgicalColour =
+            entries.firstOrNull { it.key == key } ?: GREEN
+    }
 }
 
 enum class MysterySet(val key: String) {

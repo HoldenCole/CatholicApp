@@ -53,7 +53,7 @@ import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
-import com.lampstandhq.introibo.ui.theme.RawPalette
+import com.lampstandhq.introibo.ui.theme.liturgicalColor
 import com.lampstandhq.introibo.ui.components.BilingualLine
 import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
@@ -110,13 +110,8 @@ private fun dailyPsalm(): PsalmVerse {
 // Liturgical colour mapping
 // ---------------------------------------------------------------------------
 
-private fun liturgicalColor(colour: LiturgicalColour): Color = when (colour) {
-    LiturgicalColour.VIOLET -> RawPalette.LiturgicalViolet
-    LiturgicalColour.ROSE   -> RawPalette.LiturgicalRose
-    LiturgicalColour.WHITE  -> RawPalette.LiturgicalWhite
-    LiturgicalColour.RED    -> RawPalette.RedLight
-    LiturgicalColour.GREEN  -> RawPalette.LiturgicalGreen
-}
+// Liturgical colour → display Color now lives in ui.theme.liturgicalColor
+// (single source of truth shared with the calendar). Imported below.
 
 // ---------------------------------------------------------------------------
 // TodayScreen composable

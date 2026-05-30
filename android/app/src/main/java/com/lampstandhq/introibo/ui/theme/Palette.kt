@@ -5,6 +5,21 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
+
+/**
+ * Single source of truth mapping a [LiturgicalColour] to its invariant display
+ * [Color]. Used by the Today header and the liturgical calendar so the two can
+ * never disagree on a hue. Mirrors iOS `LiturgicalColour.swiftUIColor`.
+ */
+fun liturgicalColor(colour: LiturgicalColour): Color = when (colour) {
+    LiturgicalColour.VIOLET -> RawPalette.LiturgicalViolet
+    LiturgicalColour.ROSE   -> RawPalette.LiturgicalRose
+    LiturgicalColour.WHITE  -> RawPalette.LiturgicalWhite
+    LiturgicalColour.RED    -> RawPalette.RedLight
+    LiturgicalColour.GREEN  -> RawPalette.LiturgicalGreen
+    LiturgicalColour.BLACK  -> RawPalette.LiturgicalBlack
+}
 
 // ---------------------------------------------------------------------------
 // Raw colour tokens
@@ -48,6 +63,7 @@ object RawPalette {
     val LiturgicalRose   = Color(0xFFA04860)
     val LiturgicalWhite  = Color(0xFF7A5A0E)
     val LiturgicalGreen  = Color(0xFF3A5D28)
+    val LiturgicalBlack  = Color(0xFF2A2521)
 
     // Dot colour used for the paper-grain overlay
     val GrainDot = Color(0xFF5C3C1E)

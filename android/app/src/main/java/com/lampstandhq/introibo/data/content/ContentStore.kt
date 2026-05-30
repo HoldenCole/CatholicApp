@@ -204,6 +204,25 @@ object ContentStore {
         }
     }
 
+    /**
+     * Inclusive [min, max] year span actually covered by the bundled ordo for
+     * [rite]. The liturgical calendar uses this to bound month navigation so a
+     * user can never page into a year with no ordo data. Computed from the table
+     * keys ("yyyy-MM-dd") so it self-corrects if the data range changes.
+     * Mirrors iOS `ContentStore.ordoYearRange(rite:)`.
+     */
+    fun ordoYearRange(rite: MissalRite = MissalRite.RITE_1962): IntRange {
+        val data = when (rite) {
+            MissalRite.RITE_1955 -> ordoData1955
+            MissalRite.PRE_1955 -> ordoDataPre1955
+            else -> ordoData
+        }
+        val years = data.keys.mapNotNull { it.take(4).toIntOrNull() }
+        val lo = years.minOrNull() ?: return 2024..2030
+        val hi = years.maxOrNull() ?: return 2024..2030
+        return lo..hi
+    }
+
     fun properForDate(date: java.time.LocalDate, rite: MissalRite = MissalRite.RITE_1962): MassProper? {
         val entry = ordoForDate(date, rite) ?: return null
         val key = entry.winnerKey
