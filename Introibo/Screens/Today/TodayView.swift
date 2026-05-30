@@ -13,6 +13,7 @@ struct TodayView: View {
     private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     @State private var showSettings = false
     @State private var showSearch = false
+    @State private var showCalendar = false
     @State private var offeringTapped = false
     @State private var showProper = false
     @State private var tutorialNavTarget: String? = nil
@@ -53,6 +54,9 @@ struct TodayView: View {
             .fullScreenCover(isPresented: $showSearch) {
                 SearchView()
             }
+            .fullScreenCover(isPresented: $showCalendar) {
+                CalendarView()
+            }
             .sheet(isPresented: $offeringTapped) {
                 if let prayer = ContentStore.shared.prayer(slug: offeringSlug()) {
                     PrayerDetailView(prayer: prayer)
@@ -75,6 +79,12 @@ struct TodayView: View {
         VStack(spacing: 6) {
             HStack(spacing: 18) {
                 Spacer()
+                Button { showCalendar = true } label: {
+                    Image(systemName: "calendar")
+                        .foregroundStyle(Color.goldLeaf)
+                        .font(.system(size: 16))
+                }
+                .spotlightAnchor("calendarButton")
                 Button { showSearch = true } label: {
                     Image(systemName: "magnifyingglass")
                         .foregroundStyle(Color.goldLeaf)
