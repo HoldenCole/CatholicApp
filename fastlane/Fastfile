@@ -81,24 +81,22 @@ platform :ios do
     UI.message("Looking for IPA at: #{ipa_abs}")
 
     changelog = <<~NOTES
-      Tier 1 content correctness pass.
+      What's new in 1.2.
 
-      Mass: Restored Wednesday Luke Passion, Good Friday Mass,
-      Easter Vigil (1962 + pre-1955 forms). Corrected All Souls,
-      All Saints, Sts Peter & Paul Mass content. Doctor/Apostle/
-      Evangelist feasts now show Credo. Sundays after Pentecost
-      and Epiphany now green.
+      Search: Find any prayer, Mass, Office hour, saint, or
+      reference article from one search box. Diacritic-insensitive,
+      so "miserere" finds "Miserére".
 
-      Office: Added Litany of the Saints, Athanasian Creed,
-      and Office of the Dead.
+      In-text links: Tap highlighted references to jump straight
+      to the related prayer, Mass part, or article — and see what
+      links back to the page you're on.
 
-      Calendar: Holy Family transfers to Jan 13 when Epiphany
-      falls on Sunday. 1962 abolished apostle vigils stripped.
-      38 previously-blank sanctoral days now resolve.
+      Liturgical calendar: Browse any month from the new calendar
+      button on the home screen. Each day shows its feast or feria
+      and liturgical colour; tap a day to see its details and open
+      that day's Mass. Rite-aware (1962 / 1955 / pre-1955).
 
-      Pre-1955: Palm Sunday Last Gospel substitution now works.
-      Marian antiphon boundaries corrected at Feb 2, Triduum,
-      Saturday before Advent.
+      Plus Office and parchment-mode fixes from your feedback.
     NOTES
 
     upload_to_testflight(
