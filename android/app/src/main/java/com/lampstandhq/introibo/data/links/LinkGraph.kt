@@ -1,7 +1,10 @@
 package com.lampstandhq.introibo.data.links
 
+import com.lampstandhq.introibo.BuildConfig
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.search.DeepLinkTarget
+import com.lampstandhq.introibo.ui.navigation.AnchorValidation
+import com.lampstandhq.introibo.ui.navigation.DeepLinkRouter
 
 // MARK: - LinkGraph (Phase 3: contextual-links reverse index)
 //
@@ -64,7 +67,9 @@ class LinkGraph private constructor(
          * returns []).
          */
         fun build(store: ContentStore): LinkGraph {
-            val builder = Builder()
+            // Dangling-link tripwire is enabled only in debug builds; release
+            // builds skip it (the validation block compiles out to a no-op).
+            val builder = Builder(validate = BuildConfig.DEBUG)
 
             // Registration list: adding a content type = adding one line here
             // (mirrors SearchIndex.build / SearchExtractors).
@@ -83,15 +88,30 @@ class LinkGraph private constructor(
      * Accumulates inbound edges while scanners run, deduping per key so the same
      * source linking to the same target multiple times is recorded once.
      */
-    class Builder {
+    class Builder(private val validate: Boolean = false) {
         private val inbound = linkedMapOf<String, MutableList<LinkSource>>()
         private val seen = linkedMapOf<String, MutableSet<LinkSource>>()
 
         /**
          * Record that [source] links to [outbound]. The edge is filed under the
          * outbound target's document-home canonical key.
+         *
+         * When [validate] is set (debug builds), the moment content introduces a
+         * link whose id does not resolve OR whose position anchor is invalid, this
+         * fails loudly so a content edit can never silently ship a dead link. The
+         * check is a no-op in release.
          */
         fun record(source: LinkSource, outbound: DeepLinkTarget) {
+            if (validate) {
+                val resolves = DeepLinkRouter.resolve(outbound) != null
+                val anchorOk = AnchorValidation.anchorExists(outbound)
+                if (!resolves || !anchorOk) {
+                    throw AssertionError(
+                        "dangling link: ${source.label} (${source.target.wireString}) -> ${outbound.wireString}",
+                    )
+                }
+            }
+
             val key = canonicalKey(outbound)
             val seenForKey = seen.getOrPut(key) { mutableSetOf() }
             if (!seenForKey.add(source)) return

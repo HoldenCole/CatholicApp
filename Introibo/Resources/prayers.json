@@ -271,6 +271,12 @@
     "occasions": [
       "Before Confession",
       "During Mass"
+    ],
+    "related": [
+      {
+        "label": "Penance (Confession) (Liber)",
+        "target": "reference:mass-penance"
+      }
     ]
   },
   {

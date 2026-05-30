@@ -68,7 +68,11 @@ struct LinkGraph {
     /// into the inbound index. Pure function of its inputs — safe off the main
     /// thread.
     static func build(from store: ContentStore) -> LinkGraph {
+        #if DEBUG
+        var builder = Builder(validateAgainst: store)
+        #else
         var builder = Builder()
+        #endif
 
         // Registration list: adding a content type = adding one line here.
         LinkScanners.prayers(store.prayers, into: &builder)
@@ -89,9 +93,36 @@ struct LinkGraph {
         private var inbound: [String: [LinkSource]] = [:]
         private var seen: [String: Set<LinkSource>] = [:]
 
+        #if DEBUG
+        /// In DEBUG builds the builder holds the store so it can assert, at the
+        /// instant an edge is recorded, that the outbound target is not dangling.
+        /// nil in the default (release-shaped) init so the no-arg path stays pure.
+        private let validationStore: ContentStore?
+        init() { validationStore = nil }
+        init(validateAgainst store: ContentStore) { validationStore = store }
+        #else
+        init() {}
+        #endif
+
         /// Record that `source` links to `outbound`. The edge is filed under the
         /// outbound target's document-home canonical key.
         mutating func record(source: LinkSource, linksTo outbound: DeepLinkTarget) {
+            #if DEBUG
+            // Dangling-link tripwire: the moment content introduces a link whose
+            // id does not resolve OR whose position anchor is invalid, fail loudly
+            // in DEBUG so a content edit can never silently ship a dead link.
+            // Non-fatal in release (this whole block compiles out).
+            if let store = validationStore {
+                let resolves = DeepLinkRouter.resolve(outbound, store: store) != nil
+                let anchorOK = AnchorValidation.anchorExists(outbound, store: store)
+                if !resolves || !anchorOK {
+                    assertionFailure(
+                        "dangling link: \(source.label) (\(source.target.wireString)) -> \(outbound.wireString)"
+                    )
+                }
+            }
+            #endif
+
             let key = LinkGraph.canonicalKey(outbound)
             if seen[key]?.contains(source) == true { return }
             seen[key, default: []].insert(source)
