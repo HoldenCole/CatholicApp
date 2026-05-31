@@ -365,7 +365,7 @@ struct LiturgicalContext {
             if isEmberDate(date: date, easter: easter, pentecost: pentecost,
                            firstAdvent: firstAdvent, cal: cal, dow: dow) {
                 return Penance(
-                    title: "Ember Day — Fast & Abstinence",
+                    title: "Ember Day: Fast & Abstinence",
                     latin: "Quattuor Témporum",
                     desc: discipline == .strict
                         ? "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat."
@@ -380,8 +380,8 @@ struct LiturgicalContext {
         if discipline != .discipline1962 {
             if isVigilFast(date: date, easter: easter, pentecost: pentecost, cal: cal) {
                 return Penance(
-                    title: "Vigil — Fast & Abstinence",
-                    latin: "Vigília — Ieiúnium",
+                    title: "Vigil: Fast & Abstinence",
+                    latin: "Vigília: Ieiúnium",
                     desc: discipline == .strict
                         ? "Fast (one full meal, no upper age limit) and abstinence."
                         : "Fast (one full meal and two collations, ages 21–59) and abstinence.",
@@ -398,7 +398,7 @@ struct LiturgicalContext {
                 : "Fast: one full meal and two small collations (ages 21–59)."
             if isFriday {
                 return Penance(
-                    title: "Lenten Friday — Fast & Abstinence",
+                    title: "Lenten Friday: Fast & Abstinence",
                     latin: "Feria Sexta in Quadragésima",
                     desc: "\(fastDesc) Complete abstinence from flesh-meat.",
                     rubric: "℟. Quadragésima · Feria Sexta",
@@ -408,7 +408,7 @@ struct LiturgicalContext {
             // 1917/strict: Saturdays in Lent are days of abstinence (in addition to fast)
             if isSaturday && discipline != .discipline1962 {
                 return Penance(
-                    title: "Lenten Saturday — Fast & Abstinence",
+                    title: "Lenten Saturday: Fast & Abstinence",
                     latin: "Sábbato in Quadragésima",
                     desc: "\(fastDesc) Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).",
                     rubric: "℟. Quadragésima · Sábbato",
@@ -458,7 +458,7 @@ struct LiturgicalContext {
                 )
             }
             return Penance(
-                title: "Advent — Penitential Season",
+                title: "Advent: Penitential Season",
                 latin: "Tempus Advéntus",
                 desc: "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
                 rubric: "℟. \(feriaLatin[dow]) in Advéntu",

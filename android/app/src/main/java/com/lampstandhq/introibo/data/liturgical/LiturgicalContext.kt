@@ -352,7 +352,7 @@ data class LiturgicalContext(
                 val desc = if (discipline == PenanceDiscipline.STRICT)
                     "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat."
                 else "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat."
-                return Penance("Ember Day — Fast & Abstinence", "Quattuor Témporum", desc,
+                return Penance("Ember Day: Fast & Abstinence", "Quattuor Témporum", desc,
                     "℟. Quattuor Témporum", true)
             }
             if (discipline != PenanceDiscipline.DISCIPLINE_1962 &&
@@ -360,19 +360,19 @@ data class LiturgicalContext(
                 val desc = if (discipline == PenanceDiscipline.STRICT)
                     "Fast (one full meal, no upper age limit) and abstinence."
                 else "Fast (one full meal and two collations, ages 21–59) and abstinence."
-                return Penance("Vigil — Fast & Abstinence", "Vigília — Ieiúnium", desc,
+                return Penance("Vigil: Fast & Abstinence", "Vigília: Ieiúnium", desc,
                     "℟. Vigília", true)
             }
             if (isLent) {
                 val fastDesc = if (discipline == PenanceDiscipline.STRICT)
                     "Fast: one full meal (no upper age limit). Two small collations permitted."
                 else "Fast: one full meal and two small collations (ages 21–59)."
-                if (isFriday) return Penance("Lenten Friday — Fast & Abstinence",
+                if (isFriday) return Penance("Lenten Friday: Fast & Abstinence",
                     "Feria Sexta in Quadragésima",
                     "$fastDesc Complete abstinence from flesh-meat.",
                     "℟. Quadragésima · Feria Sexta", true)
                 if (isSaturday && discipline != PenanceDiscipline.DISCIPLINE_1962)
-                    return Penance("Lenten Saturday — Fast & Abstinence",
+                    return Penance("Lenten Saturday: Fast & Abstinence",
                         "Sábbato in Quadragésima",
                         "$fastDesc Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).",
                         "℟. Quadragésima · Sábbato", true)
@@ -392,7 +392,7 @@ data class LiturgicalContext(
                 if (isFriday) return Penance("Friday Abstinence", "Feria Sexta",
                     "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
                     "℟. Feria Sexta", false)
-                return Penance("Advent — Penitential Season", "Tempus Advéntus",
+                return Penance("Advent: Penitential Season", "Tempus Advéntus",
                     "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
                     "℟. ${feriaLatinNames[dow]} in Advéntu", false)
             }
