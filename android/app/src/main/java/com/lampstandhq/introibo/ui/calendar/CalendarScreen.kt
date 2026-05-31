@@ -1,6 +1,7 @@
 package com.lampstandhq.introibo.ui.calendar
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -13,9 +14,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.itemsIndexed
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
@@ -28,6 +30,7 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -45,6 +48,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.content.ContentStore
@@ -66,15 +70,10 @@ import java.time.LocalDate
 
 // MARK: - CalendarScreen (v1.2 feature 3: liturgical calendar)
 //
-// Browsable month grid of the traditional calendar, opened from the Today
-// header. Each day shows its liturgical-colour pip; tapping a day opens a
-// bottom-sheet detail with the feast/feria, season, colour, special-day flags,
-// and a link to that day's Mass. All data comes from the bundled ordo tables
-// via CalendarMonth.build / ContentStore.ordoForDate — zero network.
-//
-// iOS mirror: Introibo/Screens/Calendar/CalendarView.swift
-
-private val weekdayLetters = listOf("S", "M", "T", "W", "T", "F", "S")
+// List-based month view of the traditional calendar. Each day gets a full row
+// showing the liturgical-colour bar, day-of-week, day number, feast/feria
+// name, and Sunday-obligation badge. Tapping a row opens a bottom-sheet
+// detail. iOS mirror: Introibo/Screens/Calendar/CalendarView.swift
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -110,12 +109,18 @@ fun CalendarScreen(
         month = m
     }
 
+    val listState = rememberLazyListState()
+    LaunchedEffect(year, month) {
+        val todayIdx = model.days.indexOfFirst { it.isToday }
+        if (todayIdx >= 0) listState.animateScrollToItem(todayIdx)
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(colors.pageBackground),
     ) {
-        // ---- Title bar ----
+        // Title bar
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -141,73 +146,47 @@ fun CalendarScreen(
                 )
             }
             IconButton(onClick = onBack) {
-                Icon(
-                    imageVector = Icons.Filled.Close,
-                    contentDescription = "Close",
-                    tint = colors.tertiaryText,
-                    modifier = Modifier.size(18.dp),
-                )
+                Icon(Icons.Filled.Close, "Close", tint = colors.tertiaryText, modifier = Modifier.size(18.dp))
             }
         }
 
-        // ---- Month / year navigation ----
+        // Month / year nav
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 24.dp, vertical = 12.dp),
+                .padding(horizontal = 24.dp, vertical = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            NavGlyph("«", enabled = year > yearRange.first) { step(-12) }
-            NavGlyph("‹", enabled = canGoPrev) { step(-1) }
+            NavGlyph("‹", canGoPrev) { step(-1) }
             Spacer(Modifier.weight(1f))
-            Text(text = model.title, style = type.titleM, color = colors.primaryText)
-            Spacer(Modifier.weight(1f))
-            NavGlyph("›", enabled = canGoNext) { step(1) }
-            NavGlyph("»", enabled = year < yearRange.last) { step(12) }
-        }
-
-        // ---- Weekday header ----
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 18.dp, bottom = 6.dp),
-        ) {
-            weekdayLetters.forEach { letter ->
-                Text(
-                    text = letter,
-                    style = type.captionSm,
-                    color = colors.tertiaryText,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.weight(1f),
-                )
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(text = model.title.substringBefore(" "), style = type.titleM, color = colors.primaryText)
+                Text(text = "$year", style = type.captionSm, color = colors.tertiaryText)
             }
+            Spacer(Modifier.weight(1f))
+            NavGlyph("›", canGoNext) { step(1) }
         }
         HorizontalDivider(color = colors.frameLine, thickness = 0.5.dp)
 
-        // ---- Grid ----
-        val cells: List<CalendarDay?> =
-            List(model.leadingBlanks) { null } + model.days
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(7),
+        // Day list
+        LazyColumn(
+            state = listState,
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
-                .padding(horizontal = 18.dp, vertical = 8.dp),
+                .weight(1f),
         ) {
-            itemsIndexed(cells) { _, cell ->
-                if (cell == null) {
-                    Box(Modifier.height(46.dp))
-                } else {
-                    DayCell(day = cell) { selectedDay = cell }
-                }
+            itemsIndexed(model.days) { _, day ->
+                DayRow(day = day) { selectedDay = day }
+                HorizontalDivider(
+                    color = colors.frameLine.copy(alpha = 0.5f),
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(start = 60.dp),
+                )
             }
         }
-
-        // ---- Colour legend ----
-        Legend()
     }
 
-    // ---- Day detail sheet ----
+    // Day detail sheet
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
     selectedDay?.let { day ->
@@ -235,79 +214,97 @@ private fun NavGlyph(glyph: String, enabled: Boolean, onClick: () -> Unit) {
     val colors = IntroiboTheme.colors
     Text(
         text = glyph,
-        fontSize = 18.sp,
+        fontSize = 22.sp,
         fontWeight = FontWeight.Medium,
         color = if (enabled) colors.goldLeaf else colors.frameLine,
         textAlign = TextAlign.Center,
         modifier = Modifier
-            .width(28.dp)
-            .let { if (enabled) it.clickable { onClick() } else it },
+            .size(44.dp)
+            .clip(CircleShape)
+            .background(if (enabled) colors.goldLeaf.copy(alpha = 0.08f) else Color.Transparent)
+            .let { if (enabled) it.clickable { onClick() } else it }
+            .padding(top = 8.dp),
     )
 }
 
 @Composable
-private fun DayCell(
-    day: CalendarDay,
-    onClick: () -> Unit,
-) {
+private fun DayRow(day: CalendarDay, onClick: () -> Unit) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
-            .height(46.dp)
             .fillMaxWidth()
-            .clip(RoundedCornerShape(6.dp))
-            .background(if (day.isToday) colors.sanctuaryRed else Color.Transparent)
-            .clickable { onClick() },
+            .clickable { onClick() }
+            .padding(vertical = 14.dp),
     ) {
-        Text(
-            text = "${day.day}",
-            style = type.bodySm,
-            fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
-            color = if (day.isToday) colors.parchment else colors.primaryText,
-        )
-        Spacer(Modifier.height(3.dp))
+        // Liturgical colour bar
         Box(
             modifier = Modifier
-                .size(6.dp)
-                .clip(RoundedCornerShape(3.dp))
+                .width(3.dp)
+                .height(52.dp)
                 .background(day.colour?.let { liturgicalColor(it) } ?: Color.Transparent),
         )
-    }
-}
 
-@Composable
-private fun Legend() {
-    val tertiary = IntroiboTheme.colors.tertiaryText
-    val pairs = listOf(
-        LiturgicalColour.WHITE to "White",
-        LiturgicalColour.RED to "Red",
-        LiturgicalColour.GREEN to "Green",
-        LiturgicalColour.VIOLET to "Violet",
-        LiturgicalColour.ROSE to "Rose",
-        LiturgicalColour.BLACK to "Black",
-    )
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 18.dp, vertical = 16.dp),
-        horizontalArrangement = Arrangement.SpaceEvenly,
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        pairs.forEach { (colour, label) ->
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(
+        // Day number + weekday
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                .width(52.dp)
+                .padding(start = 4.dp),
+        ) {
+            Text(
+                text = day.weekdayAbbrev,
+                fontSize = 10.sp,
+                fontWeight = FontWeight.Medium,
+                letterSpacing = 0.5.sp,
+                color = colors.tertiaryText,
+            )
+            Text(
+                text = "${day.day}",
+                fontSize = 24.sp,
+                fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
+                color = if (day.isToday) colors.sanctuaryRed else colors.primaryText,
+            )
+        }
+
+        // Feast / feria name + badges
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(start = 12.dp),
+        ) {
+            Text(
+                text = day.label ?: "Feria",
+                style = type.body,
+                fontWeight = if (day.isMajor) FontWeight.Medium else FontWeight.Normal,
+                color = colors.primaryText,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            if (day.isSunday) {
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = "SUNDAY OBLIGATION",
+                    fontSize = 9.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    letterSpacing = 0.5.sp,
+                    color = colors.sanctuaryRed,
                     modifier = Modifier
-                        .size(6.dp)
-                        .clip(RoundedCornerShape(3.dp))
-                        .background(liturgicalColor(colour)),
+                        .border(0.5.dp, colors.sanctuaryRed.copy(alpha = 0.5f), RoundedCornerShape(3.dp))
+                        .padding(horizontal = 8.dp, vertical = 3.dp),
                 )
-                Spacer(Modifier.width(4.dp))
-                Text(text = label, fontSize = 9.sp, color = tertiary)
             }
         }
+
+        // Chevron
+        Text(
+            text = "›",
+            fontSize = 20.sp,
+            color = colors.tertiaryText,
+            modifier = Modifier.padding(end = 16.dp),
+        )
     }
 }
 
@@ -356,12 +353,7 @@ private fun DayDetail(
                 )
             }
             Spacer(Modifier.height(8.dp))
-            Text(
-                text = title,
-                style = type.pageTitle,
-                color = colors.ivory,
-                textAlign = TextAlign.Center,
-            )
+            Text(text = title, style = type.pageTitle, color = colors.ivory, textAlign = TextAlign.Center)
             Spacer(Modifier.height(4.dp))
             Text(
                 text = LongDateFormatter.format(day.date),
@@ -373,16 +365,21 @@ private fun DayDetail(
         Spacer(Modifier.height(20.dp))
 
         day.colour?.let { colour ->
-            InfoRow(label = "Liturgical Colour", value = colour.key.replaceFirstChar { it.uppercase() }, swatch = colour)
+            InfoRow("Liturgical Colour", colour.key.replaceFirstChar { it.uppercase() }, colour)
             Spacer(Modifier.height(16.dp))
         }
-        InfoRow(label = "Season", value = ctx.englishName)
+        InfoRow("Season", ctx.englishName)
 
         if (ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay) {
             Spacer(Modifier.height(16.dp))
             if (ctx.isFirstFriday) Flag("First Friday")
             if (ctx.isFirstSaturday) Flag("First Saturday")
             if (ctx.isEmberDay) Flag("Ember Day")
+        }
+
+        if (day.isSunday) {
+            Spacer(Modifier.height(16.dp))
+            Flag("Sunday Obligation")
         }
 
         if (proper != null) {
@@ -394,20 +391,11 @@ private fun DayDetail(
                     .clickable { onOpenProper(proper.slug) }
                     .padding(14.dp),
             ) {
-                Icon(
-                    imageVector = Icons.Filled.MenuBook,
-                    contentDescription = null,
-                    tint = colors.sanctuaryRed,
-                    modifier = Modifier.size(16.dp),
-                )
+                Icon(Icons.Filled.MenuBook, null, tint = colors.sanctuaryRed, modifier = Modifier.size(16.dp))
                 Spacer(Modifier.width(10.dp))
-                Text(
-                    text = "View the Mass",
-                    style = type.titleM.copy(fontStyle = FontStyle.Italic),
-                    color = colors.primaryText,
-                )
+                Text("View the Mass", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
                 Spacer(Modifier.weight(1f))
-                Text(text = "›", color = colors.tertiaryText, fontSize = 16.sp)
+                Text("›", color = colors.tertiaryText, fontSize = 16.sp)
             }
         }
     }
@@ -418,24 +406,14 @@ private fun InfoRow(label: String, value: String, swatch: LiturgicalColour? = nu
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
     Column {
-        Text(
-            text = label.uppercase(),
-            fontSize = 10.sp,
-            letterSpacing = 1.5.sp,
-            color = colors.tertiaryText,
-        )
+        Text(label.uppercase(), fontSize = 10.sp, letterSpacing = 1.5.sp, color = colors.tertiaryText)
         Spacer(Modifier.height(4.dp))
         Row(verticalAlignment = Alignment.CenterVertically) {
             swatch?.let {
-                Box(
-                    modifier = Modifier
-                        .size(10.dp)
-                        .clip(RoundedCornerShape(5.dp))
-                        .background(liturgicalColor(it)),
-                )
+                Box(Modifier.size(10.dp).clip(RoundedCornerShape(5.dp)).background(liturgicalColor(it)))
                 Spacer(Modifier.width(8.dp))
             }
-            Text(text = value, style = type.body, color = colors.primaryText)
+            Text(value, style = type.body, color = colors.primaryText)
         }
     }
 }
@@ -444,10 +422,5 @@ private fun InfoRow(label: String, value: String, swatch: LiturgicalColour? = nu
 private fun Flag(text: String) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    Text(
-        text = text,
-        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-        color = colors.sanctuaryRed,
-        modifier = Modifier.padding(vertical = 2.dp),
-    )
+    Text(text, style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed, modifier = Modifier.padding(vertical = 2.dp))
 }

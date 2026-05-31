@@ -20,10 +20,11 @@ import java.util.Locale
 // Both platforms read the SAME bundled ordo tables, so a given (year, month,
 // rite) yields the same feast/colour per day on each platform by construction.
 
-/** One day cell in a month grid. */
+/** One day cell in a calendar list row. */
 data class CalendarDay(
     val date: LocalDate,
     val day: Int,            // day-of-month, 1..31
+    val weekday: Int,        // 1=Sun .. 7=Sat (matches iOS Calendar.liturgical weekday)
     val ordo: OrdoEntry?,    // null only if the date is outside the bundled ordo
     val isToday: Boolean,
 ) {
@@ -38,6 +39,15 @@ data class CalendarDay(
     /** A 1st- or 2nd-class day (rank >= 5) — the view emphasises these. */
     val isMajor: Boolean
         get() = (ordo?.rank ?: 0.0) >= 5.0
+
+    val isSunday: Boolean get() = weekday == 1
+
+    /** Three-letter weekday abbreviation. */
+    val weekdayAbbrev: String get() = abbrevs[weekday - 1]
+
+    companion object {
+        private val abbrevs = listOf("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT")
+    }
 }
 
 /** A single month laid out for display. */
@@ -72,10 +82,13 @@ data class CalendarMonth(
             val days = ArrayList<CalendarDay>(dayCount)
             for (d in 1..dayCount) {
                 val date = LocalDate.of(year, month, d)
+                // DayOfWeek: MONDAY=1..SUNDAY=7 → remap to 1=Sun..7=Sat
+                val wd = date.dayOfWeek.value % 7 + 1
                 days.add(
                     CalendarDay(
                         date = date,
                         day = d,
+                        weekday = wd,
                         ordo = ContentStore.ordoForDate(date, rite),
                         isToday = date == today,
                     )

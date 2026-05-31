@@ -2,15 +2,11 @@ import SwiftUI
 
 // MARK: - CalendarView (v1.2 feature 3: liturgical calendar)
 //
-// A browsable month grid of the traditional calendar, presented full-screen
-// from the Today header. Each day shows its liturgical colour; tapping a day
-// opens a detail with the day's feast/feria, season, colour, and a link to
-// that day's Mass. Everything is computed from the bundled ordo tables via
-// `CalendarMonth.build` / `ContentStore.ordoForDate` — zero network.
-//
-// The displayed rite follows the user's setting, so the calendar always agrees
-// with the rest of the app. Month navigation is bounded to the years the ordo
-// data actually covers (ContentStore.ordoYearRange).
+// A browsable month list of the traditional calendar, presented full-screen
+// from the Today header. Each day gets a full row showing the liturgical colour
+// bar, day-of-week, day number, feast/feria name, and Sunday-obligation badge.
+// Tapping a row opens a detail sheet with season, colour, special-day flags,
+// and a link to that day's Mass.
 //
 // Android mirror: android/.../ui/calendar/CalendarScreen.kt
 
@@ -21,16 +17,12 @@ struct CalendarView: View {
     @State private var year: Int
     @State private var month: Int
     @State private var selectedDay: CalendarDay?
-    // "View the Mass" presents ProperView as a SIBLING sheet of the day detail,
-    // chained through the day sheet's onDismiss — never a sheet nested inside a
-    // sheet (which presents unreliably under a fullScreenCover).
     @State private var pendingProper: MassProper?
     @State private var properToShow: MassProper?
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var store: ContentStore { .shared }
 
-    /// `initial` decides which month opens first (defaults to the current month).
     init(initial: Date = Date()) {
         let cal = Calendar.liturgical
         _year = State(initialValue: cal.component(.year, from: initial))
@@ -43,27 +35,19 @@ struct CalendarView: View {
     }
     private var canGoPrev: Bool { !(year == yearRange.lowerBound && month == 1) }
     private var canGoNext: Bool { !(year == yearRange.upperBound && month == 12) }
-    private var canGoPrevYear: Bool { year > yearRange.lowerBound }
-    private var canGoNextYear: Bool { year < yearRange.upperBound }
-
-    private static let weekdayLetters = ["S", "M", "T", "W", "T", "F", "S"]
-    private static let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 7)
 
     var body: some View {
         VStack(spacing: 0) {
             chrome
             navRow
-            weekdayHeader
             Divider().overlay(Color.frameLine)
-            grid
-            Spacer(minLength: 0)
-            legend
+            dayList
         }
         .background(Color.pageBackground.ignoresSafeArea())
         .sheet(item: $selectedDay, onDismiss: presentPendingProper) { day in
             DayDetailView(day: day, rite: rite) { proper in
                 pendingProper = proper
-                selectedDay = nil          // dismiss → onDismiss presents the Mass
+                selectedDay = nil
             }
         }
         .sheet(item: $properToShow) { proper in
@@ -71,16 +55,13 @@ struct CalendarView: View {
         }
     }
 
-    /// Called once the day-detail sheet has fully dismissed; presents the Mass
-    /// the user requested, if any. Deferred to the next runloop tick so the two
-    /// sheet transitions never overlap.
     private func presentPendingProper() {
         guard let proper = pendingProper else { return }
         pendingProper = nil
         DispatchQueue.main.async { properToShow = proper }
     }
 
-    // MARK: Chrome (title bar)
+    // MARK: Chrome
 
     private var chrome: some View {
         HStack {
@@ -110,145 +91,159 @@ struct CalendarView: View {
 
     private var navRow: some View {
         HStack(spacing: 16) {
-            navButton("\u{00AB}", enabled: canGoPrevYear) { step(months: -12) }   // « previous year
-            navButton("\u{2039}", enabled: canGoPrev) { step(months: -1) }        // ‹ previous month
+            navButton("\u{2039}", enabled: canGoPrev) { step(months: -1) }
             Spacer()
-            Text(model.title)
-                .font(.titleM)
-                .foregroundStyle(Color.primaryText)
+            VStack(spacing: 2) {
+                Text(monthName)
+                    .font(.titleM)
+                    .foregroundStyle(Color.primaryText)
+                Text("\(String(year))")
+                    .font(.captionSm)
+                    .foregroundStyle(Color.tertiaryText)
+            }
             Spacer()
-            navButton("\u{203A}", enabled: canGoNext) { step(months: 1) }         // › next month
-            navButton("\u{00BB}", enabled: canGoNextYear) { step(months: 12) }    // » next year
+            navButton("\u{203A}", enabled: canGoNext) { step(months: 1) }
         }
         .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.vertical, 10)
+    }
+
+    private var monthName: String {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "en_US_POSIX")
+        df.dateFormat = "LLLL"
+        var comps = DateComponents()
+        comps.year = year; comps.month = month; comps.day = 1
+        guard let d = Calendar.liturgical.date(from: comps) else { return "" }
+        return df.string(from: d)
     }
 
     private func navButton(_ glyph: String, enabled: Bool, _ action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(glyph)
-                .font(.system(size: 18, weight: .medium))
+                .font(.system(size: 22, weight: .medium))
                 .foregroundStyle(enabled ? Color.goldLeaf : Color.frameLine)
-                .frame(width: 24)
+                .frame(width: 44, height: 44)
+                .background(
+                    Circle()
+                        .fill(enabled ? Color.goldLeaf.opacity(0.08) : Color.clear)
+                )
         }
         .disabled(!enabled)
     }
 
-    private var weekdayHeader: some View {
-        HStack(spacing: 4) {
-            ForEach(Array(Self.weekdayLetters.enumerated()), id: \.offset) { _, letter in
-                Text(letter)
-                    .font(.captionSm)
-                    .foregroundStyle(Color.tertiaryText)
-                    .frame(maxWidth: .infinity)
+    // MARK: Day list
+
+    private var dayList: some View {
+        ScrollViewReader { proxy in
+            ScrollView {
+                LazyVStack(spacing: 0) {
+                    ForEach(model.days) { day in
+                        DayRow(day: day) { selectedDay = day }
+                        Divider()
+                            .overlay(Color.frameLine.opacity(0.5))
+                            .padding(.leading, 60)
+                    }
+                }
+                .padding(.bottom, 20)
             }
-        }
-        .padding(.horizontal, 18)
-        .padding(.bottom, 6)
-    }
-
-    // MARK: Grid
-
-    private var grid: some View {
-        LazyVGrid(columns: Self.columns, spacing: 4) {
-            ForEach(cells) { cell in
-                switch cell {
-                case .blank:
-                    Color.clear.frame(height: 46)
-                case .day(let d):
-                    dayCell(d)
+            .onAppear {
+                if let todayDay = model.days.first(where: { $0.isToday }) {
+                    proxy.scrollTo(todayDay.id, anchor: .center)
                 }
             }
         }
-        .padding(.horizontal, 18)
-        .padding(.top, 8)
-    }
-
-    private var cells: [CalCell] {
-        (0..<model.leadingBlanks).map { CalCell.blank($0) } + model.days.map { CalCell.day($0) }
-    }
-
-    private func dayCell(_ d: CalendarDay) -> some View {
-        Button { selectedDay = d } label: {
-            VStack(spacing: 4) {
-                Text("\(d.day)")
-                    .font(.bodySm)
-                    .fontWeight(d.isMajor ? .semibold : .regular)
-                    .foregroundStyle(d.isToday ? Color.parchment : Color.primaryText)
-                Circle()
-                    .fill(d.colour?.swiftUIColor ?? Color.clear)
-                    .frame(width: 6, height: 6)
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 46)
-            .background(
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(d.isToday ? Color.sanctuaryRed : Color.clear)
-            )
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-    }
-
-    // MARK: Legend
-
-    private var legend: some View {
-        let pairs: [(LiturgicalColour, String)] = [
-            (.white, "White"), (.red, "Red"), (.green, "Green"),
-            (.violet, "Violet"), (.rose, "Rose"), (.black, "Black"),
-        ]
-        return HStack(spacing: 14) {
-            ForEach(Array(pairs.enumerated()), id: \.offset) { _, pair in
-                HStack(spacing: 4) {
-                    Circle().fill(pair.0.swiftUIColor).frame(width: 6, height: 6)
-                    Text(pair.1).font(.system(size: 9)).foregroundStyle(Color.tertiaryText)
-                }
-            }
-        }
-        .padding(.horizontal, 18)
-        .padding(.vertical, 16)
-        .frame(maxWidth: .infinity)
     }
 
     // MARK: Navigation logic
 
     private var isCurrentMonth: Bool {
-        let cal = Calendar.liturgical
-        let now = Date()
+        let cal = Calendar.liturgical; let now = Date()
         return year == cal.component(.year, from: now) && month == cal.component(.month, from: now)
     }
 
     private func jumpToToday() {
-        let cal = Calendar.liturgical
-        let now = Date()
+        let cal = Calendar.liturgical; let now = Date()
         year = cal.component(.year, from: now)
         month = cal.component(.month, from: now)
     }
 
-    /// Steps the displayed month by `months` (can be ±1 or ±12), clamped to the
-    /// ordo year range so paging can never run off the bundled data.
     private func step(months: Int) {
-        var m = month + months
-        var y = year
+        var m = month + months; var y = year
         while m > 12 { m -= 12; y += 1 }
-        while m < 1 { m += 12; y -= 1 }
+        while m < 1  { m += 12; y -= 1 }
         y = min(max(y, yearRange.lowerBound), yearRange.upperBound)
-        year = y
-        month = m
+        year = y; month = m
     }
 }
 
-// MARK: - Grid cell
+// MARK: - Day row
 
-private enum CalCell: Identifiable {
-    case blank(Int)
-    case day(CalendarDay)
+private struct DayRow: View {
+    let day: CalendarDay
+    let onTap: () -> Void
 
-    var id: String {
-        switch self {
-        case .blank(let i): return "blank-\(i)"
-        case .day(let d):   return "day-\(d.day)"
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 0) {
+                // Liturgical colour bar
+                Rectangle()
+                    .fill(day.colour?.swiftUIColor ?? Color.clear)
+                    .frame(width: 3)
+
+                // Day number + weekday
+                VStack(spacing: 1) {
+                    Text(day.weekdayAbbrev)
+                        .font(.system(size: 10, weight: .medium))
+                        .tracking(0.5)
+                        .foregroundStyle(Color.tertiaryText)
+                    Text("\(day.day)")
+                        .font(.system(size: 24, weight: day.isMajor ? .semibold : .regular))
+                        .foregroundStyle(day.isToday ? Color.sanctuaryRed : Color.primaryText)
+                }
+                .frame(width: 52)
+                .padding(.leading, 4)
+
+                // Feast / feria name + badges
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(day.label ?? "Feria")
+                        .font(.body)
+                        .fontWeight(day.isMajor ? .medium : .regular)
+                        .foregroundStyle(Color.primaryText)
+                        .lineLimit(2)
+
+                    if day.isSunday {
+                        obligationBadge
+                    }
+                }
+                .padding(.leading, 12)
+
+                Spacer(minLength: 8)
+
+                // Chevron
+                Text("\u{203A}")
+                    .font(.system(size: 20))
+                    .foregroundStyle(Color.tertiaryText)
+                    .padding(.trailing, 16)
+            }
+            .padding(.vertical, 14)
+            .contentShape(Rectangle())
         }
+        .buttonStyle(.plain)
+        .id(day.id)
+    }
+
+    private var obligationBadge: some View {
+        Text("SUNDAY OBLIGATION")
+            .font(.system(size: 9, weight: .semibold))
+            .tracking(0.5)
+            .foregroundStyle(Color.sanctuaryRed)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 3)
+            .overlay(
+                RoundedRectangle(cornerRadius: 3)
+                    .stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 0.5)
+            )
     }
 }
 
@@ -257,8 +252,6 @@ private enum CalCell: Identifiable {
 private struct DayDetailView: View {
     let day: CalendarDay
     let rite: MissalRite
-    /// Invoked when the user taps "View the Mass"; the parent dismisses this
-    /// sheet and presents the proper as a sibling sheet.
     let onViewMass: (MassProper) -> Void
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
@@ -266,9 +259,6 @@ private struct DayDetailView: View {
     private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var ctx: LiturgicalContext { .for(date: day.date, rite: rite) }
     private var proper: MassProper? { ContentStore.shared.properForDate(day.date, rite: rite) }
-
-    /// Primary day title — the winning ordo name (Latin), or the feria name if
-    /// the date is outside the ordo range.
     private var title: String { day.ordo?.name ?? ctx.feriaLatin }
 
     var body: some View {
@@ -332,6 +322,10 @@ private struct DayDetailView: View {
                     if ctx.isFirstSaturday { flag("First Saturday") }
                     if ctx.isEmberDay { flag("Ember Day") }
                 }
+            }
+
+            if day.isSunday {
+                flag("Sunday Obligation")
             }
 
             if let proper {

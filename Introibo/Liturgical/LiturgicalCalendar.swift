@@ -17,6 +17,7 @@ import Foundation
 struct CalendarDay: Identifiable {
     let date: Date
     let day: Int             // day-of-month, 1...31
+    let weekday: Int         // 1=Sun .. 7=Sat (Calendar.liturgical weekday)
     let ordo: OrdoEntry?     // nil only if the date is outside the bundled ordo
     let isToday: Bool
 
@@ -32,6 +33,12 @@ struct CalendarDay: Identifiable {
 
     /// A 1st- or 2nd-class day (rank >= 5) — the view emphasises these.
     var isMajor: Bool { (ordo?.rank ?? 0) >= 5.0 }
+
+    var isSunday: Bool { weekday == 1 }
+
+    /// Three-letter weekday abbreviation (SUN, MON, … SAT).
+    var weekdayAbbrev: String { Self.abbrevs[weekday - 1] }
+    private static let abbrevs = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
 }
 
 /// A single month laid out for display.
@@ -69,6 +76,7 @@ struct CalendarMonth {
             days.append(CalendarDay(
                 date: date,
                 day: d,
+                weekday: cal.component(.weekday, from: date),
                 ordo: store.ordoForDate(date, rite: rite),
                 isToday: cal.isDate(date, inSameDayAs: today)
             ))
