@@ -23,6 +23,7 @@ struct HourView: View {
                     ScrollView(.vertical, showsIndicators: true) {
                         VStack(alignment: .leading, spacing: 0) {
                             header
+                                .frame(width: geo.size.width)
                             VStack(alignment: .leading, spacing: 22) {
                                 intro
                                 ForEach(Array(hour.parts.enumerated()), id: \.offset) { offset, part in
@@ -34,10 +35,16 @@ struct HourView: View {
                                     DeepLinkTarget(type: .office, id: hour.slug, position: nil)
                                 ))
                             }
-                            .padding(.horizontal, 20)
                             .padding(.vertical, 24)
+                            // Concrete column width = viewport minus the 20pt
+                            // gutters. Giving the parts column an EXPLICIT width
+                            // (not maxWidth:.infinity) forces every BilingualLine
+                            // HStack to receive a bounded proposal and wrap, so a
+                            // long Matins lesson can never widen the column and
+                            // centre-clip the whole hour.
+                            .frame(width: max(geo.size.width - 40, 0), alignment: .leading)
+                            .padding(.horizontal, 20)
                         }
-                        .frame(width: geo.size.width, alignment: .leading)
                     }
                     .onAppear { scrollToAnchor(proxy) }
                 }
