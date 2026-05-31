@@ -49,7 +49,7 @@ struct MissalView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     VStack(spacing: 2) {
-                        Text(todayProper?.english ?? "Ordo Missæ")
+                        Text(todayProper?.englishTitle ?? "Ordo Missæ")
                             .font(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
@@ -414,7 +414,7 @@ struct MissalView: View {
 
         if let proper = proper {
             lines.append(proper.title)
-            lines.append(proper.english)
+            lines.append(proper.englishTitle)
             lines.append(rite.short)
             lines.append("")
         } else {

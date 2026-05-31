@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.model
 
+import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.links.RelatedLink
 import kotlinx.serialization.Serializable
 
@@ -31,7 +32,11 @@ data class MassProper(
     val glorOverride: Boolean? = null,
     val credoOverride: Boolean? = null,
     val related: List<RelatedLink>? = null,
-)
+) {
+    /** English feast/feria name, resolved lazily from the translation map. */
+    val englishTitle: String
+        get() = ContentStore.ordoNameEnglish(title) ?: english
+}
 
 @Serializable
 data class ProperText(

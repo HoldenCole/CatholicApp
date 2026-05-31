@@ -84,7 +84,7 @@ fun MissalScreen() {
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Text(
-                        text = todayProper?.english ?: "Ordo Missae",
+                        text = todayProper?.englishTitle ?: "Ordo Missae",
                         style = type.titleM.copy(fontStyle = FontStyle.Italic),
                         color = colors.primaryText,
                     )
@@ -693,7 +693,7 @@ private fun buildFullMassText(
 
     if (proper != null) {
         lines.add(proper.title)
-        lines.add(proper.english)
+        lines.add(proper.englishTitle)
         lines.add(rite.short)
         lines.add("")
     } else {

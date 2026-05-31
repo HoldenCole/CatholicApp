@@ -27,6 +27,13 @@ struct MassProper: Identifiable, Decodable, Hashable {
     var related: [RelatedLink]? = nil
 
     var id: String { slug }
+
+    /// English feast/feria name, resolved lazily from the translation map.
+    /// Falls back to the stored `english` field (which is the Latin title)
+    /// if no translation exists.
+    var englishTitle: String {
+        ContentStore.shared.ordoNameEnglish(title) ?? english
+    }
 }
 
 struct ProperText: Decodable, Hashable {

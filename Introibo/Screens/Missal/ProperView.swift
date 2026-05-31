@@ -106,7 +106,7 @@ struct ProperView: View {
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
-            Text(proper.english)
+            Text(proper.englishTitle)
                 .font(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
@@ -133,7 +133,7 @@ struct ProperView: View {
     private func properAsText() -> String {
         var lines: [String] = []
         lines.append(proper.title)
-        lines.append(proper.english)
+        lines.append(proper.englishTitle)
         lines.append("")
 
         func addSection(_ label: String, lat: String, eng: String) {

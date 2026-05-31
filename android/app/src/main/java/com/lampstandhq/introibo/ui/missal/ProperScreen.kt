@@ -172,7 +172,7 @@ fun ProperScreen(
                         modifier = Modifier.padding(top = 8.dp, start = 20.dp, end = 20.dp),
                     )
                     Text(
-                        text = proper.english.uppercase(),
+                        text = proper.englishTitle.uppercase(),
                         style = type.captionSm.copy(
                             fontStyle = FontStyle.Italic,
                             letterSpacing = type.smallLabel.letterSpacing,
@@ -279,7 +279,7 @@ fun ProperScreen(
 private fun properAsText(proper: MassProper): String {
     val lines = mutableListOf<String>()
     lines.add(proper.title)
-    lines.add(proper.english)
+    lines.add(proper.englishTitle)
     lines.add("")
 
     fun addSection(label: String, lat: String, eng: String) {

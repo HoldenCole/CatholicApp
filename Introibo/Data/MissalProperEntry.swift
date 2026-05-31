@@ -48,12 +48,11 @@ struct MissalProperEntry: Decodable {
         else { legacyRank = 5 }                   // ferial / commemoration
 
         let latinTitle = officium ?? key
-        let engTitle = ContentStore.shared.ordoNameEnglish(latinTitle) ?? latinTitle
 
         return MassProper(
             slug: key,
             title: latinTitle,
-            english: engTitle,
+            english: latinTitle,
             rank: legacyRank,
             color: ordo?.color ?? "",
             season: ordo?.season,

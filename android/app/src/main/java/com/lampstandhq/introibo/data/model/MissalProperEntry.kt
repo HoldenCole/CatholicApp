@@ -1,6 +1,5 @@
 package com.lampstandhq.introibo.data.model
 
-import com.lampstandhq.introibo.data.content.ContentStore
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -56,12 +55,11 @@ data class MissalProperEntry(
         }
 
         val latinTitle = officium ?: key
-        val engTitle = ContentStore.ordoNameEnglish(latinTitle) ?: latinTitle
 
         return MassProper(
             slug = key,
             title = latinTitle,
-            english = engTitle,
+            english = latinTitle,
             rank = legacyRank,
             color = ordo?.color ?: "",
             season = ordo?.season,
