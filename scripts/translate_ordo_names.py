@@ -183,6 +183,19 @@ OVERRIDES = {
     "S. Rosæ a Sancta Maria Limanæ Virginis": "St. Rose of Lima, Virgin",
     "S. Hieronymi Presbyteris Confessoris et Ecclesiæ Doctoris": "St. Jerome, Priest, Confessor & Doctor of the Church",
     "Feria infra Hebdomadam Adventus": "Weekday of Advent",
+
+    # Missal-specific variant spellings and titles
+    "Dominica infra Octavam Epiphaniæ": "Sunday within the Octave of the Epiphany",
+    "Sanctissimi Nominis Jesu": "The Most Holy Name of Jesus",
+    "Patrocinii St. Joseph Confessoris Sponsi B.M.V. confessoris": "The Patronage of St. Joseph",
+    "Diei II infra Octavam Nativitatis": "2nd Day within the Octave of the Nativity",
+    "Diei III infra Octavam Nativitatis": "3rd Day within the Octave of the Nativity",
+    "Diei IV infra Octavam Nativitatis": "4th Day within the Octave of the Nativity",
+    "Die V infra Octavam Nativitatis": "5th Day within the Octave of the Nativity",
+    "Die VI infra Octavam Nativitatis": "6th Day within the Octave of the Nativity",
+    "Die VII infra Octavam Nativitatis": "7th Day within the Octave of the Nativity",
+    "Die Quinta infra Octavam Nativitatis": "5th Day within the Octave of the Nativity",
+    "Die Septima infra Octavam Nativitatis": "7th Day within the Octave of the Nativity",
 }
 
 # ---------------------------------------------------------------------------
@@ -217,7 +230,7 @@ SAINTS = {
     "Gregorii VII":"Gregory VII","Gulielmi":"William","Hedwigis":"Hedwig",
     "Henrici":"Henry","Hermenegildi":"Hermenegild","Hieronymi Æmiliani":"Jerome Emiliani",
     "Hieronymi":"Jerome","Hilarii":"Hilary","Hilarionis":"Hilarion","Hyacinthi":"Hyacinth",
-    "Ignatii":"Ignatius","Jacobi":"James","Joachim":"Joachim",
+    "Ignatii":"Ignatius","Irenæi":"Irenaeus","Jacobi":"James","Joachim":"Joachim",
     "Joannis Baptistæ de Rossi":"John Baptist de Rossi","Joannis Baptistæ de la Salle":"John Baptist de la Salle",
     "Joannis Bosco":"John Bosco","Joannis Cantii":"John Cantius","Joannis Chrysostomi":"John Chrysostom",
     "Joannis Damasceni":"John Damascene","Joannis Eudes":"John Eudes","Joannis Gualberti":"John Gualbert",
@@ -298,11 +311,15 @@ WEEK_TAIL = {
     "in Quadragesima": "of Lent",
     "Quadragesimæ": "of Lent",
     "post Octavam Pentecostes": "after Pentecost",
+    "post Pentecosten": "after Pentecost",
     "post Epiphaniam": "after Epiphany",
+    "post Epiiphaniam": "after Epiphany",
     "post Octavam Epiphaniæ": "after Epiphany",
     "Post Pascha": "after Easter",
     "post Pascha": "after Easter",
     "post Octavam Paschæ": "after Easter",
+    "post Octavam Paschae": "after Easter",
+    "I post Octavam Paschae": "after Easter",
 }
 
 def suffix_for(rest):
@@ -339,6 +356,12 @@ def suffix_for(rest):
     return fixed.get(rest)
 
 def translate_temporal(n):
+    # "De Dominica" prefix (missal variant) → strip and treat as Dominica
+    if n.startswith("De Dominica"):
+        result = translate_temporal("Dominica" + n[len("De Dominica"):])
+        if result:
+            return result
+
     # Good Friday
     if n.startswith("Feria") and ("in Passione" in n or "in Parasceve" in n):
         return "Good Friday"
@@ -462,7 +485,17 @@ def translate(name):
 
 def main():
     ordo = json.loads(ORDO.read_text())
-    names = sorted(set(v["name"] for v in ordo.values()))
+    # Collect names from both the ordo AND the missal propers so the english
+    # map covers feast titles wherever they appear.
+    names = set(v["name"] for v in ordo.values())
+    for mf in ["missal_tempora.json", "missal_sanctoral.json"]:
+        p = ROOT / "Introibo" / "Resources" / mf
+        if p.exists():
+            for v in json.loads(p.read_text()).values():
+                off = v.get("officium", "")
+                if off:
+                    names.add(off)
+    names = sorted(names)
     out, missed = {}, []
     for n in names:
         eng = translate(n)

@@ -47,10 +47,13 @@ struct MissalProperEntry: Decodable {
         else if doRank >= 3.0 { legacyRank = 4 } // 4th class
         else { legacyRank = 5 }                   // ferial / commemoration
 
+        let latinTitle = officium ?? key
+        let engTitle = ContentStore.shared.ordoNameEnglish(latinTitle) ?? latinTitle
+
         return MassProper(
             slug: key,
-            title: officium ?? key,
-            english: officium ?? key,
+            title: latinTitle,
+            english: engTitle,
             rank: legacyRank,
             color: ordo?.color ?? "",
             season: ordo?.season,
