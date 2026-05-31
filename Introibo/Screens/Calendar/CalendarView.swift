@@ -182,6 +182,8 @@ struct CalendarView: View {
 private struct DayRow: View {
     let day: CalendarDay
     let onTap: () -> Void
+    @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
     var body: some View {
         Button(action: onTap) {
@@ -204,13 +206,22 @@ private struct DayRow: View {
                 .frame(width: 52)
                 .padding(.leading, 4)
 
-                // Feast / feria name + badges
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(day.label ?? "Feria")
-                        .font(.body)
-                        .fontWeight(day.isMajor ? .medium : .regular)
-                        .foregroundStyle(Color.primaryText)
-                        .lineLimit(2)
+                // Feast / feria name (Latin on top, English below)
+                VStack(alignment: .leading, spacing: 3) {
+                    if mode != .vernacular {
+                        Text(day.label ?? "Feria")
+                            .font(.body)
+                            .fontWeight(day.isMajor ? .medium : .regular)
+                            .foregroundStyle(Color.primaryText)
+                            .lineLimit(2)
+                    }
+                    if mode != .latinOnly {
+                        Text(day.englishSubtitle)
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                            .lineLimit(1)
+                    }
 
                     if day.isSunday {
                         obligationBadge

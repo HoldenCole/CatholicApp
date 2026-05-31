@@ -269,7 +269,7 @@ private fun DayRow(day: CalendarDay, onClick: () -> Unit) {
             )
         }
 
-        // Feast / feria name + badges
+        // Feast / feria name: Latin on top, English below
         Column(
             modifier = Modifier
                 .weight(1f)
@@ -281,6 +281,14 @@ private fun DayRow(day: CalendarDay, onClick: () -> Unit) {
                 fontWeight = if (day.isMajor) FontWeight.Medium else FontWeight.Normal,
                 color = colors.primaryText,
                 maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Spacer(Modifier.height(3.dp))
+            Text(
+                text = day.englishSubtitle,
+                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                color = colors.secondaryText,
+                maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
             if (day.isSunday) {

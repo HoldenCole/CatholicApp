@@ -25,14 +25,12 @@ struct BilingualLine: View {
                     .foregroundStyle(Color.primaryText)
                     .lineSpacing(3)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
                 Text(attributedEng)
                     .font(.body)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .lineSpacing(3)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
             }
         } else {
             VStack(alignment: .leading, spacing: 3) {

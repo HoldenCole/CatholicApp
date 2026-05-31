@@ -39,6 +39,26 @@ struct CalendarDay: Identifiable {
     /// Three-letter weekday abbreviation (SUN, MON, … SAT).
     var weekdayAbbrev: String { Self.abbrevs[weekday - 1] }
     private static let abbrevs = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+
+    /// Full English weekday name.
+    var weekdayName: String { Self.dayNames[weekday - 1] }
+    private static let dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+    /// English subtitle: "Monday · Eastertide" — weekday + season, derived from
+    /// the ordo's season field so we never need to compute full LiturgicalContext.
+    var englishSubtitle: String {
+        let season = ordo.flatMap { Self.seasonLabels[$0.season] } ?? ""
+        if season.isEmpty { return weekdayName }
+        return "\(weekdayName)  \u{00B7}  \(season)"
+    }
+    private static let seasonLabels: [String: String] = [
+        "advent": "Advent",
+        "christmas": "Christmastide",
+        "lent": "Lent",
+        "easter": "Eastertide",
+        "ordinary": "Ordinary Time",
+        "pre-lent": "Pre-Lent",
+    ]
 }
 
 /// A single month laid out for display.

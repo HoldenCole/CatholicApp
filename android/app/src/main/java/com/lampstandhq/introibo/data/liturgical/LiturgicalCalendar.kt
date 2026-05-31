@@ -45,8 +45,29 @@ data class CalendarDay(
     /** Three-letter weekday abbreviation. */
     val weekdayAbbrev: String get() = abbrevs[weekday - 1]
 
+    /** Full English weekday name. */
+    val weekdayName: String get() = dayNames[weekday - 1]
+
+    /**
+     * English subtitle: "Monday · Eastertide" — weekday + season, derived from
+     * the ordo's season field so we never need to compute full LiturgicalContext.
+     */
+    val englishSubtitle: String get() {
+        val season = ordo?.season?.let { seasonLabels[it] } ?: ""
+        return if (season.isEmpty()) weekdayName else "$weekdayName  ·  $season"
+    }
+
     companion object {
         private val abbrevs = listOf("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT")
+        private val dayNames = listOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+        private val seasonLabels = mapOf(
+            "advent" to "Advent",
+            "christmas" to "Christmastide",
+            "lent" to "Lent",
+            "easter" to "Eastertide",
+            "ordinary" to "Ordinary Time",
+            "pre-lent" to "Pre-Lent",
+        )
     }
 }
 
