@@ -18,32 +18,29 @@ struct HourView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollViewReader { proxy in
-                ScrollView(.vertical, showsIndicators: true) {
-                    VStack(alignment: .leading, spacing: 0) {
-                        header
-                        VStack(alignment: .leading, spacing: 22) {
-                            intro
-                            ForEach(Array(hour.parts.enumerated()), id: \.offset) { offset, part in
-                                partView(part)
-                                    .id("part:\(offset)")
+            GeometryReader { geo in
+                ScrollViewReader { proxy in
+                    ScrollView(.vertical, showsIndicators: true) {
+                        VStack(alignment: .leading, spacing: 0) {
+                            header
+                            VStack(alignment: .leading, spacing: 22) {
+                                intro
+                                ForEach(Array(hour.parts.enumerated()), id: \.offset) { offset, part in
+                                    partView(part)
+                                        .id("part:\(offset)")
+                                }
+                                RelatedLinksSection(related: hour.related)
+                                ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
+                                    DeepLinkTarget(type: .office, id: hour.slug, position: nil)
+                                ))
                             }
-                            RelatedLinksSection(related: hour.related)
-                            ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
-                                DeepLinkTarget(type: .office, id: hour.slug, position: nil)
-                            ))
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 24)
                         }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 24)
+                        .frame(width: geo.size.width, alignment: .leading)
                     }
-                    // Pin the whole column to the viewport width so a single
-                    // wide part (e.g. a long unbreakable token in a Matins
-                    // lesson) can never make the VStack grow and centre-clip
-                    // the entire hour. Content stays leading-aligned.
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .onAppear { scrollToAnchor(proxy) }
                 }
-                .onAppear { scrollToAnchor(proxy) }
             }
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
