@@ -193,13 +193,22 @@ struct OfficeAssembler {
         }
 
         // Insert Preces Feriales for Lauds/Vespers on qualifying ferial days.
-        // When Preces are not said, also remove the standalone Pater Noster
-        // that precedes the Collect (it is only said as part of the Preces).
+        // When Preces are NOT said, remove the standalone Pater Noster that
+        // precedes the Collect — it is only said as part of the Preces. This
+        // applies to every day-hour with a Preces Pater: Lauds, Vespers, the
+        // Little Hours (Prime/Terce/Sext/None) and Compline. Matins is excluded
+        // (its Pater Noster introduces the nocturn lessons and is always said),
+        // as is the Office of the Dead (its own proper structure). The opening
+        // "Pater Noster, Ave María, Credo" is preserved by the "Ave" check.
+        let precesHours: Set<String> = [
+            "laudes", "vesperae", "prima", "tertia", "sexta", "nona", "completorium",
+        ]
         let precesApplied: [Hour.Part]
         if (template.slug == "laudes" || template.slug == "vesperae")
             && shouldIncludePreces(context: context) {
             precesApplied = insertPreces(into: filteredParts, hour: template.slug)
-        } else if template.slug == "laudes" || template.slug == "vesperae" {
+        } else if precesHours.contains(template.slug)
+            && !shouldIncludePreces(context: context) {
             precesApplied = filteredParts.filter { part in
                 !(part.type == "pater" && (part.variationKey ?? "").isEmpty
                   && !(part.label ?? "").contains("Ave"))
