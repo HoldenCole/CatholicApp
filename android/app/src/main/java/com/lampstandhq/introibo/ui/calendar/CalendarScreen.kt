@@ -65,6 +65,7 @@ import com.lampstandhq.introibo.data.liturgical.isFirstFriday
 import com.lampstandhq.introibo.data.liturgical.isFirstSaturday
 import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.storage.settings.MissalRite
+import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -217,6 +218,7 @@ fun CalendarScreen(
                 day = day,
                 rite = rite,
                 mode = langMode,
+                discipline = settingsRepo.penanceDiscipline.collectAsState(initial = PenanceDiscipline.DISCIPLINE_1962).value,
                 onOpenProper = { slug ->
                     scope.launch { sheetState.hide() }.invokeOnCompletion {
                         selectedDay = null
@@ -353,12 +355,14 @@ private fun DayDetail(
     day: CalendarDay,
     rite: MissalRite,
     mode: LanguageMode,
+    discipline: PenanceDiscipline = PenanceDiscipline.DISCIPLINE_1962,
     onOpenProper: (String) -> Unit,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    val ctx = remember(day.date) { LiturgicalContext.forDate(day.date) }
+    val ctx = remember(day.date, discipline) { LiturgicalContext.forDate(day.date, discipline) }
     val proper = remember(day.date, rite) { ContentStore.properForDate(day.date, rite) }
+    val penance = ctx.penance
     val title = day.ordo?.name ?: ctx.feriaLatin
 
     Column(
@@ -430,6 +434,60 @@ private fun DayDetail(
         if (day.isSunday) {
             Spacer(Modifier.height(16.dp))
             Flag("Sunday Obligation")
+        }
+
+        // Penance / fasting card
+        Spacer(Modifier.height(18.dp))
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .border(
+                    0.5.dp,
+                    if (penance.strict) colors.sanctuaryRed.copy(alpha = 0.3f) else colors.frameLine,
+                    RoundedCornerShape(6.dp),
+                )
+                .padding(14.dp),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = "FASTING & ABSTINENCE",
+                    fontSize = 10.sp,
+                    letterSpacing = 1.5.sp,
+                    color = colors.tertiaryText,
+                )
+                Text(
+                    text = discipline.short,
+                    fontSize = 9.sp,
+                    color = colors.goldLeaf,
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(
+                    modifier = Modifier
+                        .size(8.dp)
+                        .clip(CircleShape)
+                        .background(if (penance.strict) colors.sanctuaryRed else colors.goldLeaf),
+                )
+                Spacer(Modifier.width(8.dp))
+                Text(
+                    text = penance.title,
+                    style = type.body,
+                    fontWeight = FontWeight.Medium,
+                    color = colors.primaryText,
+                )
+            }
+            Spacer(Modifier.height(6.dp))
+            Text(
+                text = penance.desc,
+                style = type.captionSm,
+                color = colors.secondaryText,
+                lineHeight = type.captionSm.fontSize * 1.4f,
+            )
         }
 
         if (proper != null) {

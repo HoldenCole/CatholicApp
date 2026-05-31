@@ -423,9 +423,11 @@ private struct DayDetailView: View {
     let onViewMass: (MassProper) -> Void
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
+    @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
 
     private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
-    private var ctx: LiturgicalContext { .for(date: day.date, rite: rite) }
+    private var discipline: PenanceDiscipline { PenanceDiscipline(rawValue: penanceRaw) ?? .discipline1962 }
+    private var ctx: LiturgicalContext { .for(date: day.date, rite: rite, discipline: discipline) }
     private var proper: MassProper? { ContentStore.shared.properForDate(day.date, rite: rite) }
     private var title: String { day.ordo?.name ?? ctx.feriaLatin }
 
@@ -505,6 +507,9 @@ private struct DayDetailView: View {
                 flag("Sunday Obligation")
             }
 
+            // Penance / fasting section
+            penanceSection
+
             if let proper {
                 Button { onViewMass(proper) } label: {
                     HStack {
@@ -553,5 +558,41 @@ private struct DayDetailView: View {
             .font(.captionSm)
             .italic()
             .foregroundStyle(Color.sanctuaryRed)
+    }
+
+    private var penanceSection: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                Text("FASTING & ABSTINENCE")
+                    .font(.system(size: 10))
+                    .tracking(1.5)
+                    .foregroundStyle(Color.tertiaryText)
+                Spacer()
+                Text(discipline.short)
+                    .font(.system(size: 9))
+                    .foregroundStyle(Color.goldLeaf)
+            }
+
+            HStack(spacing: 8) {
+                Circle()
+                    .fill(ctx.penance.strict ? Color.sanctuaryRed : Color.goldLeaf)
+                    .frame(width: 8, height: 8)
+                Text(ctx.penance.title)
+                    .font(.body)
+                    .fontWeight(.medium)
+                    .foregroundStyle(Color.primaryText)
+            }
+
+            Text(ctx.penance.desc)
+                .font(.captionSm)
+                .foregroundStyle(Color.secondaryText)
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(14)
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(ctx.penance.strict ? Color.sanctuaryRed.opacity(0.3) : Color.frameLine, lineWidth: 0.5)
+        )
     }
 }
