@@ -499,14 +499,16 @@ struct LiturgicalContext {
         let ashWed = easter.addingDays(-46)
         let ashWeek = cal.component(.weekOfYear, from: ashWed)
         if week == ashWeek { return true }
-        // Pentecost Ember: week after Pentecost
+        // Pentecost Ember: Wed/Fri/Sat within the octave of Pentecost
+        // (same week as Pentecost Sunday in a Sunday-start calendar)
         let pentWeek = cal.component(.weekOfYear, from: pentecost)
-        if week == pentWeek + 1 { return true }
-        // September Ember: week after Sept 14 (Exaltation of the Cross)
+        if week == pentWeek { return true }
+        // September Ember: Wed/Fri/Sat in the week containing Sept 14
+        // (the Exaltation of the Cross)
         let year = cal.component(.year, from: date)
         var sept14Comps = DateComponents(); sept14Comps.year = year; sept14Comps.month = 9; sept14Comps.day = 14
         if let sept14 = cal.date(from: sept14Comps) {
-            let s14week = cal.component(.weekOfYear, from: nextSunday(after: sept14, cal: cal))
+            let s14week = cal.component(.weekOfYear, from: sept14)
             if week == s14week { return true }
         }
         return false

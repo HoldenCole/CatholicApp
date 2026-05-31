@@ -413,11 +413,12 @@ data class LiturgicalContext(
             val ashWed = easter.minusDays(46)
             val ashw = ashWed.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
             if (woy == ashw) return true
+            // ISO weeks are Monday-start: Pentecost (Sunday) is in ISO week N,
+            // but the Ember Wed/Fri/Sat of the octave are in ISO week N+1.
             val pentw = pentecost.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
             if (woy == pentw + 1) return true
             val sept14 = LocalDate.of(date.year, 9, 14)
-            var sun = sept14; while (sun.dayOfWeek != java.time.DayOfWeek.SUNDAY) sun = sun.plusDays(1)
-            val septw = sun.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
+            val septw = sept14.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
             if (woy == septw) return true
             return false
         }
