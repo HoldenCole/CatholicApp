@@ -11,12 +11,11 @@ import SwiftUI
 // Android mirror: android/.../ui/calendar/CalendarScreen.kt
 
 private enum CalViewMode: String, CaseIterable {
-    case list, week, month
+    case list, month
 
     var icon: String {
         switch self {
         case .list:  return "list.bullet"
-        case .week:  return "calendar.day.timeline.left"
         case .month: return "square.grid.3x3"
         }
     }
@@ -56,7 +55,6 @@ struct CalendarView: View {
             Divider().overlay(Color.frameLine)
             switch viewMode {
             case .list:  dayList
-            case .week:  weekView
             case .month: monthGrid
             }
         }
@@ -208,45 +206,6 @@ struct CalendarView: View {
         guard model.days[idx].seasonLabel != nil else { return false }
         if idx == 0 { return true }
         return model.days[idx - 1].seasonLabel != model.days[idx].seasonLabel
-    }
-
-    // MARK: Week view
-
-    private var currentWeekDays: [CalendarDay] {
-        let cal = Calendar.liturgical
-        let now = Date()
-        let todayWd = cal.component(.weekday, from: now) // 1=Sun..7=Sat
-        return model.days.filter { day in
-            if day.isToday { return true }
-            let diff = cal.dateComponents([.day], from: now, to: day.date).day ?? 999
-            let startOfWeek = -(todayWd - 1)
-            let endOfWeek = 7 - todayWd
-            return diff >= startOfWeek && diff <= endOfWeek
-        }
-    }
-
-    private var weekView: some View {
-        let days: [CalendarDay]
-        if isCurrentMonth {
-            days = currentWeekDays
-        } else {
-            days = Array(model.days.prefix(7))
-        }
-        return ScrollView {
-            LazyVStack(spacing: 0) {
-                ForEach(Array(days.enumerated()), id: \.element.id) { idx, day in
-                    DayRow(day: day) { selectedDay = day }
-                        .id(day.id)
-                    if idx < days.count - 1 {
-                        Rectangle()
-                            .fill(Color.goldLeaf.opacity(0.16))
-                            .frame(height: 0.5)
-                            .padding(.leading, 78)
-                    }
-                }
-            }
-            .padding(.bottom, 28)
-        }
     }
 
     // MARK: Month grid

@@ -96,7 +96,7 @@ fun CalendarScreen(
     var year by rememberSaveable { mutableIntStateOf(today.year) }
     var month by rememberSaveable { mutableIntStateOf(today.monthValue) }
     var selectedDay by remember { mutableStateOf<CalendarDay?>(null) }
-    var viewMode by rememberSaveable { mutableStateOf("list") } // "list" | "week" | "month"
+    var viewMode by rememberSaveable { mutableStateOf("list") } // "list" | "month"
 
     val yearRange = remember(rite) { ContentStore.ordoYearRange(rite) }
     val model = remember(year, month, rite) { CalendarMonth.build(year, month, rite, today) }
@@ -184,23 +184,6 @@ fun CalendarScreen(
             return model.days[idx - 1].seasonLabel != model.days[idx].seasonLabel
         }
         when (viewMode) {
-            "week" -> {
-                val days = if (isCurrentMonth) {
-                    val todayWd = today.dayOfWeek.value % 7  // 0=Sun..6=Sat
-                    model.days.filter { d ->
-                        val diff = java.time.temporal.ChronoUnit.DAYS.between(today, d.date).toInt()
-                        diff >= -todayWd && diff <= (6 - todayWd)
-                    }
-                } else model.days.take(7)
-                LazyColumn(modifier = Modifier.fillMaxWidth().weight(1f)) {
-                    itemsIndexed(days) { idx, day ->
-                        DayRow(day = day, mode = langMode) { selectedDay = day }
-                        if (idx < days.size - 1) {
-                            HorizontalDivider(color = colors.goldLeaf.copy(alpha = 0.16f), thickness = 0.5.dp, modifier = Modifier.padding(start = 78.dp))
-                        }
-                    }
-                }
-            }
             "month" -> {
                 MonthGrid(model = model, langMode = langMode) { selectedDay = it }
             }
@@ -499,7 +482,6 @@ private fun Flag(text: String) {
 private data class ModeEntry(val key: String, val icon: String)
 private val modes = listOf(
     ModeEntry("list", "≡"),
-    ModeEntry("week", "7"),
     ModeEntry("month", "▦"),
 )
 
