@@ -2025,12 +2025,12 @@
   },
   "2024-07-03": {
     "temporal": "pent06-3",
-    "sanctoral": "07-03",
+    "sanctoral": "07-03r",
     "winner": "sanctoral",
-    "winnerKey": "07-03",
-    "rank": 2.2,
-    "name": "S. Leonis Papæ et Confessoris",
-    "color": "white",
+    "winnerKey": "07-03r",
+    "rank": 3.0,
+    "name": "S. Irenæi Episcopi et Martyris",
+    "color": "red",
     "season": "ordinary",
     "commemoration": "pent06-3"
   },
@@ -2421,23 +2421,23 @@
   },
   "2024-08-08": {
     "temporal": "pent11-4",
-    "sanctoral": "08-08",
-    "winner": "sanctoral",
-    "winnerKey": "08-08",
-    "rank": 1.1,
-    "name": "Ss. Cyriaci, Largi et Smaragdi Martyrum",
-    "color": "red",
-    "season": "ordinary",
-    "commemoration": "pent11-4"
-  },
-  "2024-08-09": {
-    "temporal": "pent11-5",
     "sanctoral": "08-09",
     "winner": "sanctoral",
     "winnerKey": "08-09",
     "rank": 3.0,
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
+    "season": "ordinary",
+    "commemoration": "pent11-4"
+  },
+  "2024-08-09": {
+    "temporal": "pent11-5",
+    "sanctoral": "08-09t",
+    "winner": "sanctoral",
+    "winnerKey": "08-09t",
+    "rank": 3.0,
+    "name": "In Vigilia S. Laurentii Mart.",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent11-5"
   },
@@ -4017,13 +4017,13 @@
   "2024-12-31": {
     "temporal": "nat06",
     "sanctoral": "12-31",
-    "winner": "sanctoral",
-    "winnerKey": "12-31",
-    "rank": 2.9,
-    "name": "S. Silvestri Papæ et Confessoris",
+    "winner": "temporal",
+    "winnerKey": "nat06",
+    "rank": 1.0,
+    "name": "Die Septima infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-31"
   },
   "2025-01-01": {
     "temporal": "nat07",
@@ -6040,12 +6040,12 @@
   },
   "2025-07-03": {
     "temporal": "pent03-4",
-    "sanctoral": "07-03",
+    "sanctoral": "07-03r",
     "winner": "sanctoral",
-    "winnerKey": "07-03",
-    "rank": 2.2,
-    "name": "S. Leonis Papæ et Confessoris",
-    "color": "white",
+    "winnerKey": "07-03r",
+    "rank": 3.0,
+    "name": "S. Irenæi Episcopi et Martyris",
+    "color": "red",
     "season": "ordinary",
     "commemoration": "pent03-4"
   },
@@ -6238,11 +6238,11 @@
   },
   "2025-07-21": {
     "temporal": "pent06-1",
-    "sanctoral": "07-21",
+    "sanctoral": "07-21r",
     "winner": "sanctoral",
-    "winnerKey": "07-21",
-    "rank": 1.1,
-    "name": "S. Praxedis Virginis",
+    "winnerKey": "07-21r",
+    "rank": 3.0,
+    "name": "S. Laurentii a Brundusio Confessoris et Ecclesiæ Doctoris",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent06-1"
@@ -6436,23 +6436,23 @@
   },
   "2025-08-08": {
     "temporal": "pent08-5",
-    "sanctoral": "08-08",
-    "winner": "sanctoral",
-    "winnerKey": "08-08",
-    "rank": 1.1,
-    "name": "Ss. Cyriaci, Largi et Smaragdi Martyrum",
-    "color": "red",
-    "season": "ordinary",
-    "commemoration": "pent08-5"
-  },
-  "2025-08-09": {
-    "temporal": "pent08-6",
     "sanctoral": "08-09",
     "winner": "sanctoral",
     "winnerKey": "08-09",
     "rank": 3.0,
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
+    "season": "ordinary",
+    "commemoration": "pent08-5"
+  },
+  "2025-08-09": {
+    "temporal": "pent08-6",
+    "sanctoral": "08-09t",
+    "winner": "sanctoral",
+    "winnerKey": "08-09t",
+    "rank": 3.0,
+    "name": "In Vigilia S. Laurentii Mart.",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent08-6"
   },
@@ -8010,13 +8010,13 @@
   "2025-12-29": {
     "temporal": "nat04",
     "sanctoral": "12-29",
-    "winner": "sanctoral",
-    "winnerKey": "12-29",
-    "rank": 1.1,
-    "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat04",
+    "rank": 1.0,
+    "name": "Die Quinta infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "12-29"
   },
   "2025-12-30": {
     "temporal": "nat05",
@@ -8032,13 +8032,13 @@
   "2025-12-31": {
     "temporal": "nat06",
     "sanctoral": "12-31",
-    "winner": "sanctoral",
-    "winnerKey": "12-31",
-    "rank": 2.9,
-    "name": "S. Silvestri Papæ et Confessoris",
+    "winner": "temporal",
+    "winnerKey": "nat06",
+    "rank": 1.0,
+    "name": "Die Septima infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-31"
   },
   "2026-01-01": {
     "temporal": "nat07",
@@ -9391,7 +9391,7 @@
     "name": "Dominica IV Post Pascha",
     "color": "white",
     "season": "easter",
-    "commemoration": "05-03"
+    "commemoration": null
   },
   "2026-05-04": {
     "temporal": "pasc4-1",
@@ -10055,12 +10055,12 @@
   },
   "2026-07-03": {
     "temporal": "pent05-5",
-    "sanctoral": "07-03",
+    "sanctoral": "07-03r",
     "winner": "sanctoral",
-    "winnerKey": "07-03",
-    "rank": 2.2,
-    "name": "S. Leonis Papæ et Confessoris",
-    "color": "white",
+    "winnerKey": "07-03r",
+    "rank": 3.0,
+    "name": "S. Irenæi Episcopi et Martyris",
+    "color": "red",
     "season": "ordinary",
     "commemoration": "pent05-5"
   },
@@ -10253,11 +10253,11 @@
   },
   "2026-07-21": {
     "temporal": "pent08-2",
-    "sanctoral": "07-21",
+    "sanctoral": "07-21r",
     "winner": "sanctoral",
-    "winnerKey": "07-21",
-    "rank": 1.1,
-    "name": "S. Praxedis Virginis",
+    "winnerKey": "07-21r",
+    "rank": 3.0,
+    "name": "S. Laurentii a Brundusio Confessoris et Ecclesiæ Doctoris",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent08-2"
@@ -10451,12 +10451,12 @@
   },
   "2026-08-08": {
     "temporal": "pent10-6",
-    "sanctoral": "08-08",
+    "sanctoral": "08-09",
     "winner": "sanctoral",
-    "winnerKey": "08-08",
-    "rank": 1.1,
-    "name": "Ss. Cyriaci, Largi et Smaragdi Martyrum",
-    "color": "red",
+    "winnerKey": "08-09",
+    "rank": 3.0,
+    "name": "S. Joannis Mariæ Vianney Confessoris",
+    "color": "white",
     "season": "ordinary",
     "commemoration": "pent10-6"
   },
@@ -11470,7 +11470,7 @@
     "name": "Dominica XXIV Post Pentecosten",
     "color": "green",
     "season": "ordinary",
-    "commemoration": "11-08"
+    "commemoration": null
   },
   "2026-11-09": {
     "temporal": "pent24-1",
@@ -12025,13 +12025,13 @@
   "2026-12-29": {
     "temporal": "nat04",
     "sanctoral": "12-29",
-    "winner": "sanctoral",
-    "winnerKey": "12-29",
-    "rank": 1.1,
-    "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat04",
+    "rank": 1.0,
+    "name": "Die Quinta infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "12-29"
   },
   "2026-12-30": {
     "temporal": "nat05",
@@ -12047,13 +12047,13 @@
   "2026-12-31": {
     "temporal": "nat06",
     "sanctoral": "12-31",
-    "winner": "sanctoral",
-    "winnerKey": "12-31",
-    "rank": 2.9,
-    "name": "S. Silvestri Papæ et Confessoris",
+    "winner": "temporal",
+    "winnerKey": "nat06",
+    "rank": 1.0,
+    "name": "Die Septima infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-31"
   },
   "2027-01-01": {
     "temporal": "nat07",
@@ -14070,12 +14070,12 @@
   },
   "2027-07-03": {
     "temporal": "pent06-6",
-    "sanctoral": "07-03",
+    "sanctoral": "07-03r",
     "winner": "sanctoral",
-    "winnerKey": "07-03",
-    "rank": 2.2,
-    "name": "S. Leonis Papæ et Confessoris",
-    "color": "white",
+    "winnerKey": "07-03r",
+    "rank": 3.0,
+    "name": "S. Irenæi Episcopi et Martyris",
+    "color": "red",
     "season": "ordinary",
     "commemoration": "pent06-6"
   },
@@ -14268,11 +14268,11 @@
   },
   "2027-07-21": {
     "temporal": "pent09-3",
-    "sanctoral": "07-21",
+    "sanctoral": "07-21r",
     "winner": "sanctoral",
-    "winnerKey": "07-21",
-    "rank": 1.1,
-    "name": "S. Praxedis Virginis",
+    "winnerKey": "07-21r",
+    "rank": 3.0,
+    "name": "S. Laurentii a Brundusio Confessoris et Ecclesiæ Doctoris",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent09-3"
@@ -14477,12 +14477,12 @@
   },
   "2027-08-09": {
     "temporal": "pent12-1",
-    "sanctoral": "08-09",
+    "sanctoral": "08-09t",
     "winner": "sanctoral",
-    "winnerKey": "08-09",
+    "winnerKey": "08-09t",
     "rank": 3.0,
-    "name": "S. Joannis Mariæ Vianney Confessoris",
-    "color": "white",
+    "name": "In Vigilia S. Laurentii Mart.",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent12-1"
   },
@@ -16040,13 +16040,13 @@
   "2027-12-29": {
     "temporal": "nat04",
     "sanctoral": "12-29",
-    "winner": "sanctoral",
-    "winnerKey": "12-29",
-    "rank": 1.1,
-    "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat04",
+    "rank": 1.0,
+    "name": "Die Quinta infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "12-29"
   },
   "2027-12-30": {
     "temporal": "nat05",
@@ -16062,13 +16062,13 @@
   "2027-12-31": {
     "temporal": "nat06",
     "sanctoral": "12-31",
-    "winner": "sanctoral",
-    "winnerKey": "12-31",
-    "rank": 2.9,
-    "name": "S. Silvestri Papæ et Confessoris",
+    "winner": "temporal",
+    "winnerKey": "nat06",
+    "rank": 1.0,
+    "name": "Die Septima infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-31"
   },
   "2028-01-01": {
     "temporal": "nat07",
@@ -18096,12 +18096,12 @@
   },
   "2028-07-03": {
     "temporal": "pent04-1",
-    "sanctoral": "07-03",
+    "sanctoral": "07-03r",
     "winner": "sanctoral",
-    "winnerKey": "07-03",
-    "rank": 2.2,
-    "name": "S. Leonis Papæ et Confessoris",
-    "color": "white",
+    "winnerKey": "07-03r",
+    "rank": 3.0,
+    "name": "S. Irenæi Episcopi et Martyris",
+    "color": "red",
     "season": "ordinary",
     "commemoration": "pent04-1"
   },
@@ -18294,11 +18294,11 @@
   },
   "2028-07-21": {
     "temporal": "pent06-5",
-    "sanctoral": "07-21",
+    "sanctoral": "07-21r",
     "winner": "sanctoral",
-    "winnerKey": "07-21",
-    "rank": 1.1,
-    "name": "S. Praxedis Virginis",
+    "winnerKey": "07-21r",
+    "rank": 3.0,
+    "name": "S. Laurentii a Brundusio Confessoris et Ecclesiæ Doctoris",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent06-5"
@@ -18492,23 +18492,23 @@
   },
   "2028-08-08": {
     "temporal": "pent09-2",
-    "sanctoral": "08-08",
-    "winner": "sanctoral",
-    "winnerKey": "08-08",
-    "rank": 1.1,
-    "name": "Ss. Cyriaci, Largi et Smaragdi Martyrum",
-    "color": "red",
-    "season": "ordinary",
-    "commemoration": "pent09-2"
-  },
-  "2028-08-09": {
-    "temporal": "pent09-3",
     "sanctoral": "08-09",
     "winner": "sanctoral",
     "winnerKey": "08-09",
     "rank": 3.0,
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
+    "season": "ordinary",
+    "commemoration": "pent09-2"
+  },
+  "2028-08-09": {
+    "temporal": "pent09-3",
+    "sanctoral": "08-09t",
+    "winner": "sanctoral",
+    "winnerKey": "08-09t",
+    "rank": 3.0,
+    "name": "In Vigilia S. Laurentii Mart.",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent09-3"
   },
@@ -20066,13 +20066,13 @@
   "2028-12-29": {
     "temporal": "nat04",
     "sanctoral": "12-29",
-    "winner": "sanctoral",
-    "winnerKey": "12-29",
-    "rank": 1.1,
-    "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat04",
+    "rank": 1.0,
+    "name": "Die Quinta infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "12-29"
   },
   "2028-12-30": {
     "temporal": "nat05",
@@ -22111,12 +22111,12 @@
   },
   "2029-07-03": {
     "temporal": "pent06-2",
-    "sanctoral": "07-03",
+    "sanctoral": "07-03r",
     "winner": "sanctoral",
-    "winnerKey": "07-03",
-    "rank": 2.2,
-    "name": "S. Leonis Papæ et Confessoris",
-    "color": "white",
+    "winnerKey": "07-03r",
+    "rank": 3.0,
+    "name": "S. Irenæi Episcopi et Martyris",
+    "color": "red",
     "season": "ordinary",
     "commemoration": "pent06-2"
   },
@@ -22309,11 +22309,11 @@
   },
   "2029-07-21": {
     "temporal": "pent08-6",
-    "sanctoral": "07-21",
+    "sanctoral": "07-21r",
     "winner": "sanctoral",
-    "winnerKey": "07-21",
-    "rank": 1.1,
-    "name": "S. Praxedis Virginis",
+    "winnerKey": "07-21r",
+    "rank": 3.0,
+    "name": "S. Laurentii a Brundusio Confessoris et Ecclesiæ Doctoris",
     "color": "white",
     "season": "ordinary",
     "commemoration": "pent08-6"
@@ -22507,23 +22507,23 @@
   },
   "2029-08-08": {
     "temporal": "pent11-3",
-    "sanctoral": "08-08",
-    "winner": "sanctoral",
-    "winnerKey": "08-08",
-    "rank": 1.1,
-    "name": "Ss. Cyriaci, Largi et Smaragdi Martyrum",
-    "color": "red",
-    "season": "ordinary",
-    "commemoration": "pent11-3"
-  },
-  "2029-08-09": {
-    "temporal": "pent11-4",
     "sanctoral": "08-09",
     "winner": "sanctoral",
     "winnerKey": "08-09",
     "rank": 3.0,
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
+    "season": "ordinary",
+    "commemoration": "pent11-3"
+  },
+  "2029-08-09": {
+    "temporal": "pent11-4",
+    "sanctoral": "08-09t",
+    "winner": "sanctoral",
+    "winnerKey": "08-09t",
+    "rank": 3.0,
+    "name": "In Vigilia S. Laurentii Mart.",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent11-4"
   },
@@ -24081,13 +24081,13 @@
   "2029-12-29": {
     "temporal": "nat04",
     "sanctoral": "12-29",
-    "winner": "sanctoral",
-    "winnerKey": "12-29",
-    "rank": 1.1,
-    "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
-    "color": "red",
+    "winner": "temporal",
+    "winnerKey": "nat04",
+    "rank": 1.0,
+    "name": "Die Quinta infra Octavam Nativitatis",
+    "color": "white",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "12-29"
   },
   "2029-12-30": {
     "temporal": "nat05",
@@ -24103,13 +24103,13 @@
   "2029-12-31": {
     "temporal": "nat06",
     "sanctoral": "12-31",
-    "winner": "sanctoral",
-    "winnerKey": "12-31",
-    "rank": 2.9,
-    "name": "S. Silvestri Papæ et Confessoris",
+    "winner": "temporal",
+    "winnerKey": "nat06",
+    "rank": 1.0,
+    "name": "Die Septima infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-31"
   },
   "2030-01-01": {
     "temporal": "nat07",
@@ -26126,12 +26126,12 @@
   },
   "2030-07-03": {
     "temporal": "pent03-3",
-    "sanctoral": "07-03",
+    "sanctoral": "07-03r",
     "winner": "sanctoral",
-    "winnerKey": "07-03",
-    "rank": 2.2,
-    "name": "S. Leonis Papæ et Confessoris",
-    "color": "white",
+    "winnerKey": "07-03r",
+    "rank": 3.0,
+    "name": "S. Irenæi Episcopi et Martyris",
+    "color": "red",
     "season": "ordinary",
     "commemoration": "pent03-3"
   },
@@ -26522,23 +26522,23 @@
   },
   "2030-08-08": {
     "temporal": "pent08-4",
-    "sanctoral": "08-08",
-    "winner": "sanctoral",
-    "winnerKey": "08-08",
-    "rank": 1.1,
-    "name": "Ss. Cyriaci, Largi et Smaragdi Martyrum",
-    "color": "red",
-    "season": "ordinary",
-    "commemoration": "pent08-4"
-  },
-  "2030-08-09": {
-    "temporal": "pent08-5",
     "sanctoral": "08-09",
     "winner": "sanctoral",
     "winnerKey": "08-09",
     "rank": 3.0,
     "name": "S. Joannis Mariæ Vianney Confessoris",
     "color": "white",
+    "season": "ordinary",
+    "commemoration": "pent08-4"
+  },
+  "2030-08-09": {
+    "temporal": "pent08-5",
+    "sanctoral": "08-09t",
+    "winner": "sanctoral",
+    "winnerKey": "08-09t",
+    "rank": 3.0,
+    "name": "In Vigilia S. Laurentii Mart.",
+    "color": "violet",
     "season": "ordinary",
     "commemoration": "pent08-5"
   },
@@ -28118,12 +28118,12 @@
   "2030-12-31": {
     "temporal": "nat06",
     "sanctoral": "12-31",
-    "winner": "sanctoral",
-    "winnerKey": "12-31",
-    "rank": 2.9,
-    "name": "S. Silvestri Papæ et Confessoris",
+    "winner": "temporal",
+    "winnerKey": "nat06",
+    "rank": 1.0,
+    "name": "Die Septima infra Octavam Nativitatis",
     "color": "white",
     "season": "christmas",
-    "commemoration": null
+    "commemoration": "12-31"
   }
 }
