@@ -74,6 +74,8 @@ object ContentStore {
     private var ordoData: Map<String, OrdoEntry> = emptyMap()
     private var ordoData1955: Map<String, OrdoEntry> = emptyMap()
     private var ordoDataPre1955: Map<String, OrdoEntry> = emptyMap()
+    // Latin ordo `name` -> English translation (translate_ordo_names.py).
+    private var ordoNamesEn: Map<String, String> = emptyMap()
     private lateinit var officeAssembler: OfficeAssembler
 
     /**
@@ -103,6 +105,7 @@ object ContentStore {
         ordoData         = load("ordo.json")              ?: emptyMap()
         ordoData1955     = load("ordo_1955.json")         ?: emptyMap()
         ordoDataPre1955  = load("ordo_pre1955.json")      ?: emptyMap()
+        ordoNamesEn      = load("ordo_names_en.json")     ?: emptyMap()
         canonVariants    = load("canon_variants.json")    ?: emptyMap()
 
         val psalterWeekly: Map<String, Map<String, Hour.Part>> =
@@ -194,6 +197,9 @@ object ContentStore {
         }
         return false
     }
+
+    /** English translation of a Latin ordo `name`, or null if none is bundled. */
+    fun ordoNameEnglish(latin: String): String? = ordoNamesEn[latin]
 
     fun ordoForDate(date: java.time.LocalDate, rite: MissalRite = MissalRite.RITE_1962): OrdoEntry? {
         val key = "%04d-%02d-%02d".format(date.year, date.monthValue, date.dayOfMonth)

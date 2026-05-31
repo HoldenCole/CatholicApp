@@ -19,6 +19,7 @@ struct CalendarDay: Identifiable {
     let day: Int             // day-of-month, 1...31
     let weekday: Int         // 1=Sun .. 7=Sat (Calendar.liturgical weekday)
     let ordo: OrdoEntry?     // nil only if the date is outside the bundled ordo
+    let englishName: String? // full English translation of ordo.name, if bundled
     let isToday: Bool
 
     var id: Int { day }
@@ -44,13 +45,12 @@ struct CalendarDay: Identifiable {
     var weekdayName: String { Self.dayNames[weekday - 1] }
     private static let dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-    /// English subtitle: "Monday · Eastertide" — weekday + season, derived from
-    /// the ordo's season field so we never need to compute full LiturgicalContext.
-    var englishSubtitle: String {
-        let season = ordo.flatMap { Self.seasonLabels[$0.season] } ?? ""
-        if season.isEmpty { return weekdayName }
-        return "\(weekdayName)  \u{00B7}  \(season)"
-    }
+    /// The English line shown beneath the Latin name — the full feast/feria
+    /// translation when bundled, else just the weekday.
+    var englishLine: String { englishName ?? weekdayName }
+
+    /// English season label (for the inline season dividers).
+    var seasonLabel: String? { ordo.flatMap { Self.seasonLabels[$0.season] } }
     private static let seasonLabels: [String: String] = [
         "advent": "Advent",
         "christmas": "Christmastide",
@@ -93,11 +93,13 @@ struct CalendarMonth {
             var dc = comps
             dc.day = d
             let date = cal.date(from: dc) ?? firstOfMonth
+            let ordo = store.ordoForDate(date, rite: rite)
             days.append(CalendarDay(
                 date: date,
                 day: d,
                 weekday: cal.component(.weekday, from: date),
-                ordo: store.ordoForDate(date, rite: rite),
+                ordo: ordo,
+                englishName: ordo.flatMap { store.ordoNameEnglish($0.name) },
                 isToday: cal.isDate(date, inSameDayAs: today)
             ))
         }

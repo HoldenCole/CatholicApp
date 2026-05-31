@@ -138,14 +138,21 @@ struct CalendarView: View {
         ScrollViewReader { proxy in
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    ForEach(model.days) { day in
+                    ForEach(Array(model.days.enumerated()), id: \.element.id) { idx, day in
+                        if showsSeasonHeader(at: idx), let label = day.seasonLabel {
+                            SeasonDivider(label: label)
+                        }
                         DayRow(day: day) { selectedDay = day }
-                        Divider()
-                            .overlay(Color.frameLine.opacity(0.5))
-                            .padding(.leading, 60)
+                            .id(day.id)
+                        if idx < model.days.count - 1 && !showsSeasonHeader(at: idx + 1) {
+                            Rectangle()
+                                .fill(Color.goldLeaf.opacity(0.16))
+                                .frame(height: 0.5)
+                                .padding(.leading, 78)
+                        }
                     }
                 }
-                .padding(.bottom, 20)
+                .padding(.bottom, 28)
             }
             .onAppear {
                 if let todayDay = model.days.first(where: { $0.isToday }) {
@@ -153,6 +160,14 @@ struct CalendarView: View {
                 }
             }
         }
+    }
+
+    /// True when day `idx` begins a new liturgical season (or is the first day).
+    private func showsSeasonHeader(at idx: Int) -> Bool {
+        guard idx >= 0, idx < model.days.count else { return false }
+        guard model.days[idx].seasonLabel != nil else { return false }
+        if idx == 0 { return true }
+        return model.days[idx - 1].seasonLabel != model.days[idx].seasonLabel
     }
 
     // MARK: Navigation logic
@@ -177,7 +192,27 @@ struct CalendarView: View {
     }
 }
 
-// MARK: - Day row
+// MARK: - Season divider
+
+private struct SeasonDivider: View {
+    let label: String
+    var body: some View {
+        HStack(spacing: 12) {
+            Rectangle().fill(Color.goldLeaf.opacity(0.3)).frame(height: 0.5)
+            Text(label.uppercased())
+                .font(.system(size: 10, weight: .semibold))
+                .tracking(2.5)
+                .foregroundStyle(Color.goldLeaf)
+                .fixedSize()
+            Rectangle().fill(Color.goldLeaf.opacity(0.3)).frame(height: 0.5)
+        }
+        .padding(.horizontal, 28)
+        .padding(.top, 24)
+        .padding(.bottom, 12)
+    }
+}
+
+// MARK: - Day row (illuminated medallion)
 
 private struct DayRow: View {
     let day: CalendarDay
@@ -187,74 +222,77 @@ private struct DayRow: View {
 
     var body: some View {
         Button(action: onTap) {
-            HStack(spacing: 0) {
-                // Liturgical colour bar
-                Rectangle()
-                    .fill(day.colour?.swiftUIColor ?? Color.clear)
-                    .frame(width: 3)
+            HStack(alignment: .top, spacing: 14) {
+                medallion
 
-                // Day number + weekday
-                VStack(spacing: 1) {
-                    Text(day.weekdayAbbrev)
-                        .font(.system(size: 10, weight: .medium))
-                        .tracking(0.5)
-                        .foregroundStyle(Color.tertiaryText)
-                    Text("\(day.day)")
-                        .font(.system(size: 24, weight: day.isMajor ? .semibold : .regular))
-                        .foregroundStyle(day.isToday ? Color.sanctuaryRed : Color.primaryText)
-                }
-                .frame(width: 52)
-                .padding(.leading, 4)
-
-                // Feast / feria name (Latin on top, English below)
                 VStack(alignment: .leading, spacing: 3) {
+                    HStack(spacing: 6) {
+                        Text(day.weekdayAbbrev)
+                            .font(.system(size: 10, weight: .medium))
+                            .tracking(1)
+                            .foregroundStyle(Color.tertiaryText)
+                        if day.isSunday {
+                            Text("\u{2720}")   // ✠ — day of obligation
+                                .font(.system(size: 9))
+                                .foregroundStyle(Color.sanctuaryRed)
+                        }
+                    }
+
                     if mode != .vernacular {
                         Text(day.label ?? "Feria")
                             .font(.body)
-                            .fontWeight(day.isMajor ? .medium : .regular)
+                            .fontWeight(day.isMajor ? .semibold : .regular)
                             .foregroundStyle(Color.primaryText)
                             .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     if mode != .latinOnly {
-                        Text(day.englishSubtitle)
+                        Text(day.englishLine)
                             .font(.captionSm)
                             .italic()
                             .foregroundStyle(Color.secondaryText)
-                            .lineLimit(1)
-                    }
-
-                    if day.isSunday {
-                        obligationBadge
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
-                .padding(.leading, 12)
 
-                Spacer(minLength: 8)
+                Spacer(minLength: 4)
 
-                // Chevron
-                Text("\u{203A}")
-                    .font(.system(size: 20))
-                    .foregroundStyle(Color.tertiaryText)
-                    .padding(.trailing, 16)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12))
+                    .foregroundStyle(Color.tertiaryText.opacity(0.6))
+                    .padding(.top, 2)
             }
-            .padding(.vertical, 14)
+            .padding(.horizontal, 22)
+            .padding(.vertical, 13)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .id(day.id)
     }
 
-    private var obligationBadge: some View {
-        Text("SUNDAY OBLIGATION")
-            .font(.system(size: 9, weight: .semibold))
-            .tracking(0.5)
-            .foregroundStyle(Color.sanctuaryRed)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 3)
-            .overlay(
-                RoundedRectangle(cornerRadius: 3)
-                    .stroke(Color.sanctuaryRed.opacity(0.5), lineWidth: 0.5)
-            )
+    // Circular day medallion: a soft liturgical-colour wash + ring around the
+    // serif day number. Today is a filled sanctuary-red disc; major feasts get
+    // a heavier ring.
+    private var medallion: some View {
+        ZStack {
+            Circle()
+                .fill(day.isToday
+                      ? Color.sanctuaryRed
+                      : (day.colour?.swiftUIColor ?? Color.frameLine).opacity(0.14))
+            Circle()
+                .stroke(ringColor, lineWidth: day.isMajor ? 1.5 : 1)
+            Text("\(day.day)")
+                .font(.system(size: 16, weight: day.isMajor ? .semibold : .regular, design: .serif))
+                .foregroundStyle(day.isToday ? Color.parchment : Color.primaryText)
+        }
+        .frame(width: 40, height: 40)
+    }
+
+    private var ringColor: Color {
+        if day.isToday { return Color.sanctuaryRed }
+        let base = day.colour?.swiftUIColor ?? Color.frameLine
+        return base.opacity(day.isMajor ? 0.8 : 0.45)
     }
 }
 
@@ -308,6 +346,15 @@ private struct DayDetailView: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(Color.ivory)
                 .padding(.horizontal, 12)
+
+            if langMode != .latinOnly, let english = day.englishName {
+                Text(english)
+                    .font(.bodySm)
+                    .italic()
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(Color.goldLeaf.opacity(0.85))
+                    .padding(.horizontal, 16)
+            }
 
             Text(LongDateFormatter.format(day.date))
                 .font(.bodySm)

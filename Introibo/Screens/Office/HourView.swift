@@ -18,7 +18,7 @@ struct HourView: View {
 
     var body: some View {
         NavigationStack {
-            GeometryReader { geo in
+            GeometryReader { _ in
                 ScrollViewReader { proxy in
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack(spacing: 0) {
@@ -37,7 +37,7 @@ struct HourView: View {
                         .padding(.horizontal, 20)
                         .padding(.vertical, 24)
                     }
-                    .frame(width: geo.size.width)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .onAppear { scrollToAnchor(proxy) }
                 }

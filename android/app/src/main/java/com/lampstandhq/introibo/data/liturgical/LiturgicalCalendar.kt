@@ -26,6 +26,7 @@ data class CalendarDay(
     val day: Int,            // day-of-month, 1..31
     val weekday: Int,        // 1=Sun .. 7=Sat (matches iOS Calendar.liturgical weekday)
     val ordo: OrdoEntry?,    // null only if the date is outside the bundled ordo
+    val englishName: String?, // full English translation of ordo.name, if bundled
     val isToday: Boolean,
 ) {
     /** Display colour for the cell's pip; null when there is no ordo entry. */
@@ -49,13 +50,13 @@ data class CalendarDay(
     val weekdayName: String get() = dayNames[weekday - 1]
 
     /**
-     * English subtitle: "Monday · Eastertide" — weekday + season, derived from
-     * the ordo's season field so we never need to compute full LiturgicalContext.
+     * The English line shown beneath the Latin name — the full feast/feria
+     * translation when bundled, else just the weekday.
      */
-    val englishSubtitle: String get() {
-        val season = ordo?.season?.let { seasonLabels[it] } ?: ""
-        return if (season.isEmpty()) weekdayName else "$weekdayName  ·  $season"
-    }
+    val englishLine: String get() = englishName ?: weekdayName
+
+    /** English season label (for the inline season dividers). */
+    val seasonLabel: String? get() = ordo?.season?.let { seasonLabels[it] }
 
     companion object {
         private val abbrevs = listOf("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT")
@@ -105,12 +106,14 @@ data class CalendarMonth(
                 val date = LocalDate.of(year, month, d)
                 // DayOfWeek: MONDAY=1..SUNDAY=7 → remap to 1=Sun..7=Sat
                 val wd = date.dayOfWeek.value % 7 + 1
+                val ordo = ContentStore.ordoForDate(date, rite)
                 days.add(
                     CalendarDay(
                         date = date,
                         day = d,
                         weekday = wd,
-                        ordo = ContentStore.ordoForDate(date, rite),
+                        ordo = ordo,
+                        englishName = ordo?.let { ContentStore.ordoNameEnglish(it.name) },
                         isToday = date == today,
                     )
                 )

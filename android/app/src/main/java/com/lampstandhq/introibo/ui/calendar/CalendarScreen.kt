@@ -60,6 +60,7 @@ import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
 import com.lampstandhq.introibo.data.liturgical.isEmberDay
 import com.lampstandhq.introibo.data.liturgical.isFirstFriday
 import com.lampstandhq.introibo.data.liturgical.isFirstSaturday
+import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.storage.settings.MissalRite
 import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -86,6 +87,7 @@ fun CalendarScreen(
     val type = IntroiboType.current
     val settingsRepo = remember { SettingsRepository(context) }
     val rite by settingsRepo.missalRite.collectAsState(initial = MissalRite.RITE_1962)
+    val langMode by settingsRepo.languageMode.collectAsState(initial = LanguageMode.BOTH)
 
     val today = remember { LocalDate.now() }
     var year by rememberSaveable { mutableIntStateOf(today.year) }
@@ -169,19 +171,30 @@ fun CalendarScreen(
         HorizontalDivider(color = colors.frameLine, thickness = 0.5.dp)
 
         // Day list
+        fun showsSeasonHeader(idx: Int): Boolean {
+            if (idx < 0 || idx >= model.days.size) return false
+            if (model.days[idx].seasonLabel == null) return false
+            if (idx == 0) return true
+            return model.days[idx - 1].seasonLabel != model.days[idx].seasonLabel
+        }
         LazyColumn(
             state = listState,
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f),
         ) {
-            itemsIndexed(model.days) { _, day ->
-                DayRow(day = day) { selectedDay = day }
-                HorizontalDivider(
-                    color = colors.frameLine.copy(alpha = 0.5f),
-                    thickness = 0.5.dp,
-                    modifier = Modifier.padding(start = 60.dp),
-                )
+            itemsIndexed(model.days) { idx, day ->
+                if (showsSeasonHeader(idx)) {
+                    SeasonDivider(day.seasonLabel ?: "")
+                }
+                DayRow(day = day, mode = langMode) { selectedDay = day }
+                if (idx < model.days.size - 1 && !showsSeasonHeader(idx + 1)) {
+                    HorizontalDivider(
+                        color = colors.goldLeaf.copy(alpha = 0.16f),
+                        thickness = 0.5.dp,
+                        modifier = Modifier.padding(start = 78.dp),
+                    )
+                }
             }
         }
     }
@@ -198,6 +211,7 @@ fun CalendarScreen(
             DayDetail(
                 day = day,
                 rite = rite,
+                mode = langMode,
                 onOpenProper = { slug ->
                     scope.launch { sheetState.hide() }.invokeOnCompletion {
                         selectedDay = null
@@ -228,91 +242,104 @@ private fun NavGlyph(glyph: String, enabled: Boolean, onClick: () -> Unit) {
 }
 
 @Composable
-private fun DayRow(day: CalendarDay, onClick: () -> Unit) {
+private fun SeasonDivider(label: String) {
     val colors = IntroiboTheme.colors
-    val type = IntroiboType.current
-
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick() }
-            .padding(vertical = 14.dp),
+            .padding(horizontal = 28.dp)
+            .padding(top = 24.dp, bottom = 12.dp),
     ) {
-        // Liturgical colour bar
-        Box(
-            modifier = Modifier
-                .width(3.dp)
-                .height(52.dp)
-                .background(day.colour?.let { liturgicalColor(it) } ?: Color.Transparent),
+        HorizontalDivider(color = colors.goldLeaf.copy(alpha = 0.3f), thickness = 0.5.dp, modifier = Modifier.weight(1f))
+        Text(
+            text = label.uppercase(),
+            fontSize = 10.sp,
+            fontWeight = FontWeight.SemiBold,
+            letterSpacing = 2.5.sp,
+            color = colors.goldLeaf,
+            modifier = Modifier.padding(horizontal = 12.dp),
         )
+        HorizontalDivider(color = colors.goldLeaf.copy(alpha = 0.3f), thickness = 0.5.dp, modifier = Modifier.weight(1f))
+    }
+}
 
-        // Day number + weekday
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
+@Composable
+private fun DayRow(day: CalendarDay, mode: LanguageMode, onClick: () -> Unit) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+
+    val litColor = day.colour?.let { liturgicalColor(it) } ?: colors.frameLine
+    val ringColor = when {
+        day.isToday -> colors.sanctuaryRed
+        else -> litColor.copy(alpha = if (day.isMajor) 0.8f else 0.45f)
+    }
+
+    Row(
+        verticalAlignment = Alignment.Top,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() }
+            .padding(horizontal = 22.dp, vertical = 13.dp),
+    ) {
+        // Illuminated medallion: soft colour wash + ring around the serif number.
+        Box(
+            contentAlignment = Alignment.Center,
             modifier = Modifier
-                .width(52.dp)
-                .padding(start = 4.dp),
+                .size(40.dp)
+                .clip(CircleShape)
+                .background(if (day.isToday) colors.sanctuaryRed else litColor.copy(alpha = 0.14f))
+                .border(if (day.isMajor) 1.5.dp else 1.dp, ringColor, CircleShape),
         ) {
             Text(
-                text = day.weekdayAbbrev,
-                fontSize = 10.sp,
-                fontWeight = FontWeight.Medium,
-                letterSpacing = 0.5.sp,
-                color = colors.tertiaryText,
-            )
-            Text(
                 text = "${day.day}",
-                fontSize = 24.sp,
+                fontSize = 16.sp,
+                fontFamily = type.pageTitle.fontFamily,
                 fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
-                color = if (day.isToday) colors.sanctuaryRed else colors.primaryText,
+                color = if (day.isToday) colors.parchment else colors.primaryText,
             )
         }
 
-        // Feast / feria name: Latin on top, English below
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .padding(start = 12.dp),
-        ) {
-            Text(
-                text = day.label ?: "Feria",
-                style = type.body,
-                fontWeight = if (day.isMajor) FontWeight.Medium else FontWeight.Normal,
-                color = colors.primaryText,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Spacer(Modifier.height(3.dp))
-            Text(
-                text = day.englishSubtitle,
-                style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                color = colors.secondaryText,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (day.isSunday) {
-                Spacer(Modifier.height(4.dp))
+        Spacer(Modifier.width(14.dp))
+
+        // Weekday + bilingual feast name
+        Column(modifier = Modifier.weight(1f)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = "SUNDAY OBLIGATION",
-                    fontSize = 9.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 0.5.sp,
-                    color = colors.sanctuaryRed,
-                    modifier = Modifier
-                        .border(0.5.dp, colors.sanctuaryRed.copy(alpha = 0.5f), RoundedCornerShape(3.dp))
-                        .padding(horizontal = 8.dp, vertical = 3.dp),
+                    text = day.weekdayAbbrev,
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.Medium,
+                    letterSpacing = 1.sp,
+                    color = colors.tertiaryText,
+                )
+                if (day.isSunday) {
+                    Spacer(Modifier.width(6.dp))
+                    Text(text = "✠", fontSize = 9.sp, color = colors.sanctuaryRed)
+                }
+            }
+            if (mode != LanguageMode.VERNACULAR) {
+                Text(
+                    text = day.label ?: "Feria",
+                    style = type.body,
+                    fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
+                    color = colors.primaryText,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
+            if (mode != LanguageMode.LATIN_ONLY) {
+                Text(
+                    text = day.englishLine,
+                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.secondaryText,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
         }
 
-        // Chevron
-        Text(
-            text = "›",
-            fontSize = 20.sp,
-            color = colors.tertiaryText,
-            modifier = Modifier.padding(end = 16.dp),
-        )
+        Spacer(Modifier.width(8.dp))
+        Text(text = "›", fontSize = 18.sp, color = colors.tertiaryText.copy(alpha = 0.6f))
     }
 }
 
@@ -320,6 +347,7 @@ private fun DayRow(day: CalendarDay, onClick: () -> Unit) {
 private fun DayDetail(
     day: CalendarDay,
     rite: MissalRite,
+    mode: LanguageMode,
     onOpenProper: (String) -> Unit,
 ) {
     val colors = IntroiboTheme.colors
@@ -362,6 +390,15 @@ private fun DayDetail(
             }
             Spacer(Modifier.height(8.dp))
             Text(text = title, style = type.pageTitle, color = colors.ivory, textAlign = TextAlign.Center)
+            if (mode != LanguageMode.LATIN_ONLY && day.englishName != null) {
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    text = day.englishName,
+                    style = type.bodySm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.goldLeaf.copy(alpha = 0.85f),
+                    textAlign = TextAlign.Center,
+                )
+            }
             Spacer(Modifier.height(4.dp))
             Text(
                 text = LongDateFormatter.format(day.date),
