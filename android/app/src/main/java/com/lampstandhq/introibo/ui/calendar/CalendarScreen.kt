@@ -15,6 +15,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
@@ -93,6 +96,7 @@ fun CalendarScreen(
     var year by rememberSaveable { mutableIntStateOf(today.year) }
     var month by rememberSaveable { mutableIntStateOf(today.monthValue) }
     var selectedDay by remember { mutableStateOf<CalendarDay?>(null) }
+    var viewMode by rememberSaveable { mutableStateOf("list") } // "list" | "week" | "month"
 
     val yearRange = remember(rite) { ContentStore.ordoYearRange(rite) }
     val model = remember(year, month, rite) { CalendarMonth.build(year, month, rite, today) }
@@ -137,6 +141,8 @@ fun CalendarScreen(
                 letterSpacing = 2.sp,
             )
             Spacer(Modifier.weight(1f))
+            ViewModePicker(viewMode) { viewMode = it }
+            Spacer(Modifier.width(8.dp))
             if (!isCurrentMonth) {
                 Text(
                     text = "Today",
@@ -170,30 +176,46 @@ fun CalendarScreen(
         }
         HorizontalDivider(color = colors.frameLine, thickness = 0.5.dp)
 
-        // Day list
+        // Content — list, week, or month grid
         fun showsSeasonHeader(idx: Int): Boolean {
             if (idx < 0 || idx >= model.days.size) return false
             if (model.days[idx].seasonLabel == null) return false
             if (idx == 0) return true
             return model.days[idx - 1].seasonLabel != model.days[idx].seasonLabel
         }
-        LazyColumn(
-            state = listState,
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f),
-        ) {
-            itemsIndexed(model.days) { idx, day ->
-                if (showsSeasonHeader(idx)) {
-                    SeasonDivider(day.seasonLabel ?: "")
+        when (viewMode) {
+            "week" -> {
+                val days = if (isCurrentMonth) {
+                    val todayWd = today.dayOfWeek.value % 7  // 0=Sun..6=Sat
+                    model.days.filter { d ->
+                        val diff = java.time.temporal.ChronoUnit.DAYS.between(today, d.date).toInt()
+                        diff >= -todayWd && diff <= (6 - todayWd)
+                    }
+                } else model.days.take(7)
+                LazyColumn(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                    itemsIndexed(days) { idx, day ->
+                        DayRow(day = day, mode = langMode) { selectedDay = day }
+                        if (idx < days.size - 1) {
+                            HorizontalDivider(color = colors.goldLeaf.copy(alpha = 0.16f), thickness = 0.5.dp, modifier = Modifier.padding(start = 78.dp))
+                        }
+                    }
                 }
-                DayRow(day = day, mode = langMode) { selectedDay = day }
-                if (idx < model.days.size - 1 && !showsSeasonHeader(idx + 1)) {
-                    HorizontalDivider(
-                        color = colors.goldLeaf.copy(alpha = 0.16f),
-                        thickness = 0.5.dp,
-                        modifier = Modifier.padding(start = 78.dp),
-                    )
+            }
+            "month" -> {
+                MonthGrid(model = model, langMode = langMode) { selectedDay = it }
+            }
+            else -> {
+                LazyColumn(
+                    state = listState,
+                    modifier = Modifier.fillMaxWidth().weight(1f),
+                ) {
+                    itemsIndexed(model.days) { idx, day ->
+                        if (showsSeasonHeader(idx)) SeasonDivider(day.seasonLabel ?: "")
+                        DayRow(day = day, mode = langMode) { selectedDay = day }
+                        if (idx < model.days.size - 1 && !showsSeasonHeader(idx + 1)) {
+                            HorizontalDivider(color = colors.goldLeaf.copy(alpha = 0.16f), thickness = 0.5.dp, modifier = Modifier.padding(start = 78.dp))
+                        }
+                    }
                 }
             }
         }
@@ -468,4 +490,128 @@ private fun Flag(text: String) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
     Text(text, style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed, modifier = Modifier.padding(vertical = 2.dp))
+}
+
+// ---------------------------------------------------------------------------
+// View mode picker
+// ---------------------------------------------------------------------------
+
+private data class ModeEntry(val key: String, val icon: String)
+private val modes = listOf(
+    ModeEntry("list", "≡"),
+    ModeEntry("week", "7"),
+    ModeEntry("month", "▦"),
+)
+
+@Composable
+private fun ViewModePicker(current: String, onSelect: (String) -> Unit) {
+    val colors = IntroiboTheme.colors
+    Row(
+        modifier = Modifier
+            .border(0.5.dp, colors.frameLine, RoundedCornerShape(5.dp))
+            .clip(RoundedCornerShape(5.dp)),
+    ) {
+        modes.forEach { mode ->
+            val selected = current == mode.key
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .size(width = 30.dp, height = 26.dp)
+                    .background(if (selected) colors.sanctuaryRed else Color.Transparent)
+                    .clickable { onSelect(mode.key) },
+            ) {
+                Text(
+                    text = mode.icon,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = if (selected) colors.parchment else colors.tertiaryText,
+                )
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Month grid view
+// ---------------------------------------------------------------------------
+
+private val weekdayLetters = listOf("S", "M", "T", "W", "T", "F", "S")
+
+@Composable
+private fun MonthGrid(
+    model: CalendarMonth,
+    langMode: LanguageMode,
+    onSelect: (CalendarDay) -> Unit,
+) {
+    val colors = IntroiboTheme.colors
+    Column(modifier = Modifier.fillMaxWidth().weight(1f)) {
+        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
+            weekdayLetters.forEach { letter ->
+                Text(
+                    text = letter,
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = colors.tertiaryText,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.weight(1f),
+                )
+            }
+        }
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(7),
+            modifier = Modifier.fillMaxWidth().weight(1f).padding(horizontal = 16.dp),
+        ) {
+            items(model.leadingBlanks) { Box(Modifier.height(56.dp)) }
+            items(model.days.size) { idx ->
+                val day = model.days[idx]
+                GridCell(day, langMode) { onSelect(day) }
+            }
+        }
+    }
+}
+
+@Composable
+private fun GridCell(day: CalendarDay, langMode: LanguageMode, onClick: () -> Unit) {
+    val colors = IntroiboTheme.colors
+    val litColor = day.colour?.let { liturgicalColor(it) } ?: colors.frameLine
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .height(56.dp)
+            .fillMaxWidth()
+            .clickable { onClick() },
+    ) {
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier
+                .size(30.dp)
+                .clip(CircleShape)
+                .background(if (day.isToday) colors.sanctuaryRed else litColor.copy(alpha = 0.14f))
+                .border(if (day.isMajor) 1.5.dp else 0.5.dp,
+                    if (day.isToday) colors.sanctuaryRed else litColor.copy(alpha = if (day.isMajor) 0.8f else 0.3f),
+                    CircleShape),
+        ) {
+            Text(
+                text = "${day.day}",
+                fontSize = 13.sp,
+                fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
+                color = if (day.isToday) colors.parchment else colors.primaryText,
+            )
+        }
+        Spacer(Modifier.height(2.dp))
+        val label = if (langMode != LanguageMode.LATIN_ONLY && day.englishName != null) {
+            day.englishName.substringBefore(",")
+        } else {
+            (day.label ?: "").split(" ").take(3).joinToString(" ")
+        }
+        Text(
+            text = label,
+            fontSize = 8.sp,
+            color = colors.secondaryText,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            textAlign = TextAlign.Center,
+            lineHeight = 9.sp,
+        )
+    }
 }

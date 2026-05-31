@@ -10,6 +10,18 @@ import SwiftUI
 //
 // Android mirror: android/.../ui/calendar/CalendarScreen.kt
 
+private enum CalViewMode: String, CaseIterable {
+    case list, week, month
+
+    var icon: String {
+        switch self {
+        case .list:  return "list.bullet"
+        case .week:  return "calendar.day.timeline.left"
+        case .month: return "square.grid.3x3"
+        }
+    }
+}
+
 struct CalendarView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.rite) private var riteRaw = MissalRite.rite1962.rawValue
@@ -19,6 +31,7 @@ struct CalendarView: View {
     @State private var selectedDay: CalendarDay?
     @State private var pendingProper: MassProper?
     @State private var properToShow: MassProper?
+    @State private var viewMode: CalViewMode = .list
 
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var store: ContentStore { .shared }
@@ -41,7 +54,11 @@ struct CalendarView: View {
             chrome
             navRow
             Divider().overlay(Color.frameLine)
-            dayList
+            switch viewMode {
+            case .list:  dayList
+            case .week:  weekView
+            case .month: monthGrid
+            }
         }
         .background(Color.pageBackground.ignoresSafeArea())
         .sheet(item: $selectedDay, onDismiss: presentPendingProper) { day in
@@ -64,10 +81,11 @@ struct CalendarView: View {
     // MARK: Chrome
 
     private var chrome: some View {
-        HStack {
+        HStack(spacing: 12) {
             Text("Kalendárium")
                 .smallLabel(color: Color.sanctuaryRed)
             Spacer()
+            viewModePicker
             if !isCurrentMonth {
                 Button { jumpToToday() } label: {
                     Text("Today")
@@ -80,11 +98,33 @@ struct CalendarView: View {
                     .font(.system(size: 15, weight: .medium))
                     .foregroundStyle(Color.tertiaryText)
             }
-            .padding(.leading, 14)
         }
         .padding(.horizontal, 24)
         .padding(.top, 20)
         .padding(.bottom, 8)
+    }
+
+    private var viewModePicker: some View {
+        HStack(spacing: 0) {
+            ForEach(CalViewMode.allCases, id: \.self) { mode in
+                Button {
+                    withAnimation(.easeInOut(duration: 0.2)) { viewMode = mode }
+                } label: {
+                    Image(systemName: mode.icon)
+                        .font(.system(size: 12))
+                        .foregroundStyle(viewMode == mode ? Color.parchment : Color.tertiaryText)
+                        .frame(width: 30, height: 26)
+                        .background(
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(viewMode == mode ? Color.sanctuaryRed : Color.clear)
+                        )
+                }
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(Color.frameLine, lineWidth: 0.5)
+        )
     }
 
     // MARK: Month / year navigation
@@ -168,6 +208,126 @@ struct CalendarView: View {
         guard model.days[idx].seasonLabel != nil else { return false }
         if idx == 0 { return true }
         return model.days[idx - 1].seasonLabel != model.days[idx].seasonLabel
+    }
+
+    // MARK: Week view
+
+    private var currentWeekDays: [CalendarDay] {
+        let cal = Calendar.liturgical
+        let now = Date()
+        let todayWd = cal.component(.weekday, from: now) // 1=Sun..7=Sat
+        return model.days.filter { day in
+            if day.isToday { return true }
+            let diff = cal.dateComponents([.day], from: now, to: day.date).day ?? 999
+            let startOfWeek = -(todayWd - 1)
+            let endOfWeek = 7 - todayWd
+            return diff >= startOfWeek && diff <= endOfWeek
+        }
+    }
+
+    private var weekView: some View {
+        let days: [CalendarDay]
+        if isCurrentMonth {
+            days = currentWeekDays
+        } else {
+            days = Array(model.days.prefix(7))
+        }
+        return ScrollView {
+            LazyVStack(spacing: 0) {
+                ForEach(Array(days.enumerated()), id: \.element.id) { idx, day in
+                    DayRow(day: day) { selectedDay = day }
+                        .id(day.id)
+                    if idx < days.count - 1 {
+                        Rectangle()
+                            .fill(Color.goldLeaf.opacity(0.16))
+                            .frame(height: 0.5)
+                            .padding(.leading, 78)
+                    }
+                }
+            }
+            .padding(.bottom, 28)
+        }
+    }
+
+    // MARK: Month grid
+
+    private static let gridWeekdayLetters = ["S", "M", "T", "W", "T", "F", "S"]
+    private static let gridColumns = Array(repeating: GridItem(.flexible(), spacing: 2), count: 7)
+
+    private var monthGrid: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 2) {
+                ForEach(Array(Self.gridWeekdayLetters.enumerated()), id: \.offset) { _, letter in
+                    Text(letter)
+                        .font(.system(size: 10, weight: .medium))
+                        .foregroundStyle(Color.tertiaryText)
+                        .frame(maxWidth: .infinity)
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+
+            ScrollView {
+                LazyVGrid(columns: Self.gridColumns, spacing: 2) {
+                    ForEach(0..<model.leadingBlanks, id: \.self) { _ in
+                        Color.clear.frame(height: 52)
+                    }
+                    ForEach(model.days) { day in
+                        gridCell(day)
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.bottom, 20)
+            }
+        }
+    }
+
+    @AppStorage(SettingsKey.language) private var calLangRaw = LanguageMode.both.rawValue
+    private var calLang: LanguageMode { LanguageMode(rawValue: calLangRaw) ?? .both }
+
+    private func gridCell(_ d: CalendarDay) -> some View {
+        Button { selectedDay = d } label: {
+            VStack(spacing: 2) {
+                ZStack {
+                    Circle()
+                        .fill(d.isToday
+                              ? Color.sanctuaryRed
+                              : (d.colour?.swiftUIColor ?? Color.frameLine).opacity(0.14))
+                    Circle()
+                        .stroke(gridRingColor(d), lineWidth: d.isMajor ? 1.5 : 0.5)
+                    Text("\(d.day)")
+                        .font(.system(size: 13, weight: d.isMajor ? .semibold : .regular, design: .serif))
+                        .foregroundStyle(d.isToday ? Color.parchment : Color.primaryText)
+                }
+                .frame(width: 30, height: 30)
+
+                Text(gridLabel(d))
+                    .font(.system(size: 8))
+                    .foregroundStyle(Color.secondaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+                    .frame(height: 20)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 52)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func gridRingColor(_ d: CalendarDay) -> Color {
+        if d.isToday { return Color.sanctuaryRed }
+        return (d.colour?.swiftUIColor ?? Color.frameLine).opacity(d.isMajor ? 0.8 : 0.3)
+    }
+
+    private func gridLabel(_ d: CalendarDay) -> String {
+        if calLang != .latinOnly, let eng = d.englishName {
+            let parts = eng.split(separator: ",")
+            return String(parts.first ?? Substring(eng))
+        }
+        let label = d.label ?? ""
+        let parts = label.split(separator: " ")
+        return parts.prefix(3).joined(separator: " ")
     }
 
     // MARK: Navigation logic

@@ -18,8 +18,7 @@ struct HourView: View {
 
     var body: some View {
         NavigationStack {
-            GeometryReader { _ in
-                ScrollViewReader { proxy in
+            ScrollViewReader { proxy in
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack(spacing: 0) {
                         header
@@ -37,10 +36,8 @@ struct HourView: View {
                         .padding(.horizontal, 20)
                         .padding(.vertical, 24)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .onAppear { scrollToAnchor(proxy) }
-                }
             }
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
