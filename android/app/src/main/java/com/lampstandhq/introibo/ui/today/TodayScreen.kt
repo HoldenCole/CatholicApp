@@ -47,6 +47,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
 import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
+import com.lampstandhq.introibo.data.liturgical.penanceFor
 import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.data.model.Prayer
 import com.lampstandhq.introibo.ui.prayers.PrayerDetailSheet
@@ -544,6 +545,8 @@ private fun PenanceCard(
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
+    val penance = remember(ctx, discipline) { ctx.penanceFor(discipline) }
+
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -559,21 +562,21 @@ private fun PenanceCard(
         }
 
         Text(
-            text = ctx.penance.rubric,
+            text = penance.rubric,
             style = type.captionSm,
             color = colors.tertiaryText,
             modifier = Modifier.padding(top = 4.dp),
         )
 
         Text(
-            text = ctx.penance.title,
+            text = penance.title,
             style = type.titleM.copy(fontStyle = FontStyle.Italic),
             color = colors.primaryText,
             modifier = Modifier.padding(top = 8.dp),
         )
 
         Text(
-            text = ctx.penance.desc,
+            text = penance.desc,
             style = type.bodySm,
             color = colors.secondaryText,
             lineHeight = type.bodySm.fontSize * 1.2f,

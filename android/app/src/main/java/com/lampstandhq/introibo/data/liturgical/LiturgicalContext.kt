@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.liturgical
 
+import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
@@ -124,7 +125,10 @@ data class LiturgicalContext(
          * Build the full liturgical context for [now].
          * Direct port of LiturgicalContext.for(date:) in the iOS codebase.
          */
-        fun forDate(now: LocalDate): LiturgicalContext {
+        fun forDate(
+            now: LocalDate,
+            discipline: PenanceDiscipline = PenanceDiscipline.DISCIPLINE_1962,
+        ): LiturgicalContext {
             val year = now.year
 
             // Feast anchors
@@ -235,56 +239,11 @@ data class LiturgicalContext(
             if (isSunday && season == LiturgicalSeason.ADVENT) mystery = MysterySet.JOYFUL
             if (isSunday && isLent) mystery = MysterySet.SORROWFUL
 
-            // ---- Penance (1962 norms) ----
-            val penance: Penance = if (isLent && isFriday) {
-                Penance(
-                    title = "Lenten Friday",
-                    latin = "Feria Sexta in Quadragésima",
-                    desc = "Abstinence from flesh-meat. Those of fasting age observe the Lenten fast: one full meal and two small collations.",
-                    rubric = "℟. Quadragésima · Feria Sexta",
-                    strict = true,
-                )
-            } else if (isLent) {
-                Penance(
-                    title = "Lenten Fast",
-                    latin = "Ieiúnium Quadragesimále",
-                    desc = "Those of fasting age (21-59) observe the Lenten fast: one full meal and two small collations. Wednesdays in Lent are also days of abstinence.",
-                    rubric = "℟. ${feriaLatinNames[dow]} in Quadragésima",
-                    strict = true,
-                )
-            } else if (isFriday) {
-                Penance(
-                    title = "Friday Abstinence",
-                    latin = "Feria Sexta",
-                    desc = "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
-                    rubric = "℟. Feria Sexta",
-                    strict = false,
-                )
-            } else if (season == LiturgicalSeason.ADVENT && (dow == 3 || dow == 5 || dow == 6)) {
-                Penance(
-                    title = "Advent Penance",
-                    latin = "Tempus Advéntus",
-                    desc = "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
-                    rubric = "℟. ${feriaLatinNames[dow]} in Advéntu",
-                    strict = false,
-                )
-            } else if (isSunday) {
-                Penance(
-                    title = "Day of the Lord",
-                    latin = "Dies Domínica",
-                    desc = "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass.",
-                    rubric = "℟. Domínica",
-                    strict = false,
-                )
-            } else {
-                Penance(
-                    title = "No obligatory penance",
-                    latin = "Nulla pæniténtia obligatória",
-                    desc = "A free day. Voluntary mortifications are always meritorious, choose a small sacrifice as your daily offering.",
-                    rubric = "℟. ${feriaLatinNames[dow]}",
-                    strict = false,
-                )
-            }
+            // ---- Penance (discipline-aware) ----
+            val penance = computePenance(
+                discipline, season, dow, isSunday, isFriday, isLent,
+                now, easter, pentecost, firstAdvent,
+            )
 
             val temporal = computeTemporalKey(
                 now, easter, ashWed, pentecost, trinity, firstAdvent, christmas,
@@ -371,6 +330,105 @@ data class LiturgicalContext(
             }
 
             return null
+        }
+
+        // ---- Discipline-aware penance ----
+
+        internal fun computePenance(
+            discipline: PenanceDiscipline,
+            season: LiturgicalSeason, dow: Int,
+            isSunday: Boolean, isFriday: Boolean, isLent: Boolean,
+            date: LocalDate, easter: LocalDate, pentecost: LocalDate,
+            firstAdvent: LocalDate,
+        ): Penance {
+            val isSaturday = dow == 6
+            val isWednesday = dow == 3
+            if (isSunday) return Penance("Day of the Lord", "Dies Domínica",
+                "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass.",
+                "℟. Domínica", false)
+
+            if (discipline != PenanceDiscipline.DISCIPLINE_1962 &&
+                isEmberDate(date, easter, pentecost, firstAdvent, dow)) {
+                val desc = if (discipline == PenanceDiscipline.STRICT)
+                    "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat."
+                else "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat."
+                return Penance("Ember Day — Fast & Abstinence", "Quattuor Témporum", desc,
+                    "℟. Quattuor Témporum", true)
+            }
+            if (discipline != PenanceDiscipline.DISCIPLINE_1962 &&
+                isVigilFast(date, pentecost)) {
+                val desc = if (discipline == PenanceDiscipline.STRICT)
+                    "Fast (one full meal, no upper age limit) and abstinence."
+                else "Fast (one full meal and two collations, ages 21–59) and abstinence."
+                return Penance("Vigil — Fast & Abstinence", "Vigília — Ieiúnium", desc,
+                    "℟. Vigília", true)
+            }
+            if (isLent) {
+                val fastDesc = if (discipline == PenanceDiscipline.STRICT)
+                    "Fast: one full meal (no upper age limit). Two small collations permitted."
+                else "Fast: one full meal and two small collations (ages 21–59)."
+                if (isFriday) return Penance("Lenten Friday — Fast & Abstinence",
+                    "Feria Sexta in Quadragésima",
+                    "$fastDesc Complete abstinence from flesh-meat.",
+                    "℟. Quadragésima · Feria Sexta", true)
+                if (isSaturday && discipline != PenanceDiscipline.DISCIPLINE_1962)
+                    return Penance("Lenten Saturday — Fast & Abstinence",
+                        "Sábbato in Quadragésima",
+                        "$fastDesc Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).",
+                        "℟. Quadragésima · Sábbato", true)
+                return Penance("Lenten Fast", "Ieiúnium Quadragesimále",
+                    "$fastDesc Wednesdays are also days of abstinence.",
+                    "℟. ${feriaLatinNames[dow]} in Quadragésima", true)
+            }
+            if (season == LiturgicalSeason.ADVENT) {
+                if (discipline == PenanceDiscipline.STRICT && (isWednesday || isFriday))
+                    return Penance("Advent Fast & Abstinence", "Ieiúnium et Abstinéntia in Advéntu",
+                        "Fast (one full meal, no upper age limit) and abstinence from flesh-meat (pre-1953 Advent discipline).",
+                        "℟. ${feriaLatinNames[dow]} in Advéntu", true)
+                if (discipline == PenanceDiscipline.DISCIPLINE_1917 && (isFriday || isSaturday))
+                    return Penance("Advent Abstinence", "Abstinéntia in Advéntu",
+                        "Abstain from flesh-meat (Advent Friday/Saturday, 1917 Code).",
+                        "℟. ${feriaLatinNames[dow]} in Advéntu", false)
+                if (isFriday) return Penance("Friday Abstinence", "Feria Sexta",
+                    "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+                    "℟. Feria Sexta", false)
+                return Penance("Advent — Penitential Season", "Tempus Advéntus",
+                    "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
+                    "℟. ${feriaLatinNames[dow]} in Advéntu", false)
+            }
+            if (isFriday) return Penance("Friday Abstinence", "Feria Sexta",
+                "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+                "℟. Feria Sexta", false)
+            return Penance("No obligatory penance", "Nulla pæniténtia obligatória",
+                "A free day. Voluntary mortifications are always meritorious; choose a small sacrifice as your daily offering.",
+                "℟. ${feriaLatinNames[dow]}", false)
+        }
+
+        private fun isEmberDate(date: LocalDate, easter: LocalDate, pentecost: LocalDate,
+                                firstAdvent: LocalDate, dow: Int): Boolean {
+            if (dow != 3 && dow != 5 && dow != 6) return false
+            val woy = date.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
+            val adv1w = firstAdvent.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
+            if (woy == adv1w + 2) return true
+            val ashWed = easter.minusDays(46)
+            val ashw = ashWed.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
+            if (woy == ashw) return true
+            val pentw = pentecost.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
+            if (woy == pentw + 1) return true
+            val sept14 = LocalDate.of(date.year, 9, 14)
+            var sun = sept14; while (sun.dayOfWeek != java.time.DayOfWeek.SUNDAY) sun = sun.plusDays(1)
+            val septw = sun.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
+            if (woy == septw) return true
+            return false
+        }
+
+        private fun isVigilFast(date: LocalDate, pentecost: LocalDate): Boolean {
+            val m = date.monthValue; val d = date.dayOfMonth
+            if (m == 12 && d == 24) return true
+            if (m == 8 && d == 14) return true
+            if (m == 10 && d == 31) return true
+            if (date == pentecost.minusDays(1)) return true
+            return false
         }
 
         // ---- Static lookup tables ----
@@ -470,6 +528,17 @@ val LiturgicalContext.isEmberDay: Boolean
 
         return false
     }
+
+/**
+ * Recompute the penance for this context under a specific [discipline].
+ * Used by the Today screen when the user's discipline differs from the default
+ * baked into [LiturgicalContext.penance] at construction time.
+ */
+fun LiturgicalContext.penanceFor(discipline: PenanceDiscipline): Penance =
+    LiturgicalContext.computePenance(
+        discipline, season, dayOfWeek, isSunday, isFriday, isLent,
+        date, easter, pentecost, firstAdvent,
+    )
 
 private fun weekOfYear(date: LocalDate): Int =
     date.get(java.time.temporal.WeekFields.SUNDAY_START.weekOfYear())

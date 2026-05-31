@@ -89,10 +89,12 @@ struct LiturgicalContext {
     static func current() -> LiturgicalContext {
         let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? MissalRite.rite1962.rawValue
         let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
-        return .for(date: Date(), rite: rite)
+        let discRaw = UserDefaults.standard.string(forKey: SettingsKey.penance) ?? PenanceDiscipline.discipline1962.rawValue
+        let disc = PenanceDiscipline(rawValue: discRaw) ?? .discipline1962
+        return .for(date: Date(), rite: rite, discipline: disc)
     }
 
-    static func `for`(date now: Date, rite: MissalRite = .rite1962) -> LiturgicalContext {
+    static func `for`(date now: Date, rite: MissalRite = .rite1962, discipline: PenanceDiscipline = .discipline1962) -> LiturgicalContext {
         let cal = Calendar.liturgical
         let year = cal.component(.year, from: now)
 
@@ -202,57 +204,13 @@ struct LiturgicalContext {
         if isSunday && season == .advent { mystery = .joyful }
         if isSunday && isLent { mystery = .sorrowful }
 
-        // ---- Penance (1962 norms) ----
-        let penance: Penance
-        if isLent && isFriday {
-            penance = Penance(
-                title: "Lenten Friday",
-                latin: "Feria Sexta in Quadragésima",
-                desc: "Abstinence from flesh-meat. Those of fasting age observe the Lenten fast: one full meal and two small collations.",
-                rubric: "℟. Quadragésima · Feria Sexta",
-                strict: true
-            )
-        } else if isLent {
-            penance = Penance(
-                title: "Lenten Fast",
-                latin: "Ieiúnium Quadragesimále",
-                desc: "Those of fasting age (21-59) observe the Lenten fast: one full meal and two small collations. Wednesdays in Lent are also days of abstinence.",
-                rubric: "℟. \(Self.feriaLatin[dow]) in Quadragésima",
-                strict: true
-            )
-        } else if isFriday {
-            penance = Penance(
-                title: "Friday Abstinence",
-                latin: "Feria Sexta",
-                desc: "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
-                rubric: "℟. Feria Sexta",
-                strict: false
-            )
-        } else if season == .advent && (dow == 3 || dow == 5 || dow == 6) {
-            penance = Penance(
-                title: "Advent Penance",
-                latin: "Tempus Advéntus",
-                desc: "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
-                rubric: "℟. \(Self.feriaLatin[dow]) in Advéntu",
-                strict: false
-            )
-        } else if isSunday {
-            penance = Penance(
-                title: "Day of the Lord",
-                latin: "Dies Domínica",
-                desc: "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass.",
-                rubric: "℟. Domínica",
-                strict: false
-            )
-        } else {
-            penance = Penance(
-                title: "No obligatory penance",
-                latin: "Nulla pænitentia obligatória",
-                desc: "A free day. Voluntary mortifications are always meritorious, choose a small sacrifice as your daily offering.",
-                rubric: "℟. \(Self.feriaLatin[dow])",
-                strict: false
-            )
-        }
+        // ---- Penance (discipline-aware) ----
+        let penance = Self.computePenance(
+            discipline: discipline, season: season,
+            dow: dow, isSunday: isSunday, isFriday: isFriday, isLent: isLent,
+            date: now, easter: easter, pentecost: pentecost,
+            firstAdvent: firstAdvent, cal: cal
+        )
 
         let temporal = Self.computeTemporalKey(
             date: now, easter: easter, ashWed: ashWed,
@@ -366,6 +324,205 @@ struct LiturgicalContext {
             d = d.addingDays(1)
         }
         return d
+    }
+
+    // MARK: - Discipline-aware penance computation
+    //
+    // Three supported disciplines:
+    //  .discipline1962 — CIC 1983 / Paenitemini 1966 as applied in traditionalist
+    //     practice: Friday abstinence year-round; Lenten fast on weekdays
+    //     (ages 21–59 fasting, 14+ abstinence).
+    //  .discipline1917 — 1917 Code of Canon Law (canons 1250–1254): adds
+    //     Ember-day fast+abstinence; Saturday abstinence in Lent; vigil fasts
+    //     (Christmas Eve, Pentecost vigil, Assumption vigil, All Saints vigil);
+    //     Advent Fridays+Saturdays are abstinence days.
+    //  .strict — Pre-Pius XII (pre-1953): everything in 1917, plus Advent
+    //     Wednesdays & Fridays are fast+abstinence days; no upper age limit
+    //     on the fast.
+
+    private static func computePenance(
+        discipline: PenanceDiscipline,
+        season: LiturgicalSeason,
+        dow: Int, isSunday: Bool, isFriday: Bool, isLent: Bool,
+        date: Date, easter: Date, pentecost: Date,
+        firstAdvent: Date, cal: Calendar
+    ) -> Penance {
+        let isSaturday = dow == 6
+        let isWednesday = dow == 3
+
+        // Sundays: never a day of obligatory penance in any discipline.
+        if isSunday {
+            return Penance(
+                title: "Day of the Lord", latin: "Dies Domínica",
+                desc: "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass.",
+                rubric: "℟. Domínica", strict: false
+            )
+        }
+
+        // Ember days: fast + abstinence under 1917/strict (Wed/Fri/Sat of Ember weeks)
+        // Under 1962 they are penitential but not obligatory fast days.
+        if discipline != .discipline1962 {
+            if isEmberDate(date: date, easter: easter, pentecost: pentecost,
+                           firstAdvent: firstAdvent, cal: cal, dow: dow) {
+                return Penance(
+                    title: "Ember Day — Fast & Abstinence",
+                    latin: "Quattuor Témporum",
+                    desc: discipline == .strict
+                        ? "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat."
+                        : "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat.",
+                    rubric: "℟. Quattuor Témporum",
+                    strict: true
+                )
+            }
+        }
+
+        // Vigils: fast days under 1917/strict
+        if discipline != .discipline1962 {
+            if isVigilFast(date: date, easter: easter, pentecost: pentecost, cal: cal) {
+                return Penance(
+                    title: "Vigil — Fast & Abstinence",
+                    latin: "Vigília — Ieiúnium",
+                    desc: discipline == .strict
+                        ? "Fast (one full meal, no upper age limit) and abstinence."
+                        : "Fast (one full meal and two collations, ages 21–59) and abstinence.",
+                    rubric: "℟. Vigília",
+                    strict: true
+                )
+            }
+        }
+
+        // Lent
+        if isLent {
+            let fastDesc = discipline == .strict
+                ? "Fast: one full meal (no upper age limit). Two small collations permitted."
+                : "Fast: one full meal and two small collations (ages 21–59)."
+            if isFriday {
+                return Penance(
+                    title: "Lenten Friday — Fast & Abstinence",
+                    latin: "Feria Sexta in Quadragésima",
+                    desc: "\(fastDesc) Complete abstinence from flesh-meat.",
+                    rubric: "℟. Quadragésima · Feria Sexta",
+                    strict: true
+                )
+            }
+            // 1917/strict: Saturdays in Lent are days of abstinence (in addition to fast)
+            if isSaturday && discipline != .discipline1962 {
+                return Penance(
+                    title: "Lenten Saturday — Fast & Abstinence",
+                    latin: "Sábbato in Quadragésima",
+                    desc: "\(fastDesc) Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).",
+                    rubric: "℟. Quadragésima · Sábbato",
+                    strict: true
+                )
+            }
+            // All other Lenten weekdays: fast
+            return Penance(
+                title: "Lenten Fast",
+                latin: "Ieiúnium Quadragesimále",
+                desc: "\(fastDesc) Wednesdays are also days of abstinence.",
+                rubric: "℟. \(feriaLatin[dow]) in Quadragésima",
+                strict: true
+            )
+        }
+
+        // Advent
+        if season == .advent {
+            // Strict: Wednesdays & Fridays are fast + abstinence
+            if discipline == .strict && (isWednesday || isFriday) {
+                return Penance(
+                    title: "Advent Fast & Abstinence",
+                    latin: "Ieiúnium et Abstinéntia in Advéntu",
+                    desc: "Fast (one full meal, no upper age limit) and abstinence from flesh-meat (pre-1953 Advent discipline).",
+                    rubric: "℟. \(feriaLatin[dow]) in Advéntu",
+                    strict: true
+                )
+            }
+            // 1917: Advent Fridays & Saturdays are abstinence days
+            if discipline == .discipline1917 && (isFriday || isSaturday) {
+                return Penance(
+                    title: "Advent Abstinence",
+                    latin: "Abstinéntia in Advéntu",
+                    desc: "Abstain from flesh-meat (Advent Friday/Saturday, 1917 Code).",
+                    rubric: "℟. \(feriaLatin[dow]) in Advéntu",
+                    strict: false
+                )
+            }
+            // 1962: Advent is penitential but no binding obligation outside Fridays
+            if isFriday {
+                return Penance(
+                    title: "Friday Abstinence",
+                    latin: "Feria Sexta",
+                    desc: "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+                    rubric: "℟. Feria Sexta",
+                    strict: false
+                )
+            }
+            return Penance(
+                title: "Advent — Penitential Season",
+                latin: "Tempus Advéntus",
+                desc: "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
+                rubric: "℟. \(feriaLatin[dow]) in Advéntu",
+                strict: false
+            )
+        }
+
+        // Year-round Friday abstinence (all three disciplines)
+        if isFriday {
+            return Penance(
+                title: "Friday Abstinence",
+                latin: "Feria Sexta",
+                desc: "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+                rubric: "℟. Feria Sexta",
+                strict: false
+            )
+        }
+
+        // No obligatory penance
+        return Penance(
+            title: "No obligatory penance",
+            latin: "Nulla pænitentia obligatória",
+            desc: "A free day. Voluntary mortifications are always meritorious; choose a small sacrifice as your daily offering.",
+            rubric: "℟. \(feriaLatin[dow])",
+            strict: false
+        )
+    }
+
+    /// Ember days: Wed/Fri/Sat of the four Ember weeks.
+    private static func isEmberDate(date: Date, easter: Date, pentecost: Date,
+                                     firstAdvent: Date, cal: Calendar, dow: Int) -> Bool {
+        guard dow == 3 || dow == 5 || dow == 6 else { return false }
+        let week = cal.component(.weekOfYear, from: date)
+        // Advent Ember: 3rd week of Advent
+        let adv1Week = cal.component(.weekOfYear, from: firstAdvent)
+        if week == adv1Week + 2 { return true }
+        // Lent Ember: week of Ash Wednesday (= Easter - 46 days)
+        let ashWed = easter.addingDays(-46)
+        let ashWeek = cal.component(.weekOfYear, from: ashWed)
+        if week == ashWeek { return true }
+        // Pentecost Ember: week after Pentecost
+        let pentWeek = cal.component(.weekOfYear, from: pentecost)
+        if week == pentWeek + 1 { return true }
+        // September Ember: week after Sept 14 (Exaltation of the Cross)
+        let year = cal.component(.year, from: date)
+        var sept14Comps = DateComponents(); sept14Comps.year = year; sept14Comps.month = 9; sept14Comps.day = 14
+        if let sept14 = cal.date(from: sept14Comps) {
+            let s14week = cal.component(.weekOfYear, from: nextSunday(after: sept14, cal: cal))
+            if week == s14week { return true }
+        }
+        return false
+    }
+
+    /// Vigil fast days under the 1917 Code: Christmas Eve, Pentecost vigil,
+    /// Assumption vigil (Aug 14), All Saints vigil (Oct 31).
+    private static func isVigilFast(date: Date, easter: Date, pentecost: Date, cal: Calendar) -> Bool {
+        let m = cal.component(.month, from: date)
+        let d = cal.component(.day, from: date)
+        if m == 12 && d == 24 { return true }    // Christmas Eve
+        if m == 8  && d == 14 { return true }    // Assumption Vigil
+        if m == 10 && d == 31 { return true }    // All Saints Vigil
+        // Pentecost vigil (Saturday before Pentecost)
+        if date.isSameDay(as: pentecost.addingDays(-1)) { return true }
+        return false
     }
 
     private static let feriaLatin = [
