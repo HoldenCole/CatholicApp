@@ -20,7 +20,7 @@ struct HourView: View {
         NavigationStack {
             ScrollViewReader { proxy in
                 ScrollView(.vertical, showsIndicators: true) {
-                    VStack(spacing: 0) {
+                    VStack(alignment: .leading, spacing: 0) {
                         header
                         VStack(alignment: .leading, spacing: 22) {
                             intro
@@ -33,9 +33,15 @@ struct HourView: View {
                                 DeepLinkTarget(type: .office, id: hour.slug, position: nil)
                             ))
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 24)
                     }
+                    // Pin the whole column to the viewport width so a single
+                    // wide part (e.g. a long unbreakable token in a Matins
+                    // lesson) can never make the VStack grow and centre-clip
+                    // the entire hour. Content stays leading-aligned.
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .onAppear { scrollToAnchor(proxy) }
             }
