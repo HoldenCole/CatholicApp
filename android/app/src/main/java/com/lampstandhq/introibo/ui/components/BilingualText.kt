@@ -52,8 +52,13 @@ fun BilingualLine(
     // i.e. visually identical to the previous plain Text(strippingEm).
     val cleanLat = linkedAnnotatedString(lat, colors.sanctuaryRed, onLinkTap)
     val cleanEng = linkedAnnotatedString(eng, colors.sanctuaryRed, onLinkTap)
+    // Many feasts carry a proper part DivinumOfficium only ships in Latin — its
+    // English is genuinely absent upstream. Fall back to the Latin rather than
+    // render a blank line (or nothing at all in English-only mode), the way
+    // traditional hand missals print Latin where no approved vernacular exists.
+    val hasEng = eng.isNotBlank()
 
-    if (sideBySide && languageMode == "both") {
+    if (sideBySide && languageMode == "both" && hasEng) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.Top,
@@ -79,7 +84,7 @@ fun BilingualLine(
             verticalArrangement = Arrangement.spacedBy(3.dp),
             horizontalAlignment = Alignment.Start,
         ) {
-            if (languageMode != "vernacular") {
+            if (languageMode != "vernacular" || !hasEng) {
                 Text(
                     text = cleanLat,
                     style = type.body,
@@ -87,7 +92,7 @@ fun BilingualLine(
                     lineHeight = type.body.fontSize * 1.2f,
                 )
             }
-            if (languageMode != "latin") {
+            if (languageMode != "latin" && hasEng) {
                 Text(
                     text = cleanEng,
                     style = type.bodyIt,
@@ -144,12 +149,13 @@ fun LanguageAwareLabel(
     style: androidx.compose.ui.text.TextStyle = IntroiboType.current.captionSm.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic),
     color: androidx.compose.ui.graphics.Color = androidx.compose.material3.LocalContentColor.current,
 ) {
+    val hasEng = english.isNotBlank()
     when (currentLanguageMode()) {
         LanguageMode.LATIN_ONLY -> Text(latin, style = style, color = color, modifier = modifier)
-        LanguageMode.VERNACULAR -> Text(english, style = style, color = color, modifier = modifier)
+        LanguageMode.VERNACULAR -> Text(if (hasEng) english else latin, style = style, color = color, modifier = modifier)
         LanguageMode.BOTH -> Column(modifier = modifier) {
             Text(latin, style = style, color = color)
-            Text(english, style = style, color = color)
+            if (hasEng) Text(english, style = style, color = color)
         }
     }
 }

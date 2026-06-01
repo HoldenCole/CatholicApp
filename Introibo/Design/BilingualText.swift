@@ -17,8 +17,15 @@ struct BilingualLine: View {
     private var attributedLat: AttributedString { ContextualLink.attributed(lat) }
     private var attributedEng: AttributedString { ContextualLink.attributed(eng) }
 
+    /// Many feasts carry a proper part (a Little Chapter, antiphon, or lesson)
+    /// that DivinumOfficium only ships in Latin — its English is genuinely
+    /// absent upstream. Rather than render a blank line (or, in English-only
+    /// mode, nothing at all), fall back to the Latin, the way traditional hand
+    /// missals print the Latin where no approved vernacular exists.
+    private var hasEng: Bool { !eng.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+
     var body: some View {
-        if sideBySide && mode == .both && fontScale <= 1.4 {
+        if sideBySide && mode == .both && fontScale <= 1.4 && hasEng {
             HStack(alignment: .top, spacing: 12) {
                 Text(attributedLat)
                     .font(.body)
@@ -36,13 +43,15 @@ struct BilingualLine: View {
             }
         } else {
             VStack(alignment: .leading, spacing: 3) {
-                if mode != .vernacular {
+                // In vernacular mode with no English, show the Latin so the
+                // part is never blank; otherwise show Latin unless suppressed.
+                if mode != .vernacular || !hasEng {
                     Text(attributedLat)
                         .font(.body)
                         .foregroundStyle(Color.primaryText)
                         .lineSpacing(3)
                 }
-                if mode != .latinOnly {
+                if mode != .latinOnly && hasEng {
                     Text(attributedEng)
                         .font(.body)
                         .italic()
@@ -108,16 +117,18 @@ struct LanguageAwareText: View {
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
 
+    private var hasEng: Bool { !english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+
     var body: some View {
         switch mode {
         case .latinOnly:
             Text(latin)
         case .vernacular:
-            Text(english)
+            Text(hasEng ? english : latin)   // fall back to Latin when untranslated
         case .both:
             VStack(spacing: 2) {
                 Text(latin)
-                Text(english)
+                if hasEng { Text(english) }
             }
         }
     }

@@ -262,7 +262,11 @@ enum MassHTMLExporter {
 
         html += "<div class=\"bilingual\">"
         html += "<p class=\"latin\">\(prepareBodyHTML(lat))</p>"
-        html += "<p class=\"english-text\">\(prepareBodyHTML(eng))</p>"
+        // Some propers have no approved English upstream; omit the empty
+        // paragraph rather than print a blank line under the Latin.
+        if !eng.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            html += "<p class=\"english-text\">\(prepareBodyHTML(eng))</p>"
+        }
         html += "</div>"
         html += "</div>"
         html += "<div class=\"divider\"></div>"

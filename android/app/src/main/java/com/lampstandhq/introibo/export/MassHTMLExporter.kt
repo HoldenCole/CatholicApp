@@ -115,7 +115,11 @@ object MassHTMLExporter {
             // Convert <br> variants to <br> for consistency, strip other tags.
             append("""<div class="bilingual">""")
             append("""<p class="latin">${prepareBodyHTML(lat)}</p>""")
-            append("""<p class="english-text">${prepareBodyHTML(eng)}</p>""")
+            // Some propers have no approved English upstream; omit the empty
+            // paragraph rather than print a blank line under the Latin.
+            if (eng.isNotBlank()) {
+                append("""<p class="english-text">${prepareBodyHTML(eng)}</p>""")
+            }
             append("</div>")
             append("</div>")
             append("""<div class="divider"></div>""")
