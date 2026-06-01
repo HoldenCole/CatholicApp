@@ -315,6 +315,18 @@ def extract_psalm_antiphons(code, lat_sections, eng_sections, lat_file, eng_file
         eng_ants = _resolve_ant_section(eng_sections, do_sec, eng_file, DO_ENG) \
             if eng_sections else []
 
+        # Fallback: when the English file lacks the section entirely but the
+        # Latin file has cross-references, build a merged section dict that
+        # has the Latin structure (for the missing section) plus English content
+        # (for self-referenced sub-sections like Ant VesperaBMV), then replay
+        # the resolution against English commune files.
+        if not eng_ants and lat_ants and eng_sections and do_sec not in eng_sections:
+            merged = dict(eng_sections)
+            # Copy only the missing structural section from Latin
+            if do_sec in lat_sections:
+                merged[do_sec] = lat_sections[do_sec]
+            eng_ants = _resolve_ant_section(merged, do_sec, eng_file, DO_ENG)
+
         if not lat_ants:
             continue
 
