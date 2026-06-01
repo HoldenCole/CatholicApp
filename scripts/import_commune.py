@@ -30,13 +30,25 @@ OUT_ANDROID = ROOT / "android" / "app" / "src" / "main" / "assets"
 # Lauds: capitulum_laudes, hymnus_laudes, versum_1 (versicle), ant_laudes (Benedictus)
 # Vespers: vesperae.capitulum, hymnus_vespera, versum_2 (versicle), ant_vespera (Magnificat)
 SECTION_MAP = {
+    # Lauds
     "Capitulum Laudes": ("capitulum_laudes", "capitulum"),
     "Hymnus Laudes":    ("hymnus_laudes", "hymn"),
     "Versum 2":         ("versum_1", "vr"),       # DO "Versum 2" is the Lauds versicle
     "Ant 2":            ("ant_laudes", "antiphon"), # DO "Ant 2" is the Benedictus antiphon
+    # Vespers
     "Hymnus Vespera":   ("hymnus_vespera", "hymn"),
     "Versum 1":         ("versum_2", "vr"),       # DO "Versum 1" is the Vespers versicle
     "Ant 1":            ("ant_vespera", "antiphon"), # DO "Ant 1" is the Magnificat antiphon
+    # Little Hours
+    "Capitulum Sexta":  ("capitulum_sexta", "capitulum"),
+    "Capitulum Nona":   ("capitulum_nona", "capitulum"),
+    "Responsory Breve Tertia": ("responsory_breve_tertia", "responsory"),
+    "Responsory Breve Sexta":  ("responsory_breve_sexta", "responsory"),
+    "Responsory Breve Nona":   ("responsory_breve_nona", "responsory"),
+    "Lectio Prima":     ("lectio_prima", "reading"),
+    # Matins (structural — invitatory + hymn; lessons stay proper)
+    "Invit":            ("invit", "antiphon"),
+    "Hymnus Matutinum": ("hymnus_matutinum", "hymn"),
 }
 
 
@@ -132,11 +144,13 @@ def build_commune(code, _seen=None):
             "variationKey": app_key,
         }
 
-    # The Little Chapter is the same at Vespers as at Lauds in the commons.
-    if "capitulum_laudes" in parts and "vesperae.capitulum" not in parts:
-        cap = dict(parts["capitulum_laudes"])
-        cap["variationKey"] = "vesperae.capitulum"
-        parts["vesperae.capitulum"] = cap
+    # The Little Chapter is the same at Vespers and Terce as at Lauds.
+    if "capitulum_laudes" in parts:
+        for vk in ("vesperae.capitulum", "tertia.capitulum"):
+            if vk not in parts:
+                cap = dict(parts["capitulum_laudes"])
+                cap["variationKey"] = vk
+                parts[vk] = cap
 
     # In several commons the Lauds hymn IS the Vespers hymn (DO self-reference
     # that doesn't carry the English text). Backfill the missing translation.
