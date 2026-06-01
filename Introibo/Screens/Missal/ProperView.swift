@@ -9,6 +9,9 @@ struct ProperView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
+    @State private var showShareSheet = false
+    @State private var pdfURL: URL?
+    @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private func sectionLabel(_ latin: String, _ english: String) -> String {
         switch mode {
@@ -79,10 +82,31 @@ struct ProperView: View {
                         .foregroundStyle(Color.sanctuaryRed)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    ShareLink(item: properAsText()) {
+                    Menu {
+                        Button {
+                            let html = MassHTMLExporter.properHTML(proper)
+                            if let data = PDFExporter.generatePDF(from: html) {
+                                let url = FileManager.default.temporaryDirectory
+                                    .appendingPathComponent("Introibo-Proper.pdf")
+                                try? data.write(to: url)
+                                pdfURL = url
+                                showShareSheet = true
+                            }
+                        } label: {
+                            Label("Share as PDF", systemImage: "doc.richtext")
+                        }
+                        ShareLink(item: properAsText()) {
+                            Label("Share as Text", systemImage: "doc.plaintext")
+                        }
+                    } label: {
                         Image(systemName: "square.and.arrow.up")
                             .foregroundStyle(Color.sanctuaryRed)
                     }
+                }
+            }
+            .sheet(isPresented: $showShareSheet) {
+                if let url = pdfURL {
+                    ShareSheet(items: [url])
                 }
             }
         }

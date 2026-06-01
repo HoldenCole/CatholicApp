@@ -15,7 +15,11 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.ui.unit.Dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Subject
+import androidx.compose.material.icons.filled.PictureAsPdf
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -24,12 +28,17 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.foundation.layout.size
 import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.MassProper
@@ -122,19 +131,37 @@ fun ProperScreen(
                 }
             },
             actions = {
-                IconButton(onClick = {
-                    val shareText = properAsText(proper)
-                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                        this.type = "text/plain"
-                        putExtra(Intent.EXTRA_TEXT, shareText)
+                var showMenu by remember { mutableStateOf(false) }
+                Box {
+                    IconButton(onClick = { showMenu = true }) {
+                        Icon(Icons.Filled.Share, "Share", tint = colors.sanctuaryRed)
                     }
-                    context.startActivity(Intent.createChooser(shareIntent, "Share Propers"))
-                }) {
-                    Icon(
-                        imageVector = Icons.Filled.Share,
-                        contentDescription = "Share",
-                        tint = colors.sanctuaryRed,
-                    )
+                    DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+                        DropdownMenuItem(
+                            text = { Text("Share as PDF") },
+                            leadingIcon = { Icon(Icons.Filled.PictureAsPdf, null, modifier = Modifier.size(20.dp)) },
+                            onClick = {
+                                showMenu = false
+                                val html = com.lampstandhq.introibo.export.MassHTMLExporter.properHTML(proper)
+                                context.startActivity(Intent.createChooser(
+                                    com.lampstandhq.introibo.export.PDFExporter.shareHTMLIntent(html, proper.title),
+                                    "Share Propers"
+                                ))
+                            },
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Share as Text") },
+                            leadingIcon = { Icon(Icons.AutoMirrored.Filled.Subject, null, modifier = Modifier.size(20.dp)) },
+                            onClick = {
+                                showMenu = false
+                                val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                                    type = "text/plain"
+                                    putExtra(Intent.EXTRA_TEXT, properAsText(proper))
+                                }
+                                context.startActivity(Intent.createChooser(shareIntent, "Share Propers"))
+                            },
+                        )
+                    }
                 }
             },
             colors = TopAppBarDefaults.topAppBarColors(
