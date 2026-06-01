@@ -448,9 +448,11 @@ object ContentStore {
     fun hourForToday(slug: String, rite: MissalRite = MissalRite.RITE_1962): Hour? {
         val template = hour(slug) ?: return null
         val ctx = LiturgicalContext.current()
-        var assembled = officeAssembler.assemble(template, ctx)
-
         val ordo = ordoForDate(ctx.date, rite)
+        // Feasts (Semiduplex and above, rank >= 2.0) use festal psalm scheme
+        // at Lauds & Vespers; ferias and Simples use ferial psalms.
+        val isFestal = ordo?.rank?.let { it >= 2.0 } ?: false
+        var assembled = officeAssembler.assemble(template, ctx, isFestal)
         if (ordo != null) {
             if (ordo.winner == "sanctoral") {
                 // Office layering (each later layer wins): commune fallback,
@@ -484,6 +486,19 @@ object ContentStore {
         return assembled
     }
 
+    private val psalmToAntiphonKey = mapOf(
+        "laudes.psalm1" to "laudes.antiphon.psalm1",
+        "laudes.psalm2" to "laudes.antiphon.psalm2",
+        "laudes.psalm3" to "laudes.antiphon.psalm3",
+        "laudes.canticle1" to "laudes.antiphon.psalm4",
+        "laudes.psalm4" to "laudes.antiphon.psalm5",
+        "vesperae.psalm1" to "vesperae.antiphon.psalm1",
+        "vesperae.psalm2" to "vesperae.antiphon.psalm2",
+        "vesperae.psalm3" to "vesperae.antiphon.psalm3",
+        "vesperae.psalm4" to "vesperae.antiphon.psalm4",
+        "vesperae.psalm5" to "vesperae.antiphon.psalm5",
+    )
+
     private fun applyProperOverrides(hour: Hour, overrides: Map<String, Hour.Part>): Hour {
         val updatedParts = hour.parts.map { part ->
             val key = part.variationKey
@@ -493,6 +508,20 @@ object ContentStore {
             if ((key == "vesperae.capitulum" || key == "tertia.capitulum") &&
                 overrides.containsKey("capitulum_laudes")) {
                 return@map overrides["capitulum_laudes"]!!
+            }
+            // Proper per-psalm antiphons: set antiphonLat/antiphonEng on the
+            // psalm part without replacing the whole part (psalm text/ref).
+            if (key != null) {
+                val antKey = psalmToAntiphonKey[key]
+                if (antKey != null) {
+                    val antPart = overrides[antKey]
+                    if (antPart != null) {
+                        return@map part.copy(
+                            antiphonLat = antPart.lat,
+                            antiphonEng = antPart.eng,
+                        )
+                    }
+                }
             }
             if (part.type == "collect" && overrides.containsKey("collect")) return@map overrides["collect"]!!
             part

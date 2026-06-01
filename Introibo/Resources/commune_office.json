@@ -54,6 +54,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Hoc est præcéptum meum, * ut diligátis ínvicem, sicut diléxi vos.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Majórem caritátem * nemo habet, ut ánimam suam ponat quis pro amícis suis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Vos amíci mei estis, * si fecéritis quæ præcípio vobis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Beáti pacífici, * beáti mundo corde: quóniam ipsi Deum vidébunt.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "In patiéntia vestra * possidébitis ánimas vestras.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "V. And the Apostles indeed went from the presence of the council, rejoicing that they were accounted worthy to suffer reproach for the name of Jesus.",
    "lat": "Ibant Apóstoli gaudéntes a conspéctu concílii, quóniam digni hábiti sunt pro nómine Jesu contuméliam pati.",
@@ -95,6 +125,36 @@
    "lat": "V. In omnem terram exívit sonus eórum.\nR. Et in fines orbis terræ verba eórum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "This is my commandment * that you love one another, as I have loved you.",
+   "lat": "Hoc est præcéptum meum, * ut diligátis ínvicem, sicut diléxi vos.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "Greater love than this no man hath, * that a man lay down his life for his friends.",
+   "lat": "Majórem caritátem * nemo habet, ut ánimam suam ponat quis pro amícis suis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "You are my friends * if you do the things that I command you, said the Lord.",
+   "lat": "Vos amíci mei estis, * si fecéritis quæ præcípio vobis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Blessed are the peacemakers * the clean of heart, they shall see God.",
+   "lat": "Beáti pacífici, * beáti mundo corde: quóniam ipsi Deum vidébunt.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "In your patience * you shall possess your souls.",
+   "lat": "In patiéntia vestra * possidébitis ánimas vestras.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
@@ -262,6 +322,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Læva ejus * sub cápite meo, et déxtera illíus amplexábitur me.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Speciósa * facta es et suávis in delíciis tuis, sancta Dei Génetrix.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Nigra sum, * sed formósa, fíliæ Jerúsalem; ídeo diléxit me Rex, et introdúxit me in cubículum suum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "As a plane tree by the water in the streets, I gave a sweet smell like cinnamon. and aromatical balm: I yielded a sweet odour like the best myrrh.",
    "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.",
@@ -303,6 +393,36 @@
    "lat": "V. Dignáre me laudáre te, Virgo sacráta.\nR. Da mihi virtútem contra hostes tuos.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Læva ejus * sub cápite meo, et déxtera illíus amplexábitur me.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Nigra sum, * sed formósa, fíliæ Jerúsalem; ídeo diléxit me Rex, et introdúxit me in cubículum suum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Speciósa * facta es et suávis in delíciis tuis, sancta Dei Génetrix.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "From the beginning, and before the world, was I created, and unto the world to come I shall not cease to be, and in the holy dwelling place I have ministered before him.\n$Deo gratias.",
@@ -347,6 +467,36 @@
    "lat": "Ave María, grátia plena, * Dóminus tecum.",
    "type": "antiphon",
    "variationKey": "invit"
+  },
+  "laudes.antiphon.psalm1": {
+   "eng": "Mary hath been taken to heaven; * the Angels rejoice; they praise and bless the Lord.",
+   "lat": "Assúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "The Virgin Mary hath been taken into the chamber on high, * where the King of kings sitteth on a throne amid the stars.",
+   "lat": "María Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "We run after thee, on the scent of thy perfumes * the virgins love thee heartily.",
+   "lat": "In odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "Blessed of the Lord art thou, O daughter, * for by thee we have been given to eat of the fruit of the tree of Life.",
+   "lat": "Benedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "Fair and comely art thou, O daughter of Jerusalem, * terrible as a fenced camp set in battle array.",
+   "lat": "Pulchra es, * et decóra, fília Jerúsalem: terríbilis ut castrórum ácies ordináta.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
   },
   "tertia.capitulum": {
    "eng": "The daughters of Zion saw her, and called her blessed; the queens also, and they praised her.\n$Deo gratias",
@@ -428,6 +578,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Hoc est præcéptum meum, * ut diligátis ínvicem, sicut diléxi vos.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Majórem caritátem * nemo habet, ut ánimam suam ponat quis pro amícis suis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Vos amíci mei estis, * si fecéritis quæ præcípio vobis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Beáti pacífici, * beáti mundo corde: quóniam ipsi Deum vidébunt.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "In patiéntia vestra * possidébitis ánimas vestras.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "V. And the Apostles indeed went from the presence of the council, rejoicing that they were accounted worthy to suffer reproach for the name of Jesus.",
    "lat": "Ibant Apóstoli gaudéntes a conspéctu concílii, quóniam digni hábiti sunt pro nómine Jesu contuméliam pati.",
@@ -469,6 +649,36 @@
    "lat": "V. In omnem terram exívit sonus eórum.\nR. Et in fines orbis terræ verba eórum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "This is my commandment * that you love one another, as I have loved you.",
+   "lat": "Hoc est præcéptum meum, * ut diligátis ínvicem, sicut diléxi vos.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "Greater love than this no man hath, * that a man lay down his life for his friends.",
+   "lat": "Majórem caritátem * nemo habet, ut ánimam suam ponat quis pro amícis suis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "You are my friends * if you do the things that I command you, said the Lord.",
+   "lat": "Vos amíci mei estis, * si fecéritis quæ præcípio vobis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Blessed are the peacemakers * the clean of heart, they shall see God.",
+   "lat": "Beáti pacífici, * beáti mundo corde: quóniam ipsi Deum vidébunt.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "In your patience * you shall possess your souls.",
+   "lat": "In patiéntia vestra * possidébitis ánimas vestras.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
@@ -532,6 +742,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.",
    "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.",
@@ -573,6 +813,36 @@
    "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Whosoever shall confess Me * before men, him will I confess also before My Father.",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "He that followeth Me * walketh not in darkness, but shall have the light of life, saith the Lord.",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "If any man serve Me, * let him follow Me and where I am, there shall also My servant be.",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "If any man serve Me, * him will My Father, who is in heaven, honour.",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Father, I will * that where I am, there shall also My servant be.",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
@@ -636,6 +906,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.",
    "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.",
@@ -677,6 +977,36 @@
    "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Whosoever shall confess Me * before men, him will I confess also before My Father.",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "He that followeth Me * walketh not in darkness, but shall have the light of life, saith the Lord.",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "If any man serve Me, * let him follow Me and where I am, there shall also My servant be.",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "If any man serve Me, * him will My Father, who is in heaven, honour.",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Father, I will * that where I am, there shall also My servant be.",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
@@ -740,6 +1070,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.",
    "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.",
@@ -781,6 +1141,36 @@
    "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Whosoever shall confess Me * before men, him will I confess also before My Father.",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "He that followeth Me * walketh not in darkness, but shall have the light of life, saith the Lord.",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "If any man serve Me, * let him follow Me and where I am, there shall also My servant be.",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "If any man serve Me, * him will My Father, who is in heaven, honour.",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Father, I will * that where I am, there shall also My servant be.",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
@@ -844,6 +1234,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.",
    "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.",
@@ -885,6 +1305,36 @@
    "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Whosoever shall confess Me * before men, him will I confess also before My Father.",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "He that followeth Me * walketh not in darkness, but shall have the light of life, saith the Lord.",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "If any man serve Me, * let him follow Me and where I am, there shall also My servant be.",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "If any man serve Me, * him will My Father, who is in heaven, honour.",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Father, I will * that where I am, there shall also My servant be.",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
@@ -948,6 +1398,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.",
    "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.",
@@ -989,6 +1469,36 @@
    "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Whosoever shall confess Me * before men, him will I confess also before My Father.",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "He that followeth Me * walketh not in darkness, but shall have the light of life, saith the Lord.",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "If any man serve Me, * let him follow Me and where I am, there shall also My servant be.",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "If any man serve Me, * him will My Father, who is in heaven, honour.",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Father, I will * that where I am, there shall also My servant be.",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
@@ -1052,6 +1562,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.",
    "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.",
@@ -1093,6 +1633,36 @@
    "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Whosoever shall confess Me * before men, him will I confess also before My Father.",
+   "lat": "Qui me conféssus fúerit * coram homínibus, confitébor et ego eum coram Patre meo.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "He that followeth Me * walketh not in darkness, but shall have the light of life, saith the Lord.",
+   "lat": "Qui séquitur me, * non ámbulat in ténebris, sed habébit lumen vitæ, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "If any man serve Me, * let him follow Me and where I am, there shall also My servant be.",
+   "lat": "Qui mihi minístrat, * me sequátur: et ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "If any man serve Me, * him will My Father, who is in heaven, honour.",
+   "lat": "Si quis mihi ministráverit, * honorificábit eum Pater meus, qui est in cælis, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Father, I will * that where I am, there shall also My servant be.",
+   "lat": "Volo Pater, * ut ubi ego sum, illic sit et miníster meus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
@@ -1156,6 +1726,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "The just shall shine, and shall run to and fro like sparks among the reeds. They shall judge nations, and rule over people, and their Lord shall reign for ever.",
    "lat": "Fulgébunt justi, et tamquam scintíllæ in arundinéto discúrrent. Judicábunt natiónes, et dominabúntur pópulis: et regnábit Dóminus illórum in perpétuum.",
@@ -1197,6 +1797,36 @@
    "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "O how many torments have all the Saints suffered, * that they might attain safely unto the palm of martyrdom.",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "The Saints have attained unto the kingdom, * with palms in their hands; they have earned crowns of Majesty from the Lord's hand.",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "The bodies of the Saints are buried in peace, * and their name liveth for evermore.",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Martyrs of the Lord, bless ye the Lord * for ever.",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "O ye Martyrs, * praise ye the Lord from the heavens, praise Him with the dance, alleluia.",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
@@ -1260,6 +1890,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "The just shall shine, and shall run to and fro like sparks among the reeds. They shall judge nations, and rule over people, and their Lord shall reign for ever.",
    "lat": "Fulgébunt justi, et tamquam scintíllæ in arundinéto discúrrent. Judicábunt natiónes, et dominabúntur pópulis: et regnábit Dóminus illórum in perpétuum.",
@@ -1301,6 +1961,36 @@
    "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "O how many torments have all the Saints suffered, * that they might attain safely unto the palm of martyrdom.",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "The Saints have attained unto the kingdom, * with palms in their hands; they have earned crowns of Majesty from the Lord's hand.",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "The bodies of the Saints are buried in peace, * and their name liveth for evermore.",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Martyrs of the Lord, bless ye the Lord * for ever.",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "O ye Martyrs, * praise ye the Lord from the heavens, praise Him with the dance, alleluia.",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
@@ -1364,6 +2054,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "The just shall shine, and shall run to and fro like sparks among the reeds. They shall judge nations, and rule over people, and their Lord shall reign for ever.",
    "lat": "Fulgébunt justi, et tamquam scintíllæ in arundinéto discúrrent. Judicábunt natiónes, et dominabúntur pópulis: et regnábit Dóminus illórum in perpétuum.",
@@ -1405,6 +2125,36 @@
    "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "O how many torments have all the Saints suffered, * that they might attain safely unto the palm of martyrdom.",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "The Saints have attained unto the kingdom, * with palms in their hands; they have earned crowns of Majesty from the Lord's hand.",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "The bodies of the Saints are buried in peace, * and their name liveth for evermore.",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Martyrs of the Lord, bless ye the Lord * for ever.",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "O ye Martyrs, * praise ye the Lord from the heavens, praise Him with the dance, alleluia.",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
@@ -1468,6 +2218,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "The just shall shine, and shall run to and fro like sparks among the reeds. They shall judge nations, and rule over people, and their Lord shall reign for ever.",
    "lat": "Fulgébunt justi, et tamquam scintíllæ in arundinéto discúrrent. Judicábunt natiónes, et dominabúntur pópulis: et regnábit Dóminus illórum in perpétuum.",
@@ -1509,6 +2289,36 @@
    "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "O how many torments have all the Saints suffered, * that they might attain safely unto the palm of martyrdom.",
+   "lat": "Omnes Sancti, * quanta passi sunt torménta, ut secúri pervenírent ad palmam martýrii.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "The Saints have attained unto the kingdom, * with palms in their hands; they have earned crowns of Majesty from the Lord's hand.",
+   "lat": "Cum palma * ad regna pervenérunt Sancti, corónas decóris meruérunt de manu Dei.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "The bodies of the Saints are buried in peace, * and their name liveth for evermore.",
+   "lat": "Córpora Sanctórum * in pace sepúlta sunt: et vivent nómina eórum in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Martyrs of the Lord, bless ye the Lord * for ever.",
+   "lat": "Mártyres Dómini * Dóminum benedícite in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "O ye Martyrs, * praise ye the Lord from the heavens, praise Him with the dance, alleluia.",
+   "lat": "Mártyrum chorus * laudáte Dóminum de cælis, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
@@ -1572,6 +2382,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.",
    "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -1613,6 +2453,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Behold an high priest, * who in his days pleased God, and was found righteous.",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "None was found like unto him, * to keep the Law of the Most High.",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Therefore the Lord assured him * by an oath that He would multiply his seed among His people.",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Priests of God, * bless ye the Lord O all ye servants of the Lord, sing praises unto our God.",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -1676,6 +2546,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.",
    "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -1717,6 +2617,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Behold an high priest, * who in his days pleased God, and was found righteous.",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "None was found like unto him, * to keep the Law of the Most High.",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Therefore the Lord assured him * by an oath that He would multiply his seed among His people.",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Priests of God, * bless ye the Lord O all ye servants of the Lord, sing praises unto our God.",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -1780,6 +2710,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.",
    "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -1821,6 +2781,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Behold an high priest, * who in his days pleased God, and was found righteous.",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "None was found like unto him, * to keep the Law of the Most High.",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Therefore the Lord assured him * by an oath that He would multiply his seed among His people.",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Priests of God, * bless ye the Lord O all ye servants of the Lord, sing praises unto our God.",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -1884,6 +2874,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.",
    "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -1925,6 +2945,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Behold an high priest, * who in his days pleased God, and was found righteous.",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "None was found like unto him, * to keep the Law of the Most High.",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Therefore the Lord assured him * by an oath that He would multiply his seed among His people.",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Priests of God, * bless ye the Lord O all ye servants of the Lord, sing praises unto our God.",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -1988,6 +3038,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.",
    "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -2029,6 +3109,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Behold an high priest, * who in his days pleased God, and was found righteous.",
+   "lat": "Ecce sacérdos magnus, * qui in diébus suis plácuit Deo, et invéntus est justus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "None was found like unto him, * to keep the Law of the Most High.",
+   "lat": "Non est invéntus * símilis illi, qui conserváret legem Excélsi.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Therefore the Lord assured him * by an oath that He would multiply his seed among His people.",
+   "lat": "Ideo jurejurándo * fecit illum Dóminus créscere in plebem suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "O all ye Priests of God, * bless ye the Lord O all ye servants of the Lord, sing praises unto our God.",
+   "lat": "Sacerdótes Dei, * benedícite Dóminum: servi Dómini, hymnum dícite Deo. Allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -2092,6 +3202,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.",
    "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.",
@@ -2133,6 +3273,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Lord, Thou deliverest unto me five talents * behold, I have gained beside them five talents more.",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "Well done, thou good servant, * thou hast been faithful in a very little, enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "A faithful and wise servant * whom his Lord hath made ruler over His household.",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Blessed is that servant * whom his Lord, when He cometh and knocketh at the door, shall find watching.",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Thou good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -2196,6 +3366,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.",
    "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.",
@@ -2237,6 +3437,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Lord, Thou deliverest unto me five talents * behold, I have gained beside them five talents more.",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "Well done, thou good servant, * thou hast been faithful in a very little, enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "A faithful and wise servant * whom his Lord hath made ruler over His household.",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Blessed is that servant * whom his Lord, when He cometh and knocketh at the door, shall find watching.",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Thou good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -2300,6 +3530,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.",
    "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.",
@@ -2341,6 +3601,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Lord, Thou deliverest unto me five talents * behold, I have gained beside them five talents more.",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "Well done, thou good servant, * thou hast been faithful in a very little, enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "A faithful and wise servant * whom his Lord hath made ruler over His household.",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Blessed is that servant * whom his Lord, when He cometh and knocketh at the door, shall find watching.",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Thou good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -2404,6 +3694,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.",
    "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.",
@@ -2445,6 +3765,36 @@
    "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Lord, Thou deliverest unto me five talents * behold, I have gained beside them five talents more.",
+   "lat": "Dómine, quinque talénta * tradidísti mihi, ecce ália quinque superlucrátus sum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "Well done, thou good servant, * thou hast been faithful in a very little, enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * in módico fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "A faithful and wise servant * whom his Lord hath made ruler over His household.",
+   "lat": "Fidélis servus * et prudens, quem constítuit Dóminus super famíliam suam.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Blessed is that servant * whom his Lord, when He cometh and knocketh at the door, shall find watching.",
+   "lat": "Beátus ille servus, * quem, cum vénerit Dóminus ejus et pulsáverit jánuam, invénerit vigilántem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "Thou good and faithful servant, * enter thou into the joy of thy Lord.",
+   "lat": "Serve bone * et fidélis, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
@@ -2508,6 +3858,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "O Lord, my God thou hast exalted my dwelling place upon the earth and I have prayed for death to pass away. I called upon the Lord, the father of my Lord, that he would not leave me in the day of my trouble, and in the time of the proud without help.",
    "lat": "Dómine, Deus meus, exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum. Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum sine adjutório.",
@@ -2549,6 +3929,36 @@
    "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "This is one of the wise virgins, * whom the Lord found watching.",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "This, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O my chosen one, * and I will establish My throne in thee.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -2612,6 +4022,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "O Lord, my God thou hast exalted my dwelling place upon the earth and I have prayed for death to pass away. I called upon the Lord, the father of my Lord, that he would not leave me in the day of my trouble, and in the time of the proud without help.",
    "lat": "Dómine, Deus meus, exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum. Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum sine adjutório.",
@@ -2653,6 +4093,36 @@
    "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "This is one of the wise virgins, * whom the Lord found watching.",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "This, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O my chosen one, * and I will establish My throne in thee.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -2716,6 +4186,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "O how beautiful is the chaste generation with glory: for the memory thereof is immortal: because it is known both with God and with men.",
    "lat": "O quam pulchra est casta generátio cum claritáte! Immortális est enim memória illíus, quóniam apud Deum nota est, et apud hómines.",
@@ -2757,6 +4257,36 @@
    "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "This is one of the wise virgins, * whom the Lord found watching.",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "This, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O my chosen one, * and I will establish My throne in thee.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -2820,6 +4350,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "O how beautiful is the chaste generation with glory: for the memory thereof is immortal: because it is known both with God and with men.",
    "lat": "O quam pulchra est casta generátio cum claritáte! Immortális est enim memória illíus, quóniam apud Deum nota est, et apud hómines.",
@@ -2861,6 +4421,36 @@
    "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "This is one of the wise virgins, * whom the Lord found watching.",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "This, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O my chosen one, * and I will establish My throne in thee.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -2924,6 +4514,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "O Lord, my God thou hast exalted my dwelling place upon the earth and I have prayed for death to pass away. I called upon the Lord, the father of my Lord, that he would not leave me in the day of my trouble, and in the time of the proud without help.",
    "lat": "Dómine, Deus meus, exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum. Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum sine adjutório.",
@@ -2965,6 +4585,36 @@
    "lat": "V. Adducéntur Regi Vírgines post eam.\nR. Próximæ ejus afferéntur tibi.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "This is one of the wise virgins, * one chosen out of the number of the careful.",
+   "lat": "Hæc est Virgo sápiens, * et una de número prudéntum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "This is one of the wise virgins, * whom the Lord found watching.",
+   "lat": "Hæc est Virgo sápiens, * quam Dóminus vigilántem invénit.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "This, is one which hath not known the sinful bed, * she shall have fruit in the visitation of holy souls.",
+   "lat": "Hæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O my chosen one, * and I will establish My throne in thee.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -3028,6 +4678,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "In odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "My soul shall praise the Lord even to death. How thou deliverest them that wait for thee, O Lord, and savest them out of the hands of the nations!",
    "lat": "Laudábit usque ad mortem ánima mea Dóminum, quóniam éruis sustinéntes te, et líberas eos de manu angústiæ, Dómine, Deus noster.",
@@ -3069,6 +4749,36 @@
    "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "While the King sitteth at his table, * my spikenard sendeth forth the smell thereof",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "We will run after thee, * in the savour of thy good ointments. The virgins love them exceedingly.",
+   "lat": "In odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Lo the winter is past, * the rain is over and gone. Rise up, my love, and come away.",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O My chosen one, * and I will establish My throne in thee. Alleluia.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -3132,6 +4842,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "In odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "Many daughters have gathered together riches: thou hast surpassed them all. Favour is deceitful, and beauty is vain: the woman that feareth the Lord, she shall be praised.",
    "lat": "Multæ fíliæ congregavérunt divítias: tu supergréssa es univérsas. Fallax grátia, et vana est pulchritúdo: múlier timens Dóminum, ipsa laudábitur.",
@@ -3173,6 +4913,36 @@
    "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "While the King sitteth at his table, * my spikenard sendeth forth the smell thereof",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "We will run after thee, * in the savour of thy good ointments. The virgins love them exceedingly.",
+   "lat": "In odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Lo the winter is past, * the rain is over and gone. Rise up, my love, and come away.",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O My chosen one, * and I will establish My throne in thee. Alleluia.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -3236,6 +5006,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "In odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "My soul shall praise the Lord even to death. How thou deliverest them that wait for thee, O Lord, and savest them out of the hands of the nations!",
    "lat": "Laudábit usque ad mortem ánima mea Dóminum, quóniam éruis sustinéntes te, et líberas eos de manu angústiæ, Dómine, Deus noster.",
@@ -3277,6 +5077,36 @@
    "lat": "V. Glória et honóre coronásti eas, Dómine.\nR. Et constituísti eas super ópera mánuum tuárum.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "While the King sitteth at his table, * my spikenard sendeth forth the smell thereof",
+   "lat": "Dum esset Rex * in accúbitu suo, nardus mea dedit odórem suavitátis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "We will run after thee, * in the savour of thy good ointments. The virgins love them exceedingly.",
+   "lat": "In odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "Lo the winter is past, * the rain is over and gone. Rise up, my love, and come away.",
+   "lat": "Jam hiems tránsiit, * imber ábiit et recéssit: surge, amíca mea, et veni.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "Come, O My chosen one, * and I will establish My throne in thee. Alleluia.",
+   "lat": "Veni, elécta mea, * et ponam in te thronum meum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "She is beautiful * among the daughters of Jerusalem.",
+   "lat": "Ista est speciósa * inter fílias Jerúsalem.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   },
   "vesperae.capitulum": {
    "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
@@ -3340,6 +5170,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Domum tuam, Dómine, * decet sanctitúdo in longitúdinem diérum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Domus mea, * domus oratiónis vocábitur.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Hæc est domus Dómini * fírmiter ædificáta, bene fundáta est supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "Bene fundáta est * domus Dómini supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Lápides pretiósi * omnes muri tui, et turres Jerúsalem gemmis ædificabúntur.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "lectio_prima": {
    "eng": "And God shall wipe away all tears from their eyes, and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain; for the former things are passed away. And He That sat upon the throne said: Behold, I make all things new.",
    "lat": "Et abstérget Deus omnem lácrimam ab óculis eórum: et mors ultra non erit, neque luctus, neque clamor, neque dolor erit ultra, quia prima abiérunt. Et dixit qui sedébat in throno: Ecce nova fácio ómnia.",
@@ -3382,6 +5242,36 @@
    "type": "vr",
    "variationKey": "versum_2"
   },
+  "vesperae.antiphon.psalm1": {
+   "eng": "Holiness becometh thine house, * O Lord, for ever.",
+   "lat": "Domum tuam, Dómine, * decet sanctitúdo in longitúdinem diérum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "My house * shall be called the house of prayer.",
+   "lat": "Domus mea, * domus oratiónis vocábitur.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "This is the Lord's house * stoutly builded, well founded upon a sure rock.",
+   "lat": "Hæc est domus Dómini * fírmiter ædificáta, bene fundáta est supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "The Lord's house is well founded * upon a sure rock.",
+   "lat": "Bene fundáta est * domus Dómini supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "All thy walls are of stones most precious, * and the towers of Jerusalem shall be built up with jewels.",
+   "lat": "Lápides pretiósi * omnes muri tui, et turres Jerúsalem gemmis ædificabúntur.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
+  },
   "vesperae.capitulum": {
    "eng": "I saw the holy city, New Jerusalem, coming down from God out of heaven, prepared as a Bride adorned for her husband.\n$Deo gratias",
    "lat": "Vidi civitátem sanctam, Jerúsalem novam, descendéntem de cælo a Deo, parátam sicut sponsam ornátam viro suo.\n$Deo gratias",
@@ -3408,6 +5298,36 @@
    "type": "antiphon",
    "variationKey": "invit"
   },
+  "laudes.antiphon.psalm1": {
+   "eng": "",
+   "lat": "Exsultábunt Dómino * ossa humiliáta.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm1"
+  },
+  "laudes.antiphon.psalm2": {
+   "eng": "",
+   "lat": "Exáudi, Dómine, * oratiónem meam: ad te omnis caro véniet.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm2"
+  },
+  "laudes.antiphon.psalm3": {
+   "eng": "",
+   "lat": "Me suscépit * déxtera tua, Dómine.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm3"
+  },
+  "laudes.antiphon.psalm4": {
+   "eng": "",
+   "lat": "A porta ínferi * érue, Dómine, ánimam meam.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm4"
+  },
+  "laudes.antiphon.psalm5": {
+   "eng": "",
+   "lat": "Omnis spíritus * laudet Dóminum.",
+   "type": "antiphon",
+   "variationKey": "laudes.antiphon.psalm5"
+  },
   "versum_1": {
    "eng": "",
    "lat": "V. Audívi vocem de cælo dicéntem mihi.\nR. Beáti mórtui qui in Dómino moriúntur.",
@@ -3419,6 +5339,36 @@
    "lat": "V. Audívi vocem de cælo dicéntem mihi.\nR. Beáti mórtui qui in Dómino moriúntur.",
    "type": "vr",
    "variationKey": "versum_2"
+  },
+  "vesperae.antiphon.psalm1": {
+   "eng": "I will walk before the Lord * in the land of the living.",
+   "lat": "Placébo Dómino * in regióne vivórum.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm1"
+  },
+  "vesperae.antiphon.psalm2": {
+   "eng": "Woe is me! O Lord, * that my sojourn is long",
+   "lat": "Heu mihi Dómine, * quia incolátus meus prolongátus est.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm2"
+  },
+  "vesperae.antiphon.psalm3": {
+   "eng": "The Lord shall keep thee from all evil, * the Lord shall keep thy soul.",
+   "lat": "Dóminus custódit te ab omni malo: * custódiat ánimam tuam Dóminus.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm3"
+  },
+  "vesperae.antiphon.psalm4": {
+   "eng": "If Thou, Lord, shouldest mark iniquities, * O Lord, who shall stand.",
+   "lat": "Si iniquitátes * observáveris, Dómine: Dómine, quis sustinébit?",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm4"
+  },
+  "vesperae.antiphon.psalm5": {
+   "eng": "O Lord, forsake not * the works of thine own hands.",
+   "lat": "Opera * mánuum tuárum, Dómine, ne despícias.",
+   "type": "antiphon",
+   "variationKey": "vesperae.antiphon.psalm5"
   }
  }
 }

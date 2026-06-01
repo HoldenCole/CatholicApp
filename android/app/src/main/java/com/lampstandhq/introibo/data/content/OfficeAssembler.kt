@@ -19,7 +19,17 @@ class OfficeAssembler(
     private val marianAntiphons: List<MarianAntiphonData>,
     private val psalter: Map<String, Map<String, List<String>>> = emptyMap(),
 ) {
-    fun assemble(template: Hour, context: LiturgicalContext): Hour {
+    // On feasts (Semiduplex and above, rank >= 2.0), Lauds and Vespers use
+    // the festal psalm scheme baked into the hour template rather than the
+    // weekday ferial set from psalter_weekly.
+    private val festalPsalmKeys = setOf(
+        "laudes.psalm1", "laudes.psalm2", "laudes.psalm3",
+        "laudes.canticle1", "laudes.psalm4",
+        "vesperae.psalm1", "vesperae.psalm2", "vesperae.psalm3",
+        "vesperae.psalm4", "vesperae.psalm5",
+    )
+
+    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
         val seasonKey = seasonString(context.season)
 
@@ -46,6 +56,12 @@ class OfficeAssembler(
 
             if (part.type == "hymn") {
                 seasonOverrides[key]?.let { return@map it }
+            }
+
+            // On festal days, keep the template's festal psalms for Lauds
+            // and Vespers (the weekday psalter would replace them with ferial).
+            if (isFestal && key in festalPsalmKeys) {
+                return@map part
             }
 
             dayOverrides[key]?.let { return@map it }

@@ -81,7 +81,19 @@ struct OfficeAssembler {
         return key.hasPrefix("pasc0-") || key.hasPrefix("pasc7-")
     }
 
-    func assemble(template: Hour, context: LiturgicalContext) -> Hour {
+    // MARK: - Festal psalm keys
+    // On feasts (Semiduplex and above, rank ≥ 2.0), Lauds and Vespers use the
+    // festal psalm scheme baked into the hour template (Lauds: 92/99/62/
+    // Benedicite/148-150; Vespers: 109-113) rather than the weekday ferial set.
+    // These are the variationKeys for those psalm/canticle parts.
+    private static let festalPsalmKeys: Set<String> = [
+        "laudes.psalm1", "laudes.psalm2", "laudes.psalm3",
+        "laudes.canticle1", "laudes.psalm4",
+        "vesperae.psalm1", "vesperae.psalm2", "vesperae.psalm3",
+        "vesperae.psalm4", "vesperae.psalm5",
+    ]
+
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
 
@@ -110,6 +122,13 @@ struct OfficeAssembler {
 
             if part.type == "hymn", let override = seasonOverrides[key] {
                 return override
+            }
+
+            // On festal days, keep the template's festal psalms for Lauds
+            // and Vespers (the weekday psalter would replace them with ferial
+            // psalms). All other parts (hymns, capitula, etc.) still override.
+            if isFestal && Self.festalPsalmKeys.contains(key) {
+                return part
             }
 
             if let override = dayOverrides[key] {

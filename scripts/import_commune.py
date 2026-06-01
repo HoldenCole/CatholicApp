@@ -166,6 +166,174 @@ def extract_office_vide():
     return out
 
 
+def _raw_section_lines(sections, sec_name):
+    """Return the raw lines for *sec_name*, or None if absent."""
+    if sec_name not in sections:
+        return None
+    return sections[sec_name]
+
+
+def _strip_psalm_suffix(line):
+    """Remove trailing ``;;NNN`` (or ``;;NNN;NNN;NNN``) psalm-number markers."""
+    return re.sub(r";;[\d;]+\s*$", "", line).strip()
+
+
+def _antiphon_lines_from_raw(raw_lines):
+    """Given the raw content lines of an ``[Ant …]`` section, return only the
+    actual antiphon text lines (non-empty, non-comment, non-directive) with
+    psalm suffixes stripped.  Returns a list of strings."""
+    out = []
+    for line in raw_lines:
+        s = line.strip()
+        if not s:
+            continue
+        # Skip comments / rubrical conditionals / directives
+        if s.startswith(("#", "!", "(", "v.")):
+            continue
+        # Skip @-references (we handle those at a higher level)
+        if s.startswith("@"):
+            continue
+        out.append(_strip_psalm_suffix(s))
+    return out
+
+
+def _resolve_ant_section(sections, sec_name, file_path, lang_root, _depth=0):
+    """Resolve an ``[Ant Vespera]`` or ``[Ant Laudes]`` section to its list of
+    5 antiphon-text lines, following ``@:`` self-references and ``@Commune/``
+    cross-file redirects.
+
+    Returns a list of antiphon strings (ideally 5), or an empty list on
+    failure.  *_depth* guards against infinite loops.
+    """
+    if _depth > 5:
+        return []
+    raw = _raw_section_lines(sections, sec_name)
+    if raw is None:
+        return []
+
+    # Check for single-line redirects that cover the whole section.
+    non_empty = [l.strip() for l in raw if l.strip()
+                 and not l.strip().startswith(("#", "!", "("))]
+
+    # --- Self-reference: ``@:Ant Vespera`` (with optional sed suffix) --------
+    if len(non_empty) == 1 and non_empty[0].startswith("@:"):
+        ref = non_empty[0][2:]  # e.g. "Ant Vespera: s/;;.*//g" or "Ant Vespera"
+        target_sec = ref.split(":")[0].strip()
+        return _resolve_ant_section(sections, target_sec, file_path, lang_root,
+                                    _depth + 1)
+
+    # --- Cross-file redirect: ``@Commune/CXX`` (whole section) --------------
+    if len(non_empty) == 1 and re.match(r"@Commune/(C\d+[A-Za-z0-9]*(?:-\d+)?)\s*$",
+                                         non_empty[0]):
+        m = re.match(r"@Commune/(C\d+[A-Za-z0-9]*(?:-\d+)?)", non_empty[0])
+        target_code = m.group(1)
+        target_file = lang_root / "Commune" / f"{target_code}.txt"
+        if target_file.exists():
+            target_secs = IDO.parse_do_file(target_file)
+            return _resolve_ant_section(target_secs, sec_name, target_file,
+                                        lang_root, _depth + 1)
+        return []
+
+    # --- Plain antiphon lines (possibly mixed with per-line @ refs) ----------
+    # For sections whose lines are individual @-references to single antiphon
+    # lines in other sections/files (e.g. C11), we attempt line-by-line
+    # resolution, but only for simple ``@Commune/CXX:Section:N`` patterns.
+    result = []
+    for line in raw:
+        s = line.strip()
+        if not s or s.startswith(("#", "!", "(")):
+            continue
+        if s.startswith("@:"):
+            # Per-line self-reference: ``@:SectionName:N`` — take line N from
+            # that section (1-indexed).
+            parts = s[2:].split(":")
+            target_sec = parts[0].strip()
+            line_idx = None
+            for p in parts[1:]:
+                p = p.strip()
+                if p.isdigit():
+                    line_idx = int(p)
+                    break
+            target_lines = _raw_section_lines(sections, target_sec)
+            if target_lines and line_idx is not None:
+                # DO line indices are 1-based, pointing into *antiphon* lines
+                ant_lines = _antiphon_lines_from_raw(target_lines)
+                if 1 <= line_idx <= len(ant_lines):
+                    result.append(ant_lines[line_idx - 1])
+            elif target_lines and line_idx is None:
+                # Whole-section redirect (handled above for single-line case)
+                resolved = _antiphon_lines_from_raw(target_lines)
+                result.extend(resolved)
+        elif s.startswith("@Commune/"):
+            # Cross-file per-line reference.
+            # Formats: @Commune/C7::1        (empty section, line 1)
+            #          @Commune/C6:Ant Matutinum:7 s/95/121/
+            #          @Commune/C11           (whole-section redirect)
+            m = re.match(
+                r"@Commune/(C\d+[A-Za-z0-9]*(?:-\d+)?)"
+                r"(?::([^:]*?))?(?::(\d+))?"
+                r"(?:\s+s/.*)?$", s)
+            if m:
+                target_code = m.group(1)
+                target_sec = m.group(2).strip() if m.group(2) else ""
+                target_sec = target_sec or sec_name
+                line_idx = int(m.group(3)) if m.group(3) else None
+                target_file = lang_root / "Commune" / f"{target_code}.txt"
+                if target_file.exists():
+                    target_secs = IDO.parse_do_file(target_file)
+                    if line_idx is not None:
+                        target_lines = _raw_section_lines(target_secs, target_sec)
+                        if target_lines:
+                            ant_lines = _antiphon_lines_from_raw(target_lines)
+                            if 1 <= line_idx <= len(ant_lines):
+                                result.append(ant_lines[line_idx - 1])
+                    else:
+                        resolved = _resolve_ant_section(target_secs, target_sec,
+                                                        target_file, lang_root,
+                                                        _depth + 1)
+                        result.extend(resolved)
+        elif s.startswith("@"):
+            # Other @-references (e.g. @Sancti/...) — skip, too specific
+            continue
+        else:
+            result.append(_strip_psalm_suffix(s))
+
+    return result
+
+
+def extract_psalm_antiphons(code, lat_sections, eng_sections, lat_file, eng_file):
+    """Extract the 5 per-psalm antiphons for Vespers and Lauds from a commune's
+    parsed sections.  Returns a dict of app-key -> {lat, eng, type, variationKey}
+    entries, or an empty dict if the commune has no psalm antiphons."""
+    parts = {}
+
+    for hour, do_sec, key_prefix in (
+        ("vesperae", "Ant Vespera", "vesperae.antiphon.psalm"),
+        ("laudes",   "Ant Laudes", "laudes.antiphon.psalm"),
+    ):
+        lat_ants = _resolve_ant_section(lat_sections, do_sec, lat_file, DO_LAT)
+        eng_ants = _resolve_ant_section(eng_sections, do_sec, eng_file, DO_ENG) \
+            if eng_sections else []
+
+        if not lat_ants:
+            continue
+
+        # Pad English list to match Latin length
+        while len(eng_ants) < len(lat_ants):
+            eng_ants.append("")
+
+        for i, (lat, eng) in enumerate(zip(lat_ants[:5], eng_ants[:5]), start=1):
+            app_key = f"{key_prefix}{i}"
+            parts[app_key] = {
+                "lat": lat,
+                "eng": eng,
+                "type": "antiphon",
+                "variationKey": app_key,
+            }
+
+    return parts
+
+
 def build_commune(code, _seen=None):
     """Resolve one commune code's Office parts (Latin + English), merging the
     inherited parent commune as a base when the file declares `@Commune/CX`."""
@@ -203,6 +371,11 @@ def build_commune(code, _seen=None):
             "type": part_type,
             "variationKey": app_key,
         }
+
+    # Per-psalm antiphons for Vespers and Lauds
+    psalm_ants = extract_psalm_antiphons(code, lat_sections, eng_sections,
+                                         lat_file, eng_file)
+    parts.update(psalm_ants)
 
     # The Little Chapter is the same at Vespers and Terce as at Lauds.
     if "capitulum_laudes" in parts:

@@ -95,12 +95,16 @@ final class ContentStore {
     func hourForToday(slug: String) -> Hour? {
         guard let template = hour(slug: slug) else { return nil }
         let ctx = LiturgicalContext.current()
-        var assembled = officeAssembler.assemble(template: template, context: ctx)
-
-        // Apply proper collect from the ordo winner (temporal or sanctoral)
         let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? MissalRite.rite1962.rawValue
         let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
-        if let ordo = ordoForDate(ctx.date, rite: rite) {
+        let ordo = ordoForDate(ctx.date, rite: rite)
+
+        // Feasts (Semiduplex and above, rank ≥ 2.0) use the festal psalm
+        // scheme at Lauds & Vespers; ferias and Simples use ferial psalms.
+        let isFestal = ordo.map { $0.rank >= 2.0 } ?? false
+        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal)
+
+        if let ordo {
             if ordo.winner == "sanctoral" {
                 // Office layering (each later layer wins): commune fallback,
                 // then a borrowed feast's Office (`ex Sancti/...`), then the
@@ -126,6 +130,23 @@ final class ContentStore {
         return assembled
     }
 
+    /// Mapping from a psalm part's variationKey to the antiphon-override key
+    /// that carries its proper antiphon. Matches the layout in the festal
+    /// psalm scheme: Lauds has psalm1-3, canticle1, psalm4 (5 elements);
+    /// Vespers has psalm1-5 (5 elements).
+    private static let psalmToAntiphonKey: [String: String] = [
+        "laudes.psalm1":    "laudes.antiphon.psalm1",
+        "laudes.psalm2":    "laudes.antiphon.psalm2",
+        "laudes.psalm3":    "laudes.antiphon.psalm3",
+        "laudes.canticle1": "laudes.antiphon.psalm4",
+        "laudes.psalm4":    "laudes.antiphon.psalm5",
+        "vesperae.psalm1":  "vesperae.antiphon.psalm1",
+        "vesperae.psalm2":  "vesperae.antiphon.psalm2",
+        "vesperae.psalm3":  "vesperae.antiphon.psalm3",
+        "vesperae.psalm4":  "vesperae.antiphon.psalm4",
+        "vesperae.psalm5":  "vesperae.antiphon.psalm5",
+    ]
+
     private func applyProperOverrides(_ hour: Hour, overrides: [String: Hour.Part]) -> Hour {
         let updatedParts = hour.parts.map { part -> Hour.Part in
             guard let key = part.variationKey else {
@@ -141,6 +162,16 @@ final class ContentStore {
             if (key == "vesperae.capitulum" || key == "tertia.capitulum"),
                let lauds = overrides["capitulum_laudes"] {
                 return lauds
+            }
+            // Proper per-psalm antiphons (from commune or saint proper): set
+            // antiphonLat/antiphonEng on the psalm part without replacing the
+            // whole part (which carries the psalm text/ref).
+            if let antKey = Self.psalmToAntiphonKey[key],
+               let antPart = overrides[antKey] {
+                var modified = part
+                modified.antiphonLat = antPart.lat
+                modified.antiphonEng = antPart.eng
+                return modified
             }
             if part.type == "collect", let collect = overrides["collect"] {
                 return collect
