@@ -277,42 +277,40 @@ fun ProperScreen(
 // ---------------------------------------------------------------------------
 
 private fun properAsText(proper: MassProper): String {
-    val lines = mutableListOf<String>()
-    lines.add(proper.title)
-    lines.add(proper.englishTitle)
-    lines.add("")
+    val sb = StringBuilder()
+    sb.appendLine("✠ ${proper.title}")
+    sb.appendLine("  ${proper.englishTitle}")
+    sb.appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    sb.appendLine()
 
-    fun addSection(label: String, lat: String, eng: String) {
-        lines.add("-- $label --")
-        lines.add(lat)
-        lines.add(eng)
-        lines.add("")
+    fun section(label: String, lat: String, eng: String, ref: String? = null) {
+        sb.appendLine("┌ ${label.uppercase()}")
+        if (!ref.isNullOrEmpty()) sb.appendLine("│ $ref")
+        sb.appendLine("│")
+        lat.lines().filter { it.isNotEmpty() }.forEach { sb.appendLine("│  $it") }
+        sb.appendLine("│")
+        eng.lines().filter { it.isNotEmpty() }.forEach { sb.appendLine("│  $it") }
+        sb.appendLine("└─────")
+        sb.appendLine()
     }
 
-    fun addReading(label: String, ref: String, lat: String, eng: String) {
-        lines.add("-- $label --")
-        if (ref.isNotEmpty()) lines.add(ref)
-        lines.add(lat)
-        lines.add(eng)
-        lines.add("")
-    }
-
-    addSection("Introitus", proper.introit.lat, proper.introit.eng)
-    addSection("Oratio", proper.collect.lat, proper.collect.eng)
-    addReading("Lectio", proper.epistle.ref, proper.epistle.lat, proper.epistle.eng)
-    proper.gradual?.let { addSection("Graduale", it.lat, it.eng) }
-    proper.alleluia?.let { addSection("Alleluia", it.lat, it.eng) }
-    proper.tract?.let { addSection("Tractus", it.lat, it.eng) }
-    proper.sequence?.let { addSection("Sequentia", it.lat, it.eng) }
-    addReading("Evangelium", proper.gospel.ref, proper.gospel.lat, proper.gospel.eng)
-    addSection("Offertorium", proper.offertory.lat, proper.offertory.eng)
-    addSection("Secreta", proper.secret.lat, proper.secret.eng)
+    section("Introitus · Introit", proper.introit.lat, proper.introit.eng)
+    section("Orátio · Collect", proper.collect.lat, proper.collect.eng)
+    section("Léctio · Epistle", proper.epistle.lat, proper.epistle.eng, proper.epistle.ref)
+    proper.gradual?.let { section("Graduále · Gradual", it.lat, it.eng) }
+    proper.alleluia?.let { section("Allelúja", it.lat, it.eng) }
+    proper.tract?.let { section("Tractus · Tract", it.lat, it.eng) }
+    proper.sequence?.let { section("Sequéntia · Sequence", it.lat, it.eng) }
+    section("Evangélium · Gospel", proper.gospel.lat, proper.gospel.eng, proper.gospel.ref)
+    section("Offertórium · Offertory", proper.offertory.lat, proper.offertory.eng)
+    section("Secréta · Secret", proper.secret.lat, proper.secret.eng)
     proper.preface?.let {
-        lines.add("Preface: ${it.replaceFirstChar { c -> c.titlecase() }}")
-        lines.add("")
+        sb.appendLine("Præfátio: ${it.replaceFirstChar { c -> c.titlecase() }}")
+        sb.appendLine()
     }
-    addSection("Communio", proper.communion.lat, proper.communion.eng)
-    addSection("Postcommunio", proper.postcommunion.lat, proper.postcommunion.eng)
+    section("Commúnio · Communion", proper.communion.lat, proper.communion.eng)
+    section("Postcommúnio · Postcommunion", proper.postcommunion.lat, proper.postcommunion.eng)
 
-    return lines.joinToString("\n")
+    sb.append("— Introibo (app.introibo) —")
+    return sb.toString()
 }

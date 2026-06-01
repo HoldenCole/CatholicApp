@@ -131,41 +131,41 @@ struct ProperView: View {
     }
 
     private func properAsText() -> String {
-        var lines: [String] = []
-        lines.append(proper.title)
-        lines.append(proper.englishTitle)
-        lines.append("")
+        var s = ""
+        s += "✠ \(proper.title.strippingEm)\n"
+        s += "  \(proper.englishTitle)\n"
+        s += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
 
-        func addSection(_ label: String, lat: String, eng: String) {
-            lines.append("— \(label) —")
-            lines.append(lat)
-            lines.append(eng)
-            lines.append("")
+        func section(_ latin: String, english: String, label: String, ref: String? = nil) {
+            s += "┌ \(label.uppercased())\n"
+            if let ref, !ref.isEmpty { s += "│ \(ref)\n" }
+            s += "│\n"
+            for line in latin.strippingEm.components(separatedBy: "\n") where !line.isEmpty {
+                s += "│  \(line)\n"
+            }
+            s += "│\n"
+            for line in english.strippingEm.components(separatedBy: "\n") where !line.isEmpty {
+                s += "│  \(line)\n"
+            }
+            s += "└─────\n\n"
         }
 
-        func addReading(_ label: String, ref: String, lat: String, eng: String) {
-            lines.append("— \(label) —")
-            if !ref.isEmpty { lines.append(ref) }
-            lines.append(lat)
-            lines.append(eng)
-            lines.append("")
-        }
+        section(proper.introit.lat, english: proper.introit.eng, label: "Introitus · Introit")
+        section(proper.collect.lat, english: proper.collect.eng, label: "Orátio · Collect")
+        section(proper.epistle.lat, english: proper.epistle.eng, label: "Léctio · Epistle", ref: proper.epistle.ref)
+        if let g = proper.gradual { section(g.lat, english: g.eng, label: "Graduále · Gradual") }
+        if let a = proper.alleluia { section(a.lat, english: a.eng, label: "Allelúja") }
+        if let t = proper.tract { section(t.lat, english: t.eng, label: "Tractus · Tract") }
+        if let seq = proper.sequence { section(seq.lat, english: seq.eng, label: "Sequéntia · Sequence") }
+        section(proper.gospel.lat, english: proper.gospel.eng, label: "Evangélium · Gospel", ref: proper.gospel.ref)
+        section(proper.offertory.lat, english: proper.offertory.eng, label: "Offertórium · Offertory")
+        section(proper.secret.lat, english: proper.secret.eng, label: "Secréta · Secret")
+        if let p = proper.preface { s += "Præfátio: \(p.capitalized)\n\n" }
+        section(proper.communion.lat, english: proper.communion.eng, label: "Commúnio · Communion")
+        section(proper.postcommunion.lat, english: proper.postcommunion.eng, label: "Postcommúnio · Postcommunion")
 
-        addSection("Introitus", lat: proper.introit.lat, eng: proper.introit.eng)
-        addSection("Oratio", lat: proper.collect.lat, eng: proper.collect.eng)
-        addReading("Lectio", ref: proper.epistle.ref, lat: proper.epistle.lat, eng: proper.epistle.eng)
-        if let g = proper.gradual { addSection("Graduale", lat: g.lat, eng: g.eng) }
-        if let a = proper.alleluia { addSection("Alleluia", lat: a.lat, eng: a.eng) }
-        if let t = proper.tract { addSection("Tractus", lat: t.lat, eng: t.eng) }
-        if let s = proper.sequence { addSection("Sequentia", lat: s.lat, eng: s.eng) }
-        addReading("Evangelium", ref: proper.gospel.ref, lat: proper.gospel.lat, eng: proper.gospel.eng)
-        addSection("Offertorium", lat: proper.offertory.lat, eng: proper.offertory.eng)
-        addSection("Secreta", lat: proper.secret.lat, eng: proper.secret.eng)
-        if let p = proper.preface { lines.append("Preface: \(p.capitalized)"); lines.append("") }
-        addSection("Communio", lat: proper.communion.lat, eng: proper.communion.eng)
-        addSection("Postcommunio", lat: proper.postcommunion.lat, eng: proper.postcommunion.eng)
-
-        return lines.joined(separator: "\n")
+        s += "— Introibo (app.introibo) —"
+        return s
     }
 
     private func properSection(_ latin: String, subtitle: String, text: ProperText) -> some View {

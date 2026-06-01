@@ -692,20 +692,21 @@ private fun buildFullMassText(
     val lines = mutableListOf<String>()
 
     if (proper != null) {
-        lines.add(proper.title)
-        lines.add(proper.englishTitle)
-        lines.add(rite.short)
-        lines.add("")
+        lines.add("✠ ${proper.title}")
+        lines.add("  ${proper.englishTitle}")
+        lines.add("  ${rite.short}")
     } else {
-        lines.add("Ordo Missae")
-        lines.add(rite.short)
-        lines.add("")
+        lines.add("✠ Ordo Missæ")
+        lines.add("  ${rite.short}")
     }
+    lines.add("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    lines.add("")
 
     fun addOrdinary(slug: String) {
         val section = ContentStore.missal.firstOrNull { it.slug == slug } ?: return
-        lines.add("=== ${section.title} ===")
-        section.english?.let { lines.add(it) }
+        var header = "══ ${section.title.uppercase()}"
+        section.english?.let { header += " · $it" }
+        lines.add("$header ══")
         lines.add("")
         section.body.forEach { line ->
             lines.add(line.lat)
@@ -714,18 +715,14 @@ private fun buildFullMassText(
         }
     }
 
-    fun addProper(label: String, lat: String, eng: String) {
-        lines.add("--- $label ---")
-        lines.add(lat)
-        lines.add(eng)
-        lines.add("")
-    }
-
-    fun addReading(label: String, ref: String, lat: String, eng: String) {
-        lines.add("--- $label ---")
-        if (ref.isNotEmpty()) lines.add(ref)
-        lines.add(lat)
-        lines.add(eng)
+    fun addProper(label: String, lat: String, eng: String, ref: String? = null) {
+        lines.add("┌ ${label.uppercase()}")
+        if (!ref.isNullOrEmpty()) lines.add("│ $ref")
+        lines.add("│")
+        lat.lines().filter { it.isNotEmpty() }.forEach { lines.add("│  $it") }
+        lines.add("│")
+        eng.lines().filter { it.isNotEmpty() }.forEach { lines.add("│  $it") }
+        lines.add("└─────")
         lines.add("")
     }
 
@@ -752,13 +749,13 @@ private fun buildFullMassText(
     }
 
     proper?.let { p ->
-        addProper("Oratio · Collect", p.collect.lat, p.collect.eng)
-        addReading("Lectio · Epistle", p.epistle.ref, p.epistle.lat, p.epistle.eng)
-        p.gradual?.let { addProper("Graduale · Gradual", it.lat, it.eng) }
-        p.alleluia?.let { addProper("Alleluia", it.lat, it.eng) }
+        addProper("Orátio · Collect", p.collect.lat, p.collect.eng)
+        addProper("Léctio · Epistle", p.epistle.lat, p.epistle.eng, p.epistle.ref)
+        p.gradual?.let { addProper("Graduále · Gradual", it.lat, it.eng) }
+        p.alleluia?.let { addProper("Allelúja", it.lat, it.eng) }
         p.tract?.let { addProper("Tractus · Tract", it.lat, it.eng) }
-        p.sequence?.let { addProper("Sequentia · Sequence", it.lat, it.eng) }
-        addReading("Evangelium · Gospel", p.gospel.ref, p.gospel.lat, p.gospel.eng)
+        p.sequence?.let { addProper("Sequéntia · Sequence", it.lat, it.eng) }
+        addProper("Evangélium · Gospel", p.gospel.lat, p.gospel.eng, p.gospel.ref)
     }
 
     // Credo — conditional when proper is present (Sundays, rank-1, Apostles/Doctors/Evangelists)
@@ -769,13 +766,13 @@ private fun buildFullMassText(
     }
 
     proper?.let { p ->
-        addProper("Offertorium · Offertory", p.offertory.lat, p.offertory.eng)
+        addProper("Offertórium · Offertory", p.offertory.lat, p.offertory.eng)
     }
 
     addOrdinary("offertory_prayers")
 
     proper?.let { p ->
-        addProper("Secreta · Secret", p.secret.lat, p.secret.eng)
+        addProper("Secréta · Secret", p.secret.lat, p.secret.eng)
     }
 
     // Preface — select proper preface for the season/feast
@@ -827,11 +824,11 @@ private fun buildFullMassText(
     addOrdinary("domine")
 
     proper?.let { p ->
-        addProper("Communio · Communion", p.communion.lat, p.communion.eng)
+        addProper("Commúnio · Communion", p.communion.lat, p.communion.eng)
     }
 
     proper?.let { p ->
-        addProper("Postcommunio · Postcommunion", p.postcommunion.lat, p.postcommunion.eng)
+        addProper("Postcommúnio · Postcommunion", p.postcommunion.lat, p.postcommunion.eng)
     }
 
     // Placeat + Blessing — omitted in Requiem Masses
@@ -857,5 +854,6 @@ private fun buildFullMassText(
         addOrdinary("leonine")
     }
 
+    lines.add("— Introibo (app.introibo) —")
     return lines.joinToString("\n")
 }

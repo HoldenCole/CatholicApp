@@ -409,47 +409,45 @@ struct MissalView: View {
     // MARK: - Export full Mass as text
 
     private func fullMassText() -> String {
-        var lines: [String] = []
+        var s = ""
         let proper = todayProper
 
-        if let proper = proper {
-            lines.append(proper.title)
-            lines.append(proper.englishTitle)
-            lines.append(rite.short)
-            lines.append("")
+        if let proper {
+            s += "✠ \(proper.title.strippingEm)\n"
+            s += "  \(proper.englishTitle)\n"
+            s += "  \(rite.short)\n"
         } else {
-            lines.append("Ordo Missæ")
-            lines.append(rite.short)
-            lines.append("")
+            s += "✠ Ordo Missæ\n"
+            s += "  \(rite.short)\n"
         }
+        s += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
 
         func addOrdinary(_ slug: String) {
-            if let section = store.missal.first(where: { $0.slug == slug }) {
-                lines.append("═══ \(section.title) ═══")
-                if let eng = section.english { lines.append(eng) }
-                lines.append("")
-                for line in section.body {
-                    lines.append(line.lat)
-                    lines.append(line.eng)
-                    lines.append("")
-                }
+            guard let section = store.missal.first(where: { $0.slug == slug }) else { return }
+            s += "══ \(section.title.uppercased())"
+            if let eng = section.english { s += " · \(eng)" }
+            s += " ══\n\n"
+            for line in section.body {
+                s += "\(line.lat.strippingEm)\n"
+                s += "\(line.eng.strippingEm)\n\n"
             }
         }
 
-        func addProper(_ label: String, lat: String, eng: String) {
-            lines.append("─── \(label) ───")
-            lines.append(lat)
-            lines.append(eng)
-            lines.append("")
+        func addProper(_ label: String, lat: String, eng: String, ref: String? = nil) {
+            s += "┌ \(label.uppercased())\n"
+            if let ref, !ref.isEmpty { s += "│ \(ref)\n" }
+            s += "│\n"
+            for line in lat.strippingEm.components(separatedBy: "\n") where !line.isEmpty {
+                s += "│  \(line)\n"
+            }
+            s += "│\n"
+            for line in eng.strippingEm.components(separatedBy: "\n") where !line.isEmpty {
+                s += "│  \(line)\n"
+            }
+            s += "└─────\n\n"
         }
 
-        func addReading(_ label: String, ref: String, lat: String, eng: String) {
-            lines.append("─── \(label) ───")
-            if !ref.isEmpty { lines.append(ref) }
-            lines.append(lat)
-            lines.append(eng)
-            lines.append("")
-        }
+        var lines: [String] = [] // kept only for return compatibility below
 
         if let p = proper {
             // Psalm 42 omitted in Passiontide and Requiem Masses
@@ -475,25 +473,25 @@ struct MissalView: View {
         }
 
         if let p = proper {
-            addProper("Oratio · Collect", lat: p.collect.lat, eng: p.collect.eng)
-            addReading("Lectio · Epistle", ref: p.epistle.ref, lat: p.epistle.lat, eng: p.epistle.eng)
-            if let g = p.gradual { addProper("Graduale · Gradual", lat: g.lat, eng: g.eng) }
-            if let a = p.alleluia { addProper("Alleluia", lat: a.lat, eng: a.eng) }
+            addProper("Orátio · Collect", lat: p.collect.lat, eng: p.collect.eng)
+            addProper("Léctio · Epistle", lat: p.epistle.lat, eng: p.epistle.eng, ref: p.epistle.ref)
+            if let g = p.gradual { addProper("Graduále · Gradual", lat: g.lat, eng: g.eng) }
+            if let a = p.alleluia { addProper("Allelúja", lat: a.lat, eng: a.eng) }
             if let t = p.tract { addProper("Tractus · Tract", lat: t.lat, eng: t.eng) }
-            if let s = p.sequence { addProper("Sequentia · Sequence", lat: s.lat, eng: s.eng) }
-            addReading("Evangelium · Gospel", ref: p.gospel.ref, lat: p.gospel.lat, eng: p.gospel.eng)
+            if let seq = p.sequence { addProper("Sequéntia · Sequence", lat: seq.lat, eng: seq.eng) }
+            addProper("Evangélium · Gospel", lat: p.gospel.lat, eng: p.gospel.eng, ref: p.gospel.ref)
         }
 
         addOrdinary("credo")
 
         if let p = proper {
-            addProper("Offertorium · Offertory", lat: p.offertory.lat, eng: p.offertory.eng)
+            addProper("Offertórium · Offertory", lat: p.offertory.lat, eng: p.offertory.eng)
         }
 
         addOrdinary("offertory_prayers")
 
         if let p = proper {
-            addProper("Secreta · Secret", lat: p.secret.lat, eng: p.secret.eng)
+            addProper("Secréta · Secret", lat: p.secret.lat, eng: p.secret.eng)
         }
 
         let resolvedPreface = prefaceSlug(for: proper)
@@ -513,11 +511,11 @@ struct MissalView: View {
         addOrdinary("domine")
 
         if let p = proper {
-            addProper("Communio · Communion", lat: p.communion.lat, eng: p.communion.eng)
+            addProper("Commúnio · Communion", lat: p.communion.lat, eng: p.communion.eng)
         }
 
         if let p = proper {
-            addProper("Postcommunio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
+            addProper("Postcommúnio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
         }
 
         if proper?.color != "black" {
@@ -544,7 +542,8 @@ struct MissalView: View {
             addOrdinary("leonine")
         }
 
-        return lines.joined(separator: "\n")
+        s += "— Introibo (app.introibo) —"
+        return s
     }
 
     // MARK: - Ordinary-only fallback
