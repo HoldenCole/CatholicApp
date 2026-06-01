@@ -55,6 +55,200 @@ enum MassHTMLExporter {
         )
     }
 
+    /// Returns a styled HTML document for a calendar day detail — feast name,
+    /// liturgical colour, season, special-day flags, and penance/fasting info.
+    static func calendarDayHTML(
+        latinTitle: String,
+        englishTitle: String?,
+        longDate: String,
+        colour: String?,
+        colourHex: String?,
+        season: String,
+        flags: [String],
+        penanceTitle: String,
+        penanceDesc: String,
+        penanceStrict: Bool,
+        discipline: String
+    ) -> String {
+        var body = ""
+
+        // Info rows
+        if let colour {
+            var row = "<div class=\"info-row\">"
+            row += "<span class=\"info-label\">LITURGICAL COLOUR</span>"
+            if let hex = colourHex {
+                row += "<span style=\"display:inline-block;width:10px;height:10px;border-radius:50%;background:\(hex);margin-right:6px;vertical-align:middle;\"></span>"
+            }
+            row += "<span class=\"info-value\">\(escapeHTML(colour))</span>"
+            row += "</div>"
+            body += row
+        }
+
+        body += "<div class=\"info-row\">"
+        body += "<span class=\"info-label\">SEASON</span>"
+        body += "<span class=\"info-value\">\(escapeHTML(season))</span>"
+        body += "</div>"
+
+        // Special-day flags
+        for flag in flags {
+            body += "<p class=\"flag\">\(escapeHTML(flag))</p>"
+        }
+
+        // Penance card
+        body += "<div class=\"penance-card\(penanceStrict ? " strict" : "")\">"
+        body += "<div class=\"penance-header\">"
+        body += "<span class=\"info-label\">FASTING &amp; ABSTINENCE</span>"
+        body += "<span class=\"discipline\">\(escapeHTML(discipline))</span>"
+        body += "</div>"
+        body += "<p class=\"penance-title\">"
+        body += "<span class=\"penance-dot\(penanceStrict ? " strict" : "")\"></span>"
+        body += escapeHTML(penanceTitle)
+        body += "</p>"
+        body += "<p class=\"penance-desc\">\(escapeHTML(penanceDesc))</p>"
+        body += "</div>"
+
+        body += "<div class=\"footer\">Introibo — app.introibo</div>"
+
+        return calendarDocument(
+            latinTitle: latinTitle,
+            englishTitle: englishTitle,
+            longDate: longDate,
+            body: body
+        )
+    }
+
+    /// Wraps calendar-day content in a full HTML5 document with inline CSS.
+    private static func calendarDocument(latinTitle: String, englishTitle: String?, longDate: String, body: String) -> String {
+        """
+        <!DOCTYPE html>
+        <html lang="la">
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>\(escapeHTML(latinTitle))</title>
+        <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #F2E8D0;
+            font-family: Palatino, "Palatino Linotype", Georgia, "Times New Roman", serif;
+            color: #1C1410;
+            padding: 32px;
+            max-width: 520px;
+            margin: 0 auto;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .header {
+            background: linear-gradient(to bottom, #1A130C, #2C2015);
+            color: #E8DFC9;
+            text-align: center;
+            padding: 28px 24px;
+            border-radius: 8px;
+            margin-bottom: 28px;
+        }
+        .header h1 {
+            font-size: 22px;
+            font-style: italic;
+            margin: 0;
+            line-height: 1.3;
+        }
+        .header .english {
+            font-size: 14px;
+            color: #B8960C;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        .header .date {
+            font-size: 12px;
+            color: #9A8670;
+            margin-top: 6px;
+            font-style: italic;
+        }
+        .info-row {
+            margin-bottom: 16px;
+        }
+        .info-label {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #9A8670;
+            margin-bottom: 4px;
+        }
+        .info-value {
+            font-size: 15px;
+            color: #1C1410;
+        }
+        .flag {
+            font-size: 13px;
+            font-style: italic;
+            color: #8B1A1A;
+            margin-bottom: 6px;
+        }
+        .penance-card {
+            border: 1px solid rgba(184, 150, 12, 0.3);
+            border-radius: 6px;
+            padding: 14px;
+            margin-top: 20px;
+        }
+        .penance-card.strict {
+            border-color: rgba(139, 26, 26, 0.3);
+        }
+        .penance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .discipline {
+            font-size: 9px;
+            color: #B8960C;
+        }
+        .penance-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1C1410;
+            margin-bottom: 8px;
+        }
+        .penance-dot {
+            display: inline-block;
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #B8960C;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .penance-dot.strict { background: #8B1A1A; }
+        .penance-desc {
+            font-size: 13px;
+            color: #5A4A3A;
+            line-height: 1.5;
+        }
+        .footer {
+            text-align: center;
+            color: #9A8670;
+            font-size: 11px;
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(184, 150, 12, 0.2);
+        }
+        @media print {
+            body { padding: 20px; }
+        }
+        </style>
+        </head>
+        <body>
+        <div class="header">
+            <h1>\(escapeHTML(latinTitle))</h1>
+            \(englishTitle.map { "<p class=\"english\">\(escapeHTML($0))</p>" } ?? "")
+            <p class="date">\(escapeHTML(longDate))</p>
+        </div>
+        \(body)
+        </body>
+        </html>
+        """
+    }
+
     // MARK: - Private helpers
 
     /// Wraps one proper section (label + optional ref + bilingual text) in HTML.

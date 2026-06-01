@@ -424,6 +424,8 @@ private struct DayDetailView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
     @AppStorage(SettingsKey.penance) private var penanceRaw = PenanceDiscipline.discipline1962.rawValue
+    @State private var showShareSheet = false
+    @State private var pdfURL: URL?
 
     private var langMode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var discipline: PenanceDiscipline { PenanceDiscipline(rawValue: penanceRaw) ?? .discipline1962 }
@@ -439,6 +441,49 @@ private struct DayDetailView: View {
             }
         }
         .background(Color.pageBackground.ignoresSafeArea())
+        .sheet(isPresented: $showShareSheet) {
+            if let url = pdfURL { ShareSheet(items: [url]) }
+        }
+    }
+
+    private func sharePDF() {
+        var flags: [String] = []
+        if ctx.isFirstFriday { flags.append("First Friday") }
+        if ctx.isFirstSaturday { flags.append("First Saturday") }
+        if ctx.isEmberDay { flags.append("Ember Day") }
+        if day.isSunday { flags.append("Sunday Obligation") }
+
+        let colourHex: String? = day.colour.map {
+            switch $0 {
+            case .violet: return "#6A359A"
+            case .rose:   return "#A04860"
+            case .white:  return "#7A5A0E"
+            case .red:    return "#8B1A1A"
+            case .green:  return "#3A5D28"
+            case .black:  return "#2A2521"
+            }
+        }
+
+        let html = MassHTMLExporter.calendarDayHTML(
+            latinTitle: title,
+            englishTitle: day.englishName,
+            longDate: LongDateFormatter.format(day.date),
+            colour: day.colour?.rawValue.capitalized,
+            colourHex: colourHex,
+            season: ctx.englishName,
+            flags: flags,
+            penanceTitle: ctx.penance.title,
+            penanceDesc: ctx.penance.desc,
+            penanceStrict: ctx.penance.strict,
+            discipline: discipline.short
+        )
+        if let data = PDFExporter.generatePDF(from: html) {
+            let url = FileManager.default.temporaryDirectory
+                .appendingPathComponent("Introibo-Calendar.pdf")
+            try? data.write(to: url)
+            pdfURL = url
+            showShareSheet = true
+        }
     }
 
     private var shareText: String {
@@ -454,7 +499,14 @@ private struct DayDetailView: View {
         VStack(spacing: 8) {
             HStack {
                 Spacer()
-                ShareLink(item: shareText) {
+                Menu {
+                    Button { sharePDF() } label: {
+                        Label("Share as PDF", systemImage: "doc.richtext")
+                    }
+                    ShareLink(item: shareText) {
+                        Label("Share as Text", systemImage: "doc.plaintext")
+                    }
+                } label: {
                     Image(systemName: "square.and.arrow.up")
                         .font(.system(size: 14))
                         .foregroundStyle(Color.goldLeaf)

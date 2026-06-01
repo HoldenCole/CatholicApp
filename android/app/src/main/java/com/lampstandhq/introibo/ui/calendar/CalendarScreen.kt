@@ -26,6 +26,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -418,27 +420,54 @@ private fun DayDetail(
             )
         }
 
-        // Share button
+        // Share menu
         Row(
             modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
             horizontalArrangement = Arrangement.End,
         ) {
             val eng = day.englishName ?: title
-            val colour = day.colour?.key?.replaceFirstChar { it.uppercase() } ?: ""
-            val shareText = "${LongDateFormatter.format(day.date)}\n$title\n$eng\n$colour · ${ctx.englishName}\n${penance.title} (${discipline.short})"
-            IconButton(onClick = {
-                val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
-                    type = "text/plain"
-                    putExtra(android.content.Intent.EXTRA_TEXT, shareText)
+            val colourName = day.colour?.key?.replaceFirstChar { it.uppercase() } ?: ""
+            val shareText = "${LongDateFormatter.format(day.date)}\n$title\n$eng\n$colourName · ${ctx.englishName}\n${penance.title} (${discipline.short})"
+            val colourHexMap = mapOf("violet" to "#6A359A", "rose" to "#A04860", "white" to "#7A5A0E", "red" to "#8B1A1A", "green" to "#3A5D28", "black" to "#2A2521")
+            var showMenu by remember { mutableStateOf(false) }
+            Box {
+                IconButton(onClick = { showMenu = true }) {
+                    Icon(Icons.Filled.Share, "Share", tint = colors.tertiaryText, modifier = Modifier.size(18.dp))
                 }
-                shareContext.startActivity(android.content.Intent.createChooser(intent, "Share"))
-            }) {
-                Icon(
-                    imageVector = Icons.Filled.Share,
-                    contentDescription = "Share",
-                    tint = colors.tertiaryText,
-                    modifier = Modifier.size(18.dp),
-                )
+                DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+                    DropdownMenuItem(
+                        text = { Text("Share as PDF") },
+                        onClick = {
+                            showMenu = false
+                            val flags = mutableListOf<String>()
+                            if (ctx.isFirstFriday) flags.add("First Friday")
+                            if (ctx.isFirstSaturday) flags.add("First Saturday")
+                            if (ctx.isEmberDay) flags.add("Ember Day")
+                            if (day.isSunday) flags.add("Sunday Obligation")
+                            val html = com.lampstandhq.introibo.export.MassHTMLExporter.calendarDayHTML(
+                                latinTitle = title, englishTitle = day.englishName,
+                                longDate = LongDateFormatter.format(day.date),
+                                colour = colourName.ifEmpty { null }, colourHex = day.colour?.let { colourHexMap[it.key] },
+                                season = ctx.englishName, flags = flags,
+                                penanceTitle = penance.title, penanceDesc = penance.desc,
+                                penanceStrict = penance.strict, discipline = discipline.short,
+                            )
+                            shareContext.startActivity(android.content.Intent.createChooser(
+                                com.lampstandhq.introibo.export.PDFExporter.shareHTMLIntent(html, title), "Share"
+                            ))
+                        },
+                    )
+                    DropdownMenuItem(
+                        text = { Text("Share as Text") },
+                        onClick = {
+                            showMenu = false
+                            val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
+                                type = "text/plain"; putExtra(android.content.Intent.EXTRA_TEXT, shareText)
+                            }
+                            shareContext.startActivity(android.content.Intent.createChooser(intent, "Share"))
+                        },
+                    )
+                }
             }
         }
 
