@@ -28,6 +28,11 @@ final class ContentStore {
     private var missalTempora:   [String: MissalProperEntry] = [:]
     private var missalSanctoral: [String: MissalProperEntry] = [:]
     private var sanctoralPropers: [String: [String: Hour.Part]] = [:]
+    // Commune (common Office) parts keyed by commune code (C1, C4a, C6a, …),
+    // and the saint→commune map keyed by "MM-DD". Saints without their own
+    // proper capitulum/hymn/versicle/antiphon inherit them from their commune.
+    private var communeOffice: [String: [String: Hour.Part]] = [:]
+    private var saintCommune: [String: String] = [:]
     private var ordoData:        [String: OrdoEntry] = [:]
     private var ordoData1955:    [String: OrdoEntry] = [:]
     private var ordoDataPre1955: [String: OrdoEntry] = [:]
@@ -53,6 +58,8 @@ final class ContentStore {
         missalTempora     = load("missal_tempora",    as: [String: MissalProperEntry].self) ?? [:]
         missalSanctoral   = load("missal_sanctoral",  as: [String: MissalProperEntry].self) ?? [:]
         sanctoralPropers  = load("sanctoral_propers", as: [String: [String: Hour.Part]].self) ?? [:]
+        communeOffice     = load("commune_office",     as: [String: [String: Hour.Part]].self) ?? [:]
+        saintCommune      = load("saint_commune",      as: [String: String].self) ?? [:]
         ordoData          = load("ordo",              as: [String: OrdoEntry].self) ?? [:]
         ordoData1955      = load("ordo_1955",         as: [String: OrdoEntry].self) ?? [:]
         ordoDataPre1955   = load("ordo_pre1955",      as: [String: OrdoEntry].self) ?? [:]
@@ -89,9 +96,17 @@ final class ContentStore {
         let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? MissalRite.rite1962.rawValue
         let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
         if let ordo = ordoForDate(ctx.date, rite: rite) {
-            if ordo.winner == "sanctoral",
-               let saint = sanctoralPropers[ordo.winnerKey] {
-                assembled = applyProperOverrides(assembled, overrides: saint)
+            if ordo.winner == "sanctoral" {
+                // Commune fallback first (capitulum, hymn, versicle, antiphons),
+                // then the saint's own proper on top (collect + any proper parts).
+                let key = ordo.winnerKey
+                let code = saintCommune[key] ?? saintCommune[String(key.prefix(5))]
+                if let code, let commune = communeOffice[code] {
+                    assembled = applyProperOverrides(assembled, overrides: commune)
+                }
+                if let saint = sanctoralPropers[ordo.winnerKey] {
+                    assembled = applyProperOverrides(assembled, overrides: saint)
+                }
             } else if let temporalKey = ordo.temporal,
                       let tempOverrides = officeAssembler.temporalPropers[temporalKey] {
                 assembled = applyProperOverrides(assembled, overrides: tempOverrides)

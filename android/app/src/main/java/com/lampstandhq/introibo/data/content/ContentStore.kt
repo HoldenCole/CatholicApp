@@ -71,6 +71,9 @@ object ContentStore {
     private var missalTempora: Map<String, MissalProperEntry> = emptyMap()
     private var missalSanctoral: Map<String, MissalProperEntry> = emptyMap()
     private var sanctoralPropers: Map<String, Map<String, Hour.Part>> = emptyMap()
+    // Commune (common Office) parts + saint→commune map (see iOS ContentStore).
+    private var communeOffice: Map<String, Map<String, Hour.Part>> = emptyMap()
+    private var saintCommune: Map<String, String> = emptyMap()
     private var ordoData: Map<String, OrdoEntry> = emptyMap()
     private var ordoData1955: Map<String, OrdoEntry> = emptyMap()
     private var ordoDataPre1955: Map<String, OrdoEntry> = emptyMap()
@@ -102,6 +105,8 @@ object ContentStore {
         missalTempora    = load("missal_tempora.json")    ?: emptyMap()
         missalSanctoral  = load("missal_sanctoral.json")  ?: emptyMap()
         sanctoralPropers = load("sanctoral_propers.json") ?: emptyMap()
+        communeOffice    = load("commune_office.json")    ?: emptyMap()
+        saintCommune     = load("saint_commune.json")     ?: emptyMap()
         ordoData         = load("ordo.json")              ?: emptyMap()
         ordoData1955     = load("ordo_1955.json")         ?: emptyMap()
         ordoDataPre1955  = load("ordo_pre1955.json")      ?: emptyMap()
@@ -445,6 +450,13 @@ object ContentStore {
         val ordo = ordoForDate(ctx.date, rite)
         if (ordo != null) {
             if (ordo.winner == "sanctoral") {
+                // Commune fallback first, then the saint's own proper on top.
+                val key = ordo.winnerKey
+                val code = saintCommune[key] ?: saintCommune[key.take(5)]
+                val commune = code?.let { communeOffice[it] }
+                if (commune != null) {
+                    assembled = applyProperOverrides(assembled, commune)
+                }
                 val saint = sanctoralPropers[ordo.winnerKey]
                 if (saint != null) {
                     assembled = applyProperOverrides(assembled, saint)

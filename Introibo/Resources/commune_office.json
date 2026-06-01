@@ -1,0 +1,1552 @@
+{
+ "C1": {
+  "ant_laudes": {
+   "eng": "You who left all * and follow me, you will receive hundredfolds, and you will have eternal life.",
+   "lat": "Vos qui reliquístis * ómnia, et secúti estis me, céntuplum accipiétis, et vitam ætérnam possidébitis.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "For they shall deliver you * up to councils: and in the synagogues you shall be beaten: and you shall stand before governors and kings for my sake, for a testimony unto them.",
+   "lat": "Tradent enim vos * in concíliis, et in synagógis suis flagellábunt vos, et ante reges et prǽsides ducémini propter me in testimónium illis, et Géntibus.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
+   "lat": "Fratres: Jam non estis hóspites et ádvenæ: sed estis cives Sanctórum et doméstici Dei: superædificáti super fundaméntum Apostolórum, et Prophetárum, ipso summo angulári lápide Christo Jesu.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Now let the earth with joy resound,\nAnd heaven the chant re-echo round;\nNor heaven nor earth too high can raise\nThe great Apostles' glorious praise.\nO ye who, throned in glory dread,\nShall judge the living and the dead,\nLights of the world forevermore!\nTo you the suppliant prayer we pour.\nYe close the sacred gates on high;\nAt your command apart they fly:\nOh! loose for us the guilty chain\nWe strive to break, and strive in vain.\nSickness and health your voice obey;\nAt your command they go or stay:\nFrom sin's disease our souls restore;\nIn good confirm us more and more.\nSo when the world is at its end,\nAnd Christ to judgement shall descend,\nMay we be called those joys to see\nPrepared from all eternity.\n* Praise to the Father, with the Son,\nAnd Holy Spirit, Three in One;\nAs ever was in ages past,\nAnd so shall be while ages last.\nAmen.",
+   "lat": "Exsúltet orbis gáudiis:\nCælum resúltet láudibus:\nApostolórum glóriam\nTellus et astra cóncinunt.\nVos sæculórum júdices,\nEt vera mundi lúmina:\nVotis precámur córdium,\nAudíte voces súpplicum.\nQui templa cæli cláuditis,\nSerásque verbo sólvitis,\nNos a reátu nóxios\nSolvi jubéte, quǽsumus.\nPræcépta quorum prótinus\nLanguor salúsque séntiunt:\nSanáte mentes lánguidas:\nAugéte nos virtútibus.\nUt, cum redíbit árbiter\nIn fine Christus sǽculi,\nNos sempitérni gáudii\nConcédat esse cómpotes.\n* Patri, simúlque Fílio,\nTibíque Sancte Spíritus,\nSicut fuit, sit júgiter\nSæclum per omne glória.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Now let the earth with joy resound,\nAnd heaven the chant re-echo round;\nNor heaven nor earth too high can raise\nThe great Apostles' glorious praise.\nO ye who, throned in glory dread,\nShall judge the living and the dead,\nLights of the world forevermore!\nTo you the suppliant prayer we pour.\nYe close the sacred gates on high;\nAt your command apart they fly:\nOh! loose for us the guilty chain\nWe strive to break, and strive in vain.\nSickness and health your voice obey;\nAt your command they go or stay:\nFrom sin's disease our souls restore;\nIn good confirm us more and more.\nSo when the world is at its end,\nAnd Christ to judgement shall descend,\nMay we be called those joys to see\nPrepared from all eternity.\n* Praise to the Father, with the Son,\nAnd Holy Spirit, Three in One;\nAs ever was in ages past,\nAnd so shall be while ages last.\nAmen.",
+   "lat": "Exsúltet orbis gáudiis:\nCælum resúltet láudibus:\nApostolórum glóriam\nTellus et astra cóncinunt.\nVos sæculórum júdices,\nEt vera mundi lúmina:\nVotis precámur córdium,\nAudíte voces súpplicum.\nQui templa cæli cláuditis,\nSerásque verbo sólvitis,\nNos a reátu nóxios\nSolvi jubéte, quǽsumus.\nPræcépta quorum prótinus\nLanguor salúsque séntiunt:\nSanáte mentes lánguidas:\nAugéte nos virtútibus.\nUt, cum redíbit árbiter\nIn fine Christus sǽculi,\nNos sempitérni gáudii\nConcédat esse cómpotes.\n* Patri, simúlque Fílio,\nTibíque Sancte Spíritus,\nSicut fuit, sit júgiter\nSæclum per omne glória.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. They declared the works of God.\nR. And understood his doings.",
+   "lat": "V. Annuntiavérunt ópera Dei.\nR. Et facta ejus intellexérunt.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Their sound hath gone forth into all the earth:\nR. And their words unto the ends of the world.",
+   "lat": "V. In omnem terram exívit sonus eórum.\nR. Et in fines orbis terræ verba eórum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
+   "lat": "Fratres: Jam non estis hóspites et ádvenæ: sed estis cives Sanctórum et doméstici Dei: superædificáti super fundaméntum Apostolórum, et Prophetárum, ipso summo angulári lápide Christo Jesu.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C11": {
+  "ant_laudes": {
+   "eng": "O Mary * blessed art thou that didst believe! for there shall be a performance of those things which were told thee from the Lord. Alleluia.",
+   "lat": "Beáta es, * María, quæ credidísti: perficiéntur in te, quæ dicta sunt tibi a Dómino, allelúja.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "O Holy Mary, * be thou an help to the helpless, a strength to the fearful, a comfort to the sorrowful; pray for the people, plead for the clergy, make intercession for all women vowed to God: may all that are keeping this thine holy Feast-day feel the might of thine assistance.",
+   "lat": "Sancta María, * succúrre míseris, juva pusillánimes, réfove flébiles, ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu: séntiant omnes tuum juvámen, quicúmque célebrant tuam sanctam festivitátem.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "From the beginning, and before the world, was I created, and unto the world to come I shall not cease to be, and in the holy dwelling place I have ministered before him.\n$Deo gratias.",
+   "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "O glorious lady! throned on high\nAbove the star-illumined sky;\nThereto ordained, thy bosom lent\nTo thy Creator nourishment.\nThrough thy sweet offspring we receive\nThe bliss once lost through hapless Eve;\nAnd heaven to mortals open lies\nNow thou art portal of the skies.\nThou art the door of heaven's high King,\nLight's gateway fair and glistering;\nLife through a Virgin is restored;\nYe ransomed nations, praise the Lord!\nAll honour, laud, and glory be,\nO Jesu, Virgin-born, to thee;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "O gloriósa vírginum,\nSublímis inter sídera,\nQui te creávit, párvulum\nLacténte nutris úbere.\nQuod Heva tristis ábstulit,\nTu reddis almo gérmine:\nIntrent ut astra flébiles,\nCæli reclúdis cárdines.\nTu Regis alti jánua\nEt aula lucis fúlgida:\nVitam datam per Vírginem,\nGentes redémptæ, pláudite.\n* Jesu tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "/:The first verse of the following hymn is said genuflecting.:/\nAve, star of ocean,\nChild divine who barest,\nMother, ever-Virgin,\nHeaven's portal fairest.\nTaking that sweet Ave\nErst by Gabriel spoken,\nEva's name reversing,\nBe of peace the token.\nBreak the sinners' fetters,\nLight to blind restoring,\nAll our ills dispelling,\nEvery boon imploring.\nShow thyself a mother\nIn thy supplication;\nHe will hear who chose thee\nAt his incarnation.\nMaid all maids excelling,\nPassing meek and lowly,\nWin for sinners pardon,\nMake us chaste and holy.\nAs we onward journey\nAid our weak endeavour,\nTill we gaze on Jesus\nAnd rejoice forever.\nFather, Son, and Spirit,\nThree in One confessing,\nGive we equal glory\nEqual praise and blessing.\nAmen.",
+   "lat": "/:Prima stropha sequentis hymni dicitur flexis genibus.:/\nAve maris stella,\nDei Mater alma,\nAtque semper Virgo,\nFelix cæli porta.\nSumens illud Ave\nGabriélis ore,\nFunda nos in pace,\nMutans Hevæ nomen.\nSolve vincla reis,\nProfer lumen cæcis,\nMala nostra pelle,\nBona cuncta posce.\nMonstra te esse matrem,\nSumat per te preces,\nQui pro nobis natus,\nTulit esse tuus.\nVirgo singuláris,\nInter omnes mitis,\nNos culpis solútos\nMites fac et castos.\nVitam præsta puram,\nIter para tutum,\nUt vidéntes Jesum,\nSemper collætémur.\nSit laus Deo Patri,\nSummo Christo decus,\nSpirítui Sancto,\nTribus honor unus.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Holy Virgin, my praise by thee accepted be.\nR. Give me strength against thine enemies.",
+   "lat": "V. Dignáre me laudáre te, Virgo sacráta.\nR. Da mihi virtútem contra hostes tuos.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "From the beginning, and before the world, was I created, and unto the world to come I shall not cease to be, and in the holy dwelling place I have ministered before him.\n$Deo gratias.",
+   "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C2": {
+  "ant_laudes": {
+   "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
+   "lat": "Qui odit * ánimam suam in hoc mundo, in vitam ætérnam custódit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "This man is holy * for he hath striven for the law of his God even unto death, and hath not feared for the words of the ungodly; For he had his foundation upon a strong rock.",
+   "lat": "Iste Sanctus * pro lege Dei sui certávit usque ad mortem, et a verbis impiórum non tímuit: fundátus enim erat supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Martyr of God, whose strength was steeled\nTo follow close God's only Son,\nWell didst thou brave thy battlefield,\nAnd well thy heavenly bliss was won!\nNow join thy prayers with ours, who pray\nThat God may pardon us and bless;\nFor prayer keeps evil's plague away,\nAnd draws from life its weariness.\nLong, long ago, were loosed the chains\nThat held thy body once in thrall;\nFor us how many a bond remains!\nO love of God release us all.\nAll praise to God the Father be,\nAll praise to thee, Eternal Son;\nAll praise, O Holy Ghost, to thee,\nWhile never-ending ages run.\nAmen.",
+   "lat": "Invícte Martyr, únicum\nPatris secútus Fílium,\nVictis triúmphas hóstibus,\nVictor fruens cæléstibus.\nTui precátus múnere\nNostrum reátum dílue,\nArcens mali contágium,\nVitæ repéllens tǽdium.\nSolúta sunt jam víncula\nTui sacráti córporis:\nNos solve vinclis sǽculi,\nDono supérni Núminis.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The righteous shall flourish like the palm-tree.\nR. He shall grow like a cedar in Lebanon.",
+   "lat": "V. Justus ut palma florébit.\nR. Sicut cedrus Líbani multiplicábitur.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Thou hast crowned him with glory and honour, O Lord.\nR. And madest him to have dominion over the works of thy hands.",
+   "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C2-1": {
+  "ant_laudes": {
+   "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
+   "lat": "Qui odit * ánimam suam in hoc mundo, in vitam ætérnam custódit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "This man is holy * for he hath striven for the law of his God even unto death, and hath not feared for the words of the ungodly; For he had his foundation upon a strong rock.",
+   "lat": "Iste Sanctus * pro lege Dei sui certávit usque ad mortem, et a verbis impiórum non tímuit: fundátus enim erat supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Martyr of God, whose strength was steeled\nTo follow close God's only Son,\nWell didst thou brave thy battlefield,\nAnd well thy heavenly bliss was won!\nNow join thy prayers with ours, who pray\nThat God may pardon us and bless;\nFor prayer keeps evil's plague away,\nAnd draws from life its weariness.\nLong, long ago, were loosed the chains\nThat held thy body once in thrall;\nFor us how many a bond remains!\nO love of God release us all.\nAll praise to God the Father be,\nAll praise to thee, Eternal Son;\nAll praise, O Holy Ghost, to thee,\nWhile never-ending ages run.\nAmen.",
+   "lat": "Invícte Martyr, únicum\nPatris secútus Fílium,\nVictis triúmphas hóstibus,\nVictor fruens cæléstibus.\nTui precátus múnere\nNostrum reátum dílue,\nArcens mali contágium,\nVitæ repéllens tǽdium.\nSolúta sunt jam víncula\nTui sacráti córporis:\nNos solve vinclis sǽculi,\nDono supérni Núminis.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The righteous shall flourish like the palm-tree.\nR. He shall grow like a cedar in Lebanon.",
+   "lat": "V. Justus ut palma florébit.\nR. Sicut cedrus Líbani multiplicábitur.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Thou hast crowned him with glory and honour, O Lord.\nR. And madest him to have dominion over the works of thy hands.",
+   "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C2a": {
+  "ant_laudes": {
+   "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
+   "lat": "Qui odit * ánimam suam in hoc mundo, in vitam ætérnam custódit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "This man is holy * for he hath striven for the law of his God even unto death, and hath not feared for the words of the ungodly; For he had his foundation upon a strong rock.",
+   "lat": "Iste Sanctus * pro lege Dei sui certávit usque ad mortem, et a verbis impiórum non tímuit: fundátus enim erat supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Martyr of God, whose strength was steeled\nTo follow close God's only Son,\nWell didst thou brave thy battlefield,\nAnd well thy heavenly bliss was won!\nNow join thy prayers with ours, who pray\nThat God may pardon us and bless;\nFor prayer keeps evil's plague away,\nAnd draws from life its weariness.\nLong, long ago, were loosed the chains\nThat held thy body once in thrall;\nFor us how many a bond remains!\nO love of God release us all.\nAll praise to God the Father be,\nAll praise to thee, Eternal Son;\nAll praise, O Holy Ghost, to thee,\nWhile never-ending ages run.\nAmen.",
+   "lat": "Invícte Martyr, únicum\nPatris secútus Fílium,\nVictis triúmphas hóstibus,\nVictor fruens cæléstibus.\nTui precátus múnere\nNostrum reátum dílue,\nArcens mali contágium,\nVitæ repéllens tǽdium.\nSolúta sunt jam víncula\nTui sacráti córporis:\nNos solve vinclis sǽculi,\nDono supérni Núminis.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The righteous shall flourish like the palm-tree.\nR. He shall grow like a cedar in Lebanon.",
+   "lat": "V. Justus ut palma florébit.\nR. Sicut cedrus Líbani multiplicábitur.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Thou hast crowned him with glory and honour, O Lord.\nR. And madest him to have dominion over the works of thy hands.",
+   "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C2a-1": {
+  "ant_laudes": {
+   "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
+   "lat": "Qui odit * ánimam suam in hoc mundo, in vitam ætérnam custódit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "This man is holy * for he hath striven for the law of his God even unto death, and hath not feared for the words of the ungodly; For he had his foundation upon a strong rock.",
+   "lat": "Iste Sanctus * pro lege Dei sui certávit usque ad mortem, et a verbis impiórum non tímuit: fundátus enim erat supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Martyr of God, whose strength was steeled\nTo follow close God's only Son,\nWell didst thou brave thy battlefield,\nAnd well thy heavenly bliss was won!\nNow join thy prayers with ours, who pray\nThat God may pardon us and bless;\nFor prayer keeps evil's plague away,\nAnd draws from life its weariness.\nLong, long ago, were loosed the chains\nThat held thy body once in thrall;\nFor us how many a bond remains!\nO love of God release us all.\nAll praise to God the Father be,\nAll praise to thee, Eternal Son;\nAll praise, O Holy Ghost, to thee,\nWhile never-ending ages run.\nAmen.",
+   "lat": "Invícte Martyr, únicum\nPatris secútus Fílium,\nVictis triúmphas hóstibus,\nVictor fruens cæléstibus.\nTui precátus múnere\nNostrum reátum dílue,\nArcens mali contágium,\nVitæ repéllens tǽdium.\nSolúta sunt jam víncula\nTui sacráti córporis:\nNos solve vinclis sǽculi,\nDono supérni Núminis.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The righteous shall flourish like the palm-tree.\nR. He shall grow like a cedar in Lebanon.",
+   "lat": "V. Justus ut palma florébit.\nR. Sicut cedrus Líbani multiplicábitur.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Thou hast crowned him with glory and honour, O Lord.\nR. And madest him to have dominion over the works of thy hands.",
+   "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C2b": {
+  "ant_laudes": {
+   "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
+   "lat": "Qui odit * ánimam suam in hoc mundo, in vitam ætérnam custódit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "This man is holy * for he hath striven for the law of his God even unto death, and hath not feared for the words of the ungodly; For he had his foundation upon a strong rock.",
+   "lat": "Iste Sanctus * pro lege Dei sui certávit usque ad mortem, et a verbis impiórum non tímuit: fundátus enim erat supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Martyr of God, whose strength was steeled\nTo follow close God's only Son,\nWell didst thou brave thy battlefield,\nAnd well thy heavenly bliss was won!\nNow join thy prayers with ours, who pray\nThat God may pardon us and bless;\nFor prayer keeps evil's plague away,\nAnd draws from life its weariness.\nLong, long ago, were loosed the chains\nThat held thy body once in thrall;\nFor us how many a bond remains!\nO love of God release us all.\nAll praise to God the Father be,\nAll praise to thee, Eternal Son;\nAll praise, O Holy Ghost, to thee,\nWhile never-ending ages run.\nAmen.",
+   "lat": "Invícte Martyr, únicum\nPatris secútus Fílium,\nVictis triúmphas hóstibus,\nVictor fruens cæléstibus.\nTui precátus múnere\nNostrum reátum dílue,\nArcens mali contágium,\nVitæ repéllens tǽdium.\nSolúta sunt jam víncula\nTui sacráti córporis:\nNos solve vinclis sǽculi,\nDono supérni Núminis.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The righteous shall flourish like the palm-tree.\nR. He shall grow like a cedar in Lebanon.",
+   "lat": "V. Justus ut palma florébit.\nR. Sicut cedrus Líbani multiplicábitur.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Thou hast crowned him with glory and honour, O Lord.\nR. And madest him to have dominion over the works of thy hands.",
+   "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C2b-1": {
+  "ant_laudes": {
+   "eng": "He that hateth his life * in this world, shall keep it unto life eternal.",
+   "lat": "Qui odit * ánimam suam in hoc mundo, in vitam ætérnam custódit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "This man is holy * for he hath striven for the law of his God even unto death, and hath not feared for the words of the ungodly; For he had his foundation upon a strong rock.",
+   "lat": "Iste Sanctus * pro lege Dei sui certávit usque ad mortem, et a verbis impiórum non tímuit: fundátus enim erat supra firmam petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Martyr of God, whose strength was steeled\nTo follow close God's only Son,\nWell didst thou brave thy battlefield,\nAnd well thy heavenly bliss was won!\nNow join thy prayers with ours, who pray\nThat God may pardon us and bless;\nFor prayer keeps evil's plague away,\nAnd draws from life its weariness.\nLong, long ago, were loosed the chains\nThat held thy body once in thrall;\nFor us how many a bond remains!\nO love of God release us all.\nAll praise to God the Father be,\nAll praise to thee, Eternal Son;\nAll praise, O Holy Ghost, to thee,\nWhile never-ending ages run.\nAmen.",
+   "lat": "Invícte Martyr, únicum\nPatris secútus Fílium,\nVictis triúmphas hóstibus,\nVictor fruens cæléstibus.\nTui precátus múnere\nNostrum reátum dílue,\nArcens mali contágium,\nVitæ repéllens tǽdium.\nSolúta sunt jam víncula\nTui sacráti córporis:\nNos solve vinclis sǽculi,\nDono supérni Núminis.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The righteous shall flourish like the palm-tree.\nR. He shall grow like a cedar in Lebanon.",
+   "lat": "V. Justus ut palma florébit.\nR. Sicut cedrus Líbani multiplicábitur.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Thou hast crowned him with glory and honour, O Lord.\nR. And madest him to have dominion over the works of thy hands.",
+   "lat": "V. Glória et honóre coronásti eum, Dómine.\nR. Et constituísti eum super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
+   "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C3": {
+  "ant_laudes": {
+   "eng": "Even the very hairs of your head are all numbered: * fear not therefore; ye are of more value than many sparrows.",
+   "lat": "Vestri capílli cápitis * omnes numeráti sunt: nolíte timére: multis passéribus melióres estis vos.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "For theirs is the Kingdom of heaven * who love not their lives in this world, and have attained unto the reward of the Kingdom, and have washed their robes in the blood of the Lamb.",
+   "lat": "Istórum est enim * regnum cælórum qui contempsérunt vitam mundi, et pervenérunt ad prǽmia regni, et lavérunt stolas suas in sánguine Agni.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "O glorious King of martyr hosts,\nThou crown that each confessor boasts,\nWho leadest to celestial day\nThose who have cast earth's joys away:\nThine ear in mercy, Saviour, lend,\nWhile unto thee our prayers ascend;\nAnd as we count their triumphs won,\nForgive the sins that we have done.\nMartyrs in thee their triumphs gain,\nFrom thee confessors grace obtain;\nO'ercome in us the lust of sin,\nThat we thy pardoning love may win.\nTo thee who, dead, again dost live,\nAll glory, Lord, thy people give;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Rex glorióse Mártyrum,\nCoróna confiténtium,\nQui respuéntes térrea\nPerdúcis ad cæléstia:\nAurem benígnam prótinus\nInténde nostris vócibus:\nTrophǽa sacra pángimus:\nIgnósce quod delíquimus.\nTu vincis inter Mártyres\nParcísque Confessóribus:\nTu vince nostra crímina,\nLargítor indulgéntiæ.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Sing, O sons of the Church sounding the martyrs' praise!\nGod's true soldiers applaud, who, in their weary days,\nWon bright trophies of good, glad be the voice ye raise,\nWhile these heroes of Christ ye sing!\nThey, while yet in the world were by the world abhorred;\nFelt how fading the joys, fleeting the wealth it stored;\nSpurned all pleasure for thee, and at thy call, O Lord,\nCame forth strong in thy name, as King.\nLord, how bravely they bore fury and pain for thee!\nScourge, rod, sword, and the rack strongly endured; but free\nSang out, bold in thy love, longing on high to be;\nEarth's might never their souls could bend.\nWhile they, shedding their blood, victims for Jesus fell,\nNo sound out of their lips came of their throes to tell;\nBowed low, patient and meek, loving the Lord so well,\nTurned they still to the Christ, their friend.\nWhat joys, bright with the blood shed for thy love they share,\nThose brave martyrs of thine crowned with thy laurels rare;\nMan's tongue never can tell, never can half declare,\nHow pure now is their bliss above!\nYet we, Father on high, God of eternal might,\nLift weak voices in prayer asking for peace and light;\nCleanse thou out of our hearts every stain and blight,\nSo our songs may be songs of love.\nAmen.",
+   "lat": "Sanctórum méritis ínclita gáudia\nPangámus, sócii, géstaque fórtia:\nGliscens fert ánimus prómere cántibus\nVictórum genus óptimum.\nHi sunt, quos fátue mundus abhórruit;\nHunc fructu vácuum, flóribus áridum\nContempsére tui nóminis ásseclæ\nJesu, Rex bone cǽlitum.\nHi pro te fúrias, atque minas truces\nCalcárunt hóminum, sǽvaque vérbera:\nHis cessit lácerans fórtiter úngula,\nNec carpsit penetrália.\nCædúntur gládiis more bidéntium:\nNon murmur résonat, non quærimónia;\nSed corde impávido mens bene cónscia\nConsérvat patiéntiam.\nQuæ vox, quæ póterit lingua retéxere,\nQuæ tu Martýribus múnera prǽparas?\nRubri nam flúido sánguine fúlgidis\nCingunt témpora láureis.\nTe, summa o Déitas, únaque póscimus;\nUt culpas ábigas, nóxia súbtrahas,\nDes pacem fámulis; ut tibi glóriam,\nAnnórum in sériem, canant.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The saints shall rejoice in glory:\nR. They shall be joyful in their beds.",
+   "lat": "V. Exsultábunt Sancti in glória.\nR. Lætabúntur in cubílibus suis.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Be glad in the Lord, and rejoice, ye just,\nR. And glory, all ye right of heart.",
+   "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C3a": {
+  "ant_laudes": {
+   "eng": "Even the very hairs of your head are all numbered: * fear not therefore; ye are of more value than many sparrows.",
+   "lat": "Vestri capílli cápitis * omnes numeráti sunt: nolíte timére: multis passéribus melióres estis vos.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "For theirs is the Kingdom of heaven * who love not their lives in this world, and have attained unto the reward of the Kingdom, and have washed their robes in the blood of the Lamb.",
+   "lat": "Istórum est enim * regnum cælórum qui contempsérunt vitam mundi, et pervenérunt ad prǽmia regni, et lavérunt stolas suas in sánguine Agni.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "O glorious King of martyr hosts,\nThou crown that each confessor boasts,\nWho leadest to celestial day\nThose who have cast earth's joys away:\nThine ear in mercy, Saviour, lend,\nWhile unto thee our prayers ascend;\nAnd as we count their triumphs won,\nForgive the sins that we have done.\nMartyrs in thee their triumphs gain,\nFrom thee confessors grace obtain;\nO'ercome in us the lust of sin,\nThat we thy pardoning love may win.\nTo thee who, dead, again dost live,\nAll glory, Lord, thy people give;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Rex glorióse Mártyrum,\nCoróna confiténtium,\nQui respuéntes térrea\nPerdúcis ad cæléstia:\nAurem benígnam prótinus\nInténde nostris vócibus:\nTrophǽa sacra pángimus:\nIgnósce quod delíquimus.\nTu vincis inter Mártyres\nParcísque Confessóribus:\nTu vince nostra crímina,\nLargítor indulgéntiæ.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Sing, O sons of the Church sounding the martyrs' praise!\nGod's true soldiers applaud, who, in their weary days,\nWon bright trophies of good, glad be the voice ye raise,\nWhile these heroes of Christ ye sing!\nThey, while yet in the world were by the world abhorred;\nFelt how fading the joys, fleeting the wealth it stored;\nSpurned all pleasure for thee, and at thy call, O Lord,\nCame forth strong in thy name, as King.\nLord, how bravely they bore fury and pain for thee!\nScourge, rod, sword, and the rack strongly endured; but free\nSang out, bold in thy love, longing on high to be;\nEarth's might never their souls could bend.\nWhile they, shedding their blood, victims for Jesus fell,\nNo sound out of their lips came of their throes to tell;\nBowed low, patient and meek, loving the Lord so well,\nTurned they still to the Christ, their friend.\nWhat joys, bright with the blood shed for thy love they share,\nThose brave martyrs of thine crowned with thy laurels rare;\nMan's tongue never can tell, never can half declare,\nHow pure now is their bliss above!\nYet we, Father on high, God of eternal might,\nLift weak voices in prayer asking for peace and light;\nCleanse thou out of our hearts every stain and blight,\nSo our songs may be songs of love.\nAmen.",
+   "lat": "Sanctórum méritis ínclita gáudia\nPangámus, sócii, géstaque fórtia:\nGliscens fert ánimus prómere cántibus\nVictórum genus óptimum.\nHi sunt, quos fátue mundus abhórruit;\nHunc fructu vácuum, flóribus áridum\nContempsére tui nóminis ásseclæ\nJesu, Rex bone cǽlitum.\nHi pro te fúrias, atque minas truces\nCalcárunt hóminum, sǽvaque vérbera:\nHis cessit lácerans fórtiter úngula,\nNec carpsit penetrália.\nCædúntur gládiis more bidéntium:\nNon murmur résonat, non quærimónia;\nSed corde impávido mens bene cónscia\nConsérvat patiéntiam.\nQuæ vox, quæ póterit lingua retéxere,\nQuæ tu Martýribus múnera prǽparas?\nRubri nam flúido sánguine fúlgidis\nCingunt témpora láureis.\nTe, summa o Déitas, únaque póscimus;\nUt culpas ábigas, nóxia súbtrahas,\nDes pacem fámulis; ut tibi glóriam,\nAnnórum in sériem, canant.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The saints shall rejoice in glory:\nR. They shall be joyful in their beds.",
+   "lat": "V. Exsultábunt Sancti in glória.\nR. Lætabúntur in cubílibus suis.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Be glad in the Lord, and rejoice, ye just,\nR. And glory, all ye right of heart.",
+   "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C3a-1": {
+  "ant_laudes": {
+   "eng": "Even the very hairs of your head are all numbered: * fear not therefore; ye are of more value than many sparrows.",
+   "lat": "Vestri capílli cápitis * omnes numeráti sunt: nolíte timére: multis passéribus melióres estis vos.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "For theirs is the Kingdom of heaven * who love not their lives in this world, and have attained unto the reward of the Kingdom, and have washed their robes in the blood of the Lamb.",
+   "lat": "Istórum est enim * regnum cælórum qui contempsérunt vitam mundi, et pervenérunt ad prǽmia regni, et lavérunt stolas suas in sánguine Agni.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "O glorious King of martyr hosts,\nThou crown that each confessor boasts,\nWho leadest to celestial day\nThose who have cast earth's joys away:\nThine ear in mercy, Saviour, lend,\nWhile unto thee our prayers ascend;\nAnd as we count their triumphs won,\nForgive the sins that we have done.\nMartyrs in thee their triumphs gain,\nFrom thee confessors grace obtain;\nO'ercome in us the lust of sin,\nThat we thy pardoning love may win.\nTo thee who, dead, again dost live,\nAll glory, Lord, thy people give;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Rex glorióse Mártyrum,\nCoróna confiténtium,\nQui respuéntes térrea\nPerdúcis ad cæléstia:\nAurem benígnam prótinus\nInténde nostris vócibus:\nTrophǽa sacra pángimus:\nIgnósce quod delíquimus.\nTu vincis inter Mártyres\nParcísque Confessóribus:\nTu vince nostra crímina,\nLargítor indulgéntiæ.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Sing, O sons of the Church sounding the martyrs' praise!\nGod's true soldiers applaud, who, in their weary days,\nWon bright trophies of good, glad be the voice ye raise,\nWhile these heroes of Christ ye sing!\nThey, while yet in the world were by the world abhorred;\nFelt how fading the joys, fleeting the wealth it stored;\nSpurned all pleasure for thee, and at thy call, O Lord,\nCame forth strong in thy name, as King.\nLord, how bravely they bore fury and pain for thee!\nScourge, rod, sword, and the rack strongly endured; but free\nSang out, bold in thy love, longing on high to be;\nEarth's might never their souls could bend.\nWhile they, shedding their blood, victims for Jesus fell,\nNo sound out of their lips came of their throes to tell;\nBowed low, patient and meek, loving the Lord so well,\nTurned they still to the Christ, their friend.\nWhat joys, bright with the blood shed for thy love they share,\nThose brave martyrs of thine crowned with thy laurels rare;\nMan's tongue never can tell, never can half declare,\nHow pure now is their bliss above!\nYet we, Father on high, God of eternal might,\nLift weak voices in prayer asking for peace and light;\nCleanse thou out of our hearts every stain and blight,\nSo our songs may be songs of love.\nAmen.",
+   "lat": "Sanctórum méritis ínclita gáudia\nPangámus, sócii, géstaque fórtia:\nGliscens fert ánimus prómere cántibus\nVictórum genus óptimum.\nHi sunt, quos fátue mundus abhórruit;\nHunc fructu vácuum, flóribus áridum\nContempsére tui nóminis ásseclæ\nJesu, Rex bone cǽlitum.\nHi pro te fúrias, atque minas truces\nCalcárunt hóminum, sǽvaque vérbera:\nHis cessit lácerans fórtiter úngula,\nNec carpsit penetrália.\nCædúntur gládiis more bidéntium:\nNon murmur résonat, non quærimónia;\nSed corde impávido mens bene cónscia\nConsérvat patiéntiam.\nQuæ vox, quæ póterit lingua retéxere,\nQuæ tu Martýribus múnera prǽparas?\nRubri nam flúido sánguine fúlgidis\nCingunt témpora láureis.\nTe, summa o Déitas, únaque póscimus;\nUt culpas ábigas, nóxia súbtrahas,\nDes pacem fámulis; ut tibi glóriam,\nAnnórum in sériem, canant.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The saints shall rejoice in glory:\nR. They shall be joyful in their beds.",
+   "lat": "V. Exsultábunt Sancti in glória.\nR. Lætabúntur in cubílibus suis.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Be glad in the Lord, and rejoice, ye just,\nR. And glory, all ye right of heart.",
+   "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C3b": {
+  "ant_laudes": {
+   "eng": "Even the very hairs of your head are all numbered: * fear not therefore; ye are of more value than many sparrows.",
+   "lat": "Vestri capílli cápitis * omnes numeráti sunt: nolíte timére: multis passéribus melióres estis vos.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "For theirs is the Kingdom of heaven * who love not their lives in this world, and have attained unto the reward of the Kingdom, and have washed their robes in the blood of the Lamb.",
+   "lat": "Istórum est enim * regnum cælórum qui contempsérunt vitam mundi, et pervenérunt ad prǽmia regni, et lavérunt stolas suas in sánguine Agni.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "O glorious King of martyr hosts,\nThou crown that each confessor boasts,\nWho leadest to celestial day\nThose who have cast earth's joys away:\nThine ear in mercy, Saviour, lend,\nWhile unto thee our prayers ascend;\nAnd as we count their triumphs won,\nForgive the sins that we have done.\nMartyrs in thee their triumphs gain,\nFrom thee confessors grace obtain;\nO'ercome in us the lust of sin,\nThat we thy pardoning love may win.\nTo thee who, dead, again dost live,\nAll glory, Lord, thy people give;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Rex glorióse Mártyrum,\nCoróna confiténtium,\nQui respuéntes térrea\nPerdúcis ad cæléstia:\nAurem benígnam prótinus\nInténde nostris vócibus:\nTrophǽa sacra pángimus:\nIgnósce quod delíquimus.\nTu vincis inter Mártyres\nParcísque Confessóribus:\nTu vince nostra crímina,\nLargítor indulgéntiæ.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Sing, O sons of the Church sounding the martyrs' praise!\nGod's true soldiers applaud, who, in their weary days,\nWon bright trophies of good, glad be the voice ye raise,\nWhile these heroes of Christ ye sing!\nThey, while yet in the world were by the world abhorred;\nFelt how fading the joys, fleeting the wealth it stored;\nSpurned all pleasure for thee, and at thy call, O Lord,\nCame forth strong in thy name, as King.\nLord, how bravely they bore fury and pain for thee!\nScourge, rod, sword, and the rack strongly endured; but free\nSang out, bold in thy love, longing on high to be;\nEarth's might never their souls could bend.\nWhile they, shedding their blood, victims for Jesus fell,\nNo sound out of their lips came of their throes to tell;\nBowed low, patient and meek, loving the Lord so well,\nTurned they still to the Christ, their friend.\nWhat joys, bright with the blood shed for thy love they share,\nThose brave martyrs of thine crowned with thy laurels rare;\nMan's tongue never can tell, never can half declare,\nHow pure now is their bliss above!\nYet we, Father on high, God of eternal might,\nLift weak voices in prayer asking for peace and light;\nCleanse thou out of our hearts every stain and blight,\nSo our songs may be songs of love.\nAmen.",
+   "lat": "Sanctórum méritis ínclita gáudia\nPangámus, sócii, géstaque fórtia:\nGliscens fert ánimus prómere cántibus\nVictórum genus óptimum.\nHi sunt, quos fátue mundus abhórruit;\nHunc fructu vácuum, flóribus áridum\nContempsére tui nóminis ásseclæ\nJesu, Rex bone cǽlitum.\nHi pro te fúrias, atque minas truces\nCalcárunt hóminum, sǽvaque vérbera:\nHis cessit lácerans fórtiter úngula,\nNec carpsit penetrália.\nCædúntur gládiis more bidéntium:\nNon murmur résonat, non quærimónia;\nSed corde impávido mens bene cónscia\nConsérvat patiéntiam.\nQuæ vox, quæ póterit lingua retéxere,\nQuæ tu Martýribus múnera prǽparas?\nRubri nam flúido sánguine fúlgidis\nCingunt témpora láureis.\nTe, summa o Déitas, únaque póscimus;\nUt culpas ábigas, nóxia súbtrahas,\nDes pacem fámulis; ut tibi glóriam,\nAnnórum in sériem, canant.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The saints shall rejoice in glory:\nR. They shall be joyful in their beds.",
+   "lat": "V. Exsultábunt Sancti in glória.\nR. Lætabúntur in cubílibus suis.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Be glad in the Lord, and rejoice, ye just,\nR. And glory, all ye right of heart.",
+   "lat": "V. Lætámini in Dómino, et exsultáte justi.\nR. Et gloriámini omnes recti corde.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "But the souls of the just are in the hand of God, and the torment of death shall not touch them. In the sight of the unwise they seemed to die, but they are in peace.\n$Deo gratias.",
+   "lat": "Justórum ánimæ in manu Dei sunt, et non tanget illos torméntum mortis. Visi sunt óculis insipiéntium mori: illi autem sunt in pace.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C4": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant * thou hast been faithful over a few things, I will make thee ruler over many things, saith the Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "O thou Priest and Bishop, * thou worker of mighty works, thou good shepherd over God’s people, pray for us unto the Lord.",
+   "lat": "Sacérdos et Póntifex, * et virtútum ópifex, pastor bone in pópulo, ora pro nobis Dóminum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the world’s Redeemer, O hear;\nthy bishops’ fadeless crown, draw near:\nAccept with gentlest love today\nThe prayers and praises that we pay.\nThe meek confessor of thy name\nToday attained a glorious fame;\nWhose yearly feast, in solemn state,\nThy faithful people celebrate.\nThe world and all its boasted good,\nAs vain and passing, he eschewed;\nAnd therefore with angelic bands,\nIn endless joy forever stands.\nGrant then that we, most gracious God,\nMay follow in the steps he trod:\nAnd, at his prayer, thy servants free\nFrom stain of all iniquity.\n* To thee, O Christ, our loving King,\nAll glory, praise, and thanks we bring:\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Jesu Redémptor ómnium,\nPerpes coróna Prǽsulum,\nIn hac die cleméntius\nIndúlgeas precántibus.\nTui sacri qua nóminis\nConféssor almus cláruit:\nHujus celébrat ánnua\nDevóta plebs solémnia.\nQui rite mundi gáudia\nHujus cadúca réspuens,\nÆternitátis prǽmio\nPotítur inter Ángelos.\nHujus benígnus ánnue\nNobis sequi vestígia:\nHujus precátu, sérvulis\nDimítte noxam críminis.\n* Sit Christe, Rex piíssime,\nTibi, Patríque glória,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C4-1": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant * thou hast been faithful over a few things, I will make thee ruler over many things, saith the Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "O thou Priest and Bishop, * thou worker of mighty works, thou good shepherd over God’s people, pray for us unto the Lord.",
+   "lat": "Sacérdos et Póntifex, * et virtútum ópifex, pastor bone in pópulo, ora pro nobis Dóminum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the world’s Redeemer, O hear;\nthy bishops’ fadeless crown, draw near:\nAccept with gentlest love today\nThe prayers and praises that we pay.\nThe meek confessor of thy name\nToday attained a glorious fame;\nWhose yearly feast, in solemn state,\nThy faithful people celebrate.\nThe world and all its boasted good,\nAs vain and passing, he eschewed;\nAnd therefore with angelic bands,\nIn endless joy forever stands.\nGrant then that we, most gracious God,\nMay follow in the steps he trod:\nAnd, at his prayer, thy servants free\nFrom stain of all iniquity.\n* To thee, O Christ, our loving King,\nAll glory, praise, and thanks we bring:\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Jesu Redémptor ómnium,\nPerpes coróna Prǽsulum,\nIn hac die cleméntius\nIndúlgeas precántibus.\nTui sacri qua nóminis\nConféssor almus cláruit:\nHujus celébrat ánnua\nDevóta plebs solémnia.\nQui rite mundi gáudia\nHujus cadúca réspuens,\nÆternitátis prǽmio\nPotítur inter Ángelos.\nHujus benígnus ánnue\nNobis sequi vestígia:\nHujus precátu, sérvulis\nDimítte noxam críminis.\n* Sit Christe, Rex piíssime,\nTibi, Patríque glória,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C4a": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant * thou hast been faithful over a few things, I will make thee ruler over many things, saith the Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+   "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the world’s Redeemer, O hear;\nthy bishops’ fadeless crown, draw near:\nAccept with gentlest love today\nThe prayers and praises that we pay.\nThe meek confessor of thy name\nToday attained a glorious fame;\nWhose yearly feast, in solemn state,\nThy faithful people celebrate.\nThe world and all its boasted good,\nAs vain and passing, he eschewed;\nAnd therefore with angelic bands,\nIn endless joy forever stands.\nGrant then that we, most gracious God,\nMay follow in the steps he trod:\nAnd, at his prayer, thy servants free\nFrom stain of all iniquity.\n* To thee, O Christ, our loving King,\nAll glory, praise, and thanks we bring:\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Jesu Redémptor ómnium,\nPerpes coróna Prǽsulum,\nIn hac die cleméntius\nIndúlgeas precántibus.\nTui sacri qua nóminis\nConféssor almus cláruit:\nHujus celébrat ánnua\nDevóta plebs solémnia.\nQui rite mundi gáudia\nHujus cadúca réspuens,\nÆternitátis prǽmio\nPotítur inter Ángelos.\nHujus benígnus ánnue\nNobis sequi vestígia:\nHujus precátu, sérvulis\nDimítte noxam críminis.\n* Sit Christe, Rex piíssime,\nTibi, Patríque glória,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C4b": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant * thou hast been faithful over a few things, I will make thee ruler over many things, saith the Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "O thou Priest and Bishop, * thou worker of mighty works, thou good shepherd over God’s people, pray for us unto the Lord.",
+   "lat": "Sacérdos et Póntifex, * et virtútum ópifex, pastor bone in pópulo, ora pro nobis Dóminum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the world’s Redeemer, O hear;\nthy bishops’ fadeless crown, draw near:\nAccept with gentlest love today\nThe prayers and praises that we pay.\nThe meek confessor of thy name\nToday attained a glorious fame;\nWhose yearly feast, in solemn state,\nThy faithful people celebrate.\nThe world and all its boasted good,\nAs vain and passing, he eschewed;\nAnd therefore with angelic bands,\nIn endless joy forever stands.\nGrant then that we, most gracious God,\nMay follow in the steps he trod:\nAnd, at his prayer, thy servants free\nFrom stain of all iniquity.\n* To thee, O Christ, our loving King,\nAll glory, praise, and thanks we bring:\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Jesu Redémptor ómnium,\nPerpes coróna Prǽsulum,\nIn hac die cleméntius\nIndúlgeas precántibus.\nTui sacri qua nóminis\nConféssor almus cláruit:\nHujus celébrat ánnua\nDevóta plebs solémnia.\nQui rite mundi gáudia\nHujus cadúca réspuens,\nÆternitátis prǽmio\nPotítur inter Ángelos.\nHujus benígnus ánnue\nNobis sequi vestígia:\nHujus precátu, sérvulis\nDimítte noxam críminis.\n* Sit Christe, Rex piíssime,\nTibi, Patríque glória,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C4b-2": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant * thou hast been faithful over a few things, I will make thee ruler over many things, saith the Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
+   "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the world’s Redeemer, O hear;\nthy bishops’ fadeless crown, draw near:\nAccept with gentlest love today\nThe prayers and praises that we pay.\nThe meek confessor of thy name\nToday attained a glorious fame;\nWhose yearly feast, in solemn state,\nThy faithful people celebrate.\nThe world and all its boasted good,\nAs vain and passing, he eschewed;\nAnd therefore with angelic bands,\nIn endless joy forever stands.\nGrant then that we, most gracious God,\nMay follow in the steps he trod:\nAnd, at his prayer, thy servants free\nFrom stain of all iniquity.\n* To thee, O Christ, our loving King,\nAll glory, praise, and thanks we bring:\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "lat": "Jesu Redémptor ómnium,\nPerpes coróna Prǽsulum,\nIn hac die cleméntius\nIndúlgeas precántibus.\nTui sacri qua nóminis\nConféssor almus cláruit:\nHujus celébrat ánnua\nDevóta plebs solémnia.\nQui rite mundi gáudia\nHujus cadúca réspuens,\nÆternitátis prǽmio\nPotítur inter Ángelos.\nHujus benígnus ánnue\nNobis sequi vestígia:\nHujus precátu, sérvulis\nDimítte noxam críminis.\n* Sit Christe, Rex piíssime,\nTibi, Patríque glória,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C5": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
+   "lat": "Similábo eum * viro sapiénti, qui ædificávit domum suam supra petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the rich man that is found without blemish: and that hath not gone after gold, nor put his trust in money nor in treasures. Who is he, and we will praise him? for he hath done wonderful things in his life.\n$Deo gratias",
+   "lat": "Beátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, eternal truth sublime,\nThrough endless years the same!\nThou crown of those who through all time\nConfess thy holy name:\nThy suppliant people, through the prayer\nOf thy blest saint, forgive;\nFor his dear sake, thy wrath forbear,\nAnd bid our spirits live.\nAgain returns the sacred day,\nWith heavenly glory bright,\nWhich saw him go upon his way\nInto the realms of light.\nAll objects of our vain desire,\nAll earthly joys and gains,\nTo him were but as filthy mire;\nAnd now with thee he reigns.\nThee, Jesu, his all-gracious Lord,\nConfessing to the last,\nHe trod beneath him Satan's fraud,\nAnd stood forever fast.\nIn holy deeds of faith and love,\nIn fastings and in prayers,\nHis days were spent; and now above\nThy heavenly feast he shares.\nThen, for his sake thy wrath lay by,\nAnd hear us while we pray;\nAnd pardon us, O thou most high,\nOn this his festal day.\n* All glory to the Father be;\nAnd sole Incarnate Son;\nPraise, holy Paraclete, to thee;\nWhile endless ages run.\nAmen.",
+   "lat": "Jesu, coróna célsior,\nEt véritas sublímior,\nQui confiténti sérvulo\nReddis perénne prǽmium:\nDa supplicánti cœ́tui,\nHujus rogátu, nóxii\nRemissiónem críminis,\nRumpéndo nexum vínculi.\nAnni revérso témpore,\nDies refúlsit lúmine,\nQuo Sanctus hic de córpore\nMigrávit inter sídera.\nHic vana terræ gáudia,\nEt luculénta prǽdia,\nPollúta sorde députans,\nOvans tenet cæléstia.\nTe, Christe, Rex piíssime,\nHic confiténdo júgiter,\nCalcávit artes dǽmonum,\nSævúmque avérni príncipem.\nVirtúte clarus, et fide,\nConfessióne sédulus,\nJejúna membra déferens,\nDapes supérnas óbtinet.\nProínde te piíssime\nPrecámur omnes súpplices:\nNobis ut hujus grátia\nPœnas remíttas débitas.\n* Patri perénnis glória,\nNatóque Patris único,\nSanctóque sit Paráclito,\nPer omne semper sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C5-1": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
+   "lat": "Similábo eum * viro sapiénti, qui ædificávit domum suam supra petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the rich man that is found without blemish: and that hath not gone after gold, nor put his trust in money nor in treasures. Who is he, and we will praise him? for he hath done wonderful things in his life.\n$Deo gratias",
+   "lat": "Beátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, eternal truth sublime,\nThrough endless years the same!\nThou crown of those who through all time\nConfess thy holy name:\nThy suppliant people, through the prayer\nOf thy blest saint, forgive;\nFor his dear sake, thy wrath forbear,\nAnd bid our spirits live.\nAgain returns the sacred day,\nWith heavenly glory bright,\nWhich saw him go upon his way\nInto the realms of light.\nAll objects of our vain desire,\nAll earthly joys and gains,\nTo him were but as filthy mire;\nAnd now with thee he reigns.\nThee, Jesu, his all-gracious Lord,\nConfessing to the last,\nHe trod beneath him Satan's fraud,\nAnd stood forever fast.\nIn holy deeds of faith and love,\nIn fastings and in prayers,\nHis days were spent; and now above\nThy heavenly feast he shares.\nThen, for his sake thy wrath lay by,\nAnd hear us while we pray;\nAnd pardon us, O thou most high,\nOn this his festal day.\n* All glory to the Father be;\nAnd sole Incarnate Son;\nPraise, holy Paraclete, to thee;\nWhile endless ages run.\nAmen.",
+   "lat": "Jesu, coróna célsior,\nEt véritas sublímior,\nQui confiténti sérvulo\nReddis perénne prǽmium:\nDa supplicánti cœ́tui,\nHujus rogátu, nóxii\nRemissiónem críminis,\nRumpéndo nexum vínculi.\nAnni revérso témpore,\nDies refúlsit lúmine,\nQuo Sanctus hic de córpore\nMigrávit inter sídera.\nHic vana terræ gáudia,\nEt luculénta prǽdia,\nPollúta sorde députans,\nOvans tenet cæléstia.\nTe, Christe, Rex piíssime,\nHic confiténdo júgiter,\nCalcávit artes dǽmonum,\nSævúmque avérni príncipem.\nVirtúte clarus, et fide,\nConfessióne sédulus,\nJejúna membra déferens,\nDapes supérnas óbtinet.\nProínde te piíssime\nPrecámur omnes súpplices:\nNobis ut hujus grátia\nPœnas remíttas débitas.\n* Patri perénnis glória,\nNatóque Patris único,\nSanctóque sit Paráclito,\nPer omne semper sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C5a": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "",
+   "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the rich man that is found without blemish: and that hath not gone after gold, nor put his trust in money nor in treasures. Who is he, and we will praise him? for he hath done wonderful things in his life.\n$Deo gratias",
+   "lat": "Beátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, eternal truth sublime,\nThrough endless years the same!\nThou crown of those who through all time\nConfess thy holy name:\nThy suppliant people, through the prayer\nOf thy blest saint, forgive;\nFor his dear sake, thy wrath forbear,\nAnd bid our spirits live.\nAgain returns the sacred day,\nWith heavenly glory bright,\nWhich saw him go upon his way\nInto the realms of light.\nAll objects of our vain desire,\nAll earthly joys and gains,\nTo him were but as filthy mire;\nAnd now with thee he reigns.\nThee, Jesu, his all-gracious Lord,\nConfessing to the last,\nHe trod beneath him Satan's fraud,\nAnd stood forever fast.\nIn holy deeds of faith and love,\nIn fastings and in prayers,\nHis days were spent; and now above\nThy heavenly feast he shares.\nThen, for his sake thy wrath lay by,\nAnd hear us while we pray;\nAnd pardon us, O thou most high,\nOn this his festal day.\n* All glory to the Father be;\nAnd sole Incarnate Son;\nPraise, holy Paraclete, to thee;\nWhile endless ages run.\nAmen.",
+   "lat": "Jesu, coróna célsior,\nEt véritas sublímior,\nQui confiténti sérvulo\nReddis perénne prǽmium:\nDa supplicánti cœ́tui,\nHujus rogátu, nóxii\nRemissiónem críminis,\nRumpéndo nexum vínculi.\nAnni revérso témpore,\nDies refúlsit lúmine,\nQuo Sanctus hic de córpore\nMigrávit inter sídera.\nHic vana terræ gáudia,\nEt luculénta prǽdia,\nPollúta sorde députans,\nOvans tenet cæléstia.\nTe, Christe, Rex piíssime,\nHic confiténdo júgiter,\nCalcávit artes dǽmonum,\nSævúmque avérni príncipem.\nVirtúte clarus, et fide,\nConfessióne sédulus,\nJejúna membra déferens,\nDapes supérnas óbtinet.\nProínde te piíssime\nPrecámur omnes súpplices:\nNobis ut hujus grátia\nPœnas remíttas débitas.\n* Patri perénnis glória,\nNatóque Patris único,\nSanctóque sit Paráclito,\nPer omne semper sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C5b": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
+   "lat": "Similábo eum * viro sapiénti, qui ædificávit domum suam supra petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the rich man that is found without blemish: and that hath not gone after gold, nor put his trust in money nor in treasures. Who is he, and we will praise him? for he hath done wonderful things in his life.\n$Deo gratias",
+   "lat": "Beátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, eternal truth sublime,\nThrough endless years the same!\nThou crown of those who through all time\nConfess thy holy name:\nThy suppliant people, through the prayer\nOf thy blest saint, forgive;\nFor his dear sake, thy wrath forbear,\nAnd bid our spirits live.\nAgain returns the sacred day,\nWith heavenly glory bright,\nWhich saw him go upon his way\nInto the realms of light.\nAll objects of our vain desire,\nAll earthly joys and gains,\nTo him were but as filthy mire;\nAnd now with thee he reigns.\nThee, Jesu, his all-gracious Lord,\nConfessing to the last,\nHe trod beneath him Satan's fraud,\nAnd stood forever fast.\nIn holy deeds of faith and love,\nIn fastings and in prayers,\nHis days were spent; and now above\nThy heavenly feast he shares.\nThen, for his sake thy wrath lay by,\nAnd hear us while we pray;\nAnd pardon us, O thou most high,\nOn this his festal day.\n* All glory to the Father be;\nAnd sole Incarnate Son;\nPraise, holy Paraclete, to thee;\nWhile endless ages run.\nAmen.",
+   "lat": "Jesu, coróna célsior,\nEt véritas sublímior,\nQui confiténti sérvulo\nReddis perénne prǽmium:\nDa supplicánti cœ́tui,\nHujus rogátu, nóxii\nRemissiónem críminis,\nRumpéndo nexum vínculi.\nAnni revérso témpore,\nDies refúlsit lúmine,\nQuo Sanctus hic de córpore\nMigrávit inter sídera.\nHic vana terræ gáudia,\nEt luculénta prǽdia,\nPollúta sorde députans,\nOvans tenet cæléstia.\nTe, Christe, Rex piíssime,\nHic confiténdo júgiter,\nCalcávit artes dǽmonum,\nSævúmque avérni príncipem.\nVirtúte clarus, et fide,\nConfessióne sédulus,\nJejúna membra déferens,\nDapes supérnas óbtinet.\nProínde te piíssime\nPrecámur omnes súpplices:\nNobis ut hujus grátia\nPœnas remíttas débitas.\n* Patri perénnis glória,\nNatóque Patris único,\nSanctóque sit Paráclito,\nPer omne semper sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C5c": {
+  "ant_laudes": {
+   "eng": "Well done, thou good and faithful servant; * thou hast been faithful over a few things, I will make thee ruler over many things; enter thou into the joy of thy Lord.",
+   "lat": "Euge, serve bone * et fidélis, quia in pauca fuísti fidélis, supra multa te constítuam, intra in gáudium Dómini tui.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "I will liken him unto a wise man, * which built his house upon a rock.",
+   "lat": "Similábo eum * viro sapiénti, qui ædificávit domum suam supra petram.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Blessed is the rich man that is found without blemish: and that hath not gone after gold, nor put his trust in money nor in treasures. Who is he, and we will praise him? for he hath done wonderful things in his life.\n$Deo gratias",
+   "lat": "Beátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, eternal truth sublime,\nThrough endless years the same!\nThou crown of those who through all time\nConfess thy holy name:\nThy suppliant people, through the prayer\nOf thy blest saint, forgive;\nFor his dear sake, thy wrath forbear,\nAnd bid our spirits live.\nAgain returns the sacred day,\nWith heavenly glory bright,\nWhich saw him go upon his way\nInto the realms of light.\nAll objects of our vain desire,\nAll earthly joys and gains,\nTo him were but as filthy mire;\nAnd now with thee he reigns.\nThee, Jesu, his all-gracious Lord,\nConfessing to the last,\nHe trod beneath him Satan's fraud,\nAnd stood forever fast.\nIn holy deeds of faith and love,\nIn fastings and in prayers,\nHis days were spent; and now above\nThy heavenly feast he shares.\nThen, for his sake thy wrath lay by,\nAnd hear us while we pray;\nAnd pardon us, O thou most high,\nOn this his festal day.\n* All glory to the Father be;\nAnd sole Incarnate Son;\nPraise, holy Paraclete, to thee;\nWhile endless ages run.\nAmen.",
+   "lat": "Jesu, coróna célsior,\nEt véritas sublímior,\nQui confiténti sérvulo\nReddis perénne prǽmium:\nDa supplicánti cœ́tui,\nHujus rogátu, nóxii\nRemissiónem críminis,\nRumpéndo nexum vínculi.\nAnni revérso témpore,\nDies refúlsit lúmine,\nQuo Sanctus hic de córpore\nMigrávit inter sídera.\nHic vana terræ gáudia,\nEt luculénta prǽdia,\nPollúta sorde députans,\nOvans tenet cæléstia.\nTe, Christe, Rex piíssime,\nHic confiténdo júgiter,\nCalcávit artes dǽmonum,\nSævúmque avérni príncipem.\nVirtúte clarus, et fide,\nConfessióne sédulus,\nJejúna membra déferens,\nDapes supérnas óbtinet.\nProínde te piíssime\nPrecámur omnes súpplices:\nNobis ut hujus grátia\nPœnas remíttas débitas.\n* Patri perénnis glória,\nNatóque Patris único,\nSanctóque sit Paráclito,\nPer omne semper sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
+   "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. The Lord guided the just in right paths.\nR. And showed him the kingdom of God.",
+   "lat": "V. Justum dedúxit Dóminus per vias rectas.\nR. Et osténdit illi regnum Dei.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. The Lord loved him and beautified him.\nR. He clothed him with a robe of glory.",
+   "lat": "V. Amávit eum Dóminus, et ornávit eum.\nR. Stolam glóriæ índuit eum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Behold an high priest, who in his days pleased God, and was found righteous, and in the time of wrath he was made a propitiation.\n$Deo gratias",
+   "lat": "Ecce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C6": {
+  "ant_laudes": {
+   "eng": "The kingdom of heaven is like unto a merchantman * seeking goodly pearls, who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
+   "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "Come, Bride of Christ, and take the everlasting crown * which the Lord hath prepared for thee.",
+   "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.",
+   "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C6-1": {
+  "ant_laudes": {
+   "eng": "The kingdom of heaven is like unto a merchantman * seeking goodly pearls, who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
+   "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "Come, Bride of Christ, and take the everlasting crown * which the Lord hath prepared for thee.",
+   "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.",
+   "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C6a": {
+  "ant_laudes": {
+   "eng": "The kingdom of heaven is like unto a merchantman * seeking goodly pearls, who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
+   "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "Come, Bride of Christ, and take the everlasting crown * which the Lord hath prepared for thee.",
+   "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.",
+   "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C6a-1": {
+  "ant_laudes": {
+   "eng": "The kingdom of heaven is like unto a merchantman * seeking goodly pearls, who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
+   "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "Come, Bride of Christ, and take the everlasting crown * which the Lord hath prepared for thee.",
+   "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.",
+   "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C6b": {
+  "ant_laudes": {
+   "eng": "",
+   "lat": "Prudéntes vírgines, * aptáte vestras lámpades: ecce sponsus venit, exíte óbviam ei.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "Trim your lamps, O ye wise virgins: * Behold the Bridegroom cometh; go ye out to meet Him.",
+   "lat": "Prudéntes vírgines, * aptáte vestras lámpades: ecce sponsus venit, exíte óbviam ei.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Jesu, the virgins' crown, do thou\nAccept us as in prayer we bow;\nBorn of that Virgin, whom alone\nThe mother and the maid we own.\nAmongst the lilies thou dost feed,\nBy virgin choirs accompanied; \nWith glory decked, the spotless brides\nWhose bridal gifts thy love provides.\nThey, wheresoe'er thy footsteps bend,\nWith hymns and praises still attend:\nIn blessèd troops they follow thee,\nWith dance, and song, and melody.\nWe pray thee therefore to bestow\nUpon our senses here below\nThy grace, that so we may endure\nFrom taint of all corruption pure.\n* All laud to God the Father be,\nAll praise, eternal Son, to thee;\nAll glory as is ever meet,\nTo God, the holy Paraclete.\nAmen.",
+   "lat": "Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "",
+   "lat": "V. Adducéntur Regi Vírgines post eam.\nR. Próximæ ejus afferéntur tibi.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. After her shall virgins be brought unto the King. \nR. Her fellows shall be brought unto thee.",
+   "lat": "V. Adducéntur Regi Vírgines post eam.\nR. Próximæ ejus afferéntur tibi.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C7": {
+  "ant_laudes": {
+   "eng": "Give her of the fruit of her hands, * and let her own works praise her in the gates.",
+   "lat": "Date ei * de fructu mánuum suárum, et laudent eam in portis ópera ejus.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "",
+   "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "I will give glory to thee, O Lord, O King, and I will praise thee, O God my Saviour. I will give glory to thy name: for thou hast been a helper and protector to me, and hast preserved my body from destruction.\n$Deo gratias.",
+   "lat": "Confitébor tibi, Dómine, Rex, et collaudábo te Deum Salvatórem meum. Confitébor nómini tuo: quóniam adjútor et protéctor factus es mihi, et liberásti corpus meum a perditióne.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "High let us all our voices raise\nIn that heroic woman's praise\nWhose name, with saintly glory bright,\nShines in the starry realms of light.\nFilled with a pure celestial glow,\nShe spurned all love of things below;\nAnd heedless here on earth to stay,\nClimbed to the skies her toilsome way.\nWith fasts her body she subdued,\nBut filled her soul with prayer's sweet food:\nIn other worlds she tastes the bliss\nFor which she left the joys of this.\nO Christ, the strength of all the strong;\nTo whom our holiest deeds belong!\nThrough her prevailing prayers on high,\nIn mercy hear thy people's cry!\n* To God the Father, with the Son,\nAnd Holy Spirit, Three in One,\nBe glory while the ages flow,\nFrom all above, and all below.\nAmen.",
+   "lat": "Fortem viríli péctore\nLaudémus omnes féminam,\nQuæ sanctitátis glória \nUbíque fulget ínclita.\nHæc sancto amóre sáucia,\nDum mundi amórem nóxium\nHorréscit, ad cæléstia\nIter perégit árduum.\nCarnem domans jejúniis,\nDulcíque mentem pábulo\nOratiónis nútriens,\nCæli potítur gáudiis.\nRex Christe, virtus fórtium,\nQui magna solus éfficis,\nHujus precátu, quǽsumus,\nAudi benígnus súpplices.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "High let us all our voices raise\nIn that heroic woman's praise\nWhose name, with saintly glory bright,\nShines in the starry realms of light.\nFilled with a pure celestial glow,\nShe spurned all love of things below;\nAnd heedless here on earth to stay,\nClimbed to the skies her toilsome way.\nWith fasts her body she subdued,\nBut filled her soul with prayer's sweet food:\nIn other worlds she tastes the bliss\nFor which she left the joys of this.\nO Christ, the strength of all the strong;\nTo whom our holiest deeds belong!\nThrough her prevailing prayers on high,\nIn mercy hear thy people's cry!\n* To God the Father, with the Son,\nAnd Holy Spirit, Three in One,\nBe glory while the ages flow,\nFrom all above, and all below.\nAmen.",
+   "lat": "Fortem viríli péctore\nLaudémus omnes féminam,\nQuæ sanctitátis glória \nUbíque fulget ínclita.\nHæc sancto amóre sáucia,\nDum mundi amórem nóxium\nHorréscit, ad cæléstia\nIter perégit árduum.\nCarnem domans jejúniis,\nDulcíque mentem pábulo\nOratiónis nútriens,\nCæli potítur gáudiis.\nRex Christe, virtus fórtium,\nQui magna solus éfficis,\nHujus precátu, quǽsumus,\nAudi benígnus súpplices.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.",
+   "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C7a": {
+  "ant_laudes": {
+   "eng": "Give her of the fruit of her hands, * and let her own works praise her in the gates.",
+   "lat": "Date ei * de fructu mánuum suárum, et laudent eam in portis ópera ejus.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "",
+   "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Who shall find a valiant woman? Far and from the uttermost coasts is the price of her. The heart of her husband trusteth in her, and he shall have no need of spoils.\n$Deo gratias.",
+   "lat": "Mulíerem fortem quis invéniet? Procul et de últimis fínibus prétium ejus. Confídit in ea cor viri sui, et spóliis non indigébit.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "High let us all our voices raise\nIn that heroic woman's praise\nWhose name, with saintly glory bright,\nShines in the starry realms of light.\nFilled with a pure celestial glow,\nShe spurned all love of things below;\nAnd heedless here on earth to stay,\nClimbed to the skies her toilsome way.\nWith fasts her body she subdued,\nBut filled her soul with prayer's sweet food:\nIn other worlds she tastes the bliss\nFor which she left the joys of this.\nO Christ, the strength of all the strong;\nTo whom our holiest deeds belong!\nThrough her prevailing prayers on high,\nIn mercy hear thy people's cry!\n* To God the Father, with the Son,\nAnd Holy Spirit, Three in One,\nBe glory while the ages flow,\nFrom all above, and all below.\nAmen.",
+   "lat": "Fortem viríli péctore\nLaudémus omnes féminam,\nQuæ sanctitátis glória \nUbíque fulget ínclita.\nHæc sancto amóre sáucia,\nDum mundi amórem nóxium\nHorréscit, ad cæléstia\nIter perégit árduum.\nCarnem domans jejúniis,\nDulcíque mentem pábulo\nOratiónis nútriens,\nCæli potítur gáudiis.\nRex Christe, virtus fórtium,\nQui magna solus éfficis,\nHujus precátu, quǽsumus,\nAudi benígnus súpplices.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "High let us all our voices raise\nIn that heroic woman's praise\nWhose name, with saintly glory bright,\nShines in the starry realms of light.\nFilled with a pure celestial glow,\nShe spurned all love of things below;\nAnd heedless here on earth to stay,\nClimbed to the skies her toilsome way.\nWith fasts her body she subdued,\nBut filled her soul with prayer's sweet food:\nIn other worlds she tastes the bliss\nFor which she left the joys of this.\nO Christ, the strength of all the strong;\nTo whom our holiest deeds belong!\nThrough her prevailing prayers on high,\nIn mercy hear thy people's cry!\n* To God the Father, with the Son,\nAnd Holy Spirit, Three in One,\nBe glory while the ages flow,\nFrom all above, and all below.\nAmen.",
+   "lat": "Fortem viríli péctore\nLaudémus omnes féminam,\nQuæ sanctitátis glória \nUbíque fulget ínclita.\nHæc sancto amóre sáucia,\nDum mundi amórem nóxium\nHorréscit, ad cæléstia\nIter perégit árduum.\nCarnem domans jejúniis,\nDulcíque mentem pábulo\nOratiónis nútriens,\nCæli potítur gáudiis.\nRex Christe, virtus fórtium,\nQui magna solus éfficis,\nHujus precátu, quǽsumus,\nAudi benígnus súpplices.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.",
+   "lat": "V. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C7b": {
+  "ant_laudes": {
+   "eng": "",
+   "lat": "Istárum est enim * regnum cælórum, quæ contempsérunt vitam mundi, et pervenérunt ad prǽmia regni, et lavérunt stolas suas in sánguine Agni.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "For theirs is * the Kingdom of heaven who love not their lives in this world, and have attained unto the reward of the Kingdom, and have washed their robes in the blood of the Lamb.",
+   "lat": "Istárum est enim * regnum cælórum, quæ contempsérunt vitam mundi, et pervenérunt ad prǽmia regni, et lavérunt stolas suas in sánguine Agni.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "I will give glory to thee, O Lord, O King, and I will praise thee, O God my Saviour. I will give glory to thy name: for thou hast been a helper and protector to me, and hast preserved my body from destruction.\n$Deo gratias.",
+   "lat": "Confitébor tibi, Dómine, Rex, et collaudábo te Deum Salvatórem meum. Confitébor nómini tuo: quóniam adjútor et protéctor factus es mihi, et liberásti corpus meum a perditióne.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "High let us all our voices raise\nIn that heroic woman's praise\nWhose name, with saintly glory bright,\nShines in the starry realms of light.\nFilled with a pure celestial glow,\nShe spurned all love of things below;\nAnd heedless here on earth to stay,\nClimbed to the skies her toilsome way.\nWith fasts her body she subdued,\nBut filled her soul with prayer's sweet food:\nIn other worlds she tastes the bliss\nFor which she left the joys of this.\nO Christ, the strength of all the strong;\nTo whom our holiest deeds belong!\nThrough her prevailing prayers on high,\nIn mercy hear thy people's cry!\n* To God the Father, with the Son,\nAnd Holy Spirit, Three in One,\nBe glory while the ages flow,\nFrom all above, and all below.\nAmen.",
+   "lat": "Fortem viríli péctore\nLaudémus omnes féminam,\nQuæ sanctitátis glória \nUbíque fulget ínclita.\nHæc sancto amóre sáucia,\nDum mundi amórem nóxium\nHorréscit, ad cæléstia\nIter perégit árduum.\nCarnem domans jejúniis,\nDulcíque mentem pábulo\nOratiónis nútriens,\nCæli potítur gáudiis.\nRex Christe, virtus fórtium,\nQui magna solus éfficis,\nHujus precátu, quǽsumus,\nAudi benígnus súpplices.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "High let us all our voices raise\nIn that heroic woman's praise\nWhose name, with saintly glory bright,\nShines in the starry realms of light.\nFilled with a pure celestial glow,\nShe spurned all love of things below;\nAnd heedless here on earth to stay,\nClimbed to the skies her toilsome way.\nWith fasts her body she subdued,\nBut filled her soul with prayer's sweet food:\nIn other worlds she tastes the bliss\nFor which she left the joys of this.\nO Christ, the strength of all the strong;\nTo whom our holiest deeds belong!\nThrough her prevailing prayers on high,\nIn mercy hear thy people's cry!\n* To God the Father, with the Son,\nAnd Holy Spirit, Three in One,\nBe glory while the ages flow,\nFrom all above, and all below.\nAmen.",
+   "lat": "Fortem viríli péctore\nLaudémus omnes féminam,\nQuæ sanctitátis glória \nUbíque fulget ínclita.\nHæc sancto amóre sáucia,\nDum mundi amórem nóxium\nHorréscit, ad cæléstia\nIter perégit árduum.\nCarnem domans jejúniis,\nDulcíque mentem pábulo\nOratiónis nútriens,\nCæli potítur gáudiis.\nRex Christe, virtus fórtium,\nQui magna solus éfficis,\nHujus precátu, quǽsumus,\nAudi benígnus súpplices.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum. \nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "",
+   "lat": "V. Glória et honóre coronásti eas, Dómine.\nR. Et constituísti eas super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Thou hast crowned them with glory and honour, O Lord.\nR. And madest them to have dominion over the works of thy hands.",
+   "lat": "V. Glória et honóre coronásti eas, Dómine.\nR. Et constituísti eas super ópera mánuum tuárum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: But he that glorieth, let him glory in the Lord. For not he who commendeth himself, is approved, but he, whom God commendeth.\n$Deo gratias",
+   "lat": "Fratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C8": {
+  "ant_laudes": {
+   "eng": "Zacchaeus, make haste and come down, for today I must abide at thy house. * And he made haste and came down, and received Him joyfully into his house. This day is salvation come from God to this house. Alleluia.",
+   "lat": "Zachǽe, * festínans descénde, quia hódie in domo tua opórtet me manére. At ille festínans descéndit, et suscépit illum gaudens in domum suam. Hódie huic dómui salus a Deo facta est, allelúja.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "The Most High hath hallowed His Tabernacle. * For this is the House of God, whereon His Name shall be called, whereof it is written My Name shall be there, saith the Lord.",
+   "lat": "Sanctificávit Dóminus * tabernáculum suum: quia hæc est domus Dei, in qua invocábitur nomen ejus, de quo scriptum est: Et erit nomen meum ibi, dicit Dóminus.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "I saw the holy city, New Jerusalem, coming down from God out of heaven, prepared as a Bride adorned for her husband.\n$Deo gratias",
+   "lat": "Vidi civitátem sanctam, Jerúsalem novam, descendéntem de cælo a Deo, parátam sicut sponsam ornátam viro suo.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "hymnus_laudes": {
+   "eng": "From highest heaven, the Father's Son,\nDescending like that mystic stone\nCut from a mountain without hands,\nCame down below, and filled all lands;\nUniting, midway in the sky,\nHis house on earth, and house on high.\nThat house on high,  it ever rings\nWith praises of the King of kings;\nForever there, on harps divine,\nThey hymn th' eternal One and Trine;\nWe, here below, the strain prolong,\nAnd faintly echo Sion's song.\nO Lord of lords invisible!\nWith thy pure light this temple fill:\nHither, oft as invoked, descend;\nHere to thy people's prayer attend;\nHere, through all hearts, forevermore,\nthy Spirit's quick'ning graces pour.\nHere may the faithful, day by day,\nTheir hearts' adoring homage pay;\nAnd here receive from thy dear love\nThe blessings of that home above;\nTill loosened from this mortal chain,\nIts everlasting joys they gain.\nTo God the Father, glory due\nBe paid by all the heavenly host;\nAnd to his only Son most true;\nWith thee, O mighty Holy Ghost!\nTo whom, praise, power, and blessing be,\nThrough th' ages of eternity,\nAmen.",
+   "lat": "Alto ex Olýmpi vértice\nSummi Paréntis Fílius,\nCeu monte deséctus lapis\nTerras in imas décidens,\nDomus supérnæ et ínfimæ\nUtrúmque junxit ángulum.\nSed illa sedes cǽlitum\nSemper resúltat láudibus,\nDeúmque trinum et únicum\nJugi canóre prǽdicat: \nIlli canéntes júngimur\nAlmæ Siónis ǽmuli.\nHæc templa, Rex cæléstium,\nImple benígno lúmine:\nHuc, o rogátus, ádveni,\nPlebísque vota súscipe,\nEt nostra corda júgiter\nPerfúnde cæli grátia.\nHic ímpetrent fidélium\nVoces precésque súpplicum\nDomus beátæ múnera,\nPartísque donis gáudeant:\nDonec, solúti córpore,\nSedes beátas ímpleant.\nDecus Parénti débitum\nSit usquequáque Altíssimo,\nNatóque Patris único,\nEt ínclito Paráclito,\nCui laus, potéstas, glória \nÆtérna sit per sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_vespera": {
+   "eng": "Thou heavenly, new Jerusalem,\nVision of peace in prophet's dream!\nWith living stones built up on high,\nAnd rising to yon starry sky;\nIn bridal pomp thy form is crowned,\nWith thousand thousand angels round!\nO bride, betrothed in happy hour,\nThe Father's glory is thy dower;\nThe bridegroom's grace is shed on thee\nThou queen all fair eternally;\nTo Christ allied, thy Prince adored,\nBright shining city of the Lord!\nBehold with pearls they glittering stand\nthy peaceful gates to all expand;\nBy grace and strength divinely shed\nEach mortal thither may be led;\nWho, kindled by Christ's love, will dare\nAll earthly sufferings now to bear.\nBy many a salutary stroke,\nBy many a weary blow that broke,\nOr polished with a workman's skill,\nThe stones that form that glorious pile,\nThey all are fitly framed to lie\nIn their appointed place on high.\nFair and well pleasing in thy sight,\nParent most high, enthroned in light,\nAnd for thine only Son most meet,\nAnd thee, all-glorious Paraclete,\nTo whom praise, power, and glory rise\nForever through the eternal skies.\nAmen.",
+   "lat": "Cæléstis urbs Jerúsalem,\nBeáta pacis vísio,\nQuæ celsa de vivéntibus\nSaxis ad astra tólleris,\nSponsǽque ritu cíngeris\nMille Angelórum míllibus.\nO sorte nupta próspera,\nDotáta Patris glória,\nRespérsa Sponsi grátia,\nRegína formosíssima,\nChristo jugáta Príncipi,\nCæli corúsca cívitas.\nHic margarítis émicant,\nPaténtque cunctis óstia;\nVirtúte namque prǽvia\nMortális illuc dúcitur,\nAmóre Christi pércitus\nTorménta quisquis sústinet.\nScalpri salúbris íctibus\nEt tunsióne plúrima,\nFabri políta málleo\nHanc saxa molem cónstruunt,\nAptísque juncta néxibus\nLocántur in fastígio.\nDecus Parénti débitum\nSit usquequáque Altíssimo,\nNatóque Patris único,\nEt ínclito Paráclito,\nCui laus, potéstas, glória \nÆtérna sit per sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "versum_1": {
+   "eng": "",
+   "lat": "V. Hæc est domus Dómini fírmiter ædificáta. \nR. Bene fundáta est supra firmam petram.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. This is the house of God, stoutly builded.\nR. Well founded upon a sure rock.",
+   "lat": "V. Hæc est domus Dómini fírmiter ædificáta. \nR. Bene fundáta est supra firmam petram.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "I saw the holy city, New Jerusalem, coming down from God out of heaven, prepared as a Bride adorned for her husband.\n$Deo gratias",
+   "lat": "Vidi civitátem sanctam, Jerúsalem novam, descendéntem de cælo a Deo, parátam sicut sponsam ornátam viro suo.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ }
+}
