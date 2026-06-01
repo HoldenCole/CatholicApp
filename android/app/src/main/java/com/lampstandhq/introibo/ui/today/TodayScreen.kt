@@ -46,6 +46,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
+import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
 import com.lampstandhq.introibo.data.liturgical.penanceFor
 import com.lampstandhq.introibo.data.model.MassProper
@@ -583,6 +584,23 @@ private fun PenanceCard(
             modifier = Modifier.padding(top = 4.dp),
         )
 
+        // Next obligation
+        val nextObl = remember(discipline) { nextObligationDay(discipline) }
+        if (nextObl != null) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(top = 8.dp),
+            ) {
+                Text(text = "→", fontSize = 11.sp, color = colors.sanctuaryRed)
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = "Next obligation: $nextObl",
+                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.secondaryText,
+                )
+            }
+        }
+
         // Saint-specific penance
         if (followedSaint != null) {
             val saint = ContentStore.saints.firstOrNull { it.slug == followedSaint }
@@ -944,6 +962,19 @@ private fun ProgressRing(
 // ---------------------------------------------------------------------------
 
 @Composable
+private fun nextObligationDay(discipline: PenanceDiscipline): String? {
+    var d = java.time.LocalDate.now().plusDays(1)
+    val fmt = java.time.format.DateTimeFormatter.ofPattern("EEEE, MMMM d", java.util.Locale.US)
+    repeat(60) {
+        val ctx = LiturgicalContext.forDate(d, discipline)
+        if (ctx.penance.strict || (ctx.isFriday && !ctx.isSunday)) {
+            return "${d.format(fmt)} (${ctx.penance.title})"
+        }
+        d = d.plusDays(1)
+    }
+    return null
+}
+
 private fun SettingsSheet(onDismiss: () -> Unit) {
     // Using a full-screen dialog approach for the settings sheet
     androidx.compose.ui.window.Dialog(

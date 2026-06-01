@@ -25,6 +25,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -358,6 +359,7 @@ private fun DayDetail(
     discipline: PenanceDiscipline = PenanceDiscipline.DISCIPLINE_1962,
     onOpenProper: (String) -> Unit,
 ) {
+    val shareContext = LocalContext.current
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
     val ctx = remember(day.date, discipline) { LiturgicalContext.forDate(day.date, discipline) }
@@ -416,7 +418,29 @@ private fun DayDetail(
             )
         }
 
-        Spacer(Modifier.height(20.dp))
+        // Share button
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
+            horizontalArrangement = Arrangement.End,
+        ) {
+            val eng = day.englishName ?: title
+            val colour = day.colour?.key?.replaceFirstChar { it.uppercase() } ?: ""
+            val shareText = "${LongDateFormatter.format(day.date)}\n$title\n$eng\n$colour · ${ctx.englishName}\n${penance.title} (${discipline.short})"
+            IconButton(onClick = {
+                val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
+                    type = "text/plain"
+                    putExtra(android.content.Intent.EXTRA_TEXT, shareText)
+                }
+                shareContext.startActivity(android.content.Intent.createChooser(intent, "Share"))
+            }) {
+                Icon(
+                    imageVector = Icons.Filled.Share,
+                    contentDescription = "Share",
+                    tint = colors.tertiaryText,
+                    modifier = Modifier.size(18.dp),
+                )
+            }
+        }
 
         day.colour?.let { colour ->
             InfoRow("Liturgical Colour", colour.key.replaceFirstChar { it.uppercase() }, colour)

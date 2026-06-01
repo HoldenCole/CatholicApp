@@ -397,6 +397,20 @@ struct TodayView: View {
                 .padding(.top, 8)
             }
 
+            // Next obligation
+            if let next = nextObligationDay() {
+                HStack(spacing: 6) {
+                    Image(systemName: "arrow.right.circle")
+                        .font(.system(size: 11))
+                        .foregroundStyle(Color.sanctuaryRed)
+                    Text("Next obligation: \(next)")
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+                }
+                .padding(.top, 6)
+            }
+
             // Optional penances
             let selected = OptionalPenances.selected()
             if !selected.isEmpty {
@@ -649,6 +663,26 @@ struct TodayView: View {
         f.dateStyle = .medium
         return f
     }()
+
+    // MARK: - Next obligation
+
+    private func nextObligationDay() -> String? {
+        let cal = Calendar.liturgical
+        var d = Date().addingDays(1)
+        for _ in 0..<60 {
+            let c = LiturgicalContext.for(date: d, rite: rite, discipline: discipline)
+            if c.penance.strict || (c.isFriday && !c.isSunday) {
+                let df = DateFormatter()
+                df.locale = Locale(identifier: "en_US_POSIX")
+                df.dateFormat = "EEEE, MMMM d"
+                let label = df.string(from: d)
+                let kind = c.penance.title
+                return "\(label) (\(kind))"
+            }
+            d = d.addingDays(1)
+        }
+        return nil
+    }
 
     // MARK: - Helpers
 

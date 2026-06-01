@@ -441,10 +441,24 @@ private struct DayDetailView: View {
         .background(Color.pageBackground.ignoresSafeArea())
     }
 
+    private var shareText: String {
+        let eng = day.englishName ?? title
+        let colour = day.colour?.rawValue.capitalized ?? ""
+        let season = ctx.englishName
+        let penance = ctx.penance.title
+        let disc = discipline.short
+        return "\(LongDateFormatter.format(day.date))\n\(title)\n\(eng)\n\(colour) · \(season)\n\(penance) (\(disc))"
+    }
+
     private var header: some View {
         VStack(spacing: 8) {
             HStack {
                 Spacer()
+                ShareLink(item: shareText) {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.system(size: 14))
+                        .foregroundStyle(Color.goldLeaf)
+                }
                 Button { dismiss() } label: {
                     Image(systemName: "xmark")
                         .font(.system(size: 15, weight: .medium))
