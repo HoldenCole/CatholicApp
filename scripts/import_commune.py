@@ -73,13 +73,25 @@ def extract_saint_commune():
         if not m0:
             continue
         key = m0.group(1)
+        secs = IDO.parse_do_file(SANCTI_LAT / fn)
         text = (SANCTI_LAT / fn).read_text(encoding="utf-8", errors="replace")
-        m = re.search(r"vide\s+(C\d+[a-z]*(?:-\d+)?)", text)
-        if not m:
-            # `@Commune/C1` (but not `@CommuneCist/...`) at line start.
-            m = re.search(r"(?m)^@Commune/(C\d+[a-z]*(?:-\d+)?)\b", text)
+
+        code = None
+        # 1. The Office common is declared at the top of the [Rule] section as
+        #    "ex CXX" or "vide CXX".
+        rule = "\n".join(secs.get("Rule", []))
+        m = re.search(r"\b(?:ex|vide)\s+(C\d+[a-z]*(?:-\d+)?)\b", rule)
         if m:
-            out[key] = m.group(1)
+            code = m.group(1)
+        # 2. Fallbacks: a `vide CXX` anywhere, then a top-level `@Commune/CXX`.
+        if not code:
+            m = re.search(r"vide\s+(C\d+[a-z]*(?:-\d+)?)", text)
+            code = m.group(1) if m else None
+        if not code:
+            m = re.search(r"(?m)^@Commune/(C\d+[a-z]*(?:-\d+)?)\b", text)
+            code = m.group(1) if m else None
+        if code:
+            out[key] = code
     return out
 
 
