@@ -447,7 +447,6 @@ struct MissalView: View {
             s += "└─────\n\n"
         }
 
-        var lines: [String] = [] // kept only for return compatibility below
 
         if let p = proper {
             // Psalm 42 omitted in Passiontide and Requiem Masses

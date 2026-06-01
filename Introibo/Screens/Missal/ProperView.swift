@@ -11,7 +11,6 @@ struct ProperView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @State private var showShareSheet = false
     @State private var pdfURL: URL?
-    @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private func sectionLabel(_ latin: String, _ english: String) -> String {
         switch mode {
