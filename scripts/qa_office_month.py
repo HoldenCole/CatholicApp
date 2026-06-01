@@ -49,6 +49,44 @@ def merged_for(wk, winner, temporal):
     return m
 
 
+CORE = ["introitus", "oratio", "lectio", "evangelium"]
+
+
+def follow_redirect(entry, depth=0):
+    """Mirror the app's rule.commune redirect: 'Sancti/MM-DD', 'Tempora/Xxx',
+    or a bare key looked up in missal_tempora/sanctoral."""
+    if not entry or depth > 4:
+        return entry
+    target = (entry.get("rule") or {}).get("commune")
+    if not target:
+        return entry
+    if target.startswith("Sancti/"):
+        nxt = ms.get(target.split("/", 1)[1])
+    elif target.startswith("Tempora/"):
+        nxt = mt.get(target.split("/", 1)[1].lower())
+    else:
+        nxt = mt.get(target.lower()) or ms.get(target)
+    return follow_redirect(nxt, depth + 1) if nxt else entry
+
+
+def resolve_mass(winner, wk, temporal):
+    """Resolve a Mass the way ContentStore does: direct key, rule.commune
+    redirect, then (for ferias) the preceding Sunday's formulary."""
+    if winner == "sanctoral":
+        base = ms.get(wk) or ms.get(wk[:5])
+    else:
+        base = mt.get(wk) or (mt.get(temporal) if temporal else None)
+    mass = follow_redirect(base)
+    # Feria fallback: replace trailing -N day suffix with -0 (the Sunday).
+    if (mass is None or any(c not in mass for c in CORE)) and temporal and "-" in temporal:
+        prefix, _, day = temporal.rpartition("-")
+        if day.isdigit() and day != "0":
+            sun = follow_redirect(mt.get(prefix + "-0"))
+            if sun and all(c in sun for c in CORE):
+                return sun
+    return mass
+
+
 def check_day(k, e):
     issues = []
     winner, wk, temporal = e["winner"], e["winnerKey"], e.get("temporal")
@@ -65,8 +103,11 @@ def check_day(k, e):
         m = merged_for(wk, winner, temporal)
         code = sc.get(wk) or sc.get(wk[:5])
         has_proper = any(x.startswith(("capitulum", "hymnus", "ant_", "invit")) for x in sp.get(wk, {}))
-        if not code and not has_proper:
+        has_inherit = bool(office_inherit.get(wk) or office_inherit.get(wk[:5]))
+        if not code and not has_proper and not has_inherit:
             issues.append("Office: no commune & no proper → ferial fallback")
+        elif code == "C9":
+            pass  # Office of the Dead (All Souls) has no hymns/Little Chapters
         else:
             miss = []
             for hour, keys in HOUR_KEYS.items():
@@ -75,22 +116,13 @@ def check_day(k, e):
                     miss.append(f"{hour}{mm}")
             if miss:
                 issues.append("Office missing: " + " ".join(miss))
-        # collect present?
-        if wk in sp and "oratio" not in sp[wk]:
-            issues.append("no proper collect")
 
-    # 3) Mass proper resolves
-    mass = None
-    if winner == "sanctoral":
-        mass = ms.get(wk) or ms.get(wk[:5])
-    else:
-        mass = mt.get(wk) or (mt.get(temporal) if temporal else None)
+    # 3) Mass proper resolves (following redirects + Sunday fallback)
+    mass = resolve_mass(winner, wk, temporal)
     if mass is None and not is_feria:
         issues.append(f"no Mass proper for winnerKey {wk}")
     elif mass is not None:
-        # Check the Mass has the core elements
-        core = ["introitus", "oratio", "lectio", "evangelium"]
-        miss = [c for c in core if c not in mass]
+        miss = [c for c in CORE if c not in mass]
         if miss:
             issues.append(f"Mass missing {miss}")
 

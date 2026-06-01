@@ -143,6 +143,29 @@ def extract_office_inherit():
     return out
 
 
+def extract_office_vide():
+    """feast-key -> source feast-key, for feasts whose Office *is* another
+    feast's entirely (`vide Sancti/MM-DD`): the translated Ss Philip & James
+    (05-11 → 05-01), the Four Crowned Martyrs (11-08 → 11-01), the Octave of
+    the Immaculate Conception (12-15 → 12-08). DO ships these with an empty or
+    stub Office file and resolves the date to the source feast. Unlike the
+    partial `ex Sancti` borrow, the target carries no Office of its own, so it
+    must also inherit the source's *commune* (the structural Little Chapter /
+    Hymn) — handled in main()."""
+    out = {}
+    for fn in sorted(os.listdir(SANCTI_LAT)):
+        m0 = re.match(r"(\d{2}-\d{2}[a-z0-9]*)\.txt$", fn)
+        if not m0:
+            continue
+        key = m0.group(1)
+        secs = IDO.parse_do_file(SANCTI_LAT / fn)
+        rule = "\n".join(secs.get("Rule", []))
+        m = re.search(r"\bvide\s+Sancti/(\d{2}-\d{2}[a-z0-9]*)", rule)
+        if m and m.group(1) != key:
+            out[key] = m.group(1)
+    return out
+
+
 def build_commune(code, _seen=None):
     """Resolve one commune code's Office parts (Latin + English), merging the
     inherited parent commune as a base when the file declares `@Commune/CX`."""
@@ -226,6 +249,22 @@ def main():
         return any(k.startswith(("capitulum", "hymnus", "ant_", "invit", "versum"))
                    for k in sp.get(key, {}))
     office_inherit = {t: s for t, s in extract_office_inherit().items() if has_office(s)}
+
+    # Whole-Office borrows (`vide Sancti/XX`): the target has no Office of its
+    # own, so inherit both the source's proper parts AND its commune (for the
+    # structural Little Chapter/Hymn the proper doesn't carry).
+    vide = extract_office_vide()
+    # Translated feasts whose horas file DO ships *empty* (the calendar engine
+    # redirects the date, so `vide Sancti/...` lives only in the Mass file):
+    # the 1962 translation of Ss Philip & James to 05-11, May 1 having become
+    # St Joseph the Worker. Its Office is that of 05-01.
+    vide.setdefault("05-11", "05-01")
+    for t, s in vide.items():
+        if not has_office(s):
+            continue
+        office_inherit.setdefault(t, s)
+        if t not in saint_commune and s in saint_commune:
+            saint_commune[t] = saint_commune[s]
 
     for out_dir in (OUT_IOS, OUT_ANDROID):
         (out_dir / "commune_office.json").write_text(
