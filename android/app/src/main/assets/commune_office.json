@@ -103,6 +103,110 @@
    "variationKey": "vesperae.capitulum"
   }
  },
+ "C10": {
+  "ant_laudes": {
+   "eng": "",
+   "lat": "Beáta Dei Génetrix, María, * Virgo perpétua, templum Dómini, sacrárium Spíritus Sancti, sola sine exémplo placuísti Dómino nostro Jesu Christo: ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "",
+   "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "",
+   "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "capitulum_nona": {
+   "eng": "",
+   "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_nona"
+  },
+  "capitulum_sexta": {
+   "eng": "",
+   "lat": "Et sic in Sion firmáta sum, et in civitáte sanctificáta simíliter requiévi, et in Jerúsalem potéstas mea. Et radicávi in pópulo honorificáto, et in parte Dei mei heréditas illíus, et in plenitúdine sanctórum deténtio mea.\n$Deo gratias.",
+   "type": "capitulum",
+   "variationKey": "capitulum_sexta"
+  },
+  "hymnus_laudes": {
+   "eng": "",
+   "lat": "O gloriósa vírginum,\nSublímis inter sídera,\nQui te creávit, párvulum\nLacténte nutris úbere.\nQuod Heva tristis ábstulit,\nTu reddis almo gérmine:\nIntrent ut astra flébiles,\nCæli reclúdis cárdines.\nTu Regis alti jánua\nEt aula lucis fúlgida:\nVitam datam per Vírginem,\nGentes redémptæ, pláudite.\n* Jesu tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_matutinum": {
+   "eng": "",
+   "lat": "Quem terra, pontus, sídera\nColunt, adórant, prædicant,\nTrinam regéntem máchinam,\nClaustrum Maríæ bájulat.\nCui luna, sol, et ómnia\nDesérviunt per témpora,\nPerfúsa cæli grátia,\nGestant puéllæ víscera.\nBeáta Mater múnere,\nCujus supérnus ártifex\nMundum pugíllo cóntinens,\nVentris sub arca clausus est.\nBeáta cæli núntio,\nFœcúnda sancto Spíritu,\nDesiderátus géntibus,\nCujus per alvum fusus est.\n* Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_matutinum"
+  },
+  "hymnus_vespera": {
+   "eng": "",
+   "lat": "/:Prima stropha sequentis hymni dicitur flexis genibus.:/\nAve maris stella,\nDei Mater alma,\nAtque semper Virgo,\nFelix cæli porta.\nSumens illud Ave\nGabriélis ore,\nFunda nos in pace,\nMutans Hevæ nomen.\nSolve vincla reis,\nProfer lumen cæcis,\nMala nostra pelle,\nBona cuncta posce.\nMonstra te esse matrem,\nSumat per te preces,\nQui pro nobis natus,\nTulit esse tuus.\nVirgo singuláris,\nInter omnes mitis,\nNos culpis solútos\nMites fac et castos.\nVitam præsta puram,\nIter para tutum,\nUt vidéntes Jesum,\nSemper collætémur.\nSit laus Deo Patri,\nSummo Christo decus,\nSpirítui Sancto,\nTribus honor unus.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "invit": {
+   "eng": "Hail Mary, full of grace, * The Lord is with thee.",
+   "lat": "Ave María, grátia plena, * Dóminus tecum.",
+   "type": "antiphon",
+   "variationKey": "invit"
+  },
+  "lectio_prima": {
+   "eng": "",
+   "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.",
+   "type": "reading",
+   "variationKey": "lectio_prima"
+  },
+  "responsory_breve_nona": {
+   "eng": "",
+   "lat": "R.br. Elégit eam Deus, * Et præelégit eam.\nR. Elégit eam Deus, * Et præelégit eam.\nV. In tabernáculo suo habitáre facit eam.\nR. Et præelégit eam.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Elégit eam Deus, * Et præelégit eam.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_nona"
+  },
+  "responsory_breve_sexta": {
+   "eng": "",
+   "lat": "R.br. Adjuvábit eam * Deus vultu suo.\nR. Adjuvábit eam * Deus vultu suo.\nV. Deus in médio ejus, non commovébitur.\nR. Deus vultu suo.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Adjuvábit eam * Deus vultu suo.\n\n[Responsory Breve Sexta] (tempore paschali)\nR.br. Adjuvábit eam Deus vultu suo, * Allelúja, allelúja.\nR. Adjuvábit eam Deus vultu suo, * Allelúja, allelúja.\nV. Deus in médio ejus, non commovébitur.\nR. Allelúja, allelúja.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Adjuvábit eam Deus vultu suo, * Allelúja, allelúja.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_sexta"
+  },
+  "responsory_breve_tertia": {
+   "eng": "",
+   "lat": "R.br. Spécie tua * Et pulchritúdine tua.\nR. Spécie tua * Et pulchritúdine tua.\nV. Inténde, próspere procéde, et regna.\nR. Et pulchritúdine tua.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Spécie tua * Et pulchritúdine tua.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_tertia"
+  },
+  "tertia.capitulum": {
+   "eng": "",
+   "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
+   "type": "capitulum",
+   "variationKey": "tertia.capitulum"
+  },
+  "versum_1": {
+   "eng": "V. Blessed art thou amongst women,\nR. And blessed is the fruit of thy womb.",
+   "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "",
+   "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "",
+   "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
  "C11": {
   "ant_laudes": {
    "eng": "O Mary * blessed art thou that didst believe! for there shall be a performance of those things which were told thee from the Lord. Alleluia.",
@@ -203,6 +307,172 @@
   "vesperae.capitulum": {
    "eng": "From the beginning, and before the world, was I created, and unto the world to come I shall not cease to be, and in the holy dwelling place I have ministered before him.\n$Deo gratias.",
    "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C12": {
+  "ant_laudes": {
+   "eng": "",
+   "lat": "Beáta Dei Génetrix, María, * Virgo perpétua, templum Dómini, sacrárium Spíritus Sancti, sola sine exémplo placuísti Dómino nostro Jesu Christo: ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "",
+   "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "The daughters of Zion saw her, and called her blessed; the queens also, and they praised her.\n$Deo gratias",
+   "lat": "Vidérunt eam fíliæ Sion, et beatíssimam prædicavérunt et regínæ laudavérunt eam.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "capitulum_nona": {
+   "eng": "",
+   "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_nona"
+  },
+  "capitulum_sexta": {
+   "eng": "",
+   "lat": "$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_sexta"
+  },
+  "invit": {
+   "eng": "",
+   "lat": "Ave María, grátia plena, * Dóminus tecum.",
+   "type": "antiphon",
+   "variationKey": "invit"
+  },
+  "tertia.capitulum": {
+   "eng": "The daughters of Zion saw her, and called her blessed; the queens also, and they praised her.\n$Deo gratias",
+   "lat": "Vidérunt eam fíliæ Sion, et beatíssimam prædicavérunt et regínæ laudavérunt eam.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "tertia.capitulum"
+  },
+  "versum_1": {
+   "eng": "",
+   "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "",
+   "lat": "Commune Unius Virginis et Martyris\nLoquebar\nPsalmi Dominica\nAntiphonas horas\nHæc est Virgo sápiens, * et una de número prudéntum.;;109\nHæc est Virgo sápiens, * quam Dóminus vigilántem invénit.;;112\nHæc est quæ nescívit * torum in delícto: habébit fructum in respectióne animárum sanctárum.;;121\nVeni, elécta mea, * et ponam in te thronum meum, allelúja.;;126\nIsta est speciósa * inter fílias Jerúsalem.;;147\nv. Jesu, coróna Vírginum,\nQuem Mater illa cóncipit\nQuæ sola Virgo párturit,\nHæc vota clemens áccipe:\nQui pergis inter lília\nSeptus choréis Vírginum,\nSponsus decórus glória\nSponsísque reddens prǽmia.\nQuocúmque tendis, Vírgines\nSequúntur, atque láudibus\nPost te canéntes cúrsitant,\nHymnósque dulces pérsonant;\nTe deprecámur súpplices,\nNostris ut addas sénsibus\nNescíre prorsus ómnia\nCorruptiónis vúlnera.\n* Virtus, honor, laus, glória\nDeo Patri cum Fílio,\nSancto simul Paráclito,\nIn sæculórum sǽcula.\nAmen.\n@:Hymnus Vespera:s/pergis/pascis/ s/tendis/pergis/ s/súpplices/lárgius/ s/ut addas/adáuge/ s/Virtus, honor, laus/Laus, honor, virtus/ s/cum/et/\nV. Spécie tua et pulchritúdine tua.\nR. Inténde, próspere procéde, et regna.\nVeni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.\nDeus, qui inter cétera poténtiæ tuæ mirácula étiam in sexu frágili victóriam martýrii contulísti: concéde propítius; ut, qui beátæ N. Vírginis et Mártyris tuæ natalícia cólimus, per ejus ad te exémpla gradiámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.\nRegem Vírginum Dóminum, * Veníte, adorémus.\nv. Vírginis Proles Opiféxque Matris,\nVirgo quem gessit, peperítque Virgo:\nVírginis partos cánimus decóra\nMorte triúmphos.\nHæc enim palmæ dúplicis beáta\nSorte, dum gestit frágilem domáre\nCórporis sexum, dómuit cruéntum\nCæde tyránnum.\nUnde nec mortem, nec amíca mortis\nMille pœnárum génera expavéscens,\nSánguine effúso méruit serénum\nScándere cælum.\nHujus orátu, Deus alme, nobis\nDébitas pœnas scélerum remítte;\nUt tibi puro resonémus almum\nPéctore carmen.\nSit decus Patri, genitǽque Proli,\nEt tibi, compar utriúsque virtus,\nSpíritus semper, Deus unus, omni\nTémporis ævo.\nAmen.\nVírginis Proles, Opiféxque Matris,\nVirgo quem gessit, peperítque Virgo:\nVírginis festum cánimus trophǽum\nAccipe votum.\nHæc tua Virgo dúplici beáta\nSorte, dum gestit frágilem domáre\nCórporis sexum, dómuit cruéntum\nCorpóre sæclum.\nUnde nec mortem, nec amíca mortis\nSæva pœnárum génera pavéscens,\nSánguine fuso méruit sacrátum\nScándere cælum.\nHujus obténtu, Deus alme, nostris\nParce jam culpis, vítia remíttens,\nQuo tibi puri resonémus almum\nPéctoris hymnum.\nGlória Patri genitǽque Proli,\nEt tibi compar utriúsque semper\nSpíritus alme, Deus unus, omni\nTémpore sæcli.\nAmen.\nO quam pulchra * est casta generátio cum claritáte!;;8\nAnte torum * hujus Vírginis frequentáte nobis dúlcia cántica drámatis.;;18\nRevértere, * revértere, Sunamítis; revértere, ut intueámur te.;;23\nSpécie tua * et pulchritúdine tua inténde, próspere procéde, et regna.;;44\nAdjuvábit eam * Deus vultu suo: Deus in médio ejus, non commovébitur.;;45\nAquæ multæ * non potuérunt exstínguere caritátem.;;47\nNigra sum, * sed formósa, fíliæ Jerúsalem; ídeo diléxit me Rex, et introdúxit me in cubículum suum.;;95\nTrahe me post te, * in odórem currémus unguentórum tuórum: óleum effúsum nomen tuum.;;96\nVeni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.;;97\nV. Adjuvábit eam Deus vultu suo.\nR. Deus in médio ejus, non commovébitur.\nV. Elégit eam Deus, et præelégit eam.\nR. In tabernáculo suo habitáre facit eam.\nDe Epístola prima beáti Pauli Apóstoli ad Corínthios\n25 De virgínibus præcéptum Dómini non hábeo: consílium autem do, tamquam misericórdiam consecútus a Dómino, ut sim fidélis.\n26 Exístimo ergo hoc bonum esse propter instántem necessitátem, quóniam bonum est hómini sic esse.\n27 Alligátus es uxóri? noli quǽrere solutiónem. Solútus es ab uxóre? noli quǽrere uxórem.\n28 Si autem accéperis uxórem, non peccásti. Et si núpserit virgo, non peccávit. Tribulatiónem tamen carnis habébunt hujúsmodi. Ego autem vobis parco.\n29 Hoc ítaque dico, fratres: Tempus breve est: réliquum est, ut et qui habent uxóres, tamquam non habéntes sint;\n30 et qui flent, tamquam non flentes; et qui gaudent, tamquam non gaudéntes; et qui emunt, tamquam non possidéntes;\n31 et qui utúntur hoc mundo, tamquam non utántur; prǽterit enim figúra hujus mundi.\nR. Veni Sponsa Christi, áccipe corónam, quam tibi Dóminus præparávit in ætérnum; pro cujus amóre sánguinem tuum fudísti,\n* Et cum Ángelis in paradísum introísti.\nV. Veni, elécta mea, et ponam in te thronum meum; quia concupívit Rex spéciem tuam.\nR. Et cum Ángelis in paradísum introísti.\n32 Volo autem vos sine sollicitúdine esse. Qui sine uxóre est, sollícitus est quæ Dómini sunt, quómodo pláceat Deo.\n33 Qui autem cum uxóre est, sollícitus est quæ sunt mundi, quómodo pláceat uxóri; et divísus est.\n34 Et múlier innúpta et virgo cógitat quæ Dómini sunt, ut sit sancta córpore et spíritu. Quæ autem nupta est, cógitat quæ sunt mundi, quómodo pláceat viro.\n35 Porro hoc ad utilitátem vestram dico, non ut láqueum vobis iníciam, sed ad id, quod honéstum est, et quod facultátem prǽbeat sine impediménto Dóminum obsecrándi.\nR. Diffúsa est grátia in lábiis tuis,\n* Proptérea benedíxit te Deus in ætérnum.\nV. Spécie tua et pulchritúdine tua inténde, próspere procéde, et regna.\nR. Proptérea benedíxit te Deus in ætérnum.\n36 Si quis autem turpem se vidéri exístimat super vírgine sua, quod sit superadúlta, et ita opórtet fíeri; quod vult fáciat: non peccat, si nubat.\n37 Nam, qui státuit in corde suo firmus, non habens necessitátem, potestátem autem habens suæ voluntátis, et hoc judicávit in corde suo, serváre vírginem suam, bene facit.\n38 Ígitur et qui matrimónio jungit vírginem suam, bene facit; et qui non jungit, mélius facit.\n39 Múlier alligáta est legi quanto témpore, vir ejus vivit. Quod, si dormíerit vir ejus, liberáta est; cui vult nubat, tantum in Dómino.\n40 Beátior autem erit, si sic permánserit, secúndum meum consílium; puto autem quod et ego Spíritum Dei hábeam.\nR. Spécie tua et pulchritúdine tua\n* Inténde, próspere procéde, et regna.\nV. Diffúsa est grátia in lábiis tuis, proptérea benedíxit te Deus in ætérnum.\nR. Inténde, próspere procéde, et regna.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Inténde, próspere procéde, et regna.\nSermo sancti Ambrósii Epíscopi\nQuóniam hódie natális est Vírginis, invítat nunc integritátis amor, ut áliquid de virginitáte dicámus; ne, véluti tránsitu quodam præstrícta videátur, quæ principális est virtus. Non enim ídeo laudábilis virgínitas, quia in Martýribus reperítur; sed quia ipsa Mártyres fáciat. Quis autem humáno eam possit ingénio comprehéndere, quam nec natúra suis inclúsit légibus? aut quis naturáli voce complécti, quod supra usum natúræ sit? E cælo accersívit quod imitarétur in terris. Nec immérito vivéndi sibi usum quæsívit e cælo, quæ Sponsum sibi invénit in cælo.\nR. Propter veritátem, et mansuetúdinem, et justítiam:\n* Et dedúcet te mirabíliter déxtera tua.\nV. Spécie tua et pulchritúdine tua inténde, próspere procéde, et regna.\nR. Et dedúcet te mirabíliter déxtera tua.\nHæc nubes, áëra, Ángelos, sidéraque transgrédiens, Verbum Dei in ipso sinu Patris invénit, et toto hausit péctore. Nam quis tantum, cum invénerit, relínquat boni? Unguéntum enim exinanítum est nomen tuum; proptérea adolescéntulæ dilexérunt te, et attraxérunt te. Postrémo, non meum est illud quóniam, Quæ non nubunt neque nubéntur, erunt sicut Ángeli Dei in cælo. Nemo ergo mirétur, si Ángelis comparéntur, quæ Angelórum Dómino copulántur.\nR. Dilexísti justítiam, et odísti iniquitátem:\n* Proptérea unxit te Deus, Deus tuus, óleo lætítiæ.\nV. Propter veritátem, et mansuetúdinem, et justítiam.\nR. Proptérea unxit te Deus, Deus tuus, óleo lætítiæ.\nQuis ígitur neget hanc vitam fluxísse de cælo, quam non fácile invenímus in terris, nisi postquam Deus in hæc terréni córporis membra descéndit? Tunc in útero Virgo concépit, et Verbum caro factum est, ut caro fíeret Deus. Dicet áliquis: Sed étiam Elías nullíus corpórei cóitus fuísse permíxtus cupiditátibus invenítur. Ideo ergo curru raptus ad cælum; ídeo cum Dómino appáret in glória; ídeo Domínici ventúrus est præcúrsor advéntus.\nR. Afferéntur Regi vírgines post eam, próximæ ejus;\n* Afferéntur tibi in lætítia et exsultatióne.\nV. Spécie tua et pulchritúdine tua; inténde, próspere procéde, et regna.\nR. Afferéntur tibi in lætítia et exsultatióne.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Afferéntur tibi in lætítia et exsultatióne.\nLéctio sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile erit regnum cælórum decem virgínibus, quæ, accipiéntes lámpades suas, exiérunt óbviam sponso et sponsæ. Et réliqua.\nHomilía sancti Gregórii Papæ\nSæpe vos, fratres caríssimi, admóneo prava ópera fúgere, mundi hujus inquinaménta devitáre, sed hodiérna sancti Evangélii lectióne compéllor dícere, ut, et bona, quæ ágitis, cum magna cautéla teneátis; ne per hoc, quod a vobis rectum géritur, favor aut grátia humána requirátur; ne appetítus laudis subrépat, et, quod foris osténditur, intus a mercéde vacuétur. Ecce enim Redemptóris voce decem vírgines, et omnes dicúntur vírgines, et tamen intra beatitúdinis jánuam non omnes sunt recéptæ; quia eárum quædam, dum de virginitáte sua glóriam foris éxpetunt, in vasis suis óleum habére noluérunt.\nR. Hæc est Virgo sápiens, quam Dóminus vigilántem invénit, quæ accéptis lampádibus sumpsit secum óleum:\n* Et veniénte Dómino, introívit cum eo ad núptias.\nV. Média nocte clamor factus est: Ecce sponsus venit, exíte óbviam ei.\nR. Et veniénte Dómino, introívit cum eo ad núptias.\nSed prius quæréndum nobis est quid sit regnum cælórum, aut cur decem virgínibus comparétur, quæ étiam vírgines prudéntes et fátuæ dicántur. Dum enim cælórum regnum constat quia reprobórum nullus ingréditur, étiam fátuis virgínibus cur símile esse perhibétur? Sed sciéndum nobis est quod sæpe in sacro elóquio regnum cælórum præséntis témporis Ecclésia dícitur. De quo álio in loco Dóminus dicit: Mittet Fílius hóminis Ángelos suos, et cólligent de regno ejus ómnia scándala. Neque enim in illo regno beatitúdinis, in quo pax summa est, inveníri scándala póterunt, quæ colligántur.\nR. Média nocte clamor factus est:\n* Ecce sponsus venit, exíte óbviam ei.\nV. Prudéntes vírgines, aptáte vestras lámpades.\nR. Ecce sponsus venit, exíte óbviam ei.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ecce sponsus venit, exíte óbviam ei.\nIn quinque autem córporis sénsibus unusquísque subsístit; geminátus autem quinárius denárium pérficit. Et, quia ex utróque sexu fidélium multitúdo collígitur, sancta Ecclésia decem virgínibus símilis esse denuntiátur. In qua quia mali cum bonis et réprobi cum eléctis admíxti sunt, recte símilis virgínibus prudéntibus et fátuis esse perhibétur. Sunt namque pleríque continéntes, qui ab appetítu se exterióri custódiunt et spe ad interióra rapiúntur, carnem mácerant, et toto desidério ad supérnam pátriam anhélant, ætérna prǽmia éxpetunt, pro labóribus suis recípere laudes humánas nolunt. Hi nimírum glóriam suam non in ore hóminum ponunt, sed intra consciéntiam cóntegunt. Et sunt pleríque, qui corpus per abstinéntiam afflígunt, sed de ipsa sua abstinéntia humános favóres éxpetunt.\nV. Ora pro nobis, beáta N..\nR. Ut digni efficiámur promissiónibus Christi.\n@:Ant Vespera: s/;;.*//g\nFratres: Qui gloriátur, in Dómino gloriétur. Non enim qui seípsum comméndat, ille probátus est; sed quem Deus comméndat.\n$Deo gratias\n@Commune/C6:Hymnus Vespera\n@Commune/C6:HymnusM Vespera\nV. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.\nSímile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.\nDómine, Deus meus, exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum. Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum sine adjutório.\nR.br. Spécie tua * Et pulchritúdine tua.\nR. Spécie tua * Et pulchritúdine tua.\nV. Inténde, próspere procéde, et regna.\nR. Et pulchritúdine tua.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Spécie tua * Et pulchritúdine tua.\nÆmulor enim vos Dei æmulatióne. Despóndi enim vos uni viro vírginem castam exhibére Christo.\n$Deo gratias\nR.br. Adjuvábit eam * Deus vultu suo.\nR. Adjuvábit eam * Deus vultu suo.\nV. Deus in médio ejus, non commovébitur.\nR. Deus vultu suo.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Adjuvábit eam * Deus vultu suo.\n\n[Responsory Breve Sexta] (tempore paschali)\nR.br. Adjuvábit eam Deus vultu suo, * Allelúja, allelúja.\nR. Adjuvábit eam Deus vultu suo, * Allelúja, allelúja.\nV. Deus in médio ejus, non commovébitur.\nR. Allelúja, allelúja.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Adjuvábit eam Deus vultu suo, * Allelúja, allelúja.\n@:Lectio Prima\n$Deo gratias\nR.br. Elégit eam Deus, * Et præelégit eam.\nR. Elégit eam Deus, * Et præelégit eam.\nV. In tabernáculo suo habitáre facit eam.\nR. Et præelégit eam.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Elégit eam Deus, * Et præelégit eam.\n@:Versum 2\n@:Ant 1\nDe libro Ecclesiástici\n1 Confitébor tibi, Dómine, Rex, et collaudábo te Deum Salvatórem meum.\n2 Confitébor nómini tuo: quóniam adjútor et protéctor factus es mihi,\n3 et liberásti corpus meum a perditióne, a láqueo linguæ iníquæ et a lábiis operántium mendácium, et in conspéctu astántium factus es mihi adjútor.\n4 Et liberásti me secúndum multitúdinem misericórdiæ nóminis tui a rugiéntibus, præparátis ad escam:\n5 de mánibus quæréntium ánimam meam, et de portis tribulatiónum, quæ circumdedérunt me;\n6 a pressúra flammæ, quæ circúmdedit me, et in médio ignis non sum æstuáta;\n7 de altitúdine ventris ínferi, et a lingua coinquináta, et a verbo mendácii, a rege iníquo, et a lingua injústa.\n8 Laudábit usque ad mortem ánima mea Dóminum,\n9 et vita mea appropínquans erat in inférno deórsum.\n10 Circumdedérunt me úndique, et non erat qui adjuváret. Respíciens eram ad adjutórium hóminum, et non erat.\n11 Memoráta sum misericórdiæ tuæ, Dómine, et operatiónis tuæ, quæ a sǽculo sunt:\n12 quóniam éruis sustinéntes te, Dómine, et líberas eos de mánibus géntium.\n13 Exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum.\n14 Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum, sine adjutório.\n15 Laudábo nomen tuum assídue, et collaudábo illud in confessióne, et exaudíta est orátio mea.\n16 Et liberásti me de perditióne, et eripuísti me de témpore iníquo.\n17 Proptérea confitébor, et laudem dicam tibi, et benedícam nómini Dómini.\nEx libro S. Cypriáni, Epíscopi et Mártyris, de disciplína et hábitu Vírginum\nNunc nobis ad vírgines sermo est, quarum quo sublímior glória est, major et cura est. Flos est ille ecclesiástici gérminis, decus atque ornaméntum grátiæ spiritális, læta índoles, laudis et honóris opus íntegrum atque incorrúptum, Dei imágo respóndens ad sanctimóniam Dómini, illústrior pórtio gregis Christi. Gaudet per illas atque in illis lárgiter floret Ecclésiæ matris gloriósa fœcúnditas: quantóque plus copiósa virgínitas número suo addit, tanto plus gáudium matris augéscit. Ad has lóquimur, has adhortámur affectióne pótius quam potestáte: non quod, extrémi et mínimi et humilitátis nostræ ádmodum cónscii, áliquid ad censúram licéntiæ vindicémus; sed quod ad sollicitúdinem magis cauti, plus de diáboli infestatióne timeámus.\nNeque enim inánis hæc cáutio est, et vana formído, quæ ad salútis viam cónsulit, quæ domínica et vitália præcépta custódit, ut quæ se Christo dicáverint, et a carnáli concupiscéntia recedéntes tam carne, quam mente se Deo vóverint, consúmment opus suum magno prǽmio destinátum, nec ornári jam, aut placére cuíquam, nisi Dómino suo, stúdeant, a quo et mercédem virginitátis expéctant, dicénte ipso: Non omnes cápiunt verbum, sed illi quibus datum est. Sunt enim spadónes, qui ex útero matris sic nati sunt: et sunt spadónes, qui coácti sunt ab homínibus; et sunt spadónes, qui seípsos castravérunt propter regnum cœlórum. \nDénuo quoque per hanc Angeli vocem continéntiæ munus osténditur, virgínitas prædicátur. Hi sunt, qui cum muliéribus se non coinquinavérunt: vírgines enim permansérunt: hi sunt qui sequúntur Agnum quocúmque íerit. Neque enim tantum másculis continéntiæ grátiam Dóminus repromíttit, et féminas prǽterit: sed quóniam fémina viri pórtio est, et ex eo sumpta atque formáta est, in Scriptúris fere ómnibus ad protoplástum Deus lóquitur, quia sunt duo in carne una, et in másculo simul significátur et fémina. Quod si Christum continéntia séquitur, et regno Dei virgínitas destinátur: quid est illis cum terréno cultu, et cum ornaméntis, quibus dum homínibus placére géstiunt, Deum offéndunt?\n@Commune/C7:Lectio7\n@Commune/C7:Lectio8\n@Commune/C7:Lectio9\nLéctio sancti Evangélii secúndum Matthǽum\nIn illo témpore: Accessérunt ad Jesum pharisæi, tentántes eum et dicéntes: Si licet hómini dimíttere uxórem suam quacúmque ex causa? Et réliqua.\nHomilía S. Joánnis Chrysostomi\nDóminus noster, quia ad virginitátem hortári grave esse videbátur, a necessitáte legis de non solvéndo matrimónio, eos ad cupiditátem illíus tráhere studet. Deínde, ut eam esse possíbilem osténdat, sic inquit: Sunt eunúchi qui ex ventre matris ita nati sunt; et sunt qui ab homínibus eunúchi facti sunt, et sunt qui seípsos castravérunt propter regnum cælórum. Quibus verbis laténter eos ad eligéndam virginitátem indúcit, dum eam virtútem esse possíbilem ástruit.\nId autem hoc fere modo confírmat: Cógita tecum, si aut a natúra talis esses, aut ab homínibus eam injúriam passus, quid fáceres, cum et ejúsmodi voluptáte caréres, et nullam, caréndo, mercédem consequeréris? Grátias ígitur nunc Deo agas, quod cum mercéde atque corónis idem sústines, quod illi sine corónis ac præmio tólerant. Immo vero non idem, sed multo lévius; tum quia spe erígeris et consciéntia recte facti, tum quia non ita ingéntibus concupiscéntiæ flúctibus jactáris.\nCum ergo de illis eunúchis díxerit, qui, nisi étiam ipsi mente se contíneant, frustra et inutíliter tales sunt, ac de illis, qui, ut regnum cælórum consequántur, se cóntinent; subjúnxit rursus, dicens: Qui potest cápere, capiat; ut alacrióres effíciat eo ipso quod grave esse opus osténdit, et ineffábili benignitáte sua nóluit eam rem intra necessitátem legis conclúdere. Idque dicéndo, adhuc magis possíbilem esse demónstrat, ut voluntátis stúdium plus augeátur.\nLoquébar de testimóniis tuis in conspéctu regum, et non confundébar: et meditábar in mandátis tuis, quæ diléxi nimis. (Allelúja, allelúja.)\nBeáti immaculáti in via: qui ámbulant in lege Dómini.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nLoquébar de testimóniis tuis in conspéctu regum, et non confundébar: et meditábar in mandátis tuis, quæ diléxi nimis. (Allelúja, allelúja.)\nLéctio libri Sapiéntiæ\nConfitébor tibi, Dómine, Rex, et collaudábo te Deum, Salvatórem meum. Confitébor nómini tuo: quóniam adjútor et protéctor factus es mihi, et liberásti corpus meum a perditióne, a láqueo línguæ iníquæ et a lábiis operántium mendácium, et in conspéctu astántium factus es mihi adjutor. Et liberasti me secúndum multitúdinem misericórdiæ nóminis tui a rugiéntibus, præparátis ad escam, de mánibus quæréntium ánimam meam, et de portis tribulatiónum, quæ circumdedérunt me: a pressúra flammæ, quæ circúmdedit me, et in médio ignis non sum æstuáta: de altitúdine ventris inferi, et a lingua coinquináta, et a verbo mendácii, a rege iníquo, et a lingua injústa: laudábit usque ad mortem ánima mea Dóminum: quóniam éruis sustinéntes te, et líberas eos de mánibus géntium, Dómine, Deus noster.\nDilexísti justítiam, et odísti iniquitátem.\nV. Proptérea unxit te Deus, Deus tuus, óleo lætítiæ. \nAllelúja, allelúja.\nAdducéntur Regi Vírgines post eam: próximæ ejus afferéntur tibi in lætítia. Allelúja.\nAllelúja, allelúja.\nAdducéntur Regi Vírgines post eam: próximæ ejus afferéntur tibi in lætítia. Allelúja.\nSpécie tua et pulchritúdine tua inténde, próspere procéde et regna. Allelúja.\nDilexísti justítiam, et odísti iniquitátem.\nV. Proptérea unxit te Deus, Deus tuus, óleo lætítiæ.\nVeni, Sponsa Christi, áccipe corónam, quam tibi Dóminus præparávit in ætérnum: pro cujus amóre sánguinem tuum fudísti.\nDilexísti justítiam, et odísti iniquitátem: proptérea unxit te Deus, Deus tuus, óleo lætítiæ præ consórtibus tuis.\nV. Spécie tua et pulchritúdine tua inténde, próspere procéde et regna.\nSequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile erit regnum coelórum decem virgínibus: quæ, accipiéntes lámpades suas, exiérunt óbviam sponso et sponsæ. Quinque autem ex eis erant fátuæ, et quinque prudéntes: sed quinque fátuæ, accéptis lampádibus, non sumpsérunt óleum secum: prudéntes vero accepérunt óleum in vasis suis cum lampádibus. Moram autem faciénte sponso, dormitavérunt omnes et dormiérunt. Média autem nocte clamor factus est: Ecce, sponsus venit, exíte óbviam ei. Tunc surrexérunt omnes vírgines íllæ, et ornavérunt lámpades suas. Fátuæ autem sapiéntibus dixérunt: Date nobis de óleo vestro: quia lámpades nostræ exstinguúntur. Respondérunt prudéntes, dicéntes: Ne forte non suffíciat nobis et vobis, ite pótius ad vendéntes, et émite vobis. Dum autem irent émere, venit sponsus: et quæ parátæ erant, intravérunt cum eo ad núptias, et clausa est jánua. Novíssime vero véniunt et réliquæ vírgines, dicéntes: Dómine, Dómine, áperi nobis. At ille respóndens, ait: Amen, dico vobis, néscio vos. Vigiláte ítaque, quia nescítis diem neque horam.\nAfferéntur Regi Vírgines post eam: próximæ ejus afferéntur tibi in lætítia et exsultatióne: adducéntur in templum Regi Dómino. (Allelúja.)\nSúscipe, Dómine, múnera, quæ in beátæ N. Vírginis et Mártyris tuæ sollemnitáte deférimus: cujus nos confídimus patrocínio liberári.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.\nConfundántur supérbi, quia injúste iniquitátem fecérunt in me: ego autem in mandátis tuis exercébor, in tuis justificatiónibus, ut non confúndar. (Allelúja.)\nAuxiliéntur nobis, Dómine, sumpta mystéria: et, intercedénte beáta N. Vírgine et Mártyre tua, sempitérna fáciant protectióne gaudére.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "The daughters of Zion saw her, and called her blessed; the queens also, and they praised her.\n$Deo gratias",
+   "lat": "Vidérunt eam fíliæ Sion, et beatíssimam prædicavérunt et regínæ laudavérunt eam.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C1a": {
+  "ant_laudes": {
+   "eng": "You who left all * and follow me, you will receive hundredfolds, and you will have eternal life.",
+   "lat": "Vos qui reliquístis * ómnia, et secúti estis me, céntuplum accipiétis, et vitam ætérnam possidébitis.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "For they shall deliver you * up to councils: and in the synagogues you shall be beaten: and you shall stand before governors and kings for my sake, for a testimony unto them.",
+   "lat": "Tradent enim vos * in concíliis, et in synagógis suis flagellábunt vos, et ante reges et prǽsides ducémini propter me in testimónium illis, et Géntibus.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
+   "lat": "Fratres: Jam non estis hóspites et ádvenæ: sed estis cives Sanctórum et doméstici Dei: superædificáti super fundaméntum Apostolórum, et Prophetárum, ipso summo angulári lápide Christo Jesu.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "capitulum_nona": {
+   "eng": "",
+   "lat": "Ibant Apóstoli gaudéntes a conspéctu concílii, quóniam digni hábiti sunt pro nómine Jesu contuméliam pati.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_nona"
+  },
+  "capitulum_sexta": {
+   "eng": "And by the hands of the apostles were many signs and wonders wrought among the people.\n$Deo gratias",
+   "lat": "Per manus autem Apostolórum fiébant signa et prodígia multa in plebe.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_sexta"
+  },
+  "hymnus_laudes": {
+   "eng": "Now let the earth with joy resound,\nAnd heaven the chant re-echo round;\nNor heaven nor earth too high can raise\nThe great Apostles' glorious praise.\nO ye who, throned in glory dread,\nShall judge the living and the dead,\nLights of the world forevermore!\nTo you the suppliant prayer we pour.\nYe close the sacred gates on high;\nAt your command apart they fly:\nOh! loose for us the guilty chain\nWe strive to break, and strive in vain.\nSickness and health your voice obey;\nAt your command they go or stay:\nFrom sin's disease our souls restore;\nIn good confirm us more and more.\nSo when the world is at its end,\nAnd Christ to judgement shall descend,\nMay we be called those joys to see\nPrepared from all eternity.\n* Praise to the Father, with the Son,\nAnd Holy Spirit, Three in One;\nAs ever was in ages past,\nAnd so shall be while ages last.\nAmen.",
+   "lat": "Exsúltet orbis gáudiis:\nCælum resúltet láudibus:\nApostolórum glóriam\nTellus et astra cóncinunt.\nVos sæculórum júdices,\nEt vera mundi lúmina:\nVotis precámur córdium,\nAudíte voces súpplicum.\nQui templa cæli cláuditis,\nSerásque verbo sólvitis,\nNos a reátu nóxios\nSolvi jubéte, quǽsumus.\nPræcépta quorum prótinus\nLanguor salúsque séntiunt:\nSanáte mentes lánguidas:\nAugéte nos virtútibus.\nUt, cum redíbit árbiter\nIn fine Christus sǽculi,\nNos sempitérni gáudii\nConcédat esse cómpotes.\n* Patri, simúlque Fílio,\nTibíque Sancte Spíritus,\nSicut fuit, sit júgiter\nSæclum per omne glória.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_matutinum": {
+   "eng": "Th' eternal gifts of Christ the King,\nThe Apostles' glory, let us sing;\nAnd all with hearts of gladness raise\nDue hymns of thankful love and praise.\nFor they the Church's princes are,\nTriumphant leaders in the war,\nThe heavenly King's own warrior band,\nTrue lights to lighten every land.\nTheirs was the steadfast faith of saints,\nThe hope that never yields nor faints,\nThe love of Christ in perfect glow,\nThat lay the prince of this world low.\nIn them the Father's glory shone,\nIn them the Spirit's will was done,\nThe Son himself exults in them;\nJoy fills the new Jerusalem.\n* Praise to the Father, with the Son,\nAnd Holy Spirit, Three in One;\nAs ever was in ages past,\nAnd so shall be while ages last.\nAmen.",
+   "lat": "Ætérna Christi múnera,\nApostolórum glóriam,\nPalmas et hymnos débitos\nLætis canámus méntibus.\nEcclesiárum Príncipes,\nBelli triumpháles duces,\nCæléstis aulæ mílites,\nEt vera mundi lúmina.\nDevóta Sanctórum fides,\nInvícta spes credéntium,\nPerfécta Christi cáritas\nMundi tyránnum cónterit.\nIn his Patérna glória,\nIn his triúmphat Fílius,\nIn his volúntas Spíritus,\nCælum replétur gáudio.\n* Patri, simúlque Fílio,\nTibíque Sancte Spíritus,\nSicut fuit, sit júgiter\nSæclum per omne glória.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_matutinum"
+  },
+  "hymnus_vespera": {
+   "eng": "Now let the earth with joy resound,\nAnd heaven the chant re-echo round;\nNor heaven nor earth too high can raise\nThe great Apostles' glorious praise.\nO ye who, throned in glory dread,\nShall judge the living and the dead,\nLights of the world forevermore!\nTo you the suppliant prayer we pour.\nYe close the sacred gates on high;\nAt your command apart they fly:\nOh! loose for us the guilty chain\nWe strive to break, and strive in vain.\nSickness and health your voice obey;\nAt your command they go or stay:\nFrom sin's disease our souls restore;\nIn good confirm us more and more.\nSo when the world is at its end,\nAnd Christ to judgement shall descend,\nMay we be called those joys to see\nPrepared from all eternity.\n* Praise to the Father, with the Son,\nAnd Holy Spirit, Three in One;\nAs ever was in ages past,\nAnd so shall be while ages last.\nAmen.",
+   "lat": "Exsúltet orbis gáudiis:\nCælum resúltet láudibus:\nApostolórum glóriam\nTellus et astra cóncinunt.\nVos sæculórum júdices,\nEt vera mundi lúmina:\nVotis precámur córdium,\nAudíte voces súpplicum.\nQui templa cæli cláuditis,\nSerásque verbo sólvitis,\nNos a reátu nóxios\nSolvi jubéte, quǽsumus.\nPræcépta quorum prótinus\nLanguor salúsque séntiunt:\nSanáte mentes lánguidas:\nAugéte nos virtútibus.\nUt, cum redíbit árbiter\nIn fine Christus sǽculi,\nNos sempitérni gáudii\nConcédat esse cómpotes.\n* Patri, simúlque Fílio,\nTibíque Sancte Spíritus,\nSicut fuit, sit júgiter\nSæclum per omne glória.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "invit": {
+   "eng": "The Lord, the King of Apostles, * O come, let us adore.",
+   "lat": "Regem Apostolórum Dóminum, * Veníte, adorémus.",
+   "type": "antiphon",
+   "variationKey": "invit"
+  },
+  "lectio_prima": {
+   "eng": "V. And the Apostles indeed went from the presence of the council, rejoicing that they were accounted worthy to suffer reproach for the name of Jesus.",
+   "lat": "Ibant Apóstoli gaudéntes a conspéctu concílii, quóniam digni hábiti sunt pro nómine Jesu contuméliam pati.",
+   "type": "reading",
+   "variationKey": "lectio_prima"
+  },
+  "responsory_breve_nona": {
+   "eng": "R.br. Thy friends, O God * are made exceedingly honourable.\nR. Thy friends, O God * are made exceedingly honourable.\nV. Their principality is exceedingly strengthened.\nR. O God, thy friends.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. Thy friends, O God * are made exceedingly honourable.",
+   "lat": "R.br. Nimis honoráti sunt * Amíci tui, Deus.\nR. Nimis honoráti sunt * Amíci tui, Deus.\nV. Nimis confortátus est principátus eórum.\nR. Amíci tui, Deus.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Nimis honoráti sunt * Amíci tui, Deus.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_nona"
+  },
+  "responsory_breve_sexta": {
+   "eng": "R.br. Thou shalt make them princes * over all the earth.\nR. Thou shalt make them princes * over all the earth.\nV. They shall remember thy name, O Lord.\nR. All over the earth.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. Thou shalt make them princes * over all the earth.",
+   "lat": "R.br. Constítues eos príncipes * Super omnem terram.\nR. Constítues eos príncipes * Super omnem terram.\nV. Mémores erunt nóminis tui, Dómine.\nR. Super omnem terram.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Constítues eos príncipes * Super omnem terram.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_sexta"
+  },
+  "responsory_breve_tertia": {
+   "eng": "R.br. Their sound hath gone * forth into all the earth.\nR. Their sound hath gone * forth into all the earth.\nV. And their words unto the ends of the world.\nR. Forth into all the earth.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. Their sound hath gone * forth into all the earth.",
+   "lat": "R.br. In omnem terram * Exívit sonus eórum.\nR. In omnem terram * Exívit sonus eórum.\nV. Et in fines orbis terræ verba eórum.\nR. Exívit sonus eórum.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. In omnem terram * Exívit sonus eórum.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_tertia"
+  },
+  "tertia.capitulum": {
+   "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
+   "lat": "Fratres: Jam non estis hóspites et ádvenæ: sed estis cives Sanctórum et doméstici Dei: superædificáti super fundaméntum Apostolórum, et Prophetárum, ipso summo angulári lápide Christo Jesu.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "tertia.capitulum"
+  },
+  "versum_1": {
+   "eng": "V. They declared the works of God.\nR. And understood his doings.",
+   "lat": "V. Annuntiavérunt ópera Dei.\nR. Et facta ejus intellexérunt.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Their sound hath gone forth into all the earth:\nR. And their words unto the ends of the world.",
+   "lat": "V. In omnem terram exívit sonus eórum.\nR. Et in fines orbis terræ verba eórum.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
+   "lat": "Fratres: Jam non estis hóspites et ádvenæ: sed estis cives Sanctórum et doméstici Dei: superædificáti super fundaméntum Apostolórum, et Prophetárum, ipso summo angulári lápide Christo Jesu.\n$Deo gratias",
    "type": "capitulum",
    "variationKey": "vesperae.capitulum"
   }
@@ -827,6 +1097,110 @@
   "vesperae.capitulum": {
    "eng": "Blessed is the man that endureth temptation; for when he hath been proved, he shall receive a crown of life, which God hath promised to them that love him.\n$Deo gratias",
    "lat": "Beátus vir, qui suffert tentatiónem: quóniam cum probátus fúerit, accípiet corónam vitæ, quam repromísit Deus diligéntibus se.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C2p": {
+  "ant_laudes": {
+   "eng": "Daughters of Jerusalem, * come and see the crowned martyrs, the Lord crowned them in his solemnity and delight, alleluia, alleluia.",
+   "lat": "Fíliæ Jerúsalem, * veníte et vidéte Mártyres cum corónis, quibus coronávit eos Dóminus in die solemnitátis et lætítiæ, allelúja, allelúja.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "Eternal light will shine * over your saints, O Lord, and the eternity of times, alleluia.",
+   "lat": "Lux perpétua * lucébit Sanctis tuis, Dómine, et ætérnitas témporum, allelúja.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "capitulum_laudes": {
+   "eng": "Then shall the just stand with great constancy against those that have afflicted them, and taken away their labours.\n$Deo gratias",
+   "lat": "Stabunt justi in magna constántia advérsus eos qui se angustiavérunt et qui abstulérunt labóres eórum.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_laudes"
+  },
+  "capitulum_nona": {
+   "eng": "",
+   "lat": "Scimus quóniam diligéntibus Deum ómnia cooperántur in bonum, iis qui secúndum propósitum vocáti sunt sancti.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_nona"
+  },
+  "capitulum_sexta": {
+   "eng": "Behold how they are numbered among the children of God, and their lot is among the saints.\n$Deo gratias",
+   "lat": "Ecce quómodo computáti sunt inter fílios Dei, et inter sanctos sors illórum est.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "capitulum_sexta"
+  },
+  "hymnus_laudes": {
+   "eng": "",
+   "lat": "Invícte Martyr, únicum\nPatris secútus Fílium,\nVictis triúmphas hóstibus,\nVictor fruens cæléstibus.\nTui precátus múnere\nNostrum reátum dílue,\nArcens mali contágium,\nVitæ repéllens tǽdium.\nSolúta sunt jam víncula\nTui sacráti córporis:\nNos solve vinclis sǽculi,\nDono supérni Núminis.\n* Deo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc, et per omne sǽculum.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_laudes"
+  },
+  "hymnus_matutinum": {
+   "eng": "",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_matutinum"
+  },
+  "hymnus_vespera": {
+   "eng": "",
+   "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "type": "hymn",
+   "variationKey": "hymnus_vespera"
+  },
+  "invit": {
+   "eng": "Let the Saints rejoice in the Lord, * Alleluia.",
+   "lat": "Exsúltent in Dómino sancti, * Allelúja.",
+   "type": "antiphon",
+   "variationKey": "invit"
+  },
+  "lectio_prima": {
+   "eng": "And we know that to them that love God, all things work together unto good, to such as, according to his purpose, are called to be saints.",
+   "lat": "Scimus quóniam diligéntibus Deum ómnia cooperántur in bonum, iis qui secúndum propósitum vocáti sunt sancti.",
+   "type": "reading",
+   "variationKey": "lectio_prima"
+  },
+  "responsory_breve_nona": {
+   "eng": "",
+   "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_nona"
+  },
+  "responsory_breve_sexta": {
+   "eng": "",
+   "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_sexta"
+  },
+  "responsory_breve_tertia": {
+   "eng": "",
+   "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+   "type": "responsory",
+   "variationKey": "responsory_breve_tertia"
+  },
+  "tertia.capitulum": {
+   "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
+   "lat": "Fratres: Jam non estis hóspites et ádvenæ: sed estis cives Sanctórum et doméstici Dei: superædificáti super fundaméntum Apostolórum, et Prophetárum, ipso summo angulári lápide Christo Jesu.\n$Deo gratias",
+   "type": "capitulum",
+   "variationKey": "tertia.capitulum"
+  },
+  "versum_1": {
+   "eng": "V. Precious in the sight of the Lord, alleluia.\nR. Is the death of his saints, alleluia.",
+   "lat": "V. Pretiósa in conspéctu Dómini, allelúja.\nR. Mors Sanctórum ejus, allelúja.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. Saints and just, rejoice in the Lord, alleluia.\nR. The Lord has chosen you for his inheritance, alleluia.",
+   "lat": "V. Sancti et justi in Dómino gaudéte, allelúja.\nR. Vos elégit Deus in hereditátem sibi, allelúja.",
+   "type": "vr",
+   "variationKey": "versum_2"
+  },
+  "vesperae.capitulum": {
+   "eng": "Brothers: Now therefore you are no more strangers and foreigners; but you are fellow citizens with the saints, and the domestics of God, built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\n$Deo gratias.",
+   "lat": "Fratres: Jam non estis hóspites et ádvenæ: sed estis cives Sanctórum et doméstici Dei: superædificáti super fundaméntum Apostolórum, et Prophetárum, ipso summo angulári lápide Christo Jesu.\n$Deo gratias",
    "type": "capitulum",
    "variationKey": "vesperae.capitulum"
   }
@@ -3221,6 +3595,38 @@
    "lat": "Vidi civitátem sanctam, Jerúsalem novam, descendéntem de cælo a Deo, parátam sicut sponsam ornátam viro suo.\n$Deo gratias",
    "type": "capitulum",
    "variationKey": "vesperae.capitulum"
+  }
+ },
+ "C9": {
+  "ant_laudes": {
+   "eng": "I am the resurrection and the life: * he that believeth in me, though he were dead, yet shall he live; and whosoever liveth and believeth in me shall never die.",
+   "lat": "Ego sum * resurréctio et vita: qui credit in me, étiam si mórtuus fúerit, vivet; et omnis qui vivit et credit in me, non moriétur in ætérnum.",
+   "type": "antiphon",
+   "variationKey": "ant_laudes"
+  },
+  "ant_vespera": {
+   "eng": "All that the Father giveth Me shall come to Me; * and him that cometh to Me I will in no wise cast out.",
+   "lat": "Omne * quod dat mihi Pater, ad me véniet; et eum qui venit ad me, non eíciam foras.",
+   "type": "antiphon",
+   "variationKey": "ant_vespera"
+  },
+  "invit": {
+   "eng": "Unto the Eternal King all live. * O come, let us worship Him.",
+   "lat": "Regem, cui ómnia vivunt, * Veníte adorémus.",
+   "type": "antiphon",
+   "variationKey": "invit"
+  },
+  "versum_1": {
+   "eng": "",
+   "lat": "V. Audívi vocem de cælo dicéntem mihi.\nR. Beáti mórtui qui in Dómino moriúntur.",
+   "type": "vr",
+   "variationKey": "versum_1"
+  },
+  "versum_2": {
+   "eng": "V. I heard a voice from heaven, saying unto me:\nR. Blessed are the dead which die in the Lord.",
+   "lat": "V. Audívi vocem de cælo dicéntem mihi.\nR. Beáti mórtui qui in Dómino moriúntur.",
+   "type": "vr",
+   "variationKey": "versum_2"
   }
  }
 }
