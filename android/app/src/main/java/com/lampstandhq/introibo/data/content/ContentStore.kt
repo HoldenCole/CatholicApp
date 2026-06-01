@@ -74,6 +74,8 @@ object ContentStore {
     // Commune (common Office) parts + saint→commune map (see iOS ContentStore).
     private var communeOffice: Map<String, Map<String, Hour.Part>> = emptyMap()
     private var saintCommune: Map<String, String> = emptyMap()
+    // Feast->feast Office inheritance via `ex Sancti/MM-DD` (see iOS ContentStore).
+    private var saintOfficeInherit: Map<String, String> = emptyMap()
     private var ordoData: Map<String, OrdoEntry> = emptyMap()
     private var ordoData1955: Map<String, OrdoEntry> = emptyMap()
     private var ordoDataPre1955: Map<String, OrdoEntry> = emptyMap()
@@ -107,6 +109,7 @@ object ContentStore {
         sanctoralPropers = load("sanctoral_propers.json") ?: emptyMap()
         communeOffice    = load("commune_office.json")    ?: emptyMap()
         saintCommune     = load("saint_commune.json")     ?: emptyMap()
+        saintOfficeInherit = load("saint_office_inherit.json") ?: emptyMap()
         ordoData         = load("ordo.json")              ?: emptyMap()
         ordoData1955     = load("ordo_1955.json")         ?: emptyMap()
         ordoDataPre1955  = load("ordo_pre1955.json")      ?: emptyMap()
@@ -450,12 +453,19 @@ object ContentStore {
         val ordo = ordoForDate(ctx.date, rite)
         if (ordo != null) {
             if (ordo.winner == "sanctoral") {
-                // Commune fallback first, then the saint's own proper on top.
+                // Office layering (each later layer wins): commune fallback,
+                // then a borrowed feast's Office (`ex Sancti/...`), then the
+                // saint's own proper on top.
                 val key = ordo.winnerKey
                 val code = saintCommune[key] ?: saintCommune[key.take(5)]
                 val commune = code?.let { communeOffice[it] }
                 if (commune != null) {
                     assembled = applyProperOverrides(assembled, commune)
+                }
+                val inheritSource = saintOfficeInherit[key] ?: saintOfficeInherit[key.take(5)]
+                val inherited = inheritSource?.let { sanctoralPropers[it] }
+                if (inherited != null) {
+                    assembled = applyProperOverrides(assembled, inherited)
                 }
                 val saint = sanctoralPropers[ordo.winnerKey]
                 if (saint != null) {

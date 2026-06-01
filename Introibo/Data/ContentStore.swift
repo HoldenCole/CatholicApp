@@ -33,6 +33,10 @@ final class ContentStore {
     // proper capitulum/hymn/versicle/antiphon inherit them from their commune.
     private var communeOffice: [String: [String: Hour.Part]] = [:]
     private var saintCommune: [String: String] = [:]
+    // Feast→feast Office inheritance: a feast whose [Rule] borrows the Office
+    // from another feast via `ex Sancti/MM-DD` (e.g. the Exaltation of the
+    // Cross 09-14 ← Finding of the Cross 05-03). Keyed by "MM-DD".
+    private var saintOfficeInherit: [String: String] = [:]
     private var ordoData:        [String: OrdoEntry] = [:]
     private var ordoData1955:    [String: OrdoEntry] = [:]
     private var ordoDataPre1955: [String: OrdoEntry] = [:]
@@ -60,6 +64,7 @@ final class ContentStore {
         sanctoralPropers  = load("sanctoral_propers", as: [String: [String: Hour.Part]].self) ?? [:]
         communeOffice     = load("commune_office",     as: [String: [String: Hour.Part]].self) ?? [:]
         saintCommune      = load("saint_commune",      as: [String: String].self) ?? [:]
+        saintOfficeInherit = load("saint_office_inherit", as: [String: String].self) ?? [:]
         ordoData          = load("ordo",              as: [String: OrdoEntry].self) ?? [:]
         ordoData1955      = load("ordo_1955",         as: [String: OrdoEntry].self) ?? [:]
         ordoDataPre1955   = load("ordo_pre1955",      as: [String: OrdoEntry].self) ?? [:]
@@ -97,12 +102,17 @@ final class ContentStore {
         let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
         if let ordo = ordoForDate(ctx.date, rite: rite) {
             if ordo.winner == "sanctoral" {
-                // Commune fallback first (capitulum, hymn, versicle, antiphons),
-                // then the saint's own proper on top (collect + any proper parts).
+                // Office layering (each later layer wins): commune fallback,
+                // then a borrowed feast's Office (`ex Sancti/...`), then the
+                // saint's own proper on top.
                 let key = ordo.winnerKey
                 let code = saintCommune[key] ?? saintCommune[String(key.prefix(5))]
                 if let code, let commune = communeOffice[code] {
                     assembled = applyProperOverrides(assembled, overrides: commune)
+                }
+                if let source = saintOfficeInherit[key] ?? saintOfficeInherit[String(key.prefix(5))],
+                   let inherited = sanctoralPropers[source] {
+                    assembled = applyProperOverrides(assembled, overrides: inherited)
                 }
                 if let saint = sanctoralPropers[ordo.winnerKey] {
                     assembled = applyProperOverrides(assembled, overrides: saint)

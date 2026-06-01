@@ -123,6 +123,26 @@ def _parent_code(code):
     return None
 
 
+def extract_office_inherit():
+    """feast-key -> source feast-key, for feasts whose [Rule] borrows the
+    Office from another feast via `ex Sancti/MM-DD` (e.g. the Exaltation of
+    the Cross 09-14 takes its hymns/antiphons from the Holy Cross office 05-03,
+    St Michael 09-29 from 05-08). The source's parts fill whatever the target
+    doesn't define; the target's own proper still wins."""
+    out = {}
+    for fn in sorted(os.listdir(SANCTI_LAT)):
+        m0 = re.match(r"(\d{2}-\d{2}[a-z0-9]*)\.txt$", fn)
+        if not m0:
+            continue
+        key = m0.group(1)
+        secs = IDO.parse_do_file(SANCTI_LAT / fn)
+        rule = "\n".join(secs.get("Rule", []))
+        m = re.search(r"\bex\s+Sancti/(\d{2}-\d{2}[a-z0-9]*)", rule)
+        if m and m.group(1) != key:
+            out[key] = m.group(1)
+    return out
+
+
 def build_commune(code, _seen=None):
     """Resolve one commune code's Office parts (Latin + English), merging the
     inherited parent commune as a base when the file declares `@Commune/CX`."""
@@ -199,14 +219,25 @@ def main():
     # Drop saints whose commune produced no usable parts
     saint_commune = {k: v for k, v in saint_commune.items() if v in commune_office}
 
+    # Feast→feast Office inheritance, kept only where the source actually has
+    # Office parts to give.
+    sp = json.loads((OUT_IOS / "sanctoral_propers.json").read_text())
+    def has_office(key):
+        return any(k.startswith(("capitulum", "hymnus", "ant_", "invit", "versum"))
+                   for k in sp.get(key, {}))
+    office_inherit = {t: s for t, s in extract_office_inherit().items() if has_office(s)}
+
     for out_dir in (OUT_IOS, OUT_ANDROID):
         (out_dir / "commune_office.json").write_text(
             json.dumps(commune_office, ensure_ascii=False, indent=1, sort_keys=True))
         (out_dir / "saint_commune.json").write_text(
             json.dumps(saint_commune, ensure_ascii=False, indent=1, sort_keys=True))
+        (out_dir / "saint_office_inherit.json").write_text(
+            json.dumps(office_inherit, ensure_ascii=False, indent=1, sort_keys=True))
 
     print(f"communes resolved: {len(commune_office)} / {len(codes)} codes")
     print(f"saints mapped:     {len(saint_commune)}")
+    print(f"office-inherit map: {len(office_inherit)} feasts")
     # Coverage of each part type
     from collections import Counter
     cov = Counter()
