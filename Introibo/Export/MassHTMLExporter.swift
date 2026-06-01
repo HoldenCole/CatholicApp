@@ -66,10 +66,10 @@ enum MassHTMLExporter {
             html += "<p class=\"ref\">\(escapeHTML(ref))</p>"
         }
 
-        // Keep <em> tags — they render correctly in HTML as italics.
-        // Convert <br> variants to <br> for consistency, strip other tags.
+        html += "<div class=\"bilingual\">"
         html += "<p class=\"latin\">\(prepareBodyHTML(lat))</p>"
         html += "<p class=\"english-text\">\(prepareBodyHTML(eng))</p>"
+        html += "</div>"
         html += "</div>"
         html += "<div class=\"divider\"></div>"
         return html
@@ -168,12 +168,17 @@ enum MassHTMLExporter {
             font-weight: 600;
             margin-bottom: 8px;
         }
-        .latin {
+        .bilingual {
+            display: flex;
+            gap: 20px;
+        }
+        .bilingual .latin {
+            flex: 1;
             color: #1C1410;
             line-height: 1.6;
-            margin-bottom: 8px;
         }
-        .english-text {
+        .bilingual .english-text {
+            flex: 1;
             color: #5A4A3A;
             font-style: italic;
             line-height: 1.6;

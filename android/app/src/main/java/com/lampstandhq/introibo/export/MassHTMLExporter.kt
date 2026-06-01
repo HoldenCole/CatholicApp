@@ -78,8 +78,10 @@ object MassHTMLExporter {
 
             // Keep <em> tags — they render correctly in HTML as italics.
             // Convert <br> variants to <br> for consistency, strip other tags.
+            append("""<div class="bilingual">""")
             append("""<p class="latin">${prepareBodyHTML(lat)}</p>""")
             append("""<p class="english-text">${prepareBodyHTML(eng)}</p>""")
+            append("</div>")
             append("</div>")
             append("""<div class="divider"></div>""")
         }
@@ -173,12 +175,17 @@ body {
     font-weight: 600;
     margin-bottom: 8px;
 }
-.latin {
+.bilingual {
+    display: flex;
+    gap: 20px;
+}
+.bilingual .latin {
+    flex: 1;
     color: #1C1410;
     line-height: 1.6;
-    margin-bottom: 8px;
 }
-.english-text {
+.bilingual .english-text {
+    flex: 1;
     color: #5A4A3A;
     font-style: italic;
     line-height: 1.6;
