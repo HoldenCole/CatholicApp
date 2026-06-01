@@ -16,6 +16,7 @@ sc = json.load(open(R / "saint_commune.json"))
 mt = json.load(open(R / "missal_tempora.json"))
 ms = json.load(open(R / "missal_sanctoral.json"))
 names_en = json.load(open(R / "ordo_names_en.json"))
+office_inherit = json.load(open(R / "saint_office_inherit.json")) if (R / "saint_office_inherit.json").exists() else {}
 
 HOUR_KEYS = {
     "Lauds":   ["capitulum_laudes", "hymnus_laudes", "ant_laudes"],
@@ -30,9 +31,14 @@ HOUR_KEYS = {
 def merged_for(wk, winner, temporal):
     m = {}
     if winner == "sanctoral":
+        # Layer to match ContentStore: commune fallback, then a borrowed
+        # feast's Office (ex Sancti/MM-DD), then the saint's own proper.
         code = sc.get(wk) or sc.get(wk[:5])
         if code in commune:
             m.update(commune[code])
+        src = office_inherit.get(wk) or office_inherit.get(wk[:5])
+        if src and src in sp:
+            m.update(sp[src])
         if wk in sp:
             m.update(sp[wk])
         if "capitulum_laudes" in m:
