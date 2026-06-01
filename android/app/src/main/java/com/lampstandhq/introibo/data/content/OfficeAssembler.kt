@@ -29,7 +29,15 @@ class OfficeAssembler(
         "vesperae.psalm4", "vesperae.psalm5",
     )
 
-    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false): Hour {
+    // Compline uses the Sunday psalms (Ps 4, 90, 133) only on Sundays and
+    // feasts of I and II class (rank >= 5); ferias, Simples, and III-class
+    // feasts use the day-of-the-week ferial Compline.
+    private val festalComplineKeys = setOf(
+        "completorium.antiphon",
+        "completorium.psalm1", "completorium.psalm2", "completorium.psalm3",
+    )
+
+    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
         val seasonKey = seasonString(context.season)
 
@@ -61,6 +69,12 @@ class OfficeAssembler(
             // On festal days, keep the template's festal psalms for Lauds
             // and Vespers (the weekday psalter would replace them with ferial).
             if (isFestal && key in festalPsalmKeys) {
+                return@map part
+            }
+
+            // On Sundays and I/II-class feasts, keep the festal Compline
+            // (Sunday psalms + "Miserere" antiphon) instead of the ferial set.
+            if (festalCompline && key in festalComplineKeys) {
                 return@map part
             }
 

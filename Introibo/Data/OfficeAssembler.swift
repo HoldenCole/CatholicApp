@@ -93,7 +93,16 @@ struct OfficeAssembler {
         "vesperae.psalm4", "vesperae.psalm5",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false) -> Hour {
+    // Compline uses the Sunday psalms (Ps 4, 90, 133) only on Sundays and
+    // feasts of I and II class (rank >= 5); ferias, Simples, and III-class
+    // feasts use the day-of-the-week ferial Compline. The threshold is
+    // higher than Lauds/Vespers, so it gets its own flag and key set.
+    private static let festalComplineKeys: Set<String> = [
+        "completorium.antiphon",
+        "completorium.psalm1", "completorium.psalm2", "completorium.psalm3",
+    ]
+
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
 
@@ -128,6 +137,12 @@ struct OfficeAssembler {
             // and Vespers (the weekday psalter would replace them with ferial
             // psalms). All other parts (hymns, capitula, etc.) still override.
             if isFestal && Self.festalPsalmKeys.contains(key) {
+                return part
+            }
+
+            // On Sundays and I/II-class feasts, keep the festal Compline
+            // (Sunday psalms + "Miserere" antiphon) instead of the ferial set.
+            if festalCompline && Self.festalComplineKeys.contains(key) {
                 return part
             }
 

@@ -3193,38 +3193,6 @@
       },
       {
         "type": "psalm",
-        "label": "Psalmus 30; In te, Dómine, sperávi",
-        "ref": "Ps 30:1-6",
-        "verses": [
-          {
-            "lat": "In te, Dómine, sperávi, non confúndar in ætérnum: in justítia tua líbera me.",
-            "eng": "In Thee, O Lord, have I hoped, let me never be confounded: deliver me in Thy justice."
-          },
-          {
-            "lat": "Inclína ad me aurem tuam, accélera ut éruas me.",
-            "eng": "Bow down Thy ear to me: make haste to deliver me."
-          },
-          {
-            "lat": "Esto mihi in Deum protectórem, et in domum refúgii, ut salvum me fácias.",
-            "eng": "Be Thou unto me a God, a protector, and a house of refuge, to save me."
-          },
-          {
-            "lat": "Quóniam fortitúdo mea et refúgium meum es tu; et propter nomen tuum dedúces me et enútries me.",
-            "eng": "For Thou art my strength and my refuge; and for Thy name's sake Thou wilt lead me and nourish me."
-          },
-          {
-            "lat": "Edúces me de láqueo hoc quem abscondérunt mihi, quóniam tu es protéctor meus.",
-            "eng": "Thou wilt bring me out of this snare which they have hidden for me; for Thou art my protector."
-          },
-          {
-            "lat": "In manus tuas comméndo spíritum meum: redemísti me, Dómine, Deus veritátis.",
-            "eng": "Into Thy hands I commend my spirit: Thou hast redeemed me, O Lord, the God of truth."
-          }
-        ],
-        "variationKey": "completorium.psalm2"
-      },
-      {
-        "type": "psalm",
         "label": "Psalmus 90; Qui hábitat",
         "ref": "Ps 90",
         "verses": [
@@ -3293,7 +3261,7 @@
             "eng": "I will fill him with length of days, and I will show him My salvation."
           }
         ],
-        "variationKey": "completorium.psalm3"
+        "variationKey": "completorium.psalm2"
       },
       {
         "type": "psalm",
@@ -3317,7 +3285,7 @@
             "eng": "May the Lord out of Sion bless thee, He that made heaven and earth."
           }
         ],
-        "variationKey": "completorium.psalm4"
+        "variationKey": "completorium.psalm3"
       },
       {
         "type": "capitulum",
@@ -3345,6 +3313,8 @@
         "type": "canticle",
         "label": "Canticum Simeónis; Nunc Dimittis",
         "ref": "Lk 2:29-32",
+        "antiphonLat": "Salva nos, * Dómine, vigilántes, custódi nos dormiéntes; ut vigilémus cum Christo, et requiescámus in pace.",
+        "antiphonEng": "Protect us, * Lord, while we are awake and safeguard us while we sleep; that we may keep watch with Christ, and rest in peace.",
         "verses": [
           {
             "lat": "Nunc dimíttis servum tuum, Dómine, secúndum verbum tuum in pace:",
