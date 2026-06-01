@@ -61,10 +61,12 @@ def clean_antiphon(text):
 
 
 def extract_saint_commune():
-    """feast-key -> commune code, from each saint file's first `vide CXX`.
-    Keyed by the full file stem (incl. -r/-t variants, e.g. "07-21r") so a
-    1960-reformed feast resolves to its own commune rather than the base
-    date's saint."""
+    """feast-key -> commune code. Picks up both `vide CXX` (3rd/4th-class
+    saints that take the whole common Office) and a top-level `@Commune/CXX`
+    include (major feasts that have a proper Office but inherit a few parts —
+    e.g. the Matins invitatory & hymn — from their common, like Ss Peter &
+    Paul → C1). Keyed by the full file stem so -r/-t variants resolve to their
+    own common."""
     out = {}
     for fn in sorted(os.listdir(SANCTI_LAT)):
         m0 = re.match(r"(\d{2}-\d{2}[a-z0-9]*)\.txt$", fn)
@@ -73,6 +75,9 @@ def extract_saint_commune():
         key = m0.group(1)
         text = (SANCTI_LAT / fn).read_text(encoding="utf-8", errors="replace")
         m = re.search(r"vide\s+(C\d+[a-z]*(?:-\d+)?)", text)
+        if not m:
+            # `@Commune/C1` (but not `@CommuneCist/...`) at line start.
+            m = re.search(r"(?m)^@Commune/(C\d+[a-z]*(?:-\d+)?)\b", text)
         if m:
             out[key] = m.group(1)
     return out

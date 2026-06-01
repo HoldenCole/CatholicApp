@@ -125,6 +125,13 @@ final class ContentStore {
                 return part
             }
             if let override = overrides[key] { return override }
+            // The Little Chapter is shared across Lauds, Terce, and Vespers.
+            // Feasts/communes that define only `capitulum_laudes` still want it
+            // at Vespers and Terce — inherit it when no explicit override exists.
+            if (key == "vesperae.capitulum" || key == "tertia.capitulum"),
+               let lauds = overrides["capitulum_laudes"] {
+                return lauds
+            }
             if part.type == "collect", let collect = overrides["collect"] {
                 return collect
             }

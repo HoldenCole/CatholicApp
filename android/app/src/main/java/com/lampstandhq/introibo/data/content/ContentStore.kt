@@ -478,6 +478,12 @@ object ContentStore {
         val updatedParts = hour.parts.map { part ->
             val key = part.variationKey
             if (key != null && overrides.containsKey(key)) return@map overrides[key]!!
+            // The Little Chapter is shared across Lauds, Terce, and Vespers;
+            // inherit capitulum_laudes when those slots have no explicit override.
+            if ((key == "vesperae.capitulum" || key == "tertia.capitulum") &&
+                overrides.containsKey("capitulum_laudes")) {
+                return@map overrides["capitulum_laudes"]!!
+            }
             if (part.type == "collect" && overrides.containsKey("collect")) return@map overrides["collect"]!!
             part
         }
