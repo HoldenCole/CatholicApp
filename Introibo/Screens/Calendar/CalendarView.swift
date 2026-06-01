@@ -235,6 +235,7 @@ struct CalendarView: View {
                         gridCell(day)
                     }
                 }
+                .id("\(year)-\(month)")
                 .padding(.horizontal, 16)
                 .padding(.bottom, 20)
             }
