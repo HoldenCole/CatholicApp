@@ -11856,6 +11856,12 @@
       "lat": "Verbum caro factum est, et habitávit in nobis: et vídimus glóriam ejus, glóriam quasi Unigéniti a Patre plenum grátiæ, et veritátis, allelúia, allelúia, allelúia.\n\n[Ant 2] (rubrica cisterciensis)\nVerbum caro factum est, et habitávit in nobis: et vídimus glóriam ejus, glóriam quasi Unigéniti a Patre plenum grátiæ, et veritátis, allelúia, allelúia, allelúia.",
       "type": "antiphon",
       "variationKey": "ant_2c"
+    },
+    "oratio": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
+      "eng": "Grant, we beseech thee, almighty God, that the new birth of thy Only-begotten Son as man may set us free, who are held by the old bondage under the yoke of sin.\n$Per eumdem",
+      "type": "collect",
+      "variationKey": "oratio"
     }
   },
   "nat27": {
@@ -11880,6 +11886,12 @@
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.\n\n[Ant 2] (rubrica cisterciensis)\nV. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.\n\n[Commemoratio 2] (rubrica tridentina nisi rubrica altovadensis)\n\n[Commemoratio 3] (rubrica tridentina nisi rubrica altovadensis)",
       "type": "vr",
       "variationKey": "versum_2"
+    },
+    "oratio": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
+      "eng": "Grant, we beseech thee, almighty God, that the new birth of thy Only-begotten Son as man may set us free, who are held by the old bondage under the yoke of sin.\n$Per eumdem",
+      "type": "collect",
+      "variationKey": "oratio"
     }
   },
   "nat28": {
@@ -11904,6 +11916,12 @@
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.\n\n[Ant 2] (rubrica cisterciensis)\nV. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.\n\n[Commemoratio 2] (rubrica tridentina nisi rubrica altovadensis)\n\n[Commemoratio 3] (rubrica tridentina nisi rubrica altovadensis)",
       "type": "vr",
       "variationKey": "versum_2"
+    },
+    "oratio": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
+      "eng": "Grant, we beseech thee, almighty God, that the new birth of thy Only-begotten Son as man may set us free, who are held by the old bondage under the yoke of sin.\n$Per eumdem",
+      "type": "collect",
+      "variationKey": "oratio"
     }
   },
   "nat29": {
@@ -11961,6 +11979,12 @@
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.\n\n[Ant 2] (rubrica cisterciensis)\nV. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.\n\n[Commemoratio 2] (rubrica tridentina nisi rubrica altovadensis)\n\n[Commemoratio 3] (rubrica tridentina nisi rubrica altovadensis)",
       "type": "vr",
       "variationKey": "versum_2"
+    },
+    "oratio": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
+      "eng": "Grant, we beseech thee, almighty God, that the new birth of thy Only-begotten Son as man may set us free, who are held by the old bondage under the yoke of sin.\n$Per eumdem",
+      "type": "collect",
+      "variationKey": "oratio"
     }
   },
   "nat29o": {
@@ -12081,6 +12105,12 @@
       "eng": "Think not meanly either of the shepherds' words. The shepherds strengthen the faith even of Mary; the shepherds lead God's people to His worship. For, all they that heard it, wondered at those things which were told them by the shepherds. But Mary kept all these things and pondered them in her heart. Let us learn the modesty of the Holy Virgin, that modesty of speech as of body, whereby she laid up in her heart the evidences of her faith.",
       "type": "reading",
       "variationKey": "lectio9"
+    },
+    "oratio": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
+      "eng": "Grant, we beseech thee, almighty God, that the new birth of thy Only-begotten Son as man may set us free, who are held by the old bondage under the yoke of sin.\n$Per eumdem",
+      "type": "collect",
+      "variationKey": "oratio"
     }
   },
   "nat30o": {
@@ -12145,6 +12175,12 @@
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.\n\n[Ant 2] (rubrica cisterciensis)\nV. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.\n\n[Versum 2] (rubrica cisterciensis)\nV. Puer natus est nobis.\nR. Fílius datus est nobis.",
       "type": "vr",
       "variationKey": "versum_2"
+    },
+    "oratio": {
+      "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
+      "eng": "Grant, we beseech thee, almighty God, that the new birth of thy Only-begotten Son as man may set us free, who are held by the old bondage under the yoke of sin.\n$Per eumdem",
+      "type": "collect",
+      "variationKey": "oratio"
     }
   },
   "nat31o": {
