@@ -13,6 +13,18 @@ def norm(s):
 idx=json.load(open("/tmp/ordo_gen/indices.json"))
 COMBINED=idx["combined"]; TEMP=idx["temporal"]
 EMBER=re.compile(r"quattuor temporum septembr")
+# Valid sanctoral keys (from the proper/commune data). When synthesizing a
+# sanctoral winnerKey for a feast that wasn't in the name index, prefer the
+# variant that actually carries propers (e.g. "10-23r" for St Anthony Mary
+# Claret, whose 1960-rubrics office lives under the -r file).
+_sp=json.load(open("Introibo/Resources/sanctoral_propers.json"))
+_sc=json.load(open("Introibo/Resources/saint_commune.json"))
+VALID_SANCT_KEYS=set(_sp)|set(_sc)
+def best_sanct_key(mmdd):
+    if mmdd in VALID_SANCT_KEYS: return mmdd
+    for suf in ("r","o","a"):
+        if mmdd+suf in VALID_SANCT_KEYS: return mmdd+suf
+    return mmdd
 RANK_BY_CLASS={"i. classis":7.0,"ii. classis":5.0,"iii. classis":3.0,"iv. classis":1.0}
 # More accurate rank by class
 RANK_MAP={
@@ -68,6 +80,9 @@ def resumed_temporal_key(name, computed):
         return "pent24-0"
     if "infra hebdomadam xxiv post octavam pentecostes" in nn and computed and re.search(r"-(\d)$",computed):
         return "pent24-"+re.search(r"-(\d)$",computed).group(1)
+    m2=re.search(r"infra hebdomadam (i{1,3}|iv|vi?) post epiphaniam", nn)
+    if m2 and computed and re.search(r"-(\d)$",computed):
+        return f"epi{_ROMAN[m2.group(1)]}-"+re.search(r"-(\d)$",computed).group(1)
     return None
 
 def parse_title(title):
@@ -113,7 +128,7 @@ def assemble(date_str, title, commem):
         wk=centry["winnerKey"]; color=centry["color"]; rank=centry["rank"]
         sanct=(centry["winner"]=="sanctoral")
     elif sanct:
-        wk=mmdd
+        wk=best_sanct_key(mmdd)
     else:
         wk=tkk or tk or ""
     if sanct:
