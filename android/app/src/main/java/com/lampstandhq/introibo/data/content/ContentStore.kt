@@ -562,26 +562,25 @@ object ContentStore {
     private fun applyProperOverrides(hour: Hour, overrides: Map<String, Hour.Part>): Hour {
         val updatedParts = hour.parts.map { part ->
             val key = part.variationKey
-            if (key != null && overrides.containsKey(key)) return@map overrides[key]!!
+            // Base part: a direct full-part override, else the existing part.
+            // (The Triduum supplies both a replacement psalm and its proper
+            // antiphon, so apply the antiphon on top of the replacement.)
+            val base = if (key != null) overrides[key] ?: part else part
+            // Proper per-psalm antiphons: set antiphonLat/antiphonEng on the
+            // psalm part without discarding the psalm text/ref.
+            if (key != null) {
+                val antKey = psalmToAntiphonKey[key]
+                val antPart = if (antKey != null) overrides[antKey] else null
+                if (antPart != null) {
+                    return@map base.copy(antiphonLat = antPart.lat, antiphonEng = antPart.eng)
+                }
+            }
+            if (key != null && overrides.containsKey(key)) return@map base
             // The Little Chapter is shared across Lauds, Terce, and Vespers;
             // inherit capitulum_laudes when those slots have no explicit override.
             if ((key == "vesperae.capitulum" || key == "tertia.capitulum") &&
                 overrides.containsKey("capitulum_laudes")) {
                 return@map overrides["capitulum_laudes"]!!
-            }
-            // Proper per-psalm antiphons: set antiphonLat/antiphonEng on the
-            // psalm part without replacing the whole part (psalm text/ref).
-            if (key != null) {
-                val antKey = psalmToAntiphonKey[key]
-                if (antKey != null) {
-                    val antPart = overrides[antKey]
-                    if (antPart != null) {
-                        return@map part.copy(
-                            antiphonLat = antPart.lat,
-                            antiphonEng = antPart.eng,
-                        )
-                    }
-                }
             }
             if (part.type == "collect" && overrides.containsKey("collect")) return@map overrides["collect"]!!
             part

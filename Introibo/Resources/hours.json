@@ -2069,8 +2069,8 @@
       {
         "type": "antiphon",
         "label": "Antiphon",
-        "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia.",
+        "lat": "Allelúja, * deduc me, Dómine, in sémitam mandatórum tuórum, allelúja, allelúja.",
+        "eng": "Alleluia, * lead me into the path of Thy commandments, alleluia, alleluia.",
         "variationKey": "ant_tertia"
       },
       {
@@ -2376,8 +2376,8 @@
       {
         "type": "antiphon",
         "label": "Antiphon",
-        "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia.",
+        "lat": "Allelúja, * tuus sum ego, salvum me fac, Dómine, allelúja, allelúja.",
+        "eng": "Alleluia, * I am Thine, save Thou me, O Lord, alleluia, alleluia.",
         "variationKey": "ant_sexta"
       },
       {
@@ -2683,8 +2683,8 @@
       {
         "type": "antiphon",
         "label": "Antiphon",
-        "lat": "Allelúja, allelúja, allelúja.",
-        "eng": "Alleluia, alleluia, alleluia.",
+        "lat": "Allelúja, * fáciem tuam, Dómine, illúmina super servum tuum, allelúja, allelúja.",
+        "eng": "Alleluia, * make Thy face to shine upon Thy servant, alleluia, alleluia.",
         "variationKey": "ant_nona"
       },
       {

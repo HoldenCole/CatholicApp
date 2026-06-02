@@ -212,23 +212,26 @@ final class ContentStore {
                 }
                 return part
             }
-            if let override = overrides[key] { return override }
+            // Base part: a direct full-part override, else the existing part.
+            // (The Triduum supplies both a replacement psalm and its proper
+            // antiphon, so apply the antiphon on top of the replacement.)
+            var base = overrides[key] ?? part
+            // Proper per-psalm antiphons (from commune, saint, or temporal):
+            // set antiphonLat/antiphonEng on the psalm part without discarding
+            // the psalm text/ref.
+            if let antKey = Self.psalmToAntiphonKey[key],
+               let antPart = overrides[antKey] {
+                base.antiphonLat = antPart.lat
+                base.antiphonEng = antPart.eng
+                return base
+            }
+            if overrides[key] != nil { return base }
             // The Little Chapter is shared across Lauds, Terce, and Vespers.
             // Feasts/communes that define only `capitulum_laudes` still want it
             // at Vespers and Terce — inherit it when no explicit override exists.
             if (key == "vesperae.capitulum" || key == "tertia.capitulum"),
                let lauds = overrides["capitulum_laudes"] {
                 return lauds
-            }
-            // Proper per-psalm antiphons (from commune or saint proper): set
-            // antiphonLat/antiphonEng on the psalm part without replacing the
-            // whole part (which carries the psalm text/ref).
-            if let antKey = Self.psalmToAntiphonKey[key],
-               let antPart = overrides[antKey] {
-                var modified = part
-                modified.antiphonLat = antPart.lat
-                modified.antiphonEng = antPart.eng
-                return modified
             }
             if part.type == "collect", let collect = overrides["collect"] {
                 return collect

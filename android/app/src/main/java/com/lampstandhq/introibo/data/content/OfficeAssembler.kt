@@ -71,10 +71,14 @@ class OfficeAssembler(
             // Temporal propers (highest priority for non-psalm parts)
             temporalOverrides[key]?.let { return@map it }
 
-            // Seasonal overrides: hymns change every season; antiphons change
-            // only on ferias (feasts use the commune/proper antiphon instead).
+            // Seasonal overrides: hymns change every season. Seasonal antiphons
+            // apply on ferias (feasts keep the commune/proper antiphon), EXCEPT
+            // in Paschaltide where the "Alleluia" antiphon is used universally.
             val isSeasonalAntiphon = part.type == "antiphon" || part.type == "canticle"
-            if (part.type == "hymn" || (isSeasonalAntiphon && !isFestal)) {
+            val antiphonSeasonApplies = !isFestal ||
+                context.season == LiturgicalSeason.EASTER ||
+                context.season == LiturgicalSeason.PENTECOST
+            if (part.type == "hymn" || (isSeasonalAntiphon && antiphonSeasonApplies)) {
                 seasonOverrides[key]?.let { override ->
                     // Antiphon-only override on a canticle: merge the antiphon
                     // without replacing the canticle's verses.
@@ -163,22 +167,39 @@ class OfficeAssembler(
             antiphonApplied
         }
 
+        // Septuagesima through Holy Saturday: strip "Alleluia" from antiphons.
+        // The per-annum Little Hours antiphons embed alleluias; during this
+        // penitential window they are removed, leaving the bare antiphon text.
+        val alleluiaStripped = if (shouldSubstituteLausTibi(context)) {
+            lausTibiApplied.map { part ->
+                if (part.type != "antiphon") return@map part
+                part.copy(
+                    lat = part.lat?.let { stripAlleluia(it) },
+                    eng = part.eng?.let { stripAlleluia(it) },
+                )
+            }
+        } else {
+            lausTibiApplied
+        }
+
         // Post-assembly filtering for Matins nocturn structure and Te Deum.
         val filteredParts = if (template.slug == "matutinum") {
-            filterMatinsParts(lausTibiApplied, matinsNocturns, matinsTeDeum)
+            // Tenebrae: Matins of Holy Thursday, Good Friday, Holy Saturday.
+            val isTenebrae = context.temporalKey in setOf("quad6-4", "quad6-5", "quad6-6")
+            filterMatinsParts(alleluiaStripped, matinsNocturns, matinsTeDeum, isTenebrae)
         } else if (template.slug == "prima") {
             // Festal Prime (Sunday/I-class feast or Easter/Pentecost octave):
             // 4 psalms (Ps 53, 117, 118 I, 118 II). Ferial Prime: 3 psalms.
             // During octave, drop Ps 117 instead.
             if (isOctave && context.dayOfWeek != 0) {
-                lausTibiApplied.filter { it.variationKey != "prima.psalm2" }
+                alleluiaStripped.filter { it.variationKey != "prima.psalm2" }
             } else if (!festalLittleHours) {
-                lausTibiApplied.filter { it.variationKey != "prima.psalm4" }
+                alleluiaStripped.filter { it.variationKey != "prima.psalm4" }
             } else {
-                lausTibiApplied
+                alleluiaStripped
             }
         } else {
-            lausTibiApplied
+            alleluiaStripped
         }
 
         // Insert Preces Feriales for Lauds/Vespers on qualifying ferial days.
@@ -240,11 +261,29 @@ class OfficeAssembler(
     // and 1 nocturn / 9 psalms / 3 lessons for everything else (all Sundays,
     // III-class feasts, ferias, octave days). The nocturn count and Te Deum
     // decision are computed in ContentStore and passed in.
-    private fun filterMatinsParts(parts: List<Hour.Part>, nocturns: Int, includeTeDeum: Boolean): List<Hour.Part> {
-        if (nocturns >= 3) {
-            return if (includeTeDeum) parts else parts.filter { !isTeDeum(it) }
+    private fun filterMatinsParts(parts: List<Hour.Part>, nocturns: Int, includeTeDeum: Boolean, isTenebrae: Boolean = false): List<Hour.Part> {
+        val structured = if (nocturns >= 3) {
+            if (includeTeDeum) parts else parts.filter { !isTeDeum(it) }
+        } else {
+            buildOneNocturn(parts, includeTeDeum)
         }
-        return buildOneNocturn(parts, includeTeDeum)
+        return if (isTenebrae) applyTenebrae(structured) else structured
+    }
+
+    /**
+     * Tenebrae (Matins of the Sacred Triduum) omits the Incipit, Invitatory,
+     * hymn, Te Deum, and Conclusion: it begins directly with the antiphon of
+     * the first psalm and ends after the collect.
+     */
+    private fun applyTenebrae(parts: List<Hour.Part>): List<Hour.Part> {
+        var result = parts
+        val firstHeading = result.indexOfFirst {
+            it.type == "heading" && (it.label ?: "").contains("Noct")
+        }
+        if (firstHeading != -1) {
+            result = result.subList(firstHeading, result.size)
+        }
+        return result.filter { it.type != "closing" && !isTeDeum(it) }
     }
 
     /**
@@ -318,6 +357,22 @@ class OfficeAssembler(
             return true
         }
         return false
+    }
+
+    /**
+     * Remove leading/trailing "Alleluia" words from an antiphon (Septuagesima
+     * through Lent). E.g. "Allelúja, * deduc me, Dómine…, allelúja, allelúja."
+     * -> "Deduc me, Dómine…". Leaves the text unchanged if stripping would
+     * empty it (a purely-alleluiatic antiphon).
+     */
+    private fun stripAlleluia(text: String): String {
+        // Latin "Allelúja" ends in -ja, English "Alleluia" in -ia.
+        var s = text.replace(
+            Regex("[,;]?\\s*[Aa]llel[úu][ji]a[,.]?(\\s*[Aa]llel[úu][ji]a[,.]?)*\\s*$"), "")
+        s = s.replace(Regex("^[Aa]llel[úu][ji]a[,.]?\\s*\\*?\\s*"), "")
+        s = s.trim()
+        if (s.isEmpty()) return text
+        return s.replaceFirstChar { it.uppercase() }
     }
 
     // ---- Gloria Patri suppression (Passiontide & Office of the Dead) ----

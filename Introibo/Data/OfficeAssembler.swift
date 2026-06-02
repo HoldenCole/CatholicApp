@@ -140,10 +140,13 @@ struct OfficeAssembler {
                 return override
             }
 
-            // Seasonal overrides: hymns change every season; antiphons change
-            // only on ferias (feasts use the commune/proper antiphon instead).
+            // Seasonal overrides: hymns change every season. Seasonal antiphons
+            // apply on ferias (feasts keep the commune/proper antiphon), EXCEPT
+            // in Paschaltide where the "Alleluia" antiphon is used universally
+            // — Sundays and feasts included.
             let isSeasonalAntiphon = part.type == "antiphon" || part.type == "canticle"
-            if (part.type == "hymn" || (isSeasonalAntiphon && !isFestal)),
+            let antiphonSeasonApplies = !isFestal || context.season == .easter || context.season == .pentecost
+            if (part.type == "hymn" || (isSeasonalAntiphon && antiphonSeasonApplies)),
                let override = seasonOverrides[key] {
                 // Antiphon-only override on a canticle: merge the antiphon
                 // without replacing the canticle's verses.
@@ -241,24 +244,43 @@ struct OfficeAssembler {
             lausTibiApplied = antiphonApplied
         }
 
+        // Septuagesima through Holy Saturday: strip "Alleluia" from antiphons.
+        // The per-annum Little Hours antiphons embed alleluias (e.g. "Allelúja,
+        // deduc me, Dómine…, allelúja, allelúja"); during this penitential
+        // window the alleluias are removed, leaving the bare antiphon text.
+        let alleluiaStripped: [Hour.Part]
+        if Self.shouldSubstituteLausTibi(context: context) {
+            alleluiaStripped = lausTibiApplied.map { part in
+                guard part.type == "antiphon" else { return part }
+                var modified = part
+                if let lat = part.lat { modified.lat = Self.stripAlleluia(lat) }
+                if let eng = part.eng { modified.eng = Self.stripAlleluia(eng) }
+                return modified
+            }
+        } else {
+            alleluiaStripped = lausTibiApplied
+        }
+
         // Post-assembly filtering for Matins nocturn structure and Te Deum.
         let filteredParts: [Hour.Part]
         if template.slug == "matutinum" {
-            filteredParts = filterMatinsParts(lausTibiApplied, nocturns: matinsNocturns, includeTeDeum: matinsTeDeum)
+            // Tenebrae: Matins of Holy Thursday, Good Friday, Holy Saturday.
+            let isTenebrae = ["quad6-4", "quad6-5", "quad6-6"].contains(context.temporalKey ?? "")
+            filteredParts = filterMatinsParts(alleluiaStripped, nocturns: matinsNocturns, includeTeDeum: matinsTeDeum, isTenebrae: isTenebrae)
         } else if template.slug == "prima" {
             // Festal Prime (Sunday/I-class feast or Easter/Pentecost octave):
             // 4 psalms (Ps 53, 117, 118 I, 118 II). Ferial Prime: 3 psalms
             // (the weekday override replaces psalm1-3, but psalm4 has no ferial
             // override and would leak). During octave, drop Ps 117 instead.
             if isOctave && context.dayOfWeek != 0 {
-                filteredParts = lausTibiApplied.filter { $0.variationKey != "prima.psalm2" }
+                filteredParts = alleluiaStripped.filter { $0.variationKey != "prima.psalm2" }
             } else if !festalLittleHours {
-                filteredParts = lausTibiApplied.filter { $0.variationKey != "prima.psalm4" }
+                filteredParts = alleluiaStripped.filter { $0.variationKey != "prima.psalm4" }
             } else {
-                filteredParts = lausTibiApplied
+                filteredParts = alleluiaStripped
             }
         } else {
-            filteredParts = lausTibiApplied
+            filteredParts = alleluiaStripped
         }
 
         // Insert Preces Feriales for Lauds/Vespers on qualifying ferial days.
@@ -354,13 +376,33 @@ struct OfficeAssembler {
     //     III-class feasts, ferias, octave days.
     // The nocturn count and Te Deum decision are computed in ContentStore
     // (which has the ordo rank/winner) and passed in.
-    private func filterMatinsParts(_ parts: [Hour.Part], nocturns: Int, includeTeDeum: Bool) -> [Hour.Part] {
+    private func filterMatinsParts(_ parts: [Hour.Part], nocturns: Int, includeTeDeum: Bool, isTenebrae: Bool = false) -> [Hour.Part] {
+        let structured: [Hour.Part]
         if nocturns >= 3 {
             // 3-Nocturn Matins: keep all nocturns; include the Te Deum only
             // when the day calls for it.
-            return includeTeDeum ? parts : parts.filter { !isTeDeum($0) }
+            structured = includeTeDeum ? parts : parts.filter { !isTeDeum($0) }
+        } else {
+            structured = buildOneNocturn(parts, includeTeDeum: includeTeDeum)
         }
-        return buildOneNocturn(parts, includeTeDeum: includeTeDeum)
+        return isTenebrae ? applyTenebrae(structured) : structured
+    }
+
+    /// Tenebrae (Matins of the Sacred Triduum) omits the Incipit, Invitatory,
+    /// hymn, Te Deum, and Conclusion: it begins directly with the antiphon of
+    /// the first psalm and ends after the collect. Drops everything before the
+    /// first nocturn heading and the closing conclusion.
+    private func applyTenebrae(_ parts: [Hour.Part]) -> [Hour.Part] {
+        var result = parts
+        // Drop the Incipit / Invitatory / Hymn: everything before Nocturn I.
+        if let firstHeading = result.firstIndex(where: {
+            $0.type == "heading" && ($0.label ?? "").contains("Noct")
+        }) {
+            result = Array(result[firstHeading...])
+        }
+        // Drop the Te Deum and the final Conclusion (Benedicámus Dómino, etc.).
+        result = result.filter { $0.type != "closing" && !isTeDeum($0) }
+        return result
     }
 
     /// Build a 1-nocturn Matins: all 9 psalms (pulled from the three template
@@ -435,6 +477,27 @@ struct OfficeAssembler {
             return true
         }
         return false
+    }
+
+    /// Remove leading/trailing "Alleluia" words from an antiphon (Septuagesima
+    /// through Lent). E.g. "Allelúja, * deduc me, Dómine…, allelúja, allelúja."
+    /// → "Deduc me, Dómine…". Leaves the text unchanged if stripping would
+    /// empty it (a purely-alleluiatic antiphon).
+    static func stripAlleluia(_ text: String) -> String {
+        var s = text
+        // Trailing alleluias: ", allelúja, allelúja." / ", alleluia." etc.
+        // (Latin "Allelúja" ends in -ja, English "Alleluia" in -ia.)
+        s = s.replacingOccurrences(
+            of: "[,;]?\\s*[Aa]llel[úu][ji]a[,.]?(\\s*[Aa]llel[úu][ji]a[,.]?)*\\s*$",
+            with: "", options: .regularExpression)
+        // Leading alleluia + optional antiphon mediant marker: "Allelúja, * "
+        s = s.replacingOccurrences(
+            of: "^[Aa]llel[úu][ji]a[,.]?\\s*\\*?\\s*",
+            with: "", options: .regularExpression)
+        s = s.trimmingCharacters(in: .whitespaces)
+        guard !s.isEmpty else { return text }
+        // Capitalise the new first letter.
+        return s.prefix(1).uppercased() + s.dropFirst()
     }
 
     // MARK: - Gloria Patri suppression (Passiontide & Office of the Dead)
