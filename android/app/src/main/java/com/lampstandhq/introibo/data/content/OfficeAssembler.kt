@@ -71,8 +71,21 @@ class OfficeAssembler(
             // Temporal propers (highest priority for non-psalm parts)
             temporalOverrides[key]?.let { return@map it }
 
-            if (part.type == "hymn") {
-                seasonOverrides[key]?.let { return@map it }
+            // Seasonal overrides: hymns change every season; antiphons change
+            // only on ferias (feasts use the commune/proper antiphon instead).
+            val isSeasonalAntiphon = part.type == "antiphon" || part.type == "canticle"
+            if (part.type == "hymn" || (isSeasonalAntiphon && !isFestal)) {
+                seasonOverrides[key]?.let { override ->
+                    // Antiphon-only override on a canticle: merge the antiphon
+                    // without replacing the canticle's verses.
+                    if (override.antiphonLat != null && override.verses == null && part.verses != null) {
+                        return@map part.copy(
+                            antiphonLat = override.antiphonLat,
+                            antiphonEng = override.antiphonEng,
+                        )
+                    }
+                    return@map override
+                }
             }
 
             // On festal days, keep the template's festal psalms for Lauds

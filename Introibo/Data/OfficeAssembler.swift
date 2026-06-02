@@ -140,7 +140,19 @@ struct OfficeAssembler {
                 return override
             }
 
-            if part.type == "hymn", let override = seasonOverrides[key] {
+            // Seasonal overrides: hymns change every season; antiphons change
+            // only on ferias (feasts use the commune/proper antiphon instead).
+            let isSeasonalAntiphon = part.type == "antiphon" || part.type == "canticle"
+            if (part.type == "hymn" || (isSeasonalAntiphon && !isFestal)),
+               let override = seasonOverrides[key] {
+                // Antiphon-only override on a canticle: merge the antiphon
+                // without replacing the canticle's verses.
+                if override.antiphonLat != nil && override.verses == nil && part.verses != nil {
+                    var merged = part
+                    merged.antiphonLat = override.antiphonLat
+                    merged.antiphonEng = override.antiphonEng
+                    return merged
+                }
                 return override
             }
 
