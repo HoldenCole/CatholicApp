@@ -7044,5 +7044,231 @@
       "type": "antiphon",
       "variationKey": "vesperae.antiphon.psalm5"
     }
+  },
+  "bvm-sab": {
+    "laudes.antiphon.psalm1": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm1",
+      "lat": "Fílii Sion * exsúltent in Rege suo.",
+      "eng": "Let the children of Sion * be joyful in their king."
+    },
+    "laudes.antiphon.psalm2": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm2",
+      "lat": "Quam magnificáta * sunt ópera tua, Dómine.",
+      "eng": "O Lord, * how great are thy works!"
+    },
+    "laudes.antiphon.psalm3": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm3",
+      "lat": "Lætábitur justus * in Dómino et sperábit in eo.",
+      "eng": "The just shall rejoice * in the Lord, and shall hope in him."
+    },
+    "laudes.antiphon.psalm4": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm4",
+      "lat": "Osténde nobis, Dómine, * lucem miseratiónum tuárum.",
+      "eng": "Show us, O Lord, * the light of thy mercies."
+    },
+    "laudes.antiphon.psalm5": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm5",
+      "lat": "Omnis spíritus * laudet Dóminum.",
+      "eng": "Let every thing that hath breath * praise the Lord."
+    },
+    "capitulum_laudes": {
+      "eng": "The daughters of Zion saw her, and called her blessed; the queens also, and they praised her.\n$Deo gratias",
+      "lat": "Vidérunt eam fíliæ Sion, et beatíssimam prædicavérunt et regínæ laudavérunt eam.\n$Deo gratias",
+      "type": "capitulum",
+      "variationKey": "capitulum_laudes"
+    },
+    "versum_1": {
+      "eng": "",
+      "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
+      "type": "vr",
+      "variationKey": "versum_1"
+    },
+    "ant_vespera": {
+      "eng": "",
+      "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
+      "type": "antiphon",
+      "variationKey": "ant_vespera"
+    },
+    "invit": {
+      "eng": "",
+      "lat": "Ave María, grátia plena, * Dóminus tecum.",
+      "type": "antiphon",
+      "variationKey": "invit"
+    },
+    "hymnus_laudes": {
+      "eng": "O glorious lady! throned on high\nAbove the star-illumined sky;\nThereto ordained, thy bosom lent\nTo thy Creator nourishment.\nThrough thy sweet offspring we receive\nThe bliss once lost through hapless Eve;\nAnd heaven to mortals open lies\nNow thou art portal of the skies.\nThou art the door of heaven's high King,\nLight's gateway fair and glistering;\nLife through a Virgin is restored;\nYe ransomed nations, praise the Lord!\nAll honour, laud, and glory be,\nO Jesu, Virgin-born, to thee;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+      "lat": "O gloriósa vírginum,\nSublímis inter sídera,\nQui te creávit, párvulum\nLacténte nutris úbere.\nQuod Heva tristis ábstulit,\nTu reddis almo gérmine:\nIntrent ut astra flébiles,\nCæli reclúdis cárdines.\nTu Regis alti jánua\nEt aula lucis fúlgida:\nVitam datam per Vírginem,\nGentes redémptæ, pláudite.\n* Jesu tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+      "type": "hymn",
+      "variationKey": "hymnus_laudes"
+    },
+    "ant_laudes": {
+      "eng": "",
+      "lat": "Beáta Dei Génetrix, María, * Virgo perpétua, templum Dómini, sacrárium Spíritus Sancti, sola sine exémplo placuísti Dómino nostro Jesu Christo: ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu.",
+      "type": "antiphon",
+      "variationKey": "ant_laudes"
+    },
+    "oratio": {
+      "lat": "Concéde nos fámulos tuos, quǽsumus, Dómine Deus, perpétua mentis et córporis sanitáte gaudére: et, gloriósa beátæ Maríæ semper Vírginis intercessióne, a præsénti liberári tristítia, et ætérna pérfrui lætítia.",
+      "eng": "Grant, we beseech thee, O Lord God, unto all thy servants, that they may remain continually in the enjoyment of soundness both of mind and body, and by the glorious intercession of the Blessed Mary, always a Virgin, may be delivered from present sadness, and enter into the joy of thine eternal gladness.",
+      "type": "collect",
+      "variationKey": "oratio"
+    }
+  },
+  "bvm-sabN": {
+    "laudes.antiphon.psalm1": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm1",
+      "lat": "Fílii Sion * exsúltent in Rege suo.",
+      "eng": "Let the children of Sion * be joyful in their king."
+    },
+    "laudes.antiphon.psalm2": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm2",
+      "lat": "Quam magnificáta * sunt ópera tua, Dómine.",
+      "eng": "O Lord, * how great are thy works!"
+    },
+    "laudes.antiphon.psalm3": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm3",
+      "lat": "Lætábitur justus * in Dómino et sperábit in eo.",
+      "eng": "The just shall rejoice * in the Lord, and shall hope in him."
+    },
+    "laudes.antiphon.psalm4": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm4",
+      "lat": "Osténde nobis, Dómine, * lucem miseratiónum tuárum.",
+      "eng": "Show us, O Lord, * the light of thy mercies."
+    },
+    "laudes.antiphon.psalm5": {
+      "type": "antiphon",
+      "label": "Antíphona",
+      "variationKey": "laudes.antiphon.psalm5",
+      "lat": "Omnis spíritus * laudet Dóminum.",
+      "eng": "Let every thing that hath breath * praise the Lord."
+    },
+    "capitulum_laudes": {
+      "eng": "The daughters of Zion saw her, and called her blessed; the queens also, and they praised her.\n$Deo gratias",
+      "lat": "Vidérunt eam fíliæ Sion, et beatíssimam prædicavérunt et regínæ laudavérunt eam.\n$Deo gratias",
+      "type": "capitulum",
+      "variationKey": "capitulum_laudes"
+    },
+    "versum_1": {
+      "eng": "",
+      "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
+      "type": "vr",
+      "variationKey": "versum_1"
+    },
+    "ant_vespera": {
+      "eng": "",
+      "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
+      "type": "antiphon",
+      "variationKey": "ant_vespera"
+    },
+    "invit": {
+      "eng": "",
+      "lat": "Ave María, grátia plena, * Dóminus tecum.",
+      "type": "antiphon",
+      "variationKey": "invit"
+    },
+    "hymnus_laudes": {
+      "eng": "O glorious lady! throned on high\nAbove the star-illumined sky;\nThereto ordained, thy bosom lent\nTo thy Creator nourishment.\nThrough thy sweet offspring we receive\nThe bliss once lost through hapless Eve;\nAnd heaven to mortals open lies\nNow thou art portal of the skies.\nThou art the door of heaven's high King,\nLight's gateway fair and glistering;\nLife through a Virgin is restored;\nYe ransomed nations, praise the Lord!\nAll honour, laud, and glory be,\nO Jesu, Virgin-born, to thee;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+      "lat": "O gloriósa vírginum,\nSublímis inter sídera,\nQui te creávit, párvulum\nLacténte nutris úbere.\nQuod Heva tristis ábstulit,\nTu reddis almo gérmine:\nIntrent ut astra flébiles,\nCæli reclúdis cárdines.\nTu Regis alti jánua\nEt aula lucis fúlgida:\nVitam datam per Vírginem,\nGentes redémptæ, pláudite.\n* Jesu tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+      "type": "hymn",
+      "variationKey": "hymnus_laudes"
+    },
+    "ant_laudes": {
+      "lat": "Mirábile mystérium * declarátur hódie: innovántur natúræ, Deus homo factus est: id quod fuit permánsit, et quod non erat assúmpsit; non commixtiónem passus, neque divisiónem.",
+      "eng": "This day is set forth a wonderful mystery, * a new thing hath been created in the earth: God is made man. That which He was, He remaineth; and that which He was not, He taketh; suffering therein neither confusion nor division.",
+      "type": "antiphon",
+      "variationKey": "ant_2"
+    },
+    "oratio": {
+      "lat": "Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda, humáno géneri prǽmia præstitísti: tríbue, quǽsumus; ut ipsam pro nobis intercédere sentiámus, per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum Fílium tuum:\nQui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O God, Who, by the fruitful virginity of the Blessed Mary, hast given unto mankind the rewards of everlasting life; grant, we beseech thee, that we may continually feel the might of her intercession, through whom we have worthily received the Author of our life, our Lord Jesus Christ, thy Son:\nWho liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.",
+      "type": "collect",
+      "variationKey": "oratio"
+    }
+  },
+  "bvm-sabP": {
+    "laudes.antiphon.psalm1": {
+      "type": "antiphon",
+      "lat": "Allelúja, * allelúja, allelúja.",
+      "eng": "Alleluia, * alleluia, alleluia."
+    },
+    "laudes.antiphon.psalm2": {
+      "type": "antiphon",
+      "lat": "Allelúja, * allelúja, allelúja.",
+      "eng": "Alleluia, * alleluia, alleluia."
+    },
+    "laudes.antiphon.psalm3": {
+      "type": "antiphon",
+      "lat": "Allelúja, * allelúja, allelúja.",
+      "eng": "Alleluia, * alleluia, alleluia."
+    },
+    "laudes.antiphon.psalm4": {
+      "type": "antiphon",
+      "lat": "Allelúja, * allelúja, allelúja.",
+      "eng": "Alleluia, * alleluia, alleluia."
+    },
+    "laudes.antiphon.psalm5": {
+      "type": "antiphon",
+      "lat": "Allelúja, * allelúja, allelúja.",
+      "eng": "Alleluia, * alleluia, alleluia."
+    },
+    "capitulum_laudes": {
+      "eng": "The daughters of Zion saw her, and called her blessed; the queens also, and they praised her.\n$Deo gratias",
+      "lat": "Vidérunt eam fíliæ Sion, et beatíssimam prædicavérunt et regínæ laudavérunt eam.\n$Deo gratias",
+      "type": "capitulum",
+      "variationKey": "capitulum_laudes"
+    },
+    "versum_1": {
+      "eng": "",
+      "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
+      "type": "vr",
+      "variationKey": "versum_1"
+    },
+    "ant_vespera": {
+      "eng": "",
+      "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
+      "type": "antiphon",
+      "variationKey": "ant_vespera"
+    },
+    "invit": {
+      "eng": "",
+      "lat": "Ave María, grátia plena, * Dóminus tecum.",
+      "type": "antiphon",
+      "variationKey": "invit"
+    },
+    "hymnus_laudes": {
+      "eng": "O glorious lady! throned on high\nAbove the star-illumined sky;\nThereto ordained, thy bosom lent\nTo thy Creator nourishment.\nThrough thy sweet offspring we receive\nThe bliss once lost through hapless Eve;\nAnd heaven to mortals open lies\nNow thou art portal of the skies.\nThou art the door of heaven's high King,\nLight's gateway fair and glistering;\nLife through a Virgin is restored;\nYe ransomed nations, praise the Lord!\nAll honour, laud, and glory be,\nO Jesu, Virgin-born, to thee;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+      "lat": "O gloriósa vírginum,\nSublímis inter sídera,\nQui te creávit, párvulum\nLacténte nutris úbere.\nQuod Heva tristis ábstulit,\nTu reddis almo gérmine:\nIntrent ut astra flébiles,\nCæli reclúdis cárdines.\nTu Regis alti jánua\nEt aula lucis fúlgida:\nVitam datam per Vírginem,\nGentes redémptæ, pláudite.\n* Jesu tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+      "type": "hymn",
+      "variationKey": "hymnus_laudes"
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "lat": "Regína cæli, * lætáre, allelúia; quia quem meruísti portáre, allelúia; resurréxit, sicut dixit, allelúia: ora pro nobis Deum, allelúia.",
+      "eng": "Queen of heaven, rejoice, alleluia: For He whom thou didst merit to bear, alleluia, Hath risen, as He said, alleluia. Pray for us to God, alleluia."
+    },
+    "oratio": {
+      "lat": "Concéde nos fámulos tuos, quǽsumus, Dómine Deus, perpétua mentis et córporis sanitáte gaudére: et, gloriósa beátæ Maríæ semper Vírginis intercessióne, a præsénti liberári tristítia, et ætérna pérfrui lætítia.",
+      "eng": "Grant, we beseech thee, O Lord God, unto all thy servants, that they may remain continually in the enjoyment of soundness both of mind and body, and by the glorious intercession of the Blessed Mary, always a Virgin, may be delivered from present sadness, and enter into the joy of thine eternal gladness.",
+      "type": "collect",
+      "variationKey": "oratio"
+    }
   }
 }

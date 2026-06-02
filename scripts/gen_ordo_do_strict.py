@@ -116,6 +116,15 @@ def assemble(date_str, title, commem):
     tkk=tk
     if EMBER.search(nn) and tk and re.search(r"-(\d)$",tk):
         tkk="093-"+re.search(r"-(\d)$",tk).group(1)
+    # Saturday Office of the BVM ("Sanctæ Mariæ Sabbato"): a IV-class office on
+    # free Saturdays. It uses the Saturday Lauds psalmody (already the festal
+    # Lauds-I scheme) with the proper BVM Benedictus antiphon, hymn and collect,
+    # which live in the dedicated bvm-sab / bvm-sabN commune (the latter for the
+    # Christmas season). Route it to that commune as a low-rank sanctoral office.
+    if "mariae sabbato" in nn or "mari ae sabbato" in nn or nn.startswith("sanctae mariae sabbato"):
+        wkb = {"christmas":"bvm-sabN","easter":"bvm-sabP"}.get(season,"bvm-sab")
+        return {"temporal":tk,"sanctoral":mmdd,"winner":"sanctoral","winnerKey":wkb,
+                "rank":1.0,"name":name,"color":"white","season":season,"commemoration":tk}
     sanct=is_sanctoral_winner(name,nn,tkk or tk,mmdd,season)
     rank=infer_rank(name,cls,season,mmdd)
     color=infer_color(name,season,cls)
