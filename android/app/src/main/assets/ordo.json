@@ -3993,10 +3993,10 @@
     "commemoration": "nat03"
   },
   "2024-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat1-0",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -4004,10 +4004,10 @@
     "commemoration": null
   },
   "2024-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -4015,10 +4015,10 @@
     "commemoration": null
   },
   "2024-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -7997,10 +7997,10 @@
     "commemoration": "nat02"
   },
   "2025-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat1-0",
     "sanctoral": "12-28",
     "winner": "temporal",
-    "winnerKey": "nat03",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -8008,10 +8008,10 @@
     "commemoration": "12-28"
   },
   "2025-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -8019,10 +8019,10 @@
     "commemoration": "12-29"
   },
   "2025-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -8030,10 +8030,10 @@
     "commemoration": null
   },
   "2025-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -12001,10 +12001,10 @@
     "commemoration": "nat01"
   },
   "2026-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat1-0",
     "sanctoral": "12-27",
     "winner": "temporal",
-    "winnerKey": "nat02",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -12023,10 +12023,10 @@
     "commemoration": "nat03"
   },
   "2026-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -12034,10 +12034,10 @@
     "commemoration": "12-29"
   },
   "2026-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -12045,10 +12045,10 @@
     "commemoration": null
   },
   "2026-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -16005,10 +16005,10 @@
     "commemoration": "nat00"
   },
   "2027-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat1-0",
     "sanctoral": "12-26",
     "winner": "temporal",
-    "winnerKey": "nat01",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -16038,10 +16038,10 @@
     "commemoration": "nat03"
   },
   "2027-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -16049,10 +16049,10 @@
     "commemoration": "12-29"
   },
   "2027-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -16060,10 +16060,10 @@
     "commemoration": null
   },
   "2027-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -20064,10 +20064,10 @@
     "commemoration": "nat03"
   },
   "2028-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -20075,10 +20075,10 @@
     "commemoration": "12-29"
   },
   "2028-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -20086,10 +20086,10 @@
     "commemoration": null
   },
   "2028-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat1-0",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -24079,10 +24079,10 @@
     "commemoration": "nat03"
   },
   "2029-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -24090,10 +24090,10 @@
     "commemoration": "12-29"
   },
   "2029-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -24101,10 +24101,10 @@
     "commemoration": null
   },
   "2029-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -28094,10 +28094,10 @@
     "commemoration": "nat03"
   },
   "2030-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat1-0",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -28105,10 +28105,10 @@
     "commemoration": null
   },
   "2030-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -28116,10 +28116,10 @@
     "commemoration": null
   },
   "2030-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -32098,10 +32098,10 @@
     "commemoration": "nat02"
   },
   "2031-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat1-0",
     "sanctoral": "12-28",
     "winner": "temporal",
-    "winnerKey": "nat03",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -32109,10 +32109,10 @@
     "commemoration": "12-28"
   },
   "2031-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -32120,10 +32120,10 @@
     "commemoration": "12-29"
   },
   "2031-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -32131,10 +32131,10 @@
     "commemoration": null
   },
   "2031-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -36102,10 +36102,10 @@
     "commemoration": "nat00"
   },
   "2032-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat1-0",
     "sanctoral": "12-26",
     "winner": "temporal",
-    "winnerKey": "nat01",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -36135,10 +36135,10 @@
     "commemoration": "nat03"
   },
   "2032-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -36146,10 +36146,10 @@
     "commemoration": "12-29"
   },
   "2032-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -36157,10 +36157,10 @@
     "commemoration": null
   },
   "2032-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -40150,10 +40150,10 @@
     "commemoration": "nat03"
   },
   "2033-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -40161,10 +40161,10 @@
     "commemoration": "12-29"
   },
   "2033-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -40172,10 +40172,10 @@
     "commemoration": null
   },
   "2033-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -44165,10 +44165,10 @@
     "commemoration": "nat03"
   },
   "2034-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -44176,10 +44176,10 @@
     "commemoration": "12-29"
   },
   "2034-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -44187,10 +44187,10 @@
     "commemoration": null
   },
   "2034-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat1-0",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -48180,10 +48180,10 @@
     "commemoration": "nat03"
   },
   "2035-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -48191,10 +48191,10 @@
     "commemoration": "12-29"
   },
   "2035-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -48202,10 +48202,10 @@
     "commemoration": null
   },
   "2035-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -52195,10 +52195,10 @@
     "commemoration": "nat02"
   },
   "2036-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat1-0",
     "sanctoral": "12-28",
     "winner": "temporal",
-    "winnerKey": "nat03",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -52206,10 +52206,10 @@
     "commemoration": "12-28"
   },
   "2036-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -52217,10 +52217,10 @@
     "commemoration": "12-29"
   },
   "2036-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -52228,10 +52228,10 @@
     "commemoration": null
   },
   "2036-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -56199,10 +56199,10 @@
     "commemoration": "nat01"
   },
   "2037-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat1-0",
     "sanctoral": "12-27",
     "winner": "temporal",
-    "winnerKey": "nat02",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -56221,10 +56221,10 @@
     "commemoration": "nat03"
   },
   "2037-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -56232,10 +56232,10 @@
     "commemoration": "12-29"
   },
   "2037-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -56243,10 +56243,10 @@
     "commemoration": null
   },
   "2037-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -60203,10 +60203,10 @@
     "commemoration": "nat00"
   },
   "2038-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat1-0",
     "sanctoral": "12-26",
     "winner": "temporal",
-    "winnerKey": "nat01",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -60236,10 +60236,10 @@
     "commemoration": "nat03"
   },
   "2038-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -60247,10 +60247,10 @@
     "commemoration": "12-29"
   },
   "2038-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -60258,10 +60258,10 @@
     "commemoration": null
   },
   "2038-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -64251,10 +64251,10 @@
     "commemoration": "nat03"
   },
   "2039-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -64262,10 +64262,10 @@
     "commemoration": "12-29"
   },
   "2039-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -64273,10 +64273,10 @@
     "commemoration": null
   },
   "2039-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -68277,10 +68277,10 @@
     "commemoration": "nat03"
   },
   "2040-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -68288,10 +68288,10 @@
     "commemoration": "12-29"
   },
   "2040-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -68299,10 +68299,10 @@
     "commemoration": null
   },
   "2040-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -72292,10 +72292,10 @@
     "commemoration": "nat03"
   },
   "2041-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat1-0",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -72303,10 +72303,10 @@
     "commemoration": null
   },
   "2041-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -72314,10 +72314,10 @@
     "commemoration": null
   },
   "2041-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -76296,10 +76296,10 @@
     "commemoration": "nat02"
   },
   "2042-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat1-0",
     "sanctoral": "12-28",
     "winner": "temporal",
-    "winnerKey": "nat03",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -76307,10 +76307,10 @@
     "commemoration": "12-28"
   },
   "2042-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -76318,10 +76318,10 @@
     "commemoration": "12-29"
   },
   "2042-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -76329,10 +76329,10 @@
     "commemoration": null
   },
   "2042-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -80300,10 +80300,10 @@
     "commemoration": "nat01"
   },
   "2043-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat1-0",
     "sanctoral": "12-27",
     "winner": "temporal",
-    "winnerKey": "nat02",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -80322,10 +80322,10 @@
     "commemoration": "nat03"
   },
   "2043-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -80333,10 +80333,10 @@
     "commemoration": "12-29"
   },
   "2043-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -80344,10 +80344,10 @@
     "commemoration": null
   },
   "2043-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -84348,10 +84348,10 @@
     "commemoration": "nat03"
   },
   "2044-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -84359,10 +84359,10 @@
     "commemoration": "12-29"
   },
   "2044-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -84370,10 +84370,10 @@
     "commemoration": null
   },
   "2044-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -88363,10 +88363,10 @@
     "commemoration": "nat03"
   },
   "2045-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -88374,10 +88374,10 @@
     "commemoration": "12-29"
   },
   "2045-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -88385,10 +88385,10 @@
     "commemoration": null
   },
   "2045-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat1-0",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -92378,10 +92378,10 @@
     "commemoration": "nat03"
   },
   "2046-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -92389,10 +92389,10 @@
     "commemoration": "12-29"
   },
   "2046-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -92400,10 +92400,10 @@
     "commemoration": null
   },
   "2046-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -96393,10 +96393,10 @@
     "commemoration": "nat03"
   },
   "2047-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat1-0",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -96404,10 +96404,10 @@
     "commemoration": null
   },
   "2047-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -96415,10 +96415,10 @@
     "commemoration": null
   },
   "2047-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -100397,10 +100397,10 @@
     "commemoration": "nat01"
   },
   "2048-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat1-0",
     "sanctoral": "12-27",
     "winner": "temporal",
-    "winnerKey": "nat02",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -100419,10 +100419,10 @@
     "commemoration": "nat03"
   },
   "2048-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -100430,10 +100430,10 @@
     "commemoration": "12-29"
   },
   "2048-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -100441,10 +100441,10 @@
     "commemoration": null
   },
   "2048-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -104401,10 +104401,10 @@
     "commemoration": "nat00"
   },
   "2049-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat1-0",
     "sanctoral": "12-26",
     "winner": "temporal",
-    "winnerKey": "nat01",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -104434,10 +104434,10 @@
     "commemoration": "nat03"
   },
   "2049-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -104445,10 +104445,10 @@
     "commemoration": "12-29"
   },
   "2049-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 5.0,
     "name": "Diei VI infra Octavam Nativitatis",
     "color": "white",
@@ -104456,10 +104456,10 @@
     "commemoration": null
   },
   "2049-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",
@@ -108449,10 +108449,10 @@
     "commemoration": "nat03"
   },
   "2050-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "temporal",
-    "winnerKey": "nat04",
+    "winnerKey": "nat29",
     "rank": 5.0,
     "name": "Diei V infra Octavam Nativitatis",
     "color": "white",
@@ -108460,10 +108460,10 @@
     "commemoration": "12-29"
   },
   "2050-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat1-0",
     "rank": 5.0,
     "name": "Dominica Infra Octavam Nativitatis",
     "color": "white",
@@ -108471,10 +108471,10 @@
     "commemoration": null
   },
   "2050-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "temporal",
-    "winnerKey": "nat06",
+    "winnerKey": "nat31",
     "rank": 5.0,
     "name": "Diei VII infra Octavam Nativitatis",
     "color": "white",

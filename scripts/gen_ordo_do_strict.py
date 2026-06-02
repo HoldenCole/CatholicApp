@@ -152,6 +152,14 @@ def assemble(date_str, title, commem):
         # Resumed Epiphany Sundays / last Pentecost week recurring in autumn.
         resumed = resumed_temporal_key(name, temporal_key_val)
         if resumed: temporal_key_val = resumed
+        # Christmas-octave days: the app keys the octave offices by calendar day
+        # (nat26..nat31 for Dec 26-31) and the Sunday within the octave as
+        # nat1-0, not by the sequential day-from-Christmas count. Remap so the
+        # office reads the right octave-day formulary (e.g. Dec 31 -> nat31).
+        if "dominica infra octavam nativitatis" in nn:
+            temporal_key_val = "nat1-0"
+        elif d.month==12 and 26<=d.day<=31:
+            temporal_key_val = f"nat{d.day}"
         entry={"temporal":temporal_key_val,"sanctoral":mmdd,"winner":"temporal","winnerKey":temporal_key_val,
                "rank":rank,"name":name,"color":color,"season":season}
         entry["commemoration"]=mmdd if has_commem else None
