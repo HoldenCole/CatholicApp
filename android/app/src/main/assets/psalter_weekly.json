@@ -1747,45 +1747,48 @@
     },
     "tertia.capitulum": {
       "type": "capitulum",
-      "label": "Capitulum (Jer 17:14)",
+      "label": "Capitulum",
+      "variationKey": "tertia.capitulum",
+      "ref": "Jer 17:14",
       "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for thou art my praise.",
-      "variationKey": "tertia.capitulum"
+      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
     },
     "responsory_breve_tertia": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Sana ánimam meam, * Quia peccávi tibi.\nR. Sana ánimam meam, * Quia peccávi tibi.\nV. Ego dixi: Dómine, miserére mei.\nR. Quia peccávi tibi.\n&Gloria\nR. Sana ánimam meam, * Quia peccávi tibi.",
-      "eng": "R.br. Heal my soul, * for I have sinned against thee.\nR. Heal my soul, * for I have sinned against thee.\nV. I said: O Lord, be thou merciful to me.\nR. For I have sinned against thee.\n&Gloria \nR. Heal my soul, * for I have sinned against thee.",
-      "variationKey": "tertia.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_tertia",
+      "lat": "℟.br. Sana ánimam meam, * quia peccávi tibi.\n℣. Ego dixi: Dómine, miserére mei.\n℟. Quia peccávi tibi.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Sana ánimam meam, * quia peccávi tibi.",
+      "eng": "℟.br. Heal my soul, * for I have sinned against Thee.\n℣. I said: O Lord, be Thou merciful to me.\n℟. For I have sinned against Thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Heal my soul, * for I have sinned against Thee."
     },
     "capitulum_sexta": {
       "type": "capitulum",
-      "label": "Capitulum (Rom 13:8)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_sexta",
+      "ref": "Rom 13:8",
       "lat": "Némini quidquam debeátis, nisi ut ínvicem diligátis: qui enim díligit próximum, legem implévit.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
-      "variationKey": "sexta.capitulum"
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law."
     },
     "responsory_breve_sexta": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times.\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "sexta.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_sexta",
+      "lat": "℟.br. Benedícam Dóminum * in omni témpore.\n℣. Semper laus ejus in ore meo.\n℟. In omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Benedícam Dóminum * in omni témpore.",
+      "eng": "℟.br. I will bless the Lord * at all times.\n℣. His praise shall be always in my mouth.\n℟. At all times.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I will bless the Lord * at all times."
     },
     "capitulum_nona": {
       "type": "capitulum",
-      "label": "Capitulum (1 Pet 1:17-19)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_nona",
+      "ref": "1 Pet 1:17-19",
       "lat": "In timóre incolátus vestri témpore conversámini: sciéntes quod non corruptibílibus auro vel argénto redémpti estis, sed pretióso sánguine quasi Agni immaculáti Christi.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
-      "variationKey": "nona.capitulum"
+      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ."
     },
     "responsory_breve_nona": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Rédime me, Dómine, * Et miserére mei.\nR. Rédime me, Dómine, * Et miserére mei.\nV. Pes enim meus stetit in via recta.\nR. Et miserére mei.\n&Gloria\nR. Rédime me, Dómine, * Et miserére mei.",
-      "eng": "R.br. Redeem me, O Lord, * and have mercy on me.\nR. Redeem me, O Lord, * and have mercy on me.\nV. For my feet stood in the right way.\nR. And have mercy on me.\n&Gloria\nR. Redeem me, O Lord, * and have mercy on me.",
-      "variationKey": "nona.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_nona",
+      "lat": "℟.br. Rédime me, Dómine, * et miserére mei.\n℣. Pes enim meus stetit in via recta.\n℟. Et miserére mei.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Rédime me, Dómine, * et miserére mei.",
+      "eng": "℟.br. Redeem me, O Lord, * and have mercy on me.\n℣. For my feet stood in the right way.\n℟. And have mercy on me.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Redeem me, O Lord, * and have mercy on me."
     },
     "laudes.psalm1": {
       "type": "psalm",
@@ -2063,6 +2066,33 @@
       "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
       "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
       "variationKey": "vesperae.responsory"
+    },
+    "versum_tertia": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_tertia",
+      "lat": "℣. Adjútor meus, esto, ne derelínquas me.",
+      "eng": "℣. Be Thou my helper, forsake me not.",
+      "latR": "℟. Neque despícias me, Deus, salutáris meus.",
+      "engR": "℟. Do not Thou despise me, O God my Saviour."
+    },
+    "versum_sexta": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_sexta",
+      "lat": "℣. Dóminus regit me, et nihil mihi déerit.",
+      "eng": "℣. The Lord ruleth me: and I shall want nothing.",
+      "latR": "℟. In loco páscuæ ibi me collocávit.",
+      "engR": "℟. He hath set me in a place of pasture."
+    },
+    "versum_nona": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_nona",
+      "lat": "℣. Ab occúltis meis munda me, Dómine.",
+      "eng": "℣. From my secret ones cleanse me, O Lord.",
+      "latR": "℟. Et ab aliénis parce servo tuo.",
+      "engR": "℟. And from those of others spare Thy servant."
     }
   },
   "tuesday": {
@@ -3636,45 +3666,48 @@
     },
     "tertia.capitulum": {
       "type": "capitulum",
-      "label": "Capitulum (Jer 17:14)",
+      "label": "Capitulum",
+      "variationKey": "tertia.capitulum",
+      "ref": "Jer 17:14",
       "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for thou art my praise.",
-      "variationKey": "tertia.capitulum"
+      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
     },
     "responsory_breve_tertia": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Sana ánimam meam, * Quia peccávi tibi.\nR. Sana ánimam meam, * Quia peccávi tibi.\nV. Ego dixi: Dómine, miserére mei.\nR. Quia peccávi tibi.\n&Gloria\nR. Sana ánimam meam, * Quia peccávi tibi.",
-      "eng": "R.br. Heal my soul, * for I have sinned against thee.\nR. Heal my soul, * for I have sinned against thee.\nV. I said: O Lord, be thou merciful to me.\nR. For I have sinned against thee.\n&Gloria \nR. Heal my soul, * for I have sinned against thee.",
-      "variationKey": "tertia.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_tertia",
+      "lat": "℟.br. Sana ánimam meam, * quia peccávi tibi.\n℣. Ego dixi: Dómine, miserére mei.\n℟. Quia peccávi tibi.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Sana ánimam meam, * quia peccávi tibi.",
+      "eng": "℟.br. Heal my soul, * for I have sinned against Thee.\n℣. I said: O Lord, be Thou merciful to me.\n℟. For I have sinned against Thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Heal my soul, * for I have sinned against Thee."
     },
     "capitulum_sexta": {
       "type": "capitulum",
-      "label": "Capitulum (Rom 13:8)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_sexta",
+      "ref": "Rom 13:8",
       "lat": "Némini quidquam debeátis, nisi ut ínvicem diligátis: qui enim díligit próximum, legem implévit.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
-      "variationKey": "sexta.capitulum"
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law."
     },
     "responsory_breve_sexta": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times.\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "sexta.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_sexta",
+      "lat": "℟.br. Benedícam Dóminum * in omni témpore.\n℣. Semper laus ejus in ore meo.\n℟. In omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Benedícam Dóminum * in omni témpore.",
+      "eng": "℟.br. I will bless the Lord * at all times.\n℣. His praise shall be always in my mouth.\n℟. At all times.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I will bless the Lord * at all times."
     },
     "capitulum_nona": {
       "type": "capitulum",
-      "label": "Capitulum (1 Pet 1:17-19)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_nona",
+      "ref": "1 Pet 1:17-19",
       "lat": "In timóre incolátus vestri témpore conversámini: sciéntes quod non corruptibílibus auro vel argénto redémpti estis, sed pretióso sánguine quasi Agni immaculáti Christi.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
-      "variationKey": "nona.capitulum"
+      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ."
     },
     "responsory_breve_nona": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Rédime me, Dómine, * Et miserére mei.\nR. Rédime me, Dómine, * Et miserére mei.\nV. Pes enim meus stetit in via recta.\nR. Et miserére mei.\n&Gloria\nR. Rédime me, Dómine, * Et miserére mei.",
-      "eng": "R.br. Redeem me, O Lord, * and have mercy on me.\nR. Redeem me, O Lord, * and have mercy on me.\nV. For my feet stood in the right way.\nR. And have mercy on me.\n&Gloria\nR. Redeem me, O Lord, * and have mercy on me.",
-      "variationKey": "nona.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_nona",
+      "lat": "℟.br. Rédime me, Dómine, * et miserére mei.\n℣. Pes enim meus stetit in via recta.\n℟. Et miserére mei.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Rédime me, Dómine, * et miserére mei.",
+      "eng": "℟.br. Redeem me, O Lord, * and have mercy on me.\n℣. For my feet stood in the right way.\n℟. And have mercy on me.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Redeem me, O Lord, * and have mercy on me."
     },
     "laudes.psalm1": {
       "type": "psalm",
@@ -4008,6 +4041,33 @@
       "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
       "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
       "variationKey": "vesperae.responsory"
+    },
+    "versum_tertia": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_tertia",
+      "lat": "℣. Adjútor meus, esto, ne derelínquas me.",
+      "eng": "℣. Be Thou my helper, forsake me not.",
+      "latR": "℟. Neque despícias me, Deus, salutáris meus.",
+      "engR": "℟. Do not Thou despise me, O God my Saviour."
+    },
+    "versum_sexta": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_sexta",
+      "lat": "℣. Dóminus regit me, et nihil mihi déerit.",
+      "eng": "℣. The Lord ruleth me: and I shall want nothing.",
+      "latR": "℟. In loco páscuæ ibi me collocávit.",
+      "engR": "℟. He hath set me in a place of pasture."
+    },
+    "versum_nona": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_nona",
+      "lat": "℣. Ab occúltis meis munda me, Dómine.",
+      "eng": "℣. From my secret ones cleanse me, O Lord.",
+      "latR": "℟. Et ab aliénis parce servo tuo.",
+      "engR": "℟. And from those of others spare Thy servant."
     }
   },
   "wednesday": {
@@ -5857,45 +5917,48 @@
     },
     "tertia.capitulum": {
       "type": "capitulum",
-      "label": "Capitulum (Jer 17:14)",
+      "label": "Capitulum",
+      "variationKey": "tertia.capitulum",
+      "ref": "Jer 17:14",
       "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for thou art my praise.",
-      "variationKey": "tertia.capitulum"
+      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
     },
     "responsory_breve_tertia": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Sana ánimam meam, * Quia peccávi tibi.\nR. Sana ánimam meam, * Quia peccávi tibi.\nV. Ego dixi: Dómine, miserére mei.\nR. Quia peccávi tibi.\n&Gloria\nR. Sana ánimam meam, * Quia peccávi tibi.",
-      "eng": "R.br. Heal my soul, * for I have sinned against thee.\nR. Heal my soul, * for I have sinned against thee.\nV. I said: O Lord, be thou merciful to me.\nR. For I have sinned against thee.\n&Gloria \nR. Heal my soul, * for I have sinned against thee.",
-      "variationKey": "tertia.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_tertia",
+      "lat": "℟.br. Sana ánimam meam, * quia peccávi tibi.\n℣. Ego dixi: Dómine, miserére mei.\n℟. Quia peccávi tibi.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Sana ánimam meam, * quia peccávi tibi.",
+      "eng": "℟.br. Heal my soul, * for I have sinned against Thee.\n℣. I said: O Lord, be Thou merciful to me.\n℟. For I have sinned against Thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Heal my soul, * for I have sinned against Thee."
     },
     "capitulum_sexta": {
       "type": "capitulum",
-      "label": "Capitulum (Rom 13:8)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_sexta",
+      "ref": "Rom 13:8",
       "lat": "Némini quidquam debeátis, nisi ut ínvicem diligátis: qui enim díligit próximum, legem implévit.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
-      "variationKey": "sexta.capitulum"
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law."
     },
     "responsory_breve_sexta": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times.\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "sexta.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_sexta",
+      "lat": "℟.br. Benedícam Dóminum * in omni témpore.\n℣. Semper laus ejus in ore meo.\n℟. In omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Benedícam Dóminum * in omni témpore.",
+      "eng": "℟.br. I will bless the Lord * at all times.\n℣. His praise shall be always in my mouth.\n℟. At all times.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I will bless the Lord * at all times."
     },
     "capitulum_nona": {
       "type": "capitulum",
-      "label": "Capitulum (1 Pet 1:17-19)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_nona",
+      "ref": "1 Pet 1:17-19",
       "lat": "In timóre incolátus vestri témpore conversámini: sciéntes quod non corruptibílibus auro vel argénto redémpti estis, sed pretióso sánguine quasi Agni immaculáti Christi.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
-      "variationKey": "nona.capitulum"
+      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ."
     },
     "responsory_breve_nona": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Rédime me, Dómine, * Et miserére mei.\nR. Rédime me, Dómine, * Et miserére mei.\nV. Pes enim meus stetit in via recta.\nR. Et miserére mei.\n&Gloria\nR. Rédime me, Dómine, * Et miserére mei.",
-      "eng": "R.br. Redeem me, O Lord, * and have mercy on me.\nR. Redeem me, O Lord, * and have mercy on me.\nV. For my feet stood in the right way.\nR. And have mercy on me.\n&Gloria\nR. Redeem me, O Lord, * and have mercy on me.",
-      "variationKey": "nona.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_nona",
+      "lat": "℟.br. Rédime me, Dómine, * et miserére mei.\n℣. Pes enim meus stetit in via recta.\n℟. Et miserére mei.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Rédime me, Dómine, * et miserére mei.",
+      "eng": "℟.br. Redeem me, O Lord, * and have mercy on me.\n℣. For my feet stood in the right way.\n℟. And have mercy on me.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Redeem me, O Lord, * and have mercy on me."
     },
     "laudes.psalm1": {
       "type": "psalm",
@@ -6217,6 +6280,33 @@
       "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
       "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
       "variationKey": "vesperae.responsory"
+    },
+    "versum_tertia": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_tertia",
+      "lat": "℣. Adjútor meus, esto, ne derelínquas me.",
+      "eng": "℣. Be Thou my helper, forsake me not.",
+      "latR": "℟. Neque despícias me, Deus, salutáris meus.",
+      "engR": "℟. Do not Thou despise me, O God my Saviour."
+    },
+    "versum_sexta": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_sexta",
+      "lat": "℣. Dóminus regit me, et nihil mihi déerit.",
+      "eng": "℣. The Lord ruleth me: and I shall want nothing.",
+      "latR": "℟. In loco páscuæ ibi me collocávit.",
+      "engR": "℟. He hath set me in a place of pasture."
+    },
+    "versum_nona": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_nona",
+      "lat": "℣. Ab occúltis meis munda me, Dómine.",
+      "eng": "℣. From my secret ones cleanse me, O Lord.",
+      "latR": "℟. Et ab aliénis parce servo tuo.",
+      "engR": "℟. And from those of others spare Thy servant."
     }
   },
   "friday": {
@@ -8154,45 +8244,48 @@
     },
     "tertia.capitulum": {
       "type": "capitulum",
-      "label": "Capitulum (Jer 17:14)",
+      "label": "Capitulum",
+      "variationKey": "tertia.capitulum",
+      "ref": "Jer 17:14",
       "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for thou art my praise.",
-      "variationKey": "tertia.capitulum"
+      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
     },
     "responsory_breve_tertia": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Sana ánimam meam, * Quia peccávi tibi.\nR. Sana ánimam meam, * Quia peccávi tibi.\nV. Ego dixi: Dómine, miserére mei.\nR. Quia peccávi tibi.\n&Gloria\nR. Sana ánimam meam, * Quia peccávi tibi.",
-      "eng": "R.br. Heal my soul, * for I have sinned against thee.\nR. Heal my soul, * for I have sinned against thee.\nV. I said: O Lord, be thou merciful to me.\nR. For I have sinned against thee.\n&Gloria \nR. Heal my soul, * for I have sinned against thee.",
-      "variationKey": "tertia.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_tertia",
+      "lat": "℟.br. Sana ánimam meam, * quia peccávi tibi.\n℣. Ego dixi: Dómine, miserére mei.\n℟. Quia peccávi tibi.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Sana ánimam meam, * quia peccávi tibi.",
+      "eng": "℟.br. Heal my soul, * for I have sinned against Thee.\n℣. I said: O Lord, be Thou merciful to me.\n℟. For I have sinned against Thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Heal my soul, * for I have sinned against Thee."
     },
     "capitulum_sexta": {
       "type": "capitulum",
-      "label": "Capitulum (Rom 13:8)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_sexta",
+      "ref": "Rom 13:8",
       "lat": "Némini quidquam debeátis, nisi ut ínvicem diligátis: qui enim díligit próximum, legem implévit.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
-      "variationKey": "sexta.capitulum"
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law."
     },
     "responsory_breve_sexta": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times.\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "sexta.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_sexta",
+      "lat": "℟.br. Benedícam Dóminum * in omni témpore.\n℣. Semper laus ejus in ore meo.\n℟. In omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Benedícam Dóminum * in omni témpore.",
+      "eng": "℟.br. I will bless the Lord * at all times.\n℣. His praise shall be always in my mouth.\n℟. At all times.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I will bless the Lord * at all times."
     },
     "capitulum_nona": {
       "type": "capitulum",
-      "label": "Capitulum (1 Pet 1:17-19)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_nona",
+      "ref": "1 Pet 1:17-19",
       "lat": "In timóre incolátus vestri témpore conversámini: sciéntes quod non corruptibílibus auro vel argénto redémpti estis, sed pretióso sánguine quasi Agni immaculáti Christi.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
-      "variationKey": "nona.capitulum"
+      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ."
     },
     "responsory_breve_nona": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Rédime me, Dómine, * Et miserére mei.\nR. Rédime me, Dómine, * Et miserére mei.\nV. Pes enim meus stetit in via recta.\nR. Et miserére mei.\n&Gloria\nR. Rédime me, Dómine, * Et miserére mei.",
-      "eng": "R.br. Redeem me, O Lord, * and have mercy on me.\nR. Redeem me, O Lord, * and have mercy on me.\nV. For my feet stood in the right way.\nR. And have mercy on me.\n&Gloria\nR. Redeem me, O Lord, * and have mercy on me.",
-      "variationKey": "nona.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_nona",
+      "lat": "℟.br. Rédime me, Dómine, * et miserére mei.\n℣. Pes enim meus stetit in via recta.\n℟. Et miserére mei.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Rédime me, Dómine, * et miserére mei.",
+      "eng": "℟.br. Redeem me, O Lord, * and have mercy on me.\n℣. For my feet stood in the right way.\n℟. And have mercy on me.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Redeem me, O Lord, * and have mercy on me."
     },
     "laudes.psalm1": {
       "type": "psalm",
@@ -8550,6 +8643,33 @@
       "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
       "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
       "variationKey": "vesperae.responsory"
+    },
+    "versum_tertia": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_tertia",
+      "lat": "℣. Adjútor meus, esto, ne derelínquas me.",
+      "eng": "℣. Be Thou my helper, forsake me not.",
+      "latR": "℟. Neque despícias me, Deus, salutáris meus.",
+      "engR": "℟. Do not Thou despise me, O God my Saviour."
+    },
+    "versum_sexta": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_sexta",
+      "lat": "℣. Dóminus regit me, et nihil mihi déerit.",
+      "eng": "℣. The Lord ruleth me: and I shall want nothing.",
+      "latR": "℟. In loco páscuæ ibi me collocávit.",
+      "engR": "℟. He hath set me in a place of pasture."
+    },
+    "versum_nona": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_nona",
+      "lat": "℣. Ab occúltis meis munda me, Dómine.",
+      "eng": "℣. From my secret ones cleanse me, O Lord.",
+      "latR": "℟. Et ab aliénis parce servo tuo.",
+      "engR": "℟. And from those of others spare Thy servant."
     }
   },
   "saturday": {
@@ -10603,45 +10723,48 @@
     },
     "tertia.capitulum": {
       "type": "capitulum",
-      "label": "Capitulum (Jer 17:14)",
+      "label": "Capitulum",
+      "variationKey": "tertia.capitulum",
+      "ref": "Jer 17:14",
       "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for thou art my praise.",
-      "variationKey": "tertia.capitulum"
+      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
     },
     "responsory_breve_tertia": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Sana ánimam meam, * Quia peccávi tibi.\nR. Sana ánimam meam, * Quia peccávi tibi.\nV. Ego dixi: Dómine, miserére mei.\nR. Quia peccávi tibi.\n&Gloria\nR. Sana ánimam meam, * Quia peccávi tibi.",
-      "eng": "R.br. Heal my soul, * for I have sinned against thee.\nR. Heal my soul, * for I have sinned against thee.\nV. I said: O Lord, be thou merciful to me.\nR. For I have sinned against thee.\n&Gloria \nR. Heal my soul, * for I have sinned against thee.",
-      "variationKey": "tertia.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_tertia",
+      "lat": "℟.br. Sana ánimam meam, * quia peccávi tibi.\n℣. Ego dixi: Dómine, miserére mei.\n℟. Quia peccávi tibi.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Sana ánimam meam, * quia peccávi tibi.",
+      "eng": "℟.br. Heal my soul, * for I have sinned against Thee.\n℣. I said: O Lord, be Thou merciful to me.\n℟. For I have sinned against Thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Heal my soul, * for I have sinned against Thee."
     },
     "capitulum_sexta": {
       "type": "capitulum",
-      "label": "Capitulum (Rom 13:8)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_sexta",
+      "ref": "Rom 13:8",
       "lat": "Némini quidquam debeátis, nisi ut ínvicem diligátis: qui enim díligit próximum, legem implévit.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
-      "variationKey": "sexta.capitulum"
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law."
     },
     "responsory_breve_sexta": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times.\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "sexta.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_sexta",
+      "lat": "℟.br. Benedícam Dóminum * in omni témpore.\n℣. Semper laus ejus in ore meo.\n℟. In omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Benedícam Dóminum * in omni témpore.",
+      "eng": "℟.br. I will bless the Lord * at all times.\n℣. His praise shall be always in my mouth.\n℟. At all times.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I will bless the Lord * at all times."
     },
     "capitulum_nona": {
       "type": "capitulum",
-      "label": "Capitulum (1 Pet 1:17-19)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_nona",
+      "ref": "1 Pet 1:17-19",
       "lat": "In timóre incolátus vestri témpore conversámini: sciéntes quod non corruptibílibus auro vel argénto redémpti estis, sed pretióso sánguine quasi Agni immaculáti Christi.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
-      "variationKey": "nona.capitulum"
+      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ."
     },
     "responsory_breve_nona": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Rédime me, Dómine, * Et miserére mei.\nR. Rédime me, Dómine, * Et miserére mei.\nV. Pes enim meus stetit in via recta.\nR. Et miserére mei.\n&Gloria\nR. Rédime me, Dómine, * Et miserére mei.",
-      "eng": "R.br. Redeem me, O Lord, * and have mercy on me.\nR. Redeem me, O Lord, * and have mercy on me.\nV. For my feet stood in the right way.\nR. And have mercy on me.\n&Gloria\nR. Redeem me, O Lord, * and have mercy on me.",
-      "variationKey": "nona.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_nona",
+      "lat": "℟.br. Rédime me, Dómine, * et miserére mei.\n℣. Pes enim meus stetit in via recta.\n℟. Et miserére mei.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Rédime me, Dómine, * et miserére mei.",
+      "eng": "℟.br. Redeem me, O Lord, * and have mercy on me.\n℣. For my feet stood in the right way.\n℟. And have mercy on me.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Redeem me, O Lord, * and have mercy on me."
     },
     "laudes.psalm1": {
       "type": "psalm",
@@ -10971,6 +11094,33 @@
       "lat": "R.br. Magnus Dóminus noster, * et magna virtus ejus.\nR. Magnus Dóminus noster, * et magna virtus ejus.\nV. Et sapiéntiæ ejus non est númerus.\nR. Et magna virtus ejus.\n&Gloria\nR. Magnus Dóminus noster, * et magna virtus ejus.",
       "eng": "R.br. Great is our Lord, and great is his power.\nR. Great is our Lord, and great is his power.\nV. and of his wisdom there is no number. \nR. And great is his power.\n&Gloria\nR. Great is our Lord, and great is his power.",
       "variationKey": "vesperae.responsory"
+    },
+    "versum_tertia": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_tertia",
+      "lat": "℣. Adjútor meus, esto, ne derelínquas me.",
+      "eng": "℣. Be Thou my helper, forsake me not.",
+      "latR": "℟. Neque despícias me, Deus, salutáris meus.",
+      "engR": "℟. Do not Thou despise me, O God my Saviour."
+    },
+    "versum_sexta": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_sexta",
+      "lat": "℣. Dóminus regit me, et nihil mihi déerit.",
+      "eng": "℣. The Lord ruleth me: and I shall want nothing.",
+      "latR": "℟. In loco páscuæ ibi me collocávit.",
+      "engR": "℟. He hath set me in a place of pasture."
+    },
+    "versum_nona": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_nona",
+      "lat": "℣. Ab occúltis meis munda me, Dómine.",
+      "eng": "℣. From my secret ones cleanse me, O Lord.",
+      "latR": "℟. Et ab aliénis parce servo tuo.",
+      "engR": "℟. And from those of others spare Thy servant."
     }
   },
   "thursday": {
@@ -12552,45 +12702,48 @@
     },
     "tertia.capitulum": {
       "type": "capitulum",
-      "label": "Capitulum (Jer 17:14)",
+      "label": "Capitulum",
+      "variationKey": "tertia.capitulum",
+      "ref": "Jer 17:14",
       "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for thou art my praise.",
-      "variationKey": "tertia.capitulum"
+      "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise."
     },
     "responsory_breve_tertia": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Sana ánimam meam, * Quia peccávi tibi.\nR. Sana ánimam meam, * Quia peccávi tibi.\nV. Ego dixi: Dómine, miserére mei.\nR. Quia peccávi tibi.\n&Gloria\nR. Sana ánimam meam, * Quia peccávi tibi.",
-      "eng": "R.br. Heal my soul, * for I have sinned against thee.\nR. Heal my soul, * for I have sinned against thee.\nV. I said: O Lord, be thou merciful to me.\nR. For I have sinned against thee.\n&Gloria \nR. Heal my soul, * for I have sinned against thee.",
-      "variationKey": "tertia.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_tertia",
+      "lat": "℟.br. Sana ánimam meam, * quia peccávi tibi.\n℣. Ego dixi: Dómine, miserére mei.\n℟. Quia peccávi tibi.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Sana ánimam meam, * quia peccávi tibi.",
+      "eng": "℟.br. Heal my soul, * for I have sinned against Thee.\n℣. I said: O Lord, be Thou merciful to me.\n℟. For I have sinned against Thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Heal my soul, * for I have sinned against Thee."
     },
     "capitulum_sexta": {
       "type": "capitulum",
-      "label": "Capitulum (Rom 13:8)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_sexta",
+      "ref": "Rom 13:8",
       "lat": "Némini quidquam debeátis, nisi ut ínvicem diligátis: qui enim díligit próximum, legem implévit.",
-      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law.",
-      "variationKey": "sexta.capitulum"
+      "eng": "Owe no man any thing, but to love one another. For he that loveth his neighbour, hath fulfilled the law."
     },
     "responsory_breve_sexta": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times.\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "sexta.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_sexta",
+      "lat": "℟.br. Benedícam Dóminum * in omni témpore.\n℣. Semper laus ejus in ore meo.\n℟. In omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Benedícam Dóminum * in omni témpore.",
+      "eng": "℟.br. I will bless the Lord * at all times.\n℣. His praise shall be always in my mouth.\n℟. At all times.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I will bless the Lord * at all times."
     },
     "capitulum_nona": {
       "type": "capitulum",
-      "label": "Capitulum (1 Pet 1:17-19)",
+      "label": "Capitulum",
+      "variationKey": "capitulum_nona",
+      "ref": "1 Pet 1:17-19",
       "lat": "In timóre incolátus vestri témpore conversámini: sciéntes quod non corruptibílibus auro vel argénto redémpti estis, sed pretióso sánguine quasi Agni immaculáti Christi.",
-      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ.",
-      "variationKey": "nona.capitulum"
+      "eng": "Converse in fear during the time of your sojourning here. Knowing that you were not redeemed with corruptible things as gold or silver, but with the precious blood of Christ."
     },
     "responsory_breve_nona": {
       "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Rédime me, Dómine, * Et miserére mei.\nR. Rédime me, Dómine, * Et miserére mei.\nV. Pes enim meus stetit in via recta.\nR. Et miserére mei.\n&Gloria\nR. Rédime me, Dómine, * Et miserére mei.",
-      "eng": "R.br. Redeem me, O Lord, * and have mercy on me.\nR. Redeem me, O Lord, * and have mercy on me.\nV. For my feet stood in the right way.\nR. And have mercy on me.\n&Gloria\nR. Redeem me, O Lord, * and have mercy on me.",
-      "variationKey": "nona.responsory"
+      "label": "Responsory",
+      "variationKey": "responsory_breve_nona",
+      "lat": "℟.br. Rédime me, Dómine, * et miserére mei.\n℣. Pes enim meus stetit in via recta.\n℟. Et miserére mei.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Rédime me, Dómine, * et miserére mei.",
+      "eng": "℟.br. Redeem me, O Lord, * and have mercy on me.\n℣. For my feet stood in the right way.\n℟. And have mercy on me.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Redeem me, O Lord, * and have mercy on me."
     },
     "laudes.psalm1": {
       "type": "psalm",
@@ -12948,6 +13101,33 @@
       "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
       "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
       "variationKey": "vesperae.responsory"
+    },
+    "versum_tertia": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_tertia",
+      "lat": "℣. Adjútor meus, esto, ne derelínquas me.",
+      "eng": "℣. Be Thou my helper, forsake me not.",
+      "latR": "℟. Neque despícias me, Deus, salutáris meus.",
+      "engR": "℟. Do not Thou despise me, O God my Saviour."
+    },
+    "versum_sexta": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_sexta",
+      "lat": "℣. Dóminus regit me, et nihil mihi déerit.",
+      "eng": "℣. The Lord ruleth me: and I shall want nothing.",
+      "latR": "℟. In loco páscuæ ibi me collocávit.",
+      "engR": "℟. He hath set me in a place of pasture."
+    },
+    "versum_nona": {
+      "type": "vr",
+      "label": "Versiculus",
+      "variationKey": "versum_nona",
+      "lat": "℣. Ab occúltis meis munda me, Dómine.",
+      "eng": "℣. From my secret ones cleanse me, O Lord.",
+      "latR": "℟. Et ab aliénis parce servo tuo.",
+      "engR": "℟. And from those of others spare Thy servant."
     }
   }
 }

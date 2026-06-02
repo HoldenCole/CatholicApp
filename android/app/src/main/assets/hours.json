@@ -2334,22 +2334,26 @@
       {
         "type": "capitulum",
         "label": "Capitulum",
-        "ref": "Jer 17:14",
-        "lat": "Sana me, Dómine, et sanábor: salvum me fac, et salvus ero: quóniam laus mea tu es.",
-        "eng": "Heal me, O Lord, and I shall be healed: save me, and I shall be saved, for Thou art my praise.",
+        "ref": "1 John 4:16",
+        "lat": "Deus cáritas est: et qui manet in caritáte, in Deo manet, et Deus in eo.",
+        "eng": "God is charity: and he that abideth in charity, abideth in God, and God in him.",
         "variationKey": "tertia.capitulum"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
-        "lat": "℟.br. Inclína cor meum, Deus, * in testimónia tua.\n℣. Avérte óculos meos ne vídeant vanitátem.\n℟. In testimónia tua.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Inclína cor meum, Deus, in testimónia tua.",
-        "eng": "℟.br. Incline my heart, O God, * unto Thy testimonies.\n℣. Turn away my eyes that they may not behold vanity.\n℟. Unto Thy testimonies.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Incline my heart, O God, unto Thy testimonies.",
+        "lat": "℟.br. Inclína cor meum, Deus, * in testimónia tua.\n℣. Avérte óculos meos ne vídeant vanitátem: in via tua vivífica me.\n℟. In testimónia tua.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Inclína cor meum, Deus, * in testimónia tua.",
+        "eng": "℟.br. Incline my heart, O God, * unto Thy testimonies.\n℣. Turn away my eyes that they may not behold vanity: quicken me in Thy way.\n℟. Unto Thy testimonies.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. Incline my heart, O God, * unto Thy testimonies.",
         "variationKey": "responsory_breve_tertia"
       },
       {
         "type": "vr",
         "label": "Versicle",
-        "variationKey": "versum_tertia"
+        "variationKey": "versum_tertia",
+        "lat": "℣. Ego dixi: Dómine, miserére mei.",
+        "eng": "℣. I said: O Lord, be Thou merciful to me.",
+        "latR": "℟. Sana ánimam meam, quia peccávi tibi.",
+        "engR": "℟. Heal my soul, for I have sinned against Thee."
       },
       {
         "type": "pater",
@@ -2639,20 +2643,24 @@
         "label": "Capitulum",
         "ref": "Gal 6:2",
         "lat": "Alter altérius ónera portáte, et sic adimplébitis legem Christi.",
-        "eng": "Bear ye one another's burdens; and so you shall fulfil the law of Christ.",
+        "eng": "Bear ye one another's burdens; and so you shall fulfill the law of Christ.",
         "variationKey": "capitulum_sexta"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
-        "lat": "℟.br. In ætérnum, Dómine, * pérmanet verbum tuum.\n℣. In sæculum sæculi véritas tua.\n℟. Pérmanet verbum tuum.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. In ætérnum, Dómine, pérmanet verbum tuum.",
-        "eng": "℟.br. For ever, O Lord, * Thy word standeth firm.\n℣. Thy truth endureth to all generations.\n℟. Thy word standeth firm.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. For ever, O Lord, Thy word standeth firm.",
+        "lat": "℟.br. In ætérnum, Dómine, * pérmanet verbum tuum.\n℣. In sǽculum sǽculi véritas tua.\n℟. Pérmanet verbum tuum.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. In ætérnum, Dómine, * pérmanet verbum tuum.",
+        "eng": "℟.br. For ever, O Lord, * Thy word standeth firm in heaven.\n℣. Thy truth for ever and ever.\n℟. Thy word standeth firm in heaven.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. For ever, O Lord, * Thy word standeth firm in heaven.",
         "variationKey": "responsory_breve_sexta"
       },
       {
         "type": "vr",
         "label": "Versicle",
-        "variationKey": "versum_sexta"
+        "variationKey": "versum_sexta",
+        "lat": "℣. Dóminus regit me, et nihil mihi déerit.",
+        "eng": "℣. The Lord ruleth me: and I shall want nothing.",
+        "latR": "℟. In loco páscuæ ibi me collocávit.",
+        "engR": "℟. He hath set me in a place of pasture."
       },
       {
         "type": "pater",
@@ -2940,22 +2948,26 @@
       {
         "type": "capitulum",
         "label": "Capitulum",
-        "ref": "Deut 4:31",
-        "lat": "Quia Deus miséricors Dóminus Deus tuus est: non dimíttet te, nec omníno discoóperit, neque obliviscétur testaménti, in quo jurávit pátribus tuis.",
-        "eng": "For the Lord thy God is a merciful God: He will not leave thee, nor altogether destroy thee, nor forget the covenant by which He swore to thy fathers.",
+        "ref": "1 Cor 6:20",
+        "lat": "Empti enim estis prétio magno. Glorificáte et portáte Deum in córpore vestro.",
+        "eng": "For you are bought with a great price. Glorify and bear God in your body.",
         "variationKey": "capitulum_nona"
       },
       {
         "type": "responsory",
         "label": "Responsorium Breve",
-        "lat": "℟.br. Clamávi et exaudísti me, Dómine, * custódi me.\n℣. A lábiis iníquis et a lingua dolósa.\n℟. Custódi me.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Clamávi et exaudísti me, Dómine, custódi me.",
-        "eng": "℟.br. I cried and Thou didst hear me, O Lord, * guard me.\n℣. From wicked lips and a deceitful tongue.\n℟. Guard me.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I cried and Thou didst hear me, O Lord, guard me.",
+        "lat": "℟.br. Clamávi in toto corde meo: * exáudi me, Dómine.\n℣. Justificatiónes tuas requíram.\n℟. Exáudi me, Dómine.\nGlória Patri, et Fílio, et Spirítui Sancto.\n℟. Clamávi in toto corde meo: * exáudi me, Dómine.",
+        "eng": "℟.br. I cried with my whole heart: * hear me, O Lord.\n℣. I will seek Thy justifications.\n℟. Hear me, O Lord.\nGlory be to the Father, and to the Son, and to the Holy Ghost.\n℟. I cried with my whole heart: * hear me, O Lord.",
         "variationKey": "responsory_breve_nona"
       },
       {
         "type": "vr",
         "label": "Versicle",
-        "variationKey": "versum_nona"
+        "variationKey": "versum_nona",
+        "lat": "℣. Ab occúltis meis munda me, Dómine.",
+        "eng": "℣. From my secret ones cleanse me, O Lord.",
+        "latR": "℟. Et ab aliénis parce servo tuo.",
+        "engR": "℟. And from those of others spare Thy servant."
       },
       {
         "type": "pater",
