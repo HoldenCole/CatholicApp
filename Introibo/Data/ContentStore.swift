@@ -147,6 +147,19 @@ final class ContentStore {
             }
         }
 
+        // Dec 17-23 ("O Antiphon" days): override the Little Hours antiphons
+        // with date-specific ones (these change daily, unlike the per-week
+        // Advent antiphons applied by the temporal key above).
+        let cal = Calendar.liturgical
+        let month = cal.component(.month, from: ctx.date)
+        let day = cal.component(.day, from: ctx.date)
+        if ctx.season == .advent && month == 12 && day >= 17 && day <= 23 {
+            let dateKey = "adv-12-\(day)"
+            if let dateOverrides = officeAssembler.temporalPropers[dateKey] {
+                assembled = applyProperOverrides(assembled, overrides: dateOverrides)
+            }
+        }
+
         return assembled
     }
 
@@ -180,6 +193,15 @@ final class ContentStore {
         "vesperae.psalm3":  "vesperae.antiphon.psalm3",
         "vesperae.psalm4":  "vesperae.antiphon.psalm4",
         "vesperae.psalm5":  "vesperae.antiphon.psalm5",
+        "matutinum.psalm2":  "matutinum.antiphon.psalm1",
+        "matutinum.psalm3":  "matutinum.antiphon.psalm2",
+        "matutinum.psalm4":  "matutinum.antiphon.psalm3",
+        "matutinum.psalm5":  "matutinum.antiphon.psalm4",
+        "matutinum.psalm6":  "matutinum.antiphon.psalm5",
+        "matutinum.psalm7":  "matutinum.antiphon.psalm6",
+        "matutinum.psalm8":  "matutinum.antiphon.psalm7",
+        "matutinum.psalm9":  "matutinum.antiphon.psalm8",
+        "matutinum.psalm10": "matutinum.antiphon.psalm9",
     ]
 
     private func applyProperOverrides(_ hour: Hour, overrides: [String: Hour.Part]) -> Hour {

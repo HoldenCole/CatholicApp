@@ -200,6 +200,60 @@
       "eng": "℣. Thy friends, O Lord, are made exceedingly honourable.",
       "latR": "℟. Nimis confortátus est principátus eórum.",
       "engR": "℟. Their principality is exceedingly strengthened."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "In omnem terram * exívit sonus eórum, et in fines orbis terræ verba eórum.",
+      "eng": "Their sound * hath gone forth into all the earth: and their words unto the ends of the world."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Clamavérunt justi, * et Dóminus exaudívit eos.",
+      "eng": "The just cried * and the Lord heard them."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Constítues eos * príncipes super omnem terram: mémores erunt nóminis tui, Dómine.",
+      "eng": "Thou shalt make them princes * over all the earth. They shall remember thy name, O Lord."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Príncipes populórum * congregáti sunt cum Deo Ábraham.",
+      "eng": "The princes of the people * are gathered together, with the God of Abraham."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Dedísti hereditátem * timéntibus nomen tuum, Dómine.",
+      "eng": "Thou hast given an inheritance * to them that fear thy name, O Lord."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Annuntiavérunt * ópera Dei, et facta ejus intellexérunt.",
+      "eng": "They declared * the works of God, and understood his doings."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Exaltabúntur * córnua justi, allelúja.",
+      "eng": "The horns of the just * shall be exalted. Alleluia."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Lux orta est * justo, allelúja, rectis corde lætítia, allelúja.",
+      "eng": "Light is risen * to the just, alleluia, and joy to the right of heart. Alleluia."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Custodiébant * testimónia ejus, et præcépta ejus, allelúja.",
+      "eng": "They kept his testimonies, * and the commandment which he gave them. Alleluia."
     }
   },
   "C10": {
@@ -763,6 +817,60 @@
       "eng": "℣. Thy friends, O Lord, are made exceedingly honourable.",
       "latR": "℟. Nimis confortátus est principátus eórum.",
       "engR": "℟. Their principality is exceedingly strengthened."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "In omnem terram * exívit sonus eórum, et in fines orbis terræ verba eórum.",
+      "eng": "Their sound * hath gone forth into all the earth: and their words unto the ends of the world."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Clamavérunt justi, * et Dóminus exaudívit eos.",
+      "eng": "The just cried * and the Lord heard them."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Constítues eos * príncipes super omnem terram: mémores erunt nóminis tui, Dómine.",
+      "eng": "Thou shalt make them princes * over all the earth. They shall remember thy name, O Lord."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Príncipes populórum * congregáti sunt cum Deo Ábraham.",
+      "eng": "The princes of the people * are gathered together, with the God of Abraham."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Dedísti hereditátem * timéntibus nomen tuum, Dómine.",
+      "eng": "Thou hast given an inheritance * to them that fear thy name, O Lord."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Annuntiavérunt * ópera Dei, et facta ejus intellexérunt.",
+      "eng": "They declared * the works of God, and understood his doings."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Exaltabúntur * córnua justi, allelúja.",
+      "eng": "The horns of the just * shall be exalted. Alleluia."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Lux orta est * justo, allelúja, rectis corde lætítia, allelúja.",
+      "eng": "Light is risen * to the just, alleluia, and joy to the right of heart. Alleluia."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Custodiébant * testimónia ejus, et præcépta ejus, allelúja.",
+      "eng": "They kept his testimonies, * and the commandment which he gave them. Alleluia."
     }
   },
   "C2": {
@@ -966,6 +1074,60 @@
       "eng": "℣. His glory is great in thy salvation.",
       "latR": "℟. Glóriam et magnum decórem impónes super eum.",
       "engR": "℟. Honour and great majesty shalt Thou lay upon him."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "In lege Dómini * fuit volúntas ejus die ac nocte.",
+      "eng": "His delight * was in the law of the Lord day and night."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Prǽdicans * præcéptum Dómini constitútus est in monte sancto ejus.",
+      "eng": "The Lord hath set him * upon His holy hill, to declare His decree."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Voce mea * ad Dóminum clamávi: et exaudívit me de monte sancto suo.",
+      "eng": "I cried unto the Lord * with my voice, and He heard me out of His holy hill."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Fílii hóminum * scitóte quia Dóminus sanctum suum mirificávit.",
+      "eng": "O ye sons of men, * know that the Lord hath set apart him that is holy for Himself."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Scuto bonæ voluntátis * tuæ coronásti eum Dómine.",
+      "eng": "O Lord, Thou hast compassed him * with thy favour as with a shield."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "In univérsa terra * glória et honóre coronásti eum.",
+      "eng": "Thou hast crowned him * with glory and honour in all the earth."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Justus Dóminus, * et justítiam diléxit: æquitátem vidit vultus ejus.",
+      "eng": "The righteous Lord * loveth righteousness; His countenance doth behold uprightness."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Habitábit * in tabernáculo tuo: requiéscet in monte sancto tuo.",
+      "eng": "He shall dwell * in thy tabernacle, He shall rest upon thy holy hill."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Posuísti, Dómine, * super caput ejus corónam de lápide pretióso.",
+      "eng": "O Lord, Thou hast set a crown * of precious stones upon his head."
     }
   },
   "C2-1": {
@@ -1333,6 +1495,60 @@
       "eng": "℣. His glory is great in thy salvation.",
       "latR": "℟. Glóriam et magnum decórem impónes super eum.",
       "engR": "℟. Honour and great majesty shalt Thou lay upon him."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "In lege Dómini * fuit volúntas ejus die ac nocte.",
+      "eng": "His delight * was in the law of the Lord day and night."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Prǽdicans * præcéptum Dómini constitútus est in monte sancto ejus.",
+      "eng": "The Lord hath set him * upon His holy hill, to declare His decree."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Voce mea * ad Dóminum clamávi: et exaudívit me de monte sancto suo.",
+      "eng": "I cried unto the Lord * with my voice, and He heard me out of His holy hill."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Fílii hóminum * scitóte quia Dóminus sanctum suum mirificávit.",
+      "eng": "O ye sons of men, * know that the Lord hath set apart him that is holy for Himself."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Scuto bonæ voluntátis * tuæ coronásti eum Dómine.",
+      "eng": "O Lord, Thou hast compassed him * with thy favour as with a shield."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "In univérsa terra * glória et honóre coronásti eum.",
+      "eng": "Thou hast crowned him * with glory and honour in all the earth."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Justus Dóminus, * et justítiam diléxit: æquitátem vidit vultus ejus.",
+      "eng": "The righteous Lord * loveth righteousness; His countenance doth behold uprightness."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Habitábit * in tabernáculo tuo: requiéscet in monte sancto tuo.",
+      "eng": "He shall dwell * in thy tabernacle, He shall rest upon thy holy hill."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Posuísti, Dómine, * super caput ejus corónam de lápide pretióso.",
+      "eng": "O Lord, Thou hast set a crown * of precious stones upon his head."
     }
   },
   "C2a-1": {
@@ -1700,6 +1916,60 @@
       "eng": "℣. His glory is great in thy salvation.",
       "latR": "℟. Glóriam et magnum decórem impónes super eum.",
       "engR": "℟. Honour and great majesty shalt Thou lay upon him."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "In lege Dómini * fuit volúntas ejus die ac nocte.",
+      "eng": "His delight * was in the law of the Lord day and night."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Prǽdicans * præcéptum Dómini constitútus est in monte sancto ejus.",
+      "eng": "The Lord hath set him * upon His holy hill, to declare His decree."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Voce mea * ad Dóminum clamávi: et exaudívit me de monte sancto suo.",
+      "eng": "I cried unto the Lord * with my voice, and He heard me out of His holy hill."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Fílii hóminum * scitóte quia Dóminus sanctum suum mirificávit.",
+      "eng": "O ye sons of men, * know that the Lord hath set apart him that is holy for Himself."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Scuto bonæ voluntátis * tuæ coronásti eum Dómine.",
+      "eng": "O Lord, Thou hast compassed him * with thy favour as with a shield."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "In univérsa terra * glória et honóre coronásti eum.",
+      "eng": "Thou hast crowned him * with glory and honour in all the earth."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Justus Dóminus, * et justítiam diléxit: æquitátem vidit vultus ejus.",
+      "eng": "The righteous Lord * loveth righteousness; His countenance doth behold uprightness."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Habitábit * in tabernáculo tuo: requiéscet in monte sancto tuo.",
+      "eng": "He shall dwell * in thy tabernacle, He shall rest upon thy holy hill."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Posuísti, Dómine, * super caput ejus corónam de lápide pretióso.",
+      "eng": "O Lord, Thou hast set a crown * of precious stones upon his head."
     }
   },
   "C2b-1": {
@@ -2067,6 +2337,60 @@
       "eng": "℣. The righteous live for evermore.",
       "latR": "℟. Et apud Dóminum est merces eórum.",
       "engR": "℟. Their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Secus decúrsus aquárum * plantávit víneam justórum, et in lege Dómini fuit volúntas eórum.",
+      "eng": "By the rivers of water * hath the Lord planted the vineyard of the righteous, and in His Law do they meditate day and night."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Tamquam aurum * in fornáce probávit eléctos Dóminus: et quasi holocáusta accépit eos in ætérnum.",
+      "eng": "As gold in the furnace * hath the Lord tried His chosen ones, and received them for ever as a burnt-offering."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Si coram homínibus * torménta passi sunt, spes electórum est immortális in ætérnum.",
+      "eng": "Though the elect be punished * in the sight of men, yet is their hope full of immortality for ever."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Dabo Sanctis meis * locum nominátum in regno Patris mei, dicit Dóminus.",
+      "eng": "I will give unto My Saints a place * in the kingdom of My Father, every one by his own name, saith the Lord."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Sanctis, qui in terra sunt ejus, * mirificávit omnes voluntátes meas inter illos.",
+      "eng": "To the Saints that are in the earth * Thou hast made all my counsels admirable."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Sancti qui sperant in Dómino, * habébunt fortitúdinem, assúment pennas ut áquilæ, volábunt, et non defícient.",
+      "eng": "The Saints that wait upon the Lord * shall renew their strength; they shall mount up with wings as eagles, they shall fly and not faint."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Justi autem * in perpétuum vivent, et apud Dóminum est merces eórum.",
+      "eng": "The righteous live * for evermore; their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Tradidérunt * córpora sua in mortem, ne servírent idólis: ídeo coronáti póssident palmam.",
+      "eng": "They gave up their bodies unto death * rather than serve idols and therefore have they crowns on their heads and palms in their hands."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Ecce merces * Sanctórum copiósa est apud Deum: ipsi vero mórtui sunt pro Christo, et vivent in ætérnum.",
+      "eng": "Behold, how great with God is the reward * of His Saints; yea, they who died for Christ's sake shall live for ever and ever."
     }
   },
   "C3a": {
@@ -2270,6 +2594,60 @@
       "eng": "℣. The righteous live for evermore.",
       "latR": "℟. Et apud Dóminum est merces eórum.",
       "engR": "℟. Their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Secus decúrsus aquárum * plantávit víneam justórum, et in lege Dómini fuit volúntas eórum.",
+      "eng": "By the rivers of water * hath the Lord planted the vineyard of the righteous, and in His Law do they meditate day and night."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Tamquam aurum * in fornáce probávit eléctos Dóminus: et quasi holocáusta accépit eos in ætérnum.",
+      "eng": "As gold in the furnace * hath the Lord tried His chosen ones, and received them for ever as a burnt-offering."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Si coram homínibus * torménta passi sunt, spes electórum est immortális in ætérnum.",
+      "eng": "Though the elect be punished * in the sight of men, yet is their hope full of immortality for ever."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Dabo Sanctis meis * locum nominátum in regno Patris mei, dicit Dóminus.",
+      "eng": "I will give unto My Saints a place * in the kingdom of My Father, every one by his own name, saith the Lord."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Sanctis, qui in terra sunt ejus, * mirificávit omnes voluntátes meas inter illos.",
+      "eng": "To the Saints that are in the earth * Thou hast made all my counsels admirable."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Sancti qui sperant in Dómino, * habébunt fortitúdinem, assúment pennas ut áquilæ, volábunt, et non defícient.",
+      "eng": "The Saints that wait upon the Lord * shall renew their strength; they shall mount up with wings as eagles, they shall fly and not faint."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Justi autem * in perpétuum vivent, et apud Dóminum est merces eórum.",
+      "eng": "The righteous live * for evermore; their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Tradidérunt * córpora sua in mortem, ne servírent idólis: ídeo coronáti póssident palmam.",
+      "eng": "They gave up their bodies unto death * rather than serve idols and therefore have they crowns on their heads and palms in their hands."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Ecce merces * Sanctórum copiósa est apud Deum: ipsi vero mórtui sunt pro Christo, et vivent in ætérnum.",
+      "eng": "Behold, how great with God is the reward * of His Saints; yea, they who died for Christ's sake shall live for ever and ever."
     }
   },
   "C3a-1": {
@@ -2473,6 +2851,60 @@
       "eng": "℣. The righteous live for evermore.",
       "latR": "℟. Et apud Dóminum est merces eórum.",
       "engR": "℟. Their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Secus decúrsus aquárum * plantávit víneam justórum, et in lege Dómini fuit volúntas eórum.",
+      "eng": "By the rivers of water * hath the Lord planted the vineyard of the righteous, and in His Law do they meditate day and night."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Tamquam aurum * in fornáce probávit eléctos Dóminus: et quasi holocáusta accépit eos in ætérnum.",
+      "eng": "As gold in the furnace * hath the Lord tried His chosen ones, and received them for ever as a burnt-offering."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Si coram homínibus * torménta passi sunt, spes electórum est immortális in ætérnum.",
+      "eng": "Though the elect be punished * in the sight of men, yet is their hope full of immortality for ever."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Dabo Sanctis meis * locum nominátum in regno Patris mei, dicit Dóminus.",
+      "eng": "I will give unto My Saints a place * in the kingdom of My Father, every one by his own name, saith the Lord."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Sanctis, qui in terra sunt ejus, * mirificávit omnes voluntátes meas inter illos.",
+      "eng": "To the Saints that are in the earth * Thou hast made all my counsels admirable."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Sancti qui sperant in Dómino, * habébunt fortitúdinem, assúment pennas ut áquilæ, volábunt, et non defícient.",
+      "eng": "The Saints that wait upon the Lord * shall renew their strength; they shall mount up with wings as eagles, they shall fly and not faint."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Justi autem * in perpétuum vivent, et apud Dóminum est merces eórum.",
+      "eng": "The righteous live * for evermore; their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Tradidérunt * córpora sua in mortem, ne servírent idólis: ídeo coronáti póssident palmam.",
+      "eng": "They gave up their bodies unto death * rather than serve idols and therefore have they crowns on their heads and palms in their hands."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Ecce merces * Sanctórum copiósa est apud Deum: ipsi vero mórtui sunt pro Christo, et vivent in ætérnum.",
+      "eng": "Behold, how great with God is the reward * of His Saints; yea, they who died for Christ's sake shall live for ever and ever."
     }
   },
   "C3b": {
@@ -2676,6 +3108,60 @@
       "eng": "℣. The righteous live for evermore.",
       "latR": "℟. Et apud Dóminum est merces eórum.",
       "engR": "℟. Their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Secus decúrsus aquárum * plantávit víneam justórum, et in lege Dómini fuit volúntas eórum.",
+      "eng": "By the rivers of water * hath the Lord planted the vineyard of the righteous, and in His Law do they meditate day and night."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Tamquam aurum * in fornáce probávit eléctos Dóminus: et quasi holocáusta accépit eos in ætérnum.",
+      "eng": "As gold in the furnace * hath the Lord tried His chosen ones, and received them for ever as a burnt-offering."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Si coram homínibus * torménta passi sunt, spes electórum est immortális in ætérnum.",
+      "eng": "Though the elect be punished * in the sight of men, yet is their hope full of immortality for ever."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Dabo Sanctis meis * locum nominátum in regno Patris mei, dicit Dóminus.",
+      "eng": "I will give unto My Saints a place * in the kingdom of My Father, every one by his own name, saith the Lord."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Sanctis, qui in terra sunt ejus, * mirificávit omnes voluntátes meas inter illos.",
+      "eng": "To the Saints that are in the earth * Thou hast made all my counsels admirable."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Sancti qui sperant in Dómino, * habébunt fortitúdinem, assúment pennas ut áquilæ, volábunt, et non defícient.",
+      "eng": "The Saints that wait upon the Lord * shall renew their strength; they shall mount up with wings as eagles, they shall fly and not faint."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Justi autem * in perpétuum vivent, et apud Dóminum est merces eórum.",
+      "eng": "The righteous live * for evermore; their reward also is with the Lord."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Tradidérunt * córpora sua in mortem, ne servírent idólis: ídeo coronáti póssident palmam.",
+      "eng": "They gave up their bodies unto death * rather than serve idols and therefore have they crowns on their heads and palms in their hands."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Ecce merces * Sanctórum copiósa est apud Deum: ipsi vero mórtui sunt pro Christo, et vivent in ætérnum.",
+      "eng": "Behold, how great with God is the reward * of His Saints; yea, they who died for Christ's sake shall live for ever and ever."
     }
   },
   "C4": {
@@ -2879,6 +3365,60 @@
       "eng": "℣. Thou art a Priest for ever.",
       "latR": "℟. Secúndum órdinem Melchísedech.",
       "engR": "℟. After the order of Melchisedek."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Beátus vir, * qui in lege Dómini meditátur: volúntas ejus pérmanet die ac nocte, et ómnia quæcúmque fáciet, semper prosperabúntur.",
+      "eng": "Blessed is the man * that doth meditate in the law of the Lord; his delight is therein day and night, and whatsoever he doeth shall prosper."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Beátus iste Sanctus, * qui confísus est in Dómino, prædicávit præcéptum Dómini, constitútus est in monte sancto ejus.",
+      "eng": "Blessed and holy is he * that putteth his trust in the Lord, that declareth the decree of the Lord, and is set upon His holy hill."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Tu es glória mea, * tu es suscéptor meus, Dómine; tu exáltans caput meum, et exaudísti me de monte sancto tuo.",
+      "eng": "Thou, O Lord, art my glory, * Thou art a shield for me; Thou art the Lifter-up of mine head, and Thou hast heard me out of thy holy hill."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Invocántem * exaudívit Dóminus Sanctum suum; Dóminus exaudívit eum, et constítuit eum in pace.",
+      "eng": "When His holy one called, * the Lord heard him, yea, the Lord heard him, and gave him peace."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Læténtur omnes * qui sperant in te, Dómine; quóniam tu benedixísti justo, scuto bonæ voluntátis tuæ coronásti eum.",
+      "eng": "Let all those that put their trust in thee rejoice, O Lord, for Thou hast blessed the righteous; * Thou hast compassed him with thy favour as with a shield."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Dómine, Dóminus noster, * quam admirábile est nomen tuum in univérsa terra! quia glória et honóre coronásti Sanctum tuum, et constituísti eum super ópera mánuum tuárum.",
+      "eng": "O Lord, our Ruler, * how excellent is thy Name in all the earth, Who hast crowned thine holy one with glory and honour, and made him to have dominion over the works of thy hands."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Dómine, * iste Sanctus habitábit in tabernáculo tuo, operátus est justítiam, requiéscet in monte sancto tuo.",
+      "eng": "Lord, this thy Saint * shall dwell in thy tabernacle, and this that hath worked righteousness shall abide upon thy holy hill."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Vitam pétiit * a te, et tribuísti ei, Dómine: glóriam et magnum decórem imposuísti super eum; posuísti in cápite ejus corónam de lápide pretióso.",
+      "eng": "He asked life of thee, * and Thou, O Lord, gavest it; honour and great majesty hast Thou laid upon him; Thou hast set a crown of precious stones upon his head."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Hic accípiet * benedictiónem a Dómino, et misericórdiam a Deo salutári suo: quia hæc est generátio quæréntium Dóminum.",
+      "eng": "He shall receive * a blessing from the Lord, and mercy from the God of his salvation, for this is the generation of them that seek the Lord."
     }
   },
   "C4-1": {
@@ -3738,6 +4278,60 @@
       "eng": "℣. Thou art a Priest for ever.",
       "latR": "℟. Secúndum órdinem Melchísedech.",
       "engR": "℟. After the order of Melchisedek."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Beátus vir, * qui in lege Dómini meditátur: volúntas ejus pérmanet die ac nocte, et ómnia quæcúmque fáciet, semper prosperabúntur.",
+      "eng": "Blessed is the man * that doth meditate in the law of the Lord; his delight is therein day and night, and whatsoever he doeth shall prosper."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Beátus iste Sanctus, * qui confísus est in Dómino, prædicávit præcéptum Dómini, constitútus est in monte sancto ejus.",
+      "eng": "Blessed and holy is he * that putteth his trust in the Lord, that declareth the decree of the Lord, and is set upon His holy hill."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Tu es glória mea, * tu es suscéptor meus, Dómine; tu exáltans caput meum, et exaudísti me de monte sancto tuo.",
+      "eng": "Thou, O Lord, art my glory, * Thou art a shield for me; Thou art the Lifter-up of mine head, and Thou hast heard me out of thy holy hill."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Invocántem * exaudívit Dóminus Sanctum suum; Dóminus exaudívit eum, et constítuit eum in pace.",
+      "eng": "When His holy one called, * the Lord heard him, yea, the Lord heard him, and gave him peace."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Læténtur omnes * qui sperant in te, Dómine; quóniam tu benedixísti justo, scuto bonæ voluntátis tuæ coronásti eum.",
+      "eng": "Let all those that put their trust in thee rejoice, O Lord, for Thou hast blessed the righteous; * Thou hast compassed him with thy favour as with a shield."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Dómine, Dóminus noster, * quam admirábile est nomen tuum in univérsa terra! quia glória et honóre coronásti Sanctum tuum, et constituísti eum super ópera mánuum tuárum.",
+      "eng": "O Lord, our Ruler, * how excellent is thy Name in all the earth, Who hast crowned thine holy one with glory and honour, and made him to have dominion over the works of thy hands."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Dómine, * iste Sanctus habitábit in tabernáculo tuo, operátus est justítiam, requiéscet in monte sancto tuo.",
+      "eng": "Lord, this thy Saint * shall dwell in thy tabernacle, and this that hath worked righteousness shall abide upon thy holy hill."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Vitam pétiit * a te, et tribuísti ei, Dómine: glóriam et magnum decórem imposuísti super eum; posuísti in cápite ejus corónam de lápide pretióso.",
+      "eng": "He asked life of thee, * and Thou, O Lord, gavest it; honour and great majesty hast Thou laid upon him; Thou hast set a crown of precious stones upon his head."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Hic accípiet * benedictiónem a Dómino, et misericórdiam a Deo salutári suo: quia hæc est generátio quæréntium Dóminum.",
+      "eng": "He shall receive * a blessing from the Lord, and mercy from the God of his salvation, for this is the generation of them that seek the Lord."
     }
   },
   "C5-1": {
@@ -4105,6 +4699,60 @@
       "eng": "℣. Thou art a Priest for ever.",
       "latR": "℟. Secúndum órdinem Melchísedech.",
       "engR": "℟. After the order of Melchisedek."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Beátus vir, * qui in lege Dómini meditátur: volúntas ejus pérmanet die ac nocte, et ómnia quæcúmque fáciet, semper prosperabúntur.",
+      "eng": "Blessed is the man * that doth meditate in the law of the Lord; his delight is therein day and night, and whatsoever he doeth shall prosper."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Beátus iste Sanctus, * qui confísus est in Dómino, prædicávit præcéptum Dómini, constitútus est in monte sancto ejus.",
+      "eng": "Blessed and holy is he * that putteth his trust in the Lord, that declareth the decree of the Lord, and is set upon His holy hill."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Tu es glória mea, * tu es suscéptor meus, Dómine; tu exáltans caput meum, et exaudísti me de monte sancto tuo.",
+      "eng": "Thou, O Lord, art my glory, * Thou art a shield for me; Thou art the Lifter-up of mine head, and Thou hast heard me out of thy holy hill."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Invocántem * exaudívit Dóminus Sanctum suum; Dóminus exaudívit eum, et constítuit eum in pace.",
+      "eng": "When His holy one called, * the Lord heard him, yea, the Lord heard him, and gave him peace."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Læténtur omnes * qui sperant in te, Dómine; quóniam tu benedixísti justo, scuto bonæ voluntátis tuæ coronásti eum.",
+      "eng": "Let all those that put their trust in thee rejoice, O Lord, for Thou hast blessed the righteous; * Thou hast compassed him with thy favour as with a shield."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Dómine, Dóminus noster, * quam admirábile est nomen tuum in univérsa terra! quia glória et honóre coronásti Sanctum tuum, et constituísti eum super ópera mánuum tuárum.",
+      "eng": "O Lord, our Ruler, * how excellent is thy Name in all the earth, Who hast crowned thine holy one with glory and honour, and made him to have dominion over the works of thy hands."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Dómine, * iste Sanctus habitábit in tabernáculo tuo, operátus est justítiam, requiéscet in monte sancto tuo.",
+      "eng": "Lord, this thy Saint * shall dwell in thy tabernacle, and this that hath worked righteousness shall abide upon thy holy hill."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Vitam pétiit * a te, et tribuísti ei, Dómine: glóriam et magnum decórem imposuísti super eum; posuísti in cápite ejus corónam de lápide pretióso.",
+      "eng": "He asked life of thee, * and Thou, O Lord, gavest it; honour and great majesty hast Thou laid upon him; Thou hast set a crown of precious stones upon his head."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Hic accípiet * benedictiónem a Dómino, et misericórdiam a Deo salutári suo: quia hæc est generátio quæréntium Dóminum.",
+      "eng": "He shall receive * a blessing from the Lord, and mercy from the God of his salvation, for this is the generation of them that seek the Lord."
     }
   },
   "C5b": {
@@ -4308,6 +4956,60 @@
       "eng": "℣. Thou art a Priest for ever.",
       "latR": "℟. Secúndum órdinem Melchísedech.",
       "engR": "℟. After the order of Melchisedek."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Beátus vir, * qui in lege Dómini meditátur: volúntas ejus pérmanet die ac nocte, et ómnia quæcúmque fáciet, semper prosperabúntur.",
+      "eng": "Blessed is the man * that doth meditate in the law of the Lord; his delight is therein day and night, and whatsoever he doeth shall prosper."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Beátus iste Sanctus, * qui confísus est in Dómino, prædicávit præcéptum Dómini, constitútus est in monte sancto ejus.",
+      "eng": "Blessed and holy is he * that putteth his trust in the Lord, that declareth the decree of the Lord, and is set upon His holy hill."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Tu es glória mea, * tu es suscéptor meus, Dómine; tu exáltans caput meum, et exaudísti me de monte sancto tuo.",
+      "eng": "Thou, O Lord, art my glory, * Thou art a shield for me; Thou art the Lifter-up of mine head, and Thou hast heard me out of thy holy hill."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Invocántem * exaudívit Dóminus Sanctum suum; Dóminus exaudívit eum, et constítuit eum in pace.",
+      "eng": "When His holy one called, * the Lord heard him, yea, the Lord heard him, and gave him peace."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Læténtur omnes * qui sperant in te, Dómine; quóniam tu benedixísti justo, scuto bonæ voluntátis tuæ coronásti eum.",
+      "eng": "Let all those that put their trust in thee rejoice, O Lord, for Thou hast blessed the righteous; * Thou hast compassed him with thy favour as with a shield."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Dómine, Dóminus noster, * quam admirábile est nomen tuum in univérsa terra! quia glória et honóre coronásti Sanctum tuum, et constituísti eum super ópera mánuum tuárum.",
+      "eng": "O Lord, our Ruler, * how excellent is thy Name in all the earth, Who hast crowned thine holy one with glory and honour, and made him to have dominion over the works of thy hands."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Dómine, * iste Sanctus habitábit in tabernáculo tuo, operátus est justítiam, requiéscet in monte sancto tuo.",
+      "eng": "Lord, this thy Saint * shall dwell in thy tabernacle, and this that hath worked righteousness shall abide upon thy holy hill."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Vitam pétiit * a te, et tribuísti ei, Dómine: glóriam et magnum decórem imposuísti super eum; posuísti in cápite ejus corónam de lápide pretióso.",
+      "eng": "He asked life of thee, * and Thou, O Lord, gavest it; honour and great majesty hast Thou laid upon him; Thou hast set a crown of precious stones upon his head."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Hic accípiet * benedictiónem a Dómino, et misericórdiam a Deo salutári suo: quia hæc est generátio quæréntium Dóminum.",
+      "eng": "He shall receive * a blessing from the Lord, and mercy from the God of his salvation, for this is the generation of them that seek the Lord."
     }
   },
   "C6": {
@@ -4511,6 +5213,60 @@
       "eng": "℣. God hath chosen her, and fore-chosen her.",
       "latR": "℟. In tabernáculo suo habitáre facit eam.",
       "engR": "℟. He hath made her to dwell in His tabernacle."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "O quam pulchra * est casta generátio cum claritáte!",
+      "eng": "O how lovely and glorious * is the generation of the chaste."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Ante torum * hujus Vírginis frequentáte nobis dúlcia cántica drámatis.",
+      "eng": "Sing for us again and again before this maiden's bed * the tender idylls of the play."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Revértere, * revértere, Sunamítis; revértere, ut intueámur te.",
+      "eng": "Return, return, O Shulammith * Return, return, that we may look upon thee."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Spécie tua * et pulchritúdine tua inténde, próspere procéde, et regna.",
+      "eng": "In thy comeliness and thy beauty, * go forward, fare prosperously, and reign."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Adjuvábit eam * Deus vultu suo: Deus in médio ejus, non commovébitur.",
+      "eng": "God shall help * her with His countenance: God is in the midst of her; she shall not be moved."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Aquæ multæ * non potuérunt exstínguere caritátem.",
+      "eng": "Many waters cannot * quench love."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Nigra sum, * sed formósa, fíliæ Jerúsalem; ídeo diléxit me Rex, et introdúxit me in cubículum suum.",
+      "eng": "I am black but comely, * O ye daughters of Jerusalem; therefore hath the King loved me, and brought me into his chamber."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Trahe me post te, * in odórem currémus unguentórum tuórum: óleum effúsum nomen tuum.",
+      "eng": "Draw me after thee * we will run after the savour of thy good ointments; thy name is as oil poured forth."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+      "eng": "Come, Bride of Christ, * and take the everlasting crown which the Lord hath prepared for thee."
     }
   },
   "C6-1": {
@@ -5370,6 +6126,60 @@
       "eng": "℣. God hath chosen her, and fore-chosen her.",
       "latR": "℟. In tabernáculo suo habitáre facit eam.",
       "engR": "℟. He hath made her to dwell in His tabernacle."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "O quam pulchra * est casta generátio cum claritáte!",
+      "eng": "O how lovely and glorious * is the generation of the chaste."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Ante torum * hujus Vírginis frequentáte nobis dúlcia cántica drámatis.",
+      "eng": "Sing for us again and again before this maiden's bed * the tender idylls of the play."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Revértere, * revértere, Sunamítis; revértere, ut intueámur te.",
+      "eng": "Return, return, O Shulammith * Return, return, that we may look upon thee."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Spécie tua * et pulchritúdine tua inténde, próspere procéde, et regna.",
+      "eng": "In thy comeliness and thy beauty, * go forward, fare prosperously, and reign."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Adjuvábit eam * Deus vultu suo: Deus in médio ejus, non commovébitur.",
+      "eng": "God shall help * her with His countenance: God is in the midst of her; she shall not be moved."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Aquæ multæ * non potuérunt exstínguere caritátem.",
+      "eng": "Many waters cannot * quench love."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Nigra sum, * sed formósa, fíliæ Jerúsalem; ídeo diléxit me Rex, et introdúxit me in cubículum suum.",
+      "eng": "I am black but comely, * O ye daughters of Jerusalem; therefore hath the King loved me, and brought me into his chamber."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Trahe me post te, * in odórem currémus unguentórum tuórum: óleum effúsum nomen tuum.",
+      "eng": "Draw me after thee * we will run after the savour of thy good ointments; thy name is as oil poured forth."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+      "eng": "Come, Bride of Christ, * and take the everlasting crown which the Lord hath prepared for thee."
     }
   },
   "C7a": {
@@ -5573,6 +6383,60 @@
       "eng": "℣. God hath chosen her, and fore-chosen her.",
       "latR": "℟. In tabernáculo suo habitáre facit eam.",
       "engR": "℟. He hath made her to dwell in His tabernacle."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "O quam pulchra * est casta generátio cum claritáte!",
+      "eng": "O how lovely and glorious * is the generation of the chaste."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Ante torum * hujus Vírginis frequentáte nobis dúlcia cántica drámatis.",
+      "eng": "Sing for us again and again before this maiden's bed * the tender idylls of the play."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Revértere, * revértere, Sunamítis; revértere, ut intueámur te.",
+      "eng": "Return, return, O Shulammith * Return, return, that we may look upon thee."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Spécie tua * et pulchritúdine tua inténde, próspere procéde, et regna.",
+      "eng": "In thy comeliness and thy beauty, * go forward, fare prosperously, and reign."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Adjuvábit eam * Deus vultu suo: Deus in médio ejus, non commovébitur.",
+      "eng": "God shall help * her with His countenance: God is in the midst of her; she shall not be moved."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Aquæ multæ * non potuérunt exstínguere caritátem.",
+      "eng": "Many waters cannot * quench love."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Nigra sum, * sed formósa, fíliæ Jerúsalem; ídeo diléxit me Rex, et introdúxit me in cubículum suum.",
+      "eng": "I am black but comely, * O ye daughters of Jerusalem; therefore hath the King loved me, and brought me into his chamber."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Trahe me post te, * in odórem currémus unguentórum tuórum: óleum effúsum nomen tuum.",
+      "eng": "Draw me after thee * we will run after the savour of thy good ointments; thy name is as oil poured forth."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+      "eng": "Come, Bride of Christ, * and take the everlasting crown which the Lord hath prepared for thee."
     }
   },
   "C7b": {
@@ -5776,6 +6640,60 @@
       "eng": "℣. God hath chosen her, and fore-chosen her.",
       "latR": "℟. In tabernáculo suo habitáre facit eam.",
       "engR": "℟. He hath made her to dwell in His tabernacle."
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "O quam pulchra * est casta generátio cum claritáte!",
+      "eng": "O how lovely and glorious * is the generation of the chaste."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Ante torum * hujus Vírginis frequentáte nobis dúlcia cántica drámatis.",
+      "eng": "Sing for us again and again before this maiden's bed * the tender idylls of the play."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Revértere, * revértere, Sunamítis; revértere, ut intueámur te.",
+      "eng": "Return, return, O Shulammith * Return, return, that we may look upon thee."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Spécie tua * et pulchritúdine tua inténde, próspere procéde, et regna.",
+      "eng": "In thy comeliness and thy beauty, * go forward, fare prosperously, and reign."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Adjuvábit eam * Deus vultu suo: Deus in médio ejus, non commovébitur.",
+      "eng": "God shall help * her with His countenance: God is in the midst of her; she shall not be moved."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Aquæ multæ * non potuérunt exstínguere caritátem.",
+      "eng": "Many waters cannot * quench love."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Nigra sum, * sed formósa, fíliæ Jerúsalem; ídeo diléxit me Rex, et introdúxit me in cubículum suum.",
+      "eng": "I am black but comely, * O ye daughters of Jerusalem; therefore hath the King loved me, and brought me into his chamber."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Trahe me post te, * in odórem currémus unguentórum tuórum: óleum effúsum nomen tuum.",
+      "eng": "Draw me after thee * we will run after the savour of thy good ointments; thy name is as oil poured forth."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Veni, Sponsa Christi, * áccipe corónam, quam tibi Dóminus præparávit in ætérnum.",
+      "eng": "Come, Bride of Christ, * and take the everlasting crown which the Lord hath prepared for thee."
     }
   },
   "C8": {
@@ -5979,6 +6897,60 @@
       "eng": "",
       "latR": "",
       "engR": ""
+    },
+    "matutinum.antiphon.psalm1": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm1",
+      "lat": "Tóllite portas, * príncipes vestras, et elevámini, portæ æternáles.",
+      "eng": "Lift up your gates, O ye princes, * and be ye lift up, ye everlasting doors."
+    },
+    "matutinum.antiphon.psalm2": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm2",
+      "lat": "Erit mihi Dóminus * in Deum, et lapis iste vocábitur domus Dei.",
+      "eng": "The Lord shall be my God, * and this stone shall be called God's house."
+    },
+    "matutinum.antiphon.psalm3": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm3",
+      "lat": "Ædificávit * Móyses altáre Dómino Deo.",
+      "eng": "Moses built an altar * to the Lord God."
+    },
+    "matutinum.antiphon.psalm4": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm4",
+      "lat": "Non est hic áliud, * nisi domus Dei, et porta cæli.",
+      "eng": "This is none other but the house of God, and this is the gate of heaven."
+    },
+    "matutinum.antiphon.psalm5": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm5",
+      "lat": "Vidit Jacob scalam, * súmmitas ejus cælos tangébat, et descendéntes Angelos, et dixit: Vere locus iste sanctus est.",
+      "eng": "Jacob beheld a ladder set up on the earth, and the top of it reached to heaven, and the angels of God descending on it. And he said: Surely this place is holy."
+    },
+    "matutinum.antiphon.psalm6": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm6",
+      "lat": "Eréxit Jacob * lápidem in títulum, fundens óleum désuper.",
+      "eng": "Jacob set up the stone for a pillar, and poured oil upon the top of it."
+    },
+    "matutinum.antiphon.psalm7": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm7",
+      "lat": "Qui hábitat * in adjutório Altíssimi, in protectióne Dei cæli commorábitur.",
+      "eng": "He that dwelleth in the help of the Most High * shall abide under the shadow of the God of heaven."
+    },
+    "matutinum.antiphon.psalm8": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm8",
+      "lat": "Templum Dómini * sanctum est, Dei structúra est, Dei ædificátio est.",
+      "eng": "The Temple of the Lord is holy. * The same is God's workmanship and God's building."
+    },
+    "matutinum.antiphon.psalm9": {
+      "type": "antiphon",
+      "variationKey": "matutinum.antiphon.psalm9",
+      "lat": "Benedícta * glória Dómini, de loco sancto suo, allelúja.",
+      "eng": "Blessed be the glory of the Lord * from His holy place. Alleluia."
     }
   },
   "C9": {

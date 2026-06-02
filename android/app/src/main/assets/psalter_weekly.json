@@ -51,7 +51,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Dóminus de cælo * prospéxit super fílios hóminum.",
+      "antiphonEng": "The Lord hath looked down from heaven * upon the children of men."
     },
     "matutinum.psalm3": {
       "type": "psalm",
@@ -147,7 +149,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Qui operátur justítiam * requiéscet in monte sancto tuo, Dómine.",
+      "antiphonEng": "He who worketh justice * may rest on thy holy mountain, O Lord."
     },
     "matutinum.psalm4": {
       "type": "psalm",
@@ -243,7 +247,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Inclína, Dómine, * aurem tuam mihi, et exáudi verba mea.",
+      "antiphonEng": "O Lord, incline * thy ear to me, and hear my voice, my Lord."
     },
     "matutinum.psalm5": {
       "type": "psalm",
@@ -375,7 +381,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Díligam te, * Dómine, virtus mea.",
+      "antiphonEng": "I will love thee, * O Lord, who art my strength."
     },
     "matutinum.psalm6": {
       "type": "psalm",
@@ -475,7 +483,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Retríbuet mihi Dóminus * secúndum justítiam meam.",
+      "antiphonEng": "The Lord will reward me * according to my justice."
     },
     "matutinum.psalm7": {
       "type": "psalm",
@@ -527,7 +537,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Vivit Dóminus * et benedíctus Deus salútis meæ.",
+      "antiphonEng": "The Lord liveth, * and blessed be my God, my salvation."
     },
     "matutinum.psalm8": {
       "type": "psalm",
@@ -591,7 +603,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Exáudiat te * Dóminus in die tribulatiónis.",
+      "antiphonEng": "May the Lord hear * thee in the day of tribulation."
     },
     "matutinum.psalm9": {
       "type": "psalm",
@@ -691,7 +705,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Dómine, * in virtúte tua lætábitur rex.",
+      "antiphonEng": "The king rejoices * in Thy strength, O Lord."
     },
     "matutinum.psalm10": {
       "type": "psalm",
@@ -751,7 +767,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Exaltábo te, * Dómine, quóniam suscepísti me.",
+      "antiphonEng": "I will extol thee, * O Lord, for thou hast upheld me."
     },
     "vesperae.psalm1": {
       "type": "psalm",
@@ -2194,7 +2212,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Expúgna, Dómine, * impugnántes me.",
+      "antiphonEng": "Overthrow, O Lord, * them that fight against me."
     },
     "matutinum.psalm3": {
       "type": "psalm",
@@ -2254,7 +2274,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Restítue ánimam meam * a malefáctis eórum, Dómine.",
+      "antiphonEng": "Rescue, O Lord, * my soul from their malice."
     },
     "matutinum.psalm4": {
       "type": "psalm",
@@ -2310,7 +2332,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Exsúrge, Dómine, * et inténde judício meo.",
+      "antiphonEng": "Arise, O Lord, * and be attentive to my judgment."
     },
     "matutinum.psalm5": {
       "type": "psalm",
@@ -2378,7 +2402,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Noli æmulári * in eo qui prosperátur et facit iniquitátem.",
+      "antiphonEng": "Envy not * the man who prospereth in his way; the man who doth unjust things."
     },
     "matutinum.psalm6": {
       "type": "psalm",
@@ -2478,7 +2504,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Brácchia peccatórum * conteréntur, confírmat autem justos Dóminus.",
+      "antiphonEng": "The arms of the wicked * shall be broken in pieces; but the Lord strengtheneth the just."
     },
     "matutinum.psalm7": {
       "type": "psalm",
@@ -2542,7 +2570,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Custódi innocéntiam * et vide æquitátem.",
+      "antiphonEng": "Keep innocence * and behold justice."
     },
     "matutinum.psalm8": {
       "type": "psalm",
@@ -2678,7 +2708,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ne in ira tua * corrípias me, Dómine.",
+      "antiphonEng": "O Lord, * do not chastise me in thy wrath."
     },
     "matutinum.psalm9": {
       "type": "psalm",
@@ -2734,7 +2766,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Inténde in adjutórium meum, * Dómine, virtus salútis meæ.",
+      "antiphonEng": "Attend unto my help, * O Lord, the God of my salvation."
     },
     "matutinum.psalm10": {
       "type": "psalm",
@@ -2838,7 +2872,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ámove, Dómine, * a me plagas tuas.",
+      "antiphonEng": "Remove, O Lord, * thy scourges from me."
     },
     "vesperae.psalm1": {
       "type": "psalm",
@@ -4253,7 +4289,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Speciósus forma * præ fíliis hóminum, diffúsa est grátia in lábiis tuis.",
+      "antiphonEng": "Thou art beautiful * above the sons of men: grace is poured abroad in thy lips."
     },
     "matutinum.psalm3": {
       "type": "psalm",
@@ -4361,7 +4399,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Confitebúntur tibi * pópuli Deus in ætérnum.",
+      "antiphonEng": "Let people confess to thee, * O God, forever."
     },
     "matutinum.psalm4": {
       "type": "psalm",
@@ -4485,7 +4525,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Adjútor in tribulatiónibus * Deus noster.",
+      "antiphonEng": "Our God * is our helper in troubles."
     },
     "matutinum.psalm5": {
       "type": "psalm",
@@ -4577,7 +4619,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Magnus Dóminus * et laudábilis nimis in civitáte Dei nostri.",
+      "antiphonEng": "Great is the Lord * and exceedingly to be praised in the city of our God."
     },
     "matutinum.psalm6": {
       "type": "psalm",
@@ -4633,7 +4677,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Os meum loquétur * sapiéntiam: et meditátio cordis mei prudéntiam.",
+      "antiphonEng": "My mouth shall speak * wisdom: and the meditation of my heart understanding."
     },
     "matutinum.psalm7": {
       "type": "psalm",
@@ -4697,7 +4743,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ne timúeris * cum dívite non descéndet in sepúlcrum glória ejus.",
+      "antiphonEng": "Be not thou afraid * the things which made him rich, or his glory shall not descend with him to the sepulchre."
     },
     "matutinum.psalm8": {
       "type": "psalm",
@@ -4793,7 +4841,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Deus deórum, * Dóminus locútus est.",
+      "antiphonEng": "The God of gods, * the Lord hath spoken."
     },
     "matutinum.psalm9": {
       "type": "psalm",
@@ -4901,7 +4951,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Intellégite, * qui obliviscímini Deum.",
+      "antiphonEng": "Understand these things, * you that forget God."
     },
     "matutinum.psalm10": {
       "type": "psalm",
@@ -4949,7 +5001,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Acceptábis sacrifícium * justítiæ super altáre tuum, Dómine.",
+      "antiphonEng": "Thou shalt accept the sacrifice * of justice, upon thy altar, O Lord."
     },
     "vesperae.psalm1": {
       "type": "psalm",
@@ -6520,7 +6574,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Suscitávit Dóminus * testimónium in Jacob: et legem pósuit in Israël.",
+      "antiphonEng": "The Lord set up a testimony in Jacob: * and made a law in Israel."
     },
     "matutinum.psalm3": {
       "type": "psalm",
@@ -6568,7 +6624,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Coram pátribus eórum * fecit Deus mirabília.",
+      "antiphonEng": "The Lord did wonderful things * in the sight of their fathers."
     },
     "matutinum.psalm4": {
       "type": "psalm",
@@ -6628,7 +6686,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Jánuas cæli apéruit * Dóminus, et pluit illis manna ad manducándum.",
+      "antiphonEng": "The Lord opened * the doors of heaven and had rained down manna upon them to eat."
     },
     "matutinum.psalm5": {
       "type": "psalm",
@@ -6736,7 +6796,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Deus adjútor * est eórum: et Excélsus redémptor eórum est.",
+      "antiphonEng": "God is their helper, * and the most high God their redeemer."
     },
     "matutinum.psalm6": {
       "type": "psalm",
@@ -6860,7 +6922,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Redémit eos * Dóminus de manu tribulántis.",
+      "antiphonEng": "The Lord redeemed them * from the hand of him that afflicted them."
     },
     "matutinum.psalm7": {
       "type": "psalm",
@@ -7032,7 +7096,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ædificávit * Deus sanctifícium suum in terra.",
+      "antiphonEng": "God built * his sanctuary in the earth."
     },
     "matutinum.psalm8": {
       "type": "psalm",
@@ -7132,7 +7198,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ádjuva nos, * Deus, salutáris noster: et propítius esto peccátis nostris.",
+      "antiphonEng": "Help us, O God, our Saviour, * deliver us: and forgive us our sins."
     },
     "matutinum.psalm9": {
       "type": "psalm",
@@ -7192,7 +7260,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ego sum Dóminus * Deus tuus Israël, qui edúxi te de terra Ægýpti.",
+      "antiphonEng": "I am the Lord * God of Israel, who brought you out from the land of Egypt."
     },
     "matutinum.psalm10": {
       "type": "psalm",
@@ -7256,7 +7326,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ne táceas Deus * quóniam inimíci tui extulérunt caput.",
+      "antiphonEng": "Be not thou silent, O Lord, * for Thy enemies lifted up their head."
     },
     "vesperae.psalm1": {
       "type": "psalm",
@@ -8987,7 +9059,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Memor fuit in sǽculum * testaménti sui Dóminus Deus noster.",
+      "antiphonEng": "The memory of thy testament * will live forever, O Lord our God."
     },
     "matutinum.psalm3": {
       "type": "psalm",
@@ -9083,7 +9157,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Auxit Dóminus * pópulum suum: et firmávit eum super inimícos ejus.",
+      "antiphonEng": "The Lord increased his people exceedingly * and strengthened them over their enemies."
     },
     "matutinum.psalm4": {
       "type": "psalm",
@@ -9187,7 +9263,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Edúxit Deus * pópulum suum in exsultatióne, et eléctos suos in lætítia.",
+      "antiphonEng": "The Lord brought forth * his people with joy, and his chosen with gladness."
     },
     "matutinum.psalm5": {
       "type": "psalm",
@@ -9243,7 +9321,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Salvávit eos Dóminus * propter nomen suum.",
+      "antiphonEng": "The Lord saved them * for his own name's sake."
     },
     "matutinum.psalm6": {
       "type": "psalm",
@@ -9355,7 +9435,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Oblíti sunt Deum * qui salvávit eos.",
+      "antiphonEng": "They forgot God * who saved them."
     },
     "matutinum.psalm7": {
       "type": "psalm",
@@ -9443,7 +9525,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Cum tribularéntur * vidit Dóminus: et audívit oratiónem eórum.",
+      "antiphonEng": "And he saw when they were in tribulation * and he heard their prayer."
     },
     "matutinum.psalm8": {
       "type": "psalm",
@@ -9547,7 +9631,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Clamavérunt ad Dóminum * et de necessitátibus eórum liberávit eos.",
+      "antiphonEng": "Then they cried to the Lord * and he delivered them out of their distresses."
     },
     "matutinum.psalm9": {
       "type": "psalm",
@@ -9647,7 +9733,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Ipsi vidérunt * ópera Dei et mirabília ejus.",
+      "antiphonEng": "These have seen * the works of the Lord, and his wonders."
     },
     "matutinum.psalm10": {
       "type": "psalm",
@@ -9831,7 +9919,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Vidébunt recti * et lætabúntur, et intéllegent misericórdias Dómini.",
+      "antiphonEng": "The just see and rejoice * and understand the mercy of the Lord."
     },
     "vesperae.psalm1": {
       "type": "psalm",
@@ -11406,7 +11496,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "In Deo salutáre meum * et glória mea: et spes mea in Deo est.",
+      "antiphonEng": "In God is my salvation * and my glory: and my hope is in God."
     },
     "matutinum.psalm3": {
       "type": "psalm",
@@ -11518,7 +11610,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Vidéte ópera Dómini, * et audítam fácite vocem laudis ejus.",
+      "antiphonEng": "Behold the works of the Lord * and make the voice of his praise to be heard."
     },
     "matutinum.psalm4": {
       "type": "psalm",
@@ -11582,7 +11676,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Audíte, omnes * qui timétis Deum, quanta fecit ánimæ meæ.",
+      "antiphonEng": "Come and hear, all ye that fear God * what great things he hath done for my soul."
     },
     "matutinum.psalm5": {
       "type": "psalm",
@@ -11650,7 +11746,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Exsúrgat Deus, * et dissipéntur inimíci ejus.",
+      "antiphonEng": "Let God arise, * and let his enemies be scattered."
     },
     "matutinum.psalm6": {
       "type": "psalm",
@@ -11706,7 +11804,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Deus noster, * Deus salvos faciéndi: et Dómini sunt éxitus mortis.",
+      "antiphonEng": "Our God * is the God of salvation: and the Lord of the issues from death."
     },
     "matutinum.psalm7": {
       "type": "psalm",
@@ -11802,7 +11902,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "In ecclésiis * benedícite Dómino Deo.",
+      "antiphonEng": "In the churches * bless ye God the Lord."
     },
     "matutinum.psalm8": {
       "type": "psalm",
@@ -11866,7 +11968,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Salvum me fac, * Deus, quóniam intravérunt aquæ usque ad ánimam meam.",
+      "antiphonEng": "Save me, O God * for the waters are come in even unto my soul."
     },
     "matutinum.psalm9": {
       "type": "psalm",
@@ -11910,7 +12014,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Propter inimícos meos * éripe me, Dómine.",
+      "antiphonEng": "O Lord, save me * from my enemies."
     },
     "matutinum.psalm10": {
       "type": "psalm",
@@ -11966,7 +12072,9 @@
           "lat": "Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
           "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
         }
-      ]
+      ],
+      "antiphonLat": "Quǽrite Dóminum, * et vivet ánima vestra.",
+      "antiphonEng": "Look for the Lord * and your soul shall live."
     },
     "vesperae.psalm1": {
       "type": "psalm",

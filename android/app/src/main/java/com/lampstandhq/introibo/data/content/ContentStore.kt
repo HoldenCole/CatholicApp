@@ -503,6 +503,18 @@ object ContentStore {
                 }
             }
         }
+
+        // Dec 17-23 ("O Antiphon" days): override the Little Hours antiphons
+        // with date-specific ones (these change daily, unlike the per-week
+        // Advent antiphons applied by the temporal key above).
+        if (ctx.season == LiturgicalSeason.ADVENT &&
+            ctx.date.monthValue == 12 && ctx.date.dayOfMonth in 17..23) {
+            val dateOverrides = officeAssembler.temporalPropers["adv-12-${ctx.date.dayOfMonth}"]
+            if (dateOverrides != null) {
+                assembled = applyProperOverrides(assembled, dateOverrides)
+            }
+        }
+
         return assembled
     }
 
@@ -536,6 +548,15 @@ object ContentStore {
         "vesperae.psalm3" to "vesperae.antiphon.psalm3",
         "vesperae.psalm4" to "vesperae.antiphon.psalm4",
         "vesperae.psalm5" to "vesperae.antiphon.psalm5",
+        "matutinum.psalm2" to "matutinum.antiphon.psalm1",
+        "matutinum.psalm3" to "matutinum.antiphon.psalm2",
+        "matutinum.psalm4" to "matutinum.antiphon.psalm3",
+        "matutinum.psalm5" to "matutinum.antiphon.psalm4",
+        "matutinum.psalm6" to "matutinum.antiphon.psalm5",
+        "matutinum.psalm7" to "matutinum.antiphon.psalm6",
+        "matutinum.psalm8" to "matutinum.antiphon.psalm7",
+        "matutinum.psalm9" to "matutinum.antiphon.psalm8",
+        "matutinum.psalm10" to "matutinum.antiphon.psalm9",
     )
 
     private fun applyProperOverrides(hour: Hour, overrides: Map<String, Hour.Part>): Hour {

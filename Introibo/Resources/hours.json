@@ -142,7 +142,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm2"
+        "variationKey": "matutinum.psalm2",
+        "antiphonLat": "Beátus vir * qui in lege Dómini meditátur.",
+        "antiphonEng": "Blessed is the man * who studieth the law of the Lord."
       },
       {
         "type": "psalm",
@@ -206,7 +208,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm3"
+        "variationKey": "matutinum.psalm3",
+        "antiphonLat": "Servíte Dómino * in timóre, et exsultáte ei cum tremóre.",
+        "antiphonEng": "Serve ye the Lord * with fear: and rejoice unto him with trembling."
       },
       {
         "type": "psalm",
@@ -250,7 +254,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm4"
+        "variationKey": "matutinum.psalm4",
+        "antiphonLat": "Exsúrge, * Dómine, salvum me fac, Deus meus.",
+        "antiphonEng": "Arise, * O Lord; save me, O my God."
       },
       {
         "type": "vr",
@@ -462,7 +468,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm5"
+        "variationKey": "matutinum.psalm5",
+        "antiphonLat": "Quam admirábile * est nomen tuum, Dómine, in univérsa terra!",
+        "antiphonEng": "How admirable * is thy name, O Lord, in the whole earth!"
       },
       {
         "type": "psalm",
@@ -514,7 +522,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm6"
+        "variationKey": "matutinum.psalm6",
+        "antiphonLat": "Sedísti super thronum * qui júdicas justítiam.",
+        "antiphonEng": "Thou hast sat on the throne * who judgest justice."
       },
       {
         "type": "psalm",
@@ -570,7 +580,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm7"
+        "variationKey": "matutinum.psalm7",
+        "antiphonLat": "Exsúrge, Dómine, * non præváleat homo.",
+        "antiphonEng": "Arise, O Lord, * let not man prevail."
       },
       {
         "type": "vr",
@@ -794,7 +806,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm8"
+        "variationKey": "matutinum.psalm8",
+        "antiphonLat": "Ut quid, Dómine, * recessísti longe?",
+        "antiphonEng": "Why, O Lord, * hast thou retired afar off?"
       },
       {
         "type": "psalm",
@@ -842,7 +856,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm9"
+        "variationKey": "matutinum.psalm9",
+        "antiphonLat": "Exsúrge, * Dómine Deus, exaltétur manus tua.",
+        "antiphonEng": "Arise, O Lord God, * let thy hand be exalted."
       },
       {
         "type": "psalm",
@@ -886,7 +902,9 @@
             "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen."
           }
         ],
-        "variationKey": "matutinum.psalm10"
+        "variationKey": "matutinum.psalm10",
+        "antiphonLat": "Justus Dóminus * et justítiam diléxit.",
+        "antiphonEng": "The Lord is just * and He hath loved justice."
       },
       {
         "type": "vr",
