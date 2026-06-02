@@ -1,0 +1,142 @@
+"""Generate authoritative ordo.json from DO's headless extraction.
+Uses DO's title as the authoritative winner, with the app's temporal key
+and season computed from Computus. For 'sanctoral' winners, resolves the
+winnerKey from the existing sanctoral index."""
+import json, re, unicodedata, datetime, sys
+sys.path.insert(0,"scripts")
+from gen_ordo_temporal import temporal_key, season_of_date
+
+def norm(s):
+    s=unicodedata.normalize("NFD",s); s="".join(c for c in s if unicodedata.category(c)!="Mn").lower()
+    s=s.replace("æ","ae").replace("œ","oe"); s=re.sub(r"[^a-z0-9 ]"," ",s); return re.sub(r"\s+"," ",s).strip()
+
+idx=json.load(open("/tmp/ordo_gen/indices.json"))
+COMBINED=idx["combined"]; TEMP=idx["temporal"]
+EMBER=re.compile(r"quattuor temporum septembr")
+RANK_BY_CLASS={"i. classis":7.0,"ii. classis":5.0,"iii. classis":3.0,"iv. classis":1.0}
+# More accurate rank by class
+RANK_MAP={
+    "i. classis": lambda n,mmdd: 7.0 if ("domini" in n or "nativ" in n or "resurr" in n or "pentecost" in n) else 6.5 if ("assumpt" in n or "epiphan" in n) else 6.0,
+    "ii. classis": lambda n,mmdd: 5.0,
+    "iii. classis": lambda n,mmdd: 3.0,
+    "iv. classis": lambda n,mmdd: 1.0,
+}
+# Color inference from DO title + class
+COLOR_KEYWORDS={
+    "martyr":"red","apostol":"red","evangel":"red","passione":"red","crucis":"red",
+    "innocen":"red","stephani":"red","laurenti":"red","joannis baptistæ":"red",
+    "pentecoste":"red","spiritus":"red",
+    "confess":"white","virgin":"white","purific":"white","nativitat":"white",
+    "assumpt":"white","concept":"white","corpus":"white","cordis":"white",
+    "dedic":"white","angeli":"white","michael":"red","raphael":"white",
+    "joseph":"white","annuntiat":"white","transf":"white","epiphan":"white",
+    "resurrect":"white","ascension":"white","trinit":"white","omni sancto":"white",
+    "defunct":"black","animarum":"black","requiem":"black",
+}
+
+def infer_color(name, season, cls_str):
+    nn=norm(name)
+    for kw,col in COLOR_KEYWORDS.items():
+        if kw in nn: return col
+    if "dominica" in nn:
+        return {"advent":"violet","lent":"violet","pre-lent":"violet","easter":"white","christmas":"white"}.get(season,"green")
+    if "feria" in nn or "sabbato" in nn:
+        return {"advent":"violet","lent":"violet","pre-lent":"violet","easter":"white","christmas":"white"}.get(season,"green")
+    if "ii. classis" in cls_str or "i. classis" in cls_str: return "white"
+    return "white"  # saints default
+
+def infer_rank(name, cls_str, season, mmdd):
+    nn=norm(name)
+    cls=cls_str.strip().rstrip(".")
+    if cls in RANK_MAP:
+        return RANK_MAP[cls](nn, mmdd)
+    # Try to match by known name in COMBINED
+    if nn in COMBINED:
+        return COMBINED[nn]["rank"]
+    return 1.0  # ferial default
+
+def parse_title(title):
+    title=title.split("\t")[0].strip()
+    m=re.search(r"~\s*(.+?)\s*$",title); cls=m.group(1).strip().lower() if m else ""
+    return re.sub(r"\s*~\s*.+$","",title).strip(), cls
+
+def is_sanctoral_winner(name, nn, tk, mmdd, season):
+    """DO declared this as the winner; is it a sanctoral or temporal office?"""
+    if nn in COMBINED:
+        return COMBINED[nn]["winner"]=="sanctoral"
+    # Heuristics: if name matches a temporal key's name template, it's temporal
+    if tk and TEMP.get(tk) and norm(TEMP[tk]["name"])==nn:
+        return False
+    # Generic temporal markers
+    temporal_markers=("feria","dominica","sabbato","die ","diei ","in vigilia",
+                      "sanctae mariae sabbato","octava ","infra octavam","infra hebdomadam","infra tempus")
+    if any(nn.startswith(x) or x in nn for x in temporal_markers):
+        return False
+    return True  # named feast → sanctoral
+
+def assemble(date_str, title, commem):
+    d=datetime.date.fromisoformat(date_str)
+    tk=temporal_key(d); season=season_of_date(d); mmdd=date_str[5:]
+    name,cls=parse_title(title); nn=norm(name)
+    has_commem=bool(commem.strip())
+    if not nn:
+        return {"temporal":tk,"sanctoral":mmdd,"winner":"temporal","winnerKey":tk or "",
+                "rank":1.0,"name":"Feria","color":"green","season":season,"commemoration":None}
+    # Ember remap
+    tkk=tk
+    if EMBER.search(nn) and tk and re.search(r"-(\d)$",tk):
+        tkk="093-"+re.search(r"-(\d)$",tk).group(1)
+    sanct=is_sanctoral_winner(name,nn,tkk or tk,mmdd,season)
+    rank=infer_rank(name,cls,season,mmdd)
+    color=infer_color(name,season,cls)
+    if nn in COMBINED:
+        wk=COMBINED[nn]["winnerKey"]
+        color=COMBINED[nn]["color"]
+        rank=COMBINED[nn]["rank"]
+    elif sanct:
+        wk=mmdd
+    else:
+        wk=tkk or tk or ""
+    if sanct:
+        return {"temporal":tk,"sanctoral":mmdd,"winner":"sanctoral","winnerKey":wk,
+                "rank":rank,"name":name,"color":color,"season":season,"commemoration":tk}
+    else:
+        entry={"temporal":tkk or tk,"sanctoral":mmdd,"winner":"temporal","winnerKey":wk,
+               "rank":rank,"name":name,"color":color,"season":season}
+        # commemoration
+        entry["commemoration"]=mmdd if has_commem else None
+        return entry
+
+def load_rows():
+    rows={}
+    for line in open("/tmp/ordo_gen/do_winners.tsv"):
+        p=line.rstrip("\n").split("\t",2)
+        if len(p)>=2: rows[p[0]]=(p[1],p[2] if len(p)>2 else "")
+    return rows
+
+if __name__=="__main__":
+    rows=load_rows()
+    ordo={}
+    for date in sorted(rows):
+        ordo[date]=assemble(date,*rows[date])
+    print(f"generated {len(ordo)} entries")
+    # Quick winner distribution
+    from collections import Counter
+    w=Counter(e["winner"] for e in ordo.values())
+    print(f"winners: {dict(w)}")
+    # Validate field completeness
+    bad=sum(1 for e in ordo.values() if not e.get("winnerKey") or not e.get("name"))
+    print(f"entries missing winnerKey/name: {bad}")
+
+def write_ordo(dest_ios, dest_android):
+    """Generate ordo.json from DO's TSV extraction."""
+    rows=load_rows()
+    ordo={}
+    for date in sorted(rows):
+        ordo[date]=assemble(date,*rows[date])
+    json.dump(ordo, open(dest_ios,"w"), ensure_ascii=False, indent=2)
+    json.dump(ordo, open(dest_android,"w"), ensure_ascii=False, indent=2)
+    print(f"wrote {len(ordo)} entries to {dest_ios} + {dest_android}")
+    from collections import Counter
+    print(f"winners: {dict(Counter(e['winner'] for e in ordo.values()))}")
+    return ordo
