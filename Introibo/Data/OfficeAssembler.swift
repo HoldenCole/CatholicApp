@@ -113,7 +113,7 @@ struct OfficeAssembler {
         "ant_nona", "nona.psalm1", "nona.psalm2", "nona.psalm3",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false) -> Hour {
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
 
@@ -244,7 +244,7 @@ struct OfficeAssembler {
         // Post-assembly filtering for Matins nocturn structure and Te Deum.
         let filteredParts: [Hour.Part]
         if template.slug == "matutinum" {
-            filteredParts = filterMatinsParts(lausTibiApplied, context: context)
+            filteredParts = filterMatinsParts(lausTibiApplied, nocturns: matinsNocturns, includeTeDeum: matinsTeDeum)
         } else if template.slug == "prima" && isOctave && context.dayOfWeek != 0 {
             // Easter/Pentecost octave festal Prime: Ps 53, 118 pars I,
             // 118 pars II — drop Psalm 117 (prima.psalm2 in the template).
@@ -340,86 +340,70 @@ struct OfficeAssembler {
         "holy-thursday", "good-friday", "holy-saturday",
     ]
 
-    private func filterMatinsParts(_ parts: [Hour.Part], context: LiturgicalContext) -> [Hour.Part] {
-        let isWeekday = context.dayOfWeek != 0  // 0 = Sunday
-        let isHighRankFeast = isWeekday
-            && (context.properSlug.map { Self.highRankWeekdayFeasts.contains($0) } ?? false)
-        let useThreeNocturns = !isWeekday || isHighRankFeast
-
-        if !useThreeNocturns {
-            // 1-Nocturn Matins: keep everything before "In II Nocturno",
-            // skip Nocturns II & III and the Te Deum, keep the closing
-            // elements (capitulum, collect, conclusion).
-            return filterToOneNocturn(parts)
-        } else {
-            // 3-Nocturn Matins (Sunday or Class I/II weekday feast): keep
-            // all nocturns but omit Te Deum on penitential Sundays.
-            if shouldOmitTeDeum(context: context) {
-                return parts.filter { !isTeDeum($0) }
-            }
-            return parts
+    // MARK: - Matins structure (1960/1962 rubrics)
+    //
+    // Under the 1960 rubrics every Matins has 9 psalms. The structure splits:
+    //   3 nocturns / 9 lessons / Te Deum: I- and II-class feasts only.
+    //   1 nocturn  / 9 psalms / 3 lessons: everything else — all Sundays,
+    //     III-class feasts, ferias, octave days.
+    // The nocturn count and Te Deum decision are computed in ContentStore
+    // (which has the ordo rank/winner) and passed in.
+    private func filterMatinsParts(_ parts: [Hour.Part], nocturns: Int, includeTeDeum: Bool) -> [Hour.Part] {
+        if nocturns >= 3 {
+            // 3-Nocturn Matins: keep all nocturns; include the Te Deum only
+            // when the day calls for it.
+            return includeTeDeum ? parts : parts.filter { !isTeDeum($0) }
         }
+        return buildOneNocturn(parts, includeTeDeum: includeTeDeum)
     }
 
-    /// Reduce Matins to 1 nocturn by removing everything from the
-    /// "In II Nocturno" heading through the Te Deum (inclusive).
-    /// Keeps: Invitatory, Hymn, Nocturn I, Capitulum, Collect, Closing.
-    private func filterToOneNocturn(_ parts: [Hour.Part]) -> [Hour.Part] {
-        // Find the index of "In II Nocturno" heading.
-        guard let nocturn2Index = parts.firstIndex(where: {
-            $0.type == "heading" && ($0.label ?? "").contains("II Noct")
-        }) else {
-            // Template doesn't have Nocturn II — nothing to remove.
-            return parts
+    /// Build a 1-nocturn Matins: all 9 psalms (pulled from the three template
+    /// nocturns into a single nocturn), the first versicle, the three lessons
+    /// and responsories of Nocturn I, an optional Te Deum, then the closing.
+    private func buildOneNocturn(_ parts: [Hour.Part], includeTeDeum: Bool) -> [Hour.Part] {
+        // Locate the three nocturn headings.
+        let headingIdxs = parts.indices.filter {
+            parts[$0].type == "heading" && (parts[$0].label ?? "").contains("Noct")
+        }
+        guard let firstHeading = headingIdxs.first else { return parts }
+
+        // Everything before the first nocturn heading: invitatory + hymn.
+        var result = Array(parts[..<firstHeading])
+
+        // From each nocturn, take the antiphon + psalms (the run between the
+        // heading and that nocturn's versicle), dropping the nocturn heading.
+        for h in headingIdxs {
+            var i = h + 1
+            while i < parts.count && parts[i].type != "vr" {
+                result.append(parts[i])
+                i += 1
+            }
         }
 
-        // Find the Te Deum (canticle with "Te Deum" in label).
-        // Everything after Te Deum is closing material we want to keep.
-        let teDaumIndex = parts.firstIndex(where: { isTeDeum($0) })
+        // The single versicle (the first nocturn's "nocturn_1_versum").
+        if let versicleIdx = parts.indices.first(where: {
+            parts[$0].variationKey == "nocturn_1_versum"
+        }) {
+            result.append(parts[versicleIdx])
 
-        // Keep parts before Nocturn II.
-        var kept = Array(parts[..<nocturn2Index])
+            // Nocturn I's lesson block: everything from after that versicle up
+            // to the second nocturn heading (Pater, absolution, blessings, the
+            // three lessons + responsories).
+            let secondHeading = headingIdxs.count > 1 ? headingIdxs[1] : parts.count
+            if versicleIdx + 1 < secondHeading {
+                result.append(contentsOf: parts[(versicleIdx + 1)..<secondHeading])
+            }
+        }
 
-        // Append parts after Te Deum (or after Nocturn III's last element
-        // if Te Deum is somehow missing). The Te Deum itself is omitted
-        // in 1-nocturn Matins.
-        if let teDeumIdx = teDaumIndex {
-            // Everything after the Te Deum line
+        // Te Deum (optional), then the closing material that follows it.
+        if let teDeumIdx = parts.firstIndex(where: { isTeDeum($0) }) {
+            if includeTeDeum { result.append(parts[teDeumIdx]) }
             if teDeumIdx + 1 < parts.count {
-                kept.append(contentsOf: parts[(teDeumIdx + 1)...])
-            }
-        } else {
-            // Fallback: find the end of Nocturn III by looking for the
-            // capitulum, collect, or closing elements.
-            if let capIndex = parts.firstIndex(where: {
-                $0.type == "capitulum" || $0.type == "collect" || $0.type == "closing"
-            }), capIndex >= nocturn2Index {
-                kept.append(contentsOf: parts[capIndex...])
+                result.append(contentsOf: parts[(teDeumIdx + 1)...])
             }
         }
 
-        return kept
-    }
-
-    /// Te Deum is omitted on Sundays during Septuagesima-tide, Lent, and Passiontide.
-    /// Septuagesima/Sexagesima/Quinquagesima Sundays are detected via properSlug.
-    private func shouldOmitTeDeum(context: LiturgicalContext) -> Bool {
-        // Lent and Passion Sundays: always omit
-        if context.season == .lent || context.season == .passion {
-            return true
-        }
-
-        // Pre-Lent Sundays (Septuagesima, Sexagesima, Quinquagesima)
-        // are in perAnnum by the season detector but have distinctive
-        // properSlug values.
-        if let slug = context.properSlug {
-            let preLentSlugs = ["septuagesima", "sexagesima", "quinquagesima"]
-            if preLentSlugs.contains(slug) {
-                return true
-            }
-        }
-
-        return false
+        return result
     }
 
     private func isTeDeum(_ part: Hour.Part) -> Bool {

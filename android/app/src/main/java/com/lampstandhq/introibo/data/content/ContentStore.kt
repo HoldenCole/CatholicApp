@@ -458,7 +458,21 @@ object ContentStore {
         // The Little Hours keep the Sunday psalms (Ps 118) only on Sundays
         // and I-class feasts (rank >= 6); all else uses the ferial psalms.
         val festalLittleHours = ctx.isSunday || (ordo?.rank?.let { it >= 6.0 } ?: false)
-        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours)
+
+        // Matins (1960 rubrics): 3 nocturns / 9 lessons only for I- and II-class
+        // feasts (sanctoral rank >= 5, or a temporal I-class feast on a weekday
+        // such as Corpus Christi). All Sundays, III-class feasts, and ferias use
+        // a single nocturn of 9 psalms and 3 lessons.
+        val isClassIorII = when {
+            ordo == null -> false
+            ordo.winner == "sanctoral" && ordo.rank >= 5.0 -> true
+            ordo.rank >= 6.0 && !ctx.isSunday -> true
+            else -> false
+        }
+        val matinsNocturns = if (isClassIorII) 3 else 1
+        val matinsTeDeum = computeMatinsTeDeum(ctx, ordo)
+
+        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum)
         if (ordo != null) {
             if (ordo.winner == "sanctoral") {
                 // Office layering (each later layer wins): commune fallback,
@@ -490,6 +504,25 @@ object ContentStore {
             }
         }
         return assembled
+    }
+
+    /**
+     * Whether the Te Deum is said at Matins (1960 rubrics). Said on Sundays
+     * (per-annum and Septuagesima), on all feasts (III class and above), and on
+     * days of the Christmas/Easter/Pentecost seasons and their octaves; omitted
+     * on ordinary ferias and on all Advent and Lent/Passion days -- except
+     * feasts, which keep it even in penitential seasons.
+     */
+    private fun computeMatinsTeDeum(ctx: LiturgicalContext, ordo: OrdoEntry?): Boolean {
+        val isFeast = ordo?.winner == "sanctoral" && (ordo.rank) >= 3.0
+        val penitential = ctx.season == LiturgicalSeason.ADVENT ||
+            ctx.season == LiturgicalSeason.LENT ||
+            ctx.season == LiturgicalSeason.PASSION
+        if (penitential) return isFeast
+        if (ctx.isSunday) return true
+        if (isFeast) return true
+        if (ctx.season == LiturgicalSeason.EASTER || ctx.season == LiturgicalSeason.CHRISTMAS) return true
+        return false
     }
 
     private val psalmToAntiphonKey = mapOf(

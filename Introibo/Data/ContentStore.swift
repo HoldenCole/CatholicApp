@@ -108,7 +108,21 @@ final class ContentStore {
         // The Little Hours keep the Sunday psalms (Ps 118) only on Sundays
         // and I-class feasts (rank ≥ 6); all else uses the ferial psalms.
         let festalLittleHours = ctx.isSunday || (ordo.map { $0.rank >= 6.0 } ?? false)
-        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours)
+
+        // Matins (1960 rubrics): 3 nocturns / 9 lessons only for I- and II-class
+        // feasts (sanctoral rank ≥ 5, or a temporal I-class feast on a weekday
+        // such as Corpus Christi). All Sundays, III-class feasts, and ferias use
+        // a single nocturn of 9 psalms and 3 lessons.
+        let isClassIorII: Bool = {
+            guard let ordo else { return false }
+            if ordo.winner == "sanctoral" && ordo.rank >= 5.0 { return true }
+            if ordo.rank >= 6.0 && !ctx.isSunday { return true }
+            return false
+        }()
+        let matinsNocturns = isClassIorII ? 3 : 1
+        let matinsTeDeum = computeMatinsTeDeum(ctx: ctx, ordo: ordo)
+
+        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum)
 
         if let ordo {
             if ordo.winner == "sanctoral" {
@@ -134,6 +148,21 @@ final class ContentStore {
         }
 
         return assembled
+    }
+
+    /// Whether the Te Deum is said at Matins (1960 rubrics). Said on Sundays
+    /// (per-annum and Septuagesima), on all feasts (III class and above), and
+    /// on days of the Christmas/Easter/Pentecost seasons and their octaves;
+    /// omitted on ordinary ferias and on all Advent and Lent/Passion days —
+    /// except feasts, which keep it even in penitential seasons.
+    private func computeMatinsTeDeum(ctx: LiturgicalContext, ordo: OrdoEntry?) -> Bool {
+        let isFeast = (ordo?.winner == "sanctoral") && ((ordo?.rank ?? 0) >= 3.0)
+        let penitential = ctx.season == .advent || ctx.season == .lent || ctx.season == .passion
+        if penitential { return isFeast }
+        if ctx.isSunday { return true }
+        if isFeast { return true }
+        if ctx.season == .easter || ctx.season == .christmas { return true }
+        return false
     }
 
     /// Mapping from a psalm part's variationKey to the antiphon-override key
