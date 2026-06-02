@@ -245,11 +245,17 @@ struct OfficeAssembler {
         let filteredParts: [Hour.Part]
         if template.slug == "matutinum" {
             filteredParts = filterMatinsParts(lausTibiApplied, nocturns: matinsNocturns, includeTeDeum: matinsTeDeum)
-        } else if template.slug == "prima" && isOctave && context.dayOfWeek != 0 {
-            // Easter/Pentecost octave festal Prime: Ps 53, 118 pars I,
-            // 118 pars II — drop Psalm 117 (prima.psalm2 in the template).
-            filteredParts = lausTibiApplied.filter { part in
-                part.variationKey != "prima.psalm2"
+        } else if template.slug == "prima" {
+            // Festal Prime (Sunday/I-class feast or Easter/Pentecost octave):
+            // 4 psalms (Ps 53, 117, 118 I, 118 II). Ferial Prime: 3 psalms
+            // (the weekday override replaces psalm1-3, but psalm4 has no ferial
+            // override and would leak). During octave, drop Ps 117 instead.
+            if isOctave && context.dayOfWeek != 0 {
+                filteredParts = lausTibiApplied.filter { $0.variationKey != "prima.psalm2" }
+            } else if !festalLittleHours {
+                filteredParts = lausTibiApplied.filter { $0.variationKey != "prima.psalm4" }
+            } else {
+                filteredParts = lausTibiApplied
             }
         } else {
             filteredParts = lausTibiApplied

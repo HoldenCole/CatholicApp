@@ -2093,6 +2093,54 @@
       "eng": "℣. From my secret ones cleanse me, O Lord.",
       "latR": "℟. Et ab aliénis parce servo tuo.",
       "engR": "℟. And from those of others spare Thy servant."
+    },
+    "ant_1": {
+      "type": "antiphon",
+      "variationKey": "ant_1",
+      "label": "Antíphona",
+      "lat": "Dóminus de cælo * prospéxit super fílios hóminum.",
+      "eng": "The Lord hath looked down from heaven * upon the children of men."
+    },
+    "ant_2": {
+      "type": "antiphon",
+      "variationKey": "ant_2",
+      "label": "Antíphona",
+      "lat": "Díligam te, * Dómine, virtus mea.",
+      "eng": "I will love thee, * O Lord, who art my strength."
+    },
+    "ant_3": {
+      "type": "antiphon",
+      "variationKey": "ant_3",
+      "label": "Antíphona",
+      "lat": "Exáudiat te * Dóminus in die tribulatiónis.",
+      "eng": "May the Lord hear * thee in the day of tribulation."
+    },
+    "nocturn_1_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_1_versum",
+      "label": "Versicle after Nocturn I",
+      "lat": "℣. Mirífica Dómine misericórdias tuas.",
+      "eng": "℣. Show forth thy wonderful mercies.",
+      "latR": "℟. Qui salvos facis sperántes in te.",
+      "engR": "℟. Thou who savest them that trust in thee."
+    },
+    "nocturn_2_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_2_versum",
+      "label": "Versicle after Nocturn II",
+      "lat": "℣. Confitébor tibi in natiónibus, Dómine.",
+      "eng": "℣. I will give glory to thee, O Lord, among the nations.",
+      "latR": "℟. Et nómini tuo psalmum dicam.",
+      "engR": "℟. And I will sing a psalm to thy name."
+    },
+    "nocturn_3_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_3_versum",
+      "label": "Versicle after Nocturn III",
+      "lat": "℣. Psállite Dómino sancti ejus.",
+      "eng": "℣. Sing to the Lord, O ye his saints.",
+      "latR": "℟. Et confitémini memóriæ sanctitátis ejus.",
+      "engR": "℟. And give praise to the memory of his holiness."
     }
   },
   "tuesday": {
@@ -4068,6 +4116,54 @@
       "eng": "℣. From my secret ones cleanse me, O Lord.",
       "latR": "℟. Et ab aliénis parce servo tuo.",
       "engR": "℟. And from those of others spare Thy servant."
+    },
+    "ant_1": {
+      "type": "antiphon",
+      "variationKey": "ant_1",
+      "label": "Antíphona",
+      "lat": "Expúgna, Dómine, * impugnántes me.",
+      "eng": "Overthrow, O Lord, * them that fight against me."
+    },
+    "ant_2": {
+      "type": "antiphon",
+      "variationKey": "ant_2",
+      "label": "Antíphona",
+      "lat": "Noli æmulári * in eo qui prosperátur et facit iniquitátem.",
+      "eng": "Envy not * the man who prospereth in his way; the man who doth unjust things."
+    },
+    "ant_3": {
+      "type": "antiphon",
+      "variationKey": "ant_3",
+      "label": "Antíphona",
+      "lat": "Ne in ira tua * corrípias me, Dómine.",
+      "eng": "O Lord, * do not chastise me in thy wrath."
+    },
+    "nocturn_1_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_1_versum",
+      "label": "Versicle after Nocturn I",
+      "lat": "℣. Lingua mea meditábitur justítiam tuam.",
+      "eng": "℣. And my tongue shall meditate thy justice.",
+      "latR": "℟. Tota die laudem tuam, Dómine.",
+      "engR": "℟. Thy praise all the day long, O Lord."
+    },
+    "nocturn_2_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_2_versum",
+      "label": "Versicle after Nocturn II",
+      "lat": "℣. Exspécta Dóminum, et custódi viam ejus.",
+      "eng": "℣. Expect the Lord and keep his way.",
+      "latR": "℟. Exaltábit te, ut hereditáte cápias terram.",
+      "engR": "℟. He will exalt thee to inherit the land."
+    },
+    "nocturn_3_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_3_versum",
+      "label": "Versicle after Nocturn III",
+      "lat": "℣. Deus, ne síleas a me, remítte mihi.",
+      "eng": "℣. O Lord, be not thou silent, forgive me.",
+      "latR": "℟. Quóniam íncola ego sum apud te et peregrínus.",
+      "engR": "℟. For I am a stranger with thee, and a sojourner."
     }
   },
   "wednesday": {
@@ -6307,6 +6403,54 @@
       "eng": "℣. From my secret ones cleanse me, O Lord.",
       "latR": "℟. Et ab aliénis parce servo tuo.",
       "engR": "℟. And from those of others spare Thy servant."
+    },
+    "ant_1": {
+      "type": "antiphon",
+      "variationKey": "ant_1",
+      "label": "Antíphona",
+      "lat": "Speciósus forma * præ fíliis hóminum, diffúsa est grátia in lábiis tuis.",
+      "eng": "Thou art beautiful * above the sons of men: grace is poured abroad in thy lips."
+    },
+    "ant_2": {
+      "type": "antiphon",
+      "variationKey": "ant_2",
+      "label": "Antíphona",
+      "lat": "Magnus Dóminus * et laudábilis nimis in civitáte Dei nostri.",
+      "eng": "Great is the Lord * and exceedingly to be praised in the city of our God."
+    },
+    "ant_3": {
+      "type": "antiphon",
+      "variationKey": "ant_3",
+      "label": "Antíphona",
+      "lat": "Deus deórum, * Dóminus locútus est.",
+      "eng": "The God of gods, * the Lord hath spoken."
+    },
+    "nocturn_1_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_1_versum",
+      "label": "Versicle after Nocturn I",
+      "lat": "℣. Dóminus virtútum nobíscum.",
+      "eng": "℣. The Lord of armies is with us.",
+      "latR": "℟. Suscéptor noster, Deus Jacob.",
+      "engR": "℟. The God of Jacob is our protector."
+    },
+    "nocturn_2_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_2_versum",
+      "label": "Versicle after Nocturn II",
+      "lat": "℣. Deus rédimet ánimam meam de manu ínferi.",
+      "eng": "℣. God will redeem my soul from the hand of hell.",
+      "latR": "℟. Cum accéperit me.",
+      "engR": "℟. When he shall receive me."
+    },
+    "nocturn_3_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_3_versum",
+      "label": "Versicle after Nocturn III",
+      "lat": "℣. Audítui meo dabis gáudium et lætítiam.",
+      "eng": "℣. To my hearing thou shalt give joy and gladness.",
+      "latR": "℟. Et exsultábunt ossa humiliáta.",
+      "engR": "℟. And the bones that have been humbled shall rejoice."
     }
   },
   "friday": {
@@ -8670,6 +8814,54 @@
       "eng": "℣. From my secret ones cleanse me, O Lord.",
       "latR": "℟. Et ab aliénis parce servo tuo.",
       "engR": "℟. And from those of others spare Thy servant."
+    },
+    "ant_1": {
+      "type": "antiphon",
+      "variationKey": "ant_1",
+      "label": "Antíphona",
+      "lat": "Suscitávit Dóminus * testimónium in Jacob: et legem pósuit in Israël.",
+      "eng": "The Lord set up a testimony in Jacob: * and made a law in Israel."
+    },
+    "ant_2": {
+      "type": "antiphon",
+      "variationKey": "ant_2",
+      "label": "Antíphona",
+      "lat": "Deus adjútor * est eórum: et Excélsus redémptor eórum est.",
+      "eng": "God is their helper, * and the most high God their redeemer."
+    },
+    "ant_3": {
+      "type": "antiphon",
+      "variationKey": "ant_3",
+      "label": "Antíphona",
+      "lat": "Ádjuva nos, * Deus, salutáris noster: et propítius esto peccátis nostris.",
+      "eng": "Help us, O God, our Saviour, * deliver us: and forgive us our sins."
+    },
+    "nocturn_1_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_1_versum",
+      "label": "Versicle after Nocturn I",
+      "lat": "℣. Deus percússit petram et fluxérunt aquæ.",
+      "eng": "℣. He struck the rock, and the waters gushed out.",
+      "latR": "℟. Et torréntes inundavérunt.",
+      "engR": "℟. And the streams overflowed."
+    },
+    "nocturn_2_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_2_versum",
+      "label": "Versicle after Nocturn II",
+      "lat": "℣. Elégit Dóminus tribum Juda.",
+      "eng": "℣. The Lord chose the tribe of Juda.",
+      "latR": "℟. Montem Sion quem diléxit.",
+      "engR": "℟. Mount Sion which he loved."
+    },
+    "nocturn_3_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_3_versum",
+      "label": "Versicle after Nocturn III",
+      "lat": "℣. Cognóscant quia nomen tibi Dóminus.",
+      "eng": "℣. Let them know that the Lord is thy name.",
+      "latR": "℟. Tu solus Altíssimus super omnem terram.",
+      "engR": "℟. Thou alone art the most High over all the earth."
     }
   },
   "saturday": {
@@ -11121,6 +11313,54 @@
       "eng": "℣. From my secret ones cleanse me, O Lord.",
       "latR": "℟. Et ab aliénis parce servo tuo.",
       "engR": "℟. And from those of others spare Thy servant."
+    },
+    "ant_1": {
+      "type": "antiphon",
+      "variationKey": "ant_1",
+      "label": "Antíphona",
+      "lat": "Memor fuit in sǽculum * testaménti sui Dóminus Deus noster.",
+      "eng": "The memory of thy testament * will live forever, O Lord our God."
+    },
+    "ant_2": {
+      "type": "antiphon",
+      "variationKey": "ant_2",
+      "label": "Antíphona",
+      "lat": "Salvávit eos Dóminus * propter nomen suum.",
+      "eng": "The Lord saved them * for his own name's sake."
+    },
+    "ant_3": {
+      "type": "antiphon",
+      "variationKey": "ant_3",
+      "label": "Antíphona",
+      "lat": "Clamavérunt ad Dóminum * et de necessitátibus eórum liberávit eos.",
+      "eng": "Then they cried to the Lord * and he delivered them out of their distresses."
+    },
+    "nocturn_1_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_1_versum",
+      "label": "Versicle after Nocturn I",
+      "lat": "℣. Memor fuit Dóminus verbi sancti sui.",
+      "eng": "℣. God remembered his holy word.",
+      "latR": "℟. Quod locútus est ad Ábraham, púerum suum.",
+      "engR": "℟. Which he had spoken to his son Abraham."
+    },
+    "nocturn_2_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_2_versum",
+      "label": "Versicle after Nocturn II",
+      "lat": "℣. Salvos nos fac, Dómine, Deus noster.",
+      "eng": "℣. Save us, O Lord, our God.",
+      "latR": "℟. Ut confiteámur nómini sancto tuo.",
+      "engR": "℟. That we may give glory to thy holy name."
+    },
+    "nocturn_3_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_3_versum",
+      "label": "Versicle after Nocturn III",
+      "lat": "℣. Exáltent Dóminum in ecclésia plebis.",
+      "eng": "℣. Let them exalt the Lord in the church of the people.",
+      "latR": "℟. Et in cáthedra seniórum laudent eum.",
+      "engR": "℟. And praise him in the chair of the ancients."
     }
   },
   "thursday": {
@@ -13128,6 +13368,54 @@
       "eng": "℣. From my secret ones cleanse me, O Lord.",
       "latR": "℟. Et ab aliénis parce servo tuo.",
       "engR": "℟. And from those of others spare Thy servant."
+    },
+    "ant_1": {
+      "type": "antiphon",
+      "variationKey": "ant_1",
+      "label": "Antíphona",
+      "lat": "In Deo salutáre meum * et glória mea: et spes mea in Deo est.",
+      "eng": "In God is my salvation * and my glory: and my hope is in God."
+    },
+    "ant_2": {
+      "type": "antiphon",
+      "variationKey": "ant_2",
+      "label": "Antíphona",
+      "lat": "Exsúrgat Deus, * et dissipéntur inimíci ejus.",
+      "eng": "Let God arise, * and let his enemies be scattered."
+    },
+    "ant_3": {
+      "type": "antiphon",
+      "variationKey": "ant_3",
+      "label": "Antíphona",
+      "lat": "Salvum me fac, * Deus, quóniam intravérunt aquæ usque ad ánimam meam.",
+      "eng": "Save me, O God * for the waters are come in even unto my soul."
+    },
+    "nocturn_1_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_1_versum",
+      "label": "Versicle after Nocturn I",
+      "lat": "℣. Non amóvit Dóminus oratiónem meam.",
+      "eng": "℣. God hath not turned away my prayer.",
+      "latR": "℟. Et misericórdiam suam a me.",
+      "engR": "℟. Nor his mercy from me."
+    },
+    "nocturn_2_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_2_versum",
+      "label": "Versicle after Nocturn II",
+      "lat": "℣. Mirábilis Deus in sanctis suis.",
+      "eng": "℣. God is wonderful in his saints.",
+      "latR": "℟. Deus Israël dabit virtútem plebi suæ.",
+      "engR": "℟. The God of Israel is he who will give power and strength to his people."
+    },
+    "nocturn_3_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_3_versum",
+      "label": "Versicle after Nocturn III",
+      "lat": "℣. Laudábo nomen Dei cum cántico.",
+      "eng": "℣. I will praise the name of God.",
+      "latR": "℟. Et magnificábo eum in laude.",
+      "engR": "℟. And I will magnify him with praise."
     }
   }
 }

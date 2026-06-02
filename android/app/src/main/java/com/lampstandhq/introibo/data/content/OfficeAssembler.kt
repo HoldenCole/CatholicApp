@@ -166,10 +166,17 @@ class OfficeAssembler(
         // Post-assembly filtering for Matins nocturn structure and Te Deum.
         val filteredParts = if (template.slug == "matutinum") {
             filterMatinsParts(lausTibiApplied, matinsNocturns, matinsTeDeum)
-        } else if (template.slug == "prima" && isOctave && context.dayOfWeek != 0) {
-            // Easter/Pentecost octave festal Prime: Ps 53, 118 pars I,
-            // 118 pars II -- drop Psalm 117 (prima.psalm2 in the template).
-            lausTibiApplied.filter { it.variationKey != "prima.psalm2" }
+        } else if (template.slug == "prima") {
+            // Festal Prime (Sunday/I-class feast or Easter/Pentecost octave):
+            // 4 psalms (Ps 53, 117, 118 I, 118 II). Ferial Prime: 3 psalms.
+            // During octave, drop Ps 117 instead.
+            if (isOctave && context.dayOfWeek != 0) {
+                lausTibiApplied.filter { it.variationKey != "prima.psalm2" }
+            } else if (!festalLittleHours) {
+                lausTibiApplied.filter { it.variationKey != "prima.psalm4" }
+            } else {
+                lausTibiApplied
+            }
         } else {
             lausTibiApplied
         }

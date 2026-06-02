@@ -6369,6 +6369,27 @@
       "eng": "Fear not, Mary, * for thou hast found grace with the Lord; behold, thou shalt conceive in thy womb, and bring forth a son. Alleluia.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-0o": {
@@ -6408,6 +6429,27 @@
       "lat": "Haec nos, fratres charissimi, idcirco dicimus, ut ad cautelae studium vestrae mentes evigilent, ne securitate torpeant, ne ignorantia languescant, sed semper eas et timor sollicitet, et in bono opere sollicitudo confirmet, pensantes hoc quod Redemptoris nostri voce subjungitur: Arescentibus hominibus prae timore et exspectatione quae supervenient universo orbi. Nam virtutes coelorum movebuntur. Quid etenim Dominus virtutes coelorum nisi angelos, archangelos, thronos, dominationes, principatus et potestates appellat, quae in adventu districti judicis nostris tunc oculis visibiliter apparebunt, ut districte tunc a nobis exigant hoc, quod nos modo invisibilis conditor aequanimiter portat? Ubi et subditur: Et tunc videbunt Filium hominis venientem in nubibus cum potestate magna et majestate. Ac si aperte diceretur: In potestate et majestate visuri sunt quem in humilitate positum audire noluerunt, ut virtutem ejus tanto tunc districtius sentiant, quanto nunc cervicem cordis ad ejus patientiam non inclinant.",
       "type": "reading",
       "variationKey": "lectio9"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-1": {
@@ -6470,6 +6512,27 @@
       "lat": "Leva, Jerúsalem, * óculos tuos, et vide poténtiam regis: ecce Salvátor venit sólvere te a vínculo.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-1o": {
@@ -6478,6 +6541,27 @@
       "eng": "29 For they shall be confounded for the idols, to which they have sacrificed: and you shall be ashamed of the gardens which you have chosen.\n30 When you shall be as an oak with the leaves falling off, and as a garden without water.\n31 And your strength shall be as the ashes of tow, and your work as a spark: and both shall burn together, and there shall be none to quench it.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-2": {
@@ -6540,6 +6624,27 @@
       "eng": "Seek ye the Lord * while He may be found; call ye upon Him while He is near. Alleluia.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-2o": {
@@ -6554,6 +6659,27 @@
       "eng": "11 The lofty eyes of man are humbled, and the haughtiness of men shall be made to stoop: and the Lord alone shall be exalted in that day.\n12 Because the day of the Lord of hosts shall be upon every one that is proud and highminded, and upon every one that is arrogant, and he shall be humbled.\n13 And upon all the tall and lofty cedars of Libanus, and upon all the oaks of Basan.\n14 And upon all the high mountains and upon all the elevated hills.\n15 And upon every high tower, and every fenced wall.\n16 And upon all the ships of Tharsis, and upon all that is fair to behold.\n17 And the loftiness of men shall be bowed down, and the haughtiness of men shall be humbled, and the Lord alone shall be exalted in that day.\n18 And idols shall be utterly destroyed.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-3": {
@@ -6605,6 +6731,27 @@
       "eng": "There cometh One mightier * than I after me, the latchet of Whose shoes I am not worthy to unloose.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-3o": {
@@ -6613,6 +6760,27 @@
       "eng": "12 As for my people, their oppressors have stripped them, and women have ruled over them. O my people, they that call thee blessed, the same deceive thee, and destroy the way of thy steps.\n13 The Lord standeth up to judge, and he standeth to judge the people.\n14 The Lord will enter into judgment with the ancients of his people, and its princes: for you have devoured the vineyard, and the spoil of the poor is in your house.\n15 Why do you consume my people, and grind the faces of the poor? saith the Lord the God of hosts.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-4": {
@@ -6662,6 +6830,27 @@
       "eng": "I will wait * upon the Lord my Saviour, and come before Him when He is near, alleluia.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-4o": {
@@ -6676,6 +6865,27 @@
       "eng": "7 For the vineyard of the Lord of hosts is the house of Israel: and the man of Juda, his pleasant plant: and I looked that he should do judgment, and behold iniquity: and do justice, and behold a cry.\n8 Woe to you that join house to house and lay field to field, even to the end of the place: shall you alone dwell in the midst of the earth?\n9 These things are in my ears, saith the Lord of hosts: Unless many great and fair houses shall become desolate, without an inhabitant.\n10 For ten acres of vineyard shall yield one little measure, and thirty bushels of seed shall yield three bushels.\n11 Woe to you that rise up early in the morning to follow drunkenness, and to drink in the evening, to be inflamed with wine.\n12 The harp, and the lyre, and, the timbrel and the pipe, and wine are in your feasts: and the work of the Lord you regard not, nor do you consider the works of his hands.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-5": {
@@ -6725,6 +6935,27 @@
       "eng": "Out of Egypt * have I called My Son; He shall come to save His people.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-5o": {
@@ -6733,6 +6964,27 @@
       "eng": "12 And the Lord shall remove men far away, and she shall be multiplied that was left in the midst of the earth.\n13 And there shall be still a tithing therein, and she shall turn, and shall be made a show as a turpentine tree, and as an oak that spreadeth its branches: that which shall stand therein, shall be a holy seed.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-6": {
@@ -6776,6 +7028,27 @@
       "eng": "Fear not * Zion, behold, thy God cometh, Alleluia.",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv1-6o": {
@@ -6784,6 +7057,27 @@
       "eng": "7 Thus saith the Lord God: It shall not stand, and this shall not be.\n8 But the head of Syria is Damascus, and the head of Damascus is Rasin: and within threescore and five years, Ephraim shall cease to be a people:\n9 And the head of Ephraim is Samaria, and the head of Samaria is the son of Romelia. If you will not believe, you shall not continue.",
       "type": "reading",
       "variationKey": "lectio2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus véniet, * et omnes Sancti ejus cum eo: et erit in die illa lux magna, allelúja.",
+      "eng": "Behold the Lord will come, * and all his Saints with him: and in that day there shall be a great light, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jucundáre, * fília Sion, et exsúlta satis, fília Jerúsalem, allelúja.",
+      "eng": "Rejoice greatly, * O daughter of Sion, shout for joy, O daughter of Jerusalem, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * Prophéta magnus, et ipse renovábit Jerúsalem, allelúja.",
+      "eng": "Behold, there will come * a great Prophet, and he shall renew Jerusalem, alleluia."
     }
   },
   "adv2-0": {
@@ -6937,6 +7231,27 @@
       "eng": "Art thou he that art to come * or look we for another? Go and relate to John what you have seen: the blind see, the dead rise again, to the poor the gospel is preached. Alleluia.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-0o": {
@@ -6975,6 +7290,27 @@
       "lat": "Discamus ergo, fratres charissimi, arundinem vento agitatam non esse; solidemus animum inter auras linguarum positum, stet inflexibilis status mentis. Nulla nos detractio ad iram provocet, atque ad remissionem inutilis gratiae nullus favor inclinet. Non nos prospera elevent, non adversa perturbent, ut qui in soliditate fidei figimur, nequáquam rerum transeuntium mutabilitate moveamur. Adhuc autem de ejus expressione subjungitur: Sed quid existis in desertum videre? Hominem mollibus vestitum? Ecce qui mollibus vestiuntur in domibus regum sunt. Camelorum etenim pilis contextis vestitus Joannes fuisse describitur. Et quid est dicere: Ecce qui mollibus vestiuntur in domibus regum sunt, nisi aperta sententia demonstrare quia non coelesti, sed terreno regi militant hi qui pro Deo perpeti aspera fugiunt, sed, solis exterioribus dediti, praesentis vitae mollitiem et delectationem quaerunt? Nemo ergo existimet in fluxu atque studio vestium peccatum deesse, quia si hoc culpa non esset, nullo modo Joannem Dominus de vestimenti sui asperitate laudasset.",
       "type": "reading",
       "variationKey": "lectio9"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-1": {
@@ -7024,6 +7360,27 @@
       "eng": "Behold, the Lord cometh * the King of all the earth, to take off from us the yoke of our captivity.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-1o": {
@@ -7032,6 +7389,27 @@
       "eng": "11 And I will visit the evils of the world, and against the wicked for their iniquity: and I will make the pride of infidels to cease, and will bring down the arrogancy of the mighty.\n12 A man shall be more precious than gold, yea a man than the finest of gold.\n13 For this I will trouble the heaven: and the earth shall be moved out of her place, for the indignation of the Lord of hosts, and for the day of his fierce wrath.\n14 And they shall be as a doe fleeing away, and as a sheep: and there shall be none to gather them together: every man shall turn to his own people, and every one shall flee to his own land.\n15 Every one that shall be found, shall be slain: and every one that shall come to their aid, shall fall by the sword.\n16 Their inhabitants shall be dashed in pieces before their eyes: their houses shall be pillaged, and their wives shall be ravished.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-2": {
@@ -7081,6 +7459,27 @@
       "eng": "The voice * of one crying in the wilderness: Prepare ye the way of the Lord, make His paths straight.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-2o": {
@@ -7095,6 +7494,27 @@
       "eng": "16 They that shall see thee, shall turn toward thee, and behold thee. Is this the man that troubled the earth, that shook kingdoms,\n17 That made the world a wilderness, and destroyed the cities thereof, that opened not the prison to his prisoners?",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-3": {
@@ -7144,6 +7564,27 @@
       "eng": "Thou shalt yet be built anew, * O Zion, and thou shalt see thy Righteous One, Who shall come in thee.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-3o": {
@@ -7158,6 +7599,27 @@
       "eng": "10 And gladness and joy shall be taken away from Carmel, and there shall be no rejoicing nor shouting in the vineyards. He shall not tread out wine in the press that was wont to tread it out: the voice of the treaders I have taken away.\n11 Wherefore my bowels shall sound like a harp for Moab, and my inward parts for the brick wall.\n12 And it shall come to pass, when it is seen that Moab is wearied on his high places, that he shall go in to his sanctuaries to pray, and shall not prevail.\n13 This is the word, that the Lord spoke to Moab from that time:\n14 And now the Lord hath spoken, saying: In three years, as the years of a hireling, the glory of Moab shall be taken away for all the multitude of the people, and it shall be left small and feeble, not many.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-4": {
@@ -7207,6 +7669,27 @@
       "eng": "He it is * Who, coming after me, is preferred before me, Whose shoe's latchet I am not worthy to unloose.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-4o": {
@@ -7221,6 +7704,27 @@
       "eng": "14 The Lord hath mingled in the midst thereof the spirit of giddiness: and they have caused Egypt to err in all its works, as a drunken man staggereth and vomiteth.\n15 And there shall be no work for Egypt, to make head or tail, him that bendeth down, or that holdeth back.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-5": {
@@ -7270,6 +7774,27 @@
       "eng": "Sing unto the Lord * a new song; from the end of the earth, let the voice of praise be heard.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-5o": {
@@ -7283,6 +7808,27 @@
       "eng": "19 With breaking shall the earth be broken, with crushing shall the earth be crushed, with trembling shall the earth be moved.\n20 With shaking shall the earth be shaken as a drunken man, and shall be removed as the tent of one night: and the iniquity thereof shall be heavy upon it, and it shall fall, and not rise again.\n21 And it shall come to pass, that in that day the Lord shall visit upon the host of heaven on high, and upon the kings of the earth, on the earth.\n22 And they shall be gathered together as in the gathering of one bundle into the pit, and they shall be shut up there in prison: and after many days they shall be visited.\n23 And the moon shall blush, and the sun shall be ashamed, when the Lord of hosts shall reign in mount Sion, and in Jerusalem, and shall be glorified in the sight of his ancients.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv2-6": {
@@ -7326,6 +7872,27 @@
       "eng": "The Lord shall lift up a standard * unto the nations, and shall gather together the outcasts of Israel.",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Ecce apparébit * Dóminus, et non mentiétur: si moram fécerit, exspécta eum, quia véniet, et non tardábit, allelúja.",
+      "eng": "Behold, the Lord shall appear, * and he shall not lie: if he make any delay, wait for him: for he shall surely come, and shall not be slack, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Urbs fortitúdinis * nostræ Sion, Salvátor ponétur in ea murus et antemurále: aperíte portas, quia nobíscum Deus, allelúja.",
+      "eng": "Sion, the city of our strength, * a saviour, a wall and a bulwark shall be set therein: open ye the gates, because God is with us, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Ecce Dóminus * noster cum virtúte véniet, et illuminábit óculos servórum suórum, allelúja.",
+      "eng": "Behold, our Lord * shall come with power, and give light to the eyes of his servants, alleluia."
     }
   },
   "adv3-0": {
@@ -7479,6 +8046,27 @@
       "eng": "Blessed art thou, * O Mary, who hast believed the Lord, for there shall be a performance of those things which were told thee from the Lord. Alleluia.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-0o": {
@@ -7504,6 +8092,27 @@
       "lat": "In Dominico agro, dilectissimi, cujus operarii sumus, oportet nos prudenter atque vigilanter spiritalem exercere culturam, ut perseveranti industria, quae legitimis temporibus sunt exsequenda, curantes, de sanctorum operum fruge laetemur. Quae si pigro otio et inerti desidia negligantur, terra nostra nihil generosi germinis pariet, et spinis ac tribulis obsita, non producet quae condenda sint horreis, sed quae urenda sint flammis. Ager autem iste, dilectissimi, rorante desuper gratia Dei, fide munitur, jejuniis exercetur, eleemosynis seritur, orationibus fecundatur, ut inter plantationes rigationesque nostras nullius amaritudinis radix pullulet, nec se incrementa cujusque noxiae stirpis attollant; sed enecate omnium semine vitiorum, coalescat seges laeta virtutum.",
       "type": "reading",
       "variationKey": "lectio6"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-1": {
@@ -7553,6 +8162,27 @@
       "eng": "All generations shall call me blessed, * for God hath regarded the lowliness of His hand-maiden.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-1o": {
@@ -7567,6 +8197,27 @@
       "eng": "19 Whensoever it shall pass through, it shall take you away: because in the morning early it shall pass through, in the day and in the night, and vexation alone shall make you understand what you hear.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-2": {
@@ -7616,6 +8267,27 @@
       "eng": "Awake, awake, * arise, O Jerusalem: loose thyself from the bands of thy neck, O captive daughter of Zion.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-2o": {
@@ -7630,6 +8302,27 @@
       "eng": "29 You shall have a song as in the night of the sanctified solemnity, and joy of heart, as where one goeth with a pipe, to come into the mountain of the Lord, to the Mighty One of Israel.\n30 And the Lord shall make the glory of his voice to be heard, and shall shew the terror of his arm, in the threatening of wrath, and the flame of devouring fire.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-3": {
@@ -7688,6 +8381,27 @@
       "eng": "Behold the handmaid * of the Lord; be it unto me according to thy word.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-3o": {
@@ -7705,6 +8419,27 @@
       "lat": "Quo modo fiet istud; quoniam virum non cognovi? Incredibilis et inaudita generatio ante audiri debuit, ut crederetur. Virginem parere, divini est signum mysterii, non humani. Denique, accipe, inquit, tibi signum: Ecce virgo in utero accipiet, et pariet filium. Legerat hoc Maria, ideo credidit futurum: sed quomodo fieret, ante non legerat; non enim quemadmodum fieret, vel tanto prophetae fuerat revelatum. Tanti namque mandati mysterium non hominis fuit, sed angeli ore promendum. Hodie primum auditur: Spiritus sanctus superveniet in te. Et auditur, et creditur. Denique: Ecce, inquit, ancilla Domini, contingat mihi secundum verbum tuum. Vide humilitatem, vide devotionem, ancillam se dicit Domini, quae mater eligitur: nec repentino exaltata promisso est, simul ancillam dicendo, nullam sibi praerogativam tantae gratiae vindicavit, quae faceret quod juberetur.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-4": {
@@ -7757,6 +8492,27 @@
       "eng": "Rejoice ye with Jerusalem, * and be glad with her, all ye that love her for ever.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-4o": {
@@ -7771,6 +8527,27 @@
       "eng": "13 Hear, you that are far off, what I have done, and you that are near know my strength.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-5": {
@@ -7829,6 +8606,27 @@
       "eng": "John bare witness of Him, * saying He That cometh after me is preferred before me.",
       "type": "antiphon",
       "variationKey": "ant_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-5o": {
@@ -7843,6 +8641,27 @@
       "eng": "Denique etiam postea, ut sanctificaret baptismum Ioannis, Dominus venit ad baptismum. Cito quoque adventus Mariae, et praesensentiae dominicae beneficia declarantur. Simul enim ut audivit salutationem Mariae Elizabeth, exsultavit infans in utero eius. Et repleta est Spiritu sancto. Vide distinctionem, singulorumque verborum proprietates. Vocem prior Elizabeth audivit, sed Ioannes prior gratiam sensit: illa naturae ordine audivit, iste exsultavit ratione mysterii: illa Mariae, iste Domini sensit adventum: femina mulieris, et pignus pignoris. Istae gratiam loquuntur, illi intus operantur, pietatisque mysterium maternis adoriuntur profectibus; duplicique miraculo prophetant matres spiritu parvulorum. Exsultavit infans, repleta est mater. Non prius mater repleta, quam filius: sed cum filius esset repletus Spiritu sancto, replevit et matrem. Exsultavit Ioannes, exsultavit et Mariae spiritus. Exsultante Ioanne, repletur Elizabeth: Mariam tamen non repleri Spiritu, sed spiritum eius exsultare cognovimus; incomprehensibilis enim incomprehensibiliter operabatur in matre. Et illa post conceptum repletur, ista ante conceptum.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-6": {
@@ -7895,6 +8714,27 @@
       "eng": "O thou Angel of God, * how shall this be, seeing I know not a man? Hear, O Virgin Mary! the Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee!",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv3-6o": {
@@ -7903,6 +8743,27 @@
       "eng": "Ut quia ejus sermo praecurrebat praesentiam Redemptoris, ipsum quoque ejus baptisma praecedendo fieret umbra veritatis. Sequitur: Sicut scriptum est in libro sermonum Isaiae prophetae: Vox clamantis in deserto, Parate viam Domini, rectas facite semitas ejus. Idem vero Joannes Baptista requisitus quis esset, respondit, dicens: Ego vox clamantis in deserto. Qui, sicut ante per nos dictum est, ideo vox a propheta vocatus est, quia verbum praeibat. Quid autem clamaret aperitur cum subditur: Parate viam Domini, rectas facite semitas ejus. Omnis qui fidem rectam et bona opera praedicat, quid aliud quam venienti Domino ad corda audientium viam parat?",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Dabo in Sion * salútem, et in Jerúsalem glóriam meam, allelúja.",
+      "eng": "I will give salvation in Zion, * and unto Jerusalem my glory, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Jerúsalem, gaude * gáudio magno, quia véniet tibi Salvátor, allelúja.",
+      "eng": "Rejoice Jerusalem, * with great joy, for a Saviour shall come to thee, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Juste et pie * vivámus, exspectántes beátam spem, et advéntum Dómini.",
+      "eng": "Let us live in justice and godliness, * looking for the blessed hope and coming of the Lord, alleluia."
     }
   },
   "adv4-0": {
@@ -8044,6 +8905,27 @@
       "lat": "Cánite tuba * in Sion, quia prope est dies Dómini: ecce véniet ad salvándum nos, allelúja, allelúja.\nEcce véniet * desiderátus cunctis géntibus: et replébitur glória domus Dómini, allelúja.\nErunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.\nDóminus véniet, * occúrrite illi, dicéntes: Magnum princípium, et regni ejus non erit finis: Deus, Fortis, Dominátor, Princeps pacis, allelúja, allelúja.\nOmnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
       "type": "antiphon",
       "variationKey": "ant_vespera_3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-0o": {
@@ -8067,6 +8949,27 @@
       "lat": "Dicente itaque Domino: Diliges Dominum Deum tuum ex toto corde tuo, et ex tota mente tua; et diliges proximum tuum sicut teipsum: suscipiat fidelis anima auctoris sui atque rectoris immarcescibilem charitatem, totamque se etiam ejus subjiciat voluntati, in cujus operibus atque judiciis nihil vacat a veritate justitiae, nihil a miseratione clementiae. Quoniam etsi magnis quis laboribus et multis fatigetur incommodis, bona est illi causa tolerandi, qui se adversis vel corrigi intelligit, vel probari. Charitatis vero istius pietas perfecta esse non poterit, nisi diligatur et proximus. Quo nomine non ii tantum intelligendi sunt qui nobis amicitia aut propinquitate junguntur, sed omnes prorsus homines, cum quibus nobis natura communis est, sive illi hostes sint, sive socii; sive liberi, sive servi.",
       "type": "reading",
       "variationKey": "lectio6"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-1": {
@@ -8110,6 +9013,27 @@
       "eng": "Thus saith the Lord: * Repent ye, for the kingdom of heaven is at hand. Alleluia.",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-1o": {
@@ -8124,6 +9048,27 @@
       "eng": "25 I have raised up one from the north, and he shall come from the rising of the sun: he shall call upon my name, and he shall make princes to be as dirt, and as the potter treading clay.\n26 Who hath declared from the beginning, that we may know: and from time of old, that we may say: Thou art just. There is none that sheweth, nor that foretelleth, nor that heareth your words.\n27 The first shall say to Sion: Behold they are here, and to Jerusalem I will give an evangelist.\n28 And I saw, and there was no one even among them to consult, or who, when I asked, could answer a word.\n29 Behold they are all in the wrong, and their works are vain: their idols are wind and vanity.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-2": {
@@ -8177,6 +9122,27 @@
       "eng": "Awake, awake, * put on strength, O arm of the Lord!",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-2o": {
@@ -8185,6 +9151,27 @@
       "eng": "8 I the Lord, this is my name: I will not give my glory to another, nor my praise to graven things.\n9 The things that were first, behold they are come: and new things do I declare: before they spring forth, I will make you hear them.",
       "type": "reading",
       "variationKey": "lectio2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-3": {
@@ -8228,6 +9215,27 @@
       "eng": "I will place salvation * in Zion, and My glory in Jerusalem. Alleluia.",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-3o": {
@@ -8236,6 +9244,27 @@
       "eng": "9 Arise, arise, put on strength, O thou arm of the Lord, arise as in the days of old, in the ancient generations.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-4": {
@@ -8279,6 +9308,27 @@
       "eng": "Comfort ye, comfort ye, * My people, saith the Lord your God.",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-4o": {
@@ -8287,6 +9337,27 @@
       "eng": "12 Wilt thou refrain thyself, O Lord, upon these things, wilt thou hold thy peace, and afflict us vehemently?",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-5": {
@@ -8330,6 +9401,27 @@
       "eng": "Behold, all things are fulfilled * which were spoken by the Angel concerning the Virgin Mary.",
       "type": "antiphon",
       "variationKey": "ant_2"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-5o": {
@@ -8338,10 +9430,52 @@
       "eng": "17 They that were sanctified, thought themselves clean in the gardens behind the gate within, they that did eat swine's flesh, and the abomination, and the mouse: they shall be consumed together, saith the Lord.\n18 But I know their works, and their thoughts: I come that I may gather them together with all nations and tongues: and they shall come and shall see my glory.\n19 And I will set a sign among them, and I will send of them that shall be saved, to the Gentiles into the sea, into Africa, and Lydia them that draw the bow: into Italy, and Greece, to the islands afar off, to them that have not heard of me, and have not seen my glory.",
       "type": "reading",
       "variationKey": "lectio3"
+    },
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
     }
   },
   "adv4-6": {
-    "officium": "Sabbato in Hebdomadam IV Adventus"
+    "officium": "Sabbato in Hebdomadam IV Adventus",
+    "ant_tertia": {
+      "type": "antiphon",
+      "variationKey": "ant_tertia",
+      "label": "Antíphona",
+      "lat": "Erunt prava * in dirécta, et áspera in vias planas: veni, Dómine, et noli tardáre, allelúja.",
+      "eng": "The crooked * shall become straight, and the rough ways plain: come, O Lord, and do not tarry, alleluia."
+    },
+    "ant_sexta": {
+      "type": "antiphon",
+      "variationKey": "ant_sexta",
+      "label": "Antíphona",
+      "lat": "Ecce véniet * desiderátus cunctis Géntibus: et replébitur glória domus Dómini, allelúja.",
+      "eng": "Behold, he shall come * the desire of all nations: and the house of the Lord shall be filled with glory, alleluia."
+    },
+    "ant_nona": {
+      "type": "antiphon",
+      "variationKey": "ant_nona",
+      "label": "Antíphona",
+      "lat": "Omnípotens Sermo tuus, * Dómine, a regálibus sédibus véniet, allelúja.",
+      "eng": "Thy almighty Word, * O Lord, shall come from the royal throne, alleluia."
+    }
   },
   "epi1-0": {
     "officium": "Sanctæ Familiæ Jesu Mariæ Joseph",
