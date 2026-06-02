@@ -3303,7 +3303,7 @@
     "temporal": "pent23-0",
     "sanctoral": "10-27",
     "winner": "sanctoral",
-    "winnerKey": "10-27",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -3377,10 +3377,10 @@
     "commemoration": "pent23-6"
   },
   "2024-11-03": {
-    "temporal": "pent24-0",
+    "temporal": "epi4-0",
     "sanctoral": "11-03",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam I. Novembris",
     "color": "white",
@@ -3454,10 +3454,10 @@
     "commemoration": "pent24-6"
   },
   "2024-11-10": {
-    "temporal": "pent25-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-10",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -3531,10 +3531,10 @@
     "commemoration": "pent25-6"
   },
   "2024-11-17": {
-    "temporal": "pent26-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-17",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -3608,10 +3608,10 @@
     "commemoration": "pent26-6"
   },
   "2024-11-24": {
-    "temporal": "pent27-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-24",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -3641,10 +3641,10 @@
     "commemoration": "pent27-2"
   },
   "2024-11-27": {
-    "temporal": "pent27-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent27-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -3652,10 +3652,10 @@
     "commemoration": null
   },
   "2024-11-28": {
-    "temporal": "pent27-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent27-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -3663,10 +3663,10 @@
     "commemoration": null
   },
   "2024-11-29": {
-    "temporal": "pent27-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent27-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -7307,7 +7307,7 @@
     "temporal": "pent20-0",
     "sanctoral": "10-26",
     "winner": "sanctoral",
-    "winnerKey": "10-26",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -11311,7 +11311,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-25",
     "winner": "sanctoral",
-    "winnerKey": "10-25",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -11462,10 +11462,10 @@
     "commemoration": null
   },
   "2026-11-08": {
-    "temporal": "pent24-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-08",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -11539,10 +11539,10 @@
     "commemoration": "pent24-6"
   },
   "2026-11-15": {
-    "temporal": "pent25-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-15",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -11616,10 +11616,10 @@
     "commemoration": "pent25-6"
   },
   "2026-11-22": {
-    "temporal": "pent26-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-22",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -11671,10 +11671,10 @@
     "commemoration": "pent26-4"
   },
   "2026-11-27": {
-    "temporal": "pent26-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent26-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -15392,7 +15392,7 @@
     "temporal": "pent24-0",
     "sanctoral": "10-31",
     "winner": "sanctoral",
-    "winnerKey": "10-31",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -15466,10 +15466,10 @@
     "commemoration": null
   },
   "2027-11-07": {
-    "temporal": "pent25-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-07",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -15543,10 +15543,10 @@
     "commemoration": "pent25-6"
   },
   "2027-11-14": {
-    "temporal": "pent26-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-14",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -15620,10 +15620,10 @@
     "commemoration": "pent26-6"
   },
   "2027-11-21": {
-    "temporal": "pent27-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-21",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -19396,7 +19396,7 @@
     "temporal": "pent21-0",
     "sanctoral": "10-29",
     "winner": "sanctoral",
-    "winnerKey": "10-29",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -19624,10 +19624,10 @@
     "commemoration": "pent23-6"
   },
   "2028-11-19": {
-    "temporal": "pent24-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-19",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -19701,10 +19701,10 @@
     "commemoration": "pent24-6"
   },
   "2028-11-26": {
-    "temporal": "pent25-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-26",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -19712,10 +19712,10 @@
     "commemoration": null
   },
   "2028-11-27": {
-    "temporal": "pent25-1",
+    "temporal": "pent24-1",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent25-1",
+    "winnerKey": "pent24-1",
     "rank": 1.0,
     "name": "Feria Secunda infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -19723,10 +19723,10 @@
     "commemoration": null
   },
   "2028-11-28": {
-    "temporal": "pent25-2",
+    "temporal": "pent24-2",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent25-2",
+    "winnerKey": "pent24-2",
     "rank": 1.0,
     "name": "Feria Tertia infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -19734,10 +19734,10 @@
     "commemoration": null
   },
   "2028-11-29": {
-    "temporal": "pent25-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent25-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -19756,10 +19756,10 @@
     "commemoration": "pent25-4"
   },
   "2028-12-01": {
-    "temporal": "pent25-5",
+    "temporal": "pent24-5",
     "sanctoral": "12-01",
     "winner": "temporal",
-    "winnerKey": "pent25-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -23400,7 +23400,7 @@
     "temporal": "pent23-0",
     "sanctoral": "10-28",
     "winner": "sanctoral",
-    "winnerKey": "10-28",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -23474,10 +23474,10 @@
     "commemoration": null
   },
   "2029-11-04": {
-    "temporal": "pent24-0",
+    "temporal": "epi4-0",
     "sanctoral": "11-04",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam I. Novembris",
     "color": "white",
@@ -23551,10 +23551,10 @@
     "commemoration": "pent24-6"
   },
   "2029-11-11": {
-    "temporal": "pent25-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-11",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -23628,10 +23628,10 @@
     "commemoration": "pent25-6"
   },
   "2029-11-18": {
-    "temporal": "pent26-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-18",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -23705,10 +23705,10 @@
     "commemoration": "pent26-6"
   },
   "2029-11-25": {
-    "temporal": "pent27-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-25",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -23727,10 +23727,10 @@
     "commemoration": "pent27-1"
   },
   "2029-11-27": {
-    "temporal": "pent27-2",
+    "temporal": "pent24-2",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent27-2",
+    "winnerKey": "pent24-2",
     "rank": 1.0,
     "name": "Feria Tertia infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -23738,10 +23738,10 @@
     "commemoration": null
   },
   "2029-11-28": {
-    "temporal": "pent27-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent27-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -23749,10 +23749,10 @@
     "commemoration": null
   },
   "2029-11-29": {
-    "temporal": "pent27-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent27-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -24244,7 +24244,7 @@
     "commemoration": "epi1-6"
   },
   "2030-01-13": {
-    "temporal": "epi2-0",
+    "temporal": "epi1-0",
     "sanctoral": "01-13",
     "winner": "temporal",
     "winnerKey": "epi1-0",
@@ -24321,7 +24321,7 @@
     "commemoration": "01-19"
   },
   "2030-01-20": {
-    "temporal": "epi3-0",
+    "temporal": "epi2-0",
     "sanctoral": "01-20",
     "winner": "temporal",
     "winnerKey": "epi2-0",
@@ -24398,7 +24398,7 @@
     "commemoration": "epi3-6"
   },
   "2030-01-27": {
-    "temporal": "epi4-0",
+    "temporal": "epi3-0",
     "sanctoral": "01-27",
     "winner": "temporal",
     "winnerKey": "epi3-0",
@@ -24475,7 +24475,7 @@
     "commemoration": "epi4-6"
   },
   "2030-02-03": {
-    "temporal": "epi5-0",
+    "temporal": "epi4-0",
     "sanctoral": "02-03",
     "winner": "temporal",
     "winnerKey": "epi4-0",
@@ -24552,7 +24552,7 @@
     "commemoration": "epi5-6"
   },
   "2030-02-10": {
-    "temporal": "epi6-0",
+    "temporal": "epi5-0",
     "sanctoral": "02-10",
     "winner": "temporal",
     "winnerKey": "epi5-0",
@@ -24596,7 +24596,7 @@
     "commemoration": null
   },
   "2030-02-14": {
-    "temporal": "epi6-4",
+    "temporal": "epi5-4",
     "sanctoral": "02-14",
     "winner": "temporal",
     "winnerKey": "epi5-4",
@@ -27404,7 +27404,7 @@
     "temporal": "pent20-0",
     "sanctoral": "10-27",
     "winner": "sanctoral",
-    "winnerKey": "10-27",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -31408,7 +31408,7 @@
     "temporal": "pent21-0",
     "sanctoral": "10-26",
     "winner": "sanctoral",
-    "winnerKey": "10-26",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -31636,10 +31636,10 @@
     "commemoration": "pent23-6"
   },
   "2031-11-16": {
-    "temporal": "pent24-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-16",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -31713,10 +31713,10 @@
     "commemoration": "pent24-6"
   },
   "2031-11-23": {
-    "temporal": "pent25-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-23",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -31757,10 +31757,10 @@
     "commemoration": "pent25-3"
   },
   "2031-11-27": {
-    "temporal": "pent25-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent25-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -31768,10 +31768,10 @@
     "commemoration": null
   },
   "2031-11-28": {
-    "temporal": "pent25-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent25-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -35489,7 +35489,7 @@
     "temporal": "pent24-0",
     "sanctoral": "10-31",
     "winner": "sanctoral",
-    "winnerKey": "10-31",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -35563,10 +35563,10 @@
     "commemoration": null
   },
   "2032-11-07": {
-    "temporal": "pent25-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-07",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -35640,10 +35640,10 @@
     "commemoration": "pent25-6"
   },
   "2032-11-14": {
-    "temporal": "pent26-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-14",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -35717,10 +35717,10 @@
     "commemoration": "pent26-6"
   },
   "2032-11-21": {
-    "temporal": "pent27-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-21",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -39493,7 +39493,7 @@
     "temporal": "pent21-0",
     "sanctoral": "10-30",
     "winner": "sanctoral",
-    "winnerKey": "10-30",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -39798,7 +39798,7 @@
     "commemoration": "pent24-6"
   },
   "2033-11-27": {
-    "temporal": "pent25-0",
+    "temporal": "adv1-0",
     "sanctoral": "11-27",
     "winner": "temporal",
     "winnerKey": "adv1-0",
@@ -39809,7 +39809,7 @@
     "commemoration": null
   },
   "2033-11-28": {
-    "temporal": "pent25-1",
+    "temporal": "adv1-1",
     "sanctoral": "11-28",
     "winner": "temporal",
     "winnerKey": "adv1-1",
@@ -39820,7 +39820,7 @@
     "commemoration": null
   },
   "2033-11-29": {
-    "temporal": "pent25-2",
+    "temporal": "adv1-2",
     "sanctoral": "11-29",
     "winner": "temporal",
     "winnerKey": "adv1-2",
@@ -39842,7 +39842,7 @@
     "commemoration": "pent25-3"
   },
   "2033-12-01": {
-    "temporal": "pent25-4",
+    "temporal": "adv1-4",
     "sanctoral": "12-01",
     "winner": "temporal",
     "winnerKey": "adv1-4",
@@ -39875,7 +39875,7 @@
     "commemoration": "pent25-6"
   },
   "2033-12-04": {
-    "temporal": "adv1-0",
+    "temporal": "adv2-0",
     "sanctoral": "12-04",
     "winner": "temporal",
     "winnerKey": "adv2-0",
@@ -39886,7 +39886,7 @@
     "commemoration": null
   },
   "2033-12-05": {
-    "temporal": "adv1-1",
+    "temporal": "adv2-1",
     "sanctoral": "12-05",
     "winner": "temporal",
     "winnerKey": "adv2-1",
@@ -39930,7 +39930,7 @@
     "commemoration": "adv1-4"
   },
   "2033-12-09": {
-    "temporal": "adv1-5",
+    "temporal": "adv2-5",
     "sanctoral": "12-09",
     "winner": "temporal",
     "winnerKey": "adv2-5",
@@ -39941,7 +39941,7 @@
     "commemoration": null
   },
   "2033-12-10": {
-    "temporal": "adv1-6",
+    "temporal": "adv2-6",
     "sanctoral": "12-10",
     "winner": "temporal",
     "winnerKey": "adv2-6",
@@ -39952,7 +39952,7 @@
     "commemoration": "12-10"
   },
   "2033-12-11": {
-    "temporal": "adv2-0",
+    "temporal": "adv3-0",
     "sanctoral": "12-11",
     "winner": "temporal",
     "winnerKey": "adv3-0",
@@ -39963,7 +39963,7 @@
     "commemoration": null
   },
   "2033-12-12": {
-    "temporal": "adv2-1",
+    "temporal": "adv3-1",
     "sanctoral": "12-12",
     "winner": "temporal",
     "winnerKey": "adv3-1",
@@ -39996,7 +39996,7 @@
     "commemoration": null
   },
   "2033-12-15": {
-    "temporal": "adv2-4",
+    "temporal": "adv3-4",
     "sanctoral": "12-15",
     "winner": "temporal",
     "winnerKey": "adv3-4",
@@ -40029,7 +40029,7 @@
     "commemoration": null
   },
   "2033-12-18": {
-    "temporal": "adv3-0",
+    "temporal": "adv4-0",
     "sanctoral": "12-18",
     "winner": "temporal",
     "winnerKey": "adv4-0",
@@ -40040,7 +40040,7 @@
     "commemoration": null
   },
   "2033-12-19": {
-    "temporal": "adv3-1",
+    "temporal": "adv4-1",
     "sanctoral": "12-19",
     "winner": "temporal",
     "winnerKey": "adv4-1",
@@ -40051,7 +40051,7 @@
     "commemoration": null
   },
   "2033-12-20": {
-    "temporal": "adv3-2",
+    "temporal": "adv4-2",
     "sanctoral": "12-20",
     "winner": "temporal",
     "winnerKey": "adv4-2",
@@ -40073,7 +40073,7 @@
     "commemoration": "adv3-3"
   },
   "2033-12-22": {
-    "temporal": "adv3-4",
+    "temporal": "adv4-4",
     "sanctoral": "12-22",
     "winner": "temporal",
     "winnerKey": "adv4-4",
@@ -43497,7 +43497,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-29",
     "winner": "sanctoral",
-    "winnerKey": "10-29",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -43648,10 +43648,10 @@
     "commemoration": "pent23-6"
   },
   "2034-11-12": {
-    "temporal": "pent24-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-12",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -43725,10 +43725,10 @@
     "commemoration": "pent24-6"
   },
   "2034-11-19": {
-    "temporal": "pent25-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-19",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -43802,10 +43802,10 @@
     "commemoration": "pent25-6"
   },
   "2034-11-26": {
-    "temporal": "pent26-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-26",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -43813,10 +43813,10 @@
     "commemoration": null
   },
   "2034-11-27": {
-    "temporal": "pent26-1",
+    "temporal": "pent24-1",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent26-1",
+    "winnerKey": "pent24-1",
     "rank": 1.0,
     "name": "Feria Secunda infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -43824,10 +43824,10 @@
     "commemoration": null
   },
   "2034-11-28": {
-    "temporal": "pent26-2",
+    "temporal": "pent24-2",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent26-2",
+    "winnerKey": "pent24-2",
     "rank": 1.0,
     "name": "Feria Tertia infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -43835,10 +43835,10 @@
     "commemoration": null
   },
   "2034-11-29": {
-    "temporal": "pent26-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent26-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -43857,10 +43857,10 @@
     "commemoration": "pent26-4"
   },
   "2034-12-01": {
-    "temporal": "pent26-5",
+    "temporal": "pent24-5",
     "sanctoral": "12-01",
     "winner": "temporal",
-    "winnerKey": "pent26-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -47501,7 +47501,7 @@
     "temporal": "pent24-0",
     "sanctoral": "10-28",
     "winner": "sanctoral",
-    "winnerKey": "10-28",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -47575,10 +47575,10 @@
     "commemoration": null
   },
   "2035-11-04": {
-    "temporal": "pent25-0",
+    "temporal": "epi4-0",
     "sanctoral": "11-04",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam I. Novembris",
     "color": "white",
@@ -47652,10 +47652,10 @@
     "commemoration": "pent25-6"
   },
   "2035-11-11": {
-    "temporal": "pent26-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-11",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -47729,10 +47729,10 @@
     "commemoration": "pent26-6"
   },
   "2035-11-18": {
-    "temporal": "pent27-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-18",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -47806,10 +47806,10 @@
     "commemoration": "pent27-6"
   },
   "2035-11-25": {
-    "temporal": "pent28-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-25",
     "winner": "temporal",
-    "winnerKey": "pent28-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -47828,10 +47828,10 @@
     "commemoration": "pent28-1"
   },
   "2035-11-27": {
-    "temporal": "pent28-2",
+    "temporal": "pent24-2",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent28-2",
+    "winnerKey": "pent24-2",
     "rank": 1.0,
     "name": "Feria Tertia infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -47839,10 +47839,10 @@
     "commemoration": null
   },
   "2035-11-28": {
-    "temporal": "pent28-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent28-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -47850,10 +47850,10 @@
     "commemoration": null
   },
   "2035-11-29": {
-    "temporal": "pent28-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent28-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -48345,7 +48345,7 @@
     "commemoration": "epi1-6"
   },
   "2036-01-13": {
-    "temporal": "epi2-0",
+    "temporal": "epi1-0",
     "sanctoral": "01-13",
     "winner": "temporal",
     "winnerKey": "epi1-0",
@@ -48422,7 +48422,7 @@
     "commemoration": "01-19"
   },
   "2036-01-20": {
-    "temporal": "epi3-0",
+    "temporal": "epi2-0",
     "sanctoral": "01-20",
     "winner": "temporal",
     "winnerKey": "epi2-0",
@@ -48499,7 +48499,7 @@
     "commemoration": "epi3-6"
   },
   "2036-01-27": {
-    "temporal": "epi4-0",
+    "temporal": "epi3-0",
     "sanctoral": "01-27",
     "winner": "temporal",
     "winnerKey": "epi3-0",
@@ -48576,7 +48576,7 @@
     "commemoration": "epi4-6"
   },
   "2036-02-03": {
-    "temporal": "epi5-0",
+    "temporal": "epi4-0",
     "sanctoral": "02-03",
     "winner": "temporal",
     "winnerKey": "epi4-0",
@@ -51505,7 +51505,7 @@
     "temporal": "pent21-0",
     "sanctoral": "10-26",
     "winner": "sanctoral",
-    "winnerKey": "10-26",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -51733,10 +51733,10 @@
     "commemoration": "pent23-6"
   },
   "2036-11-16": {
-    "temporal": "pent24-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-16",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -51810,10 +51810,10 @@
     "commemoration": "pent24-6"
   },
   "2036-11-23": {
-    "temporal": "pent25-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-23",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -51854,10 +51854,10 @@
     "commemoration": "pent25-3"
   },
   "2036-11-27": {
-    "temporal": "pent25-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent25-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -51865,10 +51865,10 @@
     "commemoration": null
   },
   "2036-11-28": {
-    "temporal": "pent25-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent25-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -55509,7 +55509,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-25",
     "winner": "sanctoral",
-    "winnerKey": "10-25",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -55660,10 +55660,10 @@
     "commemoration": null
   },
   "2037-11-08": {
-    "temporal": "pent24-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-08",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -55737,10 +55737,10 @@
     "commemoration": "pent24-6"
   },
   "2037-11-15": {
-    "temporal": "pent25-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-15",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -55814,10 +55814,10 @@
     "commemoration": "pent25-6"
   },
   "2037-11-22": {
-    "temporal": "pent26-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-22",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -55869,10 +55869,10 @@
     "commemoration": "pent26-4"
   },
   "2037-11-27": {
-    "temporal": "pent26-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent26-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -59590,7 +59590,7 @@
     "temporal": "pent20-0",
     "sanctoral": "10-31",
     "winner": "sanctoral",
-    "winnerKey": "10-31",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -59818,10 +59818,10 @@
     "commemoration": "pent22-6"
   },
   "2038-11-21": {
-    "temporal": "pent23-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-21",
     "winner": "temporal",
-    "winnerKey": "pent23-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -63594,7 +63594,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-30",
     "winner": "sanctoral",
-    "winnerKey": "10-30",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -63745,10 +63745,10 @@
     "commemoration": "pent23-6"
   },
   "2039-11-13": {
-    "temporal": "pent24-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-13",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -63822,10 +63822,10 @@
     "commemoration": "pent24-6"
   },
   "2039-11-20": {
-    "temporal": "pent25-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-20",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -63899,7 +63899,7 @@
     "commemoration": "pent25-6"
   },
   "2039-11-27": {
-    "temporal": "pent26-0",
+    "temporal": "adv1-0",
     "sanctoral": "11-27",
     "winner": "temporal",
     "winnerKey": "adv1-0",
@@ -63910,7 +63910,7 @@
     "commemoration": null
   },
   "2039-11-28": {
-    "temporal": "pent26-1",
+    "temporal": "adv1-1",
     "sanctoral": "11-28",
     "winner": "temporal",
     "winnerKey": "adv1-1",
@@ -63921,7 +63921,7 @@
     "commemoration": null
   },
   "2039-11-29": {
-    "temporal": "pent26-2",
+    "temporal": "adv1-2",
     "sanctoral": "11-29",
     "winner": "temporal",
     "winnerKey": "adv1-2",
@@ -63943,7 +63943,7 @@
     "commemoration": "pent26-3"
   },
   "2039-12-01": {
-    "temporal": "pent26-4",
+    "temporal": "adv1-4",
     "sanctoral": "12-01",
     "winner": "temporal",
     "winnerKey": "adv1-4",
@@ -63976,7 +63976,7 @@
     "commemoration": "pent26-6"
   },
   "2039-12-04": {
-    "temporal": "adv1-0",
+    "temporal": "adv2-0",
     "sanctoral": "12-04",
     "winner": "temporal",
     "winnerKey": "adv2-0",
@@ -63987,7 +63987,7 @@
     "commemoration": null
   },
   "2039-12-05": {
-    "temporal": "adv1-1",
+    "temporal": "adv2-1",
     "sanctoral": "12-05",
     "winner": "temporal",
     "winnerKey": "adv2-1",
@@ -64031,7 +64031,7 @@
     "commemoration": "adv1-4"
   },
   "2039-12-09": {
-    "temporal": "adv1-5",
+    "temporal": "adv2-5",
     "sanctoral": "12-09",
     "winner": "temporal",
     "winnerKey": "adv2-5",
@@ -64042,7 +64042,7 @@
     "commemoration": null
   },
   "2039-12-10": {
-    "temporal": "adv1-6",
+    "temporal": "adv2-6",
     "sanctoral": "12-10",
     "winner": "temporal",
     "winnerKey": "adv2-6",
@@ -64053,7 +64053,7 @@
     "commemoration": "12-10"
   },
   "2039-12-11": {
-    "temporal": "adv2-0",
+    "temporal": "adv3-0",
     "sanctoral": "12-11",
     "winner": "temporal",
     "winnerKey": "adv3-0",
@@ -64064,7 +64064,7 @@
     "commemoration": null
   },
   "2039-12-12": {
-    "temporal": "adv2-1",
+    "temporal": "adv3-1",
     "sanctoral": "12-12",
     "winner": "temporal",
     "winnerKey": "adv3-1",
@@ -64097,7 +64097,7 @@
     "commemoration": null
   },
   "2039-12-15": {
-    "temporal": "adv2-4",
+    "temporal": "adv3-4",
     "sanctoral": "12-15",
     "winner": "temporal",
     "winnerKey": "adv3-4",
@@ -64130,7 +64130,7 @@
     "commemoration": null
   },
   "2039-12-18": {
-    "temporal": "adv3-0",
+    "temporal": "adv4-0",
     "sanctoral": "12-18",
     "winner": "temporal",
     "winnerKey": "adv4-0",
@@ -64141,7 +64141,7 @@
     "commemoration": null
   },
   "2039-12-19": {
-    "temporal": "adv3-1",
+    "temporal": "adv4-1",
     "sanctoral": "12-19",
     "winner": "temporal",
     "winnerKey": "adv4-1",
@@ -64152,7 +64152,7 @@
     "commemoration": null
   },
   "2039-12-20": {
-    "temporal": "adv3-2",
+    "temporal": "adv4-2",
     "sanctoral": "12-20",
     "winner": "temporal",
     "winnerKey": "adv4-2",
@@ -64174,7 +64174,7 @@
     "commemoration": "adv3-3"
   },
   "2039-12-22": {
-    "temporal": "adv3-4",
+    "temporal": "adv4-4",
     "sanctoral": "12-22",
     "winner": "temporal",
     "winnerKey": "adv4-4",
@@ -67598,7 +67598,7 @@
     "temporal": "pent23-0",
     "sanctoral": "10-28",
     "winner": "sanctoral",
-    "winnerKey": "10-28",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -67672,10 +67672,10 @@
     "commemoration": null
   },
   "2040-11-04": {
-    "temporal": "pent24-0",
+    "temporal": "epi4-0",
     "sanctoral": "11-04",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam I. Novembris",
     "color": "white",
@@ -67749,10 +67749,10 @@
     "commemoration": "pent24-6"
   },
   "2040-11-11": {
-    "temporal": "pent25-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-11",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -67826,10 +67826,10 @@
     "commemoration": "pent25-6"
   },
   "2040-11-18": {
-    "temporal": "pent26-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-18",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -67903,10 +67903,10 @@
     "commemoration": "pent26-6"
   },
   "2040-11-25": {
-    "temporal": "pent27-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-25",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -67925,10 +67925,10 @@
     "commemoration": "pent27-1"
   },
   "2040-11-27": {
-    "temporal": "pent27-2",
+    "temporal": "pent24-2",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent27-2",
+    "winnerKey": "pent24-2",
     "rank": 1.0,
     "name": "Feria Tertia infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -67936,10 +67936,10 @@
     "commemoration": null
   },
   "2040-11-28": {
-    "temporal": "pent27-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent27-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -67947,10 +67947,10 @@
     "commemoration": null
   },
   "2040-11-29": {
-    "temporal": "pent27-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent27-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -68442,7 +68442,7 @@
     "commemoration": "epi1-6"
   },
   "2041-01-13": {
-    "temporal": "epi2-0",
+    "temporal": "epi1-0",
     "sanctoral": "01-13",
     "winner": "temporal",
     "winnerKey": "epi1-0",
@@ -68519,7 +68519,7 @@
     "commemoration": "01-19"
   },
   "2041-01-20": {
-    "temporal": "epi3-0",
+    "temporal": "epi2-0",
     "sanctoral": "01-20",
     "winner": "temporal",
     "winnerKey": "epi2-0",
@@ -68596,7 +68596,7 @@
     "commemoration": "epi3-6"
   },
   "2041-01-27": {
-    "temporal": "epi4-0",
+    "temporal": "epi3-0",
     "sanctoral": "01-27",
     "winner": "temporal",
     "winnerKey": "epi3-0",
@@ -68673,7 +68673,7 @@
     "commemoration": "epi4-6"
   },
   "2041-02-03": {
-    "temporal": "epi5-0",
+    "temporal": "epi4-0",
     "sanctoral": "02-03",
     "winner": "temporal",
     "winnerKey": "epi4-0",
@@ -68750,7 +68750,7 @@
     "commemoration": "epi5-6"
   },
   "2041-02-10": {
-    "temporal": "epi6-0",
+    "temporal": "epi5-0",
     "sanctoral": "02-10",
     "winner": "temporal",
     "winnerKey": "epi5-0",
@@ -68794,7 +68794,7 @@
     "commemoration": null
   },
   "2041-02-14": {
-    "temporal": "epi6-4",
+    "temporal": "epi5-4",
     "sanctoral": "02-14",
     "winner": "temporal",
     "winnerKey": "epi5-4",
@@ -71602,7 +71602,7 @@
     "temporal": "pent20-0",
     "sanctoral": "10-27",
     "winner": "sanctoral",
-    "winnerKey": "10-27",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -75606,7 +75606,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-26",
     "winner": "sanctoral",
-    "winnerKey": "10-26",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -75834,10 +75834,10 @@
     "commemoration": "pent24-6"
   },
   "2042-11-16": {
-    "temporal": "pent25-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-16",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -75911,10 +75911,10 @@
     "commemoration": "pent25-6"
   },
   "2042-11-23": {
-    "temporal": "pent26-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-23",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -75955,10 +75955,10 @@
     "commemoration": "pent26-3"
   },
   "2042-11-27": {
-    "temporal": "pent26-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent26-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -75966,10 +75966,10 @@
     "commemoration": null
   },
   "2042-11-28": {
-    "temporal": "pent26-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent26-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -79610,7 +79610,7 @@
     "temporal": "pent23-0",
     "sanctoral": "10-25",
     "winner": "sanctoral",
-    "winnerKey": "10-25",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -79761,10 +79761,10 @@
     "commemoration": null
   },
   "2043-11-08": {
-    "temporal": "pent25-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-08",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -79838,10 +79838,10 @@
     "commemoration": "pent25-6"
   },
   "2043-11-15": {
-    "temporal": "pent26-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-15",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -79915,10 +79915,10 @@
     "commemoration": "pent26-6"
   },
   "2043-11-22": {
-    "temporal": "pent27-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-22",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -79970,10 +79970,10 @@
     "commemoration": "pent27-4"
   },
   "2043-11-27": {
-    "temporal": "pent27-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent27-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -83691,7 +83691,7 @@
     "temporal": "pent21-0",
     "sanctoral": "10-30",
     "winner": "sanctoral",
-    "winnerKey": "10-30",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -83996,7 +83996,7 @@
     "commemoration": "pent24-6"
   },
   "2044-11-27": {
-    "temporal": "pent25-0",
+    "temporal": "adv1-0",
     "sanctoral": "11-27",
     "winner": "temporal",
     "winnerKey": "adv1-0",
@@ -84007,7 +84007,7 @@
     "commemoration": null
   },
   "2044-11-28": {
-    "temporal": "pent25-1",
+    "temporal": "adv1-1",
     "sanctoral": "11-28",
     "winner": "temporal",
     "winnerKey": "adv1-1",
@@ -84018,7 +84018,7 @@
     "commemoration": null
   },
   "2044-11-29": {
-    "temporal": "pent25-2",
+    "temporal": "adv1-2",
     "sanctoral": "11-29",
     "winner": "temporal",
     "winnerKey": "adv1-2",
@@ -84040,7 +84040,7 @@
     "commemoration": "pent25-3"
   },
   "2044-12-01": {
-    "temporal": "pent25-4",
+    "temporal": "adv1-4",
     "sanctoral": "12-01",
     "winner": "temporal",
     "winnerKey": "adv1-4",
@@ -84073,7 +84073,7 @@
     "commemoration": "pent25-6"
   },
   "2044-12-04": {
-    "temporal": "adv1-0",
+    "temporal": "adv2-0",
     "sanctoral": "12-04",
     "winner": "temporal",
     "winnerKey": "adv2-0",
@@ -84084,7 +84084,7 @@
     "commemoration": null
   },
   "2044-12-05": {
-    "temporal": "adv1-1",
+    "temporal": "adv2-1",
     "sanctoral": "12-05",
     "winner": "temporal",
     "winnerKey": "adv2-1",
@@ -84128,7 +84128,7 @@
     "commemoration": "adv1-4"
   },
   "2044-12-09": {
-    "temporal": "adv1-5",
+    "temporal": "adv2-5",
     "sanctoral": "12-09",
     "winner": "temporal",
     "winnerKey": "adv2-5",
@@ -84139,7 +84139,7 @@
     "commemoration": null
   },
   "2044-12-10": {
-    "temporal": "adv1-6",
+    "temporal": "adv2-6",
     "sanctoral": "12-10",
     "winner": "temporal",
     "winnerKey": "adv2-6",
@@ -84150,7 +84150,7 @@
     "commemoration": "12-10"
   },
   "2044-12-11": {
-    "temporal": "adv2-0",
+    "temporal": "adv3-0",
     "sanctoral": "12-11",
     "winner": "temporal",
     "winnerKey": "adv3-0",
@@ -84161,7 +84161,7 @@
     "commemoration": null
   },
   "2044-12-12": {
-    "temporal": "adv2-1",
+    "temporal": "adv3-1",
     "sanctoral": "12-12",
     "winner": "temporal",
     "winnerKey": "adv3-1",
@@ -84194,7 +84194,7 @@
     "commemoration": null
   },
   "2044-12-15": {
-    "temporal": "adv2-4",
+    "temporal": "adv3-4",
     "sanctoral": "12-15",
     "winner": "temporal",
     "winnerKey": "adv3-4",
@@ -84227,7 +84227,7 @@
     "commemoration": null
   },
   "2044-12-18": {
-    "temporal": "adv3-0",
+    "temporal": "adv4-0",
     "sanctoral": "12-18",
     "winner": "temporal",
     "winnerKey": "adv4-0",
@@ -84238,7 +84238,7 @@
     "commemoration": null
   },
   "2044-12-19": {
-    "temporal": "adv3-1",
+    "temporal": "adv4-1",
     "sanctoral": "12-19",
     "winner": "temporal",
     "winnerKey": "adv4-1",
@@ -84249,7 +84249,7 @@
     "commemoration": null
   },
   "2044-12-20": {
-    "temporal": "adv3-2",
+    "temporal": "adv4-2",
     "sanctoral": "12-20",
     "winner": "temporal",
     "winnerKey": "adv4-2",
@@ -84271,7 +84271,7 @@
     "commemoration": "adv3-3"
   },
   "2044-12-22": {
-    "temporal": "adv3-4",
+    "temporal": "adv4-4",
     "sanctoral": "12-22",
     "winner": "temporal",
     "winnerKey": "adv4-4",
@@ -87695,7 +87695,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-29",
     "winner": "sanctoral",
-    "winnerKey": "10-29",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -87846,10 +87846,10 @@
     "commemoration": "pent23-6"
   },
   "2045-11-12": {
-    "temporal": "pent24-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-12",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -87923,10 +87923,10 @@
     "commemoration": "pent24-6"
   },
   "2045-11-19": {
-    "temporal": "pent25-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-19",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -88000,10 +88000,10 @@
     "commemoration": "pent25-6"
   },
   "2045-11-26": {
-    "temporal": "pent26-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-26",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -88011,10 +88011,10 @@
     "commemoration": null
   },
   "2045-11-27": {
-    "temporal": "pent26-1",
+    "temporal": "pent24-1",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent26-1",
+    "winnerKey": "pent24-1",
     "rank": 1.0,
     "name": "Feria Secunda infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -88022,10 +88022,10 @@
     "commemoration": null
   },
   "2045-11-28": {
-    "temporal": "pent26-2",
+    "temporal": "pent24-2",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent26-2",
+    "winnerKey": "pent24-2",
     "rank": 1.0,
     "name": "Feria Tertia infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -88033,10 +88033,10 @@
     "commemoration": null
   },
   "2045-11-29": {
-    "temporal": "pent26-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent26-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -88055,10 +88055,10 @@
     "commemoration": "pent26-4"
   },
   "2045-12-01": {
-    "temporal": "pent26-5",
+    "temporal": "pent24-5",
     "sanctoral": "12-01",
     "winner": "temporal",
-    "winnerKey": "pent26-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -91699,7 +91699,7 @@
     "temporal": "pent24-0",
     "sanctoral": "10-28",
     "winner": "sanctoral",
-    "winnerKey": "10-28",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -91773,10 +91773,10 @@
     "commemoration": null
   },
   "2046-11-04": {
-    "temporal": "pent25-0",
+    "temporal": "epi4-0",
     "sanctoral": "11-04",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi4-0",
     "rank": 5.0,
     "name": "Dominica IV Post Epiphaniam I. Novembris",
     "color": "white",
@@ -91850,10 +91850,10 @@
     "commemoration": "pent25-6"
   },
   "2046-11-11": {
-    "temporal": "pent26-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-11",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -91927,10 +91927,10 @@
     "commemoration": "pent26-6"
   },
   "2046-11-18": {
-    "temporal": "pent27-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-18",
     "winner": "temporal",
-    "winnerKey": "pent27-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -92004,10 +92004,10 @@
     "commemoration": "pent27-6"
   },
   "2046-11-25": {
-    "temporal": "pent28-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-25",
     "winner": "temporal",
-    "winnerKey": "pent28-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -92026,10 +92026,10 @@
     "commemoration": "pent28-1"
   },
   "2046-11-27": {
-    "temporal": "pent28-2",
+    "temporal": "pent24-2",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent28-2",
+    "winnerKey": "pent24-2",
     "rank": 1.0,
     "name": "Feria Tertia infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -92037,10 +92037,10 @@
     "commemoration": null
   },
   "2046-11-28": {
-    "temporal": "pent28-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent28-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -92048,10 +92048,10 @@
     "commemoration": null
   },
   "2046-11-29": {
-    "temporal": "pent28-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent28-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -92543,7 +92543,7 @@
     "commemoration": "epi1-6"
   },
   "2047-01-13": {
-    "temporal": "epi2-0",
+    "temporal": "epi1-0",
     "sanctoral": "01-13",
     "winner": "temporal",
     "winnerKey": "epi1-0",
@@ -92620,7 +92620,7 @@
     "commemoration": "01-19"
   },
   "2047-01-20": {
-    "temporal": "epi3-0",
+    "temporal": "epi2-0",
     "sanctoral": "01-20",
     "winner": "temporal",
     "winnerKey": "epi2-0",
@@ -92697,7 +92697,7 @@
     "commemoration": "epi3-6"
   },
   "2047-01-27": {
-    "temporal": "epi4-0",
+    "temporal": "epi3-0",
     "sanctoral": "01-27",
     "winner": "temporal",
     "winnerKey": "epi3-0",
@@ -92774,7 +92774,7 @@
     "commemoration": "epi4-6"
   },
   "2047-02-03": {
-    "temporal": "epi5-0",
+    "temporal": "epi4-0",
     "sanctoral": "02-03",
     "winner": "temporal",
     "winnerKey": "epi4-0",
@@ -95703,7 +95703,7 @@
     "temporal": "pent21-0",
     "sanctoral": "10-27",
     "winner": "sanctoral",
-    "winnerKey": "10-27",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -95931,10 +95931,10 @@
     "commemoration": "pent23-6"
   },
   "2047-11-17": {
-    "temporal": "pent24-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-17",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -96008,10 +96008,10 @@
     "commemoration": "pent24-6"
   },
   "2047-11-24": {
-    "temporal": "pent25-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-24",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -96041,10 +96041,10 @@
     "commemoration": "pent25-2"
   },
   "2047-11-27": {
-    "temporal": "pent25-3",
+    "temporal": "pent24-3",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent25-3",
+    "winnerKey": "pent24-3",
     "rank": 1.0,
     "name": "Feria Quarta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -96052,10 +96052,10 @@
     "commemoration": null
   },
   "2047-11-28": {
-    "temporal": "pent25-4",
+    "temporal": "pent24-4",
     "sanctoral": "11-28",
     "winner": "temporal",
-    "winnerKey": "pent25-4",
+    "winnerKey": "pent24-4",
     "rank": 1.0,
     "name": "Feria Quinta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -96063,10 +96063,10 @@
     "commemoration": null
   },
   "2047-11-29": {
-    "temporal": "pent25-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-29",
     "winner": "temporal",
-    "winnerKey": "pent25-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -99707,7 +99707,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-25",
     "winner": "sanctoral",
-    "winnerKey": "10-25",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -99858,10 +99858,10 @@
     "commemoration": null
   },
   "2048-11-08": {
-    "temporal": "pent24-0",
+    "temporal": "epi5-0",
     "sanctoral": "11-08",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi5-0",
     "rank": 5.0,
     "name": "Dominica V Post Epiphaniam III. Novembris",
     "color": "white",
@@ -99935,10 +99935,10 @@
     "commemoration": "pent24-6"
   },
   "2048-11-15": {
-    "temporal": "pent25-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-15",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -100012,10 +100012,10 @@
     "commemoration": "pent25-6"
   },
   "2048-11-22": {
-    "temporal": "pent26-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-22",
     "winner": "temporal",
-    "winnerKey": "pent26-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -100067,10 +100067,10 @@
     "commemoration": "pent26-4"
   },
   "2048-11-27": {
-    "temporal": "pent26-5",
+    "temporal": "pent24-5",
     "sanctoral": "11-27",
     "winner": "temporal",
-    "winnerKey": "pent26-5",
+    "winnerKey": "pent24-5",
     "rank": 1.0,
     "name": "Feria Sexta infra Hebdomadam XXIV post Octavam Pentecostes V. Novembris",
     "color": "red",
@@ -103788,7 +103788,7 @@
     "temporal": "pent21-0",
     "sanctoral": "10-31",
     "winner": "sanctoral",
-    "winnerKey": "10-31",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -107792,7 +107792,7 @@
     "temporal": "pent22-0",
     "sanctoral": "10-30",
     "winner": "sanctoral",
-    "winnerKey": "10-30",
+    "winnerKey": "10-du",
     "rank": 7.0,
     "name": "Domini Nostri Jesu Christi Regis",
     "color": "white",
@@ -107943,10 +107943,10 @@
     "commemoration": "pent23-6"
   },
   "2050-11-13": {
-    "temporal": "pent24-0",
+    "temporal": "epi6-0",
     "sanctoral": "11-13",
     "winner": "temporal",
-    "winnerKey": "pent24-0",
+    "winnerKey": "epi6-0",
     "rank": 5.0,
     "name": "Dominica VI Post Epiphaniam IV. Novembris",
     "color": "white",
@@ -108020,10 +108020,10 @@
     "commemoration": "pent24-6"
   },
   "2050-11-20": {
-    "temporal": "pent25-0",
+    "temporal": "pent24-0",
     "sanctoral": "11-20",
     "winner": "temporal",
-    "winnerKey": "pent25-0",
+    "winnerKey": "pent24-0",
     "rank": 5.0,
     "name": "Dominica XXIV et Ultima Post Pentecosten V. Novembris",
     "color": "red",
@@ -108097,7 +108097,7 @@
     "commemoration": "pent25-6"
   },
   "2050-11-27": {
-    "temporal": "pent26-0",
+    "temporal": "adv1-0",
     "sanctoral": "11-27",
     "winner": "temporal",
     "winnerKey": "adv1-0",
@@ -108108,7 +108108,7 @@
     "commemoration": null
   },
   "2050-11-28": {
-    "temporal": "pent26-1",
+    "temporal": "adv1-1",
     "sanctoral": "11-28",
     "winner": "temporal",
     "winnerKey": "adv1-1",
@@ -108119,7 +108119,7 @@
     "commemoration": null
   },
   "2050-11-29": {
-    "temporal": "pent26-2",
+    "temporal": "adv1-2",
     "sanctoral": "11-29",
     "winner": "temporal",
     "winnerKey": "adv1-2",
@@ -108141,7 +108141,7 @@
     "commemoration": "pent26-3"
   },
   "2050-12-01": {
-    "temporal": "pent26-4",
+    "temporal": "adv1-4",
     "sanctoral": "12-01",
     "winner": "temporal",
     "winnerKey": "adv1-4",
@@ -108174,7 +108174,7 @@
     "commemoration": "pent26-6"
   },
   "2050-12-04": {
-    "temporal": "adv1-0",
+    "temporal": "adv2-0",
     "sanctoral": "12-04",
     "winner": "temporal",
     "winnerKey": "adv2-0",
@@ -108185,7 +108185,7 @@
     "commemoration": null
   },
   "2050-12-05": {
-    "temporal": "adv1-1",
+    "temporal": "adv2-1",
     "sanctoral": "12-05",
     "winner": "temporal",
     "winnerKey": "adv2-1",
@@ -108229,7 +108229,7 @@
     "commemoration": "adv1-4"
   },
   "2050-12-09": {
-    "temporal": "adv1-5",
+    "temporal": "adv2-5",
     "sanctoral": "12-09",
     "winner": "temporal",
     "winnerKey": "adv2-5",
@@ -108240,7 +108240,7 @@
     "commemoration": null
   },
   "2050-12-10": {
-    "temporal": "adv1-6",
+    "temporal": "adv2-6",
     "sanctoral": "12-10",
     "winner": "temporal",
     "winnerKey": "adv2-6",
@@ -108251,7 +108251,7 @@
     "commemoration": "12-10"
   },
   "2050-12-11": {
-    "temporal": "adv2-0",
+    "temporal": "adv3-0",
     "sanctoral": "12-11",
     "winner": "temporal",
     "winnerKey": "adv3-0",
@@ -108262,7 +108262,7 @@
     "commemoration": null
   },
   "2050-12-12": {
-    "temporal": "adv2-1",
+    "temporal": "adv3-1",
     "sanctoral": "12-12",
     "winner": "temporal",
     "winnerKey": "adv3-1",
@@ -108295,7 +108295,7 @@
     "commemoration": null
   },
   "2050-12-15": {
-    "temporal": "adv2-4",
+    "temporal": "adv3-4",
     "sanctoral": "12-15",
     "winner": "temporal",
     "winnerKey": "adv3-4",
@@ -108328,7 +108328,7 @@
     "commemoration": null
   },
   "2050-12-18": {
-    "temporal": "adv3-0",
+    "temporal": "adv4-0",
     "sanctoral": "12-18",
     "winner": "temporal",
     "winnerKey": "adv4-0",
@@ -108339,7 +108339,7 @@
     "commemoration": null
   },
   "2050-12-19": {
-    "temporal": "adv3-1",
+    "temporal": "adv4-1",
     "sanctoral": "12-19",
     "winner": "temporal",
     "winnerKey": "adv4-1",
@@ -108350,7 +108350,7 @@
     "commemoration": null
   },
   "2050-12-20": {
-    "temporal": "adv3-2",
+    "temporal": "adv4-2",
     "sanctoral": "12-20",
     "winner": "temporal",
     "winnerKey": "adv4-2",
@@ -108372,7 +108372,7 @@
     "commemoration": "adv3-3"
   },
   "2050-12-22": {
-    "temporal": "adv3-4",
+    "temporal": "adv4-4",
     "sanctoral": "12-22",
     "winner": "temporal",
     "winnerKey": "adv4-4",

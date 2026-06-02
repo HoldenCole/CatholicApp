@@ -55,6 +55,21 @@ def infer_rank(name, cls_str, season, mmdd):
         return COMBINED[nn]["rank"]
     return 1.0  # ferial default
 
+_ROMAN={"i":1,"ii":2,"iii":3,"iv":4,"v":5,"vi":6}
+def resumed_temporal_key(name, computed):
+    """Resumed Epiphany Sundays and the last Pentecost week recur in autumn
+    (when there are >24 weeks after Pentecost). DO names them by their proper
+    identity; remap to the existing epi/pent24 proper keys so the office reads
+    the right formulary instead of falling back to ferial."""
+    nn=norm(name)
+    m=re.search(r"dominica (i{1,3}|iv|vi?) post epiphaniam", nn)
+    if m: return f"epi{_ROMAN[m.group(1)]}-0"
+    if "ultima post pentecosten" in nn:
+        return "pent24-0"
+    if "infra hebdomadam xxiv post octavam pentecostes" in nn and computed and re.search(r"-(\d)$",computed):
+        return "pent24-"+re.search(r"-(\d)$",computed).group(1)
+    return None
+
 def parse_title(title):
     title=title.split("\t")[0].strip()
     m=re.search(r"~\s*(.+?)\s*$",title); cls=m.group(1).strip().lower() if m else ""
@@ -89,10 +104,14 @@ def assemble(date_str, title, commem):
     sanct=is_sanctoral_winner(name,nn,tkk or tk,mmdd,season)
     rank=infer_rank(name,cls,season,mmdd)
     color=infer_color(name,season,cls)
-    if nn in COMBINED:
-        wk=COMBINED[nn]["winnerKey"]
-        color=COMBINED[nn]["color"]
-        rank=COMBINED[nn]["rank"]
+    # Resolve the index entry, allowing for DO dropping an "In Festo "/"Festum "
+    # prefix that the source data carries (e.g. Christ the King).
+    cnn = nn if nn in COMBINED else next(
+        (a for a in ("in festo "+nn, "festum "+nn, "in "+nn) if a in COMBINED), None)
+    centry = COMBINED.get(cnn) if cnn else None
+    if centry:
+        wk=centry["winnerKey"]; color=centry["color"]; rank=centry["rank"]
+        sanct=(centry["winner"]=="sanctoral")
     elif sanct:
         wk=mmdd
     else:
@@ -101,9 +120,16 @@ def assemble(date_str, title, commem):
         return {"temporal":tk,"sanctoral":mmdd,"winner":"sanctoral","winnerKey":wk,
                 "rank":rank,"name":name,"color":color,"season":season,"commemoration":tk}
     else:
-        entry={"temporal":tkk or tk,"sanctoral":mmdd,"winner":"temporal","winnerKey":wk,
+        # For temporal feasts found in the index, the index key is the
+        # authoritative temporal key (e.g. "Dominica II post Epiphaniam" ->
+        # epi2-0); use it for BOTH temporal and winnerKey so the office reads
+        # the right proper. Otherwise fall back to the computed key.
+        temporal_key_val = wk if centry else (tkk or tk)
+        # Resumed Epiphany Sundays / last Pentecost week recurring in autumn.
+        resumed = resumed_temporal_key(name, temporal_key_val)
+        if resumed: temporal_key_val = resumed
+        entry={"temporal":temporal_key_val,"sanctoral":mmdd,"winner":"temporal","winnerKey":temporal_key_val,
                "rank":rank,"name":name,"color":color,"season":season}
-        # commemoration
         entry["commemoration"]=mmdd if has_commem else None
         return entry
 
