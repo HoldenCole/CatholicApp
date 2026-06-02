@@ -455,7 +455,10 @@ object ContentStore {
         // Compline keeps the Sunday psalms only on Sundays and I/II-class
         // feasts (rank >= 5); III class and below use the ferial Compline.
         val festalCompline = ctx.isSunday || (ordo?.rank?.let { it >= 5.0 } ?: false)
-        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline)
+        // The Little Hours keep the Sunday psalms (Ps 118) only on Sundays
+        // and I-class feasts (rank >= 6); all else uses the ferial psalms.
+        val festalLittleHours = ctx.isSunday || (ordo?.rank?.let { it >= 6.0 } ?: false)
+        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours)
         if (ordo != null) {
             if (ordo.winner == "sanctoral") {
                 // Office layering (each later layer wins): commune fallback,

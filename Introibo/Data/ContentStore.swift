@@ -105,7 +105,10 @@ final class ContentStore {
         // Compline keeps the Sunday psalms only on Sundays and I/II-class
         // feasts (rank ≥ 5); III class and below use the ferial Compline.
         let festalCompline = ctx.isSunday || (ordo.map { $0.rank >= 5.0 } ?? false)
-        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline)
+        // The Little Hours keep the Sunday psalms (Ps 118) only on Sundays
+        // and I-class feasts (rank ≥ 6); all else uses the ferial psalms.
+        let festalLittleHours = ctx.isSunday || (ordo.map { $0.rank >= 6.0 } ?? false)
+        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours)
 
         if let ordo {
             if ordo.winner == "sanctoral" {

@@ -37,7 +37,16 @@ class OfficeAssembler(
         "completorium.psalm1", "completorium.psalm2", "completorium.psalm3",
     )
 
-    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false): Hour {
+    // The Little Hours (Terce, Sext, None) take the Sunday psalms (portions
+    // of Ps 118) only on Sundays and feasts of I class (rank >= 6); all else
+    // uses the day-of-the-week ferial psalms. Higher threshold than Compline.
+    private val festalLittleHourKeys = setOf(
+        "ant_tertia", "tertia.psalm1", "tertia.psalm2", "tertia.psalm3",
+        "ant_sexta", "sexta.psalm1", "sexta.psalm2", "sexta.psalm3",
+        "ant_nona", "nona.psalm1", "nona.psalm2", "nona.psalm3",
+    )
+
+    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
         val seasonKey = seasonString(context.season)
 
@@ -75,6 +84,12 @@ class OfficeAssembler(
             // On Sundays and I/II-class feasts, keep the festal Compline
             // (Sunday psalms + "Miserere" antiphon) instead of the ferial set.
             if (festalCompline && key in festalComplineKeys) {
+                return@map part
+            }
+
+            // On Sundays and I-class feasts, keep the festal Little Hours
+            // (Ps 118 portions) instead of the day-of-the-week ferial psalms.
+            if (festalLittleHours && key in festalLittleHourKeys) {
                 return@map part
             }
 

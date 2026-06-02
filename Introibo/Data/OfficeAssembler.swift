@@ -102,7 +102,18 @@ struct OfficeAssembler {
         "completorium.psalm1", "completorium.psalm2", "completorium.psalm3",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false) -> Hour {
+    // The Little Hours (Terce, Sext, None) take the Sunday psalms (portions
+    // of Ps 118) only on Sundays and feasts of I class (rank >= 6); ferias,
+    // Simples, and III/II-class feasts use the day-of-the-week ferial psalms.
+    // This is a higher threshold than Compline (II class), per the 1960
+    // rubrics, so it gets its own flag and key set.
+    private static let festalLittleHourKeys: Set<String> = [
+        "ant_tertia", "tertia.psalm1", "tertia.psalm2", "tertia.psalm3",
+        "ant_sexta", "sexta.psalm1", "sexta.psalm2", "sexta.psalm3",
+        "ant_nona", "nona.psalm1", "nona.psalm2", "nona.psalm3",
+    ]
+
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
 
@@ -143,6 +154,12 @@ struct OfficeAssembler {
             // On Sundays and I/II-class feasts, keep the festal Compline
             // (Sunday psalms + "Miserere" antiphon) instead of the ferial set.
             if festalCompline && Self.festalComplineKeys.contains(key) {
+                return part
+            }
+
+            // On Sundays and I-class feasts, keep the festal Little Hours
+            // (Ps 118 portions) instead of the day-of-the-week ferial psalms.
+            if festalLittleHours && Self.festalLittleHourKeys.contains(key) {
                 return part
             }
 

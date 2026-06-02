@@ -2117,120 +2117,216 @@
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:25-32",
-        "ref": "Ps 118:25-32 (Adhǽsit)",
+        "label": "Psalmus 118:33-48",
+        "ref": "Ps 118:33-48 (Legem pone)",
         "verses": [
           {
-            "lat": "Adhǽsit paviménto ánima mea; vivífica me secúndum verbum tuum.",
-            "eng": "My soul hath cleaved to the pavement; quicken Thou me according to Thy word."
+            "lat": "Legem pone mihi, Dómine, viam justificatiónum tuárum: et exquíram eam semper.",
+            "eng": "Set before me for a law the way of thy justifications, O Lord: and I will always seek after it."
           },
           {
-            "lat": "Vias meas enuntiávi, et exaudísti me; doce me justificatiónes tuas.",
-            "eng": "I have declared my ways, and Thou hast heard me; teach me Thy justifications."
+            "lat": "Da mihi intelléctum, et scrutábor legem tuam: et custódiam illam in toto corde meo.",
+            "eng": "Give me understanding, and I will search thy law; and I will keep it with my whole heart."
           },
           {
-            "lat": "Viam justificatiónum tuárum ínstrue me, et exercébor in mirabílibus tuis.",
-            "eng": "Make me to understand the way of Thy justifications, and I shall be exercised in Thy wondrous works."
+            "lat": "Deduc me in sémitam mandatórum tuórum: quia ipsam vólui.",
+            "eng": "Lead me into the path of thy commandments; for this same I have desired."
           },
           {
-            "lat": "Dormitávit ánima mea præ tǽdio; confírma me in verbis tuis.",
-            "eng": "My soul hath slumbered through heaviness; strengthen Thou me in Thy words."
+            "lat": "Inclína cor meum in testimónia tua: et non in avarítiam.",
+            "eng": "Incline my heart into thy testimonies and not to covetousness."
           },
           {
-            "lat": "Viam iniquitátis ámove a me, et de lege tua miserére mei.",
-            "eng": "Remove from me the way of iniquity, and out of Thy law have mercy on me."
+            "lat": "Avérte óculos meos ne vídeant vanitátem: in via tua vivífica me.",
+            "eng": "Turn away my eyes that they may not behold vanity: quicken me in thy way."
           },
           {
-            "lat": "Viam veritátis elégi; judícia tua non sum oblítus.",
-            "eng": "I have chosen the way of truth; Thy judgments I have not forgotten."
+            "lat": "Státue servo tuo elóquium tuum, in timóre tuo.",
+            "eng": "Establish thy word to thy servant, in thy fear."
           },
           {
-            "lat": "Adhǽsi testimóniis tuis, Dómine; noli me confúndere.",
-            "eng": "I have stuck to Thy testimonies, O Lord; put me not to shame."
+            "lat": "Ámputa oppróbrium meum quod suspicátus sum: quia judícia tua jucúnda.",
+            "eng": "Turn away my reproach, which I have apprehended: for thy judgments are delightful."
           },
           {
-            "lat": "Viam mandatórum tuórum cucúrri, cum dilatásti cor meum.",
-            "eng": "I have run the way of Thy commandments, when Thou didst enlarge my heart."
+            "lat": "Ecce, concupívi mandáta tua: in æquitáte tua vivífica me.",
+            "eng": "Behold I have longed after thy precepts: quicken me in thy justice."
+          },
+          {
+            "lat": "Et véniat super me misericórdia tua, Dómine: salutáre tuum secúndum elóquium tuum.",
+            "eng": "Let thy mercy also come upon me, O Lord: thy salvation according to thy word."
+          },
+          {
+            "lat": "Et respondébo exprobrántibus mihi verbum: quia sperávi in sermónibus tuis.",
+            "eng": "So shall I answer them that reproach me in any thing; that I have trusted in thy words."
+          },
+          {
+            "lat": "Et ne áuferas de ore meo verbum veritátis usquequáque: quia in judíciis tuis supersperávi.",
+            "eng": "And take not thou the word of truth utterly out of my mouth: for in thy words, I have hoped exceedingly."
+          },
+          {
+            "lat": "Et custódiam legem tuam semper: in sǽculum et in sǽculum sǽculi.",
+            "eng": "So shall I always keep thy law, for ever and ever."
+          },
+          {
+            "lat": "Et ambulábam in latitúdine: quia mandáta tua exquisívi.",
+            "eng": "And I walked at large: because I have sought after thy commandments."
+          },
+          {
+            "lat": "Et loquébar in testimóniis tuis in conspéctu regum: et non confundébar.",
+            "eng": "And I spoke of thy testimonies before kings: and I was not ashamed."
+          },
+          {
+            "lat": "Et meditábar in mandátis tuis, quæ diléxi.",
+            "eng": "I meditated also on thy commandments, which I loved."
+          },
+          {
+            "lat": "Et levávi manus meas ad mandáta tua, quæ diléxi: et exercébar in justificatiónibus tuis.",
+            "eng": "And I lifted up my hands to thy commandments, which I loved: and I was exercised in thy justifications."
           }
         ],
         "variationKey": "tertia.psalm1"
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:33-40",
-        "ref": "Ps 118:33-40 (Legem pone)",
+        "label": "Psalmus 118:49-64",
+        "ref": "Ps 118:49-64 (Memor esto)",
         "verses": [
           {
-            "lat": "Legem pone mihi, Dómine, viam justificatiónum tuárum, et exquíram eam semper.",
-            "eng": "Set before me for a law the way of Thy justifications, O Lord, and I will always seek after it."
+            "lat": "Memor esto verbi tui servo tuo, in quo mihi spem dedísti.",
+            "eng": "Be thou mindful of thy word to thy servant, in which thou hast given me hope."
           },
           {
-            "lat": "Da mihi intelléctum, et scrutábor legem tuam, et custódiam illam in toto corde meo.",
-            "eng": "Give me understanding, and I will search Thy law, and I will keep it with my whole heart."
+            "lat": "Hæc me consoláta est in humilitáte mea: quia elóquium tuum vivificávit me.",
+            "eng": "This hath comforted me in my humiliation: because thy word hath enlivened me."
           },
           {
-            "lat": "Deduc me in sémitam mandatórum tuórum, quia ipsam vólui.",
-            "eng": "Lead me into the path of Thy commandments, for this same I have desired."
+            "lat": "Supérbi iníque agébant usquequáque: a lege autem tua non declinávi.",
+            "eng": "The proud did iniquitously altogether: but I declined not from thy law."
           },
           {
-            "lat": "Inclína cor meum in testimónia tua, et non in avarítiam.",
-            "eng": "Incline my heart unto Thy testimonies, and not to covetousness."
+            "lat": "Memor fui judiciórum tuórum a sǽculo, Dómine: et consolátus sum.",
+            "eng": "I remembered, O Lord, thy judgments of old: and I was comforted."
           },
           {
-            "lat": "Avérte óculos meos ne vídeant vanitátem: in via tua vivífica me.",
-            "eng": "Turn away my eyes that they may not behold vanity: quicken me in Thy way."
+            "lat": "Deféctio ténuit me, pro peccatóribus derelinquéntibus legem tuam.",
+            "eng": "A fainting hath taken hold of me, because of the wicked that forsake thy law."
           },
           {
-            "lat": "Státue servo tuo elóquium tuum, in timóre tuo.",
-            "eng": "Establish Thy word to Thy servant, in Thy fear."
+            "lat": "Cantábiles mihi erant justificatiónes tuæ, in loco peregrinatiónis meæ.",
+            "eng": "Thy justifications were the subject of my song, in the place of my pilgrimage."
           },
           {
-            "lat": "Ámputa oppróbrium meum quod suspicátus sum: quia judícia tua jucúnda.",
-            "eng": "Turn away my reproach which I have apprehended: for Thy judgments are delightful."
+            "lat": "Memor fui nocte nóminis tui, Dómine: et custodívi legem tuam.",
+            "eng": "In the night I have remembered thy name, O Lord: and have kept thy law."
           },
           {
-            "lat": "Ecce concupívi mandáta tua: in æquitáte tua vivífica me.",
-            "eng": "Behold I have longed after Thy precepts: quicken me in Thy justice."
+            "lat": "Hæc facta est mihi: quia justificatiónes tuas exquisívi.",
+            "eng": "This happened to me: because I sought after thy justifications."
+          },
+          {
+            "lat": "Pórtio mea, Dómine, dixi custodíre legem tuam.",
+            "eng": "O Lord, my portion, I have said, I would keep thy law."
+          },
+          {
+            "lat": "Deprecátus sum fáciem tuam in toto corde meo: miserére mei secúndum elóquium tuum.",
+            "eng": "I entreated thy face with all my heart: have mercy on me according to thy word."
+          },
+          {
+            "lat": "Cogitávi vias meas: et convérti pedes meos in testimónia tua.",
+            "eng": "I have thought on my ways: and turned my feet unto thy testimonies."
+          },
+          {
+            "lat": "Parátus sum, et non sum turbátus: ut custódiam mandáta tua.",
+            "eng": "I am ready, and am not troubled: that I may keep thy commandments."
+          },
+          {
+            "lat": "Funes peccatórum circumpléxi sunt me: et legem tuam non sum oblítus.",
+            "eng": "The cords of the wicked have encompassed me: but I have not forgotten thy law."
+          },
+          {
+            "lat": "Média nocte surgébam ad confiténdum tibi, super judícia justificatiónis tuæ.",
+            "eng": "I rose at midnight to give praise to thee; for the judgments of thy justification."
+          },
+          {
+            "lat": "Párticeps ego sum ómnium timéntium te: et custodiéntium mandáta tua.",
+            "eng": "I am a partaker with all them that fear thee, and that keep thy commandments."
+          },
+          {
+            "lat": "Misericórdia tua, Dómine, plena est terra: justificatiónes tuas doce me.",
+            "eng": "The earth, O Lord, is full of thy mercy: teach me thy justifications."
           }
         ],
         "variationKey": "tertia.psalm2"
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:41-48",
-        "ref": "Ps 118:41-48 (Et véniat)",
+        "label": "Psalmus 118:65-80",
+        "ref": "Ps 118:65-80 (Bonitátem fecísti)",
         "verses": [
           {
-            "lat": "Et véniat super me misericórdia tua, Dómine; salutáre tuum secúndum elóquium tuum.",
-            "eng": "Let Thy mercy also come upon me, O Lord; Thy salvation according to Thy word."
+            "lat": "Bonitátem fecísti cum servo tuo, Dómine, secúndum verbum tuum.",
+            "eng": "Thou hast done well with thy servant, O Lord, according to thy word."
           },
           {
-            "lat": "Et respondébo exprobrántibus mihi verbum, quia sperávi in sermónibus tuis.",
-            "eng": "So shall I answer them that reproach me in anything, that I have trusted in Thy words."
+            "lat": "Bonitátem, et disciplínam, et sciéntiam doce me: quia mandátis tuis crédidi.",
+            "eng": "Teach me goodness and discipline and knowledge; for I have believed thy commandments."
           },
           {
-            "lat": "Et ne áuferas de ore meo verbum veritátis usquequáque, quia in judíciis tuis supersperávi.",
-            "eng": "And take not Thou the word of truth utterly out of my mouth, for in Thy words I have hoped exceedingly."
+            "lat": "Priúsquam humiliárer ego delíqui: proptérea elóquium tuum custodívi.",
+            "eng": "Before I was humbled I offended; therefore have I kept thy word."
           },
           {
-            "lat": "Et custódiam legem tuam semper, in sǽculum et in sǽculum sǽculi.",
-            "eng": "So shall I always keep Thy law, for ever and ever."
+            "lat": "Bonus es tu: et in bonitáte tua doce me justificatiónes tuas.",
+            "eng": "Thou art good; and in thy goodness teach me thy justifications."
           },
           {
-            "lat": "Et ambulábam in latitúdine, quia mandáta tua exquisívi.",
-            "eng": "And I walked at large, because I have sought after Thy commandments."
+            "lat": "Multiplicáta est super me iníquitas superbórum: ego autem in toto corde meo scrutábor mandáta tua.",
+            "eng": "The iniquity of the proud hath been multiplied over me: but I will seek thy commandments with my whole heart."
           },
           {
-            "lat": "Et loquébar in testimóniis tuis in conspéctu regum, et non confundébar.",
-            "eng": "And I spoke of Thy testimonies before kings, and I was not ashamed."
+            "lat": "Coagulátum est sicut lac cor eórum: ego vero legem tuam meditátus sum.",
+            "eng": "Their heart is curdled like milk: but I have meditated on thy law."
           },
           {
-            "lat": "Et meditábar in mandátis tuis, quæ diléxi.",
-            "eng": "And I meditated on Thy commandments, which I loved."
+            "lat": "Bonum mihi quia humiliásti me: ut discam justificatiónes tuas.",
+            "eng": "It is good for me that thou hast humbled me, that I may learn thy justifications."
           },
           {
-            "lat": "Et levávi manus meas ad mandáta tua quæ diléxi, et exercébar in justificatiónibus tuis.",
-            "eng": "And I lifted up my hands to Thy commandments, which I loved, and I was exercised in Thy justifications."
+            "lat": "Bonum mihi lex oris tui, super míllia auri et argénti.",
+            "eng": "The law of thy mouth is good to me, above thousands of gold and silver."
+          },
+          {
+            "lat": "Manus tuæ fecérunt me, et plasmavérunt me: da mihi intelléctum, et discam mandáta tua.",
+            "eng": "Thy hands have made me and formed me: give me understanding, and I will learn thy commandments."
+          },
+          {
+            "lat": "Qui timent te vidébunt me, et lætabúntur: quia in verba tua supersperávi.",
+            "eng": "They that fear thee shall see me, and shall be glad: because I have greatly hoped in thy words."
+          },
+          {
+            "lat": "Cognóvi, Dómine, quia ǽquitas judícia tua: et in veritáte tua humiliásti me.",
+            "eng": "I know, O Lord, that thy judgments are equity: and in thy truth thou hast humbled me."
+          },
+          {
+            "lat": "Fiat misericórdia tua ut consolétur me, secúndum elóquium tuum servo tuo.",
+            "eng": "O! let thy mercy be for my comfort, according to thy word unto thy servant."
+          },
+          {
+            "lat": "Véniant mihi miseratiónes tuæ, et vivam: quia lex tua meditátio mea est.",
+            "eng": "Let thy tender mercies come unto me, and I shall live: for thy law is my meditation."
+          },
+          {
+            "lat": "Confundántur supérbi, quia injúste iniquitátem fecérunt in me: ego autem exercébor in mandátis tuis.",
+            "eng": "Let the proud be ashamed, because they have done unjustly towards me: but I will be employed in thy commandments."
+          },
+          {
+            "lat": "Convertántur mihi timéntes te: et qui novérunt testimónia tua.",
+            "eng": "Let them that fear thee turn to me: and they that know thy testimonies."
+          },
+          {
+            "lat": "Fiat cor meum immaculátum in justificatiónibus tuis, ut non confúndar.",
+            "eng": "Let my heart be undefiled in thy justifications, that I may not be confounded."
           }
         ],
         "variationKey": "tertia.psalm3"
@@ -2324,120 +2420,216 @@
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:49-56",
-        "ref": "Ps 118:49-56 (Memor esto)",
+        "label": "Psalmus 118:81-96",
+        "ref": "Ps 118:81-96 (Defécit)",
         "verses": [
           {
-            "lat": "Memor esto verbi tui servo tuo, in quo mihi spem dedísti.",
-            "eng": "Be Thou mindful of Thy word to Thy servant, in which Thou hast given me hope."
+            "lat": "Defécit in salutáre tuum ánima mea: et in verbum tuum supersperávi.",
+            "eng": "My soul hath fainted after thy salvation: and in thy word I have very much hoped."
           },
           {
-            "lat": "Hæc me consoláta est in humilitáte mea, quia elóquium tuum vivificávit me.",
-            "eng": "This hath comforted me in my humiliation, because Thy word hath enlivened me."
+            "lat": "Defecérunt óculi mei in elóquium tuum, dicéntes: Quando consoláberis me?",
+            "eng": "My eyes have failed for thy word, saying: When wilt thou comfort me?"
           },
           {
-            "lat": "Supérbi iníque agébant usquequáque: a lege autem tua non declinávi.",
-            "eng": "The proud did iniquitously altogether: but I declined not from Thy law."
+            "lat": "Quia factus sum sicut uter in pruína: justificatiónes tuas non sum oblítus.",
+            "eng": "For I am become like a bottle in the frost: I have not forgotten thy justifications."
           },
           {
-            "lat": "Memor fui judiciórum tuórum a sǽculo, Dómine, et consolátus sum.",
-            "eng": "I remembered, O Lord, Thy judgments of old, and I was comforted."
+            "lat": "Quot sunt dies servi tui? quando fácies de persequéntibus me judícium?",
+            "eng": "How many are the days of thy servant: when wilt thou execute judgment on them that persecute me?"
           },
           {
-            "lat": "Deféctio ténuit me, pro peccatóribus derelinquéntibus legem tuam.",
-            "eng": "A fainting hath taken hold of me, because of the wicked that forsake Thy law."
+            "lat": "Narravérunt mihi iníqui fabulatiónes: sed non ut lex tua.",
+            "eng": "The wicked have told me fables: but not as thy law."
           },
           {
-            "lat": "Cantábiles mihi erant justificatiónes tuæ, in loco peregrinatiónis meæ.",
-            "eng": "Thy justifications were the subject of my song, in the place of my pilgrimage."
+            "lat": "Ómnia mandáta tua véritas: iníque persecúti sunt me, ádjuva me.",
+            "eng": "All thy statutes are truth: they have persecuted me unjustly, do thou help me."
           },
           {
-            "lat": "Memor fui nocte nóminis tui, Dómine, et custodívi legem tuam.",
-            "eng": "In the night I have remembered Thy name, O Lord, and have kept Thy law."
+            "lat": "Paulo minus consummavérunt me in terra: ego autem non derelíqui mandáta tua.",
+            "eng": "They had almost made an end of me upon earth: but I have not forsaken thy commandments."
           },
           {
-            "lat": "Hæc facta est mihi, quia justificatiónes tuas exquisívi.",
-            "eng": "This fell to me, because I sought after Thy justifications."
+            "lat": "Secúndum misericórdiam tuam vivífica me: et custódiam testimónia oris tui.",
+            "eng": "Quicken thou me according to thy mercy: and I shall keep the testimonies of thy mouth."
+          },
+          {
+            "lat": "In ætérnum, Dómine, verbum tuum pérmanet in cælo.",
+            "eng": "For ever, O Lord, thy word standeth firm in heaven."
+          },
+          {
+            "lat": "In generatiónem et generatiónem véritas tua: fundásti terram, et pérmanet.",
+            "eng": "Thy truth unto all generations: thou hast founded the earth, and it continueth."
+          },
+          {
+            "lat": "Ordinatióne tua persevérat dies: quóniam ómnia sérviunt tibi.",
+            "eng": "By thy ordinance the day goeth on: for all things serve thee."
+          },
+          {
+            "lat": "Nisi quod lex tua meditátio mea est: tunc forte periíssem in humilitáte mea.",
+            "eng": "Unless thy law had been my meditation, I had then perhaps perished in my abjection."
+          },
+          {
+            "lat": "In ætérnum non oblivíscar justificatiónes tuas: quia in ipsis vivificásti me.",
+            "eng": "Thy justifications I will never forget: for by them thou hast given me life."
+          },
+          {
+            "lat": "Tuus sum ego, salvum me fac: quóniam justificatiónes tuas exquisívi.",
+            "eng": "I am thine, save thou me: for I have sought thy justifications."
+          },
+          {
+            "lat": "Me exspectavérunt peccatóres ut pérderent me: testimónia tua intelléxi.",
+            "eng": "The wicked have waited for me to destroy me: but I have understood thy testimonies."
+          },
+          {
+            "lat": "Omnis consummatiónis vidi finem: latum mandátum tuum nimis.",
+            "eng": "I have seen an end of all perfection: thy commandment is exceeding broad."
           }
         ],
         "variationKey": "sexta.psalm1"
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:57-64",
-        "ref": "Ps 118:57-64 (Pórtio mea)",
+        "label": "Psalmus 118:97-112",
+        "ref": "Ps 118:97-112 (Quómodo diléxi)",
         "verses": [
           {
-            "lat": "Pórtio mea, Dómine, dixi, custodíre legem tuam.",
-            "eng": "O Lord, my portion, I have said, I would keep Thy law."
+            "lat": "Quómodo diléxi legem tuam, Dómine? tota die meditátio mea est.",
+            "eng": "How have I loved thy law, O Lord! it is my meditation all the day."
           },
           {
-            "lat": "Deprecátus sum fáciem tuam in toto corde meo: miserére mei secúndum elóquium tuum.",
-            "eng": "I entreated Thy face with all my heart: have mercy on me according to Thy word."
+            "lat": "Super inimícos meos prudéntem me fecísti mandáto tuo: quia in ætérnum mihi est.",
+            "eng": "Through thy commandment, thou hast made me wiser than my enemies: for it is ever with me."
           },
           {
-            "lat": "Cogitávi vias meas, et convérti pedes meos in testimónia tua.",
-            "eng": "I have thought on my ways, and turned my feet unto Thy testimonies."
+            "lat": "Super omnes docéntes me intelléxi: quia testimónia tua meditátio mea est.",
+            "eng": "I have understood more than all my teachers: because thy testimonies are my meditation."
           },
           {
-            "lat": "Parátus sum, et non sum turbátus, ut custódiam mandáta tua.",
-            "eng": "I am ready, and am not troubled, that I may keep Thy commandments."
+            "lat": "Super senes intelléxi: quia mandáta tua quæsívi.",
+            "eng": "I have had understanding above ancients: because I have sought thy commandments."
           },
           {
-            "lat": "Funes peccatórum circumpléxi sunt me, et legem tuam non sum oblítus.",
-            "eng": "The cords of the wicked have encompassed me, but I have not forgotten Thy law."
+            "lat": "Ab omni via mala prohíbui pedes meos: ut custódiam verba tua.",
+            "eng": "I have restrained my feet from every evil way: that I may keep thy words."
           },
           {
-            "lat": "Média nocte surgébam ad confiténdum tibi, super judícia justificatiónis tuæ.",
-            "eng": "I rose at midnight to give praise to Thee, for the judgments of Thy justification."
+            "lat": "A judíciis tuis non declinávi: quia tu legem posuísti mihi.",
+            "eng": "I have not declined from thy judgments, because thou hast set me a law."
           },
           {
-            "lat": "Párticeps ego sum ómnium timéntium te, et custodiéntium mandáta tua.",
-            "eng": "I am a partaker with all them that fear Thee, and that keep Thy commandments."
+            "lat": "Quam dúlcia fáucibus meis elóquia tua, super mel ori meo!",
+            "eng": "How sweet are thy words to my palate! more than honey to my mouth."
           },
           {
-            "lat": "Misericórdia tua, Dómine, plena est terra: justificatiónes tuas doce me.",
-            "eng": "The earth, O Lord, is full of Thy mercy: teach me Thy justifications."
+            "lat": "A mandátis tuis intelléxi: proptérea odívi omnem viam iniquitátis.",
+            "eng": "By thy commandments I have had understanding: therefore have I hated every way of iniquity."
+          },
+          {
+            "lat": "Lucérna pédibus meis verbum tuum, et lumen sémitis meis.",
+            "eng": "Thy word is a lamp to my feet, and a light to my paths."
+          },
+          {
+            "lat": "Jurávi, et státui custodíre judícia justítiæ tuæ.",
+            "eng": "I have sworn and am determined to keep the judgments of thy justice."
+          },
+          {
+            "lat": "Humiliátus sum usquequáque, Dómine: vivífica me secúndum verbum tuum.",
+            "eng": "I have been humbled, O Lord, exceedingly: quicken thou me according to thy word."
+          },
+          {
+            "lat": "Voluntária oris mei beneplácita fac, Dómine: et judícia tua doce me.",
+            "eng": "The free offerings of my mouth make acceptable, O Lord: and teach me thy judgments."
+          },
+          {
+            "lat": "Ánima mea in mánibus meis semper: et legem tuam non sum oblítus.",
+            "eng": "My soul is continually in my hands: and I have not forgotten thy law."
+          },
+          {
+            "lat": "Posuérunt peccatóres láqueum mihi: et de mandátis tuis non errávi.",
+            "eng": "Sinners have laid a snare for me: but I have not erred from thy precepts."
+          },
+          {
+            "lat": "Hereditáte acquisívi testimónia tua in ætérnum: quia exsultátio cordis mei sunt.",
+            "eng": "I have purchased thy testimonies for an inheritance for ever: because they are the joy of my heart."
+          },
+          {
+            "lat": "Inclinávi cor meum ad faciéndas justificatiónes tuas in ætérnum, propter retributiónem.",
+            "eng": "I have inclined my heart to do thy justifications for ever, for the reward."
           }
         ],
         "variationKey": "sexta.psalm2"
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:65-72",
-        "ref": "Ps 118:65-72 (Bonitátem fecísti)",
+        "label": "Psalmus 118:113-128",
+        "ref": "Ps 118:113-128 (Iníquos ódio)",
         "verses": [
           {
-            "lat": "Bonitátem fecísti cum servo tuo, Dómine, secúndum verbum tuum.",
-            "eng": "Thou hast done well with Thy servant, O Lord, according to Thy word."
+            "lat": "Iníquos ódio hábui: et legem tuam diléxi.",
+            "eng": "I have hated the unjust: and I have loved thy law."
           },
           {
-            "lat": "Bonitátem, et disciplínam, et sciéntiam doce me, quia mandátis tuis crédidi.",
-            "eng": "Teach me goodness, and discipline, and knowledge, for I have believed Thy commandments."
+            "lat": "Adjútor et suscéptor meus es tu: et in verbum tuum supersperávi.",
+            "eng": "Thou art my helper and my protector: and in thy word I have greatly hoped."
           },
           {
-            "lat": "Priúsquam humiliárer ego delíqui: proptérea elóquium tuum custodívi.",
-            "eng": "Before I was humbled I offended: therefore have I kept Thy word."
+            "lat": "Declináte a me, malígni: et scrutábor mandáta Dei mei.",
+            "eng": "Depart from me, ye malignant: and I will search the commandments of my God."
           },
           {
-            "lat": "Bonus es tu, et in bonitáte tua doce me justificatiónes tuas.",
-            "eng": "Thou art good, and in Thy goodness teach me Thy justifications."
+            "lat": "Súscipe me secúndum elóquium tuum, et vivam: et non confúndas me ab exspectatióne mea.",
+            "eng": "Uphold me according to thy word, and I shall live: and let me not be confounded in my expectation."
           },
           {
-            "lat": "Multiplicáta est super me iníquitas superbórum: ego autem in toto corde meo scrutábor mandáta tua.",
-            "eng": "The iniquity of the proud hath been multiplied over me: but I will seek Thy commandments with my whole heart."
+            "lat": "Ádjuva me, et salvus ero: et meditábor in justificatiónibus tuis semper.",
+            "eng": "Help me, and I shall be saved: and I will meditate always on thy justifications."
           },
           {
-            "lat": "Coagulátum est sicut lac cor eórum: ego vero legem tuam meditátus sum.",
-            "eng": "Their heart is curdled like milk: but I have meditated on Thy law."
+            "lat": "Sprevísti omnes discedéntes a judíciis tuis: quia injústa cogitátio eórum.",
+            "eng": "Thou hast despised all them that fall off from thy judgments; for their thought is unjust."
           },
           {
-            "lat": "Bonum mihi quia humiliásti me, ut discam justificatiónes tuas.",
-            "eng": "It is good for me that Thou hast humbled me, that I may learn Thy justifications."
+            "lat": "Prævaricántes reputávi omnes peccatóres terræ: ídeo diléxi testimónia tua.",
+            "eng": "I have accounted all the sinners of the earth prevaricators: therefore have I loved thy testimonies."
           },
           {
-            "lat": "Bonum mihi lex oris tui, super míllia auri et argénti.",
-            "eng": "The law of Thy mouth is good to me, above thousands of gold and silver."
+            "lat": "Confíge timóre tuo carnes meas: a judíciis enim tuis tímui.",
+            "eng": "Pierce thou my flesh with thy fear: for I am afraid of thy judgments."
+          },
+          {
+            "lat": "Feci judícium et justítiam: non tradas me calumniántibus me.",
+            "eng": "I have done judgment and justice: give me not up to them that slander me."
+          },
+          {
+            "lat": "Súscipe servum tuum in bonum: non calumniéntur me supérbi.",
+            "eng": "Uphold thy servant unto good: let not the proud calumniate me."
+          },
+          {
+            "lat": "Óculi mei defecérunt in salutáre tuum: et in elóquium justítiæ tuæ.",
+            "eng": "My eyes have fainted after thy salvation: and for the word of thy justice."
+          },
+          {
+            "lat": "Fac cum servo tuo secúndum misericórdiam tuam: et justificatiónes tuas doce me.",
+            "eng": "Deal with thy servant according to thy mercy: and teach me thy justifications."
+          },
+          {
+            "lat": "Servus tuus sum ego: da mihi intelléctum, ut sciam testimónia tua.",
+            "eng": "I am thy servant: give me understanding that I may know thy testimonies."
+          },
+          {
+            "lat": "Tempus faciéndi, Dómine: dissipavérunt legem tuam.",
+            "eng": "It is time, O Lord, to do: they have dissipated thy law."
+          },
+          {
+            "lat": "Ídeo diléxi mandáta tua, super aurum et topázion.",
+            "eng": "Therefore have I loved thy commandments above gold and the topaz."
+          },
+          {
+            "lat": "Proptérea ad ómnia mandáta tua dirigébar: omnem viam iníquam ódio hábui.",
+            "eng": "Therefore was I directed to all thy commandments: I have hated all wicked ways."
           }
         ],
         "variationKey": "sexta.psalm3"
@@ -2531,120 +2723,216 @@
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:73-80",
-        "ref": "Ps 118:73-80 (Manus tuæ)",
+        "label": "Psalmus 118:129-144",
+        "ref": "Ps 118:129-144 (Mirabília)",
         "verses": [
           {
-            "lat": "Manus tuæ fecérunt me, et plasmavérunt me: da mihi intelléctum, et discam mandáta tua.",
-            "eng": "Thy hands have made me and formed me: give me understanding, and I will learn Thy commandments."
+            "lat": "Mirabília testimónia tua: ídeo scrutáta est ea ánima mea.",
+            "eng": "Thy testimonies are wonderful: therefore my soul hath sought them."
           },
           {
-            "lat": "Qui timent te vidébunt me, et lætabúntur: quia in verba tua supersperávi.",
-            "eng": "They that fear Thee shall see me, and shall be glad: because I have greatly hoped in Thy words."
+            "lat": "Declarátio sermónum tuórum illúminat: et intelléctum dat párvulis.",
+            "eng": "The declaration of thy words giveth light: and giveth understanding to little ones."
           },
           {
-            "lat": "Cognóvi, Dómine, quia ǽquitas judícia tua, et in veritáte tua humiliásti me.",
-            "eng": "I know, O Lord, that Thy judgments are equity, and in Thy truth Thou hast humbled me."
+            "lat": "Os meum apérui, et attráxi spíritum: quia mandáta tua desiderábam.",
+            "eng": "I opened my mouth, and panted: because I longed for thy commandments."
           },
           {
-            "lat": "Fiat misericórdia tua ut consolétur me, secúndum elóquium tuum servo tuo.",
-            "eng": "O let Thy mercy be for my comfort, according to Thy word unto Thy servant."
+            "lat": "Áspice in me, et miserére mei, secúndum judícium diligéntium nomen tuum.",
+            "eng": "Look thou upon me, and have mercy on me, according to the judgment of them that love thy name."
           },
           {
-            "lat": "Véniant mihi miseratiónes tuæ, et vivam: quia lex tua meditátio mea est.",
-            "eng": "Let Thy tender mercies come unto me, and I shall live: for Thy law is my meditation."
+            "lat": "Gressus meos dírige secúndum elóquium tuum: et non dominétur mei omnis injustítia.",
+            "eng": "Direct my steps according to thy word: and let no iniquity have dominion over me."
           },
           {
-            "lat": "Confundántur supérbi, quia injúste iniquitátem fecérunt in me: ego autem exercébor in mandátis tuis.",
-            "eng": "Let the proud be ashamed, because they have done unjustly towards me: but I will be employed in Thy commandments."
+            "lat": "Rédime me a calúmniis hóminum: ut custódiam mandáta tua.",
+            "eng": "Redeem me from the calumnies of men: that I may keep thy commandments."
           },
           {
-            "lat": "Convertántur mihi timéntes te, et qui novérunt testimónia tua.",
-            "eng": "Let them that fear Thee turn to me, and they that know Thy testimonies."
+            "lat": "Fáciem tuam illúmina super servum tuum: et doce me justificatiónes tuas.",
+            "eng": "Make thy face to shine upon thy servant: and teach me thy justifications."
           },
           {
-            "lat": "Fiat cor meum immaculátum in justificatiónibus tuis, ut non confúndar.",
-            "eng": "Let my heart be undefiled in Thy justifications, that I may not be confounded."
+            "lat": "Éxitus aquárum deduxérunt óculi mei: quia non custodiérunt legem tuam.",
+            "eng": "My eyes have sent forth springs of water: because they have not kept thy law."
+          },
+          {
+            "lat": "Justus es, Dómine: et rectum judícium tuum.",
+            "eng": "Thou art just, O Lord: and thy judgment is right."
+          },
+          {
+            "lat": "Mandásti justítiam testimónia tua: et veritátem tuam nimis.",
+            "eng": "Thou hast commanded justice thy testimonies: and thy truth exceedingly."
+          },
+          {
+            "lat": "Tabéscere me fecit zelus meus: quia oblíti sunt verba tua inimíci mei.",
+            "eng": "My zeal hath made me pine away: because my enemies forgot thy words."
+          },
+          {
+            "lat": "Ignítum elóquium tuum veheménter: et servus tuus diléxit illud.",
+            "eng": "Thy word is exceedingly refined: and thy servant hath loved it."
+          },
+          {
+            "lat": "Adolescéntulus sum ego et contémptus: justificatiónes tuas non sum oblítus.",
+            "eng": "I am very young and despised; but I forget not thy justifications."
+          },
+          {
+            "lat": "Justítia tua, justítia in ætérnum: et lex tua véritas.",
+            "eng": "Thy justice is justice for ever: and thy law is the truth."
+          },
+          {
+            "lat": "Tribulátio, et angústia invenérunt me: mandáta tua meditátio mea est.",
+            "eng": "Trouble and anguish have found me: thy commandments are my meditation."
+          },
+          {
+            "lat": "Ǽquitas testimónia tua in ætérnum: intelléctum da mihi, et vivam.",
+            "eng": "Thy testimonies are justice for ever: give me understanding, and I shall live."
           }
         ],
         "variationKey": "nona.psalm1"
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:81-88",
-        "ref": "Ps 118:81-88 (Defécit)",
+        "label": "Psalmus 118:145-160",
+        "ref": "Ps 118:145-160 (Clamávi)",
         "verses": [
           {
-            "lat": "Defécit in salutáre tuum ánima mea, et in verbum tuum supersperávi.",
-            "eng": "My soul hath fainted after Thy salvation: and in Thy word I have very much hoped."
+            "lat": "Clamávi in toto corde meo, exáudi me, Dómine: justificatiónes tuas requíram.",
+            "eng": "I cried with my whole heart, hear me, O Lord: I will seek thy justifications."
           },
           {
-            "lat": "Defecérunt óculi mei in elóquium tuum, dicéntes: Quando consoláberis me?",
-            "eng": "My eyes have failed for Thy word, saying: When wilt Thou comfort me?"
+            "lat": "Clamávi ad te, salvum me fac: ut custódiam mandáta tua.",
+            "eng": "I cried unto thee, save me: that I may keep thy commandments."
           },
           {
-            "lat": "Quia factus sum sicut uter in pruína: justificatiónes tuas non sum oblítus.",
-            "eng": "For I am become like a bottle in the frost: I have not forgotten Thy justifications."
+            "lat": "Prævéni in maturitáte, et clamávi: quia in verba tua supersperávi.",
+            "eng": "I prevented the dawning of the day, and cried: because in thy words I very much hoped."
           },
           {
-            "lat": "Quot sunt dies servi tui? quando fácies de persequéntibus me judícium?",
-            "eng": "How many are the days of Thy servant? when wilt Thou execute judgment on them that persecute me?"
+            "lat": "Prævenérunt óculi mei ad te dilúculo: ut meditárer elóquia tua.",
+            "eng": "My eyes to thee have prevented the morning: that I might meditate on thy words."
           },
           {
-            "lat": "Narravérunt mihi iníqui fabulatiónes: sed non ut lex tua.",
-            "eng": "The wicked have told me fables: but not as Thy law."
+            "lat": "Vocem meam audi secúndum misericórdiam tuam, Dómine: et secúndum judícium tuum vivífica me.",
+            "eng": "Hear thou my voice, O Lord, according to thy mercy: and quicken me according to thy judgment."
           },
           {
-            "lat": "Ómnia mandáta tua véritas: iníque persecúti sunt me, ádjuva me.",
-            "eng": "All Thy commandments are truth: they have persecuted me unjustly, do Thou help me."
+            "lat": "Appropinquavérunt persequéntes me iniquitáti: a lege autem tua longe facti sunt.",
+            "eng": "They that persecute me have drawn nigh to iniquity; but they are gone far off from thy law."
           },
           {
-            "lat": "Paulo minus consumavérunt me in terra: ego autem non derelíqui mandáta tua.",
-            "eng": "They had almost made an end of me upon earth: but I have not forsaken Thy commandments."
+            "lat": "Prope es tu, Dómine: et omnes viæ tuæ véritas.",
+            "eng": "Thou art near, O Lord: and all thy ways are truth."
           },
           {
-            "lat": "Secúndum misericórdiam tuam vivífica me, et custódiam testimónia oris tui.",
-            "eng": "Quicken Thou me according to Thy mercy, and I shall keep the testimonies of Thy mouth."
+            "lat": "Inítio cognóvi de testimóniis tuis: quia in ætérnum fundásti ea.",
+            "eng": "I have known from the beginning concerning thy testimonies: that thou hast founded them for ever."
+          },
+          {
+            "lat": "Vide humilitátem meam, et éripe me: quia legem tuam non sum oblítus.",
+            "eng": "See my humiliation and deliver me: for I have not forgotten thy law."
+          },
+          {
+            "lat": "Júdica judícium meum, et rédime me: propter elóquium tuum vivífica me.",
+            "eng": "Judge my judgment and redeem me: quicken thou me for thy word’s sake."
+          },
+          {
+            "lat": "Longe a peccatóribus salus: quia justificatiónes tuas non exquisiérunt.",
+            "eng": "Salvation is far from sinners; because they have not sought thy justifications."
+          },
+          {
+            "lat": "Misericórdiæ tuæ multæ, Dómine: secúndum judícium tuum vivífica me.",
+            "eng": "Many, O Lord, are thy mercies: quicken me according to thy judgment."
+          },
+          {
+            "lat": "Multi qui persequúntur me, et tríbulant me: a testimóniis tuis non declinávi.",
+            "eng": "Many are they that persecute me, and afflict me; but I have not declined from thy testimonies."
+          },
+          {
+            "lat": "Vidi prævaricántes, et tabescébam: quia elóquia tua non custodiérunt.",
+            "eng": "I beheld the transgressors, and I pined away; because they kept not thy word."
+          },
+          {
+            "lat": "Vide quóniam mandáta tua diléxi, Dómine: in misericórdia tua vivífica me.",
+            "eng": "Behold I have loved thy commandments, O Lord; quicken me thou in thy mercy."
+          },
+          {
+            "lat": "Princípium verbórum tuórum, véritas: in ætérnum ómnia judícia justítiæ tuæ.",
+            "eng": "The beginning of thy words is truth: all the judgments of thy justice are for ever."
           }
         ],
         "variationKey": "nona.psalm2"
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:89-96",
-        "ref": "Ps 118:89-96 (In ætérnum)",
+        "label": "Psalmus 118:161-176",
+        "ref": "Ps 118:161-176 (Príncipes)",
         "verses": [
           {
-            "lat": "In ætérnum, Dómine, verbum tuum permánet in cælo.",
-            "eng": "For ever, O Lord, Thy word standeth firm in heaven."
+            "lat": "Príncipes persecúti sunt me gratis: et a verbis tuis formidávit cor meum.",
+            "eng": "Princes have persecuted me without cause: and my heart hath been in awe of thy words."
           },
           {
-            "lat": "In generatiónem et generatiónem véritas tua: fundásti terram, et pérmanet.",
-            "eng": "Thy truth unto all generations: Thou hast founded the earth, and it continueth."
+            "lat": "Lætábor ego super elóquia tua: sicut qui invénit spólia multa.",
+            "eng": "I will rejoice at thy words, as one that hath found great spoil."
           },
           {
-            "lat": "Ordinatióne tua persevérat dies, quóniam ómnia sérviunt tibi.",
-            "eng": "By Thy ordinance the day goeth on, for all things serve Thee."
+            "lat": "Iniquitátem ódio hábui, et abominátus sum: legem autem tuam diléxi.",
+            "eng": "I have hated and abhorred iniquity; but I have loved thy law."
           },
           {
-            "lat": "Nisi quod lex tua meditátio mea est, tunc forte periíssem in humilitáte mea.",
-            "eng": "Unless Thy law had been my meditation, I had then perhaps perished in my abjection."
+            "lat": "Sépties in die laudem dixi tibi, super judícia justítiæ tuæ.",
+            "eng": "Seven times a day I have given praise to thee, for the judgments of thy justice."
           },
           {
-            "lat": "In ætérnum non oblivíscar justificatiónes tuas, quia in ipsis vivificásti me.",
-            "eng": "Thy justifications I will never forget, for by them Thou hast given me life."
+            "lat": "Pax multa diligéntibus legem tuam: et non est illis scándalum.",
+            "eng": "Much peace have they that love thy law, and to them there is no stumbling-block."
           },
           {
-            "lat": "Tuus sum ego, salvum me fac: quóniam justificatiónes tuas exquisívi.",
-            "eng": "I am Thine, save Thou me: for I have sought Thy justifications."
+            "lat": "Exspectábam salutáre tuum, Dómine: et mandáta tua diléxi.",
+            "eng": "I looked for thy salvation, O Lord: and I loved thy commandments."
           },
           {
-            "lat": "Me exspectavérunt peccatóres ut pérderent me: testimónia tua intelléxi.",
-            "eng": "The wicked have waited for me to destroy me: but I have understood Thy testimonies."
+            "lat": "Custodívit ánima mea testimónia tua: et diléxit ea veheménter.",
+            "eng": "My soul hath kept thy testimonies: and hath loved them exceedingly."
           },
           {
-            "lat": "Omnis consummatiónis vidi finem: latum mandátum tuum nimis.",
-            "eng": "I have seen an end of all perfection: Thy commandment is exceeding broad."
+            "lat": "Servávi mandáta tua, et testimónia tua: quia omnes viæ meæ in conspéctu tuo.",
+            "eng": "I have kept thy commandments and thy testimonies: because all my ways are in thy sight."
+          },
+          {
+            "lat": "Appropínquet deprecátio mea in conspéctu tuo, Dómine: juxta elóquium tuum da mihi intelléctum.",
+            "eng": "Let my supplication, O Lord, come near in thy sight: give me understanding according to thy word."
+          },
+          {
+            "lat": "Intret postulátio mea in conspéctu tuo: secúndum elóquium tuum éripe me.",
+            "eng": "Let my request come in before thee; deliver thou me according to thy word."
+          },
+          {
+            "lat": "Eructábunt lábia mea hymnum, cum docúeris me justificatiónes tuas.",
+            "eng": "My lips shall utter a hymn, when thou shalt teach me thy justifications."
+          },
+          {
+            "lat": "Pronuntiábit lingua mea elóquium tuum: quia ómnia mandáta tua ǽquitas.",
+            "eng": "My tongue shall pronounce thy word: because all thy commandments are justice."
+          },
+          {
+            "lat": "Fiat manus tua ut salvet me: quóniam mandáta tua elégi.",
+            "eng": "Let thy hand be with me to save me; for I have chosen thy precepts."
+          },
+          {
+            "lat": "Concupívi salutáre tuum, Dómine: et lex tua meditátio mea est.",
+            "eng": "I have longed for thy salvation, O Lord; and thy law is my meditation."
+          },
+          {
+            "lat": "Vivet ánima mea, et laudábit te: et judícia tua adjuvábunt me.",
+            "eng": "My soul shall live and shall praise thee: and thy judgments shall help me."
+          },
+          {
+            "lat": "Errávi, sicut ovis, quæ périit: quære servum tuum, quia mandáta tua non sum oblítus.",
+            "eng": "I have gone astray like a sheep that is lost: seek thy servant, because I have not forgotten thy commandments."
           }
         ],
         "variationKey": "nona.psalm3"
