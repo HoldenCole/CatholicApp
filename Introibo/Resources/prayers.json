@@ -2699,5 +2699,449 @@
         "eng": "My God, I give Thee my whole will. I desire to begin this day for Thy honour and glory. I offer Thee all the actions of this day, and I pray Thee to give me the grace to do nothing that is contrary to Thy will. Enlighten my understanding, strengthen my will, purify my heart, and sanctify my soul. Amen."
       }
     ]
+  },
+  {
+    "slug": "te-deum",
+    "title": "Te Deum",
+    "eng": "We Praise Thee, O God",
+    "category": "Devotiónes",
+    "note": "Ancient hymn of thanksgiving, sung at Matins on feasts.",
+    "lines": [
+      {
+        "lat": "Te Deum laudámus: te Dóminum confitémur.",
+        "eng": "We praise Thee, O God: we acknowledge Thee to be the Lord."
+      },
+      {
+        "lat": "Te ætérnum Patrem omnis terra venerátur.",
+        "eng": "All the earth doth worship Thee, the Father everlasting."
+      },
+      {
+        "lat": "Tibi omnes Ángeli, tibi Cæli et univérsæ Potestátes:",
+        "eng": "To Thee all Angels cry aloud, the Heavens and all the Powers therein."
+      },
+      {
+        "lat": "Tibi Chérubim et Séraphim incessábili voce proclámant:",
+        "eng": "To Thee Cherubim and Seraphim continually do cry:"
+      },
+      {
+        "lat": "Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth.",
+        "eng": "Holy, Holy, Holy, Lord God of Hosts."
+      },
+      {
+        "lat": "Pleni sunt cæli et terra majestátis glóriæ tuæ.",
+        "eng": "Heaven and earth are full of the majesty of Thy glory."
+      },
+      {
+        "lat": "Te gloriósus Apostolórum chorus:",
+        "eng": "The glorious choir of the Apostles praise Thee."
+      },
+      {
+        "lat": "Te Prophetárum laudábilis númerus:",
+        "eng": "The admirable company of the Prophets praise Thee."
+      },
+      {
+        "lat": "Te Mártyrum candidátus laudat exércitus.",
+        "eng": "The white-robed army of Martyrs praise Thee."
+      },
+      {
+        "lat": "Te per orbem terrárum sancta confitétur Ecclésia:",
+        "eng": "The holy Church throughout all the world doth acknowledge Thee:"
+      },
+      {
+        "lat": "Patrem imménsæ majestátis:",
+        "eng": "The Father of an infinite majesty:"
+      },
+      {
+        "lat": "Venerándum tuum verum et únicum Fílium:",
+        "eng": "Thine honourable, true, and only Son:"
+      },
+      {
+        "lat": "Sanctum quoque Paráclitum Spíritum.",
+        "eng": "Also the Holy Ghost, the Comforter."
+      },
+      {
+        "lat": "Tu Rex glóriæ, Christe.",
+        "eng": "Thou art the King of Glory, O Christ."
+      },
+      {
+        "lat": "Tu Patris sempitérnus es Fílius.",
+        "eng": "Thou art the everlasting Son of the Father."
+      },
+      {
+        "lat": "Tu, ad liberándum susceptúrus hóminem, non horruísti Vírginis úterum.",
+        "eng": "When Thou tookest upon Thee to deliver man, Thou didst not abhor the Virgin's womb."
+      },
+      {
+        "lat": "Tu, devícto mortis acúleo, aperuísti credéntibus regna cælórum.",
+        "eng": "When Thou hadst overcome the sting of death, Thou didst open the kingdom of heaven to all believers."
+      },
+      {
+        "lat": "Tu ad déxteram Dei sedes, in glória Patris.",
+        "eng": "Thou sittest at the right hand of God, in the glory of the Father."
+      },
+      {
+        "lat": "Judex créderis esse ventúrus.",
+        "eng": "Thou art believed to be the Judge that shall come."
+      },
+      {
+        "lat": "Te ergo quǽsumus, tuis fámulis súbveni, quos pretióso sánguine redemísti.",
+        "eng": "We therefore pray Thee, help Thy servants, whom Thou hast redeemed with Thy precious Blood."
+      },
+      {
+        "lat": "Ætérna fac cum Sanctis tuis in glória numerári.",
+        "eng": "Make them to be numbered with Thy Saints in glory everlasting."
+      },
+      {
+        "lat": "Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ.",
+        "eng": "O Lord, save Thy people, and bless Thine inheritance."
+      },
+      {
+        "lat": "Et rege eos, et extólle illos usque in ætérnum.",
+        "eng": "Govern them, and lift them up for ever."
+      },
+      {
+        "lat": "Per síngulos dies benedícimus te.",
+        "eng": "Day by day we magnify Thee."
+      },
+      {
+        "lat": "Et laudámus nomen tuum in sǽculum, et in sǽculum sǽculi.",
+        "eng": "And we worship Thy name ever, world without end."
+      },
+      {
+        "lat": "Dignáre, Dómine, die isto sine peccáto nos custodíre.",
+        "eng": "Vouchsafe, O Lord, to keep us this day without sin."
+      },
+      {
+        "lat": "Miserére nostri, Dómine, miserére nostri.",
+        "eng": "O Lord, have mercy upon us, have mercy upon us."
+      },
+      {
+        "lat": "Fiat misericórdia tua, Dómine, super nos, quemádmodum sperávimus in te.",
+        "eng": "O Lord, let Thy mercy lighten upon us, as our trust is in Thee."
+      },
+      {
+        "lat": "In te, Dómine, sperávi: non confúndar in ætérnum.",
+        "eng": "O Lord, in Thee have I trusted: let me never be confounded."
+      }
+    ]
+  },
+  {
+    "slug": "magnificat",
+    "title": "Magníficat",
+    "eng": "Canticle of Our Lady",
+    "category": "Devotiónes",
+    "note": "The Canticle of the Blessed Virgin Mary (Luke 1:46-55), sung at Vespers.",
+    "lines": [
+      {
+        "lat": "Magníficat ánima mea Dóminum:",
+        "eng": "My soul doth magnify the Lord:"
+      },
+      {
+        "lat": "Et exsultávit spíritus meus in Deo salutári meo.",
+        "eng": "And my spirit hath rejoiced in God my Saviour."
+      },
+      {
+        "lat": "Quia respéxit humilitátem ancíllæ suæ: ecce enim ex hoc beátam me dicent omnes generatiónes.",
+        "eng": "Because He hath regarded the humility of His handmaid: for behold from henceforth all generations shall call me blessed."
+      },
+      {
+        "lat": "Quia fecit mihi magna qui potens est: et sanctum nomen ejus.",
+        "eng": "Because He that is mighty hath done great things to me: and holy is His name."
+      },
+      {
+        "lat": "Et misericórdia ejus a progénie in progénies timéntibus eum.",
+        "eng": "And His mercy is from generation unto generations, to them that fear Him."
+      },
+      {
+        "lat": "Fecit poténtiam in bráchio suo: dispérsit supérbos mente cordis sui.",
+        "eng": "He hath showed might in His arm: He hath scattered the proud in the conceit of their heart."
+      },
+      {
+        "lat": "Depósuit poténtes de sede, et exaltávit húmiles.",
+        "eng": "He hath put down the mighty from their seat, and hath exalted the humble."
+      },
+      {
+        "lat": "Esuriéntes implévit bonis: et dívites dimísit inánes.",
+        "eng": "He hath filled the hungry with good things: and the rich He hath sent empty away."
+      },
+      {
+        "lat": "Suscépit Israël púerum suum, recordátus misericórdiæ suæ.",
+        "eng": "He hath received Israel His servant, being mindful of His mercy."
+      },
+      {
+        "lat": "Sicut locútus est ad patres nostros, Abraham et sémini ejus in sǽcula.",
+        "eng": "As He spoke to our fathers, to Abraham and to his seed for ever."
+      },
+      {
+        "lat": "Glória Patri, et Fílio, et Spirítui Sancto.",
+        "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "lat": "Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "benedictus",
+    "title": "Benedíctus",
+    "eng": "Canticle of Zachary",
+    "category": "Devotiónes",
+    "note": "The Canticle of Zachary (Luke 1:68-79), sung at Lauds.",
+    "lines": [
+      {
+        "lat": "Benedíctus Dóminus Deus Israël, quia visitávit et fecit redemptiónem plebis suæ:",
+        "eng": "Blessed be the Lord God of Israel, because He hath visited and wrought the redemption of His people:"
+      },
+      {
+        "lat": "Et eréxit cornu salútis nobis, in domo David púeri sui.",
+        "eng": "And hath raised up an horn of salvation to us, in the house of David His servant."
+      },
+      {
+        "lat": "Sicut locútus est per os sanctórum, qui a sǽculo sunt, prophetárum ejus:",
+        "eng": "As He spoke by the mouth of His holy prophets, who are from the beginning:"
+      },
+      {
+        "lat": "Salútem ex inimícis nostris, et de manu ómnium qui odérunt nos:",
+        "eng": "Salvation from our enemies, and from the hand of all that hate us:"
+      },
+      {
+        "lat": "Ad faciéndam misericórdiam cum pátribus nostris, et memorári testaménti sui sancti.",
+        "eng": "To perform mercy to our fathers, and to remember His holy testament."
+      },
+      {
+        "lat": "Jusjurándum quod jurávit ad Abraham patrem nostrum, datúrum se nobis:",
+        "eng": "The oath which He swore to Abraham our father, that He would grant to us:"
+      },
+      {
+        "lat": "Ut sine timóre, de manu inimicórum nostrórum liberáti, serviámus illi,",
+        "eng": "That being delivered from the hand of our enemies, we may serve Him without fear,"
+      },
+      {
+        "lat": "In sanctitáte et justítia coram ipso, ómnibus diébus nostris.",
+        "eng": "In holiness and justice before Him, all our days."
+      },
+      {
+        "lat": "Et tu, puer, Prophéta Altíssimi vocáberis: præíbis enim ante fáciem Dómini, paráre vias ejus:",
+        "eng": "And thou, child, shalt be called the prophet of the Highest: for thou shalt go before the face of the Lord to prepare His ways:"
+      },
+      {
+        "lat": "Ad dandam sciéntiam salútis plebi ejus, in remissiónem peccatórum eórum:",
+        "eng": "To give knowledge of salvation to His people, unto the remission of their sins:"
+      },
+      {
+        "lat": "Per víscera misericórdiæ Dei nostri, in quibus visitávit nos Óriens ex alto:",
+        "eng": "Through the bowels of the mercy of our God, in which the Orient from on high hath visited us:"
+      },
+      {
+        "lat": "Illumináre his qui in ténebris et in umbra mortis sedent, ad dirigéndos pedes nostros in viam pacis.",
+        "eng": "To enlighten them that sit in darkness and in the shadow of death: to direct our feet into the way of peace."
+      },
+      {
+        "lat": "Glória Patri, et Fílio, et Spirítui Sancto.",
+        "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "lat": "Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "nunc-dimittis",
+    "title": "Nunc Dimíttis",
+    "eng": "Canticle of Simeon",
+    "category": "Devotiónes",
+    "note": "The Canticle of Simeon (Luke 2:29-32), sung at Compline.",
+    "lines": [
+      {
+        "lat": "Nunc dimíttis servum tuum, Dómine, secúndum verbum tuum in pace:",
+        "eng": "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace:"
+      },
+      {
+        "lat": "Quia vidérunt óculi mei salutáre tuum,",
+        "eng": "Because my eyes have seen Thy salvation,"
+      },
+      {
+        "lat": "Quod parásti ante fáciem ómnium populórum:",
+        "eng": "Which Thou hast prepared before the face of all peoples:"
+      },
+      {
+        "lat": "Lumen ad revelatiónem géntium, et glóriam plebis tuæ Israël.",
+        "eng": "A light to the revelation of the Gentiles, and the glory of Thy people Israel."
+      },
+      {
+        "lat": "Glória Patri, et Fílio, et Spirítui Sancto.",
+        "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "lat": "Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "alma-redemptoris",
+    "title": "Alma Redemptóris Mater",
+    "eng": "Loving Mother of the Redeemer",
+    "category": "Devotiónes",
+    "note": "Marian antiphon for Advent until the Purification.",
+    "lines": [
+      {
+        "lat": "Alma Redemptóris Mater, quæ pérvia cæli porta manes,",
+        "eng": "Mother of Christ, hear thou thy people's cry"
+      },
+      {
+        "lat": "et stella maris, succúrre cadénti,",
+        "eng": "Star of the deep and Portal of the sky!"
+      },
+      {
+        "lat": "Súrgere qui curat, pópulo: tu quæ genuísti,",
+        "eng": "Mother of Him who thee from nothing made."
+      },
+      {
+        "lat": "Natúra miránte, tuum sanctum Genitórem,",
+        "eng": "Sinking we strive and call to thee for aid:"
+      },
+      {
+        "lat": "Virgo prius ac postérius, Gabriélis ab ore",
+        "eng": "O, by what joy which Gabriel brought to thee,"
+      },
+      {
+        "lat": "Sumens illud Ave, peccatórum miserére.",
+        "eng": "Thou Virgin first and last, let us thy mercy see."
+      }
+    ]
+  },
+  {
+    "slug": "ave-regina-caelorum",
+    "title": "Ave Regína Cælórum",
+    "eng": "Hail, O Queen of Heaven",
+    "category": "Devotiónes",
+    "note": "Marian antiphon from the Purification until Holy Week.",
+    "lines": [
+      {
+        "lat": "Ave, Regína cælórum,",
+        "eng": "Hail, O Queen of heaven, enthroned!"
+      },
+      {
+        "lat": "Ave, Dómina Angelórum:",
+        "eng": "Hail, by Angels Mistress owned!"
+      },
+      {
+        "lat": "Salve radix, salve porta,",
+        "eng": "Root of Jesse, Gate of morn,"
+      },
+      {
+        "lat": "Ex qua mundo lux est orta:",
+        "eng": "Whence the world's true Light was born:"
+      },
+      {
+        "lat": "Gaude, Virgo gloriósa,",
+        "eng": "Glorious Virgin, joy to thee,"
+      },
+      {
+        "lat": "Super omnes speciósa,",
+        "eng": "Loveliest whom in heaven they see:"
+      },
+      {
+        "lat": "Vale, o valde decóra,",
+        "eng": "Fairest thou, where all are fair,"
+      },
+      {
+        "lat": "Et pro nobis Christum exóra.",
+        "eng": "Plead with Christ our sins to spare."
+      }
+    ]
+  },
+  {
+    "slug": "o-salutaris-hostia",
+    "title": "O Salutáris Hóstia",
+    "eng": "O Saving Victim",
+    "category": "Devotiónes",
+    "note": "Sung at the exposition of the Blessed Sacrament.",
+    "lines": [
+      {
+        "lat": "O salutáris Hóstia,",
+        "eng": "O saving Victim, opening wide"
+      },
+      {
+        "lat": "Quæ cæli pandis óstium:",
+        "eng": "The gate of heaven to man below;"
+      },
+      {
+        "lat": "Bella premunt hostília;",
+        "eng": "Our foes press on from every side;"
+      },
+      {
+        "lat": "Da robur, fer auxílium.",
+        "eng": "Thine aid supply, thy strength bestow."
+      },
+      {
+        "lat": "Uni trinóque Dómino",
+        "eng": "To Thy great name be endless praise,"
+      },
+      {
+        "lat": "Sit sempitérna glória:",
+        "eng": "Immortal Godhead, One in Three;"
+      },
+      {
+        "lat": "Qui vitam sine término",
+        "eng": "Oh, grant us endless length of days"
+      },
+      {
+        "lat": "Nobis donet in pátria. Amen.",
+        "eng": "In our true native land with Thee. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "ave-verum-corpus",
+    "title": "Ave Verum Corpus",
+    "eng": "Hail, True Body",
+    "category": "Devotiónes",
+    "note": "Eucharistic hymn in honor of the Blessed Sacrament.",
+    "lines": [
+      {
+        "lat": "Ave verum Corpus natum",
+        "eng": "Hail, true Body, born"
+      },
+      {
+        "lat": "de María Vírgine:",
+        "eng": "of the Virgin Mary,"
+      },
+      {
+        "lat": "Vere passum, immolátum",
+        "eng": "who truly suffered, sacrificed"
+      },
+      {
+        "lat": "in cruce pro hómine:",
+        "eng": "on the Cross for mankind,"
+      },
+      {
+        "lat": "Cujus latus perforátum",
+        "eng": "from whose pierced side"
+      },
+      {
+        "lat": "unda fluxit et sánguine:",
+        "eng": "flowed water and blood:"
+      },
+      {
+        "lat": "Esto nobis prægustátum",
+        "eng": "Be for us a foretaste"
+      },
+      {
+        "lat": "mortis in exámine.",
+        "eng": "in the trial of death."
+      },
+      {
+        "lat": "O Jesu dulcis! O Jesu pie!",
+        "eng": "O sweet Jesus! O holy Jesus!"
+      },
+      {
+        "lat": "O Jesu fili Maríæ! Miserére mei. Amen.",
+        "eng": "O Jesus, Son of Mary, have mercy on me. Amen."
+      }
+    ]
   }
 ]
