@@ -16,7 +16,7 @@ struct ProperView: View {
         switch mode {
         case .latinOnly: return latin
         case .vernacular: return english
-        case .both: return "\(latin)  \u{00B7}  \(english)"
+        case .both: return "\(latin)\n\(english)"
         }
     }
 
