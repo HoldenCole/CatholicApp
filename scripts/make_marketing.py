@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate App Store marketing screenshots in the Introibo house style.
 
-This reproduces the design of `marketing-screenshots/` (the originals).
+This reproduces the established house style (see `1.2.1 screenshots/`).
 Read docs/marketing-screenshots.md before changing anything here.
 
 Usage:

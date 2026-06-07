@@ -4,10 +4,10 @@ This document is the single source of truth for how the App Store marketing
 screenshots are made. It exists so the long font/style back-and-forth that
 happened for 1.2.1 never repeats. **Read this before touching the design.**
 
-The generator is `scripts/make_marketing.py`. The committed reference set lives
-in `marketing-screenshots/` (the originals) and `1.2.1 screenshots/` (current
-release). The originals are the design target — when in doubt, open one and
-compare side-by-side.
+The generator is `scripts/make_marketing.py`. The committed reference set is the
+current release folder, `1.2.1 screenshots/` — these match the established house
+style and are the design target. When in doubt, open one and compare
+side-by-side.
 
 ---
 
@@ -190,7 +190,8 @@ release:
 3. Update `OUT_DIR` to the new release folder (e.g. `1.3.0 screenshots`).
 4. Re-verify every quoted number against the data.
 5. Run the script.
-6. Eyeball the output against `marketing-screenshots/` originals.
+6. Eyeball the output against the previous release's set (e.g.
+   `1.2.1 screenshots/`).
 7. Commit by size.
 
 ---
