@@ -2530,5 +2530,174 @@
         "eng": "R. Amen."
       }
     ]
+  },
+  {
+    "slug": "pio-prayer-after-holy-communion",
+    "title": "Prayer After Holy Communion",
+    "eng": "St. Padre Pio",
+    "category": "Devotiónes",
+    "note": "Composed by St. Padre Pio, prayed after receiving Holy Communion.",
+    "lines": [
+      {
+        "lat": "Mane nobiscum, Domine, quoniam advesperascit. Mane nobiscum, et esto nostra consolatio. Mane nobiscum, sol occasus nesciens.",
+        "eng": "Stay with us, Lord, for evening is coming. Stay with us and be our consolation. Stay with us, O Sun that knows no setting."
+      }
+    ]
+  },
+  {
+    "slug": "pio-prayer-for-the-five-wounds",
+    "title": "Prayer for the Five Wounds",
+    "eng": "St. Padre Pio",
+    "category": "Devotiónes",
+    "note": "Padre Pio bore the stigmata for 50 years.",
+    "lines": [
+      {
+        "lat": "O Domine Jesu Christe, qui sacratissimas manus et pedes tuos clavis affigi voluisti: concede mihi te totis viribus diligere, et in vulneribus tuis refugium et pacem invenire. Amen.",
+        "eng": "O Lord Jesus Christ, Who didst submit to the nailing of Thy sacred hands and feet: grant me to love Thee with all my strength, and to find in Thy wounds my refuge and my peace. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "therese-act-of-oblation-to-merciful-love",
+    "title": "Act of Oblation to Merciful Love",
+    "eng": "St. Thérèse of Lisieux",
+    "category": "Devotiónes",
+    "note": "St. Therese made this offering on June 9, 1895, the feast of the Most Holy Trinity.",
+    "lines": [
+      {
+        "lat": "O Deus meus, Sanctissima Trinitas, cupio te amare et te amari facere, ad gloriam sanctae Ecclesiae laborando, animas in terris salvando et eas quae in Purgatorio patiuntur liberando. Offero tibi omnia merita Sanctorum cum meis meritis et illis quae infinita bonitas tua in manus meas posuit. Amen.",
+        "eng": "O my God, most Blessed Trinity, I desire to love Thee and to make Thee loved, to work for the glory of Holy Church by saving souls on earth and liberating those suffering in Purgatory. I offer Thee all the merits of the saints, with my own merits and those which Thy infinite goodness has placed in my hands. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "therese-prayer-of-confidence",
+    "title": "Prayer of Confidence",
+    "eng": "St. Thérèse of Lisieux",
+    "category": "Devotiónes",
+    "note": "From the last writings of St. Therese.",
+    "lines": [
+      {
+        "lat": "Deus meus, gratias tibi ago pro omnibus gratiis quas mihi concessisti, praesertim quod me per ignem tribulationis purificasti. In die novissimo te cum gaudio aspiciam, sceptrum Crucis ferens. Amen.",
+        "eng": "My God, I thank Thee for all the graces Thou hast granted me, especially for having purified me in the crucible of suffering. I shall look upon Thee with joy at the last day, bearing the sceptre of the Cross. Since Thou didst deign to give me this precious Cross, I hope to resemble Thee in heaven and to see the sacred wounds of Thy Passion shine upon my glorified body. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "aquinas-prayer-before-study",
+    "title": "Prayer Before Study",
+    "eng": "St. Thomas Aquinas",
+    "category": "Devotiónes",
+    "note": "St. Thomas prayed this before every study session.",
+    "lines": [
+      {
+        "lat": "Creator ineffabilis, qui de thesauris sapientiae tuae tres Angelorum hierarchias designasti et eas super caelum empyreum miro ordine collocasti: concede mihi intelligentiam. Amen.",
+        "eng": "O Creator beyond words, Who from the treasures of Thy wisdom didst appoint three hierarchies of Angels and set them in wonderful order above the heavens: grant me understanding. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "benedict-prayer-for-a-happy-death",
+    "title": "Prayer for a Happy Death",
+    "eng": "St. Benedict of Nursia",
+    "category": "Devotiónes",
+    "note": "St. Benedict died standing, supported by his monks, arms raised in prayer.",
+    "lines": [
+      {
+        "lat": "O Domine Deus meus, ne tradas me in manus inimici: sed fac me victorem in hora mortis meae.",
+        "eng": "O Lord my God, deliver me not into the hands of the enemy: but make me victorious in the hour of my death."
+      }
+    ]
+  },
+  {
+    "slug": "benedict-the-medal-prayer",
+    "title": "The Medal Prayer",
+    "eng": "St. Benedict of Nursia",
+    "category": "Devotiónes",
+    "note": "Inscribed on the St. Benedict Medal, a powerful sacramental.",
+    "lines": [
+      {
+        "lat": "Crux sacra sit mihi lux. Non draco sit mihi dux. Vade retro satana. Numquam suade mihi vana. Sunt mala quae libas. Ipse venena bibas.",
+        "eng": "Let the Holy Cross be my light. Let not the dragon be my guide. Begone, Satan. Never tempt me with vanities. What you offer is evil. Drink your own poison."
+      }
+    ]
+  },
+  {
+    "slug": "teresa-bookmark-prayer",
+    "title": "Bookmark Prayer",
+    "eng": "St. Teresa of Ávila",
+    "category": "Devotiónes",
+    "note": "Found in the breviary of St. Teresa after her death. Originally in Spanish.",
+    "lines": [
+      {
+        "lat": "Nada te turbe, nada te espante, todo se pasa. Dios no se muda. La paciencia todo lo alcanza. Quien a Dios tiene nada le falta. Solo Dios basta.",
+        "eng": "Let nothing disturb thee, nothing affright thee. All things are passing. God never changes. Patience attains all things. He who possesses God lacks nothing. God alone suffices."
+      }
+    ]
+  },
+  {
+    "slug": "teresa-prayer-of-self-offering",
+    "title": "Prayer of Self-Offering",
+    "eng": "St. Teresa of Ávila",
+    "category": "Devotiónes",
+    "note": "From the writings of St. Teresa of Avila.",
+    "lines": [
+      {
+        "lat": "Tua sum, Domine. Pro te nata sum. Quid vis de me fieri? Sive dives sive pauper, sive gaudens sive dolens, sive consolata sive desolata: cum tu sis Rex meus, quid vis de me fieri? Loquere, Domine, quia audit serva tua. Amen.",
+        "eng": "I am Thine, O Lord. I was born for Thee. What is Thy will for me? Let me be rich or beggared, exulting or repining, comforted or lonely. Since Thou art my King, what is Thy will for me? Speak, Lord, for Thy servant heareth. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "escriva-prayer-for-sanctifying-work",
+    "title": "Prayer for Sanctifying Work",
+    "eng": "St. Josemaría Escrivá",
+    "category": "Devotiónes",
+    "note": "Inspired by the spirit of Opus Dei, the sanctification of ordinary life.",
+    "lines": [
+      {
+        "lat": "Domine, da mihi gratiam ut laborem meum ordinarium materiam sanctificationis meae videam. Adjuva me ut omne opus, omne colloquium, omne momentum hujus diei in orationem convertam, ut in fine diei totum tibi offerre possim tamquam aliquid amore tuo dignum. Amen.",
+        "eng": "Lord, grant me the grace to see my ordinary work as the material for my sanctification. Help me to turn every task, every conversation, every moment of this day into a prayer, so that at its end I may offer it all to Thee as something worthy of Thy love. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "escriva-prayer-to-the-guardian-angels",
+    "title": "Prayer to the Guardian Angels",
+    "eng": "St. Josemaría Escrivá",
+    "category": "Devotiónes",
+    "note": "St. Josemaria had a great devotion to the Guardian Angels.",
+    "lines": [
+      {
+        "lat": "Sancti Angeli Custodes eorum qui meae curae commissi sunt: adjuvate me semper conscium esse Deum vigilare, et ei in illis fideliter et cum amore servire. Defendite me a maligno, et per vias pacis me ducite. Amen.",
+        "eng": "Holy Guardian Angels of those in my care: help me always to be aware that God is watching, and to serve Him in them with fidelity and love. Defend me from the evil one, and lead me along the paths of peace. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "desales-prayer-of-gentle-trust",
+    "title": "Prayer of Gentle Trust",
+    "eng": "St. Francis de Sales",
+    "category": "Devotiónes",
+    "note": "Adapted from the letters of St. Francis de Sales.",
+    "lines": [
+      {
+        "lat": "Noli prospicere mutationes et casus hujus vitae cum timore; sed potius eas cum plena spe aspice, quia Deus, cujus es, te ex illis liberabit. Hucusque te custodivit; manum ejus tene, et per omnia te secure ducet. Amen.",
+        "eng": "Do not look forward to the changes and chances of this life in fear; rather look to them with full hope that, as they arise, God, whose you are, will deliver you out of them. He has kept you hitherto; hold fast to His hand, and He will lead you safely through all things. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "desales-prayer-for-a-devout-life",
+    "title": "Prayer for a Devout Life",
+    "eng": "St. Francis de Sales",
+    "category": "Devotiónes",
+    "note": "Inspired by the Introduction to the Devout Life.",
+    "lines": [
+      {
+        "lat": "Deus meus, totam voluntatem meam tibi dono. Hunc diem pro honore et gloria tua incipere desidero. Offero tibi omnes actiones hujus diei, et precor te ut mihi gratiam des nihil contra voluntatem tuam agendi. Illumina intellectum meum, robora voluntatem meam, purifica cor meum, et sanctifica animam meam. Amen.",
+        "eng": "My God, I give Thee my whole will. I desire to begin this day for Thy honour and glory. I offer Thee all the actions of this day, and I pray Thee to give me the grace to do nothing that is contrary to Thy will. Enlighten my understanding, strengthen my will, purify my heart, and sanctify my soul. Amen."
+      }
+    ]
   }
 ]
