@@ -81,22 +81,27 @@ platform :ios do
     UI.message("Looking for IPA at: #{ipa_abs}")
 
     changelog = <<~NOTES
-      What's new in 1.2.
+      What's new in 1.2.1.
 
-      Search: Find any prayer, Mass, Office hour, saint, or
-      reference article from one search box. Diacritic-insensitive,
-      so "miserere" finds "Miserére".
+      Accurate calendar through 2050: the 1962 calendar has been
+      rebuilt from an authoritative source and verified day-by-day —
+      correct feasts, transfers, octaves, and privileged ferias for
+      every day from 2024 to 2050.
 
-      In-text links: Tap highlighted references to jump straight
-      to the related prayer, Mass part, or article — and see what
-      links back to the page you're on.
+      Fuller Divine Office: English translations now cover the great
+      majority of the Office (antiphons, lessons, responsories,
+      hymns, collects), and the Saturday Office of the Blessed Virgin
+      Mary is now included, with its proper seasonal forms.
 
-      Liturgical calendar: Browse any month from the new calendar
-      button on the home screen. Each day shows its feast or feria
-      and liturgical colour; tap a day to see its details and open
-      that day's Mass. Rite-aware (1962 / 1955 / pre-1955).
+      English for every day: every feast and feria now shows an
+      English name on the home screen and calendar, across all three
+      rites (1962 / 1955 / pre-1955).
 
-      Plus Office and parchment-mode fixes from your feedback.
+      Cleaner text: removed stray formatting marks that could appear
+      in some Office prayers, and fixed the bilingual section
+      headings so the English title sits centered beneath the Latin.
+
+      Plus assorted calendar and Office corrections from your feedback.
     NOTES
 
     upload_to_testflight(
