@@ -103,10 +103,25 @@ MASS_SECTION_MAP = {
 # ─── File Parsing ─────────────────────────────────────────────────────────────
 
 
+# Rubric codes whose section content applies to the 1960/1962 office.
+KEEP_RUBRIC = ("1960", "196", "innovata")
+
 def parse_do_file(path: Path) -> dict:
-    """Splits a DO file into sections. Returns dict[section_name] -> list of lines."""
+    """Splits a DO file into sections. Returns dict[section_name] -> list of lines.
+
+    DO section headers may carry a conditional variant, e.g.
+        [Versum 2] (rubrica cisterciensis)
+        [Ant 1] (rubrica 1960)
+    A header is `[Name]` optionally followed by a parenthetical condition. For a
+    1960 Roman import we keep the base (unconditioned) section and any explicitly
+    1960 variant (which overrides the base), and DISCARD every other variant
+    (Cistercian, monastic, 1955, Tridentine, seasonal, …). Without this, the old
+    parser only matched bare `[Name]` headers, so variant headers were treated as
+    content and their blocks — including @-references and alternate text — bled
+    into the preceding section (the source of the displayed-markup bug)."""
     sections = {}
     current_section = None
+    skipping = False  # inside a discarded non-1960 variant block
 
     if not path.exists():
         return sections
@@ -118,15 +133,31 @@ def parse_do_file(path: Path) -> dict:
         return sections
 
     for line in text.split("\n"):
-        # Section header
-        m = re.match(r"^\[(.+?)\]\s*$", line)
+        # Section header: [Name] optionally followed by a parenthetical condition.
+        m = re.match(r"^\[(.+?)\]\s*(\([^\[\]]*\))?\s*$", line)
         if m:
-            current_section = m.group(1)
-            if current_section not in sections:
-                sections[current_section] = []
+            name = m.group(1)
+            cond = m.group(2) or ""
+            if not cond:
+                # Base section — the 1960 default.
+                skipping = False
+                current_section = name
+                sections.setdefault(name, [])
+            else:
+                rub = re.search(r"rubrica\s+(\w+)", cond, re.IGNORECASE)
+                if rub and rub.group(1).lower() in KEEP_RUBRIC:
+                    # Explicit 1960 variant overrides the base section.
+                    skipping = False
+                    current_section = name
+                    sections[name] = []
+                else:
+                    # Any other variant (other rubric / seasonal / order-specific)
+                    # is not part of the 1960 Roman office — discard its block.
+                    skipping = True
+                    current_section = None
             continue
 
-        if current_section is not None:
+        if current_section is not None and not skipping:
             sections[current_section].append(line)
 
     # Strip trailing empty lines from each section
@@ -412,6 +443,12 @@ def strip_markup(text: str) -> str:
     result = []
 
     for line in lines:
+        # Remove /:...:/ conditional-rubric spans (DO display instructions)
+        line = re.sub(r"/:.*?:/", "", line)
+
+        # Remove trailing ;;NNN metadata (psalm-number / rank markers on antiphons)
+        line = re.sub(r";;.*$", "", line)
+
         # Remove v. / V. prefixes at start of line (verse markers)
         line = re.sub(r"^v\.\s*", "", line)
 
