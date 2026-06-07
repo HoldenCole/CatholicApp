@@ -3960,7 +3960,7 @@
     "commemoration": null
   },
   "2024-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat26",
     "sanctoral": "12-26",
     "winner": "sanctoral",
     "winnerKey": "12-26",
@@ -3968,10 +3968,10 @@
     "name": "S. Stephani Protomartyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat01"
+    "commemoration": "nat26"
   },
   "2024-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat27",
     "sanctoral": "12-27",
     "winner": "sanctoral",
     "winnerKey": "12-27",
@@ -3979,10 +3979,10 @@
     "name": "S. Joannis Apostoli et Evangelistæ",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "nat27"
   },
   "2024-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat28",
     "sanctoral": "12-28",
     "winner": "sanctoral",
     "winnerKey": "12-28",
@@ -3990,10 +3990,10 @@
     "name": "Ss. Innocentium",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "nat28"
   },
   "2024-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat1-0",
     "sanctoral": "12-29",
     "winner": "temporal",
     "winnerKey": "nat1-0",
@@ -4004,10 +4004,10 @@
     "commemoration": "12-29"
   },
   "2024-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 1.2,
     "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
@@ -4015,7 +4015,7 @@
     "commemoration": null
   },
   "2024-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "sanctoral",
     "winnerKey": "12-31",
@@ -7975,7 +7975,7 @@
     "commemoration": null
   },
   "2025-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat26",
     "sanctoral": "12-26",
     "winner": "sanctoral",
     "winnerKey": "12-26",
@@ -7983,10 +7983,10 @@
     "name": "S. Stephani Protomartyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat01"
+    "commemoration": "nat26"
   },
   "2025-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat27",
     "sanctoral": "12-27",
     "winner": "sanctoral",
     "winnerKey": "12-27",
@@ -7994,10 +7994,10 @@
     "name": "S. Joannis Apostoli et Evangelistæ",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "nat27"
   },
   "2025-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat1-0",
     "sanctoral": "12-28",
     "winner": "sanctoral",
     "winnerKey": "12-28",
@@ -8005,10 +8005,10 @@
     "name": "Ss. Innocentium",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "nat1-0"
   },
   "2025-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "sanctoral",
     "winnerKey": "12-29",
@@ -8016,13 +8016,13 @@
     "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "nat29"
   },
   "2025-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 1.2,
     "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
@@ -8030,7 +8030,7 @@
     "commemoration": null
   },
   "2025-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "sanctoral",
     "winnerKey": "12-31",
@@ -11990,7 +11990,7 @@
     "commemoration": null
   },
   "2026-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat26",
     "sanctoral": "12-26",
     "winner": "sanctoral",
     "winnerKey": "12-26",
@@ -11998,10 +11998,10 @@
     "name": "S. Stephani Protomartyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat01"
+    "commemoration": "nat26"
   },
   "2026-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat1-0",
     "sanctoral": "12-27",
     "winner": "sanctoral",
     "winnerKey": "12-27",
@@ -12009,10 +12009,10 @@
     "name": "S. Joannis Apostoli et Evangelistæ",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "nat1-0"
   },
   "2026-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat28",
     "sanctoral": "12-28",
     "winner": "sanctoral",
     "winnerKey": "12-28",
@@ -12020,10 +12020,10 @@
     "name": "Ss. Innocentium",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "nat28"
   },
   "2026-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "sanctoral",
     "winnerKey": "12-29",
@@ -12031,13 +12031,13 @@
     "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "nat29"
   },
   "2026-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 1.2,
     "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
@@ -12045,7 +12045,7 @@
     "commemoration": null
   },
   "2026-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "sanctoral",
     "winnerKey": "12-31",
@@ -16005,7 +16005,7 @@
     "commemoration": null
   },
   "2027-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat1-0",
     "sanctoral": "12-26",
     "winner": "sanctoral",
     "winnerKey": "12-26",
@@ -16013,10 +16013,10 @@
     "name": "S. Stephani Protomartyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat01"
+    "commemoration": "nat1-0"
   },
   "2027-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat27",
     "sanctoral": "12-27",
     "winner": "sanctoral",
     "winnerKey": "12-27",
@@ -16024,10 +16024,10 @@
     "name": "S. Joannis Apostoli et Evangelistæ",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "nat27"
   },
   "2027-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat28",
     "sanctoral": "12-28",
     "winner": "sanctoral",
     "winnerKey": "12-28",
@@ -16035,10 +16035,10 @@
     "name": "Ss. Innocentium",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "nat28"
   },
   "2027-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "sanctoral",
     "winnerKey": "12-29",
@@ -16046,13 +16046,13 @@
     "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "nat29"
   },
   "2027-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 1.2,
     "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
@@ -16060,7 +16060,7 @@
     "commemoration": null
   },
   "2027-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "sanctoral",
     "winnerKey": "12-31",
@@ -20031,7 +20031,7 @@
     "commemoration": null
   },
   "2028-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat26",
     "sanctoral": "12-26",
     "winner": "sanctoral",
     "winnerKey": "12-26",
@@ -20039,10 +20039,10 @@
     "name": "S. Stephani Protomartyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat01"
+    "commemoration": "nat26"
   },
   "2028-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat27",
     "sanctoral": "12-27",
     "winner": "sanctoral",
     "winnerKey": "12-27",
@@ -20050,10 +20050,10 @@
     "name": "S. Joannis Apostoli et Evangelistæ",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "nat27"
   },
   "2028-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat28",
     "sanctoral": "12-28",
     "winner": "sanctoral",
     "winnerKey": "12-28",
@@ -20061,10 +20061,10 @@
     "name": "Ss. Innocentium",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "nat28"
   },
   "2028-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "sanctoral",
     "winnerKey": "12-29",
@@ -20072,13 +20072,13 @@
     "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "nat29"
   },
   "2028-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 1.2,
     "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
@@ -24046,7 +24046,7 @@
     "commemoration": null
   },
   "2029-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat26",
     "sanctoral": "12-26",
     "winner": "sanctoral",
     "winnerKey": "12-26",
@@ -24054,10 +24054,10 @@
     "name": "S. Stephani Protomartyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat01"
+    "commemoration": "nat26"
   },
   "2029-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat27",
     "sanctoral": "12-27",
     "winner": "sanctoral",
     "winnerKey": "12-27",
@@ -24065,10 +24065,10 @@
     "name": "S. Joannis Apostoli et Evangelistæ",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "nat27"
   },
   "2029-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat28",
     "sanctoral": "12-28",
     "winner": "sanctoral",
     "winnerKey": "12-28",
@@ -24076,10 +24076,10 @@
     "name": "Ss. Innocentium",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "nat28"
   },
   "2029-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat29",
     "sanctoral": "12-29",
     "winner": "sanctoral",
     "winnerKey": "12-29",
@@ -24087,10 +24087,10 @@
     "name": "S. Thomæ Cantuariensis Episcopi et Martyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat04"
+    "commemoration": "nat29"
   },
   "2029-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat1-0",
     "sanctoral": "12-30",
     "winner": "temporal",
     "winnerKey": "nat1-0",
@@ -24101,7 +24101,7 @@
     "commemoration": null
   },
   "2029-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "sanctoral",
     "winnerKey": "12-31",
@@ -28061,7 +28061,7 @@
     "commemoration": null
   },
   "2030-12-26": {
-    "temporal": "nat01",
+    "temporal": "nat26",
     "sanctoral": "12-26",
     "winner": "sanctoral",
     "winnerKey": "12-26",
@@ -28069,10 +28069,10 @@
     "name": "S. Stephani Protomartyris",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat01"
+    "commemoration": "nat26"
   },
   "2030-12-27": {
-    "temporal": "nat02",
+    "temporal": "nat27",
     "sanctoral": "12-27",
     "winner": "sanctoral",
     "winnerKey": "12-27",
@@ -28080,10 +28080,10 @@
     "name": "S. Joannis Apostoli et Evangelistæ",
     "color": "red",
     "season": "christmas",
-    "commemoration": "nat02"
+    "commemoration": "nat27"
   },
   "2030-12-28": {
-    "temporal": "nat03",
+    "temporal": "nat28",
     "sanctoral": "12-28",
     "winner": "sanctoral",
     "winnerKey": "12-28",
@@ -28091,10 +28091,10 @@
     "name": "Ss. Innocentium",
     "color": "white",
     "season": "christmas",
-    "commemoration": "nat03"
+    "commemoration": "nat28"
   },
   "2030-12-29": {
-    "temporal": "nat04",
+    "temporal": "nat1-0",
     "sanctoral": "12-29",
     "winner": "temporal",
     "winnerKey": "nat1-0",
@@ -28105,10 +28105,10 @@
     "commemoration": "12-29"
   },
   "2030-12-30": {
-    "temporal": "nat05",
+    "temporal": "nat30",
     "sanctoral": "12-30",
     "winner": "temporal",
-    "winnerKey": "nat05",
+    "winnerKey": "nat30",
     "rank": 1.2,
     "name": "Die Sexta infra Octavam Nativitatis",
     "color": "white",
@@ -28116,7 +28116,7 @@
     "commemoration": null
   },
   "2030-12-31": {
-    "temporal": "nat06",
+    "temporal": "nat31",
     "sanctoral": "12-31",
     "winner": "sanctoral",
     "winnerKey": "12-31",
