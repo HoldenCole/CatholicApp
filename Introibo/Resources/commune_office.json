@@ -19,7 +19,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "V. And the Apostles indeed went from the presence of the council, rejoicing that they were accounted worthy to suffer reproach for the name of Jesus.\n$Deo gratias.",
       "lat": "Ibant Apóstoli gaudéntes a conspéctu concílii, quóniam digni hábiti sunt pro nómine Jesu contuméliam pati.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -258,31 +258,31 @@
   },
   "C10": {
     "ant_laudes": {
-      "eng": "",
+      "eng": "O Blessed Mary, * Mother of God, Virgin for ever, temple of the Lord, sanctuary of the Holy Ghost, thou, without any example before thee, didst make thyself well-pleasing in the sight of our Lord Jesus Christ; pray for the people, plead for the clergy, make intercession for all women vowed to God.",
       "lat": "Beáta Dei Génetrix, María, * Virgo perpétua, templum Dómini, sacrárium Spíritus Sancti, sola sine exémplo placuísti Dómino nostro Jesu Christo: ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu.",
       "type": "antiphon",
       "variationKey": "ant_laudes"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "Blessed Mother and inviolate Maiden! * Glorious Queen of the world! Plead for us with the Lord!",
       "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
     },
     "capitulum_laudes": {
-      "eng": "",
+      "eng": "$Deo gratias.",
       "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
       "type": "capitulum",
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. As a plane tree by the water in the streets, I gave a sweet smell like cinnamon. and aromatical balm: I yielded a sweet odour like the best myrrh.\n$Deo gratias.",
       "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
     },
     "capitulum_sexta": {
-      "eng": "",
+      "eng": "v. And so was I established in Sion, and in the holy city likewise I rested, and my power was in Jerusalem. And I took root in an honourable people, and in the portion of my God his inheritance, and my abode is in the full assembly of saints.\n$Deo gratias.",
       "lat": "Et sic in Sion firmáta sum, et in civitáte sanctificáta simíliter requiévi, et in Jerúsalem potéstas mea. Et radicávi in pópulo honorificáto, et in parte Dei mei heréditas illíus, et in plenitúdine sanctórum deténtio mea.\n$Deo gratias.",
       "type": "capitulum",
       "variationKey": "capitulum_sexta"
@@ -300,7 +300,7 @@
       "variationKey": "hymnus_matutinum"
     },
     "hymnus_vespera": {
-      "eng": "",
+      "eng": "v. Ave, star of ocean,\nChild divine who barest,\nMother, ever-Virgin,\nHeaven's portal fairest.\nTaking that sweet Ave\nErst by Gabriel spoken,\nEva's name reversing,\nBe of peace the token.\nBreak the sinners' fetters,\nLight to blind restoring,\nAll our ills dispelling,\nEvery boon imploring.\nShow thyself a mother\nIn thy supplication;\nHe will hear who chose thee\nAt his incarnation.\nMaid all maids excelling,\nPassing meek and lowly,\nWin for sinners pardon,\nMake us chaste and holy.\nAs we onward journey\nAid our weak endeavour,\nTill we gaze on Jesus\nAnd rejoice forever.\nFather, Son, and Spirit,\nThree in One confessing,\nGive we equal glory\nEqual praise and blessing.\nAmen.",
       "lat": "/:Prima stropha sequentis hymni dicitur flexis genibus.:/\nAve maris stella,\nDei Mater alma,\nAtque semper Virgo,\nFelix cæli porta.\nSumens illud Ave\nGabriélis ore,\nFunda nos in pace,\nMutans Hevæ nomen.\nSolve vincla reis,\nProfer lumen cæcis,\nMala nostra pelle,\nBona cuncta posce.\nMonstra te esse matrem,\nSumat per te preces,\nQui pro nobis natus,\nTulit esse tuus.\nVirgo singuláris,\nInter omnes mitis,\nNos culpis solútos\nMites fac et castos.\nVitam præsta puram,\nIter para tutum,\nUt vidéntes Jesum,\nSemper collætémur.\nSit laus Deo Patri,\nSummo Christo decus,\nSpirítui Sancto,\nTribus honor unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_vespera"
@@ -312,13 +312,13 @@
       "variationKey": "invit"
     },
     "lectio_prima": {
-      "eng": "",
+      "eng": "v. As a plane tree by the water in the streets, I gave a sweet smell like cinnamon. and aromatical balm: I yielded a sweet odour like the best myrrh.",
       "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.",
       "type": "reading",
       "variationKey": "lectio_prima"
     },
     "responsory_breve_nona": {
-      "eng": "",
+      "eng": "R.br. God hath chosen her, * and fore-chosen her.\nV. God hath chosen her, and fore-chosen her.\nR. He hath made her to dwell in His tabernacle.\nR. And fore-chosen her.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nV. God hath chosen her, and fore-chosen her.",
       "lat": "R.br. Elégit eam Deus, * Et præelégit eam.\nR. Elégit eam Deus, * Et præelégit eam.\nV. In tabernáculo suo habitáre facit eam.\nR. Et præelégit eam.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Elégit eam Deus, * Et præelégit eam.",
       "type": "responsory",
       "variationKey": "responsory_breve_nona"
@@ -330,13 +330,13 @@
       "variationKey": "responsory_breve_sexta"
     },
     "responsory_breve_tertia": {
-      "eng": "",
+      "eng": "R.br. In thy comeliness * and in thy beauty.\nV. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.\nR. In thy beauty.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nV. In thy comeliness and thy beauty.",
       "lat": "R.br. Spécie tua * Et pulchritúdine tua.\nR. Spécie tua * Et pulchritúdine tua.\nV. Inténde, próspere procéde, et regna.\nR. Et pulchritúdine tua.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Spécie tua * Et pulchritúdine tua.",
       "type": "responsory",
       "variationKey": "responsory_breve_tertia"
     },
     "tertia.capitulum": {
-      "eng": "",
+      "eng": "$Deo gratias.",
       "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
       "type": "capitulum",
       "variationKey": "tertia.capitulum"
@@ -348,13 +348,13 @@
       "variationKey": "versum_1"
     },
     "versum_2": {
-      "eng": "",
+      "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
       "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
       "type": "vr",
       "variationKey": "versum_2"
     },
     "vesperae.capitulum": {
-      "eng": "",
+      "eng": "$Deo gratias.",
       "lat": "Ab inítio et ante sǽcula creáta sum, et usque ad futúrum sǽculum non désinam, et in habitatióne sancta coram ipso ministrávi.\n$Deo gratias.",
       "type": "capitulum",
       "variationKey": "vesperae.capitulum"
@@ -380,7 +380,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. As a plane tree by the water in the streets, I gave a sweet smell like cinnamon. and aromatical balm: I yielded a sweet odour like the best myrrh.\n$Deo gratias.",
       "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -452,7 +452,7 @@
       "variationKey": "lectio_prima"
     },
     "responsory_breve_nona": {
-      "eng": "",
+      "eng": "R.br. God hath chosen her, * and fore-chosen her.\nV. God hath chosen her, and fore-chosen her.\nR. He hath made her to dwell in His tabernacle.\nR. And fore-chosen her.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nV. God hath chosen her, and fore-chosen her.",
       "lat": "R.br. Elégit eam Deus, * Et præelégit eam.\nR. Elégit eam Deus, * Et præelégit eam.\nV. In tabernáculo suo habitáre facit eam.\nR. Et præelégit eam.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Elégit eam Deus, * Et præelégit eam.",
       "type": "responsory",
       "variationKey": "responsory_breve_nona"
@@ -464,7 +464,7 @@
       "variationKey": "responsory_breve_sexta"
     },
     "responsory_breve_tertia": {
-      "eng": "",
+      "eng": "R.br. In thy comeliness * and in thy beauty.\nV. In thy comeliness and thy beauty.\nR. Go forward, fare prosperously, and reign.\nR. In thy beauty.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nV. In thy comeliness and thy beauty.",
       "lat": "R.br. Spécie tua * Et pulchritúdine tua.\nR. Spécie tua * Et pulchritúdine tua.\nV. Inténde, próspere procéde, et regna.\nR. Et pulchritúdine tua.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Spécie tua * Et pulchritúdine tua.",
       "type": "responsory",
       "variationKey": "responsory_breve_tertia"
@@ -476,7 +476,7 @@
       "variationKey": "tertia.capitulum"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. Grace is poured into thy lips.\nR. Therefore God hath blessed thee for ever.",
       "lat": "V. Diffúsa est grátia in lábiis tuis.\nR. Proptérea benedíxit te Deus in ætérnum.",
       "type": "vr",
       "variationKey": "versum_1"
@@ -526,13 +526,13 @@
   },
   "C12": {
     "ant_laudes": {
-      "eng": "",
+      "eng": "O Blessed Mary, * Mother of God, Virgin for ever, temple of the Lord, sanctuary of the Holy Ghost, thou, without any example before thee, didst make thyself well-pleasing in the sight of our Lord Jesus Christ; pray for the people, plead for the clergy, make intercession for all women vowed to God.",
       "lat": "Beáta Dei Génetrix, María, * Virgo perpétua, templum Dómini, sacrárium Spíritus Sancti, sola sine exémplo placuísti Dómino nostro Jesu Christo: ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu.",
       "type": "antiphon",
       "variationKey": "ant_laudes"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "Blessed Mother and inviolate Maiden! * Glorious Queen of the world! Plead for us with the Lord!",
       "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
@@ -544,19 +544,19 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. As a plane tree by the water in the streets, I gave a sweet smell like cinnamon. and aromatical balm: I yielded a sweet odour like the best myrrh.\n$Deo gratias.",
       "lat": "In platéis sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta, dedi suavitátem odóris.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
     },
     "capitulum_sexta": {
-      "eng": "",
+      "eng": "$Deo gratias.",
       "lat": "$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_sexta"
     },
     "invit": {
-      "eng": "",
+      "eng": "V. Hail, Mary, full of grace, the Lord is with thee.",
       "lat": "Ave María, grátia plena, * Dóminus tecum.",
       "type": "antiphon",
       "variationKey": "invit"
@@ -598,7 +598,7 @@
       "variationKey": "tertia.capitulum"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. Blessed art thou amongst women,\nR. And blessed is the fruit of thy womb.",
       "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
       "type": "vr",
       "variationKey": "versum_1"
@@ -636,7 +636,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "V. And the Apostles indeed went from the presence of the council, rejoicing that they were accounted worthy to suffer reproach for the name of Jesus.\n$Deo gratias.",
       "lat": "Ibant Apóstoli gaudéntes a conspéctu concílii, quóniam digni hábiti sunt pro nómine Jesu contuméliam pati.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -893,7 +893,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.\n$Deo gratias.",
       "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -1150,7 +1150,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.\n$Deo gratias.",
       "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -1314,7 +1314,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.\n$Deo gratias.",
       "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -1571,7 +1571,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.\n$Deo gratias.",
       "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -1735,7 +1735,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.\n$Deo gratias.",
       "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -1992,7 +1992,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High.\n$Deo gratias.",
       "lat": "Justus cor suum trádidit ad vigilándum dilúculo ad Dóminum, qui fecit illum, et in conspéctu Altíssimi deprecábitur.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -2186,7 +2186,7 @@
       "variationKey": "hymnus_vespera"
     },
     "invit": {
-      "eng": "",
+      "eng": "The Lord, the King of Martyrs, * O come, let us worship.",
       "lat": "Regem Mártyrum Dóminum, * Veníte, adorémus.",
       "type": "antiphon",
       "variationKey": "invit"
@@ -2443,7 +2443,7 @@
       "variationKey": "hymnus_vespera"
     },
     "invit": {
-      "eng": "",
+      "eng": "The Lord, the King of Martyrs, * O come, let us worship.",
       "lat": "Regem Mártyrum Dóminum, * Veníte, adorémus.",
       "type": "antiphon",
       "variationKey": "invit"
@@ -2700,7 +2700,7 @@
       "variationKey": "hymnus_vespera"
     },
     "invit": {
-      "eng": "",
+      "eng": "The Lord, the King of Martyrs, * O come, let us worship.",
       "lat": "Regem Mártyrum Dóminum, * Veníte, adorémus.",
       "type": "antiphon",
       "variationKey": "invit"
@@ -2957,7 +2957,7 @@
       "variationKey": "hymnus_vespera"
     },
     "invit": {
-      "eng": "",
+      "eng": "The Lord, the King of Martyrs, * O come, let us worship.",
       "lat": "Regem Mártyrum Dóminum, * Veníte, adorémus.",
       "type": "antiphon",
       "variationKey": "invit"
@@ -3184,7 +3184,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.\n$Deo gratias.",
       "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -3441,7 +3441,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.\n$Deo gratias.",
       "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -3605,7 +3605,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.\n$Deo gratias.",
       "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -3769,7 +3769,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.\n$Deo gratias.",
       "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -3933,7 +3933,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. To execute the office of the priesthood, and to have praise, and to glorify his people in his name. He chose him out of all men living, to offer sacrifice to God, incense, and a good savour.\n$Deo gratias.",
       "lat": "Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -4097,7 +4097,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.\n$Deo gratias.",
       "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -4354,7 +4354,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.\n$Deo gratias.",
       "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -4506,7 +4506,7 @@
       "variationKey": "ant_laudes"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "O right excellent Teacher * Light of the Holy Church, N., blessed lover of the Divine Law, pray for us to the Son of God.",
       "lat": "O Doctor óptime, * Ecclésiæ sanctæ lumen, beáte N., divínæ legis amátor, deprecáre pro nobis Fílium Dei.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
@@ -4518,7 +4518,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.\n$Deo gratias.",
       "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -4775,7 +4775,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. She conducted the just, when he fled from his brother's wrath, through the right ways, and showed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.\n$Deo gratias.",
       "lat": "Justum dedúxit Dóminus per vias rectas, et osténdit illi regnum Dei, et dedit illi sciéntiam sanctórum: honestávit illum in labóribus, et complévit labóres illíus.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -5032,7 +5032,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. O Lord, my God thou hast exalted my dwelling place upon the earth and I have prayed for death to pass away. I called upon the Lord, the father of my Lord, that he would not leave me in the day of my trouble, and in the time of the proud without help.\n$Deo gratias.",
       "lat": "Dómine, Deus meus, exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum. Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum sine adjutório.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -5289,7 +5289,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. O Lord, my God thou hast exalted my dwelling place upon the earth and I have prayed for death to pass away. I called upon the Lord, the father of my Lord, that he would not leave me in the day of my trouble, and in the time of the proud without help.\n$Deo gratias.",
       "lat": "Dómine, Deus meus, exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum. Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum sine adjutório.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -5453,7 +5453,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. O how beautiful is the chaste generation with glory: for the memory thereof is immortal: because it is known both with God and with men.\n$Deo gratias.",
       "lat": "O quam pulchra est casta generátio cum claritáte! Immortális est enim memória illíus, quóniam apud Deum nota est, et apud hómines.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -5617,7 +5617,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. O how beautiful is the chaste generation with glory: for the memory thereof is immortal: because it is known both with God and with men.\n$Deo gratias.",
       "lat": "O quam pulchra est casta generátio cum claritáte! Immortális est enim memória illíus, quóniam apud Deum nota est, et apud hómines.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -5763,7 +5763,7 @@
   },
   "C6b": {
     "ant_laudes": {
-      "eng": "",
+      "eng": "Trim your lamps, O ye wise virgins: * Behold the Bridegroom cometh; go ye out to meet Him. ",
       "lat": "Prudéntes vírgines, * aptáte vestras lámpades: ecce sponsus venit, exíte óbviam ei.",
       "type": "antiphon",
       "variationKey": "ant_laudes"
@@ -5781,7 +5781,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. O Lord, my God thou hast exalted my dwelling place upon the earth and I have prayed for death to pass away. I called upon the Lord, the father of my Lord, that he would not leave me in the day of my trouble, and in the time of the proud without help.\n$Deo gratias.",
       "lat": "Dómine, Deus meus, exaltásti super terram habitatiónem meam, et pro morte defluénte deprecáta sum. Invocávi Dóminum, Patrem Dómini mei, ut non derelínquat me in die tribulatiónis meæ, et in témpore superbórum sine adjutório.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -5877,7 +5877,7 @@
       "variationKey": "tertia.capitulum"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. After her shall virgins be brought unto the King. \nR. Her fellows shall be brought unto thee. ",
       "lat": "V. Adducéntur Regi Vírgines post eam.\nR. Próximæ ejus afferéntur tibi.",
       "type": "vr",
       "variationKey": "versum_1"
@@ -5933,7 +5933,7 @@
       "variationKey": "ant_laudes"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "The kingdom of heaven is like unto a merchantman * seeking goodly pearls, who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
       "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
@@ -5945,7 +5945,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. My soul shall praise the Lord even to death. How thou deliverest them that wait for thee, O Lord, and savest them out of the hands of the nations!\n$Deo gratias.",
       "lat": "Laudábit usque ad mortem ánima mea Dóminum, quóniam éruis sustinéntes te, et líberas eos de manu angústiæ, Dómine, Deus noster.\n$Deo gratias.",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -6190,7 +6190,7 @@
       "variationKey": "ant_laudes"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "The kingdom of heaven is like unto a merchantman * seeking goodly pearls, who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
       "lat": "Símile est regnum cælórum * hómini negotiatóri quærénti bonas margarítas: invénta una pretiósa, dedit ómnia sua, et comparávit eam.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
@@ -6202,7 +6202,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. Many daughters have gathered together riches: thou hast surpassed them all. Favour is deceitful, and beauty is vain: the woman that feareth the Lord, she shall be praised.\n$Deo gratias.",
       "lat": "Multæ fíliæ congregavérunt divítias: tu supergréssa es univérsas. Fallax grátia, et vana est pulchritúdo: múlier timens Dóminum, ipsa laudábitur.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -6441,7 +6441,7 @@
   },
   "C7b": {
     "ant_laudes": {
-      "eng": "",
+      "eng": "For theirs is * the Kingdom of heaven who love not their lives in this world, and have attained unto the reward of the Kingdom, and have washed their robes in the blood of the Lamb.",
       "lat": "Istárum est enim * regnum cælórum, quæ contempsérunt vitam mundi, et pervenérunt ad prǽmia regni, et lavérunt stolas suas in sánguine Agni.",
       "type": "antiphon",
       "variationKey": "ant_laudes"
@@ -6459,7 +6459,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. My soul shall praise the Lord even to death. How thou deliverest them that wait for thee, O Lord, and savest them out of the hands of the nations!\n$Deo gratias.",
       "lat": "Laudábit usque ad mortem ánima mea Dóminum, quóniam éruis sustinéntes te, et líberas eos de manu angústiæ, Dómine, Deus noster.\n$Deo gratias.",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -6555,7 +6555,7 @@
       "variationKey": "tertia.capitulum"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. Thou hast crowned them with glory and honour, O Lord.\nR. And madest them to have dominion over the works of thy hands.",
       "lat": "V. Glória et honóre coronásti eas, Dómine.\nR. Et constituísti eas super ópera mánuum tuárum.",
       "type": "vr",
       "variationKey": "versum_1"
@@ -6716,7 +6716,7 @@
       "variationKey": "capitulum_laudes"
     },
     "capitulum_nona": {
-      "eng": "",
+      "eng": "v. And God shall wipe away all tears from their eyes, and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain; for the former things are passed away. And He That sat upon the throne said: Behold, I make all things new.\n$Deo gratias.",
       "lat": "Et abstérget Deus omnem lácrimam ab óculis eórum: et mors ultra non erit, neque luctus, neque clamor, neque dolor erit ultra, quia prima abiérunt. Et dixit qui sedébat in throno: Ecce nova fácio ómnia.\n$Deo gratias",
       "type": "capitulum",
       "variationKey": "capitulum_nona"
@@ -6812,7 +6812,7 @@
       "variationKey": "tertia.capitulum"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. This is the house of God, stoutly builded.\nR. Well founded upon a sure rock.",
       "lat": "V. Hæc est domus Dómini fírmiter ædificáta. \nR. Bene fundáta est supra firmam petram.",
       "type": "vr",
       "variationKey": "versum_1"
@@ -7003,7 +7003,7 @@
       "variationKey": "laudes.antiphon.psalm5"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. I heard a voice from heaven, saying unto me:\nR. Blessed are the dead which die in the Lord.",
       "lat": "V. Audívi vocem de cælo dicéntem mihi.\nR. Beáti mórtui qui in Dómino moriúntur.",
       "type": "vr",
       "variationKey": "versum_1"
@@ -7088,19 +7088,19 @@
       "variationKey": "capitulum_laudes"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. Blessed art thou amongst women,\nR. And blessed is the fruit of thy womb.",
       "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
       "type": "vr",
       "variationKey": "versum_1"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "Blessed Mother and inviolate Maiden! * Glorious Queen of the world! Plead for us with the Lord!",
       "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
     },
     "invit": {
-      "eng": "",
+      "eng": "V. Hail, Mary, full of grace, the Lord is with thee.",
       "lat": "Ave María, grátia plena, * Dóminus tecum.",
       "type": "antiphon",
       "variationKey": "invit"
@@ -7112,7 +7112,7 @@
       "variationKey": "hymnus_laudes"
     },
     "ant_laudes": {
-      "eng": "",
+      "eng": "O Blessed Mary, * Mother of God, Virgin for ever, temple of the Lord, sanctuary of the Holy Ghost, thou, without any example before thee, didst make thyself well-pleasing in the sight of our Lord Jesus Christ; pray for the people, plead for the clergy, make intercession for all women vowed to God.",
       "lat": "Beáta Dei Génetrix, María, * Virgo perpétua, templum Dómini, sacrárium Spíritus Sancti, sola sine exémplo placuísti Dómino nostro Jesu Christo: ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu.",
       "type": "antiphon",
       "variationKey": "ant_laudes"
@@ -7167,19 +7167,19 @@
       "variationKey": "capitulum_laudes"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. Blessed art thou amongst women,\nR. And blessed is the fruit of thy womb.",
       "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
       "type": "vr",
       "variationKey": "versum_1"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "Blessed Mother and inviolate Maiden! * Glorious Queen of the world! Plead for us with the Lord!",
       "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
     },
     "invit": {
-      "eng": "",
+      "eng": "V. Hail, Mary, full of grace, the Lord is with thee.",
       "lat": "Ave María, grátia plena, * Dóminus tecum.",
       "type": "antiphon",
       "variationKey": "invit"
@@ -7236,19 +7236,19 @@
       "variationKey": "capitulum_laudes"
     },
     "versum_1": {
-      "eng": "",
+      "eng": "V. Blessed art thou amongst women,\nR. And blessed is the fruit of thy womb.",
       "lat": "V. Benedícta tu in muliéribus.\nR. Et benedíctus fructus ventris tui.",
       "type": "vr",
       "variationKey": "versum_1"
     },
     "ant_vespera": {
-      "eng": "",
+      "eng": "Blessed Mother and inviolate Maiden! * Glorious Queen of the world! Plead for us with the Lord!",
       "lat": "Beáta Mater * et intácta Virgo, gloriósa Regína mundi, intercéde pro nobis ad Dóminum.",
       "type": "antiphon",
       "variationKey": "ant_vespera"
     },
     "invit": {
-      "eng": "",
+      "eng": "V. Hail, Mary, full of grace, the Lord is with thee.",
       "lat": "Ave María, grátia plena, * Dóminus tecum.",
       "type": "antiphon",
       "variationKey": "invit"
