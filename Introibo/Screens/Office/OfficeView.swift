@@ -69,6 +69,38 @@ struct OfficeView: View {
                     .font(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
+
+                // Office of the Dead — a self-contained votive office, not one
+                // of the eight horæ, so it sits below the dial rather than on
+                // it. Opened from the raw template (no temporal/sanctoral
+                // overlay), reusing the same HourView sheet as the dial hours.
+                if let dead = store.hours.first(where: { $0.slug == "office-of-the-dead" }) {
+                    Button { selectedHour = dead } label: {
+                        VStack(spacing: 4) {
+                            Text("✠")
+                                .font(.titleM)
+                                .foregroundStyle(Color.sanctuaryRed)
+                            Text("Officium Defunctórum")
+                                .font(.titleM)
+                                .italic()
+                                .foregroundStyle(Color.primaryText)
+                            Text("Office of the Dead")
+                                .font(.captionSm)
+                                .italic()
+                                .foregroundStyle(Color.secondaryText)
+                                .textCase(.uppercase)
+                                .tracking(2)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 18)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.goldLeaf.opacity(0.45), lineWidth: 0.5)
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.top, 44)
+                }
             }
             .padding(.horizontal, 28)
             .padding(.top, 18)
