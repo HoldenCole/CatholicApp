@@ -10,9 +10,9 @@ No accounts. No tracking. No ads. Works completely offline. All data stored loca
 
 ## Overview
 
-Introibo puts the complete 1962 Missale Romanum in your pocket with daily Propers automatically interleaved with the Ordinary in correct liturgical order, so you can follow along at Mass from the Prayers at the Foot of the Altar through the Last Gospel. Beyond the Missal, it is a full daily companion with the Divine Office, an interactive bead-by-bead Rosary, Stations of the Cross, 38 traditional prayers with a customisable personal prayer rule, patron saint tracking with daily practice checklists, a Latin school, and a reference library with searchable propers, TLM history timeline, and liturgical glossary, all in side-by-side Latin and English.
+Introibo puts the complete 1962 Missale Romanum in your pocket with daily Propers automatically interleaved with the Ordinary in correct liturgical order, so you can follow along at Mass from the Prayers at the Foot of the Altar through the Last Gospel. Beyond the Missal, it is a full daily companion with the Divine Office, an interactive bead-by-bead Rosary, Stations of the Cross, 67 traditional prayers with a customizable personal prayer rule, patron saint tracking with daily practice checklists, a Latin school, and a reference library with searchable propers, TLM history timeline, and liturgical glossary, all in side-by-side Latin and English.
 
-Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, and diocesan TLM parishes.
+Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, and diocesan TLM parishes. Available for **iOS** (SwiftUI) and **Android** (Kotlin / Jetpack Compose) from a shared, byte-identical set of bundled JSON content.
 
 ---
 
@@ -20,12 +20,12 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Missal
 
-- **422 daily Propers** (Introit, Collect, Epistle, Gradual, Gospel, Offertory, Secret, Communion, Postcommunion) imported from the [DivinumOfficium](https://github.com/DivinumOfficium/divinum-officium) open-source database
-- **Calendar engine** resolving the correct proper for any date via Temporale (Easter-relative moveable feasts covering every Sunday and major weekday) and Sanctorale (285 saints feast days including Christmas, Epiphany, Assumption, Immaculate Conception)
+- **574 daily Propers** — complete Mass formularies (Introit, Collect, Epistle, Gradual, Gospel, Offertory, Secret, Communion, Postcommunion) drawn from 985 temporal and sanctoral proper entries, imported from the [DivinumOfficium](https://github.com/DivinumOfficium/divinum-officium) open-source database
+- **Calendar engine** resolving the correct proper for any date from an authoritative pre-computed ordo covering every day from 2024 through 2050 (verified day-by-day for feasts, transfers, octaves, and privileged ferias), backed by Temporale (Easter-relative moveable feasts) and Sanctorale (fixed-date feast table)
 - **Interleaved Mass view** weaving Ordinary and Propers together automatically in correct liturgical order: Preces, Introit, Kyrie, Gloria, Collect, Epistle, Gradual, Gospel, Credo, Offertory, Secret, Sanctus, Canon, Communion, Postcommunion, Last Gospel
 - Proper sections visually distinguished with a red left border
 - Toolbar displays today's feast name
-- Complete Ordinary of the 1962 Missale Romanum (13 sections)
+- Complete Ordinary of the 1962 Missale Romanum (46 sections, including 15 proper Prefaces, requiem/Paschal variants, and the Leonine Prayers)
 - Side-by-side Latin and English via BilingualLine component
 - Support for 1962, 1955, and pre-1955 Missal rubrics
 
@@ -45,13 +45,13 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Prayers
 
-- **38 traditional prayers** in Latin and English with decorative drop cap on the first line
-- **Personal Prayer Rule**: customisable morning, midday, and evening prayer schedule with daily checklist and progress ring
-- **11 occasion categories**: Morning, Before Mass, After Mass, Meals, Marian, Eucharistic, Before Confession, For the Departed, In Temptation, For Protection, Evening
+- **67 traditional prayers** in Latin and English with decorative drop cap on the first line
+- **Personal Prayer Rule**: customizable morning, midday, and evening prayer schedule with daily checklist and progress ring
+- **12 occasion categories**: Morning, Before Mass, During Mass, After Mass, Meals, Marian, Eucharistic, Before Confession, For the Departed, In Temptation, For Protection, Evening
 - **Sort toggle**: Custom order or alphabetical (A-Z)
 - **Time-aware featured prayer**: Morning Offering (before noon), Salve Regina (noon to 6pm), Suscipe (after 6pm)
 - All prayers respect the language mode setting (Latin only, English only, or both side-by-side)
-- Prayers include: Sign of the Cross, Our Father, Hail Mary, Glory Be, Fatima Prayer, Salve Regina, Apostles' Creed, Confiteor, Kyrie, Gloria in Excelsis, Sanctus, Agnus Dei, Domine Non Sum Dignus, Morning Offering, Memorare, Act of Contrition, Anima Christi, Prayer Before a Crucifix, Tantum Ergo, St. Michael Prayer, Adoro Te Devote, Suscipe, Grace Before Meals, Grace After Meals, Miserere, Requiem Aeternam, Veni Creator Spiritus, Psalm 102 Thanksgiving, and more
+- Prayers include: Sign of the Cross, Our Father, Hail Mary, Glory Be, Fatima Prayer, Salve Regina, Regina Caeli, Apostles' Creed, Confiteor, Gloria in Excelsis, Sanctus, Agnus Dei, Domine Non Sum Dignus, Morning Offering, Memorare, Act of Contrition, Anima Christi, Prayer Before a Crucifix, Tantum Ergo, St. Michael Prayer, Adoro Te Devote, Suscipe, Grace Before/After Meals, Miserere, Requiem Aeternam, Veni Creator Spiritus, Veni Sancte Spiritus, the Divine Praises, the Litany of Loreto, O Sacrum Convivium, and more
 
 ### Rosary
 
@@ -77,8 +77,11 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 ### Divine Office
 
 - **All 8 canonical hours** of the 1962 Roman Breviary: Matutinum, Laudes, Prima, Tertia, Sexta, Nona, Vesperae, Completorium
+- **Office of the Dead** (Officium Defunctorum) as a self-contained votive office, accessible below the clock dial
+- **Saturday Office of the Blessed Virgin Mary** with its proper seasonal forms
 - **Canonical clock dial** with hours positioned at their traditional times; current hour glows
-- Side-by-side Latin and English rendering for all part types: versicles and responses, hymns, antiphons, psalms with individual verses, capitula, canticles, collects, responsories, confiteor, and Marian antiphons (Alma Redemptoris, Ave Regina, Regina Caeli, Salve Regina by season)
+- English translations now cover the great majority of the Office (antiphons, lessons, responsories, hymns, collects), with side-by-side Latin and English for all part types: versicles and responses, psalms with individual verses, capitula, canticles, and Marian antiphons (Alma Redemptoris, Ave Regina, Regina Caeli, Salve Regina by season)
+- Weekly psalter distributing the correct psalms and Old Testament canticles per day, with seasonal hymns and proper doxologies
 - Intro block with red left accent stripe
 - Dark walnut header with hour name, English translation, and traditional time
 
@@ -93,8 +96,8 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 - **10 progressive lessons** from vowels and pronunciation through reading the Vulgate
 - **Progress ring header** with mastery count and lesson dot indicators
-- **Daily Latin word** (Verbum Hodie) rotating from flashcard pool
-- **Interactive flip-card flashcards** showing Latin front, tap to reveal English translation and phonetic pronunciation
+- **Daily Latin word** (Verbum Hodie) rotating from the flashcard pool
+- **97 interactive flip-card flashcards** showing Latin front, tap to reveal English translation and phonetic pronunciation
 - **Multiple-choice quizzes** (5 questions each) testing both Latin-to-English and English-to-Latin, with randomized choices, score tracking, and try-again option
 - Visual lesson rows with Roman numeral circles, card counts, and mastery badges
 - Mastery tracking per lesson with checkmark seal indicator
@@ -104,7 +107,7 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 - **Knowledge hub** with four sections: References, Propers, History, and Glossary
 - **41 reference articles across 7 categories** covering Catholic doctrine, sacraments, devotional practice, and tradition
-- **Propers search**: full-text search across 422 Mass proper formularies by saint name, date, or scripture reference
+- **Propers search**: full-text search across the Mass proper formularies by saint name, date, or scripture reference
 - **TLM History timeline**: 20 key events from the Last Supper (33 AD) through present day
 - **Liturgical Glossary**: 25 essential terms with Latin, English, and definitions
 - Quick reference links to key articles (Holy Mass, Baptism, Eucharist, Penance, Rosary)
@@ -137,18 +140,33 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Architecture
 
-- **SwiftUI** with `@Observable`, `@AppStorage`, `@State`, `@Environment` patterns
-- **iOS 17.0+** deployment target
-- **XcodeGen** (`project.yml`) for Xcode project generation
-- Bundle ID: `app.introibo.Introibo`
+Two native apps share one set of bundled JSON content (kept byte-identical
+between platforms):
+
+- **iOS** — SwiftUI with `@Observable`, `@AppStorage`, `@State`, `@Environment`
+  patterns; **iOS 17.0+** deployment target; **XcodeGen** (`project.yml`) for
+  Xcode project generation; bundle ID `app.introibo.Introibo`
+- **Android** — Kotlin with **Jetpack Compose** (Material 3, Navigation
+  Compose), kotlinx.serialization, DataStore for preferences, WorkManager for
+  notifications; **minSdk 26 / targetSdk 35**; application ID
+  `com.lampstandhq.introibo`
 
 ### Data Layer
 
-- **ContentStore** singleton (`@Observable`) loading 14 bundled JSON files on first access: prayers, reference, saints, courses, missal, mysteries, rosary_prayers, stations, hours, marian_antiphons, examen, confession_guides, propers, communes
+- **ContentStore** singleton (`@Observable`) loading 28 bundled JSON files on
+  first access, including: prayers, reference, saints, courses, missal,
+  mysteries, rosary_prayers, stations, hours, marian_antiphons,
+  confession_examen, confession_guides, the Mass propers
+  (`missal_tempora` / `missal_sanctoral`), the Office propers
+  (`temporal_propers` / `sanctoral_propers`), the commune and inheritance
+  tables (`commune_office`, `saint_commune`, `saint_office_inherit`), the
+  pre-computed calendar (`ordo`, `ordo_names_en`), the weekly psalter
+  (`psalter`, `psalter_weekly`), seasonal hymns, and canon variants
 - **LiturgicalContext** engine computing full liturgical date info for any date: season, colour, feria, Marian antiphon, Rosary mystery, penance obligations, proper slug
 - **Computus** algorithm (Anonymous Gregorian) for Easter date calculation
-- **ProperCalendar** resolving any date to a proper slug via Temporale (Easter-relative offsets) and Sanctorale (fixed-date feast table)
-- **UserProgress** facade over UserDefaults for saints streaks, rosary history, lesson mastery, all local with no sync
+- **ProperCalendar** resolving any date to a proper slug via the pre-computed ordo, backed by Temporale (Easter-relative offsets) and Sanctorale (fixed-date feast table)
+- **UserProgress** facade over UserDefaults (iOS) / DataStore (Android) for saints streaks, rosary history, lesson mastery, all local with no sync
+- Parity between platforms is guarded by a golden-fixture test on the Android side and shared JSON golden files (`*_golden.json`)
 
 ### Design System
 
@@ -168,7 +186,9 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Content Sources
 
-- Missal Propers imported from [DivinumOfficium](https://github.com/DivinumOfficium/divinum-officium) via `scripts/import_propers.py`
+- Mass Propers imported from [DivinumOfficium](https://github.com/DivinumOfficium/divinum-officium) via `scripts/import_propers.py` (and the commune helpers `import_commune.py` / `import_mass_commune.py` / `build_communes.py`)
+- Divine Office texts imported and assembled via `scripts/import_do.py` and the `gen_ordo_*.py` pipeline, then QA'd against DivinumOfficium with `scripts/qa_ordo_vs_divinumofficium.py` and `scripts/qa_office_month.py`
+- The 2024–2050 calendar is generated by the `gen_ordo_*` / `fix_ordo_1962_calendar.py` scripts and English-titled via `translate_ordo_names.py`
 - All other liturgical content authored from the 1962 Missale Romanum, Roman Breviary, and traditional prayer books
 - All texts are public domain (pre-copyright liturgical sources)
 
@@ -176,12 +196,10 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ## Building
 
-### Prerequisites
+### iOS
 
-- macOS with **Xcode 15+** (Xcode 26 recommended)
-- **XcodeGen**: `brew install xcodegen`
-
-### Build
+Prerequisites: macOS with **Xcode 15+** (Xcode 26 recommended) and **XcodeGen**
+(`brew install xcodegen`).
 
 ```sh
 xcodegen generate
@@ -189,6 +207,17 @@ open Introibo.xcodeproj
 ```
 
 Build target: iOS 17.0+. No code signing required for local simulator builds.
+
+### Android
+
+Prerequisites: **JDK 17** and the Android SDK (API 35). From the `android/`
+directory:
+
+```sh
+cd android
+./gradlew assembleDebug      # build the debug APK
+./gradlew test               # run the JVM golden-fixture parity tests
+```
 
 ### CI Deployment
 
@@ -209,7 +238,7 @@ Introibo/
   IntroiboApp.swift              App entry point, onboarding gate, splash screen
   ContentView.swift              5-tab TabView with theme-aware tab bar
   Data/                          Models and ContentStore
-    ContentStore.swift            Singleton loading 13 JSON bundles
+    ContentStore.swift            Singleton loading 28 JSON bundles
     MassProper.swift              Proper formulary model
     MissalSection.swift           Ordinary section model
     Prayer.swift                  Prayer model and String.strippingEm
@@ -226,14 +255,22 @@ Introibo/
     LiturgicalContext.swift       Season, colour, feria, penance, mystery
     Computus.swift                Easter date algorithm
     ProperCalendar.swift          Date to proper slug resolver
-  Resources/                     Bundled JSON content
-    propers.json                  422 Mass proper formularies
-    missal.json                   13 Ordinary sections
-    prayers.json                  38 traditional prayers
-    hours.json                    8 canonical hours
+  Resources/                     Bundled JSON content (28 loaded + golden fixtures)
+    missal_tempora.json           Temporal Mass propers (498 entries)
+    missal_sanctoral.json         Sanctoral Mass propers (487 entries)
+    temporal_propers.json         Temporal Office propers
+    sanctoral_propers.json        Sanctoral Office propers
+    ordo.json                     Pre-computed 1962 calendar, 2024–2050
+    ordo_names_en.json            English feast names for the ordo
+    missal.json                   46 Ordinary sections (incl. 15 prefaces)
+    prayers.json                  67 traditional prayers
+    hours.json                    8 canonical hours + Office of the Dead
+    psalter.json, psalter_weekly.json, hymns_seasonal.json, canon_variants.json
+    commune_office.json, saint_commune.json, saint_office_inherit.json
     mysteries.json, rosary_prayers.json, stations.json, saints.json,
     courses.json, reference.json, marian_antiphons.json,
     confession_examen.json, confession_guides.json
+    *_golden.json                 Parity golden fixtures (link/search)
   Screens/                       All UI views
     SplashView.swift              Launch screen
     OnboardingView.swift          3-page first-run flow
@@ -253,8 +290,22 @@ Introibo/
     UserProgress.swift            Saints streaks, rosary history, lesson mastery
   Assets.xcassets/               App icons (18 sizes)
 
-scripts/
-  import_propers.py              DivinumOfficium to propers.json converter
+android/                         Android app (Kotlin / Jetpack Compose)
+  app/src/main/                   Sources, bundled JSON assets, launcher icons
+  app/src/test/                   JVM golden-fixture parity tests
+  app/build.gradle.kts            Module build config (versionName, deps)
+
+prototype/                       HTML/JS reference prototype the apps port from
+docs/
+  marketing-screenshots.md       How the App Store screenshots are designed
+  index.html                     Marketing landing page
+
+scripts/                         Content import, calendar generation, QA, tooling
+  import_propers.py               DivinumOfficium → Mass propers
+  import_do.py                    DivinumOfficium → Divine Office
+  gen_ordo_*.py / fix_ordo_*.py   1962 calendar (ordo) generation
+  qa_ordo_vs_divinumofficium.py   Calendar QA against DivinumOfficium
+  make_marketing.py               App Store screenshot generator
 
 project.yml                      XcodeGen specification
 fastlane/Fastfile                TestFlight deployment lane
