@@ -1,14 +1,32 @@
 # Google Play Screenshots — Capture & Generate
 
-This is the Android counterpart to `docs/marketing-screenshots.md`. The
-generator is `scripts/make_play_marketing.py` — it wraps raw Android
-captures in the same Introibo house style as the App Store set
-(`1.2.1 screenshots/`) and writes the Play assets into
-`google-play-screenshots/`.
+This is the Android counterpart to `docs/marketing-screenshots.md`.
 
 > The Play screenshots must show the **Android** app — not the iPhone set —
 > because the Material 3 UI looks meaningfully different from SwiftUI. The
 > Apple captures cannot be reused.
+
+## Current state (1.2.1)
+
+The committed `google-play-screenshots/{phone,tablet-7in,tablet-10in}-NN.png`
+**are genuine Android emulator captures** (verify: the bottom nav shows the
+Material 3 pill indicator and `Icons.Filled.*` icons that the iOS build does
+not render). They were wrapped by an older generator that used a drop-shadow
+title style.
+
+Their caption text was stale and has been corrected **in place** by
+`scripts/fix_play_captions.py` (501→574 Propers, 40→67 Prayers, 91→97
+flashcards, Customise→Customize) — only the text was repainted; the device
+shots are untouched. So the current set is ready to upload as-is for 1.2.1.
+
+## Regenerating from scratch (future releases)
+
+When the Android UI changes enough that the device shots are stale, capture
+fresh screens and re-wrap them with `scripts/make_play_marketing.py`, which
+reproduces the **canonical flat-title** App Store house style (no drop
+shadow) at the Play canvas sizes. (A full regen therefore drops the old
+drop-shadow look in favour of the canonical one — an intentional improvement,
+matching the Apple set.)
 
 ---
 

@@ -121,7 +121,7 @@ In **Play Console → Grow → Store presence → Main store listing**:
 |-------------------|-----------------------------------------------------|
 | App icon (512²)   | `google-play-screenshots/app-icon-512.png`          |
 | Feature graphic   | `google-play-screenshots/feature-graphic-1024x500.png` *(regenerated this branch)* |
-| Phone screenshots | `google-play-screenshots/phone-NN.png` *(needs Android captures — see `docs/play-screenshots.md`)* |
+| Phone screenshots | `google-play-screenshots/phone-NN.png` *(genuine Android, captions corrected for 1.2.1 — ready to upload)* |
 | 7" tablet         | `google-play-screenshots/tablet-7in-NN.png`         |
 | 10" tablet        | `google-play-screenshots/tablet-10in-NN.png`        |
 | Short description | `google-play-screenshots/STORE_LISTING.md`          |
