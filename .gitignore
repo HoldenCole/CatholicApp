@@ -53,3 +53,6 @@ android/.gradle/
 # Python (link-validation tooling)
 __pycache__/
 *.pyc
+
+# Android SDK location (machine-specific)
+android/local.properties
