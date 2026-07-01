@@ -149,7 +149,13 @@ object ContentStore {
 
     /** Eagerly builds the search index off the main thread. Idempotent. */
     fun prepareSearchIndex() {
-        Thread { searchIndex }.start()
+        Thread {
+            try {
+                searchIndex
+            } catch (t: Throwable) {
+                android.util.Log.e("INTROIBO_START", "search index build failed", t)
+            }
+        }.start()
     }
 
     // ---- Link graph (Phase 3: contextual-links reverse index) ----
@@ -167,7 +173,13 @@ object ContentStore {
 
     /** Eagerly builds the link graph off the main thread. Idempotent. */
     fun prepareLinkGraph() {
-        Thread { linkGraph }.start()
+        Thread {
+            try {
+                linkGraph
+            } catch (t: Throwable) {
+                android.util.Log.e("INTROIBO_START", "link graph build failed", t)
+            }
+        }.start()
     }
 
     // ---- Convenience lookups ----
@@ -447,6 +459,7 @@ object ContentStore {
         hours.firstOrNull { it.slug == slug }
 
     fun hourForToday(slug: String, rite: MissalRite = MissalRite.RITE_1962): Hour? {
+      try {
         val template = hour(slug) ?: return null
         val ctx = LiturgicalContext.current()
         val ordo = ordoForDate(ctx.date, rite)
@@ -517,6 +530,12 @@ object ContentStore {
         }
 
         return assembled
+      } catch (t: Throwable) {
+        // Log but don't crash — mirrors load()'s philosophy. A data edge case
+        // in one day's Office must not take down the whole app.
+        android.util.Log.e("INTROIBO_OFFICE", "hourForToday failed for slug=$slug", t)
+        return null
+      }
     }
 
     /**
