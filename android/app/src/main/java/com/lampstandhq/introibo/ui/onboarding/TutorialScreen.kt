@@ -90,7 +90,7 @@ private val tutorialSteps = listOf(
             "Interactive bead-by-bead Rosary with three traditional mystery sets",
             "14 Stations of the Cross with meditations and Stabat Mater",
             "All 8 canonical hours of the 1962 Divine Office",
-            "Learn Latin with 10 lessons, 91 flashcards, and quizzes",
+            "Learn Latin with 10 lessons, 97 flashcards, and quizzes",
             "Confession guide with examination of conscience",
         ),
     ),

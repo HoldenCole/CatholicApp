@@ -283,14 +283,14 @@ private fun FeaturesPage() {
 
     val features = listOf(
         "Liturgical Today" to "Daily psalm, penance, season, feast days, and today's Mass propers.",
-        "1962 Missal" to "Complete Ordinary and 428 daily Propers interleaved in correct Mass order.",
-        "40 Prayers" to "Every essential prayer in Latin and English with a personal prayer rule.",
+        "1962 Missal" to "Complete Ordinary and 574 daily Propers interleaved in correct Mass order.",
+        "67 Prayers" to "Every essential prayer in Latin and English with a personal prayer rule.",
         "Rosary & Stations" to "Interactive bead-by-bead Rosary. 14 Stations with meditations.",
         "Divine Office" to "All 8 canonical hours of the 1962 Breviary.",
         "Confession Guide" to "Examination of conscience and two guided confession paths.",
         "Follow a Saint" to "7 patron saints with daily practices and streak tracking.",
-        "Learn Latin" to "10 lessons with 91 flashcards and quizzes.",
-        "Reference Library" to "41 articles, 428 searchable propers, TLM history, and glossary.",
+        "Learn Latin" to "10 lessons with 97 flashcards and quizzes.",
+        "Reference Library" to "41 articles, 574 searchable propers, TLM history, and glossary.",
     )
 
     Column(
