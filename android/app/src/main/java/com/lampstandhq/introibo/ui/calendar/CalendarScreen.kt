@@ -189,7 +189,7 @@ fun CalendarScreen(
         }
         when (viewMode) {
             "month" -> {
-                MonthGrid(model = model, langMode = langMode) { selectedDay = it }
+                MonthGrid(model = model, langMode = langMode, modifier = Modifier.weight(1f)) { selectedDay = it }
             }
             else -> {
                 LazyColumn(
@@ -462,7 +462,7 @@ private fun DayDetail(
                         onClick = {
                             showMenu = false
                             val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
-                                type = "text/plain"; putExtra(android.content.Intent.EXTRA_TEXT, shareText)
+                                this.type = "text/plain"; putExtra(android.content.Intent.EXTRA_TEXT, shareText)
                             }
                             shareContext.startActivity(android.content.Intent.createChooser(intent, "Share"))
                         },
@@ -634,10 +634,11 @@ private val weekdayLetters = listOf("S", "M", "T", "W", "T", "F", "S")
 private fun MonthGrid(
     model: CalendarMonth,
     langMode: LanguageMode,
+    modifier: Modifier = Modifier,
     onSelect: (CalendarDay) -> Unit,
 ) {
     val colors = IntroiboTheme.colors
-    Column(modifier = Modifier.fillMaxWidth().weight(1f)) {
+    Column(modifier = modifier.fillMaxWidth()) {
         Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
             weekdayLetters.forEach { letter ->
                 Text(

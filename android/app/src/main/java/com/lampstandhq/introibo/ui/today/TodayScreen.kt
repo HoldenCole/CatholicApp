@@ -61,6 +61,7 @@ import com.lampstandhq.introibo.ui.components.BilingualLine
 import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.storage.settings.LanguageMode
+import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import java.time.LocalDate
 import java.util.Calendar
 
@@ -961,7 +962,7 @@ private fun ProgressRing(
 // Settings sheet placeholder — wraps SettingsScreen
 // ---------------------------------------------------------------------------
 
-@Composable
+// Pure helper (no composables) — computed inside remember{} at the call site.
 private fun nextObligationDay(discipline: PenanceDiscipline): String? {
     var d = java.time.LocalDate.now().plusDays(1)
     val fmt = java.time.format.DateTimeFormatter.ofPattern("EEEE, MMMM d", java.util.Locale.US)
@@ -975,6 +976,7 @@ private fun nextObligationDay(discipline: PenanceDiscipline): String? {
     return null
 }
 
+@Composable
 private fun SettingsSheet(onDismiss: () -> Unit) {
     // Using a full-screen dialog approach for the settings sheet
     androidx.compose.ui.window.Dialog(

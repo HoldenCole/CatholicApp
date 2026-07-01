@@ -155,7 +155,7 @@ fun ProperScreen(
                             onClick = {
                                 showMenu = false
                                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                                    type = "text/plain"
+                                    this.type = "text/plain"
                                     putExtra(Intent.EXTRA_TEXT, properAsText(proper))
                                 }
                                 context.startActivity(Intent.createChooser(shareIntent, "Share Propers"))
