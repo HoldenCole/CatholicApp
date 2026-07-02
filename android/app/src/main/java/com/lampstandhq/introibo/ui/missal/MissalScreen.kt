@@ -66,9 +66,11 @@ fun MissalScreen() {
 
     var showProperDetail by rememberSaveable { mutableStateOf(false) }
 
-    val ctx = remember { LiturgicalContext.current() }
-    val todayProper = remember {
-        ContentStore.properForDate(ctx.date) ?: ctx.properSlug?.let { ContentStore.proper(it) }
+    // Rebuild context and proper whenever the rite setting changes so a
+    // 1955/pre-1955 user sees their rite's Mass (iOS parity).
+    val ctx = remember(rite) { LiturgicalContext.forDate(java.time.LocalDate.now(), rite = rite) }
+    val todayProper = remember(rite) {
+        ContentStore.properForDate(ctx.date, rite) ?: ctx.properSlug?.let { ContentStore.proper(it) }
     }
 
     Column(

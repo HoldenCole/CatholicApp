@@ -19,7 +19,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
@@ -46,6 +48,17 @@ class TodayViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope, SharingStarted.WhileSubscribed(5_000), PenanceDiscipline.DISCIPLINE_1962
     )
 
+    init {
+        // Rebuild the context whenever the saved rite or discipline changes —
+        // iOS parity: its current() reads both from UserDefaults on every call.
+        viewModelScope.launch {
+            combine(settingsRepo.missalRite, settingsRepo.penanceDiscipline) { r, d -> r to d }
+                .collect { (r, d) ->
+                    _ctx.value = LiturgicalContext.forDate(LocalDate.now(), d, r)
+                }
+        }
+    }
+
     val prayerRule = progressRepo.prayerRule.stateIn(
         viewModelScope, SharingStarted.WhileSubscribed(5_000), PrayerRule()
     )
@@ -71,7 +84,7 @@ class TodayViewModel(application: Application) : AndroidViewModel(application) {
     fun todayProper(): MassProper? {
         val context = ctx.value
         // Use ordo-based lookup first (DivinumOfficium data), fall back to legacy
-        ContentStore.properForDate(context.date)?.let { return it }
+        ContentStore.properForDate(context.date, rite.value)?.let { return it }
         return context.properSlug?.let { ContentStore.proper(it) }
     }
 

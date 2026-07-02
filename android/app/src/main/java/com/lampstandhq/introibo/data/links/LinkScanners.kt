@@ -133,6 +133,7 @@ object LinkScanners {
                 fields.add(part.v1Lat); fields.add(part.v1Eng)
                 fields.add(part.r1Lat); fields.add(part.r1Eng)
                 fields.add(part.v2Lat); fields.add(part.v2Eng)
+                fields.add(part.r2Lat); fields.add(part.r2Eng)
                 fields.add(part.engBody)
                 fields.add(part.antiphonLat); fields.add(part.antiphonEng)
                 part.verses?.forEach { v -> fields.add(v.lat); fields.add(v.eng) }

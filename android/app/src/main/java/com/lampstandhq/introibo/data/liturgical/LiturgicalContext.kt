@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.liturgical
 
+import com.lampstandhq.introibo.storage.settings.MissalRite
 import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import java.time.DayOfWeek
 import java.time.LocalDate
@@ -128,6 +129,7 @@ data class LiturgicalContext(
         fun forDate(
             now: LocalDate,
             discipline: PenanceDiscipline = PenanceDiscipline.DISCIPLINE_1962,
+            rite: MissalRite = MissalRite.RITE_1962,
         ): LiturgicalContext {
             val year = now.year
 
@@ -264,7 +266,7 @@ data class LiturgicalContext(
                 marian = marian,
                 mystery = mystery,
                 penance = penance,
-                properSlug = ProperCalendar.properSlug(now),
+                properSlug = ProperCalendar.properSlug(now, rite = rite),
                 temporalKey = temporal,
                 easter = easter,
                 ashWednesday = ashWed,
@@ -407,19 +409,19 @@ data class LiturgicalContext(
         private fun isEmberDate(date: LocalDate, easter: LocalDate, pentecost: LocalDate,
                                 firstAdvent: LocalDate, dow: Int): Boolean {
             if (dow != 3 && dow != 5 && dow != 6) return false
-            val woy = date.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
-            val adv1w = firstAdvent.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
-            if (woy == adv1w + 2) return true
-            val ashWed = easter.minusDays(46)
-            val ashw = ashWed.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
-            if (woy == ashw) return true
-            // ISO weeks are Monday-start: Pentecost (Sunday) is in ISO week N,
-            // but the Ember Wed/Fri/Sat of the octave are in ISO week N+1.
-            val pentw = pentecost.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
-            if (woy == pentw + 1) return true
-            val sept14 = LocalDate.of(date.year, 9, 14)
-            val septw = sept14.get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
-            if (woy == septw) return true
+            // Sunday-start weeks throughout — parity with iOS Calendar.liturgical
+            // (weekOfYear). The previous ISO Monday-start comparison put the
+            // Advent Ember days a week early and broke September when the 14th
+            // fell on a Sunday.
+            val woy = weekOfYear(date)
+            // Advent Ember: 3rd week of Advent
+            if (woy == weekOfYear(firstAdvent) + 2) return true
+            // Lent Ember: week of Ash Wednesday
+            if (woy == weekOfYear(easter.minusDays(46))) return true
+            // Pentecost Ember: same Sunday-start week as Pentecost Sunday
+            if (woy == weekOfYear(pentecost)) return true
+            // September Ember: week containing Sept 14 (Exaltation of the Cross)
+            if (woy == weekOfYear(LocalDate.of(date.year, 9, 14))) return true
             return false
         }
 
@@ -526,6 +528,14 @@ val LiturgicalContext.isEmberDay: Boolean
             val ashWeek = weekOfYear(ashWednesday)
             if (dateWeek == ashWeek) return true
         }
+
+        // Pentecost ember: same Sunday-start week as Pentecost (iOS parity)
+        if (dateWeek == weekOfYear(pentecost)) return true
+
+        // September ember: week after the one containing Sept 14 (iOS parity —
+        // note iOS's badge intentionally differs by +1 from its penance check)
+        val sept14 = java.time.LocalDate.of(date.year, 9, 14)
+        if (dateWeek == weekOfYear(sept14) + 1) return true
 
         return false
     }

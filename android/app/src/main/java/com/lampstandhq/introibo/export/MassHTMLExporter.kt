@@ -46,8 +46,9 @@ object MassHTMLExporter {
 
             // Preface note (between Secret and Communion)
             proper.preface?.let { preface ->
-                val capitalized = preface.replaceFirstChar {
-                    if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString()
+                // Title-case every word — parity with Swift String.capitalized.
+                val capitalized = preface.split(" ").joinToString(" ") { w ->
+                    w.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
                 }
                 append("""<p class="preface-note">Præfátio: ${escapeHTML(capitalized)}</p>""")
                 append("""<div class="divider"></div>""")

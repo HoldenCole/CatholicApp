@@ -1,7 +1,10 @@
 package com.lampstandhq.introibo.ui.office
 
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -32,10 +35,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.platform.LocalContext
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.liturgical.OfficeSchedule
 import com.lampstandhq.introibo.data.model.Hour
+import com.lampstandhq.introibo.storage.settings.MissalRite
+import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
@@ -53,7 +60,12 @@ fun OfficeScreen(
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    val ctx = remember { LiturgicalContext.current() }
+    val appContext = LocalContext.current
+    val settingsRepo = remember { SettingsRepository(appContext) }
+    // The Office ordo (festal psalms, Matins structure, proper overrides)
+    // depends on the selected rite — iOS parity.
+    val rite by settingsRepo.missalRite.collectAsState(initial = MissalRite.RITE_1962)
+    val ctx = remember(rite) { LiturgicalContext.forDate(java.time.LocalDate.now(), rite = rite) }
 
     var selectedHour by remember { mutableStateOf<Hour?>(null) }
     var showNotification by rememberSaveable { mutableStateOf(false) }
@@ -131,7 +143,7 @@ fun OfficeScreen(
                 hours = ContentStore.hours.filter { it.slug != "office-of-the-dead" },
                 currentKey = currentHourKey(),
                 onTap = { slug ->
-                    ContentStore.hourForToday(slug)?.let { selectedHour = it }
+                    ContentStore.hourForToday(slug, rite)?.let { selectedHour = it }
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -150,6 +162,33 @@ fun OfficeScreen(
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.tertiaryText,
             )
+
+            // Office of the Dead — a votive office outside the daily cursus,
+            // so it lives below the dial rather than on it. Opened from the
+            // raw template (no temporal/sanctoral overlay), like iOS.
+            ContentStore.hours.firstOrNull { it.slug == "office-of-the-dead" }?.let { dead ->
+                Spacer(modifier = Modifier.height(44.dp))
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .border(0.5.dp, colors.goldLeaf.copy(alpha = 0.45f), RoundedCornerShape(10.dp))
+                        .clickable { selectedHour = dead }
+                        .padding(vertical = 18.dp),
+                ) {
+                    Text(text = "✠", style = type.titleM, color = colors.sanctuaryRed)
+                    Text(
+                        text = "Officium Defunctórum",
+                        style = type.titleM.copy(fontStyle = FontStyle.Italic),
+                        color = colors.primaryText,
+                    )
+                    Text(
+                        text = "OFFICE OF THE DEAD",
+                        style = type.captionSm.copy(fontStyle = FontStyle.Italic, letterSpacing = 2.sp),
+                        color = colors.secondaryText,
+                    )
+                }
+            }
         }
     }
 

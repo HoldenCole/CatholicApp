@@ -46,6 +46,13 @@ class OfficeAssembler(
         "ant_nona", "nona.psalm1", "nona.psalm2", "nona.psalm3",
     )
 
+    // Day-hours whose standalone pre-Collect Pater Noster is only said as part
+    // of the Preces (stripped when Preces are omitted). Matins and the Office
+    // of the Dead are deliberately excluded.
+    private val precesHours = setOf(
+        "laudes", "vesperae", "prima", "tertia", "sexta", "nona", "completorium",
+    )
+
     fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
         val seasonKey = seasonString(context.season)
@@ -205,12 +212,17 @@ class OfficeAssembler(
         // Insert Preces Feriales for Lauds/Vespers on qualifying ferial days.
         // When Preces are not said, also remove the standalone Pater Noster
         // that precedes the Collect (it is only said as part of the Preces).
+        // Applies to every day-hour with a Preces Pater: Lauds, Vespers, the
+        // Little Hours and Compline (iOS parity). Matins keeps its Pater (it
+        // introduces the nocturn lessons); the Office of the Dead keeps its
+        // own structure. The opening "Pater Noster, Ave María" survives via
+        // the "Ave" label check.
         val precesApplied = if (
             (template.slug == "laudes" || template.slug == "vesperae")
             && shouldIncludePreces(context)
         ) {
             insertPreces(filteredParts, template.slug)
-        } else if (template.slug == "laudes" || template.slug == "vesperae") {
+        } else if (template.slug in precesHours && !shouldIncludePreces(context)) {
             filteredParts.filter { part ->
                 !(part.type == "pater" && part.variationKey.isNullOrEmpty()
                     && !(part.label ?: "").contains("Ave"))
