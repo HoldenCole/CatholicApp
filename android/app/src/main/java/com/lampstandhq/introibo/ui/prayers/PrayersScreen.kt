@@ -65,7 +65,7 @@ import com.lampstandhq.introibo.ui.theme.IntroiboType
 import kotlinx.coroutines.launch
 
 private val occasions = listOf(
-    "Morning", "Before Mass", "After Mass", "Meals",
+    "Morning", "Before Mass", "During Mass", "After Mass", "Meals",
     "Marian", "Eucharistic", "Before Confession",
     "For the Departed", "In Temptation", "For Protection", "Evening",
 )

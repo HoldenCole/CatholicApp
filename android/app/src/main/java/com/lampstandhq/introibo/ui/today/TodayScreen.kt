@@ -546,8 +546,14 @@ private fun PenanceCard(
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
+    val appContext = androidx.compose.ui.platform.LocalContext.current
 
     val penance = remember(ctx, discipline) { ctx.penanceFor(discipline) }
+    var showPenanceSheet by remember { mutableStateOf(false) }
+    // Recompute after the sheet closes so edits show immediately.
+    val selectedPenances = remember(showPenanceSheet) {
+        com.lampstandhq.introibo.data.penance.OptionalPenances.selected(appContext)
+    }
 
     Column(
         modifier = modifier
@@ -629,6 +635,33 @@ private fun PenanceCard(
                 }
             }
         }
+
+        // Voluntary penances the user has taken on (iOS parity).
+        if (selectedPenances.isNotEmpty()) {
+            Column(modifier = Modifier.padding(top = 8.dp)) {
+                SmallLabel(text = "Pæniténtiæ Voluntáriæ", color = colors.goldLeaf)
+                selectedPenances.forEach { p ->
+                    Text(
+                        text = "· ${p.title}",
+                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                        color = colors.primaryText,
+                    )
+                }
+            }
+        }
+
+        Text(
+            text = if (selectedPenances.isEmpty()) "Choose optional penances" else "Edit penances",
+            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+            color = colors.sanctuaryRed,
+            modifier = Modifier
+                .padding(top = 8.dp)
+                .clickable { showPenanceSheet = true },
+        )
+    }
+
+    if (showPenanceSheet) {
+        PenanceSheet(onDismiss = { showPenanceSheet = false })
     }
 }
 
