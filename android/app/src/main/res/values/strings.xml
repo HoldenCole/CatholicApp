@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Introibo</string>
+
+    <!-- Launcher long-press shortcuts -->
+    <string name="shortcut_missal_short">Today\'s Mass</string>
+    <string name="shortcut_missal_long">Open today\'s Mass propers</string>
+    <string name="shortcut_office_short">Divine Office</string>
+    <string name="shortcut_office_long">Pray the canonical hours</string>
+    <string name="shortcut_rosary_short">Rosary</string>
+    <string name="shortcut_rosary_long">Pray the Holy Rosary</string>
 </resources>

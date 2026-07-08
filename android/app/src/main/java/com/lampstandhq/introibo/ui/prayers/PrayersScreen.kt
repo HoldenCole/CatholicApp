@@ -24,6 +24,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SortByAlpha
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -316,6 +317,48 @@ private fun RulePeriod(
         Spacer(Modifier.height(8.dp))
 
         slugs.forEach { slug ->
+            // Office hours in the rule ("office-<hour>") render as a checkable
+            // row with the hour's name and time (iOS parity).
+            if (slug.startsWith("office-")) {
+                val hour = ContentStore.hour(slug.removePrefix("office-")) ?: return@forEach
+                val isDone = slug in completedPrayers
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onToggle(slug) }
+                        .padding(vertical = 4.dp),
+                ) {
+                    Icon(
+                        imageVector = if (isDone) Icons.Filled.CheckCircle else Icons.Filled.RadioButtonUnchecked,
+                        contentDescription = null,
+                        tint = if (isDone) colors.goldLeaf else colors.frameLine,
+                        modifier = Modifier.size(24.dp),
+                    )
+                    Spacer(Modifier.width(12.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = hour.name,
+                            style = type.titleM.copy(fontStyle = FontStyle.Italic),
+                            color = if (isDone) colors.tertiaryText else colors.primaryText,
+                            textDecoration = if (isDone) TextDecoration.LineThrough else null,
+                        )
+                        Text(
+                            text = "${hour.eng} — ${hour.time}",
+                            style = type.captionSm,
+                            color = if (isDone) colors.tertiaryText else colors.secondaryText,
+                        )
+                    }
+                    Icon(
+                        imageVector = Icons.Filled.Schedule,
+                        contentDescription = null,
+                        tint = colors.sanctuaryRed,
+                        modifier = Modifier.size(16.dp),
+                    )
+                }
+                return@forEach
+            }
+
             val prayer = ContentStore.prayer(slug) ?: return@forEach
             val isDone = slug in completedPrayers
 

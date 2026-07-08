@@ -143,10 +143,9 @@ fun ProperScreen(
                             onClick = {
                                 showMenu = false
                                 val html = com.lampstandhq.introibo.export.MassHTMLExporter.properHTML(proper)
-                                context.startActivity(Intent.createChooser(
-                                    com.lampstandhq.introibo.export.PDFExporter.shareHTMLIntent(html, proper.title),
-                                    "Share Propers"
-                                ))
+                                com.lampstandhq.introibo.export.PDFExporter.sharePDF(
+                                    context, html, fileName = proper.title, title = "Share Propers"
+                                )
                             },
                         )
                         DropdownMenuItem(

@@ -24,10 +24,24 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.outlined.BookmarkBorder
+import androidx.compose.material.icons.outlined.Notifications
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import com.lampstandhq.introibo.storage.progress.PrayerRule
+import com.lampstandhq.introibo.storage.progress.UserProgressRepository
+import com.lampstandhq.introibo.ui.prayers.NotificationScheduleSheet
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
@@ -71,6 +85,15 @@ fun HourSheet(
     val scope = rememberCoroutineScope()
     val listState = rememberLazyListState()
 
+    // Prayer-rule membership + reminder scheduling (iOS HourView toolbar parity).
+    val appContext = LocalContext.current
+    val progressRepo = remember { UserProgressRepository(appContext) }
+    val rule by progressRepo.prayerRule.collectAsState(initial = PrayerRule())
+    val ruleSlug = "office-${hour.slug}"
+    val isInRule = ruleSlug in rule.allSlugs
+    var showAddToRule by remember { mutableStateOf(false) }
+    var showNotification by remember { mutableStateOf(false) }
+
     // Back button + header occupy LazyColumn indices 0 and 1; parts begin at 2,
     // so part i sits at list index i + HEADER_ITEM_COUNT.
     LaunchedEffect(scrollToPartIndex, hour.slug) {
@@ -92,9 +115,10 @@ fun HourSheet(
                 .fillMaxSize()
                 .padding(bottom = 80.dp),
         ) {
-            // Back button (list index 0)
+            // Back button + rule/reminder actions (list index 0)
             item(key = "back") {
                 Row(
+                    horizontalArrangement = Arrangement.SpaceBetween,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 8.dp),
@@ -103,6 +127,23 @@ fun HourSheet(
                         scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
                     }) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    }
+                    Row {
+                        IconButton(onClick = { showAddToRule = true }) {
+                            Icon(
+                                imageVector = if (isInRule) Icons.Filled.Bookmark
+                                              else Icons.Outlined.BookmarkBorder,
+                                contentDescription = "Add to Prayer Rule",
+                                tint = colors.sanctuaryRed,
+                            )
+                        }
+                        IconButton(onClick = { showNotification = true }) {
+                            Icon(
+                                imageVector = Icons.Outlined.Notifications,
+                                contentDescription = "Hour reminder",
+                                tint = colors.sanctuaryRed,
+                            )
+                        }
                     }
                 }
             }
@@ -155,6 +196,57 @@ fun HourSheet(
                 )
             }
         }
+    }
+
+    // "Add to Prayer Rule" period chooser (iOS confirmationDialog parity).
+    if (showAddToRule) {
+        AlertDialog(
+            onDismissRequest = { showAddToRule = false },
+            containerColor = colors.pageBackground,
+            title = {
+                Text("Add to Prayer Rule", style = type.titleM, color = colors.primaryText)
+            },
+            text = {
+                Text(
+                    "Add ${hour.eng} to your prayer rule",
+                    style = type.bodySm,
+                    color = colors.secondaryText,
+                )
+            },
+            confirmButton = {
+                Column {
+                    for ((label, period) in listOf(
+                        "Morning" to "morning", "Midday" to "midday", "Evening" to "evening",
+                    )) {
+                        TextButton(onClick = {
+                            scope.launch { progressRepo.addToRule(ruleSlug, period) }
+                            showAddToRule = false
+                        }) { Text(label, color = colors.sanctuaryRed) }
+                    }
+                    if (isInRule) {
+                        TextButton(onClick = {
+                            scope.launch { progressRepo.removeFromRule(ruleSlug) }
+                            showAddToRule = false
+                        }) { Text("Remove from Rule", color = colors.sanctuaryRed) }
+                    }
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showAddToRule = false }) {
+                    Text("Cancel", color = colors.tertiaryText)
+                }
+            },
+        )
+    }
+
+    // Per-hour reminder schedule (same schedule-id convention as iOS).
+    if (showNotification) {
+        NotificationScheduleSheet(
+            scheduleId = "office.${hour.slug}",
+            title = hour.name,
+            subtitle = "${hour.eng} — ${hour.time}",
+            onDismiss = { showNotification = false },
+        )
     }
 }
 

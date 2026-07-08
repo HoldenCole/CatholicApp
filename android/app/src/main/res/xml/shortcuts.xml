@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="missal"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_missal"
+        android:shortcutShortLabel="@string/shortcut_missal_short"
+        android:shortcutLongLabel="@string/shortcut_missal_long">
+        <intent
+            android:action="com.lampstandhq.introibo.action.MISSAL"
+            android:targetPackage="com.lampstandhq.introibo"
+            android:targetClass="com.lampstandhq.introibo.app.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="office"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_office"
+        android:shortcutShortLabel="@string/shortcut_office_short"
+        android:shortcutLongLabel="@string/shortcut_office_long">
+        <intent
+            android:action="com.lampstandhq.introibo.action.OFFICE"
+            android:targetPackage="com.lampstandhq.introibo"
+            android:targetClass="com.lampstandhq.introibo.app.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="rosary"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_rosary"
+        android:shortcutShortLabel="@string/shortcut_rosary_short"
+        android:shortcutLongLabel="@string/shortcut_rosary_long">
+        <intent
+            android:action="com.lampstandhq.introibo.action.ROSARY"
+            android:targetPackage="com.lampstandhq.introibo"
+            android:targetClass="com.lampstandhq.introibo.app.MainActivity" />
+    </shortcut>
+
+</shortcuts>

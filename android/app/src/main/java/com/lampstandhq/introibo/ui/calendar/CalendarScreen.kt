@@ -452,9 +452,9 @@ private fun DayDetail(
                                 penanceTitle = penance.title, penanceDesc = penance.desc,
                                 penanceStrict = penance.strict, discipline = discipline.short,
                             )
-                            shareContext.startActivity(android.content.Intent.createChooser(
-                                com.lampstandhq.introibo.export.PDFExporter.shareHTMLIntent(html, title), "Share"
-                            ))
+                            com.lampstandhq.introibo.export.PDFExporter.sharePDF(
+                                shareContext, html, fileName = title, title = "Share"
+                            )
                         },
                     )
                     DropdownMenuItem(

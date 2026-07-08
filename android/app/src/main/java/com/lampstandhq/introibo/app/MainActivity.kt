@@ -24,8 +24,24 @@ import com.lampstandhq.introibo.ui.theme.introiboTypography
 
 class MainActivity : ComponentActivity() {
 
+    /** Launcher-shortcut destination (a Screen route), consumed by the NavHost. */
+    private val shortcutRoute = mutableStateOf<String?>(null)
+
+    private fun routeForIntent(intent: android.content.Intent?): String? = when (intent?.action) {
+        "com.lampstandhq.introibo.action.MISSAL" -> "missal"
+        "com.lampstandhq.introibo.action.OFFICE" -> "office"
+        "com.lampstandhq.introibo.action.ROSARY" -> "rosary"
+        else -> null
+    }
+
+    override fun onNewIntent(intent: android.content.Intent) {
+        super.onNewIntent(intent)
+        routeForIntent(intent)?.let { shortcutRoute.value = it }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        routeForIntent(intent)?.let { shortcutRoute.value = it }
 
         setContent {
             val settingsRepo = remember { SettingsRepository(applicationContext) }
@@ -61,7 +77,10 @@ class MainActivity : ComponentActivity() {
                             })
                         }
                         else -> {
-                            IntroiboNavHost()
+                            IntroiboNavHost(
+                                shortcutRoute = shortcutRoute.value,
+                                onShortcutConsumed = { shortcutRoute.value = null },
+                            )
                         }
                     }
                 }

@@ -16,6 +16,7 @@ import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -80,7 +81,11 @@ private val tabs = listOf(
  * Mirrors the iOS ContentView TabView.
  */
 @Composable
-fun IntroiboNavHost() {
+fun IntroiboNavHost(
+    /** Launcher-shortcut destination (a Screen route) to open, or null. */
+    shortcutRoute: String? = null,
+    onShortcutConsumed: () -> Unit = {},
+) {
     val colors = IntroiboTheme.colors
     var selectedIndex by rememberSaveable { mutableIntStateOf(0) }
 
@@ -88,6 +93,17 @@ fun IntroiboNavHost() {
     // For the initial port we use a single NavHost and swap content;
     // each tab's screen manages its own internal navigation.
     val navController = rememberNavController()
+
+    // Launcher shortcuts (Today's Mass / Divine Office / Rosary). Tab routes
+    // also sync the bottom-bar selection; stacked routes ride on Today.
+    LaunchedEffect(shortcutRoute) {
+        val route = shortcutRoute ?: return@LaunchedEffect
+        tabs.indexOfFirst { it.screen.route == route }.let { tabIndex ->
+            if (tabIndex >= 0) selectedIndex = tabIndex
+        }
+        navController.navigate(route) { launchSingleTop = true }
+        onShortcutConsumed()
+    }
 
     Scaffold(
         bottomBar = {
