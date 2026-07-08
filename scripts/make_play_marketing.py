@@ -111,7 +111,7 @@ def _generate(shot_path, title, desc, tilt, size_key, out):
 #    capture is used for all three canvas sizes (it's resized to fit). ──────
 OUT_DIR = "google-play-screenshots"
 
-# (n, raw capture, title, description, tilt) — captions verified for 1.2.1
+# (n, raw capture, title, description, tilt) — captions verified for 1.2.2
 SHOTS = [
     (1,  "android-01-today.png",     "Your Daily Companion",         "Liturgical calendar, propers, penance, and prayer rule",      -TILT_DEG),
     (2,  "android-02-missal.png",    "The Complete 1962 Missal",     "574 daily Propers woven into the Ordinary in correct order",   TILT_DEG),

@@ -1,4 +1,4 @@
-# Google Play Store Listing — Introibo v1.2.1
+# Google Play Store Listing — Introibo v1.2.2
 
 ## Short Description (80 chars max)
 

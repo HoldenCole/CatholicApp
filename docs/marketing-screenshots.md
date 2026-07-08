@@ -159,7 +159,7 @@ changes between releases. Re-check every release:
   Do not quote the raw row count; count complete formularies.
 
 - **Latin lessons / flashcards** — verify against the Latin learning data
-  before quoting (1.2.1: "10 lessons, 91 flashcards").
+  before quoting (1.2.2: "10 lessons, 97 flashcards" — the 91 in the committed 1.2.1 Apple set is stale).
 
 If a number can't be verified, don't put it in a caption.
 

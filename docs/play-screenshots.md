@@ -6,7 +6,7 @@ This is the Android counterpart to `docs/marketing-screenshots.md`.
 > because the Material 3 UI looks meaningfully different from SwiftUI. The
 > Apple captures cannot be reused.
 
-## Current state (1.2.1)
+## Current state (1.2.2)
 
 The committed `google-play-screenshots/{phone,tablet-7in,tablet-10in}-NN.png`
 **are genuine Android emulator captures** (verify: the bottom nav shows the
@@ -17,7 +17,7 @@ title style.
 Their caption text was stale and has been corrected **in place** by
 `scripts/fix_play_captions.py` (501→574 Propers, 40→67 Prayers, 91→97
 flashcards, Customise→Customize) — only the text was repainted; the device
-shots are untouched. So the current set is ready to upload as-is for 1.2.1.
+shots are untouched. So the current set is ready to upload as-is for 1.2.2.
 
 ## Regenerating from scratch (future releases)
 
@@ -107,7 +107,7 @@ device shot changes.
 ## Caption rules (same as Apple set)
 
 The captions are baked into `scripts/make_play_marketing.py`'s `SHOTS`
-table and are already verified for 1.2.1 against the shipped data:
+table and are already verified for 1.2.2 against the shipped data:
 
 - **574 daily Propers** (slot 02) — complete Mass formularies, all 8 parts
 - **67 Traditional Prayers** (slot 03)

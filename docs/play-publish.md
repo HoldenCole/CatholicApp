@@ -33,8 +33,8 @@ new upload key from the Play Console (Setup → App integrity → App signing
 `android/app/build.gradle.kts` is now at:
 
 ```kotlin
-versionCode = 13         // strictly higher than what's in closed testing (12)
-versionName = "1.2.1"    // user-visible — matches iOS 1.2.1
+versionCode = 14         // strictly higher than any build already uploaded
+versionName = "1.2.2"    // user-visible content version (Apple's train for the same content is 1.5.6)
 ```
 
 Play rejects any AAB whose `versionCode` is ≤ the highest already on the
@@ -87,7 +87,7 @@ Two paths depending on how cautious you want to be:
 3. Drop the new AAB. Play will warn that you're replacing the existing
    one; that's fine — the old build is what was wrong.
 4. Set release notes (something like
-   *"Fixes launcher icon; minor bug fixes for 1.2.1."*).
+   *"Fixes launcher icon; minor bug fixes for 1.2.2."*).
 5. **Save → Review → Start rollout to closed testing**.
 6. Wait until the new build is the "Latest release" on the track (a
    few minutes to a couple of hours for review).
@@ -121,13 +121,13 @@ In **Play Console → Grow → Store presence → Main store listing**:
 |-------------------|-----------------------------------------------------|
 | App icon (512²)   | `google-play-screenshots/app-icon-512.png`          |
 | Feature graphic   | `google-play-screenshots/feature-graphic-1024x500.png` *(regenerated this branch)* |
-| Phone screenshots | `google-play-screenshots/phone-NN.png` *(genuine Android, captions corrected for 1.2.1 — ready to upload)* |
+| Phone screenshots | `google-play-screenshots/phone-NN.png` *(genuine Android, captions corrected for 1.2.2 — ready to upload)* |
 | 7" tablet         | `google-play-screenshots/tablet-7in-NN.png`         |
 | 10" tablet        | `google-play-screenshots/tablet-10in-NN.png`        |
 | Short description | `google-play-screenshots/STORE_LISTING.md`          |
 | Full description  | `google-play-screenshots/STORE_LISTING.md`          |
 
-The STORE_LISTING.md numbers are verified against shipped data for 1.2.1
+The STORE_LISTING.md numbers are verified against shipped data for 1.2.2
 (574 propers, 67 prayers, 97 flashcards, 41 articles, 14 stations,
 8 hours, 7 saints, 16 prefaces). If you update the listing copy on the
 console without changing the file, copy the result back into
@@ -156,8 +156,8 @@ STORE_LISTING.md so the repo stays the source of truth.
 
 ## 6. After production rollout
 
-- Tag the commit: `git tag android-1.2.1 && git push --tags`.
+- Tag the commit: `git tag android-1.2.2 && git push --tags`.
 - Update `README.md` if it claims an Android version different from the
   shipped one (it currently doesn't pin an Android version, so no change).
-- Bump `versionCode` to 14 in `build.gradle.kts` on `main` so the next
+- Bump `versionCode` to 15 in `build.gradle.kts` on `main` so the next
   upload is always higher.
