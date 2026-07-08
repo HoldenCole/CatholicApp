@@ -18,6 +18,13 @@ import java.io.FileOutputStream
  * an android.graphics.pdf.PdfDocument — US Letter (612x792pt) with 36pt
  * margins, the same page geometry as the iOS PDFExporter.
  *
+ * Two Android gotchas handled here:
+ *  * WebView.enableSlowWholeDocumentDraw() must be called before ANY WebView
+ *    is created, or offscreen draw() only produces the visible tile (blank
+ *    or truncated pages).
+ *  * The WebView lays text out in density-scaled pixels while PDF canvases
+ *    are in points — we render at pixel scale and shrink by 1/density.
+ *
  * Falls back to sharing the HTML as text if PDF generation fails.
  */
 object PDFExporter {
@@ -33,44 +40,65 @@ object PDFExporter {
      * Must be called from the main thread (WebView requirement).
      */
     fun sharePDF(context: Context, html: String, fileName: String, title: String = "Share") {
+        WebView.enableSlowWholeDocumentDraw()
+
+        val density = context.resources.displayMetrics.density
+        val contentWpx = (CONTENT_W * density).toInt()
+        val contentHpx = (CONTENT_H * density).toInt()
+
         val webView = WebView(context)
         webView.settings.javaScriptEnabled = false
+        // Give the view its real width BEFORE loading so the page lays out
+        // once, at the printable width.
+        webView.layout(0, 0, contentWpx, contentHpx)
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String?) {
-                // Give the engine one frame to settle layout before drawing.
-                view.post {
+                // Let the engine finish async layout before drawing.
+                view.postDelayed({
                     try {
-                        writePdf(context, view, fileName, title)
+                        writePdf(context, view, density, contentWpx, contentHpx, fileName, title)
                     } catch (t: Throwable) {
                         Log.e("PDFExporter", "PDF generation failed", t)
                         fallbackToHTML(context, html, title)
                     }
-                }
+                }, 250)
             }
         }
         webView.loadDataWithBaseURL(null, html, "text/html", "utf-8", null)
     }
 
-    private fun writePdf(context: Context, webView: WebView, fileName: String, title: String) {
-        // Lay the WebView out at the printable width; its measured height is
-        // the full document length in the same units (CSS px == pt here).
+    private fun writePdf(
+        context: Context,
+        webView: WebView,
+        density: Float,
+        contentWpx: Int,
+        contentHpx: Int,
+        fileName: String,
+        title: String,
+    ) {
         webView.measure(
-            View.MeasureSpec.makeMeasureSpec(CONTENT_W, View.MeasureSpec.EXACTLY),
+            View.MeasureSpec.makeMeasureSpec(contentWpx, View.MeasureSpec.EXACTLY),
             View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
         )
-        webView.layout(0, 0, CONTENT_W, webView.measuredHeight)
-        val totalHeight = webView.measuredHeight.coerceAtLeast(1)
+        webView.layout(0, 0, contentWpx, webView.measuredHeight)
+        val totalHpx = maxOf(
+            webView.measuredHeight,
+            (webView.contentHeight * density).toInt(),
+            1,
+        )
 
         val doc = PdfDocument()
         var pageIndex = 0
-        while (pageIndex * CONTENT_H < totalHeight) {
+        while (pageIndex * contentHpx < totalHpx) {
             val page = doc.startPage(
                 PdfDocument.PageInfo.Builder(PAGE_W, PAGE_H, pageIndex + 1).create()
             )
             with(page.canvas) {
                 translate(MARGIN.toFloat(), MARGIN.toFloat())
                 clipRect(0, 0, CONTENT_W, CONTENT_H)
-                translate(0f, -(pageIndex * CONTENT_H).toFloat())
+                // Points -> WebView pixels, then slide up to this page's slice.
+                scale(1f / density, 1f / density)
+                translate(0f, -(pageIndex * contentHpx).toFloat())
                 webView.draw(this)
             }
             doc.finishPage(page)

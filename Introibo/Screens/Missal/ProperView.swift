@@ -84,10 +84,7 @@ struct ProperView: View {
                     Menu {
                         Button {
                             let html = MassHTMLExporter.properHTML(proper)
-                            if let data = PDFExporter.generatePDF(from: html) {
-                                let url = FileManager.default.temporaryDirectory
-                                    .appendingPathComponent("Introibo-Proper.pdf")
-                                try? data.write(to: url)
+                            if let url = PDFExporter.writePDF(from: html, title: proper.title) {
                                 pdfURL = url
                                 showShareSheet = true
                             }

@@ -420,13 +420,26 @@ struct PrayerRuleEditor: View {
     @State private var rule = UserProgress.prayerRule()
     @State private var store = ContentStore.shared
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
+    @State private var addingTo: RulePeriod? = nil
+
+    enum RulePeriod: String, Identifiable {
+        case morning, midday, evening
+        var id: String { rawValue }
+        var title: String {
+            switch self {
+            case .morning: return "Morning"
+            case .midday: return "Midday"
+            case .evening: return "Evening"
+            }
+        }
+    }
 
     var body: some View {
         NavigationStack {
             List {
-                ruleSection("Morning", latin: "Mane", slugs: $rule.morning)
-                ruleSection("Midday", latin: "Meridies", slugs: $rule.midday)
-                ruleSection("Evening", latin: "Vesperae", slugs: $rule.evening)
+                ruleSection(.morning, eng: "Morning", latin: "Mane", slugs: $rule.morning)
+                ruleSection(.midday, eng: "Midday", latin: "Meridies", slugs: $rule.midday)
+                ruleSection(.evening, eng: "Evening", latin: "Vesperae", slugs: $rule.evening)
             }
             .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden)
@@ -446,16 +459,53 @@ struct PrayerRuleEditor: View {
                     .foregroundStyle(Color.sanctuaryRed)
                 }
             }
+            .sheet(item: $addingTo) { period in
+                RuleItemPicker(
+                    periodTitle: period.title,
+                    slugs: binding(for: period),
+                    otherSlugs: otherSlugs(than: period)
+                )
+            }
         }
     }
 
-    private func ruleSection(_ eng: String, latin: String, slugs: Binding<[String]>) -> some View {
+    private func binding(for period: RulePeriod) -> Binding<[String]> {
+        switch period {
+        case .morning: return $rule.morning
+        case .midday: return $rule.midday
+        case .evening: return $rule.evening
+        }
+    }
+
+    private func otherSlugs(than period: RulePeriod) -> Set<String> {
+        var all = Set(rule.allSlugs)
+        for slug in binding(for: period).wrappedValue { all.remove(slug) }
+        return all
+    }
+
+    /// Display title for a rule slug — a prayer, or an Office hour
+    /// ("office-<slug>"). Hours added via the hour view's bookmark were
+    /// previously invisible here because only prayers were resolved.
+    private func itemTitle(_ slug: String) -> String? {
+        if slug.hasPrefix("office-") {
+            return store.hour(slug: String(slug.dropFirst(7)))?.name
+        }
+        return store.prayer(slug: slug)?.title.strippingEm
+    }
+
+    private func ruleSection(_ period: RulePeriod, eng: String, latin: String,
+                             slugs: Binding<[String]>) -> some View {
         Section {
             ForEach(slugs.wrappedValue, id: \.self) { slug in
-                if let prayer = store.prayer(slug: slug) {
+                if let title = itemTitle(slug) {
                     HStack {
-                        Text(prayer.title.strippingEm)
+                        Text(title)
                             .foregroundStyle(Color.primaryText)
+                        if slug.hasPrefix("office-") {
+                            Image(systemName: "clock")
+                                .font(.system(size: 12))
+                                .foregroundStyle(Color.sanctuaryRed)
+                        }
                         Spacer()
                         Button {
                             slugs.wrappedValue.removeAll { $0 == slug }
@@ -469,17 +519,13 @@ struct PrayerRuleEditor: View {
                 }
             }
 
-            Menu {
-                ForEach(store.prayers.filter { !rule.allSlugs.contains($0.slug) }) { prayer in
-                    Button(prayer.title.strippingEm) {
-                        slugs.wrappedValue.append(prayer.slug)
-                    }
-                }
+            Button {
+                addingTo = period
             } label: {
                 HStack {
                     Image(systemName: "plus.circle")
                         .foregroundStyle(Color.sanctuaryRed)
-                    Text("Add Prayer")
+                    Text("Add prayers or hours")
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
@@ -487,6 +533,91 @@ struct PrayerRuleEditor: View {
         } header: {
             Text("\(latin)  .  \(eng)")
         }
+    }
+}
+
+/// Sectioned picker for building a prayer rule: the canonical hours first,
+/// then every prayer grouped by category. Tap to toggle; items already used
+/// in another period are hidden (an item lives in one period at a time).
+struct RuleItemPicker: View {
+    @Environment(\.dismiss) private var dismiss
+    let periodTitle: String
+    @Binding var slugs: [String]
+    let otherSlugs: Set<String>
+    @State private var store = ContentStore.shared
+
+    private static let categoryOrder = ["Rosárium", "Missa", "Devotiónes", "Ante Crucifíxum"]
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    ForEach(store.hours, id: \.slug) { hour in
+                        let slug = "office-\(hour.slug)"
+                        if !otherSlugs.contains(slug) {
+                            pickerRow(slug: slug, title: hour.name,
+                                      subtitle: "\(hour.eng) — \(hour.time)")
+                        }
+                    }
+                } header: {
+                    Text("Horæ Canonicæ  ·  Canonical Hours")
+                }
+
+                ForEach(Self.categoryOrder, id: \.self) { category in
+                    let prayers = store.prayers.filter {
+                        $0.category == category && !otherSlugs.contains($0.slug)
+                    }
+                    if !prayers.isEmpty {
+                        Section {
+                            ForEach(prayers) { prayer in
+                                pickerRow(slug: prayer.slug,
+                                          title: prayer.title.strippingEm,
+                                          subtitle: prayer.eng)
+                            }
+                        } header: {
+                            Text(category)
+                        }
+                    }
+                }
+            }
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
+            .background(Color.pageBackground.ignoresSafeArea())
+            .navigationTitle("Add to \(periodTitle)")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") { dismiss() }
+                        .foregroundStyle(Color.sanctuaryRed)
+                }
+            }
+        }
+    }
+
+    private func pickerRow(slug: String, title: String, subtitle: String) -> some View {
+        let selected = slugs.contains(slug)
+        return Button {
+            if selected {
+                slugs.removeAll { $0 == slug }
+            } else {
+                slugs.append(slug)
+            }
+        } label: {
+            HStack {
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(title)
+                        .foregroundStyle(Color.primaryText)
+                    Text(subtitle)
+                        .font(.captionSm)
+                        .foregroundStyle(Color.secondaryText)
+                }
+                Spacer()
+                Image(systemName: selected ? "checkmark.circle.fill" : "circle")
+                    .foregroundStyle(selected ? Color.sanctuaryRed : Color.frameLine)
+            }
+        }
+        .buttonStyle(.plain)
+        .listRowBackground(Color.pageBackground)
     }
 }
 

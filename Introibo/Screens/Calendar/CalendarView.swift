@@ -478,10 +478,7 @@ private struct DayDetailView: View {
             penanceStrict: ctx.penance.strict,
             discipline: discipline.short
         )
-        if let data = PDFExporter.generatePDF(from: html) {
-            let url = FileManager.default.temporaryDirectory
-                .appendingPathComponent("Introibo-Calendar.pdf")
-            try? data.write(to: url)
+        if let url = PDFExporter.writePDF(from: html, title: title) {
             pdfURL = url
             showShareSheet = true
         }

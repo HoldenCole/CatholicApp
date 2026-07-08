@@ -45,6 +45,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -806,14 +807,23 @@ private fun PrayerRuleEditorSheet(
 
     val currentRule by progressRepo.prayerRule.collectAsState(initial = PrayerRule())
 
-    var morningPrayers by remember(currentRule) { mutableStateOf(currentRule.morning) }
-    var middayPrayers by remember(currentRule) { mutableStateOf(currentRule.midday) }
-    var eveningPrayers by remember(currentRule) { mutableStateOf(currentRule.evening) }
+    var morning by remember(currentRule) { mutableStateOf(currentRule.morning) }
+    var midday by remember(currentRule) { mutableStateOf(currentRule.midday) }
+    var evening by remember(currentRule) { mutableStateOf(currentRule.evening) }
+    var period by remember { mutableStateOf(0) } // 0=morning 1=midday 2=evening
+
+    val selected = when (period) { 0 -> morning; 1 -> midday; else -> evening }
+    val inOtherPeriods = (morning + midday + evening).toSet() - selected.toSet()
+    fun toggle(slug: String) {
+        val updated = if (slug in selected) selected - slug else selected + slug
+        when (period) { 0 -> morning = updated; 1 -> midday = updated; else -> evening = updated }
+    }
 
     val sheetState = androidx.compose.material3.rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
-    val availablePrayers = remember {
-        ContentStore.prayers.toList()
+    val prayersByCategory = remember {
+        listOf("Rosárium", "Missa", "Devotiónes", "Ante Crucifíxum")
+            .map { cat -> cat to ContentStore.prayers.filter { it.category == cat } }
+            .filter { it.second.isNotEmpty() }
     }
 
     androidx.compose.material3.ModalBottomSheet(
@@ -838,11 +848,7 @@ private fun PrayerRuleEditorSheet(
                 androidx.compose.material3.TextButton(onClick = {
                     scope.launch {
                         progressRepo.savePrayerRule(
-                            PrayerRule(
-                                morning = morningPrayers,
-                                midday = middayPrayers,
-                                evening = eveningPrayers,
-                            )
+                            PrayerRule(morning = morning, midday = midday, evening = evening)
                         )
                         sheetState.hide()
                     }.invokeOnCompletion { onDismiss() }
@@ -855,7 +861,7 @@ private fun PrayerRuleEditorSheet(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 12.dp),
+                    .padding(bottom = 12.dp),
             ) {
                 SmallLabel(text = "Regula Orationis", color = colors.sanctuaryRed)
                 Text(
@@ -864,65 +870,67 @@ private fun PrayerRuleEditorSheet(
                     color = colors.primaryText,
                     modifier = Modifier.padding(top = 4.dp),
                 )
-                Text(
-                    text = "Tap prayers to add them to each period",
-                    style = type.captionSm.copy(fontStyle = FontStyle.Italic),
-                    color = colors.secondaryText,
-                )
+            }
+
+            // Period selector — one list below applies to the chosen period.
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp, vertical = 4.dp),
+            ) {
+                listOf(
+                    "Mane" to morning.size,
+                    "Meridies" to midday.size,
+                    "Vesperae" to evening.size,
+                ).forEachIndexed { i, (label, count) ->
+                    val active = period == i
+                    Text(
+                        text = if (count > 0) "$label ($count)" else label,
+                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                        color = if (active) colors.pageBackground else colors.sanctuaryRed,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(50))
+                            .background(if (active) colors.sanctuaryRed else colors.sanctuaryRed.copy(alpha = 0.08f))
+                            .clickable { period = i }
+                            .padding(horizontal = 14.dp, vertical = 6.dp),
+                    )
+                }
             }
 
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(horizontal = 20.dp),
-                verticalArrangement = Arrangement.spacedBy(20.dp),
             ) {
-                // Morning
-                item {
-                    RuleEditorPeriod(
-                        label = "Mane  ·  Morning",
-                        selectedSlugs = morningPrayers,
-                        allPrayers = availablePrayers,
-                        onToggle = { slug ->
-                            morningPrayers = if (slug in morningPrayers) {
-                                morningPrayers - slug
-                            } else {
-                                morningPrayers + slug
-                            }
-                        },
-                    )
+                // Canonical hours first — each adds "office-<slug>" to the rule.
+                item(key = "hours-header") {
+                    RuleSectionHeader("Horæ Canonicæ  ·  Canonical Hours")
+                }
+                items(ContentStore.hours, key = { "office-" + it.slug }) { hour ->
+                    val slug = "office-" + hour.slug
+                    if (slug !in inOtherPeriods) {
+                        RulePickRow(
+                            title = hour.name,
+                            subtitle = hour.eng + " — " + hour.time,
+                            isSelected = slug in selected,
+                            onToggle = { toggle(slug) },
+                        )
+                    }
                 }
 
-                // Midday
-                item {
-                    RuleEditorPeriod(
-                        label = "Meridies  ·  Midday",
-                        selectedSlugs = middayPrayers,
-                        allPrayers = availablePrayers,
-                        onToggle = { slug ->
-                            middayPrayers = if (slug in middayPrayers) {
-                                middayPrayers - slug
-                            } else {
-                                middayPrayers + slug
-                            }
-                        },
-                    )
-                }
-
-                // Evening
-                item {
-                    RuleEditorPeriod(
-                        label = "Vesperae  ·  Evening",
-                        selectedSlugs = eveningPrayers,
-                        allPrayers = availablePrayers,
-                        onToggle = { slug ->
-                            eveningPrayers = if (slug in eveningPrayers) {
-                                eveningPrayers - slug
-                            } else {
-                                eveningPrayers + slug
-                            }
-                        },
-                    )
+                prayersByCategory.forEach { (category, prayers) ->
+                    item(key = "hdr-" + category) { RuleSectionHeader(category) }
+                    items(prayers, key = { it.slug }) { prayer ->
+                        if (prayer.slug !in inOtherPeriods) {
+                            RulePickRow(
+                                title = prayer.title.strippingEm,
+                                subtitle = prayer.eng,
+                                isSelected = prayer.slug in selected,
+                                onToggle = { toggle(prayer.slug) },
+                            )
+                        }
+                    }
                 }
 
                 item { Spacer(Modifier.height(40.dp)) }
@@ -932,48 +940,47 @@ private fun PrayerRuleEditorSheet(
 }
 
 @Composable
-private fun RuleEditorPeriod(
-    label: String,
-    selectedSlugs: List<String>,
-    allPrayers: List<Prayer>,
-    onToggle: (String) -> Unit,
+private fun RuleSectionHeader(text: String) {
+    val colors = IntroiboTheme.colors
+    Column(modifier = Modifier.padding(top = 18.dp, bottom = 6.dp)) {
+        SmallLabel(text = text, color = colors.goldLeaf)
+    }
+}
+
+@Composable
+private fun RulePickRow(
+    title: String,
+    subtitle: String,
+    isSelected: Boolean,
+    onToggle: () -> Unit,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-
-    Column {
-        SmallLabel(text = label, color = colors.goldLeaf)
-        Spacer(Modifier.height(8.dp))
-
-        allPrayers.forEach { prayer ->
-            val isSelected = prayer.slug in selectedSlugs
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onToggle(prayer.slug) }
-                    .padding(vertical = 4.dp),
-            ) {
-                Icon(
-                    imageVector = if (isSelected) Icons.Filled.CheckCircle else Icons.Filled.RadioButtonUnchecked,
-                    contentDescription = null,
-                    tint = if (isSelected) colors.sanctuaryRed else colors.frameLine,
-                    modifier = Modifier.size(20.dp),
-                )
-                Spacer(Modifier.width(10.dp))
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = prayer.title.strippingEm,
-                        style = type.body,
-                        color = if (isSelected) colors.primaryText else colors.secondaryText,
-                    )
-                    Text(
-                        text = prayer.eng,
-                        style = type.captionSm,
-                        color = colors.tertiaryText,
-                    )
-                }
-            }
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onToggle() }
+            .padding(vertical = 5.dp),
+    ) {
+        Icon(
+            imageVector = if (isSelected) Icons.Filled.CheckCircle else Icons.Filled.RadioButtonUnchecked,
+            contentDescription = null,
+            tint = if (isSelected) colors.sanctuaryRed else colors.frameLine,
+            modifier = Modifier.size(20.dp),
+        )
+        Spacer(Modifier.width(10.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = title,
+                style = type.body,
+                color = if (isSelected) colors.primaryText else colors.secondaryText,
+            )
+            Text(
+                text = subtitle,
+                style = type.captionSm,
+                color = colors.tertiaryText,
+            )
         }
     }
 }
