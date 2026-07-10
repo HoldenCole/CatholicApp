@@ -252,6 +252,23 @@ enum MassHTMLExporter {
     // MARK: - Private helpers
 
     /// Wraps one proper section (label + optional ref + bilingual text) in HTML.
+    /// Full interleaved Mass (Ordinary + Propers) as a styled HTML document.
+    /// Each section is (label, latin, english, optional scripture ref) —
+    /// built by MissalView's fullMassItems walk so the PDF can never drift
+    /// from the text share.
+    static func massHTML(
+        title: String,
+        englishTitle: String,
+        sections: [(label: String, lat: String, eng: String, ref: String?)]
+    ) -> String {
+        var body = ""
+        for section in sections {
+            body += sectionHTML(label: section.label, lat: section.lat,
+                                eng: section.eng, ref: section.ref)
+        }
+        return document(title: title, englishTitle: englishTitle, body: body)
+    }
+
     private static func sectionHTML(label: String, lat: String, eng: String, ref: String?) -> String {
         var html = "<div class=\"section\">"
         html += "<div class=\"section-label\">\(escapeHTML(label))</div>"

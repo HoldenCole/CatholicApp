@@ -8,6 +8,9 @@ struct MissalView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.showLeoninePrayers) private var showLeoninePrayers = true
 
+    @State private var pdfURL: URL?
+    @State private var showShareSheet = false
+
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
     private var mode: LanguageMode { LanguageMode(rawValue: languageRaw) ?? .both }
     private var ctx: LiturgicalContext { .current() }
@@ -58,10 +61,28 @@ struct MissalView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    ShareLink(item: fullMassText()) {
+                    Menu {
+                        Button {
+                            let t = massShareTitle
+                            if let url = PDFExporter.writePDF(from: fullMassHTML(), title: t.latin) {
+                                pdfURL = url
+                                showShareSheet = true
+                            }
+                        } label: {
+                            Label("Share as PDF", systemImage: "doc.richtext")
+                        }
+                        ShareLink(item: fullMassText()) {
+                            Label("Share as Text", systemImage: "doc.plaintext")
+                        }
+                    } label: {
                         Image(systemName: "square.and.arrow.up")
                             .foregroundStyle(Color.sanctuaryRed)
                     }
+                }
+            }
+            .sheet(isPresented: $showShareSheet) {
+                if let url = pdfURL {
+                    ShareSheet(items: [url])
                 }
             }
         }
@@ -408,45 +429,30 @@ struct MissalView: View {
 
     // MARK: - Export full Mass as text
 
-    private func fullMassText() -> String {
-        var s = ""
-        let proper = todayProper
+    private enum MassShareItem {
+        case ordinary(title: String, english: String?, lines: [(lat: String, eng: String)])
+        case properText(label: String, lat: String, eng: String, ref: String?)
+    }
 
-        if let proper {
-            s += "✠ \(proper.title.strippingEm)\n"
-            s += "  \(proper.englishTitle)\n"
-            s += "  \(rite.short)\n"
-        } else {
-            s += "✠ Ordo Missæ\n"
-            s += "  \(rite.short)\n"
-        }
-        s += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    /// The single source of truth for the interleave walk — both the text
+    /// share and the PDF render from these items, so they can never drift.
+    private func fullMassItems() -> [MassShareItem] {
+        var items: [MassShareItem] = []
+        let proper = todayProper
 
         func addOrdinary(_ slug: String) {
             guard let section = store.missal.first(where: { $0.slug == slug }) else { return }
-            s += "══ \(section.title.uppercased())"
-            if let eng = section.english { s += " · \(eng)" }
-            s += " ══\n\n"
-            for line in section.body {
-                s += "\(line.lat.strippingEm)\n"
-                s += "\(line.eng.strippingEm)\n\n"
-            }
+            items.append(.ordinary(
+                title: section.title,
+                english: section.english,
+                lines: section.body.map { ($0.lat.strippingEm, $0.eng.strippingEm) }
+            ))
         }
 
         func addProper(_ label: String, lat: String, eng: String, ref: String? = nil) {
-            s += "┌ \(label.uppercased())\n"
-            if let ref, !ref.isEmpty { s += "│ \(ref)\n" }
-            s += "│\n"
-            for line in lat.strippingEm.components(separatedBy: "\n") where !line.isEmpty {
-                s += "│  \(line)\n"
-            }
-            s += "│\n"
-            for line in eng.strippingEm.components(separatedBy: "\n") where !line.isEmpty {
-                s += "│  \(line)\n"
-            }
-            s += "└─────\n\n"
+            items.append(.properText(label: label, lat: lat.strippingEm,
+                                     eng: eng.strippingEm, ref: ref))
         }
-
 
         if let p = proper {
             // Psalm 42 omitted in Passiontide and Requiem Masses
@@ -541,8 +547,70 @@ struct MissalView: View {
             addOrdinary("leonine")
         }
 
+        return items
+    }
+
+    private var massShareTitle: (latin: String, english: String) {
+        if let p = todayProper { return (p.title.strippingEm, p.englishTitle) }
+        return ("Ordo Missæ", rite.short)
+    }
+
+    private func fullMassText() -> String {
+        var s = ""
+        if let proper = todayProper {
+            s += "✠ \(proper.title.strippingEm)\n"
+            s += "  \(proper.englishTitle)\n"
+            s += "  \(rite.short)\n"
+        } else {
+            s += "✠ Ordo Missæ\n"
+            s += "  \(rite.short)\n"
+        }
+        s += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+        for item in fullMassItems() {
+            switch item {
+            case .ordinary(let title, let english, let lines):
+                s += "══ \(title.uppercased())"
+                if let english { s += " · \(english)" }
+                s += " ══\n\n"
+                for line in lines {
+                    s += "\(line.lat)\n"
+                    s += "\(line.eng)\n\n"
+                }
+            case .properText(let label, let lat, let eng, let ref):
+                s += "┌ \(label.uppercased())\n"
+                if let ref, !ref.isEmpty { s += "│ \(ref)\n" }
+                s += "│\n"
+                for line in lat.components(separatedBy: "\n") where !line.isEmpty {
+                    s += "│  \(line)\n"
+                }
+                s += "│\n"
+                for line in eng.components(separatedBy: "\n") where !line.isEmpty {
+                    s += "│  \(line)\n"
+                }
+                s += "└─────\n\n"
+            }
+        }
+
         s += "— Introibo (app.introibo) —"
         return s
+    }
+
+    private func fullMassHTML() -> String {
+        let sections = fullMassItems().map { item -> (label: String, lat: String, eng: String, ref: String?) in
+            switch item {
+            case .ordinary(let title, let english, let lines):
+                let label = english.map { "\(title)  ·  \($0)" } ?? title
+                return (label: label,
+                        lat: lines.map { $0.lat }.joined(separator: "\n"),
+                        eng: lines.map { $0.eng }.joined(separator: "\n"),
+                        ref: nil)
+            case .properText(let label, let lat, let eng, let ref):
+                return (label: label, lat: lat, eng: eng, ref: ref)
+            }
+        }
+        let t = massShareTitle
+        return MassHTMLExporter.massHTML(title: t.latin, englishTitle: t.english, sections: sections)
     }
 
     // MARK: - Ordinary-only fallback

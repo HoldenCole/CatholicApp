@@ -103,6 +103,20 @@ object MassHTMLExporter {
     // MARK: - Private helpers
 
     /** Wraps one proper section (label + optional ref + bilingual text) in HTML. */
+    data class MassSection(val label: String, val lat: String, val eng: String, val ref: String? = null)
+
+    /**
+     * Full interleaved Mass (Ordinary + Propers) as a styled HTML document.
+     * Sections come from MissalScreen's buildFullMassItems walk, so the PDF
+     * can never drift from the text share.
+     */
+    fun massHTML(title: String, englishTitle: String, sections: List<MassSection>): String {
+        val body = buildString {
+            sections.forEach { append(sectionHTML(it.label, it.lat, it.eng, it.ref)) }
+        }
+        return document(title, englishTitle, body)
+    }
+
     private fun sectionHTML(label: String, lat: String, eng: String, ref: String?): String {
         return buildString {
             append("""<div class="section">""")

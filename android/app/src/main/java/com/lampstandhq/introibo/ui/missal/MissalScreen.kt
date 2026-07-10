@@ -17,6 +17,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -36,6 +38,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.export.MassHTMLExporter
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.liturgical.LiturgicalSeason
 import com.lampstandhq.introibo.data.model.MassProper
@@ -112,19 +115,46 @@ fun MissalScreen() {
                 }
             },
             actions = {
-                IconButton(onClick = {
-                    val shareText = buildFullMassText(todayProper, rite, ctx, showLeonine)
-                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                        this.type = "text/plain"
-                        putExtra(Intent.EXTRA_TEXT, shareText)
+                var showShareMenu by remember { mutableStateOf(false) }
+                Box {
+                    IconButton(onClick = { showShareMenu = true }) {
+                        Icon(
+                            imageVector = Icons.Filled.Share,
+                            contentDescription = "Share",
+                            tint = colors.sanctuaryRed,
+                        )
                     }
-                    context.startActivity(Intent.createChooser(shareIntent, "Share Mass text"))
-                }) {
-                    Icon(
-                        imageVector = Icons.Filled.Share,
-                        contentDescription = "Share",
-                        tint = colors.sanctuaryRed,
-                    )
+                    DropdownMenu(expanded = showShareMenu, onDismissRequest = { showShareMenu = false }) {
+                        DropdownMenuItem(
+                            text = { Text("Share as PDF") },
+                            onClick = {
+                                showShareMenu = false
+                                val items = buildFullMassItems(todayProper, rite, ctx, showLeonine)
+                                val html = com.lampstandhq.introibo.export.MassHTMLExporter.massHTML(
+                                    title = todayProper?.title ?: "Ordo Miss\u00e6",
+                                    englishTitle = todayProper?.englishTitle ?: rite.short,
+                                    sections = items.map { it.toHtmlSection() },
+                                )
+                                com.lampstandhq.introibo.export.PDFExporter.sharePDF(
+                                    context, html,
+                                    fileName = todayProper?.title ?: "Ordo Missae",
+                                    title = "Share Mass",
+                                )
+                            },
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Share as Text") },
+                            onClick = {
+                                showShareMenu = false
+                                val shareText = buildFullMassText(todayProper, rite, ctx, showLeonine)
+                                val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                                    this.type = "text/plain"
+                                    putExtra(Intent.EXTRA_TEXT, shareText)
+                                }
+                                context.startActivity(Intent.createChooser(shareIntent, "Share Mass text"))
+                            },
+                        )
+                    }
                 }
             },
             colors = TopAppBarDefaults.topAppBarColors(
@@ -685,47 +715,55 @@ fun ReadingSection(
 // Full Mass text export
 // ---------------------------------------------------------------------------
 
-private fun buildFullMassText(
+/**
+ * One shared walk of the interleaved Mass (Ordinary + Propers). The text
+ * share and the PDF render from the same items so they can never drift.
+ */
+private sealed class MassShareItem {
+    /** An Ordinary section; canonStyle marks the Canon's bespoke text layout. */
+    data class Ordinary(
+        val title: String,
+        val english: String?,
+        val pairs: List<Pair<String, String>>,
+        val canonStyle: Boolean = false,
+    ) : MassShareItem()
+
+    data class ProperText(
+        val label: String,
+        val lat: String,
+        val eng: String,
+        val ref: String? = null,
+    ) : MassShareItem()
+
+    fun toHtmlSection(): MassHTMLExporter.MassSection = when (this) {
+        is Ordinary -> MassHTMLExporter.MassSection(
+            label = english?.let { "$title  ·  $it" } ?: title,
+            lat = pairs.joinToString("\n") { it.first },
+            eng = pairs.joinToString("\n") { it.second },
+        )
+        is ProperText -> MassHTMLExporter.MassSection(label, lat, eng, ref)
+    }
+}
+
+private fun buildFullMassItems(
     proper: MassProper?,
     rite: MissalRite,
     ctx: LiturgicalContext,
     showLeonine: Boolean = true,
-): String {
-    val lines = mutableListOf<String>()
-
-    if (proper != null) {
-        lines.add("✠ ${proper.title}")
-        lines.add("  ${proper.englishTitle}")
-        lines.add("  ${rite.short}")
-    } else {
-        lines.add("✠ Ordo Missæ")
-        lines.add("  ${rite.short}")
-    }
-    lines.add("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    lines.add("")
+): List<MassShareItem> {
+    val items = mutableListOf<MassShareItem>()
 
     fun addOrdinary(slug: String) {
         val section = ContentStore.missal.firstOrNull { it.slug == slug } ?: return
-        var header = "══ ${section.title.uppercase()}"
-        section.english?.let { header += " · $it" }
-        lines.add("$header ══")
-        lines.add("")
-        section.body.forEach { line ->
-            lines.add(line.lat)
-            lines.add(line.eng)
-            lines.add("")
-        }
+        items.add(MassShareItem.Ordinary(
+            title = section.title,
+            english = section.english,
+            pairs = section.body.map { it.lat to it.eng },
+        ))
     }
 
     fun addProper(label: String, lat: String, eng: String, ref: String? = null) {
-        lines.add("┌ ${label.uppercase()}")
-        if (!ref.isNullOrEmpty()) lines.add("│ $ref")
-        lines.add("│")
-        lat.lines().filter { it.isNotEmpty() }.forEach { lines.add("│  $it") }
-        lines.add("│")
-        eng.lines().filter { it.isNotEmpty() }.forEach { lines.add("│  $it") }
-        lines.add("└─────")
-        lines.add("")
+        items.add(MassShareItem.ProperText(label, lat, eng, ref))
     }
 
     // Psalm 42 omitted in Passiontide and Requiem Masses
@@ -794,10 +832,7 @@ private fun buildFullMassText(
     val variantKey = canonVariantKey(ctx.properSlug, rite)
     val canonSection = ContentStore.missal.firstOrNull { it.slug == "canon" }
     if (variantKey != null && canonSection != null) {
-        lines.add("=== ${canonSection.title} ===")
-        canonSection.english?.let { lines.add(it) }
-        lines.add("")
-        canonSection.body.forEach { line ->
+        val pairs = canonSection.body.map { line ->
             var lat = line.lat
             var eng = line.eng
             if (line.lat.startsWith("Commúnicántes")) {
@@ -808,10 +843,14 @@ private fun buildFullMassText(
                 val variant = ContentStore.canonVariant("hanc_igitur", variantKey)
                 if (variant != null) { lat = variant.first; eng = variant.second }
             }
-            lines.add(lat)
-            lines.add(eng)
-            lines.add("")
+            lat to eng
         }
+        items.add(MassShareItem.Ordinary(
+            title = canonSection.title,
+            english = canonSection.english,
+            pairs = pairs,
+            canonStyle = true,
+        ))
     } else {
         addOrdinary("canon")
     }
@@ -854,6 +893,59 @@ private fun buildFullMassText(
     addOrdinary("ultimum")
     if (showLeonine) {
         addOrdinary("leonine")
+    }
+
+    return items
+}
+
+private fun buildFullMassText(
+    proper: MassProper?,
+    rite: MissalRite,
+    ctx: LiturgicalContext,
+    showLeonine: Boolean = true,
+): String {
+    val lines = mutableListOf<String>()
+
+    if (proper != null) {
+        lines.add("✠ ${proper.title}")
+        lines.add("  ${proper.englishTitle}")
+        lines.add("  ${rite.short}")
+    } else {
+        lines.add("✠ Ordo Missæ")
+        lines.add("  ${rite.short}")
+    }
+    lines.add("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    lines.add("")
+
+    buildFullMassItems(proper, rite, ctx, showLeonine).forEach { item ->
+        when (item) {
+            is MassShareItem.Ordinary -> {
+                if (item.canonStyle) {
+                    lines.add("=== ${item.title} ===")
+                    item.english?.let { lines.add(it) }
+                } else {
+                    var header = "══ ${item.title.uppercase()}"
+                    item.english?.let { header += " · $it" }
+                    lines.add("$header ══")
+                }
+                lines.add("")
+                item.pairs.forEach { (lat, eng) ->
+                    lines.add(lat)
+                    lines.add(eng)
+                    lines.add("")
+                }
+            }
+            is MassShareItem.ProperText -> {
+                lines.add("┌ ${item.label.uppercase()}")
+                if (!item.ref.isNullOrEmpty()) lines.add("│ ${item.ref}")
+                lines.add("│")
+                item.lat.lines().filter { it.isNotEmpty() }.forEach { lines.add("│  $it") }
+                lines.add("│")
+                item.eng.lines().filter { it.isNotEmpty() }.forEach { lines.add("│  $it") }
+                lines.add("└─────")
+                lines.add("")
+            }
+        }
     }
 
     lines.add("— Introibo (app.introibo) —")
