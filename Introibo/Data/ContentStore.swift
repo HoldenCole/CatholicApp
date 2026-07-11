@@ -99,9 +99,12 @@ final class ContentStore {
         let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
         let ordo = ordoForDate(ctx.date, rite: rite)
 
-        // Feasts (Semiduplex and above, rank ≥ 2.0) use the festal psalm
-        // scheme at Lauds & Vespers; ferias and Simples use ferial psalms.
-        let isFestal = ordo.map { $0.rank >= 2.0 } ?? false
+        // Festal (Sunday) psalm scheme at Lauds & Vespers belongs to I/II
+        // class feasts only (rank ≥ 5). Since Divino Afflatu (1911) — and in
+        // the 1962 books — III class feasts and ferias pray the psalms of the
+        // occurring weekday. The old rank ≥ 2.0 gate wrongly gave most
+        // weekdays the Sunday psalms.
+        let isFestal = ordo.map { $0.rank >= 5.0 } ?? false
         // Compline keeps the Sunday psalms only on Sundays and I/II-class
         // feasts (rank ≥ 5); III class and below use the ferial Compline.
         let festalCompline = ctx.isSunday || (ordo.map { $0.rank >= 5.0 } ?? false)

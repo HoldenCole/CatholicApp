@@ -463,9 +463,12 @@ object ContentStore {
         val template = hour(slug) ?: return null
         val ctx = LiturgicalContext.current()
         val ordo = ordoForDate(ctx.date, rite)
-        // Feasts (Semiduplex and above, rank >= 2.0) use festal psalm scheme
-        // at Lauds & Vespers; ferias and Simples use ferial psalms.
-        val isFestal = ordo?.rank?.let { it >= 2.0 } ?: false
+        // Festal (Sunday) psalm scheme at Lauds & Vespers belongs to I/II
+        // class feasts only (rank >= 5). Since Divino Afflatu (1911) — and in
+        // the 1962 books — III class feasts and ferias pray the psalms of the
+        // occurring weekday. The old rank >= 2.0 gate wrongly gave most
+        // weekdays the Sunday psalms.
+        val isFestal = ordo?.rank?.let { it >= 5.0 } ?: false
         // Compline keeps the Sunday psalms only on Sundays and I/II-class
         // feasts (rank >= 5); III class and below use the ferial Compline.
         val festalCompline = ctx.isSunday || (ordo?.rank?.let { it >= 5.0 } ?: false)
