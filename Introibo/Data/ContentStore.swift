@@ -104,7 +104,11 @@ final class ContentStore {
         // the 1962 books — III class feasts and ferias pray the psalms of the
         // occurring weekday. The old rank ≥ 2.0 gate wrongly gave most
         // weekdays the Sunday psalms.
-        let isFestal = ordo.map { $0.rank >= 5.0 } ?? false
+        // 1955/pre-1955 keep the Divino Afflatu rule: every double and
+        // semidouble (rank ≥ 3) prays the festal scheme; 1962 restricts it
+        // to I/II class (rank ≥ 5).
+        let festalThreshold: Double = (rite == .rite1962) ? 5.0 : 3.0
+        let isFestal = ordo.map { $0.rank >= festalThreshold } ?? false
         // Compline keeps the Sunday psalms only on Sundays and I/II-class
         // feasts (rank ≥ 5); III class and below use the ferial Compline.
         let festalCompline = ctx.isSunday || (ordo.map { $0.rank >= 5.0 } ?? false)
@@ -118,12 +122,16 @@ final class ContentStore {
         // a single nocturn of 9 psalms and 3 lessons.
         let isClassIorII: Bool = {
             guard let ordo else { return false }
+            // Pre-1960 rubrics: all doubles/semidoubles (rank ≥ 3) and all
+            // Sundays have 3 nocturns / 9 lessons; only ferias and simples
+            // use the single nocturn.
+            if rite != .rite1962 && (ordo.rank >= 3.0 || ctx.isSunday) { return true }
             if ordo.winner == "sanctoral" && ordo.rank >= 5.0 { return true }
             if ordo.rank >= 6.0 && !ctx.isSunday { return true }
             return false
         }()
         let matinsNocturns = isClassIorII ? 3 : 1
-        let matinsTeDeum = computeMatinsTeDeum(ctx: ctx, ordo: ordo)
+        let matinsTeDeum = computeMatinsTeDeum(ctx: ctx, ordo: ordo, rite: rite)
 
         var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum)
 
@@ -171,8 +179,11 @@ final class ContentStore {
     /// on days of the Christmas/Easter/Pentecost seasons and their octaves;
     /// omitted on ordinary ferias and on all Advent and Lent/Passion days —
     /// except feasts, which keep it even in penitential seasons.
-    private func computeMatinsTeDeum(ctx: LiturgicalContext, ordo: OrdoEntry?) -> Bool {
-        let isFeast = (ordo?.winner == "sanctoral") && ((ordo?.rank ?? 0) >= 3.0)
+    private func computeMatinsTeDeum(ctx: LiturgicalContext, ordo: OrdoEntry?, rite: MissalRite = .rite1962) -> Bool {
+        // Pre-1960 rubrics: octave days and other festive temporal winners
+        // (rank ≥ 3) also say the Te Deum, not just sanctoral feasts.
+        let isFeast = ((ordo?.winner == "sanctoral") && ((ordo?.rank ?? 0) >= 3.0)) ||
+            (rite != .rite1962 && (ordo?.rank ?? 0) >= 3.0)
         let penitential = ctx.season == .advent || ctx.season == .lent || ctx.season == .passion
         if penitential { return isFeast }
         if ctx.isSunday { return true }
@@ -330,7 +341,7 @@ final class ContentStore {
         }
 
         // Inheritance: octave days inherit Mass propers from feast day.
-        if let parent = inheritedTemporalKey(for: key),
+        if let parent = inheritedTemporalKey(for: key, rite: rite),
            let mp = missalTempora[parent]?.toMassProper(key: parent, ordo: entry) {
             return mp
         }
@@ -514,7 +525,10 @@ final class ContentStore {
 
     /// Returns the inherited temporal key (e.g., octave days inherit from the feast).
     /// Currently handles the Ascension octave: pasc5-5 through pasc6-* inherit from pasc5-4.
-    private func inheritedTemporalKey(for key: String) -> String? {
+    private func inheritedTemporalKey(for key: String, rite: MissalRite) -> String? {
+        // The Ascension octave exists only in the pre-1955 books; 1955/1962
+        // ferias in that range keep their own (per-annum) formulary.
+        guard rite == .pre1955 else { return nil }
         // Ascension octave (Pasc5-5 through Pasc6-4)
         let ascensionOctave: Set<String> = [
             "pasc5-5", "pasc5-6", "pasc6-0", "pasc6-1",

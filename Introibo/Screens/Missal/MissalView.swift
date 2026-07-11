@@ -487,7 +487,11 @@ struct MissalView: View {
             addProper("Evangélium · Gospel", lat: p.gospel.lat, eng: p.gospel.eng, ref: p.gospel.ref)
         }
 
-        addOrdinary("credo")
+        if let p = proper {
+            if showCredo(p) { addOrdinary("credo") }
+        } else {
+            addOrdinary("credo")
+        }
 
         if let p = proper {
             addProper("Offertórium · Offertory", lat: p.offertory.lat, eng: p.offertory.eng)
@@ -506,13 +510,33 @@ struct MissalView: View {
             addOrdinary("preface")
         }
         addOrdinary("sanctus")
-        addOrdinary("canon")
+        // Canon with proper Communicantes / Hanc igitur (on-screen parity)
+        if let variantKey = canonVariantKey(for: rite),
+           let section = store.missal.first(where: { $0.slug == "canon" }) {
+            let lines: [(lat: String, eng: String)] = section.body.map { line in
+                var lat = line.lat, eng = line.eng
+                if line.lat.hasPrefix("Commúnicántes"),
+                   let v = store.canonVariant("communicantes", key: variantKey) {
+                    lat = v.lat; eng = v.eng
+                }
+                if line.lat.hasPrefix("Hanc ígitur"),
+                   let v = store.canonVariant("hanc_igitur", key: variantKey) {
+                    lat = v.lat; eng = v.eng
+                }
+                return (lat.strippingEm, eng.strippingEm)
+            }
+            items.append(.ordinary(title: section.title, english: section.english, lines: lines))
+        } else {
+            addOrdinary("canon")
+        }
         addOrdinary("pater")
         if proper?.color == "black" {
             addOrdinary("agnus-requiem")
         } else {
             addOrdinary("agnus")
         }
+        // Confiteor before Communion — retained in all pre-1964 rites
+        addOrdinary("confiteor-communion")
         addOrdinary("domine")
 
         if let p = proper {
@@ -542,7 +566,7 @@ struct MissalView: View {
             addOrdinary("ite")
         }
 
-        addOrdinary("ultimum")
+        addOrdinary(lastGospelOverride(for: proper) ?? "ultimum")
         if showLeoninePrayers {
             addOrdinary("leonine")
         }

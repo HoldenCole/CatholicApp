@@ -175,9 +175,10 @@ fun MissalScreen() {
                 // Interleaved Mass: Ordinary + Propers
                 interleavedMassItems(todayProper, ctx, rite, showLeonine)
             } else {
-                // Ordinary only
+                // Ordinary only — hide sections that appear only when selected
+                // for a specific season/feast/rite (iOS parity).
                 items(
-                    items = ContentStore.missal,
+                    items = ContentStore.missal.filter { it.slug !in properPrefaceSlugs },
                     key = { it.slug },
                 ) { section ->
                     OrdinarySectionBlock(section = section)
@@ -220,7 +221,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     ordinaryItem("confiteor")
 
     // Introit
-    item { ProperSection(latin = "Introitus", subtitle = "Introit", text = proper.introit) }
+    item {
+        // Gloria Patri suppressed from the Introit in Passiontide (iOS parity).
+        val introit = if (ctx.season == LiturgicalSeason.PASSION) stripGloriaPatri(proper.introit) else proper.introit
+        ProperSection(latin = "Introitus", subtitle = "Introit", text = introit)
+    }
 
     // Kyrie
     ordinaryItem("kyrie")
@@ -321,6 +326,32 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
  * Currently: Palm Sunday in the pre-1955 rite uses Matt 21 (the blessing-of-palms
  * gospel) as the Last Gospel of the principal Mass.
  */
+/** Sections shown only when selected for a season/feast/rite (iOS parity). */
+private val properPrefaceSlugs = setOf(
+    "preface-advent", "preface-nativity", "preface-epiphany",
+    "preface-lent", "preface-cross", "preface-easter",
+    "preface-ascension", "preface-pentecost", "preface-trinity",
+    "preface-bvm", "preface-joseph", "preface-apostles",
+    "preface-requiem",
+    "agnus-requiem",
+    "ite-alleluia",
+)
+
+/**
+ * Strips the Gloria Patri doxology from a proper text (the Introit during
+ * Passiontide — the Gloria Patri is suppressed from Passion Sunday until
+ * the Easter Vigil). Port of iOS MissalView.stripGloriaPatri.
+ */
+private fun stripGloriaPatri(text: ProperText): ProperText {
+    val lat = text.lat
+        .replace(Regex("""\s*℣\.?\s*Glória Patri[^℣]*$"""), "")
+        .replace(Regex("""\s*Glória Patri,\s*et Fílio.*?(Amen\.|Sancto\.)"""), "")
+    val eng = text.eng
+        .replace(Regex("""\s*℣\.?\s*Glory be to the Father[^℣]*$"""), "")
+        .replace(Regex("""\s*Glory be to the Father,?\s*and to the Son.*?(Amen\.|Ghost\.)"""), "")
+    return ProperText(lat = lat, eng = eng, ref = text.ref)
+}
+
 private fun lastGospelOverride(ctx: LiturgicalContext, rite: MissalRite): String? {
     val slug = ctx.properSlug ?: ""
     if (rite == MissalRite.PRE_1955 && (slug == "palm-sunday" || slug == "quad6-0")) {
@@ -416,13 +447,15 @@ private fun isApostleEvangelistOrDoctor(proper: MassProper): Boolean {
  *   Communicantes is used.
  * - Christmas, Epiphany, and Ascension behave identically across all three rites.
  */
-private fun canonVariantKey(slug: String?, rite: MissalRite): String? {
+private fun canonVariantKey(slug: String?, temporalKey: String?, rite: MissalRite): String? {
+    // Christmastide ferias carry temporal keys "natN" even when the slug is a
+    // saint's; the octave Communicantes applies throughout (iOS parity).
+    if (temporalKey != null && temporalKey.startsWith("nat")) return "christmas"
     if (slug == null) return null
 
     // Christmas (Dec 25 + octave days Dec 26-31)
     if (slug == "christmas" || slug.startsWith("christmas-")) return "christmas"
     if (slug == "st-stephen" || slug == "holy-innocents") return "christmas"
-    if (slug.startsWith("nat") && slug.length <= 5) return "christmas"
     if (slug.startsWith("sancti-12-2") || slug.startsWith("sancti-12-3")) return "christmas"
 
     // Epiphany (Jan 6)
@@ -465,7 +498,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.canonWithProperInsert
     ctx: LiturgicalContext,
     rite: MissalRite,
 ) {
-    val variantKey = canonVariantKey(ctx.properSlug, rite)
+    val variantKey = canonVariantKey(ctx.properSlug, ctx.temporalKey, rite)
     val section = ContentStore.missal.firstOrNull { it.slug == "canon" }
 
     if (variantKey != null && section != null) {
@@ -777,7 +810,8 @@ private fun buildFullMassItems(
     addOrdinary("confiteor")
 
     proper?.let { p ->
-        addProper("Introitus · Introit", p.introit.lat, p.introit.eng)
+        val introit = if (ctx.season == LiturgicalSeason.PASSION) stripGloriaPatri(p.introit) else p.introit
+        addProper("Introitus · Introit", introit.lat, introit.eng)
     }
 
     addOrdinary("kyrie")
@@ -829,7 +863,7 @@ private fun buildFullMassItems(
     addOrdinary("sanctus")
 
     // Canon — with proper Communicantes/Hanc igitur insertions when applicable
-    val variantKey = canonVariantKey(ctx.properSlug, rite)
+    val variantKey = canonVariantKey(ctx.properSlug, ctx.temporalKey, rite)
     val canonSection = ContentStore.missal.firstOrNull { it.slug == "canon" }
     if (variantKey != null && canonSection != null) {
         val pairs = canonSection.body.map { line ->
@@ -862,6 +896,8 @@ private fun buildFullMassItems(
     } else {
         addOrdinary("agnus")
     }
+    // Confiteor before Communion — retained in all pre-1964 rites (on-screen parity)
+    addOrdinary("confiteor-communion")
     addOrdinary("domine")
 
     proper?.let { p ->
@@ -890,7 +926,8 @@ private fun buildFullMassItems(
         addOrdinary("ite")
     }
 
-    addOrdinary("ultimum")
+    // Last Gospel — Palm Sunday substitutes Matt 21:1-9 in the pre-1955 rite
+    addOrdinary(lastGospelOverride(ctx, rite) ?: "ultimum")
     if (showLeonine) {
         addOrdinary("leonine")
     }

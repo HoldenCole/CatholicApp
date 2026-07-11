@@ -52,8 +52,8 @@ object ProperCalendar {
         return slug.matches(Regex("^(pentecost|epiphany)-\\d+-6$"))
     }
 
-    fun properSlugWithFallback(date: LocalDate, store: List<String>): String? {
-        val slug = properSlug(date)
+    fun properSlugWithFallback(date: LocalDate, store: List<String>, rite: MissalRite = MissalRite.RITE_1962): String? {
+        val slug = properSlug(date, rite = rite)
         if (slug != null && store.contains(slug)) {
             return slug
         }
@@ -65,7 +65,7 @@ object ProperCalendar {
                 return sundaySlug
             }
         }
-        return properSlug(date)
+        return properSlug(date, rite = rite)
     }
 
     // ---- Moveable feasts that take precedence over fixed sanctorale ----

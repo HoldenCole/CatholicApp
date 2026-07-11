@@ -272,7 +272,7 @@ object ContentStore {
         missalTempora[key]?.toMassProper(key, entry)?.let { return it }
         missalSanctoral[key]?.toMassProper(key, entry)?.let { return it }
         resolveCommuneRedirect(key, entry)?.let { return it }
-        inheritedTemporalKey(key)?.let { parent ->
+        inheritedTemporalKey(key, rite)?.let { parent ->
             missalTempora[parent]?.toMassProper(parent, entry)?.let { return it }
         }
         propers.firstOrNull { it.slug == key }?.let { return it }
@@ -445,8 +445,11 @@ object ContentStore {
         "ad", "ac", "et", "de", "sub", "sancti", "sanctae", "sanctæ"
     )
 
-    private fun inheritedTemporalKey(key: String): String? {
-        // Ascension octave (Pasc5-5 through Pasc6-4) inherits from Pasc5-4
+    private fun inheritedTemporalKey(key: String, rite: MissalRite): String? {
+        // Ascension octave (Pasc5-5 through Pasc6-4) inherits from Pasc5-4.
+        // The octave exists only in the pre-1955 books; 1955/1962 ferias in
+        // that range keep their own (per-annum) formulary.
+        if (rite != MissalRite.PRE_1955) return null
         val ascensionOctave = setOf(
             "pasc5-5", "pasc5-6", "pasc6-0", "pasc6-1",
             "pasc6-2", "pasc6-3", "pasc6-4"
@@ -461,14 +464,20 @@ object ContentStore {
     fun hourForToday(slug: String, rite: MissalRite = MissalRite.RITE_1962): Hour? {
       try {
         val template = hour(slug) ?: return null
-        val ctx = LiturgicalContext.current()
+        // Build the context with the caller's rite — ctx.properSlug feeds the
+        // Preces Feriales gate in OfficeAssembler (iOS reads the rite here too).
+        val ctx = LiturgicalContext.forDate(java.time.LocalDate.now(), rite = rite)
         val ordo = ordoForDate(ctx.date, rite)
         // Festal (Sunday) psalm scheme at Lauds & Vespers belongs to I/II
         // class feasts only (rank >= 5). Since Divino Afflatu (1911) — and in
         // the 1962 books — III class feasts and ferias pray the psalms of the
         // occurring weekday. The old rank >= 2.0 gate wrongly gave most
         // weekdays the Sunday psalms.
-        val isFestal = ordo?.rank?.let { it >= 5.0 } ?: false
+        // 1955/pre-1955 keep the Divino Afflatu rule: every double and
+        // semidouble (rank >= 3) prays the festal scheme; 1962 restricts it
+        // to I/II class (rank >= 5).
+        val festalThreshold = if (rite == MissalRite.RITE_1962) 5.0 else 3.0
+        val isFestal = ordo?.rank?.let { it >= festalThreshold } ?: false
         // Compline keeps the Sunday psalms only on Sundays and I/II-class
         // feasts (rank >= 5); III class and below use the ferial Compline.
         val festalCompline = ctx.isSunday || (ordo?.rank?.let { it >= 5.0 } ?: false)
@@ -482,12 +491,16 @@ object ContentStore {
         // a single nocturn of 9 psalms and 3 lessons.
         val isClassIorII = when {
             ordo == null -> false
+            // Pre-1960 rubrics: all doubles/semidoubles (rank >= 3) and all
+            // Sundays have 3 nocturns / 9 lessons; only ferias and simples
+            // use the single nocturn.
+            rite != MissalRite.RITE_1962 && (ordo.rank >= 3.0 || ctx.isSunday) -> true
             ordo.winner == "sanctoral" && ordo.rank >= 5.0 -> true
             ordo.rank >= 6.0 && !ctx.isSunday -> true
             else -> false
         }
         val matinsNocturns = if (isClassIorII) 3 else 1
-        val matinsTeDeum = computeMatinsTeDeum(ctx, ordo)
+        val matinsTeDeum = computeMatinsTeDeum(ctx, ordo, rite)
 
         var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum)
         if (ordo != null) {
@@ -548,8 +561,11 @@ object ContentStore {
      * on ordinary ferias and on all Advent and Lent/Passion days -- except
      * feasts, which keep it even in penitential seasons.
      */
-    private fun computeMatinsTeDeum(ctx: LiturgicalContext, ordo: OrdoEntry?): Boolean {
-        val isFeast = ordo?.winner == "sanctoral" && (ordo.rank) >= 3.0
+    private fun computeMatinsTeDeum(ctx: LiturgicalContext, ordo: OrdoEntry?, rite: MissalRite = MissalRite.RITE_1962): Boolean {
+        // Pre-1960 rubrics: octave days and other festive temporal winners
+        // (rank >= 3) also say the Te Deum, not just sanctoral feasts.
+        val isFeast = (ordo?.winner == "sanctoral" && (ordo.rank) >= 3.0) ||
+            (rite != MissalRite.RITE_1962 && (ordo?.rank ?: 0.0) >= 3.0)
         val penitential = ctx.season == LiturgicalSeason.ADVENT ||
             ctx.season == LiturgicalSeason.LENT ||
             ctx.season == LiturgicalSeason.PASSION
