@@ -152,10 +152,24 @@ final class ContentStore {
                 if let saint = sanctoralPropers[ordo.winnerKey] {
                     assembled = applyProperOverrides(assembled, overrides: saint)
                 }
+                // Pre-1955 old-rite variant of the saint's Office ("<key>o"),
+                // e.g. the festive Epiphany-octave lessons the 1960 books
+                // reduced to ferial commemorations.
+                if rite == .pre1955, let oSaint = sanctoralPropers[ordo.winnerKey + "o"] {
+                    assembled = applyProperOverrides(assembled, overrides: oSaint)
+                }
             } else if let temporalKey = ordo.temporal,
                       let tempOverrides = officeAssembler.temporalPropers[temporalKey] {
                 assembled = applyProperOverrides(assembled, overrides: tempOverrides)
             }
+        }
+
+        // Pre-1955 old-rite Office variants: DO ships "<key>o" overlays (extra
+        // Matins lessons etc. for the octaves the later books suppressed).
+        // Layer them over the base temporal content.
+        if rite == .pre1955, let tKey = ctx.temporalKey,
+           let oOverrides = officeAssembler.temporalPropers[tKey + "o"] {
+            assembled = applyProperOverrides(assembled, overrides: oOverrides)
         }
 
         // Dec 17-23 ("O Antiphon" days): override the Little Hours antiphons

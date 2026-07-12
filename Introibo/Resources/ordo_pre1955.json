@@ -2752,13 +2752,13 @@
   "2024-09-07": {
     "temporal": "pent15-6",
     "sanctoral": "09-07",
-    "winner": "temporal",
-    "winnerKey": "pent15-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XV post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent15-6"
   },
   "2024-09-08": {
     "temporal": "pent16-0",
@@ -3137,13 +3137,13 @@
   "2024-10-12": {
     "temporal": "pent20-6",
     "sanctoral": "10-12",
-    "winner": "temporal",
-    "winnerKey": "pent20-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XX post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent20-6"
   },
   "2024-10-13": {
     "temporal": "pent21-0",
@@ -4677,13 +4677,13 @@
   "2025-03-01": {
     "temporal": "quadp2-6",
     "sanctoral": "03-01",
-    "winner": "temporal",
-    "winnerKey": "quadp2-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam Sexagesimæ",
-    "color": "violet",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "pre-lent",
-    "commemoration": null
+    "commemoration": "quadp2-6"
   },
   "2025-03-02": {
     "temporal": "quadp3-0",
@@ -5601,13 +5601,13 @@
   "2025-05-24": {
     "temporal": "pasc4-6",
     "sanctoral": "05-24",
-    "winner": "temporal",
-    "winnerKey": "pasc4-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sabP",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam IV post Octavam Paschæ",
+    "name": "Sanctæ Mariæ Sabbato",
     "color": "white",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc4-6"
   },
   "2025-05-25": {
     "temporal": "pasc5-0",
@@ -6756,13 +6756,13 @@
   "2025-09-06": {
     "temporal": "pent12-6",
     "sanctoral": "09-06",
-    "winner": "temporal",
-    "winnerKey": "pent12-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent12-6"
   },
   "2025-09-07": {
     "temporal": "pent13-0",
@@ -6833,13 +6833,13 @@
   "2025-09-13": {
     "temporal": "pent13-6",
     "sanctoral": "09-13",
-    "winner": "temporal",
-    "winnerKey": "pent13-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XIII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent13-6"
   },
   "2025-09-14": {
     "temporal": "pent14-0",
@@ -9220,13 +9220,13 @@
   "2026-04-18": {
     "temporal": "pasc1-6",
     "sanctoral": "04-18",
-    "winner": "temporal",
-    "winnerKey": "pasc1-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sabP",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam I post Octavam Paschæ",
+    "name": "Sanctæ Mariæ Sabbato",
     "color": "white",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc1-6"
   },
   "2026-04-19": {
     "temporal": "pasc2-0",
@@ -9990,13 +9990,13 @@
   "2026-06-27": {
     "temporal": "pent04-6",
     "sanctoral": "06-27",
-    "winner": "temporal",
-    "winnerKey": "pent04-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam IV post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent04-6"
   },
   "2026-06-28": {
     "temporal": "pent05-0",
@@ -10067,13 +10067,13 @@
   "2026-07-04": {
     "temporal": "pent05-6",
     "sanctoral": "07-04",
-    "winner": "temporal",
-    "winnerKey": "pent05-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam V post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent05-6"
   },
   "2026-07-05": {
     "temporal": "pent06-0",
@@ -11453,13 +11453,13 @@
   "2026-11-07": {
     "temporal": "pent23-6",
     "sanctoral": "11-07",
-    "winner": "temporal",
-    "winnerKey": "pent23-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XXIII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent23-6"
   },
   "2026-11-08": {
     "temporal": "pent24-0",
@@ -11684,13 +11684,13 @@
   "2026-11-28": {
     "temporal": "pent26-6",
     "sanctoral": "11-28",
-    "winner": "temporal",
-    "winnerKey": "pent26-6",
-    "rank": 0.0,
-    "name": "Feria",
-    "color": "green",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
+    "rank": 1.0,
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent26-6"
   },
   "2026-11-29": {
     "temporal": "adv1-0",
@@ -13147,13 +13147,13 @@
   "2027-04-10": {
     "temporal": "pasc1-6",
     "sanctoral": "04-10",
-    "winner": "temporal",
-    "winnerKey": "pasc1-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sabP",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam I post Octavam Paschæ",
+    "name": "Sanctæ Mariæ Sabbato",
     "color": "white",
     "season": "easter",
-    "commemoration": null
+    "commemoration": "pasc1-6"
   },
   "2027-04-11": {
     "temporal": "pasc2-0",
@@ -14764,13 +14764,13 @@
   "2027-09-04": {
     "temporal": "pent15-6",
     "sanctoral": "09-04",
-    "winner": "temporal",
-    "winnerKey": "pent15-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XV post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent15-6"
   },
   "2027-09-05": {
     "temporal": "pent16-0",
@@ -15380,13 +15380,13 @@
   "2027-10-30": {
     "temporal": "pent23-6",
     "sanctoral": "10-30",
-    "winner": "temporal",
-    "winnerKey": "pent23-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XXIII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent23-6"
   },
   "2027-10-31": {
     "temporal": "pent24-0",
@@ -15457,13 +15457,13 @@
   "2027-11-06": {
     "temporal": "pent24-6",
     "sanctoral": "11-06",
-    "winner": "temporal",
-    "winnerKey": "pent24-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XXIV post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent24-6"
   },
   "2027-11-07": {
     "temporal": "pent25-0",
@@ -15688,13 +15688,13 @@
   "2027-11-27": {
     "temporal": "pent27-6",
     "sanctoral": "11-27",
-    "winner": "temporal",
-    "winnerKey": "pent27-6",
-    "rank": 0.0,
-    "name": "Feria",
-    "color": "green",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
+    "rank": 1.0,
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent27-6"
   },
   "2027-11-28": {
     "temporal": "adv1-0",
@@ -16612,13 +16612,13 @@
   "2028-02-19": {
     "temporal": "quadp1-6",
     "sanctoral": "02-19",
-    "winner": "temporal",
-    "winnerKey": "quadp1-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam Septuagesimæ",
-    "color": "violet",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "pre-lent",
-    "commemoration": null
+    "commemoration": "quadp1-6"
   },
   "2028-02-20": {
     "temporal": "quadp2-0",
@@ -16689,13 +16689,13 @@
   "2028-02-26": {
     "temporal": "quadp2-6",
     "sanctoral": "02-26",
-    "winner": "temporal",
-    "winnerKey": "quadp2-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam Sexagesimæ",
-    "color": "violet",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "pre-lent",
-    "commemoration": null
+    "commemoration": "quadp2-6"
   },
   "2028-02-27": {
     "temporal": "quadp3-0",
@@ -21925,13 +21925,13 @@
   "2029-06-16": {
     "temporal": "pent03-6",
     "sanctoral": "06-16",
-    "winner": "temporal",
-    "winnerKey": "pent03-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam III post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent03-6"
   },
   "2029-06-17": {
     "temporal": "pent04-0",
@@ -22618,13 +22618,13 @@
   "2029-08-18": {
     "temporal": "pent12-6",
     "sanctoral": "08-18",
-    "winner": "temporal",
-    "winnerKey": "pent12-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent12-6"
   },
   "2029-08-19": {
     "temporal": "pent13-0",
@@ -23465,13 +23465,13 @@
   "2029-11-03": {
     "temporal": "pent23-6",
     "sanctoral": "11-03",
-    "winner": "temporal",
-    "winnerKey": "pent23-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XXIII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent23-6"
   },
   "2029-11-04": {
     "temporal": "pent24-0",
@@ -23773,13 +23773,13 @@
   "2029-12-01": {
     "temporal": "pent27-6",
     "sanctoral": "12-01",
-    "winner": "temporal",
-    "winnerKey": "pent27-6",
-    "rank": 0.0,
-    "name": "Feria",
-    "color": "green",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
+    "rank": 1.0,
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent27-6"
   },
   "2029-12-02": {
     "temporal": "adv1-0",
@@ -24620,13 +24620,13 @@
   "2030-02-16": {
     "temporal": "epi6-6",
     "sanctoral": "02-16",
-    "winner": "temporal",
-    "winnerKey": "epi6-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam VI post Epiphaniam",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "epi6-6"
   },
   "2030-02-17": {
     "temporal": "quadp1-0",
@@ -24774,13 +24774,13 @@
   "2030-03-02": {
     "temporal": "quadp2-6",
     "sanctoral": "03-02",
-    "winner": "temporal",
-    "winnerKey": "quadp2-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam Sexagesimæ",
-    "color": "violet",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "pre-lent",
-    "commemoration": null
+    "commemoration": "quadp2-6"
   },
   "2030-03-03": {
     "temporal": "quadp3-0",
@@ -26853,13 +26853,13 @@
   "2030-09-07": {
     "temporal": "pent12-6",
     "sanctoral": "09-07",
-    "winner": "temporal",
-    "winnerKey": "pent12-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent12-6"
   },
   "2030-09-08": {
     "temporal": "pent13-0",
@@ -27238,13 +27238,13 @@
   "2030-10-12": {
     "temporal": "pent17-6",
     "sanctoral": "10-12",
-    "winner": "temporal",
-    "winnerKey": "pent17-6",
+    "winner": "sanctoral",
+    "winnerKey": "bvm-sab",
     "rank": 1.0,
-    "name": "Sabbato infra Hebdomadam XVII post Octavam Pentecostes",
-    "color": "green",
+    "name": "Sanctæ Mariæ Sabbato",
+    "color": "white",
     "season": "ordinary",
-    "commemoration": null
+    "commemoration": "pent17-6"
   },
   "2030-10-13": {
     "temporal": "pent18-0",

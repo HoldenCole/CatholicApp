@@ -523,6 +523,15 @@ object ContentStore {
                 if (saint != null) {
                     assembled = applyProperOverrides(assembled, saint)
                 }
+                // Pre-1955 old-rite variant of the saint's Office ("<key>o"),
+                // e.g. the festive Epiphany-octave lessons the 1960 books
+                // reduced to ferial commemorations.
+                if (rite == MissalRite.PRE_1955) {
+                    val oSaint = sanctoralPropers[ordo.winnerKey + "o"]
+                    if (oSaint != null) {
+                        assembled = applyProperOverrides(assembled, oSaint)
+                    }
+                }
             } else {
                 val temporalKey = ordo.temporal
                 if (temporalKey != null) {
@@ -531,6 +540,17 @@ object ContentStore {
                         assembled = applyProperOverrides(assembled, tempOverrides)
                     }
                 }
+            }
+        }
+
+        // Pre-1955 old-rite Office variants: DO ships "<key>o" overlays (extra
+        // Matins lessons etc. for the octaves the later books suppressed).
+        // Layer them over the base temporal content.
+        if (rite == MissalRite.PRE_1955) {
+            val oKey = ctx.temporalKey?.let { it + "o" }
+            val oOverrides = oKey?.let { officeAssembler.temporalPropers[it] }
+            if (oOverrides != null) {
+                assembled = applyProperOverrides(assembled, oOverrides)
             }
         }
 
