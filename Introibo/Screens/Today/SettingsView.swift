@@ -244,7 +244,16 @@ struct SettingsView: View {
             .buttonStyle(.plain)
             .listRowBackground(Color.pageBackground)
             .sheet(isPresented: $showTutorials) {
-                TutorialsListView()
+                // Close BOTH sheets (tutorials list + Settings) before the
+                // tour starts, or the spotlight plays underneath Settings and
+                // the user just lands back on this screen.
+                TutorialsListView(onStart: { feature in
+                    showTutorials = false
+                    dismiss()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                        TutorialManager.shared.startFeatureTutorial(feature)
+                    }
+                })
             }
         } header: {
             Text("Tutoriales")

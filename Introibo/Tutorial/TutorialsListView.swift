@@ -3,15 +3,24 @@ import SwiftUI
 struct TutorialsListView: View {
     @Environment(\.dismiss) private var dismiss
 
+    /// When set, starting a tutorial is delegated to the presenter — needed
+    /// when this list is itself presented over another sheet (Settings): the
+    /// presenter must dismiss the WHOLE stack or the tour plays underneath it.
+    var onStart: ((FeatureTutorial) -> Void)? = nil
+
     var body: some View {
         NavigationStack {
             List {
                 Section {
                     ForEach(FeatureTutorial.allCases) { feature in
                         Button {
-                            dismiss()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                TutorialManager.shared.startFeatureTutorial(feature)
+                            if let onStart {
+                                onStart(feature)
+                            } else {
+                                dismiss()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    TutorialManager.shared.startFeatureTutorial(feature)
+                                }
                             }
                         } label: {
                             HStack(spacing: 12) {
