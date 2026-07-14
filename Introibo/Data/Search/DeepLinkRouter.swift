@@ -64,6 +64,41 @@ final class DeepLinkRouter {
         self.resolved = resolved
     }
 
+    /// URL entry point — inline contextual links (`introibo://link?t=…`) and
+    /// widget taps (`introibo://widget?m=office|prayer`). Attached at the App
+    /// root so cold launches during the splash still stage the navigation;
+    /// ContentView presents it when it mounts. Widget targets are resolved
+    /// against the clock AT TAP TIME (never a stale render payload), via the
+    /// same OfficeSchedule / slot logic the widget itself renders from.
+    func open(url: URL) {
+        guard url.scheme == ContextualLink.scheme,
+              let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        else { return }
+
+        switch url.host {
+        case ContextualLink.host: // "link"
+            guard let raw = components.queryItems?.first(where: { $0.name == "t" })?.value,
+                  let target = LinkTarget.parse(raw)
+            else { return }
+            open(target)
+
+        case "widget":
+            let mode = components.queryItems?.first(where: { $0.name == "m" })?.value
+            switch WidgetMode(rawValue: mode ?? "") ?? .office {
+            case .office:
+                let slug = OfficeSchedule.currentHourSlug(in: ContentStore.shared.hours)
+                open(DeepLinkTarget(type: .office, id: slug, position: nil))
+            case .prayer:
+                let slot = WidgetConfigStore.currentSlot()
+                let slug = WidgetConfigStore.slotPrayer(slot)
+                open(DeepLinkTarget(type: .prayer, id: slug, position: nil))
+            }
+
+        default:
+            return
+        }
+    }
+
     /// Clears the staged navigation once the destination sheet has been
     /// presented (called by ContentView on dismissal).
     func consume() {

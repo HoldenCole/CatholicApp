@@ -21,6 +21,14 @@ targets:
     type: application
     platform: iOS
     deploymentTarget: "17.0"
+    dependencies:
+      - target: IntroiboWidgets
+        embed: true
+    entitlements:
+      path: Introibo/Introibo.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.app.introibo.shared
     sources:
       - path: Introibo
         excludes:
@@ -52,6 +60,42 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
         SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: ""
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGNING_ALLOWED: NO
+
+  IntroiboWidgets:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "17.0"
+    entitlements:
+      path: IntroiboWidgets/IntroiboWidgets.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.app.introibo.shared
+    sources:
+      - path: IntroiboWidgets
+      # Shared logic: the widget compiles the SAME files the app uses, so the
+      # two can never disagree about the current hour or the widget config.
+      - path: Introibo/Liturgical/OfficeSchedule.swift
+      - path: Introibo/Widget/WidgetConfigStore.swift
+      # Same bundled schedule data the app reads.
+      - path: Introibo/Resources/hours.json
+        buildPhase: resources
+    info:
+      path: IntroiboWidgets/Info.plist
+      properties:
+        CFBundleDisplayName: Introibo
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.introibo.Introibo.widgets
+        PRODUCT_NAME: IntroiboWidgets
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        SKIP_INSTALL: YES
         CODE_SIGN_STYLE: Automatic
         CODE_SIGN_IDENTITY: ""
         CODE_SIGNING_REQUIRED: NO

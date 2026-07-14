@@ -9,4 +9,12 @@
     <string name="shortcut_office_long">Pray the canonical hours</string>
     <string name="shortcut_rosary_short">Rosary</string>
     <string name="shortcut_rosary_long">Pray the Holy Rosary</string>
+
+    <!-- Home-screen widget -->
+    <string name="widget_description">The current canonical hour, or your chosen prayer for this part of the day. Tap to pray.</string>
+    <string name="widget_tap_to_pray">Tap to pray</string>
+    <string name="widget_label_office">Divine Office</string>
+    <string name="widget_label_morning">Morning</string>
+    <string name="widget_label_midday">Midday</string>
+    <string name="widget_label_evening">Evening</string>
 </resources>

@@ -24,8 +24,20 @@ import com.lampstandhq.introibo.ui.theme.introiboTypography
 
 class MainActivity : ComponentActivity() {
 
+    companion object {
+        /** Intent action carrying a deep-link target (widget taps, etc.). */
+        const val ACTION_DEEPLINK = "com.lampstandhq.introibo.action.DEEPLINK"
+
+        /** String extra: "type:id[#pos]" wire string, or "widget:office" /
+         *  "widget:prayer" (resolved against the clock when handled). */
+        const val EXTRA_TARGET = "target"
+    }
+
     /** Launcher-shortcut destination (a Screen route), consumed by the NavHost. */
     private val shortcutRoute = mutableStateOf<String?>(null)
+
+    /** Widget/deep-link target wire string, consumed by the NavHost. */
+    private val deepLinkTarget = mutableStateOf<String?>(null)
 
     private fun routeForIntent(intent: android.content.Intent?): String? = when (intent?.action) {
         "com.lampstandhq.introibo.action.MISSAL" -> "missal"
@@ -34,14 +46,21 @@ class MainActivity : ComponentActivity() {
         else -> null
     }
 
+    private fun consumeIntent(intent: android.content.Intent?) {
+        routeForIntent(intent)?.let { shortcutRoute.value = it }
+        if (intent?.action == ACTION_DEEPLINK) {
+            intent.getStringExtra(EXTRA_TARGET)?.let { deepLinkTarget.value = it }
+        }
+    }
+
     override fun onNewIntent(intent: android.content.Intent) {
         super.onNewIntent(intent)
-        routeForIntent(intent)?.let { shortcutRoute.value = it }
+        consumeIntent(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        routeForIntent(intent)?.let { shortcutRoute.value = it }
+        consumeIntent(intent)
 
         setContent {
             val settingsRepo = remember { SettingsRepository(applicationContext) }
@@ -80,6 +99,8 @@ class MainActivity : ComponentActivity() {
                             IntroiboNavHost(
                                 shortcutRoute = shortcutRoute.value,
                                 onShortcutConsumed = { shortcutRoute.value = null },
+                                deepLinkTarget = deepLinkTarget.value,
+                                onDeepLinkConsumed = { deepLinkTarget.value = null },
                             )
                         }
                     }

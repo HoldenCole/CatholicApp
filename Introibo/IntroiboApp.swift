@@ -28,6 +28,7 @@ struct IntroiboApp: App {
 
     var body: some Scene {
         WindowGroup {
+            Group {
             if !hasCompletedOnboarding {
                 OnboardingView(hasCompletedOnboarding: $hasCompletedOnboarding)
                     .preferredColorScheme(.light)
@@ -58,6 +59,14 @@ struct IntroiboApp: App {
                     } message: {
                         Text("Would you like a quick tour of what\u{2019}s new?")
                     }
+            }
+            }
+            // Deep-link URL entry (inline contextual links + widget taps).
+            // Attached at the App root — NOT only inside ContentView — so a
+            // cold launch from a widget tap during the splash still stages
+            // the navigation; ContentView presents it when it mounts.
+            .onOpenURL { url in
+                DeepLinkRouter.shared.open(url: url)
             }
         }
     }

@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Widgets
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Switch
@@ -68,7 +69,11 @@ import kotlinx.coroutines.launch
  * feedback, reset, and about.
  */
 @Composable
-fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = null) {
+fun SettingsScreen(
+    onDismiss: () -> Unit = {},
+    onOpenTutorial: (() -> Unit)? = null,
+    onOpenWidgetSettings: (() -> Unit)? = null,
+) {
     val context = LocalContext.current
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -366,6 +371,38 @@ fun SettingsScreen(onDismiss: () -> Unit = {}, onOpenTutorial: (() -> Unit)? = n
                     )
                 }
                 HorizontalDivider(color = colors.frameLine)
+            }
+
+            // ---- Widget Section ----
+            if (onOpenWidgetSettings != null) {
+                item {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onOpenWidgetSettings() }
+                            .padding(vertical = 12.dp),
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.Widgets,
+                            contentDescription = null,
+                            tint = colors.primaryText,
+                            modifier = Modifier.padding(end = 8.dp),
+                        )
+                        Text(
+                            text = "Home Screen Widget",
+                            style = type.body,
+                            color = colors.primaryText,
+                            modifier = Modifier.weight(1f),
+                        )
+                        Icon(
+                            imageVector = Icons.Filled.ChevronRight,
+                            contentDescription = null,
+                            tint = colors.tertiaryText,
+                        )
+                    }
+                    HorizontalDivider(color = colors.frameLine)
+                }
             }
 
             // ---- Feedback Section ----

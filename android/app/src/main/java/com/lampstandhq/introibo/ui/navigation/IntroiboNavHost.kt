@@ -85,6 +85,9 @@ fun IntroiboNavHost(
     /** Launcher-shortcut destination (a Screen route) to open, or null. */
     shortcutRoute: String? = null,
     onShortcutConsumed: () -> Unit = {},
+    /** Widget/deep-link target wire string ("type:id[#pos]" or "widget:…"). */
+    deepLinkTarget: String? = null,
+    onDeepLinkConsumed: () -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
     var selectedIndex by rememberSaveable { mutableIntStateOf(0) }
@@ -103,6 +106,38 @@ fun IntroiboNavHost(
         }
         navController.navigate(route) { launchSingleTop = true }
         onShortcutConsumed()
+    }
+
+    // Widget taps and other deep links. "widget:office" / "widget:prayer" are
+    // resolved against the clock AT TAP TIME (never a stale render payload);
+    // anything else is a standard "type:id#pos" wire string.
+    val appContext = androidx.compose.ui.platform.LocalContext.current.applicationContext
+    LaunchedEffect(deepLinkTarget) {
+        val raw = deepLinkTarget ?: return@LaunchedEffect
+        val target = when (raw) {
+            "widget:office" -> {
+                val slug = com.lampstandhq.introibo.data.liturgical.OfficeSchedule
+                    .currentHourSlug(com.lampstandhq.introibo.data.content.ContentStore.hours)
+                com.lampstandhq.introibo.data.search.DeepLinkTarget(
+                    com.lampstandhq.introibo.data.search.ContentType.OFFICE, slug,
+                )
+            }
+            "widget:prayer" -> {
+                val slot = com.lampstandhq.introibo.data.widget.WidgetConfig.currentSlot(
+                    appContext,
+                    com.lampstandhq.introibo.data.liturgical.OfficeSchedule.currentMinuteOfDay(),
+                )
+                com.lampstandhq.introibo.data.search.DeepLinkTarget(
+                    com.lampstandhq.introibo.data.search.ContentType.PRAYER,
+                    com.lampstandhq.introibo.data.widget.WidgetConfig.slotPrayer(appContext, slot),
+                )
+            }
+            else -> com.lampstandhq.introibo.data.links.LinkTarget.parse(raw)
+        }
+        if (target != null) {
+            DeepLinkRouter.open(navController, target)
+        }
+        onDeepLinkConsumed()
     }
 
     Scaffold(
@@ -171,7 +206,19 @@ fun IntroiboNavHost(
                     onNavigateCalendar = { navController.navigate(Screen.Calendar.route) },
                 )
             }
-            composable(Screen.Settings.route) { SettingsScreen(onDismiss = { navController.popBackStack() }) }
+            composable(Screen.Settings.route) {
+                SettingsScreen(
+                    onDismiss = { navController.popBackStack() },
+                    onOpenWidgetSettings = {
+                        navController.navigate(Screen.WidgetSettings.route)
+                    },
+                )
+            }
+            composable(Screen.WidgetSettings.route) {
+                com.lampstandhq.introibo.ui.widget.WidgetSettingsScreen(
+                    onBack = { navController.popBackStack() },
+                )
+            }
             composable(Screen.Calendar.route) {
                 CalendarScreen(
                     onBack = { navController.popBackStack() },

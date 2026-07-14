@@ -21,6 +21,7 @@ struct SettingsView: View {
                 languageSection
                 displaySection
                 fontSizeSection
+                widgetSection
                 tutorialSection
                 feedbackSection
                 resetSection
@@ -219,6 +220,22 @@ struct SettingsView: View {
             Text("Littera · Text Size")
         } footer: {
             Text("Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility.")
+        }
+    }
+
+    // MARK: - Widget
+
+    private var widgetSection: some View {
+        Section {
+            NavigationLink {
+                WidgetSettingsView()
+            } label: {
+                Label("Home Screen Widget", systemImage: "square.grid.2x2")
+                    .foregroundStyle(Color.primaryText)
+            }
+            .listRowBackground(Color.pageBackground)
+        } header: {
+            Text("Widget")
         }
     }
 

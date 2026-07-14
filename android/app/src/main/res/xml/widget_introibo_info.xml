@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- updatePeriodMillis=0: the widget never polls. It re-renders on our own
+     boundary alarm (next Office hour / next slot start) and on system
+     date/time/timezone broadcasts. Content is computed from the clock at
+     render, so a missed refresh degrades gracefully. -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="180dp"
+    android:minHeight="60dp"
+    android:targetCellWidth="3"
+    android:targetCellHeight="1"
+    android:maxResizeWidth="360dp"
+    android:maxResizeHeight="120dp"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/widget_introibo"
+    android:widgetCategory="home_screen"
+    android:description="@string/widget_description" />

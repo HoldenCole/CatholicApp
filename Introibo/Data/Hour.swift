@@ -3,7 +3,7 @@ import Foundation
 // Matches Introibo/Resources/hours.json — the 8 canonical hours of the
 // 1962 Roman Breviary.
 
-struct Hour: Identifiable, Decodable, Hashable {
+struct Hour: Identifiable, Decodable, Hashable, ScheduledHour {
     let slug: String
     let name: String        // Latin name (Matutínum, Laudes, ...)
     let eng: String         // English name
