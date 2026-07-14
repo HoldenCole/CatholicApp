@@ -420,8 +420,10 @@ data class LiturgicalContext(
             if (woy == weekOfYear(easter.minusDays(46))) return true
             // Pentecost Ember: same Sunday-start week as Pentecost Sunday
             if (woy == weekOfYear(pentecost)) return true
-            // September Ember: week containing Sept 14 (Exaltation of the Cross)
-            if (woy == weekOfYear(LocalDate.of(date.year, 9, 14))) return true
+            // September Ember: the week AFTER the week containing Sept 14
+            // (Exaltation of the Cross) — matches the ordo's "Quattuor
+            // Temporum Septembris" days and the isEmberDay badge reckoning.
+            if (woy == weekOfYear(LocalDate.of(date.year, 9, 14)) + 1) return true
             return false
         }
 

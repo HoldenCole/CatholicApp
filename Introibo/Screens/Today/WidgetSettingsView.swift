@@ -124,12 +124,14 @@ private struct WidgetPrayerPicker: View {
                 Section {
                     ForEach(group.prayers) { prayer in
                         Button {
-                            WidgetConfigStore.setSlotPrayer(slot, slug: prayer.slug)
-                            // Denormalize the display titles for the extension.
+                            // Denormalize the display titles FIRST — the slot
+                            // setter triggers a timeline reload, and the
+                            // extension must not race an unwritten title.
                             WidgetConfigStore.defaults.set(
                                 prayer.title, forKey: "widget.title.\(prayer.slug)")
                             WidgetConfigStore.defaults.set(
                                 prayer.eng, forKey: "widget.eng.\(prayer.slug)")
+                            WidgetConfigStore.setSlotPrayer(slot, slug: prayer.slug)
                             onPicked()
                             dismiss()
                         } label: {

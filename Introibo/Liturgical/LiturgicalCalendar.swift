@@ -34,9 +34,12 @@ struct CalendarDay: Identifiable {
     }
 
     /// A day within (or the day of) an octave, from the ordo title.
+    /// "post octavam" is excluded — ordinary ferias are NAMED by the octave
+    /// they follow ("Feria II infra Hebdomadam II post Octavam Pentecostes")
+    /// without being octave days themselves.
     var isOctaveDay: Bool {
         guard let n = ordo?.name.lowercased() else { return false }
-        return n.contains("octav")   // "in octava", "infra octavam", "die octavæ"
+        return n.contains("octav") && !n.contains("post octavam")
     }
 
     /// Display colour for the cell's pip; nil when there is no ordo entry.

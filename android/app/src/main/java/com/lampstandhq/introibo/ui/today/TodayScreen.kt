@@ -463,8 +463,11 @@ private fun UpcomingFeastsCard(
     onClick: () -> Unit = {},
 ) {
     val colors = IntroiboTheme.colors
-    val upcoming = remember(rite) {
-        com.lampstandhq.introibo.data.liturgical.LiturgicalYear.upcoming(rite = rite).take(4)
+    // Keyed by today's date so a recomposition after midnight refreshes the
+    // window (matches the rest of the Today screen's day-scoped behaviour).
+    val todayKey = java.time.LocalDate.now()
+    val upcoming = remember(rite, todayKey) {
+        com.lampstandhq.introibo.data.liturgical.LiturgicalYear.upcoming(start = todayKey, rite = rite).take(4)
     }
     if (upcoming.isEmpty()) return
     val langMode = currentLanguageMode()

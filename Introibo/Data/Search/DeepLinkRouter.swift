@@ -138,6 +138,13 @@ final class DeepLinkRouter {
             return nil
 
         case .office:
+            // Anchored targets (search hits carry "part:<i>") must open the
+            // raw TEMPLATE hour — the anchors index its parts. Anchor-free
+            // targets (the widget, contextual links) open today's ASSEMBLED
+            // office, ready to pray.
+            if target.position == nil, let assembled = store.hourForToday(slug: target.id) {
+                return .hour(assembled, anchor: nil)
+            }
             guard let h = store.hour(slug: target.id) else { return nil }
             return .hour(h, anchor: target.position)
 

@@ -57,10 +57,17 @@ object LiturgicalYear {
 
         fun flush() {
             val key = runKey ?: return
+            // A year has TWO "ordinary" runs: Time after Epiphany (starts in
+            // January) and Time after Pentecost. Label them apart.
+            val label = if (key == "ordinary" && runStart!!.monthValue <= 2) {
+                "Time after Epiphany"
+            } else {
+                SeasonSegment.labels[key] ?: key.replaceFirstChar { it.uppercase() }
+            }
             segments.add(
                 SeasonSegment(
                     seasonKey = key,
-                    label = SeasonSegment.labels[key] ?: key.replaceFirstChar { it.uppercase() },
+                    label = label,
                     startDate = runStart!!,
                     endDate = runEnd!!,
                     dayCount = runDays,

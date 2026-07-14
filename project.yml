@@ -61,9 +61,6 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
         CODE_SIGN_STYLE: Automatic
-        CODE_SIGN_IDENTITY: ""
-        CODE_SIGNING_REQUIRED: NO
-        CODE_SIGNING_ALLOWED: NO
 
   IntroiboWidgets:
     type: app-extension
@@ -97,6 +94,3 @@ targets:
         SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
         SKIP_INSTALL: YES
         CODE_SIGN_STYLE: Automatic
-        CODE_SIGN_IDENTITY: ""
-        CODE_SIGNING_REQUIRED: NO
-        CODE_SIGNING_ALLOWED: NO

@@ -38,9 +38,16 @@ data class CalendarDay(
     val isVigil: Boolean
         get() = ordo?.name?.contains("vigilia", ignoreCase = true) == true
 
-    /** A day within (or the day of) an octave, from the ordo title. */
+    /**
+     * A day within (or the day of) an octave, from the ordo title.
+     * "post octavam" is excluded — ordinary ferias are NAMED by the octave
+     * they follow ("Feria II infra Hebdomadam II post Octavam Pentecostes")
+     * without being octave days themselves.
+     */
     val isOctaveDay: Boolean
-        get() = ordo?.name?.contains("octav", ignoreCase = true) == true
+        get() = ordo?.name?.lowercase()?.let {
+            it.contains("octav") && !it.contains("post octavam")
+        } == true
 
     /** Display colour for the cell's pip; null when there is no ordo entry. */
     val colour: LiturgicalColour?

@@ -19,13 +19,11 @@ class IntroiboApp : Application() {
         // Load all bundled JSON content into memory.
         ContentStore.init(applicationContext)
 
-        // Build the search index off the main thread so the first Search use
-        // doesn't pay the fold/index cost synchronously. Idempotent.
-        ContentStore.prepareSearchIndex()
-
-        // Build the contextual-link reverse index off the main thread too, so the
-        // first "Referenced By" block doesn't pay the scan cost synchronously.
-        ContentStore.prepareLinkGraph()
+        // NOTE: prepareSearchIndex()/prepareLinkGraph() are deliberately NOT
+        // called here — Application.onCreate also runs for widget-alarm
+        // broadcasts that wake a dead process, and building a full search
+        // index to render three lines of widget text is pure waste.
+        // MainActivity.onCreate kicks them off when the UI actually starts.
 
         // Create the notification channel (required on API 26+).
         createNotificationChannel()

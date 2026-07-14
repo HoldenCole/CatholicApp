@@ -50,9 +50,11 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
         super.onReceive(context, intent)
         when (intent.action) {
             // Clock jumps the alarm pipeline can't see: re-render immediately.
+            // (Date rollover needs no broadcast — the midnight Matins boundary
+            // alarm covers it; DATE_CHANGED is not deliverable to manifest
+            // receivers on API 26+ anyway.)
             Intent.ACTION_TIME_CHANGED,
             Intent.ACTION_TIMEZONE_CHANGED,
-            Intent.ACTION_DATE_CHANGED,
             ACTION_REFRESH -> refreshAll(context)
         }
     }
@@ -80,6 +82,14 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
             scheduleNextBoundaryUpdate(context)
         }
 
+        /**
+         * The schedulable cursus: hours.json also carries the devotional
+         * Office of the Dead at the same time as Matins — the widget (like
+         * the Office tab's dial) only surfaces the canonical hours.
+         */
+        private fun canonicalHours() =
+            ContentStore.hours.filter { it.slug != "office-of-the-dead" }
+
         // MARK: Render
 
         private fun buildViews(context: Context): RemoteViews {
@@ -88,7 +98,7 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
 
             when (WidgetConfig.mode(context)) {
                 WidgetMode.OFFICE -> {
-                    val hours = ContentStore.hours
+                    val hours = canonicalHours()
                     val slug = OfficeSchedule.currentHourSlug(hours, nowMinutes)
                     val hour = hours.firstOrNull { it.slug == slug }
                     views.setTextViewText(
@@ -164,7 +174,7 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
             val nowMinutes = OfficeSchedule.currentMinuteOfDay()
 
             val todayBoundaries: List<Int> = when (WidgetConfig.mode(context)) {
-                WidgetMode.OFFICE -> ContentStore.hours.map { it.hour * 60 + it.minute }
+                WidgetMode.OFFICE -> canonicalHours().map { it.hour * 60 + it.minute }
                 WidgetMode.PRAYER ->
                     WidgetSlot.entries
                         .map { WidgetConfig.slotStart(context, it) }
@@ -187,13 +197,14 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
 
             val pi = boundaryPendingIntent(context)
             alarm.cancel(pi)
-            // Inexact by design: a widget label may lag a boundary by a few
-            // minutes without harm, and this avoids the exact-alarm permission
-            // gate. windowMillis gives the OS a 5-minute batching window.
+            // Inexact by design: a widget label may lag a boundary without
+            // harm (the tap resolves against the clock at tap time), and this
+            // avoids the exact-alarm permission gate. Android 12+ clamps the
+            // window to a 10-minute minimum, so declare that honestly.
             alarm.setWindow(
                 AlarmManager.RTC,
                 cal.timeInMillis,
-                5 * 60 * 1000L,
+                10 * 60 * 1000L,
                 pi,
             )
         }

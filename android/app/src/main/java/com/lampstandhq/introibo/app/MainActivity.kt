@@ -55,12 +55,27 @@ class MainActivity : ComponentActivity() {
 
     override fun onNewIntent(intent: android.content.Intent) {
         super.onNewIntent(intent)
+        // Replace the stored intent so a later recreation doesn't replay the
+        // original launch intent's navigation.
+        setIntent(intent)
         consumeIntent(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        consumeIntent(intent)
+
+        // Deferred from Application.onCreate so widget-alarm broadcasts that
+        // wake a dead process don't pay for a search index they never use.
+        // Both are idempotent and run off the main thread.
+        com.lampstandhq.introibo.data.content.ContentStore.prepareSearchIndex()
+        com.lampstandhq.introibo.data.content.ContentStore.prepareLinkGraph()
+        // Only consume the launch intent on a FRESH start: on recreation
+        // (rotation, theme change, process restore) getIntent() still returns
+        // the original widget/shortcut intent, and re-consuming it would yank
+        // the user back to the deep-link destination.
+        if (savedInstanceState == null) {
+            consumeIntent(intent)
+        }
 
         setContent {
             val settingsRepo = remember { SettingsRepository(applicationContext) }

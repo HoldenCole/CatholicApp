@@ -106,6 +106,11 @@ fun CalendarScreen(
     var viewMode by rememberSaveable { mutableStateOf("list") } // "list" | "month"
 
     val yearRange = remember(rite) { ContentStore.ordoYearRange(rite) }
+    // Clamp into the rite's data horizon (e.g. device date past the bundled
+    // old-rite ordos would otherwise open an empty year).
+    LaunchedEffect(yearRange) {
+        if (year !in yearRange) year = year.coerceIn(yearRange.first, yearRange.last)
+    }
     val model = remember(year, month, rite, discipline) {
         CalendarMonth.build(year, month, rite, today, discipline)
     }

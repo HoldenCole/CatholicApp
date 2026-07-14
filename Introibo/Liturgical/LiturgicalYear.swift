@@ -53,30 +53,38 @@ enum LiturgicalYearModel {
         var runEnd: Date?
         var runDays = 0
 
+        // A year has TWO "ordinary" runs: Time after Epiphany (starts in
+        // January) and Time after Pentecost. Label them apart.
+        func label(for key: String, start: Date) -> String {
+            if key == "ordinary",
+               Calendar.liturgical.component(.month, from: start) <= 2 {
+                return "Time after Epiphany"
+            }
+            return SeasonSegment.labels[key] ?? key.capitalized
+        }
+        func flush() {
+            if let key = runKey, let s = runStart, let e = runEnd {
+                segments.append(SeasonSegment(
+                    seasonKey: key,
+                    label: label(for: key, start: s),
+                    startDate: s, endDate: e, dayCount: runDays))
+            }
+        }
+
         for date in days(ofYear: year) {
             let season = store.ordoForDate(date, rite: rite)?.season ?? "ordinary"
             if season == runKey {
                 runEnd = date
                 runDays += 1
             } else {
-                if let key = runKey, let s = runStart, let e = runEnd {
-                    segments.append(SeasonSegment(
-                        seasonKey: key,
-                        label: SeasonSegment.labels[key] ?? key.capitalized,
-                        startDate: s, endDate: e, dayCount: runDays))
-                }
+                flush()
                 runKey = season
                 runStart = date
                 runEnd = date
                 runDays = 1
             }
         }
-        if let key = runKey, let s = runStart, let e = runEnd {
-            segments.append(SeasonSegment(
-                seasonKey: key,
-                label: SeasonSegment.labels[key] ?? key.capitalized,
-                startDate: s, endDate: e, dayCount: runDays))
-        }
+        flush()
         return segments
     }
 

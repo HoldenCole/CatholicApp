@@ -27,7 +27,9 @@
         android:ellipsize="end"
         android:text="@string/widget_label_office" />
 
-    <View
+    <!-- FrameLayout, not View: RemoteViews only inflates @RemoteView classes,
+         and a bare View throws InflateException in the launcher process. -->
+    <FrameLayout
         android:layout_width="28dp"
         android:layout_height="1dp"
         android:layout_marginTop="4dp"

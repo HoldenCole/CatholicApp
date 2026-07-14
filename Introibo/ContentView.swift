@@ -52,6 +52,11 @@ struct ContentView: View {
         }
         // Deep-link navigation (Phase 3): when the router stages a resolved
         // target, switch to the owning tab and present the detail at the root.
+        // Cold launch: a widget tap can stage requestedTab BEFORE this view
+        // exists, and onChange never reports the value present at mount.
+        .onAppear {
+            if let tab = router.requestedTab { selectedTab = tab }
+        }
         .onChange(of: router.requestedTab) { _, newTab in
             if let tab = newTab { selectedTab = tab }
         }

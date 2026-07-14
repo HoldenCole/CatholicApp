@@ -40,7 +40,10 @@ enum WidgetContent {
               let data = try? Data(contentsOf: url),
               let hours = try? JSONDecoder().decode([WidgetHour].self, from: data)
         else { return [] }
-        return hours
+        // hours.json also carries the devotional Office of the Dead at the
+        // same time as Matins — the widget (like the Office tab's dial) only
+        // surfaces the canonical cursus.
+        return hours.filter { $0.slug != "office-of-the-dead" }
     }
 
     /// Prayer titles for the chosen-prayer mode, keyed by slug. Denormalized
@@ -99,11 +102,16 @@ struct PrayerProvider: TimelineProvider {
         }
 
         // One entry now, plus one at each boundary over today and tomorrow.
+        // Boundaries are WALL-CLOCK times, so build them with
+        // date(bySettingHour:) — minute-adding from midnight drifts by an
+        // hour on DST-transition days.
         var dates: [Date] = [now]
         for dayOffset in 0...1 {
             guard let day = cal.date(byAdding: .day, value: dayOffset, to: startOfDay) else { continue }
             for minutes in boundaries {
-                if let d = cal.date(byAdding: .minute, value: minutes, to: day), d > now {
+                if let d = cal.date(bySettingHour: minutes / 60, minute: minutes % 60,
+                                    second: 0, of: day),
+                   d > now {
                     dates.append(d)
                 }
             }

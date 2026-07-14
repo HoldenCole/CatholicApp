@@ -503,13 +503,16 @@ struct LiturgicalContext {
         // (same week as Pentecost Sunday in a Sunday-start calendar)
         let pentWeek = cal.component(.weekOfYear, from: pentecost)
         if week == pentWeek { return true }
-        // September Ember: Wed/Fri/Sat in the week containing Sept 14
-        // (the Exaltation of the Cross)
+        // September Ember: Wed/Fri/Sat in the week AFTER the week containing
+        // Sept 14 (Exaltation of the Cross) — the week of the ordo's
+        // "Quattuor Temporum Septembris" days, and the same reckoning the
+        // isEmberDay badge uses. (Was +0, which put the 1917-discipline fast
+        // dots a week earlier than the calendar's own Ember days.)
         let year = cal.component(.year, from: date)
         var sept14Comps = DateComponents(); sept14Comps.year = year; sept14Comps.month = 9; sept14Comps.day = 14
         if let sept14 = cal.date(from: sept14Comps) {
             let s14week = cal.component(.weekOfYear, from: sept14)
-            if week == s14week { return true }
+            if week == s14week + 1 { return true }
         }
         return false
     }

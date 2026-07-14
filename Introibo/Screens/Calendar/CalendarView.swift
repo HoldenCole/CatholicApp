@@ -54,6 +54,11 @@ struct CalendarView: View {
     private var canGoNext: Bool { !(year == yearRange.upperBound && month == 12) }
 
     var body: some View {
+        // Built ONCE per render pass — each build computes a LiturgicalContext
+        // (computus) for every day of the month, so this must not be a
+        // computed property the row helpers re-trigger dozens of times.
+        let model = self.model
+
         VStack(spacing: 0) {
             chrome
             if viewMode != .year {
@@ -63,8 +68,8 @@ struct CalendarView: View {
             }
             Divider().overlay(Color.frameLine)
             switch viewMode {
-            case .list:  dayList
-            case .month: monthGrid
+            case .list:  dayList(model)
+            case .month: monthGrid(model)
             case .year:  YearOverview(year: year, rite: rite, store: store) { date in
                 let cal = Calendar.liturgical
                 self.year = cal.component(.year, from: date)
@@ -74,6 +79,11 @@ struct CalendarView: View {
             }
         }
         .background(Color.pageBackground.ignoresSafeArea())
+        // Clamp into the rite's data horizon (a device date past the bundled
+        // ordos would otherwise open an empty year).
+        .onAppear {
+            year = min(max(year, yearRange.lowerBound), yearRange.upperBound)
+        }
         .sheet(item: $selectedDay, onDismiss: presentPendingProper) { day in
             DayDetailView(day: day, rite: rite) { proper in
                 pendingProper = proper
@@ -240,17 +250,18 @@ struct CalendarView: View {
 
     // MARK: Day list
 
-    private var dayList: some View {
-        ScrollViewReader { proxy in
+    private func dayList(_ model: CalendarMonth) -> some View {
+        let days = model.days
+        return ScrollViewReader { proxy in
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    ForEach(Array(model.days.enumerated()), id: \.element.id) { idx, day in
-                        if showsSeasonHeader(at: idx), let label = day.seasonLabel {
+                    ForEach(Array(days.enumerated()), id: \.element.id) { idx, day in
+                        if showsSeasonHeader(in: days, at: idx), let label = day.seasonLabel {
                             SeasonDivider(label: label)
                         }
                         DayRow(day: day) { selectedDay = day }
                             .id(day.id)
-                        if idx < model.days.count - 1 && !showsSeasonHeader(at: idx + 1) {
+                        if idx < days.count - 1 && !showsSeasonHeader(in: days, at: idx + 1) {
                             Rectangle()
                                 .fill(Color.goldLeaf.opacity(0.16))
                                 .frame(height: 0.5)
@@ -261,7 +272,7 @@ struct CalendarView: View {
                 .padding(.bottom, 28)
             }
             .onAppear {
-                if let todayDay = model.days.first(where: { $0.isToday }) {
+                if let todayDay = days.first(where: { $0.isToday }) {
                     proxy.scrollTo(todayDay.id, anchor: .center)
                 }
             }
@@ -269,11 +280,11 @@ struct CalendarView: View {
     }
 
     /// True when day `idx` begins a new liturgical season (or is the first day).
-    private func showsSeasonHeader(at idx: Int) -> Bool {
-        guard idx >= 0, idx < model.days.count else { return false }
-        guard model.days[idx].seasonLabel != nil else { return false }
+    private func showsSeasonHeader(in days: [CalendarDay], at idx: Int) -> Bool {
+        guard idx >= 0, idx < days.count else { return false }
+        guard days[idx].seasonLabel != nil else { return false }
         if idx == 0 { return true }
-        return model.days[idx - 1].seasonLabel != model.days[idx].seasonLabel
+        return days[idx - 1].seasonLabel != days[idx].seasonLabel
     }
 
     // MARK: Month grid
@@ -281,7 +292,7 @@ struct CalendarView: View {
     private static let gridWeekdayLetters = ["S", "M", "T", "W", "T", "F", "S"]
     private static let gridColumns = Array(repeating: GridItem(.flexible(), spacing: 2), count: 7)
 
-    private var monthGrid: some View {
+    private func monthGrid(_ model: CalendarMonth) -> some View {
         VStack(spacing: 0) {
             HStack(spacing: 2) {
                 ForEach(Array(Self.gridWeekdayLetters.enumerated()), id: \.offset) { _, letter in
@@ -392,19 +403,19 @@ private struct YearOverview: View {
     /// Jump into the month list at `date`.
     let onOpen: (Date) -> Void
 
-    private var segments: [SeasonSegment] {
-        LiturgicalYearModel.seasons(year: year, rite: rite, store: store)
-    }
-    private var markers: [YearMarker] {
-        LiturgicalYearModel.markers(year: year, rite: rite, store: store)
-    }
-
     var body: some View {
+        // Computed once per render pass: each iterates the whole year.
+        let segments = LiturgicalYearModel.seasons(year: year, rite: rite, store: store)
+        let markers = LiturgicalYearModel.markers(year: year, rite: rite, store: store)
+        // Day-granular "today": segment bounds are midnight-anchored, so a
+        // raw Date() comparison fails on the LAST day of every season.
+        let today = Calendar.liturgical.startOfDay(for: Date())
+
         ScrollViewReader { proxy in
             ScrollView {
                 VStack(spacing: 10) {
                     ForEach(segments) { seg in
-                        segmentCard(seg)
+                        segmentCard(seg, markers: markers, today: today)
                             .id(seg.id)
                     }
                 }
@@ -413,7 +424,7 @@ private struct YearOverview: View {
             }
             .onAppear {
                 if let current = segments.first(where: { seg in
-                    (seg.startDate...seg.endDate).contains(Date())
+                    (seg.startDate...seg.endDate).contains(today)
                 }) {
                     proxy.scrollTo(current.id, anchor: .center)
                 }
@@ -421,10 +432,9 @@ private struct YearOverview: View {
         }
     }
 
-    private func segmentCard(_ seg: SeasonSegment) -> some View {
+    private func segmentCard(_ seg: SeasonSegment, markers: [YearMarker], today: Date) -> some View {
         let tint = Self.seasonTint(seg.seasonKey)
-        let now = Date()
-        let isCurrent = (seg.startDate...seg.endDate).contains(now)
+        let isCurrent = (seg.startDate...seg.endDate).contains(today)
         let segMarkers = markers.filter { $0.date >= seg.startDate && $0.date <= seg.endDate }
 
         return VStack(alignment: .leading, spacing: 0) {

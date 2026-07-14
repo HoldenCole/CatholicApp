@@ -18,7 +18,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -51,6 +53,7 @@ import com.lampstandhq.introibo.ui.saints.SaintsScreen
 import com.lampstandhq.introibo.ui.search.SearchScreen
 import com.lampstandhq.introibo.ui.stations.StationsScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
+import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.today.SettingsScreen
 import com.lampstandhq.introibo.ui.today.TodayScreen
 
@@ -340,11 +343,21 @@ fun IntroiboNavHost(
             ) { entry ->
                 val slug = entry.arguments?.getString("slug") ?: return@composable
                 val pos = entry.arguments?.getString("pos")
-                // Use the raw template hour (store.hours) — the same corpus the
-                // office search extractor indexes — so "part:<index>" aligns.
-                ContentStore.hour(slug)?.let { hour ->
+                // Anchored targets ("part:<i>" from search) must open the raw
+                // TEMPLATE hour — the anchors index its parts. Anchor-free
+                // targets (the widget, contextual links) open today's
+                // ASSEMBLED office under the user's rite, ready to pray.
+                val hourCtx = androidx.compose.ui.platform.LocalContext.current
+                val hourRite by remember { SettingsRepository(hourCtx.applicationContext) }
+                    .missalRite.collectAsState(initial = com.lampstandhq.introibo.storage.settings.MissalRite.RITE_1962)
+                val hour = if (pos == null) {
+                    ContentStore.hourForToday(slug, hourRite) ?: ContentStore.hour(slug)
+                } else {
+                    ContentStore.hour(slug)
+                }
+                hour?.let { h ->
                     HourSheet(
-                        hour = hour,
+                        hour = h,
                         onDismiss = { navController.popBackStack() },
                         scrollToPartIndex = pos?.removePrefix("part:")?.toIntOrNull(),
                         onLinkTap = { DeepLinkRouter.open(navController, it) },

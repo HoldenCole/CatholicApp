@@ -44,20 +44,25 @@ class EmberDaysTest {
 
     @Test
     fun septemberEmberDaysWhenSept14IsASunday() {
-        // Sept 14 2025 is a Sunday. Sunday-start week ⇒ Ember Wed/Fri/Sat are
-        // Sep 17/19/20 (iOS behavior). The ISO comparison put them a week early.
-        assertTrue(ember(LocalDate.of(2025, 9, 17)))
-        assertTrue(ember(LocalDate.of(2025, 9, 19)))
-        assertTrue(ember(LocalDate.of(2025, 9, 20)))
+        // Sept 14 2025 is a Sunday. The ordo's "Quattuor Temporum Septembris"
+        // days that year are Sep 24/26/27 — the week AFTER the week containing
+        // Sept 14 (the badge path's reckoning; the penance path used to sit a
+        // week early, contradicting the calendar's own Ember days).
+        assertTrue(ember(LocalDate.of(2025, 9, 24)))
+        assertTrue(ember(LocalDate.of(2025, 9, 26)))
+        assertTrue(ember(LocalDate.of(2025, 9, 27)))
+        assertFalse(ember(LocalDate.of(2025, 9, 17)))
         assertFalse(ember(LocalDate.of(2025, 9, 10)))
     }
 
     @Test
     fun septemberEmberDaysOrdinaryYear2026() {
-        // Sept 14 2026 is a Monday; its Sunday-start week is Sep 13–19.
-        assertTrue(ember(LocalDate.of(2026, 9, 16)))
-        assertTrue(ember(LocalDate.of(2026, 9, 18)))
-        assertTrue(ember(LocalDate.of(2026, 9, 19)))
+        // Sept 14 2026 is a Monday (week Sep 13–19); the ordo's Ember days are
+        // Sep 23/25/26 in the following week.
+        assertTrue(ember(LocalDate.of(2026, 9, 23)))
+        assertTrue(ember(LocalDate.of(2026, 9, 25)))
+        assertTrue(ember(LocalDate.of(2026, 9, 26)))
+        assertFalse(ember(LocalDate.of(2026, 9, 16)))
     }
 
     // ---- Badge path (LiturgicalContext.isEmberDay extension) ----

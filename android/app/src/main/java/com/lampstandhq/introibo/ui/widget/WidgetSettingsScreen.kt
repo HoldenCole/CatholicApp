@@ -61,6 +61,12 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
 
     fun refreshWidget() = IntroiboWidgetProvider.refreshAll(context)
 
+    // Back (system or header arrow) from the prayer picker returns to the
+    // slot list, not out of widget settings entirely.
+    androidx.activity.compose.BackHandler(enabled = pickingSlot != null) {
+        pickingSlot = null
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -73,7 +79,9 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            IconButton(onClick = onBack) {
+            IconButton(onClick = {
+                if (pickingSlot != null) pickingSlot = null else onBack()
+            }) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Back",
