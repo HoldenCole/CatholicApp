@@ -3,6 +3,7 @@ package com.lampstandhq.introibo.data.liturgical
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.OrdoEntry
 import com.lampstandhq.introibo.storage.settings.MissalRite
+import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -28,7 +29,19 @@ data class CalendarDay(
     val ordo: OrdoEntry?,    // null only if the date is outside the bundled ordo
     val englishName: String?, // full English translation of ordo.name, if bundled
     val isToday: Boolean,
+    /** Ember day under the rite (from LiturgicalContext at build time). */
+    val isEmberDay: Boolean = false,
+    /** Strict fast/abstinence under the user's penance discipline (build time). */
+    val penanceStrict: Boolean = false,
 ) {
+    /** Vigil day (from the ordo title — "In Vigilia …" / "Sabbato in Vigilia …"). */
+    val isVigil: Boolean
+        get() = ordo?.name?.contains("vigilia", ignoreCase = true) == true
+
+    /** A day within (or the day of) an octave, from the ordo title. */
+    val isOctaveDay: Boolean
+        get() = ordo?.name?.contains("octav", ignoreCase = true) == true
+
     /** Display colour for the cell's pip; null when there is no ordo entry. */
     val colour: LiturgicalColour?
         get() = ordo?.let { LiturgicalColour.from(it.color) }
@@ -93,6 +106,7 @@ data class CalendarMonth(
             month: Int,
             rite: MissalRite,
             today: LocalDate = LocalDate.now(),
+            discipline: PenanceDiscipline = PenanceDiscipline.DISCIPLINE_1962,
         ): CalendarMonth {
             val firstOfMonth = LocalDate.of(year, month, 1)
 
@@ -107,6 +121,7 @@ data class CalendarMonth(
                 // DayOfWeek: MONDAY=1..SUNDAY=7 → remap to 1=Sun..7=Sat
                 val wd = date.dayOfWeek.value % 7 + 1
                 val ordo = ContentStore.ordoForDate(date, rite)
+                val ctx = LiturgicalContext.forDate(date, discipline = discipline, rite = rite)
                 days.add(
                     CalendarDay(
                         date = date,
@@ -115,6 +130,8 @@ data class CalendarMonth(
                         ordo = ordo,
                         englishName = ordo?.let { ContentStore.ordoNameEnglish(it.name) },
                         isToday = date == today,
+                        isEmberDay = ctx.isEmberDay,
+                        penanceStrict = ctx.penance.strict,
                     )
                 )
             }

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -62,6 +63,7 @@ import com.lampstandhq.introibo.data.liturgical.CalendarDay
 import com.lampstandhq.introibo.data.liturgical.CalendarMonth
 import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
+import com.lampstandhq.introibo.data.liturgical.LiturgicalYear
 import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
 import com.lampstandhq.introibo.data.liturgical.isEmberDay
 import com.lampstandhq.introibo.data.liturgical.isFirstFriday
@@ -95,6 +97,7 @@ fun CalendarScreen(
     val settingsRepo = remember { SettingsRepository(context) }
     val rite by settingsRepo.missalRite.collectAsState(initial = MissalRite.RITE_1962)
     val langMode by settingsRepo.languageMode.collectAsState(initial = LanguageMode.BOTH)
+    val discipline by settingsRepo.penanceDiscipline.collectAsState(initial = PenanceDiscipline.DISCIPLINE_1962)
 
     val today = remember { LocalDate.now() }
     var year by rememberSaveable { mutableIntStateOf(today.year) }
@@ -103,7 +106,9 @@ fun CalendarScreen(
     var viewMode by rememberSaveable { mutableStateOf("list") } // "list" | "month"
 
     val yearRange = remember(rite) { ContentStore.ordoYearRange(rite) }
-    val model = remember(year, month, rite) { CalendarMonth.build(year, month, rite, today) }
+    val model = remember(year, month, rite, discipline) {
+        CalendarMonth.build(year, month, rite, today, discipline)
+    }
 
     val canGoPrev = !(year == yearRange.first && month == 1)
     val canGoNext = !(year == yearRange.last && month == 12)
@@ -145,6 +150,12 @@ fun CalendarScreen(
                 letterSpacing = 2.sp,
             )
             Spacer(Modifier.weight(1f))
+            MoveableFeastMenu(year = year, rite = rite) { date ->
+                year = date.year
+                month = date.monthValue
+                if (viewMode == "year") viewMode = "list"
+            }
+            Spacer(Modifier.width(8.dp))
             ViewModePicker(viewMode) { viewMode = it }
             Spacer(Modifier.width(8.dp))
             if (!isCurrentMonth) {
@@ -169,14 +180,25 @@ fun CalendarScreen(
                 .padding(horizontal = 24.dp, vertical = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            NavGlyph("‹", canGoPrev) { step(-1) }
-            Spacer(Modifier.weight(1f))
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(text = model.title.substringBefore(" "), style = type.titleM, color = colors.primaryText)
-                Text(text = "$year", style = type.captionSm, color = colors.tertiaryText)
+            if (viewMode == "year") {
+                NavGlyph("‹", year > yearRange.first) { year -= 1 }
+                Spacer(Modifier.weight(1f))
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(text = "$year", style = type.titleM, color = colors.primaryText)
+                    Text(text = "The Liturgical Year", style = type.captionSm, color = colors.tertiaryText)
+                }
+                Spacer(Modifier.weight(1f))
+                NavGlyph("›", year < yearRange.last) { year += 1 }
+            } else {
+                NavGlyph("‹", canGoPrev) { step(-1) }
+                Spacer(Modifier.weight(1f))
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(text = model.title.substringBefore(" "), style = type.titleM, color = colors.primaryText)
+                    Text(text = "$year", style = type.captionSm, color = colors.tertiaryText)
+                }
+                Spacer(Modifier.weight(1f))
+                NavGlyph("›", canGoNext) { step(1) }
             }
-            Spacer(Modifier.weight(1f))
-            NavGlyph("›", canGoNext) { step(1) }
         }
         HorizontalDivider(color = colors.frameLine, thickness = 0.5.dp)
 
@@ -190,6 +212,12 @@ fun CalendarScreen(
         when (viewMode) {
             "month" -> {
                 MonthGrid(model = model, langMode = langMode, modifier = Modifier.weight(1f)) { selectedDay = it }
+            }
+            "year" -> {
+                YearOverview(year = year, rite = rite, modifier = Modifier.weight(1f)) { date ->
+                    month = date.monthValue
+                    viewMode = "list"
+                }
             }
             else -> {
                 LazyColumn(
@@ -221,7 +249,7 @@ fun CalendarScreen(
                 day = day,
                 rite = rite,
                 mode = langMode,
-                discipline = settingsRepo.penanceDiscipline.collectAsState(initial = PenanceDiscipline.DISCIPLINE_1962).value,
+                discipline = discipline,
                 onOpenProper = { slug ->
                     scope.launch { sheetState.hide() }.invokeOnCompletion {
                         selectedDay = null
@@ -326,6 +354,8 @@ private fun DayRow(day: CalendarDay, mode: LanguageMode, onClick: () -> Unit) {
                     Spacer(Modifier.width(6.dp))
                     Text(text = "✠", fontSize = 9.sp, color = colors.sanctuaryRed)
                 }
+                Spacer(Modifier.width(6.dp))
+                DayMarkerPips(day)
             }
             if (mode != LanguageMode.VERNACULAR) {
                 Text(
@@ -364,7 +394,7 @@ private fun DayDetail(
     val shareContext = LocalContext.current
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    val ctx = remember(day.date, discipline) { LiturgicalContext.forDate(day.date, discipline) }
+    val ctx = remember(day.date, discipline, rite) { LiturgicalContext.forDate(day.date, discipline, rite) }
     val proper = remember(day.date, rite) { ContentStore.properForDate(day.date, rite) }
     val penance = ctx.penance
     val title = day.ordo?.name ?: ctx.feriaLatin
@@ -477,11 +507,15 @@ private fun DayDetail(
         }
         InfoRow("Season", ctx.englishName)
 
-        if (ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay) {
+        if (ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay ||
+            day.isVigil || day.isOctaveDay
+        ) {
             Spacer(Modifier.height(16.dp))
             if (ctx.isFirstFriday) Flag("First Friday")
             if (ctx.isFirstSaturday) Flag("First Saturday")
             if (ctx.isEmberDay) Flag("Ember Day")
+            if (day.isVigil) Flag("Vigil")
+            if (day.isOctaveDay) Flag("Within an Octave")
         }
 
         if (day.isSunday) {
@@ -594,6 +628,7 @@ private data class ModeEntry(val key: String, val icon: String)
 private val modes = listOf(
     ModeEntry("list", "≡"),
     ModeEntry("month", "▦"),
+    ModeEntry("year", "▤"),
 )
 
 @Composable
@@ -655,7 +690,7 @@ private fun MonthGrid(
             columns = GridCells.Fixed(7),
             modifier = Modifier.fillMaxWidth().weight(1f).padding(horizontal = 16.dp),
         ) {
-            items(model.leadingBlanks) { Box(Modifier.height(56.dp)) }
+            items(model.leadingBlanks) { Box(Modifier.height(62.dp)) }
             items(model.days.size) { idx ->
                 val day = model.days[idx]
                 GridCell(day, langMode) { onSelect(day) }
@@ -671,7 +706,7 @@ private fun GridCell(day: CalendarDay, langMode: LanguageMode, onClick: () -> Un
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .height(56.dp)
+            .height(62.dp)
             .fillMaxWidth()
             .clickable { onClick() },
     ) {
@@ -707,5 +742,218 @@ private fun GridCell(day: CalendarDay, langMode: LanguageMode, onClick: () -> Un
             textAlign = TextAlign.Center,
             lineHeight = 9.sp,
         )
+        DayMarkerPips(day)
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Day markers (octave / vigil / Ember / fast pips)
+// ---------------------------------------------------------------------------
+
+/**
+ * Tiny letter pips shared by the month grid and the day list: V vigil,
+ * O octave day, E Ember day, plus a filled dot on strict fast days under the
+ * user's discipline. Presentation only — all flags come from the ordo/context.
+ * iOS mirror: DayMarkerPips in CalendarView.swift.
+ */
+@Composable
+internal fun DayMarkerPips(day: CalendarDay) {
+    val colors = IntroiboTheme.colors
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        @Composable
+        fun pip(letter: String, color: Color) {
+            Text(
+                text = letter,
+                fontSize = 7.sp,
+                fontWeight = FontWeight.Bold,
+                color = color.copy(alpha = 0.9f),
+                modifier = Modifier.padding(horizontal = 1.5.dp),
+            )
+        }
+        if (day.isVigil) pip("V", Color(0xFF6A359A))
+        if (day.isOctaveDay) pip("O", colors.goldLeaf)
+        if (day.isEmberDay) pip("E", colors.sanctuaryRed)
+        if (day.penanceStrict) {
+            Box(
+                modifier = Modifier
+                    .padding(horizontal = 1.5.dp)
+                    .size(4.dp)
+                    .clip(CircleShape)
+                    .background(colors.sanctuaryRed.copy(alpha = 0.75f)),
+            )
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Moveable feasts (quick jump)
+// ---------------------------------------------------------------------------
+
+@Composable
+private fun MoveableFeastMenu(year: Int, rite: MissalRite, onJump: (java.time.LocalDate) -> Unit) {
+    val colors = IntroiboTheme.colors
+    var open by remember { mutableStateOf(false) }
+    val feasts = remember(year, rite) { LiturgicalYear.moveableDates(year, rite) }
+    val fmt = remember { java.time.format.DateTimeFormatter.ofPattern("MMM d", java.util.Locale.US) }
+    Box {
+        Text(
+            text = "✦",
+            fontSize = 14.sp,
+            color = colors.goldLeaf,
+            modifier = Modifier
+                .clip(CircleShape)
+                .clickable { open = true }
+                .padding(horizontal = 6.dp, vertical = 4.dp),
+        )
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            feasts.forEach { (label, date) ->
+                DropdownMenuItem(
+                    text = { Text("$label · ${date.format(fmt)}") },
+                    onClick = {
+                        open = false
+                        onJump(date)
+                    },
+                )
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Year overview ("where am I in the year")
+// ---------------------------------------------------------------------------
+
+@Composable
+private fun YearOverview(
+    year: Int,
+    rite: MissalRite,
+    modifier: Modifier = Modifier,
+    onOpen: (java.time.LocalDate) -> Unit,
+) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+    val segments = remember(year, rite) { LiturgicalYear.seasons(year, rite) }
+    val markers = remember(year, rite) { LiturgicalYear.markers(year, rite) }
+    val today = remember { java.time.LocalDate.now() }
+    val rangeFmt = remember { java.time.format.DateTimeFormatter.ofPattern("MMMM d", java.util.Locale.US) }
+    val markFmt = remember { java.time.format.DateTimeFormatter.ofPattern("MMM d", java.util.Locale.US) }
+
+    val listState = rememberLazyListState()
+    LaunchedEffect(year) {
+        val idx = segments.indexOfFirst { !today.isBefore(it.startDate) && !today.isAfter(it.endDate) }
+        if (idx >= 0) listState.scrollToItem(idx)
+    }
+
+    fun seasonTint(key: String): Color = when (key) {
+        "advent", "lent" -> Color(0xFF6B369A)
+        "pre-lent" -> Color(0xFF8C599E)
+        "christmas" -> Color(0xFFA68829)
+        "easter" -> Color(0xFFB89933)
+        else -> Color(0xFF3B5C29)
+    }
+
+    LazyColumn(
+        state = listState,
+        modifier = modifier.fillMaxWidth(),
+        contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 20.dp, vertical = 16.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        items(segments.size) { i ->
+            val seg = segments[i]
+            val tint = seasonTint(seg.seasonKey)
+            val isCurrent = !today.isBefore(seg.startDate) && !today.isAfter(seg.endDate)
+            val segMarkers = markers.filter { !it.date.isBefore(seg.startDate) && !it.date.isAfter(seg.endDate) }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(6.dp))
+                    .background(tint.copy(alpha = if (isCurrent) 0.10f else 0.05f))
+                    .border(
+                        0.5.dp,
+                        if (isCurrent) colors.sanctuaryRed.copy(alpha = 0.35f) else colors.frameLine,
+                        RoundedCornerShape(6.dp),
+                    )
+                    .height(intrinsicSize = androidx.compose.foundation.layout.IntrinsicSize.Min),
+            ) {
+                Box(
+                    Modifier
+                        .width(4.dp)
+                        .fillMaxHeight()
+                        .background(tint),
+                )
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(horizontal = 12.dp, vertical = 12.dp),
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = seg.label.uppercase(),
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            letterSpacing = 2.sp,
+                            color = tint,
+                        )
+                        Spacer(Modifier.weight(1f))
+                        if (isCurrent) {
+                            Text(
+                                text = "YOU ARE HERE",
+                                fontSize = 9.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                letterSpacing = 1.5.sp,
+                                color = colors.parchment,
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(10.dp))
+                                    .background(colors.sanctuaryRed)
+                                    .padding(horizontal = 7.dp, vertical = 3.dp),
+                            )
+                            Spacer(Modifier.width(6.dp))
+                        }
+                        Text(
+                            text = "${seg.dayCount} days",
+                            fontSize = 10.sp,
+                            color = colors.tertiaryText,
+                        )
+                    }
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = "${seg.startDate.format(rangeFmt)} – ${seg.endDate.format(rangeFmt)}",
+                        style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+                        color = colors.secondaryText,
+                    )
+                    segMarkers.forEach { marker ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { onOpen(marker.date) }
+                                .padding(vertical = 3.dp),
+                        ) {
+                            Box(
+                                modifier = Modifier
+                                    .size(6.dp)
+                                    .clip(CircleShape)
+                                    .background(liturgicalColor(LiturgicalColour.from(marker.color))),
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Text(
+                                text = marker.date.format(markFmt),
+                                fontSize = 11.sp,
+                                color = colors.tertiaryText,
+                                modifier = Modifier.width(46.dp),
+                            )
+                            Text(
+                                text = marker.english ?: marker.name,
+                                fontSize = 13.sp,
+                                color = colors.primaryText,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                    }
+                }
+            }
+        }
     }
 }

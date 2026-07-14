@@ -198,6 +198,7 @@ struct TodayView: View {
 
     private var mainContent: some View {
         VStack(spacing: 24) {
+            upcomingFeastsCard
             dailyPsalmCard
             propersCard
             penanceCard
@@ -211,6 +212,60 @@ struct TodayView: View {
         .padding(.top, 24)
         .padding(.bottom, 40)
     }
+
+    // MARK: - Upcoming feasts (next 14 days)
+
+    @ViewBuilder
+    private var upcomingFeastsCard: some View {
+        let upcoming = LiturgicalYearModel.upcoming(rite: rite, store: ContentStore.shared)
+        if !upcoming.isEmpty {
+            Button { showCalendar = true } label: {
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Text("VENTURA \u{00B7} UPCOMING")
+                            .font(.system(size: 10, weight: .semibold))
+                            .tracking(2)
+                            .foregroundStyle(Color.tertiaryText)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 11))
+                            .foregroundStyle(Color.tertiaryText)
+                    }
+                    ForEach(upcoming.prefix(4), id: \.date) { day in
+                        HStack(spacing: 10) {
+                            Circle()
+                                .fill((day.colour?.swiftUIColor ?? Color.frameLine).opacity(0.85))
+                                .frame(width: 6, height: 6)
+                            Text(Self.upcomingDate.string(from: day.date))
+                                .font(.system(size: 12, design: .serif))
+                                .foregroundStyle(Color.tertiaryText)
+                                .frame(width: 52, alignment: .leading)
+                            Text(langMode == .latinOnly
+                                 ? (day.label ?? day.weekdayName)
+                                 : (day.englishName ?? day.label ?? day.weekdayName))
+                                .font(.system(size: 14, design: .serif))
+                                .foregroundStyle(Color.primaryText)
+                                .lineLimit(1)
+                            Spacer(minLength: 0)
+                            DayMarkerPips(day: day)
+                        }
+                    }
+                }
+                .padding(16)
+                .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    private static let upcomingDate: DateFormatter = {
+        let df = DateFormatter()
+        df.calendar = Calendar.liturgical
+        df.locale = Locale(identifier: "en_US_POSIX")
+        df.dateFormat = "EEE d MMM"
+        return df
+    }()
 
     // MARK: - Prayer Rule Card
 

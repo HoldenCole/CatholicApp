@@ -11,12 +11,13 @@ import SwiftUI
 // Android mirror: android/.../ui/calendar/CalendarScreen.kt
 
 private enum CalViewMode: String, CaseIterable {
-    case list, month
+    case list, month, year
 
     var icon: String {
         switch self {
         case .list:  return "list.bullet"
         case .month: return "square.grid.3x3"
+        case .year:  return "calendar"
         }
     }
 }
@@ -32,7 +33,10 @@ struct CalendarView: View {
     @State private var properToShow: MassProper?
     @State private var viewMode: CalViewMode = .list
 
+    @AppStorage(SettingsKey.penance) private var calPenanceRaw = PenanceDiscipline.discipline1962.rawValue
+
     private var rite: MissalRite { MissalRite(rawValue: riteRaw) ?? .rite1962 }
+    private var discipline: PenanceDiscipline { PenanceDiscipline(rawValue: calPenanceRaw) ?? .discipline1962 }
     private var store: ContentStore { .shared }
 
     init(initial: Date = Date()) {
@@ -43,7 +47,8 @@ struct CalendarView: View {
 
     private var yearRange: ClosedRange<Int> { store.ordoYearRange(rite: rite) }
     private var model: CalendarMonth {
-        CalendarMonth.build(year: year, month: month, rite: rite, store: store)
+        CalendarMonth.build(year: year, month: month, rite: rite, store: store,
+                            discipline: discipline)
     }
     private var canGoPrev: Bool { !(year == yearRange.lowerBound && month == 1) }
     private var canGoNext: Bool { !(year == yearRange.upperBound && month == 12) }
@@ -51,11 +56,21 @@ struct CalendarView: View {
     var body: some View {
         VStack(spacing: 0) {
             chrome
-            navRow
+            if viewMode != .year {
+                navRow
+            } else {
+                yearNavRow
+            }
             Divider().overlay(Color.frameLine)
             switch viewMode {
             case .list:  dayList
             case .month: monthGrid
+            case .year:  YearOverview(year: year, rite: rite, store: store) { date in
+                let cal = Calendar.liturgical
+                self.year = cal.component(.year, from: date)
+                self.month = cal.component(.month, from: date)
+                withAnimation(.easeInOut(duration: 0.2)) { viewMode = .list }
+            }
             }
         }
         .background(Color.pageBackground.ignoresSafeArea())
@@ -83,6 +98,7 @@ struct CalendarView: View {
             Text("Kalendárium")
                 .smallLabel(color: Color.sanctuaryRed)
             Spacer()
+            moveableFeastMenu
             viewModePicker
             if !isCurrentMonth {
                 Button { jumpToToday() } label: {
@@ -123,6 +139,58 @@ struct CalendarView: View {
             RoundedRectangle(cornerRadius: 5)
                 .stroke(Color.frameLine, lineWidth: 0.5)
         )
+    }
+
+    // MARK: Moveable feasts (quick jump)
+
+    private var moveableFeastMenu: some View {
+        Menu {
+            ForEach(LiturgicalYearModel.moveableDates(year: year, rite: rite, store: store),
+                    id: \.label) { feast in
+                Button {
+                    let cal = Calendar.liturgical
+                    self.month = cal.component(.month, from: feast.date)
+                    if viewMode == .year {
+                        withAnimation(.easeInOut(duration: 0.2)) { viewMode = .list }
+                    }
+                } label: {
+                    Text("\(feast.label) \u{00B7} \(Self.shortDate.string(from: feast.date))")
+                }
+            }
+        } label: {
+            Image(systemName: "sparkles")
+                .font(.system(size: 13))
+                .foregroundStyle(Color.goldLeaf)
+        }
+    }
+
+    private static let shortDate: DateFormatter = {
+        let df = DateFormatter()
+        df.calendar = Calendar.liturgical
+        df.locale = Locale(identifier: "en_US_POSIX")
+        df.dateFormat = "MMM d"
+        return df
+    }()
+
+    // MARK: Year navigation (year-overview mode)
+
+    private var yearNavRow: some View {
+        HStack(spacing: 16) {
+            navButton("\u{2039}", enabled: year > yearRange.lowerBound) { year -= 1 }
+            Spacer()
+            VStack(spacing: 2) {
+                Text(String(year))
+                    .font(.titleM)
+                    .foregroundStyle(Color.primaryText)
+                Text("The Liturgical Year")
+                    .font(.captionSm)
+                    .foregroundStyle(Color.tertiaryText)
+            }
+            Spacer()
+            navButton("\u{203A}", enabled: year < yearRange.upperBound) { year += 1 }
+        }
+        .padding(.horizontal, 24)
+        .padding(.vertical, 10)
     }
 
     // MARK: Month / year navigation
@@ -229,7 +297,7 @@ struct CalendarView: View {
             ScrollView {
                 LazyVGrid(columns: Self.gridColumns, spacing: 2) {
                     ForEach(0..<model.leadingBlanks, id: \.self) { _ in
-                        Color.clear.frame(height: 52)
+                        Color.clear.frame(height: 60)
                     }
                     ForEach(model.days) { day in
                         gridCell(day)
@@ -267,9 +335,12 @@ struct CalendarView: View {
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
                     .frame(height: 20)
+
+                DayMarkerPips(day: d)
+                    .frame(height: 8)
             }
             .frame(maxWidth: .infinity)
-            .frame(height: 52)
+            .frame(height: 60)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
@@ -309,6 +380,170 @@ struct CalendarView: View {
         while m < 1  { m += 12; y -= 1 }
         y = min(max(y, yearRange.lowerBound), yearRange.upperBound)
         year = y; month = m
+    }
+}
+
+// MARK: - Year overview ("where am I in the year")
+
+private struct YearOverview: View {
+    let year: Int
+    let rite: MissalRite
+    let store: ContentStore
+    /// Jump into the month list at `date`.
+    let onOpen: (Date) -> Void
+
+    private var segments: [SeasonSegment] {
+        LiturgicalYearModel.seasons(year: year, rite: rite, store: store)
+    }
+    private var markers: [YearMarker] {
+        LiturgicalYearModel.markers(year: year, rite: rite, store: store)
+    }
+
+    var body: some View {
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(spacing: 10) {
+                    ForEach(segments) { seg in
+                        segmentCard(seg)
+                            .id(seg.id)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.vertical, 16)
+            }
+            .onAppear {
+                if let current = segments.first(where: { seg in
+                    (seg.startDate...seg.endDate).contains(Date())
+                }) {
+                    proxy.scrollTo(current.id, anchor: .center)
+                }
+            }
+        }
+    }
+
+    private func segmentCard(_ seg: SeasonSegment) -> some View {
+        let tint = Self.seasonTint(seg.seasonKey)
+        let now = Date()
+        let isCurrent = (seg.startDate...seg.endDate).contains(now)
+        let segMarkers = markers.filter { $0.date >= seg.startDate && $0.date <= seg.endDate }
+
+        return VStack(alignment: .leading, spacing: 0) {
+            HStack(spacing: 8) {
+                Rectangle()
+                    .fill(tint)
+                    .frame(width: 4)
+                    .frame(maxHeight: .infinity)
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack {
+                        Text(seg.label.uppercased())
+                            .font(.system(size: 11, weight: .semibold))
+                            .tracking(2)
+                            .foregroundStyle(tint)
+                        Spacer()
+                        if isCurrent {
+                            Text("YOU ARE HERE")
+                                .font(.system(size: 9, weight: .semibold))
+                                .tracking(1.5)
+                                .foregroundStyle(Color.parchment)
+                                .padding(.horizontal, 7)
+                                .padding(.vertical, 3)
+                                .background(Capsule().fill(Color.sanctuaryRed))
+                        }
+                        Text("\(seg.dayCount) days")
+                            .font(.system(size: 10))
+                            .foregroundStyle(Color.tertiaryText)
+                    }
+                    Text("\(Self.rangeDate.string(from: seg.startDate)) \u{2013} \(Self.rangeDate.string(from: seg.endDate))")
+                        .font(.captionSm)
+                        .italic()
+                        .foregroundStyle(Color.secondaryText)
+
+                    ForEach(segMarkers) { marker in
+                        Button { onOpen(marker.date) } label: {
+                            HStack(spacing: 8) {
+                                Circle()
+                                    .fill(LiturgicalColour.from(ordoColor: marker.color).swiftUIColor)
+                                    .frame(width: 6, height: 6)
+                                Text(Self.markerDate.string(from: marker.date))
+                                    .font(.system(size: 11, design: .serif))
+                                    .foregroundStyle(Color.tertiaryText)
+                                    .frame(width: 46, alignment: .leading)
+                                Text(marker.english ?? marker.name)
+                                    .font(.system(size: 13, design: .serif))
+                                    .foregroundStyle(Color.primaryText)
+                                    .lineLimit(1)
+                                Spacer(minLength: 0)
+                            }
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(.vertical, 12)
+                .padding(.trailing, 12)
+            }
+        }
+        .background(tint.opacity(isCurrent ? 0.10 : 0.05))
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(isCurrent ? Color.sanctuaryRed.opacity(0.35) : Color.frameLine, lineWidth: 0.5)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 6))
+    }
+
+    /// Muted band tints — colour is information, but legibility rules.
+    private static func seasonTint(_ key: String) -> Color {
+        switch key {
+        case "advent", "lent": return Color(red: 0.42, green: 0.21, blue: 0.60)
+        case "pre-lent":       return Color(red: 0.55, green: 0.35, blue: 0.62)
+        case "christmas":      return Color(red: 0.65, green: 0.53, blue: 0.16)
+        case "easter":         return Color(red: 0.72, green: 0.60, blue: 0.20)
+        default:               return Color(red: 0.23, green: 0.36, blue: 0.16)
+        }
+    }
+
+    private static let rangeDate: DateFormatter = {
+        let df = DateFormatter()
+        df.calendar = Calendar.liturgical
+        df.locale = Locale(identifier: "en_US_POSIX")
+        df.dateFormat = "MMMM d"
+        return df
+    }()
+
+    private static let markerDate: DateFormatter = {
+        let df = DateFormatter()
+        df.calendar = Calendar.liturgical
+        df.locale = Locale(identifier: "en_US_POSIX")
+        df.dateFormat = "MMM d"
+        return df
+    }()
+}
+
+// MARK: - Day markers (octave / vigil / Ember / fast pips)
+
+/// Tiny letter pips shared by the month grid and the day list: V vigil,
+/// O octave day, E Ember day, plus a filled dot on strict fast days under the
+/// user's discipline. Presentation only — all flags come from the ordo/context.
+struct DayMarkerPips: View {
+    let day: CalendarDay
+
+    var body: some View {
+        HStack(spacing: 3) {
+            if day.isVigil { pip("V", Color(red: 0.42, green: 0.21, blue: 0.60)) }
+            if day.isOctaveDay { pip("O", Color.goldLeaf) }
+            if day.isEmberDay { pip("E", Color.sanctuaryRed) }
+            if day.penanceStrict {
+                Circle()
+                    .fill(Color.sanctuaryRed.opacity(0.75))
+                    .frame(width: 4, height: 4)
+            }
+        }
+    }
+
+    private func pip(_ letter: String, _ color: Color) -> some View {
+        Text(letter)
+            .font(.system(size: 7, weight: .bold))
+            .foregroundStyle(color.opacity(0.9))
     }
 }
 
@@ -356,6 +591,7 @@ private struct DayRow: View {
                                 .font(.system(size: 9))
                                 .foregroundStyle(Color.sanctuaryRed)
                         }
+                        DayMarkerPips(day: day)
                     }
 
                     if mode != .vernacular {
@@ -559,11 +795,14 @@ private struct DayDetailView: View {
             }
             infoRow(label: "Season", value: langMode == .latinOnly ? ctx.latinName : ctx.englishName)
 
-            if ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay {
+            if ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay
+                || day.isVigil || day.isOctaveDay {
                 VStack(alignment: .leading, spacing: 6) {
                     if ctx.isFirstFriday { flag("First Friday") }
                     if ctx.isFirstSaturday { flag("First Saturday") }
                     if ctx.isEmberDay { flag("Ember Day") }
+                    if day.isVigil { flag("Vigil") }
+                    if day.isOctaveDay { flag("Within an Octave") }
                 }
             }
 

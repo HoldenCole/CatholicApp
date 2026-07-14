@@ -21,8 +21,23 @@ struct CalendarDay: Identifiable {
     let ordo: OrdoEntry?     // nil only if the date is outside the bundled ordo
     let englishName: String? // full English translation of ordo.name, if bundled
     let isToday: Bool
+    /// Ember day under the rite (from LiturgicalContext at build time).
+    var isEmberDay: Bool = false
+    /// Strict fast/abstinence under the user's penance discipline (build time).
+    var penanceStrict: Bool = false
 
     var id: Int { day }
+
+    /// Vigil day (from the ordo title — "In Vigilia …" / "Sabbato in Vigilia …").
+    var isVigil: Bool {
+        ordo?.name.localizedCaseInsensitiveContains("vigilia") ?? false
+    }
+
+    /// A day within (or the day of) an octave, from the ordo title.
+    var isOctaveDay: Bool {
+        guard let n = ordo?.name.lowercased() else { return false }
+        return n.contains("octav")   // "in octava", "infra octavam", "die octavæ"
+    }
 
     /// Display colour for the cell's pip; nil when there is no ordo entry.
     var colour: LiturgicalColour? {
@@ -75,7 +90,8 @@ struct CalendarMonth {
                       month: Int,
                       rite: MissalRite,
                       store: ContentStore,
-                      today: Date = Date()) -> CalendarMonth {
+                      today: Date = Date(),
+                      discipline: PenanceDiscipline = .discipline1962) -> CalendarMonth {
         let cal = Calendar.liturgical
         var comps = DateComponents()
         comps.year = year
@@ -94,13 +110,16 @@ struct CalendarMonth {
             dc.day = d
             let date = cal.date(from: dc) ?? firstOfMonth
             let ordo = store.ordoForDate(date, rite: rite)
+            let ctx = LiturgicalContext.for(date: date, rite: rite, discipline: discipline)
             days.append(CalendarDay(
                 date: date,
                 day: d,
                 weekday: cal.component(.weekday, from: date),
                 ordo: ordo,
                 englishName: ordo.flatMap { store.ordoNameEnglish($0.name) },
-                isToday: cal.isDate(date, inSameDayAs: today)
+                isToday: cal.isDate(date, inSameDayAs: today),
+                isEmberDay: ctx.isEmberDay,
+                penanceStrict: ctx.penance.strict
             ))
         }
 

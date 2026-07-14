@@ -322,6 +322,17 @@ fun TodayScreen(
         // ---- Main content cards ----
         item { Spacer(Modifier.height(24.dp)) }
 
+        // Upcoming feasts (next 14 days)
+        item {
+            UpcomingFeastsCard(
+                rite = rite,
+                modifier = Modifier.padding(horizontal = 28.dp),
+                onClick = { onNavigateCalendar?.invoke() },
+            )
+        }
+
+        item { Spacer(Modifier.height(24.dp)) }
+
         // Daily Psalm
         item {
             DailyPsalmCard(modifier = Modifier.padding(horizontal = 28.dp))
@@ -444,6 +455,72 @@ fun TodayScreen(
 // ---------------------------------------------------------------------------
 // Card composables
 // ---------------------------------------------------------------------------
+
+@Composable
+private fun UpcomingFeastsCard(
+    rite: com.lampstandhq.introibo.storage.settings.MissalRite,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {},
+) {
+    val colors = IntroiboTheme.colors
+    val upcoming = remember(rite) {
+        com.lampstandhq.introibo.data.liturgical.LiturgicalYear.upcoming(rite = rite).take(4)
+    }
+    if (upcoming.isEmpty()) return
+    val langMode = currentLanguageMode()
+    val fmt = remember { java.time.format.DateTimeFormatter.ofPattern("EEE d MMM", java.util.Locale.US) }
+
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .border(0.5.dp, colors.frameLine)
+            .clickable { onClick() }
+            .padding(16.dp),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            SmallLabel(text = "Ventura · Upcoming", color = colors.tertiaryText)
+            Spacer(Modifier.weight(1f))
+            Text(text = "›", fontSize = 12.sp, color = colors.tertiaryText)
+        }
+        Spacer(Modifier.height(8.dp))
+        upcoming.forEach { day ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(vertical = 3.dp),
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(6.dp)
+                        .clip(androidx.compose.foundation.shape.CircleShape)
+                        .background(
+                            (day.colour?.let { com.lampstandhq.introibo.ui.theme.liturgicalColor(it) }
+                                ?: colors.frameLine).copy(alpha = 0.85f),
+                        ),
+                )
+                Spacer(Modifier.width(10.dp))
+                Text(
+                    text = day.date.format(fmt),
+                    fontSize = 12.sp,
+                    color = colors.tertiaryText,
+                    modifier = Modifier.width(72.dp),
+                )
+                Text(
+                    text = if (langMode == LanguageMode.LATIN_ONLY) {
+                        day.label ?: day.weekdayName
+                    } else {
+                        day.englishName ?: day.label ?: day.weekdayName
+                    },
+                    fontSize = 14.sp,
+                    color = colors.primaryText,
+                    maxLines = 1,
+                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                com.lampstandhq.introibo.ui.calendar.DayMarkerPips(day)
+            }
+        }
+    }
+}
 
 @Composable
 private fun DailyPsalmCard(modifier: Modifier = Modifier) {
