@@ -33,7 +33,13 @@ platform :ios do
 
     archive_path = File.join(Dir.tmpdir, "Introibo.xcarchive")
 
-    # Archive
+    # Archive UNSIGNED; signing happens at export (below), where automatic
+    # signing + -allowProvisioningUpdates provably works with this API key.
+    # Signing at archive time instead fails in GatherProvisioningInputs with
+    # "Authentication failed: bearer token" on the CI runners — every deploy
+    # between 2026-07-14 and 2026-07-20 silently failed that way after these
+    # flags moved out of the project's base settings. Keep them HERE (CI
+    # archive only) so local Xcode builds retain clean automatic signing.
     sh(
       "xcodebuild",
       "-project", "../Introibo.xcodeproj",
@@ -44,6 +50,9 @@ platform :ios do
       "-authenticationKeyPath", key_path,
       "-authenticationKeyID", ENV["ASC_KEY_ID"],
       "-authenticationKeyIssuerID", ENV["ASC_ISSUER_ID"],
+      "CODE_SIGN_IDENTITY=",
+      "CODE_SIGNING_REQUIRED=NO",
+      "CODE_SIGNING_ALLOWED=NO",
       "archive",
     )
 
