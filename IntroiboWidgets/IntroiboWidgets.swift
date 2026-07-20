@@ -1,7 +1,7 @@
 import WidgetKit
 import SwiftUI
 
-// MARK: - IntroiboWidgets
+// MARK: - IntroiboWidgets (v1.2.3)
 //
 // The home-screen / lock-screen widget: an INVITATION to pray, never a
 // tracker. It shows the right prayer content for the current part of the day

@@ -23,7 +23,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-// MARK: - Day widgets (Today's Feast + Daily Reading)
+// MARK: - Day widgets (Today's Feast + Daily Reading, v1.2.3)
 //
 // Two further widget types alongside the prayer widget: the small "Today's
 // Feast" card (the day of the liturgical calendar you are on) and the wide
