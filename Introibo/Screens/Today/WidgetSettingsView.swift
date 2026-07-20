@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 // MARK: - WidgetSettingsView
 //
@@ -16,6 +17,7 @@ import SwiftUI
 
 struct WidgetSettingsView: View {
     @State private var mode = WidgetConfigStore.mode
+    @State private var readingChoice = WidgetSnapshotStore.readingText
     /// Bumped after a slot pick so the rows re-read the store.
     @State private var revision = 0
 
@@ -54,6 +56,33 @@ struct WidgetSettingsView: View {
                     Text("Orationes · Slot Prayers")
                 }
                 .id(revision)
+            }
+
+            Section {
+                ForEach(WidgetReadingText.allCases, id: \.rawValue) { choice in
+                    Button {
+                        readingChoice = choice
+                        WidgetSnapshotStore.readingText = choice
+                        WidgetCenter.shared.reloadAllTimelines()
+                    } label: {
+                        HStack {
+                            Text(choice.label)
+                                .font(.body)
+                                .foregroundStyle(Color.primaryText)
+                            Spacer()
+                            if readingChoice == choice {
+                                Image(systemName: "checkmark")
+                                    .foregroundStyle(Color.sanctuaryRed)
+                            }
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .listRowBackground(Color.pageBackground)
+                }
+            } header: {
+                Text("Lectio · Reading Widget")
+            } footer: {
+                Text("The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget needs no configuration — it always shows the liturgical day.")
             }
         }
         .scrollContentBackground(.hidden)

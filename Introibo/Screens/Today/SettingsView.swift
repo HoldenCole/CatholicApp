@@ -33,6 +33,14 @@ struct SettingsView: View {
             .background(Color.pageBackground.ignoresSafeArea())
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
+            // The widget snapshot bakes in the rite and language — rebuild it
+            // the moment either changes so the widgets follow immediately.
+            .onChange(of: riteRaw) { _, _ in
+                DispatchQueue.global(qos: .utility).async { WidgetSnapshotWriter.refresh() }
+            }
+            .onChange(of: languageRaw) { _, _ in
+                DispatchQueue.global(qos: .utility).async { WidgetSnapshotWriter.refresh() }
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") { dismiss() }

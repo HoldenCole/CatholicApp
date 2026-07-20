@@ -84,14 +84,25 @@ final class DeepLinkRouter {
 
         case "widget":
             let mode = components.queryItems?.first(where: { $0.name == "m" })?.value
-            switch WidgetMode(rawValue: mode ?? "") ?? .office {
-            case .office:
-                let slug = OfficeSchedule.currentHourSlug(in: ContentStore.shared.hours)
-                open(DeepLinkTarget(type: .office, id: slug, position: nil))
-            case .prayer:
+            switch mode {
+            case "prayer":
                 let slot = WidgetConfigStore.currentSlot()
                 let slug = WidgetConfigStore.slotPrayer(slot)
                 open(DeepLinkTarget(type: .prayer, id: slug, position: nil))
+            case "day":
+                // Today's-feast widget: land on the Hodie tab, no sheet.
+                requestedTab = 0
+            case "reading":
+                // Daily-reading widget: open today's Mass, resolved at tap.
+                let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? ""
+                let rite = MissalRite(rawValue: riteRaw) ?? .rite1962
+                if let proper = ContentStore.shared.properForDate(Date(), rite: rite) {
+                    requestedTab = 1
+                    resolved = .proper(proper, anchor: nil)
+                }
+            default: // "office" and anything unrecognized
+                let slug = OfficeSchedule.currentHourSlug(in: ContentStore.shared.hours)
+                open(DeepLinkTarget(type: .office, id: slug, position: nil))
             }
 
         default:

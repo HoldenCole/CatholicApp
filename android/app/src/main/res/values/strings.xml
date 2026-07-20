@@ -17,4 +17,6 @@
     <string name="widget_label_morning">Morning</string>
     <string name="widget_label_midday">Midday</string>
     <string name="widget_label_evening">Evening</string>
+    <string name="widget_day_description">The day of the liturgical calendar you are on — feast, season, and colour.</string>
+    <string name="widget_reading_description">A quote from today\'s Mass propers. Choose the text in the app\'s widget settings.</string>
 </resources>

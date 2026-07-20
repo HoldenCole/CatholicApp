@@ -77,6 +77,7 @@ targets:
       # two can never disagree about the current hour or the widget config.
       - path: Introibo/Liturgical/OfficeSchedule.swift
       - path: Introibo/Widget/WidgetConfigStore.swift
+      - path: Introibo/Widget/WidgetDaySnapshot.swift
       # Same bundled schedule data the app reads.
       - path: Introibo/Resources/hours.json
         buildPhase: resources

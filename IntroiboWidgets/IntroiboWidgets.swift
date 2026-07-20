@@ -151,7 +151,7 @@ struct PrayerProvider: TimelineProvider {
 
 // MARK: - Views
 
-private extension Color {
+extension Color {
     static let wParchment = Color(red: 0xF2 / 255, green: 0xE8 / 255, blue: 0xD0 / 255)
     static let wWalnut = Color(red: 0x1A / 255, green: 0x13 / 255, blue: 0x0C / 255)
     static let wRed = Color(red: 0x8B / 255, green: 0x1A / 255, blue: 0x1A / 255)
@@ -224,6 +224,236 @@ struct IntroiboWidgetView: View {
     }
 }
 
+// MARK: - Liturgical-day + Daily-reading widgets
+//
+// Both render from the WidgetDaySnapshot window the APP precomputes into the
+// App Group (the extension can't load the missal corpus). Content changes at
+// local midnight; the timeline carries entries for the next week and refreshes
+// .atEnd. If the window has gone stale (app unopened for >30 days) the views
+// degrade to an invitation to open the app.
+
+struct DayEntry: TimelineEntry {
+    let date: Date
+    let snapshot: WidgetDaySnapshot?
+}
+
+private func midnightTimeline(completion: @escaping (Timeline<DayEntry>) -> Void) {
+    let cal = Calendar(identifier: .gregorian)
+    let now = Date()
+    var dates: [Date] = [now]
+    for offset in 1...7 {
+        if let day = cal.date(byAdding: .day, value: offset, to: cal.startOfDay(for: now)) {
+            dates.append(day)
+        }
+    }
+    let entries = dates.map { DayEntry(date: $0, snapshot: WidgetSnapshotStore.snapshot(for: $0)) }
+    completion(Timeline(entries: entries, policy: .atEnd))
+}
+
+struct DayProvider: TimelineProvider {
+    func placeholder(in context: Context) -> DayEntry {
+        DayEntry(date: Date(), snapshot: nil)
+    }
+    func getSnapshot(in context: Context, completion: @escaping (DayEntry) -> Void) {
+        completion(DayEntry(date: Date(), snapshot: WidgetSnapshotStore.snapshot()))
+    }
+    func getTimeline(in context: Context, completion: @escaping (Timeline<DayEntry>) -> Void) {
+        midnightTimeline(completion: completion)
+    }
+}
+
+private func liturgicalColor(_ key: String) -> Color {
+    switch key {
+    case "violet": return Color(red: 0.42, green: 0.21, blue: 0.60)
+    case "rose": return Color(red: 0.63, green: 0.28, blue: 0.38)
+    case "red": return .wRed
+    case "green": return Color(red: 0.23, green: 0.36, blue: 0.16)
+    case "black": return Color(red: 0.16, green: 0.15, blue: 0.13)
+    default: return .wGold   // white feasts render as gold on parchment
+    }
+}
+
+/// Small square: the day of the liturgical calendar you are on.
+struct LiturgicalDayWidgetView: View {
+    let entry: DayEntry
+
+    private static let dayFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "en_US_POSIX")
+        df.dateFormat = "EEEE d MMMM"
+        return df
+    }()
+
+    var body: some View {
+        Group {
+            if let snap = entry.snapshot {
+                VStack(alignment: .leading, spacing: 3) {
+                    HStack(spacing: 5) {
+                        Circle()
+                            .fill(liturgicalColor(snap.color))
+                            .frame(width: 7, height: 7)
+                        Text(snap.season.uppercased())
+                            .font(.system(size: 9, weight: .semibold, design: .serif))
+                            .tracking(1.2)
+                            .foregroundStyle(Color.wRed)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
+                    Spacer(minLength: 0)
+                    Text(WidgetSnapshotStore.prefersLatin
+                         ? snap.name
+                         : (snap.english ?? snap.name))
+                        .font(.system(size: 15, weight: .medium, design: .serif))
+                        .foregroundStyle(Color.wWalnut)
+                        .lineLimit(4)
+                        .minimumScaleFactor(0.75)
+                    Spacer(minLength: 0)
+                    Text(Self.dayFormatter.string(from: entry.date))
+                        .font(.system(size: 10, design: .serif))
+                        .italic()
+                        .foregroundStyle(Color.wInkSoft)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            } else {
+                stalePrompt
+            }
+        }
+        .widgetURL(URL(string: "introibo://widget?m=day"))
+        .containerBackground(for: .widget) { Color.wParchment }
+    }
+}
+
+/// Medium/large rectangle: a quote from the day's Mass propers.
+struct DailyReadingWidgetView: View {
+    @Environment(\.widgetFamily) private var family
+    let entry: DayEntry
+
+    var body: some View {
+        Group {
+            if let snap = entry.snapshot {
+                readingBody(snap)
+            } else {
+                stalePrompt
+            }
+        }
+        .widgetURL(URL(string: "introibo://widget?m=reading"))
+        .containerBackground(for: .widget) { Color.wParchment }
+    }
+
+    private func readingBody(_ snap: WidgetDaySnapshot) -> some View {
+        let latin = WidgetSnapshotStore.prefersLatin
+        let choice = WidgetSnapshotStore.readingText
+        let primary = text(choice, from: snap, latin: latin)
+
+        return VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 6) {
+                Circle()
+                    .fill(liturgicalColor(snap.color))
+                    .frame(width: 6, height: 6)
+                Text((latin ? snap.name : (snap.english ?? snap.name)).uppercased())
+                    .font(.system(size: 10, weight: .semibold, design: .serif))
+                    .tracking(1.2)
+                    .foregroundStyle(Color.wRed)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+                Spacer(minLength: 0)
+                if let ref = primary.ref {
+                    Text(ref)
+                        .font(.system(size: 9, design: .serif))
+                        .italic()
+                        .foregroundStyle(Color.wInkSoft)
+                        .lineLimit(1)
+                }
+            }
+            Rectangle()
+                .fill(Color.wGold)
+                .frame(width: 28, height: 1)
+                .padding(.vertical, 1)
+            Text(choice.label)
+                .font(.system(size: 9, weight: .semibold, design: .serif))
+                .tracking(1)
+                .foregroundStyle(Color.wInkSoft)
+            Text(primary.body)
+                .font(.system(size: family == .systemLarge ? 14 : 12, design: .serif))
+                .foregroundStyle(Color.wWalnut)
+                .lineSpacing(2)
+                .lineLimit(family == .systemLarge ? 10 : 4)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            if family == .systemLarge, choice != .collect {
+                Text("Collect")
+                    .font(.system(size: 9, weight: .semibold, design: .serif))
+                    .tracking(1)
+                    .foregroundStyle(Color.wInkSoft)
+                    .padding(.top, 3)
+                Text(latin ? snap.collectLat : snap.collectEng)
+                    .font(.system(size: 12, design: .serif))
+                    .italic()
+                    .foregroundStyle(Color.wWalnut)
+                    .lineSpacing(2)
+                    .lineLimit(6)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+
+    private func text(_ choice: WidgetReadingText, from snap: WidgetDaySnapshot,
+                      latin: Bool) -> (body: String, ref: String?) {
+        switch choice {
+        case .introit: return (latin ? snap.introitLat : snap.introitEng, snap.introitRef)
+        case .collect: return (latin ? snap.collectLat : snap.collectEng, nil)
+        case .epistle: return (latin ? snap.epistleLat : snap.epistleEng, snap.epistleRef)
+        case .gospel: return (latin ? snap.gospelLat : snap.gospelEng, snap.gospelRef)
+        }
+    }
+}
+
+/// Rendered when the snapshot window doesn't cover the entry date (the app
+/// hasn't been opened in over a month). An invitation, never an error.
+private var stalePrompt: some View {
+    VStack(alignment: .leading, spacing: 4) {
+        Text("INTROIBO")
+            .font(.system(size: 10, weight: .semibold, design: .serif))
+            .tracking(1.6)
+            .foregroundStyle(Color.wRed)
+        Text("Open the app to refresh today's liturgy.")
+            .font(.system(size: 12, design: .serif))
+            .italic()
+            .foregroundStyle(Color.wInkSoft)
+    }
+    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+}
+
+struct LiturgicalDayWidget: Widget {
+    let kind = "IntroiboDayWidget"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: DayProvider()) { entry in
+            LiturgicalDayWidgetView(entry: entry)
+        }
+        .configurationDisplayName("Today's Feast")
+        .description("The day of the liturgical calendar you are on — feast, season, and colour.")
+        .supportedFamilies([.systemSmall])
+    }
+}
+
+struct DailyReadingWidget: Widget {
+    let kind = "IntroiboReadingWidget"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: DayProvider()) { entry in
+            DailyReadingWidgetView(entry: entry)
+        }
+        .configurationDisplayName("Daily Reading")
+        .description("A quote from today's Mass propers — choose the text in the app's widget settings.")
+        .supportedFamilies([.systemMedium, .systemLarge])
+    }
+}
+
 // MARK: - Widget declaration
 
 struct IntroiboWidget: Widget {
@@ -243,5 +473,7 @@ struct IntroiboWidget: Widget {
 struct IntroiboWidgetsBundle: WidgetBundle {
     var body: some Widget {
         IntroiboWidget()
+        LiturgicalDayWidget()
+        DailyReadingWidget()
     }
 }

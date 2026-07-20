@@ -66,6 +66,15 @@ object WidgetConfig {
         prefs(context).edit().putString(KEY_MODE, mode.key).apply()
     }
 
+    /** Which propers text the Daily Reading widget quotes
+     *  ("introit" | "collect" | "epistle" | "gospel"). */
+    fun readingText(context: Context): String =
+        prefs(context).getString("reading.text", null) ?: "introit"
+
+    fun setReadingText(context: Context, key: String) {
+        prefs(context).edit().putString("reading.text", key).apply()
+    }
+
     /** The prayer slug assigned to [slot] (falls back to a sensible default). */
     fun slotPrayer(context: Context, slot: WidgetSlot): String =
         prefs(context).getString("slot.${slot.key}", null)

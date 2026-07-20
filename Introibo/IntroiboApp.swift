@@ -6,6 +6,7 @@ struct IntroiboApp: App {
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var splashFinished = false
     @State private var showUpgradeModal = false
+    @Environment(\.scenePhase) private var scenePhase
     private var tutorial: TutorialManager { TutorialManager.shared }
 
     init() {
@@ -67,6 +68,16 @@ struct IntroiboApp: App {
             // the navigation; ContentView presents it when it mounts.
             .onOpenURL { url in
                 DeepLinkRouter.shared.open(url: url)
+            }
+            // Refresh the widget snapshot window (feast + propers quotes for
+            // the next 30 days) on every foreground — the widget extension
+            // can't compute these itself. Cheap; runs off the main thread.
+            .onChange(of: scenePhase) { _, phase in
+                if phase == .active {
+                    DispatchQueue.global(qos: .utility).async {
+                        WidgetSnapshotWriter.refresh()
+                    }
+                }
             }
         }
     }

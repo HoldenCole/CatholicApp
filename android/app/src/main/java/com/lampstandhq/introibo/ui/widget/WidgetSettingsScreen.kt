@@ -55,6 +55,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
     val type = IntroiboType.current
 
     var mode by remember { mutableStateOf(WidgetConfig.mode(context)) }
+    var readingText by remember { mutableStateOf(WidgetConfig.readingText(context)) }
     var pickingSlot by remember { mutableStateOf<WidgetSlot?>(null) }
     // Bump to re-read slot assignments after a pick.
     var revision by remember { mutableStateOf(0) }
@@ -199,6 +200,53 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
                     mode = WidgetMode.PRAYER
                     WidgetConfig.setMode(context, WidgetMode.PRAYER)
                     refreshWidget()
+                }
+            }
+
+            item {
+                Text(
+                    text = "LECTIO · READING WIDGET",
+                    style = type.smallLabel,
+                    color = colors.tertiaryText,
+                    modifier = Modifier.padding(top = 20.dp, bottom = 6.dp),
+                )
+            }
+            item {
+                Text(
+                    text = "The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget always shows the liturgical day.",
+                    style = type.bodySm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.secondaryText,
+                    modifier = Modifier.padding(bottom = 4.dp),
+                )
+            }
+            val readingChoices = listOf(
+                "introit" to "Introit",
+                "collect" to "Collect",
+                "epistle" to "Epistle",
+                "gospel" to "Gospel",
+            )
+            items(readingChoices.size, key = { "r-" + readingChoices[it].first }) { i ->
+                val (key, label) = readingChoices[i]
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            readingText = key
+                            WidgetConfig.setReadingText(context, key)
+                            com.lampstandhq.introibo.widget.IntroiboReadingWidgetProvider()
+                                .refreshAll(context)
+                        }
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(label, style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
+                    if (readingText == key) {
+                        Icon(
+                            imageVector = Icons.Filled.Check,
+                            contentDescription = "Selected",
+                            tint = colors.sanctuaryRed,
+                        )
+                    }
                 }
             }
 

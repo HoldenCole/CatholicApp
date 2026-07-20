@@ -35,6 +35,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import kotlinx.coroutines.flow.first
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.ui.confession.ConfessionScreen
 import com.lampstandhq.introibo.ui.learn.LearnScreen
@@ -117,6 +118,24 @@ fun IntroiboNavHost(
     val appContext = androidx.compose.ui.platform.LocalContext.current.applicationContext
     LaunchedEffect(deepLinkTarget) {
         val raw = deepLinkTarget ?: return@LaunchedEffect
+        // Day widget: land on the Today tab, nothing stacked.
+        if (raw == "widget:day") {
+            selectedIndex = 0
+            navController.navigate(Screen.Today.route) { launchSingleTop = true }
+            onDeepLinkConsumed()
+            return@LaunchedEffect
+        }
+        // Reading widget: open today's Mass, resolved at tap time.
+        if (raw == "widget:reading") {
+            val rite = SettingsRepository(appContext).missalRite.first()
+            val proper = com.lampstandhq.introibo.data.content.ContentStore
+                .properForDate(java.time.LocalDate.now(), rite)
+            if (proper != null) {
+                navController.navigate(Screen.ProperDetail.createRoute(proper.slug))
+            }
+            onDeepLinkConsumed()
+            return@LaunchedEffect
+        }
         val target = when (raw) {
             "widget:office" -> {
                 val slug = com.lampstandhq.introibo.data.liturgical.OfficeSchedule
