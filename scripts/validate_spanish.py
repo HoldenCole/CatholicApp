@@ -37,9 +37,17 @@ def validate_prayers():
         want = len(src[slug].get("lines", []))
         got = len(entry.get("lines_es", []))
         check(want == got, f"prayers[{slug}]: line count {got} != source {want}")
+        src_lines = src[slug].get("lines", [])
         for i, line in enumerate(entry.get("lines_es", [])):
-            check(isinstance(line, str) and line.strip(),
-                  f"prayers[{slug}].lines_es[{i}]: empty")
+            check(isinstance(line, str), f"prayers[{slug}].lines_es[{i}]: not a string")
+            # Blank separator lines in the source stay blank in Spanish.
+            src_blank = i < len(src_lines) and not (
+                (src_lines[i].get("lat") or "").strip()
+                or (src_lines[i].get("eng") or "").strip()
+            )
+            if not src_blank:
+                check(isinstance(line, str) and line.strip(),
+                      f"prayers[{slug}].lines_es[{i}]: empty")
     print(f"prayers_es.json: {len(es)} prayers checked")
 
 

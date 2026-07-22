@@ -1,0 +1,1098 @@
+{
+  "signum": {
+    "title_es": "La Señal de la Cruz",
+    "note_es": null,
+    "lines_es": [
+      "En el nombre del Padre, y del Hijo, y del Espíritu Santo.",
+      "Amén."
+    ]
+  },
+  "pater": {
+    "title_es": "El Padrenuestro",
+    "note_es": null,
+    "lines_es": [
+      "Padre nuestro, que estás en los cielos, santificado sea el tu nombre.",
+      "Venga a nos el tu reino. Hágase tu voluntad, así en la tierra como en el cielo.",
+      "El pan nuestro de cada día dánosle hoy,",
+      "y perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores.",
+      "Y no nos dejes caer en la tentación, mas líbranos de mal.",
+      "℟. Amén."
+    ]
+  },
+  "ave": {
+    "title_es": "El Avemaría",
+    "note_es": null,
+    "lines_es": [
+      "Dios te salve, María, llena eres de gracia; el Señor es contigo.",
+      "Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.",
+      "℟. Santa María, Madre de Dios, ruega por nosotros, pecadores,",
+      "ahora y en la hora de nuestra muerte. Amén."
+    ]
+  },
+  "gloriaPatri": {
+    "title_es": "El Gloria al Padre",
+    "note_es": null,
+    "lines_es": [
+      "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
+      "Como era en el principio, ahora y siempre,",
+      "y por los siglos de los siglos. Amén."
+    ]
+  },
+  "fatima": {
+    "title_es": "La Oración de Fátima",
+    "note_es": "Se añade después de cada Gloria en el Rosario, según lo reveló Nuestra Señora en Fátima en 1917.",
+    "lines_es": [
+      "Oh Jesús mío, perdona nuestros pecados,",
+      "líbranos del fuego del infierno,",
+      "lleva al cielo a todas las almas,",
+      "especialmente a las más necesitadas de tu misericordia. Amén."
+    ]
+  },
+  "salve": {
+    "title_es": "La Salve",
+    "note_es": "Se dice al final del Rosario, y como antífona mariana de Completas desde la fiesta de la Santísima Trinidad hasta el Adviento.",
+    "lines_es": [
+      "Dios te salve, Reina y Madre de misericordia,",
+      "vida, dulzura y esperanza nuestra; Dios te salve.",
+      "A ti llamamos los desterrados hijos de Eva.",
+      "A ti suspiramos, gimiendo y llorando en este valle de lágrimas.",
+      "Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos.",
+      "Y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.",
+      "¡Oh clemente, oh piadosa, oh dulce Virgen María! Amén."
+    ]
+  },
+  "credoApost": {
+    "title_es": "El Credo de los Apóstoles",
+    "note_es": "Se dice al comienzo del Rosario, sosteniendo el crucifijo.",
+    "lines_es": [
+      "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra.",
+      "Y en Jesucristo, su único Hijo, nuestro Señor:",
+      "que fue concebido por obra del Espíritu Santo, nació de Santa María Virgen,",
+      "padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado:",
+      "descendió a los infiernos; al tercer día resucitó de entre los muertos;",
+      "subió a los cielos; está sentado a la diestra de Dios Padre todopoderoso:",
+      "desde allí ha de venir a juzgar a los vivos y a los muertos.",
+      "Creo en el Espíritu Santo, la santa Iglesia católica,",
+      "la comunión de los Santos, el perdón de los pecados,",
+      "la resurrección de la carne y la vida perdurable. Amén."
+    ]
+  },
+  "confiteor": {
+    "title_es": "Yo, pecador, me confieso (Confíteor)",
+    "note_es": "El Confíteor de la Misa, dicho al pie del altar. Se incluyen las frases conventuales (y a vos, Padre / y a vosotros, hermanos); omítanse cuando se reza en privado.",
+    "lines_es": [
+      "Yo, pecador, me confieso a Dios todopoderoso, a la bienaventurada siempre Virgen María,",
+      "al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista,",
+      "a los santos Apóstoles San Pedro y San Pablo, a todos los Santos, y a vos, Padre (y a vosotros, hermanos):",
+      "que pequé gravemente con el pensamiento, palabra y obra:",
+      "por mi culpa, por mi culpa, por mi grandísima culpa.",
+      "Por tanto, ruego a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel,",
+      "al bienaventurado San Juan Bautista, a los santos Apóstoles San Pedro y San Pablo, a todos los Santos, y a vos, Padre (y a vosotros, hermanos),",
+      "que roguéis por mí a Dios nuestro Señor. Amén."
+    ]
+  },
+  "kyrie": {
+    "title_es": "Señor, ten piedad",
+    "note_es": "Se dice en tres grupos de tres al comienzo de la Misa.",
+    "lines_es": [
+      "Señor, ten piedad de nosotros.",
+      "Señor, ten piedad de nosotros.",
+      "Señor, ten piedad de nosotros.",
+      "Cristo, ten piedad de nosotros.",
+      "Cristo, ten piedad de nosotros.",
+      "Cristo, ten piedad de nosotros.",
+      "Señor, ten piedad de nosotros.",
+      "Señor, ten piedad de nosotros.",
+      "Señor, ten piedad de nosotros."
+    ]
+  },
+  "gloriaExcelsis": {
+    "title_es": "Gloria a Dios en las alturas",
+    "note_es": "La Doxología mayor. Se canta en la Misa los domingos (fuera de Adviento y Cuaresma), en las fiestas y dentro de las octavas.",
+    "lines_es": [
+      "Gloria a Dios en las alturas, y en la tierra paz a los hombres de buena voluntad.",
+      "Te alabamos. Te bendecimos. Te adoramos. Te glorificamos.",
+      "Te damos gracias por tu grande gloria.",
+      "Señor Dios, Rey celestial, Dios Padre todopoderoso.",
+      "Señor, Hijo unigénito, Jesucristo. Señor Dios, Cordero de Dios, Hijo del Padre.",
+      "Tú que quitas los pecados del mundo, ten misericordia de nosotros.",
+      "Tú que quitas los pecados del mundo, recibe nuestra súplica.",
+      "Tú que estás sentado a la diestra del Padre, ten misericordia de nosotros.",
+      "Porque Tú solo eres Santo. Tú solo Señor. Tú solo Altísimo, Jesucristo.",
+      "Con el Espíritu Santo en la gloria de Dios Padre. Amén."
+    ]
+  },
+  "sanctus": {
+    "title_es": "Santo, Santo, Santo",
+    "note_es": "Se canta en toda Misa antes del Canon. Todos de rodillas.",
+    "lines_es": [
+      "Santo, Santo, Santo es el Señor, Dios de los ejércitos.",
+      "Llenos están los cielos y la tierra de tu gloria.",
+      "Hosanna en las alturas.",
+      "✠ Bendito el que viene en el nombre del Señor.",
+      "Hosanna en las alturas."
+    ]
+  },
+  "agnus": {
+    "title_es": "Cordero de Dios",
+    "note_es": "Se dice antes de la Comunión.",
+    "lines_es": [
+      "Cordero de Dios, que quitas los pecados del mundo: ten misericordia de nosotros.",
+      "Cordero de Dios, que quitas los pecados del mundo: ten misericordia de nosotros.",
+      "Cordero de Dios, que quitas los pecados del mundo: danos la paz."
+    ]
+  },
+  "domineNSD": {
+    "title_es": "Señor, no soy digno",
+    "note_es": "Se dice tres veces antes de recibir la Sagrada Comunión, golpeándose el pecho en cada repetición.",
+    "lines_es": [
+      "Señor, no soy digno de que entres bajo mi techo:",
+      "mas di una sola palabra, y mi alma será sana.",
+      "(Se dice tres veces.)"
+    ]
+  },
+  "morning": {
+    "title_es": "Ofrecimiento de la mañana",
+    "note_es": "Se reza tradicionalmente al levantarse, para consagrar las oraciones, obras, alegrías y sufrimientos del día al Sagrado Corazón de Jesús por medio del Corazón Inmaculado de María.",
+    "lines_es": [
+      "Oh Jesús, por medio del Corazón Inmaculado de María,",
+      "te ofrezco las oraciones, obras, alegrías y sufrimientos de este día,",
+      "en satisfacción por nuestros pecados,",
+      "en unión con todos los Santos Sacrificios de la Misa celebrados hoy en el mundo entero,",
+      "por todas las intenciones de tu Sacratísimo Corazón,",
+      "por la unión de los cristianos, por la conversión de los pecadores,",
+      "y por las intenciones del Sumo Pontífice en este mes. Amén."
+    ]
+  },
+  "memorare": {
+    "title_es": "Acordaos (Memorare)",
+    "note_es": "Oración a Nuestra Señora de San Bernardo de Claraval (siglo XII).",
+    "lines_es": [
+      "Acordaos, oh piadosísima Virgen María, que jamás se ha oído decir",
+      "que ninguno de los que han acudido a vuestra protección, implorando vuestra asistencia y reclamando vuestro socorro,",
+      "haya sido abandonado.",
+      "Animado con esta confianza, a Vos, oh Virgen de las vírgenes, Madre mía, acudo;",
+      "a Vos vengo, y gimiendo bajo el peso de mis pecados me postro en vuestra presencia.",
+      "Oh Madre del Verbo, no despreciéis mis súplicas,",
+      "antes bien, escuchadlas y acogedlas benignamente. Amén."
+    ]
+  },
+  "actusContr": {
+    "title_es": "Acto de Contrición",
+    "note_es": "El Acto de Contrición tradicional latino, distinto de la forma castellana («Señor mío Jesucristo…»), pero igualmente válido. Se reza a diario y en el Sacramento de la Penitencia.",
+    "lines_es": [
+      "Dios mío, me pesa de todo corazón de todos mis pecados,",
+      "y los aborrezco, porque al pecar,",
+      "no sólo he merecido las penas por Ti justamente establecidas,",
+      "sino sobre todo porque te ofendí a Ti, sumo Bien, digno de ser amado sobre todas las cosas.",
+      "Por eso propongo firmemente, con la ayuda de tu gracia,",
+      "no pecar más en adelante y huir de las ocasiones próximas de pecado. Amén."
+    ]
+  },
+  "anima": {
+    "title_es": "Alma de Cristo",
+    "note_es": "Oración de acción de gracias después de la Sagrada Comunión, atribuida frecuentemente a San Ignacio de Loyola.",
+    "lines_es": [
+      "Alma de Cristo, santifícame.",
+      "Cuerpo de Cristo, sálvame.",
+      "Sangre de Cristo, embriágame.",
+      "Agua del costado de Cristo, lávame.",
+      "Pasión de Cristo, confórtame.",
+      "¡Oh buen Jesús!, óyeme.",
+      "Dentro de tus llagas, escóndeme.",
+      "No permitas que me aparte de Ti.",
+      "Del maligno enemigo, defiéndeme.",
+      "En la hora de mi muerte, llámame.",
+      "Y mándame ir a Ti,",
+      "para que con tus Santos te alabe,",
+      "℟. por los siglos de los siglos. Amén."
+    ]
+  },
+  "crucifix": {
+    "title_es": "Oración ante un crucifijo (Mírame, oh mi amado y buen Jesús)",
+    "note_es": "Para rezar después de la Comunión, de rodillas ante un crucifijo. Puede ganarse indulgencia plenaria cualquier viernes de Cuaresma.",
+    "lines_es": [
+      "Mírame, oh mi amado y buen Jesús: postrado de rodillas en tu presencia,",
+      "te ruego y suplico con el mayor fervor de mi alma",
+      "que imprimas en mi corazón vivos sentimientos de fe, esperanza y caridad,",
+      "verdadero dolor de mis pecados",
+      "y propósito firmísimo de enmendarme;",
+      "mientras que yo, con todo el amor y con toda la compasión de mi alma, voy considerando tus cinco llagas,",
+      "teniendo presente aquello que ya el profeta David ponía en tus labios acerca de Ti, oh buen Jesús:",
+      "Han taladrado mis manos y mis pies; se pueden contar todos mis huesos. (Sal 21, 17-18)",
+      "℟. Amén."
+    ]
+  },
+  "tantumErgo": {
+    "title_es": "Tantum Ergo (Veneremos tan gran Sacramento)",
+    "note_es": "Las dos últimas estrofas del Pange Lingua de Santo Tomás de Aquino. Se canta en la Bendición con el Santísimo Sacramento.",
+    "lines_es": [
+      "Veneremos, pues, postrados tan gran Sacramento;",
+      "y la antigua figura ceda su lugar al nuevo rito;",
+      "supla la fe el defecto de los sentidos.",
+      "Al Padre y al Hijo sean dadas alabanza y júbilo,",
+      "salud, honor, poder y bendición;",
+      "una gloria igual sea dada al que de uno y otro procede. Amén.",
+      "℣. Les diste pan del cielo.",
+      "℟. Que contiene en sí todo deleite."
+    ]
+  },
+  "michael": {
+    "title_es": "Oración a San Miguel Arcángel",
+    "note_es": "Compuesta por el Papa León XIII en 1886 tras una visión de la lucha espiritual que afronta la Iglesia. Se rezó después de la Misa rezada hasta 1965, y hoy está ampliamente restaurada.",
+    "lines_es": [
+      "San Miguel Arcángel, defiéndenos en la batalla;",
+      "sé nuestro amparo contra la perversidad y asechanzas del demonio.",
+      "Reprímale Dios, pedimos suplicantes;",
+      "y tú, Príncipe de la milicia celestial,",
+      "a Satanás y a los demás espíritus malignos,",
+      "que andan dispersos por el mundo para la perdición de las almas,",
+      "arrójalos al infierno con el divino poder. Amén."
+    ]
+  },
+  "adoroTe": {
+    "title_es": "Te adoro con devoción (Adoro te devote)",
+    "note_es": "Himno eucarístico de Santo Tomás de Aquino, rezado en acción de gracias después de la Comunión.",
+    "lines_es": [
+      "Te adoro con devoción, Deidad escondida,",
+      "que bajo estas apariencias verdaderamente te ocultas:",
+      "a Ti mi corazón se somete por entero,",
+      "porque al contemplarte, todo desfallece.",
+      "La vista, el tacto, el gusto se engañan respecto de Ti,",
+      "mas sólo por el oído se cree con seguridad:",
+      "creo cuanto ha dicho el Hijo de Dios;",
+      "nada hay más verdadero que esta palabra de la Verdad.",
+      "En la Cruz se escondía sólo la Divinidad,",
+      "mas aquí se esconde también la Humanidad:",
+      "sin embargo, creyendo y confesando ambas,",
+      "pido lo que pidió el ladrón arrepentido.",
+      "No veo las llagas, como las vio Tomás,",
+      "pero te confieso por mi Dios.",
+      "Haz que yo crea en Ti cada vez más,",
+      "que en Ti ponga mi esperanza, que te ame.",
+      "¡Oh memorial de la muerte del Señor!",
+      "¡Pan vivo, que das la vida al hombre!",
+      "Concede a mi alma vivir de Ti,",
+      "y saborearte siempre con dulzura.",
+      "Piadoso pelícano, Señor Jesús,",
+      "límpiame a mí, inmundo, con tu Sangre,",
+      "de la cual una sola gota puede salvar",
+      "al mundo entero de todo pecado.",
+      "Jesús, a quien ahora contemplo velado,",
+      "te ruego que se cumpla lo que tanto ansío:",
+      "que, al contemplarte con el rostro descubierto,",
+      "sea yo dichoso con la visión de tu gloria. Amén."
+    ]
+  },
+  "suscipe": {
+    "title_es": "Tomad, Señor, y recibid (Suscipe)",
+    "note_es": "La oración de total entrega de sí de San Ignacio de Loyola, de los Ejercicios Espirituales. Uno de los actos de abandono más radicales de la tradición católica.",
+    "lines_es": [
+      "Tomad, Señor, y recibid toda mi libertad.",
+      "Recibid mi memoria, mi entendimiento y toda mi voluntad.",
+      "Todo mi haber y mi poseer, Vos me lo disteis;",
+      "a Vos, Señor, lo torno todo, y lo entrego enteramente al gobierno de vuestra voluntad.",
+      "Dadme sólo vuestro amor y gracia,",
+      "que con esto soy bastante rico, y no pido otra cosa. Amén."
+    ]
+  },
+  "angelus": {
+    "title_es": "El Ángelus",
+    "note_es": "Se reza tres veces al día (a las 6, a las 12 y a las 18 horas) en honor de la Encarnación. Durante el tiempo pascual se dice en su lugar el Regina Cæli.",
+    "lines_es": [
+      "℣. El Ángel del Señor anunció a María,",
+      "℟. Y concibió por obra del Espíritu Santo.",
+      "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "℣. He aquí la esclava del Señor,",
+      "℟. Hágase en mí según tu palabra.",
+      "Dios te salve, María...",
+      "℣. Y el Verbo se hizo carne,",
+      "℟. Y habitó entre nosotros.",
+      "Dios te salve, María...",
+      "℣. Ruega por nosotros, santa Madre de Dios,",
+      "℟. Para que seamos dignos de alcanzar las promesas de Cristo.",
+      "Oremos. Infunde, Señor, te rogamos, tu gracia en nuestras almas, para que los que hemos conocido, por el anuncio del Ángel, la Encarnación de tu Hijo Jesucristo, por su Pasión y Cruz seamos llevados a la gloria de la Resurrección. Por el mismo Cristo nuestro Señor. Amén."
+    ]
+  },
+  "reginaCaeli": {
+    "title_es": "Regina Cæli (Reina del cielo)",
+    "note_es": "Sustituye al Ángelus durante el tiempo pascual (desde el Domingo de Resurrección hasta el sábado de Pentecostés). Se reza de pie, en honor de la Resurrección.",
+    "lines_es": [
+      "Reina del cielo, alégrate, aleluya,",
+      "Porque el que mereciste llevar en tu seno, aleluya,",
+      "Ha resucitado, según predijo, aleluya.",
+      "Ruega por nosotros a Dios, aleluya.",
+      "℣. Gózate y alégrate, Virgen María, aleluya,",
+      "℟. Porque verdaderamente ha resucitado el Señor, aleluya.",
+      "Oremos. Oh Dios, que por la resurrección de tu Hijo, nuestro Señor Jesucristo, te dignaste alegrar al mundo: concédenos, te rogamos, que por su Madre, la Virgen María, alcancemos los gozos de la vida eterna. Por el mismo Cristo nuestro Señor. Amén."
+    ]
+  },
+  "subTuum": {
+    "title_es": "Bajo tu amparo",
+    "note_es": "La oración mariana más antigua que se conoce, que data al menos del siglo III. Hallada en un fragmento de papiro de Egipto.",
+    "lines_es": [
+      "Bajo tu amparo nos acogemos, santa Madre de Dios;",
+      "no deseches las súplicas que te dirigimos en nuestras necesidades;",
+      "antes bien, líbranos siempre de todos los peligros,",
+      "oh Virgen gloriosa y bendita. Amén."
+    ]
+  },
+  "deProfundis": {
+    "title_es": "De lo profundo (Salmo 129)",
+    "note_es": "Uno de los siete Salmos Penitenciales. Se reza especialmente por los fieles difuntos y durante la Cuaresma.",
+    "lines_es": [
+      "De lo profundo clamo a Ti, Señor:",
+      "Señor, escucha mi voz.",
+      "Estén atentos tus oídos a la voz de mi súplica.",
+      "Si tienes en cuenta las iniquidades, Señor, Señor, ¿quién podrá subsistir?",
+      "Mas en Ti se halla el perdón: y por tu ley he esperado en Ti, Señor.",
+      "Esperó mi alma en su palabra: mi alma ha esperado en el Señor.",
+      "Desde la vigilia matutina hasta la noche, espere Israel en el Señor.",
+      "Porque en el Señor está la misericordia, y en Él abundante redención.",
+      "Y Él redimirá a Israel de todas sus iniquidades.",
+      "℣. Dales, Señor, el descanso eterno. ℟. Y brille para ellos la luz perpetua."
+    ]
+  },
+  "actFaith": {
+    "title_es": "Acto de Fe",
+    "note_es": "Uno de los tres actos de las virtudes teologales. Se reza tradicionalmente a diario, sobre todo en las oraciones de la mañana.",
+    "lines_es": [
+      "Oh Dios mío, creo con fe firme que Tú eres un solo Dios en tres Personas divinas, Padre, Hijo y Espíritu Santo.",
+      "Creo que Jesucristo, Hijo de Dios, se encarnó y murió por nosotros,",
+      "y que dará a cada uno, según sus méritos, la vida eterna o el castigo eterno.",
+      "Todo esto lo creo porque Tú, oh Dios, lo has revelado, que no puedes engañarte ni engañarnos. Amén."
+    ]
+  },
+  "actHope": {
+    "title_es": "Acto de Esperanza",
+    "note_es": "Uno de los tres actos de las virtudes teologales, que expresa la confianza en las promesas de Dios.",
+    "lines_es": [
+      "Oh Dios mío, esperando en tus promesas, confío en que me darás, por los méritos de Jesucristo,",
+      "la vida eterna y las gracias necesarias para merecerla,",
+      "mediante las buenas obras que debo hacer y me propongo realizar. Amén."
+    ]
+  },
+  "actCharity": {
+    "title_es": "Acto de Caridad",
+    "note_es": "Uno de los tres actos de las virtudes teologales, que expresa el amor a Dios sobre todas las cosas.",
+    "lines_es": [
+      "Oh Dios mío, te amo sobre todas las cosas y con todo mi corazón,",
+      "porque eres el sumo Bien e infinitamente amable.",
+      "Amo a mi prójimo como a mí mismo por amor de Ti.",
+      "Perdono a todos los que me han ofendido, y pido perdón a todos los que yo he ofendido. Amén."
+    ]
+  },
+  "angeleCustode": {
+    "title_es": "Oración al Ángel de la Guarda (Ángel de Dios)",
+    "note_es": "Oración tradicional que pide la protección y guía del propio Ángel de la Guarda. Suele enseñarse a los niños como una de sus primeras oraciones.",
+    "lines_es": [
+      "Ángel de Dios, que eres mi custodio,",
+      "pues la piedad soberana me ha encomendado a ti,",
+      "ilumíname hoy, guárdame, rígeme y gobiérname.",
+      "Amén."
+    ]
+  },
+  "blessingMeal": {
+    "title_es": "Bendición de la mesa",
+    "note_es": "La bendición latina tradicional que se dice antes de las comidas.",
+    "lines_es": [
+      "Bendícenos, Señor, y bendice estos dones tuyos que de tu largueza vamos a recibir.",
+      "Por Cristo nuestro Señor. Amén."
+    ]
+  },
+  "gratiasPost": {
+    "title_es": "Acción de gracias después de la comida",
+    "note_es": "La acción de gracias tradicional que se dice después de las comidas.",
+    "lines_es": [
+      "Te damos gracias, Dios todopoderoso, por todos tus beneficios, Tú que vives y reinas por los siglos de los siglos.",
+      "Amén.",
+      "Las almas de los fieles difuntos, por la misericordia de Dios, descansen en paz.",
+      "Amén."
+    ]
+  },
+  "miserere": {
+    "title_es": "Salmo 50: Ten piedad de mí (Miserere)",
+    "note_es": "Versículos escogidos del gran Salmo Penitencial (Salmo 50), rezado antes de la confesión y durante toda la Cuaresma. El salmo del rey David después de su pecado.",
+    "lines_es": [
+      "Ten piedad de mí, oh Dios, según tu gran misericordia.",
+      "Y según la multitud de tus piedades, borra mi iniquidad.",
+      "Lávame más y más de mi iniquidad, y límpiame de mi pecado.",
+      "Porque yo conozco mi iniquidad, y mi pecado está siempre delante de mí.",
+      "Contra Ti solo pequé, e hice lo malo delante de Ti.",
+      "Crea en mí, oh Dios, un corazón puro, y renueva un espíritu recto en mis entrañas.",
+      "No me arrojes de tu presencia, y no quites de mí tu Santo Espíritu.",
+      "Devuélveme la alegría de tu salvación, y confírmame con espíritu principal."
+    ]
+  },
+  "requiem": {
+    "title_es": "El descanso eterno",
+    "note_es": "La oración tradicional por los fieles difuntos, que se dice después del Rosario y al final de las oraciones por los muertos.",
+    "lines_es": [
+      "Dales, Señor, el descanso eterno.",
+      "Y brille para ellos la luz perpetua.",
+      "Descansen en paz.",
+      "Amén."
+    ]
+  },
+  "pieFidelium": {
+    "title_es": "Oración por todos los fieles difuntos",
+    "note_es": "Breve oración por todas las benditas almas del Purgatorio.",
+    "lines_es": [
+      "Las almas de todos los fieles difuntos, por la misericordia de Dios, descansen en paz.",
+      "Amén."
+    ]
+  },
+  "animaChristi2": {
+    "title_es": "Jaculatorias en la tentación",
+    "note_es": "Breves oraciones jaculatorias tradicionalmente recomendadas para los momentos de tentación.",
+    "lines_es": [
+      "Jesús, María y José, asistidme en mi última agonía.",
+      "San Miguel Arcángel, defiéndenos en la batalla.",
+      "Sacratísimo Corazón de Jesús, ten misericordia de nosotros.",
+      "Refugio de los pecadores, ruega por nosotros.",
+      "Señor, ayúdame."
+    ]
+  },
+  "veniCreator": {
+    "title_es": "Ven, Espíritu Creador (Veni Creator)",
+    "note_es": "Antiguo himno de invocación al Espíritu Santo, cantado en Pentecostés, en las ordenaciones y antes de las decisiones importantes.",
+    "lines_es": [
+      "Ven, Espíritu Creador, visita las almas de tus fieles, y llena de la gracia celestial los corazones que Tú creaste.",
+      "Tú, que eres llamado el Paráclito, don del Dios Altísimo, fuente viva, fuego, caridad y espiritual unción.",
+      "Tú, que repartes los siete dones; dedo de la diestra del Padre; Tú, solemne promesa del Padre, que enriqueces las lenguas con la palabra.",
+      "Aleja de nosotros al enemigo y danos pronto la paz; siendo Tú nuestro guía, evitemos todo lo nocivo.",
+      "Haz que por Ti conozcamos al Padre, y que conozcamos también al Hijo; y que en Ti, Espíritu de ambos, creamos en todo tiempo.",
+      "Enciende la luz en nuestros sentidos, infunde tu amor en nuestros corazones, y fortalece la debilidad de nuestro cuerpo con tu perpetuo auxilio.",
+      "Gloria sea dada a Dios Padre, y al Hijo, que resucitó de entre los muertos, y al Paráclito, por los siglos de los siglos. Amén."
+    ]
+  },
+  "benediciteDominum": {
+    "title_es": "Bendice, alma mía, al Señor",
+    "note_es": "Breve acción de gracias del Salmo 102, apropiada como bendición de mesa o acción de gracias general.",
+    "lines_es": [
+      "Bendice, alma mía, al Señor, y todo cuanto hay dentro de mí bendiga su santo nombre.",
+      "Bendice, alma mía, al Señor, y no olvides ninguno de sus beneficios.",
+      "Él colma de bienes tus deseos: se renovará como la del águila tu juventud.",
+      "Gloria al Padre, y al Hijo, y al Espíritu Santo. Amén."
+    ]
+  },
+  "stJoseph": {
+    "title_es": "Oración a San José (A Vos, bienaventurado José)",
+    "note_es": "Mandada rezar por el Papa León XIII después del Rosario en el mes de octubre.",
+    "lines_es": [
+      "A Vos, bienaventurado San José, acudimos en nuestra tribulación, y después de implorar el auxilio de vuestra santísima Esposa, solicitamos también confiadamente vuestro patrocinio.",
+      "Por aquella caridad que os tuvo unido con la Inmaculada Virgen, Madre de Dios, y por el paterno amor con que abrazasteis al Niño Jesús, humildemente os suplicamos",
+      "que volváis benigno los ojos a la herencia que con su Sangre adquirió Jesucristo, y con vuestro poder y auxilio socorráis nuestras necesidades.",
+      "Proteged, oh providentísimo Custodio de la divina Familia, la escogida descendencia de Jesucristo; apartad de nosotros, oh Padre amantísimo, toda mancha de error y de corrupción;",
+      "asistidnos propicio desde el cielo, oh fortísimo protector nuestro, en la lucha con el poder de las tinieblas;",
+      "y como en otro tiempo librasteis al Niño Jesús del inminente peligro de su vida, así ahora defended a la Iglesia santa de Dios de las asechanzas de sus enemigos y de toda adversidad;",
+      "y a cada uno de nosotros protegednos con perpetuo patrocinio, para que, a ejemplo vuestro y sostenidos por vuestro auxilio, podamos vivir santamente, morir piadosamente y alcanzar en los cielos la eterna bienaventuranza. Amén."
+    ]
+  },
+  "communioSpiritualis": {
+    "title_es": "Comunión espiritual",
+    "note_es": "Atribuida a San Alfonso María de Ligorio. Se reza cuando no se puede recibir sacramentalmente la Sagrada Comunión.",
+    "lines_es": [
+      "Jesús mío, creo que estás presente en el Santísimo Sacramento. Te amo sobre todas las cosas y deseo recibirte en mi alma.",
+      "Ya que ahora no puedo recibirte sacramentalmente, ven al menos espiritualmente a mi corazón.",
+      "Como si ya te hubiese recibido, te abrazo y me uno todo a Ti; no permitas que jamás me aparte de Ti. Amén."
+    ]
+  },
+  "athanasian-creed": {
+    "title_es": "El Credo de San Atanasio (Símbolo Atanasiano)",
+    "note_es": "Llamado también Quicúmque vult. En el Breviario de 1962 se dice en Prima sólo el domingo de la Santísima Trinidad; en el Breviario anterior a 1955 se decía en Prima los domingos fuera de las octavas de Navidad, Pascua y Pentecostés. El asterisco (*) señala la división del versículo entre los dos coros.",
+    "lines_es": [
+      "Todo el que quiera salvarse, * ante todo es necesario que mantenga la fe católica;",
+      "pues quien no la guardare íntegra e inviolada, * sin duda perecerá eternamente.",
+      "Y la fe católica es ésta: * que veneremos a un solo Dios en la Trinidad, y a la Trinidad en la unidad;",
+      "sin confundir las Personas, * ni separar la sustancia.",
+      "Porque una es la Persona del Padre, otra la del Hijo, * y otra la del Espíritu Santo;",
+      "pero una sola es la divinidad del Padre, del Hijo y del Espíritu Santo, * igual la gloria, coeterna la majestad.",
+      "Cual es el Padre, tal es el Hijo, * tal el Espíritu Santo.",
+      "Increado el Padre, increado el Hijo, * increado el Espíritu Santo.",
+      "Inmenso el Padre, inmenso el Hijo, * inmenso el Espíritu Santo.",
+      "Eterno el Padre, eterno el Hijo, * eterno el Espíritu Santo.",
+      "Y sin embargo, no son tres eternos, * sino un solo eterno.",
+      "Como tampoco son tres increados, ni tres inmensos, * sino un solo increado y un solo inmenso.",
+      "Igualmente, omnipotente el Padre, omnipotente el Hijo, * omnipotente el Espíritu Santo.",
+      "Y sin embargo, no son tres omnipotentes, * sino un solo omnipotente.",
+      "Así, el Padre es Dios, el Hijo es Dios, * el Espíritu Santo es Dios.",
+      "Y sin embargo, no son tres Dioses, * sino un solo Dios.",
+      "Así, el Padre es Señor, el Hijo es Señor, * el Espíritu Santo es Señor.",
+      "Y sin embargo, no son tres Señores, * sino un solo Señor.",
+      "Porque así como la verdad cristiana nos obliga a confesar que cada Persona de por sí es Dios y Señor, * así la religión católica nos prohíbe decir que hay tres Dioses o tres Señores.",
+      "El Padre por nadie ha sido hecho: * ni creado, ni engendrado.",
+      "El Hijo es sólo del Padre: * no hecho, ni creado, sino engendrado.",
+      "El Espíritu Santo procede del Padre y del Hijo: * no hecho, ni creado, ni engendrado, sino procedente.",
+      "Hay, pues, un solo Padre, no tres Padres; un solo Hijo, no tres Hijos; * un solo Espíritu Santo, no tres Espíritus Santos.",
+      "Y en esta Trinidad nada hay anterior ni posterior, nada mayor ni menor: * sino que las tres Personas son entre sí coeternas y coiguales.",
+      "De suerte que en todo, como ya se ha dicho arriba, * ha de venerarse la unidad en la Trinidad, y la Trinidad en la unidad.",
+      "El que quiera, pues, salvarse, * así ha de sentir de la Trinidad.",
+      "Pero es necesario para la salvación eterna * creer también fielmente en la Encarnación de nuestro Señor Jesucristo.",
+      "Es, pues, fe recta que creamos y confesemos * que nuestro Señor Jesucristo, Hijo de Dios, es Dios y hombre.",
+      "Es Dios, engendrado de la sustancia del Padre antes de los siglos: * y es hombre, nacido de la sustancia de su madre en el tiempo.",
+      "Perfecto Dios, perfecto hombre: * que subsiste con alma racional y carne humana.",
+      "Igual al Padre según la divinidad: * menor que el Padre según la humanidad.",
+      "El cual, aunque es Dios y hombre, * no son dos, sino un solo Cristo.",
+      "Uno, no por conversión de la divinidad en carne, * sino por asunción de la humanidad en Dios.",
+      "Uno absolutamente, no por confusión de la sustancia, * sino por la unidad de la Persona.",
+      "Pues así como el alma racional y la carne son un solo hombre, * así Dios y hombre son un solo Cristo.",
+      "El cual padeció por nuestra salvación, descendió a los infiernos, * al tercer día resucitó de entre los muertos.",
+      "Subió a los cielos, está sentado a la diestra de Dios Padre omnipotente: * desde allí ha de venir a juzgar a los vivos y a los muertos.",
+      "A cuya venida todos los hombres han de resucitar con sus cuerpos, * y han de dar cuenta de sus propias obras.",
+      "Y los que obraron bien irán a la vida eterna; * mas los que obraron mal, al fuego eterno.",
+      "Ésta es la fe católica, * y quien no la creyere fiel y firmemente no podrá salvarse."
+    ]
+  },
+  "te-deum": {
+    "title_es": "Te Deum",
+    "note_es": null,
+    "lines_es": [
+      "A ti, oh Dios, te alabamos: a ti, Señor, te confesamos.",
+      "A ti, eterno Padre, te venera toda la tierra.",
+      "A ti todos los Ángeles, a ti los Cielos y todas las Potestades,",
+      "a ti los Querubines y Serafines te aclaman con voz incesante:",
+      "Santo, Santo, Santo es el Señor, Dios de los ejércitos.",
+      "Llenos están los cielos y la tierra de la majestad de tu gloria.",
+      "A ti te alaba el glorioso coro de los Apóstoles,",
+      "a ti el laudable número de los Profetas,",
+      "a ti te alaba el blanco ejército de los Mártires.",
+      "A ti por toda la redondez de la tierra te confiesa la santa Iglesia:",
+      "Padre de inmensa majestad;",
+      "a tu venerado, verdadero y único Hijo;",
+      "y también al Espíritu Santo Paráclito.",
+      "Tú eres el Rey de la gloria, oh Cristo.",
+      "Tú eres el Hijo sempiterno del Padre.",
+      "Tú, para librar al hombre, no desdeñaste el seno de la Virgen.",
+      "Tú, vencido el aguijón de la muerte, abriste a los creyentes el reino de los cielos.",
+      "Tú estás sentado a la diestra de Dios, en la gloria del Padre.",
+      "Creemos que has de venir como Juez.",
+      "Por eso te rogamos que socorras a tus siervos, a quienes redimiste con tu preciosa Sangre.",
+      "Haz que seamos contados con tus Santos en la gloria eterna.",
+      "Salva a tu pueblo, Señor, y bendice tu heredad.",
+      "Y gobiérnalos y ensálzalos para siempre.",
+      "Cada día te bendecimos,",
+      "y alabamos tu nombre por los siglos, y por los siglos de los siglos.",
+      "Dígnate, Señor, guardarnos sin pecado en este día.",
+      "Ten piedad de nosotros, Señor, ten piedad de nosotros.",
+      "Venga tu misericordia, Señor, sobre nosotros, según hemos esperado en ti.",
+      "En ti, Señor, esperé: no sea yo confundido jamás."
+    ]
+  },
+  "magnificat": {
+    "title_es": "Magníficat",
+    "note_es": null,
+    "lines_es": [
+      "Engrandece mi alma al Señor,",
+      "y mi espíritu se llena de gozo en Dios, mi Salvador.",
+      "Porque miró la humildad de su esclava: por eso desde ahora me llamarán bienaventurada todas las generaciones.",
+      "Porque ha hecho en mí cosas grandes el que es poderoso, y santo es su nombre.",
+      "Y su misericordia llega de generación en generación a los que le temen.",
+      "Desplegó el poder de su brazo: dispersó a los soberbios de corazón.",
+      "Derribó a los poderosos de su trono y ensalzó a los humildes.",
+      "A los hambrientos los colmó de bienes, y a los ricos los despidió vacíos.",
+      "Acogió a Israel, su siervo, acordándose de su misericordia,",
+      "como lo había prometido a nuestros padres, a Abrahán y a su descendencia para siempre.",
+      "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
+      "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+    ]
+  },
+  "benedictus": {
+    "title_es": "Benedíctus",
+    "note_es": null,
+    "lines_es": [
+      "Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su pueblo,",
+      "y nos ha suscitado una fuerza de salvación en la casa de David, su siervo,",
+      "según lo había predicho desde antiguo por boca de sus santos profetas:",
+      "salvarnos de nuestros enemigos y de la mano de todos los que nos odian;",
+      "usar de misericordia con nuestros padres y acordarse de su santa alianza,",
+      "del juramento que juró a Abrahán, nuestro padre, de concedernos",
+      "que, libres de la mano de nuestros enemigos, le sirvamos sin temor,",
+      "en santidad y justicia, en su presencia, todos nuestros días.",
+      "Y tú, niño, serás llamado Profeta del Altísimo, porque irás delante del Señor a preparar sus caminos,",
+      "para dar a su pueblo el conocimiento de la salvación por el perdón de sus pecados,",
+      "por la entrañable misericordia de nuestro Dios, con la que nos visitará el Sol que nace de lo alto,",
+      "para iluminar a los que yacen en tinieblas y en sombra de muerte, y guiar nuestros pasos por el camino de la paz.",
+      "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
+      "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+    ]
+  },
+  "nunc-dimittis": {
+    "title_es": "Nunc Dimíttis",
+    "note_es": null,
+    "lines_es": [
+      "Ahora, Señor, según tu palabra, puedes dejar a tu siervo irse en paz,",
+      "porque mis ojos han visto a tu Salvador,",
+      "a quien has preparado ante la faz de todos los pueblos:",
+      "luz para iluminar a las naciones y gloria de tu pueblo Israel.",
+      "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
+      "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+    ]
+  },
+  "alma-redemptoris": {
+    "title_es": "Madre del Redentor",
+    "note_es": null,
+    "lines_es": [
+      "Madre del Redentor, que permaneces puerta abierta del cielo",
+      "y estrella del mar: socorre al que cae",
+      "y anhela levantarse. Tú que engendraste,",
+      "ante el asombro de la naturaleza, a tu santo Creador;",
+      "Virgen antes y después, que de los labios de Gabriel",
+      "recibiste aquel Ave: ten piedad de los pecadores."
+    ]
+  },
+  "ave-regina-caelorum": {
+    "title_es": "Salve, Reina de los cielos",
+    "note_es": null,
+    "lines_es": [
+      "Salve, Reina de los cielos,",
+      "salve, Señora de los ángeles:",
+      "salve, raíz; salve, puerta",
+      "por la que amaneció la luz al mundo.",
+      "Alégrate, Virgen gloriosa,",
+      "hermosa entre todas:",
+      "adiós, oh hermosísima,",
+      "y ruega a Cristo por nosotros."
+    ]
+  },
+  "o-salutaris-hostia": {
+    "title_es": "Oh Hostia de salvación",
+    "note_es": null,
+    "lines_es": [
+      "Oh Hostia de salvación,",
+      "que abres la puerta del cielo:",
+      "guerras enemigas nos acosan;",
+      "danos fuerza, envíanos auxilio.",
+      "Al Señor uno y trino",
+      "sea la gloria sempiterna:",
+      "que Él nos conceda la vida sin término",
+      "en la patria celestial. Amén."
+    ]
+  },
+  "ave-verum-corpus": {
+    "title_es": "Ave Verum Corpus",
+    "note_es": null,
+    "lines_es": [
+      "Salve, Cuerpo verdadero, nacido",
+      "de la Virgen María:",
+      "que verdaderamente padeciste y fuiste inmolado",
+      "en la cruz por el hombre:",
+      "de cuyo costado traspasado",
+      "brotaron agua y sangre:",
+      "sé para nosotros anticipo",
+      "en el trance de la muerte.",
+      "¡Oh Jesús dulce! ¡Oh Jesús piadoso!",
+      "¡Oh Jesús, hijo de María! Ten piedad de mí. Amén."
+    ]
+  },
+  "o-sacrum-convivium": {
+    "title_es": "Oh Sagrado Banquete",
+    "note_es": null,
+    "lines_es": [
+      "¡Oh sagrado banquete, en que Cristo es recibido, se renueva la memoria de su Pasión, el alma se llena de gracia y se nos da la prenda de la gloria futura!"
+    ]
+  },
+  "veni-sancte-spiritus": {
+    "title_es": "Ven, Espíritu Santo",
+    "note_es": null,
+    "lines_es": [
+      "Ven, Espíritu Santo, y envía desde el cielo un rayo de tu luz.",
+      "Ven, padre de los pobres; ven, dador de los dones; ven, luz de los corazones.",
+      "Consolador óptimo, dulce huésped del alma, dulce refrigerio.",
+      "Descanso en la fatiga, templanza en el ardor, consuelo en el llanto.",
+      "Oh luz santísima: llena lo más íntimo del corazón de tus fieles.",
+      "Sin tu ayuda divina nada hay en el hombre, nada que sea inocente.",
+      "Lava lo que está manchado, riega lo que es árido, sana lo que está herido.",
+      "Doblega lo que es rígido, calienta lo que es frío, endereza lo extraviado.",
+      "Da a tus fieles, que en ti confían, tus siete sagrados dones.",
+      "Dales el mérito de la virtud, dales el puerto de la salvación, dales el gozo eterno. Amén. Aleluya."
+    ]
+  },
+  "laudes-divinae": {
+    "title_es": "Alabanzas de desagravio",
+    "note_es": null,
+    "lines_es": [
+      "Bendito sea Dios.",
+      "Bendito sea su santo Nombre.",
+      "Bendito sea Jesucristo, Dios y hombre verdadero.",
+      "Bendito sea el Nombre de Jesús.",
+      "Bendito sea su sacratísimo Corazón.",
+      "Bendita sea su preciosísima Sangre.",
+      "Bendito sea Jesús en el santísimo Sacramento del altar.",
+      "Bendito sea el Espíritu Santo Paráclito.",
+      "Bendita sea la excelsa Madre de Dios, María santísima.",
+      "Bendita sea su santa e inmaculada Concepción.",
+      "Bendita sea su gloriosa Asunción.",
+      "Bendito sea el nombre de María, Virgen y Madre.",
+      "Bendito sea San José, su castísimo esposo.",
+      "Bendito sea Dios en sus Ángeles y en sus Santos. Amén."
+    ]
+  },
+  "pio-prayer-after-holy-communion": {
+    "title_es": "Oración después de la Sagrada Comunión",
+    "note_es": null,
+    "lines_es": [
+      "Quédate con nosotros, Señor, porque atardece. Quédate con nosotros y sé nuestro consuelo. Quédate con nosotros, oh Sol que no conoce ocaso."
+    ]
+  },
+  "pio-prayer-for-the-five-wounds": {
+    "title_es": "Oración a las cinco llagas",
+    "note_es": null,
+    "lines_es": [
+      "Oh Señor Jesucristo, que consentiste que fueran clavados tus sagrados pies y manos: concédeme amarte con todas mis fuerzas y hallar en tus llagas mi refugio y mi paz. Amén."
+    ]
+  },
+  "therese-act-of-oblation-to-merciful-love": {
+    "title_es": "Acto de ofrenda al Amor misericordioso",
+    "note_es": null,
+    "lines_es": [
+      "Oh Dios mío, Trinidad Bienaventurada: deseo amarte y hacerte amar, trabajar por la gloria de la santa Iglesia salvando las almas en la tierra y librando a las que sufren en el Purgatorio. Te ofrezco todos los méritos de los santos, con mis propios méritos y los que tu bondad infinita ha puesto en mis manos. Amén."
+    ]
+  },
+  "therese-prayer-of-confidence": {
+    "title_es": "Oración de confianza",
+    "note_es": null,
+    "lines_es": [
+      "Dios mío, te doy gracias por todas las gracias que me has concedido, especialmente por haberme purificado en el crisol del sufrimiento. En el último día te contemplaré con alegría, llevando el cetro de la Cruz. Puesto que te dignaste darme esta Cruz preciosa, espero parecerme a ti en el cielo y ver brillar en mi cuerpo glorificado las sagradas llagas de tu Pasión. Amén."
+    ]
+  },
+  "aquinas-prayer-before-study": {
+    "title_es": "Oración antes del estudio",
+    "note_es": null,
+    "lines_es": [
+      "Oh Creador inefable, que de los tesoros de tu sabiduría estableciste tres jerarquías de Ángeles y las ordenaste maravillosamente sobre los cielos: concédeme entendimiento. Amén."
+    ]
+  },
+  "benedict-prayer-for-a-happy-death": {
+    "title_es": "Oración por una buena muerte",
+    "note_es": null,
+    "lines_es": [
+      "Oh Señor, Dios mío, no me entregues en manos del enemigo, sino hazme victorioso en la hora de mi muerte."
+    ]
+  },
+  "benedict-the-medal-prayer": {
+    "title_es": "Oración de la medalla",
+    "note_es": null,
+    "lines_es": [
+      "Sea la santa Cruz mi luz. No sea el dragón mi guía. Apártate, Satanás. No me tientes jamás con vanidades. Es malo lo que ofreces. Bebe tú tu propio veneno."
+    ]
+  },
+  "teresa-bookmark-prayer": {
+    "title_es": "Nada te turbe",
+    "note_es": null,
+    "lines_es": [
+      "Nada te turbe, nada te espante. Todo se pasa. Dios no se muda. La paciencia todo lo alcanza. Quien a Dios tiene nada le falta. Sólo Dios basta."
+    ]
+  },
+  "teresa-prayer-of-self-offering": {
+    "title_es": "Oración de entrega",
+    "note_es": null,
+    "lines_es": [
+      "Tuya soy, Señor: para ti nací. ¿Qué quieres de mí? Dame riqueza o pobreza, consuelo o desconsuelo, alegría o tristeza. Pues eres mi Rey, ¿qué mandas hacer de mí? Habla, Señor, que tu siervo escucha. Amén."
+    ]
+  },
+  "escriva-prayer-for-sanctifying-work": {
+    "title_es": "Oración para santificar el trabajo",
+    "note_es": null,
+    "lines_es": [
+      "Señor, concédeme la gracia de ver mi trabajo ordinario como materia de mi santificación. Ayúdame a convertir cada tarea, cada conversación, cada momento de este día en oración, para que al terminarlo pueda ofrecértelo todo como algo digno de tu amor. Amén."
+    ]
+  },
+  "escriva-prayer-to-the-guardian-angels": {
+    "title_es": "Oración a los Ángeles Custodios",
+    "note_es": null,
+    "lines_es": [
+      "Santos Ángeles Custodios de los que tengo a mi cargo: ayudadme a tener siempre presente que Dios me ve, y a servirle en ellos con fidelidad y amor. Defendedme del maligno y llevadme por los caminos de la paz. Amén."
+    ]
+  },
+  "desales-prayer-of-gentle-trust": {
+    "title_es": "Oración de dulce confianza",
+    "note_es": null,
+    "lines_es": [
+      "No mires con temor los cambios y azares de esta vida; míralos más bien con plena esperanza de que, cuando lleguen, Dios, de quien eres, te librará de ellos. Él te ha guardado hasta ahora: tente firme de su mano, y te conducirá seguro a través de todas las cosas. Amén."
+    ]
+  },
+  "desales-prayer-for-a-devout-life": {
+    "title_es": "Oración por una vida devota",
+    "note_es": null,
+    "lines_es": [
+      "Dios mío, te entrego toda mi voluntad. Deseo comenzar este día para tu honra y gloria. Te ofrezco todas las acciones de esta jornada, y te pido la gracia de no hacer nada contrario a tu voluntad. Ilumina mi entendimiento, fortalece mi voluntad, purifica mi corazón y santifica mi alma. Amén."
+    ]
+  },
+  "litaniae-lauretanae": {
+    "title_es": "Letanías Lauretanas",
+    "note_es": null,
+    "lines_es": [
+      "Señor, ten piedad.",
+      "Cristo, ten piedad.",
+      "Señor, ten piedad.",
+      "Cristo, óyenos.",
+      "Cristo, escúchanos.",
+      "Dios Padre celestial, ten piedad de nosotros.",
+      "Dios Hijo, Redentor del mundo, ten piedad de nosotros.",
+      "Dios Espíritu Santo, ten piedad de nosotros.",
+      "Santísima Trinidad, un solo Dios, ten piedad de nosotros.",
+      "Santa María, ruega por nosotros.",
+      "Santa Madre de Dios, ruega por nosotros.",
+      "Santa Virgen de las vírgenes, ruega por nosotros.",
+      "Madre de Cristo, ruega por nosotros.",
+      "Madre de la divina gracia, ruega por nosotros.",
+      "Madre purísima, ruega por nosotros.",
+      "Madre castísima, ruega por nosotros.",
+      "Madre inviolada, ruega por nosotros.",
+      "Madre inmaculada, ruega por nosotros.",
+      "Madre amable, ruega por nosotros.",
+      "Madre admirable, ruega por nosotros.",
+      "Madre del buen consejo, ruega por nosotros.",
+      "Madre del Creador, ruega por nosotros.",
+      "Madre del Salvador, ruega por nosotros.",
+      "Virgen prudentísima, ruega por nosotros.",
+      "Virgen digna de veneración, ruega por nosotros.",
+      "Virgen digna de alabanza, ruega por nosotros.",
+      "Virgen poderosa, ruega por nosotros.",
+      "Virgen clemente, ruega por nosotros.",
+      "Virgen fiel, ruega por nosotros.",
+      "Espejo de justicia, ruega por nosotros.",
+      "Trono de sabiduría, ruega por nosotros.",
+      "Causa de nuestra alegría, ruega por nosotros.",
+      "Vaso espiritual, ruega por nosotros.",
+      "Vaso digno de honor, ruega por nosotros.",
+      "Vaso insigne de devoción, ruega por nosotros.",
+      "Rosa mística, ruega por nosotros.",
+      "Torre de David, ruega por nosotros.",
+      "Torre de marfil, ruega por nosotros.",
+      "Casa de oro, ruega por nosotros.",
+      "Arca de la alianza, ruega por nosotros.",
+      "Puerta del cielo, ruega por nosotros.",
+      "Estrella de la mañana, ruega por nosotros.",
+      "Salud de los enfermos, ruega por nosotros.",
+      "Refugio de los pecadores, ruega por nosotros.",
+      "Consoladora de los afligidos, ruega por nosotros.",
+      "Auxilio de los cristianos, ruega por nosotros.",
+      "Reina de los Ángeles, ruega por nosotros.",
+      "Reina de los Patriarcas, ruega por nosotros.",
+      "Reina de los Profetas, ruega por nosotros.",
+      "Reina de los Apóstoles, ruega por nosotros.",
+      "Reina de los Mártires, ruega por nosotros.",
+      "Reina de los Confesores, ruega por nosotros.",
+      "Reina de las Vírgenes, ruega por nosotros.",
+      "Reina de todos los Santos, ruega por nosotros.",
+      "Reina concebida sin pecado original, ruega por nosotros.",
+      "Reina asunta a los cielos, ruega por nosotros.",
+      "Reina del santísimo Rosario, ruega por nosotros.",
+      "Reina de la paz, ruega por nosotros.",
+      "Cordero de Dios, que quitas los pecados del mundo, perdónanos, Señor.",
+      "Cordero de Dios, que quitas los pecados del mundo, escúchanos, Señor.",
+      "Cordero de Dios, que quitas los pecados del mundo, ten piedad de nosotros.",
+      "V. Ruega por nosotros, santa Madre de Dios.",
+      "R. Para que seamos dignos de alcanzar las promesas de Cristo.",
+      "Oremos. Concede a tus siervos, Señor Dios, te suplicamos, gozar de perpetua salud de alma y cuerpo; y por la gloriosa intercesión de la bienaventurada siempre Virgen María, líbranos de la tristeza presente y concédenos la alegría eterna. Por Cristo nuestro Señor. Amén."
+    ]
+  },
+  "litaniaeSanctorum": {
+    "title_es": "Letanías de los Santos",
+    "note_es": null,
+    "lines_es": [
+      "V. Señor, ten piedad.",
+      "R. Cristo, ten piedad.",
+      "V. Señor, ten piedad.",
+      "V. Cristo, óyenos.",
+      "R. Cristo, escúchanos.",
+      "",
+      "Dios Padre celestial,",
+      "℟. ten piedad de nosotros.",
+      "Dios Hijo, Redentor del mundo,",
+      "℟. ten piedad de nosotros.",
+      "Dios Espíritu Santo,",
+      "℟. ten piedad de nosotros.",
+      "Santísima Trinidad, un solo Dios,",
+      "℟. ten piedad de nosotros.",
+      "",
+      "Santa María, ruega por nosotros.",
+      "Santa Madre de Dios, ruega por nosotros.",
+      "Santa Virgen de las vírgenes, ruega por nosotros.",
+      "San Miguel, ruega por nosotros.",
+      "San Gabriel, ruega por nosotros.",
+      "San Rafael, ruega por nosotros.",
+      "Todos los santos Ángeles y Arcángeles, rogad por nosotros.",
+      "Todos los santos coros de los espíritus bienaventurados, rogad por nosotros.",
+      "",
+      "San Juan Bautista, ruega por nosotros.",
+      "San José, ruega por nosotros.",
+      "Todos los santos Patriarcas y Profetas, rogad por nosotros.",
+      "San Pedro, ruega por nosotros.",
+      "San Pablo, ruega por nosotros.",
+      "San Andrés, ruega por nosotros.",
+      "Santiago, ruega por nosotros.",
+      "San Juan, ruega por nosotros.",
+      "Santo Tomás, ruega por nosotros.",
+      "Santiago, ruega por nosotros.",
+      "San Felipe, ruega por nosotros.",
+      "San Bartolomé, ruega por nosotros.",
+      "San Mateo, ruega por nosotros.",
+      "San Simón, ruega por nosotros.",
+      "San Tadeo, ruega por nosotros.",
+      "San Matías, ruega por nosotros.",
+      "San Bernabé, ruega por nosotros.",
+      "San Lucas, ruega por nosotros.",
+      "San Marcos, ruega por nosotros.",
+      "Todos los santos Apóstoles y Evangelistas, rogad por nosotros.",
+      "Todos los santos Discípulos del Señor, rogad por nosotros.",
+      "",
+      "Todos los santos Inocentes, rogad por nosotros.",
+      "San Esteban, ruega por nosotros.",
+      "San Lorenzo, ruega por nosotros.",
+      "San Vicente, ruega por nosotros.",
+      "Santos Fabián y Sebastián, rogad por nosotros.",
+      "Santos Juan y Pablo, rogad por nosotros.",
+      "Santos Cosme y Damián, rogad por nosotros.",
+      "Santos Gervasio y Protasio, rogad por nosotros.",
+      "Todos los santos Mártires, rogad por nosotros.",
+      "San Silvestre, ruega por nosotros.",
+      "San Gregorio, ruega por nosotros.",
+      "San Ambrosio, ruega por nosotros.",
+      "San Agustín, ruega por nosotros.",
+      "San Jerónimo, ruega por nosotros.",
+      "San Martín, ruega por nosotros.",
+      "San Nicolás, ruega por nosotros.",
+      "Todos los santos Pontífices y Confesores, rogad por nosotros.",
+      "Todos los santos Doctores, rogad por nosotros.",
+      "San Antonio, ruega por nosotros.",
+      "San Benito, ruega por nosotros.",
+      "San Bernardo, ruega por nosotros.",
+      "Santo Domingo, ruega por nosotros.",
+      "San Francisco, ruega por nosotros.",
+      "Todos los santos Sacerdotes y Levitas, rogad por nosotros.",
+      "Todos los santos Monjes y Ermitaños, rogad por nosotros.",
+      "",
+      "Santa María Magdalena, ruega por nosotros.",
+      "Santa Águeda, ruega por nosotros.",
+      "Santa Lucía, ruega por nosotros.",
+      "Santa Inés, ruega por nosotros.",
+      "Santa Cecilia, ruega por nosotros.",
+      "Santa Catalina, ruega por nosotros.",
+      "Santa Anastasia, ruega por nosotros.",
+      "Todas las santas Vírgenes y Viudas, rogad por nosotros.",
+      "Todos los Santos y Santas de Dios, interceded por nosotros.",
+      "",
+      "Sé propicio,",
+      "℟. perdónanos, Señor.",
+      "Sé propicio,",
+      "℟. escúchanos, Señor.",
+      "De todo mal,",
+      "℟. líbranos, Señor.",
+      "De todo pecado, líbranos, Señor.",
+      "De tu ira, líbranos, Señor.",
+      "De la muerte súbita e imprevista, líbranos, Señor.",
+      "De las asechanzas del demonio, líbranos, Señor.",
+      "De la ira, del odio y de toda mala voluntad, líbranos, Señor.",
+      "Del espíritu de fornicación, líbranos, Señor.",
+      "Del rayo y de la tempestad, líbranos, Señor.",
+      "Del azote del terremoto, líbranos, Señor.",
+      "De la peste, del hambre y de la guerra, líbranos, Señor.",
+      "De la muerte eterna, líbranos, Señor.",
+      "Por el misterio de tu santa Encarnación, líbranos, Señor.",
+      "Por tu venida, líbranos, Señor.",
+      "Por tu natividad, líbranos, Señor.",
+      "Por tu bautismo y santo ayuno, líbranos, Señor.",
+      "Por tu cruz y pasión, líbranos, Señor.",
+      "Por tu muerte y sepultura, líbranos, Señor.",
+      "Por tu santa resurrección, líbranos, Señor.",
+      "Por tu admirable ascensión, líbranos, Señor.",
+      "Por la venida del Espíritu Santo Paráclito, líbranos, Señor.",
+      "En el día del juicio, líbranos, Señor.",
+      "",
+      "Nosotros, pecadores,",
+      "℟. te rogamos, óyenos.",
+      "Que nos perdones, te rogamos, óyenos.",
+      "Que nos seas indulgente, te rogamos, óyenos.",
+      "Que te dignes conducirnos a verdadera penitencia, te rogamos, óyenos.",
+      "Que te dignes regir y conservar a tu santa Iglesia, te rogamos, óyenos.",
+      "Que te dignes conservar en la santa religión al Sumo Pontífice y a todos los órdenes de la jerarquía eclesiástica, te rogamos, óyenos.",
+      "Que te dignes humillar a los enemigos de la santa Iglesia, te rogamos, óyenos.",
+      "Que te dignes conceder la paz y la verdadera concordia a los reyes y príncipes cristianos, te rogamos, óyenos.",
+      "Que te dignes conceder la paz y la unidad a todo el pueblo cristiano, te rogamos, óyenos.",
+      "Que te dignes volver a la unidad de la Iglesia a todos los que andan errados, y traer a la luz del Evangelio a todos los infieles, te rogamos, óyenos.",
+      "Que te dignes confirmarnos y conservarnos en tu santo servicio, te rogamos, óyenos.",
+      "Que levantes nuestras almas a los deseos celestiales, te rogamos, óyenos.",
+      "Que concedas los bienes eternos a todos nuestros bienhechores, te rogamos, óyenos.",
+      "Que libres de la condenación eterna nuestras almas y las de nuestros hermanos, parientes y bienhechores, te rogamos, óyenos.",
+      "Que te dignes dar y conservar los frutos de la tierra, te rogamos, óyenos.",
+      "Que te dignes conceder el descanso eterno a todos los fieles difuntos, te rogamos, óyenos.",
+      "Que te dignes escucharnos, te rogamos, óyenos.",
+      "Hijo de Dios, te rogamos, óyenos.",
+      "",
+      "Cordero de Dios, que quitas los pecados del mundo,",
+      "℟. perdónanos, Señor.",
+      "Cordero de Dios, que quitas los pecados del mundo,",
+      "℟. escúchanos, Señor.",
+      "Cordero de Dios, que quitas los pecados del mundo,",
+      "℟. ten piedad de nosotros.",
+      "",
+      "V. Cristo, óyenos.",
+      "R. Cristo, escúchanos.",
+      "V. Señor, ten piedad.",
+      "R. Cristo, ten piedad.",
+      "V. Señor, ten piedad.",
+      "",
+      "Padre nuestro. (en secreto hasta)",
+      "V. Y no nos dejes caer en la tentación.",
+      "R. Mas líbranos del mal.",
+      "",
+      "Salmo 69",
+      "Dios mío, ven en mi auxilio; * Señor, date prisa en socorrerme.",
+      "Queden confundidos y avergonzados * los que buscan mi vida.",
+      "Vuelvan atrás y sonrójense * los que desean mi mal.",
+      "Retrocedan al punto avergonzados * los que me dicen: ¡Ea, ea!",
+      "Alégrense y gócense en ti todos los que te buscan; * y digan siempre los que aman tu salvación: Engrandecido sea el Señor.",
+      "Mas yo soy menesteroso y pobre; * Dios mío, ayúdame.",
+      "Tú eres mi amparo y mi libertador; * Señor, no tardes.",
+      "Gloria al Padre, y al Hijo, * y al Espíritu Santo.",
+      "Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.",
+      "",
+      "V. Salva a tus siervos.",
+      "R. Que esperan en ti, Dios mío.",
+      "V. Sé para nosotros, Señor, torre de fortaleza.",
+      "R. Frente al enemigo.",
+      "V. Nada consiga contra nosotros el enemigo.",
+      "R. Y el hijo de la iniquidad no llegue a dañarnos.",
+      "V. Señor, no nos trates según nuestros pecados.",
+      "R. Ni nos pagues según nuestras iniquidades.",
+      "V. Oremos por nuestro Sumo Pontífice N.",
+      "R. El Señor lo guarde y le dé vida, lo haga dichoso en la tierra y no lo entregue a la voluntad de sus enemigos.",
+      "V. Oremos por nuestros bienhechores.",
+      "R. Dígnate, Señor, dar la vida eterna a todos los que nos hacen bien por tu nombre. Amén.",
+      "V. Oremos por los fieles difuntos.",
+      "R. Dales, Señor, el descanso eterno, y brille para ellos la luz perpetua.",
+      "V. Descansen en paz.",
+      "R. Amén.",
+      "V. Por nuestros hermanos ausentes.",
+      "R. Salva a tus siervos, Dios mío, que esperan en ti.",
+      "V. Envíales, Señor, el auxilio desde tu santuario.",
+      "R. Y desde Sión defiéndelos.",
+      "V. Señor, escucha mi oración.",
+      "R. Y llegue a ti mi clamor.",
+      "V. El Señor esté con vosotros.",
+      "R. Y con tu espíritu.",
+      "",
+      "Oremos.",
+      "Oh Dios, de quien es propio compadecerse siempre y perdonar: recibe nuestra súplica, para que nosotros y todos tus siervos, atados por la cadena de los pecados, seamos absueltos por la ternura de tu misericordia.",
+      "Escucha, Señor, te suplicamos, las preces de los que te rogamos, y perdona los pecados de los que te los confesamos, para que nos concedas juntamente el perdón y la paz.",
+      "Muéstranos, Señor, con clemencia tu inefable misericordia: líbranos de todos nuestros pecados y arráncanos de las penas que por ellos merecemos.",
+      "Oh Dios, a quien ofende la culpa y aplaca la penitencia: mira con bondad las preces de tu pueblo suplicante, y aparta los azotes de tu ira, que merecemos por nuestros pecados.",
+      "Omnipotente y sempiterno Dios, ten misericordia de tu siervo N., nuestro Sumo Pontífice, y dirígelo según tu clemencia por el camino de la salvación eterna, para que con tu gracia desee lo que te agrada y lo cumpla con todas sus fuerzas.",
+      "Oh Dios, de quien proceden los santos deseos, los rectos consejos y las obras justas: da a tus siervos aquella paz que el mundo no puede dar, para que, entregados nuestros corazones a tus mandamientos y libres del temor de los enemigos, pasemos la vida en paz bajo tu protección.",
+      "Abrasa, Señor, con el fuego del Espíritu Santo nuestros riñones y nuestro corazón, para que te sirvamos con cuerpo casto y te agrademos con corazón puro.",
+      "Oh Dios, Creador y Redentor de todos los fieles: concede a las almas de tus siervos y siervas la remisión de todos sus pecados, para que por nuestras piadosas súplicas alcancen el perdón que siempre desearon.",
+      "Te suplicamos, Señor, que prevengas nuestras acciones con tu inspiración y las acompañes con tu ayuda, para que toda oración y obra nuestra comience siempre por ti y, por ti comenzada, llegue a su término.",
+      "Omnipotente y sempiterno Dios, que tienes dominio sobre los vivos y los muertos, y eres misericordioso con todos los que preconoces que serán tuyos por la fe y las obras: te suplicamos humildemente que aquellos por quienes hemos determinado ofrecer nuestras oraciones, ya los retenga aún este mundo en la carne, ya los haya recibido el venidero despojados del cuerpo, alcancen, por la intercesión de todos tus santos y la clemencia de tu bondad, el perdón de todos sus pecados. Por nuestro Señor Jesucristo, tu Hijo, que contigo vive y reina en unidad del Espíritu Santo, Dios, por los siglos de los siglos. Amén.",
+      "",
+      "V. El Señor esté con vosotros.",
+      "R. Y con tu espíritu.",
+      "V. Que nos escuche el Señor omnipotente y misericordioso.",
+      "R. Amén.",
+      "V. Las almas de los fieles difuntos, por la misericordia de Dios, descansen en paz.",
+      "R. Amén."
+    ]
+  }
+}
