@@ -1,82 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Daily Reading widget: a quote from today's Mass propers.
-     RemoteViews-safe views only (no bare View). -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Daily Reading widget: a wide missal page; ribbon takes the day's
+     liturgical colour at render time. RemoteViews-safe views only. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/reading_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/widget_bg"
-    android:orientation="vertical"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:paddingTop="12dp"
-    android:paddingBottom="12dp">
+    android:background="@drawable/widget_bg">
+
+    <FrameLayout
+        android:id="@+id/reading_ribbon"
+        android:layout_width="6dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="18dp"
+        android:background="#C9A227" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="12dp">
 
-        <FrameLayout
-            android:id="@+id/reading_color_pip"
-            android:layout_width="6dp"
-            android:layout_height="6dp"
-            android:layout_marginEnd="6dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp">
+
+            <TextView
+                android:id="@+id/reading_feast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="10sp"
+                android:letterSpacing="0.16"
+                android:textColor="#8B1A1A"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/reading_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="8sp"
+                android:letterSpacing="0.14"
+                android:textAllCaps="true"
+                android:textColor="#C9A227"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/reading_ref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/eb_garamond_italic"
+                android:textSize="9sp"
+                android:textColor="#4C3E31"
+                android:maxLines="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:textSize="8sp"
+                android:textColor="#C9A227"
+                android:text="✠" />
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/reading_feast"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/reading_body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:fontFamily="@font/eb_garamond_regular"
-            android:textSize="10sp"
-            android:letterSpacing="0.12"
-            android:textColor="#8B1A1A"
-            android:maxLines="1"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="#1A130C"
             android:ellipsize="end"
             android:text="" />
-
-        <TextView
-            android:id="@+id/reading_ref"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/eb_garamond_italic"
-            android:textSize="9sp"
-            android:textColor="#4C3E31"
-            android:maxLines="1"
-            android:text="" />
     </LinearLayout>
-
-    <FrameLayout
-        android:layout_width="28dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="#C9A227" />
-
-    <TextView
-        android:id="@+id/reading_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/eb_garamond_regular"
-        android:textSize="9sp"
-        android:letterSpacing="0.1"
-        android:textAllCaps="true"
-        android:textColor="#4C3E31"
-        android:text="" />
-
-    <TextView
-        android:id="@+id/reading_body"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/eb_garamond_regular"
-        android:textSize="12sp"
-        android:lineSpacingExtra="2dp"
-        android:textColor="#1A130C"
-        android:ellipsize="end"
-        android:text="" />
-
-</LinearLayout>
+</FrameLayout>

@@ -1,62 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Home-screen widget: an invitation to pray. Parchment surface, Sanctuary
-     Red rule, EB Garamond text — the Cistercian system at ambient scale.
-     No progress/tracking elements of any kind (wellbeing CUT LINE). -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Prayer widget: a small missal page with a sanctuary-red ribbon marker.
+     RemoteViews-safe views only (FrameLayout/LinearLayout/TextView). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/widget_bg"
-    android:orientation="vertical"
-    android:gravity="center_vertical"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:paddingTop="12dp"
-    android:paddingBottom="12dp">
+    android:background="@drawable/widget_bg">
 
-    <TextView
-        android:id="@+id/widget_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/eb_garamond_regular"
-        android:textSize="11sp"
-        android:letterSpacing="0.18"
-        android:textAllCaps="true"
-        android:textColor="#8B1A1A"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:text="@string/widget_label_office" />
-
-    <!-- FrameLayout, not View: RemoteViews only inflates @RemoteView classes,
-         and a bare View throws InflateException in the launcher process. -->
+    <!-- Ribbon marker hanging from the top edge. -->
     <FrameLayout
-        android:layout_width="28dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="6dp"
-        android:background="#C9A227" />
+        android:layout_width="6dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="16dp"
+        android:background="#E58B1A1A" />
 
-    <TextView
-        android:id="@+id/widget_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/playfair_display_regular"
-        android:textSize="20sp"
-        android:textColor="#1A130C"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:text="Laudes" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="11dp">
 
-    <TextView
-        android:id="@+id/widget_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/eb_garamond_italic"
-        android:textSize="13sp"
-        android:textColor="#4C3E31"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:text="@string/widget_tap_to_pray" />
+        <TextView
+            android:id="@+id/widget_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond_regular"
+            android:textSize="10sp"
+            android:letterSpacing="0.22"
+            android:textAllCaps="true"
+            android:textColor="#8B1A1A"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/widget_label_office" />
 
-</LinearLayout>
+        <!-- Gold ornament rule: ── ✠ ── -->
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textSize="8sp"
+                android:textColor="#C9A227"
+                android:text="✠" />
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/playfair_display_regular"
+            android:textSize="21sp"
+            android:textColor="#1A130C"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Laudes" />
+
+        <TextView
+            android:id="@+id/widget_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond_italic"
+            android:textSize="13sp"
+            android:textColor="#4C3E31"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/widget_tap_to_pray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="9sp"
+            android:textColor="#D9C9A227"
+            android:text="❦" />
+    </LinearLayout>
+</FrameLayout>

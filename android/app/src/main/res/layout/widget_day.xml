@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Today's Feast widget: the day of the liturgical calendar you are on.
-     RemoteViews-safe views only (no bare View). -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Today's Feast widget: a small missal page. The ribbon takes the day's
+     liturgical colour at render time. RemoteViews-safe views only. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/day_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/widget_bg"
-    android:orientation="vertical"
-    android:paddingStart="14dp"
-    android:paddingEnd="14dp"
-    android:paddingTop="12dp"
-    android:paddingBottom="12dp">
+    android:background="@drawable/widget_bg">
+
+    <FrameLayout
+        android:id="@+id/day_ribbon"
+        android:layout_width="6dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="16dp"
+        android:background="#C9A227" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <FrameLayout
-            android:id="@+id/day_color_pip"
-            android:layout_width="7dp"
-            android:layout_height="7dp"
-            android:layout_marginEnd="5dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="11dp">
 
         <TextView
             android:id="@+id/day_season"
@@ -30,36 +31,60 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/eb_garamond_regular"
             android:textSize="9sp"
-            android:letterSpacing="0.14"
+            android:letterSpacing="0.18"
             android:textColor="#8B1A1A"
             android:maxLines="1"
             android:ellipsize="end"
             android:text="" />
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textSize="8sp"
+                android:textColor="#C9A227"
+                android:text="✠" />
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/day_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/playfair_display_regular"
+            android:textSize="15sp"
+            android:textColor="#1A130C"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/day_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond_italic"
+            android:textSize="10sp"
+            android:textColor="#4C3E31"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/day_title"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="6dp"
-        android:fontFamily="@font/playfair_display_regular"
-        android:textSize="15sp"
-        android:textColor="#1A130C"
-        android:maxLines="4"
-        android:ellipsize="end"
-        android:gravity="center_vertical"
-        android:text="" />
-
-    <TextView
-        android:id="@+id/day_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/eb_garamond_italic"
-        android:textSize="10sp"
-        android:textColor="#4C3E31"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:text="" />
-
-</LinearLayout>
+</FrameLayout>

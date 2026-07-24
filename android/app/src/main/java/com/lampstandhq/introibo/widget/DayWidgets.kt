@@ -161,7 +161,7 @@ class IntroiboDayWidgetProvider : DayScopedWidgetProvider() {
         val english = ordo?.let { ContentStore.ordoNameEnglish(it.name) }
 
         views.setTextViewText(R.id.day_season, ctx.englishName.uppercase())
-        views.setInt(R.id.day_color_pip, "setBackgroundColor", liturgicalColorInt(ordo?.color))
+        views.setInt(R.id.day_ribbon, "setBackgroundColor", liturgicalColorInt(ordo?.color))
         views.setTextViewText(R.id.day_title, if (latin) latinName else (english ?: latinName))
         views.setTextViewText(R.id.day_date, today.format(dayFormatter))
         views.setOnClickPendingIntent(R.id.day_root, tapIntent(context, "widget:day"))
@@ -187,7 +187,7 @@ class IntroiboReadingWidgetProvider : DayScopedWidgetProvider() {
         val latinName = ordo?.name ?: ctx.feriaLatin
         val english = ordo?.let { ContentStore.ordoNameEnglish(it.name) }
 
-        views.setInt(R.id.reading_color_pip, "setBackgroundColor", liturgicalColorInt(ordo?.color))
+        views.setInt(R.id.reading_ribbon, "setBackgroundColor", liturgicalColorInt(ordo?.color))
         views.setTextViewText(
             R.id.reading_feast,
             (if (latin) latinName else (english ?: latinName)).uppercase(),

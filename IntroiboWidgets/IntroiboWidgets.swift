@@ -153,10 +153,91 @@ struct PrayerProvider: TimelineProvider {
 
 extension Color {
     static let wParchment = Color(red: 0xF2 / 255, green: 0xE8 / 255, blue: 0xD0 / 255)
+    static let wIvory = Color(red: 0xF8 / 255, green: 0xF2 / 255, blue: 0xE2 / 255)
+    static let wParchDeep = Color(red: 0xE7 / 255, green: 0xD9 / 255, blue: 0xBB / 255)
     static let wWalnut = Color(red: 0x1A / 255, green: 0x13 / 255, blue: 0x0C / 255)
     static let wRed = Color(red: 0x8B / 255, green: 0x1A / 255, blue: 0x1A / 255)
     static let wGold = Color(red: 0xC9 / 255, green: 0xA2 / 255, blue: 0x27 / 255)
     static let wInkSoft = Color(red: 0x4C / 255, green: 0x3E / 255, blue: 0x31 / 255)
+}
+
+// MARK: Missal chrome (shared by every home-screen family)
+//
+// The widgets read as a small missal page: warm parchment gradient, a double
+// hairline frame (walnut outside, gold leaf inside), and a ribbon marker in
+// the day's liturgical colour hanging from the top edge — the bookmark of a
+// hand missal. Lock-screen accessory families stay plain.
+
+/// Warm top-lit parchment.
+struct ParchmentBackground: View {
+    var body: some View {
+        LinearGradient(
+            colors: [.wIvory, .wParchment, .wParchDeep],
+            startPoint: .top, endPoint: .bottom
+        )
+    }
+}
+
+/// A bookmark ribbon with a swallow-tail notch, hanging from the top.
+struct RibbonShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        p.move(to: CGPoint(x: 0, y: 0))
+        p.addLine(to: CGPoint(x: rect.width, y: 0))
+        p.addLine(to: CGPoint(x: rect.width, y: rect.height))
+        p.addLine(to: CGPoint(x: rect.width / 2, y: rect.height - rect.width * 0.8))
+        p.addLine(to: CGPoint(x: 0, y: rect.height))
+        p.closeSubpath()
+        return p
+    }
+}
+
+/// A centred gold rule broken by a small cross: ─── ✠ ───
+struct OrnamentRule: View {
+    var body: some View {
+        HStack(spacing: 6) {
+            Rectangle().fill(Color.wGold.opacity(0.75)).frame(height: 0.7)
+            Text("\u{2720}")
+                .font(.system(size: 8))
+                .foregroundStyle(Color.wGold)
+            Rectangle().fill(Color.wGold.opacity(0.75)).frame(height: 0.7)
+        }
+    }
+}
+
+/// Double hairline page frame + optional ribbon marker over the content.
+struct MissalCard: ViewModifier {
+    var ribbon: Color?
+
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .overlay(
+                RoundedRectangle(cornerRadius: 3)
+                    .strokeBorder(Color.wWalnut.opacity(0.28), lineWidth: 0.8)
+                    .padding(4)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 2)
+                    .strokeBorder(Color.wGold.opacity(0.55), lineWidth: 0.5)
+                    .padding(6.5)
+            )
+            .overlay(alignment: .topLeading) {
+                if let ribbon {
+                    RibbonShape()
+                        .fill(ribbon.opacity(0.92))
+                        .frame(width: 6, height: 34)
+                        .shadow(color: .black.opacity(0.18), radius: 0.8, x: 0.5, y: 0.8)
+                        .padding(.leading, 14)
+                }
+            }
+    }
+}
+
+extension View {
+    func missalCard(ribbon: Color?) -> some View {
+        modifier(MissalCard(ribbon: ribbon))
+    }
 }
 
 struct IntroiboWidgetView: View {
@@ -187,30 +268,38 @@ struct IntroiboWidgetView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             default:
-                // Home screen: the parchment card.
-                VStack(alignment: .leading, spacing: 3) {
+                // Home screen: a small missal page, sanctuary-red ribbon.
+                VStack(spacing: family == .systemSmall ? 3 : 4) {
                     Text(entry.label.uppercased())
                         .font(.system(size: 10, weight: .semibold, design: .serif))
-                        .tracking(1.6)
+                        .tracking(2.2)
                         .foregroundStyle(Color.wRed)
                         .lineLimit(1)
-                    Rectangle()
-                        .fill(Color.wGold)
-                        .frame(width: 28, height: 1)
-                        .padding(.vertical, 2)
+                        .minimumScaleFactor(0.8)
+                    OrnamentRule()
+                        .frame(width: family == .systemSmall ? 84 : 110)
+                    Spacer(minLength: 0)
                     Text(entry.title)
-                        .font(.system(size: family == .systemSmall ? 19 : 22,
+                        .font(.system(size: family == .systemSmall ? 22 : 26,
                                       weight: .medium, design: .serif))
                         .foregroundStyle(Color.wWalnut)
-                        .minimumScaleFactor(0.7)
+                        .minimumScaleFactor(0.6)
                         .lineLimit(1)
+                        .multilineTextAlignment(.center)
                     Text(entry.subtitle)
                         .font(.system(size: 13, design: .serif))
                         .italic()
                         .foregroundStyle(Color.wInkSoft)
                         .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                    Spacer(minLength: 0)
+                    Text("\u{2766}")   // ❦ fleuron foot ornament
+                        .font(.system(size: 9))
+                        .foregroundStyle(Color.wGold.opacity(0.85))
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                .padding(.vertical, 14)
+                .padding(.horizontal, 16)
+                .missalCard(ribbon: .wRed)
             }
         }
         .widgetURL(tapURL)
@@ -218,7 +307,7 @@ struct IntroiboWidgetView: View {
             if family == .accessoryRectangular {
                 Color.clear
             } else {
-                Color.wParchment
+                ParchmentBackground()
             }
         }
     }
@@ -287,41 +376,41 @@ struct LiturgicalDayWidgetView: View {
     var body: some View {
         Group {
             if let snap = entry.snapshot {
-                VStack(alignment: .leading, spacing: 3) {
-                    HStack(spacing: 5) {
-                        Circle()
-                            .fill(liturgicalColor(snap.color))
-                            .frame(width: 7, height: 7)
-                        Text(snap.season.uppercased())
-                            .font(.system(size: 9, weight: .semibold, design: .serif))
-                            .tracking(1.2)
-                            .foregroundStyle(Color.wRed)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.8)
-                    }
+                VStack(spacing: 3) {
+                    Text(snap.season.uppercased())
+                        .font(.system(size: 9, weight: .semibold, design: .serif))
+                        .tracking(1.8)
+                        .foregroundStyle(Color.wRed)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                    OrnamentRule()
+                        .frame(width: 84)
                     Spacer(minLength: 0)
                     Text(WidgetSnapshotStore.prefersLatin
                          ? snap.name
                          : (snap.english ?? snap.name))
-                        .font(.system(size: 15, weight: .medium, design: .serif))
+                        .font(.system(size: 16, weight: .medium, design: .serif))
                         .foregroundStyle(Color.wWalnut)
+                        .multilineTextAlignment(.center)
                         .lineLimit(4)
-                        .minimumScaleFactor(0.75)
+                        .minimumScaleFactor(0.7)
                     Spacer(minLength: 0)
                     Text(Self.dayFormatter.string(from: entry.date))
                         .font(.system(size: 10, design: .serif))
                         .italic()
                         .foregroundStyle(Color.wInkSoft)
                         .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+                        .minimumScaleFactor(0.75)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                .padding(.vertical, 14)
+                .padding(.horizontal, 15)
+                .missalCard(ribbon: liturgicalColor(snap.color))
             } else {
                 stalePrompt
             }
         }
         .widgetURL(URL(string: "introibo://widget?m=day"))
-        .containerBackground(for: .widget) { Color.wParchment }
+        .containerBackground(for: .widget) { ParchmentBackground() }
     }
 }
 
@@ -339,7 +428,7 @@ struct DailyReadingWidgetView: View {
             }
         }
         .widgetURL(URL(string: "introibo://widget?m=reading"))
-        .containerBackground(for: .widget) { Color.wParchment }
+        .containerBackground(for: .widget) { ParchmentBackground() }
     }
 
     private func readingBody(_ snap: WidgetDaySnapshot) -> some View {
@@ -349,45 +438,41 @@ struct DailyReadingWidgetView: View {
 
         return VStack(alignment: .leading, spacing: 4) {
             HStack(spacing: 6) {
-                Circle()
-                    .fill(liturgicalColor(snap.color))
-                    .frame(width: 6, height: 6)
                 Text((latin ? snap.name : (snap.english ?? snap.name)).uppercased())
                     .font(.system(size: 10, weight: .semibold, design: .serif))
-                    .tracking(1.2)
+                    .tracking(1.6)
                     .foregroundStyle(Color.wRed)
                     .lineLimit(1)
-                    .minimumScaleFactor(0.75)
+                    .minimumScaleFactor(0.7)
                 Spacer(minLength: 0)
+                Text(choice.label.uppercased())
+                    .font(.system(size: 8, weight: .semibold, design: .serif))
+                    .tracking(1.4)
+                    .foregroundStyle(Color.wGold)
+                    .lineLimit(1)
                 if let ref = primary.ref {
-                    Text(ref)
+                    Text("\u{00B7} \(ref)")
                         .font(.system(size: 9, design: .serif))
                         .italic()
                         .foregroundStyle(Color.wInkSoft)
                         .lineLimit(1)
                 }
             }
-            Rectangle()
-                .fill(Color.wGold)
-                .frame(width: 28, height: 1)
+            OrnamentRule()
                 .padding(.vertical, 1)
-            Text(choice.label)
-                .font(.system(size: 9, weight: .semibold, design: .serif))
-                .tracking(1)
-                .foregroundStyle(Color.wInkSoft)
-            Text(primary.body)
-                .font(.system(size: family == .systemLarge ? 14 : 12, design: .serif))
-                .foregroundStyle(Color.wWalnut)
-                .lineSpacing(2)
-                .lineLimit(family == .systemLarge ? 10 : 4)
-                .frame(maxWidth: .infinity, alignment: .leading)
+
+            // Illuminated drop cap: the quote opens with an oversized
+            // sanctuary-red initial, as in a hand missal.
+            dropCapText(primary.body,
+                        bodySize: family == .systemLarge ? 14 : 12,
+                        lines: family == .systemLarge ? 9 : 4)
 
             if family == .systemLarge, choice != .collect {
-                Text("Collect")
-                    .font(.system(size: 9, weight: .semibold, design: .serif))
-                    .tracking(1)
-                    .foregroundStyle(Color.wInkSoft)
-                    .padding(.top, 3)
+                Text("COLLECT")
+                    .font(.system(size: 8, weight: .semibold, design: .serif))
+                    .tracking(1.4)
+                    .foregroundStyle(Color.wGold)
+                    .padding(.top, 4)
                 Text(latin ? snap.collectLat : snap.collectEng)
                     .font(.system(size: 12, design: .serif))
                     .italic()
@@ -398,7 +483,36 @@ struct DailyReadingWidgetView: View {
             }
             Spacer(minLength: 0)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .padding(.vertical, 13)
+        .padding(.horizontal, 16)
+        .missalCard(ribbon: liturgicalColor(snap.color))
+    }
+
+    /// First letter oversized in Sanctuary Red beside the flowing text.
+    @ViewBuilder
+    private func dropCapText(_ body: String, bodySize: CGFloat, lines: Int) -> some View {
+        let trimmed = body.trimmingCharacters(in: .whitespacesAndNewlines)
+        if let first = trimmed.first, first.isLetter {
+            HStack(alignment: .top, spacing: 5) {
+                Text(String(first))
+                    .font(.system(size: bodySize * 2.6, weight: .medium, design: .serif))
+                    .foregroundStyle(Color.wRed)
+                    .padding(.top, -4)
+                Text(String(trimmed.dropFirst()))
+                    .font(.system(size: bodySize, design: .serif))
+                    .foregroundStyle(Color.wWalnut)
+                    .lineSpacing(2)
+                    .lineLimit(lines)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        } else {
+            Text(trimmed)
+                .font(.system(size: bodySize, design: .serif))
+                .foregroundStyle(Color.wWalnut)
+                .lineSpacing(2)
+                .lineLimit(lines)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
     }
 
     private func text(_ choice: WidgetReadingText, from snap: WidgetDaySnapshot,
@@ -415,17 +529,21 @@ struct DailyReadingWidgetView: View {
 /// Rendered when the snapshot window doesn't cover the entry date (the app
 /// hasn't been opened in over a month). An invitation, never an error.
 private var stalePrompt: some View {
-    VStack(alignment: .leading, spacing: 4) {
+    VStack(spacing: 5) {
         Text("INTROIBO")
             .font(.system(size: 10, weight: .semibold, design: .serif))
-            .tracking(1.6)
+            .tracking(2.2)
             .foregroundStyle(Color.wRed)
+        OrnamentRule()
+            .frame(width: 84)
         Text("Open the app to refresh today's liturgy.")
             .font(.system(size: 12, design: .serif))
             .italic()
             .foregroundStyle(Color.wInkSoft)
+            .multilineTextAlignment(.center)
     }
-    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+    .padding(14)
+    .missalCard(ribbon: nil)
 }
 
 struct LiturgicalDayWidget: Widget {
