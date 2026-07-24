@@ -18,6 +18,7 @@ import WidgetKit
 struct WidgetSettingsView: View {
     @State private var mode = WidgetConfigStore.mode
     @State private var readingChoice = WidgetSnapshotStore.readingText
+    @State private var saintsChoice = WidgetSnapshotStore.saintsFilter
     /// Bumped after a slot pick so the rows re-read the store.
     @State private var revision = 0
 
@@ -83,6 +84,38 @@ struct WidgetSettingsView: View {
                 Text("Lectio · Reading Widget")
             } footer: {
                 Text("The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget needs no configuration — it always shows the liturgical day.")
+            }
+
+            Section {
+                ForEach(WidgetSaintsFilter.allCases, id: \.rawValue) { choice in
+                    Button {
+                        saintsChoice = choice
+                        WidgetSnapshotStore.saintsFilter = choice
+                        WidgetCenter.shared.reloadAllTimelines()
+                    } label: {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(choice.label)
+                                    .font(.body)
+                                    .foregroundStyle(Color.primaryText)
+                                Text(choice.detail)
+                                    .font(.captionSm)
+                                    .foregroundStyle(Color.tertiaryText)
+                            }
+                            Spacer()
+                            if saintsChoice == choice {
+                                Image(systemName: "checkmark")
+                                    .foregroundStyle(Color.sanctuaryRed)
+                            }
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .listRowBackground(Color.pageBackground)
+                }
+            } header: {
+                Text("Sancti · Saints Widget")
+            } footer: {
+                Text("Who appears in the Sanctorale widget's upcoming list. It always shows the Church's calendar — never a score.")
             }
         }
         .scrollContentBackground(.hidden)

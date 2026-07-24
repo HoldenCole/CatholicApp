@@ -351,7 +351,7 @@ struct DayProvider: TimelineProvider {
     }
 }
 
-private func liturgicalColor(_ key: String) -> Color {
+func liturgicalColor(_ key: String) -> Color {
     switch key {
     case "violet": return Color(red: 0.42, green: 0.21, blue: 0.60)
     case "rose": return Color(red: 0.63, green: 0.28, blue: 0.38)
@@ -462,10 +462,13 @@ struct DailyReadingWidgetView: View {
                 .padding(.vertical, 1)
 
             // Illuminated drop cap: the quote opens with an oversized
-            // sanctuary-red initial, as in a hand missal.
+            // sanctuary-red initial, as in a hand missal. The large family
+            // gives the quote the whole page — no truncation; the Collect
+            // addendum yields whatever space the full quote leaves.
             dropCapText(primary.body,
                         bodySize: family == .systemLarge ? 14 : 12,
-                        lines: family == .systemLarge ? 9 : 4)
+                        lines: family == .systemLarge ? nil : 4)
+                .layoutPriority(1)
 
             if family == .systemLarge, choice != .collect {
                 Text("COLLECT")
@@ -489,8 +492,9 @@ struct DailyReadingWidgetView: View {
     }
 
     /// First letter oversized in Sanctuary Red beside the flowing text.
+    /// `lines` nil = untruncated (the large family's full quote).
     @ViewBuilder
-    private func dropCapText(_ body: String, bodySize: CGFloat, lines: Int) -> some View {
+    private func dropCapText(_ body: String, bodySize: CGFloat, lines: Int?) -> some View {
         let trimmed = body.trimmingCharacters(in: .whitespacesAndNewlines)
         if let first = trimmed.first, first.isLetter {
             HStack(alignment: .top, spacing: 5) {
@@ -528,7 +532,7 @@ struct DailyReadingWidgetView: View {
 
 /// Rendered when the snapshot window doesn't cover the entry date (the app
 /// hasn't been opened in over a month). An invitation, never an error.
-private var stalePrompt: some View {
+var stalePrompt: some View {
     VStack(spacing: 5) {
         Text("INTROIBO")
             .font(.system(size: 10, weight: .semibold, design: .serif))
@@ -593,5 +597,6 @@ struct IntroiboWidgetsBundle: WidgetBundle {
         IntroiboWidget()
         LiturgicalDayWidget()
         DailyReadingWidget()
+        SaintsWidget()
     }
 }

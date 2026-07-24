@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sanctorale widget: today's feast, position in the season, upcoming
+     saints. The ribbon takes the day's liturgical colour and the progress
+     bar is the CHURCH'S calendar (day N of M in the season), never the
+     user's behaviour. RemoteViews-safe views only. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/saints_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg">
+
+    <FrameLayout
+        android:id="@+id/saints_ribbon"
+        android:layout_width="6dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="18dp"
+        android:background="#C9A227" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="9sp"
+                android:letterSpacing="0.16"
+                android:textAllCaps="true"
+                android:textColor="#C9A227"
+                android:text="Sanctorale" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/saints_season"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="9sp"
+                android:letterSpacing="0.16"
+                android:textColor="#8B1A1A"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/saints_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/playfair_display_regular"
+            android:textSize="16sp"
+            android:textColor="#1A130C"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/saints_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="1"
+                android:progressTint="#C9A227"
+                android:progressBackgroundTint="#241A130C"
+                android:max="1"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/saints_progress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/eb_garamond_italic"
+                android:textSize="9sp"
+                android:textColor="#4C3E31"
+                android:maxLines="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:textSize="8sp"
+                android:textColor="#C9A227"
+                android:text="✠" />
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BFC9A227" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond_regular"
+            android:textSize="8sp"
+            android:letterSpacing="0.14"
+            android:textAllCaps="true"
+            android:textColor="#C9A227"
+            android:text="Ventura · Upcoming" />
+
+        <LinearLayout
+            android:id="@+id/saints_up1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/saints_up1_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="12sp"
+                android:textColor="#1A130C"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="" />
+            <TextView
+                android:id="@+id/saints_up1_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/eb_garamond_italic"
+                android:textSize="10sp"
+                android:textColor="#4C3E31"
+                android:maxLines="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saints_up2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/saints_up2_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="12sp"
+                android:textColor="#1A130C"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="" />
+            <TextView
+                android:id="@+id/saints_up2_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/eb_garamond_italic"
+                android:textSize="10sp"
+                android:textColor="#4C3E31"
+                android:maxLines="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saints_up3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/saints_up3_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="12sp"
+                android:textColor="#1A130C"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="" />
+            <TextView
+                android:id="@+id/saints_up3_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/eb_garamond_italic"
+                android:textSize="10sp"
+                android:textColor="#4C3E31"
+                android:maxLines="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saints_up4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/saints_up4_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/eb_garamond_regular"
+                android:textSize="12sp"
+                android:textColor="#1A130C"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="" />
+            <TextView
+                android:id="@+id/saints_up4_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/eb_garamond_italic"
+                android:textSize="10sp"
+                android:textColor="#4C3E31"
+                android:maxLines="1"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

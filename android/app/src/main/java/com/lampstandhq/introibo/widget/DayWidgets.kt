@@ -13,6 +13,7 @@ import com.lampstandhq.introibo.R
 import com.lampstandhq.introibo.app.MainActivity
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
+import com.lampstandhq.introibo.data.liturgical.LiturgicalYear
 import com.lampstandhq.introibo.data.widget.WidgetConfig
 import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.storage.settings.MissalRite
@@ -215,4 +216,75 @@ class IntroiboReadingWidgetProvider : DayScopedWidgetProvider() {
         views.setOnClickPendingIntent(R.id.reading_root, tapIntent(context, "widget:reading"))
         return views
     }
+}
+
+/**
+ * Tall card: today's feast, your place in the season, and the saints ahead.
+ * The "season progress" bar is the CHURCH'S calendar — day N of M in the
+ * current season run — never the user's behaviour (wellbeing CUT LINE).
+ */
+class IntroiboSaintsWidgetProvider : DayScopedWidgetProvider() {
+
+    override val refreshAction = "com.lampstandhq.introibo.widget.SAINTS_REFRESH"
+    override val alarmRequestCode = 4
+
+    private val upcomingDateFormatter = DateTimeFormatter.ofPattern("d MMM", Locale.US)
+
+    override fun buildViews(context: Context): RemoteViews {
+        val views = RemoteViews(context.packageName, R.layout.widget_saints)
+        val today = LocalDate.now()
+        val rite = currentRite(context)
+        val latin = prefersLatin(context)
+
+        val ordo = ContentStore.ordoForDate(today, rite)
+        val ctx = LiturgicalContext.forDate(today, rite = rite)
+        val latinName = ordo?.name ?: ctx.feriaLatin
+        val english = ordo?.let { ContentStore.ordoNameEnglish(it.name) }
+
+        views.setTextViewText(R.id.saints_season, ctx.englishName.uppercase())
+        views.setInt(R.id.saints_ribbon, "setBackgroundColor", liturgicalColorInt(ordo?.color))
+        views.setTextViewText(R.id.saints_title, if (latin) latinName else (english ?: latinName))
+
+        val segment = LiturgicalYear.seasons(today.year, rite)
+            .firstOrNull { !today.isBefore(it.startDate) && !today.isAfter(it.endDate) }
+        if (segment != null) {
+            val day = java.time.temporal.ChronoUnit.DAYS
+                .between(segment.startDate, today).toInt() + 1
+            views.setProgressBar(R.id.saints_progress, segment.dayCount, day, false)
+            views.setTextViewText(R.id.saints_progress_text, "Day $day of ${segment.dayCount}")
+        } else {
+            views.setProgressBar(R.id.saints_progress, 1, 0, false)
+            views.setTextViewText(R.id.saints_progress_text, "")
+        }
+
+        // Upcoming saints (or all notable days), straight from the ordo.
+        val saintsOnly = WidgetConfig.saintsFilter(context) != "all"
+        val ahead = LiturgicalYear.upcoming(start = today, window = 30, rite = rite)
+            .filter { !saintsOnly || it.ordo?.winner == "sanctoral" }
+            .take(upcomingRows.size)
+        upcomingRows.forEachIndexed { i, (rowId, nameId, dateId) ->
+            val day = ahead.getOrNull(i)
+            val dayOrdo = day?.ordo
+            if (day == null || dayOrdo == null) {
+                views.setViewVisibility(rowId, android.view.View.GONE)
+            } else {
+                views.setViewVisibility(rowId, android.view.View.VISIBLE)
+                views.setTextViewText(
+                    nameId,
+                    if (latin) dayOrdo.name else (day.englishName ?: dayOrdo.name),
+                )
+                views.setTextViewText(dateId, day.date.format(upcomingDateFormatter))
+            }
+        }
+
+        views.setOnClickPendingIntent(R.id.saints_root, tapIntent(context, "widget:day"))
+        return views
+    }
+
+    private val upcomingRows = listOf(
+        Triple(R.id.saints_up1, R.id.saints_up1_name, R.id.saints_up1_date),
+        Triple(R.id.saints_up2, R.id.saints_up2_name, R.id.saints_up2_date),
+        Triple(R.id.saints_up3, R.id.saints_up3_name, R.id.saints_up3_date),
+        Triple(R.id.saints_up4, R.id.saints_up4_name, R.id.saints_up4_date),
+    )
 }

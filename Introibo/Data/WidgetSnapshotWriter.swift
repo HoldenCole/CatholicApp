@@ -26,11 +26,32 @@ enum WidgetSnapshotWriter {
         var out: [WidgetDaySnapshot] = []
         out.reserveCapacity(windowDays)
 
+        // Season runs for the years the window touches, so each day can carry
+        // its position within the current season ("day N of M" — the Church's
+        // calendar, never the user's behaviour).
+        var seasonsByYear: [Int: [SeasonSegment]] = [:]
+        func seasonPosition(of date: Date) -> (day: Int, length: Int)? {
+            let day0 = cal.startOfDay(for: date)
+            let year = cal.component(.year, from: day0)
+            if seasonsByYear[year] == nil {
+                seasonsByYear[year] = LiturgicalYearModel.seasons(year: year, rite: rite, store: store)
+            }
+            guard let seg = seasonsByYear[year]?.first(where: {
+                $0.startDate <= day0 && day0 <= $0.endDate
+            }) else { return nil }
+            let dayIndex = (cal.dateComponents([.day], from: seg.startDate, to: day0).day ?? 0) + 1
+            return (dayIndex, seg.dayCount)
+        }
+
         for offset in 0..<windowDays {
             guard let date = cal.date(byAdding: .day, value: offset, to: Date()) else { continue }
             let ordo = store.ordoForDate(date, rite: rite)
             let ctx = LiturgicalContext.for(date: date, rite: rite)
             guard let proper = store.properForDate(date, rite: rite) else { continue }
+            let notable = (ordo?.rank ?? 0) >= 3.0
+                || (ordo?.name.localizedCaseInsensitiveContains("vigilia") ?? false)
+                || ctx.isEmberDay
+            let position = seasonPosition(of: date)
             out.append(WidgetDaySnapshot(
                 date: WidgetSnapshotStore.dateKey(date),
                 name: ordo?.name ?? ctx.feriaLatin,
@@ -47,7 +68,12 @@ enum WidgetSnapshotWriter {
                 epistleRef: proper.epistle.ref,
                 gospelLat: proper.gospel.lat,
                 gospelEng: proper.gospel.eng,
-                gospelRef: proper.gospel.ref
+                gospelRef: proper.gospel.ref,
+                rank: ordo?.rank,
+                sanctoral: ordo?.winner == "sanctoral",
+                notable: notable,
+                seasonDay: position?.day,
+                seasonLength: position?.length
             ))
         }
 

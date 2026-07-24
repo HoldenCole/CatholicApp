@@ -92,6 +92,20 @@
                 android:resource="@xml/widget_reading_info" />
         </receiver>
 
+        <receiver
+            android:name=".widget.IntroiboSaintsWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.lampstandhq.introibo.widget.SAINTS_REFRESH" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_saints_info" />
+        </receiver>
+
     </application>
 
 </manifest>

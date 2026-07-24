@@ -56,6 +56,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
 
     var mode by remember { mutableStateOf(WidgetConfig.mode(context)) }
     var readingText by remember { mutableStateOf(WidgetConfig.readingText(context)) }
+    var saintsFilter by remember { mutableStateOf(WidgetConfig.saintsFilter(context)) }
     var pickingSlot by remember { mutableStateOf<WidgetSlot?>(null) }
     // Bump to re-read slot assignments after a pick.
     var revision by remember { mutableStateOf(0) }
@@ -241,6 +242,54 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
                 ) {
                     Text(label, style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
                     if (readingText == key) {
+                        Icon(
+                            imageVector = Icons.Filled.Check,
+                            contentDescription = "Selected",
+                            tint = colors.sanctuaryRed,
+                        )
+                    }
+                }
+            }
+
+            item {
+                Text(
+                    text = "SANCTI · SAINTS WIDGET",
+                    style = type.smallLabel,
+                    color = colors.tertiaryText,
+                    modifier = Modifier.padding(top = 20.dp, bottom = 6.dp),
+                )
+            }
+            item {
+                Text(
+                    text = "Who appears in the Sanctorale widget's upcoming list. It always shows the Church's calendar — never a score.",
+                    style = type.bodySm.copy(fontStyle = FontStyle.Italic),
+                    color = colors.secondaryText,
+                    modifier = Modifier.padding(bottom = 4.dp),
+                )
+            }
+            val saintsChoices = listOf(
+                Triple("saints", "Saints only", "Feasts of the sanctoral cycle"),
+                Triple("all", "All notable days", "Adds vigils and Ember days"),
+            )
+            items(saintsChoices.size, key = { "s-" + saintsChoices[it].first }) { i ->
+                val (key, label, detail) = saintsChoices[i]
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable {
+                            saintsFilter = key
+                            WidgetConfig.setSaintsFilter(context, key)
+                            com.lampstandhq.introibo.widget.IntroiboSaintsWidgetProvider()
+                                .refreshAll(context)
+                        }
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(label, style = type.body, color = colors.primaryText)
+                        Text(detail, style = type.smallLabel, color = colors.tertiaryText)
+                    }
+                    if (saintsFilter == key) {
                         Icon(
                             imageVector = Icons.Filled.Check,
                             contentDescription = "Selected",

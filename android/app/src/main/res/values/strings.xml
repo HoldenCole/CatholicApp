@@ -19,4 +19,5 @@
     <string name="widget_label_evening">Evening</string>
     <string name="widget_day_description">The day of the liturgical calendar you are on — feast, season, and colour.</string>
     <string name="widget_reading_description">A quote from today\'s Mass propers. Choose the text in the app\'s widget settings.</string>
+    <string name="widget_saints_description">Today\'s feast, your place in the season, and the saints ahead.</string>
 </resources>

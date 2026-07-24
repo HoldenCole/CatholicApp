@@ -33,6 +33,14 @@ struct WidgetDaySnapshot: Codable {
     let gospelLat: String
     let gospelEng: String
     let gospelRef: String?
+    // Sanctorale fields — optional so snapshot windows written by older app
+    // versions still decode. "Progress" below is the CHURCH'S calendar (how
+    // far the season has run), never the user's behaviour (wellbeing CUT LINE).
+    let rank: Double?          // ordo rank of the day's celebration
+    let sanctoral: Bool?       // the sanctoral cycle won the day
+    let notable: Bool?         // upcoming-feasts criteria (rank ≥ III | vigil | Ember)
+    let seasonDay: Int?        // 1-based day within the current season run
+    let seasonLength: Int?     // total days in the current season run
 }
 
 /// Which propers text the Daily Reading widget quotes (user choice, set in
@@ -50,11 +58,32 @@ enum WidgetReadingText: String, CaseIterable {
     }
 }
 
+/// Who appears in the Sanctorale widget's upcoming list (user choice, set in
+/// the in-app widget settings).
+enum WidgetSaintsFilter: String, CaseIterable {
+    case saints, all
+
+    var label: String {
+        switch self {
+        case .saints: return "Saints only"
+        case .all: return "All notable days"
+        }
+    }
+
+    var detail: String {
+        switch self {
+        case .saints: return "Feasts of the sanctoral cycle"
+        case .all: return "Adds vigils and Ember days"
+        }
+    }
+}
+
 enum WidgetSnapshotStore {
 
     static let daysKey = "widget.days"
     static let langKey = "widget.lang"        // "latin" | "english"
     static let readingKey = "widget.reading"  // WidgetReadingText rawValue
+    static let saintsKey = "widget.saints"    // WidgetSaintsFilter rawValue
 
     static func load() -> [WidgetDaySnapshot] {
         guard let data = WidgetConfigStore.defaults.data(forKey: daysKey),
@@ -96,5 +125,31 @@ enum WidgetSnapshotStore {
         set {
             WidgetConfigStore.defaults.set(newValue.rawValue, forKey: readingKey)
         }
+    }
+
+    static var saintsFilter: WidgetSaintsFilter {
+        get {
+            WidgetSaintsFilter(
+                rawValue: WidgetConfigStore.defaults.string(forKey: saintsKey) ?? ""
+            ) ?? .saints
+        }
+        set {
+            WidgetConfigStore.defaults.set(newValue.rawValue, forKey: saintsKey)
+        }
+    }
+
+    /// The notable days after `snapshot`'s date still inside the window,
+    /// filtered per the user's saints choice, soonest first.
+    static func upcoming(after snapshot: WidgetDaySnapshot, limit: Int) -> [WidgetDaySnapshot] {
+        let filter = saintsFilter
+        return load()
+            .filter {
+                $0.date > snapshot.date
+                    && ($0.notable ?? false)
+                    && (filter == .all || ($0.sanctoral ?? false))
+            }
+            .sorted { $0.date < $1.date }   // "yyyy-MM-dd" sorts lexically
+            .prefix(limit)
+            .map { $0 }
     }
 }

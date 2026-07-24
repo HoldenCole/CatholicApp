@@ -75,6 +75,14 @@ object WidgetConfig {
         prefs(context).edit().putString("reading.text", key).apply()
     }
 
+    /** Who appears in the Saints widget's upcoming list ("saints" | "all"). */
+    fun saintsFilter(context: Context): String =
+        prefs(context).getString("saints.filter", null) ?: "saints"
+
+    fun setSaintsFilter(context: Context, key: String) {
+        prefs(context).edit().putString("saints.filter", key).apply()
+    }
+
     /** The prayer slug assigned to [slot] (falls back to a sensible default). */
     fun slotPrayer(context: Context, slot: WidgetSlot): String =
         prefs(context).getString("slot.${slot.key}", null)
