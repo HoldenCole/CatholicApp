@@ -166,7 +166,7 @@ struct LearnView: View {
                 HStack(spacing: 8) {
                     HStack(spacing: 3) {
                         Image(systemName: "rectangle.on.rectangle")
-                            .font(.system(size: 9))
+                            .font(.scaledSystem(9))
                         Text("\(cardCount)")
                             .font(.captionSm)
                     }
@@ -174,7 +174,7 @@ struct LearnView: View {
                     if isMastered {
                         HStack(spacing: 3) {
                             Image(systemName: "checkmark.seal.fill")
-                                .font(.system(size: 9))
+                                .font(.scaledSystem(9))
                             Text("Mastered")
                                 .font(.captionSm)
                         }
@@ -186,7 +186,7 @@ struct LearnView: View {
             Spacer()
 
             Image(systemName: "chevron.right")
-                .font(.system(size: 12))
+                .font(.scaledSystem(12))
                 .foregroundStyle(Color.tertiaryText)
         }
         .padding(.vertical, 12)

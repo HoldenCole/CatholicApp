@@ -182,13 +182,15 @@ struct SettingsView: View {
         Section {
             VStack(spacing: 12) {
                 Text("Introibo ad altare Dei")
+                    // Slider preview: apply the slider value directly (NOT
+                    // .scaledSystem, which would apply it a second time).
                     .font(.system(size: 16 * fontScale, design: .serif))
                     .italic()
                     .foregroundStyle(Color.primaryText)
                     .frame(maxWidth: .infinity)
                 HStack {
                     Text("A")
-                        .font(.system(size: 10, design: .serif))
+                        .font(.scaledSystem(10, design: .serif))
                         .foregroundStyle(Color.tertiaryText)
                     Slider(
                         value: $fontScale,
@@ -197,7 +199,7 @@ struct SettingsView: View {
                     )
                     .tint(Color.sanctuaryRed)
                     Text("A")
-                        .font(.system(size: 24, design: .serif))
+                        .font(.scaledSystem(24, design: .serif))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
@@ -262,7 +264,7 @@ struct SettingsView: View {
                         .font(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                     Image(systemName: "chevron.right")
-                        .font(.system(size: 12))
+                        .font(.scaledSystem(12))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }

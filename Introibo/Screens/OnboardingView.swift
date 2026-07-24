@@ -40,7 +40,7 @@ struct OnboardingView: View {
                             withAnimation { page -= 1 }
                         } label: {
                             Image(systemName: "chevron.left")
-                                .font(.system(size: 16, weight: .medium))
+                                .font(.scaledSystem(16, weight: .medium))
                                 .foregroundStyle(page == 7 ? Color.ivory : Color.secondaryText)
                                 .padding(12)
                         }
@@ -82,7 +82,7 @@ struct OnboardingView: View {
                             withAnimation { page += 1 }
                         } label: {
                             Text("Continue")
-                                .font(.system(size: 15, weight: .semibold, design: .serif))
+                                .font(.scaledSystem(15, weight: .semibold, design: .serif))
                                 .italic()
                                 .foregroundStyle(Color.ivory)
                                 .tracking(1.5)
@@ -110,7 +110,7 @@ struct OnboardingView: View {
 
             VStack(spacing: 8) {
                 Text("Intro\u{00ED}bo")
-                    .font(.system(size: 48, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(48, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.ivory)
 
@@ -139,7 +139,7 @@ struct OnboardingView: View {
                 Spacer(minLength: 60)
 
                 Text("\u{2720}")
-                    .font(.system(size: 48))
+                    .font(.scaledSystem(48))
                     .foregroundStyle(Color.sanctuaryRed)
 
                 Text("A companion for the\ntraditional Catholic life.")
@@ -176,7 +176,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your rite")
-                    .font(.system(size: 26, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("This determines your liturgical calendar and rubrics.")
@@ -229,7 +229,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your penance discipline")
-                    .font(.system(size: 26, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("The app will show your daily obligations automatically.")
@@ -282,7 +282,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your language")
-                    .font(.system(size: 26, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Every prayer appears in Ecclesiastical Latin. Choose how you\u{2019}d like to see it.")
@@ -335,7 +335,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Follow a patron saint")
-                    .font(.system(size: 26, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Track daily practices, build streaks, and grow in holiness with a patron\u{2019}s guidance.")
@@ -396,7 +396,7 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Stay on schedule")
-                    .font(.system(size: 26, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Introibo can remind you to pray at the traditional hours.")
@@ -454,7 +454,7 @@ struct OnboardingView: View {
             Spacer()
 
             Text("\u{2720}")
-                .font(.system(size: 56))
+                .font(.scaledSystem(56))
                 .foregroundStyle(Color.goldLeaf)
 
             Text("Intro\u{00ED}bo ad alt\u{00E1}re Dei")
@@ -482,7 +482,7 @@ struct OnboardingView: View {
                 hasCompletedOnboarding = true
             } label: {
                 Text("Begin")
-                    .font(.system(size: 17, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(17, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.ivory)
                     .tracking(2)
@@ -520,7 +520,7 @@ struct OnboardingView: View {
                 Spacer()
                 if isSelected {
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 20))
+                        .font(.scaledSystem(20))
                         .foregroundStyle(Color.sanctuaryRed)
                         .padding(.top, 2)
                 }
@@ -558,7 +558,7 @@ struct OnboardingView: View {
                 Spacer()
                 if isSelected {
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 20))
+                        .font(.scaledSystem(20))
                         .foregroundStyle(Color.goldLeaf)
                         .padding(.top, 2)
                 }

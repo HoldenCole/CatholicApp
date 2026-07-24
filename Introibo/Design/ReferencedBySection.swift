@@ -30,7 +30,7 @@ struct ReferencedBySection: View {
                         } label: {
                             HStack(alignment: .firstTextBaseline, spacing: 8) {
                                 Image(systemName: "arrow.uturn.backward")
-                                    .font(.system(size: 11, weight: .regular))
+                                    .font(.scaledSystem(11, weight: .regular))
                                     .foregroundStyle(Color.sanctuaryRed.opacity(0.7))
                                 Text(source.label)
                                     .font(.body)

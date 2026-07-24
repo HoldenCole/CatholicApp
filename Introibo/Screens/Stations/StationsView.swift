@@ -43,7 +43,7 @@ struct StationsView: View {
             VStack(spacing: 0) {
                 VStack(spacing: 10) {
                     Text("✠")
-                        .font(.system(size: 36))
+                        .font(.scaledSystem(36))
                         .foregroundStyle(Color.sanctuaryRed.opacity(0.6))
                         .padding(.top, 24)
                     Text("Via Crucis")
@@ -234,7 +234,7 @@ private struct PrayStationView: View {
                         .smallLabel(color: Color.goldLeaf)
                         .padding(.top, 12)
                     Text(station.station)
-                        .font(.system(size: 96, weight: .semibold, design: .serif))
+                        .font(.scaledSystem(96, weight: .semibold, design: .serif))
                         .italic()
                         .foregroundStyle(numeralColor)
                         .shadow(color: numeralColor.opacity(0.25), radius: 24)
@@ -341,7 +341,7 @@ private struct PrayStationView: View {
                 onBack()
             } label: {
                 Text("‹")
-                    .font(.system(size: 22, design: .serif))
+                    .font(.scaledSystem(22, design: .serif))
                     .foregroundStyle(Color.goldLeaf)
                     .frame(width: 52, height: 52)
                     .overlay(Rectangle().stroke(Color.goldLeaf.opacity(0.55), lineWidth: 1))

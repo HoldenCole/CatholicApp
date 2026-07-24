@@ -30,7 +30,7 @@ struct RelatedLinksSection: View {
                             } label: {
                                 HStack(alignment: .firstTextBaseline, spacing: 8) {
                                     Image(systemName: "arrow.up.right")
-                                        .font(.system(size: 11, weight: .regular))
+                                        .font(.scaledSystem(11, weight: .regular))
                                         .foregroundStyle(Color.sanctuaryRed.opacity(0.7))
                                     Text(link.label)
                                         .font(.body)

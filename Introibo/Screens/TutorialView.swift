@@ -69,7 +69,7 @@ struct TutorialView: View {
                     }
                 } label: {
                     Text(page < steps.count - 1 ? "Next" : "Introíbo ad altáre Dei  ✠")
-                        .font(.system(size: 14, weight: .semibold, design: .serif))
+                        .font(.scaledSystem(14, weight: .semibold, design: .serif))
                         .italic()
                         .foregroundStyle(Color.ivory)
                         .tracking(2)
@@ -105,12 +105,12 @@ struct TutorialView: View {
                         .fill(Color.sanctuaryRed)
                         .frame(width: 72, height: 72)
                     Image(systemName: step.icon)
-                        .font(.system(size: 28))
+                        .font(.scaledSystem(28))
                         .foregroundStyle(Color.ivory)
                 }
 
                 Text(step.title)
-                    .font(.system(size: 30, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(30, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.primaryText)
 
@@ -122,7 +122,7 @@ struct TutorialView: View {
                     ForEach(Array(step.items.enumerated()), id: \.offset) { _, item in
                         HStack(alignment: .top, spacing: 14) {
                             Image(systemName: item.0)
-                                .font(.system(size: 16))
+                                .font(.scaledSystem(16))
                                 .foregroundStyle(Color.sanctuaryRed)
                                 .frame(width: 24, alignment: .center)
                                 .padding(.top, 2)

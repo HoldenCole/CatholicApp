@@ -67,7 +67,10 @@ data class IntroiboTypography(
 )
 
 /**
- * Build a full [IntroiboTypography] set scaled by [scale].
+ * Build a full [IntroiboTypography] set scaled by [scale]. EVERY style
+ * scales — titles and labels included (they used to be pinned, which left
+ * low-vision users unable to enlarge headings). The system font-size
+ * setting applies on top automatically via sp units.
  */
 fun introiboTypography(scale: Float = FontSizeScale.DEFAULT_VALUE): IntroiboTypography {
     fun scaled(size: Float): TextUnit = (size * scale).sp
@@ -77,22 +80,22 @@ fun introiboTypography(scale: Float = FontSizeScale.DEFAULT_VALUE): IntroiboTypo
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.SemiBold,
             fontStyle = FontStyle.Italic,
-            fontSize = 34.sp,
+            fontSize = scaled(34f),
         ),
         titleXL = TextStyle(
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.SemiBold,
-            fontSize = 28.sp,
+            fontSize = scaled(28f),
         ),
         titleL = TextStyle(
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.SemiBold,
-            fontSize = 22.sp,
+            fontSize = scaled(22f),
         ),
         titleM = TextStyle(
             fontFamily = DisplayFamily,
             fontWeight = FontWeight.Medium,
-            fontSize = 18.sp,
+            fontSize = scaled(18f),
         ),
         body = TextStyle(
             fontFamily = BodyFamily,
@@ -114,13 +117,13 @@ fun introiboTypography(scale: Float = FontSizeScale.DEFAULT_VALUE): IntroiboTypo
             fontFamily = LabelFamily,
             fontWeight = FontWeight.Normal,
             fontStyle = FontStyle.Italic,
-            fontSize = 10.sp,
+            fontSize = scaled(10f),
         ),
         smallLabel = TextStyle(
             fontFamily = LabelFamily,
             fontWeight = FontWeight.Bold,
             fontStyle = FontStyle.Italic,
-            fontSize = 11.sp,
+            fontSize = scaled(11f),
             letterSpacing = 2.5.sp,
         ),
     )

@@ -82,19 +82,19 @@ struct TodayView: View {
                 Button { showCalendar = true } label: {
                     Image(systemName: "calendar")
                         .foregroundStyle(Color.goldLeaf)
-                        .font(.system(size: 16))
+                        .font(.scaledSystem(16))
                 }
                 .spotlightAnchor("calendarButton")
                 Button { showSearch = true } label: {
                     Image(systemName: "magnifyingglass")
                         .foregroundStyle(Color.goldLeaf)
-                        .font(.system(size: 16))
+                        .font(.scaledSystem(16))
                 }
                 .spotlightAnchor("searchButton")
                 Button { showSettings = true } label: {
                     Image(systemName: "gearshape")
                         .foregroundStyle(Color.goldLeaf)
-                        .font(.system(size: 16))
+                        .font(.scaledSystem(16))
                 }
                 .spotlightAnchor("settingsButton")
             }
@@ -187,7 +187,7 @@ struct TodayView: View {
                 Text("Ritus  ·  \(rite.short)")
                     .smallLabel(color: Color.goldLeaf, tracking: 2)
                 Text("›")
-                    .font(.system(size: 8))
+                    .font(.scaledSystem(8))
                     .foregroundStyle(Color.goldLeaf)
             }
         }
@@ -223,12 +223,12 @@ struct TodayView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
                         Text("VENTURA \u{00B7} UPCOMING")
-                            .font(.system(size: 10, weight: .semibold))
+                            .font(.scaledSystem(10, weight: .semibold))
                             .tracking(2)
                             .foregroundStyle(Color.tertiaryText)
                         Spacer()
                         Image(systemName: "chevron.right")
-                            .font(.system(size: 11))
+                            .font(.scaledSystem(11))
                             .foregroundStyle(Color.tertiaryText)
                     }
                     ForEach(upcoming.prefix(4), id: \.date) { day in
@@ -237,13 +237,13 @@ struct TodayView: View {
                                 .fill((day.colour?.swiftUIColor ?? Color.frameLine).opacity(0.85))
                                 .frame(width: 6, height: 6)
                             Text(Self.upcomingDate.string(from: day.date))
-                                .font(.system(size: 12, design: .serif))
+                                .font(.scaledSystem(12, design: .serif))
                                 .foregroundStyle(Color.tertiaryText)
                                 .frame(width: 52, alignment: .leading)
                             Text(langMode == .latinOnly
                                  ? (day.label ?? day.weekdayName)
                                  : (day.englishName ?? day.label ?? day.weekdayName))
-                                .font(.system(size: 14, design: .serif))
+                                .font(.scaledSystem(14, design: .serif))
                                 .foregroundStyle(Color.primaryText)
                                 .lineLimit(1)
                             Spacer(minLength: 0)
@@ -456,7 +456,7 @@ struct TodayView: View {
             if let next = nextObligationDay() {
                 HStack(spacing: 6) {
                     Image(systemName: "arrow.right.circle")
-                        .font(.system(size: 11))
+                        .font(.scaledSystem(11))
                         .foregroundStyle(Color.sanctuaryRed)
                     Text("Next obligation: \(next)")
                         .font(.captionSm)

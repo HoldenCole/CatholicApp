@@ -213,7 +213,7 @@ private struct ClockDial: View {
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                 Text(formatTime(h: hour.hour, m: hour.minute))
-                    .font(.system(size: 8, weight: .semibold, design: .serif))
+                    .font(.scaledSystem(8, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
             }

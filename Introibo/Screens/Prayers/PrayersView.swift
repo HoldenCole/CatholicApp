@@ -87,7 +87,7 @@ struct PrayersView: View {
                 Button { showRuleNotification = true } label: {
                     Image(systemName: hasActiveRuleNotification ? "bell.fill" : "bell")
                         .foregroundStyle(Color.sanctuaryRed)
-                        .font(.system(size: 14))
+                        .font(.scaledSystem(14))
                 }
                 .buttonStyle(.plain)
                 .sheet(isPresented: $showRuleNotification) {
@@ -100,7 +100,7 @@ struct PrayersView: View {
                 Button { showRuleEditor = true } label: {
                     Image(systemName: "pencil")
                         .foregroundStyle(Color.sanctuaryRed)
-                        .font(.system(size: 14))
+                        .font(.scaledSystem(14))
                 }
                 .buttonStyle(.plain)
             }
@@ -151,7 +151,7 @@ struct PrayersView: View {
                             } label: {
                                 Image(systemName: "book.pages")
                                     .foregroundStyle(Color.sanctuaryRed)
-                                    .font(.system(size: 14))
+                                    .font(.scaledSystem(14))
                             }
                             .buttonStyle(.plain)
                         }
@@ -182,7 +182,7 @@ struct PrayersView: View {
                             Spacer()
                             Image(systemName: "clock")
                                 .foregroundStyle(Color.sanctuaryRed)
-                                .font(.system(size: 14))
+                                .font(.scaledSystem(14))
                         }
                         .padding(.vertical, 4)
                         .contentShape(Rectangle())
@@ -295,7 +295,7 @@ struct PrayersView: View {
             HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Color.tertiaryText)
-                    .font(.system(size: 14))
+                    .font(.scaledSystem(14))
                 TextField("Search prayers", text: $searchText)
                     .font(.body)
                 if !searchText.isEmpty {
@@ -317,7 +317,7 @@ struct PrayersView: View {
                 } label: {
                     HStack(spacing: 4) {
                         Image(systemName: sortAlphabetical ? "textformat.abc" : "list.number")
-                            .font(.system(size: 11))
+                            .font(.scaledSystem(11))
                         Text(sortAlphabetical ? "A - Z" : "Default")
                             .font(.captionSm)
                     }
@@ -503,7 +503,7 @@ struct PrayerRuleEditor: View {
                             .foregroundStyle(Color.primaryText)
                         if slug.hasPrefix("office-") {
                             Image(systemName: "clock")
-                                .font(.system(size: 12))
+                                .font(.scaledSystem(12))
                                 .foregroundStyle(Color.sanctuaryRed)
                         }
                         Spacer()

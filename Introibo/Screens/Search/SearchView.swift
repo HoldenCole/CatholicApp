@@ -100,14 +100,14 @@ struct SearchView: View {
                 Spacer()
                 Button { dismiss() } label: {
                     Image(systemName: "xmark")
-                        .font(.system(size: 15, weight: .medium))
+                        .font(.scaledSystem(15, weight: .medium))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
 
             HStack(spacing: 10) {
                 Image(systemName: "magnifyingglass")
-                    .font(.system(size: 15))
+                    .font(.scaledSystem(15))
                     .foregroundStyle(Color.tertiaryText)
                 TextField("", text: $query, prompt:
                     Text("Search prayers, Mass, Office…")
@@ -121,7 +121,7 @@ struct SearchView: View {
                 if !query.isEmpty {
                     Button { query = "" } label: {
                         Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 15))
+                            .font(.scaledSystem(15))
                             .foregroundStyle(Color.tertiaryText)
                     }
                 }
@@ -241,7 +241,7 @@ struct SearchView: View {
     private func resultRow(_ result: SearchResult) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: result.document.type.symbolName)
-                .font(.system(size: 14))
+                .font(.scaledSystem(14))
                 .foregroundStyle(Color.goldLeaf)
                 .frame(width: 20)
                 .padding(.top, 2)

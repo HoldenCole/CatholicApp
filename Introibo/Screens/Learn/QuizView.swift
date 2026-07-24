@@ -159,10 +159,10 @@ struct QuizView: View {
         VStack(spacing: 16) {
             Spacer()
             Text("✠")
-                .font(.system(size: 48))
+                .font(.scaledSystem(48))
                 .foregroundStyle(Color.sanctuaryRed)
             Text("\(score) / \(questions.count)")
-                .font(.system(size: 48, weight: .semibold, design: .serif))
+                .font(.scaledSystem(48, weight: .semibold, design: .serif))
                 .foregroundStyle(Color.primaryText)
             Text(score == questions.count ? "Perfect!" : score >= questions.count / 2 ? "Well done" : "Keep practising")
                 .font(.titleM)

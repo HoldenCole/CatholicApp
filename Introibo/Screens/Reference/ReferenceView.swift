@@ -68,7 +68,7 @@ struct ReferenceView: View {
         NavigationLink(destination: destination) {
             VStack(spacing: 8) {
                 Image(systemName: icon)
-                    .font(.system(size: 24))
+                    .font(.scaledSystem(24))
                     .foregroundStyle(Color.sanctuaryRed)
                 Text(title)
                     .font(.titleM)
@@ -117,7 +117,7 @@ struct ReferenceView: View {
                                 .foregroundStyle(Color.primaryText)
                             Spacer()
                             Image(systemName: "chevron.right")
-                                .font(.system(size: 10))
+                                .font(.scaledSystem(10))
                                 .foregroundStyle(Color.tertiaryText)
                         }
                         .padding(.vertical, 4)
@@ -338,7 +338,7 @@ struct TLMHistoryView: View {
             VStack(spacing: 0) {
                 VStack(spacing: 8) {
                     Text("✠")
-                        .font(.system(size: 36))
+                        .font(.scaledSystem(36))
                         .foregroundStyle(Color.sanctuaryRed.opacity(0.6))
                         .padding(.top, 24)
                     Text("History of the Mass")

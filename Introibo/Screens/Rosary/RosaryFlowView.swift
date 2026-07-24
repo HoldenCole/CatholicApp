@@ -184,7 +184,7 @@ struct RosaryFlowView: View {
         VStack(spacing: 16) {
             Spacer()
             Text("✠")
-                .font(.system(size: 64))
+                .font(.scaledSystem(64))
                 .foregroundStyle(Color.sanctuaryRed)
             Text("Rosary Complete")
                 .font(.pageTitle)

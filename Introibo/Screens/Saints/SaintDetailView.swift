@@ -238,7 +238,7 @@ struct SaintDetailView: View {
                 if isFollowed {
                     Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                         .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
-                        .font(.system(size: 20))
+                        .font(.scaledSystem(20))
                         .padding(.top, 2)
                 }
                 VStack(alignment: .leading, spacing: 2) {

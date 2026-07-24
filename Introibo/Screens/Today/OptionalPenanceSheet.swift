@@ -25,7 +25,7 @@ struct OptionalPenanceSheet: View {
                         } label: {
                             HStack(alignment: .top, spacing: 14) {
                                 Image(systemName: selected.contains(penance.id) ? "checkmark.circle.fill" : "circle")
-                                    .font(.system(size: 20))
+                                    .font(.scaledSystem(20))
                                     .foregroundStyle(selected.contains(penance.id) ? Color.sanctuaryRed : Color.tertiaryText)
 
                                 VStack(alignment: .leading, spacing: 4) {

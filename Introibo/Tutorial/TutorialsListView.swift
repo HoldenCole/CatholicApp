@@ -25,7 +25,7 @@ struct TutorialsListView: View {
                         } label: {
                             HStack(spacing: 12) {
                                 Image(systemName: feature.systemImage)
-                                    .font(.system(size: 14))
+                                    .font(.scaledSystem(14))
                                     .foregroundStyle(Color.sanctuaryRed)
                                     .frame(width: 24, alignment: .center)
                                 VStack(alignment: .leading, spacing: 2) {
@@ -39,7 +39,7 @@ struct TutorialsListView: View {
                                 }
                                 Spacer()
                                 Image(systemName: "play.circle")
-                                    .font(.system(size: 16))
+                                    .font(.scaledSystem(16))
                                     .foregroundStyle(Color.sanctuaryRed)
                             }
                         }
