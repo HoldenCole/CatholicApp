@@ -2140,8 +2140,8 @@
       "eng": "Refreshed by the sacrament of salvation, we beseech You, O Lord, that we may be aided by the prayers of those whose festival we celebrate.\n$Per Dominum"
     },
     "oratio": {
-      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Faustíni et Jovítæ et Faustíni et Jovítæ sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
-      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Faustinus and Jovita and Faustinus and Jovita, grant that we may be inspired by the example of those in whose merits we rejoice.",
+      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Faustíni et Jovítæ sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
+      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Faustinus and Jovita, grant that we may be inspired by the example of those in whose merits we rejoice.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -2532,8 +2532,8 @@
       "eng": "Let the people shew forth their wisdom, and the church declare their praise. Their name liveth unto generation and generation.\nRejoice in the Lord, O ye just: praise becometh the upright.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nLet the people shew forth their wisdom, and the church declare their praise. Their name liveth unto generation and generation."
     },
     "oratio": {
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Perpétuæ et Felicitátis et Perpétuæ et Felicitátis natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "O God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, Perpétuæ et Felicitátis and Perpétuæ et Felicitátis, grant that we may enjoy their companionship in everlasting happiness."
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Perpétuæ et Felicitátis natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "O God, Who permits us to celebrate the anniversary of the death of Your holy Martyrs, Perpétuæ et Felicitátis, grant that we may enjoy their companionship in everlasting happiness."
     },
     "lectio": {
       "lat": "Lectio libri Sapientiæ\nJusti autem in perpétuum vivent, et apud Dóminum est merces eórum, et cogitátio illórum apud Altíssimum. Ideo accípient regnum decóris, et diadéma speciéi de manu Dómini: quóniam déxtera sua teget eos, et bráchio sancto suo deféndet illos. Accípiet armatúram zelus illíus, et armábit creatúram ad ultiónem inimicórum. Induet pro thoráce justítiam, et accípiet pro gálea judícium certum. Sumet scutum inexpugnábile æquitátem.",
@@ -2990,7 +2990,7 @@
     "rank": 2,
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)\nMeménto, Dómine, David: et omnis mansuetúdinis ejus.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nStátuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever.\nRemember, O Lord, David and all his meekness.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nEcce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio. Non est invéntus símilis illi, qui conservávit legem Excélsi. Ideo jurejurándo fecit illum Dóminus créscere in plebem suam. Benedictiónem ómnium géntium dedit illi, et testaméntum suum confirmávit super caput ejus. Agnóvit eum in benedictiónibus suis: conservávit illi misericórdiam suam: et invénit grátiam coram óculis Dómini. Magnificávit eum in conspéctu regum: et dedit illi corónam glóriæ. Státuit illi testaméntum ætérnum, et dedit illi sacerdótium magnum: et beatificávit illum in glória. Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -3601,8 +3601,8 @@
       "gloria": true
     },
     "oratio": {
-      "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et per beátos Sotéris et Caji et Sotéris et Caji Mártyres tuos atque Summos Pontífices perpétua protectióne custódi; quos totíus Ecclésiæ præstitísti esse pastóres.",
-      "eng": "Look forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Soter and Caius and Soter and Caius thy Martyrs and Sovereign Pontiffs, whom thou didst constitute Shepherds of the whole Church.",
+      "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et per beátos Sotéris et Caji Mártyres tuos atque Summos Pontífices perpétua protectióne custódi; quos totíus Ecclésiæ præstitísti esse pastóres.",
+      "eng": "Look forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Soter and Caius thy Martyrs and Sovereign Pontiffs, whom thou didst constitute Shepherds of the whole Church.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -3632,8 +3632,8 @@
       "ref": "Sap 3:1-3"
     },
     "secreta": {
-      "lat": "Oblátis, quǽsumus, Dómine, placáre munéribus: et, intercedéntibus sanctis Martýribus tuis Sotéris et Caji et Sotéris et Caji, a cunctis nos defénde perículis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Be appeased by the gifts we offer You, O Lord, and through the intercession of Your holy Martyrs Sotéris et Caji and Sotéris et Caji, safeguard us from all dangers.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Oblátis, quǽsumus, Dómine, placáre munéribus: et, intercedéntibus sanctis Martýribus tuis Sotéris et Caji, a cunctis nos defénde perículis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Be appeased by the gifts we offer You, O Lord, and through the intercession of Your holy Martyrs Sotéris et Caji, safeguard us from all dangers.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "communio": {
       "lat": "Quod dico vobis in ténebris, dícite in lúmine, dicit Dóminus: et quod in aure audítis, prædicáte super tecta.",
@@ -3641,8 +3641,8 @@
       "ref": "Matt 10:27"
     },
     "postcommunio": {
-      "lat": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedéntibus sanctis Martýribus tuis Sotéris et Caji et Sotéris et Caji, coeléstis remédii fáciat esse consórtes.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "May this Communion, O Lord, cleanse us of sin, and, through the intercession of Your holy Martyrs Sotéris et Caji and Sotéris et Caji, make us sharers of heavenly salvation.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedéntibus sanctis Martýribus tuis Sotéris et Caji, coeléstis remédii fáciat esse consórtes.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "May this Communion, O Lord, cleanse us of sin, and, through the intercession of Your holy Martyrs Sotéris et Caji, make us sharers of heavenly salvation.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "04-23": {
@@ -3815,8 +3815,8 @@
       "gloria": true
     },
     "oratio": {
-      "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et per beátos Cleti et Marcellíni et Cleti et Marcellíni Mártyres tuos atque Summos Pontífices perpétua protectióne custódi; quos totíus Ecclésiæ præstitísti esse pastóres.",
-      "eng": "Look forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Cletus and Marcellinus and Cletus and Marcellinus thy Martyrs and Sovereign Pontiffs, whom thou didst constitute Shepherds of the whole Church.",
+      "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et per beátos Cleti et Marcellíni Mártyres tuos atque Summos Pontífices perpétua protectióne custódi; quos totíus Ecclésiæ præstitísti esse pastóres.",
+      "eng": "Look forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Cletus and Marcellinus thy Martyrs and Sovereign Pontiffs, whom thou didst constitute Shepherds of the whole Church.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -3846,8 +3846,8 @@
       "ref": "Sap 3:1-3"
     },
     "secreta": {
-      "lat": "Oblátis, quǽsumus, Dómine, placáre munéribus: et, intercedéntibus sanctis Martýribus tuis Cleti et Marcellíni et Cleti et Marcellíni, a cunctis nos defénde perículis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Be appeased by the gifts we offer You, O Lord, and through the intercession of Your holy Martyrs Cleti et Marcellíni and Cleti et Marcellíni, safeguard us from all dangers.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Oblátis, quǽsumus, Dómine, placáre munéribus: et, intercedéntibus sanctis Martýribus tuis Cleti et Marcellíni, a cunctis nos defénde perículis.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Be appeased by the gifts we offer You, O Lord, and through the intercession of Your holy Martyrs Cleti et Marcellíni, safeguard us from all dangers.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "communio": {
       "lat": "Quod dico vobis in ténebris, dícite in lúmine, dicit Dóminus: et quod in aure audítis, prædicáte super tecta.",
@@ -3855,8 +3855,8 @@
       "ref": "Matt 10:27"
     },
     "postcommunio": {
-      "lat": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedéntibus sanctis Martýribus tuis Cleti et Marcellíni et Cleti et Marcellíni, coeléstis remédii fáciat esse consórtes.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "May this Communion, O Lord, cleanse us of sin, and, through the intercession of Your holy Martyrs Cleti et Marcellíni and Cleti et Marcellíni, make us sharers of heavenly salvation.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedéntibus sanctis Martýribus tuis Cleti et Marcellíni, coeléstis remédii fáciat esse consórtes.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "May this Communion, O Lord, cleanse us of sin, and, through the intercession of Your holy Martyrs Cleti et Marcellíni, make us sharers of heavenly salvation.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "04-27": {
@@ -5035,7 +5035,7 @@
     "rank": 3,
     "oratio": {
       "lat": "Deus, qui ob invictum beati Joannis sacramentale silentium, nova Ecclesiam tuam martyrii corona decorasti: da nobis, ejus intercessione et exemplo, linguam caute custodire; ac omnia potius mala, quam animæ detrimentum, in hoc sæculo tolerare.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "O God, Who didst adorn Thy Church with a new crown of martyrdom for the unconquered sacramental silence of blessed John: grant us, by his intercession and example, to keep careful guard over our tongue, and to endure every evil in this world rather than harm to the soul.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -5164,7 +5164,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)\nMeménto, Dómine, David: et omnis mansuetúdinis ejus.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nStátuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever.\nRemember, O Lord, David and all his meekness.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nEcce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio. Non est invéntus símilis illi, qui conservávit legem Excélsi. Ideo jurejurándo fecit illum Dóminus créscere in plebem suam. Benedictiónem ómnium géntium dedit illi, et testaméntum suum confirmávit super caput ejus. Agnóvit eum in benedictiónibus suis: conservávit illi misericórdiam suam: et invénit grátiam coram óculis Dómini. Magnificávit eum in conspéctu regum: et dedit illi corónam glóriæ. Státuit illi testaméntum ætérnum, et dedit illi sacerdótium magnum: et beatificávit illum in glória. Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -5279,8 +5279,8 @@
       "ref": "Ps 44:3"
     },
     "secreta": {
-      "lat": "Inténde, quǽsumus, Dómine, múnera altáribus tuis pro sanctárum Vírginum et Mártyrum tuárum Pudentiánæ et Pudentiánæ festivitáte propósita: ut, sicut per hæc beáta mystéria illis glóriam contulísti; ita nobis indulgéntiam largiáris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "O Lord, we beseech thee, look down upon these gifts, laid upon thine altars on the festival of thy holy Virgins and Martyrs Pudentiánæ and Pudentiánæ: that as by these blessed mysteries thou hast bestowed glory upon them; so thou wouldst vouchsafe to us thy pardon.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Inténde, quǽsumus, Dómine, múnera altáribus tuis pro sanctárum Vírginum et Mártyrum tuárum Pudentiánæ festivitáte propósita: ut, sicut per hæc beáta mystéria illis glóriam contulísti; ita nobis indulgéntiam largiáris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O Lord, we beseech thee, look down upon these gifts, laid upon thine altars on the festival of thy holy Virgins and Martyrs Pudentiánæ: that as by these blessed mysteries thou hast bestowed glory upon them; so thou wouldst vouchsafe to us thy pardon.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "communio": {
       "lat": "Feci judícium et justítiam, Dómine, non calumniéntur mihi supérbi: ad ómnia mandáta tua dirigébar, omnem viam iniquitátis ódio hábui. (Allelúja.)",
@@ -5288,8 +5288,8 @@
       "ref": "Ps 118:121; 118:122; 118:128"
     },
     "postcommunio": {
-      "lat": "Præsta nobis, quǽsumus, Dómine, intercedéntibus sanctis Virgínibus et Martýribus tuis Pudentiánæ et Pudentiánæ: ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Grant to us we beseech thee, O Lord, at the intercession of thy holy Virgins and Martyrs Pudentiánæ and Pudentiánæ: that what we touch with our lips we may receive with pure minds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Præsta nobis, quǽsumus, Dómine, intercedéntibus sanctis Virgínibus et Martýribus tuis Pudentiánæ: ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant to us we beseech thee, O Lord, at the intercession of thy holy Virgins and Martyrs Pudentiánæ: that what we touch with our lips we may receive with pure minds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "05-20": {
@@ -5395,7 +5395,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -5414,7 +5414,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -5422,7 +5422,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -5443,7 +5443,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -5462,7 +5462,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -5470,7 +5470,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -6004,8 +6004,8 @@
       "ref": "Ps 44:3"
     },
     "secreta": {
-      "lat": "Inténde, quǽsumus, Dómine, múnera altáribus tuis pro sanctárum Vírginum et Mártyrum tuárum Petroníllæ et Petroníllæ festivitáte propósita: ut, sicut per hæc beáta mystéria illis glóriam contulísti; ita nobis indulgéntiam largiáris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "O Lord, we beseech thee, look down upon these gifts, laid upon thine altars on the festival of thy holy Virgins and Martyrs Petroníllæ and Petroníllæ: that as by these blessed mysteries thou hast bestowed glory upon them; so thou wouldst vouchsafe to us thy pardon.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Inténde, quǽsumus, Dómine, múnera altáribus tuis pro sanctárum Vírginum et Mártyrum tuárum Petroníllæ festivitáte propósita: ut, sicut per hæc beáta mystéria illis glóriam contulísti; ita nobis indulgéntiam largiáris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O Lord, we beseech thee, look down upon these gifts, laid upon thine altars on the festival of thy holy Virgins and Martyrs Petroníllæ: that as by these blessed mysteries thou hast bestowed glory upon them; so thou wouldst vouchsafe to us thy pardon.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "communio": {
       "lat": "Feci judícium et justítiam, Dómine, non calumniéntur mihi supérbi: ad ómnia mandáta tua dirigébar, omnem viam iniquitátis ódio hábui. (Allelúja.)",
@@ -6013,8 +6013,8 @@
       "ref": "Ps 118:121; 118:122; 118:128"
     },
     "postcommunio": {
-      "lat": "Præsta nobis, quǽsumus, Dómine, intercedéntibus sanctis Virgínibus et Martýribus tuis Petroníllæ et Petroníllæ: ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Grant to us we beseech thee, O Lord, at the intercession of thy holy Virgins and Martyrs Petroníllæ and Petroníllæ: that what we touch with our lips we may receive with pure minds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Præsta nobis, quǽsumus, Dómine, intercedéntibus sanctis Virgínibus et Martýribus tuis Petroníllæ: ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant to us we beseech thee, O Lord, at the intercession of thy holy Virgins and Martyrs Petroníllæ: that what we touch with our lips we may receive with pure minds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "06-01": {
@@ -6824,8 +6824,8 @@
       "ref": "Ps 78:2; 78:11"
     },
     "oratio": {
-      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Gervásii et Protásii et Gervásii et Protásii sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
-      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Gervase and Protase and Gervase and Protase, grant that we may be inspired by the example of those in whose merits we rejoice.",
+      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Gervásii et Protásii sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
+      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Gervase and Protase, grant that we may be inspired by the example of those in whose merits we rejoice.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -7428,7 +7428,7 @@
       "eng": "℣. I know Whom I have believed, and I am certain that He is able to guard the trust committed to me, against that day; being a just Judge.\nO Lord, You have probed me and You know me; You know when I sit and when I stand.\n&Gloria\n℣. I know Whom I have believed, and I am certain that He is able to guard the trust committed to me, against that day; being a just Judge."
     },
     "oratio": {
-      "lat": "Deus, qui multitúdinem géntium beáti Pauli Apóstoli prædicatióne docuísti: da nobis, quǽsumus; ut, cujus natalícia cólimus, ejus apud te patrocínia sentiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen..\nOrémus.\n@Sancti/02-22:Oratio Petri",
+      "lat": "Deus, qui multitúdinem géntium beáti Pauli Apóstoli prædicatióne docuísti: da nobis, quǽsumus; ut, cujus natalícia cólimus, ejus apud te patrocínia sentiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen..\nOrémus.\nDeus, qui beáto Petro Apóstolo tuo, collátis clávibus regni cœléstis, ligándi atque solvéndi pontifícium tradidísti: concéde; ut, intercessiónis ejus auxílio, a peccatórum nostrórum néxibus liberémur:\n$Qui vivis",
       "eng": "O God, who together with the keys of the kingdom of heaven didst bestow on thy blessed Apostle Peter the pontifical power of binding and loosing, grant that by the aid of this intercession, we may be released from the bonds of our sins.\n$Qui vivis"
     },
     "lectio": {
@@ -7458,7 +7458,7 @@
       "eng": "Amen I say to you that you, who have left all things and followed Me, shall receive a hundredfold, and shall possess life everlasting. (Alleluia.)"
     },
     "postcommunio": {
-      "lat": "Percéptis, Dómine, sacraméntis: beáto Paulo Apóstolo tuo interveniénte, deprecámur; ut, quæ pro illíus celebráta sunt glória, nobis profíciant ad medélam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.\nOrémus.\n@Sancti/02-22:Postcommunio Petri",
+      "lat": "Percéptis, Dómine, sacraméntis: beáto Paulo Apóstolo tuo interveniénte, deprecámur; ut, quæ pro illíus celebráta sunt glória, nobis profíciant ad medélam.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.\nOrémus.\nLætíficet nos, Dómine, munus oblátum: ut, sicut in Apóstolo tuo Petro te mirábilem prædicámus; sic per illum tuæ sumámus indulgéntiæ largitátem.\n$Per Dominum",
       "eng": "O Lord, may the gift we offer bring us joy, that as we praise Your wondrous work in Your Apostle Peter, so through him may we share Your generous forgiveness.\n$Per Dominum"
     }
   },
@@ -7516,7 +7516,7 @@
     "rank": 2,
     "oratio": {
       "lat": "Deus, qui hodiérnam diem Apostolórum tuórum Petri et Pauli martýrio consecrásti: da Ecclésiæ tuæ, eórum in ómnibus sequi præcéptum; per quos religiónis sumpsit exórdium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "O God, Who made this day holy by the martyrdom of Your Apostles Peter and Paul, grant Your Church to follow in all things the teaching of those from whom she first received the faith.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.",
       "type": "collect",
       "variationKey": "oratio"
     }
@@ -7587,7 +7587,7 @@
     },
     "oratio": {
       "lat": "Deus, qui hodiérnam diem Apostolórum tuórum Petri et Pauli martýrio consecrásti: da Ecclésiæ tuæ, eórum in ómnibus sequi præcéptum; per quos religiónis sumpsit exórdium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "O God, Who made this day holy by the martyrdom of Your Apostles Peter and Paul, grant Your Church to follow in all things the teaching of those from whom she first received the faith.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -7768,7 +7768,7 @@
     },
     "oratio": {
       "lat": "Deus, qui hodiérnam diem Apostolórum tuórum Petri et Pauli martýrio consecrásti: da Ecclésiæ tuæ, eórum in ómnibus sequi præcéptum; per quos religiónis sumpsit exórdium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "O God, Who made this day holy by the martyrdom of Your Apostles Peter and Paul, grant Your Church to follow in all things the teaching of those from whom she first received the faith.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -7951,7 +7951,7 @@
     },
     "oratio": {
       "lat": "Deus, qui hodiérnam diem Apostolórum tuórum Petri et Pauli martýrio consecrásti: da Ecclésiæ tuæ, eórum in ómnibus sequi præcéptum; per quos religiónis sumpsit exórdium.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "O God, Who made this day holy by the martyrdom of Your Apostles Peter and Paul, grant Your Church to follow in all things the teaching of those from whom she first received the faith.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -8727,8 +8727,8 @@
       "eng": "Whoever does the will of My Father in heaven, he is My brother and sister and mother, says the Lord."
     },
     "oratio": {
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Symphorósæ et filiórum ejus et Symphorósæ et filiórum ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "O God, who dost permit us to keep the birthday of thy holy Martyrs Symphorosa and her sons and Symphorosa and her sons, grant that we may enjoy their fellowship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Symphorósæ et filiórum ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "O God, who dost permit us to keep the birthday of thy holy Martyrs Symphorosa and her sons, grant that we may enjoy their fellowship in everlasting happiness.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -9134,7 +9134,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -9153,7 +9153,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -9161,7 +9161,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -9767,7 +9767,7 @@
     "rank": 2,
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)\nMeménto, Dómine, David: et omnis mansuetúdinis ejus.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nStátuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever.\nRemember, O Lord, David and all his meekness.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nEcce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio. Non est invéntus símilis illi, qui conservávit legem Excélsi. Ideo jurejurándo fecit illum Dóminus créscere in plebem suam. Benedictiónem ómnium géntium dedit illi, et testaméntum suum confirmávit super caput ejus. Agnóvit eum in benedictiónibus suis: conservávit illi misericórdiam suam: et invénit grátiam coram óculis Dómini. Magnificávit eum in conspéctu regum: et dedit illi corónam glóriæ. Státuit illi testaméntum ætérnum, et dedit illi sacerdótium magnum: et beatificávit illum in glória. Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -10046,8 +10046,8 @@
     "officium": "Ss. Xysti II Papæ, Felicissimi et Agapiti Martyrum",
     "rank": 1,
     "oratio": {
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Xysti, Felicíssimi et Agapíti et Xysti, Felicíssimi et Agapíti natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "O God, who dost permit us to keep the birthday of thy holy Martyrs Xystus, Felicissimus and Agapitus and Xystus, Felicissimus and Agapitus, grant that we may enjoy their fellowship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Xysti, Felicíssimi et Agapíti natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "O God, who dost permit us to keep the birthday of thy holy Martyrs Xystus, Felicissimus and Agapitus, grant that we may enjoy their fellowship in everlasting happiness.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -10086,8 +10086,8 @@
       "ref": "Luc 12:4"
     },
     "postcommunio": {
-      "lat": "Præsta nobis, quǽsumus, Dómine: intercedéntibus sanctis Martýribus tuis Xysto, Felicíssimo et Agapíto et Xysto, Felicíssimo et Agapíto; ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Grant, we beseech You, O almighty and merciful God, that through the intercession of Your holy Martyrs, Xysto, Felicíssimo et Agapíto et Xysto, Felicíssimo et Agapíto what we take into our mouths we may eat with pure heart.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Præsta nobis, quǽsumus, Dómine: intercedéntibus sanctis Martýribus tuis Xysto, Felicíssimo et Agapíto; ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant, we beseech You, O almighty and merciful God, that through the intercession of Your holy Martyrs, Xysto, Felicíssimo et Agapíto what we take into our mouths we may eat with pure heart.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "08-07": {
@@ -10257,8 +10257,8 @@
       "eng": "With our strength renewed from having shared in Your sacred gift, we beseech You, O Lord our God, that by the intercession of blessed Cyriacus, Largus, and Smaragdus, Your Martyrs, we may feel the benefit of the worship we are offering.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "oratio": {
-      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Cyríaci, Largi et Smarágdi et Cyríaci, Largi et Smarágdi sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
-      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Cyriacus, Largus, and Smaragdus and Cyriacus, Largus, and Smaragdus, grant that we may be inspired by the example of those in whose merits we rejoice.",
+      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Cyríaci, Largi et Smarágdi sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
+      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Cyriacus, Largus, and Smaragdus, grant that we may be inspired by the example of those in whose merits we rejoice.",
       "type": "collect",
       "variationKey": "oratio"
     }
@@ -10728,7 +10728,7 @@
     "rank": 1,
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -10747,7 +10747,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -10755,7 +10755,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -12092,7 +12092,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -12111,7 +12111,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -12119,7 +12119,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -12449,7 +12449,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -12468,7 +12468,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -12476,7 +12476,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -12796,8 +12796,8 @@
     "officium": "Ss. Cornelii Papæ et Cypriani Episcopi, Martyrum",
     "rank": 2,
     "oratio": {
-      "lat": "Beatórum Mártyrum paritérque Pontíficum Cornélii et Cypriáni et Cornélii et Cypriáni nos, quǽsumus, Dómine, festa tueántur: et eórum comméndet orátio veneránda.",
-      "eng": "May the feast of the blessed Martyrs and Bishops Cornelius and Cyprian and Cornelius and Cyprian, protect us, O Lord, we beseech You, and may their holy prayer recommend us unto You.",
+      "lat": "Beatórum Mártyrum paritérque Pontíficum Cornélii et Cypriáni nos, quǽsumus, Dómine, festa tueántur: et eórum comméndet orátio veneránda.",
+      "eng": "May the feast of the blessed Martyrs and Bishops Cornelius and Cyprian, protect us, O Lord, we beseech You, and may their holy prayer recommend us unto You.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -12973,8 +12973,8 @@
       "eng": "Continuation + of the Holy Gospel according to Matthew\nAt that time, as Jesus was sitting on the Mount of Olives, the disciples came to Him privately, saying, Tell us, when are these things to happen, and what will be the sign of Your coming and of the end of the world? And in answer Jesus said to them, Take care that no one leads you astray. For many will come in My name, saying, ‘I am the Christ,’ and they will lead many astray. For you shall hear of wars and rumors of wars. Take care that you do not be alarmed, for these things must come to pass, but the end is not yet. For nation will rise against nation, and kingdom against kingdom; and there will be pestilences and famines and earthquakes in various places. But all these things are the beginnings of sorrows. Then they will deliver you up to tribulation, and will put you to death; and you will be hated by all nations for My name’s sake. And then many will fall away, and will betray one another, and will hate one another. And many false prophets will arise, and will lead many astray. And because iniquity will abound, the charity of the many will grow cold. But whoever perseveres to the end, he shall be saved."
     },
     "oratio": {
-      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Januárii et Sociórum ejus et Januárii et Sociórum ejus sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
-      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Januarius and companions and Januarius and companions, grant that we may be inspired by the example of those in whose merits we rejoice.",
+      "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum Januárii et Sociórum ejus sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
+      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Januarius and companions, grant that we may be inspired by the example of those in whose merits we rejoice.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -13013,8 +13013,8 @@
       "gloria": true
     },
     "oratio": {
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Eustáchii et Sociórum ejus et Eustáchii et Sociórum ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
-      "eng": "O God, who dost permit us to keep the birthday of thy holy Martyrs Eustache and his companions and Eustache and his companions, grant that we may enjoy their fellowship in everlasting happiness.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Eustáchii et Sociórum ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+      "eng": "O God, who dost permit us to keep the birthday of thy holy Martyrs Eustache and his companions, grant that we may enjoy their fellowship in everlasting happiness.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -13053,8 +13053,8 @@
       "ref": "Luc 12:4"
     },
     "postcommunio": {
-      "lat": "Præsta nobis, quǽsumus, Dómine: intercedéntibus sanctis Martýribus tuis Eustáchio et Sóciis ejus et Eustáchio et Sóciis ejus; ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Grant, we beseech You, O almighty and merciful God, that through the intercession of Your holy Martyrs, Eustáchio et Sóciis ejus et Eustáchio et Sóciis ejus what we take into our mouths we may eat with pure heart.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Præsta nobis, quǽsumus, Dómine: intercedéntibus sanctis Martýribus tuis Eustáchio et Sóciis ejus; ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant, we beseech You, O almighty and merciful God, that through the intercession of Your holy Martyrs, Eustáchio et Sóciis ejus what we take into our mouths we may eat with pure heart.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "09-20n": {
@@ -13356,7 +13356,7 @@
     "rank": 3,
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -13375,7 +13375,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -13383,7 +13383,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -13707,7 +13707,7 @@
     },
     "introitus": {
       "lat": "Státuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)\nMeménto, Dómine, David: et omnis mansuetúdinis ejus.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nStátuit ei Dóminus testaméntum pacis, et príncipem fecit eum: ut sit illi sacerdótii dígnitas in ætérnum. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever.\nRemember, O Lord, David and all his meekness.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe Lord made a covenant of friendship with him, and made him a prince; that he should possess the dignity of priesthood forever."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nEcce sacérdos magnus, qui in diébus suis plácuit Deo, et invéntus est justus: et in témpore iracúndiæ factus est reconciliátio. Non est invéntus símilis illi, qui conservávit legem Excélsi. Ideo jurejurándo fecit illum Dóminus créscere in plebem suam. Benedictiónem ómnium géntium dedit illi, et testaméntum suum confirmávit super caput ejus. Agnóvit eum in benedictiónibus suis: conservávit illi misericórdiam suam: et invénit grátiam coram óculis Dómini. Magnificávit eum in conspéctu regum: et dedit illi corónam glóriæ. Státuit illi testaméntum ætérnum, et dedit illi sacerdótium magnum: et beatificávit illum in glória. Fungi sacerdótio, et habére laudem in nómine ipsíus, et offérre illi incénsum dignum in odórem suavitátis.",
@@ -13887,8 +13887,8 @@
     "officium": "Ss. Placidi et Sociorum Martyrum",
     "rank": 1,
     "oratio": {
-      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Plácidi et Sociórum ejus et Plácidi et Sociórum ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Placidus and his companions and Placidus and his companions, grant that we may be inspired by the example of those in whose merits we rejoice.",
+      "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum Plácidi et Sociórum ejus natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O God, Who gladden us by the annual festival of Your Martyrs Placidus and his companions, grant that we may be inspired by the example of those in whose merits we rejoice.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -14747,8 +14747,8 @@
     "officium": "Ss. Ursulæ et Sociarum Virg. et Mart.",
     "rank": 1,
     "oratio": {
-      "lat": "Da nobis, quǽsumus, Dómine Deus noster, sanctárum Vírginum et Mártyrum tuárum Ursulæ et Sociárum et Ursulæ et Sociárum palmas incessábili devotióne venerári: ut quas digna mente non póssumus celebráre, humílibus saltem frequentémus obséquiis.",
-      "eng": "Grant unto us, we beseech thee, O Lord, our God, that we may ever call to mind, with all worship and thanksgiving, the victory of thy holy Virgins and Martyrs Ursula and her companions and Ursula and her companions, and although we know that our mind cannot comprehend thee who art this day their exceeding great reward, give us always the grace humbly to worship thee.\nGrant, we beseech thee, O Lord our God, that we may never cease devoutly to venerate the triumphs of thy holy Virgins and Martyrs Ursula and her companions and Ursula and her companions: that, though we cannot worthily shew forth their praises, yet we may continually honour them with lowly service.",
+      "lat": "Da nobis, quǽsumus, Dómine Deus noster, sanctárum Vírginum et Mártyrum tuárum Ursulæ et Sociárum palmas incessábili devotióne venerári: ut quas digna mente non póssumus celebráre, humílibus saltem frequentémus obséquiis.",
+      "eng": "Grant unto us, we beseech thee, O Lord, our God, that we may ever call to mind, with all worship and thanksgiving, the victory of thy holy Virgins and Martyrs Ursula and her companions, and although we know that our mind cannot comprehend thee who art this day their exceeding great reward, give us always the grace humbly to worship thee.\nGrant, we beseech thee, O Lord our God, that we may never cease devoutly to venerate the triumphs of thy holy Virgins and Martyrs Ursula and her companions: that, though we cannot worthily shew forth their praises, yet we may continually honour them with lowly service.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -14769,7 +14769,7 @@
     },
     "evangelium": {
       "lat": "Sequéntia ++ sancti Evangélii secúndum Matthǽum\nIn illo témpore: Dixit Jesus discípulis suis parábolam hanc: Símile erit regnum coelórum decem virgínibus: quæ, accipiéntes lámpades suas, exiérunt óbviam sponso et sponsæ. Quinque autem ex eis erant fátuæ, et quinque prudéntes: sed quinque fátuæ, accéptis lampádibus, non sumpsérunt óleum secum: prudéntes vero accepérunt óleum in vasis suis cum lampádibus. Moram autem faciénte sponso, dormitavérunt omnes et dormiérunt. Média autem nocte clamor factus est: Ecce, sponsus venit, exíte óbviam ei. Tunc surrexérunt omnes vírgines íllæ, et ornavérunt lámpades suas. Fátuæ autem sapiéntibus dixérunt: Date nobis de óleo vestro: quia lámpades nostræ exstinguúntur. Respondérunt prudéntes, dicéntes: Ne forte non suffíciat nobis et vobis, ite pótius ad vendéntes, et émite vobis. Dum autem irent émere, venit sponsus: et quæ parátæ erant, intravérunt cum eo ad núptias, et clausa est jánua. Novíssime vero véniunt et réliquæ vírgines, dicéntes: Dómine, Dómine, áperi nobis. At ille respóndens, ait: Amen, dico vobis, néscio vos. Vigiláte ítaque, quia nescítis diem neque horam.",
-      "eng": ""
+      "eng": "Continuation ++ of the Holy Gospel according to Matthew\nAt that time, Jesus said to His disciples, If anyone wishes to come after Me, let him deny himself, and take up his cross, and follow Me. For he who would save his life will lose it; but he who loses his life for My sake will find it. For what does it profit a man, if he gain the whole world, but suffer the loss of his own soul? For the Son of Man is to come with His angels in the glory of His Father, and then He will render to everyone according to His conduct."
     },
     "offertorium": {
       "lat": "Fíliæ regum in honóre tuo, ástitit regína a dextris tuis in vestítu deauráto, circúmdata varietáte. (Allelúja.)",
@@ -16033,16 +16033,16 @@
       "eng": "Grace is poured out upon your lips; thus God has blessed you forever, and for ages of ages. (Allelúja.)"
     },
     "secreta": {
-      "lat": "Inténde, quǽsumus, Dómine, múnera altáribus tuis pro sanctárum Vírginum et Mártyrum tuárum Gertrudis et Gertrudis festivitáte propósita: ut, sicut per hæc beáta mystéria illis glóriam contulísti; ita nobis indulgéntiam largiáris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "O Lord, we beseech thee, look down upon these gifts, laid upon thine altars on the festival of thy holy Virgins and Martyrs Gertrude and Gertrude: that as by these blessed mysteries thou hast bestowed glory upon them; so thou wouldst vouchsafe to us thy pardon.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Inténde, quǽsumus, Dómine, múnera altáribus tuis pro sanctárum Vírginum et Mártyrum tuárum Gertrudis festivitáte propósita: ut, sicut per hæc beáta mystéria illis glóriam contulísti; ita nobis indulgéntiam largiáris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "O Lord, we beseech thee, look down upon these gifts, laid upon thine altars on the festival of thy holy Virgins and Martyrs Gertrude: that as by these blessed mysteries thou hast bestowed glory upon them; so thou wouldst vouchsafe to us thy pardon.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "communio": {
       "lat": "Feci judícium et justítiam, Dómine, non calumniéntur mihi supérbi: ad ómnia mandáta tua dirigébar, omnem viam iniquitátis ódio hábui. (Allelúja.)",
       "eng": "I have fulfilled just ordinances, O Lord; let not the proud oppress me. For in all Your precepts I go forward; every false way I hate. (Allelúja.)"
     },
     "postcommunio": {
-      "lat": "Præsta nobis, quǽsumus, Dómine, intercedéntibus sanctis Virgínibus et Martýribus tuis Gertrudis et Gertrudis: ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "Grant to us we beseech thee, O Lord, at the intercession of thy holy Virgins and Martyrs Gertrude and Gertrude: that what we touch with our lips we may receive with pure minds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      "lat": "Præsta nobis, quǽsumus, Dómine, intercedéntibus sanctis Virgínibus et Martýribus tuis Gertrudis: ut, quod ore contíngimus, pura mente capiámus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Grant to us we beseech thee, O Lord, at the intercession of thy holy Virgins and Martyrs Gertrude: that what we touch with our lips we may receive with pure minds.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "11-17": {
@@ -16689,7 +16689,7 @@
     },
     "oratio": {
       "lat": "Quǽsumus omnípotens Deus, ut beátus Andreas Apóstolus, cujus prævenímus festivitátem, tuum pro nobis implóret auxílium: ut a nostris reátibus absolúti a cunctis étiam perículis eruámur.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
-      "eng": "",
+      "eng": "We beseech Thee, almighty God, that the blessed Apostle Andrew, whose feast we anticipate, may implore Thy help for us: that, absolved from our sins, we may also be delivered from all dangers.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.",
       "type": "collect",
       "variationKey": "oratio"
     },
@@ -17236,7 +17236,7 @@
     },
     "introitus": {
       "lat": "Os justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)\nNoli æmulári in malignántibus: neque zeláveris faciéntes iniquitátem.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nOs justi meditábitur sapiéntiam, et lingua ejus loquétur judícium: lex Dei ejus in corde ipsíus. (Allelúja, allelúja.)",
-      "eng": ""
+      "eng": "The mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart.\nBe not vexed over evildoers, nor jealous of those who do wrong.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe mouth of the just man tells of wisdom, and his tongue utters what is right. The law of his God is in his heart."
     },
     "lectio": {
       "lat": "Léctio libri Sapiéntiæ\nBeátus vir, qui invéntus est sine mácula, et qui post aurum non ábiit, nec sperávit in pecúnia et thesáuris. Quis est hic, et laudábimus eum? fecit enim mirabília in vita sua. Qui probátus est in illo, et perféctus est, erit illi glória ætérna: qui potuit tránsgredi, et non est transgréssus: fácere mala, et non fecit: ídeo stabilíta sunt bona illíus in Dómino, et eleemósynas illíus enarrábit omnis ecclésia sanctórum.",
@@ -17255,7 +17255,7 @@
     },
     "offertorium": {
       "lat": "Véritas mea et misericórdia mea cum ipso: et in nómine meo exaltábitur cornu ejus. (Allelúja.)",
-      "eng": ""
+      "eng": "My faithfulness and My kindness shall be with him, and through My name shall his horn be exalted. (Alleluia.)"
     },
     "secreta": {
       "lat": "Laudis tibi, Dómine, hóstias immolámus in tuórum commemoratióne Sanctórum: quibus nos et præséntibus éxui malis confídimus et futúris.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -17263,7 +17263,7 @@
     },
     "communio": {
       "lat": "Beátus servus, quem, cum vénerit dóminus, invénerit vigilántem: amen, dico vobis, super ómnia bona sua constítuet eum. (Allelúja.)",
-      "eng": ""
+      "eng": "Blessed is that servant whom his master, when he comes, shall find watching. Amen I say to you, he will set him over all his goods. (Alleluia.)"
     },
     "postcommunio": {
       "lat": "Refécti cibo potúque cœlésti, Deus noster, te súpplices exorámus: ut, in cujus hæc commemoratióne percépimus, ejus muniámur et précibus.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -18241,8 +18241,8 @@
       "preface": "Nat"
     },
     "oratio": {
-      "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et, per beátum Silvéstri Summum Pontíficem, perpétua protectióne custódi; quem totíus Ecclésiæ præstitísti esse pastórem.\nDeus, qui Ecclésiam tuam, in apostólicæ petræ soliditáte fundátam, ab infernárum éruis terróre portárum: præsta, quǽsumus; ut, intercedénte beáto Silvéstri Summo Pontífice, in tua veritáte persístens, contínua securitáte muniátur.\nGregem tuum, Pastor ætérne, placátus inténde: et per beátos Silvéstri et Silvéstri Summos Pontífices perpétua protectióne custódi; quos totíus Ecclésiæ præstitísti esse pastóres.",
-      "eng": "Look forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Sylvester thy Sovereign Pontiff, whom thou didst constitute Shepherd of the whole Church.\nO God, who dost rescue thy Church, built on the solid Apostolic rock, from terror of the gates of hell, grant we pray, that through the intercession of blessed Sylvester Supreme Pontiff, it may continue in thy truth and may be fortified by continued security.\nLook forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Sylvester and Sylvester thy Sovereign Pontiffs, whom thou didst constitute Shepherds of the whole Church.",
+      "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et, per beátum Silvéstri Summum Pontíficem, perpétua protectióne custódi; quem totíus Ecclésiæ præstitísti esse pastórem.\nDeus, qui Ecclésiam tuam, in apostólicæ petræ soliditáte fundátam, ab infernárum éruis terróre portárum: præsta, quǽsumus; ut, intercedénte beáto Silvéstri Summo Pontífice, in tua veritáte persístens, contínua securitáte muniátur.\nGregem tuum, Pastor ætérne, placátus inténde: et per beátos Silvéstri Summos Pontífices perpétua protectióne custódi; quos totíus Ecclésiæ præstitísti esse pastóres.",
+      "eng": "Look forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Sylvester thy Sovereign Pontiff, whom thou didst constitute Shepherd of the whole Church.\nO God, who dost rescue thy Church, built on the solid Apostolic rock, from terror of the gates of hell, grant we pray, that through the intercession of blessed Sylvester Supreme Pontiff, it may continue in thy truth and may be fortified by continued security.\nLook forgivingly on thy flock, Eternal Shepherd, and keep it in thy constant protection, by the intercession of blessed Sylvester thy Sovereign Pontiffs, whom thou didst constitute Shepherds of the whole Church.",
       "type": "collect",
       "variationKey": "oratio"
     },
