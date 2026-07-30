@@ -25180,5 +25180,265 @@
       "lat": "Et, respónso accépto in somnis, ne redírent ad Heródem, per áliam viam revérsi sunt in regiónem suam. Hic mihi vide fidem ipsórum, quómodo non offendántur, sed sint quiéti et obtemperántes, neque turbéntur, neque tália mútuo loquántur: Sane, si magnus hic puer est, et si quam habet poténtiam, quid opus fuga et occúlto discéssu? cur vero nos, qui palam et cum fidúcia accéssimus ad pópulum tantum, et coram furénte rege stétimus, quasi fugitívos ex civitáte dimíttit Angelus? At nihil tale vel dixérunt vel cogitárunt. Illud enim máxime ad fidem pértinet, ut nulla mandatórum exquirátur rátio, sed jussis tantum obediátur.\n\n\n[Capitulum Laudes] (rubrica 196)\n@Sancti/01-06",
       "eng": "“And having received an answer in sleep that they should not return to Herod, they went back another way into their country.” (Matthew 2:12) See from this also their faith, how they were not offended, but are docile, and considerate; neither are they troubled, nor reason with themselves, saying, And yet, if this Child be great, and has any might, what need of flight, and of a clandestine retreat? And wherefore can it be, that when we have come openly and with boldness, and have stood against so great a people, and against a king's madness, the angel sends us out of the city as runaways and fugitives? But none of these things did they either say or think. For this most especially belongs to faith, not to seek an account of what is enjoined, but merely to obey the commandments laid upon us."
     }
+  },
+  "01-00": {
+    "ant_vespera": {
+      "type": "antiphon",
+      "variationKey": "ant_vespera",
+      "lat": "Omnis * qui invocáverit nomen Dómini, salvus erit.\nSanctum et terríbile * nomen ejus, inítium sapiéntiæ timor Dómini.\nEgo autem * in Dómino gaudébo, et exsultábo in Deo Jesu meo.\nA solis ortu * usque ad occásum laudábile nomen Dómini.\nSacrificábo * hóstiam laudis, et nomen Dómini invocábo.",
+      "eng": "Whosoever shall call * on the name of the Lord shall be saved.\nHoly and terrible * is His Name; the fear of the Lord is the beginning of wisdom.\nYet will I rejoice * in the Lord I will joy in the God of my salvation.\nFrom the rising of the sun * unto the going down of the same the Lord's Name is to be praised.\nI will offer * the sacrifice of thanksgiving, and will call upon the Name of the Lord."
+    },
+    "hymnus_vespera": {
+      "type": "hymn",
+      "variationKey": "hymnus_vespera",
+      "lat": "Jesu, dulcis memória,\nDans vera cordis gáudia:\nSed super mel, et ómnia,\nEjus dulcis præséntia.\nNil cánitur suávius,\nNil audítur jucúndius,\nNil cogitátur dúlcius,\nQuam Jesus Dei Fílius.\nJesu, spes pœniténtibus,\nQuam pius es peténtibus!\nQuam bonus te quæréntibus!\nSed quid inveniéntibus?\nNec lingua valet dícere,\nNec líttera exprímere:\nExpértus potest crédere,\nQuid sit Jesum dilígere.\nSis, Jesu, nostrum gáudium,\nQui es futúrus prǽmium:\nSit nostra in te glória,\nPer cuncta semper sǽcula.\nAmen.",
+      "eng": "Jesu, the very thought of thee\nWith sweetness fills my breast;\nBut sweeter far thy face to see,\nAnd in thy presence rest.\nNor voice can sing, nor heart can frame,\nNor can the memory find,\nA sweeter sound than thy blest Name,\nO Saviour of mankind!\nO Hope of every contrite heart,\nO Joy of all the meek,\nTo those who fall, how kind Thou art!\nHow good to those who seek!\nBut what to those who find? Ah! this\nNor tongue nor pen can show:\nThe love of Jesus, what it is\nNone but his loved ones know.\nJesu, our only joy be Thou,\nAs Thou our prize wilt be;\nJesu, be Thou our glory now,\nAnd through eternity.\nAmen."
+    },
+    "versum_1": {
+      "type": "vr",
+      "variationKey": "versum_1",
+      "lat": "V. Sit nomen Dómini benedíctum, allelúja.\nR. Ex hoc nunc et usque in sǽculum, allelúja.",
+      "eng": "V. Blessed be the Name of the Lord, alleluia.\nR. From this time forth, and for evermore, alleluia."
+    },
+    "ant_1": {
+      "type": "antiphon",
+      "variationKey": "ant_1",
+      "lat": "Fecit * mihi magna qui potens est, et sanctum Nomen ejus, allelúja.",
+      "eng": "He That is mighty * hath done to me great things, and holy is His Name, alleluia."
+    },
+    "oratio": {
+      "type": "collect",
+      "variationKey": "oratio",
+      "lat": "Deus, qui unigénitum Fílium tuum constituísti humáni géneris Salvatórem, et Jesum vocári jussísti: concéde propítius; ut, cujus sanctum nomen venerámur in terris, ejus quoque aspéctu perfruámur in cælis. \n$Per eumdem",
+      "eng": "O God, Who hast appointed thine Only-begotten Son to be the Saviour of mankind, and hast commanded that His Name should be called Jesus, mercifully grant that we who here on earth do worship that most Holy Name may be made glad in heaven by His Presence.\n$Per eumdem"
+    },
+    "invit": {
+      "type": "antiphon",
+      "variationKey": "invit",
+      "lat": "Admirábile nomen Jesu, quod est super omne nomen, * Veníte, adorémus.",
+      "eng": "The Name which shall be called Wonderful, the Name of Jesus is the Name which is above every name. * O come, let us worship Him."
+    },
+    "hymnus_matutinum": {
+      "type": "hymn",
+      "variationKey": "hymnus_matutinum",
+      "lat": "Jesu, Rex admirábilis,\nEt triumphátor nóbilis,\nDulcédo ineffábilis,\nTotus desiderábilis.\nQuando cor nostrum vísitas,\nTunc lucet ei véritas,\nMundi viléscit vánitas,\nEt intus fervet cáritas.\nJesu, dulcédo córdium,\nFons vivus, lumen méntium,\nExcédens omne gáudium,\nEt omne desidérium.\nJesum omnes agnóscite,\nAmórem ejus póscite:\nJesum ardénter quǽrite,\nQuæréndo inardéscite.\nTe nostra, Jesu, vox sonet,\nNostri te mores éxprimant,\nTe corda nostra díligant,\nEt nunc, et in perpétuum.\nAmen.",
+      "eng": "O Jesu, King most wonderful\nThou conqueror renowned,\nThou sweetness most ineffable,\nIn whom all joys are found!\nWhen once Thou visitest the heart,\nThen truth begins to shine;\nThen earthly vanities depart;\nThen kindles love divine.\nO Jesu, light of all below,\nThou fount of life and fire,\nSurpassing all the joys we know,\nAnd all we can desire:\nMay every heart confess thy Name,\nAnd ever thee adore;\nAnd, seeking thee, itself inflame\nTo seek thee more and more.\nThee may our tongues forever bless;\nThee may we love alone;\nAnd ever in our lives express\nThe image of thine own.\nAmen."
+    },
+    "ant_matutinum": {
+      "type": "antiphon",
+      "variationKey": "ant_matutinum",
+      "lat": "Dómine, Dóminus noster, * quam admirábile est nomen tuum in univérsa terra!\nIn nómine Jesu * omne genu flectátur cæléstium, terréstrium, et infernórum.\nConfitémini * Dómino, et invocáte nomen ejus: mementóte, quóniam excélsum est nomen ejus.\nMémores erunt * nóminis tui, Dómine, in omni generatióne et generatiónem.\nMagnificáte * Dóminum mecum, et exaltémus nomen ejus in idípsum.\nOmnes gentes, * quascúmque fecísti, vénient, et adorábunt coram te, Dómine, et glorificábunt nomen tuum.\nCantáte Dómino * et benedícite nómini ejus: annuntiáte de die in diem salutáre ejus.\nSecúndum nomen tuum, * Deus, sic et laus tua in fines terræ: justítia plena est déxtera tua.\nCantáte Deo, * psalmum dícite nómini ejus: iter fácite ei, qui ascéndit super occásum, Dóminus nomen illi.",
+      "eng": "O Lord our Lord, * how admirable is thy name in the whole earth!\nAt the Name of Jesus, * let every knee bow, of things in heaven, and things in earth, and things under the earth.\nPraise the Lord, * and call upon His Name; remember that His Name is exalted.\nThey shall be mindful * of thy Name, O Lord, unto all generations.\nO magnify * the Lord with me, and let us exalt His Name together.\nAll nations * whom Thou hast made, shall come and worship before thee, O Lord, and shall glorify thy Name.\nSing unto the Lord, * and bless His Name show forth His salvation from day to day.\nAccording to thy Name, O God, * so is thy praise unto the ends of the earth; thy right hand is full of righteousness.\nSing unto God, * sing praises to His Name; spread a path before Him That rideth upon the heavens the Lord is His Name."
+    },
+    "nocturn_1_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_1_versum",
+      "lat": "V. Propter nomen tuum, Dómine, propitiáberis peccáto meo.\nR. Multum est enim.",
+      "eng": "V. For thy Name's sake, O Lord, pardon mine iniquity.\nR. For it is great."
+    },
+    "nocturn_2_versum": {
+      "type": "vr",
+      "variationKey": "nocturn_2_versum",
+      "lat": "V. Propter glóriam nóminis tui, Dómine, líbera nos.\nR. Et propítius esto peccátis nostris propter nomen tuum.",
+      "eng": "V. For the glory of thy Name, deliver us, O Lord.\nR. And forgive our sins, for thy Name's sake."
+    },
+    "lectio1": {
+      "type": "reading",
+      "variationKey": "lectio1",
+      "lat": "De Actibus Apostolórum\n1 Petrus autem et Joánnes ascendébant in templum ad horam oratiónis nonam.\n2 Et quidam vir, qui erat claudus ex útero matris suæ, bajulabátur; quem ponébant cotídie ad portam templi, quæ dícitur Speciósa, ut péteret eleemósynam ab introëúntibus in templum.\n3 Is, cum vidísset Petrum et Joánnem incipiéntes introíre in templum, rogábat ut eleemósynam accíperet.\n4 Intuens autem in eum Petrus cum Joánne, dixit: Réspice in nos.\n5 At ille intendébat in eos, sperans se áliquid acceptúrum ab eis.\n6 Petrus autem dixit: Argéntum et aurum non est mihi: quod autem hábeo, hoc tibi do: In nómine Jesu Christi Nazaréni surge, et ámbula.\n7 Et, apprehénsa manu ejus déxtera, allevávit eum, et prótinus consolidátæ sunt bases ejus, et plantæ.\n8 Et exsíliens stetit, et ambulábat; et intrávit cum illis in templum ámbulans, et exsíliens, et laudans Deum.",
+      "eng": "Lesson from the Acts of the Apostles\n1 Now Peter and John went up into the temple at the ninth hour of prayer.\n2 And a certain man who was lame from his mother's womb, was carried: whom they laid every day at the gate of the temple, which is called Beautiful, that he might ask alms of them that went into the temple.\n3 He, when he had seen Peter and John about to go into the temple, asked to receive an alms.\n4 But Peter with John fastening his eyes upon him, said: Look upon us.\n5 But he looked earnestly upon them, hoping that he should receive something of them.\n6 But Peter said: Silver and gold I have none; but what I have, I give thee: In the name of Jesus Christ of Nazareth, arise, and walk.\n7 And taking him by the right hand, he lifted him up, and forthwith his feet and soles received strength.\n8 And he leaping up, stood, and walked, and went in with them into the temple, walking, and leaping, and praising God."
+    },
+    "responsory1": {
+      "type": "responsory",
+      "variationKey": "responsory1",
+      "lat": "R. Ecce concípies, et paries fílium, et vocábis nomen ejus Jesum: \n* Ipse enim salvum fáciet pópulum suum a peccátis eórum.\nV. Vocátum est nomen ejus Jesus, quod vocátum est ab Angelo, priúsquam in útero conciperétur.\nR. Ipse enim salvum fáciet pópulum suum a peccátis eórum.",
+      "eng": "R. Behold, thou shalt conceive, and bring forth a Son, and shalt call His Name Jesus\n* For He shall save His people from their sins.\nV. His Name was called Jesus, which was so named of the Angel, before He was conceived in the womb.\nR. For He shall save His people from their sins."
+    },
+    "lectio2": {
+      "type": "reading",
+      "variationKey": "lectio2",
+      "lat": "9 Et vidit omnis pópulus eum ambulántem, et laudántem Deum.\n10 Cognoscébant autem illum, quod ipse erat, qui ad eleemósynam sedébat ad Speciósam portam templi; et impléti sunt stupóre et éxtasi in eo, quod contígerat illi.\n11 Cum tenéret autem Petrum et Joánnem, cucúrrit omnis pópulus ad eos ad pórticum, quæ appellátur Salomónis, stupéntes.\n12 Videns autem Petrus, respóndit ad pópulum: Viri Israëlítæ, quid mirámini in hoc, aut nos quid intuémini, quasi nostra virtúte aut potestáte fecérimus hunc ambuláre?\n13 Deus Abraham, et Deus Isaac, et Deus Jacob, Deus patrum nostrórum glorificávit Fílium suum Jesum, quem vos quidem tradidístis et negástis ante fáciem Piláti, judicánte illo dimítti.\n14 Vos autem sanctum et justum negástis, et petístis virum homicídam donári vobis:\n15 Auctórem vero vitæ interfecístis, quem Deus suscitávit a mórtuis, cujus nos testes sumus.\n16 Et in fide nóminis ejus, hunc, quem vos vidístis et nostis, confirmávit nomen ejus: et fides, quæ per eum est, dedit íntegram sanitátem istam in conspéctu ómnium vestrum.",
+      "eng": "9 And all the people saw him walking and praising God.\n10 And they knew him, that it was he who sat begging alms at the Beautiful gate of the temple: and they were filled with wonder and amazement at that which had happened to him.\n11 And as he held Peter and John, all the people ran to them to the porch which is called Solomon's, greatly wondering.\n12 But Peter seeing, made answer to the people: Ye men of Israel, why wonder you at this? or why look you upon us, as if by our strength or power we had made this man to walk?\n13 The God of Abraham, and the God of Isaac, and the God of Jacob, the God of our fathers, hath glorified his Son Jesus, whom you indeed delivered up and denied before the face of Pilate, when he judged he should be released.\n14 But you denied the Holy One and the Just, and desired a murderer to be granted unto you.\n15 But the author of life you killed, whom God hath raised from the dead, of which we are witnesses.\n16 And in the faith of his name, this man, whom you have seen and known, hath his name strengthened; and the faith which is by him, hath given this perfect soundness in the sight of you all."
+    },
+    "responsory2": {
+      "type": "responsory",
+      "variationKey": "responsory2",
+      "lat": "R. Benedíctum est nomen tuum, Deus patrum nostrórum, qui cum irátus fúeris, misericórdiæ recordáberis, \n* Et in témpore tribulatiónis peccáta dimíttis.\nV. Et benedíctum nomen majestátis tuæ in ætérnum, qui facis mirabília solus.\nR. Et in témpore tribulatiónis peccáta dimíttis.",
+      "eng": "R. Blessed is thy Name, O God of our fathers, for in wrath Thou wilt remember mercy.\n* And in the time of tribulation Thou forgivest the sins of them that call upon thee.\nV. And blessed be thy glorious Name for ever, O Thou Who only doest wondrous things!\nR. And in the time of tribulation Thou forgivest the sins of them that call upon thee."
+    },
+    "lectio3": {
+      "type": "reading",
+      "variationKey": "lectio3",
+      "lat": "5 Factum est autem in crástinum, ut congregaréntur príncipes eórum, et senióres, et scribæ, in Jerúsalem:\n6 et Annas princeps sacerdótum, et Cáiphas, et Joánnes, et Alexánder, et quotquot erant de génere sacerdotáli.\n7 Et statuéntes eos in médio, interrogábant: In qua virtúte, aut in quo nómine fecístis hoc vos?\n8 Tunc replétus Spíritu Sancto Petrus, dixit ad eos: Príncipes pópuli, et senióres, audíte:\n9 si nos hódie diiudicámur in benefácto hóminis infírmi, in quo iste salvus factus est,\n10 notum sit ómnibus vobis, et omni plebi Israël, quia in nómine Dómini nostri Jesu Christi Nazaréni, quem vos crucifixístis, quem Deus suscitávit a mórtuis, in hoc iste adstat coram vobis sanus.\n11 Hic est lapis, qui reprobátus est a vobis ædificántibus, qui factus est in caput ánguli:\n12 et non est in álio áliquo salus. Nec enim áliud nomen est sub cælo datum homínibus, in quo opórteat nos salvos fíeri.",
+      "eng": "5 And it came to pass on the morrow, that their princes, and ancients, and scribes, were gathered together in Jerusalem;\n6 And Annas the high priest, and Caiphas, and John, and Alexander, and as many as were of the kindred of the high priest.\n7 And setting them in the midst, they asked: By what power, or by what name, have you done this?\n8 Then Peter, filled with the Holy Ghost, said to them: Ye princes of the people, and ancients, hear:\n9 If we this day are examined concerning the good deed done to the infirm man, by what means he hath been made whole:\n10 Be it known to you all, and to all the people of Israel, that by the name of our Lord Jesus Christ of Nazareth, whom you crucified, whom God hath raised from the dead, even by him this man standeth here before you whole.\n11 This is the stone which was rejected by you the builders, which is become the head of the corner.\n12 Neither is there salvation in any other. For there is no other name under heaven given to men, whereby we must be saved."
+    },
+    "responsory3": {
+      "type": "responsory",
+      "variationKey": "responsory3",
+      "lat": "R. Laudábo nomen tuum assídue, \n* Et collaudábo illud in confessióne.\nV. Lætábor et exsultábo in te: psallam nómini tuo, Altíssime.\nR. Et collaudábo illud in confessióne.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Et collaudábo illud in confessióne.",
+      "eng": "R. I will praise thy Name continually;\n* Yea, I will praise it with thanksgiving.\nV. I will be glad and rejoice in thee I will sing praise to thy Name, O Thou Most High.\nR. Yea, I will praise it with thanksgiving.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. Yea, I will praise it with thanksgiving."
+    },
+    "lectio4": {
+      "type": "reading",
+      "variationKey": "lectio4",
+      "lat": "Sermo sancti Bernárdi Abbátis\nNon otióse Spíritus Sanctus nomen Sponsi óleo cómparat, cum ita dóceat sponsam ad Sponsum clamáre: Oleum effúsum nomen tuum. Oleum enim lucet, pascit et ungit. Fovet ignem, nutrit carnem, lenit dolórem: lux, cibus, medicína. Vide idem nunc et de Sponsi nómine: Lucet prædicátum, pascit recogitátum, invocátum lenit et ungit. Et percurrámus síngula. Unde putas in toto orbe tanta et tam súbita fídei lux, nisi de prædicáto nómine Jesu? Nonne in hujus nóminis luce Deus nos vocávit in admirábile lumen suum; quibus illuminátis, et in lúmine isto vidéntibus lumen, dicat mérito Paulus: Fuístis aliquándo ténebræ, nunc autem lux in Dómino?",
+      "eng": "From the Sermons of St. Bernard, Abbot (of Clairvaux) \nIt is not idly that the Holy Ghost likeneth the Name of the Bridegroom to oil, when He maketh the Bride say to the Bridegroom: thy Name is as oil poured forth. Oil indeed giveth light, meat, and unction. It feedeth fire, it nourisheth the flesh, it sootheth pain; it is light, food, and healing. Behold, Thus also is the Name of the Bridegroom. To preach it, is to give light; to think of it, is to feed the soul; to call on it, is to win grace and unction. Let us take it point by point. What, thinkest thou, hath made the light of faith so suddenly and so brightly to shine in the whole world but the preaching of the Name of Jesus? Is it not in the light of this Name that God hath called us into His marvellous light, even that light wherewith we being enlightened, and in His light seeing light, Paul saith truly of us: Ye were sometimes darkness, but now are ye light in the Lord."
+    },
+    "responsory4": {
+      "type": "responsory",
+      "variationKey": "responsory4",
+      "lat": "R. Sperent in te, qui novérunt nomen tuum: \n* Quóniam non dereliquísti quæréntes te, Dómine.\nV. Exsúrge, Dómine, ádjuva nos, et líbera nos propter nomen tuum.\nR. Quóniam non dereliquísti quæréntes te, Dómine.",
+      "eng": "R. Let them that know thy Name put their trust in thee\n* For Thou, Lord, hast not forsaken them that seek thee.\nV. Arise, O Lord, help us, and redeem us for thy Name's sake.\nR. For Thou, Lord, hast not forsaken them that seek thee."
+    },
+    "lectio5": {
+      "type": "reading",
+      "variationKey": "lectio5",
+      "lat": "Hoc dénique nomen coram régibus, et géntibus, et fíliis Israël portáre jussus est idem Apóstolus; et portábat nomen tamquam lumen, et illuminábat pátriam, et clamábat ubíque: Nox præcéssit, dies autem appropinquávit. Abiciámus ergo ópera tenebrárum, et induámur arma lucis, sicut in die honéste ambulémus. Et monstrábat ómnibus lucérnam super candelábrum, annúntians in omni loco Jesum, et hunc crucifíxum. Quómodo lux ista resplénduit ac perstrínxit cunctórum intuéntium óculos, quando de ore Petri, tamquam fulgur egrédiens, claudi uníus corporáles plantas solidávit et bases, multósque spirituáliter cæcos illuminávit? Numquid non ignem sparsit, cum ait: In nómine Jesu Christi Nazaréni surge et ámbula?",
+      "eng": "This is the Name which the Apostle was commanded to bear before Gentiles, and kings, and the children of Israel, the Name which he bore as a light to enlighten his people, crying everywhere The night is far spent, the day is at hand; let us therefore cast off the works of darkness, and let us put on the armour of light, let us walk honestly as in the dayligth, He pointed out to all that candle set upon a candlestick, preaching in every place Jesus and Him crucified. How did that Name shine forth and dazzle every eye that beheld it, when it came like lightning out of the mouth of Peter to give bodily strength to the feet of the lame man, and to clear the sight of many a blind soul? Cast he not fire when he said: In the Name of Jesus Christ of Nazareth, rise up and walk?"
+    },
+    "responsory5": {
+      "type": "responsory",
+      "variationKey": "responsory5",
+      "lat": "R. Confiteámur nómini tuo magno, \n* Quóniam terríbile et sanctum est.\nV. Hi in cúrribus, et hi in equis, nos autem in nómine Dómini, Dei nostri, invocábimus.\nR. Quóniam terríbile et sanctum est.",
+      "eng": "R. Let us praise thy great Name,\n* For it is terrible and holy.\nV. Some trust in chariots, and some in horses, but we will call upon the Name of the Lord our God.\nR. For it is terrible and holy."
+    },
+    "lectio6": {
+      "type": "reading",
+      "variationKey": "lectio6",
+      "lat": "Nec tantum lux est nomen Jesu, sed est et cibus. An non tóties confortáris, quóties recordáris? Quid æque mentem cogitántis impínguat? Quid ita exercitátos réparat sensus, virtútes róborat, végetat mores bonos atque honéstos, castas fovet affectiónes? Aridus est omnis ánimæ cibus, si non óleo isto infúnditur; insípidus est, si non hoc sale condítur. Si scribas, non sapit mihi, nisi légero ibi Jesum. Si dísputes aut cónferas, non sapit mihi, nisi sonúerit ibi Jesus. Jesus mel in ore, in aure melos, in corde júbilus. Sed est et medicína. Tristátur áliquis nostrum? Véniat in cor ejus Jesus, et inde sáliat in os. Et ecce ad exórtum nóminis lumen, núbilum omne díffugit, redit serénum. Lábitur quis in crimen? currit ínsuper ad láqueum mortis desperándo? Nonne, si ínvocet nomen vitæ, conféstim respirábit ad vitam?",
+      "eng": "The Name of Jesus is not a Name of light only, but it is meat also. Dost thou ever call it to mind, and remain unstrengthened? Is there anything like it to enrich the soul of him that thinketh of it? What is there like it to restore the weakened senses, to fortify strength, to give birth to good lives and pure affections? The soul is fed on husks if that whereon it feedeth lack seasoning with this salt. If thou writest, thou hast no meaning for me if I read not of Jesus there. If thou preach, or dispute, thou hast no meaning for me if I hear not of Jesus there. The mention of Jesus is honey in the mouth, music in the ear, and gladness in the heart. It is our healing too. Is any sorrowful among us? Let the thought of Jesus come into his heart, and spring to his mouth. Behold, when the day of that Name beginneth to break, every cloud will flee away, and there will be a great calm. Doth any fall into sin? Doth any draw nigh to an hopeless death? And if he but call on the life-giving Name of Jesus, will he not draw the breath of a new life again?"
+    },
+    "responsory6": {
+      "type": "responsory",
+      "variationKey": "responsory6",
+      "lat": "R. Læténtur omnes, qui sperant in te, Dómine, in ætérnum exsultábunt, et habitábis in eis, et gloriabúntur in te omnes, \n* Qui díligunt nomen tuum.\nV. Dómine, in lúmine vultus tui ambulábunt, et in nómine tuo exsultábunt tota die.\nR. Qui díligunt nomen tuum.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Qui díligunt nomen tuum.",
+      "eng": "R. O Lord, let all those that put their trust in thee rejoice, let them ever shout for joy because Thou dwellest in them\n* Let them also that love thy Name be joyful in thee.\nV. They shall walk, O Lord, in the light of thy countenance; and in thy Name shall they rejoice all the day.\nR. Let them also that love thy Name be joyful in thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. Let them also that love thy Name be joyful in thee."
+    },
+    "lectio7": {
+      "type": "reading",
+      "variationKey": "lectio7",
+      "lat": "Léctio sancti Evangélii secúndum Lucam\nIn illo témpore: Postquam consummáti sunt dies octo, ut circumciderétur Puer: vocátum est nomen ejus Jesus. Et réliqua.\nHomilía sancti Bernárdi Abbátis\nMagnum et mirábile sacraméntum! Circumcíditur Puer, et vocátur Jesus. Quid sibi vult ista connéxio? Circumcísio nempe magis salvándi, quam Salvatóris esse vidétur; et Salvatórem circumcídere pótius decet, quam circumcídi. Sed agnósce mediatórem Dei et hóminum, qui ab ipso nativitátis suæ exórdio divínis humána sóciat, ima summis. Náscitur ex mulíere, sed cui fecunditátis fructus sic accédat, ut non décidat flos virginitátis. Pannis invólvitur; sed panni ipsi angélicis láudibus honorántur. Abscónditur in præsépio; sed próditur radiánte stella de cælo. Sic et circumcísio veritátem suscéptæ probat humanitátis; et nomen, quod est super omne nomen, glóriam índicat majestátis. Circumcíditur tamquam verus Abrahæ fílius; Jesus vocátur tamquam verus Fílius Dei.",
+      "eng": "From the Holy Gospel according to Luke\nIn that time: when eight days were accomplished, that the child should be circumcised, his name was called Jesus, which was called by the angel, before he was conceived in the womb. And so on.\nHomily by St. Bernard, Abbot (of Clairvaux)\nBehold a mystery, great and full of wonder! The Child is circumcised, and His Name is called Jesus. Why are these two things thus mentioned together? It would seem that circumcision should rather be for the saved than for the Saviour; that the Saviour ought rather to be Circumciser than circumcised. But behold here the Mediator between God and men, how even from His childhood He joineth the things of the Highest to the things of the lowest, the things of God to the things of men. He is born of a woman, but her womb is made fruitful without the loss of the flower of her virginity. He is wrapped in swaddling-bands, but these swaddling-bands are a theme for the jubilation of angels. He is laid in a manger, but a bright star standeth in heaven over the place. So also in His circumcision, the ceremony gave proof of the reality of the Manhood which He had taken, and that Name which is above every name proclaimed the glory of His Blessed Majesty. As very son of Abraham He underwent circumcision; He assumed the Name of Jesus as very Son of God."
+    },
+    "responsory7": {
+      "type": "responsory",
+      "variationKey": "responsory7",
+      "lat": "R. Tribulatiónem et dolórem invéni: \n* Et nomen Dómini invocávi.\nV. Turris fortíssima nomen Dómini, in ipso sperávi, et adjútus sum.\nR. Et nomen Dómini invocávi.",
+      "eng": "R. Sorrow and trouble did I find.\n* Then called I upon the Name of the Lord.\nV. The Name of the Lord is a strong tower; I trusted in Him and I am helped.\nR. Then called I upon the Name of the Lord."
+    },
+    "lectio8": {
+      "type": "reading",
+      "variationKey": "lectio8",
+      "lat": "Neque enim ad instar priórum meus iste Jesus nomen vácuum aut ináne portat: non est in eo magni nóminis umbra, sed véritas. Cǽlitus síquidem índitum nomen Evangelísta testátur, quod vocátum est ab Angelo, priúsquam in útero conciperétur. Et atténde verbi profunditátem: Postquam natus est Jesus, Jesus vocátur ab homínibus, qui vocátus est ab Angelo, priúsquam in útero conciperétur. Idem quippe et Angeli Salvátor et hóminis; sed hóminis ab incarnatióne, Angeli ab inítio creatúræ. Vocátum est, ait, nomen ejus Jesus, quod vocátum est ab Angelo. In ore ergo duórum vel trium téstium stat omne verbum; et ipsum, quod in Prophéta abbreviátum, maniféstius in Evangélio légitur caro factum.",
+      "eng": "Why Jesus beareth not that Name as others have borne it before Him, as a vain and empty title. It is not in Him the shadow of a great Name, but the very meaning of that Name. That His Name was revealed from heaven, is attested by the Evangelist, where it is written, Which was so named of the Angel before He was conceived in the womb. After Jesus was born, men called Him Jesus, but angels called Him Jesus, before He was conceived in the womb. The One Lord is the Saviour of angels and of men; of men, since His Incarnation; of angels, from the beginning of their creation. His Name, saith the Evangelist, was called Jesus, which was so named of the Angel before He was conceived in the womb. In the mouth therefore of two or three witnesses is every word established; and that word whereof the Prophet spoke as cut short, is set forth at length in the Gospel: the Word made Flesh."
+    },
+    "responsory8": {
+      "type": "responsory",
+      "variationKey": "responsory8",
+      "lat": "R. Exspectábo nomen tuum, Dómine, \n* Quóniam bonum est in conspéctu sanctórum tuórum.\nV. Ut confiteámur nómini sancto tuo, et gloriémur in laude tua.\nR. Quóniam bonum est in conspéctu sanctórum tuórum.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Quóniam bonum est in conspéctu sanctórum tuórum.",
+      "eng": "R. O Lord, I will wait on thy Name.\n* For it is good before thy Saints.\nV. To give thanks unto thy Holy Name, and to triumph in thy praise.\nR. For it is good before thy Saints.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. For it is good before thy Saints."
+    },
+    "lectio9": {
+      "type": "reading",
+      "variationKey": "lectio9",
+      "lat": "Mérito sane, dum circumcíditur puer, qui natus est nobis, Salvátor vocátur; quod vidélicet ex hoc jam cœ́perit operári salútem nostram, immaculátum illum pro nobis sánguinem fundens. Neque enim jam quǽrere est Christiánis, cur volúerit Dóminus Christus circumcídi. Propter hoc síquidem circumcísus est, propter quod natus, propter quod passus. Nihil horum propter se, sed ómnia propter eléctos. Nec in peccáto génitus, nec a peccáto circumcísus, nec mórtuus est pro peccáto suo; magis autem propter delícta nostra. Quod vocátum est, inquit, ab Angelo, priúsquam in útero conciperétur. Vocátum plane, non impósitum: nempe hoc ei nomen est ab ætérno. A natúra própria habet, ut sit Salvátor: innátum est ei nomen hoc, non índitum ab humána vel angélica creatúra.",
+      "eng": "It is no wonder that it should be at His circumcision that the Name of Jesus (which is, being interpreted, Saviour) is given to the Child Who is born unto us, for it was then that He for the first time shed that sinless Blood Which is the mean whereby He hath chosen to work out our salvation. It is no matter for the speculation of Christians why the Lord Christ was pleased to be circumcised. He was circumcised for the same reason for which He was born, and for which He suffered. Neither one nor the other was for Himself, but all for the sake of the elect. He was not born in sin; He was not circumcised to separate Him from sin; neither did He die for sins of His own, but for ours. Which was so named of the Angel before He was conceived in the womb. The Angel indeed gave Him that title of Saviour, but not for the first time. Saviour is His Name from everlasting; He hath it of His own proper nature to save. This title He hath in Himself, not by the gift of anything that He hath made, be it man or Angel."
+    },
+    "versum_0": {
+      "type": "vr",
+      "variationKey": "versum_0",
+      "lat": "V. Sit nomen Dómini benedictum.\nR. Ex hoc nunc et usque in sǽculum.",
+      "eng": ""
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "variationKey": "ant_laudes",
+      "lat": "Oleum effúsum * nomen tuum, ídeo adolescéntulæ dilexérunt te.\nScitóte, * quia Dóminus ipse est Deus, cujus nomen in ætérnum.\nSitívit * ánima mea ad nomen sanctum tuum, Dómine.\nBenedíctum * nomen glóriæ tuæ sanctum, et laudábile, et superexaltátum in sǽcula.\nJúvenes et vírgines, * senes cum junióribus laudáte nomen Dómini, quia exaltátum est nomen ejus solíus.",
+      "eng": "Thy Name is as oil * poured forth, therefore do the virgins love thee.\nKnow ye that the Lord He is God, * and His Name endureth for ever.\nMy soul thirsteth * for thy Holy Name, O Lord.\nBlessed * is the Holy Name of thy glory, and worthy to be praised, and exalted above all for ever.\nYoung men and maidens, * old men and children, praise the Name of the Lord, for His Name alone is exalted."
+    },
+    "capitulum_laudes": {
+      "type": "capitulum",
+      "variationKey": "capitulum_laudes",
+      "lat": "Fratres: Christus humiliávit semetípsum, factus obédiens usque ad mortem, mortem autem crucis. Propter quod et Deus exaltávit illum, et donávit illi nomen, quod est super omne nomen, ut in nómine Jesu omne genu flectátur.\n$Deo gratias",
+      "eng": "He humbled himself, becoming obedient unto death, even to the death of the cross. For which cause God also hath exalted him, and hath given him a name which is above all names: That in the name of Jesus every knee should bow, of those that are in heaven, on earth, and under the earth.\n$Deo gratias"
+    },
+    "hymnus_laudes": {
+      "type": "hymn",
+      "variationKey": "hymnus_laudes",
+      "lat": "Jesu decus angélicum,\nIn aure dulce cánticum,\nIn ore mel miríficum,\nIn corde nectar cǽlicum.\nQui te gustant, esúriunt;\nQui bibunt, adhuc sítiunt;\nDesideráre nésciunt,\nNisi Jesum, quem díligunt.\nO Jesu mi dulcíssime,\nSpes suspirántis ánimæ!\nTe quærunt piæ lácrimæ,\nTe clamor mentis íntimæ.\nMane nobíscum, Dómine,\nEt nos illústra lúmine;\nPulsa mentis calígine,\nMundum reple dulcédine.\nJesu, flos Matris Vírginis,\nAmor nostræ dulcédinis,\nTibi laus, honor nóminis,\nRegnum beatitúdinis.\nAmen.",
+      "eng": "O Jesu, Thou the Beauty art\nOf Angel worlds above;\nThy name is music to the heart,\nEnchanting it with love.\nCelestial Sweetness unalloyed!\nWho eat thee hunger still;\nWho drink of thee still feel a void,\nWhich naught but Thou can fill.\nO my sweet Jesu! hear the sigh,\nWhich unto thee I send;\nTo thee mine inmost spirit cries\nMy being's hope and end!\nStay with us, Lord, and with thy light\nIllume the soul's abyss;\nScatter the darkness of our night,\nAnd fill the world with bliss.\nO Jesu, spotless Virgin flower,\nOur life and joy: to thee\nBe praise, beatitude, and power,\nThrough all eternity.\nAmen."
+    },
+    "ant_2": {
+      "type": "antiphon",
+      "variationKey": "ant_2",
+      "lat": "Dedit se, * ut liberáret pópulum, et acquíreret sibi nomen ætérnum, allelúja.",
+      "eng": "He gave Himself * to deliver His people, and to get Himself an everlasting Name. Alleluia."
+    },
+    "lectio_prima": {
+      "type": "reading",
+      "variationKey": "lectio_prima",
+      "lat": "Omne quodcúmque fácitis in verbo, aut in ópere: ómnia in nómine Dómini Jesu Christi fácite, grátias agéntes Deo et Patri per ipsum.",
+      "eng": "All whatsoever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God and the Father by him."
+    },
+    "responsory_breve_tertia": {
+      "type": "responsory",
+      "variationKey": "responsory_breve_tertia",
+      "lat": "R.br. Sit nomen Dómini benedíctum, * Allelúja, allelúja.\nR. Sit nomen Domini benedíctum, * Allelúja, allelúja.\nV. Ex hoc nunc et usque in sǽculum.\nR. Allelúja, allelúja.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Sit nomen Dómini benedíctum, * Allelúja, allelúja.",
+      "eng": "R.br. Blessed be the Name of the Lord, * Alleluia, alleluia.\nR. Blessed be the Name of the Lord, * Alleluia, alleluia.\nV. From this time forth, and for evermore.\nR. Alleluia, alleluia.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. Blessed be the Name of the Lord, * Alleluia, alleluia."
+    },
+    "versum_tertia": {
+      "type": "vr",
+      "variationKey": "versum_tertia",
+      "lat": "V. Afférte Dómino glóriam et honórem, allelúja.\nR. Afférte Dómino glóriam nómini ejus, allelúja.",
+      "eng": "V. Give unto the Lord glory and honour, alleluia.\nR. Give unto the Lord the glory due unto His Name, alleluia."
+    },
+    "capitulum_sexta": {
+      "type": "capitulum",
+      "variationKey": "capitulum_sexta",
+      "lat": "In nómine Jesu omne genu flectátur cæléstium, terréstrium, et infernórum: et omnis lingua confiteátur, quia Dóminus Jesus Christus in glória est Dei Patris.\n$Deo gratias",
+      "eng": "That in the name of Jesus every knee should bow, of those that are in heaven, on earth, and under the earth: And that every tongue should confess that the Lord Jesus Christ is in the glory of God the Father.\n$Deo gratias"
+    },
+    "responsory_breve_sexta": {
+      "type": "responsory",
+      "variationKey": "responsory_breve_sexta",
+      "lat": "R.br. Afférte Dómino glóriam et honórem, * Allelúja, allelúja.\nR. Afférte Dómino glóriam et honórem, * Allelúja, allelúja.\nV. Afférte Dómino glóriam nómini ejus.\nR. Allelúja, allelúja.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Afférte Dómino glóriam et honórem, * Allelúja, allelúja.",
+      "eng": "R.br. Give unto the Lord glory and honour, * Alleluia, alleluia.\nR. Give unto the Lord glory and honour, * Alleluia, alleluia.\nV. Give unto the Lord the glory due unto His Name.\nR. Alleluia, alleluia.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. Give unto the Lord glory and honour, * Alleluia, alleluia."
+    },
+    "versum_sexta": {
+      "type": "vr",
+      "variationKey": "versum_sexta",
+      "lat": "V. Magnificáte Dóminum mecum, allelúja.\nR. Et exaltémus nomen ejus in idípsum, allelúja.",
+      "eng": "V. O magnify the Lord with me, alleluia.\nR. And let us exalt His Name together, alleluia."
+    },
+    "capitulum_nona": {
+      "type": "capitulum",
+      "variationKey": "capitulum_nona",
+      "lat": "Omne quodcúmque fácitis in verbo, aut in ópere: ómnia in nómine Dómini Jesu Christi fácite, grátias agéntes Deo et Patri per ipsum.\n$Deo gratias",
+      "eng": ""
+    },
+    "responsory_breve_nona": {
+      "type": "responsory",
+      "variationKey": "responsory_breve_nona",
+      "lat": "R.br. Magnificáte Dóminum mecum, * Allelúja, allelúja.\nR. Magnificáte Dóminum mecum, * Allelúja, allelúja.\nV. Et exaltémus nomen ejus in idípsum.\nR. Allelúja, allelúja.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Magnificáte Dóminum mecum, * Allelúja, allelúja.",
+      "eng": "R.br. O magnify the Lord with me, * Alleluia, alleluia.\nR. O magnify the Lord with me, * Alleluia, alleluia.\nV. And let us exalt His Name together.\nR. Alleluia, alleluia.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. O magnify the Lord with me, * Alleluia, alleluia."
+    },
+    "versum_nona": {
+      "type": "vr",
+      "variationKey": "versum_nona",
+      "lat": "V. Adjutórium nostrum in nómine Dómini, allelúja.\nR. Qui fecit cælum et terram, allelúja.",
+      "eng": "V. Our help is in the Name of the Lord, alleluia.\nR. Who made heaven and earth, alleluia."
+    },
+    "versum_3": {
+      "type": "vr",
+      "variationKey": "versum_3",
+      "lat": "V. Sit nomen Dómini benedíctum, allelúja.\nR. Ex hoc nunc et usque in sǽculum, allelúja.",
+      "eng": ""
+    },
+    "ant_3": {
+      "type": "antiphon",
+      "variationKey": "ant_3",
+      "lat": "Vocábis * nomen ejus Jesum; ipse enim salvum fáciet pópulum suum a peccátis eórum, allelúja.",
+      "eng": "Thou shalt call His Name Jesus, * for He shall save His people from their sins, alleluia."
+    }
   }
 }

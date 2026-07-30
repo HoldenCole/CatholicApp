@@ -120,20 +120,75 @@ assembled-office dumps against Divinum Officium sources). Dumps regenerate via
 15. [wrong-content] **Suffrage of the Saints** (pre-1955 per-annum) not
     modeled at Lauds/Vespers.
 
+## Extended QA (Missal + calendars + rite switching) — fixed
+A dedicated Missal sweep (every day × 3 rites through properForDate, now in
+CI) plus DO-verified reviews of the Mass propers and all three ordo tables.
+**The 1962 ordo winners verified CLEAN**: a full-2026 comparison against
+DO's own runtime found zero winner/rank errors — including transfers and
+the 1960 Ember-week relocation. (The earlier register claim that 1962
+September Ember Saturday precedence was inverted was itself wrong: the 1960
+code moved the Embers to the week after the third Sunday; the app is
+right.) Fixed in this pass:
+- 52 Mass orations with doubled saint names; the 06-30 raw @-references
+  (second orations of St. Peter); 35 Latin-only fields given English.
+- Holy Name Sunday served the Circumcision Mass and office (its ordo key
+  pointed at the pre-1960 octave stub): rekeyed to the floating "01-00",
+  Mass bound to the complete formulary, office newly imported from DO
+  (43 parts). Jan 2-5 ferias pinned to Puer natus (DO's own vide rule).
+- Trinity Sunday had the OLD Dominica-I introit; now Benedicta sit.
+- Christmas composite entry lacked the Viderunt omnes gradual.
+- Missing sequences imported: Victimae paschali (Easter + octave), Stabat
+  Mater (Seven Sorrows, Passion Friday), Dies irae (All Souls ×3).
+- Four orations sourced from @Commune/C2a were expanded from the wrong
+  commune (C2a-1) — re-resolved.
+- 231 fields carried literal DO macros ($Per Dominum-family, &Gloria,
+  v.-markers) — expanded; Easter gradual's spurious leading alleluia cut.
+- 1962 commemoration keys: BVM-Saturdays now commemorate the day's saint
+  (246 entries); Jan 5 commemorates S. Telesphorus (01-05cc), not the
+  abolished vigil; transferred feasts commemorate the displaced saint
+  (137); spurious per-annum-feria commemorations nulled (3,245 — ferias
+  per annum are never commemorated under the 1960 rubrics).
+- Vigil of Pentecost color white → red, all rites.
+- Rite switching audited: every call site passes the user's rite; no
+  surface relies on the defaulted parameter.
+
 ## Open — calendar/ordo layer
-16. [blocker] **September Ember Saturday precedence inverted**: 1962 gives
-    the day to the III-class feast (feria II class must win); pre-1955 gives
-    it to the feria (the Double must win). 1955 alone is right.
-17. [wrong-content] **1955 calendar misses Cum nostra**: Vigil of Epiphany
-    still present Jan 5 (abolished 1955; should be feria + St Telesphorus
-    comm.); simples (07-30) still full festal offices instead of
-    commemorations; opening Pater/Ave/Credo should already be gone in 1955
-    (currently only pre-1955 vs 1962 differ nowhere — all rites show it).
-18. [wrong-content] 1962 ordo carries a spurious commemoration of the
-    abolished Epiphany vigil on Jan 5; pre-1955 12-08 serves the pre-1863
-    office (wrong era for Divino-Afflatu rubrics); 1955 11-18 Matins pulls
-    Septuagesima lessons; pre-1955 Ember Saturday Vespers should be I
-    Vespers of Sunday.
+16. [blocker] **ordo_1955 misses Cum nostra** (~10 dates/yr, DO-verified):
+    abolished octaves of Stephen/John/Innocents still celebrated Jan 2-4;
+    Holy Name missing entirely (Jan 4); Vigil of Epiphany still present
+    Jan 5 (rank read from the wrong DO rank row); abolished vigils of
+    St James / Simon & Jude / All Saints and the Immaculate-Conception
+    octave day still celebrated; several duplex feasts dropped outright
+    (Feb 23, Apr 29, Jun 19); Ember commemoration keys point at common
+    ferias instead of the Ember propers (093-N); simples not reduced to
+    commemorations (07-30); opening Pater/Ave should already be gone.
+17. [blocker] **ordo_pre1955 precedence + octaves** (~15 dates/yr):
+    doubles/semidoubles must beat non-privileged greater ferias (Sep 16,
+    Sep 19, Dec 16, Feb 23 inverted); five sanctoral octaves absent
+    wholesale (John Baptist, Peter & Paul, Assumption, All Saints,
+    Immaculate Conception); two winner/commemoration inversions (Jun 18,
+    Dec 11); impeded-feast transfer not modeled (BVM Regina → Jun 1);
+    Ember Saturday Vespers should be I Vespers of the Sunday.
+18. [wrong-content] **The pre-1955 "<key>o" overlay is a blanket
+    heuristic** (ContentStore, both platforms): it layers DO's Tridentine
+    "o" files over Divino-Afflatu offices that never use them — 12-08
+    gets the pre-1863 Conception office. Needs a data-driven whitelist of
+    which o-files the DA rubrics actually use. Also: 1955 11-18 Matins
+    pulls Septuagesima lessons (temporal lesson lookup for pent25).
+
+## Open — Missal layer
+19. [gap] **Commemorated collects at Mass not modeled**: MassProper has no
+    second-collect field; ordo.commemoration is never read on the Mass
+    path (the office renders commemorations; the Mass cannot).
+20. [wrong-content] Tract/alleluia merged into the gradual field with no
+    label (Septuagesima's De profundis, Lenten tracts); schema supports
+    tractus but data never populates it. ~90 commune "N." saint-name
+    placeholders unsubstituted. Nine oration refs carry commemoration
+    headings. Christmas m1/m2/m3 Masses all modeled but no UI picker
+    (composite 12-25 = third Mass always). Pre-1955 Good Friday
+    (Presanctified) and its "r" stubs incomplete — 1962/55 content served
+    to pre-1955 users; Triduum pseudo-formulary slot labels misleading
+    ("Introit" over a tract).
 
 ## Deliberately out of scope (design decisions, unchanged)
 - Antiphon doubling display (pre-1960 incipit-only before canticles).
