@@ -133,7 +133,28 @@ final class ContentStore {
         let matinsNocturns = isClassIorII ? 3 : 1
         let matinsTeDeum = computeMatinsTeDeum(ctx: ctx, ordo: ordo, rite: rite)
 
-        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum)
+        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite)
+
+        // Every layered dict goes through the hour-aware semantic remap
+        // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
+        // versicle numbering, spelling aliases) — the raw DO keys collide
+        // with the template's variationKeys and would otherwise silently
+        // miss (or worse, land on the wrong slot).
+        func layer(_ overrides: [String: Hour.Part]) {
+            var remapped = OfficeAssembler.remapProperOverrides(overrides, hourSlug: template.slug)
+            // 1960 rubrics: a III-class feast's Matins has ONE nocturn — two
+            // Scripture lessons of the feria and the saint's contracted
+            // legend as the third. DO ships the contraction as Lectio94 /
+            // Lectio93; failing that, join the legend lessons 4-6. Without
+            // this, the saint's lessons target the lectio4-9 slots that the
+            // 1-nocturn structure no longer has.
+            if template.slug == "matutinum", matinsNocturns == 1,
+               remapped["lectio3"] == nil,
+               let contracted = Self.contractedLesson(from: remapped) {
+                remapped["lectio3"] = contracted
+            }
+            assembled = applyProperOverrides(assembled, overrides: remapped)
+        }
 
         if let ordo {
             if ordo.winner == "sanctoral" {
@@ -143,24 +164,24 @@ final class ContentStore {
                 let key = ordo.winnerKey
                 let code = saintCommune[key] ?? saintCommune[String(key.prefix(5))]
                 if let code, let commune = communeOffice[code] {
-                    assembled = applyProperOverrides(assembled, overrides: commune)
+                    layer(commune)
                 }
                 if let source = saintOfficeInherit[key] ?? saintOfficeInherit[String(key.prefix(5))],
                    let inherited = sanctoralPropers[source] {
-                    assembled = applyProperOverrides(assembled, overrides: inherited)
+                    layer(inherited)
                 }
                 if let saint = sanctoralPropers[ordo.winnerKey] {
-                    assembled = applyProperOverrides(assembled, overrides: saint)
+                    layer(saint)
                 }
                 // Pre-1955 old-rite variant of the saint's Office ("<key>o"),
                 // e.g. the festive Epiphany-octave lessons the 1960 books
                 // reduced to ferial commemorations.
                 if rite == .pre1955, let oSaint = sanctoralPropers[ordo.winnerKey + "o"] {
-                    assembled = applyProperOverrides(assembled, overrides: oSaint)
+                    layer(oSaint)
                 }
             } else if let temporalKey = ordo.temporal,
                       let tempOverrides = officeAssembler.temporalPropers[temporalKey] {
-                assembled = applyProperOverrides(assembled, overrides: tempOverrides)
+                layer(tempOverrides)
             }
         }
 
@@ -169,7 +190,7 @@ final class ContentStore {
         // Layer them over the base temporal content.
         if rite == .pre1955, let tKey = ctx.temporalKey,
            let oOverrides = officeAssembler.temporalPropers[tKey + "o"] {
-            assembled = applyProperOverrides(assembled, overrides: oOverrides)
+            layer(oOverrides)
         }
 
         // Dec 17-23 ("O Antiphon" days): override the Little Hours antiphons
@@ -181,11 +202,98 @@ final class ContentStore {
         if ctx.season == .advent && month == 12 && day >= 17 && day <= 23 {
             let dateKey = "adv-12-\(day)"
             if let dateOverrides = officeAssembler.temporalPropers[dateKey] {
-                assembled = applyProperOverrides(assembled, overrides: dateOverrides)
+                layer(dateOverrides)
             }
         }
 
+        // Commemoration of the concurring office: its antiphon, versicle and
+        // collect follow the collect of the day at Lauds (all rites) and at
+        // Vespers in the pre-1960 rites, which kept most Vespers
+        // commemorations. This is how a suppressed feria, a commemorated
+        // saint, or an octave day stays present in the day's office.
+        if let commemKey = ordo?.commemoration, !commemKey.isEmpty,
+           template.slug == "laudes" || (template.slug == "vesperae" && rite != .rite1962),
+           let commemData = sanctoralPropers[commemKey] ?? officeAssembler.temporalPropers[commemKey] {
+            assembled = Self.insertCommemoration(
+                into: assembled, data: commemData, hourSlug: template.slug)
+        }
+
         return assembled
+    }
+
+    /// DO's contracted single legend lesson for 1-nocturn feast Matins:
+    /// Lectio94, else Lectio93, else the legend lessons 4-6 joined.
+    private static func contractedLesson(from overrides: [String: Hour.Part]) -> Hour.Part? {
+        if let l = overrides["lectio94"] ?? overrides["lectio93"] {
+            var p = l
+            p.variationKey = "lectio3"
+            return p
+        }
+        let legend = ["lectio4", "lectio5", "lectio6"].compactMap { overrides[$0] }
+        guard !legend.isEmpty else { return nil }
+        var p = legend[0]
+        p.variationKey = "lectio3"
+        p.lat = legend.compactMap { $0.lat }.joined(separator: "\n\n")
+        let engs = legend.compactMap { $0.eng }
+        p.eng = engs.isEmpty ? nil : engs.joined(separator: "\n\n")
+        return p
+    }
+
+    /// Builds and inserts the commemoration block (antiphon → versicle →
+    /// collect) after the day's collect. Pieces the data lacks are omitted;
+    /// without a collect there is no commemoration to make.
+    private static func insertCommemoration(into hour: Hour,
+                                            data: [String: Hour.Part],
+                                            hourSlug: String) -> Hour {
+        guard let oratio = data["oratio"] else { return hour }
+        guard let collectIdx = hour.parts.lastIndex(where: {
+            $0.variationKey == "oratio" && $0.type == "collect"
+        }) else { return hour }
+
+        var block: [Hour.Part] = []
+        block.append(Hour.Part(type: "heading", label: "Commemoratio"))
+
+        // The commemorated office's own canticle antiphon: Benedictus at
+        // Lauds (DO Ant 2), Magnificat at Vespers (Ant 3, else Ant 1). The
+        // curated communes keep single-line canticle antiphons under
+        // ant_laudes / ant_vespera.
+        let singleLine: (Hour.Part?) -> Hour.Part? = { part in
+            guard let part, let lat = part.lat,
+                  !lat.contains("\n") else { return nil }
+            return part
+        }
+        let ant: Hour.Part? = hourSlug == "laudes"
+            ? (data["ant_2"] ?? singleLine(data["ant_laudes"]))
+            : (data["ant_3"] ?? data["ant_1"] ?? singleLine(data["ant_vespera"]))
+        if let ant {
+            var p = ant
+            p.variationKey = nil
+            p.label = "Antiphon"
+            block.append(p)
+        }
+
+        let versum: Hour.Part? = hourSlug == "laudes"
+            ? (data["versum_2"] ?? data["versum_1"])
+            : (data["versum_3"] ?? data["versum_1"])
+        if let versum {
+            var p = versum
+            p.variationKey = nil
+            block.append(p)
+        }
+
+        var collect = oratio
+        collect.variationKey = nil
+        collect.label = "Oratio"
+        block.append(collect)
+
+        var parts = hour.parts
+        parts.insert(contentsOf: block, at: collectIdx + 1)
+        return Hour(
+            slug: hour.slug, name: hour.name, eng: hour.eng,
+            time: hour.time, hour: hour.hour, minute: hour.minute,
+            glyph: hour.glyph, order: hour.order, intro: hour.intro,
+            parts: parts
+        )
     }
 
     /// Whether the Te Deum is said at Matins (1960 rubrics). Said on Sundays
@@ -206,32 +314,6 @@ final class ContentStore {
         return false
     }
 
-    /// Mapping from a psalm part's variationKey to the antiphon-override key
-    /// that carries its proper antiphon. Matches the layout in the festal
-    /// psalm scheme: Lauds has psalm1-3, canticle1, psalm4 (5 elements);
-    /// Vespers has psalm1-5 (5 elements).
-    private static let psalmToAntiphonKey: [String: String] = [
-        "laudes.psalm1":    "laudes.antiphon.psalm1",
-        "laudes.psalm2":    "laudes.antiphon.psalm2",
-        "laudes.psalm3":    "laudes.antiphon.psalm3",
-        "laudes.canticle1": "laudes.antiphon.psalm4",
-        "laudes.psalm4":    "laudes.antiphon.psalm5",
-        "vesperae.psalm1":  "vesperae.antiphon.psalm1",
-        "vesperae.psalm2":  "vesperae.antiphon.psalm2",
-        "vesperae.psalm3":  "vesperae.antiphon.psalm3",
-        "vesperae.psalm4":  "vesperae.antiphon.psalm4",
-        "vesperae.psalm5":  "vesperae.antiphon.psalm5",
-        "matutinum.psalm2":  "matutinum.antiphon.psalm1",
-        "matutinum.psalm3":  "matutinum.antiphon.psalm2",
-        "matutinum.psalm4":  "matutinum.antiphon.psalm3",
-        "matutinum.psalm5":  "matutinum.antiphon.psalm4",
-        "matutinum.psalm6":  "matutinum.antiphon.psalm5",
-        "matutinum.psalm7":  "matutinum.antiphon.psalm6",
-        "matutinum.psalm8":  "matutinum.antiphon.psalm7",
-        "matutinum.psalm9":  "matutinum.antiphon.psalm8",
-        "matutinum.psalm10": "matutinum.antiphon.psalm9",
-    ]
-
     private func applyProperOverrides(_ hour: Hour, overrides: [String: Hour.Part]) -> Hour {
         let updatedParts = hour.parts.map { part -> Hour.Part in
             guard let key = part.variationKey else {
@@ -240,14 +322,17 @@ final class ContentStore {
                 }
                 return part
             }
-            // Base part: a direct full-part override, else the existing part.
-            // (The Triduum supplies both a replacement psalm and its proper
-            // antiphon, so apply the antiphon on top of the replacement.)
+            // Base part: a direct full-part override (rekeyed onto the
+            // template's slot so later layers can still address it), else
+            // the existing part. (The Triduum supplies both a replacement
+            // psalm and its proper antiphon, so apply the antiphon on top
+            // of the replacement.)
             var base = overrides[key] ?? part
+            base.variationKey = key
             // Proper per-psalm antiphons (from commune, saint, or temporal):
             // set antiphonLat/antiphonEng on the psalm part without discarding
-            // the psalm text/ref.
-            if let antKey = Self.psalmToAntiphonKey[key],
+            // the psalm text/ref. Mapping shared with OfficeAssembler.
+            if let antKey = OfficeAssembler.psalmToAntiphonKey[key],
                let antPart = overrides[antKey] {
                 base.antiphonLat = antPart.lat
                 base.antiphonEng = antPart.eng

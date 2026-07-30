@@ -24,17 +24,17 @@ struct OfficeAssembler {
         "ant_laudes_":              "ant_laudes",
         "ant_laudesc":              "ant_laudes",
         // Vespers — variant hymn spellings / rubric variants
+        // (ant_vespera_3 — the 2nd-Vespers psalm-antiphon list — is handled
+        // semantically in remapProperOverrides, NOT aliased onto the
+        // Magnificat-antiphon slot.)
         "hymnusm_vespera":          "hymnus_vespera",
         "hymnus_vespera_3":         "hymnus_vespera",
-        "ant_vespera_3":            "ant_vespera",
-        "ant_vespera_3c":           "ant_vespera",
         // Vespers — capitulum variants (sanctoral, e.g. Christmas)
         "capitulum_vespera_1":      "vesperae.capitulum",
         "capitulum_vespera_3":      "vesperae.capitulum",
-        // Matins — variant hymn spelling & antiphon
+        // Matins — variant hymn spelling
         "hymnusm_matutinum":        "hymnus_matutinum",
         "hymnus_matutinum_":        "hymnus_matutinum",
-        "ant_matutinum":            "ant_1",
         // Nocturn versum variants (trailing underscore = rubrical variant)
         "nocturn_2_versum_":        "nocturn_2_versum",
         "nocturn_3_versum_":        "nocturn_3_versum",
@@ -64,6 +64,153 @@ struct OfficeAssembler {
             }
         }
         return result
+    }
+
+    // MARK: - Semantic key remapping (DivinumOfficium → template slots)
+    //
+    // The DO import keeps DO's own section semantics, which COLLIDE with the
+    // template's variationKeys:
+    //   Ant 1/2/3      = 1st-Vespers Magnificat / Benedictus / 2nd-Vespers
+    //                    Magnificat antiphons (canticle antiphons) — but the
+    //                    template's ant_1/2/3 are the MATINS NOCTURN slots.
+    //   Ant Matutinum  = the nocturn antiphons, as a newline list.
+    //   Ant Vespera / Ant Laudes = the five PSALM antiphons as a newline list
+    //                    (the curated communes already carry single-line
+    //                    canticle antiphons under these keys instead).
+    //   Versum 1/2/3   = 1st-Vespers / Lauds / 2nd-Vespers versicles — but
+    //                    the template's versum_1 is the LAUDS slot and
+    //                    versum_2 the VESPERS slot.
+    // This remap rebinds an override dict for ONE assembled hour so every
+    // piece lands on its rubrically correct slot. Without it, Sundays put
+    // canticle antiphons on Matins, feasts dump five psalm antiphons into
+    // the Magnificat slot, and proper hymns never match at all.
+
+    /// Newline-split of a part's Latin text (the DO list convention).
+    private static func latLines(_ part: Hour.Part?) -> [String] {
+        guard let lat = part?.lat else { return [] }
+        return lat.split(separator: "\n").map(String.init).filter { !$0.isEmpty }
+    }
+
+    private static func engLines(_ part: Hour.Part?) -> [String] {
+        guard let eng = part?.eng else { return [] }
+        return eng.split(separator: "\n").map(String.init).filter { !$0.isEmpty }
+    }
+
+    /// A single antiphon part built from one line of a DO list (or a whole
+    /// single-antiphon part), rekeyed onto a template slot.
+    private static func antiphonPart(lat: String, eng: String?, label: String, vk: String) -> Hour.Part {
+        var p = Hour.Part(type: "antiphon")
+        p.label = label
+        p.lat = lat
+        p.eng = eng
+        p.variationKey = vk
+        return p
+    }
+
+    private static func rekeyed(_ part: Hour.Part, _ vk: String) -> Hour.Part {
+        var p = part
+        p.variationKey = vk
+        return p
+    }
+
+    /// Distribute a multi-line antiphon list onto the per-psalm dotted keys
+    /// ("<prefix>.antiphon.psalmN"), without clobbering explicit ones.
+    private static func setPsalmAntiphons(prefix: String, list: Hour.Part,
+                                          into o: inout [String: Hour.Part]) {
+        let lats = latLines(list)
+        let engs = engLines(list)
+        for (i, lat) in lats.enumerated() where i < 9 {
+            let key = "\(prefix).antiphon.psalm\(i + 1)"
+            guard o[key] == nil else { continue }
+            o[key] = antiphonPart(lat: lat, eng: i < engs.count ? engs[i] : nil,
+                                  label: "Antiphon", vk: key)
+        }
+    }
+
+    /// Hour-aware semantic remap of a proper/commune/temporal override dict.
+    /// Also runs the spelling-alias expansion. Use this for EVERY layered
+    /// override dict (temporal, sanctoral, commune, inherited, pre-1955 "o").
+    static func remapProperOverrides(_ raw: [String: Hour.Part], hourSlug: String) -> [String: Hour.Part] {
+        var o = expandedOverrides(raw)
+        let ant1 = o["ant_1"], ant2 = o["ant_2"], ant3 = o["ant_3"]
+        // Canticle antiphons must never sit on the Matins nocturn slots.
+        o.removeValue(forKey: "ant_1")
+        o.removeValue(forKey: "ant_2")
+        o.removeValue(forKey: "ant_3")
+
+        switch hourSlug {
+        case "matutinum":
+            // Nocturn antiphons from "Ant Matutinum": one chunk per nocturn.
+            let lats = latLines(o["ant_matutinum"])
+            if !lats.isEmpty {
+                let engs = engLines(o["ant_matutinum"])
+                let per = max(1, Int((Double(lats.count) / 3.0).rounded(.up)))
+                for n in 0..<3 {
+                    let slice = lats.dropFirst(n * per).prefix(per)
+                    guard !slice.isEmpty else { continue }
+                    let engSlice = engs.dropFirst(n * per).prefix(per)
+                    o["ant_\(n + 1)"] = antiphonPart(
+                        lat: slice.joined(separator: "\n"),
+                        eng: engSlice.isEmpty ? nil : engSlice.joined(separator: "\n"),
+                        label: "Antiphon", vk: "ant_\(n + 1)")
+                }
+            }
+
+        case "laudes":
+            // A multi-line "Ant Laudes" is the five psalm antiphons; a
+            // single-line one (curated communes) is the Benedictus antiphon.
+            if let al = o["ant_laudes"], latLines(al).count >= 2 {
+                setPsalmAntiphons(prefix: "laudes", list: al, into: &o)
+                o.removeValue(forKey: "ant_laudes")
+            }
+            if o["ant_laudes"] == nil, let a2 = ant2 {
+                o["ant_laudes"] = rekeyed(a2, "ant_laudes")
+            }
+            // Lauds versicle is DO's "Versum 2" (Versum 1 is 1st Vespers').
+            if let v = o["versum_2"] ?? raw["versum_2"] {
+                o["versum_1"] = rekeyed(v, "versum_1")
+            }
+            o.removeValue(forKey: "versum_2")
+
+        case "vesperae":
+            // Psalm antiphons: the 2nd-Vespers list (Ant Vespera 3) wins
+            // over the 1st-Vespers/shared list (Ant Vespera).
+            if let list = o["ant_vespera_3"] ?? o["ant_vespera_3c"] {
+                setPsalmAntiphons(prefix: "vesperae", list: list, into: &o)
+            } else if let av = o["ant_vespera"], latLines(av).count >= 2 {
+                setPsalmAntiphons(prefix: "vesperae", list: av, into: &o)
+            }
+            if let av = o["ant_vespera"], latLines(av).count >= 2 {
+                o.removeValue(forKey: "ant_vespera")
+            }
+            o.removeValue(forKey: "ant_vespera_3")
+            o.removeValue(forKey: "ant_vespera_3c")
+            // Magnificat antiphon: DO's Ant 3 (2nd Vespers), else Ant 1.
+            if o["ant_vespera"] == nil, let a = ant3 ?? ant1 {
+                o["ant_vespera"] = rekeyed(a, "ant_vespera")
+            }
+            // Vespers versicle: Versum 3 (2nd Vespers), else Versum 1 (1st
+            // Vespers — usually identical); DO's Versum 2 is the LAUDS
+            // versicle and must not land here.
+            if let v = raw["versum_3"] ?? raw["versum_1"] {
+                o["versum_2"] = rekeyed(v, "versum_2")
+            } else {
+                o.removeValue(forKey: "versum_2")
+            }
+
+        default:
+            break
+        }
+        return o
+    }
+
+    /// "pent10-3" → "pent10-0": the Sunday whose week the feria belongs to.
+    static func precedingSundayKey(_ temporalKey: String) -> String? {
+        guard let dashIdx = temporalKey.lastIndex(of: "-") else { return nil }
+        let daySuffix = temporalKey[temporalKey.index(after: dashIdx)...]
+        guard daySuffix.count == 1, let dayNum = Int(daySuffix),
+              dayNum >= 1 && dayNum <= 6 else { return nil }
+        return String(temporalKey[...dashIdx]) + "0"
     }
 
     // MARK: - Easter/Pentecost Octave detection
@@ -113,7 +260,50 @@ struct OfficeAssembler {
         "ant_nona", "nona.psalm1", "nona.psalm2", "nona.psalm3",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true) -> Hour {
+    /// Hours whose collect is the collect OF THE DAY. Prime and Compline are
+    /// absent on purpose: their collects are invariable (keyed oratio_prima /
+    /// oratio_completorium so no day override can ever reach them).
+    private static let collectHours: Set<String> = [
+        "matutinum", "laudes", "tertia", "sexta", "nona", "vesperae",
+    ]
+
+    /// Weekday-psalter keys that belong to the FERIAL office only; festal
+    /// days keep the template defaults until the proper/commune layers apply.
+    private static let ferialOnlyDayKeys: Set<String> = [
+        "hymnus_laudes", "hymnus_vespera",
+        "ant_laudes", "ant_vespera",
+        "versum_1", "versum_2",
+    ]
+
+    /// Mapping from a psalm part's variationKey to the antiphon-override key
+    /// that carries its proper antiphon. Lauds has psalm1-3, canticle1,
+    /// psalm4 (5 elements); Vespers has psalm1-5; Matins' antiphon keys are
+    /// offset by one because matutinum.psalm1 is the invariable Venite.
+    /// Shared with ContentStore.applyProperOverrides so the temporal and
+    /// sanctoral paths can never disagree.
+    static let psalmToAntiphonKey: [String: String] = [
+        "laudes.psalm1":    "laudes.antiphon.psalm1",
+        "laudes.psalm2":    "laudes.antiphon.psalm2",
+        "laudes.psalm3":    "laudes.antiphon.psalm3",
+        "laudes.canticle1": "laudes.antiphon.psalm4",
+        "laudes.psalm4":    "laudes.antiphon.psalm5",
+        "vesperae.psalm1":  "vesperae.antiphon.psalm1",
+        "vesperae.psalm2":  "vesperae.antiphon.psalm2",
+        "vesperae.psalm3":  "vesperae.antiphon.psalm3",
+        "vesperae.psalm4":  "vesperae.antiphon.psalm4",
+        "vesperae.psalm5":  "vesperae.antiphon.psalm5",
+        "matutinum.psalm2":  "matutinum.antiphon.psalm1",
+        "matutinum.psalm3":  "matutinum.antiphon.psalm2",
+        "matutinum.psalm4":  "matutinum.antiphon.psalm3",
+        "matutinum.psalm5":  "matutinum.antiphon.psalm4",
+        "matutinum.psalm6":  "matutinum.antiphon.psalm5",
+        "matutinum.psalm7":  "matutinum.antiphon.psalm6",
+        "matutinum.psalm8":  "matutinum.antiphon.psalm7",
+        "matutinum.psalm9":  "matutinum.antiphon.psalm8",
+        "matutinum.psalm10": "matutinum.antiphon.psalm9",
+    ]
+
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
 
@@ -126,7 +316,30 @@ struct OfficeAssembler {
         let dayOverrides = weeklyPsalter[dayKey] ?? [:]
         let seasonOverrides = seasonalHymns[seasonKey] ?? [:]
         let rawTemporalOverrides = context.temporalKey.flatMap { temporalPropers[$0] } ?? [:]
-        let temporalOverrides = Self.expandedOverrides(rawTemporalOverrides)
+        var temporalOverrides = Self.remapProperOverrides(rawTemporalOverrides, hourSlug: template.slug)
+
+        // Day-collect resolution. The collect of the day belongs to Matins,
+        // Lauds, the Little Hours, and Vespers (Prime's and Compline's
+        // collects are invariable and keyed separately). Per-annum ferias
+        // repeat the preceding Sunday's collect; Lent/Passiontide ferias
+        // carry their own as DO's "oratio_2", and at Vespers a DISTINCT
+        // proper collect as "oratio_3". A sanctoral winner's own collect is
+        // layered on top later in hourForToday and wins.
+        if Self.collectHours.contains(template.slug), temporalOverrides["oratio"] == nil {
+            var candidates: [Hour.Part?] = []
+            if template.slug == "vesperae" { candidates.append(rawTemporalOverrides["oratio_3"]) }
+            candidates.append(rawTemporalOverrides["oratio"])
+            candidates.append(rawTemporalOverrides["oratio_2"])
+            if let tKey = context.temporalKey,
+               let sundayKey = Self.precedingSundayKey(tKey),
+               let sunday = temporalPropers[sundayKey] {
+                candidates.append(sunday["oratio"])
+                candidates.append(sunday["oratio_2"])
+            }
+            if let collect = candidates.compactMap({ $0 }).first {
+                temporalOverrides["oratio"] = Self.rekeyed(collect, "oratio")
+            }
+        }
 
         let assembledParts = template.parts.map { part -> Hour.Part in
             guard let key = part.variationKey else { return part }
@@ -137,7 +350,16 @@ struct OfficeAssembler {
 
             // Temporal propers (highest priority for non-psalm parts)
             if let override = temporalOverrides[key] {
-                return override
+                return Self.rekeyed(override, key)
+            }
+
+            // Ferial weekday hymns (per annum): the psalter's own Mon–Sat
+            // hymn cycle beats the season's default (which is the SUNDAY
+            // hymn) on non-festal weekdays. Seasonal hymns still win in
+            // every proper season (Advent, Lent, Paschaltide, ...).
+            if part.type == "hymn", seasonKey == "ordinary", !isFestal,
+               let dayHymn = dayOverrides[key] {
+                return Self.rekeyed(dayHymn, key)
             }
 
             // Seasonal overrides: hymns change every season. Seasonal antiphons
@@ -156,7 +378,7 @@ struct OfficeAssembler {
                     merged.antiphonEng = override.antiphonEng
                     return merged
                 }
-                return override
+                return Self.rekeyed(override, key)
             }
 
             // On festal days, keep the template's festal psalms for Lauds
@@ -179,7 +401,13 @@ struct OfficeAssembler {
             }
 
             if let override = dayOverrides[key] {
-                return override
+                // The ferial hymn/canticle-antiphon/versicle cycle belongs to
+                // the ferial office only — festal days keep the template's
+                // (Sunday) defaults until the proper/commune layers land.
+                if isFestal && Self.ferialOnlyDayKeys.contains(key) {
+                    return part
+                }
+                return Self.rekeyed(override, key)
             }
 
             return part
@@ -191,35 +419,17 @@ struct OfficeAssembler {
 
         // Apply temporal per-psalm antiphon overrides.
         // Temporal keys like "laudes.antiphon.psalm1" replace the antiphon
-        // on the corresponding psalm/canticle part.
+        // on the corresponding psalm/canticle part. Uses the same mapping as
+        // ContentStore.applyProperOverrides (incl. the Matins offset —
+        // matutinum.psalm1 is the invariable Venite).
         let antiphonApplied = psalmInlined.map { part -> Hour.Part in
-            guard let key = part.variationKey else { return part }
-            // Build the antiphon override key for this part's position
-            // e.g., "laudes.psalm1" → check "laudes.antiphon.psalm1"
-            let hourPrefix = key.components(separatedBy: ".").first ?? ""
-            // Lauds has: psalm1, psalm2, psalm3, canticle1, psalm4 (canticle in middle)
-            // Vespers has: psalm1-psalm5 (all psalms)
-            // Antiphon slots are always 1-5 in order. Map accordingly.
-            let antKey: String?
-            if key.hasSuffix(".psalm1") { antKey = "\(hourPrefix).antiphon.psalm1" }
-            else if key.hasSuffix(".psalm2") { antKey = "\(hourPrefix).antiphon.psalm2" }
-            else if key.hasSuffix(".psalm3") { antKey = "\(hourPrefix).antiphon.psalm3" }
-            else if key.hasSuffix(".canticle1") { antKey = "\(hourPrefix).antiphon.psalm4" }
-            else if key.hasSuffix(".psalm4") {
-                // Lauds psalm4 is the 5th element (after canticle1)
-                // Vespers psalm4 is the 4th element
-                antKey = hourPrefix == "laudes" ? "\(hourPrefix).antiphon.psalm5" : "\(hourPrefix).antiphon.psalm4"
-            }
-            else if key.hasSuffix(".psalm5") { antKey = "\(hourPrefix).antiphon.psalm5" }
-            else { antKey = nil }
-
-            if let ak = antKey, let antOverride = temporalOverrides[ak] {
-                var modified = part
-                modified.antiphonLat = antOverride.lat
-                modified.antiphonEng = antOverride.eng
-                return modified
-            }
-            return part
+            guard let key = part.variationKey,
+                  let ak = Self.psalmToAntiphonKey[key],
+                  let antOverride = temporalOverrides[ak] else { return part }
+            var modified = part
+            modified.antiphonLat = antOverride.lat
+            modified.antiphonEng = antOverride.eng
+            return modified
         }
 
         // Septuagesima through Holy Saturday: replace trailing "Allelúja" in
@@ -294,18 +504,18 @@ struct OfficeAssembler {
         let precesHours: Set<String> = [
             "laudes", "vesperae", "prima", "tertia", "sexta", "nona", "completorium",
         ]
-        let precesApplied: [Hour.Part]
-        if (template.slug == "laudes" || template.slug == "vesperae")
-            && shouldIncludePreces(context: context) {
-            precesApplied = insertPreces(into: filteredParts, hour: template.slug)
-        } else if precesHours.contains(template.slug)
-            && !shouldIncludePreces(context: context) {
-            precesApplied = filteredParts.filter { part in
+        var precesApplied = filteredParts
+        if precesHours.contains(template.slug) {
+            // The standalone Pater before the collect is not said at the day
+            // hours under the 1960 rubrics; when the Preces fire they carry
+            // their own Pater. (The opening "Pater, Ave" is kept.)
+            precesApplied = precesApplied.filter { part in
                 !(part.type == "pater" && (part.variationKey ?? "").isEmpty
                   && !(part.label ?? "").contains("Ave"))
             }
-        } else {
-            precesApplied = filteredParts
+            if shouldIncludePreces(context: context, rite: rite, hourSlug: template.slug) {
+                precesApplied = insertPreces(into: precesApplied, hour: template.slug)
+            }
         }
 
         // Suppress Gloria Patri at the end of psalms during Passiontide
@@ -552,44 +762,53 @@ struct OfficeAssembler {
 
     // MARK: - Preces Feriales (Lauds & Vespers)
     //
-    // 1962 Breviary rubric: Preces are said at Lauds and Vespers on ferial
-    // days (Mon-Sat) during Advent and Lent/Passiontide, provided no feast
-    // of Double rank or higher is celebrated. They are NOT said on Sundays,
-    // feast days (rank >= 3 / high-rank weekday feasts), during the Easter
-    // or Pentecost octaves, or on days of obligation.
+    // Rite-specific scope (the preces are said KNEELING, before the collect):
+    //   1962:      at LAUDS only, on Wednesdays and Fridays of Advent, Lent
+    //              and Passiontide, and on Ember days.
+    //   1955:      at Lauds AND Vespers on those same days (Cum nostra kept
+    //              the ferial preces at both hours).
+    //   pre-1955:  at Lauds and Vespers on all ferias of Advent, Lent and
+    //              Passiontide, and on Ember days.
+    // Never on Sundays or on feasts.
 
     /// Determines whether Preces Feriales should be included in the Hour.
-    private func shouldIncludePreces(context: LiturgicalContext) -> Bool {
+    private func shouldIncludePreces(context: LiturgicalContext, rite: MissalRite, hourSlug: String) -> Bool {
         // Never on Sundays
         guard context.dayOfWeek != 0 else { return false }
-
-        // Only during Advent, Lent, or Passiontide
-        guard context.season == .advent || context.season == .lent || context.season == .passion else {
-            return false
-        }
 
         // Not on high-rank weekday feasts (equivalent to Double rank or higher)
         if let slug = context.properSlug, Self.highRankWeekdayFeasts.contains(slug) {
             return false
         }
 
-        return true
+        let penitential = context.season == .advent || context.season == .lent
+            || context.season == .passion
+        let wedOrFri = context.dayOfWeek == 3 || context.dayOfWeek == 5
+
+        switch rite {
+        case .rite1962:
+            guard hourSlug == "laudes" else { return false }
+            return context.isEmberDay || (penitential && wedOrFri)
+        case .rite1955:
+            guard hourSlug == "laudes" || hourSlug == "vesperae" else { return false }
+            return context.isEmberDay || (penitential && wedOrFri)
+        case .pre1955:
+            guard hourSlug == "laudes" || hourSlug == "vesperae" else { return false }
+            return penitential || context.isEmberDay
+        }
     }
 
     /// Inserts the Preces Feriales parts into the assembled hour, placed
-    /// after the Collect and before the concluding "Dómine, exáudi" versicle.
+    /// BEFORE the Collect (they are said kneeling, and conclude with the
+    /// "Dómine, exáudi" that introduces the collect).
     private func insertPreces(into parts: [Hour.Part], hour: String) -> [Hour.Part] {
-        // Find insertion point: after the collect part.
-        guard let collectIndex = parts.lastIndex(where: { $0.type == "collect" }) else {
+        guard let collectIndex = parts.firstIndex(where: { $0.type == "collect" }) else {
             return parts
         }
-
-        let insertionIndex = collectIndex + 1
         let precesParts = Self.makePrecesParts(hour: hour)
-
-        var result = Array(parts[..<insertionIndex])
+        var result = Array(parts[..<collectIndex])
         result.append(contentsOf: precesParts)
-        result.append(contentsOf: parts[insertionIndex...])
+        result.append(contentsOf: parts[collectIndex...])
         return result
     }
 

@@ -502,7 +502,31 @@ object ContentStore {
         val matinsNocturns = if (isClassIorII) 3 else 1
         val matinsTeDeum = computeMatinsTeDeum(ctx, ordo, rite)
 
-        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum)
+        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite)
+
+        // Every layered dict goes through the hour-aware semantic remap
+        // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
+        // versicle numbering, spelling aliases) — the raw DO keys collide
+        // with the template's variationKeys and would otherwise silently
+        // miss (or worse, land on the wrong slot).
+        fun layer(overrides: Map<String, Hour.Part>) {
+            val remapped = OfficeAssembler
+                .remapProperOverrides(overrides, template.slug)
+                .toMutableMap()
+            // 1960 rubrics: a III-class feast's Matins has ONE nocturn — two
+            // Scripture lessons of the feria and the saint's contracted
+            // legend as the third. DO ships the contraction as Lectio94 /
+            // Lectio93; failing that, join the legend lessons 4-6. Without
+            // this, the saint's lessons target the lectio4-9 slots that the
+            // 1-nocturn structure no longer has.
+            if (template.slug == "matutinum" && matinsNocturns == 1 &&
+                "lectio3" !in remapped
+            ) {
+                contractedLesson(remapped)?.let { remapped["lectio3"] = it }
+            }
+            assembled = applyProperOverrides(assembled, remapped)
+        }
+
         if (ordo != null) {
             if (ordo.winner == "sanctoral") {
                 // Office layering (each later layer wins): commune fallback,
@@ -512,16 +536,16 @@ object ContentStore {
                 val code = saintCommune[key] ?: saintCommune[key.take(5)]
                 val commune = code?.let { communeOffice[it] }
                 if (commune != null) {
-                    assembled = applyProperOverrides(assembled, commune)
+                    layer(commune)
                 }
                 val inheritSource = saintOfficeInherit[key] ?: saintOfficeInherit[key.take(5)]
                 val inherited = inheritSource?.let { sanctoralPropers[it] }
                 if (inherited != null) {
-                    assembled = applyProperOverrides(assembled, inherited)
+                    layer(inherited)
                 }
                 val saint = sanctoralPropers[ordo.winnerKey]
                 if (saint != null) {
-                    assembled = applyProperOverrides(assembled, saint)
+                    layer(saint)
                 }
                 // Pre-1955 old-rite variant of the saint's Office ("<key>o"),
                 // e.g. the festive Epiphany-octave lessons the 1960 books
@@ -529,7 +553,7 @@ object ContentStore {
                 if (rite == MissalRite.PRE_1955) {
                     val oSaint = sanctoralPropers[ordo.winnerKey + "o"]
                     if (oSaint != null) {
-                        assembled = applyProperOverrides(assembled, oSaint)
+                        layer(oSaint)
                     }
                 }
             } else {
@@ -537,7 +561,7 @@ object ContentStore {
                 if (temporalKey != null) {
                     val tempOverrides = officeAssembler.temporalPropers[temporalKey]
                     if (tempOverrides != null) {
-                        assembled = applyProperOverrides(assembled, tempOverrides)
+                        layer(tempOverrides)
                     }
                 }
             }
@@ -550,7 +574,7 @@ object ContentStore {
             val oKey = ctx.temporalKey?.let { it + "o" }
             val oOverrides = oKey?.let { officeAssembler.temporalPropers[it] }
             if (oOverrides != null) {
-                assembled = applyProperOverrides(assembled, oOverrides)
+                layer(oOverrides)
             }
         }
 
@@ -561,7 +585,24 @@ object ContentStore {
             ctx.date.monthValue == 12 && ctx.date.dayOfMonth in 17..23) {
             val dateOverrides = officeAssembler.temporalPropers["adv-12-${ctx.date.dayOfMonth}"]
             if (dateOverrides != null) {
-                assembled = applyProperOverrides(assembled, dateOverrides)
+                layer(dateOverrides)
+            }
+        }
+
+        // Commemoration of the concurring office: its antiphon, versicle and
+        // collect follow the collect of the day at Lauds (all rites) and at
+        // Vespers in the pre-1960 rites, which kept most Vespers
+        // commemorations. This is how a suppressed feria, a commemorated
+        // saint, or an octave day stays present in the day's office.
+        val commemKey = ordo?.commemoration
+        if (!commemKey.isNullOrEmpty() &&
+            (template.slug == "laudes" ||
+                (template.slug == "vesperae" && rite != MissalRite.RITE_1962))
+        ) {
+            val commemData = sanctoralPropers[commemKey]
+                ?: officeAssembler.temporalPropers[commemKey]
+            if (commemData != null) {
+                assembled = insertCommemoration(assembled, commemData, template.slug)
             }
         }
 
@@ -596,39 +637,24 @@ object ContentStore {
         return false
     }
 
-    private val psalmToAntiphonKey = mapOf(
-        "laudes.psalm1" to "laudes.antiphon.psalm1",
-        "laudes.psalm2" to "laudes.antiphon.psalm2",
-        "laudes.psalm3" to "laudes.antiphon.psalm3",
-        "laudes.canticle1" to "laudes.antiphon.psalm4",
-        "laudes.psalm4" to "laudes.antiphon.psalm5",
-        "vesperae.psalm1" to "vesperae.antiphon.psalm1",
-        "vesperae.psalm2" to "vesperae.antiphon.psalm2",
-        "vesperae.psalm3" to "vesperae.antiphon.psalm3",
-        "vesperae.psalm4" to "vesperae.antiphon.psalm4",
-        "vesperae.psalm5" to "vesperae.antiphon.psalm5",
-        "matutinum.psalm2" to "matutinum.antiphon.psalm1",
-        "matutinum.psalm3" to "matutinum.antiphon.psalm2",
-        "matutinum.psalm4" to "matutinum.antiphon.psalm3",
-        "matutinum.psalm5" to "matutinum.antiphon.psalm4",
-        "matutinum.psalm6" to "matutinum.antiphon.psalm5",
-        "matutinum.psalm7" to "matutinum.antiphon.psalm6",
-        "matutinum.psalm8" to "matutinum.antiphon.psalm7",
-        "matutinum.psalm9" to "matutinum.antiphon.psalm8",
-        "matutinum.psalm10" to "matutinum.antiphon.psalm9",
-    )
-
     private fun applyProperOverrides(hour: Hour, overrides: Map<String, Hour.Part>): Hour {
         val updatedParts = hour.parts.map { part ->
             val key = part.variationKey
-            // Base part: a direct full-part override, else the existing part.
-            // (The Triduum supplies both a replacement psalm and its proper
-            // antiphon, so apply the antiphon on top of the replacement.)
-            val base = if (key != null) overrides[key] ?: part else part
+            // Base part: a direct full-part override (rekeyed onto the
+            // template's slot so later layers can still address it), else
+            // the existing part. (The Triduum supplies both a replacement
+            // psalm and its proper antiphon, so apply the antiphon on top of
+            // the replacement.)
+            val base = if (key != null) {
+                (overrides[key] ?: part).copy(variationKey = key)
+            } else {
+                part
+            }
             // Proper per-psalm antiphons: set antiphonLat/antiphonEng on the
-            // psalm part without discarding the psalm text/ref.
+            // psalm part without discarding the psalm text/ref. Mapping
+            // shared with OfficeAssembler.
             if (key != null) {
-                val antKey = psalmToAntiphonKey[key]
+                val antKey = OfficeAssembler.PSALM_TO_ANTIPHON_KEY[key]
                 val antPart = if (antKey != null) overrides[antKey] else null
                 if (antPart != null) {
                     return@map base.copy(antiphonLat = antPart.lat, antiphonEng = antPart.eng)
@@ -645,6 +671,72 @@ object ContentStore {
             part
         }
         return hour.copy(parts = updatedParts)
+    }
+
+    /**
+     * DO's contracted single legend lesson for 1-nocturn feast Matins:
+     * Lectio94, else Lectio93, else the legend lessons 4-6 joined.
+     */
+    private fun contractedLesson(overrides: Map<String, Hour.Part>): Hour.Part? {
+        (overrides["lectio94"] ?: overrides["lectio93"])?.let {
+            return it.copy(variationKey = "lectio3")
+        }
+        val legend = listOf("lectio4", "lectio5", "lectio6").mapNotNull { overrides[it] }
+        if (legend.isEmpty()) return null
+        val engs = legend.mapNotNull { it.eng }
+        return legend[0].copy(
+            variationKey = "lectio3",
+            lat = legend.mapNotNull { it.lat }.joinToString("\n\n"),
+            eng = if (engs.isEmpty()) null else engs.joinToString("\n\n"),
+        )
+    }
+
+    /**
+     * Builds and inserts the commemoration block (antiphon -> versicle ->
+     * collect) after the day's collect. Pieces the data lacks are omitted;
+     * without a collect there is no commemoration to make.
+     */
+    private fun insertCommemoration(hour: Hour, data: Map<String, Hour.Part>, hourSlug: String): Hour {
+        val oratio = data["oratio"] ?: return hour
+        val collectIdx = hour.parts.indexOfLast {
+            it.variationKey == "oratio" && it.type == "collect"
+        }
+        if (collectIdx == -1) return hour
+
+        val block = mutableListOf<Hour.Part>()
+        block.add(Hour.Part(type = "heading", label = "Commemoratio"))
+
+        // The commemorated office's own canticle antiphon: Benedictus at
+        // Lauds (DO Ant 2), Magnificat at Vespers (Ant 3, else Ant 1). The
+        // curated communes keep single-line canticle antiphons under
+        // ant_laudes / ant_vespera.
+        fun singleLine(part: Hour.Part?): Hour.Part? {
+            val lat = part?.lat ?: return null
+            return if ("\n" in lat) null else part
+        }
+        val ant = if (hourSlug == "laudes") {
+            data["ant_2"] ?: singleLine(data["ant_laudes"])
+        } else {
+            data["ant_3"] ?: data["ant_1"] ?: singleLine(data["ant_vespera"])
+        }
+        if (ant != null) {
+            block.add(ant.copy(variationKey = null, label = "Antiphon"))
+        }
+
+        val versum = if (hourSlug == "laudes") {
+            data["versum_2"] ?: data["versum_1"]
+        } else {
+            data["versum_3"] ?: data["versum_1"]
+        }
+        if (versum != null) {
+            block.add(versum.copy(variationKey = null))
+        }
+
+        block.add(oratio.copy(variationKey = null, label = "Oratio"))
+
+        val parts = hour.parts.toMutableList()
+        parts.addAll(collectIdx + 1, block)
+        return hour.copy(parts = parts)
     }
 
     fun mysterySet(slug: String): MysterySetData? =

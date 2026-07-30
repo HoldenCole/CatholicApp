@@ -2018,7 +2018,7 @@
         "label": "Collect",
         "lat": "Dómine Deus omnípotens, qui ad princípium hujus diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam justítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera. Per Dóminum nostrum Jesum Christum. Amen.",
         "eng": "O Lord, almighty God, who hast brought us to the beginning of this day: defend us in the same by Thy power; that during this day we may fall into no sin, but that all our words may proceed and all our thoughts and works be directed to the doing of Thy justice. Through our Lord Jesus Christ. Amen.",
-        "variationKey": "oratio"
+        "variationKey": "oratio_prima"
       },
       {
         "type": "closing",
@@ -3205,11 +3205,6 @@
         "variationKey": "vesperae.capitulum"
       },
       {
-        "type": "responsory",
-        "label": "Responsorium Breve",
-        "variationKey": "responsory_vespera_1"
-      },
-      {
         "type": "hymn",
         "label": "Hymn",
         "title": "Lucis Creátor óptime",
@@ -3387,14 +3382,6 @@
         "engR": "O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Ghost."
       },
       {
-        "type": "hymn",
-        "label": "Hymn",
-        "title": "Te lucis ante términum",
-        "lat": "Te lucis ante términum,\nrerum Creátor, póscimus,\nut pro tua cleméntia\nsis præsul et custódia.\n\nProcul recédant sómnia,\net nóctium phantásmata;\nhostémque nostrum cómprime,\nne polluántur córpora.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\ncum Spíritu Paráclito\nregnans per omne sǽculum. Amen.",
-        "eng": "To Thee before the close of day,\nCreator of the world, we pray:\nthat with Thy wonted favour Thou\nwouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,\nfrom fears and terrors of the night;\nwithhold from us our ghostly foe,\nthat spot of sin we may not know.\n\nO Father, that we ask be done,\nthrough Jesus Christ, Thine only Son,\nwho, with the Holy Ghost and Thee,\nshall live and reign eternally. Amen.",
-        "variationKey": "completorium.hymn"
-      },
-      {
         "type": "antiphon",
         "label": "Antiphon",
         "lat": "Miserére mihi, Dómine, et exáudi oratiónem meam.",
@@ -3546,6 +3533,14 @@
         "variationKey": "completorium.psalm3"
       },
       {
+        "type": "hymn",
+        "label": "Hymn",
+        "title": "Te lucis ante términum",
+        "lat": "Te lucis ante términum,\nrerum Creátor, póscimus,\nut pro tua cleméntia\nsis præsul et custódia.\n\nProcul recédant sómnia,\net nóctium phantásmata;\nhostémque nostrum cómprime,\nne polluántur córpora.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\ncum Spíritu Paráclito\nregnans per omne sǽculum. Amen.",
+        "eng": "To Thee before the close of day,\nCreator of the world, we pray:\nthat with Thy wonted favour Thou\nwouldst be our guard and keeper now.\n\nFrom all ill dreams defend our sight,\nfrom fears and terrors of the night;\nwithhold from us our ghostly foe,\nthat spot of sin we may not know.\n\nO Father, that we ask be done,\nthrough Jesus Christ, Thine only Son,\nwho, with the Holy Ghost and Thee,\nshall live and reign eternally. Amen.",
+        "variationKey": "completorium.hymn"
+      },
+      {
         "type": "capitulum",
         "label": "Capitulum",
         "ref": "Jeremiah 14:9",
@@ -3566,6 +3561,14 @@
         "r2Lat": "Sub umbra alárum tuárum prótege nos.",
         "r2Eng": "Protect us under the shadow of Thy wings.",
         "variationKey": "completorium.responsory"
+      },
+      {
+        "type": "vr",
+        "label": "Versicle",
+        "lat": "Custódi nos, Dómine, ut pupíllam óculi.",
+        "eng": "Keep us, O Lord, as the apple of Thine eye.",
+        "latR": "Sub umbra alárum tuárum prótege nos.",
+        "engR": "Protect us under the shadow of Thy wings."
       },
       {
         "type": "canticle",
@@ -3605,7 +3608,7 @@
         "label": "Collect",
         "lat": "Vísita, quǽsumus, Dómine, habitatiónem istam, et omnes insídias inimíci ab ea longe repélle: Angeli tui sancti hábitent in ea, qui nos in pace custódiant. Per Dóminum nostrum Jesum Christum. Amen.",
         "eng": "Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all snares of the enemy: let Thy holy Angels dwell herein, to preserve us in peace. Through our Lord Jesus Christ. Amen.",
-        "variationKey": "oratio"
+        "variationKey": "oratio_completorium"
       },
       {
         "type": "marian",

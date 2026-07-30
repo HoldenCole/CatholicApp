@@ -1016,7 +1016,7 @@
       "label": "Antíphona",
       "lat": "Ínnocens mánibus * et mundo corde ascéndet in montem Dómini.",
       "eng": "The innocent in hands * and clean of heart shall ascend the mountain of the Lord.",
-      "variationKey": "prima.antiphon"
+      "variationKey": "ant_prima"
     },
     "prima.psalm1": {
       "type": "psalm",
@@ -1148,7 +1148,7 @@
       "label": "Antíphona",
       "lat": "Illuminátio mea * et salus mea Dóminus.",
       "eng": "My light * and my salvation is the Lord.",
-      "variationKey": "tertia.antiphon"
+      "variationKey": "ant_tertia"
     },
     "tertia.psalm1": {
       "type": "psalm",
@@ -1304,7 +1304,7 @@
       "label": "Antíphona",
       "lat": "In tua justítia * líbera me, Dómine.",
       "eng": "Deliver me * in thy justice, O Lord.",
-      "variationKey": "sexta.antiphon"
+      "variationKey": "ant_sexta"
     },
     "sexta.psalm1": {
       "type": "psalm",
@@ -1456,7 +1456,7 @@
       "label": "Antíphona",
       "lat": "Exsultáte, justi, * et gloriámini, omnes recti corde.",
       "eng": "Rejoice ye  just, * and glory, all ye right of heart.",
-      "variationKey": "nona.antiphon"
+      "variationKey": "ant_nona"
     },
     "nona.psalm1": {
       "type": "psalm",
@@ -2076,14 +2076,7 @@
       "label": "Capitulum (Rom 13:12-13)",
       "lat": "Nox præcéssit, dies autem appropinquávit. Abiciámus ergo ópera tenebrárum, et induámur arma lucis. Sicut in die honéste ambulémus.",
       "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
-      "variationKey": "laudes.capitulum"
-    },
-    "responsory_vespera_1": {
-      "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "vesperae.responsory"
+      "variationKey": "capitulum_laudes"
     },
     "versum_tertia": {
       "type": "vr",
@@ -2159,6 +2152,45 @@
       "eng": "℣. Sing to the Lord, O ye his saints.",
       "latR": "℟. Et confitémini memóriæ sanctitátis ejus.",
       "engR": "℟. And give praise to the memory of his holiness."
+    },
+    "hymnus_laudes": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Splendor Patérnæ glóriæ",
+      "lat": "Splendor Patérnæ glóriæ,\nDe luce lucem próferens,\nLux lucis, et fons lúminis,\nDiem dies illúminans:\n\nVerúsque sol illábere,\nMicans nitóre pérpeti:\nJubárque Sancti Spíritus\nInfúnde nostris sénsibus.\n\nVotis vocémus et Patrem,\nPatrem poténtis grátiæ,\nPatrem perénnis glóriæ:\nCulpam reléget lúbricam.\n\nConfírmet actus strénuos:\nDentes retúndat ínvidi:\nCasus secúndet ásperos:\nAgénda recte dírigat.\n\nMentem gubérnet et regat:\nSit pura nobis cástitas:\nFides calóre férveat,\nFraudis venéna nésciat.\n\nChristúsque nobis sit cibus,\nPotúsque noster sit fides:\nLæti bibámus sóbriam\nProfusiónem Spíritus.\n\nLætus dies hic tránseat:\nPudor sit ut dilúculum:\nFides velut merídies:\nCrepúsculum mens nésciat.\n\nAuróra lucem próvehit,\nCum luce nobis pródeat\nIn Patre totus Fílius,\nEt totus in Verbo Pater.\n\nDeo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc et per omne sǽculum.\nAmen.",
+      "eng": "O splendour of God’s glory bright,\nO thou that bringest light from light,\nO light of light, light’s living spring,\nO day, all days illumining.\n\nO thou true sun, on us thy glance\nLet fall in royal radiance,\nThe Spirit’s sanctifying beam\nUpon our earthly senses stream.\n\nThe Father too our prayers implore,\nFather of glory evermore,\nThe Father of all grace and might,\nTo banish sin from our delight:\n\nTo guide whate’er we nobly do,\nWith love all envy to subdue,\nTo make ill-fortune turn to fair,\nAnd give us grace our wrongs to bear.\n\nOur mind be in his keeping placed,\nOur body true to him and chaste,\nWhere only faith her fire shall feed,\nAnd burn the tares of Satan’s seed.\n\nAnd Christ to us for food shall be,\nFrom him our drink that welleth free,\nThe Spirit’s wine, that maketh whole,\nAnd mocking not, exalts the soul.\n\nRejoicing may this day go hence,\nLike virgin dawn our innocence,\nLike fiery noon our faith appear,\nNor know the gloom of twilight drear.\n\nMorn in her rosy car is borne;\nLet him come forth our perfect morn,\nThe Word in God the Father One,\nThe Father perfect in the Son.\n\nAll laud to God the Father be;\nAll praise, Eternal Son, to thee;\nAll glory, as is ever meet,\nTo God the Holy Paraclete.\nAmen.",
+      "variationKey": "hymnus_laudes"
+    },
+    "hymnus_vespera": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Imménse cæli Cónditor",
+      "lat": "Imménse cæli Cónditor,\nQui mixta ne confúnderent,\nAquæ fluénta dívidens,\nCælum dedísti límitem.\n\nFirmans locum cæléstibus,\nSimúlque terræ rívulis;\nUt unda flammas témperet,\nTerræ solum ne díssipent.\n\nInfúnde nunc, piíssime,\nDonum perénnis grátiæ:\nFraudis novæ ne cásibus\nNos error átterat vetus.\n\nLucem fides adáugeat:\nSic lúminis jubar ferat:\nHæc vana cuncta próterat:\nHanc falsa nulla cómprimant.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\nCum Spíritu Paráclito\nRegnans per omne sǽculum.\nAmen.",
+      "eng": "O great Creator of the sky,\nWho wouldest not the floods on high\nWith earthly waters to confound,\nBut mad’st the firmament their bound;\n\nThe floods above thou didst ordain;\nThe floods below thou didst restrain:\nThat moisture might attemper heat,\nLest the parched earth should ruin meet.\n\nUpon our souls, good Lord, bestow\nThy gift of grace in endless flow:\nLest some renewed deceit or wile\nOf former sin should us beguile.\n\nLet faith discover heav’nly light;\nSo shall its rays direct us right:\nAnd let this faith each error chase,\nAnd never give to falsehood place.\n\nGrant this, O Father, ever One\nWith Christ, thy sole-begotten Son,\nAnd Holy Ghost, whom all adore,\nReigning and blest forevermore.\nAmen.",
+      "variationKey": "hymnus_vespera"
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "label": "Antiphon ad Benedictus",
+      "lat": "Benedíctus * Dóminus Deus Israël, quia visitávit et liberávit nos.",
+      "eng": "Blessed be the Lord * the God of Israel, because he has visited and redeemed his people.",
+      "variationKey": "ant_laudes"
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "Magníficat * ánima mea Dóminum, quia respéxit Deus humilitátem meam.",
+      "eng": "My soul * magnifies the Lord, because God has regarded my lowliness.",
+      "variationKey": "ant_vespera"
+    },
+    "versum_1": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Repléti sumus mane misericórdia tua.",
+      "eng": "We are filled in the morning with thy mercy.",
+      "latR": "Exsultávimus, et delectáti sumus.",
+      "engR": "And we have rejoiced, and are delighted.",
+      "variationKey": "versum_1"
     }
   },
   "tuesday": {
@@ -3089,7 +3121,7 @@
       "label": "Antíphona",
       "lat": "Deus meus * in te confído non erubéscam.",
       "eng": "In thee, O my God, * I put my trust; let me not be ashamed.",
-      "variationKey": "prima.antiphon"
+      "variationKey": "ant_prima"
     },
     "prima.psalm1": {
       "type": "psalm",
@@ -3209,7 +3241,7 @@
       "label": "Antíphona",
       "lat": "Respéxit me * et exaudívit deprecatiónem meam Dóminus.",
       "eng": "The Lord hath heard * my supplication: the Lord hath received my prayer.",
-      "variationKey": "tertia.antiphon"
+      "variationKey": "ant_tertia"
     },
     "tertia.psalm1": {
       "type": "psalm",
@@ -3333,7 +3365,7 @@
       "label": "Antíphona",
       "lat": "Suscepísti me, Dómine: * et confirmásti me in conspéctu tuo.",
       "eng": "But thou hast upheld me, O Lord, * and hast established me in thy sight for ever.",
-      "variationKey": "sexta.antiphon"
+      "variationKey": "ant_sexta"
     },
     "sexta.psalm1": {
       "type": "psalm",
@@ -3481,7 +3513,7 @@
       "label": "Antíphona",
       "lat": "Salvásti nos, * Dómine, et in nómine tuo confitébimur in sǽcula.",
       "eng": "Thou hast saved us, O Lord, * and in thy name we will give praise for ever.",
-      "variationKey": "nona.antiphon"
+      "variationKey": "ant_nona"
     },
     "nona.psalm1": {
       "type": "psalm",
@@ -4117,14 +4149,7 @@
       "label": "Capitulum (Rom 13:12-13)",
       "lat": "Nox præcéssit, dies autem appropinquávit. Abiciámus ergo ópera tenebrárum, et induámur arma lucis. Sicut in die honéste ambulémus.",
       "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
-      "variationKey": "laudes.capitulum"
-    },
-    "responsory_vespera_1": {
-      "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "vesperae.responsory"
+      "variationKey": "capitulum_laudes"
     },
     "versum_tertia": {
       "type": "vr",
@@ -4200,6 +4225,45 @@
       "eng": "℣. O Lord, be not thou silent, forgive me.",
       "latR": "℟. Quóniam íncola ego sum apud te et peregrínus.",
       "engR": "℟. For I am a stranger with thee, and a sojourner."
+    },
+    "hymnus_laudes": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Ales diéi núntius",
+      "lat": "Ales diéi núntius\nLucem propínquam prǽcinit:\nNos excitátor méntium\nJam Christus ad vitam vocat.\n\nAuférte, clamat, léctulos,\nÆgro sopóre désides:\nCastíque, recti, ac sóbrii\nVigiláte, jam sum próximus.\n\nJesum ciámus vócibus,\nFlentes, precántes, sóbrii:\nInténta supplicátio\nDormíre cor mundum vetat.\n\nTu, Christe, somnum díscute:\nTu rumpe noctis víncula:\nTu solve peccátum vetus,\nNovúmque lumen íngere.\n\nDeo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc et per omne sǽculum.\nAmen.",
+      "eng": "As the bird, whose clarion gay\nSounds before the dawn is grey,\nChrist, who brings the spirit’s day,\nCalls us, close at hand:\n\nWake! he cries, and for my sake,\nFrom your eyes dull slumbers shake!\nSober, righteous, chaste, awake!\nAt the door I stand!\n\nLord, to thee we lift on high\nFervent prayer and bitter cry:\nHearts aroused to pray and sigh\nMay not slumber more:\n\nBreak the sleep of death and time,\nForged by Adam’s ancient crime;\nAnd the light of Eden’s prime\nTo the world restore!\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "variationKey": "hymnus_laudes"
+    },
+    "hymnus_vespera": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Tellúris alme Cónditor",
+      "lat": "Tellúris alme Cónditor,\nMundi solum qui séparans,\nPulsis aquæ moléstiis,\nTerram dedísti immóbilem:\n\nUt germen aptum próferens,\nFulvis decóra flóribus,\nFecúnda fructu sísteret,\nPastúmque gratum rédderet.\n\nMentis perústæ vúlnera\nMunda viróre grátiæ:\nUt facta fletu díluat,\nMotúsque pravos átterat.\n\nJussis tuis obtémperet:\nNullis malis appróximet:\nBonis repléri gáudeat,\nEt mortis ictum nésciat.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\nCum Spíritu Paráclito\nRegnans per omne sǽculum.\nAmen.",
+      "eng": "Earth's mighty Maker, whose command\nRaised from the sea the solid land;\nAnd drove each billowy heap away,\nAnd bade the earth stand firm for aye:\n\nThat so, with flowers of golden hue,\nThe seeds of each it might renew;\nAnd fruit-trees bearing fruit might yield,\nAnd pleasant pasture of the field:\n\nOur spirit’s rankling wounds efface\nWith dewy freshness of thy grace:\nThat grief may cleanse each deed of ill,\nAnd o’er each lust may triumph still.\n\nLet every soul thy law obey,\nAnd keep from every evil way;\nRejoice each promised good to win,\nAnd flee from every mortal sin.\n\nHear thou our prayer, Almighty King!\nHear thou our praises, while we sing,\nAdoring with the heavenly host,\nThe Father, Son, and Holy Ghost!\nAmen.",
+      "variationKey": "hymnus_vespera"
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "label": "Antiphon ad Benedictus",
+      "lat": "Eréxit nobis * Dóminus cornu salútis in domo David púeri sui.",
+      "eng": "The Lord has raised up * a horn of salvation for us in the house of David his servant.",
+      "variationKey": "ant_laudes"
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "Exsultávit * spíritus meus in Deo salutári meo.",
+      "eng": "My spirit rejoices * in God, in my Saviour.",
+      "variationKey": "ant_vespera"
+    },
+    "versum_1": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Repléti sumus mane misericórdia tua.",
+      "eng": "We are filled in the morning with thy mercy.",
+      "latR": "Exsultávimus, et delectáti sumus.",
+      "engR": "And we have rejoiced, and are delighted.",
+      "variationKey": "versum_1"
     }
   },
   "wednesday": {
@@ -5274,7 +5338,7 @@
       "label": "Antíphona",
       "lat": "Misericórdia tua, * Dómine, ante óculos meos: et complácui in veritáte tua.",
       "eng": "For thy mercy, * O Lord, is before my eyes; and I am well pleased with thy truth.",
-      "variationKey": "prima.antiphon"
+      "variationKey": "ant_prima"
     },
     "prima.psalm1": {
       "type": "psalm",
@@ -5418,7 +5482,7 @@
       "label": "Antíphona",
       "lat": "Deus ádjuvat me: * et Dóminus suscéptor est ánimæ meæ.",
       "eng": "For behold God is my helper: * and the Lord is the protector of my soul.",
-      "variationKey": "tertia.antiphon"
+      "variationKey": "ant_tertia"
     },
     "tertia.psalm1": {
       "type": "psalm",
@@ -5582,7 +5646,7 @@
       "label": "Antíphona",
       "lat": "In Deo sperávi * non timébo quid fáciat mihi homo.",
       "eng": "In God I have put my trust * I will not fear what flesh can do against me.",
-      "variationKey": "sexta.antiphon"
+      "variationKey": "ant_sexta"
     },
     "sexta.psalm1": {
       "type": "psalm",
@@ -5762,7 +5826,7 @@
       "label": "Antíphona",
       "lat": "Deus meus * misericórdia tua prævéniet me.",
       "eng": "My God, * his mercy shall prevent me.",
-      "variationKey": "nona.antiphon"
+      "variationKey": "ant_nona"
     },
     "nona.psalm1": {
       "type": "psalm",
@@ -6422,14 +6486,7 @@
       "label": "Capitulum (Rom 13:12-13)",
       "lat": "Nox præcéssit, dies autem appropinquávit. Abiciámus ergo ópera tenebrárum, et induámur arma lucis. Sicut in die honéste ambulémus.",
       "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
-      "variationKey": "laudes.capitulum"
-    },
-    "responsory_vespera_1": {
-      "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "vesperae.responsory"
+      "variationKey": "capitulum_laudes"
     },
     "versum_tertia": {
       "type": "vr",
@@ -6505,6 +6562,45 @@
       "eng": "℣. To my hearing thou shalt give joy and gladness.",
       "latR": "℟. Et exsultábunt ossa humiliáta.",
       "engR": "℟. And the bones that have been humbled shall rejoice."
+    },
+    "hymnus_laudes": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Nox, et tenébræ, et núbila",
+      "lat": "Nox, et tenébræ, et núbila,\nConfúsa mundi et túrbida:\nLux intrat, albéscit polus:\nChristus venit: discédite.\n\nCalígo terræ scínditur\nPercússa solis spículo,\nRebúsque jam color redit,\nVultu niténtis síderis.\n\nTe, Christe, solum nóvimus:\nTe mente pura et simplici,\nFlendo et canéndo quǽsumus,\nInténde nostris sénsibus.\n\nSunt multa fucis íllita,\nQuæ luce purgéntur tua:\nTu, vera lux cæléstium,\nVultu seréno illúmina.\n\nDeo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc et per omne sǽculum.\nAmen.",
+      "eng": "Day is breaking, dawn is bright:\nHence, vain shadows of the night!\nMists that dim our mortal sight,\nChrist is come! Depart!\n\nDarkness routed lifts her wings\nAs the radiance upwards springs:\nThrough the world of wakened things\nLife and colour dart.\n\nThee, O Christ, alone we know:\nSinging even in our woe,\nWith pure hearts to thee we go:\nOn our senses shine!\n\nIn thy beams be purged away\nAll that leads our thoughts astray!\nThrough our spirits, King of day,\nPour thy light divine!\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "variationKey": "hymnus_laudes"
+    },
+    "hymnus_vespera": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Cæli Deus sanctíssime",
+      "lat": "Cæli Deus sanctíssime,\nQui lúcidas mundi plagas\nCandóre pingis ígneo,\nAugens decóro lúmine:\n\nQuarto die qui flámmeam\nDum solis accéndis rotam,\nLunæ minístras órdinem,\nVagósque cursus síderum:\n\nUt nóctibus, vel lúmini\nDiremptiónis términum,\nPrimórdiis et ménsium\nSignum dares notíssimum;\n\nExpélle noctem córdium:\nAbstérge sordes méntium:\nResólve culpæ vínculum:\nEvérte moles críminum.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\nCum Spíritu Paráclito\nRegnans per omne sǽculum.\nAmen.",
+      "eng": "O God, whose hand hath spread the sky,\nAnd all its shining hosts on high,\nAnd painting it with fiery light,\nMade it so beauteous and so bright:\n\nThou, when the fourth day was begun,\nDidst frame the circle of the sun,\nAnd set the moon for ordered change,\nAnd planets for their wider range:\n\nTo night and day, by certain line,\nTheir varying bounds thou didst assign;\nAnd gav’st a signal, known and meet,\nFor months begun and months complete.\n\nEnlighten thou the hearts of men:\nPolluted souls make pure again:\nUnloose the bands of guilt within:\nRemove the burden of our sin.\n\nGrant this, O Father, ever One\nWith Christ thy sole-begotten Son,\nWhom, with the Spirit we adore,\nOne God, both now and evermore.\nAmen.",
+      "variationKey": "hymnus_vespera"
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "label": "Antiphon ad Benedictus",
+      "lat": "De manu ómnium * qui odérunt nos, liberávit nos Dóminus.",
+      "eng": "From the hand of all * who hate us, the Lord has delivered us.",
+      "variationKey": "ant_laudes"
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "Respéxit Dóminus * humilitátem meam, et fecit in me magna, qui potens est.",
+      "eng": "The Lord has regarded * my lowliness, and he who is mighty has done great things through me.",
+      "variationKey": "ant_vespera"
+    },
+    "versum_1": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Repléti sumus mane misericórdia tua.",
+      "eng": "We are filled in the morning with thy mercy.",
+      "latR": "Exsultávimus, et delectáti sumus.",
+      "engR": "And we have rejoiced, and are delighted.",
+      "variationKey": "versum_1"
     }
   },
   "friday": {
@@ -7647,7 +7743,7 @@
       "label": "Antíphona",
       "lat": "Ne discédas a me, * Dómine: quóniam tribulátio próxima est: quóniam non est qui ádjuvet.",
       "eng": "Depart not from me, * O Lord, for tribulation is very near; for there is none to help me.",
-      "variationKey": "prima.antiphon"
+      "variationKey": "ant_prima"
     },
     "prima.psalm1": {
       "type": "psalm",
@@ -7811,7 +7907,7 @@
       "label": "Antíphona",
       "lat": "Éxcita, Dómine, * poténtiam tuam, ut salvos fácias nos.",
       "eng": "Stir up thy might, O Lord, * and come to save us.",
-      "variationKey": "tertia.antiphon"
+      "variationKey": "ant_tertia"
     },
     "tertia.psalm1": {
       "type": "psalm",
@@ -7951,7 +8047,7 @@
       "label": "Antíphona",
       "lat": "Beáti, qui hábitant * in domo tua, Dómine.",
       "eng": "Blessed are they * that dwell in thy house, O Lord.",
-      "variationKey": "sexta.antiphon"
+      "variationKey": "ant_sexta"
     },
     "sexta.psalm1": {
       "type": "psalm",
@@ -8059,7 +8155,7 @@
       "label": "Antíphona",
       "lat": "Misericórdia et véritas * præcédent fáciem tuam, Dómine.",
       "eng": "Mercy and truth * shall go before thy face, O Lord.",
-      "variationKey": "nona.antiphon"
+      "variationKey": "ant_nona"
     },
     "nona.psalm1": {
       "type": "psalm",
@@ -8851,14 +8947,7 @@
       "label": "Capitulum (Rom 13:12-13)",
       "lat": "Nox præcéssit, dies autem appropinquávit. Abiciámus ergo ópera tenebrárum, et induámur arma lucis. Sicut in die honéste ambulémus.",
       "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
-      "variationKey": "laudes.capitulum"
-    },
-    "responsory_vespera_1": {
-      "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "vesperae.responsory"
+      "variationKey": "capitulum_laudes"
     },
     "versum_tertia": {
       "type": "vr",
@@ -8934,6 +9023,45 @@
       "eng": "℣. Let them know that the Lord is thy name.",
       "latR": "℟. Tu solus Altíssimus super omnem terram.",
       "engR": "℟. Thou alone art the most High over all the earth."
+    },
+    "hymnus_laudes": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Ætérna cæli glória",
+      "lat": "Ætérna cæli glória,\nBeáta spes mortálium,\nSummi Tonántis Únice,\nCastǽque proles Vírginis:\n\nDa déxteram surgéntibus,\nExsúrgat et mens sóbria,\nFlagrans et in laudem Dei\nGrates repéndat débitas.\n\nOrtus refúlget Lúcifer,\nPræítque solem núntius:\nCadunt tenébræ nóctium:\nLux sancta nos illúminet.\n\nManénsque nostris sénsibus,\nNoctem repéllat sǽculi,\nOmníque fine témporis\nPurgáta servet péctora.\n\nQuæsíta jam primum fides\nIn corde radíces agat:\nSecúnda spes congáudeat,\nQua major exstat cáritas.\n\nDeo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc et per omne sǽculum.\nAmen.",
+      "eng": "O Christ, whose glory fills the heaven,\nOur only hope, in mercy given;\nChild of a Virgin meek and pure;\nSon of the Highest evermore:\n\nGrant us thine aid thy praise to sing,\nAs opening days new duties bring;\nThat with the light our life may be\nRenewed and sanctified by thee.\n\nThe morning star fades from the sky,\nThe sun breaks forth; night’s shadows fly:\nO Thou, true Light, upon us shine:\nOur darkness turn to light divine.\n\nWithin us grant thy light to dwell;\nAnd from our souls dark sins expel;\nCleanse thou our minds from stain of ill,\nAnd with thy peace our bosoms fill.\n\nTo us strong faith forever give,\nWith joyous hope, in thee to live;\nThat life’s rough way may ever be\nMade strong and pure by charity.\n\nAll laud to God the Father be,\nAll praise, Eternal Son, to thee:\nAll glory, as is ever meet,\nTo God the holy Paraclete,\nAmen.",
+      "variationKey": "hymnus_laudes"
+    },
+    "hymnus_vespera": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Hóminis superne Cónditor",
+      "lat": "Hóminis superne Cónditor,\nQui cuncta solus órdinans,\nHumum jubes prodúcere\nReptántis et feræ genus:\n\nEt magna rerum córpora,\nDictu jubéntis vívida,\nPer témporum certas vices\nObtemperáre sérvulis:\n\nRepélle, quod cupídinis\nCiénte vi nos ímpetit,\nAut móribus se súggerit,\nAut áctibus se intérserit.\n\nDa gaudiórum prǽmia,\nDa gratiárum múnera:\nDissólve litis víncula:\nAstrínge pacis fœ́dera.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\nCum Spíritu Paráclito\nRegnans per omne sǽculum.\nAmen.",
+      "eng": "Maker of man, who from thy throne\nDost order all things, God alone;\nBy whose decree the teeming earth\nTo reptile and to beast gave birth:\n\nThe mighty forms that fill the land,\nInstinct with life at thy command,\nAre given subdued to humankind\nFor service in their rank assigned.\n\nFrom all thy servants drive away\nWhate’er of thought impure to-day\nHath been with open action blent,\nOr mingled with the heart’s intent.\n\nIn heaven thine endless joys bestow,\nAnd grant thy gifts of grace below;\nFrom chains of strife our souls release,\nBind fast the gentle bands of peace.\n\nGrant this, O Father, ever One\nWith Christ, thy sole-begotten Son,\nWhom, with the Spirit we adore,\nOne God, both now and evermore.\nAmen.",
+      "variationKey": "hymnus_vespera"
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "label": "Antiphon ad Benedictus",
+      "lat": "Per víscera misericórdiæ * Dei nostri visitávit nos Óriens ex alto.",
+      "eng": "Through the tender mercy * of our God, the dayspring from on high has visited us.",
+      "variationKey": "ant_laudes"
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "Depósuit Dóminus * poténtes de sede, et exaltávit húmiles.",
+      "eng": "The Lord has put down * the mighty from their seat, and exalted the humble and meek.",
+      "variationKey": "ant_vespera"
+    },
+    "versum_1": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Repléti sumus mane misericórdia tua.",
+      "eng": "We are filled in the morning with thy mercy.",
+      "latR": "Exsultávimus, et delectáti sumus.",
+      "engR": "And we have rejoiced, and are delighted.",
+      "variationKey": "versum_1"
     }
   },
   "saturday": {
@@ -10176,7 +10304,7 @@
       "label": "Antíphona",
       "lat": "Exaltáre, Dómine, * qui júdicas terram: redde retributiónem supérbis.",
       "eng": "Lift up thyself, O Lord, * thou that judgest the earth: render retribution to the proud.",
-      "variationKey": "prima.antiphon"
+      "variationKey": "ant_prima"
     },
     "prima.psalm1": {
       "type": "psalm",
@@ -10352,7 +10480,7 @@
       "label": "Antíphona",
       "lat": "Clamor meus, * Dómine, ad te pervéniat: non avértas fáciem tuam a me.",
       "eng": "Let my cry reach unto thee, O Lord: * turn not away thy face from me.",
-      "variationKey": "tertia.antiphon"
+      "variationKey": "ant_tertia"
     },
     "tertia.psalm1": {
       "type": "psalm",
@@ -10496,7 +10624,7 @@
       "label": "Antíphona",
       "lat": "Dómine, Deus meus * magnificátus es veheménter.",
       "eng": "O Lord, my God, * thou art exceedingly great.",
-      "variationKey": "sexta.antiphon"
+      "variationKey": "ant_sexta"
     },
     "sexta.psalm1": {
       "type": "psalm",
@@ -10668,7 +10796,7 @@
       "label": "Antíphona",
       "lat": "Ne tacúeris Deus, * quia sermónibus ódii circumdedérunt me.",
       "eng": "O God, be thou not silent * for the mouth of the wicked man is opened against me.",
-      "variationKey": "nona.antiphon"
+      "variationKey": "ant_nona"
     },
     "nona.psalm1": {
       "type": "psalm",
@@ -11368,14 +11496,7 @@
       "label": "Capitulum (Rom 13:12-13)",
       "lat": "Nox præcéssit, dies autem appropinquávit. Abiciámus ergo ópera tenebrárum, et induámur arma lucis. Sicut in die honéste ambulémus.",
       "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
-      "variationKey": "laudes.capitulum"
-    },
-    "responsory_vespera_1": {
-      "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Magnus Dóminus noster, * et magna virtus ejus.\nR. Magnus Dóminus noster, * et magna virtus ejus.\nV. Et sapiéntiæ ejus non est númerus.\nR. Et magna virtus ejus.\n&Gloria\nR. Magnus Dóminus noster, * et magna virtus ejus.",
-      "eng": "R.br. Great is our Lord, and great is his power.\nR. Great is our Lord, and great is his power.\nV. and of his wisdom there is no number. \nR. And great is his power.\n&Gloria\nR. Great is our Lord, and great is his power.",
-      "variationKey": "vesperae.responsory"
+      "variationKey": "capitulum_laudes"
     },
     "versum_tertia": {
       "type": "vr",
@@ -11451,6 +11572,54 @@
       "eng": "℣. Let them exalt the Lord in the church of the people.",
       "latR": "℟. Et in cáthedra seniórum laudent eum.",
       "engR": "℟. And praise him in the chair of the ancients."
+    },
+    "hymnus_laudes": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Auróra jam spargit polum",
+      "lat": "Auróra jam spargit polum:\nTerris dies illábitur:\nLucis resúltat spículum:\nDiscédat omne lúbricum.\n\nPhantásma noctis éxsulet:\nMentis reátus córruat:\nQuidquid ténebris hórridum\nNox áttulit culpæ, cadat.\n\nUt mane, quod nos últimum\nHic deprecámur cérnui,\nCum luce nobis éffluat,\nHoc dum canóre cóncrepat.\n\nDeo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc et per omne sǽculum.\nAmen.",
+      "eng": "The dawn is sprinkling in the east\nIts golden shower, as day flows in;\nFast mount the pointed shafts of light:\nFarewell to darkness and to sin!\n\nAway, ye midnight phantoms all!\nAway, despondence and despair!\nWhatever guilt the night has brought,\nNow let it vanish into air.\n\nSo, Lord, when that last morning breaks,\nLooking to which we sigh and pray,\nO may it to thy minstrels prove\nThe dawning of a better day.\n\nTo God the Father glory be,\nAnd to his sole-begotten Son;\nGlory, O Holy Ghost, to thee,\nWhile everlasting ages run,\nAmen.",
+      "variationKey": "hymnus_laudes"
+    },
+    "hymnus_vespera": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Jam sol recédit ígneus",
+      "lat": "Jam sol recédit ígneus:\nTu, lux perénnis, Únitas,\nNostris, beáta Trínitas,\nInfúnde lumen córdibus.\n\nTe mane laudum cármine,\nTe deprecámur véspere;\nDignéris ut te súpplices\nLaudémus inter cǽlites.\n\nPatri, simúlque Fílio,\nTibíque, Sancte Spíritus,\nSicut fuit, sit júgiter\nSæclum per omne glória.\nAmen.",
+      "eng": "As fades the glowing orb of day,\nTo thee, great source of light, we pray;\nBlest Three in One, to every heart\nThy beams of life and love impart.\n\nAt early dawn, at close of day,\nTo thee our vows we humbly pay;\nMay we, mid joys that never end,\nWith thy bright saints in homage bend.\n\nTo God the Father, and the Son,\nAnd Holy Spirit, Three in One,\nBe endless glory, as before\nThe world began, so evermore.\nAmen.",
+      "variationKey": "hymnus_vespera"
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "label": "Antiphon ad Benedictus",
+      "lat": "Illúmina, Dómine, * sedéntes in ténebris et umbra mortis, et dírige pedes nostros in viam pacis.",
+      "eng": "O Lord, give light * to those who sit in darkness and in the shadow of death, and guide our feet into the way of peace.",
+      "variationKey": "ant_laudes"
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "Suscépit Deus * Israël, púerum suum: sicut locútus est ad Ábraham, et semen ejus usque in sǽculum.",
+      "eng": "God hath received * Israel his servant: as he spoke to our fathers, to Abraham and to his seed for ever.",
+      "variationKey": "ant_vespera"
+    },
+    "versum_1": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Repléti sumus mane misericórdia tua.",
+      "eng": "We are filled in the morning with thy mercy.",
+      "latR": "Exsultávimus, et delectáti sumus.",
+      "engR": "And we have rejoiced, and are delighted.",
+      "variationKey": "versum_1"
+    },
+    "versum_2": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Vespertína orátio ascéndat ad te, Dómine.",
+      "eng": "Let the evening prayer ascend unto thee, O Lord.",
+      "latR": "Et descéndat super nos misericórdia tua.",
+      "engR": "And let there descend upon us thy mercy.",
+      "variationKey": "versum_2"
     }
   },
   "thursday": {
@@ -12369,7 +12538,7 @@
       "label": "Antíphona",
       "lat": "In loco páscuæ * ibi Dóminus me collocávit.",
       "eng": "The Lord hath set me * in a place of pasture.",
-      "variationKey": "prima.antiphon"
+      "variationKey": "ant_prima"
     },
     "prima.psalm1": {
       "type": "psalm",
@@ -12513,7 +12682,7 @@
       "label": "Antíphona",
       "lat": "Quam bonus * Israël Deus, his, qui recto sunt corde.",
       "eng": "How good is God * to Israel, to them that are of a right heart!",
-      "variationKey": "tertia.antiphon"
+      "variationKey": "ant_tertia"
     },
     "tertia.psalm1": {
       "type": "psalm",
@@ -12653,7 +12822,7 @@
       "label": "Antíphona",
       "lat": "Memor esto * congregatiónis tuæ, Dómine, quam possedísti ab inítio.",
       "eng": "Remember * thy congregation, which thou hast possessed from the beginning.",
-      "variationKey": "sexta.antiphon"
+      "variationKey": "ant_sexta"
     },
     "sexta.psalm1": {
       "type": "psalm",
@@ -12777,7 +12946,7 @@
       "label": "Antíphona",
       "lat": "Invocábimus * nomen tuum, Dómine: narrábimus mirabília tua.",
       "eng": "We will call * upon thy name O Lord. We will relate thy wondrous works.",
-      "variationKey": "nona.antiphon"
+      "variationKey": "ant_nona"
     },
     "nona.psalm1": {
       "type": "psalm",
@@ -13441,14 +13610,7 @@
       "label": "Capitulum (Rom 13:12-13)",
       "lat": "Nox præcéssit, dies autem appropinquávit. Abiciámus ergo ópera tenebrárum, et induámur arma lucis. Sicut in die honéste ambulémus.",
       "eng": "The night is passed, and the day is at hand. Let us therefore cast off the works of darkness, and put on the armour of light. Let us walk honestly, as in the day.",
-      "variationKey": "laudes.capitulum"
-    },
-    "responsory_vespera_1": {
-      "type": "responsory",
-      "label": "Responsorium Breve",
-      "lat": "R.br. Benedícam Dóminum * In omni témpore.\nR. Benedícam Dóminum * In omni témpore.\nV. Semper laus ejus in ore meo.\nR. In omni témpore.\n&Gloria\nR. Benedícam Dóminum * In omni témpore.",
-      "eng": "R.br. I will bless the Lord * at all times.\nR. I will bless the Lord * at all times.\nV. His praise shall be always in my mouth.\nR. At all times\n&Gloria\nR. I will bless the Lord * at all times.",
-      "variationKey": "vesperae.responsory"
+      "variationKey": "capitulum_laudes"
     },
     "versum_tertia": {
       "type": "vr",
@@ -13524,6 +13686,45 @@
       "eng": "℣. I will praise the name of God.",
       "latR": "℟. Et magnificábo eum in laude.",
       "engR": "℟. And I will magnify him with praise."
+    },
+    "hymnus_laudes": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Lux ecce surgit áurea",
+      "lat": "Lux ecce surgit áurea,\nPallens facéssat cǽcitas,\nQuæ nosmet in præceps diu\nErróre traxit dévio.\n\nHæc lux serénum cónferat,\nPurósque nos præstet sibi:\nNihil loquámur súbdolum:\nVolvámus obscúrum nihil.\n\nSic tota decúrrat dies,\nNe lingua mendax, ne manus\nOculíve peccent lúbrici,\nNe noxa corpus ínquinet.\n\nSpeculátor astat désuper,\nQui nos diébus ómnibus,\nActúsque nostros próspicit\nA luce prima in vésperum.\n\nDeo Patri sit glória,\nEjúsque soli Fílio,\nCum Spíritu Paráclito,\nNunc et per omne sǽculum.\nAmen.",
+      "eng": "See the golden sun arise!\nLet no more our darkened eyes\nSnare us, tangled by surprise\nIn the maze of sin!\n\nFrom false words and thoughts impure\nLet this light, serene and sure,\nKeep our lips without secure,\nKeep our souls within.\n\nSo may we the day-time spend,\nThat, till life’s temptations end,\nTongue, nor hand, nor eye offend!\nOne, above us all,\n\nViews in his revealing ray\nAll we do, and think, and say,\nWatching us from break of day\nTill the twilight fall.\n\nUnto God the Father, Son,\nHoly Spirit, Three in One,\nOne in Three, be glory done,\nNow and evermore.\nAmen.",
+      "variationKey": "hymnus_laudes"
+    },
+    "hymnus_vespera": {
+      "type": "hymn",
+      "label": "Hymn",
+      "title": "Magnæ Deus poténtiæ",
+      "lat": "Magnæ Deus poténtiæ,\nQui fértili natos aqua\nPartim relínquis gúrgiti,\nPartim levas in áëra.\n\nDemérsa lymphis ímprimens,\nSubvécta cælis érigens:\nUt stirpe ab una pródita,\nDivérsa répleant loca:\n\nLargíre cunctis sérvulis,\nQuos mundat unda Sánguinis,\nNescíre lapsus críminum,\nNec ferre mortis tǽdium.\n\nUt culpa nullum déprimat:\nNullum éfferat jactántia:\nElísa mens ne cóncidat:\nEláta mens ne córruat.\n\nPræsta, Pater piíssime,\nPatríque compar Únice,\nCum Spíritu Paráclito\nRegnans per omne sǽculum.\nAmen.",
+      "eng": "O sovereign Lord of nature’s might,\nWho bad’st the water’s birth divide;\nPart in the heavens to take their flight,\nAnd part in ocean’s deep to hide;\n\nThese low obscured, on airy wing\nExalted those, that either race,\nThough from one element they spring,\nMight serve thee in a different place.\n\nGrant, Lord, that we thy servants all,\nSaved by thy tide of cleansing blood,\nNo more ’neath sin's dominion fall,\nNor fear the thought of death’s dark flood!\n\nThy varied love each spirit bless,\nThe humble cheer, the high control;\nCheck in each heart its proud excess,\nBut raise the meek and contrite soul!\n\nThis boon, O Father, we entreat,\nThis blessing grant, Eternal Son,\nAnd Holy Ghost, the Paraclete,\nBoth now, and while the ages run.\nAmen.",
+      "variationKey": "hymnus_vespera"
+    },
+    "ant_laudes": {
+      "type": "antiphon",
+      "label": "Antiphon ad Benedictus",
+      "lat": "In sanctitáte * serviámus Dómino, et liberábit nos ab inimícis nostris.",
+      "eng": "In holiness * let us serve the Lord, and he will deliver us from our enemies.",
+      "variationKey": "ant_laudes"
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "Fecit Deus * poténtiam in brácchio suo: dispérsit supérbos mente cordis sui.",
+      "eng": "God has shown * the power of his arm: he has scattered the proud in the imagination of their hearts.",
+      "variationKey": "ant_vespera"
+    },
+    "versum_1": {
+      "type": "vr",
+      "label": "Versicle",
+      "lat": "Repléti sumus mane misericórdia tua.",
+      "eng": "We are filled in the morning with thy mercy.",
+      "latR": "Exsultávimus, et delectáti sumus.",
+      "engR": "And we have rejoiced, and are delighted.",
+      "variationKey": "versum_1"
     }
   }
 }
