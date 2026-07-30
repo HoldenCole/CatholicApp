@@ -39,6 +39,7 @@ class SettingsRepository(private val context: Context) {
         val FONT_RANGE = stringPreferencesKey(SettingsKey.FONT_RANGE)
         val TEXT_DARKNESS = floatPreferencesKey(SettingsKey.TEXT_DARKNESS)
         val SHOW_LEONINE_PRAYERS = booleanPreferencesKey(SettingsKey.SHOW_LEONINE_PRAYERS)
+        val SHOW_UPCOMING_FEASTS = booleanPreferencesKey(SettingsKey.SHOW_UPCOMING_FEASTS)
     }
 
     // -----------------------------------------------------------------------
@@ -81,6 +82,11 @@ class SettingsRepository(private val context: Context) {
         prefs[PrefsKeys.SHOW_LEONINE_PRAYERS] ?: true
     }
 
+    /** The Upcoming Feasts card on the Home (Hodie) screen. Off by default. */
+    val showUpcomingFeasts: Flow<Boolean> = context.settingsDataStore.data.map { prefs ->
+        prefs[PrefsKeys.SHOW_UPCOMING_FEASTS] ?: false
+    }
+
     // -----------------------------------------------------------------------
     // Mutations
     // -----------------------------------------------------------------------
@@ -115,5 +121,9 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setShowLeoninePrayers(show: Boolean) {
         context.settingsDataStore.edit { it[PrefsKeys.SHOW_LEONINE_PRAYERS] = show }
+    }
+
+    suspend fun setShowUpcomingFeasts(show: Boolean) {
+        context.settingsDataStore.edit { it[PrefsKeys.SHOW_UPCOMING_FEASTS] = show }
     }
 }

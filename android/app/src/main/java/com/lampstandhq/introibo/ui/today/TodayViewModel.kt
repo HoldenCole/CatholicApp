@@ -48,6 +48,11 @@ class TodayViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope, SharingStarted.WhileSubscribed(5_000), PenanceDiscipline.DISCIPLINE_1962
     )
 
+    /** The Upcoming Feasts card on the Home screen (Settings toggle, off by default). */
+    val showUpcomingFeasts = settingsRepo.showUpcomingFeasts.stateIn(
+        viewModelScope, SharingStarted.WhileSubscribed(5_000), false
+    )
+
     init {
         // Rebuild the context whenever the saved rite or discipline changes —
         // iOS parity: its current() reads both from UserDefaults on every call.

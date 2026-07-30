@@ -8,6 +8,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
     @AppStorage(SettingsKey.showLeoninePrayers) private var showLeoninePrayers = true
+    @AppStorage(SettingsKey.showUpcomingFeasts) private var showUpcomingFeasts = false
     @State private var showResetConfirm = false
 
     @Environment(\.dismiss) private var dismiss
@@ -17,6 +18,7 @@ struct SettingsView: View {
             List {
                 riteSection
                 leonineSection
+                homeSection
                 penanceSection
                 languageSection
                 displaySection
@@ -94,6 +96,28 @@ struct SettingsView: View {
             Text("Preces Leoninae · Leonine Prayers")
         } footer: {
             Text("The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice.")
+        }
+    }
+
+    // MARK: - Home screen
+
+    private var homeSection: some View {
+        Section {
+            Toggle(isOn: $showUpcomingFeasts) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Show Upcoming Feasts on Home")
+                        .foregroundStyle(Color.primaryText)
+                    Text("The next fortnight's feasts, vigils, and Ember days")
+                        .font(.caption)
+                        .foregroundStyle(Color.secondaryText)
+                }
+            }
+            .tint(Color.sanctuaryRed)
+            .listRowBackground(Color.pageBackground)
+        } header: {
+            Text("Hodie · Home Screen")
+        } footer: {
+            Text("The full list always remains available on the Calendar.")
         }
     }
 

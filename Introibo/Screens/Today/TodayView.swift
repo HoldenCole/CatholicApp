@@ -215,9 +215,13 @@ struct TodayView: View {
 
     // MARK: - Upcoming feasts (next 14 days)
 
+    @AppStorage(SettingsKey.showUpcomingFeasts) private var showUpcomingFeasts = false
+
     @ViewBuilder
     private var upcomingFeastsCard: some View {
-        let upcoming = LiturgicalYearModel.upcoming(rite: rite, store: ContentStore.shared)
+        let upcoming = showUpcomingFeasts
+            ? LiturgicalYearModel.upcoming(rite: rite, store: ContentStore.shared)
+            : []
         if !upcoming.isEmpty {
             Button { showCalendar = true } label: {
                 VStack(alignment: .leading, spacing: 10) {

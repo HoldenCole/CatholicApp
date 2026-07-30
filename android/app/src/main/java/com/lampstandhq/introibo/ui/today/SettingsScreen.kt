@@ -89,6 +89,7 @@ fun SettingsScreen(
     val fontScale by settingsRepo.fontScale.collectAsState(initial = FontSizeScale.DEFAULT_VALUE)
     val fontRange by settingsRepo.fontRange.collectAsState(initial = FontRange.NORMAL)
     val showLeonine by settingsRepo.showLeoninePrayers.collectAsState(initial = true)
+    val showUpcoming by settingsRepo.showUpcomingFeasts.collectAsState(initial = false)
 
     var showResetConfirm by remember { mutableStateOf(false) }
     var showTutorial by remember { mutableStateOf(false) }
@@ -185,6 +186,45 @@ fun SettingsScreen(
                 }
                 SettingsSectionFooter(
                     text = "The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice.",
+                )
+            }
+
+            // ---- Home Screen Section ----
+            item {
+                SettingsSectionHeader(title = "Hodie · Home Screen")
+            }
+            item {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 10.dp),
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = "Show Upcoming Feasts on Home",
+                            style = type.body,
+                            color = colors.primaryText,
+                        )
+                        Text(
+                            text = "The next fortnight's feasts, vigils, and Ember days",
+                            style = type.captionSm,
+                            color = colors.secondaryText,
+                        )
+                    }
+                    Switch(
+                        checked = showUpcoming,
+                        onCheckedChange = { checked ->
+                            scope.launch { settingsRepo.setShowUpcomingFeasts(checked) }
+                        },
+                        colors = SwitchDefaults.colors(
+                            checkedThumbColor = colors.sanctuaryRed,
+                            checkedTrackColor = colors.sanctuaryRed.copy(alpha = 0.3f),
+                        ),
+                    )
+                }
+                SettingsSectionFooter(
+                    text = "The full list always remains available on the Calendar.",
                 )
             }
 

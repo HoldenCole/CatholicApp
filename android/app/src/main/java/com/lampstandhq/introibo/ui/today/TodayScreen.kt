@@ -144,6 +144,7 @@ fun TodayScreen(
     val masteredLessons by vm.masteredLessons.collectAsState()
     val followedSaint by vm.followedSaint.collectAsState()
     val rosaryLastDate by vm.rosaryLastDate.collectAsState()
+    val showUpcomingFeasts by vm.showUpcomingFeasts.collectAsState()
 
     var showSettings by rememberSaveable { mutableStateOf(false) }
     var showProper by remember { mutableStateOf<MassProper?>(null) }
@@ -322,16 +323,18 @@ fun TodayScreen(
         // ---- Main content cards ----
         item { Spacer(Modifier.height(24.dp)) }
 
-        // Upcoming feasts (next 14 days)
-        item {
-            UpcomingFeastsCard(
-                rite = rite,
-                modifier = Modifier.padding(horizontal = 28.dp),
-                onClick = { onNavigateCalendar?.invoke() },
-            )
-        }
+        // Upcoming feasts (next 14 days) — Settings toggle, off by default.
+        if (showUpcomingFeasts) {
+            item {
+                UpcomingFeastsCard(
+                    rite = rite,
+                    modifier = Modifier.padding(horizontal = 28.dp),
+                    onClick = { onNavigateCalendar?.invoke() },
+                )
+            }
 
-        item { Spacer(Modifier.height(24.dp)) }
+            item { Spacer(Modifier.height(24.dp)) }
+        }
 
         // Daily Psalm
         item {
