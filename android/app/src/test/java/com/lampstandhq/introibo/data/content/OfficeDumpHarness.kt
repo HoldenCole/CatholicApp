@@ -78,7 +78,15 @@ class OfficeDumpHarness {
                     sb.appendLine("-- $slug (${h.parts.size} parts)")
                     for (p in h.parts) {
                         val vk = p.variationKey ?: "-"
-                        val lat = (p.lat ?: p.verses?.firstOrNull()?.lat ?: "").replace("\n", " | ").take(110)
+                        // Responsory-style parts store their text in v1/r1/v2
+                        // fields — fall through so the dump never shows a
+                        // populated part as empty.
+                        val lat = (
+                            p.lat ?: p.verses?.firstOrNull()?.lat
+                                ?: listOfNotNull(p.v1Lat, p.r1Lat, p.v2Lat, p.r2Lat)
+                                    .joinToString(" | ").ifEmpty { null }
+                                ?: ""
+                            ).replace("\n", " | ").take(110)
                         val ant = p.antiphonLat?.replace("\n", " | ")?.take(60)
                         sb.append("   [${p.type}/$vk] ${(p.label ?: "").take(40)}")
                         if (lat.isNotEmpty()) sb.append(" :: $lat")

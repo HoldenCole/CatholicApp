@@ -107,14 +107,29 @@ final class ContentStore {
         // 1955/pre-1955 keep the Divino Afflatu rule: every double and
         // semidouble (rank ≥ 3) prays the festal scheme; 1962 restricts it
         // to I/II class (rank ≥ 5).
+        // Privileged ferias (Ash Wednesday, Ember days, the January ferias)
+        // carry HIGH ranks so the calendar wins precedence with them — but
+        // their OFFICE is still ferial: weekday psalms, one nocturn, ferial
+        // preces. Detect them by name, not rank. The Triduum is excepted:
+        // its Matins (Tenebrae) keeps three nocturns.
+        let isTriduum = ["quad6-4", "quad6-5", "quad6-6"].contains(ctx.temporalKey ?? "")
+        let ferialOffice = ordo == nil || (
+            ordo?.winner == "temporal" && !isTriduum &&
+                ((ordo?.name.hasPrefix("Feria") ?? false) ||
+                 (ordo?.name.hasPrefix("Sabbato") ?? false) ||
+                 (ordo?.name.hasPrefix("Die ") ?? false))
+        )
+
         let festalThreshold: Double = (rite == .rite1962) ? 5.0 : 3.0
-        let isFestal = ordo.map { $0.rank >= festalThreshold } ?? false
+        let isFestal = !ferialOffice && (ordo.map { $0.rank >= festalThreshold } ?? false)
         // Compline keeps the Sunday psalms only on Sundays and I/II-class
         // feasts (rank ≥ 5); III class and below use the ferial Compline.
-        let festalCompline = ctx.isSunday || (ordo.map { $0.rank >= 5.0 } ?? false)
+        let festalCompline = ctx.isSunday
+            || (!ferialOffice && (ordo.map { $0.rank >= 5.0 } ?? false))
         // The Little Hours keep the Sunday psalms (Ps 118) only on Sundays
         // and I-class feasts (rank ≥ 6); all else uses the ferial psalms.
-        let festalLittleHours = ctx.isSunday || (ordo.map { $0.rank >= 6.0 } ?? false)
+        let festalLittleHours = ctx.isSunday
+            || (!ferialOffice && (ordo.map { $0.rank >= 6.0 } ?? false))
 
         // Matins (1960 rubrics): 3 nocturns / 9 lessons only for I- and II-class
         // feasts (sanctoral rank ≥ 5, or a temporal I-class feast on a weekday
@@ -122,6 +137,9 @@ final class ContentStore {
         // a single nocturn of 9 psalms and 3 lessons.
         let isClassIorII: Bool = {
             guard let ordo else { return false }
+            // A ferial office is one nocturn no matter how privileged the
+            // feria's precedence rank is (Ash Wednesday, Ember days).
+            if ferialOffice { return false }
             // Pre-1960 rubrics: all doubles/semidoubles (rank ≥ 3) and all
             // Sundays have 3 nocturns / 9 lessons; only ferias and simples
             // use the single nocturn.
@@ -146,7 +164,7 @@ final class ContentStore {
             return p
         }
 
-        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite, fallbackCollect: fallbackCollect)
+        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite, fallbackCollect: fallbackCollect, officeIsFerial: ferialOffice)
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -226,7 +244,15 @@ final class ContentStore {
         // saint, or an octave day stays present in the day's office.
         if let commemKey = ordo?.commemoration, !commemKey.isEmpty,
            template.slug == "laudes" || (template.slug == "vesperae" && rite != .rite1962),
-           let commemData = sanctoralPropers[commemKey] ?? officeAssembler.temporalPropers[commemKey] {
+           var commemData = sanctoralPropers[commemKey] ?? officeAssembler.temporalPropers[commemKey] {
+            // A commemorated temporal feria (e.g. the Advent feria on a
+            // III-class feast) has no collect of its own — it repeats the
+            // Sunday's, like the feria's office would.
+            if commemData["oratio"] == nil,
+               let sundayKey = OfficeAssembler.precedingSundayKey(commemKey),
+               let sundayOratio = officeAssembler.temporalPropers[sundayKey]?["oratio"] {
+                commemData["oratio"] = sundayOratio
+            }
             assembled = Self.insertCommemoration(
                 into: assembled, data: commemData, hourSlug: template.slug)
         }
@@ -319,7 +345,10 @@ final class ContentStore {
         // (rank ≥ 3) also say the Te Deum, not just sanctoral feasts.
         let isFeast = ((ordo?.winner == "sanctoral") && ((ordo?.rank ?? 0) >= 3.0)) ||
             (rite != .rite1962 && (ordo?.rank ?? 0) >= 3.0)
+        // Pre-Lent (Septuagesima) counts as penitential for the Te Deum:
+        // it is omitted on those Sundays through Lent, kept on feasts.
         let penitential = ctx.season == .advent || ctx.season == .lent || ctx.season == .passion
+            || (ctx.temporalKey?.hasPrefix("quadp") ?? false)
         if penitential { return isFeast }
         if ctx.isSunday { return true }
         if isFeast { return true }

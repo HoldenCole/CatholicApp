@@ -28083,10 +28083,11 @@
       "variationKey": "ant_vespera"
     },
     "oratio": {
-      "lat": "Christus factus est pro nobis obédiens usque ad mortem.\nPater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie. Et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen.",
-      "eng": "Christ became obedient for us unto death.\nOur Father, Who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation: but deliver us from evil. Amen.",
       "type": "collect",
-      "variationKey": "oratio"
+      "label": "Collect",
+      "variationKey": "oratio",
+      "lat": "Christus factus est pro nobis obédiens usque ad mortem.\n\nPater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie. Et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen.\n\nRéspice, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum: Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Christ became obedient for us unto death.\n\nOur Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation: but deliver us from evil. Amen.\n\nLook down, we beseech Thee, O Lord, on this Thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross. Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "ant_matutinum": {
       "lat": "Zelus domus tuæ * comédit me, et oppróbria exprobrántium tibi cecidérunt super me.\nAvertántur retrórsum, * et erubéscant, qui cógitant mihi mala.\nDeus meus, * éripe me de manu peccatóris.\nLiberávit Dóminus * páuperem a poténte, et ínopem, cui non erat adjútor.\nCogitavérunt ímpii, * et locúti sunt nequítiam: iniquitátem in excélso locúti sunt.\nExsúrge, Dómine, * et júdica causam meam.\nDixi iníquis: * Nolíte loqui advérsus Deum iniquitátem.\nTerra trémuit * et quiévit, dum exsúrgeret in judício Deus.\nIn die tribulatiónis * meæ Deum exquisívi mánibus meis.",
@@ -29147,10 +29148,11 @@
       "eng": "I will take the cup of salvation; * and call upon the Name of the Lord.\nWith them * that hated peace I was peaceable: when I spoke to them they fought against me without cause.\nFrom unjust men * deliver me, O Lord.\nKeep me * from the snare, which they have laid for me, and from the stumbling-blocks of them that work iniquity.\nI looked * on my right hand, and beheld, and there was no one that would know me."
     },
     "oratio": {
-      "lat": "[Prelude Vespera] (rubrica 1955 aut rubrica 196)",
-      "eng": "[Prelude Vespera] (rubrica 1955 aut rubrica 1960)",
       "type": "collect",
-      "variationKey": "oratio"
+      "label": "Collect",
+      "variationKey": "oratio",
+      "lat": "Christus factus est pro nobis obédiens usque ad mortem, mortem autem crucis.\n\nPater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie. Et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen.\n\nRéspice, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum: Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Christ became obedient for us unto death, even to the death of the cross.\n\nOur Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation: but deliver us from evil. Amen.\n\nLook down, we beseech Thee, O Lord, on this Thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross. Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "ant_matutinum": {
       "lat": "Astitérunt reges terræ, * et príncipes convenérunt in unum, advérsus Dóminum, et advérsus Christum ejus.\nDivisérunt sibi * vestiménta mea, et super vestem meam misérunt sortem.\nInsurrexérunt in me * testes iníqui, et mentíta est iníquitas sibi.\nVim faciébant, * qui quærébant ánimam meam.\nConfundántur * et revereántur, qui quærunt ánimam meam, ut áuferant eam.\nAliéni * insurrexérunt in me, et fortes quæsiérunt ánimam meam.\nAb insurgéntibus in me * líbera me, Dómine, quia occupavérunt ánimam meam.\nLonge fecísti * notos meos a me: tráditus sum, et non egrediébar.\nCaptábunt * in ánimam justi, et sánguinem innocéntem condemnábunt.",
@@ -30905,6 +30907,13 @@
           "eng": "Friend and neighbour thou hast put far from me: and my acquaintance, because of misery."
         }
       ]
+    },
+    "oratio": {
+      "type": "collect",
+      "label": "Collect",
+      "variationKey": "oratio",
+      "lat": "Christus factus est pro nobis obédiens usque ad mortem, mortem autem crucis. Propter quod et Deus exaltávit illum: et dedit illi nomen, quod est super omne nomen.\n\nPater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie. Et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen.\n\nConcéde, quǽsumus, omnípotens Deus: ut, qui Fílii tui resurrectiónem devóta exspectatióne prævenímus; ejúsdem resurrectiónis glóriam consequámur. Per eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "eng": "Christ became obedient for us unto death, even to the death of the cross. Wherefore God also hath exalted Him, and hath given Him a name which is above all names.\n\nOur Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation: but deliver us from evil. Amen.\n\nGrant, we beseech Thee, almighty God, that we who await with devout expectation the resurrection of Thy Son, may attain unto the glory of the same resurrection. Through the same our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     }
   },
   "quad6-6r": {
@@ -32273,6 +32282,13 @@
       "label": "Antíphona",
       "lat": "Egrediétur * Dóminus de loco sancto suo: véniet, ut salvet pópulum suum.",
       "eng": "The Lord goeth forth * from his holy place; he cometh to save his people."
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "O Sapiéntia, * quæ ex ore Altíssimi prodiísti, attíngens a fine usque ad finem, fórtiter suavitérque dispónens ómnia: veni ad docéndum nos viam prudéntiæ.",
+      "eng": "O Wisdom, * that comest out of the mouth of the Most High, that reachest from one end to another, and dost mightily and sweetly order all things; come, to teach us the way of prudence!",
+      "variationKey": "ant_vespera"
     }
   },
   "adv-12-18": {
@@ -32296,6 +32312,13 @@
       "label": "Antíphona",
       "lat": "Lex per Móysen data est; * grátia et véritas per Jesum Christum facta est.",
       "eng": "The law was given by Moses, * but grace and truth came by Jesus Christ."
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "O Adonái * et Dux domus Israël, qui Móysi in igne flammæ rubi apparuísti, et ei in Sina legem dedísti: veni ad rediméndum nos in brácchio exténto.",
+      "eng": "O Adonai, * and Ruler of the house of Israel, who didst appear unto Moses in the burning bush, and gavest him the law in Sinai; come, to redeem us with an outstretched arm!",
+      "variationKey": "ant_vespera"
     }
   },
   "adv-12-19": {
@@ -32319,6 +32342,13 @@
       "label": "Antíphona",
       "lat": "Annuntiáte * pópulis, et dícite: Ecce, Deus Salvátor noster véniet.",
       "eng": "Tell it out among the people, * and say: Behold, God, our Saviour cometh."
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "O radix Jesse * qui stas in signum populórum, super quem continébunt reges os suum, quem gentes deprecabúntur: veni ad liberándum nos, jam noli tardáre.",
+      "eng": "O Root of Jesse, * which standest for an ensign of the people, at whom the kings shall shut their mouths, to whom the Gentiles shall seek; come to deliver us, make no tarrying!",
+      "variationKey": "ant_vespera"
     }
   },
   "adv-12-20": {
@@ -32342,6 +32372,13 @@
       "label": "Antíphona",
       "lat": "Dóminus * légifer noster, Dóminus Rex noster, ipse véniet, et salvábit nos.",
       "eng": "The Lord our Law-giver, * the Lord our King, he cometh and will save us."
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "O clavis David * et sceptrum domus Israël; qui áperis, et nemo claudit; claudis, et nemo áperit: veni, et educ vinctum de domo cárceris, sedéntem in ténebris, et umbra mortis.",
+      "eng": "O Key of David, * and Sceptre of the house of Israel that openest, and no man shutteth; and shuttest and no man openeth; come to bring out the prisoners from the prison, and them that sit in darkness, and in the shadow of death!",
+      "variationKey": "ant_vespera"
     }
   },
   "adv-12-21": {
@@ -32365,6 +32402,13 @@
       "label": "Antíphona",
       "lat": "Ego autem * ad Dóminum aspíciam, et exspectábo Deum, Salvatórem meum.",
       "eng": "Therefore I shall look unto the Lord, * I shall wait for God my Saviour."
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "O Óriens * splendor lucis ætérnæ, et sol justítiæ: veni, et illúmina sedéntes in ténebris, et umbra mortis.",
+      "eng": "O Day-Spring, * brightness of the everlasting Light, Sun of Righteousness; come, to give light to them that sit in darkness, and in the shadow of death!",
+      "variationKey": "ant_vespera"
     }
   },
   "adv-12-22": {
@@ -32388,6 +32432,13 @@
       "label": "Antíphona",
       "lat": "Parátus esto, * Israël, in occúrsum Dómini, quóniam venit.",
       "eng": "Let Israel be ready * to go out to meet the Lord, for he is coming."
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "O Rex géntium, * et desiderátus eárum, lapísque anguláris, qui facis útraque unum: veni, et salva hóminem, quem de limo formásti.",
+      "eng": "O King of the Gentiles, * yea, and Desire thereof, O Cornerstone that makest of twain one; come to save man, whom thou hast made of the dust of the earth!",
+      "variationKey": "ant_vespera"
     }
   },
   "adv-12-23": {
@@ -32411,6 +32462,13 @@
       "label": "Antíphona",
       "lat": "Ego autem * ad Dóminum aspíciam, et exspectábo Deum, Salvatórem meum.",
       "eng": "Therefore I shall look unto the Lord, * I shall wait for God my Saviour."
+    },
+    "ant_vespera": {
+      "type": "antiphon",
+      "label": "Antiphon ad Magnificat",
+      "lat": "O Emmánuel, * Rex et légifer noster, exspectátio géntium, et Salvátor eárum: veni ad salvándum nos, Dómine, Deus noster.",
+      "eng": "O Emmanuel, our King * and our Law-giver, Longing of the Gentiles, yea, and Salvation thereof; come to save us, O Lord our God!",
+      "variationKey": "ant_vespera"
     }
   }
 }

@@ -319,6 +319,111 @@ def write_both(name: str, data) -> None:
     print(f"  wrote {name} ({len(text):,} bytes, md5 {digest})")
 
 
+def add_great_o_antiphons(tp: dict) -> None:
+    """Dec 17-23: the Great O antiphon IS the Vespers Magnificat antiphon of
+    the day. The date entries (adv-12-17..23) carried only little-hours
+    antiphons; add ant_vespera from DO's [Adv Ant N] sections."""
+    lat = parse_sections(MAJOR_LAT)
+    eng = parse_sections(MAJOR_ENG)
+    for day in range(17, 24):
+        sec = f"Adv Ant {day}"
+        if sec not in lat:
+            raise SystemExit(f"DO section missing: [{sec}]")
+        entry = tp.setdefault(f"adv-12-{day}", {})
+        entry["ant_vespera"] = {
+            "type": "antiphon", "label": "Antiphon ad Magnificat",
+            "lat": single_text(lat[sec]),
+            "eng": single_text(eng.get(sec, [])) or None,
+            "variationKey": "ant_vespera",
+        }
+
+
+TRIDUUM_COLLECTS = {
+    # Christus factus est grows a phrase each day; the Pater follows in
+    # silence, then the collect (said without Oremus, concluded silently).
+    "quad6-4": (
+        "Christus factus est pro nobis obédiens usque ad mortem.",
+        "Christ became obedient for us unto death.",
+        "Réspice, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus "
+        "noster Jesus Christus non dubitávit mánibus tradi nocéntium, et crucis "
+        "subíre torméntum: Qui tecum vivit et regnat in unitáte Spíritus Sancti, "
+        "Deus, per ómnia sǽcula sæculórum. Amen.",
+        "Look down, we beseech Thee, O Lord, on this Thy family, for which our "
+        "Lord Jesus Christ did not hesitate to be delivered up into the hands "
+        "of wicked men, and to suffer the torment of the Cross. Who liveth and "
+        "reigneth with Thee in the unity of the Holy Ghost, God, world without "
+        "end. Amen.",
+    ),
+    "quad6-5": (
+        "Christus factus est pro nobis obédiens usque ad mortem, mortem autem crucis.",
+        "Christ became obedient for us unto death, even to the death of the cross.",
+        None, None,  # same Respice as Thursday (filled below)
+    ),
+    "quad6-6": (
+        "Christus factus est pro nobis obédiens usque ad mortem, mortem autem "
+        "crucis. Propter quod et Deus exaltávit illum: et dedit illi nomen, "
+        "quod est super omne nomen.",
+        "Christ became obedient for us unto death, even to the death of the "
+        "cross. Wherefore God also hath exalted Him, and hath given Him a name "
+        "which is above all names.",
+        "Concéde, quǽsumus, omnípotens Deus: ut, qui Fílii tui resurrectiónem "
+        "devóta exspectatióne prævenímus; ejúsdem resurrectiónis glóriam "
+        "consequámur. Per eúndem Dóminum nostrum Jesum Christum Fílium tuum, "
+        "qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia "
+        "sǽcula sæculórum. Amen.",
+        "Grant, we beseech Thee, almighty God, that we who await with devout "
+        "expectation the resurrection of Thy Son, may attain unto the glory of "
+        "the same resurrection. Through the same our Lord Jesus Christ, Thy "
+        "Son, Who liveth and reigneth with Thee in the unity of the Holy "
+        "Ghost, God, world without end. Amen.",
+    ),
+}
+
+PATER_LAT = ("Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat "
+             "regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem "
+             "nostrum quotidiánum da nobis hódie. Et dimítte nobis débita "
+             "nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos "
+             "indúcas in tentatiónem: sed líbera nos a malo. Amen.")
+PATER_ENG = ("Our Father, who art in heaven, hallowed be Thy name. Thy kingdom "
+             "come. Thy will be done on earth as it is in heaven. Give us this "
+             "day our daily bread. And forgive us our trespasses, as we forgive "
+             "those who trespass against us. And lead us not into temptation: "
+             "but deliver us from evil. Amen.")
+
+
+def fix_triduum_collects(tp: dict) -> None:
+    """The Triduum hours end: Christus factus est (+ the day's extension) →
+    Pater (in silence) → the collect, without Oremus. quad6-4 lacked the
+    collect, quad6-5 held raw import markup, quad6-6 was absent."""
+    respice_lat = TRIDUUM_COLLECTS["quad6-4"][2]
+    respice_eng = TRIDUUM_COLLECTS["quad6-4"][3]
+    for key, (cf_lat, cf_eng, or_lat, or_eng) in TRIDUUM_COLLECTS.items():
+        entry = tp.setdefault(key, {})
+        entry["oratio"] = {
+            "type": "collect", "label": "Collect", "variationKey": "oratio",
+            "lat": f"{cf_lat}\n\n{PATER_LAT}\n\n{or_lat or respice_lat}",
+            "eng": f"{cf_eng}\n\n{PATER_ENG}\n\n{or_eng or respice_eng}",
+        }
+
+
+def fix_duplicated_collect_names(sp: dict) -> int:
+    """fix_collects.py doubled the saint-name substitution in a few entries
+    ('Januárii et Sociórum ejus et Januárii et Sociórum ejus')."""
+    import re as _re
+    fixed = 0
+    for entry in sp.values():
+        oratio = entry.get("oratio")
+        if not oratio:
+            continue
+        for field in ("lat", "eng"):
+            text = oratio.get(field) or ""
+            new = _re.sub(r"\b(.{8,80}?)\s+(et|and)\s+\1\b", r"\1", text)
+            if new != text:
+                oratio[field] = new
+                fixed += 1
+    return fixed
+
+
 def strip_junk_doxologies(propers: dict) -> int:
     """A proper doxology override is the hymn's final 'Glória' stanza; an
     entry whose text lacks any 'glori' is an import artefact (e.g. the 09-15
@@ -348,6 +453,10 @@ def main():
     hs = fix_hymns_seasonal(hs)
     junk = strip_junk_doxologies(sp) + strip_junk_doxologies(tp)
     print(f"  stripped {junk} junk doxology override(s)")
+    add_great_o_antiphons(tp)
+    fix_triduum_collects(tp)
+    dups = fix_duplicated_collect_names(sp) + fix_duplicated_collect_names(tp)
+    print(f"  deduplicated {dups} collect name field(s)")
 
     write_both("hours.json", hours)
     write_both("psalter_weekly.json", pw)

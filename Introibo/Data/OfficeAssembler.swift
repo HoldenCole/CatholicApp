@@ -173,6 +173,12 @@ struct OfficeAssembler {
             o.removeValue(forKey: "versum_2")
 
         case "vesperae":
+            // The 2nd-Vespers capitulum (Capitulum Vespera 3) wins over the
+            // 1st-Vespers one when both exist (the alias table maps both
+            // onto vesperae.capitulum unordered).
+            if let cap3 = raw["capitulum_vespera_3"] {
+                o["vesperae.capitulum"] = rekeyed(cap3, "vesperae.capitulum")
+            }
             // Psalm antiphons: the 2nd-Vespers list (Ant Vespera 3) wins
             // over the 1st-Vespers/shared list (Ant Vespera).
             if let list = o["ant_vespera_3"] ?? o["ant_vespera_3c"] {
@@ -303,9 +309,14 @@ struct OfficeAssembler {
         "matutinum.psalm10": "matutinum.antiphon.psalm9",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962, fallbackCollect: Hour.Part? = nil) -> Hour {
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962, fallbackCollect: Hour.Part? = nil, officeIsFerial: Bool = true) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
-        let seasonKey = seasonString(for: context.season)
+        // Pre-Lent (Septuagesima..Quinquagesima) keeps the per-annum
+        // ordinarium — the season flag may still say "christmas" (Christmas
+        // cycle runs to Feb 2) but Septuagesima's hymns are the ordinary ones.
+        let seasonKey = (context.temporalKey?.hasPrefix("quadp") ?? false)
+            ? "ordinary"
+            : seasonString(for: context.season)
 
         // Easter/Pentecost octave: use Sunday psalms for all hours
         let isOctave = Self.isEasterOrPentecostOctave(context: context)
@@ -418,9 +429,30 @@ struct OfficeAssembler {
             return part
         }
 
+        // Prime's Lectio Brevis is, by the rubric's own rule, the day's None
+        // capitulum. Fill the slot when nothing proper landed there (proper
+        // feast lessons override by key in the later layers).
+        let lectioBrevisApplied: [Hour.Part]
+        if template.slug == "prima" {
+            lectioBrevisApplied = assembledParts.map { part in
+                guard part.variationKey == "lectio_prima", (part.lat ?? "").isEmpty,
+                      let src = temporalOverrides["capitulum_nona"]
+                          ?? seasonOverrides["capitulum_nona"]
+                          ?? dayOverrides["capitulum_nona"]
+                else { return part }
+                var modified = part
+                modified.lat = src.lat
+                modified.eng = src.eng
+                modified.ref = src.ref
+                return modified
+            }
+        } else {
+            lectioBrevisApplied = assembledParts
+        }
+
         // Inline psalm text from psalter.json for any psalm part that has
         // a ref but no verses (or empty verses).
-        let psalmInlined = assembledParts.map { inlinePsalmText($0) }
+        let psalmInlined = lectioBrevisApplied.map { inlinePsalmText($0) }
 
         // Apply temporal per-psalm antiphon overrides.
         // Temporal keys like "laudes.antiphon.psalm1" replace the antiphon
@@ -466,11 +498,21 @@ struct OfficeAssembler {
         let alleluiaStripped: [Hour.Part]
         if Self.shouldSubstituteLausTibi(context: context) {
             alleluiaStripped = lausTibiApplied.map { part in
-                guard part.type == "antiphon" else { return part }
-                var modified = part
-                if let lat = part.lat { modified.lat = Self.stripAlleluia(lat) }
-                if let eng = part.eng { modified.eng = Self.stripAlleluia(eng) }
-                return modified
+                if part.type == "antiphon" {
+                    var modified = part
+                    if let lat = part.lat { modified.lat = Self.stripAlleluia(lat) }
+                    if let eng = part.eng { modified.eng = Self.stripAlleluia(eng) }
+                    return modified
+                }
+                // Psalm-attached antiphons carry alleluias too (the festal
+                // template antiphons embed them).
+                if part.antiphonLat != nil {
+                    var modified = part
+                    if let lat = part.antiphonLat { modified.antiphonLat = Self.stripAlleluia(lat) }
+                    if let eng = part.antiphonEng { modified.antiphonEng = Self.stripAlleluia(eng) }
+                    return modified
+                }
+                return part
             }
         } else {
             alleluiaStripped = lausTibiApplied
@@ -518,7 +560,7 @@ struct OfficeAssembler {
                 !(part.type == "pater" && (part.variationKey ?? "").isEmpty
                   && !(part.label ?? "").contains("Ave"))
             }
-            if shouldIncludePreces(context: context, rite: rite, hourSlug: template.slug) {
+            if officeIsFerial && shouldIncludePreces(context: context, rite: rite, hourSlug: template.slug) {
                 precesApplied = insertPreces(into: precesApplied, hour: template.slug)
             }
         }
@@ -592,13 +634,22 @@ struct OfficeAssembler {
     // The nocturn count and Te Deum decision are computed in ContentStore
     // (which has the ordo rank/winner) and passed in.
     private func filterMatinsParts(_ parts: [Hour.Part], nocturns: Int, includeTeDeum: Bool, isTenebrae: Bool = false) -> [Hour.Part] {
-        let structured: [Hour.Part]
+        var structured: [Hour.Part]
         if nocturns >= 3 {
             // 3-Nocturn Matins: keep all nocturns; include the Te Deum only
             // when the day calls for it.
             structured = includeTeDeum ? parts : parts.filter { !isTeDeum($0) }
         } else {
             structured = buildOneNocturn(parts, includeTeDeum: includeTeDeum)
+        }
+        // When the Te Deum stands in place of the ninth responsory, drop the
+        // bare "Responsorium IX" slot if nothing filled it.
+        if includeTeDeum {
+            structured = structured.filter {
+                !($0.variationKey == "responsory9"
+                  && ($0.lat ?? "").isEmpty && ($0.v1Lat ?? "").isEmpty
+                  && ($0.verses ?? []).isEmpty)
+            }
         }
         return isTenebrae ? applyTenebrae(structured) : structured
     }

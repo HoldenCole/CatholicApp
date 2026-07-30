@@ -55,9 +55,16 @@ class OfficeAssembler(
         "laudes", "vesperae", "prima", "tertia", "sexta", "nona", "completorium",
     )
 
-    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962, fallbackCollect: Hour.Part? = null): Hour {
+    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962, fallbackCollect: Hour.Part? = null, officeIsFerial: Boolean = true): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
-        val seasonKey = seasonString(context.season)
+        // Pre-Lent (Septuagesima..Quinquagesima) keeps the per-annum
+        // ordinarium — the season flag may still say "christmas" (Christmas
+        // cycle runs to Feb 2) but Septuagesima's hymns are the ordinary ones.
+        val seasonKey = if (context.temporalKey?.startsWith("quadp") == true) {
+            "ordinary"
+        } else {
+            seasonString(context.season)
+        }
 
         // Easter/Pentecost octave: use Sunday psalms for all hours
         val isOctave = isEasterOrPentecostOctave(context)
@@ -170,9 +177,25 @@ class OfficeAssembler(
             part
         }
 
+        // Prime's Lectio Brevis is, by the rubric's own rule, the day's None
+        // capitulum. Fill the slot when nothing proper landed there (proper
+        // feast lessons override by key in the later layers).
+        val lectioBrevisApplied = if (template.slug == "prima") {
+            assembledParts.map { part ->
+                if (part.variationKey != "lectio_prima" || !part.lat.isNullOrEmpty()) return@map part
+                val src = temporalOverrides["capitulum_nona"]
+                    ?: seasonOverrides["capitulum_nona"]
+                    ?: dayOverrides["capitulum_nona"]
+                    ?: return@map part
+                part.copy(lat = src.lat, eng = src.eng, ref = src.ref)
+            }
+        } else {
+            assembledParts
+        }
+
         // Inline psalm text from psalter.json for any psalm part that has
         // a ref but no verses (or empty verses).
-        val psalmInlined = assembledParts.map { inlinePsalmText(it) }
+        val psalmInlined = lectioBrevisApplied.map { inlinePsalmText(it) }
 
         // Apply temporal per-psalm antiphon overrides. Uses the same mapping
         // as ContentStore.applyProperOverrides (incl. the Matins offset --
@@ -211,11 +234,19 @@ class OfficeAssembler(
         // penitential window they are removed, leaving the bare antiphon text.
         val alleluiaStripped = if (shouldSubstituteLausTibi(context)) {
             lausTibiApplied.map { part ->
-                if (part.type != "antiphon") return@map part
-                part.copy(
-                    lat = part.lat?.let { stripAlleluia(it) },
-                    eng = part.eng?.let { stripAlleluia(it) },
-                )
+                when {
+                    part.type == "antiphon" -> part.copy(
+                        lat = part.lat?.let { stripAlleluia(it) },
+                        eng = part.eng?.let { stripAlleluia(it) },
+                    )
+                    // Psalm-attached antiphons carry alleluias too (the
+                    // festal template antiphons embed them).
+                    part.antiphonLat != null -> part.copy(
+                        antiphonLat = part.antiphonLat?.let { stripAlleluia(it) },
+                        antiphonEng = part.antiphonEng?.let { stripAlleluia(it) },
+                    )
+                    else -> part
+                }
             }
         } else {
             lausTibiApplied
@@ -250,7 +281,7 @@ class OfficeAssembler(
                 !(part.type == "pater" && part.variationKey.isNullOrEmpty()
                     && !(part.label ?: "").contains("Ave"))
             }
-            if (shouldIncludePreces(context, rite, template.slug)) {
+            if (officeIsFerial && shouldIncludePreces(context, rite, template.slug)) {
                 precesApplied = insertPreces(precesApplied, template.slug)
             }
         }
@@ -303,7 +334,17 @@ class OfficeAssembler(
         } else {
             buildOneNocturn(parts, includeTeDeum)
         }
-        return if (isTenebrae) applyTenebrae(structured) else structured
+        // When the Te Deum stands in place of the ninth responsory, drop the
+        // bare "Responsorium IX" slot if nothing filled it.
+        val cleaned = if (includeTeDeum) {
+            structured.filter {
+                !(it.variationKey == "responsory9" &&
+                    it.lat.isNullOrEmpty() && it.v1Lat.isNullOrEmpty() && it.verses.isNullOrEmpty())
+            }
+        } else {
+            structured
+        }
+        return if (isTenebrae) applyTenebrae(cleaned) else cleaned
     }
 
     /**
@@ -806,6 +847,12 @@ class OfficeAssembler(
                 }
 
                 "vesperae" -> {
+                    // The 2nd-Vespers capitulum (Capitulum Vespera 3) wins
+                    // over the 1st-Vespers one when both exist (the alias
+                    // table maps both onto vesperae.capitulum unordered).
+                    raw["capitulum_vespera_3"]?.let {
+                        o["vesperae.capitulum"] = rekeyed(it, "vesperae.capitulum")
+                    }
                     // Psalm antiphons: the 2nd-Vespers list (Ant Vespera 3)
                     // wins over the 1st-Vespers/shared list (Ant Vespera).
                     val list = o["ant_vespera_3"] ?: o["ant_vespera_3c"]
