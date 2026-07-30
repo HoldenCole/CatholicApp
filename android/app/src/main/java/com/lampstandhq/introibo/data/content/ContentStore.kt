@@ -39,6 +39,21 @@ object ContentStore {
 
     private lateinit var appContext: Context
 
+    // JVM test seam: when set, load() reads the SAME asset files from this
+    // directory instead of Android assets, so unit tests can run the real
+    // office pipeline (hourForDate and everything under it) without a
+    // Context. Never used by the app.
+    private var fileRoot: java.io.File? = null
+    private var filesInitialized = false
+
+    /** Initialise from a directory of asset files (JVM tests only). */
+    internal fun initFromDirectory(dir: java.io.File) {
+        if (::appContext.isInitialized || filesInitialized) return
+        fileRoot = dir
+        filesInitialized = true
+        loadAll()
+    }
+
     var prayers: List<Prayer> = emptyList()
         private set
     var reference: List<ReferenceEntry> = emptyList()
@@ -91,7 +106,11 @@ object ContentStore {
     fun init(context: Context) {
         if (::appContext.isInitialized) return
         appContext = context.applicationContext
+        if (filesInitialized) return
+        loadAll()
+    }
 
+    private fun loadAll() {
         prayers          = load("prayers.json")            ?: emptyList()
         reference        = load("reference.json")          ?: emptyList()
         saints           = load("saints.json")             ?: emptyList()
@@ -300,6 +319,15 @@ object ContentStore {
             resolveCommuneRedirect(sundayKey, sundayOrdo)?.let { return it }
         }
 
+        // Ferias whose temporal key has no weekday form (the early-January
+        // "nat08".."nat11" days) repeat the preceding Sunday's Mass — find
+        // that Sunday by DATE and resolve its own formulary. One hop only:
+        // the recursive call lands on a Sunday and never reaches this branch.
+        if (date.dayOfWeek != java.time.DayOfWeek.SUNDAY) {
+            val sunday = date.minusDays((date.dayOfWeek.value % 7).toLong())
+            return properForDate(sunday, rite)
+        }
+
         return null
     }
 
@@ -462,11 +490,26 @@ object ContentStore {
         hours.firstOrNull { it.slug == slug }
 
     fun hourForToday(slug: String, rite: MissalRite = MissalRite.RITE_1962): Hour? {
-      try {
+        return try {
+            hourForDate(slug, java.time.LocalDate.now(), rite)
+        } catch (t: Throwable) {
+            // Log but don't crash — mirrors load()'s philosophy. A data edge
+            // case in one day's Office must not take down the whole app.
+            android.util.Log.e("INTROIBO_OFFICE", "hourForToday failed for slug=$slug", t)
+            null
+        }
+    }
+
+    /**
+     * The full office pipeline for any [date] (assembly + proper layers +
+     * commemoration). Throws on data edge cases — hourForToday catches; the
+     * QA sweep wants the exception.
+     */
+    internal fun hourForDate(slug: String, date: java.time.LocalDate, rite: MissalRite = MissalRite.RITE_1962): Hour? {
         val template = hour(slug) ?: return null
         // Build the context with the caller's rite — ctx.properSlug feeds the
         // Preces Feriales gate in OfficeAssembler (iOS reads the rite here too).
-        val ctx = LiturgicalContext.forDate(java.time.LocalDate.now(), rite = rite)
+        val ctx = LiturgicalContext.forDate(date, rite = rite)
         val ordo = ordoForDate(ctx.date, rite)
         // Festal (Sunday) psalm scheme at Lauds & Vespers belongs to I/II
         // class feasts only (rank >= 5). Since Divino Afflatu (1911) — and in
@@ -502,7 +545,15 @@ object ContentStore {
         val matinsNocturns = if (isClassIorII) 3 else 1
         val matinsTeDeum = computeMatinsTeDeum(ctx, ordo, rite)
 
-        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite)
+        // Last-resort day collect: the day's Mass collect via the Missal
+        // pipeline, whose resolution (preceding Sunday, stub redirects,
+        // resumed Sundays, early-January ferias) is the app's single source
+        // of truth for "the collect of the day".
+        val fallbackCollect = properForDate(date, rite)?.collect?.let { c ->
+            Hour.Part(type = "collect", label = "Collect", lat = c.lat, eng = c.eng, variationKey = "oratio")
+        }
+
+        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect)
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -607,12 +658,6 @@ object ContentStore {
         }
 
         return assembled
-      } catch (t: Throwable) {
-        // Log but don't crash — mirrors load()'s philosophy. A data edge case
-        // in one day's Office must not take down the whole app.
-        android.util.Log.e("INTROIBO_OFFICE", "hourForToday failed for slug=$slug", t)
-        return null
-      }
     }
 
     /**
@@ -672,6 +717,25 @@ object ContentStore {
         }
         return hour.copy(parts = updatedParts)
     }
+
+    /** QA seam: the collect texts the saint's layers could supply (proper +
+     *  pre-1955 "o" variant), or null when the entry carries no collect. */
+    internal fun sanctoralOratioForQA(winnerKey: String, rite: MissalRite): List<String>? {
+        val texts = listOfNotNull(
+            sanctoralPropers[winnerKey]?.get("oratio")?.lat,
+            if (rite == MissalRite.PRE_1955) {
+                sanctoralPropers[winnerKey + "o"]?.get("oratio")?.lat
+            } else {
+                null
+            },
+        )
+        return texts.ifEmpty { null }
+    }
+
+    /** QA seam: whether commemoration data exists with a collect. */
+    internal fun commemorationHasOratioForQA(key: String): Boolean =
+        (sanctoralPropers[key] ?: officeAssembler.temporalPropers[key])
+            ?.containsKey("oratio") == true
 
     /**
      * DO's contracted single legend lesson for 1-nocturn feast Matins:
@@ -800,7 +864,12 @@ object ContentStore {
 
     private inline fun <reified T> load(filename: String): T? {
         return try {
-            val text = appContext.assets.open(filename).bufferedReader().use { it.readText() }
+            val root = fileRoot
+            val text = if (root != null) {
+                java.io.File(root, filename).readText()
+            } else {
+                appContext.assets.open(filename).bufferedReader().use { it.readText() }
+            }
             json.decodeFromString<T>(text)
         } catch (e: Exception) {
             // Log but don't crash -- mirrors the iOS assertionFailure behaviour

@@ -55,7 +55,7 @@ class OfficeAssembler(
         "laudes", "vesperae", "prima", "tertia", "sexta", "nona", "completorium",
     )
 
-    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962): Hour {
+    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962, fallbackCollect: Hour.Part? = null): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
         val seasonKey = seasonString(context.season)
 
@@ -90,6 +90,11 @@ class OfficeAssembler(
                 candidates.add(sunday["oratio"])
                 candidates.add(sunday["oratio_2"])
             }
+            // Last resort: the day's MASS collect, resolved by the caller via
+            // the Missal pipeline (which already handles resumed Sundays,
+            // stub redirects, and the early-January ferias). The office and
+            // Mass collect of the day coincide.
+            candidates.add(fallbackCollect)
             candidates.filterNotNull().firstOrNull()?.let {
                 temporalOverrides["oratio"] = rekeyed(it, "oratio")
             }

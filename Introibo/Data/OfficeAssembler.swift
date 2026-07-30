@@ -303,7 +303,7 @@ struct OfficeAssembler {
         "matutinum.psalm10": "matutinum.antiphon.psalm9",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962) -> Hour {
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962, fallbackCollect: Hour.Part? = nil) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
         let seasonKey = seasonString(for: context.season)
 
@@ -336,6 +336,11 @@ struct OfficeAssembler {
                 candidates.append(sunday["oratio"])
                 candidates.append(sunday["oratio_2"])
             }
+            // Last resort: the day's MASS collect, resolved by the caller via
+            // the Missal pipeline (which already handles resumed Sundays,
+            // stub redirects, and the early-January ferias). The office and
+            // Mass collect of the day coincide.
+            candidates.append(fallbackCollect)
             if let collect = candidates.compactMap({ $0 }).first {
                 temporalOverrides["oratio"] = Self.rekeyed(collect, "oratio")
             }

@@ -319,20 +319,41 @@ def write_both(name: str, data) -> None:
     print(f"  wrote {name} ({len(text):,} bytes, md5 {digest})")
 
 
+def strip_junk_doxologies(propers: dict) -> int:
+    """A proper doxology override is the hymn's final 'Glória' stanza; an
+    entry whose text lacks any 'glori' is an import artefact (e.g. the 09-15
+    doxology, which held the feast TITLE) and must fall back to the common
+    doxology instead of rendering junk."""
+    removed = 0
+    for entry in propers.values():
+        for key in ("doxology", "doxology_"):
+            part = entry.get(key)
+            if part and "glori" not in part.get("lat", "").lower().replace("ó", "o"):
+                del entry[key]
+                removed += 1
+    return removed
+
+
 def main():
     ferial = build_ferial_parts()
 
     hours = json.loads((RESOURCES / "hours.json").read_text())
     pw = json.loads((RESOURCES / "psalter_weekly.json").read_text())
     hs = json.loads((RESOURCES / "hymns_seasonal.json").read_text())
+    sp = json.loads((RESOURCES / "sanctoral_propers.json").read_text())
+    tp = json.loads((RESOURCES / "temporal_propers.json").read_text())
 
     hours = fix_hours(hours)
     pw = fix_psalter_weekly(pw, ferial)
     hs = fix_hymns_seasonal(hs)
+    junk = strip_junk_doxologies(sp) + strip_junk_doxologies(tp)
+    print(f"  stripped {junk} junk doxology override(s)")
 
     write_both("hours.json", hours)
     write_both("psalter_weekly.json", pw)
     write_both("hymns_seasonal.json", hs)
+    write_both("sanctoral_propers.json", sp)
+    write_both("temporal_propers.json", tp)
 
     # ── QA ────────────────────────────────────────────────────────────────
     vesp = next(h for h in hours if h["slug"] == "vesperae")

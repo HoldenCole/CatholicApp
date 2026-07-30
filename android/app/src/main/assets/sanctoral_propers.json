@@ -16805,11 +16805,6 @@
       "type": "hymn",
       "variationKey": "hymnus_vespera"
     },
-    "doxology": {
-      "lat": "Septem Dolorum Beatæ Mariæ Virginis",
-      "type": "hymn",
-      "variationKey": "doxology"
-    },
     "versum_1": {
       "lat": "V. Regína Mártyrum, ora pro nobis.\nR. Quæ juxta crucem Jesu constitísti.",
       "eng": "V. Pray for us, O Queen of Martyrs.\nR. Who didst stand by the Cross of Jesus.",

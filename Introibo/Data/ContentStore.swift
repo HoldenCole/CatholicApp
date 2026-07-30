@@ -133,7 +133,20 @@ final class ContentStore {
         let matinsNocturns = isClassIorII ? 3 : 1
         let matinsTeDeum = computeMatinsTeDeum(ctx: ctx, ordo: ordo, rite: rite)
 
-        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite)
+        // Last-resort day collect: the day's Mass collect via the Missal
+        // pipeline, whose resolution (preceding Sunday, stub redirects,
+        // resumed Sundays, early-January ferias) is the app's single source
+        // of truth for "the collect of the day".
+        let fallbackCollect: Hour.Part? = properForDate(ctx.date, rite: rite).map { proper in
+            var p = Hour.Part(type: "collect")
+            p.label = "Collect"
+            p.lat = proper.collect.lat
+            p.eng = proper.collect.eng
+            p.variationKey = "oratio"
+            return p
+        }
+
+        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite, fallbackCollect: fallbackCollect)
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -406,7 +419,17 @@ final class ContentStore {
 
     func properForDate(_ date: Date, rite: MissalRite = .rite1962) -> MassProper? {
         let entry = ordoForDate(date, rite: rite)
-        return properFromOrdo(entry, rite: rite)
+        if let mp = properFromOrdo(entry, rite: rite) { return mp }
+        // Ferias whose temporal key has no weekday form (the early-January
+        // "nat08".."nat11" days) repeat the preceding Sunday's Mass — find
+        // that Sunday by DATE and resolve its own formulary. One hop only:
+        // the recursive call lands on a Sunday and never reaches this branch.
+        let cal = Calendar.liturgical
+        let weekday = cal.component(.weekday, from: date)   // 1 = Sunday
+        guard weekday != 1,
+              let sunday = cal.date(byAdding: .day, value: -(weekday - 1), to: date)
+        else { return nil }
+        return properFromOrdo(ordoForDate(sunday, rite: rite), rite: rite)
     }
 
     private func properFromOrdo(_ entry: OrdoEntry?, rite: MissalRite = .rite1962) -> MassProper? {

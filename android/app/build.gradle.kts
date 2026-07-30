@@ -42,6 +42,12 @@ android {
         compose = true
         buildConfig = true
     }
+
+    testOptions {
+        // The QA sweep runs the real ContentStore pipeline on the JVM; its
+        // error paths touch android.util.Log, which must no-op, not throw.
+        unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {
