@@ -46,27 +46,65 @@ assembled-office dumps against Divinum Officium sources). Dumps regenerate via
 - [cosmetic] Dump harness printed responsories as empty (v1Lat fields not
   shown) — caused false findings; fixed.
 
+## Fixed in the final QA pass (psalm data · responsories · content · Mass ordinary)
+Divine Office data (`scripts/fix_office_psalm_data.py`; closes items 1–3):
+- Ferial Matins psalter rebuilt from DO `Psalterium/Psalmi matutinum.txt
+  [DayN]`: 9 psalms per weekday with the 1960 antiphons over the RIGHT
+  psalms, divisi slices (44i/44ii …) cut exactly on DO verse labels, and the
+  three per-nocturn versicles imported.
+- Proper/commune psalm assignments now honored: 847 pre-normalized slot
+  parts across 77 temporal/sanctoral/commune entries (`matutinum.psalmN`,
+  `vesperae.psalmN`, `laudes.psalmN`/canticle) parsed from the `;;N` refs of
+  `[Ant Matutinum]`/`[Ant Vespera]`/`[Ant Laudes]`, with nocturn antiphons
+  carried on prefixed `matutinum.ant_N` keys so canticle antiphons survive;
+  Easter/Pentecost one-nocturn offices suppress the unused slots. Both
+  assemblers gained the pre-normalized remap guard.
+- 95 commune Matins responsories imported (C1, C8, C9 …) with full
+  `@file:Section:s/x/y/` sed-reference resolution.
+
+Prayers/devotions/reference content (`scripts/fix_content_qa.py`), all
+verified against editio-typica sources: Veni Creator stanza order; Act of
+Faith English realigned; Morning Offering completed (dolóres, union with
+all Masses clause); Litany of the Sacred Heart ADDED; Stations IV/VIII Latin
+titles; Marian-antiphon season boundaries (Candlemas cutover) and Per
+eúndem/Génetrix orthography; ~12 reference corrections + a new Septuagesima
+calendar entry; saints quotes re-attributed (Lauda Sion); course/confession
+guide Latin fixes; assorted accent typos (propitiátio, Bartholomǽe …).
+
+Order of Mass (code both platforms + `scripts/fix_missal_ordinary.py`):
+- Dismissal now precedes the Placeat (Ite → Placeat → Blessing → Last
+  Gospel); Placeat said at every Mass with only the blessing omitted at
+  Requiems (placeat/benedictio split into separate sections).
+- Communion of the faithful completed: priest's communion sequence ordered
+  (Panem cæléstem → Dómine non sum dignus → communion → Confiteor of the
+  people), Ecce Agnus Dei + the people's threefold Dómine non sum dignus
+  added.
+- The five proper Communicantes ended mid-sentence at "…Jesu Christi:" while
+  the renderer swaps the whole canon line — the saint list and conclusion
+  were silently deleted on Christmas/Epiphany/Easter/Ascension/Pentecost.
+  Continuation appended; Christmas/Epiphany gain "Genetrícis ejúsdem Dei"
+  ("Mother of the same God"); Genitrícis → Genetrícis throughout.
+- 1962 Canon now inserts the St Joseph clause (decree 13 Nov 1962) at render
+  time — plain and variant paths, view and share walks.
+- Canon-variant gating unified across rites (the 1960 Codex retained the
+  Easter/Pentecost octaves): variants run the whole octave, vigils included;
+  Christmas variant through Jan 1, not the Jan 2–5 ferias.
+- Doubled-Alleluia dismissal restricted to the Easter Octave (was also
+  firing through Pentecost week); 1962 says Ite missa est even without
+  Gloria; Requiem checks now precede season checks in showGloria.
+- Sacred Heart / Christ the King prefaces recognized as proper prefaces;
+  Sacred Heart "páteret salútis refúgium" and Easter "in hac potíssimum
+  die" restored; Easter preface English aligned to the Latin (true Lamb,
+  Thee/Thy).
+
 ## Open — data-layer (largest impact first)
-1. [blocker] **Ferial Matins psalm table is wrong every weekday.**
-   psalter_weekly's Matins psalms match no edition (e.g. Wednesday 38,39,43…
-   instead of 44i,44ii,45,47,48i,48ii,49i,49ii,50). Antiphons are the correct
-   1960 set but sit over the wrong psalms. Needs a re-import from DO
-   `Psalterium/Psalmi matutinum.txt [DayN]` with psalm-division (divisi)
-   support in psalter.json.
-2. [blocker] **Proper/commune Matins psalm assignments ignored.** DO's
-   `[Ant Matutinum]` lines carry `;;psalm` numbers (Christmas 2,18,44…;
-   Epiphany 28,45,46…; Assumption/Immaculate Conception 8,18,23…; C1
-   18,33,44…; C8 23,45,47…; Easter/Pentecost 3-psalm proper nocturns).
-   The importer dropped the numbers and the assembler has no mechanism to
-   swap psalms; proper antiphons currently render as one concatenated block
-   over ferial psalms. Same mechanism needed for proper Vespers psalm sets
-   (Christmas 129/131; C8/C11 5th psalm 147/116; Triduum Lauds 50,89,35…;
-   Good Friday Vespers 115,119,139,140,141; All Souls).
-3. [blocker] **Commune Matins responsories empty** (C1, C8, C9): DO
-   `@file:Section:s/x/y/` references with sed payloads were skipped at
-   import, leaving bare "Responsorium" labels on feasts using those communes.
-   Same root cause as the lost proper Lauds antiphons of 08-15/12-08
-   (`@…:s/;;.*//g`) which fall back to the C10 set.
+1. **FIXED** in the final QA pass — ferial Matins psalter re-imported with
+   divisi support (see above).
+2. **FIXED** in the final QA pass — proper/commune psalm slots imported for
+   Matins/Vespers/Lauds, incl. 3-psalm proper nocturns (see above). All
+   Souls' fully proper psalter remains with item 4.
+3. **FIXED** in the final QA pass — commune responsories imported with
+   sed-reference resolution (see above).
 4. [blocker] **All Souls (11-02)** needs the Office of the Dead structure:
    no hymn, no Te Deum, proper psalms at every hour, "A porta inferi"
    versicles, C9 responsories and the Fidelium collect (currently the
@@ -189,6 +227,17 @@ right.) Fixed in this pass:
     (Presanctified) and its "r" stubs incomplete — 1962/55 content served
     to pre-1955 users; Triduum pseudo-formulary slot labels misleading
     ("Introit" over a tract).
+21. [minor] Final-QA deferrals (reviewed, consciously not shipped):
+    Munda cor meum + the Gospel dialogue absent from the printed Ordinary;
+    Kyrie lacks priest/server alternation marks; preface season defaults
+    are coarse (the Christmastide flag runs to Candlemas, so late-January
+    ferias keep the Nativity preface; an "Advent preface" is offered though
+    the 1962 Missale assigns the common preface in Advent — authenticity
+    to be decided); green Sundays' formularies inherit to their ferias
+    with gloria=true and the Trinity preface, where a repeated feria takes
+    neither; preces omitted slightly too broadly on the Missal side;
+    j/i orthography mixed across texts (Iesus/Jesus); the St Catherine
+    confession-guide step count differs from its phase list.
 
 ## Deliberately out of scope (design decisions, unchanged)
 - Antiphon doubling display (pre-1960 incipit-only before canticles).

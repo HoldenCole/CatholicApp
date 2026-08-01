@@ -810,6 +810,18 @@ class OfficeAssembler(
 
             when (hourSlug) {
                 "matutinum" -> {
+                    // Pre-normalized entries (the psalm-slot generator emits
+                    // explicit matutinum.psalmN parts plus their nocturn
+                    // antiphons/suppressions under PREFIXED matutinum.ant_N
+                    // keys — the plain ant_1/2/3 keys hold the canticle
+                    // antiphons): bind the prefixed keys.
+                    if ("matutinum.psalm2" in raw) {
+                        for (k in listOf("ant_1", "ant_2", "ant_3")) {
+                            raw["matutinum.$k"]?.let { o[k] = it }
+                        }
+                        o.remove("ant_matutinum")
+                        return o
+                    }
                     // Nocturn antiphons from "Ant Matutinum": one chunk per nocturn.
                     val lats = latLines(o["ant_matutinum"])
                     if (lats.isNotEmpty()) {

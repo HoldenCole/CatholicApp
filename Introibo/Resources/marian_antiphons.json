@@ -3,24 +3,24 @@
     "slug": "alma",
     "title": "Alma Redemptóris Mater",
     "eng": "Loving Mother of the Redeemer",
-    "season": "Advent through Candlemas",
+    "season": "Advent through February 1",
     "lat": "Alma Redemptóris Mater, quæ pérvia cæli porta manes, et stella maris, succúrre cadénti, súrgere qui curat pópulo: Tu quæ genuísti, natúra miránte, tuum sanctum Genitórem: Virgo prius ac postérius, Gabriélis ab ore sumens illud Ave, peccatórum miserére.",
     "engBody": "Loving Mother of the Redeemer, gate of heaven, star of the sea, hasten to aid thy fallen people who strive to rise once more. Thou who brought forth thy holy Creator, while all nature marvelled, Virgin before and after receiving that Ave from the mouth of Gabriel, have mercy on us sinners.",
     "versicle_lat": "℣. Angelus Dómini nuntiávit Maríæ.\n℟. Et concépit de Spíritu Sancto.",
     "versicle_eng": "℣. The Angel of the Lord declared unto Mary.\n℟. And she conceived of the Holy Ghost.",
-    "collect_lat": "Grátiam tuam, quæsumus, Dómine, méntibus nostris infúnde: ut, qui Angelo nuntiánte, Christi Fílii tui Incarnatiónem cognóvimus; per Passiónem ejus et Crucem, ad Resurrectiónis glóriam perducámur. Per eúmdem Christum Dóminum nostrum. Amen.",
+    "collect_lat": "Grátiam tuam, quæsumus, Dómine, méntibus nostris infúnde: ut, qui Angelo nuntiánte, Christi Fílii tui Incarnatiónem cognóvimus; per Passiónem ejus et Crucem, ad Resurrectiónis glóriam perducámur. Per eúndem Christum Dóminum nostrum. Amen.",
     "collect_eng": "Pour forth, we beseech Thee, O Lord, Thy grace into our hearts; that we, to whom the Incarnation of Christ Thy Son was made known by the message of an Angel, may by His Passion and Cross be brought to the glory of His Resurrection. Through the same Christ our Lord. Amen."
   },
   {
     "slug": "ave",
     "title": "Ave Regína Cælórum",
     "eng": "Hail, Queen of Heaven",
-    "season": "Candlemas through Holy Wednesday",
+    "season": "February 2 through Holy Wednesday",
     "lat": "Ave Regína cælórum, Ave Dómina Angelórum: Salve radix, salve porta, ex qua mundo lux est orta. Gaude Virgo gloriósa, super omnes speciósa: Vale, o valde decóra, et pro nobis Christum exóra.",
     "engBody": "Hail, O Queen of Heaven enthron'd! Hail, by angels Mistress own'd! Root of Jesse, Gate of morn, whence the world's true light was born. Glorious Virgin, joy to thee, loveliest whom in heaven they see; fairest thou where all are fair, plead with Christ our sins to spare.",
     "versicle_lat": "℣. Dignáre me laudáre te, Virgo sacráta.\n℟. Da mihi virtútem contra hostes tuos.",
     "versicle_eng": "℣. Vouchsafe that I may praise thee, O sacred Virgin.\n℟. Give me strength against thine enemies.",
-    "collect_lat": "Concéde, miserícors Deus, fragilitáti nostræ præsídium: ut, qui sanctæ Dei Genitrícis memóriam ágimus, intercessiónis ejus auxílio, a nostris iniquitátibus resurgámus. Per eúmdem Christum Dóminum nostrum. Amen.",
+    "collect_lat": "Concéde, miserícors Deus, fragilitáti nostræ præsídium: ut, qui sanctæ Dei Genitrícis memóriam ágimus, intercessiónis ejus auxílio, a nostris iniquitátibus resurgámus. Per eúndem Christum Dóminum nostrum. Amen.",
     "collect_eng": "Grant, O merciful God, support to our frailty: that we who commemorate the holy Mother of God, may by the help of her intercession, rise again from our iniquities. Through the same Christ our Lord. Amen."
   },
   {
@@ -32,7 +32,7 @@
     "engBody": "Queen of Heaven, rejoice, alleluia: For He whom thou didst merit to bear, alleluia, Hath risen, as He said, alleluia. Pray for us to God, alleluia.",
     "versicle_lat": "℣. Gaude et lætáre, Virgo María, allelúja.\n℟. Quia surréxit Dóminus vere, allelúja.",
     "versicle_eng": "℣. Rejoice and be glad, O Virgin Mary, alleluia.\n℟. For the Lord hath risen indeed, alleluia.",
-    "collect_lat": "Deus, qui per resurrectiónem Fílii tui Dómini nostri Jesu Christi mundum lætificáre dignátus es: præsta, quǽsumus; ut per ejus Genitrícem Vírginem Maríam perpétuæ capiámus gáudia vitæ. Per eúmdem Christum Dóminum nostrum. Amen.",
+    "collect_lat": "Deus, qui per resurrectiónem Fílii tui Dómini nostri Jesu Christi mundum lætificáre dignátus es: præsta, quǽsumus; ut per ejus Genitrícem Vírginem Maríam perpétuæ capiámus gáudia vitæ. Per eúndem Christum Dóminum nostrum. Amen.",
     "collect_eng": "O God, who through the resurrection of Thy Son our Lord Jesus Christ didst vouchsafe to give joy to the world: grant, we beseech Thee, that through His Mother, the Virgin Mary, we may obtain the joys of everlasting life. Through the same Christ our Lord. Amen."
   },
   {
@@ -42,9 +42,9 @@
     "season": "Trinity Sunday through Advent",
     "lat": "Salve, Regína, Mater misericórdiæ, vita, dulcédo et spes nostra, salve. Ad te clamámus, éxsules fílii Hevæ. Ad te suspirámus, geméntes et flentes in hac lacrimárum valle. Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte. Et Jesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde. O clemens, o pia, o dulcis Virgo María.",
     "engBody": "Hail, holy Queen, Mother of Mercy, our life, our sweetness, and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us, and after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
-    "versicle_lat": "℣. Ora pro nobis, sancta Dei Génitrix.\n℟. Ut digni efficiámur promissiónibus Christi.",
+    "versicle_lat": "℣. Ora pro nobis, sancta Dei Génetrix.\n℟. Ut digni efficiámur promissiónibus Christi.",
     "versicle_eng": "℣. Pray for us, O holy Mother of God.\n℟. That we may be made worthy of the promises of Christ.",
-    "collect_lat": "Omnípotens sempitérne Deus, qui gloriósæ Vírginis Matris Maríæ corpus et ánimam, ut dignum Fílii tui habitáculum éffici mererétur, Spíritu Sancto cooperánte, præparásti: da, ut cujus commemoratióne lætámur, ejus pia intercessióne ab instántibus malis et a morte perpétua liberémur. Per eúmdem Christum Dóminum nostrum. Amen.",
+    "collect_lat": "Omnípotens sempitérne Deus, qui gloriósæ Vírginis Matris Maríæ corpus et ánimam, ut dignum Fílii tui habitáculum éffici mererétur, Spíritu Sancto cooperánte, præparásti: da, ut cujus commemoratióne lætámur, ejus pia intercessióne ab instántibus malis et a morte perpétua liberémur. Per eúndem Christum Dóminum nostrum. Amen.",
     "collect_eng": "Almighty, everlasting God, who by the cooperation of the Holy Ghost didst prepare the body and soul of the glorious Virgin-Mother Mary to become a dwelling worthy of Thy Son: grant that as we rejoice in her commemoration, so by her loving intercession we may be delivered from present evils and from everlasting death. Through the same Christ our Lord. Amen."
   }
 ]

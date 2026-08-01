@@ -274,6 +274,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     ordinaryItem("sanctus")
     canonWithProperInsertions(ctx, rite)
     ordinaryItem("pater")
+    ordinaryItem("libera")
 
     // Agnus Dei (Requiem form when color is black)
     if (proper.color == "black") {
@@ -282,32 +283,40 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
         ordinaryItem("agnus")
     }
 
-    // Confiteor before Communion — retained in all pre-1964 rites
-    // (1962 Ritus servandus VIII.6; only suppressed by Inter Oecumenici 1964)
-    ordinaryItem("confiteor-communion")
-
+    // The priest's communion prayers and communion, then the Confiteor and
+    // communion of the faithful (retained in preconciliar practice;
+    // suppressed by Inter Oecumenici 1964).
+    ordinaryItem("orationes-ante-communionem")
+    ordinaryItem("panem-caelestem")
     ordinaryItem("domine")
+    ordinaryItem("communio-sacerdotis")
+    ordinaryItem("confiteor-communion")
 
     // Communion
     item { ProperSection(latin = "Communio", subtitle = "Communion", text = proper.communion) }
 
+    ordinaryItem("ablutiones")
+
     // Postcommunion
     item { ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion) }
 
-    // Placeat + Blessing (omitted in Requiem)
-    if (proper.color != "black") {
-        ordinaryItem("placeat")
-    }
-
-    // Dismissal: doubled-Alleluia form during Easter/Pentecost Octave
+    // Dismissal precedes the Placeat: doubled-Alleluia form during the
+    // EASTER Octave only; the 1960 rubrics say Ite missa est even when the
+    // Gloria is not said.
     if (proper.color == "black") {
         ordinaryItem("requiescant")
-    } else if (isEasterOrPentecostOctave(ctx)) {
+    } else if (isEasterOctave(ctx)) {
         ordinaryItem("ite-alleluia")
-    } else if (showGloria(proper, ctx)) {
+    } else if (showGloria(proper, ctx) || rite == MissalRite.RITE_1962) {
         ordinaryItem("ite")
     } else {
         ordinaryItem("benedicamus")
+    }
+
+    // Placeat is said at every Mass; the blessing alone is omitted at Requiems.
+    ordinaryItem("placeat")
+    if (proper.color != "black") {
+        ordinaryItem("benedictio")
     }
 
     // Last Gospel — Palm Sunday in the pre-1955 rite substitutes Matt 21:1-9
@@ -363,13 +372,12 @@ private fun lastGospelOverride(ctx: LiturgicalContext, rite: MissalRite): String
 }
 
 /**
- * Returns true when the current day is within the Easter Octave (pasc0-0
- * through pasc0-6) or the Pentecost Octave (pasc7-0 through pasc7-6).
- * On those days the dismissal uses the doubled-Alleluia form.
+ * The doubled "Ite, missa est, alleluia" belongs to the EASTER octave only
+ * (Pentecost's octave keeps the ordinary dismissal).
  */
-private fun isEasterOrPentecostOctave(ctx: LiturgicalContext): Boolean {
+private fun isEasterOctave(ctx: LiturgicalContext): Boolean {
     val key = ctx.temporalKey ?: return false
-    return key.startsWith("pasc0-") || key.startsWith("pasc7-")
+    return key.startsWith("pasc0-")
 }
 
 private fun prefaceSlug(proper: MassProper, ctx: LiturgicalContext): String {
@@ -389,8 +397,8 @@ private fun prefaceSlug(proper: MassProper, ctx: LiturgicalContext): String {
 private fun showGloria(proper: MassProper, ctx: LiturgicalContext): Boolean {
     // Honor explicit DO rubric rule when present.
     proper.glorOverride?.let { return it }
-    if (ctx.season == LiturgicalSeason.EASTER || ctx.season == LiturgicalSeason.CHRISTMAS) return true
     if (proper.color == "violet" || proper.color == "black") return false
+    if (ctx.season == LiturgicalSeason.EASTER || ctx.season == LiturgicalSeason.CHRISTMAS) return true
     if (ctx.isSunday) {
         val preLent = listOf("septuagesima", "sexagesima", "quinquagesima")
         if (ctx.properSlug in preLent) return false
@@ -432,60 +440,60 @@ private fun isApostleEvangelistOrDoctor(proper: MassProper): Boolean {
 }
 
 /**
- * Returns the Communicantes/Hanc igitur variant key (if any) for the
- * current day, gated by rite.
- *
- * Rite scope:
- * - **PRE_1955** retains the full octaves of Easter and Pentecost: the proper
- *   Communicantes (and, for the two paschal octaves, the proper Hanc igitur)
- *   fires on every day of the octave (feast + six weekdays through Saturday).
- * - **RITE_1955** keeps the Easter and Pentecost octaves intact for Canon
- *   purposes — same behavior as pre-1955 for this gating.
- * - **RITE_1962** (Codex Rubricarum 1960) abolished the octaves of Easter and
- *   Pentecost as such. Only the feast day itself (Easter/Pentecost Sunday) and
- *   the Monday keep the proper insertion. From Tuesday onward the standard
- *   Communicantes is used.
- * - Christmas, Epiphany, and Ascension behave identically across all three rites.
+ * The 1962 Canon (decree of 13 Nov 1962) adds "sed et beati Joseph, ejusdem
+ * Virginis Sponsi" to the Communicantes; the older rites do not.
+ */
+private fun withJosephClause(line: MissalSection.Line, rite: MissalRite): MissalSection.Line {
+    if (rite != MissalRite.RITE_1962) return line
+    if (!(line.lat.startsWith("Commúnicántes") || line.lat.startsWith("Communicántes"))) return line
+    if ("beáti Joseph" in line.lat) return line
+    var lat = line.lat.replace(
+        "Jesu Christi: sed et",
+        "Jesu Christi: sed et beáti Joseph, ejúsdem Vírginis Sponsi: sed et",
+    )
+    var eng = line.eng.replaceFirst(
+        ": and also of the blessed Apostles",
+        ": and also of blessed Joseph, spouse of the same Virgin: and also of the blessed Apostles",
+    )
+    return MissalSection.Line(lat = lat, eng = eng, rubric = line.rubric)
+}
+
+/**
+ * Returns the Communicantes/Hanc igitur variant key (if any) for the current
+ * day. Identical across all three rites: the 1960 Codex Rubricarum retained
+ * the octaves of Easter and Pentecost (abolishing all the others except
+ * Christmas), so the proper texts run the whole octave everywhere; Christmas
+ * runs through its octave day (Jan 1), and Epiphany/Ascension fire on the
+ * feast itself.
  */
 private fun canonVariantKey(slug: String?, temporalKey: String?, rite: MissalRite): String? {
-    // Christmastide ferias carry temporal keys "natN" even when the slug is a
-    // saint's; the octave Communicantes applies throughout (iOS parity).
-    if (temporalKey != null && temporalKey.startsWith("nat")) return "christmas"
+    // Nativity: Christmas through its octave day (the Circumcision, Jan 1)
+    // and the Sunday within the octave. NOT the Holy Name Sunday
+    // (christmas-2, Jan 2-5) and NOT the Jan 2-5 ferias — the octave ended.
+    if (temporalKey != null && temporalKey.startsWith("nat") &&
+        !temporalKey.startsWith("nat2") &&
+        temporalKey !in setOf("nat08", "nat09", "nat10", "nat11")
+    ) {
+        return "christmas"
+    }
     if (slug == null) return null
 
-    // Christmas (Dec 25 + octave days Dec 26-31)
-    if (slug == "christmas" || slug.startsWith("christmas-")) return "christmas"
+    if (slug == "christmas" || slug == "christmas-1" || slug == "circumcision") return "christmas"
     if (slug == "st-stephen" || slug == "holy-innocents") return "christmas"
     if (slug.startsWith("sancti-12-2") || slug.startsWith("sancti-12-3")) return "christmas"
 
-    // Epiphany (Jan 6)
     if (slug == "epiphany") return "epiphany"
-
-    // Ascension Thursday
     if (slug == "ascension") return "ascension"
 
-    // Easter octave: easter-sunday + easter-0-1..6 (Mon..Sat in albis)
-    if (slug == "easter-sunday") return "easter"
-    if (slug.startsWith("easter-0-")) {
-        return when (rite) {
-            MissalRite.PRE_1955, MissalRite.RITE_1955 -> "easter"
-            MissalRite.RITE_1962 ->
-                // Only Easter Monday keeps the proper insertion.
-                if (slug == "easter-0-1") "easter" else null
-        }
+    // The 1960 Codex Rubricarum RETAINED the octaves of Easter and
+    // Pentecost (it abolished all the others): the proper Communicantes and
+    // Hanc igitur run the whole octave in all three rites, vigils included.
+    if (slug == "easter-sunday" || slug == "holy-saturday" || slug.startsWith("easter-0-")) {
+        return "easter"
     }
-
-    // Pentecost octave: pentecost-sunday + easter-7-1..6
-    if (slug == "pentecost-sunday") return "pentecost"
-    if (slug.startsWith("easter-7-")) {
-        return when (rite) {
-            MissalRite.PRE_1955, MissalRite.RITE_1955 -> "pentecost"
-            MissalRite.RITE_1962 ->
-                // Only Pentecost Monday keeps the proper insertion.
-                if (slug == "easter-7-1") "pentecost" else null
-        }
+    if (slug == "pentecost-sunday" || slug == "vigil-pentecost" || slug.startsWith("easter-7-")) {
+        return "pentecost"
     }
-
     return null
 }
 
@@ -505,7 +513,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.canonWithProperInsert
         val modifiedBody = section.body.map { line ->
             var lat = line.lat
             var eng = line.eng
-            if (line.lat.startsWith("Commúnicántes")) {
+            if (line.lat.startsWith("Commúnicántes") || line.lat.startsWith("Communicántes")) {
                 val variant = ContentStore.canonVariant("communicantes", variantKey)
                 if (variant != null) {
                     lat = variant.first
@@ -519,7 +527,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.canonWithProperInsert
                     eng = variant.second
                 }
             }
-            MissalSection.Line(lat = lat, eng = eng, rubric = line.rubric)
+            withJosephClause(MissalSection.Line(lat = lat, eng = eng, rubric = line.rubric), rite)
         }
         val modifiedSection = MissalSection(
             slug = section.slug,
@@ -531,6 +539,13 @@ private fun androidx.compose.foundation.lazy.LazyListScope.canonWithProperInsert
         item(key = "ordinary_canon") {
             OrdinarySectionBlock(section = modifiedSection)
         }
+    } else if (section != null) {
+        val modified = MissalSection(
+            slug = section.slug, label = section.label,
+            title = section.title, english = section.english,
+            body = section.body.map { withJosephClause(it, rite) },
+        )
+        item(key = "ordinary_canon") { OrdinarySectionBlock(section = modified) }
     } else {
         ordinaryItem("canon")
     }
@@ -869,7 +884,7 @@ private fun buildFullMassItems(
         val pairs = canonSection.body.map { line ->
             var lat = line.lat
             var eng = line.eng
-            if (line.lat.startsWith("Commúnicántes")) {
+            if (line.lat.startsWith("Commúnicántes") || line.lat.startsWith("Communicántes")) {
                 val variant = ContentStore.canonVariant("communicantes", variantKey)
                 if (variant != null) { lat = variant.first; eng = variant.second }
             }
@@ -877,7 +892,19 @@ private fun buildFullMassItems(
                 val variant = ContentStore.canonVariant("hanc_igitur", variantKey)
                 if (variant != null) { lat = variant.first; eng = variant.second }
             }
-            lat to eng
+            val jl = withJosephClause(MissalSection.Line(lat = lat, eng = eng, rubric = line.rubric), rite)
+            jl.lat to jl.eng
+        }
+        items.add(MassShareItem.Ordinary(
+            title = canonSection.title,
+            english = canonSection.english,
+            pairs = pairs,
+            canonStyle = true,
+        ))
+    } else if (canonSection != null) {
+        val pairs = canonSection.body.map { line ->
+            val jl = withJosephClause(line, rite)
+            jl.lat to jl.eng
         }
         items.add(MassShareItem.Ordinary(
             title = canonSection.title,
@@ -890,40 +917,46 @@ private fun buildFullMassItems(
     }
 
     addOrdinary("pater")
+    addOrdinary("libera")
     // Agnus Dei — Requiem form for black-color Masses
     if (proper?.color == "black") {
         addOrdinary("agnus-requiem")
     } else {
         addOrdinary("agnus")
     }
-    // Confiteor before Communion — retained in all pre-1964 rites (on-screen parity)
-    addOrdinary("confiteor-communion")
+    addOrdinary("orationes-ante-communionem")
+    addOrdinary("panem-caelestem")
     addOrdinary("domine")
+    addOrdinary("communio-sacerdotis")
+    // Confiteor before Communion — retained in preconciliar practice
+    addOrdinary("confiteor-communion")
 
     proper?.let { p ->
         addProper("Commúnio · Communion", p.communion.lat, p.communion.eng)
     }
+    addOrdinary("ablutiones")
 
     proper?.let { p ->
         addProper("Postcommúnio · Postcommunion", p.postcommunion.lat, p.postcommunion.eng)
     }
 
-    // Placeat + Blessing — omitted in Requiem Masses
-    if (proper?.color != "black") {
-        addOrdinary("placeat")
-    }
-
-    // Dismissal: Requiescant for black, doubled-Alleluia for Easter/Pentecost
-    // Octave, Ite when Gloria was said, Benedicamus otherwise.
+    // Dismissal precedes the Placeat: doubled-Alleluia only in the EASTER
+    // octave; 1960 rubrics say Ite missa est even without the Gloria.
     if (proper != null) {
         when {
             proper.color == "black" -> addOrdinary("requiescant")
-            isEasterOrPentecostOctave(ctx) -> addOrdinary("ite-alleluia")
-            showGloria(proper, ctx) -> addOrdinary("ite")
+            isEasterOctave(ctx) -> addOrdinary("ite-alleluia")
+            showGloria(proper, ctx) || rite == MissalRite.RITE_1962 -> addOrdinary("ite")
             else -> addOrdinary("benedicamus")
         }
     } else {
         addOrdinary("ite")
+    }
+
+    // Placeat is said at every Mass; the blessing alone is omitted at Requiems.
+    addOrdinary("placeat")
+    if (proper?.color != "black") {
+        addOrdinary("benedictio")
     }
 
     // Last Gospel — Palm Sunday substitutes Matt 21:1-9 in the pre-1955 rite

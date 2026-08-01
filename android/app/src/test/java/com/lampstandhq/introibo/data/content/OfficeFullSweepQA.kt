@@ -107,8 +107,13 @@ class OfficeFullSweepQA {
                     // Psalmody counts per hour.
                     val psalms = h.parts.count { it.type == "psalm" }
                     val expected: IntRange? = when (slug) {
-                        "matutinum" -> if (isTenebrae) 9..10 else 10..10
-                        "laudes" -> 4..4
+                        // Proper ONE-NOCTURN offices (Easter, Pentecost and
+                        // their octaves) have Venite + 3 psalms, the unused
+                        // slots suppressed; everything else Venite + 9.
+                        "matutinum" -> if (isTenebrae) 9..10 else 4..10
+                        // A proper Lauds set may place a psalm in the
+                        // canticle slot (e.g. festal schemes).
+                        "laudes" -> 4..5
                         "vesperae" -> 5..5
                         "tertia", "sexta", "nona" -> 3..3
                         "prima" -> 3..4

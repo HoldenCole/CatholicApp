@@ -140,6 +140,17 @@ struct OfficeAssembler {
 
         switch hourSlug {
         case "matutinum":
+            // Pre-normalized entries (the psalm-slot generator emits explicit
+            // matutinum.psalmN parts plus their nocturn antiphons/suppressions
+            // under PREFIXED matutinum.ant_N keys — the plain ant_1/2/3 keys
+            // hold the canticle antiphons): bind the prefixed keys.
+            if raw["matutinum.psalm2"] != nil {
+                for k in ["ant_1", "ant_2", "ant_3"] {
+                    if let p = raw["matutinum.\(k)"] { o[k] = p }
+                }
+                o.removeValue(forKey: "ant_matutinum")
+                break
+            }
             // Nocturn antiphons from "Ant Matutinum": one chunk per nocturn.
             let lats = latLines(o["ant_matutinum"])
             if !lats.isEmpty {

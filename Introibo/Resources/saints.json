@@ -67,7 +67,7 @@
         "title": "Prayer After Holy Communion",
         "latin": "Mane nobiscum, Domine, quoniam advesperascit. Mane nobiscum, et esto nostra consolatio. Mane nobiscum, sol occasus nesciens.",
         "eng": "Stay with us, Lord, for evening is coming. Stay with us and be our consolation. Stay with us, O Sun that knows no setting.",
-        "note": "Composed by St. Padre Pio, prayed after receiving Holy Communion."
+        "note": "Adapted from St. Pio of Pietrelcina's prayer after Holy Communion, prayed after receiving Holy Communion."
       },
       {
         "title": "Prayer for the Five Wounds",
@@ -159,7 +159,7 @@
     "slug": "aquinas",
     "name": "St. Thomas Aquinas",
     "title": "Doctor of the Church · Doctor Angelicus",
-    "quote": "To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.",
+    "quote": "Quantum potes, tantum aude: quia major omni laude — Dare to do all that you can: for He is greater than all praise. (Lauda Sion, composed by St. Thomas)",
     "sections": [
       {
         "lat": "Mane",
@@ -189,7 +189,7 @@
           },
           {
             "t": "Pray the Rosary",
-            "d": "Thomas loved the Rosary for its simplicity; 'all the theology of the Incarnation in 50 beads.'"
+            "d": "Thomas loved the Rosary for its simplicity; 'a daily meditation on the mysteries of the Incarnation.'"
           },
           {
             "t": "Visit to the Blessed Sacrament",

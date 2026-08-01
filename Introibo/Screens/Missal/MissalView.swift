@@ -159,6 +159,7 @@ struct MissalView: View {
         ordinarySection("sanctus")
         canonWithProperInsertions()
         ordinarySection("pater")
+        ordinarySection("libera")
 
         // Agnus Dei
         if proper.color == "black" {
@@ -167,36 +168,48 @@ struct MissalView: View {
             ordinarySection("agnus")
         }
 
-        // Confiteor before Communion — retained in all pre-1964 rites
-        // (1962 Ritus servandus VIII.6; only suppressed by Inter Oecumenici 1964)
-        ordinarySection("confiteor-communion")
+        // Libera nos (embolism), the priest's communion prayers, and his
+        // communion — then the Confiteor and communion of the faithful
+        // (retained in preconciliar practice; suppressed by Inter
+        // Oecumenici 1964).
+        ordinarySection("orationes-ante-communionem")
+        ordinarySection("panem-caelestem")
 
-        // Domine non sum dignus
+        // Domine non sum dignus (the priest's, said thrice)
         ordinarySection("domine")
+        ordinarySection("communio-sacerdotis")
+        ordinarySection("confiteor-communion")
 
         // COMMUNION (proper)
         properSection("Commúnio", subtitle: "Communion", text: proper.communion)
 
+        ordinarySection("ablutiones")
+
         // POSTCOMMUNION (proper)
         properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
 
-        // Placeat, Blessing (omitted in Requiem Masses)
-        if proper.color != "black" {
-            ordinarySection("placeat")
-        }
-
-        // Dismissal: "Ite, missa est" when Gloria was said;
-        // "Ite, missa est, alleluia, alleluia" during Easter/Pentecost octave;
+        // Dismissal precedes the Placeat:
+        // "Ite, missa est" when Gloria was said;
+        // "Ite, missa est, alleluia, alleluia" during the Easter octave;
         // "Benedicamus Domino" when Gloria was not said;
         // "Requiescant in pace" at Requiem Masses.
         if proper.color == "black" {
             ordinarySection("requiescant")
-        } else if isEasterOrPentecostOctave {
+        } else if isEasterOctave {
             ordinarySection("ite-alleluia")
-        } else if showGloria(proper) {
+        } else if showGloria(proper) || rite == .rite1962 {
+            // 1960 rubrics: Ite missa est even when the Gloria is not said;
+            // Benedicamus Domino survives only in the older rites.
             ordinarySection("ite")
         } else {
             ordinarySection("benedicamus")
+        }
+
+        // Placeat is said at every Mass; the blessing alone is omitted at
+        // Requiems.
+        ordinarySection("placeat")
+        if proper.color != "black" {
+            ordinarySection("benedictio")
         }
 
         // Last Gospel — Palm Sunday substitutes Matt 21:1-9 in the pre-1955 rite.
@@ -230,13 +243,11 @@ struct MissalView: View {
     /// (Pentecost Sunday through the following Saturday). On those days the
     /// dismissal uses the doubled-Alleluia form: "Ite, missa est, alleluia,
     /// alleluia."
-    private var isEasterOrPentecostOctave: Bool {
+    /// The doubled "Ite, missa est, alleluia" belongs to the EASTER octave
+    /// only (Pentecost's octave keeps the ordinary dismissal).
+    private var isEasterOctave: Bool {
         guard let key = ctx.temporalKey else { return false }
-        // Easter Octave: pasc0-0 (Easter Sun) through pasc0-6 (Sat in albis)
-        if key.hasPrefix("pasc0-") { return true }
-        // Pentecost Octave: pasc7-0 (Pentecost Sun) through pasc7-6
-        if key.hasPrefix("pasc7-") { return true }
-        return false
+        return key.hasPrefix("pasc0-")
     }
 
     /// Gloria is omitted during penitential seasons (Advent, Lent, Passion,
@@ -246,10 +257,10 @@ struct MissalView: View {
         // Honor explicit DO rubric rule when present.
         if let override = proper.glorOverride { return override }
         let season = ctx.season
-        if season == .easter || season == .christmas { return true }
         if proper.color == "violet" || proper.color == "black" {
             return false
         }
+        if season == .easter || season == .christmas { return true }
         if ctx.isSunday {
             let preLent = ["septuagesima", "sexagesima", "quinquagesima"]
             if let slug = ctx.properSlug, preLent.contains(slug) { return false }
@@ -296,7 +307,7 @@ struct MissalView: View {
            let section = store.missal.first(where: { $0.slug == "canon" }) {
             let modified: [MissalSection.Line] = section.body.map { line in
                 var mutable = line
-                if line.lat.hasPrefix("Commúnicántes"),
+                if line.lat.hasPrefix("Commúnicántes") || line.lat.hasPrefix("Communicántes"),
                    let variant = store.canonVariant("communicantes", key: variantKey) {
                     mutable.lat = variant.lat
                     mutable.eng = variant.eng
@@ -306,6 +317,7 @@ struct MissalView: View {
                     mutable.lat = variant.lat
                     mutable.eng = variant.eng
                 }
+                mutable = Self.withJosephClause(mutable, rite: rite)
                 return mutable
             }
             ordinarySectionBlock(
@@ -313,64 +325,65 @@ struct MissalView: View {
                               title: section.title, english: section.english,
                               body: modified)
             )
+        } else if let section = store.missal.first(where: { $0.slug == "canon" }) {
+            ordinarySectionBlock(
+                MissalSection(slug: section.slug, label: section.label,
+                              title: section.title, english: section.english,
+                              body: section.body.map { Self.withJosephClause($0, rite: rite) })
+            )
         } else {
             ordinarySection("canon")
         }
     }
 
+    /// The 1962 Canon (decree of 13 Nov 1962) adds "sed et beati Joseph,
+    /// ejusdem Virginis Sponsi" to the Communicantes; the older rites do not.
+    static func withJosephClause(_ line: MissalSection.Line, rite: MissalRite) -> MissalSection.Line {
+        guard rite == .rite1962,
+              line.lat.hasPrefix("Commúnicántes") || line.lat.hasPrefix("Communicántes"),
+              !line.lat.contains("beáti Joseph") else { return line }
+        var mutable = line
+        mutable.lat = mutable.lat.replacingOccurrences(
+            of: "Jesu Christi: sed et",
+            with: "Jesu Christi: sed et beáti Joseph, ejúsdem Vírginis Sponsi: sed et")
+        if let range = mutable.eng.range(of: ": and also of the blessed Apostles") {
+            mutable.eng = mutable.eng.replacingCharacters(
+                in: range,
+                with: ": and also of blessed Joseph, spouse of the same Virgin: and also of the blessed Apostles")
+        }
+        return mutable
+    }
+
     /// Returns the Communicantes/Hanc igitur variant key (if any) for the
-    /// current day, gated by rite.
-    ///
-    /// Rite scope:
-    /// - **pre-1955** retains the full octaves of Easter and Pentecost: the
-    ///   proper Communicantes (and, for the two paschal octaves, the proper
-    ///   Hanc igitur) fires on every day of the octave (the feast plus six
-    ///   weekdays through the following Saturday).
-    /// - **1955** keeps the Easter and Pentecost octaves intact for Canon
-    ///   purposes — the Holy Week reforms reordered the Triduum and demoted
-    ///   the octave days' rank, but the proper inserts in the Canon were not
-    ///   suppressed until the Codex Rubricarum of 1960. Same behavior as
-    ///   pre-1955 for this gating.
-    /// - **1962** (Codex Rubricarum 1960, in force 1962) abolished the
-    ///   octaves of Easter and Pentecost as such. Only the privileged days
-    ///   keep the proper insertion: the feast day itself (Easter Sunday /
-    ///   Pentecost Sunday) and Easter Monday / Pentecost Monday. From
-    ///   Tuesday of either octave onward the standard Communicantes is used.
-    /// - Christmas, Epiphany, and Ascension behave identically across all
-    ///   three rites (their octaves either were never gated this way in our
-    ///   data or remain unaffected).
+    /// current day. Identical across all three rites: the 1960 Codex
+    /// Rubricarum retained the octaves of Easter and Pentecost (abolishing
+    /// all the others except Christmas), so the proper texts run the whole
+    /// octave everywhere; Christmas runs through its octave day (Jan 1),
+    /// and Epiphany/Ascension fire on the feast itself.
     private func canonVariantKey(for rite: MissalRite) -> String? {
         guard let slug = ctx.properSlug else { return nil }
-        if slug == "christmas" || slug.hasPrefix("christmas-") { return "christmas" }
-        // Christmas octave: saints within the octave (Dec 26-31) also get proper Communicantes
+        // Nativity: Christmas through its octave day (the Circumcision,
+        // Jan 1) and the Sunday within the octave. NOT the Holy Name Sunday
+        // (christmas-2, Jan 2-5) — the octave has ended.
+        if slug == "christmas" || slug == "christmas-1" || slug == "circumcision" { return "christmas" }
         if slug == "st-stephen" || slug == "holy-innocents" { return "christmas" }
-        if let key = ctx.temporalKey, key.hasPrefix("nat") { return "christmas" }
+        if let key = ctx.temporalKey, key.hasPrefix("nat"), !key.hasPrefix("nat2") {
+            let jan = ["nat08", "nat09", "nat10", "nat11"]
+            if !jan.contains(key) { return "christmas" }
+        }
         if slug.hasPrefix("sancti-12-2") || slug.hasPrefix("sancti-12-3") { return "christmas" }
         if slug == "epiphany" { return "epiphany" }
         if slug == "ascension" { return "ascension" }
 
-        // Easter octave: easter-sunday + easter-0-1..6 (Mon..Sat in albis)
-        if slug == "easter-sunday" { return "easter" }
-        if slug.hasPrefix("easter-0-") {
-            switch rite {
-            case .pre1955, .rite1955:
-                return "easter"
-            case .rite1962:
-                // Only Easter Monday keeps the proper insertion.
-                return slug == "easter-0-1" ? "easter" : nil
-            }
+        // The 1960 Codex Rubricarum RETAINED the octaves of Easter and
+        // Pentecost (it abolished all the others): the proper Communicantes
+        // and Hanc igitur run the whole octave in all three rites, vigils
+        // included.
+        if slug == "easter-sunday" || slug == "holy-saturday" || slug.hasPrefix("easter-0-") {
+            return "easter"
         }
-
-        // Pentecost octave: pentecost-sunday + easter-7-1..6
-        if slug == "pentecost-sunday" { return "pentecost" }
-        if slug.hasPrefix("easter-7-") {
-            switch rite {
-            case .pre1955, .rite1955:
-                return "pentecost"
-            case .rite1962:
-                // Only Pentecost Monday keeps the proper insertion.
-                return slug == "easter-7-1" ? "pentecost" : nil
-            }
+        if slug == "pentecost-sunday" || slug == "vigil-pentecost" || slug.hasPrefix("easter-7-") {
+            return "pentecost"
         }
         return nil
     }
@@ -514,56 +527,69 @@ struct MissalView: View {
         if let variantKey = canonVariantKey(for: rite),
            let section = store.missal.first(where: { $0.slug == "canon" }) {
             let lines: [(lat: String, eng: String)] = section.body.map { line in
-                var lat = line.lat, eng = line.eng
-                if line.lat.hasPrefix("Commúnicántes"),
+                var mutable = line
+                if line.lat.hasPrefix("Commúnicántes") || line.lat.hasPrefix("Communicántes"),
                    let v = store.canonVariant("communicantes", key: variantKey) {
-                    lat = v.lat; eng = v.eng
+                    mutable.lat = v.lat; mutable.eng = v.eng
                 }
                 if line.lat.hasPrefix("Hanc ígitur"),
                    let v = store.canonVariant("hanc_igitur", key: variantKey) {
-                    lat = v.lat; eng = v.eng
+                    mutable.lat = v.lat; mutable.eng = v.eng
                 }
-                return (lat.strippingEm, eng.strippingEm)
+                mutable = Self.withJosephClause(mutable, rite: rite)
+                return (mutable.lat.strippingEm, mutable.eng.strippingEm)
+            }
+            items.append(.ordinary(title: section.title, english: section.english, lines: lines))
+        } else if let section = store.missal.first(where: { $0.slug == "canon" }) {
+            let lines = section.body.map { line -> (lat: String, eng: String) in
+                let l = Self.withJosephClause(line, rite: rite)
+                return (l.lat.strippingEm, l.eng.strippingEm)
             }
             items.append(.ordinary(title: section.title, english: section.english, lines: lines))
         } else {
             addOrdinary("canon")
         }
         addOrdinary("pater")
+        addOrdinary("libera")
         if proper?.color == "black" {
             addOrdinary("agnus-requiem")
         } else {
             addOrdinary("agnus")
         }
-        // Confiteor before Communion — retained in all pre-1964 rites
-        addOrdinary("confiteor-communion")
+        addOrdinary("orationes-ante-communionem")
+        addOrdinary("panem-caelestem")
         addOrdinary("domine")
+        addOrdinary("communio-sacerdotis")
+        // Confiteor before Communion — retained in preconciliar practice
+        addOrdinary("confiteor-communion")
 
         if let p = proper {
             addProper("Commúnio · Communion", lat: p.communion.lat, eng: p.communion.eng)
         }
+        addOrdinary("ablutiones")
 
         if let p = proper {
             addProper("Postcommúnio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
         }
 
-        if proper?.color != "black" {
-            addOrdinary("placeat")
-        }
-
-        // Dismissal
+        // Dismissal precedes the Placeat.
         if let p = proper {
             if p.color == "black" {
                 addOrdinary("requiescant")
-            } else if isEasterOrPentecostOctave {
+            } else if isEasterOctave {
                 addOrdinary("ite-alleluia")
-            } else if showGloria(p) {
+            } else if showGloria(p) || rite == .rite1962 {
                 addOrdinary("ite")
             } else {
                 addOrdinary("benedicamus")
             }
         } else {
             addOrdinary("ite")
+        }
+
+        addOrdinary("placeat")
+        if proper?.color != "black" {
+            addOrdinary("benedictio")
         }
 
         addOrdinary(lastGospelOverride(for: proper) ?? "ultimum")
@@ -647,6 +673,8 @@ struct MissalView: View {
         "preface-ascension", "preface-pentecost", "preface-trinity",
         "preface-bvm", "preface-joseph", "preface-apostles",
         "preface-requiem",
+        "preface-sacred-heart",
+        "preface-christ-king",
         "agnus-requiem",
         "ite-alleluia"
     ]

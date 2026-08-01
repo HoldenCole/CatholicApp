@@ -35,7 +35,7 @@
     "latin": "Quadragesima",
     "cat": "Calendarium",
     "summary": "Forty days of penitential preparation for Easter, beginning on Ash Wednesday and ending on Holy Saturday. A season of fasting, abstinence, increased prayer, and almsgiving, commemorating Our Lord's forty days in the desert.",
-    "history": "The forty-day fast is attested from at least the second century. The word 'Lent' derives from the Anglo-Saxon lencten (spring). The 1962 Code mandates the Lenten fast for those aged 21-59.",
+    "history": "The forty-day fast is attested from the fourth century. The word 'Lent' derives from the Anglo-Saxon lencten (spring). The 1917 Code of Canon Law (in force in 1962) mandates the Lenten fast for those aged 21-59.",
     "practice": "Give alms, pray more, fast, and abstain. Attend daily Mass when possible. Pray the Stations of the Cross, especially on Fridays. Make a good Confession before Easter.",
     "notes": "Violet vestments. The Gloria and Alleluia are suppressed. The organ is silent except to sustain singing. Images and crucifixes are veiled beginning with Passion Sunday.",
     "scripture": {
@@ -52,7 +52,7 @@
     "summary": "The most sacred week of the liturgical year, from Palm Sunday through Holy Saturday. It contains the Paschal Triduum; Maundy Thursday, Good Friday, and Holy Saturday; during which the Passion, Death, and Resurrection of Our Lord are commemorated.",
     "history": "The observance of Holy Week dates to the earliest centuries. The rites of the Triduum were reformed in 1955 under Pius XII, and again in 1962.",
     "practice": "Attend all available liturgies: Palm Sunday procession, Chrism Mass, Mass of the Lord's Supper with the washing of feet, the Good Friday liturgy with veneration of the Cross, the Easter Vigil. Keep strict silence from Gloria Thursday through the Vigil.",
-    "notes": "Violet then Red on Palm Sunday; White on Maundy Thursday; Red for Good Friday; the tabernacle is empty from after the Mass of the Lord's Supper until the Easter Vigil.",
+    "notes": "Red for the blessing of palms and procession on Palm Sunday, then violet for the Mass; White on Maundy Thursday; Black for Good Friday (violet for the Communion rite); the tabernacle is empty from after the Mass of the Lord's Supper until the Easter Vigil.",
     "scripture": {
       "ref": "Phil 2:8",
       "lat": "Humiliavit semetipsum factus obediens usque ad mortem, mortem autem crucis.",
@@ -79,21 +79,36 @@
     "title": "Ordinary Time",
     "latin": "Tempus per Annum",
     "cat": "Calendarium",
-    "summary": "The weeks outside the major seasons; Time after Epiphany (from Candlemas to Ash Wednesday) and Time after Pentecost (from Trinity Sunday to Advent I). In the 1962 calendar these are counted as Sundays after Epiphany and Sundays after Pentecost.",
+    "summary": "The weeks outside the major seasons; Time after Epiphany (from January 14 (after the Commemoration of the Baptism of Our Lord) to Septuagesima) and Time after Pentecost (from Trinity Sunday to Advent I). In the 1962 calendar these are counted as Sundays after Epiphany and Sundays after Pentecost.",
     "history": "The term 'Ordinary Time' is a Novus Ordo coinage; traditionally these weeks were simply 'after Epiphany' or 'after Pentecost'. The 1962 calendar typically counts 24 Sundays after Pentecost.",
     "practice": "A time for steady spiritual growth, daily Mass, the Rosary, and the deepening of virtue. Many important feasts fall within this period; Corpus Christi, Sacred Heart, Assumption, and All Saints.",
     "notes": "Green vestments. Marian antiphon: Salve Regina (Trinity to Advent); Ave Regina Caelorum (Candlemas to Holy Wednesday).",
     "scripture": null
   },
   {
+    "slug": "cal-septuagesima",
+    "title": "Septuagesima (Pre-Lent)",
+    "latin": "Tempus Septuagesimæ",
+    "cat": "calendar",
+    "summary": "The two-and-a-half-week season of preparation for Lent: Septuagesima, Sexagesima, and Quinquagesima Sundays, from the third Sunday before Ash Wednesday until Shrove Tuesday.",
+    "history": "Established at Rome by the sixth century, the season takes its names from the round numbers seventy, sixty, and fifty days before Easter. It was abolished in the 1969 calendar but remains in all the traditional books.",
+    "practice": "Violet vestments; the Gloria is omitted on Sundays; the Alleluia is put away entirely from First Vespers of Septuagesima — a tract replaces it at Mass, and 'Laus tibi, Domine, Rex aeternae gloriae' replaces it in the Office. No fasting is yet required; the season invites a gradual entry into penance.",
+    "notes": "The dismissal of the Alleluia (the 'depositio') was kept with real ceremony in medieval uses. The Sunday Masses — the laborers in the vineyard, the sower, the healing of the blind man — form a catechesis on grace before the Lenten fast begins.",
+    "scripture": {
+      "ref": "1 Cor 9:24-27",
+      "lat": "Sic cúrrite, ut comprehendátis.",
+      "eng": "So run, that you may obtain."
+    }
+  },
+  {
     "slug": "cal-ranks",
     "title": "Feast Ranks",
     "latin": "Gradus Festorum",
     "cat": "Calendarium",
-    "summary": "In the 1962 calendar, feasts are ranked to determine precedence when two fall on the same day. The classes are: First Class, Second Class, Third Class, Fourth Class (commemoration), and the Common of feasts.",
+    "summary": "Under the 1960 rubrics, feasts are of the First, Second, or Third Class; lesser observances are kept as commemorations, and liturgical days themselves are ranked I-IV class.",
     "history": "The system was simplified in 1960 under John XXIII from the older system of Doubles of the First Class, Doubles of the Second Class, Greater Doubles, Doubles, Semidoubles, and Simples.",
     "practice": "The rank of the day determines the Office and Mass said. First Class feasts override almost everything and have proper Offices. Second Class have proper Offices but yield to First Class feasts.",
-    "notes": "First Class feasts are marked with a red cross in traditional missals and are observed with the greatest solemnity.",
+    "notes": "First Class feasts are printed in capitals in traditional ordos and are observed with the greatest solemnity.",
     "scripture": null
   },
   {
@@ -103,7 +118,7 @@
     "cat": "Missa et Sacramenta",
     "summary": "The unbloody re-presentation of the Sacrifice of Calvary; the source and summit of the Christian life. In the Mass, Our Lord Himself is both the Priest offering and the Victim offered, by means of the ministry of the ordained priest.",
     "history": "The Roman Rite of Mass took shape gradually over the first millennium and was codified by Pope St. Pius V in 1570 after the Council of Trent. The Missale Romanum of 1962 preserves this rite in its final traditional form.",
-    "practice": "Sunday and Holy Day attendance is a grave obligation. Receive Our Lord worthily in the state of grace, having fasted from midnight (1962 rules) or at least one hour (current discipline). Make a proper thanksgiving after Mass.",
+    "practice": "Sunday and Holy Day attendance is a grave obligation. Receive Our Lord worthily in the state of grace, having observed the Eucharistic fast (three hours under the 1957 discipline of Pius XII; from midnight under the older 1917 rule) or at least one hour (current discipline). Make a proper thanksgiving after Mass.",
     "notes": "The Mass has two principal parts: the Mass of the Catechumens (from the Prayers at the Foot of the Altar through the Credo) and the Mass of the Faithful (Offertory through Last Gospel). The Canon is said silently.",
     "scripture": {
       "ref": "1 Cor 11:26",
@@ -262,7 +277,7 @@
     "latin": "Sacratissimum Rosarium",
     "cat": "De Orationibus",
     "summary": "The Most Holy Rosary is a devotion combining vocal and mental prayer, in which the faithful meditate on the mysteries of the life of Christ and His Blessed Mother while reciting decades of Hail Marys. It is the most widely practised Catholic devotion after the Mass, recommended by every Pope for centuries and associated with countless miracles, conversions, and victories.",
-    "history": "Tradition attributes the Rosary to St. Dominic, who received it from Our Lady during the Albigensian heresy (13th century). The Dominican order spread it throughout Europe. Pope St. Pius V credited the Rosary with the Christian victory at the Battle of Lepanto (1571) and established the feast of Our Lady of the Rosary. Every Pope since has recommended it. Our Lady of Fatima (1917) specifically asked for the daily Rosary for peace.",
+    "history": "Tradition attributes the Rosary to St. Dominic, who received it from Our Lady during the Albigensian heresy (13th century). The Dominican order spread it throughout Europe. Pope St. Pius V credited the Rosary with the Christian victory at the Battle of Lepanto (1571) and established the feast of Our Lady of Victory in thanksgiving, which Gregory XIII renamed Our Lady of the Rosary. Every Pope since has recommended it. Our Lady of Fatima (1917) specifically asked for the daily Rosary for peace.",
     "practice": "How to pray the Rosary: (1) Make the Sign of the Cross and pray the Apostles' Creed on the crucifix. (2) Pray one Our Father on the first large bead. (3) Pray three Hail Marys on the next three beads (for faith, hope, and charity). (4) Pray the Glory Be. (5) Announce the first Mystery. Pause to consider its meaning. (6) Pray one Our Father, ten Hail Marys, and one Glory Be for each decade. (7) After each decade, pray the Fatima prayer. (8) After five decades, pray the Hail Holy Queen (Salve Regina). The key to a fruitful Rosary is meditating on the mysteries, not merely reciting the words. Let each decade be a window into the life of Christ. Traditional mystery schedule: Joyful (Mon/Thu), Sorrowful (Tue/Fri), Glorious (Wed/Sat/Sun).",
     "notes": "Fifteen promises of Our Lady to those who faithfully pray the Rosary include: special protection, signal graces, a powerful armour against hell, growth in virtue, and the grace of a happy death. The family Rosary is especially powerful: \"The family that prays together stays together\" (Fr. Patrick Peyton).",
     "scripture": {
@@ -279,7 +294,7 @@
     "summary": "Devotion to the physical Heart of Jesus Christ as the symbol of His boundless love for mankind, revealed especially to St. Margaret Mary Alacoque at Paray-le-Monial in 1673-75.",
     "history": "The devotion has patristic roots but became explicit in the writings of St. Gertrude, St. John Eudes, and St. Margaret Mary. The feast was extended to the universal Church in 1856.",
     "practice": "First Friday devotions: nine consecutive First Fridays of Communion of reparation. Consecration of self, family, and home to the Sacred Heart. Enthronement of the Sacred Heart in the home.",
-    "notes": "The feast of the Sacred Heart falls on the Friday after Corpus Christi. Twelve promises were made by Our Lord to St. Margaret Mary for those who honour His Heart.",
+    "notes": "The feast of the Sacred Heart falls on the Friday of the week after Corpus Christi (the Friday after the Second Sunday after Pentecost). Twelve promises were made by Our Lord to St. Margaret Mary for those who honour His Heart.",
     "scripture": {
       "ref": "Jn 19:34",
       "lat": "Unus militum lancea latus ejus aperuit, et continuo exivit sanguis et aqua.",
@@ -337,7 +352,7 @@
     "cat": "De Paenitentia",
     "summary": "The discipline of restricting food as an act of penance. Under the 1962 rules, fasting means one full meal plus two small collations (meals which together are smaller than the main meal) in a single day. Water and medicine may be taken freely.",
     "history": "Fasting is of apostolic and patristic origin. Mosaic Law required fasting on the Day of Atonement. Our Lord fasted forty days in the desert. The Church has prescribed fasts throughout history.",
-    "practice": "The 1962 Code binds all Catholics aged 21 to 59 to the Lenten fast on all weekdays of Lent, on Ember Days, and on the Vigils of certain feasts. The current discipline (post-1966) only binds on Ash Wednesday and Good Friday.",
+    "practice": "The 1917 Code of Canon Law (in force in 1962) binds all Catholics aged 21 to 59 to the Lenten fast on all weekdays of Lent, on Ember Days, and on the Vigils of certain feasts. The current discipline (post-1966) only binds on Ash Wednesday and Good Friday.",
     "notes": "Traditional Catholics often follow the older, stricter discipline; fasting on all weekdays of Lent and on Ember Days as a matter of devotion.",
     "scripture": null
   },
@@ -347,8 +362,8 @@
     "latin": "Abstinentia",
     "cat": "De Paenitentia",
     "summary": "The discipline of abstaining from the flesh of warm-blooded animals as an act of penance. Fish, eggs, dairy, and fats of land animals are permitted under traditional rules.",
-    "history": "Friday abstinence in memory of the Passion has been observed since apostolic times. The 1962 Code requires abstinence on all Fridays of the year.",
-    "practice": "Abstain from meat every Friday (perpetual obligation). During Lent, also abstain on Ash Wednesday and on Wednesdays if following traditional discipline. The abstinence begins at midnight and continues to midnight.",
+    "history": "Friday abstinence in memory of the Passion has been observed since apostolic times. The 1917 Code of Canon Law (in force in 1962) requires abstinence on all Fridays of the year.",
+    "practice": "Abstain from meat every Friday (perpetual obligation). During Lent, also abstain on Ash Wednesday and on Saturdays if following the traditional discipline of the 1917 Code. The abstinence begins at midnight and continues to midnight.",
     "notes": "Those aged 7 and older are bound. 'Meat' means the flesh of mammals and birds; marine mammals (whales, porpoises) are traditionally counted as fish.",
     "scripture": null
   },
@@ -456,7 +471,7 @@
     "title": "Exorcisms",
     "latin": "Exorcismi",
     "cat": "De Sacramentalibus",
-    "summary": "Prayers commanding evil spirits to depart. Minor exorcisms are found in the rite of Baptism and in many blessings. Major exorcism (the cast of a possessed person) is reserved to a priest with the explicit permission of his bishop.",
+    "summary": "Prayers commanding evil spirits to depart. Minor exorcisms are found in the rite of Baptism and in many blessings. Major exorcism (the case of a possessed person) is reserved to a priest with the explicit permission of his bishop.",
     "history": "Our Lord cast out demons (Mt 8:28-34). The power was given to the Apostles (Mt 10:1) and through them to the Church. The rite of exorcism is preserved in the Rituale Romanum.",
     "practice": "The faithful may pray the Prayer to St. Michael and the Leonine Exorcism as private prayers of protection. Only a priest with faculties may perform the solemn exorcism.",
     "notes": "Pope Leo XIII composed a short exorcism and the St. Michael prayer after a vision of spiritual battles to come.",

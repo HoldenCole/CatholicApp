@@ -29,7 +29,7 @@
   {
     "station": "IV",
     "title": "Jesus Meets His Blessed Mother",
-    "latin": "Iesus Matrem suam occurrit",
+    "latin": "Iesus Matri suae occurrit",
     "med": "In the midst of the jeering crowd, the eyes of Jesus meet the eyes of His Mother. No words pass between them, yet in that glance is contained all the sorrow of the world and all the love of Heaven. Mary's heart is pierced by the sword Simeon foretold. She cannot take His suffering away; she can only share it. Consider your own mother, who has suffered for you in ways you may never know. Consider Our Lady, who stands by every soul in its agony. When your suffering seems unbearable, look to Mary. She will not remove your cross, but she will stand beside you as you carry it.",
     "mood": "mood-mother",
     "stabat_lat": "Quæ mœrébat et dolébat,<br>pia Mater, dum vidébat<br>nati pœnas ínclyti.",
@@ -68,8 +68,8 @@
     "latin": "Iesus mulieres Ierusalem alloquitur",
     "med": "Jesus turns to the weeping women and says: \"Daughters of Jerusalem, weep not for Me, but for yourselves and for your children.\" Even in His agony, He thinks of others. He weeps not for His own suffering but for the sins that cause suffering. Consider the tears you shed: are they for your wounded pride, your lost comforts, your frustrated desires? Or do you weep for your sins, which wound God and harm your soul? True repentance is not self-pity but sorrow born of love. Ask for the gift of tears: the grace to weep for what truly matters.",
     "mood": "",
-    "stabat_lat": "Vidit suum dulcem natum<br>moriéntem, desolátum,<br>dum emísit spíritum.",
-    "stabat_eng": "For the sins of His own nation,<br>she saw Jesus wracked with torments,<br>all with scourges rent."
+    "stabat_lat": "Vidit suum dulcem natum, moriéndo desolátum, dum emísit spíritum.",
+    "stabat_eng": "She beheld her sweet Child dying, forsaken and desolate, as He yielded up His spirit."
   },
   {
     "station": "IX",
