@@ -1,7 +1,14 @@
 # Spanish Translation — Staging
 
-Pre-prepared Spanish content for a future release. **Nothing in this folder is
-wired into either app build**; it stages cleanly until integration.
+Spanish content for the app. **The tier-1 tranche (prayers, Marian
+antiphons, hour metadata) is now WIRED INTO BOTH APPS**: Settings → Sermo
+Vulgáris offers English/Español, and `ContentStore.applyVernacular` overlays
+the `*_es.json` files at load (English fallback wherever a field is absent).
+`scripts/sync_spanish_assets.py` copies this folder's content files into
+both asset directories — edit HERE, then sync; the Android suite
+(`SpanishOverlayQA`) fails if the copies drift or misalign.
+`ui_strings_es.json` remains staged: the UI chrome is hardcoded English on
+both platforms and localizing it is its own pass.
 
 ## Method (three tiers)
 
@@ -54,13 +61,19 @@ so integration cannot silently misalign.
   Spanish source; do not machine-translate.
 - `reference.json`, `saints.json`, `stations.json`, tutorial/course content.
 
-## Integration plan (when ready)
+## Integration (done for tier 1)
 
-1. Add `SPANISH` to `LanguageMode` on both platforms (the enum and settings
-   UI were built with this in mind; the search index is language-agnostic per
-   the v1.2 design).
-2. Merge `*_es.json` into the bundled sources (script: join by slug/index) or
-   teach the renderers to overlay the `_es` files directly.
-3. Fall back to English wherever a `spa` field is absent, so partial coverage
-   ships safely.
-4. Run `scripts/validate_spanish.py` in CI once integrated.
+- `VernacularLanguage` (en/es) setting on both platforms, orthogonal to
+  `LanguageMode` (Latin/Vernacular/Both); the language-mode labels name the
+  chosen vernacular ("Latin & Español").
+- `ContentStore.applyVernacular` reloads the pristine sources and overlays
+  the `_es` files (English fallback per-field), rebuilds the office
+  assembler (Compline's Marian antiphon), and drops the search-index and
+  link-graph caches so they rebuild on the new text.
+- Android applies the saved setting in `IntroiboApp.onCreate` (widgets
+  included); a change in Settings re-keys the compose tree. iOS applies it
+  in `ContentStore.init` and on the Settings toggle (`@Observable` handles
+  the rest).
+- CI: `SpanishOverlayQA` mirrors `scripts/validate_spanish.py` (slug +
+  line-count alignment, staging↔assets byte identity) and pins the
+  overlay/restore behavior.

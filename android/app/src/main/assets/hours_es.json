@@ -1,0 +1,47 @@
+{
+  "matutinum": {
+    "name_es": "Maitines",
+    "time_es": "a medianoche",
+    "intro_es": "El Oficio nocturno, rezado en las horas oscuras antes del alba. La más larga y antigua de las horas: invitatorio, himno y los nocturnos de salmos y lecciones."
+  },
+  "laudes": {
+    "name_es": "Laudes",
+    "time_es": "al amanecer",
+    "intro_es": "La alabanza matutina con la primera luz. La Iglesia saluda el nuevo día con el Benedictus y los salmos de alabanza."
+  },
+  "prima": {
+    "name_es": "Prima",
+    "time_es": "a la hora primera",
+    "intro_es": "La primera hora del día, que santifica el comienzo del trabajo. Un oficio breve de salmos y el martirologio."
+  },
+  "tertia": {
+    "name_es": "Tercia",
+    "time_es": "a la hora tercia",
+    "intro_es": "La hora tercia, en la que el Espíritu Santo descendió en Pentecostés."
+  },
+  "sexta": {
+    "name_es": "Sexta",
+    "time_es": "al mediodía",
+    "intro_es": "La hora sexta: el mediodía. A esta hora Nuestro Señor fue clavado en la Cruz. Una pausa de oración en medio de la jornada."
+  },
+  "nona": {
+    "name_es": "Nona",
+    "time_es": "a la hora nona",
+    "intro_es": "La hora nona: las tres de la tarde. A esta hora Nuestro Señor murió en la Cruz."
+  },
+  "vesperae": {
+    "name_es": "Vísperas",
+    "time_es": "al atardecer",
+    "intro_es": "La hora vespertina, cuando se encienden las lámparas. El segundo gran gozne del día, con el Magníficat."
+  },
+  "completorium": {
+    "name_es": "Completas",
+    "time_es": "antes de dormir",
+    "intro_es": "La oración de la noche y la última palabra de la Iglesia antes del descanso. Se abre con el Confiteor y se cierra con la antífona de la Santísima Virgen."
+  },
+  "office-of-the-dead": {
+    "name_es": "Oficio de Difuntos",
+    "time_es": "Día de los Fieles Difuntos, aniversarios y funerales",
+    "intro_es": "El Oficio por los Fieles Difuntos (Officium Defunctorum). Se reza el día de los Fieles Difuntos, en aniversarios y funerales, por el eterno descanso de las almas."
+  }
+}

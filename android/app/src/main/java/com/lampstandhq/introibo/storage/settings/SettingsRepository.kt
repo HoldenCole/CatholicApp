@@ -40,6 +40,7 @@ class SettingsRepository(private val context: Context) {
         val TEXT_DARKNESS = floatPreferencesKey(SettingsKey.TEXT_DARKNESS)
         val SHOW_LEONINE_PRAYERS = booleanPreferencesKey(SettingsKey.SHOW_LEONINE_PRAYERS)
         val SHOW_UPCOMING_FEASTS = booleanPreferencesKey(SettingsKey.SHOW_UPCOMING_FEASTS)
+        val VERNACULAR_LANG = stringPreferencesKey(SettingsKey.VERNACULAR_LANG)
     }
 
     // -----------------------------------------------------------------------
@@ -63,6 +64,10 @@ class SettingsRepository(private val context: Context) {
 
     val languageMode: Flow<LanguageMode> = context.settingsDataStore.data.map { prefs ->
         LanguageMode.fromRaw(prefs[PrefsKeys.LANGUAGE])
+    }
+
+    val vernacularLanguage: Flow<VernacularLanguage> = context.settingsDataStore.data.map { prefs ->
+        VernacularLanguage.fromRaw(prefs[PrefsKeys.VERNACULAR_LANG])
     }
 
     val fontScale: Flow<Float> = context.settingsDataStore.data.map { prefs ->
@@ -105,6 +110,10 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setLanguageMode(mode: LanguageMode) {
         context.settingsDataStore.edit { it[PrefsKeys.LANGUAGE] = mode.rawValue }
+    }
+
+    suspend fun setVernacularLanguage(lang: VernacularLanguage) {
+        context.settingsDataStore.edit { it[PrefsKeys.VERNACULAR_LANG] = lang.rawValue }
     }
 
     suspend fun setFontScale(scale: Float) {

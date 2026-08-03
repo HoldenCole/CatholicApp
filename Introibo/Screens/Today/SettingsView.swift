@@ -9,6 +9,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
     @AppStorage(SettingsKey.showLeoninePrayers) private var showLeoninePrayers = true
     @AppStorage(SettingsKey.showUpcomingFeasts) private var showUpcomingFeasts = false
+    @AppStorage(SettingsKey.vernacularLang) private var vernacularRaw = VernacularLanguage.english.rawValue
     @State private var showResetConfirm = false
 
     @Environment(\.dismiss) private var dismiss
@@ -21,6 +22,7 @@ struct SettingsView: View {
                 homeSection
                 penanceSection
                 languageSection
+                vernacularSection
                 displaySection
                 fontSizeSection
                 widgetSection
@@ -168,6 +170,35 @@ struct SettingsView: View {
             Text("Lingua · Language")
         } footer: {
             Text("Choose which text to display in prayers, the Missal, and the Divine Office.")
+        }
+    }
+
+    // MARK: - Vernacular
+
+    private var vernacularSection: some View {
+        Section {
+            ForEach(VernacularLanguage.allCases) { v in
+                HStack {
+                    Text(v.displayName)
+                        .foregroundStyle(Color.primaryText)
+                    Spacer()
+                    if vernacularRaw == v.rawValue {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(Color.sanctuaryRed)
+                    }
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    guard vernacularRaw != v.rawValue else { return }
+                    vernacularRaw = v.rawValue
+                    ContentStore.shared.applyVernacular(v)
+                }
+                .listRowBackground(Color.pageBackground)
+            }
+        } header: {
+            Text("Sermo Vulgáris · Vernacular")
+        } footer: {
+            Text("Español covers the prayers, the Marian antiphons, and the Office hour introductions; everything else falls back to English while translation continues.")
         }
     }
 

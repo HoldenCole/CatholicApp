@@ -84,6 +84,15 @@ class MainActivity : ComponentActivity() {
             val fontScale by settingsRepo.fontScale.collectAsState(
                 initial = FontSizeScale.DEFAULT_VALUE
             )
+            // Screens read ContentStore collections directly during
+            // composition, so a vernacular switch must recompose the whole
+            // tree AFTER the overlay swap. The Settings screen applies the
+            // overlay; keying the tree on the language makes every screen
+            // re-read the store. (Initial value matches what IntroiboApp
+            // already applied at process start — no startup churn.)
+            val vernacular by settingsRepo.vernacularLanguage.collectAsState(
+                initial = com.lampstandhq.introibo.data.content.ContentStore.currentVernacular
+            )
 
             val typography = introiboTypography(scale = fontScale)
 
@@ -111,12 +120,14 @@ class MainActivity : ComponentActivity() {
                             })
                         }
                         else -> {
-                            IntroiboNavHost(
-                                shortcutRoute = shortcutRoute.value,
-                                onShortcutConsumed = { shortcutRoute.value = null },
-                                deepLinkTarget = deepLinkTarget.value,
-                                onDeepLinkConsumed = { deepLinkTarget.value = null },
-                            )
+                            androidx.compose.runtime.key(vernacular) {
+                                IntroiboNavHost(
+                                    shortcutRoute = shortcutRoute.value,
+                                    onShortcutConsumed = { shortcutRoute.value = null },
+                                    deepLinkTarget = deepLinkTarget.value,
+                                    onDeepLinkConsumed = { deepLinkTarget.value = null },
+                                )
+                            }
                         }
                     }
                 }

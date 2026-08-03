@@ -34,6 +34,20 @@ import java.io.File
  */
 class AssetsDecodeTest {
 
+    // Spanish-overlay schemas, mirroring ContentStore's private decode types.
+    @kotlinx.serialization.Serializable
+    data class PrayerEsEntry(
+        val title_es: String,
+        val note_es: String? = null,
+        val lines_es: List<String>,
+    )
+
+    @kotlinx.serialization.Serializable
+    data class MarianEsEntry(val title_es: String, val body_es: String)
+
+    @kotlinx.serialization.Serializable
+    data class HourEsEntry(val name_es: String, val time_es: String, val intro_es: String)
+
     private val json = Json {
         ignoreUnknownKeys = true
         isLenient = true
@@ -99,6 +113,10 @@ class AssetsDecodeTest {
         check("hymns_seasonal.json", { decode<Map<String, Map<String, Hour.Part>>>("hymns_seasonal.json") }) { it.isNotEmpty() }
         check("temporal_propers.json", { decode<Map<String, Map<String, Hour.Part>>>("temporal_propers.json") }) { it.isNotEmpty() }
         check("psalter.json", { decode<Map<String, Map<String, List<String>>>>("psalter.json") }) { it.isNotEmpty() }
+        // Spanish vernacular overlay (ContentStore.applyVernacular).
+        check("prayers_es.json", { decode<Map<String, PrayerEsEntry>>("prayers_es.json") }) { it.isNotEmpty() }
+        check("marian_antiphons_es.json", { decode<Map<String, MarianEsEntry>>("marian_antiphons_es.json") }) { it.isNotEmpty() }
+        check("hours_es.json", { decode<Map<String, HourEsEntry>>("hours_es.json") }) { it.isNotEmpty() }
 
         // Any asset shipped but not covered above would dodge this net —
         // force the list to stay in sync with the assets directory.

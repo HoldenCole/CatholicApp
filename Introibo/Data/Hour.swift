@@ -6,13 +6,15 @@ import Foundation
 struct Hour: Identifiable, Decodable, Hashable, ScheduledHour {
     let slug: String
     let name: String        // Latin name (Matutínum, Laudes, ...)
-    let eng: String         // English name
-    let time: String        // "at midnight", "at dawn", ...
+    // Vernacular metadata is `var` so the Spanish overlay can rewrite it
+    // (ContentStore.applyVernacularOverlay). The parts stay Latin/English.
+    var eng: String         // Vernacular name
+    var time: String        // "at midnight", "at dawn", ...
     let hour: Int           // 0-23
     let minute: Int
     let glyph: String       // Single-letter dial glyph (M, L, I, III...)
     let order: Int          // Roman order for Hora I/II/...
-    let intro: String       // Short prose introduction
+    var intro: String       // Short prose introduction
     let parts: [Part]
     var related: [RelatedLink]? = nil
 
@@ -55,10 +57,10 @@ struct Hour: Identifiable, Decodable, Hashable, ScheduledHour {
 struct MarianAntiphonData: Identifiable, Decodable, Hashable {
     let slug: String
     let title: String
-    let eng: String
+    var eng: String
     let season: String
     let lat: String
-    let engBody: String
+    var engBody: String
 
     var id: String { slug }
 }

@@ -58,6 +58,8 @@ import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.storage.settings.MissalRite
 import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import com.lampstandhq.introibo.storage.settings.SettingsRepository
+import com.lampstandhq.introibo.storage.settings.VernacularLanguage
+import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
@@ -90,6 +92,7 @@ fun SettingsScreen(
     val fontRange by settingsRepo.fontRange.collectAsState(initial = FontRange.NORMAL)
     val showLeonine by settingsRepo.showLeoninePrayers.collectAsState(initial = true)
     val showUpcoming by settingsRepo.showUpcomingFeasts.collectAsState(initial = false)
+    val vernacular by settingsRepo.vernacularLanguage.collectAsState(initial = VernacularLanguage.ENGLISH)
 
     var showResetConfirm by remember { mutableStateOf(false) }
     var showTutorial by remember { mutableStateOf(false) }
@@ -252,13 +255,36 @@ fun SettingsScreen(
             item {
                 LanguageMode.entries.forEach { l ->
                     SettingsRadioRow(
-                        label = l.label,
+                        label = l.label(vernacular),
                         isSelected = language == l,
                         onClick = { scope.launch { settingsRepo.setLanguageMode(l) } },
                     )
                 }
                 SettingsSectionFooter(
                     text = "Choose which text to display in prayers, the Missal, and the Divine Office.",
+                )
+            }
+
+            // ---- Vernacular Section ----
+            item {
+                SettingsSectionHeader(title = "Sermo Vulgáris · Vernacular")
+            }
+            item {
+                VernacularLanguage.entries.forEach { v ->
+                    SettingsRadioRow(
+                        label = v.displayName,
+                        isSelected = vernacular == v,
+                        onClick = {
+                            scope.launch {
+                                settingsRepo.setVernacularLanguage(v)
+                                ContentStore.applyVernacular(v)
+                            }
+                        },
+                    )
+                }
+                SettingsSectionFooter(
+                    text = "Español covers the prayers, the Marian antiphons, and the Office hour " +
+                        "introductions; everything else falls back to English while translation continues.",
                 )
             }
 

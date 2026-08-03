@@ -5,6 +5,9 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
 import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.storage.settings.SettingsRepository
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
 
 /**
  * Application class for Introibo. Initialises the [ContentStore] from
@@ -18,6 +21,15 @@ class IntroiboApp : Application() {
 
         // Load all bundled JSON content into memory.
         ContentStore.init(applicationContext)
+
+        // Apply the saved vernacular overlay (Spanish) before anything —
+        // widgets included — renders. Same runBlocking-first() pattern the
+        // widget providers use for their settings reads; applyVernacular is
+        // a no-op for English, the default.
+        val vernacular = runBlocking {
+            SettingsRepository(applicationContext).vernacularLanguage.first()
+        }
+        ContentStore.applyVernacular(vernacular)
 
         // NOTE: prepareSearchIndex()/prepareLinkGraph() are deliberately NOT
         // called here — Application.onCreate also runs for widget-alarm

@@ -4,6 +4,7 @@ import android.content.Context
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.liturgical.LiturgicalSeason
 import com.lampstandhq.introibo.storage.settings.MissalRite
+import com.lampstandhq.introibo.storage.settings.VernacularLanguage
 import com.lampstandhq.introibo.data.model.ConfessionGuide
 import com.lampstandhq.introibo.data.model.Course
 import com.lampstandhq.introibo.data.model.ExamenEntry
@@ -136,35 +137,129 @@ object ContentStore {
         ordoNamesEn      = load("ordo_names_en.json")     ?: emptyMap()
         canonVariants    = load("canon_variants.json")    ?: emptyMap()
 
-        val psalterWeekly: Map<String, Map<String, Hour.Part>> =
-            load("psalter_weekly.json") ?: emptyMap()
-        val hymns: Map<String, Map<String, Hour.Part>> =
-            load("hymns_seasonal.json") ?: emptyMap()
-        val temporal: Map<String, Map<String, Hour.Part>> =
-            load("temporal_propers.json") ?: emptyMap()
-        val psalterText: Map<String, Map<String, List<String>>> =
-            load("psalter.json") ?: emptyMap()
+        psalterWeeklyData = load("psalter_weekly.json") ?: emptyMap()
+        hymnsSeasonalData = load("hymns_seasonal.json") ?: emptyMap()
+        temporalData = load("temporal_propers.json") ?: emptyMap()
+        psalterTextData = load("psalter.json") ?: emptyMap()
 
+        rebuildOfficeAssembler()
+    }
+
+    // Retained so the office assembler can be rebuilt when the vernacular
+    // overlay changes (the maps are shared by reference, not copied).
+    private var psalterWeeklyData: Map<String, Map<String, Hour.Part>> = emptyMap()
+    private var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
+    private var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
+    private var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
+
+    private fun rebuildOfficeAssembler() {
         officeAssembler = OfficeAssembler(
-            weeklyPsalter = psalterWeekly,
-            seasonalHymns = hymns,
-            temporalPropers = temporal,
+            weeklyPsalter = psalterWeeklyData,
+            seasonalHymns = hymnsSeasonalData,
+            temporalPropers = temporalData,
             marianAntiphons = marianAntiphons,
-            psalter = psalterText,
+            psalter = psalterTextData,
         )
+    }
+
+    // ---- Vernacular (Spanish overlay) ----
+
+    // Overlay schemas — spanish-translation/*.json, bundled as *_es.json.
+    // Each keys the source file's slug to Spanish replacements; anything
+    // absent (or misaligned) keeps the English, so partial coverage is safe.
+    @kotlinx.serialization.Serializable
+    private data class PrayerES(
+        val title_es: String,
+        val note_es: String? = null,
+        val lines_es: List<String>,
+    )
+
+    @kotlinx.serialization.Serializable
+    private data class MarianAntiphonES(
+        val title_es: String,
+        val body_es: String,
+    )
+
+    @kotlinx.serialization.Serializable
+    private data class HourES(
+        val name_es: String,
+        val time_es: String,
+        val intro_es: String,
+    )
+
+    private var appliedVernacular: VernacularLanguage = VernacularLanguage.ENGLISH
+
+    /** The vernacular whose overlay is currently applied to the store. */
+    val currentVernacular: VernacularLanguage get() = appliedVernacular
+
+    /**
+     * Switches the vernacular side of prayers, Marian antiphons, and hour
+     * metadata. Reloads the pristine sources first (so es→en restores the
+     * English), rebuilds the office assembler (Compline's antiphon comes
+     * from its copy), and drops the search/link caches built on the old
+     * text. No-op when [lang] is already applied.
+     */
+    fun applyVernacular(lang: VernacularLanguage) {
+        if (lang == appliedVernacular) return
+        appliedVernacular = lang
+
+        prayers = load("prayers.json") ?: emptyList()
+        hours = load("hours.json") ?: emptyList()
+        marianAntiphons = load("marian_antiphons.json") ?: emptyList()
+
+        if (lang == VernacularLanguage.SPANISH) {
+            load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
+                prayers = prayers.map { p ->
+                    val o = es[p.slug] ?: return@map p
+                    p.copy(
+                        eng = o.title_es,
+                        note = if (p.note != null) o.note_es ?: p.note else p.note,
+                        lines = if (o.lines_es.size == p.lines.size) {
+                            p.lines.mapIndexed { i, line -> line.copy(eng = o.lines_es[i]) }
+                        } else {
+                            p.lines
+                        },
+                    )
+                }
+            }
+            load<Map<String, MarianAntiphonES>>("marian_antiphons_es.json")?.let { es ->
+                marianAntiphons = marianAntiphons.map { a ->
+                    val o = es[a.slug] ?: return@map a
+                    a.copy(eng = o.title_es, engBody = o.body_es)
+                }
+            }
+            load<Map<String, HourES>>("hours_es.json")?.let { es ->
+                hours = hours.map { h ->
+                    val o = es[h.slug] ?: return@map h
+                    h.copy(eng = o.name_es, time = o.time_es, intro = o.intro_es)
+                }
+            }
+        }
+
+        rebuildOfficeAssembler()
+        synchronized(this) {
+            _searchIndex = null
+            _linkGraph = null
+        }
     }
 
     // ---- Search index (Phase 1: index core) ----
     //
     // Built lazily on first access. Owned here so the whole app shares one
-    // folded corpus. Mirror: iOS ContentStore.searchIndex.
-    // `by lazy` is thread-safe (LazyThreadSafetyMode.SYNCHRONIZED) by default;
-    // call prepareSearchIndex() on a background thread at launch to avoid
-    // blocking the first reader.
+    // folded corpus. Mirror: iOS ContentStore.searchIndex. Cached in a
+    // resettable holder (not `by lazy`) so a vernacular switch can drop the
+    // corpus built on the old text; call prepareSearchIndex() on a background
+    // thread at launch to avoid blocking the first reader.
 
-    val searchIndex: com.lampstandhq.introibo.data.search.SearchIndex by lazy {
-        com.lampstandhq.introibo.data.search.SearchIndex.build(this)
-    }
+    @Volatile
+    private var _searchIndex: com.lampstandhq.introibo.data.search.SearchIndex? = null
+
+    val searchIndex: com.lampstandhq.introibo.data.search.SearchIndex
+        get() = _searchIndex ?: synchronized(this) {
+            _searchIndex
+                ?: com.lampstandhq.introibo.data.search.SearchIndex.build(this)
+                    .also { _searchIndex = it }
+        }
 
     /** Eagerly builds the search index off the main thread. Idempotent. */
     fun prepareSearchIndex() {
@@ -186,9 +281,15 @@ object ContentStore {
     // call prepareLinkGraph() on a background thread at launch to avoid blocking
     // the first reader.
 
-    val linkGraph: com.lampstandhq.introibo.data.links.LinkGraph by lazy {
-        com.lampstandhq.introibo.data.links.LinkGraph.build(this)
-    }
+    @Volatile
+    private var _linkGraph: com.lampstandhq.introibo.data.links.LinkGraph? = null
+
+    val linkGraph: com.lampstandhq.introibo.data.links.LinkGraph
+        get() = _linkGraph ?: synchronized(this) {
+            _linkGraph
+                ?: com.lampstandhq.introibo.data.links.LinkGraph.build(this)
+                    .also { _linkGraph = it }
+        }
 
     /** Eagerly builds the link graph off the main thread. Idempotent. */
     fun prepareLinkGraph() {

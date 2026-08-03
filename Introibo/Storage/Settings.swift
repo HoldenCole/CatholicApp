@@ -65,6 +65,7 @@ enum SettingsKey {
     static let textDarkness = "settings.textDarkness"
     static let showLeoninePrayers = "settings.showLeoninePrayers"
     static let showUpcomingFeasts = "settings.showUpcomingFeasts"
+    static let vernacularLang = "settings.vernacularLang"
 }
 
 enum FontRange: String, CaseIterable, Identifiable {
@@ -132,16 +133,39 @@ enum LanguageMode: String, CaseIterable, Identifiable {
     var id: String { rawValue }
 
     var label: String {
+        let v = VernacularLanguage.current().displayName
         switch self {
-        case .both:       return "Latin & English"
+        case .both:       return "Latin & \(v)"
         case .latinOnly:  return "Latin Only"
-        case .vernacular: return "English Only"
+        case .vernacular: return "\(v) Only"
         }
     }
 
     static func current() -> LanguageMode {
         let raw = UserDefaults.standard.string(forKey: SettingsKey.language) ?? "both"
         return LanguageMode(rawValue: raw) ?? .both
+    }
+}
+
+// Which vernacular the eng-side of every bilingual surface shows. Spanish
+// coverage is the overlay in *_es.json (prayers, Marian antiphons, hour
+// metadata); anything not covered falls back to English.
+enum VernacularLanguage: String, CaseIterable, Identifiable {
+    case english = "en"
+    case spanish = "es"
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .english: return "English"
+        case .spanish: return "Español"
+        }
+    }
+
+    static func current() -> VernacularLanguage {
+        let raw = UserDefaults.standard.string(forKey: SettingsKey.vernacularLang) ?? "en"
+        return VernacularLanguage(rawValue: raw) ?? .english
     }
 }
 

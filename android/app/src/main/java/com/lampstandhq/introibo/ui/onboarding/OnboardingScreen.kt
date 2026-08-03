@@ -483,7 +483,7 @@ private fun SettingsPage(
                         .padding(vertical = 10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Text(l.label, style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
+                    Text(l.label(), style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
                     if (language == l) {
                         Text("✓", color = colors.sanctuaryRed, style = type.titleM)
                     }

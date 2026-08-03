@@ -70,18 +70,108 @@ final class ContentStore {
         ordoDataPre1955   = load("ordo_pre1955",      as: [String: OrdoEntry].self) ?? [:]
         ordoNamesEn       = load("ordo_names_en",     as: [String: String].self) ?? [:]
 
-        let psalterWeekly = load("psalter_weekly",    as: [String: [String: Hour.Part]].self) ?? [:]
-        let hymns         = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
-        let temporal      = load("temporal_propers",  as: [String: [String: Hour.Part]].self) ?? [:]
-        let psalterText   = load("psalter",           as: [String: [String: [String]]].self) ?? [:]
-        officeAssembler = OfficeAssembler(
-            weeklyPsalter: psalterWeekly,
-            seasonalHymns: hymns,
-            temporalPropers: temporal,
-            marianAntiphons: marianAntiphons,
-            psalter: psalterText
-        )
+        psalterWeeklyData = load("psalter_weekly",    as: [String: [String: Hour.Part]].self) ?? [:]
+        hymnsSeasonalData = load("hymns_seasonal",   as: [String: [String: Hour.Part]].self) ?? [:]
+        temporalData      = load("temporal_propers",  as: [String: [String: Hour.Part]].self) ?? [:]
+        psalterTextData   = load("psalter",           as: [String: [String: [String]]].self) ?? [:]
+        applyVernacularOverlay(VernacularLanguage.current(), reloadSources: false)
+        rebuildOfficeAssembler()
         buildAllPropers()
+    }
+
+    // Retained so the office assembler can be rebuilt when the vernacular
+    // overlay changes (dictionaries are COW — the assembler shares storage).
+    private var psalterWeeklyData: [String: [String: Hour.Part]] = [:]
+    private var hymnsSeasonalData: [String: [String: Hour.Part]] = [:]
+    private var temporalData:      [String: [String: Hour.Part]] = [:]
+    private var psalterTextData:   [String: [String: [String]]] = [:]
+
+    private func rebuildOfficeAssembler() {
+        officeAssembler = OfficeAssembler(
+            weeklyPsalter: psalterWeeklyData,
+            seasonalHymns: hymnsSeasonalData,
+            temporalPropers: temporalData,
+            marianAntiphons: marianAntiphons,
+            psalter: psalterTextData
+        )
+    }
+
+    // MARK: - Vernacular (Spanish overlay)
+
+    // Overlay schemas — spanish-translation/*.json, bundled as *_es.json.
+    // Each keys the source file's slug to Spanish replacements; anything
+    // absent (or misaligned) keeps the English, so partial coverage is safe.
+    private struct PrayerES: Decodable {
+        let title_es: String
+        let note_es: String?
+        let lines_es: [String]
+    }
+    private struct MarianAntiphonES: Decodable {
+        let title_es: String
+        let body_es: String
+    }
+    private struct HourES: Decodable {
+        let name_es: String
+        let time_es: String
+        let intro_es: String
+    }
+
+    /// Switches the vernacular side of prayers, Marian antiphons, and hour
+    /// metadata. Reloads the pristine sources first (so es→en restores the
+    /// English), rebuilds the office assembler (Compline's antiphon comes
+    /// from its copy), and drops the search/link caches built on the old text.
+    func applyVernacular(_ lang: VernacularLanguage) {
+        applyVernacularOverlay(lang, reloadSources: true)
+        rebuildOfficeAssembler()
+        searchIndexLock.lock()
+        _searchIndex = nil
+        searchIndexLock.unlock()
+        linkGraphLock.lock()
+        _linkGraph = nil
+        linkGraphLock.unlock()
+        prepareSearchIndex()
+        prepareLinkGraph()
+    }
+
+    private func applyVernacularOverlay(_ lang: VernacularLanguage, reloadSources: Bool) {
+        if reloadSources {
+            prayers         = load("prayers",          as: [Prayer].self)             ?? []
+            hours           = load("hours",            as: [Hour].self)               ?? []
+            marianAntiphons = load("marian_antiphons", as: [MarianAntiphonData].self) ?? []
+        }
+        guard lang == .spanish else { return }
+
+        if let es = load("prayers_es", as: [String: PrayerES].self) {
+            prayers = prayers.map { p in
+                guard let o = es[p.slug] else { return p }
+                var m = p
+                m.eng = o.title_es
+                if m.note != nil, let n = o.note_es { m.note = n }
+                if o.lines_es.count == m.lines.count {
+                    for i in m.lines.indices { m.lines[i].eng = o.lines_es[i] }
+                }
+                return m
+            }
+        }
+        if let es = load("marian_antiphons_es", as: [String: MarianAntiphonES].self) {
+            marianAntiphons = marianAntiphons.map { a in
+                guard let o = es[a.slug] else { return a }
+                var m = a
+                m.eng = o.title_es
+                m.engBody = o.body_es
+                return m
+            }
+        }
+        if let es = load("hours_es", as: [String: HourES].self) {
+            hours = hours.map { h in
+                guard let o = es[h.slug] else { return h }
+                var m = h
+                m.eng = o.name_es
+                m.time = o.time_es
+                m.intro = o.intro_es
+                return m
+            }
+        }
     }
 
     func proper(slug: String) -> MassProper? {

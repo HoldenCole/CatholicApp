@@ -76,14 +76,40 @@ object FontSizeScale {
 // Language mode
 // ---------------------------------------------------------------------------
 
-enum class LanguageMode(val rawValue: String, val label: String) {
-    BOTH("both", "Latin & English"),
-    LATIN_ONLY("latin", "Latin Only"),
-    VERNACULAR("vernacular", "English Only");
+enum class LanguageMode(val rawValue: String) {
+    BOTH("both"),
+    LATIN_ONLY("latin"),
+    VERNACULAR("vernacular");
+
+    /** Display label; the vernacular rows name the chosen vernacular. */
+    fun label(vernacular: VernacularLanguage = VernacularLanguage.ENGLISH): String = when (this) {
+        BOTH -> "Latin & ${vernacular.displayName}"
+        LATIN_ONLY -> "Latin Only"
+        VERNACULAR -> "${vernacular.displayName} Only"
+    }
 
     companion object {
         fun fromRaw(raw: String?): LanguageMode =
             entries.firstOrNull { it.rawValue == raw } ?: BOTH
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Vernacular language
+// ---------------------------------------------------------------------------
+
+/**
+ * Which vernacular the eng-side of every bilingual surface shows. Spanish
+ * coverage is the *_es.json overlay (prayers, Marian antiphons, hour
+ * metadata); anything not covered falls back to English.
+ */
+enum class VernacularLanguage(val rawValue: String, val displayName: String) {
+    ENGLISH("en", "English"),
+    SPANISH("es", "Español");
+
+    companion object {
+        fun fromRaw(raw: String?): VernacularLanguage =
+            entries.firstOrNull { it.rawValue == raw } ?: ENGLISH
     }
 }
 
@@ -117,4 +143,5 @@ object SettingsKey {
     const val TEXT_DARKNESS = "settings.textDarkness"
     const val SHOW_LEONINE_PRAYERS = "settings.showLeoninePrayers"
     const val SHOW_UPCOMING_FEASTS = "settings.showUpcomingFeasts"
+    const val VERNACULAR_LANG = "settings.vernacularLang"
 }

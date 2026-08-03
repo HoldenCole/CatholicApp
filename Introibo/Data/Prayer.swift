@@ -6,18 +6,20 @@ import Foundation
 struct Prayer: Identifiable, Decodable, Hashable {
     let slug: String
     let title: String
-    let eng: String
+    // Vernacular fields are `var` so the Spanish overlay can rewrite them
+    // in place at load time (ContentStore.applyVernacularOverlay).
+    var eng: String
     let category: String
-    let note: String?
+    var note: String?
     let occasions: [String]?
     var related: [RelatedLink]? = nil
-    let lines: [Line]
+    var lines: [Line]
 
     var id: String { slug }
 
     struct Line: Decodable, Hashable {
         let lat: String
-        let eng: String
+        var eng: String
     }
 }
 
