@@ -350,6 +350,11 @@ struct MissalView: View {
             mutable.eng = mutable.eng.replacingCharacters(
                 in: range,
                 with: ": and also of blessed Joseph, spouse of the same Virgin: and also of the blessed Apostles")
+        } else if let range = mutable.eng.range(of: ": y también de tus bienaventurados Apóstoles") {
+            // Spanish vernacular overlay active.
+            mutable.eng = mutable.eng.replacingCharacters(
+                in: range,
+                with: ": y también del bienaventurado José, esposo de la misma Virgen: y también de tus bienaventurados Apóstoles")
         }
         return mutable
     }

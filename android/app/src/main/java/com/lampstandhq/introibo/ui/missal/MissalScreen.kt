@@ -451,9 +451,14 @@ private fun withJosephClause(line: MissalSection.Line, rite: MissalRite): Missal
         "Jesu Christi: sed et",
         "Jesu Christi: sed et beáti Joseph, ejúsdem Vírginis Sponsi: sed et",
     )
+    // Only one of the two anchors can be present — English, or the Spanish
+    // vernacular overlay's text.
     var eng = line.eng.replaceFirst(
         ": and also of the blessed Apostles",
         ": and also of blessed Joseph, spouse of the same Virgin: and also of the blessed Apostles",
+    ).replaceFirst(
+        ": y también de tus bienaventurados Apóstoles",
+        ": y también del bienaventurado José, esposo de la misma Virgen: y también de tus bienaventurados Apóstoles",
     )
     return MissalSection.Line(lat = lat, eng = eng, rubric = line.rubric)
 }

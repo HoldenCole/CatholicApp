@@ -20,7 +20,13 @@ ASSET_DIRS = [
     ROOT / "Introibo" / "Resources",
     ROOT / "android" / "app" / "src" / "main" / "assets",
 ]
-FILES = ["prayers_es.json", "marian_antiphons_es.json", "hours_es.json"]
+FILES = [
+    "prayers_es.json",
+    "marian_antiphons_es.json",
+    "hours_es.json",
+    "missal_es.json",
+    "canon_variants_es.json",
+]
 
 
 def main():

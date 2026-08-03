@@ -187,6 +187,20 @@ object ContentStore {
         val intro_es: String,
     )
 
+    // missal_es.json is PARTIAL by design — the Ordinary translates section
+    // by section (the Canon first); uncovered sections keep their English.
+    @kotlinx.serialization.Serializable
+    private data class MissalLineES(
+        val eng_es: String,
+        val rubric_es: String? = null,
+    )
+
+    @kotlinx.serialization.Serializable
+    private data class MissalSectionES(
+        val english_es: String? = null,
+        val body_es: List<MissalLineES>,
+    )
+
     private var appliedVernacular: VernacularLanguage = VernacularLanguage.ENGLISH
 
     /** The vernacular whose overlay is currently applied to the store. */
@@ -206,6 +220,8 @@ object ContentStore {
         prayers = load("prayers.json") ?: emptyList()
         hours = load("hours.json") ?: emptyList()
         marianAntiphons = load("marian_antiphons.json") ?: emptyList()
+        missal = load("missal.json") ?: emptyList()
+        canonVariants = load("canon_variants.json") ?: emptyMap()
 
         if (lang == VernacularLanguage.SPANISH) {
             load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
@@ -232,6 +248,33 @@ object ContentStore {
                 hours = hours.map { h ->
                     val o = es[h.slug] ?: return@map h
                     h.copy(eng = o.name_es, time = o.time_es, intro = o.intro_es)
+                }
+            }
+            load<Map<String, MissalSectionES>>("missal_es.json")?.let { es ->
+                missal = missal.map { s ->
+                    val o = es[s.slug] ?: return@map s
+                    if (o.body_es.size != s.body.size) return@map s
+                    s.copy(
+                        english = o.english_es ?: s.english,
+                        body = s.body.mapIndexed { i, line ->
+                            line.copy(
+                                eng = o.body_es[i].eng_es,
+                                rubric = if (line.rubric != null) {
+                                    o.body_es[i].rubric_es ?: line.rubric
+                                } else {
+                                    line.rubric
+                                },
+                            )
+                        },
+                    )
+                }
+            }
+            load<Map<String, Map<String, Map<String, String>>>>("canon_variants_es.json")?.let { es ->
+                canonVariants = canonVariants.mapValues { (group, entries) ->
+                    entries.mapValues { (key, entry) ->
+                        val e = es[group]?.get(key)?.get("eng_es")
+                        if (e != null) entry + ("eng" to e) else entry
+                    }
                 }
             }
         }

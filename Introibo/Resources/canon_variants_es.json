@@ -1,0 +1,27 @@
+{
+  "communicantes": {
+    "christmas": {
+      "eng_es": "Unidos en una misma comunión, y celebrando el día sacratísimo en que la virginidad intacta de la bienaventurada María dio a este mundo al Salvador: y venerando la memoria, en primer lugar, de la misma gloriosa siempre Virgen María, Madre del mismo Jesucristo, nuestro Dios y Señor: y también de tus bienaventurados Apóstoles y Mártires: Pedro y Pablo, Andrés, Santiago, Juan, Tomás, Santiago, Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián, y de todos tus Santos; por cuyos méritos y ruegos concédenos que en todo seamos fortalecidos con el auxilio de tu protección. Por el mismo Cristo nuestro Señor. Amén."
+    },
+    "epiphany": {
+      "eng_es": "Unidos en una misma comunión, y celebrando el día sacratísimo en que tu Unigénito, coeterno contigo en tu gloria, se manifestó visiblemente corporal en la verdad de nuestra carne: y venerando la memoria, en primer lugar, de la gloriosa siempre Virgen María, Madre del mismo Jesucristo, nuestro Dios y Señor: y también de tus bienaventurados Apóstoles y Mártires: Pedro y Pablo, Andrés, Santiago, Juan, Tomás, Santiago, Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián, y de todos tus Santos; por cuyos méritos y ruegos concédenos que en todo seamos fortalecidos con el auxilio de tu protección. Por el mismo Cristo nuestro Señor. Amén."
+    },
+    "easter": {
+      "eng_es": "Unidos en una misma comunión, y celebrando el día sacratísimo de la Resurrección de nuestro Señor Jesucristo según la carne: y venerando la memoria, en primer lugar, de la gloriosa siempre Virgen María, Madre del mismo Jesucristo, nuestro Dios y Señor: y también de tus bienaventurados Apóstoles y Mártires: Pedro y Pablo, Andrés, Santiago, Juan, Tomás, Santiago, Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián, y de todos tus Santos; por cuyos méritos y ruegos concédenos que en todo seamos fortalecidos con el auxilio de tu protección. Por el mismo Cristo nuestro Señor. Amén."
+    },
+    "ascension": {
+      "eng_es": "Unidos en una misma comunión, y celebrando el día sacratísimo en que nuestro Señor, tu unigénito Hijo, colocó a la diestra de tu gloria la substancia de nuestra frágil naturaleza, que había unido a sí: y venerando la memoria, en primer lugar, de la gloriosa siempre Virgen María, Madre del mismo Jesucristo, nuestro Dios y Señor: y también de tus bienaventurados Apóstoles y Mártires: Pedro y Pablo, Andrés, Santiago, Juan, Tomás, Santiago, Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián, y de todos tus Santos; por cuyos méritos y ruegos concédenos que en todo seamos fortalecidos con el auxilio de tu protección. Por el mismo Cristo nuestro Señor. Amén."
+    },
+    "pentecost": {
+      "eng_es": "Unidos en una misma comunión, y celebrando el día sacratísimo de Pentecostés, en que el Espíritu Santo se apareció a los Apóstoles en innumerables lenguas: y venerando la memoria, en primer lugar, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor: y también de tus bienaventurados Apóstoles y Mártires: Pedro y Pablo, Andrés, Santiago, Juan, Tomás, Santiago, Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián, y de todos tus Santos; por cuyos méritos y ruegos concédenos que en todo seamos fortalecidos con el auxilio de tu protección. Por el mismo Cristo nuestro Señor. Amén."
+    }
+  },
+  "hanc_igitur": {
+    "easter": {
+      "eng_es": "Te rogamos, pues, Señor, que recibas aplacado esta ofrenda de nosotros tus siervos y de toda tu familia, que te ofrecemos también por éstos a quienes te has dignado regenerar por el agua y el Espíritu Santo, concediéndoles la remisión de todos sus pecados; ordena en tu paz nuestros días, líbranos de la eterna condenación y cuéntanos en el número de tus elegidos. Por Cristo nuestro Señor. Amén."
+    },
+    "pentecost": {
+      "eng_es": "Te rogamos, pues, Señor, que recibas aplacado esta ofrenda de nosotros tus siervos y de toda tu familia, que te ofrecemos también por éstos a quienes te has dignado regenerar por el agua y el Espíritu Santo, concediéndoles la remisión de todos sus pecados; ordena en tu paz nuestros días, líbranos de la eterna condenación y cuéntanos en el número de tus elegidos. Por Cristo nuestro Señor. Amén."
+    }
+  }
+}

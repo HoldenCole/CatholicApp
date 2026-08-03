@@ -198,7 +198,7 @@ struct SettingsView: View {
         } header: {
             Text("Sermo Vulgáris · Vernacular")
         } footer: {
-            Text("Español covers the prayers, the Marian antiphons, and the Office hour introductions; everything else falls back to English while translation continues.")
+            Text("Español covers the prayers, the Marian antiphons, the Canon of the Mass, and the Office hour introductions; everything else falls back to English while translation continues.")
         }
     }
 

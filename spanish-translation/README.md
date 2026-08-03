@@ -51,9 +51,16 @@ so integration cannot silently misalign.
 | `hours_es.json` | `hours.json` metadata (names, times, intros) | complete |
 | `ui_strings_es.json` | curated app UI strings | complete |
 
-## Phase 2 (not started — large corpora)
+## Phase 2 (in progress — large corpora)
 
-- `missal.json` Ordinary sections (90 KB) — tier 2/3 mix.
+- `missal.json` Ordinary sections — **the Canon Missæ is DONE**
+  (`missal_es.json`, partial-coverage overlay: covered sections align
+  line-for-line, everything else falls back to English) along with the
+  proper Communicantes/Hanc igitur (`canon_variants_es.json`); the 1962
+  St Joseph clause inserts into the Spanish text at render time, anchored
+  on ": y también de tus bienaventurados Apóstoles" (the validator pins
+  the anchor). Remaining ordinary sections translate section by section
+  into the same file.
 - `ordo_names_en.json` (1,184 feast names) — mostly pattern-translatable by
   script ("Dominica II Post Pentecosten" → "II Domingo después de
   Pentecostés") plus a saint-name table.

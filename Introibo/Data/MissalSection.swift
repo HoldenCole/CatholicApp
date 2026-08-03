@@ -7,8 +7,10 @@ struct MissalSection: Identifiable, Decodable, Hashable {
     let slug: String
     let label: String?
     let title: String
-    let english: String?
-    let body: [Line]
+    // Vernacular fields are `var` so the Spanish overlay can rewrite them
+    // in place (ContentStore.applyVernacularOverlay).
+    var english: String?
+    var body: [Line]
 
     var id: String { slug }
 

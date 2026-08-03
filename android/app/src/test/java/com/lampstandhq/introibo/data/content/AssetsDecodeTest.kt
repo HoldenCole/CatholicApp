@@ -48,6 +48,15 @@ class AssetsDecodeTest {
     @kotlinx.serialization.Serializable
     data class HourEsEntry(val name_es: String, val time_es: String, val intro_es: String)
 
+    @kotlinx.serialization.Serializable
+    data class MissalLineEsEntry(val eng_es: String, val rubric_es: String? = null)
+
+    @kotlinx.serialization.Serializable
+    data class MissalSectionEsEntry(
+        val english_es: String? = null,
+        val body_es: List<MissalLineEsEntry>,
+    )
+
     private val json = Json {
         ignoreUnknownKeys = true
         isLenient = true
@@ -117,6 +126,8 @@ class AssetsDecodeTest {
         check("prayers_es.json", { decode<Map<String, PrayerEsEntry>>("prayers_es.json") }) { it.isNotEmpty() }
         check("marian_antiphons_es.json", { decode<Map<String, MarianEsEntry>>("marian_antiphons_es.json") }) { it.isNotEmpty() }
         check("hours_es.json", { decode<Map<String, HourEsEntry>>("hours_es.json") }) { it.isNotEmpty() }
+        check("missal_es.json", { decode<Map<String, MissalSectionEsEntry>>("missal_es.json") }) { it.isNotEmpty() }
+        check("canon_variants_es.json", { decode<Map<String, Map<String, Map<String, String>>>>("canon_variants_es.json") }) { it.isNotEmpty() }
 
         // Any asset shipped but not covered above would dodge this net —
         // force the list to stay in sync with the assets directory.

@@ -115,6 +115,16 @@ final class ContentStore {
         let time_es: String
         let intro_es: String
     }
+    // missal_es.json is PARTIAL by design — the Ordinary translates section
+    // by section (the Canon first); uncovered sections keep their English.
+    private struct MissalLineES: Decodable {
+        let eng_es: String
+        let rubric_es: String?
+    }
+    private struct MissalSectionES: Decodable {
+        let english_es: String?
+        let body_es: [MissalLineES]
+    }
 
     /// Switches the vernacular side of prayers, Marian antiphons, and hour
     /// metadata. Reloads the pristine sources first (so es→en restores the
@@ -138,6 +148,8 @@ final class ContentStore {
             prayers         = load("prayers",          as: [Prayer].self)             ?? []
             hours           = load("hours",            as: [Hour].self)               ?? []
             marianAntiphons = load("marian_antiphons", as: [MarianAntiphonData].self) ?? []
+            missal          = load("missal",           as: [MissalSection].self)      ?? []
+            canonVariants   = load("canon_variants",   as: [String: [String: [String: String]]].self) ?? [:]
         }
         guard lang == .spanish else { return }
 
@@ -170,6 +182,29 @@ final class ContentStore {
                 m.time = o.time_es
                 m.intro = o.intro_es
                 return m
+            }
+        }
+        if let es = load("missal_es", as: [String: MissalSectionES].self) {
+            missal = missal.map { s in
+                guard let o = es[s.slug], o.body_es.count == s.body.count else { return s }
+                var m = s
+                if let e = o.english_es { m.english = e }
+                for i in m.body.indices {
+                    m.body[i].eng = o.body_es[i].eng_es
+                    if m.body[i].rubric != nil, let r = o.body_es[i].rubric_es {
+                        m.body[i].rubric = r
+                    }
+                }
+                return m
+            }
+        }
+        if let es = load("canon_variants_es", as: [String: [String: [String: String]]].self) {
+            for (group, entries) in es {
+                for (key, entry) in entries {
+                    if let e = entry["eng_es"], canonVariants[group]?[key] != nil {
+                        canonVariants[group]?[key]?["eng"] = e
+                    }
+                }
             }
         }
     }

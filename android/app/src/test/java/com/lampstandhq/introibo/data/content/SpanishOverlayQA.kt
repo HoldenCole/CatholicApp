@@ -64,11 +64,41 @@ class SpanishOverlayQA {
         val staging = File(assets, "../../../../../spanish-translation").canonicalFile
         // Staging only exists in the repo checkout; skip quietly elsewhere.
         if (!staging.isDirectory) return
-        for (name in listOf("prayers_es.json", "marian_antiphons_es.json", "hours_es.json")) {
+        for (name in listOf(
+            "prayers_es.json", "marian_antiphons_es.json", "hours_es.json",
+            "missal_es.json", "canon_variants_es.json",
+        )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
                 File(staging, name).readBytes().contentEquals(File(assets, name).readBytes()),
             )
+        }
+    }
+
+    @Test
+    fun missalOverlayAlignsWithCoveredSections() {
+        val source = parse("missal.json").jsonArray.associateBy(
+            { it.jsonObject["slug"]!!.jsonPrimitive.content },
+            { it.jsonObject["body"]!!.jsonArray.size },
+        )
+        val overlay = parse("missal_es.json").jsonObject
+        for ((slug, entry) in overlay) {
+            assertTrue("missal_es covers unknown section $slug", slug in source)
+            assertEquals(
+                "$slug line count",
+                source[slug],
+                entry.jsonObject["body_es"]!!.jsonArray.size,
+            )
+        }
+        // Variant keys must exist in canon_variants.json.
+        val srcVariants = parse("canon_variants.json").jsonObject
+        for ((group, entries) in parse("canon_variants_es.json").jsonObject) {
+            for (key in entries.jsonObject.keys) {
+                assertTrue(
+                    "canon_variants_es[$group][$key] has no source variant",
+                    srcVariants[group]?.jsonObject?.containsKey(key) == true,
+                )
+            }
         }
     }
 
@@ -96,10 +126,28 @@ class SpanishOverlayQA {
             assertEquals("Maitines", matins.eng)
             assertEquals("a medianoche", matins.time)
 
-            // Corpora outside the tranche stay English (safe fallback).
+            // The Canon of the Mass is covered: Te igitur, the Communicantes
+            // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
-            assertTrue(canon.body[0].eng.startsWith("Wherefore") ||
-                canon.body[0].eng.startsWith("We ") || canon.body[0].eng.contains("Father"))
+            assertTrue(canon.body[0].eng.startsWith("Te pedimos, pues, Padre clementísimo"))
+            assertTrue(canon.body[0].rubric == "El sacerdote ora en silencio:")
+            val communicantes = canon.body.first { it.lat.startsWith("Communicántes") }
+            assertEquals(1, communicantes.eng.split(": y también de tus bienaventurados Apóstoles").size - 1)
+            assertTrue(communicantes.eng.endsWith("Por el mismo Cristo nuestro Señor. Amén."))
+            assertTrue(canon.body[17].eng.startsWith("Por todos los siglos"))
+            // Latin untouched.
+            assertTrue(canon.body[0].lat.startsWith("Te ígitur"))
+
+            // Proper Communicantes variants carry Spanish too.
+            val easter = ContentStore.canonVariant("communicantes", "easter")
+            assertTrue(easter!!.second.startsWith("Unidos en una misma comunión, y celebrando el día sacratísimo de la Resurrección"))
+            assertTrue(easter.first.startsWith("Communicántes"))
+            val hanc = ContentStore.canonVariant("hanc_igitur", "pentecost")
+            assertTrue(hanc!!.second.contains("regenerar por el agua y el Espíritu Santo"))
+
+            // Sections outside the covered set stay English (safe fallback).
+            val sanctus = ContentStore.missal.first { it.slug == "sanctus" }
+            assertTrue(sanctus.body[0].eng.startsWith("Holy, Holy, Holy"))
         } finally {
             ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
         }
@@ -108,5 +156,9 @@ class SpanishOverlayQA {
         val pater = ContentStore.prayers.first { it.slug == "pater" }
         assertTrue(pater.lines[0].eng.startsWith("Our Father"))
         assertEquals("Matins", ContentStore.hours.first { it.slug == "matutinum" }.eng)
+        val canon = ContentStore.missal.first { it.slug == "canon" }
+        assertTrue(canon.body[0].eng.startsWith("We therefore humbly pray"))
+        assertTrue(ContentStore.canonVariant("communicantes", "easter")!!
+            .second.startsWith("Communicating, and celebrating"))
     }
 }
