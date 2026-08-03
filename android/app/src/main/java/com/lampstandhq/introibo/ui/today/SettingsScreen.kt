@@ -284,8 +284,9 @@ fun SettingsScreen(
                 }
                 SettingsSectionFooter(
                     text = "Español covers the prayers, the Marian antiphons, the complete Ordinary " +
-                        "of the Mass, and the Office hour introductions; the Mass propers and " +
-                        "Office texts fall back to English while translation continues.",
+                        "of the Mass, the feast names of the calendar, and the Office hour " +
+                        "introductions; the Mass propers and Office texts fall back to English " +
+                        "while translation continues.",
                 )
             }
 

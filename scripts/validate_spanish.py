@@ -133,8 +133,23 @@ def validate_canon_variants():
     print(f"canon_variants_es.json: {n} variants checked")
 
 
+def validate_ordo_names():
+    path = ES / "ordo_names_es.json"
+    if not path.exists():
+        print("ordo_names_es.json: not present (skipped)")
+        return
+    en = json.load(open(SRC / "ordo_names_en.json"))
+    es = json.load(open(path))
+    extra = set(es) - set(en)
+    check(not extra, f"ordo_names: {len(extra)} keys not in ordo_names_en (e.g. {sorted(extra)[:3]})")
+    for k, v in es.items():
+        check(isinstance(v, str) and v.strip(), f"ordo_names[{k}]: empty")
+    print(f"ordo_names_es.json: {len(es)}/{len(en)} names checked")
+
+
 def main():
     validate_prayers()
+    validate_ordo_names()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

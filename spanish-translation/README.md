@@ -61,9 +61,14 @@ so integration cannot silently misalign.
   on ": y también de tus bienaventurados Apóstoles" (the validator pins
   the anchor). The overlay remains partial-capable for any future
   sections.
-- `ordo_names_en.json` (1,184 feast names) — mostly pattern-translatable by
-  script ("Dominica II Post Pentecosten" → "II Domingo después de
-  Pentecostés") plus a saint-name table.
+- `ordo_names_en.json` (1,184 feast names) — **DONE, 100% coverage**:
+  `scripts/translate_ordo_names_es.py` generates `ordo_names_es.json`
+  from the normalized English table (pattern rules for the temporal
+  cycle, octaves, Embers, Rogations, dates; a 250-entry saint-name table
+  with San/Santa/Santo/Santiago prefix handling; whole-name overrides
+  for the specials). At runtime the Spanish map merges over the English
+  one, so any future uncovered key falls back to English, then Latin.
+  Regenerate after ordo changes, then sync.
 - Office propers / Mass propers / readings (multi-MB) — needs an approved
   Spanish source; do not machine-translate.
 - `reference.json`, `saints.json`, `stations.json`, tutorial/course content.

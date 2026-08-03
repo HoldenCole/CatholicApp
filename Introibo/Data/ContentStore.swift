@@ -150,8 +150,13 @@ final class ContentStore {
             marianAntiphons = load("marian_antiphons", as: [MarianAntiphonData].self) ?? []
             missal          = load("missal",           as: [MissalSection].self)      ?? []
             canonVariants   = load("canon_variants",   as: [String: [String: [String: String]]].self) ?? [:]
+            ordoNamesEn     = load("ordo_names_en",    as: [String: String].self) ?? [:]
         }
         guard lang == .spanish else { return }
+        // Feast names: Spanish wins, missing keys keep their English.
+        if let es = load("ordo_names_es", as: [String: String].self) {
+            ordoNamesEn.merge(es) { _, spanish in spanish }
+        }
 
         if let es = load("prayers_es", as: [String: PrayerES].self) {
             prayers = prayers.map { p in

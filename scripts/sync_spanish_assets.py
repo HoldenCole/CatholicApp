@@ -26,6 +26,7 @@ FILES = [
     "hours_es.json",
     "missal_es.json",
     "canon_variants_es.json",
+    "ordo_names_es.json",
 ]
 
 

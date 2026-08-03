@@ -66,7 +66,7 @@ class SpanishOverlayQA {
         if (!staging.isDirectory) return
         for (name in listOf(
             "prayers_es.json", "marian_antiphons_es.json", "hours_es.json",
-            "missal_es.json", "canon_variants_es.json",
+            "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -100,6 +100,11 @@ class SpanishOverlayQA {
                 )
             }
         }
+        // Every Spanish feast name keys a name the English table knows.
+        val enNames = parse("ordo_names_en.json").jsonObject.keys
+        for (key in parse("ordo_names_es.json").jsonObject.keys) {
+            assertTrue("ordo_names_es key not in ordo_names_en: $key", key in enNames)
+        }
     }
 
     // ---- Behavior ----
@@ -125,6 +130,12 @@ class SpanishOverlayQA {
             val matins = ContentStore.hours.first { it.slug == "matutinum" }
             assertEquals("Maitines", matins.eng)
             assertEquals("a medianoche", matins.time)
+
+            // Feast names render in Spanish.
+            assertEquals("La Natividad de Nuestro Señor",
+                ContentStore.ordoNameEnglish("In Nativitate Domini"))
+            assertEquals("Domingo XXIII después de Pentecostés",
+                ContentStore.ordoNameEnglish("De Dominica XXIII post Pentecosten"))
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
@@ -176,5 +187,7 @@ class SpanishOverlayQA {
         assertTrue(canon.body[0].eng.startsWith("We therefore humbly pray"))
         assertTrue(ContentStore.canonVariant("communicantes", "easter")!!
             .second.startsWith("Communicating, and celebrating"))
+        assertEquals("The Nativity of Our Lord",
+            ContentStore.ordoNameEnglish("In Nativitate Domini"))
     }
 }

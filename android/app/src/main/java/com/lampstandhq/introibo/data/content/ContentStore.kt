@@ -222,8 +222,13 @@ object ContentStore {
         marianAntiphons = load("marian_antiphons.json") ?: emptyList()
         missal = load("missal.json") ?: emptyList()
         canonVariants = load("canon_variants.json") ?: emptyMap()
+        ordoNamesEn = load("ordo_names_en.json") ?: emptyMap()
 
         if (lang == VernacularLanguage.SPANISH) {
+            // Feast names: Spanish wins, missing keys keep their English.
+            load<Map<String, String>>("ordo_names_es.json")?.let { es ->
+                ordoNamesEn = ordoNamesEn + es
+            }
             load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
                 prayers = prayers.map { p ->
                     val o = es[p.slug] ?: return@map p
