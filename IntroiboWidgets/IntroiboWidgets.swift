@@ -129,9 +129,10 @@ struct PrayerProvider: TimelineProvider {
             let hour = hours.first { $0.slug == slug }
             return PrayerEntry(
                 date: date,
-                label: "Divine Office",
+                label: WidgetConfigStore.chrome("widget.label.office", "Divine Office"),
                 title: hour?.name ?? "Divine Office",
-                subtitle: hour?.eng ?? "Tap to pray",
+                subtitle: hour.map { WidgetConfigStore.chrome("hour.\($0.slug)", $0.eng) }
+                    ?? WidgetConfigStore.chrome("widget.tap_to_pray", "Tap to pray"),
                 mode: .office
             )
         case .prayer:
@@ -140,7 +141,7 @@ struct PrayerProvider: TimelineProvider {
             let display = WidgetContent.prayerDisplay(slug: slug)
             return PrayerEntry(
                 date: date,
-                label: slot.label,
+                label: WidgetConfigStore.chrome("widget.label.\(slot.rawValue)", slot.label),
                 title: display.title,
                 subtitle: display.eng,
                 mode: .prayer
@@ -445,7 +446,7 @@ struct DailyReadingWidgetView: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
                 Spacer(minLength: 0)
-                Text(choice.label.uppercased())
+                Text(WidgetConfigStore.chrome("widget.reading.\(choice.rawValue)", choice.label).uppercased())
                     .font(.system(size: 8, weight: .semibold, design: .serif))
                     .tracking(1.4)
                     .foregroundStyle(Color.wGold)
@@ -540,7 +541,7 @@ var stalePrompt: some View {
             .foregroundStyle(Color.wRed)
         OrnamentRule()
             .frame(width: 84)
-        Text("Open the app to refresh today's liturgy.")
+        Text(WidgetConfigStore.chrome("widget.stale", "Open the app to refresh today's liturgy."))
             .font(.system(size: 12, design: .serif))
             .italic()
             .foregroundStyle(Color.wInkSoft)

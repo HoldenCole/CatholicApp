@@ -53,6 +53,21 @@ enum WidgetConfigStore {
         UserDefaults(suiteName: appGroup) ?? .standard
     }
 
+    // MARK: - Localized widget chrome
+    //
+    // Written by the APP (WidgetSnapshotWriter.refresh) from the active
+    // vernacular; the extension cannot see the in-app language setting, so
+    // this map is its only channel. Empty for English. Missing keys fall
+    // back to the English literal at the call site — and the Latin parts of
+    // the widget (hour names, "Oratio", "INTROIBO") never pass through here.
+    static func setChrome(_ map: [String: String]) {
+        defaults.set(map, forKey: "widget.chrome")
+    }
+
+    static func chrome(_ key: String, _ en: String) -> String {
+        (defaults.dictionary(forKey: "widget.chrome") as? [String: String])?[key] ?? en
+    }
+
     // Slot boundaries as minutes since midnight. Defaults align with the
     // Office's own sense of the day: Laudes in the early morning, Sext at
     // midday, Vespers in the evening. Mirrors Android WidgetConfig.

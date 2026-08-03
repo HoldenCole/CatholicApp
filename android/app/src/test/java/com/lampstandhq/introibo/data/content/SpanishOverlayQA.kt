@@ -67,6 +67,7 @@ class SpanishOverlayQA {
         for (name in listOf(
             "prayers_es.json", "marian_antiphons_es.json", "hours_es.json",
             "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
+            "ui_strings_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -137,6 +138,12 @@ class SpanishOverlayQA {
             assertEquals("Domingo XXIII después de Pentecostés",
                 ContentStore.ordoNameEnglish("De Dominica XXIII post Pentecosten"))
 
+            // UI chrome resolves Spanish; unknown keys keep the English
+            // literal passed at the call site.
+            assertEquals("Hoy", ContentStore.uiString("calendar.today", "Today"))
+            assertEquals("Témporas", ContentStore.uiString("flag.ember_day", "Ember Day"))
+            assertEquals("Fallback", ContentStore.uiString("no.such.key", "Fallback"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -189,5 +196,6 @@ class SpanishOverlayQA {
             .second.startsWith("Communicating, and celebrating"))
         assertEquals("The Nativity of Our Lord",
             ContentStore.ordoNameEnglish("In Nativitate Domini"))
+        assertEquals("Today", ContentStore.uiString("calendar.today", "Today"))
     }
 }

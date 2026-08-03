@@ -9,7 +9,7 @@ struct OptionalPenanceSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Choose voluntary penances to observe today. These are not obligatory but are meritorious offerings to God.")
+                    Text(ContentStore.shared.uiString("penance.voluntary_sub", "Choose voluntary penances to observe today. These are not obligatory but are meritorious offerings to God."))
                         .font(.bodySm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
@@ -59,7 +59,7 @@ struct OptionalPenanceSheet: View {
             }
             .background(Color.pageBackground.ignoresSafeArea())
             .scrollContentBackground(.hidden)
-            .navigationTitle("Voluntary Penances")
+            .navigationTitle(ContentStore.shared.uiString("penance.voluntary", "Voluntary Penances"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

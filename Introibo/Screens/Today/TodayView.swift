@@ -145,19 +145,19 @@ struct TodayView: View {
             if ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay {
                 HStack(spacing: 12) {
                     if ctx.isFirstFriday {
-                        Text("First Friday")
+                        Text(ContentStore.shared.uiString("flag.first_friday", "First Friday"))
                             .font(.captionSm)
                             .italic()
                             .foregroundStyle(Color.sanctuaryRed)
                     }
                     if ctx.isFirstSaturday {
-                        Text("First Saturday")
+                        Text(ContentStore.shared.uiString("flag.first_saturday", "First Saturday"))
                             .font(.captionSm)
                             .italic()
                             .foregroundStyle(Color.sanctuaryRed)
                     }
                     if ctx.isEmberDay {
-                        Text("Ember Day")
+                        Text(ContentStore.shared.uiString("flag.ember_day", "Ember Day"))
                             .font(.captionSm)
                             .italic()
                             .foregroundStyle(Color.sanctuaryRed)
@@ -226,7 +226,7 @@ struct TodayView: View {
             Button { showCalendar = true } label: {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
-                        Text("VENTURA \u{00B7} UPCOMING")
+                        Text("VENTURA \u{00B7} " + ContentStore.shared.uiString("today.upcoming", "Upcoming").uppercased())
                             .font(.scaledSystem(10, weight: .semibold))
                             .tracking(2)
                             .foregroundStyle(Color.tertiaryText)
@@ -298,18 +298,18 @@ struct TodayView: View {
                     }
 
                     VStack(alignment: .leading, spacing: 3) {
-                        Text("Prayer Rule")
+                        Text(ContentStore.shared.uiString("today.prayer_rule", "Prayer Rule"))
                             .font(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
-                        Text(progress >= 1.0 ? "All prayers complete" : "\(done) of \(total) prayers today")
+                        Text(progress >= 1.0 ? ContentStore.shared.uiString("today.prayer_rule.done", "All prayers complete") : ContentStore.shared.uiString("today.prayer_rule.progress", "{done} of {total} prayers today").replacingOccurrences(of: "{done}", with: "\(done)").replacingOccurrences(of: "{total}", with: "\(total)"))
                             .font(.captionSm)
                             .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                     }
 
                     Spacer()
 
-                    Text("Open")
+                    Text(ContentStore.shared.uiString("common.open", "Open"))
                         .font(.captionSm)
                         .foregroundStyle(Color.sanctuaryRed)
                 }
@@ -487,7 +487,7 @@ struct TodayView: View {
             }
 
             Button { showPenanceSheet = true } label: {
-                Text(selected.isEmpty ? "Choose optional penances" : "Edit penances")
+                Text(selected.isEmpty ? ContentStore.shared.uiString("today.penance.choose", "Choose optional penances") : ContentStore.shared.uiString("today.penance.edit", "Edit penances"))
                     .font(.captionSm)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
@@ -505,22 +505,22 @@ struct TodayView: View {
 
     private var devotionsSection: some View {
         VStack(alignment: .leading, spacing: 14) {
-            sectionLabel("Devotiónes Hodiérnæ", subtitle: "Today's devotions")
+            sectionLabel("Devotiónes Hodiérnæ", subtitle: ContentStore.shared.uiString("today.devotions.sub", "Today's devotions"))
 
             NavigationLink(destination: OfficeView()) {
-                devotionRow("The Divine Office",
+                devotionRow(ContentStore.shared.uiString("today.devotion.office", "The Divine Office"),
                             latin: "Officium Divínum, VIII Horæ Canónicæ")
             }
             .buttonStyle(.plain)
 
             NavigationLink(destination: StationsView()) {
-                devotionRow("Stations of the Cross",
+                devotionRow(ContentStore.shared.uiString("today.devotion.stations", "Stations of the Cross"),
                             latin: "Via Crucis, XIV statiónes")
             }
             .buttonStyle(.plain)
 
             NavigationLink(destination: ConfessionView()) {
-                devotionRow("Confession Guide",
+                devotionRow(ContentStore.shared.uiString("today.devotion.confession", "Confession Guide"),
                             latin: "De Confessióne")
             }
             .buttonStyle(.plain)
@@ -576,7 +576,7 @@ struct TodayView: View {
     private var rosaryCard: some View {
         NavigationLink(destination: RosaryView()) {
             VStack(alignment: .leading, spacing: 8) {
-                sectionLabel("Sacratíssimum Rosárium", subtitle: "of the Rosary")
+                sectionLabel("Sacratíssimum Rosárium", subtitle: ContentStore.shared.uiString("today.rosary.sub", "of the Rosary"))
 
                 if langMode != .vernacular {
                     Text(ctx.mystery.latinName)
@@ -666,7 +666,7 @@ struct TodayView: View {
 
             Spacer()
 
-            Text("Open")
+            Text(ContentStore.shared.uiString("common.open", "Open"))
                 .font(.captionSm)
                 .foregroundStyle(Color.sanctuaryRed)
         }
@@ -681,7 +681,7 @@ struct TodayView: View {
             Text("✠")
                 .font(.titleL)
                 .foregroundStyle(Color.sanctuaryRed)
-            Text("Follow a Saint")
+            Text(ContentStore.shared.uiString("today.saints.follow", "Follow a Saint"))
                 .font(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
@@ -690,7 +690,7 @@ struct TodayView: View {
                 .italic()
                 .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
-            Text("Begin")
+            Text(ContentStore.shared.uiString("today.saints.begin", "Begin"))
                 .smallLabel(color: Color.sanctuaryRed)
                 .padding(.top, 4)
         }
@@ -706,7 +706,7 @@ struct TodayView: View {
         NavigationLink(destination: LearnView()) {
             VStack(alignment: .leading, spacing: 8) {
                 let mastered = UserProgress.masteredLessons()
-                sectionLabel("Schola", subtitle: "Latin learning")
+                sectionLabel("Schola", subtitle: ContentStore.shared.uiString("today.schola.sub", "Latin learning"))
                 Text("Mastered: \(mastered.count) of \(ContentStore.shared.courses.count) lessons")
                     .font(.bodySm)
                     .foregroundStyle(Color.secondaryText)

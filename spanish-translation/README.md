@@ -7,8 +7,15 @@ the `*_es.json` files at load (English fallback wherever a field is absent).
 `scripts/sync_spanish_assets.py` copies this folder's content files into
 both asset directories — edit HERE, then sync; the Android suite
 (`SpanishOverlayQA`) fails if the copies drift or misalign.
-`ui_strings_es.json` remains staged: the UI chrome is hardcoded English on
-both platforms and localizing it is its own pass.
+`ui_strings_es.json` is WIRED: `ContentStore.uiString(key, en)` resolves
+UI chrome on both platforms (English literal fallback per call site), and
+the iOS widget extension — which cannot see the in-app setting — reads a
+chrome map the app writes to the App Group on every snapshot refresh.
+The invariant throughout: only the ENGLISH half of a dual
+"Latin · English" label passes through the lookup; every Latin label
+(tab names, section headers' Latin halves, hour names, "Oratio",
+"Psalmus Hodiernus"…) is a literal in code and identical in every
+vernacular.
 
 ## Method (three tiers)
 

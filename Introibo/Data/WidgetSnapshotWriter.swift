@@ -22,6 +22,28 @@ enum WidgetSnapshotWriter {
         let langRaw = UserDefaults.standard.string(forKey: SettingsKey.language) ?? ""
         let lang = LanguageMode(rawValue: langRaw) ?? .both
 
+        // Localized widget chrome for the extension (its only channel to the
+        // in-app vernacular setting). Hour vernacular names ride along so the
+        // office widget's subtitle follows the language; the Latin names do
+        // not pass through here and stay Latin in every vernacular.
+        if VernacularLanguage.current() == .spanish {
+            var chrome: [String: String] = [:]
+            for key in ["widget.label.office", "widget.label.morning",
+                        "widget.label.midday", "widget.label.evening",
+                        "widget.tap_to_pray", "widget.stale",
+                        "widget.reading.introit", "widget.reading.collect",
+                        "widget.reading.epistle", "widget.reading.gospel"] {
+                let es = store.uiString(key, "")
+                if !es.isEmpty { chrome[key] = es }
+            }
+            for hour in store.hours {
+                chrome["hour.\(hour.slug)"] = hour.eng
+            }
+            WidgetConfigStore.setChrome(chrome)
+        } else {
+            WidgetConfigStore.setChrome([:])
+        }
+
         let cal = Calendar.liturgical
         var out: [WidgetDaySnapshot] = []
         out.reserveCapacity(windowDays)

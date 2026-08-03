@@ -203,6 +203,16 @@ object ContentStore {
 
     private var appliedVernacular: VernacularLanguage = VernacularLanguage.ENGLISH
 
+    // UI-chrome strings for the active vernacular; empty when English.
+    // ONLY the English half of a dual "Latin · English" label ever goes
+    // through here — the Latin half is a literal at the call site and is
+    // identical in every vernacular. (Screens recompose on language change
+    // via the key(vernacular) wrapper in MainActivity.)
+    private var uiStringsES: Map<String, String> = emptyMap()
+
+    /** The vernacular form of a piece of UI chrome; [en] when not covered. */
+    fun uiString(key: String, en: String): String = uiStringsES[key] ?: en
+
     /** The vernacular whose overlay is currently applied to the store. */
     val currentVernacular: VernacularLanguage get() = appliedVernacular
 
@@ -224,11 +234,15 @@ object ContentStore {
         canonVariants = load("canon_variants.json") ?: emptyMap()
         ordoNamesEn = load("ordo_names_en.json") ?: emptyMap()
 
+        uiStringsES = emptyMap()
+
         if (lang == VernacularLanguage.SPANISH) {
             // Feast names: Spanish wins, missing keys keep their English.
             load<Map<String, String>>("ordo_names_es.json")?.let { es ->
                 ordoNamesEn = ordoNamesEn + es
             }
+            uiStringsES = (load<Map<String, String>>("ui_strings_es.json") ?: emptyMap())
+                .filterKeys { !it.startsWith("_") }
             load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
                 prayers = prayers.map { p ->
                     val o = es[p.slug] ?: return@map p

@@ -2,11 +2,8 @@
 """Bundle the Spanish content overlay into both app asset directories.
 
 Runs the alignment validator first (a misaligned overlay must never ship),
-then copies the three CONTENT files byte-identically into
+then copies the Spanish files byte-identically into
 Introibo/Resources/ and android/app/src/main/assets/.
-
-ui_strings_es.json stays in staging: the UI chrome is hardcoded English on
-both platforms and localizing it is a separate pass.
 """
 
 import shutil
@@ -27,6 +24,7 @@ FILES = [
     "missal_es.json",
     "canon_variants_es.json",
     "ordo_names_es.json",
+    "ui_strings_es.json",
 ]
 
 

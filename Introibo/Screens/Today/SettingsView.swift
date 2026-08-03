@@ -35,7 +35,7 @@ struct SettingsView: View {
             .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden)
             .background(Color.pageBackground.ignoresSafeArea())
-            .navigationTitle("Settings")
+            .navigationTitle(ContentStore.shared.uiString("settings.title", "Settings"))
             .navigationBarTitleDisplayMode(.inline)
             // The widget snapshot bakes in the rite and language — rebuild it
             // the moment either changes so the widgets follow immediately.
@@ -43,6 +43,9 @@ struct SettingsView: View {
                 DispatchQueue.global(qos: .utility).async { WidgetSnapshotWriter.refresh() }
             }
             .onChange(of: languageRaw) { _, _ in
+                DispatchQueue.global(qos: .utility).async { WidgetSnapshotWriter.refresh() }
+            }
+            .onChange(of: vernacularRaw) { _, _ in
                 DispatchQueue.global(qos: .utility).async { WidgetSnapshotWriter.refresh() }
             }
             .toolbar {
@@ -73,9 +76,9 @@ struct SettingsView: View {
                 .listRowBackground(Color.pageBackground)
             }
         } header: {
-            Text("Ritus · Missal Rite")
+            Text("Ritus · " + ContentStore.shared.uiString("settings.header.rite", "Missal Rite"))
         } footer: {
-            Text("Controls the rubrics displayed in the Missal. Most traditional parishes use the 1962 Missal.")
+            Text(ContentStore.shared.uiString("settings.rite.footer", "Controls the rubrics displayed in the Missal. Most traditional parishes use the 1962 Missal."))
         }
     }
 
@@ -85,9 +88,9 @@ struct SettingsView: View {
         Section {
             Toggle(isOn: $showLeoninePrayers) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Leonine Prayers")
+                    Text(ContentStore.shared.uiString("settings.leonine.row", "Leonine Prayers"))
                         .foregroundStyle(Color.primaryText)
-                    Text("Prayers after Low Mass (Leo XIII, 1884)")
+                    Text(ContentStore.shared.uiString("settings.leonine.sub", "Prayers after Low Mass (Leo XIII, 1884)"))
                         .font(.caption)
                         .foregroundStyle(Color.secondaryText)
                 }
@@ -95,9 +98,9 @@ struct SettingsView: View {
             .tint(Color.sanctuaryRed)
             .listRowBackground(Color.pageBackground)
         } header: {
-            Text("Preces Leoninae · Leonine Prayers")
+            Text("Preces Leoninae · " + ContentStore.shared.uiString("settings.header.leonine", "Leonine Prayers"))
         } footer: {
-            Text("The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice.")
+            Text(ContentStore.shared.uiString("settings.leonine.footer", "The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice."))
         }
     }
 
@@ -107,9 +110,9 @@ struct SettingsView: View {
         Section {
             Toggle(isOn: $showUpcomingFeasts) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Show Upcoming Feasts on Home")
+                    Text(ContentStore.shared.uiString("settings.home.upcoming", "Show Upcoming Feasts on Home"))
                         .foregroundStyle(Color.primaryText)
-                    Text("The next fortnight's feasts, vigils, and Ember days")
+                    Text(ContentStore.shared.uiString("settings.home.upcoming_sub", "The next fortnight's feasts, vigils, and Ember days"))
                         .font(.caption)
                         .foregroundStyle(Color.secondaryText)
                 }
@@ -117,9 +120,9 @@ struct SettingsView: View {
             .tint(Color.sanctuaryRed)
             .listRowBackground(Color.pageBackground)
         } header: {
-            Text("Hodie · Home Screen")
+            Text("Hodie · " + ContentStore.shared.uiString("settings.header.home", "Home Screen"))
         } footer: {
-            Text("The full list always remains available on the Calendar.")
+            Text(ContentStore.shared.uiString("settings.home.footer", "The full list always remains available on the Calendar."))
         }
     }
 
@@ -142,9 +145,9 @@ struct SettingsView: View {
                 .listRowBackground(Color.pageBackground)
             }
         } header: {
-            Text("Paenitentia · Penance Discipline")
+            Text("Paenitentia · " + ContentStore.shared.uiString("settings.header.penance", "Penance Discipline"))
         } footer: {
-            Text("Determines which fasting and abstinence obligations appear on the Today screen.")
+            Text(ContentStore.shared.uiString("settings.penance.footer", "Determines which fasting and abstinence obligations appear on the Today screen."))
         }
     }
 
@@ -167,9 +170,9 @@ struct SettingsView: View {
                 .listRowBackground(Color.pageBackground)
             }
         } header: {
-            Text("Lingua · Language")
+            Text("Lingua · " + ContentStore.shared.uiString("settings.header.language", "Language"))
         } footer: {
-            Text("Choose which text to display in prayers, the Missal, and the Divine Office.")
+            Text(ContentStore.shared.uiString("settings.language.footer", "Choose which text to display in prayers, the Missal, and the Divine Office."))
         }
     }
 
@@ -196,9 +199,9 @@ struct SettingsView: View {
                 .listRowBackground(Color.pageBackground)
             }
         } header: {
-            Text("Sermo Vulgáris · Vernacular")
+            Text("Sermo Vulgáris · " + ContentStore.shared.uiString("settings.header.vernacular", "Vernacular"))
         } footer: {
-            Text("Español covers the prayers, the Marian antiphons, the complete Ordinary of the Mass, the feast names of the calendar, and the Office hour introductions; the Mass propers and Office texts fall back to English while translation continues.")
+            Text(ContentStore.shared.uiString("settings.vernacular.footer", "Español covers the prayers, the Marian antiphons, the complete Ordinary of the Mass, the feast names of the calendar, and the Office hour introductions; the Mass propers and Office texts fall back to English while translation continues."))
         }
     }
 
@@ -221,9 +224,9 @@ struct SettingsView: View {
                 .listRowBackground(Color.pageBackground)
             }
         } header: {
-            Text("Apparitus · Appearance")
+            Text("Apparitus · " + ContentStore.shared.uiString("settings.header.appearance", "Appearance"))
         } footer: {
-            Text("Parchment: warm vellum background. Clean White: modern white with walnut tab bar. Dark: deep walnut for low light.")
+            Text(ContentStore.shared.uiString("settings.appearance.footer", "Parchment: warm vellum background. Clean White: modern white with walnut tab bar. Dark: deep walnut for low light."))
         }
     }
 
@@ -282,9 +285,9 @@ struct SettingsView: View {
             }
             .listRowBackground(Color.pageBackground)
         } header: {
-            Text("Littera · Text Size")
+            Text("Littera · " + ContentStore.shared.uiString("settings.header.text_size", "Text Size"))
         } footer: {
-            Text("Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility.")
+            Text(ContentStore.shared.uiString("settings.text_size.footer", "Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility."))
         }
     }
 
@@ -358,9 +361,9 @@ struct SettingsView: View {
             }
             .listRowBackground(Color.pageBackground)
         } header: {
-            Text("Opinor · Feedback")
+            Text("Opinor · " + ContentStore.shared.uiString("settings.header.feedback", "Feedback"))
         } footer: {
-            Text("Report issues, suggest features, or share your experience.")
+            Text(ContentStore.shared.uiString("settings.feedback.footer", "Report issues, suggest features, or share your experience."))
         }
     }
 

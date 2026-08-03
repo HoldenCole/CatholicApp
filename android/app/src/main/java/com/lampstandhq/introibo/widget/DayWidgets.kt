@@ -200,13 +200,13 @@ class IntroiboReadingWidgetProvider : DayScopedWidgetProvider() {
         val label: String
         if (proper != null) {
             when (choice) {
-                "collect" -> { body = if (latin) proper.collect.lat else proper.collect.eng; ref = null; label = "Collect" }
-                "epistle" -> { body = if (latin) proper.epistle.lat else proper.epistle.eng; ref = proper.epistle.ref; label = "Epistle" }
-                "gospel" -> { body = if (latin) proper.gospel.lat else proper.gospel.eng; ref = proper.gospel.ref; label = "Gospel" }
-                else -> { body = if (latin) proper.introit.lat else proper.introit.eng; ref = proper.introit.ref; label = "Introit" }
+                "collect" -> { body = if (latin) proper.collect.lat else proper.collect.eng; ref = null; label = ContentStore.uiString("widget.reading.collect", "Collect") }
+                "epistle" -> { body = if (latin) proper.epistle.lat else proper.epistle.eng; ref = proper.epistle.ref; label = ContentStore.uiString("widget.reading.epistle", "Epistle") }
+                "gospel" -> { body = if (latin) proper.gospel.lat else proper.gospel.eng; ref = proper.gospel.ref; label = ContentStore.uiString("widget.reading.gospel", "Gospel") }
+                else -> { body = if (latin) proper.introit.lat else proper.introit.eng; ref = proper.introit.ref; label = ContentStore.uiString("widget.reading.introit", "Introit") }
             }
         } else {
-            body = context.getString(R.string.widget_tap_to_pray)
+            body = ContentStore.uiString("widget.tap_to_pray", context.getString(R.string.widget_tap_to_pray))
             ref = null
             label = "Missa"
         }

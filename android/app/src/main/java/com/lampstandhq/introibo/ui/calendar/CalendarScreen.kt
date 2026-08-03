@@ -165,7 +165,7 @@ fun CalendarScreen(
             Spacer(Modifier.width(8.dp))
             if (!isCurrentMonth) {
                 Text(
-                    text = "Today",
+                    text = ContentStore.uiString("calendar.today", "Today"),
                     style = type.captionSm,
                     color = colors.sanctuaryRed,
                     modifier = Modifier
@@ -190,7 +190,7 @@ fun CalendarScreen(
                 Spacer(Modifier.weight(1f))
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "$year", style = type.titleM, color = colors.primaryText)
-                    Text(text = "The Liturgical Year", style = type.captionSm, color = colors.tertiaryText)
+                    Text(text = ContentStore.uiString("calendar.year_overview", "The Liturgical Year"), style = type.captionSm, color = colors.tertiaryText)
                 }
                 Spacer(Modifier.weight(1f))
                 NavGlyph("›", year < yearRange.last) { year += 1 }
@@ -364,7 +364,7 @@ private fun DayRow(day: CalendarDay, mode: LanguageMode, onClick: () -> Unit) {
             }
             if (mode != LanguageMode.VERNACULAR) {
                 Text(
-                    text = day.label ?: "Feria",
+                    text = day.label ?: ContentStore.uiString("calendar.feria", "Feria"),
                     style = type.body,
                     fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
                     color = colors.primaryText,
@@ -471,14 +471,14 @@ private fun DayDetail(
                 }
                 DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
                     DropdownMenuItem(
-                        text = { Text("Share as PDF") },
+                        text = { Text(ContentStore.uiString("share.pdf", "Share as PDF")) },
                         onClick = {
                             showMenu = false
                             val flags = mutableListOf<String>()
-                            if (ctx.isFirstFriday) flags.add("First Friday")
-                            if (ctx.isFirstSaturday) flags.add("First Saturday")
-                            if (ctx.isEmberDay) flags.add("Ember Day")
-                            if (day.isSunday) flags.add("Sunday Obligation")
+                            if (ctx.isFirstFriday) flags.add(ContentStore.uiString("flag.first_friday", "First Friday"))
+                            if (ctx.isFirstSaturday) flags.add(ContentStore.uiString("flag.first_saturday", "First Saturday"))
+                            if (ctx.isEmberDay) flags.add(ContentStore.uiString("flag.ember_day", "Ember Day"))
+                            if (day.isSunday) flags.add(ContentStore.uiString("flag.sunday_obligation", "Sunday Obligation"))
                             val html = com.lampstandhq.introibo.export.MassHTMLExporter.calendarDayHTML(
                                 latinTitle = title, englishTitle = day.englishName,
                                 longDate = LongDateFormatter.format(day.date),
@@ -493,7 +493,7 @@ private fun DayDetail(
                         },
                     )
                     DropdownMenuItem(
-                        text = { Text("Share as Text") },
+                        text = { Text(ContentStore.uiString("share.text", "Share as Text")) },
                         onClick = {
                             showMenu = false
                             val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
@@ -507,25 +507,25 @@ private fun DayDetail(
         }
 
         day.colour?.let { colour ->
-            InfoRow("Liturgical Colour", colour.key.replaceFirstChar { it.uppercase() }, colour)
+            InfoRow(ContentStore.uiString("calendar.colour", "Liturgical Colour"), colour.key.replaceFirstChar { it.uppercase() }, colour)
             Spacer(Modifier.height(16.dp))
         }
-        InfoRow("Season", ctx.englishName)
+        InfoRow(ContentStore.uiString("calendar.season_label", "Season"), ctx.englishName)
 
         if (ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay ||
             day.isVigil || day.isOctaveDay
         ) {
             Spacer(Modifier.height(16.dp))
-            if (ctx.isFirstFriday) Flag("First Friday")
-            if (ctx.isFirstSaturday) Flag("First Saturday")
-            if (ctx.isEmberDay) Flag("Ember Day")
-            if (day.isVigil) Flag("Vigil")
-            if (day.isOctaveDay) Flag("Within an Octave")
+            if (ctx.isFirstFriday) Flag(ContentStore.uiString("flag.first_friday", "First Friday"))
+            if (ctx.isFirstSaturday) Flag(ContentStore.uiString("flag.first_saturday", "First Saturday"))
+            if (ctx.isEmberDay) Flag(ContentStore.uiString("flag.ember_day", "Ember Day"))
+            if (day.isVigil) Flag(ContentStore.uiString("flag.vigil", "Vigil"))
+            if (day.isOctaveDay) Flag(ContentStore.uiString("flag.octave", "Within an Octave"))
         }
 
         if (day.isSunday) {
             Spacer(Modifier.height(16.dp))
-            Flag("Sunday Obligation")
+            Flag(ContentStore.uiString("flag.sunday_obligation", "Sunday Obligation"))
         }
 
         // Penance / fasting card
@@ -546,7 +546,7 @@ private fun DayDetail(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "FASTING & ABSTINENCE",
+                    text = ContentStore.uiString("penance.fast_abstinence", "Fasting & Abstinence").uppercase(),
                     fontSize = 10.sp,
                     letterSpacing = 1.5.sp,
                     color = colors.tertiaryText,
@@ -593,7 +593,7 @@ private fun DayDetail(
             ) {
                 Icon(Icons.Filled.MenuBook, null, tint = colors.sanctuaryRed, modifier = Modifier.size(16.dp))
                 Spacer(Modifier.width(10.dp))
-                Text("View the Mass", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
+                Text(ContentStore.uiString("calendar.view_mass", "View the Mass"), style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
                 Spacer(Modifier.weight(1f))
                 Text("›", color = colors.tertiaryText, fontSize = 16.sp)
             }
@@ -813,7 +813,7 @@ private fun MoveableFeastMenu(year: Int, rite: MissalRite, onJump: (java.time.Lo
         DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             feasts.forEach { (label, date) ->
                 DropdownMenuItem(
-                    text = { Text("$label · ${date.format(fmt)}") },
+                    text = { Text(ContentStore.uiString("calendar.moveable." + label.lowercase().replace(" ", "_"), label) + " · ${date.format(fmt)}") },
                     onClick = {
                         open = false
                         onJump(date)
@@ -894,7 +894,7 @@ private fun YearOverview(
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
-                            text = seg.label.uppercase(),
+                            text = ContentStore.uiString("calendar.season." + seg.label.lowercase().replace(" ", "_"), seg.label).uppercase(),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                             letterSpacing = 2.sp,
@@ -903,7 +903,7 @@ private fun YearOverview(
                         Spacer(Modifier.weight(1f))
                         if (isCurrent) {
                             Text(
-                                text = "YOU ARE HERE",
+                                text = ContentStore.uiString("calendar.you_are_here", "You are here").uppercase(),
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 letterSpacing = 1.5.sp,
@@ -916,7 +916,7 @@ private fun YearOverview(
                             Spacer(Modifier.width(6.dp))
                         }
                         Text(
-                            text = "${seg.dayCount} days",
+                            text = "${seg.dayCount} " + ContentStore.uiString("calendar.days", "days"),
                             fontSize = 10.sp,
                             color = colors.tertiaryText,
                         )

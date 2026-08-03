@@ -103,12 +103,12 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
                     val hour = hours.firstOrNull { it.slug == slug }
                     views.setTextViewText(
                         R.id.widget_label,
-                        context.getString(R.string.widget_label_office),
+                        ContentStore.uiString("widget.label.office", context.getString(R.string.widget_label_office)),
                     )
                     views.setTextViewText(R.id.widget_title, hour?.name ?: "Divine Office")
                     views.setTextViewText(
                         R.id.widget_subtitle,
-                        hour?.eng ?: context.getString(R.string.widget_tap_to_pray),
+                        hour?.eng ?: ContentStore.uiString("widget.tap_to_pray", context.getString(R.string.widget_tap_to_pray)),
                     )
                 }
                 WidgetMode.PRAYER -> {
@@ -117,21 +117,19 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
                     val prayer = ContentStore.prayers.firstOrNull { it.slug == slug }
                     views.setTextViewText(
                         R.id.widget_label,
-                        context.getString(
-                            when (slot) {
-                                WidgetSlot.MORNING ->
-                                    R.string.widget_label_morning
-                                WidgetSlot.MIDDAY ->
-                                    R.string.widget_label_midday
-                                WidgetSlot.EVENING ->
-                                    R.string.widget_label_evening
-                            },
-                        ),
+                        when (slot) {
+                            WidgetSlot.MORNING -> ContentStore.uiString(
+                                "widget.label.morning", context.getString(R.string.widget_label_morning))
+                            WidgetSlot.MIDDAY -> ContentStore.uiString(
+                                "widget.label.midday", context.getString(R.string.widget_label_midday))
+                            WidgetSlot.EVENING -> ContentStore.uiString(
+                                "widget.label.evening", context.getString(R.string.widget_label_evening))
+                        },
                     )
                     views.setTextViewText(R.id.widget_title, prayer?.title ?: "Oratio")
                     views.setTextViewText(
                         R.id.widget_subtitle,
-                        prayer?.eng ?: context.getString(R.string.widget_tap_to_pray),
+                        prayer?.eng ?: ContentStore.uiString("widget.tap_to_pray", context.getString(R.string.widget_tap_to_pray)),
                     )
                 }
             }

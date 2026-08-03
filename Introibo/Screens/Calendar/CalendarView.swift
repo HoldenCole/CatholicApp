@@ -112,7 +112,7 @@ struct CalendarView: View {
             viewModePicker
             if !isCurrentMonth {
                 Button { jumpToToday() } label: {
-                    Text("Today")
+                    Text(ContentStore.shared.uiString("calendar.today", "Today"))
                         .font(.captionSm)
                         .foregroundStyle(Color.sanctuaryRed)
                 }
@@ -164,7 +164,7 @@ struct CalendarView: View {
                         withAnimation(.easeInOut(duration: 0.2)) { viewMode = .list }
                     }
                 } label: {
-                    Text("\(feast.label) \u{00B7} \(Self.shortDate.string(from: feast.date))")
+                    Text(ContentStore.shared.uiString("calendar.moveable." + feast.label.lowercased().replacingOccurrences(of: " ", with: "_"), feast.label) + " \u{00B7} " + Self.shortDate.string(from: feast.date))
                 }
             }
         } label: {
@@ -192,7 +192,7 @@ struct CalendarView: View {
                 Text(String(year))
                     .font(.titleM)
                     .foregroundStyle(Color.primaryText)
-                Text("The Liturgical Year")
+                Text(ContentStore.shared.uiString("calendar.year_overview", "The Liturgical Year"))
                     .font(.captionSm)
                     .foregroundStyle(Color.tertiaryText)
             }
@@ -445,13 +445,13 @@ private struct YearOverview: View {
                     .frame(maxHeight: .infinity)
                 VStack(alignment: .leading, spacing: 6) {
                     HStack {
-                        Text(seg.label.uppercased())
+                        Text(ContentStore.shared.uiString("calendar.season." + seg.label.lowercased().replacingOccurrences(of: " ", with: "_"), seg.label).uppercased())
                             .font(.scaledSystem(11, weight: .semibold))
                             .tracking(2)
                             .foregroundStyle(tint)
                         Spacer()
                         if isCurrent {
-                            Text("YOU ARE HERE")
+                            Text(ContentStore.shared.uiString("calendar.you_are_here", "You are here").uppercased())
                                 .font(.scaledSystem(9, weight: .semibold))
                                 .tracking(1.5)
                                 .foregroundStyle(Color.parchment)
@@ -459,7 +459,7 @@ private struct YearOverview: View {
                                 .padding(.vertical, 3)
                                 .background(Capsule().fill(Color.sanctuaryRed))
                         }
-                        Text("\(seg.dayCount) days")
+                        Text("\(seg.dayCount) " + ContentStore.shared.uiString("calendar.days", "days"))
                             .font(.scaledSystem(10))
                             .foregroundStyle(Color.tertiaryText)
                     }
@@ -605,7 +605,7 @@ private struct DayRow: View {
                     }
 
                     if mode != .vernacular {
-                        Text(day.label ?? "Feria")
+                        Text(day.label ?? ContentStore.shared.uiString("calendar.feria", "Feria"))
                             .font(.body)
                             .fontWeight(day.isMajor ? .semibold : .regular)
                             .foregroundStyle(Color.primaryText)
@@ -695,10 +695,10 @@ private struct DayDetailView: View {
 
     private func sharePDF() {
         var flags: [String] = []
-        if ctx.isFirstFriday { flags.append("First Friday") }
-        if ctx.isFirstSaturday { flags.append("First Saturday") }
-        if ctx.isEmberDay { flags.append("Ember Day") }
-        if day.isSunday { flags.append("Sunday Obligation") }
+        if ctx.isFirstFriday { flags.append(ContentStore.shared.uiString("flag.first_friday", "First Friday")) }
+        if ctx.isFirstSaturday { flags.append(ContentStore.shared.uiString("flag.first_saturday", "First Saturday")) }
+        if ctx.isEmberDay { flags.append(ContentStore.shared.uiString("flag.ember_day", "Ember Day")) }
+        if day.isSunday { flags.append(ContentStore.shared.uiString("flag.sunday_obligation", "Sunday Obligation")) }
 
         let colourHex: String? = day.colour.map {
             switch $0 {
@@ -745,10 +745,10 @@ private struct DayDetailView: View {
                 Spacer()
                 Menu {
                     Button { sharePDF() } label: {
-                        Label("Share as PDF", systemImage: "doc.richtext")
+                        Label(ContentStore.shared.uiString("share.pdf", "Share as PDF"), systemImage: "doc.richtext")
                     }
                     ShareLink(item: shareText) {
-                        Label("Share as Text", systemImage: "doc.plaintext")
+                        Label(ContentStore.shared.uiString("share.text", "Share as Text"), systemImage: "doc.plaintext")
                     }
                 } label: {
                     Image(systemName: "square.and.arrow.up")
@@ -801,23 +801,23 @@ private struct DayDetailView: View {
     private var detail: some View {
         VStack(alignment: .leading, spacing: 18) {
             if let colour = day.colour {
-                infoRow(label: "Liturgical Colour", value: colour.rawValue.capitalized, swatch: colour)
+                infoRow(label: ContentStore.shared.uiString("calendar.colour", "Liturgical Colour"), value: colour.rawValue.capitalized, swatch: colour)
             }
-            infoRow(label: "Season", value: langMode == .latinOnly ? ctx.latinName : ctx.englishName)
+            infoRow(label: ContentStore.shared.uiString("calendar.season_label", "Season"), value: langMode == .latinOnly ? ctx.latinName : ctx.englishName)
 
             if ctx.isFirstFriday || ctx.isFirstSaturday || ctx.isEmberDay
                 || day.isVigil || day.isOctaveDay {
                 VStack(alignment: .leading, spacing: 6) {
-                    if ctx.isFirstFriday { flag("First Friday") }
-                    if ctx.isFirstSaturday { flag("First Saturday") }
-                    if ctx.isEmberDay { flag("Ember Day") }
-                    if day.isVigil { flag("Vigil") }
-                    if day.isOctaveDay { flag("Within an Octave") }
+                    if ctx.isFirstFriday { flag(ContentStore.shared.uiString("flag.first_friday", "First Friday")) }
+                    if ctx.isFirstSaturday { flag(ContentStore.shared.uiString("flag.first_saturday", "First Saturday")) }
+                    if ctx.isEmberDay { flag(ContentStore.shared.uiString("flag.ember_day", "Ember Day")) }
+                    if day.isVigil { flag(ContentStore.shared.uiString("flag.vigil", "Vigil")) }
+                    if day.isOctaveDay { flag(ContentStore.shared.uiString("flag.octave", "Within an Octave")) }
                 }
             }
 
             if day.isSunday {
-                flag("Sunday Obligation")
+                flag(ContentStore.shared.uiString("flag.sunday_obligation", "Sunday Obligation"))
             }
 
             // Penance / fasting section
@@ -829,7 +829,7 @@ private struct DayDetailView: View {
                         Image(systemName: "book.closed")
                             .font(.scaledSystem(14))
                             .foregroundStyle(Color.sanctuaryRed)
-                        Text("View the Mass")
+                        Text(ContentStore.shared.uiString("calendar.view_mass", "View the Mass"))
                             .font(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
@@ -876,7 +876,7 @@ private struct DayDetailView: View {
     private var penanceSection: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
-                Text("FASTING & ABSTINENCE")
+                Text(ContentStore.shared.uiString("penance.fast_abstinence", "Fasting & Abstinence").uppercased())
                     .font(.scaledSystem(10))
                     .tracking(1.5)
                     .foregroundStyle(Color.tertiaryText)

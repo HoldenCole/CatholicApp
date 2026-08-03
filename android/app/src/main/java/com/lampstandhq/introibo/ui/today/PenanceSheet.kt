@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.penance.OptionalPenances
 import com.lampstandhq.introibo.storage.settings.LanguageMode
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
+import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 
@@ -71,7 +72,7 @@ fun PenanceSheet(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "Voluntary Penances",
+                    text = ContentStore.uiString("penance.voluntary", "Voluntary Penances"),
                     style = type.titleM,
                     color = colors.primaryText,
                 )
@@ -88,7 +89,7 @@ fun PenanceSheet(
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 Text(
-                    text = "Choose voluntary penances to observe today. These are not obligatory but are meritorious offerings to God.",
+                    text = ContentStore.uiString("penance.voluntary_sub", "Choose voluntary penances to observe today. These are not obligatory but are meritorious offerings to God."),
                     style = type.bodySm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                     lineHeight = type.bodySm.fontSize * 1.2f,

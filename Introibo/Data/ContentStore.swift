@@ -98,6 +98,18 @@ final class ContentStore {
 
     // MARK: - Vernacular (Spanish overlay)
 
+    /// UI-chrome strings for the active vernacular; empty when English.
+    /// Views resolve chrome through `uiString` so @Observable re-renders
+    /// them when the map swaps. ONLY the English half of a dual
+    /// "Latin · English" label ever goes through here — the Latin half is
+    /// a literal at the call site and is identical in every vernacular.
+    private(set) var uiStringsES: [String: String] = [:]
+
+    /// The vernacular form of a piece of UI chrome; `en` when not covered.
+    func uiString(_ key: String, _ en: String) -> String {
+        uiStringsES[key] ?? en
+    }
+
     // Overlay schemas — spanish-translation/*.json, bundled as *_es.json.
     // Each keys the source file's slug to Spanish replacements; anything
     // absent (or misaligned) keeps the English, so partial coverage is safe.
@@ -152,11 +164,16 @@ final class ContentStore {
             canonVariants   = load("canon_variants",   as: [String: [String: [String: String]]].self) ?? [:]
             ordoNamesEn     = load("ordo_names_en",    as: [String: String].self) ?? [:]
         }
-        guard lang == .spanish else { return }
+        guard lang == .spanish else {
+            uiStringsES = [:]
+            return
+        }
         // Feast names: Spanish wins, missing keys keep their English.
         if let es = load("ordo_names_es", as: [String: String].self) {
             ordoNamesEn.merge(es) { _, spanish in spanish }
         }
+        uiStringsES = (load("ui_strings_es", as: [String: String].self) ?? [:])
+            .filter { !$0.key.hasPrefix("_") }
 
         if let es = load("prayers_es", as: [String: PrayerES].self) {
             prayers = prayers.map { p in

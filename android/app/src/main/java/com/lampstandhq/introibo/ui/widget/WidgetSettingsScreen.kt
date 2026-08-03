@@ -91,7 +91,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
                 )
             }
             Text(
-                text = "Home Screen Widget",
+                text = ContentStore.uiString("settings.widget", "Home Screen Widget"),
                 style = type.titleM.copy(fontStyle = FontStyle.Italic),
                 color = colors.primaryText,
                 textAlign = TextAlign.Center,
@@ -183,8 +183,8 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             }
             item {
                 ModeRow(
-                    title = "Divine Office",
-                    subtitle = "The canonical hour for the current time",
+                    title = ContentStore.uiString("widget.settings.mode_office", "Divine Office"),
+                    subtitle = ContentStore.uiString("widget.settings.mode_office_sub", "The canonical hour for the current time"),
                     selected = mode == WidgetMode.OFFICE,
                 ) {
                     mode = WidgetMode.OFFICE
@@ -194,7 +194,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             }
             item {
                 ModeRow(
-                    title = "Chosen prayers",
+                    title = ContentStore.uiString("widget.settings.mode_prayer", "Chosen prayers"),
                     subtitle = "Your own prayer for morning, midday, and evening",
                     selected = mode == WidgetMode.PRAYER,
                 ) {
@@ -214,17 +214,17 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             }
             item {
                 Text(
-                    text = "The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget always shows the liturgical day.",
+                    text = ContentStore.uiString("widget.settings.reading_sub", "The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget always shows the liturgical day."),
                     style = type.bodySm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                     modifier = Modifier.padding(bottom = 4.dp),
                 )
             }
             val readingChoices = listOf(
-                "introit" to "Introit",
-                "collect" to "Collect",
-                "epistle" to "Epistle",
-                "gospel" to "Gospel",
+                "introit" to ContentStore.uiString("widget.reading.introit", "Introit"),
+                "collect" to ContentStore.uiString("widget.reading.collect", "Collect"),
+                "epistle" to ContentStore.uiString("widget.reading.epistle", "Epistle"),
+                "gospel" to ContentStore.uiString("widget.reading.gospel", "Gospel"),
             )
             items(readingChoices.size, key = { "r-" + readingChoices[it].first }) { i ->
                 val (key, label) = readingChoices[i]
@@ -268,8 +268,8 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
                 )
             }
             val saintsChoices = listOf(
-                Triple("saints", "Saints only", "Feasts of the sanctoral cycle"),
-                Triple("all", "All notable days", "Adds vigils and Ember days"),
+                Triple("saints", ContentStore.uiString("widget.saints.only", "Saints only"), ContentStore.uiString("widget.saints.only_sub", "Feasts of the sanctoral cycle")),
+                Triple("all", ContentStore.uiString("widget.saints.all", "All notable days"), ContentStore.uiString("widget.saints.all_sub", "Adds vigils and Ember days")),
             )
             items(saintsChoices.size, key = { "s-" + saintsChoices[it].first }) { i ->
                 val (key, label, detail) = saintsChoices[i]
@@ -327,7 +327,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
                                 color = colors.primaryText,
                             )
                         }
-                        Text("Change", style = type.smallLabel, color = colors.sanctuaryRed)
+                        Text(ContentStore.uiString("common.change", "Change"), style = type.smallLabel, color = colors.sanctuaryRed)
                     }
                 }
             }

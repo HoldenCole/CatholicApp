@@ -119,7 +119,7 @@ fun SettingsScreen(
                 )
             }
             Text(
-                text = "Settings",
+                text = ContentStore.uiString("settings.title", "Settings"),
                 style = type.titleM.copy(fontStyle = FontStyle.Italic),
                 color = colors.primaryText,
                 textAlign = TextAlign.Center,
@@ -137,7 +137,7 @@ fun SettingsScreen(
             // ---- Rite Section ----
             item {
                 SettingsSectionHeader(
-                    title = "Ritus · Missal Rite",
+                    title = "Ritus · " + ContentStore.uiString("settings.header.rite", "Missal Rite"),
                 )
             }
             item {
@@ -149,13 +149,13 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "Controls the rubrics displayed in the Missal. Most traditional parishes use the 1962 Missal.",
+                    text = ContentStore.uiString("settings.rite.footer", "Controls the rubrics displayed in the Missal. Most traditional parishes use the 1962 Missal."),
                 )
             }
 
             // ---- Leonine Prayers Section ----
             item {
-                SettingsSectionHeader(title = "Preces Leoninae · Leonine Prayers")
+                SettingsSectionHeader(title = "Preces Leoninae · " + ContentStore.uiString("settings.header.leonine", "Leonine Prayers"))
             }
             item {
                 Row(
@@ -166,12 +166,12 @@ fun SettingsScreen(
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
-                            text = "Leonine Prayers",
+                            text = ContentStore.uiString("settings.leonine.row", "Leonine Prayers"),
                             style = type.body,
                             color = colors.primaryText,
                         )
                         Text(
-                            text = "Prayers after Low Mass (Leo XIII, 1884)",
+                            text = ContentStore.uiString("settings.leonine.sub", "Prayers after Low Mass (Leo XIII, 1884)"),
                             style = type.captionSm,
                             color = colors.secondaryText,
                         )
@@ -188,13 +188,13 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice.",
+                    text = ContentStore.uiString("settings.leonine.footer", "The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice."),
                 )
             }
 
             // ---- Home Screen Section ----
             item {
-                SettingsSectionHeader(title = "Hodie · Home Screen")
+                SettingsSectionHeader(title = "Hodie · " + ContentStore.uiString("settings.header.home", "Home Screen"))
             }
             item {
                 Row(
@@ -205,12 +205,12 @@ fun SettingsScreen(
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
-                            text = "Show Upcoming Feasts on Home",
+                            text = ContentStore.uiString("settings.home.upcoming", "Show Upcoming Feasts on Home"),
                             style = type.body,
                             color = colors.primaryText,
                         )
                         Text(
-                            text = "The next fortnight's feasts, vigils, and Ember days",
+                            text = ContentStore.uiString("settings.home.upcoming_sub", "The next fortnight's feasts, vigils, and Ember days"),
                             style = type.captionSm,
                             color = colors.secondaryText,
                         )
@@ -227,13 +227,13 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "The full list always remains available on the Calendar.",
+                    text = ContentStore.uiString("settings.home.footer", "The full list always remains available on the Calendar."),
                 )
             }
 
             // ---- Penance Section ----
             item {
-                SettingsSectionHeader(title = "Paenitentia · Penance Discipline")
+                SettingsSectionHeader(title = "Paenitentia · " + ContentStore.uiString("settings.header.penance", "Penance Discipline"))
             }
             item {
                 PenanceDiscipline.entries.forEach { d ->
@@ -244,13 +244,13 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "Determines which fasting and abstinence obligations appear on the Today screen.",
+                    text = ContentStore.uiString("settings.penance.footer", "Determines which fasting and abstinence obligations appear on the Today screen."),
                 )
             }
 
             // ---- Language Section ----
             item {
-                SettingsSectionHeader(title = "Lingua · Language")
+                SettingsSectionHeader(title = "Lingua · " + ContentStore.uiString("settings.header.language", "Language"))
             }
             item {
                 LanguageMode.entries.forEach { l ->
@@ -261,13 +261,13 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "Choose which text to display in prayers, the Missal, and the Divine Office.",
+                    text = ContentStore.uiString("settings.language.footer", "Choose which text to display in prayers, the Missal, and the Divine Office."),
                 )
             }
 
             // ---- Vernacular Section ----
             item {
-                SettingsSectionHeader(title = "Sermo Vulgáris · Vernacular")
+                SettingsSectionHeader(title = "Sermo Vulgáris · " + ContentStore.uiString("settings.header.vernacular", "Vernacular"))
             }
             item {
                 VernacularLanguage.entries.forEach { v ->
@@ -283,16 +283,14 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "Español covers the prayers, the Marian antiphons, the complete Ordinary " +
-                        "of the Mass, the feast names of the calendar, and the Office hour " +
-                        "introductions; the Mass propers and Office texts fall back to English " +
-                        "while translation continues.",
+                    text = ContentStore.uiString("settings.vernacular.footer",
+                        "Español covers the prayers, the Marian antiphons, the complete Ordinary of the Mass, the feast names of the calendar, and the Office hour introductions; the Mass propers and Office texts fall back to English while translation continues."),
                 )
             }
 
             // ---- Appearance Section ----
             item {
-                SettingsSectionHeader(title = "Apparitus · Appearance")
+                SettingsSectionHeader(title = "Apparitus · " + ContentStore.uiString("settings.header.appearance", "Appearance"))
             }
             item {
                 AppTheme.entries.forEach { t ->
@@ -303,13 +301,13 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "Parchment: warm vellum background. Clean White: modern white with walnut tab bar. Dark: deep walnut for low light.",
+                    text = ContentStore.uiString("settings.appearance.footer", "Parchment: warm vellum background. Clean White: modern white with walnut tab bar. Dark: deep walnut for low light."),
                 )
             }
 
             // ---- Font Size Section ----
             item {
-                SettingsSectionHeader(title = "Littera · Text Size")
+                SettingsSectionHeader(title = "Littera · " + ContentStore.uiString("settings.header.text_size", "Text Size"))
             }
             item {
                 Column(modifier = Modifier.padding(vertical = 8.dp)) {
@@ -398,7 +396,7 @@ fun SettingsScreen(
                     }
                 }
                 SettingsSectionFooter(
-                    text = "Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility.",
+                    text = ContentStore.uiString("settings.text_size.footer", "Choose a scale range, then adjust the slider. Smaller for compact reading, Bigger for accessibility."),
                 )
             }
 
@@ -427,7 +425,7 @@ fun SettingsScreen(
                         modifier = Modifier.padding(end = 8.dp),
                     )
                     Text(
-                        text = "App Tutorial",
+                        text = ContentStore.uiString("settings.tutorial", "App Tutorial"),
                         style = type.body,
                         color = colors.primaryText,
                         modifier = Modifier.weight(1f),
@@ -458,7 +456,7 @@ fun SettingsScreen(
                             modifier = Modifier.padding(end = 8.dp),
                         )
                         Text(
-                            text = "Home Screen Widget",
+                            text = ContentStore.uiString("settings.widget", "Home Screen Widget"),
                             style = type.body,
                             color = colors.primaryText,
                             modifier = Modifier.weight(1f),
@@ -475,7 +473,7 @@ fun SettingsScreen(
 
             // ---- Feedback Section ----
             item {
-                SettingsSectionHeader(title = "Opinor · Feedback")
+                SettingsSectionHeader(title = "Opinor · " + ContentStore.uiString("settings.header.feedback", "Feedback"))
             }
             item {
                 Row(
@@ -499,14 +497,14 @@ fun SettingsScreen(
                         modifier = Modifier.padding(end = 8.dp),
                     )
                     Text(
-                        text = "Send Feedback",
+                        text = ContentStore.uiString("settings.feedback.send", "Send Feedback"),
                         style = type.body,
                         color = colors.primaryText,
                         modifier = Modifier.weight(1f),
                     )
                 }
                 SettingsSectionFooter(
-                    text = "Report issues, suggest features, or share your experience.",
+                    text = ContentStore.uiString("settings.feedback.footer", "Report issues, suggest features, or share your experience."),
                 )
             }
 
@@ -529,7 +527,7 @@ fun SettingsScreen(
                         modifier = Modifier.padding(end = 8.dp),
                     )
                     Text(
-                        text = "Reset All Progress",
+                        text = ContentStore.uiString("settings.reset", "Reset All Progress"),
                         style = type.body,
                         color = colors.sanctuaryRed,
                     )

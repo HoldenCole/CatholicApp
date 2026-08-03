@@ -286,21 +286,21 @@ fun TodayScreen(
                     ) {
                         if (vm.isFirstFriday()) {
                             Text(
-                                text = "First Friday",
+                                text = ContentStore.uiString("flag.first_friday", "First Friday"),
                                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                                 color = colors.sanctuaryRed,
                             )
                         }
                         if (vm.isFirstSaturday()) {
                             Text(
-                                text = "First Saturday",
+                                text = ContentStore.uiString("flag.first_saturday", "First Saturday"),
                                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                                 color = colors.sanctuaryRed,
                             )
                         }
                         if (vm.isEmberDay()) {
                             Text(
-                                text = "Ember Day",
+                                text = ContentStore.uiString("flag.ember_day", "Ember Day"),
                                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                                 color = colors.sanctuaryRed,
                             )
@@ -484,7 +484,7 @@ private fun UpcomingFeastsCard(
             .padding(16.dp),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            SmallLabel(text = "Ventura · Upcoming", color = colors.tertiaryText)
+            SmallLabel(text = "Ventura · " + ContentStore.uiString("today.upcoming", "Upcoming"), color = colors.tertiaryText)
             Spacer(Modifier.weight(1f))
             Text(text = "›", fontSize = 12.sp, color = colors.tertiaryText)
         }
@@ -734,7 +734,7 @@ private fun PenanceCard(
         }
 
         Text(
-            text = if (selectedPenances.isEmpty()) "Choose optional penances" else "Edit penances",
+            text = if (selectedPenances.isEmpty()) ContentStore.uiString("today.penance.choose", "Choose optional penances") else ContentStore.uiString("today.penance.edit", "Edit penances"),
             style = type.captionSm.copy(fontStyle = FontStyle.Italic),
             color = colors.sanctuaryRed,
             modifier = Modifier
@@ -789,7 +789,7 @@ private fun SaintCard(
                         color = colors.secondaryText,
                     )
                 }
-                Text(text = "Open", style = type.captionSm, color = colors.sanctuaryRed)
+                Text(text = ContentStore.uiString("common.open", "Open"), style = type.captionSm, color = colors.sanctuaryRed)
             }
         }
     } else {
@@ -808,19 +808,19 @@ private fun SaintCard(
                 color = colors.sanctuaryRed,
             )
             Text(
-                text = "Follow a Saint",
+                text = ContentStore.uiString("today.saints.follow", "Follow a Saint"),
                 style = type.titleM.copy(fontStyle = FontStyle.Italic),
                 color = colors.primaryText,
                 modifier = Modifier.padding(top = 4.dp),
             )
             Text(
-                text = "Choose a patron saint and track daily practices",
+                text = ContentStore.uiString("today.saints.sub", "Choose a patron saint and track daily practices"),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.secondaryText,
                 modifier = Modifier.padding(top = 2.dp),
             )
             SmallLabel(
-                text = "Begin",
+                text = ContentStore.uiString("today.saints.begin", "Begin"),
                 color = colors.sanctuaryRed,
                 modifier = Modifier.padding(top = 8.dp),
             )
@@ -857,17 +857,17 @@ private fun PrayerRuleCard(
         Spacer(Modifier.width(14.dp))
         Column(modifier = Modifier.weight(1f)) {
             Text(
-                text = "Prayer Rule",
+                text = ContentStore.uiString("today.prayer_rule", "Prayer Rule"),
                 style = type.titleM.copy(fontStyle = FontStyle.Italic),
                 color = colors.primaryText,
             )
             Text(
-                text = if (progress >= 1f) "All prayers complete" else "$done of $total prayers today",
+                text = if (progress >= 1f) ContentStore.uiString("today.prayer_rule.done", "All prayers complete") else ContentStore.uiString("today.prayer_rule.progress", "{done} of {total} prayers today").replace("{done}", "$done").replace("{total}", "$total"),
                 style = type.captionSm,
                 color = if (progress >= 1f) colors.goldLeaf else colors.secondaryText,
             )
         }
-        Text(text = "Open", style = type.captionSm, color = colors.sanctuaryRed)
+        Text(text = ContentStore.uiString("common.open", "Open"), style = type.captionSm, color = colors.sanctuaryRed)
     }
 }
 
@@ -884,12 +884,12 @@ private fun DevotionsSection(
     val type = IntroiboType.current
 
     Column(modifier = modifier.fillMaxWidth()) {
-        SectionLabel(title = "Devotiones Hodiernae", subtitle = "Today's devotions")
+        SectionLabel(title = "Devotiones Hodiernae", subtitle = ContentStore.uiString("today.devotions.sub", "Today's devotions"))
         Spacer(Modifier.height(14.dp))
 
-        DevotionRow(title = "The Divine Office", latin = "Officium Divinum, VIII Horae Canonicae", onClick = onNavigateOffice)
-        DevotionRow(title = "Stations of the Cross", latin = "Via Crucis, XIV stationes", onClick = onNavigateStations)
-        DevotionRow(title = "Confession Guide", latin = "De Confessione", onClick = onNavigateConfession)
+        DevotionRow(title = ContentStore.uiString("today.devotion.office", "The Divine Office"), latin = "Officium Divinum, VIII Horae Canonicae", onClick = onNavigateOffice)
+        DevotionRow(title = ContentStore.uiString("today.devotion.stations", "Stations of the Cross"), latin = "Via Crucis, XIV stationes", onClick = onNavigateStations)
+        DevotionRow(title = ContentStore.uiString("today.devotion.confession", "Confession Guide"), latin = "De Confessione", onClick = onNavigateConfession)
         DevotionRow(title = vm.offeringTitle(), latin = vm.offeringLatin(), onClick = {
             ContentStore.prayer(vm.offeringSlug())?.let { onOfferingClick(it) }
         })
@@ -942,7 +942,7 @@ private fun RosaryCard(
             .fillMaxWidth()
             .then(if (onNavigateRosary != null) Modifier.clickable { onNavigateRosary() } else Modifier),
     ) {
-        SectionLabel(title = "Sacratissimum Rosarium", subtitle = "of the Rosary")
+        SectionLabel(title = "Sacratissimum Rosarium", subtitle = ContentStore.uiString("today.rosary.sub", "of the Rosary"))
         Spacer(Modifier.height(8.dp))
 
         val rosaryLang = currentLanguageMode()
@@ -986,7 +986,7 @@ private fun ScholaCard(
     val type = IntroiboType.current
 
     Column(modifier = modifier.fillMaxWidth()) {
-        SectionLabel(title = "Schola", subtitle = "Latin learning")
+        SectionLabel(title = "Schola", subtitle = ContentStore.uiString("today.schola.sub", "Latin learning"))
         Spacer(Modifier.height(8.dp))
         Text(
             text = "Mastered: ${masteredLessons.size} of ${ContentStore.courses.size} lessons",

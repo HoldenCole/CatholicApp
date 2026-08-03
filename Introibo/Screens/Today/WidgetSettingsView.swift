@@ -36,12 +36,12 @@ struct WidgetSettingsView: View {
             Section {
                 modeRow(
                     .office,
-                    title: "Divine Office",
-                    subtitle: "The canonical hour for the current time"
+                    title: ContentStore.shared.uiString("widget.settings.mode_office", "Divine Office"),
+                    subtitle: ContentStore.shared.uiString("widget.settings.mode_office_sub", "The canonical hour for the current time")
                 )
                 modeRow(
                     .prayer,
-                    title: "Chosen prayers",
+                    title: ContentStore.shared.uiString("widget.settings.mode_prayer", "Chosen prayers"),
                     subtitle: "Your own prayer for morning, midday, and evening"
                 )
             } header: {
@@ -120,7 +120,7 @@ struct WidgetSettingsView: View {
         }
         .scrollContentBackground(.hidden)
         .background(Color.pageBackground)
-        .navigationTitle("Home Screen Widget")
+        .navigationTitle(ContentStore.shared.uiString("settings.widget", "Home Screen Widget"))
         .navigationBarTitleDisplayMode(.inline)
     }
 
