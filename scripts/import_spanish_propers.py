@@ -29,7 +29,33 @@ MISSA_ES = DO / "web" / "www" / "missa" / "Espanol"
 OUT = ROOT / "spanish-translation" / "missal_propers_es.json"
 
 # Tranche 1: Advent through Time after Epiphany.
-TRANCHE = re.compile(r"^(adv|nat|epi)")
+# Tranche 2: Septuagesima (quadp) through Lent and Holy Week (quad).
+TRANCHE = re.compile(r"^(adv|nat|epi|quad)")
+
+# Our own tier-2 supplements: single fields the DO Espanol files omit,
+# translated here from the Latin so a whole Sunday isn't blocked by one
+# missing oration. Applied BEFORE the completeness gate.
+PER_DOMINUM_ES = ("Por nuestro Señor Jesucristo, tu Hijo, que vive y reina "
+                  "contigo en la unidad del Espíritu Santo, Dios, por todos "
+                  "los siglos de los siglos. Amén.")
+MUNERIBUS_ES = ("Recibidos, Señor, nuestros dones y súplicas, te rogamos que "
+                "nos purifiques con estos celestiales misterios y nos "
+                "escuches con clemencia.\n" + PER_DOMINUM_ES)
+SUPPLEMENTS = {
+    # Septuagesima Sunday and Advent Ember Friday share the Muneribus
+    # nostris secret (as does Jan 1, outside this temporal tranche).
+    "quadp1-0": {"secreta": MUNERIBUS_ES},
+    "adv3-5": {"secreta": MUNERIBUS_ES},
+    # Lent III Sunday — Justitiæ Dómini (Ps 18:9-12).
+    "quad3-0": {"offertorium": (
+        "Los preceptos del Señor son rectos y alegran los corazones; sus "
+        "juicios, más dulces que la miel y el panal; por eso tu siervo los "
+        "guarda.")},
+    # Passion Friday (Seven Sorrows) — Recordáre, Virgo Mater.
+    "quad5-5": {"offertorium": (
+        "Acuérdate, Virgen Madre, de hablar en favor nuestro ante Dios, "
+        "para que aparte de nosotros su indignación.")},
+}
 
 FIELDS = {
     "introitus": "Introitus",
@@ -223,6 +249,8 @@ def main():
             rendered = render_section(section, sections[section])
             if rendered:
                 entry[field] = rendered
+        for field, text in SUPPLEMENTS.get(key, {}).items():
+            entry.setdefault(field, text)
         missing = [f for f in REQUIRED
                    if tempora[key].get(f) is not None and f not in entry]
         if missing:
@@ -244,6 +272,9 @@ def main():
     assert out["adv1-0"]["oratio"].startswith("Despierta, Señor, tu potencia")
     assert "Tú que vives y reinas" in out["adv1-0"]["oratio"], \
         "conclusion must be expanded"
+    assert "quadp1-0" in out, "Septuagesima must import (supplemented secreta)"
+    assert out["quadp1-0"]["secreta"].startswith("Recibidos, Señor")
+    assert "quad3-0" in out and "quad5-5" in out
     for key, entry in out.items():
         assert key in tempora, key
         for field, text in entry.items():

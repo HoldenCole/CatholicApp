@@ -79,8 +79,8 @@ so integration cannot silently misalign.
 - Mass propers — **tranche-based import from DO's own Espanol tree has
   begun** (`scripts/import_spanish_propers.py` reading a local
   divinum-officium clone; MIT-licensed like the English data we already
-  ship). Tranche 1: Advent through Time after Epiphany — 15 formularies,
-  antiphons and orations only, with a per-formulary completeness gate (a
+  ship). Tranches 1–2: Advent through Holy Wednesday — 62 formularies (Advent, the Christmas cycle, Epiphany weeks 1–2, Septuagesima, all of Lent, Palm Sunday through Spy Wednesday),
+  antiphons and orations only (plus four tier-2 supplements of our own for single fields DO's Espanol omits, e.g. the Septuagesima secreta), with a per-formulary completeness gate (a
   day is fully Spanish or stays fully English; DO's Espanol gaps, e.g.
   Epiphany weeks 3–6 and Easter Sunday, fall back automatically).
   **Scripture ([Lectio]/[Evangelium]) is deliberately excluded**: DO's

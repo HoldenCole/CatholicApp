@@ -153,6 +153,13 @@ class SpanishOverlayQA {
             assertTrue(advent1.collect.eng.startsWith("Despierta, Señor, tu potencia"))
             assertTrue(advent1.collect.eng.contains("Tú que vives y reinas"))
             assertTrue(advent1.epistle.eng.startsWith("Lesson from the letter"))
+            // Tranche 2: Septuagesima (with the supplemented secreta) and Lent.
+            val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }
+            assertTrue(septuagesima.introit.eng.startsWith("Me cercaron angustias de muerte"))
+            assertTrue(septuagesima.secret.eng.startsWith("Recibidos, Señor"))
+            val lent1 = ContentStore.allPropers.first { it.slug == "quad1-0" }
+            assertTrue(lent1.introit.eng.startsWith("Si me invoca"))
+
             // An uncovered formulary stays entirely English.
             val easterProper = ContentStore.allPropers.first { it.slug == "pasc0-0" }
             assertTrue(easterProper.introit.eng.first().isLetter() &&
@@ -214,5 +221,10 @@ class SpanishOverlayQA {
         val advent1 = ContentStore.allPropers.first { it.slug == "adv1-0" }
         assertTrue(advent1.introit.eng.startsWith("To You I lift up my soul") ||
             !advent1.introit.eng.startsWith("A ti, Señor"))
+        // The English data fix that tranche 2 flushed out: Septuagesima's
+        // secret is Muneribus nostris, not the C2a martyr's secret.
+        val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }
+        assertTrue(septuagesima.secret.lat.startsWith("Munéribus nostris"))
+        assertTrue(!septuagesima.secret.lat.contains("Accépta sit in conspéctu"))
     }
 }
