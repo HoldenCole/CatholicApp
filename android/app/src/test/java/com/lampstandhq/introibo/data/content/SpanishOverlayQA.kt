@@ -160,10 +160,24 @@ class SpanishOverlayQA {
             val lent1 = ContentStore.allPropers.first { it.slug == "quad1-0" }
             assertTrue(lent1.introit.eng.startsWith("Si me invoca"))
 
-            // An uncovered formulary stays entirely English.
+            // Tranche 3: Easter Sunday (our supplemented formulary — DO's
+            // Espanol Eastertide is stubs), Pentecost, and the
+            // post-Pentecost Sundays.
             val easterProper = ContentStore.allPropers.first { it.slug == "pasc0-0" }
-            assertTrue(easterProper.introit.eng.first().isLetter() &&
-                !easterProper.introit.eng.startsWith("Resucité"))
+            assertTrue(easterProper.introit.eng.startsWith("Resucité, y aún estoy contigo"))
+            assertTrue(easterProper.communion.eng.startsWith("Cristo, nuestra Pascua"))
+            val pentecost = ContentStore.allPropers.first { it.slug == "pasc7-0" }
+            assertTrue(pentecost.introit.eng.isNotBlank() &&
+                !pentecost.introit.eng.startsWith("The Spirit of the Lord"))
+            val trinity = ContentStore.allPropers.first { it.slug == "pent01-0" }
+            assertTrue(trinity.introit.eng.startsWith("Bendita sea la Trinidad"))
+
+            // An uncovered formulary stays entirely English (Low Sunday —
+            // DO's Espanol has no file).
+            val lowSunday = ContentStore.allPropers.firstOrNull { it.slug == "pasc1-0" }
+            if (lowSunday != null) {
+                assertTrue(!lowSunday.introit.eng.startsWith("Como niños"))
+            }
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.

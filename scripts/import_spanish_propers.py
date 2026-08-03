@@ -30,7 +30,8 @@ OUT = ROOT / "spanish-translation" / "missal_propers_es.json"
 
 # Tranche 1: Advent through Time after Epiphany.
 # Tranche 2: Septuagesima (quadp) through Lent and Holy Week (quad).
-TRANCHE = re.compile(r"^(adv|nat|epi|quad)")
+# Tranche 3: Eastertide (pasc) and the season after Pentecost (pent).
+TRANCHE = re.compile(r"^(adv|nat|epi|quad|pasc|pent)")
 
 # Our own tier-2 supplements: single fields the DO Espanol files omit,
 # translated here from the Latin so a whole Sunday isn't blocked by one
@@ -55,6 +56,55 @@ SUPPLEMENTS = {
     "quad5-5": {"offertorium": (
         "Acuérdate, Virgen Madre, de hablar en favor nuestro ante Dios, "
         "para que aparte de nosotros su indignación.")},
+    # Easter Sunday: DO's Espanol Eastertide is name-only stubs, and the
+    # queen of feasts should not fall back to English. Full formulary
+    # translated here from the Latin, line-mirrored to the English entry.
+    "pasc0-0": {
+        "introitus": (
+            "Resucité, y aún estoy contigo, aleluya: pusiste sobre mí tu "
+            "mano, aleluya: tu sabiduría se ha mostrado admirable, aleluya, "
+            "aleluya.\n"
+            "Señor, tú me has probado y me has conocido: tú conociste mi "
+            "descanso y mi resurrección.\n"
+            "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el "
+            "principio, ahora y siempre, por los siglos de los siglos. Amén.\n"
+            "Resucité, y aún estoy contigo, aleluya: pusiste sobre mí tu "
+            "mano, aleluya: tu sabiduría se ha mostrado admirable, aleluya, "
+            "aleluya."),
+        "oratio": (
+            "Oh Dios, que en este día, vencida la muerte, nos abriste por tu "
+            "Unigénito las puertas de la eternidad: acompaña con tu ayuda "
+            "los deseos que tú mismo nos inspiras y previenes con tu "
+            "gracia.\n"
+            "Por el mismo Jesucristo nuestro Señor, tu Hijo, que vive y "
+            "reina contigo en la unidad del Espíritu Santo, Dios, por todos "
+            "los siglos de los siglos. Amén."),
+        "graduale": (
+            "Éste es el día que hizo el Señor: regocijémonos y alegrémonos "
+            "en él.\n"
+            "V. Alabad al Señor, porque es bueno: porque es eterna su "
+            "misericordia. Aleluya, aleluya.\n"
+            "V. Cristo, nuestra Pascua, ha sido inmolado."),
+        "offertorium": (
+            "Tembló la tierra y quedó en calma, cuando se levantó Dios para "
+            "el juicio, aleluya."),
+        "secreta": (
+            "Recibe, Señor, te suplicamos, las preces de tu pueblo junto con "
+            "la oblación de estas hostias: para que, estrenadas en los "
+            "misterios pascuales, nos aprovechen, por tu obra, como remedio "
+            "de eternidad.\n" + PER_DOMINUM_ES),
+        "communio": (
+            "Cristo, nuestra Pascua, ha sido inmolado, aleluya: celebremos, "
+            "pues, el banquete con los ázimos de la sinceridad y de la "
+            "verdad, aleluya, aleluya, aleluya."),
+        "postcommunio": (
+            "Infúndenos, Señor, el Espíritu de tu caridad: para que, "
+            "saciados con los sacramentos pascuales, vivamos concordes por "
+            "tu piedad.\n"
+            "Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo "
+            "en la unidad del mismo Espíritu Santo, Dios, por todos los "
+            "siglos de los siglos. Amén."),
+    },
 }
 
 FIELDS = {
