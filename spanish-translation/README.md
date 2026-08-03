@@ -76,8 +76,20 @@ so integration cannot silently misalign.
   for the specials). At runtime the Spanish map merges over the English
   one, so any future uncovered key falls back to English, then Latin.
   Regenerate after ordo changes, then sync.
-- Office propers / Mass propers / readings (multi-MB) — needs an approved
-  Spanish source; do not machine-translate.
+- Mass propers — **tranche-based import from DO's own Espanol tree has
+  begun** (`scripts/import_spanish_propers.py` reading a local
+  divinum-officium clone; MIT-licensed like the English data we already
+  ship). Tranche 1: Advent through Time after Epiphany — 15 formularies,
+  antiphons and orations only, with a per-formulary completeness gate (a
+  day is fully Spanish or stays fully English; DO's Espanol gaps, e.g.
+  Epiphany weeks 3–6 and Easter Sunday, fall back automatically).
+  **Scripture ([Lectio]/[Evangelium]) is deliberately excluded**: DO's
+  Spanish readings are in a modern register of uncertain provenance —
+  they wait for a public-domain source decision (Torres Amat, 1825).
+  The DO Espanol PSALTER has the same provenance question; audit before
+  importing the Office texts.
+- Office propers / readings (multi-MB) — DO Espanol coverage is ~94% for
+  the horas tree; same register/provenance audit applies before import.
 - `reference.json`, `saints.json`, `stations.json`, tutorial/course content.
 
 ## Integration (done for tier 1)

@@ -147,9 +147,42 @@ def validate_ordo_names():
     print(f"ordo_names_es.json: {len(es)}/{len(en)} names checked")
 
 
+def validate_missal_propers():
+    """Tranche-based propers overlay: keys must be real formularies, fields
+    must stay inside the imported set (scripture is deliberately excluded
+    until a public-domain source is chosen), values must be clean text."""
+    path = ES / "missal_propers_es.json"
+    if not path.exists():
+        print("missal_propers_es.json: not present (skipped)")
+        return
+    tempora = json.load(open(SRC / "missal_tempora.json"))
+    sanctoral = json.load(open(SRC / "missal_sanctoral.json"))
+    allowed = {"introitus", "oratio", "graduale", "alleluia", "tractus",
+               "offertorium", "secreta", "communio", "postcommunio"}
+    es = json.load(open(path))
+    for key, fields in es.items():
+        check(key in tempora or key in sanctoral,
+              f"missal_propers[{key}]: no such formulary")
+        src = tempora.get(key) or sanctoral.get(key) or {}
+        for field, text in fields.items():
+            check(field in allowed,
+                  f"missal_propers[{key}].{field}: field not importable "
+                  "(scripture stays English pending a source decision)")
+            check(isinstance(text, str) and text.strip(),
+                  f"missal_propers[{key}].{field}: empty")
+            check(src.get(field) is not None,
+                  f"missal_propers[{key}].{field}: English side has no such field")
+            for bad in ("@", "&Gloria", "\n$"):
+                check(bad not in text,
+                      f"missal_propers[{key}].{field}: DO markup left in text")
+    n = sum(len(v) for v in es.values())
+    print(f"missal_propers_es.json: {len(es)} formularies / {n} fields checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
+    validate_missal_propers()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

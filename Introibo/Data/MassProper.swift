@@ -38,7 +38,9 @@ struct MassProper: Identifiable, Decodable, Hashable {
 
 struct ProperText: Decodable, Hashable {
     let lat: String
-    let eng: String
+    // `var` so the Spanish propers overlay can rewrite the vernacular side
+    // in place (ContentStore.applyVernacularOverlay); lat and ref untouched.
+    var eng: String
     var ref: String? = nil
 }
 

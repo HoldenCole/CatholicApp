@@ -145,6 +145,7 @@ final class ContentStore {
     func applyVernacular(_ lang: VernacularLanguage) {
         applyVernacularOverlay(lang, reloadSources: true)
         rebuildOfficeAssembler()
+        buildAllPropers()
         searchIndexLock.lock()
         _searchIndex = nil
         searchIndexLock.unlock()
@@ -163,6 +164,8 @@ final class ContentStore {
             missal          = load("missal",           as: [MissalSection].self)      ?? []
             canonVariants   = load("canon_variants",   as: [String: [String: [String: String]]].self) ?? [:]
             ordoNamesEn     = load("ordo_names_en",    as: [String: String].self) ?? [:]
+            missalTempora   = load("missal_tempora",   as: [String: MissalProperEntry].self) ?? [:]
+            missalSanctoral = load("missal_sanctoral", as: [String: MissalProperEntry].self) ?? [:]
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -174,6 +177,27 @@ final class ContentStore {
         }
         uiStringsES = (load("ui_strings_es", as: [String: String].self) ?? [:])
             .filter { !$0.key.hasPrefix("_") }
+        // Mass propers (tranche-based import from the DO Espanol tree):
+        // per-field vernacular replacement; uncovered days and the deferred
+        // scripture fields keep their English.
+        if let es = load("missal_propers_es", as: [String: [String: String]].self) {
+            for (key, fields) in es {
+                guard var entry = missalTempora[key] else { continue }
+                for (field, text) in fields {
+                    switch field {
+                    case "introitus":    entry.introitus?.eng = text
+                    case "oratio":       entry.oratio?.eng = text
+                    case "graduale":     entry.graduale?.eng = text
+                    case "offertorium":  entry.offertorium?.eng = text
+                    case "secreta":      entry.secreta?.eng = text
+                    case "communio":     entry.communio?.eng = text
+                    case "postcommunio": entry.postcommunio?.eng = text
+                    default: break
+                    }
+                }
+                missalTempora[key] = entry
+            }
+        }
 
         if let es = load("prayers_es", as: [String: PrayerES].self) {
             prayers = prayers.map { p in

@@ -4,15 +4,15 @@ struct MissalProperEntry: Decodable {
     let officium: String?
     let rank: Double?
     let rule: MissalRule?
-    let introitus: ProperText?
-    let oratio: ProperText?
+    var introitus: ProperText?
+    var oratio: ProperText?
     let lectio: ProperText?
-    let graduale: ProperText?
+    var graduale: ProperText?
     let evangelium: ProperText?
-    let offertorium: ProperText?
-    let secreta: ProperText?
-    let communio: ProperText?
-    let postcommunio: ProperText?
+    var offertorium: ProperText?
+    var secreta: ProperText?
+    var communio: ProperText?
+    var postcommunio: ProperText?
     // Optional propers using DO's Latin field names. Currently absent from
     // missal_tempora.json / missal_sanctoral.json but threaded so that any
     // future data additions surface in the rendered MassProper.

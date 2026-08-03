@@ -233,6 +233,8 @@ object ContentStore {
         missal = load("missal.json") ?: emptyList()
         canonVariants = load("canon_variants.json") ?: emptyMap()
         ordoNamesEn = load("ordo_names_en.json") ?: emptyMap()
+        missalTempora = load("missal_tempora.json") ?: emptyMap()
+        missalSanctoral = load("missal_sanctoral.json") ?: emptyMap()
 
         uiStringsES = emptyMap()
 
@@ -243,6 +245,23 @@ object ContentStore {
             }
             uiStringsES = (load<Map<String, String>>("ui_strings_es.json") ?: emptyMap())
                 .filterKeys { !it.startsWith("_") }
+            // Mass propers (tranche-based import from the DO Espanol tree):
+            // per-field vernacular replacement; uncovered days and the
+            // deferred scripture fields keep their English.
+            load<Map<String, Map<String, String>>>("missal_propers_es.json")?.let { es ->
+                missalTempora = missalTempora.mapValues { (key, entry) ->
+                    val fields = es[key] ?: return@mapValues entry
+                    entry.copy(
+                        introitus = fields["introitus"]?.let { entry.introitus?.copy(eng = it) } ?: entry.introitus,
+                        oratio = fields["oratio"]?.let { entry.oratio?.copy(eng = it) } ?: entry.oratio,
+                        graduale = fields["graduale"]?.let { entry.graduale?.copy(eng = it) } ?: entry.graduale,
+                        offertorium = fields["offertorium"]?.let { entry.offertorium?.copy(eng = it) } ?: entry.offertorium,
+                        secreta = fields["secreta"]?.let { entry.secreta?.copy(eng = it) } ?: entry.secreta,
+                        communio = fields["communio"]?.let { entry.communio?.copy(eng = it) } ?: entry.communio,
+                        postcommunio = fields["postcommunio"]?.let { entry.postcommunio?.copy(eng = it) } ?: entry.postcommunio,
+                    )
+                }
+            }
             load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
                 prayers = prayers.map { p ->
                     val o = es[p.slug] ?: return@map p
@@ -302,6 +321,7 @@ object ContentStore {
         synchronized(this) {
             _searchIndex = null
             _linkGraph = null
+            _allPropers = null
         }
     }
 
@@ -369,7 +389,17 @@ object ContentStore {
     fun proper(slug: String): MassProper? =
         propers.firstOrNull { it.slug == slug }
 
-    val allPropers: List<MassProper> by lazy {
+    // Resettable cache (not `by lazy`): a vernacular switch overlays
+    // missalTempora and must rebuild the derived propers.
+    @Volatile
+    private var _allPropers: List<MassProper>? = null
+
+    val allPropers: List<MassProper>
+        get() = _allPropers ?: synchronized(this) {
+            _allPropers ?: buildAllPropers().also { _allPropers = it }
+        }
+
+    private fun buildAllPropers(): List<MassProper> {
         val combined = mutableMapOf<String, MassProper>()
         for ((key, entry) in missalTempora) {
             entry.toMassProper(key)?.let { combined[key] = it }
@@ -383,7 +413,7 @@ object ContentStore {
             if (hasDOEquivalent(p.slug, doKeys)) continue
             combined[p.slug] = p
         }
-        combined.values.sortedBy { it.slug }
+        return combined.values.sortedBy { it.slug }
     }
 
     private fun hasDOEquivalent(slug: String, doKeys: Set<String>): Boolean {

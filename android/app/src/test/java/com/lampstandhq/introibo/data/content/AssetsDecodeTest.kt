@@ -130,6 +130,7 @@ class AssetsDecodeTest {
         check("canon_variants_es.json", { decode<Map<String, Map<String, Map<String, String>>>>("canon_variants_es.json") }) { it.isNotEmpty() }
         check("ordo_names_es.json", { decode<Map<String, String>>("ordo_names_es.json") }) { it.isNotEmpty() }
         check("ui_strings_es.json", { decode<Map<String, String>>("ui_strings_es.json") }) { it.isNotEmpty() }
+        check("missal_propers_es.json", { decode<Map<String, Map<String, String>>>("missal_propers_es.json") }) { it.isNotEmpty() }
 
         // Any asset shipped but not covered above would dodge this net —
         // force the list to stay in sync with the assets directory.

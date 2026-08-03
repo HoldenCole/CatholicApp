@@ -67,7 +67,7 @@ class SpanishOverlayQA {
         for (name in listOf(
             "prayers_es.json", "marian_antiphons_es.json", "hours_es.json",
             "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
-            "ui_strings_es.json",
+            "ui_strings_es.json", "missal_propers_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -144,6 +144,20 @@ class SpanishOverlayQA {
             assertEquals("Témporas", ContentStore.uiString("flag.ember_day", "Ember Day"))
             assertEquals("Fallback", ContentStore.uiString("no.such.key", "Fallback"))
 
+            // Mass propers tranche: Advent I is covered — antiphons and
+            // orations in Spanish, Latin untouched, and SCRIPTURE stays
+            // English (deferred until a public-domain source is chosen).
+            val advent1 = ContentStore.allPropers.first { it.slug == "adv1-0" }
+            assertTrue(advent1.introit.eng.startsWith("A ti, Señor, levanto mi alma"))
+            assertTrue(advent1.introit.lat.startsWith("Ad te levávi"))
+            assertTrue(advent1.collect.eng.startsWith("Despierta, Señor, tu potencia"))
+            assertTrue(advent1.collect.eng.contains("Tú que vives y reinas"))
+            assertTrue(advent1.epistle.eng.startsWith("Lesson from the letter"))
+            // An uncovered formulary stays entirely English.
+            val easterProper = ContentStore.allPropers.first { it.slug == "pasc0-0" }
+            assertTrue(easterProper.introit.eng.first().isLetter() &&
+                !easterProper.introit.eng.startsWith("Resucité"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -197,5 +211,8 @@ class SpanishOverlayQA {
         assertEquals("The Nativity of Our Lord",
             ContentStore.ordoNameEnglish("In Nativitate Domini"))
         assertEquals("Today", ContentStore.uiString("calendar.today", "Today"))
+        val advent1 = ContentStore.allPropers.first { it.slug == "adv1-0" }
+        assertTrue(advent1.introit.eng.startsWith("To You I lift up my soul") ||
+            !advent1.introit.eng.startsWith("A ti, Señor"))
     }
 }

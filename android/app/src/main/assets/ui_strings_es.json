@@ -65,7 +65,7 @@
   "settings.header.language": "Idioma",
   "settings.language.footer": "Elige qué texto mostrar en las oraciones, el Misal y el Oficio Divino.",
   "settings.header.vernacular": "Lengua vernácula",
-  "settings.vernacular.footer": "El español cubre las oraciones, las antífonas marianas, el Ordinario completo de la Misa, los nombres de las fiestas del calendario y las introducciones de las horas del Oficio; los propios de la Misa y los textos del Oficio permanecen en inglés mientras continúa la traducción.",
+  "settings.vernacular.footer": "El español cubre las oraciones, las antífonas marianas, el Ordinario completo de la Misa, los nombres de las fiestas del calendario, las introducciones de las horas del Oficio y un conjunto creciente de propios estacionales de la Misa; todo lo aún no cubierto se muestra en inglés.",
   "settings.header.appearance": "Apariencia",
   "settings.appearance.footer": "Pergamino: fondo cálido de vitela. Blanco limpio: blanco moderno con barra de nogal. Oscuro: nogal profundo para poca luz.",
   "settings.header.text_size": "Tamaño del texto",
