@@ -172,12 +172,16 @@ class SpanishOverlayQA {
             val trinity = ContentStore.allPropers.first { it.slug == "pent01-0" }
             assertTrue(trinity.introit.eng.startsWith("Bendita sea la Trinidad"))
 
-            // An uncovered formulary stays entirely English (Low Sunday —
-            // DO's Espanol has no file).
-            val lowSunday = ContentStore.allPropers.firstOrNull { it.slug == "pasc1-0" }
-            if (lowSunday != null) {
-                assertTrue(!lowSunday.introit.eng.startsWith("Como niños"))
-            }
+            // Tranche 4: the Eastertide supplements — Low Sunday, the
+            // octave, Ascension, and the Pentecost octave.
+            val lowSunday = ContentStore.allPropers.first { it.slug == "pasc1-0" }
+            assertTrue(lowSunday.introit.eng.startsWith("Como niños recién nacidos"))
+            val ascension = ContentStore.allPropers.first { it.slug == "pasc5-4" }
+            assertTrue(ascension.introit.eng.startsWith("Varones de Galilea"))
+            assertTrue(ascension.collect.eng.contains("Por el mismo Jesucristo"))
+            val whitMonday = ContentStore.allPropers.first { it.slug == "pasc7-1" }
+            assertTrue(whitMonday.introit.eng.startsWith("Los alimentó con flor de trigo"))
+            assertTrue(whitMonday.collect.eng.contains("del mismo Espíritu Santo"))
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.

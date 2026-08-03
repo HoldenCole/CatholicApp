@@ -33,79 +33,14 @@ OUT = ROOT / "spanish-translation" / "missal_propers_es.json"
 # Tranche 3: Eastertide (pasc) and the season after Pentecost (pent).
 TRANCHE = re.compile(r"^(adv|nat|epi|quad|pasc|pent)")
 
-# Our own tier-2 supplements: single fields the DO Espanol files omit,
-# translated here from the Latin so a whole Sunday isn't blocked by one
-# missing oration. Applied BEFORE the completeness gate.
-PER_DOMINUM_ES = ("Por nuestro Señor Jesucristo, tu Hijo, que vive y reina "
-                  "contigo en la unidad del Espíritu Santo, Dios, por todos "
-                  "los siglos de los siglos. Amén.")
-MUNERIBUS_ES = ("Recibidos, Señor, nuestros dones y súplicas, te rogamos que "
-                "nos purifiques con estos celestiales misterios y nos "
-                "escuches con clemencia.\n" + PER_DOMINUM_ES)
-SUPPLEMENTS = {
-    # Septuagesima Sunday and Advent Ember Friday share the Muneribus
-    # nostris secret (as does Jan 1, outside this temporal tranche).
-    "quadp1-0": {"secreta": MUNERIBUS_ES},
-    "adv3-5": {"secreta": MUNERIBUS_ES},
-    # Lent III Sunday — Justitiæ Dómini (Ps 18:9-12).
-    "quad3-0": {"offertorium": (
-        "Los preceptos del Señor son rectos y alegran los corazones; sus "
-        "juicios, más dulces que la miel y el panal; por eso tu siervo los "
-        "guarda.")},
-    # Passion Friday (Seven Sorrows) — Recordáre, Virgo Mater.
-    "quad5-5": {"offertorium": (
-        "Acuérdate, Virgen Madre, de hablar en favor nuestro ante Dios, "
-        "para que aparte de nosotros su indignación.")},
-    # Easter Sunday: DO's Espanol Eastertide is name-only stubs, and the
-    # queen of feasts should not fall back to English. Full formulary
-    # translated here from the Latin, line-mirrored to the English entry.
-    "pasc0-0": {
-        "introitus": (
-            "Resucité, y aún estoy contigo, aleluya: pusiste sobre mí tu "
-            "mano, aleluya: tu sabiduría se ha mostrado admirable, aleluya, "
-            "aleluya.\n"
-            "Señor, tú me has probado y me has conocido: tú conociste mi "
-            "descanso y mi resurrección.\n"
-            "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el "
-            "principio, ahora y siempre, por los siglos de los siglos. Amén.\n"
-            "Resucité, y aún estoy contigo, aleluya: pusiste sobre mí tu "
-            "mano, aleluya: tu sabiduría se ha mostrado admirable, aleluya, "
-            "aleluya."),
-        "oratio": (
-            "Oh Dios, que en este día, vencida la muerte, nos abriste por tu "
-            "Unigénito las puertas de la eternidad: acompaña con tu ayuda "
-            "los deseos que tú mismo nos inspiras y previenes con tu "
-            "gracia.\n"
-            "Por el mismo Jesucristo nuestro Señor, tu Hijo, que vive y "
-            "reina contigo en la unidad del Espíritu Santo, Dios, por todos "
-            "los siglos de los siglos. Amén."),
-        "graduale": (
-            "Éste es el día que hizo el Señor: regocijémonos y alegrémonos "
-            "en él.\n"
-            "V. Alabad al Señor, porque es bueno: porque es eterna su "
-            "misericordia. Aleluya, aleluya.\n"
-            "V. Cristo, nuestra Pascua, ha sido inmolado."),
-        "offertorium": (
-            "Tembló la tierra y quedó en calma, cuando se levantó Dios para "
-            "el juicio, aleluya."),
-        "secreta": (
-            "Recibe, Señor, te suplicamos, las preces de tu pueblo junto con "
-            "la oblación de estas hostias: para que, estrenadas en los "
-            "misterios pascuales, nos aprovechen, por tu obra, como remedio "
-            "de eternidad.\n" + PER_DOMINUM_ES),
-        "communio": (
-            "Cristo, nuestra Pascua, ha sido inmolado, aleluya: celebremos, "
-            "pues, el banquete con los ázimos de la sinceridad y de la "
-            "verdad, aleluya, aleluya, aleluya."),
-        "postcommunio": (
-            "Infúndenos, Señor, el Espíritu de tu caridad: para que, "
-            "saciados con los sacramentos pascuales, vivamos concordes por "
-            "tu piedad.\n"
-            "Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo "
-            "en la unidad del mismo Espíritu Santo, Dios, por todos los "
-            "siglos de los siglos. Amén."),
-    },
-}
+# Our own tier-2 supplements: fields the DO Espanol files omit, translated
+# from the Latin in spanish-translation/propers_supplements_es.json (built
+# incrementally, tranche by tranche — single missing orations first, then
+# whole formularies for days DO leaves as stubs, e.g. Easter Sunday and the
+# rest of Eastertide). Applied BEFORE the completeness gate.
+SUPPLEMENTS_PATH = ROOT / "spanish-translation" / "propers_supplements_es.json"
+SUPPLEMENTS = (json.load(open(SUPPLEMENTS_PATH, encoding="utf-8"))
+               if SUPPLEMENTS_PATH.exists() else {})
 
 FIELDS = {
     "introitus": "Introitus",
@@ -288,8 +223,11 @@ def main():
         rel = "Tempora/" + key[0].upper() + key[1:]
         sections = load_formulary(rel)
         if sections is None:
-            skipped.append((key, "no Spanish file"))
-            continue
+            if key in SUPPLEMENTS:
+                sections = {}   # supplement-only day (no upstream file)
+            else:
+                skipped.append((key, "no Spanish file"))
+                continue
         entry = {}
         for field, section in FIELDS.items():
             if tempora[key].get(field) is None:
