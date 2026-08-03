@@ -75,5 +75,879 @@
         "eng_es": "Por todos los siglos de los siglos. ℟. Amén."
       }
     ]
+  },
+  "preces": {
+    "english_es": "Oraciones al pie del altar",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote hace la señal de la Cruz:",
+        "eng_es": "En el nombre del Padre, ✠ y del Hijo, y del Espíritu Santo. Amén."
+      },
+      {
+        "rubric_es": "El sacerdote y los ministros alternan el Salmo 42:",
+        "eng_es": "℣. Me acercaré al altar de Dios."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Al Dios que alegra mi juventud."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Júzgame, oh Dios, y defiende mi causa de la gente no santa: líbrame del hombre inicuo y engañoso."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Pues tú eres, oh Dios, mi fortaleza: ¿por qué me has desechado? ¿y por qué he de andar triste, mientras me aflige el enemigo?"
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Envía tu luz y tu verdad: ellas me han guiado y conducido a tu monte santo y a tus tabernáculos."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Y me acercaré al altar de Dios: al Dios que alegra mi juventud."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Te alabaré con la cítara, oh Dios, Dios mío: ¿por qué estás triste, alma mía, y por qué me turbas?"
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Espera en Dios, porque aún he de alabarle: salud de mi rostro y Dios mío."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Me acercaré al altar de Dios."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Al Dios que alegra mi juventud."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Nuestro auxilio ✠ está en el nombre del Señor."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Que hizo el cielo y la tierra."
+      }
+    ]
+  },
+  "confiteor": {
+    "english_es": "La Confesión",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote, profundamente inclinado, dice:",
+        "eng_es": "Yo, pecador, me confieso a Dios todopoderoso, a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los santos Apóstoles San Pedro y San Pablo, a todos los Santos, y a vosotros, hermanos: que pequé gravemente con el pensamiento, palabra y obra:"
+      },
+      {
+        "rubric_es": "Se golpea el pecho tres veces:",
+        "eng_es": "por mi culpa, por mi culpa, por mi grandísima culpa."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Por tanto, ruego a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los santos Apóstoles San Pedro y San Pablo, a todos los Santos, y a vosotros, hermanos, que roguéis por mí a Dios nuestro Señor."
+      },
+      {
+        "rubric_es": "Los ministros responden:",
+        "eng_es": "℟. Dios todopoderoso tenga misericordia de ti, y perdonados tus pecados, te lleve a la vida eterna."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Amén."
+      },
+      {
+        "rubric_es": "Los ministros dicen el Confíteor:",
+        "eng_es": "Yo, pecador, me confieso a Dios todopoderoso, a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los santos Apóstoles San Pedro y San Pablo, a todos los Santos, y a ti, padre: que pequé gravemente con el pensamiento, palabra y obra:"
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "por mi culpa, por mi culpa, por mi grandísima culpa."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Por tanto, ruego a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los santos Apóstoles San Pedro y San Pablo, a todos los Santos, y a ti, padre, que ruegues por mí a Dios nuestro Señor."
+      },
+      {
+        "rubric_es": "El sacerdote responde:",
+        "eng_es": "℣. Dios todopoderoso tenga misericordia de vosotros, y perdonados vuestros pecados, os lleve a la vida eterna."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Amén."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. El Señor todopoderoso y misericordioso nos conceda el perdón, ✠ la absolución y la remisión de nuestros pecados."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Amén."
+      }
+    ]
+  },
+  "versiculi": {
+    "english_es": "Versículos después de la Confesión",
+    "body_es": [
+      {
+        "rubric_es": "Inclinado, el sacerdote prosigue:",
+        "eng_es": "℣. Oh Dios, vuélvete a nosotros y nos darás vida."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Y tu pueblo se alegrará en ti."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Muéstranos, Señor, tu misericordia."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Y danos tu salvación."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Señor, escucha mi oración."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Y llegue a ti mi clamor."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. El Señor sea con vosotros."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Y con tu espíritu."
+      },
+      {
+        "rubric_es": "Extendiendo y juntando las manos, el sacerdote dice en voz alta:",
+        "eng_es": "Oremos."
+      }
+    ]
+  },
+  "aufer": {
+    "english_es": "Oraciones al subir al altar",
+    "body_es": [
+      {
+        "rubric_es": "Subiendo al altar, el sacerdote dice en silencio:",
+        "eng_es": "Quítanos, te suplicamos, Señor, nuestras iniquidades: para que merezcamos entrar con almas puras en el Santo de los santos. Por Cristo nuestro Señor. Amén."
+      },
+      {
+        "rubric_es": "Con las manos juntas, inclinado sobre el altar, el sacerdote dice:",
+        "eng_es": "Te rogamos, Señor, por los méritos de tus Santos, cuyas reliquias están aquí, y de todos los Santos: que te dignes perdonarme todos mis pecados. Amén."
+      }
+    ]
+  },
+  "introit": {
+    "english_es": "Introito · Antífona de entrada",
+    "body_es": [
+      {
+        "rubric_es": null,
+        "eng_es": "Propio; varía según la fiesta."
+      }
+    ]
+  },
+  "kyrie": {
+    "english_es": "Señor, ten piedad",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote y los ministros alternan:",
+        "eng_es": "Señor, ten piedad. Señor, ten piedad."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Señor, ten piedad."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Cristo, ten piedad. Cristo, ten piedad."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Cristo, ten piedad."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Señor, ten piedad. Señor, ten piedad."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Señor, ten piedad."
+      }
+    ]
+  },
+  "gloria": {
+    "english_es": "Gloria a Dios en las alturas",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote entona, y luego continúa:",
+        "eng_es": "Gloria a Dios en las alturas, y en la tierra paz a los hombres de buena voluntad. Te alabamos. Te bendecimos. Te adoramos. Te glorificamos. Te damos gracias por tu inmensa gloria."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Señor Dios, Rey celestial, Dios Padre todopoderoso. Señor, Hijo Unigénito, Jesucristo. Señor Dios, Cordero de Dios, Hijo del Padre."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Tú que quitas los pecados del mundo, ten piedad de nosotros. Tú que quitas los pecados del mundo, recibe nuestra súplica. Tú que estás sentado a la diestra del Padre, ten piedad de nosotros."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Porque tú solo eres Santo. Tú solo Señor. Tú solo Altísimo, Jesucristo. Con el Espíritu Santo, en la gloria de Dios Padre. Amén."
+      }
+    ]
+  },
+  "collecta": {
+    "english_es": "La Colecta",
+    "body_es": [
+      {
+        "rubric_es": null,
+        "eng_es": "Propio; varía según la fiesta."
+      }
+    ]
+  },
+  "credo": {
+    "english_es": "El Credo Niceno",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote entona, y luego continúa:",
+        "eng_es": "Creo en un solo Dios, Padre todopoderoso, Creador del cielo y de la tierra, de todo lo visible y lo invisible."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Y en un solo Señor Jesucristo, Hijo unigénito de Dios. Y nacido del Padre antes de todos los siglos. Dios de Dios, luz de luz, Dios verdadero de Dios verdadero. Engendrado, no creado, consubstancial al Padre: por quien todas las cosas fueron hechas."
+      },
+      {
+        "rubric_es": "Todos se arrodillan:",
+        "eng_es": "Que por nosotros los hombres y por nuestra salvación bajó de los cielos. Y se encarnó por obra del Espíritu Santo de María Virgen: y se hizo hombre."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Fue crucificado también por nosotros: padeció bajo Poncio Pilato, y fue sepultado. Y resucitó al tercer día, según las Escrituras. Y subió al cielo: está sentado a la diestra del Padre. Y otra vez ha de venir con gloria a juzgar a los vivos y a los muertos: y su reino no tendrá fin."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Y en el Espíritu Santo, Señor y vivificador: que procede del Padre y del Hijo. Que con el Padre y el Hijo es juntamente adorado y glorificado: que habló por los Profetas."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Y en la Iglesia, una, santa, católica y apostólica. Confieso un solo bautismo para la remisión de los pecados. Y espero la resurrección de los muertos. Y la vida del siglo venidero. Amén."
+      }
+    ]
+  },
+  "offertory_prayers": {
+    "english_es": "Oraciones del Ofertorio",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote ofrece la hostia:",
+        "eng_es": "Recibe, Padre santo, Dios todopoderoso y eterno, esta hostia inmaculada, que yo, indigno siervo tuyo, te ofrezco a ti, mi Dios vivo y verdadero, por mis innumerables pecados, ofensas y negligencias, y por todos los presentes, como también por todos los fieles cristianos vivos y difuntos: para que a mí y a ellos nos aproveche para la salvación en la vida eterna. Amén."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Oh Dios, ✠ que maravillosamente creaste la dignidad de la naturaleza humana, y más maravillosamente la restauraste: concédenos, por el misterio de esta agua y este vino, ser partícipes de la divinidad de aquel que se dignó hacerse partícipe de nuestra humanidad, Jesucristo, tu Hijo, nuestro Señor: que contigo vive y reina en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+      },
+      {
+        "rubric_es": "El sacerdote ofrece el cáliz:",
+        "eng_es": "Te ofrecemos, Señor, el cáliz de salvación, implorando tu clemencia: para que suba con olor de suavidad a la presencia de tu divina Majestad, por nuestra salvación y la de todo el mundo. Amén."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Con espíritu de humildad y corazón contrito seamos recibidos por ti, Señor: y de tal manera se haga hoy nuestro sacrificio en tu presencia, que te sea agradable, Señor Dios."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Ven, Santificador, Dios todopoderoso y eterno: y bendice ✠ este sacrificio, preparado para tu santo nombre."
+      },
+      {
+        "rubric_es": "El sacerdote se lava las manos:",
+        "eng_es": "Lavaré mis manos entre los inocentes: y rodearé tu altar, Señor. Para oír la voz de tu alabanza, y contar todas tus maravillas. Señor, he amado la hermosura de tu casa, y el lugar donde habita tu gloria. No pierdas, oh Dios, mi alma con los impíos, ni mi vida con los hombres sanguinarios. En cuyas manos están las iniquidades: cuya diestra está llena de dádivas. Mas yo he andado en mi inocencia: redímeme y ten misericordia de mí. Mi pie ha permanecido en el camino recto: en las asambleas te bendeciré, Señor. Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+      },
+      {
+        "rubric_es": "Inclinado, el sacerdote dice:",
+        "eng_es": "Recibe, Santísima Trinidad, esta oblación que te ofrecemos en memoria de la Pasión, Resurrección y Ascensión de Jesucristo, nuestro Señor: y en honor de la bienaventurada siempre Virgen María, del bienaventurado San Juan Bautista, de los santos Apóstoles San Pedro y San Pablo, de éstos y de todos los Santos: para que a ellos les sirva de honor y a nosotros nos aproveche para la salvación: y ellos se dignen interceder por nosotros en el cielo, cuya memoria celebramos en la tierra. Por el mismo Cristo nuestro Señor. Amén."
+      },
+      {
+        "rubric_es": "Vuelto hacia el pueblo:",
+        "eng_es": "℣. Orad, hermanos: para que mi sacrificio, que también es vuestro, sea agradable a Dios Padre todopoderoso.\n℟. El Señor reciba de tus manos este sacrificio, para alabanza y gloria de su nombre, para nuestro provecho y el de toda su santa Iglesia."
+      }
+    ]
+  },
+  "preface": {
+    "english_es": "Prefacio",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio continúa (varía según el tiempo):",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: por Cristo nuestro Señor. Por quien los Ángeles alaban tu majestad, las Dominaciones la adoran, las Potestades la temen. Los cielos y las Virtudes de los cielos, y los bienaventurados Serafines la celebran con común alegría. Con los cuales te rogamos que admitas también nuestras voces, diciendo con humilde confesión:"
+      }
+    ]
+  },
+  "preface-advent": {
+    "english_es": "Prefacio de Adviento",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de Adviento:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: por Cristo nuestro Señor. A quien tu misericordia dio como Salvador a los hombres perdidos, para que esperasen al que nos instruyó con sus promesas, y, cuando viniera, reconociesen al que nos previno con la luz de la divina caridad. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-nativity": {
+    "english_es": "Prefacio de la Natividad",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de la Natividad:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Porque por el misterio del Verbo encarnado, un nuevo resplandor de tu claridad ha brillado a los ojos de nuestra alma: para que, conociendo a Dios visiblemente, seamos por Él arrebatados al amor de las cosas invisibles. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-lent": {
+    "english_es": "Prefacio de Cuaresma",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de Cuaresma:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Que con el ayuno corporal reprimes los vicios, elevas el alma, y otorgas la virtud y el premio: por Cristo nuestro Señor. Por quien los Ángeles alaban tu majestad, las Dominaciones la adoran, las Potestades la temen. Los cielos y las Virtudes de los cielos, y los bienaventurados Serafines la celebran con común alegría. Con los cuales te rogamos que admitas también nuestras voces, diciendo con humilde confesión:"
+      }
+    ]
+  },
+  "preface-cross": {
+    "english_es": "Prefacio de la Santa Cruz",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de la Santa Cruz:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Que pusiste la salvación del género humano en el árbol de la Cruz: para que de donde vino la muerte, de allí renaciese la vida; y el que en un árbol venció, en un árbol fuese también vencido: por Cristo nuestro Señor. Por quien los Ángeles alaban tu majestad, las Dominaciones la adoran, las Potestades la temen. Los cielos y las Virtudes de los cielos, y los bienaventurados Serafines la celebran con común alegría. Con los cuales te rogamos que admitas también nuestras voces, diciendo con humilde confesión:"
+      }
+    ]
+  },
+  "preface-easter": {
+    "english_es": "Prefacio de Pascua",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de Pascua:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable: alabarte, Señor, en todo tiempo, pero con mayor gloria en este día en que Cristo, nuestra Pascua, ha sido inmolado. Porque Él es el verdadero Cordero que quitó los pecados del mundo. El cual, muriendo, destruyó nuestra muerte, y, resucitando, reparó nuestra vida. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-ascension": {
+    "english_es": "Prefacio de la Ascensión",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de la Ascensión:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: por Cristo nuestro Señor. El cual, después de su Resurrección, se apareció manifiestamente a todos sus discípulos, y a la vista de ellos fue elevado al cielo, para hacernos partícipes de su divinidad. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-pentecost": {
+    "english_es": "Prefacio del Espíritu Santo",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio del Espíritu Santo:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: por Cristo nuestro Señor. El cual, subiendo sobre todos los cielos y sentado a tu diestra, derramó el Espíritu Santo prometido sobre los hijos de adopción. Por lo cual el mundo entero, en toda la redondez de la tierra, se desborda de alegría. Y también las Virtudes celestiales y las angélicas Potestades cantan a una el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-trinity": {
+    "english_es": "Prefacio de la Santísima Trinidad",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de la Santísima Trinidad:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Que con tu Hijo Unigénito y el Espíritu Santo eres un solo Dios, un solo Señor: no en la singularidad de una sola persona, sino en la Trinidad de una sola substancia. Pues lo que de tu gloria creemos, porque tú lo revelaste, lo mismo sentimos de tu Hijo, lo mismo del Espíritu Santo, sin diferencia ni distinción. De suerte que, confesando una verdadera y eterna Divinidad, adoramos la propiedad en las personas, la unidad en la esencia y la igualdad en la majestad. A la cual alaban los Ángeles y los Arcángeles, los Querubines y los Serafines, que no cesan de aclamar cada día, diciendo a una voz:"
+      }
+    ]
+  },
+  "preface-bvm": {
+    "english_es": "Prefacio de la Santísima Virgen María",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de la Santísima Virgen María:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Y alabarte, bendecirte y glorificarte en la Festividad de la bienaventurada siempre Virgen María. La cual concibió a tu Unigénito por obra del Espíritu Santo y, permaneciendo la gloria de su virginidad, dio al mundo la luz eterna, Jesucristo nuestro Señor. Por quien los Ángeles alaban tu majestad, las Dominaciones la adoran, las Potestades la temen. Los cielos y las Virtudes de los cielos, y los bienaventurados Serafines la celebran con común alegría. Con los cuales te rogamos que admitas también nuestras voces, diciendo con humilde confesión:"
+      }
+    ]
+  },
+  "preface-apostles": {
+    "english_es": "Prefacio de los Apóstoles",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de los Apóstoles:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable: suplicarte humildemente, Señor, que tú, Pastor eterno, no desampares a tu rebaño: sino que por tus bienaventurados Apóstoles lo guardes con continua protección. Para que sea gobernado por los mismos rectores que, como vicarios de tu obra, le diste por pastores. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-epiphany": {
+    "english_es": "Prefacio de la Epifanía",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de la Epifanía:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Porque, cuando tu Unigénito se manifestó en la substancia de nuestra carne mortal, nos reparó con la nueva luz de su inmortalidad. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-joseph": {
+    "english_es": "Prefacio de San José",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de San José:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Y magnificarte, bendecirte y glorificarte con las debidas alabanzas en la Festividad de San José. El cual, varón justo, fue dado por ti como Esposo a la Virgen Madre de Dios; y, siervo fiel y prudente, fue constituido sobre tu Familia: para guardar, haciendo las veces de padre, a tu Unigénito, concebido por obra del Espíritu Santo, Jesucristo nuestro Señor. Por quien los Ángeles alaban tu majestad, las Dominaciones la adoran, las Potestades la temen. Los cielos y las Virtudes de los cielos, y los bienaventurados Serafines la celebran con común alegría. Con los cuales te rogamos que admitas también nuestras voces, diciendo con humilde confesión:"
+      }
+    ]
+  },
+  "preface-requiem": {
+    "english_es": "Prefacio de Difuntos",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de Difuntos:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: por Cristo nuestro Señor. En quien brilló para nosotros la esperanza de la resurrección bienaventurada: para que, a los que entristece la certeza de morir, los consuele la promesa de la inmortalidad futura. Pues para tus fieles, Señor, la vida se cambia, no se acaba: y, deshecha la casa de esta morada terrenal, se les prepara una eterna habitación en los cielos. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-sacred-heart": {
+    "english_es": "Prefacio del Sagrado Corazón",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio del Sagrado Corazón:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Que quisiste que tu Unigénito, pendiente de la Cruz, fuese traspasado por la lanza de un soldado: para que su Corazón abierto, sagrario de la divina largueza, derramase sobre nosotros torrentes de misericordia y de gracia: y el que nunca cesó de arder en amor por nosotros, fuese descanso para los piadosos, y para los penitentes quedase abierto como refugio de salvación. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "preface-christ-king": {
+    "english_es": "Prefacio de Cristo Rey",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote canta o dice el diálogo:",
+        "eng_es": "℣. Por todos los siglos de los siglos. ℟. Amén.\n℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\n℣. Levantad los corazones. ℟. Los tenemos levantados hacia el Señor.\n℣. Demos gracias al Señor, nuestro Dios. ℟. Digno y justo es."
+      },
+      {
+        "rubric_es": "El Prefacio propio de Cristo Rey:",
+        "eng_es": "En verdad es digno y justo, equitativo y saludable, darte gracias en todo tiempo y lugar, Señor, Padre santo, Dios todopoderoso y eterno: Que ungiste con óleo de alegría a tu Hijo unigénito, nuestro Señor Jesucristo, Sacerdote eterno y Rey del universo: para que, ofreciéndose a sí mismo en el ara de la cruz como hostia inmaculada y pacífica, consumara el sacramento de la redención humana: y, sometidas a su imperio todas las criaturas, entregase a tu inmensa Majestad un reino eterno y universal: reino de verdad y de vida, reino de santidad y de gracia, reino de justicia, de amor y de paz. Y por eso, con los Ángeles y los Arcángeles, con los Tronos y las Dominaciones, y con toda la milicia del ejército celestial, cantamos el himno de tu gloria, diciendo sin fin:"
+      }
+    ]
+  },
+  "sanctus": {
+    "english_es": "Santo, Santo, Santo",
+    "body_es": [
+      {
+        "rubric_es": "Suena la campanilla. Todos dicen:",
+        "eng_es": "Santo, Santo, Santo es el Señor, Dios de los ejércitos."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Llenos están los cielos y la tierra de tu gloria. Hosanna en las alturas."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "✠ Bendito el que viene en el nombre del Señor. Hosanna en las alturas."
+      }
+    ]
+  },
+  "pater": {
+    "english_es": "El Padrenuestro",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote junta las manos y dice:",
+        "eng_es": "Oremos: Amonestados con preceptos saludables, e instruidos por la divina enseñanza, nos atrevemos a decir:"
+      },
+      {
+        "rubric_es": "Extendiendo las manos, el sacerdote continúa:",
+        "eng_es": "Padre nuestro, que estás en los cielos, santificado sea el tu nombre. Venga a nos el tu reino. Hágase tu voluntad, así en la tierra como en el cielo."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "El pan nuestro de cada día dánosle hoy, y perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores. Y no nos dejes caer en la tentación."
+      },
+      {
+        "rubric_es": "Los ministros responden:",
+        "eng_es": "℟. Mas líbranos del mal."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℣. Amén."
+      }
+    ]
+  },
+  "libera": {
+    "english_es": "Líbranos",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote toma la patena y dice en silencio:",
+        "eng_es": "Líbranos, te suplicamos, Señor, de todos los males pasados, presentes y futuros: y por la intercesión de la bienaventurada y gloriosa siempre Virgen María, Madre de Dios, con tus bienaventurados Apóstoles San Pedro y San Pablo, y San Andrés, y todos los Santos, da propicio la paz en nuestros días: para que, ayudados con el auxilio de tu misericordia, estemos siempre libres de pecado y seguros de toda perturbación."
+      },
+      {
+        "rubric_es": "Parte la Hostia sobre el cáliz:",
+        "eng_es": "Por el mismo Jesucristo, nuestro Señor, tu Hijo. Que contigo vive y reina en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. ℟. Amén."
+      },
+      {
+        "rubric_es": "Hace la señal con una Partícula sobre el cáliz:",
+        "eng_es": "℣. La paz ✠ del Señor sea ✠ siempre con vos✠otros."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Y con tu espíritu."
+      },
+      {
+        "rubric_es": "Deja caer la Partícula en el cáliz, diciendo:",
+        "eng_es": "Esta mezcla y consagración del Cuerpo y de la Sangre de nuestro Señor Jesucristo, sea para nosotros que la recibimos, prenda de vida eterna. Amén."
+      }
+    ]
+  },
+  "agnus": {
+    "english_es": "Cordero de Dios",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote se golpea el pecho; todos dicen:",
+        "eng_es": "Cordero de Dios, que quitas los pecados del mundo: ten piedad de nosotros."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Cordero de Dios, que quitas los pecados del mundo: ten piedad de nosotros."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Cordero de Dios, que quitas los pecados del mundo: danos la paz."
+      }
+    ]
+  },
+  "agnus-requiem": {
+    "english_es": "Cordero de Dios (Réquiem)",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote se golpea el pecho; todos dicen:",
+        "eng_es": "Cordero de Dios, que quitas los pecados del mundo: dales el descanso."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Cordero de Dios, que quitas los pecados del mundo: dales el descanso."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Cordero de Dios, que quitas los pecados del mundo: dales el descanso eterno."
+      }
+    ]
+  },
+  "orationes-ante-communionem": {
+    "english_es": "Oraciones antes de la Comunión",
+    "body_es": [
+      {
+        "rubric_es": "Con las manos juntas y apoyadas sobre el altar, inclinado, el sacerdote dice:",
+        "eng_es": "Señor Jesucristo, que dijiste a tus Apóstoles: La paz os dejo, mi paz os doy: no mires mis pecados, sino la fe de tu Iglesia; y dígnate darle la paz y la unidad conforme a tu voluntad: Tú que vives y reinas, Dios, por todos los siglos de los siglos. Amén."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, con la cooperación del Espíritu Santo, diste la vida al mundo por tu muerte: líbrame, por este tu sacrosanto Cuerpo y Sangre, de todas mis iniquidades y de todos los males: y haz que cumpla siempre tus mandamientos, y no permitas que jamás me separe de ti: Que con el mismo Dios Padre y el Espíritu Santo vives y reinas, Dios, por los siglos de los siglos. Amén."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "La comunión de tu Cuerpo, Señor Jesucristo, que yo, indigno, me atrevo a recibir, no se me convierta en juicio y condenación: sino que, por tu piedad, me aproveche para defensa del alma y del cuerpo, y como remedio saludable: Tú que vives y reinas con Dios Padre en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+      }
+    ]
+  },
+  "panem-caelestem": {
+    "english_es": "El Pan del cielo",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote hace genuflexión, se levanta y dice:",
+        "eng_es": "Recibiré el Pan del cielo, e invocaré el nombre del Señor."
+      }
+    ]
+  },
+  "confiteor-communion": {
+    "english_es": "Comunión de los fieles",
+    "body_es": [
+      {
+        "rubric_es": "Antes de distribuir la Sagrada Comunión, el ministro recita el Confíteor en nombre del pueblo:",
+        "eng_es": "Yo, pecador, me confieso a Dios todopoderoso, a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los santos Apóstoles San Pedro y San Pablo, a todos los Santos, y a ti, padre: que pequé gravemente con el pensamiento, palabra y obra: por mi culpa, por mi culpa, por mi grandísima culpa."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Dios todopoderoso tenga misericordia de vosotros, y perdonados vuestros pecados, os lleve a la vida eterna. ℟. Amén.\nEl Señor todopoderoso y misericordioso os conceda la indulgencia, la absolución y la remisión de vuestros pecados. ℟. Amén."
+      },
+      {
+        "rubric_es": "El sacerdote, sosteniendo una Hostia sobre el copón, se vuelve al pueblo y dice:",
+        "eng_es": "℣. He aquí el Cordero de Dios, he aquí al que quita los pecados del mundo."
+      },
+      {
+        "rubric_es": "El pueblo responde tres veces, golpeándose el pecho:",
+        "eng_es": "℟. Señor, yo no soy digno de que entres en mi morada: pero di una sola palabra y mi alma será sana."
+      }
+    ]
+  },
+  "domine": {
+    "english_es": "Señor, yo no soy digno",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote dice tres veces, golpeándose el pecho:",
+        "eng_es": "Señor, yo no soy digno de que entres en mi morada: pero di una sola palabra y mi alma será sana."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Señor, yo no soy digno de que entres en mi morada: pero di una sola palabra y mi alma será sana."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Señor, yo no soy digno de que entres en mi morada: pero di una sola palabra y mi alma será sana."
+      }
+    ]
+  },
+  "communio-sacerdotis": {
+    "english_es": "Comunión del sacerdote",
+    "body_es": [
+      {
+        "rubric_es": "Haciendo la señal de la Cruz con la Hostia sobre la patena, el sacerdote dice:",
+        "eng_es": "El Cuerpo de nuestro Señor Jesucristo guarde mi alma para la vida eterna. Amén."
+      },
+      {
+        "rubric_es": "Recoge los fragmentos, y luego dice:",
+        "eng_es": "¿Qué retornaré al Señor por todo lo que Él me ha dado? Tomaré el cáliz de la salvación, e invocaré el nombre del Señor. Alabando invocaré al Señor, y quedaré a salvo de mis enemigos."
+      },
+      {
+        "rubric_es": "Haciendo la señal de la Cruz con el cáliz, el sacerdote dice:",
+        "eng_es": "La Sangre de nuestro Señor Jesucristo guarde mi alma para la vida eterna. Amén."
+      }
+    ]
+  },
+  "ablutiones": {
+    "english_es": "Abluciones",
+    "body_es": [
+      {
+        "rubric_es": "Después de recibir la Preciosa Sangre, el sacerdote dice:",
+        "eng_es": "Lo que hemos tomado con la boca, Señor, recibámoslo con alma pura: y este don temporal se nos convierta en remedio sempiterno."
+      },
+      {
+        "rubric_es": "En la segunda ablución, el sacerdote dice:",
+        "eng_es": "Tu Cuerpo, Señor, que he recibido, y tu Sangre, que he bebido, se adhieran a mis entrañas: y concede que no quede mancha alguna de pecado en mí, a quien han renovado estos puros y santos sacramentos: Tú que vives y reinas por los siglos de los siglos. Amén."
+      }
+    ]
+  },
+  "placeat": {
+    "english_es": "Séate agradable, Trinidad santa",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote, inclinado, dice en silencio:",
+        "eng_es": "Séate agradable, Trinidad santa, el obsequio de mi servidumbre: y concede que el sacrificio que yo, indigno, he ofrecido a los ojos de tu majestad, te sea aceptable, y que a mí y a todos aquellos por quienes lo he ofrecido, nos alcance, por tu misericordia, el perdón. Por Cristo nuestro Señor. Amén."
+      }
+    ]
+  },
+  "benedictio": {
+    "english_es": "La Bendición",
+    "body_es": [
+      {
+        "rubric_es": "El sacerdote bendice al pueblo:",
+        "eng_es": "℣. Bendígaos Dios todopoderoso, Padre, e Hijo, ✠ y Espíritu Santo. ℟. Amén."
+      }
+    ]
+  },
+  "ite": {
+    "english_es": "Idos, la Misa ha terminado",
+    "body_es": [
+      {
+        "rubric_es": "El diácono (o el sacerdote en la Misa rezada) canta o dice:",
+        "eng_es": "℣. Idos, la Misa ha terminado."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Demos gracias a Dios."
+      }
+    ]
+  },
+  "ite-alleluia": {
+    "english_es": "Idos, la Misa ha terminado, aleluya, aleluya",
+    "body_es": [
+      {
+        "rubric_es": "Durante la Octava de Pascua, la despedida añade un doble Aleluya:",
+        "eng_es": "℣. Idos, la Misa ha terminado, aleluya, aleluya."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Demos gracias a Dios, aleluya, aleluya."
+      }
+    ]
+  },
+  "benedicamus": {
+    "english_es": "Bendigamos al Señor",
+    "body_es": [
+      {
+        "rubric_es": "Cuando no se ha dicho el Gloria, el diácono (o el sacerdote) dice:",
+        "eng_es": "℣. Bendigamos al Señor."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Demos gracias a Dios."
+      }
+    ]
+  },
+  "requiescant": {
+    "english_es": "Descansen en paz",
+    "body_es": [
+      {
+        "rubric_es": "En las Misas de Réquiem, en lugar del Ite missa est o del Benedicámus Dómino:",
+        "eng_es": "℣. Descansen en paz."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Amén."
+      }
+    ]
+  },
+  "ultimum": {
+    "english_es": "El Último Evangelio · Prólogo de San Juan",
+    "body_es": [
+      {
+        "rubric_es": "En el lado del Evangelio del altar:",
+        "eng_es": "℣. El Señor sea con vosotros. ℟. Y con tu espíritu. Principio del santo Evangelio según San Juan. ℟. Gloria a ti, Señor."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "En el principio era el Verbo, y el Verbo estaba en Dios, y el Verbo era Dios. Él estaba en el principio en Dios."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Todas las cosas fueron hechas por Él: y sin Él nada se hizo de cuanto ha sido hecho. En Él estaba la vida, y la vida era la luz de los hombres: y la luz luce en las tinieblas, y las tinieblas no la comprendieron."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Hubo un hombre enviado de Dios, que se llamaba Juan. Éste vino como testigo, para dar testimonio de la luz, a fin de que todos creyesen por él. No era él la luz, sino que vino para dar testimonio de la luz."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Era la luz verdadera, que ilumina a todo hombre que viene a este mundo. En el mundo estaba, y el mundo fue hecho por Él, y el mundo no le conoció."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Vino a los suyos, y los suyos no le recibieron. Mas a cuantos le recibieron, les dio poder de llegar a ser hijos de Dios, a los que creen en su nombre: los cuales no nacieron de la sangre, ni de la voluntad de la carne, ni de la voluntad de varón, sino de Dios."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Y el Verbo se hizo carne, y habitó entre nosotros: y vimos su gloria, gloria como del Unigénito del Padre, lleno de gracia y de verdad."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Demos gracias a Dios."
+      }
+    ]
+  },
+  "ultimum-palm-sunday": {
+    "english_es": "El Último Evangelio · Domingo de Ramos (anterior a 1955)",
+    "body_es": [
+      {
+        "rubric_es": "El Domingo de Ramos en el rito anterior a 1955, el Último Evangelio es la perícopa de la entrada en Jerusalén (Mt 21, 1-9), en lugar del Prólogo de San Juan.",
+        "eng_es": "℣. El Señor sea con vosotros. ℟. Y con tu espíritu. Continuación ✠ del santo Evangelio según San Mateo. ℟. Gloria a ti, Señor."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "En aquel tiempo: Acercándose Jesús a Jerusalén, y llegando a Betfagé, junto al monte de los Olivos, envió a dos discípulos, diciéndoles: Id a la aldea que está enfrente de vosotros, y luego hallaréis una asna atada y un pollino con ella: desatadla y traédmelos: y si alguien os dijere algo, decid que el Señor los necesita, y al punto los dejará llevar."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Todo esto sucedió para que se cumpliese lo que fue dicho por el Profeta: Decid a la hija de Sión: He aquí que tu Rey viene a ti, manso, sentado sobre un asna y un pollino, hijo de animal de yugo."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Fueron, pues, los discípulos, e hicieron como Jesús les había mandado. Y trajeron el asna y el pollino: y pusieron sobre ellos sus mantos, y le hicieron sentar encima. Y una gran muchedumbre tendía sus mantos por el camino: otros cortaban ramas de los árboles y las tendían por el camino."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Y las turbas que iban delante y las que seguían detrás clamaban, diciendo: ¡Hosanna al Hijo de David! ¡Bendito el que viene en el nombre del Señor! ¡Hosanna en las alturas!"
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "℟. Demos gracias a Dios."
+      }
+    ]
+  },
+  "leonine": {
+    "english_es": "Oraciones Leoninas",
+    "body_es": [
+      {
+        "rubric_es": "Después de la Misa rezada, el sacerdote y los fieles, de rodillas, dicen tres Avemarías:",
+        "eng_es": "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén. (×3)"
+      },
+      {
+        "rubric_es": "Luego la Salve:",
+        "eng_es": "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve. A ti llamamos los desterrados hijos de Eva; a ti suspiramos, gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clemente, oh piadosa, oh dulce Virgen María!"
+      },
+      {
+        "rubric_es": "Luego:",
+        "eng_es": "℣. Ruega por nosotros, santa Madre de Dios.\n℟. Para que seamos dignos de alcanzar las promesas de Cristo."
+      },
+      {
+        "rubric_es": "El sacerdote dice la Colecta:",
+        "eng_es": "Oremos. Oh Dios, refugio nuestro y fortaleza, mira propicio al pueblo que a ti clama; y por la intercesión de la gloriosa e inmaculada Virgen María, Madre de Dios, de San José, su Esposo, de tus santos Apóstoles San Pedro y San Pablo, y de todos los Santos, escucha, misericordioso y benigno, las súplicas que te dirigimos por la conversión de los pecadores, por la libertad y exaltación de la santa Madre Iglesia. Por el mismo Cristo nuestro Señor. Amén."
+      },
+      {
+        "rubric_es": "Oración a San Miguel Arcángel:",
+        "eng_es": "San Miguel Arcángel, defiéndenos en la batalla; sé nuestro amparo contra la perversidad y asechanzas del demonio. Que Dios manifieste sobre él su poder, es nuestra humilde súplica: y tú, Príncipe de la milicia celestial, arroja al infierno, con el divino poder, a Satanás y a los demás espíritus malignos que vagan por el mundo para la perdición de las almas. Amén."
+      },
+      {
+        "rubric_es": null,
+        "eng_es": "Sacratísimo Corazón de Jesús, ten piedad de nosotros. (×3)"
+      }
+    ]
   }
 }

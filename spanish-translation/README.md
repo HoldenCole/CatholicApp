@@ -53,14 +53,14 @@ so integration cannot silently misalign.
 
 ## Phase 2 (in progress — large corpora)
 
-- `missal.json` Ordinary sections — **the Canon Missæ is DONE**
-  (`missal_es.json`, partial-coverage overlay: covered sections align
-  line-for-line, everything else falls back to English) along with the
-  proper Communicantes/Hanc igitur (`canon_variants_es.json`); the 1962
+- `missal.json` Ordinary — **COMPLETE: all 47 sections** in
+  `missal_es.json` (Prayers at the Foot of the Altar through the Leonine
+  Prayers, all 17 prefaces, the Canon, both Last Gospels), plus the
+  proper Communicantes/Hanc igitur in `canon_variants_es.json`; the 1962
   St Joseph clause inserts into the Spanish text at render time, anchored
   on ": y también de tus bienaventurados Apóstoles" (the validator pins
-  the anchor). Remaining ordinary sections translate section by section
-  into the same file.
+  the anchor). The overlay remains partial-capable for any future
+  sections.
 - `ordo_names_en.json` (1,184 feast names) — mostly pattern-translatable by
   script ("Dominica II Post Pentecosten" → "II Domingo después de
   Pentecostés") plus a saint-name table.

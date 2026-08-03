@@ -145,9 +145,25 @@ class SpanishOverlayQA {
             val hanc = ContentStore.canonVariant("hanc_igitur", "pentecost")
             assertTrue(hanc!!.second.contains("regenerar por el agua y el Espíritu Santo"))
 
-            // Sections outside the covered set stay English (safe fallback).
+            // The whole Ordinary is covered — spot-check the people's parts.
             val sanctus = ContentStore.missal.first { it.slug == "sanctus" }
-            assertTrue(sanctus.body[0].eng.startsWith("Holy, Holy, Holy"))
+            assertTrue(sanctus.body[0].eng.startsWith("Santo, Santo, Santo"))
+            val gloria = ContentStore.missal.first { it.slug == "gloria" }
+            assertTrue(gloria.body[0].eng.startsWith("Gloria a Dios en las alturas"))
+            val credo = ContentStore.missal.first { it.slug == "credo" }
+            assertTrue(credo.body[0].eng.startsWith("Creo en un solo Dios"))
+            val ultimum = ContentStore.missal.first { it.slug == "ultimum" }
+            assertTrue(ultimum.body[1].eng.startsWith("En el principio era el Verbo"))
+            // Every section is overlaid — a line-count mismatch would leave a
+            // section silently English. The English texts begin "We/I/O/May/
+            // It is truly/The/Go/Let/World…"; none begins like these:
+            for (s in ContentStore.missal) {
+                assertTrue("${s.slug} appears to have kept its English body",
+                    !s.body[0].eng.startsWith("We ") &&
+                        !s.body[0].eng.startsWith("It is truly") &&
+                        !s.body[0].eng.startsWith("I confess") &&
+                        !s.body[0].eng.startsWith("I will go"))
+            }
         } finally {
             ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
         }
