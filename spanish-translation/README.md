@@ -76,13 +76,31 @@ so integration cannot silently misalign.
   for the specials). At runtime the Spanish map merges over the English
   one, so any future uncovered key falls back to English, then Latin.
   Regenerate after ordo changes, then sync.
-- Mass propers — **tranche-based import from DO's own Espanol tree has
-  begun** (`scripts/import_spanish_propers.py` reading a local
+- Mass propers — **tranche-based import from DO's own Espanol tree**
+  (`scripts/import_spanish_propers.py` reading a local
   divinum-officium clone; MIT-licensed like the English data we already
-  ship). Tranches 1–4: 132 formularies — Advent through Holy Wednesday (Advent, the Christmas cycle, Epiphany weeks 1–2, Septuagesima, all of Lent, Palm Sunday through Spy Wednesday), ALL of Eastertide — the Easter octave, the Sundays after Easter, the Rogation and Patronage-of-St-Joseph Masses, Ascension and its octave, the vigil and octave of Pentecost — as tier-2 supplements of our own (163 distinct texts translated from the Latin, deduplicated so identical Latin gets identical Spanish; DO's Espanol Eastertide is name-only stubs), Pentecost with its Ember Friday, and every Sunday after Pentecost including Trinity and Corpus Christi (green ferias inherit their Sunday's formulary at render time, so they follow automatically),
-  antiphons and orations only (plus four tier-2 supplements of our own for single fields DO's Espanol omits, e.g. the Septuagesima secreta), with a per-formulary completeness gate (a
-  day is fully Spanish or stays fully English; DO's Espanol gaps, e.g.
-  Epiphany weeks 3–6 and Easter Sunday, fall back automatically).
+  ship). Tranches 1–5: **362 formularies / 2,331 fields — the ENTIRE
+  temporal cycle** (every Sunday, feria, vigil, Ember day, and the whole
+  Triduum: the Chrism Mass, Maundy Thursday, Good Friday with the
+  Improperia and its rubric-note fields, and the Easter Vigil, plus the
+  1955 "t"/"r" variants) **and 180 sanctoral feasts** including the
+  first-class days (Circumcision, St Joseph, Sts Peter & Paul, the
+  Assumption, the Immaculate Conception…). Three mechanisms compose:
+  (1) DO's Espanol day files (antiphons and orations), (2) our tier-2
+  supplements (`propers_supplements_es.json`, 57 formularies / 334
+  fields translated from the Latin — all of Eastertide, the Triduum, and
+  single missing orations), and (3) a commune line table
+  (`propers_commune_es.json`, 188 Latin-line → Spanish-line pairs) that
+  the importer composes per-field, so the antiphons and orations the
+  sanctoral shares (Os justi, Státuit, Salve sancta parens, the Requiem
+  texts…) are translated once and fan out — identical Latin always gets
+  identical Spanish (a same-Latin propagation pass also fills the 1955
+  variants and resumed Sundays from their base formularies). The
+  per-formulary completeness gate still applies: a day is fully Spanish
+  or stays fully English (graduale exempt), so the ~300 sanctoral days
+  whose proper orations aren't translated yet fall back automatically.
+  The tranche-5 sweep also fixed a doubled "Amén. Amén." on every
+  DO-derived conclusion (the Espanol formulas already end in Amén).
   **Scripture ([Lectio]/[Evangelium]) is deliberately excluded**: DO's
   Spanish readings are in a modern register of uncertain provenance —
   they wait for a public-domain source decision (Torres Amat, 1825).

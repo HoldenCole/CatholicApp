@@ -181,22 +181,26 @@ final class ContentStore {
         // per-field vernacular replacement; uncovered days and the deferred
         // scripture fields keep their English.
         if let es = load("missal_propers_es", as: [String: [String: String]].self) {
-            for (key, fields) in es {
-                guard var entry = missalTempora[key] else { continue }
-                for (field, text) in fields {
-                    switch field {
-                    case "introitus":    entry.introitus?.eng = text
-                    case "oratio":       entry.oratio?.eng = text
-                    case "graduale":     entry.graduale?.eng = text
-                    case "offertorium":  entry.offertorium?.eng = text
-                    case "secreta":      entry.secreta?.eng = text
-                    case "communio":     entry.communio?.eng = text
-                    case "postcommunio": entry.postcommunio?.eng = text
-                    default: break
+            func overlay(_ dict: inout [String: MissalProperEntry]) {
+                for (key, fields) in es {
+                    guard var entry = dict[key] else { continue }
+                    for (field, text) in fields {
+                        switch field {
+                        case "introitus":    entry.introitus?.eng = text
+                        case "oratio":       entry.oratio?.eng = text
+                        case "graduale":     entry.graduale?.eng = text
+                        case "offertorium":  entry.offertorium?.eng = text
+                        case "secreta":      entry.secreta?.eng = text
+                        case "communio":     entry.communio?.eng = text
+                        case "postcommunio": entry.postcommunio?.eng = text
+                        default: break
+                        }
                     }
+                    dict[key] = entry
                 }
-                missalTempora[key] = entry
             }
+            overlay(&missalTempora)
+            overlay(&missalSanctoral)
         }
 
         if let es = load("prayers_es", as: [String: PrayerES].self) {

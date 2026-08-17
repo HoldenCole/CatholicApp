@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Import Spanish Mass propers from the Divinum Officium Espanol tree.
 
-Tranche-based by design: a WHITELIST of temporal keys imports only when the
-Spanish source passes a per-formulary completeness gate — a day either gets
-its full set of orations and antiphons in Spanish or stays entirely English.
+Tranche-based by design: a WHITELIST of temporal and sanctoral keys imports
+only when the Spanish source passes a per-formulary completeness gate — a
+day either gets its full set of orations and antiphons in Spanish or stays
+entirely English. Three sources compose: DO's Espanol day files, our own
+supplements (propers_supplements_es.json), and the commune line table
+(propers_commune_es.json) which translates shared Latin lines once and
+fans them out wherever the same Latin recurs.
 Scripture ([Lectio]/[Evangelium]) is deliberately NOT imported: the DO
 Spanish readings are in a modern register of uncertain provenance; they wait
 for a public-domain source decision (Torres Amat).
@@ -31,7 +35,8 @@ OUT = ROOT / "spanish-translation" / "missal_propers_es.json"
 # Tranche 1: Advent through Time after Epiphany.
 # Tranche 2: Septuagesima (quadp) through Lent and Holy Week (quad).
 # Tranche 3: Eastertide (pasc) and the season after Pentecost (pent).
-TRANCHE = re.compile(r"^(adv|nat|epi|quad|pasc|pent)")
+# Tranche 5: the sanctoral cycle (MM-DD keys, DO Sancti tree).
+TRANCHE = re.compile(r"^(adv|nat|epi|quad|pasc|pent|\d\d\d?-)")
 
 # Our own tier-2 supplements: fields the DO Espanol files omit, translated
 # from the Latin in spanish-translation/propers_supplements_es.json (built
@@ -41,6 +46,84 @@ TRANCHE = re.compile(r"^(adv|nat|epi|quad|pasc|pent)")
 SUPPLEMENTS_PATH = ROOT / "spanish-translation" / "propers_supplements_es.json"
 SUPPLEMENTS = (json.load(open(SUPPLEMENTS_PATH, encoding="utf-8"))
                if SUPPLEMENTS_PATH.exists() else {})
+
+# Latin-line -> Spanish-line table for the shared commune texts (our own
+# tier-2 translations; see spanish-translation/propers_commune_es.json).
+# Keys are alleluia-normalized lines; compose_from_lines() re-attaches the
+# stripped "(Allelúja…)" / sentence-final "Allelúja…" markers in Spanish.
+COMMUNE_PATH = ROOT / "spanish-translation" / "propers_commune_es.json"
+COMMUNE = (json.load(open(COMMUNE_PATH, encoding="utf-8"))
+           if COMMUNE_PATH.exists() else {})
+
+GLORIA_ES = ("Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en "
+             "el principio, ahora y siempre, por los siglos de los siglos. "
+             "Amén.")
+_PER_DOM_ES = ("Por nuestro Señor Jesucristo, tu Hijo, que vive y reina "
+               "contigo en la unidad del Espíritu Santo, Dios, por todos "
+               "los siglos de los siglos. Amén.")
+CONCL_ES = {
+    ("Per Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et "
+     "regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. "
+     "Amen."): _PER_DOM_ES,
+    ("Per Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et "
+     "regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. "
+     "Amen.."): _PER_DOM_ES,
+    ("Per Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et "
+     "regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. "
+     "Amen."): _PER_DOM_ES,
+    ("Per eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum "
+     "vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula "
+     "sæculórum. Amen."):
+        "Por el mismo Jesucristo nuestro Señor, tu Hijo, que vive y reina "
+        "contigo en la unidad del Espíritu Santo, Dios, por todos los "
+        "siglos de los siglos. Amén.",
+    ("Per Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et "
+     "regnat in unitáte ejúsdem Spíritus Sancti, Deus, per ómnia sǽcula "
+     "sæculórum. Amen."):
+        "Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo "
+        "en la unidad del mismo Espíritu Santo, Dios, por todos los siglos "
+        "de los siglos. Amén.",
+    ("Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per "
+     "ómnia sǽcula sæculórum. Amen."):
+        "Que contigo vive y reina en la unidad del Espíritu Santo, Dios, "
+        "por todos los siglos de los siglos. Amén.",
+    ("Qui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, "
+     "per ómnia sǽcula sæculórum. Amen."):
+        "Tú que vives y reinas con Dios Padre en la unidad del Espíritu "
+        "Santo, y eres Dios por todos los siglos de los siglos. Amén.",
+}
+
+ALLE_SUFFIX = re.compile(
+    r"(\s*\(Allelúja[^)]*\)\.?|\s+Allelúja(?:,\s*allelúja)*\.?)$")
+
+
+def compose_from_lines(lat):
+    """Line-by-line Spanish for a field whose every line is covered by the
+    commune table (plus Gloria Patri and the standard conclusions).
+    Returns None unless ALL lines resolve — the gate stays honest."""
+    out = []
+    for raw in lat.split("\n"):
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith("Glória Patri, et Fílio"):
+            out.append(GLORIA_ES)
+            continue
+        if line in CONCL_ES:
+            out.append(CONCL_ES[line])
+            continue
+        suffix, base = "", line
+        m = ALLE_SUFFIX.search(line)
+        if m and m.start() > 0:
+            base = line[:m.start()]
+            suffix = (m.group(1).replace("Allelúja", "Aleluya")
+                      .replace("allelúja", "aleluya"))
+        es = COMMUNE.get(base)
+        if es is None:
+            return None
+        out.append(es + suffix)
+    return "\n".join(out) if out else None
+
 
 FIELDS = {
     "introitus": "Introitus",
@@ -183,13 +266,13 @@ def render_section(name, body):
             return None                  # unknown & macro — don't guess
         if line.startswith("$"):
             macro = line[1:].strip()
-            if CONCLUSIONS and macro in CONCLUSIONS:
-                lines_out.append(CONCLUSIONS[macro] + " Amén.")
-                continue
-            # "$Per Dominum" style may appear with trailing text variants
-            base = macro.rstrip(".")
+            base = macro if (CONCLUSIONS and macro in CONCLUSIONS) \
+                else macro.rstrip(".")
             if CONCLUSIONS and base in CONCLUSIONS:
-                lines_out.append(CONCLUSIONS[base] + " Amén.")
+                concl = CONCLUSIONS[base]
+                if not concl.rstrip().endswith(("Amén.", "Amen.")):
+                    concl += " Amén."    # some formulas lack the response
+                lines_out.append(concl)
                 continue
             return None                  # unknown $ macro — don't guess
         if line.startswith(("_", "//")):
@@ -216,21 +299,24 @@ def main():
         f"unexpected Spanish Gloria Patri: {gloria!r}"
 
     tempora = json.load(open(ROOT / "Introibo" / "Resources" / "missal_tempora.json"))
-    keys = sorted(k for k in tempora if TRANCHE.match(k))
+    sanctoral = json.load(open(ROOT / "Introibo" / "Resources" / "missal_sanctoral.json"))
+    sources = {**{k: ("Tempora/" + k[0].upper() + k[1:], v) for k, v in tempora.items()},
+               **{k: ("Sancti/" + k, v) for k, v in sanctoral.items()}}
+    keys = sorted(k for k in sources if TRANCHE.match(k))
 
     out, skipped = {}, []
     for key in keys:
-        rel = "Tempora/" + key[0].upper() + key[1:]
+        rel, src_entry = sources[key]
         sections = load_formulary(rel)
         if sections is None:
             if key in SUPPLEMENTS:
                 sections = {}   # supplement-only day (no upstream file)
             else:
-                skipped.append((key, "no Spanish file"))
+                skipped.append((key, "no Spanish file", {}))
                 continue
         entry = {}
         for field, section in FIELDS.items():
-            if tempora[key].get(field) is None:
+            if src_entry.get(field) is None:
                 continue                 # English side has no such field
             if section not in sections or not sections[section].strip():
                 continue
@@ -240,15 +326,67 @@ def main():
         for field, text in SUPPLEMENTS.get(key, {}).items():
             entry.setdefault(field, text)
         missing = [f for f in REQUIRED
-                   if tempora[key].get(f) is not None and f not in entry]
+                   if src_entry.get(f) is not None and f not in entry]
         if missing:
-            skipped.append((key, f"gate: missing {','.join(missing)}"))
+            # Keep the partial entry: the propagation pass below may finish
+            # it via identical-Latin fields from days that did import.
+            skipped.append((key, f"gate: missing {','.join(missing)}", entry))
             continue
         if not entry:
             # A feria with no proper fields of its own inherits the Sunday's
             # formulary at render time — nothing to overlay.
             continue
         out[key] = entry
+
+    # Same-Latin propagation: identical Latin gets identical Spanish. This
+    # fills the 1955 "t"/"r" variants and the November resumed Sundays from
+    # their base formularies, and any shared antiphons, without a second
+    # translation that could drift. The completeness gate still applies.
+    latin_to_es = {}
+    for key, entry in out.items():
+        for field, es in entry.items():
+            src = sources[key][1].get(field)
+            if src and src.get("lat"):
+                latin_to_es.setdefault(src["lat"], es)
+    promoted = 0
+    while True:  # to fixpoint: promoted days feed further Latin matches
+        still_skipped, changed = [], False
+        for key, why, partial in skipped:
+            rel, src_entry = sources[key]
+            entry = dict(partial)
+            for field in FIELDS:
+                v = src_entry.get(field)
+                if v is None or field in entry:
+                    continue
+                lat = v.get("lat") or ""
+                es = latin_to_es.get(lat) or compose_from_lines(lat)
+                if es:
+                    entry[field] = es
+            missing = [f for f in REQUIRED
+                       if src_entry.get(f) is not None and f not in entry]
+            if entry and not missing:
+                out[key] = entry
+                promoted += 1
+                changed = True
+                for field, es in entry.items():
+                    src = src_entry.get(field)
+                    if src and src.get("lat"):
+                        latin_to_es.setdefault(src["lat"], es)
+            else:
+                still_skipped.append((key, why, entry))
+        skipped = still_skipped
+        if not changed:
+            break
+    if "--report" in sys.argv:  # remaining missing Latin, for tranche planning
+        report = {}
+        for key, why, entry in skipped:
+            src_entry = sources[key][1]
+            report[key] = {f: src_entry[f]["lat"] for f in FIELDS
+                           if src_entry.get(f) is not None and f not in entry}
+        Path(sys.argv[sys.argv.index("--report") + 1]).write_text(
+            json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
+    skipped = [(key, why) for key, why, _ in skipped]
+    print(f"same-Latin propagation promoted {promoted} formularies")
 
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2,
                               sort_keys=True) + "\n", encoding="utf-8")
@@ -264,7 +402,7 @@ def main():
     assert out["quadp1-0"]["secreta"].startswith("Recibidos, Señor")
     assert "quad3-0" in out and "quad5-5" in out
     for key, entry in out.items():
-        assert key in tempora, key
+        assert key in sources, key
         for field, text in entry.items():
             assert text.strip(), f"{key}.{field} empty"
             for bad in ("@", "&", "\n$"):

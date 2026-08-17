@@ -183,6 +183,24 @@ class SpanishOverlayQA {
             assertTrue(whitMonday.introit.eng.startsWith("Los alimentó con flor de trigo"))
             assertTrue(whitMonday.collect.eng.contains("del mismo Espíritu Santo"))
 
+            // Tranche 5: the sanctoral cycle — DO Espanol orations plus our
+            // commune line table (identical Latin -> identical Spanish).
+            val assumption = ContentStore.allPropers.first { it.slug == "08-15" }
+            assertTrue(assumption.introit.eng.startsWith("Un gran prodigio apareció en el cielo"))
+            val peterPaul = ContentStore.allPropers.first { it.slug == "06-29" }
+            assertTrue(peterPaul.communion.eng.startsWith("Tú eres Pedro"))
+            val joseph = ContentStore.allPropers.first { it.slug == "03-19" }
+            assertTrue(joseph.introit.eng.startsWith("El justo florecerá como la palma"))
+            // The Triduum: Good Friday's rubric notes and the Easter Vigil.
+            val goodFriday = ContentStore.allPropers.first { it.slug == "quad6-5" }
+            assertTrue(goodFriday.secret.eng.startsWith("El Viernes Santo no se celebra la Misa"))
+            val vigil = ContentStore.allPropers.first { it.slug == "quad6-6" }
+            assertTrue(vigil.collect.eng.startsWith("Oh Dios, que iluminas esta sacratísima noche"))
+            // Conclusion formulas expand exactly once (a doubled response
+            // was the tranche-5 regression this pins against).
+            assertTrue(!advent1.collect.eng.contains("Amén. Amén."))
+            assertTrue(!vigil.collect.eng.contains("Amén. Amén."))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -239,6 +257,8 @@ class SpanishOverlayQA {
         val advent1 = ContentStore.allPropers.first { it.slug == "adv1-0" }
         assertTrue(advent1.introit.eng.startsWith("To You I lift up my soul") ||
             !advent1.introit.eng.startsWith("A ti, Señor"))
+        val assumption = ContentStore.allPropers.first { it.slug == "08-15" }
+        assertTrue(!assumption.introit.eng.startsWith("Un gran prodigio"))
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

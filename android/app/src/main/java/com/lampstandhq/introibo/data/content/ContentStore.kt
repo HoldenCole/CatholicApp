@@ -249,18 +249,22 @@ object ContentStore {
             // per-field vernacular replacement; uncovered days and the
             // deferred scripture fields keep their English.
             load<Map<String, Map<String, String>>>("missal_propers_es.json")?.let { es ->
-                missalTempora = missalTempora.mapValues { (key, entry) ->
-                    val fields = es[key] ?: return@mapValues entry
-                    entry.copy(
-                        introitus = fields["introitus"]?.let { entry.introitus?.copy(eng = it) } ?: entry.introitus,
-                        oratio = fields["oratio"]?.let { entry.oratio?.copy(eng = it) } ?: entry.oratio,
-                        graduale = fields["graduale"]?.let { entry.graduale?.copy(eng = it) } ?: entry.graduale,
-                        offertorium = fields["offertorium"]?.let { entry.offertorium?.copy(eng = it) } ?: entry.offertorium,
-                        secreta = fields["secreta"]?.let { entry.secreta?.copy(eng = it) } ?: entry.secreta,
-                        communio = fields["communio"]?.let { entry.communio?.copy(eng = it) } ?: entry.communio,
-                        postcommunio = fields["postcommunio"]?.let { entry.postcommunio?.copy(eng = it) } ?: entry.postcommunio,
-                    )
+                val overlay: (Map<String, MissalProperEntry>) -> Map<String, MissalProperEntry> = { map ->
+                    map.mapValues { (key, entry) ->
+                        val fields = es[key] ?: return@mapValues entry
+                        entry.copy(
+                            introitus = fields["introitus"]?.let { entry.introitus?.copy(eng = it) } ?: entry.introitus,
+                            oratio = fields["oratio"]?.let { entry.oratio?.copy(eng = it) } ?: entry.oratio,
+                            graduale = fields["graduale"]?.let { entry.graduale?.copy(eng = it) } ?: entry.graduale,
+                            offertorium = fields["offertorium"]?.let { entry.offertorium?.copy(eng = it) } ?: entry.offertorium,
+                            secreta = fields["secreta"]?.let { entry.secreta?.copy(eng = it) } ?: entry.secreta,
+                            communio = fields["communio"]?.let { entry.communio?.copy(eng = it) } ?: entry.communio,
+                            postcommunio = fields["postcommunio"]?.let { entry.postcommunio?.copy(eng = it) } ?: entry.postcommunio,
+                        )
+                    }
                 }
+                missalTempora = overlay(missalTempora)
+                missalSanctoral = overlay(missalSanctoral)
             }
             load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
                 prayers = prayers.map { p ->
