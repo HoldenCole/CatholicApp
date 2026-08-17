@@ -106,7 +106,10 @@ struct TodayView: View {
                 Circle()
                     .fill(ctx.colour.swiftUIColor)
                     .frame(width: 8, height: 8)
-                LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)")
+                // The big title below already names the weekday — the caps line
+                // carries only the season, so it reads as one quiet line
+                // instead of three crowded ones.
+                LanguageAwareText(latin: ctx.latinName, english: ctx.englishName)
                     .smallLabel(color: Color.goldLeaf)
             }
             .padding(.top, 4)
@@ -354,10 +357,18 @@ struct TodayView: View {
                         .font(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
-                    Text(proper.english)
-                        .font(.captionSm)
-                        .italic()
-                        .foregroundStyle(Color.secondaryText)
+                    // Subtitle: the vernacular feast name. DO sanctoral
+                    // imports carry the Latin officium in `english` too, so
+                    // prefer the ordo-name translation and drop the line
+                    // entirely rather than repeat the Latin.
+                    let subtitle = ContentStore.shared.ordoNameEnglish(proper.title)
+                        ?? proper.english
+                    if subtitle != proper.title {
+                        Text(subtitle)
+                            .font(.captionSm)
+                            .italic()
+                            .foregroundStyle(Color.secondaryText)
+                    }
 
                     if !proper.epistle.ref.isEmpty || !proper.gospel.ref.isEmpty {
                         HStack(spacing: 12) {

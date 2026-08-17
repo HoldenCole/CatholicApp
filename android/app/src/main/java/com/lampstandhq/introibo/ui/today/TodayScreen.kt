@@ -218,8 +218,11 @@ fun TodayScreen(
                     )
                     Spacer(Modifier.width(8.dp))
                     LanguageAwareLabel(
-                        latin = "${ctx.feriaLatin}  ·  ${ctx.latinName}",
-                        english = "${ctx.feriaEnglish}  ·  ${ctx.englishName}",
+                        // The big title below already names the weekday — the
+                        // caps line carries only the season, so it reads as one
+                        // quiet line instead of three crowded ones.
+                        latin = ctx.latinName,
+                        english = ctx.englishName,
                         color = colors.goldLeaf,
                     )
                 }
@@ -578,9 +581,15 @@ private fun PropersCard(
             color = colors.primaryText,
             modifier = Modifier.padding(top = 4.dp),
         )
-        if (currentLanguageMode() != LanguageMode.LATIN_ONLY) {
+        // Subtitle: the vernacular feast name. DO sanctoral imports carry
+        // the Latin officium in `english` too, so prefer the ordo-name
+        // translation and drop the line rather than repeat the Latin.
+        val properSubtitle = ContentStore.ordoNameEnglish(proper.title) ?: proper.english
+        if (currentLanguageMode() != LanguageMode.LATIN_ONLY &&
+            properSubtitle != proper.title
+        ) {
             Text(
-                text = proper.english,
+                text = properSubtitle,
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.secondaryText,
             )
