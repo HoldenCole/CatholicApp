@@ -4,12 +4,12 @@ import Foundation
 
 struct Station: Identifiable, Decodable, Hashable {
     let station: String     // Roman numeral I...XIV
-    let title: String
+    var title: String
     let latin: String
-    let med: String         // Meditation
+    var med: String         // Meditation
     let mood: String        // "" | "mood-mother" | "mood-death" | "mood-tomb"
     let stabat_lat: String
-    let stabat_eng: String
+    var stabat_eng: String
 
     var id: String { station }
 }

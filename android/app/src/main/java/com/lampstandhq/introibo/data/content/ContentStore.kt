@@ -235,6 +235,7 @@ object ContentStore {
         ordoNamesEn = load("ordo_names_en.json") ?: emptyMap()
         missalTempora = load("missal_tempora.json") ?: emptyMap()
         missalSanctoral = load("missal_sanctoral.json") ?: emptyMap()
+        stations = load("stations.json") ?: emptyList()
 
         uiStringsES = emptyMap()
 
@@ -281,6 +282,18 @@ object ContentStore {
                 }
                 missalTempora = overlay(missalTempora)
                 missalSanctoral = overlay(missalSanctoral)
+            }
+            // Stations of the Cross: title, meditation, and the received
+            // Spanish Stabat Mater verse (Latin title and verse untouched).
+            load<Map<String, Map<String, String>>>("stations_es.json")?.let { es ->
+                stations = stations.map { s ->
+                    val o = es[s.station] ?: return@map s
+                    s.copy(
+                        title = o["title_es"] ?: s.title,
+                        med = o["med_es"] ?: s.med,
+                        stabatEng = o["stabat_es"] ?: s.stabatEng,
+                    )
+                }
             }
             load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
                 prayers = prayers.map { p ->

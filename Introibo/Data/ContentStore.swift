@@ -166,6 +166,7 @@ final class ContentStore {
             ordoNamesEn     = load("ordo_names_en",    as: [String: String].self) ?? [:]
             missalTempora   = load("missal_tempora",   as: [String: MissalProperEntry].self) ?? [:]
             missalSanctoral = load("missal_sanctoral", as: [String: MissalProperEntry].self) ?? [:]
+            stations        = load("stations",         as: [Station].self)            ?? []
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -216,6 +217,18 @@ final class ContentStore {
             }
             overlay(&missalTempora)
             overlay(&missalSanctoral)
+        }
+        // Stations of the Cross: title, meditation, and the received
+        // Spanish Stabat Mater verse (Latin title and verse untouched).
+        if let es = load("stations_es", as: [String: [String: String]].self) {
+            stations = stations.map { s in
+                guard let o = es[s.station] else { return s }
+                var m = s
+                if let t = o["title_es"] { m.title = t }
+                if let t = o["med_es"] { m.med = t }
+                if let t = o["stabat_es"] { m.stabat_eng = t }
+                return m
+            }
         }
 
         if let es = load("prayers_es", as: [String: PrayerES].self) {

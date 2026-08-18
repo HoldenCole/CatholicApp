@@ -140,7 +140,13 @@ so integration cannot silently misalign.
   readings; audit before importing the Office texts.
 - Office propers / readings (multi-MB) — DO Espanol coverage is ~94% for
   the horas tree; same register/provenance audit applies before import.
-- `reference.json`, `saints.json`, `stations.json`, tutorial/course content.
+- Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
+  stations: traditional Via Crucis titles, the meditations translated
+  (tier 2), and the received Spanish Stabat Mater verses (tier 1,
+  keeping each verse's line structure); the Latin titles and verses are
+  untouched. The validator enforces full coverage and matching `<br>`
+  counts.
+- `reference.json`, `saints.json`, tutorial/course content.
 
 ## Integration (done for tier 1)
 

@@ -27,6 +27,7 @@ FILES = [
     "ui_strings_es.json",
     "missal_propers_es.json",
     "missal_readings_es.json",
+    "stations_es.json",
 ]
 
 

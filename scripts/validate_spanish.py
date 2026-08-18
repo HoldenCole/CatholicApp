@@ -208,11 +208,35 @@ def validate_missal_readings():
     print(f"missal_readings_es.json: {len(es)} days / {n} fields checked")
 
 
+def validate_stations():
+    """Stations of the Cross: every station covered, all three fields, and
+    the Stabat verse keeps the source's line structure (<br> count)."""
+    path = ES / "stations_es.json"
+    if not path.exists():
+        print("stations_es.json: not present (skipped)")
+        return
+    src = {s["station"]: s for s in json.load(open(SRC / "stations.json"))}
+    es = json.load(open(path))
+    check(set(es) == set(src),
+          f"stations: key mismatch (missing {set(src) - set(es)}, "
+          f"extra {set(es) - set(src)})")
+    for key, o in es.items():
+        check(set(o) == {"title_es", "med_es", "stabat_es"},
+              f"stations[{key}]: fields must be title_es/med_es/stabat_es")
+        for f, v in o.items():
+            check(isinstance(v, str) and v.strip(), f"stations[{key}].{f}: empty")
+        if key in src:
+            check(o["stabat_es"].count("<br>") == src[key]["stabat_eng"].count("<br>"),
+                  f"stations[{key}].stabat_es: <br> count differs from source")
+    print(f"stations_es.json: {len(es)} stations checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
     validate_missal_propers()
     validate_missal_readings()
+    validate_stations()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",
