@@ -381,6 +381,12 @@ class SpanishOverlayQA {
             // Wednesday's Isaiah lesson opens at 7:10, not 7:11.
             val adv33 = ContentStore.allPropers.first { it.slug == "adv3-3" }
             assertTrue(adv33.epistle.eng.contains("Habló de nuevo el Señor a Acaz"))
+            // Tranche O5b: the deuterocanonical lessons (tier-2 Vulgate
+            // compositions) and the hand-supplemented patristic lessons.
+            assertTrue(ContentStore.temporalData["083-0"]!!["lectio1"]!!.eng!!
+                .startsWith("Empieza el Libro de la Sabiduría\n1 Amad la justicia"))
+            assertTrue(ContentStore.temporalData["pent01-0"]!!["lectio9"]!!.eng!!
+                .contains("Homilía de San Agustín, Obispo"))
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.

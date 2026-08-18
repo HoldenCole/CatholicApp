@@ -224,9 +224,18 @@ so integration cannot silently misalign.
   now consumes it — fixing 106 shipped readings that were silently one
   verse off in the drifted books (early Isaiah, Titus, 2 Tim, Hebrews,
   James, 1 Peter, 1 John, Revelation …).
-  Remaining: 211 deuterocanonical pericopes (tier-2 compositions from
-  the Vulgate — `lessons_deutero_office_es.json`), 5 patristic lessons
-  DO lacks, seasonal hymns.
+  **Tranche O5b — the deuterocanonical lessons: COMPLETE
+  (`lessons_deutero_office_es.json`, 202 unique pericopes / 211 lesson
+  fields — 1 Mac, 2 Mac, Sirach, Wisdom, Judith, Tobit, Dan 3).** The
+  66-book module lacks the deuterocanon, so these are our own tier-2
+  translations from the Vulgate Latin the app carries, verse-for-verse
+  with the same numbering, in the Torres Amat register (like
+  `readings_deutero_es.json`). Five patristic lessons the DO Espanol
+  tree lacks (the Trinity Augustine homily, Gregory's Expositio in
+  libros Regum ×3, an Augustine passage on the high priest) are hand
+  supplements. temporal_propers_es.json now covers all 7,032 fields —
+  the temporal Office is 100% Spanish.
+  Remaining: seasonal hymns (O6).
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,
