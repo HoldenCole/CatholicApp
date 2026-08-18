@@ -495,50 +495,54 @@ def validate_commune_office():
     print(f"commune_office_es.json: {n} fields checked")
 
 
-def validate_temporal_propers():
-    """Temporal Office propers (non-lesson fields): every overlaid part
-    must exist in the source, only fields the source carries may be
-    translated, verse arrays aligned. Lessons are a separate tranche."""
-    path = ES / "temporal_propers_es.json"
+def _validate_office_parts(name, srcname):
+    """Office propers keyed day->field->part: every overlaid part must
+    exist in the source, only fields the source carries may be
+    translated, verse arrays aligned."""
+    path = ES / name
     if not path.exists():
-        print("temporal_propers_es.json: not present (skipped)")
+        print(f"{name}: not present (skipped)")
         return
-    src = json.load(open(SRC / "temporal_propers.json"))
+    src = json.load(open(SRC / srcname))
     es = json.load(open(path))
     n = 0
     FIELDS = ("eng", "engR", "v1Eng", "r1Eng", "v2Eng", "r2Eng",
               "antiphonEng")
     for code, fields in es.items():
-        check(code in src, f"temporal_propers[{code}]: no such day")
+        check(code in src, f"{name}[{code}]: no such day")
         for fkey, o in fields.items():
             p = (src.get(code) or {}).get(fkey)
             check(p is not None,
-                  f"temporal_propers[{code}][{fkey}]: no such part")
+                  f"{name}[{code}][{fkey}]: no such part")
             if p is None:
                 continue
             for f, v in o.items():
                 if f == "verses":
                     verses = p.get("verses") or []
                     check(len(v) == len(verses),
-                          f"temporal_propers[{code}][{fkey}].verses: "
-                          f"count differs")
+                          f"{name}[{code}][{fkey}].verses: count differs")
                     for j, l in enumerate(v):
                         if l is None:
                             continue
                         n += 1
                         check(isinstance(l, str) and l.strip(),
-                              f"temporal_propers[{code}][{fkey}]"
-                              f".verses[{j}]: empty")
+                              f"{name}[{code}][{fkey}].verses[{j}]: empty")
                     continue
                 check(f in FIELDS,
-                      f"temporal_propers[{code}][{fkey}].{f}: not a field")
+                      f"{name}[{code}][{fkey}].{f}: not a field")
                 check(p.get(f) is not None,
-                      f"temporal_propers[{code}][{fkey}].{f}: "
-                      f"source has no {f}")
+                      f"{name}[{code}][{fkey}].{f}: source has no {f}")
                 check(isinstance(v, str) and v.strip(),
-                      f"temporal_propers[{code}][{fkey}].{f}: empty")
+                      f"{name}[{code}][{fkey}].{f}: empty")
                 n += 1
-    print(f"temporal_propers_es.json: {n} fields checked")
+    print(f"{name}: {n} fields checked")
+
+
+def validate_temporal_propers():
+    _validate_office_parts("temporal_propers_es.json",
+                           "temporal_propers.json")
+    _validate_office_parts("sanctoral_propers_es.json",
+                           "sanctoral_propers.json")
 
 
 def validate_hymns_seasonal():

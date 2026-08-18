@@ -34,6 +34,7 @@ OUT = ROOT / "spanish-translation" / "hours_parts_es.json"
 COMMUNE_OUT = ROOT / "spanish-translation" / "commune_office_es.json"
 TEMPORAL_OUT = ROOT / "spanish-translation" / "temporal_propers_es.json"
 HYMNS_OUT = ROOT / "spanish-translation" / "hymns_seasonal_es.json"
+SANCTORAL_OUT = ROOT / "spanish-translation" / "sanctoral_propers_es.json"
 SUPP_PATH = ROOT / "spanish-translation" / "hours_supplements_es.json"
 DEFAULT_DO = Path("/tmp/claude-0/-home-user-CatholicApp/"
                   "71906fbb-67e9-553f-b996-d8565178e126/scratchpad/do_repo")
@@ -1036,10 +1037,30 @@ def main():
     # per-pericope provenance audit — skipped here.
     temporal = json.load(open(ROOT / "Introibo/Resources/"
                               "temporal_propers.json"))
-    es_temp_files = {p.name[:-4].lower(): p
-                     for p in (es_horas / "Tempora").glob("*.txt")}
-    lat_temp_files = {p.name[:-4].lower(): p
-                      for p in (lat_horas / "Tempora").glob("*.txt")}
+    # The sanctoral Office propers share the shape and the machinery —
+    # their keys map to the Sancti files the same way.
+    sanctoral = json.load(open(ROOT / "Introibo/Resources/"
+                               "sanctoral_propers.json"))
+    combined = {}
+    combined.update(temporal)
+    combined.update(sanctoral)
+    es_temp_files = {}
+    lat_temp_files = {}
+    for sub in ("Tempora", "Sancti"):
+        for p in (es_horas / sub).glob("*.txt"):
+            es_temp_files.setdefault(p.name[:-4].lower(), p)
+        for p in (lat_horas / sub).glob("*.txt"):
+            lat_temp_files.setdefault(p.name[:-4].lower(), p)
+
+    def key_file(files, key):
+        """Exact filename first; app rite-variant suffixes ('01-05cc',
+        '01-06n') fall back to the base MM-DD file."""
+        p = files.get(key)
+        if p is None:
+            base = re.sub(r"(?<=\d)[a-z]+$", "", key)
+            if base != key:
+                p = files.get(base)
+        return p
 
     _secs_cache = {}
 
@@ -1231,6 +1252,28 @@ def main():
         ("pasc6-6", "lectio1"): "Judas 1:1-4",
         ("pasc6-6", "lectio2"): "Judas 1:5-8",
         ("pasc6-6", "lectio3"): "Judas 1:9-13",
+        # Sancti sections whose "!" ref belongs to a different variant.
+        ("01-00", "lectio1"): "Act 3:1-8",
+        ("01-00", "lectio2"): "Act 3:9-16",
+        ("01-00", "lectio3"): "Act 4:5-12",
+        ("03-25", "lectio1"): "Isa 7:10-15",
+        ("09-08", "lectio1"): "Cant 1:1-4",
+        ("09-08", "lectio2"): "Cant 1:5-9",
+        ("09-08", "lectio3"): "Cant 1:10-16",
+        ("12-24s", "lectio1"): "Isa 35:1-7",
+        ("12-24s", "lectio2"): "Isa 35:7-10",
+        ("12-24s", "lectio3"): "Isa 41:1-4",
+        ("12-24so", "lectio1"): "Isa 35:1-7",
+        ("12-24so", "lectio2"): "Isa 35:7-10",
+        ("12-24so", "lectio3"): "Isa 41:1-4",
+        ("epi1-0b", "lectio1"): "1 Cor 1:1-3",
+        ("epi1-0b", "lectio2"): "1 Cor 1:4-9",
+        ("epi1-0b", "lectio3"): "1 Cor 1:10-13",
+        ("nat01o", "lectio3"): "Rom 4:9-12",
+        ("nat04o", "lectio1"): "Rom 5:1-5",
+        ("nat04o", "lectio2"): "Rom 5:6-9",
+        ("nat05o", "lectio2"): "Rom 7:4-6",
+        ("10-24", "lectio3"): "Tob 12:14-22",
     }
     # Office lesson headings the missal intro translator doesn't know.
     HEAD_FIXES = {}
@@ -1240,15 +1283,46 @@ def main():
     ]:
         HEAD_FIXES[fold(_la)] = _es
 
+    # The Office collect of a feast is the Mass collect — the missal's
+    # Spanish already carries the common saints' orations. Bank them by
+    # the folded body (conclusion stripped).
+    CONCL_CUT = re.compile(
+        r"\s*(?:Per (?:Dóminum|eúndem|Dominum)|Qui vivis|Qui tecum"
+        r"|\$).*$", re.S)
+
+    def oration_key(lat):
+        k = fold(CONCL_CUT.sub("", clean_line(lat.replace("\n", " "))))
+        # ae/oe spellings vary between the trees (caelestis/coelestis)
+        return k.replace("ae", "e").replace("oe", "e")
+
+    oration_bank = {}
+    missal_es = json.load(open(ROOT / "spanish-translation/"
+                               "missal_propers_es.json"))
+    for srcname in ("missal_tempora.json", "missal_sanctoral.json"):
+        msrc = json.load(open(ROOT / "Introibo/Resources" / srcname))
+        for slug, entry in msrc.items():
+            eslug = missal_es.get(slug) or {}
+            for f in ("oratio", "secreta", "postcommunio", "oratio_2",
+                      "oratio_3"):
+                v = entry.get(f)
+                es_v = eslug.get(f)
+                if isinstance(v, dict) and v.get("lat") and \
+                        isinstance(es_v, str) and es_v.strip():
+                    k = oration_key(v["lat"])
+                    if len(k) > 25:
+                        oration_bank.setdefault(k, es_v.strip())
+
     tout = {}
     tmisses = []
     tn = 0
     pending_lessons = []   # scripture pericopes awaiting shift consensus
     ch_agg = {}            # (book, chapter) -> {shift: summed score}
-    for tkey in sorted(temporal):
-        es_p = es_temp_files.get(tkey)
-        lat_p = lat_temp_files.get(tkey)
-        for fkey, p in sorted(temporal[tkey].items()):
+    sout = {}
+    for tkey in sorted(combined):
+        tout_dst = sout if tkey in sanctoral else tout
+        es_p = key_file(es_temp_files, tkey)
+        lat_p = key_file(lat_temp_files, tkey)
+        for fkey, p in sorted(combined[tkey].items()):
             if not isinstance(p, dict):
                 continue
             if fkey.startswith("lectio"):
@@ -1257,7 +1331,7 @@ def main():
                 lat = p.get("lat") or ""
                 skey = f"temporal:{tkey}:{fkey}:eng"
                 if skey in supp:
-                    tout.setdefault(tkey, {})[fkey] = {"eng": supp[skey]}
+                    tout_dst.setdefault(tkey, {})[fkey] = {"eng": supp[skey]}
                     tn += 1
                     continue
                 raw_es, raw_lat = resolve_pair(es_p, lat_p, fkey)
@@ -1305,7 +1379,7 @@ def main():
                     if deutero:
                         dt = lessons_deutero.get(f"{tkey}:{fkey}")
                         if dt:
-                            tout.setdefault(tkey, {})[fkey] = {"eng": dt}
+                            tout_dst.setdefault(tkey, {})[fkey] = {"eng": dt}
                             tn += 1
                         else:
                             tmisses.append((tkey, fkey,
@@ -1416,7 +1490,7 @@ def main():
                         tmisses.append((tkey, fkey, "PATRISTIC " +
                                         lat_lines[0][:50]))
                         continue
-                tout.setdefault(tkey, {})[fkey] = {"eng": nfc(t)}
+                tout_dst.setdefault(tkey, {})[fkey] = {"eng": nfc(t)}
                 tn += 1
                 continue
             entry = {}
@@ -1522,12 +1596,18 @@ def main():
                             t = bank.get(bank_key(clean_line(lat)))
                 if t is None:
                     t = TEMPORAL_FIXES.get(fold(lat))
+                if t is None:
+                    t = oration_bank.get(oration_key(lat))
                 if t:
                     m = re.match(r"^([℣℟VR]\.\s*)", p[eng_f])
                     if m and not re.match(r"^[℣℟VR]\.", t):
                         t = m.group(1) + t
                     entry[eng_f] = nfc(t)
                     tn += 1
+                elif lat.lstrip().startswith(("@", "#", "(deinde")):
+                    # unresolved-reference artifacts in the source data —
+                    # the English side carries the same raw text
+                    pass
                 else:
                     tmisses.append((tkey, fkey, (lat or "?")[:60]))
             if p.get("verses"):
@@ -1557,7 +1637,7 @@ def main():
                         tmisses.append((tkey, fkey + "/verses",
                                         p["verses"][0]["lat"][:60]))
             if entry:
-                tout.setdefault(tkey, {})[fkey] = entry
+                tout_dst.setdefault(tkey, {})[fkey] = entry
     # Post-pass: compose the deferred scripture pericopes with the
     # chapter-consensus line-shift (0 preferred when within noise).
     ch_choice = {}
@@ -1612,8 +1692,9 @@ def main():
                 lines[-1] = lines[-1] + " " + nxt
                 last_ln += 1
                 appended += 1
+        dst = sout if tkey in sanctoral else tout
         if okk and pairs and tot / len(pairs) >= 0.30:
-            tout.setdefault(tkey, {})[fkey] = {"eng": nfc("\n".join(lines))}
+            dst.setdefault(tkey, {})[fkey] = {"eng": nfc("\n".join(lines))}
             tn += 1
             continue
         # Constant-shift alignment failed — the module merges/splits the
@@ -1669,7 +1750,7 @@ def main():
             lines = list(out_lines)
             for (num, lt, name, ch, v), t_ in zip(pairs, best_lines):
                 lines.append(f"{num} {t_}")
-            tout.setdefault(tkey, {})[fkey] = {"eng": nfc("\n".join(lines))}
+            dst.setdefault(tkey, {})[fkey] = {"eng": nfc("\n".join(lines))}
             lesson_shift_stats["dp"] = lesson_shift_stats.get("dp", 0) + 1
             tn += 1
         else:
@@ -1679,6 +1760,17 @@ def main():
     TEMPORAL_OUT.write_text(json.dumps(tout, ensure_ascii=False, indent=1,
                                        sort_keys=True) + "\n",
                             encoding="utf-8")
+    SANCTORAL_OUT.write_text(json.dumps(sout, ensure_ascii=False,
+                                        indent=1, sort_keys=True) + "\n",
+                             encoding="utf-8")
+    sn = sum(1 for v in sout.values() for o in v.values()
+             for f, x in o.items()
+             if f != "verses"
+             for _ in ([1] if isinstance(x, str) else []))
+    sv = sum(1 for v in sout.values() for o in v.values()
+             for l in (o.get("verses") or []) if l)
+    print(f"sanctoral: wrote {sum(len(v) for v in sout.values())} parts "
+          f"({sn + sv} fields)")
     # ---- the seasonal hymns (hymns_seasonal.json): traditional verse
     # translations from the hymn table; the app's <br>-within-stanza /
     # blank-line-between-stanza structure is mirrored.

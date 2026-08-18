@@ -73,6 +73,7 @@ class SpanishOverlayQA {
             "psalter_es.json", "psalter_weekly_es.json",
             "hours_parts_es.json", "commune_office_es.json",
             "temporal_propers_es.json", "hymns_seasonal_es.json",
+            "sanctoral_propers_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -394,6 +395,14 @@ class SpanishOverlayQA {
                 .eng!!.startsWith("Oíd la voz que sonora"))
             assertTrue(ContentStore.hymnsSeasonalData["easter"]!!["completorium.canticle"]!!
                 .antiphonEng!!.startsWith("Aleluya. Ha resucitado el Señor"))
+            // The sanctoral Office (tranche O7): a proper antiphon, a
+            // common collect from the missal bank, and a hagiography.
+            assertTrue(ContentStore.sanctoralPropers["11-30"]!!["ant_laudes"]!!
+                .eng!!.startsWith("Salve, cruz preciosa"))
+            assertTrue(ContentStore.sanctoralPropers["11-23"]!!["oratio"]!!
+                .eng!!.startsWith("Mira aplacado a tu rebaño, Pastor eterno"))
+            assertTrue(ContentStore.sanctoralPropers["09-09n"]!!["lectio94"]!!
+                .eng!!.startsWith("Pedro Claver, español"))
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
@@ -466,6 +475,10 @@ class SpanishOverlayQA {
             .startsWith("You who left all"))
         assertTrue(ContentStore.temporalData["adv1-0"]!!["ant_1"]!!.eng!!
             .startsWith("Behold, the name of the Lord"))
+        assertTrue(ContentStore.sanctoralPropers["11-30"]!!["ant_laudes"]!!.eng!!
+            .startsWith("O precious cross") ||
+            !ContentStore.sanctoralPropers["11-30"]!!["ant_laudes"]!!.eng!!
+                .startsWith("Salve, cruz"))
         assertTrue(ContentStore.hymnsSeasonalData["advent"]!!["hymnus_laudes"]!!
             .eng!!.startsWith("Hark! a thrilling voice") ||
             !ContentStore.hymnsSeasonalData["advent"]!!["hymnus_laudes"]!!

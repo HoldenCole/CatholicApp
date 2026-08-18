@@ -87,7 +87,7 @@ object ContentStore {
 
     private var missalTempora: Map<String, MissalProperEntry> = emptyMap()
     private var missalSanctoral: Map<String, MissalProperEntry> = emptyMap()
-    private var sanctoralPropers: Map<String, Map<String, Hour.Part>> = emptyMap()
+    internal var sanctoralPropers: Map<String, Map<String, Hour.Part>> = emptyMap()
     // Commune (common Office) parts + saint→commune map (see iOS ContentStore).
     internal var communeOffice: Map<String, Map<String, Hour.Part>> = emptyMap()
     private var saintCommune: Map<String, String> = emptyMap()
@@ -321,6 +321,7 @@ object ContentStore {
         communeOffice = load("commune_office.json") ?: emptyMap()
         temporalData = load("temporal_propers.json") ?: emptyMap()
         hymnsSeasonalData = load("hymns_seasonal.json") ?: emptyMap()
+        sanctoralPropers = load("sanctoral_propers.json") ?: emptyMap()
 
         uiStringsES = emptyMap()
 
@@ -446,6 +447,34 @@ object ContentStore {
             // antiphons, responsories, collects, versicles, hymns.
             load<Map<String, Map<String, HourPartES>>>("temporal_propers_es.json")?.let { es ->
                 temporalData = temporalData.mapValues { (code, entry) ->
+                    val fields = es[code] ?: return@mapValues entry
+                    entry.mapValues { (fkey, part) ->
+                        val o = fields[fkey] ?: return@mapValues part
+                        part.copy(
+                            eng = o.eng ?: part.eng,
+                            engR = o.engR ?: part.engR,
+                            v1Eng = o.v1Eng ?: part.v1Eng,
+                            r1Eng = o.r1Eng ?: part.r1Eng,
+                            v2Eng = o.v2Eng ?: part.v2Eng,
+                            r2Eng = o.r2Eng ?: part.r2Eng,
+                            antiphonEng = o.antiphonEng ?: part.antiphonEng,
+                            verses = if (part.verses != null && o.verses != null &&
+                                o.verses.size == part.verses.size
+                            ) {
+                                part.verses.mapIndexed { j, vv ->
+                                    o.verses[j]?.let { vv.copy(eng = it) } ?: vv
+                                }
+                            } else {
+                                part.verses
+                            },
+                        )
+                    }
+                }
+            }
+            // The sanctoral Office propers (tranche O7): same per-part
+            // replacement as the temporal cycle.
+            load<Map<String, Map<String, HourPartES>>>("sanctoral_propers_es.json")?.let { es ->
+                sanctoralPropers = sanctoralPropers.mapValues { (code, entry) ->
                     val fields = es[code] ?: return@mapValues entry
                     entry.mapValues { (fkey, part) ->
                         val o = fields[fkey] ?: return@mapValues part

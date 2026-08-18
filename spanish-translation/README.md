@@ -243,10 +243,22 @@ so integration cannot silently misalign.
   pre-Urban-VIII texts for a few hymns ("Vox clara" where DO defaults
   to "En clara vox") — those are reached by their season-named sections
   in Major Special; four antiphons are hand supplements.
-  The full-app audit after O6 found the remaining gaps: the SANCTORAL
-  Office propers (`sanctoral_propers.json`, 475 feasts / ~4,600 parts —
-  tranche O7, same machinery as the temporal cycle), and the small
-  rosary files (`mysteries.json`, `rosary_prayers.json` — tranche O8).
+  **Tranche O7 — the sanctoral Office propers: COMPLETE
+  (`sanctoral_propers_es.json`, 475 feasts / 4,392 parts / 8,987
+  fields).** The full-app audit after O6 surfaced this corpus; it
+  shares the temporal machinery — keys map to the Sancti files, the
+  same section pairing, TA lesson composition with the chapter-shift
+  consensus, and a new ORATION BANK: the Office collect of a feast is
+  the Mass collect, so the missal's Spanish covers the common saints'
+  orations (keyed by folded body with conclusions stripped and ae/oe
+  normalized). Deuterocanonical additions (Sir 24/39/44/51, Tob 12)
+  extend `lessons_deutero_office_es.json`; ~50 antiphon sets, octave
+  commemorations, brief responsories, four late hymns (the 1950
+  Assumption Vespers hymn, the three Cabrini hymns), and a dozen
+  hagiographies the DO Espanol tree lacks are hand supplements in the
+  traditional register.
+  Remaining: the small rosary files (`mysteries.json`,
+  `rosary_prayers.json` — tranche O8).
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,

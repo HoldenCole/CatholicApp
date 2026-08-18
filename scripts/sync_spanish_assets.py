@@ -37,6 +37,7 @@ FILES = [
     "commune_office_es.json",
     "temporal_propers_es.json",
     "hymns_seasonal_es.json",
+    "sanctoral_propers_es.json",
 ]
 
 
