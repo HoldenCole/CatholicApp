@@ -154,7 +154,19 @@ so integration cannot silently misalign.
   ORIGINAL Spanish — received texts, not translations. Index-aligned by
   section/practice/prayer; the validator enforces exact count matches so
   a misalignment can never silently leave English behind.
-- `reference.json`, tutorial/course content.
+- Reference encyclopedia — **COMPLETE: `reference_es.json`**, all 42
+  entries (seasons, sacraments, prayer forms, devotions, penance,
+  sacramentals, and the Latin-language articles): title, summary,
+  history, practice, and notes translated, plus the scripture quote's
+  English half (matching the Latin snippet's extent). The Latin names,
+  category labels, refs, and Latin quotes stay. Optional fields are
+  translated exactly when the source has them; embedded
+  `<link target=…>` tags must survive with identical targets (validator
+  enforced — the link scanner depends on them). The import also fixed
+  cal-septuagesima's stray `"cat": "calendar"` (→ "Calendarium") in the
+  English source, which had broken its grouping, deep-link type, and
+  search category.
+- Tutorial/course content (`courses.json`).
 
 ## Integration (done for tier 1)
 

@@ -127,6 +127,14 @@ final class ContentStore {
         let time_es: String
         let intro_es: String
     }
+    private struct ReferenceES: Decodable {
+        let title_es: String
+        let summary_es: String
+        let history_es: String?
+        let practice_es: String?
+        let notes_es: String?
+        let scripture_eng_es: String?
+    }
     private struct SaintES: Decodable {
         let name_es: String
         let title_es: String
@@ -189,6 +197,7 @@ final class ContentStore {
             missalSanctoral = load("missal_sanctoral", as: [String: MissalProperEntry].self) ?? [:]
             stations        = load("stations",         as: [Station].self)            ?? []
             saints          = load("saints",           as: [Saint].self)              ?? []
+            reference       = load("reference",        as: [ReferenceEntry].self)     ?? []
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -249,6 +258,24 @@ final class ContentStore {
                 if let t = o["title_es"] { m.title = t }
                 if let t = o["med_es"] { m.med = t }
                 if let t = o["stabat_es"] { m.stabat_eng = t }
+                return m
+            }
+        }
+        // Reference encyclopedia: English-side prose per slug (title, summary,
+        // history, practice, notes, and the scripture quote's English half;
+        // the Latin names, category labels, refs, and Latin quotes stay).
+        if let es = load("reference_es", as: [String: ReferenceES].self) {
+            reference = reference.map { e in
+                guard let o = es[e.slug] else { return e }
+                var m = e
+                m.title = o.title_es
+                m.summary = o.summary_es
+                if m.history != nil, let t = o.history_es { m.history = t }
+                if m.practice != nil, let t = o.practice_es { m.practice = t }
+                if m.notes != nil, let t = o.notes_es { m.notes = t }
+                if m.scripture != nil, let t = o.scripture_eng_es {
+                    m.scripture?.eng = t
+                }
                 return m
             }
         }

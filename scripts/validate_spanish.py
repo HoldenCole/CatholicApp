@@ -6,6 +6,7 @@ line-for-line with its English/Latin source, so merging can never silently
 misalign a prayer. Run from repo root:  python3 scripts/validate_spanish.py
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -270,6 +271,48 @@ def validate_saints():
     print(f"saints_es.json: {len(es)} saints checked")
 
 
+def validate_reference():
+    """Reference encyclopedia: every entry covered; optional fields translated
+    exactly when the source has them; embedded <link target=...> tags must
+    survive translation with identical targets (the link scanner needs them)."""
+    path = ES / "reference_es.json"
+    if not path.exists():
+        print("reference_es.json: not present (skipped)")
+        return
+    link_re = re.compile(r'<link target="([^"]+)">')
+    src = {e["slug"]: e for e in json.load(open(SRC / "reference.json"))}
+    es = json.load(open(path))
+    check(set(es) == set(src),
+          f"reference: slug mismatch (missing {set(src) - set(es)}, "
+          f"extra {set(es) - set(src)})")
+    pairs = [("title_es", "title"), ("summary_es", "summary"),
+             ("history_es", "history"), ("practice_es", "practice"),
+             ("notes_es", "notes")]
+    for slug, o in es.items():
+        s = src.get(slug)
+        if not s:
+            continue
+        for f_es, f_en in pairs:
+            if s.get(f_en) is not None:
+                check(isinstance(o.get(f_es), str) and o[f_es].strip(),
+                      f"reference[{slug}].{f_es}: source has {f_en}, "
+                      "translation empty/missing")
+                check(set(link_re.findall(o[f_es])) ==
+                      set(link_re.findall(s[f_en])),
+                      f"reference[{slug}].{f_es}: <link> targets differ "
+                      "from source")
+            else:
+                check(f_es not in o,
+                      f"reference[{slug}].{f_es}: source has no {f_en}")
+        if s.get("scripture") is not None:
+            check(o.get("scripture_eng_es", "").strip(),
+                  f"reference[{slug}].scripture_eng_es: missing")
+        else:
+            check("scripture_eng_es" not in o,
+                  f"reference[{slug}].scripture_eng_es: source has no scripture")
+    print(f"reference_es.json: {len(es)} entries checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -277,6 +320,7 @@ def main():
     validate_missal_readings()
     validate_stations()
     validate_saints()
+    validate_reference()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

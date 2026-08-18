@@ -1,0 +1,304 @@
+{
+ "cal-advent": {
+  "title_es": "Adviento",
+  "summary_es": "El tiempo litúrgico de preparación para la Natividad de Nuestro Señor Jesucristo. Comienza cuatro domingos antes de Navidad y termina en la Vigilia de Navidad. Un tiempo de gozosa expectación, preparación penitencial y renovación espiritual.",
+  "history_es": "La observancia del Adviento se remonta al menos al siglo IV. El Concilio de Tours (567) prescribió un ayuno tres veces por semana desde la fiesta de San Martín (11 de noviembre) hasta Navidad.",
+  "practice_es": "Más oración, ayuno y limosna. Asiste a las Misas de Rorate, celebradas de madrugada a la luz de las velas. La corona de Adviento, con sus cuatro velas, marca el paso de las semanas.",
+  "notes_es": "Se usan ornamentos morados. Se omite el Gloria. El órgano calla, salvo para sostener el canto. El tercer domingo, Gaudete, permite ornamentos rosados.",
+  "scripture_eng_es": "He aquí que la virgen concebirá y dará a luz un hijo, y su nombre será llamado Emmanuel."
+ },
+ "cal-christmas": {
+  "title_es": "Tiempo de Navidad",
+  "summary_es": "El tiempo que celebra el nacimiento de Nuestro Señor, desde la Vigilia de Navidad (24 de diciembre) hasta el 2 de febrero (la Candelaria, la Purificación de Nuestra Señora). Doce días de fiesta que culminan en la Epifanía.",
+  "history_es": "La fiesta de la Natividad quedó fijada el 25 de diciembre hacia el siglo IV, desplazando la fiesta pagana del Sol Invicto. La Octava de Navidad incluye los Santos Inocentes (28 de diciembre), San Esteban (26 de diciembre) y San Juan (27 de diciembre).",
+  "practice_es": "Los fieles cantan villancicos, montan el nacimiento (belén), asisten a la Misa de Medianoche y guardan con alegría la Octava de Navidad. Los ornamentos de Navidad se usan hasta la Candelaria.",
+  "notes_es": "Ornamentos blancos durante todo el tiempo. Vuelven el Gloria y el Te Deum. La antífona mariana Alma Redemptoris Mater se canta en Completas.",
+  "scripture_eng_es": "Hoy os ha nacido un Salvador, que es Cristo el Señor."
+ },
+ "cal-lent": {
+  "title_es": "Cuaresma",
+  "summary_es": "Cuarenta días de preparación penitencial para la Pascua, desde el Miércoles de Ceniza hasta el Sábado Santo. Un tiempo de ayuno, abstinencia, mayor oración y limosna, en memoria de los cuarenta días de Nuestro Señor en el desierto.",
+  "history_es": "El ayuno de cuarenta días está atestiguado desde el siglo IV. La palabra inglesa «Lent» procede del anglosajón lencten (primavera). El Código de Derecho Canónico de 1917 (vigente en 1962) manda el ayuno cuaresmal a los fieles de 21 a 59 años.",
+  "practice_es": "Da limosna, reza más, ayuna y guarda abstinencia. Asiste a Misa diaria cuando sea posible. Reza el Vía Crucis, especialmente los viernes. Haz una buena Confesión antes de Pascua.",
+  "notes_es": "Ornamentos morados. Se suprimen el Gloria y el Aleluya. El órgano calla, salvo para sostener el canto. Las imágenes y crucifijos se velan desde el Domingo de Pasión.",
+  "scripture_eng_es": "Convertíos a mí de todo vuestro corazón, con ayuno, con llanto y con gemidos."
+ },
+ "cal-holyweek": {
+  "title_es": "Semana Santa",
+  "summary_es": "La semana más sagrada del año litúrgico, desde el Domingo de Ramos hasta el Sábado Santo. Contiene el Triduo Pascual —Jueves Santo, Viernes Santo y Sábado Santo—, durante el cual se conmemoran la Pasión, Muerte y Resurrección de Nuestro Señor.",
+  "history_es": "La observancia de la Semana Santa se remonta a los primeros siglos. Los ritos del Triduo fueron reformados en 1955 bajo Pío XII, y de nuevo en 1962.",
+  "practice_es": "Asiste a todas las liturgias disponibles: la procesión del Domingo de Ramos, la Misa Crismal, la Misa de la Cena del Señor con el lavatorio de los pies, la liturgia del Viernes Santo con la adoración de la Cruz, la Vigilia Pascual. Guarda estricto silencio desde el Gloria del Jueves hasta la Vigilia.",
+  "notes_es": "Rojo para la bendición de las palmas y la procesión del Domingo de Ramos, y morado después para la Misa; blanco el Jueves Santo; negro el Viernes Santo (morado para el rito de la Comunión); el sagrario queda vacío desde después de la Misa de la Cena del Señor hasta la Vigilia Pascual.",
+  "scripture_eng_es": "Se humilló a sí mismo, hecho obediente hasta la muerte, y muerte de cruz."
+ },
+ "cal-easter": {
+  "title_es": "Tiempo Pascual",
+  "summary_es": "Los cincuenta días desde el Domingo de Resurrección hasta Pentecostés, durante los cuales la Iglesia celebra la Resurrección de Nuestro Señor. Se restaura el Aleluya, cantado una y otra vez; el Cirio Pascual arde en todas las Misas.",
+  "history_es": "El Tiempo Pascual es más antiguo que la Cuaresma y se remonta a los primeros días de la Iglesia. La Octava de Pascua se consideraba un solo día continuo de alegría.",
+  "practice_es": "Recibe la Sagrada Comunión (el precepto pascual obliga a comulgar al menos una vez entre el Miércoles de Ceniza y el Domingo de la Trinidad). Saludaos unos a otros con «Cristo ha resucitado; verdaderamente ha resucitado».",
+  "notes_es": "Ornamentos blancos durante todo el tiempo. Se añade el Aleluya a las antífonas. La antífona mariana es el Regina Caeli. Pentecostés cierra el tiempo con ornamentos rojos.",
+  "scripture_eng_es": "No está aquí, porque ha resucitado, como dijo."
+ },
+ "cal-ordinary": {
+  "title_es": "Tiempo Ordinario",
+  "summary_es": "Las semanas fuera de los grandes tiempos: el Tiempo después de Epifanía (del 14 de enero (tras la Conmemoración del Bautismo de Nuestro Señor) a Septuagésima) y el Tiempo después de Pentecostés (del Domingo de la Trinidad al I de Adviento). En el calendario de 1962 se cuentan como domingos después de Epifanía y domingos después de Pentecostés.",
+  "history_es": "El término «Tiempo Ordinario» es una acuñación del Novus Ordo; tradicionalmente estas semanas eran simplemente «después de Epifanía» o «después de Pentecostés». El calendario de 1962 cuenta normalmente 24 domingos después de Pentecostés.",
+  "practice_es": "Un tiempo para el crecimiento espiritual constante, la Misa diaria, el Rosario y el afianzamiento de la virtud. En este período caen muchas fiestas importantes: Corpus Christi, el Sagrado Corazón, la Asunción y Todos los Santos.",
+  "notes_es": "Ornamentos verdes. Antífona mariana: Salve Regina (de la Trinidad al Adviento); Ave Regina Caelorum (de la Candelaria al Miércoles Santo)."
+ },
+ "cal-septuagesima": {
+  "title_es": "Septuagésima (Precuaresma)",
+  "summary_es": "El tiempo de dos semanas y media de preparación para la Cuaresma: los domingos de Septuagésima, Sexagésima y Quincuagésima, desde el tercer domingo antes del Miércoles de Ceniza hasta el Martes de Carnaval.",
+  "history_es": "Establecido en Roma hacia el siglo VI, el tiempo toma sus nombres de los números redondos setenta, sesenta y cincuenta días antes de Pascua. Fue abolido en el calendario de 1969, pero permanece en todos los libros tradicionales.",
+  "practice_es": "Ornamentos morados; se omite el Gloria los domingos; el Aleluya se retira por completo desde las Primeras Vísperas de Septuagésima — un tracto lo sustituye en la Misa, y «Laus tibi, Domine, Rex aeternae gloriae» lo sustituye en el Oficio. Aún no se exige ayuno; el tiempo invita a una entrada gradual en la penitencia.",
+  "notes_es": "La despedida del Aleluya (la «depositio») se guardaba con verdadera ceremonia en los usos medievales. Las Misas dominicales — los obreros de la viña, el sembrador, la curación del ciego — forman una catequesis sobre la gracia antes de que comience el ayuno cuaresmal.",
+  "scripture_eng_es": "Corred de tal manera que lo alcancéis."
+ },
+ "cal-ranks": {
+  "title_es": "Rangos de las fiestas",
+  "summary_es": "Según las rúbricas de 1960, las fiestas son de Primera, Segunda o Tercera Clase; las observancias menores se guardan como conmemoraciones, y los propios días litúrgicos se clasifican en clases I-IV.",
+  "history_es": "El sistema fue simplificado en 1960 bajo Juan XXIII a partir del sistema más antiguo de Dobles de Primera Clase, Dobles de Segunda Clase, Dobles Mayores, Dobles, Semidobles y Simples.",
+  "practice_es": "El rango del día determina el Oficio y la Misa que se dicen. Las fiestas de Primera Clase prevalecen sobre casi todo y tienen Oficios propios. Las de Segunda Clase tienen Oficios propios pero ceden ante las de Primera Clase.",
+  "notes_es": "Las fiestas de Primera Clase se imprimen en mayúsculas en los ordos tradicionales y se observan con la mayor solemnidad."
+ },
+ "mass-mass": {
+  "title_es": "La Santa Misa",
+  "summary_es": "La renovación incruenta del Sacrificio del Calvario; fuente y cumbre de la vida cristiana. En la Misa, Nuestro Señor mismo es a la vez el Sacerdote que ofrece y la Víctima ofrecida, por medio del ministerio del sacerdote ordenado.",
+  "history_es": "El Rito Romano de la Misa se formó gradualmente a lo largo del primer milenio y fue codificado por el Papa San Pío V en 1570 tras el Concilio de Trento. El Missale Romanum de 1962 conserva este rito en su forma tradicional definitiva.",
+  "practice_es": "La asistencia los domingos y días de precepto es obligación grave. Recibe a Nuestro Señor dignamente en estado de gracia, habiendo observado el ayuno eucarístico (tres horas según la disciplina de 1957 de Pío XII; desde la medianoche según la regla más antigua de 1917) o al menos una hora (disciplina actual). Haz una debida acción de gracias después de la Misa.",
+  "notes_es": "La Misa tiene dos partes principales: la Misa de los Catecúmenos (desde las Oraciones al pie del Altar hasta el Credo) y la Misa de los Fieles (del Ofertorio al Último Evangelio). El Canon se dice en silencio.",
+  "scripture_eng_es": "Pues cuantas veces comiereis este pan y bebiereis el cáliz, anunciaréis la muerte del Señor hasta que venga."
+ },
+ "mass-baptism": {
+  "title_es": "El Bautismo",
+  "summary_es": "El primero de los siete sacramentos, por el cual se perdona el pecado original y el alma es regenerada a la vida de la gracia. El Bautismo es necesario para la salvación. Imprime un carácter espiritual indeleble.",
+  "history_es": "Instituido por Nuestro Señor después de su Resurrección (Mt 28, 19). El rito romano tradicional incluye exorcismos, la entrega de la sal, el Ephphatha y la triple infusión de agua.",
+  "practice_es": "Los niños deben ser bautizados cuanto antes. El ministro propio es el sacerdote, aunque en peligro de muerte cualquier persona puede bautizar con la forma y la intención debidas.",
+  "notes_es": "Forma: «Yo te bautizo en el nombre del Padre, y del Hijo, y del Espíritu Santo». Materia: agua natural derramada sobre la cabeza.",
+  "scripture_eng_es": "El que creyere y fuere bautizado, se salvará."
+ },
+ "mass-confirmation": {
+  "title_es": "La Confirmación",
+  "summary_es": "El sacramento por el cual los bautizados son fortalecidos por el Espíritu Santo para confesar la Fe con valentía. El obispo unge la frente con el Crisma y dice: «Yo te signo con la señal de la Cruz y te confirmo con el Crisma de la salvación».",
+  "history_es": "La imposición de manos es apostólica (Hch 8, 17). El uso del Crisma se remonta al menos al siglo III. Tradicionalmente se confiere hacia la edad de la razón o después.",
+  "practice_es": "Todo católico debe confirmarse. El sacramento imprime carácter y da los siete dones del Espíritu Santo: Sabiduría, Entendimiento, Consejo, Fortaleza, Ciencia, Piedad y Temor de Dios.",
+  "scripture_eng_es": "Entonces les imponían las manos, y recibían al Espíritu Santo."
+ },
+ "mass-orders": {
+  "title_es": "El Orden Sagrado",
+  "summary_es": "El sacramento por el cual un varón es configurado con Cristo Sumo Sacerdote y capacitado para ofrecer el Santo Sacrificio de la Misa y perdonar los pecados. Los tres grados son diácono, sacerdote y obispo.",
+  "history_es": "Instituido por Nuestro Señor en la Última Cena cuando dijo: «Haced esto en memoria mía». La sucesión apostólica conserva la línea ininterrumpida desde los Doce hasta cada obispo válidamente ordenado hoy.",
+  "practice_es": "Reza a diario por los sacerdotes y por las vocaciones. Las manos del sacerdote están consagradas para ofrecer la Misa; los fieles tradicionalmente besan las manos del sacerdote recién ordenado para recibir su Primera Bendición.",
+  "notes_es": "Solo un varón bautizado puede recibir válidamente el Orden Sagrado. El sacramento imprime un carácter indeleble y confiere potestades específicas."
+ },
+ "mass-eucharist": {
+  "title_es": "La Sagrada Eucaristía",
+  "summary_es": "El Sacramento del Cuerpo y la Sangre, Alma y Divinidad de Nuestro Señor Jesucristo, bajo las apariencias de pan y vino. La Sagrada Eucaristía es fuente y cumbre de la vida cristiana. En ella Cristo está verdadera, real y sustancialmente presente; no de modo meramente simbólico, sino con su Persona entera. Es a la vez sacrificio (la Misa) y sacramento (la Sagrada Comunión).",
+  "history_es": "Instituida por Nuestro Señor en la Última Cena, la noche antes de padecer: «Esto es mi Cuerpo... Esta es mi Sangre de la nueva alianza» (Mt 26, 26-28). Los Apóstoles lo entendieron literalmente, como toda la Iglesia durante quince siglos sin disputa. El Concilio de Trento (1551) definió la doctrina de la transubstanciación: la sustancia del pan y del vino se convierte en la sustancia del Cuerpo y de la Sangre de Cristo, mientras permanecen las apariencias (accidentes).",
+  "practice_es": "Para comulgar dignamente: (1) Estar en estado de gracia; si eres consciente de pecado mortal, confiésate primero. (2) Observar el ayuno eucarístico: una hora antes de comulgar (exceptuados el agua y las medicinas). Bajo el Código de 1917, el ayuno era desde la medianoche. (3) Acercarse al altar con reverencia. En la Misa Tradicional, la Comunión se recibe de rodillas, en la lengua, de manos del sacerdote. (4) Tras comulgar, vuelve a tu sitio y dedica un tiempo a la acción de gracias; al menos 10-15 minutos. San Alfonso María de Ligorio consideraba la acción de gracias después de la Comunión más importante que la preparación anterior.",
+  "notes_es": "La Iglesia obliga a los fieles a recibir la Sagrada Comunión al menos una vez al año, en tiempo pascual (el «precepto pascual»). Se recomienda la Comunión diaria a quienes estén debidamente dispuestos. La Comunión espiritual — desear recibir cuando no es posible — también confiere gracia.",
+  "scripture_eng_es": "Porque mi carne verdaderamente es comida, y mi sangre verdaderamente es bebida. El que come mi carne y bebe mi sangre, en mí mora y yo en él."
+ },
+ "mass-penance": {
+  "title_es": "La Penitencia (Confesión)",
+  "summary_es": "El sacramento por el cual los pecados cometidos después del Bautismo son perdonados mediante la absolución de un sacerdote que actúa en la persona de Cristo. Se llama también Confesión (por la declaración de los pecados) y Reconciliación (por la restauración de la amistad con Dios). Cristo dio este poder a los Apóstoles el Domingo de Resurrección: «A quienes perdonareis los pecados, les son perdonados» (Jn 20, 23).",
+  "history_es": "En la Iglesia primitiva se imponía penitencia pública por los pecados graves, a veces durante años. Hacia el siglo VI, los monjes irlandeses desarrollaron la confesión privada tal como hoy la conocemos, extendiendo la práctica por Europa. El IV Concilio de Letrán (1215) exigió la confesión anual a quienes estuvieran en pecado mortal. El Concilio de Trento definió los elementos esenciales del sacramento: contrición, confesión, satisfacción y absolución.",
+  "practice_es": "Cómo hacer una buena Confesión: (1) Examina tu conciencia con los Diez Mandamientos (ve el Examen en esta aplicación). (2) Arrepiéntete de tus pecados; la contrición perfecta (dolor por amor de Dios) o la imperfecta (dolor por temor del castigo) basta con el sacramento. (3) Confiesa al sacerdote todos los pecados mortales en especie y número. Los veniales, aunque no es obligatorio, se recomienda confesarlos. (4) Acepta la penitencia impuesta. (5) Reza el <link target=\"prayer:actusContr\">Acto de Contrición</link>. (6) Recibe la absolución. (7) Cumple tu penitencia sin demora. Frecuencia: la confesión mensual es el mínimo que recomiendan los directores espirituales; la semanal es ideal para quien busca la santidad.",
+  "notes_es": "El sigilo de la Confesión es absoluto: un sacerdote jamás puede revelar lo confesado, bajo ninguna circunstancia, ni siquiera bajo amenaza de muerte. Así ha sido la ley y la práctica de la Iglesia desde el principio.",
+  "scripture_eng_es": "Recibid el Espíritu Santo: a quienes perdonareis los pecados, les son perdonados; y a quienes se los retuviereis, les son retenidos."
+ },
+ "mass-matrimony": {
+  "title_es": "El Santo Matrimonio",
+  "summary_es": "El sacramento por el cual un hombre bautizado y una mujer bautizada se unen de por vida en matrimonio legítimo y reciben la gracia para cumplir los deberes de su estado. Los esposos son los ministros del sacramento el uno para el otro; el sacerdote es el testigo oficial de la Iglesia. El matrimonio cristiano es indisoluble: lo que Dios ha unido, ningún poder humano puede separarlo.",
+  "history_es": "Nuestro Señor elevó el matrimonio natural a sacramento, devolviéndole su dignidad original tal como Dios lo creó en el Edén. Hizo su primer milagro en las bodas de Caná (Jn 2, 1-11). San Pablo enseña que el matrimonio significa la unión de Cristo y su Iglesia (Ef 5, 25-32). El Concilio de Trento exigió la presencia de un sacerdote y dos testigos para la validez (el decreto Tametsi, 1563).",
+  "practice_es": "Preparación para el matrimonio católico: (1) Contacta con tu párroco con mucha antelación (6-12 meses). (2) Completa la preparación matrimonial que exija la diócesis. (3) Recibe el Sacramento de la Penitencia antes de la boda. (4) La Misa Nupcial es el marco ideal, con los novios comulgando juntos. (5) La pareja debe rezar junta a diario desde el noviazgo. La Bendición Nupcial tradicional pide a Dios que dé a la esposa las virtudes de las santas mujeres de la Escritura y que bendiga a los esposos con hijos.",
+  "notes_es": "Los tres bienes del matrimonio (San Agustín): los hijos (proles), la fidelidad (fides) y el vínculo sacramental (sacramentum). La anticoncepción artificial es gravemente pecaminosa; la Planificación Familiar Natural, usada por razones serias, respeta el designio de Dios.",
+  "scripture_eng_es": "Pues lo que Dios ha unido, no lo separe el hombre."
+ },
+ "mass-anointing": {
+  "title_es": "La Unción de los Enfermos",
+  "summary_es": "El sacramento por el cual un sacerdote unge con óleo santo a los gravemente enfermos o moribundos, orando por su curación espiritual y corporal. Llamado tradicionalmente Extremaunción («última unción»), prepara el alma para la muerte perdonando los pecados (especialmente los que la persona no puede confesar), fortaleciendo contra las últimas tentaciones y, a veces, devolviendo la salud corporal si Dios lo quiere.",
+  "history_es": "El sacramento tiene su origen en la práctica de los Apóstoles: «¿Está enfermo alguno entre vosotros? Llame a los presbíteros de la Iglesia, y oren sobre él, ungiéndole con óleo en el nombre del Señor» (Sant 5, 14). El Concilio de Trento lo confirmó como verdadero sacramento instituido por Cristo y promulgado por Santiago. En el rito tradicional, el sacerdote unge los cinco sentidos (ojos, oídos, narices, boca, manos y, opcionalmente, pies), pidiendo el perdón de Dios por los pecados cometidos por cada uno.",
+  "practice_es": "Cuándo llamar al sacerdote: no esperes a que la persona esté inconsciente o en el último momento. El sacramento es más fructuoso cuando se recibe con conciencia y devoción. Llama al sacerdote cuando alguien esté gravemente enfermo, afronte una operación importante o esté en peligro de muerte por edad o enfermedad. El sacerdote oirá la Confesión (si es posible), administrará la Unción y dará el Santo Viático (la última Comunión). Ten velas benditas y agua bendita junto a la cama.",
+  "notes_es": "La gracia de la Extremaunción incluye: la remisión de los pecados veniales y de las reliquias del pecado; la remisión del pecado mortal si la persona está contrita pero no puede confesarse; la fortaleza contra la desesperación y las tentaciones del demonio en la agonía final; la salud corporal, si conviene a la salvación.",
+  "scripture_eng_es": "¿Está enfermo alguno entre vosotros? Llame a los presbíteros de la Iglesia, y oren sobre él, ungiéndole con óleo en el nombre del Señor."
+ },
+ "pray-vocal": {
+  "title_es": "Oración vocal",
+  "summary_es": "La oración vocal es la que se dice en voz alta o en silencio con palabras fijas, ya compuestas por la Iglesia (oración litúrgica), ya por los santos y los fieles. Es la forma de oración más común y accesible, y ancla la mente mediante fórmulas familiares. El Padrenuestro, enseñado por Cristo mismo, es su modelo supremo.",
+  "history_es": "Nuestro Señor enseñó a sus discípulos a orar con palabras: «Cuando oréis, decid: Padre nuestro...» (Lc 11, 2). Los Apóstoles continuaron la tradición de las horas litúrgicas judías, añadiendo oraciones propiamente cristianas. A lo largo de los siglos la Iglesia formó un rico tesoro de oraciones vocales: el Avemaría, el Rosario, las letanías, las novenas y las oraciones de la Misa. Santa Teresa de Ávila enseñó que la oración vocal, hecha con atención, puede llegar a ser contemplación.",
+  "practice_es": "Cómo orar bien vocalmente: (1) Elige una oración, como el Padrenuestro, el Avemaría o una oración de esta aplicación. (2) Antes de comenzar, ponte en la presencia de Dios: «Señor, aquí estoy ante Ti». (3) Di cada palabra con deliberación, deteniéndote a considerar su sentido. No corras. (4) Cuando te distraigas, vuelve suavemente a las palabras. (5) Termina dando gracias a Dios por el tiempo pasado con Él. Consejo: rezar en voz alta, aunque sea bajito, ayuda a mantener la atención. Arrodillarse o estar de pie añade reverencia corporal.",
+  "notes_es": "Oraciones recomendadas para principiantes: el Ofrecimiento de la mañana, el Ángelus (al mediodía), las tres Avemarías (al acostarse) y la bendición de la mesa. Construye un ritmo de oraciones breves a lo largo del día antes de intentar las más largas."
+ },
+ "pray-mental": {
+  "title_es": "Oración mental",
+  "summary_es": "La oración mental es la elevación silenciosa de la mente y del corazón a Dios, sin palabras fijas, para conocerle, amarle y resolverse a servirle. Es una conversación interior con Dios que emplea las facultades de la memoria, el entendimiento y la voluntad. Todos los santos insisten en su necesidad: «Quien no practica la oración mental no necesita demonio que lo lleve al infierno» (Santa Teresa de Ávila).",
+  "history_es": "Los Padres del Desierto practicaban la oración interior desde el siglo III. San Juan Casiano trajo sus métodos a Occidente. En el siglo XVI, San Ignacio de Loyola sistematizó la meditación en sus Ejercicios Espirituales, y Santa Teresa de Ávila trazó sus grados en las Moradas. San Francisco de Sales la hizo accesible a los laicos en la Introducción a la Vida Devota. El método sulpiciano, desarrollado para la formación de los seminarios, sigue siendo muy usado.",
+  "practice_es": "Cómo practicar la oración mental (método sulpiciano): (1) Preparación (2-3 min): ponte en la presencia de Dios. Recuerda que Él te ve, te ama y te atiende. Pide luz al Espíritu Santo. (2) Lectura: lee despacio un pasaje breve de la Escritura o de lectura espiritual. Detente cuando una frase te toque. (3) Meditación (10-15 min): considera la verdad leída. Pregúntate: ¿qué significa esto? ¿Qué quiere Dios que entienda? Usa la imaginación para situarte en la escena si es un pasaje del Evangelio. (4) Afectos: deja que el corazón responda: actos de amor, gratitud, dolor, confianza o petición. Habla con Dios libremente. (5) Resolución: elige una cosa concreta que harás hoy como respuesta. Que sea pequeña y específica. (6) Conclusión: da gracias a Dios. Pide la gracia de cumplir tu resolución. Reza un Padrenuestro. Consejo: empieza con 15 minutos diarios. La mañana es lo mejor. Ayuda una iglesia silenciosa o un rincón de tu cuarto, con un crucifijo.",
+  "notes_es": "Si no sientes nada durante la oración, no te desanimes. La sequedad es normal y a menudo señal de crecimiento. Permanece simplemente ante Dios en fe. «La oración no es cuestión de sentir, sino de querer» (Santo Tomás de Aquino). Cumple tu cita con Dios haya o no consuelo."
+ },
+ "pray-contemplation": {
+  "title_es": "Contemplación",
+  "summary_es": "La contemplación es una mirada sencilla y amorosa a Dios y a las cosas divinas. Es un don del Espíritu Santo que va más allá del razonamiento y de las palabras hasta la experiencia directa de la presencia de Dios. Aunque la contemplación infusa es don gratuito de Dios, el alma puede disponerse mediante la meditación fiel, la mortificación y la humildad.",
+  "history_es": "La tradición contemplativa corre desde los Apóstoles, pasando por los Padres del Desierto, hasta los grandes místicos carmelitas y dominicos. San Gregorio Magno distinguió la vida activa y la contemplativa. San Juan de la Cruz describió las noches oscuras por las que el alma pasa hacia la unión divina. Santo Tomás de Aquino enseñó que la contemplación es la actividad más alta de la persona humana, un anticipo de la visión beatífica.",
+  "practice_es": "Cómo disponerte para la contemplación: (1) Sé fiel a la oración mental diaria. La contemplación crece normalmente de la meditación regular, no de saltarse pasos. (2) Simplifica: si durante la oración notas que las palabras se desvanecen y queda una serena conciencia de la presencia de Dios, no te fuerces a volver al razonamiento. Descansa en esa conciencia. Es el comienzo de la contemplación. (3) La oración de simple mirada: mira el crucifijo o el sagrario. No digas nada. Deja hablar a Dios. Si parece callar, permanece de todos modos. (4) Lee a los místicos: la Nube del No Saber, las Moradas (Teresa), la Noche Oscura (Juan de la Cruz). (5) Busca dirección espiritual de un sacerdote experimentado en la vida interior. Señales de que Dios te llama a la contemplación (según San Juan de la Cruz): ya no puedes meditar como antes; sientes una conciencia general y amorosa de Dios; prefieres la soledad y el silencio.",
+  "notes_es": "La contemplación no está reservada a monjes y monjas. El Concilio Vaticano II afirmó la llamada universal a la santidad. Muchos laicos en la vida ordinaria reciben este don. La disposición clave no es la inteligencia ni el saber, sino la humildad y el deseo de Dios."
+ },
+ "pray-lectio": {
+  "title_es": "Lectio Divina",
+  "summary_es": "La Lectio Divina («lectura divina») es la antigua práctica monástica de orar con la Sagrada Escritura. En lugar de estudiar la Biblia para informarse, la lectio la aborda como una conversación viva con Dios, que habla por su Palabra inspirada. La práctica tiene cuatro pasos tradicionales, llamados a veces los «cuatro peldaños de la escalera al cielo».",
+  "history_es": "La práctica se origina con Orígenes (siglo III) y fue sistematizada por Guigo II, cartujo del siglo XII, que describió los cuatro pasos como una escalera: «La lectura busca, la meditación encuentra, la oración pide, la contemplación recibe». San Benito la hizo central en la vida monástica en su Regla. Fue la forma principal de trato con la Escritura durante más de mil años antes del auge de la exégesis académica.",
+  "practice_es": "Cómo practicar la Lectio Divina: (1) Lectio (lectura): elige un pasaje breve de la Escritura (una escena del Evangelio, un Salmo, una Epístola). Léelo despacio, dos o tres veces. Deja que una palabra o frase te llame la atención. Detente ahí. (2) Meditatio (meditación): da vueltas en la mente a esa palabra o frase. ¿Qué te dice Dios por medio de ella? ¿Cómo toca tu vida hoy? Mastícala como alimento del alma. (3) Oratio (oración): responde a Dios desde el corazón. ¿Qué te mueve a decirle este pasaje? ¿Alabanza, petición, arrepentimiento, gratitud, entrega? Habla con libertad. (4) Contemplatio (contemplación): deja caer las palabras. Descansa en silencio en la presencia de Dios, dejando que la verdad recibida cale hondo. Quédate mientras dure ese silencio. Ejemplo con Lucas 1, 38 («He aquí la esclava del Señor; hágase en mí según tu palabra»): Lectio: lee despacio. La palabra «esclava» te toca. Meditatio: María se llama sierva. ¿Cómo sería la entrega total en mi vida? ¿Dónde me resisto a la voluntad de Dios? Oratio: «Señor, quiero decir sí como ella. Ayuda mi resistencia. Hazme siervo». Contemplatio: quédate en silencio con el sí de María. Deja que se haga tuyo. Consejo: 20-30 minutos. Para los católicos tradicionales, usa la Vulgata o una traducción hecha de ella (Torres Amat).",
+  "notes_es": "La Lectio Divina puede practicarse con cualquier libro de la Escritura, pero los Evangelios y los Salmos son los puntos de partida más ricos. Algunos añaden un quinto paso, Actio (acción), preguntando: ¿qué haré hoy de otra manera por este encuentro con la Palabra de Dios?"
+ },
+ "pray-rosary": {
+  "title_es": "El Rosario",
+  "summary_es": "El Santísimo Rosario es una devoción que combina la oración vocal y la mental, en la que los fieles meditan los misterios de la vida de Cristo y de su Santísima Madre mientras rezan decenas de Avemarías. Es la devoción católica más practicada después de la Misa, recomendada por todos los Papas durante siglos y asociada a incontables milagros, conversiones y victorias.",
+  "history_es": "La tradición atribuye el Rosario a Santo Domingo, que lo recibió de Nuestra Señora durante la herejía albigense (siglo XIII). La orden dominicana lo extendió por Europa. El Papa San Pío V atribuyó al Rosario la victoria cristiana en la batalla de Lepanto (1571) y estableció en acción de gracias la fiesta de Nuestra Señora de la Victoria, que Gregorio XIII renombró Nuestra Señora del Rosario. Todos los Papas desde entonces lo han recomendado. Nuestra Señora de Fátima (1917) pidió expresamente el Rosario diario por la paz.",
+  "practice_es": "Cómo rezar el Rosario: (1) Haz la Señal de la Cruz y reza el Credo de los Apóstoles en el crucifijo. (2) Reza un Padrenuestro en la primera cuenta grande. (3) Reza tres Avemarías en las tres cuentas siguientes (por la fe, la esperanza y la caridad). (4) Reza el Gloria. (5) Anuncia el primer Misterio. Detente a considerar su sentido. (6) Reza un Padrenuestro, diez Avemarías y un Gloria por cada decena. (7) Tras cada decena, reza la oración de Fátima. (8) Tras las cinco decenas, reza la Salve. La clave de un Rosario fructuoso es meditar los misterios, no solo recitar las palabras. Que cada decena sea una ventana a la vida de Cristo. Horario tradicional de misterios: Gozosos (lunes/jueves), Dolorosos (martes/viernes), Gloriosos (miércoles/sábado/domingo).",
+  "notes_es": "Las quince promesas de Nuestra Señora a quienes recen fielmente el Rosario incluyen: protección especial, gracias señaladas, una armadura poderosa contra el infierno, crecimiento en la virtud y la gracia de una buena muerte. El Rosario en familia es especialmente poderoso: «La familia que reza unida permanece unida» (P. Patrick Peyton).",
+  "scripture_eng_es": "Pues he aquí que desde ahora me llamarán bienaventurada todas las generaciones."
+ },
+ "dev-sacred-heart": {
+  "title_es": "El Sagrado Corazón",
+  "summary_es": "Devoción al Corazón físico de Jesucristo como símbolo de su amor sin límites a los hombres, revelada especialmente a Santa Margarita María de Alacoque en Paray-le-Monial en 1673-75.",
+  "history_es": "La devoción tiene raíces patrísticas, pero se hizo explícita en los escritos de Santa Gertrudis, San Juan Eudes y Santa Margarita María. La fiesta se extendió a la Iglesia universal en 1856.",
+  "practice_es": "Devoción de los Primeros Viernes: nueve Primeros Viernes consecutivos de Comunión reparadora. Consagración de uno mismo, de la familia y del hogar al Sagrado Corazón. Entronización del Sagrado Corazón en el hogar.",
+  "notes_es": "La fiesta del Sagrado Corazón cae el viernes de la semana siguiente al Corpus Christi (el viernes después del segundo domingo después de Pentecostés). Nuestro Señor hizo doce promesas a Santa Margarita María para quienes honren su Corazón.",
+  "scripture_eng_es": "Uno de los soldados le abrió el costado con una lanza, y al instante salió sangre y agua."
+ },
+ "dev-adoration": {
+  "title_es": "Adoración Eucarística",
+  "summary_es": "La adoración de Nuestro Señor Jesucristo verdaderamente presente — cuerpo, sangre, alma y divinidad — en el Santísimo Sacramento del Altar, ya en el sagrario, ya expuesto en la custodia.",
+  "history_es": "La adoración eucarística se desarrolló en el siglo XIII junto a la fiesta del Corpus Christi (instituida en 1264). Existen comunidades de adoración perpetua desde el siglo XVII.",
+  "practice_es": "Haz una hora santa ante el Santísimo Sacramento. Asiste a la Bendición. Haz genuflexión al pasar ante un sagrario. Procura comulgar con frecuencia, incluso a diario, en estado de gracia.",
+  "notes_es": "Durante la exposición debe cesar toda actividad ordinaria de la parroquia. Un sacerdote o diácono con sobrepelliz y estola da la Bendición."
+ },
+ "dev-scapular": {
+  "title_es": "El Escapulario del Carmen",
+  "summary_es": "Un sacramental de la Orden Carmelita: dos pequeños trozos de paño marrón unidos por cordones y llevados sobre los hombros. Señal de consagración a Nuestra Señora y prenda de su protección.",
+  "history_es": "Entregado por Nuestra Señora a San Simón Stock, General de los Carmelitas, en 1251. Prometió que quien muera llevándolo «no padecerá el fuego eterno».",
+  "practice_es": "Haz que un sacerdote te imponga el escapulario. Llévalo día y noche. Guarda la castidad según tu estado. Reza a diario una oración mariana (el Oficio Parvo de Nuestra Señora, o los siete Padrenuestros, siete Avemarías y siete Glorias).",
+  "notes_es": "El privilegio sabatino: Nuestra Señora prometió librar del Purgatorio, el primer sábado después de la muerte, a quienes lleven el escapulario y cumplan sus condiciones."
+ },
+ "dev-first-fridays": {
+  "title_es": "Los Primeros Viernes",
+  "summary_es": "La devoción de comulgar nueve Primeros Viernes de mes consecutivos en honor del Sagrado Corazón de Jesús, con la promesa de Nuestro Señor de conceder la gracia de la perseverancia final.",
+  "history_es": "La promesa fue hecha por Nuestro Señor a Santa Margarita María de Alacoque como la duodécima y mayor de las promesas del Sagrado Corazón.",
+  "practice_es": "Comulga dignamente nueve Primeros Viernes consecutivos. Ofrece la Misa en reparación al Sagrado Corazón. Muchos añaden una Hora Santa ante el Santísimo Sacramento.",
+  "notes_es": "La Duodécima Promesa: «Yo te prometo, en la excesiva misericordia de mi Corazón, que mi amor todopoderoso concederá a todos los que comulguen nueve Primeros Viernes consecutivos la gracia de la penitencia final; no morirán en mi desgracia»."
+ },
+ "dev-first-saturdays": {
+  "title_es": "Los Primeros Sábados",
+  "summary_es": "La devoción de reparación al Inmaculado Corazón de María en cinco Primeros Sábados consecutivos, pedida por Nuestra Señora en Fátima en 1925 por medio de Sor Lucía.",
+  "history_es": "Revelada en Pontevedra el 10 de diciembre de 1925, como respuesta a las blasfemias e ingratitudes ofrecidas contra el Inmaculado Corazón de María.",
+  "practice_es": "En cinco Primeros Sábados consecutivos: Confesión (dentro de los ocho días), Comunión, cinco decenas del Rosario y quince minutos de meditación de los misterios; todo ofrecido en reparación al Inmaculado Corazón.",
+  "notes_es": "Nuestra Señora prometió asistir en la hora de la muerte, con todas las gracias necesarias para la salvación, a quienes cumplan estas condiciones."
+ },
+ "pen-fasting": {
+  "title_es": "El Ayuno",
+  "summary_es": "La disciplina de restringir la comida como acto de penitencia. Según las reglas de 1962, ayunar significa una comida completa más dos pequeñas colaciones (que juntas sean menores que la comida principal) en un solo día. El agua y las medicinas pueden tomarse libremente.",
+  "history_es": "El ayuno es de origen apostólico y patrístico. La Ley mosaica exigía ayunar el Día de la Expiación. Nuestro Señor ayunó cuarenta días en el desierto. La Iglesia ha prescrito ayunos a lo largo de la historia.",
+  "practice_es": "El Código de Derecho Canónico de 1917 (vigente en 1962) obliga a todos los católicos de 21 a 59 años al ayuno cuaresmal todos los días de entre semana de Cuaresma, en las Témporas y en las Vigilias de ciertas fiestas. La disciplina actual (posterior a 1966) solo obliga el Miércoles de Ceniza y el Viernes Santo.",
+  "notes_es": "Los católicos tradicionales suelen seguir por devoción la disciplina antigua, más estricta: ayunar todos los días de entre semana de Cuaresma y en las Témporas."
+ },
+ "pen-abstinence": {
+  "title_es": "La Abstinencia",
+  "summary_es": "La disciplina de abstenerse de la carne de animales de sangre caliente como acto de penitencia. El pescado, los huevos, los lácteos y las grasas de animales terrestres están permitidos según las reglas tradicionales.",
+  "history_es": "La abstinencia del viernes en memoria de la Pasión se observa desde los tiempos apostólicos. El Código de Derecho Canónico de 1917 (vigente en 1962) exige la abstinencia todos los viernes del año.",
+  "practice_es": "Abstente de carne todos los viernes (obligación perpetua). En Cuaresma, abstente también el Miércoles de Ceniza y los sábados si sigues la disciplina tradicional del Código de 1917. La abstinencia comienza a medianoche y dura hasta la medianoche.",
+  "notes_es": "Obliga desde los 7 años. «Carne» significa la carne de mamíferos y aves; los mamíferos marinos (ballenas, marsopas) se cuentan tradicionalmente como pescado."
+ },
+ "pen-ember": {
+  "title_es": "Las Témporas",
+  "summary_es": "Cuatro grupos de tres días (miércoles, viernes y sábado) en cada estación del año, observados con ayuno y abstinencia como consagración de cada estación a Dios y en acción de gracias por los frutos de la tierra.",
+  "history_es": "De origen romano, las Témporas se observan desde al menos el siglo III. Caen en las semanas de Santa Lucía (diciembre), la primera semana de Cuaresma, la Octava de Pentecostés y tras la fiesta de la Santa Cruz (septiembre).",
+  "practice_es": "Ayuna y guarda abstinencia en cada día de Témporas. Reza por los que van a ser ordenados; los sábados de Témporas eran los días tradicionales para conferir el Orden Sagrado. Reza por los sacerdotes y por las vocaciones.",
+  "notes_es": "Las Misas de Témporas tienen cantos y lecturas propios que reflejan la estación del año."
+ },
+ "pen-vigils": {
+  "title_es": "Las Vigilias",
+  "summary_es": "El día anterior a una gran fiesta, guardado tradicionalmente con ayuno y abstinencia como preparación espiritual para la fiesta misma. Las vigilias tienen Misa y Oficio propios.",
+  "history_es": "Las vigilias nacieron de las celebraciones de oración nocturna antes de las grandes fiestas. El ayuno se añadió para preparar el cuerpo y el alma para la celebración.",
+  "practice_es": "Tradicionalmente observadas como días de ayuno: las Vigilias de Navidad, Pentecostés, la Asunción y Todos los Santos. Quienes siguen la disciplina de 1962 guardan estas vigilias como días de ayuno y abstinencia.",
+  "notes_es": "La Vigilia Pascual es la mayor de todas las vigilias; la «madre de todas las santas vigilias» (San Agustín)."
+ },
+ "sac-holywater": {
+  "title_es": "El Agua Bendita",
+  "summary_es": "Agua bendecida por un sacerdote con oraciones de exorcismo y consagración, usada para bendecir personas, lugares y objetos, para la remisión del pecado venial y para poner en fuga a los espíritus malignos.",
+  "history_es": "El uso de agua bendecida está atestiguado desde los primeros siglos. El rito tradicional para bendecir el agua se encuentra en el Rituale Romanum.",
+  "practice_es": "Signate con agua bendita al entrar en la iglesia. Ten una pila de agua bendita a la entrada de tu casa. Rocía las habitaciones como protección. Signate antes de dormir.",
+  "notes_es": "El Asperges de la Misa dominical es una aspersión de los fieles con agua bendita que recuerda el Bautismo."
+ },
+ "sac-crucifix": {
+  "title_es": "Los Crucifijos",
+  "summary_es": "Una cruz con la figura (corpus) de Cristo crucificado. La imagen central de la devoción cristiana, colocada en toda iglesia, sobre todo altar y en todo hogar católico.",
+  "history_es": "El crucifijo se desarrolló como la imagen cristiana definitiva en los siglos V y VI, sustituyendo a las representaciones anteriores, meramente simbólicas, de la Cruz.",
+  "practice_es": "Coloca un crucifijo en lugar destacado de cada habitación. Besa el crucifijo del Rosario al comenzar y al terminar. Arrodíllate ante el crucifijo para orar.",
+  "notes_es": "Los crucifijos deben ser bendecidos por un sacerdote antes de usarse. El crucifijo bendecido concede indulgencia plenaria en la hora de la muerte, con las condiciones acostumbradas."
+ },
+ "sac-rosary": {
+  "title_es": "El Rosario (sacramental)",
+  "summary_es": "El Rosario físico mismo: la sarta de cuentas con que se cuentan las oraciones de la devoción del Rosario. Bendecido por un sacerdote, es un sacramental que lleva consigo muchas indulgencias.",
+  "history_es": "En el cristianismo antiguo, e incluso antes en tradiciones no cristianas, existían instrumentos para contar oraciones. La forma del Rosario dominicano (15 decenas) quedó fijada en el siglo XVI.",
+  "practice_es": "Haz bendecir tu Rosario por un sacerdote. Llévalo contigo. Llévalo puesto o tenlo cerca en la hora de la muerte.",
+  "notes_es": "Un Rosario dominicano bendecido por un sacerdote dominico lleva indulgencias adicionales propias de la Orden."
+ },
+ "sac-medal": {
+  "title_es": "La Medalla Milagrosa",
+  "summary_es": "La medalla acuñada tras la aparición de Nuestra Señora a Santa Catalina Labouré en la Rue du Bac, París, en 1830. El anverso muestra a María de pie sobre el globo con la inscripción «Oh María, sin pecado concebida, ruega por nosotros que recurrimos a ti».",
+  "history_es": "Nuestra Señora se apareció a Santa Catalina el 27 de noviembre de 1830, mostrándole el diseño y pidiendo que se acuñaran y distribuyeran medallas. Siguieron incontables milagros; de ahí el nombre.",
+  "practice_es": "Lleva la medalla con devoción. Distribúyela a quienes necesiten gracia. Reza a diario la oración inscrita en ella.",
+  "notes_es": "Llevar la Medalla Milagrosa se considera una pequeña consagración a la Inmaculada Concepción."
+ },
+ "sac-candles": {
+  "title_es": "Las Velas Benditas",
+  "summary_es": "Velas de cera de abeja bendecidas por la Iglesia, usadas en la Misa, en los funerales, junto al lecho del enfermo y durante las tormentas como protección contra el mal.",
+  "history_es": "Las velas se bendicen especialmente en la Candelaria (2 de febrero), fiesta de la Presentación, en memoria de las palabras de Simeón: «luz para revelación de los gentiles».",
+  "practice_es": "Recibe velas benditas en la Candelaria y guárdalas en casa. Enciende una durante las tormentas. Enciende una junto al lecho de los enfermos y moribundos. En el Viático se encienden dos velas benditas.",
+  "notes_es": "Las velas usadas en la Misa deben ser de cera de abeja pura (al menos el 51% en el Cirio Pascual y en las velas del altar mayor)."
+ },
+ "sac-incense": {
+  "title_es": "El Incienso",
+  "summary_es": "Una resina aromática (olíbano del árbol de la boswellia) que se quema sobre carbones para producir un humo de olor suave. Se usa en la liturgia como símbolo de la oración que sube a Dios y del culto debido a Cristo presente en el altar.",
+  "history_es": "El incienso se ofrece en el culto divino desde los tiempos del Antiguo Testamento (Éx 30, 7-8). Fue adoptado en el culto cristiano al menos desde el siglo IV.",
+  "practice_es": "Se usa en las Misas solemnes y en la Bendición. En la Vigilia Pascual se colocan cinco granos de incienso en el Cirio Pascual.",
+  "notes_es": "Los tres golpes del incensario expresan reverencia al altar, a la Cruz y al Santísimo Sacramento."
+ },
+ "sac-blessings": {
+  "title_es": "Las Bendiciones",
+  "summary_es": "Oraciones de la Iglesia que invocan el favor y la protección de Dios sobre personas, objetos, lugares u ocasiones. El Rituale Romanum contiene bendiciones para casi todos los aspectos de la vida católica.",
+  "history_es": "Las bendiciones litúrgicas forman parte de la vida de la Iglesia desde el principio. El Rituale Romanum fue codificado después de Trento y contiene cientos de bendiciones.",
+  "practice_es": "Pide bendiciones al sacerdote: de casas, coches, medallas, artículos religiosos, alimentos, madres embarazadas, niños. Muchas bendiciones son sacramentales que disponen el alma a la gracia.",
+  "notes_es": "La bendición del sacerdote tiene su propio poder. Recibe con reverencia la bendición del sacerdote al final de la Misa."
+ },
+ "sac-exorcisms": {
+  "title_es": "Los Exorcismos",
+  "summary_es": "Oraciones que mandan a los espíritus malignos retirarse. Los exorcismos menores se encuentran en el rito del Bautismo y en muchas bendiciones. El exorcismo mayor (el caso de una persona poseída) está reservado a un sacerdote con permiso expreso de su obispo.",
+  "history_es": "Nuestro Señor expulsó demonios (Mt 8, 28-34). El poder fue dado a los Apóstoles (Mt 10, 1) y por ellos a la Iglesia. El rito del exorcismo se conserva en el Rituale Romanum.",
+  "practice_es": "Los fieles pueden rezar la Oración a San Miguel y el Exorcismo Leonino como oraciones privadas de protección. Solo un sacerdote con facultades puede realizar el exorcismo solemne.",
+  "notes_es": "El Papa León XIII compuso un breve exorcismo y la oración a San Miguel tras una visión de las batallas espirituales por venir."
+ },
+ "lat-pronunciation": {
+  "title_es": "Pronunciación",
+  "summary_es": "La pronunciación del latín eclesiástico (la pronunciación «italiana») difiere de la pronunciación clásica o reconstruida que se enseña en las universidades. El latín eclesiástico es la lengua viva del Rito Romano.",
+  "practice_es": "A = «a», E = «e», I = «i», O = «o», U = «u» (vocales puras, como en español). C ante e/i/y/ae/oe = «ch» (como en «church» inglés). G ante e/i suave (como la «g» italiana de «gente»). Gn = «ñ». Ti ante vocal = «tsi».",
+  "notes_es": "Ve la pestaña Aprender (Schola Latina) para cursos completos de pronunciación y gramática."
+ },
+ "lat-grammar": {
+  "title_es": "Gramática básica",
+  "summary_es": "El latín es una lengua flexiva: las palabras cambian de forma para mostrar su función gramatical (caso, número, género, tiempo, modo). Hay cinco declinaciones de sustantivos, cuatro conjugaciones de verbos y seis casos principales (nominativo, genitivo, dativo, acusativo, ablativo, vocativo).",
+  "practice_es": "Para el Rosario y la Misa, céntrate en reconocer las formas comunes de las oraciones. «Dominus» (el Señor) frente a «Domino» (al Señor) frente a «Domini» (del Señor).",
+  "notes_es": "La pestaña Aprender tiene cursos completos de declinaciones, conjugaciones y lectura."
+ },
+ "lat-vocab": {
+  "title_es": "Vocabulario de oración",
+  "summary_es": "Las palabras más comunes de la Misa latina y del Rosario: Dominus (Señor), Deus (Dios), Pater (Padre), Filius (Hijo), Spiritus (Espíritu), Sanctus (Santo), Maria (María), Jesus (Jesús), gratia (gracia), et (y), in (en).",
+  "practice_es": "Aprende cincuenta palabras de oración y podrás seguir el ochenta por ciento de la Misa. Las fichas, la repetición y rezar el Rosario en latín son los métodos tradicionales."
+ },
+ "lat-abbrev": {
+  "title_es": "Abreviaturas",
+  "summary_es": "Abreviaturas comunes en el misal y el breviario: ℣. (Versiculus, versículo; el celebrante), ℟. (Responsum, respuesta; los fieles), S. (Sacerdos / Sanctus), P. (Pater), M. (Minister).",
+  "notes_es": "El texto rojo del misal se llama «rúbrica» (de ruber, rojo) y da las indicaciones. El texto negro es el que se dice en voz alta."
+ }
+}

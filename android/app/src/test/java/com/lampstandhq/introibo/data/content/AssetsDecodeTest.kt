@@ -134,6 +134,7 @@ class AssetsDecodeTest {
         check("missal_readings_es.json", { decode<Map<String, Map<String, String>>>("missal_readings_es.json") }) { it.isNotEmpty() }
         check("stations_es.json", { decode<Map<String, Map<String, String>>>("stations_es.json") }) { it.size == 14 }
         check("saints_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("saints_es.json") }) { it.size == 7 }
+        check("reference_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("reference_es.json") }) { it.size == 42 }
 
         // Any asset shipped but not covered above would dodge this net —
         // force the list to stay in sync with the assets directory.

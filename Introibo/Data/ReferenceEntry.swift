@@ -6,14 +6,14 @@ import Foundation
 
 struct ReferenceEntry: Identifiable, Decodable, Hashable {
     let slug: String
-    let title: String
+    var title: String
     let latin: String?
     let cat: String                 // Category label
-    let summary: String
-    let history: String?
-    let practice: String?
-    let notes: String?
-    let scripture: Scripture?
+    var summary: String
+    var history: String?
+    var practice: String?
+    var notes: String?
+    var scripture: Scripture?
     var related: [RelatedLink]? = nil
 
     var id: String { slug }
@@ -21,6 +21,6 @@ struct ReferenceEntry: Identifiable, Decodable, Hashable {
     struct Scripture: Decodable, Hashable {
         let ref: String
         let lat: String
-        let eng: String
+        var eng: String
     }
 }

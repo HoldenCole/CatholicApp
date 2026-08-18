@@ -69,6 +69,7 @@ class SpanishOverlayQA {
             "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
             "ui_strings_es.json", "missal_propers_es.json",
             "missal_readings_es.json", "stations_es.json", "saints_es.json",
+            "reference_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -271,6 +272,23 @@ class SpanishOverlayQA {
             assertTrue(teresa.prayers!![0].eng.startsWith("Nada te turbe, nada te espante"))
             assertTrue(teresa.quote.startsWith("Nada te turbe"))
 
+            // Reference encyclopedia: prose in Spanish, Latin names and
+            // category labels untouched, scripture quote's English half
+            // replaced, and the embedded <link> tag survives with its
+            // target intact (the link scanner depends on it).
+            val advent = ContentStore.reference.first { it.slug == "cal-advent" }
+            assertEquals("Adviento", advent.title)
+            assertEquals("Adventus Domini", advent.latin)
+            assertEquals("Calendarium", advent.cat)
+            assertTrue(advent.summary.startsWith("El tiempo litúrgico de preparación"))
+            assertTrue(advent.scripture!!.eng.startsWith("He aquí que la virgen concebirá"))
+            assertTrue(advent.scripture!!.lat.startsWith("Ecce virgo concipiet"))
+            val penanceRef = ContentStore.reference.first { it.slug == "mass-penance" }
+            assertTrue(penanceRef.practice!!.contains(
+                "<link target=\"prayer:actusContr\">Acto de Contrición</link>"))
+            // The Septuagesima category fix holds: no stray lowercase bucket.
+            assertTrue(ContentStore.reference.none { it.cat == "calendar" })
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -332,6 +350,7 @@ class SpanishOverlayQA {
         assertTrue(advent1.epistle.eng.startsWith("Lesson from the letter"))
         assertEquals("Jesus Is Condemned to Death", ContentStore.stations.first().title)
         assertEquals("St. Padre Pio", ContentStore.saints.first { it.slug == "pio" }.name)
+        assertEquals("Advent", ContentStore.reference.first { it.slug == "cal-advent" }.title)
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

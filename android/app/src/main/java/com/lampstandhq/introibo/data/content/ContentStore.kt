@@ -188,6 +188,16 @@ object ContentStore {
     )
 
     @kotlinx.serialization.Serializable
+    private data class ReferenceES(
+        val title_es: String,
+        val summary_es: String,
+        val history_es: String? = null,
+        val practice_es: String? = null,
+        val notes_es: String? = null,
+        val scripture_eng_es: String? = null,
+    )
+
+    @kotlinx.serialization.Serializable
     private data class SaintES(
         val name_es: String,
         val title_es: String,
@@ -266,6 +276,7 @@ object ContentStore {
         missalSanctoral = load("missal_sanctoral.json") ?: emptyMap()
         stations = load("stations.json") ?: emptyList()
         saints = load("saints.json") ?: emptyList()
+        reference = load("reference.json") ?: emptyList()
 
         uiStringsES = emptyMap()
 
@@ -322,6 +333,27 @@ object ContentStore {
                         title = o["title_es"] ?: s.title,
                         med = o["med_es"] ?: s.med,
                         stabatEng = o["stabat_es"] ?: s.stabatEng,
+                    )
+                }
+            }
+            // Reference encyclopedia: English-side prose per slug (title,
+            // summary, history, practice, notes, and the scripture quote's
+            // English half; the Latin names, category labels, refs, and
+            // Latin quotes stay).
+            load<Map<String, ReferenceES>>("reference_es.json")?.let { es ->
+                reference = reference.map { e ->
+                    val o = es[e.slug] ?: return@map e
+                    e.copy(
+                        title = o.title_es,
+                        summary = o.summary_es,
+                        history = if (e.history != null) o.history_es ?: e.history else e.history,
+                        practice = if (e.practice != null) o.practice_es ?: e.practice else e.practice,
+                        notes = if (e.notes != null) o.notes_es ?: e.notes else e.notes,
+                        scripture = if (e.scripture != null && o.scripture_eng_es != null) {
+                            e.scripture.copy(eng = o.scripture_eng_es)
+                        } else {
+                            e.scripture
+                        },
                     )
                 }
             }

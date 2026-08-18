@@ -29,6 +29,7 @@ FILES = [
     "missal_readings_es.json",
     "stations_es.json",
     "saints_es.json",
+    "reference_es.json",
 ]
 
 
