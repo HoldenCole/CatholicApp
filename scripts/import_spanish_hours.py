@@ -31,6 +31,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "spanish-translation" / "hours_parts_es.json"
+COMMUNE_OUT = ROOT / "spanish-translation" / "commune_office_es.json"
 SUPP_PATH = ROOT / "spanish-translation" / "hours_supplements_es.json"
 DEFAULT_DO = Path("/tmp/claude-0/-home-user-CatholicApp/"
                   "71906fbb-67e9-553f-b996-d8565178e126/scratchpad/do_repo")
@@ -414,6 +415,133 @@ def main():
     if misses:
         print(f"MISSES {len(misses)}:")
         for m in misses:
+            print("   ", m)
+
+    def compose_brief_responsory(lat):
+        """'R.br. A * B.\\nR. A * B.\\nV. C.\\nR. B.\\n<Gloria>\\nR. A * B.'
+        — translate the A, B, and C segments independently and rebuild
+        the same line pattern."""
+        first = lat.split("\n", 1)[0]
+        m = re.match(r"^R\.br\.\s*(.+?)\s*\*\s*(.+?)\.?\s*$", first)
+        if not m:
+            return None
+        a_lat, b_lat = m.group(1), m.group(2)
+        v_lat = None
+        for l in lat.split("\n"):
+            if l.strip().startswith("V."):
+                v_lat = clean_line(l)
+                break
+        a = find_line(a_lat)
+        b = find_line(b_lat)
+        if a is None or b is None:
+            whole = find_line(a_lat + " " + b_lat)
+            if whole is None:
+                return None
+            # place the mediant at the same ratio as the Latin
+            ratio = len(a_lat) / max(1, len(a_lat) + len(b_lat))
+            pos = int(len(whole) * ratio)
+            sp = [mm.start() for mm in re.finditer(r"\s", whole)]
+            if not sp:
+                return None
+            cut = min(sp, key=lambda c: abs(c - pos))
+            a, b = whole[:cut].strip(), whole[cut:].strip()
+        v = find_line(v_lat) if v_lat else None
+        if v is None:
+            return None
+        a = a.rstrip(".")
+        b = b.rstrip(".")
+        return (f"R.br. {a} * {b}.\n"
+                f"R. {a} * {b}.\n"
+                f"V. {v if v.endswith('.') else v + '.'}\n"
+                f"R. {cap_first(b)}.\n"
+                f"{GLORIA_ES}\n"
+                f"R. {a} * {b}.")
+
+    def cap_first(s):
+        for i, ch in enumerate(s):
+            if ch.isalpha():
+                return s[:i] + ch.upper() + s[i + 1:]
+        return s
+
+    # ---- the Office commons (commune_office.json) share the Hour.Part
+    # shape — translate them with the same tables into
+    # commune_office_es.json (supplement keys "commune:<C>:<field>:<f>")
+    commune = json.load(open(ROOT / "Introibo/Resources/"
+                             "commune_office.json"))
+    cout = {}
+    cmisses = []
+    cn = 0
+    for ckey in sorted(commune):
+        for fkey, p in sorted(commune[ckey].items()):
+            if not isinstance(p, dict):
+                continue
+            entry = {}
+            for lat_f, eng_f in SINGLE:
+                if not p.get(eng_f):
+                    continue
+                skey = f"commune:{ckey}:{fkey}:{eng_f}"
+                if skey in supp:
+                    entry[eng_f] = supp[skey]
+                    cn += 1
+                    continue
+                lat = p.get(lat_f) or ""
+                if p.get("type") == "hymn" and eng_f == "eng":
+                    first = lat.split("\n", 1)[0]
+                    t = hymn_map.get(fold(clean_line(first)))
+                elif lat.startswith("R.br.") and eng_f == "eng":
+                    t = compose_brief_responsory(lat)
+                elif lat.strip() in ("$Deo gratias", "$Deo gratias."):
+                    t = "Demos gracias a Dios."
+                elif "\n" in lat or len(lat) > 140:
+                    t = find_block(lat)
+                else:
+                    t = find_line(lat)
+                    if t is None:
+                        t = find_block(lat)
+                if t:
+                    m = re.match(r"^([℣℟VR]\.\s*)", p[eng_f])
+                    if m and not re.match(r"^[℣℟VR]\.", t):
+                        t = m.group(1) + t
+                    entry[eng_f] = nfc(t)
+                    cn += 1
+                else:
+                    cmisses.append((ckey, fkey, (lat or "?")[:60]))
+            if p.get("verses"):
+                vkey = f"commune:{ckey}:{fkey}:verses"
+                if vkey in supp and len(supp[vkey]) == len(p["verses"]):
+                    entry["verses"] = supp[vkey]
+                    cn += len(supp[vkey])
+                else:
+                    vs = []
+                    hit_any = False
+                    for vi, vv in enumerate(p["verses"]):
+                        el = supp.get(f"commune:{ckey}:{fkey}:verses:{vi}")
+                        if el is None:
+                            el = bank.get(bank_key(vv["lat"]))
+                        if el is None:
+                            el = VERSE_FIXES.get(fold(vv["lat"]))
+                        if el is None and fold(vv["lat"]).startswith(
+                                "gloria patri et filio"):
+                            el = GLORIA_ES
+                        if el is not None:
+                            hit_any = True
+                        vs.append(el)
+                    if hit_any:
+                        entry["verses"] = vs
+                        cn += sum(1 for x in vs if x)
+                    else:
+                        cmisses.append((ckey, fkey + "/verses",
+                                        p["verses"][0]["lat"][:60]))
+            if entry:
+                cout.setdefault(ckey, {})[fkey] = entry
+    COMMUNE_OUT.write_text(json.dumps(cout, ensure_ascii=False, indent=1,
+                                      sort_keys=True) + "\n",
+                           encoding="utf-8")
+    print(f"commune: wrote {sum(len(v) for v in cout.values())} parts "
+          f"({cn} fields)")
+    if cmisses:
+        print(f"COMMUNE MISSES {len(cmisses)}:")
+        for m in cmisses:
             print("   ", m)
 
 

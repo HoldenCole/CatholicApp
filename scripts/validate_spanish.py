@@ -454,6 +454,47 @@ def validate_hours_parts():
     print(f"hours_parts_es.json: {n} fields checked")
 
 
+def validate_commune_office():
+    """Commons of the saints: every overlaid part must exist in the source,
+    only fields the source carries may be translated, verse arrays aligned."""
+    path = ES / "commune_office_es.json"
+    if not path.exists():
+        print("commune_office_es.json: not present (skipped)")
+        return
+    src = json.load(open(SRC / "commune_office.json"))
+    es = json.load(open(path))
+    n = 0
+    FIELDS = ("eng", "engR", "v1Eng", "r1Eng", "v2Eng", "r2Eng",
+              "antiphonEng")
+    for code, fields in es.items():
+        check(code in src, f"commune_office[{code}]: no such common")
+        for fkey, o in fields.items():
+            p = (src.get(code) or {}).get(fkey)
+            check(p is not None, f"commune_office[{code}][{fkey}]: no such part")
+            if p is None:
+                continue
+            for f, v in o.items():
+                if f == "verses":
+                    verses = p.get("verses") or []
+                    check(len(v) == len(verses),
+                          f"commune_office[{code}][{fkey}].verses: count differs")
+                    for j, l in enumerate(v):
+                        if l is None:
+                            continue
+                        n += 1
+                        check(isinstance(l, str) and l.strip(),
+                              f"commune_office[{code}][{fkey}].verses[{j}]: empty")
+                    continue
+                check(f in FIELDS,
+                      f"commune_office[{code}][{fkey}].{f}: not a field")
+                check(p.get(f) is not None,
+                      f"commune_office[{code}][{fkey}].{f}: source has no {f}")
+                check(isinstance(v, str) and v.strip(),
+                      f"commune_office[{code}][{fkey}].{f}: empty")
+                n += 1
+    print(f"commune_office_es.json: {n} fields checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -465,6 +506,7 @@ def main():
     validate_courses()
     validate_psalter()
     validate_hours_parts()
+    validate_commune_office()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

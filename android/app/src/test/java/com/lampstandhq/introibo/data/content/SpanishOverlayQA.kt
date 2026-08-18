@@ -71,7 +71,7 @@ class SpanishOverlayQA {
             "missal_readings_es.json", "stations_es.json", "saints_es.json",
             "reference_es.json", "courses_es.json",
             "psalter_es.json", "psalter_weekly_es.json",
-            "hours_parts_es.json",
+            "hours_parts_es.json", "commune_office_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -345,6 +345,18 @@ class SpanishOverlayQA {
             val compline = ContentStore.hours.first { it.slug == "completorium" }
             assertTrue(compline.parts[17].eng!!.startsWith("Dios te salve, Reina"))
 
+            // The commons of the saints (commune_office): antiphons, brief
+            // responsories, and Matins psalms all carry Spanish.
+            val c1 = ContentStore.communeOffice["C1"]!!
+            assertTrue(c1["ant_laudes"]!!.eng!!
+                .startsWith("Vosotros, los que habéis dejado todo"))
+            assertTrue(c1["ant_laudes"]!!.lat!!.startsWith("Vos qui"))
+            assertTrue(c1["responsory_breve_nona"]!!.eng!!.startsWith("R.br. Tus amigos"))
+            assertTrue(c1["responsory_breve_nona"]!!.eng!!
+                .contains("Gloria al Padre, y al Hijo, y al Espíritu Santo."))
+            assertTrue(c1["matutinum.psalm10"]!!.verses!![0].eng
+                .startsWith("Reina ya el Señor, que se estremezcan los pueblos"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -412,6 +424,8 @@ class SpanishOverlayQA {
             .startsWith("1:1 Blessed is the man"))
         assertEquals("O Lord, Thou wilt open my lips.",
             ContentStore.hours.first { it.slug == "matutinum" }.parts[0].eng)
+        assertTrue(ContentStore.communeOffice["C1"]!!["ant_laudes"]!!.eng!!
+            .startsWith("You who left all"))
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

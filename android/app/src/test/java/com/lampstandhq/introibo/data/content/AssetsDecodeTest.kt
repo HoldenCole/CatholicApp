@@ -139,6 +139,7 @@ class AssetsDecodeTest {
         check("psalter_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("psalter_es.json") }) { it.isNotEmpty() }
         check("psalter_weekly_es.json", { decode<Map<String, Map<String, List<String?>>>>("psalter_weekly_es.json") }) { it.isNotEmpty() }
         check("hours_parts_es.json", { decode<Map<String, Map<String, kotlinx.serialization.json.JsonObject>>>("hours_parts_es.json") }) { it.isNotEmpty() }
+        check("commune_office_es.json", { decode<Map<String, Map<String, kotlinx.serialization.json.JsonObject>>>("commune_office_es.json") }) { it.isNotEmpty() }
 
         // Any asset shipped but not covered above would dodge this net —
         // force the list to stay in sync with the assets directory.

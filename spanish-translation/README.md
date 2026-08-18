@@ -177,7 +177,19 @@ so integration cannot silently misalign.
   scripture is ALSO mixed — Adv1-0's Isaiah is verbatim Torres Amat but
   Quadp1-0's Genesis is a modern copyrighted register, so lessons must
   be audited per-pericope or composed from the TA module.
-  Remaining Office tranches: commune_office, temporal propers
+  **Tranche O3 — the commons of the saints: COMPLETE
+  (`commune_office_es.json`, 1,340 parts / 2,425 fields — every English
+  field of every C* commune template plus the BVM Saturday Office).**
+  The same importer emits it from the pair table: antiphons,
+  capitula, orations, versicles, and hymns match DO Espanol's
+  traditional-register lines; Matins psalms fan in from the Torres
+  Amat psalter bank; brief responsories are composed segment-by-segment
+  on the R.br./R./V./R./Gloria/R. pattern with the received Gloria
+  Patri. Six hand supplements (`commune:*` keys in
+  `hours_supplements_es.json`) cover the Euge-serve-bone responsories,
+  the C12 Felix namque responsory, the BVM Saturday oration, and the
+  Regina caeli (received text).
+  Remaining Office tranches: temporal propers
   (antiphons, responsories, collects, lessons), seasonal hymns.
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
