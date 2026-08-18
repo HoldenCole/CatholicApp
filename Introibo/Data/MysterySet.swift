@@ -28,7 +28,7 @@ struct RosaryPrayer: Identifiable, Decodable, Hashable {
     let slug: String
     let title: String
     var eng: String
-    let lines: [Line]
+    var lines: [Line]
 
     var id: String { slug }
 
