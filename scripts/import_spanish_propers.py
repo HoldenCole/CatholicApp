@@ -41,7 +41,7 @@ OUT = ROOT / "spanish-translation" / "missal_propers_es.json"
 # Tranche 2: Septuagesima (quadp) through Lent and Holy Week (quad).
 # Tranche 3: Eastertide (pasc) and the season after Pentecost (pent).
 # Tranche 5: the sanctoral cycle (MM-DD keys, DO Sancti tree).
-TRANCHE = re.compile(r"^(adv|nat|epi|quad|pasc|pent|\d\d\d?-)")
+TRANCHE = re.compile(r"^(adv|nat|epi|quad|pasc|pent|\d\d\d?-|C\d)")
 
 # Our own tier-2 supplements: fields the DO Espanol files omit, translated
 # from the Latin in spanish-translation/propers_supplements_es.json (built
@@ -97,6 +97,10 @@ CONCL_ES = {
      "per ómnia sǽcula sæculórum. Amen."):
         "Tú que vives y reinas con Dios Padre en la unidad del Espíritu "
         "Santo, y eres Dios por todos los siglos de los siglos. Amén.",
+    ("Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti, Deus, "
+     "per ómnia sǽcula sæculórum. Amen."):
+        "Tú que vives y reinas con Dios Padre en la unidad del Espíritu "
+        "Santo, y eres Dios por todos los siglos de los siglos. Amén.",
     # a data artifact: "eiusdem" tag appended after the response — render
     # the ejúsdem (same-Spirit) form it flags
     ("Per Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et "
@@ -137,9 +141,9 @@ def template_line(line):
 
 
 ALLE_SUFFIX = re.compile(
-    r"(\s*\((?:Allelúja|Allelúia|Alleluia)[^)]*\)\.?"
-    r"|\s+(?:Allelúja|Allelúia|Alleluia)"
-    r"(?:,\s*(?:allelúja|allelúia|alleluia))*\.?)$")
+    r"(\s*\((?:Allelúja|Allelúia|Alleluia|Alleluja)[^)]*\)\.?"
+    r"|\s+(?:Allelúja|Allelúia|Alleluia|Alleluja)"
+    r"(?:,\s*(?:allelúja|allelúia|alleluia|alleluja))*\.?)$")
 
 
 def compose_from_lines(lat):
@@ -156,6 +160,15 @@ def compose_from_lines(lat):
             continue
         if line in CONCL_ES:
             out.append(CONCL_ES[line])
+            continue
+        # one conclusion line in the source is mojibake-damaged ("ó" became
+        # two replacement chars); repair and retry before giving up on it
+        repaired = line.replace("��", "ó")
+        if repaired in CONCL_ES:
+            out.append(CONCL_ES[repaired])
+            continue
+        if line == "&Glória":     # a raw DO macro leaked into the data
+            out.append(GLORIA_ES)
             continue
         suffix, base = "", line
         m = ALLE_SUFFIX.search(line)
@@ -437,6 +450,22 @@ def main():
         skipped = still_skipped
         if not changed:
             break
+    # Backfill pass: an imported day may still lack a field the gate exempts
+    # (graduale) or one filled late into the tables — compose those too.
+    backfilled = 0
+    for key, entry in out.items():
+        src_entry = sources[key][1]
+        for field in FIELDS:
+            v = src_entry.get(field)
+            if field in entry or v is None or not has_field(src_entry, field):
+                continue
+            lat = v.get("lat") or ""
+            es = latin_to_es.get(lat) or compose_from_lines(lat)
+            if es:
+                entry[field] = es
+                backfilled += 1
+    print(f"backfilled {backfilled} exempt fields on imported days")
+
     if "--report" in sys.argv:  # remaining missing Latin, for tranche planning
         report = {}
         for key, why, entry in skipped:

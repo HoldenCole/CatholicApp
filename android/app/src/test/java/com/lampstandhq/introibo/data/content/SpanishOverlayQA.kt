@@ -212,6 +212,20 @@ class SpanishOverlayQA {
             val monica = ContentStore.allPropers.first { it.slug == "05-04" }
             assertTrue(monica.collect.eng.contains("Santa Mónica"))
 
+            // Tranche 7 (completion): the last hand-translated feasts —
+            // Christ the King, All Saints, Candlemas, and All Souls' first
+            // Mass. EVERY proper field in the missal now carries Spanish:
+            // no day and no field falls back to English any more.
+            val christKing = ContentStore.allPropers.first { it.slug == "10-du" }
+            assertTrue(christKing.introit.eng.startsWith("Digno es el Cordero"))
+            assertTrue(christKing.collect.eng.contains("Rey del universo"))
+            val allSaints = ContentStore.allPropers.first { it.slug == "11-01" }
+            assertTrue(allSaints.communion.eng.startsWith("Bienaventurados los limpios de corazón"))
+            val candlemas = ContentStore.allPropers.first { it.slug == "02-02" }
+            assertTrue(candlemas.communion.eng.startsWith("Simeón había recibido del Espíritu Santo"))
+            val allSouls = ContentStore.allPropers.first { it.slug == "11-02m1" }
+            assertTrue(allSouls.collect.eng.startsWith("Oh Dios, Creador y Redentor de todos los fieles"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
