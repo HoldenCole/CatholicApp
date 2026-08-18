@@ -33,6 +33,7 @@ FILES = [
     "courses_es.json",
     "psalter_es.json",
     "psalter_weekly_es.json",
+    "hours_parts_es.json",
 ]
 
 

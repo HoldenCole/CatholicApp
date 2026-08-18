@@ -412,6 +412,48 @@ def validate_psalter():
     print(f"psalter_weekly_es.json: {n} verses checked")
 
 
+def validate_hours_parts():
+    """Ordinary of the hours: parts indexed by position must exist, only
+    translate fields the source carries, and verse arrays stay aligned."""
+    path = ES / "hours_parts_es.json"
+    if not path.exists():
+        print("hours_parts_es.json: not present (skipped)")
+        return
+    src = {h["slug"]: h["parts"] for h in json.load(open(SRC / "hours.json"))}
+    es = json.load(open(path))
+    n = 0
+    FIELDS = ("eng", "engR", "v1Eng", "r1Eng", "v2Eng", "r2Eng",
+              "antiphonEng")
+    for slug, parts in es.items():
+        check(slug in src, f"hours_parts[{slug}]: no such hour")
+        for idx, o in parts.items():
+            p = (src.get(slug) or [])[int(idx)] if slug in src and \
+                int(idx) < len(src[slug]) else None
+            check(p is not None, f"hours_parts[{slug}][{idx}]: no such part")
+            if p is None:
+                continue
+            for f, v in o.items():
+                if f == "verses":
+                    verses = p.get("verses") or []
+                    check(len(v) == len(verses),
+                          f"hours_parts[{slug}][{idx}].verses: count differs")
+                    for j, l in enumerate(v):
+                        if l is None:
+                            continue
+                        n += 1
+                        check(isinstance(l, str) and l.strip(),
+                              f"hours_parts[{slug}][{idx}].verses[{j}]: empty")
+                    continue
+                check(f in FIELDS,
+                      f"hours_parts[{slug}][{idx}].{f}: not a field")
+                check(p.get(f) is not None,
+                      f"hours_parts[{slug}][{idx}].{f}: source has no {f}")
+                check(isinstance(v, str) and v.strip(),
+                      f"hours_parts[{slug}][{idx}].{f}: empty")
+                n += 1
+    print(f"hours_parts_es.json: {n} fields checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -422,6 +464,7 @@ def main():
     validate_reference()
     validate_courses()
     validate_psalter()
+    validate_hours_parts()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

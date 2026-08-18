@@ -130,6 +130,16 @@ final class ContentStore {
     private struct PsalterES: Decodable {
         let lines: [String]
     }
+    private struct HourPartES: Decodable {
+        let eng: String?
+        let engR: String?
+        let v1Eng: String?
+        let r1Eng: String?
+        let v2Eng: String?
+        let r2Eng: String?
+        let antiphonEng: String?
+        let verses: [String?]?
+    }
     private struct CourseES: Decodable {
         let title_es: String
         let intro_es: String
@@ -426,6 +436,35 @@ final class ContentStore {
                 m.eng = o.name_es
                 m.time = o.time_es
                 m.intro = o.intro_es
+                return m
+            }
+        }
+        // The ordinary of the hours (Office tranche O2): per-part
+        // English-side replacement, indexed by part position — versicles,
+        // blessings, hymns, antiphons, readings, responsories, collects,
+        // and the psalm/canticle verses (null keeps English).
+        if let es = load("hours_parts_es",
+                         as: [String: [String: HourPartES]].self) {
+            hours = hours.map { h in
+                guard let hp = es[h.slug] else { return h }
+                var m = h
+                for i in m.parts.indices {
+                    guard let o = hp[String(i)] else { continue }
+                    if let t = o.eng { m.parts[i].eng = t }
+                    if let t = o.engR { m.parts[i].engR = t }
+                    if let t = o.v1Eng { m.parts[i].v1Eng = t }
+                    if let t = o.r1Eng { m.parts[i].r1Eng = t }
+                    if let t = o.v2Eng { m.parts[i].v2Eng = t }
+                    if let t = o.r2Eng { m.parts[i].r2Eng = t }
+                    if let t = o.antiphonEng { m.parts[i].antiphonEng = t }
+                    if let lines = o.verses, var verses = m.parts[i].verses,
+                       verses.count == lines.count {
+                        for j in verses.indices {
+                            if let l = lines[j] { verses[j].eng = l }
+                        }
+                        m.parts[i].verses = verses
+                    }
+                }
                 return m
             }
         }

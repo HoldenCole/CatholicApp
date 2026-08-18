@@ -193,6 +193,18 @@ object ContentStore {
     )
 
     @kotlinx.serialization.Serializable
+    private data class HourPartES(
+        val eng: String? = null,
+        val engR: String? = null,
+        val v1Eng: String? = null,
+        val r1Eng: String? = null,
+        val v2Eng: String? = null,
+        val r2Eng: String? = null,
+        val antiphonEng: String? = null,
+        val verses: List<String?>? = null,
+    )
+
+    @kotlinx.serialization.Serializable
     private data class CourseES(
         val title_es: String,
         val intro_es: String,
@@ -528,6 +540,39 @@ object ContentStore {
                 hours = hours.map { h ->
                     val o = es[h.slug] ?: return@map h
                     h.copy(eng = o.name_es, time = o.time_es, intro = o.intro_es)
+                }
+            }
+            // The ordinary of the hours (Office tranche O2): per-part
+            // English-side replacement, indexed by part position —
+            // versicles, blessings, hymns, antiphons, readings,
+            // responsories, collects, and the psalm/canticle verses
+            // (null keeps English).
+            load<Map<String, Map<String, HourPartES>>>("hours_parts_es.json")?.let { es ->
+                hours = hours.map { h ->
+                    val hp = es[h.slug] ?: return@map h
+                    h.copy(
+                        parts = h.parts.mapIndexed { i, p ->
+                            val o = hp[i.toString()] ?: return@mapIndexed p
+                            p.copy(
+                                eng = o.eng ?: p.eng,
+                                engR = o.engR ?: p.engR,
+                                v1Eng = o.v1Eng ?: p.v1Eng,
+                                r1Eng = o.r1Eng ?: p.r1Eng,
+                                v2Eng = o.v2Eng ?: p.v2Eng,
+                                r2Eng = o.r2Eng ?: p.r2Eng,
+                                antiphonEng = o.antiphonEng ?: p.antiphonEng,
+                                verses = if (p.verses != null && o.verses != null &&
+                                    o.verses.size == p.verses.size
+                                ) {
+                                    p.verses.mapIndexed { j, vv ->
+                                        o.verses[j]?.let { vv.copy(eng = it) } ?: vv
+                                    }
+                                } else {
+                                    p.verses
+                                },
+                            )
+                        },
+                    )
                 }
             }
             load<Map<String, MissalSectionES>>("missal_es.json")?.let { es ->

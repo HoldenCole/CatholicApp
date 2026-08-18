@@ -71,6 +71,7 @@ class SpanishOverlayQA {
             "missal_readings_es.json", "stations_es.json", "saints_es.json",
             "reference_es.json", "courses_es.json",
             "psalter_es.json", "psalter_weekly_es.json",
+            "hours_parts_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -328,6 +329,22 @@ class SpanishOverlayQA {
                 mondayEs.eng)
             assertTrue(mondayEs.lat.startsWith("13:1a Dixit insípiens"))
 
+            // The ordinary of the hours (O2): the opening versicle, the
+            // received formulas, a traditional verse hymn, the Te Deum,
+            // and the Benedictus — with the Latin untouched throughout.
+            val matinsParts = ContentStore.hours.first { it.slug == "matutinum" }.parts
+            assertEquals("Señor, ábreme los labios.", matinsParts[0].eng)
+            assertEquals("Y mi boca proclamará tu alabanza.", matinsParts[0].engR)
+            assertTrue(matinsParts[0].lat!!.startsWith("Dómine, lábia mea"))
+            assertTrue(matinsParts[4].eng!!.startsWith("Eterno Hacedor del mundo"))
+            assertTrue(matinsParts[74].verses!![0].eng
+                .startsWith("A ti, oh Dios, te alabamos"))
+            val laudes = ContentStore.hours.first { it.slug == "laudes" }
+            assertTrue(laudes.parts[12].verses!![0].eng
+                .startsWith("Bendito + sea el Señor, Dios de Israel"))
+            val compline = ContentStore.hours.first { it.slug == "completorium" }
+            assertTrue(compline.parts[17].eng!!.startsWith("Dios te salve, Reina"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -393,6 +410,8 @@ class SpanishOverlayQA {
         assertEquals("Ecclesiastical Vowels", ContentStore.courses.first { it.slug == "vowels" }.title)
         assertTrue(ContentStore.psalterTextData["psalm1"]!!["eng"]!![0]
             .startsWith("1:1 Blessed is the man"))
+        assertEquals("O Lord, Thou wilt open my lips.",
+            ContentStore.hours.first { it.slug == "matutinum" }.parts[0].eng)
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

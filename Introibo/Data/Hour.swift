@@ -15,7 +15,7 @@ struct Hour: Identifiable, Decodable, Hashable, ScheduledHour {
     let glyph: String       // Single-letter dial glyph (M, L, I, III...)
     let order: Int          // Roman order for Hora I/II/...
     var intro: String       // Short prose introduction
-    let parts: [Part]
+    var parts: [Part]
     var related: [RelatedLink]? = nil
 
     var id: String { slug }

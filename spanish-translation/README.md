@@ -160,11 +160,25 @@ so integration cannot silently misalign.
   Judith, Sirach, Wisdom — tier 2 from the Vulgate), the Athanasian
   Creed, and the three Gospel canticles (Benedictus, Magnificat, Nunc
   dimittis) in their received Spanish wordings rather than
-  back-composed prose. Remaining Office tranches: hours.json
-  ordinary parts, commune_office, temporal propers (antiphons,
-  responsories, collects — DO Espanol, same register as the missal
-  propers we already ship; its Matins scripture lessons are verbatim
-  Torres Amat), and the seasonal hymns.
+  back-composed prose.
+  **Tranche O2 — the ordinary of the hours: COMPLETE
+  (`hours_parts_es.json`, 271 parts / 1,246 fields — every English
+  field of every hour template).** `scripts/import_spanish_hours.py`
+  builds a Latin↔Spanish pair table from DO's whole horas tree (1,308
+  paired files; 21k line pairs incl. the *-split responsory segments;
+  163 traditional verse hymn translations) and fans the psalter bank
+  into the psalm/canticle verses (piece-window keys absorb the hours'
+  different verse groupings). `hours_supplements_es.json` covers what
+  DO hides behind macros or lacks: the received Te Deum, the Matins
+  blessings and sample lessons (Genesis from Torres Amat, the patristic
+  and homily snippets tier-2), the Deus-in-adjutorium responses, the
+  Prime/Compline formulas, and the Office-of-the-Dead invitatory and
+  collect. CAUTION for the readings tranche: DO Espanol Tempora
+  scripture is ALSO mixed — Adv1-0's Isaiah is verbatim Torres Amat but
+  Quadp1-0's Genesis is a modern copyrighted register, so lessons must
+  be audited per-pericope or composed from the TA module.
+  Remaining Office tranches: commune_office, temporal propers
+  (antiphons, responsories, collects, lessons), seasonal hymns.
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,
