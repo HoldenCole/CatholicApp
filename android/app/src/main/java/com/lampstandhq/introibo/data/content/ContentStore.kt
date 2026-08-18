@@ -149,7 +149,7 @@ object ContentStore {
     // overlay changes (the maps are shared by reference, not copied).
     internal var psalterWeeklyData: Map<String, Map<String, Hour.Part>> = emptyMap()
     private var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
-    private var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
+    internal var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
 
     private fun rebuildOfficeAssembler() {
@@ -319,6 +319,7 @@ object ContentStore {
         psalterTextData = load("psalter.json") ?: emptyMap()
         psalterWeeklyData = load("psalter_weekly.json") ?: emptyMap()
         communeOffice = load("commune_office.json") ?: emptyMap()
+        temporalData = load("temporal_propers.json") ?: emptyMap()
 
         uiStringsES = emptyMap()
 
@@ -416,6 +417,34 @@ object ContentStore {
             // as the hours, keyed by commune code and field key.
             load<Map<String, Map<String, HourPartES>>>("commune_office_es.json")?.let { es ->
                 communeOffice = communeOffice.mapValues { (code, entry) ->
+                    val fields = es[code] ?: return@mapValues entry
+                    entry.mapValues { (fkey, part) ->
+                        val o = fields[fkey] ?: return@mapValues part
+                        part.copy(
+                            eng = o.eng ?: part.eng,
+                            engR = o.engR ?: part.engR,
+                            v1Eng = o.v1Eng ?: part.v1Eng,
+                            r1Eng = o.r1Eng ?: part.r1Eng,
+                            v2Eng = o.v2Eng ?: part.v2Eng,
+                            r2Eng = o.r2Eng ?: part.r2Eng,
+                            antiphonEng = o.antiphonEng ?: part.antiphonEng,
+                            verses = if (part.verses != null && o.verses != null &&
+                                o.verses.size == part.verses.size
+                            ) {
+                                part.verses.mapIndexed { j, vv ->
+                                    o.verses[j]?.let { vv.copy(eng = it) } ?: vv
+                                }
+                            } else {
+                                part.verses
+                            },
+                        )
+                    }
+                }
+            }
+            // The temporal propers (tranche O4): non-lesson fields —
+            // antiphons, responsories, collects, versicles, hymns.
+            load<Map<String, Map<String, HourPartES>>>("temporal_propers_es.json")?.let { es ->
+                temporalData = temporalData.mapValues { (code, entry) ->
                     val fields = es[code] ?: return@mapValues entry
                     entry.mapValues { (fkey, part) ->
                         val o = fields[fkey] ?: return@mapValues part

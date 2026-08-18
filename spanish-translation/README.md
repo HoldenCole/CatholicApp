@@ -189,8 +189,24 @@ so integration cannot silently misalign.
   `hours_supplements_es.json`) cover the Euge-serve-bone responsories,
   the C12 Felix namque responsory, the BVM Saturday oration, and the
   Regina caeli (received text).
-  Remaining Office tranches: temporal propers
-  (antiphons, responsories, collects, lessons), seasonal hymns.
+  **Tranche O4 — the temporal propers, non-lesson fields: COMPLETE
+  (`temporal_propers_es.json`, 2,919 parts / 5,048 fields — every
+  antiphon, responsory, collect, versicle, and hymn of the temporal
+  cycle; the Matins lessons are tranche O5).** App keys map 1:1 to DO
+  Tempora filenames and field keys to section names, so the importer
+  pairs each day's file section-for-section, following `@File:Section`
+  references through both trees in lock-step, verifying the resolved
+  Latin against the app's own text (first-line prefix identity — DO has
+  re-split some lines since the app's import) and line counts against
+  the app's Latin. Fallbacks: the global pair tables, line-by-line
+  responsory composition from surviving lines, the psalter bank, and
+  `TEMPORAL_FIX_PAIRS` — 61 hand translations for old-recension
+  responsories/antiphons the current DO Espanol no longer carries
+  (the August Wisdom-book responsories, Tenebrae orations with the
+  received Padre nuestro, the Trinity Duo Séraphim, etc.), Torres Amat
+  wording where the Latin follows the Vulgate.
+  Remaining Office tranches: temporal Matins lessons (per-pericope
+  provenance audit), seasonal hymns.
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,

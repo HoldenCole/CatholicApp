@@ -230,6 +230,7 @@ final class ContentStore {
             psalterTextData   = load("psalter",        as: [String: [String: [String]]].self) ?? [:]
             psalterWeeklyData = load("psalter_weekly", as: [String: [String: Hour.Part]].self) ?? [:]
             communeOffice     = load("commune_office", as: [String: [String: Hour.Part]].self) ?? [:]
+            temporalData      = load("temporal_propers", as: [String: [String: Hour.Part]].self) ?? [:]
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -349,6 +350,33 @@ final class ContentStore {
                     entry[fkey] = part
                 }
                 communeOffice[code] = entry
+            }
+        }
+        // The temporal propers (tranche O4): non-lesson fields —
+        // antiphons, responsories, collects, versicles, hymns.
+        if let es = load("temporal_propers_es",
+                         as: [String: [String: HourPartES]].self) {
+            for (code, fields) in es {
+                guard var entry = temporalData[code] else { continue }
+                for (fkey, o) in fields {
+                    guard var part = entry[fkey] else { continue }
+                    if let t = o.eng { part.eng = t }
+                    if let t = o.engR { part.engR = t }
+                    if let t = o.v1Eng { part.v1Eng = t }
+                    if let t = o.r1Eng { part.r1Eng = t }
+                    if let t = o.v2Eng { part.v2Eng = t }
+                    if let t = o.r2Eng { part.r2Eng = t }
+                    if let t = o.antiphonEng { part.antiphonEng = t }
+                    if let lines = o.verses, var verses = part.verses,
+                       verses.count == lines.count {
+                        for j in verses.indices {
+                            if let l = lines[j] { verses[j].eng = l }
+                        }
+                        part.verses = verses
+                    }
+                    entry[fkey] = part
+                }
+                temporalData[code] = entry
             }
         }
         // Schola Latina courses: localized (not merely translated) for

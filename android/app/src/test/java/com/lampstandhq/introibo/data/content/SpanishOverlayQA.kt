@@ -72,6 +72,7 @@ class SpanishOverlayQA {
             "reference_es.json", "courses_es.json",
             "psalter_es.json", "psalter_weekly_es.json",
             "hours_parts_es.json", "commune_office_es.json",
+            "temporal_propers_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -357,6 +358,18 @@ class SpanishOverlayQA {
             assertTrue(c1["matutinum.psalm10"]!!.verses!![0].eng
                 .startsWith("Reina ya el Señor, que se estremezcan los pueblos"))
 
+            // The temporal propers (tranche O4): antiphons, the great
+            // Advent responsory, and a hand-supplemented Tenebrae antiphon.
+            val adv1 = ContentStore.temporalData["adv1-0"]!!
+            assertTrue(adv1["ant_1"]!!.eng!!
+                .startsWith("He aquí que el nombre del Señor"))
+            assertTrue(adv1["responsory1"]!!.eng!!
+                .startsWith("R. Mirando desde lejos"))
+            assertTrue(adv1["responsory1"]!!.lat!!
+                .startsWith("R. Aspíciens a longe"))
+            assertTrue(ContentStore.temporalData["quad6-6"]!!["matutinum.ant_3"]!!
+                .eng!!.startsWith("Dios me socorre"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -426,6 +439,8 @@ class SpanishOverlayQA {
             ContentStore.hours.first { it.slug == "matutinum" }.parts[0].eng)
         assertTrue(ContentStore.communeOffice["C1"]!!["ant_laudes"]!!.eng!!
             .startsWith("You who left all"))
+        assertTrue(ContentStore.temporalData["adv1-0"]!!["ant_1"]!!.eng!!
+            .startsWith("Behold, the name of the Lord"))
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }
