@@ -36,6 +36,7 @@ FILES = [
     "hours_parts_es.json",
     "commune_office_es.json",
     "temporal_propers_es.json",
+    "hymns_seasonal_es.json",
 ]
 
 

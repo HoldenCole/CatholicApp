@@ -148,7 +148,7 @@ object ContentStore {
     // Retained so the office assembler can be rebuilt when the vernacular
     // overlay changes (the maps are shared by reference, not copied).
     internal var psalterWeeklyData: Map<String, Map<String, Hour.Part>> = emptyMap()
-    private var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
+    internal var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
 
@@ -320,6 +320,7 @@ object ContentStore {
         psalterWeeklyData = load("psalter_weekly.json") ?: emptyMap()
         communeOffice = load("commune_office.json") ?: emptyMap()
         temporalData = load("temporal_propers.json") ?: emptyMap()
+        hymnsSeasonalData = load("hymns_seasonal.json") ?: emptyMap()
 
         uiStringsES = emptyMap()
 
@@ -465,6 +466,20 @@ object ContentStore {
                             } else {
                                 part.verses
                             },
+                        )
+                    }
+                }
+            }
+            // The seasonal hymns (tranche O6): traditional verse
+            // translations, plus the Compline canticle antiphons.
+            load<Map<String, Map<String, HourPartES>>>("hymns_seasonal_es.json")?.let { es ->
+                hymnsSeasonalData = hymnsSeasonalData.mapValues { (season, entry) ->
+                    val fields = es[season] ?: return@mapValues entry
+                    entry.mapValues { (fkey, part) ->
+                        val o = fields[fkey] ?: return@mapValues part
+                        part.copy(
+                            eng = o.eng ?: part.eng,
+                            antiphonEng = o.antiphonEng ?: part.antiphonEng,
                         )
                     }
                 }

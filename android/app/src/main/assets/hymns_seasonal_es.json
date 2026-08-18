@@ -1,0 +1,243 @@
+{
+ "advent": {
+  "hymnus_laudes": {
+   "eng": "Oíd la voz que sonora<br>nuestra indolencia reprende:<br>desechad sueño y pereza:<br>Jesus brilla en el Oriente.\n\nRompa ya el alma los lazos<br>que en la tierra la detienen:<br>para librarnos de culpas<br>nueva estrella resplandece.\n\nVed al Cordero sin mancha,<br>que a rescatarnos se ofrece:<br>impetremos su indulgencia,<br>pidámosle humildemente:\n\nQue cuando venga de nuevo<br>a juzgar todas las gentes,<br>no nos castigue culpables,<br>mas nos proteja clemente.\n\nA Dios Padre y a Dios Hijo,<br>honor y gloria perenne,<br>con el Paráclito Santo,<br>por siglos y eternamente.<br>Amén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Divino Verbo engendrado<br>del Padre Eterno en el seno,<br>que por salvarnos naciste<br>en la plenitud del tiempo.\n\nIlumina ahora las mentes,<br>e inflama en tu amor los pechos,<br>que, desechando lo vano,<br>llenen celestes deseos.\n\nPara que el día del juicio,<br>aquella sentencia oyendo,<br>que al fuego envia los malos<br>y al cielo llama los buenos,\n\nNo nos envuelvan las llamas<br>en sus torbellinos negros;<br>mas contemplando tu rostro,<br>eterna dicha gocemos.\n\nGloria al Padre, gloria al Hijo,<br>y a Tí, Santo Paracleto,<br>como lo fue, sea siempre,<br>por los siglos sempiternos.<br>Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "Almo Creador del cielo,<br>eterna luz de los hombres,<br>Jesus, Redentor del mundo,<br>nuestra humilde oracion oye.\n\nCon engaños del infierno<br>porque no perezca el orbe,<br>movido de amor, sus llagas<br>Tú mismo sanar dispones.\n\nDel sagrario de una Virgen<br>cargas con el peso enorme<br>de nuestra maldad, que expías<br>sobre la cruz en el monte.\n\nLa grandeza de tu gloria<br>hace que todos se postren,<br>en cielo, tierra e infierno,<br>al pronunciarse tu nombre.\n\nRogámoste ¡oh Juez supremo!<br>pues nuestra mengua conoces,<br>nos guardes del enemigo<br>con las armas de tus dones.\n\nHonor, alabanza y gloria<br>al Padre y su eterna prole,<br>y juntamente al Espíritu<br>demos eternos loores.<br>Amén."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ },
+ "christmas": {
+  "completorium.hymn": {
+   "eng": "A Ti, Creador, pedimos,<br>antes que la luz acabe,<br>seas por tu gran clemencia<br>centinela que nos guarde.\n\nAleja los malos sueños,<br>y las nocturnas imágenes;<br>reprime a nuestro adversario,<br>que nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,<br>Hijo al Padre semejante,<br>que reinas con el Espíritu,<br>por siglos interminables.<br>Amén"
+  },
+  "hymnus_laudes": {
+   "eng": "Desde el Oriente al ocaso,<br>y del orbe en todo extremo,<br>a Cristo, que de María<br>Virgen nació, celebremos.\n\nFeliz Creador del mundo,<br>la forma viste de siervo,<br>para salvar con la carne<br>los que la carne hizo reos.\n\nLas virginales entrañas<br>cubre resplandor del cielo;<br>misterios que desconoce<br>lleva la Madre en su seno.\n\nTemplo de Dios de repente<br>se hace inmaculado un pecho:<br>la que varon no conoce,<br>concibe al divino Verbo.\n\nAl que Gabriel anunciara,<br>al que en el vientre materno<br>sintió con gozo el Bautista,<br>la Virgen da nacimiento.\n\nPor cuna tiene un pesebre,<br>mullida paja por lecho:<br>aliméntase con leche<br>quien da a las aves sustento.\n\nLoores cantan los ángeles,<br>alégrase todo el cielo,<br>y en la tierra a los pastores<br>se hace el Pastor manifiesto.\n\nA Ti, Jesús, que de Virgen<br>naciste, la gloria demos,<br>con el Padre y almo Espíritu,<br>por los siglos sempiternos.<br>Amén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Jesús, Redentor de todos,<br>de Obispos santos corona,<br>con más clemencia este día<br>te suplicamos nos oigas.\n\nEl confesor de tu Nombre<br>recibe en él mayor honra:<br>su fiesta todos los años<br>celebra plebe devota.\n\nDel mundo ruin despreciando<br>vanos placeres y pompas,<br>premios y honores eternos<br>entre los ángeles goza.\n\nQue de este Santo las huellas<br>sigamos, benigno otorga;<br>y toda culpa a tus siervos<br>por su intercesión perdona.\n\nA Ti, Cristo, Rey piísimo,<br>y al Padre demos la gloria,<br>con el Espíritu Santo,<br>por eternidad dichosa.<br>Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "Perdona, ¡oh Cristo!, a tus siervos,<br>en cuyo favor implora la clemencia<br>del Padre, ante el tribunal<br>de tu gracia, la Virgen, su abogada.\n\nY vosotros, ejércitos celestiales,<br>que estáis agrupados en nueve coros,<br>ahuyentad todos los males, los pasados,<br>los presentes y los venideros.\n\n¡Oh apóstoles y profetas!,<br>pedid clemencia ante el severo Juez<br>para los pecadores<br>sinceramente arrepentidos.\n\nVosotros, los que vais vestidos con la púrpura<br>del martirio, y vosotros, los que lleváis la blanca<br>vestidura de vuestra confesión, llamadnos<br>a la patria a los que estamos desterrados.\n\nCoros castos de las vírgenes,<br>y vosotros, a quienes transportó<br>al cielo el desierto, aposentadnos<br>en la mansión de los bienaventurados.\n\nAlejad de los pueblos creyentes<br>a la gente sin fe, para que,<br>formando un solo rebaño,<br>nos apaciente a todos un solo Pastor.\n\n* Gloria sea dada a Dios Padre,<br>y a su Hijo Unigénito,<br>y al Paráclito Santo,<br>por los siglos sempiternos.<br>Amén."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ },
+ "easter": {
+  "ant_nona": {
+   "eng": "Aleluya * aleluya, aleluya."
+  },
+  "ant_sexta": {
+   "eng": "Aleluya * aleluya, aleluya."
+  },
+  "ant_tertia": {
+   "eng": "Aleluya * aleluya, aleluya."
+  },
+  "completorium.canticle": {
+   "antiphonEng": "Aleluya. Ha resucitado el Señor, aleluya: como os lo había dicho, aleluya, aleluya."
+  },
+  "completorium.hymn": {
+   "eng": "A Ti, Creador, pedimos,<br>antes que la luz acabe,<br>seas por tu gran clemencia<br>centinela que nos guarde.\n\nAleja los malos sueños,<br>y las nocturnas imágenes;<br>reprime a nuestro adversario,<br>que nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,<br>Hijo al Padre semejante,<br>que reinas con el Espíritu,<br>por siglos interminables.<br>Amén"
+  },
+  "hymnus_laudes": {
+   "eng": "La aurora embellece al cielo,<br>y en alabanzas resuena:<br>triunfante se alegra el mundo,<br>pávido el infierno tiembla.\n\nCuando aquel Rey valentísimo<br>bajando al seno en que esperan<br>su advenimiento los padres,<br>,e la prísion los liberta:\n\nEn vano le ponen guardia,<br>en vano la piedra sellan:<br>triunfante deja el sepulcro;<br>en él a la muerte entierra.\n\nBasta de luto y de lágrimas,<br>basta de llanto y tristeza:<br>«Resucitó, no está aquí,»<br>célico nuncio revela.\n\nPara que seas perenne<br>pascual regocijo y fiesta,<br>haz, Jesus, que nuestras almas<br>por el pecado no mueran.\n\nGloria a Dios Padre, y al Hijo<br>que cumpliendo su promesa<br>resucitó, y al Paráclito,<br>por edades sempiternas.<br>Amén."
+  },
+  "hymnus_matutinum": {
+   "eng": "La aurora embellece al cielo,<br>y en alabanzas resuena:<br>triunfante se alegra el mundo,<br>pávido el infierno tiembla.\n\nCuando aquel Rey valentísimo<br>bajando al seno en que esperan<br>su advenimiento los padres,<br>,e la prísion los liberta:\n\nEn vano le ponen guardia,<br>en vano la piedra sellan:<br>triunfante deja el sepulcro;<br>en él a la muerte entierra.\n\nBasta de luto y de lágrimas,<br>basta de llanto y tristeza:<br>«Resucitó, no está aquí,»<br>célico nuncio revela.\n\nPara que seas perenne<br>pascual regocijo y fiesta,<br>haz, Jesus, que nuestras almas<br>por el pecado no mueran.\n\nGloria a Dios Padre, y al Hijo<br>que cumpliendo su promesa<br>resucitó, y al Paráclito,<br>por edades sempiternas.<br>Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "En la mesa del Cordero,<br>de estolas blancas vestidos,<br>atravesado el mar Rojo,<br>cantemos al Rey divino.\n\nCuya caridad su sangre<br>darnos en bebida quiso,<br>despues que ofreció su cuerpo.<br>el amor en sacrificio.\n\nLa sangre que ungió los postes,<br>ahuyenta al ángel maligno:<br>el mar divide sus olas,<br>sumerge a los enemigos.\n\nNuestra pascua verdadera<br>y nuestra víctima es Cristo;<br>y los ázimos sinceros<br>para el corazon sencillo.\n\n¡Oh santa y celeste Víctima,<br>a quien se rinde el abismo!<br>Tú restituyes la vida,<br>roto de la muerte el vínculo.\n\nVictorioso del infierno,<br>dejando a su rey vencido,<br>trofeo son esos padres<br>que al cielo llevas contigo.\n\nPara que seas perenne<br>nuestro pascual regocijo,<br>de la muerte de la culpa<br>libra, Jesús, a tus hijos.\n\n* Demos la gloria a Dios Padre,<br>y al Hijo, que por sí mismo<br>resucitó, y al Paráclito,<br>por eternidad de siglos.<br>Amen."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ },
+ "epiphany": {
+  "completorium.hymn": {
+   "eng": "A Ti, Creador, pedimos,<br>antes que la luz acabe,<br>seas por tu gran clemencia<br>centinela que nos guarde.\n\nAleja los malos sueños,<br>y las nocturnas imágenes;<br>reprime a nuestro adversario,<br>que nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,<br>Hijo al Padre semejante,<br>que reinas con el Espíritu,<br>por siglos interminables.<br>Amén"
+  },
+  "hymnus_laudes": {
+   "eng": "¡Oh sola entre las ciudades<br>de Judá, Belen excelsa,<br>porque en ti nace el Caudillo<br>que de la muerte liberta!\n\nUn astro, que al solar disco<br>en luz y esplendor supera,<br>anuncia que en carne humana<br>Dios aparece en la tierra.\n\nDe Oriente vienen los Magos;<br>postrándose le veneran;<br>de incienso, de mirra y oro,<br>le hacen místicas ofrendas.\n\nAl Dios el incienso anuncia,<br>al Rey el oro demuestra,<br>y el aroma de la mirra<br>al hombre mortal revela.\n\nA Ti, Jesus, demos gloria,<br>que a las naciones te muestras,<br>con el Padre y Santo Espíritu,<br>por edades sempiternas.<br>Amén."
+  },
+  "hymnus_matutinum": {
+   "eng": "De un Rey Dios, cruel Herodes,<br>¿por qué la venida temes?<br>No quita reinos mortales<br>quien da los reinos celestes.\n\nLa estrella que habían visto,<br>siguiendo los Magos vienen:<br>a la Luz con la luz buscan;<br>dones como a Dios le ofrecen.\n\nToca el celestial Cordero<br>aguas de pura corriente:<br>lavándonos, purifica<br>los pecados que no tiene.\n\nNueva clase de portento:<br>hidrias de agua se enrojecen;<br>y mandadas echar vino,<br>en vino el agua convierten.\n\nA Ti, Jesús, demos gloria,<br>que apareciste a las gentes,<br>con el Padre y Santo Espíritu,<br>por siglos y eternamente.<br>Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "De un Rey Dios, cruel Herodes,<br>¿por qué la venida temes?<br>No quita reinos mortales<br>quien da los reinos celestes.\n\nLa estrella que habían visto,<br>siguiendo los Magos vienen:<br>a la Luz con la luz buscan;<br>dones como a Dios le ofrecen.\n\nToca el celestial Cordero<br>aguas de pura corriente:<br>lavándonos, purifica<br>los pecados que no tiene.\n\nNueva clase de portento:<br>hidrias de agua se enrojecen;<br>y mandadas echar vino,<br>en vino el agua convierten.\n\nA Ti, Jesús, demos gloria,<br>que apareciste a las gentes,<br>con el Padre y Santo Espíritu,<br>por siglos y eternamente.<br>Amén."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ },
+ "lent": {
+  "ant_nona": {
+   "eng": "= Por las armas de la justicia * y del poder de Dios mostrémonos en la mucha paciencia."
+  },
+  "ant_sexta": {
+   "eng": "Nos han llegado * los días de penitencia, para redimir los pecados y salvar las almas."
+  },
+  "ant_tertia": {
+   "eng": "="
+  },
+  "completorium.canticle": {
+   "antiphonEng": "Vela sobre nosotros, * eterno Salvador, para que no nos sorprenda el astuto tentador; pues tú te has hecho nuestro perpetuo ayudador."
+  },
+  "completorium.hymn": {
+   "eng": "A Ti, Creador, pedimos,<br>antes que la luz acabe,<br>seas por tu gran clemencia<br>centinela que nos guarde.\n\nAleja los malos sueños,<br>y las nocturnas imágenes;<br>reprime a nuestro adversario,<br>que nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,<br>Hijo al Padre semejante,<br>que reinas con el Espíritu,<br>por siglos interminables.<br>Amén"
+  },
+  "hymnus_laudes": {
+   "eng": "Divino sol de justicia,<br>resplandece en nuestras almas,<br>cuando ahuyentada la noche<br>alegre renace el alba.\n\nDándonos tiempo aceptable,<br>haz que en arroyos de lágrimas<br>se purifique la víctima<br>que el corazón te consagra.\n\nBroten lágrimas perennes<br>de donde el crimen brotara:<br>rasgue el corazon y cure<br>la penitencia sus llagas.\n\nEl día viene en que toda<br>la creacion vista gala:<br>la senda alegres sigamos<br>a que nos volvió tu gracia.\n\nAdórete todo el mundo,<br>Trinidad clemente y santa;<br>y renovados nosotros<br>cantemos nueva alabanza.<br>Amen."
+  },
+  "hymnus_matutinum": {
+   "eng": "En estos cuarenta días<br>(misterio encierra su número),<br>conforme a santa costumbre,<br>observemos el ayuno.\n\nPor la ley y los Profetas<br>establecido ya en uso,<br>lo consagró con su ejemplo<br>Cristo, Redentor del mundo.\n\nAflijamos, pues, la carne;<br>cercenemos todo gusto:<br>en comer y beber parcos,<br>ni en el hablar haya abuso.\n\nAlejemos de la mente<br>todo pensamiento impuro;<br>no nos envuelva en sus lazos<br>el tentador siempre astuto.\n\nCon nuestro llanto aplaquemos<br>al Juez indignado y justo:<br>digámosle arrepentidos<br>con rendimiento profundo:\n\nCon nuestras obras pecamos;<br>a Ti ofendimos, Dios sumo:<br>que tus piedades superen<br>de nuestras culpas el número.\n\nRecuerda somos tu obra,<br>aunque la abatió el orgullo:<br>no cedas a ningun otro<br>el honor del nombre tuyo.\n\nPerdona el mal que hemos hecho,<br>aumenta de gracia el fruto;<br>que complacerte podamos<br>aquí y en siglos futuros.\n\nHazlo así, Trinidad santa;<br>otórgalo, Dios augusto;<br>para que a tus siervos sean<br>fructuosos los ayunos.<br>Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "Oye, Creador benigno,<br>nuestras súplicas sinceras,<br>que entre sollozos te hacemos<br>en esta santa Cuaresma.\n\nTú que el corazon registras,<br>sabes nuestras flacas fuerzas:<br>a los que a Ti nos volvemos,<br>perdón y gracia dispensa.\n\nEn gran manera pecamos;<br>perdona a los que confiesan:<br>para loor de tu nombre<br>a los lánguidos consuela.\n\nHaz que el ayuno quebrante<br>de la carne la soberbia;<br>y mientras ayuna el cuerpo,<br>de culpa el alma se abstenga.\n\nHazlo así, Trinidad santa,<br>único Dios por esencia,<br>para que este santo ayuno<br>útil a tus siervos sea.<br>Amén."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ },
+ "ordinary": {
+  "completorium.hymn": {
+   "eng": "A Ti, Creador, pedimos,<br>antes que la luz acabe,<br>seas por tu gran clemencia<br>centinela que nos guarde.\n\nAleja los malos sueños,<br>y las nocturnas imágenes;<br>reprime a nuestro adversario,<br>que nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,<br>Hijo al Padre semejante,<br>que reinas con el Espíritu,<br>por siglos interminables.<br>Amén"
+  },
+  "hymnus_laudes": {
+   "eng": "Ya de la noche se adelgaza el velo:<br>Ya luz esparce fúlgida la aurora:<br>Con voz sonora al Señor roguemos,<br>Árbitro sumo.\n\nQuiera propicio perdonar las culpas:<br>Penas aleje, llantos, aflicciones:<br>Bienes y dones de la paz eterna<br>Dígnese darnos.\n\nDígnate hacerlo, Trinidad Beata,<br>Padre con Hijo, Espíritu divino:<br>Loor contino por el orbe entero<br>Suena en tu gloria.<br>Amén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Dejando el sueño, por la noche en vela, Siempre en divinos salmos meditemos: Y a Dios cantemos con acento acorde Himnos suaves. Que el Rey eterno, cuyo loor cantamos En su celeste corte nos reciba; Y siempre viva con sus Santos goce Dichas el alma. Dígnate hacerlo, Trinidad Beata, Padre con Hijo, Espíritu divino: Loor contino por el orbe entero Suena en tu gloria. Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "De la luz Creador óptimo,<br>que luz á los dias prestas,<br>y el orígen de las cosas<br>haciendo la luz empiezas.\n\nQue a tarde y mañana juntos<br>un día llamarse ordenas:<br>negro se desliza el caos,<br>oye las súplicas nuestras.\n\nNo sea que al peso del crimen<br>el alma la vida pierda,<br>cuando se enlaza en pecados,<br>porque en lo eterno no piensa.\n\nLlame a las puertas del cielo,<br>busque vital recompensa;<br>huyamos de toda culpa,<br>y expiemos toda ofensa.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imagen perfecta,<br>con el Espíritu Santo,<br>Dios que por los siglos reinas.<br>Amén."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ },
+ "passion": {
+  "ant_nona": {
+   "eng": "= ¿Se paga por ventura mal por bien? Porque cavan una hoya para mi alma."
+  },
+  "ant_sexta": {
+   "eng": "= Tú, Señor, has defendido la causa de mi alma, rescatarás mi vida, Señor, Dios mío."
+  },
+  "ant_tertia": {
+   "eng": "= ¿Qué te he hecho yo, * pueblo mío? ¿En qué te he molestado? Respóndeme."
+  },
+  "completorium.canticle": {
+   "antiphonEng": "Oh Rey glorioso entre tus Santos, que eres siempre digno de alabanza, aunque inefable: tú estás en nosotros, Señor, y tu santo nombre ha sido invocado sobre nosotros: no nos desampares, Dios nuestro: para que en el día del juicio te dignes colocarnos entre tus Santos y Elegidos, Rey bendito."
+  },
+  "completorium.hymn": {
+   "eng": "A Ti, Creador, pedimos,<br>antes que la luz acabe,<br>seas por tu gran clemencia<br>centinela que nos guarde.\n\nAleja los malos sueños,<br>y las nocturnas imágenes;<br>reprime a nuestro adversario,<br>que nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,<br>Hijo al Padre semejante,<br>que reinas con el Espíritu,<br>por siglos interminables.<br>Amén"
+  },
+  "hymnus_laudes": {
+   "eng": "El sexto lustro de su edad cumplido,<br>Llegando al fin de su mortal carrera,<br>De propio impulso el Redentor movido<br>Se entrega a la Pasion y muerte fiera.<br>En la cruz el Cordero es levantado<br>Para ser sobre el árbol inmolado.\n\nVedle desfallecido, hiel gustando:<br>Ved la espina, los clavos, finalmente<br>La lanza que atraviesa el pecho blando.<br>De sangre y agua brota viva fuente.<br>La tierra, el mar, los astros, todo el mundo<br>¡En qué río se lavan tan profundo!\n\n¡Oh sacrosanta cruz! Firme, constante;<br>Árbol como ninguno generoso:<br>Las selvas no producen semejante,<br>En lozanía, en flor, en fruto hermoso.<br>¡Oh dulces clavos! ¡Oh madero santo!<br>Que un peso sostenéis de valor tanto.\n\nDobla, dobla tus ramas, cruz divina;<br>Ablanda de tu seno la dureza:<br>Mitiga ese rigor que en ti domina,<br>Y en su orígen te dió naturaleza;<br>Y a los miembros del Rey que de ti pende,<br>Lecho más blando en tu regazo tiende.\n\nSola tú digna de llevar has sido<br>La víctima que al mundo rescatase,<br>Y un puerto preparar donde acogido<br>En tu arca del naufragio se salvase.<br>Altar de sacrificio es tu madero<br>Ungido con la sangre del Cordero.\n\nA tí la gloria, Trinidad beata,<br>Por sempiternos siglos tributemos;<br>Al Hijo con el Padre a quien retrata;<br>El mismo honor al Paracleto demos:<br>Del uno y trino Dios alabe el hombre<br>Con todo el universo el santo nombre.<br>Amén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Canta, lengua, con voz entusiasmada<br>Gloriosos lauros de inmortal querella;<br>Y ante el trofeo de la Cruz sagrada,<br>Dinos el triunfo conseguido en ella:<br>De qué modo, en nobleza sin segundo,<br>Venció muriendo el Redentor del mundo.\n\nDel fraude el Hacedor compadecido,<br>Que puso al primer hombre en triste estado,<br>Cuando al gustar del fruto prohibido<br>Comió la muerte en el fatal bocado,<br>Para pagar el contraído empeño<br>Bajo el árbol, entonces buscó el leño.\n\nTal obra, en la salud que nos prepara<br>Benigno el cielo, el orden requería:<br>Que con el arte el arte se burlara,<br>Que trazó para herir la alevosía;<br>Y donde el enemigo encontró medio<br>De perdernos, hallásemos remedio.\n\nLlegado el tiempo consagrado y fijo<br>Que el Verbo eterno señaló en su mente,<br>Envía el Padre a su celeste Hijo<br>Que fue del orbe Creador potente;<br>Y en virginal entraña concebido<br>Nace de humana carne revestido.\n\nPrincipiando a sufrir, cual niño llora<br>Del pesebre sintiendo la estrechura:<br>Sus miembros liga, mientras fiel le adora,<br>La Vírgen Madre en cándida envoltura:<br>Las manos y los pies de un Dios sublime<br>De estrecha faja el ceñidor comprime.\n\nA Ti la gloria, Trinidad beata,<br>Por sempiternos siglos tributemos;<br>Al Hijo con el Padre á quien retrata;<br>El mismo honor al Paracleto demos:<br>Del uno y trino Dios alabe el hombre<br>Con todo el universo el santo nombre.<br>Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "La enseña se enarbola del Rey fuerte:<br>Brilla el misterio de la Cruz sagrada:<br>En ella padeció la Vida muerte,<br>Y vida con la muerte nos fue dada.\n\nEl que es de vida manantial y fuente,<br>Con duro hierro abierto su costado,<br>De sangre y agua destiló un torrente,<br>Para lavar las manchas del pecado.\n\nCumplido fue lo que David predijo<br>En misterioso canto verdadero,<br>Cuando a los pueblos y naciones dijo:<br>Ved que reina el Señor desde el madero.\n\nÁrbol hermoso y fúlgido, teñido<br>Con púrpura de Rey cual regio manto:<br>Tú solo; entre millares elegido,<br>Mereciste tocar cuerpo tan santo.\n\nTronco feliz, en cuyas ramas pende<br>El rescate del mundo: del Eterno<br>En la balanza justa el fiel desciende,<br>Su presa arrebatándole al infierno.\n\n¡Salve, oh Cruz, nuestra única esperanza!<br>Aumenta en este tiempo tus trofeos:<br>Acrecienta en el fiel la confianza,<br>Y perdona su crímen a los reos.\n\n¡Oh Santa Trinidad, fuente de vida!<br>Los espíritus todos te den gloria:<br>Concédenos la palma merecida,<br>Pues de la Cruz nos diste la victoria.<br>Amén."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ },
+ "pentecost": {
+  "completorium.hymn": {
+   "eng": "A Ti, Creador, pedimos,<br>antes que la luz acabe,<br>seas por tu gran clemencia<br>centinela que nos guarde.\n\nAleja los malos sueños,<br>y las nocturnas imágenes;<br>reprime a nuestro adversario,<br>que nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,<br>Hijo al Padre semejante,<br>que reinas con el Espíritu,<br>por siglos interminables.<br>Amén"
+  },
+  "hymnus_laudes": {
+   "eng": "Festivos gozos nos vuelve<br>tornando en su giro el orbe,<br>cuando el Espíritu Santo<br>bajó sobre los Apóstoles.\n\nLas lenguas en que aparece,<br>símbolo son de sus dones:<br>disertos hace los labios,<br>fervientes los corazones.\n\nHablan idiomas diversos:<br>pásmanse los que los oyen;<br>solo tan gran maravilla<br>los judíos desconocen.\n\nMísticos son estos hechos:<br>de las gracias y perdones<br>en la ley establecidos<br>el tiempo cumplia entonces.\n\nAhora a Ti, Dios clementísimo,<br>humildes se alzan las voces:<br>dígnate del Santo Espíritu<br>pródigo darnos los dones.\n\nAntes los sagrados pechos<br>llenaste de sus ardores:<br>ahora perdona las culpas,<br>y danos de paz los goces.\n\nGloria al Padre, gloria al Hijo,<br>que a su palabra conforme<br>resucitó, y al Paráclito<br>demos eternos loores.<br>Amén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Ya Cristo ascendiera a lo alto,<br>regresando a su morada,<br>para impetrar de su Padre<br>que al Paráclito enviara.\n\nEra la solemne fiesta<br>que, cumplidas las semanas<br>del místico septenario,<br>tiempos felices señala.\n\nCuando a la hora de tercia<br>conmueve un viento la casa,<br>y a los Apóstoles que oran<br>un Dios anuncia que baja.\n\nDe la claridad del Padre<br>despréndese viva llama,<br>y sobre ellos se divide<br>como en lenguas abrasadas.\n\nLlena de gozo sus pechos,<br>conmuévense sus entrañas;<br>óyense voces diversas,<br>grandezas de Dios proclaman.\n\nA las distintas naciones,<br>griegas, latinas y bárbaras,<br>con admiracion y asombro<br>en lengua propia les hablan.\n\nLos incrédulos judíos<br>en vano pérfidos tratan<br>de quitar fuerza al portento,<br>cuando a embriaguez lo achacan.\n\nPedro, con nuevos milagros,<br>les sale al frente, y declara<br>que de Joel se ha cumplido<br>la profecía sagrada.\n\nGloria al Padre, gloria al Hijo<br>qne cumpliendo su palabra<br>resucitó, y al Paráclito,<br>por siglos que nunca acaban.<br>Amén."
+  },
+  "hymnus_vespera": {
+   "eng": "Ven, ¡oh Espíritu Creador!,<br>visita las almas de los tuyos,<br>llena de tu gracia divina<br>los corazones que Tú creaste.\n\nTú, que eres llamado Paráclito,<br>don del altísimo Dios,<br>fuente viva, fuego, amor<br>y unción del espíritu.\n\nTú, el de los siete dones,<br>el dedo de la diestra del Padre,<br>la promesa solemne del Padre,<br>que dotas de palabra las gargantas.\n\nEnciende la luz en nuestros espíritus,<br>infunde tu amor en nuestros corazones,<br>confortando con tu auxilio continuo<br>la flaqueza de nuestra carne.\n\nAleja más y más a nuestro enemigo,<br>y danos pronto la paz,<br>para que así, guiándonos Tú,<br>evitemos todo mal.\n\nHaz que por ti conozcamos al Padre,<br>y que conozcamos al Hijo,<br>y que creamos siempre en ti,<br>¡oh Espíritu que procedes de ambos!\n\nGloria sea dada a Dios Padre,<br>y al Hijo, que resucitó<br>de entre los muertos, y al Paráclito,<br>por los siglos de los siglos.<br>Amén."
+  },
+  "nona.hymn": {
+   "eng": "¡Oh Dios! firmeza del mundo,<br>permaneciendo inmovible<br>para señalar los tiempos<br>haces que los astros giren.\n\nDanos la luz por la tarde,<br>que nunca la vida espire;<br>mas premio de muerte santa<br>tu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,<br>Hijo, su imágen sublime,<br>con el Espíritu Santo,<br>que reinas siglos sin límites.<br>Amén."
+  },
+  "prima.hymn": {
+   "eng": "Ya resplandece el lucero;<br>a Dios pidamos rendidos<br>que en el discurso del día<br>nos guarde de los malignos.\n\nRefrene y temple la lengua,<br>no se oiga voz de litigios;<br>ponga guarda en nuestros ojos,<br>no entre por ellos el vicio.\n\nEl corazón, sin rencilla,<br>sea puro en lo más íntimo:<br>bebida y comida parcas<br>bajen a la carne el brio.\n\nPara que, acabado el día,<br>turnando la noche en giro,<br>por la abstinencia del mundo<br>cantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,<br>y a su Unigénito Hijo,<br>con el Espíritu Santo,<br>ahora y por todos los siglos.<br>Amen."
+  },
+  "sexta.hymn": {
+   "eng": "Rector sabio, Dios potente,<br>que en todo pones concierto ;<br>alumbras por la mañana,<br>y al mediodía das fuego:\n\nApaga el calor nocivo,<br>estingue llamas de pleitos;<br>paz al corazon sincera<br>confiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Unigénito,<br>con el Espíritu Santo,<br>que reinas siglos sin término.<br>Amén."
+  },
+  "tertia.hymn": {
+   "eng": "Divino Espíritu Santo,<br>con Padre e Hijo Dios uno,<br>ven ahora a nuestro pecho<br>derramado en amor puro.\n\nBoca, lengua, mente y alma<br>canten la alabanza, y juntos<br>estreche los corazones<br>de la caridad el nudo.\n\n* Hazlo así, Padre piísimo,<br>y al Padre igual Hijo único,<br>con el Espíritu Santo,<br>que reinas siglos sin número.<br>Amén."
+  }
+ }
+}

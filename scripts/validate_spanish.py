@@ -541,6 +541,36 @@ def validate_temporal_propers():
     print(f"temporal_propers_es.json: {n} fields checked")
 
 
+def validate_hymns_seasonal():
+    """Seasonal hymns: every overlaid part must exist in the source and
+    only translate fields the source carries."""
+    path = ES / "hymns_seasonal_es.json"
+    if not path.exists():
+        print("hymns_seasonal_es.json: not present (skipped)")
+        return
+    src = json.load(open(SRC / "hymns_seasonal.json"))
+    es = json.load(open(path))
+    n = 0
+    for season, fields in es.items():
+        check(season in src, f"hymns_seasonal[{season}]: no such season")
+        for fkey, o in fields.items():
+            p = (src.get(season) or {}).get(fkey)
+            check(p is not None,
+                  f"hymns_seasonal[{season}][{fkey}]: no such part")
+            if p is None:
+                continue
+            for f, v in o.items():
+                check(f in ("eng", "antiphonEng"),
+                      f"hymns_seasonal[{season}][{fkey}].{f}: not a field")
+                check(p.get(f) is not None,
+                      f"hymns_seasonal[{season}][{fkey}].{f}: "
+                      f"source has no {f}")
+                check(isinstance(v, str) and v.strip(),
+                      f"hymns_seasonal[{season}][{fkey}].{f}: empty")
+                n += 1
+    print(f"hymns_seasonal_es.json: {n} fields checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -554,6 +584,7 @@ def main():
     validate_hours_parts()
     validate_commune_office()
     validate_temporal_propers()
+    validate_hymns_seasonal()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

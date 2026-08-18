@@ -235,7 +235,18 @@ so integration cannot silently misalign.
   libros Regum ×3, an Augustine passage on the high priest) are hand
   supplements. temporal_propers_es.json now covers all 7,032 fields —
   the temporal Office is 100% Spanish.
-  Remaining: seasonal hymns (O6).
+  **Tranche O6 — the seasonal hymns: COMPLETE
+  (`hymns_seasonal_es.json`, 75 fields — every hymn of all 8 seasons
+  plus the Compline canticle antiphons).** Traditional verse
+  translations from DO Espanol's hymn table, the app's
+  `<br>`-within-stanza structure mirrored. The app carries the
+  pre-Urban-VIII texts for a few hymns ("Vox clara" where DO defaults
+  to "En clara vox") — those are reached by their season-named sections
+  in Major Special; four antiphons are hand supplements.
+  The full-app audit after O6 found the remaining gaps: the SANCTORAL
+  Office propers (`sanctoral_propers.json`, 475 feasts / ~4,600 parts —
+  tranche O7, same machinery as the temporal cycle), and the small
+  rosary files (`mysteries.json`, `rosary_prayers.json` — tranche O8).
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,

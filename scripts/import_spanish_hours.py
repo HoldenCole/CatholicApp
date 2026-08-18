@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "spanish-translation" / "hours_parts_es.json"
 COMMUNE_OUT = ROOT / "spanish-translation" / "commune_office_es.json"
 TEMPORAL_OUT = ROOT / "spanish-translation" / "temporal_propers_es.json"
+HYMNS_OUT = ROOT / "spanish-translation" / "hymns_seasonal_es.json"
 SUPP_PATH = ROOT / "spanish-translation" / "hours_supplements_es.json"
 DEFAULT_DO = Path("/tmp/claude-0/-home-user-CatholicApp/"
                   "71906fbb-67e9-553f-b996-d8565178e126/scratchpad/do_repo")
@@ -1678,6 +1679,86 @@ def main():
     TEMPORAL_OUT.write_text(json.dumps(tout, ensure_ascii=False, indent=1,
                                        sort_keys=True) + "\n",
                             encoding="utf-8")
+    # ---- the seasonal hymns (hymns_seasonal.json): traditional verse
+    # translations from the hymn table; the app's <br>-within-stanza /
+    # blank-line-between-stanza structure is mirrored.
+    hymns = json.load(open(ROOT / "Introibo/Resources/"
+                           "hymns_seasonal.json"))
+    # The app carries the pre-Urban-VIII texts for a few seasonal hymns
+    # ("Vox clara" where DO's default is "En clara vox") — the Espanol
+    # verse translations cover the hymn either way; reach them by the
+    # season-named section when the incipit key misses.
+    SEASON_HYMN_SECTIONS = {
+        ("advent", "hymnus_laudes"): "Hymnus Adv Laudes",
+        ("advent", "hymnus_vespera"): "Hymnus Adv Vespera",
+        ("lent", "hymnus_laudes"): "Hymnus Quad Laudes",
+        ("passion", "hymnus_laudes"): "Hymnus Quad5 Laudes",
+        ("easter", "hymnus_laudes"): "Hymnus Pasch Laudes",
+    }
+
+    def named_hymn_text(name):
+        raw = espanol_named.get(
+            ("Psalterium/Special/Major Special.txt", name))
+        if not raw:
+            return None
+        txt = "\n".join(
+            "" if l.strip() == "_" else clean_line(l)
+            for l in raw if not l.strip().startswith("!"))
+        return re.sub(r"\n{3,}", "\n\n", txt).strip() or None
+
+    hymn_out = {}
+    hymn_misses = []
+    hymn_n = 0
+    for season in sorted(hymns):
+        for fkey, p in sorted(hymns[season].items()):
+            if not isinstance(p, dict):
+                continue
+            entry = {}
+            if p.get("eng"):
+                skey = f"hymns:{season}:{fkey}:eng"
+                lat = p.get("lat") or ""
+                first = clean_line(lat.split("<br>")[0].split("\n")[0])
+                t = supp.get(skey)
+                if t is None and p.get("type") == "hymn":
+                    t = hymn_map.get(fold(first))
+                    if t is None:
+                        name = SEASON_HYMN_SECTIONS.get((season, fkey))
+                        if name:
+                            t = named_hymn_text(name)
+                    if t is not None:
+                        stanzas = [s.strip() for s in t.split("\n\n")
+                                   if s.strip()]
+                        t = "\n\n".join(
+                            "<br>".join(l for l in s.split("\n") if l)
+                            for s in stanzas)
+                if t is None:
+                    flat = clean_line(lat.replace("<br>", " "))
+                    t = find_line(flat) or find_block(flat)
+                if t:
+                    entry["eng"] = nfc(t)
+                    hymn_n += 1
+                else:
+                    hymn_misses.append((season, fkey, first[:60]))
+            if p.get("antiphonEng") and p.get("antiphonLat"):
+                ta = supp.get(f"hymns:{season}:{fkey}:antiphonEng") \
+                    or find_line(clean_line(p["antiphonLat"]))
+                if ta:
+                    entry["antiphonEng"] = nfc(ta)
+                    hymn_n += 1
+                else:
+                    hymn_misses.append((season, fkey + "/antiphon",
+                                        p["antiphonLat"][:60]))
+            if entry:
+                hymn_out.setdefault(season, {})[fkey] = entry
+    HYMNS_OUT.write_text(json.dumps(hymn_out, ensure_ascii=False,
+                                    indent=1, sort_keys=True) + "\n",
+                         encoding="utf-8")
+    print(f"hymns: wrote {hymn_n} fields")
+    if hymn_misses:
+        print(f"HYMN MISSES {len(hymn_misses)}:")
+        for m in hymn_misses:
+            print("   ", m)
+
     print(f"temporal: wrote {sum(len(v) for v in tout.values())} parts "
           f"({tn} fields)")
     if LESSONS and lesson_shift_stats:

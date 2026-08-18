@@ -231,6 +231,7 @@ final class ContentStore {
             psalterWeeklyData = load("psalter_weekly", as: [String: [String: Hour.Part]].self) ?? [:]
             communeOffice     = load("commune_office", as: [String: [String: Hour.Part]].self) ?? [:]
             temporalData      = load("temporal_propers", as: [String: [String: Hour.Part]].self) ?? [:]
+            hymnsSeasonalData = load("hymns_seasonal", as: [String: [String: Hour.Part]].self) ?? [:]
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -377,6 +378,21 @@ final class ContentStore {
                     entry[fkey] = part
                 }
                 temporalData[code] = entry
+            }
+        }
+        // The seasonal hymns (tranche O6): traditional verse
+        // translations, plus the Compline canticle antiphons.
+        if let es = load("hymns_seasonal_es",
+                         as: [String: [String: HourPartES]].self) {
+            for (season, fields) in es {
+                guard var entry = hymnsSeasonalData[season] else { continue }
+                for (fkey, o) in fields {
+                    guard var part = entry[fkey] else { continue }
+                    if let t = o.eng { part.eng = t }
+                    if let t = o.antiphonEng { part.antiphonEng = t }
+                    entry[fkey] = part
+                }
+                hymnsSeasonalData[season] = entry
             }
         }
         // Schola Latina courses: localized (not merely translated) for

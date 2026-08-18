@@ -72,7 +72,7 @@ class SpanishOverlayQA {
             "reference_es.json", "courses_es.json",
             "psalter_es.json", "psalter_weekly_es.json",
             "hours_parts_es.json", "commune_office_es.json",
-            "temporal_propers_es.json",
+            "temporal_propers_es.json", "hymns_seasonal_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -387,6 +387,13 @@ class SpanishOverlayQA {
                 .startsWith("Empieza el Libro de la Sabiduría\n1 Amad la justicia"))
             assertTrue(ContentStore.temporalData["pent01-0"]!!["lectio9"]!!.eng!!
                 .contains("Homilía de San Agustín, Obispo"))
+            // The seasonal hymns (tranche O6): traditional verse
+            // translations, incl. the pre-Urban-VIII incipits reached by
+            // their season-named sections.
+            assertTrue(ContentStore.hymnsSeasonalData["advent"]!!["hymnus_laudes"]!!
+                .eng!!.startsWith("Oíd la voz que sonora"))
+            assertTrue(ContentStore.hymnsSeasonalData["easter"]!!["completorium.canticle"]!!
+                .antiphonEng!!.startsWith("Aleluya. Ha resucitado el Señor"))
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
@@ -459,6 +466,10 @@ class SpanishOverlayQA {
             .startsWith("You who left all"))
         assertTrue(ContentStore.temporalData["adv1-0"]!!["ant_1"]!!.eng!!
             .startsWith("Behold, the name of the Lord"))
+        assertTrue(ContentStore.hymnsSeasonalData["advent"]!!["hymnus_laudes"]!!
+            .eng!!.startsWith("Hark! a thrilling voice") ||
+            !ContentStore.hymnsSeasonalData["advent"]!!["hymnus_laudes"]!!
+                .eng!!.startsWith("Oíd la voz"))
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }
