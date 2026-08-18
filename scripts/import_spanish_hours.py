@@ -1140,14 +1140,283 @@ def main():
     for lt, es_ in TEMPORAL_FIX_PAIRS:
         TEMPORAL_FIXES[fold(lt)] = es_
 
+    # ---- the Matins lessons (--lessons): scripture pericopes are
+    # COMPOSED from the Torres Amat module (the DO Espanol Tempora
+    # lessons are largely a modern, non-TA scripture translation — the
+    # per-pericope audit rejected them); patristic/homily lessons keep
+    # the DO Espanol traditional-register translation (tier 2, like the
+    # orations). Deuterocanonical pericopes need their own tier-2
+    # compositions (lessons_deutero_office_es.json, keyed
+    # "<key>:<field>") — until supplied they stay English.
+    LESSONS = "--lessons" in sys.argv
+    ta_text = None
+    isr = None
+    lessons_deutero = {}
+    if LESSONS:
+        import import_spanish_readings as isr_mod
+        isr = isr_mod
+        # DO's Tempora files abbreviate books differently than the missal
+        isr.BOOKS.update({
+            "Ezek": "Ezekiel", "Eccl": "Ecclesiastes", "Apo": "Revelation",
+            "Titus": "Titus", "Jonas": "Jonah", "Mic": "Micah",
+            "Phlm": "Philemon", "Judas": "Jude",
+            "2 Joannes": "2 John", "1 Jn": "1 John", "2 Jn": "2 John",
+            "3 Jn": "3 John",
+            "1 Mac": isr_mod.DEUTERO, "2 Mac": isr_mod.DEUTERO,
+            "Jdt": isr_mod.DEUTERO, "Bar": isr_mod.DEUTERO,
+        })
+        bible_path = arg("--bible", str(DEFAULT_DO.parent /
+                                        "torres_amat.bin"))
+        kjv_path = arg("--kjv", str(DEFAULT_DO.parent / "kjv.json"))
+        verse_lines = open(bible_path, encoding="utf-8-sig",
+                           newline="").read().splitlines()
+        kjv_books = json.load(open(kjv_path, encoding="utf-8"))["books"]
+        ta_index = {}
+        line_no = 0
+        for b in kjv_books:
+            by_cv = {}
+            for ch in b["chapters"]:
+                for v in ch["verses"]:
+                    by_cv[(int(ch["chapter"]), int(v["verse"]))] = line_no
+                    line_no += 1
+            ta_index[b["name"]] = by_cv
+
+        def ta_line_text(ln):
+            if not (0 <= ln < len(verse_lines)):
+                return None
+            t = re.sub(r"<[^>]*>", " ", verse_lines[ln])
+            t = re.sub(r"\s+([,.;:!?])", r"\1",
+                       re.sub(r"\s+", " ", t)).strip()
+            return t or None
+
+        def ta_text(name, ch, v, line_shift=0):
+            shift = isr.VULGATE_SHIFTS.get((name, ch), 0)
+            ln = ta_index.get(name, {}).get((ch, v + shift))
+            if ln is None:
+                return None
+            return ta_line_text(ln + line_shift)
+
+        def cognate_stems(s):
+            out = set()
+            for w in fold(s).split():
+                w = w.replace("ue", "o").replace("ie", "e")
+                if len(w) >= 5:
+                    out.add(w[:4])
+            return out
+
+        def cog_score(lat_s, es_s):
+            a = cognate_stems(lat_s)
+            if not a:
+                return 0.5
+            return len(a & cognate_stems(es_s)) / len(a)
+
+        def pair_score(lat_s, es_s):
+            """Cognate fit + length similarity (TA runs ~1.15x the
+            Latin) — TA's free renderings can be cognate-poor."""
+            r = len(es_s) / (1.15 * max(1, len(lat_s)))
+            return cog_score(lat_s, es_s) + \
+                0.5 * (min(r, 1 / r) if r > 0 else 0.0)
+
+        lesson_shift_stats = {}
+
+        dpath = ROOT / "spanish-translation" / \
+            "lessons_deutero_office_es.json"
+        if dpath.exists():
+            lessons_deutero = json.load(open(dpath, encoding="utf-8"))
+
+    # Sections whose source carries no parsable "!" reference.
+    LESSON_REFS = {
+        ("pasc2-2t", "lectio3"): "Act 18:5-6",
+        ("pasc6-6", "lectio1"): "Judas 1:1-4",
+        ("pasc6-6", "lectio2"): "Judas 1:5-8",
+        ("pasc6-6", "lectio3"): "Judas 1:9-13",
+    }
+    # Office lesson headings the missal intro translator doesn't know.
+    HEAD_FIXES = {}
+    for _la, _es in [
+        ("Incipit Epístola cathólica beáti Judæ Apóstoli",
+         "Empieza la Epístola católica del Apóstol San Judas"),
+    ]:
+        HEAD_FIXES[fold(_la)] = _es
+
     tout = {}
     tmisses = []
     tn = 0
+    pending_lessons = []   # scripture pericopes awaiting shift consensus
+    ch_agg = {}            # (book, chapter) -> {shift: summed score}
     for tkey in sorted(temporal):
         es_p = es_temp_files.get(tkey)
         lat_p = lat_temp_files.get(tkey)
         for fkey, p in sorted(temporal[tkey].items()):
-            if not isinstance(p, dict) or fkey.startswith("lectio"):
+            if not isinstance(p, dict):
+                continue
+            if fkey.startswith("lectio"):
+                if not LESSONS or not p.get("eng"):
+                    continue
+                lat = p.get("lat") or ""
+                skey = f"temporal:{tkey}:{fkey}:eng"
+                if skey in supp:
+                    tout.setdefault(tkey, {})[fkey] = {"eng": supp[skey]}
+                    tn += 1
+                    continue
+                raw_es, raw_lat = resolve_pair(es_p, lat_p, fkey)
+                if raw_es is None and raw_lat is None:
+                    base = re.sub(r"_(19\d\d|cist|op)$", "", fkey)
+                    if base != fkey:
+                        raw_es, raw_lat = resolve_pair(es_p, lat_p, base)
+                lat_lines = lat.split("\n")
+                num_idx = [i for i, l in enumerate(lat_lines)
+                           if re.match(r"^\d+ ", l.strip())]
+                is_reading = bool(num_idx) and all(
+                    re.match(r"^\d+ ", l.strip())
+                    for l in lat_lines[num_idx[0]:] if l.strip())
+                t = None
+                if is_reading:
+                    ref = LESSON_REFS.get((tkey, fkey))
+                    parsed = isr.parse_ref(ref) if ref else None
+                    if parsed is None:
+                        for l in (raw_lat or []) + (raw_es or []):
+                            if l.strip().startswith("!"):
+                                cand = l.strip()[1:].strip()
+                                parsed = isr.parse_ref(cand)
+                                if parsed:
+                                    ref = cand
+                                    break
+                                if ref is None:
+                                    ref = cand
+                    seq = None
+                    deutero = False
+                    if parsed:
+                        seq = []
+                        for book, ch, v in parsed:
+                            name = isr.BOOKS.get(book)
+                            if name is None:
+                                seq = None
+                                break
+                            if name == isr.DEUTERO or \
+                               (name == "Esther" and ch > 10) or \
+                               (name == "Ecclesiastes" and ch > 12) or \
+                               (name == "Daniel" and (ch > 12 or
+                                    (ch == 3 and (v is None or v > 23)))):
+                                deutero = True
+                                break
+                            seq.append((name, ch, v))
+                    if deutero:
+                        dt = lessons_deutero.get(f"{tkey}:{fkey}")
+                        if dt:
+                            tout.setdefault(tkey, {})[fkey] = {"eng": dt}
+                            tn += 1
+                        else:
+                            tmisses.append((tkey, fkey,
+                                            "DEUTERO " + (ref or "?")))
+                        continue
+                    if seq:
+                        out_lines = []
+                        ok = True
+                        head_lines = [h for h in lat_lines[:num_idx[0]]
+                                      if h.strip()]
+                        es_heads = []
+                        if raw_es:
+                            for l in raw_es:
+                                s = l.strip()
+                                if not s or s.startswith(("!", "@", "#")):
+                                    continue
+                                if re.match(r"^\d+ ", s):
+                                    break
+                                es_heads.append(clean_line(l))
+                        if es_heads and len(es_heads) == len(head_lines):
+                            out_lines.extend(es_heads)
+                        else:
+                            for h in head_lines:
+                                if h.strip().startswith("!"):
+                                    out_lines.append(h.strip())
+                                    continue
+                                hc = clean_line(h)
+                                ht = (HEAD_FIXES.get(fold(hc))
+                                      or isr.translate_intro(hc)
+                                      or find_line(hc))
+                                if ht is None:
+                                    ok = False
+                                    break
+                                out_lines.append(ht)
+                        if ok:
+                            vnum_lines = [l.strip()
+                                          for l in lat_lines[num_idx[0]:]
+                                          if l.strip()]
+                            pairs = []  # (printed num, latin text, n/c/v)
+                            if len(vnum_lines) == len(seq):
+                                # positional zip — robust to source typos
+                                # in the printed verse numbers
+                                for (name, ch, v), s in zip(seq,
+                                                            vnum_lines):
+                                    pairs.append(
+                                        (v, re.sub(r"^\d+ ", "", s),
+                                         name, ch, v))
+                            else:
+                                si = 0
+                                for s in vnum_lines:
+                                    n_ = int(re.match(r"^(\d+) ",
+                                                      s).group(1))
+                                    while si < len(seq) and \
+                                            seq[si][2] != n_:
+                                        si += 1
+                                    if si >= len(seq):
+                                        ok = False
+                                        break
+                                    name, ch, v = seq[si]
+                                    si += 1
+                                    pairs.append(
+                                        (n_, re.sub(r"^\d+ ", "", s),
+                                         name, ch, v))
+                            # The module's versification drifts in spots
+                            # (its Isaiah drops the 1:1 title verse,
+                            # shifting chapters 1-44 down a line). Score
+                            # every line-shift per pericope, aggregate
+                            # per chapter, and decide in a post-pass —
+                            # a chapter's shift is consistent even when
+                            # a single short pericope is ambiguous.
+                            if ok and pairs:
+                                for shf in (0, -1, 1, -2, 2, -3, 3, -4, 4):
+                                    tot = 0.0
+                                    good = True
+                                    for num, lt, name, ch, v in pairs:
+                                        t_ = ta_text(name, ch, v, shf)
+                                        if t_ is None:
+                                            good = False
+                                            break
+                                        tot += pair_score(lt, t_)
+                                    if not good:
+                                        continue
+                                    sc = tot / len(pairs)
+                                    for _n, _lt, name, ch, _v in pairs:
+                                        d = ch_agg.setdefault((name, ch),
+                                                              {})
+                                        d[shf] = d.get(shf, 0.0) + sc
+                                pending_lessons.append(
+                                    (tkey, fkey, ref, out_lines, pairs))
+                                continue
+                        if ok and out_lines:
+                            t = "\n".join(out_lines)
+                    if t is None:
+                        tmisses.append((tkey, fkey, "SCRIPT " +
+                                        (ref or lat_lines[0][:50])))
+                        continue
+                else:
+                    # patristic/homily lesson: the DO Espanol
+                    # traditional-register translation (tier 2)
+                    if raw_es:
+                        t = render_es_section(raw_es)
+                        if t is not None and len(t.split("\n")) != \
+                                len(lat_lines):
+                            t = None
+                    if t is None:
+                        t = find_block(lat)
+                    if t is None:
+                        tmisses.append((tkey, fkey, "PATRISTIC " +
+                                        lat_lines[0][:50]))
+                        continue
+                tout.setdefault(tkey, {})[fkey] = {"eng": nfc(t)}
+                tn += 1
                 continue
             entry = {}
             for lat_f, eng_f in SINGLE:
@@ -1288,17 +1557,141 @@ def main():
                                         p["verses"][0]["lat"][:60]))
             if entry:
                 tout.setdefault(tkey, {})[fkey] = entry
+    # Post-pass: compose the deferred scripture pericopes with the
+    # chapter-consensus line-shift (0 preferred when within noise).
+    ch_choice = {}
+    for key, d in ch_agg.items():
+        top = max(d, key=d.get)
+        if 0 in d and d[0] >= 0.9 * d[top]:
+            top = 0
+        ch_choice[key] = top
+    if LESSONS:
+        # Export the consensus for the missal readings importer — its
+        # pericopes are too sparse to infer the drift on their own.
+        shifts_path = ROOT / "spanish-translation" / \
+            "ta_chapter_shifts.json"
+        json.dump({f"{b} {c}": s
+                   for (b, c), s in sorted(ch_choice.items())},
+                  open(shifts_path, "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=0, sort_keys=True)
+        print(f"chapter shifts exported: "
+              f"{sum(1 for s in ch_choice.values() if s)} nonzero "
+              f"of {len(ch_choice)}")
+    for tkey, fkey, ref, out_lines, pairs in pending_lessons:
+        lines = list(out_lines)
+        tot = 0.0
+        okk = True
+        last_ln = None
+        for num, lt, name, ch, v in pairs:
+            shf = ch_choice.get((name, ch), 0)
+            t_ = ta_text(name, ch, v, shf)
+            if t_ is None:
+                okk = False
+                break
+            tot += pair_score(lt, t_)
+            lines.append(f"{num} {t_}")
+            base = ta_index.get(name, {}).get(
+                (ch, v + isr.VULGATE_SHIFTS.get((name, ch), 0)))
+            last_ln = None if base is None else base + shf
+            last_lt = lt
+            lesson_shift_stats[shf] = lesson_shift_stats.get(shf, 0) + 1
+        # The Vulgate sometimes merges what the module splits (KJV
+        # division): when the final verse's Spanish runs well short of
+        # its Latin and the next module line is a lowercase
+        # continuation, pull it in.
+        if okk and last_ln is not None and lines:
+            appended = 0
+            while appended < 2:
+                nxt = ta_line_text(last_ln + 1)
+                if not nxt or not nxt[0].islower():
+                    break
+                if len(lines[-1].split(" ", 1)[1]) >= \
+                        0.75 * len(last_lt):
+                    break
+                lines[-1] = lines[-1] + " " + nxt
+                last_ln += 1
+                appended += 1
+        if okk and pairs and tot / len(pairs) >= 0.30:
+            tout.setdefault(tkey, {})[fkey] = {"eng": nfc("\n".join(lines))}
+            tn += 1
+            continue
+        # Constant-shift alignment failed — the module merges/splits the
+        # occasional verse mid-chapter. Local DP: pick one module line
+        # per verse from a small window, strictly increasing, maximizing
+        # the cognate fit.
+        opts_per = []
+        for num, lt, name, ch, v in pairs:
+            b = ta_index.get(name, {}).get((ch, v))
+            opts = []
+            if b is not None:
+                for dd in range(-5, 6):
+                    t_ = ta_line_text(b + dd)
+                    if t_:
+                        opts.append((b + dd, t_, pair_score(lt, t_)))
+            if not opts:
+                opts_per = None
+                break
+            opts_per.append(opts)
+        best_lines = None
+        if opts_per:
+            dp = [(o[2], None, oi) for oi, o in enumerate(opts_per[0])]
+            tables = [dp]
+            for pi in range(1, len(opts_per)):
+                cur = []
+                for oi, (ln, t_, sc) in enumerate(opts_per[pi]):
+                    best_prev = None
+                    for pj, (psc, _pb, poi) in enumerate(tables[-1]):
+                        if opts_per[pi - 1][poi][0] < ln and \
+                                (best_prev is None or
+                                 psc > tables[-1][best_prev][0]):
+                            best_prev = pj
+                    if best_prev is None:
+                        cur.append((-1e9, None, oi))
+                    else:
+                        cur.append((tables[-1][best_prev][0] + sc,
+                                    best_prev, oi))
+                tables.append(cur)
+            end = max(range(len(tables[-1])),
+                      key=lambda i: tables[-1][i][0])
+            total = tables[-1][end][0]
+            if total / len(pairs) >= 0.35:
+                sel = []
+                i = end
+                for pi in range(len(tables) - 1, -1, -1):
+                    sc_, prev, oi = tables[pi][i]
+                    sel.append(oi)
+                    i = prev if prev is not None else 0
+                sel.reverse()
+                best_lines = [opts_per[pi][oi][1]
+                              for pi, oi in enumerate(sel)]
+        if best_lines:
+            lines = list(out_lines)
+            for (num, lt, name, ch, v), t_ in zip(pairs, best_lines):
+                lines.append(f"{num} {t_}")
+            tout.setdefault(tkey, {})[fkey] = {"eng": nfc("\n".join(lines))}
+            lesson_shift_stats["dp"] = lesson_shift_stats.get("dp", 0) + 1
+            tn += 1
+        else:
+            tmisses.append((tkey, fkey, "SCRIPT " + (ref or "?") +
+                            f" score={tot / max(1, len(pairs)):.2f}"))
+
     TEMPORAL_OUT.write_text(json.dumps(tout, ensure_ascii=False, indent=1,
                                        sort_keys=True) + "\n",
                             encoding="utf-8")
     print(f"temporal: wrote {sum(len(v) for v in tout.values())} parts "
           f"({tn} fields)")
+    if LESSONS and lesson_shift_stats:
+        print(f"lesson line-shifts chosen: {lesson_shift_stats}")
     if tmisses:
         print(f"TEMPORAL MISSES {len(tmisses)}:")
         for m in tmisses[:80]:
             print("   ", m)
         if len(tmisses) > 80:
             print(f"    … and {len(tmisses) - 80} more")
+        mpath = arg("--miss-out")
+        if mpath:
+            json.dump(tmisses, open(mpath, "w"), ensure_ascii=False,
+                      indent=0)
 
 
 if __name__ == "__main__":

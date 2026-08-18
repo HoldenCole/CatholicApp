@@ -205,8 +205,28 @@ so integration cannot silently misalign.
   (the August Wisdom-book responsories, Tenebrae orations with the
   received Padre nuestro, the Trinity Duo Séraphim, etc.), Torres Amat
   wording where the Latin follows the Vulgate.
-  Remaining Office tranches: temporal Matins lessons (per-pericope
-  provenance audit), seasonal hymns.
+  **Tranche O5a — the temporal Matins lessons, canonical scripture +
+  patristic: 1,765 of 1,984 lesson fields.** The per-pericope audit
+  confirmed the DO Espanol Tempora scripture lessons are largely a
+  modern non-TA translation (TA-shingle score < 0.2 for 1,049 of 1,204
+  scripture lessons), so canonical pericopes are COMPOSED from the
+  Torres Amat module: the day's `!Ref` resolved through @-references,
+  verse-numbered Latin lines zipped against the parsed ref, and — the
+  audit's big find — the module's own versification drift corrected by
+  a per-chapter line-shift chosen by cognate+length consensus across
+  the whole corpus (the module's Isaiah sits one line early through
+  chapter 44; most epistles similarly), with a local DP re-alignment
+  for chapters that merge verses mid-stream and a lowercase-
+  continuation rule where the Vulgate merges what the module splits.
+  Patristic/homily lessons keep DO Espanol's traditional-register
+  translation (tier 2, like the orations). The consensus table is
+  exported (`ta_chapter_shifts.json`) and the MISSAL readings importer
+  now consumes it — fixing 106 shipped readings that were silently one
+  verse off in the drifted books (early Isaiah, Titus, 2 Tim, Hebrews,
+  James, 1 Peter, 1 John, Revelation …).
+  Remaining: 211 deuterocanonical pericopes (tier-2 compositions from
+  the Vulgate — `lessons_deutero_office_es.json`), 5 patristic lessons
+  DO lacks, seasonal hymns.
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,

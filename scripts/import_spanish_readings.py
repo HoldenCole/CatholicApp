@@ -426,6 +426,75 @@ def main():
                 verses.append((kjv_name, ch, v_ + shift))
         return verses
 
+    def _stems(s):
+        out_ = set()
+        for w in fold(s).split():
+            w = w.replace("ue", "o").replace("ie", "e")
+            if len(w) >= 5:
+                out_.add(w[:4])
+        return out_
+
+    # Chapter line-shift table exported by import_spanish_hours.py
+    # --lessons: the Office corpus aligns thousands of verse-numbered
+    # Latin lines against the module, giving a reliable per-chapter
+    # correction for the module's versification drift.
+    shifts_path = ROOT / "spanish-translation" / "ta_chapter_shifts.json"
+    CH_SHIFTS = (json.load(open(shifts_path, encoding="utf-8"))
+                 if shifts_path.exists() else {})
+    # Books the Office corpus proved to drift somewhere — shift
+    # inference is only trusted inside these (the cognate signal is too
+    # noisy to challenge an aligned book).
+    DRIFT_BOOKS = {k.rsplit(" ", 1)[0]
+                   for k, v in CH_SHIFTS.items() if v}
+
+    def compose_shifted(verses, body_lat):
+        """Join the pericope's module lines at the line-shift that best
+        matches the Latin body (cognate stems + length). The module's
+        versification drifts in spots — its Isaiah drops the 1:1 title
+        verse, shifting chapters 1-44 down a line — so a fixed index
+        would silently read the neighboring verses. The Office-derived
+        chapter table decides where it can; inference covers the rest."""
+        base = [index[b][(c, v_)] for b, c, v_ in verses]
+        if verses and all(f"{b} {c}" in CH_SHIFTS for b, c, v_ in verses):
+            lines = []
+            for (b, c, v_), ln in zip(verses, base):
+                ln += CH_SHIFTS.get(f"{b} {c}", 0)
+                if not (0 <= ln < len(verse_lines)):
+                    return None
+                lines.append(CM.sub(" ", verse_lines[ln]).strip())
+            return " ".join(lines)
+        a = _stems(body_lat)
+        cands = {}
+        for shf in (0, -1, 1, -2, 2, -3, 3, 4):
+            lines = []
+            good = True
+            for ln in base:
+                ln += shf
+                if not (0 <= ln < len(verse_lines)):
+                    good = False
+                    break
+                lines.append(CM.sub(" ", verse_lines[ln]).strip())
+            if not good:
+                continue
+            text = " ".join(lines)
+            cog = (len(a & _stems(text)) / len(a)) if a else 0.0
+            r = len(text) / (1.15 * max(1, len(body_lat)))
+            # the opening verse anchors the shift: every candidate
+            # shift changes which verse comes first
+            fa = _stems(body_lat[:170])
+            cog_first = (len(fa & _stems(lines[0])) / len(fa)) if fa \
+                else 0.0
+            cands[shf] = (cog + 0.5 * min(r, 1 / r) + cog_first, text)
+        if not cands:
+            return None
+        if not any(b in DRIFT_BOOKS for b, c, v_ in verses):
+            return cands.get(0, cands[max(cands)])[1]
+        top = max(cands, key=lambda s: cands[s][0])
+        # most chapters are aligned — only leave 0 for a decisive win
+        if 0 in cands and cands[0][0] >= cands[top][0] - 0.15:
+            top = 0
+        return cands[top][1]
+
     out, skipped = {}, {}
     for d in (tempora, sanctoral):
         for key, entry in d.items():
@@ -477,9 +546,11 @@ def main():
                 if deutero_body is not None:
                     text = deutero_body
                 else:
-                    text = " ".join(
-                        CM.sub(" ", verse_lines[index[b][(c, v_)]]).strip()
-                        for b, c, v_ in verses)
+                    text = compose_shifted(verses, body_lat)
+                    if text is None:
+                        skipped.setdefault("no shift candidate", []).append(
+                            (key, f, ref))
+                        continue
                 text = re.sub(r"\s+", " ", text).strip()
                 # the .ont module puts spaces before punctuation
                 text = re.sub(r"\s+([,.;:!?])", r"\1", text)
@@ -491,7 +562,8 @@ def main():
                     text = re.sub(
                         r"^(?:Y|Pero|Mas|Entonces|"
                         r"(?:Por (?:aquel|este) tiempo|"
-                        r"En (?:aquella|esta) sazón|En aquel tiempo),?)\s+",
+                        r"En (?:aquella|esta) sazón|En aquel tiempo|"
+                        r"En aquellos días),?)\s+",
                         "", text)
                     text = text[:1].upper() + text[1:]
                 if not text:

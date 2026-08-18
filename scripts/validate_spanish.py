@@ -511,8 +511,6 @@ def validate_temporal_propers():
     for code, fields in es.items():
         check(code in src, f"temporal_propers[{code}]: no such day")
         for fkey, o in fields.items():
-            check(not fkey.startswith("lectio"),
-                  f"temporal_propers[{code}][{fkey}]: lessons are tranche O5")
             p = (src.get(code) or {}).get(fkey)
             check(p is not None,
                   f"temporal_propers[{code}][{fkey}]: no such part")

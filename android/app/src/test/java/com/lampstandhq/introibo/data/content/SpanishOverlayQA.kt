@@ -369,6 +369,18 @@ class SpanishOverlayQA {
                 .startsWith("R. Aspíciens a longe"))
             assertTrue(ContentStore.temporalData["quad6-6"]!!["matutinum.ant_3"]!!
                 .eng!!.startsWith("Dios me socorre"))
+            // The Matins lessons (tranche O5a): scripture composed from
+            // Torres Amat — including the module's shifted Isaiah — and
+            // patristic lessons in DO's traditional register.
+            val advLessons = ContentStore.temporalData["adv1-0"]!!
+            assertTrue(advLessons["lectio1"]!!.eng!!.startsWith(
+                "Empieza el Libro de Isaías\n1 Visión profética que tuvo Isaías"))
+            assertTrue(advLessons["lectio4"]!!.eng!!
+                .contains("Salvador instruía a sus discípulos"))
+            // The missal-readings versification fix rides along: Advent
+            // Wednesday's Isaiah lesson opens at 7:10, not 7:11.
+            val adv33 = ContentStore.allPropers.first { it.slug == "adv3-3" }
+            assertTrue(adv33.epistle.eng.contains("Habló de nuevo el Señor a Acaz"))
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
