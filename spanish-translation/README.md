@@ -166,7 +166,23 @@ so integration cannot silently misalign.
   cal-septuagesima's stray `"cat": "calendar"` (→ "Calendarium") in the
   English source, which had broken its grouping, deep-link type, and
   search category.
-- Tutorial/course content (`courses.json`).
+- Schola Latina courses — **COMPLETE: `courses_es.json`**, all 10
+  courses, LOCALIZED rather than merely translated: the lessons address
+  a Spanish ear (the vowels course teaches that Latin vowels ARE the
+  Spanish five; the consonant and stress courses lean on the ñ, the
+  «ch», and the written tilde Spanish speakers already know), every
+  phonetic respelling is re-keyed to Spanish orthography ("DÓ-mi-nus",
+  "re-YÍ-na", "A-ñus" — the English-keyed "DOH-mee-noos" style would
+  mislead a Spanish reader), and the Ave/Pater phrase glosses use the
+  received Spanish prayer wordings. The Latin card fronts are untouched.
+  Aligned by section/item index with exact-count validation. (The
+  `table` sections' rows are not decoded or displayed by either app
+  today, so they have no Spanish side; if a table renderer is added,
+  translate the rows then.)
+
+With this, EVERY content surface of the app outside the Divine Office
+corpus carries Spanish. What remains is the Office (multi-MB; see
+below).
 
 ## Integration (done for tier 1)
 

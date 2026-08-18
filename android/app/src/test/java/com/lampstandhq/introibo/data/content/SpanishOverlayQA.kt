@@ -69,7 +69,7 @@ class SpanishOverlayQA {
             "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
             "ui_strings_es.json", "missal_propers_es.json",
             "missal_readings_es.json", "stations_es.json", "saints_es.json",
-            "reference_es.json",
+            "reference_es.json", "courses_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -289,6 +289,22 @@ class SpanishOverlayQA {
             // The Septuagesima category fix holds: no stray lowercase bucket.
             assertTrue(ContentStore.reference.none { it.cat == "calendar" })
 
+            // Schola Latina: localized for Spanish speakers — the vowels
+            // lesson addresses a Spanish ear, phonetics are re-keyed to
+            // Spanish orthography, the Ave glosses use the received Spanish
+            // prayer, and the Latin card fronts are untouched.
+            val vowelsCourse = ContentStore.courses.first { it.slug == "vowels" }
+            assertEquals("Las vocales eclesiásticas", vowelsCourse.title)
+            assertEquals("De Vocalibus Ecclesiasticis", vowelsCourse.latin)
+            assertTrue(vowelsCourse.sections[0].html!!.contains("las cinco del español"))
+            val vowelCard = vowelsCourse.sections.first { it.type == "cards" }.items!![0]
+            assertEquals("Dóminus", vowelCard.lat)
+            assertEquals("DÓ-mi-nus", vowelCard.phon)
+            assertEquals("Señor, Amo", vowelCard.eng)
+            val aveCourse = ContentStore.courses.first { it.slug == "ave" }
+            val avePhrases = aveCourse.sections.first { it.type == "phrase" }.items!!
+            assertEquals("Dios te salve, María,", avePhrases[0].eng)
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -351,6 +367,7 @@ class SpanishOverlayQA {
         assertEquals("Jesus Is Condemned to Death", ContentStore.stations.first().title)
         assertEquals("St. Padre Pio", ContentStore.saints.first { it.slug == "pio" }.name)
         assertEquals("Advent", ContentStore.reference.first { it.slug == "cal-advent" }.title)
+        assertEquals("Ecclesiastical Vowels", ContentStore.courses.first { it.slug == "vowels" }.title)
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

@@ -188,6 +188,27 @@ object ContentStore {
     )
 
     @kotlinx.serialization.Serializable
+    private data class CourseES(
+        val title_es: String,
+        val intro_es: String,
+        val sections_es: List<SectionES>,
+    ) {
+        @kotlinx.serialization.Serializable
+        data class SectionES(
+            val label_es: String? = null,
+            val html_es: String? = null,
+            val note_es: String? = null,
+            val items_es: List<CardES>? = null,
+        )
+
+        @kotlinx.serialization.Serializable
+        data class CardES(
+            val eng_es: String? = null,
+            val phon_es: String? = null,
+        )
+    }
+
+    @kotlinx.serialization.Serializable
     private data class ReferenceES(
         val title_es: String,
         val summary_es: String,
@@ -277,6 +298,7 @@ object ContentStore {
         stations = load("stations.json") ?: emptyList()
         saints = load("saints.json") ?: emptyList()
         reference = load("reference.json") ?: emptyList()
+        courses = load("courses.json") ?: emptyList()
 
         uiStringsES = emptyMap()
 
@@ -333,6 +355,44 @@ object ContentStore {
                         title = o["title_es"] ?: s.title,
                         med = o["med_es"] ?: s.med,
                         stabatEng = o["stabat_es"] ?: s.stabatEng,
+                    )
+                }
+            }
+            // Schola Latina courses: localized (not merely translated) for
+            // Spanish speakers — the lessons address a Spanish ear and the
+            // phonetic respellings are re-keyed to Spanish orthography.
+            // Aligned by section/item index; the Latin words are untouched.
+            load<Map<String, CourseES>>("courses_es.json")?.let { es ->
+                courses = courses.map { c ->
+                    val o = es[c.slug] ?: return@map c
+                    c.copy(
+                        title = o.title_es,
+                        intro = o.intro_es,
+                        sections = if (o.sections_es.size == c.sections.size) {
+                            c.sections.mapIndexed { i, sec ->
+                                val se = o.sections_es[i]
+                                sec.copy(
+                                    label = if (sec.label != null) se.label_es ?: sec.label else sec.label,
+                                    html = if (sec.html != null) se.html_es ?: sec.html else sec.html,
+                                    note = if (sec.note != null) se.note_es ?: sec.note else sec.note,
+                                    items = if (sec.items != null && se.items_es != null &&
+                                        se.items_es.size == sec.items.size
+                                    ) {
+                                        sec.items.mapIndexed { j, card ->
+                                            val ce = se.items_es[j]
+                                            card.copy(
+                                                eng = if (card.eng != null) ce.eng_es ?: card.eng else card.eng,
+                                                phon = if (card.phon != null) ce.phon_es ?: card.phon else card.phon,
+                                            )
+                                        }
+                                    } else {
+                                        sec.items
+                                    },
+                                )
+                            }
+                        } else {
+                            c.sections
+                        },
                     )
                 }
             }

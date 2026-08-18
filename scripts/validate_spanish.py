@@ -313,6 +313,52 @@ def validate_reference():
     print(f"reference_es.json: {len(es)} entries checked")
 
 
+def validate_courses():
+    """Schola Latina courses: every course covered, section counts exact,
+    and per-section field parity — a field is translated iff the source has
+    it, and card/phrase item lists match one-to-one."""
+    path = ES / "courses_es.json"
+    if not path.exists():
+        print("courses_es.json: not present (skipped)")
+        return
+    src = {c["slug"]: c for c in json.load(open(SRC / "courses.json"))}
+    es = json.load(open(path))
+    check(set(es) == set(src),
+          f"courses: slug mismatch (missing {set(src) - set(es)}, "
+          f"extra {set(es) - set(src)})")
+    for slug, o in es.items():
+        c = src.get(slug)
+        if not c:
+            continue
+        for f in ("title_es", "intro_es"):
+            check(isinstance(o.get(f), str) and o[f].strip(),
+                  f"courses[{slug}].{f}: empty/missing")
+        check(len(o.get("sections_es", [])) == len(c["sections"]),
+              f"courses[{slug}]: section count differs from source")
+        for i, (se, s) in enumerate(zip(o.get("sections_es", []),
+                                        c["sections"])):
+            where = f"courses[{slug}].sections[{i}]"
+            for f_es, f_en in (("label_es", "label"), ("html_es", "html"),
+                               ("note_es", "note")):
+                if s.get(f_en) is not None:
+                    check(isinstance(se.get(f_es), str) and se[f_es].strip(),
+                          f"{where}.{f_es}: source has {f_en}, missing")
+                else:
+                    check(f_es not in se, f"{where}.{f_es}: source has no {f_en}")
+            if s.get("items") is not None:
+                items_es = se.get("items_es", [])
+                check(len(items_es) == len(s["items"]),
+                      f"{where}: item count differs from source")
+                for j, (ie, it) in enumerate(zip(items_es, s["items"])):
+                    for f_es, f_en in (("eng_es", "eng"), ("phon_es", "phon")):
+                        if it.get(f_en) is not None:
+                            check(isinstance(ie.get(f_es), str) and ie[f_es].strip(),
+                                  f"{where}.items[{j}].{f_es}: missing")
+            else:
+                check("items_es" not in se, f"{where}: source has no items")
+    print(f"courses_es.json: {len(es)} courses checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -321,6 +367,7 @@ def main():
     validate_stations()
     validate_saints()
     validate_reference()
+    validate_courses()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

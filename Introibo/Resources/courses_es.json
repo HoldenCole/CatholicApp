@@ -1,0 +1,399 @@
+{
+ "vowels": {
+  "title_es": "Las vocales eclesiásticas",
+  "intro_es": "La pronunciación del latín que usa la Iglesia Romana difiere de la pronunciación clásica que se enseña en las universidades. El latín eclesiástico es la lengua viva de la liturgia: así rezaban los santos, y así se canta la Misa hoy.",
+  "sections_es": [
+   {
+    "label_es": "Las cinco vocales",
+    "html_es": "<p>Buena noticia para el hispanohablante: las cinco vocales latinas son exactamente las cinco del español — puras y estables.</p><p><strong>A</strong> — como en <em>casa</em>.<br><em>Ejemplo:</em> <strong>Sancta</strong> = SANC-ta</p><p><strong>E</strong> — como en <em>mesa</em>.<br><em>Ejemplo:</em> <strong>Deus</strong> = DE-us</p><p><strong>I</strong> — como en <em>misa</em>.<br><em>Ejemplo:</em> <strong>Fili</strong> = FI-li</p><p><strong>O</strong> — como en <em>coro</em>.<br><em>Ejemplo:</em> <strong>Dominus</strong> = DÓ-mi-nus</p><p><strong>U</strong> — como en <em>luna</em>.<br><em>Ejemplo:</em> <strong>Unum</strong> = U-num</p><h3>Diptongos</h3><p><strong>AE / OE</strong> — se pronuncian «e» (como la E). <em>Caelum</em> = CHE-lum, <em>Poenae</em> = PE-ne.<br><strong>AU</strong> — como en <em>aula</em>. <em>Laudate</em> = lau-DA-te.</p>"
+   },
+   {
+    "label_es": "Nota Bene · Toma nota",
+    "html_es": "La regla de oro: las vocales latinas son <em>puras</em> — exactamente como las del español. Lee las vocales como si fueran españolas y acertarás. «Amen» es <em>A-men</em>, con vocales limpias y firmes."
+   },
+   {
+    "label_es": "Practica · Práctica",
+    "note_es": "Toca cada palabra para ver la pronunciación y el significado.",
+    "items_es": [
+     {"eng_es": "Señor, Amo", "phon_es": "DÓ-mi-nus"},
+     {"eng_es": "María", "phon_es": "ma-RÍ-a"},
+     {"eng_es": "Gloria", "phon_es": "GLÓ-ri-a"},
+     {"eng_es": "Padre", "phon_es": "PA-ter"},
+     {"eng_es": "Hijo", "phon_es": "FÍ-li-us"},
+     {"eng_es": "Espíritu", "phon_es": "SPÍ-ri-tus"},
+     {"eng_es": "Dios", "phon_es": "DE-us"},
+     {"eng_es": "Santa (fem.)", "phon_es": "SANC-ta"},
+     {"eng_es": "Uno", "phon_es": "U-num"},
+     {"eng_es": "Cielo", "phon_es": "CHE-lum"},
+     {"eng_es": "Alabad", "phon_es": "lau-DÁ-te"},
+     {"eng_es": "Amén", "phon_es": "Á-men"}
+    ]
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>Las vocales latinas son <em>puras</em> y <em>estables</em>: exactamente las cinco del español. Los diptongos AE y OE suenan «e»; AU suena como en «aula». Practica con las palabras comunes de la oración hasta que los sonidos salgan solos.</p>"
+   }
+  ]
+ },
+ "consonants": {
+  "title_es": "Reglas de las consonantes",
+  "intro_es": "La mayoría de las consonantes latinas suenan de un modo familiar; pero un puñado sigue reglas propias que transforman palabras conocidas. Domínalas, y toda oración latina se te abre.",
+  "sections_es": [
+   {
+    "label_es": "Las reglas clave",
+    "html_es": "<p><strong>C</strong> — fuerte (k) ante a, o, u o consonante (<em>cantáre</em> = can-TA-re).<br><strong>C + e/i/ae</strong> — suave, como la «ch» española (<em>caelum</em> = CHE-lum, <em>Dómine</em> = DÓ-mi-ne).<br><strong>G + e/i</strong> — suave, como la «gi» italiana, cercana a la «y» de <em>inyectar</em> (<em>regina</em> = re-YI-na); nunca la «j» áspera del español.<br><strong>Gn</strong> — «ñ» (<em>Agnus</em> = A-ñus).<br><strong>Sc + e/i</strong> — «sh» inglesa (<em>suscipe</em> = SU-shi-pe).<br><strong>Ti + vocal</strong> — «tsi» (<em>gratia</em> = GRA-tsi-a).<br><strong>J</strong> — como «y» (<em>Jesus</em> = YE-sus). <strong>H</strong> — muda.</p>"
+   },
+   {
+    "label_es": "Mnemotecnia",
+    "html_es": "«CHElum, reYIna, Añus»: di <em>caelum</em> con «ch» española, <em>regína</em> con la «gi» italiana y <em>Agnus</em> con «ñ»."
+   },
+   {
+    "label_es": "Practica · Práctica",
+    "note_es": "Toca cada palabra para ver la pronunciación y el significado.",
+    "items_es": [
+     {"eng_es": "Cielo", "phon_es": "CHE-lum"},
+     {"eng_es": "Reina", "phon_es": "re-YÍ-na"},
+     {"eng_es": "Cordero", "phon_es": "A-ñus"},
+     {"eng_es": "Recibe", "phon_es": "SU-shi-pe"},
+     {"eng_es": "Gracia", "phon_es": "GRÁ-tsi-a"},
+     {"eng_es": "Iglesia", "phon_es": "e-KLÉ-si-a"},
+     {"eng_es": "Engendrado", "phon_es": "YÉ-ni-tum"},
+     {"eng_es": "Las alturas", "phon_es": "ek-SHÉL-sis"}
+    ]
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>Seis reglas abren casi todas las consonantes latinas: <strong>c/g + e/i se suavizan, gn = ñ, sc + e/i = sh, ti + vocal = tsi</strong>. Lo demás se lee prácticamente como en español.</p>"
+   }
+  ]
+ },
+ "stress": {
+  "title_es": "Acento y sílaba tónica",
+  "intro_es": "Cada palabra latina tiene una sílaba tónica. Acierta el acento y sonarás fluido; falla y sonarás extranjero. Por suerte, la regla es sencilla — y al hispanohablante le resulta familiar.",
+  "sections_es": [
+   {
+    "label_es": "La regla de la penúltima",
+    "html_es": "<p>El acento cae en la <strong>penúltima sílaba</strong>, <em>salvo</em> que sea breve; entonces cae en la antepenúltima.</p><p>En esta aplicación verás escrito el acento agudo (Dóminus, Glória); esa tilde te señala exactamente la sílaba tónica, como en español. Sigue la tilde y no errarás.</p>"
+   },
+   {
+    "label_es": "Atajo",
+    "html_es": "Si la palabra lleva tilde impresa sobre una vocal, acentúa ESA vocal. No hay que adivinar."
+   },
+   {
+    "label_es": "Practica · Práctica",
+    "note_es": "Toca cada palabra. La sílaba tónica va en MAYÚSCULAS en la fonética.",
+    "items_es": [
+     {"eng_es": "Señor (acento en la primera)", "phon_es": "DÓ-mi-nus"},
+     {"eng_es": "Gloria (acento en la primera)", "phon_es": "GLÓ-ri-a"},
+     {"eng_es": "Creo (acento en la primera)", "phon_es": "CRE-do"},
+     {"eng_es": "Amén (acento en la primera)", "phon_es": "A-men"},
+     {"eng_es": "Santo (acento en la primera)", "phon_es": "SANC-tus"}
+    ]
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>Acentúa la sílaba que lleva la tilde. En caso de duda, acentúa la penúltima. Esta regla cubre el 95% de las palabras latinas.</p>"
+   }
+  ]
+ },
+ "declensions": {
+  "title_es": "Primera y segunda declinación",
+  "intro_es": "Los sustantivos latinos cambian sus terminaciones para mostrar su función en la frase: sujeto, objeto, posesión, dirección. Esto es la declinación. Los dos patrones más comunes te dan cientos de palabras de la oración.",
+  "sections_es": [
+   {
+    "label_es": "Primera declinación (-a)",
+    "html_es": "<p>Los sustantivos de la primera declinación suelen ser femeninos y terminan en <strong>-a</strong> en el nominativo: <em>María, grátia, vita, gloria, córona</em>. Las terminaciones de los casos siguen un patrón previsible.</p>"
+   },
+   {
+    "label_es": "María (f.); 1.ª declinación"
+   },
+   {
+    "label_es": "Segunda declinación (-us / -um)",
+    "html_es": "<p>Los sustantivos de la segunda declinación suelen ser masculinos (en -us) o neutros (en -um): <em>Dóminus, Christus, Iesus, verbum, sæculum</em>.</p>"
+   },
+   {
+    "label_es": "Dóminus (m.); 2.ª declinación"
+   },
+   {
+    "label_es": "Fíjate en la terminación",
+    "html_es": "En la Misa verás frases como <em>per Dóminum nostrum</em> (acusativo: «por nuestro Señor») y <em>Glória Dómini</em> (genitivo: «gloria del Señor»). La terminación te da el sentido."
+   },
+   {
+    "label_es": "Vocabula · Vocabulario",
+    "note_es": "Sustantivos comunes de 1.ª y 2.ª declinación en la Misa.",
+    "items_es": [
+     {"eng_es": "iglesia (1.ª decl.)", "phon_es": "e-KLÉ-si-a"},
+     {"eng_es": "gracia (1.ª decl.)", "phon_es": "GRÁ-tsi-a"},
+     {"eng_es": "gloria (1.ª decl.)", "phon_es": "GLÓ-ri-a"},
+     {"eng_es": "vida (1.ª decl.)", "phon_es": "VI-ta"},
+     {"eng_es": "alma (1.ª decl.)", "phon_es": "Á-ni-ma"},
+     {"eng_es": "tierra (1.ª decl.)", "phon_es": "TE-rra"},
+     {"eng_es": "Señor (2.ª decl.)", "phon_es": "DÓ-mi-nus"},
+     {"eng_es": "hijo (2.ª decl.)", "phon_es": "FÍ-li-us"},
+     {"eng_es": "cielo (2.ª decl.)", "phon_es": "CHE-lum"},
+     {"eng_es": "palabra, Verbo (2.ª decl.)", "phon_es": "VER-bum"},
+     {"eng_es": "reino (2.ª decl.)", "phon_es": "REG-num"},
+     {"eng_es": "sacramento (2.ª decl.)", "phon_es": "sa-cra-MÉN-tum"}
+    ]
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>1.ª declinación: -a / -æ / -æ / -am / -a. 2.ª declinación: -us / -i / -o / -um / -o. Estos dos patrones cubren la mayoría de los sustantivos de la oración.</p>"
+   }
+  ]
+ },
+ "verbs": {
+  "title_es": "Nociones del verbo",
+  "intro_es": "Los verbos latinos se conjugan: cambian sus terminaciones según la persona y el número — igual que en español. La buena noticia: para leer las oraciones basta el presente y un puñado de terminaciones.",
+  "sections_es": [
+   {
+    "label_es": "Los cuatro grupos de conjugación",
+    "html_es": "<p>Los verbos latinos se agrupan por la vocal de su tema:</p><p><strong>I:</strong> -āre (<em>laudáre</em>; alabar)<br><strong>II:</strong> -ēre (<em>vidére</em>; ver)<br><strong>III:</strong> -ere (<em>dúcere</em>; guiar)<br><strong>IV:</strong> -īre (<em>audíre</em>; oír)</p>"
+   },
+   {
+    "label_es": "Laudáre; 1.ª conjugación (presente)"
+   },
+   {
+    "label_es": "Las terminaciones son la clave",
+    "html_es": "-o, -s, -t, -mus, -tis, -nt; casi las mismas del español (alabo, alabas, alaba, alabamos, alabáis, alaban). <em>Laudámus te</em> = «Te alabamos» (la terminación -mus ES el «nosotros»)."
+   },
+   {
+    "label_es": "Verbos comunes de la oración",
+    "note_es": "Toca para ver el significado.",
+    "items_es": [
+     {"eng_es": "alabamos", "phon_es": "lau-DÁ-mus"},
+     {"eng_es": "bendecimos", "phon_es": "be-ne-DÍ-chi-mus"},
+     {"eng_es": "adoramos", "phon_es": "a-do-RÁ-mus"},
+     {"eng_es": "glorificamos", "phon_es": "glo-ri-fi-CÁ-mus"},
+     {"eng_es": "ten piedad", "phon_es": "mi-se-RÉ-re"},
+     {"eng_es": "ruega", "phon_es": "O-ra"}
+    ]
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>Aprende las seis terminaciones del presente (-o, -s, -t, -mus, -tis, -nt) y podrás identificar el sujeto de casi cualquier verbo de la oración.</p>"
+   }
+  ]
+ },
+ "vocab50": {
+  "title_es": "Vocabulario esencial de oración",
+  "intro_es": "Aprende estas diez palabras esenciales y reconocerás más de la mitad de lo que oyes en la Misa y el Rosario. Empieza aquí.",
+  "sections_es": [
+   {
+    "label_es": "Las diez palabras más comunes",
+    "note_es": "Toca para ver el significado y un ejemplo.",
+    "items_es": [
+     {"eng_es": "Señor · Dominus vobiscum", "phon_es": "DÓ-mi-nus"},
+     {"eng_es": "Dios · Deo gratias", "phon_es": "DE-us"},
+     {"eng_es": "Padre · Pater noster", "phon_es": "PA-ter"},
+     {"eng_es": "Hijo · Fílius Dei", "phon_es": "FÍ-li-us"},
+     {"eng_es": "Espíritu · Spiritus Sancti", "phon_es": "SPÍ-ri-tus"},
+     {"eng_es": "Santo · Sanctus, Sanctus, Sanctus", "phon_es": "SANC-tus"},
+     {"eng_es": "Amén · Así sea", "phon_es": "Á-men"},
+     {"eng_es": "Gloria · Gloria in excelsis", "phon_es": "GLÓ-ri-a"},
+     {"eng_es": "Paz · Pax vobiscum", "phon_es": "PAX"},
+     {"eng_es": "Vida · vita ætérna", "phon_es": "VI-ta"}
+    ]
+   },
+   {
+    "label_es": "Construye sobre ellas",
+    "html_es": "Dóminus + Deus + Pater + Fílius + Spíritus + Sanctus = el vocabulario del comienzo de casi todas las oraciones. Domina estas primero."
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>Diez palabras son una gran ventaja inicial. Cada una aparece docenas de veces en la Misa, el Oficio y el Rosario. Repasa estas tarjetas a diario durante una semana.</p>"
+   }
+  ]
+ },
+ "ave": {
+  "title_es": "Domina el Ave María",
+  "intro_es": "El Avemaría es la oración más rezada del Rosario: 50 veces en cada rosario, cientos de veces en una vida. Vamos a desglosarla frase a frase hasta conocer cada palabra.",
+  "sections_es": [
+   {
+    "label_es": "El origen",
+    "html_es": "<p>La primera mitad viene directamente de la Escritura: el saludo del ángel Gabriel en la Anunciación (Lc 1, 28) y la bendición de Isabel en la Visitación (Lc 1, 42). La segunda mitad es la respuesta de la Iglesia, añadida gradualmente desde el siglo XV.</p>"
+   },
+   {
+    "items_es": [
+     {"eng_es": "Dios te salve, María,", "phon_es": "A-ve ma-RÍ-a"},
+     {"eng_es": "llena eres de gracia,", "phon_es": "GRÁ-tsi-a PLE-na"},
+     {"eng_es": "el Señor es contigo.", "phon_es": "DÓ-mi-nus TE-cum"},
+     {"eng_es": "Bendita tú eres entre todas las mujeres,", "phon_es": "be-ne-DIC-ta tu in mu-li-É-ri-bus"},
+     {"eng_es": "y bendito es el fruto de tu vientre, Jesús.", "phon_es": "et be-ne-DIC-tus FRUC-tus VEN-tris TU-i, YE-sus"},
+     {"eng_es": "Santa María, Madre de Dios,", "phon_es": "SANC-ta ma-RÍ-a, MA-ter DE-i"},
+     {"eng_es": "ruega por nosotros, pecadores,", "phon_es": "O-ra pro NO-bis pec-ca-TÓ-ri-bus"},
+     {"eng_es": "ahora y en la hora de nuestra muerte.", "phon_es": "nunc et in O-ra MOR-tis NOS-tre"},
+     {"eng_es": "Amén.", "phon_es": "Á-men"}
+    ]
+   },
+   {
+    "label_es": "Vocabula · Frases clave",
+    "note_es": "Domina cada frase del Avemaría.",
+    "items_es": [
+     {"eng_es": "Dios te salve", "phon_es": "A-ve"},
+     {"eng_es": "llena de gracia", "phon_es": "GRÁ-tsi-a PLE-na"},
+     {"eng_es": "el Señor es contigo", "phon_es": "DÓ-mi-nus TE-cum"},
+     {"eng_es": "bendita tú eres", "phon_es": "be-ne-DIC-ta tu"},
+     {"eng_es": "entre las mujeres", "phon_es": "in mu-li-É-ri-bus"},
+     {"eng_es": "el fruto de tu vientre", "phon_es": "FRUC-tus VEN-tris TU-i"},
+     {"eng_es": "Santa María", "phon_es": "SANC-ta ma-RÍ-a"},
+     {"eng_es": "Madre de Dios", "phon_es": "MA-ter DE-i"},
+     {"eng_es": "ruega por nosotros", "phon_es": "O-ra pro NO-bis"},
+     {"eng_es": "pecadores", "phon_es": "pec-ca-TÓ-ri-bus"},
+     {"eng_es": "en la hora de nuestra muerte", "phon_es": "in O-ra MOR-tis NOS-tre"}
+    ]
+   },
+   {
+    "label_es": "Rézala despacio",
+    "html_es": "El Rosario no es una carrera. Reza el Ave con calma, dejando posarse cada frase. Un solo Avemaría rezado con plena atención vale más que cien con prisa."
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>El Ave María tiene dos mitades: el saludo de la Escritura (Ave Maria… fructus ventris tui, Iesus) y la súplica de la Iglesia (Sancta Maria… in hora mortis nostræ). Cada frase es un eco bíblico.</p>"
+   }
+  ]
+ },
+ "pater": {
+  "title_es": "Domina el Pater Noster",
+  "intro_es": "La oración del Señor mismo. Cada frase salió de los labios de Nuestro Señor. Sábela en latín y rezarás con la Iglesia de todos los siglos.",
+  "sections_es": [
+   {
+    "label_es": "Las siete peticiones",
+    "html_es": "<p>El Pater Noster contiene siete peticiones: las tres primeras sobre la gloria de Dios (Nombre, Reino, Voluntad), las cuatro últimas sobre nuestras necesidades (pan, perdón, tentación, mal). Es la oración perfecta.</p>"
+   },
+   {
+    "items_es": [
+     {"eng_es": "Padre nuestro,", "phon_es": "PA-ter NOS-ter"},
+     {"eng_es": "que estás en los cielos,", "phon_es": "kui es in CHE-lis"},
+     {"eng_es": "santificado sea tu nombre.", "phon_es": "sanc-ti-fi-CHÉ-tur NO-men TU-um"},
+     {"eng_es": "Venga a nosotros tu reino.", "phon_es": "ad-VÉ-ni-at REG-num TU-um"},
+     {"eng_es": "Hágase tu voluntad,", "phon_es": "FI-at vo-LUN-tas TU-a"},
+     {"eng_es": "así en la tierra como en el cielo.", "phon_es": "SI-cut in CHE-lo et in TE-rra"},
+     {"eng_es": "El pan nuestro de cada día", "phon_es": "PA-nem NOS-trum kuo-ti-di-Á-num"},
+     {"eng_es": "dánosle hoy,", "phon_es": "da NO-bis Ó-di-e"},
+     {"eng_es": "y perdónanos nuestras deudas,", "phon_es": "et di-MÍT-te NO-bis DÉ-bi-ta NOS-tra"},
+     {"eng_es": "así como nosotros perdonamos a nuestros deudores.", "phon_es": "SI-cut et nos di-MÍT-ti-mus de-bi-TÓ-ri-bus NOS-tris"},
+     {"eng_es": "Y no nos dejes caer en la tentación,", "phon_es": "et ne nos in-DU-cas in ten-ta-tsi-Ó-nem"},
+     {"eng_es": "mas líbranos del mal. Amén.", "phon_es": "sed LÍ-be-ra nos a MA-lo. Á-men"}
+    ]
+   },
+   {
+    "label_es": "Vocabula · Las siete peticiones",
+    "note_es": "Aprende cada petición del Padrenuestro.",
+    "items_es": [
+     {"eng_es": "Padre nuestro", "phon_es": "PA-ter NOS-ter"},
+     {"eng_es": "que estás en los cielos", "phon_es": "kui es in CHE-lis"},
+     {"eng_es": "santificado sea tu Nombre", "phon_es": "sanc-ti-fi-CHÉ-tur NO-men TU-um"},
+     {"eng_es": "venga a nosotros tu reino", "phon_es": "ad-VÉ-ni-at REG-num TU-um"},
+     {"eng_es": "hágase tu voluntad", "phon_es": "FI-at vo-LUN-tas TU-a"},
+     {"eng_es": "el pan nuestro", "phon_es": "PA-nem NOS-trum"},
+     {"eng_es": "de cada día", "phon_es": "kuo-ti-di-Á-num"},
+     {"eng_es": "perdónanos", "phon_es": "di-MÍT-te NO-bis"},
+     {"eng_es": "nuestras deudas", "phon_es": "DÉ-bi-ta NOS-tra"},
+     {"eng_es": "no nos dejes caer", "phon_es": "ne nos in-DU-cas"},
+     {"eng_es": "en la tentación", "phon_es": "in ten-ta-tsi-Ó-nem"},
+     {"eng_es": "líbranos del mal", "phon_es": "LÍ-be-ra nos a MA-lo"}
+    ]
+   },
+   {
+    "label_es": "Rézalo a diario en latín",
+    "html_es": "Reza el Pater Noster en latín una vez al día durante una semana. Al final lo sabrás de memoria; y llevarás de por vida la oración de la Iglesia en la lengua de la Iglesia."
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>Siete peticiones, enseñadas por Nuestro Señor mismo. El Pater Noster es el centro de la Misa, del Rosario y del Oficio Divino. Sábelo en latín.</p>"
+   }
+  ]
+ },
+ "psalms": {
+  "title_es": "Leer los Salmos en latín",
+  "intro_es": "Los Salmos son el libro de oración de la Iglesia. Cuando conoces su estructura, puedes leerlos en latín aun con poco vocabulario. El secreto es el paralelismo.",
+  "sections_es": [
+   {
+    "label_es": "El paralelismo hebreo",
+    "html_es": "<p>Cada versículo de un salmo tiene dos (a veces tres) mitades paralelas que dicen lo mismo con palabras distintas. Cuando lo reconoces, la segunda mitad suele explicar la primera.</p><p><em>Ejemplo del Salmo 22 (El Señor es mi pastor):</em></p>"
+   },
+   {
+    "items_es": [
+     {"eng_es": "El Señor me gobierna,", "phon_es": "DÓ-mi-nus RE-yit me"},
+     {"eng_es": "y nada me faltará.", "phon_es": "et NI-il MI-i DE-e-rit"},
+     {"eng_es": "En un lugar de pastos me ha colocado,", "phon_es": "in LO-co PAS-kue Í-bi me co-lo-CÁ-vit"},
+     {"eng_es": "junto al agua de refección me ha criado.", "phon_es": "SU-per Á-kuam re-fec-tsi-Ó-nis e-du-CÁ-vit me"}
+    ]
+   },
+   {
+    "label_es": "Vocabula · Vocabulario de los salmos",
+    "note_es": "Palabras que aparecen constantemente en los salmos.",
+    "items_es": [
+     {"eng_es": "oh Señor (vocativo)", "phon_es": "DÓ-mi-ne"},
+     {"eng_es": "ten piedad", "phon_es": "mi-se-RÉ-re"},
+     {"eng_es": "escucha, atiende", "phon_es": "ex-ÁU-di"},
+     {"eng_es": "alabad", "phon_es": "lau-DÁ-te"},
+     {"eng_es": "eterno, para siempre", "phon_es": "e-TER-num"},
+     {"eng_es": "misericordia", "phon_es": "mi-se-ri-CÓR-di-a"},
+     {"eng_es": "justicia", "phon_es": "yus-TÍ-tsi-a"},
+     {"eng_es": "enemigo", "phon_es": "i-ni-MÍ-cus"},
+     {"eng_es": "clamé", "phon_es": "cla-MÁ-vi"},
+     {"eng_es": "sálvame", "phon_es": "SAL-vum me fac"}
+    ]
+   },
+   {
+    "label_es": "Léelo en voz alta",
+    "html_es": "Lee primero el latín en voz alta, despacio. Aun sin entender cada palabra, el ritmo y el paralelismo te llevarán. Después consulta la traducción."
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>El paralelismo es tu llave. Cuando no entiendas la primera línea, mira la segunda; dice lo mismo con otras palabras.</p>"
+   }
+  ]
+ },
+ "vulgate": {
+  "title_es": "Leer la Vulgata",
+  "intro_es": "La Biblia latina de San Jerónimo — la Vulgata — es la Biblia de la Iglesia. Con la gramática y el vocabulario que has aprendido, ya puedes abrirla y leer. Empieza por Juan 1.",
+  "sections_es": [
+   {
+    "label_es": "Juan 1, 1-5",
+    "html_es": "<p>El Prólogo de Juan es el comienzo más célebre de la Escritura; y el Último Evangelio de la Misa latina. Léelo con el desglose frase a frase de abajo.</p>"
+   },
+   {
+    "items_es": [
+     {"eng_es": "En el principio era el Verbo,", "phon_es": "in prin-CHÍ-pi-o E-rat VER-bum"},
+     {"eng_es": "y el Verbo estaba en Dios,", "phon_es": "et VER-bum E-rat Á-pud DE-um"},
+     {"eng_es": "y el Verbo era Dios.", "phon_es": "et DE-us E-rat VER-bum"},
+     {"eng_es": "Él estaba en el principio en Dios.", "phon_es": "hoc E-rat in prin-CHÍ-pi-o Á-pud DE-um"},
+     {"eng_es": "Todas las cosas fueron hechas por Él,", "phon_es": "ÓM-ni-a per IP-sum FAC-ta sunt"},
+     {"eng_es": "y sin Él nada se hizo de cuanto ha sido hecho.", "phon_es": "et SI-ne IP-so FAC-tum est NI-il kuod FAC-tum est"},
+     {"eng_es": "En Él estaba la vida,", "phon_es": "in IP-so VI-ta E-rat"},
+     {"eng_es": "y la vida era la luz de los hombres.", "phon_es": "et VI-ta E-rat lux Ó-mi-num"},
+     {"eng_es": "Y la luz luce en las tinieblas,", "phon_es": "et lux in TÉ-ne-bris LU-chet"},
+     {"eng_es": "y las tinieblas no la comprendieron.", "phon_es": "et TÉ-ne-bre E-am non com-pre-en-DÉ-runt"}
+    ]
+   },
+   {
+    "label_es": "Vocabula · Vocabulario de Juan 1",
+    "note_es": "Palabras clave del Prólogo del Evangelio de San Juan.",
+    "items_es": [
+     {"eng_es": "En el principio", "phon_es": "in prin-CHÍ-pi-o"},
+     {"eng_es": "el Verbo", "phon_es": "VER-bum"},
+     {"eng_es": "en Dios, junto a Dios", "phon_es": "Á-pud DE-um"},
+     {"eng_es": "vida", "phon_es": "VI-ta"},
+     {"eng_es": "luz", "phon_es": "lux"},
+     {"eng_es": "tinieblas", "phon_es": "TÉ-ne-bre"},
+     {"eng_es": "comprendieron, vencieron", "phon_es": "com-pre-en-DÉ-runt"},
+     {"eng_es": "el mundo", "phon_es": "MUN-dus"},
+     {"eng_es": "se hizo carne", "phon_es": "KA-ro FAC-tum est"},
+     {"eng_es": "habitó entre nosotros", "phon_es": "a-bi-TÁ-vit in NO-bis"},
+     {"eng_es": "gracia y verdad", "phon_es": "GRÁ-tsi-a et VÉ-ri-tas"}
+    ]
+   },
+   {
+    "label_es": "Próximos pasos",
+    "html_es": "Cuando puedas leer Juan 1, prueba el Salmo 50 (el Miserere) y el comienzo del Génesis. La Vulgata ya es tuya para toda la vida."
+   },
+   {
+    "label_es": "Summarium · Resumen",
+    "html_es": "<p>Ya puedes leer la Vulgata. El latín de San Jerónimo está a tu alcance; la misma Biblia en que oraron los santos y sabios de mil años.</p>"
+   }
+  ]
+ }
+}

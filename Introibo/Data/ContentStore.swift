@@ -127,6 +127,21 @@ final class ContentStore {
         let time_es: String
         let intro_es: String
     }
+    private struct CourseES: Decodable {
+        let title_es: String
+        let intro_es: String
+        let sections_es: [SectionES]
+        struct SectionES: Decodable {
+            let label_es: String?
+            let html_es: String?
+            let note_es: String?
+            let items_es: [CardES]?
+        }
+        struct CardES: Decodable {
+            let eng_es: String?
+            let phon_es: String?
+        }
+    }
     private struct ReferenceES: Decodable {
         let title_es: String
         let summary_es: String
@@ -198,6 +213,7 @@ final class ContentStore {
             stations        = load("stations",         as: [Station].self)            ?? []
             saints          = load("saints",           as: [Saint].self)              ?? []
             reference       = load("reference",        as: [ReferenceEntry].self)     ?? []
+            courses         = load("courses",          as: [Course].self)             ?? []
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -258,6 +274,35 @@ final class ContentStore {
                 if let t = o["title_es"] { m.title = t }
                 if let t = o["med_es"] { m.med = t }
                 if let t = o["stabat_es"] { m.stabat_eng = t }
+                return m
+            }
+        }
+        // Schola Latina courses: localized (not merely translated) for
+        // Spanish speakers — the lessons address a Spanish ear and the
+        // phonetic respellings are re-keyed to Spanish orthography. Aligned
+        // by section/item index; the Latin words themselves are untouched.
+        if let es = load("courses_es", as: [String: CourseES].self) {
+            courses = courses.map { c in
+                guard let o = es[c.slug] else { return c }
+                var m = c
+                m.title = o.title_es
+                m.intro = o.intro_es
+                if o.sections_es.count == m.sections.count {
+                    for i in m.sections.indices {
+                        let se = o.sections_es[i]
+                        if m.sections[i].label != nil, let t = se.label_es { m.sections[i].label = t }
+                        if m.sections[i].html != nil, let t = se.html_es { m.sections[i].html = t }
+                        if m.sections[i].note != nil, let t = se.note_es { m.sections[i].note = t }
+                        if var items = m.sections[i].items, let ie = se.items_es,
+                           ie.count == items.count {
+                            for j in items.indices {
+                                if items[j].eng != nil, let t = ie[j].eng_es { items[j].eng = t }
+                                if items[j].phon != nil, let t = ie[j].phon_es { items[j].phon = t }
+                            }
+                            m.sections[i].items = items
+                        }
+                    }
+                }
                 return m
             }
         }
