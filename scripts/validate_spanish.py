@@ -575,6 +575,56 @@ def validate_hymns_seasonal():
     print(f"hymns_seasonal_es.json: {n} fields checked")
 
 
+def validate_rosary():
+    """Rosary mysteries and prayers: full coverage, index-aligned."""
+    path = ES / "mysteries_es.json"
+    if path.exists():
+        src = {s["slug"]: s for s in json.load(open(SRC / "mysteries.json"))}
+        es = json.load(open(path))
+        check(set(es) == set(src),
+              f"mysteries: slug mismatch — missing {set(src) - set(es)}, "
+              f"extra {set(es) - set(src)}")
+        n = 0
+        for slug in set(es) & set(src):
+            o = es[slug]
+            check(isinstance(o.get("english_es"), str) and o["english_es"].strip(),
+                  f"mysteries[{slug}]: empty english_es")
+            want = len(src[slug]["mysteries"])
+            got = len(o.get("mysteries", []))
+            check(want == got,
+                  f"mysteries[{slug}]: count {got} != source {want}")
+            for i, m in enumerate(o.get("mysteries", [])):
+                for f in ("eng_es", "body_es", "fruit_es"):
+                    check(isinstance(m.get(f), str) and m[f].strip(),
+                          f"mysteries[{slug}][{i}]: empty {f}")
+                    n += 1
+        print(f"mysteries_es.json: {n} fields checked")
+    else:
+        print("mysteries_es.json: not present (skipped)")
+
+    path = ES / "rosary_prayers_es.json"
+    if path.exists():
+        src = {p["slug"]: p for p in json.load(open(SRC / "rosary_prayers.json"))}
+        es = json.load(open(path))
+        check(set(es) == set(src),
+              f"rosary_prayers: slug mismatch — missing {set(src) - set(es)}, "
+              f"extra {set(es) - set(src)}")
+        for slug in set(es) & set(src):
+            o = es[slug]
+            check(isinstance(o.get("eng_es"), str) and o["eng_es"].strip(),
+                  f"rosary_prayers[{slug}]: empty eng_es")
+            want = len(src[slug]["lines"])
+            got = len(o.get("lines_es", []))
+            check(want == got,
+                  f"rosary_prayers[{slug}]: line count {got} != source {want}")
+            for i, ln in enumerate(o.get("lines_es", [])):
+                check(isinstance(ln, str) and ln.strip(),
+                      f"rosary_prayers[{slug}].lines_es[{i}]: empty")
+        print(f"rosary_prayers_es.json: {len(es)} prayers checked")
+    else:
+        print("rosary_prayers_es.json: not present (skipped)")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -589,6 +639,7 @@ def main():
     validate_commune_office()
     validate_temporal_propers()
     validate_hymns_seasonal()
+    validate_rosary()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

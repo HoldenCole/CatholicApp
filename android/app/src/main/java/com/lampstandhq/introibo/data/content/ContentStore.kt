@@ -205,6 +205,25 @@ object ContentStore {
     )
 
     @kotlinx.serialization.Serializable
+    private data class MysteryES(
+        val eng_es: String,
+        val body_es: String,
+        val fruit_es: String,
+    )
+
+    @kotlinx.serialization.Serializable
+    private data class MysterySetES(
+        val english_es: String,
+        val mysteries: List<MysteryES>,
+    )
+
+    @kotlinx.serialization.Serializable
+    private data class RosaryPrayerES(
+        val eng_es: String,
+        val lines_es: List<String>,
+    )
+
+    @kotlinx.serialization.Serializable
     private data class CourseES(
         val title_es: String,
         val intro_es: String,
@@ -322,6 +341,8 @@ object ContentStore {
         temporalData = load("temporal_propers.json") ?: emptyMap()
         hymnsSeasonalData = load("hymns_seasonal.json") ?: emptyMap()
         sanctoralPropers = load("sanctoral_propers.json") ?: emptyMap()
+        mysterySets = load("mysteries.json") ?: emptyList()
+        rosaryPrayers = load("rosary_prayers.json") ?: emptyList()
 
         uiStringsES = emptyMap()
 
@@ -511,6 +532,35 @@ object ContentStore {
                             antiphonEng = o.antiphonEng ?: part.antiphonEng,
                         )
                     }
+                }
+            }
+            // The Rosary (tranche O8): mystery titles, meditations, and
+            // fruits, plus the constituent prayers in their received
+            // Spanish texts. Latin and scripture refs are untouched.
+            load<Map<String, MysterySetES>>("mysteries_es.json")?.let { es ->
+                mysterySets = mysterySets.map { set ->
+                    val o = es[set.slug] ?: return@map set
+                    if (o.mysteries.size != set.mysteries.size) return@map set
+                    set.copy(
+                        english = o.english_es,
+                        mysteries = set.mysteries.mapIndexed { i, m ->
+                            m.copy(
+                                eng = o.mysteries[i].eng_es,
+                                body = o.mysteries[i].body_es,
+                                fruit = o.mysteries[i].fruit_es,
+                            )
+                        },
+                    )
+                }
+            }
+            load<Map<String, RosaryPrayerES>>("rosary_prayers_es.json")?.let { es ->
+                rosaryPrayers = rosaryPrayers.map { pr ->
+                    val o = es[pr.slug] ?: return@map pr
+                    if (o.lines_es.size != pr.lines.size) return@map pr
+                    pr.copy(
+                        eng = o.eng_es,
+                        lines = pr.lines.mapIndexed { i, ln -> ln.copy(eng = o.lines_es[i]) },
+                    )
                 }
             }
             // Schola Latina courses: localized (not merely translated) for

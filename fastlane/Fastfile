@@ -92,11 +92,12 @@ platform :ios do
     UI.message("Looking for IPA at: #{ipa_abs}")
 
     changelog = <<~NOTES
-      Español: the Missal is now fully translated — every antiphon and
-      oration of every day in both cycles, and now every Epistle and
-      Gospel too, from the classic public-domain Torres Amat Bible
-      (translated from the Vulgate), composed as a hand missal prints
-      them.
+      Español: the app is now 100% translated. The Divine Office joins
+      the Missal — the whole Psalter and every antiphon, responsory,
+      lesson, collect, and hymn of the temporal cycle, the commons, and
+      the saints' feasts, with Scripture from the classic public-domain
+      Torres Amat Bible and the hymns in their traditional verse
+      translations — plus the Rosary's mysteries and prayers.
     NOTES
 
     upload_to_testflight(

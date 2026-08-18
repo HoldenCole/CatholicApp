@@ -1,0 +1,44 @@
+{
+ "ave": {
+  "eng_es": "El Avemaría",
+  "lines_es": [
+   "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. ℟. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+  ]
+ },
+ "credo": {
+  "eng_es": "El Credo de los Apóstoles",
+  "lines_es": [
+   "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor: que fue concebido por obra del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado: descendió a los infiernos; al tercer día resucitó de entre los muertos; subió a los cielos; está sentado a la diestra de Dios Padre todopoderoso: desde allí ha de venir a juzgar a los vivos y a los muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los Santos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén."
+  ]
+ },
+ "fatima": {
+  "eng_es": "La Oración de Fátima",
+  "lines_es": [
+   "Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén."
+  ]
+ },
+ "gloria": {
+  "eng_es": "El Gloria al Padre",
+  "lines_es": [
+   "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén."
+  ]
+ },
+ "pater": {
+  "eng_es": "El Padrenuestro",
+  "lines_es": [
+   "Padre nuestro, que estás en los cielos, santificado sea el tu nombre. Venga a nos el tu reino. Hágase tu voluntad, así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy, y perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores. Y no nos dejes caer en la tentación, mas líbranos de mal. ℟. Amén."
+  ]
+ },
+ "salve": {
+  "eng_es": "La Salve",
+  "lines_es": [
+   "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve. A ti llamamos los desterrados hijos de Eva. A ti suspiramos, gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos. Y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clemente, oh piadosa, oh dulce Virgen María! Amén."
+  ]
+ },
+ "signum": {
+  "eng_es": "La Señal de la Cruz",
+  "lines_es": [
+   "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
+  ]
+ }
+}

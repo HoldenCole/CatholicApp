@@ -6,8 +6,8 @@ import Foundation
 struct MysterySetData: Identifiable, Decodable, Hashable {
     let slug: String            // joyful | sorrowful | glorious
     let name: String            // Mystéria Gaudiósa etc
-    let english: String         // Joyful Mysteries etc
-    let mysteries: [Mystery]
+    var english: String         // Joyful Mysteries etc
+    var mysteries: [Mystery]
 
     var id: String { slug }
 }
@@ -15,10 +15,10 @@ struct MysterySetData: Identifiable, Decodable, Hashable {
 struct Mystery: Decodable, Hashable {
     let num: String             // "Mystérium Primum" etc
     let title: String           // Latin title
-    let eng: String             // English title
+    var eng: String             // English title
     let ref: String             // Scripture reference
-    let body: String            // Meditation paragraph
-    let fruit: String           // Fruit of the mystery
+    var body: String            // Meditation paragraph
+    var fruit: String           // Fruit of the mystery
 }
 
 // Matches Introibo/Resources/rosary_prayers.json.
@@ -27,13 +27,13 @@ struct Mystery: Decodable, Hashable {
 struct RosaryPrayer: Identifiable, Decodable, Hashable {
     let slug: String
     let title: String
-    let eng: String
+    var eng: String
     let lines: [Line]
 
     var id: String { slug }
 
     struct Line: Decodable, Hashable {
         let lat: String
-        let eng: String
+        var eng: String
     }
 }

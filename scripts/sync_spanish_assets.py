@@ -38,6 +38,8 @@ FILES = [
     "temporal_propers_es.json",
     "hymns_seasonal_es.json",
     "sanctoral_propers_es.json",
+    "mysteries_es.json",
+    "rosary_prayers_es.json",
 ]
 
 

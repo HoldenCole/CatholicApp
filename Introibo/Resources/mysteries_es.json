@@ -1,0 +1,92 @@
+{
+ "glorious": {
+  "english_es": "Misterios Gloriosos",
+  "mysteries": [
+   {
+    "body_es": "Al tercer día Jesús resucita de entre los muertos, victorioso sobre el pecado y la muerte.",
+    "eng_es": "La Resurrección del Señor",
+    "fruit_es": "La fe"
+   },
+   {
+    "body_es": "Cuarenta días después de su Resurrección, Jesús sube a los cielos a la vista de sus discípulos, para sentarse a la diestra del Padre.",
+    "eng_es": "La Ascensión del Señor",
+    "fruit_es": "La esperanza"
+   },
+   {
+    "body_es": "En Pentecostés, el Espíritu Santo desciende sobre los Apóstoles en lenguas de fuego, reunidos en oración con María.",
+    "eng_es": "La Venida del Espíritu Santo",
+    "fruit_es": "El amor de Dios"
+   },
+   {
+    "body_es": "Terminado el curso de su vida terrena, la Virgen María es llevada en cuerpo y alma a la gloria del cielo.",
+    "eng_es": "La Asunción de Nuestra Señora",
+    "fruit_es": "La gracia de una buena muerte"
+   },
+   {
+    "body_es": "María es coronada por su Hijo como Reina del cielo y de la tierra, abogada y madre de todos los hombres.",
+    "eng_es": "La Coronación de la Santísima Virgen",
+    "fruit_es": "La confianza en María"
+   }
+  ]
+ },
+ "joyful": {
+  "english_es": "Misterios Gozosos",
+  "mysteries": [
+   {
+    "body_es": "El Arcángel Gabriel anuncia a la Virgen María que concebirá y dará a luz al Hijo de Dios. Ella responde: «He aquí la esclava del Señor».",
+    "eng_es": "La Anunciación",
+    "fruit_es": "La humildad"
+   },
+   {
+    "body_es": "María visita a su prima Isabel, que la saluda: «Bendita tú entre las mujeres». María responde con el Magníficat.",
+    "eng_es": "La Visitación",
+    "fruit_es": "La caridad"
+   },
+   {
+    "body_es": "Jesús nace en un establo de Belén. Los pastores vienen a adorar al Niño recostado en el pesebre.",
+    "eng_es": "El Nacimiento del Señor",
+    "fruit_es": "La pobreza de espíritu"
+   },
+   {
+    "body_es": "María y José presentan a Jesús en el Templo. El anciano Simeón lo reconoce como el Salvador y anuncia a María que una espada traspasará su alma.",
+    "eng_es": "La Presentación en el Templo",
+    "fruit_es": "La obediencia"
+   },
+   {
+    "body_es": "Después de tres días de angustiosa búsqueda, María y José hallan al Niño Jesús en el Templo, sentado en medio de los doctores.",
+    "eng_es": "El Niño perdido y hallado en el Templo",
+    "fruit_es": "La piedad"
+   }
+  ]
+ },
+ "sorrowful": {
+  "english_es": "Misterios Dolorosos",
+  "mysteries": [
+   {
+    "body_es": "Jesús, postrado en oración en el Huerto de Getsemaní, suda sangre ante la pasión que le aguarda: «No se haga mi voluntad, sino la tuya».",
+    "eng_es": "La Oración en el Huerto",
+    "fruit_es": "El dolor de los pecados"
+   },
+   {
+    "body_es": "Jesús es atado a una columna y azotado por los soldados romanos, padeciendo en su carne por nuestros pecados.",
+    "eng_es": "La Flagelación del Señor",
+    "fruit_es": "La pureza"
+   },
+   {
+    "body_es": "Una corona de espinas es clavada en la cabeza de Jesús, y los soldados se burlan de él: «Salve, Rey de los judíos».",
+    "eng_es": "La Coronación de espinas",
+    "fruit_es": "La fortaleza"
+   },
+   {
+    "body_es": "Jesús lleva su Cruz por el camino del Calvario, cayendo bajo su peso, y el Cireneo le ayuda a llevarla.",
+    "eng_es": "Jesús con la Cruz a cuestas",
+    "fruit_es": "La paciencia en el sufrimiento"
+   },
+   {
+    "body_es": "Jesús es clavado en la cruz y muere después de tres horas de agonía, perdonando a sus verdugos y encomendando su Madre a Juan.",
+    "eng_es": "La Crucifixión y Muerte del Señor",
+    "fruit_es": "La perseverancia final"
+   }
+  ]
+ }
+}

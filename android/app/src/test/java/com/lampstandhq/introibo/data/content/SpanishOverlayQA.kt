@@ -73,7 +73,8 @@ class SpanishOverlayQA {
             "psalter_es.json", "psalter_weekly_es.json",
             "hours_parts_es.json", "commune_office_es.json",
             "temporal_propers_es.json", "hymns_seasonal_es.json",
-            "sanctoral_propers_es.json",
+            "sanctoral_propers_es.json", "mysteries_es.json",
+            "rosary_prayers_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -403,6 +404,18 @@ class SpanishOverlayQA {
                 .eng!!.startsWith("Mira aplacado a tu rebaño, Pastor eterno"))
             assertTrue(ContentStore.sanctoralPropers["09-09n"]!!["lectio94"]!!
                 .eng!!.startsWith("Pedro Claver, español"))
+            // The Rosary (tranche O8): mystery sets and the constituent
+            // prayers in their received Spanish texts; Latin untouched.
+            val joyful = ContentStore.mysterySets.first { it.slug == "joyful" }
+            assertEquals("Misterios Gozosos", joyful.english)
+            assertEquals("La Anunciación", joyful.mysteries[0].eng)
+            assertEquals("La humildad", joyful.mysteries[0].fruit)
+            assertTrue(joyful.mysteries[0].title.isNotBlank())
+            val aveRosary = ContentStore.rosaryPrayers.first { it.slug == "ave" }
+            assertEquals("El Avemaría", aveRosary.eng)
+            assertTrue(aveRosary.lines[0].eng.startsWith("Dios te salve, María"))
+            assertTrue(aveRosary.lines[0].lat.startsWith("Ave María") ||
+                aveRosary.lines[0].lat.startsWith("Ave Maria"))
 
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
@@ -483,6 +496,10 @@ class SpanishOverlayQA {
             .eng!!.startsWith("Hark! a thrilling voice") ||
             !ContentStore.hymnsSeasonalData["advent"]!!["hymnus_laudes"]!!
                 .eng!!.startsWith("Oíd la voz"))
+        assertEquals("Joyful Mysteries",
+            ContentStore.mysterySets.first { it.slug == "joyful" }.english)
+        assertTrue(ContentStore.rosaryPrayers.first { it.slug == "ave" }
+            .lines[0].eng.startsWith("Hail Mary"))
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

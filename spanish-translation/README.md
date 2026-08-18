@@ -257,8 +257,12 @@ so integration cannot silently misalign.
   Assumption Vespers hymn, the three Cabrini hymns), and a dozen
   hagiographies the DO Espanol tree lacks are hand supplements in the
   traditional register.
-  Remaining: the small rosary files (`mysteries.json`,
-  `rosary_prayers.json` — tranche O8).
+  **Tranche O8 — the Rosary: COMPLETE (`mysteries_es.json`, all 15
+  mysteries with titles, meditations, and fruits; `rosary_prayers_es.json`,
+  the 7 constituent prayers in their received Spanish texts, matching
+  `prayers_es.json` where the prayers overlap).** With O8 the full-app
+  audit (every `eng`-bearing field in every bundled JSON) reports zero
+  uncovered files — **the app is 100% Spanish**.
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,

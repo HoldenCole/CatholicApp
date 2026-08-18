@@ -130,6 +130,19 @@ final class ContentStore {
     private struct PsalterES: Decodable {
         let lines: [String]
     }
+    private struct MysteryES: Decodable {
+        let eng_es: String
+        let body_es: String
+        let fruit_es: String
+    }
+    private struct MysterySetES: Decodable {
+        let english_es: String
+        let mysteries: [MysteryES]
+    }
+    private struct RosaryPrayerES: Decodable {
+        let eng_es: String
+        let lines_es: [String]
+    }
     private struct HourPartES: Decodable {
         let eng: String?
         let engR: String?
@@ -233,6 +246,8 @@ final class ContentStore {
             temporalData      = load("temporal_propers", as: [String: [String: Hour.Part]].self) ?? [:]
             hymnsSeasonalData = load("hymns_seasonal", as: [String: [String: Hour.Part]].self) ?? [:]
             sanctoralPropers  = load("sanctoral_propers", as: [String: [String: Hour.Part]].self) ?? [:]
+            mysterySets       = load("mysteries", as: [MysterySetData].self) ?? []
+            rosaryPrayers     = load("rosary_prayers", as: [RosaryPrayer].self) ?? []
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -379,6 +394,37 @@ final class ContentStore {
                     entry[fkey] = part
                 }
                 temporalData[code] = entry
+            }
+        }
+        // The Rosary (tranche O8): mystery titles, meditations, and
+        // fruits; the prayers reuse the received texts from prayers_es.
+        if let es = load("mysteries_es", as: [String: MysterySetES].self) {
+            mysterySets = mysterySets.map { set in
+                guard let o = es[set.slug],
+                      o.mysteries.count == set.mysteries.count
+                else { return set }
+                var s2 = set
+                s2.english = o.english_es
+                for i in s2.mysteries.indices {
+                    s2.mysteries[i].eng = o.mysteries[i].eng_es
+                    s2.mysteries[i].body = o.mysteries[i].body_es
+                    s2.mysteries[i].fruit = o.mysteries[i].fruit_es
+                }
+                return s2
+            }
+        }
+        if let es = load("rosary_prayers_es",
+                         as: [String: RosaryPrayerES].self) {
+            rosaryPrayers = rosaryPrayers.map { pr in
+                guard let o = es[pr.slug],
+                      o.lines_es.count == pr.lines.count
+                else { return pr }
+                var p2 = pr
+                p2.eng = o.eng_es
+                for i in p2.lines.indices {
+                    p2.lines[i].eng = o.lines_es[i]
+                }
+                return p2
             }
         }
         // The sanctoral Office propers (tranche O7): same per-part
