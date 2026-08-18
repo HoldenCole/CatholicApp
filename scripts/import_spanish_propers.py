@@ -8,9 +8,10 @@ entirely English. Three sources compose: DO's Espanol day files, our own
 supplements (propers_supplements_es.json), and the commune line table
 (propers_commune_es.json) which translates shared Latin lines once and
 fans them out wherever the same Latin recurs.
-Scripture ([Lectio]/[Evangelium]) is deliberately NOT imported: the DO
-Spanish readings are in a modern register of uncertain provenance; they wait
-for a public-domain source decision (Torres Amat).
+Scripture ([Lectio]/[Evangelium]) is deliberately NOT imported here: the DO
+Spanish readings are in a modern register of uncertain provenance. The
+readings come instead from the public-domain Torres Amat text via
+scripts/import_spanish_readings.py (missal_readings_es.json).
 
 Output: spanish-translation/missal_propers_es.json
     { "<missal_tempora key>": { "<field>": "<es text>" } }

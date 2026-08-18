@@ -149,8 +149,8 @@ def validate_ordo_names():
 
 def validate_missal_propers():
     """Tranche-based propers overlay: keys must be real formularies, fields
-    must stay inside the imported set (scripture is deliberately excluded
-    until a public-domain source is chosen), values must be clean text."""
+    must stay inside the imported set (scripture ships separately in
+    missal_readings_es.json), values must be clean text."""
     path = ES / "missal_propers_es.json"
     if not path.exists():
         print("missal_propers_es.json: not present (skipped)")
@@ -167,7 +167,7 @@ def validate_missal_propers():
         for field, text in fields.items():
             check(field in allowed,
                   f"missal_propers[{key}].{field}: field not importable "
-                  "(scripture stays English pending a source decision)")
+                  "(scripture belongs in missal_readings_es.json)")
             check(isinstance(text, str) and text.strip(),
                   f"missal_propers[{key}].{field}: empty")
             check(src.get(field) is not None,
@@ -179,10 +179,40 @@ def validate_missal_propers():
     print(f"missal_propers_es.json: {len(es)} formularies / {n} fields checked")
 
 
+def validate_missal_readings():
+    """Scripture overlay (Torres Amat): keys must be real formularies, only
+    the two reading fields, non-empty text with no module markup, and the
+    English side must carry the field being replaced."""
+    path = ES / "missal_readings_es.json"
+    if not path.exists():
+        print("missal_readings_es.json: not present (skipped)")
+        return
+    tempora = json.load(open(SRC / "missal_tempora.json"))
+    sanctoral = json.load(open(SRC / "missal_sanctoral.json"))
+    es = json.load(open(path))
+    for key, fields in es.items():
+        check(key in tempora or key in sanctoral,
+              f"missal_readings[{key}]: no such formulary")
+        src = tempora.get(key) or sanctoral.get(key) or {}
+        for field, text in fields.items():
+            check(field in ("lectio", "evangelium"),
+                  f"missal_readings[{key}].{field}: not a reading field")
+            check(isinstance(text, str) and text.strip(),
+                  f"missal_readings[{key}].{field}: empty")
+            check(src.get(field) is not None,
+                  f"missal_readings[{key}].{field}: English side has no such field")
+            for bad in ("<CM>", "</b>", "<", ">", "  "):
+                check(bad not in text,
+                      f"missal_readings[{key}].{field}: markup/artifact in text")
+    n = sum(len(v) for v in es.values())
+    print(f"missal_readings_es.json: {len(es)} days / {n} fields checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
     validate_missal_propers()
+    validate_missal_readings()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

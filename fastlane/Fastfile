@@ -92,13 +92,11 @@ platform :ios do
     UI.message("Looking for IPA at: #{ipa_abs}")
 
     changelog = <<~NOTES
-      Español: the Mass propers now cover the entire temporal cycle —
-      every Sunday, feria, and the whole Triduum — plus 180 saints'
-      feasts, alongside the full Ordinary, Canon, prayers, and feast
-      names already translated.
-
-      Fixed the Fatima Prayer's Latin (peccata nostra) and cleaned up
-      the Today screen header.
+      Español: the Missal is now fully translated — every antiphon and
+      oration of every day in both cycles, and now every Epistle and
+      Gospel too, from the classic public-domain Torres Amat Bible
+      (translated from the Vulgate), composed as a hand missal prints
+      them.
     NOTES
 
     upload_to_testflight(

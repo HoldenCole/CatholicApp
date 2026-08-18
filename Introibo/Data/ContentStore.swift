@@ -202,6 +202,21 @@ final class ContentStore {
             overlay(&missalTempora)
             overlay(&missalSanctoral)
         }
+        // Mass Scripture readings (Torres Amat, composed per pericope):
+        // same per-field replacement, kept in its own file because the
+        // corpus and its provenance differ from the propers.
+        if let es = load("missal_readings_es", as: [String: [String: String]].self) {
+            func overlay(_ dict: inout [String: MissalProperEntry]) {
+                for (key, fields) in es {
+                    guard var entry = dict[key] else { continue }
+                    if let text = fields["lectio"] { entry.lectio?.eng = text }
+                    if let text = fields["evangelium"] { entry.evangelium?.eng = text }
+                    dict[key] = entry
+                }
+            }
+            overlay(&missalTempora)
+            overlay(&missalSanctoral)
+        }
 
         if let es = load("prayers_es", as: [String: PrayerES].self) {
             prayers = prayers.map { p in

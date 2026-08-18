@@ -6,9 +6,9 @@ struct MissalProperEntry: Decodable {
     let rule: MissalRule?
     var introitus: ProperText?
     var oratio: ProperText?
-    let lectio: ProperText?
+    var lectio: ProperText?
     var graduale: ProperText?
-    let evangelium: ProperText?
+    var evangelium: ProperText?
     var offertorium: ProperText?
     var secreta: ProperText?
     var communio: ProperText?

@@ -26,6 +26,7 @@ FILES = [
     "ordo_names_es.json",
     "ui_strings_es.json",
     "missal_propers_es.json",
+    "missal_readings_es.json",
 ]
 
 

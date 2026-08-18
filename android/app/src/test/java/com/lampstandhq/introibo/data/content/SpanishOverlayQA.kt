@@ -68,6 +68,7 @@ class SpanishOverlayQA {
             "prayers_es.json", "marian_antiphons_es.json", "hours_es.json",
             "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
             "ui_strings_es.json", "missal_propers_es.json",
+            "missal_readings_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -145,14 +146,12 @@ class SpanishOverlayQA {
             assertEquals("Fallback", ContentStore.uiString("no.such.key", "Fallback"))
 
             // Mass propers tranche: Advent I is covered — antiphons and
-            // orations in Spanish, Latin untouched, and SCRIPTURE stays
-            // English (deferred until a public-domain source is chosen).
+            // orations in Spanish, Latin untouched.
             val advent1 = ContentStore.allPropers.first { it.slug == "adv1-0" }
             assertTrue(advent1.introit.eng.startsWith("A ti, Señor, levanto mi alma"))
             assertTrue(advent1.introit.lat.startsWith("Ad te levávi"))
             assertTrue(advent1.collect.eng.startsWith("Despierta, Señor, tu potencia"))
             assertTrue(advent1.collect.eng.contains("Tú que vives y reinas"))
-            assertTrue(advent1.epistle.eng.startsWith("Lesson from the letter"))
             // Tranche 2: Septuagesima (with the supplemented secreta) and Lent.
             val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }
             assertTrue(septuagesima.introit.eng.startsWith("Me cercaron angustias de muerte"))
@@ -226,6 +225,25 @@ class SpanishOverlayQA {
             val allSouls = ContentStore.allPropers.first { it.slug == "11-02m1" }
             assertTrue(allSouls.collect.eng.startsWith("Oh Dios, Creador y Redentor de todos los fieles"))
 
+            // Scripture readings (Torres Amat, translated from the Vulgate):
+            // intro heading + liturgical incipit + verse text, composed the
+            // way a hand missal prints them.
+            assertTrue(advent1.epistle.eng.startsWith(
+                "Lección de la Epístola del Apóstol San Pablo a los Romanos\nHermanos:"))
+            assertTrue(advent1.gospel.eng.startsWith(
+                "Continuación + del santo Evangelio según San Lucas\nEn aquel tiempo:"))
+            // A deuterocanonical pericope — our own tier-2 translation from
+            // the Vulgate (the 66-book Torres Amat module lacks Judith).
+            assertTrue(assumption.epistle.eng.startsWith("Lección del libro de Judit"))
+            assertTrue(assumption.epistle.eng.contains("Tú, gloria de Jerusalén"))
+            // Palm Sunday's Passion carries its own heading.
+            val palmSunday = ContentStore.allPropers.first { it.slug == "quad6-0" }
+            assertTrue(palmSunday.gospel.eng.startsWith(
+                "Pasión de nuestro Señor Jesucristo según San Mateo"))
+            // Deliberate exclusions keep their English: the Easter Vigil's
+            // Exsultet-plus-prophecies block is not a plain pericope.
+            assertTrue(vigil.epistle.eng.startsWith("Rejoice now, all ye heavenly Legions"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -284,6 +302,7 @@ class SpanishOverlayQA {
             !advent1.introit.eng.startsWith("A ti, Señor"))
         val assumption = ContentStore.allPropers.first { it.slug == "08-15" }
         assertTrue(!assumption.introit.eng.startsWith("Un gran prodigio"))
+        assertTrue(advent1.epistle.eng.startsWith("Lesson from the letter"))
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

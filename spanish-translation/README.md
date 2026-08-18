@@ -108,11 +108,36 @@ so integration cannot silently misalign.
   handling absorbs the source's spelling variants).
   The tranche-5 sweep also fixed a doubled "Amén. Amén." on every
   DO-derived conclusion (the Espanol formulas already end in Amén).
-  **Scripture ([Lectio]/[Evangelium]) is deliberately excluded**: DO's
-  Spanish readings are in a modern register of uncertain provenance —
-  they wait for a public-domain source decision (Torres Amat, 1825).
-  The DO Espanol PSALTER has the same provenance question; audit before
-  importing the Office texts.
+  Scripture ([Lectio]/[Evangelium]) is deliberately excluded from THIS
+  importer — it ships separately (next bullet) from a different source.
+- Mass Scripture readings — **COMPLETE: 590 days / 1,176 fields in
+  `missal_readings_es.json`** (`scripts/import_spanish_readings.py`).
+  DO's Spanish readings were REJECTED on provenance grounds (a modern
+  copyrighted lectionary register); the text used instead is the
+  **public-domain Petisco/Torres Amat Bible (1798/1825), translated from
+  the Vulgate** — the classic Spanish hand-missal lineage. The importer
+  reads a theWord `.ont` module of the Torres Amat text (kept OUTSIDE
+  the repo; getbible's KJV JSON supplies only the versification index to
+  address the verse lines) and composes each reading the way a hand
+  missal prints it: translated heading ("Lección de la Epístola del
+  Apóstol San Pablo a los Romanos"), liturgical incipit ("Hermanos:",
+  "En aquel tiempo:"…), then the verse text of the entry's ref, with
+  seam smoothing (leading connectives and redundant time-phrases
+  dropped after the incipit) and the module's spacing artifacts
+  normalized. Refs are recovered for ref-less entries by matching their
+  Latin to a ref-bearing twin, plus a hand-checked fix table; Vulgate/KJV
+  versification shifts are mapped where the missal touches them. The
+  deuterocanonical pericopes (Wisdom, Sirach, Tobit, Judith, Maccabees,
+  Daniel 13–14…, absent from the 66-book module) are our own tier-2
+  translations from the Vulgate in `readings_deutero_es.json` — 28
+  pericopes keyed by ref, covering every deutero reading in the missal.
+  Every lectio/evangelium field carries Spanish except 4 by design: the
+  Easter Vigil's Exsultet-plus-prophecies blocks (quad6-6/quad6-6r),
+  the pre-1955 Palm Sunday entry embedding the Munda cor (quad6-0r),
+  and the Vigil of the Assumption's cross-reference stub (08-14) — all
+  structured texts, not plain pericopes.
+  The DO Espanol PSALTER has the same provenance question as its
+  readings; audit before importing the Office texts.
 - Office propers / readings (multi-MB) — DO Espanol coverage is ~94% for
   the horas tree; same register/provenance audit applies before import.
 - `reference.json`, `saints.json`, `stations.json`, tutorial/course content.

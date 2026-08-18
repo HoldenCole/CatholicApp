@@ -266,6 +266,22 @@ object ContentStore {
                 missalTempora = overlay(missalTempora)
                 missalSanctoral = overlay(missalSanctoral)
             }
+            // Mass Scripture readings (Torres Amat, composed per pericope):
+            // same per-field replacement, kept in its own file because the
+            // corpus and its provenance differ from the propers.
+            load<Map<String, Map<String, String>>>("missal_readings_es.json")?.let { es ->
+                val overlay: (Map<String, MissalProperEntry>) -> Map<String, MissalProperEntry> = { map ->
+                    map.mapValues { (key, entry) ->
+                        val fields = es[key] ?: return@mapValues entry
+                        entry.copy(
+                            lectio = fields["lectio"]?.let { entry.lectio?.copy(eng = it) } ?: entry.lectio,
+                            evangelium = fields["evangelium"]?.let { entry.evangelium?.copy(eng = it) } ?: entry.evangelium,
+                        )
+                    }
+                }
+                missalTempora = overlay(missalTempora)
+                missalSanctoral = overlay(missalSanctoral)
+            }
             load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
                 prayers = prayers.map { p ->
                     val o = es[p.slug] ?: return@map p
