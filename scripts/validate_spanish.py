@@ -379,7 +379,7 @@ def validate_psalter():
                   f"psalter[{name}][{i}]: empty")
             check(not re.search(r"[<>{}]|\s{2}", el),
                   f"psalter[{name}][{i}]: markup/artifact")
-            if not ll.startswith("(") and not ll.startswith("$"):
+            if re.match(r"^\d+:\d+", ll):
                 ref = ll.split(" ", 1)[0]
                 check(el.startswith(ref + " "),
                       f"psalter[{name}][{i}]: ref prefix differs "

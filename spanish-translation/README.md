@@ -152,12 +152,15 @@ so integration cannot silently misalign.
   (title sentences trimmed by cognate evidence, Vulgate verse splits
   absorbed), verse text is split across lines at punctuation nearest
   the Latin's proportions, and the flex (†) and mediant (*) marks are
-  mirrored from the Latin. Output: `psalter_es.json` (187/202 entries,
-  3,099 lines) plus `psalter_weekly_es.json` (2,220 verses fanned out
-  by identical-Latin-line matching). The 15 remaining entries — the
-  deuterocanonical canticles (Daniel 3, Tobit, Judith, Sirach, Wisdom)
-  and the Athanasian Creed — await `psalter_supplements_es.json`
-  (tier-2 hand translations). Remaining Office tranches: hours.json
+  mirrored from the Latin. Output: `psalter_es.json` — **COMPLETE,
+  202/202 entries, 3,269 lines** — plus `psalter_weekly_es.json`
+  (2,258/2,258 verses fanned out by identical-Latin-line matching).
+  `psalter_supplements_es.json` carries the hand-translated remainder:
+  the deuterocanonical canticles (both Daniel 3 canticles, Tobit,
+  Judith, Sirach, Wisdom — tier 2 from the Vulgate), the Athanasian
+  Creed, and the three Gospel canticles (Benedictus, Magnificat, Nunc
+  dimittis) in their received Spanish wordings rather than
+  back-composed prose. Remaining Office tranches: hours.json
   ordinary parts, commune_office, temporal propers (antiphons,
   responsories, collects — DO Espanol, same register as the missal
   propers we already ship; its Matins scripture lessons are verbatim

@@ -72,8 +72,10 @@ def content_words(s, minlen=4):
 def cognate_stems(s, minlen=5):
     """4-letter prefixes of longer words — Latin and Spanish share enough
     Romance stems (misericord-, iniquit-/iniquid-, exsult-/exult-) for a
-    verse-alignment signal."""
-    return {w[:4] for w in fold(s).split() if len(w) >= minlen}
+    verse-alignment signal. Spanish diphthongization (porta->puerta,
+    terra->tierra, mortis->muerte) is undone first so those stems match."""
+    t = fold(s).replace("ue", "o").replace("ie", "e")
+    return {w[:4] for w in t.split() if len(w) >= minlen}
 
 
 DEUTERO = "DEUTERO"
@@ -434,8 +436,12 @@ def main():
                 if anchored:
                     dp[0][0] = sc(0, 0)
                 else:
+                    # canticle start prior: the breviary numbering equals
+                    # the source's at the canticle's first verse, so favour
+                    # starting there (cognate evidence can still override)
                     for j in range(m2_):
-                        dp[0][j] = sc(0, j)
+                        prior = 0.5 if run[j][2] == distinct[0] else 0.0
+                        dp[0][j] = sc(0, j) + prior
                 for i in range(1, n):
                     for j in range(m2_):
                         for pj in range(max(0, j - 3), j + 1):
