@@ -1,0 +1,308 @@
+{
+ "pio": {
+  "name_es": "San Padre Pío",
+  "title_es": "Místico, estigmatizado, confesor",
+  "quote_es": "Reza, espera y no te preocupes. La preocupación es inútil. Dios es misericordioso y escuchará tu oración.",
+  "sections_es": [
+   {
+    "eng_es": "Mañana",
+    "practices_es": [
+     {"t_es": "Ofrecimiento de la mañana", "d_es": "Al despertar, ofrece inmediatamente tu día a Dios. «Señor, te ofrezco todas mis oraciones, obras, alegrías y sufrimientos de este día»."},
+     {"t_es": "Asistir a la Santa Misa", "d_es": "La Misa del Padre Pío era el centro de su vida, y a menudo duraba dos horas. Asiste a Misa a diario si te es posible."},
+     {"t_es": "Oración mental (30 min)", "d_es": "Dedica treinta minutos a la oración mental en silencio ante el Santísimo Sacramento. El Padre Pío pasaba horas en contemplación; incluso treinta minutos siguen su espíritu."}
+    ]
+   },
+   {
+    "eng_es": "Durante el día",
+    "practices_es": [
+     {"t_es": "Rezar el Rosario completo", "d_es": "El Padre Pío lo llamaba «el arma». Reza al menos cinco decenas cada día."},
+     {"t_es": "Lectura espiritual", "d_es": "Lee quince minutos de la Imitación de Cristo, de las vidas de los santos o de San Juan de la Cruz."},
+     {"t_es": "Visita al Santísimo Sacramento", "d_es": "Haz una visita al Santísimo durante el día, aunque sea breve. El Padre Pío decía que Jesús en el sagrario nos espera con infinita paciencia y amor."}
+    ]
+   },
+   {
+    "eng_es": "Noche",
+    "practices_es": [
+     {"t_es": "Examen de conciencia", "d_es": "Antes de dormir, examina tu conciencia con honradez. Pide a Dios que te muestre dónde has faltado a la caridad, a la paciencia y a la fidelidad a los deberes de tu estado."},
+     {"t_es": "Rezar tres Avemarías", "d_es": "Antes de dormir, reza tres Avemarías por la gracia de la pureza, invocando la protección de Nuestra Señora durante la noche."},
+     {"t_es": "Lectura espiritual (15 min)", "d_es": "Lee de las vidas de los santos o de la Imitación de Cristo, como el Padre Pío recomendaba a sus hijos espirituales."}
+    ]
+   }
+  ],
+  "penance_es": "Ofrece hoy un sufrimiento físico sin quejarte, uniéndolo a la Pasión de Cristo.",
+  "prayers_es": [
+   {
+    "title_es": "Oración después de la Sagrada Comunión",
+    "eng_es": "Quédate con nosotros, Señor, porque atardece. Quédate con nosotros y sé nuestro consuelo. Quédate con nosotros, Sol que no conoce ocaso.",
+    "note_es": "Adaptada de la oración de San Pío de Pietrelcina después de la Sagrada Comunión, para rezar tras comulgar."
+   },
+   {
+    "title_es": "Oración a las Cinco Llagas",
+    "eng_es": "Oh Señor Jesucristo, que quisiste que tus sacratísimas manos y pies fueran traspasados por los clavos: concédeme amarte con todas mis fuerzas y hallar en tus llagas mi refugio y mi paz. Amén.",
+    "note_es": "El Padre Pío llevó los estigmas durante 50 años."
+   }
+  ]
+ },
+ "therese": {
+  "name_es": "Santa Teresita de Lisieux",
+  "title_es": "Doctora de la Iglesia · La Florecilla",
+  "quote_es": "No pierdas ninguna ocasión de hacer algún pequeño sacrificio: aquí con una mirada sonriente, allí con una palabra amable; haciendo siempre lo más pequeño bien, y haciéndolo todo por amor.",
+  "sections_es": [
+   {
+    "eng_es": "Mañana",
+    "practices_es": [
+     {"t_es": "Ofrecimiento de la mañana al Amor", "d_es": "Ofrece tu día como un «pequeño sacrificio de amor» a Jesús. Aspira a agradarle en cada cosa pequeña."},
+     {"t_es": "Asistir a Misa", "d_es": "Recibe la Sagrada Comunión con total confianza y abandono de niño."},
+     {"t_es": "Rezar el Ángelus", "d_es": "Recuerda el misterio de la Encarnación tres veces al día: por la mañana, al mediodía y al atardecer."}
+    ]
+   },
+   {
+    "eng_es": "Durante el día",
+    "practices_es": [
+     {"t_es": "Hacer las cosas pequeñas con gran amor", "d_es": "Busca pequeños actos de bondad: una mirada sonriente, una palabra amable, una molestia soportada con alegría."},
+     {"t_es": "Aceptar cada cruz", "d_es": "Recibe cada pequeña contrariedad como un regalo de Dios. No te quejes nunca."},
+     {"t_es": "Sacrificio interior silencioso", "d_es": "Haz sacrificios ocultos que solo Dios conozca. No busques reconocimiento."}
+    ]
+   },
+   {
+    "eng_es": "Noche",
+    "practices_es": [
+     {"t_es": "Acto de abandono", "d_es": "Antes de dormir, abandónate en los brazos misericordiosos de nuestro Padre del Cielo, como un niño pequeño."},
+     {"t_es": "Repasar los pequeños sacrificios del día", "d_es": "Antes de acostarte, recuerda los pequeños sacrificios ocultos que ofreciste a lo largo del día. Da gracias a Dios por cada uno, por pequeño que sea."},
+     {"t_es": "Oración a la Santa Faz", "d_es": "Reza ante un crucifijo o una imagen de la Santa Faz, ofreciendo reparación por los pecados contra la fe y la profanación de los domingos."}
+    ]
+   }
+  ],
+  "penance_es": "Haz un pequeño sacrificio oculto que nadie note, ofreciéndolo como una flor a Jesús.",
+  "prayers_es": [
+   {
+    "title_es": "Acto de ofrenda al Amor Misericordioso",
+    "eng_es": "Oh Dios mío, Trinidad Santísima, deseo amarte y hacerte amar, trabajar por la gloria de la santa Iglesia salvando almas en la tierra y librando a las que sufren en el Purgatorio. Te ofrezco todos los méritos de los santos, con mis propios méritos y los que tu bondad infinita ha puesto en mis manos. Amén.",
+    "note_es": "Santa Teresita hizo esta ofrenda el 9 de junio de 1895, fiesta de la Santísima Trinidad."
+   },
+   {
+    "title_es": "Oración de confianza",
+    "eng_es": "Dios mío, te doy gracias por todas las gracias que me has concedido, especialmente por haberme purificado en el crisol del sufrimiento. En el último día te contemplaré con alegría, llevando el cetro de la Cruz. Ya que te dignaste darme esta Cruz preciosa, espero parecerme a ti en el cielo y ver brillar las sagradas llagas de tu Pasión en mi cuerpo glorificado. Amén.",
+    "note_es": "De los últimos escritos de Santa Teresita."
+   }
+  ]
+ },
+ "aquinas": {
+  "name_es": "Santo Tomás de Aquino",
+  "title_es": "Doctor de la Iglesia · Doctor Angélico",
+  "quote_es": "Quantum potes, tantum aude: quia major omni laude — Atrévete a cuanto puedas: porque Él es mayor que toda alabanza. (Lauda Sion, compuesto por Santo Tomás)",
+  "sections_es": [
+   {
+    "eng_es": "Mañana",
+    "practices_es": [
+     {"t_es": "Oración antes del estudio", "d_es": "Reza: «Creador de todas las cosas, verdadera fuente de luz y de sabiduría, dígnate derramar sobre las tinieblas de mi entendimiento el resplandor de tu luz»."},
+     {"t_es": "Asistir a Misa", "d_es": "Tomás celebraba la Misa a diario con profunda reverencia; lloraba en la Consagración."},
+     {"t_es": "Oración mental (30 min)", "d_es": "Meditación silenciosa sobre una sola verdad de la fe. La sencillez es más alta que la complejidad."}
+    ]
+   },
+   {
+    "eng_es": "Durante el día",
+    "practices_es": [
+     {"t_es": "Estudiar teología (1 hora)", "d_es": "Lee despacio la Suma, la Escritura o los Padres de la Iglesia. El estudio es una forma de oración."},
+     {"t_es": "Rezar el Rosario", "d_es": "Tomás amaba el Rosario por su sencillez: «una meditación diaria sobre los misterios de la Encarnación»."},
+     {"t_es": "Visita al Santísimo Sacramento", "d_es": "Haz una visita al Santísimo para adorar a Cristo verdaderamente presente. Santo Tomás compuso el Tantum Ergo y el Adoro Te Devote; deja que su devoción eucarística inspire la tuya."}
+    ]
+   },
+   {
+    "eng_es": "Noche",
+    "practices_es": [
+     {"t_es": "Completas y silencio", "d_es": "Reza la última hora del Oficio Divino y retírate en silencio contemplativo."},
+     {"t_es": "Examinar los pensamientos del día", "d_es": "Pregúntate: «¿He pensado en Dios? ¿Mi estudio me ha llevado a amarle más?»."}
+    ]
+   }
+  ],
+  "penance_es": "Ayuna hoy de palabras innecesarias. Di solo lo que sea verdadero, necesario y amable.",
+  "prayers_es": [
+   {
+    "title_es": "Oración antes del estudio",
+    "eng_es": "Oh Creador inefable, que de los tesoros de tu sabiduría designaste tres jerarquías de Ángeles y las colocaste con orden admirable sobre el cielo empíreo: concédeme entendimiento. Amén.",
+    "note_es": "Santo Tomás la rezaba antes de cada sesión de estudio."
+   },
+   {
+    "title_es": "Adoro Te Devote",
+    "eng_es": "Te adoro con devoción, Dios escondido,\noculto verdaderamente bajo estas apariencias:\na Ti se somete mi corazón por completo,\npues al contemplarte, todo desfallece.\n\nLa vista, el tacto, el gusto se engañan ante Ti,\nmas solo con el oído se cree con seguridad:\ncreo cuanto dijo el Hijo de Dios;\nnada hay más verdadero que esta palabra de la Verdad.\n\nEn la Cruz se escondía solo la divinidad,\nmas aquí se esconde también la humanidad;\ncreyendo y confesando ambas,\npido lo que pidió el ladrón arrepentido.\n\nNo veo las llagas como las vio Tomás,\npero te confieso mi Dios:\nhaz que crea en Ti cada vez más,\nque en Ti espere y que te ame.\n\n¡Oh memorial de la muerte del Señor!\nPan vivo que das la vida al hombre:\nconcede a mi alma vivir de Ti,\ny que siempre saboree tu dulzura.\n\nSeñor Jesús, piadoso pelícano,\nlímpiame a mí, inmundo, con tu Sangre,\nde la que una sola gota puede salvar\nal mundo entero de todo pecado.\n\nJesús, a quien ahora veo velado,\nte ruego que se cumpla lo que tanto ansío:\nque al contemplarte con el rostro descubierto,\nsea yo bienaventurado viendo tu gloria.\nAmén.",
+    "note_es": "Compuesto por Santo Tomás de Aquino para la fiesta del Corpus Christi. Versión española tradicional."
+   }
+  ]
+ },
+ "benedict": {
+  "name_es": "San Benito de Nursia",
+  "title_es": "Padre del monacato occidental",
+  "quote_es": "Ora et labora; reza y trabaja. Que nada se anteponga a la Obra de Dios.",
+  "sections_es": [
+   {
+    "eng_es": "Mañana (Vigilias y Laudes)",
+    "practices_es": [
+     {"t_es": "Levantarse antes del alba", "d_es": "Los monjes de Benito se levantaban de noche para las Vigilias. Comienza tu día temprano, antes de que el mundo reclame tu atención."},
+     {"t_es": "Rezar Laudes", "d_es": "Reza la hora de Laudes del Oficio Divino, saludando el nuevo día con la alabanza matutina de la Iglesia. Si la hora completa no es posible, reza al menos un salmo."},
+     {"t_es": "Lectio Divina (30 min)", "d_es": "Lee la Sagrada Escritura despacio y en oración, deteniéndote en palabras y frases. Deja que la Palabra de Dios cale en tu corazón antes de comenzar el trabajo del día."}
+    ]
+   },
+   {
+    "eng_es": "El trabajo del día",
+    "practices_es": [
+     {"t_es": "Trabajar con oración", "d_es": "Trabaja con las manos o con la mente, pero mantén el corazón fijo en Dios. Ofrece cada tarea como una oración."},
+     {"t_es": "Rezar las Horas menores", "d_es": "Prima, Tercia, Sexta, Nona: breves interrupciones para acordarse de Dios a lo largo del día."},
+     {"t_es": "Hospitalidad", "d_es": "Recibe a cada persona como a Cristo mismo. «Fui forastero y me acogisteis»."}
+    ]
+   },
+   {
+    "eng_es": "Noche",
+    "practices_es": [
+     {"t_es": "Rezar Vísperas", "d_es": "Al ponerse el sol, reza Vísperas para consagrar a Dios las horas de la tarde. El Magníficat de Vísperas es el gran canto de acción de gracias por las gracias del día."},
+     {"t_es": "Cena en silencio", "d_es": "Toma la cena en silencio o con lectura espiritual, según la costumbre monástica de alimentar juntos el cuerpo y el alma en la mesa."},
+     {"t_es": "Rezar Completas", "d_es": "Termina el día con Completas, la oración nocturna de la Iglesia. El Nunc Dimittis y la bendición final ponen el descanso de la noche bajo la protección de Dios."}
+    ]
+   }
+  ],
+  "penance_es": "Come hoy con sencillez: una comida completa y dos pequeñas colaciones, en el espíritu de la Regla.",
+  "prayers_es": [
+   {
+    "title_es": "Oración por una buena muerte",
+    "eng_es": "Oh Señor Dios mío, no me entregues en manos del enemigo, sino hazme vencedor en la hora de mi muerte.",
+    "note_es": "San Benito murió de pie, sostenido por sus monjes, con los brazos alzados en oración."
+   },
+   {
+    "title_es": "La oración de la Medalla",
+    "eng_es": "Que la santa Cruz sea mi luz. Que el dragón no sea mi guía. Apártate, Satanás. No me tientes jamás con vanidades. Es malo lo que me ofreces. Bebe tú mismo tu veneno.",
+    "note_es": "Inscrita en la Medalla de San Benito, poderoso sacramental."
+   }
+  ]
+ },
+ "teresa": {
+  "name_es": "Santa Teresa de Ávila",
+  "title_es": "Doctora de la Iglesia · Mística, reformadora",
+  "quote_es": "Nada te turbe, nada te espante; todo se pasa; Dios no se muda; la paciencia todo lo alcanza; quien a Dios tiene, nada le falta; solo Dios basta.",
+  "sections_es": [
+   {
+    "eng_es": "Mañana",
+    "practices_es": [
+     {"t_es": "Oración mental matutina (1 hora)", "d_es": "Entra en el «castillo interior»: vuélvete hacia el centro del alma, donde mora Cristo."},
+     {"t_es": "Asistir a Misa", "d_es": "Asiste a la Santa Misa con recogimiento interior. Como enseñaba Santa Teresa, la Misa es la oración más grande; mantente plenamente presente ante los Sagrados Misterios."},
+     {"t_es": "Lectura espiritual", "d_es": "Lee de las Moradas o Castillo Interior, del Camino de Perfección o de la Escritura."}
+    ]
+   },
+   {
+    "eng_es": "Durante el día",
+    "practices_es": [
+     {"t_es": "Rezar el Rosario", "d_es": "Medita los misterios. Teresa usaba el Rosario para serenar su alma."},
+     {"t_es": "Practicar el recogimiento", "d_es": "A lo largo del día, retírate brevemente al castillo interior de tu alma. Aun en medio del trabajo y de la conversación, mantén la conciencia de la presencia de Dios en ti."},
+     {"t_es": "Ofrecer pequeños sacrificios", "d_es": "Acepta cada contrariedad con paciente perseverancia: «la paciencia todo lo alcanza»."}
+    ]
+   },
+   {
+    "eng_es": "Noche",
+    "practices_es": [
+     {"t_es": "Oración mental vespertina (30 min)", "d_es": "Vuelve de nuevo al castillo interior. Descansa en silencio en la presencia de Dios."},
+     {"t_es": "Examen y acto de contrición", "d_es": "Repasa las faltas del día con humildad. Confía en la misericordia de Dios."}
+    ]
+   }
+  ],
+  "penance_es": "Niégate hoy una comodidad de la que sueles disfrutar, ofreciéndola por la conversión de los pecadores.",
+  "prayers_es": [
+   {
+    "title_es": "Letrilla de Santa Teresa",
+    "eng_es": "Nada te turbe, nada te espante. Todo se pasa. Dios no se muda. La paciencia todo lo alcanza. Quien a Dios tiene, nada le falta. Solo Dios basta.",
+    "note_es": "Hallada en el breviario de Santa Teresa después de su muerte. El texto original es español."
+   },
+   {
+    "title_es": "Oración de ofrecimiento de sí",
+    "eng_es": "Vuestra soy, para Vos nací: ¿qué mandáis hacer de mí? Sea rica o esté mendiga, gozosa o atribulada, consolada o desolada: pues sois mi Rey, ¿qué mandáis hacer de mí? Hablad, Señor, que vuestra sierva oye. Amén.",
+    "note_es": "De los escritos de Santa Teresa de Ávila; el texto original es español."
+   }
+  ]
+ },
+ "escriva": {
+  "name_es": "San Josemaría Escrivá",
+  "title_es": "Fundador del Opus Dei",
+  "quote_es": "Haz todo por Amor. Así no hay cosas pequeñas: todo es grande. La perseverancia en las cosas pequeñas, por Amor, es heroísmo.",
+  "sections_es": [
+   {
+    "eng_es": "Mañana",
+    "practices_es": [
+     {"t_es": "El minuto heroico", "d_es": "Al sonar el despertador, levántate de la cama al instante. Consagra a Nuestro Señor el primer minuto del día."},
+     {"t_es": "Ofrecimiento de la mañana", "d_es": "«Serviam»: serviré. Ofrece a Dios el día entero por medio de María."},
+     {"t_es": "Asistir a la Santa Misa", "d_es": "La Misa es el centro y la raíz de la vida interior. Comulga a diario."},
+     {"t_es": "Oración mental (30 min)", "d_es": "Dedica treinta minutos a la oración mental en silencio ante el Santísimo Sacramento o ante un crucifijo. Habla con Dios como un amigo habla con un amigo."}
+    ]
+   },
+   {
+    "eng_es": "El trabajo como oración",
+    "practices_es": [
+     {"t_es": "Santificar el trabajo", "d_es": "Trabaja bien, por amor de Dios. Convierte cada tarea en oración. Esto es el Opus Dei: «la Obra de Dios»."},
+     {"t_es": "Rezar el Ángelus", "d_es": "Al mediodía, interrumpe lo que estés haciendo y reza el Ángelus. Esta breve pausa santifica la mitad de la jornada de trabajo y honra la Encarnación."},
+     {"t_es": "Rezar el Rosario", "d_es": "Cinco decenas diarias. «El Rosario es el arma más poderosa para vencer a Satanás»."},
+     {"t_es": "Visita al Santísimo Sacramento", "d_es": "Una breve visita en medio del trabajo del día, aunque sea de un minuto."}
+    ]
+   },
+   {
+    "eng_es": "Noche",
+    "practices_es": [
+     {"t_es": "Lectura espiritual (15 min)", "d_es": "Lee de un clásico espiritual al menos quince minutos. San Josemaría la llamaba alimento del alma, tan necesario como la comida para el cuerpo."},
+     {"t_es": "Examen particular", "d_es": "Examínate sobre una virtud concreta que estés trabajando por adquirir."}
+    ]
+   }
+  ],
+  "penance_es": "Santifica hoy tu trabajo ordinario ofreciendo a Dios cada tarea antes de comenzarla.",
+  "prayers_es": [
+   {
+    "title_es": "Oración para santificar el trabajo",
+    "eng_es": "Señor, dame la gracia de ver mi trabajo ordinario como materia de mi santificación. Ayúdame a convertir en oración cada tarea, cada conversación, cada momento de este día, para que al terminarlo pueda ofrecértelo todo como algo digno de tu amor. Amén.",
+    "note_es": "Inspirada en el espíritu del Opus Dei: la santificación de la vida ordinaria."
+   },
+   {
+    "title_es": "Oración a los Ángeles Custodios",
+    "eng_es": "Santos Ángeles Custodios de los que están confiados a mi cuidado: ayudadme a ser siempre consciente de que Dios vigila, y a servirle en ellos con fidelidad y amor. Defendedme del maligno y conducidme por caminos de paz. Amén.",
+    "note_es": "San Josemaría tuvo gran devoción a los Ángeles Custodios."
+   }
+  ]
+ },
+ "desales": {
+  "name_es": "San Francisco de Sales",
+  "title_es": "Doctor de la Iglesia · Obispo de Ginebra",
+  "quote_es": "Nada hay tan fuerte como la dulzura; nada tan dulce como la verdadera fortaleza.",
+  "sections_es": [
+   {
+    "eng_es": "Mañana",
+    "practices_es": [
+     {"t_es": "Preparación del día", "d_es": "Ponte en la presencia de Dios. Prevé lo que traerá el día y resuelve cómo afrontar cada cosa con dulzura."},
+     {"t_es": "Asistir a Misa si es posible", "d_es": "Únete al Sacrificio de Cristo. Comulga con suave devoción."},
+     {"t_es": "Meditación (30 min)", "d_es": "Una meditación sencilla y afectiva sobre una escena de los Evangelios. Habla con Nuestro Señor como con un amigo."}
+    ]
+   },
+   {
+    "eng_es": "Durante el día",
+    "practices_es": [
+     {"t_es": "Ramilletes espirituales", "d_es": "Recoge a lo largo del día «ramilletes» de pensamientos devotos. Vuelve a ellos con frecuencia."},
+     {"t_es": "Practicar la dulzura", "d_es": "Sé dulce ante todo: con los demás, contigo mismo, con las circunstancias. «Nada hay tan fuerte como la dulzura»."},
+     {"t_es": "Rezar el Rosario", "d_es": "Francisco amaba el Rosario como oración de familia: lento, afectuoso, meditativo."}
+    ]
+   },
+   {
+    "eng_es": "Noche",
+    "practices_es": [
+     {"t_es": "Examen de conciencia", "d_es": "Repasa el día con bondad. Da gracias a Dios por las gracias, pide perdón por las faltas, propón enmendarte."},
+     {"t_es": "Breve lectura espiritual", "d_es": "Lee de la Introducción a la Vida Devota o del Tratado del Amor de Dios."}
+    ]
+   }
+  ],
+  "penance_es": "Practica hoy la dulzura con todos los que encuentres, especialmente con quienes te irriten.",
+  "prayers_es": [
+   {
+    "title_es": "Oración de confianza serena",
+    "eng_es": "No mires con temor los cambios y azares de esta vida; míralos más bien con plena esperanza de que, cuando lleguen, Dios, de quien eres, te librará de ellos. Hasta ahora te ha guardado; tente de su mano, y te conducirá seguro a través de todo. Amén.",
+    "note_es": "Adaptada de las cartas de San Francisco de Sales."
+   },
+   {
+    "title_es": "Oración por una vida devota",
+    "eng_es": "Dios mío, te doy toda mi voluntad. Deseo comenzar este día para tu honor y tu gloria. Te ofrezco todas las acciones de este día, y te pido la gracia de no hacer nada contrario a tu voluntad. Ilumina mi entendimiento, fortalece mi voluntad, purifica mi corazón y santifica mi alma. Amén.",
+    "note_es": "Inspirada en la Introducción a la Vida Devota."
+   }
+  ]
+ }
+}

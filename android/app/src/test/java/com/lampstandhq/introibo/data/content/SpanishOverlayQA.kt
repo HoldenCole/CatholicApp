@@ -68,7 +68,7 @@ class SpanishOverlayQA {
             "prayers_es.json", "marian_antiphons_es.json", "hours_es.json",
             "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
             "ui_strings_es.json", "missal_propers_es.json",
-            "missal_readings_es.json", "stations_es.json",
+            "missal_readings_es.json", "stations_es.json", "saints_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -256,6 +256,21 @@ class SpanishOverlayQA {
             assertEquals("Jesús es puesto en el sepulcro", last.title)
             assertTrue(last.stabatEng.endsWith("la gloria del paraíso. Amén."))
 
+            // Saints' devotional programs: names, sections, practices, and
+            // prayers in Spanish; Teresa's Letrilla returns to its ORIGINAL
+            // Spanish; the Latin labels and prayer texts are untouched.
+            val pio = ContentStore.saints.first { it.slug == "pio" }
+            assertEquals("San Padre Pío", pio.name)
+            assertEquals("Mañana", pio.sections[0].eng)
+            assertEquals("Mane", pio.sections[0].lat)
+            assertTrue(pio.sections[0].practices[0].t == "Ofrecimiento de la mañana")
+            assertTrue(pio.penance!!.startsWith("Ofrece hoy un sufrimiento físico"))
+            assertTrue(pio.prayers!![0].eng.startsWith("Quédate con nosotros, Señor"))
+            assertTrue(pio.prayers!![0].latin!!.startsWith("Mane nobiscum"))
+            val teresa = ContentStore.saints.first { it.slug == "teresa" }
+            assertTrue(teresa.prayers!![0].eng.startsWith("Nada te turbe, nada te espante"))
+            assertTrue(teresa.quote.startsWith("Nada te turbe"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -316,6 +331,7 @@ class SpanishOverlayQA {
         assertTrue(!assumption.introit.eng.startsWith("Un gran prodigio"))
         assertTrue(advent1.epistle.eng.startsWith("Lesson from the letter"))
         assertEquals("Jesus Is Condemned to Death", ContentStore.stations.first().title)
+        assertEquals("St. Padre Pio", ContentStore.saints.first { it.slug == "pio" }.name)
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

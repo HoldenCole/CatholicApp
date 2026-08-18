@@ -5,33 +5,33 @@ import Foundation
 
 struct Saint: Identifiable, Decodable, Hashable {
     let slug: String
-    let name: String
-    let title: String
-    let quote: String
-    let penance: String?
+    var name: String
+    var title: String
+    var quote: String
+    var penance: String?
     let penanceLatin: String?
-    let sections: [Section]
-    let prayers: [SaintPrayer]?
+    var sections: [Section]
+    var prayers: [SaintPrayer]?
     var related: [RelatedLink]? = nil
 
     var id: String { slug }
 
     struct Section: Decodable, Hashable {
         let lat: String
-        let eng: String
-        let practices: [Practice]
+        var eng: String
+        var practices: [Practice]
     }
 
     struct Practice: Decodable, Hashable {
-        let t: String
-        let d: String
+        var t: String
+        var d: String
     }
 
     struct SaintPrayer: Decodable, Hashable, Identifiable {
-        let title: String
+        var title: String
         let latin: String?
-        let eng: String
-        let note: String?
+        var eng: String
+        var note: String?
 
         var id: String { title }
     }

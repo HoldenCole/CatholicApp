@@ -127,6 +127,27 @@ final class ContentStore {
         let time_es: String
         let intro_es: String
     }
+    private struct SaintES: Decodable {
+        let name_es: String
+        let title_es: String
+        let quote_es: String
+        let penance_es: String?
+        let sections_es: [SectionES]
+        let prayers_es: [SaintPrayerES]?
+        struct SectionES: Decodable {
+            let eng_es: String
+            let practices_es: [PracticeES]
+        }
+        struct PracticeES: Decodable {
+            let t_es: String
+            let d_es: String
+        }
+        struct SaintPrayerES: Decodable {
+            let title_es: String
+            let eng_es: String
+            let note_es: String?
+        }
+    }
     // missal_es.json is PARTIAL by design — the Ordinary translates section
     // by section (the Canon first); uncovered sections keep their English.
     private struct MissalLineES: Decodable {
@@ -167,6 +188,7 @@ final class ContentStore {
             missalTempora   = load("missal_tempora",   as: [String: MissalProperEntry].self) ?? [:]
             missalSanctoral = load("missal_sanctoral", as: [String: MissalProperEntry].self) ?? [:]
             stations        = load("stations",         as: [Station].self)            ?? []
+            saints          = load("saints",           as: [Saint].self)              ?? []
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -227,6 +249,43 @@ final class ContentStore {
                 if let t = o["title_es"] { m.title = t }
                 if let t = o["med_es"] { m.med = t }
                 if let t = o["stabat_es"] { m.stabat_eng = t }
+                return m
+            }
+        }
+        // Saints' devotional programs: English-side fields per slug, aligned
+        // by section/practice/prayer index (the Latin section labels and
+        // Latin prayer texts are untouched; a count mismatch keeps English).
+        if let es = load("saints_es", as: [String: SaintES].self) {
+            saints = saints.map { s in
+                guard let o = es[s.slug] else { return s }
+                var m = s
+                m.name = o.name_es
+                m.title = o.title_es
+                m.quote = o.quote_es
+                if m.penance != nil, let p = o.penance_es { m.penance = p }
+                if o.sections_es.count == m.sections.count {
+                    for i in m.sections.indices {
+                        m.sections[i].eng = o.sections_es[i].eng_es
+                        let ps = o.sections_es[i].practices_es
+                        if ps.count == m.sections[i].practices.count {
+                            for j in m.sections[i].practices.indices {
+                                m.sections[i].practices[j].t = ps[j].t_es
+                                m.sections[i].practices[j].d = ps[j].d_es
+                            }
+                        }
+                    }
+                }
+                if var prayers = m.prayers, let pes = o.prayers_es,
+                   pes.count == prayers.count {
+                    for i in prayers.indices {
+                        prayers[i].title = pes[i].title_es
+                        prayers[i].eng = pes[i].eng_es
+                        if prayers[i].note != nil, let n = pes[i].note_es {
+                            prayers[i].note = n
+                        }
+                    }
+                    m.prayers = prayers
+                }
                 return m
             }
         }

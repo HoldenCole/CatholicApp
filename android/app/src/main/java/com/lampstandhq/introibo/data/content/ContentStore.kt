@@ -187,6 +187,35 @@ object ContentStore {
         val intro_es: String,
     )
 
+    @kotlinx.serialization.Serializable
+    private data class SaintES(
+        val name_es: String,
+        val title_es: String,
+        val quote_es: String,
+        val penance_es: String? = null,
+        val sections_es: List<SectionES>,
+        val prayers_es: List<SaintPrayerES>? = null,
+    ) {
+        @kotlinx.serialization.Serializable
+        data class SectionES(
+            val eng_es: String,
+            val practices_es: List<PracticeES>,
+        )
+
+        @kotlinx.serialization.Serializable
+        data class PracticeES(
+            val t_es: String,
+            val d_es: String,
+        )
+
+        @kotlinx.serialization.Serializable
+        data class SaintPrayerES(
+            val title_es: String,
+            val eng_es: String,
+            val note_es: String? = null,
+        )
+    }
+
     // missal_es.json is PARTIAL by design — the Ordinary translates section
     // by section (the Canon first); uncovered sections keep their English.
     @kotlinx.serialization.Serializable
@@ -236,6 +265,7 @@ object ContentStore {
         missalTempora = load("missal_tempora.json") ?: emptyMap()
         missalSanctoral = load("missal_sanctoral.json") ?: emptyMap()
         stations = load("stations.json") ?: emptyList()
+        saints = load("saints.json") ?: emptyList()
 
         uiStringsES = emptyMap()
 
@@ -292,6 +322,52 @@ object ContentStore {
                         title = o["title_es"] ?: s.title,
                         med = o["med_es"] ?: s.med,
                         stabatEng = o["stabat_es"] ?: s.stabatEng,
+                    )
+                }
+            }
+            // Saints' devotional programs: English-side fields per slug,
+            // aligned by section/practice/prayer index (the Latin section
+            // labels and Latin prayer texts are untouched; a count mismatch
+            // keeps English).
+            load<Map<String, SaintES>>("saints_es.json")?.let { es ->
+                saints = saints.map { s ->
+                    val o = es[s.slug] ?: return@map s
+                    s.copy(
+                        name = o.name_es,
+                        title = o.title_es,
+                        quote = o.quote_es,
+                        penance = if (s.penance != null) o.penance_es ?: s.penance else s.penance,
+                        sections = if (o.sections_es.size == s.sections.size) {
+                            s.sections.mapIndexed { i, sec ->
+                                val se = o.sections_es[i]
+                                sec.copy(
+                                    eng = se.eng_es,
+                                    practices = if (se.practices_es.size == sec.practices.size) {
+                                        sec.practices.mapIndexed { j, p ->
+                                            p.copy(t = se.practices_es[j].t_es, d = se.practices_es[j].d_es)
+                                        }
+                                    } else {
+                                        sec.practices
+                                    },
+                                )
+                            }
+                        } else {
+                            s.sections
+                        },
+                        prayers = if (s.prayers != null && o.prayers_es != null &&
+                            o.prayers_es.size == s.prayers.size
+                        ) {
+                            s.prayers.mapIndexed { i, p ->
+                                val pe = o.prayers_es[i]
+                                p.copy(
+                                    title = pe.title_es,
+                                    eng = pe.eng_es,
+                                    note = if (p.note != null) pe.note_es ?: p.note else p.note,
+                                )
+                            }
+                        } else {
+                            s.prayers
+                        },
                     )
                 }
             }

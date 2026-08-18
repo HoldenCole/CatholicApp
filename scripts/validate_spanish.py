@@ -231,12 +231,52 @@ def validate_stations():
     print(f"stations_es.json: {len(es)} stations checked")
 
 
+def validate_saints():
+    """Saints' devotional programs: every saint covered, and the index-aligned
+    lists (sections, practices per section, prayers) match the source counts
+    exactly — a silent mismatch would leave English behind at runtime."""
+    path = ES / "saints_es.json"
+    if not path.exists():
+        print("saints_es.json: not present (skipped)")
+        return
+    src = {s["slug"]: s for s in json.load(open(SRC / "saints.json"))}
+    es = json.load(open(path))
+    check(set(es) == set(src),
+          f"saints: slug mismatch (missing {set(src) - set(es)}, "
+          f"extra {set(es) - set(src)})")
+    for slug, o in es.items():
+        s = src.get(slug)
+        if not s:
+            continue
+        for f in ("name_es", "title_es", "quote_es", "penance_es"):
+            check(isinstance(o.get(f), str) and o[f].strip(),
+                  f"saints[{slug}].{f}: empty/missing")
+        check(len(o.get("sections_es", [])) == len(s["sections"]),
+              f"saints[{slug}]: section count differs from source")
+        for i, (sec_es, sec) in enumerate(zip(o.get("sections_es", []),
+                                              s["sections"])):
+            check(sec_es.get("eng_es", "").strip(),
+                  f"saints[{slug}].sections[{i}].eng_es: empty")
+            check(len(sec_es.get("practices_es", [])) == len(sec["practices"]),
+                  f"saints[{slug}].sections[{i}]: practice count differs")
+            for j, p in enumerate(sec_es.get("practices_es", [])):
+                check(p.get("t_es", "").strip() and p.get("d_es", "").strip(),
+                      f"saints[{slug}].sections[{i}].practices[{j}]: empty")
+        check(len(o.get("prayers_es", [])) == len(s["prayers"]),
+              f"saints[{slug}]: prayer count differs from source")
+        for i, p in enumerate(o.get("prayers_es", [])):
+            check(p.get("title_es", "").strip() and p.get("eng_es", "").strip(),
+                  f"saints[{slug}].prayers[{i}]: empty")
+    print(f"saints_es.json: {len(es)} saints checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
     validate_missal_propers()
     validate_missal_readings()
     validate_stations()
+    validate_saints()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

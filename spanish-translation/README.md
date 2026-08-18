@@ -146,7 +146,15 @@ so integration cannot silently misalign.
   keeping each verse's line structure); the Latin titles and verses are
   untouched. The validator enforces full coverage and matching `<br>`
   counts.
-- `reference.json`, `saints.json`, tutorial/course content.
+- Saints' devotional programs — **COMPLETE: `saints_es.json`**, all 7
+  saints: names, titles, quotes, all 61 practices, penances, and the
+  saints' prayers (English side; the Latin texts are untouched).
+  St Teresa's Letrilla ("Nada te turbe") and self-offering ("Vuestra
+  soy, para Vos nací") and St Josemaría's Camino quote return to their
+  ORIGINAL Spanish — received texts, not translations. Index-aligned by
+  section/practice/prayer; the validator enforces exact count matches so
+  a misalignment can never silently leave English behind.
+- `reference.json`, tutorial/course content.
 
 ## Integration (done for tier 1)
 
