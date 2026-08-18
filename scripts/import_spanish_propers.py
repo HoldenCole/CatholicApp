@@ -23,7 +23,12 @@ Run:  python3 scripts/import_spanish_propers.py [--do <path-to-DO-clone>]
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
+
+
+def nfc(s):
+    return unicodedata.normalize("NFC", s)
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DO = Path("/tmp/claude-0/-home-user-CatholicApp/"
@@ -52,7 +57,8 @@ SUPPLEMENTS = (json.load(open(SUPPLEMENTS_PATH, encoding="utf-8"))
 # Keys are alleluia-normalized lines; compose_from_lines() re-attaches the
 # stripped "(Allelúja…)" / sentence-final "Allelúja…" markers in Spanish.
 COMMUNE_PATH = ROOT / "spanish-translation" / "propers_commune_es.json"
-COMMUNE = (json.load(open(COMMUNE_PATH, encoding="utf-8"))
+COMMUNE = ({nfc(k): v for k, v in
+            json.load(open(COMMUNE_PATH, encoding="utf-8")).items()}
            if COMMUNE_PATH.exists() else {})
 
 GLORIA_ES = ("Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en "
@@ -91,10 +97,49 @@ CONCL_ES = {
      "per ómnia sǽcula sæculórum. Amen."):
         "Tú que vives y reinas con Dios Padre en la unidad del Espíritu "
         "Santo, y eres Dios por todos los siglos de los siglos. Amén.",
+    # a data artifact: "eiusdem" tag appended after the response — render
+    # the ejúsdem (same-Spirit) form it flags
+    ("Per Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et "
+     "regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. "
+     "Amen. eiusdem"):
+        "Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo "
+        "en la unidad del mismo Espíritu Santo, Dios, por todos los siglos "
+        "de los siglos. Amén.",
 }
 
+# Name-parameterized commune oration templates (see
+# spanish-translation/propers_templates_es.json): the sanctoral instantiates
+# a small set of commune orations with each saint's name; a template pairs
+# the Latin shape ({N} = name slot) with our Spanish, and `names` maps every
+# captured Latin name phrase to its traditional Spanish form. An unmapped
+# name refuses to compose — no guessing.
+TEMPLATES_PATH = ROOT / "spanish-translation" / "propers_templates_es.json"
+if TEMPLATES_PATH.exists():
+    _t = json.load(open(TEMPLATES_PATH, encoding="utf-8"))
+    TEMPLATE_NAMES = {nfc(k): v for k, v in _t["names"].items()}
+    TEMPLATES = [(re.compile(re.escape(nfc(e["lat"]))
+                             .replace(r"\{N\}", "(.+?)")
+                             .replace(r"\{N}", "(.+?)")), e["es"])
+                 for e in sorted(_t["templates"],
+                                 key=lambda e: -len(e["lat"]))]
+else:
+    TEMPLATE_NAMES, TEMPLATES = {}, []
+
+
+def template_line(line):
+    for regex, es_tmpl in TEMPLATES:
+        m = regex.fullmatch(line)
+        if m:
+            name_es = TEMPLATE_NAMES.get(nfc(m.group(1).strip()))
+            if name_es:
+                return es_tmpl.replace("{N}", name_es)
+    return None
+
+
 ALLE_SUFFIX = re.compile(
-    r"(\s*\(Allelúja[^)]*\)\.?|\s+Allelúja(?:,\s*allelúja)*\.?)$")
+    r"(\s*\((?:Allelúja|Allelúia|Alleluia)[^)]*\)\.?"
+    r"|\s+(?:Allelúja|Allelúia|Alleluia)"
+    r"(?:,\s*(?:allelúja|allelúia|alleluia))*\.?)$")
 
 
 def compose_from_lines(lat):
@@ -103,7 +148,7 @@ def compose_from_lines(lat):
     Returns None unless ALL lines resolve — the gate stays honest."""
     out = []
     for raw in lat.split("\n"):
-        line = raw.strip()
+        line = nfc(raw.strip())   # source data mixes NFC/NFD accents
         if not line:
             continue
         if line.startswith("Glória Patri, et Fílio"):
@@ -116,11 +161,16 @@ def compose_from_lines(lat):
         m = ALLE_SUFFIX.search(line)
         if m and m.start() > 0:
             base = line[:m.start()]
-            suffix = (m.group(1).replace("Allelúja", "Aleluya")
-                      .replace("allelúja", "aleluya"))
+            suffix = re.sub(r"[Aa]llel[úu][ji]a",
+                            lambda x: "Aleluya" if x.group(0)[0] == "A"
+                            else "aleluya", m.group(1))
         es = COMMUNE.get(base)
         if es is None:
+            es = template_line(base)
+        if es is None:
             return None
+        if es == "":
+            continue   # mapped to nothing (junk line the English drops too)
         out.append(es + suffix)
     return "\n".join(out) if out else None
 
@@ -138,6 +188,16 @@ FIELDS = {
 # (graduale is exempt — a handful of days legitimately lack one.)
 REQUIRED = ["introitus", "oratio", "offertorium", "secreta", "communio",
             "postcommunio"]
+
+
+def has_field(src_entry, field):
+    """A field counts only if it carries text — a few days have an entry
+    whose lat AND eng are both blank (a data artifact); the gate must not
+    demand Spanish for nothing."""
+    v = src_entry.get(field)
+    if v is None:
+        return False
+    return bool((v.get("lat") or "").strip() or (v.get("eng") or "").strip())
 
 
 def parse_sections(text):
@@ -316,7 +376,7 @@ def main():
                 continue
         entry = {}
         for field, section in FIELDS.items():
-            if src_entry.get(field) is None:
+            if not has_field(src_entry, field):
                 continue                 # English side has no such field
             if section not in sections or not sections[section].strip():
                 continue
@@ -326,7 +386,7 @@ def main():
         for field, text in SUPPLEMENTS.get(key, {}).items():
             entry.setdefault(field, text)
         missing = [f for f in REQUIRED
-                   if src_entry.get(f) is not None and f not in entry]
+                   if has_field(src_entry, f) and f not in entry]
         if missing:
             # Keep the partial entry: the propagation pass below may finish
             # it via identical-Latin fields from days that did import.
@@ -356,14 +416,14 @@ def main():
             entry = dict(partial)
             for field in FIELDS:
                 v = src_entry.get(field)
-                if v is None or field in entry:
+                if v is None or field in entry or not has_field(src_entry, field):
                     continue
                 lat = v.get("lat") or ""
                 es = latin_to_es.get(lat) or compose_from_lines(lat)
                 if es:
                     entry[field] = es
             missing = [f for f in REQUIRED
-                       if src_entry.get(f) is not None and f not in entry]
+                       if has_field(src_entry, f) and f not in entry]
             if entry and not missing:
                 out[key] = entry
                 promoted += 1
@@ -382,7 +442,7 @@ def main():
         for key, why, entry in skipped:
             src_entry = sources[key][1]
             report[key] = {f: src_entry[f]["lat"] for f in FIELDS
-                           if src_entry.get(f) is not None and f not in entry}
+                           if has_field(src_entry, f) and f not in entry}
         Path(sys.argv[sys.argv.index("--report") + 1]).write_text(
             json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     skipped = [(key, why) for key, why, _ in skipped]

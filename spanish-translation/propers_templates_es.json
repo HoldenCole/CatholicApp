@@ -1,0 +1,353 @@
+{
+ "templates": [
+  {
+   "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et, per beátum {N} Mártyrem tuum atque Summum Pontíficem, perpétua protectióne custódi; quem totíus Ecclésiæ præstitísti esse pastórem.",
+   "es": "Mira aplacado a tu rebaño, Pastor eterno: y guárdalo con tu continua protección, por intercesión de tu santo Mártir y Sumo Pontífice {N}, a quien constituiste pastor de toda la Iglesia."
+  },
+  {
+   "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et, per beátum {N} Summum Pontíficem, perpétua protectióne custódi; quem totíus Ecclésiæ præstitísti esse pastórem.",
+   "es": "Mira aplacado a tu rebaño, Pastor eterno: y guárdalo con tu continua protección, por intercesión de tu santo Sumo Pontífice {N}, a quien constituiste pastor de toda la Iglesia."
+  },
+  {
+   "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et, per beátum {N} (Mártyrem tuum atque) Summum Pontíficem, perpétua protectióne custódi; quem totíus Ecclésiæ præstitísti esse pastórem.",
+   "es": "Mira aplacado a tu rebaño, Pastor eterno: y guárdalo con tu continua protección, por intercesión de tu santo (Mártir y) Sumo Pontífice {N}, a quien constituiste pastor de toda la Iglesia."
+  },
+  {
+   "lat": "Gregem tuum, Pastor ætérne, placátus inténde: et per beátos {N} Mártyres tuos atque Summos Pontífices perpétua protectióne custódi; quos totíus Ecclésiæ præstitísti esse pastóres.",
+   "es": "Mira aplacado a tu rebaño, Pastor eterno: y guárdalo con tu continua protección, por intercesión de tus santos Mártires y Sumos Pontífices {N}, a quienes constituiste pastores de toda la Iglesia."
+  },
+  {
+   "lat": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedénte beáto {N} Mártyre tuo atque Pontífice, coeléstis remédii fáciat esse consórtes.",
+   "es": "Esta comunión, Señor, nos purifique de todo pecado: y, por la intercesión de tu santo Mártir y Obispo {N}, nos haga partícipes del remedio celestial."
+  },
+  {
+   "lat": "Hæc nos commúnio, Dómine, purget a crímine: et, intercedéntibus sanctis Martýribus tuis {N}, coeléstis remédii fáciat esse consórtes.",
+   "es": "Esta comunión, Señor, nos purifique de todo pecado: y, por la intercesión de tus santos Mártires {N}, nos haga partícipes del remedio celestial."
+  },
+  {
+   "lat": "Múnera tibi, Dómine, dicáta sanctífica: et, intercedénte beáto {N} Mártyre tuo atque Pontífice, per éadem nos placátus inténde.",
+   "es": "Santifica, Señor, los dones a ti dedicados: y, por la intercesión de tu santo Mártir y Obispo {N}, míranos aplacado por ellos."
+  },
+  {
+   "lat": "Auxiliéntur nobis, Dómine, sumpta mystéria: et, intercedénte beáta {N} Vírgine et Mártyre tua, sempitérna fáciant protectióne gaudére.",
+   "es": "Ayúdennos, Señor, los misterios recibidos: y, por la intercesión de tu santa Virgen y Mártir {N}, hágannos gozar de su eterna protección."
+  },
+  {
+   "lat": "Auxiliéntur nobis, Dómine, sumpta mystéria: et, intercedénte beáto {N} Mártyre tuo, sempitérna protectióne confírment.",
+   "es": "Ayúdennos, Señor, los misterios recibidos: y, por la intercesión de tu santo Mártir {N}, confírmennos con su eterna protección."
+  },
+  {
+   "lat": "Refécti participatióne múneris sacri, quǽsumus, Dómine, Deus noster: ut, cujus exséquimur cultum, intercedénte beáto {N} Mártyre tuo, sentiámus efféctum.",
+   "es": "Alimentados con la participación del don sagrado, te rogamos, Señor Dios nuestro: que, por la intercesión de tu santo Mártir {N}, experimentemos el efecto del culto que celebramos."
+  },
+  {
+   "lat": "Refécti participatióne múneris sacri, quǽsumus, Dómine, Deus noster: ut, cujus exséquimur cultum, intercedéntibus sanctis Martýribus tuis {N}, sentiámus efféctum.",
+   "es": "Alimentados con la participación del don sagrado, te rogamos, Señor Dios nuestro: que, por la intercesión de tus santos Mártires {N}, experimentemos el efecto del culto que celebramos."
+  },
+  {
+   "lat": "Refécti participatióne múneris sacri, quǽsumus, Dómine, Deus noster: ut, cujus exséquimur cultum, intercedéntibus sanctis tuis {N}, sentiámus efféctum.",
+   "es": "Alimentados con la participación del don sagrado, te rogamos, Señor Dios nuestro: que, por la intercesión de tus santos {N}, experimentemos el efecto del culto que celebramos."
+  },
+  {
+   "lat": "Quǽsumus, omnípotens Deus: ut, qui cœléstia aliménta percépimus, intercedénte beáto {N} Confessóre tuo, per hæc contra ómnia advérsa muniámur.",
+   "es": "Te rogamos, oh Dios omnipotente: que, quienes hemos recibido el alimento celestial, seamos protegidos por él contra toda adversidad, por la intercesión de tu santo Confesor {N}."
+  },
+  {
+   "lat": "Quǽsumus, omnípotens Deus: ut, qui cœléstia aliménta percépimus, intercedéntibus beátis Martýribus tuis {N}, per hæc contra ómnia advérsa muniámur.",
+   "es": "Te rogamos, oh Dios omnipotente: que, quienes hemos recibido el alimento celestial, seamos protegidos por él contra toda adversidad, por la intercesión de tus santos Mártires {N}."
+  },
+  {
+   "lat": "Quǽsumus, omnípotens Deus: ut, qui cœléstia aliménta percépimus, intercedéntibus sanctis Martýribus tuis {N}, per hæc contra ómnia advérsa muniámur.",
+   "es": "Te rogamos, oh Dios omnipotente: que, quienes hemos recibido el alimento celestial, seamos protegidos por él contra toda adversidad, por la intercesión de tus santos Mártires {N}."
+  },
+  {
+   "lat": "Exáudi nos, Deus, salutáris noster: ut sicut de beátæ {N} Vírginis tuæ festivitáte gaudémus; ita piæ devotiónis erudiámur afféctu.",
+   "es": "Escúchanos, oh Dios, salvador nuestro: para que, así como nos alegramos en la festividad de tu santa Virgen {N}, así aprendamos el afecto de una piadosa devoción."
+  },
+  {
+   "lat": "Exáudi nos, Deus, salutáris noster: ut sicut de beátæ {N} Vírginis et Mártyris tuæ festivitáte gaudémus; ita piæ devotiónis erudiámur afféctu.",
+   "es": "Escúchanos, oh Dios, salvador nuestro: para que, así como nos alegramos en la festividad de tu santa Virgen y Mártir {N}, así aprendamos el afecto de una piadosa devoción."
+  },
+  {
+   "lat": "Deus, qui inter cétera poténtiæ tuæ mirácula étiam in sexu frágili victóriam martýrii contulísti: concéde propítius; ut, qui beátæ {N} Vírginis et Mártyris tuæ natalícia cólimus, per ejus ad te exémpla gradiámur.",
+   "es": "Oh Dios, que entre las demás maravillas de tu poder concediste también al sexo frágil la victoria del martirio: concédenos propicio que, quienes celebramos el nacimiento al cielo de tu santa Virgen y Mártir {N}, caminemos hacia ti por sus ejemplos."
+  },
+  {
+   "lat": "Præsta, quǽsumus, omnípotens Deus: ut, de percéptis munéribus grátias exhibéntes, intercedénte beáto {N} Confessóre tuo atque Pontífice, benefícia potióra sumámus.",
+   "es": "Haz, oh Dios omnipotente, te lo rogamos: que, dando gracias por los dones recibidos, alcancemos, por la intercesión de tu santo Confesor y Obispo {N}, beneficios aún mayores."
+  },
+  {
+   "lat": "Ut nobis, Dómine, tua sacrifícia dent salútem: beátus {N} Póntifex tuus et Doctor egrégius, quǽsumus, precátor accédat.",
+   "es": "Para que tus sacrificios, Señor, nos den la salvación: interceda por nosotros, te rogamos, el bienaventurado {N}, tu Obispo y Doctor egregio."
+  },
+  {
+   "lat": "Præsta, quǽsumus, omnípotens Deus: ut, qui beáti {N} Mártyris tui natalítia cólimus, intercessióne ejus in tui nóminis amóre roborémur.",
+   "es": "Concédenos, oh Dios omnipotente: que, quienes celebramos el nacimiento al cielo de tu santo Mártir {N}, seamos fortalecidos por su intercesión en el amor de tu nombre."
+  },
+  {
+   "lat": "Oblátis, quǽsumus, Dómine, placáre munéribus: et, intercedénte beáto {N} Mártyre tuo, a cunctis nos defénde perículis.",
+   "es": "Aplácate, Señor, con los dones ofrecidos: y, por la intercesión de tu santo Mártir {N}, defiéndenos de todos los peligros."
+  },
+  {
+   "lat": "Oblátis, quǽsumus, Dómine, placáre munéribus: et, intercedéntibus sanctis Martýribus tuis {N}, a cunctis nos defénde perículis.",
+   "es": "Aplácate, Señor, con los dones ofrecidos: y, por la intercesión de tus santos Mártires {N}, defiéndenos de todos los peligros."
+  },
+  {
+   "lat": "Infirmitátem nostram réspice, omnípotens Deus: et, quia pondus própriæ actiónis gravat, beáti {N} Mártyris tui atque Pontíficis intercéssio gloriósa nos prótegat.",
+   "es": "Mira nuestra flaqueza, oh Dios omnipotente: y, pues nos agobia el peso de nuestras propias obras, protéjanos la gloriosa intercesión de tu santo Mártir y Obispo {N}."
+  },
+  {
+   "lat": "Deus, qui nos concédis sanctórum Mártyrum tuórum {N} natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+   "es": "Oh Dios, que nos concedes celebrar el nacimiento al cielo de tus santos Mártires {N}: danos gozar de su compañía en la eterna bienaventuranza."
+  },
+  {
+   "lat": "Deus, qui nos concédis sane in Mártyrum tuórum {N} natalítia cólere: da nobis in ætérna beatitúdine de eórum societáte gaudére.",
+   "es": "Oh Dios, que nos concedes celebrar el nacimiento al cielo de tus santos Mártires {N}: danos gozar de su compañía en la eterna bienaventuranza."
+  },
+  {
+   "lat": "Súscipe, Dómine, múnera, quæ in beátæ {N} Vírginis et Mártyris tuæ sollemnitáte deférimus: cujus nos confídimus patrocínio liberári.",
+   "es": "Recibe, Señor, los dones que te presentamos en la solemnidad de tu santa Virgen y Mártir {N}: por cuyo patrocinio confiamos ser librados."
+  },
+  {
+   "lat": "Præsta nobis, quǽsumus, Dómine, intercedéntibus sanctis Virgínibus et Martýribus tuis {N}: ut, quod ore contíngimus, pura mente capiámus.",
+   "es": "Concédenos, Señor, te rogamos, por la intercesión de tus santas Vírgenes y Mártires {N}: que lo que tocamos con la boca, lo recibamos con alma pura."
+  },
+  {
+   "lat": "Præsta nobis, quǽsumus, Dómine: intercedénte beáto {N} Mártyre tuo; ut, quod ore contíngimus, pura mente capiámus.",
+   "es": "Concédenos, Señor, te rogamos, por la intercesión de tu santo Mártir {N}: que lo que tocamos con la boca, lo recibamos con alma pura."
+  },
+  {
+   "lat": "Præsta nobis, quǽsumus, Dómine: intercedéntibus sanctis Martyribus tuis {N}; ut, quod ore contíngimus, pura mente capiámus.",
+   "es": "Concédenos, Señor, te rogamos, por la intercesión de tus santos Mártires {N}: que lo que tocamos con la boca, lo recibamos con alma pura."
+  },
+  {
+   "lat": "Præsta nobis, quǽsumus, Dómine: intercedéntibus sanctis Martýribus tuis {N}; ut, quod ore contíngimus, pura mente capiámus.",
+   "es": "Concédenos, Señor, te rogamos, por la intercesión de tus santos Mártires {N}: que lo que tocamos con la boca, lo recibamos con alma pura."
+  },
+  {
+   "lat": "Inténde, quǽsumus, Dómine, múnera altáribus tuis pro sanctárum Vírginum et Mártyrum tuárum {N} festivitáte propósita: ut, sicut per hæc beáta mystéria illis glóriam contulísti; ita nobis indulgéntiam largiáris.",
+   "es": "Mira, Señor, te rogamos, los dones puestos sobre tus altares en la festividad de tus santas Vírgenes y Mártires {N}: para que, así como por estos sagrados misterios les diste la gloria, así nos concedas a nosotros el perdón."
+  },
+  {
+   "lat": "Deus, qui nos ánnua sanctórum Mártyrum tuórum {N} sollemnitáte lætíficas: concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.",
+   "es": "Oh Dios, que nos alegras con la solemnidad anual de tus santos Mártires {N}: concédenos propicio que, gozando de sus méritos, nos enardezcamos con sus ejemplos."
+  },
+  {
+   "lat": "Deus, fidélium remunerátor animárum: præsta; ut, beáti {N} Confessóris tui atque Pontíficis, cujus venerándam celebrámus festivitátem, précibus indulgéntiam consequámur.",
+   "es": "Oh Dios, remunerador de las almas fieles: concédenos alcanzar el perdón por las preces de tu santo Confesor y Obispo {N}, cuya venerable festividad celebramos."
+  },
+  {
+   "lat": "Præsta, quǽsumus, omnípotens Deus: ut, intercedénte beáto {N} Mártyre tuo, et a cunctis adversitátibus liberémur in córpore, et a pravis cogitatiónibus mundémur in mente.",
+   "es": "Concédenos, oh Dios omnipotente: que, por la intercesión de tu santo Mártir {N}, seamos librados de toda adversidad en el cuerpo, y purificados de los malos pensamientos en el alma."
+  },
+  {
+   "lat": "Præsta, quǽsumus, omnípotens Deus: ut, qui sanctórum Mártyrum tuórum {N} sollémnia cólimus; eórum étiam virtútes imitémur.",
+   "es": "Concédenos, oh Dios omnipotente: que, quienes celebramos la solemnidad de tus santos Mártires {N}, imitemos también sus virtudes."
+  },
+  {
+   "lat": "Deus, qui Ecclésiam tuam, in apostólicæ petræ soliditáte fundátam, ab infernárum éruis terróre portárum: præsta, quǽsumus; ut, intercedénte beáto {N} Mártyre tuo atque Summo Pontífice, in tua veritáte persístens, contínua securitáte muniátur.",
+   "es": "Oh Dios, que libras a tu Iglesia, fundada sobre la solidez de la piedra apostólica, del terror de las puertas del infierno: concédenos, te rogamos, que, por la intercesión de tu santo Mártir y Sumo Pontífice {N}, persevere en tu verdad y sea guardada en continua seguridad."
+  },
+  {
+   "lat": "Deus, qui Ecclésiam tuam, in apostólicæ petræ soliditáte fundátam, ab infernárum éruis terróre portárum: præsta, quǽsumus; ut, intercedénte beáto {N} Summo Pontífice, in tua veritáte persístens, contínua securitáte muniátur.",
+   "es": "Oh Dios, que libras a tu Iglesia, fundada sobre la solidez de la piedra apostólica, del terror de las puertas del infierno: concédenos, te rogamos, que, por la intercesión de tu santo Sumo Pontífice {N}, persevere en tu verdad y sea guardada en continua seguridad."
+  },
+  {
+   "lat": "Da, quǽsumus, omnípotens Deus: ut, qui beáti {N}, Mártyris tui, solémnia cólimus, ejus apud te intercessiónibus adjuvémur.",
+   "es": "Danos, oh Dios omnipotente: que, quienes celebramos la solemnidad de tu santo Mártir {N}, seamos ayudados por su intercesión ante ti."
+  },
+  {
+   "lat": "Indulgéntiam nobis, quǽsumus, Dómine, beáta {N} Virgo et Martyr implóret: quæ tibi grata semper éxstitit, et mérito castitátis, et tuæ professióne virtútis.",
+   "es": "Implórenos, Señor, te lo rogamos, el perdón tu santa Virgen y Mártir {N}: que siempre te fue grata, por el mérito de su castidad y por la confesión de tu poder."
+  },
+  {
+   "lat": "Deus, qui pópulo tuo ætérnæ salútis beátum {N} minístrum tribuísti: præsta, quǽsumus; ut, quem Doctórem vitæ habúimus in terris, intercessórem habére mereámur in cœlis.",
+   "es": "Oh Dios, que diste a tu pueblo a tu santo {N} como ministro de la salvación eterna: concédenos, te rogamos, que merezcamos tener por intercesor en los cielos a quien tuvimos por Doctor de la vida en la tierra."
+  },
+  {
+   "lat": "Deus, qui pópulo tuo ætérnæ salútis beátum {N} minístrum tribuísti: præsta, quǽsumus; ut, quem Doctórem vitæ habúimus in terris, intercessórem habére mereámur in cælis.",
+   "es": "Oh Dios, que diste a tu pueblo a tu santo {N} como ministro de la salvación eterna: concédenos, te rogamos, que merezcamos tener por intercesor en los cielos a quien tuvimos por Doctor de la vida en la tierra."
+  },
+  {
+   "lat": "Súpplices te rogámus, omnípotens Deus: ut, quos tuis réficis sacraméntis, intercedénte beáto {N} Mártyre tuo, tibi étiam plácitis móribus dignánter tríbuas deservíre.",
+   "es": "Humildemente te rogamos, oh Dios omnipotente: que, a quienes alimentas con tus sacramentos, les concedas también, por la intercesión de tu santo Mártir {N}, servirte dignamente con una conducta que te agrade."
+  },
+  {
+   "lat": "Súpplices te rogámus, omnípotens Deus: ut, quos donis cœléstibus satiásti, intercedénte beáto {N} Mártyre tuo, perpétua protectióne custódias.",
+   "es": "Humildemente te rogamos, oh Dios omnipotente: que guardes con tu perpetua protección, por la intercesión de tu santo Mártir {N}, a quienes has saciado con los dones celestiales."
+  },
+  {
+   "lat": "Intercéssio nos, quǽsumus, Dómine, beáti {N} Abbátis comméndet: ut, quod nostris méritis non valémus, ejus patrocínio assequámur.",
+   "es": "Que nos recomiende, Señor, te rogamos, la intercesión de tu santo Abad {N}: para que alcancemos por su patrocinio lo que no podemos por nuestros méritos."
+  },
+  {
+   "lat": "Deus, qui nos beáti {N} Mártyris tui atque Pontíficis ánnua sollemnitáte lætíficas: concéde propítius; ut, cujus natalítia cólimus, de ejúsdem étiam protectióne gaudeámus.",
+   "es": "Oh Dios, que nos alegras con la solemnidad anual de tu santo Mártir y Obispo {N}: concédenos propicio que, celebrando su nacimiento al cielo, gocemos también de su protección."
+  },
+  {
+   "lat": "Deus, qui nos beáti {N} Mártyris tui atque Pontíficis ánnua solemnitáte lætíficas: concéde propítius; ut, cujus natalítia cólimus, de ejúsdem étiam protectióne gaudeámus.",
+   "es": "Oh Dios, que nos alegras con la solemnidad anual de tu santo Mártir y Obispo {N}: concédenos propicio que, celebrando su nacimiento al cielo, gocemos también de su protección."
+  },
+  {
+   "lat": "Deus, qui nos beáti {N} Confessóris tui ánnua solemnitáte lætíficas: concéde propítius; ut cujus natalítia cólimus, étiam actiónes imitémur.",
+   "es": "Oh Dios, que nos alegras con la solemnidad anual de tu santo Confesor {N}: concédenos propicio que, celebrando su nacimiento al cielo, imitemos también sus obras."
+  },
+  {
+   "lat": "Da, quǽsumus, omnípotens Deus: ut beáti {N} Confessóris tui atque Pontíficis veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
+   "es": "Concédenos, oh Dios omnipotente: que la venerable solemnidad de tu santo Confesor y Obispo {N} nos aumente la devoción y la salvación."
+  },
+  {
+   "lat": "Da, quǽsumus, omnípotens Deus: ut beáti {N} Apóstoli tui, quam prævenimus, veneránda solémnitas, et devotiónem nobis áugeat et salútem.",
+   "es": "Concédenos, oh Dios omnipotente: que la venerable solemnidad de tu santo Apóstol {N}, que anticipamos, nos aumente la devoción y la salvación."
+  },
+  {
+   "lat": "Da, quǽsumus, omnípotens Deus: ut qui beáti {N} Mártyris tui atque Pontíficis solémnia cólimus, ejus apud te intercessiónibus adjuvémur.",
+   "es": "Danos, oh Dios omnipotente: que, quienes celebramos la solemnidad de tu santo Mártir y Obispo {N}, seamos ayudados por su intercesión ante ti."
+  },
+  {
+   "lat": "Sancti {N} Pontíficis tui atque Doctóris nobis, Dómine, pia non desit orátio: quæ et múnera nostra concíliet; et tuam nobis indulgéntiam semper obtíneat.",
+   "es": "No nos falte, Señor, la piadosa oración de tu santo Obispo y Doctor {N}: que haga aceptos nuestros dones, y nos alcance siempre tu indulgencia."
+  },
+  {
+   "lat": "Sancti {N} Confessóris tui atque Pontíficis, quǽsumus, Dómine, ánnua sollémnitas pietáti tuæ nos reddat accéptos: ut, per hæc piæ placatiónis offícia, et illum beáta retribútio comitétur, et nobis grátiæ tuæ dona concíliet.",
+   "es": "Que la solemnidad anual de tu santo Confesor y Obispo {N}, Señor, nos haga aceptos a tu piedad: para que, por este oficio de piadosa reconciliación, a él lo acompañe la bienaventurada recompensa, y a nosotros nos alcance los dones de tu gracia."
+  }
+ ],
+ "names": {
+  "Telésphori": "Telesforo",
+  "Telésphoro": "Telesforo",
+  "Hygíni": "Higinio",
+  "Lúcii": "Lucio",
+  "Lúcio": "Lucio",
+  "Anicéti": "Aniceto",
+  "Anicéto": "Aniceto",
+  "Anacléti": "Anacleto",
+  "Dámaso": "Dámaso",
+  "Eleuthérii": "Eleuterio",
+  "Eleuthério": "Eleuterio",
+  "Evarísti": "Evaristo",
+  "Felícis": "Félix",
+  "Felíce": "Félix",
+  "Joannis": "Juan",
+  "Joánnis": "Juan",
+  "Joánne": "Juan",
+  "Leónis": "León",
+  "Lini": "Lino",
+  "Lino": "Lino",
+  "Marco": "Marcos",
+  "Melchíadis": "Melquíades",
+  "Melchíade": "Melquíades",
+  "Pii": "Pío",
+  "Pio": "Pío",
+  "Pontiáni": "Ponciano",
+  "Silvéstri": "Silvestre",
+  "Silvérii": "Silverio",
+  "Stéphani": "Esteban",
+  "Stéphano": "Esteban",
+  "Cleméntem": "Clemente",
+  "Martíni": "Martín",
+  "Cleti et Marcellíni": "Cleto y Marcelino",
+  "Sotéris et Caji": "Sotero y Cayo",
+  "Apollónia": "Apolonia",
+  "Apollóniæ": "Apolonia",
+  "Bibiánæ": "Bibiana",
+  "Bárbara": "Bárbara",
+  "Bárbaræ": "Bárbara",
+  "Catharínæ": "Catalina",
+  "Christína": "Cristina",
+  "Christínæ": "Cristina",
+  "Doróthea": "Dorotea",
+  "Dorótheæ": "Dorotea",
+  "Emerentiána": "Emerenciana",
+  "Emerentiánæ": "Emerenciana",
+  "Margaríta": "Margarita",
+  "Margarítæ": "Margarita",
+  "Martína": "Martina",
+  "Martínæ": "Martina",
+  "María": "María",
+  "Maríæ": "María",
+  "Terésia": "Teresa",
+  "Terésiæ": "Teresa",
+  "Agathæ": "Águeda",
+  "Claræ": "Clara",
+  "Lúciæ": "Lucía",
+  "Marthæ": "Marta",
+  "Petroníllæ": "Petronila",
+  "Praxédis": "Práxedes",
+  "Pudentiánæ": "Pudenciana",
+  "Gertrudis": "Gertrudis",
+  "Maurus": "Mauro",
+  "Antónii": "Antonio",
+  "Benedíctus": "Benito",
+  "Hilariónis": "Hilarión",
+  "Sabbas": "Sabas",
+  "Andréæ Corsíni": "Andrés Corsini",
+  "Caróli": "Carlos",
+  "Gregórii": "Gregorio",
+  "Gregórius": "Gregorio",
+  "Remígio": "Remigio",
+  "Athanásii": "Atanasio",
+  "Basílii": "Basilio",
+  "Ansélmus": "Anselmo",
+  "Isidórus": "Isidoro",
+  "Joánnis a Cruce": "Juan de la Cruz",
+  "Vincéntio et Anastásio": "Vicente y Anastasio",
+  "Gordiáno et Epímacho": "Gordiano y Epímaco",
+  "Christóphori": "Cristóbal",
+  "Mennæ": "Menas",
+  "Petri": "Pedro",
+  "Vitális": "Vital",
+  "Bonifátii": "Bonifacio",
+  "Marii": "Mario",
+  "Pantaleóne": "Pantaleón",
+  "Theodóro": "Teodoro",
+  "Chrysógono": "Crisógono",
+  "Timóthei": "Timoteo",
+  "Ignátii": "Ignacio",
+  "Simeónis": "Simeón",
+  "Románo": "Román",
+  "Cyríaco, Largo et Smarágdo": "Ciriaco, Largo y Esmaragdo",
+  "Alexándro, Evéntio, Theodúlo et Juvenále": "Alejandro, Evencio, Teódulo y Juvenal",
+  "Xysto, Felicíssimo et Agapíto": "Sixto, Felicísimo y Agapito",
+  "Xysti Felicíssimi et Agapíti": "Sixto, Felicísimo y Agapito",
+  "Eustáchio et Sóciis ejus": "Eustaquio y sus Compañeros",
+  "Eustáchii et Sociórum ejus": "Eustaquio y sus Compañeros",
+  "Perpétuæ et Felicitátis": "Perpetua y Felicidad",
+  "Plácidi et Sociórum ejus": "Plácido y sus Compañeros",
+  "Symphorósæ et filiórum ejus": "Sinforosa y sus hijos",
+  "Januárii et Sociórum ejus": "Jenaro y sus Compañeros",
+  "Faustíni et Jovítæ": "Faustino y Jovita",
+  "Gervásii et Protásii": "Gervasio y Protasio",
+  "Tibúrtii, Valeriáni et Máximi": "Tiburcio, Valeriano y Máximo",
+  "Hilárium": "Hilario",
+  "Isidórum": "Isidoro",
+  "Ansélmum": "Anselmo",
+  "Gregórium": "Gregorio",
+  "Bonaventúram": "Buenaventura",
+  "Bernárdum": "Bernardo",
+  "Ambrósium": "Ambrosio",
+  "Geórgio": "Jorge",
+  "Lauréntio": "Lorenzo",
+  "Mauri": "Mauro",
+  "Benedícti": "Benito",
+  "Ægídii": "Gil",
+  "Sabbæ": "Sabas",
+  "Polycárpi": "Policarpo",
+  "Blásii": "Blas",
+  "Zephyrínum": "Ceferino",
+  "Eusébii": "Eusebio",
+  "Paulíni": "Paulino",
+  "Lauréntii": "Lorenzo",
+  "Remígii": "Remigio",
+  "Isidóri": "Isidoro",
+  "Ansélmi": "Anselmo",
+  "Urbáni": "Urbano",
+  "Antóni": "Antonio",
+  "Aléxii": "Alejo",
+  "Hyacínthi": "Jacinto",
+  "Jacóbi": "Santiago",
+  "Thomæ": "Tomás",
+  "N.": "N.",
+  "N. et N.": "N. y N."
+ }
+}

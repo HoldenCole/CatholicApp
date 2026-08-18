@@ -201,6 +201,17 @@ class SpanishOverlayQA {
             assertTrue(!advent1.collect.eng.contains("Amén. Amén."))
             assertTrue(!vigil.collect.eng.contains("Amén. Amén."))
 
+            // Tranche 6: name-parameterized commune templates — the abbot
+            // collect (St Benedict), a papal martyr (St Polycarp), and a
+            // hand-translated proper collect (St Monica).
+            val benedict = ContentStore.allPropers.first { it.slug == "03-21" }
+            assertTrue(benedict.collect.eng.startsWith(
+                "Que nos recomiende, Señor, te rogamos, la intercesión de tu santo Abad Benito"))
+            val polycarp = ContentStore.allPropers.first { it.slug == "01-26" }
+            assertTrue(polycarp.collect.eng.contains("Mártir y Obispo Policarpo"))
+            val monica = ContentStore.allPropers.first { it.slug == "05-04" }
+            assertTrue(monica.collect.eng.contains("Santa Mónica"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
