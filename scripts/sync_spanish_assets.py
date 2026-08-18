@@ -31,6 +31,8 @@ FILES = [
     "saints_es.json",
     "reference_es.json",
     "courses_es.json",
+    "psalter_es.json",
+    "psalter_weekly_es.json",
 ]
 
 

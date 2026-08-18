@@ -359,6 +359,59 @@ def validate_courses():
     print(f"courses_es.json: {len(es)} courses checked")
 
 
+def validate_psalter():
+    """Psalter overlay: keys must exist, line counts must equal the source's,
+    every content line keeps its Latin ref prefix and mediant, and the
+    weekly fan-out stays index-aligned with its part's verses."""
+    path = ES / "psalter_es.json"
+    if not path.exists():
+        print("psalter_es.json: not present (skipped)")
+        return
+    src = json.load(open(SRC / "psalter.json"))
+    es = json.load(open(path))
+    for name, o in es.items():
+        check(name in src, f"psalter[{name}]: no such psalm")
+        lat = src.get(name, {}).get("lat", [])
+        lines = o.get("lines", [])
+        check(len(lines) == len(lat), f"psalter[{name}]: line count differs")
+        for i, (ll, el) in enumerate(zip(lat, lines)):
+            check(isinstance(el, str) and el.strip(),
+                  f"psalter[{name}][{i}]: empty")
+            check(not re.search(r"[<>{}]|\s{2}", el),
+                  f"psalter[{name}][{i}]: markup/artifact")
+            if not ll.startswith("(") and not ll.startswith("$"):
+                ref = ll.split(" ", 1)[0]
+                check(el.startswith(ref + " "),
+                      f"psalter[{name}][{i}]: ref prefix differs "
+                      f"({el[:20]!r} vs {ref!r})")
+    n = sum(len(v["lines"]) for v in es.values())
+    print(f"psalter_es.json: {len(es)}/{len(src)} psalms / {n} lines checked")
+
+    wpath = ES / "psalter_weekly_es.json"
+    if not wpath.exists():
+        print("psalter_weekly_es.json: not present (skipped)")
+        return
+    wsrc = json.load(open(SRC / "psalter_weekly.json"))
+    wes = json.load(open(wpath))
+    n = 0
+    for day, parts in wes.items():
+        check(day in wsrc, f"psalter_weekly[{day}]: no such day")
+        for key, lines in parts.items():
+            part = wsrc.get(day, {}).get(key)
+            check(part is not None,
+                  f"psalter_weekly[{day}].{key}: no such part")
+            verses = (part or {}).get("verses", [])
+            check(len(lines) == len(verses),
+                  f"psalter_weekly[{day}].{key}: verse count differs")
+            for i, l in enumerate(lines):
+                if l is None:
+                    continue
+                n += 1
+                check(isinstance(l, str) and l.strip(),
+                      f"psalter_weekly[{day}].{key}[{i}]: empty")
+    print(f"psalter_weekly_es.json: {n} verses checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -368,6 +421,7 @@ def main():
     validate_saints()
     validate_reference()
     validate_courses()
+    validate_psalter()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_keyed("hours_es.json", "hours.json",

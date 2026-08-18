@@ -138,8 +138,30 @@ so integration cannot silently misalign.
   structured texts, not plain pericopes.
   The DO Espanol PSALTER has the same provenance question as its
   readings; audit before importing the Office texts.
-- Office propers / readings (multi-MB) — DO Espanol coverage is ~94% for
-  the horas tree; same register/provenance audit applies before import.
+- **The Divine Office (in progress — tranche O1: the Psalter).** The
+  provenance audit CONFIRMED the suspicion: DO's Espanol psalter is a
+  mix — some psalms are the public-domain Torres Amat hand-lined into
+  liturgical verses, but many others (Ps 22, Ps 50, Ps 109, the modern
+  Benedictus…) were pasted VERBATIM from the modern copyrighted Spanish
+  liturgical psalter, translated from the Hebrew. Those can never ship.
+  `scripts/import_spanish_psalter.py` therefore accepts a DO psalm only
+  when its lines demonstrably ARE Torres Amat (mean per-line word
+  overlap ≥ 0.85 against the TA verse), and composes everything else
+  directly from the Torres Amat module: an anchored monotone alignment
+  maps each Latin line's Vulgate ref to its KJV-versified module verse
+  (title sentences trimmed by cognate evidence, Vulgate verse splits
+  absorbed), verse text is split across lines at punctuation nearest
+  the Latin's proportions, and the flex (†) and mediant (*) marks are
+  mirrored from the Latin. Output: `psalter_es.json` (187/202 entries,
+  3,099 lines) plus `psalter_weekly_es.json` (2,220 verses fanned out
+  by identical-Latin-line matching). The 15 remaining entries — the
+  deuterocanonical canticles (Daniel 3, Tobit, Judith, Sirach, Wisdom)
+  and the Athanasian Creed — await `psalter_supplements_es.json`
+  (tier-2 hand translations). Remaining Office tranches: hours.json
+  ordinary parts, commune_office, temporal propers (antiphons,
+  responsories, collects — DO Espanol, same register as the missal
+  propers we already ship; its Matins scripture lessons are verbatim
+  Torres Amat), and the seasonal hymns.
 - Stations of the Cross — **COMPLETE: `stations_es.json`**, all 14
   stations: traditional Via Crucis titles, the meditations translated
   (tier 2), and the received Spanish Stabat Mater verses (tier 1,

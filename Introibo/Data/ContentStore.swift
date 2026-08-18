@@ -127,6 +127,9 @@ final class ContentStore {
         let time_es: String
         let intro_es: String
     }
+    private struct PsalterES: Decodable {
+        let lines: [String]
+    }
     private struct CourseES: Decodable {
         let title_es: String
         let intro_es: String
@@ -214,6 +217,8 @@ final class ContentStore {
             saints          = load("saints",           as: [Saint].self)              ?? []
             reference       = load("reference",        as: [ReferenceEntry].self)     ?? []
             courses         = load("courses",          as: [Course].self)             ?? []
+            psalterTextData   = load("psalter",        as: [String: [String: [String]]].self) ?? [:]
+            psalterWeeklyData = load("psalter_weekly", as: [String: [String: Hour.Part]].self) ?? [:]
         }
         guard lang == .spanish else {
             uiStringsES = [:]
@@ -275,6 +280,37 @@ final class ContentStore {
                 if let t = o["med_es"] { m.med = t }
                 if let t = o["stabat_es"] { m.stabat_eng = t }
                 return m
+            }
+        }
+        // The Psalter (Torres Amat, translated from the Vulgate):
+        // line-aligned replacement of each psalm's eng array, then the
+        // same lines fan out to the weekly psalter (null keeps English).
+        // The office assembler is rebuilt AFTER this overlay, so the
+        // Spanish flows into every assembled hour.
+        if let es = load("psalter_es", as: [String: PsalterES].self) {
+            for (name, o) in es {
+                if var entry = psalterTextData[name], let eng = entry["eng"],
+                   eng.count == o.lines.count {
+                    entry["eng"] = o.lines
+                    psalterTextData[name] = entry
+                }
+            }
+        }
+        if let es = load("psalter_weekly_es",
+                         as: [String: [String: [String?]]].self) {
+            for (day, parts) in es {
+                guard var dayParts = psalterWeeklyData[day] else { continue }
+                for (key, lines) in parts {
+                    guard var part = dayParts[key],
+                          var verses = part.verses,
+                          verses.count == lines.count else { continue }
+                    for i in verses.indices {
+                        if let l = lines[i] { verses[i].eng = l }
+                    }
+                    part.verses = verses
+                    dayParts[key] = part
+                }
+                psalterWeeklyData[day] = dayParts
             }
         }
         // Schola Latina courses: localized (not merely translated) for

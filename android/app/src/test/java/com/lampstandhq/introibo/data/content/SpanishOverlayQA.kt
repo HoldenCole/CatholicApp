@@ -70,6 +70,7 @@ class SpanishOverlayQA {
             "ui_strings_es.json", "missal_propers_es.json",
             "missal_readings_es.json", "stations_es.json", "saints_es.json",
             "reference_es.json", "courses_es.json",
+            "psalter_es.json", "psalter_weekly_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",
@@ -305,6 +306,28 @@ class SpanishOverlayQA {
             val avePhrases = aveCourse.sections.first { it.type == "phrase" }.items!!
             assertEquals("Dios te salve, María,", avePhrases[0].eng)
 
+            // The Psalter (Office tranche O1): Torres Amat — DO's psalter
+            // was REJECTED where it pasted the modern copyrighted
+            // liturgical psalter (Ps 22, Ps 50…); those psalms now carry
+            // the public-domain Torres Amat text, ref prefixes and flex
+            // marks mirrored from the Latin.
+            val ps1 = ContentStore.psalterTextData["psalm1"]!!["eng"]!!
+            assertTrue(ps1[0].startsWith("1:1 Dichoso aquel varón"))
+            assertTrue(ps1[0].contains("†") && ps1[0].contains("*"))
+            val ps22 = ContentStore.psalterTextData["psalm22"]!!["eng"]!!
+            assertTrue(ps22[0].startsWith("22:1 El Señor es mi pastor"))
+            val ps50 = ContentStore.psalterTextData["psalm50"]!!["eng"]!!
+            assertTrue(ps50[0].startsWith("50:3a Ten piedad de mí"))
+            // Latin untouched.
+            assertTrue(ContentStore.psalterTextData["psalm1"]!!["lat"]!![0]
+                .startsWith("1:1 Beátus vir"))
+            // The weekly fan-out carries the same lines.
+            val mondayEs = ContentStore.psalterWeeklyData["monday"]!!
+                .getValue("matutinum.psalm2").verses!![0]
+            assertEquals("13:1a Dijo en su corazón el insensato: * No hay Dios.",
+                mondayEs.eng)
+            assertTrue(mondayEs.lat.startsWith("13:1a Dixit insípiens"))
+
             // The Canon of the Mass is covered: Te igitur, the Communicantes
             // (with the Joseph anchor exactly once), and the doxology.
             val canon = ContentStore.missal.first { it.slug == "canon" }
@@ -368,6 +391,8 @@ class SpanishOverlayQA {
         assertEquals("St. Padre Pio", ContentStore.saints.first { it.slug == "pio" }.name)
         assertEquals("Advent", ContentStore.reference.first { it.slug == "cal-advent" }.title)
         assertEquals("Ecclesiastical Vowels", ContentStore.courses.first { it.slug == "vowels" }.title)
+        assertTrue(ContentStore.psalterTextData["psalm1"]!!["eng"]!![0]
+            .startsWith("1:1 Blessed is the man"))
         // The English data fix that tranche 2 flushed out: Septuagesima's
         // secret is Muneribus nostris, not the C2a martyr's secret.
         val septuagesima = ContentStore.allPropers.first { it.slug == "quadp1-0" }

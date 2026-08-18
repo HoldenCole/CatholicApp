@@ -147,10 +147,10 @@ object ContentStore {
 
     // Retained so the office assembler can be rebuilt when the vernacular
     // overlay changes (the maps are shared by reference, not copied).
-    private var psalterWeeklyData: Map<String, Map<String, Hour.Part>> = emptyMap()
+    internal var psalterWeeklyData: Map<String, Map<String, Hour.Part>> = emptyMap()
     private var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     private var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
-    private var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
+    internal var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
 
     private fun rebuildOfficeAssembler() {
         officeAssembler = OfficeAssembler(
@@ -185,6 +185,11 @@ object ContentStore {
         val name_es: String,
         val time_es: String,
         val intro_es: String,
+    )
+
+    @kotlinx.serialization.Serializable
+    private data class PsalterES(
+        val lines: List<String>,
     )
 
     @kotlinx.serialization.Serializable
@@ -299,6 +304,8 @@ object ContentStore {
         saints = load("saints.json") ?: emptyList()
         reference = load("reference.json") ?: emptyList()
         courses = load("courses.json") ?: emptyList()
+        psalterTextData = load("psalter.json") ?: emptyMap()
+        psalterWeeklyData = load("psalter_weekly.json") ?: emptyMap()
 
         uiStringsES = emptyMap()
 
@@ -356,6 +363,40 @@ object ContentStore {
                         med = o["med_es"] ?: s.med,
                         stabatEng = o["stabat_es"] ?: s.stabatEng,
                     )
+                }
+            }
+            // The Psalter (Torres Amat, translated from the Vulgate):
+            // line-aligned replacement of each psalm's eng array, then the
+            // same lines fan out to the weekly psalter (null keeps
+            // English). The office assembler is rebuilt AFTER this
+            // overlay, so the Spanish flows into every assembled hour.
+            load<Map<String, PsalterES>>("psalter_es.json")?.let { es ->
+                psalterTextData = psalterTextData.mapValues { (name, entry) ->
+                    val o = es[name] ?: return@mapValues entry
+                    val eng = entry["eng"]
+                    if (eng != null && eng.size == o.lines.size) {
+                        entry + ("eng" to o.lines)
+                    } else {
+                        entry
+                    }
+                }
+            }
+            load<Map<String, Map<String, List<String?>>>>("psalter_weekly_es.json")?.let { es ->
+                psalterWeeklyData = psalterWeeklyData.mapValues { (day, parts) ->
+                    val dayEs = es[day] ?: return@mapValues parts
+                    parts.mapValues { (key, part) ->
+                        val lines = dayEs[key] ?: return@mapValues part
+                        val verses = part.verses
+                        if (verses != null && verses.size == lines.size) {
+                            part.copy(
+                                verses = verses.mapIndexed { i, vv ->
+                                    lines[i]?.let { vv.copy(eng = it) } ?: vv
+                                },
+                            )
+                        } else {
+                            part
+                        }
+                    }
                 }
             }
             // Schola Latina courses: localized (not merely translated) for

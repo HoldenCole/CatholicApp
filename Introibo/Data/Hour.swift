@@ -48,7 +48,7 @@ struct Hour: Identifiable, Decodable, Hashable, ScheduledHour {
 
         struct Verse: Decodable, Hashable {
             let lat: String
-            let eng: String
+            var eng: String
         }
     }
 }
