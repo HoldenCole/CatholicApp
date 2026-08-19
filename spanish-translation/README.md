@@ -263,8 +263,21 @@ so integration cannot silently misalign.
   clean before shipping. Its NOPAIR census also surfaced the app's
   pre-existing Latin-only corpus: 268 fields (163 unique texts — variant
   hymns, the Duo Séraphim responsory, several pre-1955 octave lesson
-  sets) that have neither English nor Spanish. Translating that corpus
-  (both languages) is the next tranche.
+  sets) that have neither English nor Spanish. **Tranches O9a (English)
+  and O9b (Spanish) — COMPLETE.** O9a filled the English side in the
+  core files from the DO English tree (DO register, thee/thou; classic
+  public-domain hymn translations for the pre-Urban VIII hymn texts).
+  O9b filled the Spanish side in the overlays: DO Espanol traditional-
+  register texts where the tree has them, Torres Amat for the scripture
+  lessons (1 Sam octave sets, Prov 8 antiphons), and hand translations
+  in the traditional register for the variant hymns and patristic
+  lessons the Espanol tree lacks — the old-text `hymnusm_*` hymns
+  (Quodcúmque vinclis, Aurea luce, Christe Redemptor Conserva, Jesu
+  Salvátor sǽculi, the pre-Urban Vexilla Regis and Salvete flores
+  doxologies, etc.) each carry their own translation, distinct from the
+  revised-text hymns beside them. Rubric pointer tails (gospel-incipit
+  `lectio8/9` ellipses, cross-reference headings) stay Latin in both
+  languages by design. The QA tool exits fully clean over the result.
   **Tranche O8 — the Rosary: COMPLETE (`mysteries_es.json`, all 15
   mysteries with titles, meditations, and fruits; `rosary_prayers_es.json`,
   the 7 constituent prayers in their received Spanish texts, matching

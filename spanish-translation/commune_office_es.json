@@ -445,6 +445,15 @@
   },
   "vesperae.capitulum": {
    "eng": "Desde el principio fui creada, antes de los siglos, y por los siglos duraré. En la santa morada, en su presencia ofrecí el culto."
+  },
+  "hymnus_matutinum": {
+   "eng": "Aquel a quien la tierra, el mar y las estrellas\nveneran, adoran y anuncian;\nel que gobierna cielos, tierra y abismos,\nreside en el seno de María.\n\nAl que el sol, la luna y todos los elementos\nsirven en el tiempo, le llevan\nlas entrañas de una virgen\nllena de gracia celestial.\n\n¡Oh Madre dichosa! En el arca de su seno,\npor un prodigio de la gracia,\nse encierra el supremo Artífice\nque en sus manos sostiene el orbe.\n\nDichosa aquella que al anuncio\ndel mensajero celestial fue fecundada\npor el Espíritu Santo; por cuyo seno se nos dio\nel deseado de todos los pueblos.\n\n* Gloria a ti, oh Jesús, nacido de la Virgen,\njuntamente con el Padre\ny el Espíritu Santo,\npor los siglos de los siglos.\nAmén."
+  },
+  "hymnus_laudes": {
+   "eng": "Oh la más gloriosa de las Vírgenes,\nelevada más allá de las estrellas,\nque alimentáis con la leche de vuestro seno\na vuestro Creador hecho niño.\n\nPor vuestro augusto Hijo nos devolvéis aquello\nde lo cual Eva nos había desgraciadamente privado;\nabrís las puertas del cielo para franquear\nsu entrada a los que lloran.\n\nVos sois la puerta del gran Rey\ny su vestíbulo radiante de claridad.\n¡Oh pueblos redimidos, celebrad la vida\nque se nos da por esta Virgen!\n\n* Gloria a Vos, oh Jesús, nacido\nde la Virgen, juntamente\ncon el Padre y el Espíritu Santo,\npor los siglos de los siglos.\nAmén."
+  },
+  "responsory_breve_sexta": {
+   "eng": "R.br. Dios la protegerá * con su faz.\nR. Dios la protegerá * con su faz.\nV. En medio de ella está Dios; no será conmovida.\nR. Con su faz.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Dios la protegerá * con su faz."
   }
  },
  "C11": {
@@ -549,6 +558,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Desde el principio fui creada, antes de los siglos, y por los siglos duraré. En la santa morada, en su presencia ofrecí el culto."
+  },
+  "responsory_breve_sexta": {
+   "eng": "R.br. Dios la protegerá * con su faz.\nR. Dios la protegerá * con su faz.\nV. En medio de ella está Dios; no será conmovida.\nR. Con su faz.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Dios la protegerá * con su faz."
   }
  },
  "C12": {
@@ -1018,6 +1030,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida, que Dios ha prometido a los que le aman."
+  },
+  "hymnus_matutinum": {
+   "eng": "Dios, de tus fieles soldados\nherencia, premio, corona,\nabsuelve a los que celebran\nde un Mártir santo las glorias.\n\nVanos placeres del mundo,\ngozos, halagos, lisonjas,\ncomo viles despreciando,\nbienes celestiales logra.\n\nCombates, penas, tormentos,\nvaronilmente soporta;\npor ti vertiendo su sangre\ntus dones eternos goza.\n\nPor su intercesion tus siervos,\n¡oh Dios! tu clemencia imploran:\nhonrando el triunfo del Mártir,\nnuestros pecados perdona.\n\n* Demos al Padre y al Hijo\nperenne alabanza y gloria,\ny juntamente al Paráclito,\npor eternidad dichosa.\nAmén."
   }
  },
  "C2-1": {
@@ -1098,6 +1113,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida, que Dios ha prometido a los que le aman."
+  },
+  "hymnus_matutinum": {
+   "eng": "Dios, de tus fieles soldados\nherencia, premio, corona,\nabsuelve a los que celebran\nde un Mártir santo las glorias.\n\nVanos placeres del mundo,\ngozos, halagos, lisonjas,\ncomo viles despreciando,\nbienes celestiales logra.\n\nCombates, penas, tormentos,\nvaronilmente soporta;\npor ti vertiendo su sangre\ntus dones eternos goza.\n\nPor su intercesion tus siervos,\n¡oh Dios! tu clemencia imploran:\nhonrando el triunfo del Mártir,\nnuestros pecados perdona.\n\n* Demos al Padre y al Hijo\nperenne alabanza y gloria,\ny juntamente al Paráclito,\npor eternidad dichosa.\nAmén."
   }
  },
  "C2a": {
@@ -1222,6 +1240,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida, que Dios ha prometido a los que le aman."
+  },
+  "hymnus_matutinum": {
+   "eng": "Dios, de tus fieles soldados\nherencia, premio, corona,\nabsuelve a los que celebran\nde un Mártir santo las glorias.\n\nVanos placeres del mundo,\ngozos, halagos, lisonjas,\ncomo viles despreciando,\nbienes celestiales logra.\n\nCombates, penas, tormentos,\nvaronilmente soporta;\npor ti vertiendo su sangre\ntus dones eternos goza.\n\nPor su intercesion tus siervos,\n¡oh Dios! tu clemencia imploran:\nhonrando el triunfo del Mártir,\nnuestros pecados perdona.\n\n* Demos al Padre y al Hijo\nperenne alabanza y gloria,\ny juntamente al Paráclito,\npor eternidad dichosa.\nAmén."
   }
  },
  "C2a-1": {
@@ -1302,6 +1323,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida, que Dios ha prometido a los que le aman."
+  },
+  "hymnus_matutinum": {
+   "eng": "Dios, de tus fieles soldados\nherencia, premio, corona,\nabsuelve a los que celebran\nde un Mártir santo las glorias.\n\nVanos placeres del mundo,\ngozos, halagos, lisonjas,\ncomo viles despreciando,\nbienes celestiales logra.\n\nCombates, penas, tormentos,\nvaronilmente soporta;\npor ti vertiendo su sangre\ntus dones eternos goza.\n\nPor su intercesion tus siervos,\n¡oh Dios! tu clemencia imploran:\nhonrando el triunfo del Mártir,\nnuestros pecados perdona.\n\n* Demos al Padre y al Hijo\nperenne alabanza y gloria,\ny juntamente al Paráclito,\npor eternidad dichosa.\nAmén."
   }
  },
  "C2b": {
@@ -1426,6 +1450,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida, que Dios ha prometido a los que le aman."
+  },
+  "hymnus_matutinum": {
+   "eng": "Dios, de tus fieles soldados\nherencia, premio, corona,\nabsuelve a los que celebran\nde un Mártir santo las glorias.\n\nVanos placeres del mundo,\ngozos, halagos, lisonjas,\ncomo viles despreciando,\nbienes celestiales logra.\n\nCombates, penas, tormentos,\nvaronilmente soporta;\npor ti vertiendo su sangre\ntus dones eternos goza.\n\nPor su intercesion tus siervos,\n¡oh Dios! tu clemencia imploran:\nhonrando el triunfo del Mártir,\nnuestros pecados perdona.\n\n* Demos al Padre y al Hijo\nperenne alabanza y gloria,\ny juntamente al Paráclito,\npor eternidad dichosa.\nAmén."
   }
  },
  "C2b-1": {
@@ -1506,6 +1533,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida, que Dios ha prometido a los que le aman."
+  },
+  "hymnus_matutinum": {
+   "eng": "Dios, de tus fieles soldados\nherencia, premio, corona,\nabsuelve a los que celebran\nde un Mártir santo las glorias.\n\nVanos placeres del mundo,\ngozos, halagos, lisonjas,\ncomo viles despreciando,\nbienes celestiales logra.\n\nCombates, penas, tormentos,\nvaronilmente soporta;\npor ti vertiendo su sangre\ntus dones eternos goza.\n\nPor su intercesion tus siervos,\n¡oh Dios! tu clemencia imploran:\nhonrando el triunfo del Mártir,\nnuestros pecados perdona.\n\n* Demos al Padre y al Hijo\nperenne alabanza y gloria,\ny juntamente al Paráclito,\npor eternidad dichosa.\nAmén."
   }
  },
  "C3": {
@@ -2565,6 +2595,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C4-1": {
@@ -2645,6 +2678,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C4a": {
@@ -2728,6 +2764,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C4b": {
@@ -2808,6 +2847,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C4b-2": {
@@ -2888,6 +2930,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C5": {
@@ -3030,6 +3075,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C5-1": {
@@ -3110,6 +3158,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C5a": {
@@ -3234,6 +3285,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C5b": {
@@ -3358,6 +3412,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Este es el gran sacerdote que agradó a Dios en su vida: fue hallado intachable, y en el tiempo de la ira fue reconciliador."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "C6": {
@@ -3909,6 +3966,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Hermanos: El que se gloría, que se gloríe en el Señor. Porque no está acreditado el que se recomienda a sí mismo, sino aquel a quien el Señor recomienda."
+  },
+  "hymnus_matutinum": {
+   "eng": "Oh Hijo de la Virgen y Creador de tu Madre.\nTú a quien Élla concibió y dio a luz permaneciendo virgen;\nnosotros celebramos la fiesta de una Virgen bienaventurada;\nrecibe nuestros votos."
   }
  },
  "C6a-1": {
@@ -3989,6 +4049,9 @@
   },
   "vesperae.capitulum": {
    "eng": "Hermanos: El que se gloría, que se gloríe en el Señor. Porque no está acreditado el que se recomienda a sí mismo, sino aquel a quien el Señor recomienda."
+  },
+  "hymnus_matutinum": {
+   "eng": "Oh Hijo de la Virgen y Creador de tu Madre.\nTú a quien Élla concibió y dio a luz permaneciendo virgen;\nnosotros celebramos la fiesta de una Virgen bienaventurada;\nrecibe nuestros votos."
   }
  },
  "C6b": {
@@ -4906,6 +4969,9 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "hymnus_matutinum": {
+   "eng": "Jerusalén celeste,\nvisión de paz dichosa:\nvivientes son las piedras\nde tu estructura hermosa;\ngloriosos paraninfos\nte siguen como a esposa:\nÁngeles a millares\nte cercan en redor.\n\n¡Oh esposa felicísima!\ncon la gloria dotada\ndel Padre, y por el Hijo\ncon dones hermoseada;\nReina de Cristo príncipe,\nquerida y bien amada;\nciudad del cielo empíreo\nradiante de esplendor.\n\nAquí brillan las puertas\nde perlas y diamantes:\nLas calles y las plazas\nrebosan de habitantes:\nallí felices moran\nlos que en virtud florecen,\ny por Jesus padecen\nangustias y aflicción.\n\nCon el cincel cortadas,\ny á golpes de martillo\nlabradas y bruñidas\npiedras de hermoso brillo,\nelevan esta fábrica\ndel cielo en las alturas,\nunidas las junturas\ncon arte y perfección.\n\nDemos gloria al Altísimo,\nal Padre sempiterno,\ny al Hijo de Dios único,\nigual y coeterno;\ntambien al Santo Espíritu,\nque espira su amor tierno,\nhonor, imperio y gloria\npor los siglos,\nAmén."
   }
  },
  "C9": {

@@ -41,6 +41,9 @@
   },
   "responsory7": {
    "eng": "R. Oh Señor, Padre mío y Dios de mi vida, no me abandones a mis malos pensamientos; no me des ojos altaneros, y aparta de mí, Señor, todo mal deseo; quita de mí la intemperancia,\n* Y no me entregues a un ánimo inverecundo y desenfrenado.\nV. No me abandones, Señor; no sea que se acrecienten mis ignorancias y se multipliquen mis faltas.\nR. Y no me entregues a un ánimo inverecundo y desenfrenado."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "081-1": {
@@ -78,6 +81,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "081-3": {
@@ -115,6 +121,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola recorrí todo el giro del cielo, y me paseé por las olas del mar, y en toda gente y en todo pueblo tuve el primado:\n* Con mi propio poder hollé las cervices de los soberbios y de los altivos.\nV. Yo habito en las alturas, y mi trono está sobre una columna de nube.\nR. Con mi propio poder hollé las cervices de los soberbios y de los altivos."
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
   }
  },
  "081-5": {
@@ -132,6 +141,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "081-6": {
@@ -190,6 +202,15 @@
   },
   "responsory7": {
    "eng": "R. Oh Señor, Padre mío y Dios de mi vida, no me abandones a mis malos pensamientos; no me des ojos altaneros, y aparta de mí, Señor, todo mal deseo; quita de mí la intemperancia,\n* Y no me entregues a un ánimo inverecundo y desenfrenado.\nV. No me abandones, Señor; no sea que se acrecienten mis ignorancias y se multipliquen mis faltas.\nR. Y no me entregues a un ánimo inverecundo y desenfrenado."
+  },
+  "responsory6": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
   }
  },
  "082-1": {
@@ -227,6 +248,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "082-3": {
@@ -264,6 +288,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola recorrí todo el giro del cielo, y me paseé por las olas del mar, y en toda gente y en todo pueblo tuve el primado:\n* Con mi propio poder hollé las cervices de los soberbios y de los altivos.\nV. Yo habito en las alturas, y mi trono está sobre una columna de nube.\nR. Con mi propio poder hollé las cervices de los soberbios y de los altivos."
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
   }
  },
  "082-5": {
@@ -281,6 +308,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "082-6": {
@@ -342,6 +372,18 @@
   },
   "responsory7": {
    "eng": "R. Oh Señor, Padre mío y Dios de mi vida, no me abandones a mis malos pensamientos; no me des ojos altaneros, y aparta de mí, Señor, todo mal deseo; quita de mí la intemperancia,\n* Y no me entregues a un ánimo inverecundo y desenfrenado.\nV. No me abandones, Señor; no sea que se acrecienten mis ignorancias y se multipliquen mis faltas.\nR. Y no me entregues a un ánimo inverecundo y desenfrenado."
+  },
+  "responsory6": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
+  },
+  "ant_1c": {
+   "eng": "La sabiduría * clama en las plazas: Si alguno ama la sabiduría, venga a mí y la hallará; y cuando la hubiere hallado, dichoso será si la retiene."
   }
  },
  "083-1": {
@@ -379,6 +421,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "083-3": {
@@ -416,6 +461,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola recorrí todo el giro del cielo, y me paseé por las olas del mar, y en toda gente y en todo pueblo tuve el primado:\n* Con mi propio poder hollé las cervices de los soberbios y de los altivos.\nV. Yo habito en las alturas, y mi trono está sobre una columna de nube.\nR. Con mi propio poder hollé las cervices de los soberbios y de los altivos."
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
   }
  },
  "083-5": {
@@ -433,6 +481,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "083-6": {
@@ -494,6 +545,12 @@
   },
   "responsory7": {
    "eng": "R. Oh Señor, Padre mío y Dios de mi vida, no me abandones a mis malos pensamientos; no me des ojos altaneros, y aparta de mí, Señor, todo mal deseo; quita de mí la intemperancia,\n* Y no me entregues a un ánimo inverecundo y desenfrenado.\nV. No me abandones, Señor; no sea que se acrecienten mis ignorancias y se multipliquen mis faltas.\nR. Y no me entregues a un ánimo inverecundo y desenfrenado."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
   }
  },
  "084-1": {
@@ -531,6 +588,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "084-3": {
@@ -568,6 +628,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola recorrí todo el giro del cielo, y me paseé por las olas del mar, y en toda gente y en todo pueblo tuve el primado:\n* Con mi propio poder hollé las cervices de los soberbios y de los altivos.\nV. Yo habito en las alturas, y mi trono está sobre una columna de nube.\nR. Con mi propio poder hollé las cervices de los soberbios y de los altivos."
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
   }
  },
  "084-5": {
@@ -585,6 +648,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "084-6": {
@@ -643,6 +709,21 @@
   },
   "responsory7": {
    "eng": "R. Oh Señor, Padre mío y Dios de mi vida, no me abandones a mis malos pensamientos; no me des ojos altaneros, y aparta de mí, Señor, todo mal deseo; quita de mí la intemperancia,\n* Y no me entregues a un ánimo inverecundo y desenfrenado.\nV. No me abandones, Señor; no sea que se acrecienten mis ignorancias y se multipliquen mis faltas.\nR. Y no me entregues a un ánimo inverecundo y desenfrenado."
+  },
+  "responsory6": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
+  },
+  "ant_1_": {
+   "eng": "Observa, hijo, * los preceptos de tu padre, y no desprecies los consejos de tu madre; guárdalos siempre en tu corazón."
+  },
+  "ant_1c": {
+   "eng": "El Señor me tuvo consigo * al principio de sus caminos, antes que crease cosa alguna: todavía no existían los abismos, y yo estaba ya concebida: cuando extendía él los cielos, estaba yo presente, disponiendo con él todas las cosas."
   }
  },
  "085-1": {
@@ -680,6 +761,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "085-3": {
@@ -717,6 +801,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola recorrí todo el giro del cielo, y me paseé por las olas del mar, y en toda gente y en todo pueblo tuve el primado:\n* Con mi propio poder hollé las cervices de los soberbios y de los altivos.\nV. Yo habito en las alturas, y mi trono está sobre una columna de nube.\nR. Con mi propio poder hollé las cervices de los soberbios y de los altivos."
+  },
+  "responsory3": {
+   "eng": "R. Envía, Señor, la sabiduría desde el solio de tu grandeza, para que esté conmigo y conmigo obre.\n* A fin de que sepa en todo tiempo qué es lo que te place.\nV. Dame, Señor, aquella sabiduría que reside en tu trono.\nR. A fin de que sepa en todo tiempo qué es lo que te place.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. A fin de que sepa en todo tiempo qué es lo que te place."
   }
  },
  "085-5": {
@@ -734,6 +821,9 @@
   },
   "responsory2": {
    "eng": "R. Yo sola di la vuelta al cielo, y me paseé por las olas del mar, y en todas las naciones y en todos los pueblos tuve la primacía.\n* Y pisé con mi poder la cerviz de los grandes y de los soberbios.\nV. Yo en los altísimos cielos puse mi morada, mi trono sobre una columna de nubes.\nR. * Y pisé con mi poder la cerviz de los grandes y de los soberbios."
+  },
+  "responsory3": {
+   "eng": "R. Aparta lejos de mí, Señor, toda palabra perversa y falsa:\n* No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nV. Dos cosas te he pedido; no me las niegues antes que muera.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento.\nR. No me des ni riquezas ni pobreza, sino tan sólo lo necesario para mi sustento."
   }
  },
  "085-6": {
@@ -798,6 +888,9 @@
   },
   "responsory7": {
    "eng": "R. ¿Quién me diera, oh Señor, que eres el único Dios, que me guarecieses y escondieses en el sepulcro hasta que pase tu furor,\n* Y me señalases el plazo en que te has de acordar de mí?\nV. ¿Son acaso tus días como los días del hombre, para que hayas de ir inquiriendo mis iniquidades, siendo así que nadie pueda librarse de tus manos?\nR. Y me señalases el plazo en que te has de acordar de mí."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "091-1": {
@@ -962,6 +1055,9 @@
   },
   "responsory7": {
    "eng": "R. ¿Quién me diera, oh Señor, que eres el único Dios, que me guarecieses y escondieses en el sepulcro hasta que pase tu furor,\n* Y me señalases el plazo en que te has de acordar de mí?\nV. ¿Son acaso tus días como los días del hombre, para que hayas de ir inquiriendo mis iniquidades, siendo así que nadie pueda librarse de tus manos?\nR. Y me señalases el plazo en que te has de acordar de mí."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "092-1": {
@@ -1126,6 +1222,9 @@
   },
   "responsory7": {
    "eng": "R. Hemos oído referir las tribulaciones que han sufrido las ciudades y nos sentimos desfallecer; el temor y la ansiedad se han apoderado de nosotros y de nuestros hijos; aun los mismos montes se niegan a ofrecernos refugio en nuestra fuga;\n* ¡Piedad, Señor!\nV. Hemos pecado con nuestros padres, hemos obrado injustamente, hemos cometido la iniquidad.\nR. ¡Piedad, Señor!"
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "093-1": {
@@ -1302,6 +1401,9 @@
   },
   "responsory7": {
    "eng": "R. Confórtame, oh Rey, Tú que tienes la primacía sobre los Santos:\n* Y pon en mi boca palabras discretas y apropiadas.\nV. Señor, Rey de toda potestad, vuelve sus planes contra ellos mismos.\nR. Y pon en mi boca palabras discretas y apropiadas."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "094-1": {
@@ -1466,6 +1568,9 @@
   },
   "responsory7": {
    "eng": "R. Nosotros no conocemos otro Dios que el Señor en quien esperamos.\n* El cual no nos abandona, ni niega la salvación a nuestro pueblo.\nV. Con abundantes lágrimas imploremos su perdón, y humillemos nuestras almas ante su acatamiento.\nR. El cual no nos abandona, ni niega la salvación a nuestro pueblo."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "095-1": {
@@ -1630,6 +1735,9 @@
   },
   "responsory7": {
    "eng": "R. Reverberó el sol en los broqueles de oro, cuyo resplandor se reflejó en las montañas:\n* Y desvaneciose el poderío de los gentiles,\nV. Grande y poderoso era, ciertamente, su ejército, mas Judas, con sus huestes, se acercó para dar la batalla.\nR. Y desvaneciose el poderío de los gentiles."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "101-1": {
@@ -1794,6 +1902,9 @@
   },
   "responsory7": {
    "eng": "R. Reverberó el sol en los broqueles de oro, cuyo resplandor se reflejó en las montañas:\n* Y desvaneciose el poderío de los gentiles,\nV. Grande y poderoso era, ciertamente, su ejército, mas Judas, con sus huestes, se acercó para dar la batalla.\nR. Y desvaneciose el poderío de los gentiles."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "102-1": {
@@ -1958,6 +2069,9 @@
   },
   "responsory7": {
    "eng": "R. Reverberó el sol en los broqueles de oro, cuyo resplandor se reflejó en las montañas:\n* Y desvaneciose el poderío de los gentiles,\nV. Grande y poderoso era, ciertamente, su ejército, mas Judas, con sus huestes, se acercó para dar la batalla.\nR. Y desvaneciose el poderío de los gentiles."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "103-1": {
@@ -2122,6 +2236,9 @@
   },
   "responsory7": {
    "eng": "R. Reverberó el sol en los broqueles de oro, cuyo resplandor se reflejó en las montañas:\n* Y desvaneciose el poderío de los gentiles,\nV. Grande y poderoso era, ciertamente, su ejército, mas Judas, con sus huestes, se acercó para dar la batalla.\nR. Y desvaneciose el poderío de los gentiles."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "104-1": {
@@ -2286,6 +2403,9 @@
   },
   "responsory7": {
    "eng": "R. Reverberó el sol en los broqueles de oro, cuyo resplandor se reflejó en las montañas:\n* Y desvaneciose el poderío de los gentiles,\nV. Grande y poderoso era, ciertamente, su ejército, mas Judas, con sus huestes, se acercó para dar la batalla.\nR. Y desvaneciose el poderío de los gentiles."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "105-1": {
@@ -2477,6 +2597,9 @@
   },
   "responsory7": {
    "eng": "R. Pueblo digno de alabanza,\n* Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad.\nV. Feliz el pueblo cuyo Señor es el mismo Dios; dichoso el pueblo elegido como herencia.\nR. Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "111-1": {
@@ -2641,6 +2764,9 @@
   },
   "responsory7": {
    "eng": "R. Pueblo digno de alabanza,\n* Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad.\nV. Feliz el pueblo cuyo Señor es el mismo Dios; dichoso el pueblo elegido como herencia.\nR. Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "112-1": {
@@ -2805,6 +2931,9 @@
   },
   "responsory7": {
    "eng": "R. Pueblo digno de alabanza,\n* Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad.\nV. Feliz el pueblo cuyo Señor es el mismo Dios; dichoso el pueblo elegido como herencia.\nR. Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "113-1": {
@@ -2969,6 +3098,9 @@
   },
   "responsory7": {
    "eng": "R. Pueblo digno de alabanza,\n* Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad.\nV. Feliz el pueblo cuyo Señor es el mismo Dios; dichoso el pueblo elegido como herencia.\nR. Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "114-1": {
@@ -3133,6 +3265,9 @@
   },
   "responsory7": {
    "eng": "R. Pueblo digno de alabanza,\n* Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad.\nV. Feliz el pueblo cuyo Señor es el mismo Dios; dichoso el pueblo elegido como herencia.\nR. Al que bendijo el Señor de los ejércitos, diciendo: Tú eres la obra de mis manos, tú, Israel, eres mi heredad."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "115-1": {
@@ -3481,6 +3616,9 @@
   },
   "responsory3": {
    "eng": "R. Los extranjeros no pasarán más por Jerusalén:\n* Pues en aquel día los montes manarán dulzura, y los collados derramarán leche y miel, dice el Señor.\nV. Dios vendrá del Líbano, y el Santo del monte sombrío y fértil.\nR. Pues en aquel día los montes manarán dulzura, y los collados derramarán leche y miel, dice el Señor.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Pues en aquel día los montes manarán dulzura, y los collados derramarán leche y miel, dice el Señor."
+  },
+  "ant_3c": {
+   "eng": "Jerusalén, * mira hacia el Oriente, y contempla, aleluya."
   }
  },
  "adv1-2": {
@@ -3516,6 +3654,12 @@
   },
   "responsory3": {
    "eng": "R. He aquí que vengo desde el Austro, Yo el Señor Dios vuestro.\n* Para visitaros en la paz.\nV. Os miraré y haré que crezcáis: os multiplicaréis, y estableceré mi alianza con vosotros.\nR. Para visitaros en la paz.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Para visitaros en la paz."
+  },
+  "ant_3_": {
+   "eng": "Buscad al Señor, * mientras se le encuentra: invocadlo mientras está cerca, aleluya."
+  },
+  "ant_3c": {
+   "eng": "Prorrumpan los montes * en júbilo, y los collados en justicia, porque el Señor, luz del mundo, viene con poder."
   }
  },
  "adv1-3": {
@@ -4392,6 +4536,12 @@
   },
   "responsory3": {
    "eng": "R. Virgen de Israel, vuelve a tus ciudades:\n* ¿Hasta cuándo te apartarás contristada? Darás a luz al Señor Salvador, oblación nueva en la tierra: * Los hombres andarán por el camino de la salvación,\nV. Te amé con perpetua caridad; por eso te atraje hacia mí porque te tuve compasión.\nR. ¿Hasta cuándo te apartarás contristada? Darás a luz al Señor Salvador, oblación nueva en la tierra.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Los hombres andarán por el camino de la salvación."
+  },
+  "ant_2_": {
+   "eng": "Despierta, despierta, * revístete de fuerza, brazo del Señor."
+  },
+  "ant_2c": {
+   "eng": "El día del Señor vendrá como el ladrón * en la noche: estad, pues, preparados, porque a la hora que no pensáis vendrá el Hijo del hombre."
   }
  },
  "adv4-3": {
@@ -4867,6 +5017,9 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "versum_0": {
+   "eng": "V. He aquí que le he puesto por testigo a los pueblos.\nR. Por caudillo y maestro de las naciones."
   }
  },
  "epi1-0a": {
@@ -4935,6 +5088,9 @@
   },
   "versum_commemoratio": {
    "eng": "V. Vienen todos de Saba. Aleluya.\nR. Trayendo incienso y oro. Aleluya."
+  },
+  "versum_2": {
+   "eng": "V. Adorad a Dios. Aleluya.\nR. Todos sus ángeles. Aleluya."
   }
  },
  "epi1-0b": {
@@ -5207,6 +5363,9 @@
   },
   "responsory7": {
    "eng": "R. A ti, oh Señor, elevo mi alma:\n* Dios mío, en ti confío, no quede por ello avergonzado.\nV. Guarda mi alma y líbrame.\nR. Dios mío, en ti confío, no quede por ello avergonzado."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "epi2-0tt": {
@@ -5409,6 +5568,9 @@
   },
   "responsory7": {
    "eng": "R. A ti, oh Señor, elevo mi alma:\n* Dios mío, en ti confío, no quede por ello avergonzado.\nV. Guarda mi alma y líbrame.\nR. Dios mío, en ti confío, no quede por ello avergonzado."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "epi3-0tt": {
@@ -5599,6 +5761,9 @@
   },
   "responsory7": {
    "eng": "R. A ti, oh Señor, elevo mi alma:\n* Dios mío, en ti confío, no quede por ello avergonzado.\nV. Guarda mi alma y líbrame.\nR. Dios mío, en ti confío, no quede por ello avergonzado."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "epi4-0tt": {
@@ -5789,6 +5954,9 @@
   },
   "responsory7": {
    "eng": "R. A ti, oh Señor, elevo mi alma:\n* Dios mío, en ti confío, no quede por ello avergonzado.\nV. Guarda mi alma y líbrame.\nR. Dios mío, en ti confío, no quede por ello avergonzado."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "epi5-0tt": {
@@ -5979,6 +6147,9 @@
   },
   "responsory7": {
    "eng": "R. A ti, oh Señor, elevo mi alma:\n* Dios mío, en ti confío, no quede por ello avergonzado.\nV. Guarda mi alma y líbrame.\nR. Dios mío, en ti confío, no quede por ello avergonzado."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "epi6-0tt": {
@@ -6403,6 +6574,9 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "responsory_vespera_1": {
+   "eng": "R.br. La Palabra se hizo carne. * Aleluya, aleluya.\nR. La Palabra se hizo carne. * Aleluya, aleluya.\nV. Y acampó entre nosotros.\nR. Aleluya, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. La Palabra se hizo carne. * Aleluya, aleluya."
   }
  },
  "nat10": {
@@ -6818,6 +6992,12 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "ant_1c": {
+   "eng": "La Virgen Madre, sin conocer varón, dio a luz sin dolor al Salvador de los siglos: la Virgen sola amamantaba al mismo Rey de los Ángeles con su pecho lleno del cielo."
+  },
+  "ant_2c": {
+   "eng": "El Verbo se hizo carne, y habitó entre nosotros: y vimos su gloria, gloria como del Unigénito del Padre, lleno de gracia y de verdad, aleluya, aleluya, aleluya."
   }
  },
  "nat27": {
@@ -6906,6 +7086,9 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "versum_2": {
+   "eng": "V. El Señor ha dado a conocer. Aleluya.\nR. A su Salvador. Aleluya."
   }
  },
  "nat28": {
@@ -6994,6 +7177,9 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "versum_2": {
+   "eng": "V. El Señor ha dado a conocer. Aleluya.\nR. A su Salvador. Aleluya."
   }
  },
  "nat29": {
@@ -7100,6 +7286,9 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "versum_2": {
+   "eng": "V. El Señor ha dado a conocer. Aleluya.\nR. A su Salvador. Aleluya."
   }
  },
  "nat30": {
@@ -7236,6 +7425,9 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "versum_1": {
+   "eng": "V. El Señor ha dado a conocer. Aleluya.\nR. A su Salvador. Aleluya."
   }
  },
  "nat31": {
@@ -7342,6 +7534,9 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "versum_2": {
+   "eng": "V. El Señor ha dado a conocer. Aleluya.\nR. A su Salvador. Aleluya."
   }
  },
  "pasc0-0": {
@@ -7438,6 +7633,9 @@
   },
   "versum_2": {
    "eng": "Ant. Este es el día * en que actuó el Señor, sea nuestra alegría y nuestro gozo."
+  },
+  "nocturn_1_versum": {
+   "eng": "V. El Señor ha resucitado del sepulcro. Aleluya."
   }
  },
  "pasc0-1": {
@@ -7522,6 +7720,12 @@
   },
   "responsory2": {
    "eng": "R. Yo soy la verdadera vid, y vosotros los sarmientos;\n* El que permanece en mí, y Yo en él, produce abundante fruto, aleluya, aleluya.\nV. Como el Padre me amó, os amé Yo también.\nR. El que permanece en mí, y Yo en él, produce abundante fruto, aleluya, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. El que permanece en mí, y Yo en él, produce abundante fruto, aleluya, aleluya."
+  },
+  "ant_3_": {
+   "eng": "Dijo Jesús * a sus discípulos: Traed de los peces que acabáis de coger. Simón Pedro subió a la barca y arrastró hasta la orilla la red repleta de peces grandes. Aleluya."
+  },
+  "ant_3c": {
+   "eng": "Ésta fue ya la tercera vez * que Jesús se manifestó, después de resucitar de entre los muertos, aleluya."
   }
  },
  "pasc0-4": {
@@ -7677,6 +7881,9 @@
   },
   "responsory8": {
    "eng": "R. Habiendo resucitado Jesús nuestro Señor y estando en medio de sus discípulos, les dijo:\n* La paz sea con vosotros, aleluya; alegráronse los discípulos a la vista del Señor, aleluya.\nV. El primer día de la semana, estando cerradas las puertas del lugar, donde los discípulos se hallaban reunidos, vino Jesús, y puesto en pie, en medio de ellos, les dijo:\nR. La paz sea con vosotros, aleluya; alegráronse los discípulos a la vista del Señor, aleluya."
+  },
+  "ant_3c": {
+   "eng": "Muchos otros milagros * hizo también Jesús a la vista de sus discípulos, aleluya, que no están escritos en este libro, aleluya."
   }
  },
  "pasc1-1": {
@@ -7804,6 +8011,9 @@
   },
   "responsory3": {
    "eng": "R. Purificaos del fermento viejo, para que seáis nueva masa, pues fue inmolado Jesucristo nuestro Cordero pascual.\n* Por tanto celebremos en el Señor este convite, aleluya.\nV. Murió por nuestros delitos, y resucitó para nuestra justificación.\nR. Por tanto celebremos en el Señor este convite, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Por tanto celebremos en el Señor este convite, aleluya."
+  },
+  "ant_3": {
+   "eng": "Al anochecer * de aquel día, el primero de la semana, estaban los discípulos en una casa con las puertas cerradas; y entró Jesús, se puso en medio y les dijo: Paz a vosotros. Aleluya."
   }
  },
  "pasc1-6": {
@@ -7901,6 +8111,9 @@
   },
   "responsory8": {
    "eng": "R. Resucitó el buen Pastor, que dio la vida por sus ovejas, y se dignó morir por su rebaño.\n* Aleluya, aleluya, aleluya.\nV. A la verdad ha sido inmolado Cristo nuestro Cordero pascual.\nR. Aleluya, aleluya, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Aleluya, aleluya, aleluya."
+  },
+  "ant_1c": {
+   "eng": "Éstas han sido escritas, * para que creáis que Jesús es el Cristo, el Hijo de Dios, y para que creyendo tengáis vida en su nombre, aleluya."
   }
  },
  "pasc2-1": {
@@ -8519,6 +8732,9 @@
   },
   "responsory8": {
    "eng": "R. Vuestra tristeza, aleluya.\n* Se convertirá en gozo, aleluya, aleluya.\nV. El mundo se gozará, empero vosotros os entristeceréis, pero vuestra tristeza.\nR. Se convertirá en gozo, aleluya, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Se convertirá en gozo, aleluya, aleluya."
+  },
+  "ant_1_cist": {
+   "eng": "Tengo otras ovejas * que no son de este redil; también a ésas las tengo que traer; y escucharán mi voz y habrá un solo rebaño y un solo pastor. Aleluya."
   }
  },
  "pasc3-0r": {
@@ -8752,6 +8968,9 @@
   },
   "responsory3": {
    "eng": "R. Viniendo del Líbano, cuán hermosa te muestras:\n* El olor de tus vestidos excede al de todos los aromas, aleluya, aleluya.\nV. Panal que destila son tus labios; la miel y la leche están en tu lengua.\nR. El olor de tus vestidos excede al de todos los aromas, aleluya, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. El olor de tus vestidos excede al de todos los aromas, aleluya, aleluya."
+  },
+  "ant_1": {
+   "eng": "Vuestro corazón * se llenará de tristeza; pero después nadie os quitará vuestra alegría. Aleluya, aleluya."
   }
  },
  "pasc3-3": {
@@ -8977,6 +9196,9 @@
   },
   "responsory8": {
    "eng": "R. Es bueno alabar al Señor, aleluya.\n* Y cantar salmos, aleluya.\nV. Con el salterio de diez cuerdas a los acordes de la lira.\nR. Y cantar salmos, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Y cantar salmos, aleluya."
+  },
+  "ant_2": {
+   "eng": "Me voy * al que me envió, y ninguno de vosotros me pregunta: ¿A dónde vas? Aleluya, aleluya."
   }
  },
  "pasc4-1": {
@@ -9104,6 +9326,9 @@
   },
   "responsory3": {
    "eng": "R. Cantadnos algún himno, aleluya:\n* ¿Cómo cantaremos los cánticos del Señor en tierra extranjera? Aleluya, aleluya.\nV. Quienes nos retenían cautivos, nos pedían que entonáramos himnos.\nR. ¿Cómo cantaremos los cánticos del Señor en tierra extranjera? Aleluya, aleluya.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. ¿Cómo cantaremos los cánticos del Señor en tierra extranjera? Aleluya, aleluya."
+  },
+  "ant_3": {
+   "eng": "Me voy * al que me envió, y ninguno de vosotros me pregunta: ¿A dónde vas? Aleluya, aleluya."
   }
  },
  "pasc4-6": {
@@ -9643,6 +9868,18 @@
   },
   "versum_tertia": {
    "eng": "V. Al subir Cristo a lo alto, aleluya.\nR. Llevó consigo una multitud de cautivos, aleluya."
+  },
+  "hymnus_laudes": {
+   "eng": "¡Oh Salvador de los hombres!\nJesús, delicia del alma,\ncasta luz de los amantes,\nCreador de los que salvas:\n\n¿Qué amor inmenso te obliga\na cargar con nuestras faltas,\ny para vencer la muerte,\nmuerte sufrir tan amarga?\n\nPara librar los cautivos\nal caos profundo bajas;\nal seno y diestra del Padre\ncon triunfo tan noble te alzas.\n\nEse mismo amor te mueva\na que en nosotros resarzas\ntodos los daños, y ricos\ncon tu posesión nos hagas.\n\nTú, guía y senda del cielo,\nsé blanco de nuestras almas,\nsé gozo de los que lloran,\nsé premio de los que te aman.\nAmen."
+  },
+  "versum_1op": {
+   "eng": "V. Exaltada está tu magnificencia, aleluya.\nR. Sobre los cielos, oh Dios, aleluya."
+  },
+  "hymnusm_vespera": {
+   "eng": "Jesús, redención nuestra,\namor y deseo nuestro,\nDios, Creador de todas las cosas,\nhombre al fin de los tiempos:\n\n¿Qué clemencia te venció,\npara cargar con nuestros crímenes,\npadeciendo cruel muerte\npara librarnos de la muerte?\n\nPenetrando los claustros del infierno,\nredimiendo a tus cautivos,\nvencedor en noble triunfo,\nte sientas a la diestra del Padre.\n\nQue esa misma piedad te obligue\na vencer nuestros males\nperdonando; y, cumplido nuestro deseo,\nnos sacies con tu rostro.\n\nSé tú nuestro gozo,\ntú que has de ser nuestro premio:\nque nuestra gloria esté en ti\npor todos los siglos.\nAmén."
+  },
+  "hymnusm_laudes": {
+   "eng": "Jesús, redención nuestra,\namor y deseo nuestro,\nDios, Creador de todas las cosas,\nhombre al fin de los tiempos:\n\n¿Qué clemencia te venció,\npara cargar con nuestros crímenes,\npadeciendo cruel muerte\npara librarnos de la muerte?\n\nPenetrando los claustros del infierno,\nredimiendo a tus cautivos,\nvencedor en noble triunfo,\nte sientas a la diestra del Padre.\n\nQue esa misma piedad te obligue\na vencer nuestros males\nperdonando; y, cumplido nuestro deseo,\nnos sacies con tu rostro.\n\nSé tú nuestro gozo,\ntú que has de ser nuestro premio:\nque nuestra gloria esté en ti\npor todos los siglos.\nAmén."
   }
  },
  "pasc5-5": {
@@ -9787,6 +10024,9 @@
   },
   "versum_3": {
    "eng": "V. El Señor en el cielo. Aleluya.\nR. Estableció su trono. Aleluya."
+  },
+  "lectio6_2": {
+   "eng": "Mi Padre le amará, y vendremos a él y en él haremos morada."
   }
  },
  "pasc6-1": {
@@ -9988,6 +10228,15 @@
   },
   "lectio9": {
    "eng": "Él, por lo tanto, dará testimonio de mí, y vosotros daréis testimonio también; ya que os comunicará valor para dar testimonio, la caridad de Dios que será difundida en vuestros corazones por el Espíritu Santo que se os dará. Y este valor faltó ciertamente a Pedro, cuando atemorizado por la pregunta de la criada, no pudo dar testimonio verdadero, y dominado por el temor, negó por tres veces a su Maestro. Ahora bien, “este temor no existe en la caridad, sino que ella, siendo perfecta, arroja lejos de sí el temor”. Y así, antes de la pasión del Señor, el temor servil de Pedro fue interrogado por una sirvienta; pero después de la resurrección del Señor, es el amor de un corazón libre el que es interrogado por el mismo autor de la libertad. Por eso en el primer caso se turbó; en el otro permaneció tranquilo. En el primer caso negó al que había amado; en el segundo, amó al que había negado. Mas el amor era aún débil, hasta que fue esforzado y dilatado por el Espíritu Santo."
+  },
+  "lectio1": {
+   "eng": "Inicio de la 3ª Epístola de San Juan, Apóstol\n1 El presbítero al muy querido Gayo, a quien amo yo de veras.\n2 Carísimo, ruego a Dios que te prospere en todo, y goces salud, como la goza dichosamente tu alma.\n3 Grande ha sido mi contento con la venida de los hermanos, y el testimonio que dan de tu sincera piedad, como que sigues el camino de la verdad, de la buena nueva.\n4 En ninguna cosa tengo mayor gusto que cuando entiendo que mis hijos van por el camino de la verdad."
+  },
+  "lectio2": {
+   "eng": "5 Carísimo mío, te portas como fiel y buen cristiano en todo lo que practicas con los hermanos, especialmente con los peregrinos,\n6 los cuales han dado testimonio de tu caridad públicamente en la Iglesia; y tú harás bien en hacerlos conducir y asistir en sus viajes con el decoro debido a Dios,\n7 pues que por la gloria de su Nombre han emprendido el viaje, sin tomar nada de los gentiles recién convertidos.\n8 Por eso mismo nosotros debemos acoger a los tales a fin de cooperar a la propagación de la verdad o de la buena nueva.\n9 Yo quizá hubiera escrito a la Iglesia; pero ese Diótrefes, que ambiciona la primacía entre los demás, nada quiere saber de nosotros.\n10 Por tanto, si voy allá, yo denunciaré sus procedimientos, haciéndole ver cuán mal hace en ir vertiendo especies malignas contra nosotros; y como si esto no le bastase, no solamente no hospeda él a nuestros hermanos, sino que a los que les dan acogida se lo veda y los echa de la Iglesia."
+  },
+  "lectio3": {
+   "eng": "11 Tú, querido mío, no has de imitar el mal ejemplo, sino el bueno. El que hace bien, es de Dios; el que hace mal, no mira a Dios.\n12 Todos dan testimonio a favor de Demetrio, y lo da la verdad misma, y se lo damos igualmente nosotros; y bien sabes que nuestro testimonio es verdadero.\n13 Muchas cosas tenía que escribirte; pero no he querido hacerlo por medio de tinta y pluma;\n14 porque espero verte luego, y hablaremos boca a boca. La paz sea contigo. Te saludan los amigos. Saluda tú a los nuestros, a cada uno en particular."
   }
  },
  "pasc6-6": {
@@ -10047,6 +10296,9 @@
   },
   "versum_2": {
    "eng": "V. Dios asciende entre aclamaciones. Aleluya.\nR. El Señor, al son de trompetas. Aleluya."
+  },
+  "lectio5et6": {
+   "eng": "Limpia está la casa: que no quede vacía, no sea que, hallándola desocupada el desertor, traiga consigo otros siete peores que él, y las postrimerías de aquel hombre, como dice el Evangelio, vengan a ser peores que sus principios.\nApenas haya sido excluido el pésimo invasor, sea introducido el óptimo poseedor. ¿Quién es el invasor? El diablo. ¿Qué invadió? Al hombre, a quien no hizo, y a quien además engañó. Le prometió la inmortalidad, y le dio a beber la iniquidad."
   }
  },
  "pasc7-0": {
@@ -10238,6 +10490,12 @@
   },
   "versum_tertia": {
    "eng": "V. El Paráclito, el Espíritu Santo. Aleluya.\nR. Será quien os enseñe todo. Aleluya."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Ya Cristo había subido a los astros,\nvolviendo allá de donde viniera,\npara dar el Espíritu Santo,\ndon prometido del Padre.\n\nUrgía el día solemne\nen que el orbe, girado siete veces\npor el místico septenario,\nseñala los tiempos dichosos.\n\nCuando a la hora tercia de la luz,\nde repente el mundo resuena,\ny a los Apóstoles en oración\nanuncia que Dios ha venido.\n\nDe la luz del Padre procede,\npues, el fuego hermoso y santo,\nque llena del calor del Verbo\nlos pechos fieles a Cristo.\n\nGozan los corazones henchidos,\ninspirados por el Espíritu Santo,\ny entonando voces diversas\nproclaman las grandezas de Dios.\n\nConocidos de todas las gentes,\ngriegos, latinos y bárbaros,\nadmirándose todos,\nhablan las lenguas de todos.\n\nLa Judea entonces incrédula,\nenloquecida por torvo espíritu,\nincrepa a los discípulos de Cristo\nde eructar la embriaguez del mosto.\n\nPero con signos y prodigios\nles sale al paso Pedro, y enseña\nque los pérfidos hablan falsedad,\nprobándolo con el testimonio de Joel.\n\nGloria al Padre, Señor,\ny al Hijo, que de entre los muertos\nresucitó, y al Paráclito,\npor los siglos de los siglos.\nAmén."
+  },
+  "nocturn_1_versum": {
+   "eng": "R.br. El Espíritu del Señor llenó toda la tierra * Aleluya, aleluya."
   }
  },
  "pasc7-1": {
@@ -10758,6 +11016,12 @@
     "Alabad al Señor, naciones todas de la tierra, * pueblos todos cantad sus alabanzas.",
     "Porque su misericordia se ha confirmado sobre nosotros; * y la verdad del Señor permanece eternamente."
    ]
+  },
+  "hymnusm_matutinum": {
+   "eng": "Oh Dios de suma clemencia,\nHacedor de la máquina del mundo,\nuno en el poder,\ny trino en las personas:\n\nTiende tu diestra a los que se levantan,\npara que se alce la mente sobria,\ny ardiendo en la alabanza de Dios,\nte rinda las debidas gracias.\n\nGloria al Padre, Señor,\ngloria al Unigénito,\njuntamente con el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "versum_0": {
+   "eng": "V. Grande es el Señor, y digno de toda alabanza.\nR. Y su grandeza no tiene fin."
   }
  },
  "pent01-1": {
@@ -11206,6 +11470,9 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "versum_0": {
+   "eng": "V. He comido mi panal con mi miel, aleluya.\nR. He bebido mi vino con mi leche, aleluya."
   }
  },
  "pent01-5": {
@@ -11341,6 +11608,9 @@
   },
   "versum_3": {
    "eng": "V. Los alimentó con la flor del trigo, aleluya.\nR. Los sació con la miel de la peña, aleluya."
+  },
+  "hymnus_vespera": {
+   "eng": "Canta, lengua, del cuerpo glorioso\nEl misterio sublime y profundo:\nDe la sangre tambien que amoroso\nDerramó por rescate del mundo,\nFruto santo de real, casto seno,\nRey del orbe magnánimo, bueno.\n\nA nosotros se dio libremente,\nDe una Virgen intacta naciendo;\nY en el mundo moró, la simiente\nDe palabras de vida esparciendo:\nFinalmente su humana carrera\nTerminó de admirable manera.\n\nEn la cena postrera que Él hizo,\nCon sus fieles hermanos sentado,\nYa que al rito legal satisfizo,\nEl Cordero pascual inmolado,\nPor que el hombre en su cuerpo se goce,\nCon sus manos se entrega a los doce.\n\nHecho carne aquel Verbo divino,\nA una voz en su carne convierte\nLo que es pan, y lo que antes fue vino,\nEn su sangre mudó de igual suerte.\nLo que falta al sentido grosero,\nLa fe suple en el hombre sincero.\n\nA tan grande sacramento\ndemos, pues, la adoración:\nceda antiguo documento\na tan santa institución:\nal sentido suplemento\nden la fe y la devoción.\n\nGloria al Padre Omnipotente,\ngloria al Hijo Redentor;\ny al que de ambos procedente\nes el vínculo de amor,\ntributemos igualmente\ngloria, júbilo y honor.\nAmén."
   }
  },
  "pent02-0r": {
@@ -11414,6 +11684,9 @@
   },
   "responsory3_1960": {
    "eng": "Feria Quarta infra Hebdomadam I post Octavam Pentecostes\n\nDel Libro Primero de los Reyes\n12 Mas los hijos de Helí eran hijos de Belial, que no conocían al Señor,\n13 ni la obligación de los sacerdotes para con el pueblo, sino que cuando alguno había inmolado una víctima, venía el criado del sacerdote, mientras se cocían las carnes, y trayendo en su mano un garfio u horquilla de tres dientes,\n14 la metía en el perol, o en el caldero, o en la olla, o en la cazuela, y todo lo que prendía con él, lo tomaba para sí el sacerdote. Esto hacían con todos los de Israel que venían a Silo.\nR. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia.\n15 Y aun antes que quemasen la grosura de la víctima, venía el criado del sacerdote, y decía al que inmolaba: Dame de la carne para guisársela yo al sacerdote; pues no he de tomar de ti la carne cocida, sino cruda.\n16 Le decía el que inmolaba: Quémese ahora primero la grosura, según el rito, y llévate después todo lo que quisieres. Mas él respondía diciendo: No, ahora me la darás; de lo contrario, te la quitaré yo por fuerza.\n17 Era, pues, el pecado de estos jóvenes enorme a los ojos del Señor; por cuanto retraían a la gente de sacrificar al Señor.\nR. Oíste, oh Señor, la oración de tu siervo, permitiéndome que edificara un templo para gloria de tu nombre:\n* Bendice y santifica para siempre esta casa, oh Dios de Israel.\nV. Señor, que guardas el pacto con tus siervos, que andan en tu presencia con todo su corazón.\nR. Bendice y santifica para siempre esta casa, oh Dios de Israel."
+  },
+  "responsory1_1960": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent02-2": {
@@ -11773,6 +12046,9 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "versum_0": {
+   "eng": "V. Compasivo y misericordioso es el Señor.\nR. Paciente y de mucha misericordia."
   }
  },
  "pent02-5feria": {
@@ -11992,6 +12268,15 @@
     "Porque en el Señor está la misericordia, * y en su mano tiene una redención abundantísima.",
     "Y es él el que redimirá * a Israel de todas sus iniquidades."
    ]
+  },
+  "hymnus_vespera": {
+   "eng": "¡Oh Corazón, arca que contiene la ley,\nno de la antigua esclavitud,\nsino de la gracia, del perdón,\nde la misericordia!.\n\n¡Oh Corazón, santuario inmaculado\nde la nueva alianza, templo más santo\nque aquel antiguo, y velo más útil\nque aquel que fue rasgado!\n\nTu caridad ha querido herirte\ncon un golpe que te dejara abierto,\npara que nosotros veneremos\nlas llagas de tu amor invisible.\n\nCristo sacerdote, que sufrió\ndolores cruentos y místicos,\nofrendó ambos sacrificios\nbajo este símbolo del amor.\n\n¿Quién no devolverá amor al que nos ama?\n¿Quién de los redimidos no le amará,\ny escogerá en ese Corazón\nsu eterna morada?\n\n¡Oh Jesús, que derramas la gracia\npor tu Corazón!, gloria sea dada a Ti,\nen unión con el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "doxology_": {
+   "eng": "¡Oh Corazón, arca que contiene la ley,\nno de la antigua esclavitud,\nsino de la gracia, del perdón,\nde la misericordia!.\n\n¡Oh Corazón, santuario inmaculado\nde la nueva alianza, templo más santo\nque aquel antiguo, y velo más útil\nque aquel que fue rasgado!\n\nTu caridad ha querido herirte\ncon un golpe que te dejara abierto,\npara que nosotros veneremos\nlas llagas de tu amor invisible.\n\nCristo sacerdote, que sufrió\ndolores cruentos y místicos,\nofrendó ambos sacrificios\nbajo este símbolo del amor.\n\n¿Quién no devolverá amor al que nos ama?\n¿Quién de los redimidos no le amará,\ny escogerá en ese Corazón\nsu eterna morada?\n\n¡Oh Jesús, que derramas la gracia\npor tu Corazón!, gloria sea dada a Ti,\nen unión con el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Concédenos esto, oh Cristo,\ny tú, Padre, y tú, Espíritu Santo,\na quienes pertenecen el poder, la gloria\ny el reino por todos los siglos.\nAmén."
   }
  },
  "pent02-6": {
@@ -12109,6 +12394,9 @@
   },
   "versum_3": {
    "eng": "V. Hizo un memorial de sus maravillas el misericordioso Señor.\nR. Y dio un manjar a los que le temen."
+  },
+  "capitulum_sexta": {
+   "eng": "Sed sobrios, velad. Vuestro adversario, el diablo, como león rugiente, ronda buscando a quien devorar. Resistidle, firmes en la fe, sabiendo que vuestra comunidad fraternal en el mundo entero está pasando por los mismos sufrimientos."
   }
  },
  "pent03-0o": {
@@ -12171,6 +12459,9 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "pent03-1": {
@@ -12223,6 +12514,9 @@
   },
   "responsory3": {
    "eng": "R. Escucha, Señor, los himnos y las plegarias que tu siervo pronuncia hoy en tu presencia, para que estén tus ojos abiertos,\n* Hacia esta casa de día y de noche.\nV. Óyeles, Señor, desde tu santuario y desde tu excelsa mansión de los cielos.\nR. Hacia esta casa de día y de noche.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Hacia esta casa de día y de noche."
+  },
+  "responsory1c": {
+   "eng": "R. David lloró a Saúl y a sus hijos con gran llanto, y dijo: ¡Cómo cayeron los fuertes en la batalla!\n* Y perecieron las armas de la guerra; llorad, nobles de Israel.\nV. Montes de Gelboé, ni rocío ni lluvia desciendan sobre vosotros, donde cayeron tantos heridos:\nR. Y perecieron las armas de la guerra; llorad, nobles de Israel."
   }
  },
  "pent03-2": {
@@ -12518,6 +12812,12 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "ant_1c": {
+   "eng": "Airado * el rey Saúl dijo: A mí me han dado mil, y al hijo de Isaí le han dado diez mil."
   }
  },
  "pent04-0o": {
@@ -12549,6 +12849,9 @@
   },
   "responsory3": {
    "eng": "Feria Quarta infra Hebdomadam I post Octavam Pentecostes\n\nDel Libro Primero de los Reyes\n12 Mas los hijos de Helí eran hijos de Belial, que no conocían al Señor,\n13 ni la obligación de los sacerdotes para con el pueblo, sino que cuando alguno había inmolado una víctima, venía el criado del sacerdote, mientras se cocían las carnes, y trayendo en su mano un garfio u horquilla de tres dientes,\n14 la metía en el perol, o en el caldero, o en la olla, o en la cazuela, y todo lo que prendía con él, lo tomaba para sí el sacerdote. Esto hacían con todos los de Israel que venían a Silo.\nR. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia.\n15 Y aun antes que quemasen la grosura de la víctima, venía el criado del sacerdote, y decía al que inmolaba: Dame de la carne para guisársela yo al sacerdote; pues no he de tomar de ti la carne cocida, sino cruda.\n16 Le decía el que inmolaba: Quémese ahora primero la grosura, según el rito, y llévate después todo lo que quisieres. Mas él respondía diciendo: No, ahora me la darás; de lo contrario, te la quitaré yo por fuerza.\n17 Era, pues, el pecado de estos jóvenes enorme a los ojos del Señor; por cuanto retraían a la gente de sacrificar al Señor.\nR. Oíste, oh Señor, la oración de tu siervo, permitiéndome que edificara un templo para gloria de tu nombre:\n* Bendice y santifica para siempre esta casa, oh Dios de Israel.\nV. Señor, que guardas el pacto con tus siervos, que andan en tu presencia con todo su corazón.\nR. Bendice y santifica para siempre esta casa, oh Dios de Israel."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent04-1o": {
@@ -12760,6 +13063,12 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "ant_1c": {
+   "eng": "¿Quién hay * en todo tu reino tan fiel como David, que sale y entra, y marcha a las órdenes del rey?"
   }
  },
  "pent05-0o": {
@@ -12797,6 +13106,9 @@
   },
   "responsory3": {
    "eng": "Feria Quarta infra Hebdomadam I post Octavam Pentecostes\n\nDel Libro Primero de los Reyes\n12 Mas los hijos de Helí eran hijos de Belial, que no conocían al Señor,\n13 ni la obligación de los sacerdotes para con el pueblo, sino que cuando alguno había inmolado una víctima, venía el criado del sacerdote, mientras se cocían las carnes, y trayendo en su mano un garfio u horquilla de tres dientes,\n14 la metía en el perol, o en el caldero, o en la olla, o en la cazuela, y todo lo que prendía con él, lo tomaba para sí el sacerdote. Esto hacían con todos los de Israel que venían a Silo.\nR. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia.\n15 Y aun antes que quemasen la grosura de la víctima, venía el criado del sacerdote, y decía al que inmolaba: Dame de la carne para guisársela yo al sacerdote; pues no he de tomar de ti la carne cocida, sino cruda.\n16 Le decía el que inmolaba: Quémese ahora primero la grosura, según el rito, y llévate después todo lo que quisieres. Mas él respondía diciendo: No, ahora me la darás; de lo contrario, te la quitaré yo por fuerza.\n17 Era, pues, el pecado de estos jóvenes enorme a los ojos del Señor; por cuanto retraían a la gente de sacrificar al Señor.\nR. Oíste, oh Señor, la oración de tu siervo, permitiéndome que edificara un templo para gloria de tu nombre:\n* Bendice y santifica para siempre esta casa, oh Dios de Israel.\nV. Señor, que guardas el pacto con tus siervos, que andan en tu presencia con todo su corazón.\nR. Bendice y santifica para siempre esta casa, oh Dios de Israel."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent05-2": {
@@ -12962,6 +13274,12 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "ant_1c": {
+   "eng": "V. ¿Por ventura no es este David, de quien cantaban a coro diciendo: Saúl ha muerto a mil, y David a diez mil?"
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "pent06-1": {
@@ -12976,6 +13294,9 @@
   },
   "responsory3": {
    "eng": "R. Escucha, Señor, los himnos y las plegarias que tu siervo pronuncia hoy en tu presencia, para que estén tus ojos abiertos,\n* Hacia esta casa de día y de noche.\nV. Óyeles, Señor, desde tu santuario y desde tu excelsa mansión de los cielos.\nR. * Hacia esta casa de día y de noche.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. * Hacia esta casa de día y de noche."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent06-2": {
@@ -13141,6 +13462,18 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "ant_3_": {
+   "eng": "Un árbol sano * no puede dar frutos malos, ni un árbol enfermo dar frutos buenos. Todo árbol que no da fruto bueno se corta y se echa al fuego. Aleluya."
+  },
+  "ant_1c": {
+   "eng": "Lloro por ti, hermano mío Jonatás, amable sobremanera, más que el amor de las mujeres: como la madre ama a su hijo único, así te amaba yo: la flecha de Jonatás jamás volvió atrás, ni su escudo se apartó de la batalla, ni su lanza se volvió."
+  },
+  "ant_3c": {
+   "eng": "No todo el que * me dice: ¡Señor, Señor!, entrará en el reino de los cielos: sino el que hace la voluntad de mi Padre, que está en los cielos, ése entrará en el reino de los cielos, aleluya."
   }
  },
  "pent07-1": {
@@ -13158,6 +13491,9 @@
   },
   "responsory3": {
    "eng": "R. Escucha, Señor, los himnos y las plegarias que tu siervo pronuncia hoy en tu presencia, para que estén tus ojos abiertos,\n* Hacia esta casa de día y de noche.\nV. Óyeles, Señor, desde tu santuario y desde tu excelsa mansión de los cielos.\nR. * Hacia esta casa de día y de noche.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. * Hacia esta casa de día y de noche."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent07-2": {
@@ -13323,6 +13659,12 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "ant_1c": {
+   "eng": "El rey David, * con la cabeza cubierta, iba llorando a su hijo, y decía: ¡Absalón, hijo mío! ¡Hijo mío Absalón! ¡Quién me diera morir yo por ti, hijo mío Absalón!"
   }
  },
  "pent08-1": {
@@ -13340,6 +13682,9 @@
   },
   "responsory3": {
    "eng": "R. Escucha, Señor, los himnos y las plegarias que tu siervo pronuncia hoy en tu presencia, para que estén tus ojos abiertos,\n* Hacia esta casa de día y de noche.\nV. Óyeles, Señor, desde tu santuario y desde tu excelsa mansión de los cielos.\nR. * Hacia esta casa de día y de noche.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. * Hacia esta casa de día y de noche."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent08-2": {
@@ -13502,6 +13847,9 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "pent09-1": {
@@ -13519,6 +13867,9 @@
   },
   "responsory3": {
    "eng": "Feria Quarta infra Hebdomadam I post Octavam Pentecostes\n\nDel Libro Primero de los Reyes\n12 Mas los hijos de Helí eran hijos de Belial, que no conocían al Señor,\n13 ni la obligación de los sacerdotes para con el pueblo, sino que cuando alguno había inmolado una víctima, venía el criado del sacerdote, mientras se cocían las carnes, y trayendo en su mano un garfio u horquilla de tres dientes,\n14 la metía en el perol, o en el caldero, o en la olla, o en la cazuela, y todo lo que prendía con él, lo tomaba para sí el sacerdote. Esto hacían con todos los de Israel que venían a Silo.\nR. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia.\n15 Y aun antes que quemasen la grosura de la víctima, venía el criado del sacerdote, y decía al que inmolaba: Dame de la carne para guisársela yo al sacerdote; pues no he de tomar de ti la carne cocida, sino cruda.\n16 Le decía el que inmolaba: Quémese ahora primero la grosura, según el rito, y llévate después todo lo que quisieres. Mas él respondía diciendo: No, ahora me la darás; de lo contrario, te la quitaré yo por fuerza.\n17 Era, pues, el pecado de estos jóvenes enorme a los ojos del Señor; por cuanto retraían a la gente de sacrificar al Señor.\nR. Oíste, oh Señor, la oración de tu siervo, permitiéndome que edificara un templo para gloria de tu nombre:\n* Bendice y santifica para siempre esta casa, oh Dios de Israel.\nV. Señor, que guardas el pacto con tus siervos, que andan en tu presencia con todo su corazón.\nR. Bendice y santifica para siempre esta casa, oh Dios de Israel."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent09-2": {
@@ -13681,6 +14032,9 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "pent10-1": {
@@ -13698,6 +14052,9 @@
   },
   "responsory3": {
    "eng": "Feria Quarta infra Hebdomadam I post Octavam Pentecostes\n\nDel Libro Primero de los Reyes\n12 Mas los hijos de Helí eran hijos de Belial, que no conocían al Señor,\n13 ni la obligación de los sacerdotes para con el pueblo, sino que cuando alguno había inmolado una víctima, venía el criado del sacerdote, mientras se cocían las carnes, y trayendo en su mano un garfio u horquilla de tres dientes,\n14 la metía en el perol, o en el caldero, o en la olla, o en la cazuela, y todo lo que prendía con él, lo tomaba para sí el sacerdote. Esto hacían con todos los de Israel que venían a Silo.\nR. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia.\n15 Y aun antes que quemasen la grosura de la víctima, venía el criado del sacerdote, y decía al que inmolaba: Dame de la carne para guisársela yo al sacerdote; pues no he de tomar de ti la carne cocida, sino cruda.\n16 Le decía el que inmolaba: Quémese ahora primero la grosura, según el rito, y llévate después todo lo que quisieres. Mas él respondía diciendo: No, ahora me la darás; de lo contrario, te la quitaré yo por fuerza.\n17 Era, pues, el pecado de estos jóvenes enorme a los ojos del Señor; por cuanto retraían a la gente de sacrificar al Señor.\nR. Oíste, oh Señor, la oración de tu siervo, permitiéndome que edificara un templo para gloria de tu nombre:\n* Bendice y santifica para siempre esta casa, oh Dios de Israel.\nV. Señor, que guardas el pacto con tus siervos, que andan en tu presencia con todo su corazón.\nR. Bendice y santifica para siempre esta casa, oh Dios de Israel."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent10-2": {
@@ -13860,6 +14217,9 @@
   },
   "responsory7": {
    "eng": "R. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "pent11-1": {
@@ -13877,6 +14237,9 @@
   },
   "responsory3": {
    "eng": "Feria Quarta infra Hebdomadam I post Octavam Pentecostes\n\nDel Libro Primero de los Reyes\n12 Mas los hijos de Helí eran hijos de Belial, que no conocían al Señor,\n13 ni la obligación de los sacerdotes para con el pueblo, sino que cuando alguno había inmolado una víctima, venía el criado del sacerdote, mientras se cocían las carnes, y trayendo en su mano un garfio u horquilla de tres dientes,\n14 la metía en el perol, o en el caldero, o en la olla, o en la cazuela, y todo lo que prendía con él, lo tomaba para sí el sacerdote. Esto hacían con todos los de Israel que venían a Silo.\nR. Yo he pecado, y mis pecados se han multiplicado, llegando a ser más numerosos que las arenas del mar; y a causa de la multitud de mis iniquidades no soy digno de mirar a lo alto, hacia el cielo: porque he excitado tu cólera,\n* Y he cometido la maldad en tu presencia.\nV. Porque yo reconozco mi maldad, y delante de mí tengo siempre mi pecado, porque contra ti sólo he pecado.\nR. Y he cometido la maldad en tu presencia.\n15 Y aun antes que quemasen la grosura de la víctima, venía el criado del sacerdote, y decía al que inmolaba: Dame de la carne para guisársela yo al sacerdote; pues no he de tomar de ti la carne cocida, sino cruda.\n16 Le decía el que inmolaba: Quémese ahora primero la grosura, según el rito, y llévate después todo lo que quisieres. Mas él respondía diciendo: No, ahora me la darás; de lo contrario, te la quitaré yo por fuerza.\n17 Era, pues, el pecado de estos jóvenes enorme a los ojos del Señor; por cuanto retraían a la gente de sacrificar al Señor.\nR. Oíste, oh Señor, la oración de tu siervo, permitiéndome que edificara un templo para gloria de tu nombre:\n* Bendice y santifica para siempre esta casa, oh Dios de Israel.\nV. Señor, que guardas el pacto con tus siervos, que andan en tu presencia con todo su corazón.\nR. Bendice y santifica para siempre esta casa, oh Dios de Israel."
+  },
+  "responsory1": {
+   "eng": "R. Acuérdate, Señor, de tu alianza, y di al Ángel exterminador: Cesa ya en tus castigos,\n* Para que no quede la tierra aterrorizada, y no hagas perecer a toda alma viviente.\nV. Yo soy quien ha pecado, y quien ha obrado la iniquidad: pero estas ovejas ¿qué han hecho? Aparta, Señor, te ruego tu furor de tu pueblo."
   }
  },
  "pent11-2": {
@@ -14003,6 +14366,12 @@
   },
   "oratio": {
    "eng": "Señor de poder y misericordia, cuyo favor hace digno y agradable el servicio de tus fieles; concédenos caminar sin tropiezos hacia los bienes que nos prometes.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "ant_3c": {
+   "eng": "¿Quién te parece * que fue el prójimo de aquel que cayó en manos de los ladrones? Y él respondió: El que usó de misericordia con él. Ve, y haz tú lo mismo, aleluya."
   }
  },
  "pent13-0": {
@@ -14026,6 +14395,12 @@
   },
   "oratio": {
    "eng": "Dios todopoderoso y eterno, aumenta nuestra fe, esperanza y caridad. Y, para conseguir tus promesas, concédenos amar tus preceptos.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
+  },
+  "ant_3c": {
+   "eng": "¿No son diez * los que quedaron limpios? Y los nueve, ¿dónde están? No hubo quien volviera a dar gloria a Dios, sino este extranjero. Vete, que tu fe te ha salvado, aleluya."
   }
  },
  "pent14-0": {
@@ -14046,6 +14421,9 @@
   },
   "oratio": {
    "eng": "Guarda, Señor, a tu Iglesia con protección constante; y, pues sin ti el hombre sucumbe por su naturaleza mortal, protégelo de los peligros y dirige sus pasos a la salvación.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "pent15-0": {
@@ -14066,6 +14444,9 @@
   },
   "oratio": {
    "eng": "Con amor incansable, Señor, limpia y protege siempre a tu Iglesia; y, pues no puede estar sin tu apoyo, gobiérnala con tu constante bondad.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "responsory8": {
+   "eng": "R. Dos Serafines clamaban el uno al otro:\n* Santo, Santo, Santo es el Señor Dios de las virtudes: * Llena está toda la tierra de su gloria,\nV. Tres son los que dan testimonio en el cielo: el Padre, el Verbo, y el Espíritu Santo, y estos tres son una sola cosa.\nR. Santo, Santo, Santo es el Señor Dios de las virtudes.\nR. Llena está toda la tierra de su gloria.\n\n[Responsory8] (rubrica cisterciensis)"
   }
  },
  "pent16-0": {
@@ -14352,6 +14733,9 @@
   },
   "responsory9": {
    "eng": "R. Él mandó a sus Ángeles que cuidasen de ti, los cuales te guardarán en cuantos pasos dieres.\n* Te llevarán en las palmas de sus manos, no sea que tropiece tu pie en alguna piedra,\nV. Andarás sobre áspides y basiliscos, y hollarás los leones y dragones.\nR. Te llevarán en las palmas de sus manos, no sea que tropiece tu pie en alguna piedra.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Te llevarán en las palmas de sus manos, no sea que tropiece tu pie en alguna piedra."
+  },
+  "ant_3c": {
+   "eng": "Lo dejó el tentador, * y llegaron los Ángeles, y le servían."
   }
  },
  "quad1-1": {
@@ -15285,6 +15669,9 @@
   },
   "responsory3": {
    "eng": "R. Moisés, siervo de Dios, ayunó cuarenta días y otras tantas noches.\n* Para que mereciera recibir la ley del Señor,\nV. Subiendo Moisés al monte Sinaí para tratar con el Señor, permaneció en aquel lugar cuarenta días y otras tantas noches.\nR. Para que mereciera recibir la ley del Señor.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Para que mereciera recibir la ley del Señor."
+  },
+  "ant_3": {
+   "eng": "Nadie le pudo echar mano, * porque todavía no había llegado su hora."
   }
  },
  "quad4-3": {
@@ -15633,6 +16020,12 @@
   },
   "responsory3": {
    "eng": "R. ¿Hasta cuándo prevalecerá mi enemigo sobre mí?\n* Mírame y óyeme, Señor, Dios mío.\nV. Mis adversarios se gozarán si yo cayere. Mas yo espero en tu misericordia.\nR. Mírame y óyeme, Señor, Dios mío.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. ¿Hasta cuándo prevalecerá mi enemigo sobre mí? * Mírame y óyeme, Señor, Dios mío."
+  },
+  "ant_3_": {
+   "eng": "He deseado con ansia * comer esta Pascua con vosotros antes de padecer."
+  },
+  "ant_3c": {
+   "eng": "Al derramar esta mujer * este perfume sobre mi cuerpo, lo ha hecho para mi sepultura."
   }
  },
  "quad5-5": {
@@ -16292,6 +16685,12 @@
   },
   "responsory3": {
    "eng": "R. Me cercaron hombres mentirosos; sin causa me azotaron;\n* Mas Tú, Señor, que eres mi defensor, véngame,\nV. Ya que la tribulación está cercana, y no hay quien me ayude.\nR. Mas Tú, Señor, que eres mi defensor, véngame.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Me cercaron hombres mentirosos; sin causa me azotaron; * Mas Tú, Señor, que eres mi defensor, véngame."
+  },
+  "ant_2_": {
+   "eng": "Simón, ¿duermes?; * ¿no has podido velar ni una hora conmigo?"
+  },
+  "ant_2c": {
+   "eng": "Tanto tiempo * estuve con vosotros enseñando en el templo, y no me prendisteis; y he aquí que, azotado, me lleváis a crucificar."
   }
  },
  "quad6-4": {
@@ -18159,6 +18558,9 @@
   },
   "responsory3": {
    "eng": "R. Oh Dios de mi señor Abrahán, dirige mi camino:\n* Para que con salud vuelva a la casa de mi Señor.\nV. Te ruego, Señor, tengas misericordia de tu siervo.\nR. Para que con salud vuelva a la casa de mi Señor.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Para que con salud vuelva a la casa de mi Señor."
+  },
+  "ant_3c": {
+   "eng": "¿Por qué hemos ayunado, * y no lo has mirado? ¿Hemos humillado nuestras almas, y no lo has tenido en cuenta?"
   }
  },
  "quadp3-6": {
@@ -18185,6 +18587,43 @@
   },
   "responsory3": {
    "eng": "R. Abrahán, removiendo su pabellón, se puso en camino y fue a morar junto al valle de Mambre.\n* Y edificó allí un altar al Señor.\nV. Y dijo el Señor a Abrahán: Alza tus ojos, y contempla toda la tierra que ves, a ti te la daré y a tu descendencia para siempre.\nR. Y edificó allí un altar al Señor."
+  }
+ },
+ "pent02-0o": {
+  "lectio4": {
+   "eng": "Sermón de S. Juan Crisóstomo.\nPuesto que el Verbo dijo: “Este es mi cuerpo”, aceptemos sus palabras, creamos en ellas y contemplémosle con los ojos del espíritu. Porque Jesucristo no nos dio nada sensible, sino que, bajo cosas sensibles, nos lo dio todo a entender. Lo mismo hay que decir del bautismo, en el cual, por una cosa enteramente sensible, el agua, se nos confiere el don; espiritual es la cosa realizada, a saber, la regeneración y la renovación. Si no tuvieras cuerpo, nada corporal habría en los dones que Dios te hace; mas porque el alma está unida al cuerpo, te da lo espiritual por medio de lo sensible. ¡Cuántos hay actualmente que dicen: Quisiera verlo a Él mismo, su rostro, su vestido, su calzado! Pues bien le ves, le tocas, le comes. Deseas ver su vestido; mas helo ahí a Él mismo, permitiéndote, no solamente verle sino también tocarle, comerle y recibirle dentro de ti mismo."
+  },
+  "lectio5": {
+   "eng": "Nadie, pues, se acerque con repugnancia o con indiferencia; lléguense todos a Él ardiendo en amor, llenos de fervor y de celo. Si los judíos comían de pie el cordero pascual, calzados, empuñando el bastón con presura, ¡con cuánta mayor razón debes practicar aquí la vigilancia! Los judíos estaban entonces a punto de pasar de Egipto a Palestina; por ello, adoptaban la actitud de viajeros. Pero tú debes emigrar al cielo; por lo cual debes velar siempre, pensando cuán grande es el suplicio que amenaza a los que reciben indignamente el cuerpo del Señor. Piensa en tu propia indignación contra el que traicionó y los que crucificaron al Salvador; procura, pues, por tu parte, no hacerte reo del cuerpo y de la sangre de Jesucristo. Aquellos desventurados dieron la muerte al santísimo cuerpo del Señor, y tú lo recibes con el alma impura, después de tantos beneficios como te ha otorgado. No contento con hacerse hombre, con verse abofeteado, crucificado, el Hijo de Dios quiso además unirse a nosotros, de tal suerte que nos convertimos en un mismo cuerpo con Él, no solamente por la fe, sino efectivamente y en realidad."
+  },
+  "lectio6": {
+   "eng": "¿Quién, pues, debe ser más puro que el participante de semejante sacrificio? ¿Qué rayo de sol no deberá ceder en esplendor a la mano que distribuye esta carne, a la boca que se llena de ese fuego espiritual, a la lengua que se enrojece con esa terrible sangre? Piensa en el gran honor que recibes y en la mesa de que participas. Aquello que los ángeles miran con temblor, aquello cuyo radiante esplendor no pueden resistir, lo convertimos en alimento nuestro, nos unimos a ello, y llegamos a formar con Jesucristo un solo cuerpo y una sola carne. ¿Quién podrá contar las obras del poder del Señor, ni pregonar todas sus alabanzas? ¿Qué pastor dio jamás su sangre para alimentar a sus ovejas? ¿Qué digo, un pastor? Hay muchas madres que entregan a nodrizas extrañas los hijos que acaban de dar al mundo; pero Jesucristo no procede así; nos alimenta por sí mismo con su propia sangre, nos incorpora absolutamente a Él."
+  },
+  "lectio7": {
+   "eng": "Lección del santo Evangelio según San Lucas\nEn aquel tiempo: Propuso Jesús a los fariseos esta parábola: Un hombre dispuso una gran cena, y convidó a mucha gente. Y lo que sigue.\n\nHomilía de San Gregorio, Papa.\nEntre las delicias corporales y las espirituales hay esta diferencia: las corporales, antes de gozarlas, despiertan un ardiente deseo; mas después de gustarlas causan hastío. Las espirituales, por el contrario, causan hastío mientras no se han gustado; mas después de gozarlas se despierta el apetito de las mismas; y son tanto más apetecidas por el que las prueba, cuanto mayor es el apetito con que las gusta. En aquéllas, el deseo agrada, mas la posesión desagrada; éstas, en cambio, apenas se desean, mas su posesión es sumamente agradable. En aquéllas, el apetito engendra la saciedad y la saciedad produce el hastío; pero en éstas, el apetito engendra también la saciedad, mas la saciedad produce apetito."
+  },
+  "lectio8": {
+   "eng": "Las delicias espirituales al saciar el alma fomentan su apetito, porque cuanto más se percibe el sabor de una cosa, tanto mejor se la conoce, por lo cual se la ama con mayor avidez; por esto, cuando no se han experimentado no pueden amarse porque se desconoce su sabor. ¿Quién, en efecto, puede amar lo que no conoce? He ahí por qué dice el Salmista: “Gustad y ved cuán suave es el Señor”. Como si dijera abiertamente: No conoceréis su suavidad si no la gustáis; pero tocad con el paladar de vuestro corazón el alimento de vida, para que, experimentando su suavidad, seáis capaces de amarle. El hombre perdió estas delicias cuando pecó en el Paraíso; salió de él cuando cerró su boca al alimento de eterna suavidad."
+  },
+  "lectio9": {
+   "eng": "De aquí proviene que, habiendo nacido en las penas de este destierro, lleguemos aquí abajo a tal hastío, que ya no sabemos lo que debemos desear. Esta enfermedad del hastío se aumenta tanto más en nosotros cuanto más el alma se aleja de este alimento lleno de suavidad. Llega hasta el punto de perder todo apetito por esas delicias interiores, a causa precisamente de haberse mantenido alejada de ellas, y haber perdido de mucho tiempo atrás el hábito de gustarlas. Es, pues, nuestro hastío el que hace que nos debilitemos; es esa funesta y prolongada inanición la que nos agota. Y, por cuanto no queremos gustar interiormente la suavidad que se nos ofrece, preferimos, insensatos, el hambre a que nos condenan las cosas externas."
+  },
+  "lectio1": {
+   "eng": "Del Libro Primero de los Reyes\n1 Sucedió por aquellos días que los filisteos se juntaron para hacer la guerra a los israelitas. Israel se puso también en campaña para combatir a los filisteos, y acampó junto a la piedra llamada después Piedra del Socorro. Los filisteos por su parte avanzaron hasta Afec,\n2 y presentaron a Israel la batalla. Comenzada ésta, Israel volvió las espaldas a los filisteos; quienes mataron en aquel choque, y dejaron tendidos por los campos, como cuatro mil hombres.\n3 Vuelto el grueso del ejército al campamento, dijeron los ancianos de Israel: ¿Cómo es que el Señor nos ha derrotado hoy delante de los filisteos? Traigamos aquí de Silo el arca de la alianza del Señor, y venga en medio de nosotros, para que nos salve de la mano de nuestros enemigos."
+  },
+  "lectio2": {
+   "eng": "5 Luego que el arca de la alianza del Señor llegó al campamento, dio voces todo Israel con grande algazara, que resonaron por todo el país.\n6 Y oyéndolas los filisteos, dijeron: ¿Qué gritería es esta que se oye en el campamento de los hebreos? Y supieron que era por haber llegado al campamento el arca del Señor.\n7 Con esto se atemorizaron los filisteos y dijeron: El Dios de ellos ha venido a sus campamentos. Y añadían gimiendo:\n8 ¡Ay de nosotros! ¿Quién nos librará de la mano de ese Dios excelso? Ese es aquel Dios que castigó a Egipto con toda suerte de plagas, y que condujo a Israel por el desierto.\n9 Pero, ¡ánimo, filisteos!, tened valor, no seáis esclavos de los hebreos como ellos lo han sido de vosotros tantos años. Esforzaos y pelead con denuedo.\n10 Dieron, pues, los filisteos la batalla, y quedó derrotado Israel; y todos los que pudieron huyeron a sus casas. El destrozo de los israelitas fue tan grande, que quedaron muertos treinta mil infantes.\n11 Fue tomada el arca de Dios y muertos los dos hijos de Helí, Ofni y Finees."
+  },
+  "lectio3": {
+   "eng": "12 Aquel mismo día, un soldado de la tribu de Benjamín, escapado de la batalla, vino corriendo a Silo, rasgado el vestido y cubierta de polvo la cabeza en señal de dolor.\n13 Al tiempo que llegó, estaba Helí sentado en su silla de audiencia, a la entrada del templo, mirando hacia el camino, porque su corazón se hallaba en un continuo sobresalto por el arca del Señor. Habiendo entrado, pues, aquel soldado, publicó luego la noticia por la ciudad, y toda la gente prorrumpió en grandes alaridos.\n14 Helí, oído el clamor general, dijo: ¿Qué ruido tumultuoso es ese? Llegó entonces aquel hombre a toda prisa a Helí, y le dio la noticia.\n15 Helí tenía a la sazón noventa y ocho años, y sus ojos habían cegado, de suerte que no podía ver.\n16 Dijo, pues, el soldado a Helí: Yo soy el que acabo de venir de la batalla, y yo el que hoy escapé del combate. Le dijo Helí: ¿Qué ha sucedido, hijo mío?\n17 A lo que respondió el hombre que había traído la nueva, diciendo: Huyó Israel delante de los filisteos, y ha sido grande el destrozo del ejército; y además han quedado muertos tus dos hijos Ofni y Finees, y el arca de Dios ha sido robada.\n18 Apenas el hombre hubo nombrado el arca de Dios, cayó Helí de espaldas de la silla junto a la puerta, y quebrándose la cerviz, murió."
+  }
+ },
+ "pent01-6o": {
+  "lectio2": {
+   "eng": "13 Porque ya le predije que habría de castigar perpetuamente su casa por causa de su iniquidad, puesto que sabiendo lo indignamente que se portan sus hijos, no los ha corregido como debía.\n14 Por lo cual he jurado a la casa de Helí que su iniquidad no se expiará jamás ni con víctimas, ni con ofrendas."
+  },
+  "lectio4": {
+   "eng": "Esto, pues, insinuaba Job hablando de sus siervos, para quienes era deseable sobremanera, los cuales, mostrando su deseo, decían: ¿Quién nos diera saciarnos de su carne? Por eso también Cristo hizo esto mismo, llevándonos a mayor caridad y mostrando su deseo para con nosotros: no sólo dejándose ver de los que le anhelan, sino también tocar, y comer, y hincar los dientes en su carne, y abrazarse con Él, y satisfacer todo deseo."
   }
  }
 }

@@ -119,6 +119,15 @@
   },
   "versum_tertia": {
    "eng": "V. Tributad al Señor gloria y honor. Aleluya.\nR. Tributad al Señor la gloria debida a su nombre. Aleluya."
+  },
+  "versum_0": {
+   "eng": "V. Bendito sea el nombre del Señor.\nR. Ahora y por todos los siglos."
+  },
+  "capitulum_nona": {
+   "eng": "17 Y todo cuanto hacéis de palabra o de obra, hacedlo todo en el nombre del Señor Jesús, dando gracias a Dios Padre por Él."
+  },
+  "versum_3": {
+   "eng": "V. Bendito sea el nombre del Señor. Aleluya.\nR. Ahora y por todos los siglos. Aleluya."
   }
  },
  "01-01": {
@@ -412,6 +421,12 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "versum_1": {
+   "eng": "V. La Palabra se hizo carne. Aleluya.\nR. Y acampó entre nosotros. Aleluya."
+  },
+  "versum_2": {
+   "eng": "V. La Palabra se hizo carne. Aleluya.\nR. Y acampó entre nosotros. Aleluya."
   }
  },
  "01-02": {
@@ -522,6 +537,21 @@
   },
   "versum_1": {
    "eng": "V. El Señor ha dado a conocer, aleluya.\nR. Su salvación, aleluya."
+  },
+  "hymnusm_vespera": {
+   "eng": "Jesus, Redentor de todos,\nantes que luciese el alba,\nigual con el Padre en gloria,\nnaciste de sus entrañas.\n\nTú, luz y esplendor del Padre,\nTú, nuestra dulce esperanza,\noye la voz de tus siervos\nque por el orbe te alaban.\n\nRecuerda, Hacedor del mundo,\nque de una Vírgen sagrada\nnaciendo en tiempo, la forma\nde nuestro cuerpo tomaras.\n\nEn el círculo del año\neste dia se señala,\nen que por salvar al mundo\ndel Padre el seno dejaras.\n\nAstros, tierra, mar y cuanto\nel compás del cielo abarca,\nsaludan con nuevo cántico\nal Autor de tanta gracia.\n\nY nosotros, que lavaste\ncon tu sangre inmaculada,\npor tu nacimiento santo\nte damos nueva alabanza.\n\nA Jesús sea la gloria,\nque nació de Vírgen casta,\ncon el Padre y almo Espíritu,\npor siglos que nunca acaban.\nAmén."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Jesus, Redentor de todos,\nantes que luciese el alba,\nigual con el Padre en gloria,\nnaciste de sus entrañas.\n\nTú, luz y esplendor del Padre,\nTú, nuestra dulce esperanza,\noye la voz de tus siervos\nque por el orbe te alaban.\n\nRecuerda, Hacedor del mundo,\nque de una Vírgen sagrada\nnaciendo en tiempo, la forma\nde nuestro cuerpo tomaras.\n\nEn el círculo del año\neste dia se señala,\nen que por salvar al mundo\ndel Padre el seno dejaras.\n\nAstros, tierra, mar y cuanto\nel compás del cielo abarca,\nsaludan con nuevo cántico\nal Autor de tanta gracia.\n\nY nosotros, que lavaste\ncon tu sangre inmaculada,\npor tu nacimiento santo\nte damos nueva alabanza.\n\nA Jesús sea la gloria,\nque nació de Vírgen casta,\ncon el Padre y almo Espíritu,\npor siglos que nunca acaban.\nAmén."
+  },
+  "hymnus_laudes": {
+   "eng": "Desde el Oriente al ocaso,\ny del orbe en todo extremo,\na Cristo, que de María\nVirgen nació, celebremos.\n\nFeliz Creador del mundo,\nla forma viste de siervo,\npara salvar con la carne\nlos que la carne hizo reos.\n\nLas virginales entrañas\ncubre resplandor del cielo;\nmisterios que desconoce\nlleva la Madre en su seno.\n\nTemplo de Dios de repente\nse hace inmaculado un pecho:\nla que varon no conoce,\nconcibe al divino Verbo.\n\nAl que Gabriel anunciara,\nal que en el vientre materno\nsintió con gozo el Bautista,\nla Virgen da nacimiento.\n\nPor cuna tiene un pesebre,\nmullida paja por lecho:\naliméntase con leche\nquien da a las aves sustento.\n\nLoores cantan los ángeles,\nalégrase todo el cielo,\ny en la tierra a los pastores\nse hace el Pastor manifiesto.\n\nA Ti, Jesús, que de Virgen\nnaciste, la gloria demos,\ncon el Padre y almo Espíritu,\npor los siglos sempiternos.\nAmén."
+  },
+  "capitulum_sexta": {
+   "eng": "Domingo infraoctava de Navidad"
+  },
+  "capitulum_nona": {
+   "eng": "Domingo infraoctava de Navidad"
   }
  },
  "01-05cc": {
@@ -658,6 +688,18 @@
   },
   "versum_tertia": {
    "eng": "V. Vienen todos de Saba. Aleluya.\nR. Trayendo incienso y oro. Aleluya."
+  },
+  "versum_1c": {
+   "eng": "V. Vienen todos de Saba.\nR. Trayendo oro e incienso, y anunciando las alabanzas del Señor."
+  },
+  "hymnus_matutinum": {
+   "eng": "De un Rey Dios, cruel Herodes,\n¿por qué la venida temes?\nNo quita reinos mortales\nquien da los reinos celestes.\n\nLa estrella que habían visto,\nsiguiendo los Magos vienen:\na la Luz con la luz buscan;\ndones como a Dios le ofrecen.\n\nToca el celestial Cordero\naguas de pura corriente:\nlavándonos, purifica\nlos pecados que no tiene.\n\nNueva clase de portento:\nhidrias de agua se enrojecen;\ny mandadas echar vino,\nen vino el agua convierten.\n\nA Ti, Jesús, demos gloria,\nque apareciste a las gentes,\ncon el Padre y Santo Espíritu,\npor siglos y eternamente.\nAmén."
+  },
+  "versum_nona": {
+   "eng": "V. Adorad a Dios. Aleluya.\nR. Todos sus ángeles. Aleluya."
+  },
+  "ant_1_": {
+   "eng": "Los Magos, al ver * la estrella, se dijeron: Éste es el signo del gran Rey. Vamos a buscarlo y darle tributo de oro, incienso y mirra. Aleluya."
   }
  },
  "01-06n": {
@@ -1104,6 +1146,9 @@
   },
   "responsory3": {
    "eng": "R. Los reyes de Tarsis y de las islas ofrecerán dones:\n* Los reyes de Arabia y de Sabá presentarán ofrendas al Señor,\nV. Todos vendrán de Sabá llevando oro e incienso.\nR. Los reyes de Arabia y de Sabá presentarán ofrendas al Señor.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Los reyes de Arabia y de Sabá presentarán ofrendas al Señor."
+  },
+  "responsory_vespera_1": {
+   "eng": "R.br. Que los reyes de Tarsis y de las islas le paguen tributo. * Aleluya, aleluya.\nR. Que los reyes de Tarsis y de las islas le paguen tributo. * Aleluya, aleluya.\nV. Que los reyes de Saba y de Arabia le ofrezcan sus dones.\nR. Aleluya, aleluya.\nR. Que los reyes de Tarsis y de las islas le paguen tributo. * Aleluya, aleluya."
   }
  },
  "01-14": {
@@ -1301,6 +1346,15 @@
   },
   "versum_3": {
    "eng": "V. El Señor te eligió sacerdote suyo.\nR. Para que le ofrezcas un sacrificio de alabanza."
+  },
+  "hymnusm_vespera": {
+   "eng": "Todo lo que atares con cadenas sobre la tierra,\nquedará fuertemente atado en los astros:\ny lo que tu potestad desatare en la tierra,\nquedará desatado sobre la altura del cielo:\nal fin del mundo serás juez de los siglos.\n\nGloria al Padre por los siglos inmensos,\na ti, oh Hijo, el decoro y el imperio,\nel honor y la potestad al Espíritu Santo:\nsalvación sea a la Trinidad indivisa\npor los infinitos siglos de los siglos.\nAmén."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Todo lo que atares con cadenas sobre la tierra,\nquedará fuertemente atado en los astros:\ny lo que tu potestad desatare en la tierra,\nquedará desatado sobre la altura del cielo:\nal fin del mundo serás juez de los siglos.\n\nGloria al Padre por los siglos inmensos,\na ti, oh Hijo, el decoro y el imperio,\nel honor y la potestad al Espíritu Santo:\nsalvación sea a la Trinidad indivisa\npor los infinitos siglos de los siglos.\nAmén."
+  },
+  "hymnusm_laudes": {
+   "eng": "Bienaventurado Pastor Pedro, recibe clemente\nlas preces de los que te ruegan; y con tu palabra\nquiebra las ataduras de los pecados, tú, a quien fue dado\nel poder de abrir y cerrar el cielo a los mortales.\n\nIlustre Doctor Pablo, dirige nuestra vida,\ny atrae en pos de ti nuestros corazones al cielo;\nhasta que la fe, ahora velada, descubra el mediodía,\ny sola, semejante al sol, reine la caridad.\n\nEterna gloria sea dada a la Trinidad;\nhonor, poder y exultación\na la unidad que lo dirige todo,\npor todos los siglos de los siglos.\nAmén."
   }
  },
  "01-18r": {
@@ -1331,6 +1385,15 @@
   },
   "oratio": {
    "eng": "¡Oh Dios, que para ilustrar a tu Iglesia te dignaste adornar al santo rey Canuto con la palma del martirio y con gloriosos milagros!; concede propicio, que así como él fue imitador de la pasión del Señor, así nosotros, siguiendo sus huellas, merezcamos llegar a los goces eternos.\nPor el mismo Señor Nuestro Jesucristo, tu Hijo, que vive y reina en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "lectio4": {
+   "eng": "Canuto IV, hijo de Suenón Estritio, rey de los daneses, insigne por su fe, piedad y honestidad de costumbres, dio desde sus tiernos años muestras de eximia santidad. Habiendo obtenido el cetro paterno con la mayor aclamación de todos, se dedicó con diligencia a promover la religión, a aumentar las rentas de las iglesias y a adornarlas con preciosos ornamentos. Encendido luego en celo por propagar la fe, acometió en justa guerra los reinos bárbaros, y sometió a la ley cristiana las naciones vencidas. Glorioso con muchas victorias y acrecentado en riquezas, arrojó la diadema real a los pies de Cristo crucificado, sometiéndose a sí y a su reino a Aquel que es Rey de reyes y Señor de los que dominan. Castigó su cuerpo con ayunos, cilicios y disciplinas. Asiduo en la oración y contemplación, pródigo con los pobres, fue siempre benéfico con todos: y jamás se apartó de la senda de la justicia y de la ley divina."
+  },
+  "lectio5": {
+   "eng": "Adornado con estas y otras virtudes, el santo rey se apresuraba hacia la cumbre suprema de la perfección. Sucedió entonces que el reino de Inglaterra fue invadido por Guillermo, duque de los normandos, con un ejército formidable. E implorando los ingleses el auxilio de los daneses, habiendo el rey resuelto socorrerlos, confió la expedición de guerra a su hermano Olao. Mas éste, seducido por la codicia de reinar, volvió las armas contra el rey, concitando contra él a los soldados y al pueblo. Ni faltaron incentivos a la rebelión. Pues habiendo el rey establecido por ley que se pagasen los diezmos a las iglesias, que se guardasen los preceptos de Dios y de la Iglesia, y que fuesen castigados los transgresores, muchos hombres perversos y criminales, exasperados, comenzaron primero a amotinarse, luego a conmover a la plebe, y por fin a maquinar la muerte del santísimo rey."
+  },
+  "lectio6": {
+   "eng": "Sabiendo, pues, el rey, con presciencia de lo por venir, que la muerte le amenazaba por causa de la justicia, la anunció de antemano, y marchó a la iglesia de San Albano Mártir, en Odense, como al lugar del combate: y fortalecido con los sacramentos, encomendaba al Señor su agonía. Llegando luego allí la multitud de los conjurados, intentaron poner fuego a la iglesia, romper las puertas e irrumpir en ella. Y no pudiendo lograrlo, acercándose a las ventanas, no cesaron de arrojar con gran ímpetu piedras y saetas contra el santo rey, que oraba de rodillas por sus enemigos: hasta que, herido por los golpes de las piedras y de los dardos, y al fin atravesado por una lanza, fue coronado con glorioso martirio, cayendo con los brazos extendidos ante el altar, ocupando la sede apostólica Gregorio VII. Después Dios glorificó a su Mártir con muchos milagros. Pues Dinamarca, oprimida por grave penuria y diversas calamidades, pagó las penas del sacrilegio cometido. Muchos también, afligidos por diversas dolencias, alcanzaron remedio y salud junto a su sepulcro. Y queriendo la reina robar de noche ocultamente su sagrado cuerpo y trasladarlo a otro lugar, aterrada por un gran resplandor enviado del cielo, desistió de su propósito."
   }
  },
  "01-20": {
@@ -1697,6 +1760,15 @@
   },
   "responsory3": {
    "eng": "R. Me está reservada una corona de justicia,\n* Que me dará aquel día el Señor, justo juez.\nV. Sé en quién he puesto mi confianza, y estoy seguro que es poderoso para conservar mi depósito hasta aquel día.\nR. Que me dará aquel día el Señor, justo juez.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Que me dará aquel día el Señor, justo juez."
+  },
+  "hymnusm_vespera": {
+   "eng": "Bienaventurado Pastor Pedro, recibe clemente\nlas preces de los que te ruegan; y con tu palabra\nquiebra las ataduras de los pecados, tú, a quien fue dado\nel poder de abrir y cerrar el cielo a los mortales.\n\nIlustre Doctor Pablo, dirige nuestra vida,\ny atrae en pos de ti nuestros corazones al cielo;\nhasta que la fe, ahora velada, descubra el mediodía,\ny sola, semejante al sol, reine la caridad.\n\nEterna gloria sea dada a la Trinidad;\nhonor, poder y exultación\na la unidad que lo dirige todo,\npor todos los siglos de los siglos.\nAmén."
+  },
+  "versum_0": {
+   "eng": "V. Diste la heredad.\nR. A los que temen tu nombre, Señor."
+  },
+  "ant_2": {
+   "eng": "Los que me habéis seguido, * os sentaréis sobre tronos para juzgar a las doce tribus de Israel, dice el Señor."
   }
  },
  "01-25r": {
@@ -2931,6 +3003,15 @@
   },
   "versum_3": {
    "eng": "V. El Señor te eligió sacerdote suyo.\nR. Para que le ofrezcas un sacrificio de alabanza."
+  },
+  "hymnusm_vespera": {
+   "eng": "Todo lo que atares con cadenas sobre la tierra,\nquedará fuertemente atado en los astros:\ny lo que tu potestad desatare en la tierra,\nquedará desatado sobre la altura del cielo:\nal fin del mundo serás juez de los siglos.\n\nGloria al Padre por los siglos inmensos,\na ti, oh Hijo, el decoro y el imperio,\nel honor y la potestad al Espíritu Santo:\nsalvación sea a la Trinidad indivisa\npor los infinitos siglos de los siglos.\nAmén."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Todo lo que atares con cadenas sobre la tierra,\nquedará fuertemente atado en los astros:\ny lo que tu potestad desatare en la tierra,\nquedará desatado sobre la altura del cielo:\nal fin del mundo serás juez de los siglos.\n\nGloria al Padre por los siglos inmensos,\na ti, oh Hijo, el decoro y el imperio,\nel honor y la potestad al Espíritu Santo:\nsalvación sea a la Trinidad indivisa\npor los infinitos siglos de los siglos.\nAmén."
+  },
+  "hymnusm_laudes": {
+   "eng": "Bienaventurado Pastor Pedro, recibe clemente\nlas preces de los que te ruegan; y con tu palabra\nquiebra las ataduras de los pecados, tú, a quien fue dado\nel poder de abrir y cerrar el cielo a los mortales.\n\nIlustre Doctor Pablo, dirige nuestra vida,\ny atrae en pos de ti nuestros corazones al cielo;\nhasta que la fe, ahora velada, descubra el mediodía,\ny sola, semejante al sol, reine la caridad.\n\nEterna gloria sea dada a la Trinidad;\nhonor, poder y exultación\na la unidad que lo dirige todo,\npor todos los siglos de los siglos.\nAmén."
   }
  },
  "02-23r": {
@@ -3497,6 +3578,9 @@
   },
   "lectio9": {
    "eng": "Y le pondrás por nombre Jesús. Pues Él salvará a su pueblo de sus pecados. Jesús en lengua hebrea significa Salvador: el evangelista señaló, pues, la etimología de su nombre al decir: Le pondrás por nombre Jesús, porque Él salvará a su pueblo."
+  },
+  "lectio6": {
+   "eng": "No hay duda de que José, con quien se desposó la Madre del Salvador, fue un hombre bueno y fiel. “Fue el siervo fiel y prudente, a quien constituyó Dios” consuelo de su Madre, sustento de su humanidad, y coadjutor fidelísimo, sobre la tierra, de su gran designio. Además, de José se afirma que fue de la casa de David. En verdad era de la casa de David. En verdad este hombre llamado José descendía de sangre real; de linaje y más noble aún de alma. En verdad hijo de David, y digno de tal padre. Hijo de David, en línea recta, y no sólo por la sangre sino por la fe, por la santidad, por la devoción; como a otro David, Dios lo encontró conforme a su corazón y digno de confiarle el sacratísimo arcano de este corazón; y como a otro David le manifestó los misterios de su sabiduría, y le dio el conocimiento del misterio que ninguno de los príncipes de este siglo conoció."
   }
  },
  "03-21": {
@@ -3786,6 +3870,15 @@
   },
   "responsory8": {
    "eng": "R. Alégrate, Virgen María, pues Tú sola has vencido todas las herejías.\n* Tú que creíste en las palabras del Arcángel Gabriel, concebiste al Dios hecho hombre sin perder tu virginidad, y permaneciste virgen intacta después del parto.\nV. Bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre.\nR. Tú que creíste en las palabras del Arcángel Gabriel, concebiste al Dios hecho hombre sin perder tu virginidad, y permaneciste virgen intacta después del parto.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Tú que creíste en las palabras del Arcángel Gabriel, concebiste al Dios hecho hombre sin perder tu virginidad, y permaneciste virgen intacta después del parto."
+  },
+  "matutinum.ant_1": {
+   "eng": "Dijo el Ángel Gabriel a Daniel: * Oh hijo de hombre, atiende al momento en que se cumplirá esta visión en el tiempo prefijado.;;8"
+  },
+  "matutinum.ant_2": {
+   "eng": "El Ángel Gabriel * se apareció a Zacarías, diciendo: Tu esposa Isabel dará a luz un hijo, y le llamarás Juan.;;18"
+  },
+  "matutinum.ant_3": {
+   "eng": "El ángel Gabriel * fue enviado por Dios a la Virgen María, desposada con José."
   }
  },
  "03-25": {
@@ -3943,6 +4036,9 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "versum_0": {
+   "eng": "V. Señor, envía el Cordero, rey de la tierra.\nR. Desde las peñas del desierto al Monte de Sion."
   }
  },
  "03-27": {
@@ -5192,6 +5288,24 @@
   },
   "versum_tertia": {
    "eng": "V. Te adoramos, Cristo, y te bendecimos.\nR. Porque con tu Cruz redimiste al mundo."
+  },
+  "hymnus_vespera": {
+   "eng": "La enseña se enarbola del Rey fuerte:\nBrilla el misterio de la Cruz sagrada:\nEn ella padeció la Vida muerte,\nY vida con la muerte nos fue dada.\n\nEl que es de vida manantial y fuente,\nCon duro hierro abierto su costado,\nDe sangre y agua destiló un torrente,\nPara lavar las manchas del pecado.\n\nCumplido fue lo que David predijo\nEn misterioso canto verdadero,\nCuando a los pueblos y naciones dijo:\nVed que reina el Señor desde el madero.\n\nÁrbol hermoso y fúlgido, teñido\nCon púrpura de Rey cual regio manto:\nTú solo; entre millares elegido,\nMereciste tocar cuerpo tan santo.\n\nTronco feliz, en cuyas ramas pende\nEl rescate del mundo: del Eterno\nEn la balanza justa el fiel desciende,\nSu presa arrebatándole al infierno.\n\n¡Salve, oh Cruz, nuestra única esperanza!\nAumenta en este tiempo tus trofeos:\nAcrecienta en el fiel la confianza,\nY perdona su crímen a los reos.\n\n¡Oh Santa Trinidad, fuente de vida!\nLos espíritus todos te den gloria:\nConcédenos la palma merecida,\nPues de la Cruz nos diste la victoria.\nAmén."
+  },
+  "hymnusm_vespera": {
+   "eng": "La enseña se enarbola del Rey:\nbrilla el misterio de la Cruz,\ndonde el Creador de la carne,\nhecho carne, fue suspendido del patíbulo.\n\nDonde, herido además\npor el hierro cruel de la lanza,\npara lavarnos del pecado,\nmanó agua y sangre.\n\nCumplido fue lo que David\npredijo en canto verdadero,\ndiciendo: Entre las naciones\nreinó Dios desde el madero.\n\nÁrbol hermoso y fúlgido,\nadornado con la púrpura del Rey,\nelegido de digno tronco\npara tocar miembros tan santos.\n\nDichosa tú, de cuyos brazos\npendió el rescate del mundo:\nhecha balanza del cuerpo,\narrebató su presa al infierno.\n\n¡Salve, oh Cruz, única esperanza!\nEn esta gloria del triunfo,\nen este tiempo de Pasión,\nen este gozo pascual,\nacrecienta la justicia a los piadosos,\ny otorga el perdón a los reos.\n\nA ti, oh Dios, suma Trinidad,\nte alabe todo espíritu:\na los que salvas por el misterio de la Cruz,\nrígelos por los siglos.\nAmén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Canta, lengua, con voz entusiasmada\nGloriosos lauros de inmortal querella;\nY ante el trofeo de la Cruz sagrada,\nDinos el triunfo conseguido en ella:\nDe qué modo, en nobleza sin segundo,\nVenció muriendo el Redentor del mundo.\n\nDel fraude el Hacedor compadecido,\nQue puso al primer hombre en triste estado,\nCuando al gustar del fruto prohibido\nComió la muerte en el fatal bocado,\nPara pagar el contraído empeño\nBajo el árbol, entonces buscó el leño.\n\nTal obra, en la salud que nos prepara\nBenigno el cielo, el orden requería:\nQue con el arte el arte se burlara,\nQue trazó para herir la alevosía;\nY donde el enemigo encontró medio\nDe perdernos, hallásemos remedio.\n\nLlegado el tiempo consagrado y fijo\nQue el Verbo eterno señaló en su mente,\nEnvía el Padre a su celeste Hijo\nQue fue del orbe Creador potente;\nY en virginal entraña concebido\nNace de humana carne revestido.\n\nPrincipiando a sufrir, cual niño llora\nDel pesebre sintiendo la estrechura:\nSus miembros liga, mientras fiel le adora,\nLa Vírgen Madre en cándida envoltura:\nLas manos y los pies de un Dios sublime\nDe estrecha faja el ceñidor comprime.\n\nA Ti la gloria, Trinidad beata,\nPor sempiternos siglos tributemos;\nAl Hijo con el Padre á quien retrata;\nEl mismo honor al Paracleto demos:\nDel uno y trino Dios alabe el hombre\nCon todo el universo el santo nombre.\nAmén."
+  },
+  "hymnus_laudes": {
+   "eng": "El sexto lustro de su edad cumplido,\nLlegando al fin de su mortal carrera,\nDe propio impulso el Redentor movido\nSe entrega a la Pasion y muerte fiera.\nEn la cruz el Cordero es levantado\nPara ser sobre el árbol inmolado.\n\nVedle desfallecido, hiel gustando:\nVed la espina, los clavos, finalmente\nLa lanza que atraviesa el pecho blando.\nDe sangre y agua brota viva fuente.\nLa tierra, el mar, los astros, todo el mundo\n¡En qué río se lavan tan profundo!\n\n¡Oh sacrosanta cruz! Firme, constante;\nÁrbol como ninguno generoso:\nLas selvas no producen semejante,\nEn lozanía, en flor, en fruto hermoso.\n¡Oh dulces clavos! ¡Oh madero santo!\nQue un peso sostenéis de valor tanto.\n\nDobla, dobla tus ramas, cruz divina;\nAblanda de tu seno la dureza:\nMitiga ese rigor que en ti domina,\nY en su orígen te dió naturaleza;\nY a los miembros del Rey que de ti pende,\nLecho más blando en tu regazo tiende.\n\nSola tú digna de llevar has sido\nLa víctima que al mundo rescatase,\nY un puerto preparar donde acogido\nEn tu arca del naufragio se salvase.\nAltar de sacrificio es tu madero\nUngido con la sangre del Cordero.\n\nA tí la gloria, Trinidad beata,\nPor sempiternos siglos tributemos;\nAl Hijo con el Padre a quien retrata;\nEl mismo honor al Paracleto demos:\nDel uno y trino Dios alabe el hombre\nCon todo el universo el santo nombre.\nAmén."
+  },
+  "hymnusm_laudes": {
+   "eng": "El sexto lustro de su edad cumplido,<br>Llegando al fin de su mortal carrera,<br>De propio impulso el Redentor movido<br>Se entrega a la Pasion y muerte fiera.<br>En la cruz el Cordero es levantado<br>Para ser sobre el árbol inmolado.\n\nVedle desfallecido, hiel gustando:<br>Ved la espina, los clavos, finalmente<br>La lanza que atraviesa el pecho blando.<br>De sangre y agua brota viva fuente.<br>La tierra, el mar, los astros, todo el mundo<br>¡En qué río se lavan tan profundo!\n\n¡Oh sacrosanta cruz! Firme, constante;<br>Árbol como ninguno generoso:<br>Las selvas no producen semejante,<br>En lozanía, en flor, en fruto hermoso.<br>¡Oh dulces clavos! ¡Oh madero santo!<br>Que un peso sostenéis de valor tanto.\n\nDobla, dobla tus ramas, cruz divina;<br>Ablanda de tu seno la dureza:<br>Mitiga ese rigor que en ti domina,<br>Y en su orígen te dió naturaleza;<br>Y a los miembros del Rey que de ti pende,<br>Lecho más blando en tu regazo tiende.\n\nSola tú digna de llevar has sido<br>La víctima que al mundo rescatase,<br>Y un puerto preparar donde acogido<br>En tu arca del naufragio se salvase.<br>Altar de sacrificio es tu madero<br>Ungido con la sangre del Cordero.\n\nA tí la gloria, Trinidad beata,<br>Por sempiternos siglos tributemos;<br>Al Hijo con el Padre a quien retrata;<br>El mismo honor al Paracleto demos:<br>Del uno y trino Dios alabe el hombre<br>Con todo el universo el santo nombre.<br>Amén."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Gloria y honor a Dios\nAltísimo por siempre,\njuntamente al Padre y al Hijo,\ny al ínclito Paráclito:\na quien pertenecen la alabanza y el poder\npor los siglos eternos.\nAmén."
   }
  },
  "05-03r": {
@@ -5200,11 +5314,20 @@
   },
   "oratio": {
    "eng": "Al celebrar la entrada en la gloria de los santos Alejandro, Evencio, Teódulo y Juvenal, te pedimos, Dios todopoderoso por su intercesión, vernos libres de toda adversidad.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "lectio93": {
+   "eng": "Alejandro, romano, gobernó la Iglesia siendo emperador Adriano; convirtió a la fe de Jesucristo a muchos nobles romanos. Ordenó que en Misa solo se ofrecieran pan y vino. Fijó que con el vino se mezclase un poco de agua, en memoria de la sangre y el agua que manaron del costado de Jesucristo. Añadió al Canon de la Misa las palabras: “El cual, el día antes de padecer”. Decretó guardar perpetuamente en la Iglesia agua bendita con sal, y que se usase en las habitaciones para ahuyentar los demonios. Gobernó 10 años, 5 meses y 20 días; destacó por la santidad de vida y por sus provechosas disposiciones. Fue coronado con el martirio junto con los presbíteros Evencio y Teódulo, y sepultado en la vía Nomentana, a 3 millas de la ciudad, en el lugar donde fue decapitado. Creó, en los meses de diciembre, 6 presbíteros, 2 diáconos y 5 obispos para diversos lugares. Los cuerpos de estos Mártires se trasladaron más tarde a la ciudad, siendo sepultados en la iglesia de Santa Sabina. En el mismo día ocurrió la muerte de San Juvenal, obispo de Narni, quien con su santidad y doctrina, engendró en Narni a muchos fieles en Jesucristo, siendo célebre por sus milagros, descansó en paz, y en la misma ciudad donde fue sepultado."
   }
  },
  "05-03t": {
   "lectio8": {
    "eng": "Sí, Nicodemo se contaba entre los muchos que habían creído en el nombre de Jesucristo. Consideremos en él las razones por las que Jesús no se revelaba a ellos. Jesús le respondió: “En verdad, en verdad te digo que no puede ver el reino de Dios sino aquel que renaciere de nuevo”. Jesús se revela, pues, a los que han renacido de nuevo. Aquéllos creían en Jesucristo, pero Jesucristo no se les revelaba. Así son todos los catecúmenos; tienen fe en el nombre de Jesucristo, pero Jesús no se da a ellos. Ponga atención en esto, y comprenderá lo que digo. Si preguntamos a un catecúmeno: ¿Crees en Jesucristo?, Creo, responde; y hace sobre sí la señal de la cruz; muestra este signo sobre la frente, y no se avergüenza de la Cruz de su Maestro. Cree, pues, en su nombre. Preguntémosle: ¿Comes la carne del Hijo del hombre y bebes su sangre? No sabe lo que queremos decir, porque Jesús no se ha confiado todavía a él."
+  },
+  "ant_vespera": {
+   "eng": "Elena, la madre de Constantino, fue a Jerusalén, aleluya.\nEntonces mandó quemarlos a todos; mas ellos, atemorizados, entregaron a Judas, aleluya.\nMuerte y vida se te ponen delante: si no me muestras la Cruz de Cristo, aleluya.\nY cuando Judas subió del pozo, fue al lugar donde yacía la santa Cruz, aleluya.\nOraba Judas: Dios, Dios mío, muéstrame el madero de la santa Cruz, aleluya."
+  },
+  "ant_laudes": {
+   "eng": "Elena, la madre de Constantino, fue a Jerusalén, aleluya.\nEntonces mandó quemarlos a todos; mas ellos, atemorizados, entregaron a Judas, aleluya.\nMuerte y vida se te ponen delante: si no me muestras la Cruz de Cristo, aleluya.\nY cuando Judas subió del pozo, fue al lugar donde yacía la santa Cruz, aleluya.\nOraba Judas: Dios, Dios mío, muéstrame el madero de la santa Cruz, aleluya."
   }
  },
  "05-04": {
@@ -5626,6 +5749,9 @@
   },
   "versum_tertia": {
    "eng": "V. Subió el humo de los perfumes al acatamiento del Señor.\nR. Por la mano del Ángel."
+  },
+  "hymnusm_laudes": {
+   "eng": "Cristo, hermosura de los Ángeles santos,\nautor eterno del linaje humano,\nduélante nuestros llantos y haznos\nsubir al cielo soberano.\n\nEnvía al Ángel de Paz, Miguel,\ndesde el cielo a estos lares,\ny así visitándonos podamos\nen paz medrar y prosperar.\n\nTambién, Señor, envía del cielo\na Gabriel fuerte, porque destierre\nal enemigo antiguo, y que more\nen este templo con frecuencia.\n\nHaz que nos visite del cielo\nRafael, y que nos cure, médico grande,\nsane a los enfermos y guíe\ncuanto fuéremos obrando.\n\nTambién la Madre de nuestro Dios,\nMaría, y los coros de los Ángeles\nnos asistan, como asisten\na la toda bienaventurada.\n\nEsté ante nosotros la Trinidad santa,\nPadre, Hijo y al mismo punto\nel Espíritu Santo, cuya gloria\nse entiende al ver el mundo. Amén."
   }
  },
  "05-09": {
@@ -5651,6 +5777,9 @@
   },
   "lectio8": {
    "eng": "Vosotros sois la luz del mundo. Así como antes había dicho: sal de la tierra, ahora dice: luz del mundo. Ni antes se debe entender la tierra como aquella que pisamos con los pies, sino los hombres que viven en la tierra, o también los pecadores, ya que el Señor ha enviado la sal apostólica para sazonarlos y extinguir su hedor. Ni aquí por mundo se ha de entender el cielo y la tierra, sino los hombres que están en el mundo o aman el mundo y a los cuales el Señor ha enviado a los apóstoles para iluminarlos. No se puede encubrir una ciudad construida sobre el monte, es decir, fundada sobre una insigne y gran justicia, simbolizada también por el monte donde el Señor está enseñando."
+  },
+  "lectio9": {
+   "eng": "Ni encienden una lámpara y la ponen bajo el celemín. ¿Qué pensamos? ¿Se dijo así para que se entienda solamente el ocultar la lámpara — como si dijera: Nadie enciende una lámpara y la esconde? ¿O significa también algo el celemín — de modo que poner la lámpara bajo el celemín sea esto: anteponer las comodidades del cuerpo a la predicación de la verdad; de suerte que uno no predique la verdad porque teme padecer alguna molestia en las cosas corporales? Y con razón se dice celemín, ya sea por la retribución de la medida — pues cada uno recibirá lo que hizo en el cuerpo; como dice el Apóstol: para que cada uno reciba lo que hizo en el cuerpo; y como de este celemín del cuerpo se dice en otro lugar: Con la medida con que midiereis, se os volverá a medir — ya sea porque los bienes temporales, que se llevan a cabo en el cuerpo, comienzan y pasan dentro de una medida determinada de días."
   }
  },
  "05-10": {
@@ -6314,11 +6443,26 @@
   },
   "versum_tertia": {
    "eng": "V. Junto a la cuz de Jesús estaba su Madre. Aleluya.\nR. Partícipe de su pasión, Reina de todo el mundo. Aleluya."
+  },
+  "matutinum.ant_1": {
+   "eng": "Dios te salve, María; llena de gracia; el Señor es contigo; bendita tú, entre las mujeres; y bendito el fruto de tu vientre. (Aleluya.)"
+  },
+  "matutinum.ant_2": {
+   "eng": "Con esa tu gallardía * y hermosura, camina, avanza prósperamente y reina, aleluya.;;44"
+  },
+  "matutinum.ant_3": {
+   "eng": "Alégrate, Virgen María; * Tú sola has destruido todas las herejías en todo el universo, aleluya.;;95"
   }
  },
  "05-31o": {
   "oratio": {
    "eng": "Escúchanos, oh Dios, salvador nuestro: para que, así como nos alegramos en la festividad de tu santa Virgen Petronila, así aprendamos el afecto de una piadosa devoción."
+  },
+  "lectio2": {
+   "eng": "Petronila, hija de San Pedro, fue virgen de eximia hermosura de cuerpo, pero mucho más excelente por la hermosura de su alma. Hallándose enferma, se preguntó al bienaventurado Pedro por qué, sanando a los extraños, no devolvía la salud a su propia hija; y respondió: Porque así le conviene. Sin embargo, para no dejar a nadie lugar de dudar de su potestad, le mandó levantarse del lecho y servir la mesa a los convidados. Poco después recayó en la misma enfermedad; y habiendo al fin convalecido de ella, el conde Flaco, movido por su fama, la amó sin haberla visto, y pretendió con empeño que le fuese dada en matrimonio."
+  },
+  "lectio3": {
+   "eng": "Mas Petronila, comprendiendo que el acerbísimo enemigo del género humano preparaba asechanzas contra la virginidad que había consagrado a Jesucristo, tomó para sí un plazo de tres días para deliberar, y consumió todo aquel tiempo en ayunos y oración, pidiendo con instancia a su Esposo celestial que no permitiera que se hiciese violencia a su santo propósito. Y así, al tercer día, Dios socorrió a la virgen: pues, abrasada en el amor de su divino Esposo, habiendo recibido la Eucaristía, la llamó a las bodas celestiales. Su cuerpo, sepultado en la vía Ardeatina, fue después trasladado por el papa Paulo I a la Basílica del Príncipe de los Apóstoles."
   }
  },
  "06-01": {
@@ -7267,6 +7411,15 @@
   },
   "versum_0": {
    "eng": "V. Tú eres Pedro.\nR. Y sobre esta piedra edificaré mi Iglesia."
+  },
+  "hymnusm_vespera": {
+   "eng": "Con áurea luz y rosado esplendor,\noh Luz de la luz, inundaste todos los siglos,\nadornando los cielos con ínclito martirio\nen este sagrado día, que da el perdón a los reos.\n\nEl portero del cielo y el Doctor del orbe,\njueces de los siglos y verdaderas lumbreras del mundo:\ntriunfando el uno por la cruz, el otro por la espada,\nposeen laureados el senado de la vida.\n\n¡Oh feliz Roma, que estás empurpurada\ncon la preciosa sangre de tan grandes Príncipes!\nNo por tu propia alabanza, sino por sus méritos,\nsuperas toda la hermosura del mundo.\n\nGloria sempiterna sea a la Trinidad,\nhonor, potestad y júbilo,\nen la unidad, en quien permanece el imperio,\ndesde entonces y ahora, por los siglos eternos. Amén."
+  },
+  "hymnusm_laudes": {
+   "eng": "Bienaventurado Pastor Pedro, recibe clemente\nlas preces de los que te ruegan; y con tu palabra\nquiebra las ataduras de los pecados, tú, a quien fue dado\nel poder de abrir y cerrar el cielo a los mortales.\n\nIlustre Doctor Pablo, dirige nuestra vida,\ny atrae en pos de ti nuestros corazones al cielo;\nhasta que la fe, ahora velada, descubra el mediodía,\ny sola, semejante al sol, reine la caridad.\n\nEterna gloria sea dada a la Trinidad;\nhonor, poder y exultación\na la unidad que lo dirige todo,\npor todos los siglos de los siglos.\nAmén."
+  },
+  "ant_laudes": {
+   "eng": "Pedro y Juan * subían al templo a la hora de nona para orar.\nNo tengo plata ni oro: * mas te doy lo que tengo.\nDijo el Ángel a Pedro: * Cíñete tu vestido y sígueme.\nEnvió el Señor * su Ángel, y me ha librado del poder de Herodes, aleluya.\nTú eres Pedro * y sobre esta piedra edificaré mi Iglesia."
   }
  },
  "06-30": {
@@ -7538,6 +7691,15 @@
   },
   "versum_2": {
    "eng": "V. Tú eres el vaso de mi elección, San Pablo Apóstol.\nR. Predicador de la verdad por todo el mundo."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Bienaventurado Pastor Pedro, recibe clemente\nlas preces de los que te ruegan; y con tu palabra\nquiebra las ataduras de los pecados, tú, a quien fue dado\nel poder de abrir y cerrar el cielo a los mortales.\n\nIlustre Doctor Pablo, dirige nuestra vida,\ny atrae en pos de ti nuestros corazones al cielo;\nhasta que la fe, ahora velada, descubra el mediodía,\ny sola, semejante al sol, reine la caridad.\n\nEterna gloria sea dada a la Trinidad;\nhonor, poder y exultación\na la unidad que lo dirige todo,\npor todos los siglos de los siglos.\nAmén."
+  },
+  "hymnus_laudes": {
+   "eng": "Llénese de gozo el orbe,\nsuene el cielo en alabanzas:\nla gloria de los Apóstoles\nla tierra y los astros cantan.\n\nVosotros, jueces del mundo,\ny antorchas de luz sagrada,\nrecibid nuestros obsequios,\ny escuchad nuestras plegarias.\n\nLas puertas cerráis del cielo,\ny abrís con una palabra:\nsuelto el lazo de la culpa,\nmandad nos sean franqueadas.\n\nSi a la salud y dolencias\nvuestros mandatos alcanzan,\nsanad las mentes enfermas,\ny aumentos dadnos de gracia.\n\nPara que al fin de los siglos\njuzgando Cristo las almas,\nde los sempiternos gozos\nparticipantes nos haga.\n\n* Gloria al Padre, gloria al Hijo,\ny a ti, Virtud sublimada,\ncomo lo fue, sea siempre\ndado el honor y alabanza.\nAmén."
+  },
+  "hymnusm_laudes": {
+   "eng": "Exulte el cielo con alabanzas,\nresuene la tierra con gozos:\nla gloria de los Apóstoles\ncantan las sagradas solemnidades.\n\nVosotros, justos jueces de los siglos\ny verdaderas lumbreras del mundo,\ncon los votos del corazón os rogamos:\noíd las preces de los suplicantes.\n\nVosotros que cerráis el cielo con la palabra\ny soltáis sus cerrojos,\nmandad, os rogamos, que seamos\ndesatados de todos los pecados.\n\nA cuyo precepto obedecen\nla salud y la enfermedad de todos:\nsanad a los enfermos de costumbres,\ndevolviéndonos a las virtudes.\n\nPara que, cuando Cristo Juez\nvenga al fin de los siglos,\nnos haga partícipes\ndel gozo sempiterno.\n\n* Gloria sea a Dios Padre,\ny a su único Hijo,\ncon el Espíritu Paráclito,\nahora y para siempre.\nAmén."
   }
  },
  "06-30octt": {
@@ -7552,6 +7714,9 @@
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
+  },
+  "oratio": {
+   "eng": "Oh Dios, que consagraste este día con el martirio de tus Apóstoles Pedro y Pablo: concede a tu Iglesia que siga en todo las enseñanzas de aquellos, por quienes fue iniciada en la religión.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   }
  },
  "07-01": {
@@ -7890,6 +8055,9 @@
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
+  },
+  "oratio": {
+   "eng": "Oh Dios, que consagraste este día con el martirio de tus Apóstoles Pedro y Pablo: concede a tu Iglesia que siga en todo las enseñanzas de aquellos, por quienes fue iniciada en la religión.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   }
  },
  "07-01t": {
@@ -8077,6 +8245,15 @@
   },
   "versum_3": {
    "eng": "V. Permíteme cantar tus alabanzas, Virgen santa.\nR. Hazme fuerte contra tus enemigos."
+  },
+  "lectio4": {
+   "eng": "Sermón del venerable Beda, presbítero\nRecibido el consentimiento de la virgen, el ángel volvió luego al cielo, y ella se fue a la montaña, apresurándose a visitar a Isabel — no como incrédula del oráculo, ni dudosa del ejemplo, sino gozosa de la promesa, diligente en el servicio; dando a la vez un ejemplo figurativo: que toda alma que ha concebido en la mente el Verbo de Dios sube al punto, con el paso del amor, las altas cumbres de las virtudes, hasta poder penetrar en la ciudad de Judá — esto es, en la ciudadela de la confesión y de la alabanza — y morar en ella, como tres meses, en la perfección de la fe, de la esperanza y de la caridad."
+  },
+  "lectio5": {
+   "eng": "Aprende, virgen, la humildad de María, para que puedas ser casta de cuerpo y devota de corazón. La más joven visita a la anciana, la virgen saluda a la casada. Pues conviene que, cuanto más casta es una virgen, tanto más humilde sea; y que, respetando a sus mayores, recomiende el hábito de la castidad con el pregón de la humildad. De un modo fue María a Isabel, de otro vino el Señor a Juan: aquélla, para que se llenara del Espíritu Santo; éste, para que su bautismo fuera consagrado: y la humillación de los mayores es siempre exaltación de los menores."
+  },
+  "lectio6": {
+   "eng": "Isabel oyó antes la voz, pero Juan sintió antes la gracia: ella oyó según el orden de la naturaleza, él saltó de gozo por razón del misterio: ella conoció la llegada de María, él la del Señor; la mujer, la llegada de la mujer; el niño, la del niño. Ellas hablan de las gracias; ellos, dentro, las obran, y comienzan el misterio de la piedad con el provecho de sus madres; y con doble milagro, las madres profetizan por el espíritu de sus hijos. Saltó el niño, y fue llena la madre: no fue llena la madre antes que el hijo, sino que, lleno el hijo, llenó también a la madre."
   }
  },
  "07-02oct": {
@@ -8140,6 +8317,9 @@
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
+  },
+  "oratio": {
+   "eng": "Oh Dios, que consagraste este día con el martirio de tus Apóstoles Pedro y Pablo: concede a tu Iglesia que siga en todo las enseñanzas de aquellos, por quienes fue iniciada en la religión.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   }
  },
  "07-04oct": {
@@ -8172,6 +8352,9 @@
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
+  },
+  "oratio": {
+   "eng": "Oh Dios, que consagraste este día con el martirio de tus Apóstoles Pedro y Pablo: concede a tu Iglesia que siga en todo las enseñanzas de aquellos, por quienes fue iniciada en la religión.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   }
  },
  "07-05": {
@@ -8212,6 +8395,18 @@
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
+  },
+  "oratio": {
+   "eng": "Oh Dios, que consagraste este día con el martirio de tus Apóstoles Pedro y Pablo: concede a tu Iglesia que siga en todo las enseñanzas de aquellos, por quienes fue iniciada en la religión.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "lectio4": {
+   "eng": "Sermón de San Máximo, Obispo\nNo pensemos, hermanos carísimos, que fue sin causa el que los gloriosísimos príncipes de la fe cristiana, Pedro y Pablo, sufrieran la sentencia de un solo tirano, en un solo día y en un solo lugar. Padecieron en un solo día, para llegar juntos a Cristo; en un solo lugar, para que a Roma no le faltara ninguno de los dos; bajo un solo perseguidor, para que una igual crueldad los sujetara a ambos. El día, pues — así lo juzgo — fue decretado para su mérito, el lugar para su gloria, el perseguidor para su fortaleza. ¿Y en qué lugar, al fin, sufrieron el martirio? En la ciudad de Roma, que tiene el principado y la cabeza de las naciones; a saber: para que donde estaba la cabeza de la superstición, allí descansara la cabeza de la santidad; y donde habitaban los príncipes de los gentiles, allí moraran los príncipes de las iglesias."
+  },
+  "lectio5": {
+   "eng": "Y de cuánto mérito sean los santísimos Pedro y Pablo, podemos entenderlo de aquí: que habiendo el Señor iluminado la región del Oriente con su propia pasión, se dignó iluminar el ámbito del Occidente — para que en nada fuera inferior — con la sangre de sus apóstoles en su lugar. Y aunque la pasión de Aquél nos basta para la salvación, con todo, el martirio de éstos nos ha aprovechado como ejemplo. En este día, pues, los santos apóstoles derramaron su sangre: mas veamos la causa por la que padecieron; a saber: que entre otras maravillas, también derribaron con sus oraciones a aquel mago Simón, precipitándolo del vacío del aire."
+  },
+  "lectio6": {
+   "eng": "Pues cuando el mismo Simón se decía Cristo, y afirmaba que, como hijo al padre, podía subir volando, y elevado de repente por sus artes mágicas comenzó a volar: entonces Pedro, hincadas las rodillas, oró al Señor, y con su santa oración venció la ligereza mágica. Pues subió al Señor la oración antes que el vuelo, y llegó la justa petición antes que la inicua presunción; Pedro, puesto en la tierra, obtuvo lo que pedía antes que Simón llegara a los cielos adonde tendía. Entonces Pedro lo hizo bajar de lo alto del aire como atado, y estrellándolo en un precipicio contra una roca, le quebró las piernas: y esto en oprobio de su hazaña — que el que poco antes había intentado volar, de repente no pudiera andar; y el que había tomado alas, perdiera las plantas."
   }
  },
  "07-06": {
@@ -8558,6 +8753,15 @@
   },
   "responsory6": {
    "eng": "R. Desprecié el reino del mundo y toda la vanidad del siglo, por amor de mi Señor Jesucristo:\n* Al que vi, en quien creí, y al que amé.\nV. De mi corazón brota una palabra excelente; dedico yo mis obras al Rey.\nR. Al que vi, en quien creí, y al que amé.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Al que vi, en quien creí, y al que amé."
+  },
+  "responsory5": {
+   "eng": "R. Aplicó sus manos a cosas fuertes:\n* Abrió su mano al necesitado, y extendió sus palmas al pobre.\nR. Abrió su mano al necesitado, y extendió sus palmas al pobre."
+  },
+  "responsory8": {
+   "eng": "R. Invoqué, y vino a mí el espíritu de sabiduría, y la preferí a los reinos y a los tronos:\n* Y tuve en nada las riquezas en comparación de ella.\nV. Porque mejor es la sabiduría que todas las riquezas más preciosas.\nR. Y tuve en nada las riquezas en comparación de ella.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Y tuve en nada las riquezas en comparación de ella."
+  },
+  "responsory4": {
+   "eng": "R. Escucha, hija, y mira, e inclina tu oído; olvida a tu pueblo y la casa de tu padre:\n* Y el Rey se prendará de tu hermosura.\nR. Y el Rey se prendará de tu hermosura."
   }
  },
  "07-10": {
@@ -8663,6 +8867,12 @@
   },
   "oratio": {
    "eng": "Oh Dios, que diste a tu pueblo a tu santo Buenaventura como ministro de la salvación eterna: concédenos, te rogamos, que merezcamos tener por intercesor en los cielos a quien tuvimos por Doctor de la vida en la tierra.\nOh Dios, que diste a tu pueblo a tu santo Buenaventura como ministro de la salvación eterna: concédenos, te rogamos, que merezcamos tener por intercesor en los cielos a quien tuvimos por Doctor de la vida en la tierra."
+  },
+  "lectio6_": {
+   "eng": "Enviado por San Gregorio X al concilio de Lión, y promovido Cardenal Obispo de Albano, desplegó el Santo en los asuntos del concilio, notable actividad. Gracias a sus trabajos, mitigáronse las discusiones cismáticas y triunfaron los dogmas de la Iglesia. En esto, murió, a los 53 años de edad, en el año de gracia 1274, causando profunda tristeza, viéndose sus funerales realzados por la presencia de todos los asistentes al concilio y del Papa. Sus muchos y brillantes milagros movieron al papa Sixto IV a inscribirle en el número de los santos. Escribió muchas obras, en las cuales se juntan una ardiente devoción a una erudición profunda, por lo cual conmueven al lector a la vez que le instruyen. Así pues, Sixto V le adjudicó con mucha justicia el título de Doctor Seráfico."
+  },
+  "lectio6": {
+   "eng": "Enviado por San Gregorio X al concilio de Lión, y promovido Cardenal Obispo de Albano, desplegó el Santo en los asuntos del concilio, notable actividad. Gracias a sus trabajos, mitigáronse las discusiones cismáticas y triunfaron los dogmas de la Iglesia. En esto, murió, a los 53 años de edad, en el año de gracia 1274, causando profunda tristeza, viéndose sus funerales realzados por la presencia de todos los asistentes al concilio y del Papa. Sus muchos y brillantes milagros movieron al papa Sixto IV a inscribirle en el número de los santos. Escribió muchas obras, en las cuales se juntan una ardiente devoción a una erudición profunda, por lo cual conmueven al lector a la vez que le instruyen. Así pues, Sixto V le adjudicó con mucha justicia el título de Doctor Seráfico."
   }
  },
  "07-15": {
@@ -8703,6 +8913,9 @@
   },
   "oratio": {
    "eng": "Oh Dios que honraste la Orden del Carmen con el singular título de la bienaventurada siempre Virgen María vuestra Madre: concédenos propicio, a los que celebramos con solemnidad su Conmemoración en este día, que ayudados por su poderosa intercesión, merezcamos llegar a los goces sempiternos.\nTú que vives y reinas con el Padre en la unidad del Espíritu Santo y eres Dios por los siglos de los siglos. Amén."
+  },
+  "ant_1": {
+   "eng": "Santa María, * socorre a los necesitados, ayuda a los débiles, consuela a los afligidos, ruega por el pueblo, aboga por el clero, intercede por las mujeres consagradas a Dios: Que sientan tu protección todos los que celebran tu fiesta."
   }
  },
  "07-16sab": {
@@ -8737,6 +8950,9 @@
   },
   "oratio": {
    "eng": "Oh Dios, que nos alegras con la solemnidad anual de tu santo Confesor Alejo: concédenos propicio que, celebrando su nacimiento al cielo, imitemos también sus obras."
+  },
+  "lectio9": {
+   "eng": "Con motivo de estas palabras, algunos hablan de mil años tras la resurrección, diciendo que entonces se nos dará el céntuplo de las cosas que dejamos y la vida eterna, no entendiendo que si en las demás cosas es digna la recompensa, sería indecoroso, tratándose de esposas, que quien haya dejado una por el Señor, recibiera cien en el tiempo futuro. Esta promesa ha de entenderse, pues, en este sentido: El que por el Salvador ha dejado las cosas terrenas recibirá las espirituales, las cuales en su comparación serán de tal cualidad, como si por una cosa de poco precio se adquiriese una de gran mérito."
   }
  },
  "07-18": {
@@ -8924,6 +9140,15 @@
   },
   "versum_3": {
    "eng": "V. El Señor la eligió sobre todas las demás.\nR. Y la hizo habitar en su tabernáculo."
+  },
+  "hymnusm_vespera": {
+   "eng": "¡Oh Padre de la luz celestial!,\ncuando miras a Magdalena,\nenciendes en ella llamas de amor,\ny derrites el hielo de su corazón.\n\nHerida de amor, corre a ungir\ntus pies divinos, a lavarlos\ncon lágrimas, a enjugarlos\ncon sus cabellos y besarlos.\n\nNo teme estar junto a la cruz,\nse acerca con ansiedad al sepulcro,\nno teme a los feroces soldados;\nla caridad ahuyenta el temor.\n\n¡Oh Cristo, caridad verdadera!,\nlava nuestros pecados, llena\nde gracia nuestros corazones,\ndanos la recompensa del cielo.\n\nGloria sea dada al Padre,\ny al Hijo, y a Ti,\n¡oh Espíritu Santo!, hoy,\ncomo ayer, y por todos los siglos.\nAmén."
+  },
+  "versum_0": {
+   "eng": "V. María escogió para sí la mejor parte.\nR. Que no le será quitada."
+  },
+  "hymnusm_laudes": {
+   "eng": "Unigénito del Padre eterno,\nmíranos con rostro piadoso,\ntú que hoy llamas a la Magdalena\nal trono de la gloria.\n\nEn el tesoro del Rey\nestá guardada la dracma perdida:\ny la gema, de ínclita luz,\ndel lodo ha sido devuelta a la luz.\n\nJesús, dulce refugio,\núnica esperanza de los penitentes,\npor los méritos de la pecadora\nperdona la deuda del pecado.\n\nMadre piadosa y humilde,\nacordándote de nuestra frágil naturaleza,\nen las olas de esta vida\ngobiérnanos con tus plegarias.\n\nAl único Dios sea la gloria\npor su multiforme gracia,\nque perdona las culpas y las penas,\ny da los premios. Amén."
   }
  },
  "07-23": {
@@ -9187,6 +9412,15 @@
   },
   "versum_2": {
    "eng": "V. Tú eres Pedro.\nR. Y sobre esta piedra edificaré mi Iglesia."
+  },
+  "hymnusm_vespera": {
+   "eng": "El bienaventurado Pedro, por mandato de Cristo,\nrompió maravillosamente los lazos de sus cadenas:\nguardián del redil y Doctor de la Iglesia,\nPastor de la grey y conservador de las ovejas,\naparta la truculenta rabia de los lobos.\n\nGloria al Padre por los siglos inmensos,\na ti, oh Hijo, el decoro y el imperio,\nel honor y la potestad al Espíritu Santo:\nsalvación sea a la Trinidad indivisa\npor los infinitos siglos de los siglos. Amén."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Todo lo que atares con cadenas sobre la tierra,\nquedará fuertemente atado en los astros:\ny lo que tu potestad desatare en la tierra,\nquedará desatado sobre la altura del cielo:\nal fin del mundo serás juez de los siglos.\n\nGloria al Padre por los siglos inmensos,\na ti, oh Hijo, el decoro y el imperio,\nel honor y la potestad al Espíritu Santo:\nsalvación sea a la Trinidad indivisa\npor los infinitos siglos de los siglos.\nAmén."
+  },
+  "hymnusm_laudes": {
+   "eng": "Bienaventurado Pastor Pedro, recibe clemente\nlas preces de los que te ruegan; y con tu palabra\nquiebra las ataduras de los pecados, tú, a quien fue dado\nel poder de abrir y cerrar el cielo a los mortales.\n\nIlustre Doctor Pablo, dirige nuestra vida,\ny atrae en pos de ti nuestros corazones al cielo;\nhasta que la fe, ahora velada, descubra el mediodía,\ny sola, semejante al sol, reine la caridad.\n\nEterna gloria sea dada a la Trinidad;\nhonor, poder y exultación\na la unidad que lo dirige todo,\npor todos los siglos de los siglos.\nAmén."
   }
  },
  "08-01r": {
@@ -9312,6 +9546,12 @@
   },
   "versum_3": {
    "eng": "V. Esteban vio los cielos abiertos.\nR. Vio y entró. Dichoso el hombre a quien se le abren los cielos."
+  },
+  "versum_2": {
+   "eng": "V. Hombres piadosos sepultaron a Esteban.\nR. E hicieron gran duelo por él."
+  },
+  "ant_2": {
+   "eng": "8 Mas Esteban, lleno de gracia y de fortaleza, obraba grandes prodigios y milagros entre el pueblo."
   }
  },
  "08-04": {
@@ -9684,6 +9924,21 @@
   },
   "versum_tertia": {
    "eng": "V. Lo coronaste, Señor, de gloria y dignidad.\nR. Le diste el mando sobre las obras de tus manos."
+  },
+  "hymnusm_laudes": {
+   "eng": "Amor dulcísimo de Jesús,\ncuando visitas nuestro corazón,\nahuyentas las tinieblas de la mente\ny nos llenas de dulzura.\n\n¡Cuán feliz aquel a quien sacias!\nCompañero de la diestra del Padre,\ntú eres la verdadera luz de la patria,\nque supera todo sentido.\n\nEsplendor de la gloria del Padre,\nbondad incomprensible,\ndanos la abundancia de tu amor\ncon tu presencia.\n\nGloria a ti, Señor,\nque te has manifestado hoy,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
+  },
+  "matutinum.ant_1": {
+   "eng": "Habiéndose situado un poco más ábajo que los Ángeles, * ha sido coronado de gloria y honor y constituido sobre las obras de las manos de Dios.;;8"
+  },
+  "matutinum.ant_2": {
+   "eng": "Una luz * admirable habéis hecho brillar desde los montes eternos: aterrados han quedado todos los insensatos de corazón.;;75"
+  },
+  "matutinum.ant_3": {
+   "eng": "El Tabor y el Hermón * saltarán de gozo en tu nombre; lleno de fortaleza está tu brazo.;;88"
+  },
+  "versum_0": {
+   "eng": "V. Envía tu luz y tu verdad.\nR. Ellas me guiaron y me condujeron a tu monte santo y a tus tabernáculos."
   }
  },
  "08-06cc": {
@@ -9779,6 +10034,9 @@
  "08-09n": {
   "oratio": {
    "eng": "Oh Dios, que entre las demás maravillas de tu poder concediste también al sexo frágil la victoria del martirio: concédenos propicio que, quienes celebramos el nacimiento al cielo de tu santa Virgen y Mártir Teresa, caminemos hacia ti por sus ejemplos."
+  },
+  "lectio93": {
+   "eng": "Del libro de San Cipriano, Obispo y Mártir, sobre la disciplina y el hábito de las Vírgenes\nAhora nuestro discurso se dirige a las vírgenes, por quienes, cuanto más sublime es su gloria, mayor es también el cuidado. Ellas son la flor del plantel de la Iglesia, la gala y ornamento de la gracia espiritual, índole alegre, obra íntegra e incorrupta de alabanza y de honor, imagen de Dios que responde a la santidad del Señor, la porción más ilustre de la grey de Cristo. Por ellas se goza, y en ellas florece abundantemente, la gloriosa fecundidad de la madre Iglesia: y cuanto más numerosa virginidad añade a su número, tanto más crece el gozo de la madre. A éstas hablamos, a éstas exhortamos, con afecto más que con potestad: no porque nosotros — los últimos y los mínimos, y muy conscientes de nuestra humildad — reclamemos licencia alguna para censurar; sino porque, más cautos por la solicitud, tememos más los asaltos del diablo."
   }
  },
  "08-09t": {
@@ -10559,6 +10817,12 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "ant_vespera": {
+   "eng": "María fue arrebatada al cielo; * alégranse los Ángeles, y bendicen al Señor.\nLa Virgen María ha sido ascendida * al celeste palacio, en donde el Rey de los reyes está sentado en su trono sembrado de estrellas.\nTras el olor * de tus perfumes acudimos a ti; la vírgenes te aman tiernamente.\nBienaventurada, * oh hija, en el Señor, porque por ti hemos participado del fruto de la vida.\nHermosa eres * y graciosa hija de Jerusalén, terrible como un ejército formado en orden de batalla."
+  },
+  "ant_3": {
+   "eng": "Ant. Hoy * la Virgen María sube al cielo: alegraos, porque reina con Cristo eternamente."
   }
  },
  "08-15t": {
@@ -10973,6 +11237,9 @@
   },
   "lectio6": {
    "eng": "Eva, que dio su asentimiento a la sugestión de la serpiente, fue castigada con el dolor del parte y con sentencia de muerte, y fue destinada a las puertas del inframundo. Pero esta mujer santa, que dio oídos a la palabra de Dios, que quedó llena de la operación del Espíritu Santo y del saludo espiritual del Arcángel, que sin concupiscencia ni participación de varón engendró al Hijo de Dios, que dio a luz sin dolor alguno, que se consagró toda ella a Dios, ¿iba a ser acaso devorada por la muerte? ¿La iba a alcanzar el infierno? ¿Iba a corromperse el cuerpo que concibió la vida? No, sino que el camino al cielo es para ella derecho, llano y fácil. Si Cristo, que es el camino y la vida, dijo que «donde yo esté, estará mi servidor», ¿no iba a estar su madre con él?"
+  },
+  "lectio7": {
+   "eng": "Lección del santo Evangelio según San Lucas\nEn aquel tiempo: Entró Jesús en una aldea; y una mujer, llamada Marta, lo recibió en su casa. Y lo demás.\nDe la Homilía de San Agustín, Obispo\nQuid autem putamus nos reprehensum esse ministerium Marthæ ... uni instet scientiæ."
   }
  },
  "08-17": {
@@ -11060,6 +11327,21 @@
   },
   "responsory6": {
    "eng": "R. Bienaventurada eres, Virgen María, por haber llevado al Señor, Creador del mundo;\n* Engendraste al que te hizo, y para siempre permaneces Virgen.\nV. Ave, María, llena de gracia; el Señor es contigo.\nR. Engendraste al que te hizo, y para siempre permaneces Virgen.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Engendraste al que te hizo, y para siempre permaneces Virgen."
+  },
+  "lectio4t": {
+   "eng": "Del Sermón de San Juan Damasceno\nHemos recibido de la antigua tradición que, al tiempo del glorioso tránsito de la santísima Virgen, todos los santos Apóstoles, que recorrían el orbe para la salvación de las gentes, fueron elevados en un momento por los aires y se reunieron en Jerusalén. Y estando allí, se les apareció una visión de ángeles, y se oyó la salmodia de las Potestades celestiales; y así, con divina gloria, entregó su santa alma en las manos de Dios. Mas su cuerpo, que había recibido a Dios de un modo inefable, llevado con himnos angélicos y apostólicos, fue depositado en un sepulcro en Getsemaní; en cuyo lugar el canto de los Ángeles permaneció tres días continuos."
+  },
+  "lectio5o": {
+   "eng": "Mas tú, oh sacratísimo entre los sagrados sepulcros — después del sepulcro del Señor, que dio el principio de la vida y fue fuente de la resurrección (pues hablaré contigo como con cosa animada) — ¿dónde está aquel oro puro que las manos de los apóstoles depositaron en ti? ¿Dónde las riquezas que no pueden consumirse? ¿Dónde el libro nuevo, en el que Dios Verbo fue inefablemente escrito sin mano? ¿Dónde el abismo de la gracia? ¿Dónde el piélago de las curaciones? ¿Dónde está aquel cuerpo deseable de la Virgen Madre de Dios?"
+  },
+  "lectio5t": {
+   "eng": "Mas pasados tres días, cesando el canto angélico, los Apóstoles presentes (habiendo llegado después del tercer día Tomás, el único que había estado ausente, y queriendo adorar el cuerpo que había recibido a Dios) abrieron el sepulcro; pero no pudieron hallar de ninguna manera su sagrado cuerpo en parte alguna. Y hallando solamente aquellas cosas en que había sido depositado, y llenos de la inefable fragancia que de ellas salía, cerraron el sepulcro. Atónitos ante el milagro de este misterio, sólo pudieron pensar esto: que Aquel a quien plugo tomar carne de la Virgen María, y hacerse hombre, y nacer — siendo Dios Verbo y Señor de la gloria — y que conservó sin mancha su virginidad después del parto; a Él le plugo también honrar el cuerpo inmaculado de ella, después de su tránsito, con la incorrupción y con la traslación, antes de la común y universal resurrección."
+  },
+  "lectio6o": {
+   "eng": "¿Por qué buscáis en el sepulcro a la que ha sido trasladada a los tabernáculos celestiales? ¿Por qué me pedís cuenta de mi custodia? No puedo yo resistir a los mandatos divinos. Aquel cuerpo sacrosanto me comunicó también a mí la santidad: me llenó de la fragancia de un ungüento preciosísimo, y me hizo templo divino; y dejando los lienzos, partió arrebatado a lo alto, acompañándolo los ángeles, los arcángeles y todas las potestades celestiales. Ahora me rodean los ángeles; ahora habita en mí la gracia divina. Me he convertido en oficina de medicina para los enfermos. Yo soy fuente perenne de curaciones; yo, remedio contra los demonios; yo, ciudad de refugio para todos los que a mí se acogen."
+  },
+  "lectio6t": {
+   "eng": "Estaban entonces presentes con los Apóstoles el santísimo Timoteo, primer obispo de los efesios, y Dionisio Areopagita, como él mismo lo atestigua en lo que escribió al mencionado Timoteo acerca del bienaventurado Hieroteo, que también estaba entonces presente, diciendo así: Pues aun entre aquellos pontífices de las Cosas Sagradas inspirados por Dios — cuando también nosotros, como sabes, y muchos de nuestros santos hermanos, nos habíamos reunido para contemplar el cuerpo que dio el principio de la Vida y recibió a Dios (y estaba presente también Santiago, el hermano del Señor, y Pedro, suprema y antiquísima cumbre de los teólogos) — visto el sagrado cuerpo, plugo a todos celebrar con himnos, según cada uno podía, la infinita bondad del poder divino."
   }
  },
  "08-18r": {
@@ -11201,6 +11483,9 @@
   },
   "responsory6": {
    "eng": "R. Bienaventurada eres, Virgen María, por haber llevado al Señor, Creador del mundo;\n* Engendraste al que te hizo, y para siempre permaneces Virgen.\nV. Ave, María, llena de gracia; el Señor es contigo.\nR. Engendraste al que te hizo, y para siempre permaneces Virgen.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Engendraste al que te hizo, y para siempre permaneces Virgen."
+  },
+  "lectio7": {
+   "eng": "De la Homilía de San Agustín, Obispo\nRemanserunt ergo in illa domo... debet otiosa."
   }
  },
  "08-22": {
@@ -11820,6 +12105,9 @@
   },
   "responsory7": {
    "eng": "R. Bienaventurada me dirán todas las generaciones:\n* Porque el Señor que es poderoso, y cuyo nombre es santo, me ha engrandecido,\nV. Y su misericordia se extiende de generación en generación en favor de los que le temen.\nR. * Porque el Señor que es poderoso, y cuyo nombre es santo, me ha engrandecido,\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. * Porque el Señor que es poderoso, y cuyo nombre es santo, me ha engrandecido,"
+  },
+  "responsory8": {
+   "eng": "R. Dichosa eres, sagrada Virgen María, y sumamente digna de todas las alabanzas:\n* Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nV. Ruega por el pueblo, interésate por el clero, intercede por las mujeres consagradas con voto a Dios; experimenten tu auxilio todos cuantos celebran tu santa Visitación.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios."
   }
  },
  "09-09n": {
@@ -11902,6 +12190,9 @@
   },
   "responsory7": {
    "eng": "R. Bienaventurada me dirán todas las generaciones:\n* Porque el Señor que es poderoso, y cuyo nombre es santo, me ha engrandecido,\nV. Y su misericordia se extiende de generación en generación en favor de los que le temen.\nR. * Porque el Señor que es poderoso, y cuyo nombre es santo, me ha engrandecido,\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. * Porque el Señor que es poderoso, y cuyo nombre es santo, me ha engrandecido,"
+  },
+  "responsory8": {
+   "eng": "R. Dichosa eres, sagrada Virgen María, y sumamente digna de todas las alabanzas:\n* Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nV. Ruega por el pueblo, interésate por el clero, intercede por las mujeres consagradas con voto a Dios; experimenten tu auxilio todos cuantos celebran tu santa Visitación.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios."
   }
  },
  "09-12": {
@@ -11948,6 +12239,15 @@
   },
   "responsory8": {
    "eng": "R. Dichosa eres, sagrada Virgen María, y sumamente digna de todas las alabanzas:\n* Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nV. Ruega por el pueblo, interésate por el clero, intercede por las mujeres consagradas con voto a Dios; experimenten tu auxilio todos cuantos celebran tu santa Visitación.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios."
+  },
+  "lectio4": {
+   "eng": "Sermón de San Juan Crisóstomo.\nEl Hijo de Dios no eligió para madre suya una mujer rica u opulenta, sino aquella bienaventurada Virgen, cuya alma estaba adornada de virtudes. Pues como la bienaventurada María sobrepujase por su castidad a toda criatura humana, por esto concibió en su seno a Cristo Señor. Acudiendo a esta santísima Virgen y Madre de Dios, conseguiremos los beneficios de su patrocinio. Por lo mismo, cuantas sois vírgenes acogeos a la Madre del Señor, pues ella con su patrocinio os conservará esta virtud en toda su hermosura, valor e integridad."
+  },
+  "lectio5": {
+   "eng": "Hermanos carísimos, ciertamente fue un gran milagro la bienaventurada siempre Virgen María. ¿Quién, a la verdad, más grande, más ilustre que ella se ha hallado, o alguna vez podrá hallarse? Ella sola con su grandeza ha sobrepujado al cielo y a la tierra. ¿Quién más santo? No los Profetas, no los Apóstoles, no los Mártires, no los Patriarcas, no los Ángeles, no los Tronos, no las Dominaciones, no los Serafines, no los Querubines, no finalmente criatura alguna visible o invisible puede hallarse mayor o más excelente. Ella es a la vez sierva y madre de Dios, Virgen y Madre."
+  },
+  "lectio6": {
+   "eng": "Esta es la madre de aquel que fue engendrado por el Padre ante todo principio, a quien los Ángeles y hombres reconocen por Señor de todas las cosas. ¿Deseáis saber cuánto excede esta Virgen a las Potestades de los cielos? Estas Potestades están ante Dios, cubriendo su faz; María ofrece la naturaleza humana al que ella concibió. Por ella conseguimos también el perdón de los pecados. ¡Ave, pues, oh Madre, oh cielo, oh doncella, oh Virgen, oh trono! Tú eres el honor de nuestra Iglesia, su gloria, su apoyo. Ruega constantemente por nosotros a Jesús, tu Hijo, a fin de que por ti hallemos misericordia en el día del juicio, y podamos conseguir los bienes que están reservados a los que aman a Dios, por la gracia y benignidad de nuestro Señor Jesucristo, a quien, juntamente con el Padre y el Espíritu Santo, sea la gloria, el honor y el imperio, ahora y siempre por los siglos de los siglos. Amén."
   }
  },
  "09-13bmv": {
@@ -12188,6 +12488,9 @@
   },
   "responsory_breve_tertia": {
    "eng": "R.br. Esta señal de la Cruz aparecerá * en el cielo.\nR. Esta señal de la Cruz aparecerá * en el cielo.\nV. Cuando el Señor vendrá a juzgar.\nR. En el cielo.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Esta señal de la Cruz aparecerá * en el cielo."
+  },
+  "versum_0": {
+   "eng": "V. Decid entre las naciones.\nR. Que el Señor ha reinado desde el madero."
   }
  },
  "09-15": {
@@ -12580,6 +12883,9 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "versum_0": {
+   "eng": "V. Mi vida se consume en el dolor.\nR. Y mis años en los gemidos."
   }
  },
  "09-15cc": {
@@ -12620,6 +12926,15 @@
   },
   "responsory8": {
    "eng": "R. Dichosa eres, sagrada Virgen María, y sumamente digna de todas las alabanzas:\n* Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nV. Ruega por el pueblo, interésate por el clero, intercede por las mujeres consagradas con voto a Dios; experimenten tu auxilio todos cuantos celebran tu santa Visitación.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Porque de ti ha nacido el sol de justicia, Cristo, nuestro Dios."
+  },
+  "lectio4o": {
+   "eng": "Sermón de S. Cirilo de Alejandría, Obispo.\nVeo ahora la feliz congregación de todos los Santos, que se han juntado con ánimo dispuesto, convocados por la santa y siempre Virgen María, Madre de Dios. Alabanza y gloria a ti, santa Trinidad, que nos has convocado a todos a esta celebración. Alabanza también a ti, santa Madre de Dios. Tú eres la perla preciosa del orbe de la tierra, tú la lámpara inextinguible, corona de virginidad, cetro de la fe ortodoxa, templo indisoluble que contiene a aquel que no puede ser contenido, Madre y Virgen por quien se dice en el Evangelio que es el bendito que viene en el nombre del Señor."
+  },
+  "lectio5o": {
+   "eng": "Por ti es santificada la Trinidad, por ti es celebrada y adorada la cruz preciosa por todo el orbe de la tierra. Por ti exulta el cielo, se alegran los Ángeles y Arcángeles, huyen los demonios, y el mismo hombre es vuelto a llamar al cielo. Por ti toda criatura que profesa el error de los ídolos es convertida al conocimiento de la verdad, y los fieles llegan al bautismo, y por ti se levantan iglesias por todo el orbe de la tierra."
+  },
+  "lectio6o": {
+   "eng": "Con tu ayuda las gentes hacen penitencia. ¿Qué más? Por ti el Hijo unigénito de Dios, verdadera luz, resplandeció sobre los que estaban sentados en tinieblas y sombras de muerte. Por ti profetizaron los Profetas, por ti predicaron los Apóstoles la salvación a las naciones. ¿Habrá alguien que pueda alabarte en todo lo que mereces, María Madre y Virgen? Celebrémosla, amadísimos hermanos, adorando a su esposo inmaculado, Hijo de la Iglesia, para él el honor y la gloria por los siglos de los siglos. Amén."
   }
  },
  "09-16": {
@@ -12648,6 +12963,9 @@
   },
   "oratio": {
    "eng": "V. Concédenos, Señor, que nuestras oraciones nos sirvan de alegría y provecho; para que al celebrar esta fiesta anual de los santos mártires Eufemia, Lucía y Geminiano, imitemos su constancia en la fe.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "ant_1": {
+   "eng": "Los santos se alegran * en el cielo: siguieron las huellas de Cristo, y porque le amaron hasta derramar su sangre, gozan con Él eternamente."
   }
  },
  "09-17": {
@@ -12689,6 +13007,9 @@
   },
   "versum_1": {
    "eng": "V. Diste, Señor, a tu siervo Francisco.\nR. Las señales de nuestra redención."
+  },
+  "hymnus_matutinum": {
+   "eng": "Este glorioso confesor de Cristo,\nÁ quien alaba el pueblo con voz pía,\nPlácido hoy día conseguir merece\nTrono de gloria.\n\nPío, discreto, humilde, candoroso,\nRico dechado de virtud cristiana,\nMientras su humana contextura anima\nVital aliento.\n\nSignos patentes de virtud preclara\nTantos prodigios en su nombre obrados:\nDel mal postrados los que enfermos yacen,\nVida recobran.\n\nDigno tributo de alabanza el coro\nRinde a su triunfo y merecida palma,\nPara que el alma con su ruego alcance\nDones eternos.\n\nHonra perpetua, gloria y alabanza\nAl que sentado en solio deslumbrante\nRige constante el universo entero,\nDios trino y uno.\nAmén."
   }
  },
  "09-18": {
@@ -12787,6 +13108,12 @@
   },
   "oratio": {
    "eng": "Concédenos, Dios todopoderoso: que la venerable solemnidad de tu santo Apóstol y Evangelista Mateo, que anticipamos, aumente en nosotros la devoción y la salvación."
+  },
+  "lectio2": {
+   "eng": "Así pues, el Señor entra de buena gana, y descansa en el afecto de aquel que ha creído. Pero de nuevo se enciende la envidia de los pérfidos, y se prefigura la imagen de la pena venidera. Pues mientras los fieles banquetean, y descansan en aquel reino de los cielos, la perfidia será atormentada con ayuno. Al mismo tiempo se muestra cuánta distancia hay entre los émulos de la Ley y los de la gracia: los que siguen la Ley padecerán el hambre eterna de un alma ayuna; mas los que han recibido la palabra en lo íntimo del alma, recreados con la abundancia del alimento celestial y de la fuente, no pueden tener hambre ni sed."
+  },
+  "lectio3": {
+   "eng": "Y por eso los que ayunaban en el alma murmuraban diciendo: ¿Por qué come y bebe con los publicanos y pecadores? Ésa es voz de la serpiente. Pues esta primera voz la lanzó la serpiente, diciendo a Eva: ¿Por qué os ha dicho Dios: No comáis de todo árbol? Derraman, pues, el veneno de su padre los que dicen: ¿Por qué come y bebe con los publicanos y pecadores? Por lo cual el Señor, comiendo con los pecadores, no nos prohíbe entrar en banquete aun con los gentiles, diciendo: No tienen necesidad de médico los sanos, sino los enfermos."
   }
  },
  "09-21": {
@@ -12914,6 +13241,30 @@
   },
   "responsory8": {
    "eng": "R. Sancti mei, qui in carne positi certamen habuistis:\n* Mercedem laboris ego reddam vobis.\nV. Venite, benedicti Patris mei, percipite regnum.\nR. Mercedem laboris ego reddam vobis.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Mercedem laboris ego reddam vobis."
+  },
+  "responsory6": {
+   "eng": "R. El Señor probó a sus escogidos como al oro en el crisol, y los recibió como víctimas de holocausto; y en su tiempo se les dará la recompensa.\n* Porque la gracia y la paz es para sus escogidos.\nV. Los que en Él confian, entenderán la verdad; y los que guardan fidelidad a su amor le permanecerán adictos.\nR. Porque la gracia y la paz es para sus escogidos.\nR. Porque la gracia y la paz es para sus escogidos."
+  },
+  "responsory4": {
+   "eng": "R. Tus santos, Señor, recorrieron un camino admirable, observando tus preceptos, a fin de mantenerse ilesos en medio de las grandes pruebas:\n* La tierra se mantuvo firme, y pasaron el Mar Rojo sin obstáculo alguno.\nV. Porque hirió la piedra, manaron las aguas, y se formaron torrentes caudalosos.\nR. La tierra se mantuvo firme, y pasaron el Mar Rojo sin obstáculo alguno."
+  },
+  "lectio4": {
+   "eng": "De entre aquellos compañeros de la Compañía de Jesús que más ilustraron los comienzos de la Iglesia en la América septentrional a mediados del siglo XVII, Dios se eligió ocho víctimas purísimas, para que las semillas de la fe, regadas con su sangre, crecieran después en mieses más abundantes. Todos estos Mártires, nacidos en Francia y elevados al sacerdocio, excepto dos hermanos legos, enviados por sus Superiores a la Misión del Canadá, llamada entonces Nueva Francia, tras innumerables correrías apostólicas desde la ciudad de Quebec por aquellas inmensas regiones, y asperísimos trabajos, fueron cruelísimamente muertos por una sola y misma causa de la religión, aunque no en un mismo tiempo ni lugar. Como capitanes y maestros de ellos se cuentan con razón Juan de Brébeuf, nacido de noble familia en Condé, en la diócesis antes de Bayeux y hoy de Coutances, e Isaac Jogues, de Orleáns — varones encendidos en celo esforzado y apostólico, dados en gran manera a la mortificación, unidísimos a Dios en la oración, e ilustrados a veces con visiones celestiales. No desemejantes de ellos eran sus cuatro compañeros sacerdotes: Antonio Daniel, de Dieppe; Gabriel Lalemant y Carlos Garnier, de París; y Natal Chabanel, de Mende; los cuales desempeñaban todos fielmente los sagrados ministerios en diversos poblados, principalmente entre los hurones."
+  },
+  "lectio5": {
+   "eng": "Las frecuentes incursiones de los iroqueses vecinos, que a menudo devastaban la misión de los hurones, ponían no pocas veces en supremo peligro la vida de los Padres. El año de mil seiscientos cuarenta y dos, Isaac Jogues, yendo de la ciudad de Quebec a los hurones con Renato Goupil, coadjutor temporal de la Compañía de Jesús, cayó en manos de los iroqueses, que lo atormentaron cruelísimamente a él y a su compañero, y los redujeron a esclavitud. Aquel mismo año, el día veintinueve de septiembre, Renato, mandado matar por un anciano bárbaro en odio de la cruz salvadora, exhaló su alma purísima cerca de Auriesville, en el actual Estado de Nueva York. Isaac, al año siguiente, hallada ocasión de huir, volvió a Francia; pero un año después, regresando a América, y yendo una y otra vez a aquellos mismos bárbaros, antes sus verdugos, con Juan de la Lande, también coadjutor de la Compañía, el día dieciocho de octubre del año mil seiscientos cuarenta y seis, en la actual diócesis de Albany, herido con un hacha, alcanzó la palma del martirio. Y al día siguiente su compañero Juan, ceñido con la misma corona, voló al cielo."
+  },
+  "lectio6": {
+   "eng": "El año de mil seiscientos cuarenta y ocho, el día cuatro de julio, Antonio Daniel, que tenía a su cargo el poblado de San José entre los hurones, defendiendo impávido a su grey contra los invasores iroqueses, atravesado por las flechas y los proyectiles encendidos, como buen pastor dio su vida por sus ovejas a las puertas del templo. Al año siguiente, el día dieciséis de marzo, Juan de Brébeuf, llamado con razón apóstol de los hurones, apresado por los iroqueses junto con Gabriel Lalemant, tras largos y crudelísimos tormentos — admirando los mismos bárbaros la invicta fortaleza del atleta de Cristo — sucumbió glorioso en el poblado de San Ignacio, en la región del Canadá hoy llamada Ontario; y al día siguiente lo siguió Gabriel Lalemant por el mismo camino cruento y con la misma virtud. En el mes de diciembre de aquel mismo año de mil seiscientos cuarenta y nueve, en la vigilia de la Inmaculada Concepción de la bienaventurada Virgen María, Carlos Garnier, acribillado de heridas y herido con un hacha, cerró su inocentísima vida con un fin glorioso. Y al día siguiente, Natal Chabanel, asaltado a traición por un hurón apóstata y arrojado a un río, alcanzó la deseada palma del martirio en aquella Misión que le era querida, y a cuyo perpetuo servicio — resistiéndose en vano la naturaleza — se había obligado con voto heroico. A estos ocho primeros Mártires de la América septentrional, el Sumo Pontífice Pío XI, en el año santo de mil novecientos veinticinco, los inscribió en el número de los Beatos, y cinco años después en los fastos de los Santos."
+  },
+  "lectio7": {
+   "eng": "Lección del santo Evangelio según San Lucas\nEn aquel tiempo: Bajando Jesús del monte, se detuvo en un llano, con la compañía de sus discípulos y una gran muchedumbre de pueblo de toda Judea, y de Jerusalén, y de la marina, y de Tiro y de Sidón. Y lo demás.\nHomilía de San Pedro Canisio, Presbítero\nNotaré que Cristo enseña y proclama acerca de la bienaventuranza de un modo muy distinto que este mundo. Pues es propio del mundo fingir que la felicidad del hombre está en las cosas caducas y pasajeras, que aquí han de dejarse — como si se dijera: Bienaventurado el pueblo que tiene estas cosas. Antes bien, a los que Cristo proclama aquí bienaventurados, el mundo insensato los tiene sólo por míseros e infelices, y según su costumbre los desprecia y aborrece; de suerte que el mismo Cristo lo atestigua también a los Apóstoles: En verdad, en verdad os digo, que lloraréis y gemiréis vosotros; mas el mundo se alegrará, y vosotros os entristeceréis. Y con razón dijo Salomón: El que anda por camino recto y teme a Dios, es despreciado por el que va por camino infame."
+  },
+  "lectio8": {
+   "eng": "Bienaventurados, en fin, los que padecen persecución por la justicia, y con su invicta paciencia obtienen el reino eterno de Cristo. A este género de bienaventuranza nadie debe referirse con más razón que el protomártir Esteban y los demás fortísimos soldados y mártires de Cristo: pues, llevados como ovejas al matadero, combatieron hasta la sangre por la justicia cristiana, de suerte que ninguna violencia ni barbarie de los enemigos, ninguna acerbidad de tribulación o de tentación pudo apartarlos ni separarlos de la confesión de la fe, del amor de Cristo, de la doctrina de la Iglesia y de la senda de la justicia. ¡Oh felices los que con buena conciencia pudieron atestiguar: ¿Quién nos separará del amor de Cristo? ¿La tribulación? ¿la angustia? ¿el hambre? ¿la desnudez? ¿el peligro? ¿la persecución? ¿la espada? En todas estas cosas vencemos por Aquel que nos amó. Pasamos por el fuego y el agua, y nos sacaste a refrigerio."
+  },
+  "lectio9": {
+   "eng": "Además, felices todos los que hasta el día de hoy suben esta escala de Jacob, señalada arriba con ocho grados, dejando todos los impedimentos, de suerte que vencen cada día a los enemigos capitales — el mundo, la carne y satanás — y con el ejercicio de las virtudes se abren camino hacia la bienaventurada inmortalidad. Pero mucho más felices aquellos que pusieron fin al pelear y al vencer, y, acabado el trabajo mismo de subir, llegaron a la corona del combate; y ya, como soldados licenciados y veteranos, gozan del sumo descanso y habitan en el tabernáculo celestial, colmados de amplísima recompensa. Ni hay duda de que los santos Mártires y los piadosos Doctores florecen sobre los demás elegidos por perpetuas eternidades, pues por sus virtudes heroicas consiguen por peculiar privilegio la aureola, como la llaman los teólogos, y una láurea excelente."
   }
  },
  "09-27": {
@@ -13633,6 +13984,12 @@
   },
   "versum_tertia": {
    "eng": "V. Subió el humo de los perfumes al acatamiento del Señor.\nR. Por la mano del Ángel."
+  },
+  "hymnusm_laudes": {
+   "eng": "Oh soberano Hacedor del mundo,\nque creaste todas las cosas\ncon tu gran poder, y las gobiernas\ncon no menor providencia:\n\nAtiende a la asamblea de los reos\nque te suplican,\ny al despuntar la luz\nda una luz nueva a las almas.\n\nY que tu Ángel, señalado\npara nuestra custodia,\nnos asista, para protegernos\ndel contagio del pecado.\n\nQue extermine las calumnias\nde la serpiente envidiosa,\npara que no enrede los pechos incautos\ncon la red del engaño.\n\nQue arroje lejos de nuestros confines\nel temor de los enemigos;\nque procure la paz de los ciudadanos,\ny ahuyente la pestilencia.\n\nGloria sea a Dios Padre,\nque por sus Ángeles guarde\na los que redimió el Hijo\ny ungió el Espíritu Santo.\nAmén."
+  },
+  "versum_0": {
+   "eng": "V. Guárdanos, Ángel de Dios, con tu muro inexpugnable.\nR. Y defiéndenos siempre con las armas de tu poder."
   }
  },
  "10-03": {
@@ -14379,6 +14736,9 @@
   },
   "oratio": {
    "eng": "Óyenos, oh Dios, Salvador nuestro; para que, así como nos gozamos en la festividad de tu santa Virgen Teresa, así también seamos alimentados con el pan celestial de su doctrina e instruidos con los afectos de su tierna devoción.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "versum_0": {
+   "eng": "V. Ruega por nosotros, Santa Teresa.\nR. Para que seamos dignos de las promesas de Cristo."
   }
  },
  "10-16": {
@@ -15222,6 +15582,9 @@
   },
   "versum_tertia": {
    "eng": "V. Aclamad al Señor todos los pueblos.\nR. Aclamad la gloria y el poder del Señor."
+  },
+  "versum_0": {
+   "eng": "V. Tu trono, oh Dios, permanece por los siglos de los siglos.\nR. Cetro de rectitud es el cetro de tu reino."
   }
  },
  "11-01": {
@@ -15462,6 +15825,30 @@
   },
   "responsory8": {
    "eng": "R. A media noche se oyó un clamor:\n* He ahí que viene el esposo; salid a recibirle.\nV. Vírgenes prudentes, preparad vuestras lámparas.\nR. He ahí que viene el esposo; salid a recibirle.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. He ahí que viene el esposo; salid a recibirle."
+  },
+  "hymnusm_vespera": {
+   "eng": "Cristo, Redentor de todos,\nconserva a tus siervos,\naplacado por las santas súplicas\nde la siempre bienaventurada Virgen.\n\nY vosotras, huestes dichosas\nde los Espíritus celestiales,\nalejad los males pasados,\npresentes y venideros.\n\nProfetas del Juez eterno\ny Apóstoles del Señor,\nhumildemente os pedimos\nser salvados por vuestras preces.\n\nMártires ínclitos de Dios\ny Confesores luminosos,\nllevadnos con vuestras oraciones\na las moradas celestiales.\n\nCoro de las santas Vírgenes\ny todos los monjes santos,\ncon todos los Santos juntamente,\nhacednos consortes de Cristo.\n\nApartad a la gente pérfida\nde los confines de los creyentes,\npara que con presteza paguemos\na Cristo las debidas alabanzas.\n\n* Gloria al Padre ingénito\ny a su Unigénito,\njuntamente con el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "hymnus_matutinum": {
+   "eng": "Perdona, ¡oh Cristo!, a tus siervos,\nen cuyo favor implora la clemencia\ndel Padre, ante el tribunal\nde tu gracia, la Virgen, su abogada.\n\nY vosotros, ejércitos celestiales,\nque estáis agrupados en nueve coros,\nahuyentad todos los males, los pasados,\nlos presentes y los venideros.\n\n¡Oh apóstoles y profetas!,\npedid clemencia ante el severo Juez\npara los pecadores\nsinceramente arrepentidos.\n\nVosotros, los que vais vestidos con la púrpura\ndel martirio, y vosotros, los que lleváis la blanca\nvestidura de vuestra confesión, llamadnos\na la patria a los que estamos desterrados.\n\nCoros castos de las vírgenes,\ny vosotros, a quienes transportó\nal cielo el desierto, aposentadnos\nen la mansión de los bienaventurados.\n\nAlejad de los pueblos creyentes\na la gente sin fe, para que,\nformando un solo rebaño,\nnos apaciente a todos un solo Pastor.\n\n* Gloria sea dada a Dios Padre,\ny a su Hijo Unigénito,\ny al Paráclito Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Cristo, Redentor de todos,\nconserva a tus siervos,\naplacado por las santas súplicas\nde la siempre bienaventurada Virgen.\n\nY vosotras, huestes dichosas\nde los Espíritus celestiales,\nalejad los males pasados,\npresentes y venideros.\n\nProfetas del Juez eterno\ny Apóstoles del Señor,\nhumildemente os pedimos\nser salvados por vuestras preces.\n\nMártires ínclitos de Dios\ny Confesores luminosos,\nllevadnos con vuestras oraciones\na las moradas celestiales.\n\nCoro de las santas Vírgenes\ny todos los monjes santos,\ncon todos los Santos juntamente,\nhacednos consortes de Cristo.\n\nApartad a la gente pérfida\nde los confines de los creyentes,\npara que con presteza paguemos\na Cristo las debidas alabanzas.\n\n* Gloria al Padre ingénito\ny a su Unigénito,\njuntamente con el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "hymnusm_laudes": {
+   "eng": "Jesús, Salvador del mundo,\nsocorre a los redimidos con tu auxilio:\ny tú, piadosa Madre de Dios,\nimplora la salvación para los míseros.\n\nTodos los coros angélicos,\nlas legiones de los Patriarcas\ny los méritos de los Profetas\nnos alcancen el perdón.\n\nEl Bautista, precursor de Cristo,\ny el Clavero celestial,\ncon los demás Apóstoles,\nnos desaten del lazo del pecado.\n\nEl coro sagrado de los Mártires,\nla confesión de los Sacerdotes\ny la castidad de las Vírgenes\nnos laven de los pecados.\n\nLos sufragios de los monjes\ny todos los ciudadanos del cielo\natiendan a los votos de los suplicantes\ny alcancen el premio de la vida.\n\nAlabanza, honor, virtud y gloria\na Dios Padre, y al Hijo,\njuntamente con el Santo Paráclito,\npor los siglos de los siglos.\nAmén."
+  },
+  "responsory7": {
+   "eng": "R. Ceñid vuestras cinturas, y tened en vuestras manos las luces ya encendidas:\n* Sed semejantes a los criados que aguardan a su amo cuando vuelve de las bodas.\nV. Estad siempre prevenidos, porque ignoráis en qué hora vuestro Señor ha de venir.\nR. Sed semejantes a los criados que aguardan a su amo cuando vuelve de las bodas.\nR. Sed semejantes a los criados que aguardan a su amo cuando vuelve de las bodas."
+  },
+  "ant_laudes": {
+   "eng": "Vi una muchedumbre grande, * que nadie podía contar, de todas las naciones, que estaban de pie ante el trono.\nY todos los Ángeles * estaban en pie alrededor del trono, y se postraron sobre sus rostros delante del trono, y adoraron a Dios.\nNos redimiste, * Señor Dios, con tu sangre, de toda tribu, y lengua, y pueblo, y nación, y nos has hecho un reino para nuestro Dios.\nBendecid al Señor * todos sus escogidos: celebrad días de alegría, y alabadle.\nHimno * para todos sus Santos: para los hijos de Israel, el pueblo que se acerca a él: esta gloria es para todos sus santos."
+  },
+  "versum_0": {
+   "eng": "V. Rogad por nosotros, todos los Santos de Dios.\nR. Para que seamos dignos de las promesas de Cristo."
+  },
+  "ant_2c": {
+   "eng": "Bienaventurados sois * Santos todos de Dios, que merecisteis ser hechos consortes de las virtudes celestiales y gozar de la gloria de la eterna claridad: por eso os rogamos que, acordándoos de nosotros, os dignéis interceder por nosotros ante el Señor Dios nuestro."
   }
  },
  "11-02": {
@@ -15500,6 +15887,9 @@
   },
   "special_prima": {
    "eng": "(Cántico de la Sabiduría * Sap 16:20-21, 26, 29; 17:1)"
+  },
+  "oratio_matutinum": {
+   "eng": "℣. El Señor sea con vosotros. ℟. Y con tu espíritu.\nOremos.\nOh Dios, Creador y Redentor de todos los fieles, concede a las almas de tus siervos y siervas la remisión de todos sus pecados: para que, por nuestras piadosas súplicas, alcancen el perdón que siempre desearon:\nTú que vives y reinas con Dios Padre, en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   }
  },
  "11-02oct": {
@@ -15929,6 +16319,9 @@
   },
   "responsory8": {
    "eng": "R. Martín, lleno de júbilo, es recibido en el seno de Abrahán; aquel Martín, acá pobre y humilde,\n* Entra rico en el empíreo, glorificado por himnos celestiales.\nV. El obispo Martín abandonó este mundo: perla del sacerdocio, y vive en Cristo.\nR. Entra rico en el empíreo, glorificado por himnos celestiales.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Entra rico en el empíreo, glorificado por himnos celestiales."
+  },
+  "ant_2": {
+   "eng": "Varón dichoso, * cuya alma entra en el paraíso, por lo cual se alegran los ángeles, se regocijan los arcángeles, lo aclama el coro de los santos y multitud de vírgenes: quédate eternamente con nosotros."
   }
  },
  "11-11cc": {
@@ -16606,6 +16999,15 @@
     "Siervo tuyo e hijo de esclava tuya. * Tú rompiste mis cadenas;",
     "En los atrios de la casa del Señor, * en medio de ti, ¡oh Jerusalén!"
    ]
+  },
+  "responsory1": {
+   "eng": "R. Estando San Clemente en oración, apareciósele el Cordero de Dios,\n* Bajo cuyos pies brota un manantial de agua viva: un río caudaloso que alegra la ciudad de Dios.\nV. Vi en pie sobre el monte un Cordero.\nR. Bajo cuyos pies brota un manantial de agua viva: un río caudaloso que alegra la ciudad de Dios."
+  },
+  "responsory2": {
+   "eng": "R. Exclamaron todos a una voz: San Clemente, rogad por nosotros,\n* Para que seamos dignos de las promesas de Cristo.\nV. Sin mérito alguno de mi parte, el Señor me ha enviado a vosotros para hacerme partícipe de vuestras coronas.\nR. Para que seamos dignos de las promesas de Cristo."
+  },
+  "responsory3": {
+   "eng": "R. Dispusiste, Señor, a tu mártir Clemente, en medio del mar, una habitación hecha a manera de templo marmóreo por manos de los ángeles;\n* Y preparaste un camino a las gentes del país para que proclamasen tus maravillas.\nV. Abriste, Señor, camino a tus Santos, aun en medio del mar, y un paso a través de las olas.\nR. Y preparaste un camino a las gentes del país para que proclamasen tus maravillas.\nR. Y preparaste un camino a las gentes del país para que proclamasen tus maravillas."
   }
  },
  "11-23cc": {
@@ -16707,6 +17109,9 @@
   },
   "lectio3": {
    "eng": "Así, pues, en la presente ocasión, estos dos discípulos siguen a Jesús; no lo hacen todavía con el propósito de no separarse de él. Querían, con todo, ver dónde habitaba y poner en práctica lo que está escrito: Trillen tus pies las escaleras de su casa; madruga para oírle y fija tu atención en sus preceptos. Y Jesús les indicó su morada, a la cual se encaminaron, hospedándose en ella. ¡Oh, qué día tan feliz pasaron, qué noche tan dichosa! ¿Quién podrá referirnos las cosas que escucharon de boca del Señor? Edifiquémonos, también nosotros, y preparemos en nuestro corazón una morada a la cual venga el Señor a instruirnos y a departir con nosotros."
+  },
+  "oratio": {
+   "eng": "Te rogamos, oh Dios omnipotente: que el santo Apóstol Andrés, cuya festividad anticipamos, implore por nosotros tu auxilio: para que, absueltos de nuestras culpas, seamos librados también de todos los peligros.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   }
  },
  "11-29r": {
@@ -17028,6 +17433,9 @@
     "Ejercerá su juicio en medio de las naciones; consumará su ruina, * y estrellará contra el suelo las orgullosas cabezas de muchísimos.",
     "Beberá del torrente durante el camino, * por eso levantará su cabeza."
    ]
+  },
+  "versum_0": {
+   "eng": "V. El Señor amó a Andrés.\nR. En olor de suavidad."
   }
  },
  "12-02": {
@@ -17482,6 +17890,9 @@
     "El anuncia su palabra a Jacob, * sus preceptos y ocultos juicios a Israel.",
     "No ha hecho otro tanto con las demás naciones, * ni les ha manifestado a todas ellas sus juicios o preceptos. ¡Aleluya!"
    ]
+  },
+  "versum_0_pasch": {
+   "eng": "V. En tu Concepción, oh Virgen Madre de Dios, fuiste inmaculada.\nR. El cielo y la tierra se alegran."
   }
  },
  "12-08o": {
@@ -18821,6 +19232,21 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "hymnusm_vespera": {
+   "eng": "Jesus, Redentor de todos,\nantes que luciese el alba,\nigual con el Padre en gloria,\nnaciste de sus entrañas.\n\nTú, luz y esplendor del Padre,\nTú, nuestra dulce esperanza,\noye la voz de tus siervos\nque por el orbe te alaban.\n\nRecuerda, Hacedor del mundo,\nque de una Vírgen sagrada\nnaciendo en tiempo, la forma\nde nuestro cuerpo tomaras.\n\nEn el círculo del año\neste dia se señala,\nen que por salvar al mundo\ndel Padre el seno dejaras.\n\nAstros, tierra, mar y cuanto\nel compás del cielo abarca,\nsaludan con nuevo cántico\nal Autor de tanta gracia.\n\nY nosotros, que lavaste\ncon tu sangre inmaculada,\npor tu nacimiento santo\nte damos nueva alabanza.\n\nA Jesús sea la gloria,\nque nació de Vírgen casta,\ncon el Padre y almo Espíritu,\npor siglos que nunca acaban.\nAmén."
+  },
+  "versum_1c": {
+   "eng": "V. Bendito el que viene en el nombre del Señor.\nR. El Señor es Dios, y nos ha iluminado."
+  },
+  "hymnusm_matutinum": {
+   "eng": "Jesus, Redentor de todos,\nantes que luciese el alba,\nigual con el Padre en gloria,\nnaciste de sus entrañas.\n\nTú, luz y esplendor del Padre,\nTú, nuestra dulce esperanza,\noye la voz de tus siervos\nque por el orbe te alaban.\n\nRecuerda, Hacedor del mundo,\nque de una Vírgen sagrada\nnaciendo en tiempo, la forma\nde nuestro cuerpo tomaras.\n\nEn el círculo del año\neste dia se señala,\nen que por salvar al mundo\ndel Padre el seno dejaras.\n\nAstros, tierra, mar y cuanto\nel compás del cielo abarca,\nsaludan con nuevo cántico\nal Autor de tanta gracia.\n\nY nosotros, que lavaste\ncon tu sangre inmaculada,\npor tu nacimiento santo\nte damos nueva alabanza.\n\nA Jesús sea la gloria,\nque nació de Vírgen casta,\ncon el Padre y almo Espíritu,\npor siglos que nunca acaban.\nAmén."
+  },
+  "ant_laudesc": {
+   "eng": "La que dio a luz * al Rey, cuyo nombre es eterno, tiene el gozo de madre con la honra de la virginidad: ni antes se vio otra semejante, ni la habrá después, aleluya.\nUna luz ha amanecido * sobre nosotros: porque hoy ha nacido el Salvador, aleluya.\nHoy la Virgen fiel, * aunque dio a luz al Verbo encarnado, permaneció Virgen después del parto: alabándola todos decimos: Bendita tú entre las mujeres.\nAlegrémonos todos los fieles: * nuestro Salvador ha nacido en el mundo: hoy ha brotado la Prole de un tallo glorioso, y persevera el pudor de la virginidad.\nHoy * la Virgen intacta nos dio a Dios, revestido de tiernos miembros, a quien mereció amamantar: adorémosle todos, pues viene a salvarnos."
+  },
+  "octava_1": {
+   "eng": "Ant. Hoy ha nacido Cristo: hoy ha aparecido el Salvador: hoy cantan en la tierra los Ángeles, se alegran los Arcángeles: hoy exultan los justos, diciendo: Gloria a Dios en las alturas, aleluya.\nV. El Señor ha dado a conocer, aleluya.\nR. Su salvación, aleluya.\nOremos.\nConcédenos, te rogamos, Dios omnipotente, que el nuevo nacimiento de tu Unigénito en la carne libre a los que la antigua servidumbre tiene bajo el yugo del pecado.\nPor el mismo Jesucristo nuestro Señor. Amén."
   }
  },
  "12-26": {
@@ -18990,6 +19416,18 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "octava_1": {
+   "eng": "Ant. Hombres piadosos * sepultaron a Esteban e hicieron gran duelo por él.\n\nV. Esteban vio los cielos abiertos.\nR. Vio y entró. Dichoso el hombre a quien se le abren los cielos.\n\nTe rogamos, Señor, nos concedas el favor de imitar lo que veneramos, para que aprendamos a amar aun a nuestros enemigos, pues celebramos el natalicio de aquel que supo rogar por sus perseguidores a nuestro Señor Jesucristo, tu Hijo:"
+  },
+  "ant_2": {
+   "eng": "8 Mas Esteban, lleno de gracia y de fortaleza, obraba grandes prodigios y milagros entre el pueblo."
+  },
+  "capitulum_nona": {
+   "eng": "Luego, cayendo de rodillas, lanzó un clamoroso grito: Señor, no les tengas en cuenta este pecado. Y, dicho esto, se durmió en el Señor."
+  },
+  "ant_3c": {
+   "eng": "Mirando al cielo, * el bienaventurado Esteban vio la gloria de Dios, y dijo: He aquí que veo los cielos abiertos, y al Hijo del hombre de pie a la diestra de Dios."
   }
  },
  "12-27": {
@@ -19162,6 +19600,12 @@
   },
   "versum_3": {
    "eng": "V. Digno es de gran honor el bienaventurado Juan.\nR. Que en la cena reclinó su cabeza sobre el pecho del Señor."
+  },
+  "ant_2": {
+   "eng": "Éste es Juan, * que en la cena se recostó sobre el pecho del Señor. Dichoso el Apóstol, a quien fueron revelados los misterios celestiales."
+  },
+  "octava_1": {
+   "eng": "Ant. Corrió entre los hermanos la voz de que aquel discípulo no moriría; mas no dijo Jesús: No morirá; sino: Así quiero que quede hasta que yo venga.\nV. Digno es de gran honor el bienaventurado Juan.\nR. Que en la cena reclinó su cabeza sobre el pecho del Señor.\nOremos.\nIlumina, Señor, benigno a tu Iglesia: para que, alumbrada por las enseñanzas de tu santo Apóstol y Evangelista Juan, alcance los dones sempiternos.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   }
  },
  "12-28": {
@@ -19346,6 +19790,18 @@
     "Aquí haré florecer el cetro de David; * preparada tengo una antorcha a mi ungido.",
     "A sus enemigos los cubriré de oprobio; * mas en él brillará la gloria de mi propia santidad."
    ]
+  },
+  "hymnusm_vespera": {
+   "eng": "Salve, flores de los mártires,\nque en el umbral mismo de la vida\nfuisteis cortadas por el perseguidor de Cristo,\ncual rosas tempranas por el huracán.\n\nVosotros, las primeras víctimas de Cristo,\nlos tiernos corderos inmolados,\njugáis inocentes al pie mismo\ndel altar con las palmas y las coronas.\n\nGloria a ti, Señor,\nque naciste de la Virgen,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "octava_1": {
+   "eng": "Ant. Los niños Inocentes fueron muertos por Cristo, degollados por un rey inicuo cuando aún mamaban: siguen al mismo Cordero sin mancha, y dicen siempre: Gloria a ti, Señor.\nV. Bajo el trono de Dios claman todos los Santos.\nR. Venga nuestra sangre, Dios nuestro.\nOremos.\nOh Dios, cuya alabanza proclamaron en este día los Mártires Inocentes, no hablando, sino muriendo: haz morir en nosotros todos los males de los vicios, para que también nuestra vida confiese con las costumbres tu fe, que nuestra lengua profesa.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  },
+  "versum_2": {
+   "eng": "V. Herodes, enfurecido, mató a muchos niños.\nR. En Belén de Judá, ciudad de David."
+  },
+  "ant_vespera_3c": {
+   "eng": "De dos años * para abajo, mató Herodes a muchos niños por causa del Señor.\nDejad que los niños * vengan a mí, porque de los tales es el reino de los cielos.\nLavaron sus vestiduras * y las blanquearon en la sangre del Cordero.\nÉstos fueron rescatados * de entre los hombres, primicias para Dios y para el Cordero; y en su boca no se halló mentira."
   }
  },
  "12-29": {
@@ -19466,11 +19922,65 @@
   },
   "oratio": {
    "eng": "Mira aplacado a tu rebaño, Pastor eterno: y guárdalo con tu continua protección, por intercesión de tu santo Sumo Pontífice Silvestre, a quien constituiste pastor de toda la Iglesia.\nOh Dios, que libras a tu Iglesia, fundada sobre la solidez de la piedra apostólica, del terror de las puertas del infierno: concédenos, te rogamos, que, por la intercesión de tu santo Sumo Pontífice Silvestre, persevere en tu verdad y sea guardada en continua seguridad.\nMira aplacado a tu rebaño, Pastor eterno: y guárdalo con tu continua protección, por intercesión de tu santo Sumo Pontífice Silvestre, a quien constituiste pastor de toda la Iglesia."
+  },
+  "lectio94": {
+   "eng": "Silvestre, romano, hijo de Rufino, durante la persecución furiosa estuvo escondido en el monte Soracte; y a los treinta años fue creado presbítero de la santa Iglesia Romana. Muerto el Pontífice Melquíades, le sucedió en su lugar, bajo el emperador Constantino, que ya antes había dado la paz por ley pública a la Iglesia de Cristo. Silvestre lo alentó de tal modo a defender y propagar la religión, que el emperador erigió muchas basílicas y las enriqueció con gran munificencia. Bajo este Pontífice se celebró el primer Concilio de Nicea, confirmado por el mismo Silvestre, en el que fue condenado Arrio. Insigne por la santidad de su vida y su bondad con los pobres, murió en paz y fue sepultado en el cementerio de Priscila."
   }
  },
  "12-31o": {
   "lectio4previousending": {
    "eng": "Y habiendo mandado este emperador, por consejo de los médicos, que para curar su lepra se le preparase un baño de sangre de niños, se le aparecieron en sueños los santos Apóstoles Pedro y Pablo, mandándole que, si quería verse libre de la lepra, dejando la crueldad de aquel baño impío, hiciese venir a Silvestre, que estaba escondido en el monte Soracte: por el cual, restablecido con el baño saludable del bautismo, mandase edificar templos a la manera cristiana en todos los dominios del Imperio Romano, y que, derribados los simulacros de los falsos dioses, diese culto al Dios verdadero. Constantino, pues, obedeciendo a los avisos celestiales, hace buscar con toda diligencia a Silvestre y lo llama: y reconociendo por él las imágenes de los Apóstoles, es sanado con el bautismo, y se inflama en celo por defender y propagar la religión de Cristo."
+  }
+ },
+ "05-16n": {
+  "lectio93": {
+   "eng": "Juan, nacido en la ciudad bohemia de Nepomuk, de donde tomó su sobrenombre Nepomuceno, iniciado en el sacerdocio con aprovechamiento en filosofía, teología y derecho canónico, fue nombrado canónigo de la iglesia en Praga, y predicó el Evangelio en la zona a pedido del rey Wenceslao IV. Confesor de la reina, padeció por parte del rey por no ceder en su pretensión de que le revelase lo escuchado en confesión. Arrojado por mandato del rey al río Moldava a su paso por Praga, consiguió así la esclarecida palma del martirio. Benedicto XIII lo añadió al número de los santos Mártires."
+  },
+  "oratio": {
+   "eng": "Oh Dios, que por el invicto silencio sacramental de San Juan adornaste a tu Iglesia con una nueva corona de martirio: concédenos, por su intercesión y ejemplo, guardar con cautela la lengua, y soportar en este mundo todos los males antes que el daño del alma.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  }
+ },
+ "06-25oct": {
+  "lectio7": {
+   "eng": "Lectura del Santo Evangelio según San Lucas\nEntre tanto le llegó a Isabel el tiempo de su alumbramiento, y dio a luz un hijo. Supieron sus amigos y parientes la gran misericordia que Dios le había hecho, y se congratulaban con ella. Y lo que sigue.\n\nHomilía de San Ambrosio, Obispo.\nJuan, dice, es su nombre. Isabel no podía desconocer el anuncio del Señor, ya que había profetizado a Cristo. Y mejor sigue: Pues nadie era nombrado con tal nombre, para que entiendas que el nombre no es el del hijo de Zacarías, sino el de un profeta. Así se anunció a Zacarías, pero como por falta de fe se le había privado de voz y oído, dijo con su puño y letra lo que no podía decir con la voz."
+  },
+  "lectio8": {
+   "eng": "Y puso por escrito: «Juan es su nombre». No es que le pusiera tal nombre, sino que dio fe de serlo ya. Y tal mérito le liberó la lengua. Lo que la falta de fe había atado, la fe lo liberó. Creamos nosotros, pues, para poder hablar; a fin de que nuestra lengua, encadenada por la falta de fe, sea liberada para decir sabiduría."
+  },
+  "lectio9": {
+   "eng": "Escribamos los misterios en el espíritu, si queremos hablar; escribamos la anunciación de Cristo, pero no en tablas de piedra, sino en las tablas carnales de nuestro corazón. El que habla de Juan, profetiza a Cristo. Hablemos de Juan, y hablaremos de Cristo; para que pueda abrirse nuestra boca como la del sacerdote Zacarías."
+  },
+  "lectio4": {
+   "eng": "Sermón de San Agustín, Obispo\nCelebramos hoy, hermanos carísimos, el nacimiento de San Juan: cosa que no leemos haya sido concedida a ningún otro de los Santos. Pues sólo el día del nacimiento del Señor y el del bienaventurado Juan se celebran y veneran en todo el mundo. A éste lo dio a luz una estéril, a Aquél lo concibió una virgen: en Isabel es vencida la esterilidad, en la bienaventurada María se cambia el modo de la concepción. Isabel engendró un hijo conociendo a su varón: María creyó al Ángel, y concibió. Isabel concibió un hombre, y María también un hombre: pero Isabel solamente un hombre, María a Dios y hombre."
+  },
+  "lectio5": {
+   "eng": "Grande es, pues, Juan, de cuya grandeza da testimonio el mismo Salvador, diciendo que entre los nacidos de mujer no se ha levantado otro mayor que Juan el Bautista. Supera a los Profetas, aventaja a los Patriarcas: y todo el que ha nacido de mujer es inferior a Juan. Acaso dirá alguno: Si Juan es el mayor entre los nacidos de mujer, ¿es mayor que el Salvador? De ningún modo. Pues Juan nació de mujer, mas Cristo nació de virgen. Aquél fue dado a luz del seno de un vientre corruptible; Éste fue engendrado de la flor de una virgen sin mancha."
+  },
+  "lectio6": {
+   "eng": "Si entendemos, pues, el misterio, hermanos míos: Juan es hombre, Cristo es Dios. Humíllese el hombre, para que sea ensalzado Dios, según aquello que el mismo Juan dijo del Señor: Conviene que Él crezca, y que yo mengüe. Para que el hombre fuera humillado, nació Juan hoy, cuando los días comienzan a menguar: para que Dios fuera ensalzado, nació Cristo en el día en que los días comienzan a crecer. Gran sacramento, hermanos carísimos. Por eso celebramos el nacimiento de Juan como el de Cristo, porque también este nacimiento está lleno de misterio. ¿De qué misterio, sino de nuestra humildad — como el nacimiento de Cristo está lleno del misterio de nuestra grandeza?"
+  }
+ },
+ "07-11o": {
+  "lectio93": {
+   "eng": "Pío I, hijo de Rufino, nació en Aquilea. Siendo Cardenal Presbítero de la Iglesia Romana, fue elegido Papa, bajo el reinado de Antonino Pío y Marco Aurelio. En 5 ordenaciones efectuadas en el mes de diciembre, consagró 12 Obispos y ordenó 18 Presbíteros. Han llegado hasta nosotros varios decretos suyos importantes, entre ellos el que establecía que la Resurrección del Señor sólo se celebrase en domingo. Transformó en iglesia la casa de Pudente, y por su preeminencia sobre los demás títulos, por ser residencia del Papa, la dedicó bajo el título del Pastor. Celebró en ella con frecuencia los sagrados Misterios y bautizó también allí a muchos convertidos a la fe. Estando desempeñando su oficio de buen pastor, derramó la sangre por sus ovejas y por Jesucristo, Pastor supremo. Recibió la corona del martirio el once de julio y fue sepultado en el Vaticano."
+  }
+ },
+ "05-22n": {
+  "oratio": {
+   "eng": "Oh Dios, que te dignaste conceder a Santa Rita tanta gracia, que amó a sus enemigos y llevó en el corazón y en la frente las señales de tu caridad y de tu pasión: concédenos, te rogamos, por su intercesión y méritos, perdonar así a nuestros enemigos y contemplar los dolores de tu pasión, de modo que alcancemos los premios prometidos a los mansos y a los que lloran:\nTú que vives y reinas con Dios Padre en la unidad del Espíritu Santo, y eres Dios por todos los siglos de los siglos. Amén."
+  }
+ },
+ "04-01c": {
+  "oratio": {
+   "eng": "Dios omnipotente, cuyo servicio es suma y plena felicidad: concédenos, por la intercesión del santo Abad Hugo, servirte en santidad y justicia, sin temor.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
+  }
+ },
+ "07-dp": {
+  "lectio5_finem": {
+   "eng": "Pues muerto Jesús, dice, y pendiente aún de la cruz, se acercó el soldado, le abrió el costado con la lanza, y de allí manó agua y sangre. Lo uno es símbolo del bautismo, lo otro del sacramento. Por eso no dijo: Salió sangre y agua; sino que salió primero el agua y después la sangre: porque primero somos lavados en el bautismo, y después somos consagrados por el misterio."
+  },
+  "lectio5": {
+   "eng": "Pues muerto Jesús, dice, y pendiente aún de la cruz, se acercó el soldado, le abrió el costado con la lanza, y de allí manó agua y sangre. Lo uno es símbolo del bautismo, lo otro del sacramento. Por eso no dijo: Salió sangre y agua; sino que salió primero el agua y después la sangre: porque primero somos lavados en el bautismo, y después somos consagrados por el misterio."
   }
  }
 }
