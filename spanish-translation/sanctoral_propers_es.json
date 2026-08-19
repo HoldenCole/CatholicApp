@@ -1020,7 +1020,7 @@
    "eng": "El niño Jesús se quedó * en Jerusalén, sin que lo supieran sus padres. Estos, creyendo que estaba en la caravana, se pusieron a buscarlo entre los parientes y conocidos."
   },
   "ant_2": {
-   "eng": "Verdaderamente es grande * este misterio de piedad que, manifestado en la carne y justificado en el espíritu, apareció a los ángeles, fue predicado a las naciones, creído por el mundo y glorificado en el cielo. Aleluya."
+   "eng": "El niño Jesús se quedó * en Jerusalén, sin que lo supieran sus padres. Estos, creyendo que estaba en la caravana, se pusieron a buscarlo entre los parientes y conocidos."
   },
   "ant_3": {
    "eng": "«Hijo, ¿por qué nos has tratado así? * Tu padre y yo te buscábamos angustiados». «¿Por qué me buscabais? ¿No sabíais que yo debía estar en las cosas de mi Padre?»"
@@ -2169,7 +2169,7 @@
    ]
   },
   "matutinum.psalm4": {
-   "antiphonEng": "Soy sierva de Cristo , * por esto quiero mostrarme de servil condición.",
+   "antiphonEng": "Soy sierva de Cristo, * por esto quiero mostrarme de servil condición.",
    "verses": [
     "¡Ah, Señor! ¿Cómo es que se han aumentado tanto mis perseguidores? * Son muchísimos los que se han rebelado contra mí.",
     "Muchos dicen de mí: * Ya no tiene que esperar de su Dios salvación.",
@@ -3484,7 +3484,7 @@
  },
  "03-19t": {
   "lectio5": {
-   "eng": "Huc accedit quod dicitur fuísse de domo David. Vere enim de domo David, vere de regia stirpe descenditur iste vir Joseph nobili genere, mente nobilior: plane filius David non degerans a patre suo David."
+   "eng": "A esto se añade que se dice que era de la casa de David. Porque verdaderamente de la casa de David, verdaderamente de la estirpe regia desciende este varón José: noble por su linaje, más noble por su alma; hijo verdadero de David, que en nada degenera de su padre David."
   },
   "lectio7": {
    "eng": "Antes de que se juntaran, se halló que en su seno había concebido por virtud del Espíritu Santo. No por otro se halló sino por José, el cual por lo mismo que cuidaba de María, nada ignoraba de lo relativo a su futura esposa. Por lo que se dice: “Antes de que se juntaran”; no se sigue que después usaran del matrimonio; la Escritura declara solamente que no lo habían hecho."
@@ -3494,6 +3494,9 @@
   },
   "oratio": {
    "eng": "Los méritos de San José, esposo de tu santa Madre, nos ayuden, Señor, y así obtendremos, por su intercesión, lo que nuestras fuerzas no alcanzan.\nTú que vives y reinas con el Padre en la unidad del Espíritu Santo y eres Dios por los siglos de los siglos. Amén."
+  },
+  "lectio9": {
+   "eng": "Y le pondrás por nombre Jesús. Pues Él salvará a su pueblo de sus pecados. Jesús en lengua hebrea significa Salvador: el evangelista señaló, pues, la etimología de su nombre al decir: Le pondrás por nombre Jesús, porque Él salvará a su pueblo."
   }
  },
  "03-21": {
@@ -4223,7 +4226,7 @@
  },
  "04-23": {
   "lectio94": {
-   "eng": "The martyr George beareth among the Easterns the title of the holy and glorious Archmartyr. He suffered a glorious death, for Christ's sake, in the persecution under Diocletian. When peace was given to the Church soon after, under Constantine, the memory of the martyr began to be celebrated, and churches were built under his invocation at Lydda in Palestine and at Constantinople. For thenceforth an extraordinary enthusiasm with regard to him grew up among the faithful, first in all parts of the East, and afterwards in the West. Of old time, when Christian armies had been about to fight, they have been used to call as patrons upon holy George, Maurice, and Sebastian. There had been already special honour paid in England to the holy martyr George, and the supreme Pontiff Benedict XIV declared him the protector of the whole kingdom."
+   "eng": "El mártir Jorge lleva entre los orientales el título de santo y glorioso Archimártir. Padeció una muerte gloriosa por Cristo en la persecución de Diocleciano. Dada poco después la paz a la Iglesia, bajo Constantino, comenzó a celebrarse la memoria del mártir, y se edificaron iglesias bajo su advocación en Lida de Palestina y en Constantinopla. Desde entonces creció entre los fieles una extraordinaria devoción hacia él, primero en todo el Oriente y después en Occidente. Antiguamente, cuando los ejércitos cristianos habían de entrar en batalla, solían invocar como patronos a los santos Jorge, Mauricio y Sebastián. En Inglaterra se tributaba ya especial honor al santo mártir Jorge, y el Sumo Pontífice Benedicto XIV lo declaró protector de todo aquel reino."
   },
   "oratio": {
    "eng": "Oh Dios, que nos alegras con los merecimientos e intercesión del bienaventurado Jorge, tu Mártir: concédenos propicio, que cuantos por él te pedimos tus beneficios, los consigamos como don de tu gracia.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
@@ -5137,7 +5140,7 @@
    "eng": "V. Te adoramos, Cristo, y te bendecimos. Aleluya.\nR. Porque con tu Cruz redimiste al mundo. Aleluya."
   },
   "nocturn_3_versum": {
-   "eng": "V. Toda la tierra te adore y cante himnos.\nR. Cante un himno a tu nombre, Señor."
+   "eng": "V. Toda la tierra te adore y te cante.\nR. Cante salmos a tu nombre, Señor."
   },
   "oratio": {
    "eng": "Oh Dios, que en la esclarecida Invención del saludable madero de la Cruz renovaste los milagros de tu pasión: concédenos que, por el precio de este árbol de la vida obtengamos la gracia de la vida eterna.\nTú que vives y reinas con el Padre en la unidad del Espíritu Santo y eres Dios por los siglos de los siglos. Amén."
@@ -5185,7 +5188,7 @@
    "eng": "V. Esta señal de la Cruz aparecerá en el cielo, aleluya.\nR. Cuando el Señor vendrá a juzgar, aleluya."
   },
   "versum_sexta": {
-   "eng": "V. Que se postre ante ti la tierra entera.\nR. Que toquen en tu honor."
+   "eng": "V. Toda la tierra te adore y te cante.\nR. Cante salmos a tu nombre, Señor."
   },
   "versum_tertia": {
    "eng": "V. Te adoramos, Cristo, y te bendecimos. Aleluya.\nR. Porque con tu Cruz redimiste al mundo. Aleluya."
@@ -5565,7 +5568,7 @@
    "eng": "V. Subió el humo de los perfumes al acatamiento del Señor, aleluya.\nR. Por la mano del Ángel, aleluya."
   },
   "nocturn_3_versum": {
-   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío, aleluya.\nR. Te adoraré en tu templo santo y confesaré tu nombre, aleluya."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "oratio": {
    "eng": "Oh Dios, que con maravilloso orden dispones el servicio de los Ángeles y los hombres: concede propicio que por medio de aquellos que siempre te sirven en el cielo, defiendan nuestra vida en la tierra.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
@@ -5613,13 +5616,13 @@
    "eng": "V. Púsose el Ángel junto el altar del templo.\nR. Teniendo un incensario de oro en su mano."
   },
   "versum_3": {
-   "eng": "V. Delante de los ángeles tañeré para ti, Dios mío.\nR. Me postraré hacia tu santuario, daré gracias a tu nombre."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "versum_nona": {
    "eng": "V. Adorad a Dios.\nR. Todos sus ángeles."
   },
   "versum_sexta": {
-   "eng": "V. Delante * de los ángeles tañeré para ti.\nR. Me postraré hacia tu santuario, daré gracias a tu nombre."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "versum_tertia": {
    "eng": "V. Subió el humo de los perfumes al acatamiento del Señor, aleluya.\nR. Por la mano del Ángel, aleluya."
@@ -5882,13 +5885,13 @@
  },
  "05-23": {
   "lectio4": {
-   "eng": "Joannes Baptista de Rossi Veiturii in Liguria honesto genere ortus, adhuc puer morum suavitate ac pietatis studio in omnium admiratione fuit. Tredecim annos natus visus est Dei consilio Romam mitti, ut apostoli munus in ea expleret. Inter ephebos Collegii Romani Societatis Jesu adlectus, ingenio et virtute præluxit. Curabat impense, ut ii Mariano sodalitio frequentes adessent, in nosocomiis segris ministrarent, honestaque animarum recreatione retraherentur a noxiis; interim cælestia sermonibus pertractans segniores excitabat, ac proinde Apostoli agnomen adeptus est. Ob asperam corporis castigationem gravi morbo correptus, ab usitata sibi studiorum severitate aliquantum remittere coactus fuit: quod divinitus factum ajebat, ne scientia inflatus sua potius quæreret, quam quæ Jesu Christi. Clericali militiæ adscriptus sacris disciplinis in sancti Thomæ collegio operam dedit, ac in virtute proficiens, dein ingenti animi voluptate sacerdotio est auctus. Ita Dominum in hereditatem sibi constituit, ut nullum, ne oblatum quidem, ecclesiasticum beneficium acceptandi, nisi obedientia adigeretur, singulari voto se obstrinxerit."
+   "eng": "Juan Bautista de Rossi, nacido en Voltaggio, en la Liguria, de honrada familia, siendo aún niño fue admiración de todos por la suavidad de sus costumbres y su amor a la piedad. A los trece años pareció enviado a Roma por designio de Dios, para cumplir en ella un oficio de apóstol. Admitido entre los alumnos del Colegio Romano de la Compañía de Jesús, sobresalió por su ingenio y su virtud. Procuraba con empeño que éstos acudieran asiduamente a la congregación mariana, sirvieran a los enfermos en los hospitales, y con honestos esparcimientos del alma se apartaran de lo nocivo; entretanto, tratando en sus conversaciones de las cosas celestiales, animaba a los más tibios, por lo cual mereció el sobrenombre de Apóstol. Atacado de grave enfermedad por la aspereza de sus penitencias corporales, se vio obligado a moderar algún tanto el acostumbrado rigor de sus estudios: lo cual decía haber sido disposición divina, para que, hinchado por la ciencia, no buscase sus propios intereses antes que los de Jesucristo. Alistado en la milicia clerical, se dedicó a las sagradas disciplinas en el colegio de Santo Tomás, y adelantando en virtud, recibió luego con inmenso gozo de su alma el sacerdocio. De tal manera constituyó al Señor por herencia suya, que se obligó con voto singular a no aceptar beneficio eclesiástico alguno, ni aun ofrecido, si no le forzase a ello la obediencia."
   },
   "lectio5": {
-   "eng": "De spirituali proximorum salute jam ab adolescentia sollicitus, sacerdos factus in id totum se devovit. Ecclesiasticos viros, sacras virgines, oppidanos, carcere detentos, imam plebem universam mira suavitate, verbi ministerio ad virtutis amorem inflammabat. Plures quotidie horas rudiorum confessionibus excipiendis impendens, ægrotis aderat vel in domibus vel in valetudinarus, præsertim phisicis, quos sui veluti juris esse affirmabat. Hac illac per urbem alacer advolans, innumeris operibus præsto erat: at assiduus in sanctæ Gallæ hospitio versabatur, ut pauperes, quos carissimos habuit, omni ope juvaret. Ob id a decimo quinto ætatis anno adjunctus sacerdotum cœtui, qui eisdem evangelizando addicti sunt, ibi apostolatus sui rationem didicit, ipsiusque societatis opera instauravit et auxit. Eadem misericordia motus egenorum omnium necessitatibus sublevandis modicam suam substantiam impendit. Perennes autem infatigabilis sui zeli fructus reliquit, satellitum, vagorum, rudium institutionem, catecheses ad sancte Pascha celebrandum, certam custodiam perditarum, noctuque per Urbem vagantium mulierum hospitium, præcipue vero studium lucrandi animas in clero excitatum."
+   "eng": "Solícito ya desde la adolescencia por la salvación espiritual del prójimo, hecho sacerdote se consagró todo entero a ella. Con admirable dulzura inflamaba en el amor de la virtud, por el ministerio de la palabra, a los eclesiásticos, a las vírgenes consagradas, a los vecinos, a los presos en la cárcel y a toda la gente más humilde. Empleando cada día muchas horas en oír las confesiones de los más rudos, asistía a los enfermos en sus casas o en los hospitales, sobre todo en los de incurables, de quienes afirmaba que eran como cosa suya. Corriendo presuroso de una a otra parte de la ciudad, acudía a innumerables obras; y era asiduo en el hospicio de Santa Gala, para ayudar con todo su poder a los pobres, a quienes tuvo por carísimos. Por ello, agregado desde el año decimoquinto de su edad a la congregación de sacerdotes dedicados a evangelizarlos, aprendió allí el método de su apostolado, y restauró y acrecentó las obras de la misma congregación. Movido de la misma misericordia, gastó su modesta hacienda en remediar las necesidades de todos los menesterosos. Dejó además frutos perennes de su infatigable celo: la instrucción de los guardias, de los vagabundos y de los ignorantes; las catequesis para la santa celebración de la Pascua; un asilo seguro para las mujeres perdidas que vagaban de noche por la ciudad; y sobre todo, el celo por la salvación de las almas encendido en el clero."
   },
   "lectio6": {
-   "eng": "Caritatis in Deum ardor ex ejus ore emicabat, dum sacris operabatur, nec sine lacrimis de ejus bonitate loqui poterat. In collegium canonicorum basilicæ sanctæ Mariæ in Cosmedin ex obedientia cooptatus, inter psallendum extra sensus rapi videbatur. In sacris ceremoniis diligentissimus, domus Dei decorem promovit, et in id suas opes libenter erogabat. Amorem erga Deiparam in alios effundebat, ejusque cultum in sua ecclesia fovit, addito étiam psalmodiæ quotidiano laudum præconio. Philippi Nerii spiritu imbui studens, et in omnes cælites pius, Apostolorum Principum obsequium augendum curavit. In oratione omnique virtutum exercitatione assiduus, supernis quoque charismatibus donatus, tandem in hospitio, cui nomen a sanctissima Trinitate, quo se reduxerat in sacerdotum convictum, laboribus fractus ad vitæ exitum adductus est, atque Ecclesiæ sacramentis refectus, caritatis opera et pauperum curam commendans, decessit in osculo Domini, die vigesima tertia Maji, anno Christi millesimo septingentesimo sexagesimo quarto, ætatis suæ sexagesimo sexto. Insigne adeo sacerdotalis virtutis exemplar miraculis Deus illustrare dignatus est, quibus rite probatis, Summus Pontifex Pius nonus tertio Idus Maji anno millesimo octingentesimo sexagesimo cælitum beatorum honoribus auxit: novisque fulgentem signis Leo decimus tertius sexto Idus Decembris anno millesimo octingentesimo octogesimo primo in sanctorum albo recensuit."
+   "eng": "El ardor de su caridad para con Dios resplandecía en su rostro cuando celebraba los sagrados misterios, y no podía hablar sin lágrimas de su bondad. Incorporado por obediencia al colegio de canónigos de la basílica de Santa María in Cosmedin, parecía arrebatado fuera de los sentidos mientras salmodiaba. Diligentísimo en las sagradas ceremonias, promovió el decoro de la casa de Dios, y gustoso gastaba en ello sus bienes. Difundía en los demás el amor a la Madre de Dios, y fomentó su culto en su iglesia, añadiendo también el pregón diario de sus alabanzas en la salmodia. Procurando imbuirse del espíritu de San Felipe Neri, y piadoso para con todos los santos, cuidó de acrecentar la devoción a los Príncipes de los Apóstoles. Asiduo en la oración y en el ejercicio de todas las virtudes, dotado también de carismas sobrenaturales, al fin, en el hospicio de la Santísima Trinidad, adonde se había retirado a la convivencia de los sacerdotes, quebrantado por los trabajos llegó al término de su vida; y confortado con los sacramentos de la Iglesia, encomendando las obras de caridad y el cuidado de los pobres, descansó en el ósculo del Señor el día veintitrés de mayo del año de Cristo mil setecientos sesenta y cuatro, a los sesenta y seis de su edad. Dios se dignó ilustrar con milagros a tan insigne ejemplar de virtud sacerdotal; y comprobados éstos en debida forma, el Sumo Pontífice Pío IX lo elevó a los honores de los beatos el trece de mayo de mil ochocientos sesenta; y brillando con nuevos prodigios, León XIII lo inscribió en el catálogo de los santos el ocho de diciembre de mil ochocientos ochenta y uno."
   },
   "oratio": {
    "eng": "Deus, qui sanctum Joánnem Baptistam Confessorem tuum in evangelizandis pauperibus caritate et patientia decorasti: concede quǽsumus; ut cujus pia merita veneramur, virtutum quoque imitemur exempla.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
@@ -5896,13 +5899,13 @@
  },
  "05-23t": {
   "lectio4": {
-   "eng": "Joannes Baptista de Rossi Veiturii in Liguria honesto genere ortus, adhuc puer morum suavitate ac pietatis studio in omnium admiratione fuit. Tredecim annos natus visus est Dei consilio Romam mitti, ut apostoli munus in ea expleret. Inter ephebos Collegii Romani Societatis Jesu adlectus, ingenio et virtute præluxit. Curabat impense, ut ii Mariano sodalitio frequentes adessent, in nosocomiis segris ministrarent, honestaque animarum recreatione retraherentur a noxiis; interim cælestia sermonibus pertractans segniores excitabat, ac proinde Apostoli agnomen adeptus est. Ob asperam corporis castigationem gravi morbo correptus , ab usitata sibi studiorum severitate aliquantum remittere coactus fuit: quod divinitus factum ajebat, ne scientia inflatus sua potius quæreret, quam quæ Jesu Christi. Clericali militiæ adscriptus sacris disciplinis in sancti Thomæ collegio operam dedit, ac in virtute proficiens, dein ingenti animi voluptate sacerdotio est auctus. Ita Dominum in hereditatem sibi constituit, ut nullum, ne oblatum quidem, ecclesiasticum beneficium acceptandi, nisi obedientia adigeretur, singulari voto se obstrinxerit."
+   "eng": "Juan Bautista de Rossi, nacido en Voltaggio, en la Liguria, de honrada familia, siendo aún niño fue admiración de todos por la suavidad de sus costumbres y su amor a la piedad. A los trece años pareció enviado a Roma por designio de Dios, para cumplir en ella un oficio de apóstol. Admitido entre los alumnos del Colegio Romano de la Compañía de Jesús, sobresalió por su ingenio y su virtud. Procuraba con empeño que éstos acudieran asiduamente a la congregación mariana, sirvieran a los enfermos en los hospitales, y con honestos esparcimientos del alma se apartaran de lo nocivo; entretanto, tratando en sus conversaciones de las cosas celestiales, animaba a los más tibios, por lo cual mereció el sobrenombre de Apóstol. Atacado de grave enfermedad por la aspereza de sus penitencias corporales, se vio obligado a moderar algún tanto el acostumbrado rigor de sus estudios: lo cual decía haber sido disposición divina, para que, hinchado por la ciencia, no buscase sus propios intereses antes que los de Jesucristo. Alistado en la milicia clerical, se dedicó a las sagradas disciplinas en el colegio de Santo Tomás, y adelantando en virtud, recibió luego con inmenso gozo de su alma el sacerdocio. De tal manera constituyó al Señor por herencia suya, que se obligó con voto singular a no aceptar beneficio eclesiástico alguno, ni aun ofrecido, si no le forzase a ello la obediencia."
   },
   "lectio5": {
-   "eng": "De spirituali proximorum salute jam ab adolescentia sollicitus, sacerdos factus in id totum se devovit. Ecclesiasticos viros, sacras virgines, oppidanos, carcere detentos, imam plebem universam mira suavitate, verbi ministerio ad virtutis amorem inflammabat. Plures quotidie horas rudiorum confessionibus excipiendis impendens, ægrotis aderat vel in domibus vel in valetudinarus, præsertim phisicis, quos sui veluti juris esse affirmabat. Hac illac per urbem alacer advolans, innumeris operibus præsto erat: at assiduus in sanctæ Gallæ hospitio versabatur, ut pauperes, quos carissimos habuit, omni ope juvaret. Ob id a decimo quinto ætatis anno adjunctus sacerdotum cœtui, qui eisdem evangelizando addicti sunt, ibi apostolatus sui rationem didicit, ipsiusque societatis opera instauravit et auxit. Eadem misericordia motus egenorum omnium necessitatibus sublevandis modicam suam substantiam impendit. Perennes autem infatigabilis sui zeli fructus reliquit, satellitum, vagorum, rudium institutionem, catecheses ad sancte Pascha celebrandum, certam custodiam perditarum, noctuque per Urbem vagantium mulierum hospitium, præcipue vero studium lucrandi animas in clero excitatum."
+   "eng": "Solícito ya desde la adolescencia por la salvación espiritual del prójimo, hecho sacerdote se consagró todo entero a ella. Con admirable dulzura inflamaba en el amor de la virtud, por el ministerio de la palabra, a los eclesiásticos, a las vírgenes consagradas, a los vecinos, a los presos en la cárcel y a toda la gente más humilde. Empleando cada día muchas horas en oír las confesiones de los más rudos, asistía a los enfermos en sus casas o en los hospitales, sobre todo en los de incurables, de quienes afirmaba que eran como cosa suya. Corriendo presuroso de una a otra parte de la ciudad, acudía a innumerables obras; y era asiduo en el hospicio de Santa Gala, para ayudar con todo su poder a los pobres, a quienes tuvo por carísimos. Por ello, agregado desde el año decimoquinto de su edad a la congregación de sacerdotes dedicados a evangelizarlos, aprendió allí el método de su apostolado, y restauró y acrecentó las obras de la misma congregación. Movido de la misma misericordia, gastó su modesta hacienda en remediar las necesidades de todos los menesterosos. Dejó además frutos perennes de su infatigable celo: la instrucción de los guardias, de los vagabundos y de los ignorantes; las catequesis para la santa celebración de la Pascua; un asilo seguro para las mujeres perdidas que vagaban de noche por la ciudad; y sobre todo, el celo por la salvación de las almas encendido en el clero."
   },
   "lectio6": {
-   "eng": "Caritatis in Deum ardor ex ejus ore emicabat, dum sacris operabatur, nec sine lacrimis de ejus bonitate loqui poterat. In collegium canonicorum basilicæ sanctæ Mariæ in Cosmedin ex obedientia cooptatus, inter psallendum extra sensus rapi videbatur. In sacris ceremoniis diligentissimus, domus Dei decorem promovit, et in id suas opes libenter erogabat. Amorem erga Deiparam in alios effundebat, ejusque cultum in sua ecclesia fovit, addito étiam psalmodiæ quotidiano laudum præconio. Philippi Nerii spiritu imbui studens, et in omnes cælites pius, Apostolorum Principum obsequium augendum curavit. In oratione omnique virtutum exercitatione assiduus, supernis quoque charismatibus donatus, tandem in hospitio, cui nomen a sanctissima Trinitate, quo se reduxerat in sacerdotum convictum, laboribus fractus ad vitæ exitum adductus est, atque Ecclesiæ sacramentis refectus, caritatis opera et pauperum curam commendans, decessit in osculo Domini, die vigesima tertia Maji, anno Christi millesimo septingentesimo sexagesimo quarto, ætatis suæ sexagesimo sexto. Insigne adeo sacerdotalis virtutis exemplar miraculis Deus illustrare dignatus est, quibus rite probatis, Summus Pontifex Pius nonus tertio Idus Maji anno millesimo octingentesimo sexagesimo cælitum beatorum honoribus auxit: novisque fulgentem signis Leo decimus tertius sexto Idus Decembris anno millesimo octingentesimo octogesimo primo in sanctorum albo recensuit."
+   "eng": "El ardor de su caridad para con Dios resplandecía en su rostro cuando celebraba los sagrados misterios, y no podía hablar sin lágrimas de su bondad. Incorporado por obediencia al colegio de canónigos de la basílica de Santa María in Cosmedin, parecía arrebatado fuera de los sentidos mientras salmodiaba. Diligentísimo en las sagradas ceremonias, promovió el decoro de la casa de Dios, y gustoso gastaba en ello sus bienes. Difundía en los demás el amor a la Madre de Dios, y fomentó su culto en su iglesia, añadiendo también el pregón diario de sus alabanzas en la salmodia. Procurando imbuirse del espíritu de San Felipe Neri, y piadoso para con todos los santos, cuidó de acrecentar la devoción a los Príncipes de los Apóstoles. Asiduo en la oración y en el ejercicio de todas las virtudes, dotado también de carismas sobrenaturales, al fin, en el hospicio de la Santísima Trinidad, adonde se había retirado a la convivencia de los sacerdotes, quebrantado por los trabajos llegó al término de su vida; y confortado con los sacramentos de la Iglesia, encomendando las obras de caridad y el cuidado de los pobres, descansó en el ósculo del Señor el día veintitrés de mayo del año de Cristo mil setecientos sesenta y cuatro, a los sesenta y seis de su edad. Dios se dignó ilustrar con milagros a tan insigne ejemplar de virtud sacerdotal; y comprobados éstos en debida forma, el Sumo Pontífice Pío IX lo elevó a los honores de los beatos el trece de mayo de mil ochocientos sesenta; y brillando con nuevos prodigios, León XIII lo inscribió en el catálogo de los santos el ocho de diciembre de mil ochocientos ochenta y uno."
   },
   "oratio": {
    "eng": "Deus, qui sanctum Joánnem Baptistam Confessorem tuum in evangelizandis pauperibus caritate et patientia decorasti: concede qusesumus; ut cujus pia merita veneramur, virtutum quoque imitemur exempla.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
@@ -7539,13 +7542,13 @@
  },
  "06-30octt": {
   "ant_1": {
-   "eng": "Oh Apóstol San Pablo, * predicador de la verdad y doctor de las Naciones, intercede por nosotros ante el Señor que te escogió."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "ant_2": {
-   "eng": "Los que me habéis seguido, * os sentaréis sobre tronos para juzgar a las doce tribus de Israel, dice el Señor."
+   "eng": "Éstos son los gloriosos príncipes * de la tierra, se amaron el uno al otro durante su vida, y en su muerte no serán separados."
   },
   "versum_1": {
-   "eng": "R. Tú eres un vaso de elección, oh apóstol San Pablo.\nR. Predicador de la verdad en todo el mundo."
+   "eng": "V. Nombrarás príncipes por toda la tierra.\nR. Para hacer memorable tu nombre, Señor."
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
@@ -7877,16 +7880,16 @@
  },
  "07-01oct": {
   "ant_1": {
-   "eng": "Os habéis acercado * al monte Sión, a la ciudad del Dios vivo, a la Jerusalén celeste; a Jesús, mediador de la nueva alianza, y a una sangre rociada, más elocuente que la de Abel."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "ant_2": {
-   "eng": "La sangre del Cordero * será para vosotros signo de salvación, dice el Señor. Y veré la sangre y pasaré, sin que os toque la plaga exterminadora."
+   "eng": "Éstos son los gloriosos príncipes * de la tierra, se amaron el uno al otro durante su vida, y en su muerte no serán separados."
   },
   "versum_1": {
-   "eng": "V. Nos redimiste, Señor, con tu sangre.\nR. Y nos hiciste reino de nuestro Dios."
+   "eng": "V. Nombrarás príncipes por toda la tierra.\nR. Para hacer memorable tu nombre, Señor."
   },
   "versum_2": {
-   "eng": "V. Justificados con la sangre de Cristo.\nR. Por Él seremos salvados de la ira."
+   "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
   }
  },
  "07-01t": {
@@ -8078,13 +8081,13 @@
  },
  "07-02oct": {
   "ant_1": {
-   "eng": "Pedro Apóstol, * y Pablo el doctor de los pueblos, nos enseñan tu ley, Señor."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "ant_2": {
    "eng": "Éstos son los gloriosos príncipes * de la tierra, se amaron el uno al otro durante su vida, y en su muerte no serán separados."
   },
   "versum_1": {
-   "eng": "V. Les constituirás príncipes sobre toda la tierra.\nR. Se acordarán, Señor, de tu nombre."
+   "eng": "V. Nombrarás príncipes por toda la tierra.\nR. Para hacer memorable tu nombre, Señor."
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
@@ -8109,7 +8112,7 @@
  },
  "07-03oct": {
   "ant_1": {
-   "eng": "Pedro Apóstol, * y Pablo el doctor de los pueblos, nos enseñan tu ley, Señor."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "ant_2": {
    "eng": "Éstos son los gloriosos príncipes * de la tierra, se amaron el uno al otro durante su vida, y en su muerte no serán separados."
@@ -8133,7 +8136,7 @@
    "eng": "Pablo, que es el decimotercero de los Apóstoles, quedaría privado de juzgar, siendo así que él dice: “¿Ignoráis que juzgaremos a los ángeles, cuanto más a los del siglo?” Conviene que sepamos, que cuantos siguiendo el ejemplo de los Apóstoles han dejado todo lo suyo y han seguido a Cristo, serán jueces junto con Él, así como todos los hombres han de ser juzgados. Por la misma razón que el número doce suele designar en las Escrituras universalidad, por las doce sedes de los Apóstoles se designa el número de todos los que han de juzgar, y por las doce tribus de Israel, el número de todos los que han de ser juzgados."
   },
   "versum_1": {
-   "eng": "V. Les constituirás príncipes sobre toda la tierra.\nR. Se acordarán, Señor, de tu nombre."
+   "eng": "V. Nombrarás príncipes por toda la tierra.\nR. Para hacer memorable tu nombre, Señor."
   },
   "versum_2": {
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
@@ -8141,7 +8144,7 @@
  },
  "07-04oct": {
   "ant_1": {
-   "eng": "Pedro Apóstol, * y Pablo el doctor de los pueblos, nos enseñan tu ley, Señor."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "ant_2": {
    "eng": "Éstos son los gloriosos príncipes * de la tierra, se amaron el uno al otro durante su vida, y en su muerte no serán separados."
@@ -8199,7 +8202,7 @@
  },
  "07-05oct": {
   "ant_1": {
-   "eng": "Pedro Apóstol, * y Pablo el doctor de los pueblos, nos enseñan tu ley, Señor."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "ant_2": {
    "eng": "Éstos son los gloriosos príncipes * de la tierra, se amaron el uno al otro durante su vida, y en su muerte no serán separados."
@@ -8213,13 +8216,13 @@
  },
  "07-06": {
   "ant_1": {
-   "eng": "Pedro Apóstol, * y Pablo el doctor de los pueblos, nos enseñan tu ley, Señor."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "ant_2": {
    "eng": "Éstos son los gloriosos príncipes * de la tierra, se amaron el uno al otro durante su vida, y en su muerte no serán separados."
   },
   "ant_3": {
-   "eng": "Pedro Apóstol, * y Pablo el doctor de los pueblos, nos enseñan tu ley, Señor."
+   "eng": "El Apóstol Pedro, * y Pablo, el Doctor de las gentes, ellos nos enseñaron tu ley, Señor."
   },
   "lectio4": {
    "eng": "Sermón de San Juan Crisóstomo\n¿Qué gracias os daremos, oh santos Apóstoles, por tanto como trabajasteis por nosotros? No puedo pensar en ti, oh Pedro, sin que me embargue la admiración, ni en ti, oh Pablo, sin sentirme arrebatado y derramar lágrimas. Porque al considerar las pruebas que sufristeis no sé qué decir ni cómo expresar lo que siento. ¿Cuántas prisiones santificasteis? ¿Cuántas cadenas honrasteis? ¿Cuántos tormentos padecisteis? ¿Cuántos ultrajes soportasteis? ¿Cuánta fecundidad comunicasteis a la Iglesia con vuestra predicación? Vuestras lenguas son instrumentos benditos; vuestros miembros se vieron cubiertos de sangre por amor a la santa Iglesia. Imitadores de Jesucristo. “El sonido de vuestra voz se extendió por toda la tierra, y vuestras palabras hasta los confines del orbe”."
@@ -8249,7 +8252,7 @@
    "eng": "V. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje."
   },
   "versum_3": {
-   "eng": "V. Les constituirás príncipes sobre toda la tierra.\nR. Se acordarán, Señor, de tu nombre."
+   "eng": "V. Nombrarás príncipes por toda la tierra.\nR. Para hacer memorable tu nombre, Señor."
   }
  },
  "07-06n": {
@@ -10171,19 +10174,19 @@
  },
  "08-14oct": {
   "lectio4": {
-   "eng": "Sermo sancti Maximi Epíscopi\nSanctum est, fratres, ac Deo placitum, ut natalem beati Laurentii præcipua devotione veneremur: cujus radiantibus flammis victrix in hunc quoque diem toto orbe Christi coruscat Ecclesia. Qui cum in sede gloriosissimi Patriarchæ diaconatus fungeretur officio, puritate innocentis vitæ, fortissimæque mortis triumpho, apostolico se consortio copulavit. Nec immerito eum Apostolorum supparem prædicamus, cui et castitas animi leviticum ministerium dedit, et plenitudo fidei martyrii contulit dignitatem."
+   "eng": "Sermón de San Máximo, Obispo\nSanto es, hermanos, y agradable a Dios, que veneremos con especial devoción el nacimiento del bienaventurado Lorenzo, con cuyas llamas radiantes resplandece victoriosa hasta el día de hoy la Iglesia de Cristo en todo el orbe. Habiendo ejercido el oficio del diaconado junto a la sede del gloriosísimo Patriarca, por la pureza de su vida inocente y por el triunfo de su fortísima muerte se unió al consorcio de los Apóstoles. Y no sin razón lo proclamamos casi igual a los Apóstoles, pues la castidad de su alma le dio el ministerio levítico, y la plenitud de su fe le confirió la dignidad del martirio."
   },
   "lectio5": {
-   "eng": "Quem venerabilis Xystus, Romanæ urbis Antistes, cum impietatem sævientis mundi per tormenta superaret, et regnis esset cælestibus jam vicinus, videretque eum paterna de morte tristissimum, ita illum spiritu præscientiæ compellasse narratur: Noli fili mœstus esse: post triduum me sequeris. Unde apparet, carissimi, beatum Laurentium non de sacerdotis sui victoria habuisse tristitiam, sed doluisse, quia non étiam ipse mundum cum suo pariter sacerdote vincebat. Noli, inquit, fili mœstus esse: post triduum me sequeris. Hoc est, Noli tristis esse, velut apud sæculum derelictus: nam nec te fides vitaque tua tali morte privabit."
+   "eng": "Cuando el venerable Sixto, Obispo de la ciudad de Roma, vencía con sus tormentos la impiedad del mundo enfurecido, y estaba ya cercano a los reinos celestiales, viendo a Lorenzo tristísimo por la muerte de su padre, se cuenta que le habló así con espíritu de profecía: No estés triste, hijo: dentro de tres días me seguirás. De donde se ve, carísimos, que el bienaventurado Lorenzo no se entristecía por la victoria de su obispo, sino que se dolía de no vencer también él al mundo juntamente con su obispo. No estés triste, hijo — le dice —: dentro de tres días me seguirás. Esto es: No te entristezcas como abandonado en el mundo, pues ni tu fe ni tu vida te privarán de una muerte semejante."
   },
   "lectio6": {
-   "eng": "Ergo ut comperit ore sacerdotis et martyris, se quoque omnimodis assumendum, congregatis inopum turbis, ecclesiasticum censum religiosa liberalitate divisit. Quam profundum spiritalis viri, et quam cæleste consilium, ut et egenis consuleret, et multitudine consumente quæ dederat, inveniri non possit, quod raperet persecutor: illam nimirum secutus sententiam: Dispersit, dedit pauperibus; justitia ejus manet in æternum."
+   "eng": "Así pues, cuando supo por boca del obispo y mártir que también él había de ser llamado en toda forma, congregadas las turbas de los pobres, repartió entre ellos con piadosa liberalidad los bienes de la Iglesia. ¡Qué profundo y qué celestial consejo el de este varón espiritual: socorrer a los necesitados de tal modo que, consumiendo la multitud lo que había repartido, nada pudiera hallar que arrebatar el perseguidor!; cumpliendo así aquella sentencia: Repartió, dio a los pobres; su justicia permanece eternamente."
   },
   "lectio7": {
-   "eng": "Léctio sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus discipulis suis: Amen, amen dico vobis, nisi granum frumenti cadens in terram, mortuum fuerit, ipsum solum manet. Et réliqua.\nHomilía sancti Joánnis Chrysóstomi\nTalem, de resurrectione disputans, rationem Paulus étiam attulit. Quam igitur habebunt excusationem qui resurrectionem non credunt, cum in seminibus et in plantis quotidie hoc videamus, ac étiam in nostro genere? Primum enim corrumpi semen oportet, inde fieri generationem. Omnino autem, cum Deus aliquid facit, nulla opus est ratione. Quomodo nos ex nihilo fecit? Hoc ad Christianos dico, qui se dicunt credere Scripturis."
+   "eng": "Lección del santo Evangelio según San Juan\nEn aquel tiempo: Dijo Jesús a sus discípulos: En verdad, en verdad os digo: que si el grano de trigo, después de echado en la tierra, no muere, queda infecundo. Y lo demás.\nHomilía de San Juan Crisóstomo\nTal es la razón que también Pablo adujo disputando sobre la resurrección. ¿Qué excusa tendrán, pues, los que no creen en la resurrección, cuando cada día vemos esto mismo en las semillas y en las plantas, y aun en nuestro propio linaje? Porque primero es menester que la semilla se corrompa, y de ahí viene la generación. Mas cuando Dios hace algo, no hay necesidad de razonamiento alguno. ¿Cómo nos hizo de la nada? Esto lo digo a los cristianos, que afirman creer en las Escrituras."
   },
   "lectio8": {
-   "eng": "Ego autem et aliud dicam ex humanis rationibus. Alii malitiam, alii virtutem sectantur: sed malitiæ sectatorum multi feliciter in ultimam pervenerunt senectutem, virtutis autem contra. Quomodo ergo pro meritis unusquisque accipiet? quando? Certe, inquiunt; sed corpora non resurgent. Nonne audiunt Paulum dicentem: Oportet autem corruptibile hoc induere incorruptionem? Neque animam intelligit, quippe quæ non corrumpitur: et resurrectio de mortuo dicitur: Cecidit autem corpus."
+   "eng": "Mas yo diré también otra cosa, tomada de razones humanas. Unos siguen la malicia, otros la virtud: pero muchos de los seguidores de la malicia han llegado felizmente a la última vejez, y al contrario los de la virtud. ¿Cómo, pues, recibirá cada uno según sus méritos? ¿cuándo? Ciertamente — dicen —; pero los cuerpos no resucitarán. ¿No oyen a Pablo que dice: Es menester que esto corruptible se revista de incorrupción? No habla del alma, que no se corrompe; y la resurrección se dice del que ha muerto: y lo que cayó fue el cuerpo."
   },
   "responsory4": {
    "eng": "R. ¿Adónde vais, oh padre, sin vuestro hijo? Oh sacerdote santo, ¿adónde acudís presuroso sin vuestro diácono?\n* Nunca acostumbrabais celebrar el sacrificio sin ministro.\nV. ¿En qué he desagradado a vuestra paternidad? ¿Me habéis encontrado indigno? Probad si el ministro a quien habéis escogido es digno de confiarle la dispensación de la sangre del Señor.\nR. Nunca acostumbrabais celebrar el sacrificio sin ministro."
@@ -12210,7 +12213,7 @@
    "eng": "V. De noche llora copiosamente y las lágrimas corren por sus mejillas. Entre sus amigos, no hay quien la consuele.\nDemos gracias a Dios."
   },
   "hymnus_laudes": {
-   "eng": "¡Oh Dios de soberana clemencia!,\nhaz que meditemos, cual conviene,\nlos siete dolores de la Virgen\ny las llagas de su Hijo Jesús.\n\nLas lágrimas tan copiosas de la Madre\nde Dios, con las cuáles Tú puedes lavar\nlos crímenes del mundo entero,\nnos obtengan la salvación.\n\nLa dolorosa contemplación\nde las cinco llagas de Jesús\ny los dolores de la Virgen sean\npara todos prendas de gloria eterna.\n\n@Tempora/Quad5-5:Doxology"
+   "eng": "¡Oh Dios de soberana clemencia!,\nhaz que meditemos, cual conviene,\nlos siete dolores de la Virgen\ny las llagas de su Hijo Jesús.\n\nLas lágrimas tan copiosas de la Madre\nde Dios, con las cuáles Tú puedes lavar\nlos crímenes del mundo entero,\nnos obtengan la salvación.\n\nLa dolorosa contemplación\nde las cinco llagas de Jesús\ny los dolores de la Virgen sean\npara todos prendas de gloria eterna."
   },
   "hymnus_matutinum": {
    "eng": "¡Oh, en qué torrentes de lágrimas,\nen qué dolores se ve sumergida\nla desolada Virgen Madre,\nmientras sostiene en sus brazos\ny contempla a su Hijo desclavado\ndel sangriento madero!\n\nAquella suave boca,\naquel tierno pecho,\naquel dulcísimo costado,\naquella mano derecha traspasada\ny aquella mano izquierda desgarrada,\nlas baña en triste llanto.\n\nCien y mil veces abraza\nestrechamente aquel pecho\ny aquellos brazos, no se cansa\nde contemplar aquellas llagas,\nderritiéndose toda\nen ósculos dolorosos.\n\nTe rogamos encarecidamente, oh Madre,\nque por tus lágrimas,\npor la triste muerte de tu Hijo\ny por la sangre de sus heridas,\nimprimas en nuestros corazones\nel dolor que llena el tuyo.\n\nSean eternamente glorificados,\nalabados y honrados el Padre y el Hijo,\ncon el Espíritu como ellos eterno;\ngloria, alabanza y honor\na la soberana Trinidad,\nahora y por todos los siglos.\nAmén."
@@ -12904,10 +12907,10 @@
    "eng": "Deus, qui primitias fidei in borealibus Americæ regionibus sanctorum Mártyrum tuorum Isaaci, Ioannis, eorumque Sociorum prædicatione et sanguine consecrasti: concede, propitius; ut, eorum intercessione, florida christianorum seges ubique in dies augeatur.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   },
   "responsory5": {
-   "eng": "R. Verbera carnificum non timuerunt Sancti Dei, morientes pro Christi nomine:\n* Ut heredes fierent in domo Domini.\nV. Tradiderunt corpora sua propter Deum ad supplicia.\nR. Ut heredes fierent in domo Domini."
+   "eng": "R. Los santos de Dios no temieron los azotes de los verdugos, muriendo por el nombre de Cristo:\n* Para ser herederos en la casa del Señor.\nV. Entregaron sus cuerpos a los suplicios por Dios.\nR. Para ser herederos en la casa del Señor."
   },
   "responsory7": {
-   "eng": "R. Propter testamentum Domini et leges paternas, Sancti Dei perstiterunt in amore fraternitatis:\n* Quia unus fuit semper spiritus in eis, et una fides.\nV. Ecce quam bonum et quam jucundum habitare fratres in unum!\nR. Quia unus fuit semper spiritus in eis, et una fides."
+   "eng": "R. Por el testamento del Señor y las leyes paternas, los santos de Dios perseveraron en el amor de la fraternidad:\n* Porque hubo siempre en ellos un solo espíritu y una sola fe.\nV. ¡Oh, cuán buena y cuán dulce cosa es el vivir los hermanos en unión!\nR. Porque hubo siempre en ellos un solo espíritu y una sola fe."
   },
   "responsory8": {
    "eng": "R. Sancti mei, qui in carne positi certamen habuistis:\n* Mercedem laboris ego reddam vobis.\nV. Venite, benedicti Patris mei, percipite regnum.\nR. Mercedem laboris ego reddam vobis.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Mercedem laboris ego reddam vobis."
@@ -13356,10 +13359,10 @@
    "eng": "¡Oh eterno Ordenador de los astros,\nque creaste todas las cosas\ncon tu poder infinito, y las gobiernas\ncon tu no menor providencia!\n\nAtiende a estos pecadores, aquí reunidos,\nque te suplican, y concede\nuna luz nueva a sus almas\nen este amanecer.\n\nQue el ángel de nuestra guarda,\nescogido por ti,\nnos asista para preservarnos\ndel contagio del mal.\n\nQue desvirtúe las astucias\ndel dragón envidioso: para que no cautive\nnuestros corazones incautos\ncon la red del engaño.\n\nQue aleje de nuestros confines\nel temor de los enemigos;\nque fomente la paz entre los ciudadanos,\ny ahuyente la peste.\n\nGloria sea dada a Dios Padre,\ny que Él guarde por medio de sus ángeles\na aquellos a quienes ha redimido el Hijo\ny ha ungido el Espíritu Santo.\nAmén."
   },
   "hymnus_matutinum": {
-   "eng": "Ensalzamos a los ángeles custodios\nde los hombres, que el Padre celestial\ndio como compañeros a nuestra frágil naturaleza,\npara que no sucumbiera a las asechanzas del enemigo.\n\nPues, por haber caído el ángel rebelde, despojado\njustamente de las prerrogativas que le fueron concedidas,\nse afana, llevado de la envidia, en apartar\ndel cielo a los que Dios llama a él.\n\nVuela, pues, hacia aquí , ¡oh protector vigilante!,\ny aleja de la región, que se te ha confiado,\ntanto los males del alma como todo\nlo que turba la paz de sus habitantes.\n\nDevota alabanza sea dada a la Trinidad Santa,\ncuyo poder dirige sin cesar la triple máquina\ndel universo, y cuya gloria permanece\npor todos los siglos.\nAmén."
+   "eng": "Ensalzamos a los ángeles custodios\nde los hombres, que el Padre celestial\ndio como compañeros a nuestra frágil naturaleza,\npara que no sucumbiera a las asechanzas del enemigo.\n\nPues, por haber caído el ángel rebelde, despojado\njustamente de las prerrogativas que le fueron concedidas,\nse afana, llevado de la envidia, en apartar\ndel cielo a los que Dios llama a él.\n\nVuela, pues, hacia aquí, ¡oh protector vigilante!,\ny aleja de la región, que se te ha confiado,\ntanto los males del alma como todo\nlo que turba la paz de sus habitantes.\n\nDevota alabanza sea dada a la Trinidad Santa,\ncuyo poder dirige sin cesar la triple máquina\ndel universo, y cuya gloria permanece\npor todos los siglos.\nAmén."
   },
   "hymnus_vespera": {
-   "eng": "Ensalzamos a los ángeles custodios\nde los hombres, que el Padre celestial\ndio como compañeros a nuestra frágil naturaleza,\npara que no sucumbiera a las asechanzas del enemigo.\n\nPues, por haber caído el ángel rebelde, despojado\njustamente de las prerrogativas que le fueron concedidas,\nse afana, llevado de la envidia, en apartar\ndel cielo a los que Dios llama a él.\n\nVuela, pues, hacia aquí , ¡oh protector vigilante!,\ny aleja de la región, que se te ha confiado,\ntanto los males del alma como todo\nlo que turba la paz de sus habitantes.\n\nDevota alabanza sea dada a la Trinidad Santa,\ncuyo poder dirige sin cesar la triple máquina\ndel universo, y cuya gloria permanece\npor todos los siglos.\nAmén."
+   "eng": "Ensalzamos a los ángeles custodios\nde los hombres, que el Padre celestial\ndio como compañeros a nuestra frágil naturaleza,\npara que no sucumbiera a las asechanzas del enemigo.\n\nPues, por haber caído el ángel rebelde, despojado\njustamente de las prerrogativas que le fueron concedidas,\nse afana, llevado de la envidia, en apartar\ndel cielo a los que Dios llama a él.\n\nVuela, pues, hacia aquí, ¡oh protector vigilante!,\ny aleja de la región, que se te ha confiado,\ntanto los males del alma como todo\nlo que turba la paz de sus habitantes.\n\nDevota alabanza sea dada a la Trinidad Santa,\ncuyo poder dirige sin cesar la triple máquina\ndel universo, y cuya gloria permanece\npor todos los siglos.\nAmén."
   },
   "invit": {
    "eng": "Al Señor Rey de los Ángeles, * Venid, adorémosle."
@@ -13575,7 +13578,7 @@
    "eng": "V. Subió el humo de los perfumes al acatamiento del Señor, aleluya.\nR. Por la mano del Ángel, aleluya."
   },
   "nocturn_3_versum": {
-   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío, aleluya.\nR. Te adoraré en tu templo santo y confesaré tu nombre, aleluya."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "oratio": {
    "eng": "¡Oh Dios, que en tu providencia inefable te has dignado enviar para nuestra custodia a tus santos ángeles!; concede a quienes te suplican ser siempre defendidos por su protección y gozar eternamente de su compañía.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
@@ -13614,19 +13617,19 @@
    "eng": "R.br. Púsose el Ángel * junto el altar del templo.\nR. Púsose el Ángel * junto el altar del templo.\nV. Teniendo un incensario de oro en su mano.\nR. Junto el altar del templo.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Púsose el Ángel * junto el altar del templo."
   },
   "versum_1": {
-   "eng": "V. Delante de los ángeles tañeré para ti, Dios mío.\nR. Me postraré hacia tu santuario, daré gracias a tu nombre."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "versum_2": {
-   "eng": "V. Delante * de los ángeles tañeré para ti.\nR. Me postraré hacia tu santuario, daré gracias a tu nombre."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "versum_3": {
-   "eng": "V. Delante * de los ángeles tañeré para ti.\nR. Me postraré hacia tu santuario, daré gracias a tu nombre."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "versum_nona": {
    "eng": "V. Adorad a Dios.\nR. Todos sus ángeles."
   },
   "versum_sexta": {
-   "eng": "V. Delante * de los ángeles tañeré para ti.\nR. Me postraré hacia tu santuario, daré gracias a tu nombre."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "versum_tertia": {
    "eng": "V. Subió el humo de los perfumes al acatamiento del Señor, aleluya.\nR. Por la mano del Ángel, aleluya."
@@ -13735,19 +13738,19 @@
    "eng": "V. Floreced como el lirio, exhalad perfume suave y entonad cánticos de alabanza. Bendecid al Señor en todas sus obras.\nDemos gracias a Dios."
   },
   "hymnus_laudes": {
-   "eng": "Sepultada ya la muerte, Cristo vencedor\nvuelve de los infiernos; y rotas ya\nlas cadenas de la culpa,\nabre las puertas del cielo.\n\nDespués de haberle contemplado algún tiempo\nlos mortales, sube a los cielos,\ny se sienta a la diestra del Padre,\ngozando de igual gloria.\n\nPara dar a los suyos el Espíritu Santo,\nque les había prometido, desciende\nen lenguas de fuego de amor\nsobre sus tristes discípulos.\n\nLibre del peso de la carne,\nla Virgen se eleva a los cielos\ny es recibida con júbilo\ny cánticos por los ángeles.\n\nDoce estrellas ciñen las sienes\nde la divina Madre; ella,\ncercana al trono del Hijo,\nreina sobre todas las criaturas.\n\n@Psalterium/Doxologies:Nat"
+   "eng": "Sepultada ya la muerte, Cristo vencedor\nvuelve de los infiernos; y rotas ya\nlas cadenas de la culpa,\nabre las puertas del cielo.\n\nDespués de haberle contemplado algún tiempo\nlos mortales, sube a los cielos,\ny se sienta a la diestra del Padre,\ngozando de igual gloria.\n\nPara dar a los suyos el Espíritu Santo,\nque les había prometido, desciende\nen lenguas de fuego de amor\nsobre sus tristes discípulos.\n\nLibre del peso de la carne,\nla Virgen se eleva a los cielos\ny es recibida con júbilo\ny cánticos por los ángeles.\n\nDoce estrellas ciñen las sienes\nde la divina Madre; ella,\ncercana al trono del Hijo,\nreina sobre todas las criaturas.\n\nJesús, a ti sea la gloria,\nque naciste de la Virgen,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "hymnus_matutinum": {
-   "eng": "En el monte de los Olivos, ora\npostrado el Redentor; está triste,\nangustiado, desfallece\nbañado en sudor de sangre.\n\nEntregado por un traidor,\nel mismo Dios es conducido al suplicio;\nsujétanle con duras cuerdas\ny le maltratan con sangrientos azotes.\n\nPonen en las sienes del Rey\nde la gloria una corona de burla,\ntejida con punzantes espinas;\ny le cubren con un pingajo de púrpura.\n\nOblíganle a llevar aquella cruz\ntres veces pesada; y sudando, jadeando,\ncayendo abatido, Jesús la lleva\nhasta la cima del monte.\n\nSiendo inocente, clávanle en duro leño,\nentre criminales; y ruega desde allí\npor sus verdugos, da toda su sangre\ny entrega su espíritu.\n\n@Psalterium/Doxologies:Nat"
+   "eng": "En el monte de los Olivos, ora\npostrado el Redentor; está triste,\nangustiado, desfallece\nbañado en sudor de sangre.\n\nEntregado por un traidor,\nel mismo Dios es conducido al suplicio;\nsujétanle con duras cuerdas\ny le maltratan con sangrientos azotes.\n\nPonen en las sienes del Rey\nde la gloria una corona de burla,\ntejida con punzantes espinas;\ny le cubren con un pingajo de púrpura.\n\nOblíganle a llevar aquella cruz\ntres veces pesada; y sudando, jadeando,\ncayendo abatido, Jesús la lleva\nhasta la cima del monte.\n\nSiendo inocente, clávanle en duro leño,\nentre criminales; y ruega desde allí\npor sus verdugos, da toda su sangre\ny entrega su espíritu.\n\nJesús, a ti sea la gloria,\nque naciste de la Virgen,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "hymnus_matutinum_": {
-   "eng": "En el monte de los Olivos, ora\npostrado el Redentor; está triste,\nangustiado, desfallece\nbañado en sudor de sangre.\n\nEntregado por un traidor,\nel mismo Dios es conducido al suplicio;\nsujétanle con duras cuerdas\ny le maltratan con sangrientos azotes.\n\nPonen en las sienes del Rey\nde la gloria una corona de burla,\ntejida con punzantes espinas;\ny le cubren con un pingajo de púrpura.\n\nOblíganle a llevar aquella cruz\ntres veces pesada; y sudando, jadeando,\ncayendo abatido, Jesús la lleva\nhasta la cima del monte.\n\nSiendo inocente, clávanle en duro leño,\nentre criminales; y ruega desde allí\npor sus verdugos, da toda su sangre\ny entrega su espíritu.\n\n@Psalterium/Doxologies:Nat"
+   "eng": "En el monte de los Olivos, ora\npostrado el Redentor; está triste,\nangustiado, desfallece\nbañado en sudor de sangre.\n\nEntregado por un traidor,\nel mismo Dios es conducido al suplicio;\nsujétanle con duras cuerdas\ny le maltratan con sangrientos azotes.\n\nPonen en las sienes del Rey\nde la gloria una corona de burla,\ntejida con punzantes espinas;\ny le cubren con un pingajo de púrpura.\n\nOblíganle a llevar aquella cruz\ntres veces pesada; y sudando, jadeando,\ncayendo abatido, Jesús la lleva\nhasta la cima del monte.\n\nSiendo inocente, clávanle en duro leño,\nentre criminales; y ruega desde allí\npor sus verdugos, da toda su sangre\ny entrega su espíritu.\n\nJesús, a ti sea la gloria,\nque naciste de la Virgen,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "hymnus_vespera": {
-   "eng": "Un mensajero de la corte celestial,\nrevelando los secretos divinos,\nsaluda llena de gracia\na la Virgen Madre de Dios.\n\nVisita la Virgen a su parienta la madre de Juan,\nquien, encerrado en el seno materno,\nanuncia, saltando de gozo,\nque Cristo está allí presente.\n\nEl Verbo, que procedió desde la eternidad\nde la mente del Padre, nace niño,\ny en carne mortal, del seno\nde la Virgen Madre.\n\nEl niño es presentado en el templo,\ny siendo el Legislador, se sujeta a la ley,\ny siendo el Redentor, es liberado con el rescate\nde los pobres, y se ofrece allí en sacrificio.\n\nAl Hijo, que ya lloraba perdido,\nencuentra luego la Madre gozosa,\nenseñando a los doctores\nmisterios que ignoraban.\n\n@Psalterium/Doxologies:Nat"
+   "eng": "Un mensajero de la corte celestial,\nrevelando los secretos divinos,\nsaluda llena de gracia\na la Virgen Madre de Dios.\n\nVisita la Virgen a su parienta la madre de Juan,\nquien, encerrado en el seno materno,\nanuncia, saltando de gozo,\nque Cristo está allí presente.\n\nEl Verbo, que procedió desde la eternidad\nde la mente del Padre, nace niño,\ny en carne mortal, del seno\nde la Virgen Madre.\n\nEl niño es presentado en el templo,\ny siendo el Legislador, se sujeta a la ley,\ny siendo el Redentor, es liberado con el rescate\nde los pobres, y se ofrece allí en sacrificio.\n\nAl Hijo, que ya lloraba perdido,\nencuentra luego la Madre gozosa,\nenseñando a los doctores\nmisterios que ignoraban.\n\nJesús, a ti sea la gloria,\nque naciste de la Virgen,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "hymnus_vespera_3": {
-   "eng": "¡Oh Virgen Madre!,\nte cantamos llena de gozo,\nsaturada de dolores,\nrevestida de gloria.\n\nSalve, Madre dichosa, que rebosas de júbilo\nen la Encarnación, en la Visitación,\nen el Nacimiento, en la Presentación\ny en el hallazgo de tu Hijo.\n\nSalve, dolorosa, Reina de los Mártires,\nque sufres en lo más profundo del corazón\nla agonía, la flagelación, las espinas\ny la crucifixión de tu Hijo.\n\nSalve, Reina coronada de gloria,\nen los triunfos de tu Hijo,\nen el fuego del Paráclito,\nen el honor y la luz del cielo.\n\nVenid, pueblos, arrancad\nrosas de estos misterios,\ny tejed coronas a la excelsa\nMadre del amor hermoso.\n\n@Psalterium/Doxologies:Nat"
+   "eng": "¡Oh Virgen Madre!,\nte cantamos llena de gozo,\nsaturada de dolores,\nrevestida de gloria.\n\nSalve, Madre dichosa, que rebosas de júbilo\nen la Encarnación, en la Visitación,\nen el Nacimiento, en la Presentación\ny en el hallazgo de tu Hijo.\n\nSalve, dolorosa, Reina de los Mártires,\nque sufres en lo más profundo del corazón\nla agonía, la flagelación, las espinas\ny la crucifixión de tu Hijo.\n\nSalve, Reina coronada de gloria,\nen los triunfos de tu Hijo,\nen el fuego del Paráclito,\nen el honor y la luz del cielo.\n\nVenid, pueblos, arrancad\nrosas de estos misterios,\ny tejed coronas a la excelsa\nMadre del amor hermoso.\n\nJesús, a ti sea la gloria,\nque naciste de la Virgen,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "invit": {
    "eng": "Celebremos la solemnidad del Rosario de la Virgen María: * Adoremos a Cristo, su Hijo, nuestro Señor."
@@ -14190,7 +14193,7 @@
    "eng": "V. El que me creó descansó en mi seno y me dijo: Habita en Jacob, echa raíces entre mis elegidos.\nDemos gracias a Dios."
   },
   "hymnus_laudes": {
-   "eng": "Suplicantes te rogamos todos,\n¡oh Madre excelsa de Dios!,\nque nos cobijes bajo tu manto\ny nos libres de las asechanzas del demonio.\n\nEl Rey supremo te elevó\na la augusta dignidad de Madre suya,\nen beneficio del humano linaje,\nperdido por el pecado del primer padre.\n\nMira, pues, clemente a los caídos\nhijos de Adán: para que,\ncon tus ruegos, el Hijo\naplaque su ira justiciera.\n\n@Psalterium/Doxologies:Nat"
+   "eng": "Suplicantes te rogamos todos,\n¡oh Madre excelsa de Dios!,\nque nos cobijes bajo tu manto\ny nos libres de las asechanzas del demonio.\n\nEl Rey supremo te elevó\na la augusta dignidad de Madre suya,\nen beneficio del humano linaje,\nperdido por el pecado del primer padre.\n\nMira, pues, clemente a los caídos\nhijos de Adán: para que,\ncon tus ruegos, el Hijo\naplaque su ira justiciera.\n\nJesús, a ti sea la gloria,\nque naciste de la Virgen,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "hymnus_matutinum": {
    "eng": "El Redentor prefirió al mismo cielo\nel seno de la bienaventurada Virgen,\ndonde, como futura víctima,\nse revistió de un cuerpo mortal.\n\nNos dio esta Virgen al autor\nde nuestra salvación, a aquel\nque nos redimió con su sangre,\ny que por nosotros sufrió y murió en la cruz.\n\nQue una alegre esperanza disipe las inquietudes\ny temores de nuestros corazones,\nya que esta Madre es quien presenta\na su Hijo nuestras preces y lágrimas.\n\nEl Hijo atiende a las voces\ny a los ruegos de su Madre;\nno dejemos, pues, nunca de amarla\ny acudamos a ella en las horas difíciles.\n\nGloria sea dada a la Trinidad\nque enriqueció con un fruto divino\nel seno virginal de esta Madre;\nalabanzas le sean dadas por todos los siglos.\nAmén."
@@ -14244,7 +14247,7 @@
    "eng": "R. Bendita eres por el Señor, oh Virgen, porque por ti hemos participado del fruto de la vida;\n* Sólo en ti puso nuestro Señor Jesucristo una complacencia sin igual.\nV. No desprecies las plegarias que te dirigimos en nuestras necesidades, mas líbranos siempre de todos los peligros, oh santa Madre de Dios.\nR. Sólo en ti puso nuestro Señor Jesucristo una complacencia sin igual."
   },
   "responsory6": {
-   "eng": "R. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre :\n* ¿De dónde a mí tanto bien, que venga la Madre de mi Señor a visitarme?\nV. Ha puesto los ojos en la bajeza de su esclava, y ha hecho en mí grandes cosas el que es poderoso.\nR. ¿De dónde a mí tanto bien, que venga la Madre de mi Señor a visitarme?\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. ¿De dónde a mí tanto bien, que venga la Madre de mi Señor a visitarme?"
+   "eng": "R. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre:\n* ¿De dónde a mí tanto bien, que venga la Madre de mi Señor a visitarme?\nV. Ha puesto los ojos en la bajeza de su esclava, y ha hecho en mí grandes cosas el que es poderoso.\nR. ¿De dónde a mí tanto bien, que venga la Madre de mi Señor a visitarme?\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. ¿De dónde a mí tanto bien, que venga la Madre de mi Señor a visitarme?"
   },
   "responsory7": {
    "eng": "R. Bienaventurada eres, Virgen María, Madre de Dios, por haber creído en el Señor: cumplido se han en ti aquellas cosas que acerca de ti se han dicho.\n* Por ello Dios te ha bendecido para siempre.\nV. La gracia está derramada en tus labios: intercede por nosotros ante Dios, nuestro Señor.\nR. Por ello Dios te ha bendecido para siempre."
@@ -14789,7 +14792,7 @@
    "eng": "R. Ya es tiempo de que me vuelva al que me envió, dijo el ángel Rafael:\n* Vosotros, empero, bendecid al Señor y anunciad todas sus maravillas.\nV. Glorificadle delante de todos los vivientes, porque ha hecho brillar en vosotros su misericordia.\nR. Vosotros, empero, bendecid al Señor y anunciad todas sus maravillas.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Vosotros, empero, bendecid al Señor y anunciad todas sus maravillas."
   },
   "versum_2": {
-   "eng": "V. Delante de los ángeles tañeré para ti, Dios mío.\nR. Me postraré hacia tu santuario, daré gracias a tu nombre."
+   "eng": "V. Te cantaré himnos en presencia de los Ángeles, oh Dios mío.\nR. Te adoraré en tu templo santo y confesaré tu nombre."
   },
   "versum_3": {
    "eng": "V. Púsose el Ángel junto el altar del templo.\nR. Teniendo un incensario de oro en su mano."
@@ -14920,13 +14923,13 @@
    "eng": "¡Oh Jesús, que naciste de la Virgen!,\ngloria sea dada a ti,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
   },
   "hymnus_laudes": {
-   "eng": "Cristo triunfador despliega\nsus banderas gloriosas: venid,\n¡oh pueblos!, a suplicarle\ny aclamad al Rey de los reyes.\n\nÉl no somete a los reinos con derrotas,\nni con la fuerza o el temor:\nlevantado en lo alto de un madero,\natrajo a sí, con el amor, todas las cosas.\n\n¡Oh ciudad mil veces dichosa\naquella en la que reina Cristo\nlegítimamente, y que se afana en cumplir\nlos preceptos dados al mundo por Dios!\n\nAllí no arden las guerras inhumanas,\nla paz sella siempre los tratados,\nreina la concordia y el orden\npúblico permanece seguro.\n\nAllí la fidelidad protege\nlos matrimonios; la juventud crece pura,\ny los hogares florecen,\nhonrados con las virtudes domésticas.\n\n¡Oh Rey dulcísimo!, que brille pronto\nesa luz que nosotros deseamos:\nque te adore rendido el orbe, después\nde alcanzada esta paz dichosa.\n\n@:Doxology"
+   "eng": "Cristo triunfador despliega\nsus banderas gloriosas: venid,\n¡oh pueblos!, a suplicarle\ny aclamad al Rey de los reyes.\n\nÉl no somete a los reinos con derrotas,\nni con la fuerza o el temor:\nlevantado en lo alto de un madero,\natrajo a sí, con el amor, todas las cosas.\n\n¡Oh ciudad mil veces dichosa\naquella en la que reina Cristo\nlegítimamente, y que se afana en cumplir\nlos preceptos dados al mundo por Dios!\n\nAllí no arden las guerras inhumanas,\nla paz sella siempre los tratados,\nreina la concordia y el orden\npúblico permanece seguro.\n\nAllí la fidelidad protege\nlos matrimonios; la juventud crece pura,\ny los hogares florecen,\nhonrados con las virtudes domésticas.\n\n¡Oh Rey dulcísimo!, que brille pronto\nesa luz que nosotros deseamos:\nque te adore rendido el orbe, después\nde alcanzada esta paz dichosa.\n\nJesús, a ti sea la gloria,\nque riges los cetros del mundo,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "hymnus_matutinum": {
-   "eng": "Eterna imagen del Altísimo, oh Dios,\nluz de luz, a ti corresponde,\noh Redentor, la gloria,\nel honor y la potestad regia.\n\nA ti, única esperanza y centro\nde los tiempos, confirió\nel Padre supremo, por un justo\ndecreto, el cetro de los pueblos.\n\nTú eres la flor de la Virgen pura,\nla cabeza del linaje humano,\nla piedra que, desprendida de la montaña,\nllena con su mole toda la tierra.\n\nLa raza de los mortales condenada\na la servidumbre de un cruel tirano,\nquebranta por ti sus cadenas\ny reconquista el cielo.\n\nTú eres el Doctor, el Sacerdote, el legislador,\nque llevas escrito con tu sangre\nen tus vestiduras: “Príncipe de los príncipes\ny Rey supremo de los reyes”.\n\nDe todo corazón nos sometemos a ti,\nque mandas por derecho propio\na todos los hombres. La felicidad\nde los pueblos consiste en acatar tus leyes.\n\n@:Doxology"
+   "eng": "Eterna imagen del Altísimo, oh Dios,\nluz de luz, a ti corresponde,\noh Redentor, la gloria,\nel honor y la potestad regia.\n\nA ti, única esperanza y centro\nde los tiempos, confirió\nel Padre supremo, por un justo\ndecreto, el cetro de los pueblos.\n\nTú eres la flor de la Virgen pura,\nla cabeza del linaje humano,\nla piedra que, desprendida de la montaña,\nllena con su mole toda la tierra.\n\nLa raza de los mortales condenada\na la servidumbre de un cruel tirano,\nquebranta por ti sus cadenas\ny reconquista el cielo.\n\nTú eres el Doctor, el Sacerdote, el legislador,\nque llevas escrito con tu sangre\nen tus vestiduras: “Príncipe de los príncipes\ny Rey supremo de los reyes”.\n\nDe todo corazón nos sometemos a ti,\nque mandas por derecho propio\na todos los hombres. La felicidad\nde los pueblos consiste en acatar tus leyes.\n\nJesús, a ti sea la gloria,\nque riges los cetros del mundo,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "hymnus_vespera": {
-   "eng": "¡Oh Cristo!, te proclamamos Príncipe\nde los siglos, Rey de las naciones,\nárbitro único de las inteligencias\ny de los corazones.\n\nLa turba malvada grita: no queremos\nque reine Cristo. Nosotros, con vítores,\nte proclamamos Rey supremo\nde todos los hombres.\n\n¡Oh Cristo, Príncipe de la paz!,\nsomete a las almas rebeldes,\ny con tu amor congrega\na los extraviados en un solo redil.\n\nPara eso estás colgado de un madero\nensangrentado, con los brazos abiertos,\ny muestras tu corazón, inflamado\nde amor, abierto por la lanza cruel.\n\nPara eso te escondes en el altar,\nbajo las especies de pan y vino,\ndando, desde ese tu corazón traspasado,\nla salud a tus hijos.\n\nQue los jefes de Estado te rindan\nculto público; que te honren los jueces,\nque te rindan homenaje\nlas leyes y las artes.\n\nBrillen sumisas las insignias\nde los reyes consagrados a ti,\ny somete a tu suave imperio la patria\ny los hogares de sus ciudadanos.\n\n@:Doxology"
+   "eng": "¡Oh Cristo!, te proclamamos Príncipe\nde los siglos, Rey de las naciones,\nárbitro único de las inteligencias\ny de los corazones.\n\nLa turba malvada grita: no queremos\nque reine Cristo. Nosotros, con vítores,\nte proclamamos Rey supremo\nde todos los hombres.\n\n¡Oh Cristo, Príncipe de la paz!,\nsomete a las almas rebeldes,\ny con tu amor congrega\na los extraviados en un solo redil.\n\nPara eso estás colgado de un madero\nensangrentado, con los brazos abiertos,\ny muestras tu corazón, inflamado\nde amor, abierto por la lanza cruel.\n\nPara eso te escondes en el altar,\nbajo las especies de pan y vino,\ndando, desde ese tu corazón traspasado,\nla salud a tus hijos.\n\nQue los jefes de Estado te rindan\nculto público; que te honren los jueces,\nque te rindan homenaje\nlas leyes y las artes.\n\nBrillen sumisas las insignias\nde los reyes consagrados a ti,\ny somete a tu suave imperio la patria\ny los hogares de sus ciudadanos.\n\nJesús, a ti sea la gloria,\nque riges los cetros del mundo,\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos. Amén."
   },
   "invit": {
    "eng": "A Jesucristo, Rey de los reyes * Venid, adorémosle."
@@ -17704,13 +17707,13 @@
    "eng": "Quoniam quæ ad cultum pertinent, intimo plane vinculo cum eiusdem objecto conserta sunt, neque rata et fixa manere possunt, si illud anceps sit et in ambiguo versetur, idcirco decessores nostri Romani Pontifices omni cura Conceptionis cultum amplificantes illius etiam objectum ac doctrinam declarare, et inculcare impensissime studuerunt. Etenim clare aperteque docuere, festum agi de Virginis Conceptione, atque uti falsam et ab Ecclesiæ mente alienissimam proscripserunt illorum opinionem qui non Conceptionem ipsam, sed sanctificationem ab Ecclesia coli arbitrarentur et affirmarent."
   },
   "lectio6": {
-   "eng": "Atque illud in primis solemne quoque fuit iisdem decessoribus nostris, doctrinam de Immaculata Dei Matris Conceptione sartam tectamque omni cura, studio et contentione tueri. Etenim non solum nullatenus passi sunt, ipsam doctrinam quovis modo a quopiam notari atque traduci, verum étiam longe ulterius progressi, perspicuis declarationibus iteratisque vicibus edixerunt: Doctrinam qua Immaculatam Virginis Conceptionem profitemur, esse, suoque merito haberi cum ecclesiastico cultu plane consonam, eamque veterem, ac prope universalem et ejusmodi, quam Romana Ecclesia sibi fovendam tuendamque susceperit, atque omnino dignam, quæ in sacra ipsa liturgia, solemnioribusque precibus usurparetur. Neque his contenti, ut ipsa de Immaculato Virginis Conceptu doctrina inviolata persisteret, opinionem huic doctrinæ adversam, sive publice, sive privatim, defendi posse severissime prohibuere, eamque multiplici veluti vulnere confectam esse voluerunt."
+   "eng": "Fue también costumbre solemne de nuestros predecesores defender con todo cuidado, empeño y esfuerzo, íntegra e intacta, la doctrina de la Inmaculada Concepción de la Madre de Dios. Pues no sólo no consintieron jamás que esta doctrina fuese censurada o desacreditada por nadie en modo alguno, sino que, avanzando mucho más allá, declararon en repetidas ocasiones, con clarísimas declaraciones, que la doctrina por la que profesamos la Inmaculada Concepción de la Virgen es, y con pleno mérito se ha de tener, por enteramente conforme con el culto eclesiástico; que es antigua y casi universal, y de tal naturaleza que la Iglesia Romana la ha tomado bajo su fomento y patrocinio; y del todo digna de ser empleada en la sagrada liturgia misma y en las preces más solemnes. Y no contentos con esto, para que la doctrina de la Inmaculada Concepción de la Virgen permaneciese inviolada, prohibieron con toda severidad que pudiera defenderse, pública o privadamente, la opinión contraria a esta doctrina, y quisieron que quedase como herida de muerte con repetidos golpes."
   },
   "lectio7": {
    "eng": "Léctio sancti Evangélii secúndum Lucam.\nIn illo témpore: Missus est Angelus Gabriel a Deo in civitatem Galilææ, cui nomen Nazareth, ad Virginem desponsatam viro, cui nomen erat Joseph, de domo David, et nomen Virginis Maria. Et réliqua.\nHomilia sancti Tharasii Epíscopi.\nQuibus te laudibus cumulabimus, Maria? O puella immaculata; o virgo impolluta; mulierum ornamentum filiarum nitor! O mater Virgo sancta, tu benedicta inter mulieres; tu celebrata propter innocentiam; tu obsignata virginitate. Tu Adami maledicti expiatio; tu debiti Hevæ solutio. Tu Abelis purissima oblatio; primogenitorum delectus; immaculatum sacrificium. Tu Enos in Deum spes non pudore suffusa; tu Enoch inita gratia, et in securam vitam migratio. Tu Noë arca, et secundæ regenerationis apud Deum conciliatio. Tu regni et sacerdotii Melchisedech perillustris splendor; tu Abrahami firma fiducia et promissionis futuræ posteritatis obsequens fides. Tu Isaac novum sacrificium et rationale holocaustum; tu Jacob in scalam ascensus causa, et fœcunditatis in duodecim tribus permanentis expressio nobilissima. Tu Judæ apparuisti secundum stirpem filia; tu Josephi pudicitia et veteris AEgypti, nimirum synagogæ Judæorum eversio, o Immaculata! Tu Moysis eiusdemque legislatoris liber divinitus concinnatus, in quo scriptum est sacramentum regenerationis, et divinis digitis insculpta in tabulis lex est tamquam in monte Sina, ubi novus Israël ab intelligibilium Aegyptiorum servitute vindicabitur, quemadmodum antiquus populus in solitudine manna et aqua de petra satiatus est, petra autem erat Christus e tuo gremio proditurus tamquam sponsus de thalamo. Tu Aaronis virga florescens; tu es Davidis filia fimbriis aureis circumvestita vario ornatu nitescens."
   },
   "lectio9": {
-   "eng": "Nos autem populus Dei, gens sancta, congregatio acceptabilis, filii columbæ, soboles gratiæ in hac Virginis celebritate puris animis, impollutis labiis, multisonis linguis hymnos suavidicos extollamus. Illustre hoc festum, principem solemnitatem Angelis lætam et hominum prædicatione dignissimam, prouti par est, venerantes illud Ave Gabrielis cum reverentia et gaudio sancto conclamemus. Ave delicium Patris, per quam ad ultimos terræ fines Dei cognitio manavit. Ave Filii domicilium, de qua ille carne indutus prodivit. Ave sancti Spiritus habitaculum ineffabile. Ave sanctior Cherubim; ave gloriosior Seraphim; ave cælo altior; ave sole splendidior; ave luna micantior; ave multiplex astrorum nitor; ave levis nubes, quæ cælestem pluviam inspergis. Ave aura sancta, quæ spiritum malitiæ a terra dissipasti. Ave nobile præconium Prophetarum; ave Apostolorum auditus per totum orbem sonus; ave Mártyrum excellens confessio; ave Patriarcharum laudatissima prædicatio; ave Sanctorum summum ornamentum. Ave causa salutis omnium mortalium; ave regina pacis conciliatrix; ave matrum splendor immaculatus. Ave mediatrix omnium, qui sub cælo sunt; ave totius orbis reparatio; ave gratia plena, Dominus tecum, qui ante te, et ex te, et nobiscum. Ipsi laus cum Patre et sanctissimo et vivifico Spiritu, nunc et semper, et in infinita sæcula sæculorum. Amen."
+   "eng": "Mas nosotros, pueblo de Dios, gente santa, congregación agradable, hijos de la paloma, linaje de la gracia, en esta festividad de la Virgen, con almas puras, con labios sin mancha, con lenguas de muchos sones, entonemos himnos suavísimos. Venerando como es justo esta fiesta ilustre, solemnidad principal, alegre para los Ángeles y digna de toda alabanza de los hombres, aclamemos con reverencia y santo gozo aquel Ave de Gabriel. Ave, delicia del Padre, por quien el conocimiento de Dios llegó hasta los últimos confines de la tierra. Ave, morada del Hijo, de la cual salió revestido de carne. Ave, habitáculo inefable del Espíritu Santo. Ave, más santa que los Querubines; ave, más gloriosa que los Serafines; ave, más alta que el cielo; ave, más espléndida que el sol; ave, más brillante que la luna; ave, resplandor multiplicado de los astros; ave, nube ligera que derramas la lluvia celestial. Ave, aura santa que disipaste de la tierra el espíritu de malicia. Ave, noble pregón de los Profetas; ave, voz de los Apóstoles que resonó por todo el orbe; ave, excelente confesión de los Mártires; ave, laudatísima predicación de los Patriarcas; ave, supremo ornamento de los Santos. Ave, causa de la salvación de todos los mortales; ave, reina conciliadora de la paz; ave, esplendor inmaculado de las madres. Ave, medianera de todos los que viven bajo el cielo; ave, reparación de todo el orbe; ave, llena de gracia, el Señor es contigo, el que es antes de ti, y de ti, y con nosotros. A Él la alabanza, con el Padre y el santísimo y vivificante Espíritu, ahora y siempre, y por los infinitos siglos de los siglos. Amén."
   }
  },
  "12-12bmv": {
@@ -17730,7 +17733,7 @@
    "eng": "Tú eres el espejo de los profetas y el fin de sus profecías. A ti, Ezequiel en su ardor profético, te llamó “la puerta cerrada” por donde jamás pasará hombre alguno, fuera del Señor Dios, el cual la conservó cerrada. De ti, Isaías, el más elocuente de los profetas, predijo que eres la vara de Jesé, de la que nacería la flor, el Cristo, el cual, extirpando de raíz los vicios, plantaría en su campo la planta del conocimiento de Dios. A ti predijo Jeremías, al decir: “He ahí que vienen los días, dice el Señor, en los cuales yo realizaré una nueva alianza con la casa de Israel, y con la casa de Judá, como lo prometí a sus padres”, indicando así la venida y el nacimiento de tu Hijo, e invitando al pueblo de los gentiles de toda la tierra a que le adorasen como Dios. A ti también Daniel, el hombre de los deseos, te proclamó con la imagen de una gran montaña, de la cual Cristo, piedra angular, se desprendería para arruinar y reducir a polvo los simulacros de la serpiente multiforme. A ti rindo yo mis honores, corderita sin mancha, y te proclamo llena de gracia, y te canto, pura e inmaculada morada de Dios. Y ciertamente, “en donde abundó la culpa sobreabundó la gracia”. Por una mujer nos vino la muerte; por una mujer Dios lo ha reparado todo. Por la serpiente recibimos un alimento de sabor amargo, pero tu Hijo nos alimentará con un nuevo alimento de inmortalidad. Eva, nuestra primera madre, dio a luz a Caín, el primer envidioso y malvado; pero tu Hijo Unigénito será el primogénito de la vida y de la resurrección. ¡Oh prodigio inaudito! ¡Oh novedad admirable! ¡Oh sabiduría que ninguna palabra podrá expresar adecuadamente!"
   },
   "lectio9": {
-   "eng": "Nos autem populus Dei, gens sancta, congregatio acceptabilis, filii columbæ, soboles gratiæ in hac Virginis celebritate puris animis, impollutis labiis, multisonis linguis hymnos suavidicos extollamus. Illustre hoc festum, principem solemnitatem Angelis lætam et hominum prædicatione dignissimam, prouti par est, venerantes illud Ave Gabrielis cum reverentia et gaudio sancto conclamemus. Ave delicium Patris, per quam ad ultimos terræ fines Dei cognitio manavit. Ave Filii domicilium, de qua ille carne indutus prodivit. Ave sancti Spiritus habitaculum ineffabile. Ave sanctior Cherubim; ave gloriosior Seraphim; ave cælo altior; ave sole splendidior; ave luna micantior; ave multiplex astrorum nitor; ave levis nubes, quæ cælestem pluviam inspergis. Ave aura sancta, quæ spiritum malitiæ a terra dissipasti. Ave nobile præconium Prophetarum; ave Apostolorum auditus per totum orbem sonus; ave Mártyrum excellens confessio; ave Patriarcharum laudatissima prædicatio; ave Sanctorum summum ornamentum. Ave causa salutis omnium mortalium; ave regina pacis conciliatrix; ave matrum splendor immaculatus. Ave mediatrix omnium, qui sub cælo sunt; ave totius orbis reparatio; ave gratia plena, Dominus tecum, qui ante te, et ex te, et nobiscum. Ipsi laus cum Patre et sanctissimo et vivifico Spiritu, nunc et semper, et in infinita sæcula sæculorum. Amen."
+   "eng": "Mas nosotros, pueblo de Dios, gente santa, congregación agradable, hijos de la paloma, linaje de la gracia, en esta festividad de la Virgen, con almas puras, con labios sin mancha, con lenguas de muchos sones, entonemos himnos suavísimos. Venerando como es justo esta fiesta ilustre, solemnidad principal, alegre para los Ángeles y digna de toda alabanza de los hombres, aclamemos con reverencia y santo gozo aquel Ave de Gabriel. Ave, delicia del Padre, por quien el conocimiento de Dios llegó hasta los últimos confines de la tierra. Ave, morada del Hijo, de la cual salió revestido de carne. Ave, habitáculo inefable del Espíritu Santo. Ave, más santa que los Querubines; ave, más gloriosa que los Serafines; ave, más alta que el cielo; ave, más espléndida que el sol; ave, más brillante que la luna; ave, resplandor multiplicado de los astros; ave, nube ligera que derramas la lluvia celestial. Ave, aura santa que disipaste de la tierra el espíritu de malicia. Ave, noble pregón de los Profetas; ave, voz de los Apóstoles que resonó por todo el orbe; ave, excelente confesión de los Mártires; ave, laudatísima predicación de los Patriarcas; ave, supremo ornamento de los Santos. Ave, causa de la salvación de todos los mortales; ave, reina conciliadora de la paz; ave, esplendor inmaculado de las madres. Ave, medianera de todos los que viven bajo el cielo; ave, reparación de todo el orbe; ave, llena de gracia, el Señor es contigo, el que es antes de ti, y de ti, y con nosotros. A Él la alabanza, con el Padre y el santísimo y vivificante Espíritu, ahora y siempre, y por los infinitos siglos de los siglos. Amén."
   },
   "lectio94": {
    "eng": "Según la piadosa tradición, en el año 1531 se apareció la Virgen María, Madre de Dios, a Juan Diego, neófito, en el monte Tepeyac de México, con un mensaje dirigido al obispo Juan de Zumárraga con el fin de se edificara con premura una iglesia en su honor en aquel mismo lugar. El obispo, no obstante, pidió una señal. Al poco, el neófito fue a buscar a un sacerdote para la extremaunción de su tío, y tomó un camino no muy cercano al lugar de la aparición. Pero su Madre se apareció de nuevo, asegurándole la sanación de su tío, y le mandó recoger unas rosas que habían florecido fuera de temporada; ella las puso en la tilma del neófito y le mandó llevarlas al obispo. Cuando cayeron las rosas en el suelo de palacio, quedó a la vista de los presentes la imagen de María, que había quedado impresa milagrosamente en la tilma. La imagen permaneció primero en el oratorio del obispo, después fue trasladada a la ermita que se levantó en el monte Tepeyac, y más tarde fue depositada en la gran basílica que se convirtió en lugar de peregrinación de las multitudes en México, llevados por la devoción y por sus numerosos milagros. Así, con la aprobación de todo el pueblo, la protectora eterna fue nombrada Patrona de México por los obispos mexicanos, y así lo aprobó Benedicto XIV por su autoridad apostólica. En el día de la Hispanidad, 12 de octubre de 1895, el Papa León XIII, por mediación del obispo de México, adornó la santa imagen con una corona de oro. Finalmente, san Pío X nombró a la bienaventurada Virgen de Guadalupe Patrona de toda América Latina."
@@ -17738,22 +17741,22 @@
  },
  "12-12n": {
   "ant_1": {
-   "eng": "Elégi et sanctificávi locum istum; * Ut sit ibi nomen meum, et permáneant óculi mei, et cor meum ibi cunctis diébus."
+   "eng": "He elegido y santificado este lugar; * para que esté en él mi nombre, y permanezcan allí mis ojos y mi corazón todos los días."
   },
   "ant_2": {
-   "eng": "Quasi arcus * refúlgens inter nébulas glóriæ, et quasi flos rosárum in diébus vernis."
+   "eng": "Como arco iris * que resplandece entre nubes de gloria, y como flor de rosas en los días de primavera."
   },
   "ant_3": {
-   "eng": "Leva in circúitu * óculos tuos, et vide: omnes isti congregáti sunt, venérunt tibi: fílii tui de longe vénient, et fíliæ tuæ de látere surgent."
+   "eng": "Levanta tus ojos * en torno, y mira: todos éstos se han congregado, han venido a ti: tus hijos vendrán de lejos, y tus hijas se levantarán a tu lado."
   },
   "ant_vespera": {
-   "eng": "Quæ est ista * quæ procéssit sicut sol, et formósa tamquam Jerúsalem?\nVidérunt eam * fíliæ Sion vernántem in flóribus rosárum, et beatíssimam prædicavérunt.\nFlores apparuérunt * in terra nostra: te laudámus, Sancta Dei Génetrix.\nCantáte ei * cánticum novum: Annuntiáte inter gentes glóriam ejus.\nTu glória * Jerúsalem, tu lætítia Israël, tu honorificéntia pópuli tui."
+   "eng": "¿Quién es ésta * que avanza como el sol, hermosa como Jerusalén?\nLa vieron * las hijas de Sión floreciente entre flores de rosas, y la proclamaron dichosísima.\nLas flores han aparecido * en nuestra tierra: te alabamos, Santa Madre de Dios.\nCantadle * un cántico nuevo: anunciad entre las gentes su gloria.\nTú, gloria * de Jerusalén; tú, alegría de Israel; tú, honra de tu pueblo."
   },
   "capitulum_laudes": {
    "eng": "V. Beátus homo qui audit me, et qui vígilat ad fores meas cotídie, et obsérvat ad postes óstii mei. Qui me invénerit, invéniet vitam, et háuriet salútem a Dómino.\nDemos gracias a Dios."
   },
   "hymnus_laudes": {
-   "eng": "Alma Parens, omni carens\nCorruptélæ mácula,\nQuam elégit qui confrégit\nDiræ mortis víncula.\n\nClemens! præsta, ut, qui festa\nTua gaudent cólere,\nGratuléntur et læténtur,\nVeræ lucis lúmine.\n\nPrimum quidem nobis fidem\nTuis auge précibus,\nSpe labéntes firma mentes,\nCaritáte róbora.\n\nMater Dei! nostræ spei\nCausa et exórdium,\nAufer bella et flagélla,\nFamem, pestem, gládium.\n\nEgenórum et vinctórum\nConsoláre gémitum;\nFave votis, dans ægrótis\nOptátum remédium.\n\nPax et quies nostros dies\nFáciant lætíssimos;\nInimícos fac amícos,\nSeda malos hómines.\n\nO María, Mater pia,\nTuum da subsídium,\nUt regnémus et laudémus\nTuum semper Fílium.\n\nPater Deus, Fili Deus,\nDeus alme Spíritus,\nPer ætérna nos gubérna\nSæcla, Deus Trínitas.\nAmen."
+   "eng": "Madre santa, que careces\nde toda mancha de corrupción,\na quien eligió el que quebrantó\nlas cadenas de la cruel muerte.\n\n¡Clemente! haz que quienes gozan\nen celebrar tus fiestas,\nse regocijen y se alegren\ncon la luz de la luz verdadera.\n\nAcrecienta ante todo\nnuestra fe con tus plegarias,\nafirma en la esperanza las almas vacilantes,\nfortalécelas con la caridad.\n\n¡Madre de Dios! causa y principio\nde nuestra esperanza,\naparta las guerras y los azotes,\nel hambre, la peste y la espada.\n\nConsuela el gemido\nde los pobres y de los cautivos;\nfavorece los ruegos, dando a los enfermos\nel remedio deseado.\n\nLa paz y el sosiego hagan\nfelicísimos nuestros días;\nhaz amigos a los enemigos,\naquieta a los hombres malos.\n\n¡Oh María, Madre piadosa!,\ndanos tu auxilio,\npara que reinemos y alabemos\na tu Hijo por siempre.\n\nDios Padre, Dios Hijo,\nDios Espíritu Santo,\ngobiérnanos por los siglos\neternos, oh Dios Trinidad.\nAmén."
   },
   "hymnus_matutinum": {
    "eng": "Oh guardiana esclarecida de las vírgenes,\npurísima Madre de Dios,\npuerta de la celestial morada;\nTú, nuestra esperanza y la alegría del cielo.\n\nAzucena en medio de espinas,\nhermosísima paloma,\ntallo que produce de una raíz bendita\nel remedio de nuestras llagas.\n\nTorre inaccesible al dragón infernal,\nestrella salvadora del náufrago,\ndirígenos con tu luz y presérvanos\nde las astucias del enemigo.\n\nDisipa las tinieblas del error,\naleja los escollos peligrosos,\ny vuelve al camino seguro\na los que se han extraviado entre las olas.\n\nGloria a ti, oh Jesús,\nnacido de la Virgen, juntamente\ncon el Padre y el Espíritu Santo,\npor los siglos de los siglos.\nAmén."
@@ -17842,13 +17845,13 @@
    "eng": "Deus, qui sub beatíssimæ Vírginis Maríæ singulári patrocínio constitútos perpétuis benefíciis nos cumulári voluísti: præsta supplícibus tuis; ut, cujus hódie commemoratióne lætámur in terris, ejus conspéctu perfruámur in cælis.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."
   },
   "versum_1": {
-   "eng": "V. Non fecit táliter omni natióni.\nR. Et judícia sua non manifestávit eis."
+   "eng": "V. No hizo cosa semejante con ninguna otra nación.\nR. Ni les manifestó a ellas sus juicios."
   },
   "versum_2": {
-   "eng": "V. Omnis terra adóret te, et psallat tibi.\nR. Psalmum dicat nómini tuo, Dómine."
+   "eng": "V. Toda la tierra te adore y te cante.\nR. Cante salmos a tu nombre, Señor."
   },
   "versum_3": {
-   "eng": "V. Non fecit táliter omni natióni.\nR. Et judícia sua non manifestávit eis."
+   "eng": "V. No hizo cosa semejante con ninguna otra nación.\nR. Ni les manifestó a ellas sus juicios."
   },
   "vesperae.psalm1": {
    "antiphonEng": "¿Quién es ésta, que se eleva como el sol, y es hermosa como Jerusalén?",
@@ -18241,7 +18244,10 @@
    "eng": "Antes de que se juntaran, se halló que en su seno había concebido por virtud del Espíritu Santo. No por otro se halló sino por José, el cual por lo mismo que cuidaba de María, nada ignoraba de lo relativo a su futura esposa. Por lo que se dice: “Antes de que se juntaran”; no se sigue que después usaran del matrimonio; la Escritura declara solamente que no lo habían hecho."
   },
   "lectio2": {
-   "eng": "Antes de que se juntaran, se halló que en su seno había concebido por virtud del Espíritu Santo. No por otro se halló sino por José, el cual por lo mismo que cuidaba de María, nada ignoraba de lo relativo a su futura esposa. Por lo que se dice: “Antes de que se juntaran”; no se sigue que después usaran del matrimonio; la Escritura declara solamente que no lo habían hecho."
+   "eng": "José, su esposo, siendo justo y no queriendo delatarla, quiso despedirla ocultamente. Si alguno se junta con una meretriz forma un solo cuerpo con ella; y en la ley está prescrito que no sólo los reos, sino los conocedores de los crímenes sean culpables de pecado. Siendo esto así, ¿cómo es que se da a José el nombre de justo? Mas este testimonio es en favor de María, puesto que José conociendo su castidad y admirando lo que había acontecido ocultó con el silencio el hecho cuyo misterio ignoraba."
+  },
+  "lectio3": {
+   "eng": "Y le pondrás por nombre Jesús. Pues Él salvará a su pueblo de sus pecados. Jesús en lengua hebrea significa Salvador: el evangelista señaló, pues, la etimología de su nombre al decir: Le pondrás por nombre Jesús, porque Él salvará a su pueblo."
   }
  },
  "12-24s": {
@@ -18357,6 +18363,9 @@
   },
   "responsory9": {
    "eng": "R. Santificaos, hijos de Israel, dice el Señor: el día de mañana descenderá el Señor,\n* Y quitará de vosotros toda languidez.\nV. El día de mañana será borrada la iniquidad de la tierra, y reinará sobre nosotros el Salvador del mundo.\nR. Y quitará de vosotros toda languidez.\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.\nR. Y quitará de vosotros toda languidez."
+  },
+  "lectio9": {
+   "eng": "Y le pondrás por nombre Jesús. Pues Él salvará a su pueblo de sus pecados. Jesús en lengua hebrea significa Salvador: el evangelista señaló, pues, la etimología de su nombre al decir: Le pondrás por nombre Jesús, porque Él salvará a su pueblo."
   }
  },
  "12-25": {
@@ -19181,7 +19190,7 @@
    "eng": "Salve, flores de los mártires,\nque en el umbral mismo de la vida\nfuisteis cortadas por el perseguidor de Cristo,\ncual rosas tempranas por el huracán.\n\nVosotros, las primeras víctimas de Cristo,\nlos tiernos corderos inmolados,\njugáis inocentes al pie mismo\ndel altar con las palmas y las coronas.\n\n¡Oh Jesús, que naciste de la Virgen!,\ngloria sea dada a ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
   },
   "hymnus_matutinum": {
-   "eng": "Oye angustioso el tirano\nque el Rey de reyes naciera,\nque sobre Israel domine\ny el cetro de David tenga.\n\nFurioso exclama : «¡Depuesto\nsoy, el sucesor da priesa!\nVerdugo, ve, coge el hierro;\nlas cunas de sangre llena».\n\n¿De qué sirve tanto crimen?\nHerodes, ¿qué te aprovecha?\nEn salvo ponen a Cristo\nentre tantos que degüellan.\n\nA Ti, Jesús, que de Virgen\nnaciste, la gloria sea,\ncon el Padre y Santo Espíritu,\npor edades sempiternas.\nAmén."
+   "eng": "Oye angustioso el tirano\nque el Rey de reyes naciera,\nque sobre Israel domine\ny el cetro de David tenga.\n\nFurioso exclama: «¡Depuesto\nsoy, el sucesor da priesa!\nVerdugo, ve, coge el hierro;\nlas cunas de sangre llena».\n\n¿De qué sirve tanto crimen?\nHerodes, ¿qué te aprovecha?\nEn salvo ponen a Cristo\nentre tantos que degüellan.\n\nA Ti, Jesús, que de Virgen\nnaciste, la gloria sea,\ncon el Padre y Santo Espíritu,\npor edades sempiternas.\nAmén."
   },
   "hymnus_vespera": {
    "eng": "Salve, flores de los mártires,\nque en el umbral mismo de la vida\nfuisteis cortadas por el perseguidor de Cristo,\ncual rosas tempranas por el huracán.\n\nVosotros, las primeras víctimas de Cristo,\nlos tiernos corderos inmolados,\njugáis inocentes al pie mismo\ndel altar con las palmas y las coronas.\n\n¡Oh Jesús, que naciste de la Virgen!,\ngloria sea dada a ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
@@ -19356,7 +19365,7 @@
    "eng": "Ya se lo había reprochado Ezequiel, diciendo: “¡Oh, los pastores de Israel! ¿Acaso no se apacientan a sí mismos?” Pues ¿no suelen los pastores apacentar a las ovejas? Mas ellos hacían lo contrario cometiendo con ello una gran maldad, causa de muchos males. Por eso dice: “Ni volvían a la grey la oveja errante, ni buscaban la perdida, ni ligaban la quebrada, ni curaban la enferma, ya que se apacentaban a sí mismos, y no a las ovejas”. Lo mismo dijo también con otras palabras el Apóstol San Pablo: “Todos buscan lo suyo, no lo de Jesucristo”."
   },
   "lectio9": {
-   "eng": "De unos y otros se muestra diferente Jesucristo: de los que vienen para la pérdida de los demás, cuando dice: Para eso vine, para que tengan vida, y la tengan abundante; y de los que contemplan impasibles a las ovejas en las fauces del lobo, cuando afirma : El da su vida para que no perezcan sus ovejas. En efecto: al proponerse los judíos darle muerte, no por esto renunció a predicar su doctrina, ni abandonó a los que creían en Él, ni los traicionó, sino que soportó la muerte con firmeza. Pudo, pues, decir con frecuencia: Yo soy el buen Pastor. Pero como de sus palabras no tenían prueba (ya que la afirmación “doy mi vida” se cumplió más tarde, y esta otra: para que tengan vida, y la tengan abundante; no se realizará sino en la vida futura); confirmando así una de sus aserciones con la otra."
+   "eng": "De unos y otros se muestra diferente Jesucristo: de los que vienen para la pérdida de los demás, cuando dice: Para eso vine, para que tengan vida, y la tengan abundante; y de los que contemplan impasibles a las ovejas en las fauces del lobo, cuando afirma: El da su vida para que no perezcan sus ovejas. En efecto: al proponerse los judíos darle muerte, no por esto renunció a predicar su doctrina, ni abandonó a los que creían en Él, ni los traicionó, sino que soportó la muerte con firmeza. Pudo, pues, decir con frecuencia: Yo soy el buen Pastor. Pero como de sus palabras no tenían prueba (ya que la afirmación “doy mi vida” se cumplió más tarde, y esta otra: para que tengan vida, y la tengan abundante; no se realizará sino en la vida futura); confirmando así una de sus aserciones con la otra."
   },
   "oratio": {
    "eng": "Oh Dios, por cuya Iglesia murió el glorioso Pontífice Tomás al filo de las espadas de los impíos; te rogamos nos concedas que todos cuantos imploramos su auxilio, consigamos el saludable efecto de su intervención.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén."

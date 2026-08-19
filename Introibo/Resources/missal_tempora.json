@@ -6157,21 +6157,24 @@
       "eng": "Grant us, we beseech You, O Lord, that all the evil in our hearts may be cured by the healing power of the sacrament we have received.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "introitus": {
-      "lat": "Adoráte Deum, omnes Angeli ejus: audívit, et lætáta est Sion: et exsultavérunt fíliæ Judæ.\nDóminus regnávit, exsúltet terra: læténtur ínsulæ multæ.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nAdoráte Deum, omnes Angeli ejus: audívit, et lætáta est Sion: et exsultavérunt fíliæ Judæ.",
-      "eng": "Adore God, all you His angels: Sion heard, and was glad; and the daughters of Juda rejoiced.\nThe Lord has reigned; let the earth rejoice: let many islands be glad.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nAdore God, all you His angels: Sion heard, and was glad; and the daughters of Juda rejoiced."
+      "lat": "Dicit Dóminus: Ego cógito cogitatiónes pacis, et non afflictiónis: invocábitis me, et ego exáudiam vos: et redúcam captivitátem vestram de cunctis locis.\nBenedixísti, Dómine, terram tuam: avertísti captivitátem Jacob.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nDicit Dóminus: Ego cógito cogitatiónes pacis, et non afflictiónis: invocábitis me, et ego exáudiam vos: et redúcam captivitátem vestram de cunctis locis.",
+      "eng": "The Lord says: “I think thoughts of peace, and not of affliction. You shall call upon Me, and I will hear you; and I will bring back your captivity from all places.”\nYou have favored, O Lord, Your land; You have restored the well-being of Jacob.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nThe Lord says: “I think thoughts of peace, and not of affliction. You shall call upon Me, and I will hear you; and I will bring back your captivity from all places.”",
+      "ref": "Jer 29:11; 29:12; 29:14"
     },
     "graduale": {
-      "lat": "Timébunt gentes nomen tuum, Dómine, et omnes reges terræ glóriam tuam.\nV. Quóniam ædificávit Dóminus Sion, et vidébitur in majestáte sua. Allelúja, allelúja.\nDóminus regnávit, exsúltet terra: læténtur ínsulæ multæ. Allelúja.",
-      "eng": "The Gentiles shall fear Your name, O Lord, and all the kings of the earth Your glory.\nV. For the Lord has built up Sion, and He shall be seen in His glory. Alleluia, alleluia.\nV. The Lord has reigned, let the earth rejoice: let many islands be glad. Alleluia."
+      "lat": "Liberásti nos, Dómine, ex affligéntibus nos: et eos, qui nos odérunt, confudísti.\nV. In Deo laudábimur tota die, et in nómine tuo confitébimur in sǽcula. Allelúja, allelúja.\nDe profúndis clamávi ad te, Dómine: Dómine, exáudi oratiónem meam. Allelúja.",
+      "eng": "You saved us, O Lord, from our foes, and those who hated us You put to shame.\nV. In God we gloried day by day; Your name we praised always. Alleluia, alleluia.\nOut of the depths I have cried to thee, O Lord: Lord, hear my prayer.\nAlleluia.",
+      "ref": "Ps 43:8-9"
     },
     "offertorium": {
-      "lat": "Déxtera Dómini fecit virtutem, déxtera Dómini exaltávit me: non móriar, sed vivam, et narrábo ópera Dómini.",
-      "eng": "The right hand of the Lord has wrought strength; the right hand of the Lord has exalted me: I shall not die, but live, and shall declare the works of the Lord.",
-      "ref": "Ps 117:16; 117:17"
+      "lat": "De profúndis clamávi ad te, Dómine: Dómine, exáudi oratiónem meam: de profúndis clamávi ad te, Dómine.",
+      "eng": "Out of the depths I cry to You, O Lord; Lord, hear my prayer! Out of the depths I cry to You, O Lord.",
+      "ref": "Ps 129:1-2"
     },
     "communio": {
-      "lat": "Mirabántur omnes de his, quæ procedébant de ore Dei.",
-      "eng": "They all marveled at these things that came from the mouth of God."
+      "lat": "Amen, dico vobis, quidquid orántes pétitis, crédite, quia accipiétis, et fiet vobis.",
+      "eng": "Amen I say to you, all things whatever you ask for in prayer, believe that you shall receive, and it shall be done to you.",
+      "ref": "Marc 11:24"
     }
   },
   "pent24-1": {

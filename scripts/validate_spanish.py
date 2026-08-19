@@ -534,6 +534,18 @@ def _validate_office_parts(name, srcname):
                       f"{name}[{code}][{fkey}].{f}: source has no {f}")
                 check(isinstance(v, str) and v.strip(),
                       f"{name}[{code}][{fkey}].{f}: empty")
+                if isinstance(v, str):
+                    # A dangling DO reference or a field left in the
+                    # source language must never ship (deep-dive QA).
+                    check("@" not in v,
+                          f"{name}[{code}][{fkey}].{f}: unresolved @ ref")
+                    LAT_OF = {"eng": "lat", "engR": "latR", "v1Eng": "v1",
+                              "r1Eng": "r1", "v2Eng": "v2", "r2Eng": "r2",
+                              "antiphonEng": "antiphon"}
+                    lat = p.get(LAT_OF.get(f, ""))
+                    check(not (isinstance(lat, str) and len(lat) > 40 and
+                               v.strip() == lat.strip()),
+                          f"{name}[{code}][{fkey}].{f}: untranslated Latin")
                 n += 1
     print(f"{name}: {n} fields checked")
 
