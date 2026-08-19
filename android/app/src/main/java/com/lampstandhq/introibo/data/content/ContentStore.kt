@@ -368,6 +368,7 @@ object ContentStore {
                             secreta = fields["secreta"]?.let { entry.secreta?.copy(eng = it) } ?: entry.secreta,
                             communio = fields["communio"]?.let { entry.communio?.copy(eng = it) } ?: entry.communio,
                             postcommunio = fields["postcommunio"]?.let { entry.postcommunio?.copy(eng = it) } ?: entry.postcommunio,
+                            sequentia = fields["sequentia"]?.let { entry.sequentia?.copy(eng = it) } ?: entry.sequentia,
                         )
                     }
                 }
@@ -433,6 +434,18 @@ object ContentStore {
                         } else {
                             part
                         }
+                    }
+                }
+            }
+            // The ferial cursus of the weekly psalter (tranche O10):
+            // part-level texts — antiphons, capitula, versicles, brief
+            // responsories, and the weekday hymns — that the verse overlay
+            // above cannot reach.
+            load<Map<String, Map<String, String>>>("psalter_weekly_parts_es.json")?.let { es ->
+                psalterWeeklyData = psalterWeeklyData.mapValues { (day, parts) ->
+                    val dayEs = es[day] ?: return@mapValues parts
+                    parts.mapValues { (key, part) ->
+                        dayEs[key]?.let { part.copy(eng = it) } ?: part
                     }
                 }
             }

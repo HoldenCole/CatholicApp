@@ -260,6 +260,23 @@ def main():
                            lat or "", v, "skip-cog")
                 bank_check("psalter_weekly", f"{day}.{fk}[{i}]", lat or "", v)
 
+    # ---- psalter weekly: part-level ferial cursus (tranche O10) ----
+    src = load("psalter_weekly.json")
+    pw_parts = load("psalter_weekly_parts_es.json")
+    for day, entry in pw_parts.items():
+        for fk, v in entry.items():
+            lat = ((src.get(day) or {}).get(fk) or {}).get("lat") or ""
+            tier = "free" if fk.startswith("hymnus") else "normal"
+            check_pair("psalter_weekly", f"{day}.{fk}", lat, v, tier)
+    # source-side coverage: every part-level eng needs a Spanish part
+    for day, parts in src.items():
+        for fk, part in parts.items():
+            if isinstance(part, dict) and isinstance(part.get("eng"), str) \
+                    and part["eng"].strip():
+                if not ((pw_parts.get(day) or {}).get(fk) or "").strip():
+                    flag("MISSING", "psalter_weekly", f"{day}.{fk}",
+                         part["eng"][:60])
+
     # ---- hours ordinary ----
     src = {h["slug"]: h for h in load("hours.json")}
     for slug, entry in load("hours_parts_es.json").items():
@@ -338,10 +355,19 @@ def main():
                     o = (es.get(code) or {}).get(fk) or {}
                     if not (o.get("eng") or "").strip():
                         flag("NOPAIR", name, f"{code}.{fk}", lat[:70])
+                # MISSING: the source carries English but the overlay has no
+                # Spanish — a source-side gap invisible to the overlay-driven
+                # pairing loops above (tranche O10 lesson).
+                if (part.get("eng") or "").strip():
+                    o = (es.get(code) or {}).get(fk) or {}
+                    if not (o.get("eng") or "").strip():
+                        flag("MISSING", name, f"{code}.{fk}",
+                             (part.get("eng") or "")[:60])
 
     # ---- missal propers + readings ----
     tem = load("missal_tempora.json")
     san = load("missal_sanctoral.json")
+    mis_es = {}
     for fname in ("missal_propers_es.json", "missal_readings_es.json"):
         tag = fname.replace("_es.json", "")
         for code, entry in load(fname).items():
@@ -352,6 +378,20 @@ def main():
                 f = e.get(field)
                 lat = (f or {}).get("lat") or "" if isinstance(f, dict) else ""
                 check_pair(tag, f"{code}.{field}", lat, v)
+                if (v or "").strip():
+                    mis_es[(code, field)] = True
+    # MISSING: every English-bearing missal field needs Spanish in one of
+    # the two overlay files (source-side coverage, tranche O10 lesson).
+    for mname, msrc in (("missal_tempora", tem), ("missal_sanctoral", san)):
+        for code, entry in msrc.items():
+            if not isinstance(entry, dict):
+                continue
+            for field, part in entry.items():
+                if isinstance(part, dict) and isinstance(part.get("eng"), str) \
+                        and part["eng"].strip():
+                    if (code, field) not in mis_es:
+                        flag("MISSING", mname, f"{code}.{field}",
+                             part["eng"][:60])
 
     # ---- rosary + mysteries ----
     src = {p["slug"]: p for p in load("rosary_prayers.json")}
@@ -395,7 +435,7 @@ def main():
         print(f"  {f:18} {n}")
     print()
     HARD = ("EMPTY", "LEAK-EN", "LEAK-LA", "VNUM", "BANK", "DUP",
-            "ALLELUIA", "STRUCT", "ART")
+            "ALLELUIA", "STRUCT", "ART", "MISSING")
     failed = False
     for check in HARD:
         items = flags[check]

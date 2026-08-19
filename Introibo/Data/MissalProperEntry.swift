@@ -18,7 +18,7 @@ struct MissalProperEntry: Decodable {
     // future data additions surface in the rendered MassProper.
     let alleluia: ProperText?
     let tractus: ProperText?
-    let sequentia: ProperText?
+    var sequentia: ProperText?
 
     struct MissalRule: Decodable {
         let gloria: Bool?

@@ -278,6 +278,31 @@ so integration cannot silently misalign.
   revised-text hymns beside them. Rubric pointer tails (gospel-incipit
   `lectio8/9` ellipses, cross-reference headings) stay Latin in both
   languages by design. The QA tool exits fully clean over the result.
+  **Tranche O10 — source-side gap closure: COMPLETE.** A source-side
+  audit (iterating the English-bearing core files instead of the
+  overlays) found three gap classes the overlay-driven QA could not see:
+  (1) 18 missal fields — the five sequences (Víctimæ pascháli, Veni
+  Sancte Spíritus, Lauda Sion, Stabat Mater from the received
+  `stations_es` verses plus the six stanzas the Via Crucis omits, Dies
+  iræ), the Holy Saturday Exsultet + prophecies (Torres Amat for the
+  scripture, with the pre-1955 12-prophecy variant kept abbreviated to
+  mirror its English), the Munda-cor + short-form Passion (extracted
+  from the full TA Passion), and the 08-14 vigil's BVM commune chant
+  block; (2) 11 Office fields — the Peter/Paul commemoration blocks, the
+  All Souls orations, and the 12 unresolved importer `@`-macros
+  (Visitation responsories adapted from 09-08, C11/C4a/C6a/08-15t/
+  pasc0-0 copies), which are now resolved into real Latin/English/
+  Spanish text in the core files of both platforms; (3) the ferial
+  cursus of the weekly psalter — 223 part-level texts (antiphons,
+  capitula, versicles, brief responsories, weekday hymns) that the
+  verse-only `psalter_weekly_es` overlay never reached: now carried by
+  **`psalter_weekly_parts_es.json`** (DO Espanol Psalterium received
+  texts; the eight Gospel-canticle antiphons and the Saturday Vespers
+  hymn are hand supplements) and applied part-level on both platforms.
+  The QA tool gained a hard **MISSING** check that iterates the source
+  side for the Office, missal, and weekly-psalter corpora, so this gap
+  class stays closed; the validator enforces full part coverage of the
+  new file.
   **Tranche O8 — the Rosary: COMPLETE (`mysteries_es.json`, all 15
   mysteries with titles, meditations, and fruits; `rosary_prayers_es.json`,
   the 7 constituent prayers in their received Spanish texts, matching

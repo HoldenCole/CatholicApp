@@ -71,6 +71,7 @@ class SpanishOverlayQA {
             "missal_readings_es.json", "stations_es.json", "saints_es.json",
             "reference_es.json", "courses_es.json",
             "psalter_es.json", "psalter_weekly_es.json",
+            "psalter_weekly_parts_es.json",
             "hours_parts_es.json", "commune_office_es.json",
             "temporal_propers_es.json", "hymns_seasonal_es.json",
             "sanctoral_propers_es.json", "mysteries_es.json",
@@ -246,9 +247,9 @@ class SpanishOverlayQA {
             val palmSunday = ContentStore.allPropers.first { it.slug == "quad6-0" }
             assertTrue(palmSunday.gospel.eng.startsWith(
                 "Pasión de nuestro Señor Jesucristo según San Mateo"))
-            // Deliberate exclusions keep their English: the Easter Vigil's
-            // Exsultet-plus-prophecies block is not a plain pericope.
-            assertTrue(vigil.epistle.eng.startsWith("Rejoice now, all ye heavenly Legions"))
+            // The Easter Vigil's Exsultet-plus-prophecies block is covered
+            // as of tranche O10 (Torres Amat scripture, traditional frame).
+            assertTrue(vigil.epistle.eng.startsWith("Alégrese ya la angélica muchedumbre"))
 
             // Stations of the Cross: all fourteen carry Spanish title,
             // meditation, and Stabat verse; the Latin side is untouched.

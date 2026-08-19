@@ -159,7 +159,8 @@ def validate_missal_propers():
     tempora = json.load(open(SRC / "missal_tempora.json"))
     sanctoral = json.load(open(SRC / "missal_sanctoral.json"))
     allowed = {"introitus", "oratio", "graduale", "alleluia", "tractus",
-               "offertorium", "secreta", "communio", "postcommunio"}
+               "sequentia", "offertorium", "secreta", "communio",
+               "postcommunio"}
     es = json.load(open(path))
     for key, fields in es.items():
         check(key in tempora or key in sanctoral,
@@ -410,6 +411,34 @@ def validate_psalter():
                 check(isinstance(l, str) and l.strip(),
                       f"psalter_weekly[{day}].{key}[{i}]: empty")
     print(f"psalter_weekly_es.json: {n} verses checked")
+
+    ppath = ES / "psalter_weekly_parts_es.json"
+    if not ppath.exists():
+        print("psalter_weekly_parts_es.json: not present (skipped)")
+        return
+    pes = json.load(open(ppath))
+    n = 0
+    covered = set()
+    for day, parts in pes.items():
+        check(day in wsrc, f"psalter_weekly_parts[{day}]: no such day")
+        for key, text in parts.items():
+            part = wsrc.get(day, {}).get(key)
+            check(part is not None,
+                  f"psalter_weekly_parts[{day}].{key}: no such part")
+            check(isinstance(text, str) and text.strip(),
+                  f"psalter_weekly_parts[{day}].{key}: empty")
+            check("@" not in (text or ""),
+                  f"psalter_weekly_parts[{day}].{key}: contains '@'")
+            covered.add((day, key))
+            n += 1
+    # full coverage: every part-level eng in the source must be translated
+    for day, parts in wsrc.items():
+        for key, part in parts.items():
+            if isinstance(part, dict) and isinstance(part.get("eng"), str) \
+                    and part["eng"].strip():
+                check((day, key) in covered,
+                      f"psalter_weekly_parts[{day}].{key}: source eng not covered")
+    print(f"psalter_weekly_parts_es.json: {n} parts checked (full coverage)")
 
 
 def validate_hours_parts():

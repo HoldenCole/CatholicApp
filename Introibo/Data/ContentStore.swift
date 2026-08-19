@@ -275,6 +275,7 @@ final class ContentStore {
                         case "secreta":      entry.secreta?.eng = text
                         case "communio":     entry.communio?.eng = text
                         case "postcommunio": entry.postcommunio?.eng = text
+                        case "sequentia":    entry.sequentia?.eng = text
                         default: break
                         }
                     }
@@ -337,6 +338,20 @@ final class ContentStore {
                         if let l = lines[i] { verses[i].eng = l }
                     }
                     part.verses = verses
+                    dayParts[key] = part
+                }
+                psalterWeeklyData[day] = dayParts
+            }
+        }
+        // The ferial cursus of the weekly psalter (tranche O10): part-level
+        // texts — antiphons, capitula, versicles, brief responsories, and
+        // the weekday hymns — that the verse overlay above cannot reach.
+        if let es = load("psalter_weekly_parts_es", as: [String: [String: String]].self) {
+            for (day, parts) in es {
+                guard var dayParts = psalterWeeklyData[day] else { continue }
+                for (key, text) in parts {
+                    guard var part = dayParts[key] else { continue }
+                    part.eng = text
                     dayParts[key] = part
                 }
                 psalterWeeklyData[day] = dayParts

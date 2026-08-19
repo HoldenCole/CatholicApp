@@ -16890,8 +16890,8 @@
     "responsory1": {
       "type": "responsory",
       "label": "Responsorium",
-      "lat": "@Tempora/Pasc0-0::s/&Gloria.*//s",
-      "eng": "",
+      "lat": "R. Angelus Dómini descéndit de cælo, et accédens revólvit lápidem, et super eum sedit, et dixit muliéribus:\n* Nolíte timére: scio enim quia crucifíxum quǽritis: jam surréxit: veníte, et vidéte locum, ubi pósitus erat Dóminus, allelúja.\nV. Et introëúntes in monuméntum, vidérunt júvenem sedéntem in dextris, coopértum stola cándida, et obstupuérunt: qui dixit illis.\nR. Nolíte timére: scio enim quia crucifíxum quǽritis: jam surréxit: veníte, et vidéte locum, ubi pósitus erat Dóminus, allelúja.",
+      "eng": "R. The Angel of the Lord descended from heaven, and came and rolled back the stone, and sat upon it, and said unto the women:\n* Fear not ye; for I know that ye seek Him That was crucified: He is risen already. Come, see the place where the Lord was laid, alleluia.\nV. And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment, and they were affrighted; and he saith unto them:\nR. Fear not ye: for I know that ye seek Him That was crucified: He is risen already; come, see the place where the Lord was laid, alleluia.",
       "variationKey": "responsory1"
     }
   },

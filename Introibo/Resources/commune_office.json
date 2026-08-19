@@ -7678,8 +7678,8 @@
     "responsory8": {
       "type": "responsory",
       "label": "Responsorium",
-      "lat": "@Commune/C4a",
-      "eng": "",
+      "lat": "R. In médio Ecclésiæ apéruit os ejus, \n* Et implévit eum Dóminus spíritu sapiéntiæ et intelléctus.\nV. Jucunditátem et exsultatiónem thesaurizávit super eum.\nR. Et implévit eum Dóminus spíritu sapiéntiæ et intelléctus.\n&Gloria\nR. Et implévit eum Dóminus spíritu sapiéntiæ et intelléctus.",
+      "eng": "R. In the midst of the congregation did the Lord open his mouth.\n* And filled him with the spirit of wisdom and understanding.\nV. He made him rich with joy and gladness.\nR. And filled him with the spirit of wisdom and understanding.\n&Gloria\nR. And filled him with the spirit of wisdom and understanding.",
       "variationKey": "responsory8"
     }
   },
@@ -10444,8 +10444,8 @@
     "responsory1": {
       "type": "responsory",
       "label": "Responsorium",
-      "lat": "@Commune/C6a",
-      "eng": "",
+      "lat": "R. Veni, elécta mea, et ponam in te thronum meum\n* Quia concupívit Rex spéciem tuam.\nV. Spécie tua et pulchritúdine tua inténde, próspere procéde, et regna.\nR. Quia concupívit Rex spéciem tuam.",
+      "eng": "R. Come, O My chosen one, and I will establish My throne in thee;\n* For the King hath greatly desired thy beauty.\nV. In thy comeliness and thy beauty, go forward, fare prosperously, and reign.\nR. For the King hath greatly desired thy beauty.",
       "variationKey": "responsory1"
     }
   },
