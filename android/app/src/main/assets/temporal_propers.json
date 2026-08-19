@@ -92,7 +92,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "081-1": {
@@ -167,7 +168,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "081-3": {
@@ -242,7 +244,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     }
   },
   "081-5": {
@@ -279,7 +282,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "081-6": {
@@ -365,7 +369,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     },
     "lectio4": {
       "lat": "Sermo sancti Joánnis Chrysóstomi\nSálomon cum sæculárium rerum concupiscéntia tenerétur, magnas eas et admirándas putábat, multúmque in eis labóris et sollicitúdinis insumébat, magníficas ædificándo domos, copiósum coacervándo aurum, congregándo cantórum choros, vária génera ministrórum mensæ et popínæ, quæréndo ánimæ suæ voluptátem ab hortórum et córporum formosórum grátia, et omnem, ut ita dicam, oblectatiónis et refrigérii viam sectándo.",
@@ -400,7 +405,8 @@
     "responsory6": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory6"
+      "variationKey": "responsory6",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     },
     "responsory7": {
       "lat": "R. Dómine, Pater et Deus vitæ meæ, ne derelínquas me in cogitátu malígno: extolléntiam oculórum meórum ne déderis mihi, et desidérium malígnum avérte a me, Dómine; aufer a me concupiscéntiam,\n* Et ánimo irreverénti et infruníto ne tradas me, Dómine.\nV. Ne derelínquas me, Dómine, ne accréscant ignorántiæ meæ, nec multiplicéntur delícta mea.\nR. Et ánimo irreverénti et infruníto ne tradas me, Dómine.",
@@ -411,7 +417,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "082-1": {
@@ -486,7 +493,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "082-3": {
@@ -561,7 +569,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     }
   },
   "082-5": {
@@ -598,7 +607,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "082-6": {
@@ -654,7 +664,8 @@
     "ant_1c": {
       "lat": "Sapiéntia * clámitat in platéis: Si quis díligit sapiéntiam, ad me declínet, et eam invéniet: et, cum invénerit, beátus erit si tenúerit eam.",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "Wisdom * crieth in the streets: If any man love wisdom, let him come unto me, and he shall find her and when once he hath found her, blessed shall he be if he hold her."
     },
     "ant_1": {
       "lat": "Omnis sapiéntia * a Dómino Deo est, et cum illo fuit semper, et est ante ævum.",
@@ -695,7 +706,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     },
     "lectio4": {
       "lat": "Ex libro Officiórum sancti Ambrósii Epíscopi\nMagnus justítiæ splendor, quæ áliis pótius nata quam sibi, communitátem et societátem nostram ádjuvat, excelsitátem tenet, ut suo judício ómnia subjécta hábeat, opem áliis ferat, pecúniam cónferat, offícia non ábnuat, perícula suscípiat aliéna. Quis non cúperet hanc virtútis arcem tenére, nisi prima avarítia infirmáret atque inflécteret tantæ virtútis vigórem? Etenim dum augére opes, aggregáre pecúnias, occupáre terras possessiónibus cúpimus, præstáre divítiis; justítiæ formam exúimus, beneficéntiam commúnem amíttimus.",
@@ -730,7 +742,8 @@
     "responsory6": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory6"
+      "variationKey": "responsory6",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     },
     "responsory7": {
       "lat": "R. Dómine, Pater et Deus vitæ meæ, ne derelínquas me in cogitátu malígno: extolléntiam oculórum meórum ne déderis mihi, et desidérium malígnum avérte a me, Dómine; aufer a me concupiscéntiam,\n* Et ánimo irreverénti et infruníto ne tradas me, Dómine.\nV. Ne derelínquas me, Dómine, ne accréscant ignorántiæ meæ, nec multiplicéntur delícta mea.\nR. Et ánimo irreverénti et infruníto ne tradas me, Dómine.",
@@ -741,7 +754,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "083-1": {
@@ -816,7 +830,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "083-3": {
@@ -891,7 +906,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     }
   },
   "083-5": {
@@ -928,7 +944,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "083-6": {
@@ -1014,7 +1031,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     },
     "lectio4": {
       "lat": "Ex libro Morálium sancti Gregórii Papæ\nSunt nonnúlli qui vitam suam négligunt et, dum transitória áppetunt, dum ætérna vel non intélligunt, vel intellécta contémnunt, nec dolórem séntiunt, nec habére consílium sciunt; cumque supérna quæ amisérunt, non consíderant, esse se (heu míseri) in bonis felíces putant. Nequáquam enim ad veritátis lucem, cui cónditi fúerant, mentis óculos érigunt; nequáquam ad contemplatiónem pátriæ ætérnæ desidérii áciem tendunt; sed semetípsos in his, ad quæ projécti sunt, deseréntes, vice pátriæ díligunt exsílium quod patiúntur, et in cæcitáte quam tólerant, quasi in claritáte lúminis exsúltant.",
@@ -1061,7 +1079,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "084-1": {
@@ -1136,7 +1155,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "084-3": {
@@ -1211,7 +1231,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     }
   },
   "084-5": {
@@ -1248,7 +1269,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "084-6": {
@@ -1293,12 +1315,14 @@
     "ant_1_": {
       "lat": "Obsérva, fili, * præcépta patris tui, et ne dimíttas legem matris tuæ, sed liga eam semper in corde tuo.",
       "type": "antiphon",
-      "variationKey": "ant_1_"
+      "variationKey": "ant_1_",
+      "eng": "My son, keep thy fathers commandment * and forsake not the law of thy mother, but bind them continually upon thy heart."
     },
     "ant_1c": {
       "lat": "Dóminus possédit me * in inítio viárum suárum, ántequam quidquam fáceret a princípio: necdum erant abyssi, et ego parturiébar: quando præparábat cœlos, áderam, cum eo compónens ómnia.",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "The Lord possessed me * in the beginning of his ways, before he made any thing from the beginning: the depths were not as yet, and I was already conceived; when he prepared the heavens, I was present, ordering all things with him."
     },
     "ant_1": {
       "lat": "Obsérva, fili, * præcépta patris tui, et ne dimíttas legem matris tuæ, sed liga eam semper in corde tuo.",
@@ -1339,7 +1363,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     },
     "lectio4": {
       "lat": "Sermo sancti Joánnis Chrysóstomi\nNe tardes convérti ad Dóminum, et ne dífferas de die in diem; nescis enim quid paritúra sit superventúra dies. Perículum enim et metus est in defferéndo; salus vero certa ac secúra, si nulla sit dilátio. Virtútem ígitur cole: sic enim, licet júvenis moriáris, secúre discésseris: quod si ad senectútem pervéneris, cum multa facilitáte et nulla moléstia e vita discédes; duplicémque habébis festivitátem, et quod a vitæ malítia abstinúeris, et quod virtútem colúeris. Ne dicas: Erit tempus, quando convérti licébit: verba enim hæc Deum valde exásperant.",
@@ -1374,7 +1399,8 @@
     "responsory6": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory6"
+      "variationKey": "responsory6",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     },
     "responsory7": {
       "lat": "R. Dómine, Pater et Deus vitæ meæ, ne derelínquas me in cogitátu malígno: extolléntiam oculórum meórum ne déderis mihi, et desidérium malígnum avérte a me, Dómine; aufer a me concupiscéntiam,\n* Et ánimo irreverénti et infruníto ne tradas me, Dómine.\nV. Ne derelínquas me, Dómine, ne accréscant ignorántiæ meæ, nec multiplicéntur delícta mea.\nR. Et ánimo irreverénti et infruníto ne tradas me, Dómine.",
@@ -1385,7 +1411,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "085-1": {
@@ -1460,7 +1487,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "085-3": {
@@ -1535,7 +1563,8 @@
     "responsory3": {
       "lat": "R. Emítte, Dómine, sapiéntiam de sede magnitúdinis tuæ, ut mecum sit et mecum labóret:\n* Ut sciam, quid accéptum sit coram te omni témpore.\nV. Da mihi, Dómine, sédium tuárum assistrícem sapiéntiam.\nR. Ut sciam quid accéptum sit coram te omni témpore.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Ut sciam quid accéptum sit coram te omni témpore.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. O send out wisdom from the throne of thy glory, O Lord, to be with me, and to labour with me,\n* That I may know at all times what is pleasing unto thee.\nV. Give me wisdom, O Lord, that sitteth by thy throne.\nR. That I may know at all times what is pleasing unto thee.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\nR. That I may know at all times what is pleasing unto thee."
     }
   },
   "085-5": {
@@ -1572,7 +1601,8 @@
     "responsory3": {
       "lat": "R. Verbum iníquum et dolósum longe fac a me, Dómine:\n* Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nV. Duo rogávi te, ne déneges mihi ántequam móriar.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Divítias et paupertátem ne déderis mihi, sed tantum víctui meo tríbue necessária.",
       "type": "responsory",
-      "variationKey": "responsory3"
+      "variationKey": "responsory3",
+      "eng": "R. Lord, remove far from me vanity and lies.\n* Give me neither poverty nor riches, but feed me with food convenient for me.\nV. Two things have I required of thee; deny me them not before I die.\nR. Give me neither poverty nor riches, but feed me with food convenient for me.\nR. Give me neither poverty nor riches, but feed me with food convenient for me."
     }
   },
   "085-6": {
@@ -1706,7 +1736,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "091-1": {
@@ -2025,7 +2056,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "092-1": {
@@ -2349,7 +2381,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "093-1": {
@@ -2712,7 +2745,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "094-1": {
@@ -3036,7 +3070,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "095-1": {
@@ -3370,7 +3405,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "101-1": {
@@ -3689,7 +3725,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "102-1": {
@@ -4008,7 +4045,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "103-1": {
@@ -4332,7 +4370,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "104-1": {
@@ -4656,7 +4695,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "105-1": {
@@ -5049,7 +5089,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "111-1": {
@@ -5368,7 +5409,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "112-1": {
@@ -5692,7 +5734,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "113-1": {
@@ -6016,7 +6059,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "114-1": {
@@ -6370,7 +6414,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     }
   },
   "115-1": {
@@ -6868,7 +6913,8 @@
     "ant_3c": {
       "lat": "Jerúsalem, * réspice ad Oriéntem, et vide, allelúia.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "Jerusalem, * look toward the East, and behold, alleluia."
     },
     "ant_3": {
       "lat": "Leva, Jerúsalem, * óculos tuos, et vide poténtiam regis: ecce Salvátor venit sólvere te a vínculo.",
@@ -6944,12 +6990,14 @@
     "ant_3_": {
       "lat": "Quǽrite Dóminum, * dum inveníri potest: invocáte eum, dum prope est, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_3_"
+      "variationKey": "ant_3_",
+      "eng": "Seek ye the Lord, while he may be found: call upon him, while he is near."
     },
     "ant_3c": {
       "lat": "Erúmpant montes * jucunditátem, et colles justítiam, quia lux mundi Dóminus cum poténtia venit.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "Let the mountains break forth * into gladness, and the hills into righteousness: for the Lord, the Light of the world, cometh with power."
     },
     "ant_3": {
       "lat": "Quǽrite Dóminum, * dum inveníri potest: invocáte eum, dum prope est, allelúja.",
@@ -8727,12 +8775,14 @@
     "ant_2_": {
       "lat": "Consúrge, consúrge, * indúere fortitúdinem, brácchium Dómini.",
       "type": "antiphon",
-      "variationKey": "ant_2_"
+      "variationKey": "ant_2_",
+      "eng": "Awake, awake, * put on strength, O arm of the Lord!"
     },
     "ant_2c": {
       "lat": "Dies Dómini sicut fur * in nocte ita véniet, et vos estóte paráti, quia qua hora non putátis, Fílius hóminis véniet.",
       "type": "antiphon",
-      "variationKey": "ant_2c"
+      "variationKey": "ant_2c",
+      "eng": "The day of the Lord shall come as a thief * in the night: and be ye ready, for in the hour that ye think not, the Son of man shall come."
     },
     "ant_2": {
       "lat": "Consúrge, consúrge, * indúere fortitúdinem, brácchium Dómini.",
@@ -9152,7 +9202,8 @@
     "versum_0": {
       "lat": "V. Ecce testem pópulis dedi eum.\nR. Ducem ac praceptórem géntibus.",
       "type": "vr",
-      "variationKey": "versum_0"
+      "variationKey": "versum_0",
+      "eng": "4 Behold I have given him for a witness to the people, for a leader and a master to the Gentiles."
     },
     "ant_laudes": {
       "lat": "Post tríduum * invenérunt Jesum in templo sedéntem in médio doctórum, audiéntem illos, et interrogántem eos.\nDixit mater Jesu * ad illum: Fili, quid fecísti nobis sic? Ecce pater tuus et ego doléntes quærebámus te.\nDescéndit Jesus * cum eis, et venit Názareth, et erat súbditus illis.\nEt Jesus proficiébat * sapiéntia, et ætáte, et grátia apud Deum et hómines.\nEt dicébant: * Unde huic sapiéntia hæc, et virtútes? Nonne hic est fabri fílius?",
@@ -10126,7 +10177,8 @@
     "versum_2": {
       "lat": "V. Adoráte Deum, allelúja.\nR. Omnes Angeli ejus, allelúja.",
       "type": "vr",
-      "variationKey": "versum_2"
+      "variationKey": "versum_2",
+      "eng": "Worship God, * alleluia, all ye His Angels, alleluia.;;96"
     },
     "ant_2": {
       "lat": "Remánsit puer Jesus * in Jerúsalem, et non cognovérunt paréntes ejus existimántes illum esse in comitátu: et requirébant eum inter cognátos et notos.",
@@ -10749,7 +10801,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Ac per hoc ergo Dóminus invitátus venit ad nuptias, ut conjugális cástitas firmarétur, et ostenderétur sacraméntum nuptiárum: quia et illárum nuptiárum sponsus personam Dómini figurábat cui dictum est: Servásti vinum bonum usque adhuc. Bonum enim vinum Christus servávit usque adhuc, id est, Evangélium suum.",
@@ -11136,7 +11189,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Et ait illi Jesus: Vide, némini díxeris. Et revéra quid erat necésse ut sermóne jactáret, quod córpore præferébat? Sed vade, osténde te sacerdóti. Várias ob causas mittit eum ad sacerdótem: primum propter humilitátem, ut sacerdótibus deférre honórem videátur. Erat enim lege præcéptum, ut, qui mundáti fúerant a lepra, offérrent múnera sacerdótibus. Deínde, ut mundátum vidéntes leprósum, aut créderent Salvatóri, aut non créderent: si créderent, salvaréntur; si non créderent, inexcusábiles forent. Et simul, ne, quod in eo sæpíssime criminabántur, legem viderétur infríngere.",
@@ -11511,7 +11565,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Porro hómines miráti sunt, dicéntes: Qualis est hic, quia venti et mare obédiunt ei? Non discípuli, sed nautæ, et céteri, qui in navi erant, mirabántur. Sin autem quis contentióse volúerit, eos, qui mirabántur, fuísse discípulos: respondébimus, recte hómines appellátos, qui necdum nóverant poténtiam Salvatóris.",
@@ -11880,7 +11935,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "In illa plane sagéna, qua concludúntur et mali et boni pisces, non absúrde mali cathólici intelligúntur. Aliud est enim mare, quod magis mundum istum signíficat: áliud sagéna, quæ uníus fídei, vel uníus Ecclésiæ communiónem vidétur osténdere. Inter hæréticos et malos cathólicos hoc ínterest, quod hærétici falsa credunt: illi autem, vera credéntes, non vivunt ita ut credunt.",
@@ -12249,7 +12305,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Sed illa cum créverint, nihil mordax, nihil vívidum, nihil vitále demónstrant: sed totum fláccidum marcidúmque et mollítum ebúllit in ólera et in herbas, quæ cito aréscunt et córruunt. Hæc autem prædicátio, quæ parva videbátur in princípio, cum vel in ánima credéntis, vel in tot mundo sata fúerit, non exsúrgit in ólera, sed crescit in árborem: ita ut vólucres cæli (quas vel ánimas credéntium, vel fortitúdines, Dei servítio mancipátas, sentíre debémus) véniant et hábitent in ramis ejus. Ramos puto evangélicæ árboris, quæ de grano sinápis créverit, dógmatum esse diversitátes, in quibus supradictárum vólucrum unaquǽque requiéscit.",
@@ -12814,7 +12871,8 @@
     "responsory_vespera_1": {
       "lat": "R.br. Verbum caro factum est, * Allelúja, allelúja.\nR. Verbum caro factum est, * Allelúja, allelúja.\nV. Et habitávit in nobis.\nR. Allelúja, allelúja.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Verbum caro factum est, * Allelúja, allelúja.",
       "type": "responsory",
-      "variationKey": "responsory_vespera_1"
+      "variationKey": "responsory_vespera_1",
+      "eng": "V. The Word was made flesh, alleluia.\nR. And dwelt among us, alleluia."
     },
     "versum_1": {
       "lat": "V. Verbum caro factum est, allelúja.\nR. Et habitávit in nobis, allelúja.",
@@ -14087,7 +14145,8 @@
     "ant_1c": {
       "lat": "Nésciens Mater Virgo virum, péperit sine dolóre Salvatórem sæculórum, ipsum Regem Angelórum sola Virgo lactábat úbere de cœlo pleno.",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "The Virgin Mother, knowing not man, brought forth without pain the Saviour of the ages: the Virgin alone gave suck to the King of Angels himself, from a breast filled from heaven."
     },
     "ant_1": {
       "lat": "Hódie * Christus natus est: hódie Salvátor appáruit: hódie in terra canunt Angeli, lætántur Archángeli: hódie exsúltant justi, dicéntes: Glória in excélsis Deo, allelúja.",
@@ -14104,7 +14163,8 @@
     "ant_2c": {
       "lat": "Verbum caro factum est, et habitávit in nobis: et vídimus glóriam ejus, glóriam quasi Unigéniti a Patre plenum grátiæ, et veritátis, allelúia, allelúia, allelúia.",
       "type": "antiphon",
-      "variationKey": "ant_2c"
+      "variationKey": "ant_2c",
+      "eng": "The Word was made flesh, and dwelt among us: and we saw his glory, the glory as it were of the Only-begotten of the Father, full of grace and truth, alleluia, alleluia, alleluia."
     },
     "oratio": {
       "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
@@ -14401,7 +14461,8 @@
     "versum_2": {
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.",
       "type": "vr",
-      "variationKey": "versum_2"
+      "variationKey": "versum_2",
+      "eng": "The Lord hath made known, alleluia, * His salvation, alleluia.;;97"
     },
     "oratio": {
       "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
@@ -14698,7 +14759,8 @@
     "versum_2": {
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.",
       "type": "vr",
-      "variationKey": "versum_2"
+      "variationKey": "versum_2",
+      "eng": "The Lord hath made known, alleluia, * His salvation, alleluia.;;97"
     },
     "oratio": {
       "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
@@ -15031,7 +15093,8 @@
     "versum_2": {
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.",
       "type": "vr",
-      "variationKey": "versum_2"
+      "variationKey": "versum_2",
+      "eng": "The Lord hath made known, alleluia, * His salvation, alleluia.;;97"
     },
     "oratio": {
       "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
@@ -15323,7 +15386,8 @@
     "versum_1": {
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.",
       "type": "vr",
-      "variationKey": "versum_1"
+      "variationKey": "versum_1",
+      "eng": "The Lord hath made known, alleluia, * His salvation, alleluia.;;97"
     },
     "ant_1": {
       "lat": "Hódie * Christus natus est: hódie Salvátor appáruit: hódie in terra canunt Angeli, lætántur Archángeli: hódie exsúltant justi, dicéntes: Glória in excélsis Deo, allelúja.",
@@ -15771,7 +15835,8 @@
     "versum_2": {
       "lat": "V. Notum fecit Dóminus, allelúja.\nR. Salutáre suum, allelúja.",
       "type": "vr",
-      "variationKey": "versum_2"
+      "variationKey": "versum_2",
+      "eng": "The Lord hath made known, alleluia, * His salvation, alleluia.;;97"
     },
     "oratio": {
       "lat": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti tui nova per carnem Natívitas líberet; quos sub peccáti jugo vetústa sérvitus tenet.\n$Per eumdem",
@@ -16336,7 +16401,7 @@
       "label": "Versicle",
       "lat": "℣. Surréxit Dóminus de sepúlcro, allelúja.",
       "latR": "℟. Qui pro nobis pepéndit in ligno, allelúja.",
-      "eng": "",
+      "eng": "V. The Lord is risen from the sepulcher, alleluia.",
       "engR": "",
       "variationKey": "nocturn_1_versum"
     }
@@ -16499,12 +16564,14 @@
     "ant_3_": {
       "lat": "Dixit Jesus * discípulis suis: Afférte de píscibus, quos prendidístis nunc. Ascéndit autem Simon Petrus, et traxit rete in terram plenum magnis píscibus, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_3_"
+      "variationKey": "ant_3_",
+      "eng": "Jesus saith * unto His disciples: Bring of the fish which ye have now caught. Simon Peter went up, and drew the net to land, full of great fishes, alleluia."
     },
     "ant_3c": {
       "lat": "Hoc jam tértio * manifestávit se Jesus, postquam resurréxit a mórtuis, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "This is now the third time * that Jesus shewed himself, after that he was risen from the dead, alleluia."
     },
     "ant_3": {
       "lat": "Dixit Jesus * discípulis suis: Afférte de píscibus, quos prendidístis nunc. Ascéndit autem Simon Petrus, et traxit rete in terram plenum magnis píscibus, allelúja.",
@@ -16811,7 +16878,8 @@
     "ant_3c": {
       "lat": "Multa quidem * et ália signa fecit Jesus in conspéctu discipulórum suórum, allelúia, quæ non sunt scripta in libro hoc, allelúia.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "Many other signs also * did Jesus in the sight of his disciples, alleluia, which are not written in this book, alleluia."
     },
     "ant_3": {
       "lat": "Post dies octo * jánuis clausis ingréssus Dóminus dixit eis: Pax vobis, allelúja, allelúja.",
@@ -17073,7 +17141,8 @@
     "ant_3": {
       "lat": "Cum esset sero * die illa una sabbatórum, et fores essent clausæ, ubi erant discípuli congregáti in unum, stetit Jesus in médio, et dixit eis: Pax vobis, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_3"
+      "variationKey": "ant_3",
+      "eng": "Now when it was late * the same day, the first of the week, and the doors were shut, where the disciples were gathered together, for fear of the Jews, Jesus came and stood in the midst and said to them: Peace be to you, alleluia."
     }
   },
   "pasc1-6": {
@@ -17124,7 +17193,8 @@
     "ant_1c": {
       "lat": "Hæc autem scripta sunt, * ut credátis quia Jesus est Christus Fílius Dei, et ut credéntes vitam habeátis in nómine ipsíus, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "But these are written, * that ye may believe that Jesus is the Christ, the Son of God, and that believing ye may have life in his name, alleluia."
     },
     "ant_1": {
       "lat": "Ego sum pastor óvium: * ego sum via, véritas, et vita: ego sum pastor bonus, et cognósco oves meas, et cognóscunt me meæ, allelúja, allelúja.",
@@ -18536,7 +18606,8 @@
     "ant_1_cist": {
       "lat": "Alias oves hábeo, * quæ non sunt ex hoc ovíli: et illas opórtet me addúcere, et vocem meam áudient, et fiet unum ovíle, et unus pastor, allelúia.",
       "type": "antiphon",
-      "variationKey": "ant_1_cist"
+      "variationKey": "ant_1_cist",
+      "eng": "And other sheep I have, * that are not of this fold: them also I must bring, and they shall hear my voice, and there shall be one fold and one shepherd, alleluia."
     },
     "oratio": {
       "lat": "Deus, qui errántibus, ut in viam possint redíre justítiæ, veritátis tuæ lumen osténdis: da cunctis, qui christiána professióne censéntur, et illa respúere, quæ huic inimíca sunt nómini; et ea, quæ sunt apta, sectári.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
@@ -19089,7 +19160,8 @@
     "ant_1": {
       "lat": "Tristítia implévit * cor vestrum: et gáudium vestrum nemo tollet a vobis, allelúja, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_1"
+      "variationKey": "ant_1",
+      "eng": "Sorrow hath filled * your heart: and your joy no man shall take from you, alleluia, alleluia."
     },
     "lectio1": {
       "lat": "De libro Apocalýpsis beáti Joánnis Apóstoli\n1 Post hæc vidi: et ecce óstium apértum in cælo, et vox prima, quam audívi tamquam tubæ loquéntis mecum, dicens: Ascénde huc, et osténdam tibi quæ opórtet fíeri post hæc.\n2 Et statim fui in spíritu: et ecce sedes pósita erat in cælo, et supra sedem sedens.\n3 Et qui sedébat símilis erat aspéctui lápidis jáspidis, et sárdinis: et iris erat in circúitu sedis símilis visióni smarágdinæ.\n4 Et in circúitu sedis sedília vigínti quátuor: et super thronos vigínti quátuor senióres sedéntes, circumamícti vestiméntis albis, et in capítibus eórum corónæ áureæ.\n5 Et de throno procedébant fúlgura, et voces, et tonítrua: et septem lámpades ardéntes ante thronum, qui sunt septem spíritus Dei.",
@@ -19556,7 +19628,8 @@
     "ant_2": {
       "lat": "Vado ad eum * qui misit me: et nemo ex vobis intérrogat me: Quo vadis? allelúja, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_2"
+      "variationKey": "ant_2",
+      "eng": "I go My way to Him That sent Me, * and none of you asketh Me: Whither goest Thou? Alleluia, Alleluia."
     },
     "capitulum_sexta": {
       "lat": "Scitis, fratres mei dilectíssimi. Sit autem omnis homo velox ad audiéndum: tardus autem ad loquéndum, et tardus ad iram. Ira enim viri justítiam Dei non operátur.\n$Deo gratias",
@@ -19823,7 +19896,8 @@
     "ant_3": {
       "lat": "Vado ad eum * qui misit me: et nemo ex vobis intérrogat me: Quo vadis? allelúja, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_3"
+      "variationKey": "ant_3",
+      "eng": "I go My way to Him That sent Me, * and none of you asketh Me: Whither goest Thou? Alleluia, Alleluia."
     }
   },
   "pasc4-6": {
@@ -20282,7 +20356,8 @@
     "hymnusm_vespera": {
       "lat": "Jesu nostra redémptio,\nAmor et desidérium,\nDeus Creátor ómnium,\nHomo in fine témporum:\nQuæ te vicit cleméntia,\nUt ferres nostra crímina,\nCrudélem mortem pátiens,\nUt nos a morte tólleres!\nInférni claustra pénetrans,\nTuos captívos rédimens,\nVictor triúmpho nóbili\nAd dextram Patris résidens.\nIpsa te cogat píetas,\nUt mala nostra súperes\nParcénd[o], et voti cómpotes\nNos tuo vultu sáties.\nTu esto nostrum gáudium,\nQui es futúrus prǽmium,\nSit nostra in te glória,\nPer cuncta semper sǽcula.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnusm_vespera"
+      "variationKey": "hymnusm_vespera",
+      "eng": "O Jesu, our redemption,\nOur love and our desire,\nGod, of all things Creator,\nMade man in the last times:\n\nWhat tenderness o'ercame thee,\nTo bear our load of sin,\nEnduring death most cruel,\nTo free us from our death!\n\nPiercing the bars of hades,\nRedeeming thy captive people,\nA Victor in noble triumph,\nThou sittest at the Father's right hand.\n\nLet that same mercy move thee\nTo overcome our evils\nBy sparing; and, our prayer fulfilled,\nFill us with thy blessed countenance.\n\nBe thou our joy for ever,\nWho art to be our great reward;\nLet all our glory ever be\nIn thee through endless ages.\nAmen."
     },
     "versum_1_": {
       "lat": "V. Ascéndit Deus in jubilatióne, allelúja.\nR. Et Dóminus in voce tubæ, allelúja.",
@@ -20299,7 +20374,8 @@
     "versum_1op": {
       "lat": "V. Eleváta est, magnificéntia tua, allelúja.\nR. Super cælos, Deus, allelúja.",
       "type": "vr",
-      "variationKey": "versum_1op"
+      "variationKey": "versum_1op",
+      "eng": "V. Thy magnificence is exalted, alleluia.\nR. Above the heavens, O God, alleluia."
     },
     "ant_1": {
       "lat": "Pater, * manifestávi nomen tuum homínibus quos dedísti mihi: nunc autem pro eis rogo, non pro mundo, quia ad te vénio, allelúja.",
@@ -20472,12 +20548,14 @@
     "hymnus_laudes": {
       "lat": "v. Salútis humánæ Sator,\nJesu, volúptas córdium\nOrbis redémpti Cónditor,\nEt casta lux amántium:\nQua victus es cleméntia,\nUt nostra ferres crímina?\nMortem subíres ínnocens,\nA morte nos ut tólleres?\nPerrúmpis inférnum chaos:\nVinctis caténas détrahis;\nVictor triúmpho nóbili\nAd déxteram Patris sedes.\nTe cogat indulgéntia,\nUt damna nostra sárcias,\nTuíque vultus cómpotes\nDites beáto lúmine.\nTu, dux ad astra, et sémita,\nSis meta nostris córdibus,\nSis lacrimárum gáudium,\nSis dulce vitæ prǽmium.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnus_laudes"
+      "variationKey": "hymnus_laudes",
+      "eng": "Hail, thou who man's Redeemer art,\nJesu, the joy of every heart;\nGreat Maker of the world's wide frame,\nAnd purest love's delight and flame:\n\nWhat nameless mercy thee o'ercame,\nTo bear our load of sin and shame?\nFor guiltless, thou thy life didst give,\nThat sinful erring man might live.\n\nThe realms of woe are forced by thee,\nIts captives from their chains set free;\nAnd thou, amid thy ransomed train,\nAt God's right hand dost victor reign.\n\nLet mercy sweet with thee prevail,\nTo cure the wounds we now bewail;\nOh, bless us with thy holy sight,\nAnd fill us with eternal light.\n\nOur guide, our way to heavenly rest,\nBe thou the aim of every breast;\nBe thou the soother of our tears,\nOur sweet reward above the spheres.\nAmen."
     },
     "hymnusm_laudes": {
       "lat": "Jesu nostra redémptio,\nAmor et desidérium,\nDeus Creátor ómnium,\nHomo in fine témporum:\nQuæ te vicit cleméntia,\nUt ferres nostra crímina,\nCrudélem mortem pátiens,\nUt nos a morte tólleres!\nInférni claustra pénetrans,\nTuos captívos rédimens,\nVictor triúmpho nóbili\nAd dextram Patris résidens.\nIpsa te cogat píetas,\nUt mala nostra súperes\nParcénd[o], et voti cómpotes\nNos tuo vultu sáties.\nTu esto nostrum gáudium,\nQui es futúrus prǽmium,\nSit nostra in te glória,\nPer cuncta semper sǽcula.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnusm_laudes"
+      "variationKey": "hymnusm_laudes",
+      "eng": "O Jesu, our redemption,\nOur love and our desire,\nGod, of all things Creator,\nMade man in the last times:\n\nWhat tenderness o'ercame thee,\nTo bear our load of sin,\nEnduring death most cruel,\nTo free us from our death!\n\nPiercing the bars of hades,\nRedeeming thy captive people,\nA Victor in noble triumph,\nThou sittest at the Father's right hand.\n\nLet that same mercy move thee\nTo overcome our evils\nBy sparing; and, our prayer fulfilled,\nFill us with thy blessed countenance.\n\nBe thou our joy for ever,\nWho art to be our great reward;\nLet all our glory ever be\nIn thee through endless ages.\nAmen."
     },
     "versum_2": {
       "lat": "V. Dóminus in cælo, allelúja.\nR. Parávit sedem suam, allelúja.",
@@ -21353,7 +21431,8 @@
     "lectio6_2": {
       "lat": "Veníre ad te vult Deus, audi ipsum dicéntem: Ego et Pater veniémus, et mansiónem apud eum faciémus.",
       "type": "reading",
-      "variationKey": "lectio6_2"
+      "variationKey": "lectio6_2",
+      "eng": "God willeth to come unto thee: hear him that saith: I and the Father will come, and will make our abode with him."
     },
     "lectio6": {
       "lat": "Resurréxit enim Christus, ut spem nobis daret, quia surgit homo, qui móritur: ne moriéndo desperarémus, et vitam nostram in morte finítam putarémus, secúros nos fecit. Sollíciti enim erámus de ipsa ánima: et ille nobis resurgéndo, de carnis resurrectióne fidúciam dedit. Crede ergo, ut mundéris. Prius te opórtet crédere, ut póstea per fidem Deum mereáris aspícere. Deum enim vidére vis? Audi ipsum: Beáti mundo corde: quóniam ipsi Deum vidébunt. Prius ergo cógita de corde mundándo: quidquid ibi vides, quod dísplicet Deo, tolle.",
@@ -21766,17 +21845,20 @@
     "lectio1": {
       "lat": "Incipit Epístola tértia beáti Joánnis Apóstoli\n1 Sénior Gaio caríssimo, quem ego díligo in veritáte.\n2 Caríssime, de ómnibus oratiónem fácio próspere te íngredi, et valére sicut próspere agit ánima tua.\n3 Gavísus sum valde veniéntibus frátribus, et testimónium perhibéntibus veritáti tuæ, sicut tu in veritáte ámbulas.\n4 Majórem horum non hábeo grátiam, quam ut áudiam fílios meos in veritáte ambuláre.",
       "type": "reading",
-      "variationKey": "lectio1"
+      "variationKey": "lectio1",
+      "eng": "Lesson from the third letter of St. John the Apostle\n1 The ancient to the dearly beloved Gaius, whom I love in truth.\n2 Dearly beloved, concerning all things I make it my prayer that thou mayest proceed prosperously, and fare well as thy soul doth prosperously.\n3 I was exceedingly glad when the brethren came and gave testimony to the truth in thee, even as thou walkest in the truth.\n4 I have no greater grace than this, to hear that my children walk in truth."
     },
     "lectio2": {
       "lat": "5 Caríssime, fidéliter facis quidquid operáris in fratres, et hoc in peregrínos,\n6 qui testimónium reddidérunt caritáti tuæ in conspéctu ecclésiæ: quos, benefáciens, dedúces digne Deo.\n7 Pro nómine enim ejus profécti sunt, nihil accipiéntes a géntibus.\n8 Nos ergo debémus suscípere hujúsmodi, ut cooperatóres simus veritátis.\n9 Scripsíssem fórsitan ecclésiæ: sed is qui amat primátum gérere in eis, Diótrephes, non récipit nos:\n10 propter hoc si vénero, commonébo ejus ópera, quæ facit, verbis malígnis gárriens in nos: et quasi non ei ista suffíciant, neque ipse súscipit fratres: et eos qui suscípiunt, próhibet, et de ecclésia éicit.",
       "type": "reading",
-      "variationKey": "lectio2"
+      "variationKey": "lectio2",
+      "eng": "5 Dearly beloved, thou dost faithfully whatever thou dost for the brethren, and that for strangers,\n6 Who have given testimony to thy charity in the sight of the church: whom thou shalt do well to bring forward on their way in a manner worthy of God.\n7 Because, for his name they went out, taking nothing of the Gentiles.\n8 We therefore ought to receive such, that we may be fellow helpers of the truth.\n9 I had written perhaps to the church: but Diotrephes, who loveth to have the pre-eminence among them, doth not receive us.\n10 For this cause, if I come, I will advertise his works which he doth, with malicious words prating against us. And as if these things were not enough for him, neither doth he himself receive the brethren, and them that do receive them he forbiddeth, and casteth out of the church."
     },
     "lectio3": {
       "lat": "11 Caríssime, noli imitári malum, sed quod bonum est. Qui benéfacit, ex Deo est: qui maléfacit, non vidit Deum.\n12 Demétrio testimónium rédditur ab ómnibus, et ab ipsa veritáte, sed et nos testimónium perhibémus: et nosti quóniam testimónium nostrum verum est.\n13 Multa hábui tibi scríbere: sed nólui per atraméntum et cálamum scríbere tibi.\n14 Spero autem prótinus te vidére, et os ad os loquémur. Pax tibi. Salútant te amíci. Salúta amícos nominátim.",
       "type": "reading",
-      "variationKey": "lectio3"
+      "variationKey": "lectio3",
+      "eng": "11 Dearly beloved, follow not that which is evil, but that which is good. He that doth good, is of God: he that doth evil, hath not seen God.\n12 To Demetrius testimony is given by all, and by the truth itself, yea and we also give testimony: and thou knowest that our testimony is true.\n13 I had many things to write unto thee: but I would not by ink and pen write to thee.\n14 But I hope speedily to see thee, and we will speak mouth to mouth. Peace be to thee. Our friends salute thee. Salute the friends by name."
     },
     "lectio4_": {
       "lat": "De sermóne sancti Augustíni Epíscopi\nSalvátor noster, caríssimi, si non in nostra carne diábolum triumphávit, se exércuit, non nobis vicit. Si non in nostro córpore resurréxit, conditióni nostræ resurgéndo nihil cóntulit. Hæc qui dicit, suscéptæ et assúmptæ carnis non intélligit ratiónem, confúndit órdinem, evácuat utilitátem. Si non in nostra carne perégit medicínam, solam ergo ex hómine nascéndi elégit injúriam. Recédat a sénsibus nostris tam periculósa persuásio. De nostro est quod appéndit, de suo est quod donávit. Meum testor esse quod cécidit, ut meum sit quod resurréxit. Meum testor esse quod jácuit intra túmulum, ut meum sit quod ascéndit in cælum.",
@@ -21903,7 +21985,8 @@
     "lectio5et6": {
       "lat": "Mundáta est domus, non remáneat inánis, ne cum vácuam desértor invénerit addúcat secum álios septem nequióres se, et efficiántur hóminis illíus posterióra, ut evangélium loquit, peióra prióribus.\nMox cum exclúsus fúerit péssimus invásor, introducátur óptimus posséssor. Quis est invásor? Diábolus. Quid invásit? Hóminem, quem non fecit, ínsuper decépit. Promísit ei immortalitátem, et propinávit iniquitátem.",
       "type": "reading",
-      "variationKey": "lectio5et6"
+      "variationKey": "lectio5et6",
+      "eng": "The house hath been cleansed: let it not remain empty, lest, when the deserter findeth it vacant, he bring with him seven others more wicked than himself, and the last state of that man, as the Gospel saith, be made worse than the first.\nAs soon as the most wicked invader hath been shut out, let the best of possessors be brought in. Who is the invader? The devil. What did he invade? Man, whom he made not, and whom moreover he deceived. He promised him immortality, and gave him iniquity to drink."
     },
     "lectio6_": {
       "lat": "Huic vos renuntiáre proféssi estis: in qua professióne, non homínibus, sed Deo et Angelis ejus conscribéntibus dixístis, Renúntio. Renuntiáte non solum vócibus, sed étiam móribus: non tantum sono linguæ, sed et actu vitæ: nec tantum lábiis sonántibus, sed opéribus pronuntiántibus. Scitóte vos cum cállido, antíquo, et veternóso inimíco suscepísse certámen: non in vobis post renuntiatiónem invéniat ópera sua, non jure vos áttrahat in servitútem suam. Deprehénderis enim, et detégeris Christiáne, quando áliud agis, et áliud profitéris: fidélis in nómine, áliud demónstrans in ópere, non tenens promissiónis tuæ fidem: modo ingrédiens ecclésiam oratiónes fúndere, post módicum in spectáculis cum histriónibus impudíce clamáre. Quid tibi cum pompis diáboli, quibus renuntiásti?",
@@ -22006,7 +22089,8 @@
     "hymnusm_matutinum": {
       "lat": "Jam Christus astra ascénderat,\nRevérsus unde vénerat,\nPromíssum Patris múnere,\nSanctum datúrus Spíritum.\nSolémnis urgébat dies,\nQuo mýstico septémplici\nOrbis volútus sépties,\nSignat beáta témpora.\nCum lucis hora tértia\nRepénte mundus íntonat,\nOrántibus Apóstolis\nDeum venísse núntiat.\nDe Patris ergo lúmine\nDecórus ignis almus est,\nQui fida Christi péctora\nCalóre Verbi cómpleat.\nImpléta gaudent víscera,\nAffláta Sancto Spíritu,\nVoces divérsas íntonant,\nFantur Dei magnália.\nEx omni gente cógniti,\nGræcis, Latínis, Bárbaris,\nCunctísque admirántibus,\nLinguis loquúntur ómnium.\nJudǽa tunc incrédula,\nVesána torvo spíritu,\nRuctáre musti crápulam,\nAlúmnos Christi cóncrepat.\nSed signis et virtútibus\nOccúrrit, et docet Petrus,\nFalsa profári pérfidos,\nJoéle teste cómprobans.\nGlória Patri Dómino,\nNatóque, qui a mórtuis\nSurréxit, ac Paráclito,\nIn sæculórum sǽcula.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnusm_matutinum"
+      "variationKey": "hymnusm_matutinum",
+      "eng": "Now Christ, ascending whence he came,\nHad mounted o'er the starry frame,\nThe Holy Ghost on man below,\nThe Father's promise, to bestow.\n\nThe solemn time was drawing nigh,\nReplete with heav'nly mystery,\nOn seven days' sevenfold circles borne,\nThat first and blessèd Whitsun-morn.\n\nWhen the third hour shone all around,\nThere came a rushing mighty sound,\nAnd told the Apostles, while in prayer,\nThat, as was promised, God was there.\n\nForth from the Father's light it came,\nThat beautiful and kindly flame:\nTo fill with fervour of his word\nThe spirits faithful to their Lord.\n\nWith joy the Apostles' breasts are fired,\nBy God the Holy Ghost inspired:\nAnd straight, in diverse kinds of speech,\nThe wondrous works of God they preach.\n\nTo men of every race they speak,\nAlike barbarian, Roman, Greek:\nFrom the same lips, with awe and fear,\nAll men their native accents hear.\n\nBut Juda's sons, e'en faithless yet,\nWith mad infuriate rage beset,\nTo mock Christ's followers combine,\nAs drunken all with new-made wine.\n\nWhen lo! with signs and mighty deeds,\nStands Peter in the midst, and pleads;\nConfounding their malignant lie\nBy Joel's ancient prophecy.\n\nTo God the Father let us sing,\nTo God the Son, our risen King,\nAnd equally let us adore\nThe Spirit, God forevermore.\nAmen."
     },
     "lectio1": {
       "lat": "Léctio sancti Evangélii secúndum Joánnem\nIn illo témpore: Dixit Jesus discípulis suis: Si quis díligit me, sermónem meum servábit, et Pater meus díliget eum, et ad eum veniémus, et mansiónem apud eum faciémus. Et réliqua.\nHomilía sancti Gregórii Papæ\nLibet, fratres caríssimi, evangélicæ verba lectiónis sub brevitáte transcúrrere, ut post diútius líceat in contemplatióne tantæ solemnitátis immorári. Hódie namque Spíritus Sanctus repentíno sónitu super discípulos venit, mentésque carnálium in sui amórem permutávit, et foris apparéntibus linguis ígneis, intus facta sunt corda flammántia; quia dum Deum in ignis visióne suscepérunt, per amórem suáviter arsérunt. Ipse namque Spíritus Sanctus amor est: unde et Joánnes dicit Deus cáritas est. Qui ergo mente íntegra Deum desíderat, profécto jam habet, quem amat. Neque enim quisquam posset Deum dilígere, si eum quem díligit, non habéret.",
@@ -22550,7 +22634,7 @@
       "label": "Versicle",
       "lat": "℣. Spíritus Dómini replévit orbem terrárum, allelúja.",
       "latR": "℟. Et hoc quod cóntinet ómnia, sciéntiam habet vocis, allelúja.",
-      "eng": "",
+      "eng": "R. The Spirit of the Lord filleth the world. * Alleluia, Alleluia.",
       "engR": "",
       "variationKey": "nocturn_1_versum"
     }
@@ -22913,7 +22997,8 @@
     "hymnusm_matutinum": {
       "lat": "Summæ Deus cleméntiæ,\nMundíque Factor máchinæ,\nUnus potentiáliter,\nTrinúsque personáliter.\nDa déxteram surgéntibus,\nExsúrgat ut mens sóbria,\nFlagrans et in laudem Dei,\nGrates repéndet débitas.\nGlória Patri Dómino,\nGlória Unigénito,\nUna cum Sancto Spíritu,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnusm_matutinum"
+      "variationKey": "hymnusm_matutinum",
+      "eng": "O God, by whose command is swayed\nThis ordered world which thou hast made;\nParent of heavenly clemency,\nIn nature One, in persons Three;\n\nAssist us while our minds we raise,\nInflamed with thy immortal praise;\nThat with our sober thoughts, we may\nForever our thanksgiving pay.\n\nMay age by age thy wonders tell,\nEternal praise thy works reveal,\nAnd sing with the celestial host\nThe Father, Son, and Holy Ghost.\nAmen."
     },
     "nocturn_1_versum": {
       "lat": "V. Benedicámus Patrem et Fílium cum Sancto Spíritu.\nR. Laudémus et superexaltémus eum in sǽcula.",
@@ -23044,7 +23129,8 @@
     "versum_0": {
       "lat": "V. Magnus Dóminus, et laudábilis nimis:\nR. Et magnitúdinis ejus non est finis.",
       "type": "vr",
-      "variationKey": "versum_0"
+      "variationKey": "versum_0",
+      "eng": "For the Lord is great * and exceedingly to be praised: His greatness has no end.;;144(1-7)"
     },
     "capitulum_laudes": {
       "lat": "O Altitúdo divitiárum sapiéntiæ, et sciéntiæ Dei, quam incomprehensibília sunt judícia ejus, et investigábiles viæ ejus!\n$Deo gratias",
@@ -24263,7 +24349,8 @@
     "versum_0": {
       "lat": "V. Comédi favum cum melle meo, allelúja.\nR. Bibi vinum meum cum lacte meo, allelúja.",
       "type": "vr",
-      "variationKey": "versum_0"
+      "variationKey": "versum_0",
+      "eng": "V. I have eaten my honeycomb with my honey, alleluia.\nR. I have drunk my wine with my milk, alleluia."
     },
     "ant_laudes": {
       "lat": "Sapiéntia * ædificávit sibi domum, míscuit vinum et pósuit mensam, allelúja.\nAngelórum esca * nutrivísti pópulum tuum, et panem de cælo præstitísti eis, allelúja.\nPinguis est panis * Christi, et præbébit delícias régibus, allelúja.\nSacerdótes sancti * incénsum et panes ófferunt Deo, allelúja.\nVincénti dabo * manna abscónditum, et nomen novum, allelúja.",
@@ -25213,19 +25300,22 @@
     "lectio2": {
       "lat": "13 Prædíxi enim ei quod iudicatúrus essem domum eius in ætérnum propter iniquitátem, eo quod nóverat indígne ágere fílios suos, et non corripúerit eos.\n14 Idcírco iurávi dómui Heli quod non expiétur iníquitas domus eius víctimis et munéribus usque in ætérnum.",
       "type": "reading",
-      "variationKey": "lectio2"
+      "variationKey": "lectio2",
+      "eng": "13 For I have foretold unto him that I will judge his house for ever for iniquity, because he knew that his sons did wickedly, and did not chastise them.\n14 Therefore have I sworn to the house of Heli, that the iniquity of his house shall not be expiated with victims nor offerings for ever."
     },
     "lectio4": {
       "lat": "Hoc itaque Job insinuas dicebat de servis, quibus erat supra modu desiderabilis, quod desiderium ostēdentes dicebant: Quis dederit nobis ex carnibus ejus impleri? Propterea quidë et Christus id fecit, in majorem nos induces charitatem, et suum erga nos ostendens desiderium, nõ tantum se præbens cupientibus vidēdum, sed et palpandum, et comedēdum, et carni dentes infigere, et coimplicari, et omne desiderium implere.",
       "type": "reading",
-      "variationKey": "lectio4"
+      "variationKey": "lectio4",
+      "eng": "This therefore Job intimated, speaking of his servants, to whom he was desirable beyond measure, who shewing their desire said: Who will grant us to be filled with his flesh? Wherefore Christ also hath done this very thing, leading us into a greater love, and shewing his desire toward us: not only suffering himself to be seen by them that long for him, but also to be touched, and eaten, and the teeth to be fastened in his flesh, and all to be embraced, and every desire to be fulfilled."
     }
   },
   "pent02-0": {
     "hymnus_vespera": {
       "lat": "v. Pange, lingua, gloriósi\nCórporis mystérium,\nSanguinísque pretiósi,\nQuem in mundi prétium\nFructus ventris generósi\nRex effúdit géntium.\nNobis datus, nobis natus\nEx intácta Vírgine,\nEt in mundo conversátus,\nSparso verbi sémine,\nSui moras incolátus\nMiro clausit órdine.\nIn suprémæ nocte cenæ\nRecúmbens cum frátribus,\nObserváta lege plene\nCibis in legálibus,\nCibum turbæ duodénæ\nSe dat suis mánibus.\nVerbum caro, panem verum\nVerbo carnem éfficit;\nFitque sanguis Christi merum:\nEt si sensus déficit,\nAd firmándum cor sincérum\nSola fides súfficit.\nTantum ergo Sacraméntum\nVenerémur cérnui:\nEt antíquum documéntum\nNovo cedat rítui:\nPræstet fides suppleméntum\nSénsuum deféctui.\nGenitóri, Genitóque\nLaus et jubilátio,\nSalus, honor, virtus quoque\nSit et benedíctio:\nProcedénti ab utróque\nCompar sit laudátio.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnus_vespera"
+      "variationKey": "hymnus_vespera",
+      "eng": "Sing, my tongue, the Saviour's glory,\nOf his flesh the mystery sing;\nOf the blood, all price exceeding,\nShed by our immortal King,\nDestined, for the world's redemption,\nFrom a noble womb to spring.\n\nOf a pure and spotless Virgin\nBorn for us on earth below,\nHe, as man, with man conversing,\nStayed, the seeds of truth to sow;\nThen he closed in solemn order\nWondrously his life of woe.\n\nOn the night of that last supper\nSeated with his chosen band,\nHe, the paschal victim eating,\nFirst fulfills the law's command:\nThen as food to all his brethren\nGives himself with his own hand.\n\nWord made flesh, the bread of nature\nBy his word to flesh he turns;\nWine into his blood he changes:\nWhat though sense no change discerns?\nOnly be the heart in earnest,\nFaith her lesson quickly learns.\n\nDown in adoration falling,\nLo! the sacred Host we hail;\nLo! o'er ancient forms departing,\nNewer rites of grace prevail;\nFaith for all defects supplying,\nWhere the feeble senses fail.\n\nTo the everlasting Father,\nAnd the Son who reigns on high,\nWith the Holy Ghost proceeding\nForth from each eternally,\nBe salvation, honour, blessing,\nMight, and endless majesty.\nAmen."
     },
     "versum_1": {
       "lat": "V. Cibávit illos ex ádipe fruménti, allelúja.\nR. Et de petra, melle saturávit eos, allelúja.",
@@ -25364,47 +25454,56 @@
     "lectio1": {
       "lat": "De libro primo Regum.\n1 Et factum est in diebus illis, convenerunt Philisthiim in pugnam: et egressus est Israël obviam Philisthiim in prælium, et castrametatus est juxta Lapidem adjutorii. Porro Philisthiim venerunt in Aphec,\n2 et instruxerunt aciem contra Israël. Inito autem certamine, terga vertit Israël Philisthæis: et cæsa sunt in illo certamine passim per agros, quasi quatuor millia virorum.\n3 Et reversus est populus ad castra: dixeruntque majores natu de Israël: Quare percussit nos Dominus hodie coram Philisthiim? Afferamus ad nos de Silo arcam fœderis Domini, et veniat in medium nostri, ut salvet nos de manu inimicorum nostrorum.\n4 Misit ergo populus in Silo, et tulerunt inde arcam fœderis Domini exercituum sedentis super Cherubim: erantque duo filii Heli cum arca fœderis Dei, Ophni et Phinees.",
       "type": "reading",
-      "variationKey": "lectio1"
+      "variationKey": "lectio1",
+      "eng": "Lesson from the first book of Samuel\n1 And it came to pass in those days, that the Philistines gathered themselves together to fight: and Israel went out to war against the Philistines, and camped by the Stone of help. And the Philistines came to Aphec,\n2 And put their army in array against Israel. And when they had joined battle, Israel turned their backs to the Philistines, and there was slain in that fight here and there in the fields about four thousand men.\n3 And the people returned to the camp: and the ancients of Israel said: Why hath the Lord defeated us today before the Philistines? Let us fetch unto us the ark of the covenant of the Lord from Silo, and let it come in the midst of us, that it may save us from the hand of our enemies."
     },
     "lectio2": {
       "lat": "5 Cumque venisset arca fœderis Domini in castra, vociferatus est omnis Israël clamore grandi, et personuit terra.\n6 Et audierunt Philisthiim vocem clamoris, dixeruntque: Quænam est hæc vox clamoris magni in castris Hebræorum? Et cognoverunt quod arca Domini venisset in castra.\n7 Timueruntque Philisthiim, dicentes: Venit Deus in castra, et ingemuerunt, dicentes:\n8 Væ nobis: non enim fuit tanta exsultatio heri et nudiustertius: væ nobis. Quis nos salvabit de manu deorum sublimium istorum? Hi sunt dii, qui percusserunt Ægyptum omni plaga in deserto.\n9 Confortamini, et estote viri, Philisthiim, ne serviatis Hebræis, sicut et illi servierunt vobis: confortamini, et bellate.\n10 Pugnaverunt ergo Philisthiim, et cæsus est Israël, et fugit unusquisque in tabernaculum suum: et facta est plaga magna nimis, et ceciderunt de Israël triginta millia peditum.\n11 et arca Dei capta est: duo quoque filii Heli mortui sunt, Ophni et Phinees.",
       "type": "reading",
-      "variationKey": "lectio2"
+      "variationKey": "lectio2",
+      "eng": "7 And the Philistines were afraid, saying: God is come into the camp. And sighing, they said:\n8 Woe to us: for there was no such great joy yesterday and the day before: Woe to us. Who shall deliver us from the hand of these high gods? these are the gods that struck Egypt with all the plagues in the desert.\n9 Take courage and behave like men, ye Philistines: lest you come to be servants to the Hebrews, as they have served you: take courage and fight.\n10 So the Philistines fought, and Israel was overthrown, and every man fled to his own dwelling: and there was an exceeding great slaughter; for there fell of Israel thirty thousand footmen.\n11 And the ark of God was taken: and the two sons of Heli, Ophni and Phinees, were slain."
     },
     "lectio3": {
       "lat": "12 Currens autem vir de Benjamin ex acie, venit in Silo in die illa, scissa veste, et conspersus pulvere caput.\n13 Cumque ille venisset, Heli sedebat super sellam contra viam spectans. Erat enim cor ejus pavens pro arca Dei. Vir autem ille postquam ingressus est, nuntiavit urbi : et ululavit omnis civitas.\n14 Et audivit Heli sonitum clamoris, dixítque : Quis est hic sonitus tumultus hujus ? At ille festinavit, et venit, et nuntiavit Heli.\n15 Heli autem erat nonaginta et octo annorum, et oculi ejus caligaverant, et videre non poterat.\n16 Et dixit ad Heli : Ego sum qui veni de prælio, et ego qui de acie fugi hodie. Cui ille ait : Quid actum est, fili mi ?\n17 Respondens autem ille qui nuntiabat : Fugit, inquit, Israël coram Philisthiim, et ruina magna facta est in populo : insuper et duo filii tui mortui sunt, Ophni et Phinees, et arca Dei capta est.\n18 Cumque ille nominasset arcam Dei, cecidit de sella retrorsum juxta ostium, et fractis cervicibus mortuus est.",
       "type": "reading",
-      "variationKey": "lectio3"
+      "variationKey": "lectio3",
+      "eng": "12 And there ran a man of Benjamin out of the army, and came to Silo the same day, with his clothes rent, and his head strewed with dust.\n13 And when he was come, Heli sat upon a stool over against the way, watching. For his heart was fearful for the ark of God. And when the man was come into the city, he told it: and all the city cried out.\n14 And Heli heard the noise of the cry, and said: What meaneth the noise of this uproar? But he made haste, and came, and told Heli.\n15 Now Heli was ninety and eight years old, and his eyes were dim, and he could not see.\n16 And he said to Heli: I am he that came from the battle, and have fled out of the field this day. And he said to him: What is there done, my son?\n17 And he that brought the news answered, and said: Israel is fled before the Philistines, and there has been a great slaughter of the people: moreover thy two sons, Ophni and Phinees, are dead: and the ark of God is taken.\n18 And when he had named the ark of God, he fell from his stool backwards by the door, and broke his neck, and died."
     },
     "lectio4": {
       "lat": "Sermo sancti Joannis. Chrysostomi.\nQuoniam Verbum dicit: Hoc est corpus meum: et assentiamur, et credamus, et intellectualibus ipsum oculis intueamur. Nihil enim sensibile nobis Christus tradidit: sed sensibilibus quidem rebus, at omnia intelligibilia. Itidem et in baptismate: per rem nempe sensibilem aquam, donum confertur: intelligibile vero quod perficitur, generatio et renovatio. Si enim incorporeus esses, nuda et incorporea tibi dedisset ipse dona: sed quoniam anima corpori conserta est, in sensibilibus intelligibilia tibi præbet. Quot nunc dicunt: Vellem ipsius formam aspicere, figuram, vestimenta, calceamenta? Ecce eum vides, ipsum tangis, ipsum manducas. Et tu quidem vestimenta cupis videre: ipse vero tibi concedit non tantum videre, verum et manducare, et tangere, et intra te sumere. Igitur accedat nemo cum nausea, nemo resolutus, omnes accensi, omnes ferventes et excitati. Nam si Judæi stantes, et calceamenta in pedibus habentes, et baculos manibus gestantes, agnum cum festinatione comedebant: te multo magis oportet esse solertem. Nam illi quidem in Palæstinam erant profecturi, et propterea viatorum figuram habebant: tu vero debes in cælum migrare. Quapropter in omnibus oportet te vigilare: nec enim parva pœna proponitur indigne sumentibus.",
       "type": "reading",
-      "variationKey": "lectio4"
+      "variationKey": "lectio4",
+      "eng": "A Sermon of St. John Chrysostom\nSince the Word saith: This is my body: let us assent, and believe, and behold him with the eyes of the understanding. For Christ hath delivered unto us nothing merely sensible; but under sensible things, all things to be understood. So likewise in baptism: through the sensible thing, water, the gift is conferred; but that which is wrought is understood — the begetting and the renewal. For if thou wert without a body, he would have given thee bare and incorporeal gifts: but since the soul is joined to a body, he giveth thee things intelligible under things sensible. How many now say: I would fain behold his form, his figure, his garments, his sandals? Behold, thou seest him, thou touchest him, thou eatest him. And thou desirest to see his garments: but he granteth thee not only to see him, but also to eat, and to touch, and to receive him within thee. Let no man therefore approach with loathing, no man faint-hearted; let all be enkindled, all fervent and eager. For if the Jews, standing, with their sandals on their feet and their staves in their hands, ate the lamb in haste, much more oughtest thou to be watchful. For they indeed were to set out for Palestine, and therefore had the guise of wayfarers: but thou art to journey unto heaven. Wherefore it behoveth thee to watch in all things: for no small punishment is appointed for them that receive unworthily."
     },
     "lectio5": {
       "lat": "Considera quarum adversus proditorem indignaris, contra eos, qui illum crucifixerunt: ítaque considera, ne tu quoque sis reus corporis et sanguinis Christi. Illi sanctissimum corpus occiderunt, tu vero polluta suscipis anima, post tot beneficia. Neque enim illi satis fuit, hominem fieri, colaphis cædi, et crucifigi: verum et semetipsum nobis commiscet; et non fide tantum, verum et ipsa re nos suum efficit corpus. Quo non oportet igitur esse puriorem, tali fruentem sacrificio? quo solari radio non splendidiorem manum, carnem hanc dividentem? os quod igni spiritali repletur, linguam quæ tremendo nimis sanguine rubescit? Cogita quali sis insignitus honore, quali mensa fruaris. Quod Angeli videntes horrescunt, neque libere audent intueri propter emicantem inde splendorem; hoc nos pascimur, huic nos unimur, et facti sumus unum Christi corpus, et una caro.",
       "type": "reading",
-      "variationKey": "lectio5"
+      "variationKey": "lectio5",
+      "eng": "Consider against whom thou art indignant for the betrayer's sake — against them that crucified him: and therefore consider, lest thou also be guilty of the body and blood of Christ. They slew his most holy body; but thou receivest it with a defiled soul, after so many benefits. For it did not suffice him to be made man, to be smitten with blows and crucified: but he also mingleth himself with us; and not by faith only, but in very deed he maketh us his own body. How pure then ought he to be who enjoyeth such a sacrifice? Than what sunbeam ought not that hand to be purer which divideth this flesh — that mouth which is filled with spiritual fire — that tongue which is reddened with blood so exceedingly awful? Think with what honour thou art distinguished, what table thou enjoyest. That which Angels behold with trembling, and dare not gaze upon freely for the splendour that flasheth from it — with this are we fed, with this are we united, and we are made one body of Christ and one flesh."
     },
     "lectio6": {
       "lat": "Quis loquetur potentias Domini, auditas faciet omnes laudes ejus? Quis pastor oves proprio pascit cruore? Et quid dico, pastor? Matres multæ sunt, quæ post partus dolores, filios aliis tradunt nutricibus. Hoc autem ipse non est passus: sed ipse nos proprio sanguine pascit, et per omnia nos sibi coagmentat. Unicuique fidelium semet ipsum per mysterium commiscet, et quos genuit per semet ipsum enutrit, nec alteri tradit: et hoc tibi rursum persuadens quod carnem tuam assumpsit. Ne torpeamus igitur tanta digni charitate, et honore putati. Nonne uidetis quanta promptitudine paruuli papillas capiunt, et quanto impetu labia uberibus infigunt? Accedamus cum tanta nos quoque alacritate ad hanc mensam, quinimmo cum longe majori trahamus tamquam infantes lactentes spiritus gratiam, et unus sit nobis dolor hac esca privari. Non sunt humanæ uirtutis opera proposita. qui tunc ista fecit in illa cena, idem ea nunc quoque facit. Nos ministrorum tenemus locum: qui uero sanctificat ea, et immutat, ipse est.",
       "type": "reading",
-      "variationKey": "lectio6"
+      "variationKey": "lectio6",
+      "eng": "Who shall declare the mighty deeds of the Lord, who shall make all his praises to be heard? What shepherd feedeth his sheep with his own blood? And why do I say shepherd? There be many mothers who, after the pains of birth, give their children to other nurses. But this he suffered not to be done: he himself feedeth us with his own blood, and by all means bindeth us fast unto himself. To each one of the faithful he joineth himself through the mystery; them whom he hath begotten he nourisheth by himself, and delivereth them to none other: persuading thee also again by this, that he hath taken thy flesh. Let us not then grow slothful, being counted worthy of so great love and honour. See ye not with what eagerness the little ones seize the breast, with what force they fasten their lips upon it? Let us also draw near with the like eagerness to this table — nay, with far greater; let us draw forth as suckling babes the grace of the Spirit, and let it be to us the one grief to be deprived of this food. The works here set before us are not of human power. He that wrought them at that supper, the same worketh them now also. We hold the place of ministers: but he that sanctifieth and changeth them is himself."
     },
     "lectio7": {
       "lat": "Léctio sancti Evangélii secúndum Lucam.\nIn illo témpore: Dixit Jesus pharisæis parabolam hanc: Homo quidam fecit cœnam magnam, et vocavit multos. Et réliqua.\nHoc distare, fratres carissimi, inter delicias corporis et cordis solet: quod corporales deliciæ, cum non habentur, grave in se desiderium accendunt: cum vero avide eduntur, comedentem protinus in fastidium per satietatem vertunt. At contra, spiritales deliciæ, cum non habentur, in fastidio sunt; cum vero habentur, in desiderio: tantoque a comedente amplius esuriuntur, quanto et ab esuriente amplius comeduntur. In illis appetitus placet, experientia displicet: in istis appetitus vilis est, et experientia magis placet. In illis appetitus saturitatem, saturitas fastidium generat: in istis autem appetitus saturitatem, saturitas appetitum parit. Augent enim spiritales deliciæ desiderium in mente, dum satiant: quia quanto magis earum sapor percipitur, eo amplius cognoscitur quod avidius ametur: et idcirco non habitæ amari non possunt, quia earum sapor ignoratur. Quis enim amare valeat quod ignorat?",
       "type": "reading",
-      "variationKey": "lectio7"
+      "variationKey": "lectio7",
+      "eng": "From the Holy Gospel according to Luke\nAt that time: Jesus spake unto the Pharisees this parable: A certain man made a great supper, and bade many. And so on.\n\nHomily by Pope St. Gregory the Great\nDearly beloved brethren, between the dainties of the body and the dainties of the mind there is this difference, that the dainties of the body, when we lack them, raise up a great hunger after them, and when we devour them, straightway our fulness worketh in us niceness. But about the dainties of the mind we are nice while as yet we lack them, and when we fill ourselves with them, then are we an-hungered after them, and the more, being an-hungered, we feed thereon, the more are we an-hungered thereafter. In the bodily dainties, the hunger is keener than the fullness, but in the spiritual the fulness is keener than the hunger. In the bodily, hunger gendereth fullness, and fulness niceness in the spiritual, hunger indeed gendereth fullness, but fullness gendereth hunger."
     },
     "lectio8": {
       "lat": "Proinde Psalmista nos admonet, dicens: Gustate et videte, quoniam suavis est Dominus. Ac si aperte dicat: Suavitatem ejus non cognoscitis, si hanc minime gustatis: sed cibum vitæ ex palato cordis tangite, ut probantes ejus dulcedinem, amare valeatis. Has autem homo delicias tunc amisit, cum in paradiso peccavit: extra exiit, cum os a cibo æternæ dulcedinis clausit. Unde nos quoque nati in hujus peregrinationis ærumna, huc fastidiosi jam venimus, nescimus quid desiderare debeamus. Tantoque se amplius fastidii nostri morbus exaggerat, quanto se magis ab esu illius dulcedinis animus elongat, et eo jam internas delicias non appetit, quo eas comedere, diu longeque desuevit. Fastidio ergo nostro tabescimus, et longa inediæ peste fatigamur. Et quia gustare intus nolumus paratam dulcedinem, amamus foris miseri famem nostram.",
       "type": "reading",
-      "variationKey": "lectio8"
+      "variationKey": "lectio8",
+      "eng": "Wherefore the Psalmist admonisheth us, saying: O taste and see that the Lord is sweet. As if he should say plainly: Ye know not his sweetness, if ye taste it not: but touch the food of life with the palate of the heart, that, proving his sweetness, ye may be able to love it. These delights man lost when he sinned in paradise: he went forth without, when he closed his mouth against the food of eternal sweetness. Wherefore we also, born into the hardship of this pilgrimage, come hither already full of loathing: we know not what we ought to desire. And this disease of our loathing groweth so much the more, the further the soul withdraweth itself from the eating of that sweetness; and it now hath no appetite for the delights within, in the measure that it hath long and far disused itself from feeding on them. By our loathing therefore we waste away, and are wearied with the long plague of our fasting. And because we will not taste within the sweetness made ready for us, we love, wretched that we are, our famine without."
     },
     "lectio9": {
       "lat": "Sed superna nos pietas nec deserentes se deserit. Contemptas enim illas delicias ad memoriæ nostræ oculos reuocat, easque nobis proponit, in promissione torporem excutit, atque ut fastidium nostrum repellere debeamus inuitat. ait namque: Homo quidam fecit cenam magnam, et uocauit multos. Quis est homo iste, nisi ille de quo per prophetam dicitur: et homo est: et quis cognouit eum? Qui fecit cenam magnam: quia satietatem nobis dulcedinis internæ præparauit. qui uocauit multos, sed pauci ueniunt: quia nonnumquam ipsi qui ei per fidem subjecti sunt, æterno ejus conujuio male ujuendo contradicunt. Sequitur: Misit autem servum suum homo cenæ dicere inuitatis ut uenirent. Quid hora cenæ nisi finis est mundi? In quo nimirum nos sumus: sicut jam dudum Paulus testatur dicens: Nos sumus, in quo fines sæculorum deuenerunt. Si ergo jam hora cenæ est, cum uocamur: tanto minus nos debemus excusare a conujuio dei, quanto jam propinquasse cernimus finem sæculi. Quo enim pensamus, quia nihil est quod restat, eo debemus pertimescere, ne tempus gratiæ, quod præsto est, pereat.",
       "type": "reading",
-      "variationKey": "lectio9"
+      "variationKey": "lectio9",
+      "eng": "But the mercy of heaven forsaketh not even them that forsake it. For those despised delights it calleth back before the eyes of our memory, and setteth them before us; by its promise it shaketh off our sloth, and inviteth us to cast away our loathing. For it saith: A certain man made a great supper, and invited many. Who is this man, but he of whom it is said by the prophet: And he is a man, and who hath known him? He made a great supper, because he prepared for us the fulness of inward sweetness. He invited many, but few come: because oftentimes they very ones who are subject to him by faith, by their evil living gainsay his eternal banquet. It followeth: And he sent his servant at the hour of supper to say to them that were invited, that they should come. What is the hour of supper, but the end of the world? In which we now surely are: as Paul long since testified, saying: We are they upon whom the ends of the ages are come. If then it is already the hour of supper when we are called: so much the less ought we to excuse ourselves from the banquet of God, the nearer we perceive the end of the world to have drawn nigh. For the more we weigh that nothing remaineth, the more ought we to fear lest the time of grace, which is at hand, should perish."
     }
   },
   "pent02-0r": {
@@ -25491,7 +25590,8 @@
     "responsory1_1960": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1_1960"
+      "variationKey": "responsory1_1960",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "6 Aggraváta est autem manus Dómini super Azótios, et demolítus est eos. Et ebulliérunt villæ et agri in médio regiónis illíus, et nati sunt mures, et facta est confúsio mortis magnæ in civitáte.\n7 Vidéntes autem viri Azótii hujuscémodi plagam dixérunt: Non máneat arca Dei Israël apud nos, quóniam dura est manus ejus super nos et super Dagon deum nostrum.\n8 Et mitténtes congregavérunt omnes sátrapas Philisthinórum ad se et dixérunt: Quid faciémus de arca Dei Israël? Responderúntque Gethǽi: Circumducátur arca Dei Israël.",
@@ -26004,7 +26104,8 @@
     "versum_0": {
       "lat": "V. Miserátor et miséricors Dóminus.\nR. Longánimis et multum miséricors.",
       "type": "vr",
-      "variationKey": "versum_0"
+      "variationKey": "versum_0",
+      "eng": "V. The Lord is compassionate and merciful.\nR. Long-suffering and plenteous in mercy."
     },
     "ant_laudes": {
       "lat": "Unus mílitum * láncea latus ejus apéruit et contínuo exívit sanguis et aqua.\nStans Jesus * clamábat dicens: Si quis sitit, véniat ad me et bibat.\nIn caritáte perpétua * diléxit nos Deus, ídeo, exaltátus a terra, attráxit nos ad Cor suum, míserans.\nVeníte ad me * omnes qui laborátis et oneráti estis et ego refíciam vos.\nFili, * præbe mihi cor tuum, et óculi tui custódiant vias meas.",
@@ -26399,12 +26500,14 @@
     "hymnus_vespera": {
       "lat": "Decus Parénti, et Fílio,\nSanctóque sit Spirítui,\nQuibus potéstas, glória,\nRegnúmque in omne est sǽculum.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnus_vespera"
+      "variationKey": "hymnus_vespera",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen."
     },
     "doxology_": {
       "lat": "Decus Parénti, et Fílio,\nSanctóque sit Spirítui,\nQuibus potéstas, glória,\nRegnúmque in omne est sǽculum.\nAmen.",
       "type": "hymn",
-      "variationKey": "doxology_"
+      "variationKey": "doxology_",
+      "eng": "Jesus, behind thy temple's veil,\nHid in an ark of gold,\nOn stones engraven, lay the law\nthy finger wrote of old.\nBut in thy body's temple new,\nthy life-blood's throbbing shrine,\nHeld, upon fleshly tables graved,\nThe law of love divine.\nAnd when that heart in death was stilled,\nEach temple's veil was riven:\nAnd lo, within thy love's red shrine,\nTo us to look was given.\nThere make us gaze and see the love\nWhich drew thee, for our sake,\nO great high-priest, thyself to God\nA sacrifice to make.\nThou, Saviour, cause that every soul\nWhich thou hast loved so well,\nMay will within thine open heart\nIn life and death to dwell.\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen."
     },
     "versum_1": {
       "lat": "V. Ignem veni míttere in terram.\nR. Et quid volo, nisi ut accendátur?",
@@ -26433,7 +26536,8 @@
     "hymnus_matutinum": {
       "lat": "Hoc Christe nobis, hoc Pater,\nHoc sancte dona Spiritus,\nQuibus potéstas, glória,\nRegnúmque in omne est sǽculum.\nAmen.",
       "type": "hymn",
-      "variationKey": "hymnus_matutinum"
+      "variationKey": "hymnus_matutinum",
+      "eng": "Grant this, O Christ, and Father grant,\nAnd Holy Ghost, this grace impart,\nTo whom be power and glory given,\nAnd kingdom, unto every age.\nAmen."
     },
     "ant_matutinum": {
       "lat": "Quid est homo * quia magníficas eum, aut quid appónis erga eum cor tuum?\nMeditátio * cordis mei in conspéctu tuo sempe.r\nElevámini * portæ æternáles, et introíbit Rex glóriæ.\nAfferéntur * in lætítia et exsultatióne: adducéntur in templum Regis.\nSanctificávit * tabernáculum suum Altíssimus.\nSicut lætántium * ómnium habitátio est in te.\nAnnuntiáte * de die in diem salutáre ejus.\nAdoráte eum * omnes Angeli ejus: audívit, et lætáta est Sion.\nVidérunt omnes * términi terræ salutáre Dei nostri.",
@@ -27098,7 +27202,8 @@
     "capitulum_sexta": {
       "lat": "Sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret: cui resístite fortes in fide, sciéntes eámdem passiónem ei, quæ in mundo est, vestræ fraternitáti fíeri.\n$Deo gratias",
       "type": "capitulum",
-      "variationKey": "capitulum_sexta"
+      "variationKey": "capitulum_sexta",
+      "eng": "Be sober, and watch: for your adversary the devil, as a roaring lion, goeth about seeking whom he may devour: whom resist ye, strong in faith, knowing that the same affliction befalleth your brethren who are in the world."
     },
     "capitulum_nona": {
       "lat": "Deus autem omnis grátiæ, qui vocávit nos in ætérnam suam glóriam in Christo Jesu, módicum passos ipse perfíciet, confirmábit solidabítque. Ipsi glória et impérium in sǽcula sæculórum. Amen.\n$Deo gratias",
@@ -27225,7 +27330,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "At contra, hi qui de falsa justítia superbíre solent, céteros quosque despíciunt, nulla infirmántibus misericórdia condescéndunt: quo se peccatóres esse non credunt, eo detérius peccatóres fiunt. De quorum profécto número pharisǽi exstíterant, qui diiudicántes Dóminum quod peccatóres suscíperet, arénti corde ipsum fontem misericórdiæ reprehendébant. Sed quia ægri erant, ita ut ægros se esse nescírent; quátenus quod erant agnóscerent, cæléstis eos médicus blandis foméntis curat, benígnum paradígma óbjicit, et in eórum corde vúlneris tumórem premit.",
@@ -27324,7 +27430,8 @@
     "responsory1c": {
       "lat": "R. Planxit autem David planctu magno super Saül, et fílios ejus, et dixit: Quómodo cecidérunt fortes in bello,\n* Et periérunt arma béllica; ínclyti Israël, flete.\nV. Montes Gélboë, nec ros nec plúvia super vos descéndant, ubi cecidérunt vulneráti multi:\nR. Et periérunt arma béllica; ínclyti Israël, flete.",
       "type": "responsory",
-      "variationKey": "responsory1c"
+      "variationKey": "responsory1c",
+      "eng": "R. And David mourned with great mourning for Saul and for his sons, and said: How are the mighty fallen in battle,\n* And the weapons of war perished; weep, ye nobles of Israel.\nV. Ye mountains of Gilboa, let neither dew nor rain descend upon you, where many fell wounded:\nR. And the weapons of war perished; weep, ye nobles of Israel."
     },
     "lectio2": {
       "lat": "20 Et applícuit Sámuel omnes tribus Israël, et cécidit sors tribus Bénjamin;\n21 et applícuit tribum Bénjamin et cognatiónes ejus, et cécidit cognátio Metri, et pervénit usque ad Saul fílium Cis. Quæsiérunt ergo eum, et non est invéntus.\n22 Et consuluérunt post hæc Dóminum utrúmnam ventúrus esset illuc. Respondítque Dóminus: Ecce abscónditus est domi.\n23 Cucurrérunt ítaque et tulérunt eum inde; stetítque in médio pópuli, et áltior fuit univérso pópulo ab húmero et sursum.\n24 Et ait Sámuel ad omnem pópulum: Certe vidétis quem elégit Dóminus, quóniam non sit símilis illi in omni pópulo. Et clamávit omnis pópulus et ait: Vivat rex.",
@@ -27801,7 +27908,8 @@
     "ant_1c": {
       "lat": "Irátus * rex Saül dixit: Mihi mille dedérunt, et fílio Isai dedérunt decem míllia.",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "King Saul * was angry, and said: To me they have given a thousand, and to the son of Jesse they have given ten thousand."
     },
     "ant_1": {
       "lat": "Præváluit David * in Philisthǽum in funda et lápide in nómine Dómini.",
@@ -27908,7 +28016,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Nam, etsi non licet mihi scire quemádmodum natus sit, non licete tamen nescire quod natus sit. Seriem generatiónis ignoro; sed auctórem generatiónis agnosco. Non interfúimus cum ex Patre Dei Fílius nascerétur; sed interfúimus cum a Patre Dei Fílius dicerétur. Si Deo non crédimus, cui credémus? Omnia enim quæ crédimus, vel visu crédimus, vel audítu: visus sæpe fállitur, audítus in fide est.",
@@ -27965,7 +28074,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "31 Audíta sunt autem verba, quæ locútus est David, et annuntiáta in conspéctu Saul.\n32 Ad quem cum fuísset addúctus, locútus est ei: Non cóncidat cor cujúsquam in eo: ego servus tuus vadam et pugnábo advérsus Philisthǽum.\n33 Et ait Saul ad David: Non vales resistere Philisthǽo isti nec pugnáre advérsus eum, quia puer es, hic autem vir bellátor est ab adulescéntia sua.",
@@ -28274,7 +28384,8 @@
     "ant_1c": {
       "lat": "Quis enim * in ómnibus, sicut David fidélis invéntus est in regno tuo, egrédiens, et regrédiens, et pergens ad impérium regis?",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "For who * in all things is found faithful as David in thy kingdom, going out, and coming in, and going forth at the king's bidding?"
     },
     "ant_1": {
       "lat": "Montes Gélboë, * nec ros nec plúvia véniant super vos: quia in te abjéctus est clípeus fórtium, clípeus Saul, quasi non esset unctus óleo. Quómodo cecidérunt fortes in bello? Jónathas in excélsis interféctus est: Saul et Jónathas, amábiles et decóri valde in vita sua, in morte quoque non sunt divísi.",
@@ -28381,7 +28492,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Vide nunc étiam tres reátus, judícii, concílii, et gehénnæ ignis. Nam in judício adhuc defensióni datur locus. In concílio autem, quamquam et judícium esse sóleat, tamen quia interésse áliquid hoc loco fatéri cogit ipsa distínctio, vidétur ad concílium pertinére senténtiæ prolátio; quando non jam cum ipso reo ágitur, utrum damnándus sit; sed inter se, qui júdicant, cónferunt quo supplício damnári opórteat, quem constat esse damnándum. Gehénna vero ignis, nec damnatiónem habet dúbiam, sicut judícium, nec damnáti pœnam, sicut concílium: in gehénna quippe ignis, certa est damnátio, et pœna damnáti.",
@@ -28450,7 +28562,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "4 Et nuntiátum est David, quod viri Jabes Gálaad sepelíssent Saul.\n5 Misit ergo David núntios ad viros Jabes Gálaad dixítque ad eos: Benedícti vos a Dómino, qui fecístis misericórdiam hanc cum dómino vestro Saul, et sepelístis eum.\n6 Et nunc retríbuet vobis quidem Dóminus misericórdiam et veritátem, sed et ego reddam grátiam, eo quod fecístis verbum istud.\n7 Conforténtur manus vestræ et estóte fílii fortitúdinis; licet enim mórtuus sit dóminus vester Saul, tamen me unxit domus Juda in regem sibi.",
@@ -28677,7 +28790,8 @@
     "ant_1c": {
       "lat": "Nonne iste est David * de quo canébant in choro, dicéntes: Saül percússit mile, et David decem míllia in míllibus suis?",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "V. Is not this David? Did they not sing one to another of him in dances, saying: Saul hath slain his thousands, and David his ten thousands?"
     },
     "ant_1": {
       "lat": "Obsecro, Dómine, * aufer iniquitátem servi tui, quia insipiénter egi.",
@@ -28784,7 +28898,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Ubíque ígitur mystérii ordo servátur, ut prius per remissiónem peccatórum vulnéribus medicína tribuátur, post alimónia mensæ cæléstis exúberat; quamquam nondum validióribus hæc turba reficiátur aliméntis, neque Christi córpore et sánguine jejúna solidióris fídei corda pascántur. Lacte, inquit, vos potávi, non esca; nondum enim poterátis, sed nec adhuc quidem potéstis. In modum lactis quinque sunt panes: esca autem solídior, corpus est Christus; potus veheméntior, sanguis est Dómini.",
@@ -28815,7 +28930,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "26 Et ait Absalom: Si non vis veníre, véniat, óbsecro, nobíscum saltem Amnon frater meus. Dixítque ad eum rex: Non est necésse ut vadat tecum.\n27 Coégit ítaque Absalom eum et dimísit cum eo Amnon et univérsos fílios regis. Fecerátque Absalom convívium quasi convívium regis.\n28 Præcéperat autem Absalom púeris suis dicens: Observáte: cum temuléntus fúerit Amnon vino, et díxero vobis: Percútite eum et interfícite; nolíte timére, ego enim sum qui præcípio: roborámini et estóte viri fortes.\n29 Fecérunt ergo púeri Absalom advérsum Amnon sicut præcéperat eis Absalom. Surgentésque omnes fílii regis ascendérunt sínguli mulas suas et fugérunt.",
@@ -29036,7 +29152,8 @@
     "ant_1c": {
       "lat": "Dóleo super te, frater mi Jónatha, amábilis valde super amórem mulíerum: et sicut mater únicum amat fílium, ita te diligébam: sagítta Jónathæ numquam ábiit retrórsum, nec declinávit clypeus ejus de bello, et hasta ejus non est avérsa.",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "I grieve for thee, my brother Jonathan, exceeding lovely above the love of women: as a mother loveth her only son, so did I love thee: the arrow of Jonathan never turned back, nor did his shield turn away in battle, nor his spear turn aside."
     },
     "ant_1": {
       "lat": "Unxérunt Salomónem * Sadoc sacérdos et Nathan prophéta, regem in Gihon et ascendéntes læti dixérunt: Vivat rex in ætérnum.",
@@ -29143,7 +29260,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Atque hinc sibi regnum cælórum pollicéntur: quasi vero eórum áliquid próprium sit, quæ loquúntur aut fáciunt, et non ómnia virtus Dei invocáta perfíciat; cum doctrínæ sciéntiam léctio áfferat, dæmónia Christi nomen exágitet. De nostro ígitur est beáta illa ætérnitas promerénda, præstandúmque est áliquid ex próprio, ut bonum velímus, malum omne vitémus, totóque afféctu præcéptis cæléstibus obtemperémus, ac tálibus offíciis cógniti Deo simus, agamúsque pótius quod vult, quam quod potest gloriémur; repúdians eos ac repéllens, quos a cognitióne sua, ópera iniquitátis avérterint.",
@@ -29160,12 +29278,14 @@
     "ant_3_": {
       "lat": "Non potest arbor * bona fructus malos fácere, nec arbor mala fructus bonos fácere. Omnis arbor quæ non facit fructum bonum, excidétur, et in ignem mittétur, allelúja.",
       "type": "antiphon",
-      "variationKey": "ant_3_"
+      "variationKey": "ant_3_",
+      "eng": "A good tree cannot bring forth evil fruit, * neither can a corrupt tree bring forth good fruit. Every tree that bringeth not forth good fruit, is hewn down and cast into the fire. Alleluia."
     },
     "ant_3c": {
       "lat": "Non omnis, * qui dicit mihi: Dómine, Dómine, intrábit in regnum cœlórum: sed qui facit voluntátem Patris mei, qui in cœlis est, ipse intrábit in regnum cœlórum, allelúia.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "Not every one * that saith unto me, Lord, Lord, shall enter into the kingdom of heaven: but he that doeth the will of my Father who is in heaven, he shall enter into the kingdom of heaven, alleluia."
     },
     "ant_3": {
       "lat": "Non potest arbor * bona fructus malos fácere, nec arbor mala fructus bonos fácere. Omnis arbor quæ non facit fructum bonum, excidétur, et in ignem mittétur, allelúja.",
@@ -29184,7 +29304,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "32 Dixit quoque rex David: Vocáte mihi Sadoc sacerdótem et Nathan prophétam et Banájam fílium Jójadæ. Qui cum ingréssi fuíssent coram rege,\n33 dixit ad eos: tóllite vobíscum servos Dómini vestri, et impónite Salomónem fílium meum super mulam meam, et dúcite eum in Gihon,\n34 et ungat eum ibi Sadoc sacérdos et Nathan prophéta in regem super Israël. Et canétis búccina, atque dicétis: Vivat rex Sálomon.\n35 Et ascendétis post eum, et véniet, et sedébit super sólium meum, et ipse regnábit pro me.",
@@ -29411,7 +29532,8 @@
     "ant_1c": {
       "lat": "Rex autem David * coopérto cápite incédens lugébat fílium suum, dicens: Absalom fili mi, fili mi Absalom, quis mihi det ut ego móriar pro te, fili mi Absalom?",
       "type": "antiphon",
-      "variationKey": "ant_1c"
+      "variationKey": "ant_1c",
+      "eng": "But king David, * going with his head covered, mourned for his son, saying: O my son Absalom, my son, my son Absalom, who would grant me that I might die for thee, my son Absalom?"
     },
     "ant_1": {
       "lat": "Exaudísti, Dómine, * oratiónem servi tui, ut ædificárem templum nómini tuo.",
@@ -29518,7 +29640,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Quam ob rem séquitur: Qui fidélis est in mínimo, hoc est, in carnálibus; et in multis fidélis erit, hoc est, in spirituálibus. Qui autem in parvo iníquus est, ut non det frátribus ad uténdum, quod a Deo pro ómnibus est creátum; iste et in spirituáli pecúnia dividénda iníquus erit, ut non pro necessitáte, sed pro persónis doctrínam Dómini dívidat. Si autem, inquit, carnáles divítia, quæ labúntur, non bene dispensátis; veras æternásque divítias doctrínæ Dei quis credet vobis?",
@@ -29549,7 +29672,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "4 Videns autem regína Saba omnem sapiéntiam Salomónis et domum quam ædificáverat,\n5 et cibos mensæ ejus, et habitácula servórum, et órdines ministrántium, vestésque eórum, et pincérnas, et holocáusta quæ offerébat in domo Dómini, non habébat ultra spíritum;\n6 dixítque ad regem: Verus est sermo, quem audívi in terra mea\n7 super sermónibus tuis, et super sapiéntia tua: et non credébam narrántibus mihi, donec ipsa veni, et vidi óculis meis, et probávi quod média pars mihi nuntiáta non fúerit. Major est sapiéntia et ópera tua, quam rumor quem audívi.",
@@ -29872,7 +29996,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Flevit étenim prius Redémptor ruínam pérfidæ civitátis, quam ipsa sibi cívitas non cognoscébat esse ventúram. Cui a flente Dómino recte dícitur: Quia si cognovísses, et tu; subáudi, fleres; quæ modo, quæ nescis quod ímminet, exsúltas. Unde et súbditur: Et quidem in hac die tua, quæ ad pacem tibi. Cum enim carnis se voluptátibus daret, et ventúra mala non prospíceret; in die sua, quæ ad pacem esse ei póterant, habébat.",
@@ -29903,7 +30028,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "8 Tulítque Elías pállium suum et invólvit illud et percússit aquas, quæ divísæ sunt in utrámque partem, et transiérunt ambo per siccum.\n9 Cumque transíssent, Elías dixit ad Eliséum: Póstula quod vis ut fáciam tibi, ántequam tollar a te. Dixítque Eliséus: Obsecro ut fiat in me duplex spíritus tuus.\n10 Qui respóndit: Rem diffícilem postulásti; áttamen si víderis me, quando tollar a te, erit tibi quod petísti; si autem non víderis, non erit.",
@@ -30226,7 +30352,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Excélsus enim Dóminus, et humília réspicit; excélsos autem, qualis erat ille pharisǽus, a longe cognóscit. Excélsa quidem Deus a longe cognóscit, sed non ignóscit. Adhuc audi humilitátem publicáni. Parum est, quia de longínquo stabat: nec óculos suos ad cælum levábat: ut aspicerétur, non aspiciébat; respícere sursum non audébat: premébat consciéntia, spes sublevábat. Adhuc audi: Percutiébat pectus suum. Pœnas a se ipso exigébat; proptérea Dóminus confiténti parcébat. Percutiébat pectus suum, dicens: Dómine, propítius esto mihi peccatóri. Ecce qui rogat. Quid miráris, si Deus ignóscit, quando ipse agnóscit?",
@@ -30257,7 +30384,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "4 Anno autem séptimo misit Jójada, et assúmens centuriónes et mílites, introdúxit ad se in templum Dómini, pepigítque cum eis fœdus; et adjúrans eos in domo Dómini, osténdit eis fílium regis:\n5 et præcépit illis, dicens: Iste est sermo quem fácere debétis:\n6 tértia pars vestrum intróëat sábbato, et obsérvet excúbias domus regis; tértia autem pars sit ad portam Sur, et tértia pars sit ad portam quæ est post habitáculum scutariórum, et custodiétis excúbias domus Messa.\n7 Duæ vero partes e vobis, omnes egrediéntes sábbato, custódiant excúbias domus Dómini circa regem.",
@@ -30580,7 +30708,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Cui mox, Ephphétha, id est, Adaperíre dícitur: et statim apértæ sunt aures ejus, et solútum est vínculum linguæ ejus. Qua in re notándum est, quia propter clausas aures dictum est, Adaperíre. Sed cui aures cordis ad obediéndum apértæ fúerint, ex subsequénti procul dúbio étiam linguæ ejus vínculum sólvitur; ut bona quæ ipse fécerit, étiam faciénda áliis loquátur. Ubi bene ádditur: Et loquebátur recte. Ille enim recte lóquitur, qui prius obediéndo fécerit quæ loquéndo ádmonet esse faciénda.",
@@ -30611,7 +30740,8 @@
     "responsory1": {
       "lat": "R. Recordáre, Dómine, testaménti tui, et dic Angelo percutiénti: Cesset jam manus tua,\n* Ut non desolétur terra, et ne perdas omnem ánimam vivam.\nV. Ego sum qui peccávi, ego qui iníque egi: isti qui oves sunt, quid fecérunt? Avertátur, óbsecro, furor tuus, Dómine, a pópulo tuo.",
       "type": "responsory",
-      "variationKey": "responsory1"
+      "variationKey": "responsory1",
+      "eng": "R. Remember, O Lord, thy covenant, and say unto the destroying Angel: Stay now thine hand;\n* That the land be not utterly laid waste, and that thou destroy not every living soul.\nV. Even I it is that have sinned, and done evil indeed; but these sheep, what have they done? Let thine anger, I pray thee, O Lord, be turned away from thy people.\nR. That the land be not utterly laid waste, and that Thou destroy not every living soul."
     },
     "lectio2": {
       "lat": "8 Dixit autem Helcías pontifex ad Saphan scribam: Librum legis réperi in domo Dómini. Dedítque Helcías volúmen Saphan, qui et legit illud.\n9 Venit quoque Saphan scriba ad regem, et renuntiávit ei quod præceperat, et ait: Conflavérunt servi tui pecúniam, quæ repérta est in domo Dómini, et dedérunt ut distribuerétur fabris a præfectis óperum templi Dómini.\n10 Narrávit quoque Saphan scriba regi, dicens: Librum dedit mihi Helcías sacérdos.",
@@ -30850,7 +30980,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Et ecce quidam legisperítus surréxit, tentans eum et dicens: Magíster, quid faciéndo vitam ætérnam possidébo? Legisperítus, qui de vita ætérna Dóminum tentans intérrogat, occasiónem, ut reor, tentándi de ipsis Dómini sermónibus sumpsit, ubi ait: Gaudéte autem quod nómina vestra scripta sunt in cælis. Sed ipsa sua tentatióne declárat quam vera sit illa Dómini conféssio, qua Patri lóquitur: Quod abscondísti hæc a sapiéntibus, et prudéntibus, et revelásti ea párvulis.",
@@ -30879,7 +31010,8 @@
     "ant_3c": {
       "lat": "Quis tibi vidétur * próximus fuísse illi, qui íncidit in latrónes? Et ait illi: Qui fecit misericórdiam in illum. Vade, et tu fac simíliter, allelúia.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "Which of these, thinkest thou, * was neighbour unto him that fell among thieves? And he said: He that shewed mercy on him. Go, and do thou in like manner, alleluia."
     },
     "ant_3": {
       "lat": "Homo quidam * descendébat ab Jerúsalem in Jéricho et íncidit in latrónes, qui étiam despoliavérunt eum et, plagis impósitis, abiérunt semivívo relícto.",
@@ -30916,7 +31048,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Hi autem tam vitándi sunt Ecclésiæ, ut, si fíeri potest, lóngius remóti, magno clamóre Christum interpéllent; sicut isti decem stetérunt a longe, et levavérunt vocem, dicéntes: Jesu præcéptor, miserére nostri. Nam et quod præceptórem vocant, quo nómine néscio utrum quisquam Dóminum interpelláverit pro medicína corporáli; satis puto significáre, lepram falsam esse doctrínam, quam bonus præcéptor abstérgit.",
@@ -30939,7 +31072,8 @@
     "ant_3c": {
       "lat": "Nonne decem * mundáti sunt? et novem ubi sunt? Non est invéntus qui redíret, et daret glóriam Deo, nisi hic alienígena. Vade, quia fides tua te salvum fecit, allelúia.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "Were not ten * made clean? and where are the nine? There was none found to return and give glory to God, save this stranger. Go thy way, for thy faith hath made thee whole, alleluia."
     },
     "ant_3": {
       "lat": "Unus autem * ex illis, ut vidit quod mundátus est, regréssus est cum magna voce magníficans Deum, allelúja.",
@@ -30976,7 +31110,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Ideo, inquit, dico vobis, non habére sollicitúdinem ánimæ vestræ quid edátis, neque córpori vestro quid induátis; ne forte, quamvis jam supérflua non quærántur, propter ipsa necessária cor duplicétur, et ad ipsa conquirénda, nostra detorqueátur inténtio, cum áliquid quasi misericórditer operámur: id est, ut cum consúlere alícui vidéri vólumus, nostrum emoluméntum ibi pótius, quam illíus utilitátem attendámus; et ídeo nobis non videámur peccáre, quia non supérflua, sed necessária sunt, quæ cónsequi vólumus.",
@@ -31025,7 +31160,8 @@
     "responsory8": {
       "lat": "R. Duo Séraphim clamábant alter ad álterum:\n* Sanctus, sanctus, sanctus Dóminus Deus Sábaoth: * Plena est omnis terra glória ejus.\nV. Tres sunt qui testimónium dant in cælo: Pater, Verbum, et Spíritus Sanctus: et hi tres unum sunt.\nR. Sanctus, sanctus, sanctus Dóminus Deus Sábaoth.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Plena est omnis terra glória ejus.",
       "type": "responsory",
-      "variationKey": "responsory8"
+      "variationKey": "responsory8",
+      "eng": "R. One Seraph cried unto another:\n* Holy, Holy, Holy is the Lord God of hosts; the whole earth is full of His glory.\nV. There are Three That bear record in heaven: the Father, the Word, and the Holy Ghost, and these Three are One.\nR. Holy, Holy, Holy is the Lord God of hosts.\nR. The whole earth is full of His glory.\n\n[Responsory8] (rubrica cisterciensis)"
     },
     "lectio9": {
       "lat": "Quemádmodum qui videt lítteras in códice óptime scripto, et non novit légere, laudat quidem antiquárii manum, admírans ápicum pulchritúdinem; sed quid sibi velint, quid índicent illi ápices, nescit, et est óculis laudátor, mente non cógnitor. Alius autem et laudat artifícium, et capit intelléctum: ille útique, qui non solum vidére quod commúne est ómnibus, potest, sed étiam légere; quod qui non dídicit, non potest. Ita qui vidérunt Christi mirácula, et non intellexérunt quid sibi vellent, et quid intelligéntibus quodámmodo innúerent, miráti sunt tantum quia facta sunt; álii vero et facta miráti, et intellécta assecúti. Tales nos in schola Christi esse debémus.",
@@ -31652,7 +31788,8 @@
     "ant_3c": {
       "lat": "Relíquit eum tentátor, * et accessérunt Angeli, et ministrábant ei.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "The tempter left him, * and angels came and ministered unto him."
     },
     "ant_3": {
       "lat": "Ecce nunc tempus * acceptábile, ecce nunc dies salútis: in his ergo diébus exhibeámus nosmetípsos sicut Dei minístros in multa patiéntia, in jejúniis, in vigíliis, et in caritáte non ficta.",
@@ -33475,7 +33612,8 @@
     "ant_3": {
       "lat": "Nemo in eum misit manum: * quia nondum vénerat hora ejus.",
       "type": "antiphon",
-      "variationKey": "ant_3"
+      "variationKey": "ant_3",
+      "eng": "No man laid hands on Him; * because His hour was not yet come."
     },
     "oratio_3": {
       "lat": "Miserére, Dómine, pópulo tuo: et contínuis tribulatiónibus laborántem propítius respiráre concéde.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen..",
@@ -34152,12 +34290,14 @@
     "ant_3_": {
       "lat": "Desidério desiderávi * hoc Pascha manducáre vobíscum, ántequam pátiar.",
       "type": "antiphon",
-      "variationKey": "ant_3_"
+      "variationKey": "ant_3_",
+      "eng": "With desire I have desired * to eat this Passover with you before I suffer."
     },
     "ant_3c": {
       "lat": "Mittens hæc múlier * in corpus meum hoc unguéntum, ad sepeliéndum me fecit.",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "This woman, pouring this ointment * upon my body, hath done it for my burial."
     },
     "ant_3": {
       "lat": "Desidério desiderávi * hoc Pascha manducáre vobíscum, ántequam pátiar.",
@@ -35817,12 +35957,14 @@
     "ant_2_": {
       "lat": "Simon, dormis? * non potuísti una hora vigiláre mecum?",
       "type": "antiphon",
-      "variationKey": "ant_2_"
+      "variationKey": "ant_2_",
+      "eng": "Simon, do you sleep? * Could you not watch one hour with me?"
     },
     "ant_2c": {
       "lat": "Tanto témpore * vobíscum eram docens vos in templo, et non me tenuístis, et ecce flagellátum dúcitis ad crucifigéndum.",
       "type": "antiphon",
-      "variationKey": "ant_2c"
+      "variationKey": "ant_2c",
+      "eng": "So long a time * was I with you, teaching you in the temple, and ye laid no hold on me; and behold, having scourged me, ye lead me to be crucified."
     },
     "ant_2": {
       "lat": "Simon, dormis? * non potuísti una hora vigiláre mecum?",
@@ -40807,7 +40949,8 @@
     "ant_3c": {
       "lat": "Quare jejunávimus, * et non aspexísti? humiliávimus ánimas nostras, et nescísti?",
       "type": "antiphon",
-      "variationKey": "ant_3c"
+      "variationKey": "ant_3c",
+      "eng": "Wherefore have we fasted, * and thou hast not seen? have we humbled our souls, and thou hast taken no knowledge?"
     },
     "ant_3": {
       "lat": "Tu autem cum oráveris, * intra in cubículum tuum: et clauso óstio, ora Patrem tuum.",

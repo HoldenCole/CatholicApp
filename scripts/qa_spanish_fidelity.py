@@ -325,9 +325,16 @@ def main():
                 if not isinstance(part, dict):
                     continue
                 lat = part.get("lat") or ""
+                first = lat.split("\n")[0]
+                artifact = (
+                    fk in ("comment", "initial", "commemoratio", "scriptura")
+                    or lat.startswith(("#", "@", "!", "["))
+                    or "…" in lat or "... " in lat
+                    or "lectiones" in lat or "Psalmi Dominica" in lat
+                    or (len(lat) < 60 and first.startswith(("In ", "Feria", "Sabbato")))
+                )
                 if (len(lat) > 120 and not (part.get("eng") or "").strip()
-                        and fk not in ("comment", "initial")
-                        and not lat.startswith("#")):
+                        and not artifact):
                     o = (es.get(code) or {}).get(fk) or {}
                     if not (o.get("eng") or "").strip():
                         flag("NOPAIR", name, f"{code}.{fk}", lat[:70])

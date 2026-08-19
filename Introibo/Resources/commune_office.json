@@ -1201,13 +1201,13 @@
       "variationKey": "capitulum_sexta"
     },
     "hymnus_laudes": {
-      "eng": "",
+      "eng": "O glorious lady! throned on high\nAbove the star-illumined sky;\nThereto ordained, thy bosom lent\nTo thy Creator nourishment.\nThrough thy sweet offspring we receive\nThe bliss once lost through hapless Eve;\nAnd heaven to mortals open lies\nNow thou art portal of the skies.\nThou art the door of heaven's high King,\nLight's gateway fair and glistering;\nLife through a Virgin is restored;\nYe ransomed nations, praise the Lord!\nAll honour, laud, and glory be,\nO Jesu, Virgin-born, to thee;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
       "lat": "O gloriósa vírginum,\nSublímis inter sídera,\nQui te creávit, párvulum\nLacténte nutris úbere.\nQuod Heva tristis ábstulit,\nTu reddis almo gérmine:\nIntrent ut astra flébiles,\nCæli reclúdis cárdines.\nTu Regis alti jánua\nEt aula lucis fúlgida:\nVitam datam per Vírginem,\nGentes redémptæ, pláudite.\n* Jesu tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "The God whom earth, and sea, and sky\nAdore, and laud, and magnify,\nWho o'er their threefold fabric reigns,\nThe Virgin's spotless womb contains.\n\nThe God, whose will by moon and sun\nAnd all things in due course is done,\nIs borne upon a maiden's breast,\nBy fullest heavenly grace possest.\n\nHow blest that mother, in whose shrine\nThe great artificer divine,\nWhose hand contains the earth and sky,\nVouchsafed, as in his ark, to lie.\n\nBlest, in the message Gabriel brought;\nBlest, by the work the Spirit wrought;\nFrom whom the great desire of earth\nTook human flesh and human birth.\n\n* All honour, laud, and glory be,\nO Jesu, Virgin-born to thee;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
       "lat": "Quem terra, pontus, sídera\nColunt, adórant, prædicant,\nTrinam regéntem máchinam,\nClaustrum Maríæ bájulat.\nCui luna, sol, et ómnia\nDesérviunt per témpora,\nPerfúsa cæli grátia,\nGestant puéllæ víscera.\nBeáta Mater múnere,\nCujus supérnus ártifex\nMundum pugíllo cóntinens,\nVentris sub arca clausus est.\nBeáta cæli núntio,\nFœcúnda sancto Spíritu,\nDesiderátus géntibus,\nCujus per alvum fusus est.\n* Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre, et almo Spíritu\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -1237,7 +1237,7 @@
       "variationKey": "responsory_breve_nona"
     },
     "responsory_breve_sexta": {
-      "eng": "",
+      "eng": "God will help her with His countenance. God is in her midst; she shall not be disturbed.\nV. There is a stream whose runlets gladden the city of God; the Most High has sanctified His dwelling. Alleluia, alleluia.\nV. This is a wise virgin, and one of the number of the prudent. Alleluia.",
       "lat": "R.br. Adjuvábit eam * Deus vultu suo.\nR. Adjuvábit eam * Deus vultu suo.\nV. Deus in médio ejus, non commovébitur.\nR. Deus vultu suo.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Adjuvábit eam * Deus vultu suo.",
       "type": "responsory",
       "variationKey": "responsory_breve_sexta"
@@ -1371,7 +1371,7 @@
       "variationKey": "responsory_breve_nona"
     },
     "responsory_breve_sexta": {
-      "eng": "",
+      "eng": "God will help her with His countenance. God is in her midst; she shall not be disturbed.\nV. There is a stream whose runlets gladden the city of God; the Most High has sanctified His dwelling. Alleluia, alleluia.\nV. This is a wise virgin, and one of the number of the prudent. Alleluia.",
       "lat": "R.br. Adjuvábit eam * Deus vultu suo.\nR. Adjuvábit eam * Deus vultu suo.\nV. Deus in médio ejus, non commovébitur.\nR. Deus vultu suo.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Adjuvábit eam * Deus vultu suo.",
       "type": "responsory",
       "variationKey": "responsory_breve_sexta"
@@ -1888,7 +1888,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\n\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\n\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\n\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
       "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -2672,7 +2672,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\n\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\n\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\n\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
       "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -2836,7 +2836,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\n\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\n\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\n\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
       "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -3093,7 +3093,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\n\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\n\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\n\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
       "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -3257,7 +3257,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\n\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\n\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\n\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
       "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -3514,7 +3514,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "O God, of those that fought thy fight,\nPortion, and prize, and crown of light,\nBreak every bond of sin and shame\nAs now we praise thy martyr's name.\n\nHe recked not of the world's allure,\nBut sin and pomp of sin forswore:\nKnew all their gall, and passed them by,\nAnd reached the throne prepared on high.\n\nBravely the course of pain he ran,\nAnd bare his torments as a man:\nFor love of thee his blood outpoured,\nAnd thus obtained the great reward.\n\nWith humble voice and suppliant word\nWe pray thee therefore, holy Lord,\nWhile we thy martyr's feast-day keep,\nForgive thy loved and erring sheep.\n\n* Glory and praise for aye be done\nTo God the Father, and the Son,\nAnd Holy Ghost, who reign on high,\nOne God, to all eternity.\nAmen.",
       "lat": "Deus tuórum mílitum\nSors, et córona, prǽmium,\nLaudes canéntes Mártyris\nAbsólve nexu críminis.\nHic nempe mundi gáudia,\nEt blanda fraudum pábula\nImbúta felle députans,\nPervénit ad cæléstia.\nPœnas cucúrrit fórtiter,\nEt sústulit viríliter,\nFundénsque pro te sánguinem,\nÆtérna dona póssidet.\nOb hoc precátu súpplici\nTe póscimus, piíssime;\nIn hoc triúmpho Mártyris\nDimítte noxam sérvulis.\n* Laus et perénnis glória\nPatri sit, atque Fílio,\nSancto simul Paráclito,\nIn sempitérna sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -5539,7 +5539,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -6331,7 +6331,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -6495,7 +6495,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -6666,7 +6666,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -6830,7 +6830,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -6994,7 +6994,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -7293,7 +7293,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -7457,7 +7457,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -7721,7 +7721,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "This the confessor of the Lord, whose triumph\nNow all the faithful celebrate, with gladness\nErst on this feast-day merited to enter\nInto his glory.\n\nSaintly and prudent, modest in behaviour,\nPeaceful and sober, chaste was he, and lowly.\nWhile that life’s vigour, coursing through his members,\nQuickened his being.\n\nSick ones of old time, to his tomb resorting,\nSorely by ailments manifold afflicted,\nOft-times have welcomed health and strength returning,\nAt his petition.\n\nWhence we in chorus gladly do him honour,\nChanting his praises with devout affection,\nThat in his merits we may have a portion,\nNow and forever.\n\nHis be the glory, power and salvation,\nWho over all things reigneth in the highest,\nEarth’s mighty fabric ruling and directing,\nOnely and Trinal.\nAmen.",
       "lat": "Iste Conféssor Dómini, coléntes\nQuem pie laudant pópuli per orbem,\nHac die lætus méruit beátas\nScándere sedes.\nQui pius, prudens, húmilis, pudícus,\nSóbriam duxit sine labe vitam,\nDonec humános animávit auræ\nSpíritus artus.\nCujus ob præstans méritum, frequénter,\nÆgra quæ passim jacuére membra,\nVíribus morbi dómitis, salúti\nRestituúntur.\nNoster hinc illi chorus obsequéntem\nCóncinit laudem celebrésque palmas,\nUt piis ejus précibus juvémur\nOmne per ævum.\nSit salus illi, decus atque virtus,\nQui, super cæli sólio corúscans,\nTótius mundi sériem gubérnat,\nTrinus et unus.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -9236,7 +9236,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "Son of a virgin, maker of thy mother,\nThou, rod and blossom from a stem unstainèd,\nNow while a virgin fair of fame we honour,\nHear our devotion!",
       "lat": "Vírginis Proles, Opiféxque Matris,\nVirgo quem gessit, peperítque Virgo:\nVírginis festum cánimus beátæ,\nAccipe votum.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -9407,7 +9407,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "Son of a virgin, maker of thy mother,\nThou, rod and blossom from a stem unstainèd,\nNow while a virgin fair of fame we honour,\nHear our devotion!",
       "lat": "Vírginis Proles, Opiféxque Matris,\nVirgo quem gessit, peperítque Virgo:\nVírginis festum cánimus beátæ,\nAccipe votum.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
@@ -10744,7 +10744,7 @@
       "variationKey": "hymnus_laudes"
     },
     "hymnus_matutinum": {
-      "eng": "",
+      "eng": "Thou heavenly, new Jerusalem,\nVision of peace in prophet's dream!\nWith living stones built up on high,\nAnd rising to yon starry sky;\nIn bridal pomp thy form is crowned,\nWith thousand thousand angels round!\n\nO bride, betrothed in happy hour,\nThe Father's glory is thy dower;\nThe bridegroom's grace is shed on thee\nThou queen all fair eternally;\nTo Christ allied, thy Prince adored,\nBright shining city of the Lord!\n\nBehold with pearls they glittering stand\nthy peaceful gates to all expand;\nBy grace and strength divinely shed\nEach mortal thither may be led;\nWho, kindled by Christ's love, will dare\nAll earthly sufferings now to bear.\n\nBy many a salutary stroke,\nBy many a weary blow that broke,\nOr polished with a workman's skill,\nThe stones that form that glorious pile,\nThey all are fitly framed to lie\nIn their appointed place on high.\n\nFair and well pleasing in thy sight,\nParent most high, enthroned in light,\nAnd for thine only Son most meet,\nAnd thee, all-glorious Paraclete,\nTo whom praise, power, and glory rise\nForever through the eternal skies.\nAmen.",
       "lat": "Cæléstis urbs Jerúsalem,\nBeáta pacis vísio,\nQuæ celsa de vivéntibus\nSaxis ad astra tólleris,\nSponsǽque ritu cíngeris\nMille Angelórum míllibus.\nO sorte nupta próspera,\nDotáta Patris glória,\nRespérsa Sponsi grátia,\nRegína formosíssima,\nChristo jugáta Príncipi,\nCæli corúsca cívitas.\nHic margarítis émicant,\nPaténtque cunctis óstia;\nVirtúte namque prǽvia\nMortális illuc dúcitur,\nAmóre Christi pércitus\nTorménta quisquis sústinet.\nScalpri salúbris íctibus\nEt tunsióne plúrima,\nFabri políta málleo\nHanc saxa molem cónstruunt,\nAptísque juncta néxibus\nLocántur in fastígio.\nDecus Parénti débitum\nSit usquequáque Altíssimo,\nNatóque Patris único,\nEt ínclito Paráclito,\nCui laus, potéstas, glória\nÆtérna sit per sǽcula.\nAmen.",
       "type": "hymn",
       "variationKey": "hymnus_matutinum"
