@@ -47140,7 +47140,8 @@
     "versum_0": {
       "lat": "V. Valde honorándus est beátus Joánnes.\nR. Qui supra pectus Dómini in cena recúbuit.",
       "type": "vr",
-      "variationKey": "versum_0"
+      "variationKey": "versum_0",
+      "eng": "V. Right worthy of honour is blessed John.\nR. Who leaned on the Lord's breast at supper."
     },
     "ant_laudes": {
       "lat": "Valde honorándus est * beátus Joánnes, qui supra pectus Dómini in cena recúbuit.\nHic est discípulus ille * qui testimónium pérhibet de his: et scimus quia verum est testimónium ejus.\nHic est discípulus meus: * sic eum volo manére, donec véniam.\nSunt de hic stántibus, * qui non gustábunt mortem, donec vídeant Fílium hóminis in regno suo.\nEcce puer meus, * eléctus, quem elégi, pósui super eum Spíritum meum.",
@@ -47198,7 +47199,8 @@
     "versum_3": {
       "lat": "V. Valde honorándus est beátus Joánnes.\nR. Qui supra pectus Dómini in cena recúbuit.",
       "type": "vr",
-      "variationKey": "versum_3"
+      "variationKey": "versum_3",
+      "eng": "V. Right worthy of honour is blessed John.\nR. Who leaned on the Lord's breast at supper."
     },
     "ant_3": {
       "lat": "Exiit * sermo inter fratres, quod discípulus ille non móritur; et non dixit Jesus, Non móritur: sed, Sic eum volo manére, donec véniam.",

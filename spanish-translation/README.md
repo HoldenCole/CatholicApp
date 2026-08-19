@@ -257,6 +257,14 @@ so integration cannot silently misalign.
   Assumption Vespers hymn, the three Cabrini hymns), and a dozen
   hagiographies the DO Espanol tree lacks are hand supplements in the
   traditional register.
+  **Fidelity QA (2026-08): `scripts/qa_spanish_fidelity.py`** pairs all
+  31,000+ Spanish fields with their Latin sources on every run (leakage,
+  cross-assignment, alleluia/structure parity, verse banks); it must exit
+  clean before shipping. Its NOPAIR census also surfaced the app's
+  pre-existing Latin-only corpus: 268 fields (163 unique texts — variant
+  hymns, the Duo Séraphim responsory, several pre-1955 octave lesson
+  sets) that have neither English nor Spanish. Translating that corpus
+  (both languages) is the next tranche.
   **Tranche O8 — the Rosary: COMPLETE (`mysteries_es.json`, all 15
   mysteries with titles, meditations, and fruits; `rosary_prayers_es.json`,
   the 7 constituent prayers in their received Spanish texts, matching
