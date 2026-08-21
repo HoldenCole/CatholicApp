@@ -384,10 +384,39 @@ so integration cannot silently misalign.
   (Sirach, Wisdom, Tobit, Judith) re-translated tier-2 from the Latin
   in the TA register, matching the readings_deutero precedent.
   Identical Latin now carries identical Spanish across every commune
-  variant. Remaining known item: `missal_tempora` `quad6-2`
-  carries a Latin/English Passion stub (heading only) where the Spanish
-  has the full text — a Latin-side data gap outside the translation
-  overlay's scope.
+  variant.
+
+  **Tranche O12 — the perfection pass: COMPLETE.** (1) The `quad6-2`
+  (Tuesday in Holy Week) St Mark Passion stub was filled on the
+  Latin/English side from the DO missa sources, closing the last known
+  received-text gap. (2) All 155 psalm-quoting Office antiphons were
+  hand-checked against the Spanish Psalter; ~30 fixed (wrong text on
+  adv2-5, Ps 132/138/100 antiphon rebasing, typos Síón/permaecerá/
+  suplica, register drift). (3) A heading scan (evangelist + homily
+  author) caught and fixed quadp3-6 (Marcum ≠ "según San Mateo"), the
+  08-14 lectio pair (gospel-only text missing its heading and homily),
+  and 08-19bmv (a Damascene sermon standing in for the Latin's St
+  Bernard — retranslated). (4) All 64 proper-name-bearing biography
+  lessons were hand-verified against their Latin; 24 sites fixed,
+  including two complete pericope mismatches retranslated (06-28t
+  Matins lesson 7: the ES carried Matt 10 + Irenaeus where the Latin
+  has the Matt 25 talents + Gregory homily; missal 02-05 Gospel: the
+  ES carried the ten-virgins pericope where the Latin is Matt 19:3-12
+  — rebased on Torres Amat), a misattributed investiture (01-23), a
+  garbled Bosco paragraph (01-31), wrong pope (02-23r León XII), wrong
+  diet (04-27 Petricovia), wrong year (08-21: 1641), wrong month
+  (11-04: noviembre), wrong age (07-20: 56), a genealogy that skipped
+  Isaac (05-01c + pasc2-3), missing canonization sentences (06-17r,
+  07-21r), a truncated Augustine lesson completed (05-01c), the
+  "de Jerusalén" dropped from the 10x-2 responsories, and typos
+  (Jeerónimo, Jerasalén, "dos filtros"→filos, aparecio). (5) A final
+  macro sweep over the LATIN core found and expanded a residual
+  `&Glória` (08-01r introit) and stripped a `[Capitulum Laudes]`
+  DO cross-reference rubric from 01-12o lectio9. (6) The audit
+  heuristics were promoted into `scripts/qa_spanish_fidelity.py` as
+  re-runnable checks: HEAD (evangelist/author heading fidelity) and
+  GLORIA (word-boundary doxology parity) are hard; STAR (flex-marker
+  count) is advisory.
 
 With this, EVERY content surface of the app outside the Divine Office
 corpus carries Spanish. What remains is the Office (multi-MB; see

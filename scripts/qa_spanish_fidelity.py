@@ -20,6 +20,9 @@ Hard checks (nonzero exit when they fire):
   DUP       identical Spanish on two different Latin fields of one day
   ALLELUIA  "aleluya" present/absent against the Latin's "allelúja"
   STRUCT    responsory/versicle R./V./* line structure differs
+  HEAD      lesson heading names a different evangelist/author than
+            the Latin (the O12 heading scan, kept re-runnable)
+  GLORIA    "Glória Patri" present in one language, absent in the other
 
 Advisory (printed, never fatal):
   NOPAIR    a long Latin field with no English AND no Spanish — the
@@ -90,6 +93,35 @@ def en_hits(es):
     return [t for t in (w.lower() for w in EN_RE.findall(es) if w.isascii())
             if t in EN_STRONG]
 
+EVANG_LAT = {"matthaeum": "mateo", "marcum": "marcos",
+             "lucam": "lucas", "ioannem": "iuan"}
+AUTH_PAIRS = [  # heading author (folded Latin genitive → folded Spanish)
+    ("bernardini", "bernardino"), ("bernardi", "bernardo"),
+    ("chrysostomi", "crisostomo"), ("hieronymi", "ieronimo"),
+    ("gregorii", "gregorio"), ("augustini", "agustin"),
+    ("ambrosii", "ambrosio"), ("hilarii", "hilario"),
+    ("damasceni", "damasceno"), ("leonis", "leon"), ("bedae", "beda"),
+]
+
+def head_checks(file, key, lat, es):
+    """Lesson-heading fidelity: evangelist and homily-author names."""
+    latf = fold("\n".join(lat.split("\n")[:2]))
+    esf = fold("\n".join(es.split("\n")[:3]))
+    m = re.search(r"secundum (matthaeum|marcum|lucam|ioannem)", latf)
+    if m:
+        got = re.search(r"segun (?:san )?(mateo|marcos|lucas|iuan)", esf)
+        if got and got.group(1) != EVANG_LAT[m.group(1)]:
+            flag("HEAD", file, key,
+                 f"lat secundum {m.group(1)} :: es según {got.group(1)}")
+    if re.search(r"\b(homilia|sermo|sermone|tractatu) (sancti|beati)\b", latf):
+        for lt, st in AUTH_PAIRS:
+            if re.search(rf"\b{lt}\b", latf):
+                if not re.search(rf"\b{st}\b", esf):
+                    flag("HEAD", file, key,
+                         f"lat author {lt}, es heading lacks {st} :: "
+                         f"{es.split(chr(10))[0][:60]}")
+                break
+
 VNUM_RE = re.compile(r"^(\d+:\d+[a-c]?)\s")
 ART_RE = re.compile(r"[&@]|(?<!\.)\.\.(?!\.)| {2,}| [;:,.!?](?!\.)")
 
@@ -156,6 +188,21 @@ def check_pair(file, key, lat, es, tier="normal"):
         if marker_shape(lat) != marker_shape(es):
             flag("STRUCT", file, key,
                  f"lat {marker_shape(lat)} es {marker_shape(es)} :: {es[:60]}")
+    if "\n" in lat:
+        head_checks(file, key, lat, es)
+    if tier == "normal" and file not in ("prayers", "psalter") \
+            and not lat.startswith("$"):
+        latf, esf = fold(lat), fold(es)
+        # word-boundary: the genitive "in glória Patris sui" is not a doxology
+        lat_gp = bool(re.search(r"\bgloria patri\b", latf))
+        es_gp = bool(re.search(r"\bgloria al padre\b", esf))
+        if lat_gp != es_gp:
+            flag("GLORIA", file, key,
+                 f"lat {'has' if lat_gp else 'lacks'} Glória Patri :: {es[-70:]}")
+        # advisory: translations legitimately move/split the flex marker
+        if lat.count("*") and lat.count("*") != es.count("*"):
+            flag("STAR", file, key,
+                 f"lat {lat.count('*')}* es {es.count('*')}* :: {es[:60]}")
     if len(lat) > 40:
         groups[fold(lat).strip()].append((f"{file} {key}", es))
     if tier != "skip-cog":
@@ -435,7 +482,7 @@ def main():
         print(f"  {f:18} {n}")
     print()
     HARD = ("EMPTY", "LEAK-EN", "LEAK-LA", "VNUM", "BANK", "DUP",
-            "ALLELUIA", "STRUCT", "ART", "MISSING")
+            "ALLELUIA", "STRUCT", "ART", "MISSING", "HEAD", "GLORIA")
     failed = False
     for check in HARD:
         items = flags[check]
@@ -445,6 +492,14 @@ def main():
         if items:
             failed = True
         print()
+
+    st = flags["STAR"]
+    print(f"== STAR (advisory): {len(st)} fields where the inline * flex-marker")
+    print("   count differs from the Latin's — translations legitimately move")
+    print("   or split the flex, so triage by hand after an import.")
+    for f, k, d in st[:args.show]:
+        print(f"   [{f}] {k}: {d}")
+    print()
 
     np = flags["NOPAIR"]
     print(f"== NOPAIR (advisory): {len(np)} fields display Latin-only in BOTH")
