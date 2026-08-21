@@ -349,6 +349,37 @@ so integration cannot silently misalign.
   today, so they have no Spanish side; if a table renderer is added,
   translate the rows then.)
 
+  **Tranche O11a — received-text accuracy audit: COMPLETE.** A semantic
+  fidelity audit over the received corpus (length-ratio outliers, Gloria
+  parity, proper-name presence, marker anomalies, worst-cognate review,
+  and a Torres-Amat-similarity classifier) found and fixed: ~49 embedded
+  import artifacts (`[Responsory8] (rubrica cisterciensis)` headers,
+  appended `[Commemoratio]` blocks not present in the Latin); 61 literal
+  `&Gloria` macros in the LATIN/ENGLISH core fields (displayed raw — now
+  expanded on both platforms) and 84 missing Spanish Gloria Patri lines
+  in third-of-nocturn responsories; the nine Tenebrae Lamentations
+  lessons rebased on Torres Amat (the received text carried the modern
+  "Yahvé" register); the Isaiah-53 family (Palm-Sunday-week responsory,
+  Sacred-Heart antiphon, capitula) restored to TA phrasing ("llagado por
+  nuestras iniquidades / con sus llagas hemos sido sanados"); two
+  `ustedes` lessons moved to the vosotros register; six untranslated
+  Latin fields translated (05-23, 08-18bmv, 09-26n ×3, 12-12n); nine
+  wrong-text fields replaced (a Nativity-of-Mary antiphon on the walls
+  of Jerusalem, the Advent None antiphon ×7, the 01-12t Magi gospel in
+  a Holy-Family Office, the Cabrini collect, the 12-25 Sext brief
+  responsory, shifted patristic lesson portions at 01-02/pent02-0o/
+  pent04-0o/08-22cc/11-18o/06-22t/epi1-0a/05-03t); the 07-21 missal
+  epistle corrected to the 1 Cor 7 pericope its Latin carries (English
+  side too); brief-responsory star markers normalized; the hours' Pater
+  opening blocks completed with the Ave and Credo; and assorted missing
+  clauses (Acts intros, "José, hijo de David", St Andrew's name).
+  Known deferred items: the modern-register capitula corpus (~150
+  unique texts across commune/temporal/sanctoral) is queued for a
+  Torres-Amat rebase as tranche O11b, and `missal_tempora` `quad6-2`
+  carries a Latin/English Passion stub (heading only) where the Spanish
+  has the full text — a Latin-side data gap outside the translation
+  overlay's scope.
+
 With this, EVERY content surface of the app outside the Divine Office
 corpus carries Spanish. What remains is the Office (multi-MB; see
 below).
