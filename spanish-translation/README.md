@@ -373,9 +373,18 @@ so integration cannot silently misalign.
   side too); brief-responsory star markers normalized; the hours' Pater
   opening blocks completed with the Ave and Credo; and assorted missing
   clauses (Acts intros, "José, hijo de David", St Andrew's name).
-  Known deferred items: the modern-register capitula corpus (~150
-  unique texts across commune/temporal/sanctoral) is queued for a
-  Torres-Amat rebase as tranche O11b, and `missal_tempora` `quad6-2`
+  **Tranche O11b — the capitula rebase: COMPLETE.** All ~220 unique
+  capitulum / lectio_prima texts (flat `capitulum_*` keys AND the
+  hour-dotted `tertia.capitulum` shapes — 411 fields in total) were
+  classified against Torres Amat with a similarity scorer; every text
+  carrying the modern Liturgia-de-las-Horas register was rebased —
+  protocanonical passages addressed verse-exactly through the KJV
+  versification index over the TA module (with the Vulgate/KJV shifts
+  resolved by eyeball per book), and the deuterocanonical capitula
+  (Sirach, Wisdom, Tobit, Judith) re-translated tier-2 from the Latin
+  in the TA register, matching the readings_deutero precedent.
+  Identical Latin now carries identical Spanish across every commune
+  variant. Remaining known item: `missal_tempora` `quad6-2`
   carries a Latin/English Passion stub (heading only) where the Spanish
   has the full text — a Latin-side data gap outside the translation
   overlay's scope.
