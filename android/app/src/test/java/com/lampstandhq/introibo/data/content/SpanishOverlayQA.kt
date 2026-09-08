@@ -65,7 +65,7 @@ class SpanishOverlayQA {
         // Staging only exists in the repo checkout; skip quietly elsewhere.
         if (!staging.isDirectory) return
         for (name in listOf(
-            "prayers_es.json", "marian_antiphons_es.json", "hours_es.json",
+            "prayers_es.json", "marian_antiphons_es.json", "martyrology_es.json", "hours_es.json",
             "missal_es.json", "canon_variants_es.json", "ordo_names_es.json",
             "ui_strings_es.json", "missal_propers_es.json",
             "missal_readings_es.json", "stations_es.json", "saints_es.json",

@@ -20,6 +20,7 @@ final class ContentStore {
     private(set) var stations:       [Station]             = []
     private(set) var hours:          [Hour]                = []
     private(set) var marianAntiphons:[MarianAntiphonData]  = []
+    private(set) var martyrology:    MartyrologyData?      = nil
     private(set) var examen:         [ExamenEntry]         = []
     private(set) var confessionGuides:[ConfessionGuide]    = []
     private(set) var propers:         [MassProper]          = []
@@ -55,6 +56,7 @@ final class ContentStore {
         stations          = load("stations",           as: [Station].self)             ?? []
         hours             = load("hours",              as: [Hour].self)                ?? []
         marianAntiphons   = load("marian_antiphons",   as: [MarianAntiphonData].self)  ?? []
+        martyrology       = load("martyrology",        as: MartyrologyData.self)
         examen            = load("confession_examen", as: [ExamenEntry].self)          ?? []
         confessionGuides  = load("confession_guides", as: [ConfessionGuide].self)      ?? []
         propers           = load("propers",            as: [MassProper].self)          ?? []
@@ -92,7 +94,8 @@ final class ContentStore {
             seasonalHymns: hymnsSeasonalData,
             temporalPropers: temporalData,
             marianAntiphons: marianAntiphons,
-            psalter: psalterTextData
+            psalter: psalterTextData,
+            martyrology: martyrology
         )
     }
 
@@ -125,6 +128,11 @@ final class ContentStore {
         let collect_es: String?
         let versicle_es_christmas: String?
         let collect_es_christmas: String?
+    }
+    private struct MartyrologyES: Decodable {
+        struct Day: Decodable { let entries_es: [String] }
+        let days: [String: Day]
+        let mobile: [String: String]
     }
     private struct HourES: Decodable {
         let name_es: String
@@ -235,6 +243,7 @@ final class ContentStore {
             prayers         = load("prayers",          as: [Prayer].self)             ?? []
             hours           = load("hours",            as: [Hour].self)               ?? []
             marianAntiphons = load("marian_antiphons", as: [MarianAntiphonData].self) ?? []
+            martyrology     = load("martyrology",      as: MartyrologyData.self)
             missal          = load("missal",           as: [MissalSection].self)      ?? []
             canonVariants   = load("canon_variants",   as: [String: [String: [String: String]]].self) ?? [:]
             ordoNamesEn     = load("ordo_names_en",    as: [String: String].self) ?? [:]
@@ -598,6 +607,18 @@ final class ContentStore {
                 return m
             }
         }
+        if var m = martyrology, let es = load("martyrology_es", as: MartyrologyES.self) {
+            for (key, day) in es.days {
+                guard var d = m.days[key], d.entries.count == day.entries_es.count else { continue }
+                for i in d.entries.indices { d.entries[i].eng = day.entries_es[i] }
+                m.days[key] = d
+            }
+            for (key, text) in es.mobile {
+                m.mobile[key]?.eng = text
+            }
+            m.vernacular = "es"
+            martyrology = m
+        }
         if let es = load("hours_es", as: [String: HourES].self) {
             hours = hours.map { h in
                 guard let o = es[h.slug] else { return h }
@@ -742,7 +763,8 @@ final class ContentStore {
             return p
         }
 
-        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite, fallbackCollect: fallbackCollect, officeIsFerial: ferialOffice)
+        let primeMartyrology = UserDefaults.standard.object(forKey: SettingsKey.primeMartyrology) as? Bool ?? true
+        var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite, fallbackCollect: fallbackCollect, officeIsFerial: ferialOffice, primeMartyrology: primeMartyrology)
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -969,7 +991,7 @@ final class ContentStore {
             // Prime and Compline collects are invariable: never let a
             // type-keyed "collect" override reach them.
             if part.type == "collect", let collect = overrides["collect"],
-               !OfficeAssembler.invariableCollectKeys.contains(key) {
+               !OfficeAssembler.isInvariableCollectKey(key) {
                 return collect
             }
             return part

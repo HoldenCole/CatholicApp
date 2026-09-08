@@ -307,6 +307,24 @@ def main():
                            lat or "", v, "skip-cog")
                 bank_check("psalter_weekly", f"{day}.{fk}[{i}]", lat or "", v)
 
+    # ---- martyrology (Prime's Chapter Office) ----
+    msrc = load("martyrology.json")
+    mes = load("martyrology_es.json")
+    for key, day in msrc["days"].items():
+        lines = (mes["days"].get(key) or {}).get("entries_es") or []
+        for i, e in enumerate(day["entries"]):
+            es_line = lines[i] if i < len(lines) else ""
+            if not es_line.strip():
+                flag("MISSING", "martyrology", f"{key}[{i}]", e["lat"][:60])
+                continue
+            check_pair("martyrology", f"{key}[{i}]", e["lat"], es_line)
+    for key, e in msrc["mobile"].items():
+        es_line = mes["mobile"].get(key) or ""
+        if not es_line.strip():
+            flag("MISSING", "martyrology", f"mobile.{key}", e["lat"][:60])
+        else:
+            check_pair("martyrology", f"mobile.{key}", e["lat"], es_line)
+
     # ---- psalter weekly: part-level ferial cursus (tranche O10) ----
     src = load("psalter_weekly.json")
     pw_parts = load("psalter_weekly_parts_es.json")

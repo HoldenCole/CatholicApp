@@ -40,6 +40,7 @@ class SettingsRepository(private val context: Context) {
         val TEXT_DARKNESS = floatPreferencesKey(SettingsKey.TEXT_DARKNESS)
         val SHOW_LEONINE_PRAYERS = booleanPreferencesKey(SettingsKey.SHOW_LEONINE_PRAYERS)
         val SHOW_UPCOMING_FEASTS = booleanPreferencesKey(SettingsKey.SHOW_UPCOMING_FEASTS)
+        val PRIME_MARTYROLOGY = booleanPreferencesKey(SettingsKey.PRIME_MARTYROLOGY)
         val VERNACULAR_LANG = stringPreferencesKey(SettingsKey.VERNACULAR_LANG)
     }
 
@@ -92,6 +93,11 @@ class SettingsRepository(private val context: Context) {
         prefs[PrefsKeys.SHOW_UPCOMING_FEASTS] ?: false
     }
 
+    /** Read the Martyrology in the second part of Prime. On by default. */
+    val primeMartyrology: Flow<Boolean> = context.settingsDataStore.data.map { prefs ->
+        prefs[PrefsKeys.PRIME_MARTYROLOGY] ?: true
+    }
+
     // -----------------------------------------------------------------------
     // Mutations
     // -----------------------------------------------------------------------
@@ -134,5 +140,9 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setShowUpcomingFeasts(show: Boolean) {
         context.settingsDataStore.edit { it[PrefsKeys.SHOW_UPCOMING_FEASTS] = show }
+    }
+
+    suspend fun setPrimeMartyrology(on: Boolean) {
+        context.settingsDataStore.edit { it[PrefsKeys.PRIME_MARTYROLOGY] = on }
     }
 }

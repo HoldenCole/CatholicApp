@@ -91,6 +91,7 @@ fun SettingsScreen(
     val fontScale by settingsRepo.fontScale.collectAsState(initial = FontSizeScale.DEFAULT_VALUE)
     val fontRange by settingsRepo.fontRange.collectAsState(initial = FontRange.NORMAL)
     val showLeonine by settingsRepo.showLeoninePrayers.collectAsState(initial = true)
+    val primeMartyrology by settingsRepo.primeMartyrology.collectAsState(initial = true)
     val showUpcoming by settingsRepo.showUpcomingFeasts.collectAsState(initial = false)
     val vernacular by settingsRepo.vernacularLanguage.collectAsState(initial = VernacularLanguage.ENGLISH)
 
@@ -189,6 +190,45 @@ fun SettingsScreen(
                 }
                 SettingsSectionFooter(
                     text = ContentStore.uiString("settings.leonine.footer", "The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice."),
+                )
+            }
+
+            // ---- Prime Section ----
+            item {
+                SettingsSectionHeader(title = "Prima · " + ContentStore.uiString("settings.header.prime", "Prime"))
+            }
+            item {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 10.dp),
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = ContentStore.uiString("settings.prime.martyrology", "Read the Martyrology at Prime"),
+                            style = type.body,
+                            color = colors.primaryText,
+                        )
+                        Text(
+                            text = ContentStore.uiString("settings.prime.martyrology_sub", "The Roman Martyrology for the morrow, with the Luna"),
+                            style = type.captionSm,
+                            color = colors.secondaryText,
+                        )
+                    }
+                    Switch(
+                        checked = primeMartyrology,
+                        onCheckedChange = { checked ->
+                            scope.launch { settingsRepo.setPrimeMartyrology(checked) }
+                        },
+                        colors = SwitchDefaults.colors(
+                            checkedThumbColor = colors.sanctuaryRed,
+                            checkedTrackColor = colors.sanctuaryRed.copy(alpha = 0.3f),
+                        ),
+                    )
+                }
+                SettingsSectionFooter(
+                    text = ContentStore.uiString("settings.prime.footer", "Prime's second part (the Chapter Office) opens with the Martyrology. It may be omitted in private recitation; the Pretiósa, the blessing for the day's work and the short lesson are always said."),
                 )
             }
 

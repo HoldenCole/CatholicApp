@@ -6,6 +6,8 @@ import com.lampstandhq.introibo.data.liturgical.MarianAntiphon
 import com.lampstandhq.introibo.data.liturgical.isEmberDay
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.MarianAntiphonData
+import com.lampstandhq.introibo.data.model.MartyrologyData
+import com.lampstandhq.introibo.data.model.MartyrologyLuna
 import com.lampstandhq.introibo.storage.settings.MissalRite
 
 /**
@@ -20,6 +22,8 @@ class OfficeAssembler(
     internal val temporalPropers: Map<String, Map<String, Hour.Part>> = emptyMap(),
     private val marianAntiphons: List<MarianAntiphonData>,
     private val psalter: Map<String, Map<String, List<String>>> = emptyMap(),
+    /** The Martyrology read in the second part of Prime (null = not bundled). */
+    private val martyrology: MartyrologyData? = null,
 ) {
     // On feasts (Semiduplex and above, rank >= 2.0), Lauds and Vespers use
     // the festal psalm scheme baked into the hour template rather than the
@@ -55,7 +59,7 @@ class OfficeAssembler(
         "laudes", "vesperae", "prima", "tertia", "sexta", "nona", "completorium",
     )
 
-    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962, fallbackCollect: Hour.Part? = null, officeIsFerial: Boolean = true): Hour {
+    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962, fallbackCollect: Hour.Part? = null, officeIsFerial: Boolean = true, primeMartyrology: Boolean = true): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
         // Pre-Lent (Septuagesima..Quinquagesima) keeps the per-annum
         // ordinarium — the season flag may still say "christmas" (Christmas
@@ -176,11 +180,28 @@ class OfficeAssembler(
             part
         }
 
-        val assembledParts = mappedParts.flatMap { part ->
+        var assembledParts = mappedParts.flatMap { part ->
             if (part.type == "marian" && part.variationKey != null) {
                 marianParts(context.marian, context.season, fallback = part)
             } else {
                 listOf(part)
+            }
+        }
+
+        // Prime's Chapter Office: the Martyrology for the morrow (with its
+        // Luna and any movable-feast announcement), which may be omitted in
+        // private recitation; and the 1960 "Jube, Dómine" vs the older
+        // "Jube, domne" before the Dies et actus blessing.
+        if (template.slug == "prima") {
+            val text = if (primeMartyrology) martyrologyText(context, rite) else null
+            assembledParts = assembledParts.mapNotNull { part ->
+                when (part.variationKey) {
+                    "prima2.heading" -> if (text != null) part else null
+                    "prima2.martyrologium" -> if (text != null) part.copy(lat = text.first, eng = text.second) else null
+                    "prima2.benedictio1" -> if (rite != MissalRite.RITE_1962)
+                        part.copy(lat = part.lat?.replace("Jube, Dómine", "Jube, domne")) else part
+                    else -> part
+                }
             }
         }
 
@@ -643,6 +664,38 @@ class OfficeAssembler(
         LiturgicalSeason.PER_ANNUM -> "ordinary"
     }
 
+    /**
+     * The Martyrology read at Prime of [context]'s date: the entry for the
+     * following day (as in choir), headed by the Roman date and the age of
+     * the moon, preceded by the movable-feast announcement when tomorrow's
+     * temporal day has one, and closed with "Et álibi…". The vernacular
+     * column follows [MartyrologyData.vernacular].
+     */
+    private fun martyrologyText(context: LiturgicalContext, rite: MissalRite): Pair<String, String>? {
+        val data = martyrology ?: return null
+        val tomorrow = context.date.plusDays(1)
+        val y = tomorrow.year; val m = tomorrow.monthValue; val d = tomorrow.dayOfMonth
+        val day = data.days[String.format("%02d-%02d", m, d)] ?: return null
+        val spanish = data.vernacular == "es"
+        val luna = MartyrologyLuna.lunarAge(m, d, y)
+        val mobileKey = LiturgicalContext.forDate(tomorrow, rite = rite).temporalKey?.lowercase()
+        val mobile = mobileKey?.let { data.mobile[it] }
+
+        val lat = mutableListOf(day.title + (luna?.let { " Luna ${MartyrologyLuna.latinOrdinals[it - 1]}." } ?: "") + " Anno Dómini $y.")
+        val eng = mutableListOf(
+            if (spanish) "$d de ${MartyrologyLuna.spanishMonths[m - 1]} de $y" + (luna?.let { ", luna ${MartyrologyLuna.spanishOrdinals[it - 1]}." } ?: ".")
+            else "${MartyrologyLuna.englishMonths[m - 1]} ${MartyrologyLuna.englishOrdinal(d)}, $y" + (luna?.let { ", the ${MartyrologyLuna.englishOrdinal(it)} day of the Moon." } ?: ".")
+        )
+        if (mobile != null) { lat += mobile.lat; eng += mobile.eng }
+        for (e in day.entries) { lat += e.lat; eng += e.eng }
+        lat += "℣. Et álibi aliórum plurimórum sanctórum Mártyrum et Confessórum, atque sanctárum Vírginum.\n℟. Deo grátias."
+        eng += if (spanish)
+            "℣. Y en otras partes, otros muchos santos Mártires y Confesores, y santas Vírgenes.\n℟. Demos gracias a Dios."
+        else
+            "℣. And elsewhere many other holy Martyrs and Confessors, and holy Virgins.\n℟. Thanks be to God."
+        return lat.joinToString("\n") to eng.joinToString("\n")
+    }
+
     private fun marianParts(
         antiphon: MarianAntiphon,
         season: LiturgicalSeason,
@@ -979,6 +1032,11 @@ class OfficeAssembler(
         val INVARIABLE_COLLECT_KEYS = setOf(
             "oratio_prima", "oratio_completorium", "completorium.marian.oratio",
         )
+
+        /** The invariable collects plus everything in Prime's Chapter Office
+         *  (keys `prima2.*`): no day, season or commune layer may replace them. */
+        fun isInvariableCollectKey(key: String?): Boolean =
+            key != null && (key in INVARIABLE_COLLECT_KEYS || key.startsWith("prima2."))
 
         /** Weekday-psalter keys that belong to the FERIAL office only. */
         private val FERIAL_ONLY_DAY_KEYS = setOf(

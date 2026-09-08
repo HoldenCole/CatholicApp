@@ -1719,13 +1719,8 @@
     "minute": 0,
     "glyph": "I",
     "order": 3,
-    "intro": "The first daylight hour, sanctifying the day's work. A short office of psalms and a chapter reading. Sunday psalter.",
+    "intro": "The first daylight hour, sanctifying the day's work. Psalms and a chapter reading, then the Chapter Office: the Martyrology for the morrow, the Pretiósa, and the blessing for the day's labours.",
     "parts": [
-      {
-        "type": "special",
-        "label": "Special Prime",
-        "variationKey": "special_prima"
-      },
       {
         "type": "pater",
         "label": "Pater Noster, Ave María, Credo",
@@ -1994,24 +1989,18 @@
       },
       {
         "type": "vr",
-        "label": "Versicle",
-        "lat": "℣. Christe, Fili Dei vivi, miserére nobis.",
-        "eng": "℣. Christ, Son of the living God, have mercy on us.",
-        "latR": "℟. Christe, Fili Dei vivi, miserére nobis.",
-        "engR": "℟. Christ, Son of the living God, have mercy on us.",
+        "label": "Versus",
+        "lat": "℣. Exsúrge, Christe, ádjuva nos.",
+        "eng": "℣. Arise, O Christ, and help us.",
+        "latR": "℟. Et líbera nos propter nomen tuum.",
+        "engR": "℟. And deliver us for Thy name's sake.",
         "variationKey": "versum_prima"
-      },
-      {
-        "type": "reading",
-        "label": "Lectio Brevis",
-        "variationKey": "lectio_prima"
       },
       {
         "type": "pater",
         "lat": "Pater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris. Et ne nos indúcas in tentatiónem, sed líbera nos a malo. Amen.",
         "eng": "Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
-        "label": "Pater Noster",
-        "rubric": "Said silently."
+        "label": "Pater Noster"
       },
       {
         "type": "collect",
@@ -2025,6 +2014,99 @@
         "label": "Conclusion",
         "lat": "Benedicámus Dómino. Deo grátias.",
         "eng": "Let us bless the Lord. Thanks be to God."
+      },
+      {
+        "type": "heading",
+        "label": "Martyrológium",
+        "variationKey": "prima2.heading"
+      },
+      {
+        "type": "reading",
+        "label": "Martyrológium",
+        "variationKey": "prima2.martyrologium",
+        "lat": "",
+        "eng": ""
+      },
+      {
+        "type": "vr",
+        "label": "Versus",
+        "variationKey": "prima2.pretiosa",
+        "lat": "℣. Pretiósa in conspéctu Dómini.",
+        "eng": "℣. Precious in the sight of the Lord.",
+        "latR": "℟. Mors Sanctórum ejus.",
+        "engR": "℟. Is the death of His saints."
+      },
+      {
+        "type": "collect",
+        "label": "Oratio",
+        "variationKey": "prima2.sanctamaria",
+        "lat": "Sancta María et omnes Sancti intercédant pro nobis ad Dóminum, ut nos mereámur ab eo adjuvári et salvári, qui vivit et regnat in sǽcula sæculórum. ℟. Amen.",
+        "eng": "Holy Mary and all the Saints intercede for us with the Lord, that we may deserve to be helped and saved by Him, who liveth and reigneth for ever and ever. ℟. Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Versus",
+        "variationKey": "prima2.deusinadjutorium",
+        "lat": "℣. Deus, in adjutórium meum inténde.\n℟. Dómine, ad adjuvándum me festína.\n℣. Deus, in adjutórium meum inténde.\n℟. Dómine, ad adjuvándum me festína.\n℣. Deus, in adjutórium meum inténde.\n℟. Dómine, ad adjuvándum me festína.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "℣. O God, come to my assistance.\n℟. O Lord, make haste to help me.\n℣. O God, come to my assistance.\n℟. O Lord, make haste to help me.\n℣. O God, come to my assistance.\n℟. O Lord, make haste to help me.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Pater Noster",
+        "variationKey": "prima2.pater",
+        "lat": "Kýrie, eléison. Christe, eléison. Kýrie, eléison.\nPater noster, qui es in cælis, sanctificétur nomen tuum. Advéniat regnum tuum. Fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie, et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris.\n℣. Et ne nos indúcas in tentatiónem.\n℟. Sed líbera nos a malo.",
+        "eng": "Lord, have mercy. Christ, have mercy. Lord, have mercy.\nOur Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth, as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us.\n℣. And lead us not into temptation.\n℟. But deliver us from evil."
+      },
+      {
+        "type": "vr",
+        "label": "Versus",
+        "variationKey": "prima2.respice",
+        "lat": "℣. Réspice in servos tuos, Dómine, et in ópera tua, et dírige fílios eórum.\n℟. Et sit splendor Dómini Dei nostri super nos, et ópera mánuum nostrárum dírige super nos, et opus mánuum nostrárum dírige.\n℣. Glória Patri, et Fílio, et Spirítui Sancto.\n℟. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "℣. Look upon Thy servants, O Lord, and upon Thy works, and direct their children.\n℟. And let the brightness of the Lord our God be upon us; direct Thou the works of our hands over us, yea, the work of our hands do Thou direct.\n℣. Glory be to the Father, and to the Son, and to the Holy Ghost.\n℟. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      },
+      {
+        "type": "collect",
+        "label": "Orémus",
+        "variationKey": "prima2.oratio",
+        "lat": "Dirígere et sanctificáre, régere et gubernáre dignáre, Dómine Deus, Rex cæli et terræ, hódie corda et córpora nostra, sensus, sermónes et actus nostros in lege tua, et in opéribus mandatórum tuórum: ut hic et in ætérnum, te auxiliánte, salvi et líberi esse mereámur, Salvátor mundi: Qui vivis et regnas in sǽcula sæculórum. ℟. Amen.",
+        "eng": "Vouchsafe, O Lord God, King of heaven and earth, to direct and sanctify, to rule and govern this day our hearts and bodies, our senses, words and deeds, in Thy law and in the works of Thy commandments: that here and for ever, by Thy help, we may deserve to be saved and free, O Saviour of the world: Who livest and reignest for ever and ever. ℟. Amen."
+      },
+      {
+        "type": "vr",
+        "label": "Benedíctio",
+        "variationKey": "prima2.benedictio1",
+        "lat": "℣. Jube, Dómine, benedícere.\nBenedíctio. Dies et actus nostros in sua pace dispónat Dóminus omnípotens.\n℟. Amen.",
+        "eng": "℣. Pray, Lord, a blessing.\nBlessing. May the Lord Almighty order our days and our deeds in His peace.\n℟. Amen."
+      },
+      {
+        "type": "reading",
+        "label": "Lectio Brevis",
+        "variationKey": "lectio_prima"
+      },
+      {
+        "type": "vr",
+        "label": "Versus",
+        "variationKey": "prima2.tuautem",
+        "lat": "℣. Tu autem, Dómine, miserére nobis.",
+        "eng": "℣. But Thou, O Lord, have mercy on us.",
+        "latR": "℟. Deo grátias.",
+        "engR": "℟. Thanks be to God."
+      },
+      {
+        "type": "vr",
+        "label": "Versus",
+        "variationKey": "prima2.adjutorium",
+        "lat": "℣. Adjutórium nostrum ✠ in nómine Dómini.",
+        "eng": "℣. Our help ✠ is in the name of the Lord.",
+        "latR": "℟. Qui fecit cælum et terram.",
+        "engR": "℟. Who made heaven and earth."
+      },
+      {
+        "type": "closing",
+        "label": "Benedíctio",
+        "variationKey": "prima2.benedictio2",
+        "lat": "Benedíctio. Dóminus nos benedícat, ✠ et ab omni malo deféndat, et ad vitam perdúcat ætérnam.\n℟. Amen.\n℣. Et fidélium ánimæ per misericórdiam Dei requiéscant in pace.\n℟. Amen.",
+        "eng": "Blessing. May the Lord bless us, ✠ and keep us from all evil, and bring us to life everlasting.\n℟. Amen.\n℣. And may the souls of the faithful departed, through the mercy of God, rest in peace.\n℟. Amen."
       }
     ]
   },

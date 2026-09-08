@@ -20,6 +20,7 @@ ASSET_DIRS = [
 FILES = [
     "prayers_es.json",
     "marian_antiphons_es.json",
+    "martyrology_es.json",
     "hours_es.json",
     "missal_es.json",
     "canon_variants_es.json",

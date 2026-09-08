@@ -1526,36 +1526,20 @@
   }
  },
  "prima": {
-  "1": {
+  "0": {
    "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén.\n\nDios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.\n\nCreo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor: que fue concebido por obra del Espíritu Santo, nació de Santa María Virgen; padeció bajo el poder de Poncio Pilato; fue crucificado, muerto y sepultado; descendió a los infiernos; al tercer día resucitó de entre los muertos; subió a los cielos, y está sentado a la diestra de Dios Padre todopoderoso; desde allí ha de venir a juzgar a los vivos y a los muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén."
   },
-  "10": {
-   "eng": "℟.br. Cristo, Hijo de Dios vivo, * ten piedad de nosotros.\n℣. Tú que estás sentado a la diestra del Padre.\n℟. Ten piedad de nosotros.\n℣. Gloria al Padre, y al Hijo, y al Espíritu Santo.\n℟. Cristo, Hijo de Dios vivo, ten piedad de nosotros."
-  },
-  "11": {
-   "eng": "℣. Cristo, Hijo de Dios vivo, ten piedad de nosotros.",
-   "engR": "℟. Cristo, Hijo de Dios vivo, ten piedad de nosotros."
-  },
-  "13": {
-   "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén."
-  },
-  "14": {
-   "eng": "Señor, Dios omnipotente, que nos has concedido llegar al principio de este día: sálvanos hoy con tu virtud; para que en este día no caigamos en ningún pecado, sino que nuestras palabras, pensamientos y obras se dirijan siempre al cumplimiento de tu santa ley. Por nuestro Señor Jesucristo. Amén."
-  },
-  "15": {
-   "eng": "Bendigamos al Señor. Demos gracias a Dios."
-  },
-  "2": {
+  "1": {
    "eng": "Dios mío, ven en mi auxilio.",
    "engR": "Señor, date prisa en socorrerme. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
-  "3": {
+  "2": {
    "eng": "Ya resplandece el lucero;\na Dios pidamos rendidos\nque en el discurso del día\nnos guarde de los malignos.\n\nRefrene y temple la lengua,\nno se oiga voz de litigios;\nponga guarda en nuestros ojos,\nno entre por ellos el vicio.\n\nEl corazón, sin rencilla,\nsea puro en lo más íntimo:\nbebida y comida parcas\nbajen a la carne el brio.\n\nPara que, acabado el día,\nturnando la noche en giro,\npor la abstinencia del mundo\ncantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,\ny a su Unigénito Hijo,\ncon el Espíritu Santo,\nahora y por todos los siglos.\nAmen."
   },
-  "4": {
+  "3": {
    "eng": "Aleluya * aleluya, aleluya."
   },
-  "5": {
+  "4": {
    "verses": [
     "Sálvame, ¡oh Dios!, por tu Nombre, * y defiéndeme con tu poder.",
     "Escucha, ¡oh Dios!, mi oración; * presta oídos a las palabras de mi boca.",
@@ -1566,7 +1550,7 @@
     "Puesto que me has librado de todas las tribulaciones, * y ya mis ojos miran con desprecio a mis enemigos."
    ]
   },
-  "6": {
+  "5": {
    "verses": [
     "Alabad al Señor por ser infinitamente bueno, * por ser eterna su misericordia.",
     "Diga ahora Israel que el Señor es bueno, * y que es eterna su misericordia.",
@@ -1599,7 +1583,7 @@
     "Alabad al Señor por ser infinitamente bueno, * por ser eterna su misericordia."
    ]
   },
-  "7": {
+  "6": {
    "verses": [
     "Bienaventurados los que proceden sin mancilla, * los que caminan según la ley del Señor.",
     "Bienaventurados los que examinan con cuidado los testimonios del Señor o su ley santa; * los que de todo corazón le buscan.",
@@ -1609,7 +1593,7 @@
     "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
-  "8": {
+  "7": {
    "verses": [
     "¿Cómo enmendará el tierno joven su conducta? * Observando tus palabras o preceptos.",
     "Yo te he buscado con todo mi corazón; * no me dejes desviar de tus mandamientos.",
@@ -1619,8 +1603,57 @@
     "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
-  "9": {
+  "8": {
    "eng": "Al Rey de los siglos, inmortal e invisible, al único Dios, honor y gloria por los siglos de los siglos. Amén."
+  },
+  "9": {
+   "eng": "℟.br. Cristo, Hijo de Dios vivo, * ten piedad de nosotros.\n℣. Tú que estás sentado a la diestra del Padre.\n℟. Ten piedad de nosotros.\n℣. Gloria al Padre, y al Hijo, y al Espíritu Santo.\n℟. Cristo, Hijo de Dios vivo, ten piedad de nosotros."
+  },
+  "10": {
+   "eng": "℣. Levántate, Cristo, y ayúdanos.",
+   "engR": "℟. Y líbranos por tu nombre."
+  },
+  "11": {
+   "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén."
+  },
+  "12": {
+   "eng": "Señor, Dios omnipotente, que nos has concedido llegar al principio de este día: sálvanos hoy con tu virtud; para que en este día no caigamos en ningún pecado, sino que nuestras palabras, pensamientos y obras se dirijan siempre al cumplimiento de tu santa ley. Por nuestro Señor Jesucristo. Amén."
+  },
+  "13": {
+   "eng": "Bendigamos al Señor. Demos gracias a Dios."
+  },
+  "16": {
+   "eng": "℣. Preciosa es a los ojos del Señor.",
+   "engR": "℟. La muerte de sus santos."
+  },
+  "17": {
+   "eng": "Santa María y todos los Santos intercedan por nosotros ante el Señor, para que merezcamos ser ayudados y salvados por Aquel que vive y reina por los siglos de los siglos. ℟. Amén."
+  },
+  "18": {
+   "eng": "℣. Dios mío, ven en mi auxilio.\n℟. Señor, date prisa en socorrerme.\n℣. Dios mío, ven en mi auxilio.\n℟. Señor, date prisa en socorrerme.\n℣. Dios mío, ven en mi auxilio.\n℟. Señor, date prisa en socorrerme.\n℣. Gloria al Padre, y al Hijo, y al Espíritu Santo.\n℟. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+  },
+  "19": {
+   "eng": "Señor, ten piedad. Cristo, ten piedad. Señor, ten piedad.\nPadre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores.\n℣. Y no nos dejes caer en la tentación.\n℟. Mas líbranos del mal."
+  },
+  "20": {
+   "eng": "℣. Mira, Señor, a tus siervos y a tus obras, y guía a sus hijos.\n℟. Y descienda sobre nosotros el resplandor del Señor, nuestro Dios; dirige sobre nosotros las obras de nuestras manos, y la obra de nuestras manos dirígela.\n℣. Gloria al Padre, y al Hijo, y al Espíritu Santo.\n℟. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+  },
+  "21": {
+   "eng": "Dígnate, Señor Dios, Rey del cielo y de la tierra, dirigir y santificar, regir y gobernar hoy nuestros corazones y nuestros cuerpos, nuestros sentidos, palabras y actos en la observancia de tu ley y en las obras de tus mandamientos: para que aquí y eternamente merezcamos, con tu auxilio, ser salvos y libres, Salvador del mundo: Tú que vives y reinas por los siglos de los siglos. ℟. Amén."
+  },
+  "22": {
+   "eng": "℣. Dígnate, Señor, dar tu bendición.\nBendición. El Señor todopoderoso disponga en su paz nuestros días y nuestras obras.\n℟. Amén."
+  },
+  "24": {
+   "eng": "℣. Mas tú, Señor, ten piedad de nosotros.",
+   "engR": "℟. Demos gracias a Dios."
+  },
+  "25": {
+   "eng": "℣. Nuestro auxilio ✠ es el nombre del Señor.",
+   "engR": "℟. Que hizo el cielo y la tierra."
+  },
+  "26": {
+   "eng": "Bendición. El Señor nos bendiga, ✠ nos defienda de todo mal y nos lleve a la vida eterna.\n℟. Amén.\n℣. Y las almas de los fieles, por la misericordia de Dios, descansen en paz.\n℟. Amén."
   }
  },
  "sexta": {

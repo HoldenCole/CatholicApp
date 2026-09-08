@@ -418,6 +418,37 @@ so integration cannot silently misalign.
   GLORIA (word-boundary doxology parity) are hard; STAR (flex-marker
   count) is advisory.
 
+  **Tranche P1 — Prime's second part and the Martyrology: COMPLETE.**
+  Prime had ended at *Benedicámus Dómino*; the whole Chapter Office was
+  missing from the data. `hours.json` now carries it in full (the
+  Martyrology slot, Pretiósa, Sancta María et omnes Sancti, the triple
+  Deus in adjutórium, Kýrie + Pater, Réspice, the Dirígere collect,
+  Jube Dómine + Dies et actus, the short lesson in its rubrical place,
+  Tu autem, Adjutórium nostrum, the blessing) with English and Spanish
+  (`hours_parts_es.json`, re-indexed), and two first-part defects were
+  fixed on the way (the versicle after the brief responsory is Exsúrge
+  Christe, not the responsory repeated; the dead `special` slot is
+  gone). A new corpus, `martyrology.json` (1.3 MB), holds the
+  Martyrologium Romanum 1960 for all 366 days (3,209 entries) plus the
+  23 movable-feast announcements; `martyrology_es.json` is its Spanish
+  overlay. Provenance: Latin is DO's Martyrologium1960 verbatim. The
+  vernaculars were built by entry-level alignment against DO's
+  received translations (proper-noun stem matching with
+  transliteration) — English reused 2,609 entries of the old Roman
+  Martyrology translation (bracketed year glosses stripped) and 600 were
+  newly translated in that register; Spanish reused 2,522 entries of
+  the traditional Martirologio where DO's Espanol carried a genuine
+  paragraph (its bare title lines and its 2004-edition paraphrases were
+  rejected) and 687 were newly translated. The assembler reads the
+  entry for the MORROW at Prime (as in choir), prefixes the movable
+  announcement keyed by tomorrow's temporal code, computes the Luna
+  from the Martyrology's own epact tables (a port of DO's specprima.pl,
+  validated against it for 2024–2028) and appends *Et álibi*. A Settings
+  toggle omits the Martyrology reading for private recitation; the rest
+  of the Chapter Office is always said. The validator, sync script and
+  fidelity QA all cover the new files (3,232 pairs, all hard checks
+  clean).
+
 With this, EVERY content surface of the app outside the Divine Office
 corpus carries Spanish. What remains is the Office (multi-MB; see
 below).

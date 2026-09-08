@@ -6,6 +6,8 @@ struct OfficeAssembler {
     let temporalPropers: [String: [String: Hour.Part]]
     let marianAntiphons: [MarianAntiphonData]
     let psalter: [String: [String: [String]]]  // key -> {lat: [verses], eng: [verses]}
+    /// The Martyrology read in the second part of Prime (nil = not bundled).
+    var martyrology: MartyrologyData? = nil
 
     // MARK: - Temporal-propers key translation
     //
@@ -290,6 +292,12 @@ struct OfficeAssembler {
         "oratio_prima", "oratio_completorium", "completorium.marian.oratio",
     ]
 
+    /// The invariable collects plus everything in Prime's Chapter Office
+    /// (keys `prima2.*`): no day, season or commune layer may replace them.
+    static func isInvariableCollectKey(_ key: String) -> Bool {
+        invariableCollectKeys.contains(key) || key.hasPrefix("prima2.")
+    }
+
     /// Weekday-psalter keys that belong to the FERIAL office only; festal
     /// days keep the template defaults until the proper/commune layers apply.
     private static let ferialOnlyDayKeys: Set<String> = [
@@ -326,7 +334,7 @@ struct OfficeAssembler {
         "matutinum.psalm10": "matutinum.antiphon.psalm9",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962, fallbackCollect: Hour.Part? = nil, officeIsFerial: Bool = true) -> Hour {
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962, fallbackCollect: Hour.Part? = nil, officeIsFerial: Bool = true, primeMartyrology: Bool = true) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
         // Pre-Lent (Septuagesima..Quinquagesima) keeps the per-annum
         // ordinarium — the season flag may still say "christmas" (Christmas
@@ -440,13 +448,40 @@ struct OfficeAssembler {
             return part
         }
 
-        let assembledParts = template.parts.flatMap { part -> [Hour.Part] in
+        var assembledParts = template.parts.flatMap { part -> [Hour.Part] in
             guard let key = part.variationKey else { return [part] }
             if part.type == "marian" {
                 // The antiphon plus its ℣/℟ and Orémus (or nothing in Triduum).
                 return marianParts(for: context.marian, season: context.season, fallback: part)
             }
             return [assemblePart(part, key: key)]
+        }
+
+        // Prime's Chapter Office: the Martyrology for the morrow (with its
+        // Luna and any movable-feast announcement), which may be omitted in
+        // private recitation; and the 1960 "Jube, Dómine" vs the older
+        // "Jube, domne" before the Dies et actus blessing.
+        if template.slug == "prima" {
+            let text = primeMartyrology ? martyrologyText(context: context, rite: rite) : nil
+            assembledParts = assembledParts.compactMap { part in
+                switch part.variationKey ?? "" {
+                case "prima2.heading", "prima2.martyrologium":
+                    guard let text else { return nil }
+                    if part.variationKey == "prima2.martyrologium" {
+                        var p = part
+                        p.lat = text.lat
+                        p.eng = text.eng
+                        return p
+                    }
+                    return part
+                case "prima2.benedictio1" where rite != .rite1962:
+                    var p = part
+                    p.lat = p.lat?.replacingOccurrences(of: "Jube, Dómine", with: "Jube, domne")
+                    return p
+                default:
+                    return part
+                }
+            }
         }
 
         // Prime's Lectio Brevis is, by the rubric's own rule, the day's None
@@ -1092,6 +1127,45 @@ struct OfficeAssembler {
         case .pentecost: return "ordinary"
         case .perAnnum:  return "ordinary"
         }
+    }
+
+    /// The Martyrology read at Prime of `context.date`: the entry for the
+    /// following day (as in choir), headed by the Roman date and the age of
+    /// the moon, preceded by the movable-feast announcement when tomorrow's
+    /// temporal day has one, and closed with "Et álibi…". The vernacular
+    /// column follows `martyrology.vernacular`.
+    private func martyrologyText(context: LiturgicalContext, rite: MissalRite) -> (lat: String, eng: String)? {
+        guard let data = martyrology else { return nil }
+        let cal = Calendar.liturgical
+        guard let tomorrow = cal.date(byAdding: .day, value: 1, to: context.date) else { return nil }
+        let comps = cal.dateComponents([.year, .month, .day], from: tomorrow)
+        guard let y = comps.year, let m = comps.month, let d = comps.day else { return nil }
+        guard let day = data.days[String(format: "%02d-%02d", m, d)] else { return nil }
+        let spanish = data.vernacular == "es"
+        let luna = MartyrologyLuna.lunarAge(month: m, day: d, year: y)
+        let mobileKey = LiturgicalContext.for(date: tomorrow, rite: rite).temporalKey?.lowercased()
+        let mobile = mobileKey.flatMap { data.mobile[$0] }
+
+        var lat = [day.title + (luna.map { " Luna \(MartyrologyLuna.latinOrdinals[$0 - 1])." } ?? "") + " Anno Dómini \(y)."]
+        var eng: [String]
+        if spanish {
+            eng = ["\(d) de \(MartyrologyLuna.spanishMonths[m - 1]) de \(y)" + (luna.map { ", luna \(MartyrologyLuna.spanishOrdinals[$0 - 1])." } ?? ".")]
+        } else {
+            eng = ["\(MartyrologyLuna.englishMonths[m - 1]) \(MartyrologyLuna.englishOrdinal(d)), \(y)" + (luna.map { ", the \(MartyrologyLuna.englishOrdinal($0)) day of the Moon." } ?? ".")]
+        }
+        if let mobile {
+            lat.append(mobile.lat)
+            eng.append(mobile.eng)
+        }
+        for e in day.entries {
+            lat.append(e.lat)
+            eng.append(e.eng)
+        }
+        lat.append("℣. Et álibi aliórum plurimórum sanctórum Mártyrum et Confessórum, atque sanctárum Vírginum.\n℟. Deo grátias.")
+        eng.append(spanish
+            ? "℣. Y en otras partes, otros muchos santos Mártires y Confesores, y santas Vírgenes.\n℟. Demos gracias a Dios."
+            : "℣. And elsewhere many other holy Martyrs and Confessors, and holy Virgins.\n℟. Thanks be to God.")
+        return (lat.joined(separator: "\n"), eng.joined(separator: "\n"))
     }
 
     private func marianParts(for antiphon: MarianAntiphon, season: LiturgicalSeason, fallback: Hour.Part) -> [Hour.Part] {

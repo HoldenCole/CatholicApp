@@ -143,5 +143,7 @@ object SettingsKey {
     const val TEXT_DARKNESS = "settings.textDarkness"
     const val SHOW_LEONINE_PRAYERS = "settings.showLeoninePrayers"
     const val SHOW_UPCOMING_FEASTS = "settings.showUpcomingFeasts"
+    /** Read the Martyrology in the second part of Prime (on by default). */
+    const val PRIME_MARTYROLOGY = "settings.primeMartyrology"
     const val VERNACULAR_LANG = "settings.vernacularLang"
 }

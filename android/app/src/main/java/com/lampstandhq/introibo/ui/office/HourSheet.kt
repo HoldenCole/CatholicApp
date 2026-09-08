@@ -756,7 +756,19 @@ private fun ReadingBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {})
         }
 
         if (p.lat != null && p.eng != null) {
-            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
+            // Multi-paragraph readings (the Martyrology) pair paragraph
+            // with paragraph so the columns stay aligned.
+            val latLines = p.lat.split("\n")
+            val engLines = p.eng.split("\n")
+            if (latLines.size > 1 && latLines.size == engLines.size) {
+                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    latLines.zip(engLines).forEach { (l, e) ->
+                        BilingualLine(lat = l, eng = e, sideBySide = true, onLinkTap = onLinkTap)
+                    }
+                }
+            } else {
+                BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
+            }
         } else {
             p.lat?.let { lat ->
                 Text(

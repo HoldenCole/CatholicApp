@@ -98,6 +98,10 @@ class MainActivity : ComponentActivity() {
 
             val typography = introiboTypography(scale = fontScale)
 
+            // Prime's Martyrology toggle feeds the office assembler directly.
+            val primeMartyrology by settingsRepo.primeMartyrology.collectAsState(initial = true)
+            com.lampstandhq.introibo.data.content.ContentStore.primeMartyrology = primeMartyrology
+
             val prefs = remember {
                 applicationContext.getSharedPreferences("introibo_onboarding", Context.MODE_PRIVATE)
             }

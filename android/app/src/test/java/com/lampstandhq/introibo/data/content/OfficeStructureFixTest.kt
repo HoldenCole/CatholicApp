@@ -3,6 +3,8 @@ package com.lampstandhq.introibo.data.content
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.MarianAntiphonData
+import com.lampstandhq.introibo.data.model.MartyrologyData
+import com.lampstandhq.introibo.storage.settings.MissalRite
 import kotlinx.serialization.json.Json
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -47,11 +49,18 @@ class OfficeStructureFixTest {
             temporalPropers = temporal,
             marianAntiphons = load<List<MarianAntiphonData>>("marian_antiphons.json"),
             psalter = load("psalter.json"),
+            martyrology = load<MartyrologyData>("martyrology.json"),
         )
     }
 
-    private fun assembled(slug: String, date: LocalDate, festal: Boolean = false): Hour {
-        val ctx = LiturgicalContext.forDate(date)
+    private fun assembled(
+        slug: String,
+        date: LocalDate,
+        festal: Boolean = false,
+        rite: MissalRite = MissalRite.RITE_1962,
+        primeMartyrology: Boolean = true,
+    ): Hour {
+        val ctx = LiturgicalContext.forDate(date, rite = rite)
         return assembler.assemble(
             template = hours.first { it.slug == slug },
             context = ctx,
@@ -60,7 +69,60 @@ class OfficeStructureFixTest {
             festalLittleHours = festal,
             matinsNocturns = if (festal) 3 else 1,
             matinsTeDeum = festal,
+            rite = rite,
+            primeMartyrology = primeMartyrology,
         )
+    }
+
+    @Test
+    fun primeCarriesItsChapterOffice() {
+        val prime = assembled("prima", feria)
+        val keys = prime.parts.mapNotNull { it.variationKey }
+        val second = keys.filter { it.startsWith("prima2.") || it == "lectio_prima" }
+        assertEquals(
+            listOf(
+                "prima2.heading", "prima2.martyrologium", "prima2.pretiosa", "prima2.sanctamaria",
+                "prima2.deusinadjutorium", "prima2.pater", "prima2.respice", "prima2.oratio",
+                "prima2.benedictio1", "lectio_prima", "prima2.tuautem", "prima2.adjutorium",
+                "prima2.benedictio2",
+            ),
+            second,
+        )
+        // The second part follows the Benedicámus of the first.
+        assertTrue(
+            prime.parts.indexOfFirst { it.variationKey == "prima2.heading" } >
+                prime.parts.indexOfFirst { it.type == "closing" },
+        )
+        // The versicle after the brief responsory is Exsúrge, not the responsory again.
+        assertTrue(prime.parts.first { it.variationKey == "versum_prima" }.lat.orEmpty().startsWith("℣. Exsúrge, Christe"))
+        // The Martyrology is the morrow's (31 July: St Ignatius), headed by the Roman date and the Luna.
+        val mart = prime.parts.first { it.variationKey == "prima2.martyrologium" }
+        val lat = mart.lat.orEmpty()
+        assertTrue(lat.startsWith("Prídie Kaléndas Augústi"))
+        assertTrue(lat.contains("Luna ") && lat.contains("Anno Dómini 2026"))
+        assertTrue(lat.contains("Ignátii"))
+        assertTrue(lat.trimEnd().endsWith("℟. Deo grátias."))
+        assertTrue(mart.eng.orEmpty().startsWith("July 31st, 2026, the "))
+        assertTrue(mart.eng.orEmpty().contains("Ignatius"))
+        // Movable-feast announcement, keyed by the MORROW's temporal code as in
+        // Divinum Officium: the Easter proclamation is keyed pasc0-1, so it is
+        // read at Prime on Easter Sunday itself (2027-03-28).
+        val easter = assembled("prima", LocalDate.of(2027, 3, 28))
+        assertTrue(easter.parts.first { it.variationKey == "prima2.martyrologium" }.lat.orEmpty()
+            .contains("Hac die quam fecit Dóminus"))
+        // ...and Maundy Thursday's is read on the Wednesday before it.
+        val spyWed = assembled("prima", LocalDate.of(2027, 3, 24))
+        assertTrue(spyWed.parts.first { it.variationKey == "prima2.martyrologium" }.lat.orEmpty()
+            .contains("Cœna Domínica"))
+        // 1960 "Jube, Dómine"; older rubrics "Jube, domne".
+        assertTrue(prime.parts.first { it.variationKey == "prima2.benedictio1" }.lat.orEmpty().contains("Jube, Dómine"))
+        val old = assembled("prima", feria, rite = MissalRite.RITE_1955)
+        assertTrue(old.parts.first { it.variationKey == "prima2.benedictio1" }.lat.orEmpty().contains("Jube, domne"))
+        // The toggle drops only the Martyrology, never the rest of the Chapter Office.
+        val private = assembled("prima", feria, primeMartyrology = false)
+        val pk = private.parts.mapNotNull { it.variationKey }
+        assertFalse(pk.contains("prima2.martyrologium") || pk.contains("prima2.heading"))
+        assertTrue(pk.contains("prima2.pretiosa") && pk.contains("prima2.benedictio2"))
     }
 
     // 2026-07-30 is a per-annum Thursday (Thursday in the 9th week after

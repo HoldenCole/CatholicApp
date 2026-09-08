@@ -10,6 +10,7 @@ import com.lampstandhq.introibo.data.model.Course
 import com.lampstandhq.introibo.data.model.ExamenEntry
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.MarianAntiphonData
+import com.lampstandhq.introibo.data.model.MartyrologyData
 import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.data.model.MissalProperEntry
 import com.lampstandhq.introibo.data.model.MissalSection
@@ -75,6 +76,11 @@ object ContentStore {
         private set
     var marianAntiphons: List<MarianAntiphonData> = emptyList()
         private set
+    var martyrology: MartyrologyData? = null
+        private set
+
+    /** Read the Martyrology in the second part of Prime (Settings; on by default). */
+    @Volatile var primeMartyrology: Boolean = true
     var examen: List<ExamenEntry> = emptyList()
         private set
     var confessionGuides: List<ConfessionGuide> = emptyList()
@@ -122,6 +128,7 @@ object ContentStore {
         stations         = load("stations.json")           ?: emptyList()
         hours            = load("hours.json")              ?: emptyList()
         marianAntiphons  = load("marian_antiphons.json")   ?: emptyList()
+        martyrology      = load("martyrology.json")
         examen           = load("confession_examen.json")  ?: emptyList()
         confessionGuides = load("confession_guides.json")  ?: emptyList()
         propers          = load("propers.json")            ?: emptyList()
@@ -159,6 +166,7 @@ object ContentStore {
             temporalPropers = temporalData,
             marianAntiphons = marianAntiphons,
             psalter = psalterTextData,
+            martyrology = martyrology,
         )
     }
 
@@ -172,6 +180,15 @@ object ContentStore {
         val title_es: String,
         val note_es: String? = null,
         val lines_es: List<String>,
+    )
+
+    @kotlinx.serialization.Serializable
+    private data class MartyrologyDayES(val entries_es: List<String>)
+
+    @kotlinx.serialization.Serializable
+    private data class MartyrologyES(
+        val days: Map<String, MartyrologyDayES>,
+        val mobile: Map<String, String>,
     )
 
     @kotlinx.serialization.Serializable
@@ -330,6 +347,7 @@ object ContentStore {
         prayers = load("prayers.json") ?: emptyList()
         hours = load("hours.json") ?: emptyList()
         marianAntiphons = load("marian_antiphons.json") ?: emptyList()
+        martyrology = load("martyrology.json")
         missal = load("missal.json") ?: emptyList()
         canonVariants = load("canon_variants.json") ?: emptyMap()
         ordoNamesEn = load("ordo_names_en.json") ?: emptyMap()
@@ -696,6 +714,20 @@ object ContentStore {
                         } else {
                             p.lines
                         },
+                    )
+                }
+            }
+            martyrology?.let { m ->
+                load<MartyrologyES>("martyrology_es.json")?.let { es ->
+                    martyrology = m.copy(
+                        days = m.days.mapValues { (key, day) ->
+                            val o = es.days[key]
+                            if (o != null && o.entries_es.size == day.entries.size)
+                                day.copy(entries = day.entries.mapIndexed { i, e -> e.copy(eng = o.entries_es[i]) })
+                            else day
+                        },
+                        mobile = m.mobile.mapValues { (key, e) -> es.mobile[key]?.let { e.copy(eng = it) } ?: e },
+                        vernacular = "es",
                     )
                 }
             }
@@ -1226,7 +1258,7 @@ object ContentStore {
             Hour.Part(type = "collect", label = "Collect", lat = c.lat, eng = c.eng, variationKey = "oratio")
         }
 
-        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect, ferialOffice)
+        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect, ferialOffice, primeMartyrology)
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -1401,7 +1433,7 @@ object ContentStore {
             // Prime and Compline collects are invariable: never let a
             // type-keyed "collect" override reach them.
             if (part.type == "collect" && overrides.containsKey("collect") &&
-                key !in OfficeAssembler.INVARIABLE_COLLECT_KEYS) {
+                !OfficeAssembler.isInvariableCollectKey(key)) {
                 return@map overrides["collect"]!!
             }
             part

@@ -1,6 +1,7 @@
 package com.lampstandhq.introibo.data.content
 
 import com.lampstandhq.introibo.data.model.ConfessionGuide
+import com.lampstandhq.introibo.data.model.MartyrologyData
 import com.lampstandhq.introibo.data.model.Course
 import com.lampstandhq.introibo.data.model.ExamenEntry
 import com.lampstandhq.introibo.data.model.Hour
@@ -101,6 +102,7 @@ class AssetsDecodeTest {
         check("stations.json", { decode<List<Station>>("stations.json") }) { it.isNotEmpty() }
         check("hours.json", { decode<List<Hour>>("hours.json") }) { it.isNotEmpty() }
         check("marian_antiphons.json", { decode<List<MarianAntiphonData>>("marian_antiphons.json") }) { it.isNotEmpty() }
+        check("martyrology.json", { decode<MartyrologyData>("martyrology.json") }) { it.days.size == 366 && it.mobile.isNotEmpty() }
         check("confession_examen.json", { decode<List<ExamenEntry>>("confession_examen.json") }) { it.isNotEmpty() }
         check("confession_guides.json", { decode<List<ConfessionGuide>>("confession_guides.json") }) { it.isNotEmpty() }
         // propers.json is intentionally [] — the bulk DO import (23bfadf) moved
@@ -146,6 +148,7 @@ class AssetsDecodeTest {
         check("sanctoral_propers_es.json", { decode<Map<String, Map<String, kotlinx.serialization.json.JsonObject>>>("sanctoral_propers_es.json") }) { it.isNotEmpty() }
         check("mysteries_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("mysteries_es.json") }) { it.size == 3 }
         check("rosary_prayers_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("rosary_prayers_es.json") }) { it.size == 7 }
+        check("martyrology_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("martyrology_es.json") }) { it["days"]?.size == 366 && it["mobile"]?.isNotEmpty() == true }
 
         // Any asset shipped but not covered above would dodge this net —
         // force the list to stay in sync with the assets directory.

@@ -441,6 +441,34 @@ def validate_psalter():
     print(f"psalter_weekly_parts_es.json: {n} parts checked (full coverage)")
 
 
+def validate_martyrology():
+    """The Martyrology overlay: every day and every movable entry of the
+    source has Spanish, entry counts align, and nothing is empty."""
+    path = ES / "martyrology_es.json"
+    if not path.exists():
+        print("martyrology_es.json: not present (skipped)")
+        return
+    src = json.load(open(SRC / "martyrology.json"))
+    es = json.load(open(path))
+    n = 0
+    check(set(es["days"]) == set(src["days"]),
+          f"martyrology: day mismatch — missing {set(src['days']) - set(es['days'])}, extra {set(es['days']) - set(src['days'])}")
+    for key, day in src["days"].items():
+        o = es["days"].get(key) or {}
+        lines = o.get("entries_es") or []
+        check(len(lines) == len(day["entries"]),
+              f"martyrology[{key}]: {len(lines)} Spanish entries for {len(day['entries'])} Latin")
+        for i, l in enumerate(lines):
+            n += 1
+            check(isinstance(l, str) and l.strip(), f"martyrology[{key}][{i}]: empty")
+    check(set(es["mobile"]) == set(src["mobile"]),
+          f"martyrology mobile: key mismatch — {set(src['mobile']) ^ set(es['mobile'])}")
+    for key, v in es["mobile"].items():
+        n += 1
+        check(isinstance(v, str) and v.strip(), f"martyrology mobile[{key}]: empty")
+    print(f"martyrology_es.json: {n} entries checked")
+
+
 def validate_hours_parts():
     """Ordinary of the hours: parts indexed by position must exist, only
     translate fields the source carries, and verse arrays stay aligned."""
@@ -683,6 +711,7 @@ def main():
     validate_rosary()
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
+    validate_martyrology()
     validate_keyed("hours_es.json", "hours.json",
                    ["name_es", "time_es", "intro_es"])
     validate_missal()

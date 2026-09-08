@@ -542,7 +542,19 @@ struct HourView: View {
                     .foregroundStyle(Color.goldLeaf)
             }
             if let lat = p.lat, let eng = p.eng {
-                BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                // Multi-paragraph readings (the Martyrology) pair paragraph
+                // with paragraph so the columns stay aligned.
+                let latLines = lat.components(separatedBy: "\n")
+                let engLines = eng.components(separatedBy: "\n")
+                if latLines.count > 1, latLines.count == engLines.count {
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(Array(zip(latLines, engLines).enumerated()), id: \.offset) { _, pair in
+                            BilingualLine(lat: pair.0, eng: pair.1, sideBySide: true)
+                        }
+                    }
+                } else {
+                    BilingualLine(lat: lat, eng: eng, sideBySide: true)
+                }
             } else {
                 if let lat = p.lat {
                     Text(lat.strippingEm).appFont(.body).foregroundStyle(Color.primaryText).lineSpacing(3)

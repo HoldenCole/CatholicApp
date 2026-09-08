@@ -9,6 +9,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.fontRange) private var fontRangeRaw = FontRange.normal.rawValue
     @AppStorage(SettingsKey.showLeoninePrayers) private var showLeoninePrayers = true
     @AppStorage(SettingsKey.showUpcomingFeasts) private var showUpcomingFeasts = false
+    @AppStorage(SettingsKey.primeMartyrology) private var primeMartyrology = true
     @AppStorage(SettingsKey.vernacularLang) private var vernacularRaw = VernacularLanguage.english.rawValue
     @State private var showResetConfirm = false
 
@@ -19,6 +20,7 @@ struct SettingsView: View {
             List {
                 riteSection
                 leonineSection
+                primeSection
                 homeSection
                 penanceSection
                 languageSection
@@ -101,6 +103,28 @@ struct SettingsView: View {
             Text("Preces Leoninae · " + ContentStore.shared.uiString("settings.header.leonine", "Leonine Prayers"))
         } footer: {
             Text(ContentStore.shared.uiString("settings.leonine.footer", "The Leonine Prayers were instituted by Leo XIII in 1884 and suppressed by Inter Oecumenici in 1964. Enable for strict 1962 observance; disable for post-1964 practice."))
+        }
+    }
+
+    // MARK: - Prime
+
+    private var primeSection: some View {
+        Section {
+            Toggle(isOn: $primeMartyrology) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(ContentStore.shared.uiString("settings.prime.martyrology", "Read the Martyrology at Prime"))
+                        .foregroundStyle(Color.primaryText)
+                    Text(ContentStore.shared.uiString("settings.prime.martyrology_sub", "The Roman Martyrology for the morrow, with the Luna"))
+                        .appFont(.caption)
+                        .foregroundStyle(Color.secondaryText)
+                }
+            }
+            .tint(Color.sanctuaryRed)
+            .listRowBackground(Color.pageBackground)
+        } header: {
+            Text("Prima · " + ContentStore.shared.uiString("settings.header.prime", "Prime"))
+        } footer: {
+            Text(ContentStore.shared.uiString("settings.prime.footer", "Prime's second part (the Chapter Office) opens with the Martyrology. It may be omitted in private recitation; the Pretiósa, the blessing for the day's work and the short lesson are always said."))
         }
     }
 

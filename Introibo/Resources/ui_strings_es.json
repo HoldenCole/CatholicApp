@@ -93,5 +93,9 @@
   "widget.saints.only_sub": "Fiestas del ciclo santoral",
   "widget.saints.all": "Todos los días notables",
   "widget.saints.all_sub": "Añade vigilias y Témporas",
-  "widget.stale": "Abre la aplicación para actualizar la liturgia de hoy."
+  "widget.stale": "Abre la aplicación para actualizar la liturgia de hoy.",
+  "settings.header.prime": "Prima",
+  "settings.prime.martyrology": "Leer el Martirologio en Prima",
+  "settings.prime.martyrology_sub": "El Martirologio Romano del día siguiente, con la luna",
+  "settings.prime.footer": "La segunda parte de Prima (el Oficio capitular) comienza con el Martirologio. Puede omitirse en la recitación privada; la Pretiosa, la bendición para el trabajo del día y la lección breve se dicen siempre."
 }

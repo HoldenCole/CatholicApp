@@ -65,6 +65,8 @@ enum SettingsKey {
     static let textDarkness = "settings.textDarkness"
     static let showLeoninePrayers = "settings.showLeoninePrayers"
     static let showUpcomingFeasts = "settings.showUpcomingFeasts"
+    /// Read the Martyrology in the second part of Prime (on by default).
+    static let primeMartyrology = "settings.primeMartyrology"
     static let vernacularLang = "settings.vernacularLang"
 }
 
