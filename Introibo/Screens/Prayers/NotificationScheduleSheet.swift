@@ -36,7 +36,7 @@ struct NotificationScheduleSheet: View {
                 .padding(.bottom, 40)
             }
             .background(Color.pageBackground.ignoresSafeArea())
-            .navigationTitle("Notification")
+            .navigationTitle(ContentStore.shared.uiString("notif.title", "Notification"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -112,7 +112,7 @@ struct NotificationScheduleSheet: View {
 
     private var timeSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Time")
+            Text(ContentStore.shared.uiString("notif.time", "Time"))
                 .smallLabel(color: Color.sanctuaryRed)
             DatePicker("", selection: $selectedTime, displayedComponents: .hourAndMinute)
                 .datePickerStyle(.wheel)
@@ -128,7 +128,7 @@ struct NotificationScheduleSheet: View {
             Image(systemName: "bell.slash")
                 .appFont(.titleL)
                 .foregroundStyle(Color.sanctuaryRed)
-            Text("Notifications Disabled")
+            Text(ContentStore.shared.uiString("notif.disabled", "Notifications Disabled"))
                 .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)

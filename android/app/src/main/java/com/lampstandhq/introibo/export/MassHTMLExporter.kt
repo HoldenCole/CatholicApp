@@ -1,5 +1,8 @@
 package com.lampstandhq.introibo.export
 
+import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.ui.missal.MassPartName
+
 import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.data.model.ProperText
 import java.util.Locale
@@ -21,28 +24,28 @@ object MassHTMLExporter {
     fun properHTML(proper: MassProper): String {
         val sections = buildString {
             // Required sections
-            append(sectionHTML("Introitus  ·  Introit", proper.introit.lat, proper.introit.eng, proper.introit.ref))
-            append(sectionHTML("Orátio  ·  Collect", proper.collect.lat, proper.collect.eng, proper.collect.ref))
-            append(sectionHTML("Léctio  ·  Epistle", proper.epistle.lat, proper.epistle.eng, proper.epistle.ref))
+            append(sectionHTML("Introitus  ·  ${MassPartName.introit}", proper.introit.lat, proper.introit.eng, proper.introit.ref))
+            append(sectionHTML("Orátio  ·  ${MassPartName.collect}", proper.collect.lat, proper.collect.eng, proper.collect.ref))
+            append(sectionHTML("Léctio  ·  ${MassPartName.epistle}", proper.epistle.lat, proper.epistle.eng, proper.epistle.ref))
 
             // Optional chant sections
             proper.gradual?.let {
-                append(sectionHTML("Graduále  ·  Gradual", it.lat, it.eng, it.ref))
+                append(sectionHTML("Graduále  ·  ${MassPartName.gradual}", it.lat, it.eng, it.ref))
             }
             proper.alleluia?.let {
-                append(sectionHTML("Allelúja  ·  Alleluia", it.lat, it.eng, it.ref))
+                append(sectionHTML("Allelúja  ·  ${MassPartName.alleluia}", it.lat, it.eng, it.ref))
             }
             proper.tract?.let {
-                append(sectionHTML("Tractus  ·  Tract", it.lat, it.eng, it.ref))
+                append(sectionHTML("Tractus  ·  ${MassPartName.tract}", it.lat, it.eng, it.ref))
             }
             proper.sequence?.let {
-                append(sectionHTML("Sequéntia  ·  Sequence", it.lat, it.eng, it.ref))
+                append(sectionHTML("Sequéntia  ·  ${MassPartName.sequence}", it.lat, it.eng, it.ref))
             }
 
             // Required sections (continued)
-            append(sectionHTML("Evangélium  ·  Gospel", proper.gospel.lat, proper.gospel.eng, proper.gospel.ref))
-            append(sectionHTML("Offertórium  ·  Offertory", proper.offertory.lat, proper.offertory.eng, proper.offertory.ref))
-            append(sectionHTML("Secréta  ·  Secret", proper.secret.lat, proper.secret.eng, proper.secret.ref))
+            append(sectionHTML("Evangélium  ·  ${MassPartName.gospel}", proper.gospel.lat, proper.gospel.eng, proper.gospel.ref))
+            append(sectionHTML("Offertórium  ·  ${MassPartName.offertory}", proper.offertory.lat, proper.offertory.eng, proper.offertory.ref))
+            append(sectionHTML("Secréta  ·  ${MassPartName.secret}", proper.secret.lat, proper.secret.eng, proper.secret.ref))
 
             // Preface note (between Secret and Communion)
             proper.preface?.let { preface ->
@@ -54,8 +57,8 @@ object MassHTMLExporter {
                 append("""<div class="divider"></div>""")
             }
 
-            append(sectionHTML("Commúnio  ·  Communion", proper.communion.lat, proper.communion.eng, proper.communion.ref))
-            append(sectionHTML("Postcommúnio  ·  Postcommunion", proper.postcommunion.lat, proper.postcommunion.eng, proper.postcommunion.ref))
+            append(sectionHTML("Commúnio  ·  ${MassPartName.communion}", proper.communion.lat, proper.communion.eng, proper.communion.ref))
+            append(sectionHTML("Postcommúnio  ·  ${MassPartName.postcommunion}", proper.postcommunion.lat, proper.postcommunion.eng, proper.postcommunion.ref))
         }
 
         return document(
@@ -81,17 +84,17 @@ object MassHTMLExporter {
     ): String {
         val body = buildString {
             if (colour != null) {
-                append("""<div class="info-row"><span class="info-label">LITURGICAL COLOUR</span>""")
+                append("""<div class="info-row"><span class="info-label">${escapeHTML(ContentStore.uiString("missal.export.colour", "LITURGICAL COLOUR"))}</span>""")
                 if (colourHex != null) {
                     append("""<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:$colourHex;margin-right:6px;vertical-align:middle;"></span>""")
                 }
                 append("""<span class="info-value">${escapeHTML(colour)}</span></div>""")
             }
-            append("""<div class="info-row"><span class="info-label">SEASON</span><span class="info-value">${escapeHTML(season)}</span></div>""")
+            append("""<div class="info-row"><span class="info-label">${escapeHTML(ContentStore.uiString("missal.export.season", "SEASON"))}</span><span class="info-value">${escapeHTML(season)}</span></div>""")
             flags.forEach { append("""<p class="flag">${escapeHTML(it)}</p>""") }
             val strictClass = if (penanceStrict) " strict" else ""
             append("""<div class="penance-card$strictClass">""")
-            append("""<div class="penance-header"><span class="info-label">FASTING &amp; ABSTINENCE</span><span class="discipline">${escapeHTML(discipline)}</span></div>""")
+            append("""<div class="penance-header"><span class="info-label">${escapeHTML(ContentStore.uiString("missal.export.penance", "FASTING & ABSTINENCE"))}</span><span class="discipline">${escapeHTML(discipline)}</span></div>""")
             append("""<p class="penance-title"><span class="penance-dot$strictClass"></span>${escapeHTML(penanceTitle)}</p>""")
             append("""<p class="penance-desc">${escapeHTML(penanceDesc)}</p>""")
             append("</div>")

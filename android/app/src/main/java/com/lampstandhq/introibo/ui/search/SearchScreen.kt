@@ -77,12 +77,12 @@ import kotlinx.coroutines.delay
 
 private val ContentType.displayName: String
     get() = when (this) {
-        ContentType.PRAYER -> "Prayers"
-        ContentType.MISSAL -> "Missal"
-        ContentType.OFFICE -> "Office"
-        ContentType.REFERENCE -> "Reference"
-        ContentType.SAINT -> "Saints"
-        ContentType.CALENDAR -> "Calendar"
+        ContentType.PRAYER -> ContentStore.uiString("search.type.prayer", "Prayers")
+        ContentType.MISSAL -> ContentStore.uiString("search.type.missal", "Missal")
+        ContentType.OFFICE -> ContentStore.uiString("search.type.office", "Office")
+        ContentType.REFERENCE -> ContentStore.uiString("search.type.reference", "Reference")
+        ContentType.SAINT -> ContentStore.uiString("search.type.saint", "Saints")
+        ContentType.CALENDAR -> ContentStore.uiString("search.type.calendar", "Calendar")
     }
 
 /** Stable display order for grouped sections. */
@@ -93,9 +93,15 @@ private val contentTypeDisplayOrder = listOf(
 
 // ---- Filter model ----
 
-private sealed class SearchFilter(val label: String, val contentType: ContentType?) {
-    data object All : SearchFilter("All", null)
-    data class Type(val type: ContentType) : SearchFilter(type.displayName, type)
+private sealed class SearchFilter(val contentType: ContentType?) {
+    /** Vernacular chip label, resolved at render time. */
+    abstract val label: String
+    data object All : SearchFilter(null) {
+        override val label: String get() = ContentStore.uiString("search.filter.all", "All")
+    }
+    data class Type(val type: ContentType) : SearchFilter(type) {
+        override val label: String get() = type.displayName
+    }
 }
 
 private val searchFilters: List<SearchFilter> = listOf(

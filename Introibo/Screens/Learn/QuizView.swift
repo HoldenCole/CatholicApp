@@ -56,7 +56,7 @@ struct QuizView: View {
                     .smallLabel(color: Color.sanctuaryRed)
                     .padding(.top, 24)
 
-                Text("Score: \(score)")
+                Text(ContentStore.shared.uiString("learn.quiz.score", "Score: {0}", String(score)))
                     .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
 
@@ -87,7 +87,7 @@ struct QuizView: View {
                             isFinished = true
                         }
                     } label: {
-                        Text(questionIndex + 1 < questions.count ? "Next" : "See Results")
+                        Text(questionIndex + 1 < questions.count ? ContentStore.shared.uiString("common.next", "Next") : ContentStore.shared.uiString("learn.quiz.results", "See Results"))
                             .smallLabel(color: Color.sanctuaryRed, tracking: 3)
                             .padding(.vertical, 14)
                             .frame(maxWidth: .infinity)
@@ -164,7 +164,7 @@ struct QuizView: View {
             Text("\(score) / \(questions.count)")
                 .appFont(.scaledSystem(48, weight: .semibold, design: .serif))
                 .foregroundStyle(Color.primaryText)
-            Text(score == questions.count ? "Perfect!" : score >= questions.count / 2 ? "Well done" : "Keep practising")
+            Text(score == questions.count ? ContentStore.shared.uiString("learn.quiz.perfect", "Perfect!") : score >= questions.count / 2 ? ContentStore.shared.uiString("learn.quiz.well_done", "Well done") : ContentStore.shared.uiString("learn.quiz.keep", "Keep practising"))
                 .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
@@ -224,13 +224,13 @@ struct QuizView: View {
                 let wrongs = usable.filter { $0.eng != correct }.shuffled().prefix(3).compactMap { $0.eng }
                 var choices = wrongs + [correct]
                 choices.shuffle()
-                qs.append(Question(prompt: cardLat, promptLabel: "What does this mean?", correct: correct, choices: choices))
+                qs.append(Question(prompt: cardLat, promptLabel: ContentStore.shared.uiString("learn.quiz.meaning", "What does this mean?"), correct: correct, choices: choices))
             } else {
                 let correct = cardLat
                 let wrongs = usable.filter { $0.lat != correct }.shuffled().prefix(3).compactMap { $0.lat }
                 var choices = wrongs + [correct]
                 choices.shuffle()
-                qs.append(Question(prompt: cardEng, promptLabel: "What is the Latin?", correct: correct, choices: choices))
+                qs.append(Question(prompt: cardEng, promptLabel: ContentStore.shared.uiString("learn.quiz.latin", "What is the Latin?"), correct: correct, choices: choices))
             }
         }
 

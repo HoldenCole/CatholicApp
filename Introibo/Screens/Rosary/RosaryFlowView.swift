@@ -53,7 +53,7 @@ struct RosaryFlowView: View {
                                 .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.secondaryText)
-                            Text("Fruit: \(mystery.fruit)")
+                            Text(ContentStore.shared.uiString("rosary.fruit", "Fruit: {0}", mystery.fruit))
                                 .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.goldLeaf)
@@ -161,7 +161,7 @@ struct RosaryFlowView: View {
                     stepIndex = steps.count
                 }
             } label: {
-                Text(stepIndex + 1 < steps.count ? "Next  ✠" : "Finish  ✠")
+                Text(stepIndex + 1 < steps.count ? ContentStore.shared.uiString("rosary.next", "Next  ✠") : ContentStore.shared.uiString("rosary.finish", "Finish  ✠"))
                     .smallLabel(color: Color.ivory, tracking: 3)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 17)
@@ -186,7 +186,7 @@ struct RosaryFlowView: View {
             Text("✠")
                 .appFont(.scaledSystem(64))
                 .foregroundStyle(Color.sanctuaryRed)
-            Text("Rosary Complete")
+            Text(ContentStore.shared.uiString("rosary.complete", "Rosary Complete"))
                 .appFont(.pageTitle)
                 .foregroundStyle(Color.primaryText)
             Text(set.english)
@@ -244,7 +244,7 @@ struct RosaryFlowView: View {
                 label: mystery.num,
                 latin: mystery.title, english: mystery.eng,
                 decade: dIdx, mystery: mystery,
-                meditation: mystery.body + "\n\nFruit: " + mystery.fruit
+                meditation: mystery.body + "\n\n" + ContentStore.shared.uiString("rosary.fruit", "Fruit: {0}", mystery.fruit)
             ))
 
             // Our Father

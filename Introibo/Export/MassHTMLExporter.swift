@@ -14,28 +14,28 @@ enum MassHTMLExporter {
         var sections = ""
 
         // Required sections
-        sections += sectionHTML(label: "Introitus  ·  Introit", lat: proper.introit.lat, eng: proper.introit.eng, ref: proper.introit.ref)
-        sections += sectionHTML(label: "Orátio  ·  Collect", lat: proper.collect.lat, eng: proper.collect.eng, ref: proper.collect.ref)
-        sections += sectionHTML(label: "Léctio  ·  Epistle", lat: proper.epistle.lat, eng: proper.epistle.eng, ref: proper.epistle.ref)
+        sections += sectionHTML(label: "Introitus  ·  \(MassPartName.introit)", lat: proper.introit.lat, eng: proper.introit.eng, ref: proper.introit.ref)
+        sections += sectionHTML(label: "Orátio  ·  \(MassPartName.collect)", lat: proper.collect.lat, eng: proper.collect.eng, ref: proper.collect.ref)
+        sections += sectionHTML(label: "Léctio  ·  \(MassPartName.epistle)", lat: proper.epistle.lat, eng: proper.epistle.eng, ref: proper.epistle.ref)
 
         // Optional chant sections
         if let gradual = proper.gradual {
-            sections += sectionHTML(label: "Graduále  ·  Gradual", lat: gradual.lat, eng: gradual.eng, ref: gradual.ref)
+            sections += sectionHTML(label: "Graduále  ·  \(MassPartName.gradual)", lat: gradual.lat, eng: gradual.eng, ref: gradual.ref)
         }
         if let alleluia = proper.alleluia {
-            sections += sectionHTML(label: "Allelúja  ·  Alleluia", lat: alleluia.lat, eng: alleluia.eng, ref: alleluia.ref)
+            sections += sectionHTML(label: "Allelúja  ·  \(MassPartName.alleluia)", lat: alleluia.lat, eng: alleluia.eng, ref: alleluia.ref)
         }
         if let tract = proper.tract {
-            sections += sectionHTML(label: "Tractus  ·  Tract", lat: tract.lat, eng: tract.eng, ref: tract.ref)
+            sections += sectionHTML(label: "Tractus  ·  \(MassPartName.tract)", lat: tract.lat, eng: tract.eng, ref: tract.ref)
         }
         if let sequence = proper.sequence {
-            sections += sectionHTML(label: "Sequéntia  ·  Sequence", lat: sequence.lat, eng: sequence.eng, ref: sequence.ref)
+            sections += sectionHTML(label: "Sequéntia  ·  \(MassPartName.sequence)", lat: sequence.lat, eng: sequence.eng, ref: sequence.ref)
         }
 
         // Required sections (continued)
-        sections += sectionHTML(label: "Evangélium  ·  Gospel", lat: proper.gospel.lat, eng: proper.gospel.eng, ref: proper.gospel.ref)
-        sections += sectionHTML(label: "Offertórium  ·  Offertory", lat: proper.offertory.lat, eng: proper.offertory.eng, ref: proper.offertory.ref)
-        sections += sectionHTML(label: "Secréta  ·  Secret", lat: proper.secret.lat, eng: proper.secret.eng, ref: proper.secret.ref)
+        sections += sectionHTML(label: "Evangélium  ·  \(MassPartName.gospel)", lat: proper.gospel.lat, eng: proper.gospel.eng, ref: proper.gospel.ref)
+        sections += sectionHTML(label: "Offertórium  ·  \(MassPartName.offertory)", lat: proper.offertory.lat, eng: proper.offertory.eng, ref: proper.offertory.ref)
+        sections += sectionHTML(label: "Secréta  ·  \(MassPartName.secret)", lat: proper.secret.lat, eng: proper.secret.eng, ref: proper.secret.ref)
 
         // Preface note (between Secret and Communion)
         var prefaceHTML = ""
@@ -45,8 +45,8 @@ enum MassHTMLExporter {
         }
 
         sections += prefaceHTML
-        sections += sectionHTML(label: "Commúnio  ·  Communion", lat: proper.communion.lat, eng: proper.communion.eng, ref: proper.communion.ref)
-        sections += sectionHTML(label: "Postcommúnio  ·  Postcommunion", lat: proper.postcommunion.lat, eng: proper.postcommunion.eng, ref: proper.postcommunion.ref)
+        sections += sectionHTML(label: "Commúnio  ·  \(MassPartName.communion)", lat: proper.communion.lat, eng: proper.communion.eng, ref: proper.communion.ref)
+        sections += sectionHTML(label: "Postcommúnio  ·  \(MassPartName.postcommunion)", lat: proper.postcommunion.lat, eng: proper.postcommunion.eng, ref: proper.postcommunion.ref)
 
         return document(
             title: proper.title,
@@ -75,7 +75,7 @@ enum MassHTMLExporter {
         // Info rows
         if let colour {
             var row = "<div class=\"info-row\">"
-            row += "<span class=\"info-label\">LITURGICAL COLOUR</span>"
+            row += "<span class=\"info-label\">\(escapeHTML(ContentStore.shared.uiString("missal.export.colour", "LITURGICAL COLOUR")))</span>"
             if let hex = colourHex {
                 row += "<span style=\"display:inline-block;width:10px;height:10px;border-radius:50%;background:\(hex);margin-right:6px;vertical-align:middle;\"></span>"
             }
@@ -85,7 +85,7 @@ enum MassHTMLExporter {
         }
 
         body += "<div class=\"info-row\">"
-        body += "<span class=\"info-label\">SEASON</span>"
+        body += "<span class=\"info-label\">\(escapeHTML(ContentStore.shared.uiString("missal.export.season", "SEASON")))</span>"
         body += "<span class=\"info-value\">\(escapeHTML(season))</span>"
         body += "</div>"
 
@@ -97,7 +97,7 @@ enum MassHTMLExporter {
         // Penance card
         body += "<div class=\"penance-card\(penanceStrict ? " strict" : "")\">"
         body += "<div class=\"penance-header\">"
-        body += "<span class=\"info-label\">FASTING &amp; ABSTINENCE</span>"
+        body += "<span class=\"info-label\">\(escapeHTML(ContentStore.shared.uiString("missal.export.penance", "FASTING & ABSTINENCE")))</span>"
         body += "<span class=\"discipline\">\(escapeHTML(discipline))</span>"
         body += "</div>"
         body += "<p class=\"penance-title\">"

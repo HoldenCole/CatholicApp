@@ -233,7 +233,7 @@ fun NotificationScheduleSheet(
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                SmallLabel(text = "Time", color = colors.sanctuaryRed)
+                SmallLabel(text = ContentStore.uiString("notif.time", "Time"), color = colors.sanctuaryRed)
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center,

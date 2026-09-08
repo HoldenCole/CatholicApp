@@ -93,7 +93,7 @@ fun OfficeScreen(
                     IconButton(onClick = { showNotification = true }) {
                         Icon(
                             imageVector = Icons.Outlined.Notifications,
-                            contentDescription = "Notification",
+                            contentDescription = ContentStore.uiString("notif.title", "Notification"),
                             tint = colors.sanctuaryRed,
                         )
                     }

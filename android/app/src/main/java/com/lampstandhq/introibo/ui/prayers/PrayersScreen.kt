@@ -70,11 +70,18 @@ import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import kotlinx.coroutines.launch
 
+/**
+ * Occasion tags as they appear in prayers.json; the tile label is the
+ * vernacular form (prayers.occasion.<slug>).
+ */
 private val occasions = listOf(
     "Morning", "Before Mass", "During Mass", "After Mass", "Meals",
     "Marian", "Eucharistic", "Before Confession",
     "For the Departed", "In Temptation", "For Protection", "Evening",
 )
+
+internal fun occasionLabel(occasion: String): String =
+    ContentStore.uiString("prayers.occasion." + occasion.lowercase().replace(" ", "_"), occasion)
 
 /**
  * Prayers (Oratio) tab screen. Shows prayer rule, occasions grid,
@@ -334,7 +341,7 @@ private fun DailyRuleSection(
         // Rule periods
         if (prayerRule.morning.isNotEmpty()) {
             RulePeriod(
-                lat = "Mane", eng = "Morning",
+                lat = "Mane", eng = ContentStore.uiString("common.morning", "Morning"),
                 slugs = prayerRule.morning,
                 completedPrayers = completedPrayers,
                 onToggle = onTogglePrayer,
@@ -343,7 +350,7 @@ private fun DailyRuleSection(
         }
         if (prayerRule.midday.isNotEmpty()) {
             RulePeriod(
-                lat = "Meridies", eng = "Midday",
+                lat = "Meridies", eng = ContentStore.uiString("common.midday", "Midday"),
                 slugs = prayerRule.midday,
                 completedPrayers = completedPrayers,
                 onToggle = onTogglePrayer,
@@ -352,7 +359,7 @@ private fun DailyRuleSection(
         }
         if (prayerRule.evening.isNotEmpty()) {
             RulePeriod(
-                lat = "Vesperae", eng = "Evening",
+                lat = "Vesperae", eng = ContentStore.uiString("common.evening", "Evening"),
                 slugs = prayerRule.evening,
                 completedPrayers = completedPrayers,
                 onToggle = onTogglePrayer,
@@ -454,7 +461,7 @@ private fun RulePeriod(
                 IconButton(onClick = { onOpen(prayer) }) {
                     Icon(
                         imageVector = Icons.Filled.MenuBook,
-                        contentDescription = "Read",
+                        contentDescription = ContentStore.uiString("prayers.read_a11y", "Read"),
                         tint = colors.sanctuaryRed,
                         modifier = Modifier.size(16.dp),
                     )
@@ -704,7 +711,7 @@ private fun FullLibrarySection(
                 )
                 Spacer(Modifier.width(4.dp))
                 Text(
-                    text = if (sortAlphabetical) "A - Z" else "Default",
+                    text = if (sortAlphabetical) "A - Z" else ContentStore.uiString("prayers.sort.default", "Default"),
                     style = type.captionSm,
                     color = colors.sanctuaryRed,
                 )
@@ -784,7 +791,7 @@ private fun OccasionPrayerSheet(
                 IconButton(
                     onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }
                 ) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
             }
 
@@ -839,7 +846,7 @@ private fun OccasionPrayerSheet(
                         }
                         Icon(
                             imageVector = Icons.Filled.MenuBook,
-                            contentDescription = "Read",
+                            contentDescription = ContentStore.uiString("prayers.read_a11y", "Read"),
                             tint = colors.sanctuaryRed,
                             modifier = Modifier.size(16.dp),
                         )

@@ -81,12 +81,12 @@ fun StationsScreen(
                 title = { Text("Via Crucis", style = type.titleM, color = colors.primaryText) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                     }
                 },
                 actions = {
                     IconButton(onClick = { showNotification = true }) {
-                        Icon(Icons.Outlined.Notifications, "Notification", tint = colors.sanctuaryRed)
+                        Icon(Icons.Outlined.Notifications, ContentStore.uiString("notif.title", "Notification"), tint = colors.sanctuaryRed)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = colors.pageBackground),
@@ -466,7 +466,7 @@ private fun PrayStationView(
                     .padding(vertical = 4.dp),
             ) {
                 SmallLabel(
-                    text = if (index + 1 < 14) "Sequens  ✠  Next Station" else "Finis  ✠  Finish",
+                    text = if (index + 1 < 14) ContentStore.uiString("stations.next", "Sequens  ✠  Next Station") else ContentStore.uiString("stations.finish", "Finis  ✠  Finish"),
                     color = colors.ivory,
                 )
             }

@@ -195,7 +195,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             item {
                 ModeRow(
                     title = ContentStore.uiString("widget.settings.mode_prayer", "Chosen prayers"),
-                    subtitle = "Your own prayer for morning, midday, and evening",
+                    subtitle = ContentStore.uiString("widget.settings.prayer_sub", "Your own prayer for morning, midday, and evening"),
                     selected = mode == WidgetMode.PRAYER,
                 ) {
                     mode = WidgetMode.PRAYER
@@ -206,7 +206,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
 
             item {
                 Text(
-                    text = "LECTIO · READING WIDGET",
+                    text = ContentStore.uiString("widget.settings.reading_header", "Lectio · Reading Widget").uppercase(),
                     style = type.smallLabel,
                     color = colors.tertiaryText,
                     modifier = Modifier.padding(top = 20.dp, bottom = 6.dp),

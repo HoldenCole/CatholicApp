@@ -34,7 +34,7 @@ struct StationsView: View {
             }
         }
         .sheet(isPresented: $showNotification) {
-            NotificationScheduleSheet(scheduleId: "devotion.stations", title: "Via Crucis", subtitle: "Remind me to pray the Stations")
+            NotificationScheduleSheet(scheduleId: "devotion.stations", title: "Via Crucis", subtitle: ContentStore.shared.uiString("stations.remind", "Remind me to pray the Stations"))
         }
     }
 
@@ -353,7 +353,7 @@ private struct PrayStationView: View {
             Button {
                 onNext()
             } label: {
-                Text(index + 1 < 14 ? "Sequens  ✠  Next Station" : "Finis  ✠  Finish")
+                Text(index + 1 < 14 ? ContentStore.shared.uiString("stations.next", "Sequens  ✠  Next Station") : ContentStore.shared.uiString("stations.finish", "Finis  ✠  Finish"))
                     .smallLabel(color: Color.ivory, tracking: 3)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 17)

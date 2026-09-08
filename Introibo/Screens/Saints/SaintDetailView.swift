@@ -130,7 +130,7 @@ struct SaintDetailView: View {
                     .italic()
                     .foregroundStyle(Color.primaryText)
             }
-            Text(progress >= 1.0 ? "Perfect day" : "Today's progress")
+            Text(progress >= 1.0 ? ContentStore.shared.uiString("saints.perfect_day", "Perfect day") : ContentStore.shared.uiString("saints.today_progress", "Today's progress"))
                 .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.tertiaryText)
@@ -174,7 +174,7 @@ struct SaintDetailView: View {
                 streak = UserProgress.saintStreak(slug: saint.slug)
             }
         } label: {
-            Text(isFollowed ? "Unfollow" : "Follow this Saint")
+            Text(isFollowed ? ContentStore.shared.uiString("saints.unfollow", "Unfollow") : ContentStore.shared.uiString("saints.follow", "Follow this Saint"))
                 .smallLabel(color: isFollowed ? Color.secondaryText : Color.sanctuaryRed, tracking: 3)
                 .padding(.vertical, 14)
                 .frame(maxWidth: .infinity)
@@ -276,7 +276,7 @@ struct SaintDetailView: View {
                     .minimumScaleFactor(0.7)
                 Text(".")
                     .foregroundStyle(Color.tertiaryText)
-                Text("Prayers")
+                Text(ContentStore.shared.uiString("saints.prayers", "Prayers"))
                     .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)

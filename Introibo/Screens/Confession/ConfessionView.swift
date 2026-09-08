@@ -39,7 +39,7 @@ struct ConfessionView: View {
             }
         }
         .sheet(isPresented: $showNotification) {
-            NotificationScheduleSheet(scheduleId: "devotion.confession", title: "Confession", subtitle: "Remind me to go to Confession")
+            NotificationScheduleSheet(scheduleId: "devotion.confession", title: ContentStore.shared.uiString("notif.devotion.confession", "Confession"), subtitle: ContentStore.shared.uiString("confession.remind", "Remind me to go to Confession"))
         }
         .sheet(item: $selectedGuide) { guide in
             GuideReaderView(guide: guide)
@@ -102,7 +102,7 @@ struct ConfessionView: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
-                Text("Libri Duo  ·  Two Paths")
+                Text(ContentStore.shared.uiString("confession.two_paths", "Libri Duo  ·  Two Paths"))
                     .smallLabel(color: Color.sanctuaryRed)
                     .lineLimit(2)
                     .minimumScaleFactor(0.7)

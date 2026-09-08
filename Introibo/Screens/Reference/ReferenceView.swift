@@ -32,32 +32,32 @@ struct ReferenceView: View {
             HStack(spacing: 12) {
                 sectionCard(
                     icon: "text.book.closed",
-                    title: "References",
+                    title: ContentStore.shared.uiString("reference.references", "References"),
                     latin: "Encyclopaedia",
-                    count: "\(store.reference.count) articles",
+                    count: ContentStore.shared.uiString("reference.articles", "{0} articles", String(store.reference.count)),
                     destination: AnyView(ReferenceListView())
                 )
                 sectionCard(
                     icon: "book.closed",
-                    title: "Propers",
+                    title: ContentStore.shared.uiString("reference.propers", "Propers"),
                     latin: "Propria Missae",
-                    count: "\(store.allPropers.count) formularies",
+                    count: ContentStore.shared.uiString("reference.formularies", "{0} formularies", String(store.allPropers.count)),
                     destination: AnyView(PropersSearchView())
                 )
             }
             HStack(spacing: 12) {
                 sectionCard(
                     icon: "scroll",
-                    title: "History",
+                    title: ContentStore.shared.uiString("reference.history_title", "History"),
                     latin: "Historia Missae",
-                    count: "Timeline",
+                    count: ContentStore.shared.uiString("reference.timeline", "Timeline"),
                     destination: AnyView(TLMHistoryView())
                 )
                 sectionCard(
                     icon: "character.book.closed",
-                    title: "Glossary",
+                    title: ContentStore.shared.uiString("reference.glossary", "Glossary"),
                     latin: "Glossarium",
-                    count: "Liturgical terms",
+                    count: ContentStore.shared.uiString("reference.terms", "Liturgical terms"),
                     destination: AnyView(GlossaryView())
                 )
             }
@@ -107,8 +107,9 @@ struct ReferenceView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
 
-            ForEach(["The Holy Mass", "Baptism", "The Holy Eucharist", "Penance (Confession)", "The Rosary"], id: \.self) { title in
-                if let entry = store.reference.first(where: { $0.title == title }) {
+            // Keyed by slug so the links survive the vernacular overlay of titles.
+            ForEach(["mass-mass", "mass-baptism", "mass-eucharist", "mass-penance", "pray-rosary"], id: \.self) { slug in
+                if let entry = store.reference.first(where: { $0.slug == slug }) {
                     Button { selection = entry } label: {
                         HStack {
                             Text(entry.title)
@@ -163,7 +164,7 @@ struct ReferenceListView: View {
             .padding(.bottom, 40)
         }
         .background(Color.pageBackground.ignoresSafeArea())
-        .navigationTitle("References")
+        .navigationTitle(ContentStore.shared.uiString("reference.references", "References"))
         .navigationBarTitleDisplayMode(.inline)
         .sheet(item: $selection) { ReferenceDetailView(entry: $0) }
     }
@@ -297,7 +298,7 @@ struct PropersSearchView: View {
             }
         }
         .background(Color.pageBackground.ignoresSafeArea())
-        .navigationTitle("Propers")
+        .navigationTitle(ContentStore.shared.uiString("reference.propers", "Propers"))
         .navigationBarTitleDisplayMode(.inline)
         .sheet(item: $selectedProper) { proper in
             ProperView(proper: proper)
@@ -310,7 +311,16 @@ struct PropersSearchView: View {
 struct TLMHistoryView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
-    private let events: [(year: String, title: String, desc: String)] = [
+    // English literals are the defaults; Spanish comes from ui_strings_es
+    // (reference.history.N.title / .desc) by index.
+    private var events: [(year: String, title: String, desc: String)] {
+        Self.eventsEN.enumerated().map { i, e in
+            (e.year,
+             ContentStore.shared.uiString("reference.history.\(i).title", e.title),
+             ContentStore.shared.uiString("reference.history.\(i).desc", e.desc))
+        }
+    }
+    private static let eventsEN: [(year: String, title: String, desc: String)] = [
         ("33 AD", "The Last Supper", "Our Lord institutes the Holy Sacrifice of the Mass at the Last Supper, commanding the Apostles to do this in memory of Him."),
         ("c. 100", "Apostolic Liturgy", "The Didache describes early Christian worship with prayers over bread and wine following the pattern established by the Apostles."),
         ("c. 225", "Apostolic Tradition", "Hippolytus of Rome records the earliest known Eucharistic Prayer, showing the Roman Canon already taking shape."),
@@ -400,7 +410,7 @@ struct TLMHistoryView: View {
             }
         }
         .background(Color.pageBackground.ignoresSafeArea())
-        .navigationTitle("History")
+        .navigationTitle(ContentStore.shared.uiString("reference.history_title", "History"))
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -410,7 +420,16 @@ struct TLMHistoryView: View {
 struct GlossaryView: View {
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
 
-    private let terms: [(lat: String, eng: String, def: String)] = [
+    // Latin is fixed; the gloss and definition follow the vernacular
+    // (reference.glossary.N.eng / .def) by index.
+    private var terms: [(lat: String, eng: String, def: String)] {
+        Self.termsEN.enumerated().map { i, t in
+            (t.lat,
+             ContentStore.shared.uiString("reference.glossary.\(i).eng", t.eng),
+             ContentStore.shared.uiString("reference.glossary.\(i).def", t.def))
+        }
+    }
+    private static let termsEN: [(lat: String, eng: String, def: String)] = [
         ("Introitus", "Introit", "The entrance antiphon sung as the priest approaches the altar."),
         ("Collecta", "Collect", "The prayer of the day, collecting the intentions of the faithful."),
         ("Lectio", "Epistle", "The first scripture reading, usually from the letters of St. Paul."),
@@ -466,7 +485,7 @@ struct GlossaryView: View {
             .padding(.vertical, 12)
         }
         .background(Color.pageBackground.ignoresSafeArea())
-        .navigationTitle("Glossary")
+        .navigationTitle(ContentStore.shared.uiString("reference.glossary", "Glossary"))
         .navigationBarTitleDisplayMode(.inline)
     }
 }

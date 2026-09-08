@@ -102,7 +102,7 @@ struct MissalView: View {
 
         // INTROIT (proper)
         // In Passiontide the Gloria Patri is omitted from the Introit.
-        properSection("Introitus", subtitle: "Introit",
+        properSection("Introitus", subtitle: MassPartName.introit,
                        text: ctx.season == .passion
                            ? stripGloriaPatri(proper.introit)
                            : proper.introit)
@@ -118,27 +118,27 @@ struct MissalView: View {
         }
 
         // COLLECT (proper)
-        properSection("Orátio", subtitle: "Collect", text: proper.collect)
+        properSection("Orátio", subtitle: MassPartName.collect, text: proper.collect)
 
         // EPISTLE (proper)
-        readingSection("Léctio", subtitle: "Epistle", reading: proper.epistle)
+        readingSection("Léctio", subtitle: MassPartName.epistle, reading: proper.epistle)
 
         // GRADUAL (proper)
         if let gradual = proper.gradual {
-            properSection("Graduále", subtitle: "Gradual", text: gradual)
+            properSection("Graduále", subtitle: MassPartName.gradual, text: gradual)
         }
         if let alleluia = proper.alleluia {
-            properSection("Allelúja", subtitle: "Alleluia", text: alleluia)
+            properSection("Allelúja", subtitle: MassPartName.alleluia, text: alleluia)
         }
         if let tract = proper.tract {
-            properSection("Tractus", subtitle: "Tract", text: tract)
+            properSection("Tractus", subtitle: MassPartName.tract, text: tract)
         }
         if let sequence = proper.sequence {
-            properSection("Sequéntia", subtitle: "Sequence", text: sequence)
+            properSection("Sequéntia", subtitle: MassPartName.sequence, text: sequence)
         }
 
         // GOSPEL (proper)
-        readingSection("Evangélium", subtitle: "Gospel", reading: proper.gospel)
+        readingSection("Evangélium", subtitle: MassPartName.gospel, reading: proper.gospel)
 
         // Credo — said on all Sundays and on major feasts (rank 1)
         if showCredo(proper) {
@@ -146,13 +146,13 @@ struct MissalView: View {
         }
 
         // OFFERTORY (proper)
-        properSection("Offertórium", subtitle: "Offertory", text: proper.offertory)
+        properSection("Offertórium", subtitle: MassPartName.offertory, text: proper.offertory)
 
         // Offertory prayers (Ordinary)
         ordinarySection("offertory_prayers")
 
         // SECRET (proper)
-        properSection("Secréta", subtitle: "Secret", text: proper.secret)
+        properSection("Secréta", subtitle: MassPartName.secret, text: proper.secret)
 
         // Preface, Sanctus, Canon, Pater Noster
         properPreface(proper)
@@ -181,12 +181,12 @@ struct MissalView: View {
         ordinarySection("confiteor-communion")
 
         // COMMUNION (proper)
-        properSection("Commúnio", subtitle: "Communion", text: proper.communion)
+        properSection("Commúnio", subtitle: MassPartName.communion, text: proper.communion)
 
         ordinarySection("ablutiones")
 
         // POSTCOMMUNION (proper)
-        properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
+        properSection("Postcommúnio", subtitle: MassPartName.postcommunion, text: proper.postcommunion)
 
         // Dismissal precedes the Placeat:
         // "Ite, missa est" when Gloria was said;
@@ -485,7 +485,7 @@ struct MissalView: View {
         if let p = proper {
             // Strip Gloria Patri from introit in Passiontide
             let introit = ctx.season == .passion ? stripGloriaPatri(p.introit) : p.introit
-            addProper("Introitus · Introit", lat: introit.lat, eng: introit.eng)
+            addProper("Introitus · \(MassPartName.introit)", lat: introit.lat, eng: introit.eng)
         }
 
         addOrdinary("kyrie")
@@ -496,13 +496,13 @@ struct MissalView: View {
         }
 
         if let p = proper {
-            addProper("Orátio · Collect", lat: p.collect.lat, eng: p.collect.eng)
-            addProper("Léctio · Epistle", lat: p.epistle.lat, eng: p.epistle.eng, ref: p.epistle.ref)
-            if let g = p.gradual { addProper("Graduále · Gradual", lat: g.lat, eng: g.eng) }
+            addProper("Orátio · \(MassPartName.collect)", lat: p.collect.lat, eng: p.collect.eng)
+            addProper("Léctio · \(MassPartName.epistle)", lat: p.epistle.lat, eng: p.epistle.eng, ref: p.epistle.ref)
+            if let g = p.gradual { addProper("Graduále · \(MassPartName.gradual)", lat: g.lat, eng: g.eng) }
             if let a = p.alleluia { addProper("Allelúja", lat: a.lat, eng: a.eng) }
-            if let t = p.tract { addProper("Tractus · Tract", lat: t.lat, eng: t.eng) }
-            if let seq = p.sequence { addProper("Sequéntia · Sequence", lat: seq.lat, eng: seq.eng) }
-            addProper("Evangélium · Gospel", lat: p.gospel.lat, eng: p.gospel.eng, ref: p.gospel.ref)
+            if let t = p.tract { addProper("Tractus · \(MassPartName.tract)", lat: t.lat, eng: t.eng) }
+            if let seq = p.sequence { addProper("Sequéntia · \(MassPartName.sequence)", lat: seq.lat, eng: seq.eng) }
+            addProper("Evangélium · \(MassPartName.gospel)", lat: p.gospel.lat, eng: p.gospel.eng, ref: p.gospel.ref)
         }
 
         if let p = proper {
@@ -512,13 +512,13 @@ struct MissalView: View {
         }
 
         if let p = proper {
-            addProper("Offertórium · Offertory", lat: p.offertory.lat, eng: p.offertory.eng)
+            addProper("Offertórium · \(MassPartName.offertory)", lat: p.offertory.lat, eng: p.offertory.eng)
         }
 
         addOrdinary("offertory_prayers")
 
         if let p = proper {
-            addProper("Secréta · Secret", lat: p.secret.lat, eng: p.secret.eng)
+            addProper("Secréta · \(MassPartName.secret)", lat: p.secret.lat, eng: p.secret.eng)
         }
 
         let resolvedPreface = prefaceSlug(for: proper)
@@ -569,12 +569,12 @@ struct MissalView: View {
         addOrdinary("confiteor-communion")
 
         if let p = proper {
-            addProper("Commúnio · Communion", lat: p.communion.lat, eng: p.communion.eng)
+            addProper("Commúnio · \(MassPartName.communion)", lat: p.communion.lat, eng: p.communion.eng)
         }
         addOrdinary("ablutiones")
 
         if let p = proper {
-            addProper("Postcommúnio · Postcommunion", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
+            addProper("Postcommúnio · \(MassPartName.postcommunion)", lat: p.postcommunion.lat, eng: p.postcommunion.eng)
         }
 
         // Dismissal precedes the Placeat.

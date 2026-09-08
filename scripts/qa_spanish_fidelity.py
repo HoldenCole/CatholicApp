@@ -59,6 +59,14 @@ ALLOWLIST = [
     ("ART", "ui_strings", "examen.decalogue"),
     ("ART", "ui_strings", "office.subtitle"),
     ("ART", "ui_strings", "prayers.canonical_hours"),
+    ("ART", "ui_strings", "rosary.next"),
+    ("ART", "ui_strings", "rosary.finish"),
+    ("ART", "ui_strings", "stations.next"),
+    ("ART", "ui_strings", "stations.finish"),
+    ("ART", "ui_strings", "learn.lesson"),
+    ("ART", "ui_strings", "learn.unmark"),
+    ("ART", "ui_strings", "confession.two_paths"),
+    ("ART", "ui_strings", "common.see_also"),
     ("ART", "ui_strings", "rosary.bead_of"),
     ("ART", "ui_strings", "stations.begin"),
     ("ART", "ui_strings", "stations.progress"),
@@ -500,10 +508,20 @@ def main():
             for k, v in node.items():
                 walk_free(file, f"{key}.{k}", v)
     for fname in ("saints_es.json", "reference_es.json", "courses_es.json",
-                  "ui_strings_es.json"):
+                  "ui_strings_es.json", "confession_examen_es.json",
+                  "confession_guides_es.json"):
         for k, v in load(fname).items():
             if not k.startswith("_"):
                 walk_free(fname.replace("_es.json", ""), k, v)
+
+    # ---- the Today screen's rotating psalm verse (Torres Amat) ----
+    # Paired with the Latin the code carries (DailyPsalm.swift).
+    swift = Path("Introibo/Data/DailyPsalm.swift").read_text(encoding="utf-8")
+    lat_by_ref = dict(re.findall(r'PsalmVerse\(ref:\s*"([^"]+)",\s*latin:\s*"([^"]*)"', swift))
+    for ref, o in load("daily_psalm_es.json").items():
+        if ref.startswith("_"):
+            continue
+        check_pair("daily_psalm", ref, lat_by_ref.get(ref, ""), o["english_es"])
 
     # ---- report ----
     print("pairs checked per corpus:")

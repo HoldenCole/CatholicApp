@@ -36,9 +36,9 @@ enum WidgetSlot: String, CaseIterable {
 
     var label: String {
         switch self {
-        case .morning: return "Morning"
-        case .midday: return "Midday"
-        case .evening: return "Evening"
+        case .morning: return WidgetConfigStore.chrome("common.morning", "Morning")
+        case .midday: return WidgetConfigStore.chrome("common.midday", "Midday")
+        case .evening: return WidgetConfigStore.chrome("common.evening", "Evening")
         }
     }
 }

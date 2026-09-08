@@ -4,7 +4,18 @@ struct TutorialView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var page = 0
 
-    private let steps: [(icon: String, title: String, items: [(String, String)])] = [
+    // English literals are the defaults; Spanish comes from ui_strings_es
+    // (tutorial.page.N.title / tutorial.page.N.M) by position.
+    private var steps: [(icon: String, title: String, items: [(String, String)])] {
+        Self.stepsEN.enumerated().map { i, page in
+            (page.icon,
+             ContentStore.shared.uiString("tutorial.page.\(i).title", page.title),
+             page.items.enumerated().map { j, item in
+                 (item.0, ContentStore.shared.uiString("tutorial.page.\(i).\(j)", item.1))
+             })
+        }
+    }
+    private static let stepsEN: [(icon: String, title: String, items: [(String, String)])] = [
         ("sun.horizon", "Today", [
             ("calendar", "Your daily liturgical companion with feast day, season, and liturgical colour"),
             ("book.closed", "Tap the Propers card to read today's Epistle and Gospel"),
@@ -68,7 +79,7 @@ struct TutorialView: View {
                         dismiss()
                     }
                 } label: {
-                    Text(page < steps.count - 1 ? "Next" : "Introíbo ad altáre Dei  ✠")
+                    Text(page < steps.count - 1 ? ContentStore.shared.uiString("tutorial.next", "Next") : "Introíbo ad altáre Dei  ✠")
                         .appFont(.scaledSystem(14, weight: .semibold, design: .serif))
                         .italic()
                         .foregroundStyle(Color.ivory)

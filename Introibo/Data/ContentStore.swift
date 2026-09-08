@@ -108,10 +108,26 @@ final class ContentStore {
     /// a literal at the call site and is identical in every vernacular.
     private(set) var uiStringsES: [String: String] = [:]
 
+    /// The vernacular currently applied to the store.
+    private(set) var vernacular: VernacularLanguage = .english
+
     /// The vernacular form of a piece of UI chrome; `en` when not covered.
     func uiString(_ key: String, _ en: String) -> String {
         uiStringsES[key] ?? en
     }
+
+    /// `pattern` with `{0}`, `{1}`… replaced in order.
+    func uiString(_ key: String, _ en: String, _ args: String...) -> String {
+        var out = uiString(key, en)
+        for (i, a) in args.enumerated() {
+            out = out.replacingOccurrences(of: "{\(i)}", with: a)
+        }
+        return out
+    }
+
+    /// Torres Amat text for the Today screen's rotating psalm verse,
+    /// keyed by the verse ref ("Ps 26:4"); empty when English.
+    private(set) var dailyPsalmES: [String: String] = [:]
 
     // Overlay schemas — spanish-translation/*.json, bundled as *_es.json.
     // Each keys the source file's slug to Spanish replacements; anything
@@ -150,6 +166,21 @@ final class ContentStore {
     private struct MysterySetES: Decodable {
         let english_es: String
         let mysteries: [MysteryES]
+    }
+    private struct ExamenES: Decodable {
+        let commandment_es: String
+        let questions_es: [String]
+    }
+    private struct GuideStepES: Decodable {
+        let title_es: String
+        let body_es: String
+    }
+    private struct GuideES: Decodable {
+        let title_es: String
+        let steps_es: [GuideStepES]
+    }
+    private struct DailyPsalmES: Decodable {
+        let english_es: String
     }
     private struct RosaryPrayerES: Decodable {
         let eng_es: String
@@ -239,6 +270,8 @@ final class ContentStore {
     }
 
     private func applyVernacularOverlay(_ lang: VernacularLanguage, reloadSources: Bool) {
+        vernacular = lang
+        dailyPsalmES = [:]
         if reloadSources {
             prayers         = load("prayers",          as: [Prayer].self)             ?? []
             hours           = load("hours",            as: [Hour].self)               ?? []
@@ -454,6 +487,38 @@ final class ContentStore {
                 }
                 return p2
             }
+        }
+        // Confession (tranche U2): the examination of conscience and the
+        // two guided paths. Roman numerals, Latin commandments, and the
+        // Latin phase names stay; the absolution formula inside a step
+        // body is quoted verbatim in both languages.
+        if let es = load("confession_examen_es", as: [String: ExamenES].self) {
+            examen = examen.map { e in
+                guard let o = es[e.num], o.questions_es.count == e.questions.count
+                else { return e }
+                var e2 = e
+                e2.commandment = o.commandment_es
+                e2.questions = o.questions_es
+                return e2
+            }
+        }
+        if let es = load("confession_guides_es", as: [String: GuideES].self) {
+            confessionGuides = confessionGuides.map { g in
+                guard let o = es[g.slug], o.steps_es.count == g.steps.count
+                else { return g }
+                var g2 = g
+                g2.title = o.title_es
+                for i in g2.steps.indices {
+                    g2.steps[i].title = o.steps_es[i].title_es
+                    g2.steps[i].body = o.steps_es[i].body_es
+                }
+                return g2
+            }
+        }
+        // The Today screen's rotating psalm verse: Torres Amat, keyed by
+        // the verse ref the code carries.
+        if let es = load("daily_psalm_es", as: [String: DailyPsalmES].self) {
+            dailyPsalmES = es.mapValues { $0.english_es }
         }
         // The sanctoral Office propers (tranche O7): same per-part
         // replacement as the temporal cycle.
@@ -756,7 +821,7 @@ final class ContentStore {
         // of truth for "the collect of the day".
         let fallbackCollect: Hour.Part? = properForDate(ctx.date, rite: rite).map { proper in
             var p = Hour.Part(type: "collect")
-            p.label = "Collect"
+            p.label = uiString("missal.part.collect", "Collect")
             p.lat = proper.collect.lat
             p.eng = proper.collect.eng
             p.variationKey = "oratio"
@@ -907,7 +972,7 @@ final class ContentStore {
         if let ant {
             var p = ant
             p.variationKey = nil
-            p.label = "Antiphon"
+            p.label = uiString("office.antiphon", "Antiphon")
             block.append(p)
         }
 

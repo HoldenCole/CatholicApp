@@ -51,18 +51,20 @@ enum WidgetContent {
     /// prayers.json. Must cover WidgetConfigStore.defaultSlotPrayers.
     /// The config screen stores the chosen prayer's display titles alongside
     /// the slug precisely so this table only backs the defaults.
-    static let defaultPrayerTitles: [String: (title: String, eng: String)] = [
-        "morning": ("Oblátio Matutína", "Morning Offering"),
-        "angelus": ("Angelus Dómini", "The Angelus"),
-        "actusContr": ("Actus Contritiónis", "Act of Contrition"),
-    ]
+    static var defaultPrayerTitles: [String: (title: String, eng: String)] {
+        [
+            "morning": ("Oblátio Matutína", WidgetConfigStore.chrome("widget.prayer.morning", "Morning Offering")),
+            "angelus": ("Angelus Dómini", WidgetConfigStore.chrome("widget.prayer.angelus", "The Angelus")),
+            "actusContr": ("Actus Contritiónis", WidgetConfigStore.chrome("widget.prayer.contrition", "Act of Contrition")),
+        ]
+    }
 
     static func prayerDisplay(slug: String) -> (title: String, eng: String) {
         if let stored = WidgetConfigStore.defaults.string(forKey: "widget.title.\(slug)") {
             let engStored = WidgetConfigStore.defaults.string(forKey: "widget.eng.\(slug)") ?? ""
             return (stored, engStored)
         }
-        return defaultPrayerTitles[slug] ?? ("Oratio", "Tap to pray")
+        return defaultPrayerTitles[slug] ?? ("Oratio", WidgetConfigStore.chrome("widget.tap_to_pray", "Tap to pray"))
     }
 }
 
@@ -367,12 +369,23 @@ func liturgicalColor(_ key: String) -> Color {
 struct LiturgicalDayWidgetView: View {
     let entry: DayEntry
 
-    private static let dayFormatter: DateFormatter = {
-        let df = DateFormatter()
-        df.locale = Locale(identifier: "en_US_POSIX")
-        df.dateFormat = "EEEE d MMMM"
-        return df
-    }()
+    /// "Monday 8 September" · "lunes 8 de septiembre": the names come from
+    /// the chrome the app writes (calendar.weekday.N / calendar.month.N);
+    /// English is the fallback. Spanish is detected by the month key
+    /// being present, and puts "de" between day and month.
+    private static func dayLabel(_ date: Date) -> String {
+        let cal = Calendar.current
+        let dow = cal.component(.weekday, from: date) - 1
+        let month = cal.component(.month, from: date)
+        let day = cal.component(.day, from: date)
+        let weekdaysEN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        let monthsEN = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"]
+        let wd = WidgetConfigStore.chrome("calendar.weekday.\(dow)", weekdaysEN[dow])
+        let mo = WidgetConfigStore.chrome("calendar.month.\(month)", monthsEN[month - 1])
+        let vernacular = WidgetConfigStore.chrome("calendar.month.\(month)", "") != ""
+        return vernacular ? "\(wd.lowercased()) \(day) de \(mo)" : "\(wd) \(day) \(mo)"
+    }
 
     var body: some View {
         Group {
@@ -396,7 +409,7 @@ struct LiturgicalDayWidgetView: View {
                         .lineLimit(4)
                         .minimumScaleFactor(0.7)
                     Spacer(minLength: 0)
-                    Text(Self.dayFormatter.string(from: entry.date))
+                    Text(Self.dayLabel(entry.date))
                         .font(.system(size: 10, design: .serif))
                         .italic()
                         .foregroundStyle(Color.wInkSoft)

@@ -12,6 +12,8 @@ import android.widget.RemoteViews
 import com.lampstandhq.introibo.R
 import com.lampstandhq.introibo.app.MainActivity
 import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.data.liturgical.LiturgicalNames
+import com.lampstandhq.introibo.data.liturgical.VernacularDates
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.liturgical.LiturgicalYear
 import com.lampstandhq.introibo.data.widget.WidgetConfig
@@ -21,8 +23,6 @@ import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.Locale
 
 // MARK: - Day widgets (Today's Feast + Daily Reading, v1.2.3)
 //
@@ -40,7 +40,6 @@ import java.util.Locale
 //
 // iOS mirror: LiturgicalDayWidget / DailyReadingWidget in IntroiboWidgets/.
 
-private val dayFormatter = DateTimeFormatter.ofPattern("EEEE d MMMM", Locale.US)
 
 private fun liturgicalColorInt(key: String?): Int = when (key) {
     "violet" -> 0xFF6B369A.toInt()
@@ -164,7 +163,7 @@ class IntroiboDayWidgetProvider : DayScopedWidgetProvider() {
         views.setTextViewText(R.id.day_season, ctx.englishName.uppercase())
         views.setInt(R.id.day_ribbon, "setBackgroundColor", liturgicalColorInt(ordo?.color))
         views.setTextViewText(R.id.day_title, if (latin) latinName else (english ?: latinName))
-        views.setTextViewText(R.id.day_date, today.format(dayFormatter))
+        views.setTextViewText(R.id.day_date, VernacularDates.weekdayDayMonth(today))
         views.setOnClickPendingIntent(R.id.day_root, tapIntent(context, "widget:day"))
         return views
     }
@@ -228,7 +227,6 @@ class IntroiboSaintsWidgetProvider : DayScopedWidgetProvider() {
     override val refreshAction = "com.lampstandhq.introibo.widget.SAINTS_REFRESH"
     override val alarmRequestCode = 4
 
-    private val upcomingDateFormatter = DateTimeFormatter.ofPattern("d MMM", Locale.US)
 
     override fun buildViews(context: Context): RemoteViews {
         val views = RemoteViews(context.packageName, R.layout.widget_saints)
@@ -274,7 +272,7 @@ class IntroiboSaintsWidgetProvider : DayScopedWidgetProvider() {
                     nameId,
                     if (latin) dayOrdo.name else (day.englishName ?: dayOrdo.name),
                 )
-                views.setTextViewText(dateId, day.date.format(upcomingDateFormatter))
+                views.setTextViewText(dateId, "${day.date.dayOfMonth} ${LiturgicalNames.monthAbbrev(day.date.monthValue)}")
             }
         }
 

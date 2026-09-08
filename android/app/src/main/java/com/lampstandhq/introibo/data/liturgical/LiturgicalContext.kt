@@ -1,6 +1,8 @@
 package com.lampstandhq.introibo.data.liturgical
 
+import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.storage.settings.MissalRite
+import com.lampstandhq.introibo.storage.settings.VernacularLanguage
 import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import java.time.DayOfWeek
 import java.time.LocalDate
@@ -54,9 +56,9 @@ enum class MysterySet(val key: String) {
 
     val englishName: String
         get() = when (this) {
-            JOYFUL -> "Joyful Mysteries"
-            SORROWFUL -> "Sorrowful Mysteries"
-            GLORIOUS -> "Glorious Mysteries"
+            JOYFUL -> ContentStore.uiString("rosary.set.joyful", "Joyful Mysteries")
+            SORROWFUL -> ContentStore.uiString("rosary.set.sorrowful", "Sorrowful Mysteries")
+            GLORIOUS -> ContentStore.uiString("rosary.set.glorious", "Glorious Mysteries")
         }
 }
 
@@ -154,44 +156,44 @@ data class LiturgicalContext(
                 season = LiturgicalSeason.ADVENT
                 colour = LiturgicalColour.VIOLET
                 latinName = "Tempus Advéntus"
-                englishName = "Advent"
+                englishName = ContentStore.uiString("calendar.season.advent", "Advent")
             } else if (now.isSameOrAfter(christmas) || now.isSameOrBefore(candlemas.addDays(-1))) {
                 season = LiturgicalSeason.CHRISTMAS
                 colour = LiturgicalColour.WHITE
                 latinName = "Tempus Nativitátis"
-                englishName = "Christmastide"
+                englishName = ContentStore.uiString("calendar.season.christmastide", "Christmastide")
             } else if (now.isSameOrAfter(ashWed) && now.isSameOrBefore(easter.addDays(-1))) {
                 if (now.isSameOrAfter(passionStart)) {
                     season = LiturgicalSeason.PASSION
                     colour = LiturgicalColour.VIOLET
                     latinName = "Tempus Passiónis"
-                    englishName = "Passiontide"
+                    englishName = ContentStore.uiString("calendar.season.passiontide", "Passiontide")
                 } else {
                     season = LiturgicalSeason.LENT
                     colour = LiturgicalColour.VIOLET
                     latinName = "Quadragésima"
-                    englishName = "Lent"
+                    englishName = ContentStore.uiString("calendar.season.lent", "Lent")
                 }
             } else if (now.isSameDay(pentecost)) {
                 season = LiturgicalSeason.PENTECOST
                 colour = LiturgicalColour.RED
                 latinName = "Pentecóste"
-                englishName = "Pentecost"
+                englishName = ContentStore.uiString("calendar.season.pentecost", "Pentecost")
             } else if (now.isSameOrAfter(easter) && now.isSameOrBefore(trinity.addDays(-1))) {
                 season = LiturgicalSeason.EASTER
                 colour = LiturgicalColour.WHITE
                 latinName = "Tempus Paschále"
-                englishName = "Eastertide"
+                englishName = ContentStore.uiString("calendar.season.eastertide", "Eastertide")
             } else if (now.isSameOrAfter(trinity)) {
                 season = LiturgicalSeason.PER_ANNUM
                 colour = LiturgicalColour.GREEN
                 latinName = "Tempus post Pentecósten"
-                englishName = "Time after Pentecost"
+                englishName = ContentStore.uiString("calendar.season.time_after_pentecost", "Time after Pentecost")
             } else {
                 season = LiturgicalSeason.PER_ANNUM
                 colour = LiturgicalColour.GREEN
                 latinName = "Tempus post Epiphaníam"
-                englishName = "Time after Epiphany"
+                englishName = ContentStore.uiString("calendar.season.time_after_epiphany", "Time after Epiphany")
             }
 
             // ---- Day-of-week ----
@@ -345,64 +347,64 @@ data class LiturgicalContext(
         ): Penance {
             val isSaturday = dow == 6
             val isWednesday = dow == 3
-            if (isSunday) return Penance("Day of the Lord", "Dies Domínica",
-                "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass.",
+            if (isSunday) return Penance(ContentStore.uiString("penance.sunday.title", "Day of the Lord"), "Dies Domínica",
+                ContentStore.uiString("penance.sunday.desc", "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass."),
                 "℟. Domínica", false)
 
             if (discipline != PenanceDiscipline.DISCIPLINE_1962 &&
                 isEmberDate(date, easter, pentecost, firstAdvent, dow)) {
                 val desc = if (discipline == PenanceDiscipline.STRICT)
-                    "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat."
-                else "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat."
-                return Penance("Ember Day: Fast & Abstinence", "Quattuor Témporum", desc,
+                    ContentStore.uiString("penance.ember.desc_strict", "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat.")
+                else ContentStore.uiString("penance.ember.desc_1917", "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat.")
+                return Penance(ContentStore.uiString("penance.ember.title", "Ember Day: Fast & Abstinence"), "Quattuor Témporum", desc,
                     "℟. Quattuor Témporum", true)
             }
             if (discipline != PenanceDiscipline.DISCIPLINE_1962 &&
                 isVigilFast(date, pentecost)) {
                 val desc = if (discipline == PenanceDiscipline.STRICT)
-                    "Fast (one full meal, no upper age limit) and abstinence."
-                else "Fast (one full meal and two collations, ages 21–59) and abstinence."
-                return Penance("Vigil: Fast & Abstinence", "Vigília: Ieiúnium", desc,
+                    ContentStore.uiString("penance.vigil.desc_strict", "Fast (one full meal, no upper age limit) and abstinence.")
+                else ContentStore.uiString("penance.vigil.desc_1917", "Fast (one full meal and two collations, ages 21–59) and abstinence.")
+                return Penance(ContentStore.uiString("penance.vigil.title", "Vigil: Fast & Abstinence"), "Vigília: Ieiúnium", desc,
                     "℟. Vigília", true)
             }
             if (isLent) {
                 val fastDesc = if (discipline == PenanceDiscipline.STRICT)
-                    "Fast: one full meal (no upper age limit). Two small collations permitted."
-                else "Fast: one full meal and two small collations (ages 21–59)."
-                if (isFriday) return Penance("Lenten Friday: Fast & Abstinence",
+                    ContentStore.uiString("penance.lent.fast_strict", "Fast: one full meal (no upper age limit). Two small collations permitted.")
+                else ContentStore.uiString("penance.lent.fast_1917", "Fast: one full meal and two small collations (ages 21–59).")
+                if (isFriday) return Penance(ContentStore.uiString("penance.lent_friday.title", "Lenten Friday: Fast & Abstinence"),
                     "Feria Sexta in Quadragésima",
-                    "$fastDesc Complete abstinence from flesh-meat.",
+                    ContentStore.uiString("penance.lent_friday.desc", "{0} Complete abstinence from flesh-meat.").replace("{0}", fastDesc),
                     "℟. Quadragésima · Feria Sexta", true)
                 if (isSaturday && discipline != PenanceDiscipline.DISCIPLINE_1962)
-                    return Penance("Lenten Saturday: Fast & Abstinence",
+                    return Penance(ContentStore.uiString("penance.lent_saturday.title", "Lenten Saturday: Fast & Abstinence"),
                         "Sábbato in Quadragésima",
-                        "$fastDesc Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).",
+                        ContentStore.uiString("penance.lent_saturday.desc", "{0} Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).").replace("{0}", fastDesc),
                         "℟. Quadragésima · Sábbato", true)
-                return Penance("Lenten Fast", "Ieiúnium Quadragesimále",
-                    "$fastDesc Wednesdays are also days of abstinence.",
+                return Penance(ContentStore.uiString("penance.lent_fast.title", "Lenten Fast"), "Ieiúnium Quadragesimále",
+                    ContentStore.uiString("penance.lent_fast.desc", "{0} Wednesdays are also days of abstinence.").replace("{0}", fastDesc),
                     "℟. ${feriaLatinNames[dow]} in Quadragésima", true)
             }
             if (season == LiturgicalSeason.ADVENT) {
                 if (discipline == PenanceDiscipline.STRICT && (isWednesday || isFriday))
-                    return Penance("Advent Fast & Abstinence", "Ieiúnium et Abstinéntia in Advéntu",
-                        "Fast (one full meal, no upper age limit) and abstinence from flesh-meat (pre-1953 Advent discipline).",
+                    return Penance(ContentStore.uiString("penance.advent_fast.title", "Advent Fast & Abstinence"), "Ieiúnium et Abstinéntia in Advéntu",
+                        ContentStore.uiString("penance.advent_fast.desc", "Fast (one full meal, no upper age limit) and abstinence from flesh-meat (pre-1953 Advent discipline)."),
                         "℟. ${feriaLatinNames[dow]} in Advéntu", true)
                 if (discipline == PenanceDiscipline.DISCIPLINE_1917 && (isFriday || isSaturday))
-                    return Penance("Advent Abstinence", "Abstinéntia in Advéntu",
-                        "Abstain from flesh-meat (Advent Friday/Saturday, 1917 Code).",
+                    return Penance(ContentStore.uiString("penance.advent_abstinence.title", "Advent Abstinence"), "Abstinéntia in Advéntu",
+                        ContentStore.uiString("penance.advent_abstinence.desc", "Abstain from flesh-meat (Advent Friday/Saturday, 1917 Code)."),
                         "℟. ${feriaLatinNames[dow]} in Advéntu", false)
-                if (isFriday) return Penance("Friday Abstinence", "Feria Sexta",
-                    "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+                if (isFriday) return Penance(ContentStore.uiString("penance.friday.title", "Friday Abstinence"), "Feria Sexta",
+                    ContentStore.uiString("penance.friday.desc", "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord."),
                     "℟. Feria Sexta", false)
-                return Penance("Advent: Penitential Season", "Tempus Advéntus",
-                    "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
+                return Penance(ContentStore.uiString("penance.advent_season.title", "Advent: Penitential Season"), "Tempus Advéntus",
+                    ContentStore.uiString("penance.advent_season.desc", "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord."),
                     "℟. ${feriaLatinNames[dow]} in Advéntu", false)
             }
-            if (isFriday) return Penance("Friday Abstinence", "Feria Sexta",
-                "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+            if (isFriday) return Penance(ContentStore.uiString("penance.friday.title", "Friday Abstinence"), "Feria Sexta",
+                ContentStore.uiString("penance.friday.desc", "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord."),
                 "℟. Feria Sexta", false)
-            return Penance("No obligatory penance", "Nulla pæniténtia obligatória",
-                "A free day. Voluntary mortifications are always meritorious; choose a small sacrifice as your daily offering.",
+            return Penance(ContentStore.uiString("penance.none.title", "No obligatory penance"), "Nulla pæniténtia obligatória",
+                ContentStore.uiString("penance.none.desc", "A free day. Voluntary mortifications are always meritorious; choose a small sacrifice as your daily offering."),
                 "℟. ${feriaLatinNames[dow]}", false)
         }
 
@@ -442,10 +444,8 @@ data class LiturgicalContext(
             "Domínica", "Feria Secúnda", "Feria Tértia", "Feria Quarta",
             "Feria Quinta", "Feria Sexta", "Sábbato",
         )
-        private val feriaEnglishNames = listOf(
-            "Sunday", "Monday", "Tuesday", "Wednesday",
-            "Thursday", "Friday", "Saturday",
-        )
+        private val feriaEnglishNames: List<String>
+            get() = (0..6).map { LiturgicalNames.weekday(it) }
 
         /**
          * Convert [java.time.DayOfWeek] to 0=Sun..6=Sat (matching iOS convention).
@@ -468,34 +468,38 @@ val LiturgicalContext.seasonalNote: String?
         if (season == LiturgicalSeason.LENT || season == LiturgicalSeason.PASSION) {
             val days = ChronoUnit.DAYS.between(date, easter).toInt()
             if (days == 0) return null
-            val plural = if (days == 1) "" else "s"
-            return "$days day$plural until Easter Sunday"
+            return ContentStore.uiString("today.countdown.easter", "{0} {1} until Easter Sunday")
+                .replace("{0}", "$days").replace("{1}", dayWord(days))
         }
 
         // Advent countdown to Christmas
         if (season == LiturgicalSeason.ADVENT) {
             val christmas = LocalDate.of(date.year, 12, 25)
             val days = ChronoUnit.DAYS.between(date, christmas).toInt()
-            if (days == 0) return "Christmas Day"
-            val plural = if (days == 1) "" else "s"
-            return "$days day$plural until Christmas"
+            if (days == 0) return ContentStore.uiString("today.countdown.christmas_day", "Christmas Day")
+            return ContentStore.uiString("today.countdown.christmas", "{0} {1} until Christmas")
+                .replace("{0}", "$days").replace("{1}", dayWord(days))
         }
 
         // Easter octave
         if (season == LiturgicalSeason.EASTER) {
             val daysSinceEaster = ChronoUnit.DAYS.between(easter, date).toInt()
             if (daysSinceEaster in 0..7) {
-                return "Octave of Easter, Day ${daysSinceEaster + 1}"
+                return ContentStore.uiString("today.countdown.octave", "Octave of Easter, Day {0}").replace("{0}", "${daysSinceEaster + 1}")
             }
             val daysToPentecost = ChronoUnit.DAYS.between(date, pentecost).toInt()
             if (daysToPentecost in 1..10) {
-                val plural = if (daysToPentecost == 1) "" else "s"
-                return "$daysToPentecost day$plural until Pentecost"
+                return ContentStore.uiString("today.countdown.pentecost", "{0} {1} until Pentecost")
+                    .replace("{0}", "$daysToPentecost").replace("{1}", dayWord(daysToPentecost))
             }
         }
 
         return null
     }
+
+/** "day" / "days" in the vernacular for the countdown notes. */
+private fun dayWord(n: Int): String =
+    if (n == 1) ContentStore.uiString("calendar.day", "day") else ContentStore.uiString("calendar.days", "days")
 
 val LiturgicalContext.isFirstFriday: Boolean
     get() {
@@ -577,6 +581,17 @@ object LongDateFormatter {
     fun format(date: LocalDate): String {
         val day = date.dayOfMonth
         val month = date.monthValue
+        if (ContentStore.currentVernacular == VernacularLanguage.SPANISH) {
+            // Spanish counts the day (cardinal) except the first: "el
+            // primero de marzo", "el veintiocho de marzo".
+            val monthES = LiturgicalNames.month(month)
+            return if (day == 1) {
+                ContentStore.uiString("calendar.long_date.first", "the first of {0}").replace("{0}", monthES)
+            } else {
+                ContentStore.uiString("calendar.long_date", "the {0} of {1}")
+                    .replace("{0}", "$day").replace("{1}", monthES)
+            }
+        }
         return "the ${ordinals[day]} of ${months[month - 1]}"
     }
 }

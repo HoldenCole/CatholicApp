@@ -160,7 +160,7 @@ fun LearnScreen() {
                     }
 
                     Text(
-                        text = "Lessons Mastered",
+                        text = ContentStore.uiString("learn.mastered", "Lessons Mastered"),
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                         color = colors.secondaryText,
                         modifier = Modifier.padding(top = 14.dp),
@@ -355,7 +355,7 @@ private fun LessonRow(course: Course, isMastered: Boolean, onClick: () -> Unit =
                 modifier = Modifier.padding(top = 4.dp),
             ) {
                 Text(
-                    text = "$cardCount cards",
+                    text = ContentStore.uiString("learn.cards", "{0} cards").replace("{0}", "$cardCount"),
                     style = type.captionSm,
                     color = colors.tertiaryText,
                 )

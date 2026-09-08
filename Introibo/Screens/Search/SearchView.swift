@@ -15,12 +15,12 @@ extension ContentType {
     /// Human label for chips and section headers.
     var displayName: String {
         switch self {
-        case .prayer:    return "Prayers"
-        case .missal:    return "Missal"
-        case .office:    return "Office"
-        case .reference: return "Reference"
-        case .saint:     return "Saints"
-        case .calendar:  return "Calendar"
+        case .prayer:    return ContentStore.shared.uiString("search.type.prayer", "Prayers")
+        case .missal:    return ContentStore.shared.uiString("search.type.missal", "Missal")
+        case .office:    return ContentStore.shared.uiString("search.type.office", "Office")
+        case .reference: return ContentStore.shared.uiString("search.type.reference", "Reference")
+        case .saint:     return ContentStore.shared.uiString("search.type.saint", "Saints")
+        case .calendar:  return ContentStore.shared.uiString("search.type.calendar", "Calendar")
         }
     }
 
@@ -48,7 +48,7 @@ private enum SearchFilter: Hashable {
 
     var label: String {
         switch self {
-        case .all: return "All"
+        case .all: return ContentStore.shared.uiString("search.filter.all", "All")
         case .type(let t): return t.displayName
         }
     }

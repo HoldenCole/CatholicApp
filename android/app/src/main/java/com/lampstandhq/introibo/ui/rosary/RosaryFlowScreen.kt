@@ -101,7 +101,7 @@ fun RosaryFlowScreen(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 IconButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
                 if (steps.isNotEmpty() && stepIndex < steps.size) {
                     Text(
@@ -118,7 +118,7 @@ fun RosaryFlowScreen(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center,
                     ) {
-                        Text("Loading...", style = type.body, color = colors.tertiaryText)
+                        Text(ContentStore.uiString("common.loading", "Loading..."), style = type.body, color = colors.tertiaryText)
                     }
                 }
                 stepIndex >= steps.size -> {
@@ -162,7 +162,7 @@ fun RosaryFlowScreen(
                                         color = colors.secondaryText,
                                     )
                                     Text(
-                                        text = "Fruit: ${mystery.fruit}",
+                                        text = ContentStore.uiString("rosary.fruit", "Fruit: {0}").replace("{0}", mystery.fruit),
                                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                                         color = colors.goldLeaf,
                                         modifier = Modifier.padding(top = 2.dp),
@@ -319,7 +319,7 @@ private fun NavBar(
                 .padding(vertical = 4.dp),
         ) {
             SmallLabel(
-                text = if (stepIndex + 1 < totalSteps) "Next  ✠" else "Finish  ✠",
+                text = if (stepIndex + 1 < totalSteps) ContentStore.uiString("rosary.next", "Next  ✠") else ContentStore.uiString("rosary.finish", "Finish  ✠"),
                 color = colors.ivory,
             )
         }
@@ -348,7 +348,7 @@ private fun CompletionView(
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            text = "Rosary Complete",
+            text = ContentStore.uiString("rosary.complete", "Rosary Complete"),
             style = type.pageTitle,
             color = colors.primaryText,
         )
@@ -413,7 +413,7 @@ private fun buildSteps(set: MysterySetData): List<RosaryStep> {
             label = mystery.num,
             latin = mystery.title, english = mystery.eng,
             decade = dIdx, mystery = mystery,
-            meditation = mystery.body + "\n\nFruit: " + mystery.fruit,
+            meditation = mystery.body + "\n\n" + ContentStore.uiString("rosary.fruit", "Fruit: {0}").replace("{0}", mystery.fruit),
         )
         s += RosaryStep(label = "Pater Noster", latin = pater.first, english = pater.second, decade = dIdx, mystery = mystery)
         for (bead in 1..10) {

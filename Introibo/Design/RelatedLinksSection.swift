@@ -19,7 +19,7 @@ struct RelatedLinksSection: View {
     var body: some View {
         if let related, !related.isEmpty {
             VStack(alignment: .leading, spacing: 12) {
-                Text("Vide Etiam  \u{00B7}  See Also")
+                Text(ContentStore.shared.uiString("common.see_also", "Vide Etiam  \u{00B7}  See Also"))
                     .smallLabel(color: Color.goldLeaf)
 
                 VStack(alignment: .leading, spacing: 10) {

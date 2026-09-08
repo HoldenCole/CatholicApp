@@ -76,12 +76,12 @@ fun RosaryScreen(
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                     }
                 },
                 actions = {
                     IconButton(onClick = { showNotification = true }) {
-                        Icon(Icons.Outlined.Notifications, "Notification", tint = colors.sanctuaryRed)
+                        Icon(Icons.Outlined.Notifications, ContentStore.uiString("notif.title", "Notification"), tint = colors.sanctuaryRed)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = colors.pageBackground),
@@ -133,7 +133,7 @@ fun RosaryScreen(
                         val rosaryLang = currentLanguageMode()
                         LanguageAwareLabel(
                             latin = "Mystéria Hodiérna",
-                            english = "Today's Mysteries",
+                            english = ContentStore.uiString("rosary.today", "Today's Mysteries"),
                             color = colors.goldLeaf,
                             style = type.smallLabel,
                         )

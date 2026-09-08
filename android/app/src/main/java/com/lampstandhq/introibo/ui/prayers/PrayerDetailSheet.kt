@@ -72,7 +72,7 @@ fun PrayerDetailSheet(
                     .padding(horizontal = 8.dp, vertical = 4.dp),
             ) {
                 IconButton(onClick = onDismiss) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
             }
 

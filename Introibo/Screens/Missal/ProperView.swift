@@ -1,5 +1,26 @@
 import SwiftUI
 
+/// Vernacular names of the Mass parts (missal.part.<id>); the Latin
+/// halves of the section labels are literals at the call sites.
+enum MassPartName {
+    static func of(_ id: String, _ en: String) -> String {
+        ContentStore.shared.uiString("missal.part.\(id)", en)
+    }
+    static var introit: String { of("introit", "Introit") }
+    static var collect: String { of("collect", "Collect") }
+    static var epistle: String { of("epistle", "Epistle") }
+    static var gradual: String { of("gradual", "Gradual") }
+    static var alleluia: String { of("alleluia", "Alleluia") }
+    static var tract: String { of("tract", "Tract") }
+    static var sequence: String { of("sequence", "Sequence") }
+    static var gospel: String { of("gospel", "Gospel") }
+    static var offertory: String { of("offertory", "Offertory") }
+    static var secret: String { of("secret", "Secret") }
+    static var preface: String { of("preface", "Preface") }
+    static var communion: String { of("communion", "Communion") }
+    static var postcommunion: String { of("postcommunion", "Postcommunion") }
+}
+
 struct ProperView: View {
     let proper: MassProper
     /// Deep-link scroll anchor: a proper-element name ("collect", "gospel", …)
@@ -29,37 +50,37 @@ struct ProperView: View {
                         header
                             .id("feast") // "feast" anchor → scroll to top
                         VStack(alignment: .leading, spacing: 28) {
-                            properSection("Introitus", subtitle: "Introit", text: proper.introit)
+                            properSection("Introitus", subtitle: MassPartName.introit, text: proper.introit)
                                 .id("introit")
-                            properSection("Orátio", subtitle: "Collect", text: proper.collect)
+                            properSection("Orátio", subtitle: MassPartName.collect, text: proper.collect)
                                 .id("collect")
-                            readingSection("Léctio", subtitle: "Epistle", reading: proper.epistle)
+                            readingSection("Léctio", subtitle: MassPartName.epistle, reading: proper.epistle)
                                 .id("epistle")
                         if let gradual = proper.gradual {
-                            properSection("Graduále", subtitle: "Gradual", text: gradual)
+                            properSection("Graduále", subtitle: MassPartName.gradual, text: gradual)
                                 .id("gradual")
                         }
                         if let alleluia = proper.alleluia {
-                            properSection("Allelúja", subtitle: "Alleluia", text: alleluia)
+                            properSection("Allelúja", subtitle: MassPartName.alleluia, text: alleluia)
                                 .id("alleluia")
                         }
                         if let tract = proper.tract {
-                            properSection("Tractus", subtitle: "Tract", text: tract)
+                            properSection("Tractus", subtitle: MassPartName.tract, text: tract)
                                 .id("tract")
                         }
                         if let sequence = proper.sequence {
-                            properSection("Sequéntia", subtitle: "Sequence", text: sequence)
+                            properSection("Sequéntia", subtitle: MassPartName.sequence, text: sequence)
                                 .id("sequence")
                         }
-                        readingSection("Evangélium", subtitle: "Gospel", reading: proper.gospel)
+                        readingSection("Evangélium", subtitle: MassPartName.gospel, reading: proper.gospel)
                             .id("gospel")
-                        properSection("Offertórium", subtitle: "Offertory", text: proper.offertory)
+                        properSection("Offertórium", subtitle: MassPartName.offertory, text: proper.offertory)
                             .id("offertory")
-                        properSection("Secréta", subtitle: "Secret", text: proper.secret)
+                        properSection("Secréta", subtitle: MassPartName.secret, text: proper.secret)
                             .id("secret")
-                        properSection("Commúnio", subtitle: "Communion", text: proper.communion)
+                        properSection("Commúnio", subtitle: MassPartName.communion, text: proper.communion)
                             .id("communion")
-                        properSection("Postcommúnio", subtitle: "Postcommunion", text: proper.postcommunion)
+                        properSection("Postcommúnio", subtitle: MassPartName.postcommunion, text: proper.postcommunion)
                             .id("postcommunion")
                         RelatedLinksSection(related: proper.related)
                         ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
@@ -170,19 +191,19 @@ struct ProperView: View {
             s += "└─────\n\n"
         }
 
-        section(proper.introit.lat, english: proper.introit.eng, label: "Introitus · Introit")
-        section(proper.collect.lat, english: proper.collect.eng, label: "Orátio · Collect")
-        section(proper.epistle.lat, english: proper.epistle.eng, label: "Léctio · Epistle", ref: proper.epistle.ref)
-        if let g = proper.gradual { section(g.lat, english: g.eng, label: "Graduále · Gradual") }
+        section(proper.introit.lat, english: proper.introit.eng, label: "Introitus · \(MassPartName.introit)")
+        section(proper.collect.lat, english: proper.collect.eng, label: "Orátio · \(MassPartName.collect)")
+        section(proper.epistle.lat, english: proper.epistle.eng, label: "Léctio · \(MassPartName.epistle)", ref: proper.epistle.ref)
+        if let g = proper.gradual { section(g.lat, english: g.eng, label: "Graduále · \(MassPartName.gradual)") }
         if let a = proper.alleluia { section(a.lat, english: a.eng, label: "Allelúja") }
-        if let t = proper.tract { section(t.lat, english: t.eng, label: "Tractus · Tract") }
-        if let seq = proper.sequence { section(seq.lat, english: seq.eng, label: "Sequéntia · Sequence") }
-        section(proper.gospel.lat, english: proper.gospel.eng, label: "Evangélium · Gospel", ref: proper.gospel.ref)
-        section(proper.offertory.lat, english: proper.offertory.eng, label: "Offertórium · Offertory")
-        section(proper.secret.lat, english: proper.secret.eng, label: "Secréta · Secret")
+        if let t = proper.tract { section(t.lat, english: t.eng, label: "Tractus · \(MassPartName.tract)") }
+        if let seq = proper.sequence { section(seq.lat, english: seq.eng, label: "Sequéntia · \(MassPartName.sequence)") }
+        section(proper.gospel.lat, english: proper.gospel.eng, label: "Evangélium · \(MassPartName.gospel)", ref: proper.gospel.ref)
+        section(proper.offertory.lat, english: proper.offertory.eng, label: "Offertórium · \(MassPartName.offertory)")
+        section(proper.secret.lat, english: proper.secret.eng, label: "Secréta · \(MassPartName.secret)")
         if let p = proper.preface { s += "Præfátio: \(p.capitalized)\n\n" }
-        section(proper.communion.lat, english: proper.communion.eng, label: "Commúnio · Communion")
-        section(proper.postcommunion.lat, english: proper.postcommunion.eng, label: "Postcommúnio · Postcommunion")
+        section(proper.communion.lat, english: proper.communion.eng, label: "Commúnio · \(MassPartName.communion)")
+        section(proper.postcommunion.lat, english: proper.postcommunion.eng, label: "Postcommúnio · \(MassPartName.postcommunion)")
 
         s += "— Introibo (app.introibo) —"
         return s

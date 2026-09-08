@@ -105,7 +105,7 @@ fun MissalScreen() {
                                 color = colors.tertiaryText,
                             )
                             Text(
-                                text = "View Propers",
+                                text = ContentStore.uiString("missal.view_propers", "View Propers"),
                                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                                 color = colors.sanctuaryRed,
                                 modifier = Modifier.clickable { showProperDetail = true },
@@ -151,7 +151,7 @@ fun MissalScreen() {
                                     this.type = "text/plain"
                                     putExtra(Intent.EXTRA_TEXT, shareText)
                                 }
-                                context.startActivity(Intent.createChooser(shareIntent, "Share Mass text"))
+                                context.startActivity(Intent.createChooser(shareIntent, ContentStore.uiString("missal.share_mass", "Share Mass")))
                             },
                         )
                     }
@@ -224,7 +224,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     item {
         // Gloria Patri suppressed from the Introit in Passiontide (iOS parity).
         val introit = if (ctx.season == LiturgicalSeason.PASSION) stripGloriaPatri(proper.introit) else proper.introit
-        ProperSection(latin = "Introitus", subtitle = "Introit", text = introit)
+        ProperSection(latin = "Introitus", subtitle = MassPartName.introit, text = introit)
     }
 
     // Kyrie
@@ -236,19 +236,19 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     }
 
     // Collect
-    item { ProperSection(latin = "Oratio", subtitle = "Collect", text = proper.collect) }
+    item { ProperSection(latin = "Oratio", subtitle = MassPartName.collect, text = proper.collect) }
 
     // Epistle
-    item { ReadingSection(latin = "Lectio", subtitle = "Epistle", reading = proper.epistle) }
+    item { ReadingSection(latin = "Lectio", subtitle = MassPartName.epistle, reading = proper.epistle) }
 
     // Gradual, Alleluia, Tract, Sequence
-    proper.gradual?.let { item { ProperSection(latin = "Graduale", subtitle = "Gradual", text = it) } }
-    proper.alleluia?.let { item { ProperSection(latin = "Alleluia", subtitle = "Alleluia", text = it) } }
-    proper.tract?.let { item { ProperSection(latin = "Tractus", subtitle = "Tract", text = it) } }
-    proper.sequence?.let { item { ProperSection(latin = "Sequentia", subtitle = "Sequence", text = it) } }
+    proper.gradual?.let { item { ProperSection(latin = "Graduale", subtitle = MassPartName.gradual, text = it) } }
+    proper.alleluia?.let { item { ProperSection(latin = "Alleluia", subtitle = MassPartName.alleluia, text = it) } }
+    proper.tract?.let { item { ProperSection(latin = "Tractus", subtitle = MassPartName.tract, text = it) } }
+    proper.sequence?.let { item { ProperSection(latin = "Sequentia", subtitle = MassPartName.sequence, text = it) } }
 
     // Gospel
-    item { ReadingSection(latin = "Evangelium", subtitle = "Gospel", reading = proper.gospel) }
+    item { ReadingSection(latin = "Evangelium", subtitle = MassPartName.gospel, reading = proper.gospel) }
 
     // Credo — Sundays and rank-1 feasts only
     if (showCredo(proper, ctx)) {
@@ -256,13 +256,13 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     }
 
     // Offertory
-    item { ProperSection(latin = "Offertorium", subtitle = "Offertory", text = proper.offertory) }
+    item { ProperSection(latin = "Offertorium", subtitle = MassPartName.offertory, text = proper.offertory) }
 
     // Offertory prayers
     ordinaryItem("offertory_prayers")
 
     // Secret
-    item { ProperSection(latin = "Secreta", subtitle = "Secret", text = proper.secret) }
+    item { ProperSection(latin = "Secreta", subtitle = MassPartName.secret, text = proper.secret) }
 
     // Proper Preface selection
     val prefaceSlug = prefaceSlug(proper, ctx)
@@ -293,12 +293,12 @@ private fun androidx.compose.foundation.lazy.LazyListScope.interleavedMassItems(
     ordinaryItem("confiteor-communion")
 
     // Communion
-    item { ProperSection(latin = "Communio", subtitle = "Communion", text = proper.communion) }
+    item { ProperSection(latin = "Communio", subtitle = MassPartName.communion, text = proper.communion) }
 
     ordinaryItem("ablutiones")
 
     // Postcommunion
-    item { ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion) }
+    item { ProperSection(latin = "Postcommunio", subtitle = MassPartName.postcommunion, text = proper.postcommunion) }
 
     // Dismissal precedes the Placeat: doubled-Alleluia form during the
     // EASTER Octave only; the 1960 rubrics say Ite missa est even when the
@@ -831,7 +831,7 @@ private fun buildFullMassItems(
 
     proper?.let { p ->
         val introit = if (ctx.season == LiturgicalSeason.PASSION) stripGloriaPatri(p.introit) else p.introit
-        addProper("Introitus · Introit", introit.lat, introit.eng)
+        addProper("Introitus · ${MassPartName.introit}", introit.lat, introit.eng)
     }
 
     addOrdinary("kyrie")
@@ -843,13 +843,13 @@ private fun buildFullMassItems(
     }
 
     proper?.let { p ->
-        addProper("Orátio · Collect", p.collect.lat, p.collect.eng)
-        addProper("Léctio · Epistle", p.epistle.lat, p.epistle.eng, p.epistle.ref)
-        p.gradual?.let { addProper("Graduále · Gradual", it.lat, it.eng) }
+        addProper("Orátio · ${MassPartName.collect}", p.collect.lat, p.collect.eng)
+        addProper("Léctio · ${MassPartName.epistle}", p.epistle.lat, p.epistle.eng, p.epistle.ref)
+        p.gradual?.let { addProper("Graduále · ${MassPartName.gradual}", it.lat, it.eng) }
         p.alleluia?.let { addProper("Allelúja", it.lat, it.eng) }
-        p.tract?.let { addProper("Tractus · Tract", it.lat, it.eng) }
-        p.sequence?.let { addProper("Sequéntia · Sequence", it.lat, it.eng) }
-        addProper("Evangélium · Gospel", p.gospel.lat, p.gospel.eng, p.gospel.ref)
+        p.tract?.let { addProper("Tractus · ${MassPartName.tract}", it.lat, it.eng) }
+        p.sequence?.let { addProper("Sequéntia · ${MassPartName.sequence}", it.lat, it.eng) }
+        addProper("Evangélium · ${MassPartName.gospel}", p.gospel.lat, p.gospel.eng, p.gospel.ref)
     }
 
     // Credo — conditional when proper is present (Sundays, rank-1, Apostles/Doctors/Evangelists)
@@ -860,13 +860,13 @@ private fun buildFullMassItems(
     }
 
     proper?.let { p ->
-        addProper("Offertórium · Offertory", p.offertory.lat, p.offertory.eng)
+        addProper("Offertórium · ${MassPartName.offertory}", p.offertory.lat, p.offertory.eng)
     }
 
     addOrdinary("offertory_prayers")
 
     proper?.let { p ->
-        addProper("Secréta · Secret", p.secret.lat, p.secret.eng)
+        addProper("Secréta · ${MassPartName.secret}", p.secret.lat, p.secret.eng)
     }
 
     // Preface — select proper preface for the season/feast
@@ -937,12 +937,12 @@ private fun buildFullMassItems(
     addOrdinary("confiteor-communion")
 
     proper?.let { p ->
-        addProper("Commúnio · Communion", p.communion.lat, p.communion.eng)
+        addProper("Commúnio · ${MassPartName.communion}", p.communion.lat, p.communion.eng)
     }
     addOrdinary("ablutiones")
 
     proper?.let { p ->
-        addProper("Postcommúnio · Postcommunion", p.postcommunion.lat, p.postcommunion.eng)
+        addProper("Postcommúnio · ${MassPartName.postcommunion}", p.postcommunion.lat, p.postcommunion.eng)
     }
 
     // Dismissal precedes the Placeat: doubled-Alleluia only in the EASTER

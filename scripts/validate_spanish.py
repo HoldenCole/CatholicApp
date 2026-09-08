@@ -498,6 +498,73 @@ def validate_martyrology():
     print(f"martyrology_es.json: {n} entries checked")
 
 
+def validate_daily_psalm():
+    """The Today screen's rotating psalm verse: every ref the code carries
+    (DailyPsalm.swift, mirrored in TodayScreen.kt) has Torres Amat text."""
+    import re
+    path = ES / "daily_psalm_es.json"
+    if not path.exists():
+        print("daily_psalm_es.json: not present (skipped)")
+        return
+    es = json.load(open(path))
+    swift = Path("Introibo/Data/DailyPsalm.swift").read_text(encoding="utf-8")
+    refs = re.findall(r'PsalmVerse\(ref:\s*"([^"]+)"', swift)
+    kt = Path("android/app/src/main/java/com/lampstandhq/introibo/ui/today/TodayScreen.kt").read_text(encoding="utf-8")
+    refs_kt = re.findall(r'PsalmVerse\("([^"]+)"', kt)
+    check(refs == refs_kt, f"daily psalm: iOS/Android verse lists differ ({len(refs)} vs {len(refs_kt)})")
+    keys = [k for k in es if not k.startswith("_")]
+    check(set(keys) == set(refs),
+          f"daily_psalm: refs mismatch — missing {set(refs) - set(keys)}, extra {set(keys) - set(refs)}")
+    for k in keys:
+        v = es[k].get("english_es") if isinstance(es[k], dict) else None
+        check(isinstance(v, str) and v.strip(), f"daily_psalm[{k}]: empty")
+    print(f"daily_psalm_es.json: {len(keys)} verses checked")
+
+
+def validate_confession():
+    """Examination of conscience (by numeral, question counts aligned) and
+    the guided paths (by slug, step counts aligned)."""
+    path = ES / "confession_examen_es.json"
+    if path.exists():
+        src = {e["num"]: e for e in json.load(open(SRC / "confession_examen.json"))}
+        es = {k: v for k, v in json.load(open(path)).items() if not k.startswith("_")}
+        check(set(es) == set(src), f"confession_examen: numerals mismatch {set(es) ^ set(src)}")
+        n = 0
+        for num, o in es.items():
+            check(isinstance(o.get("commandment_es"), str) and o["commandment_es"].strip(),
+                  f"confession_examen[{num}]: empty commandment")
+            qs = o.get("questions_es") or []
+            check(len(qs) == len(src.get(num, {}).get("questions", [])),
+                  f"confession_examen[{num}]: {len(qs)} questions for {len(src.get(num, {}).get('questions', []))}")
+            for i, q in enumerate(qs):
+                n += 1
+                check(isinstance(q, str) and q.strip(), f"confession_examen[{num}][{i}]: empty")
+        print(f"confession_examen_es.json: {len(es)} commandments / {n} questions checked")
+    else:
+        print("confession_examen_es.json: not present (skipped)")
+    path = ES / "confession_guides_es.json"
+    if path.exists():
+        src = {g["slug"]: g for g in json.load(open(SRC / "confession_guides.json"))}
+        es = {k: v for k, v in json.load(open(path)).items() if not k.startswith("_")}
+        check(set(es) == set(src), f"confession_guides: slugs mismatch {set(es) ^ set(src)}")
+        n = 0
+        for slug, o in es.items():
+            check(isinstance(o.get("title_es"), str) and o["title_es"].strip(),
+                  f"confession_guides[{slug}]: empty title")
+            steps = o.get("steps_es") or []
+            check(len(steps) == len(src.get(slug, {}).get("steps", [])),
+                  f"confession_guides[{slug}]: {len(steps)} steps for {len(src.get(slug, {}).get('steps', []))}")
+            for i, st in enumerate(steps):
+                n += 1
+                check(isinstance(st.get("title_es"), str) and st["title_es"].strip(),
+                      f"confession_guides[{slug}][{i}]: empty title")
+                check(isinstance(st.get("body_es"), str) and st["body_es"].strip(),
+                      f"confession_guides[{slug}][{i}]: empty body")
+        print(f"confession_guides_es.json: {len(es)} guides / {n} steps checked")
+    else:
+        print("confession_guides_es.json: not present (skipped)")
+
+
 def validate_hours_parts():
     """Ordinary of the hours: parts indexed by position must exist, only
     translate fields the source carries, and verse arrays stay aligned."""
@@ -742,6 +809,8 @@ def main():
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_martyrology()
     validate_ui_string_keys()
+    validate_daily_psalm()
+    validate_confession()
     validate_keyed("hours_es.json", "hours.json",
                    ["name_es", "time_es", "intro_es"])
     validate_missal()

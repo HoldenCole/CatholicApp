@@ -48,6 +48,7 @@ import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
+import com.lampstandhq.introibo.data.liturgical.VernacularDates
 import com.lampstandhq.introibo.data.liturgical.penanceFor
 import com.lampstandhq.introibo.data.model.MassProper
 import com.lampstandhq.introibo.data.model.Prayer
@@ -73,42 +74,59 @@ import java.util.Calendar
 private data class PsalmVerse(val ref: String, val latin: String, val english: String)
 
 private val dailyPsalms = listOf(
-    PsalmVerse("Ps 26:4", "Unam petii a Domino, hanc requiram: ut inhabitem in domo Domini omnibus diebus vitae meae.", "One thing I have asked of the Lord, this will I seek after: that I may dwell in the house of the Lord all the days of my life."),
-    PsalmVerse("Ps 41:2", "Quemadmodum desiderat cervus ad fontes aquarum, ita desiderat anima mea ad te, Deus.", "As the hart panteth after the fountains of water, so my soul panteth after Thee, O God."),
-    PsalmVerse("Ps 50:12", "Cor mundum crea in me, Deus, et spiritum rectum innova in visceribus meis.", "Create a clean heart in me, O God, and renew a right spirit within my bowels."),
-    PsalmVerse("Ps 22:1", "Dominus regit me, et nihil mihi deerit; in loco pascuae ibi me collocavit.", "The Lord ruleth me, and I shall want nothing; He hath set me in a place of pasture."),
-    PsalmVerse("Ps 33:9", "Gustate et videte quoniam suavis est Dominus; beatus vir qui sperat in eo.", "O taste and see that the Lord is sweet; blessed is the man that hopeth in Him."),
-    PsalmVerse("Ps 118:105", "Lucerna pedibus meis verbum tuum, et lumen semitis meis.", "Thy word is a lamp to my feet, and a light to my paths."),
-    PsalmVerse("Ps 45:11", "Vacate et videte quoniam ego sum Deus; exaltabor in gentibus, et exaltabor in terra.", "Be still and see that I am God; I will be exalted among the nations, and I will be exalted in the earth."),
-    PsalmVerse("Ps 129:1-2", "De profundis clamavi ad te, Domine; Domine, exaudi vocem meam.", "Out of the depths I have cried to Thee, O Lord; Lord, hear my voice."),
-    PsalmVerse("Ps 83:2-3", "Quam dilecta tabernacula tua, Domine virtutum! Concupiscit et deficit anima mea in atria Domini.", "How lovely are Thy tabernacles, O Lord of hosts! My soul longeth and fainteth for the courts of the Lord."),
-    PsalmVerse("Ps 102:1", "Benedic, anima mea, Domino, et omnia quae intra me sunt nomini sancto ejus.", "Bless the Lord, O my soul, and let all that is within me bless His holy name."),
-    PsalmVerse("Ps 18:2", "Caeli enarrant gloriam Dei, et opera manuum ejus annuntiat firmamentum.", "The heavens show forth the glory of God, and the firmament declareth the work of His hands."),
-    PsalmVerse("Ps 26:1", "Dominus illuminatio mea et salus mea, quem timebo?", "The Lord is my light and my salvation; whom shall I fear?"),
-    PsalmVerse("Ps 50:3", "Miserere mei, Deus, secundum magnam misericordiam tuam.", "Have mercy on me, O God, according to Thy great mercy."),
-    PsalmVerse("Ps 62:2", "Deus, Deus meus, ad te de luce vigilo. Sitivit in te anima mea.", "O God, my God, to Thee do I watch at break of day. For Thee my soul hath thirsted."),
-    PsalmVerse("Ps 83:11", "Elegi abjectus esse in domo Dei mei magis quam habitare in tabernaculis peccatorum.", "I have chosen to be an abject in the house of my God, rather than to dwell in the tabernacles of sinners."),
-    PsalmVerse("Ps 115:12", "Quid retribuam Domino pro omnibus quae retribuit mihi?", "What shall I render to the Lord for all the things that He hath rendered unto me?"),
-    PsalmVerse("Ps 8:2", "Domine, Dominus noster, quam admirabile est nomen tuum in universa terra!", "O Lord, our Lord, how admirable is Thy name in the whole earth!"),
-    PsalmVerse("Ps 138:14", "Confitebor tibi quia terribiliter magnificatus es; mirabilia opera tua.", "I will praise Thee, for Thou art fearfully magnified; wonderful are Thy works."),
-    PsalmVerse("Ps 36:5", "Revela Domino viam tuam et spera in eo, et ipse faciet.", "Commit thy way to the Lord, and trust in Him, and He will do it."),
-    PsalmVerse("Ps 89:1", "Domine, refugium factus es nobis a generatione in generationem.", "Lord, Thou hast been our refuge from generation to generation."),
-    PsalmVerse("Ps 120:1-2", "Levavi oculos meos in montes, unde veniet auxilium mihi. Auxilium meum a Domino, qui fecit caelum et terram.", "I have lifted up my eyes to the mountains, from whence help shall come to me. My help is from the Lord, who made heaven and earth."),
-    PsalmVerse("Ps 4:9", "In pace in idipsum dormiam et requiescam.", "In peace in the selfsame I will sleep, and I will rest."),
-    PsalmVerse("Ps 142:10", "Doce me facere voluntatem tuam, quia Deus meus es tu.", "Teach me to do Thy will, for Thou art my God."),
-    PsalmVerse("Ps 70:8", "Repleatur os meum laude, ut cantem gloriam tuam, tota die magnitudinem tuam.", "Let my mouth be filled with praise, that I may sing Thy glory, Thy greatness all the day long."),
-    PsalmVerse("Ps 15:11", "Notas mihi fecisti vias vitae; adimplebis me laetitia cum vultu tuo.", "Thou hast made known to me the ways of life; Thou shalt fill me with joy with Thy countenance."),
-    PsalmVerse("Ps 85:11", "Deduc me, Domine, in via tua, et ingrediar in veritate tua.", "Conduct me, O Lord, in Thy way, and I will walk in Thy truth."),
-    PsalmVerse("Ps 144:18", "Prope est Dominus omnibus invocantibus eum, omnibus invocantibus eum in veritate.", "The Lord is nigh unto all them that call upon Him, to all that call upon Him in truth."),
-    PsalmVerse("Ps 29:12", "Convertisti planctum meum in gaudium mihi; conscidisti saccum meum, et circumdedisti me laetitia.", "Thou hast turned for me my mourning into joy; Thou hast cut my sackcloth, and hast compassed me with gladness."),
-    PsalmVerse("Ps 76:14-15", "Deus, in sancto via tua; quis Deus magnus sicut Deus noster? Tu es Deus qui facis mirabilia.", "Thy way, O God, is in the holy place; who is the great God like our God? Thou art the God that dost wonders."),
-    PsalmVerse("Ps 116:1-2", "Laudate Dominum, omnes gentes; laudate eum, omnes populi. Quoniam confirmata est super nos misericordia ejus.", "O praise the Lord, all ye nations; praise Him, all ye people. For His mercy is confirmed upon us."),
+    PsalmVerse("Ps 26:4", "Unam pétii a Dómino, hanc requíram: ut inhábitem in domo Dómini ómnibus diébus vitæ meæ.", "One thing I have asked of the Lord, this will I seek after: that I may dwell in the house of the Lord all the days of my life."),
+    PsalmVerse("Ps 41:2", "Quemádmodum desíderat cervus ad fontes aquárum, ita desíderat ánima mea ad te, Deus.", "As the hart panteth after the fountains of water, so my soul panteth after Thee, O God."),
+    PsalmVerse("Ps 50:12", "Cor mundum crea in me, Deus, et spíritum rectum ínnova in viscéribus meis.", "Create a clean heart in me, O God, and renew a right spirit within my bowels."),
+    PsalmVerse("Ps 22:1", "Dóminus regit me, et nihil mihi déerit; in loco páscuæ ibi me collocávit.", "The Lord ruleth me, and I shall want nothing; He hath set me in a place of pasture."),
+    PsalmVerse("Ps 33:9", "Gustáte et vidéte quóniam suávis est Dóminus; beátus vir qui sperat in eo.", "O taste and see that the Lord is sweet; blessed is the man that hopeth in Him."),
+    PsalmVerse("Ps 118:105", "Lucérna pédibus meis verbum tuum, et lumen sémitis meis.", "Thy word is a lamp to my feet, and a light to my paths."),
+    PsalmVerse("Ps 45:11", "Vacáte et vidéte quóniam ego sum Deus; exaltábor in géntibus, et exaltábor in terra.", "Be still and see that I am God; I will be exalted among the nations, and I will be exalted in the earth."),
+    PsalmVerse("Ps 129:1-2", "De profúndis clamávi ad te, Dómine; Dómine, exáudi vocem meam.", "Out of the depths I have cried to Thee, O Lord; Lord, hear my voice."),
+    PsalmVerse("Ps 83:2-3", "Quam dilécta tabernácula tua, Dómine virtútum! Concupíscit et déficit ánima mea in átria Dómini.", "How lovely are Thy tabernacles, O Lord of hosts! My soul longeth and fainteth for the courts of the Lord."),
+    PsalmVerse("Ps 102:1", "Bénedic, ánima mea, Dómino, et ómnia quæ intra me sunt nómini sancto ejus.", "Bless the Lord, O my soul, and let all that is within me bless His holy name."),
+    PsalmVerse("Ps 18:2", "Cæli enárrant glóriam Dei, et ópera mánuum ejus annúntiat firmaméntum.", "The heavens show forth the glory of God, and the firmament declareth the work of His hands."),
+    PsalmVerse("Ps 26:1", "Dóminus illuminátio mea et salus mea, quem timébo?", "The Lord is my light and my salvation; whom shall I fear?"),
+    PsalmVerse("Ps 50:3", "Miserére mei, Deus, secúndum magnam misericórdiam tuam.", "Have mercy on me, O God, according to Thy great mercy."),
+    PsalmVerse("Ps 62:2", "Deus, Deus meus, ad te de luce vígilo. Sitívit in te ánima mea.", "O God, my God, to Thee do I watch at break of day. For Thee my soul hath thirsted."),
+    PsalmVerse("Ps 83:11", "Elegi abjéctus esse in domo Dei mei magis quam habitáre in tabernáculis peccatórum.", "I have chosen to be an abject in the house of my God, rather than to dwell in the tabernacles of sinners."),
+    PsalmVerse("Ps 115:12", "Quid retríbuam Dómino pro ómnibus quæ retríbuit mihi?", "What shall I render to the Lord for all the things that He hath rendered unto me?"),
+    PsalmVerse("Ps 8:2", "Dómine, Dóminus noster, quam admirábile est nomen tuum in univérsa terra!", "O Lord, our Lord, how admirable is Thy name in the whole earth!"),
+    PsalmVerse("Ps 138:14", "Confitébor tibi quia terribíliter magnificátus es; mirabília ópera tua.", "I will praise Thee, for Thou art fearfully magnified; wonderful are Thy works."),
+    PsalmVerse("Ps 36:5", "Revéla Dómino viam tuam et spera in eo, et ipse fáciet.", "Commit thy way to the Lord, and trust in Him, and He will do it."),
+    PsalmVerse("Ps 89:1", "Dómine, refúgium factus es nobis a generatióne in generatiónem.", "Lord, Thou hast been our refuge from generation to generation."),
+    PsalmVerse("Ps 120:1-2", "Levávi óculos meos in montes, unde véniet auxílium mihi. Auxílium meum a Dómino, qui fecit cælum et terram.", "I have lifted up my eyes to the mountains, from whence help shall come to me. My help is from the Lord, who made heaven and earth."),
+    PsalmVerse("Ps 4:9", "In pace in idípsum dórmiam et requiéscam.", "In peace in the selfsame I will sleep, and I will rest."),
+    PsalmVerse("Ps 142:10", "Doce me fácere voluntátem tuam, quia Deus meus es tu.", "Teach me to do Thy will, for Thou art my God."),
+    PsalmVerse("Ps 70:8", "Repleátur os meum laude, ut cantem glóriam tuam, tota die magnitúdinem tuam.", "Let my mouth be filled with praise, that I may sing Thy glory, Thy greatness all the day long."),
+    PsalmVerse("Ps 15:11", "Notas mihi fecísti vias vitæ; adimplébis me lætítia cum vultu tuo.", "Thou hast made known to me the ways of life; Thou shalt fill me with joy with Thy countenance."),
+    PsalmVerse("Ps 85:11", "Deduc me, Dómine, in via tua, et ingrédiar in veritáte tua.", "Conduct me, O Lord, in Thy way, and I will walk in Thy truth."),
+    PsalmVerse("Ps 144:18", "Prope est Dóminus ómnibus invocántibus eum, ómnibus invocántibus eum in veritáte.", "The Lord is nigh unto all them that call upon Him, to all that call upon Him in truth."),
+    PsalmVerse("Ps 29:12", "Convertísti planctum meum in gáudium mihi; conscidísti saccum meum, et circumdedísti me lætítia.", "Thou hast turned for me my mourning into joy; Thou hast cut my sackcloth, and hast compassed me with gladness."),
+    PsalmVerse("Ps 76:14-15", "Deus, in sancto via tua; quis Deus magnus sicut Deus noster? Tu es Deus qui facis mirabília.", "Thy way, O God, is in the holy place; who is the great God like our God? Thou art the God that dost wonders."),
+    PsalmVerse("Ps 116:1-2", "Laudáte Dóminum, omnes gentes; laudáte eum, omnes pópuli. Quóniam confirmáta est super nos misericórdia ejus.", "O praise the Lord, all ye nations; praise Him, all ye people. For His mercy is confirmed upon us."),
+    PsalmVerse("Ps 30:6", "In manus tuas comméndo spíritum meum; redemísti me, Dómine, Deus veritátis.", "Into Thy hands I commend my spirit; Thou hast redeemed me, O Lord, the God of truth."),
+    PsalmVerse("Ps 90:1-2", "Qui hábitat in adjutório Altíssimi, in protectióne Dei cæli commorábitur. Dicet Dómino: Suscéptor meus es tu et refúgium meum.", "He that dwelleth in the aid of the Most High shall abide under the protection of the God of heaven. He shall say to the Lord: Thou art my protector and my refuge."),
+    PsalmVerse("Ps 39:2-3", "Exspéctans exspectávi Dóminum, et inténdit mihi. Et exaudívit preces meas, et edúxit me de lacu misériæ.", "With expectation I have waited for the Lord, and He was attentive to me. And He heard my prayers, and brought me out of the pit of misery."),
+    PsalmVerse("Ps 24:4-5", "Vias tuas, Dómine, demónstra mihi, et sémitas tuas édoce me. Dírige me in veritáte tua et doce me.", "Show me Thy ways, O Lord, and teach me Thy paths. Direct me in Thy truth and teach me."),
+    PsalmVerse("Ps 33:19", "Juxta est Dóminus iis qui tribulántur corde, et húmiles spíritu salvábit.", "The Lord is nigh unto them that are of a contrite heart, and He will save the humble of spirit."),
+    PsalmVerse("Ps 46:2", "Omnes gentes, pláudite mánibus; jubiláte Deo in voce exsultatiónis.", "O clap your hands, all ye nations; shout unto God with the voice of joy."),
+    PsalmVerse("Ps 95:1", "Cantáte Dómino cánticum novum; cantáte Dómino, omnis terra.", "Sing ye to the Lord a new canticle; sing to the Lord, all the earth."),
+    PsalmVerse("Ps 102:2-3", "Bénedic, ánima mea, Dómino, et noli oblivísci omnes retributiónes ejus. Qui propitiátur ómnibus iniquitátibus tuis, qui sanat omnes infirmitátes tuas.", "Bless the Lord, O my soul, and never forget all He hath done for thee. Who forgiveth all thy iniquities, who healeth all thy diseases."),
+    PsalmVerse("Ps 118:1", "Beáti immaculáti in via, qui ámbulant in lege Dómini.", "Blessed are the undefiled in the way, who walk in the law of the Lord."),
+    PsalmVerse("Ps 112:1-2", "Laudáte, púeri, Dóminum; laudáte nomen Dómini. Sit nomen Dómini benedíctum, ex hoc nunc et usque in sǽculum.", "Praise the Lord, ye children; praise ye the name of the Lord. Blessed be the name of the Lord, from henceforth now and for ever."),
+    PsalmVerse("Ps 103:24", "Quam magnificáta sunt ópera tua, Dómine! Omnia in sapiéntia fecísti; impléta est terra possessióne tua.", "How great are Thy works, O Lord! Thou hast made all things in wisdom; the earth is filled with Thy riches."),
+    PsalmVerse("Ps 22:4", "Nam et si ambulávero in médio umbræ mortis, non timébo mala, quóniam tu mecum es.", "For though I should walk in the midst of the shadow of death, I will fear no evils, for Thou art with me."),
+    PsalmVerse("Ps 91:2-3", "Bonum est confitéri Dómino, et psállere nómini tuo, Altíssime. Ad annuntiándum mane misericórdiam tuam, et veritátem tuam per noctem.", "It is good to give praise to the Lord, and to sing to Thy name, O Most High. To show forth Thy mercy in the morning, and Thy truth in the night."),
+    PsalmVerse("Ps 148:1-2", "Laudáte Dóminum de cælis; laudáte eum in excélsis. Laudáte eum, omnes Ángeli ejus; laudáte eum, omnes virtútes ejus.", "Praise ye the Lord from the heavens; praise Him in the high places. Praise ye Him, all His angels; praise ye Him, all His hosts."),
 )
 
 private fun dailyPsalm(): PsalmVerse {
     val dayOfYear = Calendar.getInstance().get(Calendar.DAY_OF_YEAR)
     val idx = (dayOfYear - 1) % dailyPsalms.size
-    return dailyPsalms[idx]
+    val v = dailyPsalms[idx]
+    // The vernacular side follows the active overlay (Torres Amat for
+    // Spanish, keyed by ref); English is the literal above.
+    return ContentStore.dailyPsalmES[v.ref]?.let { v.copy(english = it) } ?: v
 }
 
 // ---------------------------------------------------------------------------
@@ -182,7 +200,7 @@ fun TodayScreen(
                     IconButton(onClick = { onNavigateCalendar?.invoke() }) {
                         Icon(
                             imageVector = Icons.Filled.DateRange,
-                            contentDescription = "Calendar",
+                            contentDescription = ContentStore.uiString("today.calendar_a11y", "Calendar"),
                             tint = colors.goldLeaf,
                             modifier = Modifier.size(18.dp),
                         )
@@ -478,7 +496,6 @@ private fun UpcomingFeastsCard(
     }
     if (upcoming.isEmpty()) return
     val langMode = currentLanguageMode()
-    val fmt = remember { java.time.format.DateTimeFormatter.ofPattern("EEE d MMM", java.util.Locale.US) }
 
     Column(
         modifier = modifier
@@ -509,7 +526,7 @@ private fun UpcomingFeastsCard(
                 )
                 Spacer(Modifier.width(10.dp))
                 Text(
-                    text = day.date.format(fmt),
+                    text = VernacularDates.weekdayDayMonthAbbrev(day.date),
                     fontSize = scaledSp(12f),
                     color = colors.tertiaryText,
                     modifier = Modifier.width(72.dp),
@@ -536,7 +553,7 @@ private fun UpcomingFeastsCard(
 private fun DailyPsalmCard(modifier: Modifier = Modifier) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
-    val verse = remember { dailyPsalm() }
+    val verse = remember(ContentStore.currentVernacular) { dailyPsalm() }
 
     Column(
         modifier = modifier
@@ -573,7 +590,7 @@ private fun PropersCard(
             .padding(16.dp),
     ) {
         SmallLabel(
-            text = "Proprium Missae  ·  Today's Propers",
+            text = "Proprium Missae  ·  " + ContentStore.uiString("today.propers", "Today's Propers"),
             color = colors.goldLeaf,
         )
         Text(
@@ -1091,11 +1108,10 @@ private fun ProgressRing(
 // Pure helper (no composables) — computed inside remember{} at the call site.
 private fun nextObligationDay(discipline: PenanceDiscipline): String? {
     var d = java.time.LocalDate.now().plusDays(1)
-    val fmt = java.time.format.DateTimeFormatter.ofPattern("EEEE, MMMM d", java.util.Locale.US)
     repeat(60) {
         val ctx = LiturgicalContext.forDate(d, discipline)
         if (ctx.penance.strict || (ctx.isFriday && !ctx.isSunday)) {
-            return "${d.format(fmt)} (${ctx.penance.title})"
+            return "${VernacularDates.weekdayLongDate(d)} (${ctx.penance.title})"
         }
         d = d.plusDays(1)
     }

@@ -243,7 +243,7 @@ struct TodayView: View {
                             Circle()
                                 .fill((day.colour?.swiftUIColor ?? Color.frameLine).opacity(0.85))
                                 .frame(width: 6, height: 6)
-                            Text(Self.upcomingDate.string(from: day.date))
+                            Text(VernacularDates.weekdayDayMonthAbbrev(day.date))
                                 .appFont(.scaledSystem(12, design: .serif))
                                 .foregroundStyle(Color.tertiaryText)
                                 .frame(width: 52, alignment: .leading)
@@ -265,14 +265,6 @@ struct TodayView: View {
             .buttonStyle(.plain)
         }
     }
-
-    private static let upcomingDate: DateFormatter = {
-        let df = DateFormatter()
-        df.calendar = Calendar.liturgical
-        df.locale = Locale(identifier: "en_US_POSIX")
-        df.dateFormat = "EEE d MMM"
-        return df
-    }()
 
     // MARK: - Prayer Rule Card
 
@@ -329,7 +321,7 @@ struct TodayView: View {
     private var dailyPsalmCard: some View {
         let verse = DailyPsalm.verse()
         return VStack(alignment: .leading, spacing: 8) {
-            LanguageAwareText(latin: "Psalmus Hodiérnus", english: "Daily Psalm")
+            LanguageAwareText(latin: "Psalmus Hodiérnus", english: ContentStore.shared.uiString("today.daily_psalm", "Daily Psalm"))
                 .smallLabel(color: Color.sanctuaryRed)
             Text(verse.ref)
                 .appFont(.captionSm)
@@ -351,7 +343,7 @@ struct TodayView: View {
         if let proper = ContentStore.shared.properForDate(ctx.date, rite: rite) ?? (ctx.properSlug.flatMap { ContentStore.shared.proper(slug: $0) }) {
             Button { showProper = true } label: {
                 VStack(alignment: .leading, spacing: 8) {
-                    LanguageAwareText(latin: "Próprium Missæ", english: "Today\u{2019}s Propers")
+                    LanguageAwareText(latin: "Próprium Missæ", english: ContentStore.shared.uiString("today.propers", "Today\u{2019}s Propers"))
                         .smallLabel(color: Color.goldLeaf)
                     Text(proper.title)
                         .appFont(.titleM)
@@ -555,9 +547,9 @@ struct TodayView: View {
 
     private func offeringTitle() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
-        if hour < 12 { return "Morning Offering" }
-        if hour < 18 { return "Afternoon Prayer" }
-        return "Night Prayer"
+        if hour < 12 { return ContentStore.shared.uiString("today.offering.morning", "Morning Offering") }
+        if hour < 18 { return ContentStore.shared.uiString("today.offering.afternoon", "Afternoon Prayer") }
+        return ContentStore.shared.uiString("today.offering.night", "Night Prayer")
     }
 
     private func offeringLatin() -> String {
@@ -665,7 +657,8 @@ struct TodayView: View {
                     .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
-                Text(progress >= 1.0 ? "All practices complete" : "\(done) of \(total) practices today")
+                Text(progress >= 1.0 ? ContentStore.shared.uiString("today.practices.done", "All practices complete")
+                                     : ContentStore.shared.uiString("today.practices.progress", "{0} of {1} practices today", String(done), String(total)))
                     .appFont(.captionSm)
                     .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                 if streak > 0 {
@@ -742,10 +735,7 @@ struct TodayView: View {
         for _ in 0..<60 {
             let c = LiturgicalContext.for(date: d, rite: rite, discipline: discipline)
             if c.penance.strict || (c.isFriday && !c.isSunday) {
-                let df = DateFormatter()
-                df.locale = Locale(identifier: "en_US_POSIX")
-                df.dateFormat = "EEEE, MMMM d"
-                let label = df.string(from: d)
+                let label = VernacularDates.weekdayLongDate(d)
                 let kind = c.penance.title
                 return "\(label) (\(kind))"
             }

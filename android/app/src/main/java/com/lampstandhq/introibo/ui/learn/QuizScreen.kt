@@ -95,12 +95,12 @@ fun QuizScreen(
                 val correct = cardEng
                 val wrongs = usable.filter { it.eng != correct }.shuffled().take(3).mapNotNull { it.eng }
                 val choices = (wrongs + correct).shuffled()
-                qs += Question(prompt = cardLat, promptLabel = "What does this mean?", correct = correct, choices = choices)
+                qs += Question(prompt = cardLat, promptLabel = ContentStore.uiString("learn.quiz.meaning", "What does this mean?"), correct = correct, choices = choices)
             } else {
                 val correct = cardLat
                 val wrongs = usable.filter { it.lat != correct }.shuffled().take(3).mapNotNull { it.lat }
                 val choices = (wrongs + correct).shuffled()
-                qs += Question(prompt = cardEng, promptLabel = "What is the Latin?", correct = correct, choices = choices)
+                qs += Question(prompt = cardEng, promptLabel = ContentStore.uiString("learn.quiz.latin", "What is the Latin?"), correct = correct, choices = choices)
             }
         }
 
@@ -123,7 +123,7 @@ fun QuizScreen(
         Column(modifier = Modifier.fillMaxSize()) {
             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
                 IconButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
             }
 
@@ -144,9 +144,9 @@ fun QuizScreen(
                         )
                         Text(
                             text = when {
-                                score == questions.size -> "Perfect!"
-                                score >= questions.size / 2 -> "Well done"
-                                else -> "Keep practising"
+                                score == questions.size -> ContentStore.uiString("learn.quiz.perfect", "Perfect!")
+                                score >= questions.size / 2 -> ContentStore.uiString("learn.quiz.well_done", "Well done")
+                                else -> ContentStore.uiString("learn.quiz.keep", "Keep practising")
                             },
                             style = type.titleM.copy(fontStyle = FontStyle.Italic),
                             color = colors.secondaryText,
@@ -198,7 +198,7 @@ fun QuizScreen(
                     ) {
                         Spacer(modifier = Modifier.height(24.dp))
                         SmallLabel(text = ContentStore.uiString("learn.quiz.progress", "Question {0} of {1}").replace("{0}", "${questionIndex + 1}").replace("{1}", "${questions.size}"), color = colors.sanctuaryRed)
-                        Text(text = "Score: $score", style = type.captionSm, color = colors.goldLeaf)
+                        Text(text = ContentStore.uiString("learn.quiz.score", "Score: {0}").replace("{0}", "$score"), style = type.captionSm, color = colors.goldLeaf)
 
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
@@ -251,7 +251,7 @@ fun QuizScreen(
                                     .padding(vertical = 4.dp),
                             ) {
                                 SmallLabel(
-                                    text = if (questionIndex + 1 < questions.size) "Next" else "See Results",
+                                    text = if (questionIndex + 1 < questions.size) ContentStore.uiString("common.next", "Next") else ContentStore.uiString("learn.quiz.results", "See Results"),
                                     color = colors.sanctuaryRed,
                                 )
                             }

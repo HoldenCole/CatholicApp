@@ -46,9 +46,20 @@ private data class TutorialStep(
     val items: List<String>,
 )
 
-private val tutorialSteps = listOf(
+// English literals are the defaults; Spanish comes from ui_strings_es
+// (tutorial.page.N.title / tutorial.page.N.M) by position. A getter so the
+// labels follow the vernacular applied after process start.
+private val tutorialSteps: List<TutorialStep>
+    get() = tutorialStepsEN.mapIndexed { i, page ->
+        TutorialStep(
+            title = ContentStore.uiString("tutorial.page.$i.title", page.title),
+            items = page.items.mapIndexed { j, item -> ContentStore.uiString("tutorial.page.$i.$j", item) },
+        )
+    }
+
+private val tutorialStepsEN = listOf(
     TutorialStep(
-        title = ContentStore.uiString("common.today", "Today"),
+        title = "Today",
         items = listOf(
             "Your daily liturgical companion with feast day, season, and liturgical colour",
             "Tap the Propers card to read today's Epistle and Gospel",
@@ -58,7 +69,7 @@ private val tutorialSteps = listOf(
         ),
     ),
     TutorialStep(
-        title = ContentStore.uiString("tutorial.missal", "The Missal"),
+        title = "The Missal",
         items = listOf(
             "Complete 1962 Missale Romanum with 426 daily Propers",
             "Ordinary and Propers interleaved in correct liturgical order",
@@ -78,7 +89,7 @@ private val tutorialSteps = listOf(
         ),
     ),
     TutorialStep(
-        title = ContentStore.uiString("common.settings", "Settings"),
+        title = "Settings",
         items = listOf(
             "Choose your Missal rite: 1962, 1955, or pre-1955 rubrics",
             "Select penance discipline: 1962, 1917, or stricter pre-Pius XII",
@@ -158,7 +169,7 @@ fun TutorialScreen(
                     .padding(vertical = 4.dp),
             ) {
                 Text(
-                    text = if (pagerState.currentPage < tutorialSteps.size - 1) "Next"
+                    text = if (pagerState.currentPage < tutorialSteps.size - 1) ContentStore.uiString("tutorial.next", "Next")
                     else "Introíbo ad altáre Dei  ✠",
                     style = type.bodySm.copy(
                         fontWeight = FontWeight.SemiBold,

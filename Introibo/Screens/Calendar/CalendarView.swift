@@ -164,7 +164,7 @@ struct CalendarView: View {
                         withAnimation(.easeInOut(duration: 0.2)) { viewMode = .list }
                     }
                 } label: {
-                    Text(ContentStore.shared.uiString("calendar.moveable." + feast.label.lowercased().replacingOccurrences(of: " ", with: "_"), feast.label) + " \u{00B7} " + Self.shortDate.string(from: feast.date))
+                    Text(feast.label + " \u{00B7} " + VernacularDates.shortDayMonth(feast.date))
                 }
             }
         } label: {
@@ -173,14 +173,6 @@ struct CalendarView: View {
                 .foregroundStyle(Color.goldLeaf)
         }
     }
-
-    private static let shortDate: DateFormatter = {
-        let df = DateFormatter()
-        df.calendar = Calendar.liturgical
-        df.locale = Locale(identifier: "en_US_POSIX")
-        df.dateFormat = "MMM d"
-        return df
-    }()
 
     // MARK: Year navigation (year-overview mode)
 
@@ -225,13 +217,10 @@ struct CalendarView: View {
     }
 
     private var monthName: String {
-        let df = DateFormatter()
-        df.locale = Locale(identifier: "en_US_POSIX")
-        df.dateFormat = "LLLL"
         var comps = DateComponents()
         comps.year = year; comps.month = month; comps.day = 1
         guard let d = Calendar.liturgical.date(from: comps) else { return "" }
-        return df.string(from: d)
+        return VernacularDates.monthName(d)
     }
 
     private func navButton(_ glyph: String, enabled: Bool, _ action: @escaping () -> Void) -> some View {
@@ -445,7 +434,7 @@ private struct YearOverview: View {
                     .frame(maxHeight: .infinity)
                 VStack(alignment: .leading, spacing: 6) {
                     HStack {
-                        Text(ContentStore.shared.uiString("calendar.season." + seg.label.lowercased().replacingOccurrences(of: " ", with: "_"), seg.label).uppercased())
+                        Text(seg.label.uppercased())
                             .appFont(.scaledSystem(11, weight: .semibold))
                             .tracking(2)
                             .foregroundStyle(tint)
@@ -463,7 +452,7 @@ private struct YearOverview: View {
                             .appFont(.scaledSystem(10))
                             .foregroundStyle(Color.tertiaryText)
                     }
-                    Text("\(Self.rangeDate.string(from: seg.startDate)) \u{2013} \(Self.rangeDate.string(from: seg.endDate))")
+                    Text("\(VernacularDates.longDayMonth(seg.startDate)) \u{2013} \(VernacularDates.longDayMonth(seg.endDate))")
                         .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
@@ -474,7 +463,7 @@ private struct YearOverview: View {
                                 Circle()
                                     .fill(LiturgicalColour.from(ordoColor: marker.color).swiftUIColor)
                                     .frame(width: 6, height: 6)
-                                Text(Self.markerDate.string(from: marker.date))
+                                Text(VernacularDates.shortDayMonth(marker.date))
                                     .appFont(.scaledSystem(11, design: .serif))
                                     .foregroundStyle(Color.tertiaryText)
                                     .frame(width: 46, alignment: .leading)
@@ -512,21 +501,6 @@ private struct YearOverview: View {
         }
     }
 
-    private static let rangeDate: DateFormatter = {
-        let df = DateFormatter()
-        df.calendar = Calendar.liturgical
-        df.locale = Locale(identifier: "en_US_POSIX")
-        df.dateFormat = "MMMM d"
-        return df
-    }()
-
-    private static let markerDate: DateFormatter = {
-        let df = DateFormatter()
-        df.calendar = Calendar.liturgical
-        df.locale = Locale(identifier: "en_US_POSIX")
-        df.dateFormat = "MMM d"
-        return df
-    }()
 }
 
 // MARK: - Day markers (octave / vigil / Ember / fast pips)

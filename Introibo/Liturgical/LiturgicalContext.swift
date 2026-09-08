@@ -27,9 +27,9 @@ enum MysterySet: String {
 
     var englishName: String {
         switch self {
-        case .joyful:    return "Joyful Mysteries"
-        case .sorrowful: return "Sorrowful Mysteries"
-        case .glorious:  return "Glorious Mysteries"
+        case .joyful:    return ContentStore.shared.uiString("rosary.set.joyful", "Joyful Mysteries")
+        case .sorrowful: return ContentStore.shared.uiString("rosary.set.sorrowful", "Sorrowful Mysteries")
+        case .glorious:  return ContentStore.shared.uiString("rosary.set.glorious", "Glorious Mysteries")
         }
     }
 }
@@ -121,44 +121,44 @@ struct LiturgicalContext {
             season = .advent
             colour = .violet
             latinName = "Tempus Advéntus"
-            englishName = "Advent"
+            englishName = ContentStore.shared.uiString("calendar.season.advent", "Advent")
         } else if now.isSameOrAfter(christmas) || now.isSameOrBefore(candlemas.addingDays(-1)) {
             season = .christmas
             colour = .white
             latinName = "Tempus Nativitátis"
-            englishName = "Christmastide"
+            englishName = ContentStore.shared.uiString("calendar.season.christmastide", "Christmastide")
         } else if now.isSameOrAfter(ashWed) && now.isSameOrBefore(easter.addingDays(-1)) {
             if now.isSameOrAfter(passionStart) {
                 season = .passion
                 colour = .violet
                 latinName = "Tempus Passiónis"
-                englishName = "Passiontide"
+                englishName = ContentStore.shared.uiString("calendar.season.passiontide", "Passiontide")
             } else {
                 season = .lent
                 colour = .violet
                 latinName = "Quadragésima"
-                englishName = "Lent"
+                englishName = ContentStore.shared.uiString("calendar.season.lent", "Lent")
             }
         } else if now.isSameDay(as: pentecost) {
             season = .pentecost
             colour = .red
             latinName = "Pentecóste"
-            englishName = "Pentecost"
+            englishName = ContentStore.shared.uiString("calendar.season.pentecost", "Pentecost")
         } else if now.isSameOrAfter(easter) && now.isSameOrBefore(trinity.addingDays(-1)) {
             season = .easter
             colour = .white
             latinName = "Tempus Paschále"
-            englishName = "Eastertide"
+            englishName = ContentStore.shared.uiString("calendar.season.eastertide", "Eastertide")
         } else if now.isSameOrAfter(trinity) {
             season = .perAnnum
             colour = .green
             latinName = "Tempus post Pentecósten"
-            englishName = "Time after Pentecost"
+            englishName = ContentStore.shared.uiString("calendar.season.time_after_pentecost", "Time after Pentecost")
         } else {
             season = .perAnnum
             colour = .green
             latinName = "Tempus post Epiphaníam"
-            englishName = "Time after Epiphany"
+            englishName = ContentStore.shared.uiString("calendar.season.time_after_epiphany", "Time after Epiphany")
         }
 
         // ---- Day-of-week ----
@@ -353,8 +353,8 @@ struct LiturgicalContext {
         // Sundays: never a day of obligatory penance in any discipline.
         if isSunday {
             return Penance(
-                title: "Day of the Lord", latin: "Dies Domínica",
-                desc: "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass.",
+                title: ContentStore.shared.uiString("penance.sunday.title", "Day of the Lord"), latin: "Dies Domínica",
+                desc: ContentStore.shared.uiString("penance.sunday.desc", "No obligation of fasting or abstinence. Rest in the Lord and attend Holy Mass."),
                 rubric: "℟. Domínica", strict: false
             )
         }
@@ -365,11 +365,11 @@ struct LiturgicalContext {
             if isEmberDate(date: date, easter: easter, pentecost: pentecost,
                            firstAdvent: firstAdvent, cal: cal, dow: dow) {
                 return Penance(
-                    title: "Ember Day: Fast & Abstinence",
+                    title: ContentStore.shared.uiString("penance.ember.title", "Ember Day: Fast & Abstinence"),
                     latin: "Quattuor Témporum",
                     desc: discipline == .strict
-                        ? "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat."
-                        : "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat.",
+                        ? ContentStore.shared.uiString("penance.ember.desc_strict", "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat.")
+                        : ContentStore.shared.uiString("penance.ember.desc_1917", "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat."),
                     rubric: "℟. Quattuor Témporum",
                     strict: true
                 )
@@ -380,11 +380,11 @@ struct LiturgicalContext {
         if discipline != .discipline1962 {
             if isVigilFast(date: date, easter: easter, pentecost: pentecost, cal: cal) {
                 return Penance(
-                    title: "Vigil: Fast & Abstinence",
+                    title: ContentStore.shared.uiString("penance.vigil.title", "Vigil: Fast & Abstinence"),
                     latin: "Vigília: Ieiúnium",
                     desc: discipline == .strict
-                        ? "Fast (one full meal, no upper age limit) and abstinence."
-                        : "Fast (one full meal and two collations, ages 21–59) and abstinence.",
+                        ? ContentStore.shared.uiString("penance.vigil.desc_strict", "Fast (one full meal, no upper age limit) and abstinence.")
+                        : ContentStore.shared.uiString("penance.vigil.desc_1917", "Fast (one full meal and two collations, ages 21–59) and abstinence."),
                     rubric: "℟. Vigília",
                     strict: true
                 )
@@ -394,13 +394,13 @@ struct LiturgicalContext {
         // Lent
         if isLent {
             let fastDesc = discipline == .strict
-                ? "Fast: one full meal (no upper age limit). Two small collations permitted."
-                : "Fast: one full meal and two small collations (ages 21–59)."
+                ? ContentStore.shared.uiString("penance.lent.fast_strict", "Fast: one full meal (no upper age limit). Two small collations permitted.")
+                : ContentStore.shared.uiString("penance.lent.fast_1917", "Fast: one full meal and two small collations (ages 21–59).")
             if isFriday {
                 return Penance(
-                    title: "Lenten Friday: Fast & Abstinence",
+                    title: ContentStore.shared.uiString("penance.lent_friday.title", "Lenten Friday: Fast & Abstinence"),
                     latin: "Feria Sexta in Quadragésima",
-                    desc: "\(fastDesc) Complete abstinence from flesh-meat.",
+                    desc: ContentStore.shared.uiString("penance.lent_friday.desc", "{0} Complete abstinence from flesh-meat.", fastDesc),
                     rubric: "℟. Quadragésima · Feria Sexta",
                     strict: true
                 )
@@ -408,18 +408,18 @@ struct LiturgicalContext {
             // 1917/strict: Saturdays in Lent are days of abstinence (in addition to fast)
             if isSaturday && discipline != .discipline1962 {
                 return Penance(
-                    title: "Lenten Saturday: Fast & Abstinence",
+                    title: ContentStore.shared.uiString("penance.lent_saturday.title", "Lenten Saturday: Fast & Abstinence"),
                     latin: "Sábbato in Quadragésima",
-                    desc: "\(fastDesc) Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).",
+                    desc: ContentStore.shared.uiString("penance.lent_saturday.desc", "{0} Abstinence from flesh-meat (Saturday Lenten abstinence, 1917 Code).", fastDesc),
                     rubric: "℟. Quadragésima · Sábbato",
                     strict: true
                 )
             }
             // All other Lenten weekdays: fast
             return Penance(
-                title: "Lenten Fast",
+                title: ContentStore.shared.uiString("penance.lent_fast.title", "Lenten Fast"),
                 latin: "Ieiúnium Quadragesimále",
-                desc: "\(fastDesc) Wednesdays are also days of abstinence.",
+                desc: ContentStore.shared.uiString("penance.lent_fast.desc", "{0} Wednesdays are also days of abstinence.", fastDesc),
                 rubric: "℟. \(feriaLatin[dow]) in Quadragésima",
                 strict: true
             )
@@ -430,9 +430,9 @@ struct LiturgicalContext {
             // Strict: Wednesdays & Fridays are fast + abstinence
             if discipline == .strict && (isWednesday || isFriday) {
                 return Penance(
-                    title: "Advent Fast & Abstinence",
+                    title: ContentStore.shared.uiString("penance.advent_fast.title", "Advent Fast & Abstinence"),
                     latin: "Ieiúnium et Abstinéntia in Advéntu",
-                    desc: "Fast (one full meal, no upper age limit) and abstinence from flesh-meat (pre-1953 Advent discipline).",
+                    desc: ContentStore.shared.uiString("penance.advent_fast.desc", "Fast (one full meal, no upper age limit) and abstinence from flesh-meat (pre-1953 Advent discipline)."),
                     rubric: "℟. \(feriaLatin[dow]) in Advéntu",
                     strict: true
                 )
@@ -440,9 +440,9 @@ struct LiturgicalContext {
             // 1917: Advent Fridays & Saturdays are abstinence days
             if discipline == .discipline1917 && (isFriday || isSaturday) {
                 return Penance(
-                    title: "Advent Abstinence",
+                    title: ContentStore.shared.uiString("penance.advent_abstinence.title", "Advent Abstinence"),
                     latin: "Abstinéntia in Advéntu",
-                    desc: "Abstain from flesh-meat (Advent Friday/Saturday, 1917 Code).",
+                    desc: ContentStore.shared.uiString("penance.advent_abstinence.desc", "Abstain from flesh-meat (Advent Friday/Saturday, 1917 Code)."),
                     rubric: "℟. \(feriaLatin[dow]) in Advéntu",
                     strict: false
                 )
@@ -450,17 +450,17 @@ struct LiturgicalContext {
             // 1962: Advent is penitential but no binding obligation outside Fridays
             if isFriday {
                 return Penance(
-                    title: "Friday Abstinence",
+                    title: ContentStore.shared.uiString("penance.friday.title", "Friday Abstinence"),
                     latin: "Feria Sexta",
-                    desc: "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+                    desc: ContentStore.shared.uiString("penance.friday.desc", "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord."),
                     rubric: "℟. Feria Sexta",
                     strict: false
                 )
             }
             return Penance(
-                title: "Advent: Penitential Season",
+                title: ContentStore.shared.uiString("penance.advent_season.title", "Advent: Penitential Season"),
                 latin: "Tempus Advéntus",
-                desc: "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord.",
+                desc: ContentStore.shared.uiString("penance.advent_season.desc", "A penitential season. Offer voluntary fasts and almsgiving as you prepare for the coming of the Lord."),
                 rubric: "℟. \(feriaLatin[dow]) in Advéntu",
                 strict: false
             )
@@ -469,9 +469,9 @@ struct LiturgicalContext {
         // Year-round Friday abstinence (all three disciplines)
         if isFriday {
             return Penance(
-                title: "Friday Abstinence",
+                title: ContentStore.shared.uiString("penance.friday.title", "Friday Abstinence"),
                 latin: "Feria Sexta",
-                desc: "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord.",
+                desc: ContentStore.shared.uiString("penance.friday.desc", "Abstain from the flesh of warm-blooded animals, in memory of the Passion of Our Lord."),
                 rubric: "℟. Feria Sexta",
                 strict: false
             )
@@ -479,9 +479,9 @@ struct LiturgicalContext {
 
         // No obligatory penance
         return Penance(
-            title: "No obligatory penance",
+            title: ContentStore.shared.uiString("penance.none.title", "No obligatory penance"),
             latin: "Nulla pænitentia obligatória",
-            desc: "A free day. Voluntary mortifications are always meritorious; choose a small sacrifice as your daily offering.",
+            desc: ContentStore.shared.uiString("penance.none.desc", "A free day. Voluntary mortifications are always meritorious; choose a small sacrifice as your daily offering."),
             rubric: "℟. \(feriaLatin[dow])",
             strict: false
         )
@@ -534,10 +534,7 @@ struct LiturgicalContext {
         "Domínica", "Feria Secúnda", "Feria Tértia", "Feria Quarta",
         "Feria Quinta", "Feria Sexta", "Sábbato"
     ]
-    private static let feriaEnglish = [
-        "Sunday", "Monday", "Tuesday", "Wednesday",
-        "Thursday", "Friday", "Saturday"
-    ]
+    private static var feriaEnglish: [String] { (0..<7).map { LiturgicalNames.weekday($0) } }
 }
 
 // Format a Date as "the twenty-eighth of March" — matches the
@@ -556,6 +553,14 @@ enum LongDateFormatter {
             "twenty-third","twenty-fourth","twenty-fifth","twenty-sixth","twenty-seventh",
             "twenty-eighth","twenty-ninth","thirtieth","thirty-first"
         ]
+        if ContentStore.shared.vernacular == .spanish {
+            // Spanish counts the day (cardinal) except the first: "el
+            // primero de marzo", "el veintiocho de marzo".
+            let monthES = LiturgicalNames.month(month)
+            return day == 1
+                ? ContentStore.shared.uiString("calendar.long_date.first", "the first of {0}", monthES)
+                : ContentStore.shared.uiString("calendar.long_date", "the {0} of {1}", String(day), monthES)
+        }
         return "the \(ordinals[day]) of \(months[month - 1])"
     }
 }
@@ -570,7 +575,7 @@ extension LiturgicalContext {
         if season == .lent || season == .passion {
             let days = cal.dateComponents([.day], from: today, to: cal.startOfDay(for: easter)).day ?? 0
             if days == 0 { return nil }
-            return "\(days) day\(days == 1 ? "" : "s") until Easter Sunday"
+            return ContentStore.shared.uiString("today.countdown.easter", "{0} {1} until Easter Sunday", String(days), dayWord(days))
         }
 
         // Advent countdown to Christmas
@@ -580,23 +585,29 @@ extension LiturgicalContext {
             comps.month = 12; comps.day = 25
             let christmas = cal.date(from: comps)!
             let days = cal.dateComponents([.day], from: today, to: cal.startOfDay(for: christmas)).day ?? 0
-            if days == 0 { return "Christmas Day" }
-            return "\(days) day\(days == 1 ? "" : "s") until Christmas"
+            if days == 0 { return ContentStore.shared.uiString("today.countdown.christmas_day", "Christmas Day") }
+            return ContentStore.shared.uiString("today.countdown.christmas", "{0} {1} until Christmas", String(days), dayWord(days))
         }
 
         // Easter octave
         if season == .easter {
             let daysSinceEaster = cal.dateComponents([.day], from: cal.startOfDay(for: easter), to: today).day ?? 0
             if daysSinceEaster >= 0 && daysSinceEaster <= 7 {
-                return "Octave of Easter, Day \(daysSinceEaster + 1)"
+                return ContentStore.shared.uiString("today.countdown.octave", "Octave of Easter, Day {0}", String(daysSinceEaster + 1))
             }
             let daysToPentecost = cal.dateComponents([.day], from: today, to: cal.startOfDay(for: pentecost)).day ?? 0
             if daysToPentecost > 0 && daysToPentecost <= 10 {
-                return "\(daysToPentecost) day\(daysToPentecost == 1 ? "" : "s") until Pentecost"
+                return ContentStore.shared.uiString("today.countdown.pentecost", "{0} {1} until Pentecost", String(daysToPentecost), dayWord(daysToPentecost))
             }
         }
 
         return nil
+    }
+
+    /// "day" / "days" in the vernacular for the countdown notes.
+    private func dayWord(_ n: Int) -> String {
+        n == 1 ? ContentStore.shared.uiString("calendar.day", "day")
+               : ContentStore.shared.uiString("calendar.days", "days")
     }
 
     var isFirstFriday: Bool {

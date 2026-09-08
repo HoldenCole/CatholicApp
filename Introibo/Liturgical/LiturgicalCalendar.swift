@@ -56,12 +56,10 @@ struct CalendarDay: Identifiable {
     var isSunday: Bool { weekday == 1 }
 
     /// Three-letter weekday abbreviation (SUN, MON, … SAT).
-    var weekdayAbbrev: String { Self.abbrevs[weekday - 1] }
-    private static let abbrevs = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+    var weekdayAbbrev: String { LiturgicalNames.weekdayAbbrev(weekday - 1) }
 
     /// Full English weekday name.
-    var weekdayName: String { Self.dayNames[weekday - 1] }
-    private static let dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    var weekdayName: String { LiturgicalNames.weekday(weekday - 1) }
 
     /// The English line shown beneath the Latin name — the full feast/feria
     /// translation when bundled, else just the weekday.
@@ -69,14 +67,17 @@ struct CalendarDay: Identifiable {
 
     /// English season label (for the inline season dividers).
     var seasonLabel: String? { ordo.flatMap { Self.seasonLabels[$0.season] } }
-    private static let seasonLabels: [String: String] = [
-        "advent": "Advent",
-        "christmas": "Christmastide",
-        "lent": "Lent",
-        "easter": "Eastertide",
-        "ordinary": "Ordinary Time",
-        "pre-lent": "Pre-Lent",
-    ]
+    private static var seasonLabels: [String: String] {
+        let ui = ContentStore.shared
+        return [
+            "advent": ui.uiString("calendar.season.advent", "Advent"),
+            "christmas": ui.uiString("calendar.season.christmastide", "Christmastide"),
+            "lent": ui.uiString("calendar.season.lent", "Lent"),
+            "easter": ui.uiString("calendar.season.eastertide", "Eastertide"),
+            "ordinary": ui.uiString("calendar.season.ordinary_time", "Ordinary Time"),
+            "pre-lent": ui.uiString("calendar.season.pre_lent", "Pre-Lent"),
+        ]
+    }
 }
 
 /// A single month laid out for display.
@@ -129,18 +130,10 @@ struct CalendarMonth {
         return CalendarMonth(
             year: year,
             month: month,
-            title: Self.titleFormatter.string(from: firstOfMonth),
+            title: VernacularDates.monthYear(firstOfMonth),
             leadingBlanks: leading,
             days: days
         )
     }
 
-    /// "May 2026" — English month name + year, locale-fixed for stable display.
-    private static let titleFormatter: DateFormatter = {
-        let df = DateFormatter()
-        df.calendar = Calendar.liturgical
-        df.locale = Locale(identifier: "en_US_POSIX")
-        df.dateFormat = "LLLL yyyy"
-        return df
-    }()
 }

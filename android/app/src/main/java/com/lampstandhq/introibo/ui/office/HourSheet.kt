@@ -131,7 +131,7 @@ fun HourSheet(
                     IconButton(onClick = {
                         scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
                     }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                     }
                     Row {
                         IconButton(onClick = { showAddToRule = true }) {
@@ -222,7 +222,9 @@ fun HourSheet(
             confirmButton = {
                 Column {
                     for ((label, period) in listOf(
-                        "Morning" to "morning", "Midday" to "midday", "Evening" to "evening",
+                        ContentStore.uiString("common.morning", "Morning") to "morning",
+                        ContentStore.uiString("common.midday", "Midday") to "midday",
+                        ContentStore.uiString("common.evening", "Evening") to "evening",
                     )) {
                         TextButton(onClick = {
                             scope.launch { progressRepo.addToRule(ruleSlug, period) }

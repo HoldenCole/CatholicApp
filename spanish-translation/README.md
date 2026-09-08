@@ -465,6 +465,53 @@ so integration cannot silently misalign.
   and fails if any referenced key lacks Spanish, so the chrome cannot
   silently regress.
 
+  **Tranche U2 — the remaining English surfaces: COMPLETE.** The U1
+  scan only caught literals at `Text(...)` call sites; a broader
+  raw-literal scan found English still reaching the screen from the
+  model layer and from data-in-code. All of it is now vernacular on
+  both platforms with shared keys (`ui_strings_es.json`, 669 keys):
+  the settings enum labels (rite, penance discipline, language mode,
+  theme, text-size range); the liturgical-context season names, the
+  weekday and month names, the penance titles and descriptions, the
+  seasonal countdowns and the long date ("el 8 de septiembre"), all
+  resolved inside `LiturgicalContext` / `LiturgicalCalendar` /
+  `LiturgicalYear` so every caller inherits them; every locale-pinned
+  date formatter (Today's upcoming list and next obligation, the
+  calendar's month title, year overview ranges and moveable-feast
+  menu, the day/saints widgets) now goes through a shared
+  `VernacularDates` helper; the Mass-part names on the Missal, Proper
+  and calendar sheets, the text/HTML exporters and the office's
+  fallback collect label (`MassPartName`); the Liber's four sections,
+  the whole TLM history timeline and the 25-term glossary (keyed by
+  index; the quick links are keyed by slug so the Spanish titles still
+  resolve); the Oratio occasion tiles (keyed by the `occasions` tag);
+  the Rosary and Stations flow chrome ("Fruto:", "Misterios de hoy",
+  next/finish, completion); learn/quiz, saint-detail, search-filter,
+  notification-channel and settings/about leftovers; the tutorial
+  pages and every per-feature tutorial step; and the accessibility
+  labels. New overlays: `daily_psalm_es.json` (the Today screen's 44
+  rotating verses in Torres Amat, trimmed to the clause the Latin
+  quotes — the Android list was shorter and unaccented and is now
+  byte-identical to iOS), `confession_examen_es.json` (the Ten
+  Commandments in the Astete/Ripalda catechism formulas plus the 46
+  questions) and `confession_guides_es.json` (both guided paths; the
+  basic path's act of contrition is the received "Señor mío
+  Jesucristo"). Validator, sync and fidelity QA cover all three.
+  Onboarding is left in English by design: it runs before the
+  vernacular can be chosen.
+
+  While pairing the daily verses against `psalter_es.json` the
+  importer's split-psalm packing turned out to have mis-mapped the
+  Vulgate/KJV boundaries of Ps 114/115 (both had received the first
+  verses of KJV 116) and Ps 146/147 (both the first verses of KJV
+  147), and dropped Ps 138:14 and half of Ps 76:14–15 at verse
+  boundaries. Those 42 lines were rebuilt from the Torres Amat text
+  (the 1823 edition on archive.org, orthography modernised to match
+  the rest of the psalter) and propagated by identical Latin into the
+  weekly psalter and the 320 copies inside the commune/temporal/
+  sanctoral Office propers. A systematic line-by-line audit of the
+  whole psalter against the Torres Amat module remains a follow-up.
+
 With this, EVERY content surface of the app outside the Divine Office
 corpus carries Spanish. What remains is the Office (multi-MB; see
 below).

@@ -24,14 +24,15 @@ data class SeasonSegment(
     val dayCount: Int,
 ) {
     companion object {
-        val labels = mapOf(
-            "advent" to "Advent",
-            "christmas" to "Christmastide",
-            "pre-lent" to "Pre-Lent",
-            "lent" to "Lent",
-            "easter" to "Eastertide",
-            "ordinary" to "Time after Pentecost",
-        )
+        val labels: Map<String, String>
+            get() = mapOf(
+                "advent" to ContentStore.uiString("calendar.season.advent", "Advent"),
+                "christmas" to ContentStore.uiString("calendar.season.christmastide", "Christmastide"),
+                "pre-lent" to ContentStore.uiString("calendar.season.pre_lent", "Pre-Lent"),
+                "lent" to ContentStore.uiString("calendar.season.lent", "Lent"),
+                "easter" to ContentStore.uiString("calendar.season.eastertide", "Eastertide"),
+                "ordinary" to ContentStore.uiString("calendar.season.time_after_pentecost", "Time after Pentecost"),
+            )
     }
 }
 
@@ -60,7 +61,7 @@ object LiturgicalYear {
             // A year has TWO "ordinary" runs: Time after Epiphany (starts in
             // January) and Time after Pentecost. Label them apart.
             val label = if (key == "ordinary" && runStart!!.monthValue <= 2) {
-                "Time after Epiphany"
+                ContentStore.uiString("calendar.season.time_after_epiphany", "Time after Epiphany")
             } else {
                 SeasonSegment.labels[key] ?: key.replaceFirstChar { it.uppercase() }
             }
@@ -140,14 +141,15 @@ object LiturgicalYear {
     // ---- Moveable feasts (quick jump) ----
 
     /** Display order for the moveable-feast jump menu. */
-    val moveableFeasts = listOf(
-        "Easter" to "pasc0-0",
-        "Ascension" to "pasc5-4",
-        "Pentecost" to "pasc7-0",
-        "Trinity Sunday" to "pent01-0",
-        "Corpus Christi" to "pent01-4",
-        "Christ the King" to "10-du",
-    )
+    val moveableFeasts: List<Pair<String, String>>
+        get() = listOf(
+            ContentStore.uiString("calendar.moveable.easter", "Easter") to "pasc0-0",
+            ContentStore.uiString("calendar.moveable.ascension", "Ascension") to "pasc5-4",
+            ContentStore.uiString("calendar.moveable.pentecost", "Pentecost") to "pasc7-0",
+            ContentStore.uiString("calendar.moveable.trinity_sunday", "Trinity Sunday") to "pent01-0",
+            ContentStore.uiString("calendar.moveable.corpus_christi", "Corpus Christi") to "pent01-4",
+            ContentStore.uiString("calendar.moveable.christ_the_king", "Christ the King") to "10-du",
+        )
 
     /** Resolves the moveable feasts' dates for [year] under [rite]. */
     fun moveableDates(year: Int, rite: MissalRite): List<Pair<String, LocalDate>> {

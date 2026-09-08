@@ -134,7 +134,7 @@ struct SaintsWidgetView: View {
               let month = Int(parts[1]), (1...12).contains(month),
               let day = Int(parts[2])
         else { return key }
-        return "\(day) \(monthAbbrev[month])"
+        return "\(day) \(WidgetConfigStore.chrome("calendar.month_abbrev.\(month)", monthAbbrev[month]))"
     }
 }
 

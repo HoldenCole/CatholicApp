@@ -105,7 +105,7 @@ class IntroiboWidgetProvider : AppWidgetProvider() {
                         R.id.widget_label,
                         ContentStore.uiString("widget.label.office", context.getString(R.string.widget_label_office)),
                     )
-                    views.setTextViewText(R.id.widget_title, hour?.name ?: "Divine Office")
+                    views.setTextViewText(R.id.widget_title, hour?.name ?: ContentStore.uiString("widget.label.office", "Divine Office"))
                     views.setTextViewText(
                         R.id.widget_subtitle,
                         hour?.eng ?: ContentStore.uiString("widget.tap_to_pray", context.getString(R.string.widget_tap_to_pray)),

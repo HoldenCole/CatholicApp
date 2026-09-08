@@ -118,7 +118,7 @@ struct OfficeView: View {
             }
         }
         .sheet(isPresented: $showNotification) {
-            NotificationScheduleSheet(scheduleId: "devotion.office", title: "Divine Office", subtitle: "Remind me to pray the Office")
+            NotificationScheduleSheet(scheduleId: "devotion.office", title: ContentStore.shared.uiString("notif.devotion.office", "Divine Office"), subtitle: ContentStore.shared.uiString("office.remind", "Remind me to pray the Office"))
         }
         .sheet(item: $selectedHour) { hour in
             HourView(hour: hour)

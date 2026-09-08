@@ -322,12 +322,12 @@ struct SettingsView: View {
             NavigationLink {
                 WidgetSettingsView()
             } label: {
-                Label("Home Screen Widget", systemImage: "square.grid.2x2")
+                Label(ContentStore.shared.uiString("settings.widget", "Home Screen Widget"), systemImage: "square.grid.2x2")
                     .foregroundStyle(Color.primaryText)
             }
             .listRowBackground(Color.pageBackground)
         } header: {
-            Text("Widget")
+            Text(ContentStore.shared.uiString("settings.header.widget", "Widget"))
         }
     }
 
@@ -375,7 +375,7 @@ struct SettingsView: View {
         Section {
             Link(destination: URL(string: "mailto:contact@lampstandhq.com?subject=Introibo%20Feedback") ?? URL(string: "mailto:")!) {
                 HStack {
-                    Label("Send Feedback", systemImage: "envelope")
+                    Label(ContentStore.shared.uiString("settings.feedback.send", "Send Feedback"), systemImage: "envelope")
                         .foregroundStyle(Color.primaryText)
                     Spacer()
                     Image(systemName: "arrow.up.right")
@@ -402,7 +402,7 @@ struct SettingsView: View {
             }
             .listRowBackground(Color.pageBackground)
             .confirmationDialog(ContentStore.shared.uiString("settings.reset_confirm", "Clear all local progress?"), isPresented: $showResetConfirm) {
-                Button("Reset", role: .destructive) {
+                Button(ContentStore.shared.uiString("settings.reset_short", "Reset"), role: .destructive) {
                     UserProgress.resetAll()
                 }
                 Button(ContentStore.shared.uiString("common.cancel", "Cancel"), role: .cancel) {}
@@ -448,7 +448,7 @@ struct SettingsView: View {
                     .italic()
             }
             .listRowBackground(Color.pageBackground)
-            LabeledContent("Version") {
+            LabeledContent(ContentStore.shared.uiString("settings.version", "Version")) {
                 Text("1.2")
                     .foregroundStyle(Color.secondaryText)
             }
@@ -465,7 +465,7 @@ struct SettingsView: View {
                 .foregroundStyle(Color.secondaryText)
                 .listRowBackground(Color.pageBackground)
         } header: {
-            Text("About")
+            Text(ContentStore.shared.uiString("settings.header.about", "About"))
         } footer: {
             Text(ContentStore.shared.uiString("settings.about.built", "Built by Lampstand"))
                 .frame(maxWidth: .infinity)

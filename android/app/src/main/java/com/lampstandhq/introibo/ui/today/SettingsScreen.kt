@@ -525,7 +525,7 @@ fun SettingsScreen(
                                 data = Uri.parse("mailto:contact@lampstandhq.com?subject=Introibo%20Feedback")
                             }
                             context.startActivity(
-                                Intent.createChooser(emailIntent, "Send Feedback")
+                                Intent.createChooser(emailIntent, ContentStore.uiString("settings.feedback.send", "Send Feedback"))
                             )
                         }
                         .padding(vertical = 12.dp),
@@ -610,12 +610,12 @@ fun SettingsScreen(
 
             // ---- About Section ----
             item {
-                SettingsSectionHeader(title = "About")
+                SettingsSectionHeader(title = ContentStore.uiString("settings.header.about", "About"))
             }
             item {
                 Column(modifier = Modifier.padding(vertical = 8.dp)) {
-                    AboutRow(label = "App", value = "Introibo")
-                    AboutRow(label = "Version", value = "1.2")
+                    AboutRow(label = ContentStore.uiString("settings.app", "App"), value = "Introibo")
+                    AboutRow(label = ContentStore.uiString("settings.version", "Version"), value = "1.2")
                     Spacer(Modifier.height(8.dp))
                     Text(
                         text = "Ad altare Dei",
@@ -664,7 +664,7 @@ fun SettingsScreen(
                         showResetConfirm = false
                     }
                 }) {
-                    Text("Reset", color = colors.sanctuaryRed)
+                    Text(ContentStore.uiString("settings.reset_short", "Reset"), color = colors.sanctuaryRed)
                 }
             },
             dismissButton = {

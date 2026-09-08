@@ -65,6 +65,7 @@ import com.lampstandhq.introibo.data.liturgical.LiturgicalColour
 import com.lampstandhq.introibo.data.liturgical.LiturgicalContext
 import com.lampstandhq.introibo.data.liturgical.LiturgicalYear
 import com.lampstandhq.introibo.data.liturgical.LongDateFormatter
+import com.lampstandhq.introibo.data.liturgical.VernacularDates
 import com.lampstandhq.introibo.data.liturgical.isEmberDay
 import com.lampstandhq.introibo.data.liturgical.isFirstFriday
 import com.lampstandhq.introibo.data.liturgical.isFirstSaturday
@@ -175,7 +176,7 @@ fun CalendarScreen(
                 )
             }
             IconButton(onClick = onBack) {
-                Icon(Icons.Filled.Close, "Close", tint = colors.tertiaryText, modifier = Modifier.size(18.dp))
+                Icon(Icons.Filled.Close, ContentStore.uiString("common.close", "Close"), tint = colors.tertiaryText, modifier = Modifier.size(18.dp))
             }
         }
 
@@ -468,7 +469,7 @@ private fun DayDetail(
             var showMenu by remember { mutableStateOf(false) }
             Box {
                 IconButton(onClick = { showMenu = true }) {
-                    Icon(Icons.Filled.Share, "Share", tint = colors.tertiaryText, modifier = Modifier.size(18.dp))
+                    Icon(Icons.Filled.Share, ContentStore.uiString("common.share", "Share"), tint = colors.tertiaryText, modifier = Modifier.size(18.dp))
                 }
                 DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
                     DropdownMenuItem(
@@ -800,7 +801,6 @@ private fun MoveableFeastMenu(year: Int, rite: MissalRite, onJump: (java.time.Lo
     val colors = IntroiboTheme.colors
     var open by remember { mutableStateOf(false) }
     val feasts = remember(year, rite) { LiturgicalYear.moveableDates(year, rite) }
-    val fmt = remember { java.time.format.DateTimeFormatter.ofPattern("MMM d", java.util.Locale.US) }
     Box {
         Text(
             text = "✦",
@@ -814,7 +814,7 @@ private fun MoveableFeastMenu(year: Int, rite: MissalRite, onJump: (java.time.Lo
         DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             feasts.forEach { (label, date) ->
                 DropdownMenuItem(
-                    text = { Text(ContentStore.uiString("calendar.moveable." + label.lowercase().replace(" ", "_"), label) + " · ${date.format(fmt)}") },
+                    text = { Text(label + " · " + VernacularDates.shortDayMonth(date)) },
                     onClick = {
                         open = false
                         onJump(date)
@@ -841,8 +841,6 @@ private fun YearOverview(
     val segments = remember(year, rite) { LiturgicalYear.seasons(year, rite) }
     val markers = remember(year, rite) { LiturgicalYear.markers(year, rite) }
     val today = remember { java.time.LocalDate.now() }
-    val rangeFmt = remember { java.time.format.DateTimeFormatter.ofPattern("MMMM d", java.util.Locale.US) }
-    val markFmt = remember { java.time.format.DateTimeFormatter.ofPattern("MMM d", java.util.Locale.US) }
 
     val listState = rememberLazyListState()
     LaunchedEffect(year) {
@@ -895,7 +893,7 @@ private fun YearOverview(
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
-                            text = ContentStore.uiString("calendar.season." + seg.label.lowercase().replace(" ", "_"), seg.label).uppercase(),
+                            text = seg.label.uppercase(),
                             fontSize = scaledSp(11f),
                             fontWeight = FontWeight.SemiBold,
                             letterSpacing = 2.sp,
@@ -924,7 +922,7 @@ private fun YearOverview(
                     }
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        text = "${seg.startDate.format(rangeFmt)} – ${seg.endDate.format(rangeFmt)}",
+                        text = "${VernacularDates.longDayMonth(seg.startDate)} – ${VernacularDates.longDayMonth(seg.endDate)}",
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                         color = colors.secondaryText,
                     )
@@ -944,7 +942,7 @@ private fun YearOverview(
                             )
                             Spacer(Modifier.width(8.dp))
                             Text(
-                                text = marker.date.format(markFmt),
+                                text = VernacularDates.shortDayMonth(marker.date),
                                 fontSize = scaledSp(11f),
                                 color = colors.tertiaryText,
                                 modifier = Modifier.width(46.dp),

@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.components
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -49,7 +51,7 @@ fun RelatedLinksSection(
             .padding(top = 8.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        SmallLabel(text = "Vide Etiam  ·  See Also", color = colors.goldLeaf)
+        SmallLabel(text = ContentStore.uiString("common.see_also", "Vide Etiam  ·  See Also"), color = colors.goldLeaf)
 
         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
             related.forEach { link ->

@@ -50,10 +50,10 @@ enum WidgetReadingText: String, CaseIterable {
 
     var label: String {
         switch self {
-        case .introit: return "Introit"
-        case .collect: return "Collect"
-        case .epistle: return "Epistle"
-        case .gospel: return "Gospel"
+        case .introit: return WidgetConfigStore.chrome("widget.reading.introit", "Introit")
+        case .collect: return WidgetConfigStore.chrome("widget.reading.collect", "Collect")
+        case .epistle: return WidgetConfigStore.chrome("widget.reading.epistle", "Epistle")
+        case .gospel: return WidgetConfigStore.chrome("widget.reading.gospel", "Gospel")
         }
     }
 }
@@ -65,15 +65,15 @@ enum WidgetSaintsFilter: String, CaseIterable {
 
     var label: String {
         switch self {
-        case .saints: return "Saints only"
-        case .all: return "All notable days"
+        case .saints: return WidgetConfigStore.chrome("widget.saints.only", "Saints only")
+        case .all: return WidgetConfigStore.chrome("widget.saints.all", "All notable days")
         }
     }
 
     var detail: String {
         switch self {
-        case .saints: return "Feasts of the sanctoral cycle"
-        case .all: return "Adds vigils and Ember days"
+        case .saints: return WidgetConfigStore.chrome("widget.saints.only_sub", "Feasts of the sanctoral cycle")
+        case .all: return WidgetConfigStore.chrome("widget.saints.all_sub", "Adds vigils and Ember days")
         }
     }
 }

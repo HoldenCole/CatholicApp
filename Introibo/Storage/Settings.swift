@@ -14,9 +14,9 @@ enum MissalRite: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .rite1962: return "1962 Missal (Roncalli)"
-        case .rite1955: return "1955 Holy Week reforms"
-        case .pre1955:  return "Pre-1955 rubrics"
+        case .rite1962: return ContentStore.shared.uiString("settings.rite.1962", "1962 Missal (Roncalli)")
+        case .rite1955: return ContentStore.shared.uiString("settings.rite.1955", "1955 Holy Week reforms")
+        case .pre1955:  return ContentStore.shared.uiString("settings.rite.pre1955", "Pre-1955 rubrics")
         }
     }
 
@@ -38,9 +38,9 @@ enum PenanceDiscipline: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .discipline1962: return "1962 discipline"
-        case .discipline1917: return "1917 Code"
-        case .strict:         return "Stricter (pre-Pius XII)"
+        case .discipline1962: return ContentStore.shared.uiString("settings.penance.1962", "1962 discipline")
+        case .discipline1917: return ContentStore.shared.uiString("settings.penance.1917", "1917 Code")
+        case .strict:         return ContentStore.shared.uiString("settings.penance.strict", "Stricter (pre-Pius XII)")
         }
     }
 
@@ -79,9 +79,9 @@ enum FontRange: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .smaller: return "Smaller"
-        case .normal:  return "Normal"
-        case .bigger:  return "Bigger"
+        case .smaller: return ContentStore.shared.uiString("settings.font.smaller", "Smaller")
+        case .normal:  return ContentStore.shared.uiString("settings.font.normal", "Normal")
+        case .bigger:  return ContentStore.shared.uiString("settings.font.bigger", "Bigger")
         }
     }
 
@@ -137,9 +137,9 @@ enum LanguageMode: String, CaseIterable, Identifiable {
     var label: String {
         let v = VernacularLanguage.current().displayName
         switch self {
-        case .both:       return "Latin & \(v)"
-        case .latinOnly:  return "Latin Only"
-        case .vernacular: return "\(v) Only"
+        case .both:       return ContentStore.shared.uiString("settings.language.both", "Latin & {0}", v)
+        case .latinOnly:  return ContentStore.shared.uiString("settings.language.latin", "Latin Only")
+        case .vernacular: return ContentStore.shared.uiString("settings.language.vernacular", "{0} Only", v)
         }
     }
 
@@ -181,9 +181,9 @@ enum AppTheme: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .parchment: return "Parchment"
-        case .white:     return "Clean White"
-        case .dark:      return "Dark (Walnut)"
+        case .parchment: return ContentStore.shared.uiString("settings.theme.parchment", "Parchment")
+        case .white:     return ContentStore.shared.uiString("settings.theme.white", "Clean White")
+        case .dark:      return ContentStore.shared.uiString("settings.theme.dark", "Dark (Walnut)")
         }
     }
 

@@ -149,6 +149,9 @@ class AssetsDecodeTest {
         check("mysteries_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("mysteries_es.json") }) { it.size == 3 }
         check("rosary_prayers_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("rosary_prayers_es.json") }) { it.size == 7 }
         check("martyrology_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("martyrology_es.json") }) { it["days"]?.size == 366 && it["mobile"]?.isNotEmpty() == true }
+        check("daily_psalm_es.json", { decode<Map<String, Map<String, String>>>("daily_psalm_es.json") }) { it.size == 44 && it.values.all { v -> !v["english_es"].isNullOrBlank() } }
+        check("confession_examen_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("confession_examen_es.json") }) { it.size == 10 }
+        check("confession_guides_es.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("confession_guides_es.json") }) { it.size == 2 }
 
         // Any asset shipped but not covered above would dodge this net —
         // force the list to stay in sync with the assets directory.

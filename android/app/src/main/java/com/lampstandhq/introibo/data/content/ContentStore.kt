@@ -21,6 +21,7 @@ import com.lampstandhq.introibo.data.model.ReferenceEntry
 import com.lampstandhq.introibo.data.model.RosaryPrayer
 import com.lampstandhq.introibo.data.model.Saint
 import com.lampstandhq.introibo.data.model.Station
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 /**
@@ -239,6 +240,30 @@ object ContentStore {
     )
 
     @kotlinx.serialization.Serializable
+    private data class ExamenES(
+        val commandment_es: String,
+        val questions_es: List<String>,
+    )
+    @Serializable
+    private data class GuideStepES(
+        val title_es: String,
+        val body_es: String,
+    )
+    @Serializable
+    private data class GuideES(
+        val title_es: String,
+        val steps_es: List<GuideStepES>,
+    )
+    @Serializable
+    private data class DailyPsalmES(
+        val english_es: String,
+    )
+
+    /** Torres Amat text for the Today screen's rotating psalm verse, keyed by ref; empty when English. */
+    var dailyPsalmES: Map<String, String> = emptyMap()
+        private set
+
+    @Serializable
     private data class RosaryPrayerES(
         val eng_es: String,
         val lines_es: List<String>,
@@ -367,6 +392,7 @@ object ContentStore {
         rosaryPrayers = load("rosary_prayers.json") ?: emptyList()
 
         uiStringsES = emptyMap()
+        dailyPsalmES = emptyMap()
 
         if (lang == VernacularLanguage.SPANISH) {
             // Feast names: Spanish wins, missing keys keep their English.
@@ -597,6 +623,33 @@ object ContentStore {
                         lines = pr.lines.mapIndexed { i, ln -> ln.copy(eng = o.lines_es[i]) },
                     )
                 }
+            }
+            // Confession (tranche U2): the examination of conscience and
+            // the two guided paths. Roman numerals, Latin commandments and
+            // the Latin phase names stay.
+            load<Map<String, ExamenES>>("confession_examen_es.json")?.let { es ->
+                examen = examen.map { e ->
+                    val o = es[e.num] ?: return@map e
+                    if (o.questions_es.size != e.questions.size) return@map e
+                    e.copy(commandment = o.commandment_es, questions = o.questions_es)
+                }
+            }
+            load<Map<String, GuideES>>("confession_guides_es.json")?.let { es ->
+                confessionGuides = confessionGuides.map { g ->
+                    val o = es[g.slug] ?: return@map g
+                    if (o.steps_es.size != g.steps.size) return@map g
+                    g.copy(
+                        title = o.title_es,
+                        steps = g.steps.mapIndexed { i, st ->
+                            st.copy(title = o.steps_es[i].title_es, body = o.steps_es[i].body_es)
+                        },
+                    )
+                }
+            }
+            // The Today screen's rotating psalm verse: Torres Amat, keyed
+            // by the verse ref the code carries.
+            load<Map<String, DailyPsalmES>>("daily_psalm_es.json")?.let { es ->
+                dailyPsalmES = es.mapValues { it.value.english_es }
             }
             // Schola Latina courses: localized (not merely translated) for
             // Spanish speakers — the lessons address a Spanish ear and the
@@ -1255,7 +1308,7 @@ object ContentStore {
         // resumed Sundays, early-January ferias) is the app's single source
         // of truth for "the collect of the day".
         val fallbackCollect = properForDate(date, rite)?.collect?.let { c ->
-            Hour.Part(type = "collect", label = "Collect", lat = c.lat, eng = c.eng, variationKey = "oratio")
+            Hour.Part(type = "collect", label = uiString("missal.part.collect", "Collect"), lat = c.lat, eng = c.eng, variationKey = "oratio")
         }
 
         var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect, ferialOffice, primeMartyrology)
@@ -1510,7 +1563,7 @@ object ContentStore {
             data["ant_3"] ?: data["ant_1"] ?: singleLine(data["ant_vespera"])
         }
         if (ant != null) {
-            block.add(ant.copy(variationKey = null, label = "Antiphon"))
+            block.add(ant.copy(variationKey = null, label = uiString("office.antiphon", "Antiphon")))
         }
 
         val versum = if (hourSlug == "laudes") {

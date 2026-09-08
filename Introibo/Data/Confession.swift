@@ -6,9 +6,9 @@ import Foundation
 
 struct ExamenEntry: Identifiable, Decodable, Hashable {
     let num: String         // Roman numeral I...X
-    let commandment: String
+    var commandment: String
     let latin: String
-    let questions: [String]
+    var questions: [String]
 
     var id: String { num }
 }
@@ -19,16 +19,16 @@ struct ExamenEntry: Identifiable, Decodable, Hashable {
 struct ConfessionGuide: Identifiable, Decodable, Hashable {
     let slug: String
     let name: String
-    let title: String
+    var title: String
     let subtitle: String?
-    let steps: [Step]
+    var steps: [Step]
 
     var id: String { slug }
 
     struct Step: Decodable, Hashable {
         let num: String       // i, ii, iii, ...
-        let title: String
+        var title: String
         let latin: String?
-        let body: String
+        var body: String
     }
 }

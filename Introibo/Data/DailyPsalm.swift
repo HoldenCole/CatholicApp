@@ -14,7 +14,13 @@ enum DailyPsalm {
     static func verse(for date: Date = Date()) -> PsalmVerse {
         let day = Calendar.liturgical.ordinality(of: .day, in: .year, for: date) ?? 1
         let idx = (day - 1) % verses.count
-        return verses[idx]
+        let v = verses[idx]
+        // The vernacular side follows the active overlay (Torres Amat for
+        // Spanish, keyed by ref); English is the literal below.
+        if let es = ContentStore.shared.dailyPsalmES[v.ref] {
+            return PsalmVerse(ref: v.ref, latin: v.latin, english: es)
+        }
+        return v
     }
 
     private static let verses: [PsalmVerse] = [

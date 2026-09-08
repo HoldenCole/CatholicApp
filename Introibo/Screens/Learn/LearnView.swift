@@ -54,7 +54,7 @@ struct LearnView: View {
                 }
             }
 
-            Text("Lessons Mastered")
+            Text(ContentStore.shared.uiString("learn.mastered", "Lessons Mastered"))
                 .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)

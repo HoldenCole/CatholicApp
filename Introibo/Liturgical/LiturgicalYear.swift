@@ -21,14 +21,17 @@ struct SeasonSegment: Identifiable {
 
     var id: String { "\(seasonKey)-\(startDate.timeIntervalSince1970)" }
 
-    static let labels: [String: String] = [
-        "advent": "Advent",
-        "christmas": "Christmastide",
-        "pre-lent": "Pre-Lent",
-        "lent": "Lent",
-        "easter": "Eastertide",
-        "ordinary": "Time after Pentecost",
-    ]
+    static var labels: [String: String] {
+        let ui = ContentStore.shared
+        return [
+            "advent": ui.uiString("calendar.season.advent", "Advent"),
+            "christmas": ui.uiString("calendar.season.christmastide", "Christmastide"),
+            "pre-lent": ui.uiString("calendar.season.pre_lent", "Pre-Lent"),
+            "lent": ui.uiString("calendar.season.lent", "Lent"),
+            "easter": ui.uiString("calendar.season.eastertide", "Eastertide"),
+            "ordinary": ui.uiString("calendar.season.time_after_pentecost", "Time after Pentecost"),
+        ]
+    }
 }
 
 /// A major feast marked on the year overview.
@@ -58,7 +61,7 @@ enum LiturgicalYearModel {
         func label(for key: String, start: Date) -> String {
             if key == "ordinary",
                Calendar.liturgical.component(.month, from: start) <= 2 {
-                return "Time after Epiphany"
+                return ContentStore.shared.uiString("calendar.season.time_after_epiphany", "Time after Epiphany")
             }
             return SeasonSegment.labels[key] ?? key.capitalized
         }
@@ -129,14 +132,17 @@ enum LiturgicalYearModel {
     // MARK: Moveable feasts (quick jump)
 
     /// Display order for the moveable-feast jump menu.
-    static let moveableFeasts: [(label: String, winnerKey: String)] = [
-        ("Easter", "pasc0-0"),
-        ("Ascension", "pasc5-4"),
-        ("Pentecost", "pasc7-0"),
-        ("Trinity Sunday", "pent01-0"),
-        ("Corpus Christi", "pent01-4"),
-        ("Christ the King", "10-du"),
-    ]
+    static var moveableFeasts: [(label: String, winnerKey: String)] {
+        let ui = ContentStore.shared
+        return [
+            (ui.uiString("calendar.moveable.easter", "Easter"), "pasc0-0"),
+            (ui.uiString("calendar.moveable.ascension", "Ascension"), "pasc5-4"),
+            (ui.uiString("calendar.moveable.pentecost", "Pentecost"), "pasc7-0"),
+            (ui.uiString("calendar.moveable.trinity_sunday", "Trinity Sunday"), "pent01-0"),
+            (ui.uiString("calendar.moveable.corpus_christi", "Corpus Christi"), "pent01-4"),
+            (ui.uiString("calendar.moveable.christ_the_king", "Christ the King"), "10-du"),
+        ]
+    }
 
     /// Resolves the moveable feasts' dates for `year` under `rite`.
     static func moveableDates(year: Int, rite: MissalRite, store: ContentStore) -> [(label: String, date: Date)] {

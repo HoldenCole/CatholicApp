@@ -112,9 +112,9 @@ class TodayViewModel(application: Application) : AndroidViewModel(application) {
     fun offeringTitle(): String {
         val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
         return when {
-            hour < 12 -> "Morning Offering"
-            hour < 18 -> "Afternoon Prayer"
-            else      -> "Night Prayer"
+            hour < 12 -> ContentStore.uiString("today.offering.morning", "Morning Offering")
+            hour < 18 -> ContentStore.uiString("today.offering.afternoon", "Afternoon Prayer")
+            else      -> ContentStore.uiString("today.offering.night", "Night Prayer")
         }
     }
 

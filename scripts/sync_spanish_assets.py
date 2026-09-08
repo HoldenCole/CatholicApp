@@ -42,6 +42,9 @@ FILES = [
     "sanctoral_propers_es.json",
     "mysteries_es.json",
     "rosary_prayers_es.json",
+    "daily_psalm_es.json",
+    "confession_examen_es.json",
+    "confession_guides_es.json",
 ]
 
 

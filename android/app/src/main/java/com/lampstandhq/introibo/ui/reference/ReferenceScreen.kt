@@ -67,12 +67,13 @@ import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.theme.scaledSp
 import kotlinx.coroutines.launch
 
-private val quickLinkTitles = listOf(
-    "The Holy Mass",
-    "Baptism",
-    "The Holy Eucharist",
-    "Penance (Confession)",
-    "The Rosary",
+// Keyed by slug so the links survive the vernacular overlay of titles.
+private val quickLinkSlugs = listOf(
+    "mass-mass",
+    "mass-baptism",
+    "mass-eucharist",
+    "mass-penance",
+    "pray-rosary",
 )
 
 /**
@@ -229,9 +230,9 @@ private fun ReferenceListSheet(
                 IconButton(onClick = {
                     scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
                 }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
-                SmallLabel(text = "References", color = colors.sanctuaryRed)
+                SmallLabel(text = ContentStore.uiString("reference.references", "References"), color = colors.sanctuaryRed)
             }
 
             LazyColumn(
@@ -366,9 +367,9 @@ private fun PropersListSheet(
                 IconButton(onClick = {
                     scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
                 }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
-                SmallLabel(text = "Propers · ${propers.size}", color = colors.sanctuaryRed)
+                SmallLabel(text = ContentStore.uiString("reference.propers", "Propers") + " · ${propers.size}", color = colors.sanctuaryRed)
             }
 
             // Search bar
@@ -479,7 +480,18 @@ private data class TimelineEvent(
     val desc: String,
 )
 
-private val tlmHistoryEvents = listOf(
+// English literals are the defaults; Spanish comes from ui_strings_es
+// (reference.history.N.title / .desc) by index.
+private val tlmHistoryEvents: List<TimelineEvent>
+    get() = tlmHistoryEventsEN.mapIndexed { i, e ->
+        TimelineEvent(
+            e.year,
+            ContentStore.uiString("reference.history.$i.title", e.title),
+            ContentStore.uiString("reference.history.$i.desc", e.desc),
+        )
+    }
+
+private val tlmHistoryEventsEN = listOf(
     TimelineEvent("33 AD", "The Last Supper", "Our Lord institutes the Holy Sacrifice of the Mass at the Last Supper, commanding the Apostles to do this in memory of Him."),
     TimelineEvent("c. 100", "Apostolic Liturgy", "The Didache describes early Christian worship with prayers over bread and wine following the pattern established by the Apostles."),
     TimelineEvent("c. 225", "Apostolic Tradition", "Hippolytus of Rome records the earliest known Eucharistic Prayer, showing the Roman Canon already taking shape."),
@@ -529,9 +541,9 @@ private fun TLMHistorySheet(
                 IconButton(onClick = {
                     scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
                 }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
-                SmallLabel(text = "History", color = colors.sanctuaryRed)
+                SmallLabel(text = ContentStore.uiString("reference.history_title", "History"), color = colors.sanctuaryRed)
             }
 
             LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -656,7 +668,18 @@ private data class GlossaryTerm(
     val def: String,
 )
 
-private val glossaryTerms = listOf(
+// Latin is fixed; the gloss and definition follow the vernacular
+// (reference.glossary.N.eng / .def) by index.
+private val glossaryTerms: List<GlossaryTerm>
+    get() = glossaryTermsEN.mapIndexed { i, t ->
+        GlossaryTerm(
+            t.lat,
+            ContentStore.uiString("reference.glossary.$i.eng", t.eng),
+            ContentStore.uiString("reference.glossary.$i.def", t.def),
+        )
+    }
+
+private val glossaryTermsEN = listOf(
     GlossaryTerm("Introitus", "Introit", "The entrance antiphon sung as the priest approaches the altar."),
     GlossaryTerm("Collecta", "Collect", "The prayer of the day, collecting the intentions of the faithful."),
     GlossaryTerm("Lectio", "Epistle", "The first scripture reading, usually from the letters of St. Paul."),
@@ -709,9 +732,9 @@ private fun GlossarySheet(
                 IconButton(onClick = {
                     scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
                 }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
-                SmallLabel(text = "Glossary", color = colors.sanctuaryRed)
+                SmallLabel(text = ContentStore.uiString("reference.glossary", "Glossary"), color = colors.sanctuaryRed)
             }
 
             LazyColumn(
@@ -775,17 +798,17 @@ private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
         ) {
             SectionCard(
                 icon = Icons.Filled.MenuBook,
-                title = "References",
+                title = ContentStore.uiString("reference.references", "References"),
                 latin = "Encyclopaedia",
-                count = "${ContentStore.reference.size} articles",
+                count = ContentStore.uiString("reference.articles", "{0} articles").replace("{0}", "${ContentStore.reference.size}"),
                 onClick = { onSectionClick("References") },
                 modifier = Modifier.weight(1f),
             )
             SectionCard(
                 icon = Icons.Filled.Book,
-                title = "Propers",
+                title = ContentStore.uiString("reference.propers", "Propers"),
                 latin = "Propria Missae",
-                count = "${ContentStore.allPropers.size} formularies",
+                count = ContentStore.uiString("reference.formularies", "{0} formularies").replace("{0}", "${ContentStore.allPropers.size}"),
                 onClick = { onSectionClick("Propers") },
                 modifier = Modifier.weight(1f),
             )
@@ -796,17 +819,17 @@ private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
         ) {
             SectionCard(
                 icon = Icons.Filled.History,
-                title = "History",
+                title = ContentStore.uiString("reference.history_title", "History"),
                 latin = "Historia Missae",
-                count = "Timeline",
+                count = ContentStore.uiString("reference.timeline", "Timeline"),
                 onClick = { onSectionClick("History") },
                 modifier = Modifier.weight(1f),
             )
             SectionCard(
                 icon = Icons.Filled.LibraryBooks,
-                title = "Glossary",
+                title = ContentStore.uiString("reference.glossary", "Glossary"),
                 latin = "Glossarium",
-                count = "Liturgical terms",
+                count = ContentStore.uiString("reference.terms", "Liturgical terms"),
                 onClick = { onSectionClick("Glossary") },
                 modifier = Modifier.weight(1f),
             )
@@ -899,8 +922,8 @@ private fun QuickLinksSection(onEntryClick: (ReferenceEntry) -> Unit = {}) {
 
         Spacer(Modifier.height(14.dp))
 
-        quickLinkTitles.forEach { title ->
-            val entry = ContentStore.reference.firstOrNull { it.title == title }
+        quickLinkSlugs.forEach { slug ->
+            val entry = ContentStore.reference.firstOrNull { it.slug == slug }
             if (entry != null) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

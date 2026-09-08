@@ -35,7 +35,7 @@ class PrayerNotificationManager(private val context: Context) {
             "prima" to "Prime",
             "tertia" to "Terce",
             "sexta" to "Sext",
-            "nona" to "None",
+            "nona" to ContentStore.uiString("notif.none", "None"),
             "vesperae" to "Vespers",
             "completorium" to "Compline",
         )
@@ -72,26 +72,26 @@ class PrayerNotificationManager(private val context: Context) {
 
         val prayerRuleChannel = NotificationChannel(
             IntroiboApp.CHANNEL_PRAYER_RULE,
-            "Prayer Rule Reminders",
+            ContentStore.uiString("notif.channel.rule", "Prayer Rule Reminders"),
             NotificationManager.IMPORTANCE_HIGH,
         ).apply {
-            description = "Daily prayer rule reminders"
+            description = ContentStore.uiString("notif.channel.rule_desc", "Daily prayer rule reminders")
         }
 
         val officeBellsChannel = NotificationChannel(
             IntroiboApp.CHANNEL_OFFICE_BELLS,
-            "Divine Office",
+            ContentStore.uiString("notif.channel.office", "Divine Office"),
             NotificationManager.IMPORTANCE_DEFAULT,
         ).apply {
-            description = "Divine Office hour bells"
+            description = ContentStore.uiString("notif.channel.office_desc", "Divine Office hour bells")
         }
 
         val devotionsChannel = NotificationChannel(
             IntroiboApp.CHANNEL_DEVOTIONS,
-            "Devotion Reminders",
+            ContentStore.uiString("notif.channel.devotions", "Devotion Reminders"),
             NotificationManager.IMPORTANCE_DEFAULT,
         ).apply {
-            description = "Rosary, stations, confession reminders"
+            description = ContentStore.uiString("notif.channel.devotions_desc", "Rosary, stations, confession reminders")
         }
 
         nm.createNotificationChannels(

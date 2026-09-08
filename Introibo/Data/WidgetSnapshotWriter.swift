@@ -33,7 +33,15 @@ enum WidgetSnapshotWriter {
                         "widget.tap_to_pray", "widget.stale",
                         "widget.reading.introit", "widget.reading.collect",
                         "widget.reading.epistle", "widget.reading.gospel",
-                        "widget.saints.day_of", "widget.saints.upcoming"] {
+                        "widget.saints.day_of", "widget.saints.upcoming",
+                        "widget.saints.only", "widget.saints.all",
+                        "widget.saints.only_sub", "widget.saints.all_sub",
+                        "common.morning", "common.midday", "common.evening",
+                        "widget.prayer.morning", "widget.prayer.angelus",
+                        "widget.prayer.contrition"]
+                + (1...12).map { "calendar.month_abbrev.\($0)" }
+                + (1...12).map { "calendar.month.\($0)" }
+                + (0...6).map { "calendar.weekday.\($0)" } {
                 let es = store.uiString(key, "")
                 if !es.isEmpty { chrome[key] = es }
             }

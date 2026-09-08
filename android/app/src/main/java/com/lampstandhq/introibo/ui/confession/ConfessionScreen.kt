@@ -73,12 +73,12 @@ fun ConfessionScreen(
                 title = { Text("De Confessióne", style = type.titleM, color = colors.primaryText) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                     }
                 },
                 actions = {
                     IconButton(onClick = { showNotification = true }) {
-                        Icon(Icons.Outlined.Notifications, "Notification", tint = colors.sanctuaryRed)
+                        Icon(Icons.Outlined.Notifications, ContentStore.uiString("notif.title", "Notification"), tint = colors.sanctuaryRed)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = colors.pageBackground),
@@ -153,7 +153,7 @@ fun ConfessionScreen(
                 ) {
                     GoldLine(modifier = Modifier.weight(1f))
                     SmallLabel(
-                        text = "Libri Duo  ·  Two Paths",
+                        text = ContentStore.uiString("confession.two_paths", "Libri Duo  ·  Two Paths"),
                         color = colors.sanctuaryRed,
                         modifier = Modifier.padding(horizontal = 10.dp),
                     )
@@ -219,7 +219,7 @@ fun ConfessionScreen(
         ) {
             com.lampstandhq.introibo.ui.prayers.NotificationScheduleSheet(
                 scheduleId = "devotion.confession",
-                title = "Confession",
+                title = ContentStore.uiString("notif.devotion.confession", "Confession"),
                 subtitle = ContentStore.uiString("confession.remind", "Remind me to go to Confession"),
                 onDismiss = { showNotification = false },
             )

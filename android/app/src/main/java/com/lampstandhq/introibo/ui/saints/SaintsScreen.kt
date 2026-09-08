@@ -63,7 +63,7 @@ fun SaintsScreen(
                 title = { Text("Praxes Sanctórum", style = type.titleM, color = colors.primaryText) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = colors.pageBackground),

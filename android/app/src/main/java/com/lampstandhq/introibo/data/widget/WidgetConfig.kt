@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.data.widget
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import android.content.Context
 import android.content.SharedPreferences
 
@@ -30,10 +32,13 @@ enum class WidgetMode(val key: String) {
 }
 
 /** The three chosen-prayer time slots. */
-enum class WidgetSlot(val key: String, val label: String) {
+enum class WidgetSlot(val key: String, private val labelEN: String) {
     MORNING("morning", "Morning"),
     MIDDAY("midday", "Midday"),
     EVENING("evening", "Evening");
+
+    /** Vernacular label (common.morning / midday / evening). */
+    val label: String get() = ContentStore.uiString("common.$key", labelEN)
 }
 
 object WidgetConfig {

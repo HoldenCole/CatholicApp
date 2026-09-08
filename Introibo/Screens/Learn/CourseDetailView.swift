@@ -48,7 +48,7 @@ struct CourseDetailView: View {
 
     private var header: some View {
         VStack(spacing: 8) {
-            Text("✠  Lésson \(roman(course.num))  ✠")
+            Text(ContentStore.shared.uiString("learn.lesson", "✠  Lésson {0}  ✠", roman(course.num)))
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(course.title)
@@ -178,7 +178,7 @@ struct CourseDetailView: View {
             isMastered = newValue
             onMasteryChange()
         } label: {
-            Text(isMastered ? "Marked as Mastered  ✠  Unmark" : "Mark as Mastered")
+            Text(isMastered ? ContentStore.shared.uiString("learn.unmark", "Marked as Mastered  ✠  Unmark") : ContentStore.shared.uiString("learn.mark_mastered", "Mark as Mastered"))
                 .smallLabel(color: isMastered ? Color.goldLeaf : Color.sanctuaryRed, tracking: 3)
                 .padding(.vertical, 14)
                 .frame(maxWidth: .infinity)

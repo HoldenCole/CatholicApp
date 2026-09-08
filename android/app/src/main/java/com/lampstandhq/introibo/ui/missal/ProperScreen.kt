@@ -127,14 +127,14 @@ fun ProperScreen(
             title = {},
             navigationIcon = {
                 IconButton(onClick = onDismiss) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
             },
             actions = {
                 var showMenu by remember { mutableStateOf(false) }
                 Box {
                     IconButton(onClick = { showMenu = true }) {
-                        Icon(Icons.Filled.Share, "Share", tint = colors.sanctuaryRed)
+                        Icon(Icons.Filled.Share, ContentStore.uiString("common.share", "Share"), tint = colors.sanctuaryRed)
                     }
                     DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
                         DropdownMenuItem(
@@ -157,7 +157,7 @@ fun ProperScreen(
                                     this.type = "text/plain"
                                     putExtra(Intent.EXTRA_TEXT, properAsText(proper))
                                 }
-                                context.startActivity(Intent.createChooser(shareIntent, "Share Propers"))
+                                context.startActivity(Intent.createChooser(shareIntent, ContentStore.uiString("missal.share_propers", "Share Propers")))
                             },
                         )
                     }
@@ -229,48 +229,48 @@ fun ProperScreen(
             // and SearchExtractors element names; each element sits at list index
             // (anchors.indexOf(key) + 1) thanks to the leading header item.
             properElementItem("introit") {
-                ProperSection(latin = "Introitus", subtitle = "Introit", text = proper.introit)
+                ProperSection(latin = "Introitus", subtitle = MassPartName.introit, text = proper.introit)
             }
             properElementItem("collect") {
-                ProperSection(latin = "Oratio", subtitle = "Collect", text = proper.collect)
+                ProperSection(latin = "Oratio", subtitle = MassPartName.collect, text = proper.collect)
             }
             properElementItem("epistle") {
-                ReadingSection(latin = "Lectio", subtitle = "Epistle", reading = proper.epistle)
+                ReadingSection(latin = "Lectio", subtitle = MassPartName.epistle, reading = proper.epistle)
             }
             proper.gradual?.let { g ->
                 properElementItem("gradual") {
-                    ProperSection(latin = "Graduale", subtitle = "Gradual", text = g)
+                    ProperSection(latin = "Graduale", subtitle = MassPartName.gradual, text = g)
                 }
             }
             proper.alleluia?.let { a ->
                 properElementItem("alleluia") {
-                    ProperSection(latin = "Alleluia", subtitle = "Alleluia", text = a)
+                    ProperSection(latin = "Alleluia", subtitle = MassPartName.alleluia, text = a)
                 }
             }
             proper.tract?.let { t ->
                 properElementItem("tract") {
-                    ProperSection(latin = "Tractus", subtitle = "Tract", text = t)
+                    ProperSection(latin = "Tractus", subtitle = MassPartName.tract, text = t)
                 }
             }
             proper.sequence?.let { s ->
                 properElementItem("sequence") {
-                    ProperSection(latin = "Sequentia", subtitle = "Sequence", text = s)
+                    ProperSection(latin = "Sequentia", subtitle = MassPartName.sequence, text = s)
                 }
             }
             properElementItem("gospel") {
-                ReadingSection(latin = "Evangelium", subtitle = "Gospel", reading = proper.gospel)
+                ReadingSection(latin = "Evangelium", subtitle = MassPartName.gospel, reading = proper.gospel)
             }
             properElementItem("offertory") {
-                ProperSection(latin = "Offertorium", subtitle = "Offertory", text = proper.offertory)
+                ProperSection(latin = "Offertorium", subtitle = MassPartName.offertory, text = proper.offertory)
             }
             properElementItem("secret") {
-                ProperSection(latin = "Secreta", subtitle = "Secret", text = proper.secret)
+                ProperSection(latin = "Secreta", subtitle = MassPartName.secret, text = proper.secret)
             }
             properElementItem("communion") {
-                ProperSection(latin = "Communio", subtitle = "Communion", text = proper.communion)
+                ProperSection(latin = "Communio", subtitle = MassPartName.communion, text = proper.communion)
             }
             properElementItem("postcommunion", bottomPadding = 40.dp) {
-                ProperSection(latin = "Postcommunio", subtitle = "Postcommunion", text = proper.postcommunion)
+                ProperSection(latin = "Postcommunio", subtitle = MassPartName.postcommunion, text = proper.postcommunion)
             }
             if (!proper.related.isNullOrEmpty()) {
                 item(key = "related") {
@@ -320,22 +320,22 @@ private fun properAsText(proper: MassProper): String {
         sb.appendLine()
     }
 
-    section("Introitus · Introit", proper.introit.lat, proper.introit.eng)
-    section("Orátio · Collect", proper.collect.lat, proper.collect.eng)
-    section("Léctio · Epistle", proper.epistle.lat, proper.epistle.eng, proper.epistle.ref)
-    proper.gradual?.let { section("Graduále · Gradual", it.lat, it.eng) }
+    section("Introitus · ${MassPartName.introit}", proper.introit.lat, proper.introit.eng)
+    section("Orátio · ${MassPartName.collect}", proper.collect.lat, proper.collect.eng)
+    section("Léctio · ${MassPartName.epistle}", proper.epistle.lat, proper.epistle.eng, proper.epistle.ref)
+    proper.gradual?.let { section("Graduále · ${MassPartName.gradual}", it.lat, it.eng) }
     proper.alleluia?.let { section("Allelúja", it.lat, it.eng) }
-    proper.tract?.let { section("Tractus · Tract", it.lat, it.eng) }
-    proper.sequence?.let { section("Sequéntia · Sequence", it.lat, it.eng) }
-    section("Evangélium · Gospel", proper.gospel.lat, proper.gospel.eng, proper.gospel.ref)
-    section("Offertórium · Offertory", proper.offertory.lat, proper.offertory.eng)
-    section("Secréta · Secret", proper.secret.lat, proper.secret.eng)
+    proper.tract?.let { section("Tractus · ${MassPartName.tract}", it.lat, it.eng) }
+    proper.sequence?.let { section("Sequéntia · ${MassPartName.sequence}", it.lat, it.eng) }
+    section("Evangélium · ${MassPartName.gospel}", proper.gospel.lat, proper.gospel.eng, proper.gospel.ref)
+    section("Offertórium · ${MassPartName.offertory}", proper.offertory.lat, proper.offertory.eng)
+    section("Secréta · ${MassPartName.secret}", proper.secret.lat, proper.secret.eng)
     proper.preface?.let {
         sb.appendLine("Præfátio: ${it.replaceFirstChar { c -> c.titlecase() }}")
         sb.appendLine()
     }
-    section("Commúnio · Communion", proper.communion.lat, proper.communion.eng)
-    section("Postcommúnio · Postcommunion", proper.postcommunion.lat, proper.postcommunion.eng)
+    section("Commúnio · ${MassPartName.communion}", proper.communion.lat, proper.communion.eng)
+    section("Postcommúnio · ${MassPartName.postcommunion}", proper.postcommunion.lat, proper.postcommunion.eng)
 
     sb.append("— Introibo (app.introibo) —")
     return sb.toString()

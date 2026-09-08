@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.export
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import android.content.Context
 import android.content.Intent
 import android.graphics.pdf.PdfDocument
@@ -39,7 +41,7 @@ object PDFExporter {
      * Renders [html] to a PDF and opens the system share sheet.
      * Must be called from the main thread (WebView requirement).
      */
-    fun sharePDF(context: Context, html: String, fileName: String, title: String = "Share") {
+    fun sharePDF(context: Context, html: String, fileName: String, title: String = ContentStore.uiString("common.share", "Share")) {
         WebView.enableSlowWholeDocumentDraw()
 
         val density = context.resources.displayMetrics.density
@@ -131,7 +133,7 @@ object PDFExporter {
     }
 
     /** Legacy fallback: shares the raw HTML as text (`text/html`). */
-    fun shareHTMLIntent(html: String, title: String = "Share Propers"): Intent {
+    fun shareHTMLIntent(html: String, title: String = ContentStore.uiString("missal.share_propers", "Share Propers")): Intent {
         return Intent(Intent.ACTION_SEND).apply {
             this.type = "text/html"
             putExtra(Intent.EXTRA_TEXT, html)

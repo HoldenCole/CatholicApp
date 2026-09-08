@@ -134,7 +134,7 @@ fun SaintDetailScreen(
             // Back
             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
                 IconButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
             }
 
@@ -244,7 +244,7 @@ fun SaintDetailScreen(
                             .padding(vertical = 4.dp),
                     ) {
                         SmallLabel(
-                            text = if (isFollowed) "Unfollow" else "Follow this Saint",
+                            text = if (isFollowed) ContentStore.uiString("saints.unfollow", "Unfollow") else ContentStore.uiString("saints.follow", "Follow this Saint"),
                             color = if (isFollowed) colors.secondaryText else colors.sanctuaryRed,
                         )
                     }
@@ -283,7 +283,7 @@ fun SaintDetailScreen(
                                 )
                             }
                             Text(
-                                text = if (progress >= 1.0) "Perfect day" else "Today's progress",
+                                text = if (progress >= 1.0) ContentStore.uiString("saints.perfect_day", "Perfect day") else ContentStore.uiString("saints.today_progress", "Today's progress"),
                                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                                 color = if (progress >= 1.0) colors.goldLeaf else colors.tertiaryText,
                             )
@@ -466,7 +466,7 @@ private fun SaintPrayersBlock(
             )
             Text(text = ".", color = colors.tertiaryText, modifier = Modifier.padding(end = 4.dp))
             Text(
-                text = "Prayers",
+                text = ContentStore.uiString("saints.prayers", "Prayers"),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.secondaryText,
             )

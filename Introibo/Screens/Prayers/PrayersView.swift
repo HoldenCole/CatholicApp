@@ -18,11 +18,17 @@ struct PrayersView: View {
         NotificationStore.all().contains { $0.id.hasPrefix("rule.") && $0.isEnabled }
     }
 
+    /// Occasion tags as they appear in prayers.json; the tile label is the
+    /// vernacular form (prayers.occasion.<slug>).
     private let occasions = [
         "Morning", "Before Mass", "During Mass", "After Mass", "Meals",
         "Marian", "Eucharistic", "Before Confession",
         "For the Departed", "In Temptation", "For Protection", "Evening"
     ]
+    static func occasionLabel(_ occasion: String) -> String {
+        let key = "prayers.occasion." + occasion.lowercased().replacingOccurrences(of: " ", with: "_")
+        return ContentStore.shared.uiString(key, occasion)
+    }
 
     var body: some View {
         NavigationStack {
@@ -93,8 +99,8 @@ struct PrayersView: View {
                 .sheet(isPresented: $showRuleNotification) {
                     NotificationScheduleSheet(
                         scheduleId: "rule.daily",
-                        title: "Prayer Rule Reminder",
-                        subtitle: "Get reminded to pray your daily rule"
+                        title: ContentStore.shared.uiString("prayers.rule_reminder", "Prayer Rule Reminder"),
+                        subtitle: ContentStore.shared.uiString("prayers.rule_reminder_sub", "Get reminded to pray your daily rule")
                     )
                 }
             }
@@ -115,13 +121,13 @@ struct PrayersView: View {
             .accessibilityLabel(ContentStore.shared.uiString("prayers.edit_rule_title", "Edit Prayer Rule"))
 
             if !rule.morning.isEmpty {
-                rulePeriod("Mane", eng: "Morning", slugs: rule.morning)
+                rulePeriod("Mane", eng: ContentStore.shared.uiString("common.morning", "Morning"), slugs: rule.morning)
             }
             if !rule.midday.isEmpty {
-                rulePeriod("Meridies", eng: "Midday", slugs: rule.midday)
+                rulePeriod("Meridies", eng: ContentStore.shared.uiString("common.midday", "Midday"), slugs: rule.midday)
             }
             if !rule.evening.isEmpty {
-                rulePeriod("Vesperae", eng: "Evening", slugs: rule.evening)
+                rulePeriod("Vesperae", eng: ContentStore.shared.uiString("common.evening", "Evening"), slugs: rule.evening)
             }
         }
         .padding(16)
@@ -252,7 +258,7 @@ struct PrayersView: View {
                     let count = store.prayers.filter { ($0.occasions ?? []).contains(occasion) }.count
                     NavigationLink(destination: OccasionView(occasion: occasion, prayers: store.prayers.filter { ($0.occasions ?? []).contains(occasion) })) {
                         VStack(spacing: 4) {
-                            Text(occasion)
+                            Text(Self.occasionLabel(occasion))
                                 .appFont(.captionSm)
                                 .foregroundStyle(Color.primaryText)
                                 .multilineTextAlignment(.center)
@@ -327,7 +333,7 @@ struct PrayersView: View {
                     HStack(spacing: 4) {
                         Image(systemName: sortAlphabetical ? "textformat.abc" : "list.number")
                             .appFont(.scaledSystem(11))
-                        Text(sortAlphabetical ? "A - Z" : "Default")
+                        Text(sortAlphabetical ? "A - Z" : ContentStore.shared.uiString("prayers.sort.default", "Default"))
                             .appFont(.captionSm)
                     }
                     .foregroundStyle(Color.sanctuaryRed)
@@ -414,7 +420,7 @@ struct OccasionView: View {
             .padding(.vertical, 24)
         }
         .background(Color.pageBackground.ignoresSafeArea())
-        .navigationTitle(occasion)
+        .navigationTitle(PrayersView.occasionLabel(occasion))
         .navigationBarTitleDisplayMode(.inline)
         .sheet(item: $selection) { p in
             PrayerDetailView(prayer: p)
@@ -436,9 +442,9 @@ struct PrayerRuleEditor: View {
         var id: String { rawValue }
         var title: String {
             switch self {
-            case .morning: return "Morning"
-            case .midday: return "Midday"
-            case .evening: return "Evening"
+            case .morning: return ContentStore.shared.uiString("common.morning", "Morning")
+            case .midday: return ContentStore.shared.uiString("common.midday", "Midday")
+            case .evening: return ContentStore.shared.uiString("common.evening", "Evening")
             }
         }
     }
@@ -446,9 +452,9 @@ struct PrayerRuleEditor: View {
     var body: some View {
         NavigationStack {
             List {
-                ruleSection(.morning, eng: "Morning", latin: "Mane", slugs: $rule.morning)
-                ruleSection(.midday, eng: "Midday", latin: "Meridies", slugs: $rule.midday)
-                ruleSection(.evening, eng: "Evening", latin: "Vesperae", slugs: $rule.evening)
+                ruleSection(.morning, eng: ContentStore.shared.uiString("common.morning", "Morning"), latin: "Mane", slugs: $rule.morning)
+                ruleSection(.midday, eng: ContentStore.shared.uiString("common.midday", "Midday"), latin: "Meridies", slugs: $rule.midday)
+                ruleSection(.evening, eng: ContentStore.shared.uiString("common.evening", "Evening"), latin: "Vesperae", slugs: $rule.evening)
             }
             .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden)

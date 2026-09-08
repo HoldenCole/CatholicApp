@@ -5,8 +5,6 @@ import com.lampstandhq.introibo.data.model.OrdoEntry
 import com.lampstandhq.introibo.storage.settings.MissalRite
 import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.Locale
 
 // MARK: - LiturgicalCalendar (month-grid model)
 //
@@ -79,16 +77,17 @@ data class CalendarDay(
     val seasonLabel: String? get() = ordo?.season?.let { seasonLabels[it] }
 
     companion object {
-        private val abbrevs = listOf("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT")
-        private val dayNames = listOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
-        private val seasonLabels = mapOf(
-            "advent" to "Advent",
-            "christmas" to "Christmastide",
-            "lent" to "Lent",
-            "easter" to "Eastertide",
-            "ordinary" to "Ordinary Time",
-            "pre-lent" to "Pre-Lent",
-        )
+        private val abbrevs: List<String> get() = (0..6).map { LiturgicalNames.weekdayAbbrev(it) }
+        private val dayNames: List<String> get() = (0..6).map { LiturgicalNames.weekday(it) }
+        private val seasonLabels: Map<String, String>
+            get() = mapOf(
+                "advent" to ContentStore.uiString("calendar.season.advent", "Advent"),
+                "christmas" to ContentStore.uiString("calendar.season.christmastide", "Christmastide"),
+                "lent" to ContentStore.uiString("calendar.season.lent", "Lent"),
+                "easter" to ContentStore.uiString("calendar.season.eastertide", "Eastertide"),
+                "ordinary" to ContentStore.uiString("calendar.season.ordinary_time", "Ordinary Time"),
+                "pre-lent" to ContentStore.uiString("calendar.season.pre_lent", "Pre-Lent"),
+            )
     }
 }
 
@@ -101,8 +100,6 @@ data class CalendarMonth(
     val days: List<CalendarDay>,
 ) {
     companion object {
-        private val titleFormatter: DateTimeFormatter =
-            DateTimeFormatter.ofPattern("LLLL yyyy", Locale.US)
 
         /**
          * Builds the grid for [year]/[month] under [rite]. [today] is injectable
@@ -146,7 +143,7 @@ data class CalendarMonth(
             return CalendarMonth(
                 year = year,
                 month = month,
-                title = firstOfMonth.format(titleFormatter),
+                title = VernacularDates.monthYear(firstOfMonth),
                 leadingBlanks = leading,
                 days = days,
             )

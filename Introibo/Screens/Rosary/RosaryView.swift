@@ -35,7 +35,7 @@ struct RosaryView: View {
             }
         }
         .sheet(isPresented: $showNotification) {
-            NotificationScheduleSheet(scheduleId: "devotion.rosary", title: "The Holy Rosary", subtitle: "Remind me to pray the Rosary")
+            NotificationScheduleSheet(scheduleId: "devotion.rosary", title: ContentStore.shared.uiString("rosary.title", "The Holy Rosary"), subtitle: ContentStore.shared.uiString("rosary.remind", "Remind me to pray the Rosary"))
         }
         .sheet(item: $selection) { set in
             RosaryFlowView(set: set)
@@ -65,7 +65,7 @@ struct RosaryView: View {
         if let todaySet = store.mysterySet(slug: ctx.mystery.rawValue) {
             Button { selection = todaySet } label: {
                 VStack(alignment: .leading, spacing: 10) {
-                    LanguageAwareText(latin: "Mystéria Hodiérna", english: "Today\u{2019}s Mysteries")
+                    LanguageAwareText(latin: "Mystéria Hodiérna", english: ContentStore.shared.uiString("rosary.today", "Today\u{2019}s Mysteries"))
                         .smallLabel(color: Color.goldLeaf)
                     if langMode != .vernacular {
                         Text(todaySet.name)

@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.learn
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -89,7 +91,7 @@ fun CourseDetailScreen(
             // Back
             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
                 IconButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = colors.sanctuaryRed)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, ContentStore.uiString("common.back", "Back"), tint = colors.sanctuaryRed)
                 }
             }
 
@@ -186,7 +188,7 @@ fun CourseDetailScreen(
                             .padding(vertical = 4.dp),
                     ) {
                         SmallLabel(
-                            text = if (isMastered) "Marked as Mastered  ✠  Unmark" else "Mark as Mastered",
+                            text = if (isMastered) ContentStore.uiString("learn.unmark", "Marked as Mastered  ✠  Unmark") else ContentStore.uiString("learn.mark_mastered", "Mark as Mastered"),
                             color = if (isMastered) colors.goldLeaf else colors.sanctuaryRed,
                         )
                     }

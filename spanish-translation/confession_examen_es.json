@@ -1,0 +1,98 @@
+{
+  "I": {
+    "commandment_es": "Amarás a Dios sobre todas las cosas",
+    "questions_es": [
+      "¿He dudado o negado las verdades de la fe?",
+      "¿He puesto mi confianza en supersticiones, adivinaciones o en el ocultismo?",
+      "¿He recibido la Sagrada Comunión en estado de pecado mortal?",
+      "¿He descuidado mis oraciones diarias?",
+      "¿He sido ingrato con los beneficios de Dios?"
+    ]
+  },
+  "II": {
+    "commandment_es": "No tomarás el nombre de Dios en vano",
+    "questions_es": [
+      "¿He usado el nombre de Dios con irreverencia o con ira?",
+      "¿He maldecido o usado lenguaje profano?",
+      "¿He quebrantado un voto o un juramento hecho a Dios?",
+      "¿He usado el nombre de Dios a la ligera en la conversación?",
+      "¿He faltado a una promesa solemne o a un voto?"
+    ]
+  },
+  "III": {
+    "commandment_es": "Santificarás las fiestas",
+    "questions_es": [
+      "¿He faltado a Misa los domingos o fiestas de precepto sin causa justa?",
+      "¿He hecho trabajos serviles innecesarios en domingo?",
+      "¿He estado distraído o irreverente en la Misa?",
+      "¿He dejado de guardar los días de precepto?"
+    ]
+  },
+  "IV": {
+    "commandment_es": "Honrarás a tu padre y a tu madre",
+    "questions_es": [
+      "¿He sido desobediente o irrespetuoso con mis padres?",
+      "¿He descuidado mis deberes para con mi familia?",
+      "¿He dejado de cuidar a mis padres ancianos o enfermos?",
+      "¿He dejado de perdonar a un familiar?"
+    ]
+  },
+  "V": {
+    "commandment_es": "No matarás",
+    "questions_es": [
+      "¿He guardado odio, ira o rencor contra alguien?",
+      "¿Me he negado a perdonar?",
+      "¿He hecho daño a otro de palabra o de obra?",
+      "¿He dado escándalo o llevado a otros al pecado?"
+    ]
+  },
+  "VI": {
+    "commandment_es": "No cometerás actos impuros",
+    "questions_es": [
+      "¿He consentido voluntariamente pensamientos impuros?",
+      "¿He cometido actos impuros, solo o con otros?",
+      "¿He sido infiel a mi estado de vida?",
+      "¿He dejado de guardar mis ojos de imágenes impuras?",
+      "¿He frecuentado compañías que son ocasión de pecado contra la pureza?"
+    ]
+  },
+  "VII": {
+    "commandment_es": "No hurtarás",
+    "questions_es": [
+      "¿He tomado lo que no me pertenece?",
+      "¿He dañado los bienes ajenos?",
+      "¿He dejado de restituir lo robado?",
+      "¿He sido deshonesto en los negocios?",
+      "¿He malgastado lo que Dios me ha dado?"
+    ]
+  },
+  "VIII": {
+    "commandment_es": "No levantarás falso testimonio ni mentirás",
+    "questions_es": [
+      "¿He mentido o engañado a otros?",
+      "¿He murmurado, hecho detracciones o calumnias?",
+      "¿He juzgado temerariamente a otros?",
+      "¿He dejado de defender la buena fama de alguien pudiendo hacerlo?"
+    ]
+  },
+  "IX": {
+    "commandment_es": "No consentirás pensamientos ni deseos impuros",
+    "questions_es": [
+      "¿He consentido voluntariamente deseos impuros hacia otra persona?",
+      "¿He dejado de guardar mis ojos, mi imaginación o mis lecturas?",
+      "¿He consentido deliberadamente pensamientos impuros?",
+      "¿He tardado en rechazar las tentaciones contra la pureza?",
+      "¿Me he puesto en ocasiones de pecado contra este mandamiento?"
+    ]
+  },
+  "X": {
+    "commandment_es": "No codiciarás los bienes ajenos",
+    "questions_es": [
+      "¿He envidiado lo que otros poseen?",
+      "¿He sido avaro o excesivamente apegado a las cosas materiales?",
+      "¿He envidiado el éxito o la buena fortuna de otros?",
+      "¿He estado descontento con mi estado de vida?",
+      "¿He dejado de practicar la generosidad y la limosna?"
+    ]
+  }
+}

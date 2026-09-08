@@ -42,10 +42,10 @@ struct WidgetSettingsView: View {
                 modeRow(
                     .prayer,
                     title: ContentStore.shared.uiString("widget.settings.mode_prayer", "Chosen prayers"),
-                    subtitle: "Your own prayer for morning, midday, and evening"
+                    subtitle: ContentStore.shared.uiString("widget.settings.prayer_sub", "Your own prayer for morning, midday, and evening")
                 )
             } header: {
-                Text("Modus · Mode")
+                Text(ContentStore.shared.uiString("widget.settings.mode_header", "Modus · Mode"))
             }
 
             if mode == .prayer {
@@ -81,7 +81,7 @@ struct WidgetSettingsView: View {
                     .listRowBackground(Color.pageBackground)
                 }
             } header: {
-                Text("Lectio · Reading Widget")
+                Text(ContentStore.shared.uiString("widget.settings.reading_header", "Lectio · Reading Widget"))
             } footer: {
                 Text(ContentStore.shared.uiString("widget.settings.reading_note", "The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget needs no configuration — it always shows the liturgical day."))
             }
