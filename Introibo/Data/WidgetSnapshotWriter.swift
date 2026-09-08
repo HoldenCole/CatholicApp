@@ -28,7 +28,7 @@ enum WidgetSnapshotWriter {
         // not pass through here and stay Latin in every vernacular.
         if VernacularLanguage.current() == .spanish {
             var chrome: [String: String] = [:]
-            for key in ["widget.label.office", "widget.label.morning",
+            var keys = ["widget.label.office", "widget.label.morning",
                         "widget.label.midday", "widget.label.evening",
                         "widget.tap_to_pray", "widget.stale",
                         "widget.reading.introit", "widget.reading.collect",
@@ -39,9 +39,10 @@ enum WidgetSnapshotWriter {
                         "common.morning", "common.midday", "common.evening",
                         "widget.prayer.morning", "widget.prayer.angelus",
                         "widget.prayer.contrition"]
-                + (1...12).map { "calendar.month_abbrev.\($0)" }
-                + (1...12).map { "calendar.month.\($0)" }
-                + (0...6).map { "calendar.weekday.\($0)" } {
+            keys += (1...12).map { "calendar.month_abbrev.\($0)" }
+            keys += (1...12).map { "calendar.month.\($0)" }
+            keys += (0...6).map { "calendar.weekday.\($0)" }
+            for key in keys {
                 let es = store.uiString(key, "")
                 if !es.isEmpty { chrome[key] = es }
             }
