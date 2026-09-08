@@ -25,6 +25,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.AlertDialog
@@ -39,6 +40,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import com.lampstandhq.introibo.storage.notification.NotificationStore
 import com.lampstandhq.introibo.storage.progress.PrayerRule
 import com.lampstandhq.introibo.storage.progress.UserProgressRepository
 import com.lampstandhq.introibo.ui.prayers.NotificationScheduleSheet
@@ -93,6 +95,9 @@ fun HourSheet(
     val isInRule = ruleSlug in rule.allSlugs
     var showAddToRule by remember { mutableStateOf(false) }
     var showNotification by remember { mutableStateOf(false) }
+    val notifStore = remember { NotificationStore(appContext) }
+    val schedules by notifStore.allSchedules.collectAsState(initial = emptyList())
+    val hasNotification = schedules.any { it.id == "office.${hour.slug}" && it.isEnabled }
 
     // Back button + header occupy LazyColumn indices 0 and 1; parts begin at 2,
     // so part i sits at list index i + HEADER_ITEM_COUNT.
@@ -139,7 +144,8 @@ fun HourSheet(
                         }
                         IconButton(onClick = { showNotification = true }) {
                             Icon(
-                                imageVector = Icons.Outlined.Notifications,
+                                imageVector = if (hasNotification) Icons.Filled.Notifications
+                                              else Icons.Outlined.Notifications,
                                 contentDescription = "Hour reminder",
                                 tint = colors.sanctuaryRed,
                             )
@@ -240,13 +246,21 @@ fun HourSheet(
     }
 
     // Per-hour reminder schedule (same schedule-id convention as iOS).
+    // NotificationScheduleSheet is bare content: it needs its own
+    // ModalBottomSheet window, or it renders beneath the hour's sheet.
     if (showNotification) {
-        NotificationScheduleSheet(
-            scheduleId = "office.${hour.slug}",
-            title = hour.name,
-            subtitle = "${hour.eng} — ${hour.time}",
-            onDismiss = { showNotification = false },
-        )
+        ModalBottomSheet(
+            onDismissRequest = { showNotification = false },
+            sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+            containerColor = colors.pageBackground,
+        ) {
+            NotificationScheduleSheet(
+                scheduleId = "office.${hour.slug}",
+                title = hour.name,
+                subtitle = "${hour.eng} — ${hour.time}",
+                onDismiss = { showNotification = false },
+            )
+        }
     }
 }
 

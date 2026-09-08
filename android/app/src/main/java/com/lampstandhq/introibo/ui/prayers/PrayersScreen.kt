@@ -22,11 +22,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SortByAlpha
+import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -58,6 +61,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.Prayer
+import com.lampstandhq.introibo.storage.notification.NotificationStore
 import com.lampstandhq.introibo.data.model.strippingEm
 import com.lampstandhq.introibo.storage.progress.PrayerRule
 import com.lampstandhq.introibo.storage.progress.UserProgressRepository
@@ -92,7 +96,11 @@ fun PrayersScreen() {
     var searchText by remember { mutableStateOf("") }
     var sortAlphabetical by remember { mutableStateOf(false) }
     var showPrayerRuleEditor by remember { mutableStateOf(false) }
+    var showRuleNotification by remember { mutableStateOf(false) }
     var selectedOccasion by remember { mutableStateOf<String?>(null) }
+    val notifStore = remember { NotificationStore(context) }
+    val schedules by notifStore.allSchedules.collectAsState(initial = emptyList())
+    val hasRuleReminder = schedules.any { it.id.startsWith("rule.") && it.isEnabled }
 
     Column(
         modifier = Modifier
@@ -130,6 +138,9 @@ fun PrayersScreen() {
                             scope.launch { progressRepo.togglePrayer(slug) }
                         },
                         onOpenPrayer = { prayer -> selectedPrayer = prayer },
+                        onEdit = { showPrayerRuleEditor = true },
+                        onReminder = { showRuleNotification = true },
+                        hasReminder = hasRuleReminder,
                     )
                 } else {
                     SetupRuleCard(onBegin = { showPrayerRuleEditor = true })
@@ -173,10 +184,9 @@ fun PrayersScreen() {
             OccasionPrayerSheet(
                 occasion = occasion,
                 prayers = occasionPrayers,
-                onSelectPrayer = { prayer ->
-                    selectedOccasion = null
-                    selectedPrayer = prayer
-                },
+                // Keep the occasion sheet mounted underneath: the detail is a
+                // full-screen Dialog, so dismissing it must land back here.
+                onSelectPrayer = { prayer -> selectedPrayer = prayer },
                 onDismiss = { selectedOccasion = null },
             )
         } else {
@@ -191,6 +201,22 @@ fun PrayersScreen() {
             onDismiss = { showPrayerRuleEditor = false },
         )
     }
+
+    // Prayer rule reminder (same schedule id as iOS)
+    if (showRuleNotification) {
+        androidx.compose.material3.ModalBottomSheet(
+            onDismissRequest = { showRuleNotification = false },
+            sheetState = androidx.compose.material3.rememberModalBottomSheetState(skipPartiallyExpanded = true),
+            containerColor = colors.pageBackground,
+        ) {
+            NotificationScheduleSheet(
+                scheduleId = "rule.daily",
+                title = "Prayer Rule Reminder",
+                subtitle = "Get reminded to pray your daily rule",
+                onDismiss = { showRuleNotification = false },
+            )
+        }
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -203,6 +229,9 @@ private fun DailyRuleSection(
     completedPrayers: Set<String>,
     onTogglePrayer: (String) -> Unit,
     onOpenPrayer: (Prayer) -> Unit,
+    onEdit: () -> Unit,
+    onReminder: () -> Unit,
+    hasReminder: Boolean,
 ) {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
@@ -228,6 +257,15 @@ private fun DailyRuleSection(
                     text = "My Daily Rule",
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
+                )
+            }
+
+            IconButton(onClick = onReminder) {
+                Icon(
+                    imageVector = if (hasReminder) Icons.Filled.Notifications
+                                  else Icons.Outlined.Notifications,
+                    contentDescription = "Prayer rule reminder",
+                    tint = colors.sanctuaryRed,
                 )
             }
 
@@ -268,7 +306,30 @@ private fun DailyRuleSection(
             }
         }
 
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(8.dp))
+
+        // Labelled edit affordance: the only way back into the rule editor
+        // once a rule exists (the setup card no longer renders).
+        androidx.compose.material3.TextButton(
+            onClick = onEdit,
+            contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 8.dp, vertical = 4.dp),
+            modifier = Modifier.defaultMinSize(minHeight = 44.dp),
+        ) {
+            Icon(
+                imageVector = Icons.Filled.Edit,
+                contentDescription = null,
+                tint = colors.sanctuaryRed,
+                modifier = Modifier.size(16.dp),
+            )
+            Spacer(Modifier.width(6.dp))
+            Text(
+                text = "Edit rule",
+                style = type.captionSm,
+                color = colors.sanctuaryRed,
+            )
+        }
+
+        Spacer(Modifier.height(4.dp))
 
         // Rule periods
         if (prayerRule.morning.isNotEmpty()) {

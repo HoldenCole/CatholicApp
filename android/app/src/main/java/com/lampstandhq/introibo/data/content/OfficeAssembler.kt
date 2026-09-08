@@ -107,12 +107,11 @@ class OfficeAssembler(
             }
         }
 
-        val assembledParts = template.parts.map { part ->
+        val mappedParts = template.parts.map { part ->
             val key = part.variationKey ?: return@map part
 
-            if (part.type == "marian") {
-                return@map marianPart(context.marian, fallback = part)
-            }
+            // Expanded below into antiphon + ℣/℟ + Orémus.
+            if (part.type == "marian") return@map part
 
             // Temporal propers (highest priority for non-psalm parts)
             temporalOverrides[key]?.let { return@map rekeyed(it, key) }
@@ -175,6 +174,14 @@ class OfficeAssembler(
             }
 
             part
+        }
+
+        val assembledParts = mappedParts.flatMap { part ->
+            if (part.type == "marian" && part.variationKey != null) {
+                marianParts(context.marian, context.season, fallback = part)
+            } else {
+                listOf(part)
+            }
         }
 
         // Prime's Lectio Brevis is, by the rubric's own rule, the day's None
@@ -636,26 +643,56 @@ class OfficeAssembler(
         LiturgicalSeason.PER_ANNUM -> "ordinary"
     }
 
-    private fun marianPart(antiphon: MarianAntiphon, fallback: Hour.Part): Hour.Part {
+    private fun marianParts(
+        antiphon: MarianAntiphon,
+        season: LiturgicalSeason,
+        fallback: Hour.Part,
+    ): List<Hour.Part> {
         // During Triduum the Marian antiphon is suppressed entirely.
         if (antiphon.isSuppressed) {
-            return Hour.Part(
-                type = "suppressed",
-                variationKey = "completorium.marian",
-            )
+            return listOf(Hour.Part(type = "suppressed", variationKey = "completorium.marian"))
         }
         val data = marianAntiphons.firstOrNull { it.slug == antiphon.key }
-            ?: return fallback
-        return Hour.Part(
-            type = "marian",
-            label = "Marian Antiphon; ${data.title}",
-            title = data.title,
-            lat = data.lat,
-            eng = data.eng,
-            season = data.season,
-            engBody = data.engBody,
-            variationKey = "completorium.marian",
+            ?: return listOf(fallback)
+        val parts = mutableListOf(
+            Hour.Part(
+                type = "marian",
+                label = "Marian Antiphon; ${data.title}",
+                title = data.title,
+                lat = data.lat,
+                eng = data.eng,
+                season = data.season,
+                engBody = data.engBody,
+                variationKey = "completorium.marian",
+            )
         )
+        // Alma Redemptóris changes its ℣/℟ and Orémus at Christmas (kept
+        // through Feb 1, so anything outside Advent takes the Christmas form).
+        val christmasForm = antiphon == MarianAntiphon.ALMA && season != LiturgicalSeason.ADVENT
+        val versicleLat = if (christmasForm) data.versicleLatChristmas ?: data.versicleLat else data.versicleLat
+        val versicleEng = if (christmasForm) data.versicleEngChristmas ?: data.versicleEng else data.versicleEng
+        val collectLat = if (christmasForm) data.collectLatChristmas ?: data.collectLat else data.collectLat
+        val collectEng = if (christmasForm) data.collectEngChristmas ?: data.collectEng else data.collectEng
+        if (versicleLat != null && versicleEng != null) {
+            val l = versicleLat.split("\n", limit = 2)
+            val e = versicleEng.split("\n", limit = 2)
+            parts += Hour.Part(
+                type = "vr",
+                label = "Versus",
+                lat = l[0], eng = e[0],
+                latR = l.getOrNull(1), engR = e.getOrNull(1),
+                variationKey = "completorium.marian.versicle",
+            )
+        }
+        if (collectLat != null && collectEng != null) {
+            parts += Hour.Part(
+                type = "collect",
+                label = "Orémus",
+                lat = collectLat, eng = collectEng,
+                variationKey = "completorium.marian.oratio",
+            )
+        }
+        return parts
     }
 
     // ---- Psalm text inlining from psalter.json ----
@@ -935,6 +972,12 @@ class OfficeAssembler(
          *  oratio_prima / oratio_completorium). */
         private val COLLECT_HOURS = setOf(
             "matutinum", "laudes", "tertia", "sexta", "nona", "vesperae",
+        )
+
+        /** Variation keys of the invariable collects; no override layer may
+         *  replace these, even by part type. */
+        val INVARIABLE_COLLECT_KEYS = setOf(
+            "oratio_prima", "oratio_completorium", "completorium.marian.oratio",
         )
 
         /** Weekday-psalter keys that belong to the FERIAL office only. */

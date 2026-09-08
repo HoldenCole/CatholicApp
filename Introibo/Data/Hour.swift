@@ -61,6 +61,28 @@ struct MarianAntiphonData: Identifiable, Decodable, Hashable {
     let season: String
     let lat: String
     var engBody: String
+    // The ℣/℟ and Orémus that follow the antiphon at Compline.
+    var versicleLat: String?
+    var versicleEng: String?
+    var collectLat: String?
+    var collectEng: String?
+    // Alma Redemptóris only: the forms used from Christmas to Feb 1.
+    var versicleLatChristmas: String?
+    var versicleEngChristmas: String?
+    var collectLatChristmas: String?
+    var collectEngChristmas: String?
 
     var id: String { slug }
+
+    enum CodingKeys: String, CodingKey {
+        case slug, title, eng, season, lat, engBody
+        case versicleLat = "versicle_lat"
+        case versicleEng = "versicle_eng"
+        case collectLat = "collect_lat"
+        case collectEng = "collect_eng"
+        case versicleLatChristmas = "versicle_lat_christmas"
+        case versicleEngChristmas = "versicle_eng_christmas"
+        case collectLatChristmas = "collect_lat_christmas"
+        case collectEngChristmas = "collect_eng_christmas"
+    }
 }

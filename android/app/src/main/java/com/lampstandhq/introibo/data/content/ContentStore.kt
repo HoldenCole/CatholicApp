@@ -178,6 +178,10 @@ object ContentStore {
     private data class MarianAntiphonES(
         val title_es: String,
         val body_es: String,
+        val versicle_es: String? = null,
+        val collect_es: String? = null,
+        val versicle_es_christmas: String? = null,
+        val collect_es_christmas: String? = null,
     )
 
     @kotlinx.serialization.Serializable
@@ -698,7 +702,14 @@ object ContentStore {
             load<Map<String, MarianAntiphonES>>("marian_antiphons_es.json")?.let { es ->
                 marianAntiphons = marianAntiphons.map { a ->
                     val o = es[a.slug] ?: return@map a
-                    a.copy(eng = o.title_es, engBody = o.body_es)
+                    a.copy(
+                        eng = o.title_es,
+                        engBody = o.body_es,
+                        versicleEng = o.versicle_es?.replace(" ℟. ", "\n℟. ") ?: a.versicleEng,
+                        collectEng = o.collect_es ?: a.collectEng,
+                        versicleEngChristmas = o.versicle_es_christmas?.replace(" ℟. ", "\n℟. ") ?: a.versicleEngChristmas,
+                        collectEngChristmas = o.collect_es_christmas ?: a.collectEngChristmas,
+                    )
                 }
             }
             load<Map<String, HourES>>("hours_es.json")?.let { es ->
@@ -1387,7 +1398,12 @@ object ContentStore {
                 overrides.containsKey("capitulum_laudes")) {
                 return@map overrides["capitulum_laudes"]!!
             }
-            if (part.type == "collect" && overrides.containsKey("collect")) return@map overrides["collect"]!!
+            // Prime and Compline collects are invariable: never let a
+            // type-keyed "collect" override reach them.
+            if (part.type == "collect" && overrides.containsKey("collect") &&
+                key !in OfficeAssembler.INVARIABLE_COLLECT_KEYS) {
+                return@map overrides["collect"]!!
+            }
             part
         }
         return hour.copy(parts = updatedParts)

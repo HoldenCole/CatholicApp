@@ -1,6 +1,7 @@
 package com.lampstandhq.introibo.data.model
 
 import com.lampstandhq.introibo.data.links.RelatedLink
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
@@ -68,4 +69,14 @@ data class MarianAntiphonData(
     val season: String,
     val lat: String,
     val engBody: String,
+    // The ℣/℟ and Orémus that follow the antiphon at Compline.
+    @SerialName("versicle_lat") val versicleLat: String? = null,
+    @SerialName("versicle_eng") val versicleEng: String? = null,
+    @SerialName("collect_lat") val collectLat: String? = null,
+    @SerialName("collect_eng") val collectEng: String? = null,
+    // Alma Redemptóris only: the forms used from Christmas to Feb 1.
+    @SerialName("versicle_lat_christmas") val versicleLatChristmas: String? = null,
+    @SerialName("versicle_eng_christmas") val versicleEngChristmas: String? = null,
+    @SerialName("collect_lat_christmas") val collectLatChristmas: String? = null,
+    @SerialName("collect_eng_christmas") val collectEngChristmas: String? = null,
 )

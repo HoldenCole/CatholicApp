@@ -124,6 +124,35 @@ class OfficeStructureFixTest {
     }
 
     @Test
+    fun marianAntiphonCarriesItsVersicleAndPrayer() {
+        fun suffix(date: LocalDate): Pair<Hour.Part?, Hour.Part?> {
+            val parts = assembled("completorium", date).parts
+            val i = parts.indexOfFirst { it.type == "marian" }
+            assertTrue("Marian antiphon present on $date", i >= 0)
+            return parts.getOrNull(i + 1) to parts.getOrNull(i + 2)
+        }
+        // Salve Regina (after Pentecost)
+        val (salveVr, salveOr) = suffix(LocalDate.of(2026, 8, 2))
+        assertTrue(salveVr?.type == "vr" && salveVr.lat.orEmpty().startsWith("℣. Ora pro nobis"))
+        assertTrue(salveOr?.type == "collect" && salveOr.lat.orEmpty().startsWith("Omnípotens sempitérne Deus"))
+        assertTrue(salveOr?.variationKey == "completorium.marian.oratio")
+        // Alma Redemptoris: Advent form vs Christmas form
+        val (adventVr, adventOr) = suffix(LocalDate.of(2026, 12, 6))
+        assertTrue(adventVr?.lat.orEmpty().startsWith("℣. Angelus Dómini"))
+        assertTrue(adventOr?.lat.orEmpty().startsWith("Grátiam tuam"))
+        val (xmasVr, xmasOr) = suffix(LocalDate.of(2027, 1, 10))
+        assertTrue(xmasVr?.lat.orEmpty().startsWith("℣. Post partum"))
+        assertTrue(xmasOr?.lat.orEmpty().startsWith("Deus, qui salútis ætérnæ"))
+        // Regina caeli in Paschaltide
+        val (reginaVr, _) = suffix(LocalDate.of(2027, 4, 11))
+        assertTrue(reginaVr?.lat.orEmpty().startsWith("℣. Gaude et lætáre"))
+        // Triduum: nothing at all after the suppressed slot
+        val triduum = assembled("completorium", LocalDate.of(2027, 3, 26)).parts
+        assertTrue(triduum.none { it.type == "marian" })
+        assertTrue(triduum.none { it.variationKey == "completorium.marian.versicle" })
+    }
+
+    @Test
     fun ferialLaudsUsesWeekdayHymnAntiphonAndVersicle() {
         val l = assembled("laudes", feria)
         val hymn = l.parts.first { it.type == "hymn" }

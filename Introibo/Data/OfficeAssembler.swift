@@ -284,6 +284,12 @@ struct OfficeAssembler {
         "matutinum", "laudes", "tertia", "sexta", "nona", "vesperae",
     ]
 
+    /// Variation keys of the invariable collects; no override layer may
+    /// replace these, even by part type.
+    static let invariableCollectKeys: Set<String> = [
+        "oratio_prima", "oratio_completorium", "completorium.marian.oratio",
+    ]
+
     /// Weekday-psalter keys that belong to the FERIAL office only; festal
     /// days keep the template defaults until the proper/commune layers apply.
     private static let ferialOnlyDayKeys: Set<String> = [
@@ -368,13 +374,7 @@ struct OfficeAssembler {
             }
         }
 
-        let assembledParts = template.parts.map { part -> Hour.Part in
-            guard let key = part.variationKey else { return part }
-
-            if part.type == "marian" {
-                return marianPart(for: context.marian, fallback: part)
-            }
-
+        func assemblePart(_ part: Hour.Part, key: String) -> Hour.Part {
             // Temporal propers (highest priority for non-psalm parts)
             if let override = temporalOverrides[key] {
                 return Self.rekeyed(override, key)
@@ -438,6 +438,15 @@ struct OfficeAssembler {
             }
 
             return part
+        }
+
+        let assembledParts = template.parts.flatMap { part -> [Hour.Part] in
+            guard let key = part.variationKey else { return [part] }
+            if part.type == "marian" {
+                // The antiphon plus its ℣/℟ and Orémus (or nothing in Triduum).
+                return marianParts(for: context.marian, season: context.season, fallback: part)
+            }
+            return [assemblePart(part, key: key)]
         }
 
         // Prime's Lectio Brevis is, by the rubric's own rule, the day's None
@@ -1085,18 +1094,18 @@ struct OfficeAssembler {
         }
     }
 
-    private func marianPart(for antiphon: MarianAntiphon, fallback: Hour.Part) -> Hour.Part {
+    private func marianParts(for antiphon: MarianAntiphon, season: LiturgicalSeason, fallback: Hour.Part) -> [Hour.Part] {
         // During Triduum the Marian antiphon is suppressed entirely.
         if antiphon.isSuppressed {
-            return Hour.Part(
+            return [Hour.Part(
                 type: "suppressed",
                 variationKey: "completorium.marian"
-            )
+            )]
         }
         guard let data = marianAntiphons.first(where: { $0.slug == antiphon.rawValue }) else {
-            return fallback
+            return [fallback]
         }
-        return Hour.Part(
+        var parts = [Hour.Part(
             type: "marian",
             label: "Marian Antiphon; \(data.title)",
             title: data.title,
@@ -1105,7 +1114,35 @@ struct OfficeAssembler {
             season: data.season,
             engBody: data.engBody,
             variationKey: "completorium.marian"
-        )
+        )]
+        // Alma Redemptóris changes its ℣/℟ and Orémus at Christmas (kept
+        // through Feb 1, so anything outside Advent takes the Christmas form).
+        let christmasForm = antiphon == .alma && season != .advent
+        let versicleLat = christmasForm ? data.versicleLatChristmas ?? data.versicleLat : data.versicleLat
+        let versicleEng = christmasForm ? data.versicleEngChristmas ?? data.versicleEng : data.versicleEng
+        let collectLat = christmasForm ? data.collectLatChristmas ?? data.collectLat : data.collectLat
+        let collectEng = christmasForm ? data.collectEngChristmas ?? data.collectEng : data.collectEng
+        if let vl = versicleLat, let ve = versicleEng {
+            let l = vl.split(separator: "\n", maxSplits: 1).map(String.init)
+            let e = ve.split(separator: "\n", maxSplits: 1).map(String.init)
+            parts.append(Hour.Part(
+                type: "vr",
+                label: "Versus",
+                lat: l.first, eng: e.first,
+                latR: l.count > 1 ? l[1] : nil,
+                engR: e.count > 1 ? e[1] : nil,
+                variationKey: "completorium.marian.versicle"
+            ))
+        }
+        if let cl = collectLat, let ce = collectEng {
+            parts.append(Hour.Part(
+                type: "collect",
+                label: "Orémus",
+                lat: cl, eng: ce,
+                variationKey: "completorium.marian.oratio"
+            ))
+        }
+        return parts
     }
 
     private static let dayKeys = [

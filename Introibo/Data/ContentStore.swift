@@ -121,6 +121,10 @@ final class ContentStore {
     private struct MarianAntiphonES: Decodable {
         let title_es: String
         let body_es: String
+        let versicle_es: String?
+        let collect_es: String?
+        let versicle_es_christmas: String?
+        let collect_es_christmas: String?
     }
     private struct HourES: Decodable {
         let name_es: String
@@ -587,6 +591,10 @@ final class ContentStore {
                 var m = a
                 m.eng = o.title_es
                 m.engBody = o.body_es
+                if let v = o.versicle_es { m.versicleEng = v.replacingOccurrences(of: " ℟. ", with: "\n℟. ") }
+                if let c = o.collect_es { m.collectEng = c }
+                if let v = o.versicle_es_christmas { m.versicleEngChristmas = v.replacingOccurrences(of: " ℟. ", with: "\n℟. ") }
+                if let c = o.collect_es_christmas { m.collectEngChristmas = c }
                 return m
             }
         }
@@ -958,7 +966,10 @@ final class ContentStore {
                let lauds = overrides["capitulum_laudes"] {
                 return lauds
             }
-            if part.type == "collect", let collect = overrides["collect"] {
+            // Prime and Compline collects are invariable: never let a
+            // type-keyed "collect" override reach them.
+            if part.type == "collect", let collect = overrides["collect"],
+               !OfficeAssembler.invariableCollectKeys.contains(key) {
                 return collect
             }
             return part

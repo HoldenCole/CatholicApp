@@ -36,10 +36,10 @@ struct ConfessionView: View {
                     Image(systemName: NotificationStore.schedule(for: "devotion.confession")?.isEnabled == true ? "bell.fill" : "bell")
                         .foregroundStyle(Color.sanctuaryRed)
                 }
-                .sheet(isPresented: $showNotification) {
-                    NotificationScheduleSheet(scheduleId: "devotion.confession", title: "Confession", subtitle: "Remind me to go to Confession")
-                }
             }
+        }
+        .sheet(isPresented: $showNotification) {
+            NotificationScheduleSheet(scheduleId: "devotion.confession", title: "Confession", subtitle: "Remind me to go to Confession")
         }
         .sheet(item: $selectedGuide) { guide in
             GuideReaderView(guide: guide)

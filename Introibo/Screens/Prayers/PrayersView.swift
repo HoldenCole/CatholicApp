@@ -97,13 +97,22 @@ struct PrayersView: View {
                         subtitle: "Get reminded to pray your daily rule"
                     )
                 }
-                Button { showRuleEditor = true } label: {
-                    Image(systemName: "pencil")
-                        .foregroundStyle(Color.sanctuaryRed)
-                        .font(.scaledSystem(14))
-                }
-                .buttonStyle(.plain)
             }
+
+            // Labelled edit affordance: the only way back into the rule
+            // editor once a rule exists (the setup card no longer renders).
+            Button { showRuleEditor = true } label: {
+                HStack(spacing: 6) {
+                    Image(systemName: "pencil")
+                    Text("Edit rule")
+                }
+                .font(.captionSm)
+                .foregroundStyle(Color.sanctuaryRed)
+                .frame(minHeight: 44)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Edit prayer rule")
 
             if !rule.morning.isEmpty {
                 rulePeriod("Mane", eng: "Morning", slugs: rule.morning)

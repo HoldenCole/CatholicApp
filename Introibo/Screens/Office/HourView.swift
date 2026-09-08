@@ -11,9 +11,10 @@ struct HourView: View {
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @State private var showNotification = false
     @State private var showAddToRule = false
+    @State private var hasNotification = false
 
-    private var hasNotification: Bool {
-        NotificationStore.schedule(for: "office.\(hour.slug)")?.isEnabled ?? false
+    private func refreshNotificationState() {
+        hasNotification = NotificationStore.schedule(for: "office.\(hour.slug)")?.isEnabled ?? false
     }
 
     var body: some View {
@@ -65,16 +66,19 @@ struct HourView: View {
                             Image(systemName: hasNotification ? "bell.fill" : "bell")
                                 .foregroundStyle(Color.sanctuaryRed)
                         }
-                        .sheet(isPresented: $showNotification) {
-                            NotificationScheduleSheet(
-                                scheduleId: "office.\(hour.slug)",
-                                title: hour.name,
-                                subtitle: "\(hour.eng) — \(hour.time)"
-                            )
-                        }
                     }
                 }
             }
+            // Presented from the navigation content, not the toolbar item:
+            // a .sheet attached inside ToolbarContent is silently dropped.
+            .sheet(isPresented: $showNotification, onDismiss: refreshNotificationState) {
+                NotificationScheduleSheet(
+                    scheduleId: "office.\(hour.slug)",
+                    title: hour.name,
+                    subtitle: "\(hour.eng) — \(hour.time)"
+                )
+            }
+            .onAppear(perform: refreshNotificationState)
             .confirmationDialog("Add to Prayer Rule", isPresented: $showAddToRule) {
                 Button("Morning") { addToRule("morning") }
                 Button("Midday") { addToRule("midday") }
