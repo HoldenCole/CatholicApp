@@ -27,7 +27,11 @@ platform :ios do
     version = "1.5.8"
     increment_version_number(version_number: version, xcodeproj: "Introibo.xcodeproj")
     latest = latest_testflight_build_number(api_key: api_key, app_identifier: "app.introibo.Introibo", version: version) rescue 0
-    new_build = latest + 1
+    # Two pushes minutes apart both saw the same "latest" (the first upload
+    # was still processing) and collided on the same build number (409
+    # Redundant Binary Upload). The workflow run number is unique and
+    # monotonic, so take whichever is higher.
+    new_build = [latest + 1, (ENV["GITHUB_RUN_NUMBER"] || "0").to_i].max
     increment_build_number(build_number: new_build, xcodeproj: "Introibo.xcodeproj")
     UI.message("Version #{version}, Build number: #{new_build}")
 
