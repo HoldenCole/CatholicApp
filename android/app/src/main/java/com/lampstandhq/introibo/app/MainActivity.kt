@@ -121,10 +121,14 @@ class MainActivity : ComponentActivity() {
                             SplashScreen(onFinished = { showSplash = false })
                         }
                         !onboardingDone -> {
-                            OnboardingScreen(onComplete = {
-                                prefs.edit().putBoolean("has_seen_onboarding", true).apply()
-                                onboardingDone = true
-                            })
+                            // Keyed on the vernacular so the language chosen on
+                            // the first page re-renders the rest of onboarding.
+                            androidx.compose.runtime.key(vernacular) {
+                                OnboardingScreen(onComplete = {
+                                    prefs.edit().putBoolean("has_seen_onboarding", true).apply()
+                                    onboardingDone = true
+                                })
+                            }
                         }
                         else -> {
                             androidx.compose.runtime.key(vernacular) {

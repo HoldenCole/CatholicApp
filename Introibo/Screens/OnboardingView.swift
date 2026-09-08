@@ -7,12 +7,14 @@ struct OnboardingView: View {
     @AppStorage(SettingsKey.rite) private var selectedRite: String = MissalRite.rite1962.rawValue
     @AppStorage(SettingsKey.penance) private var selectedPenance: String = PenanceDiscipline.discipline1962.rawValue
     @AppStorage(SettingsKey.language) private var selectedLanguage: String = LanguageMode.both.rawValue
+    @AppStorage(SettingsKey.vernacularLang) private var selectedVernacular: String = VernacularLanguage.english.rawValue
     @State private var selectedSaint: String? = nil
     @State private var notifLiturgical = false
     @State private var notifPrayerRule = false
     @State private var notifOffice = false
 
-    private let totalPages = 8
+    private let totalPages = 9
+    private let lastPage = 8
 
     // MARK: - Body
 
@@ -20,7 +22,7 @@ struct OnboardingView: View {
         ZStack(alignment: .top) {
             // Background — walnut gradient for first and last, parchment for middle
             Group {
-                if page == 0 || page == 7 {
+                if page == 1 || page == lastPage {
                     LinearGradient(
                         colors: [Color.walnut, Color.walnutHi],
                         startPoint: .top,
@@ -41,7 +43,7 @@ struct OnboardingView: View {
                         } label: {
                             Image(systemName: "chevron.left")
                                 .appFont(.scaledSystem(16, weight: .medium))
-                                .foregroundStyle(page == 7 ? Color.ivory : Color.secondaryText)
+                                .foregroundStyle(page == lastPage ? Color.ivory : Color.secondaryText)
                                 .padding(12)
                         }
                         .buttonStyle(.plain)
@@ -53,20 +55,21 @@ struct OnboardingView: View {
 
                 // Page content
                 TabView(selection: $page) {
-                    welcomeScreen.tag(0)
-                    whatIsScreen.tag(1)
-                    riteScreen.tag(2)
-                    penanceScreen.tag(3)
-                    languageScreen.tag(4)
-                    saintScreen.tag(5)
-                    notificationsScreen.tag(6)
-                    finalScreen.tag(7)
+                    vernacularScreen.tag(0)
+                    welcomeScreen.tag(1)
+                    whatIsScreen.tag(2)
+                    riteScreen.tag(3)
+                    penanceScreen.tag(4)
+                    languageScreen.tag(5)
+                    saintScreen.tag(6)
+                    notificationsScreen.tag(7)
+                    finalScreen.tag(8)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .animation(.easeInOut, value: page)
 
                 // Bottom: dots + button (hidden on final screen)
-                if page < 7 {
+                if page < lastPage {
                     VStack(spacing: 16) {
                         // Progress dots
                         HStack(spacing: 6) {
@@ -99,7 +102,66 @@ struct OnboardingView: View {
         }
     }
 
-    // MARK: - Screen 0: Welcome
+    // MARK: - Screen 0: Vernacular language
+    //
+    // First, so that everything after it (and the app) reads in the
+    // chosen language. Each option describes itself in its own language.
+
+    private var vernacularScreen: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
+                Spacer(minLength: 40)
+
+                Text("Intro\u{00ED}bo")
+                    .appFont(.scaledSystem(34, weight: .semibold, design: .serif))
+                    .italic()
+                    .foregroundStyle(Color.primaryText)
+
+                Text("LINGUA VERN\u{00C1}CULA")
+                    .smallLabel(color: Color.sanctuaryRed)
+
+                Text(ContentStore.shared.uiString("onboarding.vernacular", "Choose your language"))
+                    .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
+                    .foregroundStyle(Color.primaryText)
+
+                Text(ContentStore.shared.uiString("onboarding.vernacular_sub", "Latin is always shown. Choose the language of the translations and of the app."))
+                    .appFont(.bodySm)
+                    .foregroundStyle(Color.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                VStack(spacing: 12) {
+                    selectionCard(
+                        title: "English",
+                        description: "Translations and the app in English.",
+                        isSelected: selectedVernacular == VernacularLanguage.english.rawValue
+                    ) {
+                        chooseVernacular(.english)
+                    }
+
+                    selectionCard(
+                        title: "Espa\u{00F1}ol",
+                        description: "Traducciones y aplicaci\u{00F3}n en espa\u{00F1}ol.",
+                        isSelected: selectedVernacular == VernacularLanguage.spanish.rawValue
+                    ) {
+                        chooseVernacular(.spanish)
+                    }
+                }
+                .padding(.horizontal, 28)
+                .padding(.top, 8)
+
+                Spacer(minLength: 40)
+            }
+        }
+    }
+
+    private func chooseVernacular(_ v: VernacularLanguage) {
+        guard selectedVernacular != v.rawValue else { return }
+        selectedVernacular = v.rawValue
+        ContentStore.shared.applyVernacular(v)
+    }
+
+    // MARK: - Screen 1: Welcome
 
     private var welcomeScreen: some View {
         VStack(spacing: 20) {
@@ -187,24 +249,24 @@ struct OnboardingView: View {
 
                 VStack(spacing: 12) {
                     selectionCard(
-                        title: "1962 Roman Missal",
-                        description: "The standard traditional rite. Used by FSSP, ICKSP, and most traditional parishes.",
+                        title: ContentStore.shared.uiString("onboarding.rite.1962.title", "1962 Roman Missal"),
+                        description: ContentStore.shared.uiString("onboarding.rite.1962.desc", "The standard traditional rite. Used by FSSP, ICKSP, and most traditional parishes."),
                         isSelected: selectedRite == MissalRite.rite1962.rawValue
                     ) {
                         selectedRite = MissalRite.rite1962.rawValue
                     }
 
                     selectionCard(
-                        title: "1955 Holy Week",
-                        description: "Before the 1955 Holy Week reforms. Retains the older Palm Sunday, Good Friday, and Easter Vigil.",
+                        title: ContentStore.shared.uiString("onboarding.rite.1955.title", "1955 Holy Week"),
+                        description: ContentStore.shared.uiString("onboarding.rite.1955.desc", "Before the 1955 Holy Week reforms. Retains the older Palm Sunday, Good Friday, and Easter Vigil."),
                         isSelected: selectedRite == MissalRite.rite1955.rawValue
                     ) {
                         selectedRite = MissalRite.rite1955.rawValue
                     }
 
                     selectionCard(
-                        title: "Pre-1955 Rubrics",
-                        description: "The fullest traditional rubrics before any 20th-century simplifications.",
+                        title: ContentStore.shared.uiString("onboarding.rite.pre1955.title", "Pre-1955 Rubrics"),
+                        description: ContentStore.shared.uiString("onboarding.rite.pre1955.desc", "The fullest traditional rubrics before any 20th-century simplifications."),
                         isSelected: selectedRite == MissalRite.pre1955.rawValue
                     ) {
                         selectedRite = MissalRite.pre1955.rawValue
@@ -240,24 +302,24 @@ struct OnboardingView: View {
 
                 VStack(spacing: 12) {
                     selectionCard(
-                        title: "1962 Code",
-                        description: "Friday abstinence. Lenten fast (ages 21\u{2013}59). The standard traditional discipline.",
+                        title: ContentStore.shared.uiString("onboarding.penance.1962.title", "1962 Code"),
+                        description: ContentStore.shared.uiString("onboarding.penance.1962.desc", "Friday abstinence. Lenten fast (ages 21\u{2013}59). The standard traditional discipline."),
                         isSelected: selectedPenance == PenanceDiscipline.discipline1962.rawValue
                     ) {
                         selectedPenance = PenanceDiscipline.discipline1962.rawValue
                     }
 
                     selectionCard(
-                        title: "1917 Code",
-                        description: "Stricter. Includes Advent fasting, vigil fasts, and broader abstinence rules.",
+                        title: ContentStore.shared.uiString("onboarding.penance.1917.title", "1917 Code"),
+                        description: ContentStore.shared.uiString("onboarding.penance.1917.desc", "Stricter. Includes Advent fasting, vigil fasts, and broader abstinence rules."),
                         isSelected: selectedPenance == PenanceDiscipline.discipline1917.rawValue
                     ) {
                         selectedPenance = PenanceDiscipline.discipline1917.rawValue
                     }
 
                     selectionCard(
-                        title: "Full Traditional",
-                        description: "The strictest observance. Ember Day fasts, all traditional vigils, Saturday abstinence.",
+                        title: ContentStore.shared.uiString("onboarding.penance.strict.title", "Full Traditional"),
+                        description: ContentStore.shared.uiString("onboarding.penance.strict.desc", "The strictest observance. Ember Day fasts, all traditional vigils, Saturday abstinence."),
                         isSelected: selectedPenance == PenanceDiscipline.strict.rawValue
                     ) {
                         selectedPenance = PenanceDiscipline.strict.rawValue
@@ -293,24 +355,24 @@ struct OnboardingView: View {
 
                 VStack(spacing: 12) {
                     selectionCard(
-                        title: "Latin & English",
-                        description: "Side by side. See both languages together.",
+                        title: LanguageMode.both.label,
+                        description: ContentStore.shared.uiString("onboarding.langmode.both_desc", "Side by side. See both languages together."),
                         isSelected: selectedLanguage == LanguageMode.both.rawValue
                     ) {
                         selectedLanguage = LanguageMode.both.rawValue
                     }
 
                     selectionCard(
-                        title: "Latin Only",
-                        description: "Immerse yourself in the sacred language.",
+                        title: LanguageMode.latinOnly.label,
+                        description: ContentStore.shared.uiString("onboarding.langmode.latin_desc", "Immerse yourself in the sacred language."),
                         isSelected: selectedLanguage == LanguageMode.latinOnly.rawValue
                     ) {
                         selectedLanguage = LanguageMode.latinOnly.rawValue
                     }
 
                     selectionCard(
-                        title: "English Only",
-                        description: "Read in the vernacular.",
+                        title: LanguageMode.vernacular.label,
+                        description: ContentStore.shared.uiString("onboarding.langmode.vernacular_desc", "Read in the vernacular."),
                         isSelected: selectedLanguage == LanguageMode.vernacular.rawValue
                     ) {
                         selectedLanguage = LanguageMode.vernacular.rawValue
@@ -347,8 +409,8 @@ struct OnboardingView: View {
                 VStack(spacing: 10) {
                     ForEach(saintOptions, id: \.slug) { saint in
                         saintCard(
-                            name: saint.name,
-                            motto: saint.motto,
+                            name: ContentStore.shared.uiString("onboarding.saint.\(saint.slug).name", saint.name),
+                            motto: ContentStore.shared.uiString("onboarding.saint.\(saint.slug).motto", saint.motto),
                             isSelected: selectedSaint == saint.slug
                         ) {
                             if selectedSaint == saint.slug {
@@ -407,20 +469,20 @@ struct OnboardingView: View {
 
                 VStack(spacing: 14) {
                     notificationToggle(
-                        title: "Daily liturgical update",
-                        description: "What feast it is, penance obligations, today\u{2019}s propers.",
+                        title: ContentStore.shared.uiString("onboarding.notif.liturgical", "Daily liturgical update"),
+                        description: ContentStore.shared.uiString("onboarding.notif.liturgical_desc", "What feast it is, penance obligations, today\u{2019}s propers."),
                         isOn: $notifLiturgical
                     )
 
                     notificationToggle(
-                        title: "Prayer rule reminders",
-                        description: "Morning, midday, and evening prayer nudges.",
+                        title: ContentStore.shared.uiString("onboarding.notif.rule", "Prayer rule reminders"),
+                        description: ContentStore.shared.uiString("onboarding.notif.rule_desc", "Morning, midday, and evening prayer nudges."),
                         isOn: $notifPrayerRule
                     )
 
                     notificationToggle(
-                        title: "Divine Office bells",
-                        description: "Notifications at the canonical hours.",
+                        title: ContentStore.shared.uiString("onboarding.notif.office", "Divine Office bells"),
+                        description: ContentStore.shared.uiString("onboarding.notif.office_desc", "Notifications at the canonical hours."),
                         isOn: $notifOffice
                     )
                 }

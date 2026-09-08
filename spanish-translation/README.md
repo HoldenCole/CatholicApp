@@ -497,8 +497,12 @@ so integration cannot silently misalign.
   questions) and `confession_guides_es.json` (both guided paths; the
   basic path's act of contrition is the received "Señor mío
   Jesucristo"). Validator, sync and fidelity QA cover all three.
-  Onboarding is left in English by design: it runs before the
-  vernacular can be chosen.
+  Onboarding now opens with the vernacular choice (English / Español,
+  each option described in its own language) as its very first page;
+  the overlay is applied at once, so the rest of onboarding — rite,
+  penance and language-mode cards, the notification toggles, the saint
+  mottos, the tradition and feature rows — reads in the chosen
+  language, all keyed in `ui_strings_es.json`.
 
   While pairing the daily verses against `psalter_es.json` the
   importer's split-psalm packing turned out to have mis-mapped the

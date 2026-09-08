@@ -67,6 +67,7 @@ ALLOWLIST = [
     ("ART", "ui_strings", "learn.unmark"),
     ("ART", "ui_strings", "confession.two_paths"),
     ("ART", "ui_strings", "common.see_also"),
+    ("ART", "ui_strings", "onboarding.tour"),
     ("ART", "ui_strings", "rosary.bead_of"),
     ("ART", "ui_strings", "stations.begin"),
     ("ART", "ui_strings", "stations.progress"),

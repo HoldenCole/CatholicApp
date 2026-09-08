@@ -4,6 +4,7 @@ import com.lampstandhq.introibo.data.content.ContentStore
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -60,7 +61,7 @@ fun OnboardingScreen(
     val context = androidx.compose.ui.platform.LocalContext.current
     val settingsRepo = remember { com.lampstandhq.introibo.storage.settings.SettingsRepository(context) }
     val scope = rememberCoroutineScope()
-    val pagerState = rememberPagerState(pageCount = { 4 })
+    val pagerState = rememberPagerState(pageCount = { 5 })
     var showTutorial by remember { mutableStateOf(false) }
 
     if (showTutorial) {
@@ -84,10 +85,11 @@ fun OnboardingScreen(
             modifier = Modifier.weight(1f),
         ) { page ->
             when (page) {
-                0 -> WelcomePage()
-                1 -> TraditionPage()
-                2 -> SettingsPage(settingsRepo, scope)
-                3 -> FeaturesPage()
+                0 -> VernacularPage(settingsRepo, scope)
+                1 -> WelcomePage()
+                2 -> TraditionPage()
+                3 -> SettingsPage(settingsRepo, scope)
+                4 -> FeaturesPage()
             }
         }
 
@@ -98,7 +100,7 @@ fun OnboardingScreen(
         ) {
             // Page dots
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                for (i in 0 until 4) {
+                for (i in 0 until 5) {
                     Box(
                         modifier = Modifier
                             .size(8.dp)
@@ -113,7 +115,7 @@ fun OnboardingScreen(
             // Continue / Tour button
             TextButton(
                 onClick = {
-                    if (pagerState.currentPage < 3) {
+                    if (pagerState.currentPage < 4) {
                         scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                     } else {
                         showTutorial = true
@@ -126,7 +128,7 @@ fun OnboardingScreen(
                     .padding(vertical = 4.dp),
             ) {
                 Text(
-                    text = if (pagerState.currentPage < 3) "Continue" else "Take a Quick Tour  ✠",
+                    text = if (pagerState.currentPage < 4) ContentStore.uiString("common.continue", "Continue") else ContentStore.uiString("onboarding.tour", "Take a Quick Tour  ✠"),
                     style = type.bodySm.copy(
                         fontWeight = FontWeight.SemiBold,
                         fontStyle = FontStyle.Italic,
@@ -140,11 +142,115 @@ fun OnboardingScreen(
 
             TextButton(onClick = onComplete) {
                 Text(
-                    text = if (pagerState.currentPage < 3) "Skip" else "Skip Tutorial",
+                    text = if (pagerState.currentPage < 4) ContentStore.uiString("common.skip", "Skip") else ContentStore.uiString("tutorial.skip", "Skip Tutorial"),
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.tertiaryText,
                 )
             }
+        }
+    }
+}
+
+/**
+ * First page: the vernacular language, so that everything after it (and
+ * the app) reads in the chosen language. Each option describes itself in
+ * its own language. The overlay is applied at once; MainActivity keys
+ * the onboarding tree on the language so this screen recomposes.
+ */
+@Composable
+private fun VernacularPage(
+    settingsRepo: com.lampstandhq.introibo.storage.settings.SettingsRepository,
+    scope: kotlinx.coroutines.CoroutineScope,
+) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+    val vernacular by settingsRepo.vernacularLanguage.collectAsState(initial = ContentStore.currentVernacular)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Spacer(modifier = Modifier.height(60.dp))
+
+        Text(
+            text = "Introíbo",
+            style = type.pageTitle.copy(fontSize = scaledSp(34f), fontWeight = FontWeight.SemiBold, fontStyle = FontStyle.Italic),
+            color = colors.primaryText,
+        )
+        Spacer(modifier = Modifier.height(12.dp))
+        Text(
+            text = "LINGUA VERNÁCULA",
+            style = type.captionSm.copy(fontStyle = FontStyle.Italic),
+            color = colors.sanctuaryRed,
+            letterSpacing = 3.sp,
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = ContentStore.uiString("onboarding.vernacular", "Choose your language"),
+            style = type.pageTitle.copy(fontSize = scaledSp(26f), fontWeight = FontWeight.SemiBold),
+            color = colors.primaryText,
+            textAlign = TextAlign.Center,
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = ContentStore.uiString("onboarding.vernacular_sub", "Latin is always shown. Choose the language of the translations and of the app."),
+            style = type.bodySm,
+            color = colors.secondaryText,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(horizontal = 32.dp),
+        )
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Column(
+            modifier = Modifier.padding(horizontal = 28.dp).fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            VernacularCard(
+                title = "English",
+                desc = "Translations and the app in English.",
+                selected = vernacular == com.lampstandhq.introibo.storage.settings.VernacularLanguage.ENGLISH,
+            ) {
+                scope.launch {
+                    settingsRepo.setVernacularLanguage(com.lampstandhq.introibo.storage.settings.VernacularLanguage.ENGLISH)
+                    ContentStore.applyVernacular(com.lampstandhq.introibo.storage.settings.VernacularLanguage.ENGLISH)
+                }
+            }
+            VernacularCard(
+                title = "Español",
+                desc = "Traducciones y aplicación en español.",
+                selected = vernacular == com.lampstandhq.introibo.storage.settings.VernacularLanguage.SPANISH,
+            ) {
+                scope.launch {
+                    settingsRepo.setVernacularLanguage(com.lampstandhq.introibo.storage.settings.VernacularLanguage.SPANISH)
+                    ContentStore.applyVernacular(com.lampstandhq.introibo.storage.settings.VernacularLanguage.SPANISH)
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(40.dp))
+    }
+}
+
+@Composable
+private fun VernacularCard(title: String, desc: String, selected: Boolean, onClick: () -> Unit) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .border(if (selected) 2.dp else 0.5.dp, if (selected) colors.sanctuaryRed else colors.frameLine)
+            .clickable(onClick = onClick)
+            .padding(16.dp),
+        verticalAlignment = Alignment.Top,
+    ) {
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(text = title, style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
+            Text(text = desc, style = type.captionSm, color = colors.secondaryText)
+        }
+        if (selected) {
+            Text("✓", color = colors.sanctuaryRed, style = type.titleM)
         }
     }
 }
@@ -202,8 +308,8 @@ private fun WelcomePage() {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(6.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                Text("Ad free", style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
-                Text("Latin first", style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
+                Text(ContentStore.uiString("onboarding.ad_free", "Ad free"), style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
+                Text(ContentStore.uiString("onboarding.latin_first", "Latin first"), style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
             }
             Box(
                 modifier = Modifier
@@ -212,8 +318,8 @@ private fun WelcomePage() {
                     .background(colors.goldLeaf.copy(alpha = 0.3f)),
             )
             Column(verticalArrangement = Arrangement.spacedBy(6.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                Text("1962 Calendar", style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
-                Text("Works offline", style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
+                Text(ContentStore.uiString("onboarding.calendar_1962", "1962 Calendar"), style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
+                Text(ContentStore.uiString("onboarding.offline", "Works offline"), style = type.captionSm.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
             }
         }
 
@@ -239,7 +345,7 @@ private fun TraditionPage() {
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
-            text = "Tradition First",
+            text = ContentStore.uiString("onboarding.tradition_first", "Tradition First"),
             style = type.pageTitle.copy(fontSize = scaledSp(34f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )
@@ -257,11 +363,18 @@ private fun TraditionPage() {
             modifier = Modifier.padding(horizontal = 32.dp),
             verticalArrangement = Arrangement.spacedBy(18.dp),
         ) {
-            TraditionRow("The 1962 Missal", "Every prayer, rubric, and response of the Traditional Latin Mass. No Novus Ordo.")
-            TraditionRow("The Roman Breviary", "All eight canonical hours as they were prayed before the reforms. Not the Liturgy of the Hours.")
-            TraditionRow("Latin Always", "Every prayer in Ecclesiastical Latin with faithful English translation. Latin is never hidden or secondary.")
-            TraditionRow("Traditional Penance", "Friday abstinence, Lenten fast, Ember Days. Choose 1962, 1917, or stricter pre-Pius XII discipline.")
-            TraditionRow("Follow a Patron Saint", "Daily practice checklists, streak tracking, and prayers for 7 patron saints of the traditional life.")
+            listOf(
+                "The 1962 Missal" to "Every prayer, rubric, and response of the Traditional Latin Mass. No Novus Ordo.",
+                "The Roman Breviary" to "All eight canonical hours as they were prayed before the reforms. Not the Liturgy of the Hours.",
+                "Latin Always" to "Every prayer in Ecclesiastical Latin with faithful English translation. Latin is never hidden or secondary.",
+                "Traditional Penance" to "Friday abstinence, Lenten fast, Ember Days. Choose 1962, 1917, or stricter pre-Pius XII discipline.",
+                "Follow a Patron Saint" to "Daily practice checklists, streak tracking, and prayers for 7 patron saints of the traditional life.",
+            ).forEachIndexed { i, (title, desc) ->
+                TraditionRow(
+                    ContentStore.uiString("onboarding.tradition.$i.title", title),
+                    ContentStore.uiString("onboarding.tradition.$i.desc", desc),
+                )
+            }
         }
 
         Spacer(modifier = Modifier.height(40.dp))
@@ -284,6 +397,7 @@ private fun FeaturesPage() {
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
 
+    // English literals are the defaults; Spanish by index (onboarding.feature.N).
     val features = listOf(
         "Liturgical Today" to "Daily psalm, penance, season, feast days, and today's Mass propers.",
         "1962 Missal" to "Complete Ordinary and 574 daily Propers interleaved in correct Mass order.",
@@ -294,7 +408,9 @@ private fun FeaturesPage() {
         "Follow a Saint" to "7 patron saints with daily practices and streak tracking.",
         "Learn Latin" to "10 lessons with 97 flashcards and quizzes.",
         "Reference Library" to "41 articles, 574 searchable propers, TLM history, and glossary.",
-    )
+    ).mapIndexed { i, (title, desc) ->
+        ContentStore.uiString("onboarding.feature.$i.title", title) to ContentStore.uiString("onboarding.feature.$i.desc", desc)
+    }
 
     Column(
         modifier = Modifier
@@ -432,7 +548,7 @@ private fun SettingsPage(
 
         // Rite selection
         Column(modifier = Modifier.padding(horizontal = 32.dp).fillMaxWidth()) {
-            Text("Missal Rite", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
+            Text(ContentStore.uiString("onboarding.header.rite", "Missal Rite"), style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
             Spacer(modifier = Modifier.height(8.dp))
             com.lampstandhq.introibo.storage.settings.MissalRite.entries.forEach { r ->
                 Row(
@@ -454,7 +570,7 @@ private fun SettingsPage(
 
         // Penance discipline
         Column(modifier = Modifier.padding(horizontal = 32.dp).fillMaxWidth()) {
-            Text("Penance Discipline", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
+            Text(ContentStore.uiString("onboarding.header.penance", "Penance Discipline"), style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
             Spacer(modifier = Modifier.height(8.dp))
             com.lampstandhq.introibo.storage.settings.PenanceDiscipline.entries.forEach { d ->
                 Row(
@@ -476,7 +592,7 @@ private fun SettingsPage(
 
         // Language
         Column(modifier = Modifier.padding(horizontal = 32.dp).fillMaxWidth()) {
-            Text("Language", style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
+            Text(ContentStore.uiString("onboarding.header.language", "Language"), style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.sanctuaryRed)
             Spacer(modifier = Modifier.height(8.dp))
             com.lampstandhq.introibo.storage.settings.LanguageMode.entries.forEach { l ->
                 Row(
@@ -486,7 +602,7 @@ private fun SettingsPage(
                         .padding(vertical = 10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Text(l.label(), style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
+                    Text(l.label(ContentStore.currentVernacular), style = type.body, color = colors.primaryText, modifier = Modifier.weight(1f))
                     if (language == l) {
                         Text("✓", color = colors.sanctuaryRed, style = type.titleM)
                     }
