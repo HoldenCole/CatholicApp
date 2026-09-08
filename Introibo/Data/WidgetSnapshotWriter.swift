@@ -32,7 +32,8 @@ enum WidgetSnapshotWriter {
                         "widget.label.midday", "widget.label.evening",
                         "widget.tap_to_pray", "widget.stale",
                         "widget.reading.introit", "widget.reading.collect",
-                        "widget.reading.epistle", "widget.reading.gospel"] {
+                        "widget.reading.epistle", "widget.reading.gospel",
+                        "widget.saints.day_of", "widget.saints.upcoming"] {
                 let es = store.uiString(key, "")
                 if !es.isEmpty { chrome[key] = es }
             }

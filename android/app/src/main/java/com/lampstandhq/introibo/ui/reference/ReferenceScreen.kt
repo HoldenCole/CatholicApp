@@ -391,7 +391,7 @@ private fun PropersListSheet(
                     onValueChange = { search = it },
                     placeholder = {
                         Text(
-                            "Search by saint, date, or scripture",
+                            ContentStore.uiString("reference.search_hint", "Search by saint, date, or scripture"),
                             style = type.body,
                             color = colors.tertiaryText,
                         )
@@ -555,12 +555,12 @@ private fun TLMHistorySheet(
                         )
                         Spacer(Modifier.height(8.dp))
                         Text(
-                            text = "History of the Mass",
+                            text = ContentStore.uiString("reference.history", "History of the Mass"),
                             style = type.pageTitle,
                             color = colors.ivory,
                         )
                         Text(
-                            text = "FROM THE LAST SUPPER TO THE PRESENT DAY",
+                            text = ContentStore.uiString("reference.history_sub", "From the Last Supper to the Present Day").uppercase(),
                             style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                             color = colors.muted,
                             letterSpacing = 2.5.sp,
@@ -884,7 +884,7 @@ private fun QuickLinksSection(onEntryClick: (ReferenceEntry) -> Unit = {}) {
                     .background(colors.goldLeaf.copy(alpha = 0.4f)),
             )
             Text(
-                text = "Quick Reference",
+                text = ContentStore.uiString("reference.quick", "Quick Reference"),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.secondaryText,
                 modifier = Modifier.padding(horizontal = 10.dp),

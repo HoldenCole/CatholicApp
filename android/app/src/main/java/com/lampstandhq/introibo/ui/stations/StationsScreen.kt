@@ -123,7 +123,7 @@ fun StationsScreen(
             com.lampstandhq.introibo.ui.prayers.NotificationScheduleSheet(
                 scheduleId = "devotion.stations",
                 title = "Via Crucis",
-                subtitle = "Remind me to pray the Stations",
+                subtitle = ContentStore.uiString("stations.remind", "Remind me to pray the Stations"),
                 onDismiss = { showNotification = false },
             )
         }
@@ -160,7 +160,7 @@ private fun StartList(
             Spacer(modifier = Modifier.height(10.dp))
             Text(text = "Via Crucis", style = type.pageTitle, color = colors.ivory)
             Text(
-                text = "THE WAY OF THE CROSS",
+                text = ContentStore.uiString("stations.title", "The Way of the Cross").uppercase(),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.muted,
                 letterSpacing = 2.5.sp,
@@ -199,7 +199,7 @@ private fun StartList(
                 color = colors.sanctuaryRed,
             )
             Text(
-                text = "  ·  BEGIN",
+                text = ContentStore.uiString("stations.begin", "·  Begin").uppercase(),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.secondaryText,
                 letterSpacing = 2.sp,
@@ -326,7 +326,7 @@ private fun PrayStationView(
             verticalArrangement = Arrangement.spacedBy(18.dp),
         ) {
             SmallLabel(
-                text = "Státio ${station.station}  ·  ${index + 1} of 14",
+                text = ContentStore.uiString("stations.progress", "Státio {0}  ·  {1} of 14").replace("{0}", "${station.station}").replace("{1}", "${index + 1}"),
                 color = colors.goldLeaf,
             )
 
@@ -372,7 +372,7 @@ private fun PrayStationView(
                         color = colors.ivory,
                     )
                     Text(
-                        text = "We adore Thee, O Christ, and we bless Thee.",
+                        text = ContentStore.uiString("stations.adoramus", "We adore Thee, O Christ, and we bless Thee."),
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                         color = colors.muted,
                     )
@@ -384,7 +384,7 @@ private fun PrayStationView(
                         color = colors.ivory,
                     )
                     Text(
-                        text = "Because by Thy holy Cross Thou hast redeemed the world.",
+                        text = ContentStore.uiString("stations.quia", "Because by Thy holy Cross Thou hast redeemed the world."),
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                         color = colors.muted,
                     )

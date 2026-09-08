@@ -50,7 +50,7 @@ struct RosaryView: View {
                 .appFont(.titleL)
                 .italic()
                 .foregroundStyle(Color.primaryText)
-            Text("Pray the Rosary")
+            Text(ContentStore.shared.uiString("rosary.pray", "Pray the Rosary"))
                 .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
@@ -82,7 +82,7 @@ struct RosaryView: View {
                     }
                     HStack {
                         Spacer()
-                        Text("Incipiámus  ✠  Begin")
+                        Text(ContentStore.shared.uiString("common.incipiamus", "Incipiámus  ✠  Begin"))
                             .smallLabel(color: Color.sanctuaryRed)
                     }
                     .padding(.top, 6)

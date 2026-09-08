@@ -110,7 +110,7 @@ struct SearchView: View {
                     .appFont(.scaledSystem(15))
                     .foregroundStyle(Color.tertiaryText)
                 TextField("", text: $query, prompt:
-                    Text("Search prayers, Mass, Office…")
+                    Text(ContentStore.shared.uiString("search.placeholder", "Search prayers, Mass, Office…"))
                         .foregroundColor(Color.tertiaryText)
                 )
                 .appFont(.body)
@@ -185,11 +185,11 @@ struct SearchView: View {
             Text("✠")
                 .appFont(.titleL)
                 .foregroundStyle(Color.sanctuaryRed)
-            Text("Search the whole library")
+            Text(ContentStore.shared.uiString("search.whole_library", "Search the whole library"))
                 .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
-            Text("Prayers, the Mass, the Office, reference, saints, and the calendar.")
+            Text(ContentStore.shared.uiString("search.whole_library_sub", "Prayers, the Mass, the Office, reference, saints, and the calendar."))
                 .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
@@ -203,7 +203,7 @@ struct SearchView: View {
     private var noResults: some View {
         VStack(spacing: 8) {
             Spacer()
-            Text("No results")
+            Text(ContentStore.shared.uiString("search.no_results", "No results"))
                 .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)

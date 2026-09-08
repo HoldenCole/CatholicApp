@@ -38,7 +38,7 @@ struct QuizView: View {
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
@@ -52,7 +52,7 @@ struct QuizView: View {
         let q = questions[questionIndex]
         return ScrollView {
             VStack(spacing: 24) {
-                Text("Question \(questionIndex + 1) of \(questions.count)")
+                Text(ContentStore.shared.uiString("learn.quiz.progress", "Question {0} of {1}").replacingOccurrences(of: "{0}", with: "\(questionIndex + 1)").replacingOccurrences(of: "{1}", with: "\(questions.count)"))
                     .smallLabel(color: Color.sanctuaryRed)
                     .padding(.top, 24)
 
@@ -182,7 +182,7 @@ struct QuizView: View {
                 isFinished = false
                 generateQuestions()
             } label: {
-                Text("Try Again")
+                Text(ContentStore.shared.uiString("common.try_again", "Try Again"))
                     .smallLabel(color: Color.sanctuaryRed, tracking: 3)
                     .padding(.vertical, 14)
                     .frame(maxWidth: .infinity)
@@ -193,7 +193,7 @@ struct QuizView: View {
             .padding(.top, 20)
 
             Button { dismiss() } label: {
-                Text("Done")
+                Text(ContentStore.shared.uiString("common.done", "Done"))
                     .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)

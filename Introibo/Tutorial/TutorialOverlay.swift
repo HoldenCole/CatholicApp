@@ -56,14 +56,14 @@ struct TutorialOverlay: View {
                                 manager.skip()
                             }
                         } label: {
-                            Text("Skip tutorial")
+                            Text(ContentStore.shared.uiString("tutorial.skip", "Skip Tutorial"))
                                 .appFont(.captionSm)
                                 .foregroundStyle(Color.ivory.opacity(0.6))
                                 .padding(.horizontal, 16)
                                 .padding(.vertical, 16)
                         }
                         .frame(minWidth: 44, minHeight: 44)
-                        .accessibilityLabel("Skip tutorial")
+                        .accessibilityLabel(ContentStore.shared.uiString("tutorial.skip", "Skip Tutorial"))
                     }
                     Spacer()
                 }

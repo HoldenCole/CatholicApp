@@ -69,10 +69,10 @@ struct MissalView: View {
                                 showShareSheet = true
                             }
                         } label: {
-                            Label("Share as PDF", systemImage: "doc.richtext")
+                            Label(ContentStore.shared.uiString("share.pdf", "Share as PDF"), systemImage: "doc.richtext")
                         }
                         ShareLink(item: fullMassText()) {
-                            Label("Share as Text", systemImage: "doc.plaintext")
+                            Label(ContentStore.shared.uiString("share.text", "Share as Text"), systemImage: "doc.plaintext")
                         }
                     } label: {
                         Image(systemName: "square.and.arrow.up")

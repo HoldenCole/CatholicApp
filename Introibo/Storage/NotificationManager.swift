@@ -37,13 +37,14 @@ enum PrayerNotificationManager {
                 let prayer = prayerSlug.flatMap { prayerCache[$0] }
 
                 let rulePeriod = schedule.id.hasPrefix("rule.") ? String(schedule.id.dropFirst(5)) : nil
+                let ui = ContentStore.shared
                 let ruleTitle = rulePeriod.map { period -> String in
                     switch period {
-                    case "morning": return "Morning Prayer Rule"
-                    case "midday":  return "Midday Prayer Rule"
-                    case "evening": return "Evening Prayer Rule"
-                    case "daily":   return "Daily Prayer Rule"
-                    default:        return "Prayer Rule"
+                    case "morning": return ui.uiString("notif.rule.morning", "Morning Prayer Rule")
+                    case "midday":  return ui.uiString("notif.rule.midday", "Midday Prayer Rule")
+                    case "evening": return ui.uiString("notif.rule.evening", "Evening Prayer Rule")
+                    case "daily":   return ui.uiString("notif.rule.daily", "Daily Prayer Rule")
+                    default:        return ui.uiString("notif.rule.generic", "Prayer Rule")
                     }
                 }
 
@@ -51,11 +52,11 @@ enum PrayerNotificationManager {
                     if schedule.id.hasPrefix("devotion.") {
                         let key = String(schedule.id.dropFirst(9))
                         switch key {
-                        case "office":     return "Divine Office"
-                        case "rosary":     return "The Holy Rosary"
-                        case "stations":   return "Stations of the Cross"
-                        case "confession": return "Confession"
-                        default:           return "Devotion"
+                        case "office":     return ui.uiString("notif.devotion.office", "Divine Office")
+                        case "rosary":     return ui.uiString("notif.devotion.rosary", "The Holy Rosary")
+                        case "stations":   return ui.uiString("notif.devotion.stations", "Stations of the Cross")
+                        case "confession": return ui.uiString("notif.devotion.confession", "Confession")
+                        default:           return ui.uiString("notif.devotion.generic", "Devotion")
                         }
                     } else if schedule.id.hasPrefix("office.") {
                         let slug = String(schedule.id.dropFirst(7))
@@ -64,7 +65,8 @@ enum PrayerNotificationManager {
                             "tertia": "Terce", "sexta": "Sext", "nona": "None",
                             "vesperae": "Vespers", "completorium": "Compline"
                         ]
-                        return hourNames[slug] ?? "Divine Office"
+                        guard let en = hourNames[slug] else { return ui.uiString("notif.devotion.office", "Divine Office") }
+                        return ui.uiString("hour.\(slug)", en)
                     }
                     return nil
                 }()
@@ -75,10 +77,10 @@ enum PrayerNotificationManager {
                     content.body = String(prayer.lines.first?.lat.strippingEm.prefix(80) ?? "")
                 } else if let ruleTitle = ruleTitle {
                     content.title = ruleTitle
-                    content.body = "Time for your prayers."
+                    content.body = ui.uiString("notif.body.prayers", "Time for your prayers.")
                 } else if let devotionTitle = devotionTitle {
                     content.title = devotionTitle
-                    content.body = "Time for your devotion."
+                    content.body = ui.uiString("notif.body.devotion", "Time for your devotion.")
                 }
                 content.sound = .default
 

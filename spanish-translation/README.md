@@ -449,6 +449,22 @@ so integration cannot silently misalign.
   fidelity QA all cover the new files (3,232 pairs, all hard checks
   clean).
 
+  **Tranche U1 — UI chrome completeness: COMPLETE.** An inventory scan
+  of both codebases (`scripts/qa_ui_strings.py`, kept as an advisory
+  tool) found 172 distinct English UI literals outside the vernacular
+  layer — onboarding, search, confession/examen, stations, rosary,
+  office and prayer-rule dialogs, settings/about, widget settings,
+  tutorial, quiz and flash-card hints, plus every "Done/Cancel/Save/
+  Back" button. All 233 sites now go through `uiString` (or
+  `WidgetConfigStore.chrome` in the iOS widget extension) with one
+  shared key on both platforms and Spanish in `ui_strings_es.json`
+  (263 keys). Notification titles and bodies (prayer-rule, devotion
+  and per-hour reminders), the optional-penance names and
+  descriptions, and the saints-widget labels on both platforms are
+  routed the same way. `validate_spanish.py` now scans both codebases
+  and fails if any referenced key lacks Spanish, so the chrome cannot
+  silently regress.
+
 With this, EVERY content surface of the app outside the Divine Office
 corpus carries Spanish. What remains is the Office (multi-MB; see
 below).

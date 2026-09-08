@@ -40,11 +40,11 @@ struct NotificationScheduleSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") { save(); dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { save(); dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.cancel", "Cancel")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
@@ -69,7 +69,7 @@ struct NotificationScheduleSheet: View {
 
     private var toggleSection: some View {
         HStack {
-            Label("Remind Me", systemImage: isEnabled ? "bell.fill" : "bell")
+            Label(ContentStore.shared.uiString("notif.remind_me", "Remind Me"), systemImage: isEnabled ? "bell.fill" : "bell")
                 .appFont(.titleM)
                 .foregroundStyle(Color.primaryText)
             Spacer()
@@ -132,7 +132,7 @@ struct NotificationScheduleSheet: View {
                 .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
-            Text("Open Settings to allow Introibo to send prayer reminders.")
+            Text(ContentStore.shared.uiString("notif.open_settings_msg", "Open Settings to allow Introibo to send prayer reminders."))
                 .appFont(.captionSm)
                 .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
@@ -141,7 +141,7 @@ struct NotificationScheduleSheet: View {
                     UIApplication.shared.open(url)
                 }
             } label: {
-                Text("Open Settings")
+                Text(ContentStore.shared.uiString("notif.open_settings", "Open Settings"))
                     .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)

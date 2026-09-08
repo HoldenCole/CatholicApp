@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.storage.notification
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -178,31 +180,33 @@ class PrayerNotificationManager(private val context: Context) {
             id.startsWith("rule.") -> {
                 val period = id.removePrefix("rule.")
                 val title = when (period) {
-                    "morning" -> "Morning Prayer Rule"
-                    "midday" -> "Midday Prayer Rule"
-                    "evening" -> "Evening Prayer Rule"
-                    "daily" -> "Daily Prayer Rule"
-                    else -> "Prayer Rule"
+                    "morning" -> ContentStore.uiString("notif.rule.morning", "Morning Prayer Rule")
+                    "midday" -> ContentStore.uiString("notif.rule.midday", "Midday Prayer Rule")
+                    "evening" -> ContentStore.uiString("notif.rule.evening", "Evening Prayer Rule")
+                    "daily" -> ContentStore.uiString("notif.rule.daily", "Daily Prayer Rule")
+                    else -> ContentStore.uiString("notif.rule.generic", "Prayer Rule")
                 }
-                title to "Time for your prayers."
+                title to ContentStore.uiString("notif.body.prayers", "Time for your prayers.")
             }
 
             id.startsWith("devotion.") -> {
                 val key = id.removePrefix("devotion.")
                 val title = when (key) {
-                    "office" -> "Divine Office"
-                    "rosary" -> "The Holy Rosary"
-                    "stations" -> "Stations of the Cross"
-                    "confession" -> "Confession"
-                    else -> "Devotion"
+                    "office" -> ContentStore.uiString("notif.devotion.office", "Divine Office")
+                    "rosary" -> ContentStore.uiString("notif.devotion.rosary", "The Holy Rosary")
+                    "stations" -> ContentStore.uiString("notif.devotion.stations", "Stations of the Cross")
+                    "confession" -> ContentStore.uiString("notif.devotion.confession", "Confession")
+                    else -> ContentStore.uiString("notif.devotion.generic", "Devotion")
                 }
-                title to "Time for your devotion."
+                title to ContentStore.uiString("notif.body.devotion", "Time for your devotion.")
             }
 
             id.startsWith("office.") -> {
                 val slug = id.removePrefix("office.")
-                val title = OFFICE_HOUR_NAMES[slug] ?: "Divine Office"
-                title to "Time for your devotion."
+                val en = OFFICE_HOUR_NAMES[slug]
+                val title = if (en != null) ContentStore.uiString("hour.$slug", en)
+                            else ContentStore.uiString("notif.devotion.office", "Divine Office")
+                title to ContentStore.uiString("notif.body.devotion", "Time for your devotion.")
             }
 
             id.startsWith("prayer.") -> {
@@ -214,7 +218,7 @@ class PrayerNotificationManager(private val context: Context) {
                 slug.replaceFirstChar { it.uppercase() } to ""
             }
 
-            else -> "Introibo" to "Time for your prayers."
+            else -> "Introibo" to ContentStore.uiString("notif.body.prayers", "Time for your prayers.")
         }
     }
 

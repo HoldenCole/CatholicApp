@@ -82,7 +82,7 @@ struct TutorialView: View {
 
                 if page < steps.count - 1 {
                     Button { dismiss() } label: {
-                        Text("Skip Tutorial")
+                        Text(ContentStore.shared.uiString("tutorial.skip", "Skip Tutorial"))
                             .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.tertiaryText)

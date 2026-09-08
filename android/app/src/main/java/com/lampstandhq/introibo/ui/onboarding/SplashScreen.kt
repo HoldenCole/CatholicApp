@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.onboarding
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
@@ -106,7 +108,7 @@ fun SplashScreen(
             Spacer(modifier = Modifier.weight(1f))
 
             Text(
-                text = "A prayer companion for the traditional Catholic life",
+                text = ContentStore.uiString("splash.tagline", "A prayer companion for the traditional Catholic life"),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.muted,
                 textAlign = TextAlign.Center,

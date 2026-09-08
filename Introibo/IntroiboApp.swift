@@ -55,10 +55,10 @@ struct IntroiboApp: App {
                         }
                     }
                     .alert("Introibo has been improved throughout.", isPresented: $showUpgradeModal) {
-                        Button("Take the tour") { tutorial.startUpgradeTutorial() }
-                        Button("Skip", role: .cancel) { tutorial.upgradeTutorialPrompted = true }
+                        Button(ContentStore.shared.uiString("app.tour.take", "Take the tour")) { tutorial.startUpgradeTutorial() }
+                        Button(ContentStore.shared.uiString("common.skip", "Skip"), role: .cancel) { tutorial.upgradeTutorialPrompted = true }
                     } message: {
-                        Text("Would you like a quick tour of what\u{2019}s new?")
+                        Text(ContentStore.shared.uiString("app.tour.prompt", "Would you like a quick tour of what\u{2019}s new?"))
                     }
             }
             }

@@ -27,7 +27,7 @@ struct ExamenView: View {
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
@@ -39,10 +39,10 @@ struct ExamenView: View {
             Text("✠  Exámen Consciéntiæ  ✠")
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
-            Text("Examination of Conscience")
+            Text(ContentStore.shared.uiString("confession.examen", "Examination of Conscience"))
                 .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
-            Text("Decálogus  ·  The Ten Commandments")
+            Text(ContentStore.shared.uiString("examen.decalogue", "Decálogus  ·  The Ten Commandments"))
                 .appFont(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
@@ -60,7 +60,7 @@ struct ExamenView: View {
     }
 
     private var introBlock: some View {
-        Text("Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush, but do not dwell past what is useful.")
+        Text(ContentStore.shared.uiString("examen.intro", "Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush, but do not dwell past what is useful."))
             .appFont(.bodyIt)
             .foregroundStyle(Color.secondaryText)
             .lineSpacing(4)
@@ -122,7 +122,7 @@ struct ExamenView: View {
                     .minimumScaleFactor(0.7)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
-            Text("Make an Act of Contrition. Resolve to avoid the occasions of sin. Proceed to confession.")
+            Text(ContentStore.shared.uiString("examen.outro", "Make an Act of Contrition. Resolve to avoid the occasions of sin. Proceed to confession."))
                 .appFont(.bodyIt)
                 .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)

@@ -162,7 +162,7 @@ fun SearchScreen(
                 IconButton(onClick = onDismiss, modifier = Modifier.size(28.dp)) {
                     Icon(
                         imageVector = Icons.Filled.Close,
-                        contentDescription = "Close",
+                        contentDescription = ContentStore.uiString("common.close", "Close"),
                         tint = colors.tertiaryText,
                         modifier = Modifier.size(18.dp),
                     )
@@ -176,7 +176,7 @@ fun SearchScreen(
                 onValueChange = { query = it },
                 placeholder = {
                     Text(
-                        text = "Search prayers, Mass, Office…",
+                        text = ContentStore.uiString("search.placeholder", "Search prayers, Mass, Office…"),
                         style = type.body,
                         color = colors.tertiaryText,
                     )
@@ -410,13 +410,13 @@ private fun EmptyPrompt() {
         Text(text = "✠", style = type.titleL, color = colors.sanctuaryRed)
         Spacer(Modifier.height(10.dp))
         Text(
-            text = "Search the whole library",
+            text = ContentStore.uiString("search.whole_library", "Search the whole library"),
             style = type.titleM.copy(fontStyle = FontStyle.Italic),
             color = colors.primaryText,
         )
         Spacer(Modifier.height(6.dp))
         Text(
-            text = "Prayers, the Mass, the Office, reference, saints, and the calendar.",
+            text = ContentStore.uiString("search.whole_library_sub", "Prayers, the Mass, the Office, reference, saints, and the calendar."),
             style = type.captionSm.copy(fontStyle = FontStyle.Italic),
             color = colors.secondaryText,
             textAlign = TextAlign.Center,
@@ -434,7 +434,7 @@ private fun NoResults() {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
-            text = "No results",
+            text = ContentStore.uiString("search.no_results", "No results"),
             style = type.titleM.copy(fontStyle = FontStyle.Italic),
             color = colors.primaryText,
         )

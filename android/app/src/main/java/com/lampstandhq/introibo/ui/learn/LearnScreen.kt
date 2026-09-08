@@ -152,7 +152,7 @@ fun LearnScreen() {
                                 color = colors.primaryText,
                             )
                             Text(
-                                text = "of ${courses.size}",
+                                text = ContentStore.uiString("common.of_count", "of {0}").replace("{0}", "${courses.size}"),
                                 style = type.captionSm,
                                 color = colors.tertiaryText,
                             )

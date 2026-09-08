@@ -20,7 +20,7 @@ struct ReferencedBySection: View {
     var body: some View {
         if !sources.isEmpty {
             VStack(alignment: .leading, spacing: 12) {
-                Text("Citatur In  \u{00B7}  Referenced By")
+                Text(ContentStore.shared.uiString("common.referenced_by", "Citatur In  ·  Referenced By"))
                     .smallLabel(color: Color.goldLeaf)
 
                 VStack(alignment: .leading, spacing: 10) {

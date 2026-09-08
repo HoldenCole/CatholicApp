@@ -52,7 +52,7 @@ struct SettingsView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
@@ -398,19 +398,19 @@ struct SettingsView: View {
             Button(role: .destructive) {
                 showResetConfirm = true
             } label: {
-                Label("Reset All Progress", systemImage: "arrow.counterclockwise")
+                Label(ContentStore.shared.uiString("settings.reset_all", "Reset All Progress"), systemImage: "arrow.counterclockwise")
             }
             .listRowBackground(Color.pageBackground)
-            .confirmationDialog("Clear all local progress?", isPresented: $showResetConfirm) {
+            .confirmationDialog(ContentStore.shared.uiString("settings.reset_confirm", "Clear all local progress?"), isPresented: $showResetConfirm) {
                 Button("Reset", role: .destructive) {
                     UserProgress.resetAll()
                 }
-                Button("Cancel", role: .cancel) {}
+                Button(ContentStore.shared.uiString("common.cancel", "Cancel"), role: .cancel) {}
             } message: {
-                Text("This will clear your followed saint, streaks, rosary history, and mastered lessons. Settings are preserved.")
+                Text(ContentStore.shared.uiString("settings.reset_confirm_sub", "This will clear your followed saint, streaks, rosary history, and mastered lessons. Settings are preserved."))
             }
         } footer: {
-            Text("Clears all local progress. Settings (rite, penance, theme) are not affected.")
+            Text(ContentStore.shared.uiString("settings.reset_footer", "Clears all local progress. Settings (rite, penance, theme) are not affected."))
         }
     }
 
@@ -423,10 +423,10 @@ struct SettingsView: View {
                     .appFont(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.primaryText)
-                Text("Liturgical texts for the Divine Office and Holy Mass are sourced from the Divinum Officium project (divinumofficium.com).")
+                Text(ContentStore.shared.uiString("settings.license.do", "Liturgical texts for the Divine Office and Holy Mass are sourced from the Divinum Officium project (divinumofficium.com)."))
                     .appFont(.caption)
                     .foregroundStyle(Color.secondaryText)
-                Text("Licensed under the MIT License.")
+                Text(ContentStore.shared.uiString("settings.license.mit", "Licensed under the MIT License."))
                     .appFont(.caption)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
@@ -435,7 +435,7 @@ struct SettingsView: View {
         } header: {
             Text("Licentia · Licenses")
         } footer: {
-            Text("Introibo uses open-source liturgical data to ensure accuracy.")
+            Text(ContentStore.shared.uiString("settings.license.note", "Introibo uses open-source liturgical data to ensure accuracy."))
         }
     }
 
@@ -460,14 +460,14 @@ struct SettingsView: View {
                     .foregroundStyle(Color.secondaryText)
             }
             .listRowBackground(Color.pageBackground)
-            Text("A prayer companion for the traditional Catholic life. Ad free. Works offline.")
+            Text(ContentStore.shared.uiString("settings.about.tagline", "A prayer companion for the traditional Catholic life. Ad free. Works offline."))
                 .appFont(.caption)
                 .foregroundStyle(Color.secondaryText)
                 .listRowBackground(Color.pageBackground)
         } header: {
             Text("About")
         } footer: {
-            Text("Built by Lampstand")
+            Text(ContentStore.shared.uiString("settings.about.built", "Built by Lampstand"))
                 .frame(maxWidth: .infinity)
                 .padding(.top, 12)
         }

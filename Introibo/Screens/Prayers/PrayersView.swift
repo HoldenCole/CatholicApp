@@ -63,7 +63,7 @@ struct PrayersView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Regula Orationis")
                         .smallLabel(color: Color.sanctuaryRed)
-                    Text("My Daily Rule")
+                    Text(ContentStore.shared.uiString("prayers.my_rule", "My Daily Rule"))
                         .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
@@ -104,7 +104,7 @@ struct PrayersView: View {
             Button { showRuleEditor = true } label: {
                 HStack(spacing: 6) {
                     Image(systemName: "pencil")
-                    Text("Edit rule")
+                    Text(ContentStore.shared.uiString("prayers.edit_rule", "Edit rule"))
                 }
                 .appFont(.captionSm)
                 .foregroundStyle(Color.sanctuaryRed)
@@ -112,7 +112,7 @@ struct PrayersView: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Edit prayer rule")
+            .accessibilityLabel(ContentStore.shared.uiString("prayers.edit_rule_title", "Edit Prayer Rule"))
 
             if !rule.morning.isEmpty {
                 rulePeriod("Mane", eng: "Morning", slugs: rule.morning)
@@ -210,16 +210,16 @@ struct PrayersView: View {
                 Text("✠")
                     .appFont(.titleL)
                     .foregroundStyle(Color.sanctuaryRed)
-                Text("Create Your Prayer Rule")
+                Text(ContentStore.shared.uiString("prayers.create_rule", "Create Your Prayer Rule"))
                     .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
-                Text("Choose prayers for morning, midday, and evening")
+                Text(ContentStore.shared.uiString("prayers.create_rule_sub", "Choose prayers for morning, midday, and evening"))
                     .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
-                Text("Begin")
+                Text(ContentStore.shared.uiString("stations.begin", "·  Begin"))
                     .smallLabel(color: Color.sanctuaryRed)
                     .padding(.top, 4)
             }
@@ -292,7 +292,7 @@ struct PrayersView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
-                Text("All Prayers")
+                Text(ContentStore.shared.uiString("prayers.all", "All Prayers"))
                     .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
@@ -305,7 +305,7 @@ struct PrayersView: View {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Color.tertiaryText)
                     .appFont(.scaledSystem(14))
-                TextField("Search prayers", text: $searchText)
+                TextField(ContentStore.shared.uiString("prayers.search", "Search prayers"), text: $searchText)
                     .appFont(.body)
                 if !searchText.isEmpty {
                     Button { searchText = "" } label: {
@@ -453,15 +453,15 @@ struct PrayerRuleEditor: View {
             .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden)
             .background(Color.pageBackground.ignoresSafeArea())
-            .navigationTitle("Edit Prayer Rule")
+            .navigationTitle(ContentStore.shared.uiString("prayers.edit_rule_title", "Edit Prayer Rule"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.cancel", "Cancel")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
+                    Button(ContentStore.shared.uiString("common.save", "Save")) {
                         UserProgress.savePrayerRule(rule)
                         dismiss()
                     }
@@ -535,7 +535,7 @@ struct PrayerRuleEditor: View {
                 HStack {
                     Image(systemName: "plus.circle")
                         .foregroundStyle(Color.sanctuaryRed)
-                    Text("Add prayers or hours")
+                    Text(ContentStore.shared.uiString("prayers.add_items", "Add prayers or hours"))
                         .appFont(.body)
                         .foregroundStyle(Color.sanctuaryRed)
                 }
@@ -572,7 +572,7 @@ struct RuleItemPicker: View {
                         }
                     }
                 } header: {
-                    Text("Horæ Canonicæ  ·  Canonical Hours")
+                    Text(ContentStore.shared.uiString("prayers.canonical_hours", "Horæ Canonicæ  ·  Canonical Hours"))
                 }
 
                 ForEach(Self.categoryOrder, id: \.self) { category in
@@ -595,11 +595,11 @@ struct RuleItemPicker: View {
             .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden)
             .background(Color.pageBackground.ignoresSafeArea())
-            .navigationTitle("Add to \(periodTitle)")
+            .navigationTitle(ContentStore.shared.uiString("prayers.add_to_period", "Add to {0}").replacingOccurrences(of: "{0}", with: "\(periodTitle)"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }

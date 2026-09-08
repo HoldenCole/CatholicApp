@@ -48,7 +48,7 @@ struct LearnView: View {
                     Text("\(mastered.count)")
                         .appFont(.titleXL)
                         .foregroundStyle(Color.primaryText)
-                    Text("of \(store.courses.count)")
+                    Text(ContentStore.shared.uiString("common.of_count", "of {0}").replacingOccurrences(of: "{0}", with: "\(store.courses.count)"))
                         .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                 }

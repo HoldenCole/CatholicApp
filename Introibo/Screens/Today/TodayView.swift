@@ -398,7 +398,7 @@ struct TodayView: View {
 
                     HStack {
                         Spacer()
-                        Text("Léctio Hodiérna  ✠  Read")
+                        Text(ContentStore.shared.uiString("today.lectio", "Léctio Hodiérna  ✠  Read"))
                             .smallLabel(color: Color.sanctuaryRed)
                     }
                     .padding(.top, 4)
@@ -473,7 +473,7 @@ struct TodayView: View {
                     Image(systemName: "arrow.right.circle")
                         .appFont(.scaledSystem(11))
                         .foregroundStyle(Color.sanctuaryRed)
-                    Text("Next obligation: \(next)")
+                    Text(ContentStore.shared.uiString("today.next_obligation", "Next obligation: {0}").replacingOccurrences(of: "{0}", with: "\(next)"))
                         .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
@@ -603,7 +603,7 @@ struct TodayView: View {
                 }
 
                 if let lastDate = UserProgress.rosaryLastDate() {
-                    Text("Last prayed: \(Self.dateFmt.string(from: lastDate))")
+                    Text(ContentStore.shared.uiString("today.last_prayed", "Last prayed: {0}").replacingOccurrences(of: "{0}", with: "\(Self.dateFmt.string(from: lastDate))"))
                         .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
@@ -669,7 +669,7 @@ struct TodayView: View {
                     .appFont(.captionSm)
                     .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                 if streak > 0 {
-                    Text("\(streak) day streak")
+                    Text(ContentStore.shared.uiString("saints.streak", "{0} day streak").replacingOccurrences(of: "{0}", with: "\(streak)"))
                         .appFont(.captionSm)
                         .foregroundStyle(Color.goldLeaf)
                 }
@@ -696,7 +696,7 @@ struct TodayView: View {
                 .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
-            Text("Choose a patron saint and track daily practices")
+            Text(ContentStore.shared.uiString("today.saints_sub", "Choose a patron saint and track daily practices"))
                 .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
@@ -718,7 +718,7 @@ struct TodayView: View {
             VStack(alignment: .leading, spacing: 8) {
                 let mastered = UserProgress.masteredLessons()
                 sectionLabel("Schola", subtitle: ContentStore.shared.uiString("today.schola.sub", "Latin learning"))
-                Text("Mastered: \(mastered.count) of \(ContentStore.shared.courses.count) lessons")
+                Text(ContentStore.shared.uiString("today.mastered", "Mastered: {0} of {1} lessons").replacingOccurrences(of: "{0}", with: "\(mastered.count)").replacingOccurrences(of: "{1}", with: "\(ContentStore.shared.courses.count)"))
                     .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
             }

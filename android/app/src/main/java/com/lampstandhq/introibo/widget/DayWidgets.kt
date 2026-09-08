@@ -242,6 +242,7 @@ class IntroiboSaintsWidgetProvider : DayScopedWidgetProvider() {
         val english = ordo?.let { ContentStore.ordoNameEnglish(it.name) }
 
         views.setTextViewText(R.id.saints_season, ctx.englishName.uppercase())
+        views.setTextViewText(R.id.saints_upcoming_label, ContentStore.uiString("widget.saints.upcoming", "Ventura · Upcoming"))
         views.setInt(R.id.saints_ribbon, "setBackgroundColor", liturgicalColorInt(ordo?.color))
         views.setTextViewText(R.id.saints_title, if (latin) latinName else (english ?: latinName))
 
@@ -251,7 +252,7 @@ class IntroiboSaintsWidgetProvider : DayScopedWidgetProvider() {
             val day = java.time.temporal.ChronoUnit.DAYS
                 .between(segment.startDate, today).toInt() + 1
             views.setProgressBar(R.id.saints_progress, segment.dayCount, day, false)
-            views.setTextViewText(R.id.saints_progress_text, "Day $day of ${segment.dayCount}")
+            views.setTextViewText(R.id.saints_progress_text, ContentStore.uiString("widget.saints.day_of", "Day {0} of {1}").replace("{0}", "$day").replace("{1}", "${segment.dayCount}"))
         } else {
             views.setProgressBar(R.id.saints_progress, 1, 0, false)
             views.setTextViewText(R.id.saints_progress_text, "")

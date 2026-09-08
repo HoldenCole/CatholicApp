@@ -211,8 +211,8 @@ fun PrayersScreen() {
         ) {
             NotificationScheduleSheet(
                 scheduleId = "rule.daily",
-                title = "Prayer Rule Reminder",
-                subtitle = "Get reminded to pray your daily rule",
+                title = ContentStore.uiString("prayers.rule_reminder_a11y", "Prayer rule reminder"),
+                subtitle = ContentStore.uiString("prayers.rule_reminder_sub", "Get reminded to pray your daily rule"),
                 onDismiss = { showRuleNotification = false },
             )
         }
@@ -254,7 +254,7 @@ private fun DailyRuleSection(
             Column(modifier = Modifier.weight(1f)) {
                 SmallLabel(text = "Regula Orationis", color = colors.sanctuaryRed)
                 Text(
-                    text = "My Daily Rule",
+                    text = ContentStore.uiString("prayers.my_rule", "My Daily Rule"),
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                 )
@@ -264,7 +264,7 @@ private fun DailyRuleSection(
                 Icon(
                     imageVector = if (hasReminder) Icons.Filled.Notifications
                                   else Icons.Outlined.Notifications,
-                    contentDescription = "Prayer rule reminder",
+                    contentDescription = ContentStore.uiString("prayers.rule_reminder_a11y", "Prayer rule reminder"),
                     tint = colors.sanctuaryRed,
                 )
             }
@@ -323,7 +323,7 @@ private fun DailyRuleSection(
             )
             Spacer(Modifier.width(6.dp))
             Text(
-                text = "Edit rule",
+                text = ContentStore.uiString("prayers.edit_rule", "Edit rule"),
                 style = type.captionSm,
                 color = colors.sanctuaryRed,
             )
@@ -483,19 +483,19 @@ private fun SetupRuleCard(onBegin: () -> Unit = {}) {
     ) {
         Text(text = "✠", style = type.titleL, color = colors.sanctuaryRed)
         Text(
-            text = "Create Your Prayer Rule",
+            text = ContentStore.uiString("prayers.create_rule", "Create Your Prayer Rule"),
             style = type.titleM.copy(fontStyle = FontStyle.Italic),
             color = colors.primaryText,
             modifier = Modifier.padding(top = 4.dp),
         )
         Text(
-            text = "Choose prayers for morning, midday, and evening",
+            text = ContentStore.uiString("prayers.create_rule_sub", "Choose prayers for morning, midday, and evening"),
             style = type.captionSm.copy(fontStyle = FontStyle.Italic),
             color = colors.secondaryText,
             modifier = Modifier.padding(top = 2.dp),
         )
         SmallLabel(
-            text = "Begin",
+            text = ContentStore.uiString("stations.begin", "·  Begin"),
             color = colors.sanctuaryRed,
             modifier = Modifier.padding(top = 8.dp),
         )
@@ -625,7 +625,7 @@ private fun FullLibrarySection(
                     .background(colors.goldLeaf.copy(alpha = 0.4f)),
             )
             Text(
-                text = "All Prayers",
+                text = ContentStore.uiString("prayers.all", "All Prayers"),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.secondaryText,
                 modifier = Modifier.padding(horizontal = 10.dp),
@@ -645,7 +645,7 @@ private fun FullLibrarySection(
             value = searchText,
             onValueChange = onSearchChange,
             placeholder = {
-                Text("Search prayers", style = type.body, color = colors.tertiaryText)
+                Text(ContentStore.uiString("prayers.search", "Search prayers"), style = type.body, color = colors.tertiaryText)
             },
             leadingIcon = {
                 Icon(
@@ -803,7 +803,7 @@ private fun OccasionPrayerSheet(
                     modifier = Modifier.padding(top = 4.dp),
                 )
                 Text(
-                    text = "${prayers.size} prayers",
+                    text = ContentStore.uiString("prayers.count", "{0} prayers").replace("{0}", "${prayers.size}"),
                     style = type.captionSm,
                     color = colors.secondaryText,
                 )
@@ -904,7 +904,7 @@ private fun PrayerRuleEditorSheet(
                 androidx.compose.material3.TextButton(
                     onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }
                 ) {
-                    Text("Cancel", color = colors.tertiaryText, style = type.body)
+                    Text(ContentStore.uiString("common.cancel", "Cancel"), color = colors.tertiaryText, style = type.body)
                 }
                 androidx.compose.material3.TextButton(onClick = {
                     scope.launch {
@@ -914,7 +914,7 @@ private fun PrayerRuleEditorSheet(
                         sheetState.hide()
                     }.invokeOnCompletion { onDismiss() }
                 }) {
-                    Text("Save", color = colors.sanctuaryRed, style = type.body)
+                    Text(ContentStore.uiString("common.save", "Save"), color = colors.sanctuaryRed, style = type.body)
                 }
             }
 
@@ -926,7 +926,7 @@ private fun PrayerRuleEditorSheet(
             ) {
                 SmallLabel(text = "Regula Orationis", color = colors.sanctuaryRed)
                 Text(
-                    text = "Create Your Prayer Rule",
+                    text = ContentStore.uiString("prayers.create_rule", "Create Your Prayer Rule"),
                     style = type.titleL.copy(fontStyle = FontStyle.Italic),
                     color = colors.primaryText,
                     modifier = Modifier.padding(top = 4.dp),

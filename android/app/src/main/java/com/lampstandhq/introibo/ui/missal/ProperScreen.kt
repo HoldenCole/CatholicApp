@@ -138,18 +138,18 @@ fun ProperScreen(
                     }
                     DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
                         DropdownMenuItem(
-                            text = { Text("Share as PDF") },
+                            text = { Text(ContentStore.uiString("share.pdf", "Share as PDF")) },
                             leadingIcon = { Icon(Icons.Filled.PictureAsPdf, null, modifier = Modifier.size(20.dp)) },
                             onClick = {
                                 showMenu = false
                                 val html = com.lampstandhq.introibo.export.MassHTMLExporter.properHTML(proper)
                                 com.lampstandhq.introibo.export.PDFExporter.sharePDF(
-                                    context, html, fileName = proper.title, title = "Share Propers"
+                                    context, html, fileName = proper.title, title = ContentStore.uiString("missal.share_propers", "Share Propers")
                                 )
                             },
                         )
                         DropdownMenuItem(
-                            text = { Text("Share as Text") },
+                            text = { Text(ContentStore.uiString("share.text", "Share as Text")) },
                             leadingIcon = { Icon(Icons.AutoMirrored.Filled.Subject, null, modifier = Modifier.size(20.dp)) },
                             onClick = {
                                 showMenu = false

@@ -489,7 +489,7 @@ private fun DayDetail(
                                 penanceStrict = penance.strict, discipline = discipline.short,
                             )
                             com.lampstandhq.introibo.export.PDFExporter.sharePDF(
-                                shareContext, html, fileName = title, title = "Share"
+                                shareContext, html, fileName = title, title = ContentStore.uiString("common.share", "Share")
                             )
                         },
                     )

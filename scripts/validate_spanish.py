@@ -441,6 +441,35 @@ def validate_psalter():
     print(f"psalter_weekly_parts_es.json: {n} parts checked (full coverage)")
 
 
+def validate_ui_string_keys():
+    """Every uiString / widget-chrome key referenced in either codebase must
+    carry Spanish in ui_strings_es.json — the UI chrome is only complete
+    while this holds."""
+    import re
+    path = ES / "ui_strings_es.json"
+    if not path.exists():
+        print("ui_strings_es.json: not present (skipped)")
+        return
+    es = json.load(open(path))
+    pat = re.compile(r'(?:uiString|WidgetConfigStore\.chrome)\(\s*"([^"]+)"')
+    used = {}
+    roots = [Path("Introibo"), Path("IntroiboWidgets"),
+             Path("android/app/src/main/java")]
+    for root in roots:
+        for f in root.rglob("*"):
+            if f.suffix not in (".swift", ".kt"):
+                continue
+            for m in pat.finditer(f.read_text(encoding="utf-8")):
+                used.setdefault(m.group(1), f)
+    # Dynamic prefixes ("calendar.season." + name) are checked by their
+    # concrete members elsewhere; skip keys that end in a dot.
+    missing = sorted(k for k in used
+                     if k not in es and not k.endswith(".")
+                     and "$" not in k and "(" not in k)   # interpolated keys
+    check(not missing, f"ui_strings_es.json: keys used in code without Spanish: {missing}")
+    print(f"ui_strings_es.json: {len(used)} referenced keys checked")
+
+
 def validate_martyrology():
     """The Martyrology overlay: every day and every movable entry of the
     source has Spanish, entry counts align, and nothing is empty."""
@@ -712,6 +741,7 @@ def main():
     validate_keyed("marian_antiphons_es.json", "marian_antiphons.json",
                    ["title_es", "body_es", "versicle_es", "collect_es"])
     validate_martyrology()
+    validate_ui_string_keys()
     validate_keyed("hours_es.json", "hours.json",
                    ["name_es", "time_es", "intro_es"])
     validate_missal()

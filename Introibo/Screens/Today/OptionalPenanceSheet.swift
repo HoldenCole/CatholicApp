@@ -63,7 +63,7 @@ struct OptionalPenanceSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }

@@ -98,7 +98,7 @@ struct ReferenceView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
-                Text("Quick Reference")
+                Text(ContentStore.shared.uiString("reference.quick", "Quick Reference"))
                     .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
@@ -242,7 +242,7 @@ struct PropersSearchView: View {
             HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Color.tertiaryText)
-                TextField("Search by saint, date, or scripture", text: $searchText)
+                TextField(ContentStore.shared.uiString("reference.search_hint", "Search by saint, date, or scripture"), text: $searchText)
                     .appFont(.body)
                 if !searchText.isEmpty {
                     Button { searchText = "" } label: {
@@ -341,10 +341,10 @@ struct TLMHistoryView: View {
                         .appFont(.scaledSystem(36))
                         .foregroundStyle(Color.sanctuaryRed.opacity(0.6))
                         .padding(.top, 24)
-                    Text("History of the Mass")
+                    Text(ContentStore.shared.uiString("reference.history", "History of the Mass"))
                         .appFont(.pageTitle)
                         .foregroundStyle(Color.ivory)
-                    Text("From the Last Supper to the Present Day")
+                    Text(ContentStore.shared.uiString("reference.history_sub", "From the Last Supper to the Present Day"))
                         .appFont(.caption)
                         .italic()
                         .foregroundStyle(Color.muted)

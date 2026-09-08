@@ -24,7 +24,7 @@ struct FlashCard: View {
                             .appFont(.captionSm)
                             .foregroundStyle(Color.tertiaryText)
                     }
-                    Text("tap to see Latin")
+                    Text(ContentStore.shared.uiString("learn.flash.tap_latin", "tap to see Latin"))
                         .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
@@ -34,7 +34,7 @@ struct FlashCard: View {
                         .appFont(.titleL)
                         .italic()
                         .foregroundStyle(Color.primaryText)
-                    Text("tap to reveal")
+                    Text(ContentStore.shared.uiString("learn.flash.tap_reveal", "tap to reveal"))
                         .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)

@@ -138,7 +138,7 @@ fun HourSheet(
                             Icon(
                                 imageVector = if (isInRule) Icons.Filled.Bookmark
                                               else Icons.Outlined.BookmarkBorder,
-                                contentDescription = "Add to Prayer Rule",
+                                contentDescription = ContentStore.uiString("office.add_to_rule", "Add to Prayer Rule"),
                                 tint = colors.sanctuaryRed,
                             )
                         }
@@ -146,7 +146,7 @@ fun HourSheet(
                             Icon(
                                 imageVector = if (hasNotification) Icons.Filled.Notifications
                                               else Icons.Outlined.Notifications,
-                                contentDescription = "Hour reminder",
+                                contentDescription = ContentStore.uiString("office.hour_reminder", "Hour reminder"),
                                 tint = colors.sanctuaryRed,
                             )
                         }
@@ -210,11 +210,11 @@ fun HourSheet(
             onDismissRequest = { showAddToRule = false },
             containerColor = colors.pageBackground,
             title = {
-                Text("Add to Prayer Rule", style = type.titleM, color = colors.primaryText)
+                Text(ContentStore.uiString("office.add_to_rule", "Add to Prayer Rule"), style = type.titleM, color = colors.primaryText)
             },
             text = {
                 Text(
-                    "Add ${hour.eng} to your prayer rule",
+                    ContentStore.uiString("office.add_to_rule_msg", "Add {0} to your prayer rule").replace("{0}", "${hour.eng}"),
                     style = type.bodySm,
                     color = colors.secondaryText,
                 )
@@ -233,13 +233,13 @@ fun HourSheet(
                         TextButton(onClick = {
                             scope.launch { progressRepo.removeFromRule(ruleSlug) }
                             showAddToRule = false
-                        }) { Text("Remove from Rule", color = colors.sanctuaryRed) }
+                        }) { Text(ContentStore.uiString("office.remove_from_rule", "Remove from Rule"), color = colors.sanctuaryRed) }
                     }
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showAddToRule = false }) {
-                    Text("Cancel", color = colors.tertiaryText)
+                    Text(ContentStore.uiString("common.cancel", "Cancel"), color = colors.tertiaryText)
                 }
             },
         )

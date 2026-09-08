@@ -52,6 +52,17 @@ ALLOWLIST = [
     # lectio4/lectio94 differ only by an i/j spelling (ejiceret/eiceret);
     # the shared Spanish is correct for both
     ("DUP", "sanctoral", "09-23.lectio4+lectio94"),
+    # UI chrome labels keep the app's double-space "  ·  " / "  ✠  "
+    # separators, exactly as the English literals do
+    ("ART", "ui_strings", "common.referenced_by"),
+    ("ART", "ui_strings", "common.incipiamus"),
+    ("ART", "ui_strings", "examen.decalogue"),
+    ("ART", "ui_strings", "office.subtitle"),
+    ("ART", "ui_strings", "prayers.canonical_hours"),
+    ("ART", "ui_strings", "rosary.bead_of"),
+    ("ART", "ui_strings", "stations.begin"),
+    ("ART", "ui_strings", "stations.progress"),
+    ("ART", "ui_strings", "today.lectio"),
 ]
 
 def allowed(check, file, key):

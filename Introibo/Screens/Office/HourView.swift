@@ -53,7 +53,7 @@ struct HourView: View {
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -79,16 +79,16 @@ struct HourView: View {
                 )
             }
             .onAppear(perform: refreshNotificationState)
-            .confirmationDialog("Add to Prayer Rule", isPresented: $showAddToRule) {
-                Button("Morning") { addToRule("morning") }
-                Button("Midday") { addToRule("midday") }
-                Button("Evening") { addToRule("evening") }
+            .confirmationDialog(ContentStore.shared.uiString("office.add_to_rule", "Add to Prayer Rule"), isPresented: $showAddToRule) {
+                Button(ContentStore.shared.uiString("common.morning", "Morning")) { addToRule("morning") }
+                Button(ContentStore.shared.uiString("common.midday", "Midday")) { addToRule("midday") }
+                Button(ContentStore.shared.uiString("common.evening", "Evening")) { addToRule("evening") }
                 if isInRule {
-                    Button("Remove from Rule", role: .destructive) { removeFromRule() }
+                    Button(ContentStore.shared.uiString("office.remove_from_rule", "Remove from Rule"), role: .destructive) { removeFromRule() }
                 }
-                Button("Cancel", role: .cancel) { }
+                Button(ContentStore.shared.uiString("common.cancel", "Cancel"), role: .cancel) { }
             } message: {
-                Text("Add \(hour.eng) to your prayer rule")
+                Text(ContentStore.shared.uiString("office.add_to_rule_msg", "Add {0} to your prayer rule").replacingOccurrences(of: "{0}", with: "\(hour.eng)"))
             }
         }
     }

@@ -111,7 +111,7 @@ struct RosaryFlowView: View {
         .background(Color.pageBackground.ignoresSafeArea())
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button("Done") { dismiss() }
+                Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                     .foregroundStyle(Color.sanctuaryRed)
             }
             ToolbarItem(placement: .principal) {
@@ -195,12 +195,12 @@ struct RosaryFlowView: View {
                 .foregroundStyle(Color.secondaryText)
                 .textCase(.uppercase)
                 .tracking(2)
-            Text("Marked as prayed today")
+            Text(ContentStore.shared.uiString("rosary.marked", "Marked as prayed today"))
                 .appFont(.captionSm)
                 .foregroundStyle(Color.goldLeaf)
                 .padding(.top, 8)
             Button { dismiss() } label: {
-                Text("Done")
+                Text(ContentStore.shared.uiString("common.done", "Done"))
                     .smallLabel(color: Color.sanctuaryRed, tracking: 3)
                     .padding(.vertical, 14)
                     .frame(maxWidth: .infinity)

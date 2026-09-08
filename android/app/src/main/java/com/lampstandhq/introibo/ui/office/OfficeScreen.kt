@@ -84,7 +84,7 @@ fun OfficeScreen(
                     IconButton(onClick = onBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back",
+                            contentDescription = ContentStore.uiString("common.back", "Back"),
                             tint = colors.sanctuaryRed,
                         )
                     }
@@ -123,7 +123,7 @@ fun OfficeScreen(
             Spacer(modifier = Modifier.height(4.dp))
 
             Text(
-                text = "THE DIVINE OFFICE  ·  1962 ROMAN BREVIARY",
+                text = ContentStore.uiString("office.subtitle_1962", "The Divine Office  ·  1962 Roman Breviary").uppercase(),
                 style = type.captionSm,
                 color = colors.secondaryText,
                 letterSpacing = 2.sp,
@@ -153,12 +153,12 @@ fun OfficeScreen(
             Spacer(modifier = Modifier.height(12.dp))
 
             Text(
-                text = "Tap any hour to enter its prayer.",
+                text = ContentStore.uiString("office.tap_hint", "Tap any hour to enter its prayer."),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.tertiaryText,
             )
             Text(
-                text = "The current hour glows.",
+                text = ContentStore.uiString("office.glow_hint", "The current hour glows."),
                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                 color = colors.tertiaryText,
             )
@@ -183,7 +183,7 @@ fun OfficeScreen(
                         color = colors.primaryText,
                     )
                     Text(
-                        text = "OFFICE OF THE DEAD",
+                        text = ContentStore.uiString("office.dead", "Office of the Dead").uppercase(),
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic, letterSpacing = 2.sp),
                         color = colors.secondaryText,
                     )
@@ -210,7 +210,7 @@ fun OfficeScreen(
             com.lampstandhq.introibo.ui.prayers.NotificationScheduleSheet(
                 scheduleId = "devotion.office",
                 title = "Divine Office",
-                subtitle = "Remind me to pray the Office",
+                subtitle = ContentStore.uiString("office.remind", "Remind me to pray the Office"),
                 onDismiss = { showNotification = false },
             )
         }

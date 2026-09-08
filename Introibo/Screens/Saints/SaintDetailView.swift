@@ -56,7 +56,7 @@ struct SaintDetailView: View {
             .background(Color.pageBackground.ignoresSafeArea())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
@@ -135,7 +135,7 @@ struct SaintDetailView: View {
                 .italic()
                 .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.tertiaryText)
             if streak > 0 {
-                Text("\(streak) day streak")
+                Text(ContentStore.shared.uiString("saints.streak", "{0} day streak").replacingOccurrences(of: "{0}", with: "\(streak)"))
                     .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
             }

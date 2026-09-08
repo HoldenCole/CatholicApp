@@ -100,12 +100,12 @@ fun ConfessionScreen(
                 SmallLabel(text = "Sacraméntum Pæniténtiæ", color = colors.sanctuaryRed)
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "The Sacrament of Penance",
+                    text = ContentStore.uiString("confession.title", "The Sacrament of Penance"),
                     style = type.titleL.copy(fontStyle = FontStyle.Italic),
                     color = colors.primaryText,
                 )
                 Text(
-                    text = "Two guided paths, plus the Examination of Conscience.",
+                    text = ContentStore.uiString("confession.sub", "Two guided paths, plus the Examination of Conscience."),
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                     modifier = Modifier.padding(top = 2.dp),
@@ -123,12 +123,12 @@ fun ConfessionScreen(
                 SmallLabel(text = "Exámen Consciéntiæ", color = colors.goldLeaf)
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Examination of Conscience",
+                    text = ContentStore.uiString("confession.examen", "Examination of Conscience"),
                     style = type.titleL.copy(fontStyle = FontStyle.Italic),
                     color = colors.primaryText,
                 )
                 Text(
-                    text = "Walk through the Ten Commandments with traditional questions for each.",
+                    text = ContentStore.uiString("confession.examen_sub", "Walk through the Ten Commandments with traditional questions for each."),
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                 )
@@ -138,7 +138,7 @@ fun ConfessionScreen(
                         .padding(top = 8.dp),
                     horizontalArrangement = Arrangement.End,
                 ) {
-                    SmallLabel(text = "Incipiámus  ✠  Begin", color = colors.sanctuaryRed)
+                    SmallLabel(text = ContentStore.uiString("common.incipiamus", "Incipiámus  ✠  Begin"), color = colors.sanctuaryRed)
                 }
             }
 
@@ -220,7 +220,7 @@ fun ConfessionScreen(
             com.lampstandhq.introibo.ui.prayers.NotificationScheduleSheet(
                 scheduleId = "devotion.confession",
                 title = "Confession",
-                subtitle = "Remind me to go to Confession",
+                subtitle = ContentStore.uiString("confession.remind", "Remind me to go to Confession"),
                 onDismiss = { showNotification = false },
             )
         }

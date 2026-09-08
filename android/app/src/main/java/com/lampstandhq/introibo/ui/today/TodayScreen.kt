@@ -190,7 +190,7 @@ fun TodayScreen(
                     IconButton(onClick = { onNavigateSearch?.invoke() }) {
                         Icon(
                             imageVector = Icons.Filled.Search,
-                            contentDescription = "Search",
+                            contentDescription = ContentStore.uiString("common.search", "Search"),
                             tint = colors.goldLeaf,
                             modifier = Modifier.size(18.dp),
                         )
@@ -198,7 +198,7 @@ fun TodayScreen(
                     IconButton(onClick = { onNavigateSettings?.invoke() ?: run { showSettings = true } }) {
                         Icon(
                             imageVector = Icons.Filled.Settings,
-                            contentDescription = "Settings",
+                            contentDescription = ContentStore.uiString("common.settings", "Settings"),
                             tint = colors.goldLeaf,
                             modifier = Modifier.size(18.dp),
                         )
@@ -623,7 +623,7 @@ private fun PropersCard(
             horizontalArrangement = Arrangement.End,
         ) {
             SmallLabel(
-                text = "Lectio Hodierna  ✠  Read",
+                text = ContentStore.uiString("today.lectio", "Léctio Hodiérna  ✠  Read"),
                 color = colors.sanctuaryRed,
             )
         }
@@ -694,7 +694,7 @@ private fun PenanceCard(
                 Text(text = "→", fontSize = scaledSp(11f), color = colors.sanctuaryRed)
                 Spacer(Modifier.width(6.dp))
                 Text(
-                    text = "Next obligation: $nextObl",
+                    text = ContentStore.uiString("today.next_obligation", "Next obligation: {0}").replace("{0}", "${nextObl}"),
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                 )
@@ -794,7 +794,7 @@ private fun SaintCard(
                         color = colors.primaryText,
                     )
                     Text(
-                        text = "$totalPractices practices today",
+                        text = ContentStore.uiString("today.practices", "{0} practices today").replace("{0}", "${totalPractices}"),
                         style = type.captionSm,
                         color = colors.secondaryText,
                     )
@@ -999,7 +999,7 @@ private fun ScholaCard(
         SectionLabel(title = "Schola", subtitle = ContentStore.uiString("today.schola.sub", "Latin learning"))
         Spacer(Modifier.height(8.dp))
         Text(
-            text = "Mastered: ${masteredLessons.size} of ${ContentStore.courses.size} lessons",
+            text = ContentStore.uiString("today.mastered", "Mastered: {0} of {1} lessons").replace("{0}", "${masteredLessons.size}").replace("{1}", "${ContentStore.courses.size}"),
             style = type.bodySm,
             color = colors.secondaryText,
         )

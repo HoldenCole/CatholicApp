@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.prayers
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -160,7 +162,7 @@ fun NotificationScheduleSheet(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                text = "Remind Me",
+                text = ContentStore.uiString("notif.remind_me", "Remind Me"),
                 style = type.titleM,
                 color = colors.primaryText,
                 modifier = Modifier.weight(1f),
@@ -282,7 +284,7 @@ fun NotificationScheduleSheet(
                 onClick = onDismiss,
                 modifier = Modifier.weight(1f),
             ) {
-                Text("Cancel", color = colors.sanctuaryRed, style = type.body)
+                Text(ContentStore.uiString("common.cancel", "Cancel"), color = colors.sanctuaryRed, style = type.body)
             }
             TextButton(
                 onClick = { save(); onDismiss() },
@@ -290,7 +292,7 @@ fun NotificationScheduleSheet(
                     .weight(1f)
                     .background(colors.sanctuaryRed.copy(alpha = 0.1f)),
             ) {
-                Text("Save", color = colors.sanctuaryRed, style = type.body)
+                Text(ContentStore.uiString("common.save", "Save"), color = colors.sanctuaryRed, style = type.body)
             }
         }
     }

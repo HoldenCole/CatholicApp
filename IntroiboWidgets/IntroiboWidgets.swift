@@ -472,7 +472,7 @@ struct DailyReadingWidgetView: View {
                 .layoutPriority(1)
 
             if family == .systemLarge, choice != .collect {
-                Text("COLLECT")
+                Text(WidgetConfigStore.chrome("widget.reading.collect", "Collect").uppercased())
                     .font(.system(size: 8, weight: .semibold, design: .serif))
                     .tracking(1.4)
                     .foregroundStyle(Color.wGold)

@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.onboarding
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -46,7 +48,7 @@ private data class TutorialStep(
 
 private val tutorialSteps = listOf(
     TutorialStep(
-        title = "Today",
+        title = ContentStore.uiString("common.today", "Today"),
         items = listOf(
             "Your daily liturgical companion with feast day, season, and liturgical colour",
             "Tap the Propers card to read today's Epistle and Gospel",
@@ -56,7 +58,7 @@ private val tutorialSteps = listOf(
         ),
     ),
     TutorialStep(
-        title = "The Missal",
+        title = ContentStore.uiString("tutorial.missal", "The Missal"),
         items = listOf(
             "Complete 1962 Missale Romanum with 426 daily Propers",
             "Ordinary and Propers interleaved in correct liturgical order",
@@ -76,7 +78,7 @@ private val tutorialSteps = listOf(
         ),
     ),
     TutorialStep(
-        title = "Settings",
+        title = ContentStore.uiString("common.settings", "Settings"),
         items = listOf(
             "Choose your Missal rite: 1962, 1955, or pre-1955 rubrics",
             "Select penance discipline: 1962, 1917, or stricter pre-Pius XII",
@@ -171,7 +173,7 @@ fun TutorialScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 TextButton(onClick = onDismiss) {
                     Text(
-                        text = "Skip Tutorial",
+                        text = ContentStore.uiString("tutorial.skip", "Skip Tutorial"),
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                         color = colors.tertiaryText,
                     )

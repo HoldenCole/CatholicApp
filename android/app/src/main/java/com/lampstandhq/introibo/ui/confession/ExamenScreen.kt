@@ -86,9 +86,9 @@ fun ExamenScreen(
                     Spacer(modifier = Modifier.height(20.dp))
                     SmallLabel(text = "✠  Exámen Consciéntiæ  ✠", color = colors.goldLeaf)
                     Spacer(modifier = Modifier.height(8.dp))
-                    Text(text = "Examination of Conscience", style = type.pageTitle, color = colors.ivory)
+                    Text(text = ContentStore.uiString("confession.examen", "Examination of Conscience"), style = type.pageTitle, color = colors.ivory)
                     Text(
-                        text = "DECÁLOGUS  ·  THE TEN COMMANDMENTS",
+                        text = ContentStore.uiString("examen.decalogue", "Decálogus  ·  The Ten Commandments").uppercase(),
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                         color = colors.muted,
                         letterSpacing = 2.5.sp,
@@ -116,7 +116,7 @@ fun ExamenScreen(
                                 .background(colors.sanctuaryRed.copy(alpha = 0.4f)),
                         )
                         Text(
-                            text = "Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush, but do not dwell past what is useful.",
+                            text = ContentStore.uiString("examen.intro", "Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush, but do not dwell past what is useful."),
                             style = type.bodyIt,
                             color = colors.secondaryText,
                             lineHeight = type.bodyIt.fontSize * 1.25f,
@@ -154,7 +154,7 @@ fun ExamenScreen(
                             )
                         }
                         Text(
-                            text = "Make an Act of Contrition. Resolve to avoid the occasions of sin. Proceed to confession.",
+                            text = ContentStore.uiString("examen.outro", "Make an Act of Contrition. Resolve to avoid the occasions of sin. Proceed to confession."),
                             style = type.bodyIt,
                             color = colors.secondaryText,
                             lineHeight = type.bodyIt.fontSize * 1.2f,

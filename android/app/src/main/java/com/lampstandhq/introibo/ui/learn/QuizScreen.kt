@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.learn
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -171,13 +173,13 @@ fun QuizScreen(
                                 .border(0.5.dp, colors.sanctuaryRed.copy(alpha = 0.6f))
                                 .padding(vertical = 4.dp),
                         ) {
-                            SmallLabel(text = "Try Again", color = colors.sanctuaryRed)
+                            SmallLabel(text = ContentStore.uiString("common.try_again", "Try Again"), color = colors.sanctuaryRed)
                         }
 
                         Spacer(modifier = Modifier.height(8.dp))
                         TextButton(onClick = { scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() } }) {
                             Text(
-                                text = "Close",
+                                text = ContentStore.uiString("common.close", "Close"),
                                 style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                                 color = colors.tertiaryText,
                             )
@@ -195,7 +197,7 @@ fun QuizScreen(
                         verticalArrangement = Arrangement.spacedBy(24.dp),
                     ) {
                         Spacer(modifier = Modifier.height(24.dp))
-                        SmallLabel(text = "Question ${questionIndex + 1} of ${questions.size}", color = colors.sanctuaryRed)
+                        SmallLabel(text = ContentStore.uiString("learn.quiz.progress", "Question {0} of {1}").replace("{0}", "${questionIndex + 1}").replace("{1}", "${questions.size}"), color = colors.sanctuaryRed)
                         Text(text = "Score: $score", style = type.captionSm, color = colors.goldLeaf)
 
                         Column(

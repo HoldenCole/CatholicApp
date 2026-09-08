@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.components
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -50,7 +52,7 @@ fun ReferencedBySection(
             .padding(top = 8.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        SmallLabel(text = "Citatur In  ·  Referenced By", color = colors.goldLeaf)
+        SmallLabel(text = ContentStore.uiString("common.referenced_by", "Citatur In  ·  Referenced By"), color = colors.goldLeaf)
 
         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
             sources.forEach { source ->

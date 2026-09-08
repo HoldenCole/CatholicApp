@@ -120,13 +120,13 @@ fun MissalScreen() {
                     IconButton(onClick = { showShareMenu = true }) {
                         Icon(
                             imageVector = Icons.Filled.Share,
-                            contentDescription = "Share",
+                            contentDescription = ContentStore.uiString("common.share", "Share"),
                             tint = colors.sanctuaryRed,
                         )
                     }
                     DropdownMenu(expanded = showShareMenu, onDismissRequest = { showShareMenu = false }) {
                         DropdownMenuItem(
-                            text = { Text("Share as PDF") },
+                            text = { Text(ContentStore.uiString("share.pdf", "Share as PDF")) },
                             onClick = {
                                 showShareMenu = false
                                 val items = buildFullMassItems(todayProper, rite, ctx, showLeonine)
@@ -138,12 +138,12 @@ fun MissalScreen() {
                                 com.lampstandhq.introibo.export.PDFExporter.sharePDF(
                                     context, html,
                                     fileName = todayProper?.title ?: "Ordo Missae",
-                                    title = "Share Mass",
+                                    title = ContentStore.uiString("missal.share_mass", "Share Mass"),
                                 )
                             },
                         )
                         DropdownMenuItem(
-                            text = { Text("Share as Text") },
+                            text = { Text(ContentStore.uiString("share.text", "Share as Text")) },
                             onClick = {
                                 showShareMenu = false
                                 val shareText = buildFullMassText(todayProper, rite, ctx, showLeonine)

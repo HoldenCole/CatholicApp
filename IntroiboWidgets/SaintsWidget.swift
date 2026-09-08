@@ -65,7 +65,7 @@ struct SaintsWidgetView: View {
                 .padding(.vertical, family == .systemLarge ? 3 : 1)
 
             if !ahead.isEmpty {
-                Text("Ventura \u{00B7} Upcoming".uppercased())
+                Text(WidgetConfigStore.chrome("widget.saints.upcoming", "Ventura \u{00B7} Upcoming").uppercased())
                     .font(.system(size: 8, weight: .semibold, design: .serif))
                     .tracking(1.4)
                     .foregroundStyle(Color.wGold)
@@ -96,7 +96,7 @@ struct SaintsWidgetView: View {
                     }
                 }
                 .frame(height: 3)
-                Text("Day \(day) of \(length)")
+                Text(WidgetConfigStore.chrome("widget.saints.day_of", "Day {0} of {1}").replacingOccurrences(of: "{0}", with: "\(day)").replacingOccurrences(of: "{1}", with: "\(length)"))
                     .font(.system(size: 9, design: .serif))
                     .italic()
                     .foregroundStyle(Color.wInkSoft)

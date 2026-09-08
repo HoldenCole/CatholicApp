@@ -47,7 +47,7 @@ struct TutorialsListView: View {
                         .listRowBackground(Color.pageBackground)
                     }
                 } footer: {
-                    Text("Tutorials can be re-run anytime. Each one navigates to the relevant section and walks you through it.")
+                    Text(ContentStore.shared.uiString("tutorial.rerun_note", "Tutorials can be re-run anytime. Each one navigates to the relevant section and walks you through it."))
                 }
             }
             .listStyle(.insetGrouped)
@@ -57,7 +57,7 @@ struct TutorialsListView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") { dismiss() }
+                    Button(ContentStore.shared.uiString("common.done", "Done")) { dismiss() }
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }

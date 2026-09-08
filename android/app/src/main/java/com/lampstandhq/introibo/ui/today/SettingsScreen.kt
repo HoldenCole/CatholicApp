@@ -115,7 +115,7 @@ fun SettingsScreen(
             IconButton(onClick = onDismiss) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Back",
+                    contentDescription = ContentStore.uiString("common.back", "Back"),
                     tint = colors.sanctuaryRed,
                 )
             }
@@ -573,7 +573,7 @@ fun SettingsScreen(
                     )
                 }
                 SettingsSectionFooter(
-                    text = "Clears all local progress. Settings (rite, penance, theme) are not affected.",
+                    text = ContentStore.uiString("settings.reset_footer", "Clears all local progress. Settings (rite, penance, theme) are not affected."),
                 )
             }
 
@@ -590,13 +590,13 @@ fun SettingsScreen(
                     )
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        text = "Liturgical texts for the Divine Office and Holy Mass are sourced from the Divinum Officium project (divinumofficium.com).",
+                        text = ContentStore.uiString("settings.license.do", "Liturgical texts for the Divine Office and Holy Mass are sourced from the Divinum Officium project (divinumofficium.com)."),
                         style = type.captionSm,
                         color = colors.secondaryText,
                     )
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        text = "Licensed under the MIT License.",
+                        text = ContentStore.uiString("settings.license.mit", "Licensed under the MIT License."),
                         style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                         color = colors.tertiaryText,
                     )
@@ -604,7 +604,7 @@ fun SettingsScreen(
             }
             item {
                 SettingsSectionFooter(
-                    text = "Introibo uses open-source liturgical data to ensure accuracy.",
+                    text = ContentStore.uiString("settings.license.note", "Introibo uses open-source liturgical data to ensure accuracy."),
                 )
             }
 
@@ -626,13 +626,13 @@ fun SettingsScreen(
                     )
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        text = "A prayer companion for the traditional Catholic life. Ad free. Works offline.",
+                        text = ContentStore.uiString("settings.about.tagline", "A prayer companion for the traditional Catholic life. Ad free. Works offline."),
                         style = type.captionSm,
                         color = colors.secondaryText,
                     )
                     Spacer(Modifier.height(12.dp))
                     Text(
-                        text = "Built by Lampstand",
+                        text = ContentStore.uiString("settings.about.built", "Built by Lampstand"),
                         style = type.captionSm,
                         color = colors.tertiaryText,
                         textAlign = TextAlign.Center,
@@ -651,10 +651,10 @@ fun SettingsScreen(
     if (showResetConfirm) {
         AlertDialog(
             onDismissRequest = { showResetConfirm = false },
-            title = { Text("Clear all local progress?") },
+            title = { Text(ContentStore.uiString("settings.reset_confirm", "Clear all local progress?")) },
             text = {
                 Text(
-                    "This will clear your followed saint, streaks, rosary history, and mastered lessons. Settings are preserved.",
+                    ContentStore.uiString("settings.reset_confirm_sub", "This will clear your followed saint, streaks, rosary history, and mastered lessons. Settings are preserved."),
                 )
             },
             confirmButton = {
@@ -669,7 +669,7 @@ fun SettingsScreen(
             },
             dismissButton = {
                 TextButton(onClick = { showResetConfirm = false }) {
-                    Text("Cancel")
+                    Text(ContentStore.uiString("common.cancel", "Cancel"))
                 }
             },
         )

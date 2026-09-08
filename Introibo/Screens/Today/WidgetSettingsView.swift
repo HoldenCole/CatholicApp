@@ -27,7 +27,7 @@ struct WidgetSettingsView: View {
     var body: some View {
         List {
             Section {
-                Text("The widget offers the right prayer for this part of the day. It is an invitation, never a scorekeeper.")
+                Text(ContentStore.shared.uiString("widget.settings.intro", "The widget offers the right prayer for this part of the day. It is an invitation, never a scorekeeper."))
                     .appFont(.bodyIt)
                     .foregroundStyle(Color.secondaryText)
                     .listRowBackground(Color.pageBackground)
@@ -54,7 +54,7 @@ struct WidgetSettingsView: View {
                         slotRow(slot)
                     }
                 } header: {
-                    Text("Orationes · Slot Prayers")
+                    Text(ContentStore.shared.uiString("widget.settings.slots", "Orationes · Slot Prayers"))
                 }
                 .id(revision)
             }
@@ -83,7 +83,7 @@ struct WidgetSettingsView: View {
             } header: {
                 Text("Lectio · Reading Widget")
             } footer: {
-                Text("The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget needs no configuration — it always shows the liturgical day.")
+                Text(ContentStore.shared.uiString("widget.settings.reading_note", "The text the Daily Reading widget quotes from each day's Mass propers. The small Today's Feast widget needs no configuration — it always shows the liturgical day."))
             }
 
             Section {
@@ -113,9 +113,9 @@ struct WidgetSettingsView: View {
                     .listRowBackground(Color.pageBackground)
                 }
             } header: {
-                Text("Sancti · Saints Widget")
+                Text(ContentStore.shared.uiString("widget.settings.saints", "Sancti · Saints Widget"))
             } footer: {
-                Text("Who appears in the Sanctorale widget's upcoming list. It always shows the Church's calendar — never a score.")
+                Text(ContentStore.shared.uiString("widget.settings.saints_note", "Who appears in the Sanctorale widget's upcoming list. It always shows the Church's calendar — never a score."))
             }
         }
         .scrollContentBackground(.hidden)
@@ -223,7 +223,7 @@ private struct WidgetPrayerPicker: View {
         }
         .scrollContentBackground(.hidden)
         .background(Color.pageBackground)
-        .navigationTitle("\(slot.label) prayer")
+        .navigationTitle(ContentStore.shared.uiString("widget.settings.slot_prayer", "{0} prayer").replacingOccurrences(of: "{0}", with: "\(slot.label)"))
         .navigationBarTitleDisplayMode(.inline)
     }
 }

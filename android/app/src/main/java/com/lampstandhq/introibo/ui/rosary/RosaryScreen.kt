@@ -112,7 +112,7 @@ fun RosaryScreen(
                     color = colors.primaryText,
                 )
                 Text(
-                    text = "PRAY THE ROSARY",
+                    text = ContentStore.uiString("rosary.pray", "Pray the Rosary").uppercase(),
                     style = type.captionSm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                     letterSpacing = 2.sp,
@@ -151,7 +151,7 @@ fun RosaryScreen(
                         }
                         Spacer(modifier = Modifier.height(10.dp))
                         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                            SmallLabel(text = "Incipiámus  ✠  Begin", color = colors.sanctuaryRed)
+                            SmallLabel(text = ContentStore.uiString("common.incipiamus", "Incipiámus  ✠  Begin"), color = colors.sanctuaryRed)
                         }
                     }
                 }
@@ -230,8 +230,8 @@ fun RosaryScreen(
         ) {
             com.lampstandhq.introibo.ui.prayers.NotificationScheduleSheet(
                 scheduleId = "devotion.rosary",
-                title = "The Holy Rosary",
-                subtitle = "Remind me to pray the Rosary",
+                title = ContentStore.uiString("notif.devotion.rosary", "The Holy Rosary"),
+                subtitle = ContentStore.uiString("rosary.remind", "Remind me to pray the Rosary"),
                 onDismiss = { showNotification = false },
             )
         }

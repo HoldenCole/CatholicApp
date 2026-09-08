@@ -86,7 +86,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             }) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Back",
+                    contentDescription = ContentStore.uiString("common.back", "Back"),
                     tint = colors.sanctuaryRed,
                 )
             }
@@ -111,7 +111,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             ) {
                 item {
                     Text(
-                        text = "${slotPicking.label} prayer",
+                        text = ContentStore.uiString("widget.settings.slot_prayer", "{0} prayer").replace("{0}", "${slotPicking.label}"),
                         style = type.bodySm,
                         color = colors.secondaryText,
                         modifier = Modifier.padding(vertical = 12.dp),
@@ -166,7 +166,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
         ) {
             item {
                 Text(
-                    text = "The widget offers the right prayer for this part of the day. It is an invitation, never a scorekeeper.",
+                    text = ContentStore.uiString("widget.settings.intro", "The widget offers the right prayer for this part of the day. It is an invitation, never a scorekeeper."),
                     style = type.bodySm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                     modifier = Modifier.padding(vertical = 12.dp),
@@ -253,7 +253,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
 
             item {
                 Text(
-                    text = "SANCTI · SAINTS WIDGET",
+                    text = ContentStore.uiString("widget.settings.saints", "Sancti · Saints Widget").uppercase(),
                     style = type.smallLabel,
                     color = colors.tertiaryText,
                     modifier = Modifier.padding(top = 20.dp, bottom = 6.dp),
@@ -261,7 +261,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             }
             item {
                 Text(
-                    text = "Who appears in the Sanctorale widget's upcoming list. It always shows the Church's calendar — never a score.",
+                    text = ContentStore.uiString("widget.settings.saints_note", "Who appears in the Sanctorale widget's upcoming list. It always shows the Church's calendar — never a score."),
                     style = type.bodySm.copy(fontStyle = FontStyle.Italic),
                     color = colors.secondaryText,
                     modifier = Modifier.padding(bottom = 4.dp),
@@ -302,7 +302,7 @@ fun WidgetSettingsScreen(onBack: () -> Unit = {}) {
             if (mode == WidgetMode.PRAYER) {
                 item {
                     Text(
-                        text = "ORATIONES · SLOT PRAYERS",
+                        text = ContentStore.uiString("widget.settings.slots", "Orationes · Slot Prayers").uppercase(),
                         style = type.smallLabel,
                         color = colors.tertiaryText,
                         modifier = Modifier.padding(top = 20.dp, bottom = 6.dp),

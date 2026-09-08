@@ -289,7 +289,7 @@ fun SaintDetailScreen(
                             )
                             if (streak > 0) {
                                 Text(
-                                    text = "$streak day streak",
+                                    text = ContentStore.uiString("saints.streak", "{0} day streak").replace("{0}", "${streak}"),
                                     style = type.captionSm,
                                     color = colors.goldLeaf,
                                 )

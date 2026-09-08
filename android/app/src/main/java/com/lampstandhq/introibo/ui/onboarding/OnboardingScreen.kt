@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.onboarding
 
+import com.lampstandhq.introibo.data.content.ContentStore
+
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -187,7 +189,7 @@ private fun WelcomePage() {
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
-            text = "A prayer companion for\ntraditional Catholics",
+            text = ContentStore.uiString("onboarding.tagline_android", "A prayer companion for\ntraditional Catholics"),
             style = type.titleM.copy(fontStyle = FontStyle.Italic),
             color = colors.secondaryText,
             textAlign = TextAlign.Center,
@@ -307,7 +309,7 @@ private fun FeaturesPage() {
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
-            text = "Everything You Need",
+            text = ContentStore.uiString("onboarding.everything", "Everything You Need"),
             style = type.pageTitle.copy(fontSize = scaledSp(28f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )
@@ -415,7 +417,7 @@ private fun SettingsPage(
         Text(text = "✠", style = type.pageTitle.copy(fontSize = scaledSp(48f)), color = colors.sanctuaryRed)
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            text = "Set Up Your Missal",
+            text = ContentStore.uiString("onboarding.setup_missal", "Set Up Your Missal"),
             style = type.pageTitle.copy(fontSize = scaledSp(34f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )

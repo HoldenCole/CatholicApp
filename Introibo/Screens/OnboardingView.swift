@@ -81,7 +81,7 @@ struct OnboardingView: View {
                         Button {
                             withAnimation { page += 1 }
                         } label: {
-                            Text("Continue")
+                            Text(ContentStore.shared.uiString("common.continue", "Continue"))
                                 .appFont(.scaledSystem(15, weight: .semibold, design: .serif))
                                 .italic()
                                 .foregroundStyle(Color.ivory)
@@ -142,7 +142,7 @@ struct OnboardingView: View {
                     .appFont(.scaledSystem(48))
                     .foregroundStyle(Color.sanctuaryRed)
 
-                Text("A companion for the\ntraditional Catholic life.")
+                Text(ContentStore.shared.uiString("onboarding.tagline", "A companion for the\ntraditional Catholic life."))
                     .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
@@ -153,7 +153,7 @@ struct OnboardingView: View {
                     .fill(Color.sanctuaryRed.opacity(0.4))
                     .frame(width: 40, height: 1)
 
-                Text("The complete 1962 Missal, the Roman Breviary, traditional prayers in Latin and English, daily propers, confession guides, and the traditional liturgical calendar. All in one place, working offline.")
+                Text(ContentStore.shared.uiString("onboarding.features", "The complete 1962 Missal, the Roman Breviary, traditional prayers in Latin and English, daily propers, confession guides, and the traditional liturgical calendar. All in one place, working offline."))
                     .appFont(.body)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -175,11 +175,11 @@ struct OnboardingView: View {
                 Text("MISSALE ROMANUM")
                     .smallLabel(color: Color.sanctuaryRed)
 
-                Text("Choose your rite")
+                Text(ContentStore.shared.uiString("onboarding.rite", "Choose your rite"))
                     .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
-                Text("This determines your liturgical calendar and rubrics.")
+                Text(ContentStore.shared.uiString("onboarding.rite_sub", "This determines your liturgical calendar and rubrics."))
                     .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -228,11 +228,11 @@ struct OnboardingView: View {
                 Text("DE P\u{00C6}NIT\u{00C9}NTIA")
                     .smallLabel(color: Color.sanctuaryRed)
 
-                Text("Choose your penance discipline")
+                Text(ContentStore.shared.uiString("onboarding.penance", "Choose your penance discipline"))
                     .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
-                Text("The app will show your daily obligations automatically.")
+                Text(ContentStore.shared.uiString("onboarding.penance_sub", "The app will show your daily obligations automatically."))
                     .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -281,11 +281,11 @@ struct OnboardingView: View {
                 Text("LINGUA")
                     .smallLabel(color: Color.sanctuaryRed)
 
-                Text("Choose your language")
+                Text(ContentStore.shared.uiString("onboarding.language", "Choose your language"))
                     .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
-                Text("Every prayer appears in Ecclesiastical Latin. Choose how you\u{2019}d like to see it.")
+                Text(ContentStore.shared.uiString("onboarding.language_sub", "Every prayer appears in Ecclesiastical Latin. Choose how you\u{2019}d like to see it."))
                     .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -334,11 +334,11 @@ struct OnboardingView: View {
                 Text("SANCTI PATRONI")
                     .smallLabel(color: Color.sanctuaryRed)
 
-                Text("Follow a patron saint")
+                Text(ContentStore.shared.uiString("onboarding.saint", "Follow a patron saint"))
                     .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
-                Text("Track daily practices, build streaks, and grow in holiness with a patron\u{2019}s guidance.")
+                Text(ContentStore.shared.uiString("onboarding.saint_sub", "Track daily practices, build streaks, and grow in holiness with a patron\u{2019}s guidance."))
                     .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -370,7 +370,7 @@ struct OnboardingView: View {
                     UserProgress.setFollowedSaint(nil)
                     withAnimation { page += 1 }
                 } label: {
-                    Text("I\u{2019}ll choose later")
+                    Text(ContentStore.shared.uiString("onboarding.choose_later", "I\u{2019}ll choose later"))
                         .appFont(.body)
                         .foregroundStyle(Color.secondaryText)
                         .padding(.vertical, 12)
@@ -395,11 +395,11 @@ struct OnboardingView: View {
                 Text("NOTIFICATIONES")
                     .smallLabel(color: Color.sanctuaryRed)
 
-                Text("Stay on schedule")
+                Text(ContentStore.shared.uiString("onboarding.schedule", "Stay on schedule"))
                     .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
-                Text("Introibo can remind you to pray at the traditional hours.")
+                Text(ContentStore.shared.uiString("onboarding.schedule_sub", "Introibo can remind you to pray at the traditional hours."))
                     .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -433,7 +433,7 @@ struct OnboardingView: View {
                 Button {
                     withAnimation { page += 1 }
                 } label: {
-                    Text("I\u{2019}ll set this up later")
+                    Text(ContentStore.shared.uiString("onboarding.setup_later", "I\u{2019}ll set this up later"))
                         .appFont(.body)
                         .foregroundStyle(Color.secondaryText)
                         .padding(.vertical, 12)
@@ -481,7 +481,7 @@ struct OnboardingView: View {
             Button {
                 hasCompletedOnboarding = true
             } label: {
-                Text("Begin")
+                Text(ContentStore.shared.uiString("stations.begin", "·  Begin"))
                     .appFont(.scaledSystem(17, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.ivory)

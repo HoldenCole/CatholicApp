@@ -360,7 +360,7 @@ private fun CompletionView(
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Marked as prayed today",
+            text = ContentStore.uiString("rosary.marked", "Marked as prayed today"),
             style = type.captionSm,
             color = colors.goldLeaf,
         )
@@ -371,7 +371,7 @@ private fun CompletionView(
                 .fillMaxWidth()
                 .padding(horizontal = 28.dp),
         ) {
-            SmallLabel(text = "Close", color = colors.sanctuaryRed)
+            SmallLabel(text = ContentStore.uiString("common.close", "Close"), color = colors.sanctuaryRed)
         }
     }
 }
@@ -418,7 +418,7 @@ private fun buildSteps(set: MysterySetData): List<RosaryStep> {
         s += RosaryStep(label = "Pater Noster", latin = pater.first, english = pater.second, decade = dIdx, mystery = mystery)
         for (bead in 1..10) {
             s += RosaryStep(
-                label = "Ave María  ·  $bead of 10",
+                label = ContentStore.uiString("rosary.bead_of", "Ave María  ·  {0} of 10").replace("{0}", "${bead}"),
                 latin = ave.first, english = ave.second,
                 decade = dIdx, mystery = mystery, beadInDecade = bead,
             )

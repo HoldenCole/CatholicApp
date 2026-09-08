@@ -11,56 +11,57 @@ struct OptionalPenance: Identifiable, Hashable {
 }
 
 enum OptionalPenances {
-    static let all: [OptionalPenance] = [
+    /// Computed so the vernacular overlay applies to the titles and descriptions.
+    static var all: [OptionalPenance] { [
         OptionalPenance(
             id: "fast_bread_water",
-            title: "Bread and Water Fast",
+            title: ContentStore.shared.uiString("penance.fast_bread_water.title", "Bread and Water Fast"),
             latin: "Ieiúnium in pane et aqua",
-            desc: "Take only bread and water for one or more meals today."
+            desc: ContentStore.shared.uiString("penance.fast_bread_water.desc", "Take only bread and water for one or more meals today.")
         ),
         OptionalPenance(
             id: "no_meat",
-            title: "Voluntary Abstinence",
+            title: ContentStore.shared.uiString("penance.no_meat.title", "Voluntary Abstinence"),
             latin: "Abstinéntia voluntária",
-            desc: "Abstain from the flesh of warm-blooded animals, even when not required."
+            desc: ContentStore.shared.uiString("penance.no_meat.desc", "Abstain from the flesh of warm-blooded animals, even when not required.")
         ),
         OptionalPenance(
             id: "no_sweets",
-            title: "Abstain from Sweets",
+            title: ContentStore.shared.uiString("penance.no_sweets.title", "Abstain from Sweets"),
             latin: "Sine dulcibus",
-            desc: "Deny yourself desserts, candy, or sweetened drinks today."
+            desc: ContentStore.shared.uiString("penance.no_sweets.desc", "Deny yourself desserts, candy, or sweetened drinks today.")
         ),
         OptionalPenance(
             id: "no_entertainment",
-            title: "Media Fast",
+            title: ContentStore.shared.uiString("penance.no_entertainment.title", "Media Fast"),
             latin: "Ieiúnium a spectáculis",
-            desc: "No social media, television, music, or recreational internet today."
+            desc: ContentStore.shared.uiString("penance.no_entertainment.desc", "No social media, television, music, or recreational internet today.")
         ),
         OptionalPenance(
             id: "cold_shower",
-            title: "Cold Water Mortification",
+            title: ContentStore.shared.uiString("penance.cold_shower.title", "Cold Water Mortification"),
             latin: "Mortificátio córporis",
-            desc: "Take a cold shower or deny yourself hot water as a bodily penance."
+            desc: ContentStore.shared.uiString("penance.cold_shower.desc", "Take a cold shower or deny yourself hot water as a bodily penance.")
         ),
         OptionalPenance(
             id: "extra_prayers",
-            title: "Additional Prayers",
+            title: ContentStore.shared.uiString("penance.extra_prayers.title", "Additional Prayers"),
             latin: "Oratiónes addítæ",
-            desc: "Add an extra Rosary decade, chaplet, or 15 minutes of mental prayer."
+            desc: ContentStore.shared.uiString("penance.extra_prayers.desc", "Add an extra Rosary decade, chaplet, or 15 minutes of mental prayer.")
         ),
         OptionalPenance(
             id: "almsgiving",
-            title: "Almsgiving",
+            title: ContentStore.shared.uiString("penance.almsgiving.title", "Almsgiving"),
             latin: "Eleemósyna",
-            desc: "Give to the poor or to a charitable cause today, beyond your usual giving."
+            desc: ContentStore.shared.uiString("penance.almsgiving.desc", "Give to the poor or to a charitable cause today, beyond your usual giving.")
         ),
         OptionalPenance(
             id: "silence",
-            title: "Partial Silence",
+            title: ContentStore.shared.uiString("penance.silence.title", "Partial Silence"),
             latin: "Siléntium partiále",
-            desc: "Observe silence for a portion of the day, speaking only when necessary."
+            desc: ContentStore.shared.uiString("penance.silence.desc", "Observe silence for a portion of the day, speaking only when necessary.")
         ),
-    ]
+    ] }
 
     // MARK: - User selection storage
 
