@@ -972,7 +972,7 @@ final class ContentStore {
         if let ant {
             var p = ant
             p.variationKey = nil
-            p.label = uiString("office.antiphon", "Antiphon")
+            p.label = ContentStore.shared.uiString("office.antiphon", "Antiphon")
             block.append(p)
         }
 
