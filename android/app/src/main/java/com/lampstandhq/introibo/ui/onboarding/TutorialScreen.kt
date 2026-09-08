@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import kotlinx.coroutines.launch
 
 /**
@@ -212,7 +213,7 @@ private fun TutorialStepPage(step: TutorialStep) {
 
         Text(
             text = step.title,
-            style = type.pageTitle.copy(fontSize = 30.sp, fontWeight = FontWeight.SemiBold),
+            style = type.pageTitle.copy(fontSize = scaledSp(30f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )
 

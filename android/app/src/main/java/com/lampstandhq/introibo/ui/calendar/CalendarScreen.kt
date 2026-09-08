@@ -75,6 +75,7 @@ import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.theme.liturgicalColor
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
@@ -271,7 +272,7 @@ private fun NavGlyph(glyph: String, enabled: Boolean, onClick: () -> Unit) {
     val colors = IntroiboTheme.colors
     Text(
         text = glyph,
-        fontSize = 22.sp,
+        fontSize = scaledSp(22f),
         fontWeight = FontWeight.Medium,
         color = if (enabled) colors.goldLeaf else colors.frameLine,
         textAlign = TextAlign.Center,
@@ -297,7 +298,7 @@ private fun SeasonDivider(label: String) {
         HorizontalDivider(color = colors.goldLeaf.copy(alpha = 0.3f), thickness = 0.5.dp, modifier = Modifier.weight(1f))
         Text(
             text = label.uppercase(),
-            fontSize = 10.sp,
+            fontSize = scaledSp(10f),
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 2.5.sp,
             color = colors.goldLeaf,
@@ -336,7 +337,7 @@ private fun DayRow(day: CalendarDay, mode: LanguageMode, onClick: () -> Unit) {
         ) {
             Text(
                 text = "${day.day}",
-                fontSize = 16.sp,
+                fontSize = scaledSp(16f),
                 fontFamily = type.pageTitle.fontFamily,
                 fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
                 color = if (day.isToday) colors.parchment else colors.primaryText,
@@ -350,14 +351,14 @@ private fun DayRow(day: CalendarDay, mode: LanguageMode, onClick: () -> Unit) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = day.weekdayAbbrev,
-                    fontSize = 10.sp,
+                    fontSize = scaledSp(10f),
                     fontWeight = FontWeight.Medium,
                     letterSpacing = 1.sp,
                     color = colors.tertiaryText,
                 )
                 if (day.isSunday) {
                     Spacer(Modifier.width(6.dp))
-                    Text(text = "✠", fontSize = 9.sp, color = colors.sanctuaryRed)
+                    Text(text = "✠", fontSize = scaledSp(9f), color = colors.sanctuaryRed)
                 }
                 Spacer(Modifier.width(6.dp))
                 DayMarkerPips(day)
@@ -384,7 +385,7 @@ private fun DayRow(day: CalendarDay, mode: LanguageMode, onClick: () -> Unit) {
         }
 
         Spacer(Modifier.width(8.dp))
-        Text(text = "›", fontSize = 18.sp, color = colors.tertiaryText.copy(alpha = 0.6f))
+        Text(text = "›", fontSize = scaledSp(18f), color = colors.tertiaryText.copy(alpha = 0.6f))
     }
 }
 
@@ -547,13 +548,13 @@ private fun DayDetail(
             ) {
                 Text(
                     text = ContentStore.uiString("penance.fast_abstinence", "Fasting & Abstinence").uppercase(),
-                    fontSize = 10.sp,
+                    fontSize = scaledSp(10f),
                     letterSpacing = 1.5.sp,
                     color = colors.tertiaryText,
                 )
                 Text(
                     text = discipline.short,
-                    fontSize = 9.sp,
+                    fontSize = scaledSp(9f),
                     color = colors.goldLeaf,
                 )
             }
@@ -595,7 +596,7 @@ private fun DayDetail(
                 Spacer(Modifier.width(10.dp))
                 Text(ContentStore.uiString("calendar.view_mass", "View the Mass"), style = type.titleM.copy(fontStyle = FontStyle.Italic), color = colors.primaryText)
                 Spacer(Modifier.weight(1f))
-                Text("›", color = colors.tertiaryText, fontSize = 16.sp)
+                Text("›", color = colors.tertiaryText, fontSize = scaledSp(16f))
             }
         }
     }
@@ -606,7 +607,7 @@ private fun InfoRow(label: String, value: String, swatch: LiturgicalColour? = nu
     val colors = IntroiboTheme.colors
     val type = IntroiboType.current
     Column {
-        Text(label.uppercase(), fontSize = 10.sp, letterSpacing = 1.5.sp, color = colors.tertiaryText)
+        Text(label.uppercase(), fontSize = scaledSp(10f), letterSpacing = 1.5.sp, color = colors.tertiaryText)
         Spacer(Modifier.height(4.dp))
         Row(verticalAlignment = Alignment.CenterVertically) {
             swatch?.let {
@@ -655,7 +656,7 @@ private fun ViewModePicker(current: String, onSelect: (String) -> Unit) {
             ) {
                 Text(
                     text = mode.icon,
-                    fontSize = 12.sp,
+                    fontSize = scaledSp(12f),
                     fontWeight = FontWeight.Medium,
                     color = if (selected) colors.parchment else colors.tertiaryText,
                 )
@@ -683,7 +684,7 @@ private fun MonthGrid(
             weekdayLetters.forEach { letter ->
                 Text(
                     text = letter,
-                    fontSize = 10.sp,
+                    fontSize = scaledSp(10f),
                     fontWeight = FontWeight.Medium,
                     color = colors.tertiaryText,
                     textAlign = TextAlign.Center,
@@ -727,7 +728,7 @@ private fun GridCell(day: CalendarDay, langMode: LanguageMode, onClick: () -> Un
         ) {
             Text(
                 text = "${day.day}",
-                fontSize = 13.sp,
+                fontSize = scaledSp(13f),
                 fontWeight = if (day.isMajor) FontWeight.SemiBold else FontWeight.Normal,
                 color = if (day.isToday) colors.parchment else colors.primaryText,
             )
@@ -740,7 +741,7 @@ private fun GridCell(day: CalendarDay, langMode: LanguageMode, onClick: () -> Un
         }
         Text(
             text = label,
-            fontSize = 8.sp,
+            fontSize = scaledSp(8f),
             color = colors.secondaryText,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
@@ -769,7 +770,7 @@ internal fun DayMarkerPips(day: CalendarDay) {
         fun pip(letter: String, color: Color) {
             Text(
                 text = letter,
-                fontSize = 7.sp,
+                fontSize = scaledSp(7f),
                 fontWeight = FontWeight.Bold,
                 color = color.copy(alpha = 0.9f),
                 modifier = Modifier.padding(horizontal = 1.5.dp),
@@ -803,7 +804,7 @@ private fun MoveableFeastMenu(year: Int, rite: MissalRite, onJump: (java.time.Lo
     Box {
         Text(
             text = "✦",
-            fontSize = 14.sp,
+            fontSize = scaledSp(14f),
             color = colors.goldLeaf,
             modifier = Modifier
                 .clip(CircleShape)
@@ -895,7 +896,7 @@ private fun YearOverview(
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
                             text = ContentStore.uiString("calendar.season." + seg.label.lowercase().replace(" ", "_"), seg.label).uppercase(),
-                            fontSize = 11.sp,
+                            fontSize = scaledSp(11f),
                             fontWeight = FontWeight.SemiBold,
                             letterSpacing = 2.sp,
                             color = tint,
@@ -904,7 +905,7 @@ private fun YearOverview(
                         if (isCurrent) {
                             Text(
                                 text = ContentStore.uiString("calendar.you_are_here", "You are here").uppercase(),
-                                fontSize = 9.sp,
+                                fontSize = scaledSp(9f),
                                 fontWeight = FontWeight.SemiBold,
                                 letterSpacing = 1.5.sp,
                                 color = colors.parchment,
@@ -917,7 +918,7 @@ private fun YearOverview(
                         }
                         Text(
                             text = "${seg.dayCount} " + ContentStore.uiString("calendar.days", "days"),
-                            fontSize = 10.sp,
+                            fontSize = scaledSp(10f),
                             color = colors.tertiaryText,
                         )
                     }
@@ -944,13 +945,13 @@ private fun YearOverview(
                             Spacer(Modifier.width(8.dp))
                             Text(
                                 text = marker.date.format(markFmt),
-                                fontSize = 11.sp,
+                                fontSize = scaledSp(11f),
                                 color = colors.tertiaryText,
                                 modifier = Modifier.width(46.dp),
                             )
                             Text(
                                 text = marker.english ?: marker.name,
-                                fontSize = 13.sp,
+                                fontSize = scaledSp(13f),
                                 color = colors.primaryText,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,

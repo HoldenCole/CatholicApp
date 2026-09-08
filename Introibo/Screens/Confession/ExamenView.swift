@@ -40,10 +40,10 @@ struct ExamenView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text("Examination of Conscience")
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
             Text("Decálogus  ·  The Ten Commandments")
-                .font(.caption)
+                .appFont(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
@@ -61,7 +61,7 @@ struct ExamenView: View {
 
     private var introBlock: some View {
         Text("Go through each commandment quietly and honestly. Recall specific sins and their approximate number where you can. Do not rush, but do not dwell past what is useful.")
-            .font(.bodyIt)
+            .appFont(.bodyIt)
             .foregroundStyle(Color.secondaryText)
             .lineSpacing(4)
             .padding(.leading, 14)
@@ -78,17 +78,17 @@ struct ExamenView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
                 Text(e.num)
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .frame(width: 44, alignment: .leading)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(e.commandment)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                     Text(e.latin)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                 }
@@ -97,10 +97,10 @@ struct ExamenView: View {
                 ForEach(Array(e.questions.enumerated()), id: \.offset) { _, q in
                     HStack(alignment: .firstTextBaseline, spacing: 8) {
                         Text("•")
-                            .font(.body)
+                            .appFont(.body)
                             .foregroundStyle(Color.goldLeaf)
                         Text(q)
-                            .font(.bodySm)
+                            .appFont(.bodySm)
                             .foregroundStyle(Color.secondaryText)
                             .lineSpacing(2)
                     }
@@ -123,7 +123,7 @@ struct ExamenView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             Text("Make an Act of Contrition. Resolve to avoid the occasions of sin. Proceed to confession.")
-                .font(.bodyIt)
+                .appFont(.bodyIt)
                 .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
         }

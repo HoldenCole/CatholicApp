@@ -47,11 +47,11 @@ struct RosaryView: View {
             LanguageAwareText(latin: "\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)", english: "\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)")
                 .smallLabel(color: Color.sanctuaryRed)
             Text("Oratio per Rosárium")
-                .font(.titleL)
+                .appFont(.titleL)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             Text("Pray the Rosary")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
                 .textCase(.uppercase)
@@ -69,12 +69,12 @@ struct RosaryView: View {
                         .smallLabel(color: Color.goldLeaf)
                     if langMode != .vernacular {
                         Text(todaySet.name)
-                            .font(.pageTitle)
+                            .appFont(.pageTitle)
                             .foregroundStyle(Color.primaryText)
                     }
                     if langMode != .latinOnly {
                         Text(todaySet.english)
-                            .font(langMode == .vernacular ? .pageTitle : .caption)
+                            .appFont(langMode == .vernacular ? .pageTitle : .caption)
                             .italic()
                             .foregroundStyle(langMode == .vernacular ? Color.primaryText : Color.secondaryText)
                             .textCase(.uppercase)
@@ -111,20 +111,20 @@ struct RosaryView: View {
                         VStack(alignment: .leading, spacing: 2) {
                             if langMode != .vernacular {
                                 Text(set.name)
-                                    .font(.titleM)
+                                    .appFont(.titleM)
                                     .italic()
                                     .foregroundStyle(Color.primaryText)
                             }
                             if langMode != .latinOnly {
                                 Text(set.english)
-                                    .font(langMode == .vernacular ? .titleM : .captionSm)
+                                    .appFont(langMode == .vernacular ? .titleM : .captionSm)
                                     .italic()
                                     .foregroundStyle(langMode == .vernacular ? Color.primaryText : Color.secondaryText)
                             }
                         }
                         Spacer()
                         Text("›")
-                            .font(.titleL)
+                            .appFont(.titleL)
                             .foregroundStyle(Color.goldLeaf)
                     }
                     .padding(.vertical, 10)

@@ -1,5 +1,7 @@
 package com.lampstandhq.introibo.ui.theme
 
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.compositionLocalOf
@@ -18,6 +20,14 @@ import com.lampstandhq.introibo.storage.settings.FontSizeScale
  * Defaults to [FontSizeScale.DEFAULT_VALUE] (1.15x).
  */
 val LocalFontScale = compositionLocalOf { FontSizeScale.DEFAULT_VALUE }
+
+/**
+ * A one-off size that follows the in-app text-size slider. Use this instead
+ * of a literal `N.sp` (or `style.copy(fontSize = N.sp)`, which silently
+ * pins an otherwise-scaled style) for any text a reader is meant to read.
+ */
+@Composable
+fun scaledSp(size: Float): TextUnit = (size * LocalFontScale.current).sp
 
 // ---------------------------------------------------------------------------
 // Typography tokens — bundled fonts matching the iOS app
@@ -60,9 +70,9 @@ data class IntroiboTypography(
     val bodyIt: TextStyle,
     /** 14sp regular serif — compact body */
     val bodySm: TextStyle,
-    /** 12sp italic serif — captions */
+    /** 12sp italic serif — captions, rubrics, glosses */
     val captionSm: TextStyle,
-    /** 11sp bold italic serif, uppercase + tracking — small labels / rubrics */
+    /** 12sp bold italic serif, uppercase + tracking — small labels / part headers */
     val smallLabel: TextStyle,
 )
 
@@ -113,18 +123,22 @@ fun introiboTypography(scale: Float = FontSizeScale.DEFAULT_VALUE): IntroiboTypo
             fontWeight = FontWeight.Normal,
             fontSize = scaled(14f),
         ),
+        // Rubrics, part headers, glosses and ℣/℟ responses all render in
+        // these two roles, so they sit at 0.75x body rather than the 0.63x
+        // they used to -- any smaller and the slider never brings them to
+        // legibility. Tracking scales with the type.
         captionSm = TextStyle(
             fontFamily = LabelFamily,
             fontWeight = FontWeight.Normal,
             fontStyle = FontStyle.Italic,
-            fontSize = scaled(10f),
+            fontSize = scaled(12f),
         ),
         smallLabel = TextStyle(
             fontFamily = LabelFamily,
             fontWeight = FontWeight.Bold,
             fontStyle = FontStyle.Italic,
-            fontSize = scaled(11f),
-            letterSpacing = 2.5.sp,
+            fontSize = scaled(12f),
+            letterSpacing = (2.5f * scale / FontSizeScale.DEFAULT_VALUE).sp,
         ),
     )
 }
@@ -142,4 +156,32 @@ object IntroiboType {
     val current: IntroiboTypography
         @Composable
         get() = LocalIntroiboTypography.current
+}
+
+/**
+ * Material's own type scale multiplied by the in-app slider, so text drawn
+ * without an Introibo style (dialog titles and buttons, menu items, the
+ * default `Text` style) follows the slider like everything else.
+ */
+@Composable
+fun scaledMaterialTypography(scale: Float): Typography {
+    val base = MaterialTheme.typography
+    fun TextStyle.s(): TextStyle = if (fontSize.isSp) copy(fontSize = fontSize * scale) else this
+    return Typography(
+        displayLarge = base.displayLarge.s(),
+        displayMedium = base.displayMedium.s(),
+        displaySmall = base.displaySmall.s(),
+        headlineLarge = base.headlineLarge.s(),
+        headlineMedium = base.headlineMedium.s(),
+        headlineSmall = base.headlineSmall.s(),
+        titleLarge = base.titleLarge.s(),
+        titleMedium = base.titleMedium.s(),
+        titleSmall = base.titleSmall.s(),
+        bodyLarge = base.bodyLarge.s(),
+        bodyMedium = base.bodyMedium.s(),
+        bodySmall = base.bodySmall.s(),
+        labelLarge = base.labelLarge.s(),
+        labelMedium = base.labelMedium.s(),
+        labelSmall = base.labelSmall.s(),
+    )
 }

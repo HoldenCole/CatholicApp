@@ -77,11 +77,11 @@ struct SaintDetailView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(saint.name)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             Text(saint.title)
-                .font(.caption)
+                .appFont(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
@@ -95,7 +95,7 @@ struct SaintDetailView: View {
                     }
                     if streak > 7 {
                         Text("+ \(streak - 7)")
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .foregroundStyle(Color.goldLeaf)
                     }
                 }
@@ -126,17 +126,17 @@ struct SaintDetailView: View {
                     .frame(width: 70, height: 70)
                     .rotationEffect(.degrees(-90))
                 Text("\(completed.count)/\(totalPractices)")
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
             }
             Text(progress >= 1.0 ? "Perfect day" : "Today's progress")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.tertiaryText)
             if streak > 0 {
                 Text("\(streak) day streak")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
             }
         }
@@ -149,7 +149,7 @@ struct SaintDetailView: View {
 
     private var quoteBlock: some View {
         Text("\u{201C}\(saint.quote)\u{201D}")
-            .font(.bodyIt)
+            .appFont(.bodyIt)
             .foregroundStyle(Color.secondaryText)
             .lineSpacing(4)
             .padding(.leading, 14)
@@ -193,7 +193,7 @@ struct SaintDetailView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.3)).frame(height: 0.5)
                 Text(section.lat)
-                    .font(.caption)
+                    .appFont(.caption)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .textCase(.uppercase)
@@ -203,7 +203,7 @@ struct SaintDetailView: View {
                 Text(".")
                     .foregroundStyle(Color.tertiaryText)
                 Text(section.eng)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .lineLimit(2)
@@ -238,17 +238,17 @@ struct SaintDetailView: View {
                 if isFollowed {
                     Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                         .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
-                        .font(.scaledSystem(20))
+                        .appFont(.scaledSystem(20))
                         .padding(.top, 2)
                 }
                 VStack(alignment: .leading, spacing: 2) {
                     Text(p.t)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(isDone ? Color.tertiaryText : Color.primaryText)
                         .strikethrough(isDone, color: Color.tertiaryText)
                     Text(p.d)
-                        .font(.bodySm)
+                        .appFont(.bodySm)
                         .foregroundStyle(isDone ? Color.tertiaryText : Color.secondaryText)
                         .lineSpacing(3)
                 }
@@ -267,7 +267,7 @@ struct SaintDetailView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
                 Text("Orationes")
-                    .font(.caption)
+                    .appFont(.caption)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .textCase(.uppercase)
@@ -277,7 +277,7 @@ struct SaintDetailView: View {
                 Text(".")
                     .foregroundStyle(Color.tertiaryText)
                 Text("Prayers")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .lineLimit(2)
@@ -288,13 +288,13 @@ struct SaintDetailView: View {
             ForEach(Array(prayers.enumerated()), id: \.offset) { idx, prayer in
                 VStack(alignment: .leading, spacing: 8) {
                     Text(prayer.title)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
 
                     if let note = prayer.note {
                         Text(note)
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.goldLeaf)
                     }

@@ -57,7 +57,7 @@ struct TutorialOverlay: View {
                             }
                         } label: {
                             Text("Skip tutorial")
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .foregroundStyle(Color.ivory.opacity(0.6))
                                 .padding(.horizontal, 16)
                                 .padding(.vertical, 16)
@@ -140,7 +140,7 @@ struct TutorialOverlay: View {
     @ViewBuilder
     private func pillView(step: TutorialStep) -> some View {
         let pillContent = Text(step.text)
-            .font(.body)
+            .appFont(.body)
             .foregroundStyle(Color(.sRGB, red: 0.2, green: 0.15, blue: 0.1))
             .multilineTextAlignment(.center)
             .lineSpacing(4)

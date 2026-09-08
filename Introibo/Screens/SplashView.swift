@@ -22,12 +22,12 @@ struct SplashView: View {
 
                 VStack(spacing: 8) {
                     Text("Introíbo")
-                        .font(.scaledSystem(42, weight: .semibold, design: .serif))
+                        .appFont(.scaledSystem(42, weight: .semibold, design: .serif))
                         .italic()
                         .foregroundStyle(Color.ivory)
 
                     Text("Ad altáre Dei")
-                        .font(.scaledSystem(14, weight: .regular, design: .serif))
+                        .appFont(.scaledSystem(14, weight: .regular, design: .serif))
                         .italic()
                         .foregroundStyle(Color.goldLeaf)
                         .tracking(3)
@@ -37,7 +37,7 @@ struct SplashView: View {
                 Spacer()
 
                 Text("A prayer companion for the traditional Catholic life")
-                    .font(.scaledSystem(11, design: .serif))
+                    .appFont(.scaledSystem(11, design: .serif))
                     .italic()
                     .foregroundStyle(Color.muted)
                     .multilineTextAlignment(.center)

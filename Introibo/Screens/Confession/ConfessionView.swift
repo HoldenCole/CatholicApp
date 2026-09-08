@@ -57,11 +57,11 @@ struct ConfessionView: View {
             Text("Sacraméntum Pæniténtiæ")
                 .smallLabel(color: Color.sanctuaryRed)
             Text("The Sacrament of Penance")
-                .font(.titleL)
+                .appFont(.titleL)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             Text("Two guided paths, plus the Examination of Conscience.")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
@@ -77,11 +77,11 @@ struct ConfessionView: View {
                 Text("Exámen Consciéntiæ")
                     .smallLabel(color: Color.goldLeaf)
                 Text("Examination of Conscience")
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Text("Walk through the Ten Commandments with traditional questions for each.")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                 HStack {
@@ -124,16 +124,16 @@ struct ConfessionView: View {
         HStack(alignment: .firstTextBaseline) {
             VStack(alignment: .leading, spacing: 2) {
                 Text(g.name)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Text(g.title)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                 if let sub = g.subtitle {
                     Text(sub)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.tertiaryText)
                         .lineLimit(1)
@@ -142,7 +142,7 @@ struct ConfessionView: View {
                 }
             }
             Spacer()
-            Text("›").font(.titleL).foregroundStyle(Color.goldLeaf)
+            Text("›").appFont(.titleL).foregroundStyle(Color.goldLeaf)
         }
         .padding(.vertical, 10)
         .contentShape(Rectangle())

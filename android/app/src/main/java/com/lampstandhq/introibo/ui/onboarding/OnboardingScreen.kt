@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import kotlinx.coroutines.launch
 
 /**
@@ -165,7 +166,7 @@ private fun WelcomePage() {
 
         Text(
             text = "Introíbo",
-            style = type.pageTitle.copy(fontSize = 44.sp, fontWeight = FontWeight.SemiBold),
+            style = type.pageTitle.copy(fontSize = scaledSp(44f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )
         Text(
@@ -231,13 +232,13 @@ private fun TraditionPage() {
     ) {
         Spacer(modifier = Modifier.height(60.dp))
 
-        Text(text = "✠", style = type.pageTitle.copy(fontSize = 48.sp), color = colors.sanctuaryRed)
+        Text(text = "✠", style = type.pageTitle.copy(fontSize = scaledSp(48f)), color = colors.sanctuaryRed)
 
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
             text = "Tradition First",
-            style = type.pageTitle.copy(fontSize = 34.sp, fontWeight = FontWeight.SemiBold),
+            style = type.pageTitle.copy(fontSize = scaledSp(34f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )
 
@@ -307,7 +308,7 @@ private fun FeaturesPage() {
 
         Text(
             text = "Everything You Need",
-            style = type.pageTitle.copy(fontSize = 28.sp, fontWeight = FontWeight.SemiBold),
+            style = type.pageTitle.copy(fontSize = scaledSp(28f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )
 
@@ -411,11 +412,11 @@ private fun SettingsPage(
     ) {
         Spacer(modifier = Modifier.height(60.dp))
 
-        Text(text = "✠", style = type.pageTitle.copy(fontSize = 48.sp), color = colors.sanctuaryRed)
+        Text(text = "✠", style = type.pageTitle.copy(fontSize = scaledSp(48f)), color = colors.sanctuaryRed)
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "Set Up Your Missal",
-            style = type.pageTitle.copy(fontSize = 34.sp, fontWeight = FontWeight.SemiBold),
+            style = type.pageTitle.copy(fontSize = scaledSp(34f), fontWeight = FontWeight.SemiBold),
             color = colors.primaryText,
         )
         Spacer(modifier = Modifier.height(8.dp))

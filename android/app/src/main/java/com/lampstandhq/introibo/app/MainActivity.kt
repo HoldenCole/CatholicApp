@@ -21,6 +21,8 @@ import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.LocalFontScale
 import com.lampstandhq.introibo.ui.theme.LocalIntroiboTypography
 import com.lampstandhq.introibo.ui.theme.introiboTypography
+import com.lampstandhq.introibo.ui.theme.scaledMaterialTypography
+import androidx.compose.material3.MaterialTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -109,6 +111,7 @@ class MainActivity : ComponentActivity() {
                     LocalFontScale provides fontScale,
                     LocalIntroiboTypography provides typography,
                 ) {
+                  MaterialTheme(typography = scaledMaterialTypography(fontScale)) {
                     when {
                         showSplash -> {
                             SplashScreen(onFinished = { showSplash = false })
@@ -130,6 +133,7 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     }
+                  }
                 }
             }
         }

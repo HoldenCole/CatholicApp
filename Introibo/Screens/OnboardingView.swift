@@ -40,7 +40,7 @@ struct OnboardingView: View {
                             withAnimation { page -= 1 }
                         } label: {
                             Image(systemName: "chevron.left")
-                                .font(.scaledSystem(16, weight: .medium))
+                                .appFont(.scaledSystem(16, weight: .medium))
                                 .foregroundStyle(page == 7 ? Color.ivory : Color.secondaryText)
                                 .padding(12)
                         }
@@ -82,7 +82,7 @@ struct OnboardingView: View {
                             withAnimation { page += 1 }
                         } label: {
                             Text("Continue")
-                                .font(.scaledSystem(15, weight: .semibold, design: .serif))
+                                .appFont(.scaledSystem(15, weight: .semibold, design: .serif))
                                 .italic()
                                 .foregroundStyle(Color.ivory)
                                 .tracking(1.5)
@@ -110,12 +110,12 @@ struct OnboardingView: View {
 
             VStack(spacing: 8) {
                 Text("Intro\u{00ED}bo")
-                    .font(.scaledSystem(48, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(48, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.ivory)
 
                 Text("Ad alt\u{00E1}re Dei")
-                    .font(.caption)
+                    .appFont(.caption)
                     .foregroundStyle(Color.ivory.opacity(0.6))
                     .textCase(.uppercase)
                     .tracking(3)
@@ -139,11 +139,11 @@ struct OnboardingView: View {
                 Spacer(minLength: 60)
 
                 Text("\u{2720}")
-                    .font(.scaledSystem(48))
+                    .appFont(.scaledSystem(48))
                     .foregroundStyle(Color.sanctuaryRed)
 
                 Text("A companion for the\ntraditional Catholic life.")
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                     .multilineTextAlignment(.center)
@@ -154,7 +154,7 @@ struct OnboardingView: View {
                     .frame(width: 40, height: 1)
 
                 Text("The complete 1962 Missal, the Roman Breviary, traditional prayers in Latin and English, daily propers, confession guides, and the traditional liturgical calendar. All in one place, working offline.")
-                    .font(.body)
+                    .appFont(.body)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
                     .lineSpacing(4)
@@ -176,11 +176,11 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your rite")
-                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("This determines your liturgical calendar and rubrics.")
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
@@ -229,11 +229,11 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your penance discipline")
-                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("The app will show your daily obligations automatically.")
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
@@ -282,11 +282,11 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Choose your language")
-                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Every prayer appears in Ecclesiastical Latin. Choose how you\u{2019}d like to see it.")
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
@@ -335,11 +335,11 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Follow a patron saint")
-                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Track daily practices, build streaks, and grow in holiness with a patron\u{2019}s guidance.")
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
@@ -371,7 +371,7 @@ struct OnboardingView: View {
                     withAnimation { page += 1 }
                 } label: {
                     Text("I\u{2019}ll choose later")
-                        .font(.body)
+                        .appFont(.body)
                         .foregroundStyle(Color.secondaryText)
                         .padding(.vertical, 12)
                         .frame(maxWidth: .infinity)
@@ -396,11 +396,11 @@ struct OnboardingView: View {
                     .smallLabel(color: Color.sanctuaryRed)
 
                 Text("Stay on schedule")
-                    .font(.scaledSystem(26, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(26, weight: .semibold, design: .serif))
                     .foregroundStyle(Color.primaryText)
 
                 Text("Introibo can remind you to pray at the traditional hours.")
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
@@ -434,7 +434,7 @@ struct OnboardingView: View {
                     withAnimation { page += 1 }
                 } label: {
                     Text("I\u{2019}ll set this up later")
-                        .font(.body)
+                        .appFont(.body)
                         .foregroundStyle(Color.secondaryText)
                         .padding(.vertical, 12)
                         .frame(maxWidth: .infinity)
@@ -454,17 +454,17 @@ struct OnboardingView: View {
             Spacer()
 
             Text("\u{2720}")
-                .font(.scaledSystem(56))
+                .appFont(.scaledSystem(56))
                 .foregroundStyle(Color.goldLeaf)
 
             Text("Intro\u{00ED}bo ad alt\u{00E1}re Dei")
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
             Text("Ad Deum qui l\u{00E6}t\u{00ED}ficat juvent\u{00FA}tem meam.")
-                .font(.caption)
+                .appFont(.caption)
                 .foregroundStyle(Color.muted)
                 .italic()
                 .multilineTextAlignment(.center)
@@ -482,7 +482,7 @@ struct OnboardingView: View {
                 hasCompletedOnboarding = true
             } label: {
                 Text("Begin")
-                    .font(.scaledSystem(17, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(17, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.ivory)
                     .tracking(2)
@@ -508,11 +508,11 @@ struct OnboardingView: View {
             HStack(alignment: .top, spacing: 14) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                     Text(description)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.secondaryText)
                         .lineSpacing(2)
                         .fixedSize(horizontal: false, vertical: true)
@@ -520,7 +520,7 @@ struct OnboardingView: View {
                 Spacer()
                 if isSelected {
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.scaledSystem(20))
+                        .appFont(.scaledSystem(20))
                         .foregroundStyle(Color.sanctuaryRed)
                         .padding(.top, 2)
                 }
@@ -547,18 +547,18 @@ struct OnboardingView: View {
             HStack(spacing: 14) {
                 VStack(alignment: .leading, spacing: 3) {
                     Text(name)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                     Text(motto)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.secondaryText)
                         .italic()
                 }
                 Spacer()
                 if isSelected {
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.scaledSystem(20))
+                        .appFont(.scaledSystem(20))
                         .foregroundStyle(Color.goldLeaf)
                         .padding(.top, 2)
                 }
@@ -583,11 +583,11 @@ struct OnboardingView: View {
         HStack(alignment: .top, spacing: 14) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Text(description)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.secondaryText)
                     .lineSpacing(2)
                     .fixedSize(horizontal: false, vertical: true)

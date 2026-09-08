@@ -59,6 +59,7 @@ import com.lampstandhq.introibo.data.search.SearchSnippet
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import kotlinx.coroutines.delay
 
 // ---------------------------------------------------------------------------
@@ -270,7 +271,7 @@ private fun FilterPill(
     ) {
         Text(
             text = label,
-            style = type.captionSm.copy(fontStyle = FontStyle.Italic, fontSize = 12.sp),
+            style = type.captionSm.copy(fontStyle = FontStyle.Italic, fontSize = scaledSp(12f)),
             color = if (selected) colors.parchment else colors.secondaryText,
         )
     }

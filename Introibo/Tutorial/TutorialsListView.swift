@@ -25,21 +25,21 @@ struct TutorialsListView: View {
                         } label: {
                             HStack(spacing: 12) {
                                 Image(systemName: feature.systemImage)
-                                    .font(.scaledSystem(14))
+                                    .appFont(.scaledSystem(14))
                                     .foregroundStyle(Color.sanctuaryRed)
                                     .frame(width: 24, alignment: .center)
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(feature.label)
-                                        .font(.body)
+                                        .appFont(.body)
                                         .foregroundStyle(Color.primaryText)
                                     Text(feature.latinLabel)
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .italic()
                                         .foregroundStyle(Color.tertiaryText)
                                 }
                                 Spacer()
                                 Image(systemName: "play.circle")
-                                    .font(.scaledSystem(16))
+                                    .appFont(.scaledSystem(16))
                                     .foregroundStyle(Color.sanctuaryRed)
                             }
                         }

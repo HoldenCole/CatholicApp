@@ -48,6 +48,7 @@ import com.lampstandhq.introibo.ui.components.BilingualLine
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 
 /**
  * Interactive bead-by-bead Rosary flow.
@@ -342,7 +343,7 @@ private fun CompletionView(
     ) {
         Text(
             text = "✠",
-            style = type.pageTitle.copy(fontSize = 64.sp),
+            style = type.pageTitle.copy(fontSize = scaledSp(64f)),
             color = colors.sanctuaryRed,
         )
         Spacer(modifier = Modifier.height(16.dp))

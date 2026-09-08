@@ -69,7 +69,7 @@ struct TutorialView: View {
                     }
                 } label: {
                     Text(page < steps.count - 1 ? "Next" : "Introíbo ad altáre Dei  ✠")
-                        .font(.scaledSystem(14, weight: .semibold, design: .serif))
+                        .appFont(.scaledSystem(14, weight: .semibold, design: .serif))
                         .italic()
                         .foregroundStyle(Color.ivory)
                         .tracking(2)
@@ -83,7 +83,7 @@ struct TutorialView: View {
                 if page < steps.count - 1 {
                     Button { dismiss() } label: {
                         Text("Skip Tutorial")
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.tertiaryText)
                     }
@@ -105,12 +105,12 @@ struct TutorialView: View {
                         .fill(Color.sanctuaryRed)
                         .frame(width: 72, height: 72)
                     Image(systemName: step.icon)
-                        .font(.scaledSystem(28))
+                        .appFont(.scaledSystem(28))
                         .foregroundStyle(Color.ivory)
                 }
 
                 Text(step.title)
-                    .font(.scaledSystem(30, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(30, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.primaryText)
 
@@ -122,12 +122,12 @@ struct TutorialView: View {
                     ForEach(Array(step.items.enumerated()), id: \.offset) { _, item in
                         HStack(alignment: .top, spacing: 14) {
                             Image(systemName: item.0)
-                                .font(.scaledSystem(16))
+                                .appFont(.scaledSystem(16))
                                 .foregroundStyle(Color.sanctuaryRed)
                                 .frame(width: 24, alignment: .center)
                                 .padding(.top, 2)
                             Text(item.1)
-                                .font(.body)
+                                .appFont(.body)
                                 .foregroundStyle(Color.secondaryText)
                                 .lineSpacing(3)
                         }

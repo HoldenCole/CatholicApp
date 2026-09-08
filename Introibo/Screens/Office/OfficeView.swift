@@ -19,30 +19,30 @@ struct OfficeView: View {
         ScrollView {
             VStack(spacing: 14) {
                 Text("Officium Divínum")
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Text("The Divine Office  ·  \(rite.short)")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .textCase(.uppercase)
                     .tracking(2)
                 LanguageAwareText(latin: "\u{201C}\(ctx.feriaLatin)  \u{00B7}  \(ctx.latinName)\u{201D}", english: "\u{201C}\(ctx.feriaEnglish)  \u{00B7}  \(ctx.englishName)\u{201D}")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
                     .padding(.top, 6)
                 if rite == .pre1955 {
                     Text("Note: Under pre-1955 rubrics the Holy Week Office follows the older Triduum rites (e.g. Tenebrae on the mornings of the Sacred Triduum). Full pre-1955 Office texts are forthcoming.")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.sanctuaryRed.opacity(0.8))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 8)
                         .padding(.top, 4)
                 } else if rite == .rite1955 {
                     Text("Note: Using 1955 Holy Week rubrics. The Office of the Sacred Triduum follows the pre-reform arrangement.")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.sanctuaryRed.opacity(0.8))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 8)
@@ -61,12 +61,12 @@ struct OfficeView: View {
                 .padding(.top, 12)
 
                 Text("Tap any hour to enter its prayer.")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
                     .padding(.top, 8)
                 Text("The current hour glows.")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
 
@@ -78,14 +78,14 @@ struct OfficeView: View {
                     Button { selectedHour = dead } label: {
                         VStack(spacing: 4) {
                             Text("✠")
-                                .font(.titleM)
+                                .appFont(.titleM)
                                 .foregroundStyle(Color.sanctuaryRed)
                             Text("Officium Defunctórum")
-                                .font(.titleM)
+                                .appFont(.titleM)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
                             Text("Office of the Dead")
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.secondaryText)
                                 .textCase(.uppercase)
@@ -168,13 +168,13 @@ private struct ClockDial: View {
                 // Center
                 VStack(spacing: 2) {
                     Text("Hora hæc")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.tertiaryText)
                         .textCase(.uppercase)
                         .tracking(2)
                     Text("✠")
-                        .font(.titleL)
+                        .appFont(.titleL)
                         .foregroundStyle(Color.sanctuaryRed)
                 }
 
@@ -209,11 +209,11 @@ private struct ClockDial: View {
         return Button { onTap(hour.slug) } label: {
             VStack(spacing: 1) {
                 Text(hour.glyph)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                 Text(formatTime(h: hour.hour, m: hour.minute))
-                    .font(.scaledSystem(8, weight: .semibold, design: .serif))
+                    .appFont(.scaledSystem(8, weight: .semibold, design: .serif))
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
             }

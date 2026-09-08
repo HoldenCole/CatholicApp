@@ -30,7 +30,7 @@ struct PrayerDetailView: View {
                         header
                         if let note = prayer.note, !note.isEmpty {
                             Text(note.strippingEm)
-                                .font(.bodyIt)
+                                .appFont(.bodyIt)
                                 .foregroundStyle(Color.secondaryText)
                                 .padding(.horizontal, 28)
                                 .padding(.bottom, 4)
@@ -82,11 +82,11 @@ struct PrayerDetailView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(prayer.title.strippingEm)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             Text(prayer.eng)
-                .font(.caption)
+                .appFont(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
@@ -115,7 +115,7 @@ struct PrayerDetailView: View {
                 dropCapText(line.lat.strippingEm)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Text(line.eng.strippingEm)
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .lineSpacing(2)
@@ -132,11 +132,11 @@ struct PrayerDetailView: View {
     private func dropCapText(_ lat: String) -> some View {
         HStack(alignment: .firstTextBaseline, spacing: 2) {
             Text(String(lat.prefix(1)))
-                .font(.scaledSystem(min(42 * FontSizeScale.current(), 60), weight: .regular, design: .serif).italic())
+                .appFont(.scaledSystem(min(42 * FontSizeScale.current(), 60), weight: .regular, design: .serif).italic())
                 .foregroundStyle(Color.sanctuaryRed)
                 .baselineOffset(-4)
             Text(String(lat.dropFirst()))
-                .font(.body)
+                .appFont(.body)
                 .foregroundStyle(Color.primaryText)
                 .lineSpacing(3)
         }

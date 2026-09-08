@@ -122,16 +122,16 @@ struct HourView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(hour.name)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
             Text(hour.eng)
-                .font(.caption)
+                .appFont(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             Text(hour.time)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.muted)
                 .padding(.top, 2)
@@ -153,7 +153,7 @@ struct HourView: View {
 
     private var intro: some View {
         Text(hour.intro)
-            .font(.bodyIt)
+            .appFont(.bodyIt)
             .foregroundStyle(Color.secondaryText)
             .lineSpacing(4)
             .padding(.leading, 14)
@@ -213,12 +213,14 @@ struct HourView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.label ?? "Hymnus")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize(horizontal: true, vertical: false)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
+                    .layoutPriority(1)
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
             if let title = p.title {
                 Text(title)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
             }
@@ -245,17 +247,17 @@ struct HourView: View {
                 .smallLabel(color: Color.sanctuaryRed)
             if let ref = p.ref {
                 Text(ref)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
             }
             if let lat = p.lat, let eng = p.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
             } else {
                 if let lat = p.lat {
-                    Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
+                    Text(lat.strippingEm).appFont(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
                 }
                 if let eng = p.eng {
-                    Text(eng.strippingEm).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
+                    Text(eng.strippingEm).appFont(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
                 }
             }
         }
@@ -277,12 +279,16 @@ struct HourView: View {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text(p.label ?? "Psalmus")
                     .smallLabel(color: Color.sanctuaryRed)
-                    .fixedSize(horizontal: true, vertical: false)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
+                    .layoutPriority(1)
                 if let ref = p.ref {
                     Text(ref)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.goldLeaf)
-                        .fixedSize(horizontal: true, vertical: false)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                        .layoutPriority(1)
                 }
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
             }
@@ -343,7 +349,7 @@ struct HourView: View {
             Text(p.label ?? "Respons\u{00f3}rium")
                 .smallLabel(color: Color.sanctuaryRed)
             if let ref = p.ref {
-                Text(ref).font(.captionSm).foregroundStyle(Color.goldLeaf)
+                Text(ref).appFont(.captionSm).foregroundStyle(Color.goldLeaf)
             }
             // Full Matins responsory (v1/r1/v2/r2 fields)
             if p.v1Lat != nil {
@@ -398,7 +404,7 @@ struct HourView: View {
                 .smallLabel(color: Color.sanctuaryRed)
             if let ref = p.ref {
                 Text(ref)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.goldLeaf)
             }
@@ -406,10 +412,10 @@ struct HourView: View {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
             } else {
                 if let lat = p.lat {
-                    Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
+                    Text(lat.strippingEm).appFont(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
                 }
                 if let eng = p.eng {
-                    Text(eng.strippingEm).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
+                    Text(eng.strippingEm).appFont(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
                 }
             }
         }
@@ -500,7 +506,7 @@ struct HourView: View {
                     .lineLimit(1)
                 if let season = p.season {
                     Text("(\(season))")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.tertiaryText)
                 }
@@ -517,7 +523,7 @@ struct HourView: View {
         HStack(spacing: 10) {
             Rectangle().fill(Color.sanctuaryRed.opacity(0.3)).frame(height: 0.5)
             Text(p.label ?? "")
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.sanctuaryRed)
                 .lineLimit(1)
@@ -532,17 +538,17 @@ struct HourView: View {
                 .smallLabel(color: Color.goldLeaf)
             if let ref = p.ref {
                 Text(ref)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
             }
             if let lat = p.lat, let eng = p.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
             } else {
                 if let lat = p.lat {
-                    Text(lat.strippingEm).font(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
+                    Text(lat.strippingEm).appFont(.body).foregroundStyle(Color.primaryText).lineSpacing(3)
                 }
                 if let eng = p.eng {
-                    Text(eng.strippingEm).font(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
+                    Text(eng.strippingEm).appFont(.bodySm).italic().foregroundStyle(Color.secondaryText).lineSpacing(2)
                 }
             }
         }

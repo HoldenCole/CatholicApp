@@ -28,7 +28,7 @@ struct WidgetSettingsView: View {
         List {
             Section {
                 Text("The widget offers the right prayer for this part of the day. It is an invitation, never a scorekeeper.")
-                    .font(.bodyIt)
+                    .appFont(.bodyIt)
                     .foregroundStyle(Color.secondaryText)
                     .listRowBackground(Color.pageBackground)
             }
@@ -68,7 +68,7 @@ struct WidgetSettingsView: View {
                     } label: {
                         HStack {
                             Text(choice.label)
-                                .font(.body)
+                                .appFont(.body)
                                 .foregroundStyle(Color.primaryText)
                             Spacer()
                             if readingChoice == choice {
@@ -96,10 +96,10 @@ struct WidgetSettingsView: View {
                         HStack {
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(choice.label)
-                                    .font(.body)
+                                    .appFont(.body)
                                     .foregroundStyle(Color.primaryText)
                                 Text(choice.detail)
-                                    .font(.captionSm)
+                                    .appFont(.captionSm)
                                     .foregroundStyle(Color.tertiaryText)
                             }
                             Spacer()
@@ -134,10 +134,10 @@ struct WidgetSettingsView: View {
                     .foregroundStyle(mode == value ? Color.sanctuaryRed : Color.tertiaryText)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(title)
-                        .font(.body)
+                        .appFont(.body)
                         .foregroundStyle(Color.primaryText)
                     Text(subtitle)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
@@ -154,10 +154,10 @@ struct WidgetSettingsView: View {
         } label: {
             VStack(alignment: .leading, spacing: 2) {
                 Text(slot.label)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.tertiaryText)
                 Text(prayer?.title ?? slug)
-                    .font(.body)
+                    .appFont(.body)
                     .foregroundStyle(Color.primaryText)
             }
         }
@@ -200,10 +200,10 @@ private struct WidgetPrayerPicker: View {
                             HStack {
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(prayer.title)
-                                        .font(.body)
+                                        .appFont(.body)
                                         .foregroundStyle(Color.primaryText)
                                     Text(prayer.eng)
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .foregroundStyle(Color.tertiaryText)
                                 }
                                 Spacer()

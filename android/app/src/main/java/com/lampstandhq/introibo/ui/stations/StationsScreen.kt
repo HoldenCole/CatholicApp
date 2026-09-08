@@ -57,6 +57,7 @@ import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 
 /**
  * Stations of the Cross -- 14 stations with meditations.
@@ -155,7 +156,7 @@ private fun StartList(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Spacer(modifier = Modifier.height(24.dp))
-            Text(text = "✠", style = type.titleL.copy(fontSize = 36.sp), color = colors.sanctuaryRed.copy(alpha = 0.6f))
+            Text(text = "✠", style = type.titleL.copy(fontSize = scaledSp(36f)), color = colors.sanctuaryRed.copy(alpha = 0.6f))
             Spacer(modifier = Modifier.height(10.dp))
             Text(text = "Via Crucis", style = type.pageTitle, color = colors.ivory)
             Text(

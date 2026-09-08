@@ -82,19 +82,19 @@ struct TodayView: View {
                 Button { showCalendar = true } label: {
                     Image(systemName: "calendar")
                         .foregroundStyle(Color.goldLeaf)
-                        .font(.scaledSystem(16))
+                        .appFont(.scaledSystem(16))
                 }
                 .spotlightAnchor("calendarButton")
                 Button { showSearch = true } label: {
                     Image(systemName: "magnifyingglass")
                         .foregroundStyle(Color.goldLeaf)
-                        .font(.scaledSystem(16))
+                        .appFont(.scaledSystem(16))
                 }
                 .spotlightAnchor("searchButton")
                 Button { showSettings = true } label: {
                     Image(systemName: "gearshape")
                         .foregroundStyle(Color.goldLeaf)
-                        .font(.scaledSystem(16))
+                        .appFont(.scaledSystem(16))
                 }
                 .spotlightAnchor("settingsButton")
             }
@@ -115,11 +115,11 @@ struct TodayView: View {
             .padding(.top, 4)
 
             Text(langMode == .latinOnly ? ctx.feriaLatin : ctx.feriaEnglish)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
 
             Text(LongDateFormatter.format(ctx.date))
-                .font(.bodySm)
+                .appFont(.bodySm)
                 .italic()
                 .foregroundStyle(Color.muted)
 
@@ -129,7 +129,7 @@ struct TodayView: View {
             // Seasonal note (countdown, octave, etc)
             if let note = ctx.seasonalNote {
                 Text(note)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.goldLeaf)
                     .padding(.top, 6)
@@ -138,7 +138,7 @@ struct TodayView: View {
             // Marian antiphon (suppressed during Triduum)
             if !ctx.marian.isSuppressed {
                 Text(ctx.marian.title)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.muted)
                     .padding(.top, 2)
@@ -149,19 +149,19 @@ struct TodayView: View {
                 HStack(spacing: 12) {
                     if ctx.isFirstFriday {
                         Text(ContentStore.shared.uiString("flag.first_friday", "First Friday"))
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.sanctuaryRed)
                     }
                     if ctx.isFirstSaturday {
                         Text(ContentStore.shared.uiString("flag.first_saturday", "First Saturday"))
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.sanctuaryRed)
                     }
                     if ctx.isEmberDay {
                         Text(ContentStore.shared.uiString("flag.ember_day", "Ember Day"))
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.sanctuaryRed)
                     }
@@ -190,7 +190,7 @@ struct TodayView: View {
                 Text("Ritus  ·  \(rite.short)")
                     .smallLabel(color: Color.goldLeaf, tracking: 2)
                 Text("›")
-                    .font(.scaledSystem(8))
+                    .appFont(.scaledSystem(8))
                     .foregroundStyle(Color.goldLeaf)
             }
         }
@@ -230,12 +230,12 @@ struct TodayView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
                         Text("VENTURA \u{00B7} " + ContentStore.shared.uiString("today.upcoming", "Upcoming").uppercased())
-                            .font(.scaledSystem(10, weight: .semibold))
+                            .appFont(.scaledSystem(10, weight: .semibold))
                             .tracking(2)
                             .foregroundStyle(Color.tertiaryText)
                         Spacer()
                         Image(systemName: "chevron.right")
-                            .font(.scaledSystem(11))
+                            .appFont(.scaledSystem(11))
                             .foregroundStyle(Color.tertiaryText)
                     }
                     ForEach(upcoming.prefix(4), id: \.date) { day in
@@ -244,13 +244,13 @@ struct TodayView: View {
                                 .fill((day.colour?.swiftUIColor ?? Color.frameLine).opacity(0.85))
                                 .frame(width: 6, height: 6)
                             Text(Self.upcomingDate.string(from: day.date))
-                                .font(.scaledSystem(12, design: .serif))
+                                .appFont(.scaledSystem(12, design: .serif))
                                 .foregroundStyle(Color.tertiaryText)
                                 .frame(width: 52, alignment: .leading)
                             Text(langMode == .latinOnly
                                  ? (day.label ?? day.weekdayName)
                                  : (day.englishName ?? day.label ?? day.weekdayName))
-                                .font(.scaledSystem(14, design: .serif))
+                                .appFont(.scaledSystem(14, design: .serif))
                                 .foregroundStyle(Color.primaryText)
                                 .lineLimit(1)
                             Spacer(minLength: 0)
@@ -296,24 +296,24 @@ struct TodayView: View {
                             .frame(width: 44, height: 44)
                             .rotationEffect(.degrees(-90))
                         Text("\(done)")
-                            .font(.titleM)
+                            .appFont(.titleM)
                             .foregroundStyle(Color.primaryText)
                     }
 
                     VStack(alignment: .leading, spacing: 3) {
                         Text(ContentStore.shared.uiString("today.prayer_rule", "Prayer Rule"))
-                            .font(.titleM)
+                            .appFont(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
                         Text(progress >= 1.0 ? ContentStore.shared.uiString("today.prayer_rule.done", "All prayers complete") : ContentStore.shared.uiString("today.prayer_rule.progress", "{done} of {total} prayers today").replacingOccurrences(of: "{done}", with: "\(done)").replacingOccurrences(of: "{total}", with: "\(total)"))
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                     }
 
                     Spacer()
 
                     Text(ContentStore.shared.uiString("common.open", "Open"))
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.sanctuaryRed)
                 }
                 .padding(14)
@@ -332,7 +332,7 @@ struct TodayView: View {
             LanguageAwareText(latin: "Psalmus Hodiérnus", english: "Daily Psalm")
                 .smallLabel(color: Color.sanctuaryRed)
             Text(verse.ref)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.goldLeaf)
             BilingualLine(lat: verse.latin, eng: verse.english)
                 .lineSpacing(3)
@@ -354,7 +354,7 @@ struct TodayView: View {
                     LanguageAwareText(latin: "Próprium Missæ", english: "Today\u{2019}s Propers")
                         .smallLabel(color: Color.goldLeaf)
                     Text(proper.title)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                     // Subtitle: the vernacular feast name. DO sanctoral
@@ -365,7 +365,7 @@ struct TodayView: View {
                         ?? proper.english
                     if subtitle != proper.title {
                         Text(subtitle)
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.secondaryText)
                     }
@@ -375,20 +375,20 @@ struct TodayView: View {
                             if !proper.epistle.ref.isEmpty {
                                 HStack(spacing: 4) {
                                     Text("Ep.")
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .foregroundStyle(Color.sanctuaryRed)
                                     Text(proper.epistle.ref)
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .foregroundStyle(Color.tertiaryText)
                                 }
                             }
                             if !proper.gospel.ref.isEmpty {
                                 HStack(spacing: 4) {
                                     Text("Ev.")
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .foregroundStyle(Color.sanctuaryRed)
                                     Text(proper.gospel.ref)
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .foregroundStyle(Color.tertiaryText)
                                 }
                             }
@@ -429,17 +429,17 @@ struct TodayView: View {
                 .buttonStyle(.plain)
             }
             Text(ctx.penance.rubric)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.tertiaryText)
 
             Text(ctx.penance.title)
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
                 .padding(.top, 4)
 
             Text(ctx.penance.desc)
-                .font(.bodySm)
+                .appFont(.bodySm)
                 .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
 
@@ -454,12 +454,12 @@ struct TodayView: View {
                         Text("·")
                             .foregroundStyle(Color.tertiaryText)
                         Text(saint.name)
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.secondaryText)
                     }
                     Text(saintPenance)
-                        .font(.bodySm)
+                        .appFont(.bodySm)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                         .lineSpacing(3)
@@ -471,10 +471,10 @@ struct TodayView: View {
             if let next = nextObligationDay() {
                 HStack(spacing: 6) {
                     Image(systemName: "arrow.right.circle")
-                        .font(.scaledSystem(11))
+                        .appFont(.scaledSystem(11))
                         .foregroundStyle(Color.sanctuaryRed)
                     Text("Next obligation: \(next)")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                 }
@@ -490,7 +490,7 @@ struct TodayView: View {
                         .padding(.top, 4)
                     ForEach(selected) { p in
                         Text("· \(p.title)")
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.primaryText)
                     }
@@ -499,7 +499,7 @@ struct TodayView: View {
 
             Button { showPenanceSheet = true } label: {
                 Text(selected.isEmpty ? ContentStore.shared.uiString("today.penance.choose", "Choose optional penances") : ContentStore.shared.uiString("today.penance.edit", "Edit penances"))
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .padding(.top, 6)
@@ -570,10 +570,10 @@ struct TodayView: View {
     private func devotionRow(_ title: String, latin: String) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(title)
-                .font(.titleM)
+                .appFont(.titleM)
                 .foregroundStyle(Color.primaryText)
             Text(latin)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
         }
@@ -591,20 +591,20 @@ struct TodayView: View {
 
                 if langMode != .vernacular {
                     Text(ctx.mystery.latinName)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                 }
                 if langMode != .latinOnly {
                     Text(ctx.mystery.englishName)
-                        .font(langMode == .vernacular ? .titleM : .captionSm)
+                        .appFont(langMode == .vernacular ? .titleM : .captionSm)
                         .italic()
                         .foregroundStyle(langMode == .vernacular ? Color.primaryText : Color.secondaryText)
                 }
 
                 if let lastDate = UserProgress.rosaryLastDate() {
                     Text("Last prayed: \(Self.dateFmt.string(from: lastDate))")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
                 }
@@ -656,21 +656,21 @@ struct TodayView: View {
                     .frame(width: 56, height: 56)
                     .rotationEffect(.degrees(-90))
                 Text("\(done)")
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .foregroundStyle(Color.primaryText)
             }
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(saint.name)
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Text(progress >= 1.0 ? "All practices complete" : "\(done) of \(total) practices today")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                 if streak > 0 {
                     Text("\(streak) day streak")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.goldLeaf)
                 }
             }
@@ -678,7 +678,7 @@ struct TodayView: View {
             Spacer()
 
             Text(ContentStore.shared.uiString("common.open", "Open"))
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.sanctuaryRed)
         }
         .padding(16)
@@ -690,14 +690,14 @@ struct TodayView: View {
     private var saintCardEmpty: some View {
         VStack(spacing: 8) {
             Text("✠")
-                .font(.titleL)
+                .appFont(.titleL)
                 .foregroundStyle(Color.sanctuaryRed)
             Text(ContentStore.shared.uiString("today.saints.follow", "Follow a Saint"))
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             Text("Choose a patron saint and track daily practices")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
@@ -719,7 +719,7 @@ struct TodayView: View {
                 let mastered = UserProgress.masteredLessons()
                 sectionLabel("Schola", subtitle: ContentStore.shared.uiString("today.schola.sub", "Latin learning"))
                 Text("Mastered: \(mastered.count) of \(ContentStore.shared.courses.count) lessons")
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -761,7 +761,7 @@ struct TodayView: View {
             Text(title)
                 .smallLabel(color: Color.sanctuaryRed)
             Text(subtitle)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.tertiaryText)
         }

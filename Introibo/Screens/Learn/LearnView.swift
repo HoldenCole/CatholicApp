@@ -46,16 +46,16 @@ struct LearnView: View {
                     .rotationEffect(.degrees(-90))
                 VStack(spacing: 0) {
                     Text("\(mastered.count)")
-                        .font(.titleXL)
+                        .appFont(.titleXL)
                         .foregroundStyle(Color.primaryText)
                     Text("of \(store.courses.count)")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
 
             Text("Lessons Mastered")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
 
@@ -87,16 +87,16 @@ struct LearnView: View {
                     Text("Verbum Hodie")
                         .smallLabel(color: Color.goldLeaf)
                     Text(card.lat ?? "")
-                        .font(.titleL)
+                        .appFont(.titleL)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                     if let phon = card.phon {
                         Text("[\(phon)]")
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .foregroundStyle(Color.tertiaryText)
                     }
                     Text(card.eng ?? "")
-                        .font(.body)
+                        .appFont(.body)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                 }
@@ -114,7 +114,7 @@ struct LearnView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
                 Text("Lectiones")
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .textCase(.uppercase)
@@ -147,36 +147,36 @@ struct LearnView: View {
                     .stroke(isMastered ? Color.goldLeaf.opacity(0.5) : Color.sanctuaryRed.opacity(0.3), lineWidth: 1)
                     .frame(width: 44, height: 44)
                 Text(roman(c.num))
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(isMastered ? Color.goldLeaf : Color.sanctuaryRed)
             }
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(c.title)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 if langMode != .vernacular {
                     Text(c.latin)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                 }
                 HStack(spacing: 8) {
                     HStack(spacing: 3) {
                         Image(systemName: "rectangle.on.rectangle")
-                            .font(.scaledSystem(9))
+                            .appFont(.scaledSystem(9))
                         Text("\(cardCount)")
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                     }
                     .foregroundStyle(Color.tertiaryText)
                     if isMastered {
                         HStack(spacing: 3) {
                             Image(systemName: "checkmark.seal.fill")
-                                .font(.scaledSystem(9))
+                                .appFont(.scaledSystem(9))
                             Text("Mastered")
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                         }
                         .foregroundStyle(Color.goldLeaf)
                     }
@@ -186,7 +186,7 @@ struct LearnView: View {
             Spacer()
 
             Image(systemName: "chevron.right")
-                .font(.scaledSystem(12))
+                .appFont(.scaledSystem(12))
                 .foregroundStyle(Color.tertiaryText)
         }
         .padding(.vertical, 12)

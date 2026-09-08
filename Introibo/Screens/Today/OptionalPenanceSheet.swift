@@ -10,7 +10,7 @@ struct OptionalPenanceSheet: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     Text(ContentStore.shared.uiString("penance.voluntary_sub", "Choose voluntary penances to observe today. These are not obligatory but are meritorious offerings to God."))
-                        .font(.bodySm)
+                        .appFont(.bodySm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                         .lineSpacing(3)
@@ -25,20 +25,20 @@ struct OptionalPenanceSheet: View {
                         } label: {
                             HStack(alignment: .top, spacing: 14) {
                                 Image(systemName: selected.contains(penance.id) ? "checkmark.circle.fill" : "circle")
-                                    .font(.scaledSystem(20))
+                                    .appFont(.scaledSystem(20))
                                     .foregroundStyle(selected.contains(penance.id) ? Color.sanctuaryRed : Color.tertiaryText)
 
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(penance.title)
-                                        .font(.titleM)
+                                        .appFont(.titleM)
                                         .italic()
                                         .foregroundStyle(Color.primaryText)
                                     Text(penance.latin)
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .italic()
                                         .foregroundStyle(Color.goldLeaf)
                                     Text(penance.desc)
-                                        .font(.captionSm)
+                                        .appFont(.captionSm)
                                         .foregroundStyle(Color.secondaryText)
                                         .lineSpacing(2)
                                 }

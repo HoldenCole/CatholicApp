@@ -64,6 +64,7 @@ import com.lampstandhq.introibo.ui.components.currentLanguageMode
 import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import kotlinx.coroutines.launch
 
 private val quickLinkTitles = listOf(
@@ -549,7 +550,7 @@ private fun TLMHistorySheet(
                         Spacer(Modifier.height(24.dp))
                         Text(
                             text = "✠",
-                            style = type.pageTitle.copy(fontSize = 36.sp),
+                            style = type.pageTitle.copy(fontSize = scaledSp(36f)),
                             color = colors.sanctuaryRed.copy(alpha = 0.6f),
                         )
                         Spacer(Modifier.height(8.dp))

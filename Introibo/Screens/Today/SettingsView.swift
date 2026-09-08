@@ -91,7 +91,7 @@ struct SettingsView: View {
                     Text(ContentStore.shared.uiString("settings.leonine.row", "Leonine Prayers"))
                         .foregroundStyle(Color.primaryText)
                     Text(ContentStore.shared.uiString("settings.leonine.sub", "Prayers after Low Mass (Leo XIII, 1884)"))
-                        .font(.caption)
+                        .appFont(.caption)
                         .foregroundStyle(Color.secondaryText)
                 }
             }
@@ -113,7 +113,7 @@ struct SettingsView: View {
                     Text(ContentStore.shared.uiString("settings.home.upcoming", "Show Upcoming Feasts on Home"))
                         .foregroundStyle(Color.primaryText)
                     Text(ContentStore.shared.uiString("settings.home.upcoming_sub", "The next fortnight's feasts, vigils, and Ember days"))
-                        .font(.caption)
+                        .appFont(.caption)
                         .foregroundStyle(Color.secondaryText)
                 }
             }
@@ -248,7 +248,7 @@ struct SettingsView: View {
                     .frame(maxWidth: .infinity)
                 HStack {
                     Text("A")
-                        .font(.scaledSystem(10, design: .serif))
+                        .appFont(.scaledSystem(10, design: .serif))
                         .foregroundStyle(Color.tertiaryText)
                     Slider(
                         value: $fontScale,
@@ -257,7 +257,7 @@ struct SettingsView: View {
                     )
                     .tint(Color.sanctuaryRed)
                     Text("A")
-                        .font(.scaledSystem(24, design: .serif))
+                        .appFont(.scaledSystem(24, design: .serif))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
@@ -273,7 +273,7 @@ struct SettingsView: View {
                         }
                     } label: {
                         Text(r.label)
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .foregroundStyle(fontRangeRaw == r.rawValue ? Color.sanctuaryRed : Color.tertiaryText)
                             .padding(.vertical, 8)
                             .frame(maxWidth: .infinity)
@@ -319,10 +319,10 @@ struct SettingsView: View {
                         .foregroundStyle(Color.primaryText)
                     Spacer()
                     Text("\(FeatureTutorial.allCases.count)")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                     Image(systemName: "chevron.right")
-                        .font(.scaledSystem(12))
+                        .appFont(.scaledSystem(12))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
@@ -355,7 +355,7 @@ struct SettingsView: View {
                         .foregroundStyle(Color.primaryText)
                     Spacer()
                     Image(systemName: "arrow.up.right")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
@@ -396,14 +396,14 @@ struct SettingsView: View {
         Section {
             VStack(alignment: .leading, spacing: 10) {
                 Text("Divinum Officium")
-                    .font(.subheadline)
+                    .appFont(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.primaryText)
                 Text("Liturgical texts for the Divine Office and Holy Mass are sourced from the Divinum Officium project (divinumofficium.com).")
-                    .font(.caption)
+                    .appFont(.caption)
                     .foregroundStyle(Color.secondaryText)
                 Text("Licensed under the MIT License.")
-                    .font(.caption)
+                    .appFont(.caption)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
             }
@@ -431,13 +431,13 @@ struct SettingsView: View {
             .listRowBackground(Color.pageBackground)
             LabeledContent("") {
                 Text("Ad altare Dei")
-                    .font(.caption)
+                    .appFont(.caption)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
             }
             .listRowBackground(Color.pageBackground)
             Text("A prayer companion for the traditional Catholic life. Ad free. Works offline.")
-                .font(.caption)
+                .appFont(.caption)
                 .foregroundStyle(Color.secondaryText)
                 .listRowBackground(Color.pageBackground)
         } header: {

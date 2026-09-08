@@ -68,20 +68,20 @@ struct ReferenceView: View {
         NavigationLink(destination: destination) {
             VStack(spacing: 8) {
                 Image(systemName: icon)
-                    .font(.scaledSystem(24))
+                    .appFont(.scaledSystem(24))
                     .foregroundStyle(Color.sanctuaryRed)
                 Text(title)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 if langMode != .vernacular {
                     Text(latin)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                 }
                 Text(count)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.tertiaryText)
             }
             .frame(maxWidth: .infinity)
@@ -99,7 +99,7 @@ struct ReferenceView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("Quick Reference")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .lineLimit(2)
@@ -112,12 +112,12 @@ struct ReferenceView: View {
                     Button { selection = entry } label: {
                         HStack {
                             Text(entry.title)
-                                .font(.titleM)
+                                .appFont(.titleM)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
                             Spacer()
                             Image(systemName: "chevron.right")
-                                .font(.scaledSystem(10))
+                                .appFont(.scaledSystem(10))
                                 .foregroundStyle(Color.tertiaryText)
                         }
                         .padding(.vertical, 4)
@@ -172,7 +172,7 @@ struct ReferenceListView: View {
         HStack(spacing: 10) {
             Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
             Text(category)
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.sanctuaryRed)
                 .textCase(.uppercase)
@@ -187,17 +187,17 @@ struct ReferenceListView: View {
     private func row(_ entry: ReferenceEntry) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(entry.title)
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             if let latin = entry.latin {
                 Text(latin)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
             }
             Text(entry.summary)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.tertiaryText)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
@@ -243,7 +243,7 @@ struct PropersSearchView: View {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Color.tertiaryText)
                 TextField("Search by saint, date, or scripture", text: $searchText)
-                    .font(.body)
+                    .appFont(.body)
                 if !searchText.isEmpty {
                     Button { searchText = "" } label: {
                         Image(systemName: "xmark.circle.fill")
@@ -263,23 +263,23 @@ struct PropersSearchView: View {
                         Button { selectedProper = proper } label: {
                             VStack(alignment: .leading, spacing: 3) {
                                 Text(proper.title)
-                                    .font(.titleM)
+                                    .appFont(.titleM)
                                     .italic()
                                     .foregroundStyle(Color.primaryText)
                                 Text(proper.english)
-                                    .font(.captionSm)
+                                    .appFont(.captionSm)
                                     .italic()
                                     .foregroundStyle(Color.secondaryText)
                                 if !proper.epistle.ref.isEmpty || !proper.gospel.ref.isEmpty {
                                     HStack(spacing: 8) {
                                         if !proper.epistle.ref.isEmpty {
                                             Text("Ep. \(proper.epistle.ref)")
-                                                .font(.captionSm)
+                                                .appFont(.captionSm)
                                                 .foregroundStyle(Color.tertiaryText)
                                         }
                                         if !proper.gospel.ref.isEmpty {
                                             Text("Ev. \(proper.gospel.ref)")
-                                                .font(.captionSm)
+                                                .appFont(.captionSm)
                                                 .foregroundStyle(Color.tertiaryText)
                                         }
                                     }
@@ -338,14 +338,14 @@ struct TLMHistoryView: View {
             VStack(spacing: 0) {
                 VStack(spacing: 8) {
                     Text("✠")
-                        .font(.scaledSystem(36))
+                        .appFont(.scaledSystem(36))
                         .foregroundStyle(Color.sanctuaryRed.opacity(0.6))
                         .padding(.top, 24)
                     Text("History of the Mass")
-                        .font(.pageTitle)
+                        .appFont(.pageTitle)
                         .foregroundStyle(Color.ivory)
                     Text("From the Last Supper to the Present Day")
-                        .font(.caption)
+                        .appFont(.caption)
                         .italic()
                         .foregroundStyle(Color.muted)
                         .textCase(.uppercase)
@@ -379,14 +379,14 @@ struct TLMHistoryView: View {
 
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(event.year)
-                                    .font(.captionSm)
+                                    .appFont(.captionSm)
                                     .foregroundStyle(Color.goldLeaf)
                                 Text(event.title)
-                                    .font(.titleM)
+                                    .appFont(.titleM)
                                     .italic()
                                     .foregroundStyle(Color.primaryText)
                                 Text(event.desc)
-                                    .font(.bodySm)
+                                    .appFont(.bodySm)
                                     .foregroundStyle(Color.secondaryText)
                                     .lineSpacing(3)
                             }
@@ -445,16 +445,16 @@ struct GlossaryView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(alignment: .firstTextBaseline, spacing: 10) {
                             Text(term.lat)
-                                .font(.titleM)
+                                .appFont(.titleM)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
                             Text(term.eng)
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.secondaryText)
                         }
                         Text(term.def)
-                            .font(.bodySm)
+                            .appFont(.bodySm)
                             .foregroundStyle(Color.secondaryText)
                             .lineSpacing(3)
                     }

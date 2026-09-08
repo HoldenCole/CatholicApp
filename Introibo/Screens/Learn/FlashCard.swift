@@ -15,27 +15,27 @@ struct FlashCard: View {
                     // Back: English + phonetic
                     if let eng = card.eng {
                         Text(eng)
-                            .font(.titleM)
+                            .appFont(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
                     }
                     if let phon = card.phon, !phon.isEmpty {
                         Text("[\(phon)]")
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .foregroundStyle(Color.tertiaryText)
                     }
                     Text("tap to see Latin")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
                 } else {
                     // Front: Latin
                     Text(card.lat ?? "")
-                        .font(.titleL)
+                        .appFont(.titleL)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                     Text("tap to reveal")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
                 }

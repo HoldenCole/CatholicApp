@@ -53,7 +53,7 @@ struct MissalView: View {
                 ToolbarItem(placement: .principal) {
                     VStack(spacing: 2) {
                         Text(todayProper?.englishTitle ?? "Ordo Missæ")
-                            .font(.titleM)
+                            .appFont(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
                         Text(rite.short)
@@ -713,12 +713,12 @@ struct MissalView: View {
             }
             VStack(alignment: .leading, spacing: 2) {
                 Text(section.title)
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 if let english = section.english {
                     Text(english)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                 }
@@ -728,7 +728,7 @@ struct MissalView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         if let rubric = line.rubric {
                             Text(rubric)
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.sanctuaryRed)
                         }
@@ -778,7 +778,7 @@ struct MissalView: View {
             }
             if !reading.ref.isEmpty {
                 Text(reading.ref)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
             }
             BilingualLine(lat: reading.lat, eng: reading.eng, sideBySide: true)

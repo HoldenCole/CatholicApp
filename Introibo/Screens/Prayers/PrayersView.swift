@@ -64,7 +64,7 @@ struct PrayersView: View {
                     Text("Regula Orationis")
                         .smallLabel(color: Color.sanctuaryRed)
                     Text("My Daily Rule")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                 }
@@ -81,13 +81,13 @@ struct PrayersView: View {
                         .frame(width: 40, height: 40)
                         .rotationEffect(.degrees(-90))
                     Text("\(done)")
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .foregroundStyle(Color.primaryText)
                 }
                 Button { showRuleNotification = true } label: {
                     Image(systemName: hasActiveRuleNotification ? "bell.fill" : "bell")
                         .foregroundStyle(Color.sanctuaryRed)
-                        .font(.scaledSystem(14))
+                        .appFont(.scaledSystem(14))
                 }
                 .buttonStyle(.plain)
                 .sheet(isPresented: $showRuleNotification) {
@@ -106,7 +106,7 @@ struct PrayersView: View {
                     Image(systemName: "pencil")
                     Text("Edit rule")
                 }
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.sanctuaryRed)
                 .frame(minHeight: 44)
                 .contentShape(Rectangle())
@@ -143,15 +143,15 @@ struct PrayersView: View {
                         HStack(spacing: 12) {
                             Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                                 .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
-                                .font(.titleM)
+                                .appFont(.titleM)
                             VStack(alignment: .leading, spacing: 1) {
                                 Text(prayer.title.strippingEm)
-                                    .font(.titleM)
+                                    .appFont(.titleM)
                                     .italic()
                                     .foregroundStyle(isDone ? Color.tertiaryText : Color.primaryText)
                                     .strikethrough(isDone, color: Color.tertiaryText)
                                 Text(prayer.eng)
-                                    .font(.captionSm)
+                                    .appFont(.captionSm)
                                     .foregroundStyle(isDone ? Color.tertiaryText : Color.secondaryText)
                             }
                             Spacer()
@@ -160,7 +160,7 @@ struct PrayersView: View {
                             } label: {
                                 Image(systemName: "book.pages")
                                     .foregroundStyle(Color.sanctuaryRed)
-                                    .font(.scaledSystem(14))
+                                    .appFont(.scaledSystem(14))
                             }
                             .buttonStyle(.plain)
                         }
@@ -177,21 +177,21 @@ struct PrayersView: View {
                         HStack(spacing: 12) {
                             Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                                 .foregroundStyle(isDone ? Color.goldLeaf : Color.frameLine)
-                                .font(.titleM)
+                                .appFont(.titleM)
                             VStack(alignment: .leading, spacing: 1) {
                                 Text(h.name)
-                                    .font(.titleM)
+                                    .appFont(.titleM)
                                     .italic()
                                     .foregroundStyle(isDone ? Color.tertiaryText : Color.primaryText)
                                     .strikethrough(isDone, color: Color.tertiaryText)
                                 Text("\(h.eng) — \(h.time)")
-                                    .font(.captionSm)
+                                    .appFont(.captionSm)
                                     .foregroundStyle(isDone ? Color.tertiaryText : Color.secondaryText)
                             }
                             Spacer()
                             Image(systemName: "clock")
                                 .foregroundStyle(Color.sanctuaryRed)
-                                .font(.scaledSystem(14))
+                                .appFont(.scaledSystem(14))
                         }
                         .padding(.vertical, 4)
                         .contentShape(Rectangle())
@@ -208,14 +208,14 @@ struct PrayersView: View {
         Button { showRuleEditor = true } label: {
             VStack(spacing: 10) {
                 Text("✠")
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .foregroundStyle(Color.sanctuaryRed)
                 Text("Create Your Prayer Rule")
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Text("Choose prayers for morning, midday, and evening")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .multilineTextAlignment(.center)
@@ -237,7 +237,7 @@ struct PrayersView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.sanctuaryRed.opacity(0.4)).frame(height: 1)
                 Text("Occasiones")
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .textCase(.uppercase)
@@ -253,11 +253,11 @@ struct PrayersView: View {
                     NavigationLink(destination: OccasionView(occasion: occasion, prayers: store.prayers.filter { ($0.occasions ?? []).contains(occasion) })) {
                         VStack(spacing: 4) {
                             Text(occasion)
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .foregroundStyle(Color.primaryText)
                                 .multilineTextAlignment(.center)
                             Text("\(count)")
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .foregroundStyle(Color.tertiaryText)
                         }
                         .frame(maxWidth: .infinity)
@@ -293,7 +293,7 @@ struct PrayersView: View {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
                 Text("All Prayers")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .lineLimit(2)
@@ -304,9 +304,9 @@ struct PrayersView: View {
             HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Color.tertiaryText)
-                    .font(.scaledSystem(14))
+                    .appFont(.scaledSystem(14))
                 TextField("Search prayers", text: $searchText)
-                    .font(.body)
+                    .appFont(.body)
                 if !searchText.isEmpty {
                     Button { searchText = "" } label: {
                         Image(systemName: "xmark.circle.fill")
@@ -326,9 +326,9 @@ struct PrayersView: View {
                 } label: {
                     HStack(spacing: 4) {
                         Image(systemName: sortAlphabetical ? "textformat.abc" : "list.number")
-                            .font(.scaledSystem(11))
+                            .appFont(.scaledSystem(11))
                         Text(sortAlphabetical ? "A - Z" : "Default")
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                     }
                     .foregroundStyle(Color.sanctuaryRed)
                     .padding(.horizontal, 10)
@@ -342,17 +342,17 @@ struct PrayersView: View {
                 Button { selection = p } label: {
                     HStack(alignment: .firstTextBaseline, spacing: 14) {
                         Text(String(p.title.strippingEm.prefix(1)))
-                            .font(.titleL)
+                            .appFont(.titleL)
                             .italic()
                             .foregroundStyle(Color.sanctuaryRed)
                             .frame(width: 22, alignment: .leading)
                         VStack(alignment: .leading, spacing: 2) {
                             Text(p.title.strippingEm)
-                                .font(.titleM)
+                                .appFont(.titleM)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
                             Text(p.eng)
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.secondaryText)
                         }
@@ -384,16 +384,16 @@ struct OccasionView: View {
                     Button { selection = p } label: {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(p.title.strippingEm)
-                                .font(.titleM)
+                                .appFont(.titleM)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
                             Text(p.eng)
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.secondaryText)
                             if let note = p.note {
                                 Text(note)
-                                    .font(.captionSm)
+                                    .appFont(.captionSm)
                                     .foregroundStyle(Color.tertiaryText)
                                     .lineLimit(2)
                                     .minimumScaleFactor(0.8)
@@ -509,10 +509,11 @@ struct PrayerRuleEditor: View {
                 if let title = itemTitle(slug) {
                     HStack {
                         Text(title)
+                            .appFont(.body)
                             .foregroundStyle(Color.primaryText)
                         if slug.hasPrefix("office-") {
                             Image(systemName: "clock")
-                                .font(.scaledSystem(12))
+                                .appFont(.scaledSystem(12))
                                 .foregroundStyle(Color.sanctuaryRed)
                         }
                         Spacer()
@@ -535,12 +536,14 @@ struct PrayerRuleEditor: View {
                     Image(systemName: "plus.circle")
                         .foregroundStyle(Color.sanctuaryRed)
                     Text("Add prayers or hours")
+                        .appFont(.body)
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
             .listRowBackground(Color.pageBackground)
         } header: {
             Text("\(latin)  .  \(eng)")
+                .appFont(.caption)
         }
     }
 }
@@ -615,9 +618,10 @@ struct RuleItemPicker: View {
             HStack {
                 VStack(alignment: .leading, spacing: 1) {
                     Text(title)
+                        .appFont(.body)
                         .foregroundStyle(Color.primaryText)
                     Text(subtitle)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.secondaryText)
                 }
                 Spacer()

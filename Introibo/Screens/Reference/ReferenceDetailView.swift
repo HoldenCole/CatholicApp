@@ -59,12 +59,12 @@ struct ReferenceDetailView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(entry.title)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             if let latin = entry.latin, langMode != .vernacular {
                 Text(latin)
-                    .font(.caption)
+                    .appFont(.caption)
                     .italic()
                     .foregroundStyle(Color.muted)
                     .textCase(.uppercase)
@@ -84,7 +84,7 @@ struct ReferenceDetailView: View {
     private func dropCapParagraph(_ text: String) -> some View {
         let stripped = text.strippingEm
         return Text(stripped)
-            .font(.body)
+            .appFont(.body)
             .foregroundStyle(Color.primaryText)
             .lineSpacing(4)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -95,7 +95,7 @@ struct ReferenceDetailView: View {
             Text(title)
                 .smallLabel(color: Color.sanctuaryRed)
             Text(body.strippingEm)
-                .font(.bodySm)
+                .appFont(.bodySm)
                 .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
         }
@@ -107,7 +107,7 @@ struct ReferenceDetailView: View {
             LanguageAwareText(latin: "Scriptura", english: "Scripture")
                 .smallLabel(color: Color.sanctuaryRed)
             Text(s.ref)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.goldLeaf)
             BilingualLine(lat: s.lat, eng: s.eng)
         }

@@ -45,16 +45,16 @@ struct RosaryFlowView: View {
                     if let mystery = step.mystery {
                         VStack(spacing: 6) {
                             Text(mystery.title)
-                                .font(.titleL)
+                                .appFont(.titleL)
                                 .italic()
                                 .foregroundStyle(Color.primaryText)
                                 .multilineTextAlignment(.center)
                             Text(mystery.eng)
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.secondaryText)
                             Text("Fruit: \(mystery.fruit)")
-                                .font(.captionSm)
+                                .appFont(.captionSm)
                                 .italic()
                                 .foregroundStyle(Color.goldLeaf)
                                 .padding(.top, 2)
@@ -82,7 +82,7 @@ struct RosaryFlowView: View {
                                 .fill(Color.goldLeaf.opacity(0.3))
                                 .frame(height: 0.5)
                             Text(meditation)
-                                .font(.bodySm)
+                                .appFont(.bodySm)
                                 .italic()
                                 .foregroundStyle(Color.tertiaryText)
                                 .lineSpacing(3)
@@ -116,7 +116,7 @@ struct RosaryFlowView: View {
             }
             ToolbarItem(placement: .principal) {
                 Text("\(stepIndex + 1) / \(steps.count)")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.tertiaryText)
             }
         }
@@ -143,7 +143,7 @@ struct RosaryFlowView: View {
                 if stepIndex > 0 { stepIndex -= 1 }
             } label: {
                 Text("‹")
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .foregroundStyle(Color.sanctuaryRed)
                     .frame(width: 52, height: 52)
                     .overlay(Rectangle().stroke(Color.sanctuaryRed.opacity(0.4), lineWidth: 0.5))
@@ -184,19 +184,19 @@ struct RosaryFlowView: View {
         VStack(spacing: 16) {
             Spacer()
             Text("✠")
-                .font(.scaledSystem(64))
+                .appFont(.scaledSystem(64))
                 .foregroundStyle(Color.sanctuaryRed)
             Text("Rosary Complete")
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.primaryText)
             Text(set.english)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
                 .textCase(.uppercase)
                 .tracking(2)
             Text("Marked as prayed today")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.goldLeaf)
                 .padding(.top, 8)
             Button { dismiss() } label: {

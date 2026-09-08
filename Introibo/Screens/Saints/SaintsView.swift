@@ -36,7 +36,7 @@ struct SaintsView: View {
         return VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text(saint.name)
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Spacer()
@@ -46,11 +46,11 @@ struct SaintsView: View {
                 }
             }
             Text(saint.title)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
             Text(saint.quote)
-                .font(.bodyIt)
+                .appFont(.bodyIt)
                 .foregroundStyle(Color.tertiaryText)
                 .lineSpacing(3)
                 .padding(.top, 4)

@@ -54,6 +54,7 @@ import com.lampstandhq.introibo.ui.saints.SaintsScreen
 import com.lampstandhq.introibo.ui.search.SearchScreen
 import com.lampstandhq.introibo.ui.stations.StationsScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import com.lampstandhq.introibo.storage.settings.SettingsRepository
 import com.lampstandhq.introibo.ui.today.SettingsScreen
 import com.lampstandhq.introibo.ui.today.TodayScreen
@@ -194,7 +195,7 @@ fun IntroiboNavHost(
                                 text = tab.label,
                                 fontFamily = FontFamily.Serif,
                                 fontStyle = FontStyle.Italic,
-                                fontSize = 11.sp,
+                                fontSize = scaledSp(11f),
                             )
                         },
                         colors = NavigationBarItemDefaults.colors(

@@ -28,13 +28,13 @@ struct BilingualLine: View {
         if sideBySide && mode == .both && fontScale <= 1.4 && hasEng {
             HStack(alignment: .top, spacing: 12) {
                 Text(attributedLat)
-                    .font(.body)
+                    .appFont(.body)
                     .foregroundStyle(Color.primaryText)
                     .lineSpacing(3)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .fixedSize(horizontal: false, vertical: true)
                 Text(attributedEng)
-                    .font(.body)
+                    .appFont(.body)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
                     .lineSpacing(3)
@@ -47,13 +47,13 @@ struct BilingualLine: View {
                 // part is never blank; otherwise show Latin unless suppressed.
                 if mode != .vernacular || !hasEng {
                     Text(attributedLat)
-                        .font(.body)
+                        .appFont(.body)
                         .foregroundStyle(Color.primaryText)
                         .lineSpacing(3)
                 }
                 if mode != .latinOnly && hasEng {
                     Text(attributedEng)
-                        .font(.body)
+                        .appFont(.body)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
                         .lineSpacing(3)

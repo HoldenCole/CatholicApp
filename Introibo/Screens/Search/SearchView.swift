@@ -100,20 +100,20 @@ struct SearchView: View {
                 Spacer()
                 Button { dismiss() } label: {
                     Image(systemName: "xmark")
-                        .font(.scaledSystem(15, weight: .medium))
+                        .appFont(.scaledSystem(15, weight: .medium))
                         .foregroundStyle(Color.tertiaryText)
                 }
             }
 
             HStack(spacing: 10) {
                 Image(systemName: "magnifyingglass")
-                    .font(.scaledSystem(15))
+                    .appFont(.scaledSystem(15))
                     .foregroundStyle(Color.tertiaryText)
                 TextField("", text: $query, prompt:
                     Text("Search prayers, Mass, Office…")
                         .foregroundColor(Color.tertiaryText)
                 )
-                .font(.body)
+                .appFont(.body)
                 .foregroundStyle(Color.primaryText)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled(true)
@@ -121,7 +121,7 @@ struct SearchView: View {
                 if !query.isEmpty {
                     Button { query = "" } label: {
                         Image(systemName: "xmark.circle.fill")
-                            .font(.scaledSystem(15))
+                            .appFont(.scaledSystem(15))
                             .foregroundStyle(Color.tertiaryText)
                     }
                 }
@@ -144,7 +144,7 @@ struct SearchView: View {
                     let selected = (f == filter)
                     Button { filter = f } label: {
                         Text(f.label)
-                            .font(.caption)
+                            .appFont(.caption)
                             .foregroundStyle(selected ? Color.parchment : Color.secondaryText)
                             .padding(.vertical, 6)
                             .padding(.horizontal, 14)
@@ -183,14 +183,14 @@ struct SearchView: View {
         VStack(spacing: 10) {
             Spacer()
             Text("✠")
-                .font(.titleL)
+                .appFont(.titleL)
                 .foregroundStyle(Color.sanctuaryRed)
             Text("Search the whole library")
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             Text("Prayers, the Mass, the Office, reference, saints, and the calendar.")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
@@ -204,7 +204,7 @@ struct SearchView: View {
         VStack(spacing: 8) {
             Spacer()
             Text("No results")
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             Text("Nihil invéntum")
@@ -241,22 +241,22 @@ struct SearchView: View {
     private func resultRow(_ result: SearchResult) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: result.document.type.symbolName)
-                .font(.scaledSystem(14))
+                .appFont(.scaledSystem(14))
                 .foregroundStyle(Color.goldLeaf)
                 .frame(width: 20)
                 .padding(.top, 2)
             VStack(alignment: .leading, spacing: 3) {
                 Text(result.document.title.strippingEm)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .foregroundStyle(Color.primaryText)
                 if let subtitle = result.document.subtitle, !subtitle.isEmpty {
                     Text(subtitle.strippingEm)
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.tertiaryText)
                 }
                 highlightedSnippet(result.snippet)
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .foregroundStyle(Color.secondaryText)
                     .lineLimit(2)
             }

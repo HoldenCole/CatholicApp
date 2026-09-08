@@ -44,6 +44,7 @@ import com.lampstandhq.introibo.data.model.Course
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 
 /**
  * Multiple-choice quiz generated from flashcard data.
@@ -132,11 +133,11 @@ fun QuizScreen(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center,
                     ) {
-                        Text(text = "✠", style = type.pageTitle.copy(fontSize = 48.sp), color = colors.sanctuaryRed)
+                        Text(text = "✠", style = type.pageTitle.copy(fontSize = scaledSp(48f)), color = colors.sanctuaryRed)
                         Spacer(modifier = Modifier.height(16.dp))
                         Text(
                             text = "$score / ${questions.size}",
-                            style = type.pageTitle.copy(fontSize = 48.sp),
+                            style = type.pageTitle.copy(fontSize = scaledSp(48f)),
                             color = colors.primaryText,
                         )
                         Text(

@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import kotlin.math.cos
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -202,7 +203,7 @@ private fun HourNode(
             Text(
                 text = formatTime(hour.hour, hour.minute),
                 style = type.captionSm.copy(
-                    fontSize = 8.sp,
+                    fontSize = scaledSp(8f),
                     fontWeight = FontWeight.SemiBold,
                     fontStyle = FontStyle.Italic,
                 ),

@@ -17,7 +17,7 @@ struct GuideReaderView: View {
                     VStack(alignment: .leading, spacing: 24) {
                         if let sub = guide.subtitle {
                             Text(sub)
-                                .font(.bodyIt)
+                                .appFont(.bodyIt)
                                 .foregroundStyle(Color.secondaryText)
                                 .lineSpacing(4)
                                 .padding(.leading, 14)
@@ -53,11 +53,11 @@ struct GuideReaderView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(guide.title)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
             Text("Sacraméntum Pæniténtiæ")
-                .font(.caption)
+                .appFont(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
@@ -77,25 +77,25 @@ struct GuideReaderView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
                 Text(step.num)
-                    .font(.titleL)
+                    .appFont(.titleL)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .frame(width: 44, alignment: .leading)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(step.title)
-                        .font(.titleM)
+                        .appFont(.titleM)
                         .italic()
                         .foregroundStyle(Color.primaryText)
                     if let latin = step.latin {
                         Text(latin)
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.secondaryText)
                     }
                 }
             }
             Text(step.body)
-                .font(.bodySm)
+                .appFont(.bodySm)
                 .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
                 .padding(.leading, 56)

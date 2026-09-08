@@ -57,6 +57,7 @@ import com.lampstandhq.introibo.ui.missal.ProperScreen
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
 import com.lampstandhq.introibo.ui.theme.IntroiboType
 import com.lampstandhq.introibo.ui.theme.liturgicalColor
+import com.lampstandhq.introibo.ui.theme.scaledSp
 import com.lampstandhq.introibo.ui.components.BilingualLine
 import com.lampstandhq.introibo.ui.components.LanguageAwareLabel
 import com.lampstandhq.introibo.ui.components.currentLanguageMode
@@ -256,7 +257,7 @@ fun TodayScreen(
                     )
                     Text(
                         text = " ›",
-                        fontSize = 8.sp,
+                        fontSize = scaledSp(8f),
                         color = colors.goldLeaf,
                     )
                 }
@@ -489,7 +490,7 @@ private fun UpcomingFeastsCard(
         Row(verticalAlignment = Alignment.CenterVertically) {
             SmallLabel(text = "Ventura · " + ContentStore.uiString("today.upcoming", "Upcoming"), color = colors.tertiaryText)
             Spacer(Modifier.weight(1f))
-            Text(text = "›", fontSize = 12.sp, color = colors.tertiaryText)
+            Text(text = "›", fontSize = scaledSp(12f), color = colors.tertiaryText)
         }
         Spacer(Modifier.height(8.dp))
         upcoming.forEach { day ->
@@ -509,7 +510,7 @@ private fun UpcomingFeastsCard(
                 Spacer(Modifier.width(10.dp))
                 Text(
                     text = day.date.format(fmt),
-                    fontSize = 12.sp,
+                    fontSize = scaledSp(12f),
                     color = colors.tertiaryText,
                     modifier = Modifier.width(72.dp),
                 )
@@ -519,7 +520,7 @@ private fun UpcomingFeastsCard(
                     } else {
                         day.englishName ?: day.label ?: day.weekdayName
                     },
-                    fontSize = 14.sp,
+                    fontSize = scaledSp(14f),
                     color = colors.primaryText,
                     maxLines = 1,
                     overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
@@ -690,7 +691,7 @@ private fun PenanceCard(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(top = 8.dp),
             ) {
-                Text(text = "→", fontSize = 11.sp, color = colors.sanctuaryRed)
+                Text(text = "→", fontSize = scaledSp(11f), color = colors.sanctuaryRed)
                 Spacer(Modifier.width(6.dp))
                 Text(
                     text = "Next obligation: $nextObl",

@@ -113,13 +113,13 @@ struct CalendarView: View {
             if !isCurrentMonth {
                 Button { jumpToToday() } label: {
                     Text(ContentStore.shared.uiString("calendar.today", "Today"))
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .foregroundStyle(Color.sanctuaryRed)
                 }
             }
             Button { dismiss() } label: {
                 Image(systemName: "xmark")
-                    .font(.scaledSystem(15, weight: .medium))
+                    .appFont(.scaledSystem(15, weight: .medium))
                     .foregroundStyle(Color.tertiaryText)
             }
         }
@@ -135,7 +135,7 @@ struct CalendarView: View {
                     withAnimation(.easeInOut(duration: 0.2)) { viewMode = mode }
                 } label: {
                     Image(systemName: mode.icon)
-                        .font(.scaledSystem(12))
+                        .appFont(.scaledSystem(12))
                         .foregroundStyle(viewMode == mode ? Color.parchment : Color.tertiaryText)
                         .frame(width: 30, height: 26)
                         .background(
@@ -169,7 +169,7 @@ struct CalendarView: View {
             }
         } label: {
             Image(systemName: "sparkles")
-                .font(.scaledSystem(13))
+                .appFont(.scaledSystem(13))
                 .foregroundStyle(Color.goldLeaf)
         }
     }
@@ -190,10 +190,10 @@ struct CalendarView: View {
             Spacer()
             VStack(spacing: 2) {
                 Text(String(year))
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .foregroundStyle(Color.primaryText)
                 Text(ContentStore.shared.uiString("calendar.year_overview", "The Liturgical Year"))
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.tertiaryText)
             }
             Spacer()
@@ -211,10 +211,10 @@ struct CalendarView: View {
             Spacer()
             VStack(spacing: 2) {
                 Text(monthName)
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .foregroundStyle(Color.primaryText)
                 Text("\(String(year))")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.tertiaryText)
             }
             Spacer()
@@ -237,7 +237,7 @@ struct CalendarView: View {
     private func navButton(_ glyph: String, enabled: Bool, _ action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(glyph)
-                .font(.scaledSystem(22, weight: .medium))
+                .appFont(.scaledSystem(22, weight: .medium))
                 .foregroundStyle(enabled ? Color.goldLeaf : Color.frameLine)
                 .frame(width: 44, height: 44)
                 .background(
@@ -297,7 +297,7 @@ struct CalendarView: View {
             HStack(spacing: 2) {
                 ForEach(Array(Self.gridWeekdayLetters.enumerated()), id: \.offset) { _, letter in
                     Text(letter)
-                        .font(.scaledSystem(10, weight: .medium))
+                        .appFont(.scaledSystem(10, weight: .medium))
                         .foregroundStyle(Color.tertiaryText)
                         .frame(maxWidth: .infinity)
                 }
@@ -335,13 +335,13 @@ struct CalendarView: View {
                     Circle()
                         .stroke(gridRingColor(d), lineWidth: d.isMajor ? 1.5 : 0.5)
                     Text("\(d.day)")
-                        .font(.scaledSystem(13, weight: d.isMajor ? .semibold : .regular, design: .serif))
+                        .appFont(.scaledSystem(13, weight: d.isMajor ? .semibold : .regular, design: .serif))
                         .foregroundStyle(d.isToday ? Color.parchment : Color.primaryText)
                 }
                 .frame(width: 30, height: 30)
 
                 Text(gridLabel(d))
-                    .font(.scaledSystem(8))
+                    .appFont(.scaledSystem(8))
                     .foregroundStyle(Color.secondaryText)
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
@@ -446,13 +446,13 @@ private struct YearOverview: View {
                 VStack(alignment: .leading, spacing: 6) {
                     HStack {
                         Text(ContentStore.shared.uiString("calendar.season." + seg.label.lowercased().replacingOccurrences(of: " ", with: "_"), seg.label).uppercased())
-                            .font(.scaledSystem(11, weight: .semibold))
+                            .appFont(.scaledSystem(11, weight: .semibold))
                             .tracking(2)
                             .foregroundStyle(tint)
                         Spacer()
                         if isCurrent {
                             Text(ContentStore.shared.uiString("calendar.you_are_here", "You are here").uppercased())
-                                .font(.scaledSystem(9, weight: .semibold))
+                                .appFont(.scaledSystem(9, weight: .semibold))
                                 .tracking(1.5)
                                 .foregroundStyle(Color.parchment)
                                 .padding(.horizontal, 7)
@@ -460,11 +460,11 @@ private struct YearOverview: View {
                                 .background(Capsule().fill(Color.sanctuaryRed))
                         }
                         Text("\(seg.dayCount) " + ContentStore.shared.uiString("calendar.days", "days"))
-                            .font(.scaledSystem(10))
+                            .appFont(.scaledSystem(10))
                             .foregroundStyle(Color.tertiaryText)
                     }
                     Text("\(Self.rangeDate.string(from: seg.startDate)) \u{2013} \(Self.rangeDate.string(from: seg.endDate))")
-                        .font(.captionSm)
+                        .appFont(.captionSm)
                         .italic()
                         .foregroundStyle(Color.secondaryText)
 
@@ -475,11 +475,11 @@ private struct YearOverview: View {
                                     .fill(LiturgicalColour.from(ordoColor: marker.color).swiftUIColor)
                                     .frame(width: 6, height: 6)
                                 Text(Self.markerDate.string(from: marker.date))
-                                    .font(.scaledSystem(11, design: .serif))
+                                    .appFont(.scaledSystem(11, design: .serif))
                                     .foregroundStyle(Color.tertiaryText)
                                     .frame(width: 46, alignment: .leading)
                                 Text(marker.english ?? marker.name)
-                                    .font(.scaledSystem(13, design: .serif))
+                                    .appFont(.scaledSystem(13, design: .serif))
                                     .foregroundStyle(Color.primaryText)
                                     .lineLimit(1)
                                 Spacer(minLength: 0)
@@ -552,7 +552,7 @@ struct DayMarkerPips: View {
 
     private func pip(_ letter: String, _ color: Color) -> some View {
         Text(letter)
-            .font(.scaledSystem(7, weight: .bold))
+            .appFont(.scaledSystem(7, weight: .bold))
             .foregroundStyle(color.opacity(0.9))
     }
 }
@@ -565,7 +565,7 @@ private struct SeasonDivider: View {
         HStack(spacing: 12) {
             Rectangle().fill(Color.goldLeaf.opacity(0.3)).frame(height: 0.5)
             Text(label.uppercased())
-                .font(.scaledSystem(10, weight: .semibold))
+                .appFont(.scaledSystem(10, weight: .semibold))
                 .tracking(2.5)
                 .foregroundStyle(Color.goldLeaf)
                 .fixedSize()
@@ -593,12 +593,12 @@ private struct DayRow: View {
                 VStack(alignment: .leading, spacing: 3) {
                     HStack(spacing: 6) {
                         Text(day.weekdayAbbrev)
-                            .font(.scaledSystem(10, weight: .medium))
+                            .appFont(.scaledSystem(10, weight: .medium))
                             .tracking(1)
                             .foregroundStyle(Color.tertiaryText)
                         if day.isSunday {
                             Text("\u{2720}")   // ✠ — day of obligation
-                                .font(.scaledSystem(9))
+                                .appFont(.scaledSystem(9))
                                 .foregroundStyle(Color.sanctuaryRed)
                         }
                         DayMarkerPips(day: day)
@@ -606,7 +606,7 @@ private struct DayRow: View {
 
                     if mode != .vernacular {
                         Text(day.label ?? ContentStore.shared.uiString("calendar.feria", "Feria"))
-                            .font(.body)
+                            .appFont(.body)
                             .fontWeight(day.isMajor ? .semibold : .regular)
                             .foregroundStyle(Color.primaryText)
                             .lineLimit(2)
@@ -614,7 +614,7 @@ private struct DayRow: View {
                     }
                     if mode != .latinOnly {
                         Text(day.englishLine)
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .italic()
                             .foregroundStyle(Color.secondaryText)
                             .lineLimit(2)
@@ -625,7 +625,7 @@ private struct DayRow: View {
                 Spacer(minLength: 4)
 
                 Image(systemName: "chevron.right")
-                    .font(.scaledSystem(12))
+                    .appFont(.scaledSystem(12))
                     .foregroundStyle(Color.tertiaryText.opacity(0.6))
                     .padding(.top, 2)
             }
@@ -649,7 +649,7 @@ private struct DayRow: View {
             Circle()
                 .stroke(ringColor, lineWidth: day.isMajor ? 1.5 : 1)
             Text("\(day.day)")
-                .font(.scaledSystem(16, weight: day.isMajor ? .semibold : .regular, design: .serif))
+                .appFont(.scaledSystem(16, weight: day.isMajor ? .semibold : .regular, design: .serif))
                 .foregroundStyle(day.isToday ? Color.parchment : Color.primaryText)
         }
         .frame(width: 40, height: 40)
@@ -752,12 +752,12 @@ private struct DayDetailView: View {
                     }
                 } label: {
                     Image(systemName: "square.and.arrow.up")
-                        .font(.scaledSystem(14))
+                        .appFont(.scaledSystem(14))
                         .foregroundStyle(Color.goldLeaf)
                 }
                 Button { dismiss() } label: {
                     Image(systemName: "xmark")
-                        .font(.scaledSystem(15, weight: .medium))
+                        .appFont(.scaledSystem(15, weight: .medium))
                         .foregroundStyle(Color.goldLeaf)
                 }
             }
@@ -773,14 +773,14 @@ private struct DayDetailView: View {
             }
 
             Text(title)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(Color.ivory)
                 .padding(.horizontal, 12)
 
             if langMode != .latinOnly, let english = day.englishName {
                 Text(english)
-                    .font(.bodySm)
+                    .appFont(.bodySm)
                     .italic()
                     .multilineTextAlignment(.center)
                     .foregroundStyle(Color.goldLeaf.opacity(0.85))
@@ -788,7 +788,7 @@ private struct DayDetailView: View {
             }
 
             Text(LongDateFormatter.format(day.date))
-                .font(.bodySm)
+                .appFont(.bodySm)
                 .italic()
                 .foregroundStyle(Color.muted)
         }
@@ -827,15 +827,15 @@ private struct DayDetailView: View {
                 Button { onViewMass(proper) } label: {
                     HStack {
                         Image(systemName: "book.closed")
-                            .font(.scaledSystem(14))
+                            .appFont(.scaledSystem(14))
                             .foregroundStyle(Color.sanctuaryRed)
                         Text(ContentStore.shared.uiString("calendar.view_mass", "View the Mass"))
-                            .font(.titleM)
+                            .appFont(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
                         Spacer()
                         Image(systemName: "chevron.right")
-                            .font(.scaledSystem(12))
+                            .appFont(.scaledSystem(12))
                             .foregroundStyle(Color.tertiaryText)
                     }
                     .padding(14)
@@ -854,13 +854,13 @@ private struct DayDetailView: View {
     private func infoRow(label: String, value: String, swatch: LiturgicalColour? = nil) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label.uppercased())
-                .font(.scaledSystem(10))
+                .appFont(.scaledSystem(10))
                 .tracking(1.5)
                 .foregroundStyle(Color.tertiaryText)
             HStack(spacing: 8) {
                 if let swatch { Circle().fill(swatch.swiftUIColor).frame(width: 10, height: 10) }
                 Text(value)
-                    .font(.body)
+                    .appFont(.body)
                     .foregroundStyle(Color.primaryText)
             }
         }
@@ -868,7 +868,7 @@ private struct DayDetailView: View {
 
     private func flag(_ text: String) -> some View {
         Text(text)
-            .font(.captionSm)
+            .appFont(.captionSm)
             .italic()
             .foregroundStyle(Color.sanctuaryRed)
     }
@@ -877,12 +877,12 @@ private struct DayDetailView: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
                 Text(ContentStore.shared.uiString("penance.fast_abstinence", "Fasting & Abstinence").uppercased())
-                    .font(.scaledSystem(10))
+                    .appFont(.scaledSystem(10))
                     .tracking(1.5)
                     .foregroundStyle(Color.tertiaryText)
                 Spacer()
                 Text(discipline.short)
-                    .font(.scaledSystem(9))
+                    .appFont(.scaledSystem(9))
                     .foregroundStyle(Color.goldLeaf)
             }
 
@@ -891,13 +891,13 @@ private struct DayDetailView: View {
                     .fill(ctx.penance.strict ? Color.sanctuaryRed : Color.goldLeaf)
                     .frame(width: 8, height: 8)
                 Text(ctx.penance.title)
-                    .font(.body)
+                    .appFont(.body)
                     .fontWeight(.medium)
                     .foregroundStyle(Color.primaryText)
             }
 
             Text(ctx.penance.desc)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.secondaryText)
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)

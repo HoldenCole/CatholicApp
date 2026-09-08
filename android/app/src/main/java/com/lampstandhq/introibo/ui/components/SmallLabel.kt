@@ -31,7 +31,6 @@ fun SmallLabel(
         text = text.uppercase(),
         style = type.smallLabel,
         color = color,
-        letterSpacing = 2.5.sp,
         maxLines = 2,
         overflow = TextOverflow.Ellipsis,
         modifier = modifier,

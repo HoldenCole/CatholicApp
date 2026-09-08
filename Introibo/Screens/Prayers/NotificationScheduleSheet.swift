@@ -55,11 +55,11 @@ struct NotificationScheduleSheet: View {
     private var headerSection: some View {
         VStack(spacing: 6) {
             Text(title)
-                .font(.titleL)
+                .appFont(.titleL)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             Text(subtitle)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
         }
@@ -70,7 +70,7 @@ struct NotificationScheduleSheet: View {
     private var toggleSection: some View {
         HStack {
             Label("Remind Me", systemImage: isEnabled ? "bell.fill" : "bell")
-                .font(.titleM)
+                .appFont(.titleM)
                 .foregroundStyle(Color.primaryText)
             Spacer()
             Toggle("", isOn: $isEnabled)
@@ -94,7 +94,7 @@ struct NotificationScheduleSheet: View {
                         else if !isSelected { selectedDays.insert(day) }
                     } label: {
                         Text(dayNames[day - 1])
-                            .font(.captionSm)
+                            .appFont(.captionSm)
                             .foregroundStyle(isSelected ? Color.ivory : Color.primaryText)
                             .frame(width: 44, height: 44)
                             .background(isSelected ? Color.sanctuaryRed : Color.clear)
@@ -126,14 +126,14 @@ struct NotificationScheduleSheet: View {
     private var deniedSection: some View {
         VStack(spacing: 12) {
             Image(systemName: "bell.slash")
-                .font(.titleL)
+                .appFont(.titleL)
                 .foregroundStyle(Color.sanctuaryRed)
             Text("Notifications Disabled")
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.primaryText)
             Text("Open Settings to allow Introibo to send prayer reminders.")
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .foregroundStyle(Color.secondaryText)
                 .multilineTextAlignment(.center)
             Button {
@@ -142,7 +142,7 @@ struct NotificationScheduleSheet: View {
                 }
             } label: {
                 Text("Open Settings")
-                    .font(.titleM)
+                    .appFont(.titleM)
                     .italic()
                     .foregroundStyle(Color.sanctuaryRed)
                     .padding(.vertical, 12)

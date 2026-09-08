@@ -52,13 +52,13 @@ struct CourseDetailView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(course.title)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 28)
             if langMode != .vernacular {
                 Text(course.latin)
-                    .font(.caption)
+                    .appFont(.caption)
                     .italic()
                     .foregroundStyle(Color.muted)
                     .textCase(.uppercase)
@@ -79,7 +79,7 @@ struct CourseDetailView: View {
 
     private var introBlock: some View {
         Text(course.intro)
-            .font(.body)
+            .appFont(.body)
             .foregroundStyle(Color.primaryText)
             .lineSpacing(4)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -105,7 +105,7 @@ struct CourseDetailView: View {
             }
             if let html = s.html {
                 Text(plainText(from: html))
-                    .font(.body)
+                    .appFont(.body)
                     .foregroundStyle(Color.primaryText)
                     .lineSpacing(4)
             }
@@ -121,7 +121,7 @@ struct CourseDetailView: View {
             }
             if let note = s.note {
                 Text(note)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.secondaryText)
             }

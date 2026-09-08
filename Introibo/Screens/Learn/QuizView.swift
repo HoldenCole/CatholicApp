@@ -57,14 +57,14 @@ struct QuizView: View {
                     .padding(.top, 24)
 
                 Text("Score: \(score)")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
 
                 VStack(spacing: 8) {
                     Text(q.promptLabel)
                         .smallLabel(color: Color.goldLeaf)
                     Text(q.prompt)
-                        .font(.pageTitle)
+                        .appFont(.pageTitle)
                         .foregroundStyle(Color.primaryText)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 28)
@@ -129,7 +129,7 @@ struct QuizView: View {
         } label: {
             HStack {
                 Text(choice)
-                    .font(.body)
+                    .appFont(.body)
                     .foregroundStyle(Color.primaryText)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 if hasAnswered && isCorrect {
@@ -159,17 +159,17 @@ struct QuizView: View {
         VStack(spacing: 16) {
             Spacer()
             Text("✠")
-                .font(.scaledSystem(48))
+                .appFont(.scaledSystem(48))
                 .foregroundStyle(Color.sanctuaryRed)
             Text("\(score) / \(questions.count)")
-                .font(.scaledSystem(48, weight: .semibold, design: .serif))
+                .appFont(.scaledSystem(48, weight: .semibold, design: .serif))
                 .foregroundStyle(Color.primaryText)
             Text(score == questions.count ? "Perfect!" : score >= questions.count / 2 ? "Well done" : "Keep practising")
-                .font(.titleM)
+                .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.secondaryText)
             Text(lessonTitle)
-                .font(.captionSm)
+                .appFont(.captionSm)
                 .italic()
                 .foregroundStyle(Color.tertiaryText)
                 .textCase(.uppercase)
@@ -194,7 +194,7 @@ struct QuizView: View {
 
             Button { dismiss() } label: {
                 Text("Done")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.tertiaryText)
             }

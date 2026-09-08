@@ -122,19 +122,19 @@ struct ProperView: View {
                 .smallLabel(color: Color.goldLeaf)
                 .padding(.top, 28)
             Text(proper.title)
-                .font(.pageTitle)
+                .appFont(.pageTitle)
                 .foregroundStyle(Color.ivory)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
             Text(proper.englishTitle)
-                .font(.caption)
+                .appFont(.caption)
                 .italic()
                 .foregroundStyle(Color.muted)
                 .textCase(.uppercase)
                 .tracking(2.5)
             if let preface = proper.preface {
                 Text("Præfátio: \(preface.capitalized)")
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .italic()
                     .foregroundStyle(Color.muted)
                     .padding(.top, 2)
@@ -214,7 +214,7 @@ struct ProperView: View {
             }
             if !reading.ref.isEmpty {
                 Text(reading.ref)
-                    .font(.captionSm)
+                    .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
             }
             BilingualLine(lat: reading.lat, eng: reading.eng, sideBySide: true)
