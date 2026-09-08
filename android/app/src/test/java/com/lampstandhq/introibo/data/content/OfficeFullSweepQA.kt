@@ -60,6 +60,21 @@ class OfficeFullSweepQA {
                             if (collects.none { it.lat.orEmpty().startsWith("Dómine Deus omnípotens") }) {
                                 flag("$where/prima: invariable collect replaced or missing")
                             }
+                            // The Chapter Office: every day carries the morrow's
+                            // Martyrology with its Luna line, and the second part
+                            // ends with the blessing.
+                            val mart = h.parts.firstOrNull { it.variationKey == "prima2.martyrologium" }
+                            val ml = mart?.lat.orEmpty()
+                            if (mart == null || !ml.contains("Luna ") || !ml.contains("Anno Dómini") ||
+                                !ml.trimEnd().endsWith("℟. Deo grátias.")) {
+                                flag("$where/prima: martyrology missing or malformed")
+                            }
+                            if (mart != null && mart.eng.orEmpty().split("\n").size != ml.split("\n").size) {
+                                flag("$where/prima: martyrology lat/eng paragraph count differs")
+                            }
+                            if (h.parts.lastOrNull()?.variationKey != "prima2.benedictio2") {
+                                flag("$where/prima: does not end with the blessing")
+                            }
                         }
                         "completorium" -> {
                             if (collects.none { it.lat.orEmpty().startsWith("Vísita") }) {
