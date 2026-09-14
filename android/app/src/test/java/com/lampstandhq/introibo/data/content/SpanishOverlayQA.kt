@@ -75,7 +75,7 @@ class SpanishOverlayQA {
             "hours_parts_es.json", "commune_office_es.json",
             "temporal_propers_es.json", "hymns_seasonal_es.json",
             "sanctoral_propers_es.json", "mysteries_es.json",
-            "rosary_prayers_es.json",
+            "rosary_prayers_es.json", "office_texts_es.json",
         )) {
             assertTrue(
                 "$name drifted from spanish-translation/ — run scripts/sync_spanish_assets.py",

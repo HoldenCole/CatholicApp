@@ -7,14 +7,16 @@ import java.io.File
 import java.time.LocalDate
 
 /**
- * Full-corpus QA sweep of the Divine Office: every canonical hour, every day
- * of a complete liturgical cycle (Advent 2025 – Dec 2026), all three rites,
- * through the REAL ContentStore pipeline (assembly + proper layers +
- * commemorations) via the initFromDirectory test seam.
+ * Full-corpus sanity sweep of the Divine Office: every canonical hour, every
+ * day of a complete liturgical cycle (Advent 2025 - Dec 2026), all three
+ * rites, through the REAL ContentStore pipeline.
  *
- * Checks structural invariants only — content correctness is pinned by
- * OfficeStructureFixTest; this sweep catches the day/rite combinations
- * nobody thought to look at.
+ * Content correctness is pinned against Divinum Officium by
+ * OfficeDivinumOfficiumGoldenTest; this sweep checks what that comparison
+ * does not see: nothing throws, every hour has parts, every psalm and
+ * canticle carries its verses, and no Divinum Officium markup
+ * ("@File:Section", "&psalm(…)", "$Oremus", "!Title", "(rubrica …)")
+ * leaks into the texts the reader sees.
  */
 class OfficeFullSweepQA {
 
@@ -25,7 +27,9 @@ class OfficeFullSweepQA {
             ?: error("cannot locate assets dir")
     }
 
-    private val dayHours = listOf("matutinum", "laudes", "tertia", "sexta", "nona", "vesperae")
+    private val hours = listOf("matutinum", "laudes", "prima", "tertia", "sexta", "nona", "vesperae", "completorium")
+
+    private val markup = Regex("(^|\\n)\\s*(@[A-Za-z]|&[a-z_]+\\(|\\$[A-Z]|!Commemoratio|\\(rubrica |\\(sed |\\(deinde )")
 
     @Test
     fun fullCycleStructuralInvariants() {
@@ -38,12 +42,8 @@ class OfficeFullSweepQA {
         var runs = 0
         while (!date.isAfter(end)) {
             for (rite in MissalRite.entries) {
-                val ordo = ContentStore.ordoForDate(date, rite)
-                val temporalKey = ordo?.temporal
-                val isTenebrae = temporalKey in setOf("quad6-4", "quad6-5", "quad6-6")
                 val where = "$date/${rite.rawValue}"
-
-                for (slug in dayHours + listOf("prima", "completorium")) {
+                for (slug in hours) {
                     val h = try {
                         ContentStore.hourForDate(slug, date, rite)
                     } catch (t: Throwable) {
@@ -54,135 +54,28 @@ class OfficeFullSweepQA {
                     if (h.parts.isEmpty()) { flag("$where/$slug: zero parts"); continue }
                     runs++
 
-                    val collects = h.parts.filter { it.type == "collect" }
-                    when (slug) {
-                        "prima" -> {
-                            if (collects.none { it.lat.orEmpty().startsWith("Dómine Deus omnípotens") }) {
-                                flag("$where/prima: invariable collect replaced or missing")
-                            }
-                            // The Chapter Office: every day carries the morrow's
-                            // Martyrology with its Luna line, and the second part
-                            // ends with the blessing.
-                            val mart = h.parts.firstOrNull { it.variationKey == "prima2.martyrologium" }
-                            val ml = mart?.lat.orEmpty()
-                            if (mart == null || !ml.contains("Luna ") || !ml.contains("Anno Dómini") ||
-                                !ml.trimEnd().endsWith("℟. Deo grátias.")) {
-                                flag("$where/prima: martyrology missing or malformed")
-                            }
-                            if (mart != null && mart.eng.orEmpty().split("\n").size != ml.split("\n").size) {
-                                flag("$where/prima: martyrology lat/eng paragraph count differs")
-                            }
-                            if (h.parts.lastOrNull()?.variationKey != "prima2.benedictio2") {
-                                flag("$where/prima: does not end with the blessing")
+                    for (p in h.parts) {
+                        val texts = listOfNotNull(p.lat, p.latR, p.antiphonLat, p.eng, p.engR, p.antiphonEng, p.label, p.title)
+                        for (t in texts) {
+                            if (markup.containsMatchIn(t)) {
+                                flag("$where/$slug: DO markup in ${p.type}/${p.variationKey}: ${t.take(80)}")
+                                break
                             }
                         }
-                        "completorium" -> {
-                            if (collects.none { it.lat.orEmpty().startsWith("Vísita") }) {
-                                flag("$where/completorium: invariable collect replaced or missing")
-                            }
+                        if ((p.type == "psalm" || p.type == "canticle") && p.verses.isNullOrEmpty()) {
+                            flag("$where/$slug: ${p.type} ${p.label} (${p.ref}) has no verses")
                         }
-                        else -> {
-                            val day = collects.filter { it.variationKey == "oratio" }
-                            if (day.size != 1) {
-                                flag("$where/$slug: expected 1 day collect, got ${day.size}")
-                            }
-                            day.firstOrNull()?.let { c ->
-                                if (c.lat.isNullOrBlank()) flag("$where/$slug: empty day collect")
-                                if (c.lat.orEmpty().startsWith("Dómine Deus omnípotens, qui ad princípium")) {
-                                    flag("$where/$slug: day collect is Prime's fixed collect")
-                                }
-                            }
-                        }
+                        if (p.type == "collect" && p.lat.isNullOrBlank()) flag("$where/$slug: empty collect ${p.variationKey}")
+                        if (p.type == "hymn" && p.lat.isNullOrBlank()) flag("$where/$slug: empty hymn ${p.variationKey}")
                     }
-
-                    // No responsorium breve at Lauds or Vespers, ever.
-                    if (slug == "laudes" || slug == "vesperae") {
-                        if (h.parts.any { (it.label ?: "").contains("Responsorium Breve") }) {
-                            flag("$where/$slug: responsorium breve present")
-                        }
-                        // Exactly one hymn — a feast's PROPER DOXOLOGY stanza
-                        // legitimately overrides the doxology slot as a
-                        // second hymn-typed part.
-                        val hymns = h.parts.count {
-                            it.type == "hymn" && it.variationKey != "doxology"
-                        }
-                        if (hymns != 1) flag("$where/$slug: expected 1 hymn, got $hymns")
-                    }
-
-                    // Canticle-antiphon slots must hold ONE antiphon, not a
-                    // psalm-antiphon list.
-                    for (vk in listOf("ant_laudes", "ant_vespera")) {
-                        h.parts.firstOrNull { it.variationKey == vk }?.let { ant ->
-                            val lines = ant.lat.orEmpty().split("\n").count { it.isNotBlank() }
-                            if (lines >= 4) flag("$where/$slug: $vk holds a $lines-line list")
-                            if (ant.lat.isNullOrBlank()) flag("$where/$slug: $vk empty")
-                        }
-                    }
-
-                    // Psalmody counts per hour.
-                    val psalms = h.parts.count { it.type == "psalm" }
-                    val expected: IntRange? = when (slug) {
-                        // Proper ONE-NOCTURN offices (Easter, Pentecost and
-                        // their octaves) have Venite + 3 psalms, the unused
-                        // slots suppressed; everything else Venite + 9.
-                        "matutinum" -> if (isTenebrae) 9..10 else 4..10
-                        // A proper Lauds set may place a psalm in the
-                        // canticle slot (e.g. festal schemes).
-                        "laudes" -> 4..5
-                        "vesperae" -> 5..5
-                        "tertia", "sexta", "nona" -> 3..3
-                        "prima" -> 3..4
-                        "completorium" -> 3..3
-                        else -> null
-                    }
-                    if (expected != null && psalms !in expected) {
-                        flag("$where/$slug: $psalms psalms (expected $expected)")
-                    }
-
-                    // Matins lesson counts follow the nocturn structure.
-                    if (slug == "matutinum") {
-                        val readings = h.parts.count { it.type == "reading" }
-                        if (readings != 3 && readings != 9) {
-                            flag("$where/matutinum: $readings lessons (expected 3 or 9)")
-                        }
-                        if (!isTenebrae && h.parts.none { it.type == "hymn" }) {
-                            flag("$where/matutinum: hymn missing")
-                        }
-                    }
-
-                    // Versicle slots stay populated.
-                    if (slug == "laudes" && h.parts.none { it.variationKey == "versum_1" }) {
-                        flag("$where/laudes: versicle missing")
-                    }
-                    if (slug == "vesperae" && h.parts.none { it.variationKey == "versum_2" }) {
-                        flag("$where/vesperae: versicle missing")
-                    }
-                }
-
-                // A sanctoral winner's own collect must actually land.
-                if (ordo != null && ordo.winner == "sanctoral") {
-                    val saintOratios = ContentStore.sanctoralOratioForQA(ordo.winnerKey, rite)
-                    if (saintOratios != null) {
-                        val vespers = ContentStore.hourForDate("vesperae", date, rite)
-                        val got = vespers?.parts
-                            ?.firstOrNull { it.variationKey == "oratio" && it.type == "collect" }
-                            ?.lat
-                        if (got != null && got !in saintOratios) {
-                            flag("$where: saint's collect did not land at Vespers " +
-                                "(got ${got.take(40)}…)")
-                        }
-                    }
-                }
-
-                // Commemorations render at Lauds when the data supports them.
-                val commem = ordo?.commemoration
-                if (!commem.isNullOrEmpty() && ContentStore.commemorationHasOratioForQA(commem)) {
-                    val lauds = ContentStore.hourForDate("laudes", date, rite)
-                    if (lauds != null &&
-                        lauds.parts.none { it.type == "heading" && it.label == "Commemoratio" }
-                    ) {
-                        flag("$where: commemoration $commem missing at Lauds")
-                    }
+                    // At most two hymns (a feast's proper doxology stanza may follow the hymn).
+                    val hymns = h.parts.count { it.type == "hymn" }
+                    if (slug != "matutinum" && hymns > 2) flag("$where/$slug: $hymns hymns")
+                    // The day hours end with a conclusion or the office's own ending.
+                    // (The Easter Vigil's Vespers of the older books, said within the Mass, have none.)
+                    val vigilVespers = slug == "vesperae" && rite == MissalRite.PRE_1955 &&
+                        h.parts.any { (it.label ?: "").contains("Sabbato Sancto") || (it.lat ?: "").startsWith("Véspere autem") }
+                    if (slug in listOf("laudes", "vesperae") && !vigilVespers && h.parts.none { it.type == "collect" }) flag("$where/$slug: no collect")
                 }
             }
             date = date.plusDays(1)

@@ -118,6 +118,16 @@ class AssetsDecodeTest {
         check("ordo.json", { decode<Map<String, OrdoEntry>>("ordo.json") }) { it.isNotEmpty() }
         check("ordo_1955.json", { decode<Map<String, OrdoEntry>>("ordo_1955.json") }) { it.isNotEmpty() }
         check("ordo_pre1955.json", { decode<Map<String, OrdoEntry>>("ordo_pre1955.json") }) { it.isNotEmpty() }
+        check("office_texts_es.json", { decode<Map<String, String>>("office_texts_es.json") }) { it.isNotEmpty() }
+        // Divinum Officium's rubrics data (scripts/office_qa/build_office_psalterium.py).
+        check("office_rules.json", { decode<Map<String, Map<String, OfficeRule>>>("office_rules.json") }) { it.keys.containsAll(listOf("1962", "1955", "pre1955")) && it.values.all { m -> m.isNotEmpty() } }
+        check("office_psalterium.json", { decode<OfficePsalterium>("office_psalterium.json") }) { it.parts.isNotEmpty() && it.psalmi.isNotEmpty() }
+        check("office_ants.json", { decode<Map<String, Map<String, List<PsalmiLine>>>>("office_ants.json") }) { it.isNotEmpty() }
+        check("office_commune.json", { decode<Map<String, OfficePsalterium>>("office_commune.json") }) { it.isNotEmpty() }
+        for (rite in listOf("1962", "1955", "pre1955")) {
+            check("office_propers_$rite.json", { decode<Map<String, OfficePsalterium>>("office_propers_$rite.json") }) { it.isNotEmpty() }
+            check("office_ordo_$rite.json", { decode<Map<String, DoOrdoDay>>("office_ordo_$rite.json") }) { it.size >= 364 && it.values.all { d -> d.l != null } }
+        }
         check("ordo_names_en.json", { decode<Map<String, String>>("ordo_names_en.json") }) { it.isNotEmpty() }
         check("canon_variants.json", { decode<Map<String, Map<String, Map<String, String>>>>("canon_variants.json") }) { it.isNotEmpty() }
         check("psalter_weekly.json", { decode<Map<String, Map<String, Hour.Part>>>("psalter_weekly.json") }) { it.isNotEmpty() }

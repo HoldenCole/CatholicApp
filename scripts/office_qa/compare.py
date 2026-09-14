@@ -31,7 +31,9 @@ def norm(s):
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
     s = s.lower().replace("æ", "ae").replace("œ", "oe").replace("j", "i").replace("v", "u")
     s = re.sub(r"[^a-z0-9 ]+", " ", s)
-    return re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\s+", " ", s).strip()
+    s = s.replace("symbolum athanasium", "quicumque uult saluus")
+    return s.replace("genitri", "genetri")
 
 
 def words(s, n):
@@ -50,7 +52,7 @@ GLORIA = ("gloria patri", "sicut erat")
 # checking); matched on their normalised first words.
 FIXED_VERSICLES = ("deus in adiutorium", "gloria patri", "domine exaudi", "benedicamus domino",
                    "fidelium animae", "domine labia", "iube domine", "iube domne", "tu autem",
-                   "adiutorium nostrum", "pretiosa in conspectu", "respice in seruos",
+                   "adiutorium nostrum", "respice in seruos",
                    "et ne nos inducas", "sed libera nos", "dominus uobiscum", "exsurge christe",
                    "diuinum auxilium", "domine miserere", "conuerte nos", "dignare domine",
                    "kyrie eleison", "christe eleison", "pater noster", "ostende nobis",
@@ -77,9 +79,9 @@ def do_psalms(sections):
         i = 0
         while i < len(lines):
             l = lines[i]
-            m = re.match(r"^(Psalmus \d+(?:\(\d+-\d+\))?)\s*\[\d+\]", l) or re.match(r"^(Canticum [A-Za-zæÆ. ]+?)\s*(?:\[\d+\])?$", l)
+            m = re.match(r"^(Psalmus \d+(?:\(\d+[ab]?-\d+[ab]?\))?)\s*\[\d+\]", l) or re.match(r"^(Canticum [A-Za-zæÆ. ]+?)\s*(?:\[\d+\])?$", l)
             if m:
-                label = m.group(1).strip()
+                label = re.sub(r"[ab](?=[-)])", "", m.group(1).strip())
                 # verses follow until the next Ant./Psalmus/section end
                 j = i + 1
                 verses = []
@@ -116,12 +118,37 @@ def merge_laudate(ps):
 
 def do_antiphons(sections):
     out = []
+    open_ant = None
+    header_seen = False   # a "Psalmus"/"Canticum" header since the last antiphon
+    other_text = False    # anything but psalm verses since the last antiphon
     for sec in sections:
         for l in sec["lines"]:
+            if re.match(r"^(Psalmus \d|Canticum )", l):
+                header_seen = True
+                continue
             if l.startswith("Ant. "):
+                if sec["name"] == "Invitatorium" and out:
+                    continue  # the invitatory is repeated between the verses
                 t = words(l[5:], 5)
-                if not out or out[-1] != t:
-                    out.append(t)
+                if not t.strip():
+                    continue  # DO prints an empty "Ant." for a vigil commemorated on a Sunday
+                # the same antiphon again with only psalm verses between: the
+                # invitatory sung inside Psalm 94 (Epiphany)
+                repeat_in_psalm = out and t == out[-1] and not header_seen and not other_text
+                header_seen = False
+                other_text = False
+                if repeat_in_psalm:
+                    continue
+                # the antiphon repeated after its psalm (or its incipit before it)
+                if open_ant is not None and (t == open_ant or t.startswith(open_ant + " ") or open_ant.startswith(t + " ")):
+                    if len(t) > len(out[-1]):
+                        out[-1] = t
+                    open_ant = None
+                    continue
+                out.append(t)
+                open_ant = t
+            elif l.strip() and not re.match(r"^\d+:\d+", l) and not is_gloria(l):
+                other_text = True
     return out
 
 
@@ -152,7 +179,7 @@ def do_hymn(sections):
     for sec in sections:
         lines = sec["lines"]
         for i, l in enumerate(lines):
-            if l == "Hymnus":
+            if l.startswith("Hymnus"):
                 for l2 in lines[i + 1:]:
                     if not is_rubric(l2):
                         return words(l2, 5)
@@ -165,7 +192,7 @@ def do_capitulum(sections):
             lines = sec["lines"]
             for i, l in enumerate(lines):
                 # scripture ref line then the text
-                if re.match(r"^(?:[1-4] )?[A-Z][a-z]+\.? \d", l) and i + 1 < len(lines):
+                if re.match(r"^(?:[1-4]\.? )?[A-ZÀ-Ž][a-zà-ž]+\.? \d", l) and i + 1 < len(lines):
                     return words(lines[i + 1], 6)
             if lines:
                 return words(lines[0], 6)
@@ -184,8 +211,10 @@ def do_versicles(sections, hour):
     elif hour in ("tertia", "sexta", "nona"):
         sec = do_section(sections, r"Capitulum Responsorium Versus")
         if sec:
-            vs = [l for l in sec["lines"] if l.startswith("℣. ") and proper_versicle(l[3:])]
-            if vs: out.append(words(vs[-1][3:], 5))
+            # the versicle is the closing ℣/℟ pair after the short responsory
+            ls = sec["lines"]
+            if len(ls) >= 2 and ls[-1].startswith("℟. ") and ls[-2].startswith("℣. ") and proper_versicle(ls[-2][3:]):
+                out.append(words(ls[-2][3:], 5))
     elif hour == "matutinum":
         for sec in sections:
             if re.match(r"^Lectio", sec["name"]) or sec["name"] in ("Incipit", "Invitatorium", "Oratio", "Conclusio"):
@@ -204,11 +233,35 @@ def do_responsory(sections):
 
 def do_collects(sections):
     out = []
+    # the Triduum's Compline: DO's page breaks the extractor's sectioning ("P" / "er Dóminum")
+    if any(len(sec["name"]) == 1 for sec in sections):
+        return None
     for sec in sections:
         lines = sec["lines"]
+        found = False
         for i, l in enumerate(lines):
             if l.startswith("Orémus") and i + 1 < len(lines):
+                j = i + 1
+                # a rubric title ("In Anniversario Dedicationis Ecclesiæ") precedes some collects
+                if j + 1 < len(lines) and not re.search(r"[,:;.]", lines[j]):
+                    j += 1
+                out.append(words(lines[j], 6))
+                found = True
+        # a commemoration printed with its collect only (the 1960 books' "Commemoratio S. Petri")
+        for i, l in enumerate(lines):
+            if sec["name"].startswith("Lectio"):
+                break  # the ninth lesson's legend, not a collect
+            if l.startswith("Commemoratio") and i + 1 < len(lines) and not lines[i + 1].startswith(("Ant", "℣", "℟", "Orémus")) \
+                    and re.search(r"[,:;]", lines[i + 1]):
                 out.append(words(lines[i + 1], 6))
+                found = True
+        # the Triduum and the Office of the Dead: a collect said without Orémus
+        if not found and sec["name"] == "Oratio":
+            for l in lines:
+                if l.startswith(("℣", "℟", "V.", "R.", "Pater noster", "secreto", "aliquantulum", "Et sub silentio", "Qui tecum", "Per ", "Kýrie", "Christe")):
+                    continue
+                out.append(words(l, 6))
+                break
     return out
 
 
@@ -220,7 +273,7 @@ def do_lessons(sections):
 
 def do_marian(sections):
     sec = do_section(sections, r"Antiphona finalis")
-    return words(sec["lines"][0], 4) if sec and sec["lines"] else None
+    return words(sec["lines"][0], 3) if sec and sec["lines"] else None
 
 
 def do_preces(sections):
@@ -235,14 +288,16 @@ def app_psalms(parts):
         if p.get("type") not in ("psalm", "canticle"):
             continue
         label = p.get("label") or ""
-        if label.startswith("Psalm 94") or (p.get("vk") or "") == "matutinum.canticle":
-            continue  # invitatory psalm / Te Deum are checked elsewhere
-        verses = [strip_num(v) for v in (p.get("verses") or []) if not is_gloria(v)]
-        m = re.search(r"Psalm(?:us|i)?\s+(\d+)(?:\s*[:(]\s*(\d+)\s*-\s*(\d+))?", label)
+        if label.startswith("Psalm 94") or (p.get("vk") or "") == "matutinum.canticle" or (p.get("vk") or "").startswith("litania."):
+            continue  # invitatory psalm / Te Deum are checked elsewhere; the Litany's psalm is not sectioned by DO
+        verses = [strip_num(v) for v in (p.get("verses") or [])
+                  if not is_gloria(v) and not v.startswith("(")]
+        m = re.search(r"Psalm(?:us|i)?\s+(\d+)(?:\s*[:(]\s*(\d+)[ab]?\s*-\s*(\d+)[ab]?)?", label)
         if m and "Psalmi 148" in label:
             out.append(("Psalmus 148-150", len(verses), verses[0] if verses else ""))
         elif m:
             lab = "Psalmus %s" % m.group(1) + ("(%s-%s)" % (m.group(2), m.group(3)) if m.group(2) else "")
+            lab = re.sub(r"[ab](?=[-)])", "", lab)
             out.append((lab, len(verses), verses[0] if verses else ""))
         else:
             out.append(("Canticum " + label, len(verses), verses[0] if verses else ""))
@@ -254,9 +309,7 @@ def app_antiphons(parts):
     for p in parts:
         a = p.get("ant") if p.get("type") in ("psalm", "canticle") else (p.get("lat") if p.get("type") == "antiphon" else None)
         if a:
-            t = words(a, 5)
-            if not out or out[-1] != t:
-                out.append(t)
+            out.append(words(a, 5))
     return out
 
 
@@ -277,7 +330,7 @@ def app_capitulum(parts):
         if p.get("type") in ("capitulum", "reading") and p.get("lat") and p.get("type") == "capitulum":
             return words(first_line(p["lat"]), 6)
     for p in parts:
-        if p.get("type") == "reading" and (p.get("vk") or "").startswith("lectio") and p.get("lat"):
+        if p.get("type") == "reading" and (p.get("vk") or "").startswith("lectio") and (p.get("vk") or "") != "lectio_prima" and p.get("lat"):
             return words(first_line(p["lat"]), 6)
     return None
 
@@ -288,7 +341,7 @@ def app_versicles(parts, hour):
         if p.get("type") != "vr":
             continue
         vk = p.get("vk") or ""
-        if hour in ("laudes", "vesperae") and not vk.startswith("versum_"):
+        if hour in ("laudes", "vesperae") and not vk.startswith("versum_") and vk != "capitulum_" + hour and vk != "vesperae.capitulum":
             continue
         if hour in ("tertia", "sexta", "nona") and vk != "versum_" + hour:
             continue
@@ -311,7 +364,7 @@ def app_versicles(parts, hour):
 def app_responsory(parts):
     for p in parts:
         if p.get("type") == "responsory" and (p.get("lat") or p.get("v1") or p.get("r1")):
-            t = re.sub(r"^(℟|R)\.?\s*br\.?\s*", "", first_line(p.get("lat") or p.get("r1") or p.get("v1")).strip())
+            t = re.sub(r"^(℟|R)\.?\s*br\.?\s*", "", first_line(p.get("lat") or p.get("v1") or p.get("r1")).strip())
             return words(t, 6)
     return None
 
@@ -331,7 +384,7 @@ def app_marian(parts):
     for p in parts:
         if (p.get("vk") or "").startswith("completorium.marian") or p.get("type") == "marian":
             if p.get("lat"):
-                return words(first_line(p["lat"]), 4)
+                return words(first_line(p["lat"]), 3)
     return None
 
 
@@ -342,6 +395,36 @@ def app_preces(parts):
 
 # ---------------- comparison ----------------
 
+def golden_hour(hour, do_sections):
+    """The DO side of compare_hour, as the Kotlin golden test consumes it:
+    null where the comparison is skipped for the hour."""
+    broken = any(len(sec["name"]) == 1 for sec in do_sections)
+    dp = merge_laudate(do_psalms(do_sections))
+    def key(x):
+        m = re.match(r"Psalmus (\d+)", x[0])
+        return ("Ps%s:" % m.group(1) if m else "Cant:") + words(x[2], 3)
+    da = do_antiphons(do_sections)
+    if hour == "completorium":
+        da = sorted(da)
+    g = {
+        "ps": None if broken else [key(x) for x in dp],
+        "an": None if broken else da,
+        "hy": do_hymn(do_sections),
+        "ca": None if hour == "matutinum" else do_capitulum(do_sections),
+        "ve": None if hour in ("prima", "completorium") else do_versicles(do_sections, hour),
+        "re": None if hour == "matutinum" else do_responsory(do_sections),
+        "co": do_collects(do_sections),
+    }
+    if hour == "matutinum":
+        n, td = do_lessons(do_sections)
+        g["le"] = [n, td]
+    if hour == "completorium":
+        g["ma"] = do_marian(do_sections)
+    if hour in ("laudes", "vesperae", "prima", "completorium"):
+        g["pr"] = do_preces(do_sections)
+    return g
+
+
 def compare_hour(rite, date, hour, app_parts, do_sections, flags):
     def flag(cat, detail):
         flags[cat].append((rite, date, hour, detail))
@@ -349,6 +432,8 @@ def compare_hour(rite, date, hour, app_parts, do_sections, flags):
     # psalms
     ap = app_psalms(app_parts)
     dp = merge_laudate(do_psalms(do_sections))
+    if any(len(sec["name"]) == 1 for sec in do_sections):
+        ap, dp = [], []  # the Triduum's Compline page breaks the sectioning
     apl = [x[0] for x in ap]
     dpl = [x[0] for x in dp]
     # canticles: compare by first line instead of label
@@ -359,11 +444,15 @@ def compare_hour(rite, date, hour, app_parts, do_sections, flags):
         flag("psalms", "app %s | DO %s" % ([key(x) for x in ap], [key(x) for x in dp]))
     else:
         for a, d in zip(ap, dp):
-            if a[0].startswith("Psalmus 148"):
+            if a[0].startswith("Psalmus 148") or a[0].startswith("Psalmus 94"):
                 continue
             if abs(a[1] - d[1]) > 1:
                 flag("psalm-verses", "%s app %d vs DO %d" % (a[0], a[1], d[1]))
     aa, da = app_antiphons(app_parts), do_antiphons(do_sections)
+    if any(len(sec["name"]) == 1 for sec in do_sections):
+        aa, da = [], []  # the Triduum's Compline page breaks the sectioning
+    if hour == "completorium":
+        aa, da = sorted(aa), sorted(da)
     if aa != da:
         flag("antiphons", "app %s | DO %s" % (aa, da))
     ah, dh = app_hymn(app_parts), do_hymn(do_sections)
@@ -379,7 +468,7 @@ def compare_hour(rite, date, hour, app_parts, do_sections, flags):
     if hour != "matutinum" and (ar or dr) and ar != dr:
         flag("responsory", "app %r | DO %r" % (ar, dr))
     aco, dco = app_collects(app_parts), do_collects(do_sections)
-    if aco != dco:
+    if dco is not None and aco != dco:
         flag("collect", "app %s | DO %s" % (aco, dco))
     if hour == "matutinum":
         al, dl = app_lessons(app_parts), do_lessons(do_sections)
@@ -405,9 +494,11 @@ def main():
     ap.add_argument("--report")
     ap.add_argument("--max-examples", type=int, default=8)
     ap.add_argument("--category")
+    ap.add_argument("--golden", help="write <DIR>/<rite>.json.gz with the DO-side features (the Kotlin golden test's input)")
     args = ap.parse_args()
     flags = defaultdict(list)
     n_hours = 0
+    golden = defaultdict(dict)
     for rite in args.rites.split(","):
         adir = os.path.join(args.app, rite)
         if not os.path.isdir(adir):
@@ -427,6 +518,13 @@ def main():
                     flags["missing-app"].append((rite, date, hour, "")); continue
                 n_hours += 1
                 compare_hour(rite, date, hour, parts, dodoc["sections"], flags)
+                if args.golden:
+                    golden[rite].setdefault(date, {})[hour] = golden_hour(hour, dodoc["sections"])
+        if args.golden and golden[rite]:
+            import gzip
+            os.makedirs(args.golden, exist_ok=True)
+            with gzip.open(os.path.join(args.golden, rite + ".json.gz"), "wt", encoding="utf-8") as f:
+                json.dump(golden[rite], f, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
     out = []
     out.append("hours compared: %d" % n_hours)
     cats = sorted(flags.items(), key=lambda kv: -len(kv[1]))

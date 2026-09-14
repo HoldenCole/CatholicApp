@@ -149,6 +149,10 @@ object ContentStore {
         hymnsSeasonalData = load("hymns_seasonal.json") ?: emptyMap()
         temporalData = load("temporal_propers.json") ?: emptyMap()
         psalterTextData = load("psalter.json") ?: emptyMap()
+        officeRulesData = load("office_rules.json") ?: emptyMap()
+        officePsalteriumData = load("office_psalterium.json") ?: OfficePsalterium()
+        officeAntsData = load("office_ants.json") ?: emptyMap()
+        officeCommuneData = load("office_commune.json") ?: emptyMap()
 
         rebuildOfficeAssembler()
     }
@@ -156,6 +160,20 @@ object ContentStore {
     // Retained so the office assembler can be rebuilt when the vernacular
     // overlay changes (the maps are shared by reference, not copied).
     internal var psalterWeeklyData: Map<String, Map<String, Hour.Part>> = emptyMap()
+    internal var officeRulesData: Map<String, Map<String, OfficeRule>> = emptyMap()
+    /** Spanish for the Office texts Divinum Officium's rubrics assemble, keyed by
+     *  the normalised Latin (spanish-translation/office_texts_es.json); empty in English. */
+    private var officeTextsES: Map<String, String> = emptyMap()
+    internal var officePsalteriumData: OfficePsalterium = OfficePsalterium()
+    internal var officeAntsData: Map<String, Map<String, List<PsalmiLine>>> = emptyMap()
+    internal var officeCommuneData: Map<String, OfficePsalterium> = emptyMap()
+    private val officePropersCache = HashMap<String, Map<String, OfficePsalterium>>()
+    private fun officePropers(rite: MissalRite): Map<String, OfficePsalterium> =
+        officePropersCache.getOrPut(rite.rawValue) { load("office_propers_${rite.rawValue}.json") ?: emptyMap() }
+    private val officeOrdoCache = HashMap<String, Map<String, DoOrdoDay>>()
+    private fun officeOrdo(rite: MissalRite): Map<String, DoOrdoDay> =
+        officeOrdoCache.getOrPut(rite.rawValue) { load("office_ordo_${rite.rawValue}.json") ?: emptyMap() }
+    private var officeRubrics: OfficeRubrics = OfficeRubrics(emptyMap(), OfficePsalterium(), emptyMap(), emptyMap(), { emptyMap() }, { _, _ -> null }, emptyMap(), emptyMap(), emptyMap(), emptyMap())
     internal var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
@@ -168,6 +186,18 @@ object ContentStore {
             marianAntiphons = marianAntiphons,
             psalter = psalterTextData,
             martyrology = martyrology,
+        )
+        officeRubrics = OfficeRubrics(
+            rules = officeRulesData,
+            psalterium = officePsalteriumData,
+            ants = officeAntsData,
+            communes = officeCommuneData,
+            propersFor = { rite -> officePropers(rite) },
+            ordoFor = { rite, date -> officeOrdo(rite)["%04d-%02d-%02d".format(date.year, date.monthValue, date.dayOfMonth)] },
+            temporalPropers = temporalData,
+            sanctoralPropers = sanctoralPropers,
+            saintCommune = saintCommune,
+            saintOfficeInherit = saintOfficeInherit,
         )
     }
 
@@ -388,11 +418,17 @@ object ContentStore {
         temporalData = load("temporal_propers.json") ?: emptyMap()
         hymnsSeasonalData = load("hymns_seasonal.json") ?: emptyMap()
         sanctoralPropers = load("sanctoral_propers.json") ?: emptyMap()
+        officePsalteriumData = load("office_psalterium.json") ?: OfficePsalterium()
+        officeAntsData = load("office_ants.json") ?: emptyMap()
+        officeCommuneData = load("office_commune.json") ?: emptyMap()
+        officePropersCache.clear()
+        officeOrdoCache.clear()
         mysterySets = load("mysteries.json") ?: emptyList()
         rosaryPrayers = load("rosary_prayers.json") ?: emptyList()
 
         uiStringsES = emptyMap()
         dailyPsalmES = emptyMap()
+        officeTextsES = emptyMap()
 
         if (lang == VernacularLanguage.SPANISH) {
             // Feast names: Spanish wins, missing keys keep their English.
@@ -401,6 +437,7 @@ object ContentStore {
             }
             uiStringsES = (load<Map<String, String>>("ui_strings_es.json") ?: emptyMap())
                 .filterKeys { !it.startsWith("_") }
+            officeTextsES = load<Map<String, String>>("office_texts_es.json") ?: emptyMap()
             // Mass propers (tranche-based import from the DO Espanol tree):
             // per-field vernacular replacement; uncovered days and the
             // deferred scripture fields keep their English.
@@ -1252,6 +1289,14 @@ object ContentStore {
         // Preces Feriales gate in OfficeAssembler (iOS reads the rite here too).
         val ctx = LiturgicalContext.forDate(date, rite = rite)
         val ordo = ordoForDate(ctx.date, rite)
+        // Divinum Officium's rubrics: the variable parts, the Matins
+        // structure, the preces, and (at Vespers/Compline) the concurrence
+        // with the following day's office.
+        val tomorrowOrdo = ordoForDate(date.plusDays(1), rite)
+        val resolution = officeRubrics.resolve(slug, date, ctx.dayOfWeek, ordo, tomorrowOrdo, rite)
+        val vespersOfFollowing = resolution != null && resolution.vespera == 1
+        val layerOrdo = if (vespersOfFollowing) tomorrowOrdo else ordo
+        val effectiveDate = if (vespersOfFollowing) date.plusDays(1) else date
         // Festal (Sunday) psalm scheme at Lauds & Vespers belongs to I/II
         // class feasts only (rank >= 5). Since Divino Afflatu (1911) — and in
         // the 1962 books — III class feasts and ferias pray the psalms of the
@@ -1307,11 +1352,12 @@ object ContentStore {
         // pipeline, whose resolution (preceding Sunday, stub redirects,
         // resumed Sundays, early-January ferias) is the app's single source
         // of truth for "the collect of the day".
-        val fallbackCollect = properForDate(date, rite)?.collect?.let { c ->
+        val fallbackCollect = properForDate(effectiveDate, rite)?.collect?.let { c ->
             Hour.Part(type = "collect", label = uiString("missal.part.collect", "Collect"), lat = c.lat, eng = c.eng, variationKey = "oratio")
         }
 
-        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect, ferialOffice, primeMartyrology)
+        var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect, ferialOffice, primeMartyrology, resolution, if (vespersOfFollowing) tomorrowOrdo?.temporal else null)
+        val matinsNocturnsEff = resolution?.nocturns ?: matinsNocturns
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -1322,13 +1368,17 @@ object ContentStore {
             val remapped = OfficeAssembler
                 .remapProperOverrides(overrides, template.slug)
                 .toMutableMap()
+            if (resolution != null) {
+                remapped.keys.filter { OfficeRubrics.ownedKey(it) }.forEach { remapped.remove(it) }
+                if ("oratio" in resolution.overrides) remapped.remove("oratio")
+            }
             // 1960 rubrics: a III-class feast's Matins has ONE nocturn — two
             // Scripture lessons of the feria and the saint's contracted
             // legend as the third. DO ships the contraction as Lectio94 /
             // Lectio93; failing that, join the legend lessons 4-6. Without
             // this, the saint's lessons target the lectio4-9 slots that the
             // 1-nocturn structure no longer has.
-            if (template.slug == "matutinum" && matinsNocturns == 1 &&
+            if (template.slug == "matutinum" && matinsNocturnsEff == 1 &&
                 "lectio3" !in remapped
             ) {
                 contractedLesson(remapped)?.let { remapped["lectio3"] = it }
@@ -1336,12 +1386,12 @@ object ContentStore {
             assembled = applyProperOverrides(assembled, remapped)
         }
 
-        if (ordo != null) {
-            if (ordo.winner == "sanctoral") {
+        if (layerOrdo != null) {
+            if (layerOrdo.winner == "sanctoral") {
                 // Office layering (each later layer wins): commune fallback,
                 // then a borrowed feast's Office (`ex Sancti/...`), then the
                 // saint's own proper on top.
-                val key = ordo.winnerKey
+                val key = layerOrdo.winnerKey
                 val code = saintCommune[key] ?: saintCommune[key.take(5)]
                 val commune = code?.let { communeOffice[it] }
                 if (commune != null) {
@@ -1352,7 +1402,7 @@ object ContentStore {
                 if (inherited != null) {
                     layer(inherited)
                 }
-                val saint = sanctoralPropers[ordo.winnerKey]
+                val saint = sanctoralPropers[layerOrdo.winnerKey]
                 if (saint != null) {
                     layer(saint)
                 }
@@ -1360,13 +1410,13 @@ object ContentStore {
                 // e.g. the festive Epiphany-octave lessons the 1960 books
                 // reduced to ferial commemorations.
                 if (rite == MissalRite.PRE_1955) {
-                    val oSaint = sanctoralPropers[ordo.winnerKey + "o"]
+                    val oSaint = sanctoralPropers[layerOrdo.winnerKey + "o"]
                     if (oSaint != null) {
                         layer(oSaint)
                     }
                 }
             } else {
-                val temporalKey = ordo.temporal
+                val temporalKey = layerOrdo.temporal
                 if (temporalKey != null) {
                     val tempOverrides = officeAssembler.temporalPropers[temporalKey]
                     if (tempOverrides != null) {
@@ -1404,7 +1454,13 @@ object ContentStore {
         // commemorations. This is how a suppressed feria, a commemorated
         // saint, or an octave day stays present in the day's office.
         val commemKey = ordo?.commemoration
-        if (!commemKey.isNullOrEmpty() &&
+        if (resolution != null && resolution.fromDO && (template.slug == "laudes" || template.slug == "vesperae")) {
+            // Divinum Officium's commemorations for the hour, in its order
+            // (the concurrent office, the Sundays, then by rank).
+            for (data in officeRubrics.commemorationsFor(template.slug, date, rite, resolution).reversed()) {
+                assembled = insertCommemoration(assembled, data, template.slug)
+            }
+        } else if (!commemKey.isNullOrEmpty() &&
             (template.slug == "laudes" ||
                 (template.slug == "vesperae" && rite != MissalRite.RITE_1962))
         ) {
@@ -1425,7 +1481,45 @@ object ContentStore {
             }
         }
 
-        return assembled
+        // Vespers in concurrence: the commemoration of the office that yielded
+        // (its Magnificat antiphon, versicle and collect after the collect).
+        val concurrent = resolution?.commemoration
+        if (concurrent != null && template.slug == "vesperae" && !resolution.fromDO) {
+            val data = HashMap<String, Hour.Part>(officeRubrics.commemorationData(
+                "${if (concurrent.sanctoral) "sancti" else "tempora"}:${concurrent.key}", template.slug, date, rite,
+                if (resolution.commemorationVespera == 1) 1 else 3))
+            if ("oratio" !in data && !concurrent.sanctoral) {
+                OfficeAssembler.precedingSundayKey(concurrent.key)
+                    ?.let { officeAssembler.temporalPropers[it]?.get("oratio") }
+                    ?.let { data["oratio"] = it }
+            }
+            if ("oratio" !in data) {
+                properForDate(concurrent.date, rite)?.collect?.let { c ->
+                    data["oratio"] = Hour.Part(type = "collect", label = "Oratio", lat = c.lat, eng = c.eng, variationKey = "oratio")
+                }
+            }
+            assembled = insertCommemoration(assembled, data, template.slug)
+        }
+
+        return applyOfficeSpanish(assembled)
+    }
+
+    /** The key of office_texts_es.json: NFC, <br>/~ as spaces, whitespace collapsed. */
+    private fun officeNorm(t: String): String =
+        java.text.Normalizer.normalize(t, java.text.Normalizer.Form.NFC)
+            .replace(Regex("<br\\s*/?>"), " ").replace("~", " ").replace('\u00a0', ' ')
+            .replace(Regex("\\s+"), " ").trim()
+
+    /** The Spanish of every Latin text of the hour that the overlay knows
+     *  (the parts the rubrics assemble carry English from Divinum Officium). */
+    private fun applyOfficeSpanish(hour: Hour): Hour {
+        if (officeTextsES.isEmpty()) return hour
+        fun es(lat: String?): String? = lat?.let { officeTextsES[officeNorm(it)] }
+        return hour.copy(parts = hour.parts.map { p ->
+            val e = es(p.lat); val eR = es(p.latR); val eA = es(p.antiphonLat)
+            if (e == null && eR == null && eA == null) p
+            else p.copy(eng = e ?: p.eng, engR = eR ?: p.engR, antiphonEng = eA ?: p.antiphonEng)
+        })
     }
 
     /**
@@ -1547,7 +1641,7 @@ object ContentStore {
         if (collectIdx == -1) return hour
 
         val block = mutableListOf<Hour.Part>()
-        block.add(Hour.Part(type = "heading", label = "Commemoratio"))
+        block.add(Hour.Part(type = "heading", label = "Commemoratio", title = data["name"]?.lat?.takeIf { it.isNotBlank() }))
 
         // The commemorated office's own canticle antiphon: Benedictus at
         // Lauds (DO Ant 2), Magnificat at Vespers (Ant 3, else Ant 1). The

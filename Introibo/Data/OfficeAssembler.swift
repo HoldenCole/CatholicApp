@@ -334,8 +334,13 @@ struct OfficeAssembler {
         "matutinum.psalm10": "matutinum.antiphon.psalm9",
     ]
 
-    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962, fallbackCollect: Hour.Part? = nil, officeIsFerial: Bool = true, primeMartyrology: Bool = true) -> Hour {
+    func assemble(template: Hour, context: LiturgicalContext, isFestal: Bool = false, festalCompline: Bool = false, festalLittleHours: Bool = false, matinsNocturns: Int = 3, matinsTeDeum: Bool = true, rite: MissalRite = .rite1962, fallbackCollect: Hour.Part? = nil, officeIsFerial: Bool = true, primeMartyrology: Bool = true, resolution: OfficeRubrics.Resolution? = nil, effectiveTemporalKey: String? = nil) -> Hour {
         var dayKey = Self.dayKeys[context.dayOfWeek]
+        // The rubrics resolution (OfficeRubrics) owns the variable parts;
+        // its structural decisions replace the caller's flags.
+        let nocturnsEff = resolution?.nocturns ?? matinsNocturns
+        let teDeumEff = resolution?.teDeum ?? matinsTeDeum
+        let temporalKeyEff = effectiveTemporalKey ?? context.temporalKey
         // Pre-Lent (Septuagesima..Quinquagesima) keeps the per-annum
         // ordinarium — the season flag may still say "christmas" (Christmas
         // cycle runs to Feb 2) but Septuagesima's hymns are the ordinary ones.
@@ -351,7 +356,7 @@ struct OfficeAssembler {
 
         let dayOverrides = weeklyPsalter[dayKey] ?? [:]
         let seasonOverrides = seasonalHymns[seasonKey] ?? [:]
-        let rawTemporalOverrides = context.temporalKey.flatMap { temporalPropers[$0] } ?? [:]
+        let rawTemporalOverrides = temporalKeyEff.flatMap { temporalPropers[$0] } ?? [:]
         var temporalOverrides = Self.remapProperOverrides(rawTemporalOverrides, hourSlug: template.slug)
 
         // Day-collect resolution. The collect of the day belongs to Matins,
@@ -366,7 +371,7 @@ struct OfficeAssembler {
             if template.slug == "vesperae" { candidates.append(rawTemporalOverrides["oratio_3"]) }
             candidates.append(rawTemporalOverrides["oratio"])
             candidates.append(rawTemporalOverrides["oratio_2"])
-            if let tKey = context.temporalKey,
+            if let tKey = temporalKeyEff,
                let sundayKey = Self.precedingSundayKey(tKey),
                let sunday = temporalPropers[sundayKey] {
                 candidates.append(sunday["oratio"])
@@ -382,7 +387,23 @@ struct OfficeAssembler {
             }
         }
 
-        func assemblePart(_ part: Hour.Part, key: String) -> Hour.Part {
+        func assemblePart(_ part: Hour.Part, key: String) -> Hour.Part? {
+            // Divinum Officium's rubrics decide the variable pieces.
+            if let resolution {
+                if resolution.drop.contains(key) { return nil }
+                if let o = resolution.overrides[key] {
+                    // Antiphon-only override on a canticle: keep the verses.
+                    if o.antiphonLat != nil && o.verses == nil && o.lat == nil && o.ref == nil && part.verses != nil {
+                        var merged = part
+                        merged.antiphonLat = o.antiphonLat
+                        merged.antiphonEng = o.antiphonEng
+                        return merged
+                    }
+                    return Self.rekeyed(o, key)
+                }
+                if OfficeRubrics.ownedKey(key) { return part }
+            }
+
             // Temporal propers (highest priority for non-psalm parts)
             if let override = temporalOverrides[key] {
                 return Self.rekeyed(override, key)
@@ -448,13 +469,41 @@ struct OfficeAssembler {
             return part
         }
 
-        var assembledParts = template.parts.flatMap { part -> [Hour.Part] in
+        // A "Special <Hour>" script (DO) stands for the whole template.
+        var templateParts = resolution?.special ?? template.parts
+        if resolution?.marianAfterLauds == true, template.slug == "laudes", !templateParts.contains(where: { $0.type == "marian" }) {
+            var m = Hour.Part(type: "marian")
+            m.label = "Antiphona finalis B.M.V."
+            m.variationKey = "completorium.marian"
+            templateParts.append(m)
+        }
+        var assembledParts = templateParts.flatMap { part -> [Hour.Part] in
             guard let key = part.variationKey else { return [part] }
             if part.type == "marian" {
                 // The antiphon plus its ℣/℟ and Orémus (or nothing in Triduum).
-                return marianParts(for: context.marian, season: context.season, fallback: part)
+                var ant: MarianAntiphon = resolution?.marianOverride == "salve-regina" ? .salve : context.marian
+                // Compline already of Easter (the Vigil's Vespers said): Regina cæli.
+                if ant == .suppressed, resolution?.office.dayName.hasPrefix("Pasc") == true { ant = .regina }
+                // DO's choice by the office's season name and the date (Alma
+                // through Feb 2 except at Compline; Ave Regina in Feb-Mar and
+                // Lent; Regina cæli through the Pentecost octave; else Salve).
+                if let dn = resolution?.office.dayName, resolution?.marianOverride == nil, !ant.isSuppressed {
+                    let cal = Calendar.liturgical
+                    let m = cal.component(.month, from: context.date)
+                    let dd = cal.component(.day, from: context.date)
+                    if dn.has("Adv|Nat") || m == 1 || (m == 2 && dd < 2) || (m == 2 && dd == 2 && template.slug != "completorium") {
+                        ant = .alma
+                    } else if (m == 2 || m == 3 || dn.contains("Quad")) && !dn.hasPrefix("Pasc") {
+                        ant = .ave
+                    } else if dn.hasPrefix("Pasc") {
+                        ant = .regina
+                    } else {
+                        ant = .salve
+                    }
+                }
+                return marianParts(for: ant, season: context.season, fallback: part, officeDayName: resolution?.office.dayName)
             }
-            return [assemblePart(part, key: key)]
+            return assemblePart(part, key: key).map { [$0] } ?? []
         }
 
         // Prime's Chapter Office: the Martyrology for the morrow (with its
@@ -515,6 +564,7 @@ struct OfficeAssembler {
         // ContentStore.applyProperOverrides (incl. the Matins offset —
         // matutinum.psalm1 is the invariable Venite).
         let antiphonApplied = psalmInlined.map { part -> Hour.Part in
+            if resolution != nil { return part }
             guard let key = part.variationKey,
                   let ak = Self.psalmToAntiphonKey[key],
                   let antOverride = temporalOverrides[ak] else { return part }
@@ -578,8 +628,8 @@ struct OfficeAssembler {
         if template.slug == "matutinum" {
             // Tenebrae: Matins of Holy Thursday, Good Friday, Holy Saturday.
             let isTenebrae = ["quad6-4", "quad6-5", "quad6-6"].contains(context.temporalKey ?? "")
-            filteredParts = filterMatinsParts(alleluiaStripped, nocturns: matinsNocturns, includeTeDeum: matinsTeDeum, isTenebrae: isTenebrae)
-        } else if template.slug == "prima" {
+            filteredParts = filterMatinsParts(alleluiaStripped, nocturns: nocturnsEff, includeTeDeum: teDeumEff, isTenebrae: isTenebrae)
+        } else if template.slug == "prima" && resolution == nil {
             // Prime's psalmody (Psalterium/Psalmi minor + psalmi.pl):
             //   Sunday psalms (Sundays, I-class feasts, the Easter and
             //   Pentecost octaves): Ps 117, 118 i (1-16), 118 ii (17-32).
@@ -626,8 +676,19 @@ struct OfficeAssembler {
                 !(part.type == "pater" && (part.variationKey ?? "").isEmpty
                   && !(part.label ?? "").contains("Ave"))
             }
-            if officeIsFerial && shouldIncludePreces(context: context, rite: rite, hourSlug: template.slug) {
+            let precesNow: Bool
+            if let resolution {
+                precesNow = (template.slug == "laudes" || template.slug == "vesperae") && resolution.precesFeriales
+            } else {
+                precesNow = officeIsFerial && shouldIncludePreces(context: context, rite: rite, hourSlug: template.slug)
+            }
+            if precesNow {
                 precesApplied = insertPreces(into: precesApplied, hour: template.slug)
+            } else if let preces = resolution?.preces {
+                // DO's own preces of Prime, the little hours and Compline.
+                if let ci = precesApplied.firstIndex(where: { $0.type == "collect" }) {
+                    precesApplied.insert(contentsOf: preces.map { inlinePsalmText($0) }, at: ci)
+                }
             }
         }
 
@@ -639,6 +700,37 @@ struct OfficeAssembler {
         } else {
             finalParts = precesApplied
         }
+        // DO's structural rules: no Incipit, no Conclusion, a special
+        // conclusion, parts appended after the hour.
+        var shaped = finalParts
+        if let resolution {
+            let isClosing: (Hour.Part) -> Bool = { p in
+                p.type == "closing" || (p.type == "vr" && (p.variationKey ?? "").isEmpty &&
+                    ((p.lat ?? "").hasPrefix("Dómine, exáudi") || (p.lat ?? "").hasPrefix("Fidélium") || (p.lat ?? "").hasPrefix("Benedicámus")))
+            }
+            if !resolution.beforeCollect.isEmpty {
+                let collectKeys: Set<String> = ["oratio", "oratio_prima", "oratio_completorium"]
+                if let ci = shaped.firstIndex(where: { $0.type == "collect" && collectKeys.contains($0.variationKey ?? "") }) {
+                    shaped.insert(contentsOf: resolution.beforeCollect.map { inlinePsalmText($0) }, at: ci)
+                }
+            }
+            if !resolution.beforeConclusion.isEmpty {
+                let bc = resolution.beforeConclusion.map { inlinePsalmText($0) }
+                if let ci = shaped.firstIndex(where: isClosing) { shaped.insert(contentsOf: bc, at: ci) } else { shaped += bc }
+            }
+            if resolution.omitIncipit {
+                shaped = shaped.filter { !($0.type == "pater" && ($0.variationKey ?? "").isEmpty) && !($0.type == "vr" && $0.label == "Opening") }
+            }
+            if resolution.omitConclusion || resolution.conclusio != nil || !resolution.append.isEmpty {
+                let idx = shaped.firstIndex(where: isClosing)
+                shaped = shaped.filter { !isClosing($0) }
+                if let c = resolution.conclusio?.map({ inlinePsalmText($0) }) {
+                    if let idx, idx <= shaped.count { shaped.insert(contentsOf: c, at: idx) } else { shaped += c }
+                }
+            }
+            if !resolution.append.isEmpty { shaped += resolution.append.map { inlinePsalmText($0) } }
+        }
+        let finalShaped = shaped
 
         return Hour(
             slug: template.slug,
@@ -650,7 +742,7 @@ struct OfficeAssembler {
             glyph: template.glyph,
             order: template.order,
             intro: template.intro,
-            parts: finalParts
+            parts: finalShaped
         )
     }
 
@@ -1106,27 +1198,75 @@ struct OfficeAssembler {
         return nil
     }
 
+    /// A psalter reference: the psalter.json key and an optional verse range.
+    private struct PsalmSpec {
+        let key: String
+        let lo: (Int, String)?
+        let hi: (Int, String)?
+    }
+
+    /// "Ps 109" / "Ps 44:2a-10b" / "Ps 148,149,150" / "Cant 221" -> specs.
+    private static func psalmRefs(_ ref: String) -> [PsalmSpec] {
+        let t = ref.trimmingCharacters(in: .whitespaces)
+        let body: String
+        if t.hasPrefix("Ps ") { body = String(t.dropFirst(3)) }
+        else if t.hasPrefix("Psalm ") { body = String(t.dropFirst(6)) }
+        else if t.hasPrefix("Cant ") { body = String(t.dropFirst(5)) }
+        else { return [] }
+        return body.trimmingCharacters(in: .whitespaces).components(separatedBy: ",").compactMap { tok -> PsalmSpec? in
+            guard let m = tok.trimmingCharacters(in: .whitespaces).rmatch("^(\\d+)(?::(\\d+)([a-z]?)-(\\d+)([a-z]?))?$"),
+                  let num = Int(m[1]) else { return nil }
+            let key = "psalm\(num)"
+            if m[2].isEmpty { return PsalmSpec(key: key, lo: nil, hi: nil) }
+            return PsalmSpec(key: key, lo: (Int(m[2]) ?? 0, m[3]), hi: (Int(m[4]) ?? 0, m[5]))
+        }
+    }
+
+    private static func verseInRange(_ line: String, _ spec: PsalmSpec) -> Bool {
+        guard let lo = spec.lo, let hi = spec.hi else { return true }
+        guard let m = line.rmatch("^(\\d+):(\\d+)([a-z]?)"), let v = Int(m[2]) else { return true }
+        let letter = m[3]
+        let afterLo = v > lo.0 || (v == lo.0 && (letter.isEmpty || lo.1.isEmpty || letter >= lo.1))
+        let beforeHi = v < hi.0 || (v == hi.0 && (letter.isEmpty || hi.1.isEmpty || letter <= hi.1))
+        return afterLo && beforeHi
+    }
+
     /// If `part` is a psalm/canticle with a psalter-matching ref and no verse
-    /// text, return a copy with verses inlined from the psalter.
+    /// text, return a copy with verses inlined from the psalter (verse
+    /// ranges sliced, canticle title lines turned into label/ref).
     private func inlinePsalmText(_ part: Hour.Part) -> Hour.Part {
         guard part.type == "psalm" || part.type == "canticle" else { return part }
-        // Only inline when verses are missing or empty
         if let existing = part.verses, !existing.isEmpty { return part }
-        guard let ref = part.ref,
-              let key = Self.psalterKey(from: ref),
-              let entry = psalter[key] else { return part }
-        let latVerses = entry["lat"] ?? []
-        let engVerses = entry["eng"] ?? []
-        let count = max(latVerses.count, engVerses.count)
-        guard count > 0 else { return part }
+        guard let ref = part.ref else { return part }
+        let specs = Self.psalmRefs(ref)
+        if specs.isEmpty { return part }
         var verses: [Hour.Part.Verse] = []
-        for i in 0..<count {
-            let lat = i < latVerses.count ? latVerses[i] : ""
-            let eng = i < engVerses.count ? engVerses[i] : ""
-            verses.append(Hour.Part.Verse(lat: lat, eng: eng))
+        var label = part.label
+        var newRef: String? = nil
+        for (idx, spec) in specs.enumerated() {
+            guard let entry = psalter[spec.key] else { continue }
+            let lat = entry["lat"] ?? []
+            let eng = entry["eng"] ?? []
+            let n = max(lat.count, eng.count)
+            for i in 0..<n {
+                let l = i < lat.count ? lat[i] : ""
+                let e = i < eng.count ? eng[i] : ""
+                if i == 0 && l.hasPrefix("(") {
+                    if let m = l.rmatch("^\\((.*?)\\s*\\*\\s*(.*?)\\)$"), idx == 0, part.type == "canticle" {
+                        label = m[1].trimmingCharacters(in: .whitespaces)
+                        newRef = m[2].trimmingCharacters(in: .whitespaces)
+                    }
+                    continue
+                }
+                if !Self.verseInRange(l, spec) { continue }
+                verses.append(Hour.Part.Verse(lat: l, eng: e))
+            }
         }
+        if verses.isEmpty { return part }
         var modified = part
         modified.verses = verses
+        modified.label = label
+        modified.ref = newRef ?? part.ref
         return modified
     }
 
@@ -1183,7 +1323,7 @@ struct OfficeAssembler {
         return (lat.joined(separator: "\n"), eng.joined(separator: "\n"))
     }
 
-    private func marianParts(for antiphon: MarianAntiphon, season: LiturgicalSeason, fallback: Hour.Part) -> [Hour.Part] {
+    private func marianParts(for antiphon: MarianAntiphon, season: LiturgicalSeason, fallback: Hour.Part, officeDayName: String? = nil) -> [Hour.Part] {
         // During Triduum the Marian antiphon is suppressed entirely.
         if antiphon.isSuppressed {
             return [Hour.Part(
@@ -1206,7 +1346,7 @@ struct OfficeAssembler {
         )]
         // Alma Redemptóris changes its ℣/℟ and Orémus at Christmas (kept
         // through Feb 1, so anything outside Advent takes the Christmas form).
-        let christmasForm = antiphon == .alma && season != .advent
+        let christmasForm = antiphon == .alma && (officeDayName.map { !$0.hasPrefix("Adv") } ?? (season != .advent))
         let versicleLat = christmasForm ? data.versicleLatChristmas ?? data.versicleLat : data.versicleLat
         let versicleEng = christmasForm ? data.versicleEngChristmas ?? data.versicleEng : data.versicleEng
         let collectLat = christmasForm ? data.collectLatChristmas ?? data.collectLat : data.collectLat

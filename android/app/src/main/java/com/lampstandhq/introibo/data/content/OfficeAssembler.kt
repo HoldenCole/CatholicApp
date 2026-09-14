@@ -59,8 +59,13 @@ class OfficeAssembler(
         "laudes", "vesperae", "prima", "tertia", "sexta", "nona", "completorium",
     )
 
-    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962, fallbackCollect: Hour.Part? = null, officeIsFerial: Boolean = true, primeMartyrology: Boolean = true): Hour {
+    fun assemble(template: Hour, context: LiturgicalContext, isFestal: Boolean = false, festalCompline: Boolean = false, festalLittleHours: Boolean = false, matinsNocturns: Int = 3, matinsTeDeum: Boolean = true, rite: MissalRite = MissalRite.RITE_1962, fallbackCollect: Hour.Part? = null, officeIsFerial: Boolean = true, primeMartyrology: Boolean = true, resolution: OfficeRubrics.Resolution? = null, effectiveTemporalKey: String? = null): Hour {
         var dayKey = dayKeys[context.dayOfWeek]
+        // The rubrics resolution (OfficeRubrics) owns the variable parts;
+        // its structural decisions replace the caller's flags.
+        val nocturnsEff = resolution?.nocturns ?: matinsNocturns
+        val teDeumEff = resolution?.teDeum ?: matinsTeDeum
+        val temporalKeyEff = effectiveTemporalKey ?: context.temporalKey
         // Pre-Lent (Septuagesima..Quinquagesima) keeps the per-annum
         // ordinarium — the season flag may still say "christmas" (Christmas
         // cycle runs to Feb 2) but Septuagesima's hymns are the ordinary ones.
@@ -78,7 +83,7 @@ class OfficeAssembler(
 
         val dayOverrides = weeklyPsalter[dayKey] ?: emptyMap()
         val seasonOverrides = seasonalHymns[seasonKey] ?: emptyMap()
-        val rawTemporalOverrides = context.temporalKey?.let { temporalPropers[it] } ?: emptyMap()
+        val rawTemporalOverrides = temporalKeyEff?.let { temporalPropers[it] } ?: emptyMap()
         val temporalOverrides =
             remapProperOverrides(rawTemporalOverrides, template.slug).toMutableMap()
 
@@ -94,7 +99,7 @@ class OfficeAssembler(
             if (template.slug == "vesperae") candidates.add(rawTemporalOverrides["oratio_3"])
             candidates.add(rawTemporalOverrides["oratio"])
             candidates.add(rawTemporalOverrides["oratio_2"])
-            val tKey = context.temporalKey
+            val tKey = temporalKeyEff
             val sundayKey = tKey?.let { precedingSundayKey(it) }
             val sunday = sundayKey?.let { temporalPropers[it] }
             if (sunday != null) {
@@ -111,21 +116,39 @@ class OfficeAssembler(
             }
         }
 
-        val mappedParts = template.parts.map { part ->
-            val key = part.variationKey ?: return@map part
+        // A "Special <Hour>" script (DO) stands for the whole template.
+        var templateParts = resolution?.special ?: template.parts
+        if (resolution?.marianAfterLauds == true && template.slug == "laudes" && templateParts.none { it.type == "marian" }) {
+            templateParts = templateParts + Hour.Part(type = "marian", label = "Antiphona finalis B.M.V.", variationKey = "completorium.marian")
+        }
+        val mappedParts = templateParts.mapNotNull { part ->
+            val key = part.variationKey ?: return@mapNotNull part
 
             // Expanded below into antiphon + ℣/℟ + Orémus.
-            if (part.type == "marian") return@map part
+            if (part.type == "marian") return@mapNotNull part
+
+            // Divinum Officium's rubrics decide the variable pieces.
+            if (resolution != null) {
+                if (key in resolution.drop) return@mapNotNull null
+                resolution.overrides[key]?.let { o ->
+                    // Antiphon-only override on a canticle: keep the verses.
+                    if (o.antiphonLat != null && o.verses == null && o.lat == null && o.ref == null && part.verses != null) {
+                        return@mapNotNull part.copy(antiphonLat = o.antiphonLat, antiphonEng = o.antiphonEng)
+                    }
+                    return@mapNotNull rekeyed(o, key)
+                }
+                if (OfficeRubrics.ownedKey(key)) return@mapNotNull part
+            }
 
             // Temporal propers (highest priority for non-psalm parts)
-            temporalOverrides[key]?.let { return@map rekeyed(it, key) }
+            temporalOverrides[key]?.let { return@mapNotNull rekeyed(it, key) }
 
             // Ferial weekday hymns (per annum): the psalter's own Mon-Sat
             // hymn cycle beats the season's default (which is the SUNDAY
             // hymn) on non-festal weekdays. Seasonal hymns still win in
             // every proper season (Advent, Lent, Paschaltide, ...).
             if (part.type == "hymn" && seasonKey == "ordinary" && !isFestal) {
-                dayOverrides[key]?.let { return@map rekeyed(it, key) }
+                dayOverrides[key]?.let { return@mapNotNull rekeyed(it, key) }
             }
 
             // Seasonal overrides: hymns change every season. Seasonal antiphons
@@ -140,31 +163,31 @@ class OfficeAssembler(
                     // Antiphon-only override on a canticle: merge the antiphon
                     // without replacing the canticle's verses.
                     if (override.antiphonLat != null && override.verses == null && part.verses != null) {
-                        return@map part.copy(
+                        return@mapNotNull part.copy(
                             antiphonLat = override.antiphonLat,
                             antiphonEng = override.antiphonEng,
                         )
                     }
-                    return@map rekeyed(override, key)
+                    return@mapNotNull rekeyed(override, key)
                 }
             }
 
             // On festal days, keep the template's festal psalms for Lauds
             // and Vespers (the weekday psalter would replace them with ferial).
             if (isFestal && key in festalPsalmKeys) {
-                return@map part
+                return@mapNotNull part
             }
 
             // On Sundays and I/II-class feasts, keep the festal Compline
             // (Sunday psalms + "Miserere" antiphon) instead of the ferial set.
             if (festalCompline && key in festalComplineKeys) {
-                return@map part
+                return@mapNotNull part
             }
 
             // On Sundays and I-class feasts, keep the festal Little Hours
             // (Ps 118 portions) instead of the day-of-the-week ferial psalms.
             if (festalLittleHours && key in festalLittleHourKeys) {
-                return@map part
+                return@mapNotNull part
             }
 
             dayOverrides[key]?.let {
@@ -172,9 +195,9 @@ class OfficeAssembler(
                 // the ferial office only -- festal days keep the template's
                 // (Sunday) defaults until the proper/commune layers land.
                 if (isFestal && key in FERIAL_ONLY_DAY_KEYS) {
-                    return@map part
+                    return@mapNotNull part
                 }
-                return@map rekeyed(it, key)
+                return@mapNotNull rekeyed(it, key)
             }
 
             part
@@ -182,7 +205,27 @@ class OfficeAssembler(
 
         var assembledParts = mappedParts.flatMap { part ->
             if (part.type == "marian" && part.variationKey != null) {
-                marianParts(context.marian, context.season, fallback = part)
+                var ant = when (resolution?.marianOverride) {
+                    "salve-regina" -> MarianAntiphon.SALVE
+                    else -> context.marian
+                }
+                // Compline already of Easter (the Vigil's Vespers said): Regina cæli.
+                if (ant == MarianAntiphon.SUPPRESSED && resolution?.office?.dayName?.startsWith("Pasc") == true) ant = MarianAntiphon.REGINA
+                // DO's choice by the office's season name and the date (Alma
+                // through Feb 2 except at Compline; Ave Regina in Feb-Mar and
+                // Lent; Regina cæli through the Pentecost octave; else Salve).
+                val dn = resolution?.office?.dayName
+                if (dn != null && resolution.marianOverride == null && !ant.isSuppressed) {
+                    val m = context.date.monthValue; val dd = context.date.dayOfMonth
+                    ant = when {
+                        Regex("Adv|Nat").containsMatchIn(dn) || m == 1 || (m == 2 && dd < 2) ||
+                            (m == 2 && dd == 2 && template.slug != "completorium") -> MarianAntiphon.ALMA
+                        (m == 2 || m == 3 || dn.contains("Quad")) && !dn.startsWith("Pasc") -> MarianAntiphon.AVE
+                        dn.startsWith("Pasc") -> MarianAntiphon.REGINA
+                        else -> MarianAntiphon.SALVE
+                    }
+                }
+                marianParts(ant, context.season, fallback = part, officeDayName = resolution?.office?.dayName)
             } else {
                 listOf(part)
             }
@@ -229,6 +272,7 @@ class OfficeAssembler(
         // as ContentStore.applyProperOverrides (incl. the Matins offset --
         // matutinum.psalm1 is the invariable Venite).
         val antiphonApplied = psalmInlined.map { part ->
+            if (resolution != null) return@map part
             val key = part.variationKey ?: return@map part
             val antKey = PSALM_TO_ANTIPHON_KEY[key] ?: return@map part
             val antOverride = temporalOverrides[antKey] ?: return@map part
@@ -284,8 +328,8 @@ class OfficeAssembler(
         val filteredParts = if (template.slug == "matutinum") {
             // Tenebrae: Matins of Holy Thursday, Good Friday, Holy Saturday.
             val isTenebrae = context.temporalKey in setOf("quad6-4", "quad6-5", "quad6-6")
-            filterMatinsParts(alleluiaStripped, matinsNocturns, matinsTeDeum, isTenebrae)
-        } else if (template.slug == "prima") {
+            filterMatinsParts(alleluiaStripped, nocturnsEff, teDeumEff, isTenebrae)
+        } else if (template.slug == "prima" && resolution == null) {
             // Prime's psalmody (Psalterium/Psalmi minor + psalmi.pl):
             //   Sunday psalms (Sundays, I-class feasts, the Easter and
             //   Pentecost octaves): Ps 117, 118 i (1-16), 118 ii (17-32).
@@ -321,8 +365,17 @@ class OfficeAssembler(
                 !(part.type == "pater" && part.variationKey.isNullOrEmpty()
                     && !(part.label ?: "").contains("Ave"))
             }
-            if (officeIsFerial && shouldIncludePreces(context, rite, template.slug)) {
+            val precesNow = if (resolution != null) {
+                (template.slug == "laudes" || template.slug == "vesperae") && resolution.precesFeriales
+            } else {
+                officeIsFerial && shouldIncludePreces(context, rite, template.slug)
+            }
+            if (precesNow) {
                 precesApplied = insertPreces(precesApplied, template.slug)
+            } else if (resolution?.preces != null) {
+                // DO's own preces of Prime, the little hours and Compline.
+                val ci = precesApplied.indexOfFirst { it.type == "collect" }
+                if (ci >= 0) precesApplied = precesApplied.subList(0, ci) + resolution.preces.map { inlinePsalmText(it) } + precesApplied.subList(ci, precesApplied.size)
             }
         }
 
@@ -333,6 +386,40 @@ class OfficeAssembler(
         } else {
             precesApplied
         }
+        // DO's structural rules: no Incipit, no Conclusion, a special
+        // conclusion, parts appended after the hour.
+        var shaped = finalParts
+        if (resolution != null) {
+            if (resolution.beforeCollect.isNotEmpty()) {
+                val ci = shaped.indexOfFirst { it.type == "collect" && it.variationKey in setOf("oratio", "oratio_prima", "oratio_completorium") }
+                if (ci >= 0) shaped = shaped.subList(0, ci) + resolution.beforeCollect.map { inlinePsalmText(it) } + shaped.subList(ci, shaped.size)
+            }
+            if (resolution.beforeConclusion.isNotEmpty()) {
+                val isClosing: (Hour.Part) -> Boolean = { p ->
+                    p.type == "closing" || (p.type == "vr" && p.variationKey.isNullOrEmpty() &&
+                        ((p.lat ?: "").startsWith("Dómine, exáudi") || (p.lat ?: "").startsWith("Fidélium") || (p.lat ?: "").startsWith("Benedicámus")))
+                }
+                val ci = shaped.indexOfFirst(isClosing)
+                val bc = resolution.beforeConclusion.map { inlinePsalmText(it) }
+                shaped = if (ci >= 0) shaped.subList(0, ci) + bc + shaped.subList(ci, shaped.size) else shaped + bc
+            }
+            if (resolution.omitIncipit) {
+                shaped = shaped.filter { !(it.type == "pater" && it.variationKey.isNullOrEmpty()) && !(it.type == "vr" && it.label == "Opening") }
+            }
+            if (resolution.omitConclusion || resolution.conclusio != null || resolution.append.isNotEmpty()) {
+                val isClosing: (Hour.Part) -> Boolean = { p ->
+                    p.type == "closing" || (p.type == "vr" && p.variationKey.isNullOrEmpty() &&
+                        ((p.lat ?: "").startsWith("Dómine, exáudi") || (p.lat ?: "").startsWith("Fidélium") || (p.lat ?: "").startsWith("Benedicámus")))
+                }
+                val idx = shaped.indexOfFirst(isClosing)
+                shaped = shaped.filterNot(isClosing)
+                resolution.conclusio?.map { inlinePsalmText(it) }?.let { c ->
+                    shaped = if (idx in 0..shaped.size) shaped.take(idx) + c + shaped.drop(idx) else shaped + c
+                }
+            }
+            if (resolution.append.isNotEmpty()) shaped = shaped + resolution.append.map { inlinePsalmText(it) }
+        }
+        val finalShaped = shaped
 
         return Hour(
             slug = template.slug,
@@ -344,7 +431,7 @@ class OfficeAssembler(
             glyph = template.glyph,
             order = template.order,
             intro = template.intro,
-            parts = finalParts,
+            parts = finalShaped,
         )
     }
 
@@ -712,6 +799,7 @@ class OfficeAssembler(
         antiphon: MarianAntiphon,
         season: LiturgicalSeason,
         fallback: Hour.Part,
+        officeDayName: String? = null,
     ): List<Hour.Part> {
         // During Triduum the Marian antiphon is suppressed entirely.
         if (antiphon.isSuppressed) {
@@ -733,7 +821,8 @@ class OfficeAssembler(
         )
         // Alma Redemptóris changes its ℣/℟ and Orémus at Christmas (kept
         // through Feb 1, so anything outside Advent takes the Christmas form).
-        val christmasForm = antiphon == MarianAntiphon.ALMA && season != LiturgicalSeason.ADVENT
+        val christmasForm = antiphon == MarianAntiphon.ALMA &&
+            (officeDayName?.let { !it.startsWith("Adv") } ?: (season != LiturgicalSeason.ADVENT))
         val versicleLat = if (christmasForm) data.versicleLatChristmas ?: data.versicleLat else data.versicleLat
         val versicleEng = if (christmasForm) data.versicleEngChristmas ?: data.versicleEng else data.versicleEng
         val collectLat = if (christmasForm) data.collectLatChristmas ?: data.collectLat else data.collectLat
@@ -766,27 +855,73 @@ class OfficeAssembler(
     // empty verses), look up the text in the loaded psalter dictionary and
     // build a Verse list from it.
 
+    /** A psalter reference: the psalter.json key and an optional verse range. */
+    private class PsalmSpec(val key: String, val lo: Pair<Int, String>?, val hi: Pair<Int, String>?)
+
+    /** "Ps 109" / "Ps 44:2a-10b" / "Ps 148,149,150" / "Cant 221" -> specs. */
+    private fun psalmRefs(ref: String): List<PsalmSpec> {
+        val t = ref.trim()
+        val body = when {
+            t.startsWith("Ps ") -> t.removePrefix("Ps ")
+            t.startsWith("Psalm ") -> t.removePrefix("Psalm ")
+            t.startsWith("Cant ") -> t.removePrefix("Cant ")
+            else -> return emptyList()
+        }.trim()
+        return body.split(",").mapNotNull { tok ->
+            val m = Regex("^(\\d+)(?::(\\d+)([a-z]?)-(\\d+)([a-z]?))?$").find(tok.trim()) ?: return@mapNotNull null
+            val num = m.groupValues[1].toInt()
+            val key = "psalm$num"
+            if (m.groupValues[2].isEmpty()) PsalmSpec(key, null, null)
+            else PsalmSpec(key, m.groupValues[2].toInt() to m.groupValues[3], m.groupValues[4].toInt() to m.groupValues[5])
+        }
+    }
+
+    private fun verseInRange(line: String, spec: PsalmSpec): Boolean {
+        val lo = spec.lo ?: return true
+        val hi = spec.hi ?: return true
+        val m = Regex("^(\\d+):(\\d+)([a-z]?)").find(line) ?: return true
+        val v = m.groupValues[2].toInt()
+        val letter = m.groupValues[3]
+        val afterLo = v > lo.first || (v == lo.first && (letter.isEmpty() || lo.second.isEmpty() || letter >= lo.second))
+        val beforeHi = v < hi.first || (v == hi.first && (letter.isEmpty() || hi.second.isEmpty() || letter <= hi.second))
+        return afterLo && beforeHi
+    }
+
     /** If part is a psalm/canticle with a psalter-matching ref and no verse
-     *  text, return a copy with verses inlined from the psalter. */
+     *  text, return a copy with verses inlined from the psalter (verse
+     *  ranges sliced, canticle title lines turned into label/ref). */
     private fun inlinePsalmText(part: Hour.Part): Hour.Part {
         if (part.type != "psalm" && part.type != "canticle") return part
-        // Only inline when verses are missing or empty
         val existing = part.verses
         if (existing != null && existing.isNotEmpty()) return part
         val ref = part.ref ?: return part
-        val key = psalterKey(ref) ?: return part
-        val entry = psalter[key] ?: return part
-        val latVerses = entry["lat"] ?: emptyList()
-        val engVerses = entry["eng"] ?: emptyList()
-        val count = maxOf(latVerses.size, engVerses.size)
-        if (count == 0) return part
-        val verses = (0 until count).map { i ->
-            Hour.Part.Verse(
-                lat = latVerses.getOrElse(i) { "" },
-                eng = engVerses.getOrElse(i) { "" },
-            )
+        val specs = psalmRefs(ref)
+        if (specs.isEmpty()) return part
+        val verses = ArrayList<Hour.Part.Verse>()
+        var label = part.label
+        var newRef: String? = null
+        for ((idx, spec) in specs.withIndex()) {
+            val entry = psalter[spec.key] ?: continue
+            val lat = entry["lat"] ?: emptyList()
+            val eng = entry["eng"] ?: emptyList()
+            val n = maxOf(lat.size, eng.size)
+            for (i in 0 until n) {
+                val l = lat.getOrElse(i) { "" }
+                val e = eng.getOrElse(i) { "" }
+                if (i == 0 && l.startsWith("(")) {
+                    val m = Regex("^\\((.*?)\\s*\\*\\s*(.*?)\\)$").find(l)
+                    if (m != null && idx == 0 && part.type == "canticle") {
+                        label = m.groupValues[1].trim()
+                        newRef = m.groupValues[2].trim()
+                    }
+                    continue
+                }
+                if (!verseInRange(l, spec)) continue
+                verses += Hour.Part.Verse(lat = l, eng = e)
+            }
         }
-        return part.copy(verses = verses)
+        if (verses.isEmpty()) return part
+        return part.copy(verses = verses, label = label, ref = newRef ?: part.ref)
     }
 
     // ---- Easter/Pentecost Octave detection ----

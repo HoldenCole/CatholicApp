@@ -790,6 +790,22 @@ def validate_rosary():
         print("rosary_prayers_es.json: not present (skipped)")
 
 
+def validate_office_texts():
+    """office_texts_es.json: normalised Latin -> Spanish, for the Office
+    texts Divinum Officium's rubrics assemble (scripts/build_office_spanish.py)."""
+    path = ES / "office_texts_es.json"
+    if not path.exists():
+        print("office_texts_es.json: not present (skipped)")
+        return
+    es = json.load(open(path))
+    check(isinstance(es, dict) and es, "office_texts_es.json: not a non-empty object")
+    for k, v in es.items():
+        check(isinstance(k, str) and k.strip() and k == " ".join(k.split()),
+              f"office_texts_es[{k[:40]!r}]: key not normalised")
+        check(isinstance(v, str) and v.strip(), f"office_texts_es[{k[:40]!r}]: empty Spanish")
+    print(f"office_texts_es.json: {len(es)} texts checked")
+
+
 def main():
     validate_prayers()
     validate_ordo_names()
@@ -802,6 +818,7 @@ def main():
     validate_psalter()
     validate_hours_parts()
     validate_commune_office()
+    validate_office_texts()
     validate_temporal_propers()
     validate_hymns_seasonal()
     validate_rosary()

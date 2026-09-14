@@ -47,6 +47,10 @@ R = ROOT / "Introibo" / "Resources"
 
 # Known-intentional flags: (check, file, key-prefix)
 ALLOWLIST = [
+    # Holy Saturday's collect: no sourced Spanish (Divinum Officium's own
+    # Spanish tree leaves it in Latin); the English stands until one is.
+    ("MISSING", "temporal", "quad6-6r.oratio_3"),
+    ("MISSING", "temporal", "quad6-6r.oratio_matutinum"),
     # Spanish phonetic respelling uses English 'ye' for the J sound
     ("LEAK-EN", "courses", "ave.sections_es[1].items_es[4].phon_es"),
     # lectio4/lectio94 differ only by an i/j spelling (ejiceret/eiceret);
@@ -448,6 +452,10 @@ def main():
                     if not (o.get("eng") or "").strip():
                         flag("MISSING", name, f"{code}.{fk}",
                              (part.get("eng") or "")[:60])
+
+    # ---- the Office texts of the Divinum Officium assets (Latin-keyed) ----
+    for k, es in load("office_texts_es.json").items():
+        check_pair("office_texts", k[:50], k, es, "free")
 
     # ---- missal propers + readings ----
     tem = load("missal_tempora.json")

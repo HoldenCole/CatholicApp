@@ -45,6 +45,7 @@ FILES = [
     "daily_psalm_es.json",
     "confession_examen_es.json",
     "confession_guides_es.json",
+    "office_texts_es.json",
 ]
 
 
