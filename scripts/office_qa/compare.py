@@ -39,10 +39,27 @@ def words(s, n):
 
 
 def strip_num(l):
-    return re.sub(r"^\d+:\d+[ab]?\s+", "", re.sub(r"^\(\w+\)\s+", "", l))
+    l = re.sub(r"^\d+:\d+[ab]?\s+", "", l)
+    l = re.sub(r"^\(\w+\)\s+", "", l)          # (Aleph) / (fit reverentia)
+    return re.sub(r"^\(fit reverentia\)\s+", "", l)
 
 
 GLORIA = ("gloria patri", "sicut erat")
+
+# Versicles that belong to the fixed frame of every hour (not what we are
+# checking); matched on their normalised first words.
+FIXED_VERSICLES = ("deus in adiutorium", "gloria patri", "domine exaudi", "benedicamus domino",
+                   "fidelium animae", "domine labia", "iube domine", "iube domne", "tu autem",
+                   "adiutorium nostrum", "pretiosa in conspectu", "respice in seruos",
+                   "et ne nos inducas", "sed libera nos", "dominus uobiscum", "exsurge christe",
+                   "diuinum auxilium", "domine miserere", "conuerte nos", "dignare domine",
+                   "kyrie eleison", "christe eleison", "pater noster", "ostende nobis",
+                   "sancta maria", "exaudi domine", "in manus tuas")
+
+
+def proper_versicle(t):
+    n = norm(t)
+    return not any(n.startswith(f) for f in FIXED_VERSICLES)
 
 
 def is_gloria(l):
@@ -60,7 +77,7 @@ def do_psalms(sections):
         i = 0
         while i < len(lines):
             l = lines[i]
-            m = re.match(r"^(Psalmus \d+(?:\(\d+-\d+\))?|Canticum [^\[]+?)\s*\[\d+\]", l)
+            m = re.match(r"^(Psalmus \d+(?:\(\d+-\d+\))?)\s*\[\d+\]", l) or re.match(r"^(Canticum [A-Za-zæÆ. ]+?)\s*(?:\[\d+\])?$", l)
             if m:
                 label = m.group(1).strip()
                 # verses follow until the next Ant./Psalmus/section end
@@ -80,6 +97,20 @@ def do_psalms(sections):
                 i = j
                 continue
             i += 1
+    return out
+
+
+def merge_laudate(ps):
+    """DO lists Ps 148, 149, 150 separately; the app keeps them as one part."""
+    out = []
+    i = 0
+    while i < len(ps):
+        if (i + 2 < len(ps) and ps[i][0] == "Psalmus 148" and ps[i + 1][0] == "Psalmus 149"
+                and ps[i + 2][0] == "Psalmus 150"):
+            out.append(("Psalmus 148-150", ps[i][1] + ps[i + 1][1] + ps[i + 2][1], ps[i][2]))
+            i += 3
+        else:
+            out.append(ps[i]); i += 1
     return out
 
 
@@ -105,23 +136,32 @@ def do_section(sections, name_re):
     return None
 
 
+def is_rubric(l):
+    n = norm(l)
+    return ("stropha" in n or n.endswith("dicitur") or n.startswith("{") or l.startswith("{"))
+
+
 def do_hymn(sections):
     # "Hymnus" section, or the line after a "Hymnus" marker inside a
     # "Capitulum Hymnus Versus" section.
     sec = do_section(sections, r"^Hymnus")
     if sec and sec["lines"]:
-        return words(sec["lines"][0], 5)
+        for l in sec["lines"]:
+            if not is_rubric(l):
+                return words(l, 5)
     for sec in sections:
         lines = sec["lines"]
         for i, l in enumerate(lines):
-            if l == "Hymnus" and i + 1 < len(lines):
-                return words(lines[i + 1], 5)
+            if l == "Hymnus":
+                for l2 in lines[i + 1:]:
+                    if not is_rubric(l2):
+                        return words(l2, 5)
     return None
 
 
 def do_capitulum(sections):
     for sec in sections:
-        if "Capitulum" in sec["name"] or sec["name"].startswith("Lectio brevis"):
+        if "Capitulum" in sec["name"]:
             lines = sec["lines"]
             for i, l in enumerate(lines):
                 # scripture ref line then the text
@@ -132,8 +172,29 @@ def do_capitulum(sections):
     return None
 
 
-def do_versicles(sections):
-    return [words(l[3:], 5) for l in do_lines(sections, lambda l: l.startswith("℣. "))]
+def do_versicles(sections, hour):
+    """The hour's proper versicle(s): after the hymn (Lauds/Vespers), after
+    the short responsory (little hours), the nocturn versicles (Matins)."""
+    out = []
+    if hour in ("laudes", "vesperae"):
+        sec = do_section(sections, r"Capitulum Hymnus Versus|Versus")
+        if sec:
+            vs = [l for l in sec["lines"] if l.startswith("℣. ") and proper_versicle(l[3:])]
+            if vs: out.append(words(vs[-1][3:], 5))
+    elif hour in ("tertia", "sexta", "nona"):
+        sec = do_section(sections, r"Capitulum Responsorium Versus")
+        if sec:
+            vs = [l for l in sec["lines"] if l.startswith("℣. ") and proper_versicle(l[3:])]
+            if vs: out.append(words(vs[-1][3:], 5))
+    elif hour == "matutinum":
+        for sec in sections:
+            if re.match(r"^Lectio", sec["name"]) or sec["name"] in ("Incipit", "Invitatorium", "Oratio", "Conclusio"):
+                continue
+            lines = sec["lines"]
+            # a nocturn versicle is a bare ℣/℟ pair section (2 lines)
+            if len(lines) == 2 and lines[0].startswith("℣. ") and lines[1].startswith("℟. ") and proper_versicle(lines[0][3:]):
+                out.append(words(lines[0][3:], 5))
+    return out
 
 
 def do_responsory(sections):
@@ -163,7 +224,7 @@ def do_marian(sections):
 
 
 def do_preces(sections):
-    return bool(do_lines(sections, lambda l: norm(l).startswith("kyrie eleison") or norm(l) == "kyrie eleison"))
+    return bool(do_lines(sections, lambda l: norm(l).startswith("kyrie eleison")))
 
 
 # ---------------- app side ----------------
@@ -174,7 +235,9 @@ def app_psalms(parts):
         if p.get("type") not in ("psalm", "canticle"):
             continue
         label = p.get("label") or ""
-        verses = [v for v in (p.get("verses") or []) if not is_gloria(v)]
+        if label.startswith("Psalm 94") or (p.get("vk") or "") == "matutinum.canticle":
+            continue  # invitatory psalm / Te Deum are checked elsewhere
+        verses = [strip_num(v) for v in (p.get("verses") or []) if not is_gloria(v)]
         m = re.search(r"Psalm(?:us|i)?\s+(\d+)(?:\s*[:(]\s*(\d+)\s*-\s*(\d+))?", label)
         if m and "Psalmi 148" in label:
             out.append(("Psalmus 148-150", len(verses), verses[0] if verses else ""))
@@ -219,34 +282,48 @@ def app_capitulum(parts):
     return None
 
 
-def app_versicles(parts):
+def app_versicles(parts, hour):
     out = []
     for p in parts:
-        for k in ("lat", "v1", "v2"):
+        if p.get("type") != "vr":
+            continue
+        vk = p.get("vk") or ""
+        if hour in ("laudes", "vesperae") and not vk.startswith("versum_"):
+            continue
+        if hour in ("tertia", "sexta", "nona") and vk != "versum_" + hour:
+            continue
+        if hour == "matutinum" and not vk.startswith("nocturn_"):
+            continue
+        if hour in ("prima", "completorium"):
+            continue
+        for k in ("v1", "lat"):
             v = p.get(k)
-            if v and v.lstrip().startswith("℣."):
-                for line in re.split(r"<br\s*/?>|\n", v):
-                    line = line.strip()
-                    if line.startswith("℣."):
-                        out.append(words(line[2:], 5))
+            if not v:
+                continue
+            line = re.split(r"<br\s*/?>|\n", v)[0].strip()
+            line = re.sub(r"^(℣\.|V\.)\s*", "", line)
+            if proper_versicle(line):
+                out.append(words(line, 5))
+            break
     return out
 
 
 def app_responsory(parts):
     for p in parts:
-        if p.get("type") == "responsory" and p.get("lat"):
-            t = re.sub(r"^℟\.?br\.?\s*", "", first_line(p["lat"]).strip())
+        if p.get("type") == "responsory" and (p.get("lat") or p.get("v1") or p.get("r1")):
+            t = re.sub(r"^(℟|R)\.?\s*br\.?\s*", "", first_line(p.get("lat") or p.get("r1") or p.get("v1")).strip())
             return words(t, 6)
     return None
 
 
 def app_collects(parts):
-    return [words(first_line(p["lat"]), 6) for p in parts if p.get("type") == "collect" and p.get("lat")]
+    return [words(first_line(p["lat"]), 6) for p in parts
+            if p.get("type") == "collect" and p.get("lat") and (p.get("vk") or "") != "prima2.sanctamaria"]
 
 
 def app_lessons(parts):
-    n = sum(1 for p in parts if p.get("type") in ("reading", "lesson") and re.search(r"lectio|lesson|reading", (p.get("vk") or "") + (p.get("label") or ""), re.I) and not (p.get("vk") or "").startswith("lectio_") and (p.get("vk") or "") != "prima2.martyrologium")
-    tedeum = any(norm(p.get("lat") or "").startswith("te deum laudamus") for p in parts)
+    n = sum(1 for p in parts if p.get("type") == "reading" and re.match(r"lectio\d", p.get("vk") or ""))
+    tedeum = any((p.get("vk") or "") == "matutinum.canticle" or "Te Deum" in (p.get("label") or "") for p in parts)
     return n, tedeum
 
 
@@ -259,7 +336,8 @@ def app_marian(parts):
 
 
 def app_preces(parts):
-    return any(p.get("type") == "preces" or (p.get("vk") or "").startswith("preces") for p in parts)
+    return any(norm(first_line(p.get("lat") or "")).startswith("kyrie eleison") or p.get("type") == "preces"
+               or (p.get("vk") or "").startswith("preces") for p in parts)
 
 
 # ---------------- comparison ----------------
@@ -270,16 +348,19 @@ def compare_hour(rite, date, hour, app_parts, do_sections, flags):
 
     # psalms
     ap = app_psalms(app_parts)
-    dp = do_psalms(do_sections)
+    dp = merge_laudate(do_psalms(do_sections))
     apl = [x[0] for x in ap]
     dpl = [x[0] for x in dp]
     # canticles: compare by first line instead of label
     def key(x):
-        return x[0] if x[0].startswith("Psalmus") else "Cant:" + words(x[2], 3)
+        m = re.match(r"Psalmus (\d+)", x[0])
+        return ("Ps%s:" % m.group(1) if m else "Cant:") + words(x[2], 3)
     if [key(x) for x in ap] != [key(x) for x in dp]:
         flag("psalms", "app %s | DO %s" % ([key(x) for x in ap], [key(x) for x in dp]))
     else:
         for a, d in zip(ap, dp):
+            if a[0].startswith("Psalmus 148"):
+                continue
             if abs(a[1] - d[1]) > 1:
                 flag("psalm-verses", "%s app %d vs DO %d" % (a[0], a[1], d[1]))
     aa, da = app_antiphons(app_parts), do_antiphons(do_sections)
@@ -289,13 +370,13 @@ def compare_hour(rite, date, hour, app_parts, do_sections, flags):
     if (ah or dh) and ah != dh:
         flag("hymn", "app %r | DO %r" % (ah, dh))
     ac, dc = app_capitulum(app_parts), do_capitulum(do_sections)
-    if (ac or dc) and ac != dc:
+    if hour != "matutinum" and (ac or dc) and ac != dc:
         flag("capitulum", "app %r | DO %r" % (ac, dc))
-    av, dv = app_versicles(app_parts), do_versicles(do_sections)
-    if av != dv:
+    av, dv = app_versicles(app_parts, hour), do_versicles(do_sections, hour)
+    if hour not in ("prima", "completorium") and av != dv:
         flag("versicle", "app %s | DO %s" % (av, dv))
     ar, dr = app_responsory(app_parts), do_responsory(do_sections)
-    if (ar or dr) and ar != dr:
+    if hour != "matutinum" and (ar or dr) and ar != dr:
         flag("responsory", "app %r | DO %r" % (ar, dr))
     aco, dco = app_collects(app_parts), do_collects(do_sections)
     if aco != dco:
