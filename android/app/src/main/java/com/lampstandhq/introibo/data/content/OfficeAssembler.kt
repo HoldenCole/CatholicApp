@@ -286,15 +286,27 @@ class OfficeAssembler(
             val isTenebrae = context.temporalKey in setOf("quad6-4", "quad6-5", "quad6-6")
             filterMatinsParts(alleluiaStripped, matinsNocturns, matinsTeDeum, isTenebrae)
         } else if (template.slug == "prima") {
-            // Festal Prime (Sunday/I-class feast or Easter/Pentecost octave):
-            // 4 psalms (Ps 53, 117, 118 I, 118 II). Ferial Prime: 3 psalms.
-            // During octave, drop Ps 117 instead.
-            if (isOctave && context.dayOfWeek != 0) {
-                alleluiaStripped.filter { it.variationKey != "prima.psalm2" }
-            } else if (!festalLittleHours) {
-                alleluiaStripped.filter { it.variationKey != "prima.psalm4" }
+            // Prime's psalmody (Psalterium/Psalmi minor + psalmi.pl):
+            //   Sunday psalms (Sundays, I-class feasts, the Easter and
+            //   Pentecost octaves): Ps 117, 118 i (1-16), 118 ii (17-32).
+            //   Ps 53 takes the place of Ps 117 on the Sundays from
+            //   Septuagesima to Palm Sunday under the 1960 rubrics, and on
+            //   Easter Sunday, Pentecost, Trinity Sunday and the Sacred Heart
+            //   ("Prima=53") in every rite.
+            //   Ferial Prime: the weekday's three psalms (the weekly override
+            //   replaces psalm1-3; psalm4 has no ferial override and would
+            //   leak, so it is dropped).
+            // The template carries all four (53, 117, 118 i, 118 ii) so the
+            // part indices stay stable for the vernacular overlays.
+            if (festalLittleHours) {
+                val key = context.temporalKey ?: ""
+                val prima53 = key in PRIMA_53_KEYS ||
+                    (rite == MissalRite.RITE_1962 && context.dayOfWeek == 0 &&
+                        (key.startsWith("quadp") || key.startsWith("quad")))
+                val drop = if (prima53) "prima.psalm2" else "prima.psalm1"
+                alleluiaStripped.filter { it.variationKey != drop }
             } else {
-                alleluiaStripped
+                alleluiaStripped.filter { it.variationKey != "prima.psalm4" }
             }
         } else {
             alleluiaStripped
@@ -791,6 +803,10 @@ class OfficeAssembler(
     }
 
     companion object {
+        /** Temporal offices whose DO rule carries "Prima=53": Easter Sunday,
+         *  Pentecost, Trinity Sunday, the Sacred Heart. */
+        val PRIMA_53_KEYS = setOf("pasc0-0", "pasc7-0", "pent01-0", "pent02-5")
+
         // ---- Temporal-propers key translation ----
         //
         // The hours.json variationKeys now use the same key format as the

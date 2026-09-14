@@ -580,16 +580,27 @@ struct OfficeAssembler {
             let isTenebrae = ["quad6-4", "quad6-5", "quad6-6"].contains(context.temporalKey ?? "")
             filteredParts = filterMatinsParts(alleluiaStripped, nocturns: matinsNocturns, includeTeDeum: matinsTeDeum, isTenebrae: isTenebrae)
         } else if template.slug == "prima" {
-            // Festal Prime (Sunday/I-class feast or Easter/Pentecost octave):
-            // 4 psalms (Ps 53, 117, 118 I, 118 II). Ferial Prime: 3 psalms
-            // (the weekday override replaces psalm1-3, but psalm4 has no ferial
-            // override and would leak). During octave, drop Ps 117 instead.
-            if isOctave && context.dayOfWeek != 0 {
-                filteredParts = alleluiaStripped.filter { $0.variationKey != "prima.psalm2" }
-            } else if !festalLittleHours {
-                filteredParts = alleluiaStripped.filter { $0.variationKey != "prima.psalm4" }
+            // Prime's psalmody (Psalterium/Psalmi minor + psalmi.pl):
+            //   Sunday psalms (Sundays, I-class feasts, the Easter and
+            //   Pentecost octaves): Ps 117, 118 i (1-16), 118 ii (17-32).
+            //   Ps 53 takes the place of Ps 117 on the Sundays from
+            //   Septuagesima to Palm Sunday under the 1960 rubrics, and on
+            //   Easter Sunday, Pentecost, Trinity Sunday and the Sacred Heart
+            //   ("Prima=53") in every rite.
+            //   Ferial Prime: the weekday's three psalms (the weekly override
+            //   replaces psalm1-3; psalm4 has no ferial override and would
+            //   leak, so it is dropped).
+            // The template carries all four (53, 117, 118 i, 118 ii) so the
+            // part indices stay stable for the vernacular overlays.
+            if festalLittleHours {
+                let key = context.temporalKey ?? ""
+                let prima53 = Self.prima53Keys.contains(key)
+                    || (rite == .rite1962 && context.dayOfWeek == 0
+                        && (key.hasPrefix("quadp") || key.hasPrefix("quad")))
+                let drop = prima53 ? "prima.psalm2" : "prima.psalm1"
+                filteredParts = alleluiaStripped.filter { $0.variationKey != drop }
             } else {
-                filteredParts = alleluiaStripped
+                filteredParts = alleluiaStripped.filter { $0.variationKey != "prima.psalm4" }
             }
         } else {
             filteredParts = alleluiaStripped
@@ -883,6 +894,10 @@ struct OfficeAssembler {
     // Never on Sundays or on feasts.
 
     /// Determines whether Preces Feriales should be included in the Hour.
+    /// Temporal offices whose DO rule carries "Prima=53": Easter Sunday,
+    /// Pentecost, Trinity Sunday, the Sacred Heart.
+    static let prima53Keys: Set<String> = ["pasc0-0", "pasc7-0", "pent01-0", "pent02-5"]
+
     private func shouldIncludePreces(context: LiturgicalContext, rite: MissalRite, hourSlug: String) -> Bool {
         // Never on Sundays
         guard context.dayOfWeek != 0 else { return false }

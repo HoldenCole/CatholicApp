@@ -74,6 +74,50 @@ class OfficeStructureFixTest {
         )
     }
 
+    private fun psalmLabels(h: Hour) = h.parts.filter { it.type == "psalm" }.map { it.label ?: "" }
+    private fun psalmVerseCount(h: Hour, labelPrefix: String) =
+        h.parts.first { it.type == "psalm" && (it.label ?: "").startsWith(labelPrefix) }.verses!!
+            .count { !it.lat.startsWith("Glória Patri") && !it.lat.startsWith("Sicut erat") }
+
+    /** Sunday Vespers carries the whole of Ps 113 (In éxitu), not the
+     *  five-verse stub the template once shipped. */
+    @Test
+    fun sundayVespersCarriesTheWholeOfPsalm113() {
+        val sunday = LocalDate.of(2026, 8, 9) // per-annum Sunday
+        val v = assembled("vesperae", sunday, festal = true)
+        assertEquals(27, psalmVerseCount(v, "Psalmus 113"))
+    }
+
+    /** Prime's psalmody follows Psalterium/Psalmi minor + psalmi.pl:
+     *  Sundays and I-class feasts take Ps 117, 118 i (1-16), 118 ii (17-32);
+     *  Ps 53 replaces 117 on the Sundays from Septuagesima to Palm Sunday
+     *  (1960 rubrics) and on the "Prima=53" offices; ferias take the
+     *  weekday's three psalms. */
+    @Test
+    fun primePsalmodyFollowsTheRubrics() {
+        val perAnnumSunday = assembled("prima", LocalDate.of(2026, 8, 9), festal = true)
+        assertEquals(listOf("Psalmus 117", "Psalmus 118:1-16; Beáti immaculáti", "Psalmus 118:17-32; Retríbue servo tuo"),
+            psalmLabels(perAnnumSunday))
+        assertEquals(16, psalmVerseCount(perAnnumSunday, "Psalmus 118:1-16"))
+        assertEquals(16, psalmVerseCount(perAnnumSunday, "Psalmus 118:17-32"))
+
+        // Septuagesima Sunday 2026-02-01: 1962 says Ps 53 for 117; 1955 keeps 117.
+        val septuagesima62 = assembled("prima", LocalDate.of(2026, 2, 1), festal = true)
+        assertEquals("Psalm 53; Deus, in nómine tuo", psalmLabels(septuagesima62).first())
+        assertTrue(psalmLabels(septuagesima62).none { it == "Psalmus 117" })
+        val septuagesima55 = assembled("prima", LocalDate.of(2026, 2, 1), festal = true, rite = MissalRite.RITE_1955)
+        assertEquals("Psalmus 117", psalmLabels(septuagesima55).first())
+
+        // Easter Sunday: Prima=53 in every rite; Easter Monday: Sunday psalms with 117.
+        assertEquals("Psalm 53; Deus, in nómine tuo", psalmLabels(assembled("prima", LocalDate.of(2026, 4, 5), festal = true)).first())
+        assertEquals("Psalmus 117", psalmLabels(assembled("prima", LocalDate.of(2026, 4, 6), festal = true)).first())
+
+        // Feria: the weekday's three psalms, neither 53 nor 117.
+        val labels = psalmLabels(assembled("prima", feria))
+        assertEquals(3, labels.size)
+        assertTrue(labels.none { it.startsWith("Psalm 53") || it == "Psalmus 117" })
+    }
+
     @Test
     fun primeCarriesItsChapterOffice() {
         val prime = assembled("prima", feria)

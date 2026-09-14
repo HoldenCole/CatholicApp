@@ -1912,7 +1912,7 @@
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:1-8; Beáti immaculáti",
+        "label": "Psalmus 118:1-16; Beáti immaculáti",
         "variationKey": "prima.psalm3",
         "verses": [
           {
@@ -1921,15 +1921,63 @@
           },
           {
             "lat": "Beáti, qui scrutántur testimónia ejus: * in toto corde exquírunt eum.",
-            "eng": "Blessed are they that search His testimonies: * that seek Him with their whole heart."
+            "eng": "Blessed are they that search his testimonies: * that seek him with their whole heart."
           },
           {
-            "lat": "Non enim qui operántur iniquitátem, * in viis ejus ambula vérunt.",
-            "eng": "For they that work iniquity * have not walked in His ways."
+            "lat": "Non enim qui operántur iniquitátem, * in viis ejus ambulavérunt.",
+            "eng": "For they that work iniquity, * have not walked in his ways."
           },
           {
-            "lat": "Tu mandásti * mandáta tua custódi nimis.",
-            "eng": "Thou hast commanded * Thy commandments to be kept most diligently."
+            "lat": "Tu mandásti * mandáta tua custodíri nimis.",
+            "eng": "Thou hast commanded * thy commandments to be kept most diligently."
+          },
+          {
+            "lat": "Útinam dirigántur viæ meæ, * ad custodiéndas justificatiónes tuas!",
+            "eng": "O! that my ways may be directed * to keep thy justifications."
+          },
+          {
+            "lat": "Tunc non confúndar, * cum perspéxero in ómnibus mandátis tuis.",
+            "eng": "Then shall I not be confounded, * when I shall look into all thy commandments."
+          },
+          {
+            "lat": "Confitébor tibi in directióne cordis: * in eo quod dídici judícia justítiæ tuæ.",
+            "eng": "I will praise thee with uprightness of heart, * when I shall have learned the judgments of thy justice."
+          },
+          {
+            "lat": "Justificatiónes tuas custódiam: * non me derelínquas usquequáque.",
+            "eng": "I will keep thy justifications: * O! do not thou utterly forsake me."
+          },
+          {
+            "lat": "In quo córrigit adolescéntior viam suam? * In custodiéndo sermónes tuos.",
+            "eng": "(Béth) By what doth a young man correct his way? * By observing thy words."
+          },
+          {
+            "lat": "In toto corde meo exquisívi te: * ne repéllas me a mandátis tuis.",
+            "eng": "With my whole heart have I sought after thee: * let me not stray from thy commandments."
+          },
+          {
+            "lat": "In corde meo abscóndi elóquia tua: * ut non peccem tibi.",
+            "eng": "Thy words have I hidden in my heart, * that I may not sin against thee."
+          },
+          {
+            "lat": "Benedíctus es, Dómine: * doce me justificatiónes tuas.",
+            "eng": "Blessed art thou, O Lord: * teach me thy justifications."
+          },
+          {
+            "lat": "In lábiis meis, * pronuntiávi ómnia judícia oris tui.",
+            "eng": "With my lips * I have pronounced all the judgments of thy mouth."
+          },
+          {
+            "lat": "In via testimoniórum tuórum delectátus sum, * sicut in ómnibus divítiis.",
+            "eng": "I have been delighted in the way of thy testimonies, * as in all riches."
+          },
+          {
+            "lat": "In mandátis tuis exercébor: * et considerábo vias tuas.",
+            "eng": "I will meditate on thy commandments: * and I will consider thy ways."
+          },
+          {
+            "lat": "In justificatiónibus tuis meditábor: * non oblivíscar sermónes tuos.",
+            "eng": "I will think of thy justifications: * I will not forget thy words."
           },
           {
             "lat": "Glória Patri, et Fílio, * et Spirítui Sancto.",
@@ -1943,24 +1991,72 @@
       },
       {
         "type": "psalm",
-        "label": "Psalmus 118:9-16; In quo córrigit",
+        "label": "Psalmus 118:17-32; Retríbue servo tuo",
         "variationKey": "prima.psalm4",
         "verses": [
           {
-            "lat": "In quo córrigit adolescéntior viam suam? * In custodiéndo sermónes tuos.",
-            "eng": "By what doth a young man correct his way? * By observing Thy words."
+            "lat": "Retríbue servo tuo, vivífica me: * et custódiam sermónes tuos:",
+            "eng": "Give bountifully to thy servant, enliven me * and I shall keep thy words."
           },
           {
-            "lat": "In toto corde meo exquisívi te: * ne repéllas me a mandátis tuis.",
-            "eng": "With my whole heart have I sought after Thee: * let me not stray from Thy commandments."
+            "lat": "Revéla óculos meos: * et considerábo mirabília de lege tua.",
+            "eng": "Open thou my eyes: * and I will consider the wondrous things of thy law."
           },
           {
-            "lat": "In corde meo abscóndi elóquia tua: * ut non peccem tibi.",
-            "eng": "Thy words have I hidden in my heart, * that I may not sin against Thee."
+            "lat": "Íncola ego sum in terra: * non abscóndas a me mandáta tua.",
+            "eng": "I am a sojourner on the earth: * hide not thy commandments from me."
           },
           {
-            "lat": "Benedíctus es, Dómine: * doce me justificatiónes tuas.",
-            "eng": "Blessed art Thou, O Lord: * teach me Thy justifications."
+            "lat": "Concupívit ánima mea desideráre justificatiónes tuas, * in omni témpore.",
+            "eng": "My soul hath coveted to long for thy justifications, * at all times."
+          },
+          {
+            "lat": "Increpásti supérbos: * maledícti qui declínant a mandátis tuis.",
+            "eng": "Thou hast rebuked the proud: * they are cursed who decline from thy commandments."
+          },
+          {
+            "lat": "Aufer a me oppróbrium, et contémptum: * quia testimónia tua exquisívi.",
+            "eng": "Remove from me reproach and contempt: * because I have sought after thy testimonies."
+          },
+          {
+            "lat": "Étenim sedérunt príncipes, et advérsum me loquebántur: * servus autem tuus exercebátur in justificatiónibus tuis.",
+            "eng": "For princes sat, and spoke against me: * but thy servant was employed in thy justifications."
+          },
+          {
+            "lat": "Nam et testimónia tua meditátio mea est: * et consílium meum justificatiónes tuæ.",
+            "eng": "For thy testimonies are my meditation: * and thy justifications my counsel."
+          },
+          {
+            "lat": "Adhǽsit paviménto ánima mea: * vivífica me secúndum verbum tuum.",
+            "eng": "My soul hath cleaved to the pavement: * quicken thou me according to thy word."
+          },
+          {
+            "lat": "Vias meas enuntiávi, et exaudísti me: * doce me justificatiónes tuas.",
+            "eng": "I have declared my ways, and thou hast heard me: * teach me thy justifications."
+          },
+          {
+            "lat": "Viam justificatiónum tuárum ínstrue me: * et exercébor in mirabílibus tuis.",
+            "eng": "Make me to understand the way of thy justifications: * and I shall be exercised in thy wondrous works."
+          },
+          {
+            "lat": "Dormitávit ánima mea præ tǽdio: * confírma me in verbis tuis.",
+            "eng": "My soul hath slumbered through heaviness: * strengthen thou me in thy words."
+          },
+          {
+            "lat": "Viam iniquitátis ámove a me: * et de lege tua miserére mei.",
+            "eng": "Remove from me the way of iniquity: * and out of thy law have mercy on me."
+          },
+          {
+            "lat": "Viam veritátis elégi: * judícia tua non sum oblítus.",
+            "eng": "I have chosen the way of truth: * thy judgments I have not forgotten."
+          },
+          {
+            "lat": "Adhǽsi testimóniis tuis, Dómine: * noli me confúndere.",
+            "eng": "I have stuck to thy testimonies, O Lord: * put me not to shame."
+          },
+          {
+            "lat": "Viam mandatórum tuórum cucúrri, * cum dilatásti cor meum.",
+            "eng": "I have run the way of thy commandments, * when thou didst enlarge my heart."
           },
           {
             "lat": "Glória Patri, et Fílio, * et Spirítui Sancto.",
@@ -3247,24 +3343,112 @@
         "variationKey": "vesperae.psalm5",
         "verses": [
           {
-            "lat": "In éxitu Israël de Ægýpto, * domus Jacob de pópulo bárbaro.",
-            "eng": "When Israel went out of Egypt, * the house of Jacob from a barbarous people."
+            "lat": "In éxitu Israël de Ægýpto, * domus Jacob de pópulo bárbaro:",
+            "eng": "When Israel went out of Egypt, * the house of Jacob from a barbarous people:"
           },
           {
-            "lat": "Facta est Judæa sanctificátio ejus, * Israël potéstas ejus.",
-            "eng": "Judea was made His sanctuary, * Israel His dominion."
+            "lat": "Facta est Judǽa sanctificátio ejus, * Israël potéstas ejus.",
+            "eng": "Judea was made his sanctuary, * Israel his dominion."
           },
           {
-            "lat": "Mare vidit et fugit: * Jordánis convérsus est retrórsum.",
+            "lat": "Mare vidit, et fugit: * Jordánis convérsus est retrórsum.",
             "eng": "The sea saw and fled: * Jordan was turned back."
           },
           {
-            "lat": "Montes exsulta vérunt ut aríetes: * et colles sicut agni óvium.",
+            "lat": "Montes exsultavérunt ut aríetes, * et colles sicut agni óvium.",
             "eng": "The mountains skipped like rams, * and the hills like the lambs of the flock."
           },
           {
+            "lat": "Quid est tibi, mare, quod fugísti: * et tu, Jordánis, quia convérsus es retrórsum?",
+            "eng": "What ailed thee, O thou sea, that thou didst flee: * and thou, O Jordan, that thou wast turned back?"
+          },
+          {
+            "lat": "Montes, exsultástis sicut aríetes, * et colles, sicut agni óvium.",
+            "eng": "Ye mountains, that ye skipped like rams, * and ye hills, like lambs of the flock?"
+          },
+          {
+            "lat": "A fácie Dómini mota est terra, * a fácie Dei Jacob.",
+            "eng": "At the presence of the Lord the earth was moved, * at the presence of the God of Jacob:"
+          },
+          {
+            "lat": "Qui convértit petram in stagna aquárum, * et rupem in fontes aquárum.",
+            "eng": "Who turned the rock into pools of water, * and the stony hill into fountains of waters."
+          },
+          {
             "lat": "Non nobis, Dómine, non nobis: * sed nómini tuo da glóriam.",
-            "eng": "Not to us, O Lord, not to us: * but to Thy name give glory."
+            "eng": "Not to us, O Lord, not to us; * but to thy name give glory."
+          },
+          {
+            "lat": "Super misericórdia tua, et veritáte tua: * nequándo dicant gentes: Ubi est Deus eórum?",
+            "eng": "For thy mercy, and for thy truth’s sake: * lest the Gentiles should say: Where is their God?"
+          },
+          {
+            "lat": "Deus autem noster in cælo: * ómnia quæcúmque vóluit, fecit.",
+            "eng": "But our God is in heaven: * he hath done all things whatsoever he would."
+          },
+          {
+            "lat": "Simulácra géntium argéntum, et aurum, * ópera mánuum hóminum.",
+            "eng": "The idols of the Gentiles are silver and gold, * the works of the hands of men."
+          },
+          {
+            "lat": "Os habent, et non loquéntur: * óculos habent, et non vidébunt.",
+            "eng": "They have mouths and speak not: * they have eyes and see not."
+          },
+          {
+            "lat": "Aures habent, et non áudient: * nares habent, et non odorábunt.",
+            "eng": "They have ears and hear not: * they have noses and smell not."
+          },
+          {
+            "lat": "Manus habent, et non palpábunt: † pedes habent, et non ambulábunt: * non clamábunt in gútture suo.",
+            "eng": "They have hands and feel not: † they have feet and walk not: * neither shall they cry out through their throat."
+          },
+          {
+            "lat": "Símiles illis fiant qui fáciunt ea: * et omnes qui confídunt in eis.",
+            "eng": "Let them that make them become like unto them: * and all such as trust in them."
+          },
+          {
+            "lat": "Domus Israël sperávit in Dómino: * adjútor eórum et protéctor eórum est,",
+            "eng": "The house of Israel hath hoped in the Lord: * he is their helper and their protector."
+          },
+          {
+            "lat": "Domus Aaron sperávit in Dómino: * adjútor eórum et protéctor eórum est,",
+            "eng": "The house of Aaron hath hoped in the Lord: * he is their helper and their protector."
+          },
+          {
+            "lat": "Qui timent Dóminum, speravérunt in Dómino: * adjútor eórum et protéctor eórum est.",
+            "eng": "They that fear the Lord have hoped in the Lord: * he is their helper and their protector."
+          },
+          {
+            "lat": "Dóminus memor fuit nostri: * et benedíxit nobis:",
+            "eng": "The Lord hath been mindful of us, * and hath blessed us."
+          },
+          {
+            "lat": "Benedíxit dómui Israël: * benedíxit dómui Aaron.",
+            "eng": "He hath blessed the house of Israel: * he hath blessed the house of Aaron."
+          },
+          {
+            "lat": "Benedíxit ómnibus, qui timent Dóminum, * pusíllis cum majóribus.",
+            "eng": "He hath blessed all that fear the Lord, * both little and great."
+          },
+          {
+            "lat": "Adíciat Dóminus super vos: * super vos, et super fílios vestros.",
+            "eng": "May the Lord add blessings upon you: * upon you, and upon your children."
+          },
+          {
+            "lat": "Benedícti vos a Dómino, * qui fecit cælum, et terram.",
+            "eng": "Blessed be you of the Lord, * who made heaven and earth."
+          },
+          {
+            "lat": "Cælum cæli Dómino: * terram autem dedit fíliis hóminum.",
+            "eng": "The heaven of heaven is the Lord’s: * but the earth he has given to the children of men."
+          },
+          {
+            "lat": "Non mórtui laudábunt te, Dómine: * neque omnes, qui descéndunt in inférnum.",
+            "eng": "The dead shall not praise thee, O Lord: * nor any of them that go down to hell."
+          },
+          {
+            "lat": "Sed nos qui vívimus, benedícimus Dómino, * ex hoc nunc et usque in sǽculum.",
+            "eng": "But we that live bless the Lord: * from this time now and for ever."
           },
           {
             "lat": "Glória Patri, et Fílio, * et Spirítui Sancto.",
