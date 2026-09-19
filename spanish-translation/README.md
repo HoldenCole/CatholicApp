@@ -513,8 +513,40 @@ so integration cannot silently misalign.
   (the 1823 edition on archive.org, orthography modernised to match
   the rest of the psalter) and propagated by identical Latin into the
   weekly psalter and the 320 copies inside the commune/temporal/
-  sanctoral Office propers. A systematic line-by-line audit of the
-  whole psalter against the Torres Amat module remains a follow-up.
+  sanctoral Office propers.
+
+  That follow-up is done: `scripts/realign_spanish_psalter.py` now
+  recomposes the whole psalter from the Torres Amat module (theWord
+  `.ont`, one verse per line in KJV order, indexed with the KJV chapter
+  structure) and cuts it at the breviary's verse boundaries. For each
+  psalm or canticle the module text is split into clauses and the
+  partition into as many segments as the Latin has lines is chosen by
+  dynamic programming over per-clause affinities: word overlap with
+  Divinum Officium's own Spanish psalter (a modern translation that IS
+  cut at the breviary's verses, used only as an alignment guide, never
+  as text), Latin–Spanish cognate stems and consonant skeletons, and a
+  prior on the lines' relative lengths; cuts after a comma are
+  dispreferred, psalm titles the breviary omits and the neighbouring
+  psalm's verses (the module's verse boundaries drift by a line here
+  and there) are skipped, and the mediant/flex are placed at the clause
+  boundary that best mirrors the guide's halves. Lines matching their
+  own Latin verse better than a neighbour went from 93.5% to 97.5%
+  across 2,528 psalm lines, and the fragments ("76:6 Y") and dropped
+  half-verses are gone. The same lines are then propagated by Latin
+  (line, half-line, line pairs, and a fuzzy per-psalm match for the
+  hours' older invitatory wording) into `hours_parts_es`,
+  `psalter_weekly_es` and the commune/temporal/sanctoral psalm verses.
+  The deuterocanonical canticles (Daniel 3, Tobit, Judith, Sirach,
+  Wisdom) are outside the module and keep their supplement text,
+  re-cut against the guide. The tool takes the psalter as it stood
+  before any recomposition (`--old`) as a yardstick and keeps a psalm's
+  earlier text where the module composes it worse (the module has a few
+  gaps of its own, e.g. Ps 52:1); `psalter_fixes_es.json` (key → line
+  index → line) hand-fixes the lines the module lacks, applied last.
+
+  The Office of the Dead's Job lessons and the missal's Heb 10:32 and
+  2 Tim 4:1 incipits, which had come from a Hebrew-based modern Bible or
+  were missing, are now the Torres Amat text from the same module.
 
 With this, EVERY content surface of the app outside the Divine Office
 corpus carries Spanish. What remains is the Office (multi-MB; see

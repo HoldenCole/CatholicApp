@@ -86,7 +86,7 @@
      {"eng_es": "Señor (acento en la primera)", "phon_es": "DÓ-mi-nus"},
      {"eng_es": "Gloria (acento en la primera)", "phon_es": "GLÓ-ri-a"},
      {"eng_es": "Creo (acento en la primera)", "phon_es": "CRE-do"},
-     {"eng_es": "Amén (acento en la primera)", "phon_es": "A-men"},
+     {"eng_es": "Amén (acento en la primera)", "phon_es": "Á-men"},
      {"eng_es": "Santo (acento en la primera)", "phon_es": "SANC-tus"}
     ]
    },
@@ -245,7 +245,7 @@
    },
    {
     "label_es": "Rézala despacio",
-    "html_es": "El Rosario no es una carrera. Reza el Ave con calma, dejando posarse cada frase. Un solo Avemaría rezado con plena atención vale más que cien con prisa."
+    "html_es": "El Rosario no es una carrera. Reza el Ave con calma, dejando posarse cada frase. Una sola avemaría rezada con plena atención vale más que cien con prisa."
    },
    {
     "label_es": "Summarium · Resumen",

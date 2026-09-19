@@ -58,3 +58,21 @@ runs with the ordinary test suite.
 carries for the same Latin texts into `spanish-translation/office_texts_es.json`
 (normalised Latin → Spanish); both apps apply it to every text of an
 assembled hour. Texts without an entry keep their English.
+
+Its second source is Divinum Officium's own Spanish column: `dodump.pl`
+takes `DO_LANG2=Espanol` and dumps the Psalterium, the Commons and the
+propers with Spanish beside the Latin (`--do-es DIR`); the builder pairs
+them section by section and line by line, matching the same Latin across
+editions with a fuzzy key (no marks, accents, punctuation or asterisks).
+Entries are also stored under the key the apps compute at render time
+(DO's `v.`/`r.` markers dropped, `V.`/`R.` as ℣./℟., a ℣./℟. pair split
+in two), and the Latin the rubrics engine carries in code (the preces,
+the Pater noster) is looked up too. `spanish-translation/office_texts_fixes_es.json`
+holds hand corrections to texts only DO's column supplies (exact key →
+Spanish), applied last.
+
+`SpanishAuditDump` (Android unit test, runs only with `SPANISH_AUDIT_DIR`
+set; `SPANISH_AUDIT_RITES`, `SPANISH_AUDIT_START`/`_END` optional) applies
+the Spanish overlay and dumps every hour, the Mass proper and the ordo
+name for every day and rite as JSON, so a scan for English left in the
+Spanish office can run over the assembled result rather than the files.

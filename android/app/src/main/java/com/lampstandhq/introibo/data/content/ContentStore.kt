@@ -1514,11 +1514,48 @@ object ContentStore {
      *  (the parts the rubrics assemble carry English from Divinum Officium). */
     private fun applyOfficeSpanish(hour: Hour): Hour {
         if (officeTextsES.isEmpty()) return hour
-        fun es(lat: String?): String? = lat?.let { officeTextsES[officeNorm(it)] }
+        val mark = Regex("^(℟\\.br\\.|℟\\.|℣\\.)\\s*")
+        val alleluia = Regex("(?:,?\\s*[Aa]llel[úu][ij]a\\.?)+\\s*$")
+        fun bare(l: String): String? {
+            officeTextsES[officeNorm(l)]?.let { return it }
+            // the rubrics prefix ℣./℟. at render time: look the bare line up
+            val m = mark.find(l.trim()) ?: return null
+            val e = officeTextsES[officeNorm(l.trim().substring(m.range.last + 1))] ?: return null
+            return m.groupValues[1] + " " + mark.replace(e, "")
+        }
+        fun one(l: String): String? {
+            bare(l)?.let { return it }
+            // Paschaltide appends ", allelúja" to versicles and antiphons
+            val m = alleluia.find(l) ?: return null
+            if (m.range.first == 0) return null
+            val n = Regex("[Aa]llel").findAll(m.value).count()
+            val e = bare(l.substring(0, m.range.first).trimEnd(' ', ',', '.', ';', ':')) ?: return null
+            return e.trimEnd(' ', ',', '.', ';', ':') + ", " + List(n) { "aleluya" }.joinToString(", ") + "."
+        }
+        fun es(lat: String?): String? {
+            if (lat == null) return null
+            one(lat)?.let { return it }
+            // seasonal recombinations (an Advent versicle in the ordinary
+            // responsory): every line on its own, or nothing
+            val lines = lat.split("\n")
+            if (lines.size < 2) return null
+            val out = ArrayList<String>(lines.size)
+            for (l in lines) {
+                if (l.isBlank()) { out.add(""); continue }
+                out.add(one(l) ?: return null)
+            }
+            return out.joinToString("\n")
+        }
         return hour.copy(parts = hour.parts.map { p ->
             val e = es(p.lat); val eR = es(p.latR); val eA = es(p.antiphonLat)
-            if (e == null && eR == null && eA == null) p
-            else p.copy(eng = e ?: p.eng, engR = eR ?: p.engR, antiphonEng = eA ?: p.antiphonEng)
+            // the preces and litanies keep their versicles as verses
+            val vs = p.verses?.let { list ->
+                var hit = false
+                val out = list.map { v -> es(v.lat)?.let { hit = true; v.copy(eng = it) } ?: v }
+                if (hit) out else null
+            }
+            if (e == null && eR == null && eA == null && vs == null) p
+            else p.copy(eng = e ?: p.eng, engR = eR ?: p.engR, antiphonEng = eA ?: p.antiphonEng, verses = vs ?: p.verses)
         })
     }
 

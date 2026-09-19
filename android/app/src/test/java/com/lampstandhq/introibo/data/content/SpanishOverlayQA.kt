@@ -267,7 +267,7 @@ class SpanishOverlayQA {
             // prayers in Spanish; Teresa's Letrilla returns to its ORIGINAL
             // Spanish; the Latin labels and prayer texts are untouched.
             val pio = ContentStore.saints.first { it.slug == "pio" }
-            assertEquals("San Padre Pío", pio.name)
+            assertEquals("San Pío de Pietrelcina", pio.name)
             assertEquals("Mañana", pio.sections[0].eng)
             assertEquals("Mane", pio.sections[0].lat)
             assertTrue(pio.sections[0].practices[0].t == "Ofrecimiento de la mañana")

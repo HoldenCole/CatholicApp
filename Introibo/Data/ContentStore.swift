@@ -1030,15 +1030,65 @@ final class ContentStore {
     /// (the parts the rubrics assemble carry English from Divinum Officium).
     private func applyOfficeSpanish(_ hour: Hour) -> Hour {
         if officeTextsES.isEmpty { return hour }
-        func es(_ lat: String?) -> String? { lat.flatMap { officeTextsES[Self.officeNorm($0)] } }
+        let mark = try! NSRegularExpression(pattern: "^(℟\\.br\\.|℟\\.|℣\\.)\\s*")
+        let alleluia = try! NSRegularExpression(pattern: "(?:,?\\s*[Aa]llel[úu][ij]a\\.?)+\\s*$")
+        func one(_ l: String) -> String? {
+            if let e = bare(l) { return e }
+            // Paschaltide appends ", allelúja" to versicles and antiphons
+            let ns = l as NSString
+            guard let m = alleluia.firstMatch(in: l, range: NSRange(location: 0, length: ns.length)), m.range.location > 0 else { return nil }
+            let tail = ns.substring(with: m.range)
+            let n = tail.components(separatedBy: "llel").count - 1
+            let trimSet = CharacterSet(charactersIn: " ,.;:")
+            let head = ns.substring(to: m.range.location).trimmingCharacters(in: trimSet)
+            guard let e = bare(head) else { return nil }
+            let stem = e.trimmingCharacters(in: trimSet)
+            return stem + ", " + Array(repeating: "aleluya", count: max(n, 1)).joined(separator: ", ") + "."
+        }
+        func bare(_ l: String) -> String? {
+            if let e = officeTextsES[Self.officeNorm(l)] { return e }
+            // the rubrics prefix ℣./℟. at render time: look the bare line up
+            let t = l.trimmingCharacters(in: .whitespaces)
+            let ns = t as NSString
+            guard let m = mark.firstMatch(in: t, range: NSRange(location: 0, length: ns.length)) else { return nil }
+            let bare = ns.substring(from: m.range.location + m.range.length)
+            guard let e = officeTextsES[Self.officeNorm(bare)] else { return nil }
+            let ens = e as NSString
+            let stripped = mark.stringByReplacingMatches(in: e, range: NSRange(location: 0, length: ens.length), withTemplate: "")
+            return ns.substring(with: m.range(at: 1)) + " " + stripped
+        }
+        func es(_ lat: String?) -> String? {
+            guard let lat else { return nil }
+            if let e = one(lat) { return e }
+            // seasonal recombinations: every line on its own, or nothing
+            let lines = lat.components(separatedBy: "\n")
+            if lines.count < 2 { return nil }
+            var out: [String] = []
+            for l in lines {
+                if l.trimmingCharacters(in: .whitespaces).isEmpty { out.append(""); continue }
+                guard let e = one(l) else { return nil }
+                out.append(e)
+            }
+            return out.joined(separator: "\n")
+        }
         var h = hour
         h.parts = hour.parts.map { p in
             let e = es(p.lat), eR = es(p.latR), eA = es(p.antiphonLat)
-            if e == nil && eR == nil && eA == nil { return p }
+            // the preces and litanies keep their versicles as verses
+            var verses = p.verses
+            var hitVerse = false
+            if let vs = p.verses {
+                verses = vs.map { v in
+                    if let ev = es(v.lat) { hitVerse = true; var nv = v; nv.eng = ev; return nv }
+                    return v
+                }
+            }
+            if e == nil && eR == nil && eA == nil && !hitVerse { return p }
             var n = p
             if let e { n.eng = e }
             if let eR { n.engR = eR }
             if let eA { n.antiphonEng = eA }
+            if hitVerse { n.verses = verses }
             return n
         }
         return h

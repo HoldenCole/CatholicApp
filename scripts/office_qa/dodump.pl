@@ -5,6 +5,7 @@ our $datafolder = "$DO/web/www/horas";
 our ($version, $dayofweek, $day, $month, $year, $hora, $missa, $lang1, $lang2, $error, $debug, $votive, @dayname, $winner, %winner, $rank, $rule, $communetype, $commune, $duplex, $missanumber, $dioecesis) ;
 require "$DO/web/cgi-bin/DivinumOfficium/SetupString.pl";
 $version = shift @ARGV; my $mode = shift @ARGV; # 'rules' or 'psalt'
+our $L2 = $ENV{DO_LANG2} // 'English';  # the second column: English, or another DO language (Espanol)
 $hora='Laudes'; $dayofweek=$ENV{DO_DOW} // 1; $day=1; $month=1; $year=2026; $missa=0; $votive='Hodie'; $lang1='Latin'; $lang2='English';
 binmode(STDOUT, ':encoding(utf-8)');
 my %out;
@@ -62,7 +63,7 @@ if ($mode eq 'rules') {
     # "(tempore paschali)" sections in Paschaltide.
     @dayname = (($f =~ /p\.txt$|Pasc/i) ? 'Pasc1' : '', '', ''); %main::setupstring_caches_by_version = ();
     my $s = setupstring('Latin', "Commune/$f") or next;
-    my $e = setupstring('English', "Commune/$f") || {};
+    my $e = setupstring($L2, "Commune/$f") || {};
     my %ent;
     for my $sec (keys %$s) { next if $sec eq '__preamble'; $ent{$sec} = { lat => $s->{$sec}, eng => $e->{$sec} }; }
     $out{$f} = \%ent;
@@ -83,7 +84,7 @@ if ($mode eq 'rules') {
       if ($dir eq 'Sancti' && $f =~ /^(\d\d)-(\d\d)/) { $month = $1 + 0; $day = $2 + 0; } else { $month = 1; $day = 1; }
       if ($dir eq 'Tempora' && $f =~ /^([A-Za-z]+\d*)/) { $dayname[0] = $1; }
       my $s = setupstring('Latin', "$dir/$f") or next;
-      my $e = setupstring('English', "$dir/$f") || {};
+      my $e = setupstring($L2, "$dir/$f") || {};
       my %ent;
       for my $sec (@secs) { if (defined $s->{$sec} && ($s->{$sec} =~ /\S/ || $sec =~ /^Commemoratio/)) { $ent{$sec} = { lat => $s->{$sec}, eng => $e->{$sec} }; } }
       $out{"$dir/$f"} = \%ent if %ent;
@@ -94,7 +95,7 @@ if ($mode eq 'rules') {
         for my $fd (sort keys %dows) {
           my $dw = $fd - 1;
           %main::setupstring_caches_by_version = (); $dayofweek = $dw;
-          my $ds = setupstring('Latin', "$dir/$f"); my $de = setupstring('English', "$dir/$f") || {};
+          my $ds = setupstring('Latin', "$dir/$f"); my $de = setupstring($L2, "$dir/$f") || {};
           my %dent;
           for my $sec (@secs) { if (defined $ds->{$sec} && ($ds->{$sec} =~ /\S/ || $sec =~ /^Commemoratio/)) { $dent{$sec} = { lat => $ds->{$sec}, eng => $de->{$sec} }; } }
           $out{"$dir/$f\@dow$dw"} = \%dent if %dent;
@@ -107,7 +108,7 @@ if ($mode eq 'rules') {
       if ($refm && $f =~ /^(\d\d-\d\d)/) {
         my $md = $1; my $ref = $refm; $ref =~ s/\.txt$//;
         %main::setupstring_caches_by_version = ();
-        my $rs = setupstring('Latin', "$ref.txt"); my $re = setupstring('English', "$ref.txt") || {};
+        my $rs = setupstring('Latin', "$ref.txt"); my $re = setupstring($L2, "$ref.txt") || {};
         if ($rs) {
           my %rent;
           for my $sec (@secs) { if (defined $rs->{$sec} && $rs->{$sec} =~ /\S/) { $rent{$sec} = { lat => $rs->{$sec}, eng => $re->{$sec} }; } }
@@ -119,7 +120,7 @@ if ($mode eq 'rules') {
         open(my $fh, '<:encoding(UTF-8)', "$datafolder/Latin/$dir/$f"); local $/; my $raw = <$fh>; close($fh);
         if ($raw =~ /paschali/i) {
           %main::setupstring_caches_by_version = (); @dayname = ('Pasc1', '', '');
-          my $ps = setupstring('Latin', "$dir/$f"); my $pe = setupstring('English', "$dir/$f") || {};
+          my $ps = setupstring('Latin', "$dir/$f"); my $pe = setupstring($L2, "$dir/$f") || {};
           my %pent;
           for my $sec (@secs) { if (defined $ps->{$sec} && $ps->{$sec} =~ /\S/) { $pent{$sec} = { lat => $ps->{$sec}, eng => $pe->{$sec} }; } }
           $out{"$dir/$f\@pasch"} = \%pent if %pent;
@@ -134,14 +135,14 @@ if ($mode eq 'rules') {
     opendir(my $dh, "$datafolder/Latin/$dir"); my @files = grep { /\.txt$/ } readdir($dh); closedir($dh);
     for my $f (sort @files) {
       my $s = setupstring('Latin', "$dir/$f") or next;
-      my $e = setupstring('English', "$dir/$f") || {};
+      my $e = setupstring($L2, "$dir/$f") || {};
       my %ent;
       for my $sec (@secs) { if ($s->{$sec}) { $ent{$sec} = { lat => $s->{$sec}, eng => $e->{$sec} }; } }
       $out{"$dir/$f"} = \%ent if %ent;
     }
   }
 } else {
-  for my $lang ('Latin','English') {
+  for my $lang ('Latin',$L2) {
     for my $f ('Special/Major Special.txt','Special/Minor Special.txt','Special/Matutinum Special.txt','Special/Prima Special.txt','Psalmi/Psalmi major.txt','Psalmi/Psalmi minor.txt','Psalmi/Psalmi matutinum.txt','Doxologies.txt','Mariaant.txt','Common/Prayers.txt','Special/Preces.txt') {
       my $s = setupstring($lang, "Psalterium/$f") or next;
       $out{"$lang/$f"} = $s;

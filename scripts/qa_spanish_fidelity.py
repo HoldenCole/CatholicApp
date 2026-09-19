@@ -56,6 +56,9 @@ ALLOWLIST = [
     # lectio4/lectio94 differ only by an i/j spelling (ejiceret/eiceret);
     # the shared Spanish is correct for both
     ("DUP", "sanctoral", "09-23.lectio4+lectio94"),
+    # DO's Spanish renders Jesu Redémptor ómnium and Christe Redémptor ómnium
+    # (the two Christmas recensions) with the same hymn
+    ("DUP", "hymns", "christmas.hymnus_matutinum+hymnus_vespera"),
     # UI chrome labels keep the app's double-space "  ·  " / "  ✠  "
     # separators, exactly as the English literals do
     ("ART", "ui_strings", "common.referenced_by"),

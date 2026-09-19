@@ -3,12 +3,12 @@
   "english_es": "Misterios Gloriosos",
   "mysteries": [
    {
-    "body_es": "Al tercer día Jesús resucita de entre los muertos, victorioso sobre el pecado y la muerte.",
+    "body_es": "Al tercer día Jesús resucita de entre los muertos, victorioso sobre el pecado y la muerte. Las mujeres, junto al sepulcro, oyen del ángel: «No está aquí; ha resucitado».",
     "eng_es": "La Resurrección del Señor",
     "fruit_es": "La fe"
    },
    {
-    "body_es": "Cuarenta días después de su Resurrección, Jesús sube a los cielos a la vista de sus discípulos, para sentarse a la diestra del Padre.",
+    "body_es": "Cuarenta días después de su Resurrección, Jesús sube a los cielos a la vista de sus Apóstoles, prometiendo enviar el Espíritu Santo.",
     "eng_es": "La Ascensión del Señor",
     "fruit_es": "La esperanza"
    },
@@ -43,7 +43,7 @@
     "fruit_es": "La caridad"
    },
    {
-    "body_es": "Jesús nace en un establo de Belén. Los pastores vienen a adorar al Niño recostado en el pesebre.",
+    "body_es": "Jesús nace en un establo de Belén. Los pastores vienen a adorarlo; los ángeles cantan «Gloria in excelsis Deo».",
     "eng_es": "El Nacimiento del Señor",
     "fruit_es": "La pobreza de espíritu"
    },
@@ -78,12 +78,12 @@
     "fruit_es": "La fortaleza"
    },
    {
-    "body_es": "Jesús lleva su Cruz por el camino del Calvario, cayendo bajo su peso, y el Cireneo le ayuda a llevarla.",
+    "body_es": "Jesús lleva su Cruz por el camino del Calvario, cayendo bajo su peso y encontrando en el camino a su Santísima Madre.",
     "eng_es": "Jesús con la Cruz a cuestas",
     "fruit_es": "La paciencia en el sufrimiento"
    },
    {
-    "body_es": "Jesús es clavado en la cruz y muere después de tres horas de agonía, perdonando a sus verdugos y encomendando su Madre a Juan.",
+    "body_es": "Jesús es clavado en la Cruz y muere tras tres horas de agonía. Sus últimas palabras: «Padre, en tus manos encomiendo mi espíritu».",
     "eng_es": "La Crucifixión y Muerte del Señor",
     "fruit_es": "La perseverancia final"
    }

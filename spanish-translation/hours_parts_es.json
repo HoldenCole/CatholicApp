@@ -5,7 +5,7 @@
    "engR": "El Señor todopoderoso nos conceda una noche tranquila y un fin perfecto. Amén."
   },
   "10": {
-   "eng": "A Ti, Creador, pedimos,\nantes que la luz acabe,\nseas por tu gran clemencia\ncentinela que nos guarde.\n\nAleja los malos sueños,\ny las nocturnas imágenes;\nreprime a nuestro adversario,\nque nuestros cuerpos no manche.\n\n* Hazlo así, Padre piísimo,\nHijo al Padre semejante,\nque reinas con el Espíritu,\npor siglos interminables.\nAmén"
+   "eng": "A Ti, Creador, pedimos,\nantes que la luz acabe,\nseas por tu gran clemencia\ncentinela que nos guarde.\n\nAleja los malos sueños,\ny las nocturnas imágenes;\nreprime a nuestro adversario,\nque nuestros cuerpos no manche.\n\nHazlo así, Padre piísimo,\nHijo al Padre semejante,\nque reinas con el Espíritu,\npor siglos interminables.\nAmén."
   },
   "11": {
    "eng": "Tú estás con nosotros, Señor; sobre nosotros se ha invocado tu nombre: no nos abandones, Señor Dios nuestro."
@@ -43,11 +43,11 @@
    "engR": "Tú, Señor, ten piedad de nosotros. Demos gracias a Dios."
   },
   "3": {
-   "eng": "Yo, pecador, me confieso a Dios todopoderoso, a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los bienaventurados apóstoles Pedro y Pablo, a todos los santos (y a vosotros hermanos o a vos, Padre), que pequé gravemente con el pensamiento, palabra y obra, por mi culpa, por mi culpa, por mi grandísima culpa; por tanto, ruego a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los santos Apóstoles Pedro y Pablo, a todos los santos (y vosotros hermanos o a vos, Padre), que roguéis por mí a Dios, nuestro Señor."
+   "eng": "Yo, pecador, me confieso a Dios todopoderoso, a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los bienaventurados apóstoles Pedro y Pablo, a todos los santos (y a vosotros hermanos o a vos, Padre), que pequé gravemente con el pensamiento, palabra y obra, por mi culpa, por mi culpa, por mi grandísima culpa; por tanto, ruego a la bienaventurada siempre Virgen María, al bienaventurado San Miguel Arcángel, al bienaventurado San Juan Bautista, a los santos Apóstoles Pedro y Pablo, a todos los santos (y vosotros hermanos o a vos, Padre), que roguéis por mí a Dios, nuestro Señor.\n\nDios todopoderoso tenga misericordia de nosotros, perdone nuestros pecados, y nos lleve a la vida eterna. Amén.\n\nEl Señor todopoderoso, rico en misericordia, nos conceda la indulgencia, absolución y remisión de nuestros pecados. Amén."
   },
   "4": {
    "eng": "Conviértenos, oh Dios, Salvador nuestro.",
-   "engR": "Cesa en tu rencor contra nosotros."
+   "engR": "Y aparta de nosotros tu ira."
   },
   "5": {
    "eng": "Dios mío, ven en mi auxilio.",
@@ -77,9 +77,9 @@
     "Porque él me ha librado del lazo de los cazadores y de * terribles adversidades.",
     "Con sus alas te hará sombra, * y debajo de sus plumas estarás confiado.",
     "Su verdad te cercará como escudo; * no temerás terrores nocturnos,",
-    "Ni la saeta disparada de día, † ni al enemigo que anda en tinieblas, * ni los asaltos del demonio en medio del día.",
-    "Caerán muertos a tu siniestra mil y diez mil a tu diestra; † mas nada te pasará a ti.",
-    "Tú lo estarás contemplando con tus propios ojos, * y verás el pago que se da a los pecadores, y exclamarás:",
+    "ni la saeta disparada de día, † ni al enemigo que anda en tinieblas, * ni los asaltos del demonio en medio del día.",
+    "Caerán muertos a tu siniestra mil y diez * mil a tu diestra;",
+    "mas nada te pasará a ti. Tú lo estarás contemplando con tus propios ojos, * y verás el pago que se da a los pecadores, y exclamarás:",
     "¡Oh! y cómo eres tú, ¡oh Señor, mi esperanza! * Tú ¡oh justo! has escogido al Altísimo para asilo tuyo.",
     "No llegará a ti el mal, * ni el azote se acercará a tu morada.",
     "Porque él mandó a sus ángeles que cuidasen de ti; * los cuales te guardarán en cuantos pasos dieres.",
@@ -93,9 +93,9 @@
   "9": {
    "verses": [
     "Ea, pues, bendecid al Señor ahora mismo, * vosotros todos, ¡oh siervos del Señor!",
-    "Que asistís en la casa del Señor, * en los atrios del templo de nuestro Dios.",
-    "Levantad por las noches vuestras manos hacia el santuario, * y alabad al Señor.",
-    "Te bendiga desde Sión el Señor * que creó el cielo y la tierra."
+    "Vosotros los que asistís en la casa del Señor, * en los atrios del templo de nuestro Dios,",
+    "levantad por las noches vuestras manos hacia el santuario, * y alabad al Señor.",
+    "Te bendiga desde Sión el Señor que * creó el cielo y la tierra."
    ]
   }
  },
@@ -122,7 +122,7 @@
     "Para salvarnos de nuestros enemigos, * y de las manos de todos los que nos aborrecen.",
     "Para hacer misericordia con nuestros padres, * y acordarse de su santa alianza.",
     "Del juramento que juró a Abrahán nuestro padre, * de que nos concedería:",
-    "Que, libres de las manos de nuestros enemigos, * le sirvamos sin temor.",
+    "de que nos concedería: Que, libres de las manos de nuestros enemigos, * le sirvamos sin temor.",
     "En santidad y justicia delante de él, * todos los días de nuestra vida.",
     "Y tú, niño, serás llamado Profeta del Altísimo: * porque irás delante del Señor a preparar sus caminos:",
     "Para dar a su pueblo el conocimiento de la salvación, * para el perdón de sus pecados:",
@@ -137,8 +137,8 @@
    "eng": "Señor, Dios omnipotente, que nos has concedido llegar al principio de este día: sálvanos hoy con tu virtud; para que en este día no caigamos en ningún pecado, sino que nuestras palabras, pensamientos y obras se dirijan siempre al cumplimiento de tu santa ley. Por nuestro Señor Jesucristo. Amén."
   },
   "15": {
-   "eng": "Señor, escucha nuestra oración.",
-   "engR": "Y llegue a ti nuestro clamor."
+   "eng": "Señor, escucha mi oración.",
+   "engR": "Y llegue a ti mi clamor."
   },
   "16": {
    "eng": "Bendigamos al Señor. Demos gracias a Dios."
@@ -153,34 +153,34 @@
     "El Señor reinó, se revistió de gloria, * se armó de fortaleza, y se ciñó todo de ella.",
     "Asentó también firme la tierra, * y no será conmovida.",
     "Desde entonces quedó, ¡oh Señor!, preparado tu solio; * y tú eres desde la eternidad.",
-    "Alzaron los ríos, * ¡oh Señor!,",
-    "Levantaron los ríos su voz; * alzaron el sonido de sus olas,",
-    "Con el estruendo de las muchas aguas. * Maravillosas son las encrespaduras del mar; mas admirable es el Señor en las alturas.",
+    "Alzaron los ríos, ¡oh Señor!, * levantaron los ríos su voz;",
+    "alzaron el sonido de sus olas, * con el estruendo de las muchas aguas.",
+    "Maravillosas son las encrespaduras del mar; * mas admirable es el Señor en las alturas.",
     "Tus testimonios se han hecho en extremo creíbles. * La santidad debe ser, Señor, el ornamento de tu casa por todos los siglos."
    ]
   },
   "3": {
    "antiphonEng": "Aclama al Señor, tierra entera. Aleluya.",
    "verses": [
-    "Moradores todos * de la tierra,",
-    "Entrad llenos de alegría * en su presencia.",
-    "Entrad por sus puertas * cantando alabanzas,",
-    "Venid a sus atrios entonando himnos, y tributadle acciones de gracias. * Bendecid su Nombre,",
-    "Porque es un Señor lleno de bondad, † es eterna su misericordia, * y su verdad resplandecerá de generación en generación."
+    "Moradores todos de la tierra, cantad con júbilo las alabanzas de Dios; * servid al Señor con alegría.",
+    "Venid llenos de alborozo a * presentaros ante su acatamiento.",
+    "Tened entendido que el Señor es el único Dios. * El es el que nos hizo, y no nosotros a nosotros mismos.",
+    "¡Oh tú, pueblo suyo!, vosotros ovejas a quien él apacienta, † entrad por sus puertas cantando alabanzas, * venid a sus atrios entonando himnos, y tributadle acciones de gracias.",
+    "Bendecid su Nombre, porque es un Señor lleno de bondad, † es eterna su misericordia, * y su verdad resplandecerá de generación en generación."
    ]
   },
   "4": {
    "antiphonEng": "Toda mi vida * te bendeciré, Señor, y alzaré mis manos en tu nombre. Aleluya.",
    "verses": [
-    "¡Dios mío, oh mi Dios!, a ti aspiro, * y me dirijo desde que apunta la aurora.",
+    "Que el poder está en Dios, y que tú, Señor, eres misericordioso; * porque a cada uno remunerarás conforme a sus obras. ¡Dios mío, oh mi Dios!, a ti aspiro, y me dirijo desde que apunta la aurora.",
     "De ti está sedienta el alma mía. * ¡Y de cuántas maneras lo está también este mi cuerpo!",
     "En esta tierra desierta, intransitable y sin agua, me pongo en tu presencia, * como si me hallara en el santuario, para contemplar tu poder y la gloria tuya.",
     "Más apreciable es que mil vidas tu misericordia; * por tanto se ocuparán mis labios en tu alabanza.",
     "Por esto te bendeciré toda mi vida, * y alzaré mis manos invocando tu Nombre.",
     "Quede mi alma bien llena de ti, como de un manjar jugoso; * y entonces con labios que rebosen de júbilo, te cantará mi boca himnos de alabanza.",
     "Me acordaba de ti en mi lecho; † en ti meditaba luego que amanecía;",
-    "Pues tú eres mi amparo, † y a la sombra de tus alas me regocijaré.",
-    "En pos de ti va anhelando el alma mía; † me ha protegido tu diestra.",
+    "pues tú eres mi amparo, y a la sombra de tus alas me regocijaré. † En pos de ti va anhelando el alma mía; * me ha protegido tu diestra.",
+    "En vano han buscado cómo quitarme la vida; † entrarán en las cavernas más profundas de la tierra: * Entregados serán a los filos de la espada; serán pasto de las zorras.",
     "Entretanto el rey se regocijará en Dios: † loados serán aquellos que le juran; * porque quedó así tapada la boca de todos los que hablaban inicuamente."
    ]
   },
@@ -200,21 +200,21 @@
     "Montes y collados, bendecid al Señor: * plantas todas que germináis en la tierra, bendecid al Señor.",
     "Fuentes, bendecid al Señor: * mares y ríos, bendecid al Señor.",
     "Ballenas y cuanto se mueve en las aguas, bendecid al Señor: * aves todas del cielo, bendecid al Señor.",
-    "Bestias y ganados todos, bendecid al Señor: * hijos de los hombres, bendecid al Señor.",
-    "Bendiga Israel al Señor: * alábele y ensálcele por todos los siglos.",
-    "Sacerdotes del Señor, bendecid al Señor: * siervos del Señor, bendecid al Señor.",
+    "Bestias y ganados todos, * bendecid al Señor:",
+    "hijos de los hombres, bendecid al Señor. * Bendiga Israel al Señor:",
+    "alábele y ensálcele por todos los siglos. Sacerdotes del Señor, bendecid al Señor: * siervos del Señor, bendecid al Señor.",
     "Espíritus y almas de los justos, bendecid al Señor: * santos y humildes de corazón, bendecid al Señor.",
-    "Ananías, Azarías y Misael, bendecid al Señor: * alabadle y ensalzadle por todos los siglos.",
-    "(Fit reverentia:) Bendigamos al Padre y al Hijo con el Espíritu Santo: * alabémosle y ensalcémosle por todos los siglos.",
+    "bendecid al Señor. Ananías, Azarías y Misael, bendecid al Señor: * alabadle y ensalzadle por todos los siglos.",
+    "Bendigamos al Padre y al Hijo con el Espíritu Santo: * alabémosle y ensalcémosle por todos los siglos.",
     "Bendito eres, Señor, en el firmamento del cielo: * y digno de alabanza, y glorioso, y ensalzado por todos los siglos."
    ]
   },
   "6": {
    "antiphonEng": "Aleluya. * Alabad al Señor desde los cielos. Aleluya, aleluya.",
    "verses": [
-    "Alabad al Señor vosotros que estáis en los cielos; * alabadle los que estáis en las alturas.",
-    "Alabadle todos vosotros, ángeles suyos; * alabadle todas las milicias suyas.",
-    "Alabadle tú, ¡oh cielo empíreo! * y alabadle todas vosotras, lucientes estrellas.",
+    "Alabad al Señor vosotros * que estáis en los cielos;",
+    "alabadle los que estáis en las alturas. Alabadle todos vosotros, ángeles suyos; * alabadle todas las milicias suyas. Alabadle tú, ¡oh cielo empíreo!",
+    "y alabadle todas vosotras, * lucientes estrellas.",
     "Alábale tu, ¡oh cielo empíreo!, * y alaben el Nombre del Señor todas las aguas que están sobre el firmamento.",
     "Porque el Señor habló, y con sólo quererlo, * quedaron hechas las cosas; él mandó que existiesen y quedaron creadas.",
     "Las estableció para que subsistiesen eternamente y por todos los siglos; * les fijó un orden que observarán siempre.",
@@ -222,32 +222,32 @@
     "Fuego, granizo, nieve, hielo, vientos procelosos, * vosotros que ejecutáis sus órdenes.",
     "Montes y collados todos, * plantas fructíferas, y todos vosotros, ¡oh cedros!",
     "Bestias todas silvestres y domésticas, * reptiles y volátiles;",
-    "Reyes de la tierra y pueblos todos; * príncipes y jueces todos de la tierra;",
+    "reyes de la tierra y pueblos todos; * príncipes y jueces todos de la tierra;",
     "Los jóvenes y las vírgenes, † los ancianos y los niños, * todas las criaturas canten alabanzas al Nombre del Señor;",
-    "Y él es el que ha exaltado el poder de su pueblo. * Himnos le canten todos sus santos,",
-    "Los hijos de Israel, * el pueblo peculiar suyo. ¡Aleluya!",
-    "Cantad al Señor un cántico nuevo, * resuenen sus loores en la reunión de los santos.",
+    "porque sólo el Nombre del Señor resplandece sobre los cielos y tierra; * y él es el que ha exaltado el poder de su pueblo.",
+    "Himnos le canten todos sus santos, * los hijos de Israel, el pueblo peculiar suyo.",
+    "los hijos de Israel, el pueblo peculiar suyo. ¡Aleluya! Cantad al Señor un cántico nuevo, * resuenen sus loores en la reunión de los santos.",
     "Que se alegre Israel en el Señor que le creó, * y se regocijen en su rey los hijos de Sión.",
     "Celebren su excelso Nombre con armoniosos conciertos, * y publiquen sus alabanzas al son del pandero y salterio.",
     "Porque el Señor ha mirado benignamente a su pueblo; * y exaltará a los humildes y los salvará.",
     "Se gozarán los santos en la gloria, * y se regocijarán en sus moradas.",
     "Resonarán en sus bocas los elogios sublimes de Dios; * y vibrarán en sus manos espadas de dos filos,",
-    "Para ejecutar la divina venganza en las naciones, * y castigar a los pueblos impíos;",
-    "Para aprisionar con grillos a sus reyes, * y con esposas de hierro a sus magnates;",
-    "Para ejecutar en ellos el juicio decretado: * Gloria es ésta que está reservada para todos sus santos. ¡Aleluya!",
+    "para ejecutar la divina venganza en las naciones, * y castigar a los pueblos impíos;",
+    "para aprisionar con grillos a sus reyes, * y con esposas de hierro a sus magnates;",
+    "para ejecutar en ellos el juicio decretado: * Gloria es ésta que está reservada para todos sus santos. ¡Aleluya!",
     "Alabad al Señor que reside en su celestial santuario; * alabadle sentado en el firmamento o trono de su poder.",
     "Alabadle por sus prodigios a favor vuestro; * alabadle por su inmensa grandeza.",
     "Alabadle al son de clarines; * alabadle con el salterio y la cítara.",
     "Alabadle con panderos y armoniosos conciertos; * alabadle con instrumentos músicos de cuerdas y de viento.",
-    "Alabadle con címbalos sonoros: * alabadle con címbalos de júbilo.",
-    "Todo espíritu * alabe al Señor."
+    "Alabadle con sonoros címbalos; alabadle con címbalos de júbilo.",
+    "Empléese todo espíritu en alabar a Dios."
    ]
   },
   "7": {
    "eng": "La noche está avanzada, y se acerca el día. Desechemos, pues, las obras de las tinieblas, y vistámonos las armas de la luz."
   },
   "8": {
-   "eng": "Brillo de paterna gloria,\nluz en la luz embebida;\nluz de luz, fuente de lumbre\ndia que al dia ilumina;\n\nSol verdadero, tus rayos,\nque ofuscan la humana vista,\ncon los dones del Espíritu\ntempla, ablanda y suaviza.\n\nTambién al Padre invoquemos,\nPadre de gracia infinita,\nPadre de perenne gloria:\nculpas destierre nocivas.\n\nConfirme las obras buenas,\nal envidioso reprima,\násperas sendas allane,\nlas tortuosas dirija.\n\nGobierne y rija la mente,\ncastos afectos imprima;\nintacta de error y culpa\nconsérvela su fe viva.\n\nNuestro manjar sea Cristo,\nsu sangre nuestra bebida;\nde su Espíritu los dones\nbebamos con alegría.\n\nSea el candor como el alba,\nla fe como el mediodía\nde este día venturoso,\ny nunca noche le siga.\n\nLa luz nos traiga la aurora\nque a los Santos ilumina;\nluz con que el Padre en el Hijo,\ny el Hijo en el Padre brilla.\n\nGloria y honor a Dios Padre,\ngloria a su Imágen divina,\ny al Espíritu Paráclito,\nde siglos serie infinita.\nAmén."
+   "eng": "Brillo de paterna gloria,\nluz en la luz embebida;\nluz de luz, fuente de lumbre\ndía que al día ilumina;\n\nSol verdadero, tus rayos,\nque ofuscan la humana vista,\ncon los dones del Espíritu\ntempla, ablanda y suaviza.\n\nTambién al Padre invoquemos,\nPadre de gracia infinita,\nPadre de perenne gloria:\nculpas destierre nocivas.\n\nConfirme las obras buenas,\nal envidioso reprima,\násperas sendas allane,\nlas tortuosas dirija.\n\nGobierne y rija la mente,\ncastos afectos imprima;\nintacta de error y culpa\nconsérvela su fe viva.\n\nNuestro manjar sea Cristo,\nsu sangre nuestra bebida;\nde su Espíritu los dones\nbebamos con alegría.\n\nSea el candor como el alba,\nla fe como el mediodía\nde este día venturoso,\ny nunca noche le siga.\n\nLa luz nos traiga la aurora\nque a los Santos ilumina;\nluz con que el Padre en el Hijo,\ny el Hijo en el Padre brilla.\n\nGloria y honor a Dios Padre,\ngloria a su Imagen divina,\ny al Espíritu Paráclito,\nde siglos serie infinita.\nAmén."
   }
  },
  "matutinum": {
@@ -288,7 +288,7 @@
    "r1Eng": "℣. Y vio Dios que la luz era buena.",
    "r2Eng": "℣. Y vio Dios que la luz era buena.",
    "v1Eng": "℟. En el principio creó Dios el cielo y la tierra, y el Espíritu de Dios se cernía sobre las aguas:",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "18": {
    "eng": "Dígnate, Señor, dar tu bendición."
@@ -311,7 +311,7 @@
    "r1Eng": "℣. Y vio Dios que era bueno; y de la tarde y de la mañana se hizo un día.",
    "r2Eng": "℣. Y vio Dios que era bueno; y de la tarde y de la mañana se hizo un día.",
    "v1Eng": "℟. Haya un firmamento en medio de las aguas, que separe unas aguas de otras:",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "23": {
    "eng": "Dígnate, Señor, dar tu bendición."
@@ -331,22 +331,22 @@
    "r1Eng": "℣. Y plantas fructíferas que den fruto conforme a su especie.",
    "r2Eng": "℣. Y plantas fructíferas que den fruto conforme a su especie.",
    "v1Eng": "℟. Produzca la tierra hierba verde y que dé simiente:",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "29": {
    "eng": "¡Qué admirable * es tu nombre, Señor en toda la tierra!"
   },
   "3": {
    "verses": [
-    "Venid, * regocijémonos en el Señor;",
-    "Cantemos con júbilo las alabanzas del Dios, * salvador nuestro.",
+    "Los destruirá el Señor Dios nuestro. Venid, regocijémonos en el Señor; * cantemos con júbilo las alabanzas del Dios, salvador nuestro.",
     "Corramos a presentarnos ante su acatamiento, * dándole gracias, y entonando himnos a su gloria.",
+    "Porque el Señor es el Dios grande, * y un rey más grande que todos los dioses.",
     "Porque en su mano tiene toda la extensión de la tierra, * y suyos son los más encumbrados montes.",
-    "Suyo es el mar, y obra es de sus manos; * y hechura de sus manos es la tierra.",
-    "Venid, adoremos y postrémonos ante Dios: * lloremos en presencia del Señor que nos ha creado.",
+    "Suyo es el mar, y obra es de sus manos; * y hechura de sus manos es la tierra. Venid, pues, adorémosle;",
+    "Venid, pues, adorémosle; postrémonos, derramando lágrimas en la presencia del Señor que nos ha creado;",
     "Porque él es el Señor Dios nuestro; * y nosotros su pueblo, y ovejas que él apacienta.",
-    "guardaos de endurecer vuestros corazones,",
-    "Como sucedió cuando provocaron mi ira, el día de la tentación en el desierto, * donde vuestros padres me tentaron, me probaron, y vieron mis obras.",
+    "Hoy mismo, si oyereis su voz, guardaos de endurecer vuestros corazones,",
+    "como sucedió, dice el Señor, cuando provocaron mi ira, entonces que hicieron prueba de mí en el desierto, * en donde vuestros padres me tentaron, me probaron, y vieron mis obras.",
     "Por espacio de cuarenta años estuve cercano a esta generación, y dije: Siempre anda descarriado su corazón; * ellos no conocieron mis caminos.",
     "Por lo que juré airado: * que no entrarían en mi reposo."
    ]
@@ -354,29 +354,29 @@
   "30": {
    "antiphonEng": "¡Qué admirable * es tu nombre, Señor en toda la tierra!",
    "verses": [
-    "¡Oh Señor, soberano dueño nuestro, * cuán admirable es tu Nombre en toda la redondez de la tierra!",
+    "Oh Señor, soberano dueño nuestro, * ¡cuán admirable es tu santo Nombre en toda la tierra!",
     "Porque tu majestad se ve ensalzada * sobre los cielos.",
-    "De la boca de los niños y de los que están aún pendientes del pecho de sus madres, hiciste Tú salir perfecta alabanza, por razón de tus enemigos, * para destruir al enemigo y al vengativo.",
-    "Yo contemplo tus cielos, obra de tus dedos, * la luna y las estrellas que Tú creaste,",
-    "Y exclamo: ¿Qué es el hombre, para que Tú te acuerdes de él? * ¿O qué es el hijo del hombre, para que vengas a visitarlo?",
-    "Lo hiciste un poco inferior a los ángeles, † lo coronaste de gloria y de honor, * (7) y le has dado el mando sobre las obras de tus manos.",
+    "De la boca de los niños y de los que están aún pendientes del pecho de sus madres, hiciste tú salir perfecta alabanza, por razón de tus enemigos, * para destruir al enemigo y al vengativo.",
+    "Yo contemplo tus cielos, obra de tus dedos, * la luna y las estrellas que tú creaste,",
+    "y exclamo: ¿Qué es el hombre, para que tú te acuerdes de él? * ¿O que es el hijo del hombre, para que vengas a visitarlo?",
+    "Lo hiciste un poco inferior a los ángeles, † lo coronaste de gloria y de honor, * y le has dado el mando sobre las obras de tus manos.",
     "Todas ellas las pusiste a sus pies; * todas las ovejas y bueyes, y aun las bestias del campo;",
-    "Las aves del cielo, y los peces del mar * que hienden sus olas.",
-    "¡Oh Señor, soberano dueño nuestro, * cuán admirable es tu Nombre en toda la redondez de la tierra!",
+    "las aves del cielo, * y los peces del mar que hienden sus ondas.",
+    "Oh Señor, soberano dueño nuestro, * ¡cuán admirable es tu santo Nombre en toda la tierra!",
     "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
   "31": {
-   "antiphonEng": "El Señor está sentado en el trono * para juzgar con justicia.",
+   "antiphonEng": "Te sentaste sobre el trono, * tú que juzgas según justicia.",
    "verses": [
-    "A ti, ¡oh Señor!, tributaré gracias con todo mi corazón; * contaré todas tus maravillas.",
+    "¡Oh Señor, soberano dueño nuestro, ¡y cuán admirable es tu Nombre en toda la redondez de la tierra! A ti, ¡oh Señor!, tributaré gracias con todo mi corazón; * contaré todas tus maravillas.",
     "Me alegraré en ti y saltaré de gozo; * cantaré himnos a tu Nombre, ¡oh Dios altísimo!",
     "Porque tú pusiste en fuga a mis enemigos; * y quedarán debilitados, y perecerán delante de ti.",
     "Pues tú me has hecho justicia, y has tomado la defensa de mi causa; * te has sentado sobre el trono, tú que juzgas según justicia.",
     "Has reprendido a las naciones, y pereció el impío; * has borrado sus nombres para siempre por los siglos de los siglos.",
-    "Quedan embotadas para siempre * las espadas del enemigo,",
-    "Y has asolado sus ciudades. * Se desvaneció como el sonido su memoria.",
-    "Y él mismo es quien juzgará con rectitud la tierra; * juzgará los pueblos con justicia.",
+    "Quedan embotadas para siempre las espadas del enemigo, * y has asolado sus ciudades.",
+    "Se desvaneció como el sonido su memoria. * Mas el Señor subsiste eternamente.",
+    "El preparó su trono para ejercer el juicio; * y él mismo es quien juzgará con rectitud la tierra; juzgará los pueblos con justicia.",
     "El Señor se ha hecho el amparo del pobre; * socorriéndole oportunamente en la tribulación.",
     "Confíen, pues, en ti, ¡oh Dios mío!, los que conocen y adoran tu Nombre; * porque jamás has desamparado, Señor, a los que a ti recurren.",
     "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
@@ -425,13 +425,13 @@
    "engR": "Demos gracias a Dios."
   },
   "4": {
-   "eng": "Eterno Hacedor del mundo,\nque diriges noche y día,\ny alternas las estaciones,\ncon que el fastidio se alivia.\n\nYa dividiendo la noche,\npara el caminante guia,\nel pregonero del alba\nal sol con su canto avisa.\n\nSu voz despierta al lucero,\nsombras del cielo disipa;\nalarma a los malhechores,\ncorta sus trazas malignas.\n\nAliento cobran los nautas,\nel mar sus olas mitiga:\ncantando el gallo, su culpa\nllora la Piedra elegida.\n\nAlegres nos levantemos:\nel gallo al dormido excita,\nal perezoso reprende,\nmas al que niega le grita.\n\nVuelve con él la esperanza;\nel que está enfermo se alivia;\nsu acero el ladron esconde,\nla fe a los lapsos anima.\n\nMira, Jesus, al caído,\ny sostén al que vacila:\nen llanto se desvanece\nla culpa, si Tú nos miras.\n\nIlustra nuestros sentidos,\ndespierta al alma dormida:\nnuestra voz y nuestras preces\nprimero a Ti se dirijan.\n\nGloria y honor a Dios Padre,\ngloria a su Imagen divina,\ny al Espíritu Paráclito,\nde siglos serie infinita.\nAmén."
+   "eng": "Eterno Hacedor del mundo,\nque diriges noche y día,\ny alternas las estaciones,\ncon que el fastidio se alivia.\n\nYa dividiendo la noche,\npara el caminante guía,\nel pregonero del alba\nal sol con su canto avisa.\n\nSu voz despierta al lucero,\nsombras del cielo disipa;\nalarma a los malhechores,\ncorta sus trazas malignas.\n\nAliento cobran los nautas,\nel mar sus olas mitiga:\ncantando el gallo, su culpa\nllora la Piedra elegida.\n\nAlegres nos levantemos:\nel gallo al dormido excita,\nal perezoso reprende,\nmas al que niega le grita.\n\nVuelve con él la esperanza;\nel que está enfermo se alivia;\nsu acero el ladrón esconde,\nla fe a los lapsos anima.\n\nMira, Jesús, al caído,\ny sostén al que vacila:\nen llanto se desvanece\nla culpa, si Tú nos miras.\n\nGloria y honor a Dios Padre,\ngloria a su Imagen divina,\ny al Espíritu Paráclito,\nde siglos serie infinita.\nAmén."
   },
   "40": {
    "r1Eng": "℣. Sino que tiene puesta toda su voluntad en la ley del Señor, * y está meditando en ella día y noche.",
    "r2Eng": "℣. Sino que tiene puesta toda su voluntad en la ley del Señor, * y está meditando en ella día y noche.",
    "v1Eng": "℟. Bienaventurado el varón que no se dejó llevar de los consejos de los impíos, ni se detuvo en el camino de los pecadores:",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "41": {
    "eng": "Dígnate, Señor, dar tu bendición."
@@ -451,7 +451,7 @@
    "r1Eng": "℣. Se levantaron los reyes de la tierra contra el Señor, y contra su Cristo.",
    "r2Eng": "℣. Se levantaron los reyes de la tierra contra el Señor, y contra su Cristo.",
    "v1Eng": "℟. ¿Por qué se embravecieron las naciones, y los pueblos formaron proyectos vanos?",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "46": {
    "eng": "Dígnate, Señor, dar tu bendición."
@@ -471,7 +471,7 @@
    "r1Eng": "℣. Pero Tú, ¡oh Señor!, Tú eres mi protector, * mi gloria, y el que me hace levantar cabeza.",
    "r2Eng": "℣. Pero Tú, ¡oh Señor!, Tú eres mi protector, * mi gloria, y el que me hace levantar cabeza.",
    "v1Eng": "℟. ¡Ah, Señor! ¿Cómo es que se han aumentado tanto mis perseguidores? * Son muchísimos los que se han rebelado contra mí.",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "52": {
    "eng": "¿Por qué * te quedas lejos, Señor?"
@@ -480,15 +480,15 @@
    "antiphonEng": "¿Por qué * te quedas lejos, Señor?",
    "verses": [
     "¿Y por qué, ¡oh Señor!, te has retirado a lo lejos, * y me has desamparado en el tiempo más crítico, en la tribulación?",
-    "Mientras que el impío se llena de soberbia, * se requema el pobre; mas en fin,",
-    "Los impíos son cogidos en los mismos designios * o tramas que han urdido.",
+    "Mientras que el impío se llena de soberbia, se requema el pobre; * mas en fin, los impíos son cogidos en los mismos designios o tramas que han urdido.",
+    "Por cuanto el pecador se jacta en los perversos deseos de su alma; * y el inicuo se ve celebrado.",
+    "Por lo mismo, orgulloso el pecador ha exasperado al Señor, * y no le buscará según el exceso de su arrogancia.",
     "Delante de él no hay Dios; * y así sus procederes son siempre viciosos.",
-    "Tus juicios, Señor, * los ha apartado lejos de su vista,",
-    "Sólo piensa en dominar * a todos sus enemigos.",
+    "Tus juicios, Señor, los ha apartado lejos de su vista, * sólo piensa en dominar a todos sus enemigos.",
     "Pues él ha dicho en su corazón: * Nunca jamás seré yo derrocado; viviré siempre libre de todo infortunio.",
     "Está su boca llena de maldición y de amargura, y de dolor; * debajo de su lengua opresión y dolor para el prójimo.",
     "Se pone al acecho con los ricos en sitios escondidos, * para matar al inocente;",
-    "Tiene siempre su vista fija contra el pobre; * está acechando desde la emboscada, como un león desde su cueva.",
+    "tiene siempre su vista fija contra el pobre; * está acechando desde la emboscada, como un león desde su cueva.",
     "Acecha para echar sus garras sobre el pobre, * para agarrar al pobre, atrayéndole dolosamente hacia sí.",
     "Lo hará caer en su lazo; se agachará en tierra, * y se echará encima de los pobres, luego que los haya apresado.",
     "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
@@ -505,7 +505,7 @@
     "Quebranta el brazo del pecador y del maligno; * y entonces se buscará el fruto de su pecado, y no se hallará nada.",
     "Reinará el Señor eternamente y por los siglos de los siglos; vosotros, * ¡oh naciones impías!, seréis extirpadas de su tierra.",
     "Atendiste, ¡oh Señor!, al deseo de los pobres; * prestaste benignos oídos a la rectitud de su corazón,",
-    "Para hacer justicia al huérfano y al oprimido; * a fin de que cese ya el hombre de gloriarse de su poder sobre la tierra.",
+    "para hacer justicia al huérfano y al oprimido; * a fin de que cese ya el hombre de gloriarse de su poder sobre la tierra.",
     "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
@@ -524,7 +524,7 @@
    ]
   },
   "56": {
-   "eng": "℣. Mis ojos se adelantarán a las vigilias.",
+   "eng": "℣. Se anticiparon mis ojos a ti antes del alba.",
    "engR": "℟. Meditando tu promesa, Señor."
   },
   "57": {
@@ -555,7 +555,7 @@
    "r1Eng": "℣. Y líbrame, no sea que arrebate como león mi alma.",
    "r2Eng": "℣. Y líbrame, no sea que arrebate como león mi alma.",
    "v1Eng": "℟. Señor Dios mío, en ti he esperado: sálvame de todos los que me persiguen:",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "64": {
    "eng": "Dígnate, Señor, dar tu bendición."
@@ -575,7 +575,7 @@
    "r1Eng": "℣. Porque tu majestad se ve ensalzada * sobre los cielos.",
    "r2Eng": "℣. Porque tu majestad se ve ensalzada * sobre los cielos.",
    "v1Eng": "℟. ¡Oh Señor, nuestro dueño, * cuán admirable es tu nombre en toda la tierra!",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "69": {
    "eng": "Dígnate, Señor, dar tu bendición."
@@ -584,11 +584,11 @@
    "antiphonEng": "Dichoso el hombre * que medita la ley del Señor.",
    "verses": [
     "Dichoso aquel varón que no se deja llevar de los consejos de los malos, † ni se detiene en el camino de los pecadores, * ni se asienta en la cátedra pestilente de los libertinos;",
-    "Sino que tiene puesta toda su voluntad en la ley del Señor, * y está meditando en ella día y noche.",
-    "Él será como el árbol plantado junto a las corrientes de las aguas, * el cual dará su fruto en el debido tiempo,",
-    "Y cuya hoja no caerá nunca; * y cuanto él hiciere tendrá próspero efecto.",
+    "sino que tiene puesta toda su voluntad en la ley del Señor, * y está meditando en ella día y noche.",
+    "El será como el árbol plantado junto a las corrientes de las aguas, * el cual dará su fruto en el debido tiempo,",
+    "y cuya hoja no caerá nunca; * y cuanto él hiciere tendrá próspero efecto.",
     "No así los impíos, no así; * sino que serán como el tamo o polvo que el viento arroja de la superficie de la tierra.",
-    "Por tanto, no prevalecerán los impíos en el juicio; * ni los pecadores estarán en la asamblea de los justos.",
+    "Por tanto no prevalecerán los impíos en el juicio; * ni los pecadores estarán en la asamblea de los justos.",
     "Porque conoce el Señor y premia el proceder de los justos; * mas la senda de los impíos terminará en la perdición.",
     "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
@@ -608,7 +608,7 @@
    "r1Eng": "℣. Lo hiciste un poco inferior a los ángeles, lo coronaste de gloria y de honor.",
    "r2Eng": "℣. Lo hiciste un poco inferior a los ángeles, lo coronaste de gloria y de honor.",
    "v1Eng": "℟. Y exclamo: ¿Qué es el hombre, para que Tú te acuerdes de él? * ¿O qué es el hijo del hombre, para que vengas a visitarlo?",
-   "v2Eng": "℣. Gloria al Padre, al Hijo, * y al Espíritu Santo."
+   "v2Eng": "℣. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "74": {
    "verses": [
@@ -633,14 +633,14 @@
     "Creemos que has de venir como Juez.",
     "Por eso te rogamos que socorras a tus siervos, a quienes redimiste con tu preciosa sangre.",
     "Haz que seamos contados con tus Santos en la gloria eterna.",
-    "Salva, Señor, a tu pueblo, y bendice tu heredad.",
-    "Y gobiérnalos y ensálzalos para siempre.",
+    "a tu pueblo, y llena de bendiciones tu heredad;",
+    "rígelos tú, ensálzalos por toda la eternidad.",
     "Cada día te bendecimos.",
     "Y alabamos tu nombre por los siglos, y por los siglos de los siglos.",
     "Dígnate, Señor, guardarnos sin pecado en este día.",
-    "Ten misericordia de nosotros, Señor, ten misericordia de nosotros.",
-    "Venga tu misericordia, Señor, sobre nosotros, según lo esperamos de ti.",
-    "En ti, Señor, esperé: no sea yo confundido eternamente."
+    "Apiádate, Señor, ten misericordia de nosotros,",
+    "Venga, ¡oh Señor!, tu misericordia sobre nosotros, * conforme esperamos en ti.",
+    "yo te alabaré eternamente. Oh Señor, en ti tengo puesta mi esperanza; no quede yo para siempre confundido;"
    ]
   },
   "75": {
@@ -650,8 +650,8 @@
    "eng": "Omnipotente y sempiterno Dios, que dominas juntamente sobre los vivos y los muertos, y te compadeces de todos los que conoces que serán tuyos por la fe y las obras: te suplicamos humildemente. Por nuestro Señor Jesucristo. Amén."
   },
   "77": {
-   "eng": "Señor, escucha nuestra oración.",
-   "engR": "Y llegue a ti nuestro clamor."
+   "eng": "Señor, escucha mi oración.",
+   "engR": "Y llegue a ti mi clamor."
   },
   "78": {
    "eng": "Bendigamos al Señor. Demos gracias a Dios."
@@ -664,18 +664,18 @@
    "antiphonEng": "Servid al Señor * con temor, rendidle homenaje temblando.",
    "verses": [
     "¿Por qué causa se han embravecido tanto las naciones, * y los pueblos maquinan vanos proyectos?",
-    "Se han coligado los reyes de la tierra; y se han confederado los príncipes * contra el Señor, y contra su Cristo.",
+    "Se han coligado los reyes de la tierra; * y se han confederado los príncipes contra el Señor, y contra su Cristo o Mesías.",
     "Rompamos, dijeron, sus ataduras, * y sacudamos lejos de nosotros su yugo.",
     "Mas aquel que reside en los cielos se burlará de ellos; * se mofará de ellos el Señor.",
-    "Entonces les hablará Él en su indignación * y los llenará de terror con su saña.",
-    "Mas yo he sido por Él constituido rey sobre Sion, su santo monte, * para predicar su ley.",
-    "A mí me dijo el Señor: * Tú eres mi Hijo; Yo te engendré hoy.",
+    "Entonces les hablará él en su indignación * y los llenará de terror con su saña.",
+    "Mas yo he sido por él constituido rey sobre Sión, su santo monte, * para predicar su ley.",
+    "A mí me dijo el Señor: * Tú eres mi hijo; yo te engendré hoy.",
     "Pídeme, y te daré las naciones en herencia tuya, * y extenderé tu dominio hasta los extremos de la tierra.",
     "Los regirás con cetro de hierro; * y si te resisten, los desmenuzarás como un vaso de barro.",
-    "Ahora pues, ¡oh reyes!, entendedlo: * sed instruidos vosotros los que juzgáis la tierra.",
-    "Servid al Señor con temor, * y regocijaos en Él, poseídos siempre de un temblor santo.",
+    "Ahora pues, ¡oh reyes!, entendedlo: * Sed instruidos vosotros los que juzgáis o gobernáis la tierra.",
+    "Servid al Señor con temor, * y regocijaos en él, poseídos siempre de un temblor santo.",
     "Abrazad la buena doctrina; no sea que al fin se irrite el Señor, * y perezcáis descarriados de la senda de la justicia.",
-    "Porque cuando de aquí a poco se inflamare su ira, * bienaventurados todos aquellos que ponen en Él su confianza.",
+    "Porque cuando de aquí a poco se inflamare su ira, * bienaventurados todos aquellos que ponen en él su confianza.",
     "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
@@ -716,7 +716,7 @@
    "engR": "Señor, date prisa en socorrerme. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "3": {
-   "eng": "¡Oh Dios! firmeza del mundo,\npermaneciendo inmovible\npara señalar los tiempos\nhaces que los astros giren.\n\nDanos la luz por la tarde,\nque nunca la vida espire;\nmas premio de muerte santa\ntu gloria nos vivifique.\n\n* Hazlo así, Padre piísimo,\nHijo, su imágen sublime,\ncon el Espíritu Santo,\nque reinas siglos sin límites.\nAmén."
+   "eng": "¡Oh Dios! firmeza del mundo,\npermaneciendo inmovible\npara señalar los tiempos\nhaces que los astros giren.\n\nDanos la luz por la tarde,\nque nunca la vida espire;\nmas premio de muerte santa\ntu gloria nos vivifique.\n\nHazlo así, Padre piísimo,\nHijo, su imagen sublime,\ncon el Espíritu Santo,\nque reinas siglos sin límites.\nAmén."
   },
   "4": {
    "eng": "Aleluya, * haz brillar tu rostro, Señor, sobre tu siervo, aleluya, aleluya."
@@ -755,8 +755,8 @@
     "Sentencia tú mi causa, y libértame; * por respeto a tu palabra vuélveme la vida.",
     "Lejos está de los pecadores la salvación; * porque no han cuidado de obedecer tus justísimos preceptos.",
     "Tu misericordia, Señor, * es mucha; vivifícame según tu promesa.",
-    "Muchos son los que me persiguen y atribulan; * pero yo no me he desviado de tus mandamientos.",
-    "Los veía prevaricar, * y me consumía de dolor al ver que no hacían caso de tus palabras.",
+    "Muchos son los que * me persiguen y atribulan;",
+    "pero yo no me he desviado de tus mandamientos. * Los veía prevaricar, y me consumía de dolor al ver que no hacían caso de tus palabras.",
     "Mira, ¡oh Señor!, cuánto he amado tus mandamientos; * por tu misericordia otórgame la vida.",
     "El principio o suma de tus palabras es la verdad; * eternas son todas las disposiciones o promesas de tu justicia."
    ]
@@ -785,7 +785,7 @@
    "eng": "Habéis sido comprados a gran precio: que vuestros cuerpos glorifiquen a Dios."
   },
   "9": {
-   "eng": "℟.br. Te invoco de todo corazón, * respóndeme, Señor.\nGuardaré tus leyes, respóndeme, Señor.\nescúchame, Señor.\nGloria al Padre, al Hijo, * y al Espíritu Santo.\nTe invoco de todo corarazón, * respóndeme, Señor."
+   "eng": "℟.br. Te invoco de todo corazón, * respóndeme, Señor.\n℣. Guardaré tus leyes.\n℟. Respóndeme, Señor.\nGloria al Padre, y al Hijo, y al Espíritu Santo.\n℟. Te invoco de todo corazón, * respóndeme, Señor."
   }
  },
  "office-of-the-dead": {
@@ -796,7 +796,7 @@
    "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén."
   },
   "11": {
-   "eng": "Me consumo. No viviré eternamente. Déjame, que mi vida es un soplo. ¿Qué es el hombre para que en tanto le tengas y pongas en él tu atención, para que le visites cada mañana y a cada momento le pruebes? ¿Hasta cuándo no apartarás de mí tu mirada sin dejarme tragar mi saliva? Si pequé, ¿qué daño te inferí, oh protector de los hombres? ¿Por qué me haces blanco tuyo, cuando ni a mí mismo puedo soportarme? ¿Por qué no perdonar mi transgresión y pasar por alto mi culpa? Pues pronto descansaré en el polvo, y si me buscas, ya no existiré."
+   "eng": "Ten lástima de mí, Señor, ya que mis días son nada. ¿Qué es el hombre para que tú hagas de él tanto caso, o para que se ocupe de él tu corazón? Le visitas al rayar el alba, y de repente lo atribulas. ¿Hasta cuándo me has de negar tu compasión, sin permitirme respirar o tragar siquiera mi saliva? Pequé, Señor; mas ¿qué haré yo para aplacarte, oh observador de los hombres? ¿Por qué me has puesto por blanco de tus enojos, tanto que ya me he hecho intolerable a mí mismo? ¿Por qué no perdonas todavía mi pecado, y por qué no borras mi iniquidad? Mira que ya voy a dormir en el polvo del sepulcro, y cuando mañana me busques, ya no existiré en el mundo."
   },
   "12": {
    "eng": "Tú, Señor, ten piedad de nosotros.",
@@ -828,7 +828,7 @@
   },
   "19": {
    "r1Eng": "℣. Mis delitos me dan pavor y me avergüenzo delante de ti; cuando vengas a juzgar, no me condenes.",
-   "r2Eng": "℟. * Porque muchísimo pequé durante mi vida.\nSeñor, dales el descanso eterno y brille sobre ellos la luz eterna.\n* Porque muchísimo pequé durante mi vida.",
+   "r2Eng": "℟. Porque muchísimo pequé durante mi vida.\n℣. Señor, dales el descanso eterno y brille sobre ellos la luz perpetua.\n℟. Porque muchísimo pequé durante mi vida.",
    "v1Eng": "℟. Señor, cuando vengas a juzgar la tierra, ¿dónde me esconderé de la faz de tu ira?\n* Porque muchísimo pequé durante mi vida."
   },
   "2": {
@@ -838,15 +838,15 @@
   "21": {
    "antiphonEng": "En verdes praderas me hace recostar.",
    "verses": [
-    "El Señor es mi pastor, * nada me faltará.",
-    "El me ha colocado en lugar de verdes pastos; * me ha conducido a unas aguas que restauran y recrean.",
-    "Convirtió a mi alma. Me ha conducido por los senderos de la justicia, * para gloria de su Nombre.",
-    "De esta suerte, aunque caminase yo por la sombra de la muerte, * no temeré ningún desastre;",
-    "Porque tú estás conmigo. * Tu vara y tu báculo han sido mi consuelo.",
+    "El Señor es mi pastor, nada me faltará. * El me ha colocado en lugar de verdes pastos;",
+    "me ha conducido a unas aguas que restauran y recrean. * Convirtió a mi alma.",
+    "Me ha conducido por los senderos de la justicia, * para gloria de su Nombre.",
+    "De esta suerte, aunque caminase yo por la sombra de la muerte, no temeré ningún desastre; * porque tú estás conmigo.",
+    "Tu vara y tu báculo * han sido mi consuelo.",
     "Aparejaste delante de mí una mesa abundante, * a la vista de mis perseguidores.",
     "Bañaste de óleo o perfumaste mi cabeza. * ¡Y cuán excelente es el cáliz mío que santamente embriaga!",
     "Y me seguirá tu misericordia * todos los días de mi vida;",
-    "A fin de que yo more en la casa * del Señor por largo tiempo.",
+    "a fin de que yo more en la * casa del Señor por largo tiempo.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -854,25 +854,25 @@
   "22": {
    "antiphonEng": "Echa, Señor, * en olvido los delitos de mi juventud y mis necedades.",
    "verses": [
-    "A ti, ¡oh Señor!, * he levantado mi espíritu.",
-    "En ti, ¡oh Dios mío, * tengo puesta mi confianza: no quedaré avergonzado.",
+    "A ti, ¡oh Señor!, he levantado mi espíritu. * En ti, ¡oh Dios mío, tengo puesta mi confianza:",
+    "no quedaré avergonzado. Ni se burlarán de mí mis enemigos; * porque ninguno que espere en ti quedará confundido.",
     "Sean cubiertos de confusión todos aquellos que vana e injustamente * obran la iniquidad.",
     "Muéstrame, ¡oh Señor!, tus caminos, * y enséñame tus senderos.",
     "Encamíname según tu verdad, e instrúyeme; * pues tú eres el Dios salvador mío, y te estoy esperando todo el día.",
     "Acuérdate Señor, * de tu piedad y de tu misericordia usadas en los siglos pasados.",
     "Echa en olvido los delitos o flaquezas de mi mocedad, * y mis necedades.",
-    "Acuérdate de mí, según tu misericordia; * acuérdate de mí, ¡oh Señor!, por tu bondad.",
-    "El Señor es bondadoso y justo; * por lo mismo dirigirá a los pecadores por el camino que deben seguir.",
+    "Acuérdate de mí, según tu misericordia; acuérdate de mí, ¡oh Señor!, por tu bondad. * El Señor es bondadoso y justo;",
+    "por lo mismo dirigirá a * los pecadores por el camino que deben seguir.",
     "Dirigirá a los humildes por la vía de justicia; * enseñará sus caminos a los apacibles.",
     "Todos los caminos del Señor son misericordia y verdad * para los que buscan su santa alianza y sus mandamientos.",
     "Por la gloria de tu santo Nombre, ¡oh Señor!, perdonarás mi pecado, * que ciertamente es muy grave.",
     "¿Quién es el hombre que teme al Señor? * Dios le ha prescrito la regla que debe seguir en la carrera que escogió.",
     "Reposará su alma entre bienes, * y sus hijos poseerán la tierra.",
     "El Señor es firme apoyo de los que le temen, * y a ellos revela sus secretos o misterios.",
-    "Mis ojos están siempre fijos en el Señor; * pues él sacará mis pies del lazo.",
-    "Vuelve, Señor, hacia mí tu vista, * y ten de mí compasión; porque me veo solo y pobre.",
-    "Las tribulaciones de mi corazón se han multiplicado: * líbrame de mis congojas.",
-    "Mira mi humillación y mi trabajo, * y perdona todos mis pecados.",
+    "Mis ojos están siempre fijos en el Señor; * pues él sacará mis pies del lazo. Vuelve, Señor,",
+    "hacia mí tu vista, y ten de mí compasión; * porque me veo solo y pobre.",
+    "Las tribulaciones de mi corazón * se han multiplicado:",
+    "líbrame de mis congojas. Mira mi humillación y mi trabajo, * y perdona todos mis pecados.",
     "Repara en mis enemigos cómo se han multiplicado, * y cuán injusto es el odio con que me aborrecen.",
     "Guarda mi alma, y líbrame; * nunca quede yo sonrojado, habiendo puesto en ti mi esperanza.",
     "Los inocentes y justos se han unido conmigo, * porque yo esperé en ti.",
@@ -916,7 +916,7 @@
    "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén."
   },
   "26": {
-   "eng": "Después convoca (al debate), y yo responderé, o hablaré yo, y tú me replicarás. ¿Cuántos son mis delitos y pecados? Dame a conocer mi transgresión y mi ofensa. ¿Por qué esconderme tu rostro y tenerme por enemigo tuyo? ¿A una hoja que arrebata el viento infundes terror y a una paja seca persigues, dictando contra mí sentencias de amargura e imputándome las faltas de mi mocedad? Pones en el cepo mis pies, acechas todos mis pasos, señalas las huellas de mis pies. Me deshago como leño carcomido, como vestido que roe la polilla."
+   "eng": "Respóndeme tú. Muéstrame, Señor, cuántas maldades y pecados tengo; cuáles son mis crímenes y delitos. ¿Por qué me ocultas tu rostro, y me consideras enemigo tuyo? Contra una hoja, que se lleva el viento, haces alarde de tu poderío, y persigues una paja seca; puesto que decretas contra mí tan amargas penas, y quieres consumirme por los pecados de mi mocedad. Has metido mis pies como en un cepo; has observado todas mis acciones y notado mis pisadas o procederes; siendo así que he de quedar reducido a pobre, y ser como una ropa roída por la polilla."
   },
   "27": {
    "eng": "Tú, Señor, ten piedad de nosotros.",
@@ -928,7 +928,7 @@
    "v1Eng": "℟. Acuérdate de mí, oh Dios mío, que mi vida es un soplo.\n* Ni me verá más humana vista."
   },
   "29": {
-   "eng": "El hombre, nacido de mujer, corto de días y harto de inquietudes, brota como una flor y se marchita, huye como sombra sin pararse. ¿Y sobre un tal abres tus ojos y le citas a juicio contigo? ¿Quién podrá sacar pureza de lo impuro? Nadie. Si sus días están determinados, si es conocido de ti el número de sus meses, si fijaste su límite, que no ha de traspasar, aparta de él tu mirada y déjale hasta que como mercenario cumpla su jornada."
+   "eng": "El hombre nacido de mujer vive corto tiempo, y está atestado de miserias. El sale como una flor, y luego es cortado y se marchita; huye y desaparece como sombra, y jamás permanece en un mismo estado. ¿Y tú te dignas abrir tus ojos sobre un ser semejante, y citarlo a juicio? ¿Quién podrá volver puro al que de impura simiente fue concebido? ¿Quién sino tú solo? Breves son los días del hombre; tú tienes contado el número de sus meses; señalaste los términos de su vida, más allá de los cuales no podrá pasar. Retírate, pues, un poquito de él, para que repose mientras llega su día deseado, como el día de descanso al jornalero."
   },
   "3": {
    "eng": "Al Rey, por quien viven todos los seres, * Venid adorémosle."
@@ -943,22 +943,22 @@
    "v1Eng": "℟. ¡Ay de mí, Señor! porque muchísimo pequé durante mi vida. ¿Qué haré, miserable? ¿A dónde huiré sino a ti, Dios mío?\n* Ten misericordia de mí cuando vinieres en el último día."
   },
   "32": {
-   "eng": "¡Quién me diera que me escondieses en el “seol” y allí me ocultaras hasta que se aplacara tu ira, fijando un término para volver a acordarte de mí! Si, muerto, el hombre reviviera, esperaría que pasara el tiempo de mi milicia hasta que llegara la hora del relevo. Me llamarías entonces, y yo te respondería, y te mostrarías propicio a la obra de tus manos. Y, en vez de contar, como ahora, mis pasos, no espiarías más mis pecados."
+   "eng": "¡Oh quién me diera que me guarecieses y escondieses en el sepulcro hasta que pase tu furor, y me señalases el plazo en que te has de acordar de mí! Mas, ¿acaso ha de volver a vivir un hombre ya muerto? Sí, y por eso en la guerra continua en que me hallo, estoy esperando siempre aquel día feliz en que vendrá mi mudanza o gloriosa renovación. Entonces me llamarás, y yo te responderé; alargarás la diestra a la obra de tus manos. Es verdad que tú tienes contados todos mis pasos; mas perdóname, Señor, mis pecados."
   },
   "33": {
    "eng": "Tú, Señor, ten piedad de nosotros.",
    "engR": "Demos gracias a Dios."
   },
   "34": {
-   "r1Eng": "℣. Haz que sea recto. * Señor Dios mío, ante tus ojos, mi camino.",
-   "r2Eng": "℟. * Cuando vinieres a juzgar al siglo con el fuego,\nSeñor, dales el descanso eterno y brille sobre ellos la luz eterna.\n* Cuando vinieres a juzgar al siglo con el fuego,",
-   "v1Eng": "℟. No te acuerdes, Señor, de mis pecados,\n* Cuando vinieres a juzgar al siglo con el fuego,"
+   "r1Eng": "℣. Haz que sea recto, Señor Dios mío, ante tus ojos mi camino.",
+   "r2Eng": "℟. Cuando vinieres a juzgar al siglo con el fuego.\n℣. Señor, dales el descanso eterno y brille sobre ellos la luz perpetua.\n℟. Cuando vinieres a juzgar al siglo con el fuego.",
+   "v1Eng": "℟. No te acuerdes, Señor, de mis pecados,\n* Cuando vinieres a juzgar al siglo con el fuego."
   },
   "36": {
    "antiphonEng": "¡Oh! complácete, * Señor, librarme; vuelve a mí tus ojos para socorrerme.",
    "verses": [
-    "Con ansia suma estuve aguardando al Señor, * y por fin inclinó a mí sus oídos,",
-    "Y me sacó del lago * de la miseria y del inmundo cieno.",
+    "Señor, mi oración, y mi súplica; atiende a mis lágrimas; no guardes silencio; puesto que yo soy delante de ti un advenedizo y peregrino como todos mis padres. Afloja un poco conmigo, y déjame respirar, antes que yo parta y deje de existir. * Con ansia suma estuve aguardando al Señor, y por fin inclinó a mí sus oídos,",
+    "y escuchó benignamente mis súplicas. * Y me sacó del lago de la miseria y del inmundo cieno.",
     "Y asentó mis * pasos.",
     "Me puso en la boca un cántico nuevo, * un cántico en loor de nuestro Dios.",
     "Verán estos muchos, y temerán al Señor, * y pondrán en él su esperanza.",
@@ -966,20 +966,20 @@
     "Muchas son las maravillas que has obrado, ¡oh Señor Dios mío!, * y no hay quien pueda asemejarse a ti en tus designios.",
     "Me puse yo a referirlos y anunciarlos; * exceden todo guarismo.",
     "Tú no has querido sacrificios ni oblaciones; * pero me has dado oídos perfectos.",
-    "Tampoco pediste holocausto ni * víctima por el pecado.",
-    "Para cumplir tu voluntad. Eso he deseado siempre, * oh Dios mío; y tengo tu ley en medio de mi corazón.",
+    "Tampoco pediste holocausto ni víctima por el pecado. * Yo entonces dije: Aquí estoy;",
+    "yo vengo, (conforme está escrito de mí al frente del libro de la ley) para cumplir tu voluntad. * Eso he deseado siempre, oh Dios mío; y tengo tu ley en medio de mi corazón.",
     "He anunciado tu justicia ante tu pueblo; * no tendré jamás cerrados mis labios: Señor, tú lo sabes.",
     "No he tenido escondida tu justicia en mi corazón; * publiqué tu verdad y la salvación que de ti viene.",
     "No oculté tu misericordia y tu verdad a la numerosa * congregación.",
     "Pero tú, Señor, no alejes de mí tu piedad; * tu misericordia y tu fidelidad me han amparado en todo trance.",
     "Porque me hallo cercado de males sin número; * me sorprendieron mis pecados, y no pude distinguirlos bien;",
-    "Se multiplicaron más que los cabellos de mi cabeza, * y mi corazón ha desmayado.",
+    "se multiplicaron más que los cabellos de mi cabeza, * y mi corazón ha desmayado.",
     "¡Oh! Dígnate, Señor, librarme; * vuelve hacia mí tus ojos para socorrerme.",
     "Queden de una vez confundidos y avergonzados cuantos buscan cómo * quitarme la vida;",
-    "Que se vuelvan atrás llenos de confusión * los que mi mal desean.",
-    "Sufran luego la ignominia que merecen aquellos que me dicen: * ¡Ea, ea!",
-    "Que se regocijen en ti y salten de gozo todos los que te siguen; * y aquellos que aman a tu salvador, digan siempre: Glorificado sea el Señor.",
-    "Yo por mí soy un mendigo y desvalido; * pero el Señor tiene cuidado de mí.",
+    "que se vuelvan atrás llenos de confusión los * que mi mal desean.",
+    "Sufran luego la ignominia que * merecen aquellos que me dicen:",
+    "¡Ea, ea! Que se regocijen en ti y salten de gozo todos los que te siguen; * y aquellos que aman a tu salvador, digan siempre:",
+    "Glorificado sea el Señor. Yo por mí soy un mendigo y desvalido; * pero el Señor tiene cuidado de mí.",
     "Tú eres, ¡oh Señor!, mi libertador y protector. * No tardes, Dios mío.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
@@ -988,20 +988,20 @@
   "37": {
    "antiphonEng": "Sana mi alma, Señor, * porque pequé contra ti.",
    "verses": [
-    "Bienaventurado aquel que piensa en el necesitado y en el pobre; * el Señor le librará en el día aciago.",
+    "Glorificado sea el Señor. Yo por mí soy un mendigo y desvalido; pero el Señor tiene cuidado de mí. Tú eres, ¡oh Señor!, mi libertador y protector. No tardes, Dios mío. * Bienaventurado aquel que piensa en el necesitado y en el pobre; el Señor le librará en el día aciago.",
     "Guárdelo el Señor, y confórtelo y hágalo feliz en la tierra, * y no lo entregue a discreción de sus enemigos.",
     "Consuélelo el Señor cuando se halle postrado en el lecho de su dolor; * tú mismo, Señor, lo sostenías en su cama en su enfermedad.",
     "En cuanto a mí dije: Señor, ten lástima de mí; * sana mi alma, porque pequé contra ti.",
     "Prorrumpían mis enemigos en imprecaciones contra mí: * ¿Cuándo morirá éste, decían, y se acabará su memoria?",
     "Que si alguno entraba a visitarme, hablaba con mentira, * tramando en su corazón iniquidades.",
-    "Salíase afuera * y se confabulaba",
-    "Con los otros. Susurraban contra mí todos mis enemigos; * todos conspiraban para acarrearme males.",
-    "Sentencia inicua pronunciaron contra mí. Mas, * ¿por ventura el que duerme no volverá a levantarse?",
+    "Salíase afuera y * se confabulaba con los otros.",
+    "Susurraban contra mí * todos mis enemigos;",
+    "todos conspiraban para acarrearme males. Sentencia inicua pronunciaron contra mí. * Mas, ¿por ventura el que duerme no volverá a levantarse?",
     "Lo que más es, un hombre con quien vivía yo en dulce paz, * de quien yo me fiaba, y que comía de mi pan, ha urdido una gran traición contra mí.",
     "Pero tú, Señor, ten piedad de mí y levántame, * que yo les daré a ellos su merecido.",
     "En esto habré conocido que tú me amas; * pues no tendrá mi enemigo que holgarse a costa mía.",
     "Porque tú me has tomado bajo tu protección a causa de mi inocencia, * y me has puesto en lugar seguro ante tu acatamiento por toda la eternidad.",
-    "Bendito sea el Señor Dios de Israel por los siglos de los siglos. * ¡Amén! ¡Amén!",
+    "Bendito sea el Señor Dios de Israel por los siglos * de los siglos.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1013,18 +1013,18 @@
     "Sedienta está mi alma del Dios fuerte y vivo. * ¡Cuándo será que yo llegue, y me presente ante Dios!",
     "Mis lágrimas me han servido de pan día y noche, * desde que me están diciendo continuamente: Y tu Dios, ¿dónde está?",
     "Estos eran los recuerdos que venían a mi memoria; y ensanché dentro de mí mi espíritu; * porque yo he de llegar, dije, al sitio del admirable tabernáculo, hasta la casa de mi Dios;",
-    "Entre voces de júbilo, y de acción de gracias, * y de algazara de convite.",
+    "entre voces de júbilo, y de acción de gracias, * y de algazara de convite.",
     "¿Por qué estás triste, oh alma mía?; * y ¿por qué me tienes en esta agitación?",
-    "Porque todavía he de cantarle alabanzas, por ser él el salvador, * que está siempre delante de mí, y el Dios mío.",
-    "Y mi Dios. Conturbada está mi alma. * Por lo mismo me acordaré de ti en el país que está desde el Jordán hasta Hermón y el pequeño monte.",
+    "Espera en Dios; porque aún cantaré sus alabanzas, * como que es el salvador que tengo siempre delante de mí, y mi Dios.",
+    "Conturbada está mi alma. * Por lo mismo me acordaré de ti en el país que está desde el Jordán hasta Hermón y el pequeño monte.",
     "Como el estampido con que se deshacen tus cataratas, * un abismo o aguacero llama a otro abismo;",
-    "Así todas tus tempestades y todas tus olas * han ido descargando sobre mí.",
-    "En el día dispondrá el Señor que venga su misericordia; * y yo en la noche cantaré tus alabanzas.",
-    "Haré para conmigo oración a Dios, * autor de mi vida.",
-    "Le diré a Dios: Tú eres mi amparo; * ¿por qué te has olvidado de mí?; y ¿por qué he de andar yo triste, mientras me aflige el enemigo?",
-    "Mientras se están quebrantando mis huesos, * no cesan de insultarme los enemigos míos,",
-    "Que me atormentan; diciéndome todos los días: * ¿Y tu Dios, dónde está?",
-    "Porque todavía he de cantarle alabanzas, por ser él el salvador, * que está siempre delante de mí, y el Dios mío.",
+    "así todas tus tempestades y todas tus olas * han ido descargando sobre mí.",
+    "En el día dispondrá el Señor que venga su misericordia; * y yo en la noche cantaré tus alabanzas. Haré para conmigo oración a Dios, autor de mi vida.",
+    "Le diré a Dios: Tú eres mi amparo; * ¿por qué te has olvidado de mí?;",
+    "y ¿por qué he de andar yo triste, * mientras me aflige el enemigo?",
+    "Mientras se están quebrantando mis huesos, * no cesan de insultarme los enemigos míos, que me atormentan;",
+    "diciéndome todos los días: ¿Y tu Dios, dónde está? * Pero, ¡oh alma mía!, ¿por qué estás triste?; ¿por qué me llenas de turbación?",
+    "Espera en Dios; porque aún cantaré sus alabanzas, * como que es el salvador que tengo siempre delante de mí, y mi Dios.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1035,11 +1035,11 @@
   },
   "4": {
    "verses": [
-    "Venid, regocijémonos en el Señor; cantemos con júbilo las alabanzas de Dios, salvador nuestro: corramos a presentarnos ante su acatamiento, dándole gracias, y entonando himnos a su gloria.",
-    "Porque el Señor es el Dios grande, y un rey más grande que todos los dioses: porque el Señor no desechará a su pueblo: pues en su mano tiene toda la extensión de la tierra, y suyos son los más encumbrados montes.",
-    "Suyo es el mar, y obra es de sus manos, y hechura de sus manos es la tierra: venid, adoremos y postrémonos ante Dios: lloremos en presencia del Señor que nos ha creado: porque él es el Señor Dios nuestro, y nosotros su pueblo y ovejas que él apacienta.",
-    "Hoy mismo, si oyereis su voz, guardaos de endurecer vuestros corazones, como sucedió cuando provocaron mi ira, el día de la tentación en el desierto, en donde vuestros padres me tentaron, me probaron, y vieron mis obras.",
-    "Por espacio de cuarenta años estuve cercano a esta generación, y dije: Siempre anda descarriado su corazón; ellos no conocieron mis caminos; por lo que juré airado que no entrarían en mi reposo.",
+    "Los destruirá el Señor Dios nuestro. Venid, regocijémonos en el Señor; * cantemos con júbilo las alabanzas del Dios, salvador nuestro. Corramos a presentarnos ante su acatamiento, * dándole gracias, y entonando himnos a su gloria.",
+    "Porque el Señor es el Dios grande, * y un rey más grande que todos los dioses. Porque en su mano tiene toda la extensión de la tierra, * y suyos son los más encumbrados montes.",
+    "Venid, pues, adorémosle; postrémonos, derramando lágrimas en la presencia del Señor que nos ha creado; * pues él es el Señor Dios nuestro, y nosotros el pueblo a quien él apacienta, y ovejas de su grey.",
+    "Hoy mismo, si oyereis su voz, guardaos de endurecer vuestros corazones, como sucedió, dice el Señor, cuando provocaron mi ira, entonces que hicieron prueba de mí en el desierto, * en donde vuestros padres me tentaron, me probaron, y vieron mis obras.",
+    "Por espacio de cuarenta años estuve irritado contra esta raza de gente, y decía: * Siempre está descarriado el corazón de este pueblo. Ellos no conocieron mis caminos; por lo que juré airado, * que no entrarían en mi reposo.",
     "Dales, Señor, el descanso eterno: * y brille para ellos la luz perpetua."
    ]
   },
@@ -1047,7 +1047,7 @@
    "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén."
   },
   "41": {
-   "eng": "Mi espíritu se extingue, mis días se acaban, sólo me queda el sepulcro. ¿No soy objeto de mofa, y mis ojos no pasan entre amarguras la noche? Depositada, pues, mi fianza junto a ti, ¿quién entonces habría de tocar mi mano? Pasaron mis días, se desvanecieron mis proyectos, los deseos de mi corazón. La noche me la convierten en día, y de las tinieblas (prometen) próxima luz. ¿Qué puedo yo esperar? El sepulcro será mi morada, en las tinieblas he extendido mi lecho. A la fosa grité: “¡Tú eres mi padre!” Y a los gusanos: “¡Mi madre y mis hermanos!” ¿Dónde está mi esperanza? Y mi dicha, ¿quién la divisa?"
+   "eng": "Mi espíritu se va extenuando; se acortan mis días, y sólo me resta el sepulcro. Yo no he delinquido, y con todo mis ojos no ven sino amarguras. Líbrame, oh Señor, y ponme a tu lado, y pelee contra mí la mano de quien quiera. Mas, ¡ay!, se fueron mis días felices; se disiparon como humo todos mis designios, dejando en tormento mi corazón. Ellos han convertido para mí la noche en día; y después de las tinieblas espero ya de nuevo con ansia que venga la luz. Aun cuando yo sufra con paciencia, el sepulcro será luego mi casa, y tengo ya preparado mi lecho en las tinieblas. He dicho a la podredumbre: Tú eres mi padre; y a los gusanos: Vosotros sois mi madre y mi hermana. Según esto, ¿qué esperanza es la que me queda? ¿Y quién es el que toma en consideración mi paciencia?"
   },
   "42": {
    "eng": "Tú, Señor, ten piedad de nosotros.",
@@ -1059,7 +1059,7 @@
    "v1Eng": "℟. A mí, que peco cada día y no hago penitencia, el temor de la muerte me conturba.\n* Porque en el infierno no hay redención ninguna, apiádate de mí, oh Dios, y sálvame."
   },
   "44": {
-   "eng": "Péganse a mi piel y a mi carne mis huesos, y apenas si conservo la piel junto a mis dientes. ¡Apiadaos, apiadaos de mí siquiera vosotros, mis amigos, porque me ha herido la mano de Dios! ¿Por qué, como Dios, me perseguís vosotros también, y no os hartáis de mis carnes? ¡Quién me diera que se escribiesen mis palabras y se consignaran en un libro, que con punzón de hierro y de plomo se esculpiesen para siempre en la roca! Porque yo sé que mi Redentor vive, y al fin se erguirá como fiador sobre el polvo; y detrás de mi piel yo me mantendré erguido, y desde mi carne yo veré a Dios. ¡Al cual yo le veré, le verán mis ojos, y no otros! ¡Se consumen mis riñones en mi interior!"
+   "eng": "Mis huesos, consumidas ya las carnes, están pegados a mi piel, y sólo me han quedado los labios en torno de mis dientes. Compadeceos de mí, al menos vosotros que sois mis amigos, compadeceos de mí; ya que la mano del Señor me ha herido. ¿Por qué me perseguís vosotros como si estuvieseis en lugar de Dios, y os cebáis en mis carnes? ¡Oh! ¿Quién me diera que las palabras que voy a proferir se quedasen escritas? ¿Quién me diera que se imprimiesen en libro o tablilla, con punzón de hierro, y se esculpiesen en planchas de plomo, o con el cincel se grabasen en pedernal? Porque yo sé que vive mi redentor, y que yo he de resucitar del polvo de la tierra en el último día, y de nuevo he de ser revestido de esta piel mía, y en esta mi carne veré a mi Dios; a quien he de ver yo mismo en persona y no por medio de otro, y a quien contemplarán los mismos ojos míos. Esta es la esperanza que en mi pecho tengo depositada."
   },
   "45": {
    "eng": "Tú, Señor, ten piedad de nosotros.",
@@ -1071,23 +1071,23 @@
    "v1Eng": "℟. Señor, no me juzgues según merecen mis obras; nada digno he hecho en tu presencia; por esto ruego a tu majestad.\n* Que Tú, oh Dios, borres mi pecado."
   },
   "47": {
-   "eng": "¿Por qué me sacaste del vientre de mi madre? Muriera yo sin que ojos me vieran. Fuera como si nunca hubiera existido, llevado del vientre al sepulcro. ¿No son pocos los días de mi existencia? Retírate de mí para que pueda alegrarme un poco antes de que me vaya, para no volver, a la tierra de tinieblas y de sombras, tierra de negrura y desorden, en la que la claridad es como la oscuridad."
+   "eng": "¿Por qué me sacaste del vientre de mi madre? Ojalá hubiera yo perecido antes que ojo mortal me viera. Me habrían trasladado del seno materno al sepulcro, como si no hubiese existido. ¿Por ventura no se acabará en breve el corto número de mis días? Déjame, pues, lamentarme de mi dolor por un momento; antes que yo me vaya allá de donde no volveré, a aquella tierra tenebrosa, y cubierta de las negras sombras de la muerte; tierra o región de miseria y de tinieblas, en donde tiene su asiento la sombra de la muerte, y donde todo está sin orden, y en un caos u horror sempiterno."
   },
   "48": {
    "eng": "Tú, Señor, ten piedad de nosotros.",
    "engR": "Demos gracias a Dios."
   },
   "49": {
-   "r1Eng": "℣. Temblando estoy y temo, mientras llega el juicio, y la ira venidera.\nEn que serán conmovidos los cielos y la tierra.\nDía aquél, día de ira, de calamidad y miseria, día grande y amargo sobremanera.\n* Cuando vinieres a juzgar al siglo con el fuego,\nSeñor, dales el descanso eterno y brille sobre ellos la luz eterna.",
+   "r1Eng": "℣. Temblando estoy y temo, mientras llega el juicio, y la ira venidera.\n℟. En que serán conmovidos los cielos y la tierra.\n℣. Día aquél, día de ira, de calamidad y miseria, día grande y amargo sobremanera.\n℟. Cuando vinieres a juzgar al siglo con el fuego.\n℣. Señor, dales el descanso eterno y brille sobre ellos la luz perpetua.",
    "r2Eng": "℟. Líbrame, Señor, de la muerte eterna, en aquel tremendo día, * En que serán conmovidos los cielos y la tierra. * Cuando vinieres a juzgar al siglo con el fuego.",
-   "v1Eng": "℟. Líbrame, Señor, de la muerte eterna, en aquel tremendo día,\nEn que serán conmovidos los cielos y la tierra.\n* Cuando vinieres a juzgar al siglo con el fuego,"
+   "v1Eng": "℟. Líbrame, Señor, de la muerte eterna, en aquel tremendo día,\n* En que serán conmovidos los cielos y la tierra,\n* Cuando vinieres a juzgar al siglo con el fuego."
   },
   "50": {
    "eng": "Dales, Señor, el descanso eterno.",
    "engR": "Brille para ellos una luz perpetua."
   },
   "51": {
-   "eng": "Descansed en paz.",
+   "eng": "Descansen en paz.",
    "engR": "Amén."
   },
   "53": {
@@ -1096,11 +1096,11 @@
   "54": {
    "antiphonEng": "Se alegrarán en el Señor * los huesos quebrantados.",
    "verses": [
-    "Ten piedad de mí, * oh Dios, según la grandeza de tu misericordia;",
-    "Y según la muchedumbre de tus piedades, * borra mi iniquidad.",
+    "Ten piedad de mí, oh Dios, * según la grandeza de tu misericordia;",
+    "y según la muchedumbre de tus piedades, * borra mi iniquidad.",
     "Lávame aun más de mi iniquidad, * y límpiame de mi pecado,",
-    "(Porque yo reconozco mi maldad, * y delante de mí tengo siempre mi pecado;",
-    "Contra ti solo he pecado; y he cometido la maldad delante de tus ojos) a fin de que perdonándome, * aparezca justo cuando hables, y quedes victorioso en los juicios que de ti se formen.",
+    "(porque yo reconozco mi maldad, * y delante de mí tengo siempre mi pecado; contra ti solo he pecado;",
+    "y he cometido la maldad delante de tus ojos) a fin de que perdonándome, * aparezca justo cuando hables, y quedes victorioso en los juicios que de ti se formen.",
     "Mira, pues, * que fui concebido en iniquidad y que mi madre me concibió en pecado.",
     "Y mira que tú amas la verdad; * tú me revelaste los secretos y recónditos misterios de tu sabiduría.",
     "Me rociarás, Señor, con el hisopo, y seré purificado; * me lavarás, y quedaré más blanco que la nieve.",
@@ -1123,19 +1123,19 @@
   "55": {
    "antiphonEng": "Escucha, Señor, * mi oración. A ti acude todo mortal.",
    "verses": [
-    "A ti, ¡oh Dios!, se te deben los himnos en Sión, * y a ti se te presentarán los votos en Jerusalén.",
+    "Con lo cual publicaron todos las obras de Dios y meditaron sobre sus hechos. Se alegrará el justo en el Señor, y esperará en él; y serán aplaudidos todos los de recto corazón. * Salmo de David. Cántico de Jeremías y de Ezequiel para el pueblo transportado al cautiverio, cuando empezaba a salir de él. A ti, ¡oh Dios!, se te deben los himnos en Sión, y a ti se te presentarán los votos en Jerusalén.",
     "Oye benigno mi oración. * A ti vendrán todos los mortales.",
     "Prevalecieron en nosotros las maldades; * pero tú perdonarás nuestra impiedad.",
-    "Dichoso aquel a quien tú elegiste * y allegaste a ti:",
-    "El hablará en tu Tabernáculo. * Colmados seremos de los bienes de tu casa. Santo es tu templo,",
-    "Admirable por su justicia. Oye, pues, nuestras plegarias, ¡oh Dios, * salvador nuestro!, tú eres la esperanza de todas las naciones de la tierra y de las más remotas islas.",
-    "Tú que das firmeza a los montes con tu poder; * tú que armado de fortaleza",
-    "Y quedarán llenos de pavor los habitantes de los últimos confines de la tierra, a vista de tus prodigios. * Derramarás la alegría de oriente a occidente.",
-    "Porque tú visitaste la tierra, y la has como embriagado con lluvias saludables, * y la has colmado de toda suerte de riquezas.",
+    "Dichoso aquel a quien tú elegiste y allegaste a ti: * El hablará en tu Tabernáculo.",
+    "Colmados seremos de los bienes de tu casa. * Santo es tu templo, admirable por su justicia.",
+    "Oye, pues, nuestras plegarias, ¡oh Dios, salvador nuestro!, * tú eres la esperanza de todas las naciones de la tierra y de las más remotas islas.",
+    "Tú que das firmeza a los montes con tu poder; * tú que armado de fortaleza conmueves lo más profundo de los mares, y haces sentir el estruendo de sus olas.",
+    "Se perturbarán las naciones, * y quedarán llenos de pavor los habitantes de los últimos confines de la tierra,",
+    "a vista de tus prodigios. Derramarás la alegría de oriente a occidente. Porque tú visitaste la tierra, * y la has como embriagado con lluvias saludables, y la has colmado de toda suerte de riquezas.",
     "El río de Dios está rebosando en aguas, has preparado el alimento a sus habitantes; * así es la buena disposición de los campos.",
     "Hincha sus canales, multiplica sus producciones; * con los suaves rocíos se regocijarán las plantas todas.",
-    "Coronarás el año de tu bondad, * y serán fertilísimos tus campos.",
-    "Se pondrán lozanas las praderas del desierto, * y se vestirán de gala los collados.",
+    "Coronarás el año de tu bondad, y serán fertilísimos tus campos. * Se pondrán lozanas las praderas del desierto,",
+    "y se vestirán * de gala los collados.",
     "Se multiplicarán los rebaños de carneros y ovejas; y abundarán en grano los valles. * Todos alzarán su voz, y cantarán himnos de alabanza.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
@@ -1144,22 +1144,22 @@
   "56": {
    "antiphonEng": "Tu diestra * me sostiene, Señor.",
    "verses": [
-    "¡Dios mío, oh mi Dios!, a ti aspiro, * y me dirijo desde que apunta la aurora.",
+    "Que el poder está en Dios, y que tú, Señor, eres misericordioso; * porque a cada uno remunerarás conforme a sus obras. ¡Dios mío, oh mi Dios!, a ti aspiro, y me dirijo desde que apunta la aurora.",
     "De ti está sedienta el alma mía. * ¡Y de cuántas maneras lo está también este mi cuerpo!",
     "En esta tierra desierta, intransitable y sin agua, me pongo en tu presencia, * como si me hallara en el santuario, para contemplar tu poder y la gloria tuya.",
     "Más apreciable es que mil vidas tu misericordia; * por tanto se ocuparán mis labios en tu alabanza.",
     "Por esto te bendeciré toda mi vida, * y alzaré mis manos invocando tu Nombre.",
     "Quede mi alma bien llena de ti, como de un manjar jugoso; * y entonces con labios que rebosen de júbilo, te cantará mi boca himnos de alabanza.",
     "Me acordaba de ti en mi lecho; † en ti meditaba luego que amanecía;",
-    "Pues tú eres mi amparo, † y a la sombra de tus alas me regocijaré.",
-    "En pos de ti va anhelando el alma mía; † me ha protegido tu diestra.",
+    "pues tú eres mi amparo, y a la sombra de tus alas me regocijaré. † En pos de ti va anhelando el alma mía; * me ha protegido tu diestra.",
+    "En vano han buscado cómo quitarme la vida; † entrarán en las cavernas más profundas de la tierra: * Entregados serán a los filos de la espada; serán pasto de las zorras.",
     "Entretanto el rey se regocijará en Dios: † loados serán aquellos que le juran; * porque quedó así tapada la boca de todos los que hablaban inicuamente.",
     "Dios tenga misericordia de nosotros y nos bendiga; * haga resplandecer sobre nosotros la luz de su rostro, y nos mire compasivo;",
-    "Para que conozcamos, oh Señor, en la tierra tu camino, * y en todas las naciones tu salvación.",
+    "para que conozcamos, oh Señor, en la tierra tu camino, * y en todas las naciones tu salvación.",
     "Que te alaben, Dios mío, los pueblos; * y publiquen todos los pueblos tus alabanzas.",
     "Que se regocijen, salten de gozo las naciones, * porque tú juzgas a los pueblos con justicia, y diriges las naciones sobre la tierra.",
-    "Bendíganos * Dios,",
-    "Y sea temido en todos los * confines de la tierra.",
+    "Que te alaben, oh Dios mío, los pueblos; y publiquen todos los pueblos tus alabanzas. * Ha dado la tierra su fruto.",
+    "Bendíganos Dios, el Dios nuestro. Bendíganos Dios, * y sea temido en todos los confines de la tierra.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1167,18 +1167,18 @@
   "57": {
    "antiphonEng": "Libra, Señor, * mi alma de las puertas del infierno.",
    "verses": [
-    "Dije yo: A la mitad de mis días entraré por la puerta del sepulcro; * privado me veo del resto de mis años.",
-    "Ya no veré yo al Señor Dios, * dije, en la tierra de los que viven.",
+    "A la mitad de mis días entraré * por la puerta del sepulcro;",
+    "privado me veo del resto de mis años. * Ya no veré yo al Señor Dios, dije, en la tierra de los que viven.",
     "No veré más a hombre alguno, * ni a los que morarán en dulce paz.",
-    "Se me quita el vivir, * y se va a plegar o doblar mi vida,",
-    "Como se hace con la tienda de un pastor. Cortada ha sido mi vida, * como tela por el tejedor;",
-    "Mientras la * estaba aún urdiendo,",
-    "Entonces él me la ha cortado; * de la mañana a la noche acabarás conmigo, ¡oh Dios mío!",
-    "Esperaba vivir hasta el amanecer; el Señor, como un león fuerte, había quebrantado todos mis huesos; * pero por la mañana decía: Antes de anochecer acabarás, oh Señor, mi vi-da.",
-    "Gritaba yo como un pollito de golondrina, gemía como paloma: * Se debilitaron mis ojos de mirar siempre a lo alto del cielo. Mi situación, Señor, es muy violenta: Toma a tu cargo mi defensa.",
-    "¿Mas qué es lo que digo? ¿Cómo me tomará él bajo su patrocinio, cuando él mismo es el que ha hecho esto? * Repasaré, ¡oh Dios mío!, delante de ti con amargura de mi alma todos los años de mi vida.",
-    "¡Oh Señor!, si esto es vivir, y en tales apuros se halla la vida de mi alma, * castígame te ruego; y castigado, vivifícame.",
-    "Ved cómo se ha cambiado en paz mi amarguísima aflicción; y tú, ¡oh Señor! * has librado de la perdición a mi alma; has arrojado tras de tus espaldas todos mis pecados.",
+    "Se me quita el vivir, y se va a plegar o doblar mi vida, * como se hace con la tienda de un pastor.",
+    "Cortada ha sido mi vida, como tela por el tejedor; mientras la estaba aún urdiendo, entonces él me la ha cortado; * de la mañana a la noche acabarás conmigo, ¡oh Dios mío!",
+    "Esperaba vivir hasta el amanecer; * el Señor, como un león fuerte, había quebrantado todos mis huesos;",
+    "pero por la mañana decía: Antes de anochecer acabarás, oh Señor, mi vi-da. * Gritaba yo como un pollito de golondrina, gemía como paloma:",
+    "Se debilitaron mis ojos de mirar * siempre a lo alto del cielo.",
+    "Mi situación, Señor, es muy violenta: Toma a tu cargo mi defensa. * ¿Mas qué es lo que digo? ¿Cómo me tomará él bajo su patrocinio, cuando él mismo es el que ha hecho esto?",
+    "Repasaré, ¡oh Dios mío!, * delante de ti con amargura de mi alma todos los años de mi vida.",
+    "¡Oh Señor!, si esto es vivir, y en tales apuros se halla la vida de mi alma, castígame te ruego; y castigado, vivifícame. * Ved cómo se ha cambiado en paz mi amarguísima aflicción;",
+    "y tú, ¡oh Señor! has librado de la perdición a mi alma; * has arrojado tras de tus espaldas todos mis pecados.",
     "Porque no han de cantar tus glorias los que están en el sepulcro, ni han de entonar las alabanzas los que están en poder de la muerte; * ni aquellos que bajan a la fosa esperarán ver el cumplimiento de tus verídicas promesas.",
     "Los vivos, Señor, los vivos son los que te han de tributar alabanzas, como hago yo este día; * el padre anunciará a sus hijos su fidelidad en las promesas.",
     "¡Oh Señor!, sálvame, * y cantaremos nuestros salmos en el templo del Señor todos los días de nuestra vida.",
@@ -1189,9 +1189,9 @@
   "58": {
    "antiphonEng": "Todo ser que alienta * alabe al Señor.",
    "verses": [
-    "Alabad al Señor vosotros que estáis en los cielos; * alabadle los que estáis en las alturas.",
-    "Alabadle todos vosotros, ángeles suyos; * alabadle todas las milicias suyas.",
-    "Alabadle tú, ¡oh cielo empíreo! * y alabadle todas vosotras, lucientes estrellas.",
+    "Alabad al Señor vosotros * que estáis en los cielos;",
+    "alabadle los que estáis en las alturas. Alabadle todos vosotros, ángeles suyos; * alabadle todas las milicias suyas. Alabadle tú, ¡oh cielo empíreo!",
+    "y alabadle todas vosotras, * lucientes estrellas.",
     "Alábale tu, ¡oh cielo empíreo!, * y alaben el Nombre del Señor todas las aguas que están sobre el firmamento.",
     "Porque el Señor habló, y con sólo quererlo, * quedaron hechas las cosas; él mandó que existiesen y quedaron creadas.",
     "Las estableció para que subsistiesen eternamente y por todos los siglos; * les fijó un orden que observarán siempre.",
@@ -1199,24 +1199,24 @@
     "Fuego, granizo, nieve, hielo, vientos procelosos, * vosotros que ejecutáis sus órdenes.",
     "Montes y collados todos, * plantas fructíferas, y todos vosotros, ¡oh cedros!",
     "Bestias todas silvestres y domésticas, * reptiles y volátiles;",
-    "Reyes de la tierra y pueblos todos; * príncipes y jueces todos de la tierra;",
+    "reyes de la tierra y pueblos todos; * príncipes y jueces todos de la tierra;",
     "Los jóvenes y las vírgenes, † los ancianos y los niños, * todas las criaturas canten alabanzas al Nombre del Señor;",
-    "Y él es el que ha exaltado el poder de su pueblo. * Himnos le canten todos sus santos,",
-    "Los hijos de Israel, * el pueblo peculiar suyo. ¡Aleluya!",
-    "Cantad al Señor un cántico nuevo, * resuenen sus loores en la reunión de los santos.",
+    "porque sólo el Nombre del Señor resplandece sobre los cielos y tierra; * y él es el que ha exaltado el poder de su pueblo.",
+    "Himnos le canten todos sus santos, * los hijos de Israel, el pueblo peculiar suyo.",
+    "los hijos de Israel, el pueblo peculiar suyo. ¡Aleluya! Cantad al Señor un cántico nuevo, * resuenen sus loores en la reunión de los santos.",
     "Que se alegre Israel en el Señor que le creó, * y se regocijen en su rey los hijos de Sión.",
     "Celebren su excelso Nombre con armoniosos conciertos, * y publiquen sus alabanzas al son del pandero y salterio.",
     "Porque el Señor ha mirado benignamente a su pueblo; * y exaltará a los humildes y los salvará.",
     "Se gozarán los santos en la gloria, * y se regocijarán en sus moradas.",
     "Resonarán en sus bocas los elogios sublimes de Dios; * y vibrarán en sus manos espadas de dos filos,",
-    "Para ejecutar la divina venganza en las naciones, * y castigar a los pueblos impíos;",
-    "Para aprisionar con grillos a sus reyes, * y con esposas de hierro a sus magnates;",
-    "Para ejecutar en ellos el juicio decretado: * Gloria es ésta que está reservada para todos sus santos. ¡Aleluya!",
+    "para ejecutar la divina venganza en las naciones, * y castigar a los pueblos impíos;",
+    "para aprisionar con grillos a sus reyes, * y con esposas de hierro a sus magnates;",
+    "para ejecutar en ellos el juicio decretado: * Gloria es ésta que está reservada para todos sus santos. ¡Aleluya!",
     "Alabad al Señor que reside en su celestial santuario; * alabadle sentado en el firmamento o trono de su poder.",
     "Alabadle por sus prodigios a favor vuestro; * alabadle por su inmensa grandeza.",
     "Alabadle al son de clarines; * alabadle con el salterio y la cítara.",
     "Alabadle con panderos y armoniosos conciertos; * alabadle con instrumentos músicos de cuerdas y de viento.",
-    "Empléese todo espíritu en alabar a Dios. † ¡Aleluya!",
+    "Alabadle con sonoros címbalos; † alabadle con címbalos de júbilo. * Empléese todo espíritu en alabar a Dios.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1226,23 +1226,23 @@
    "engR": "Felices los muertos que mueren en el Señor."
   },
   "6": {
-   "antiphonEng": "Haz que sea recto. * Señor Dios mío, ante tus ojos, mi camino.",
+   "antiphonEng": "Haz que sea recto, * Señor Dios mío, ante tus ojos mi camino.",
    "verses": [
-    "Presta oídos, Señor, a mis palabras; * escucha mis clamores.",
-    "Atiende a la voz de mis súplicas; * ¡oh mi rey y Dios mío!",
-    "Porque a ti enderezaré mi oración; * de mañana, ¡oh Señor!, oirás mi voz.",
+    "Dios mío, dormiré en paz, y descansaré en tus promesas: Porque tú, ¡Oh Señor!, sólo tú has asegurado mi esperanza. * Presta oídos, Señor, a mis palabras; escucha mis clamores. Atiende a la voz de mis súplicas;",
+    "¡oh mi rey y Dios mío! * Porque a ti enderezaré mi oración;",
+    "de mañana, * ¡oh Señor!, oirás mi voz.",
     "Al amanecer me pondré en tu presencia, * y te contemplaré. Porque no eres tú un Dios que ame la iniquidad.",
     "Ni morará junto a ti el maligno, * ni los injustos podrán permanecer delante de tus ojos.",
-    "Tú aborreces a todos los * que obran la iniquidad;",
-    "Tú perderás a todos aquellos que hablan mentira. * Al hombre sanguinario y fraudulento, el Señor lo abominará.",
-    "Pero yo confiado en tu gran misericordia, * entraré en tu casa; y poseído de tu santo temor, doblaré mis rodillas ante tu santo templo.",
+    "Tú aborreces a todos los que obran la iniquidad; * tú perderás a todos aquellos que hablan mentira.",
+    "Al hombre sanguinario y fraudulento, el Señor lo abominará. * Pero yo confiado en tu gran misericordia,",
+    "entraré en tu casa; * y poseído de tu santo temor, doblaré mis rodillas ante tu santo templo.",
     "Guíame, ¡oh Señor!, por la senda de tu injusticia; * haz que sea recto ante tus ojos mi camino, por causa de mis enemigos.",
     "Pues en su boca no se halla palabra de verdad; * su corazón está lleno de vanidad y perfidia.",
     "Su garganta es un sepulcro abierto; † con sus lenguas urden continuamente engaños. * Júzgalos, ¡oh Dios mío.",
     "Frústrense sus designios, arrójalos fuera, † lejos de tu presencia, como lo merecen sus muchas impiedades; * puesto que, ¡oh Señor!, te han irritado.",
-    "Al contrario, alégranse todos aquellos que ponen en ti su esperanza: * Se regocijarán eternamente,",
-    "Y tú morarás en ellos. * Y en ti se glorificarán todos los que aman tu santo Nombre,",
-    "Porque tú colmarás de bendiciones al justo. Señor, con tu benevolencia, como con un escudo, * nos has cubierto por todos lados.",
+    "Al contrario, alégranse todos aquellos que ponen en ti su esperanza: * Se regocijarán eternamente, y tú morarás en ellos.",
+    "Y en ti se glorificarán todos los que aman tu santo Nombre, * porque tú colmarás de bendiciones al justo. Señor, con tu benevolencia,",
+    "como con un escudo, * nos has cubierto por todos lados.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1252,13 +1252,13 @@
   },
   "61": {
    "verses": [
-    "Bendito + sea el Señor, Dios de Israel, * porque ha visitado y redimido a su pueblo:",
-    "Y nos ha suscitado un poderoso Salvador * en la casa de David, su siervo.",
+    "Bendito sea el Señor, Dios de Israel, * porque ha visitado y redimido a su pueblo:",
+    "Y nos ha suscitado un poderoso Salvador en la casa de David, * su siervo.",
     "Según lo había anunciado por boca de sus santos profetas, * que han existido desde los tiempos antiguos:",
     "Para salvarnos de nuestros enemigos, * y de las manos de todos los que nos aborrecen.",
     "Para hacer misericordia con nuestros padres, * y acordarse de su santa alianza.",
-    "Del juramento que juró a Abrahán nuestro padre, * de que nos concedería:",
-    "Que, libres de las manos de nuestros enemigos, * le sirvamos sin temor.",
+    "Del juramento que juró * a Abrahán nuestro padre,",
+    "de que nos concedería: Que, libres de las manos de nuestros enemigos, * le sirvamos sin temor.",
     "En santidad y justicia delante de él, * todos los días de nuestra vida.",
     "Y tú, niño, serás llamado Profeta del Altísimo: * porque irás delante del Señor a preparar sus caminos:",
     "Para dar a su pueblo el conocimiento de la salvación, * para el perdón de sus pecados:",
@@ -1283,14 +1283,14 @@
   },
   "66": {
    "verses": [
-    "Desde lo más profundo clamé a ti, * ¡oh Señor!",
-    "Oye, Señor, benignamente mi voz. * Estén atentos tus oídos a la voz de mis plegarias.",
+    "Desde lo más profundo clamé a ti, ¡oh Señor! * Oye, Señor, benignamente mi voz.",
+    "Estén atentos tus oídos a * la voz de mis plegarias.",
     "Si te pones a examinar, Señor, nuestras maldades, * ¿quién podrá subsistir, ¡oh Señor!, en tu presencia?",
-    "Mas en ti se halla siempre la clemencia; * y en vista de tu ley he confiado en ti, ¡oh Señor! en la promesa del Señor se ha apoyado mi alma.",
-    "En el Señor ha puesto * su esperanza.",
-    "Desde el amanecer hasta la noche * espere Israel en el Señor.",
+    "Mas en ti * se halla siempre la clemencia;",
+    "y en vista de tu * ley he confiado en ti,",
+    "¡oh Señor! en la promesa del Señor se ha apoyado mi alma. En el Señor ha puesto su esperanza. * Desde el amanecer hasta la noche espere Israel en el Señor.",
     "Porque en el Señor está la misericordia, * y en su mano tiene una redención abundantísima.",
-    "Y es él el que redimirá * a Israel de todas sus iniquidades.",
+    "Y es él el que * redimirá a Israel de todas sus iniquidades.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1300,17 +1300,17 @@
    "engR": "Libra, Señor, sus almas."
   },
   "68": {
-   "eng": "Descansed en paz.",
+   "eng": "Descansen en paz.",
    "engR": "Amén."
   },
   "69": {
-   "eng": "Señor, escucha nuestra oración.",
-   "engR": "Y llegue a ti nuestro clamor."
+   "eng": "Señor, escucha mi oración.",
+   "engR": "Y llegue a ti mi clamor."
   },
   "7": {
    "antiphonEng": "Vuélvete a mí, * Señor, y libra mi alma, porque en muriendo ya no hay quien se acuerde de ti.",
    "verses": [
-    "Señor, no me reprendas en medio de tu saña, * ni me castigues en la fuerza de tu enojo.",
+    "Oh Señor, no me reprendas en medio de tu saña; * ni en medio de tu cólera me castigues.",
     "Ten, Señor, misericordia de mí, que estoy sin fuerzas; * sáname, oh Señor, porque hasta mis huesos se han estremecido.",
     "Y está mi alma sumamente perturbada: * pero tú, Señor, ¿hasta cuándo?",
     "Vuélvete a mí, Señor, y libra mi alma; * sálvame por tu misericordia.",
@@ -1319,7 +1319,7 @@
     "Por causa de la indignación se han oscurecido mis ojos; * he envejecido y quedado endeble en medio de todos mis enemigos.",
     "Apartaos lejos de mí todos los que obráis la iniquidad; * porque ha oído el Señor benignamente la voz de mi llanto.",
     "Ha otorgado el Señor mi súplica; * ha aceptado mi oración.",
-    "Avergüéncense, y queden llenos de la mayor turbación todos mis enemigos; * retírense, y váyanse al momento cubiertos de ignominia.",
+    "Avergüéncense, y queden llenos de la mayor turbación todos mis enemigos; * retírense, y váyanse al momento cubiertos de ignominia. Señor,",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1336,7 +1336,7 @@
    "engR": "Brille para ellos una luz perpetua."
   },
   "73": {
-   "eng": "Descansed en paz.",
+   "eng": "Descansen en paz.",
    "engR": "Amén."
   },
   "75": {
@@ -1346,14 +1346,14 @@
    "antiphonEng": "Agradaré al Señor * en el país de la vida.",
    "verses": [
     "Amé al Señor, * seguro de que oirá la voz de mi oración.",
-    "Porque se dignó inclinar hacia mí sus oídos, * y así lo invocaré en todos los días de mi vida.",
-    "E invoqué el * Nombre del Señor.",
-    "Libra, ¡oh Señor!, * el alma mía.",
+    "Porque se dignó inclinar hacia mí sus oídos, * y así le invocaré en todos los días de mi vida.",
+    "Cercáronme mortales angustias, * me embistieron los horrores del infierno.",
+    "Me hallé en medio de la tribulación y del dolor, * e invoqué el Nombre del Señor.",
+    "Libra, ¡oh Señor!, el alma mía. ‡ Misericordioso es el Señor, y justo, * y compasivo es nuestro Dios.",
+    "El Señor guarda a los pequeñuelos: * yo me humillé, y me sacó a paz y a salvo.",
     "Vuelve, ¡oh alma mía!, a tu sosiego; * ya que el Señor te ha favorecido tanto.",
-    "Creí a Dios; por eso hablé confiado; * aunque me vi reducido al mayor abatimien-to.",
-    "Tomaré el cáliz de la salud, * e invocaré el nombre del Señor.",
-    "Oh Señor, siervo tuyo soy, siervo tuyo e hijo de esclava tuya. * Tú rompiste mis cadenas;",
-    "En los atrios de la casa del Señor, * en medio de ti, ¡oh Jerusalén!",
+    "Pues él ha librado de la muerte a mi alma, ‡ ha enjugado mis lágrimas, * y apartado mis pies del precipicio.",
+    "Acepto seré yo al Señor * en la región de los vivos.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1361,11 +1361,11 @@
   "77": {
    "antiphonEng": "¡Ay de mí, Señor, * que se ha prolongado mi exilio!",
    "verses": [
-    "Clamé al Señor en mi tribulación, * y me atendió.",
-    "Mi alma de los * labios",
-    "Inicuos y de la lengua * dolosa.",
-    "¿Qué se te dará, * o qué fruto sacarás de tus calumnias, oh lengua fraudulenta?",
-    "¡Ay de mí, que mi destierro se ha prolongado! † He habitado entre los moradores de Cedar.",
+    "¡oh Señor!, de tus mandamientos. * Clamé al Señor en mi tribulación, y me atendió.",
+    "Libra ¡oh Señor! * mi alma de los labios inicuos y de la lengua dolosa.",
+    "¿Qué se te dará, o qué fruto sacarás de tus calumnias, * oh lengua fraudulenta?",
+    "El ser traspasada con agudas saetas, * vibradas por una mano robusta, y ser arrojada en un fuego devorador.",
+    "¡Ay de mí, que mi destierro se ha prolongado! † He habitado entre los moradores de Cedar. * Largo tiempo ha estado mi alma peregrinando.",
     "Yo era pacífico con los que aborrecían la paz; pero ellos, * así que les hablaba, se levantaban contra mí sin motivo alguno.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
@@ -1389,14 +1389,14 @@
   "79": {
    "antiphonEng": "Si llevas * cuenta de los delitos, Señor, ¿quién podrá resistir?",
    "verses": [
-    "Desde lo más profundo clamé a ti, * ¡oh Señor!",
-    "Oye, Señor, benignamente mi voz. * Estén atentos tus oídos a la voz de mis plegarias.",
+    "Desde lo más profundo clamé a ti, ¡oh Señor! * Oye, Señor, benignamente mi voz.",
+    "Estén atentos tus oídos a * la voz de mis plegarias.",
     "Si te pones a examinar, Señor, nuestras maldades, * ¿quién podrá subsistir, ¡oh Señor!, en tu presencia?",
-    "Mas en ti se halla siempre la clemencia; * y en vista de tu ley he confiado en ti, ¡oh Señor! en la promesa del Señor se ha apoyado mi alma.",
-    "En el Señor ha puesto * su esperanza.",
-    "Desde el amanecer hasta la noche * espere Israel en el Señor.",
+    "Mas en ti * se halla siempre la clemencia;",
+    "y en vista de tu * ley he confiado en ti,",
+    "¡oh Señor! en la promesa del Señor se ha apoyado mi alma. En el Señor ha puesto su esperanza. * Desde el amanecer hasta la noche espere Israel en el Señor.",
     "Porque en el Señor está la misericordia, * y en su mano tiene una redención abundantísima.",
-    "Y es él el que redimirá * a Israel de todas sus iniquidades.",
+    "Y es él el que * redimirá a Israel de todas sus iniquidades.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1404,24 +1404,24 @@
   "8": {
    "antiphonEng": "No sea que alguno * cual león, arrebate tal vez mi alma, sin que haya nadie que me libre y me ponga en salvo.",
    "verses": [
-    "Señor, Dios mío, en ti he puesto mi esperanza; * sálvame de todos mis perseguidores, y líbrame.",
+    "Ha otorgado el Señor mi súplica; ha aceptado mi oración. Avergüéncense, y queden llenos de la mayor turbación todos mis enemigos; * retírense, y váyanse al momento cubiertos de ignominia. Señor, Dios mío, en ti he puesto mi esperanza; sálvame de todos mis perseguidores, y líbrame.",
     "No sea que alguno, como león, * arrebate tal vez mi alma, sin que haya nadie que me libre y ponga a salvo.",
     "¡Ah Señor Dios mío! si yo tal hice, * si hay iniquidad en mis acciones,",
-    "Si he vuelto mal por mal a los que me lo han hecho, * caiga yo justamente en las garras de mis enemigos, sin recurso.",
+    "si he vuelto mal por mal a los que me lo han hecho, * caiga yo justamente en las garras de mis enemigos, sin recurso.",
     "Persígame el enemigo, † y apodérese de mí, y estrélleme contra el suelo, * y reduzca a polvo mi gloria.",
-    "Levántate, ¡oh Señor! * en el momento de tu enojo,",
-    "Y ostenta tu grandeza en medio de mis enemigos. Sí, Señor Dios mío, * levántate según la ley por ti establecida;",
-    "Y el concurso de las naciones se reunirá alrededor de ti. * Por amor de esta congregación vuelve a subir a lo alto.",
-    "El Señor es quien juzga a los pueblos. Júzgame, pues, oh Señor, * según mi justicia, y según la inocencia que hay en mí.",
-    "Acábese ya la malicia de los pecadores; y tú, ¡oh Dios!, que penetras los corazones, * y los afectos más íntimos, encaminarás al justo.",
-    "Mi socorro lo espero del Señor; * el cual saca a salvo a los rectos de corazón.",
+    "Levántate, ¡oh Señor! * en el momento de tu enojo, y ostenta tu grandeza en medio de mis enemigos.",
+    "Sí, Señor Dios mío, levántate según la ley por ti establecida; * y el concurso de las naciones se reunirá alrededor de ti.",
+    "Por amor de esta congregación vuelve a subir a lo alto. * El Señor es quien juzga a los pueblos.",
+    "Júzgame, pues, oh Señor, según mi justicia, * y según la inocencia que hay en mí.",
+    "Acábese ya la malicia * de los pecadores;",
+    "y tú, ¡oh Dios!, que penetras los corazones, y los afectos más íntimos, encaminarás al justo. * Mi socorro lo espero del Señor; el cual saca a salvo a los rectos de corazón.",
     "Dios, justo juez, fuerte y misericordioso, * ¿se enoja acaso todos los días?",
     "Si vosotros no os convirtiereis vibrará su espada; * tenso tiene su arco apuntado;",
-    "Y en él ha puesto dardos mortales, * y tiene dispuestas sus abrasadoras saetas.",
+    "y en él ha puesto dardos mortales, * y tiene dispuestas sus abrasadoras saetas.",
     "He aquí que el impío ha parido la injusticia; * concibió el dolor, y parió el pecado.",
     "El abrió y ahondó una fosa; * mas ha caído en esa misma fosa que él hizo.",
     "El dolor que quiso ocasionarme, * recaerá contra él; y su iniquidad descargará sobre su cabeza.",
-    "Glorificaré yo al Señor por su justicia y cantaré himnos * de alabanza al excelso Nombre del Señor altísimo.",
+    "Glorificaré yo al Señor por su justicia y cantaré himnos de alabanza al excelso Nombre del Señor altísimo. * Oh Señor,",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
    ]
@@ -1429,14 +1429,14 @@
   "80": {
    "antiphonEng": "No abandones, * Señor, la obra de tus manos.",
    "verses": [
-    "Te alabaré, Señor, con todo mi corazón; porque oíste las peticiones de mi boca. * En presencia de los ángeles te cantaré himnos.",
-    "Te adoraré en tu santo templo, * y tributaré alabanzas a tu Nombre,",
-    "Por la misericordia y verdad de sus promesas, * con que has engrandecido sobre todas las cosas tu Nombre santo.",
+    "Te alabaré, Señor, con todo mi corazón; * porque oíste las peticiones de mi boca.",
+    "En presencia de los ángeles te cantaré himnos. * Te adoraré en tu santo templo, y tributaré alabanzas a tu Nombre,",
+    "por la misericordia y verdad de sus promesas, * con que has engrandecido sobre todas las cosas tu Nombre santo.",
     "En cualquier día que te invocare, óyeme benigno; * tú aumentarás la fortaleza de mi al-ma.",
     "Alábente, ¡oh Señor!, todos los reyes de la tierra, * ya que han oído todas las palabras de tu boca.",
     "Y celebren las disposiciones del Señor, * visto que la gloria del Señor es tan grande.",
-    "Porque siendo el Señor, como es altísimo, * pone los ojos en las criaturas humildes y mira como lejos de sí a las altivas.",
-    "Si me hallare, oh Señor, en medio de la tribulación, * tú me animarás, porque extendiste tu mano contra el furor de mis enemigos, y me salvó tu poderosa diestra.",
+    "Porque siendo el Señor, como es altísimo, pone los ojos en las criaturas humildes y mira como lejos de sí a las altivas. * Si me hallare, oh Señor,",
+    "en medio de la tribulación, tú me animarás, * porque extendiste tu mano contra el furor de mis enemigos, y me salvó tu poderosa diestra.",
     "El Señor tomará mi defensa. * Eterna es, ¡oh Señor!, tu misericordia, no deseches las obras de tus manos.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
@@ -1480,14 +1480,14 @@
   },
   "88": {
    "verses": [
-    "Alaba † al * Señor,",
-    "¡Oh * alma mía!",
-    "¡Ah!, * no queráis confiar en los poderosos de la tierra,",
-    "Dichoso aquel que tiene por protector al Dios de Jacob, † el que tiene puesta su esperanza en el Señor Dios suyo.",
-    "Creador del † cielo y de la * tierra,",
-    "Del mar y de cuanto * ellos contienen.",
-    "El cual mantiene eternamente la verdad de sus promesas, hace justicia a los que padecen agravios, * da de comer a los hambrientos. El mismo Señor da libertad a los que están encadenados.",
-    "El Señor alumbra a los ciegos. † El Señor levanta a los caídos; * ama el Señor a todos los justos.",
+    "Alaba al Señor, ¡oh alma mía! Sí, † alabaré al Señor toda mi vida; * mientras yo exista, cantaré himnos a mi Dios.",
+    "¡Ah!, no queráis confiar en los poderosos de la tierra, * en hijos de hombres, los cuales no tienen en su mano la salud.",
+    "Saldrá su espíritu del cuerpo, y volverán a ser polvo; * entonces se desvanecerán como humo todos sus proyectos.",
+    "Dichoso aquel que tiene por protector al Dios de Jacob, † el que tiene puesta su esperanza en el Señor Dios suyo. * Creador del cielo y de la tierra, del mar y de cuanto ellos contienen.",
+    "El cual mantiene eternamente la verdad de sus promesas, † hace justicia a los que padecen agravios, * da de comer a los hambrientos.",
+    "El mismo Señor da libertad a los que están encadenados. * El Señor alumbra a los ciegos.",
+    "El Señor levanta a los caídos; * ama el Señor a todos los justos.",
+    "El Señor protege a los peregrinos; † ampara al huérfano y a la viuda, * y desbaratará los designios de los pecadores.",
     "El Señor reinará eternamente; el Dios tuyo, ¡oh Sión!, * reinará en todas las generaciones.",
     "Dales, Señor, * el descanso eterno.",
     "Y brille para ellos * una luz perpetua."
@@ -1502,12 +1502,12 @@
    "engR": "℟. Libra, Señor, sus almas."
   },
   "90": {
-   "eng": "Descansed en paz.",
+   "eng": "Descansen en paz.",
    "engR": "Amén."
   },
   "91": {
-   "eng": "Señor, escucha nuestra oración.",
-   "engR": "Y llegue a ti nuestro clamor."
+   "eng": "Señor, escucha mi oración.",
+   "engR": "Y llegue a ti mi clamor."
   },
   "92": {
    "eng": "Que el Señor esté con vosotros.",
@@ -1521,7 +1521,7 @@
    "engR": "Brille para ellos una luz perpetua."
   },
   "95": {
-   "eng": "Descansed en paz.",
+   "eng": "Descansen en paz.",
    "engR": "Amén."
   }
  },
@@ -1534,7 +1534,7 @@
    "engR": "Señor, date prisa en socorrerme. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "2": {
-   "eng": "Ya resplandece el lucero;\na Dios pidamos rendidos\nque en el discurso del día\nnos guarde de los malignos.\n\nRefrene y temple la lengua,\nno se oiga voz de litigios;\nponga guarda en nuestros ojos,\nno entre por ellos el vicio.\n\nEl corazón, sin rencilla,\nsea puro en lo más íntimo:\nbebida y comida parcas\nbajen a la carne el brio.\n\nPara que, acabado el día,\nturnando la noche en giro,\npor la abstinencia del mundo\ncantemos la gloria a Él mismo.\n\n* Sea a Dios Padre la gloria,\ny a su Unigénito Hijo,\ncon el Espíritu Santo,\nahora y por todos los siglos.\nAmen."
+   "eng": "Ya resplandece el lucero;\na Dios pidamos rendidos\nque en el discurso del día\nnos guarde de los malignos.\n\nRefrene y temple la lengua,\nno se oiga voz de litigios;\nponga guarda en nuestros ojos,\nno entre por ellos el vicio.\n\nEl corazón, sin rencilla,\nsea puro en lo más íntimo:\nbebida y comida parcas\nbajen a la carne el brío.\n\nPara que, acabado el día,\nturnando la noche en giro,\npor la abstinencia del mundo\ncantemos la gloria a Él mismo.\n\nSea a Dios Padre la gloria,\ny a su Unigénito Hijo,\ncon el Espíritu Santo,\nahora y por todos los siglos.\nAmén."
   },
   "3": {
    "eng": "Aleluya * aleluya, aleluya."
@@ -1543,19 +1543,19 @@
    "verses": [
     "Sálvame, ¡oh Dios!, por tu Nombre, * y defiéndeme con tu poder.",
     "Escucha, ¡oh Dios!, mi oración; * presta oídos a las palabras de mi boca.",
-    "Porque gentes extrañas han alzado bandera contra mí, * y poderosos atentan contra mi vida, sin mirar a Dios.",
-    "Pero ya Dios me socorre, * y el Señor toma por su cuenta la defensa de mi vida.",
-    "Haz, ¡oh Dios mío!, recaer los males sobre mis enemigos; * y en honor de tu verdad extermínalos.",
+    "Porque gentes extrañas han alzado * bandera contra mí,",
+    "y poderosos atentan contra mi vida, sin mirar a Dios. * Pero ya Dios me socorre, y el Señor toma por su cuenta la defensa de mi vida. Haz, ¡oh Dios mío!,",
+    "recaer los males sobre mis enemigos; * y en honor de tu verdad extermínalos.",
     "Yo te ofreceré un sacrificio voluntario; * y alabaré, ¡oh Señor!, tu Nombre, que tan lleno está de bondad.",
     "Puesto que me has librado de todas las tribulaciones, * y ya mis ojos miran con desprecio a mis enemigos."
    ]
   },
   "5": {
    "verses": [
-    "Alabad al Señor por ser infinitamente bueno, * por ser eterna su misericordia.",
-    "Diga ahora Israel que el Señor es bueno, * y que es eterna su misericordia.",
-    "Diga ahora la casa de Aarón, * que es eterna la misericordia del Señor.",
-    "Digan ahora también los que temen al Señor, * que su misericordia es eterna.",
+    "Alabad al Señor porque es tan bueno, * porque es eterna su misericordia.",
+    "y la verdad del Señor permanece eternamente. Alabad al Señor, porque es tan bueno; porque hace brillar eternamente su misericordia. Diga ahora Israel que el Señor es bueno, * y que es eterna su misericordia.",
+    "Diga ahora * la casa de Aarón,",
+    "que es eterna la misericordia del Señor. * Digan ahora también los que temen al Señor, que su misericordia es eterna.",
     "En medio de la tribulación invoqué al Señor, * y me otorgó el Señor libertad.",
     "El Señor es mi sostén, * no temo nada de cuanto pueda hacerme el hombre.",
     "El Señor está de mi parte; * yo despreciaré a mis enemigos.",
@@ -1564,23 +1564,23 @@
     "Me cercaron todas las naciones; * mas yo en el Nombre del Señor tomé venganza de ellas.",
     "Me cercaron estrechamente; * pero me vengué de ellas en el Nombre del Señor.",
     "Me rodearon a la manera de un enjambre de irritadas abejas, † y ardieron en ira como fuego que prende en secos espinos; * pero en el Nombre del Señor tomé de ellas su venganza.",
-    "A empellones procuraban derribarme, * y estuve a punto de caer; mas el Señor me sostu-vo.",
-    "El Señor es la fortaleza mía, y el objeto de mis alabanzas, * porque El ha sido mi Salvador.",
+    "A empellones procuraban derribarme, * y estuve a punto de caer;",
+    "mas el Señor me sostu-vo. El Señor es mi fortaleza y mi gloria; * el Señor se ha constituido salvación mía.",
     "Voces de júbilo y de salvación son las que * se oyen en las moradas de los justos.",
     "La diestra del Señor hizo proezas; † la diestra del Señor me ha exaltado, * triunfó la diestra del Señor.",
     "No me moriré, sino que viviré aún, * y publicaré las obras del Señor.",
     "Me ha castigado el Señor severamente; * mas no me ha entregado a la muerte.",
-    "Abridme, ¡oh sacerdotes!,, las puertas del Tabernáculo de la justicia y santidad;",
-    "Esta es la puerta del Señor; * por ella entrarán los justos.",
-    "Y tu gloria ensalzaré. Tus alabanzas cantaré, * porque me has oído, y te hiciste mi salvador.",
+    "Abridme, ¡oh sacerdotes!, las puertas del Tabernáculo de la justicia y santidad; y entrado en ellas tributaré gracias al Señor.",
+    "Esta es la puerta del Señor, por ella entrarán los justos.",
+    "Aquí cantaré himnos de gratitud, * por haberme oído y sido mi salvador.",
     "La piedra que desecharon los arquitectos, * esa misma ha sido puesta por piedra angular del edificio.",
-    "El Señor es quien lo ha hecho, * y es una cosa sumamente admirable a nuestros ojos.",
-    "Este es el día que ha hecho el Señor. * Alegrémonos y recocijémonos en él.",
-    "¡Oh Señor!,, sálvame; concede,",
-    "Bendito el que viene en el nombre del Señor. * Desde la casa del Señor os bendecimos.",
-    "El Señor es Dios, y él nos ha alumbrado. * Celebrad el día solemne con espesas ramas, hasta el ángulo del altar.",
-    "¡Oh Señor!, tú eres mi Dios, * y a ti tributaré acciones de gracias; tú eres mi Dios,",
-    "Alabad al Señor por ser infinitamente bueno, * por ser eterna su misericordia."
+    "El Señor es quien lo ha hecho, * y es una cosa sumamente admirable a nuestros ojos. Este es el día que ha hecho el Señor.",
+    "Alegrémonos y recocijémonos en él.",
+    "¡Oh Señor!, sálvame; concede, Señor, un próspero suceso.",
+    "Bendito sea el que viene en el Nombre del Señor. Os hemos echado mil bendiciones desde la casa del Señor. * El Señor es Dios, y él nos ha alumbrado.",
+    "El Señor es Dios, y él nos ha alumbrado. Celebrad el día solemne de los Tabernáculos; * celebradle con enramadas de árboles frondosos que lleguen hasta los lados del altar.",
+    "¡Oh Señor!, tú eres mi Dios, y a ti tributaré acciones de gracias; * tú eres mi Dios, y tu gloria ensalzaré.",
+    "Alabad al Señor porque es tan bueno, * porque es eterna su misericordia."
    ]
   },
   "6": {
@@ -1591,8 +1591,8 @@
     "Tú ordenaste que * se guarden exactamente tus mandamientos.",
     "Ojalá que sean enderezados * mis pasos a observar tus justísimas leyes.",
     "Entonces no seré confundido, * cuando tuviere fijos mis ojos en todos tus preceptos.",
-    "Con sincero corazón te alabaré, * porque aprendí los juicios o disposiciones de tu justicia.",
-    "Observaré tus justos decretos; * no me desampares jamás.",
+    "Con sincero corazón te alabaré, * porque aprendí los juicios o disposiciones de tu justicia. Observaré tus justos decretos;",
+    "no me desampares jamás.",
     "¿Cómo enmendará el tierno joven su conducta? * Observando tus palabras o preceptos.",
     "Yo te he buscado con todo mi corazón; * no me dejes desviar de tus mandamientos.",
     "Dentro de mi corazón deposité tus palabras, * para no pecar contra ti.",
@@ -1601,7 +1601,7 @@
     "Me he deleitado más que en todos los tesoros, * en seguir el camino de tus preceptos.",
     "Yo contemplaré tus mandamientos, * y consideraré tus leyes.",
     "Me deleitaré en tus preceptos, * y no me olvidaré de tus palabras.",
-    "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
+    "Gloria al Padre, y al Hijo, * y al Espíritu Santo.",
     "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
@@ -1623,7 +1623,7 @@
     "He escogido el camino de la verdad; * tengo siempre presentes tus juicios.",
     "Me he apoyado, Señor, en los testimonios de tu ley; * no permitas que me vea confundido.",
     "Corrí gozoso por el camino de tus mandamientos, * cuando tú ensanchaste mi corazón.",
-    "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
+    "Gloria al Padre, y al Hijo, * y al Espíritu Santo.",
     "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
@@ -1702,7 +1702,7 @@
    "engR": "Señor, date prisa en socorrerme. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "3": {
-   "eng": "Rector sabio, Dios potente,\nque en todo pones concierto;\nalumbras por la mañana,\ny al mediodía das fuego:\n\nApaga el calor nocivo,\nestingue llamas de pleitos;\npaz al corazon sincera\nconfiere, y salud al cuerpo.\n\n* Hazlo así, Padre piísimo,\ny al Padre igual Unigénito,\ncon el Espíritu Santo,\nque reinas siglos sin término.\nAmén."
+   "eng": "Rector sabio, Dios potente,\nque en todo pones concierto;\nalumbras por la mañana,\ny al mediodía das fuego:\n\nApaga el calor nocivo,\nextingue llamas de pleitos;\npaz al corazón sincera\nconfiere, y salud al cuerpo.\n\nHazlo así, Padre piísimo,\ny al Padre igual Unigénito,\ncon el Espíritu Santo,\nque reinas siglos sin término.\nAmén."
   },
   "4": {
    "eng": "Aleluya, * tuyo soy yo, sálvame, Señor, aleluya, aleluya."
@@ -1713,13 +1713,13 @@
     "Desfallecieron mis ojos de tanto esperar tu promesa. * ¿Cuándo será, Señor, decía yo, que me consolarás?",
     "Porque me he quedado seco y árido, como un odre expuesto a la escarcha; * mas con todo, no me he olvidado de tus justísimos preceptos.",
     "¡Oh Señor! ¿Cuántos son los días de tu siervo? * ¿Cuándo harás justicia de mis perseguidores?",
-    "Me contaron los impíos mil fábulas y fruslerías, * ¡cuán diferente es todo esto de tu santa ley!",
-    "Todos tus preceptos son la verdad pura. * Me han perseguido injustamente, socórreme tú ¡oh Señor!",
-    "Poco faltó que no dieran conmigo en tierra; * pero yo no dejé jamás tus preceptos.",
-    "Vivifícame, ¡oh Señor!, según tu misericordia; * y observaré los mandamientos salidos de tu divina boca.",
+    "Me contaron los impíos mil * fábulas y fruslerías,",
+    "¡cuán diferente es todo esto de tu santa ley! * Todos tus preceptos son la verdad pura. Me han perseguido injustamente, socórreme tú ¡oh Señor!",
+    "Poco faltó que no * dieran conmigo en tierra;",
+    "pero yo no dejé jamás tus preceptos. Vivifícame, ¡oh Señor!, según tu misericordia; * y observaré los mandamientos salidos de tu divina boca.",
     "Eternamente, ¡oh Señor!, * permanece en los cielos tu palabra.",
-    "Tu verdad durará de generación en generación. * Tú fundaste la tierra, y ella subsiste.",
-    "En virtud de tu ordenación continúa el curso de los días, * pues todas las cosas te sirven.",
+    "Tu verdad durará de generación en generación. * Tú fundaste la tierra,",
+    "y ella subsiste. * En virtud de tu ordenación continúa el curso de los días, pues todas las cosas te sirven.",
     "A no haber sido tu ley el objeto de mi meditación, * hubiera sin duda perecido en mi angustia.",
     "Nunca jamás olvidaré tus justísimas instituciones; * pues me diste en ellas la vida.",
     "Tuyo soy yo, Señor, sálvame, * pues he investigado con ansia tus mandamientos.",
@@ -1730,11 +1730,11 @@
   "6": {
    "verses": [
     "¡Cuán amable me es tu ley!, ¡oh Señor! * todo el día es materia de mi meditación.",
-    "Con tu mandamiento o ley divina me hiciste superior en * prudencia a mis enemigos;",
-    "Porque * le tengo",
-    "Permanentemente * ante mis ojos.",
+    "Con tu mandamiento o ley divina me hiciste superior en prudencia a mis enemigos; * porque le tengo permanentemente ante mis ojos.",
     "He comprendido yo más que todos mis maestros, * porque tus mandamientos son mi meditación continua.",
     "Alcancé más que los ancianos, * porque he ido investigando tus preceptos.",
+    "Desvié mis pies de todo mal camino, * para obedecer tus palabras.",
+    "De tus estatutos no me he desviado, * porque tú me lo prescribiste por ley.",
     "¡Oh cuán dulces son a mi paladar tus palabras!; * más que la miel a mi boca.",
     "De tus mandamientos saqué gran caudal de ciencia; * por eso aborrezco toda senda de iniquidad.",
     "Antorcha para mis pies es tu palabra; * y luz para mis sendas.",
@@ -1762,8 +1762,8 @@
     "Desfallecieron mis ojos, esperando me viniera de ti la salvación, * y el cumplimiento de tu palabra.",
     "Trata a tu siervo conforme a tu misericordia, * y enséñame tus justísimos decretos.",
     "Siervo tuyo soy yo; * dame inteligencia para que comprenda tus preceptos.",
-    "Tiempo es, oh Señor, de obrar con rigor; * los soberbios han echado por el suelo su ley.",
-    "Por lo mismo he amado tus mandamientos * más que el oro y los topacios.",
+    "Tiempo es, oh Señor, * de obrar con rigor;",
+    "los soberbios han echado por el suelo su ley. * Por lo mismo he amado tus mandamientos más que el oro y los topacios.",
     "Por eso me encaminé por la senda de todos tus preceptos, * y he detestado todos los caminos de la iniquidad."
    ]
   },
@@ -1771,7 +1771,7 @@
    "eng": "Llevad unos las cargas de otros, y así cumpliréis la Ley de Cristo."
   },
   "9": {
-   "eng": "℟.br. Es eterna, Señor, * tu palabra.\nTu fidelidad, de generación en generación.\ntu palabra.\nGloria al Padre, al Hijo, * y al Espíritu Santo.\nEs eterna, Señor, * tu palabra."
+   "eng": "℟.br. Es eterna, Señor, * tu palabra.\n℣. Tu fidelidad, de generación en generación.\n℟. Tu palabra.\nGloria al Padre, y al Hijo, y al Espíritu Santo.\n℟. Es eterna, Señor, * tu palabra."
   }
  },
  "tertia": {
@@ -1779,8 +1779,8 @@
    "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén.\n\nDios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.\n\nCreo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor: que fue concebido por obra del Espíritu Santo, nació de Santa María Virgen; padeció bajo el poder de Poncio Pilato; fue crucificado, muerto y sepultado; descendió a los infiernos; al tercer día resucitó de entre los muertos; subió a los cielos, y está sentado a la diestra de Dios Padre todopoderoso; desde allí ha de venir a juzgar a los vivos y a los muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén."
   },
   "10": {
-   "eng": "℣. Yo dije, Señor, ten misericordia.",
-   "engR": "℟. Sáname. * Porque he pecado contra ti."
+   "eng": "℣. Yo dije: Señor, ten misericordia de mí.",
+   "engR": "℟. Sana mi alma, porque he pecado contra ti."
   },
   "11": {
    "eng": "Padre nuestro, que estás en los cielos, santificado sea tu nombre, venga a nosotros tu reino, hágase tu voluntad así en la tierra como en el cielo. El pan nuestro de cada día dánosle hoy; perdónanos nuestras deudas, así como nosotros perdonamos a nuestros deudores, y no nos dejes caer en la tentación, mas líbranos del mal. Amén."
@@ -1796,7 +1796,7 @@
    "engR": "Señor, date prisa en socorrerme. Gloria al Padre, y al Hijo, y al Espíritu Santo."
   },
   "3": {
-   "eng": "Divino Espíritu Santo,\ncon Padre e Hijo Dios uno,\nven ahora a nuestro pecho\nderramado en amor puro.\n\nBoca, lengua, mente y alma\ncanten la alabanza, y juntos\nestreche los corazones\nde la caridad el nudo.\n\n* Hazlo así, Padre piísimo,\ny al Padre igual Hijo único,\ncon el Espíritu Santo,\nque reinas siglos sin número.\nAmén."
+   "eng": "Divino Espíritu Santo,\ncon Padre e Hijo Dios uno,\nven ahora a nuestro pecho\nderramado en amor puro.\n\nBoca, lengua, mente y alma\ncanten la alabanza, y juntos\nestreche los corazones\nde la caridad el nudo.\n\nHazlo así, Padre piísimo,\ny al Padre igual Hijo único,\ncon el Espíritu Santo,\nque reinas siglos sin número.\nAmén."
   },
   "4": {
    "eng": "Aleluya, * guíame, Señor, por la senda de tus mandamientos, aleluya, aleluya."
@@ -1816,9 +1816,9 @@
     "Y nunca quites de mi boca la palabra de la verdad, * ya que tanto he confiado en tus promesas.",
     "Con eso observaré siempre tu ley, * para siempre y por los siglos de los siglos.",
     "Yo caminaré con libertad y sosiego, * porque busqué tus mandamientos.",
-    "Y hablaré de tus testimonios delante de los reyes, * y no me avergonzaré de ellos.",
-    "Y alzaré mis manos hacia tus * mandamientos,",
-    "Que he amado siempre; * y meditaré tus justas disposiciones."
+    "Y hablaré de tus testimonios delante de los reyes, y no me avergonzaré de ellos. * Y me recrearé en tus preceptos,",
+    "objeto de mi amor.",
+    "Y alzaré mis manos hacia tus mandamientos, que he amado siempre; * y meditaré tus justas disposiciones."
    ]
   },
   "6": {
@@ -1829,13 +1829,13 @@
     "Me acordé, ¡oh Señor! de tus eternos juicios, * y quedé consolado.",
     "Desmayé de dolor, * por causa de los pecadores que abandonaron tu ley.",
     "En el lugar de mi destierro eran tus justísimos * mandamientos el asunto de mis cánticos.",
-    "Durante la noche me acordaba de invocar tu Nombre, * oh Señor; y así guardaba exactamente tu ley.",
-    "Esto * pasó en mí,",
-    "Porque yo procuraba observar * bien tus justísimos decretos.",
+    "Durante la noche me acordaba de invocar tu Nombre, * oh Señor;",
+    "y así guardaba exactamente tu ley. * Esto pasó en mí, porque yo procuraba observar bien tus justísimos decretos.",
     "Yo dije: ¡Oh Señor!, * mi porción de herencia es el guardar tu santa ley.",
     "Tu favor he implorado de todo mi corazón; * apiádate de mí, según tu promesa.",
-    "He examinado mi vida, * y enderezado mis pasos a la observancia de tus mandamientos.",
-    "Resuelto estoy, * y nadie me arredrará de cumplir tus preceptos.",
+    "He examinado mi vida,",
+    "y enderezado mis pasos a la observancia de tus mandamientos. * Resuelto estoy, y nadie me arredrará de cumplir tus preceptos.",
+    "Los lazos de los pecadores me rodean por todas partes; * mas yo no me olvido de tu ley.",
     "A medianoche me levantaba a tributarte gracias * por tus juicios llenos de justicia.",
     "Yo entro a la parte, * o tengo sociedad con todos los que te temen y observan tus mandamientos.",
     "Llena está la tierra, ¡oh Señor!, de tu piedad. * Amaéstrame en tus justísimos preceptos."
@@ -1865,7 +1865,7 @@
    "eng": "Dios es amor y el que permanece en el amor, permanece en Dios, y Dios en él."
   },
   "9": {
-   "eng": "℟.br. Inclina mi corazón * a tus preceptos.\nAparta mis ojos de las vanidades, dame vida con tu palabra.\na tus preceptos.\nGloria al Padre, al Hijo, * y al Espíritu Santo.\nInclina mi corazón * a tus preceptos."
+   "eng": "℟.br. Inclina mi corazón * a tus preceptos.\n℣. Aparta mis ojos de las vanidades, dame vida con tu palabra.\n℟. A tus preceptos.\nGloria al Padre, y al Hijo, y al Espíritu Santo.\n℟. Inclina mi corazón * a tus preceptos."
   }
  },
  "vesperae": {
@@ -1877,7 +1877,7 @@
    "engR": "Como el olor del incienso ante tu presencia."
   },
   "12": {
-   "eng": "* Mi alma glorifica al Señor."
+   "eng": "Mi alma glorifica al Señor."
   },
   "13": {
    "verses": [
@@ -1891,7 +1891,7 @@
     "Colmó de bienes a los hambrientos: * y a los ricos despidió vacíos.",
     "Acogió a Israel, su siervo, * acordándose de su misericordia.",
     "Según lo había prometido a nuestros padres: * a Abrahán y a su descendencia para siempre.",
-    "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
+    "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
     "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
@@ -1902,8 +1902,8 @@
    "eng": "Señor, Dios omnipotente, que nos has concedido llegar al principio de este día: sálvanos hoy con tu virtud; para que en este día no caigamos en ningún pecado, sino que nuestras palabras, pensamientos y obras se dirijan siempre al cumplimiento de tu santa ley. Por nuestro Señor Jesucristo. Amén."
   },
   "16": {
-   "eng": "Señor, escucha nuestra oración.",
-   "engR": "Y llegue a ti nuestro clamor."
+   "eng": "Señor, escucha mi oración.",
+   "engR": "Y llegue a ti mi clamor."
   },
   "17": {
    "eng": "Bendigamos al Señor. Demos gracias a Dios."
@@ -1920,7 +1920,7 @@
    "antiphonEng": "Dijo el Señor a mi Señor: * Siéntate a mi diestra.",
    "verses": [
     "El Señor dijo a mi Señor: * Siéntate a mi diestra,",
-    "Mientras que yo pongo a tus * enemigos por tarima de tus pies.",
+    "mientras que yo pongo a tus * enemigos por tarima de tus pies.",
     "De Sión hará salir el Señor el cetro de tu poder; * domina tú en medio de tus enemigos.",
     "Contigo está el principado el día de tu poderío, en medio de los resplandores de la santidad; * de mis entrañas te engendré, antes de existir el lucero de la mañana.",
     "Juró el Señor, y no se arrepentirá, y dijo: * Tú eres sacerdote sempiterno, según el orden de Melquisedec.",
@@ -1935,25 +1935,25 @@
     "Oh Señor, * te loaré con todo mi corazón en la sociedad de los justos y en tu pueblo.",
     "Grandes son las obras del Señor; * exquisitas para todos sus fines.",
     "Gloria es y magnificencia cada obra suya; * y su justicia permanece firme por los siglos de los siglos.",
-    "Memoria eterna † dejó de sus * maravillas;",
-    "Misericordioso y * compasivo es el Señor.",
-    "Para darle la herencia de las naciones; * las obras de sus manos son verdad y justicia.",
+    "Memoria eterna dejó de sus maravillas; † misericordioso y compasivo es el Señor. * Ha dado alimento a los que le temen.",
+    "Se acordará siempre de su alianza: * Manifestará a su pueblo las obras de su poder, para darle la herencia de las naciones;",
+    "las obras de sus * manos son verdad y justicia.",
     "Fieles e invariables son todos sus mandamientos, † confirmados en todos los siglos, * y fundados en la verdad y en la rectitud.",
-    "Envió la * redención a su pueblo;",
-    "Estableció para siempre su alianza. * Santo y terrible es el Nombre del Señor.",
-    "El temor del Señor es el principio o la suma de la sabiduría. * Sabios son todos los que obran con este temor; su alabanza dura por los siglos de los siglos."
+    "Envió la redención a su pueblo; * estableció para siempre su alianza.",
+    "Santo y terrible es el Nombre del Señor. El temor del Señor es el principio o la suma de la sabiduría. * Sabios son todos los que obran con este temor;",
+    "su alabanza dura por los siglos * de los siglos."
    ]
   },
   "5": {
    "antiphonEng": "El que teme al Señor * muy exacto es en cumplir sus mandamientos.",
    "verses": [
-    "Bienaventurado el hombre que teme al Señor, * y que toda su afición la pone en cumplir sus mandamientos.",
+    "Santo y terrible es el Nombre del Señor. El temor del Señor es el principio o la suma de la sabiduría. Sabios son todos los que obran con este temor; * su alabanza dura por los siglos de los siglos. Bienaventurado el hombre que teme al Señor, y que toda su afición la pone en cumplir sus mandamientos.",
     "Poderosa será sobre la tierra la descendencia suya; * bendita será la generación de los justos.",
     "Gloria y riquezas habrá en su casa, * y su justicia durará eternamente.",
     "Ha nacido entre las tinieblas la luz para los de corazón recto; * el misericordioso, el benigno, el justo.",
-    "Dichoso el hombre que se compadece, † y da prestado al pobre; * y que dispensa sus palabras con discreción,",
-    "Fortalecido * está su corazón;",
-    "No vacilará el justo; † y mirará con desprecio a sus enemigos.",
+    "Dichoso el hombre que se compadece, † y da prestado al pobre; * y que dispensa sus palabras con discreción, porque jamás resbalará.",
+    "El justo vivirá eternamente en la memoria de Dios y de los hombres; * no temerá al oír malas nuevas.",
+    "Su corazón está siempre dispuesto a esperar en el Señor. † Fortalecido está su corazón; * no vacilará el justo; y mirará con desprecio a sus enemigos.",
     "Derramó a manos llenas sus bienes entre los pobres; † su justicia permanece eternamente; * su fortaleza será exaltada con gloria.",
     "Lo verá el pecador, y se irritará; rechinará los dientes, † y se consumirá; * pero los deseos y esfuerzos de los pecadores se desvanecerán como el humo."
    ]
@@ -1965,9 +1965,9 @@
     "Sea bendito el Nombre del Señor desde ahora * mismo hasta el fin de los siglos.",
     "Desde oriente hasta poniente es digno de * ser bendecido el Nombre del Señor.",
     "Excelso es el Señor sobre todas las gentes, * y su gloria sobrepuja los cielos.",
-    "¿Quién como el Señor nuestro Dios? * El tiene su morada en las alturas,",
-    "Y está cuidando de las criaturas * humanas en el cielo y en la tierra.",
-    "Para colocarlo entre los príncipes, * entre los príncipes de su pueblo.",
+    "¿Quién como el Señor nuestro Dios? El tiene su morada en las alturas, * y está cuidando de las criaturas humanas en el cielo y en la tierra.",
+    "Levanta del polvo de la tierra al desvalido, * y alza del estercolero al pobre,",
+    "para colocarlo entre los príncipes, * entre los príncipes de su pueblo.",
     "El a la mujer antes estéril, * la hace vivir en su casa alegre de verse rodeada de sus hijos."
    ]
   },
@@ -1981,27 +1981,27 @@
     "¿Qué tienes tú, ¡oh mar!, que así has huido?; * y tú, ¡oh Jordán!, ¿por qué has vuelto atrás?",
     "Vosotros, ¡oh montes!, ¿por qué brincasteis de gozo como carneros?; * y ¿vosotros, ¡oh collados!, como corderitos?",
     "Por la presencia del Señor se estremeció la tierra, * por la presencia del Dios de Jacob,",
-    "Que convirtió la peña en estanque de aguas, * y en fuentes de aguas la árida roca.",
+    "que convirtió la peña en estanque de aguas, * y en fuentes de aguas la árida roca.",
     "No a nosotros, Señor, no a nosotros, * sino a tu Nombre da toda la gloria,",
-    "Para hacer brillar tu misericordia y tu verdad; * a fin de que jamás digan los gentiles: ¿Dónde está su Dios?",
-    "Nuestro Dios está en los cielos, * él ha hecho todo cuanto quiso.",
-    "Los ídolos de las naciones no son más que plata y oro, * obra de las manos de los hombres.",
+    "para hacer brillar tu misericordia y tu verdad; * a fin de que jamás digan los gentiles:",
+    "¿Dónde está su Dios? * Nuestro Dios está en los cielos,",
+    "él ha hecho todo cuanto quiso. Los ídolos de las naciones no son más que plata y oro, * obra de las manos de los hombres.",
     "Boca tienen, mas no hablarán; * tienen ojos pero jamás verán.",
-    "Orejas tienen, y nada oirán; * narices, y no olerán.",
-    "Tienen manos, y no palparán; † pies, mas no andarán; * ni articularán una voz con su garganta.",
+    "Orejas tienen, * y nada oirán;",
+    "narices, y no olerán. Tienen manos, † y no palparán; pies, mas no andarán; * ni articularán una voz con su garganta.",
     "Semejantes sean a estos ídolos los que los hacen, * y cuantos ponen en ellos su confianza.",
     "La casa de Israel colocó en el Señor su esperanza; * el Señor es su amparo y su protección.",
     "La casa de Aarón esperó en el Señor; * el Señor es su amparo y su protección.",
     "En el Señor han esperado los que le temen y adoran; * el Señor es su amparo y su protección.",
-    "Se acordó de nosotros el Señor, * y nos bendijo.",
-    "Bendijo a la casa de Israel, * bendijo a la casa de Aarón.",
-    "Bendijo a todos los que temen al Señor, * así a los pequeños como a los grandes.",
-    "Aumente el Señor sobre vosotros sus bendiciones, * sobre vosotros y sobre vuestros hijos.",
+    "Se acordó de * nosotros el Señor,",
+    "y nos bendijo. Bendijo a la casa de Israel, * bendijo a la casa de Aarón.",
+    "Bendijo a todos los que temen al Señor, así a los pequeños como a los grandes. * Aumente el Señor sobre vosotros sus bendiciones,",
+    "sobre vosotros y * sobre vuestros hijos.",
     "Benditos seais vosotros del Señor, * el cual hizo el cielo y la tierra.",
     "El cielo empíreo es para el Señor; * mas la tierra la dio a sus hijos de los hombres.",
     "¡Oh Señor!, no te alabarán los muertos, * ni cuantos descienden al sepulcro.",
     "Nosotros sí, los que vivimos, bendecimos al Señor desde ahora, * y por todos los siglos.",
-    "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
+    "Gloria al Padre, y al Hijo, * y al Espíritu Santo.",
     "Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
    ]
   },
@@ -2009,7 +2009,7 @@
    "eng": "Bendito sea Dios, Padre de nuestro Señor Jesucristo, Padre de las misericordias, y Dios de toda consolación, el cual nos consuela en todas nuestras aflicciones."
   },
   "9": {
-   "eng": "De la luz Creador óptimo,\nque luz á los dias prestas,\ny el orígen de las cosas\nhaciendo la luz empiezas.\n\nQue a tarde y mañana juntos\nun día llamarse ordenas:\nnegro se desliza el caos,\noye las súplicas nuestras.\n\nNo sea que al peso del crimen\nel alma la vida pierda,\ncuando se enlaza en pecados,\nporque en lo eterno no piensa.\n\nLlame a las puertas del cielo,\nbusque vital recompensa;\nhuyamos de toda culpa,\ny expiemos toda ofensa.\n\n* Hazlo así, Padre piísimo,\nHijo, su imagen perfecta,\ncon el Espíritu Santo,\nDios que por los siglos reinas.\nAmén."
+   "eng": "De la luz Creador óptimo,\nque luz a los días prestas,\ny el origen de las cosas\nhaciendo la luz empiezas.\n\nQue a tarde y mañana juntos\nun día llamarse ordenas:\nnegro se desliza el caos,\noye las súplicas nuestras.\n\nNo sea que al peso del crimen\nel alma la vida pierda,\ncuando se enlaza en pecados,\nporque en lo eterno no piensa.\n\nLlame a las puertas del cielo,\nbusque vital recompensa;\nhuyamos de toda culpa,\ny expiemos toda ofensa.\n\nHazlo así, Padre piísimo,\nHijo, su imagen perfecta,\ncon el Espíritu Santo,\nDios que por los siglos reinas.\nAmén."
   }
  }
 }
