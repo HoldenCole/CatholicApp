@@ -1529,7 +1529,8 @@ object ContentStore {
             val m = alleluia.find(l) ?: return null
             if (m.range.first == 0) return null
             val n = Regex("[Aa]llel").findAll(m.value).count()
-            val e = bare(l.substring(0, m.range.first).trimEnd(' ', ',', '.', ';', ':')) ?: return null
+            val head = l.substring(0, m.range.first).trimEnd(' ', ',', '.', ';', ':')
+            val e = bare(head) ?: bare("$head.") ?: return null
             return e.trimEnd(' ', ',', '.', ';', ':') + ", " + List(n) { "aleluya" }.joinToString(", ") + "."
         }
         fun es(lat: String?): String? {

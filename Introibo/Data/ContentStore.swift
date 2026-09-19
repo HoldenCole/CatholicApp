@@ -1041,7 +1041,7 @@ final class ContentStore {
             let n = tail.components(separatedBy: "llel").count - 1
             let trimSet = CharacterSet(charactersIn: " ,.;:")
             let head = ns.substring(to: m.range.location).trimmingCharacters(in: trimSet)
-            guard let e = bare(head) else { return nil }
+            guard let e = bare(head) ?? bare(head + ".") else { return nil }
             let stem = e.trimmingCharacters(in: trimSet)
             return stem + ", " + Array(repeating: "aleluya", count: max(n, 1)).joined(separator: ", ") + "."
         }

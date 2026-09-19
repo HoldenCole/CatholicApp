@@ -46,6 +46,7 @@ def fold(t):
     t = unicodedata.normalize("NFD", t)
     t = "".join(c for c in t if unicodedata.category(c) != "Mn")
     t = t.lower().replace("æ", "ae").replace("œ", "oe").replace("j", "i").replace("v", "u").replace("qu", "c")
+    t = t.replace("ii", "i")  # proícias / projícias
     t = re.sub(r"[^a-z0-9 ]+", " ", t)
     return re.sub(r"\s+", " ", t).strip()
 
@@ -264,6 +265,18 @@ def main():
                 for f, secs in load(do_es / f"propers_{rite}.json").items():
                     pair_sections(secs, {}, "do-es-propers")
 
+    # 7. The psalter's lines (the preces' Miserére and De profúndis are
+    #    assembled at render time with their own punctuation).
+    ps_lat = load(ASSETS / "psalter.json")
+    ps_es = load(ES / "psalter_es.json")
+    for key in ("psalm50", "psalm129"):
+        for l, e in zip(ps_lat.get(key, {}).get("lat", []), (ps_es.get(key) or {}).get("lines") or []):
+            m = re.match(r"^\(?\d+[a-z]?:\d+[a-z]?\)?\s+(.*)$", l)
+            me = re.match(r"^\(?\d+[a-z]?:\d+[a-z]?\)?\s+(.*)$", e or "")
+            if m and me:
+                add(m.group(1), me.group(1).strip(), "psalter-preces")
+                always.add(norm(m.group(1)))
+
     # The Pater noster said in parts (the hours' "Et ne nos indúcas" /
     # "Sed líbera nos a malo" split): pieces of the same sourced Spanish.
     for k in list(corpus):
@@ -384,6 +397,12 @@ def main():
             stats[where + ":missing"] += 1
             if len(missing_examples) < 40:
                 missing_examples.append((where, norm(lat)[:90]))
+            # the apps fall back line by line: keep the lines that do resolve
+            for l in re.split(r"\n|<br\s*/?>", lat):
+                if l.strip() and not re.match(r"^[#!$&_(@/]", l.strip()):
+                    e1 = lookup1(l)
+                    if e1 is not None:
+                        used.setdefault(norm(render_line(l)), e1)
         else:
             stats[where + ":ok"] += 1
             k = norm(lat)
@@ -443,16 +462,7 @@ def main():
 
     for k in always:
         used.setdefault(k, corpus[k])
-    # the preces' psalms (Miserére, De profúndis) are assembled at render
-    # time from the psalter: their lines by Latin
-    ps_lat = load(ASSETS / "psalter.json")
-    ps_es = load(ES / "psalter_es.json")
-    for key in ("psalm50", "psalm129"):
-        for l, e in zip(ps_lat.get(key, {}).get("lat", []), (ps_es.get(key) or {}).get("lines") or []):
-            m = re.match(r"^\(?\d+[a-z]?:\d+[a-z]?\)?\s+(.*)$", l)
-            me = re.match(r"^\(?\d+[a-z]?:\d+[a-z]?\)?\s+(.*)$", e or "")
-            if m and me and norm(m.group(1)):
-                used.setdefault(norm(m.group(1)), me.group(1).strip())
+
     if os.environ.get("OFFICE_ES_DEBUG"):
         t = "℟.br. Christe, Fili Dei vivi, miserére nobis, * Allelúja, allelúja."
         print("DEBUG always", len(always), "paschal keys", sum(1 for k in always if "llelúja" in k), "target in corpus", t in corpus, "in always", t in always, [k for k in corpus if k.startswith("℟.br. Christe, Fili Dei vivi, mis")][:3])
@@ -461,8 +471,7 @@ def main():
     fixes = ES / "office_texts_fixes_es.json"
     if fixes.exists():
         for k, e in load(fixes).items():
-            if k in used:
-                used[k] = e
+            used[k] = e
     # a Spanish line keeping a ℣./℟. mark the Latin key does not carry, or
     # a different mark than the key's (a ℟.br. responsory reused as a ℣.)
     for k in list(used):
