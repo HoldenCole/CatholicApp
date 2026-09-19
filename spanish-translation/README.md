@@ -548,6 +548,18 @@ so integration cannot silently misalign.
   2 Tim 4:1 incipits, which had come from a Hebrew-based modern Bible or
   were missing, are now the Torres Amat text from the same module.
 
+  Collects and antiphons that carry a saint's name (the propers' [Name]
+  filled into "N.": "per beátum Hygínum Mártyrem tuum") are rendered in
+  Spanish from the template before the name goes in — the overlay holds
+  the text with "N." — with the name in its Spanish form from
+  `office_names_es.json` (every [Name] value of the three rites' propers,
+  Latin form → Spanish: Hygínum → Higinio). Both apps do this inside the
+  rubrics engine's name substitution; in English the lookups are unset
+  and nothing changes. `office_texts_fixes_es.json` also carries the
+  hand-written Spanish for the few texts no source supplies (the A
+  cunctis suffrage collect and rubric, the Paschal versicles and short
+  responsories, the invitatory halves, the Dedication collect).
+
 With this, EVERY content surface of the app outside the Divine Office
 corpus carries Spanish. What remains is the Office (multi-MB; see
 below).

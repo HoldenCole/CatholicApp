@@ -136,6 +136,15 @@ final class ContentStore {
             saintCommune: saintCommune,
             saintOfficeInherit: saintOfficeInherit
         )
+        wireOfficeSpanish()
+    }
+
+    /// The rubrics engine's Spanish lookups: the templated collects and
+    /// antiphons (the "N." still in them) and the saints' Spanish names.
+    private func wireOfficeSpanish() {
+        let texts = officeTextsES, names = officeNamesES
+        officeRubrics.spanishText = texts.isEmpty ? nil : { lat in texts[Self.officeNorm(lat)] }
+        officeRubrics.spanishName = names.isEmpty ? nil : { lat in names[lat.trimmingCharacters(in: .whitespaces)] }
     }
 
     // MARK: - Vernacular (Spanish overlay)
@@ -149,6 +158,8 @@ final class ContentStore {
     /// Spanish for the Office texts Divinum Officium's rubrics assemble, keyed
     /// by the normalised Latin (office_texts_es.json); empty in English.
     private var officeTextsES: [String: String] = [:]
+    /// The Spanish form of the propers' [Name] values (office_names_es.json).
+    private var officeNamesES: [String: String] = [:]
 
     /// The vernacular currently applied to the store.
     private(set) var vernacular: VernacularLanguage = .english
@@ -345,9 +356,11 @@ final class ContentStore {
         guard lang == .spanish else {
             uiStringsES = [:]
             officeTextsES = [:]
+            officeNamesES = [:]
             return
         }
         officeTextsES = load("office_texts_es", as: [String: String].self) ?? [:]
+        officeNamesES = load("office_names_es", as: [String: String].self) ?? [:]
         // Feast names: Spanish wins, missing keys keep their English.
         if let es = load("ordo_names_es", as: [String: String].self) {
             ordoNamesEn.merge(es) { _, spanish in spanish }

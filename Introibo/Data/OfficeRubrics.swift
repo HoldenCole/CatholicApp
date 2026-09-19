@@ -912,16 +912,31 @@ final class OfficeRubrics {
         return t.replacingOccurrences(of: "N.", with: name)
     }
 
-    /// The office's [Name] filled into every "N." of a part.
+    /// Spanish for a templated Latin text (the "N." still in it), and the
+    /// Spanish form of a proper's [Name] value; nil in English. Set by the
+    /// ContentStore when the vernacular is Spanish.
+    var spanishText: ((String) -> String?)? = nil
+    var spanishName: ((String) -> String?)? = nil
+
+    /// The office's [Name] filled into every "N." of a part. In Spanish the
+    /// vernacular is taken from the template before the name goes in, with
+    /// the name in its Spanish form; the English is never touched.
     private func withName(_ p: Hour.Part, _ src: Src?) -> Hour.Part {
         if src?.sec("Name") == nil { return p }
         func f(_ t: String?, _ eng: Bool) -> String? {
             guard let t, t.contains("N.") else { return t }
             return replaceNdot(t, nameFor(src, t, eng))
         }
+        func es(_ latT: String?) -> String? {
+            guard let lookup = spanishText, let latT, latT.contains("N.") else { return nil }
+            guard let template = lookup(latT), let nameLat = nameFor(src, latT, false) else { return nil }
+            guard let nameEs = spanishName?(nameLat) ?? nameFor(src, latT, true) else { return nil }
+            return replaceNdot(template, nameEs)
+        }
         var n = p
-        n.lat = f(p.lat, false); n.latR = f(p.latR, false); n.eng = f(p.eng, true); n.engR = f(p.engR, true)
-        n.antiphonLat = f(p.antiphonLat, false); n.antiphonEng = f(p.antiphonEng, true)
+        n.lat = f(p.lat, false); n.latR = f(p.latR, false)
+        n.eng = es(p.lat) ?? f(p.eng, true); n.engR = es(p.latR) ?? f(p.engR, true)
+        n.antiphonLat = f(p.antiphonLat, false); n.antiphonEng = es(p.antiphonLat) ?? f(p.antiphonEng, true)
         return n
     }
 

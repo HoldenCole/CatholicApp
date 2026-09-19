@@ -119,6 +119,7 @@ class AssetsDecodeTest {
         check("ordo_1955.json", { decode<Map<String, OrdoEntry>>("ordo_1955.json") }) { it.isNotEmpty() }
         check("ordo_pre1955.json", { decode<Map<String, OrdoEntry>>("ordo_pre1955.json") }) { it.isNotEmpty() }
         check("office_texts_es.json", { decode<Map<String, String>>("office_texts_es.json") }) { it.isNotEmpty() }
+        check("office_names_es.json", { decode<Map<String, String>>("office_names_es.json") }) { it.isNotEmpty() }
         // Divinum Officium's rubrics data (scripts/office_qa/build_office_psalterium.py).
         check("office_rules.json", { decode<Map<String, Map<String, OfficeRule>>>("office_rules.json") }) { it.keys.containsAll(listOf("1962", "1955", "pre1955")) && it.values.all { m -> m.isNotEmpty() } }
         check("office_psalterium.json", { decode<OfficePsalterium>("office_psalterium.json") }) { it.parts.isNotEmpty() && it.psalmi.isNotEmpty() }

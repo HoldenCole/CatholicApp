@@ -164,6 +164,8 @@ object ContentStore {
     /** Spanish for the Office texts Divinum Officium's rubrics assemble, keyed by
      *  the normalised Latin (spanish-translation/office_texts_es.json); empty in English. */
     private var officeTextsES: Map<String, String> = emptyMap()
+    /** The Spanish form of the propers' [Name] values (office_names_es.json). */
+    private var officeNamesES: Map<String, String> = emptyMap()
     internal var officePsalteriumData: OfficePsalterium = OfficePsalterium()
     internal var officeAntsData: Map<String, Map<String, List<PsalmiLine>>> = emptyMap()
     internal var officeCommuneData: Map<String, OfficePsalterium> = emptyMap()
@@ -199,6 +201,7 @@ object ContentStore {
             saintCommune = saintCommune,
             saintOfficeInherit = saintOfficeInherit,
         )
+        wireOfficeSpanish()
     }
 
     // ---- Vernacular (Spanish overlay) ----
@@ -429,6 +432,7 @@ object ContentStore {
         uiStringsES = emptyMap()
         dailyPsalmES = emptyMap()
         officeTextsES = emptyMap()
+        officeNamesES = emptyMap()
 
         if (lang == VernacularLanguage.SPANISH) {
             // Feast names: Spanish wins, missing keys keep their English.
@@ -438,6 +442,7 @@ object ContentStore {
             uiStringsES = (load<Map<String, String>>("ui_strings_es.json") ?: emptyMap())
                 .filterKeys { !it.startsWith("_") }
             officeTextsES = load<Map<String, String>>("office_texts_es.json") ?: emptyMap()
+            officeNamesES = load<Map<String, String>>("office_names_es.json") ?: emptyMap()
             // Mass propers (tranche-based import from the DO Espanol tree):
             // per-field vernacular replacement; uncovered days and the
             // deferred scripture fields keep their English.
@@ -1502,6 +1507,13 @@ object ContentStore {
         }
 
         return applyOfficeSpanish(assembled)
+    }
+
+    /** The rubrics engine's Spanish lookups: the templated collects and
+     *  antiphons (the "N." still in them) and the saints' Spanish names. */
+    private fun wireOfficeSpanish() {
+        officeRubrics.spanishText = if (officeTextsES.isEmpty()) null else { lat -> officeTextsES[officeNorm(lat)] }
+        officeRubrics.spanishName = if (officeNamesES.isEmpty()) null else { lat -> officeNamesES[lat.trim()] }
     }
 
     /** The key of office_texts_es.json: NFC, <br>/~ as spaces, whitespace collapsed. */

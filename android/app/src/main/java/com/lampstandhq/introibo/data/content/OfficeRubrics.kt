@@ -669,12 +669,29 @@ class OfficeRubrics(
         return text.replaceFirst(Regex("N\\. .*? N\\."), name).replace("N.", name)
     }
 
-    /** The office's [Name] filled into every "N." of a part. */
+    /** Spanish for a templated Latin text (the "N." still in it), and the
+     *  Spanish form of a proper's [Name] value; null in English. Set by the
+     *  ContentStore when the vernacular is Spanish. */
+    var spanishText: ((String) -> String?)? = null
+    var spanishName: ((String) -> String?)? = null
+
+    /** The office's [Name] filled into every "N." of a part. In Spanish the
+     *  vernacular is taken from the template before the name goes in, with
+     *  the name in its Spanish form; the English is never touched. */
     private fun withName(p: Hour.Part, src: Src?): Hour.Part {
         if (src?.sec("Name") == null) return p
         fun f(t: String?, eng: Boolean): String? = if (t == null || !t.contains("N.")) t else replaceNdot(t, nameFor(src, t, eng))
-        return p.copy(lat = f(p.lat, false), latR = f(p.latR, false), eng = f(p.eng, true), engR = f(p.engR, true),
-            antiphonLat = f(p.antiphonLat, false), antiphonEng = f(p.antiphonEng, true))
+        fun es(latT: String?): String? {
+            val lookup = spanishText ?: return null
+            if (latT == null || !latT.contains("N.")) return null
+            val template = lookup(latT) ?: return null
+            val nameLat = nameFor(src, latT, false) ?: return null
+            val nameEs = spanishName?.invoke(nameLat) ?: nameFor(src, latT, true) ?: return null
+            return replaceNdot(template, nameEs)
+        }
+        return p.copy(lat = f(p.lat, false), latR = f(p.latR, false),
+            eng = es(p.lat) ?: f(p.eng, true), engR = es(p.latR) ?: f(p.engR, true),
+            antiphonLat = f(p.antiphonLat, false), antiphonEng = es(p.antiphonLat) ?: f(p.antiphonEng, true))
     }
 
     private val parenAlleluia = Regex("\\s*\\((allel[uú]j?[ia][^)]*)\\)", RegexOption.IGNORE_CASE)
