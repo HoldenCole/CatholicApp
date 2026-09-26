@@ -96,18 +96,37 @@ platform :ios do
       </plist>
     PLIST
 
-    # Export
-    sh(
-      "xcodebuild",
-      "-exportArchive",
-      "-archivePath", archive_path,
-      "-exportPath", "..",
-      "-exportOptionsPlist", export_plist,
-      "-allowProvisioningUpdates",
-      "-authenticationKeyPath", key_path,
-      "-authenticationKeyID", ENV["ASC_KEY_ID"],
-      "-authenticationKeyIssuerID", ENV["ASC_ISSUER_ID"],
-    )
+    # Export. Automatic signing at export needs an App Store profile that
+    # carries the App Group; when none exists Xcode tries to create one
+    # through the API key, and if the portal refuses ("Authentication
+    # failed" / "No profiles ... were found") the build must still ship:
+    # strip the ad hoc signatures and export as before, WITHOUT the App
+    # Group, and say so loudly — the widgets stay broken until the Apple
+    # side is fixed (see the warning text below).
+    export = lambda do
+      sh(
+        "xcodebuild",
+        "-exportArchive",
+        "-archivePath", archive_path,
+        "-exportPath", "..",
+        "-exportOptionsPlist", export_plist,
+        "-allowProvisioningUpdates",
+        "-authenticationKeyPath", key_path,
+        "-authenticationKeyID", ENV["ASC_KEY_ID"],
+        "-authenticationKeyIssuerID", ENV["ASC_ISSUER_ID"],
+      )
+    end
+    app_group_signed = true
+    begin
+      export.call
+    rescue StandardError => e
+      app_group_signed = false
+      UI.important("Export with the App Group entitlement failed: #{e.message.lines.first&.strip}")
+      UI.important("Retrying without it so the build ships; the widgets will NOT share data with the app.")
+      sh("codesign", "--remove-signature", appex_path)
+      sh("codesign", "--remove-signature", app_path)
+      export.call
+    end
 
     # Find the exported IPA
     ipa_path = File.join("..", "Introibo.ipa")
@@ -121,10 +140,24 @@ platform :ios do
     sh("unzip", "-q", ipa_abs, "-d", unpacked)
     signed_app = Dir.glob(File.join(unpacked, "Payload", "*.app")).first
     UI.user_error!("No .app in the exported IPA") unless signed_app
+    portal_help = "The App Store profiles for app.introibo.Introibo and app.introibo.Introibo.widgets " \
+      "must carry the App Group group.app.introibo.shared. In the Apple Developer portal enable App Groups " \
+      "on both App IDs with that group, and give the App Store Connect API key a role that may manage " \
+      "certificates, identifiers and profiles (Admin, or App Manager with that access) so Xcode can " \
+      "regenerate the profiles at export — or archive and upload once from Xcode with automatic signing, " \
+      "which registers everything; later CI exports then find the profiles."
     [signed_app, File.join(signed_app, "PlugIns", "IntroiboWidgets.appex")].each do |bundle|
       ents = sh("codesign", "-d", "--entitlements", "-", "--xml", bundle, log: false)
-      UI.user_error!("#{File.basename(bundle)} was exported WITHOUT the App Group entitlement:\n#{ents}") unless ents.include?("group.app.introibo.shared")
-      UI.success("#{File.basename(bundle)}: App Group entitlement present")
+      if ents.include?("group.app.introibo.shared")
+        UI.success("#{File.basename(bundle)}: App Group entitlement present")
+      elsif app_group_signed
+        UI.user_error!("#{File.basename(bundle)} was exported WITHOUT the App Group entitlement:\n#{ents}")
+      else
+        msg = "#{File.basename(bundle)} shipped WITHOUT the App Group entitlement: the Readings and Sanctorale " \
+          "widgets will show 'Open the app to refresh' and ignore their settings. #{portal_help}"
+        UI.important(msg)
+        puts "::warning title=Widgets broken in this TestFlight build::#{msg}"
+      end
     end
 
     changelog = <<~NOTES
