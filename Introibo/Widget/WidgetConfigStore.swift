@@ -45,7 +45,7 @@ enum WidgetSlot: String, CaseIterable {
 
 enum WidgetConfigStore {
 
-    static let appGroup = "group.app.introibo.shared"
+    static let appGroup = "group.app.introibo.Introibo"
 
     /// App Group defaults when provisioned; standard defaults otherwise so
     /// nothing crashes in unsigned/simulator contexts.

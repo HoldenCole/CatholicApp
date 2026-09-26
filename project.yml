@@ -28,7 +28,7 @@ targets:
       path: Introibo/Introibo.entitlements
       properties:
         com.apple.security.application-groups:
-          - group.app.introibo.shared
+          - group.app.introibo.Introibo
     sources:
       - path: Introibo
         excludes:
@@ -70,7 +70,7 @@ targets:
       path: IntroiboWidgets/IntroiboWidgets.entitlements
       properties:
         com.apple.security.application-groups:
-          - group.app.introibo.shared
+          - group.app.introibo.Introibo
     sources:
       - path: IntroiboWidgets
       # Shared logic: the widget compiles the SAME files the app uses, so the

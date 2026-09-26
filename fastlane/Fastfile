@@ -141,14 +141,14 @@ platform :ios do
     signed_app = Dir.glob(File.join(unpacked, "Payload", "*.app")).first
     UI.user_error!("No .app in the exported IPA") unless signed_app
     portal_help = "The App Store profiles for app.introibo.Introibo and app.introibo.Introibo.widgets " \
-      "must carry the App Group group.app.introibo.shared. In the Apple Developer portal enable App Groups " \
+      "must carry the App Group group.app.introibo.Introibo. In the Apple Developer portal enable App Groups " \
       "on both App IDs with that group, and give the App Store Connect API key a role that may manage " \
       "certificates, identifiers and profiles (Admin, or App Manager with that access) so Xcode can " \
       "regenerate the profiles at export — or archive and upload once from Xcode with automatic signing, " \
       "which registers everything; later CI exports then find the profiles."
     [signed_app, File.join(signed_app, "PlugIns", "IntroiboWidgets.appex")].each do |bundle|
       ents = sh("codesign", "-d", "--entitlements", "-", "--xml", bundle, log: false)
-      if ents.include?("group.app.introibo.shared")
+      if ents.include?("group.app.introibo.Introibo")
         UI.success("#{File.basename(bundle)}: App Group entitlement present")
       elsif app_group_signed
         UI.user_error!("#{File.basename(bundle)} was exported WITHOUT the App Group entitlement:\n#{ents}")
