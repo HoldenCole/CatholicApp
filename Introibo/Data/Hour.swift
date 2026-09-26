@@ -45,6 +45,13 @@ struct Hour: Identifiable, Decodable, Hashable, ScheduledHour {
         var variationKey: String? = nil
         var antiphonLat: String? = nil
         var antiphonEng: String? = nil
+        // The antiphon this part opens (its own antiphonLat, or lat for a
+        // standalone antiphon before a run of psalms) is intoned only up to
+        // the asterisk before the psalm, the whole antiphon following the
+        // psalm(s) — the older books' rule for offices below double rank.
+        // nil/false: doubled (said whole before and after). Set by the
+        // assembler; the views render it (see AntiphonPlacement).
+        var antiphonIntoned: Bool? = nil
 
         struct Verse: Decodable, Hashable {
             let lat: String

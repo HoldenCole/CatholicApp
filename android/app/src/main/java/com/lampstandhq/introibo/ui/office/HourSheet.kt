@@ -50,6 +50,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.strippingEm
+import com.lampstandhq.introibo.data.content.AntiphonPlacement
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.search.ContentType
 import com.lampstandhq.introibo.data.search.DeepLinkTarget
@@ -98,6 +99,8 @@ fun HourSheet(
     val notifStore = remember { NotificationStore(appContext) }
     val schedules by notifStore.allSchedules.collectAsState(initial = emptyList())
     val hasNotification = schedules.any { it.id == "office.${hour.slug}" && it.isEnabled }
+    // The antiphon repeated after the last psalm of each run, by part index.
+    val antiphonRepeats = remember(hour) { AntiphonPlacement.repeats(hour.parts) }
 
     // Back button + header occupy LazyColumn indices 0 and 1; parts begin at 2,
     // so part i sits at list index i + HEADER_ITEM_COUNT.
@@ -169,13 +172,18 @@ fun HourSheet(
             }
 
             // Parts (list index 2 onward; key "part:<i>" mirrors the extractor)
-            itemsIndexed(hour.parts, key = { i, _ -> "part:$i" }) { _, part ->
+            itemsIndexed(hour.parts, key = { i, _ -> "part:$i" }) { i, part ->
                 Column(
                     modifier = Modifier
                         .padding(horizontal = 20.dp)
                         .padding(bottom = 22.dp),
                 ) {
                     PartView(part, onLinkTap)
+                    // The antiphon said again, whole, after the last psalm it covers.
+                    antiphonRepeats[i]?.let { (lat, eng) ->
+                        Spacer(modifier = Modifier.height(14.dp))
+                        AntiphonRepeatBlock(lat, eng, onLinkTap)
+                    }
                 }
             }
 
@@ -360,7 +368,10 @@ private fun PartView(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     when (p.type) {
         "vr" -> VrBlock(p, onLinkTap)
         "hymn" -> HymnBlock(p, onLinkTap)
-        "antiphon" -> SimpleBlock(p, labelFallback = "Antíphona", onLinkTap = onLinkTap)
+        "antiphon" -> SimpleBlock(
+            if (p.antiphonIntoned == true) p.copy(lat = p.lat?.let(AntiphonPlacement::intoned), eng = p.eng?.let(AntiphonPlacement::intoned)) else p,
+            labelFallback = "Antíphona", onLinkTap = onLinkTap,
+        )
         "psalm" -> PsalmBlock(p, onLinkTap)
         "capitulum" -> CapitulumBlock(p, onLinkTap)
         "canticle" -> PsalmBlock(p, onLinkTap)
@@ -481,6 +492,19 @@ private fun SimpleBlock(p: Hour.Part, labelFallback: String, onLinkTap: (DeepLin
     }
 }
 
+/** "Ant." and the whole antiphon, printed after the last psalm it covers. */
+@Composable
+private fun AntiphonRepeatBlock(lat: String, eng: String?, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
+    val colors = IntroiboTheme.colors
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        SmallLabel(text = "Ant.", color = colors.sanctuaryRed)
+        BilingualLine(lat = lat, eng = eng ?: "", sideBySide = true, onLinkTap = onLinkTap)
+    }
+}
+
 @Composable
 private fun PsalmBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     val colors = IntroiboTheme.colors
@@ -491,8 +515,14 @@ private fun PsalmBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         if (!p.antiphonLat.isNullOrEmpty()) {
+            // Intoned only (older books, below double rank): the incipit up to the asterisk.
+            val intoned = p.antiphonIntoned == true
             SmallLabel(text = "Ant.", color = colors.sanctuaryRed)
-            BilingualLine(lat = p.antiphonLat, eng = p.antiphonEng ?: "", sideBySide = true, onLinkTap = onLinkTap)
+            BilingualLine(
+                lat = if (intoned) AntiphonPlacement.intoned(p.antiphonLat) else p.antiphonLat,
+                eng = (p.antiphonEng ?: "").let { if (intoned) AntiphonPlacement.intoned(it) else it },
+                sideBySide = true, onLinkTap = onLinkTap,
+            )
             Spacer(modifier = Modifier.height(4.dp))
         }
 

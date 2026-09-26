@@ -730,7 +730,9 @@ struct OfficeAssembler {
             }
             if !resolution.append.isEmpty { shaped += resolution.append.map { inlinePsalmText($0) } }
         }
-        let finalShaped = shaped
+        // The older books intone some antiphons only up to the asterisk
+        // before the psalm; the views repeat every antiphon after its psalms.
+        let finalShaped = resolution.map { AntiphonPlacement.markIntonation(shaped, hourSlug: template.slug, office: $0.office, rite: rite) } ?? shaped
 
         return Hour(
             slug: template.slug,

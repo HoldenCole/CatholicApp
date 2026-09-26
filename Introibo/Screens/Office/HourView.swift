@@ -13,6 +13,9 @@ struct HourView: View {
     @State private var showAddToRule = false
     @State private var hasNotification = false
 
+    /// The antiphon repeated after the last psalm of each run, by part index.
+    private var antiphonRepeats: [Int: AntiphonPlacement.Repeat] { AntiphonPlacement.repeats(hour.parts) }
+
     private func refreshNotificationState() {
         hasNotification = NotificationStore.schedule(for: "office.\(hour.slug)")?.isEnabled ?? false
     }
@@ -28,8 +31,14 @@ struct HourView: View {
                             VStack(alignment: .leading, spacing: 22) {
                                 intro
                                 ForEach(Array(hour.parts.enumerated()), id: \.offset) { offset, part in
-                                    partView(part)
-                                        .id("part:\(offset)")
+                                    VStack(alignment: .leading, spacing: 14) {
+                                        partView(part)
+                                        // The antiphon said again, whole, after the last psalm it covers.
+                                        if let rep = antiphonRepeats[offset] {
+                                            antiphonRepeatBlock(lat: rep.lat, eng: rep.eng)
+                                        }
+                                    }
+                                    .id("part:\(offset)")
                                 }
                                 RelatedLinksSection(related: hour.related)
                                 ReferencedBySection(sources: ContentStore.shared.linkGraph.referencedBy(
@@ -171,7 +180,7 @@ struct HourView: View {
         switch p.type {
         case "vr":        vrBlock(p)
         case "hymn":      hymnBlock(p)
-        case "antiphon":  simpleBlock(p, labelFallback: "Antíphona")
+        case "antiphon":  simpleBlock(p.antiphonIntoned == true ? AntiphonPlacement.intonedPart(p) : p, labelFallback: "Antíphona")
         case "psalm":     psalmBlock(p)
         case "capitulum": capitulumBlock(p)
         case "canticle":  psalmBlock(p)
@@ -263,14 +272,26 @@ struct HourView: View {
         }
     }
 
+    /// "Ant." and the whole antiphon, printed after the last psalm it covers.
+    private func antiphonRepeatBlock(lat: String, eng: String?) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text("Ant.")
+                .smallLabel(color: Color.sanctuaryRed)
+            BilingualLine(lat: lat, eng: eng ?? "", sideBySide: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
     private func psalmBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             if let antLat = p.antiphonLat, !antLat.isEmpty {
+                // Intoned only (older books, below double rank): the incipit up to the asterisk.
+                let intoned = p.antiphonIntoned == true
                 Text("Ant.")
                     .smallLabel(color: Color.sanctuaryRed)
                 BilingualLine(
-                    lat: antLat,
-                    eng: p.antiphonEng ?? "",
+                    lat: intoned ? AntiphonPlacement.intoned(antLat) : antLat,
+                    eng: intoned ? AntiphonPlacement.intoned(p.antiphonEng ?? "") : (p.antiphonEng ?? ""),
                     sideBySide: true
                 )
                 .padding(.bottom, 4)

@@ -60,6 +60,25 @@ platform :ios do
       "archive",
     )
 
+    # The archive above is UNSIGNED, so nothing has embedded the targets'
+    # entitlements — the App Group the widget extension shares with the app.
+    # -exportArchive re-signs from whatever the archive's binaries carry, and
+    # a binary with no signature carries nothing: every TestFlight build
+    # shipped without com.apple.security.application-groups, the app and the
+    # widgets each got a private container, and the Readings and Sanctorale
+    # widgets never saw the snapshots the app wrote ("Open the app to
+    # refresh…" for ever; widget settings without effect). Sign the archived
+    # binaries ad hoc here WITH their entitlements (xcodegen writes the files
+    # from project.yml) so the distribution signature keeps the App Group.
+    app_path = File.join(archive_path, "Products", "Applications", "Introibo.app")
+    appex_path = File.join(app_path, "PlugIns", "IntroiboWidgets.appex")
+    app_ent = File.expand_path("../Introibo/Introibo.entitlements")
+    appex_ent = File.expand_path("../IntroiboWidgets/IntroiboWidgets.entitlements")
+    [app_ent, appex_ent].each { |f| UI.user_error!("Missing entitlements file #{f} — run xcodegen generate") unless File.exist?(f) }
+    UI.user_error!("Widget extension not in archive: #{appex_path}") unless File.directory?(appex_path)
+    sh("codesign", "--force", "--sign", "-", "--entitlements", appex_ent, appex_path)
+    sh("codesign", "--force", "--sign", "-", "--entitlements", app_ent, app_path)
+
     # Write export options plist
     export_plist = File.join(Dir.tmpdir, "ExportOptions.plist")
     File.write(export_plist, <<~PLIST)
@@ -94,6 +113,19 @@ platform :ios do
     ipa_path = File.join("..", "Introibo.ipa")
     ipa_abs = File.expand_path(ipa_path)
     UI.message("Looking for IPA at: #{ipa_abs}")
+
+    # Refuse to ship a build whose app or widget extension lost the App Group:
+    # the widgets would be broken again, silently.
+    unpacked = File.join(Dir.tmpdir, "Introibo-ipa-check")
+    FileUtils.rm_rf(unpacked)
+    sh("unzip", "-q", ipa_abs, "-d", unpacked)
+    signed_app = Dir.glob(File.join(unpacked, "Payload", "*.app")).first
+    UI.user_error!("No .app in the exported IPA") unless signed_app
+    [signed_app, File.join(signed_app, "PlugIns", "IntroiboWidgets.appex")].each do |bundle|
+      ents = sh("codesign", "-d", "--entitlements", "-", "--xml", bundle, log: false)
+      UI.user_error!("#{File.basename(bundle)} was exported WITHOUT the App Group entitlement:\n#{ents}") unless ents.include?("group.app.introibo.shared")
+      UI.success("#{File.basename(bundle)}: App Group entitlement present")
+    end
 
     changelog = <<~NOTES
       Español: the app is now 100% translated. The Divine Office joins

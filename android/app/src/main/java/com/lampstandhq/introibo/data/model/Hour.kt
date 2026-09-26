@@ -49,6 +49,15 @@ data class Hour(
         val variationKey: String? = null,
         val antiphonLat: String? = null,
         val antiphonEng: String? = null,
+        /**
+         * The antiphon this part opens (its own [antiphonLat], or [lat] for a
+         * standalone antiphon before a run of psalms) is intoned only up to
+         * the asterisk before the psalm, the whole antiphon following the
+         * psalm(s) — the older books' rule for offices below double rank.
+         * Null/false: the antiphon is doubled (said whole before and after).
+         * Set by the assembler; the views render it (see AntiphonPlacement).
+         */
+        val antiphonIntoned: Boolean? = null,
     ) {
         @Serializable
         data class Verse(

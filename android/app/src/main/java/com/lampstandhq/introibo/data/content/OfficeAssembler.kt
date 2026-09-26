@@ -419,7 +419,9 @@ class OfficeAssembler(
             }
             if (resolution.append.isNotEmpty()) shaped = shaped + resolution.append.map { inlinePsalmText(it) }
         }
-        val finalShaped = shaped
+        // The older books intone some antiphons only up to the asterisk
+        // before the psalm; the views repeat every antiphon after its psalms.
+        val finalShaped = if (resolution != null) AntiphonPlacement.markIntonation(shaped, template.slug, resolution.office, rite) else shaped
 
         return Hour(
             slug = template.slug,
