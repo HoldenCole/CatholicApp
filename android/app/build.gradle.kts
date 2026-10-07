@@ -13,8 +13,8 @@ android {
         applicationId = "com.lampstandhq.introibo"
         minSdk = 26
         targetSdk = 36
-        versionCode = 15
-        versionName = "1.2.3"
+        versionCode = 16
+        versionName = "1.3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
