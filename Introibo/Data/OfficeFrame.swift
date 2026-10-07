@@ -416,7 +416,10 @@ enum OfficeFrame {
             guard p.type == "responsory" else { continue }
             let next: Hour.Part? = i + 1 < out.count ? out[i + 1] : nil
             // the responsory closes a nocturn when a new nocturn, the collect or the end follows (the Te Deum replaces the last one)
-            let last = next == nil || next!.type == "heading" || next!.type == "collect" || (next!.type == "vr" && (next!.lat ?? "").hasPrefix("℣. Dómine, exáudi"))
+            // (DO responsory_gloria: also the responsory before the last lesson when the Te Deum follows it)
+            let teDeumIdx = out.firstIndex { $0.type == "canticle" && ($0.label ?? "").contains("Te Deum") } ?? -1
+            let beforeTeDeum = teDeumIdx > i && !out[(i + 1)..<teDeumIdx].contains { $0.type == "responsory" }
+            let last = next == nil || next!.type == "heading" || next!.type == "collect" || (next!.type == "vr" && (next!.lat ?? "").hasPrefix("℣. Dómine, exáudi")) || beforeTeDeum
             let wants = last && !passion
             if p.v1Lat != nil, let r2 = p.r2Lat {
                 if wants && !isGloria(r2) {

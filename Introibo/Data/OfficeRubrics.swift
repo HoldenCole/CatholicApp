@@ -2215,7 +2215,7 @@ final class OfficeRubrics {
     }
 
     /// DO gettype1960: 0 default, 1 ferial, 2 Sunday, 3 sanctoral, 4 octave II.
-    private func type1960(_ o: Office, _ rite: MissalRite) -> Int {
+    func type1960(_ o: Office, _ rite: MissalRite) -> Int {
         var type = 0
         if is1960(rite) && !o.ruleHas("C9|Defunctorum") {
             if o.rankHas("post Nativitatem") { type = 4 }

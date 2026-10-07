@@ -71,6 +71,31 @@ writes the DO side as `<rite>.json.gz`, which
 every hour of the year and fails on any difference, so the comparison
 runs with the ordinary test suite.
 
+## Matins lessons
+
+`compare_lessons.py` compares the first words of every Matins lesson and
+responsory with DO's over the year (a wrong choice, not a wrong text):
+
+    python3 scripts/office_qa/compare_lessons.py --app /tmp/esdump --do /tmp/doqa --rites 1962
+
+Its report drove the lesson rules in `ContentStore.hourForDate` (both
+platforms): the 1960 one-nocturn Matins reads, on a Sunday, lessons 1, 2+3
+and the Gospel homily with responsories 1, 3 and (Advent, Lent,
+Septuagesima) 9, and on a III-class feast the Scripture of the day (2+3 as
+one) with the Scripture's responsories 1 and 3 and the saint's contracted
+legend (`lessons1960`); the Te Deum stands in place of the last responsory,
+which then carries the Glória Patri; and the lessons follow the office DO's
+precedence chose rather than the app's own calendar on the days the two
+differ (the older books' transferred or kept feasts).
+
+Known gaps the report still shows: the 1960 books' Scripture of
+Dec 29 - Jan 13 (DO reads Romans from the Nativity/Epiphany files), the
+Paschaltide responsories of the Apostles' Common, several feasts' homilies
+(lessons 7-9) and the pre-1955 simplex feasts' single legend lesson
+(DO reads Lectio94 or Lectio4 alone, the app joins 4-6) — the legacy
+`temporal_propers.json` / `sanctoral_propers.json` carry one text per
+file where DO's differ by rite.
+
 ## Spanish
 
 `scripts/build_office_spanish.py` gathers the Spanish the app already

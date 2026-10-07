@@ -1366,6 +1366,12 @@ object ContentStore {
         OfficeFrame.paterAveCredo = hours.firstOrNull { it.slug == "laudes" }?.parts?.firstOrNull { it.type == "pater" }
         var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect, ferialOffice, primeMartyrology, resolution, if (vespersOfFollowing) tomorrowOrdo?.temporal else null)
         val matinsNocturnsEff = resolution?.nocturns ?: matinsNocturns
+        // The first nocturn's lessons and responsories as the assembler laid
+        // them (the Scripture of the day, or the Sunday's own), before the
+        // saint's layers: the 1960 contractions below draw on them.
+        val baseLessons: Map<String, Hour.Part> = if (template.slug == "matutinum") {
+            assembled.parts.filter { Regex("^(lectio|responsory)[1-3]$").matches(it.variationKey ?: "") }.associateBy { it.variationKey!! }
+        } else emptyMap()
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -1394,12 +1400,28 @@ object ContentStore {
             assembled = applyProperOverrides(assembled, remapped)
         }
 
-        if (layerOrdo != null) {
-            if (layerOrdo.winner == "sanctoral") {
+        // Matins: the lessons follow the office Divinum Officium's precedence
+        // chose (its psalms, antiphons and collect already do) whenever the
+        // app's data carries that office; the app's own calendar otherwise.
+        // The two differ on the days the older books transfer or keep a
+        // feast the app's calendar does not (St Andrew on Dec 1 2025 in the
+        // pre-1955 books, a semidouble on an Advent feria).
+        val doPick = resolution?.takeIf { it.fromDO && template.slug == "matutinum" }?.office?.let { o ->
+            val k = o.key.lowercase()
+            when {
+                o.sanctoral && o.key in sanctoralPropers -> LayerPick(true, o.key, null)
+                o.sanctoral && o.key.take(5) in sanctoralPropers -> LayerPick(true, o.key.take(5), null)
+                !o.sanctoral && k in officeAssembler.temporalPropers -> LayerPick(false, k, k)
+                else -> null
+            }
+        }
+        val pick = doPick ?: layerOrdo?.let { LayerPick(it.winner == "sanctoral", it.winnerKey, it.temporal) }
+        if (pick != null) {
+            if (pick.sanctoral) {
                 // Office layering (each later layer wins): commune fallback,
                 // then a borrowed feast's Office (`ex Sancti/...`), then the
                 // saint's own proper on top.
-                val key = layerOrdo.winnerKey
+                val key = pick.key
                 val code = saintCommune[key] ?: saintCommune[key.take(5)]
                 val commune = code?.let { communeOffice[it] }
                 if (commune != null) {
@@ -1410,7 +1432,7 @@ object ContentStore {
                 if (inherited != null) {
                     layer(inherited)
                 }
-                val saint = sanctoralPropers[layerOrdo.winnerKey]
+                val saint = sanctoralPropers[key]
                 if (saint != null) {
                     layer(saint)
                 }
@@ -1418,13 +1440,13 @@ object ContentStore {
                 // e.g. the festive Epiphany-octave lessons the 1960 books
                 // reduced to ferial commemorations.
                 if (rite == MissalRite.PRE_1955) {
-                    val oSaint = sanctoralPropers[layerOrdo.winnerKey + "o"]
+                    val oSaint = sanctoralPropers[key + "o"]
                     if (oSaint != null) {
                         layer(oSaint)
                     }
                 }
             } else {
-                val temporalKey = layerOrdo.temporal
+                val temporalKey = pick.temporal
                 if (temporalKey != null) {
                     val tempOverrides = officeAssembler.temporalPropers[temporalKey]
                     if (tempOverrides != null) {
@@ -1442,6 +1464,19 @@ object ContentStore {
             val oOverrides = oKey?.let { officeAssembler.temporalPropers[it] }
             if (oOverrides != null) {
                 layer(oOverrides)
+            }
+        }
+
+        // 1960 rubrics, one-nocturn Matins: DO's choice of lessons and responsories.
+        if (template.slug == "matutinum" && matinsNocturnsEff == 1 && resolution != null && rite == MissalRite.RITE_1962) {
+            lessons1960(resolution.office, baseLessons)?.let { assembled = applyProperOverrides(assembled, it) }
+        }
+        // The Te Deum stands in place of the last responsory: DO adds no
+        // responsory to the lesson the Te Deum follows (any book, 1 or 3 nocturns).
+        if (template.slug == "matutinum") {
+            val td = assembled.parts.indexOfFirst { it.type == "canticle" && (it.label ?: "").contains("Te Deum") }
+            if (td > 0 && assembled.parts[td - 1].type == "responsory") {
+                assembled = assembled.copy(parts = assembled.parts.filterIndexed { i, _ -> i != td - 1 })
             }
         }
 
@@ -1666,6 +1701,59 @@ object ContentStore {
         if ("oratio" in data) return true
         return OfficeAssembler.precedingSundayKey(key)
             ?.let { officeAssembler.temporalPropers[it]?.containsKey("oratio") } == true
+    }
+
+    /** The office whose propers layer the hour: a saint (key of sanctoral_propers) or a temporal key. */
+    private class LayerPick(val sanctoral: Boolean, val key: String, val temporal: String?)
+
+    /**
+     * DO's lessons of a one-nocturn Matins under the 1960 rubrics
+     * (specmatins.pl: lectio, contract_scripture, gettype1960):
+     *  - a Sunday (type 2) reads its first lesson, its second and third as
+     *    one, and the Gospel homily (Lectio7) as the third, with its first
+     *    and third responsories and — in Advent, Lent and Septuagesima,
+     *    where the Te Deum is not said — its ninth;
+     *  - a III-class feast (type 3) reads the Scripture of the day, its
+     *    second and third lessons as one, with the Scripture's first and
+     *    third responsories, and the saint's contracted legend as the third
+     *    lesson; a saint's office with first-nocturn lessons of its own reads
+     *    those, contracted the same way.
+     * The Te Deum stands in place of the last responsory (hourForDate).
+     * `base` holds the first nocturn as the assembler laid it.
+     */
+    private fun lessons1960(o: OfficeRubrics.Office, base: Map<String, Hour.Part>): Map<String, Hour.Part>? {
+        fun joined(a: Hour.Part?, b: Hour.Part?, vk: String): Hour.Part? {
+            if (a == null) return b?.copy(variationKey = vk)
+            if (b == null) return a.copy(variationKey = vk)
+            val engs = listOfNotNull(a.eng, b.eng)
+            return a.copy(
+                variationKey = vk,
+                lat = listOfNotNull(a.lat, b.lat).joinToString("\n"),
+                eng = if (engs.isEmpty()) null else engs.joinToString("\n"),
+            )
+        }
+        val out = LinkedHashMap<String, Hour.Part>()
+        when (officeRubrics.type1960(o, MissalRite.RITE_1962)) {
+            2 -> {
+                val file = officeAssembler.temporalPropers[o.key.lowercase()] ?: emptyMap()
+                joined(base["lectio2"], base["lectio3"], "lectio2")?.let { out["lectio2"] = it }
+                file["lectio7"]?.let { out["lectio3"] = it.copy(variationKey = "lectio3") }
+                base["responsory3"]?.let { out["responsory2"] = it.copy(variationKey = "responsory2") }
+                if (o.dayName.startsWith("Adv") || o.dayName.startsWith("Quad")) {
+                    file["responsory9"]?.let { out["responsory3"] = it.copy(variationKey = "responsory3") }
+                }
+            }
+            3 -> {
+                val own = sanctoralPropers[o.key]
+                val src = if (own?.containsKey("lectio1") == true) own else base
+                src["lectio1"]?.let { out["lectio1"] = it.copy(variationKey = "lectio1") }
+                joined(src["lectio2"], src["lectio3"], "lectio2")?.let { out["lectio2"] = it }
+                src["responsory1"]?.let { out["responsory1"] = it.copy(variationKey = "responsory1") }
+                (src["responsory3"] ?: src["responsory2"])?.let { out["responsory2"] = it.copy(variationKey = "responsory2") }
+            }
+            else -> return null
+        }
+        return out.ifEmpty { null }
     }
 
     /**

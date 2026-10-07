@@ -911,6 +911,15 @@ final class ContentStore {
         OfficeFrame.paterAveCredo = hours.first { $0.slug == "laudes" }?.parts.first { $0.type == "pater" }
         var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite, fallbackCollect: fallbackCollect, officeIsFerial: ferialOffice, primeMartyrology: primeMartyrology, resolution: resolution, effectiveTemporalKey: vespersOfFollowing ? tomorrowOrdo?.temporal : nil)
         let matinsNocturnsEff = resolution?.nocturns ?? matinsNocturns
+        // The first nocturn's lessons and responsories as the assembler laid
+        // them (the Scripture of the day, or the Sunday's own), before the
+        // saint's layers: the 1960 contractions below draw on them.
+        var baseLessons: [String: Hour.Part] = [:]
+        if template.slug == "matutinum" {
+            for p in assembled.parts {
+                if let vk = p.variationKey, vk.range(of: "^(lectio|responsory)[1-3]$", options: .regularExpression) != nil { baseLessons[vk] = p }
+            }
+        }
 
         // Every layered dict goes through the hour-aware semantic remap
         // (canticle antiphons vs. nocturn slots, psalm-antiphon lists,
@@ -937,12 +946,27 @@ final class ContentStore {
             assembled = applyProperOverrides(assembled, overrides: remapped)
         }
 
-        if let ordo = layerOrdo {
-            if ordo.winner == "sanctoral" {
+        // Matins: the lessons follow the office Divinum Officium's precedence
+        // chose (its psalms, antiphons and collect already do) whenever the
+        // app's data carries that office; the app's own calendar otherwise.
+        // The two differ on the days the older books transfer or keep a
+        // feast the app's calendar does not (St Andrew on Dec 1 2025 in the
+        // pre-1955 books, a semidouble on an Advent feria).
+        var pick: (sanctoral: Bool, key: String, temporal: String?)? = nil
+        if let resolution, resolution.fromDO, template.slug == "matutinum" {
+            let o = resolution.office
+            let k = o.key.lowercased()
+            if o.sanctoral, sanctoralPropers[o.key] != nil { pick = (true, o.key, nil) }
+            else if o.sanctoral, sanctoralPropers[String(o.key.prefix(5))] != nil { pick = (true, String(o.key.prefix(5)), nil) }
+            else if !o.sanctoral, officeAssembler.temporalPropers[k] != nil { pick = (false, k, k) }
+        }
+        if pick == nil, let ordo = layerOrdo { pick = (ordo.winner == "sanctoral", ordo.winnerKey, ordo.temporal) }
+        if let pick {
+            if pick.sanctoral {
                 // Office layering (each later layer wins): commune fallback,
                 // then a borrowed feast's Office (`ex Sancti/...`), then the
                 // saint's own proper on top.
-                let key = ordo.winnerKey
+                let key = pick.key
                 let code = saintCommune[key] ?? saintCommune[String(key.prefix(5))]
                 if let code, let commune = communeOffice[code] {
                     layer(commune)
@@ -951,16 +975,16 @@ final class ContentStore {
                    let inherited = sanctoralPropers[source] {
                     layer(inherited)
                 }
-                if let saint = sanctoralPropers[ordo.winnerKey] {
+                if let saint = sanctoralPropers[key] {
                     layer(saint)
                 }
                 // Pre-1955 old-rite variant of the saint's Office ("<key>o"),
                 // e.g. the festive Epiphany-octave lessons the 1960 books
                 // reduced to ferial commemorations.
-                if rite == .pre1955, let oSaint = sanctoralPropers[ordo.winnerKey + "o"] {
+                if rite == .pre1955, let oSaint = sanctoralPropers[key + "o"] {
                     layer(oSaint)
                 }
-            } else if let temporalKey = ordo.temporal,
+            } else if let temporalKey = pick.temporal,
                       let tempOverrides = officeAssembler.temporalPropers[temporalKey] {
                 layer(tempOverrides)
             }
@@ -972,6 +996,19 @@ final class ContentStore {
         if rite == .pre1955, let tKey = ctx.temporalKey,
            let oOverrides = officeAssembler.temporalPropers[tKey + "o"] {
             layer(oOverrides)
+        }
+
+        // 1960 rubrics, one-nocturn Matins: DO's choice of lessons and responsories.
+        if template.slug == "matutinum", matinsNocturnsEff == 1, let resolution, rite == .rite1962,
+           let fixed = lessons1960(resolution.office, base: baseLessons) {
+            assembled = applyProperOverrides(assembled, overrides: fixed)
+        }
+        // The Te Deum stands in place of the last responsory: DO adds no
+        // responsory to the lesson the Te Deum follows (any book, 1 or 3 nocturns).
+        if template.slug == "matutinum",
+           let td = assembled.parts.firstIndex(where: { $0.type == "canticle" && ($0.label ?? "").contains("Te Deum") }),
+           td > 0, assembled.parts[td - 1].type == "responsory" {
+            assembled.parts.remove(at: td - 1)
         }
 
         // Dec 17-23 ("O Antiphon" days): override the Little Hours antiphons
@@ -1113,6 +1150,54 @@ final class ContentStore {
             return n
         }
         return h
+    }
+
+    /// DO's lessons of a one-nocturn Matins under the 1960 rubrics
+    /// (specmatins.pl: lectio, contract_scripture, gettype1960):
+    ///  - a Sunday (type 2) reads its first lesson, its second and third as
+    ///    one, and the Gospel homily (Lectio7) as the third, with its first
+    ///    and third responsories and — in Advent, Lent and Septuagesima,
+    ///    where the Te Deum is not said — its ninth;
+    ///  - a III-class feast (type 3) reads the Scripture of the day, its
+    ///    second and third lessons as one, with the Scripture's first and
+    ///    third responsories, and the saint's contracted legend as the third
+    ///    lesson; a saint's office with first-nocturn lessons of its own reads
+    ///    those, contracted the same way.
+    /// The Te Deum stands in place of the last responsory (hourForDate).
+    /// `base` holds the first nocturn as the assembler laid it.
+    /// Kotlin mirror: ContentStore.lessons1960.
+    private func lessons1960(_ o: OfficeRubrics.Office, base: [String: Hour.Part]) -> [String: Hour.Part]? {
+        func rekey(_ p: Hour.Part, _ vk: String) -> Hour.Part { var q = p; q.variationKey = vk; return q }
+        func joined(_ a: Hour.Part?, _ b: Hour.Part?, _ vk: String) -> Hour.Part? {
+            guard let a else { return b.map { rekey($0, vk) } }
+            guard let b else { return rekey(a, vk) }
+            var q = rekey(a, vk)
+            q.lat = [a.lat, b.lat].compactMap { $0 }.joined(separator: "\n")
+            let engs = [a.eng, b.eng].compactMap { $0 }
+            q.eng = engs.isEmpty ? nil : engs.joined(separator: "\n")
+            return q
+        }
+        var out: [String: Hour.Part] = [:]
+        switch officeRubrics.type1960(o, .rite1962) {
+        case 2:
+            let file = officeAssembler.temporalPropers[o.key.lowercased()] ?? [:]
+            if let l = joined(base["lectio2"], base["lectio3"], "lectio2") { out["lectio2"] = l }
+            if let l7 = file["lectio7"] { out["lectio3"] = rekey(l7, "lectio3") }
+            if let r3 = base["responsory3"] { out["responsory2"] = rekey(r3, "responsory2") }
+            if o.dayName.hasPrefix("Adv") || o.dayName.hasPrefix("Quad"), let r9 = file["responsory9"] {
+                out["responsory3"] = rekey(r9, "responsory3")
+            }
+        case 3:
+            let own = sanctoralPropers[o.key]
+            let src = (own?["lectio1"] != nil) ? own! : base
+            if let l1 = src["lectio1"] { out["lectio1"] = rekey(l1, "lectio1") }
+            if let l = joined(src["lectio2"], src["lectio3"], "lectio2") { out["lectio2"] = l }
+            if let r1 = src["responsory1"] { out["responsory1"] = rekey(r1, "responsory1") }
+            if let r = src["responsory3"] ?? src["responsory2"] { out["responsory2"] = rekey(r, "responsory2") }
+        default:
+            return nil
+        }
+        return out.isEmpty ? nil : out
     }
 
     /// DO's contracted single legend lesson for 1-nocturn feast Matins:

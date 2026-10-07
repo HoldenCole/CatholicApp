@@ -413,7 +413,10 @@ object OfficeFrame {
             if (p.type != "responsory") continue
             val next = out.getOrNull(i + 1)
             // the responsory closes a nocturn when a new nocturn, the collect or the end follows (the Te Deum replaces the last one)
-            val last = next == null || next.type == "heading" || next.type == "collect" || (next.type == "vr" && (next.lat ?: "").startsWith("℣. Dómine, exáudi"))
+            // (DO responsory_gloria: also the responsory before the last lesson when the Te Deum follows it)
+            val teDeumIdx = out.indexOfFirst { it.type == "canticle" && (it.label ?: "").contains("Te Deum") }
+            val beforeTeDeum = teDeumIdx > i && out.subList(i + 1, teDeumIdx).none { it.type == "responsory" }
+            val last = next == null || next.type == "heading" || next.type == "collect" || (next.type == "vr" && (next.lat ?: "").startsWith("℣. Dómine, exáudi")) || beforeTeDeum
             val wants = last && !passion
             if (p.v1Lat != null && p.r2Lat != null) {
                 if (wants && !gloriaLine.containsMatchIn(p.r2Lat)) out[i] = p.copy(r2Lat = p.r2Lat + "\n" + gl + "\n" + p.r2Lat, r2Eng = p.r2Eng?.let { "$it\n$ge\n$it" })

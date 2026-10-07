@@ -1874,7 +1874,7 @@ class OfficeRubrics(
     }
 
     /** DO gettype1960: 0 default, 1 ferial, 2 Sunday, 3 sanctoral, 4 octave II. */
-    private fun type1960(o: Office, rite: MissalRite): Int {
+    internal fun type1960(o: Office, rite: MissalRite): Int {
         var type = 0
         if (is1960(rite) && !o.ruleHas("C9|Defunctorum")) {
             type = when {
