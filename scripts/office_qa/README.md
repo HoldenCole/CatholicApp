@@ -88,13 +88,20 @@ which then carries the Glória Patri; and the lessons follow the office DO's
 precedence chose rather than the app's own calendar on the days the two
 differ (the older books' transferred or kept feasts).
 
+A Common's variant (C5-1, C4b, C2a-1) carries only what differs from its
+Common in `commune_office.json`, so the Common layers first.
+
 Known gaps the report still shows: the 1960 books' Scripture of
-Dec 29 - Jan 13 (DO reads Romans from the Nativity/Epiphany files), the
-Paschaltide responsories of the Apostles' Common, several feasts' homilies
-(lessons 7-9) and the pre-1955 simplex feasts' single legend lesson
-(DO reads Lectio94 or Lectio4 alone, the app joins 4-6) — the legacy
-`temporal_propers.json` / `sanctoral_propers.json` carry one text per
-file where DO's differ by rite.
+Dec 29 - Jan 13 (DO reads Romans from the Nativity/Epiphany files); the
+Paschaltide responsories of the Apostles' Common; the homilies (lessons
+7-9) of the saints "vide Commune" in the older books, which the legacy
+`commune_office.json` does not carry (the template's homily shows); and
+the pre-1955 simplex feasts' single legend lesson (DO reads Lectio94 or
+Lectio4 alone, the app joins 4-6). The legacy `temporal_propers.json` /
+`sanctoral_propers.json` carry one text per file where DO's differ by
+rite; after the fixes the report counts, 1962: lessons 1-3 wrong on
+121/121/69 days (nearly all Dec 28 - Jan 13 and feasts with lessons the
+data lacks), responsories 1-3 on 124/139/35.
 
 ## Spanish
 
