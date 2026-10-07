@@ -60,10 +60,12 @@ jobs:
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
-            SWIFT_STRICT_CONCURRENCY=minimal 2>&1 | tee /tmp/build.log | tail -80
+            SWIFT_STRICT_CONCURRENCY=minimal > /tmp/build.log 2>&1 || status=$?
+          tail -40 /tmp/build.log
           echo ""
           echo "=== Build errors (if any) ==="
           grep -E '(error:|BUILD FAILED)' /tmp/build.log || echo "No errors found"
+          exit ${status:-0}
 
       - name: Deploy to TestFlight
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

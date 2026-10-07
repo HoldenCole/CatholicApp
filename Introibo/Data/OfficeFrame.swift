@@ -102,7 +102,7 @@ enum OfficeFrame {
             collects(&out, c)
             switch c.hourSlug {
             case "tertia", "sexta", "nona": littleHour(&out)
-            case "prima": littleHour(&out, fidelium: false); prime(&out)
+            case "prima": littleHour(&out, withFidelium: false); prime(&out)
             case "completorium": compline(&out, c)
             default: break
             }
@@ -167,7 +167,7 @@ enum OfficeFrame {
         let s = t.trimmingCharacters(in: .whitespaces)
         guard let m = try? NSRegularExpression(pattern: "^(.*?[.!])\\s+(.+)$").firstMatch(in: s, range: NSRange(s.startIndex..., in: s)),
               let r1 = Range(m.range(at: 1), in: s), let r2 = Range(m.range(at: 2), in: s) else { return t }
-        return "℣. " + s[r1] + "\n℟. " + s[r2]
+        return "℣. " + String(s[r1]) + "\n℟. " + String(s[r2])
     }
 
     private static func closing(_ out: inout [Hour.Part]) {
@@ -441,7 +441,11 @@ enum OfficeFrame {
             guard let rep = ll.last(where: { $0.hasPrefix("R. ") || $0.hasPrefix("℟. ") }) else { continue }
             let erep = el?.last(where: { $0.hasPrefix("R. ") || $0.hasPrefix("℟. ") })
             out[i].lat = (ll + [gl, rep]).joined(separator: "\n")
-            out[i].eng = el.map { ($0 + [ge] + (erep.map { [$0] } ?? [])).joined(separator: "\n") }
+            if var e = el {
+                e.append(ge)
+                if let er = erep { e.append(er) }
+                out[i].eng = e.joined(separator: "\n")
+            }
         }
         var english: [String: String] = [:]
         for p in c.template.parts where p.type == "vr" { if let l = p.lat, let e = p.eng { english[l] = e } }
@@ -497,11 +501,11 @@ enum OfficeFrame {
            "℣. May the souls of the faithful, through the mercy of God, rest in peace.", "℟. Amen.")
     }
 
-    private static func littleHour(_ out: inout [Hour.Part], fidelium: Bool = true) {
+    private static func littleHour(_ out: inout [Hour.Part], withFidelium: Bool = true) {
         guard var ci = out.firstIndex(where: { $0.type == "closing" && ($0.lat ?? "").contains("Benedicámus Dómino") }) else { return }
         // ℣. Dómine, exáudi before the Benedicámus
         if ci == 0 || !(out[ci - 1].lat ?? "").hasPrefix("℣. Dómine, exáudi") { out.insert(domineExaudi(), at: ci); ci += 1 }
-        if !fidelium || out[(ci + 1)...].contains(where: { ($0.lat ?? "").contains("Fidélium ánimæ") }) { return }
+        if !withFidelium || out[(ci + 1)...].contains(where: { ($0.lat ?? "").contains("Fidélium ánimæ") }) { return }
         out.insert(fidelium(), at: ci + 1)
     }
 
