@@ -505,9 +505,10 @@ def main():
             e = e[:1] + e[1:2].lower() + e[2:] if False else e
         used[k] = re.sub(r"\s{2,}", " ", e).strip()
     # DO markup that survived as "Spanish", and a verb form Spanish lacks
+    # (a rubric line the Latin itself opens with "!" keeps its Spanish)
     for k in list(used):
         e = used[k]
-        if any(l.strip().startswith(("&", "$", "!", "%", "@")) for l in e.split("\n")) or k.startswith(("&", "$")):
+        if (any(l.strip().startswith(("&", "$", "!", "%", "@")) for l in e.split("\n")) and not k.startswith("!")) or k.startswith(("&", "$")):
             del used[k]
             continue
         used[k] = e.replace("Descansed en paz", "Descansen en paz")

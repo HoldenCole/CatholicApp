@@ -586,3 +586,10 @@ frame that no source supplies — the absolutions and blessings of Matins,
 the blessing and Divínum auxílium of Compline, Adjutórium nostrum — and the
 builder derives, from every antiphon with an asterisk, the whole form said
 after the psalm and the second half alone (the invitatory inside the Venite).
+It also holds the hand Spanish (traditional register) of every Office text
+no source supplies — the Athanasian Creed, the Litany of the Saints, the
+Vexilla Regis, the Paschal short responsories of the Commons, a few
+antiphons, invitatories, capitula and collects — so that the Spanish-mode
+Office shows no English over the year in any rite (checked by dumping
+every hour in Spanish mode and scanning for English). A rubric line the
+Latin itself opens with "!" keeps its Spanish in the builder.
