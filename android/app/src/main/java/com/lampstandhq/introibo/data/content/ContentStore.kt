@@ -1423,9 +1423,13 @@ object ContentStore {
                 // saint's own proper on top.
                 val key = pick.key
                 val code = saintCommune[key] ?: saintCommune[key.take(5)]
-                val commune = code?.let { communeOffice[it] }
-                if (commune != null) {
-                    layer(commune)
+                if (code != null) {
+                    // A Common's variant (C5-1, C4b, C2a-1) carries only what
+                    // differs from its Common; the Common itself (its
+                    // responsories, its homily) layers first.
+                    val baseCode = Regex("^C\\d+").find(code)?.value
+                    if (baseCode != null && baseCode != code) communeOffice[baseCode]?.let { layer(it) }
+                    communeOffice[code]?.let { layer(it) }
                 }
                 val inheritSource = saintOfficeInherit[key] ?: saintOfficeInherit[key.take(5)]
                 val inherited = inheritSource?.let { sanctoralPropers[it] }

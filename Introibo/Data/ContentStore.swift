@@ -968,8 +968,15 @@ final class ContentStore {
                 // saint's own proper on top.
                 let key = pick.key
                 let code = saintCommune[key] ?? saintCommune[String(key.prefix(5))]
-                if let code, let commune = communeOffice[code] {
-                    layer(commune)
+                if let code {
+                    // A Common's variant (C5-1, C4b, C2a-1) carries only what
+                    // differs from its Common; the Common itself (its
+                    // responsories, its homily) layers first.
+                    if let r = code.range(of: "^C\\d+", options: .regularExpression) {
+                        let baseCode = String(code[r])
+                        if baseCode != code, let base = communeOffice[baseCode] { layer(base) }
+                    }
+                    if let commune = communeOffice[code] { layer(commune) }
                 }
                 if let source = saintOfficeInherit[key] ?? saintOfficeInherit[String(key.prefix(5))],
                    let inherited = sanctoralPropers[source] {

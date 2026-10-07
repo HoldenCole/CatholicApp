@@ -88,6 +88,10 @@ class MatinsLessons1960Test {
         // 1955: St Bibiana is a commemoration; the feria's third Scripture lesson is read
         val feria = matins(LocalDate.of(2025, 12, 2), MissalRite.RITE_1955)
         assertTrue(part(feria, "lectio3")!!.lat!!.contains("Repléta est terra argénto"))
+        // a Common's variant (C5-1, C4b) layers over its Common: the second and third nocturns' responsories
+        val xavier = matins(LocalDate.of(2025, 12, 3), MissalRite.PRE_1955)
+        assertTrue(part(xavier, "responsory4")!!.lat!!.startsWith("R. Honéstum fecit illum"))
+        assertTrue(part(damasus, "responsory4")!!.lat!!.startsWith("R. Invéni David"))
     }
 
     @Test
