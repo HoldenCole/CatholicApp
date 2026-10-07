@@ -52,6 +52,7 @@ import com.lampstandhq.introibo.data.model.Hour
 import com.lampstandhq.introibo.data.model.strippingEm
 import com.lampstandhq.introibo.data.content.AntiphonPlacement
 import com.lampstandhq.introibo.data.content.ContentStore
+import com.lampstandhq.introibo.data.content.VersicleMarks
 import com.lampstandhq.introibo.data.search.ContentType
 import com.lampstandhq.introibo.data.search.DeepLinkTarget
 import com.lampstandhq.introibo.ui.components.BilingualLine
@@ -401,12 +402,13 @@ private fun VrBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
     ) {
         SmallLabel(text = p.label ?: "Versus", color = colors.sanctuaryRed)
 
-        if (p.lat != null && p.eng != null) {
-            BilingualLine(lat = p.lat, eng = p.eng, sideBySide = true, onLinkTap = onLinkTap)
+        val m = VersicleMarks.of(p)
+        if (m.lat != null && m.eng != null) {
+            BilingualLine(lat = m.lat, eng = m.eng, sideBySide = true, onLinkTap = onLinkTap)
         }
-        if (p.latR != null && p.engR != null) {
+        if (m.latR != null && m.engR != null) {
             Spacer(modifier = Modifier.height(4.dp))
-            BilingualLine(lat = p.latR, eng = p.engR, sideBySide = true, onLinkTap = onLinkTap)
+            BilingualLine(lat = m.latR, eng = m.engR, sideBySide = true, onLinkTap = onLinkTap)
         }
     }
 }

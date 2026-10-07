@@ -1,5 +1,6 @@
 package com.lampstandhq.introibo.data.liturgical
 
+import com.lampstandhq.introibo.storage.settings.MissalRite
 import com.lampstandhq.introibo.storage.settings.PenanceDiscipline
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -63,6 +64,38 @@ class EmberDaysTest {
         assertTrue(ember(LocalDate.of(2026, 9, 25)))
         assertTrue(ember(LocalDate.of(2026, 9, 26)))
         assertFalse(ember(LocalDate.of(2026, 9, 16)))
+    }
+
+    // ---- September reckoning per rite ----
+
+    private fun ember(date: LocalDate, rite: MissalRite): Boolean =
+        LiturgicalContext.forDate(date, PenanceDiscipline.DISCIPLINE_1917, rite).penance.title.startsWith("Ember")
+
+    @Test
+    fun septemberEmberDaysFollowTheRiteReckoning() {
+        // 1960 code: the Sundays of September are counted from the first that
+        // falls in the month (Sept 6 2026), so the third is Sept 20 and the
+        // Ember days Sept 23/25/26. The older books count from the Sunday
+        // nearest Sept 1 (Aug 30 2026): third Sunday Sept 13, Ember days
+        // Sept 16/18/19, the week after the Exaltation of the Cross — as the
+        // Divinum Officium ordo has them for each rite.
+        for (rite in listOf(MissalRite.RITE_1955, MissalRite.PRE_1955)) {
+            assertTrue(ember(LocalDate.of(2026, 9, 16), rite))
+            assertTrue(ember(LocalDate.of(2026, 9, 18), rite))
+            assertTrue(ember(LocalDate.of(2026, 9, 19), rite))
+            assertFalse(ember(LocalDate.of(2026, 9, 23), rite))
+            assertTrue(ember(LocalDate.of(2025, 9, 17), rite))
+            assertFalse(ember(LocalDate.of(2025, 9, 24), rite))
+            assertTrue(LiturgicalContext.forDate(LocalDate.of(2026, 9, 16), rite = rite).isEmberDay)
+            assertFalse(LiturgicalContext.forDate(LocalDate.of(2026, 9, 23), rite = rite).isEmberDay)
+        }
+        assertTrue(ember(LocalDate.of(2025, 9, 24), MissalRite.RITE_1962))
+        assertFalse(ember(LocalDate.of(2025, 9, 17), MissalRite.RITE_1962))
+        // When Sept 1 is a Sunday (2024) or the first Sunday is Sept 3 (2028) both reckonings agree.
+        assertTrue(ember(LocalDate.of(2024, 9, 18), MissalRite.RITE_1962))
+        assertTrue(ember(LocalDate.of(2024, 9, 18), MissalRite.PRE_1955))
+        assertTrue(ember(LocalDate.of(2028, 9, 20), MissalRite.RITE_1962))
+        assertTrue(ember(LocalDate.of(2028, 9, 20), MissalRite.RITE_1955))
     }
 
     // ---- Badge path (LiturgicalContext.isEmberDay extension) ----

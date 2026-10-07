@@ -100,7 +100,7 @@ def main():
         # an overlay field left in Latin, or a DO marker, is no translation
         if norm(e) == k or e.startswith(("$", "&", "!", "%", "@")):
             return
-        if src in ("pater-split", "credo-split", "paschal"):
+        if src in ("pater-split", "credo-split", "paschal", "asterisk"):
             always.add(k)
         if k in corpus and corpus[k] != e:
             conflicts[src] += 1
@@ -472,6 +472,23 @@ def main():
     if fixes.exists():
         for k, e in load(fixes).items():
             used[k] = e
+    # The antiphon said whole after its psalm (the asterisk dropped) and its
+    # second half alone (the invitatory's "Veníte, adorémus" inside the
+    # Venite): derived from every antiphon-like text the apps carry.
+    def whole(t):
+        return re.sub(r"\s+", " ", re.sub(r"\s+([,.;:])", r"\1", re.sub(r"\s*\*\s*", " ", t))).strip()
+    for k0, e in list(used.items()):
+        if " * " not in k0 or k0[:1].isdigit() or len(k0) > 200 or k0.startswith(("℟", "℣", "V.", "R.")) or "\n" in k0 or "\n" in e:
+            continue
+        wk, we = whole(k0), whole(e)
+        if len(wk) >= 4 and we:
+            used.setdefault(wk, we)
+        if "*" in e:
+            hk = k0.split(" * ", 1)[1].strip()
+            he = e.split("*", 1)[1].strip().lstrip(",;: ")
+            if hk[:1].isupper() and he and len(hk) >= 4:
+                used.setdefault(hk, he[:1].upper() + he[1:])
+
     # a Spanish line keeping a ℣./℟. mark the Latin key does not carry, or
     # a different mark than the key's (a ℟.br. responsory reused as a ℣.)
     for k in list(used):

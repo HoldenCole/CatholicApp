@@ -580,3 +580,9 @@ below).
 - CI: `SpanishOverlayQA` mirrors `scripts/validate_spanish.py` (slug +
   line-count alignment, staging↔assets byte identity) and pins the
   overlay/restore behavior.
+
+`office_texts_fixes_es.json` also carries the Spanish of the hours' fixed
+frame that no source supplies — the absolutions and blessings of Matins,
+the blessing and Divínum auxílium of Compline, Adjutórium nostrum — and the
+builder derives, from every antiphon with an asterisk, the whole form said
+after the psalm and the second half alone (the invitatory inside the Venite).

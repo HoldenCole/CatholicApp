@@ -684,8 +684,8 @@ class OfficeAssembler(
     }
 
     /**
-     * Builds the Preces Feriales parts for the given hour (Lauds or Vespers).
-     * Vespers uses Psalm 50 (Miserere) instead of Psalm 129 (De profundis).
+     * Builds the Preces Feriales parts for the given hour (Lauds or Vespers),
+     * as Divinum Officium prints them: Kýrie, Pater, the versicles, Dómine exáudi last.
      */
     private fun makePrecesParts(hour: String): List<Hour.Part> {
         val parts = mutableListOf<Hour.Part>()
@@ -722,27 +722,7 @@ class OfficeAssembler(
             )
         )
 
-        // Psalm -- De profundis (129) at Lauds, Miserere (50) at Vespers
-        if (hour == "laudes") {
-            parts.add(
-                Hour.Part(
-                    type = "preces",
-                    label = "Psalmus 129; De profúndis",
-                    lat = "De profúndis clamávi ad te, Dómine: * Dómine, exáudi vocem meam.\nFiant aures tuæ intendéntes * in vocem deprecatiónis meæ.\nSi iniquitátes observáveris, Dómine: * Dómine, quis sustinébit?\nQuia apud te propitiátio est: * et propter legem tuam sustínui te, Dómine.\nSustínuit ánima mea in verbo ejus: * sperávit ánima mea in Dómino.\nA custódia matutína usque ad noctem, * speret Israël in Dómino.\nQuia apud Dóminum misericórdia, * et copiósa apud eum redémptio.\nEt ipse rédimet Israël * ex ómnibus iniquitátibus ejus.\nGlória Patri, et Fílio, * et Spirítui Sancto.\nSicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.",
-                    eng = "Out of the depths I have cried to Thee, O Lord: * Lord, hear my voice.\nLet Thine ears be attentive * to the voice of my supplication.\nIf Thou, O Lord, wilt mark iniquities: * Lord, who shall stand it?\nFor with Thee there is merciful forgiveness: * and by reason of Thy law I have waited for Thee, O Lord.\nMy soul hath relied on His word: * my soul hath hoped in the Lord.\nFrom the morning watch even until night, * let Israel hope in the Lord.\nBecause with the Lord there is mercy, * and with Him plentiful redemption.\nAnd He shall redeem Israel * from all his iniquities.\nGlory be to the Father, and to the Son, * and to the Holy Ghost.\nAs it was in the beginning, is now, and ever shall be, * world without end. Amen.",
-                )
-            )
-        } else {
-            parts.add(
-                Hour.Part(
-                    type = "preces",
-                    label = "Psalmus 50; Miserére",
-                    lat = "Miserére mei, Deus, * secúndum magnam misericórdiam tuam.\nEt secúndum multitúdinem miseratiónum tuárum, * dele iniquitátem meam.\nAmplius lava me ab iniquitáte mea, * et a peccáto meo munda me.\nQuóniam iniquitátem meam ego cognósco, * et peccátum meum contra me est semper.\nTibi soli peccávi, et malum coram te feci: * ut justificéris in sermónibus tuis, et vincas cum judicáris.\nEcce enim in iniquitátibus concéptus sum, * et in peccátis concépit me mater mea.\nEcce enim veritátem dilexísti: * incérta et occúlta sapiéntiæ tuæ manifestásti mihi.\nAspérges me hyssópo, et mundábor: * lavábis me, et super nivem dealbábor.\nAudítui meo dabis gáudium et lætítiam, * et exsultábunt ossa humiliáta.\nAvérte fáciem tuam a peccátis meis, * et omnes iniquitátes meas dele.\nCor mundum crea in me, Deus, * et spíritum rectum ínnova in viscéribus meis.\nNe projícias me a fácie tua, * et Spíritum Sanctum tuum ne áuferas a me.\nRedde mihi lætítiam salutáris tui, * et spíritu principáli confírma me.\nDocébo iníquos vias tuas, * et ímpii ad te converténtur.\nLíbera me de sanguínibus, Deus, Deus salútis meæ, * et exsultábit lingua mea justítiam tuam.\nDómine, lábia mea apéries, * et os meum annuntiábit laudem tuam.\nQuóniam si voluísses sacrifícium, dedíssem útique: * holocáustis non delectáberis.\nSacrificium Deo spíritus contribulátus: * cor contrítum et humiliátum, Deus, non despícies.\nBenígne fac, Dómine, in bona voluntáte tua Sion, * ut ædificéntur muri Jerúsalem.\nTunc acceptábis sacrifícium justítiæ, oblatiónes et holocáusta: * tunc impónent super altáre tuum vítulos.\nGlória Patri, et Fílio, * et Spirítui Sancto.\nSicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.",
-                    eng = "Have mercy on me, O God, * according to Thy great mercy.\nAnd according to the multitude of Thy tender mercies, * blot out my iniquity.\nWash me yet more from my iniquity, * and cleanse me from my sin.\nFor I know my iniquity, * and my sin is always before me.\nTo Thee only have I sinned, and have done evil before Thee: * that Thou mayest be justified in Thy words, and mayest overcome when Thou art judged.\nFor behold I was conceived in iniquities, * and in sins did my mother conceive me.\nFor behold Thou hast loved truth: * the uncertain and hidden things of Thy wisdom Thou hast made manifest to me.\nThou shalt sprinkle me with hyssop, and I shall be cleansed: * Thou shalt wash me, and I shall be made whiter than snow.\nTo my hearing Thou shalt give joy and gladness, * and the bones that have been humbled shall rejoice.\nTurn away Thy face from my sins, * and blot out all my iniquities.\nCreate a clean heart in me, O God, * and renew a right spirit within my bowels.\nCast me not away from Thy face, * and take not Thy Holy Spirit from me.\nRestore unto me the joy of Thy salvation, * and strengthen me with a perfect spirit.\nI will teach the unjust Thy ways, * and the wicked shall be converted to Thee.\nDeliver me from blood, O God, Thou God of my salvation, * and my tongue shall extol Thy justice.\nO Lord, Thou wilt open my lips, * and my mouth shall declare Thy praise.\nFor if Thou hadst desired sacrifice, I would indeed have given it: * with burnt offerings Thou wilt not be delighted.\nA sacrifice to God is an afflicted spirit: * a contrite and humbled heart, O God, Thou wilt not despise.\nDeal favorably, O Lord, in Thy good will with Sion, * that the walls of Jerusalem may be built up.\nThen shalt Thou accept the sacrifice of justice, oblations and whole burnt offerings: * then shall they lay calves upon Thine altar.\nGlory be to the Father, and to the Son, * and to the Holy Ghost.\nAs it was in the beginning, is now, and ever shall be, * world without end. Amen.",
-                )
-            )
-        }
-
+        // DO's ferial preces carry no psalm (neither book): the versicles run on to the collect.
         // Concluding versicles
         parts.add(
             Hour.Part(
@@ -1257,6 +1237,10 @@ class OfficeAssembler(
                 eng = "℣. Let us pray for our Bishop N.\n℟. May he stand firm and care for us in the strength of the Lord, in the might of Thy name.",
             ),
             Hour.Part.Verse(
+                lat = "℣. Dómine, salvum fac regem.\n℟. Et exáudi nos in die, qua invocavérimus te.",
+                eng = "℣. O Lord, save the king.\n℟. And hear us in the day when we call upon Thee.",
+            ),
+            Hour.Part.Verse(
                 lat = "℣. Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ.\n℟. Et rege eos, et extólle illos usque in ætérnum.",
                 eng = "℣. O Lord, save Thy people, and bless Thine inheritance.\n℟. Govern them and lift them up for ever.",
             ),
@@ -1292,10 +1276,6 @@ class OfficeAssembler(
                 lat = "℣. Mitte eis, Dómine, auxílium de sancto.\n℟. Et de Sion tuére eos.",
                 eng = "℣. O Lord, send them help from Thy sanctuary.\n℟. And defend them out of Sion.",
             ),
-            Hour.Part.Verse(
-                lat = "℣. Dómine, exáudi oratiónem meam.\n℟. Et clamor meus ad te véniat.",
-                eng = "℣. O Lord, hear my prayer.\n℟. And let my cry come unto Thee.",
-            ),
         )
 
         /** Concluding versicles after the psalm in Preces Feriales. */
@@ -1307,6 +1287,10 @@ class OfficeAssembler(
             Hour.Part.Verse(
                 lat = "℣. Exsúrge, Christe, ádjuva nos.\n℟. Et líbera nos propter nomen tuum.",
                 eng = "℣. Arise, O Christ, and help us.\n℟. And redeem us for Thy name's sake.",
+            ),
+            Hour.Part.Verse(
+                lat = "℣. Dómine, exáudi oratiónem meam.\n℟. Et clamor meus ad te véniat.",
+                eng = "℣. O Lord, hear my prayer.\n℟. And let my cry come unto Thee.",
             ),
         )
     }

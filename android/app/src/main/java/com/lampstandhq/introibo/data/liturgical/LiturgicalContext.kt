@@ -119,6 +119,8 @@ data class LiturgicalContext(
     val pentecost: LocalDate,
     val trinitySunday: LocalDate,
     val firstAdvent: LocalDate,
+    /** The rite the context was built for (the Ember-day reckoning differs). */
+    val rite: MissalRite = MissalRite.RITE_1962,
 ) {
     companion object {
 
@@ -246,7 +248,7 @@ data class LiturgicalContext(
             // ---- Penance (discipline-aware) ----
             val penance = computePenance(
                 discipline, season, dow, isSunday, isFriday, isLent,
-                now, easter, pentecost, firstAdvent,
+                now, easter, pentecost, firstAdvent, rite,
             )
 
             val temporal = computeTemporalKey(
@@ -275,6 +277,7 @@ data class LiturgicalContext(
                 pentecost = pentecost,
                 trinitySunday = trinity,
                 firstAdvent = firstAdvent,
+                rite = rite,
             )
         }
 
@@ -343,7 +346,7 @@ data class LiturgicalContext(
             season: LiturgicalSeason, dow: Int,
             isSunday: Boolean, isFriday: Boolean, isLent: Boolean,
             date: LocalDate, easter: LocalDate, pentecost: LocalDate,
-            firstAdvent: LocalDate,
+            firstAdvent: LocalDate, rite: MissalRite = MissalRite.RITE_1962,
         ): Penance {
             val isSaturday = dow == 6
             val isWednesday = dow == 3
@@ -352,7 +355,7 @@ data class LiturgicalContext(
                 "℟. Domínica", false)
 
             if (discipline != PenanceDiscipline.DISCIPLINE_1962 &&
-                isEmberDate(date, easter, pentecost, firstAdvent, dow)) {
+                isEmberDate(date, easter, pentecost, firstAdvent, dow, rite)) {
                 val desc = if (discipline == PenanceDiscipline.STRICT)
                     ContentStore.uiString("penance.ember.desc_strict", "Fast (one full meal, no upper age limit) and complete abstinence from flesh-meat.")
                 else ContentStore.uiString("penance.ember.desc_1917", "Fast (one full meal and two collations, ages 21–59) and abstinence from flesh-meat.")
@@ -408,8 +411,26 @@ data class LiturgicalContext(
                 "℟. ${feriaLatinNames[dow]}", false)
         }
 
+        /**
+         * The September Ember Wednesday: the Wednesday after the third Sunday
+         * of September. The 1960 code counts the Sundays of the month from the
+         * first that falls in it (Sept 1-7); the older books from the Sunday
+         * nearest Sept 1 (Aug 29 - Sept 4), which keeps the Ember days in the
+         * week after the Exaltation of the Cross. Mirrors Divinum Officium.
+         */
+        fun septemberEmberWednesday(year: Int, rite: MissalRite): LocalDate {
+            val start = if (rite == MissalRite.RITE_1962) LocalDate.of(year, 9, 1) else LocalDate.of(year, 8, 29)
+            return start.with(java.time.temporal.TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY)).plusDays(17)
+        }
+
+        /** Wed/Fri/Sat of the September Ember week under [rite]. */
+        fun isSeptemberEmber(date: LocalDate, rite: MissalRite): Boolean {
+            val diff = ChronoUnit.DAYS.between(septemberEmberWednesday(date.year, rite), date)
+            return diff == 0L || diff == 2L || diff == 3L
+        }
+
         private fun isEmberDate(date: LocalDate, easter: LocalDate, pentecost: LocalDate,
-                                firstAdvent: LocalDate, dow: Int): Boolean {
+                                firstAdvent: LocalDate, dow: Int, rite: MissalRite): Boolean {
             if (dow != 3 && dow != 5 && dow != 6) return false
             // Sunday-start weeks throughout — parity with iOS Calendar.liturgical
             // (weekOfYear). The previous ISO Monday-start comparison put the
@@ -422,11 +443,8 @@ data class LiturgicalContext(
             if (woy == weekOfYear(easter.minusDays(46))) return true
             // Pentecost Ember: same Sunday-start week as Pentecost Sunday
             if (woy == weekOfYear(pentecost)) return true
-            // September Ember: the week AFTER the week containing Sept 14
-            // (Exaltation of the Cross) — matches the ordo's "Quattuor
-            // Temporum Septembris" days and the isEmberDay badge reckoning.
-            if (woy == weekOfYear(LocalDate.of(date.year, 9, 14)) + 1) return true
-            return false
+            // September Ember: after the third Sunday of September, reckoned per rite.
+            return isSeptemberEmber(date, rite)
         }
 
         private fun isVigilFast(date: LocalDate, pentecost: LocalDate): Boolean {
@@ -538,12 +556,8 @@ val LiturgicalContext.isEmberDay: Boolean
         // Pentecost ember: same Sunday-start week as Pentecost (iOS parity)
         if (dateWeek == weekOfYear(pentecost)) return true
 
-        // September ember: week after the one containing Sept 14 (iOS parity —
-        // note iOS's badge intentionally differs by +1 from its penance check)
-        val sept14 = java.time.LocalDate.of(date.year, 9, 14)
-        if (dateWeek == weekOfYear(sept14) + 1) return true
-
-        return false
+        // September ember: after the third Sunday of September, reckoned per rite.
+        return LiturgicalContext.isSeptemberEmber(date, rite)
     }
 
 /**
@@ -554,7 +568,7 @@ val LiturgicalContext.isEmberDay: Boolean
 fun LiturgicalContext.penanceFor(discipline: PenanceDiscipline): Penance =
     LiturgicalContext.computePenance(
         discipline, season, dayOfWeek, isSunday, isFriday, isLent,
-        date, easter, pentecost, firstAdvent,
+        date, easter, pentecost, firstAdvent, rite,
     )
 
 private fun weekOfYear(date: LocalDate): Int =

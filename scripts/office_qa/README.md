@@ -45,7 +45,26 @@ antiphon, the preces):
       gradle :app:testDebugUnitTest --tests '*OfficeJsonDump*' --rerun
     python3 scripts/office_qa/compare.py --app /tmp/appqa --do /tmp/doqa --rites 1962,1955,pre1955 --report report.txt
 
-Zero flags in every rite is the bar. `compare.py --golden DIR` also
+Zero flags in every rite is the bar.
+
+`compare_text.py` compares the WHOLE text instead — every line a user reads,
+the app's parts flattened the way the hour views render them (the antiphon
+before and after its psalms, ℣./℟. pairs, hymn stanzas) against DO's lines,
+aligned with difflib and classified, so systematic omissions (a Glória Patri,
+an Orémus, the invitatory inside the Venite) stand out over the year:
+
+    python3 scripts/office_qa/compare_text.py --app /tmp/esdump --do /tmp/doqa --rites 1962 --step 4
+    python3 scripts/office_qa/compare_text.py --app /tmp/esdump --do /tmp/doqa --show 1962:2025-11-30:prima
+
+The fixed frame of the hours (`OfficeFrame.kt` / `OfficeFrame.swift`: the
+Pater/Ave/Credo of the older books, the opening's Sicut erat and Allelúja,
+Glória Patri after the psalms, the invitatory woven into the Venite, Deo
+grátias after the capitulum, the short responsory said whole, Orémus and the
+conclusion around the collects, DO's absolution and blessings, the ends of
+the hours) was written from its report. `build_office_conclusions.py` reads
+the collect → conclusion pairs DO printed over the year into
+`office_conclusions.json` (both asset copies), which the frame looks up
+(the propers carry the collects without DO's `$Per Dominum` markers). `compare.py --golden DIR` also
 writes the DO side as `<rite>.json.gz`, which
 `android/app/src/test/resources/office_golden/` carries: the
 `OfficeDivinumOfficiumGoldenTest` unit test re-derives the app's side for

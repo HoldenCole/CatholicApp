@@ -85,6 +85,8 @@ struct LiturgicalContext {
     let pentecost: Date
     let trinitySunday: Date
     let firstAdvent: Date
+    /// The rite the context was built for (the Ember-day reckoning differs).
+    let rite: MissalRite
 
     static func current() -> LiturgicalContext {
         let riteRaw = UserDefaults.standard.string(forKey: SettingsKey.rite) ?? MissalRite.rite1962.rawValue
@@ -209,7 +211,7 @@ struct LiturgicalContext {
             discipline: discipline, season: season,
             dow: dow, isSunday: isSunday, isFriday: isFriday, isLent: isLent,
             date: now, easter: easter, pentecost: pentecost,
-            firstAdvent: firstAdvent, cal: cal
+            firstAdvent: firstAdvent, cal: cal, rite: rite
         )
 
         let temporal = Self.computeTemporalKey(
@@ -240,7 +242,8 @@ struct LiturgicalContext {
             ashWednesday: ashWed,
             pentecost: pentecost,
             trinitySunday: trinity,
-            firstAdvent: firstAdvent
+            firstAdvent: firstAdvent,
+            rite: rite
         )
     }
 
@@ -345,7 +348,7 @@ struct LiturgicalContext {
         season: LiturgicalSeason,
         dow: Int, isSunday: Bool, isFriday: Bool, isLent: Bool,
         date: Date, easter: Date, pentecost: Date,
-        firstAdvent: Date, cal: Calendar
+        firstAdvent: Date, cal: Calendar, rite: MissalRite
     ) -> Penance {
         let isSaturday = dow == 6
         let isWednesday = dow == 3
@@ -363,7 +366,7 @@ struct LiturgicalContext {
         // Under 1962 they are penitential but not obligatory fast days.
         if discipline != .discipline1962 {
             if isEmberDate(date: date, easter: easter, pentecost: pentecost,
-                           firstAdvent: firstAdvent, cal: cal, dow: dow) {
+                           firstAdvent: firstAdvent, cal: cal, dow: dow, rite: rite) {
                 return Penance(
                     title: ContentStore.shared.uiString("penance.ember.title", "Ember Day: Fast & Abstinence"),
                     latin: "Quattuor Témporum",
@@ -487,9 +490,30 @@ struct LiturgicalContext {
         )
     }
 
+    /// The September Ember Wednesday: the Wednesday after the third Sunday
+    /// of September. The 1960 code counts the Sundays of the month from the
+    /// first that falls in it (Sept 1-7); the older books from the Sunday
+    /// nearest Sept 1 (Aug 29 - Sept 4), which keeps the Ember days in the
+    /// week after the Exaltation of the Cross. Mirrors Divinum Officium.
+    static func septemberEmberWednesday(year: Int, rite: MissalRite, cal: Calendar) -> Date? {
+        var c = DateComponents()
+        c.year = year; c.month = rite == .rite1962 ? 9 : 8; c.day = rite == .rite1962 ? 1 : 29
+        guard var d = cal.date(from: c) else { return nil }
+        while cal.component(.weekday, from: d) != 1 { d = d.addingDays(1) }
+        return d.addingDays(17)
+    }
+
+    /// Wed/Fri/Sat of the September Ember week under `rite`.
+    static func isSeptemberEmber(_ date: Date, rite: MissalRite, cal: Calendar) -> Bool {
+        guard let wed = septemberEmberWednesday(year: cal.component(.year, from: date), rite: rite, cal: cal),
+              let diff = cal.dateComponents([.day], from: cal.startOfDay(for: wed), to: cal.startOfDay(for: date)).day
+        else { return false }
+        return diff == 0 || diff == 2 || diff == 3
+    }
+
     /// Ember days: Wed/Fri/Sat of the four Ember weeks.
     private static func isEmberDate(date: Date, easter: Date, pentecost: Date,
-                                     firstAdvent: Date, cal: Calendar, dow: Int) -> Bool {
+                                     firstAdvent: Date, cal: Calendar, dow: Int, rite: MissalRite) -> Bool {
         guard dow == 3 || dow == 5 || dow == 6 else { return false }
         let week = cal.component(.weekOfYear, from: date)
         // Advent Ember: 3rd week of Advent
@@ -503,18 +527,8 @@ struct LiturgicalContext {
         // (same week as Pentecost Sunday in a Sunday-start calendar)
         let pentWeek = cal.component(.weekOfYear, from: pentecost)
         if week == pentWeek { return true }
-        // September Ember: Wed/Fri/Sat in the week AFTER the week containing
-        // Sept 14 (Exaltation of the Cross) — the week of the ordo's
-        // "Quattuor Temporum Septembris" days, and the same reckoning the
-        // isEmberDay badge uses. (Was +0, which put the 1917-discipline fast
-        // dots a week earlier than the calendar's own Ember days.)
-        let year = cal.component(.year, from: date)
-        var sept14Comps = DateComponents(); sept14Comps.year = year; sept14Comps.month = 9; sept14Comps.day = 14
-        if let sept14 = cal.date(from: sept14Comps) {
-            let s14week = cal.component(.weekOfYear, from: sept14)
-            if week == s14week + 1 { return true }
-        }
-        return false
+        // September Ember: after the third Sunday of September, reckoned per rite.
+        return isSeptemberEmber(date, rite: rite, cal: cal)
     }
 
     /// Vigil fast days under the 1917 Code: Christmas Eve, Pentecost vigil,
@@ -646,15 +660,7 @@ extension LiturgicalContext {
         let pentecostWeek = cal.component(.weekOfYear, from: pentecost)
         if weekOfYear == pentecostWeek { return true }
 
-        // September ember: week containing the Wednesday after Sept 14
-        var sept14Comps = DateComponents()
-        sept14Comps.year = cal.component(.year, from: date)
-        sept14Comps.month = 9; sept14Comps.day = 14
-        if let sept14 = cal.date(from: sept14Comps) {
-            let sept14Week = cal.component(.weekOfYear, from: sept14)
-            if weekOfYear == sept14Week + 1 { return true }
-        }
-
-        return false
+        // September ember: after the third Sunday of September, reckoned per rite.
+        return Self.isSeptemberEmber(date, rite: rite, cal: cal)
     }
 }

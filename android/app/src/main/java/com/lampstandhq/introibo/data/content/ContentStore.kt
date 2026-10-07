@@ -151,6 +151,7 @@ object ContentStore {
         psalterTextData = load("psalter.json") ?: emptyMap()
         officeRulesData = load("office_rules.json") ?: emptyMap()
         officePsalteriumData = load("office_psalterium.json") ?: OfficePsalterium()
+        OfficeFrame.conclusions = load<OfficeConclusions>("office_conclusions.json")?.collects ?: emptyMap()
         officeAntsData = load("office_ants.json") ?: emptyMap()
         officeCommuneData = load("office_commune.json") ?: emptyMap()
 
@@ -422,6 +423,7 @@ object ContentStore {
         hymnsSeasonalData = load("hymns_seasonal.json") ?: emptyMap()
         sanctoralPropers = load("sanctoral_propers.json") ?: emptyMap()
         officePsalteriumData = load("office_psalterium.json") ?: OfficePsalterium()
+        OfficeFrame.conclusions = load<OfficeConclusions>("office_conclusions.json")?.collects ?: emptyMap()
         officeAntsData = load("office_ants.json") ?: emptyMap()
         officeCommuneData = load("office_commune.json") ?: emptyMap()
         officePropersCache.clear()
@@ -1361,6 +1363,7 @@ object ContentStore {
             Hour.Part(type = "collect", label = uiString("missal.part.collect", "Collect"), lat = c.lat, eng = c.eng, variationKey = "oratio")
         }
 
+        OfficeFrame.paterAveCredo = hours.firstOrNull { it.slug == "laudes" }?.parts?.firstOrNull { it.type == "pater" }
         var assembled = officeAssembler.assemble(template, ctx, isFestal, festalCompline, festalLittleHours, matinsNocturns, matinsTeDeum, rite, fallbackCollect, ferialOffice, primeMartyrology, resolution, if (vespersOfFollowing) tomorrowOrdo?.temporal else null)
         val matinsNocturnsEff = resolution?.nocturns ?: matinsNocturns
 
@@ -1506,6 +1509,11 @@ object ContentStore {
             assembled = insertCommemoration(assembled, data, template.slug)
         }
 
+        // The fixed frame DO prints around the texts (Glória Patri, Orémus and
+        // the conclusions, the Pater of the older books, the ends of the hours)
+        // — after the commemorations and every other layer, before the Spanish.
+        assembled = assembled.copy(parts = OfficeFrame.apply(assembled.parts, OfficeFrame.Ctx(template.slug, rite, ctx.dayOfWeek, resolution?.office,
+            resolution?.lessons ?: 3, resolution?.nocturns ?: 1, resolution?.special != null, template)))
         return applyOfficeSpanish(assembled)
     }
 
@@ -1526,7 +1534,7 @@ object ContentStore {
      *  (the parts the rubrics assemble carry English from Divinum Officium). */
     private fun applyOfficeSpanish(hour: Hour): Hour {
         if (officeTextsES.isEmpty()) return hour
-        val mark = Regex("^(℟\\.br\\.|℟\\.|℣\\.)\\s*")
+        val mark = Regex("^(℟\\.br\\.|℟\\.|℣\\.|Ant\\.)\\s*")
         val alleluia = Regex("(?:,?\\s*[Aa]llel[úu][ij]a\\.?)+\\s*$")
         fun bare(l: String): String? {
             officeTextsES[officeNorm(l)]?.let { return it }

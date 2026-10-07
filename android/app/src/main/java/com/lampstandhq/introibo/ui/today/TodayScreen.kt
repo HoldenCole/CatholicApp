@@ -702,7 +702,7 @@ private fun PenanceCard(
         )
 
         // Next obligation
-        val nextObl = remember(discipline) { nextObligationDay(discipline) }
+        val nextObl = remember(discipline, ctx.rite) { nextObligationDay(discipline, ctx.rite) }
         if (nextObl != null) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -1106,10 +1106,10 @@ private fun ProgressRing(
 // ---------------------------------------------------------------------------
 
 // Pure helper (no composables) — computed inside remember{} at the call site.
-private fun nextObligationDay(discipline: PenanceDiscipline): String? {
+private fun nextObligationDay(discipline: PenanceDiscipline, rite: com.lampstandhq.introibo.storage.settings.MissalRite): String? {
     var d = java.time.LocalDate.now().plusDays(1)
     repeat(60) {
-        val ctx = LiturgicalContext.forDate(d, discipline)
+        val ctx = LiturgicalContext.forDate(d, discipline, rite)
         if (ctx.penance.strict || (ctx.isFriday && !ctx.isSunday)) {
             return "${VernacularDates.weekdayLongDate(d)} (${ctx.penance.title})"
         }

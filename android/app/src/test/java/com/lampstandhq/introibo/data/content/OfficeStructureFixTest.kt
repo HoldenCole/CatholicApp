@@ -235,7 +235,8 @@ class OfficeStructureFixTest {
             val parts = assembled("completorium", date).parts
             val i = parts.indexOfFirst { it.type == "marian" }
             assertTrue("Marian antiphon present on $date", i >= 0)
-            return parts.getOrNull(i + 1) to parts.getOrNull(i + 2)
+            // the versicle follows the antiphon; the prayer after its Orémus
+            return parts.getOrNull(i + 1) to parts.drop(i + 1).firstOrNull { it.type == "collect" }
         }
         // Salve Regina (after Pentecost)
         val (salveVr, salveOr) = suffix(LocalDate.of(2026, 8, 2))

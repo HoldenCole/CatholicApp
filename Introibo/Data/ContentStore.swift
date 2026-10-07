@@ -101,6 +101,7 @@ final class ContentStore {
         psalterTextData   = load("psalter",           as: [String: [String: [String]]].self) ?? [:]
         officeRulesData      = load("office_rules",      as: [String: [String: OfficeRule]].self) ?? [:]
         officePsalteriumData = load("office_psalterium", as: OfficePsalterium.self) ?? OfficePsalterium()
+        OfficeFrame.conclusions = load("office_conclusions", as: OfficeConclusions.self)?.collects ?? [:]
         officeAntsData       = load("office_ants",       as: [String: [String: [PsalmiLine]]].self) ?? [:]
         officeCommuneData    = load("office_commune",    as: [String: OfficePsalterium].self) ?? [:]
         applyVernacularOverlay(VernacularLanguage.current(), reloadSources: false)
@@ -346,6 +347,7 @@ final class ContentStore {
             hymnsSeasonalData = load("hymns_seasonal", as: [String: [String: Hour.Part]].self) ?? [:]
             sanctoralPropers  = load("sanctoral_propers", as: [String: [String: Hour.Part]].self) ?? [:]
             officePsalteriumData = load("office_psalterium", as: OfficePsalterium.self) ?? OfficePsalterium()
+        OfficeFrame.conclusions = load("office_conclusions", as: OfficeConclusions.self)?.collects ?? [:]
             officeAntsData       = load("office_ants",       as: [String: [String: [PsalmiLine]]].self) ?? [:]
             officeCommuneData    = load("office_commune",    as: [String: OfficePsalterium].self) ?? [:]
             officePropersCache.removeAll()
@@ -906,6 +908,7 @@ final class ContentStore {
         }
 
         let primeMartyrology = UserDefaults.standard.object(forKey: SettingsKey.primeMartyrology) as? Bool ?? true
+        OfficeFrame.paterAveCredo = hours.first { $0.slug == "laudes" }?.parts.first { $0.type == "pater" }
         var assembled = officeAssembler.assemble(template: template, context: ctx, isFestal: isFestal, festalCompline: festalCompline, festalLittleHours: festalLittleHours, matinsNocturns: matinsNocturns, matinsTeDeum: matinsTeDeum, rite: rite, fallbackCollect: fallbackCollect, officeIsFerial: ferialOffice, primeMartyrology: primeMartyrology, resolution: resolution, effectiveTemporalKey: vespersOfFollowing ? tomorrowOrdo?.temporal : nil)
         let matinsNocturnsEff = resolution?.nocturns ?? matinsNocturns
 
@@ -1029,6 +1032,11 @@ final class ContentStore {
             assembled = Self.insertCommemoration(into: assembled, data: data, hourSlug: template.slug)
         }
 
+        // The fixed frame DO prints around the texts (Glória Patri, Orémus and
+        // the conclusions, the Pater of the older books, the ends of the hours)
+        // — after the commemorations and every other layer, before the Spanish.
+        assembled.parts = OfficeFrame.apply(assembled.parts, OfficeFrame.Ctx(hourSlug: template.slug, rite: rite, dow: ctx.dayOfWeek, office: resolution?.office,
+            lessons: resolution?.lessons ?? 3, nocturns: resolution?.nocturns ?? 1, special: resolution?.special != nil, template: template))
         return applyOfficeSpanish(assembled)
     }
 
@@ -1043,7 +1051,7 @@ final class ContentStore {
     /// (the parts the rubrics assemble carry English from Divinum Officium).
     private func applyOfficeSpanish(_ hour: Hour) -> Hour {
         if officeTextsES.isEmpty { return hour }
-        let mark = try! NSRegularExpression(pattern: "^(℟\\.br\\.|℟\\.|℣\\.)\\s*")
+        let mark = try! NSRegularExpression(pattern: "^(℟\\.br\\.|℟\\.|℣\\.|Ant\\.)\\s*")
         let alleluia = try! NSRegularExpression(pattern: "(?:,?\\s*[Aa]llel[úu][ij]a\\.?)+\\s*$")
         func one(_ l: String) -> String? {
             if let e = bare(l) { return e }

@@ -202,13 +202,14 @@ struct HourView: View {
     }
 
     private func vrBlock(_ p: Hour.Part) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
+        let m = VersicleMarks.of(p)
+        return VStack(alignment: .leading, spacing: 6) {
             Text(p.label ?? "Versus")
                 .smallLabel(color: Color.sanctuaryRed)
-            if let lat = p.lat, let eng = p.eng {
+            if let lat = m.lat, let eng = m.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
             }
-            if let latR = p.latR, let engR = p.engR {
+            if let latR = m.latR, let engR = m.engR {
                 BilingualLine(lat: latR, eng: engR, sideBySide: true)
                     .padding(.top, 4)
             }
