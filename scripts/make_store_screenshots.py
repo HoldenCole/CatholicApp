@@ -72,9 +72,9 @@ SHOTS = [
     ("04-latin.png",     "gentile",  "SCHOLA",    "Learn the Latin\nof the Mass.",
      "Pronunciation, grammar, and the prayers you hear every Sunday, word by word.",
      (0.04, 0.265, 0.96, 0.425, "right", 0.36), False),
-    ("05-library.png",   "raphael",  "LIBER",     "Go Deeper.",
+    ("05-library.png",   "raphael",  "LIBER",     "Go Deeper\ninto the Faith.",
      "The history of the Mass, a glossary, articles, and every Proper, searchable.",
-     (0.04, 0.095, 0.96, 0.255, "left", 0.30), False),
+     (0.02, 0.475, 0.98, 0.625, "left", 0.42), False),
     ("10-settings.png",  "angelico", "RITUS",     "Make It Yours.",
      "Your Missal, your discipline of penance, your language, your look.",
      (0.06, 0.865, 0.94, 0.925, "right", 0.60), True),
@@ -410,7 +410,8 @@ def render_nocturne(i, shot, art, latin, title, sub, co, trust, size, tablet):
 def render_asym(i, shot, art, latin, title, sub, co, trust, size, tablet):
     W, H = size
     k = 0.70 if tablet else 1.0
-    left_phone = (i % 2 == 0)                 # the phone alternates sides
+    order = [n for n in range(1, len(SHOTS) + 1) if MIXED.get(n, "asymmetric") == "asymmetric"]
+    left_phone = (order.index(i) % 2 == 1) if i in order else (i % 2 == 0)   # the phone alternates sides
     canvas = Image.new("RGBA", (W, H), PAGE + (255,))
     a = painting(W, H, art, blur=0.04, color=0.9, bright=1.08).convert("RGBA")
     a.putalpha(vgradient(W, H, [(0, 40), (0.30, 120), (1.0, 215)]))
@@ -437,7 +438,7 @@ def render_asym(i, shot, art, latin, title, sub, co, trust, size, tablet):
         y += int(sfont.size * 0.6); y = tracked(d, TRUST, sans(W * 0.018 * k, "SemiBold"), mx, y, GOLD, W * 0.004, align="left")
     fw = int(W * (0.62 if tablet else 0.86)); top = int(y + H * 0.04)
     dev, screen, band = device(shot, fw)
-    dx = -int(fw * 0.16) if left_phone else W - fw + int(fw * 0.16)
+    dx = -int(fw * 0.07) if left_phone else W - fw + int(fw * 0.07)
     place(canvas, dev, dx, top, int(W * 0.03), int(W * 0.02))
     x0, y0, x1, y1, side, cy = co
     card = callout(screen, band, (x0, y0, x1, y1), 1.30 if tablet else 1.42, int(W * 0.60), int(W * 0.012), int(W * 0.03), max(2, int(W * 0.0028)))
@@ -448,6 +449,15 @@ def render_asym(i, shot, art, latin, title, sub, co, trust, size, tablet):
 
 
 STYLES = {"wash": render_wash, "vellum": render_vellum, "nocturne": render_nocturne, "asymmetric": render_asym}
+# "mixed": asymmetric as the main voice, vellum as chapter pages — the text-centred screens
+MIXED = {1: "vellum", 4: "vellum", 7: "vellum", 10: "vellum"}
+
+
+def render_mixed(i, *a):
+    return STYLES[MIXED.get(i, "asymmetric")](i, *a)
+
+
+STYLES["mixed"] = render_mixed
 
 
 def feature_graphic(path, style):
@@ -469,7 +479,7 @@ def feature_graphic(path, style):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--style", choices=list(STYLES), default="wash")
+    ap.add_argument("--style", choices=list(STYLES), default="mixed")
     ap.add_argument("--only", choices=["apple", "play"])
     ap.add_argument("--sizes", help="comma-separated size keys (default: all)")
     ap.add_argument("--shots", help="comma-separated screenshot numbers (default: all)")
@@ -477,7 +487,7 @@ def main():
     args = ap.parse_args()
     want = set(args.sizes.split(",")) if args.sizes else None
     nums = set(int(x) for x in args.shots.split(",")) if args.shots else None
-    out_dir = args.out or f"{ROOT}/{VERSION}" + ("" if args.style == "wash" else f"-{args.style}")
+    out_dir = args.out or f"{ROOT}/{VERSION}" + ("" if args.style == "mixed" else f"-{args.style}")
     render = STYLES[args.style]
     n = 0
     for store, sizes in (("apple", APPLE), ("play", PLAY)):

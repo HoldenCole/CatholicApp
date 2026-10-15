@@ -3,9 +3,18 @@
 The App Store and Google Play screenshots are generated, never hand-made,
 by `scripts/make_store_screenshots.py` from one table of copy and one folder
 of raw in-app captures. This document is the spec; read it before changing
-the generator. The reference register is the listings of Hallow and
-Sanctifica: a painting softened into a wash, a bold serif headline, one
-sentence of support, a real-looking phone, and one zoomed callout.
+the generator.
+
+The shipped set is the **mixed** style: *asymmetric* pages as the main
+voice (headline set left, ink first line and maroon italic second, a roman
+numeral index on a gold hairline, the phone pushed to one side and off two
+edges, alternating sides, the callout on the open side) with *vellum*
+chapter pages at screens 1, 4, 7 and 10 (a missal page: double rule in
+maroon and gold, running head INTROIBO · n · LATIN WORD, a maroon italic
+drop cap, a gold diamond rule, Garamond italic subhead, the painting
+showing past the page's edges). `--style` also renders the rejected
+candidates (wash, nocturne) and either style alone;
+`store-screenshots/options/` keeps the comparison.
 
 (The earlier sets — `1.2.1 screenshots/`, `scripts/make_marketing.py`,
 `scripts/make_play_marketing.py` — are history only. Do not regenerate
