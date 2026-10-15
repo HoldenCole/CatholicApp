@@ -411,7 +411,9 @@ def render_asym(i, shot, art, latin, title, sub, co, trust, size, tablet):
     W, H = size
     k = 0.70 if tablet else 1.0
     order = [n for n in range(1, len(SHOTS) + 1) if MIXED.get(n, "asymmetric") == "asymmetric"]
-    left_phone = (order.index(i) % 2 == 1) if i in order else (i % 2 == 0)   # the phone alternates sides
+    # the phone alternates sides so that two asymmetric pages side by side carry their phones on the
+    # OUTER edges (never facing each other across the gap, which reads as one wide phone)
+    left_phone = (order.index(i) % 2 == 0) if i in order else (i % 2 == 0)
     canvas = Image.new("RGBA", (W, H), PAGE + (255,))
     a = painting(W, H, art, blur=0.04, color=0.9, bright=1.08).convert("RGBA")
     a.putalpha(vgradient(W, H, [(0, 40), (0.30, 120), (1.0, 215)]))
