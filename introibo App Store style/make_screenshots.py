@@ -1,34 +1,19 @@
 #!/usr/bin/env python3
-"""Store screenshots for Introibo — App Store and Google Play from one table.
+"""Introibo store screenshots — App Store and Google Play from one table.
 
-Four designs share the same bones (a real phone, a big headline, a painting
-blurred into the background, no counts in the copy) and differ in layout
-and ornament; `--style` picks one (see docs/marketing-screenshots.md):
+Drop fresh in-app captures into raw/ (portrait, status bar cropped away),
+keep the file names listed in SHOTS, run this script, and upload what
+appears in output/. See README.md in this folder.
 
-  wash       cream wash over the painting, centred headline, one zoomed
-             callout card over the phone's edge
-  vellum     a missal page: double-rule border, running head, a drop cap on
-             the headline, the painting showing past the page's edges
-  nocturne   the painting deep and dark, cream headline, gold rules, the
-             phone turned a few degrees, a faint Latin word behind the text
-  asymmetric headline set left with an italic maroon second line, the phone
-             pushed to one side and off two edges, alternating sides, a
-             roman numeral index and a gold hairline
-
-Inputs : store-screenshots/raw/NN-<name>.png (portrait captures without a
-         status bar), store-screenshots/art/*.jpg, store-screenshots/fonts/*.
-Output : store-screenshots/<version>[-<style>]/apple/NN-<size>.png,
-         .../play/<key>-NN.png, .../play/feature-graphic-1024x500.png
-
-    python3 scripts/make_store_screenshots.py --style vellum
-    python3 scripts/make_store_screenshots.py --style nocturne --only apple --sizes 6.9 --shots 1,2,3
+    python3 "introibo App Store style/make_screenshots.py"
+    python3 "introibo App Store style/make_screenshots.py" --only apple --sizes 6.9 --shots 1,2,3
 """
 import argparse, os, sys
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 
-VERSION = "1.3.0"
-ROOT = "store-screenshots"
-RAW, ART, FONTS = f"{ROOT}/raw", f"{ROOT}/art", f"{ROOT}/fonts"
+ROOT = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(ROOT)
+RAW, ART, FONTS, OUT_DIR = f"{ROOT}/raw", f"{ROOT}/art", f"{ROOT}/fonts", f"{ROOT}/output"
 
 PAGE = (247, 241, 229)
 MAROON = (104, 18, 26)
@@ -38,7 +23,6 @@ CREAM = (250, 245, 234)
 CARD = (253, 250, 244)
 FRAME = (24, 21, 21)
 FRAME_EDGE = (70, 62, 60)
-NIGHT = (34, 10, 14)
 
 APPLE = {"6.9": (1320, 2868), "6.5": (1284, 2778), "ipad13": (2048, 2732)}
 PLAY = {"phone": (1080, 1920), "tablet-7in": (1200, 2134), "tablet-10in": (1620, 2880)}
@@ -94,7 +78,7 @@ def sans(size, weight="Medium"):
 
 
 def garamond(size, italic=False):
-    return ImageFont.truetype(f"android/app/src/main/res/font/eb_garamond_{'italic' if italic else 'regular'}.ttf", max(8, int(size)))
+    return ImageFont.truetype(f"{REPO}/android/app/src/main/res/font/eb_garamond_{'italic' if italic else 'regular'}.ttf", max(8, int(size)))
 
 
 def wrap(draw, text, font, maxw):
@@ -169,14 +153,6 @@ def vgradient(W, H, stops):
         if t < stops[0][0]: a = stops[0][1]
         px[0, yy] = int(a)
     return m.resize((W, H))
-
-
-def bg_wash(W, H, key):
-    bg = Image.new("RGBA", (W, H), PAGE + (255,))
-    art = painting(W, H, key).convert("RGBA"); art.putalpha(int(255 * 0.78)); bg.alpha_composite(art)
-    layer = Image.new("RGBA", (W, H), PAGE + (0,)); layer.putalpha(vgradient(W, H, [(0, 190), (0.08, 190), (0.50, 0)]))
-    bg.alpha_composite(layer)
-    return bg
 
 
 # ── the device ───────────────────────────────────────────────────────────────
@@ -286,32 +262,6 @@ def diamond_rule(d, cx, y, half, col, w=2):
     d.polygon([(cx, y - s), (cx + s, y), (cx, y + s), (cx - s, y)], fill=col)
 
 
-# ── STYLE: wash ──────────────────────────────────────────────────────────────
-def render_wash(i, shot, art, latin, title, sub, co, trust, size, tablet):
-    W, H = size
-    canvas = bg_wash(W, H, art); d = ImageDraw.Draw(canvas)
-    k = 0.70 if tablet else 1.0
-    tfont, sfont = serif(W * 0.108 * k, 760), sans(W * 0.037 * k)
-    col = int(W * (0.62 if tablet else 0.88))
-    y = int(H * 0.040); r = int(W * 0.026 * k)
-    badge(canvas, W // 2, y + r, r); y += 2 * r + int(tfont.size * 0.40)
-    y = text_block(d, title.split("\n"), tfont, 0, y, MAROON, 1.02, cx=W // 2)
-    y += int(sfont.size * 0.35)
-    y = text_block(d, balanced(d, sub, sfont, int(col * 0.80)), sfont, 0, y, INK, 1.32, cx=W // 2)
-    if trust:
-        y += int(sfont.size * 0.55); y = tracked(d, TRUST, sans(sfont.size * 0.56, "SemiBold"), W // 2, y, GOLD, sfont.size * 0.10)
-    fw = int(W * (0.60 if tablet else 0.84)); top = int(y + H * 0.035)
-    dev, screen, band = device(shot, fw); dx = (W - dev.size[0]) // 2
-    place(canvas, dev, dx, top, int(W * 0.028), int(W * 0.02))
-    x0, y0, x1, y1, side, cy = co
-    card = callout(screen, band, (x0, y0, x1, y1), 1.30 if tablet else 1.42, int(W * (0.56 if tablet else 0.74)), int(W * 0.012), int(W * 0.03), max(2, int(W * 0.0028)))
-    cyy = int(top + (H - top) * cy - card.size[1] / 2); margin = int(W * 0.035)
-    cx = margin if side == "left" else W - margin - card.size[0]
-    if tablet: cx = dx - int(W * 0.06) if side == "left" else dx + dev.size[0] + int(W * 0.06) - card.size[0]
-    place(canvas, card, cx, cyy, int(W * 0.022), int(W * 0.012), 0.45)
-    return canvas.convert("RGB")
-
-
 # ── STYLE: vellum (a missal page) ────────────────────────────────────────────
 def render_vellum(i, shot, art, latin, title, sub, co, trust, size, tablet):
     W, H = size
@@ -363,49 +313,6 @@ def render_vellum(i, shot, art, latin, title, sub, co, trust, size, tablet):
     return canvas.convert("RGB")
 
 
-# ── STYLE: nocturne ──────────────────────────────────────────────────────────
-def render_nocturne(i, shot, art, latin, title, sub, co, trust, size, tablet):
-    W, H = size
-    k = 0.70 if tablet else 1.0
-    base = painting(W, H, art, blur=0.032, color=1.05, bright=0.55).convert("RGBA")
-    night = Image.new("RGBA", (W, H), NIGHT + (0,)); night.putalpha(vgradient(W, H, [(0, 150), (0.35, 110), (1.0, 235)]))
-    base.alpha_composite(night)
-    # a warm glow behind the phone
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(glow).ellipse([W * 0.05, H * 0.38, W * 0.95, H * 0.95], fill=(150, 48, 44, 110))
-    base.alpha_composite(glow.filter(ImageFilter.GaussianBlur(W * 0.18)))
-    canvas = base; d = ImageDraw.Draw(canvas)
-    # the faint Latin word behind the headline
-    wf = serif(W * 0.24 * k, 800, italic=True)
-    wm = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(wm).text((W // 2 - d.textlength(latin, font=wf) / 2, int(H * 0.035)), latin, font=wf, fill=GOLD + (22,))
-    canvas.alpha_composite(wm)
-    y = int(H * 0.055)
-    diamond_rule(d, W // 2, y, int(W * 0.09), GOLD, max(2, int(W * 0.002)))
-    y += int(W * 0.035)
-    y = tracked(d, latin, garamond(W * 0.026 * k), W // 2, y, GOLD, W * 0.006)
-    y += int(W * 0.02)
-    tfont = serif(W * 0.112 * k, 500, italic=True)
-    y = text_block(d, title.split("\n"), tfont, 0, y, CREAM, 1.0, cx=W // 2)
-    y += int(W * 0.02)
-    sfont = garamond(W * 0.040 * k)
-    y = text_block(d, balanced(d, sub, sfont, int(W * 0.72)), sfont, 0, y, (225, 205, 180), 1.25, cx=W // 2)
-    if trust:
-        y += int(sfont.size * 0.5); y = tracked(d, TRUST, sans(W * 0.019 * k, "SemiBold"), W // 2, y, GOLD, W * 0.004)
-    fw = int(W * (0.56 if tablet else 0.80)); top = int(y + H * 0.045)
-    dev, screen, band = device(shot, fw)
-    tilt = -5 if i % 2 else 5
-    rot = dev.rotate(tilt, resample=Image.BICUBIC, expand=True)
-    dx = (W - rot.size[0]) // 2
-    place(canvas, rot, dx, top, int(W * 0.035), int(W * 0.025), 0.7)
-    x0, y0, x1, y1, side, cy = co
-    card = callout(screen, band, (x0, y0, x1, y1), 1.25 if tablet else 1.36, int(W * (0.5 if tablet else 0.68)), int(W * 0.010), int(W * 0.026), max(2, int(W * 0.0028)), outline=GOLD, fill=(28, 18, 18))
-    cyy = int(top + (H - top) * cy - card.size[1] / 2); margin = int(W * 0.04)
-    cx = margin if side == "left" else W - margin - card.size[0]
-    place(canvas, card, cx, cyy, int(W * 0.022), int(W * 0.012), 0.6)
-    return canvas.convert("RGB")
-
-
 # ── STYLE: asymmetric ────────────────────────────────────────────────────────
 def render_asym(i, shot, art, latin, title, sub, co, trust, size, tablet):
     W, H = size
@@ -450,8 +357,9 @@ def render_asym(i, shot, art, latin, title, sub, co, trust, size, tablet):
     return canvas.convert("RGB")
 
 
-STYLES = {"wash": render_wash, "vellum": render_vellum, "nocturne": render_nocturne, "asymmetric": render_asym}
-# "mixed": asymmetric as the main voice, vellum as chapter pages — the text-centred screens
+STYLES = {"vellum": render_vellum, "asymmetric": render_asym}
+# The set: asymmetric pages as the main voice, vellum chapter pages at the text-centred screens.
+# Keep the vellum pages between the asymmetric pairs so two phones never face each other.
 MIXED = {1: "vellum", 4: "vellum", 7: "vellum", 10: "vellum"}
 
 
@@ -459,45 +367,52 @@ def render_mixed(i, *a):
     return STYLES[MIXED.get(i, "asymmetric")](i, *a)
 
 
-STYLES["mixed"] = render_mixed
-
-
-def feature_graphic(path, style):
+def feature_graphic(path):
     W, H = 1024, 500
-    dark = style == "nocturne"
-    canvas = painting(W, H, "raphael", blur=0.04, bright=0.55 if dark else 1.08).convert("RGBA")
-    veil = Image.new("RGBA", (W, H), (NIGHT if dark else PAGE) + (150 if dark else 170,)); canvas.alpha_composite(veil)
-    icon = Image.open("prototype/icon-assets/introibo-appstore-1024.png").convert("RGBA").resize((300, 300), Image.LANCZOS)
+    canvas = painting(W, H, "raphael", blur=0.04, bright=1.08).convert("RGBA")
+    veil = Image.new("RGBA", (W, H), PAGE + (170,)); canvas.alpha_composite(veil)
+    icon = Image.open(f"{REPO}/prototype/icon-assets/introibo-appstore-1024.png").convert("RGBA").resize((300, 300), Image.LANCZOS)
     m = Image.new("L", icon.size, 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, 299, 299], radius=66, fill=255); icon.putalpha(m)
     place(canvas, icon, 90, 100, 18, 10, 0.5)
     d = ImageDraw.Draw(canvas)
-    d.text((450, 120), "Introibo", font=serif(118, 760, italic=dark), fill=CREAM if dark else MAROON)
+    d.text((450, 120), "Introibo", font=serif(118, 760), fill=MAROON)
     f = sans(33)
-    d.text((456, 268), "A prayer companion for the", font=f, fill=(225, 205, 180) if dark else INK)
-    d.text((456, 310), "traditional Catholic life.", font=f, fill=(225, 205, 180) if dark else INK)
-    tracked(d, TRUST, sans(16, "SemiBold"), 456 + 262, 372, GOLD if dark else MAROON, 2)
+    d.text((456, 268), "A prayer companion for the", font=f, fill=INK)
+    d.text((456, 310), "traditional Catholic life.", font=f, fill=INK)
+    tracked(d, TRUST, sans(16, "SemiBold"), 456 + 262, 372, MAROON, 2)
     canvas.convert("RGB").save(path, "PNG")
+
+
+def contact_sheet(out_dir):
+    fs = sorted(f for f in os.listdir(f"{out_dir}/apple") if f.endswith("-6.9.png"))
+    if not fs: return
+    ims = [Image.open(f"{out_dir}/apple/{f}") for f in fs]
+    h = 1400; sheet = Image.new("RGB", (sum(int(i.size[0] * h / i.size[1]) + 12 for i in ims), h), (30, 30, 30)); x = 0
+    for im in ims:
+        w = int(im.size[0] * h / im.size[1]); sheet.paste(im.resize((w, h)), (x, 0)); x += w + 12
+    sheet.save(f"{out_dir}/contact-sheet-iphone-6.9.png", "PNG")
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--style", choices=list(STYLES), default="mixed")
     ap.add_argument("--only", choices=["apple", "play"])
     ap.add_argument("--sizes", help="comma-separated size keys (default: all)")
     ap.add_argument("--shots", help="comma-separated screenshot numbers (default: all)")
-    ap.add_argument("--out", help="output folder (default: store-screenshots/<version>[-<style>])")
+    ap.add_argument("--style", choices=["mixed", "vellum", "asymmetric"], default="mixed", help="the set, or one page style alone for comparison")
     args = ap.parse_args()
     want = set(args.sizes.split(",")) if args.sizes else None
     nums = set(int(x) for x in args.shots.split(",")) if args.shots else None
-    out_dir = args.out or f"{ROOT}/{VERSION}" + ("" if args.style == "mixed" else f"-{args.style}")
-    render = STYLES[args.style]
+    render = render_mixed if args.style == "mixed" else STYLES[args.style]
     n = 0
     for store, sizes in (("apple", APPLE), ("play", PLAY)):
         if args.only and args.only != store: continue
-        out = f"{out_dir}/{store}"; os.makedirs(out, exist_ok=True)
+        out = f"{OUT_DIR}/{store}"; os.makedirs(out, exist_ok=True)
         for i, (raw, art, latin, title, sub, co, trust) in enumerate(SHOTS, 1):
             if nums and i not in nums: continue
-            shot = Image.open(f"{RAW}/{raw}").convert("RGB")
+            path = f"{RAW}/{raw}"
+            if not os.path.exists(path):
+                print(f"  missing capture {raw} — screen {i} skipped"); continue
+            shot = Image.open(path).convert("RGB")
             for key, size in sizes.items():
                 if want and key not in want: continue
                 tablet = key in ("ipad13", "tablet-7in", "tablet-10in")
@@ -505,8 +420,10 @@ def main():
                 name = f"{i:02d}-{key}.png" if store == "apple" else f"{key}-{i:02d}.png"
                 img.save(f"{out}/{name}", "PNG"); n += 1
         if store == "play" and not want and not nums:
-            feature_graphic(f"{out}/feature-graphic-1024x500.png", args.style); n += 1
-    print(f"Wrote {n} images under {out_dir}/")
+            feature_graphic(f"{out}/feature-graphic-1024x500.png"); n += 1
+    if not args.only or args.only == "apple":
+        contact_sheet(OUT_DIR)
+    print(f"Wrote {n} images under {OUT_DIR}/")
 
 
 if __name__ == "__main__":

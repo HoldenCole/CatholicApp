@@ -297,15 +297,16 @@ android/                         Android app (Kotlin / Jetpack Compose)
 
 prototype/                       HTML/JS reference prototype the apps port from
 docs/
-  marketing-screenshots.md       How the App Store screenshots are designed
   index.html                     Marketing landing page
+
+introibo App Store style/        Store screenshots: raw captures, the generator, the output
+                                  for both stores (see its README to remake the set)
 
 scripts/                         Content import, calendar generation, QA, tooling
   import_propers.py               DivinumOfficium → Mass propers
   import_do.py                    DivinumOfficium → Divine Office
   gen_ordo_*.py / fix_ordo_*.py   1962 calendar (ordo) generation
   qa_ordo_vs_divinumofficium.py   Calendar QA against DivinumOfficium
-  make_marketing.py               App Store screenshot generator
 
 project.yml                      XcodeGen specification
 fastlane/Fastfile                TestFlight deployment lane
