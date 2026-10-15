@@ -1926,7 +1926,8 @@
     ],
     "occasions": [
       "first-friday",
-      "june"
+      "june",
+      "Litanies"
     ]
   },
   {
@@ -1938,7 +1939,8 @@
       "Easter Vigil",
       "Pentecost Vigil",
       "Rogation Days",
-      "Penitential"
+      "Penitential",
+      "Litanies"
     ],
     "note": "The ancient supplication invoking the Saints. Prescribed in the Roman Ritual for the Easter Vigil, the Vigil of Pentecost, the Major Litanies of St. Mark’s Day (April 25), the Minor Litanies of the Rogation Days before the Ascension, and times of public calamity or penance. Source: Breviarium Romanum.",
     "lines": [
@@ -3782,6 +3784,1004 @@
       {
         "lat": "Orémus. Concéde nos fámulos tuos, quǽsumus, Dómine Deus, perpétua mentis et córporis sanitáte gaudére: et, gloriósa beátæ Maríæ semper Vírginis intercessióne, a præsénti liberári tristítia, et ætérna pérfrui lætítia. Per Christum Dóminum nostrum. Amen.",
         "eng": "Let us pray. Grant, we beseech Thee, O Lord God, that we Thy servants may enjoy lasting health of mind and body, and by the glorious intercession of blessed Mary ever Virgin, be delivered from present sorrow and enjoy eternal gladness. Through Christ our Lord. Amen."
+      }
+    ],
+    "occasions": [
+      "Litanies"
+    ]
+  },
+  {
+    "slug": "litaniae-nominis-jesu",
+    "title": "Litaníæ Sanctíssimi Nóminis Jesu",
+    "eng": "Litany of the Most Holy Name of Jesus",
+    "category": "Devotiónes",
+    "note": "Approved for public use by Leo XIII in 1886. Fitting for the Feast of the Most Holy Name of Jesus (the Sunday between the Circumcision and the Epiphany, or January 2) and throughout January, the month of the Holy Name.",
+    "occasions": [
+      "Litanies"
+    ],
+    "lines": [
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Christe, eléison.",
+        "eng": "Christ, have mercy."
+      },
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Jesu, audi nos.",
+        "eng": "Jesus, hear us."
+      },
+      {
+        "lat": "Jesu, exáudi nos.",
+        "eng": "Jesus, graciously hear us."
+      },
+      {
+        "lat": "Pater de cælis, Deus, miserére nobis.",
+        "eng": "God the Father of Heaven, have mercy on us."
+      },
+      {
+        "lat": "Fili, Redémptor mundi, Deus, miserére nobis.",
+        "eng": "God the Son, Redeemer of the world, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, Deus, miserére nobis.",
+        "eng": "God the Holy Ghost, have mercy on us."
+      },
+      {
+        "lat": "Sancta Trínitas, unus Deus, miserére nobis.",
+        "eng": "Holy Trinity, one God, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Fili Dei vivi, miserére nobis.",
+        "eng": "Jesus, Son of the living God, have mercy on us."
+      },
+      {
+        "lat": "Jesu, splendor Patris, miserére nobis.",
+        "eng": "Jesus, splendor of the Father, have mercy on us."
+      },
+      {
+        "lat": "Jesu, candor lucis ætérnæ, miserére nobis.",
+        "eng": "Jesus, brightness of eternal light, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Rex glóriæ, miserére nobis.",
+        "eng": "Jesus, King of glory, have mercy on us."
+      },
+      {
+        "lat": "Jesu, sol justítiæ, miserére nobis.",
+        "eng": "Jesus, Sun of justice, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Fili Maríæ Vírginis, miserére nobis.",
+        "eng": "Jesus, Son of the Virgin Mary, have mercy on us."
+      },
+      {
+        "lat": "Jesu, amábilis, miserére nobis.",
+        "eng": "Jesus, most amiable, have mercy on us."
+      },
+      {
+        "lat": "Jesu, admirábilis, miserére nobis.",
+        "eng": "Jesus, most admirable, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Deus fortis, miserére nobis.",
+        "eng": "Jesus, mighty God, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Pater futúri sǽculi, miserére nobis.",
+        "eng": "Jesus, Father of the world to come, have mercy on us."
+      },
+      {
+        "lat": "Jesu, magni consílii Ángele, miserére nobis.",
+        "eng": "Jesus, Angel of great counsel, have mercy on us."
+      },
+      {
+        "lat": "Jesu, potentíssime, miserére nobis.",
+        "eng": "Jesus, most powerful, have mercy on us."
+      },
+      {
+        "lat": "Jesu, patientíssime, miserére nobis.",
+        "eng": "Jesus, most patient, have mercy on us."
+      },
+      {
+        "lat": "Jesu, obedientíssime, miserére nobis.",
+        "eng": "Jesus, most obedient, have mercy on us."
+      },
+      {
+        "lat": "Jesu, mitis et húmilis corde, miserére nobis.",
+        "eng": "Jesus, meek and humble of heart, have mercy on us."
+      },
+      {
+        "lat": "Jesu, amátor castitátis, miserére nobis.",
+        "eng": "Jesus, lover of chastity, have mercy on us."
+      },
+      {
+        "lat": "Jesu, amátor noster, miserére nobis.",
+        "eng": "Jesus, lover of us, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Deus pacis, miserére nobis.",
+        "eng": "Jesus, God of peace, have mercy on us."
+      },
+      {
+        "lat": "Jesu, auctor vitæ, miserére nobis.",
+        "eng": "Jesus, author of life, have mercy on us."
+      },
+      {
+        "lat": "Jesu, exémplar virtútum, miserére nobis.",
+        "eng": "Jesus, model of virtues, have mercy on us."
+      },
+      {
+        "lat": "Jesu, zelátor animárum, miserére nobis.",
+        "eng": "Jesus, zealous for souls, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Deus noster, miserére nobis.",
+        "eng": "Jesus, our God, have mercy on us."
+      },
+      {
+        "lat": "Jesu, refúgium nostrum, miserére nobis.",
+        "eng": "Jesus, our refuge, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Pater páuperum, miserére nobis.",
+        "eng": "Jesus, Father of the poor, have mercy on us."
+      },
+      {
+        "lat": "Jesu, thesáure fidélium, miserére nobis.",
+        "eng": "Jesus, treasure of the faithful, have mercy on us."
+      },
+      {
+        "lat": "Jesu, bone Pastor, miserére nobis.",
+        "eng": "Jesus, good Shepherd, have mercy on us."
+      },
+      {
+        "lat": "Jesu, lux vera, miserére nobis.",
+        "eng": "Jesus, true light, have mercy on us."
+      },
+      {
+        "lat": "Jesu, sapiéntia ætérna, miserére nobis.",
+        "eng": "Jesus, eternal wisdom, have mercy on us."
+      },
+      {
+        "lat": "Jesu, bónitas infiníta, miserére nobis.",
+        "eng": "Jesus, infinite goodness, have mercy on us."
+      },
+      {
+        "lat": "Jesu, via et vita nostra, miserére nobis.",
+        "eng": "Jesus, our way and our life, have mercy on us."
+      },
+      {
+        "lat": "Jesu, gáudium Angelórum, miserére nobis.",
+        "eng": "Jesus, joy of the Angels, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Rex Patriarchárum, miserére nobis.",
+        "eng": "Jesus, King of the Patriarchs, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Magíster Apostolórum, miserére nobis.",
+        "eng": "Jesus, Master of the Apostles, have mercy on us."
+      },
+      {
+        "lat": "Jesu, Doctor Evangelistárum, miserére nobis.",
+        "eng": "Jesus, Teacher of the Evangelists, have mercy on us."
+      },
+      {
+        "lat": "Jesu, fortitúdo Mártyrum, miserére nobis.",
+        "eng": "Jesus, strength of Martyrs, have mercy on us."
+      },
+      {
+        "lat": "Jesu, lumen Confessórum, miserére nobis.",
+        "eng": "Jesus, light of Confessors, have mercy on us."
+      },
+      {
+        "lat": "Jesu, púritas Vírginum, miserére nobis.",
+        "eng": "Jesus, purity of Virgins, have mercy on us."
+      },
+      {
+        "lat": "Jesu, coróna Sanctórum ómnium, miserére nobis.",
+        "eng": "Jesus, crown of all Saints, have mercy on us."
+      },
+      {
+        "lat": "Propítius esto, parce nobis, Jesu.",
+        "eng": "Be merciful, spare us, O Jesus."
+      },
+      {
+        "lat": "Propítius esto, exáudi nos, Jesu.",
+        "eng": "Be merciful, graciously hear us, O Jesus."
+      },
+      {
+        "lat": "Ab omni malo, líbera nos, Jesu.",
+        "eng": "From all evil, deliver us, O Jesus."
+      },
+      {
+        "lat": "Ab omni peccáto, líbera nos, Jesu.",
+        "eng": "From all sin, deliver us, O Jesus."
+      },
+      {
+        "lat": "Ab ira tua, líbera nos, Jesu.",
+        "eng": "From Thy wrath, deliver us, O Jesus."
+      },
+      {
+        "lat": "Ab insídiis diáboli, líbera nos, Jesu.",
+        "eng": "From the snares of the devil, deliver us, O Jesus."
+      },
+      {
+        "lat": "A spíritu fornicatiónis, líbera nos, Jesu.",
+        "eng": "From the spirit of fornication, deliver us, O Jesus."
+      },
+      {
+        "lat": "A morte perpétua, líbera nos, Jesu.",
+        "eng": "From everlasting death, deliver us, O Jesus."
+      },
+      {
+        "lat": "A negléctu inspiratiónum tuárum, líbera nos, Jesu.",
+        "eng": "From the neglect of Thy inspirations, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per mystérium sanctæ Incarnatiónis tuæ, líbera nos, Jesu.",
+        "eng": "Through the mystery of Thy holy Incarnation, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per nativitátem tuam, líbera nos, Jesu.",
+        "eng": "Through Thy Nativity, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per infántiam tuam, líbera nos, Jesu.",
+        "eng": "Through Thine Infancy, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per diviníssimam vitam tuam, líbera nos, Jesu.",
+        "eng": "Through Thy most divine life, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per labóres tuos, líbera nos, Jesu.",
+        "eng": "Through Thy labors, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per agoníam et passiónem tuam, líbera nos, Jesu.",
+        "eng": "Through Thine agony and Passion, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per crucem et derelictiónem tuam, líbera nos, Jesu.",
+        "eng": "Through Thy Cross and dereliction, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per languóres tuos, líbera nos, Jesu.",
+        "eng": "Through Thy sufferings, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per mortem et sepultúram tuam, líbera nos, Jesu.",
+        "eng": "Through Thy death and burial, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per resurrectiónem tuam, líbera nos, Jesu.",
+        "eng": "Through Thy Resurrection, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per ascensiónem tuam, líbera nos, Jesu.",
+        "eng": "Through Thine Ascension, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per sanctíssimæ Eucharístiæ institutiónem tuam, líbera nos, Jesu.",
+        "eng": "Through Thine institution of the most holy Eucharist, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per gáudia tua, líbera nos, Jesu.",
+        "eng": "Through Thy joys, deliver us, O Jesus."
+      },
+      {
+        "lat": "Per glóriam tuam, líbera nos, Jesu.",
+        "eng": "Through Thy glory, deliver us, O Jesus."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, parce nobis, Jesu.",
+        "eng": "Lamb of God, who takest away the sins of the world, spare us, O Jesus."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, exáudi nos, Jesu.",
+        "eng": "Lamb of God, who takest away the sins of the world, graciously hear us, O Jesus."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, miserére nobis, Jesu.",
+        "eng": "Lamb of God, who takest away the sins of the world, have mercy on us, O Jesus."
+      },
+      {
+        "lat": "Jesu, audi nos.",
+        "eng": "Jesus, hear us."
+      },
+      {
+        "lat": "Jesu, exáudi nos.",
+        "eng": "Jesus, graciously hear us."
+      },
+      {
+        "lat": "Orémus. Dómine Jesu Christe, qui dixísti: Pétite et accipiétis; quǽrite et inveniétis; pulsáte et aperiétur vobis: quǽsumus, da nobis peténtibus diviníssimi tui amóris afféctum, ut te toto corde, ore et ópere diligámus, et a tua numquam laude cessémus.",
+        "eng": "Let us pray. O Lord Jesus Christ, Who hast said: Ask and ye shall receive; seek and ye shall find; knock and it shall be opened unto you: grant, we beseech Thee, to us who ask, the gift of Thy most divine love, that we may ever love Thee with our whole heart, in word and in deed, and never cease to praise Thee."
+      },
+      {
+        "lat": "Sancti Nóminis tui, Dómine, timórem páriter et amórem fac nos habére perpétuum: quia numquam tua gubernatióne destítuis, quos in soliditáte tuæ dilectiónis instítuis. Qui vivis et regnas in sǽcula sæculórum. Amen.",
+        "eng": "Give us, O Lord, a perpetual fear and love of Thy holy Name: for Thou never ceasest to govern those whom Thou dost establish in the firmness of Thy love. Who livest and reignest world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "litaniae-pretiosissimi-sanguinis",
+    "title": "Litaníæ Pretiosíssimi Sánguinis",
+    "eng": "Litany of the Most Precious Blood",
+    "category": "Devotiónes",
+    "note": "Approved for public use by John XXIII in 1960, the last of the six litanies approved for public recitation. Fitting for the Feast of the Most Precious Blood (July 1) and throughout July, the month of the Precious Blood.",
+    "occasions": [
+      "Litanies"
+    ],
+    "lines": [
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Christe, eléison.",
+        "eng": "Christ, have mercy."
+      },
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Christe, audi nos.",
+        "eng": "Christ, hear us."
+      },
+      {
+        "lat": "Christe, exáudi nos.",
+        "eng": "Christ, graciously hear us."
+      },
+      {
+        "lat": "Pater de cælis, Deus, miserére nobis.",
+        "eng": "God the Father of Heaven, have mercy on us."
+      },
+      {
+        "lat": "Fili, Redémptor mundi, Deus, miserére nobis.",
+        "eng": "God the Son, Redeemer of the world, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, Deus, miserére nobis.",
+        "eng": "God the Holy Ghost, have mercy on us."
+      },
+      {
+        "lat": "Sancta Trínitas, unus Deus, miserére nobis.",
+        "eng": "Holy Trinity, one God, have mercy on us."
+      },
+      {
+        "lat": "Sanguis Christi, Unigéniti Patris ætérni, salva nos.",
+        "eng": "Blood of Christ, only-begotten Son of the Eternal Father, save us."
+      },
+      {
+        "lat": "Sanguis Christi, Verbi Dei incarnáti, salva nos.",
+        "eng": "Blood of Christ, Incarnate Word of God, save us."
+      },
+      {
+        "lat": "Sanguis Christi, Novi et Ætérni Testaménti, salva nos.",
+        "eng": "Blood of Christ, of the New and Eternal Testament, save us."
+      },
+      {
+        "lat": "Sanguis Christi, in agonía decúrrens in terram, salva nos.",
+        "eng": "Blood of Christ, falling upon the earth in the Agony, save us."
+      },
+      {
+        "lat": "Sanguis Christi, in flagellatióne prófluens, salva nos.",
+        "eng": "Blood of Christ, shed profusely in the Scourging, save us."
+      },
+      {
+        "lat": "Sanguis Christi, in coronatióne spinárum emánans, salva nos.",
+        "eng": "Blood of Christ, flowing forth in the Crowning with Thorns, save us."
+      },
+      {
+        "lat": "Sanguis Christi, in Cruce effúsus, salva nos.",
+        "eng": "Blood of Christ, poured out on the Cross, save us."
+      },
+      {
+        "lat": "Sanguis Christi, prétium nostræ salútis, salva nos.",
+        "eng": "Blood of Christ, price of our salvation, save us."
+      },
+      {
+        "lat": "Sanguis Christi, sine quo non fit remíssio, salva nos.",
+        "eng": "Blood of Christ, without which there is no forgiveness, save us."
+      },
+      {
+        "lat": "Sanguis Christi, in Eucharístia potus et lavácrum animárum, salva nos.",
+        "eng": "Blood of Christ, Eucharistic drink and refreshment of souls, save us."
+      },
+      {
+        "lat": "Sanguis Christi, flumen misericórdiæ, salva nos.",
+        "eng": "Blood of Christ, stream of mercy, save us."
+      },
+      {
+        "lat": "Sanguis Christi, victor dǽmonum, salva nos.",
+        "eng": "Blood of Christ, victor over demons, save us."
+      },
+      {
+        "lat": "Sanguis Christi, fortitúdo Mártyrum, salva nos.",
+        "eng": "Blood of Christ, courage of Martyrs, save us."
+      },
+      {
+        "lat": "Sanguis Christi, virtus Confessórum, salva nos.",
+        "eng": "Blood of Christ, strength of Confessors, save us."
+      },
+      {
+        "lat": "Sanguis Christi, gérminans Vírgines, salva nos.",
+        "eng": "Blood of Christ, bringing forth Virgins, save us."
+      },
+      {
+        "lat": "Sanguis Christi, robur periclitántium, salva nos.",
+        "eng": "Blood of Christ, help of those in peril, save us."
+      },
+      {
+        "lat": "Sanguis Christi, levámen laborántium, salva nos.",
+        "eng": "Blood of Christ, relief of the burdened, save us."
+      },
+      {
+        "lat": "Sanguis Christi, in fletu solátium, salva nos.",
+        "eng": "Blood of Christ, solace in sorrow, save us."
+      },
+      {
+        "lat": "Sanguis Christi, spes pæniténtium, salva nos.",
+        "eng": "Blood of Christ, hope of the penitent, save us."
+      },
+      {
+        "lat": "Sanguis Christi, solámen moriéntium, salva nos.",
+        "eng": "Blood of Christ, consolation of the dying, save us."
+      },
+      {
+        "lat": "Sanguis Christi, pax et dulcédo córdium, salva nos.",
+        "eng": "Blood of Christ, peace and tenderness of hearts, save us."
+      },
+      {
+        "lat": "Sanguis Christi, pignus vitæ ætérnæ, salva nos.",
+        "eng": "Blood of Christ, pledge of eternal life, save us."
+      },
+      {
+        "lat": "Sanguis Christi, ánimas líberans de lacu Purgatórii, salva nos.",
+        "eng": "Blood of Christ, freeing souls from Purgatory, save us."
+      },
+      {
+        "lat": "Sanguis Christi, omni glória et honóre digníssimus, salva nos.",
+        "eng": "Blood of Christ, most worthy of all glory and honor, save us."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, parce nobis, Dómine.",
+        "eng": "Lamb of God, who takest away the sins of the world, spare us, O Lord."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, exáudi nos, Dómine.",
+        "eng": "Lamb of God, who takest away the sins of the world, graciously hear us, O Lord."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, miserére nobis.",
+        "eng": "Lamb of God, who takest away the sins of the world, have mercy on us."
+      },
+      {
+        "lat": "V. Redemísti nos, Dómine, in Sánguine tuo.",
+        "eng": "V. Thou hast redeemed us, O Lord, in Thy Blood."
+      },
+      {
+        "lat": "R. Et fecísti nos Deo nostro regnum.",
+        "eng": "R. And hast made us a kingdom for our God."
+      },
+      {
+        "lat": "Orémus. Omnípotens sempitérne Deus, qui unigénitum Fílium tuum mundi Redemptórem constituísti, ac ejus Sánguine placári voluísti: concéde, quǽsumus, salútis nostræ prétium ita venerári, atque a præséntis vitæ malis ejus virtúte deféndi in terris, ut fructu perpétuo lætémur in cælis. Per eúndem Christum Dóminum nostrum. Amen.",
+        "eng": "Let us pray. Almighty and eternal God, Who hast appointed Thine only-begotten Son the Redeemer of the world, and hast willed to be appeased by His Blood: grant, we beseech Thee, that we may so venerate the price of our salvation, and by its power be so defended on earth from the evils of this present life, that we may rejoice in its everlasting fruit in Heaven. Through the same Christ our Lord. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "litaniae-sancti-joseph",
+    "title": "Litaníæ de Sancto Joseph",
+    "eng": "Litany of Saint Joseph",
+    "category": "Devotiónes",
+    "note": "Approved for public use by St. Pius X in 1909. Fitting for March, the month of St. Joseph; for his feast (March 19); for the Solemnity of St. Joseph (Wednesday after the second Sunday after Easter in the older calendar) and for St. Joseph the Workman (May 1); and for Wednesdays, the day traditionally dedicated to him.",
+    "occasions": [
+      "Litanies",
+      "For Protection"
+    ],
+    "lines": [
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Christe, eléison.",
+        "eng": "Christ, have mercy."
+      },
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Christe, audi nos.",
+        "eng": "Christ, hear us."
+      },
+      {
+        "lat": "Christe, exáudi nos.",
+        "eng": "Christ, graciously hear us."
+      },
+      {
+        "lat": "Pater de cælis, Deus, miserére nobis.",
+        "eng": "God the Father of Heaven, have mercy on us."
+      },
+      {
+        "lat": "Fili, Redémptor mundi, Deus, miserére nobis.",
+        "eng": "God the Son, Redeemer of the world, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, Deus, miserére nobis.",
+        "eng": "God the Holy Ghost, have mercy on us."
+      },
+      {
+        "lat": "Sancta Trínitas, unus Deus, miserére nobis.",
+        "eng": "Holy Trinity, one God, have mercy on us."
+      },
+      {
+        "lat": "Sancta María, ora pro nobis.",
+        "eng": "Holy Mary, pray for us."
+      },
+      {
+        "lat": "Sancte Joseph, ora pro nobis.",
+        "eng": "Saint Joseph, pray for us."
+      },
+      {
+        "lat": "Proles David ínclita, ora pro nobis.",
+        "eng": "Renowned offspring of David, pray for us."
+      },
+      {
+        "lat": "Lumen Patriarchárum, ora pro nobis.",
+        "eng": "Light of Patriarchs, pray for us."
+      },
+      {
+        "lat": "Dei Genetrícis sponse, ora pro nobis.",
+        "eng": "Spouse of the Mother of God, pray for us."
+      },
+      {
+        "lat": "Custos pudíce Vírginis, ora pro nobis.",
+        "eng": "Chaste guardian of the Virgin, pray for us."
+      },
+      {
+        "lat": "Fílii Dei nutrítie, ora pro nobis.",
+        "eng": "Foster-father of the Son of God, pray for us."
+      },
+      {
+        "lat": "Christi defénsor sédule, ora pro nobis.",
+        "eng": "Diligent defender of Christ, pray for us."
+      },
+      {
+        "lat": "Almæ Famíliæ præses, ora pro nobis.",
+        "eng": "Head of the Holy Family, pray for us."
+      },
+      {
+        "lat": "Joseph justíssime, ora pro nobis.",
+        "eng": "Joseph most just, pray for us."
+      },
+      {
+        "lat": "Joseph castíssime, ora pro nobis.",
+        "eng": "Joseph most chaste, pray for us."
+      },
+      {
+        "lat": "Joseph prudentíssime, ora pro nobis.",
+        "eng": "Joseph most prudent, pray for us."
+      },
+      {
+        "lat": "Joseph fortíssime, ora pro nobis.",
+        "eng": "Joseph most strong, pray for us."
+      },
+      {
+        "lat": "Joseph obedientíssime, ora pro nobis.",
+        "eng": "Joseph most obedient, pray for us."
+      },
+      {
+        "lat": "Joseph fidelíssime, ora pro nobis.",
+        "eng": "Joseph most faithful, pray for us."
+      },
+      {
+        "lat": "Spéculum patiéntiæ, ora pro nobis.",
+        "eng": "Mirror of patience, pray for us."
+      },
+      {
+        "lat": "Amátor paupertátis, ora pro nobis.",
+        "eng": "Lover of poverty, pray for us."
+      },
+      {
+        "lat": "Exémplar opíficum, ora pro nobis.",
+        "eng": "Model of workmen, pray for us."
+      },
+      {
+        "lat": "Domésticæ vitæ decus, ora pro nobis.",
+        "eng": "Glory of home life, pray for us."
+      },
+      {
+        "lat": "Custos vírginum, ora pro nobis.",
+        "eng": "Guardian of virgins, pray for us."
+      },
+      {
+        "lat": "Familiárum cólumen, ora pro nobis.",
+        "eng": "Pillar of families, pray for us."
+      },
+      {
+        "lat": "Solátium miserórum, ora pro nobis.",
+        "eng": "Solace of the afflicted, pray for us."
+      },
+      {
+        "lat": "Spes ægrotántium, ora pro nobis.",
+        "eng": "Hope of the sick, pray for us."
+      },
+      {
+        "lat": "Patróne moriéntium, ora pro nobis.",
+        "eng": "Patron of the dying, pray for us."
+      },
+      {
+        "lat": "Terror dǽmonum, ora pro nobis.",
+        "eng": "Terror of demons, pray for us."
+      },
+      {
+        "lat": "Protéctor sanctæ Ecclésiæ, ora pro nobis.",
+        "eng": "Protector of Holy Church, pray for us."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, parce nobis, Dómine.",
+        "eng": "Lamb of God, who takest away the sins of the world, spare us, O Lord."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, exáudi nos, Dómine.",
+        "eng": "Lamb of God, who takest away the sins of the world, graciously hear us, O Lord."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, miserére nobis.",
+        "eng": "Lamb of God, who takest away the sins of the world, have mercy on us."
+      },
+      {
+        "lat": "V. Constítuit eum dóminum domus suæ.",
+        "eng": "V. He made him the lord of His household."
+      },
+      {
+        "lat": "R. Et príncipem omnis possessiónis suæ.",
+        "eng": "R. And prince over all His possessions."
+      },
+      {
+        "lat": "Orémus. Deus, qui ineffábili providéntia beátum Joseph sanctíssimæ Genetrícis tuæ sponsum elígere dignátus es: præsta, quǽsumus; ut, quem protectórem venerámur in terris, intercessórem habére mereámur in cælis. Qui vivis et regnas in sǽcula sæculórum. Amen.",
+        "eng": "Let us pray. O God, Who in Thine ineffable providence didst vouchsafe to choose blessed Joseph to be the spouse of Thy most holy Mother: grant, we beseech Thee, that we may have him for our intercessor in Heaven, whom we venerate as our protector on earth. Who livest and reignest world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "litaniae-humilitatis",
+    "title": "Litaníæ Humilitátis",
+    "eng": "Litany of Humility",
+    "category": "Devotiónes",
+    "note": "Composed by Rafael Cardinal Merry del Val (1865–1930), Secretary of State to St. Pius X, who recited it daily after Mass. For private devotion.",
+    "occasions": [
+      "Litanies",
+      "In Temptation",
+      "After Mass"
+    ],
+    "lines": [
+      {
+        "lat": "O Jesu, mitis et húmilis corde, exáudi me.",
+        "eng": "O Jesus, meek and humble of heart, hear me."
+      },
+      {
+        "lat": "A desidério æstimári, líbera me, Jesu.",
+        "eng": "From the desire of being esteemed, deliver me, Jesus."
+      },
+      {
+        "lat": "A desidério amári, líbera me, Jesu.",
+        "eng": "From the desire of being loved, deliver me, Jesus."
+      },
+      {
+        "lat": "A desidério extólli, líbera me, Jesu.",
+        "eng": "From the desire of being extolled, deliver me, Jesus."
+      },
+      {
+        "lat": "A desidério honorári, líbera me, Jesu.",
+        "eng": "From the desire of being honored, deliver me, Jesus."
+      },
+      {
+        "lat": "A desidério laudári, líbera me, Jesu.",
+        "eng": "From the desire of being praised, deliver me, Jesus."
+      },
+      {
+        "lat": "A desidério áliis præférri, líbera me, Jesu.",
+        "eng": "From the desire of being preferred to others, deliver me, Jesus."
+      },
+      {
+        "lat": "A desidério cónsuli, líbera me, Jesu.",
+        "eng": "From the desire of being consulted, deliver me, Jesus."
+      },
+      {
+        "lat": "A desidério approbári, líbera me, Jesu.",
+        "eng": "From the desire of being approved, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre humiliári, líbera me, Jesu.",
+        "eng": "From the fear of being humiliated, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre déspici, líbera me, Jesu.",
+        "eng": "From the fear of being despised, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre repúlsas pati, líbera me, Jesu.",
+        "eng": "From the fear of suffering rebukes, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre calumniári, líbera me, Jesu.",
+        "eng": "From the fear of being calumniated, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre oblivióni tradi, líbera me, Jesu.",
+        "eng": "From the fear of being forgotten, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre irridéri, líbera me, Jesu.",
+        "eng": "From the fear of being ridiculed, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre injúriis áffici, líbera me, Jesu.",
+        "eng": "From the fear of being wronged, deliver me, Jesus."
+      },
+      {
+        "lat": "A timóre suspéctum habéri, líbera me, Jesu.",
+        "eng": "From the fear of being suspected, deliver me, Jesus."
+      },
+      {
+        "lat": "Ut álii améntur magis quam ego, Jesu, da mihi grátiam desiderándi.",
+        "eng": "That others may be loved more than I, Jesus, grant me the grace to desire it."
+      },
+      {
+        "lat": "Ut álii æstiméntur magis quam ego, Jesu, da mihi grátiam desiderándi.",
+        "eng": "That others may be esteemed more than I, Jesus, grant me the grace to desire it."
+      },
+      {
+        "lat": "Ut in opinióne mundi álii crescant, ego autem mínuar, Jesu, da mihi grátiam desiderándi.",
+        "eng": "That, in the opinion of the world, others may increase and I may decrease, Jesus, grant me the grace to desire it."
+      },
+      {
+        "lat": "Ut álii eligántur, ego vero prætermíttar, Jesu, da mihi grátiam desiderándi.",
+        "eng": "That others may be chosen and I set aside, Jesus, grant me the grace to desire it."
+      },
+      {
+        "lat": "Ut álii laudéntur, ego vero néglegar, Jesu, da mihi grátiam desiderándi.",
+        "eng": "That others may be praised and I unnoticed, Jesus, grant me the grace to desire it."
+      },
+      {
+        "lat": "Ut álii in ómnibus mihi præferántur, Jesu, da mihi grátiam desiderándi.",
+        "eng": "That others may be preferred to me in everything, Jesus, grant me the grace to desire it."
+      },
+      {
+        "lat": "Ut álii sanctióres me fiant, dúmmodo ego tam sanctus fiam quam possum, Jesu, da mihi grátiam desiderándi.",
+        "eng": "That others may become holier than I, provided that I may become as holy as I should, Jesus, grant me the grace to desire it."
+      }
+    ]
+  },
+  {
+    "slug": "litaniae-sancti-spiritus",
+    "title": "Litaníæ de Sancto Spíritu",
+    "eng": "Litany of the Holy Ghost",
+    "category": "Devotiónes",
+    "note": "For private devotion (not among the six litanies approved for public recitation). Fitting for the novena between the Ascension and Pentecost, for Whitsuntide, and before any undertaking that needs the light of the Holy Ghost.",
+    "occasions": [
+      "Litanies"
+    ],
+    "lines": [
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Christe, eléison.",
+        "eng": "Christ, have mercy."
+      },
+      {
+        "lat": "Kýrie, eléison.",
+        "eng": "Lord, have mercy."
+      },
+      {
+        "lat": "Spíritus Sancte, audi nos.",
+        "eng": "Holy Ghost, hear us."
+      },
+      {
+        "lat": "Spíritus Sancte, exáudi nos.",
+        "eng": "Holy Ghost, graciously hear us."
+      },
+      {
+        "lat": "Pater de cælis, Deus, miserére nobis.",
+        "eng": "God the Father of Heaven, have mercy on us."
+      },
+      {
+        "lat": "Fili, Redémptor mundi, Deus, miserére nobis.",
+        "eng": "God the Son, Redeemer of the world, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, Deus, miserére nobis.",
+        "eng": "God the Holy Ghost, have mercy on us."
+      },
+      {
+        "lat": "Sancta Trínitas, unus Deus, miserére nobis.",
+        "eng": "Holy Trinity, one God, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, a Patre Filióque procédens, miserére nobis.",
+        "eng": "Holy Ghost, Who proceedest from the Father and the Son, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, Patri et Fílio coæquális, miserére nobis.",
+        "eng": "Holy Ghost, coequal with the Father and the Son, have mercy on us."
+      },
+      {
+        "lat": "Promíssio Patris, miserére nobis.",
+        "eng": "Promise of the Father, have mercy on us."
+      },
+      {
+        "lat": "Donum Dei altíssimi, miserére nobis.",
+        "eng": "Gift of God most high, have mercy on us."
+      },
+      {
+        "lat": "Rádius lucis cæléstis, miserére nobis.",
+        "eng": "Ray of heavenly light, have mercy on us."
+      },
+      {
+        "lat": "Auctor ómnium bonórum, miserére nobis.",
+        "eng": "Author of all good, have mercy on us."
+      },
+      {
+        "lat": "Fons aquæ vivæ, miserére nobis.",
+        "eng": "Source of living water, have mercy on us."
+      },
+      {
+        "lat": "Ignis consúmens, miserére nobis.",
+        "eng": "Consuming fire, have mercy on us."
+      },
+      {
+        "lat": "Cáritas ardens, miserére nobis.",
+        "eng": "Ardent charity, have mercy on us."
+      },
+      {
+        "lat": "Únctio spiritális, miserére nobis.",
+        "eng": "Spiritual unction, have mercy on us."
+      },
+      {
+        "lat": "Spíritus amóris et veritátis, miserére nobis.",
+        "eng": "Spirit of love and truth, have mercy on us."
+      },
+      {
+        "lat": "Spíritus sapiéntiæ et intelléctus, miserére nobis.",
+        "eng": "Spirit of wisdom and understanding, have mercy on us."
+      },
+      {
+        "lat": "Spíritus consílii et fortitúdinis, miserére nobis.",
+        "eng": "Spirit of counsel and fortitude, have mercy on us."
+      },
+      {
+        "lat": "Spíritus sciéntiæ et pietátis, miserére nobis.",
+        "eng": "Spirit of knowledge and piety, have mercy on us."
+      },
+      {
+        "lat": "Spíritus timóris Dómini, miserére nobis.",
+        "eng": "Spirit of the fear of the Lord, have mercy on us."
+      },
+      {
+        "lat": "Spíritus grátiæ et precum, miserére nobis.",
+        "eng": "Spirit of grace and prayer, have mercy on us."
+      },
+      {
+        "lat": "Spíritus pacis et mansuetúdinis, miserére nobis.",
+        "eng": "Spirit of peace and meekness, have mercy on us."
+      },
+      {
+        "lat": "Spíritus modéstiæ et innocéntiæ, miserére nobis.",
+        "eng": "Spirit of modesty and innocence, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, Consolátor, miserére nobis.",
+        "eng": "Holy Ghost, the Comforter, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, Sanctificátor, miserére nobis.",
+        "eng": "Holy Ghost, the Sanctifier, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, qui Ecclésiam regis, miserére nobis.",
+        "eng": "Holy Ghost, Who governest the Church, have mercy on us."
+      },
+      {
+        "lat": "Spíritus, qui reples orbem terrárum, miserére nobis.",
+        "eng": "Spirit Who fillest the whole world, have mercy on us."
+      },
+      {
+        "lat": "Spíritus adoptiónis filiórum Dei, miserére nobis.",
+        "eng": "Spirit of the adoption of the children of God, have mercy on us."
+      },
+      {
+        "lat": "Spíritus Sancte, íncute nobis horrórem peccáti.",
+        "eng": "Holy Ghost, inspire us with horror of sin."
+      },
+      {
+        "lat": "Spíritus Sancte, veni et rénova fáciem terræ.",
+        "eng": "Holy Ghost, come and renew the face of the earth."
+      },
+      {
+        "lat": "Spíritus Sancte, infúnde lumen tuum in ánimas nostras.",
+        "eng": "Holy Ghost, shed Thy light into our souls."
+      },
+      {
+        "lat": "Spíritus Sancte, inscríbe legem tuam in córdibus nostris.",
+        "eng": "Holy Ghost, engrave Thy law in our hearts."
+      },
+      {
+        "lat": "Spíritus Sancte, inflámma nos igne amóris tui.",
+        "eng": "Holy Ghost, inflame us with the fire of Thy love."
+      },
+      {
+        "lat": "Spíritus Sancte, áperi nobis thesáuros gratiárum tuárum.",
+        "eng": "Holy Ghost, open to us the treasures of Thy graces."
+      },
+      {
+        "lat": "Spíritus Sancte, doce nos bene oráre.",
+        "eng": "Holy Ghost, teach us to pray well."
+      },
+      {
+        "lat": "Spíritus Sancte, illúmina nos inspiratiónibus tuis cæléstibus.",
+        "eng": "Holy Ghost, enlighten us with Thy heavenly inspirations."
+      },
+      {
+        "lat": "Spíritus Sancte, duc nos in via salútis.",
+        "eng": "Holy Ghost, lead us in the way of salvation."
+      },
+      {
+        "lat": "Spíritus Sancte, concéde nobis sciéntiam únice necessáriam.",
+        "eng": "Holy Ghost, grant us the only necessary knowledge."
+      },
+      {
+        "lat": "Spíritus Sancte, inspíra nobis exercítium boni.",
+        "eng": "Holy Ghost, inspire in us the practice of good."
+      },
+      {
+        "lat": "Spíritus Sancte, concéde nobis mérita ómnium virtútum.",
+        "eng": "Holy Ghost, grant us the merits of all virtues."
+      },
+      {
+        "lat": "Spíritus Sancte, fac nos perseveráre in justítia.",
+        "eng": "Holy Ghost, make us persevere in justice."
+      },
+      {
+        "lat": "Spíritus Sancte, esto tu prǽmium nostrum ætérnum.",
+        "eng": "Holy Ghost, be Thou our everlasting reward."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, emítte nobis Spíritum Sanctum tuum.",
+        "eng": "Lamb of God, who takest away the sins of the world, send us Thy Holy Ghost."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, infúnde in ánimas nostras dona Spíritus Sancti.",
+        "eng": "Lamb of God, who takest away the sins of the world, pour into our souls the gifts of the Holy Ghost."
+      },
+      {
+        "lat": "Agnus Dei, qui tollis peccáta mundi, da nobis Spíritum sapiéntiæ et pietátis.",
+        "eng": "Lamb of God, who takest away the sins of the world, grant us the Spirit of wisdom and piety."
+      },
+      {
+        "lat": "V. Veni, Sancte Spíritus, reple tuórum corda fidélium.",
+        "eng": "V. Come, Holy Ghost, fill the hearts of Thy faithful."
+      },
+      {
+        "lat": "R. Et tui amóris in eis ignem accénde.",
+        "eng": "R. And enkindle in them the fire of Thy love."
+      },
+      {
+        "lat": "Orémus. Deus, qui corda fidélium Sancti Spíritus illustratióne docuísti: da nobis in eódem Spíritu recta sápere, et de ejus semper consolatióne gaudére. Per Christum Dóminum nostrum. Amen.",
+        "eng": "Let us pray. O God, Who didst instruct the hearts of the faithful by the light of the Holy Ghost: grant that by the same Spirit we may be truly wise, and ever rejoice in His consolation. Through Christ our Lord. Amen."
       }
     ]
   }

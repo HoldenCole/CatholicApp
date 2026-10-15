@@ -84,7 +84,7 @@ private val tutorialStepsEN = listOf(
             "Build a personal prayer rule for morning, midday, and evening",
             "Tap the bell icon to set notification reminders for any prayer",
             "Search prayers by name in the library",
-            "Browse 12 occasion categories: Before Mass, During Mass, Marian, and more",
+            "Browse the occasion categories: Before Mass, During Mass, Marian, Litanies, and more",
             "Sort your library by custom order or A-Z",
         ),
     ),

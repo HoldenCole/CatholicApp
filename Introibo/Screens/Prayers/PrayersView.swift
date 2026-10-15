@@ -23,7 +23,8 @@ struct PrayersView: View {
     private let occasions = [
         "Morning", "Before Mass", "During Mass", "After Mass", "Meals",
         "Marian", "Eucharistic", "Before Confession",
-        "For the Departed", "In Temptation", "For Protection", "Evening"
+        "For the Departed", "In Temptation", "For Protection", "Evening",
+        "Litanies"
     ]
     static func occasionLabel(_ occasion: String) -> String {
         let key = "prayers.occasion." + occasion.lowercased().replacingOccurrences(of: " ", with: "_")

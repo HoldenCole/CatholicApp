@@ -78,6 +78,7 @@ private val occasions = listOf(
     "Morning", "Before Mass", "During Mass", "After Mass", "Meals",
     "Marian", "Eucharistic", "Before Confession",
     "For the Departed", "In Temptation", "For Protection", "Evening",
+    "Litanies",
 )
 
 internal fun occasionLabel(occasion: String): String =
@@ -568,7 +569,7 @@ private fun OccasionsSection(onOccasionClick: (String) -> Unit = {}) {
                             .padding(vertical = 14.dp),
                     ) {
                         Text(
-                            text = occasion,
+                            text = occasionLabel(occasion),
                             style = type.captionSm,
                             color = colors.primaryText,
                         )
@@ -804,7 +805,7 @@ private fun OccasionPrayerSheet(
             ) {
                 SmallLabel(text = "Occasio", color = colors.goldLeaf)
                 Text(
-                    text = occasion,
+                    text = occasionLabel(occasion),
                     style = type.titleL.copy(fontStyle = FontStyle.Italic),
                     color = colors.primaryText,
                     modifier = Modifier.padding(top = 4.dp),

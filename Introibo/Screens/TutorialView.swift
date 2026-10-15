@@ -34,7 +34,7 @@ struct TutorialView: View {
             ("checkmark.circle", "Build a personal prayer rule for morning, midday, and evening"),
             ("bell", "Tap the bell icon to set notification reminders for any prayer"),
             ("magnifyingglass", "Search prayers by name in the library"),
-            ("square.grid.2x2", "Browse 12 occasion categories: Before Mass, During Mass, Marian, and more"),
+            ("square.grid.2x2", "Browse the occasion categories: Before Mass, During Mass, Marian, Litanies, and more"),
             ("arrow.up.arrow.down", "Sort your library by custom order or A-Z"),
         ]),
         ("gearshape", "Settings", [
