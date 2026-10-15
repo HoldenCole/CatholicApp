@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-"""Store screenshots for Introibo — App Store and Google Play, one design.
+"""Store screenshots for Introibo — App Store and Google Play from one design.
 
-The design (read docs/marketing-screenshots.md before changing it):
-  a deep-red vertical gradient with a soft glow behind the device; a small
-  gold cross; an eyebrow line in gold letterspaced capitals; the headline in
-  Playfair Display Italic; a one-sentence subhead in EB Garamond; the phone
-  upright in a dark device frame, centred, bleeding off the bottom edge.
-  The copy names no counts (prayers, propers, lessons...), so the set never
-  goes stale when content is added.
+The design (docs/marketing-screenshots.md is the spec; read it first):
+  a public-domain painting, blurred and faded to a warm wash, behind a cream
+  page; a small maroon badge with a gold cross; the headline in Playfair
+  Display Bold, deep maroon, two or three short lines, an imperative that
+  ends with a full stop; a short subhead in Inter; the phone upright in a
+  dark frame with a real status bar, running off the bottom edge; and one
+  zoomed callout card — a piece of the screen enlarged, on a white card
+  with a gold hairline — laid over the phone's edge.
+  The copy names no counts, so the set never goes stale as content grows.
 
-Inputs : store-screenshots/raw/NN-<name>.png — one in-app capture per
-         screenshot, any size, portrait, no device frame (the status bar may
-         be cropped away). SHOTS below maps each to its copy.
+Inputs : store-screenshots/raw/NN-<name>.png — one in-app capture each,
+         portrait, the status bar cropped away (the generator draws one).
+         store-screenshots/art/*.jpg, store-screenshots/fonts/*.
 Output : store-screenshots/<version>/apple/NN-<size>.png
          store-screenshots/<version>/play/{phone,tablet-7in,tablet-10in}-NN.png
          store-screenshots/<version>/play/feature-graphic-1024x500.png
@@ -20,76 +22,107 @@ Output : store-screenshots/<version>/apple/NN-<size>.png
     python3 scripts/make_store_screenshots.py --only apple     # or play
     pip install Pillow                                         # one-time
 """
-import argparse, os, sys
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+import argparse, math, os, sys
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 
 VERSION = "1.3.0"
-RAW_DIR = "store-screenshots/raw"
-OUT_DIR = f"store-screenshots/{VERSION}"
-
-FONT_DIR = "android/app/src/main/res/font"
-TITLE_FONT = f"{FONT_DIR}/playfair_display_italic.ttf"
-SUB_FONT = f"{FONT_DIR}/eb_garamond_regular.ttf"
-EYEBROW_FONT = f"{FONT_DIR}/eb_garamond_regular.ttf"
+ROOT = "store-screenshots"
+RAW, ART, FONTS = f"{ROOT}/raw", f"{ROOT}/art", f"{ROOT}/fonts"
+OUT_DIR = f"{ROOT}/{VERSION}"
 
 # Palette
-BG_TOP = (176, 46, 46)
-BG_BOTTOM = (96, 14, 22)
-GLOW = (214, 74, 62)
-GOLD = (214, 178, 110)
-TITLE_COL = (250, 245, 234)
-SUB_COL = (235, 220, 190)
-FRAME = (22, 18, 18)
-FRAME_EDGE = (62, 54, 52)
+PAGE = (247, 241, 229)
+MAROON = (104, 18, 26)
+INK = (64, 50, 46)
+GOLD = (196, 158, 92)
+CARD = (253, 250, 244)
+FRAME = (24, 21, 21)
+FRAME_EDGE = (70, 62, 60)
 
-# Canvases
 APPLE = {"6.9": (1320, 2868), "6.5": (1284, 2778), "ipad13": (2048, 2732)}
 PLAY = {"phone": (1080, 1920), "tablet-7in": (1200, 2134), "tablet-10in": (1620, 2880)}
 
-# ── The set: raw capture, eyebrow, headline, subhead, pills ──────────────────
+TRUST = "AD-FREE  ·  OFFLINE  ·  NO ACCOUNT  ·  NO SUBSCRIPTION"
+
+# ── The set ──────────────────────────────────────────────────────────────────
+# raw capture · painting · headline · subhead · callout (x0, y0, x1, y1 as
+# fractions of the capture; side; vertical position as a fraction of the
+# visible phone) · trust line
 SHOTS = [
-    ("01-today.png",     "HODIE · TODAY",            "Your Daily Companion",
-     "The feast, the propers of the Mass, the day's penance, and your own rule of prayer — all at a glance.",
-     ["AD-FREE", "OFFLINE", "NO ACCOUNT"]),
-    ("02-missal.png",    "MISSA · THE MASS",          "The Complete 1962 Missal",
-     "Every Proper woven into the Ordinary in its right place, Latin and English side by side.", []),
-    ("06-office.png",    "OFFICIUM DIVINUM",          "The Divine Office",
-     "Every canonical hour of the Roman Breviary at its proper time, with the psalms, hymns, and lessons of the day.", []),
-    ("03-prayers.png",   "ORATIO · PRAYER",           "A Rule of Prayer",
-     "Traditional prayers for morning, midday, and evening, gathered into a rule you keep.", []),
-    ("07-rosary.png",    "ROSARIUM",                  "The Holy Rosary",
-     "Bead by bead, mystery by mystery, with every prayer in Latin and English.", []),
-    ("08-stations.png",  "VIA CRUCIS",                "The Stations of the Cross",
-     "With Tiepolo's engravings, meditations at every station, and the Stabat Mater.", []),
-    ("09-bilingual.png", "LATINE ET ANGLICE",         "Latin and English, Side by Side",
-     "The Church's own words with a faithful translation beside them, on every page.", []),
-    ("04-latin.png",     "SCHOLA LATINA",             "Learn to Pray in Latin",
-     "Pronunciation, grammar, and the prayers of the Mass, word by word.", []),
-    ("05-library.png",   "LIBER · REFERENCE",         "A Library of the Faith",
-     "The history of the Mass, a glossary, articles, and every Proper, searchable.", []),
-    ("10-settings.png",  "RITUS · SETTINGS",          "Make It Yours",
-     "Choose your Missal, your discipline of penance, your language, and your look.",
-     ["AD-FREE", "OFFLINE", "NO ACCOUNT"]),
+    ("02-missal.png",    "raphael",  "Pray the Mass\nof the Ages.",
+     "The complete 1962 Missal, every Proper woven into the Ordinary, Latin and English side by side.",
+     (0.03, 0.335, 0.97, 0.49, "left", 0.42), True),
+    ("01-today.png",     "angelico", "Live the\nLiturgical Year.",
+     "Today's feast, the Mass propers, the day's penance, and your own rule of prayer, every morning.",
+     (0.06, 0.53, 0.94, 0.705, "right", 0.50), False),
+    ("06-office.png",    "gentile",  "Pray the\nDivine Office.",
+     "Every hour of the Roman Breviary at its proper time, with the psalms, hymns, and lessons of the day.",
+     (0.12, 0.475, 0.44, 0.585, "left", 0.47), False),
+    ("03-prayers.png",   "raphael",  "Keep a Rule\nof Prayer.",
+     "Morning, midday, and evening, built from the traditional prayers of the Church.",
+     (0.04, 0.065, 0.96, 0.23, "right", 0.30), False),
+    ("07-rosary.png",    "gentile",  "Pray the Rosary,\nBead by Bead.",
+     "Every mystery and every prayer, in Latin and English, with your place always kept.",
+     (0.04, 0.225, 0.96, 0.345, "right", 0.72), False),
+    ("08-stations.png",  "raphael",  "Walk the Way\nof the Cross.",
+     "Every station with Tiepolo's engravings, a meditation, and the Stabat Mater.",
+     (0.04, 0.63, 0.96, 0.70, "right", 0.56), False),
+    ("09-bilingual.png", "angelico", "Latin and English,\nSide by Side.",
+     "The Church's own words with a faithful translation beside them, on every page.",
+     (0.04, 0.39, 0.96, 0.47, "left", 0.46), False),
+    ("04-latin.png",     "gentile",  "Learn the Latin\nof the Mass.",
+     "Pronunciation, grammar, and the prayers you hear every Sunday, word by word.",
+     (0.04, 0.265, 0.96, 0.425, "right", 0.36), False),
+    ("05-library.png",   "raphael",  "Go Deeper.",
+     "The history of the Mass, a glossary, articles, and every Proper, searchable.",
+     (0.04, 0.095, 0.96, 0.255, "left", 0.30), False),
+    ("10-settings.png",  "angelico", "Make It Yours.",
+     "Your Missal, your discipline of penance, your language, your look.",
+     (0.06, 0.865, 0.94, 0.925, "right", 0.60), True),
 ]
+PAINTINGS = {"raphael": "raphael-disputation.jpg", "angelico": "fra-angelico-annunciation.jpg", "gentile": "gentile-coronation.jpg"}
 
 
-# ── drawing helpers ──────────────────────────────────────────────────────────
-def gradient(w, h):
-    base = Image.new("RGB", (1, h))
-    px = base.load()
-    for y in range(h):
-        t = y / (h - 1)
-        px[0, y] = tuple(int(BG_TOP[i] + (BG_BOTTOM[i] - BG_TOP[i]) * t) for i in range(3))
-    return base.resize((w, h), Image.BILINEAR)
+# ── fonts ────────────────────────────────────────────────────────────────────
+def serif(size, weight=700, italic=False):
+    f = ImageFont.truetype(f"{FONTS}/PlayfairDisplay{'-Italic' if italic else ''}[wght].ttf", size)
+    f.set_variation_by_axes([weight])
+    return f
 
 
-def glow(canvas, cx, cy, rx, ry):
-    layer = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
-    ImageDraw.Draw(layer).ellipse([cx - rx, cy - ry, cx + rx, cy + ry], fill=GLOW + (120,))
-    layer = layer.filter(ImageFilter.GaussianBlur(rx * 0.45))
-    canvas.alpha_composite(layer)
+def sans(size, weight="Medium"):
+    return ImageFont.truetype(f"{FONTS}/Inter-{weight}.otf", size)
 
 
+# ── background ───────────────────────────────────────────────────────────────
+def background(W, H, painting):
+    art = Image.open(f"{ART}/{PAINTINGS[painting]}").convert("RGB")
+    # cover-fit, biased to the upper part of the painting
+    sc = max(W / art.size[0], H / art.size[1])
+    art = art.resize((int(art.size[0] * sc) + 1, int(art.size[1] * sc) + 1), Image.LANCZOS)
+    x = (art.size[0] - W) // 2
+    y = min((art.size[1] - H) // 3, art.size[1] - H)
+    art = art.crop((x, y, x + W, y + H))
+    art = art.filter(ImageFilter.GaussianBlur(W * 0.038))
+    art = ImageEnhance.Color(art).enhance(0.85)
+    art = ImageEnhance.Brightness(art).enhance(1.10)
+    bg = Image.new("RGBA", (W, H), PAGE + (255,))
+    art = art.convert("RGBA"); art.putalpha(int(255 * 0.78))
+    bg.alpha_composite(art)
+    # a stronger cream wash over the text area, fading out towards the phone
+    wash = Image.new("L", (1, H), 0)
+    px = wash.load()
+    for yy in range(H):
+        t = yy / H
+        a = 190 if t < 0.08 else max(0, int(190 * (1 - (t - 0.08) / 0.42))) if t < 0.50 else 0
+        px[0, yy] = a
+    wash = wash.resize((W, H))
+    layer = Image.new("RGBA", (W, H), PAGE + (0,)); layer.putalpha(wash)
+    bg.alpha_composite(layer)
+    return bg
+
+
+# ── text helpers ─────────────────────────────────────────────────────────────
 def wrap(draw, text, font, maxw):
     out, cur = [], ""
     for wd in text.split():
@@ -105,12 +138,25 @@ def wrap(draw, text, font, maxw):
     return out
 
 
-def centered(draw, lines, font, cx, y, fill, gap):
+def balanced(draw, text, font, maxw):
+    """Wrap, then balance the lines so the last is not a short orphan."""
+    lines = wrap(draw, text, font, maxw)
+    if len(lines) >= 2:
+        for target in range(int(maxw * 0.55), int(maxw), max(8, int(maxw * 0.03))):
+            alt = wrap(draw, text, font, target)
+            if len(alt) == len(lines):
+                widths = [draw.textlength(l, font=font) for l in alt]
+                if max(widths) - min(widths) < maxw * 0.30:
+                    return alt
+    return lines
+
+
+def centered(draw, lines, font, cx, y, fill, leading):
+    asc, desc = font.getmetrics()
     for ln in lines:
         w = draw.textlength(ln, font=font)
-        asc, desc = font.getmetrics()
         draw.text((cx - w / 2, y), ln, font=font, fill=fill)
-        y += asc + desc * 0.4 + gap
+        y += int((asc + desc) * leading)
     return y
 
 
@@ -125,170 +171,201 @@ def tracked(draw, text, font, cx, y, fill, tracking):
     return y + asc + desc
 
 
-def cross(draw, cx, cy, size, thick):
-    draw.rectangle([cx - thick / 2, cy - size, cx + thick / 2, cy + size * 0.9], fill=GOLD)
-    draw.rectangle([cx - size * 0.62, cy - size * 0.42 - thick / 2, cx + size * 0.62, cy - size * 0.42 + thick / 2], fill=GOLD)
+def badge(canvas, cx, cy, r):
+    d = ImageDraw.Draw(canvas)
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=MAROON)
+    t = max(2, int(r * 0.16))
+    d.rectangle([cx - t / 2, cy - r * 0.58, cx + t / 2, cy + r * 0.52], fill=GOLD)
+    d.rectangle([cx - r * 0.40, cy - r * 0.22 - t / 2, cx + r * 0.40, cy - r * 0.22 + t / 2], fill=GOLD)
 
 
-def pills(draw, labels, font, cx, y, tracking):
-    pad_x, pad_y, gap = int(font.size * 0.9), int(font.size * 0.42), int(font.size * 0.7)
-    asc, desc = font.getmetrics()
-    ws = [sum(draw.textlength(ch, font=font) for ch in l) + tracking * (len(l) - 1) + 2 * pad_x for l in labels]
-    x = cx - (sum(ws) + gap * (len(ws) - 1)) / 2
-    h = asc + desc + 2 * pad_y
-    for l, w in zip(labels, ws):
-        draw.rounded_rectangle([x, y, x + w, y + h], radius=h / 2, outline=GOLD, width=max(2, int(font.size * 0.07)))
-        tracked(draw, l, font, x + w / 2, y + pad_y, GOLD, tracking)
-        x += w + gap
-    return y + h
-
-
+# ── the device ───────────────────────────────────────────────────────────────
 def edge_color(img, rows, bottom=False):
-    """The average colour of the first (or last) `rows` rows — the app's own background there."""
     strip = img.crop((0, img.size[1] - rows, img.size[0], img.size[1])) if bottom else img.crop((0, 0, img.size[0], rows))
-    px = strip.resize((1, 1), Image.BOX).getpixel((0, 0))
-    return px[:3]
+    return strip.resize((1, 1), Image.BOX).getpixel((0, 0))[:3]
 
 
-def prepare(shot, _unused=0.0):
-    """A capture ready for the frame: its anti-aliased edges trimmed and a status-bar
-    band added above it in the app's own header colour (captures are taken without one)."""
+def luminance(c):
+    return 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]
+
+
+def prepare(shot):
+    """Trim the capture's anti-aliased edge, paint its rounded corners in the app's own
+    colours, and add a status bar (9:41, signal, wifi, battery) in the header colour."""
     w, h = shot.size
     t = max(2, int(w * 0.006))
-    shot = shot.crop((t, t, w - t, h - t))
-    w, h = shot.size
-    band = int(w * 0.115)
+    shot = shot.crop((t, t, w - t, h - t)); w, h = shot.size
     rows = max(2, int(h * 0.01))
     top, bottom = edge_color(shot, rows), edge_color(shot, rows, bottom=True)
-    # a capture with rounded corners (one recovered from an older render) shows
-    # whatever lay behind them: paint the corners in the app's own colours
     rad = int(w * 0.07)
     corners = Image.new("L", (w, h), 255)
     ImageDraw.Draw(corners).rounded_rectangle([0, 0, w - 1, h - 1], radius=rad, fill=0)
-    fill = Image.new("RGB", (w, h), bottom)
-    ImageDraw.Draw(fill).rectangle([0, 0, w, h // 2], fill=top)
+    fill = Image.new("RGB", (w, h), bottom); ImageDraw.Draw(fill).rectangle([0, 0, w, h // 2], fill=top)
     shot = Image.composite(fill, shot, corners)
+    band = int(w * 0.125)
     out = Image.new("RGB", (w, h + band), bottom)
-    ImageDraw.Draw(out).rectangle([0, 0, w, band], fill=top)
+    d = ImageDraw.Draw(out)
+    d.rectangle([0, 0, w, band], fill=top)
     out.paste(shot, (0, band))
-    return out
+    ink = (250, 246, 238) if luminance(top) < 110 else (28, 24, 22)
+    # 9:41 on the left, the icons on the right — iOS proportions
+    f = sans(int(w * 0.046), "SemiBold")
+    ty = int(band * 0.50) - f.getmetrics()[0] // 2 - int(w * 0.004)
+    d.text((int(w * 0.095), ty), "9:41", font=f, fill=ink)
+    cy = int(band * 0.50) - int(w * 0.004)
+    # signal bars
+    bx = int(w * 0.705); bw = max(2, int(w * 0.011)); gap = int(w * 0.006)
+    for i, hh in enumerate([0.012, 0.018, 0.024, 0.030]):
+        x = bx + i * (bw + gap); hb = int(w * hh)
+        d.rounded_rectangle([x, cy + int(w * 0.015) - hb, x + bw, cy + int(w * 0.015)], radius=1, fill=ink)
+    # wifi: three arcs
+    wx = int(w * 0.795)
+    for k, r in enumerate([0.030, 0.021, 0.012]):
+        rr = int(w * r)
+        d.arc([wx - rr, cy - rr + int(w * 0.012), wx + rr, cy + rr + int(w * 0.012)], 225, 315, fill=ink, width=max(2, int(w * 0.0065)))
+    d.ellipse([wx - int(w * 0.004), cy + int(w * 0.008), wx + int(w * 0.004), cy + int(w * 0.016)], fill=ink)
+    # battery
+    bx = int(w * 0.845); bW, bH = int(w * 0.058), int(w * 0.028)
+    d.rounded_rectangle([bx, cy - bH // 2, bx + bW, cy + bH // 2], radius=int(bH * 0.3), outline=ink, width=max(2, int(w * 0.004)))
+    d.rounded_rectangle([bx + int(bH * 0.18), cy - bH // 2 + int(bH * 0.18), bx + bW - int(bH * 0.18), cy + bH // 2 - int(bH * 0.18)], radius=int(bH * 0.18), fill=ink)
+    d.rectangle([bx + bW + 2, cy - int(bH * 0.18), bx + bW + 2 + max(2, int(w * 0.005)), cy + int(bH * 0.18)], fill=ink)
+    return out, band
 
 
 def device(shot, frame_w):
-    """The capture inside a dark phone frame; returns an RGBA image (frame width = frame_w)."""
-    bezel = int(frame_w * 0.028)
+    """The prepared capture inside a dark phone frame with a Dynamic Island.
+    Returns (frame image RGBA, screen image RGB at frame scale, bezel, band height at frame scale)."""
+    bezel = int(frame_w * 0.026)
     screen_w = frame_w - 2 * bezel
-    shot = prepare(shot)
-    sc = screen_w / shot.size[0]
-    screen = shot.resize((screen_w, int(shot.size[1] * sc)), Image.LANCZOS).convert("RGBA")
+    prepared, band = prepare(shot)
+    sc = screen_w / prepared.size[0]
+    screen = prepared.resize((screen_w, int(prepared.size[1] * sc)), Image.LANCZOS)
     frame_h = screen.size[1] + 2 * bezel
-    r_out = int(frame_w * 0.135)
-    r_in = int(screen_w * 0.112)
     img = Image.new("RGBA", (frame_w, frame_h), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle([0, 0, frame_w - 1, frame_h - 1], radius=r_out, fill=FRAME, outline=FRAME_EDGE, width=max(2, int(frame_w * 0.004)))
+    d.rounded_rectangle([0, 0, frame_w - 1, frame_h - 1], radius=int(frame_w * 0.135), fill=FRAME, outline=FRAME_EDGE, width=max(2, int(frame_w * 0.004)))
     mask = Image.new("L", screen.size, 0)
-    ImageDraw.Draw(mask).rounded_rectangle([0, 0, screen_w - 1, screen.size[1] - 1], radius=r_in, fill=255)
-    screen.putalpha(mask)
-    img.alpha_composite(screen, (bezel, bezel))
-    # Dynamic Island
-    pw, ph = int(screen_w * 0.30), int(screen_w * 0.082)
-    px, py = (frame_w - pw) // 2, bezel + int(screen_w * 0.035)
-    d.rounded_rectangle([px, py, px + pw, py + ph], radius=ph // 2, fill=(8, 8, 8))
-    return img
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, screen_w - 1, screen.size[1] - 1], radius=int(screen_w * 0.112), fill=255)
+    scr = screen.convert("RGBA"); scr.putalpha(mask)
+    img.alpha_composite(scr, (bezel, bezel))
+    pw, ph = int(screen_w * 0.29), int(screen_w * 0.082)
+    d.rounded_rectangle([(frame_w - pw) // 2, bezel + int(screen_w * 0.030), (frame_w + pw) // 2, bezel + int(screen_w * 0.030) + ph], radius=ph // 2, fill=(6, 6, 6))
+    return img, screen, bezel, int(band * sc)
 
 
-def shadow_of(img, blur, offset):
+def shadow_of(img, blur, offset, alpha=0.55):
     sh = Image.new("RGBA", (img.size[0] + blur * 6, img.size[1] + blur * 6), (0, 0, 0, 0))
-    dark = Image.new("RGBA", img.size, (20, 6, 8, 200))
-    dark.putalpha(img.split()[3].point(lambda a: int(a * 0.85)))
+    dark = Image.new("RGBA", img.size, (40, 20, 16, 255))
+    dark.putalpha(img.split()[3].point(lambda a: int(a * alpha)))
     sh.paste(dark, (blur * 3, blur * 3 + offset), dark)
     return sh.filter(ImageFilter.GaussianBlur(blur)), blur * 3
 
 
+def callout(screen, band, crop, zoom, max_w, pad, radius, border):
+    """A piece of the screen, enlarged, on a white card with a gold hairline."""
+    sw, sh_ = screen.size
+    body_h = sh_ - band
+    x0, y0, x1, y1 = crop
+    box = (int(x0 * sw), band + int(y0 * body_h), int(x1 * sw), band + int(y1 * body_h))
+    piece = screen.crop(box)
+    tw = min(int(piece.size[0] * zoom), max_w)
+    piece = piece.resize((tw, int(piece.size[1] * tw / piece.size[0])), Image.LANCZOS)
+    cw, ch = piece.size[0] + 2 * pad, piece.size[1] + 2 * pad
+    card = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
+    d = ImageDraw.Draw(card)
+    d.rounded_rectangle([0, 0, cw - 1, ch - 1], radius=radius, fill=CARD, outline=GOLD, width=border)
+    m = Image.new("L", piece.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, piece.size[0] - 1, piece.size[1] - 1], radius=max(4, radius - pad), fill=255)
+    p = piece.convert("RGBA"); p.putalpha(m)
+    card.alpha_composite(p, (pad, pad))
+    return card
+
+
 # ── one screenshot ───────────────────────────────────────────────────────────
-def render(shot_path, eyebrow, title, sub, pill_labels, size, tablet):
+def render(shot_path, painting, title, sub, co, trust, size, tablet):
     W, H = size
-    canvas = gradient(W, H).convert("RGBA")
+    canvas = background(W, H, painting)
     d = ImageDraw.Draw(canvas)
-    # type scale (fractions of the width; tablets carry a narrower column)
-    k = 0.68 if tablet else 1.0
-    t_size = int(W * 0.094 * k)
-    s_size = int(W * 0.0335 * k)
-    e_size = int(W * 0.0245 * k)
-    tfont = ImageFont.truetype(TITLE_FONT, t_size)
-    sfont = ImageFont.truetype(SUB_FONT, s_size)
-    efont = ImageFont.truetype(EYEBROW_FONT, e_size)
-    pfont = ImageFont.truetype(EYEBROW_FONT, int(e_size * 0.86))
-    col = int(W * (0.64 if tablet else 0.84))
+    k = 0.70 if tablet else 1.0
+    t_size = int(W * 0.108 * k)
+    s_size = int(W * 0.037 * k)
+    tfont, sfont = serif(t_size, 760), sans(s_size, "Medium")
+    col = int(W * (0.62 if tablet else 0.88))
 
-    y = int(H * (0.060 if tablet else 0.052))
-    cross(d, W // 2, y + int(e_size * 0.9), int(e_size * 0.9), max(2, int(W * 0.0022)))
-    y += int(e_size * 2.4)
-    y = tracked(d, eyebrow, efont, W // 2, y, GOLD, e_size * 0.28)
-    y += int(t_size * 0.22)
-    y = centered(d, wrap(d, title, tfont, col), tfont, W // 2, y, TITLE_COL, int(t_size * 0.04))
-    y += int(s_size * 0.55)
-    y = centered(d, wrap(d, sub, sfont, int(col * 0.92)), sfont, W // 2, y, SUB_COL, int(s_size * 0.18))
-    if pill_labels:
-        y += int(s_size * 0.7)
-        y = pills(d, pill_labels, pfont, W // 2, y, e_size * 0.18)
+    y = int(H * 0.040)
+    r = int(W * 0.026 * k)
+    badge(canvas, W // 2, y + r, r)
+    y += 2 * r + int(t_size * 0.40)
+    tlines = title.split("\n") if "\n" in title else balanced(d, title, tfont, col)
+    y = centered(d, tlines, tfont, W // 2, y, MAROON, 1.02)
+    y += int(s_size * 0.35)
+    y = centered(d, balanced(d, sub, sfont, int(col * 0.80)), sfont, W // 2, y, INK, 1.32)
+    if trust:
+        y += int(s_size * 0.55)
+        y = tracked(d, TRUST, sans(int(s_size * 0.56), "SemiBold"), W // 2, y, GOLD, s_size * 0.10)
 
-    # the device
+    fw = int(W * (0.60 if tablet else 0.84))
     shot = Image.open(shot_path).convert("RGB")
-    top = int(y + H * (0.045 if tablet else 0.040))
-    # the frame runs off the bottom edge, so a capture is cropped by the canvas, never
-    # padded: when a capture is too short to reach the bottom at full width, the frame
-    # is narrowed until its bottom edge just passes the canvas edge
-    avail = H - top + int(W * 0.06)
-    pw, ph = prepare(shot, 0.0).size
-    per_width = (1 - 2 * 0.028) * ph / pw + 2 * 0.028      # frame height per unit of frame width
-    fw = min(int(W * (0.56 if tablet else 0.76)), int(avail / per_width))
-    dev = device(shot, fw)
-    glow(canvas, W // 2, top + int(dev.size[1] * 0.25), int(fw * 0.95), int(fw * 0.95))
-    sh, pad = shadow_of(dev, int(W * 0.03), int(W * 0.02))
-    canvas.alpha_composite(sh, ((W - dev.size[0]) // 2 - pad, top - pad))
-    canvas.alpha_composite(dev, ((W - dev.size[0]) // 2, top))
+    top = int(y + H * 0.035)
+    dev, screen, bezel, band = device(shot, fw)
+    sh, pad = shadow_of(dev, int(W * 0.028), int(W * 0.02))
+    dx = (W - dev.size[0]) // 2
+    canvas.alpha_composite(sh, (dx - pad, top - pad))
+    canvas.alpha_composite(dev, (dx, top))
+
+    # the callout card over the phone's edge
+    x0, y0, x1, y1, side, cy = co
+    card = callout(screen, band, (x0, y0, x1, y1), 1.42 if not tablet else 1.30, int(W * (0.56 if tablet else 0.74)),
+                   int(W * 0.012), int(W * 0.03), max(2, int(W * 0.0028)))
+    visible = H - top
+    cyy = int(top + visible * cy - card.size[1] / 2)
+    margin = int(W * 0.035)
+    cx = margin if side == "left" else W - margin - card.size[0]
+    if tablet:
+        cx = dx - int(W * 0.06) if side == "left" else dx + dev.size[0] + int(W * 0.06) - card.size[0]
+    csh, cpad = shadow_of(card, int(W * 0.022), int(W * 0.012), 0.45)
+    canvas.alpha_composite(csh, (cx - cpad, cyy - cpad))
+    canvas.alpha_composite(card, (cx, cyy))
     return canvas.convert("RGB")
 
 
 def feature_graphic(path):
     W, H = 1024, 500
-    canvas = gradient(W, H).convert("RGBA")
-    glow(canvas, 250, 250, 330, 330)
+    canvas = background(W, H, "raphael")
     icon = Image.open("prototype/icon-assets/introibo-appstore-1024.png").convert("RGBA").resize((300, 300), Image.LANCZOS)
-    m = Image.new("L", icon.size, 0)
-    ImageDraw.Draw(m).rounded_rectangle([0, 0, 299, 299], radius=66, fill=255)
-    icon.putalpha(m)
-    sh, pad = shadow_of(icon, 18, 10)
-    canvas.alpha_composite(sh, (100 - pad, 100 - pad))
-    canvas.alpha_composite(icon, (100, 100))
+    m = Image.new("L", icon.size, 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, 299, 299], radius=66, fill=255); icon.putalpha(m)
+    sh, pad = shadow_of(icon, 18, 10, 0.5)
+    canvas.alpha_composite(sh, (90 - pad, 100 - pad)); canvas.alpha_composite(icon, (90, 100))
     d = ImageDraw.Draw(canvas)
-    tracked(d, "INTROIBO AD ALTARE DEI", ImageFont.truetype(EYEBROW_FONT, 24), 680, 128, GOLD, 6)
-    d.text((470, 165), "Introibo", font=ImageFont.truetype(TITLE_FONT, 118), fill=TITLE_COL)
-    sub = ImageFont.truetype(SUB_FONT, 34)
-    d.text((474, 310), "A prayer companion for the", font=sub, fill=SUB_COL)
-    d.text((474, 350), "traditional Catholic life.", font=sub, fill=SUB_COL)
-    pills(d, ["AD-FREE", "OFFLINE", "NO ACCOUNT"], ImageFont.truetype(EYEBROW_FONT, 20), 680, 412, 4)
+    d.text((450, 120), "Introibo", font=serif(118, 760), fill=MAROON)
+    f = sans(33, "Medium")
+    d.text((456, 268), "A prayer companion for the", font=f, fill=INK)
+    d.text((456, 310), "traditional Catholic life.", font=f, fill=INK)
+    tracked(d, TRUST, sans(16, "SemiBold"), 456 + 262, 372, MAROON, 2)
     canvas.convert("RGB").save(path, "PNG")
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", choices=["apple", "play"])
+    ap.add_argument("--sizes", help="comma-separated size keys to render (default: all)")
     args = ap.parse_args()
+    want = set(args.sizes.split(",")) if args.sizes else None
     n = 0
     if args.only in (None, "apple"):
         out = f"{OUT_DIR}/apple"; os.makedirs(out, exist_ok=True)
-        for i, (raw, eyebrow, title, sub, pl) in enumerate(SHOTS, 1):
+        for i, (raw, painting, title, sub, co, trust) in enumerate(SHOTS, 1):
             for key, size in APPLE.items():
-                render(f"{RAW_DIR}/{raw}", eyebrow, title, sub, pl, size, key == "ipad13").save(f"{out}/{i:02d}-{key}.png", "PNG"); n += 1
+                if want and key not in want: continue
+                render(f"{RAW}/{raw}", painting, title, sub, co, trust, size, key == "ipad13").save(f"{out}/{i:02d}-{key}.png", "PNG"); n += 1
     if args.only in (None, "play"):
         out = f"{OUT_DIR}/play"; os.makedirs(out, exist_ok=True)
-        for i, (raw, eyebrow, title, sub, pl) in enumerate(SHOTS, 1):
+        for i, (raw, painting, title, sub, co, trust) in enumerate(SHOTS, 1):
             for key, size in PLAY.items():
-                render(f"{RAW_DIR}/{raw}", eyebrow, title, sub, pl, size, key != "phone").save(f"{out}/{key}-{i:02d}.png", "PNG"); n += 1
-        feature_graphic(f"{out}/feature-graphic-1024x500.png"); n += 1
+                if want and key not in want: continue
+                render(f"{RAW}/{raw}", painting, title, sub, co, trust, size, key != "phone").save(f"{out}/{key}-{i:02d}.png", "PNG"); n += 1
+        if not want:
+            feature_graphic(f"{out}/feature-graphic-1024x500.png"); n += 1
     print(f"Wrote {n} images under {OUT_DIR}/")
 
 
