@@ -45,7 +45,7 @@ Built for Catholics who attend the Traditional Latin Mass at FSSP, ICKSP, SSPX, 
 
 ### Prayers
 
-- **73 traditional prayers** in Latin and English with decorative drop cap on the first line, including eight litanies (Saints, Loreto, Sacred Heart, Holy Name, Precious Blood, St. Joseph, Holy Ghost, Humility)
+- **75 traditional prayers** in Latin and English with decorative drop cap on the first line, including ten litanies (Saints, Loreto, Sacred Heart, Holy Name, Precious Blood, St. Joseph, Blessed Sacrament, Holy Ghost, Humility, Faithful Departed)
 - **Personal Prayer Rule**: customizable morning, midday, and evening prayer schedule with daily checklist and progress ring
 - **13 occasion categories**: Morning, Before Mass, During Mass, After Mass, Meals, Marian, Eucharistic, Before Confession, For the Departed, In Temptation, For Protection, Evening, Litanies
 - **Sort toggle**: Custom order or alphabetical (A-Z)
