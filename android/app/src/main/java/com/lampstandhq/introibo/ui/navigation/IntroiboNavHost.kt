@@ -164,6 +164,9 @@ fun IntroiboNavHost(
     }
 
     Scaffold(
+        // The status-bar band above the content takes the page colour, not
+        // Material's default background.
+        containerColor = colors.pageBackground,
         bottomBar = {
             NavigationBar(
                 containerColor = colors.pageBackground,

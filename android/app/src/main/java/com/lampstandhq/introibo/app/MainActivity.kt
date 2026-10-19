@@ -3,8 +3,11 @@ package com.lampstandhq.introibo.app
 import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -63,7 +66,21 @@ class MainActivity : ComponentActivity() {
         consumeIntent(intent)
     }
 
+    /**
+     * Transparent system bars with icon colours that follow the app theme,
+     * not the phone's night mode. Android 15+ already forces edge-to-edge
+     * for this target SDK; calling it here gives Android 14 and earlier
+     * the same look instead of bars painted from the XML theme.
+     */
+    private fun applySystemBars(dark: Boolean) {
+        val transparent = android.graphics.Color.TRANSPARENT
+        val style = if (dark) SystemBarStyle.dark(transparent)
+                    else SystemBarStyle.light(transparent, transparent)
+        enableEdgeToEdge(statusBarStyle = style, navigationBarStyle = style)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        applySystemBars(dark = false)
         super.onCreate(savedInstanceState)
 
         // Deferred from Application.onCreate so widget-alarm broadcasts that
@@ -83,6 +100,7 @@ class MainActivity : ComponentActivity() {
             val settingsRepo = remember { SettingsRepository(applicationContext) }
 
             val theme by settingsRepo.appTheme.collectAsState(initial = AppTheme.PARCHMENT)
+            LaunchedEffect(theme) { applySystemBars(dark = theme == AppTheme.DARK) }
             val fontScale by settingsRepo.fontScale.collectAsState(
                 initial = FontSizeScale.DEFAULT_VALUE
             )
