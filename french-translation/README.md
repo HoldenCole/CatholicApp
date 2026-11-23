@@ -30,6 +30,17 @@ matched to the app's data by its Latin. Nothing was machine-translated.
 | `office_names_fr.json` | Saints' names for the "N." of the common collects | every name DO carries |
 | `office_doxologies.json` (`fr` field, in the asset folders) | The seasonal hymn doxologies | 6 of 7 |
 
+`martyrology_fr.json` — the Martyrology read at Prime — is DO's French
+Martyrology, which keys every entry by the same name as the Latin: 3,201
+of the 3,209 entries and all 23 movable announcements matched; the other
+eight (leap-year rubrics, three entries DO files under another day) are
+in `martyrology_fixes_fr.json`, composed from DO's own wording. DO's
+French adds some 300 modern notes the Martyrology does not have
+("(aujourd’hui Kayseri en Turquie)"); they are removed, and the calendar
+day a Roman date falls on ("(14 décembre)") is kept. DO's credits do not
+say where this translation comes from, and those notes show a recent
+hand: its provenance is unknown and belongs with the questions below.
+
 A second tranche comes from the received French prayers rather than from
 DO alone:
 
@@ -86,10 +97,7 @@ site with the same name as this app.
 
 ## Not yet in French (hand translation, later tranches)
 
-The UI strings, the saints' and reference pages, the courses, the
-Martyrology (DO has a
-French Martyrology; aligning it entry by entry is its own job, as it was
-for Spanish), the 159 calendar titles and 8 lessons listed in the
+The UI strings, the saints' and reference pages, the courses, the 159 calendar titles and 8 lessons listed in the
 `*_missing_fr.json` files, and the Mass fields DO's French lacks (226
 distinct lines; run `import_french.py --report`).
 

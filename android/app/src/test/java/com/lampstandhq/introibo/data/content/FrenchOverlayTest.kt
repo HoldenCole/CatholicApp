@@ -57,6 +57,11 @@ class FrenchOverlayTest {
         assertTrue(psalm.verses!!.first().eng, psalm.verses!!.none { it.eng == it.lat })
         assertFalse("a psalm verse still English", psalm.verses!!.any { Regex("\\b(the|and|thou|thy)\\b").containsMatchIn(it.eng) })
         val matins = ContentStore.hourForDate("matutinum", adventSunday, MissalRite.RITE_1962)!!
+        val prime = ContentStore.hourForDate("prima", LocalDate.of(2026, 11, 23), MissalRite.RITE_1962)!!
+        val martyrology = prime.parts.first { it.variationKey?.endsWith("martyrologium") == true }
+        assertTrue(martyrology.eng, martyrology.eng!!.startsWith("Le 24 novembre 2026"))
+        assertTrue(martyrology.eng, martyrology.eng!!.contains("Jean de la Croix"))
+        assertTrue(martyrology.eng, martyrology.eng!!.contains("Rendons grâces à Dieu"))
         val lesson = matins.parts.first { it.variationKey == "lectio1" }
         assertFalse(lesson.eng, Regex("\\b(the|and|of)\\b").containsMatchIn(lesson.eng!!))
     }

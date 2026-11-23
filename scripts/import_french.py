@@ -11,6 +11,7 @@ scripts/office_qa/README.md, "French"). Steps (default: all):
   missal    french-translation/missal_propers_fr.json   Mass antiphons and orations
             french-translation/missal_readings_fr.json  Epistles and Gospels
   marian    french-translation/marian_antiphons_fr.json the four final antiphons
+  martyrology french-translation/martyrology_fr.json    the Martyrology read at Prime
   names     french-translation/ordo_names_fr.json       the calendar's feast names
             french-translation/office_names_fr.json     saints' names for the "N." of the collects
 
@@ -490,9 +491,89 @@ def names(do):
     print(f"names: {len(out)} of {len(src)} calendar titles in French ({len(missing)} left, listed in ordo_names_missing_fr.json); {len(saints)} saints' name forms")
 
 
+# ------------------------------------------------------------- martyrology
+
+MONTHS_FR = "janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre"
+
+
+def all_sections(path):
+    """{(name, condition): text} of a DO file, in order."""
+    out, name = {}, None
+    if not path.exists():
+        return out
+    for l in path.read_text(encoding="utf-8", errors="replace").split("\n"):
+        m = re.match(r"^\[([^\]]+)\]\s*(\(.*\))?\s*$", l)
+        if m:
+            name = (m.group(1), m.group(2) or "")
+            out[name] = []
+            continue
+        if name and l.strip():
+            out[name].append(l.strip())
+    return {k: " ".join(v) for k, v in out.items()}
+
+
+def martyrology(do):
+    """martyrology_fr.json: DO's French Martyrology, entry for entry.
+
+    DO keys each entry of a day by a name ("[Chrysogoni]") in the Latin and
+    in the French file alike: an entry of martyrology.json is found by its
+    Latin among the day's Latin sections, and takes the French section of
+    the same name. french-translation/martyrology_fixes_fr.json supplies
+    the few entries DO's French lacks ({"MM-DD": {"<entry index>": text}}).
+    A day is written only when every entry has its French, as the apps
+    require."""
+    import difflib
+    base = Path(do) / "web/www/horas"
+    src = load(ASSETS / "martyrology.json")
+    fx = FR / "martyrology_fixes_fr.json"
+    fixes = load(fx) if fx.exists() else {}
+    days, missing, stats = {}, [], Counter()
+    for day, d in src["days"].items():
+        lat = all_sections(base / "Latin" / "Martyrologium" / f"{day}.txt")
+        fr = {k: v for (k, cond), v in all_sections(base / "Francais" / "Martyrologium" / f"{day}.txt").items() if not cond}
+        index = {}
+        for (k, cond), text in lat.items():
+            if k not in ("Titulus", "Martyrologium"):
+                index.setdefault(fold(text), k)
+        entries = []
+        for i, e in enumerate(d["entries"]):
+            f = fold(e["lat"])
+            k = index.get(f)
+            if k is None and index:     # the same entry in a slightly different edition
+                best = max(index, key=lambda x: difflib.SequenceMatcher(None, f, x).quick_ratio())
+                if difflib.SequenceMatcher(None, f, best).ratio() > 0.85:
+                    k = index[best]
+            t = (fixes.get(day) or {}).get(str(i)) or (tidy(fr[k]) if k in fr and fold(fr[k]) != f else None)
+            if t is None:
+                missing.append({"day": day, "index": i, "lat": e["lat"], "eng": e["eng"]})
+            # DO's inline rubrics "/:…:/" are not part of the reading
+            # (written "/:…:/", and here and there ":/…:/")
+            if t:
+                t = re.sub(r"\s*(?:/:|:/)[^/]*?(?::/|/:)\s*", " ", t)
+                # DO's French adds modern glosses the Martyrology does not have
+                # ("(aujourd’hui Kayseri en Turquie)", "[en l’an 309]"); the
+                # day a Roman date falls on ("(14 décembre)") is kept.
+                if "(" not in e["lat"]:
+                    t = re.sub(r"\s*\((?!\s*(?:le\s+)?\d{1,2}(?:er)?\s+(?:%s)\s*\))[^)]*\)" % MONTHS_FR, "", t)
+                t = re.sub(r"\s*\[[^\]]*\]", "", t)
+                t = re.sub(r"\s{2,}", " ", re.sub(r"\s+([,.;])", r"\1", t)).strip()
+                if t and t[-1] not in ".!?»)" and e["lat"].rstrip()[-1:] == ".":
+                    t = t.rstrip(",;: ") + "."      # a gloss stood before the full stop
+            entries.append(t or None)
+            stats["entries" if t else "missing"] += 1
+        if all(entries):
+            days[day] = {"entries_fr": entries}
+    mob = {k.lower(): tidy(v) for (k, cond), v in all_sections(base / "Francais" / "Martyrologium" / "Mobile.txt").items() if not cond}
+    mobile = {k: mob[k] for k in src["mobile"] if k in mob}
+    dump({"days": days, "mobile": mobile}, "martyrology_fr.json")
+    dump(missing, "martyrology_missing_fr.json")
+    print(f"martyrology: {stats['entries']} of {stats['entries'] + stats['missing']} entries, "
+          f"{len(days)} of {len(src['days'])} days complete, {len(mobile)} of {len(src['mobile'])} movable announcements")
+
+
 def main():
     do, dumps = arg("--do"), arg("--dumps")
-    steps = [a for a in sys.argv[1:] if a in ("psalter", "missal", "marian", "names")] or ["psalter", "missal", "marian", "names"]
+    steps = [a for a in sys.argv[1:] if a in ("psalter", "missal", "marian", "names", "martyrology")] or ["psalter", "missal", "marian", "names", "martyrology"]
     if "psalter" in steps:
         if not do:
             sys.exit("--do DO_ROOT is needed for the psalter")
@@ -505,6 +586,8 @@ def main():
         marian(dumps)
     if "names" in steps:
         names(do)
+    if "martyrology" in steps:
+        martyrology(do)
 
 
 if __name__ == "__main__":
