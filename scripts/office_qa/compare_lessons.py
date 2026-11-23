@@ -18,6 +18,19 @@ def norm(s):
     s = s.replace('j','i').replace('v','u').replace('æ','ae').replace('œ','oe')
     return re.sub(r'[^a-z ]+',' ', s)
 REF = re.compile(r'^(\d+\s)?[A-Z0-9][\w\.]* ?\d+[:,;\d\-\s]*$|^\d+ ?$')
+def body_candidates(lines, n=6):
+    # the first words of each of the first substantive lines: DO prints a
+    # source reference ("Epist. 22, post initium", "Commemoratio ...") on a
+    # line of its own, which the app's text does not carry
+    out = []
+    for l in lines:
+        if l.startswith(('℣', '℟')): break
+        t = re.sub(r'^\d+\s+', '', l.strip())
+        if not t or REF.match(t) or t.startswith(('*','Incipit','De ','Léctio','Lectio','Homil','Sermo','Ex ','Liber','Epístola','Initium')): continue
+        w = norm(t).split()
+        if len(w) >= 3: out.append(' '.join(w[:n]))
+        if len(out) >= 4: break
+    return out
 def body_words(lines, n=6):
     # first n words of first substantive line (skip title/ref lines)
     for l in lines:
@@ -31,6 +44,7 @@ def resp_words(lines, n=5):
         if l.startswith('℟. ') and 'Deo grátias' not in l:
             return ' '.join(norm(l[3:]).split()[:n])
     return ''
+CAND = {}
 def do_matins(rite, date):
     try: d = json.load(open(f'{DO}/{rite}/{date}/matutinum.json'))
     except: return None
@@ -41,6 +55,7 @@ def do_matins(rite, date):
         if m:
             ls = s.get('lines') or []
             les[int(m.group(1))] = body_words(ls)
+            CAND[(rite, date, int(m.group(1)))] = body_candidates(ls)
             res[int(m.group(1))] = resp_words(ls)
     return les, res
 def app_matins(rite, date):
@@ -75,7 +90,7 @@ for rite in rites:
         dl, dr = do; al, ar, name = ap
         for k in sorted(set(dl) | set(al)):
             a, b = dl.get(k,''), al.get(k,'')
-            if a[:25] != b[:25]:
+            if a[:25] != b[:25] and not any(c[:25] == b[:25] for c in CAND.get((rite, date, k), [])):
                 cnt[('L',k)] += 1; ex[('L',k)].append((date, name[:30], a, b))
         for k in sorted(set(dr) | set(ar)):
             a, b = dr.get(k,''), ar.get(k,'')

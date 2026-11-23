@@ -73,35 +73,50 @@ runs with the ordinary test suite.
 
 ## Matins lessons
 
-`compare_lessons.py` compares the first words of every Matins lesson and
-responsory with DO's over the year (a wrong choice, not a wrong text):
+The lessons of Matins and their responsories are not re-derived by rule:
+the apps read what Divinum Officium itself prints for the day.
+`do_lessons_extract.py` renders DO's Matins for every date of 2024-2030 in
+the three books, Latin beside English and beside Spanish, and keeps each
+"Lectio N" section (the 1960 books' Latin is taken with the j of DO's own
+files, as the apps spell every book; the script patches the checkout's
+`spell_var` once to allow it). `build_office_lessons.py` splits each
+section into the lesson and its responsory and writes, byte-identically to
+both apps:
 
-    python3 scripts/office_qa/compare_lessons.py --app /tmp/esdump --do /tmp/doqa --rites 1962
+    office_lessons.json     {"texts": [{lat, eng, ref?}], "days": {rite: {date: [[lesson, responsory], ...]}}}
+    office_lessons_es.json  the Spanish of every text, index for index
 
-Its report drove the lesson rules in `ContentStore.hourForDate` (both
-platforms): the 1960 one-nocturn Matins reads, on a Sunday, lessons 1, 2+3
-and the Gospel homily with responsories 1, 3 and (Advent, Lent,
-Septuagesima) 9, and on a III-class feast the Scripture of the day (2+3 as
-one) with the Scripture's responsories 1 and 3 and the saint's contracted
-legend (`lessons1960`); the Te Deum stands in place of the last responsory,
-which then carries the Glória Patri; and the lessons follow the office DO's
-precedence chose rather than the app's own calendar on the days the two
-differ (the older books' transferred or kept feasts).
+    python3 scripts/office_qa/do_lessons_extract.py --do $DO_ROOT --out /tmp/dolessons --start 2024-01-01 --end 2030-12-31
+    python3 scripts/office_qa/build_office_lessons.py --src /tmp/dolessons
 
-A Common's variant (C5-1, C4b, C2a-1) carries only what differs from its
-Common in `commune_office.json`, so the Common layers first.
+`ContentStore.hourForDate` (both platforms, `applyDoLessons`) sets every
+lesson and responsory slot from the day's row after the older layering,
+drops a responsory DO does not print (the Te Deum follows), and adds one DO
+prints where the hour has no slot (Tenebrae). So the Scripture occurrens
+(the month-week books of August-November, the Nativity and Epiphany weeks),
+the Commons' homilies, the 1960 contractions, transferred Sunday lessons
+and the ninth lesson of a commemorated office are all DO's own choice. A
+lesson DO prints as a bare rubric or not at all (a gap in its own files, a
+handful of days in the 1955 books) keeps the app's layered text; dates
+outside the table fall back to the layering (`lessons1960`, `monthdayKey`,
+the Common variants), which is why that code remains.
 
-Known gaps the report still shows: the 1960 books' Scripture of
-Dec 29 - Jan 13 (DO reads Romans from the Nativity/Epiphany files); the
-Paschaltide responsories of the Apostles' Common; the homilies (lessons
-7-9) of the saints "vide Commune" in the older books, which the legacy
-`commune_office.json` does not carry (the template's homily shows); and
-the pre-1955 simplex feasts' single legend lesson (DO reads Lectio94 or
-Lectio4 alone, the app joins 4-6). The legacy `temporal_propers.json` /
-`sanctoral_propers.json` carry one text per file where DO's differ by
-rite; after the fixes the report counts, 1962: lessons 1-3 wrong on
-121/121/69 days (nearly all Dec 28 - Jan 13 and feasts with lessons the
-data lacks), responsories 1-3 on 124/139/35.
+The four lessons DO's Spanish column lacks are translated by hand in
+`spanish-translation/office_lessons_fixes_es.json` (Latin -> Spanish); the
+builder lists any others in `office_lessons_missing_es.json` beside it.
+
+`MatinsDoLessonsTest` checks every day of the table in every book: the hour
+has exactly DO's lessons, each with DO's text, and a responsory exactly
+where DO prints one. `compare_lessons.py` compares the first words of every
+lesson and responsory with a DO year dump (`do_extract.py`):
+
+    python3 scripts/office_qa/compare_lessons.py --app /tmp/appqa --do /tmp/doqa --rites 1962,1955,pre1955
+
+Before the table it counted a wrong lesson or responsory on 77 days of the
+year in the 1960 books, 216 in the 1955 books and 261 in the pre-1955
+books (the template's filler homily on saints' days "vide Commune", the
+Common's responsories where the Scripture's are said, Genesis 1 from
+mid-August to Advent); it now reports only its own first-word artifacts.
 
 ## Spanish
 

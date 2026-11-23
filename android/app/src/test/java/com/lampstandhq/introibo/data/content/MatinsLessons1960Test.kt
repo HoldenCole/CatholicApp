@@ -37,9 +37,9 @@ class MatinsLessons1960Test {
         val l2 = part(h, "lectio2")!!.lat!!
         assertTrue(l2, l2.contains("Væ genti peccatríci") && l2.contains("Terra vestra desérta"))
         assertTrue(part(h, "lectio3")!!.lat!!.startsWith("Léctio sancti Evangélii secúndum Lucam"))
-        assertTrue(part(h, "responsory1")!!.lat!!.startsWith("R. Aspíciens a longe"))
-        assertTrue(part(h, "responsory2")!!.lat!!.startsWith("R. Missus est Gábriel"))
-        assertTrue(part(h, "responsory3")!!.lat!!.startsWith("R. Ecce dies véniunt"))
+        assertTrue(part(h, "responsory1")!!.lat!!.startsWith("℟. Aspíciens a longe"))
+        assertTrue(part(h, "responsory2")!!.lat!!.startsWith("℟. Missus est Gábriel"))
+        assertTrue(part(h, "responsory3")!!.lat!!.startsWith("℟. Ecce dies véniunt"))
         assertFalse(hasTeDeum(h))
     }
 
@@ -48,7 +48,7 @@ class MatinsLessons1960Test {
         store()
         val h = matins(LocalDate.of(2026, 7, 5))
         assertTrue(part(h, "lectio3")!!.lat!!.startsWith("Léctio sancti Evangélii secúndum Marcum"))
-        assertTrue(part(h, "responsory2")!!.lat!!.startsWith("R. Dóminus, qui erípuit me"))
+        assertTrue(part(h, "responsory2")!!.lat!!.startsWith("℟. Dóminus, qui erípuit me"))
         assertNull(part(h, "responsory3"))
         assertTrue(hasTeDeum(h))
         // the responsory before the Te Deum closes with the Glória Patri
@@ -65,14 +65,14 @@ class MatinsLessons1960Test {
         val l2 = part(h, "lectio2")!!.lat!!
         assertTrue(l2, l2.contains("Et judicábit gentes") && l2.contains("Repléta est terra argénto"))
         assertTrue(part(h, "lectio3")!!.lat!!.startsWith("Bibiána virgo Romána"))
-        assertTrue(part(h, "responsory1")!!.lat!!.startsWith("R. Montes Israël"))
-        assertTrue(part(h, "responsory2")!!.lat!!.startsWith("R. Ecce ab Austro"))
+        assertTrue(part(h, "responsory1")!!.lat!!.startsWith("℟. Montes Israël"))
+        assertTrue(part(h, "responsory2")!!.lat!!.startsWith("℟. Ecce ab Austro"))
         assertNull(part(h, "responsory3"))
         assertTrue(hasTeDeum(h))
         // S. Nicolai (vide Commune): the feria's responsories, not the Common's
         val nic = matins(LocalDate.of(2025, 12, 6))
-        assertTrue(part(nic, "responsory1")!!.lat!!.startsWith("R. Ecce virgo concípiet"))
-        assertTrue(part(nic, "responsory2")!!.lat!!.startsWith("R. Ecce dies véniunt"))
+        assertTrue(part(nic, "responsory1")!!.lat!!.startsWith("℟. Ecce virgo concípiet"))
+        assertTrue(part(nic, "responsory2")!!.lat!!.startsWith("℟. Ecce dies véniunt"))
     }
 
     @Test
@@ -90,8 +90,8 @@ class MatinsLessons1960Test {
         assertTrue(part(feria, "lectio3")!!.lat!!.contains("Repléta est terra argénto"))
         // a Common's variant (C5-1, C4b) layers over its Common: the second and third nocturns' responsories
         val xavier = matins(LocalDate.of(2025, 12, 3), MissalRite.PRE_1955)
-        assertTrue(part(xavier, "responsory4")!!.lat!!.startsWith("R. Honéstum fecit illum"))
-        assertTrue(part(damasus, "responsory4")!!.lat!!.startsWith("R. Invéni David"))
+        assertTrue(part(xavier, "responsory4")!!.lat!!.startsWith("℟. Honéstum fecit illum"))
+        assertTrue(part(damasus, "responsory4")!!.lat!!.startsWith("℟. Invéni David"))
     }
 
     @Test

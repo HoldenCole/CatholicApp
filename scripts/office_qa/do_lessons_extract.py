@@ -10,6 +10,11 @@ Output: DIR/<lang>/<rite>/<date>.json — {"lessons": [{"n": 1, "lat": [..],
 "ver": [..]}]}: the lines of the "Lectio N" section in each column, blank
 lines kept as "" (they separate the lesson, its responsory and the Te Deum),
 reference lines (red italics alone on a line: "1 Mac 5:55-58") prefixed "!".
+
+DO prints the 1960 books' Latin with i for j ("eius", "Iesus": spell_var in
+horascommon.pl). The apps keep the j of DO's own files in every book, so the
+checkout's spell_var is patched once (idempotently) to leave the j alone
+when DO_KEEP_J is set, and every render here sets it.
 """
 import argparse, datetime, html, json, os, re, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
@@ -20,10 +25,19 @@ HEAD = re.compile(r"<FONT SIZE='\+1' COLOR=\"red\"><B><I>([^<]*)</I></B></FONT>"
 REFLINE = re.compile(r"^\s*<FONT COLOR=\"red\"><I>([^<]*)</I></FONT>\s*$")
 
 
+def patch_spelling(do_root):
+    path = os.path.join(do_root, "web/cgi-bin/horas/horascommon.pl")
+    src = open(path).read()
+    if "DO_KEEP_J" in src: return
+    old = "      tr/Jj/Ii/;\n"
+    if src.count(old) != 1: sys.exit("spell_var has changed: cannot patch " + path)
+    open(path, "w").write(src.replace(old, "      tr/Jj/Ii/ unless $ENV{DO_KEEP_J};\n"))
+
+
 def run_do(do_root, date, version, lang):
     q = ("date=%d-%d-%d&command=prayMatutinum&version=%s&lang2=%s&expand=all&votive=Hodie"
          % (date.month, date.day, date.year, version.replace(" ", "%20"), lang))
-    env = dict(os.environ, QUERY_STRING=q, REQUEST_METHOD="GET")
+    env = dict(os.environ, QUERY_STRING=q, REQUEST_METHOD="GET", DO_KEEP_J="1")
     p = subprocess.run(["perl", "officium.pl"], cwd=os.path.join(do_root, "web/cgi-bin/horas"),
                        env=env, capture_output=True, text=True, timeout=180)
     return p.stdout
@@ -81,6 +95,7 @@ if __name__ == "__main__":
     ap.add_argument("--versions", default="1962,1955,pre1955"); ap.add_argument("--langs", default="English,Espanol")
     ap.add_argument("--jobs", type=int, default=4); ap.add_argument("--force", action="store_true")
     a = ap.parse_args()
+    patch_spelling(a.do)
     d = datetime.date.fromisoformat(a.start); end = datetime.date.fromisoformat(a.end)
     jobs = []
     while d <= end:

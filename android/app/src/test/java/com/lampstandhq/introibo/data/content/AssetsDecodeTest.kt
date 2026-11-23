@@ -121,6 +121,14 @@ class AssetsDecodeTest {
         check("office_texts_es.json", { decode<Map<String, String>>("office_texts_es.json") }) { it.isNotEmpty() }
         check("office_names_es.json", { decode<Map<String, String>>("office_names_es.json") }) { it.isNotEmpty() }
         check("office_conclusions.json", { decode<OfficeConclusions>("office_conclusions.json") }) { it.collects.size > 400 }
+        val lessons = decode<OfficeLessons>("office_lessons.json")
+        check("office_lessons.json", { lessons }) { l ->
+            l.texts.size > 4000 && l.days.keys == setOf("1962", "1955", "pre1955") && l.days.values.all { it.size >= 2557 }
+        }
+        // DO's Spanish (or the hand fixes) for every lesson text, index for index.
+        check("office_lessons_es.json", { decode<List<String?>>("office_lessons_es.json") }) {
+            it.size == lessons.texts.size && it.none { s -> s.isNullOrBlank() }
+        }
         // Divinum Officium's rubrics data (scripts/office_qa/build_office_psalterium.py).
         check("office_rules.json", { decode<Map<String, Map<String, OfficeRule>>>("office_rules.json") }) { it.keys.containsAll(listOf("1962", "1955", "pre1955")) && it.values.all { m -> m.isNotEmpty() } }
         check("office_psalterium.json", { decode<OfficePsalterium>("office_psalterium.json") }) { it.parts.isNotEmpty() && it.psalmi.isNotEmpty() }

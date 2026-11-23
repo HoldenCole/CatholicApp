@@ -177,6 +177,15 @@ object ContentStore {
     private fun officeOrdo(rite: MissalRite): Map<String, DoOrdoDay> =
         officeOrdoCache.getOrPut(rite.rawValue) { load("office_ordo_${rite.rawValue}.json") ?: emptyMap() }
     private var officeRubrics: OfficeRubrics = OfficeRubrics(emptyMap(), OfficePsalterium(), emptyMap(), emptyMap(), { emptyMap() }, { _, _ -> null }, emptyMap(), emptyMap(), emptyMap(), emptyMap())
+    /** Matins' lessons and responsories as Divinum Officium prints them, per
+     *  rite and date (office_lessons.json), loaded on the first Matins. */
+    private var officeLessonsData: OfficeLessons? = null
+    internal fun officeLessons(): OfficeLessons =
+        officeLessonsData ?: (load<OfficeLessons>("office_lessons.json") ?: OfficeLessons()).also { officeLessonsData = it }
+    /** DO's Spanish for the same texts, aligned with [OfficeLessons.texts] (null where it has none). */
+    private var officeLessonsESData: List<String?>? = null
+    private fun officeLessonsES(): List<String?> =
+        officeLessonsESData ?: (load<List<String?>>("office_lessons_es.json") ?: emptyList()).also { officeLessonsESData = it }
     internal var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
@@ -428,6 +437,8 @@ object ContentStore {
         officeCommuneData = load("office_commune.json") ?: emptyMap()
         officePropersCache.clear()
         officeOrdoCache.clear()
+        officeLessonsData = null
+        officeLessonsESData = null
         mysterySets = load("mysteries.json") ?: emptyList()
         rosaryPrayers = load("rosary_prayers.json") ?: emptyList()
 
@@ -1483,6 +1494,15 @@ object ContentStore {
         if (template.slug == "matutinum" && matinsNocturnsEff == 1 && resolution != null && rite == MissalRite.RITE_1962) {
             lessons1960(resolution.office, baseLessons)?.let { assembled = applyProperOverrides(assembled, it) }
         }
+        // The lessons and responsories Divinum Officium itself prints for the
+        // day, wherever the table carries the date: the Scripture occurrens,
+        // the Commons' homilies, contracted and transferred lessons, the
+        // ninth lesson of a commemorated office are DO's choice, not a rule
+        // re-derived here. The layering above remains for other dates.
+        if (template.slug == "matutinum") {
+            val key = "%04d-%02d-%02d".format(date.year, date.monthValue, date.dayOfMonth)
+            officeLessons().days[rite.rawValue]?.get(key)?.let { assembled = applyDoLessons(assembled, it) }
+        }
         // The Te Deum stands in place of the last responsory: DO adds no
         // responsory to the lesson the Te Deum follows (any book, 1 or 3 nocturns).
         if (template.slug == "matutinum") {
@@ -1561,7 +1581,7 @@ object ContentStore {
         // — after the commemorations and every other layer, before the Spanish.
         assembled = assembled.copy(parts = OfficeFrame.apply(assembled.parts, OfficeFrame.Ctx(template.slug, rite, ctx.dayOfWeek, resolution?.office,
             resolution?.lessons ?: 3, resolution?.nocturns ?: 1, resolution?.special != null, template)))
-        return applyOfficeSpanish(assembled)
+        return stripNameMarks(applyOfficeSpanish(assembled))
     }
 
     /** The rubrics engine's Spanish lookups: the templated collects and
@@ -1713,6 +1733,63 @@ object ContentStore {
         if ("oratio" in data) return true
         return OfficeAssembler.precedingSundayKey(key)
             ?.let { officeAssembler.temporalPropers[it]?.containsKey("oratio") } == true
+    }
+
+    private val NAME_MARK = Regex("!?(\\s)r\\. N\\.")
+
+    /**
+     * Divinum Officium writes a name to be supplied as "r. N." (its marker
+     * for a red N.); the hours print it as plain "N." ("Pontífice nostro
+     * N.", "blessed N. and all the Saints"). Last of all, so the Spanish
+     * overlay still finds the texts by their Latin as DO has it.
+     */
+    private fun stripNameMarks(hour: Hour): Hour {
+        fun f(t: String?): String? = if (t != null && t.contains("r. N.")) NAME_MARK.replace(t, "$1N.") else t
+        if (hour.parts.none { p -> listOf(p.lat, p.eng, p.latR, p.engR).any { it?.contains("r. N.") == true } }) return hour
+        return hour.copy(parts = hour.parts.map { p -> p.copy(lat = f(p.lat), eng = f(p.eng), latR = f(p.latR), engR = f(p.engR)) })
+    }
+
+    private val LESSON_SLOT = Regex("^(lectio|responsory)([1-9])$")
+
+    /**
+     * Sets every lesson and responsory slot of Matins from [row] (one
+     * `[lesson, responsory]` pair of indexes into the lesson texts per
+     * lesson, as DO numbers them). A responsory DO does not print (-1: the
+     * Te Deum follows) is dropped; one it prints where the hour has no slot
+     * (Tenebrae, whose template keeps only each nocturn's last) is added
+     * after its lesson; a slot DO has no lesson for is left as the layering
+     * made it. In Spanish the vernacular side is DO's Spanish
+     * where it has one (the Spanish overlay still overrides by Latin key).
+     */
+    private fun applyDoLessons(hour: Hour, row: List<List<Int>>): Hour {
+        val texts = officeLessons().texts
+        val es = if (appliedVernacular == VernacularLanguage.SPANISH) officeLessonsES() else null
+        fun ver(i: Int): String = es?.getOrNull(i) ?: texts[i].eng
+        val parts = hour.parts.mapNotNull { p ->
+            val m = p.variationKey?.let { LESSON_SLOT.matchEntire(it) } ?: return@mapNotNull p
+            val pair = row.getOrNull(m.groupValues[2].toInt() - 1) ?: return@mapNotNull p
+            val lesson = m.groupValues[1] == "lectio"
+            val i = if (lesson) pair[0] else pair[1]
+            // -1: DO prints no responsory here (dropped), or has no text for the lesson (kept as layered)
+            if (i < 0) return@mapNotNull if (lesson) p else null
+            val t = texts.getOrNull(i) ?: return@mapNotNull p
+            p.copy(
+                lat = t.lat, eng = ver(i), ref = t.ref,
+                latR = null, engR = null, v1Lat = null, v1Eng = null, r1Lat = null, r1Eng = null,
+                v2Lat = null, v2Eng = null, r2Lat = null, r2Eng = null, verses = null,
+            )
+        }.toMutableList()
+        val label = parts.firstOrNull { it.type == "responsory" }?.label ?: "Responsorium"
+        for ((k, pair) in row.withIndex()) {
+            val i = pair.getOrNull(1) ?: continue
+            val t = texts.getOrNull(i) ?: continue
+            if (parts.any { it.variationKey == "responsory${k + 1}" }) continue
+            var at = parts.indexOfFirst { it.variationKey == "lectio${k + 1}" }
+            if (at < 0) continue
+            if (parts.getOrNull(at + 1)?.let { it.type == "vr" && (it.lat ?: "").contains("Tu autem") } == true) at++
+            parts.add(at + 1, Hour.Part(type = "responsory", label = label, variationKey = "responsory${k + 1}", lat = t.lat, eng = ver(i)))
+        }
+        return hour.copy(parts = parts)
     }
 
     /** The office whose propers layer the hour: a saint (key of sanctoral_propers) or a temporal key. */
@@ -1912,3 +1989,18 @@ object ContentStore {
 }
 
 // Model types now live in data.model.* — no more placeholders needed.
+
+/** One lesson or responsory of Matins as Divinum Officium prints it (office_lessons.json). */
+@Serializable
+data class OfficeLessonText(val lat: String, val eng: String, val ref: String? = null)
+
+/**
+ * DO's Matins lessons: per rite and date, one `[lesson, responsory]` pair of
+ * indexes into [texts] for each lesson (responsory -1: none is said).
+ * Built by scripts/office_qa/build_office_lessons.py.
+ */
+@Serializable
+data class OfficeLessons(
+    val texts: List<OfficeLessonText> = emptyList(),
+    val days: Map<String, Map<String, List<List<Int>>>> = emptyMap(),
+)
