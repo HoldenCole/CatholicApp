@@ -35,6 +35,7 @@ DO alone:
 
 | File | Content | Source |
 |---|---|---|
+| `prayers_fr.json` | The prayer library: 90 prayers, 1,281 lines | 774 lines in DO's or the Ordinary's wording; 214 in the received form checked against public-domain prints on archive.org (the 1919 *Manuel des congrégations de la Très Sainte Vierge* for the approved litanies, a 1913 *Nouveau paroissien romain*, the 1865 *Lettres* of St Francis de Sales, *Histoire d'une âme* for St Thérèse's own words); 80 in the received form from memory, not yet checked against a print (Souvenez-vous, Âme du Christ, the Fatima prayer, the litany of the Precious Blood…); 213 translated by hand from the Latin where no received French exists (the litanies of Humility, the Holy Ghost, the Blessed Sacrament and the Faithful Departed, the app's own morning and night prayers, the saints' prayers from other languages) |
 | `rosary_prayers_fr.json` | The prayers of the Rosary | The received traditional forms ("vous"); Credo, Pater and Ave as DO prints them |
 | `mysteries_fr.json` | The fifteen mysteries | Customary names and fruits; the app's own short meditations translated by hand, Gospel quotations in Crampon's wording |
 | `stations_fr.json` | The Stations of the Cross | Customary titles; meditations translated by hand; the Stabat Mater stanzas are DO's |
@@ -85,8 +86,8 @@ site with the same name as this app.
 
 ## Not yet in French (hand translation, later tranches)
 
-The UI strings, the prayer library, the saints' and reference pages, the
-courses, the Martyrology (DO has a
+The UI strings, the saints' and reference pages, the courses, the
+Martyrology (DO has a
 French Martyrology; aligning it entry by entry is its own job, as it was
 for Spanish), the 159 calendar titles and 8 lessons listed in the
 `*_missing_fr.json` files, and the Mass fields DO's French lacks (226

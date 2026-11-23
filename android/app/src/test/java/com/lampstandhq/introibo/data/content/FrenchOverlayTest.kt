@@ -78,6 +78,9 @@ class FrenchOverlayTest {
         assertEquals("Mystères joyeux", ContentStore.mysterySets.first { it.slug == "joyful" }.english)
         assertEquals("Jésus est condamné à mort", ContentStore.stations.first().title)
         assertEquals("Matines", ContentStore.hours.first { it.slug == "matutinum" }.eng)
+        val pater = ContentStore.prayers.first { it.slug == "pater" }
+        assertTrue(pater.lines.first().eng, pater.lines.first().eng.startsWith("Notre Père, qui êtes aux cieux"))
+        assertTrue(pater.lines.first().lat, pater.lines.first().lat.startsWith("Pater noster"))
     }
 
     @Test

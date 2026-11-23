@@ -145,7 +145,7 @@ class AssetsDecodeTest {
         check("missal_readings_fr.json", { decode<Map<String, Map<String, String>>>("missal_readings_fr.json") }) { it.size > 500 }
         check("missal_fr.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("missal_fr.json") }) { it.size == 47 }
         check("canon_variants_fr.json", { decode<Map<String, Map<String, Map<String, String>>>>("canon_variants_fr.json") }) { it.isNotEmpty() }
-        for (name in listOf("rosary_prayers_fr.json", "mysteries_fr.json", "stations_fr.json", "confession_examen_fr.json",
+        for (name in listOf("prayers_fr.json", "rosary_prayers_fr.json", "mysteries_fr.json", "stations_fr.json", "confession_examen_fr.json",
             "confession_guides_fr.json", "daily_psalm_fr.json", "hours_fr.json")) {
             check(name, { decode<Map<String, kotlinx.serialization.json.JsonObject>>(name) }) { it.isNotEmpty() }
         }
