@@ -1,0 +1,47 @@
+{
+  "matutinum": {
+    "name_fr": "Matines",
+    "time_fr": "à minuit",
+    "intro_fr": "L’Office de la nuit, récité dans les heures obscures avant l’aube. La plus longue et la plus ancienne des heures, avec trois nocturnes de psaumes, de leçons et de répons. Psautier du dimanche."
+  },
+  "laudes": {
+    "name_fr": "Laudes",
+    "time_fr": "à l’aurore",
+    "intro_fr": "La louange du matin, aux premières lueurs du jour. L’Église salue le jour nouveau par le Benedictus de Zacharie et le cantique Benedicite. Psautier du dimanche."
+  },
+  "prima": {
+    "name_fr": "Prime",
+    "time_fr": "à la première heure",
+    "intro_fr": "La première heure du jour, qui sanctifie le travail de la journée. Des psaumes et un capitule, puis l’Office du chapitre : le Martyrologe du lendemain, le Pretiósa et la bénédiction pour les travaux du jour."
+  },
+  "tertia": {
+    "name_fr": "Tierce",
+    "time_fr": "à la troisième heure",
+    "intro_fr": "La troisième heure, celle où le Saint-Esprit descendit à la Pentecôte. La psalmodie du psaume 118 se poursuit à travers les Petites Heures."
+  },
+  "sexta": {
+    "name_fr": "Sexte",
+    "time_fr": "à midi",
+    "intro_fr": "La sixième heure : midi. À cette heure, Notre-Seigneur fut cloué à la Croix. Une pause dans la journée pour se souvenir de son sacrifice."
+  },
+  "nona": {
+    "name_fr": "None",
+    "time_fr": "à la neuvième heure",
+    "intro_fr": "La neuvième heure : trois heures de l’après-midi. À cette heure, Notre-Seigneur mourut sur la Croix."
+  },
+  "vesperae": {
+    "name_fr": "Vêpres",
+    "time_fr": "au coucher du soleil",
+    "intro_fr": "L’heure du soir, où l’on allume les lampes. La seconde grande heure-charnière du jour, couronnée par le Magnificat de Notre-Dame. Psautier du dimanche."
+  },
+  "completorium": {
+    "name_fr": "Complies",
+    "time_fr": "avant le sommeil",
+    "intro_fr": "La prière de la nuit et la dernière parole de l’Église avant le sommeil. Elle s’ouvre par le Confiteor, passe par la psalmodie et s’achève par le Nunc dimittis et l’antienne mariale. Les mêmes psaumes sont récités chaque soir."
+  },
+  "office-of-the-dead": {
+    "name_fr": "Office des Défunts",
+    "time_fr": "Commémoraison des fidèles défunts, anniversaires, funérailles",
+    "intro_fr": "L’Office pour les fidèles défunts (Officium Defunctorum). Récité à la Commémoraison de tous les fidèles défunts, aux anniversaires de décès et aux funérailles. Il comprend Matines (trois nocturnes avec neuf leçons tirées de Job et les grands répons), Laudes et Vêpres. Le Gloria Patri y est partout remplacé par Réquiem ætérnam."
+  }
+}

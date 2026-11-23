@@ -71,6 +71,16 @@ class FrenchOverlayTest {
     }
 
     @Test
+    fun theRosaryAndTheStationsAreInFrench() {
+        french()
+        val ave = ContentStore.rosaryPrayers.first { it.slug == "ave" }
+        assertTrue(ave.lines.first().eng, ave.lines.first().eng.startsWith("Je vous salue, Marie"))
+        assertEquals("Mystères joyeux", ContentStore.mysterySets.first { it.slug == "joyful" }.english)
+        assertEquals("Jésus est condamné à mort", ContentStore.stations.first().title)
+        assertEquals("Matines", ContentStore.hours.first { it.slug == "matutinum" }.eng)
+    }
+
+    @Test
     fun theCalendarNamesTheDayInFrench() {
         french()
         val name = ContentStore.ordoNameEnglish("Dominica I Adventus")!!
@@ -82,10 +92,10 @@ class FrenchOverlayTest {
         ContentStore.initFromDirectory(assets)
         ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
         val english = ContentStore.properForDate(adventSunday, MissalRite.RITE_1962)!!.collect!!.eng
-        val prayer = ContentStore.prayers.first().lines.first().eng
+        val saint = ContentStore.saints.first().title
         ContentStore.applyVernacular(VernacularLanguage.FRENCH)
-        // no French prayer library yet: the English stays
-        assertEquals(prayer, ContentStore.prayers.first().lines.first().eng)
+        // no French saints' pages yet: the English stays
+        assertEquals(saint, ContentStore.saints.first().title)
         assertNotEquals(english, ContentStore.properForDate(adventSunday, MissalRite.RITE_1962)!!.collect!!.eng)
         ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
         assertEquals(english, ContentStore.properForDate(adventSunday, MissalRite.RITE_1962)!!.collect!!.eng)

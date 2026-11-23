@@ -1,0 +1,98 @@
+{
+  "I": {
+    "commandment_fr": "Un seul Dieu tu adoreras et aimeras parfaitement",
+    "questions_fr": [
+      "Ai-je douté des vérités de la foi, ou les ai-je niées ?",
+      "Ai-je mis ma confiance dans la superstition, la divination ou l’occultisme ?",
+      "Ai-je reçu la sainte Communion en état de péché mortel ?",
+      "Ai-je négligé mes prières quotidiennes ?",
+      "Ai-je été ingrat envers Dieu pour ses bienfaits ?"
+    ]
+  },
+  "II": {
+    "commandment_fr": "Dieu en vain tu ne jureras, ni autre chose pareillement",
+    "questions_fr": [
+      "Ai-je employé le nom de Dieu avec irrévérence ou dans la colère ?",
+      "Ai-je proféré des malédictions ou tenu un langage profane ?",
+      "Ai-je rompu un vœu ou un serment fait à Dieu ?",
+      "Ai-je prononcé le nom de Dieu à la légère dans la conversation ?",
+      "Ai-je manqué à une promesse solennelle ou à un vœu ?"
+    ]
+  },
+  "III": {
+    "commandment_fr": "Les dimanches tu garderas, en servant Dieu dévotement",
+    "questions_fr": [
+      "Ai-je manqué la Messe le dimanche ou les fêtes d’obligation sans motif légitime ?",
+      "Ai-je fait sans nécessité des œuvres serviles le dimanche ?",
+      "Ai-je été distrait ou irrévérencieux à la Messe ?",
+      "Ai-je omis d’observer les fêtes d’obligation ?"
+    ]
+  },
+  "IV": {
+    "commandment_fr": "Tes père et mère honoreras, afin de vivre longuement",
+    "questions_fr": [
+      "Ai-je désobéi à mes parents ou leur ai-je manqué de respect ?",
+      "Ai-je négligé mes devoirs envers ma famille ?",
+      "Ai-je négligé de prendre soin de mes parents âgés ou infirmes ?",
+      "Ai-je manqué de pardonner à un membre de ma famille ?"
+    ]
+  },
+  "V": {
+    "commandment_fr": "Homicide point ne seras, de fait ni volontairement",
+    "questions_fr": [
+      "Ai-je nourri de la haine, de la colère ou du ressentiment envers quelqu’un ?",
+      "Ai-je refusé de pardonner ?",
+      "Ai-je fait du tort à autrui par mes paroles ou par mes actes ?",
+      "Ai-je donné le scandale ou porté d’autres au péché ?"
+    ]
+  },
+  "VI": {
+    "commandment_fr": "Luxurieux point ne seras, de corps ni de consentement",
+    "questions_fr": [
+      "Ai-je entretenu volontairement des pensées impures ?",
+      "Ai-je commis des actes impurs, seul ou avec d’autres ?",
+      "Ai-je été infidèle à mon état de vie ?",
+      "Ai-je négligé de garder mes yeux des images impures ?",
+      "Ai-je fréquenté des compagnies qui sont une occasion de péché contre la pureté ?"
+    ]
+  },
+  "VII": {
+    "commandment_fr": "Le bien d’autrui tu ne prendras, ni retiendras à ton escient",
+    "questions_fr": [
+      "Ai-je pris ce qui ne m’appartient pas ?",
+      "Ai-je endommagé le bien d’autrui ?",
+      "Ai-je négligé de restituer ce que j’ai volé ?",
+      "Ai-je été malhonnête en affaires ?",
+      "Ai-je gaspillé ce que Dieu m’a donné ?"
+    ]
+  },
+  "VIII": {
+    "commandment_fr": "Faux témoignage ne diras, ni mentiras aucunement",
+    "questions_fr": [
+      "Ai-je menti ou trompé autrui ?",
+      "Me suis-je livré aux commérages, à la médisance ou à la calomnie ?",
+      "Ai-je jugé autrui témérairement ?",
+      "Ai-je négligé de défendre la bonne réputation de quelqu’un quand je le pouvais ?"
+    ]
+  },
+  "IX": {
+    "commandment_fr": "L’œuvre de chair ne désireras qu’en mariage seulement",
+    "questions_fr": [
+      "Ai-je entretenu volontairement des désirs impurs envers une autre personne ?",
+      "Ai-je négligé de garder mes yeux, mon imagination ou mes lectures ?",
+      "Ai-je entretenu délibérément des pensées impures ?",
+      "Ai-je tardé à repousser les tentations contre la pureté ?",
+      "Me suis-je exposé à des occasions de péché contre ce commandement ?"
+    ]
+  },
+  "X": {
+    "commandment_fr": "Biens d’autrui ne convoiteras, pour les avoir injustement",
+    "questions_fr": [
+      "Ai-je envié ce que les autres possèdent ?",
+      "Ai-je été cupide ou excessivement attaché aux biens matériels ?",
+      "Ai-je envié le succès ou la bonne fortune d’autrui ?",
+      "Ai-je été mécontent de mon état de vie ?",
+      "Ai-je négligé de pratiquer la générosité et l’aumône ?"
+    ]
+  }
+}

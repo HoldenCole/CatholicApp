@@ -30,6 +30,18 @@ matched to the app's data by its Latin. Nothing was machine-translated.
 | `office_names_fr.json` | Saints' names for the "N." of the common collects | every name DO carries |
 | `office_doxologies.json` (`fr` field, in the asset folders) | The seasonal hymn doxologies | 6 of 7 |
 
+A second tranche comes from the received French prayers rather than from
+DO alone:
+
+| File | Content | Source |
+|---|---|---|
+| `rosary_prayers_fr.json` | The prayers of the Rosary | The received traditional forms ("vous"); Credo, Pater and Ave as DO prints them |
+| `mysteries_fr.json` | The fifteen mysteries | Customary names and fruits; the app's own short meditations translated by hand, Gospel quotations in Crampon's wording |
+| `stations_fr.json` | The Stations of the Cross | Customary titles; meditations translated by hand; the Stabat Mater stanzas are DO's |
+| `confession_examen_fr.json`, `confession_guides_fr.json` | Examination of conscience and guides | Commandments in the old catechism formulas, the received Act of Contrition; the questions and steps translated by hand |
+| `daily_psalm_fr.json` | The daily psalm verse | Fillion's psalter (`psalter_fr.json`), verbatim |
+| `hours_fr.json` | Hour names, times and introductions | Customary names; introductions translated by hand |
+
 Working files that are **not** bundled: `office_texts_fixes_fr.json` (hand
 corrections and the few texts whose wording in the app differs from DO's,
 applied last by the builder), `office_lessons_missing_fr.json` and
@@ -73,9 +85,8 @@ site with the same name as this app.
 
 ## Not yet in French (hand translation, later tranches)
 
-The UI strings, the prayer library, the Rosary, the Stations, the
-examination of conscience and confession guides, the saints' and reference
-pages, the courses, the hour introductions, the Martyrology (DO has a
+The UI strings, the prayer library, the saints' and reference pages, the
+courses, the Martyrology (DO has a
 French Martyrology; aligning it entry by entry is its own job, as it was
 for Spanish), the 159 calendar titles and 8 lessons listed in the
 `*_missing_fr.json` files, and the Mass fields DO's French lacks (226

@@ -1,0 +1,44 @@
+{
+ "ave": {
+  "eng_fr": "Je vous salue, Marie",
+  "lines_fr": [
+   "Je vous salue, Marie, pleine de grâce, le Seigneur est avec vous ; vous êtes bénie entre toutes les femmes, et Jésus, le fruit de vos entrailles, est béni. Sainte Marie, Mère de Dieu, priez pour nous, pauvres pécheurs, maintenant et à l’heure de notre mort. Ainsi soit-il."
+  ]
+ },
+ "credo": {
+  "eng_fr": "Symbole des Apôtres",
+  "lines_fr": [
+   "Je crois en Dieu, le Père tout-puissant, Créateur du ciel et de la terre. Et en Jésus-Christ, son Fils unique, notre Seigneur, qui a été conçu du Saint-Esprit, est né de la Vierge Marie, a souffert sous Ponce Pilate, a été crucifié, est mort, a été enseveli, est descendu aux enfers, le troisième jour est ressuscité des morts, est monté aux cieux, est assis à la droite de Dieu le Père tout-puissant, d’où il viendra juger les vivants et les morts. Je crois au Saint-Esprit, à la sainte Église catholique, à la communion des Saints, à la rémission des péchés, à la résurrection de la chair, à la vie éternelle. Ainsi soit-il."
+  ]
+ },
+ "fatima": {
+  "eng_fr": "Prière de Fatima",
+  "lines_fr": [
+   "Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l’enfer, et conduisez au ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde."
+  ]
+ },
+ "gloria": {
+  "eng_fr": "Gloire au Père",
+  "lines_fr": [
+   "Gloire au Père, et au Fils, et au Saint-Esprit. Comme il était au commencement, maintenant et toujours, et dans les siècles des siècles. Ainsi soit-il."
+  ]
+ },
+ "pater": {
+  "eng_fr": "Notre Père",
+  "lines_fr": [
+   "Notre Père, qui êtes aux cieux, que votre nom soit sanctifié, que votre règne arrive, que votre volonté soit faite sur la terre comme au ciel. Donnez-nous aujourd’hui notre pain quotidien. Pardonnez-nous nos offenses, comme nous pardonnons à ceux qui nous ont offensés. Et ne nous laissez pas succomber à la tentation, mais délivrez-nous du mal. Ainsi soit-il."
+  ]
+ },
+ "salve": {
+  "eng_fr": "Salut, ô Reine",
+  "lines_fr": [
+   "Salut, ô Reine, Mère de Miséricorde ! Notre vie, notre douceur, notre espoir, salut ! Vers vous, nous crions dans notre exil, fils d’Ève. Vers vous nous soupirons, gémissant et pleurant, dans cette vallée de larmes. Ô vous donc, notre avocate, tournez vers nous vos yeux compatissants. Et Jésus, le fruit béni de vos entrailles, après notre exil, montrez-le-nous. Ô clémente, ô bonne, ô douce Vierge Marie."
+  ]
+ },
+ "signum": {
+  "eng_fr": "Signe de la Croix",
+  "lines_fr": [
+   "Au nom du Père, et du Fils, et du Saint-Esprit. Ainsi soit-il."
+  ]
+ }
+}

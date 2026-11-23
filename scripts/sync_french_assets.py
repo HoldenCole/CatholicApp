@@ -67,6 +67,23 @@ def check(name, data):
             for k in v:
                 if not ((data.get(g) or {}).get(k) or {}).get("eng_fr"):
                     errs.append(f"{g}.{k}: missing")
+    elif name == "rosary_prayers_fr.json":
+        src = {p["slug"]: p for p in load(ASSETS / "rosary_prayers.json")}
+        for k, v in data.items():
+            if k not in src or len(v["lines_fr"]) != len(src[k]["lines"]):
+                errs.append(f"{k}: lines differ from the source")
+    elif name in ("confession_examen_fr.json", "confession_guides_fr.json", "mysteries_fr.json",
+                  "stations_fr.json", "hours_fr.json", "daily_psalm_fr.json"):
+        # the same shape as the Spanish overlay, which the Spanish validator ties to the source
+        es = load(ROOT / "spanish-translation" / name.replace("_fr.json", "_es.json"))
+        def shape(x):
+            if isinstance(x, dict):
+                return {(k[:-3] + "_fr" if k.endswith("_es") else k.replace("_es_", "_fr_")): shape(v) for k, v in x.items()}
+            if isinstance(x, list):
+                return [shape(v) for v in x]
+            return "text" if isinstance(x, str) else type(x).__name__
+        if shape(es) != shape(data):
+            errs.append("shape differs from the Spanish overlay")
     elif name == "prayers_fr.json":
         src = {p["slug"]: p for p in load(ASSETS / "prayers.json")}
         for k, v in data.items():

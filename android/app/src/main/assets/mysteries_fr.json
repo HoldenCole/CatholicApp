@@ -1,0 +1,92 @@
+{
+ "glorious": {
+  "english_fr": "Mystères glorieux",
+  "mysteries": [
+   {
+    "body_fr": "Le troisième jour, Jésus ressuscite d’entre les morts, vainqueur du péché et de la mort. Au tombeau, les femmes sont accueillies par un ange : « Il n’est point ici, il est ressuscité. »",
+    "eng_fr": "La Résurrection",
+    "fruit_fr": "La foi"
+   },
+   {
+    "body_fr": "Quarante jours après sa Résurrection, Jésus monte au Ciel à la vue de ses Apôtres, en promettant d’envoyer le Saint-Esprit.",
+    "eng_fr": "L’Ascension",
+    "fruit_fr": "L’espérance"
+   },
+   {
+    "body_fr": "Le jour de la Pentecôte, le Saint-Esprit descend sur les Apôtres sous la forme de langues de feu. L’Église est née.",
+    "eng_fr": "La Pentecôte",
+    "fruit_fr": "L’amour de Dieu"
+   },
+   {
+    "body_fr": "La Bienheureuse Vierge Marie, au terme de sa vie terrestre, est élevée au Ciel en corps et en âme.",
+    "eng_fr": "L’Assomption",
+    "fruit_fr": "La grâce d’une bonne mort"
+   },
+   {
+    "body_fr": "Marie est couronnée Reine du Ciel et de la terre par son divin Fils ; elle règne dans la gloire et intercède pour tous les hommes.",
+    "eng_fr": "Le Couronnement de la Sainte Vierge",
+    "fruit_fr": "La confiance en Marie"
+   }
+  ]
+ },
+ "joyful": {
+  "english_fr": "Mystères joyeux",
+  "mysteries": [
+   {
+    "body_fr": "L’Archange Gabriel annonce à la Vierge Marie qu’elle concevra et enfantera le Fils de Dieu. Elle répond : « Voici la servante du Seigneur. »",
+    "eng_fr": "L’Annonciation",
+    "fruit_fr": "L’humilité"
+   },
+   {
+    "body_fr": "Marie visite sa cousine Élisabeth, qui la salue : « Vous êtes bénie entre les femmes. » Marie répond par le Magnificat.",
+    "eng_fr": "La Visitation",
+    "fruit_fr": "La charité fraternelle"
+   },
+   {
+    "body_fr": "Jésus naît dans une étable à Bethléem. Les bergers viennent l’adorer ; les anges chantent « Gloria in excelsis Deo ».",
+    "eng_fr": "La Nativité",
+    "fruit_fr": "L’esprit de pauvreté"
+   },
+   {
+    "body_fr": "Marie et Joseph présentent l’Enfant Jésus au Temple. Siméon reconnaît en lui le Messie et prophétise le glaive qui transpercera le cœur de Marie.",
+    "eng_fr": "La Présentation de Jésus au Temple",
+    "fruit_fr": "L’obéissance"
+   },
+   {
+    "body_fr": "Après trois jours de recherche angoissée, Marie et Joseph retrouvent Jésus, âgé de douze ans, dans le Temple, enseignant les docteurs.",
+    "eng_fr": "Le Recouvrement de Jésus au Temple",
+    "fruit_fr": "La piété"
+   }
+  ]
+ },
+ "sorrowful": {
+  "english_fr": "Mystères douloureux",
+  "mysteries": [
+   {
+    "body_fr": "Jésus tombe prosterné en prière au jardin de Gethsémani, connaissant tout le poids des souffrances qui l’attendent. Sa sueur devient comme des gouttes de sang qui tombent jusqu’à terre.",
+    "eng_fr": "L’Agonie de Jésus au Jardin des Oliviers",
+    "fruit_fr": "La contrition de nos péchés"
+   },
+   {
+    "body_fr": "Jésus est attaché à une colonne et flagellé par les soldats romains. Sa chair innocente est déchirée pour nos péchés de la chair.",
+    "eng_fr": "La Flagellation",
+    "fruit_fr": "La pureté"
+   },
+   {
+    "body_fr": "Une couronne d’épines est enfoncée sur la tête de Jésus, et les soldats le tournent en dérision comme roi des Juifs. Il supporte l’humiliation en silence.",
+    "eng_fr": "Le Couronnement d’épines",
+    "fruit_fr": "Le courage moral"
+   },
+   {
+    "body_fr": "Jésus porte sa Croix sur le chemin du Calvaire ; il tombe sous son poids et rencontre en chemin sa très sainte Mère.",
+    "eng_fr": "Le Portement de la Croix",
+    "fruit_fr": "La patience dans les souffrances"
+   },
+   {
+    "body_fr": "Jésus est cloué à la Croix et meurt après trois heures d’agonie. Ses dernières paroles : « Père, je remets mon esprit entre vos mains. »",
+    "eng_fr": "Le Crucifiement",
+    "fruit_fr": "La persévérance"
+   }
+  ]
+ }
+}

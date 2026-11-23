@@ -145,6 +145,10 @@ class AssetsDecodeTest {
         check("missal_readings_fr.json", { decode<Map<String, Map<String, String>>>("missal_readings_fr.json") }) { it.size > 500 }
         check("missal_fr.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("missal_fr.json") }) { it.size == 47 }
         check("canon_variants_fr.json", { decode<Map<String, Map<String, Map<String, String>>>>("canon_variants_fr.json") }) { it.isNotEmpty() }
+        for (name in listOf("rosary_prayers_fr.json", "mysteries_fr.json", "stations_fr.json", "confession_examen_fr.json",
+            "confession_guides_fr.json", "daily_psalm_fr.json", "hours_fr.json")) {
+            check(name, { decode<Map<String, kotlinx.serialization.json.JsonObject>>(name) }) { it.isNotEmpty() }
+        }
         check("marian_antiphons_fr.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("marian_antiphons_fr.json") }) { it.size == 4 }
         // Divinum Officium's rubrics data (scripts/office_qa/build_office_psalterium.py).
         check("office_rules.json", { decode<Map<String, Map<String, OfficeRule>>>("office_rules.json") }) { it.keys.containsAll(listOf("1962", "1955", "pre1955")) && it.values.all { m -> m.isNotEmpty() } }
