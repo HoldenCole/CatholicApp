@@ -61,6 +61,15 @@ files). Text the code still hard-codes in English, and plural or
 word-order assumptions French cannot satisfy from a data file, are listed
 in the commit that added it.
 
+`reference_fr.json`, `saints_fr.json` and `courses_fr.json` are the
+learning pages, translated by hand from the English: the 42 reference
+articles (Scripture quoted in the Crampon and Fillion wording the app
+already carries), the 7 saints' pages (prayers reused from
+`prayers_fr.json`), and the 10 Latin lessons, rewritten for a French
+reader as the Spanish ones were for a Spanish one — comparisons with
+French sounds and words, and every pronunciation respelled for French
+spelling ("DO-mi-nous", "PA-tèr").
+
 Working files that are **not** bundled: `office_texts_fixes_fr.json` (hand
 corrections and the few texts whose wording in the app differs from DO's,
 applied last by the builder), `office_lessons_missing_fr.json` and
@@ -104,7 +113,7 @@ site with the same name as this app.
 
 ## Not yet in French (hand translation, later tranches)
 
-The saints' and reference pages, the courses, the 159 calendar titles and 8 lessons listed in the
+The 159 calendar titles and 8 lessons listed in the
 `*_missing_fr.json` files, and the Mass fields DO's French lacks (226
 distinct lines; run `import_french.py --report`).
 

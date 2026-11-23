@@ -1,0 +1,308 @@
+{
+ "pio": {
+  "name_fr": "Saint Padre Pio",
+  "title_fr": "Mystique, stigmatisé, confesseur",
+  "quote_fr": "Priez, espérez et ne vous inquiétez pas. L’inquiétude ne sert à rien. Dieu est miséricordieux et il écoutera votre prière.",
+  "sections_fr": [
+   {
+    "eng_fr": "Matin",
+    "practices_fr": [
+     {"t_fr": "Offrande de la journée", "d_fr": "Dès le réveil, offrez aussitôt votre journée à Dieu. « Seigneur, je vous offre toutes mes prières, mes œuvres, mes joies et mes souffrances de ce jour. »"},
+     {"t_fr": "Assister à la sainte Messe", "d_fr": "La Messe de Padre Pio était le centre de sa vie ; elle durait souvent deux heures. Assistez à la Messe chaque jour si vous le pouvez."},
+     {"t_fr": "Oraison mentale (30 min)", "d_fr": "Consacrez trente minutes à l’oraison mentale, en silence, devant le Saint-Sacrement. Padre Pio passait des heures en contemplation ; trente minutes suffisent déjà pour suivre son esprit."}
+    ]
+   },
+   {
+    "eng_fr": "Au long du jour",
+    "practices_fr": [
+     {"t_fr": "Réciter le Rosaire en entier", "d_fr": "Padre Pio l’appelait « l’arme ». Récitez-en au moins cinq dizaines chaque jour."},
+     {"t_fr": "Lecture spirituelle", "d_fr": "Lisez pendant quinze minutes l’Imitation de Jésus-Christ, la vie des saints ou saint Jean de la Croix."},
+     {"t_fr": "Visite au Saint-Sacrement", "d_fr": "Faites dans la journée une visite au Saint-Sacrement, même brève. Padre Pio disait que Jésus, au tabernacle, nous attend avec une patience et un amour infinis."}
+    ]
+   },
+   {
+    "eng_fr": "Soir",
+    "practices_fr": [
+     {"t_fr": "Examen de conscience", "d_fr": "Avant de dormir, examinez votre conscience avec sincérité. Demandez à Dieu de vous montrer en quoi vous avez manqué à la charité, à la patience et à la fidélité à vos devoirs d’état."},
+     {"t_fr": "Dire trois Je vous salue Marie", "d_fr": "Avant de dormir, dites trois Je vous salue Marie pour obtenir la grâce de la pureté, en invoquant la protection de Notre-Dame pour la nuit."},
+     {"t_fr": "Lecture spirituelle (15 min)", "d_fr": "Lisez la vie des saints ou l’Imitation de Jésus-Christ, comme Padre Pio le recommandait à ses enfants spirituels."}
+    ]
+   }
+  ],
+  "penance_fr": "Offrez aujourd’hui une souffrance physique sans vous plaindre, en l’unissant à la Passion du Christ.",
+  "prayers_fr": [
+   {
+    "title_fr": "Prière après la sainte Communion",
+    "eng_fr": "Restez avec nous, Seigneur, car le soir tombe. Restez avec nous, et soyez notre consolation. Restez avec nous, ô Soleil qui ne connaissez pas de couchant.",
+    "note_fr": "Adaptée de la prière de saint Pio de Pietrelcina après la sainte Communion ; à dire après avoir reçu la sainte Communion."
+   },
+   {
+    "title_fr": "Prière aux cinq plaies",
+    "eng_fr": "Ô Seigneur Jésus-Christ, qui avez voulu que vos mains et vos pieds très sacrés fussent percés de clous : accordez-moi de vous aimer de toutes mes forces, et de trouver dans vos plaies mon refuge et ma paix. Ainsi soit-il.",
+    "note_fr": "Padre Pio porta les stigmates pendant 50 ans."
+   }
+  ]
+ },
+ "therese": {
+  "name_fr": "Sainte Thérèse de Lisieux",
+  "title_fr": "Docteur de l’Église · La Petite Fleur",
+  "quote_fr": "Je n’ai d’autre moyen de te prouver mon amour, que de jeter des fleurs, c’est-à-dire de ne laisser échapper aucun petit sacrifice, aucun regard, aucune parole, de profiter de toutes les plus petites choses et de les faire par amour.",
+  "sections_fr": [
+   {
+    "eng_fr": "Matin",
+    "practices_fr": [
+     {"t_fr": "Offrande de la journée à l’Amour", "d_fr": "Offrez votre journée à Jésus comme un « petit sacrifice d’amour ». Aspirez à lui plaire dans chaque petite chose."},
+     {"t_fr": "Assister à la Messe", "d_fr": "Recevez la sainte Communion avec un abandon total et une confiance d’enfant."},
+     {"t_fr": "Réciter l’Angélus", "d_fr": "Rappelez-vous le mystère de l’Incarnation trois fois par jour : le matin, à midi et le soir."}
+    ]
+   },
+   {
+    "eng_fr": "Au long du jour",
+    "practices_fr": [
+     {"t_fr": "Faire de petites choses avec un grand amour", "d_fr": "Recherchez de tout petits actes de bonté : un regard souriant, une parole aimable, un désagrément supporté de bon cœur."},
+     {"t_fr": "Accepter chaque croix", "d_fr": "Recevez chaque petite contrariété comme un don de Dieu. Ne vous plaignez jamais."},
+     {"t_fr": "Sacrifice intérieur silencieux", "d_fr": "Faites des sacrifices cachés, connus de Dieu seul. Ne cherchez pas à être remarqué."}
+    ]
+   },
+   {
+    "eng_fr": "Soir",
+    "practices_fr": [
+     {"t_fr": "Acte d’abandon", "d_fr": "Avant de dormir, abandonnez-vous entre les bras miséricordieux de notre Père du Ciel, comme un petit enfant."},
+     {"t_fr": "Repasser les petits sacrifices du jour", "d_fr": "Avant de vous coucher, rappelez-vous les petits sacrifices cachés que vous avez offerts au long de la journée. Remerciez Dieu pour chacun d’eux, si petit soit-il."},
+     {"t_fr": "Prière à la Sainte Face", "d_fr": "Priez devant un crucifix ou une image de la Sainte Face, en offrant réparation pour les péchés contre la foi et pour la profanation du dimanche."}
+    ]
+   }
+  ],
+  "penance_fr": "Faites un petit sacrifice caché que personne ne remarquera, et offrez-le à Jésus comme une fleur.",
+  "prayers_fr": [
+   {
+    "title_fr": "Acte d’offrande à l’Amour miséricordieux",
+    "eng_fr": "Ô mon Dieu, Trinité bienheureuse, je désire vous aimer et vous faire aimer, travailler à la glorification de la sainte Église, en sauvant les âmes qui sont sur la terre et en délivrant celles qui souffrent dans le Purgatoire. […] Puisque vous m’avez aimée jusqu’à me donner votre Fils unique pour être mon Sauveur et mon Époux, les trésors infinis de ses mérites sont à moi ; je vous les offre avec bonheur […]. Je vous offre encore tous les mérites des Saints qui sont au ciel et sur la terre, leurs actes d’amour et ceux des saints Anges. Ainsi soit-il.",
+    "note_fr": "Sainte Thérèse fit cette offrande le 9 juin 1895, en la fête de la Très Sainte Trinité."
+   },
+   {
+    "title_fr": "Prière de confiance",
+    "eng_fr": "Je vous remercie, ô mon Dieu, de toutes les grâces que vous m’avez accordées : en particulier de m’avoir fait passer par le creuset de la souffrance. C’est avec joie que je vous contemplerai au dernier jour, portant le sceptre de la croix ; puisque vous avez daigné me donner en partage cette croix si précieuse, j’espère au ciel vous ressembler, et voir briller sur mon corps glorifié les sacrés stigmates de votre passion. Ainsi soit-il.",
+    "note_fr": "Tirée des derniers écrits de sainte Thérèse."
+   }
+  ]
+ },
+ "aquinas": {
+  "name_fr": "Saint Thomas d’Aquin",
+  "title_fr": "Docteur de l’Église · Docteur angélique",
+  "quote_fr": "Quantum potes, tantum aude: quia major omni laude — Ose autant que tu peux : car il est au-dessus de toute louange. (Lauda Sion, composé par saint Thomas)",
+  "sections_fr": [
+   {
+    "eng_fr": "Matin",
+    "practices_fr": [
+     {"t_fr": "Prière avant l’étude", "d_fr": "Dites : « Créateur de toutes choses, vraie source de la lumière et de la sagesse, daignez répandre sur les ténèbres de mon intelligence la clarté de votre lumière. »"},
+     {"t_fr": "Assister à la Messe", "d_fr": "Thomas célébrait chaque jour la Messe avec une profonde révérence ; il pleurait à la Consécration."},
+     {"t_fr": "Oraison mentale (30 min)", "d_fr": "Méditation silencieuse sur une seule vérité de la foi. La simplicité est plus haute que la complexité."}
+    ]
+   },
+   {
+    "eng_fr": "Au long du jour",
+    "practices_fr": [
+     {"t_fr": "Étudier la théologie (1 heure)", "d_fr": "Lisez lentement la Somme, l’Écriture ou les Pères de l’Église. L’étude est une forme de prière."},
+     {"t_fr": "Réciter le Rosaire", "d_fr": "Thomas aimait le Rosaire pour sa simplicité : « une méditation quotidienne sur les mystères de l’Incarnation »."},
+     {"t_fr": "Visite au Saint-Sacrement", "d_fr": "Faites une visite au Saint-Sacrement pour adorer le Christ réellement présent. Saint Thomas a composé le Tantum ergo et l’Adoro te devote ; que sa dévotion eucharistique inspire la vôtre."}
+    ]
+   },
+   {
+    "eng_fr": "Soir",
+    "practices_fr": [
+     {"t_fr": "Complies et silence", "d_fr": "Récitez la dernière heure de l’Office divin et retirez-vous dans un silence contemplatif."},
+     {"t_fr": "Examiner les pensées du jour", "d_fr": "Demandez-vous : « Ai-je pensé à Dieu ? Mon étude m’a-t-elle porté à l’aimer davantage ? »"}
+    ]
+   }
+  ],
+  "penance_fr": "Jeûnez aujourd’hui de paroles inutiles. Ne dites que ce qui est vrai, nécessaire et bienveillant.",
+  "prayers_fr": [
+   {
+    "title_fr": "Prière avant l’étude",
+    "eng_fr": "Créateur ineffable, qui, des trésors de votre sagesse, avez établi trois hiérarchies d’Anges et les avez placées dans un ordre admirable au-dessus du ciel empyrée : accordez-moi l’intelligence. Ainsi soit-il.",
+    "note_fr": "Saint Thomas la récitait avant chaque séance d’étude."
+   },
+   {
+    "title_fr": "Adoro te devote",
+    "eng_fr": "Je vous adore pieusement, ô Dieu caché,\nqui sous ces espèces vous dérobez à nos regards :\nmon cœur tout entier se soumet à vous,\net, dans la contemplation de votre présence, mon être tout entier s’anéantit.\n\nLa vue, le toucher, le goût sont ici en défaut,\net l’ouïe seule assure ma foi ;\nje crois tout ce qu’a dit le Fils de Dieu :\nrien de plus vrai que la parole de la vérité même.\n\nSur la croix, la divinité seule était cachée ;\nici c’est l’humanité même qui se rend invisible :\nje crois et je confesse l’une et l’autre,\net je demande ce que demandait le larron pénitent.\n\nJe ne vois pas vos plaies comme les vit Thomas ;\nnéanmoins je confesse que vous êtes mon Dieu :\nfaites que ma foi en vous aille toujours croissant,\nqu’en vous j’espère, que toujours je vous aime.\n\nÔ mémorial de la mort du Seigneur,\npain vivant qui donne la vie à l’homme,\ndonnez à mon âme de vivre de vous,\net de goûter toujours votre ineffable douceur.\n\nSeigneur Jésus, pélican rempli de tendresse,\npurifiez mes souillures par votre sang\ndont une seule goutte\npeut effacer les péchés du monde entier.\n\nJésus, que maintenant je ne vois qu’à travers un voile,\ndaignez étancher l’ardente soif de mon âme ;\nfaites qu’un jour contemplant à découvert votre visage,\nje jouisse éternellement de la vue de votre gloire.\nAinsi soit-il.",
+    "note_fr": "Composé par saint Thomas d’Aquin pour la fête du Saint-Sacrement (la Fête-Dieu). Traduction française en prose."
+   }
+  ]
+ },
+ "benedict": {
+  "name_fr": "Saint Benoît de Nursie",
+  "title_fr": "Père du monachisme occidental",
+  "quote_fr": "Ora et labora ; prie et travaille. Que rien ne soit préféré à l’Œuvre de Dieu.",
+  "sections_fr": [
+   {
+    "eng_fr": "Matin (Vigiles et Laudes)",
+    "practices_fr": [
+     {"t_fr": "Se lever avant l’aube", "d_fr": "Les moines de saint Benoît se levaient dans la nuit pour les Vigiles. Commencez votre journée de bonne heure, avant que le monde ne réclame votre attention."},
+     {"t_fr": "Réciter les Laudes", "d_fr": "Récitez l’heure des Laudes de l’Office divin, pour saluer le jour nouveau par la louange matinale de l’Église. Si l’heure entière n’est pas possible, dites au moins un psaume."},
+     {"t_fr": "Lectio divina (30 min)", "d_fr": "Lisez la Sainte Écriture lentement et dans la prière, en vous arrêtant sur les mots et les phrases. Laissez la Parole de Dieu descendre dans votre cœur avant de commencer le travail du jour."}
+    ]
+   },
+   {
+    "eng_fr": "Le travail du jour",
+    "practices_fr": [
+     {"t_fr": "Travailler en priant", "d_fr": "Travaillez de vos mains ou de votre esprit, mais gardez le cœur fixé en Dieu. Offrez chaque tâche comme une prière."},
+     {"t_fr": "Réciter les Petites Heures", "d_fr": "Prime, Tierce, Sexte, None : de brèves interruptions pour se souvenir de Dieu tout au long du jour."},
+     {"t_fr": "Hospitalité", "d_fr": "Recevez chaque personne comme le Christ lui-même. « J’étais étranger, et vous m’avez recueilli. »"}
+    ]
+   },
+   {
+    "eng_fr": "Soir",
+    "practices_fr": [
+     {"t_fr": "Réciter les Vêpres", "d_fr": "Au coucher du soleil, récitez les Vêpres pour consacrer à Dieu les heures du soir. Le Magnificat des Vêpres est le grand chant d’action de grâces pour les grâces du jour."},
+     {"t_fr": "Souper en silence", "d_fr": "Prenez votre repas du soir en silence ou en écoutant une lecture spirituelle, selon la coutume monastique de nourrir ensemble, à table, le corps et l’âme."},
+     {"t_fr": "Réciter les Complies", "d_fr": "Terminez la journée par les Complies, la prière du soir de l’Église. Le Nunc dimittis et la bénédiction finale placent le repos de la nuit sous la protection de Dieu."}
+    ]
+   }
+  ],
+  "penance_fr": "Mangez simplement aujourd’hui : un repas complet et deux petites collations, dans l’esprit de la Règle.",
+  "prayers_fr": [
+   {
+    "title_fr": "Prière pour une bonne mort",
+    "eng_fr": "Ô Seigneur mon Dieu, ne me livrez pas aux mains de l’ennemi : mais rendez-moi victorieux à l’heure de ma mort.",
+    "note_fr": "Saint Benoît mourut debout, soutenu par ses moines, les bras levés en prière."
+   },
+   {
+    "title_fr": "Prière de la médaille",
+    "eng_fr": "Que la Croix sainte soit ma lumière. Que le dragon ne soit pas mon chef. Retire-toi, Satan. Ne viens pas me conseiller tes vanités. Le breuvage que tu verses est le mal. Bois toi-même tes poisons.",
+    "note_fr": "Inscrite sur la médaille de saint Benoît, puissant sacramental."
+   }
+  ]
+ },
+ "teresa": {
+  "name_fr": "Sainte Thérèse d’Avila",
+  "title_fr": "Docteur de l’Église · Mystique, réformatrice",
+  "quote_fr": "Que rien ne te trouble, que rien ne t’épouvante ; tout passe ; Dieu ne change pas ; la patience obtient tout ; celui qui possède Dieu ne manque de rien ; Dieu seul suffit.",
+  "sections_fr": [
+   {
+    "eng_fr": "Matin",
+    "practices_fr": [
+     {"t_fr": "Oraison mentale du matin (1 heure)", "d_fr": "Entrez dans le « château intérieur » : tournez-vous au-dedans, vers le centre de l’âme, où demeure le Christ."},
+     {"t_fr": "Assister à la Messe", "d_fr": "Assistez à la sainte Messe dans le recueillement intérieur. Comme l’enseignait sainte Thérèse, la Messe est la plus grande des prières ; soyez pleinement présent aux saints Mystères."},
+     {"t_fr": "Lecture spirituelle", "d_fr": "Lisez le Château intérieur ou le Chemin de la perfection de sainte Thérèse, ou bien l’Écriture."}
+    ]
+   },
+   {
+    "eng_fr": "Au long du jour",
+    "practices_fr": [
+     {"t_fr": "Réciter le Rosaire", "d_fr": "Méditez les mystères. Thérèse se servait du Rosaire pour affermir son âme."},
+     {"t_fr": "Pratiquer le recueillement", "d_fr": "Au long de la journée, retirez-vous un instant dans le château intérieur de votre âme. Même au milieu du travail et de la conversation, gardez conscience de la présence de Dieu en vous."},
+     {"t_fr": "Offrir de petits sacrifices", "d_fr": "Acceptez chaque désagrément avec une patiente endurance : « la patience obtient tout »."}
+    ]
+   },
+   {
+    "eng_fr": "Soir",
+    "practices_fr": [
+     {"t_fr": "Oraison mentale du soir (30 min)", "d_fr": "Revenez encore au château intérieur. Reposez-vous en silence en la présence de Dieu."},
+     {"t_fr": "Examen et acte de contrition", "d_fr": "Repassez avec humilité les fautes du jour. Confiez-vous à la miséricorde de Dieu."}
+    ]
+   }
+  ],
+  "penance_fr": "Privez-vous d’un confort dont vous jouissez d’ordinaire, et offrez ce renoncement pour la conversion des pécheurs.",
+  "prayers_fr": [
+   {
+    "title_fr": "Que rien ne te trouble",
+    "eng_fr": "Que rien ne te trouble, que rien ne t’épouvante. Tout passe, Dieu ne change pas. La patience obtient tout. Celui qui possède Dieu ne manque de rien. Dieu seul suffit.",
+    "note_fr": "Trouvée dans le bréviaire de sainte Thérèse après sa mort. Écrite à l’origine en espagnol."
+   },
+   {
+    "title_fr": "Prière d’offrande de soi",
+    "eng_fr": "Je suis vôtre, Seigneur. Pour vous je suis née. Que voulez-vous faire de moi ? Riche ou pauvre, dans la joie ou dans la peine, consolée ou désolée : puisque vous êtes mon Roi, que voulez-vous faire de moi ? Parlez, Seigneur, car votre servante écoute. Ainsi soit-il.",
+    "note_fr": "Tirée des écrits de sainte Thérèse d’Avila."
+   }
+  ]
+ },
+ "escriva": {
+  "name_fr": "Saint Josémaria Escriva",
+  "title_fr": "Fondateur de l’Opus Dei",
+  "quote_fr": "Accomplissez toute chose par Amour. Dès lors, rien n’est petit : tout devient grand. Persévérer par Amour dans les petites choses, voilà l’héroïsme.",
+  "sections_fr": [
+   {
+    "eng_fr": "Matin",
+    "practices_fr": [
+     {"t_fr": "La minute héroïque", "d_fr": "Dès que le réveil sonne, sautez du lit sans attendre. Consacrez à Notre-Seigneur la première minute de la journée."},
+     {"t_fr": "Offrande de la journée", "d_fr": "« Serviam » : je servirai. Offrez à Dieu toute la journée par Marie."},
+     {"t_fr": "Assister à la sainte Messe", "d_fr": "La Messe est le centre et la racine de la vie intérieure. Communiez chaque jour."},
+     {"t_fr": "Oraison mentale (30 min)", "d_fr": "Consacrez trente minutes à l’oraison mentale, en silence, en présence du Saint-Sacrement ou devant un crucifix. Parlez à Dieu comme un ami parle à son ami."}
+    ]
+   },
+   {
+    "eng_fr": "Le travail comme prière",
+    "practices_fr": [
+     {"t_fr": "Sanctifier son travail", "d_fr": "Travaillez bien, pour l’amour de Dieu. Faites de chaque tâche une prière. C’est cela, l’Opus Dei : « l’Œuvre de Dieu »."},
+     {"t_fr": "Réciter l’Angélus", "d_fr": "À midi, interrompez ce que vous faites et récitez l’Angélus. Cette brève interruption sanctifie le milieu de la journée de travail et honore l’Incarnation."},
+     {"t_fr": "Réciter le Rosaire", "d_fr": "Cinq dizaines chaque jour. « Le Rosaire est l’arme la plus puissante pour vaincre Satan. »"},
+     {"t_fr": "Visite au Saint-Sacrement", "d_fr": "Une brève visite au milieu du travail du jour, ne serait-ce qu’une minute."}
+    ]
+   },
+   {
+    "eng_fr": "Soir",
+    "practices_fr": [
+     {"t_fr": "Lecture spirituelle (15 min)", "d_fr": "Lisez un classique de la vie spirituelle pendant au moins quinze minutes. Saint Josémaria y voyait une nourriture pour l’âme, aussi nécessaire que les aliments pour le corps."},
+     {"t_fr": "Examen particulier", "d_fr": "Examinez-vous sur une vertu précise que vous vous efforcez d’acquérir."}
+    ]
+   }
+  ],
+  "penance_fr": "Sanctifiez aujourd’hui votre travail ordinaire en offrant chaque tâche à Dieu avant de la commencer.",
+  "prayers_fr": [
+   {
+    "title_fr": "Prière pour sanctifier le travail",
+    "eng_fr": "Seigneur, accordez-moi la grâce de voir dans mon travail ordinaire la matière de ma sanctification. Aidez-moi à faire de chaque tâche, de chaque conversation, de chaque instant de ce jour une prière, afin qu’à la fin de la journée je puisse vous offrir le tout comme une chose digne de votre amour. Ainsi soit-il.",
+    "note_fr": "Inspirée de l’esprit de l’Opus Dei, la sanctification de la vie ordinaire."
+   },
+   {
+    "title_fr": "Prière aux Anges gardiens",
+    "eng_fr": "Saints Anges gardiens de ceux qui sont confiés à mes soins : aidez-moi à garder toujours présent à l’esprit que Dieu veille, et à le servir en eux avec fidélité et amour. Défendez-moi du Malin, et conduisez-moi par les chemins de la paix. Ainsi soit-il.",
+    "note_fr": "Saint Josémaria avait une grande dévotion aux Anges gardiens."
+   }
+  ]
+ },
+ "desales": {
+  "name_fr": "Saint François de Sales",
+  "title_fr": "Docteur de l’Église · Évêque de Genève",
+  "quote_fr": "Rien n’est si fort que la douceur ; rien n’est si doux que la force véritable.",
+  "sections_fr": [
+   {
+    "eng_fr": "Matin",
+    "practices_fr": [
+     {"t_fr": "Préparation de la journée", "d_fr": "Mettez-vous en la présence de Dieu. Prévoyez ce que la journée apportera et résolvez d’accueillir chaque chose avec douceur."},
+     {"t_fr": "Assister à la Messe si possible", "d_fr": "Unissez-vous au Sacrifice du Christ. Communiez avec une douce dévotion."},
+     {"t_fr": "Méditation (30 min)", "d_fr": "Une méditation simple et affective sur une scène des Évangiles. Parlez à Notre-Seigneur comme à un ami."}
+    ]
+   },
+   {
+    "eng_fr": "Au long du jour",
+    "practices_fr": [
+     {"t_fr": "Bouquets spirituels", "d_fr": "Cueillez au long de la journée de « petits bouquets » de pensées dévotes. Revenez-y souvent."},
+     {"t_fr": "Pratiquer la douceur", "d_fr": "Par-dessus tout, soyez doux : avec les autres, avec vous-même, avec les circonstances. « Rien n’est si fort que la douceur. »"},
+     {"t_fr": "Réciter le Rosaire", "d_fr": "François aimait le Rosaire comme une prière de famille : lente, affectueuse, méditative."}
+    ]
+   },
+   {
+    "eng_fr": "Soir",
+    "practices_fr": [
+     {"t_fr": "Examen de conscience", "d_fr": "Repassez la journée avec bonté. Remerciez Dieu de ses grâces, demandez pardon de vos fautes, prenez la résolution de vous amender."},
+     {"t_fr": "Brève lecture spirituelle", "d_fr": "Lisez un passage de l’Introduction à la vie dévote ou du Traité de l’amour de Dieu."}
+    ]
+   }
+  ],
+  "penance_fr": "Pratiquez aujourd’hui la douceur avec tous ceux que vous rencontrerez, surtout avec ceux qui vous irritent.",
+  "prayers_fr": [
+   {
+    "title_fr": "Prière de douce confiance",
+    "eng_fr": "Ne prévenez point les accidents de cette vie par appréhension, ains prévenez-les par une parfaite espérance, qu’à mesure qu’ils arriveront, Dieu, à qui vous êtes, vous délivrera. Il vous a gardée jusqu’à présent ; tenez-vous seulement bien à la main de sa providence, et il vous assistera en toutes occasions. Ainsi soit-il.",
+    "note_fr": "Adaptée des lettres de saint François de Sales."
+   },
+   {
+    "title_fr": "Prière pour une vie dévote",
+    "eng_fr": "Mon Dieu, je vous donne toute ma volonté. Je désire commencer cette journée pour votre honneur et votre gloire. Je vous offre toutes les actions de ce jour, et je vous prie de me faire la grâce de ne rien faire qui soit contraire à votre volonté. Éclairez mon entendement, fortifiez ma volonté, purifiez mon cœur et sanctifiez mon âme. Ainsi soit-il.",
+    "note_fr": "Inspirée de l’Introduction à la vie dévote."
+   }
+  ]
+ }
+}

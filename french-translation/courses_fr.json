@@ -1,0 +1,399 @@
+{
+ "vowels": {
+  "title_fr": "Les voyelles du latin ecclésiastique",
+  "intro_fr": "La prononciation du latin en usage dans l’Église romaine diffère de la prononciation classique enseignée à l’université. Le latin ecclésiastique est la langue vivante de la liturgie : c’est ainsi que priaient les saints, et c’est ainsi que la Messe se chante aujourd’hui.",
+  "sections_fr": [
+   {
+    "label_fr": "Les cinq voyelles",
+    "html_fr": "<p>Les cinq voyelles latines sont pures et stables : chacune garde toujours le même son. Bonne nouvelle pour le francophone : ces cinq sons existent tous en français. Il lui reste à se défaire de trois habitudes : lire le « u » à la française, laisser tomber le « e » final et nasaliser les voyelles devant n ou m.</p><p><strong>A</strong> — comme dans <em>papa</em>.<br><em>Exemple :</em> <strong>Sancta</strong> = SANNK-ta</p><p><strong>E</strong> — toujours « é » (« è » dans une syllabe fermée), comme dans <em>été</em> ; jamais muet, pas même à la fin du mot.<br><em>Exemple :</em> <strong>Deus</strong> = DÉ-ous</p><p><strong>I</strong> — comme dans <em>midi</em>.<br><em>Exemple :</em> <strong>Fili</strong> = FI-li</p><p><strong>O</strong> — comme dans <em>note</em>.<br><em>Exemple :</em> <strong>Dominus</strong> = DO-mi-nous</p><p><strong>U</strong> — toujours « ou », comme dans <em>jour</em> ; jamais le « u » français de « lune ».<br><em>Exemple :</em> <strong>Unum</strong> = OU-noum</p><h3>Diphtongues</h3><p><strong>AE / OE</strong> — se prononcent « é » (comme le E). <em>Caelum</em> = TCHÉ-loum, <em>Poenae</em> = PÉ-né.<br><strong>AU</strong> — « aou » d’une seule émission de voix, comme dans <em>caoutchouc</em>. <em>Laudate</em> = laou-DA-té.</p>"
+   },
+   {
+    "label_fr": "Nota Bene · À noter",
+    "html_fr": "La règle d’or : les voyelles latines sont <em>pures</em>, et toutes les lettres se prononcent. Pas de voyelles nasales : dans « an », « in », « on », « um », on entend la voyelle, puis le n ou le m. Pas de « e » muet, pas de consonne finale muette. « Sanctus » se dit <em>SANNK-tous</em>, et non à la française, avec une nasale et un « u ». Lisez donc les transcriptions de ces leçons en faisant sonner chaque lettre, même à la fin du mot ; un n ou un m doublé rappelle que la voyelle n’est pas nasale."
+   },
+   {
+    "label_fr": "Practica · Exercice",
+    "note_fr": "Touchez chaque mot pour voir sa prononciation et son sens.",
+    "items_fr": [
+     {"eng_fr": "Seigneur, Maître", "phon_fr": "DO-mi-nous"},
+     {"eng_fr": "Marie", "phon_fr": "ma-RI-a"},
+     {"eng_fr": "Gloire", "phon_fr": "GLO-ri-a"},
+     {"eng_fr": "Père", "phon_fr": "PA-tèr"},
+     {"eng_fr": "Fils", "phon_fr": "FI-li-ous"},
+     {"eng_fr": "Esprit", "phon_fr": "SPI-ri-tous"},
+     {"eng_fr": "Dieu", "phon_fr": "DÉ-ous"},
+     {"eng_fr": "Sainte (fém.)", "phon_fr": "SANNK-ta"},
+     {"eng_fr": "Un", "phon_fr": "OU-noum"},
+     {"eng_fr": "Ciel", "phon_fr": "TCHÉ-loum"},
+     {"eng_fr": "Louez", "phon_fr": "laou-DA-té"},
+     {"eng_fr": "Amen, ainsi soit-il", "phon_fr": "A-mèn"}
+    ]
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Les voyelles latines sont <em>pures</em> et <em>stables</em> : A = a, E = é, I = i, O = o, U = ou. Aucune n’est muette, aucune n’est nasale. Les diphtongues AE et OE se disent « é » ; AU se dit « aou ». Exercez-vous sur les mots courants de la prière jusqu’à ce que les sons viennent d’eux-mêmes.</p>"
+   }
+  ]
+ },
+ "consonants": {
+  "title_fr": "Les règles des consonnes",
+  "intro_fr": "La plupart des consonnes latines se prononcent comme en français ; mais une poignée d’entre elles suivent des règles propres, qui transforment des mots familiers. Maîtrisez-les, et toute prière latine s’ouvre à vous.",
+  "sections_fr": [
+   {
+    "label_fr": "Les règles essentielles",
+    "html_fr": "<p><strong>C</strong> — dur (k) devant a, o, u ou une consonne (<em>cantáre</em> = cann-TA-ré).<br><strong>C + e/i/ae</strong> — « tch », comme dans « tchèque » (<em>caelum</em> = TCHÉ-loum, <em>pacem</em> = PA-tchèm) ; jamais le « s » français de « ciel ».<br><strong>G + e/i</strong> — « dj », comme dans <em>adjectif</em> (<em>regina</em> = ré-DJI-na) ; jamais le simple « j » français de « genou ».<br><strong>Gn</strong> — comme dans « agneau » (<em>Agnus</em> = A-gnous).<br><strong>Sc + e/i</strong> — « ch », comme dans « chemin » (<em>suscipe</em> = SOU-chi-pé).<br><strong>Ti + voyelle</strong> — « tsi » (<em>gratia</em> = GRA-tsi-a) ; jamais le « si » français de « nation ».<br><strong>J</strong> — comme le « y » de « yeux » (<em>Jesus</em> = YÉ-zous). <strong>H</strong> — muet, sauf dans « mihi » et « nihil », où il se dit « k ».</p>"
+   },
+   {
+    "label_fr": "Moyen mnémotechnique",
+    "html_fr": "Prononcez à l’italienne : <em>caelum</em> comme « ciao » (tch), <em>regína</em> comme « gelato » (dj), <em>Agnus</em> comme « lasagne » (gn)."
+   },
+   {
+    "label_fr": "Practica · Exercice",
+    "note_fr": "Touchez chaque mot pour voir sa prononciation et son sens.",
+    "items_fr": [
+     {"eng_fr": "Ciel", "phon_fr": "TCHÉ-loum"},
+     {"eng_fr": "Reine", "phon_fr": "ré-DJI-na"},
+     {"eng_fr": "Agneau", "phon_fr": "A-gnous"},
+     {"eng_fr": "Recevez", "phon_fr": "SOU-chi-pé"},
+     {"eng_fr": "Grâce", "phon_fr": "GRA-tsi-a"},
+     {"eng_fr": "Église", "phon_fr": "èk-KLÉ-zi-a"},
+     {"eng_fr": "Engendré", "phon_fr": "DJÉ-ni-toum"},
+     {"eng_fr": "Au plus haut (des cieux)", "phon_fr": "èk-CHÈL-sis"}
+    ]
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Six règles ouvrent presque toutes les consonnes latines : <strong>c + e/i = tch, g + e/i = dj, gn comme dans « agneau », sc + e/i = ch, ti + voyelle = tsi</strong>. Tout le reste se lit comme en français, à ceci près que toutes les lettres s’entendent : le s et le t à la fin des mots, le r roulé, « qu » qui se dit « kou » (qui = koui), et jamais de voyelle nasale.</p>"
+   }
+  ]
+ },
+ "stress": {
+  "title_fr": "L’accent tonique",
+  "intro_fr": "Chaque mot latin a une syllabe accentuée. Placez bien l’accent et votre latin coule de source ; placez-le mal et il sonne étranger. Heureusement, la règle est simple — même si elle demande un effort au francophone, habitué à appuyer sur la fin des mots : en latin, l’accent ne tombe pour ainsi dire jamais sur la dernière syllabe.",
+  "sections_fr": [
+   {
+    "label_fr": "La règle de l’avant-dernière",
+    "html_fr": "<p>L’accent tombe sur l’<strong>avant-dernière syllabe</strong> (la pénultième), <em>sauf</em> si elle est brève ; il remonte alors d’une syllabe (sur l’antépénultième).</p><p>Dans cette application, vous verrez un accent aigu (Dóminus, Glória) ; ce signe vous montre exactement la syllabe à accentuer. Ce n’est pas l’accent aigu du français : il ne change pas le son de la voyelle, il indique seulement où appuyer la voix. Suivez-le et vous ne pourrez pas vous tromper.</p>"
+   },
+   {
+    "label_fr": "Raccourci",
+    "html_fr": "Si le mot porte un accent imprimé sur une voyelle, appuyez sur CETTE voyelle. Rien à deviner."
+   },
+   {
+    "label_fr": "Practica · Exercice",
+    "note_fr": "Touchez chaque mot. La syllabe accentuée est en CAPITALES dans la transcription.",
+    "items_fr": [
+     {"eng_fr": "Seigneur (accent sur la première)", "phon_fr": "DO-mi-nous"},
+     {"eng_fr": "Gloire (accent sur la première)", "phon_fr": "GLO-ri-a"},
+     {"eng_fr": "Je crois (accent sur la première)", "phon_fr": "KRÉ-do"},
+     {"eng_fr": "Amen (accent sur la première)", "phon_fr": "A-mèn"},
+     {"eng_fr": "Saint (accent sur la première)", "phon_fr": "SANNK-tous"}
+    ]
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Accentuez la syllabe qui porte l’accent aigu. Dans le doute, accentuez l’avant-dernière syllabe. Cette règle couvre 95 % des mots latins.</p>"
+   }
+  ]
+ },
+ "declensions": {
+  "title_fr": "Première et deuxième déclinaisons",
+  "intro_fr": "Les noms latins changent de terminaison pour indiquer leur rôle dans la phrase : sujet, complément d’objet, possession, direction. C’est ce qu’on appelle la déclinaison. Les deux modèles les plus courants vous donnent des centaines de mots de la prière.",
+  "sections_fr": [
+   {
+    "label_fr": "Première déclinaison (-a)",
+    "html_fr": "<p>Les noms de la première déclinaison sont le plus souvent féminins et se terminent par <strong>-a</strong> au nominatif : <em>María, grátia, vita, gloria, córona</em>. Les terminaisons des cas suivent un modèle prévisible.</p>"
+   },
+   {
+    "label_fr": "María (f.) — 1re déclinaison"
+   },
+   {
+    "label_fr": "Deuxième déclinaison (-us / -um)",
+    "html_fr": "<p>Les noms de la deuxième déclinaison sont le plus souvent masculins (en -us) ou neutres (en -um) : <em>Dóminus, Christus, Iesus, verbum, sæculum</em>.</p>"
+   },
+   {
+    "label_fr": "Dóminus (m.) — 2e déclinaison"
+   },
+   {
+    "label_fr": "Regardez la terminaison",
+    "html_fr": "À la Messe, vous rencontrerez des expressions comme <em>per Dóminum nostrum</em> (accusatif : « par notre Seigneur ») et <em>Glória Dómini</em> (génitif : « la gloire du Seigneur »). Là où le français recourt à l’ordre des mots et aux prépositions (« de », « à », « par »), le latin change la fin du mot : c’est la terminaison qui donne le sens."
+   },
+   {
+    "label_fr": "Vocabula · Vocabulaire",
+    "note_fr": "Noms courants des 1re et 2e déclinaisons à la Messe.",
+    "items_fr": [
+     {"eng_fr": "église (1re décl.)", "phon_fr": "èk-KLÉ-zi-a"},
+     {"eng_fr": "grâce (1re décl.)", "phon_fr": "GRA-tsi-a"},
+     {"eng_fr": "gloire (1re décl.)", "phon_fr": "GLO-ri-a"},
+     {"eng_fr": "vie (1re décl.)", "phon_fr": "VI-ta"},
+     {"eng_fr": "âme (1re décl.)", "phon_fr": "A-ni-ma"},
+     {"eng_fr": "terre (1re décl.)", "phon_fr": "TÈR-ra"},
+     {"eng_fr": "Seigneur (2e décl.)", "phon_fr": "DO-mi-nous"},
+     {"eng_fr": "fils (2e décl.)", "phon_fr": "FI-li-ous"},
+     {"eng_fr": "ciel (2e décl.)", "phon_fr": "TCHÉ-loum"},
+     {"eng_fr": "parole, Verbe (2e décl.)", "phon_fr": "VÈR-boum"},
+     {"eng_fr": "règne, royaume (2e décl.)", "phon_fr": "RÉ-gnoum"},
+     {"eng_fr": "sacrement (2e décl.)", "phon_fr": "sa-kra-MÈN-toum"}
+    ]
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>1re déclinaison : -a / -æ / -æ / -am / -a. 2e déclinaison : -us / -i / -o / -um / -o. Ces deux modèles couvrent la plupart des noms de la prière.</p>"
+   }
+  ]
+ },
+ "verbs": {
+  "title_fr": "Les bases du verbe",
+  "intro_fr": "Les verbes latins se conjuguent : leur terminaison change selon la personne et le nombre — comme en français, mais sans pronom sujet. La bonne nouvelle : pour lire les prières, il vous suffit du présent et d’une poignée de terminaisons pour comprendre l’essentiel de ce que vous rencontrerez.",
+  "sections_fr": [
+   {
+    "label_fr": "Les quatre groupes de conjugaison",
+    "html_fr": "<p>Les verbes latins se classent d’après la voyelle de leur radical :</p><p><strong>I :</strong> -āre (<em>laudáre</em>, louer)<br><strong>II :</strong> -ēre (<em>vidére</em>, voir)<br><strong>III :</strong> -ere (<em>dúcere</em>, conduire)<br><strong>IV :</strong> -īre (<em>audíre</em>, entendre)</p>"
+   },
+   {
+    "label_fr": "Laudáre — 1re conjugaison (présent)"
+   },
+   {
+    "label_fr": "Les terminaisons sont la clé",
+    "html_fr": "-o, -s, -t, -mus, -tis, -nt ; apprenez ces six terminaisons et vous reconnaîtrez le sujet de presque tous les verbes latins. Le français en garde la trace : tu loues (-s), nous louons (-mus), vous louez (-tis), ils louent (-nt). <em>Laudámus te</em> = « Nous vous louons » (la terminaison -mus, C’EST le « nous »)."
+   },
+   {
+    "label_fr": "Verbes courants de la prière",
+    "note_fr": "Touchez pour voir le sens.",
+    "items_fr": [
+     {"eng_fr": "nous louons", "phon_fr": "laou-DA-mous"},
+     {"eng_fr": "nous bénissons", "phon_fr": "bé-né-DI-tchi-mous"},
+     {"eng_fr": "nous adorons", "phon_fr": "a-do-RA-mous"},
+     {"eng_fr": "nous glorifions", "phon_fr": "glo-ri-fi-CA-mous"},
+     {"eng_fr": "ayez pitié", "phon_fr": "mi-zé-RÉ-ré"},
+     {"eng_fr": "priez", "phon_fr": "O-ra"}
+    ]
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Apprenez les six terminaisons du présent (-o, -s, -t, -mus, -tis, -nt) et vous saurez retrouver le sujet de n’importe quel verbe de la prière.</p>"
+   }
+  ]
+ },
+ "vocab50": {
+  "title_fr": "Le vocabulaire essentiel de la prière",
+  "intro_fr": "Apprenez ces dix mots essentiels et vous reconnaîtrez plus de la moitié de ce que vous entendez à la Messe et au Rosaire. Commencez ici.",
+  "sections_fr": [
+   {
+    "label_fr": "Les dix mots les plus courants",
+    "note_fr": "Touchez pour voir le sens et un exemple.",
+    "items_fr": [
+     {"eng_fr": "Seigneur · Dominus vobiscum", "phon_fr": "DO-mi-nous"},
+     {"eng_fr": "Dieu · Deo gratias", "phon_fr": "DÉ-ous"},
+     {"eng_fr": "Père · Pater noster", "phon_fr": "PA-tèr"},
+     {"eng_fr": "Fils · Fílius Dei", "phon_fr": "FI-li-ous"},
+     {"eng_fr": "Esprit · Spiritus Sancti", "phon_fr": "SPI-ri-tous"},
+     {"eng_fr": "Saint · Sanctus, Sanctus, Sanctus", "phon_fr": "SANNK-tous"},
+     {"eng_fr": "Amen · Ainsi soit-il", "phon_fr": "A-mèn"},
+     {"eng_fr": "Gloire · Gloria in excelsis", "phon_fr": "GLO-ri-a"},
+     {"eng_fr": "Paix · Pax vobiscum", "phon_fr": "PAKS"},
+     {"eng_fr": "Vie · vita ætérna", "phon_fr": "VI-ta"}
+    ]
+   },
+   {
+    "label_fr": "Bâtissez sur ces mots",
+    "html_fr": "Dóminus + Deus + Pater + Fílius + Spíritus + Sanctus = le vocabulaire du début de presque toutes les prières. Maîtrisez d’abord ceux-là. Le français vous y aide, car ses mots en viennent tout droit : pater → père, fílius → fils, spíritus → esprit, sanctus → saint, pax → paix, vita → vie."
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Dix mots, c’est une belle longueur d’avance. Chacun revient des dizaines de fois dans la Messe, l’Office et le Rosaire. Retournez ces cartes chaque jour pendant une semaine.</p>"
+   }
+  ]
+ },
+ "ave": {
+  "title_fr": "Maîtriser l’Ave María",
+  "intro_fr": "Le Je vous salue Marie est la prière la plus récitée du Rosaire : 50 fois à chaque chapelet, des centaines de fois dans une vie. Décomposons-le phrase par phrase, jusqu’à en connaître chaque mot.",
+  "sections_fr": [
+   {
+    "label_fr": "L’origine",
+    "html_fr": "<p>La première moitié vient directement de l’Écriture : la salutation de l’ange Gabriel à l’Annonciation (Lc 1, 28) et la bénédiction d’Élisabeth à la Visitation (Lc 1, 42). La seconde moitié est la réponse de l’Église, ajoutée peu à peu à partir du XVe siècle.</p>"
+   },
+   {
+    "items_fr": [
+     {"eng_fr": "Je vous salue, Marie,", "phon_fr": "A-vé ma-RI-a"},
+     {"eng_fr": "pleine de grâce,", "phon_fr": "GRA-tsi-a PLÉ-na"},
+     {"eng_fr": "le Seigneur est avec vous.", "phon_fr": "DO-mi-nous TÉ-coum"},
+     {"eng_fr": "Vous êtes bénie entre toutes les femmes,", "phon_fr": "bé-né-DIK-ta tou inn mou-li-É-ri-bous"},
+     {"eng_fr": "et Jésus, le fruit de vos entrailles, est béni.", "phon_fr": "èt bé-né-DIK-tous FROUK-tous VÈN-tris TOU-i, YÉ-zous"},
+     {"eng_fr": "Sainte Marie, Mère de Dieu,", "phon_fr": "SANNK-ta ma-RI-a, MA-tèr DÉ-i"},
+     {"eng_fr": "priez pour nous, pauvres pécheurs,", "phon_fr": "O-ra pro NO-bis pèk-ca-TO-ri-bous"},
+     {"eng_fr": "maintenant et à l’heure de notre mort.", "phon_fr": "nounk èt inn O-ra MOR-tis NOS-tré"},
+     {"eng_fr": "Ainsi soit-il.", "phon_fr": "A-mèn"}
+    ]
+   },
+   {
+    "label_fr": "Vocabula · Expressions clés",
+    "note_fr": "Maîtrisez chaque expression du Je vous salue Marie.",
+    "items_fr": [
+     {"eng_fr": "Je vous salue", "phon_fr": "A-vé"},
+     {"eng_fr": "pleine de grâce", "phon_fr": "GRA-tsi-a PLÉ-na"},
+     {"eng_fr": "le Seigneur est avec vous", "phon_fr": "DO-mi-nous TÉ-coum"},
+     {"eng_fr": "vous êtes bénie", "phon_fr": "bé-né-DIK-ta tou"},
+     {"eng_fr": "entre les femmes", "phon_fr": "inn mou-li-É-ri-bous"},
+     {"eng_fr": "le fruit de vos entrailles", "phon_fr": "FROUK-tous VÈN-tris TOU-i"},
+     {"eng_fr": "Sainte Marie", "phon_fr": "SANNK-ta ma-RI-a"},
+     {"eng_fr": "Mère de Dieu", "phon_fr": "MA-tèr DÉ-i"},
+     {"eng_fr": "priez pour nous", "phon_fr": "O-ra pro NO-bis"},
+     {"eng_fr": "pécheurs", "phon_fr": "pèk-ca-TO-ri-bous"},
+     {"eng_fr": "à l’heure de notre mort", "phon_fr": "inn O-ra MOR-tis NOS-tré"}
+    ]
+   },
+   {
+    "label_fr": "Dites-le lentement",
+    "html_fr": "Le Rosaire n’est pas une course. Dites l’Ave posément, en laissant chaque phrase se déposer en vous. Un seul Ave dit avec toute votre attention vaut mieux que cent dits à la hâte."
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>L’Ave María a deux moitiés : la salutation de l’Écriture (Ave Maria… fructus ventris tui, Iesus) et la supplication de l’Église (Sancta Maria… in hora mortis nostræ). Chaque phrase est un écho de l’Écriture.</p>"
+   }
+  ]
+ },
+ "pater": {
+  "title_fr": "Maîtriser le Pater Noster",
+  "intro_fr": "La prière du Seigneur lui-même. Chaque phrase est sortie des lèvres de Notre-Seigneur. Sachez-la en latin, et vous prierez avec l’Église de tous les siècles.",
+  "sections_fr": [
+   {
+    "label_fr": "Les sept demandes",
+    "html_fr": "<p>Le Pater Noster contient sept demandes : les trois premières regardent la gloire de Dieu (le Nom, le Règne, la Volonté), les quatre dernières nos besoins (le pain, le pardon, la tentation, le mal). C’est la prière parfaite.</p>"
+   },
+   {
+    "items_fr": [
+     {"eng_fr": "Notre Père,", "phon_fr": "PA-tèr NOS-tèr"},
+     {"eng_fr": "qui êtes aux cieux,", "phon_fr": "koui ès inn TCHÉ-lis"},
+     {"eng_fr": "que votre nom soit sanctifié.", "phon_fr": "sannk-ti-fi-TCHÉ-tour NO-mèn TOU-oum"},
+     {"eng_fr": "Que votre règne arrive.", "phon_fr": "ad-VÉ-ni-at RÉ-gnoum TOU-oum"},
+     {"eng_fr": "Que votre volonté soit faite", "phon_fr": "FI-at vo-LOUN-tas TOU-a"},
+     {"eng_fr": "sur la terre comme au ciel.", "phon_fr": "SI-cout inn TCHÉ-lo èt inn TÈR-ra"},
+     {"eng_fr": "Notre pain quotidien", "phon_fr": "PA-nèm NOS-troum kouo-ti-di-A-noum"},
+     {"eng_fr": "donnez-nous aujourd’hui,", "phon_fr": "da NO-bis O-di-é"},
+     {"eng_fr": "et pardonnez-nous nos offenses,", "phon_fr": "èt di-MIT-té NO-bis DÉ-bi-ta NOS-tra"},
+     {"eng_fr": "comme nous pardonnons à ceux qui nous ont offensés.", "phon_fr": "SI-cout èt nos di-MIT-ti-mous dé-bi-TO-ri-bous NOS-tris"},
+     {"eng_fr": "Et ne nous laissez pas succomber à la tentation,", "phon_fr": "èt né nos inn-DOU-cas inn tèn-ta-tsi-O-nèm"},
+     {"eng_fr": "mais délivrez-nous du mal. Ainsi soit-il.", "phon_fr": "sèd LI-bé-ra nos a MA-lo. A-mèn"}
+    ]
+   },
+   {
+    "label_fr": "Vocabula · Les sept demandes",
+    "note_fr": "Apprenez chaque demande du Notre Père.",
+    "items_fr": [
+     {"eng_fr": "Notre Père", "phon_fr": "PA-tèr NOS-tèr"},
+     {"eng_fr": "qui êtes aux cieux", "phon_fr": "koui ès inn TCHÉ-lis"},
+     {"eng_fr": "que votre Nom soit sanctifié", "phon_fr": "sannk-ti-fi-TCHÉ-tour NO-mèn TOU-oum"},
+     {"eng_fr": "que votre règne arrive", "phon_fr": "ad-VÉ-ni-at RÉ-gnoum TOU-oum"},
+     {"eng_fr": "que votre volonté soit faite", "phon_fr": "FI-at vo-LOUN-tas TOU-a"},
+     {"eng_fr": "notre pain", "phon_fr": "PA-nèm NOS-troum"},
+     {"eng_fr": "quotidien, de chaque jour", "phon_fr": "kouo-ti-di-A-noum"},
+     {"eng_fr": "pardonnez-nous", "phon_fr": "di-MIT-té NO-bis"},
+     {"eng_fr": "nos offenses (nos dettes)", "phon_fr": "DÉ-bi-ta NOS-tra"},
+     {"eng_fr": "ne nous laissez pas succomber", "phon_fr": "né nos inn-DOU-cas"},
+     {"eng_fr": "à la tentation", "phon_fr": "inn tèn-ta-tsi-O-nèm"},
+     {"eng_fr": "délivrez-nous du mal", "phon_fr": "LI-bé-ra nos a MA-lo"}
+    ]
+   },
+   {
+    "label_fr": "Dites-le chaque jour en latin",
+    "html_fr": "Dites le Pater Noster en latin une fois par jour pendant une semaine. À la fin, vous le saurez par cœur ; et vous porterez toute votre vie la prière de l’Église dans la langue de l’Église."
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Sept demandes, enseignées par Notre-Seigneur lui-même. Le Pater Noster est au cœur de la Messe, du Rosaire et de l’Office divin. Sachez-le en latin.</p>"
+   }
+  ]
+ },
+ "psalms": {
+  "title_fr": "Lire les psaumes en latin",
+  "intro_fr": "Les Psaumes sont le livre de prière de l’Église. Une fois que vous en connaissez la structure, vous pouvez les lire en latin même avec un vocabulaire modeste. Le secret, c’est le parallélisme.",
+  "sections_fr": [
+   {
+    "label_fr": "Le parallélisme hébraïque",
+    "html_fr": "<p>Chaque verset de psaume a deux (parfois trois) moitiés parallèles, qui disent la même chose avec des mots différents. Une fois que vous l’avez remarqué, la seconde moitié vous explique souvent la première.</p><p><em>Exemple tiré du psaume 22 (Le Seigneur est mon berger) :</em></p>"
+   },
+   {
+    "items_fr": [
+     {"eng_fr": "C’est le Seigneur qui me conduit,", "phon_fr": "DO-mi-nous RÉ-djit mé"},
+     {"eng_fr": "et rien ne pourra me manquer.", "phon_fr": "èt NI-kil MI-ki DÉ-é-rit"},
+     {"eng_fr": "Il m’a établi dans un lieu de pâturages,", "phon_fr": "inn LO-co PAS-cou-é I-bi mé col-lo-CA-vit"},
+     {"eng_fr": "Il m’a amené près d’une eau fortifiante.", "phon_fr": "SOU-pèr A-kouam ré-fèk-tsi-O-nis é-dou-CA-vit mé"}
+    ]
+   },
+   {
+    "label_fr": "Vocabula · Vocabulaire des psaumes",
+    "note_fr": "Des mots qui reviennent sans cesse dans les psaumes.",
+    "items_fr": [
+     {"eng_fr": "Seigneur (vocatif)", "phon_fr": "DO-mi-né"},
+     {"eng_fr": "ayez pitié", "phon_fr": "mi-zé-RÉ-ré"},
+     {"eng_fr": "exaucez, écoutez", "phon_fr": "èg-ZAOU-di"},
+     {"eng_fr": "louez", "phon_fr": "laou-DA-té"},
+     {"eng_fr": "éternel, à jamais", "phon_fr": "é-TÈR-noum"},
+     {"eng_fr": "miséricorde", "phon_fr": "mi-zé-ri-COR-di-a"},
+     {"eng_fr": "justice, droiture", "phon_fr": "yous-TI-tsi-a"},
+     {"eng_fr": "ennemi", "phon_fr": "i-ni-MI-cous"},
+     {"eng_fr": "j’ai crié", "phon_fr": "kla-MA-vi"},
+     {"eng_fr": "sauvez-moi", "phon_fr": "SAL-voum mé fak"}
+    ]
+   },
+   {
+    "label_fr": "Lisez-le à voix haute",
+    "html_fr": "Lisez d’abord le latin à voix haute, lentement. Même sans comprendre chaque mot, le rythme et le parallélisme vous porteront. Consultez ensuite la traduction."
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Le parallélisme est votre clé. Quand vous ne comprenez pas la première ligne, regardez la seconde ; elle dit la même chose avec d’autres mots.</p>"
+   }
+  ]
+ },
+ "vulgate": {
+  "title_fr": "Lire la Vulgate",
+  "intro_fr": "La Bible latine de saint Jérôme — la Vulgate — est la Bible de l’Église. Avec la grammaire et le vocabulaire que vous avez appris, vous pouvez maintenant l’ouvrir et lire. Commencez par Jean 1.",
+  "sections_fr": [
+   {
+    "label_fr": "Jean 1, 1-5",
+    "html_fr": "<p>Le Prologue de saint Jean est le début le plus célèbre de l’Écriture ; c’est aussi le dernier Évangile de la Messe latine. Lisez-le à l’aide du découpage phrase par phrase ci-dessous.</p>"
+   },
+   {
+    "items_fr": [
+     {"eng_fr": "Au commencement était le Verbe,", "phon_fr": "inn prinn-TCHI-pi-o É-rat VÈR-boum"},
+     {"eng_fr": "et le Verbe était auprès de Dieu,", "phon_fr": "èt VÈR-boum É-rat A-poud DÉ-oum"},
+     {"eng_fr": "et le Verbe était Dieu.", "phon_fr": "èt DÉ-ous É-rat VÈR-boum"},
+     {"eng_fr": "Il était au commencement auprès de Dieu.", "phon_fr": "ok É-rat inn prinn-TCHI-pi-o A-poud DÉ-oum"},
+     {"eng_fr": "Toutes choses ont été faites par lui,", "phon_fr": "OMM-ni-a pèr IP-soum FAK-ta sount"},
+     {"eng_fr": "et rien de ce qui a été fait n’a été fait sans lui.", "phon_fr": "èt SI-né IP-so FAK-toum èst NI-kil kouod FAK-toum èst"},
+     {"eng_fr": "En lui était la vie,", "phon_fr": "inn IP-so VI-ta É-rat"},
+     {"eng_fr": "et la vie était la lumière des hommes.", "phon_fr": "èt VI-ta É-rat louks O-mi-noum"},
+     {"eng_fr": "Et la lumière luit dans les ténèbres,", "phon_fr": "èt louks inn TÉ-né-bris LOU-tchèt"},
+     {"eng_fr": "et les ténèbres ne l’ont point comprise.", "phon_fr": "èt TÉ-né-bré É-am nonn comm-pré-èn-DÉ-rount"}
+    ]
+   },
+   {
+    "label_fr": "Vocabula · Vocabulaire de Jean 1",
+    "note_fr": "Les mots clés du Prologue de l’Évangile selon saint Jean.",
+    "items_fr": [
+     {"eng_fr": "Au commencement", "phon_fr": "inn prinn-TCHI-pi-o"},
+     {"eng_fr": "le Verbe", "phon_fr": "VÈR-boum"},
+     {"eng_fr": "auprès de Dieu", "phon_fr": "A-poud DÉ-oum"},
+     {"eng_fr": "vie", "phon_fr": "VI-ta"},
+     {"eng_fr": "lumière", "phon_fr": "louks"},
+     {"eng_fr": "ténèbres", "phon_fr": "TÉ-né-bré"},
+     {"eng_fr": "ont compris, ont saisi", "phon_fr": "comm-pré-èn-DÉ-rount"},
+     {"eng_fr": "le monde", "phon_fr": "MOUN-dous"},
+     {"eng_fr": "s’est fait chair", "phon_fr": "CA-ro FAK-toum èst"},
+     {"eng_fr": "a habité parmi nous", "phon_fr": "a-bi-TA-vit inn NO-bis"},
+     {"eng_fr": "grâce et vérité", "phon_fr": "GRA-tsi-a èt VÉ-ri-tas"}
+    ]
+   },
+   {
+    "label_fr": "Pour aller plus loin",
+    "html_fr": "Quand vous saurez lire Jean 1, essayez le psaume 50 (le Miserere) et le début de la Genèse. La Vulgate est désormais à vous pour la vie."
+   },
+   {
+    "label_fr": "Summarium · Résumé",
+    "html_fr": "<p>Vous pouvez désormais lire la Vulgate. Le latin de saint Jérôme est à votre portée ; c’est la Bible même dans laquelle les saints et les savants ont prié pendant mille ans.</p>"
+   }
+  ]
+ }
+}

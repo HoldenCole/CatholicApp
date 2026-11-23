@@ -107,14 +107,15 @@ class FrenchOverlayTest {
     }
 
     @Test
-    fun whatFrenchLacksStaysEnglishAndEnglishComesBack() {
+    fun theLearningPagesAreInFrenchAndEnglishComesBack() {
         ContentStore.initFromDirectory(assets)
         ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
         val english = ContentStore.properForDate(adventSunday, MissalRite.RITE_1962)!!.collect!!.eng
         val saint = ContentStore.saints.first().title
+        val article = ContentStore.reference.first().summary
         ContentStore.applyVernacular(VernacularLanguage.FRENCH)
-        // no French saints' pages yet: the English stays
-        assertEquals(saint, ContentStore.saints.first().title)
+        assertNotEquals(saint, ContentStore.saints.first().title)
+        assertNotEquals(article, ContentStore.reference.first().summary)
         assertNotEquals(english, ContentStore.properForDate(adventSunday, MissalRite.RITE_1962)!!.collect!!.eng)
         ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
         assertEquals(english, ContentStore.properForDate(adventSunday, MissalRite.RITE_1962)!!.collect!!.eng)

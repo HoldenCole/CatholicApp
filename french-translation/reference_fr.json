@@ -1,0 +1,304 @@
+{
+ "cal-advent": {
+  "title_fr": "Avent",
+  "summary_fr": "Le temps liturgique de préparation à la Nativité de Notre-Seigneur Jésus-Christ. Il commence quatre dimanches avant Noël et s’achève à la Vigile de Noël. Un temps d’attente joyeuse, de préparation pénitentielle et de renouveau spirituel.",
+  "history_fr": "L’observance de l’Avent remonte au moins au IVe siècle. Le concile de Tours (567) prescrivit un jeûne trois fois par semaine, de la fête de saint Martin (11 novembre) jusqu’à Noël.",
+  "practice_fr": "Prière, jeûne et aumône plus assidus. Assistez aux Messes Rorate, célébrées de grand matin à la lueur des cierges. La couronne de l’Avent, avec ses quatre bougies, marque le passage des semaines.",
+  "notes_fr": "On porte des ornements violets. Le Gloria est omis. L’orgue se tait, sauf pour soutenir le chant. Le troisième dimanche, Gaudete, permet les ornements roses.",
+  "scripture_eng_fr": "Une vierge concevra, et elle enfantera un fils, auquel on donnera le nom d’Emmanuel."
+ },
+ "cal-christmas": {
+  "title_fr": "Temps de Noël",
+  "summary_fr": "Le temps qui célèbre la naissance de Notre-Seigneur, de la Vigile de Noël (24 décembre) au 2 février (la Chandeleur, Purification de la Sainte Vierge). Douze jours de fête qui culminent à l’Épiphanie.",
+  "history_fr": "La fête de la Nativité fut fixée au 25 décembre dès le IVe siècle, supplantant la fête païenne du Sol Invictus. L’octave de Noël comprend les saints Innocents (28 décembre), saint Étienne (26 décembre) et saint Jean (27 décembre).",
+  "practice_fr": "Les fidèles chantent des noëls, dressent la crèche de la Nativité, assistent à la Messe de minuit et gardent dans la joie l’octave de Noël. Les ornements de Noël se portent jusqu’à la Chandeleur.",
+  "notes_fr": "Ornements blancs pendant tout ce temps. Le Gloria et le Te Deum reviennent. L’antienne mariale Alma Redemptoris Mater se chante à Complies.",
+  "scripture_eng_fr": "Il vous est né aujourd’hui un Sauveur, qui est le Christ Seigneur."
+ },
+ "cal-lent": {
+  "title_fr": "Carême",
+  "summary_fr": "Quarante jours de préparation pénitentielle à Pâques, du mercredi des Cendres au Samedi saint. Un temps de jeûne, d’abstinence, de prière plus assidue et d’aumône, en mémoire des quarante jours de Notre-Seigneur au désert.",
+  "history_fr": "Le jeûne de quarante jours est attesté dès le IVe siècle. Le mot anglais « Lent » vient de l’anglo-saxon lencten (printemps). Le Code de droit canonique de 1917 (en vigueur en 1962) impose le jeûne du Carême aux fidèles de 21 à 59 ans.",
+  "practice_fr": "Faites l’aumône, priez davantage, jeûnez et gardez l’abstinence. Assistez à la Messe chaque jour lorsque c’est possible. Faites le Chemin de Croix, surtout le vendredi. Faites une bonne confession avant Pâques.",
+  "notes_fr": "Ornements violets. Le Gloria et l’Alléluia sont supprimés. L’orgue se tait, sauf pour soutenir le chant. Les images et les crucifix sont voilés à partir du dimanche de la Passion.",
+  "scripture_eng_fr": "Convertissez-vous à Moi de tout votre cœur, dans le jeûne, et dans les larmes, et dans les lamentations."
+ },
+ "cal-holyweek": {
+  "title_fr": "Semaine sainte",
+  "summary_fr": "La semaine la plus sainte de l’année liturgique, du dimanche des Rameaux au Samedi saint. Elle renferme le Triduum pascal — Jeudi saint, Vendredi saint et Samedi saint —, durant lequel sont commémorées la Passion, la Mort et la Résurrection de Notre-Seigneur.",
+  "history_fr": "L’observance de la Semaine sainte remonte aux premiers siècles. Les rites du Triduum furent réformés en 1955 sous Pie XII, puis de nouveau en 1962.",
+  "practice_fr": "Assistez à toutes les cérémonies auxquelles vous pouvez prendre part : la procession du dimanche des Rameaux, la Messe chrismale, la Messe de la Cène du Seigneur avec le lavement des pieds, la liturgie du Vendredi saint avec l’adoration de la Croix, la Vigile pascale. Gardez un strict silence depuis le Gloria du Jeudi saint jusqu’à la Vigile.",
+  "notes_fr": "Rouge pour la bénédiction des rameaux et la procession du dimanche des Rameaux, puis violet pour la Messe ; blanc le Jeudi saint ; noir le Vendredi saint (violet pour le rite de la communion) ; le tabernacle reste vide depuis la fin de la Messe de la Cène du Seigneur jusqu’à la Vigile pascale.",
+  "scripture_eng_fr": "Il s’est abaissé lui-même, se faisant obéissant jusqu’à la mort, et la mort sur la croix."
+ },
+ "cal-easter": {
+  "title_fr": "Temps pascal",
+  "summary_fr": "Les cinquante jours qui vont du dimanche de Pâques à la Pentecôte, pendant lesquels l’Église célèbre la Résurrection de Notre-Seigneur. L’Alléluia est rétabli et chanté à maintes reprises ; le cierge pascal brûle à toutes les Messes.",
+  "history_fr": "Le Temps pascal est plus ancien que le Carême et remonte aux premiers jours de l’Église. L’octave de Pâques était considérée comme un seul et même jour de joie.",
+  "practice_fr": "Recevez la sainte Communion (le devoir pascal oblige à communier au moins une fois entre le mercredi des Cendres et le dimanche de la Trinité). Saluez-vous les uns les autres par ces mots : « Le Christ est ressuscité ; il est vraiment ressuscité. »",
+  "notes_fr": "Ornements blancs pendant tout ce temps. L’Alléluia est ajouté aux antiennes. L’antienne mariale est le Regina Caeli. La Pentecôte clôt ce temps avec des ornements rouges.",
+  "scripture_eng_fr": "Il n’est point ici, car il est ressuscité, comme il l’avait dit."
+ },
+ "cal-ordinary": {
+  "title_fr": "Temps per annum",
+  "summary_fr": "Les semaines en dehors des grands temps liturgiques : le Temps après l’Épiphanie (du 14 janvier (après la Commémoraison du Baptême de Notre-Seigneur) à la Septuagésime) et le Temps après la Pentecôte (du dimanche de la Trinité au premier dimanche de l’Avent). Dans le calendrier de 1962, on les compte en dimanches après l’Épiphanie et en dimanches après la Pentecôte.",
+  "history_fr": "L’expression « Temps ordinaire » est une création du Novus Ordo ; traditionnellement, ces semaines étaient dites simplement « après l’Épiphanie » ou « après la Pentecôte ». Le calendrier de 1962 compte habituellement 24 dimanches après la Pentecôte.",
+  "practice_fr": "Un temps de croissance spirituelle régulière, de Messe quotidienne, de Rosaire et d’affermissement dans la vertu. Beaucoup de fêtes importantes tombent dans cette période : la Fête-Dieu, le Sacré-Cœur, l’Assomption et la Toussaint.",
+  "notes_fr": "Ornements verts. Antienne mariale : Salve Regina (de la Trinité à l’Avent) ; Ave Regina Caelorum (de la Chandeleur au Mercredi saint)."
+ },
+ "cal-septuagesima": {
+  "title_fr": "Septuagésime (avant-Carême)",
+  "summary_fr": "Le temps de deux semaines et demie qui prépare au Carême : les dimanches de la Septuagésime, de la Sexagésime et de la Quinquagésime, du troisième dimanche avant le mercredi des Cendres jusqu’au Mardi gras.",
+  "history_fr": "Établi à Rome dès le VIe siècle, ce temps tire ses noms des nombres ronds de soixante-dix, soixante et cinquante jours avant Pâques. Il fut supprimé dans le calendrier de 1969, mais il demeure dans tous les livres traditionnels.",
+  "practice_fr": "Ornements violets ; le Gloria est omis le dimanche ; l’Alléluia est entièrement délaissé à partir des premières Vêpres de la Septuagésime — un trait le remplace à la Messe, et « Laus tibi, Domine, Rex aeternae gloriae » le remplace à l’Office. Le jeûne n’est pas encore exigé ; ce temps invite à entrer peu à peu dans la pénitence.",
+  "notes_fr": "L’adieu à l’Alléluia (la « depositio ») était célébré avec une véritable cérémonie dans les usages médiévaux. Les Messes des dimanches — les ouvriers de la vigne, le semeur, la guérison de l’aveugle — forment une catéchèse sur la grâce avant que ne commence le jeûne du Carême.",
+  "scripture_eng_fr": "Courez de même, afin de le remporter."
+ },
+ "cal-ranks": {
+  "title_fr": "Rang des fêtes",
+  "summary_fr": "Selon les rubriques de 1960, les fêtes sont de première, de deuxième ou de troisième classe ; les célébrations moindres sont gardées comme mémoires, et les jours liturgiques eux-mêmes sont classés de la Ire à la IVe classe.",
+  "history_fr": "Ce système est issu de la simplification, opérée en 1960 sous Jean XXIII, de l’ancien système des doubles de première classe, doubles de deuxième classe, doubles majeurs, doubles, semi-doubles et simples.",
+  "practice_fr": "Le rang du jour détermine l’Office et la Messe que l’on dit. Les fêtes de première classe l’emportent sur presque tout et ont un Office propre. Celles de deuxième classe ont un Office propre, mais cèdent aux fêtes de première classe.",
+  "notes_fr": "Les fêtes de première classe sont imprimées en capitales dans les ordos traditionnels et sont célébrées avec la plus grande solennité."
+ },
+ "mass-mass": {
+  "title_fr": "La sainte Messe",
+  "summary_fr": "Le renouvellement non sanglant du Sacrifice du Calvaire ; la source et le sommet de la vie chrétienne. À la Messe, Notre-Seigneur lui-même est à la fois le Prêtre qui offre et la Victime offerte, par le ministère du prêtre ordonné.",
+  "history_fr": "Le rite romain de la Messe s’est formé peu à peu au cours du premier millénaire et fut codifié par le pape saint Pie V en 1570, après le concile de Trente. Le Missale Romanum de 1962 conserve ce rite dans sa dernière forme traditionnelle.",
+  "practice_fr": "L’assistance à la Messe les dimanches et les fêtes d’obligation est une obligation grave. Recevez dignement Notre-Seigneur, en état de grâce, après avoir observé le jeûne eucharistique (trois heures selon la discipline de Pie XII de 1957 ; depuis minuit selon l’ancienne règle de 1917), ou au moins une heure de jeûne (discipline actuelle). Faites une action de grâces convenable après la Messe.",
+  "notes_fr": "La Messe comprend deux parties principales : la Messe des catéchumènes (des Prières au bas de l’autel jusqu’au Credo) et la Messe des fidèles (de l’Offertoire au dernier Évangile). Le Canon se dit à voix basse.",
+  "scripture_eng_fr": "Car toutes les fois que vous mangez ce pain et que vous buvez ce calice, vous annoncez la mort du Seigneur, jusqu’à ce qu’il vienne."
+ },
+ "mass-baptism": {
+  "title_fr": "Le Baptême",
+  "summary_fr": "Le premier des sept sacrements, par lequel le péché originel est remis et l’âme régénérée à la vie de la grâce. Le Baptême est nécessaire au salut. Il imprime un caractère spirituel ineffaçable.",
+  "history_fr": "Institué par Notre-Seigneur après sa Résurrection (Mt 28, 19). Le rite romain traditionnel comprend des exorcismes, l’imposition du sel, l’Ephphatha et une triple infusion d’eau.",
+  "practice_fr": "Les petits enfants doivent être baptisés le plus tôt possible. Le ministre ordinaire est le prêtre, mais, en danger de mort, toute personne peut baptiser en employant la forme correcte et avec l’intention requise.",
+  "notes_fr": "Forme : « Je te baptise au nom du Père, et du Fils, et du Saint-Esprit. » Matière : de l’eau naturelle versée sur la tête.",
+  "scripture_eng_fr": "Celui qui croira et sera baptisé sera sauvé."
+ },
+ "mass-confirmation": {
+  "title_fr": "La Confirmation",
+  "summary_fr": "Le sacrement par lequel les baptisés sont fortifiés par le Saint-Esprit pour confesser hardiment la foi. L’évêque oint le front avec le saint Chrême et dit : « Je te marque du signe de la Croix, et je te confirme par le Chrême du salut. »",
+  "history_fr": "L’imposition des mains est apostolique (Ac 8, 17). L’usage du saint Chrême remonte au moins au IIIe siècle. La Confirmation est traditionnellement conférée vers l’âge de raison ou plus tard.",
+  "practice_fr": "Tout catholique doit être confirmé. Le sacrement imprime un caractère et donne les sept dons du Saint-Esprit : Sagesse, Intelligence, Conseil, Force, Science, Piété et Crainte de Dieu.",
+  "scripture_eng_fr": "Alors ils leur imposaient les mains, et ils recevaient l’Esprit-Saint."
+ },
+ "mass-orders": {
+  "title_fr": "L’Ordre",
+  "summary_fr": "Le sacrement par lequel un homme est configuré au Christ Souverain Prêtre et reçoit le pouvoir d’offrir le saint Sacrifice de la Messe et de remettre les péchés. Ses trois degrés sont ceux de diacre, de prêtre et d’évêque.",
+  "history_fr": "Institué par Notre-Seigneur à la Cène, lorsqu’il dit : « Faites ceci en mémoire de moi. » La succession apostolique conserve la lignée ininterrompue qui va des Douze à tout évêque validement ordonné aujourd’hui.",
+  "practice_fr": "Priez chaque jour pour les prêtres et pour les vocations. Les mains du prêtre sont consacrées pour offrir la Messe ; selon la tradition, les fidèles baisent les mains du prêtre nouvellement ordonné pour recevoir sa première bénédiction.",
+  "notes_fr": "Seul un homme baptisé peut recevoir validement le sacrement de l’Ordre. Ce sacrement imprime un caractère ineffaçable et confère des pouvoirs particuliers."
+ },
+ "mass-eucharist": {
+  "title_fr": "La sainte Eucharistie",
+  "summary_fr": "Le sacrement du Corps et du Sang, de l’Âme et de la Divinité de Notre-Seigneur Jésus-Christ, sous les apparences du pain et du vin. La sainte Eucharistie est la source et le sommet de la vie chrétienne. Le Christ y est vraiment, réellement et substantiellement présent ; non pas d’une manière purement symbolique, mais avec sa Personne tout entière. Elle est à la fois un sacrifice (la Messe) et un sacrement (la sainte Communion).",
+  "history_fr": "Instituée par Notre-Seigneur à la Cène, la veille de sa Passion : « Ceci est mon corps… Ceci est mon sang, le sang de la nouvelle alliance » (Mt 26, 26-28). Les Apôtres l’entendirent au sens littéral, comme le fit toute l’Église pendant quinze siècles, sans contestation. Le concile de Trente (1551) définit la doctrine de la transsubstantiation : la substance du pain et du vin est changée en la substance du Corps et du Sang du Christ, tandis que demeurent les apparences (les accidents).",
+  "practice_fr": "Pour recevoir dignement la sainte Communion : (1) Soyez en état de grâce ; si vous avez conscience d’un péché mortel, confessez-vous d’abord. (2) Observez le jeûne eucharistique : une heure avant de communier (l’eau et les médicaments exceptés). Sous le Code de 1917, le jeûne commençait à minuit. (3) Approchez-vous de l’autel avec respect. À la Messe traditionnelle, on reçoit la Communion à genoux, sur la langue, de la main du prêtre. (4) Après avoir communié, regagnez votre place et consacrez un temps à l’action de grâces ; au moins 10-15 minutes. Saint Alphonse de Liguori tenait l’action de grâces après la Communion pour plus importante que la préparation qui la précède.",
+  "notes_fr": "L’Église oblige les fidèles à recevoir la sainte Communion au moins une fois l’an, au temps pascal (le « devoir pascal »). La Communion quotidienne est encouragée pour ceux qui y sont bien disposés. La communion spirituelle — le désir de communier lorsqu’on ne le peut pas — confère elle aussi la grâce.",
+  "scripture_eng_fr": "Car ma chair est vraiment une nourriture, et mon sang est vraiment un breuvage. Celui qui mange ma chair et boit mon sang, demeure en moi, et moi en lui."
+ },
+ "mass-penance": {
+  "title_fr": "La Pénitence (Confession)",
+  "summary_fr": "Le sacrement par lequel les péchés commis après le Baptême sont remis par l’absolution d’un prêtre qui agit en la personne du Christ. On l’appelle aussi Confession (à cause de l’aveu des péchés) et Réconciliation (à cause du rétablissement de l’amitié avec Dieu). Le Christ donna ce pouvoir aux Apôtres le dimanche de Pâques : « Ceux à qui vous remettrez les péchés, ils leur seront remis » (Jn 20, 23).",
+  "history_fr": "Dans l’Église primitive, une pénitence publique était imposée pour les péchés graves, parfois durant des années. Dès le VIe siècle, les moines irlandais développèrent la confession privée telle que nous la connaissons aujourd’hui et en répandirent la pratique à travers l’Europe. Le IVe concile du Latran (1215) exigea la confession annuelle de ceux qui sont en état de péché mortel. Le concile de Trente définit les éléments essentiels du sacrement : la contrition, la confession, la satisfaction et l’absolution.",
+  "practice_fr": "Comment faire une bonne confession : (1) Examinez votre conscience à l’aide des dix commandements (voyez l’examen de conscience dans cette application). (2) Regrettez vos péchés ; la contrition parfaite (regret inspiré par l’amour de Dieu) ou la contrition imparfaite (regret inspiré par la crainte du châtiment) suffit avec le sacrement. (3) Confessez au prêtre tous vos péchés mortels, selon leur espèce et leur nombre. Il est recommandé de confesser aussi les péchés véniels, bien que ce ne soit pas obligatoire. (4) Acceptez la pénitence imposée. (5) Récitez l’<link target=\"prayer:actusContr\">Acte de contrition</link>. (6) Recevez l’absolution. (7) Accomplissez votre pénitence sans tarder. Fréquence : la confession mensuelle est le minimum recommandé par les directeurs spirituels ; la confession hebdomadaire est l’idéal pour ceux qui recherchent la sainteté.",
+  "notes_fr": "Le secret de la confession est absolu : un prêtre ne peut jamais révéler ce qui lui a été confessé, en aucune circonstance, pas même sous la menace de la mort. Telles ont été la loi et la pratique de l’Église depuis l’origine.",
+  "scripture_eng_fr": "Recevez l’Esprit-Saint. Ceux à qui vous remettrez les péchés, ils leur seront remis ; et ceux à qui vous les retiendrez, ils leur seront retenus."
+ },
+ "mass-matrimony": {
+  "title_fr": "Le Mariage",
+  "summary_fr": "Le sacrement par lequel un homme baptisé et une femme baptisée s’unissent pour la vie par un mariage légitime et reçoivent la grâce de remplir les devoirs de leur état. Les époux sont l’un pour l’autre les ministres du sacrement ; le prêtre est le témoin officiel de l’Église. Le mariage chrétien est indissoluble : ce que Dieu a uni, aucun pouvoir humain ne peut le séparer.",
+  "history_fr": "Notre-Seigneur a élevé le mariage naturel au rang de sacrement, le rétablissant dans sa dignité première, tel que Dieu l’avait créé en Éden. Il accomplit son premier miracle aux noces de Cana (Jn 2, 1-11). Saint Paul enseigne que le mariage signifie l’union du Christ et de son Église (Ep 5, 25-32). Le concile de Trente exigea, pour la validité, la présence d’un prêtre et de deux témoins (décret Tametsi, 1563).",
+  "practice_fr": "Préparation au mariage catholique : (1) Prenez contact avec votre curé longtemps à l’avance (6-12 mois). (2) Suivez la préparation au mariage exigée par le diocèse. (3) Recevez le sacrement de Pénitence avant les noces. (4) La Messe de mariage en est le cadre idéal, les époux y recevant ensemble la sainte Communion. (5) Les futurs époux devraient prier ensemble chaque jour dès les fiançailles. La bénédiction nuptiale traditionnelle demande à Dieu de donner à l’épouse les vertus des saintes femmes de l’Écriture et de bénir les époux en leur accordant des enfants.",
+  "notes_fr": "Les trois biens du mariage (saint Augustin) : les enfants (proles), la fidélité (fides) et le lien sacramentel (sacramentum). La contraception artificielle est un péché grave ; la régulation naturelle des naissances, pratiquée pour des raisons sérieuses, respecte le dessein de Dieu.",
+  "scripture_eng_fr": "Dès lors, ce que Dieu a uni, que l’homme ne le sépare pas."
+ },
+ "mass-anointing": {
+  "title_fr": "L’Onction des malades",
+  "summary_fr": "Le sacrement par lequel un prêtre oint d’huile sainte les personnes gravement malades ou mourantes, en priant pour leur guérison spirituelle et corporelle. Appelé traditionnellement Extrême-Onction (« dernière onction »), il prépare l’âme à la mort en remettant les péchés (surtout ceux que la personne ne peut pas confesser), en la fortifiant contre les dernières tentations et, parfois, en rendant la santé du corps, si Dieu le veut.",
+  "history_fr": "Ce sacrement a son origine dans la pratique des Apôtres : « Quelqu’un parmi vous est-il malade ? Qu’il appelle les prêtres de l’Église, et que ceux-ci prient sur lui, en l’oignant d’huile au nom du Seigneur » (Jc 5, 14). Le concile de Trente l’a confirmé comme un véritable sacrement, institué par le Christ et promulgué par saint Jacques. Dans le rite traditionnel, le prêtre oint les cinq sens (les yeux, les oreilles, les narines, la bouche, les mains et, facultativement, les pieds), en demandant à Dieu le pardon des péchés commis par chacun d’eux.",
+  "practice_fr": "Quand appeler le prêtre : n’attendez pas que la personne soit inconsciente, ni le tout dernier moment. Le sacrement porte le plus de fruit lorsqu’il est reçu en pleine connaissance et avec dévotion. Appelez le prêtre lorsqu’une personne est gravement malade, doit subir une opération importante ou se trouve en danger de mort en raison de l’âge ou de la maladie. Le prêtre entendra la confession (si possible), administrera l’Onction et donnera le saint Viatique (la dernière Communion). Gardez des cierges bénits et de l’eau bénite au chevet du malade.",
+  "notes_fr": "La grâce de l’Extrême-Onction comprend : la rémission des péchés véniels et des restes du péché ; la rémission du péché mortel si la personne est contrite mais ne peut se confesser ; la force contre le désespoir et les tentations du démon dans la dernière agonie ; la santé du corps, si elle est utile au salut.",
+  "scripture_eng_fr": "Quelqu’un parmi vous est-il malade ? Qu’il appelle les prêtres de l’Église, et que ceux-ci prient sur lui, en l’oignant d’huile au nom du Seigneur."
+ },
+ "pray-vocal": {
+  "title_fr": "Prière vocale",
+  "summary_fr": "La prière vocale est celle que l’on dit, à haute voix ou en silence, avec des paroles fixées, qu’elles aient été composées par l’Église (prière liturgique) ou par les saints et les fidèles. C’est la forme de prière la plus commune et la plus accessible ; elle fixe l’esprit par des formules familières. Le Notre Père, enseigné par le Christ lui-même, en est le modèle le plus élevé.",
+  "history_fr": "Notre-Seigneur apprit à ses disciples à prier avec des paroles : « Lorsque vous priez, dites : Notre Père… » (Lc 11, 2). Les Apôtres continuèrent la tradition des heures liturgiques juives, en y ajoutant des prières proprement chrétiennes. Au fil des siècles, l’Église a constitué un riche trésor de prières vocales : l’Ave Maria, le Rosaire, les litanies, les neuvaines et les prières de la Messe. Sainte Thérèse d’Avila enseignait que la prière vocale, faite avec attention, peut devenir elle-même contemplation.",
+  "practice_fr": "Comment bien prier vocalement : (1) Choisissez une prière, comme le Notre Père, le Je vous salue Marie ou une prière de cette application. (2) Avant de commencer, mettez-vous en la présence de Dieu : « Seigneur, me voici devant vous. » (3) Prononcez chaque mot posément, en vous arrêtant pour en considérer le sens. Ne vous hâtez pas. (4) Si vous êtes distrait, revenez doucement aux paroles. (5) Terminez en remerciant Dieu du temps passé avec lui. Conseil : prier à voix haute, même tout bas, aide à rester attentif. Se mettre à genoux ou se tenir debout y ajoute le respect du corps.",
+  "notes_fr": "Prières recommandées aux débutants : l’Offrande de la journée, l’Angélus (à midi), les trois Je vous salue Marie (au coucher) et le Bénédicité. Établissez un rythme de courtes prières tout au long de la journée avant d’en essayer de plus longues."
+ },
+ "pray-mental": {
+  "title_fr": "Oraison mentale",
+  "summary_fr": "L’oraison mentale est l’élévation silencieuse de l’esprit et du cœur vers Dieu, sans paroles fixées, pour le connaître, l’aimer et se résoudre à le servir. C’est un entretien intérieur avec Dieu, qui met en œuvre les facultés de la mémoire, de l’intelligence et de la volonté. Tous les saints insistent sur sa nécessité : « Celui qui ne pratique pas l’oraison mentale n’a pas besoin de démon pour l’emporter en enfer » (sainte Thérèse d’Avila).",
+  "history_fr": "Les Pères du désert pratiquaient la prière intérieure dès le IIIe siècle. Saint Jean Cassien apporta leurs méthodes en Occident. Au XVIe siècle, saint Ignace de Loyola systématisa la méditation dans ses Exercices spirituels, et sainte Thérèse d’Avila en décrivit les étapes dans Le Château intérieur. Saint François de Sales la rendit accessible aux laïcs dans l’Introduction à la vie dévote. La méthode sulpicienne, élaborée pour la formation des séminaristes, reste largement en usage.",
+  "practice_fr": "Comment faire oraison (méthode sulpicienne) : (1) Préparation (2-3 min) : mettez-vous en la présence de Dieu. Rappelez-vous qu’il vous voit, qu’il vous aime et qu’il est attentif à vous. Demandez la lumière du Saint-Esprit. (2) Lecture : lisez lentement un court passage de l’Écriture ou d’un livre spirituel. Arrêtez-vous lorsqu’une phrase vous frappe. (3) Méditation (10-15 min) : considérez la vérité que vous avez lue. Demandez-vous : que signifie-t-elle ? Que Dieu veut-il me faire comprendre ? Servez-vous de votre imagination pour vous placer dans la scène, s’il s’agit d’un passage de l’Évangile. (4) Affections : laissez votre cœur répondre par des actes d’amour, de reconnaissance, de regret, de confiance ou de demande. Parlez à Dieu librement. (5) Résolution : choisissez une chose concrète que vous ferez aujourd’hui en réponse. Qu’elle soit petite et précise. (6) Conclusion : remerciez Dieu. Demandez la grâce de tenir votre résolution. Récitez un Notre Père. Conseil : commencez par 15 minutes chaque jour. Le matin est le meilleur moment. Une église silencieuse ou un coin de votre chambre, avec un crucifix, vous y aidera.",
+  "notes_fr": "Si vous ne ressentez rien pendant l’oraison, ne vous découragez pas. La sécheresse est normale, et souvent un signe de progrès. Demeurez simplement devant Dieu dans la foi. « La prière n’est pas affaire de sentiment, mais de volonté » (saint Thomas d’Aquin). Soyez fidèle à votre rendez-vous avec Dieu, qu’il y ait ou non des consolations."
+ },
+ "pray-contemplation": {
+  "title_fr": "Contemplation",
+  "summary_fr": "La contemplation est un regard simple et aimant porté sur Dieu et sur les choses divines. C’est un don du Saint-Esprit qui, au-delà du raisonnement et des paroles, fait entrer dans l’expérience directe de la présence de Dieu. Si la contemplation infuse est un don gratuit de Dieu, l’âme peut s’y disposer par la méditation fidèle, la mortification et l’humilité.",
+  "history_fr": "La tradition contemplative va des Apôtres, par les Pères du désert, jusqu’aux grands mystiques carmes et dominicains. Saint Grégoire le Grand distingua la vie active et la vie contemplative. Saint Jean de la Croix décrivit les nuits obscures par lesquelles l’âme passe pour parvenir à l’union divine. Saint Thomas d’Aquin enseigna que la contemplation est l’activité la plus haute de la personne humaine, un avant-goût de la vision béatifique.",
+  "practice_fr": "Comment vous disposer à la contemplation : (1) Soyez fidèle à l’oraison mentale quotidienne. La contemplation naît normalement de la méditation régulière, et non d’étapes brûlées. (2) Simplifiez : si, pendant l’oraison, vous sentez les paroles s’effacer et qu’il reste une paisible conscience de la présence de Dieu, ne vous forcez pas à revenir au raisonnement. Reposez-vous dans cette conscience. C’est le commencement de la contemplation. (3) L’oraison de simple regard : regardez le crucifix ou le tabernacle. Ne dites rien. Laissez Dieu parler. S’il semble se taire, demeurez quand même. (4) Lisez les mystiques : Le Nuage de l’inconnaissance, Le Château intérieur (Thérèse), La Nuit obscure (Jean de la Croix). (5) Cherchez la direction spirituelle d’un prêtre expérimenté dans la vie intérieure. Signes que Dieu vous appelle à la contemplation (selon saint Jean de la Croix) : vous ne pouvez plus méditer comme auparavant ; vous éprouvez une attention générale et amoureuse à Dieu ; vous préférez la solitude et le silence.",
+  "notes_fr": "La contemplation n’est pas réservée aux moines et aux moniales. Le concile Vatican II a affirmé l’appel universel à la sainteté. Beaucoup de laïcs reçoivent ce don dans la vie ordinaire. La disposition essentielle n’est ni l’intelligence ni le savoir, mais l’humilité et le désir de Dieu."
+ },
+ "pray-lectio": {
+  "title_fr": "Lectio Divina",
+  "summary_fr": "La Lectio Divina (« lecture divine ») est l’antique pratique monastique de la prière avec la Sainte Écriture. Au lieu d’étudier la Bible pour s’instruire, la lectio l’aborde comme un entretien vivant avec Dieu, qui parle par sa Parole inspirée. Cette pratique comporte quatre étapes traditionnelles, parfois appelées les « quatre échelons de l’échelle qui mène au ciel ».",
+  "history_fr": "Cette pratique remonte à Origène (IIIe siècle) et fut systématisée par Guigues II, chartreux du XIIe siècle, qui décrivit les quatre étapes comme une échelle : « La lecture cherche, la méditation trouve, la prière demande, la contemplation reçoit. » Saint Benoît lui donna une place centrale dans la vie monastique par sa Règle. Elle fut la principale manière d’aborder l’Écriture pendant plus de mille ans, avant l’essor de l’exégèse universitaire.",
+  "practice_fr": "Comment pratiquer la Lectio Divina : (1) Lectio (lecture) : choisissez un court passage de l’Écriture (une scène de l’Évangile, un psaume, une épître). Lisez-le lentement, deux ou trois fois. Laissez un mot ou une phrase retenir votre attention. Arrêtez-vous là. (2) Meditatio (méditation) : retournez ce mot ou cette phrase dans votre esprit. Que Dieu vous dit-il par là ? En quoi cela touche-t-il votre vie aujourd’hui ? Ruminez-le comme une nourriture de l’âme. (3) Oratio (prière) : répondez à Dieu du fond du cœur. Que ce passage vous porte-t-il à lui dire ? Louange, demande, repentir, action de grâces, abandon ? Parlez librement. (4) Contemplatio (contemplation) : laissez les mots s’effacer. Reposez-vous en silence en la présence de Dieu, en laissant la vérité reçue pénétrer profondément. Demeurez-y aussi longtemps que dure ce silence. Exemple avec Luc 1, 38 (« Voici la servante du Seigneur ; qu’il me soit fait selon votre parole ») : Lectio : lisez lentement. Le mot « servante » vous arrête. Meditatio : Marie se dit servante. À quoi ressemble un abandon total dans ma vie ? Où est-ce que je résiste à la volonté de Dieu ? Oratio : « Seigneur, je veux dire oui comme elle. Venez en aide à ma résistance. Faites de moi un serviteur. » Contemplatio : demeurez en silence avec le oui de Marie. Laissez-le devenir le vôtre. Conseil : 20-30 minutes. Les catholiques traditionnels se serviront de la Vulgate ou d’une traduction faite sur elle (Fillion).",
+  "notes_fr": "La Lectio Divina peut se pratiquer avec n’importe quel livre de l’Écriture, mais les Évangiles et les Psaumes sont les points de départ les plus riches. Certains ajoutent une cinquième étape, Actio (action), en se demandant : que ferai-je autrement aujourd’hui à la suite de cette rencontre avec la Parole de Dieu ?"
+ },
+ "pray-rosary": {
+  "title_fr": "Le Rosaire",
+  "summary_fr": "Le très saint Rosaire est une dévotion qui unit la prière vocale et l’oraison mentale : les fidèles y méditent les mystères de la vie du Christ et de sa sainte Mère tout en récitant des dizaines de Je vous salue Marie. C’est la dévotion catholique la plus répandue après la Messe, recommandée par tous les papes depuis des siècles et associée à d’innombrables miracles, conversions et victoires.",
+  "history_fr": "La tradition attribue le Rosaire à saint Dominique, qui le reçut de Notre-Dame au temps de l’hérésie albigeoise (XIIIe siècle). L’ordre dominicain le répandit dans toute l’Europe. Le pape saint Pie V attribua au Rosaire la victoire chrétienne à la bataille de Lépante (1571) et institua en action de grâces la fête de Notre-Dame de la Victoire, que Grégoire XIII renomma Notre-Dame du Rosaire. Tous les papes l’ont recommandé depuis lors. Notre-Dame de Fatima (1917) a expressément demandé la récitation quotidienne du Rosaire pour la paix.",
+  "practice_fr": "Comment réciter le Rosaire : (1) Faites le signe de la Croix et récitez le Symbole des Apôtres sur le crucifix. (2) Dites un Notre Père sur le premier gros grain. (3) Dites trois Je vous salue Marie sur les trois grains suivants (pour la foi, l’espérance et la charité). (4) Dites le Gloire au Père. (5) Annoncez le premier mystère. Arrêtez-vous pour en considérer le sens. (6) Dites un Notre Père, dix Je vous salue Marie et un Gloire au Père pour chaque dizaine. (7) Après chaque dizaine, dites la prière de Fatima. (8) Après les cinq dizaines, dites le Salve Regina (Salut, ô Reine). La clé d’un Rosaire fructueux est de méditer les mystères, et non de se borner à réciter les paroles. Que chaque dizaine soit une fenêtre ouverte sur la vie du Christ. Répartition traditionnelle des mystères : joyeux (lundi/jeudi), douloureux (mardi/vendredi), glorieux (mercredi/samedi/dimanche).",
+  "notes_fr": "Parmi les quinze promesses de Notre-Dame à ceux qui récitent fidèlement le Rosaire : une protection spéciale, des grâces signalées, une puissante armure contre l’enfer, le progrès dans la vertu et la grâce d’une bonne mort. Le Rosaire en famille est particulièrement puissant : « La famille qui prie unie reste unie » (P. Patrick Peyton).",
+  "scripture_eng_fr": "Voici, en effet, que désormais toutes les générations me diront bienheureuse."
+ },
+ "dev-sacred-heart": {
+  "title_fr": "Le Sacré-Cœur",
+  "summary_fr": "La dévotion au Cœur de chair de Jésus-Christ, symbole de son amour sans bornes pour les hommes, révélée en particulier à sainte Marguerite-Marie Alacoque à Paray-le-Monial en 1673-1675.",
+  "history_fr": "Cette dévotion a des racines patristiques, mais elle devint explicite dans les écrits de sainte Gertrude, de saint Jean Eudes et de sainte Marguerite-Marie. La fête fut étendue à l’Église universelle en 1856.",
+  "practice_fr": "Dévotion des premiers vendredis : neuf premiers vendredis consécutifs de communion réparatrice. Consécration de soi-même, de sa famille et de son foyer au Sacré-Cœur. Intronisation du Sacré-Cœur dans le foyer.",
+  "notes_fr": "La fête du Sacré-Cœur tombe le vendredi de la semaine qui suit la Fête-Dieu (le vendredi après le deuxième dimanche après la Pentecôte). Notre-Seigneur fit à sainte Marguerite-Marie douze promesses en faveur de ceux qui honorent son Cœur.",
+  "scripture_eng_fr": "Un des soldats lui ouvrit le côté avec une lance, et aussitôt il en sortit du sang et de l’eau."
+ },
+ "dev-adoration": {
+  "title_fr": "Adoration eucharistique",
+  "summary_fr": "L’adoration de Notre-Seigneur Jésus-Christ vraiment présent — corps, sang, âme et divinité — dans le Très Saint Sacrement de l’autel, soit au tabernacle, soit exposé dans l’ostensoir.",
+  "history_fr": "L’adoration eucharistique se développa au XIIIe siècle, en même temps que la Fête-Dieu (instituée en 1264). Des communautés d’adoration perpétuelle existent depuis le XVIIe siècle.",
+  "practice_fr": "Faites une heure sainte devant le Saint-Sacrement. Assistez au Salut du Saint-Sacrement. Faites la génuflexion en passant devant un tabernacle. Efforcez-vous de communier fréquemment, et même chaque jour, en état de grâce.",
+  "notes_fr": "Pendant l’exposition, toute activité ordinaire de la paroisse doit cesser. Un prêtre ou un diacre en surplis et étole donne la bénédiction du Saint-Sacrement."
+ },
+ "dev-scapular": {
+  "title_fr": "Le scapulaire du Mont-Carmel",
+  "summary_fr": "Un sacramental de l’ordre du Carmel : deux petits morceaux d’étoffe brune reliés par des cordons et portés sur les épaules. Signe de consécration à Notre-Dame et gage de sa protection.",
+  "history_fr": "Donné par Notre-Dame à saint Simon Stock, général des Carmes, en 1251. Elle promit que quiconque meurt revêtu de ce scapulaire « ne souffrira pas le feu éternel ».",
+  "practice_fr": "Faites-vous imposer le scapulaire par un prêtre. Portez-le jour et nuit. Gardez la chasteté selon votre état. Récitez chaque jour une prière mariale (le Petit Office de la Sainte Vierge, ou bien sept Notre Père, sept Je vous salue Marie et sept Gloire au Père).",
+  "notes_fr": "Le privilège sabbatin : Notre-Dame a promis de délivrer du Purgatoire, le premier samedi après leur mort, les âmes de ceux qui portent le scapulaire et en remplissent les conditions."
+ },
+ "dev-first-fridays": {
+  "title_fr": "Les premiers vendredis",
+  "summary_fr": "La dévotion qui consiste à recevoir la sainte Communion neuf premiers vendredis du mois consécutifs en l’honneur du Sacré-Cœur de Jésus, et à laquelle Notre-Seigneur a promis d’attacher la grâce de la persévérance finale.",
+  "history_fr": "Cette promesse fut faite par Notre-Seigneur à sainte Marguerite-Marie Alacoque ; c’est la douzième et la plus grande des promesses du Sacré-Cœur.",
+  "practice_fr": "Recevez dignement la sainte Communion neuf premiers vendredis consécutifs. Offrez la Messe en réparation au Sacré-Cœur. Beaucoup y ajoutent une heure sainte devant le Saint-Sacrement.",
+  "notes_fr": "La douzième promesse : « Je te promets, dans l’excessive miséricorde de mon Cœur, que son amour tout-puissant accordera à tous ceux qui communieront neuf premiers vendredis du mois, de suite, la grâce de la pénitence finale, ne mourant point dans ma disgrâce. »"
+ },
+ "dev-first-saturdays": {
+  "title_fr": "Les premiers samedis",
+  "summary_fr": "La dévotion réparatrice envers le Cœur Immaculé de Marie, pratiquée cinq premiers samedis consécutifs, demandée par Notre-Dame à Fatima en 1925 par l’intermédiaire de sœur Lucie.",
+  "history_fr": "Révélée à Pontevedra le 10 décembre 1925, en réponse aux blasphèmes et aux ingratitudes commis contre le Cœur Immaculé de Marie.",
+  "practice_fr": "Cinq premiers samedis consécutifs : la confession (dans les huit jours), la communion, cinq dizaines du Rosaire et quinze minutes de méditation sur les mystères ; le tout offert en réparation au Cœur Immaculé.",
+  "notes_fr": "Notre-Dame a promis d’assister à l’heure de la mort, avec toutes les grâces nécessaires au salut, ceux qui remplissent ces conditions."
+ },
+ "pen-fasting": {
+  "title_fr": "Le jeûne",
+  "summary_fr": "La discipline qui consiste à restreindre la nourriture par esprit de pénitence. Selon les règles de 1962, jeûner signifie prendre en un jour un seul repas complet et deux petites collations (qui, réunies, restent inférieures au repas principal). L’eau et les médicaments peuvent être pris librement.",
+  "history_fr": "Le jeûne est d’origine apostolique et patristique. La Loi mosaïque prescrivait de jeûner au jour de l’Expiation. Notre-Seigneur jeûna quarante jours au désert. L’Église a prescrit des jeûnes tout au long de l’histoire.",
+  "practice_fr": "Le Code de droit canonique de 1917 (en vigueur en 1962) oblige tous les catholiques de 21 à 59 ans au jeûne tous les jours de semaine du Carême, ainsi qu’aux Quatre-Temps et aux Vigiles de certaines fêtes. La discipline actuelle (postérieure à 1966) n’oblige que le mercredi des Cendres et le Vendredi saint.",
+  "notes_fr": "Les catholiques traditionnels suivent souvent, par dévotion, l’ancienne discipline, plus stricte : le jeûne tous les jours de semaine du Carême et aux Quatre-Temps."
+ },
+ "pen-abstinence": {
+  "title_fr": "L’abstinence",
+  "summary_fr": "La discipline qui consiste à s’abstenir de la chair des animaux à sang chaud par esprit de pénitence. Le poisson, les œufs, les laitages et les graisses d’animaux terrestres sont permis selon les règles traditionnelles.",
+  "history_fr": "L’abstinence du vendredi, en mémoire de la Passion, est observée depuis les temps apostoliques. Le Code de droit canonique de 1917 (en vigueur en 1962) prescrit l’abstinence tous les vendredis de l’année.",
+  "practice_fr": "Abstenez-vous de viande chaque vendredi (obligation perpétuelle). Pendant le Carême, abstenez-vous aussi le mercredi des Cendres, ainsi que les samedis si vous suivez la discipline traditionnelle du Code de 1917. L’abstinence commence à minuit et dure jusqu’à minuit.",
+  "notes_fr": "Elle oblige à partir de l’âge de 7 ans. Par « viande », on entend la chair des mammifères et des oiseaux ; les mammifères marins (baleines, marsouins) sont traditionnellement comptés parmi les poissons."
+ },
+ "pen-ember": {
+  "title_fr": "Les Quatre-Temps",
+  "summary_fr": "Quatre séries de trois jours (mercredi, vendredi et samedi), une à chaque saison de l’année, observées par le jeûne et l’abstinence pour consacrer chaque saison à Dieu et lui rendre grâces pour les fruits de la terre.",
+  "history_fr": "D’origine romaine, les Quatre-Temps sont observés depuis le IIIe siècle au moins. Ils tombent dans la semaine de la Sainte-Lucie (décembre), dans la première semaine de Carême, dans l’octave de la Pentecôte et après la fête de la Sainte Croix (septembre).",
+  "practice_fr": "Jeûnez et gardez l’abstinence chacun des jours des Quatre-Temps. Priez pour ceux qui vont être ordonnés ; les samedis des Quatre-Temps étaient les jours traditionnels de la collation des saints Ordres. Priez pour les prêtres et pour les vocations.",
+  "notes_fr": "Les Messes des Quatre-Temps ont des chants et des lectures propres, en rapport avec la saison de l’année."
+ },
+ "pen-vigils": {
+  "title_fr": "Les Vigiles",
+  "summary_fr": "La veille d’une grande fête, traditionnellement gardée par le jeûne et l’abstinence, en préparation spirituelle à la fête elle-même. Les Vigiles ont leur Messe et leur Office propres.",
+  "history_fr": "Les Vigiles tirent leur origine des veillées de prière qui duraient toute la nuit avant les grandes fêtes. Le jeûne y fut ajouté pour préparer le corps et l’âme à la célébration à venir.",
+  "practice_fr": "Traditionnellement observées comme jours de jeûne : les Vigiles de Noël, de la Pentecôte, de l’Assomption et de la Toussaint. Ceux qui suivent la discipline de 1962 gardent ces Vigiles comme jours de jeûne et d’abstinence.",
+  "notes_fr": "La Vigile pascale est la plus grande de toutes les vigiles ; la « mère de toutes les saintes vigiles » (saint Augustin)."
+ },
+ "sac-holywater": {
+  "title_fr": "L’eau bénite",
+  "summary_fr": "De l’eau bénite par un prêtre avec des prières d’exorcisme et de consécration, employée pour bénir les personnes, les lieux et les objets, pour la rémission du péché véniel et pour mettre en fuite les esprits mauvais.",
+  "history_fr": "L’usage de l’eau bénite est attesté dès les premiers siècles. Le rite traditionnel de la bénédiction de l’eau se trouve dans le Rituale Romanum.",
+  "practice_fr": "Signez-vous avec de l’eau bénite en entrant dans l’église. Ayez un bénitier à l’entrée de votre maison. Aspergez-en les pièces pour les protéger. Signez-vous avant de vous endormir.",
+  "notes_fr": "L’Asperges de la Messe dominicale est une aspersion des fidèles avec l’eau bénite, en souvenir du Baptême."
+ },
+ "sac-crucifix": {
+  "title_fr": "Les crucifix",
+  "summary_fr": "Une croix portant l’image (corpus) du Christ crucifié. L’image centrale de la dévotion chrétienne, placée dans chaque église, au-dessus de chaque autel et dans chaque foyer catholique.",
+  "history_fr": "Le crucifix s’imposa comme l’image chrétienne par excellence aux Ve et VIe siècles, remplaçant les représentations symboliques antérieures de la Croix.",
+  "practice_fr": "Mettez un crucifix bien en vue dans chaque pièce. Baisez le crucifix de votre chapelet en commençant et en terminant. Mettez-vous à genoux devant le crucifix pour prier.",
+  "notes_fr": "Les crucifix doivent être bénits par un prêtre avant d’être utilisés. Le crucifix bénit procure une indulgence plénière à l’heure de la mort, aux conditions ordinaires."
+ },
+ "sac-rosary": {
+  "title_fr": "Le chapelet (sacramental)",
+  "summary_fr": "Le chapelet lui-même, l’objet matériel : le cordon de grains qui sert à compter les prières de la dévotion du Rosaire. Bénit par un prêtre, c’est un sacramental auquel sont attachées de nombreuses indulgences.",
+  "history_fr": "Des instruments servant à compter les prières existaient dans le christianisme antique, et plus tôt encore dans des traditions non chrétiennes. La forme du Rosaire dominicain (15 dizaines) fut fixée au XVIe siècle.",
+  "practice_fr": "Faites bénir votre chapelet par un prêtre. Emportez-le avec vous. Portez-le sur vous ou gardez-le près de vous à l’heure de la mort.",
+  "notes_fr": "Un rosaire dominicain bénit par un prêtre dominicain comporte des indulgences supplémentaires, propres à l’Ordre."
+ },
+ "sac-medal": {
+  "title_fr": "La Médaille miraculeuse",
+  "summary_fr": "La médaille frappée après l’apparition de Notre-Dame à sainte Catherine Labouré, rue du Bac, à Paris, en 1830. L’avers montre Marie debout sur le globe, avec l’inscription « Ô Marie conçue sans péché, priez pour nous qui avons recours à vous ».",
+  "history_fr": "Notre-Dame apparut à sainte Catherine le 27 novembre 1830, lui montra le modèle de la médaille et demanda que l’on en fît frapper et distribuer. D’innombrables miracles s’ensuivirent ; de là son nom.",
+  "practice_fr": "Portez la médaille avec dévotion. Distribuez-la à ceux qui ont besoin de grâces. Récitez chaque jour la prière qui y est gravée.",
+  "notes_fr": "Porter la Médaille miraculeuse est considéré comme une petite consécration à l’Immaculée Conception."
+ },
+ "sac-candles": {
+  "title_fr": "Les cierges bénits",
+  "summary_fr": "Des cierges de cire d’abeille bénits par l’Église, employés à la Messe, aux funérailles, au chevet des malades et pendant les orages, comme protection contre le mal.",
+  "history_fr": "Les cierges sont bénits tout spécialement à la Chandeleur (2 février), fête de la Présentation, en souvenir des paroles de Siméon : « lumière pour éclairer les nations ».",
+  "practice_fr": "Recevez des cierges bénits à la Chandeleur et conservez-les chez vous. Allumez-en un pendant les orages. Allumez-en un au chevet des malades et des mourants. Deux cierges bénits sont allumés pour le Viatique.",
+  "notes_fr": "Les cierges employés à la Messe doivent être de pure cire d’abeille (au moins 51 % pour le cierge pascal et les cierges du maître-autel)."
+ },
+ "sac-incense": {
+  "title_fr": "L’encens",
+  "summary_fr": "Une résine odorante (l’oliban, tiré de l’arbre Boswellia) que l’on brûle sur des charbons pour produire une fumée d’agréable odeur. Employé dans la liturgie comme symbole de la prière qui monte vers Dieu et du culte dû au Christ présent sur l’autel.",
+  "history_fr": "L’encens est offert dans le culte divin depuis les temps de l’Ancien Testament (Ex 30, 7-8). Il fut adopté dans le culte chrétien au IVe siècle au plus tard.",
+  "practice_fr": "On l’emploie aux Messes solennelles et au Salut du Saint-Sacrement. Cinq grains d’encens sont fixés dans le cierge pascal à la Vigile pascale.",
+  "notes_fr": "Trois coups d’encensoir expriment la révérence due à l’autel, à la Croix et au Saint-Sacrement."
+ },
+ "sac-blessings": {
+  "title_fr": "Les bénédictions",
+  "summary_fr": "Prières de l’Église qui appellent la faveur et la protection de Dieu sur des personnes, des objets, des lieux ou des circonstances. Le Rituale Romanum contient des bénédictions pour presque tous les aspects de la vie catholique.",
+  "history_fr": "Les bénédictions liturgiques font partie de la vie de l’Église depuis l’origine. Le Rituale Romanum fut codifié après le concile de Trente et contient des centaines de bénédictions.",
+  "practice_fr": "Demandez des bénédictions au prêtre : pour les maisons, les voitures, les médailles, les objets de piété, la nourriture, les femmes enceintes, les enfants. Beaucoup de bénédictions sont des sacramentaux qui disposent l’âme à la grâce.",
+  "notes_fr": "La bénédiction du prêtre a sa puissance propre. Recevez avec respect la bénédiction du prêtre à la fin de la Messe."
+ },
+ "sac-exorcisms": {
+  "title_fr": "Les exorcismes",
+  "summary_fr": "Prières qui commandent aux esprits mauvais de se retirer. Les exorcismes mineurs se trouvent dans le rite du Baptême et dans de nombreuses bénédictions. L’exorcisme majeur (le cas d’une personne possédée) est réservé à un prêtre muni de la permission expresse de son évêque.",
+  "history_fr": "Notre-Seigneur chassa les démons (Mt 8, 28-34). Ce pouvoir fut donné aux Apôtres (Mt 10, 1) et, par eux, à l’Église. Le rite de l’exorcisme est conservé dans le Rituale Romanum.",
+  "practice_fr": "Les fidèles peuvent réciter la Prière à saint Michel et l’exorcisme de Léon XIII comme prières privées de protection. Seul un prêtre muni des pouvoirs requis peut accomplir l’exorcisme solennel.",
+  "notes_fr": "Le pape Léon XIII composa un court exorcisme et la prière à saint Michel après une vision des combats spirituels à venir."
+ },
+ "lat-pronunciation": {
+  "title_fr": "Prononciation",
+  "summary_fr": "La prononciation ecclésiastique du latin (la prononciation « à l’italienne ») diffère de la prononciation classique, ou restituée, enseignée dans les universités. Le latin ecclésiastique est la langue vivante du rite romain.",
+  "practice_fr": "A = « a » (comme dans « pas »), E = « è » (comme dans « mère »), I = « i » (comme dans « lit »), O = « o » (comme dans « note »), U = « ou » (comme dans « tout »). C devant e/i/y/ae/oe = « tch » (comme dans « tchèque »). G devant e/i = « dj ». Gn = « gn » (comme dans « agneau »). Ti devant une voyelle = « tsi ».",
+  "notes_fr": "Voyez l’onglet Schola (Schola Latina) pour des cours complets de prononciation et de grammaire."
+ },
+ "lat-grammar": {
+  "title_fr": "Grammaire élémentaire",
+  "summary_fr": "Le latin est une langue flexionnelle : les mots changent de forme pour indiquer leur fonction grammaticale (cas, nombre, genre, temps, mode). Il y a cinq déclinaisons pour les noms, quatre conjugaisons pour les verbes et six cas principaux (nominatif, génitif, datif, accusatif, ablatif, vocatif).",
+  "practice_fr": "Pour le Rosaire et la Messe, attachez-vous à reconnaître les formes courantes des prières. « Dominus » (le Seigneur) se distingue de « Domino » (au Seigneur) et de « Domini » (du Seigneur).",
+  "notes_fr": "L’onglet Schola propose des cours complets sur les déclinaisons, les conjugaisons et la lecture."
+ },
+ "lat-vocab": {
+  "title_fr": "Vocabulaire de la prière",
+  "summary_fr": "Les mots les plus courants de la Messe latine et du Rosaire : Dominus (Seigneur), Deus (Dieu), Pater (Père), Filius (Fils), Spiritus (Esprit), Sanctus (Saint), Maria (Marie), Jesus (Jésus), gratia (grâce), et (et), in (dans).",
+  "practice_fr": "Apprenez cinquante mots de prière et vous pourrez suivre quatre-vingts pour cent de la Messe. Les cartes mémoire, la répétition et la récitation du Rosaire en latin sont les méthodes traditionnelles."
+ },
+ "lat-abbrev": {
+  "title_fr": "Abréviations",
+  "summary_fr": "Abréviations courantes du Missel et du Bréviaire : ℣. (Versiculus, verset ; le célébrant), ℟. (Responsum, répons ; les fidèles), S. (Sacerdos / Sanctus), P. (Pater), M. (Minister).",
+  "notes_fr": "Le texte en rouge dans le Missel s’appelle « rubrique » (de ruber, rouge) et donne les indications à suivre. Le texte en noir est celui qui doit être dit à haute voix."
+ }
+}
