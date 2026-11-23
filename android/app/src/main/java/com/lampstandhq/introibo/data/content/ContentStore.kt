@@ -1452,7 +1452,15 @@ object ContentStore {
             } else {
                 val temporalKey = pick.temporal
                 if (temporalKey != null) {
-                    val tempOverrides = officeAssembler.temporalPropers[temporalKey]
+                    var tempOverrides = officeAssembler.temporalPropers[temporalKey]
+                    // August to November: the month-week Scripture keeps the
+                    // first nocturn (a resumed Sunday after Epiphany carries
+                    // its January lessons, which must not come back here).
+                    if (tempOverrides != null && template.slug == "matutinum") {
+                        OfficeAssembler.monthdayKey(ctx.date, rite)?.let { officeAssembler.temporalPropers[it] }?.let { md ->
+                            tempOverrides = OfficeAssembler.withMonthdayScripture(tempOverrides!!, md)
+                        }
+                    }
                     if (tempOverrides != null) {
                         layer(tempOverrides)
                     }

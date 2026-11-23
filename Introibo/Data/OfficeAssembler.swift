@@ -223,6 +223,69 @@ struct OfficeAssembler {
         return o
     }
 
+    /// Divinum Officium's `monthday` (Date.pm): the key of the Scripture
+    /// occurrens of August to November, "MMw-d" (month, week of the month,
+    /// weekday with Sunday 0), e.g. "083-2" for the Tuesday of the third
+    /// week of August; nil outside those months and from Advent. The first
+    /// week of a month is the one whose Sunday falls on the 1st-7th under
+    /// the 1960 rubrics, and the Sunday nearest the 1st in the older books.
+    /// The 1960 rubrics drop October's third week when its Sunday would
+    /// fall on the 18th-21st, and November is counted back from Advent so
+    /// its second week disappears (always under the 1960 rubrics, most
+    /// years in the older books). Kotlin mirror: OfficeAssembler.monthdayKey.
+    static func monthdayKey(_ date: Date, rite: MissalRite) -> String? {
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = TimeZone.current
+        let modern = rite == .rite1962
+        let comps = cal.dateComponents([.year, .month, .day], from: date)
+        guard let year = comps.year, let month = comps.month, month >= 7 else { return nil }
+        func doy(_ d: Date) -> Int { cal.ordinality(of: .day, in: .year, for: d) ?? 0 }
+        func dow(_ d: Date) -> Int { (cal.component(.weekday, from: d) - 1) }   // Sunday 0
+        func make(_ y: Int, _ m: Int, _ d: Int) -> Date { cal.date(from: DateComponents(year: y, month: m, day: d))! }
+        let today = doy(date)
+        var firstSunday = [Int](repeating: 0, count: 5)
+        var litMonth = 0
+        for m in 8...12 {
+            let first = make(year, m, 1)
+            let fdow = dow(first)
+            var fs = doy(first) - fdow
+            if fdow >= 4 || (fdow != 0 && modern) { fs += 7 }
+            firstSunday[m - 8] = fs
+            if today >= fs { litMonth = m } else { break }
+        }
+        if litMonth == 0 { return nil }
+        var advent = 0
+        if litMonth > 10 {
+            let christmas = make(year, 12, 25)
+            let cdow = dow(christmas)
+            advent = doy(christmas) - (cdow == 0 ? 7 : cdow) - 21
+            if today >= advent { return nil }
+        }
+        var week = (today - firstSunday[litMonth - 8]) / 7
+        if litMonth == 10 && modern && week >= 2 {
+            let octFirstSunday = cal.date(byAdding: .day, value: firstSunday[2] - 1, to: make(year, 1, 1))!
+            if cal.component(.day, from: octFirstSunday) >= 4 { week += 1 }
+        }
+        if litMonth == 11 && (week > 0 || modern) {
+            week = 4 - Int(floor(Double(advent - today - 1) / 7.0))
+            if modern && week == 1 { week = 0 }
+        }
+        return String(format: "%02d%d-%d", litMonth, week + 1, dow(date))
+    }
+
+    /// The month-week file's lessons and responsories of the first two
+    /// nocturns replace the week file's; everything else of the week file
+    /// (the Sunday's homily, antiphons, collect) stays, and the month file
+    /// only fills what the week file lacks.
+    static func withMonthdayScripture(_ temporal: [String: Hour.Part], monthday: [String: Hour.Part]) -> [String: Hour.Part] {
+        var out = monthday
+        for (k, v) in temporal { out[k] = v }
+        for (k, v) in monthday where k.range(of: "^(lectio[1-6]|responsory[1-7]|scriptura)$", options: .regularExpression) != nil {
+            out[k] = v
+        }
+        return out
+    }
+
     /// "pent10-3" → "pent10-0": the Sunday whose week the feria belongs to.
     static func precedingSundayKey(_ temporalKey: String) -> String? {
         guard let dashIdx = temporalKey.lastIndex(of: "-") else { return nil }
@@ -356,7 +419,15 @@ struct OfficeAssembler {
 
         let dayOverrides = weeklyPsalter[dayKey] ?? [:]
         let seasonOverrides = seasonalHymns[seasonKey] ?? [:]
-        let rawTemporalOverrides = temporalKeyEff.flatMap { temporalPropers[$0] } ?? [:]
+        var rawTemporalOverrides = temporalKeyEff.flatMap { temporalPropers[$0] } ?? [:]
+        // August to November: the Scripture of the first nocturn (and the
+        // Sunday's second) comes from Divinum Officium's month-week file
+        // ("083-2"), not from the week-after-Pentecost file.
+        if template.slug == "matutinum",
+           let mdKey = Self.monthdayKey(context.date, rite: rite),
+           let md = temporalPropers[mdKey] {
+            rawTemporalOverrides = Self.withMonthdayScripture(rawTemporalOverrides, monthday: md)
+        }
         var temporalOverrides = Self.remapProperOverrides(rawTemporalOverrides, hourSlug: template.slug)
 
         // Day-collect resolution. The collect of the day belongs to Matins,

@@ -83,7 +83,15 @@ class OfficeAssembler(
 
         val dayOverrides = weeklyPsalter[dayKey] ?: emptyMap()
         val seasonOverrides = seasonalHymns[seasonKey] ?: emptyMap()
-        val rawTemporalOverrides = temporalKeyEff?.let { temporalPropers[it] } ?: emptyMap()
+        val rawTemporalOverrides = run {
+            val temporal = temporalKeyEff?.let { temporalPropers[it] } ?: emptyMap()
+            if (template.slug != "matutinum") return@run temporal
+            // August to November: the Scripture of the first nocturn (and
+            // the Sunday's second) comes from Divinum Officium's month-week
+            // file ("083-2"), not from the week-after-Pentecost file.
+            val md = monthdayKey(context.date, rite)?.let { temporalPropers[it] } ?: return@run temporal
+            withMonthdayScripture(temporal, md)
+        }
         val temporalOverrides =
             remapProperOverrides(rawTemporalOverrides, template.slug).toMutableMap()
 
@@ -1114,6 +1122,68 @@ class OfficeAssembler(
                 }
             }
             return o
+        }
+
+        /**
+         * Divinum Officium's `monthday` (Date.pm): the key of the Scripture
+         * occurrens of August to November, "MMw-d" (month, week of the
+         * month, weekday with Sunday 0), e.g. "083-2" for the Tuesday of the
+         * third week of August; null outside those months and from Advent.
+         * The first week of a month is the one whose Sunday falls on the
+         * 1st-7th under the 1960 rubrics, and the Sunday nearest the 1st in
+         * the older books. The 1960 rubrics drop October's third week when
+         * its Sunday would fall on the 18th-21st, and November is counted
+         * back from Advent so its second week disappears (always under the
+         * 1960 rubrics, most years in the older books).
+         */
+        internal fun monthdayKey(date: java.time.LocalDate, rite: MissalRite): String? {
+            val modern = rite == MissalRite.RITE_1962
+            if (date.monthValue < 7) return null
+            val year = date.year
+            val doy = date.dayOfYear
+            val firstSunday = IntArray(5)
+            var litMonth = 0
+            for (m in 8..12) {
+                val first = java.time.LocalDate.of(year, m, 1)
+                val dow = first.dayOfWeek.value % 7
+                var fs = first.dayOfYear - dow
+                if (dow >= 4 || (dow != 0 && modern)) fs += 7
+                firstSunday[m - 8] = fs
+                if (doy >= fs) litMonth = m else break
+            }
+            if (litMonth == 0) return null
+            var advent = 0
+            if (litMonth > 10) {
+                val christmas = java.time.LocalDate.of(year, 12, 25)
+                val cdow = christmas.dayOfWeek.value % 7
+                advent = christmas.dayOfYear - (if (cdow == 0) 7 else cdow) - 21
+                if (doy >= advent) return null
+            }
+            var week = (doy - firstSunday[litMonth - 8]) / 7
+            if (litMonth == 10 && modern && week >= 2 &&
+                java.time.LocalDate.ofYearDay(year, firstSunday[2]).dayOfMonth >= 4
+            ) week++
+            if (litMonth == 11 && (week > 0 || modern)) {
+                week = 4 - Math.floorDiv(advent - doy - 1, 7)
+                if (modern && week == 1) week = 0
+            }
+            val dow = date.dayOfWeek.value % 7
+            return "%02d%d-%d".format(litMonth, week + 1, dow)
+        }
+
+        private val MONTHDAY_KEYS = Regex("^(lectio[1-6]|responsory[1-7]|scriptura)$")
+
+        /**
+         * The month-week file's lessons and responsories of the first two
+         * nocturns replace the week file's; everything else of the week
+         * file (the Sunday's homily, antiphons, collect) stays, and the
+         * month file only fills what the week file lacks.
+         */
+        internal fun withMonthdayScripture(temporal: Map<String, Hour.Part>, monthday: Map<String, Hour.Part>): Map<String, Hour.Part> {
+            val out = LinkedHashMap(monthday)
+            out.putAll(temporal)
+            monthday.forEach { (k, v) -> if (MONTHDAY_KEYS.matches(k)) out[k] = v }
+            return out
         }
 
         /** "pent10-3" -> "pent10-0": the Sunday whose week the feria belongs to. */

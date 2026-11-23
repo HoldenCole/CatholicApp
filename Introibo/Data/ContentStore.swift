@@ -992,7 +992,15 @@ final class ContentStore {
                     layer(oSaint)
                 }
             } else if let temporalKey = pick.temporal,
-                      let tempOverrides = officeAssembler.temporalPropers[temporalKey] {
+                      var tempOverrides = officeAssembler.temporalPropers[temporalKey] {
+                // August to November: the month-week Scripture keeps the
+                // first nocturn (a resumed Sunday after Epiphany carries its
+                // January lessons, which must not come back here).
+                if template.slug == "matutinum",
+                   let mdKey = OfficeAssembler.monthdayKey(ctx.date, rite: rite),
+                   let md = officeAssembler.temporalPropers[mdKey] {
+                    tempOverrides = OfficeAssembler.withMonthdayScripture(tempOverrides, monthday: md)
+                }
                 layer(tempOverrides)
             }
         }
