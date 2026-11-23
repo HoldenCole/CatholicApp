@@ -24,7 +24,10 @@ day's Mass proper.
     # diff
     python3 scripts/office_qa/ios_parity/diff_parity.py --android /tmp/appqa --ios /tmp/iosqa
 
-`OFFICE_JSON_LANG=es` on both sides compares the Spanish office and Mass.
+`OFFICE_JSON_LANG=es` (or `fr`, or any other vernacular's code) on both
+sides compares that language's office and Mass; the harness applies a
+language the pickers do not offer yet straight to the store, as the Android
+test does.
 `OFFICE_JSON_RITES` narrows the rites. Zero differences is the bar; any
 difference is a bug in one of the mirrors (the first run found the Swift
 `ownedKey` missing the DO-script keys, which printed a raw script at Easter

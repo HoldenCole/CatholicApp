@@ -141,9 +141,33 @@ if ($mode eq 'rules') {
       $out{"$dir/$f"} = \%ent if %ent;
     }
   }
+} elsif ($mode eq 'missa') {
+  # The Mass: every section of every proper, with the second language beside
+  # the Latin, and the Ordo's prayers and prefaces.
+  $datafolder = "$DO/web/www/missa"; $missa = 1; $hora = '';
+  for my $dir ('Tempora','Sancti','Commune') {
+    opendir(my $dh, "$datafolder/Latin/$dir"); my @files = grep { /\.txt$/ } readdir($dh); closedir($dh);
+    for my $f (sort @files) {
+      $winner = "$dir/$f"; @dayname = ('', '', ''); %main::setupstring_caches_by_version = ();
+      if ($dir eq 'Sancti' && $f =~ /^(\d\d)-(\d\d)/) { $month = $1 + 0; $day = $2 + 0; } else { $month = 1; $day = 1; }
+      if ($dir eq 'Tempora' && $f =~ /^([A-Za-z]+\d*)/) { $dayname[0] = $1; }
+      my $s = setupstring('Latin', "$dir/$f") or next;
+      my $e = setupstring($L2, "$dir/$f") || {};
+      my %ent;
+      for my $sec (keys %$s) { next if $sec eq '__preamble'; $ent{$sec} = { lat => $s->{$sec}, eng => $e->{$sec} }; }
+      $out{"$dir/$f"} = \%ent if %ent;
+    }
+  }
+  for my $f ('Ordo/Prayers.txt','Ordo/Prefationes.txt','Ordo/Communio.txt','Ordo/Post.txt','Ordo/Suffragium.txt') {
+    my $s = setupstring('Latin', $f) or next;
+    my $e = setupstring($L2, $f) || {};
+    my %ent;
+    for my $sec (keys %$s) { next if $sec eq '__preamble'; $ent{$sec} = { lat => $s->{$sec}, eng => $e->{$sec} }; }
+    $out{$f} = \%ent;
+  }
 } else {
   for my $lang ('Latin',$L2) {
-    for my $f ('Special/Major Special.txt','Special/Minor Special.txt','Special/Matutinum Special.txt','Special/Prima Special.txt','Psalmi/Psalmi major.txt','Psalmi/Psalmi minor.txt','Psalmi/Psalmi matutinum.txt','Doxologies.txt','Mariaant.txt','Common/Prayers.txt','Special/Preces.txt') {
+    for my $f ('Special/Major Special.txt','Special/Minor Special.txt','Special/Matutinum Special.txt','Special/Prima Special.txt','Psalmi/Psalmi major.txt','Psalmi/Psalmi minor.txt','Psalmi/Psalmi matutinum.txt','Doxologies.txt','Mariaant.txt','Common/Prayers.txt','Special/Preces.txt','Benedictions.txt','Invitatorium.txt','Common/Translate.txt','Common/Rubricae.txt') {
       my $s = setupstring($lang, "Psalterium/$f") or next;
       $out{"$lang/$f"} = $s;
     }

@@ -567,6 +567,10 @@ enum LongDateFormatter {
             "twenty-third","twenty-fourth","twenty-fifth","twenty-sixth","twenty-seventh",
             "twenty-eighth","twenty-ninth","thirtieth","thirty-first"
         ]
+        if ContentStore.shared.vernacular == .french {
+            // "le premier mars", "le 28 mars"
+            return "le \(day == 1 ? "premier" : "\(day)") \(LiturgicalNames.month(month))"
+        }
         if ContentStore.shared.vernacular == .spanish {
             // Spanish counts the day (cardinal) except the first: "el
             // primero de marzo", "el veintiocho de marzo".

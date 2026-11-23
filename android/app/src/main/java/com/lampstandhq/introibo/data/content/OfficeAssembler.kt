@@ -766,6 +766,7 @@ class OfficeAssembler(
         val y = tomorrow.year; val m = tomorrow.monthValue; val d = tomorrow.dayOfMonth
         val day = data.days[String.format("%02d-%02d", m, d)] ?: return null
         val spanish = data.vernacular == "es"
+        val french = data.vernacular == "fr"
         val luna = MartyrologyLuna.lunarAge(m, d, y)
         val mobileKey = LiturgicalContext.forDate(tomorrow, rite = rite).temporalKey?.lowercase()
         val mobile = mobileKey?.let { data.mobile[it] }
@@ -773,6 +774,7 @@ class OfficeAssembler(
         val lat = mutableListOf(day.title + (luna?.let { " Luna ${MartyrologyLuna.latinOrdinals[it - 1]}." } ?: "") + " Anno Dómini $y.")
         val eng = mutableListOf(
             if (spanish) "$d de ${MartyrologyLuna.spanishMonths[m - 1]} de $y" + (luna?.let { ", luna ${MartyrologyLuna.spanishOrdinals[it - 1]}." } ?: ".")
+            else if (french) "Le ${if (d == 1) "1er" else "$d"} ${MartyrologyLuna.frenchMonths[m - 1]} $y" + (luna?.let { ", le ${if (it == 1) "1er" else "${it}e"} jour de la lune." } ?: ".")
             else "${MartyrologyLuna.englishMonths[m - 1]} ${MartyrologyLuna.englishOrdinal(d)}, $y" + (luna?.let { ", the ${MartyrologyLuna.englishOrdinal(it)} day of the Moon." } ?: ".")
         )
         if (mobile != null) { lat += mobile.lat; eng += mobile.eng }
@@ -780,6 +782,8 @@ class OfficeAssembler(
         lat += "℣. Et álibi aliórum plurimórum sanctórum Mártyrum et Confessórum, atque sanctárum Vírginum.\n℟. Deo grátias."
         eng += if (spanish)
             "℣. Y en otras partes, otros muchos santos Mártires y Confesores, y santas Vírgenes.\n℟. Demos gracias a Dios."
+        else if (french)
+            "℣. Et ailleurs, beaucoup d’autres saints Martyrs et Confesseurs, et saintes Vierges.\n℟. Rendons grâces à Dieu."
         else
             "℣. And elsewhere many other holy Martyrs and Confessors, and holy Virgins.\n℟. Thanks be to God."
         return lat.joinToString("\n") to eng.joinToString("\n")

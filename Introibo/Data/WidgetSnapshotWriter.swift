@@ -26,7 +26,7 @@ enum WidgetSnapshotWriter {
         // in-app vernacular setting). Hour vernacular names ride along so the
         // office widget's subtitle follows the language; the Latin names do
         // not pass through here and stay Latin in every vernacular.
-        if VernacularLanguage.current() == .spanish {
+        if VernacularLanguage.current() != .english {
             var chrome: [String: String] = [:]
             var keys = ["widget.label.office", "widget.label.morning",
                         "widget.label.midday", "widget.label.evening",

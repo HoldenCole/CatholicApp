@@ -595,6 +595,10 @@ object LongDateFormatter {
     fun format(date: LocalDate): String {
         val day = date.dayOfMonth
         val month = date.monthValue
+        if (ContentStore.currentVernacular == VernacularLanguage.FRENCH) {
+            // "le premier mars", "le 28 mars"
+            return "le ${if (day == 1) "premier" else "$day"} ${LiturgicalNames.month(month)}"
+        }
         if (ContentStore.currentVernacular == VernacularLanguage.SPANISH) {
             // Spanish counts the day (cardinal) except the first: "el
             // primero de marzo", "el veintiocho de marzo".

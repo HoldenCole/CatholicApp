@@ -1,0 +1,118 @@
+# French overlay (work in progress — not offered in store builds)
+
+French is the app's third vernacular. It reuses the Spanish overlay
+mechanism unchanged: a file `X_fr.json` overlays the asset `X.json` exactly
+as `X_es.json` does, with its fields named `*_fr` instead of `*_es`
+(both apps read every language through the one schema). A file French
+does not have yet is simply absent and the app shows English for it.
+
+`VernacularLanguage.FRENCH` is marked **not released**: the language
+pickers offer it only in debug builds. Flip `released` (Android
+`Settings.kt`, iOS `VernacularLanguage`) when French is ready to ship.
+
+## What is here, and where it comes from
+
+Everything in this first tranche is a **port of Divinum Officium's French**
+(`web/www/{horas,missa}/Francais` of the divinum-officium repository),
+matched to the app's data by its Latin. Nothing was machine-translated.
+
+| File | Content | Coverage |
+|---|---|---|
+| `office_texts_fr.json` | Latin → French for the Office texts both apps assemble (antiphons, chapters, hymns, versicles, responsories, collects, blessings, preces) | 99.6 % of the vernacular fields of a year's Office in the three rites (what is left is the Martyrology at Prime and 25 texts) |
+| `office_lessons_fr.json` (written straight into the asset folders) | Matins lessons and responsories, aligned with `office_lessons.json` | 4,709 of 4,717 texts |
+| `psalter_fr.json` | The psalms and canticles, verse for verse | 166 of 202 (the rest: 26 newer canticles DO has no French for, 10 with a different verse division) |
+| `missal_propers_fr.json` | Mass antiphons, orations, sequences | ≈ 89 % of fields; with the readings, 91.7 % of the fields of a year's Masses |
+| `missal_readings_fr.json` | Epistles and Gospels (title lines in the hand missals' form, by rule) | ≈ 93 % of fields |
+| `missal_fr.json` | The Ordinary of the Mass: 173 of its 179 lines are DO's French (Ordo, Prefationes, Prayers); 4 complete a DO text, 2 are placeholders; the section headings and the app's own rubrics are translated by hand | complete |
+| `canon_variants_fr.json` | The proper Communicantes and Hanc igitur | complete, all from DO |
+| `marian_antiphons_fr.json` | The four final antiphons with versicle and collect | complete |
+| `ordo_names_fr.json` | Calendar titles (feast and feria names) | 1,025 of 1,184 |
+| `office_names_fr.json` | Saints' names for the "N." of the common collects | every name DO carries |
+| `office_doxologies.json` (`fr` field, in the asset folders) | The seasonal hymn doxologies | 6 of 7 |
+
+Working files that are **not** bundled: `office_texts_fixes_fr.json` (hand
+corrections and the few texts whose wording in the app differs from DO's,
+applied last by the builder), `office_lessons_missing_fr.json` and
+`ordo_names_missing_fr.json` (what DO's French lacks — the to-do list for
+hand translation).
+
+## Provenance — read before releasing French
+
+Divinum Officium's own credits (`web/www/horas/Help/credits.html`) give the
+sources of its French:
+
+- **Psalter and Old Testament:** Fillion's Bible and his *Psautier du
+  Bréviaire romain* (L.-Cl. Fillion, d. 1927) — public domain.
+- **New Testament:** Crampon's translation (A. Crampon, d. 1894), with
+  *tu* changed to *vous* — public domain.
+- **Proper of the Mass:** « Les traductions du propre en français sont
+  l’œuvre et la propriété de l’Abbaye Sainte-Madeleine du Barroux. » The
+  abbey contributed its translations to Divinum Officium; they remain the
+  abbey's property.
+- **Ordinary of the Mass:** from Sancta Missa (sanctamissa.org), with
+  rubrics from introibo.fr.
+- **Hymns and other liturgical texts:** from introibo.fr.
+- **The rest of the Office:** the *Bréviaire romain latin-français*,
+  Labergerie, 1956.
+
+So the Scripture is public domain, but the Mass orations (Le Barroux) and
+the non-scriptural Office texts (Labergerie 1956, introibo.fr) are modern
+translations whose rights belong to others. Divinum Officium publishes
+them in an MIT-licensed repository with these credits; that is the basis
+on which they are reproduced here, with the same attribution. The Spanish
+overlay took a stricter line (it replaced DO texts of modern copyrighted
+origin with public-domain ones), and the same question must be settled for
+French **before `released` is switched on**: either obtain the abbey's
+(and, if traceable, the 1956 breviary publisher's) agreement, or replace
+those layers from a public-domain source (Dom Guéranger's *L'Année
+liturgique*, d. 1875, translates the whole Proper of the Mass and much of
+the Office). The app's credits screen must name these sources in any case.
+
+Note also that *introibo.fr* is an established French traditional-liturgy
+site with the same name as this app.
+
+## Not yet in French (hand translation, later tranches)
+
+The UI strings, the prayer library, the Rosary, the Stations, the
+examination of conscience and confession guides, the saints' and reference
+pages, the courses, the hour introductions, the Martyrology (DO has a
+French Martyrology; aligning it entry by entry is its own job, as it was
+for Spanish), the 159 calendar titles and 8 lessons listed in the
+`*_missing_fr.json` files, and the Mass fields DO's French lacks (226
+distinct lines; run `import_french.py --report`).
+
+`missal_fr.json` and `canon_variants_fr.json` were aligned by hand against
+DO's Ordo files (which are not line-aligned with the Latin) and are edited
+in place; the other files are regenerated by the scripts below.
+
+## Rebuilding
+
+    DO=/path/to/divinum-officium          # a checkout, read as data only
+    export DO_ROOT=$DO
+    mkdir -p /tmp/dofr /tmp/doen
+    for L in Francais English; do
+      d=/tmp/dofr; [ $L = English ] && d=/tmp/doen
+      DO_LANG2=$L            perl scripts/office_qa/dodump.pl "Rubrics 1960 - 1960"   psalt   > $d/psalt.json
+      DO_LANG2=$L DO_DOW=6   perl scripts/office_qa/dodump.pl "Rubrics 1960 - 1960"   psalt   > $d/psalt_sat.json
+      DO_LANG2=$L            perl scripts/office_qa/dodump.pl "Reduced - 1955"        psalt   > $d/psalt_1955.json
+      DO_LANG2=$L            perl scripts/office_qa/dodump.pl "Divino Afflatu - 1954" psalt   > $d/psalt_pre1955.json
+      DO_LANG2=$L            perl scripts/office_qa/dodump.pl "Rubrics 1960 - 1960"   commune > $d/commune.json
+      for v in "Rubrics 1960 - 1960:1962" "Reduced - 1955:1955" "Divino Afflatu - 1954:pre1955"; do
+        DO_LANG2=$L perl scripts/office_qa/dodump.pl "${v%%:*}" propers > $d/propers_${v##*:}.json
+        DO_LANG2=$L perl scripts/office_qa/dodump.pl "${v%%:*}" missa   > $d/missa_${v##*:}.json
+      done
+    done
+
+    # every Latin text the apps render in a year (English dump of the Office)
+    #   OFFICE_JSON_DIR=/tmp/appqa OFFICE_JSON_FULL=1 gradle :app:testDebugUnitTest --tests '*OfficeJsonDump*' --rerun
+    python3 scripts/office_qa/collect_latin.py /tmp/appqa /tmp/office_latin.json
+
+    python3 scripts/build_office_spanish.py --lang fr --do-es /tmp/dofr --do-en /tmp/doen --targets /tmp/office_latin.json
+    python3 scripts/import_french.py --do $DO --dumps /tmp/dofr            # psalter, missal, marian, names
+    python3 scripts/office_qa/do_lessons_extract.py --do $DO --out /tmp/dolessons --langs Francais ...
+    python3 scripts/office_qa/build_office_lessons.py --src /tmp/dolessons   # writes office_lessons_{es,fr}.json
+    python3 scripts/office_qa/build_office_doxologies.py --do $DO
+    python3 scripts/sync_french_assets.py                                  # validates, then copies into both apps
+
+To see what is still English in French mode, dump the Office twice
+(`OFFICE_JSON_LANG=fr` and without) and compare the vernacular fields.

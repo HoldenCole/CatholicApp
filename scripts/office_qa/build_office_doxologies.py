@@ -9,7 +9,7 @@ gethymn, doxology). The asset carries the two things the apps need:
 
   "starred"     the hymns so marked, by their first two lines (lowercase,
                 no accents or punctuation)
-  "doxologies"  Psalterium/Doxologies.txt: name -> {lat, eng, es}
+  "doxologies"  Psalterium/Doxologies.txt: name -> {lat, eng, es, fr?}
 
 Written byte-identically to both apps' asset folders.
 """
@@ -57,7 +57,10 @@ if __name__ == "__main__":
             # two lines: "Verbum supérnum pródiens" opens two different hymns
             if len(text) >= 2: starred.add(norm(text[0] + " " + text[1]))
     lat = doxologies(a.do, "Latin"); eng = doxologies(a.do, "English"); es = doxologies(a.do, "Espanol")
+    fr = doxologies(a.do, "Francais")
     dox = {k: {"lat": lat[k], "eng": eng.get(k) or lat[k], "es": es.get(k) or eng.get(k) or lat[k]} for k in sorted(lat) if not k.endswith("T")}
+    for k, v in dox.items():
+        if fr.get(k): v["fr"] = fr[k]   # absent: the apps fall back to English
     doc = json.dumps({"starred": sorted(starred), "doxologies": dox}, ensure_ascii=False, indent=1) + "\n"
     for o in OUT: open(os.path.join(o, "office_doxologies.json"), "w").write(doc)
-    print(len(starred), "starred hymns;", {k: (v["eng"] != v["lat"], v["es"] != v["eng"]) for k, v in dox.items()})
+    print(len(starred), "starred hymns;", {k: (v["eng"] != v["lat"], v["es"] != v["eng"], "fr" in v) for k, v in dox.items()})

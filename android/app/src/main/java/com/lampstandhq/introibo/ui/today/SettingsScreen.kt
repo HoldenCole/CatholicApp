@@ -310,7 +310,7 @@ fun SettingsScreen(
                 SettingsSectionHeader(title = "Sermo Vulgáris · " + ContentStore.uiString("settings.header.vernacular", "Vernacular"))
             }
             item {
-                VernacularLanguage.entries.forEach { v ->
+                VernacularLanguage.selectable.forEach { v ->
                     SettingsRadioRow(
                         label = v.displayName,
                         isSelected = vernacular == v,

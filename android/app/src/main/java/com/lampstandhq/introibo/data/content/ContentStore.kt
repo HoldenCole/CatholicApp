@@ -23,6 +23,10 @@ import com.lampstandhq.introibo.data.model.Saint
 import com.lampstandhq.introibo.data.model.Station
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.decodeFromJsonElement
 
 /**
  * Loads bundled JSON content from Android assets and keeps it in memory.
@@ -189,7 +193,7 @@ object ContentStore {
     /** DO's Spanish for the same texts, aligned with [OfficeLessons.texts] (null where it has none). */
     private var officeLessonsESData: List<String?>? = null
     private fun officeLessonsES(): List<String?> =
-        officeLessonsESData ?: (load<List<String?>>("office_lessons_es.json") ?: emptyList()).also { officeLessonsESData = it }
+        officeLessonsESData ?: (loadOverlay<List<String?>>("office_lessons") ?: emptyList()).also { officeLessonsESData = it }
     internal var hymnsSeasonalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var temporalData: Map<String, Map<String, Hour.Part>> = emptyMap()
     internal var psalterTextData: Map<String, Map<String, List<String>>> = emptyMap()
@@ -452,19 +456,19 @@ object ContentStore {
         officeTextsES = emptyMap()
         officeNamesES = emptyMap()
 
-        if (lang == VernacularLanguage.SPANISH) {
+        if (lang != VernacularLanguage.ENGLISH) {
             // Feast names: Spanish wins, missing keys keep their English.
-            load<Map<String, String>>("ordo_names_es.json")?.let { es ->
+            loadOverlay<Map<String, String>>("ordo_names")?.let { es ->
                 ordoNamesEn = ordoNamesEn + es
             }
-            uiStringsES = (load<Map<String, String>>("ui_strings_es.json") ?: emptyMap())
+            uiStringsES = (loadOverlay<Map<String, String>>("ui_strings") ?: emptyMap())
                 .filterKeys { !it.startsWith("_") }
-            officeTextsES = load<Map<String, String>>("office_texts_es.json") ?: emptyMap()
-            officeNamesES = load<Map<String, String>>("office_names_es.json") ?: emptyMap()
+            officeTextsES = loadOverlay<Map<String, String>>("office_texts") ?: emptyMap()
+            officeNamesES = loadOverlay<Map<String, String>>("office_names") ?: emptyMap()
             // Mass propers (tranche-based import from the DO Espanol tree):
             // per-field vernacular replacement; uncovered days and the
             // deferred scripture fields keep their English.
-            load<Map<String, Map<String, String>>>("missal_propers_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, String>>>("missal_propers")?.let { es ->
                 val overlay: (Map<String, MissalProperEntry>) -> Map<String, MissalProperEntry> = { map ->
                     map.mapValues { (key, entry) ->
                         val fields = es[key] ?: return@mapValues entry
@@ -486,7 +490,7 @@ object ContentStore {
             // Mass Scripture readings (Torres Amat, composed per pericope):
             // same per-field replacement, kept in its own file because the
             // corpus and its provenance differ from the propers.
-            load<Map<String, Map<String, String>>>("missal_readings_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, String>>>("missal_readings")?.let { es ->
                 val overlay: (Map<String, MissalProperEntry>) -> Map<String, MissalProperEntry> = { map ->
                     map.mapValues { (key, entry) ->
                         val fields = es[key] ?: return@mapValues entry
@@ -501,7 +505,7 @@ object ContentStore {
             }
             // Stations of the Cross: title, meditation, and the received
             // Spanish Stabat Mater verse (Latin title and verse untouched).
-            load<Map<String, Map<String, String>>>("stations_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, String>>>("stations")?.let { es ->
                 stations = stations.map { s ->
                     val o = es[s.station] ?: return@map s
                     s.copy(
@@ -516,7 +520,7 @@ object ContentStore {
             // same lines fan out to the weekly psalter (null keeps
             // English). The office assembler is rebuilt AFTER this
             // overlay, so the Spanish flows into every assembled hour.
-            load<Map<String, PsalterES>>("psalter_es.json")?.let { es ->
+            loadOverlay<Map<String, PsalterES>>("psalter")?.let { es ->
                 psalterTextData = psalterTextData.mapValues { (name, entry) ->
                     val o = es[name] ?: return@mapValues entry
                     val eng = entry["eng"]
@@ -527,7 +531,7 @@ object ContentStore {
                     }
                 }
             }
-            load<Map<String, Map<String, List<String?>>>>("psalter_weekly_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, List<String?>>>>("psalter_weekly")?.let { es ->
                 psalterWeeklyData = psalterWeeklyData.mapValues { (day, parts) ->
                     val dayEs = es[day] ?: return@mapValues parts
                     parts.mapValues { (key, part) ->
@@ -549,7 +553,7 @@ object ContentStore {
             // part-level texts — antiphons, capitula, versicles, brief
             // responsories, and the weekday hymns — that the verse overlay
             // above cannot reach.
-            load<Map<String, Map<String, String>>>("psalter_weekly_parts_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, String>>>("psalter_weekly_parts")?.let { es ->
                 psalterWeeklyData = psalterWeeklyData.mapValues { (day, parts) ->
                     val dayEs = es[day] ?: return@mapValues parts
                     parts.mapValues { (key, part) ->
@@ -559,7 +563,7 @@ object ContentStore {
             }
             // The Office commons (tranche O3): same per-part replacement
             // as the hours, keyed by commune code and field key.
-            load<Map<String, Map<String, HourPartES>>>("commune_office_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, HourPartES>>>("commune_office")?.let { es ->
                 communeOffice = communeOffice.mapValues { (code, entry) ->
                     val fields = es[code] ?: return@mapValues entry
                     entry.mapValues { (fkey, part) ->
@@ -587,7 +591,7 @@ object ContentStore {
             }
             // The temporal propers (tranche O4): non-lesson fields —
             // antiphons, responsories, collects, versicles, hymns.
-            load<Map<String, Map<String, HourPartES>>>("temporal_propers_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, HourPartES>>>("temporal_propers")?.let { es ->
                 temporalData = temporalData.mapValues { (code, entry) ->
                     val fields = es[code] ?: return@mapValues entry
                     entry.mapValues { (fkey, part) ->
@@ -615,7 +619,7 @@ object ContentStore {
             }
             // The sanctoral Office propers (tranche O7): same per-part
             // replacement as the temporal cycle.
-            load<Map<String, Map<String, HourPartES>>>("sanctoral_propers_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, HourPartES>>>("sanctoral_propers")?.let { es ->
                 sanctoralPropers = sanctoralPropers.mapValues { (code, entry) ->
                     val fields = es[code] ?: return@mapValues entry
                     entry.mapValues { (fkey, part) ->
@@ -643,7 +647,7 @@ object ContentStore {
             }
             // The seasonal hymns (tranche O6): traditional verse
             // translations, plus the Compline canticle antiphons.
-            load<Map<String, Map<String, HourPartES>>>("hymns_seasonal_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, HourPartES>>>("hymns_seasonal")?.let { es ->
                 hymnsSeasonalData = hymnsSeasonalData.mapValues { (season, entry) ->
                     val fields = es[season] ?: return@mapValues entry
                     entry.mapValues { (fkey, part) ->
@@ -658,7 +662,7 @@ object ContentStore {
             // The Rosary (tranche O8): mystery titles, meditations, and
             // fruits, plus the constituent prayers in their received
             // Spanish texts. Latin and scripture refs are untouched.
-            load<Map<String, MysterySetES>>("mysteries_es.json")?.let { es ->
+            loadOverlay<Map<String, MysterySetES>>("mysteries")?.let { es ->
                 mysterySets = mysterySets.map { set ->
                     val o = es[set.slug] ?: return@map set
                     if (o.mysteries.size != set.mysteries.size) return@map set
@@ -674,7 +678,7 @@ object ContentStore {
                     )
                 }
             }
-            load<Map<String, RosaryPrayerES>>("rosary_prayers_es.json")?.let { es ->
+            loadOverlay<Map<String, RosaryPrayerES>>("rosary_prayers")?.let { es ->
                 rosaryPrayers = rosaryPrayers.map { pr ->
                     val o = es[pr.slug] ?: return@map pr
                     if (o.lines_es.size != pr.lines.size) return@map pr
@@ -687,14 +691,14 @@ object ContentStore {
             // Confession (tranche U2): the examination of conscience and
             // the two guided paths. Roman numerals, Latin commandments and
             // the Latin phase names stay.
-            load<Map<String, ExamenES>>("confession_examen_es.json")?.let { es ->
+            loadOverlay<Map<String, ExamenES>>("confession_examen")?.let { es ->
                 examen = examen.map { e ->
                     val o = es[e.num] ?: return@map e
                     if (o.questions_es.size != e.questions.size) return@map e
                     e.copy(commandment = o.commandment_es, questions = o.questions_es)
                 }
             }
-            load<Map<String, GuideES>>("confession_guides_es.json")?.let { es ->
+            loadOverlay<Map<String, GuideES>>("confession_guides")?.let { es ->
                 confessionGuides = confessionGuides.map { g ->
                     val o = es[g.slug] ?: return@map g
                     if (o.steps_es.size != g.steps.size) return@map g
@@ -708,14 +712,14 @@ object ContentStore {
             }
             // The Today screen's rotating psalm verse: Torres Amat, keyed
             // by the verse ref the code carries.
-            load<Map<String, DailyPsalmES>>("daily_psalm_es.json")?.let { es ->
+            loadOverlay<Map<String, DailyPsalmES>>("daily_psalm")?.let { es ->
                 dailyPsalmES = es.mapValues { it.value.english_es }
             }
             // Schola Latina courses: localized (not merely translated) for
             // Spanish speakers — the lessons address a Spanish ear and the
             // phonetic respellings are re-keyed to Spanish orthography.
             // Aligned by section/item index; the Latin words are untouched.
-            load<Map<String, CourseES>>("courses_es.json")?.let { es ->
+            loadOverlay<Map<String, CourseES>>("courses")?.let { es ->
                 courses = courses.map { c ->
                     val o = es[c.slug] ?: return@map c
                     c.copy(
@@ -753,7 +757,7 @@ object ContentStore {
             // summary, history, practice, notes, and the scripture quote's
             // English half; the Latin names, category labels, refs, and
             // Latin quotes stay).
-            load<Map<String, ReferenceES>>("reference_es.json")?.let { es ->
+            loadOverlay<Map<String, ReferenceES>>("reference")?.let { es ->
                 reference = reference.map { e ->
                     val o = es[e.slug] ?: return@map e
                     e.copy(
@@ -774,7 +778,7 @@ object ContentStore {
             // aligned by section/practice/prayer index (the Latin section
             // labels and Latin prayer texts are untouched; a count mismatch
             // keeps English).
-            load<Map<String, SaintES>>("saints_es.json")?.let { es ->
+            loadOverlay<Map<String, SaintES>>("saints")?.let { es ->
                 saints = saints.map { s ->
                     val o = es[s.slug] ?: return@map s
                     s.copy(
@@ -816,7 +820,7 @@ object ContentStore {
                     )
                 }
             }
-            load<Map<String, PrayerES>>("prayers_es.json")?.let { es ->
+            loadOverlay<Map<String, PrayerES>>("prayers")?.let { es ->
                 prayers = prayers.map { p ->
                     val o = es[p.slug] ?: return@map p
                     p.copy(
@@ -831,7 +835,7 @@ object ContentStore {
                 }
             }
             martyrology?.let { m ->
-                load<MartyrologyES>("martyrology_es.json")?.let { es ->
+                loadOverlay<MartyrologyES>("martyrology")?.let { es ->
                     martyrology = m.copy(
                         days = m.days.mapValues { (key, day) ->
                             val o = es.days[key]
@@ -840,11 +844,11 @@ object ContentStore {
                             else day
                         },
                         mobile = m.mobile.mapValues { (key, e) -> es.mobile[key]?.let { e.copy(eng = it) } ?: e },
-                        vernacular = "es",
+                        vernacular = lang.rawValue,
                     )
                 }
             }
-            load<Map<String, MarianAntiphonES>>("marian_antiphons_es.json")?.let { es ->
+            loadOverlay<Map<String, MarianAntiphonES>>("marian_antiphons")?.let { es ->
                 marianAntiphons = marianAntiphons.map { a ->
                     val o = es[a.slug] ?: return@map a
                     a.copy(
@@ -857,7 +861,7 @@ object ContentStore {
                     )
                 }
             }
-            load<Map<String, HourES>>("hours_es.json")?.let { es ->
+            loadOverlay<Map<String, HourES>>("hours")?.let { es ->
                 hours = hours.map { h ->
                     val o = es[h.slug] ?: return@map h
                     h.copy(eng = o.name_es, time = o.time_es, intro = o.intro_es)
@@ -868,7 +872,7 @@ object ContentStore {
             // versicles, blessings, hymns, antiphons, readings,
             // responsories, collects, and the psalm/canticle verses
             // (null keeps English).
-            load<Map<String, Map<String, HourPartES>>>("hours_parts_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, HourPartES>>>("hours_parts")?.let { es ->
                 hours = hours.map { h ->
                     val hp = es[h.slug] ?: return@map h
                     h.copy(
@@ -896,7 +900,7 @@ object ContentStore {
                     )
                 }
             }
-            load<Map<String, MissalSectionES>>("missal_es.json")?.let { es ->
+            loadOverlay<Map<String, MissalSectionES>>("missal")?.let { es ->
                 missal = missal.map { s ->
                     val o = es[s.slug] ?: return@map s
                     if (o.body_es.size != s.body.size) return@map s
@@ -915,7 +919,7 @@ object ContentStore {
                     )
                 }
             }
-            load<Map<String, Map<String, Map<String, String>>>>("canon_variants_es.json")?.let { es ->
+            loadOverlay<Map<String, Map<String, Map<String, String>>>>("canon_variants")?.let { es ->
                 canonVariants = canonVariants.mapValues { (group, entries) ->
                     entries.mapValues { (key, entry) ->
                         val e = es[group]?.get(key)?.get("eng_es")
@@ -1623,7 +1627,8 @@ object ContentStore {
             val n = Regex("[Aa]llel").findAll(m.value).count()
             val head = l.substring(0, m.range.first).trimEnd(' ', ',', '.', ';', ':')
             val e = bare(head) ?: bare("$head.") ?: return null
-            return e.trimEnd(' ', ',', '.', ';', ':') + ", " + List(n) { "aleluya" }.joinToString(", ") + "."
+            val word = if (appliedVernacular == VernacularLanguage.FRENCH) "alléluia" else "aleluya"
+            return e.trimEnd(' ', ',', '.', ';', ':') + ", " + List(n) { word }.joinToString(", ") + "."
         }
         fun es(lat: String?): String? {
             if (lat == null) return null
@@ -1759,14 +1764,19 @@ object ContentStore {
         if (res == null || rite == MissalRite.RITE_1962 || hour.parts.none { it.type == "hymn" }) return hour
         val (name, special) = officeRubrics.doxology(res, date, dow, rite)
         val table = officeDoxologies()
-        val spanish = appliedVernacular == VernacularLanguage.SPANISH
+        val overlay = appliedVernacular != VernacularLanguage.ENGLISH
         val lat: String; val ver: String
         if (special != null) {
             lat = special.lat?.removePrefix("*")?.trim() ?: return hour
-            ver = (if (spanish) officeTextsES[officeNorm(lat)] else null) ?: special.eng?.removePrefix("*")?.trim() ?: lat
+            ver = (if (overlay) officeTextsES[officeNorm(lat)] else null) ?: special.eng?.removePrefix("*")?.trim() ?: lat
         } else {
             val d = table.doxologies[name ?: return hour] ?: return hour
-            lat = d.lat; ver = if (spanish) d.es else d.eng
+            lat = d.lat
+            ver = when (appliedVernacular) {
+                VernacularLanguage.SPANISH -> d.es
+                VernacularLanguage.FRENCH -> d.fr ?: d.eng
+                else -> d.eng
+            }
         }
         fun swap(text: String, dox: String): String {
             val i = text.lastIndexOf("\n\n")
@@ -1814,7 +1824,7 @@ object ContentStore {
      */
     private fun applyDoLessons(hour: Hour, row: List<List<Int>>): Hour {
         val texts = officeLessons().texts
-        val es = if (appliedVernacular == VernacularLanguage.SPANISH) officeLessonsES() else null
+        val es = if (appliedVernacular != VernacularLanguage.ENGLISH) officeLessonsES() else null
         fun ver(i: Int): String = es?.getOrNull(i) ?: texts[i].eng
         val parts = hour.parts.mapNotNull { p ->
             val m = p.variationKey?.let { LESSON_SLOT.matchEntire(it) } ?: return@mapNotNull p
@@ -2021,6 +2031,49 @@ object ContentStore {
 
     // ---- Generic asset loader ----
 
+    private fun readAsset(filename: String): String? {
+        val root = fileRoot
+        return try {
+            if (root != null) {
+                java.io.File(root, filename).takeIf { it.exists() }?.readText()
+            } else {
+                appContext.assets.open(filename).bufferedReader().use { it.readText() }
+            }
+        } catch (e: java.io.IOException) {
+            null
+        }
+    }
+
+    /** [tree] with [from] turned into [to] at the end of every object key, or before a further "_part". */
+    private fun renameKeySuffix(tree: JsonElement, from: String, to: String): JsonElement = when (tree) {
+        is JsonObject -> JsonObject(tree.entries.associate { (k, v) ->
+            // "title_fr" → "title_es", "versicle_fr_christmas" → "versicle_es_christmas"
+            (if (k.endsWith(from)) k.dropLast(from.length) + to else k.replace(from + "_", to + "_")) to renameKeySuffix(v, from, to)
+        })
+        is JsonArray -> JsonArray(tree.map { renameKeySuffix(it, from, to) })
+        else -> tree
+    }
+
+    /**
+     * The applied vernacular's overlay of [base] ("prayers" → prayers_es.json,
+     * prayers_fr.json); null when that language ships none, which leaves the
+     * English in place. The overlay schemas name their fields "*_es"; another
+     * language's file names them by its own code ("title_fr") and is read
+     * through the same schema.
+     */
+    private inline fun <reified T> loadOverlay(base: String): T? {
+        val code = appliedVernacular.rawValue
+        val filename = "${base}_$code.json"
+        val text = readAsset(filename) ?: return null
+        return try {
+            if (code == "es") json.decodeFromString<T>(text)
+            else json.decodeFromJsonElement<T>(renameKeySuffix(json.parseToJsonElement(text), "_$code", "_es"))
+        } catch (e: Exception) {
+            android.util.Log.e("ContentStore", "Failed to load $filename: ${e.message}")
+            null
+        }
+    }
+
     private inline fun <reified T> load(filename: String): T? {
         return try {
             val root = fileRoot
@@ -2056,9 +2109,9 @@ data class OfficeLessons(
     val days: Map<String, Map<String, List<List<Int>>>> = emptyMap(),
 )
 
-/** One doxology of Psalterium/Doxologies.txt in the three languages. */
+/** One doxology of Psalterium/Doxologies.txt in each language. */
 @Serializable
-data class OfficeDoxology(val lat: String, val eng: String, val es: String)
+data class OfficeDoxology(val lat: String, val eng: String, val es: String, val fr: String? = null)
 
 /**
  * The hymns whose last stanza the older books change (by first line, as

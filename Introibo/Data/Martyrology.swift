@@ -19,8 +19,8 @@ struct MartyrologyDay: Decodable, Hashable {
 struct MartyrologyData: Decodable {
     var days: [String: MartyrologyDay]
     var mobile: [String: MartyrologyEntry]
-    /// "en" or "es": which vernacular the `eng` fields currently carry.
-    /// Set by ContentStore when the Spanish overlay is applied; the
+    /// "en", "es" or "fr": which vernacular the `eng` fields currently carry.
+    /// Set by ContentStore when a vernacular overlay is applied; the
     /// assembler uses it for the fixed strings (date line, Et álibi).
     var vernacular: String = "en"
 
@@ -99,6 +99,8 @@ enum MartyrologyLuna {
         "vigésima tercera", "vigésima cuarta", "vigésima quinta", "vigésima sexta", "vigésima séptima",
         "vigésima octava", "vigésima novena", "trigésima",
     ]
+    static let frenchMonths = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
+                               "septembre", "octobre", "novembre", "décembre"]
     static let englishMonths = ["January", "February", "March", "April", "May", "June", "July", "August",
                                 "September", "October", "November", "December"]
     static let spanishMonths = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",

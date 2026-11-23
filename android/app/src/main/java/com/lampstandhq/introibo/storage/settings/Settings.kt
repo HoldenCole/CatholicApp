@@ -110,17 +110,25 @@ enum class LanguageMode(val rawValue: String) {
 // ---------------------------------------------------------------------------
 
 /**
- * Which vernacular the eng-side of every bilingual surface shows. Spanish
- * coverage is the *_es.json overlay (prayers, Marian antiphons, hour
- * metadata); anything not covered falls back to English.
+ * Which vernacular the eng-side of every bilingual surface shows. A
+ * language's coverage is its *_<code>.json overlays (prayers_es.json,
+ * prayers_fr.json…); anything not covered falls back to English.
+ *
+ * [released] is false while a language is still being filled in: it is
+ * offered only in debug builds, never in a store build.
  */
-enum class VernacularLanguage(val rawValue: String, val displayName: String) {
+enum class VernacularLanguage(val rawValue: String, val displayName: String, val released: Boolean = true) {
     ENGLISH("en", "English"),
-    SPANISH("es", "Español");
+    SPANISH("es", "Español"),
+    FRENCH("fr", "Français", released = false);
 
     companion object {
+        /** The languages the pickers offer. */
+        val selectable: List<VernacularLanguage>
+            get() = entries.filter { it.released || com.lampstandhq.introibo.BuildConfig.DEBUG }
+
         fun fromRaw(raw: String?): VernacularLanguage =
-            entries.firstOrNull { it.rawValue == raw } ?: ENGLISH
+            selectable.firstOrNull { it.rawValue == raw } ?: ENGLISH
     }
 }
 

@@ -5,7 +5,7 @@ import com.lampstandhq.introibo.storage.settings.VernacularLanguage
 import java.time.LocalDate
 
 // Vernacular-aware calendar names and date strings. English is the
-// literal default; Spanish comes from ui_strings_es.json through
+// literal default; the others come from ui_strings_<code>.json through
 // ContentStore.uiString, so the same tables serve every surface that
 // prints a weekday, a month, or a short date (Today, Calendar, share
 // sheets, widgets).
@@ -46,28 +46,34 @@ object LiturgicalNames {
 
 /**
  * Fixed-shape date strings that follow the vernacular instead of the
- * device locale. Each shape names its English form; the Spanish form
- * puts the day first and joins with "de" where Spanish does.
+ * device locale. Each shape names its English form; Spanish and French
+ * put the day first, and Spanish joins with "de" ("8 de septiembre",
+ * "8 septembre").
  */
 object VernacularDates {
-    private val isSpanish: Boolean get() = ContentStore.currentVernacular == VernacularLanguage.SPANISH
+    private val dayFirst: Boolean get() = ContentStore.currentVernacular != VernacularLanguage.ENGLISH
+    /** " de " in Spanish, a space in French. */
+    private val of: String get() = if (ContentStore.currentVernacular == VernacularLanguage.SPANISH) " de " else " "
+    /** "1er" on the first of a French month. */
+    private fun day(date: LocalDate): String =
+        if (ContentStore.currentVernacular == VernacularLanguage.FRENCH && date.dayOfMonth == 1) "1er" else "${date.dayOfMonth}"
 
     /** "Sep 8" · "8 sep" */
     fun shortDayMonth(date: LocalDate): String {
         val m = LiturgicalNames.monthAbbrev(date.monthValue)
-        return if (isSpanish) "${date.dayOfMonth} $m" else "$m ${date.dayOfMonth}"
+        return if (dayFirst) "${day(date)} $m" else "$m ${date.dayOfMonth}"
     }
 
     /** "September 8" · "8 de septiembre" */
     fun longDayMonth(date: LocalDate): String {
         val m = LiturgicalNames.month(date.monthValue)
-        return if (isSpanish) "${date.dayOfMonth} de $m" else "$m ${date.dayOfMonth}"
+        return if (dayFirst) "${day(date)}$of$m" else "$m ${date.dayOfMonth}"
     }
 
     /** "Mon 8 Sep" · "lun 8 sep" */
     fun weekdayDayMonthAbbrev(date: LocalDate): String {
         val wd = LiturgicalNames.weekdayAbbrev(LiturgicalNames.dow(date))
-        val cased = if (isSpanish) wd.lowercase() else wd.lowercase().replaceFirstChar { it.uppercase() }
+        val cased = if (dayFirst) wd.lowercase() else wd.lowercase().replaceFirstChar { it.uppercase() }
         return "$cased ${date.dayOfMonth} ${LiturgicalNames.monthAbbrev(date.monthValue)}"
     }
 
@@ -75,14 +81,14 @@ object VernacularDates {
     fun weekdayLongDate(date: LocalDate): String {
         val wd = LiturgicalNames.weekday(LiturgicalNames.dow(date))
         val m = LiturgicalNames.month(date.monthValue)
-        return if (isSpanish) "${wd.lowercase()}, ${date.dayOfMonth} de $m" else "$wd, $m ${date.dayOfMonth}"
+        return if (dayFirst) "${wd.lowercase()}${if (of == " ") "" else ","} ${day(date)}$of$m" else "$wd, $m ${date.dayOfMonth}"
     }
 
     /** "Monday 8 September" · "lunes 8 de septiembre" */
     fun weekdayDayMonth(date: LocalDate): String {
         val wd = LiturgicalNames.weekday(LiturgicalNames.dow(date))
         val m = LiturgicalNames.month(date.monthValue)
-        return if (isSpanish) "${wd.lowercase()} ${date.dayOfMonth} de $m" else "$wd ${date.dayOfMonth} $m"
+        return if (dayFirst) "${wd.lowercase()} ${day(date)}$of$m" else "$wd ${date.dayOfMonth} $m"
     }
 
     /** "September 2026" · "Septiembre 2026" */

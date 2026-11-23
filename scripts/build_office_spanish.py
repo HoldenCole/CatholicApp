@@ -11,6 +11,12 @@ lat/latR/antiphonLat, antiphon lists' ant/v/r) when the vernacular is
 Spanish; a Latin text without an entry keeps its English.
 
   python3 scripts/build_office_spanish.py [--report]
+
+With --lang fr the same builder writes french-translation/office_texts_fr.json.
+French has no overlays of its own to gather from yet, so its only source is
+Divinum Officium's French column (--do-es DIR, dumped with DO_LANG2=Francais);
+--do-en DIR (the same dumps with the English column) lets it tell DO's French
+from the English DO falls back to where it has none.
 """
 import json, os, re, sys, unicodedata
 from collections import Counter
@@ -18,7 +24,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
-ES = ROOT / "spanish-translation"
+LANG = sys.argv[sys.argv.index("--lang") + 1] if "--lang" in sys.argv else "es"
+ES = ROOT / {"es": "spanish-translation", "fr": "french-translation"}[LANG]
+DO_NAME = {"es": "Espanol", "fr": "Francais"}[LANG]
+ALLELUIA = {"es": "Aleluya", "fr": "Alléluia"}[LANG]
 
 
 def norm(t):
@@ -32,6 +41,15 @@ def norm(t):
 
 def load(p):
     return json.load(open(p, encoding="utf-8"))
+
+
+def vload(name):
+    """An overlay of this language (prayers -> prayers_es.json); empty when it has none yet."""
+    p = ES / f"{name}_{LANG}.json"
+    return load(p) if p.exists() else {}
+
+
+ENGLISH_WORDS = re.compile(r"\b(the|and|of|thy|thee|thou|unto|who|with|that|his|our|which|shall|hath|lord|is|for)\b", re.I)
 
 
 MARK_RE = re.compile(r"^(℟\.br\.|℟\.|℣\.|R\.br\.|R\.|V\.|v\.|r\.|Ant\.)\s*")
@@ -86,6 +104,9 @@ def es_text(t):
     return t or None
 
 
+AMEN = {"es": ". Amén.", "fr": ". Ainsi soit-il."}[LANG]
+
+
 def main():
     report = "--report" in sys.argv
     corpus = {}
@@ -109,7 +130,7 @@ def main():
 
     # 1. The hours' fixed parts.
     hours = {h["slug"]: h for h in load(ASSETS / "hours.json")}
-    for slug, idx in load(ES / "hours_parts_es.json").items():
+    for slug, idx in vload("hours_parts").items():
         parts = hours.get(slug, {}).get("parts", [])
         for i, o in idx.items():
             if not i.isdigit() or int(i) >= len(parts):
@@ -121,7 +142,7 @@ def main():
                     add(p[lf], o[ef], "hours")
     # 2. The weekly psalter's parts (antiphons, capitula, versicles, hymns).
     pw = load(ASSETS / "psalter_weekly.json")
-    for day, m in load(ES / "psalter_weekly_parts_es.json").items():
+    for day, m in vload("psalter_weekly_parts").items():
         for key, es in m.items():
             p = (pw.get(day) or {}).get(key)
             if isinstance(p, dict):
@@ -135,12 +156,12 @@ def main():
     # 3. The Office commons, propers and seasonal hymns.
     PAIRS = (("lat", "eng"), ("latR", "engR"), ("antiphonLat", "antiphonEng"),
              ("v1Lat", "v1Eng"), ("r1Lat", "r1Eng"), ("v2Lat", "v2Eng"), ("r2Lat", "r2Eng"))
-    for sname, ename in (("commune_office.json", "commune_office_es.json"),
-                         ("temporal_propers.json", "temporal_propers_es.json"),
-                         ("sanctoral_propers.json", "sanctoral_propers_es.json"),
-                         ("hymns_seasonal.json", "hymns_seasonal_es.json")):
+    for sname, ename in (("commune_office.json", "commune_office"),
+                         ("temporal_propers.json", "temporal_propers"),
+                         ("sanctoral_propers.json", "sanctoral_propers"),
+                         ("hymns_seasonal.json", "hymns_seasonal")):
         src = load(ASSETS / sname)
-        for code, entry in load(ES / ename).items():
+        for code, entry in vload(ename).items():
             for fk, o in entry.items():
                 p = (src.get(code) or {}).get(fk)
                 if not isinstance(p, dict) or not isinstance(o, dict):
@@ -150,7 +171,7 @@ def main():
                         add(p[lf], o[ef], sname)
     # 4. Supplements keyed "commune:C12:responsory3:eng".
     co = load(ASSETS / "commune_office.json")
-    for key, es in load(ES / "hours_supplements_es.json").items():
+    for key, es in vload("hours_supplements").items():
         m = re.match(r"^commune:([^:]+):([^:]+):(eng|engR|antiphonEng)$", key)
         if not m or not isinstance(es, str):
             continue
@@ -159,25 +180,50 @@ def main():
         if p.get(lf):
             add(p[lf], es, "supplements")
     # 5. Prayers and the Marian antiphons.
-    pr_es = load(ES / "prayers_es.json")
+    pr_es = vload("prayers")
     for pr in load(ASSETS / "prayers.json"):
         o = pr_es.get(pr["slug"])
         if not o:
             continue
         lines = pr.get("lines") or []
-        es_lines = o.get("lines_es") or []
+        es_lines = o.get(f"lines_{LANG}") or []
         for l, e in zip(lines, es_lines):
             if isinstance(l, dict) and l.get("lat") and e:
                 add(l["lat"], e, "prayers")
-    ma_es = load(ES / "marian_antiphons_es.json")
+    ma_es = vload("marian_antiphons")
     for m in load(ASSETS / "marian_antiphons.json"):
         o = ma_es.get(m["slug"])
-        if o and o.get("body_es") and m.get("lat"):
-            add(m["lat"], o["body_es"], "marian")
+        if o and o.get(f"body_{LANG}") and m.get("lat"):
+            add(m["lat"], o[f"body_{LANG}"], "marian")
 
     # 6. Divinum Officium's own Spanish column (dodump.pl with DO_LANG2=Espanol):
     #    the Psalterium, the Commons and the propers, section by section.
     do_es = Path(sys.argv[sys.argv.index("--do-es") + 1]) if "--do-es" in sys.argv else None
+    do_en = Path(sys.argv[sys.argv.index("--do-en") + 1]) if "--do-en" in sys.argv else None
+    # The English DO shows where it has no text in the language: every
+    # English section and line of the same dumps, to be left out.
+    en_secs, en_lines = set(), set()
+    if do_en:
+        def english(v):
+            return v.get("eng") if isinstance(v, dict) else v
+        for name in ("psalt.json", "psalt_sat.json", "commune.json", "propers_1962.json", "propers_1955.json", "propers_pre1955.json"):
+            if not (do_en / name).exists():
+                continue
+            for k, secs in load(do_en / name).items():
+                if name.startswith("psalt") and not k.startswith("English/"):
+                    continue
+                for sec, v in secs.items():
+                    t = english(v)
+                    if isinstance(t, str) and t.strip():
+                        en_secs.add(norm(t))
+                        for l in t.split("\n"):
+                            l = norm(re.sub(r"\{:[^}]*:\}", "", l)).split(";;")[0]
+                            if len(l) >= 25 or (len(l) >= 6 and ENGLISH_WORDS.search(l)):
+                                en_lines.add(l)
+
+    def is_english(t):
+        return norm(t) in en_secs or norm(t).split(";;")[0] in en_lines
+
     if do_es:
         def lines_of(t):
             raw = [re.sub(r"\{:[^}]*:\}", "", l).strip() for l in (t or "").split("\n")]
@@ -196,16 +242,21 @@ def main():
                     lt, et = lt.get("lat"), (lt.get("eng") if et is None else et)
                 if not isinstance(lt, str) or not isinstance(et, str) or not lt.strip() or not et.strip():
                     continue
-                if norm(lt) == norm(et):
+                if norm(lt) == norm(et) or norm(et) in en_secs:
                     continue
-                add(lt, et, src)  # the whole section
+                if not any(is_english(l) for l in et.split("\n") if l.strip()):
+                    add(lt, et, src)  # the whole section
                 ll, el = lines_of(lt), lines_of(et)
 
                 def pair_lines(ll, el):
                     for l, e in zip(ll, el):
-                        if l and e and not l.startswith(("$", "&", "#", "(", "@")):
+                        if l and e and not l.startswith(("$", "&", "#", "(", "@")) and not is_english(e):
                             # psalm-list lines "antiphon;;psalms": pair the antiphon
                             la, ea = l.split(";;")[0], e.split(";;")[0]
+                            # "Dominica = antiphon" (the little hours' psalm tables)
+                            ml, me = re.match(r"^([A-Z0-9][\w ]*?)\s*=\s*(.*)$", la), re.match(r"^([A-Z0-9][\w ]*?)\s*=\s*(.*)$", ea)
+                            if ml and me and ml.group(1) == me.group(1):
+                                la, ea = ml.group(2), me.group(2)
                             add(la, ea, src)
                 if len(ll) == len(el):
                     pair_lines(ll, el)
@@ -249,13 +300,15 @@ def main():
                     pre_e.append(e)
                 if len(pre_l) >= 2:
                     pair_lines(pre_l, pre_e)
-        for name in ("psalt.json", "psalt_sat.json"):
+        # psalt.json, psalt_sat.json (Saturday's forms) and, where dumped, the
+        # other rubrics' (psalt_pre1955.json: "Jube, domne" for "Jube, Dómine")
+        for name in sorted(p.name for p in do_es.glob("psalt*.json")):
             if (do_es / name).exists():
                 d = load(do_es / name)
                 for k, secs in d.items():
                     if not k.startswith("Latin/"):
                         continue
-                    es_secs = d.get("Espanol/" + k[len("Latin/"):]) or {}
+                    es_secs = d.get(DO_NAME + "/" + k[len("Latin/"):]) or {}
                     pair_sections(secs, es_secs, "do-es-psalt")
         if (do_es / "commune.json").exists():
             for f, secs in load(do_es / "commune.json").items():
@@ -268,7 +321,7 @@ def main():
     # 7. The psalter's lines (the preces' Miserére and De profúndis are
     #    assembled at render time with their own punctuation).
     ps_lat = load(ASSETS / "psalter.json")
-    ps_es = load(ES / "psalter_es.json")
+    ps_es = vload("psalter")
     for key in ("psalm50", "psalm129"):
         for l, e in zip(ps_lat.get(key, {}).get("lat", []), (ps_es.get(key) or {}).get("lines") or []):
             m = re.match(r"^\(?\d+[a-z]?:\d+[a-z]?\)?\s+(.*)$", l)
@@ -282,7 +335,8 @@ def main():
     for k in list(corpus):
         if fold(k).startswith("pater noster ci es in caelis") and "tentati" in fold(k):
             e = corpus[k]
-            m = re.search(r"^(.*?)[;,.]?\s*(y no nos dejes caer en la tentaci[oó]n)[;,.]?\s*(mas l[ií]branos del mal)\.?\s*(Am[eé]n\.?)?$", e, re.S | re.I)
+            m = re.search({"es": r"^(.*?)[;,.]?\s*(y no nos dejes caer en la tentaci[oó]n)[;,.]?\s*(mas l[ií]branos del mal)\.?\s*(Am[eé]n\.?)?$",
+                           "fr": r"^(.*?)[;,.]?\s*(et ne nous (?:laissez|induisez) [^.,;]*? tentation)[;,.]?\s*(mais d[eé]livrez-nous du mal)\.?\s*(Ainsi soit-il\.?|Amen\.?)?$"}[LANG], e, re.S | re.I)
             ml = re.search(r"^(.*?)[:;,.]?\s*(et ne nos ind[uú]cas in tentati[oó]nem)[:;,.]?\s*(sed l[ií]bera nos a malo)\.?\s*(Amen\.?)?$", k, re.S | re.I)
             if m and ml:
                 add(render_line(ml.group(1)) + ":", render_line(m.group(1)).rstrip(" ,;") + ";", "pater-split")
@@ -300,13 +354,14 @@ def main():
         if fold(k).startswith("credo in deum patrem omnipotentem") and "carnis" in fold(k):
             e = corpus[k]
             ml = re.search(r"^(.*?remissi[oó]nem peccat[oó]rum)[,.]?\s*(carnis resurrecti[oó]nem)[,.]?\s*(vitam (?:æ|ae)t[eé]rnam)\.?\s*(Amen\.?)?$", k, re.S | re.I)
-            m = re.search(r"^(.*?el perd[oó]n de los pecados)[,.]?\s*(la resurrecci[oó]n de la carne)[,.]?\s*(y la vida eterna)\.?\s*(Am[eé]n\.?)?$", e, re.S | re.I)
+            m = re.search({"es": r"^(.*?el perd[oó]n de los pecados)[,.]?\s*(la resurrecci[oó]n de la carne)[,.]?\s*(y la vida eterna)\.?\s*(Am[eé]n\.?)?$",
+                           "fr": r"^(.*?la r[eé]mission des p[eé]ch[eé]s)[,.]?\s*(la r[eé]surrection de la chair)[,.]?\s*((?:et )?la vie [eé]ternelle)\.?\s*(Ainsi soit-il\.?|Amen\.?)?$"}[LANG], e, re.S | re.I)
             if ml and m:
                 add(render_line(ml.group(1)) + ".", render_line(m.group(1)).rstrip(" ,;") + ".", "credo-split")
                 add(ml.group(2)[:1].upper() + ml.group(2)[1:] + ".", m.group(2)[:1].upper() + m.group(2)[1:] + ".", "credo-split")
                 add("V. " + ml.group(2)[:1].upper() + ml.group(2)[1:] + ".", "℣. " + m.group(2)[:1].upper() + m.group(2)[1:] + ".", "credo-split")
-                add(ml.group(3)[:1].upper() + ml.group(3)[1:] + ". Amen.", m.group(3)[:1].upper() + m.group(3)[1:] + ". Amén.", "credo-split")
-                add("R. " + ml.group(3)[:1].upper() + ml.group(3)[1:] + ". Amen.", "℟. " + m.group(3)[:1].upper() + m.group(3)[1:] + ". Amén.", "credo-split")
+                add(ml.group(3)[:1].upper() + ml.group(3)[1:] + ". Amen.", m.group(3)[:1].upper() + m.group(3)[1:] + AMEN, "credo-split")
+                add("R. " + ml.group(3)[:1].upper() + ml.group(3)[1:] + ". Amen.", "℟. " + m.group(3)[:1].upper() + m.group(3)[1:] + AMEN, "credo-split")
             break
     # Paschaltide brief responsories: "X, * Y." is said "X, y, * Allelúja, allelúja."
     for k0 in list(corpus):
@@ -324,8 +379,23 @@ def main():
                 b2 = b2.strip()
                 b2 = b2[:1].lower() + b2[1:] if not b2[:2].isupper() else b2
                 return a.rstrip(" ,.;:") + ", " + b2.rstrip(" .") + ", * "
-            add(paschal(k) + "Allelúja, allelúja.", paschal(e) + "Aleluya, aleluya.", "paschal")
-            add("℟. " + paschal(k)[6:] + "Allelúja, allelúja.", "℟. " + paschal(e)[6:] + "Aleluya, aleluya.", "paschal")
+            add(paschal(k) + "Allelúja, allelúja.", paschal(e) + f"{ALLELUIA}, {ALLELUIA.lower()}.", "paschal")
+            add("℟. " + paschal(k)[6:] + "Allelúja, allelúja.", "℟. " + paschal(e)[6:] + f"{ALLELUIA}, {ALLELUIA.lower()}.", "paschal")
+
+    if LANG != "es":
+        PAREN = re.compile(r"\s*\((?:[Aa]ll[eé]l[uú][ij]a[.,]?\s*)+\)\s*$")
+        for k, e in list(corpus.items()):
+            # "… fílium. (Allelúja.)": the text as said outside Paschaltide
+            if PAREN.search(k) and "\n" not in k:
+                corpus.setdefault(PAREN.sub("", k), PAREN.sub("", e))
+            # a ℣./℟. pair the apps print on one line ("Tu autem, Dómine, miserére nobis. Deo grátias.")
+            kl, el = k.split("\n") if "\n" in k else re.split(r"\s+(?=R\.\s)", k), e.split("\n")
+            if len(kl) == 2 and len(el) == 2 and re.match(r"^(V\.|℣\.)", kl[0]) and re.match(r"^(R\.|℟\.)", kl[1]):
+                corpus.setdefault(MARK_RE.sub("", kl[0]) + " " + MARK_RE.sub("", kl[1]),
+                                  MARK_RE.sub("", el[0]) + " " + MARK_RE.sub("", el[1]))
+
+    if "--dump-corpus" in sys.argv:   # every Latin text gathered, for looking a missing one up by hand
+        json.dump(corpus, open(sys.argv[sys.argv.index("--dump-corpus") + 1], "w", encoding="utf-8"), ensure_ascii=False, indent=0)
 
     # A looser index: without the ℣./℟. marks, the antiphon asterisk and
     # the final punctuation, case-folded (the legacy assets keep versicles
@@ -339,7 +409,24 @@ def main():
     # Apply to the DO assets: whole text, else line by line.
     def with_alleluia(e, n, star):
         e = re.sub(r"\s*\*\s*", " ", e).rstrip(" .,;:")
-        return e + (" * " if star else ", ") + ", ".join(["Aleluya"] * n).replace("Aleluya, Aleluya", "Aleluya, aleluya") + "."
+        return e + (" * " if star else ", ") + ", ".join([ALLELUIA] * n).replace(f"{ALLELUIA}, {ALLELUIA}", f"{ALLELUIA}, {ALLELUIA.lower()}") + "."
+
+    # A blessing as the apps print it: without DO's "Benedictio." label, or
+    # closed with the Amen that DO leaves to the answer.
+    LABEL = re.compile(r"^(?:Bened[ií]ctio|Bénédiction|Bendición)\.\s*", re.I)
+    AMEN = re.compile(r"\s*(?:℟\.\s*|R\.\s*)?(?:Amen|Amén|Ainsi soit-il)\.?\s*$")
+    LABEL_V = {"es": "Bendición. ", "fr": "Bénédiction. "}[LANG]
+    AMEN_V = {"es": " Amén.", "fr": " Ainsi soit-il."}[LANG]
+
+    CONCLUSION = re.compile(r"(?<=[.:;,] )(Per (?:e[uú]ndem )?D[oó]minum nostrum|Per Christum D[oó]minum|Qui vivis et regnas|Qui tecum vivit|Qui cum Patre)")
+
+    def core(t):
+        return AMEN.sub("", LABEL.sub("", MARK_RE.sub("", t.strip())))
+    core_ix = {}
+    if LANG != "es":
+        for k, e in corpus.items():
+            if "\n" not in k and "\n" not in e and (LABEL.match(MARK_RE.sub("", k)) or AMEN.search(k)):
+                core_ix.setdefault(loose(core(k)), core(e))
 
     def lookup1(l):
         """One line: exact, fuzzy, then without its Paschal alleluias."""
@@ -353,6 +440,23 @@ def main():
             e = lookup1(base)
             if e is not None:
                 return with_alleluia(e, n, star)
+        bare = MARK_RE.sub("", l.strip())
+        c = core(l)
+        if c != bare and len(loose(c)) >= 8:
+            e = core_ix.get(loose(c)) or loose_ix.get(loose(c)) or corpus.get(norm(c))
+            if e is not None:
+                e = core(e)
+                if e[-1:] not in ".!?»":
+                    e += "."
+                return (LABEL_V if LABEL.match(bare) else "") + e + (AMEN_V if AMEN.search(bare) else "")
+        elif len(loose(c)) >= 8 and loose(c) in core_ix:
+            return core_ix[loose(c)]
+        # an oration printed with its conclusion on the same line
+        m = CONCLUSION.search(l) if LANG != "es" else None
+        if m and m.start() > 20:
+            head, tail = lookup1(l[:m.start()].rstrip()), lookup1(l[m.start():].strip())
+            if head is not None and tail is not None:
+                return head.rstrip() + " " + MARK_RE.sub("", tail)
         return None
 
     def lookup(lat):
@@ -460,6 +564,31 @@ def main():
         for key, entry in load(ASSETS / f"office_propers_{rite}.json").items():
             walk(entry, "propers")
 
+    # Every Latin text the apps render over a year (collect_latin.py on
+    # OfficeJsonDump's output): whatever the walks above did not reach.
+    if "--targets" in sys.argv:
+        for t in load(sys.argv[sys.argv.index("--targets") + 1]):
+            try_text(t, "rendered")
+
+    if LANG != "es":
+        # A language without overlays of its own for the older assets (the
+        # hours' fixed parts, the weekly psalter, the legacy commons and
+        # propers, the Marian antiphons): their Latin is looked up too.
+        FIELDS = ("lat", "latR", "antiphonLat", "v1Lat", "r1Lat", "v2Lat", "r2Lat", "versicle_lat", "collect_lat")
+        def walk_legacy(node, where):
+            if isinstance(node, dict):
+                for f in FIELDS:
+                    if isinstance(node.get(f), str):
+                        try_text(node[f], where)
+                for v in node.values():
+                    walk_legacy(v, where)
+            elif isinstance(node, list):
+                for v in node:
+                    walk_legacy(v, where)
+        for name in ("hours.json", "psalter_weekly.json", "commune_office.json", "temporal_propers.json",
+                     "sanctoral_propers.json", "hymns_seasonal.json", "marian_antiphons.json"):
+            walk_legacy(load(ASSETS / name), name.split(".")[0])
+
     for k in always:
         used.setdefault(k, corpus[k])
 
@@ -468,7 +597,7 @@ def main():
         print("DEBUG always", len(always), "paschal keys", sum(1 for k in always if "llelúja" in k), "target in corpus", t in corpus, "in always", t in always, [k for k in corpus if k.startswith("℟.br. Christe, Fili Dei vivi, mis")][:3])
     # Hand corrections to texts that only Divinum Officium's column supplies
     # (spanish-translation/office_texts_fixes_es.json: exact key -> Spanish).
-    fixes = ES / "office_texts_fixes_es.json"
+    fixes = ES / f"office_texts_fixes_{LANG}.json"
     if fixes.exists():
         for k, e in load(fixes).items():
             used[k] = e
@@ -512,7 +641,7 @@ def main():
             del used[k]
             continue
         used[k] = e.replace("Descansed en paz", "Descansen en paz")
-    out = ES / "office_texts_es.json"
+    out = ES / f"office_texts_{LANG}.json"
     with open(out, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(used.items())), f, ensure_ascii=False, indent=1)
         f.write("\n")

@@ -132,6 +132,20 @@ class AssetsDecodeTest {
         check("office_lessons_es.json", { decode<List<String?>>("office_lessons_es.json") }) {
             it.size == lessons.texts.size && it.none { s -> s.isNullOrBlank() }
         }
+        // The French overlay (scripts/import_french.py, build_office_spanish.py --lang fr):
+        // the same shapes as the Spanish files, a lesson DO has no French for left null.
+        check("office_lessons_fr.json", { decode<List<String?>>("office_lessons_fr.json") }) {
+            it.size == lessons.texts.size && it.count { s -> !s.isNullOrBlank() } > 4600
+        }
+        check("office_texts_fr.json", { decode<Map<String, String>>("office_texts_fr.json") }) { it.size > 9000 }
+        check("office_names_fr.json", { decode<Map<String, String>>("office_names_fr.json") }) { it.isNotEmpty() }
+        check("ordo_names_fr.json", { decode<Map<String, String>>("ordo_names_fr.json") }) { it.size > 900 }
+        check("psalter_fr.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("psalter_fr.json") }) { it.size > 150 }
+        check("missal_propers_fr.json", { decode<Map<String, Map<String, String>>>("missal_propers_fr.json") }) { it.size > 500 }
+        check("missal_readings_fr.json", { decode<Map<String, Map<String, String>>>("missal_readings_fr.json") }) { it.size > 500 }
+        check("missal_fr.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("missal_fr.json") }) { it.size == 47 }
+        check("canon_variants_fr.json", { decode<Map<String, Map<String, Map<String, String>>>>("canon_variants_fr.json") }) { it.isNotEmpty() }
+        check("marian_antiphons_fr.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("marian_antiphons_fr.json") }) { it.size == 4 }
         // Divinum Officium's rubrics data (scripts/office_qa/build_office_psalterium.py).
         check("office_rules.json", { decode<Map<String, Map<String, OfficeRule>>>("office_rules.json") }) { it.keys.containsAll(listOf("1962", "1955", "pre1955")) && it.values.all { m -> m.isNotEmpty() } }
         check("office_psalterium.json", { decode<OfficePsalterium>("office_psalterium.json") }) { it.parts.isNotEmpty() && it.psalmi.isNotEmpty() }

@@ -1,0 +1,868 @@
+{
+ "preces": {
+  "english_fr": "Prières au bas de l’autel",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre fait le signe de la croix :",
+    "eng_fr": "Au nom du Père, ✠ et du Fils, et du Saint-Esprit. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Le prêtre et les servants alternent le psaume 42 :",
+    "eng_fr": "℣. J’entrerai à l’autel de Dieu."
+   },
+   {
+    "eng_fr": "℟. Au Dieu qui réjouit ma jeunesse."
+   },
+   {
+    "eng_fr": "℣. Jugez-moi, ô Dieu, et séparez ma cause de celle d’une nation qui n’est pas sainte ; délivrez-moi de l’homme méchant et trompeur."
+   },
+   {
+    "eng_fr": "℟. Car Vous êtes ma force, ô Dieu ; pourquoi m’avez-vous repoussé, et pourquoi dois-je marcher attristé, pendant que l’ennemi m’afflige ?"
+   },
+   {
+    "eng_fr": "℣. Envoyez Votre lumière et Votre vérité : elles me conduiront et m’amèneront à Votre montagne sainte et à Vos tabernacles."
+   },
+   {
+    "eng_fr": "℟. Et j’entrerai à l’autel de Dieu, au Dieu qui réjouit ma jeunesse."
+   },
+   {
+    "eng_fr": "℣. Je Vous louerai sur la harpe, ô Dieu, mon Dieu. Pourquoi es-tu triste, mon âme ? et pourquoi me troubles-tu ?"
+   },
+   {
+    "eng_fr": "℟. Espère en Dieu, car je Le louerai encore, Lui, le salut de mon visage et mon Dieu."
+   },
+   {
+    "eng_fr": "℣. Gloire au Père et au Fils, et au Saint-Esprit."
+   },
+   {
+    "eng_fr": "℟. Comme il était au commencement, maintenant et toujours, et dans les siècles des siècles. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "℣. J’entrerai à l’autel de Dieu."
+   },
+   {
+    "eng_fr": "℟. Au Dieu qui réjouit ma jeunesse."
+   },
+   {
+    "eng_fr": "℣. Notre secours ✠ est dans le Nom du Seigneur."
+   },
+   {
+    "eng_fr": "℟. Qui a fait le ciel et la terre."
+   }
+  ]
+ },
+ "confiteor": {
+  "english_fr": "La Confession",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre, profondément incliné, dit :",
+    "eng_fr": "Je confesse à Dieu tout-puissant, à la bienheureuse Marie toujours vierge, à saint Michel Archange, à saint Jean-Baptiste, aux saints apôtres Pierre et Paul, à tous les saints, et à vous mes frères, que j’ai beaucoup péché, en pensée, en parole et par action."
+   },
+   {
+    "rubric_fr": "Il se frappe trois fois la poitrine :",
+    "eng_fr": "C’est ma faute, c’est ma faute, c’est ma très grande faute."
+   },
+   {
+    "eng_fr": "C’est pourquoi je supplie la bienheureuse Marie toujours vierge, saint Michel Archange, saint Jean-Baptiste, les saints apôtres Pierre et Paul, tous les saints et vous, mes frères, de prier pour moi le Seigneur notre Dieu."
+   },
+   {
+    "rubric_fr": "Les servants répondent :",
+    "eng_fr": "℟. Que le Dieu tout-puissant vous fasse miséricorde, qu’il vous pardonne vos péchés et vous conduise à la vie éternelle."
+   },
+   {
+    "eng_fr": "℣. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Les servants disent le Confiteor :",
+    "eng_fr": "Je confesse à Dieu tout-puissant, à la bienheureuse Marie toujours vierge, à saint Michel Archange, à saint Jean-Baptiste, aux saints apôtres Pierre et Paul, à tous les saints, et à vous mon Père, que j’ai beaucoup péché, en pensée, en parole et par action."
+   },
+   {
+    "eng_fr": "C’est ma faute, c’est ma faute, c’est ma très grande faute."
+   },
+   {
+    "eng_fr": "C’est pourquoi je supplie la bienheureuse Marie toujours Vierge, saint Michel Archange, saint Jean-Baptiste, les saints apôtres Pierre et Paul, tous les Saints et vous, mon Père, de prier pour moi le Seigneur notre Dieu."
+   },
+   {
+    "rubric_fr": "Le prêtre répond :",
+    "eng_fr": "℣. Que le Dieu tout-puissant vous fasse miséricorde, qu’il vous pardonne vos péchés et vous conduise à la vie éternelle."
+   },
+   {
+    "eng_fr": "℟. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "℣. Que le Seigneur tout-puissant et miséricordieux nous accorde le pardon, ✠ l’absolution et la rémission de nos péchés."
+   },
+   {
+    "eng_fr": "℟. Ainsi soit-il."
+   }
+  ]
+ },
+ "versiculi": {
+  "english_fr": "Versets après la Confession",
+  "body_fr": [
+   {
+    "rubric_fr": "Incliné, le prêtre poursuit :",
+    "eng_fr": "℣. Dieu, tournez-vous vers nous et donnez-nous la vie."
+   },
+   {
+    "eng_fr": "℟. Et votre peuple se réjouira en vous."
+   },
+   {
+    "eng_fr": "℣. Montrez-nous, Seigneur, votre miséricorde."
+   },
+   {
+    "eng_fr": "℟. Et accordez-nous votre salut."
+   },
+   {
+    "eng_fr": "℣. Seigneur, exaucez ma prière."
+   },
+   {
+    "eng_fr": "℟. Et que mon cri parvienne jusqu’à vous."
+   },
+   {
+    "eng_fr": "℣. Le Seigneur soit avec vous."
+   },
+   {
+    "eng_fr": "℟. Et avec votre esprit."
+   },
+   {
+    "rubric_fr": "Étendant puis joignant les mains, le prêtre dit à voix haute :",
+    "eng_fr": "Prions."
+   }
+  ]
+ },
+ "aufer": {
+  "english_fr": "Prières en montant à l’autel",
+  "body_fr": [
+   {
+    "rubric_fr": "En montant à l’autel, le prêtre dit à voix basse :",
+    "eng_fr": "Enlevez nos fautes, Seigneur, nous vous en prions, afin que nous puissions pénétrer jusqu’au Saint des Saints avec une âme pure. Par le Christ notre Seigneur. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Les mains jointes, incliné sur l’autel, le prêtre dit :",
+    "eng_fr": "Nous vous prions, Seigneur, par les mérites de vos saints dont nous conservons ici les reliques, et de tous les saints, de daigner me pardonner tous mes péchés. Ainsi soit-il."
+   }
+  ]
+ },
+ "introit": {
+  "english_fr": "Introït · Antienne d’entrée",
+  "body_fr": [
+   {
+    "eng_fr": "Propre ; varie selon la fête"
+   }
+  ]
+ },
+ "kyrie": {
+  "english_fr": "Seigneur, ayez pitié",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre et les servants alternent :",
+    "eng_fr": "℣. Seigneur, ayez pitié. ℟. Seigneur, ayez pitié."
+   },
+   {
+    "eng_fr": "℣. Seigneur, ayez pitié."
+   },
+   {
+    "eng_fr": "℣. Christ, ayez pitié. ℟. Christ, ayez pitié."
+   },
+   {
+    "eng_fr": "℣. Christ, ayez pitié."
+   },
+   {
+    "eng_fr": "℣. Seigneur, ayez pitié. ℟. Seigneur, ayez pitié."
+   },
+   {
+    "eng_fr": "℣. Seigneur, ayez pitié."
+   }
+  ]
+ },
+ "gloria": {
+  "english_fr": "Gloire à Dieu au plus haut des cieux",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre entonne, puis poursuit :",
+    "eng_fr": "Gloire à Dieu au plus haut des cieux. Et paix sur la terre aux hommes de bonne volonté. Nous vous louons, nous vous bénissons, nous vous adorons, nous vous glorifions. Nous vous rendons grâces pour votre immense gloire."
+   },
+   {
+    "eng_fr": "Seigneur Dieu, Roi du ciel, Dieu le Père tout-puissant. Seigneur Fils Unique, Jésus-Christ. Seigneur Dieu, Agneau de Dieu, le Fils du Père."
+   },
+   {
+    "eng_fr": "Vous qui enlevez les péchés du monde, ayez pitié de nous. Vous qui enlevez les péchés du monde, accueillez notre prière. Vous qui êtes assis à la droite du Père, ayez pitié de nous."
+   },
+   {
+    "eng_fr": "Car vous seul êtes Saint, vous seul êtes Seigneur, vous seul êtes le Très-Haut, Jésus-Christ, avec le Saint-Esprit, dans la gloire de Dieu le Père. Ainsi soit-il."
+   }
+  ]
+ },
+ "collecta": {
+  "english_fr": "La Collecte",
+  "body_fr": [
+   {
+    "eng_fr": "Propre ; varie selon la fête"
+   }
+  ]
+ },
+ "credo": {
+  "english_fr": "Le Symbole de Nicée",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre entonne, puis poursuit :",
+    "eng_fr": "Je crois en un seul Dieu. Le Père tout-puissant, Créateur du ciel et de la terre, de l’univers visible et invisible."
+   },
+   {
+    "eng_fr": "Et en un seul Seigneur Jésus-Christ, le Fils unique de Dieu, né du Père avant tous les siècles. Dieu de Dieu, Lumière de Lumière, vrai Dieu de vrai Dieu. Engendré, non pas créé, consubstantiel au Père, et par qui tout a été fait."
+   },
+   {
+    "rubric_fr": "Tous fléchissent le genou :",
+    "eng_fr": "Pour nous, les hommes, et pour notre salut, il est descendu des cieux. Il a pris chair de la Vierge Marie par l’Esprit Saint, et s’est fait homme."
+   },
+   {
+    "eng_fr": "Crucifié aussi pour nous, il a souffert sous Ponce Pilate et a été enseveli. Il est ressuscité le troisième jour, conformément aux Écritures. Et il est monté au ciel : il siège à la droite du Père. Il reviendra dans la gloire pour juger les vivants et les morts ; et son règne n’aura pas de fin."
+   },
+   {
+    "eng_fr": "Je crois en l’Esprit Saint, qui est Seigneur et qui donne la vie ; il procède du Père et du Fils. Avec le Père et le Fils, il reçoit même adoration et même gloire ; il a parlé par les prophètes."
+   },
+   {
+    "eng_fr": "Je crois l’Église, qui est une, sainte, catholique et apostolique. Je reconnais un seul baptême pour la rémission des péchés. Et j’attends la résurrection des morts. Et la vie du monde à venir. Ainsi soit-il."
+   }
+  ]
+ },
+ "offertory_prayers": {
+  "english_fr": "Prières de l’Offertoire",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre offre l’hostie :",
+    "eng_fr": "Recevez, Père saint, Dieu éternel et tout-puissant, cette hostie sans tache, que moi, votre indigne serviteur, je vous offre à vous, mon Dieu vivant et vrai, pour mes innombrables péchés, offenses et négligences, pour tous ceux qui m’entourent, ainsi que pour tous les fidèles chrétiens vivants et morts, afin qu’elle serve à mon salut et au leur pour la vie éternelle. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "Dieu, ✠ qui avez admirablement fondé la dignité de la nature humaine et l’avez restaurée plus admirablement encore : donnez-nous, par le mystère de cette eau et de ce vin, d’avoir part à la divinité de celui qui a daigné partager notre humanité, Jésus-Christ, votre Fils, notre Seigneur, qui, étant Dieu, vit et règne avec vous dans l’unité du Saint-Esprit, dans tous les siècles des siècles. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Le prêtre offre le calice :",
+    "eng_fr": "Nous vous offrons, Seigneur, le calice du salut, implorant votre clémence : qu’il s’élève en odeur de suavité devant votre divine majesté, pour notre salut et celui du monde entier. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "En esprit d’humilité et le cœur contrit, puissions-nous être accueillis par vous, Seigneur : et que notre sacrifice ait lieu aujourd’hui devant vous de telle manière qu’il vous soit agréable, Seigneur Dieu."
+   },
+   {
+    "eng_fr": "Venez, Sanctificateur, Dieu éternel et tout-puissant, et bénissez ✠ ce sacrifice préparé pour la gloire de votre saint Nom."
+   },
+   {
+    "rubric_fr": "Le prêtre se lave les mains :",
+    "eng_fr": "Je laverai mes mains parmi les innocents, et je me tiendrai autour de Votre autel, Seigneur. Pour entendre la voix de Vos louanges, et pour raconter toutes Vos merveilles. Seigneur, j’ai aimé la beauté de Votre maison, et le lieu où habite Votre gloire. Ne perdez pas, ô Dieu, mon âme avec les impies, ni ma vie avec les hommes de sang qui ont l’iniquité dans les mains, et dont la droite est remplie de présents. Pour moi j’ai marché dans mon innocence : délivrez-moi et ayez pitié de moi. Mon pied s’est tenu dans le droit chemin : je Vous bénirai, Seigneur, dans les assemblées. Gloire au Père et au Fils, et au Saint-Esprit. Comme il était au commencement, maintenant et toujours, et dans les siècles des siècles. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Incliné, le prêtre dit :",
+    "eng_fr": "Recevez, Trinité Sainte, cette offrande que nous vous présentons en mémoire de la Passion, de la Résurrection et de l’Ascension de Jésus-Christ notre Seigneur ; et en l’honneur de la bienheureuse Marie toujours vierge, de saint Jean-Baptiste, des saints apôtres Pierre et Paul, de ceux-ci et de tous vos saints : qu’elle serve à leur honneur et à notre salut ; et qu’ils daignent intercéder au ciel pour nous qui faisons mémoire d’eux sur la terre. Par le même Christ notre Seigneur. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Tourné vers le peuple :",
+    "eng_fr": "℣. Priez, mes frères, afin que mon sacrifice, qui est aussi le vôtre, soit agréé par Dieu le Père tout-puissant.\n℟. Que le Seigneur reçoive de vos mains le sacrifice, à la louange et à la gloire de son nom, et aussi pour notre bien et celui de toute sa sainte Église."
+   }
+  ]
+ },
+ "preface": {
+  "english_fr": "Préface",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface se poursuit (elle varie selon le temps) :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant, par le Christ notre Seigneur. C’est par lui que les Anges louent votre majesté, que les Dominations l’adorent, que les Puissances la révèrent, que les Cieux et les Vertus des cieux, ainsi que les bienheureux Séraphins, la célèbrent dans une même allégresse. À leurs chants nous vous supplions de laisser se joindre aussi nos voix, pour proclamer dans une humble louange…"
+   }
+  ]
+ },
+ "preface-advent": {
+  "english_fr": "Préface de l’Avent",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de l’Avent :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant, par le Christ notre Seigneur. Il est le Sauveur que, dans votre miséricorde, vous avez donné aux hommes perdus, afin qu’ils attendissent celui qui nous a instruits par ses promesses, et qu’ils reconnussent, lorsqu’il est venu, celui qui nous a prévenus par la lumière de la divine charité. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-nativity": {
+  "english_fr": "Préface de la Nativité",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de la Nativité :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant. Car, par le mystère du Verbe incarné, un nouveau rayon de votre clarté a brillé aux yeux de notre âme ; en sorte que, connaissant Dieu sous une forme visible, nous sommes ravis par lui en l’amour des choses invisibles. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-lent": {
+  "english_fr": "Préface du Carême",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre du Carême :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant. Par le jeûne corporel, vous réprimez les vices, vous élevez l’âme, vous donnez largement la vertu et ses récompenses, par le Christ notre Seigneur. C’est par lui que les Anges louent votre majesté, que les Dominations l’adorent, que les Puissances la révèrent, que les Cieux et les Vertus des cieux, ainsi que les bienheureux Séraphins, la célèbrent dans une même allégresse. À leurs chants nous vous supplions de laisser se joindre aussi nos voix, pour proclamer dans une humble louange…"
+   }
+  ]
+ },
+ "preface-cross": {
+  "english_fr": "Préface de la Sainte Croix",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de la Sainte Croix :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant. Vous avez établi le salut du genre humain dans le bois de la croix, afin que la vie rejaillît par où la mort avait surgi, et que celui qui triomphait sur un arbre fût aussi vaincu sur un arbre, par le Christ notre Seigneur. C’est par lui que les Anges louent votre majesté, que les Dominations l’adorent, que les Puissances la révèrent, que les Cieux et les Vertus des cieux, ainsi que les bienheureux Séraphins, la célèbrent dans une même allégresse. À leurs chants nous vous supplions de laisser se joindre aussi nos voix, pour proclamer dans une humble louange…"
+   }
+  ]
+ },
+ "preface-easter": {
+  "english_fr": "Préface de Pâques",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de Pâques :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous célébrer en tout temps, Seigneur, mais plus glorieusement que jamais en ce jour où le Christ, notre pâque, a été immolé. C’est lui, en effet, le véritable Agneau, qui a enlevé les péchés du monde, qui a détruit notre mort en mourant, et nous a rendu la vie en ressuscitant. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-ascension": {
+  "english_fr": "Préface de l’Ascension",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de l’Ascension :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant, par le Christ notre Seigneur. Après sa résurrection, il apparut clairement à tous ses disciples, et sous leurs yeux il s’éleva au ciel pour nous rendre participants de sa divinité. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-pentecost": {
+  "english_fr": "Préface du Saint-Esprit",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre du Saint-Esprit :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant, par le Christ notre Seigneur. Montant au-dessus de tous les cieux et s’asseyant à votre droite, il répandit sur les enfants d’adoption l’Esprit Saint qu’il avait promis. C’est pourquoi, par toute la terre, le monde entier débordant de joie tressaille d’allégresse, tandis que les Vertus célestes et les Puissances angéliques chantent l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-trinity": {
+  "english_fr": "Préface de la Très Sainte Trinité",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de la Très Sainte Trinité :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant. Avec votre Fils unique et le Saint-Esprit, vous êtes un seul Dieu, un seul Seigneur ; non dans l’individualité d’une seule personne, mais dans la Trinité d’une seule substance. Car ce que nous croyons, sur la foi de votre révélation, au sujet de votre gloire, nous le pensons indistinctement et de votre Fils et de l’Esprit Saint, sans aucune différence ; en sorte que, dans la confession de la véritable et éternelle divinité, sont adorées et la propriété dans les Personnes, et l’unité dans l’essence, et l’égalité dans la majesté. C’est elle que louent les Anges et les Archanges, les Chérubins et les Séraphins, qui ne cessent de chanter chaque jour, disant d’une seule voix…"
+   }
+  ]
+ },
+ "preface-bvm": {
+  "english_fr": "Préface de la Bienheureuse Vierge Marie",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de la Bienheureuse Vierge Marie :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant. Et de vous louer, bénir et célébrer en la fête de la bienheureuse Marie toujours vierge, elle qui, le Saint-Esprit la couvrant de son ombre, a conçu votre Fils unique et, sans perdre la gloire de la virginité, a mis au monde la lumière éternelle, Jésus-Christ notre Seigneur. C’est par lui que les Anges louent votre majesté, que les Dominations l’adorent, que les Puissances la révèrent, que les Cieux et les Vertus des cieux, ainsi que les bienheureux Séraphins, la célèbrent dans une même allégresse. À leurs chants nous vous supplions de laisser se joindre aussi nos voix, pour proclamer dans une humble louange…"
+   }
+  ]
+ },
+ "preface-apostles": {
+  "english_fr": "Préface des Apôtres",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre des Apôtres :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous supplier humblement, Seigneur, Pasteur éternel, de ne pas abandonner votre troupeau ; mais, par vos bienheureux apôtres, de le garder sous une continuelle protection, afin qu’il soit gouverné par les mêmes chefs que vous avez mis à sa tête comme pasteurs pour continuer votre œuvre. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-epiphany": {
+  "english_fr": "Préface de l’Épiphanie",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de l’Épiphanie :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut, de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu éternel et tout-puissant. Car lorsque votre Fils unique est apparu dans la substance de notre chair mortelle, il nous a rétablis par la lumière nouvelle de son immortalité. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-joseph": {
+  "english_fr": "Préface de saint Joseph",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre de saint Joseph :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu tout-puissant et éternel. Et, par les louanges qui vous sont dues, de vous magnifier, bénir et célébrer en la fête du bienheureux Joseph. Cet homme juste a été donné par vous pour époux à la Vierge mère de Dieu et, serviteur fidèle et prudent, il a été établi sur votre famille pour garder comme un père votre Fils unique conçu par l’ombre mystérieuse du Saint-Esprit, notre Seigneur Jésus-Christ. C’est par lui que les Anges louent votre majesté, que les Dominations l’adorent, que les Puissances la révèrent, que les Cieux et les Vertus des cieux, ainsi que les bienheureux Séraphins, la célèbrent dans une même allégresse. À leurs chants nous vous supplions de laisser se joindre aussi nos voix, pour proclamer dans une humble louange…"
+   }
+  ]
+ },
+ "preface-requiem": {
+  "english_fr": "Préface des Défunts",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre des Défunts :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu tout-puissant et éternel, par le Christ notre Seigneur. En lui a brillé pour nous l’espérance de la bienheureuse résurrection : ainsi, ceux qu’attriste la certitude de leur condition mortelle sont consolés par la promesse de l’immortalité future. Car pour vos fidèles, Seigneur, la vie change mais ne cesse pas ; et quand se dissout la maison de ce séjour terrestre, une demeure éternelle est procurée dans les cieux. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-sacred-heart": {
+  "english_fr": "Préface du Sacré-Cœur",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre du Sacré-Cœur :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu tout-puissant et éternel. Vous avez voulu que votre Fils unique, suspendu à la croix, fût transpercé par la lance du soldat ; afin que son cœur ouvert, sanctuaire des libéralités divines, répandît sur nous des torrents de miséricorde et de grâce, et que, ne cessant jamais de brûler d’amour pour nous, il fût le repos des âmes pieuses et un refuge salutaire accessible aux pénitents. C’est pourquoi, avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "preface-christ-king": {
+  "english_fr": "Préface du Christ-Roi",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre chante ou dit le dialogue :",
+    "eng_fr": "℣. Dans tous les siècles des siècles. ℟. Ainsi soit-il.\n℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit.\n℣. Élevons nos cœurs. ℟. Ils sont tournés vers le Seigneur.\n℣. Rendons grâces au Seigneur notre Dieu. ℟. Cela est digne et juste."
+   },
+   {
+    "rubric_fr": "La Préface propre du Christ-Roi :",
+    "eng_fr": "Il est vraiment juste et nécessaire, c’est notre devoir et notre salut de vous rendre grâces toujours et partout, Seigneur, Père saint, Dieu tout-puissant et éternel. Vous avez oint de l’huile d’allégresse votre Fils unique, notre Seigneur Jésus-Christ, Prêtre éternel et Roi de l’univers ; afin que, s’offrant lui-même sur l’autel de la croix en victime immaculée et pacifique, il accomplît le mystère de la rédemption de l’humanité ; et qu’après avoir soumis toutes les créatures à son pouvoir, il remît à votre infinie majesté un royaume éternel et universel : royaume de vérité et de vie, royaume de sainteté et de grâce, royaume de justice, d’amour et de paix. C’est pourquoi avec les Anges et les Archanges, avec les Trônes et les Dominations, avec toute la milice de l’armée céleste, nous chantons l’hymne de votre gloire, disant sans cesse…"
+   }
+  ]
+ },
+ "sanctus": {
+  "english_fr": "Saint, Saint, Saint",
+  "body_fr": [
+   {
+    "rubric_fr": "On sonne la clochette. Tous disent :",
+    "eng_fr": "Saint, Saint, Saint, le Seigneur, Dieu des Forces célestes."
+   },
+   {
+    "eng_fr": "Le ciel et la terre sont remplis de votre Gloire. Hosanna au plus haut des cieux."
+   },
+   {
+    "eng_fr": "✠ Béni soit celui Qui vient au Nom du Seigneur. Hosanna au plus haut des cieux."
+   }
+  ]
+ },
+ "canon": {
+  "english_fr": "Le Canon romain · Consécration",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre prie à voix basse :",
+    "eng_fr": "Père très clément, c’est donc vous que nous prions, suppliants, et à qui nous demandons, par Jésus-Christ votre Fils, notre Seigneur, d’accepter et de bénir ces ✠ dons, ces ✠ présents, ces ✠ offrandes saintes et immaculées. Tout d’abord, nous vous les offrons pour votre sainte Église catholique : daignez lui donner la paix, la protéger, la réunir et la gouverner par toute la terre ; et en même temps pour votre serviteur notre Pape N., notre évêque N., tous ceux qui enseignent la vraie doctrine, et ceux qui gardent la foi catholique et apostolique."
+   },
+   {
+    "rubric_fr": "Mémento des vivants :",
+    "eng_fr": "Souvenez-vous, Seigneur, de vos serviteurs et de vos servantes N. et N., et de tous ceux qui nous entourent : vous connaissez leur foi, vous avez éprouvé leur attachement. Nous vous offrons ou ils vous offrent eux-mêmes ce sacrifice de louange, pour eux et pour tous les leurs, pour la rédemption de leurs âmes, dans l’espérance de leur salut et de leur intégrité ; et ils vous adressent leurs prières, à vous, Dieu éternel, vivant et vrai."
+   },
+   {
+    "eng_fr": "Unis dans une même communion, nous vénérons d’abord la mémoire de la glorieuse Marie toujours vierge, mère de notre Dieu et Seigneur Jésus-Christ, puis de vos bienheureux apôtres et martyrs, Pierre et Paul, André, Jacques, Jean, Thomas, Jacques, Philippe, Barthélémy, Matthieu, Simon et Jude, Lin, Clet, Clément, Xyste, Corneille, Cyprien, Laurent, Chrysogone, Jean et Paul, Côme et Damien, et de tous vos saints. À leurs prières et par leurs mérites, accordez-nous d’être fortifiés en toute occasion par le secours de votre protection. Par le même Christ notre Seigneur. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Étendant les mains sur l’oblation, le prêtre dit :",
+    "eng_fr": "Cette oblation donc de notre ministère, mais aussi de votre famille entière, nous vous prions, Seigneur, de l’accepter avec bienveillance, de disposer nos jours dans votre paix, et d’ordonner que nous soyons arrachés à la damnation éternelle et comptés dans la troupe de vos élus. Par le Christ notre Seigneur. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "Cette oblation, ô Dieu, nous vous en prions, daignez la rendre en tout point ✠ bénie, ✠ approuvée, ✠ ratifiée, digne et agréable : afin qu’elle devienne pour nous le ✠ Corps et le ✠ Sang de votre Fils bien-aimé, notre Seigneur Jésus-Christ."
+   },
+   {
+    "eng_fr": "La veille du jour où il a souffert, il a pris du pain dans ses mains saintes et vénérables et, les yeux levés au ciel vers vous, Dieu son Père tout-puissant, vous rendant grâces, l’a béni, rompu et donné à ses disciples, en disant : « Prenez et mangez tous de ceci :"
+   },
+   {
+    "rubric_fr": "Consécration de l’Hostie. La clochette sonne :",
+    "eng_fr": "CAR CECI EST MON CORPS. »"
+   },
+   {
+    "eng_fr": "De même, après le repas, prenant aussi ce très glorieux calice dans ses mains saintes et vénérables, vous rendant grâces encore, il l’a béni et donné à ses disciples, en disant : « Prenez, et buvez-en tous :"
+   },
+   {
+    "rubric_fr": "Consécration du Calice. La clochette sonne :",
+    "eng_fr": "CAR CECI EST LE CALICE DE MON SANG, CELUI DE L’ALLIANCE NOUVELLE ET ÉTERNELLE – MYSTÈRE DE LA FOI – QUI SERA RÉPANDU POUR VOUS ET POUR BEAUCOUP EN RÉMISSION DES PÉCHÉS."
+   },
+   {
+    "eng_fr": "Chaque fois que vous ferez cela, vous le ferez en mémoire de moi. »"
+   },
+   {
+    "eng_fr": "C’est pourquoi, Seigneur, nous vos serviteurs, et aussi votre peuple saint, en mémoire de la bienheureuse Passion de votre Fils Jésus-Christ notre Seigneur, de sa Résurrection des enfers et aussi de sa glorieuse Ascension dans les cieux, nous présentons à votre sublime majesté cette offrande venant des biens que vous nous avez donnés : la victime ✠ pure, la victime ✠ sainte, la victime ✠ immaculée, le Pain ✠ sacré de la vie éternelle et le Calice ✠ de l’éternel salut."
+   },
+   {
+    "rubric_fr": "Profondément incliné :",
+    "eng_fr": "Sur ces offrandes daignez jeter un regard favorable et serein, et les accepter comme vous avez bien voulu accepter les présents de votre serviteur Abel le Juste, le sacrifice de notre patriarche Abraham, et celui que vous offrit votre grand prêtre Melchisédech, sacrifice saint, victime immaculée."
+   },
+   {
+    "eng_fr": "Suppliants, nous vous en prions, Dieu tout-puissant : ordonnez que ces offrandes soient portées par les mains de votre saint Ange sur votre sublime autel, en présence de votre majesté divine ; afin que, nous tous qui recevrons par cette participation de l’autel le ✠ Corps et le ✠ Sang très saints de votre Fils, nous soyons comblés de toute grâce et bénédiction céleste. Par le même Christ notre Seigneur. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Mémento des défunts :",
+    "eng_fr": "Souvenez-vous aussi, Seigneur, de vos serviteurs et de vos servantes, qui nous ont précédés avec le signe de la foi, et qui dorment du sommeil de la paix. À eux, Seigneur, et à tous ceux qui reposent dans le Christ, nous vous supplions d’accorder le lieu du rafraîchissement, de la lumière et de la paix. Par le même Christ notre Seigneur. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Se frappant la poitrine, le prêtre dit à voix haute :",
+    "eng_fr": "À nous aussi, pécheurs, vos serviteurs, qui espérons en l’abondance de vos miséricordes, daignez accorder quelque participation à la société de vos saints apôtres et martyrs, avec Jean, le Baptiste, Étienne, Mathias, Barnabé, Ignace, Alexandre, Marcellin, Pierre, Félicité, Perpétue, Agathe, Lucie, Agnès, Cécile, Anastasie et avec tous vos saints ; vous qui donnez largement et ne regardez pas au mérite, mais au pardon, nous vous en prions, admettez-nous dans leur compagnie. Par le Christ notre Seigneur."
+   },
+   {
+    "eng_fr": "Par lui, Seigneur, vous ne cessez de créer tous ces biens, de les ✠ sanctifier, de les ✠ vivifier, de les ✠ bénir et de nous les donner."
+   },
+   {
+    "eng_fr": "Par ✠ lui, et avec ✠ lui, et en ✠ lui, est à vous, Dieu le Père ✠ tout-puissant, en l’unité du Saint ✠ Esprit, tout honneur et toute gloire."
+   },
+   {
+    "eng_fr": "Pour les siècles des siècles. ℟. Ainsi soit-il."
+   }
+  ]
+ },
+ "pater": {
+  "english_fr": "Le Notre Père",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre joint les mains et dit :",
+    "eng_fr": "Prions. Éclairés par de salutaires prescriptions et formés par l’enseignement divin, nous osons dire :"
+   },
+   {
+    "rubric_fr": "Étendant les mains, le prêtre poursuit :",
+    "eng_fr": "Notre Père, qui êtes aux cieux, que votre Nom soit sanctifié, que votre règne arrive, que votre volonté soit faite sur la terre comme au ciel."
+   },
+   {
+    "eng_fr": "Donnez-nous aujourd’hui notre pain de chaque jour, pardonnez-nous nos offenses, comme nous pardonnons à ceux qui nous ont offensés, et ne nous laissez pas succomber à la tentation."
+   },
+   {
+    "rubric_fr": "Les servants répondent :",
+    "eng_fr": "℟. Mais délivrez-nous du Mal."
+   },
+   {
+    "eng_fr": "℣. Amen."
+   }
+  ]
+ },
+ "libera": {
+  "english_fr": "Délivrez-nous",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre prend la patène et dit à voix basse :",
+    "eng_fr": "Délivrez-nous, Seigneur, nous vous en prions, de tous les maux passés, présents et à venir ; et par l’intercession de la bienheureuse et glorieuse Marie toujours vierge, Mère de Dieu, avec vos bienheureux apôtres Pierre et Paul, André, et tous les saints, soyez-nous favorable et donnez la paix à notre temps, afin qu’aidés par votre abondante miséricorde, nous soyons à jamais libérés du péché et préservés de toutes sortes de troubles."
+   },
+   {
+    "rubric_fr": "Il rompt l’Hostie au-dessus du calice :",
+    "eng_fr": "Par le même Jésus-Christ, votre Fils, notre Seigneur, qui, étant Dieu, vit et règne avec vous dans l’unité du Saint-Esprit, dans tous les siècles des siècles. ℟. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Il trace le signe de la croix avec une parcelle au-dessus du calice :",
+    "eng_fr": "℣. Que la paix ✠ du Seigneur soit ✠ toujours avec ✠ vous."
+   },
+   {
+    "eng_fr": "℟. Et avec votre esprit."
+   },
+   {
+    "rubric_fr": "Il laisse tomber la parcelle dans le calice, en disant :",
+    "eng_fr": "Que ce mélange sacramentel du corps et du sang de notre Seigneur Jésus-Christ, que nous allons recevoir, nous serve pour la vie éternelle. Ainsi soit-il."
+   }
+  ]
+ },
+ "agnus": {
+  "english_fr": "Agneau de Dieu",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre se frappe la poitrine ; tous disent :",
+    "eng_fr": "Agneau de Dieu, qui enlevez les péchés du monde : ayez pitié de nous."
+   },
+   {
+    "eng_fr": "Agneau de Dieu, qui enlevez les péchés du monde : ayez pitié de nous."
+   },
+   {
+    "eng_fr": "Agneau de Dieu, qui enlevez les péchés du monde : donnez-nous la paix."
+   }
+  ]
+ },
+ "agnus-requiem": {
+  "english_fr": "Agneau de Dieu (Requiem)",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre se frappe la poitrine ; tous disent :",
+    "eng_fr": "Agneau de Dieu, qui enlevez les péchés du monde : donnez-leur le repos."
+   },
+   {
+    "eng_fr": "Agneau de Dieu, qui enlevez les péchés du monde : donnez-leur le repos."
+   },
+   {
+    "eng_fr": "Agneau de Dieu, qui enlevez les péchés du monde : donnez-leur le repos éternel."
+   }
+  ]
+ },
+ "orationes-ante-communionem": {
+  "english_fr": "Prières avant la Communion",
+  "body_fr": [
+   {
+    "rubric_fr": "Incliné, les mains jointes posées sur l’autel, le prêtre dit :",
+    "eng_fr": "Seigneur Jésus-Christ, qui avez dit à vos apôtres : Je vous laisse la paix, Je vous donne ma paix, ne regardez pas mes péchés, mais la foi de votre Église ; et daignez, conformément à votre volonté, lui donner la paix et l’unité. Vous qui, étant Dieu, vivez et régnez dans tous les siècles des siècles. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "Seigneur Jésus-Christ, Fils du Dieu vivant, qui, selon la volonté du Père et avec la coopération de l’Esprit Saint, avez donné la vie au monde par votre mort ; libérez-moi par votre corps et votre sang sacrés de tous mes péchés et de tous les maux : faites que je m’attache toujours à vos commandements, et ne permettez pas que je sois jamais séparé de vous. Vous qui, étant Dieu, vivez et régnez avec le même Dieu le Père et le Saint-Esprit, dans les siècles des siècles. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "Que la réception de votre corps, que j’ose prendre, tout indigne que je suis, Seigneur Jésus-Christ, n’entraîne pour moi ni jugement ni condamnation ; mais que, par votre bonté, elle serve de soutien et de remède à mon âme et à mon corps. Vous qui, étant Dieu, vivez et régnez avec Dieu le Père dans l’unité du Saint-Esprit, dans tous les siècles des siècles. Ainsi soit-il."
+   }
+  ]
+ },
+ "panem-caelestem": {
+  "english_fr": "Le Pain du ciel",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre fait la génuflexion, se relève et dit :",
+    "eng_fr": "Je prendrai le Pain du ciel, et j’invoquerai le Nom du Seigneur."
+   }
+  ]
+ },
+ "confiteor-communion": {
+  "english_fr": "Communion des fidèles",
+  "body_fr": [
+   {
+    "rubric_fr": "Avant la distribution de la sainte Communion, le servant récite le Confiteor au nom du peuple :",
+    "eng_fr": "Je confesse à Dieu tout-puissant, à la bienheureuse Marie toujours vierge, à saint Michel Archange, à saint Jean-Baptiste, aux saints apôtres Pierre et Paul, à tous les saints, et à vous mon Père, que j’ai beaucoup péché, en pensée, en parole et par action. C’est ma faute, c’est ma faute, c’est ma très grande faute."
+   },
+   {
+    "eng_fr": "Que le Dieu tout-puissant vous fasse miséricorde, qu’il vous pardonne tous vos péchés et vous conduise à la vie éternelle. ℟. Ainsi soit-il.\nQue le Seigneur tout-puissant et miséricordieux vous accorde le pardon, l’absolution et la rémission de vos péchés. ℟. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Le prêtre, tenant une Hostie au-dessus du ciboire, se tourne vers le peuple et dit :",
+    "eng_fr": "℣. Voici l’Agneau de Dieu, voici celui qui enlève les péchés du monde."
+   },
+   {
+    "rubric_fr": "Le peuple répond trois fois, en se frappant la poitrine :",
+    "eng_fr": "℟. Seigneur, je ne suis pas digne que vous entriez sous mon toit, mais dites seulement une parole et mon âme sera guérie."
+   }
+  ]
+ },
+ "domine": {
+  "english_fr": "Seigneur, je ne suis pas digne",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre dit trois fois, en se frappant la poitrine :",
+    "eng_fr": "Seigneur, je ne suis pas digne que vous entriez sous mon toit, mais dites seulement une parole et mon âme sera guérie."
+   },
+   {
+    "eng_fr": "Seigneur, je ne suis pas digne que vous entriez sous mon toit, mais dites seulement une parole et mon âme sera guérie."
+   },
+   {
+    "eng_fr": "Seigneur, je ne suis pas digne que vous entriez sous mon toit, mais dites seulement une parole et mon âme sera guérie."
+   }
+  ]
+ },
+ "communio-sacerdotis": {
+  "english_fr": "Communion du prêtre",
+  "body_fr": [
+   {
+    "rubric_fr": "Traçant le signe de la croix avec l’Hostie au-dessus de la patène, le prêtre dit :",
+    "eng_fr": "Que le corps de notre Seigneur Jésus-Christ garde mon âme pour la vie éternelle. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Il recueille les parcelles, puis dit :",
+    "eng_fr": "Que rendrai-je au Seigneur pour tous ses bienfaits à mon égard ? Je prendrai le calice du salut et j’invoquerai le Nom du Seigneur. J’invoquerai le Nom du Seigneur en le louant, et je serai sauvé de mes ennemis."
+   },
+   {
+    "rubric_fr": "Faisant le signe de la croix avec le calice, le prêtre dit :",
+    "eng_fr": "Que le sang de notre Seigneur Jésus-Christ garde mon âme pour la vie éternelle. Ainsi soit-il."
+   }
+  ]
+ },
+ "ablutiones": {
+  "english_fr": "Prières des ablutions",
+  "body_fr": [
+   {
+    "rubric_fr": "Après avoir pris le Précieux Sang, le prêtre dit :",
+    "eng_fr": "Ce que nous avons reçu par la bouche, Seigneur, que nous l’embrassions d’une âme pure, et que de ce don temporel nous vienne un remède éternel."
+   },
+   {
+    "rubric_fr": "À la seconde ablution, le prêtre dit :",
+    "eng_fr": "Que votre corps que j’ai pris et votre sang que j’ai bu, Seigneur, adhèrent à mes entrailles ; et faites que le péché ne laisse aucune tache en moi, que de purs et saints mystères ont restauré. Vous qui vivez et régnez dans les siècles des siècles. Ainsi soit-il."
+   }
+  ]
+ },
+ "placeat": {
+  "english_fr": "Agréez, Trinité Sainte",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre s’incline et dit à voix basse :",
+    "eng_fr": "Agréez, Trinité Sainte, l’hommage de mon ministère : et faites que le sacrifice que, malgré mon indignité, j’ai présenté aux regards de votre Majesté, vous soit agréable, et que, par votre miséricorde, il puisse attirer votre faveur sur moi et sur tous ceux pour lesquels je vous l’ai offert. Par le Christ notre Seigneur. Ainsi soit-il."
+   }
+  ]
+ },
+ "benedictio": {
+  "english_fr": "La Bénédiction",
+  "body_fr": [
+   {
+    "rubric_fr": "Le prêtre bénit le peuple :",
+    "eng_fr": "℣. Que le Dieu tout-puissant vous bénisse, le Père, le Fils, ✠ et le Saint Esprit. ℟. Ainsi soit-il."
+   }
+  ]
+ },
+ "ite": {
+  "english_fr": "Allez, la Messe est dite",
+  "body_fr": [
+   {
+    "rubric_fr": "Le diacre (ou le prêtre à la Messe basse) chante ou dit :",
+    "eng_fr": "℣. Allez, la Messe est dite."
+   },
+   {
+    "eng_fr": "℟. Nous rendons grâces à Dieu."
+   }
+  ]
+ },
+ "ite-alleluia": {
+  "english_fr": "Allez, la Messe est dite, alléluia, alléluia",
+  "body_fr": [
+   {
+    "rubric_fr": "Pendant l’octave de Pâques, on ajoute au renvoi un double Alléluia :",
+    "eng_fr": "℣. Allez, la Messe est dite. Alléluia, alléluia."
+   },
+   {
+    "eng_fr": "℟. Nous rendons grâces à Dieu. Alléluia, alléluia."
+   }
+  ]
+ },
+ "benedicamus": {
+  "english_fr": "Bénissons le Seigneur",
+  "body_fr": [
+   {
+    "rubric_fr": "Lorsque le Gloria n’a pas été dit, le diacre (ou le prêtre) dit :",
+    "eng_fr": "℣. Bénissons le Seigneur."
+   },
+   {
+    "eng_fr": "℟. Nous rendons grâces à Dieu."
+   }
+  ]
+ },
+ "requiescant": {
+  "english_fr": "Qu’ils reposent en paix",
+  "body_fr": [
+   {
+    "rubric_fr": "Aux Messes de Requiem, au lieu de l’Ite missa est ou du Benedicamus Domino :",
+    "eng_fr": "℣. Qu’ils reposent en paix."
+   },
+   {
+    "eng_fr": "℟. Ainsi soit-il."
+   }
+  ]
+ },
+ "ultimum": {
+  "english_fr": "Le dernier Évangile · Prologue de saint Jean",
+  "body_fr": [
+   {
+    "rubric_fr": "À l’autel, du côté de l’Évangile :",
+    "eng_fr": "℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit. Commencement du saint Évangile selon saint Jean. ℟. Gloire à Vous, Seigneur !"
+   },
+   {
+    "eng_fr": "Au commencement était le Verbe, et le Verbe était auprès de Dieu et le Verbe était Dieu. Il était au commencement auprès de Dieu."
+   },
+   {
+    "eng_fr": "Toutes choses ont été faites par lui, et rien de ce qui a été fait n’a été fait sans lui. En lui était la vie, et la vie était la lumière des hommes ; et la lumière luit dans les ténèbres, et les ténèbres ne l’ont point comprise."
+   },
+   {
+    "eng_fr": "Il y eut un homme, envoyé de Dieu, appelé Jean. Il vint en témoin pour rendre témoignage à la lumière, afin que tous crussent par lui. Il n’était pas lui-même la lumière, mais il vint pour rendre témoignage à la lumière."
+   },
+   {
+    "eng_fr": "Celui-là était la vraie lumière qui éclaire tout homme venant en ce monde. Il était dans le monde, et le monde a été fait par lui, et le monde ne l’a pas reconnu."
+   },
+   {
+    "eng_fr": "Il est venu chez lui, et les siens ne l’ont pas reçu. Mais à tous ceux qui l’ont reçu, il a donné le pouvoir de devenir enfants de Dieu, à ceux qui croient en son nom : qui ne sont point nés du sang, ni de la volonté de la chair, ni de la volonté de l’homme, mais de Dieu."
+   },
+   {
+    "eng_fr": "Et le Verbe s’est fait chair, et il a habité parmi nous, et nous avons vu sa gloire, qui est la gloire du Fils unique du Père, plein de grâce et de vérité."
+   },
+   {
+    "eng_fr": "℟. Nous rendons grâces à Dieu."
+   }
+  ]
+ },
+ "ultimum-palm-sunday": {
+  "english_fr": "Le dernier Évangile · Dimanche des Rameaux (avant 1955)",
+  "body_fr": [
+   {
+    "rubric_fr": "Le dimanche des Rameaux, dans le rite antérieur à 1955, le dernier Évangile est la péricope de l’entrée à Jérusalem (Mt 21, 1-9), au lieu du Prologue de saint Jean.",
+    "eng_fr": "℣. Le Seigneur soit avec vous. ℟. Et avec votre esprit. Suite ✠ du saint Évangile selon saint Matthieu. ℟. Gloire à Vous, Seigneur !"
+   },
+   {
+    "eng_fr": "En ce temps-là, comme il approchait de Jérusalem, et qu’il était arrivé à Bethphagé, au mont des Oliviers, Jésus envoya deux de ses disciples, en leur disant : « Allez au village qui est devant vous et vous trouverez aussitôt une ânesse attachée et un ânon avec elle ; détachez-les et amenez-les-moi. Si on vous dit quelque chose, vous direz : Le Seigneur en a besoin, et aussitôt on les laissera aller. »"
+   },
+   {
+    "eng_fr": "Or, cela se faisait afin que s’accomplît ce qui avait été dit par le Prophète : Dites à la fille de Sion : Voici que ton roi vient à toi plein de douceur et monté sur un âne et sur un ânon, le petit de celui qui porte le joug."
+   },
+   {
+    "eng_fr": "Les disciples allèrent et firent comme Jésus leur avait ordonné. Ils amenèrent l’ânesse et l’ânon, mirent sur eux leurs manteaux et l’y firent monter. Beaucoup de gens de la foule étendirent leurs vêtements sur le chemin ; d’autres coupèrent des branches d’arbres et en jonchèrent la route."
+   },
+   {
+    "eng_fr": "Les foules qui précédaient Jésus et celles qui le suivaient criaient : « Hosanna au Fils de David ! Béni soit celui qui vient au nom du Seigneur ! Hosanna au plus haut des cieux ! »"
+   },
+   {
+    "eng_fr": "℟. Nous rendons grâces à Dieu."
+   }
+  ]
+ },
+ "leonine": {
+  "english_fr": "Prières léonines",
+  "body_fr": [
+   {
+    "rubric_fr": "Après la Messe basse, le prêtre et les fidèles, à genoux, disent trois Je vous salue Marie :",
+    "eng_fr": "Je vous salue Marie, pleine de grâce, le Seigneur est avec vous ; vous êtes bénie entre toutes les femmes, et Jésus, le fruit de vos entrailles, est béni. Sainte Marie, Mère de Dieu, priez pour nous, pauvres pécheurs, maintenant et à l’heure de notre mort. Ainsi soit-il. (×3)"
+   },
+   {
+    "rubric_fr": "Puis le Salve Regina :",
+    "eng_fr": "Salut, Reine, Mère de miséricorde : notre vie, notre douceur et notre espérance, salut ! Enfants d’Ève exilés, nous crions vers vous. Vers vous nous soupirons, gémissant et pleurant dans cette vallée de larmes. Ô vous, notre avocate, tournez donc vers nous vos regards miséricordieux. Et après cet exil, montrez-nous Jésus, le fruit béni de vos entrailles. Ô clémente, ô miséricordieuse, ô douce Vierge Marie."
+   },
+   {
+    "rubric_fr": "Puis :",
+    "eng_fr": "℣. Priez pour nous, sainte Mère de Dieu.\n℟. Afin que nous soyons rendus dignes des promesses du Christ."
+   },
+   {
+    "rubric_fr": "Le prêtre dit l’oraison :",
+    "eng_fr": "Prions. Ô Dieu, notre refuge et notre force : jetez un regard favorable sur le peuple qui crie vers vous ; et, par l’intercession de la glorieuse et immaculée Vierge Marie, Mère de Dieu, de Saint Joseph son Époux, de vos bienheureux apôtres Pierre et Paul, et de tous les Saints, écoutez avec miséricorde et bienveillance, les prières que nous vous adressons pour la conversion des pécheurs, pour la liberté et le triomphe de notre Sainte Mère l’Église. Par le même Christ notre Seigneur. Ainsi soit-il."
+   },
+   {
+    "rubric_fr": "Prière à saint Michel Archange :",
+    "eng_fr": "Saint Michel Archange, défendez-nous dans le combat : soyez notre secours contre la malice et les embûches du démon. Que Dieu lui fasse sentir son empire, nous vous en supplions. Et vous, Prince de la milice céleste, repoussez en enfer, par la force divine, Satan et les autres esprits mauvais qui rôdent dans le monde en vue de perdre les âmes. Ainsi soit-il."
+   },
+   {
+    "eng_fr": "Cœur Sacré de Jésus, ayez pitié de nous. (×3)"
+   }
+  ]
+ }
+}

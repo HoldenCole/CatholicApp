@@ -82,7 +82,7 @@ final class ContentStore {
     }
     private func officeLessonsES() -> [String?] {
         if let d = officeLessonsESData { return d }
-        let v = load("office_lessons_es", as: [String?].self) ?? []
+        let v = loadOverlay("office_lessons", as: [String?].self) ?? []
         officeLessonsESData = v
         return v
     }
@@ -381,24 +381,24 @@ final class ContentStore {
             mysterySets       = load("mysteries", as: [MysterySetData].self) ?? []
             rosaryPrayers     = load("rosary_prayers", as: [RosaryPrayer].self) ?? []
         }
-        guard lang == .spanish else {
+        guard lang != .english else {
             uiStringsES = [:]
             officeTextsES = [:]
             officeNamesES = [:]
             return
         }
-        officeTextsES = load("office_texts_es", as: [String: String].self) ?? [:]
-        officeNamesES = load("office_names_es", as: [String: String].self) ?? [:]
+        officeTextsES = loadOverlay("office_texts", as: [String: String].self) ?? [:]
+        officeNamesES = loadOverlay("office_names", as: [String: String].self) ?? [:]
         // Feast names: Spanish wins, missing keys keep their English.
-        if let es = load("ordo_names_es", as: [String: String].self) {
+        if let es = loadOverlay("ordo_names", as: [String: String].self) {
             ordoNamesEn.merge(es) { _, spanish in spanish }
         }
-        uiStringsES = (load("ui_strings_es", as: [String: String].self) ?? [:])
+        uiStringsES = (loadOverlay("ui_strings", as: [String: String].self) ?? [:])
             .filter { !$0.key.hasPrefix("_") }
         // Mass propers (tranche-based import from the DO Espanol tree):
         // per-field vernacular replacement; uncovered days and the deferred
         // scripture fields keep their English.
-        if let es = load("missal_propers_es", as: [String: [String: String]].self) {
+        if let es = loadOverlay("missal_propers", as: [String: [String: String]].self) {
             func overlay(_ dict: inout [String: MissalProperEntry]) {
                 for (key, fields) in es {
                     guard var entry = dict[key] else { continue }
@@ -424,7 +424,7 @@ final class ContentStore {
         // Mass Scripture readings (Torres Amat, composed per pericope):
         // same per-field replacement, kept in its own file because the
         // corpus and its provenance differ from the propers.
-        if let es = load("missal_readings_es", as: [String: [String: String]].self) {
+        if let es = loadOverlay("missal_readings", as: [String: [String: String]].self) {
             func overlay(_ dict: inout [String: MissalProperEntry]) {
                 for (key, fields) in es {
                     guard var entry = dict[key] else { continue }
@@ -438,7 +438,7 @@ final class ContentStore {
         }
         // Stations of the Cross: title, meditation, and the received
         // Spanish Stabat Mater verse (Latin title and verse untouched).
-        if let es = load("stations_es", as: [String: [String: String]].self) {
+        if let es = loadOverlay("stations", as: [String: [String: String]].self) {
             stations = stations.map { s in
                 guard let o = es[s.station] else { return s }
                 var m = s
@@ -453,7 +453,7 @@ final class ContentStore {
         // same lines fan out to the weekly psalter (null keeps English).
         // The office assembler is rebuilt AFTER this overlay, so the
         // Spanish flows into every assembled hour.
-        if let es = load("psalter_es", as: [String: PsalterES].self) {
+        if let es = loadOverlay("psalter", as: [String: PsalterES].self) {
             for (name, o) in es {
                 if var entry = psalterTextData[name], let eng = entry["eng"],
                    eng.count == o.lines.count {
@@ -462,7 +462,7 @@ final class ContentStore {
                 }
             }
         }
-        if let es = load("psalter_weekly_es",
+        if let es = loadOverlay("psalter_weekly",
                          as: [String: [String: [String?]]].self) {
             for (day, parts) in es {
                 guard var dayParts = psalterWeeklyData[day] else { continue }
@@ -482,7 +482,7 @@ final class ContentStore {
         // The ferial cursus of the weekly psalter (tranche O10): part-level
         // texts — antiphons, capitula, versicles, brief responsories, and
         // the weekday hymns — that the verse overlay above cannot reach.
-        if let es = load("psalter_weekly_parts_es", as: [String: [String: String]].self) {
+        if let es = loadOverlay("psalter_weekly_parts", as: [String: [String: String]].self) {
             for (day, parts) in es {
                 guard var dayParts = psalterWeeklyData[day] else { continue }
                 for (key, text) in parts {
@@ -495,7 +495,7 @@ final class ContentStore {
         }
         // The Office commons (tranche O3): same per-part replacement as
         // the hours, keyed by commune code and field key.
-        if let es = load("commune_office_es",
+        if let es = loadOverlay("commune_office",
                          as: [String: [String: HourPartES]].self) {
             for (code, fields) in es {
                 guard var entry = communeOffice[code] else { continue }
@@ -522,7 +522,7 @@ final class ContentStore {
         }
         // The temporal propers (tranche O4): non-lesson fields —
         // antiphons, responsories, collects, versicles, hymns.
-        if let es = load("temporal_propers_es",
+        if let es = loadOverlay("temporal_propers",
                          as: [String: [String: HourPartES]].self) {
             for (code, fields) in es {
                 guard var entry = temporalData[code] else { continue }
@@ -549,7 +549,7 @@ final class ContentStore {
         }
         // The Rosary (tranche O8): mystery titles, meditations, and
         // fruits; the prayers reuse the received texts from prayers_es.
-        if let es = load("mysteries_es", as: [String: MysterySetES].self) {
+        if let es = loadOverlay("mysteries", as: [String: MysterySetES].self) {
             mysterySets = mysterySets.map { set in
                 guard let o = es[set.slug],
                       o.mysteries.count == set.mysteries.count
@@ -564,7 +564,7 @@ final class ContentStore {
                 return s2
             }
         }
-        if let es = load("rosary_prayers_es",
+        if let es = loadOverlay("rosary_prayers",
                          as: [String: RosaryPrayerES].self) {
             rosaryPrayers = rosaryPrayers.map { pr in
                 guard let o = es[pr.slug],
@@ -582,7 +582,7 @@ final class ContentStore {
         // two guided paths. Roman numerals, Latin commandments, and the
         // Latin phase names stay; the absolution formula inside a step
         // body is quoted verbatim in both languages.
-        if let es = load("confession_examen_es", as: [String: ExamenES].self) {
+        if let es = loadOverlay("confession_examen", as: [String: ExamenES].self) {
             examen = examen.map { e in
                 guard let o = es[e.num], o.questions_es.count == e.questions.count
                 else { return e }
@@ -592,7 +592,7 @@ final class ContentStore {
                 return e2
             }
         }
-        if let es = load("confession_guides_es", as: [String: GuideES].self) {
+        if let es = loadOverlay("confession_guides", as: [String: GuideES].self) {
             confessionGuides = confessionGuides.map { g in
                 guard let o = es[g.slug], o.steps_es.count == g.steps.count
                 else { return g }
@@ -607,12 +607,12 @@ final class ContentStore {
         }
         // The Today screen's rotating psalm verse: Torres Amat, keyed by
         // the verse ref the code carries.
-        if let es = load("daily_psalm_es", as: [String: DailyPsalmES].self) {
+        if let es = loadOverlay("daily_psalm", as: [String: DailyPsalmES].self) {
             dailyPsalmES = es.mapValues { $0.english_es }
         }
         // The sanctoral Office propers (tranche O7): same per-part
         // replacement as the temporal cycle.
-        if let es = load("sanctoral_propers_es",
+        if let es = loadOverlay("sanctoral_propers",
                          as: [String: [String: HourPartES]].self) {
             for (code, fields) in es {
                 guard var entry = sanctoralPropers[code] else { continue }
@@ -639,7 +639,7 @@ final class ContentStore {
         }
         // The seasonal hymns (tranche O6): traditional verse
         // translations, plus the Compline canticle antiphons.
-        if let es = load("hymns_seasonal_es",
+        if let es = loadOverlay("hymns_seasonal",
                          as: [String: [String: HourPartES]].self) {
             for (season, fields) in es {
                 guard var entry = hymnsSeasonalData[season] else { continue }
@@ -656,7 +656,7 @@ final class ContentStore {
         // Spanish speakers — the lessons address a Spanish ear and the
         // phonetic respellings are re-keyed to Spanish orthography. Aligned
         // by section/item index; the Latin words themselves are untouched.
-        if let es = load("courses_es", as: [String: CourseES].self) {
+        if let es = loadOverlay("courses", as: [String: CourseES].self) {
             courses = courses.map { c in
                 guard let o = es[c.slug] else { return c }
                 var m = c
@@ -684,7 +684,7 @@ final class ContentStore {
         // Reference encyclopedia: English-side prose per slug (title, summary,
         // history, practice, notes, and the scripture quote's English half;
         // the Latin names, category labels, refs, and Latin quotes stay).
-        if let es = load("reference_es", as: [String: ReferenceES].self) {
+        if let es = loadOverlay("reference", as: [String: ReferenceES].self) {
             reference = reference.map { e in
                 guard let o = es[e.slug] else { return e }
                 var m = e
@@ -702,7 +702,7 @@ final class ContentStore {
         // Saints' devotional programs: English-side fields per slug, aligned
         // by section/practice/prayer index (the Latin section labels and
         // Latin prayer texts are untouched; a count mismatch keeps English).
-        if let es = load("saints_es", as: [String: SaintES].self) {
+        if let es = loadOverlay("saints", as: [String: SaintES].self) {
             saints = saints.map { s in
                 guard let o = es[s.slug] else { return s }
                 var m = s
@@ -737,7 +737,7 @@ final class ContentStore {
             }
         }
 
-        if let es = load("prayers_es", as: [String: PrayerES].self) {
+        if let es = loadOverlay("prayers", as: [String: PrayerES].self) {
             prayers = prayers.map { p in
                 guard let o = es[p.slug] else { return p }
                 var m = p
@@ -749,7 +749,7 @@ final class ContentStore {
                 return m
             }
         }
-        if let es = load("marian_antiphons_es", as: [String: MarianAntiphonES].self) {
+        if let es = loadOverlay("marian_antiphons", as: [String: MarianAntiphonES].self) {
             marianAntiphons = marianAntiphons.map { a in
                 guard let o = es[a.slug] else { return a }
                 var m = a
@@ -762,7 +762,7 @@ final class ContentStore {
                 return m
             }
         }
-        if var m = martyrology, let es = load("martyrology_es", as: MartyrologyES.self) {
+        if var m = martyrology, let es = loadOverlay("martyrology", as: MartyrologyES.self) {
             for (key, day) in es.days {
                 guard var d = m.days[key], d.entries.count == day.entries_es.count else { continue }
                 for i in d.entries.indices { d.entries[i].eng = day.entries_es[i] }
@@ -771,10 +771,10 @@ final class ContentStore {
             for (key, text) in es.mobile {
                 m.mobile[key]?.eng = text
             }
-            m.vernacular = "es"
+            m.vernacular = lang.rawValue
             martyrology = m
         }
-        if let es = load("hours_es", as: [String: HourES].self) {
+        if let es = loadOverlay("hours", as: [String: HourES].self) {
             hours = hours.map { h in
                 guard let o = es[h.slug] else { return h }
                 var m = h
@@ -788,7 +788,7 @@ final class ContentStore {
         // English-side replacement, indexed by part position — versicles,
         // blessings, hymns, antiphons, readings, responsories, collects,
         // and the psalm/canticle verses (null keeps English).
-        if let es = load("hours_parts_es",
+        if let es = loadOverlay("hours_parts",
                          as: [String: [String: HourPartES]].self) {
             hours = hours.map { h in
                 guard let hp = es[h.slug] else { return h }
@@ -813,7 +813,7 @@ final class ContentStore {
                 return m
             }
         }
-        if let es = load("missal_es", as: [String: MissalSectionES].self) {
+        if let es = loadOverlay("missal", as: [String: MissalSectionES].self) {
             missal = missal.map { s in
                 guard let o = es[s.slug], o.body_es.count == s.body.count else { return s }
                 var m = s
@@ -827,7 +827,7 @@ final class ContentStore {
                 return m
             }
         }
-        if let es = load("canon_variants_es", as: [String: [String: [String: String]]].self) {
+        if let es = loadOverlay("canon_variants", as: [String: [String: [String: String]]].self) {
             for (group, entries) in es {
                 for (key, entry) in entries {
                     if let e = entry["eng_es"], canonVariants[group]?[key] != nil {
@@ -1154,7 +1154,8 @@ final class ContentStore {
             let head = ns.substring(to: m.range.location).trimmingCharacters(in: trimSet)
             guard let e = bare(head) ?? bare(head + ".") else { return nil }
             let stem = e.trimmingCharacters(in: trimSet)
-            return stem + ", " + Array(repeating: "aleluya", count: max(n, 1)).joined(separator: ", ") + "."
+            let word = vernacular == .french ? "alléluia" : "aleluya"
+            return stem + ", " + Array(repeating: word, count: max(n, 1)).joined(separator: ", ") + "."
         }
         func bare(_ l: String) -> String? {
             if let e = officeTextsES[Self.officeNorm(l)] { return e }
@@ -1236,16 +1237,21 @@ final class ContentStore {
         guard let res, rite != .rite1962, hour.parts.contains(where: { $0.type == "hymn" }) else { return hour }
         let (name, special) = officeRubrics.doxology(res, date, dow, rite)
         let table = officeDoxologies()
-        let spanish = vernacular == .spanish
+        let overlay = vernacular != .english
         func unstar(_ t: String) -> String { (t.hasPrefix("*") ? String(t.dropFirst()) : t).trimmed }
         let lat: String, ver: String
         if let special {
             guard let l = special.lat else { return hour }
             lat = unstar(l)
-            ver = (spanish ? officeTextsES[Self.officeNorm(lat)] : nil) ?? special.eng.map(unstar) ?? lat
+            ver = (overlay ? officeTextsES[Self.officeNorm(lat)] : nil) ?? special.eng.map(unstar) ?? lat
         } else {
             guard let name, let d = table.doxologies[name] else { return hour }
-            lat = d.lat; ver = spanish ? d.es : d.eng
+            lat = d.lat
+            switch vernacular {
+            case .spanish: ver = d.es
+            case .french:  ver = d.fr ?? d.eng
+            case .english: ver = d.eng
+            }
         }
         func swap(_ text: String, _ dox: String) -> String {
             guard let r = text.range(of: "\n\n", options: .backwards) else { return text }
@@ -1295,7 +1301,7 @@ final class ContentStore {
     /// Kotlin mirror: ContentStore.applyDoLessons.
     private func applyDoLessons(_ hour: Hour, row: [[Int]]) -> Hour {
         let texts = officeLessons().texts
-        let es: [String?]? = vernacular == .spanish ? officeLessonsES() : nil
+        let es: [String?]? = vernacular != .english ? officeLessonsES() : nil
         func ver(_ i: Int) -> String {
             if let es, i < es.count, let s = es[i] { return s }
             return texts[i].eng
@@ -1911,6 +1917,49 @@ final class ContentStore {
 
     // MARK: - Generic bundle loader
 
+    /// `tree` with every object key ending in `from` ending in `to` instead.
+    private func renameKeySuffix(_ tree: Any, from: String, to: String) -> Any {
+        if let object = tree as? [String: Any] {
+            var out: [String: Any] = [:]
+            out.reserveCapacity(object.count)
+            for (key, value) in object {
+                // "title_fr" → "title_es", "versicle_fr_christmas" → "versicle_es_christmas"
+                let renamed = key.hasSuffix(from)
+                    ? String(key.dropLast(from.count)) + to
+                    : key.replacingOccurrences(of: from + "_", with: to + "_")
+                out[renamed] = renameKeySuffix(value, from: from, to: to)
+            }
+            return out
+        }
+        if let array = tree as? [Any] {
+            return array.map { renameKeySuffix($0, from: from, to: to) }
+        }
+        return tree
+    }
+
+    /// The applied vernacular's overlay of `base` ("prayers" → prayers_es.json,
+    /// prayers_fr.json); nil when that language ships none, which leaves the
+    /// English in place. The overlay schemas name their fields "*_es"; another
+    /// language's file names them by its own code ("title_fr") and is read
+    /// through the same schema.
+    private func loadOverlay<T: Decodable>(_ base: String, as type: T.Type) -> T? {
+        let code = vernacular.rawValue
+        let name = "\(base)_\(code)"
+        guard let url = Bundle.main.url(forResource: name, withExtension: "json") else { return nil }
+        do {
+            var data = try Data(contentsOf: url)
+            if code != "es" {
+                let tree = try JSONSerialization.jsonObject(with: data)
+                data = try JSONSerialization.data(
+                    withJSONObject: renameKeySuffix(tree, from: "_\(code)", to: "_es"))
+            }
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            assertionFailure("Failed to decode \(name).json: \(error)")
+            return nil
+        }
+    }
+
     private func load<T: Decodable>(_ name: String, as type: T.Type) -> T? {
         guard let url = Bundle.main.url(forResource: name, withExtension: "json") else {
             assertionFailure("\(name).json missing from bundle")
@@ -1983,11 +2032,12 @@ struct OfficeLessons: Decodable {
     var days: [String: [String: [[Int]]]] = [:]
 }
 
-/// One doxology of Psalterium/Doxologies.txt in the three languages.
+/// One doxology of Psalterium/Doxologies.txt in each language.
 struct OfficeDoxology: Decodable {
     let lat: String
     let eng: String
     let es: String
+    let fr: String?
 }
 
 /// The hymns whose last stanza the older books change (by first line, as

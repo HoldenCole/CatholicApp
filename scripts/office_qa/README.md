@@ -152,6 +152,26 @@ the Pater noster) is looked up too. `spanish-translation/office_texts_fixes_es.j
 holds hand corrections to texts only DO's column supplies (exact key →
 Spanish), applied last.
 
+## French
+
+French is ported from Divinum Officium's French column by the same
+builder: `build_office_spanish.py --lang fr --do-es DIR --do-en DIR2
+--targets LIST` writes `french-translation/office_texts_fr.json`. French
+has no overlays of its own to gather from, so DO's column is its only
+source; `--do-en` (the same dumps with the English column) keeps DO's
+English fallback out, and `--targets` is the list of every Latin text the
+apps render over a year (`collect_latin.py` on `OfficeJsonDump`'s output),
+so a text is found even where the app words or lines it differently from
+DO's files. `dodump.pl ... missa` dumps the Mass propers with the second
+language for `scripts/import_french.py`, which also builds the psalter, the
+Marian antiphons and the calendar and saints' names;
+`build_office_lessons.py` and `build_office_doxologies.py` carry a French
+column beside the Spanish. The whole procedure, the coverage and the
+provenance of DO's French are in `french-translation/README.md`.
+
+`OfficeJsonDump` takes `OFFICE_JSON_LANG=fr`; comparing its vernacular
+fields with an English dump of the same days shows what is still English.
+
 `SpanishAuditDump` (Android unit test, runs only with `SPANISH_AUDIT_DIR`
 set; `SPANISH_AUDIT_RITES`, `SPANISH_AUDIT_START`/`_END` optional) applies
 the Spanish overlay and dumps every hour, the Mass proper and the ordo

@@ -16,7 +16,7 @@ import java.time.LocalDate
  *   OFFICE_JSON_DIR=/tmp/appqa OFFICE_JSON_START=2025-11-30 \
  *   OFFICE_JSON_END=2026-11-28 gradle :app:testDebugUnitTest --tests '*OfficeJsonDump*'
  *
- * OFFICE_JSON_LANG=es dumps the Spanish office. OFFICE_JSON_FULL=1 adds every other field of a part (the vernacular
+ * OFFICE_JSON_LANG=es (or fr) dumps the Spanish (French) office. OFFICE_JSON_FULL=1 adds every other field of a part (the vernacular
  * side, the intoned-antiphon flag) and the day's Mass proper: the Android
  * half of the iOS/Android parity diff (scripts/office_qa/ios_parity).
  */
@@ -41,9 +41,9 @@ class OfficeJsonDump {
         val full = System.getenv("OFFICE_JSON_FULL") == "1"
 
         ContentStore.initFromDirectory(assets)
-        if (System.getenv("OFFICE_JSON_LANG") == "es") {
-            ContentStore.applyVernacular(com.lampstandhq.introibo.storage.settings.VernacularLanguage.SPANISH)
-        }
+        com.lampstandhq.introibo.storage.settings.VernacularLanguage.entries
+            .firstOrNull { it.rawValue == System.getenv("OFFICE_JSON_LANG") }
+            ?.let { ContentStore.applyVernacular(it) }
         var d = start
         while (!d.isAfter(end)) {
             for (rite in rites) {

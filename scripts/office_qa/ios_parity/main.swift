@@ -13,9 +13,20 @@ let start = fmt.date(from: env["OFFICE_JSON_START"] ?? "2025-11-30")!
 let end = fmt.date(from: env["OFFICE_JSON_END"] ?? "2026-11-28")!
 let rites = (env["OFFICE_JSON_RITES"] ?? "1962,1955,pre1955").split(separator: ",").map { MissalRite(rawValue: String($0))! }
 let hours = ["matutinum", "laudes", "prima", "tertia", "sexta", "nona", "vesperae", "completorium"]
-// OFFICE_JSON_LANG=es dumps the Spanish office (the overlay is applied at load).
-UserDefaults.standard.set(env["OFFICE_JSON_LANG"] ?? "en", forKey: SettingsKey.vernacularLang)
+// OFFICE_JSON_LANG=es (or fr) dumps the Spanish (French) office. A language
+// the pickers offer is applied at load, from the setting; one this build
+// does not offer yet is applied to the store directly, as the Android dump
+// does.
+let langCode = env["OFFICE_JSON_LANG"] ?? "en"
+UserDefaults.standard.set(langCode, forKey: SettingsKey.vernacularLang)
 let store = ContentStore.shared
+if let lang = VernacularLanguage.allCases.first(where: { $0.rawValue == langCode }), store.vernacular != lang {
+    store.applyVernacular(lang)
+    // applyVernacular rebuilds the search index and the link graph in the
+    // background; let both finish before the dump reads the store.
+    _ = store.searchIndex
+    _ = store.linkGraph
+}
 
 func put(_ d: inout [String: Any], _ k: String, _ v: Any?) { if let v { d[k] = v } }
 func partJSON(_ p: Hour.Part) -> [String: Any] {

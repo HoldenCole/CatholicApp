@@ -149,12 +149,16 @@ enum LanguageMode: String, CaseIterable, Identifiable {
     }
 }
 
-// Which vernacular the eng-side of every bilingual surface shows. Spanish
-// coverage is the overlay in *_es.json (prayers, Marian antiphons, hour
-// metadata); anything not covered falls back to English.
+// Which vernacular the eng-side of every bilingual surface shows. A
+// language's coverage is its *_<code>.json overlays (prayers_es.json,
+// prayers_fr.json…); anything not covered falls back to English.
+//
+// `released` is false while a language is still being filled in: it is
+// offered only in debug builds, never in a store build.
 enum VernacularLanguage: String, CaseIterable, Identifiable {
     case english = "en"
     case spanish = "es"
+    case french  = "fr"
 
     var id: String { rawValue }
 
@@ -162,12 +166,29 @@ enum VernacularLanguage: String, CaseIterable, Identifiable {
         switch self {
         case .english: return "English"
         case .spanish: return "Español"
+        case .french:  return "Français"
         }
+    }
+
+    var released: Bool {
+        switch self {
+        case .english, .spanish: return true
+        case .french:            return false
+        }
+    }
+
+    /// The languages the pickers offer.
+    static var selectable: [VernacularLanguage] {
+        #if DEBUG
+        return allCases
+        #else
+        return allCases.filter(\.released)
+        #endif
     }
 
     static func current() -> VernacularLanguage {
         let raw = UserDefaults.standard.string(forKey: SettingsKey.vernacularLang) ?? "en"
-        return VernacularLanguage(rawValue: raw) ?? .english
+        return selectable.first { $0.rawValue == raw } ?? .english
     }
 }
 

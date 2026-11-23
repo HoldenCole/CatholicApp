@@ -54,7 +54,8 @@
   "Asc": {
    "lat": "Jesu, tibi sit glória,\nQui victor in cælum redis,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
    "eng": "All glory, Lord, to Thee we pay,\nAscending o’er the stars to-day;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
-   "es": "Gloria a ti, Señor,\nque asciendes por encima de los astros,\ncon el Padre y el Espíritu Santo\npor los siglos eternos.\nAmén."
+   "es": "Gloria a ti, Señor,\nque asciendes por encima de los astros,\ncon el Padre y el Espíritu Santo\npor los siglos eternos.\nAmén.",
+   "fr": "Ô Jésus, à Vous soit la gloire,\nQui rentrez en vainqueur au ciel,\nAinsi qu’au Père et à l’Esprit Saint,\nDans les siècles éternels.\nAinsi soit-il."
   },
   "Corp": {
    "lat": "Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
@@ -64,27 +65,32 @@
   "Epi": {
    "lat": "Jesu, tibi sit glória,\nQui apparuísti Géntibus,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
    "eng": "All glory, Jesu, be to thee\nFor this thy glad Epiphany;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
-   "es": "¡Oh Jesús, que te mostraste a los gentiles!,\ngloria sea dada a ti en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+   "es": "¡Oh Jesús, que te mostraste a los gentiles!,\ngloria sea dada a ti en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén.",
+   "fr": "À Vous soit la gloire, Jésus,\nQui Vous êtes révélé aux Gentils,\nAinsi qu’au Père et à l’auguste Esprit,\nDans les siècles sempiternels.\nAinsi soit-il."
   },
   "Heart": {
    "lat": "Jesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
    "eng": "We give thee praise, who dost impart\nSuch grace, O Jesu, from thy Heart;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
-   "es": "¡Oh Jesús, que derramas la gracia por tu Corazón!,\ngloria sea dada a Ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+   "es": "¡Oh Jesús, que derramas la gracia por tu Corazón!,\ngloria sea dada a Ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén.",
+   "fr": "À vous soit la gloire, Jésus,\nQui par Votre Cœur répandez la grâce,\nAinsi qu’au Père et à l’auguste Esprit,\nDans les siècles sempiternels.\nAinsi soit-il."
   },
   "Nat": {
    "lat": "Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
    "eng": "All honour, laud, and glory be,\nO Jesu, Virgin-Born, to thee;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
-   "es": "¡Oh Jesús, que naciste de la Virgen!,\ngloria sea dada a Ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+   "es": "¡Oh Jesús, que naciste de la Virgen!,\ngloria sea dada a Ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén.",
+   "fr": "Gloire soit à vous, ô Jésus !\nQui êtes né de la Vierge :\nGloire au Père et à l’Esprit Saint,\nDans les siècles éternels.\nAinsi soit-il."
   },
   "Pasch": {
    "lat": "Deo Patri sit glória,\nEt Fílio, qui a mórtuis\nSurréxit, ac Paráclito,\nIn sempitérna sǽcula.\nAmen.",
    "eng": "Hymns of glory, songs of praise,\nFather, unto Thee we raise;\nRisen Lord, all praise to Thee,\nEver with the Spirit be\nAmen.",
-   "es": "Gloria sea dada a Dios Padre,\ny al Hijo, que resucitó\nde entre los muertos, y al Paráclito,\npor los siglos de los siglos.\nAmén."
+   "es": "Gloria sea dada a Dios Padre,\ny al Hijo, que resucitó\nde entre los muertos, y al Paráclito,\npor los siglos de los siglos.\nAmén.",
+   "fr": "À Dieu le Père soit la gloire,\nAinsi qu’au Fils ressuscité des morts,\nEt au Consolateur,\nDurant les siècles éternels.\nAinsi soit-il."
   },
   "Pent": {
    "lat": "Deo Patri sit glória,\nEt Fílio, qui a mórtuis\nSurréxit, ac Paráclito,\nIn sæculórum sǽcula.\nAmen.",
    "eng": "All praise be thine, O risen Lord,\nFrom death to endless life restored;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
-   "es": "Gloria sea dada a Dios Padre,\ny al Hijo, que resucitó\nde entre los muertos, y al Paráclito,\npor los siglos de los siglos.\nAmén."
+   "es": "Gloria sea dada a Dios Padre,\ny al Hijo, que resucitó\nde entre los muertos, y al Paráclito,\npor los siglos de los siglos.\nAmén.",
+   "fr": "À Dieu le Père soit la gloire,\nAinsi qu’au Fils ressuscité des morts,\nEt au Consolateur,\nDans les siècles des siècles.\nAinsi soit-il."
   }
  }
 }

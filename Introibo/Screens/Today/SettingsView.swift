@@ -204,7 +204,7 @@ struct SettingsView: View {
 
     private var vernacularSection: some View {
         Section {
-            ForEach(VernacularLanguage.allCases) { v in
+            ForEach(VernacularLanguage.selectable) { v in
                 HStack {
                     Text(v.displayName)
                         .foregroundStyle(Color.primaryText)

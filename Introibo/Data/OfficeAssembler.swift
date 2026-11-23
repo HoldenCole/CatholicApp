@@ -1359,6 +1359,7 @@ struct OfficeAssembler {
         guard let y = comps.year, let m = comps.month, let d = comps.day else { return nil }
         guard let day = data.days[String(format: "%02d-%02d", m, d)] else { return nil }
         let spanish = data.vernacular == "es"
+        let french = data.vernacular == "fr"
         let luna = MartyrologyLuna.lunarAge(month: m, day: d, year: y)
         let mobileKey = LiturgicalContext.for(date: tomorrow, rite: rite).temporalKey?.lowercased()
         let mobile = mobileKey.flatMap { data.mobile[$0] }
@@ -1367,6 +1368,9 @@ struct OfficeAssembler {
         var eng: [String]
         if spanish {
             eng = ["\(d) de \(MartyrologyLuna.spanishMonths[m - 1]) de \(y)" + (luna.map { ", luna \(MartyrologyLuna.spanishOrdinals[$0 - 1])." } ?? ".")]
+        } else if french {
+            let dayFR = d == 1 ? "1er" : "\(d)"
+            eng = ["Le \(dayFR) \(MartyrologyLuna.frenchMonths[m - 1]) \(y)" + (luna.map { ", le \($0 == 1 ? "1er" : "\($0)e") jour de la lune." } ?? ".")]
         } else {
             eng = ["\(MartyrologyLuna.englishMonths[m - 1]) \(MartyrologyLuna.englishOrdinal(d)), \(y)" + (luna.map { ", the \(MartyrologyLuna.englishOrdinal($0)) day of the Moon." } ?? ".")]
         }
@@ -1379,9 +1383,13 @@ struct OfficeAssembler {
             eng.append(e.eng)
         }
         lat.append("℣. Et álibi aliórum plurimórum sanctórum Mártyrum et Confessórum, atque sanctárum Vírginum.\n℟. Deo grátias.")
-        eng.append(spanish
-            ? "℣. Y en otras partes, otros muchos santos Mártires y Confesores, y santas Vírgenes.\n℟. Demos gracias a Dios."
-            : "℣. And elsewhere many other holy Martyrs and Confessors, and holy Virgins.\n℟. Thanks be to God.")
+        if spanish {
+            eng.append("℣. Y en otras partes, otros muchos santos Mártires y Confesores, y santas Vírgenes.\n℟. Demos gracias a Dios.")
+        } else if french {
+            eng.append("℣. Et ailleurs, beaucoup d’autres saints Martyrs et Confesseurs, et saintes Vierges.\n℟. Rendons grâces à Dieu.")
+        } else {
+            eng.append("℣. And elsewhere many other holy Martyrs and Confessors, and holy Virgins.\n℟. Thanks be to God.")
+        }
         return (lat.joined(separator: "\n"), eng.joined(separator: "\n"))
     }
 

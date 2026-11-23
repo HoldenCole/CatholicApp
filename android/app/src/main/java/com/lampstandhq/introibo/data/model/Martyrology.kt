@@ -26,7 +26,7 @@ data class MartyrologyDay(
 data class MartyrologyData(
     val days: Map<String, MartyrologyDay>,
     val mobile: Map<String, MartyrologyEntry>,
-    /** "en" or "es": which vernacular the eng fields currently carry. */
+    /** "en", "es" or "fr": which vernacular the eng fields currently carry. */
     val vernacular: String = "en",
 )
 
@@ -102,6 +102,8 @@ object MartyrologyLuna {
         "vigésima tercera", "vigésima cuarta", "vigésima quinta", "vigésima sexta", "vigésima séptima",
         "vigésima octava", "vigésima novena", "trigésima",
     )
+    val frenchMonths = listOf("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
+        "septembre", "octobre", "novembre", "décembre")
     val englishMonths = listOf("January", "February", "March", "April", "May", "June", "July", "August",
         "September", "October", "November", "December")
     val spanishMonths = listOf("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
