@@ -371,8 +371,10 @@ struct LiturgicalDayWidgetView: View {
 
     /// "Monday 8 September" · "lunes 8 de septiembre": the names come from
     /// the chrome the app writes (calendar.weekday.N / calendar.month.N);
-    /// English is the fallback. Spanish is detected by the month key
-    /// being present, and puts "de" between day and month.
+    /// English is the fallback. A vernacular is detected by the month key
+    /// being present and puts the day first; how day and month are
+    /// joined ("8 de septiembre", "8 septembre") and the French "1er"
+    /// come from the chrome too.
     private static func dayLabel(_ date: Date) -> String {
         let cal = Calendar.current
         let dow = cal.component(.weekday, from: date) - 1
@@ -384,7 +386,11 @@ struct LiturgicalDayWidgetView: View {
         let wd = WidgetConfigStore.chrome("calendar.weekday.\(dow)", weekdaysEN[dow])
         let mo = WidgetConfigStore.chrome("calendar.month.\(month)", monthsEN[month - 1])
         let vernacular = WidgetConfigStore.chrome("calendar.month.\(month)", "") != ""
-        return vernacular ? "\(wd.lowercased()) \(day) de \(mo)" : "\(wd) \(day) \(mo)"
+        let dayText = day == 1 ? WidgetConfigStore.chrome("calendar.first_day", "1") : "\(day)"
+        let dayMonth = WidgetConfigStore.chrome("calendar.day_month", "{0} de {1}")
+            .replacingOccurrences(of: "{0}", with: dayText)
+            .replacingOccurrences(of: "{1}", with: mo)
+        return vernacular ? "\(wd.lowercased()) \(dayMonth)" : "\(wd) \(day) \(mo)"
     }
 
     var body: some View {

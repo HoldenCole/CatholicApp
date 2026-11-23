@@ -138,6 +138,7 @@ class AssetsDecodeTest {
             it.size == lessons.texts.size && it.count { s -> !s.isNullOrBlank() } > 4600
         }
         check("office_texts_fr.json", { decode<Map<String, String>>("office_texts_fr.json") }) { it.size > 9000 }
+        check("ui_strings_fr.json", { decode<Map<String, String>>("ui_strings_fr.json") }) { it.size > 700 }
         check("office_names_fr.json", { decode<Map<String, String>>("office_names_fr.json") }) { it.isNotEmpty() }
         check("ordo_names_fr.json", { decode<Map<String, String>>("ordo_names_fr.json") }) { it.size > 900 }
         check("psalter_fr.json", { decode<Map<String, kotlinx.serialization.json.JsonObject>>("psalter_fr.json") }) { it.size > 150 }

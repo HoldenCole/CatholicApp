@@ -54,6 +54,13 @@ DO alone:
 | `daily_psalm_fr.json` | The daily psalm verse | Fillion's psalter (`psalter_fr.json`), verbatim |
 | `hours_fr.json` | Hour names, times and introductions | Customary names; introductions translated by hand |
 
+`ui_strings_fr.json` is the interface: the same 747 keys as the Spanish
+file, translated by hand from the English wording at the call sites
+("vous" to the user, the liturgical vocabulary of the French content
+files). Text the code still hard-codes in English, and plural or
+word-order assumptions French cannot satisfy from a data file, are listed
+in the commit that added it.
+
 Working files that are **not** bundled: `office_texts_fixes_fr.json` (hand
 corrections and the few texts whose wording in the app differs from DO's,
 applied last by the builder), `office_lessons_missing_fr.json` and
@@ -97,7 +104,7 @@ site with the same name as this app.
 
 ## Not yet in French (hand translation, later tranches)
 
-The UI strings, the saints' and reference pages, the courses, the 159 calendar titles and 8 lessons listed in the
+The saints' and reference pages, the courses, the 159 calendar titles and 8 lessons listed in the
 `*_missing_fr.json` files, and the Mass fields DO's French lacks (226
 distinct lines; run `import_french.py --report`).
 

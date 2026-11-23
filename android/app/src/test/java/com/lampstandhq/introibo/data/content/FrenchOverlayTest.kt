@@ -89,6 +89,17 @@ class FrenchOverlayTest {
     }
 
     @Test
+    fun theInterfaceIsInFrench() {
+        french()
+        assertEquals("Réglages", ContentStore.uiString("settings.title", "Settings"))
+        assertEquals("Dimanche", com.lampstandhq.introibo.data.liturgical.LiturgicalNames.weekday(0))
+        assertEquals("dimanche 30 novembre", com.lampstandhq.introibo.data.liturgical.VernacularDates.weekdayDayMonth(adventSunday))
+        assertEquals("lundi 1er décembre", com.lampstandhq.introibo.data.liturgical.VernacularDates.weekdayDayMonth(adventSunday.plusDays(1)))
+        ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
+        assertEquals("Sunday", com.lampstandhq.introibo.data.liturgical.LiturgicalNames.weekday(0))
+    }
+
+    @Test
     fun theCalendarNamesTheDayInFrench() {
         french()
         val name = ContentStore.ordoNameEnglish("Dominica I Adventus")!!

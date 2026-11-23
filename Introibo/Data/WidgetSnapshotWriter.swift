@@ -42,6 +42,8 @@ enum WidgetSnapshotWriter {
             keys += (1...12).map { "calendar.month_abbrev.\($0)" }
             keys += (1...12).map { "calendar.month.\($0)" }
             keys += (0...6).map { "calendar.weekday.\($0)" }
+            // "8 de septiembre" · "8 septembre", "1er septembre"
+            keys += ["calendar.day_month", "calendar.first_day"]
             for key in keys {
                 let es = store.uiString(key, "")
                 if !es.isEmpty { chrome[key] = es }
