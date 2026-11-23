@@ -44,6 +44,8 @@ import androidx.compose.ui.unit.sp
 import com.lampstandhq.introibo.data.content.ContentStore
 import com.lampstandhq.introibo.data.model.Mystery
 import com.lampstandhq.introibo.data.model.MysterySetData
+import com.lampstandhq.introibo.data.model.Prayer
+import com.lampstandhq.introibo.ui.prayers.PrayerDetailSheet
 import com.lampstandhq.introibo.ui.components.BilingualLine
 import com.lampstandhq.introibo.ui.components.SmallLabel
 import com.lampstandhq.introibo.ui.theme.IntroiboTheme
@@ -365,6 +367,23 @@ private fun CompletionView(
             color = colors.goldLeaf,
         )
         Spacer(modifier = Modifier.height(20.dp))
+        // What follows the Rosary: its customary closing prayers, and at
+        // night the prayers before sleep. Both open from the library.
+        var openPrayer by remember { mutableStateOf<Prayer?>(null) }
+        listOf(
+            "precesPostRosarium" to ContentStore.uiString("rosary.after_prayers", "Prayers after the Rosary"),
+            "precesNocturnae" to ContentStore.uiString("rosary.night_prayers", "Night Prayers"),
+        ).forEach { (slug, label) ->
+            val prayer = ContentStore.prayer(slug) ?: return@forEach
+            TextButton(
+                onClick = { openPrayer = prayer },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 28.dp),
+            ) {
+                SmallLabel(text = label, color = colors.goldLeaf)
+            }
+        }
         TextButton(
             onClick = onDismiss,
             modifier = Modifier
@@ -372,6 +391,9 @@ private fun CompletionView(
                 .padding(horizontal = 28.dp),
         ) {
             SmallLabel(text = ContentStore.uiString("common.close", "Close"), color = colors.sanctuaryRed)
+        }
+        openPrayer?.let { p ->
+            PrayerDetailSheet(prayer = p, onDismiss = { openPrayer = null })
         }
     }
 }

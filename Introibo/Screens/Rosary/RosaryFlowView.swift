@@ -11,6 +11,13 @@ struct RosaryFlowView: View {
     @State private var stepIndex = 0
     @State private var steps: [RosaryStep] = []
     @State private var didMark = false
+    /// A prayer opened from the completion screen (closing prayers, night prayers).
+    @State private var openPrayer: Prayer? = nil
+    private struct CompletionLink: Identifiable {
+        let slug: String
+        let label: String
+        var id: String { slug }
+    }
     @AppStorage(SettingsKey.theme) private var themeRaw = AppTheme.parchment.rawValue
     @AppStorage(SettingsKey.fontSize) private var fontScale = FontSizeScale.defaultValue
     @AppStorage(SettingsKey.language) private var languageRaw = LanguageMode.both.rawValue
@@ -199,6 +206,25 @@ struct RosaryFlowView: View {
                 .appFont(.captionSm)
                 .foregroundStyle(Color.goldLeaf)
                 .padding(.top, 8)
+            // What follows the Rosary: its customary closing prayers, and at
+            // night the prayers before sleep. Both open from the library.
+            ForEach([
+                CompletionLink(slug: "precesPostRosarium", label: ContentStore.shared.uiString("rosary.after_prayers", "Prayers after the Rosary")),
+                CompletionLink(slug: "precesNocturnae", label: ContentStore.shared.uiString("rosary.night_prayers", "Night Prayers")),
+            ]) { link in
+                if let p = store.prayer(slug: link.slug) {
+                    Button { openPrayer = p } label: {
+                        Text(link.label)
+                            .smallLabel(color: Color.goldLeaf, tracking: 3)
+                            .padding(.vertical, 14)
+                            .frame(maxWidth: .infinity)
+                            .overlay(Rectangle().stroke(Color.goldLeaf.opacity(0.6), lineWidth: 0.5))
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.horizontal, 28)
+                    .padding(.top, 8)
+                }
+            }
             Button { dismiss() } label: {
                 Text(ContentStore.shared.uiString("common.done", "Done"))
                     .smallLabel(color: Color.sanctuaryRed, tracking: 3)
@@ -212,6 +238,9 @@ struct RosaryFlowView: View {
             Spacer()
         }
         .background(Color.pageBackground.ignoresSafeArea())
+        .sheet(item: $openPrayer) { p in
+            PrayerDetailView(prayer: p)
+        }
     }
 
     // MARK: - Build steps

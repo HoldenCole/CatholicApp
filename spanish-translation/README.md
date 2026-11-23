@@ -53,7 +53,7 @@ so integration cannot silently misalign.
 
 | File | Source | Status |
 |---|---|---|
-| `prayers_es.json` | `prayers.json` (88 prayers, 1244 lines) | complete |
+| `prayers_es.json` | `prayers.json` (90 prayers, 1304 lines) | complete |
 | `marian_antiphons_es.json` | `marian_antiphons.json` (4) | complete |
 | `hours_es.json` | `hours.json` metadata (names, times, intros) | complete |
 | `ui_strings_es.json` | curated app UI strings | complete |

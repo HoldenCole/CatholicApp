@@ -241,6 +241,111 @@
     ]
   },
   {
+    "slug": "precesPostRosarium",
+    "title": "Preces post Rosárium",
+    "eng": "Prayers after the Rosary",
+    "category": "Rosárium",
+    "note": "The customary conclusion of the Rosary: the Salve Regína with its versicle and the Rosary collect, the prayer to St. Michael, and the invocations of the Sacred Heart, the Immaculate Heart and St. Joseph.",
+    "occasions": [
+      "Marian",
+      "Evening"
+    ],
+    "lines": [
+      {
+        "lat": "Salve, Regína, Mater misericórdiæ,",
+        "eng": "Hail, holy Queen, Mother of Mercy,"
+      },
+      {
+        "lat": "vita, dulcédo et spes nostra, salve.",
+        "eng": "our life, our sweetness, and our hope, hail."
+      },
+      {
+        "lat": "Ad te clamámus, éxsules fílii Hevæ.",
+        "eng": "To thee do we cry, poor banished children of Eve."
+      },
+      {
+        "lat": "Ad te suspirámus, geméntes et flentes in hac lacrimárum valle.",
+        "eng": "To thee do we send up our sighs, mourning and weeping in this valley of tears."
+      },
+      {
+        "lat": "Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte.",
+        "eng": "Turn then, most gracious Advocate, thine eyes of mercy toward us."
+      },
+      {
+        "lat": "Et Jesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde.",
+        "eng": "And after this our exile, show unto us the blessed fruit of thy womb, Jesus."
+      },
+      {
+        "lat": "O clemens, o pia, o dulcis Virgo María. Amen.",
+        "eng": "O clement, O loving, O sweet Virgin Mary. Amen."
+      },
+      {
+        "lat": "℣. Ora pro nobis, sancta Dei Génetrix.",
+        "eng": "℣. Pray for us, O holy Mother of God."
+      },
+      {
+        "lat": "℟. Ut digni efficiámur promissiónibus Christi.",
+        "eng": "℟. That we may be made worthy of the promises of Christ."
+      },
+      {
+        "lat": "Orémus. Deus, cujus Unigénitus per vitam, mortem et resurrectiónem suam nobis salútis ætérnæ prǽmia comparávit: concéde, quǽsumus; ut, hæc mystéria sacratíssimo beátæ Maríæ Vírginis Rosário recoléntes, et imitémur quod cóntinent, et quod promíttunt, assequámur. Per eúndem Christum Dóminum nostrum. Amen.",
+        "eng": "Let us pray. O God, Whose only-begotten Son, by His life, death and resurrection, hath purchased for us the rewards of eternal salvation: grant, we beseech Thee, that, meditating upon these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise. Through the same Christ our Lord. Amen."
+      },
+      {
+        "lat": "",
+        "eng": ""
+      },
+      {
+        "lat": "Sancte Míchaël Archángele, defénde nos in prǽlio;",
+        "eng": "St. Michael the Archangel, defend us in battle;"
+      },
+      {
+        "lat": "contra nequítiam et insídias diáboli esto præsídium.",
+        "eng": "be our protection against the wickedness and snares of the devil."
+      },
+      {
+        "lat": "Ímperet illi Deus, súpplices deprecámur:",
+        "eng": "May God rebuke him, we humbly pray:"
+      },
+      {
+        "lat": "tuque, Princeps milítiæ cæléstis,",
+        "eng": "and do thou, O Prince of the heavenly host,"
+      },
+      {
+        "lat": "Sátanam aliósque spíritus malígnos,",
+        "eng": "by the power of God cast into hell Satan"
+      },
+      {
+        "lat": "qui ad perditiónem animárum pervagántur in mundo,",
+        "eng": "and all the evil spirits who prowl about the world"
+      },
+      {
+        "lat": "divína virtúte, in inférnum detrúde. Amen.",
+        "eng": "seeking the ruin of souls. Amen."
+      },
+      {
+        "lat": "",
+        "eng": ""
+      },
+      {
+        "lat": "Cor Jesu sacratíssimum, miserére nobis. (×3)",
+        "eng": "Most Sacred Heart of Jesus, have mercy on us. (×3)"
+      },
+      {
+        "lat": "Cor Maríæ immaculátum, ora pro nobis.",
+        "eng": "Immaculate Heart of Mary, pray for us."
+      },
+      {
+        "lat": "Sancte Joseph, ora pro nobis.",
+        "eng": "St. Joseph, pray for us."
+      },
+      {
+        "lat": "In nómine Patris, ✠ et Fílii, et Spíritus Sancti. Amen.",
+        "eng": "In the Name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen."
+      }
+    ]
+  },
+  {
     "slug": "confiteor",
     "title": "Confíteor",
     "eng": "I Confess",
@@ -6001,6 +6106,166 @@
       {
         "lat": "Orémus. Fidélium, Deus, ómnium Cónditor et Redémptor, animábus famulórum famularúmque tuárum remissiónem cunctórum tríbue peccatórum: ut indulgéntiam, quam semper optavérunt, piis supplicatiónibus consequántur. Qui vivis et regnas in sǽcula sæculórum. Amen.",
         "eng": "Let us pray. O God, the Creator and Redeemer of all the faithful, grant to the souls of Thy servants and handmaids the remission of all their sins: that through pious supplications they may obtain the pardon which they have always desired. Who livest and reignest world without end. Amen."
+      }
+    ]
+  },
+  {
+    "slug": "precesNocturnae",
+    "title": "Preces Nocturnæ",
+    "eng": "Night Prayers",
+    "category": "Devotiónes",
+    "note": "Prayers before sleep, to be said after the evening Rosary: adoration and thanksgiving for the day, a brief examination of conscience with the Confíteor and Act of Contrition, Compline's In manus tuas and Nunc dimíttis, its collect Vísita quǽsumus, the Guardian Angel, Our Lady, a prayer for a holy death, and the faithful departed.",
+    "occasions": [
+      "Evening"
+    ],
+    "lines": [
+      {
+        "lat": "In nómine Patris, ✠ et Fílii, et Spíritus Sancti. Amen.",
+        "eng": "In the Name of the Father, ✠ and of the Son, and of the Holy Ghost. Amen."
+      },
+      {
+        "lat": "℣. Deus, in adjutórium meum inténde. ℟. Dómine, ad adjuvándum me festína.",
+        "eng": "℣. O God, come to my assistance. ℟. O Lord, make haste to help me."
+      },
+      {
+        "lat": "Adóro te, Deus meus, et amo te toto corde. Grátias ago tibi, quod me creásti, redemísti, christiánum fecísti, et in hac die conservásti. Ignósce mihi mala, quæ hódie commísi, et si quid boni egi, illud súscipe. Custódi me dum dórmio, et líbera me a perículis. Grátia tua sit semper mecum et cum ómnibus caris meis. Amen.",
+        "eng": "I adore Thee, my God, and I love Thee with all my heart. I give Thee thanks for having created me, redeemed me, made me a Christian, and preserved me this day. Pardon me the evil I have done today, and if I have done any good, accept it. Keep me while I sleep and deliver me from all danger. May Thy grace be always with me and with all whom I love. Amen."
+      },
+      {
+        "lat": "Hic fiat brevis exámen consciéntiæ.",
+        "eng": "Here make a brief examination of conscience."
+      },
+      {
+        "lat": "",
+        "eng": ""
+      },
+      {
+        "lat": "Confíteor Deo omnipoténti, beátæ Maríæ semper Vírgini,",
+        "eng": "I confess to almighty God, to blessed Mary ever Virgin,"
+      },
+      {
+        "lat": "beáto Michaéli Archángelo, beáto Joánni Baptístæ,",
+        "eng": "to blessed Michael the Archangel, to blessed John the Baptist,"
+      },
+      {
+        "lat": "sanctis Apóstolis Petro et Paulo, ómnibus Sanctis, et tibi, pater (et vobis, fratres):",
+        "eng": "to the holy Apostles Peter and Paul, to all the Saints, and to you, Father (and to you, brethren):"
+      },
+      {
+        "lat": "quia peccávi nimis cogitatióne, verbo et ópere:",
+        "eng": "that I have sinned exceedingly in thought, word, and deed:"
+      },
+      {
+        "lat": "mea culpa, mea culpa, mea máxima culpa.",
+        "eng": "through my fault, through my fault, through my most grievous fault."
+      },
+      {
+        "lat": "Ideo precor beátam Maríam semper Vírginem, beátum Michaélem Archángelum,",
+        "eng": "Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel,"
+      },
+      {
+        "lat": "beátum Joánnem Baptístam, sanctos Apóstolos Petrum et Paulum, omnes Sanctos, et te, pater (et vos, fratres),",
+        "eng": "blessed John the Baptist, the holy Apostles Peter and Paul, all the Saints, and you, Father (and you, brethren),"
+      },
+      {
+        "lat": "oráre pro me ad Dóminum Deum nostrum. Amen.",
+        "eng": "to pray for me to the Lord our God. Amen."
+      },
+      {
+        "lat": "",
+        "eng": ""
+      },
+      {
+        "lat": "Deus meus, ex toto corde pǽnitet me ómnium meórum peccatórum,",
+        "eng": "My God, with my whole heart I repent of all my sins,"
+      },
+      {
+        "lat": "éaque detéstor, quia peccándo,",
+        "eng": "and I detest them, because by sinning"
+      },
+      {
+        "lat": "non solum pœnas a te iuste statútas proméritus sum,",
+        "eng": "I have not only deserved the punishments justly decreed by Thee,"
+      },
+      {
+        "lat": "sed præsértim quia offéndi te, summum bonum, ac dignum qui super ómnia diligáris.",
+        "eng": "but above all because I have offended Thee, the supreme good, worthy to be loved above all things."
+      },
+      {
+        "lat": "Ideo fírmiter propóno, adiuvánte grátia tua,",
+        "eng": "Therefore I firmly resolve, with the help of Thy grace,"
+      },
+      {
+        "lat": "de cétero me non peccatúrum peccandíque occasiónes próximas fugitúrum. Amen.",
+        "eng": "henceforth to sin no more and to flee the near occasions of sin. Amen."
+      },
+      {
+        "lat": "",
+        "eng": ""
+      },
+      {
+        "lat": "℣. In manus tuas, Dómine, comméndo spíritum meum. ℟. Redemísti nos, Dómine, Deus veritátis.",
+        "eng": "℣. Into Thy hands, O Lord, I commend my spirit. ℟. Thou hast redeemed us, O Lord, God of truth."
+      },
+      {
+        "lat": "Ant. Salva nos, Dómine, vigilántes, custódi nos dormiéntes: ut vigilémus cum Christo, et requiescámus in pace.",
+        "eng": "Ant. Save us, O Lord, while we are awake, guard us when we sleep: that we may watch with Christ, and rest in peace."
+      },
+      {
+        "lat": "Nunc dimíttis servum tuum, Dómine, secúndum verbum tuum in pace:",
+        "eng": "Now Thou dost dismiss Thy servant, O Lord, according to Thy word in peace:"
+      },
+      {
+        "lat": "Quia vidérunt óculi mei salutáre tuum,",
+        "eng": "Because my eyes have seen Thy salvation,"
+      },
+      {
+        "lat": "Quod parásti ante fáciem ómnium populórum:",
+        "eng": "Which Thou hast prepared before the face of all peoples:"
+      },
+      {
+        "lat": "Lumen ad revelatiónem géntium, et glóriam plebis tuæ Israël.",
+        "eng": "A light to the revelation of the Gentiles, and the glory of Thy people Israel."
+      },
+      {
+        "lat": "Glória Patri, et Fílio, et Spirítui Sancto.",
+        "eng": "Glory be to the Father, and to the Son, and to the Holy Ghost."
+      },
+      {
+        "lat": "Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.",
+        "eng": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      },
+      {
+        "lat": "Orémus. Vísita, quǽsumus, Dómine, habitatiónem istam, et omnes insídias inimíci ab ea longe repélle: Ángeli tui sancti hábitent in ea, qui nos in pace custódiant; et benedíctio tua sit super nos semper. Per Dóminum nostrum Jesum Christum, Fílium tuum: Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum. Amen.",
+        "eng": "Let us pray. Visit, we beseech Thee, O Lord, this dwelling, and drive far from it all the snares of the enemy: let Thy holy Angels dwell herein, to keep us in peace; and let Thy blessing be always upon us. Through our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+      },
+      {
+        "lat": "",
+        "eng": ""
+      },
+      {
+        "lat": "Ángele Dei, qui custos es mei, me tibi commíssum pietáte supérna, hac nocte illúmina, custódi, rege et gubérna. Amen.",
+        "eng": "Angel of God, my guardian dear, to whom God's love commits me here, this night be at my side, to light and guard, to rule and guide. Amen."
+      },
+      {
+        "lat": "O Dómina mea, o Mater mea, tibi me totum óffero; atque, ut me tibi probem devótum, cónsecro tibi hódie óculos meos, aures meas, os meum, cor meum, plane me totum. Quóniam ítaque tuus sum, o bona Mater, me serva, me defénde, ut rem ac possessiónem tuam. Amen.",
+        "eng": "O my Queen, O my Mother, I give myself entirely to thee; and to show my devotion to thee, I consecrate to thee this day my eyes, my ears, my mouth, my heart, my whole being without reserve. Wherefore, good Mother, as I am thine own, keep me, guard me, as thy property and possession. Amen."
+      },
+      {
+        "lat": "Jesu, María, Joseph, vobis cor et ánimam meam dono. Jesu, María, Joseph, adstáte mihi in extrémo agóne. Jesu, María, Joseph, in pace vobíscum dórmiam et requiéscam.",
+        "eng": "Jesus, Mary and Joseph, I give you my heart and my soul. Jesus, Mary and Joseph, assist me in my last agony. Jesus, Mary and Joseph, may I sleep and rest in peace with you."
+      },
+      {
+        "lat": "℣. Réquiem ætérnam dona eis, Dómine. ℟. Et lux perpétua lúceat eis. ℣. Requiéscant in pace. ℟. Amen.",
+        "eng": "℣. Eternal rest grant unto them, O Lord. ℟. And let perpetual light shine upon them. ℣. May they rest in peace. ℟. Amen."
+      },
+      {
+        "lat": "Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. ℟. Amen.",
+        "eng": "May the almighty Lord grant us a quiet night and a perfect end. ℟. Amen."
+      },
+      {
+        "lat": "Benedícat et custódiat nos omnípotens et miséricors Dóminus, Pater, et Fílius, ✠ et Spíritus Sanctus. ℟. Amen.",
+        "eng": "May the almighty and merciful Lord, the Father, the Son, ✠ and the Holy Ghost, bless and keep us. ℟. Amen."
       }
     ]
   }
