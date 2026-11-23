@@ -56,6 +56,8 @@ final class ContentStore {
     @ObservationIgnored private var officeLessonsData: OfficeLessons?
     /// DO's Spanish for the same texts, aligned with `OfficeLessons.texts` (nil where it has none).
     @ObservationIgnored private var officeLessonsESData: [String?]?
+    /// The hymns whose doxology may change and the doxologies themselves (office_doxologies.json).
+    @ObservationIgnored private var officeDoxologiesData: OfficeDoxologies?
     private var officeRubrics = OfficeRubrics(rules: [:], psalterium: OfficePsalterium(), ants: [:], communes: [:],
                                               propersFor: { _ in [:] }, ordoFor: { _, _ in nil },
                                               temporalPropers: [:], sanctoralPropers: [:], saintCommune: [:], saintOfficeInherit: [:])
@@ -70,6 +72,12 @@ final class ContentStore {
         if let d = officeLessonsData { return d }
         let v = load("office_lessons", as: OfficeLessons.self) ?? OfficeLessons()
         officeLessonsData = v
+        return v
+    }
+    private func officeDoxologies() -> OfficeDoxologies {
+        if let d = officeDoxologiesData { return d }
+        let v = load("office_doxologies", as: OfficeDoxologies.self) ?? OfficeDoxologies()
+        officeDoxologiesData = v
         return v
     }
     private func officeLessonsES() -> [String?] {
@@ -1119,7 +1127,7 @@ final class ContentStore {
         // — after the commemorations and every other layer, before the Spanish.
         assembled.parts = OfficeFrame.apply(assembled.parts, OfficeFrame.Ctx(hourSlug: template.slug, rite: rite, dow: ctx.dayOfWeek, office: resolution?.office,
             lessons: resolution?.lessons ?? 3, nocturns: resolution?.nocturns ?? 1, special: resolution?.special != nil, template: template))
-        return stripNameMarks(applyOfficeSpanish(assembled))
+        return stripNameMarks(applyDoxology(applyOfficeSpanish(assembled), resolution, LDate.from(date), ctx.dayOfWeek, rite))
     }
 
     /// The key of office_texts_es.json: NFC, <br>/~ as spaces, whitespace collapsed.
@@ -1210,10 +1218,55 @@ final class ContentStore {
     ///    those, contracted the same way.
     /// The Te Deum stands in place of the last responsory (hourForDate).
     /// `base` holds the first nocturn as the assembler laid it.
+    /// A hymn as office_doxologies.json keys it: its first two lines, lowercase, no accents or punctuation.
+    private static func hymnKey(_ hymn: String) -> String {
+        let two = hymn.components(separatedBy: "\n").filter { !$0.trimmed.isEmpty }.prefix(2).joined(separator: " ")
+        let scalars = two.lowercased().decomposedStringWithCanonicalMapping.unicodeScalars.filter { !(0x0300...0x036F).contains($0.value) }
+        return String(String.UnicodeScalarView(scalars)).replacingOccurrences(of: "æ", with: "ae").replacingOccurrences(of: "œ", with: "oe")
+            .rreplace("[^a-z ]", " ").rreplace("\\s+", " ").trimmed
+    }
+
+    /// The older books change the last stanza of certain hymns with the
+    /// feast or season (Christmastide, Paschaltide, feasts of Our Lady...):
+    /// DO marks those hymns, and its doxology routine names the stanza.
+    /// Applied after the Spanish overlay, which finds a hymn by its whole
+    /// Latin text; the vernacular stanza is the doxology's own Spanish.
+    /// Kotlin mirror: ContentStore.applyDoxology.
+    private func applyDoxology(_ hour: Hour, _ res: OfficeRubrics.Resolution?, _ date: LDate, _ dow: Int, _ rite: MissalRite) -> Hour {
+        guard let res, rite != .rite1962, hour.parts.contains(where: { $0.type == "hymn" }) else { return hour }
+        let (name, special) = officeRubrics.doxology(res, date, dow, rite)
+        let table = officeDoxologies()
+        let spanish = vernacular == .spanish
+        func unstar(_ t: String) -> String { (t.hasPrefix("*") ? String(t.dropFirst()) : t).trimmed }
+        let lat: String, ver: String
+        if let special {
+            guard let l = special.lat else { return hour }
+            lat = unstar(l)
+            ver = (spanish ? officeTextsES[Self.officeNorm(lat)] : nil) ?? special.eng.map(unstar) ?? lat
+        } else {
+            guard let name, let d = table.doxologies[name] else { return hour }
+            lat = d.lat; ver = spanish ? d.es : d.eng
+        }
+        func swap(_ text: String, _ dox: String) -> String {
+            guard let r = text.range(of: "\n\n", options: .backwards) else { return text }
+            return String(text[..<r.upperBound]) + dox
+        }
+        var out = hour
+        for i in out.parts.indices where out.parts[i].type == "hymn" {
+            guard let l = out.parts[i].lat else { continue }
+            guard table.starred.contains(Self.hymnKey(l)) else { continue }
+            out.parts[i].lat = swap(l, lat)
+            if let e = out.parts[i].eng { out.parts[i].eng = swap(e, ver) }
+        }
+        return out
+    }
+
     /// Divinum Officium writes a name to be supplied as "r. N." (its marker
     /// for a red N.); the hours print it as plain "N." ("Pontífice nostro
-    /// N.", "blessed N. and all the Saints"). Last of all, so the Spanish
-    /// overlay still finds the texts by their Latin as DO has it.
+    /// N.", "blessed N. and all the Saints"), and it brackets a vowel elided
+    /// in singing ("Cum Patr[e], et almo Spíritu"), which the hymns print
+    /// plain. Last of all, so the Spanish overlay still finds the texts by
+    /// their Latin as DO has it.
     /// Kotlin mirror: ContentStore.stripNameMarks.
     private func stripNameMarks(_ hour: Hour) -> Hour {
         func f(_ t: String?) -> String? {
@@ -1222,6 +1275,9 @@ final class ContentStore {
         }
         var out = hour
         for i in out.parts.indices {
+            if out.parts[i].type == "hymn", let l = out.parts[i].lat, l.contains("[") {
+                out.parts[i].lat = l.replacingOccurrences(of: "\\[(\\p{L}{1,2})\\]", with: "$1", options: .regularExpression)
+            }
             out.parts[i].lat = f(out.parts[i].lat); out.parts[i].eng = f(out.parts[i].eng)
             out.parts[i].latR = f(out.parts[i].latR); out.parts[i].engR = f(out.parts[i].engR)
         }
@@ -1925,4 +1981,19 @@ struct OfficeLessonText: Decodable {
 struct OfficeLessons: Decodable {
     var texts: [OfficeLessonText] = []
     var days: [String: [String: [[Int]]]] = [:]
+}
+
+/// One doxology of Psalterium/Doxologies.txt in the three languages.
+struct OfficeDoxology: Decodable {
+    let lat: String
+    let eng: String
+    let es: String
+}
+
+/// The hymns whose last stanza the older books change (by first line, as
+/// ContentStore.hymnKey writes it) and the doxologies by DO's names.
+/// Built by scripts/office_qa/build_office_doxologies.py.
+struct OfficeDoxologies: Decodable {
+    var starred: Set<String> = []
+    var doxologies: [String: OfficeDoxology] = [:]
 }

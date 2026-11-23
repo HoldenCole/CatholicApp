@@ -673,6 +673,24 @@ final class OfficeRubrics {
     }
 
     /// DO gettempora.
+    /// DO doxology (hymni.pl): the proper doxology the older books give the
+    /// hymns whose last stanza may change — a name in Doxologies.txt, or the
+    /// office's own text. Nothing under the 1960 rubrics.
+    /// Kotlin mirror: OfficeRubrics.doxology.
+    func doxology(_ res: Resolution, _ date: LDate, _ dow: Int, _ rite: MissalRite) -> (name: String?, special: Hour.Part?) {
+        if rite == .rite1962 { return (nil, nil) }
+        let o = res.office
+        if let own = o.proper.sec("Doxology") { return (nil, own) }
+        if let m = o.rule.rmatch("Doxology=([a-z]+)", ci: true) { return (m[1], nil) }
+        let c = res.commemoration ?? o.commemoratioKey.map { officeFromKey($0, o.date, o.rite) }
+        if let c, !o.rankHas("Adventus"), let m = c.rule.rmatch("Doxology=([a-z]+)", ci: true) { return (m[1], nil) }
+        if (date.month == 8 && (16...22).contains(date.day) && rite != .rite1955) || (date.month == 12 && (9...15).contains(date.day) && dow > 0) {
+            return ("Nat", nil)
+        }
+        let t = tempora("Doxology", o, dow, rite)
+        return (t.isEmpty ? nil : t, nil)
+    }
+
     private func tempora(_ caller: String, _ o: Office, _ dow: Int, _ rite: MissalRite) -> String {
         let dn = o.dayName
         let day = o.date.day

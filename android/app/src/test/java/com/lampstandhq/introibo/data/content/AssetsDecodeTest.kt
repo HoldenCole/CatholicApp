@@ -121,6 +121,9 @@ class AssetsDecodeTest {
         check("office_texts_es.json", { decode<Map<String, String>>("office_texts_es.json") }) { it.isNotEmpty() }
         check("office_names_es.json", { decode<Map<String, String>>("office_names_es.json") }) { it.isNotEmpty() }
         check("office_conclusions.json", { decode<OfficeConclusions>("office_conclusions.json") }) { it.collects.size > 400 }
+        check("office_doxologies.json", { decode<OfficeDoxologies>("office_doxologies.json") }) {
+            it.starred.size > 40 && it.doxologies.keys.containsAll(listOf("Nat", "Epi", "Pasch", "Asc", "Pent", "Corp", "Heart"))
+        }
         val lessons = decode<OfficeLessons>("office_lessons.json")
         check("office_lessons.json", { lessons }) { l ->
             l.texts.size > 4000 && l.days.keys == setOf("1962", "1955", "pre1955") && l.days.values.all { it.size >= 2557 }

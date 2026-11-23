@@ -427,6 +427,24 @@ class OfficeRubrics(
         )
     }
 
+    /**
+     * DO doxology (hymni.pl): the proper doxology the older books give the
+     * hymns whose last stanza may change — a name in Doxologies.txt, or the
+     * office's own text. Nothing under the 1960 rubrics.
+     */
+    fun doxology(res: Resolution, date: LocalDate, dow: Int, rite: MissalRite): Pair<String?, Hour.Part?> {
+        if (rite == MissalRite.RITE_1962) return null to null
+        val o = res.office
+        o.proper.sec("Doxology")?.let { return null to it }
+        val named = Regex("Doxology=([a-z]+)", RegexOption.IGNORE_CASE)
+        named.find(o.rule)?.let { return it.groupValues[1] to null }
+        val c = res.commemoration ?: o.commemoratioKey?.let { officeFromKey(it, o.date, o.rite) }
+        if (c != null && !o.rankHas("Adventus")) named.find(c.rule)?.let { return it.groupValues[1] to null }
+        val m = date.monthValue; val d = date.dayOfMonth
+        if ((m == 8 && d in 16..22 && rite != MissalRite.RITE_1955) || (m == 12 && d in 9..15 && dow > 0)) return "Nat" to null
+        return tempora("Doxology", o, dow, rite).ifEmpty { null } to null
+    }
+
     /** DO gettempora. */
     private fun tempora(caller: String, o: Office, dow: Int, rite: MissalRite): String {
         val dn = o.dayName

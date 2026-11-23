@@ -118,6 +118,21 @@ books (the template's filler homily on saints' days "vide Commune", the
 Common's responsories where the Scripture's are said, Genesis 1 from
 mid-August to Advent); it now reports only its own first-word artifacts.
 
+## Hymn doxologies
+
+In the older books (not under the 1960 rubrics) the hymns DO marks with
+"*" before their last stanza take the doxology of the feast or season:
+Christmastide and feasts of Our Lady ("Jesu, tibi sit glória, Qui natus es
+de Vírgine"), the Epiphany, Paschaltide, the Ascension, Pentecost, Corpus
+Christi, the Sacred Heart. `build_office_doxologies.py --do $DO_ROOT`
+writes `office_doxologies.json` (the marked hymns by their first two
+lines, and Psalterium/Doxologies.txt in Latin, English and Spanish);
+`OfficeRubrics.doxology` ports DO's choice (hymni.pl) and
+`ContentStore.applyDoxology` swaps the stanza after the Spanish overlay,
+on both platforms. Over the year the last stanza of every hymn now agrees
+with DO but for five hymns where DO's own output is at fault or carries a
+commemoration the apps do not see.
+
 ## Spanish
 
 `scripts/build_office_spanish.py` gathers the Spanish the app already

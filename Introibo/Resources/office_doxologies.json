@@ -1,0 +1,90 @@
+{
+ "starred": [
+  "ad regias agni dapes stolis amicti candidis",
+  "aeterna christi munera apostolorum gloriam",
+  "aeterne rex altissime redemptor et fidelium",
+  "alma parens omni carens corruptelae macula",
+  "aurora caelum purpurat aether resultat laudibus",
+  "aurora caelum purpurat rosisque mane concolor",
+  "beata nobis gaudia anni reduxit orbita",
+  "caelestis agni nuptias o juliana dum petis",
+  "christe redemptor omnium conserva tuos famulos",
+  "christus humani generis misertus morte nos ictos merita supernam",
+  "claro paschali gaudio sol mundo nitet radio",
+  "crudelis herodes deum regem venire quid times",
+  "deus tuorum militum sors et corona praemium",
+  "exsultet caelum laudibus resultet terra gaudiis",
+  "exsultet orbis gaudiis caelum resultet laudibus",
+  "fortem virili pectore laudemus omnes feminam",
+  "invicte martyr unicum patris secutus filium",
+  "jam lucis orto sidere deum precemur supplices",
+  "jesu corona celsior et veritas sublimior",
+  "jesu corona virginum quem mater illa concipit",
+  "jesu redemptor omnium perpes corona praesulum",
+  "limana regum civitas regale munus edidit",
+  "lucis creator optime lucem dierum proferens",
+  "maria castis osculis lambit dei vestigia",
+  "maria quae mortalium preces amanter excipis",
+  "mysterium mirabile hac luce nobis panditur",
+  "nunc sancte nobis spiritus unum patri cum filio",
+  "o gloriosa virginum sublimis inter sidera",
+  "o quae serena brasilis astas favesque gentibus",
+  "o sola magnarum urbium major bethlem cui contigit",
+  "paschale mundo gaudium sol nuntiat formosior",
+  "pater superni luminis cum magdalenam respicis",
+  "placare christe servulis quibus patris clementiam",
+  "praeclara custos virginum intacta mater numinis",
+  "quem terra pontus sidera colunt adorant praedicant",
+  "quicumque christum quaeritis oculos in altum tollite",
+  "rector potens verax deus qui temperas rerum vices",
+  "rerum deus tenax vigor immotus in te permanens",
+  "rex gloriose martyrum corona confitentium",
+  "rex sempiterne caelitum rerum creator omnium",
+  "superni sponsa principis propitiatrix hominis",
+  "te dicimus praeconio intacta mater numinis",
+  "te lucis ante terminum rerum creator poscimus",
+  "telluris omnes incolae rosae plaudant solemniis",
+  "tristes erant apostoli de christi acerbo funere",
+  "tristes erant apostoli de nece sui domini",
+  "veni creator spiritus mentes tuorum visita",
+  "verbum supernum prodiens e patris aeterni sinu",
+  "virgo quae nostris decus addis oris quam pio cultu veneramur atque"
+ ],
+ "doxologies": {
+  "Asc": {
+   "lat": "Jesu, tibi sit glória,\nQui victor in cælum redis,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "eng": "All glory, Lord, to Thee we pay,\nAscending o’er the stars to-day;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen.",
+   "es": "Gloria a ti, Señor,\nque asciendes por encima de los astros,\ncon el Padre y el Espíritu Santo\npor los siglos eternos.\nAmén."
+  },
+  "Corp": {
+   "lat": "Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "eng": "Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "es": "Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+  },
+  "Epi": {
+   "lat": "Jesu, tibi sit glória,\nQui apparuísti Géntibus,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "eng": "All glory, Jesu, be to thee\nFor this thy glad Epiphany;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
+   "es": "¡Oh Jesús, que te mostraste a los gentiles!,\ngloria sea dada a ti en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "Heart": {
+   "lat": "Jesu, tibi sit glória,\nQui Corde fundis grátiam,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "eng": "We give thee praise, who dost impart\nSuch grace, O Jesu, from thy Heart;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
+   "es": "¡Oh Jesús, que derramas la gracia por tu Corazón!,\ngloria sea dada a Ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "Nat": {
+   "lat": "Jesu, tibi sit glória,\nQui natus es de Vírgine,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+   "eng": "All honour, laud, and glory be,\nO Jesu, Virgin-Born, to thee;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
+   "es": "¡Oh Jesús, que naciste de la Virgen!,\ngloria sea dada a Ti, en unión\ncon el Padre y el Espíritu Santo,\npor los siglos sempiternos.\nAmén."
+  },
+  "Pasch": {
+   "lat": "Deo Patri sit glória,\nEt Fílio, qui a mórtuis\nSurréxit, ac Paráclito,\nIn sempitérna sǽcula.\nAmen.",
+   "eng": "Hymns of glory, songs of praise,\nFather, unto Thee we raise;\nRisen Lord, all praise to Thee,\nEver with the Spirit be\nAmen.",
+   "es": "Gloria sea dada a Dios Padre,\ny al Hijo, que resucitó\nde entre los muertos, y al Paráclito,\npor los siglos de los siglos.\nAmén."
+  },
+  "Pent": {
+   "lat": "Deo Patri sit glória,\nEt Fílio, qui a mórtuis\nSurréxit, ac Paráclito,\nIn sæculórum sǽcula.\nAmen.",
+   "eng": "All praise be thine, O risen Lord,\nFrom death to endless life restored;\nWhom with the Father we adore,\nAnd Holy Ghost, for evermore.\nAmen.",
+   "es": "Gloria sea dada a Dios Padre,\ny al Hijo, que resucitó\nde entre los muertos, y al Paráclito,\npor los siglos de los siglos.\nAmén."
+  }
+ }
+}

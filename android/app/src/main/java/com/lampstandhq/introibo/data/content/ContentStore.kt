@@ -182,6 +182,10 @@ object ContentStore {
     private var officeLessonsData: OfficeLessons? = null
     internal fun officeLessons(): OfficeLessons =
         officeLessonsData ?: (load<OfficeLessons>("office_lessons.json") ?: OfficeLessons()).also { officeLessonsData = it }
+    /** The hymns whose doxology may change and the doxologies themselves (office_doxologies.json). */
+    private var officeDoxologiesData: OfficeDoxologies? = null
+    private fun officeDoxologies(): OfficeDoxologies =
+        officeDoxologiesData ?: (load<OfficeDoxologies>("office_doxologies.json") ?: OfficeDoxologies()).also { officeDoxologiesData = it }
     /** DO's Spanish for the same texts, aligned with [OfficeLessons.texts] (null where it has none). */
     private var officeLessonsESData: List<String?>? = null
     private fun officeLessonsES(): List<String?> =
@@ -439,6 +443,7 @@ object ContentStore {
         officeOrdoCache.clear()
         officeLessonsData = null
         officeLessonsESData = null
+        officeDoxologiesData = null
         mysterySets = load("mysteries.json") ?: emptyList()
         rosaryPrayers = load("rosary_prayers.json") ?: emptyList()
 
@@ -1581,7 +1586,7 @@ object ContentStore {
         // — after the commemorations and every other layer, before the Spanish.
         assembled = assembled.copy(parts = OfficeFrame.apply(assembled.parts, OfficeFrame.Ctx(template.slug, rite, ctx.dayOfWeek, resolution?.office,
             resolution?.lessons ?: 3, resolution?.nocturns ?: 1, resolution?.special != null, template)))
-        return stripNameMarks(applyOfficeSpanish(assembled))
+        return stripNameMarks(applyDoxology(applyOfficeSpanish(assembled), resolution, date, ctx.dayOfWeek, rite))
     }
 
     /** The rubrics engine's Spanish lookups: the templated collects and
@@ -1735,19 +1740,65 @@ object ContentStore {
             ?.let { officeAssembler.temporalPropers[it]?.containsKey("oratio") } == true
     }
 
+    /** A hymn as office_doxologies.json keys it: its first two lines, lowercase, no accents or punctuation. */
+    private fun hymnKey(hymn: String): String {
+        val two = hymn.split("\n").filter { it.isNotBlank() }.take(2).joinToString(" ")
+        val s = java.text.Normalizer.normalize(two.lowercase(), java.text.Normalizer.Form.NFD)
+            .filter { it.code !in 0x0300..0x036F }.replace("æ", "ae").replace("œ", "oe")
+        return s.replace(Regex("[^a-z ]"), " ").replace(Regex("\\s+"), " ").trim()
+    }
+
+    /**
+     * The older books change the last stanza of certain hymns with the
+     * feast or season (Christmastide, Paschaltide, feasts of Our Lady...):
+     * DO marks those hymns, and its doxology routine names the stanza.
+     * Applied after the Spanish overlay, which finds a hymn by its whole
+     * Latin text; the vernacular stanza is the doxology's own Spanish.
+     */
+    private fun applyDoxology(hour: Hour, res: OfficeRubrics.Resolution?, date: java.time.LocalDate, dow: Int, rite: MissalRite): Hour {
+        if (res == null || rite == MissalRite.RITE_1962 || hour.parts.none { it.type == "hymn" }) return hour
+        val (name, special) = officeRubrics.doxology(res, date, dow, rite)
+        val table = officeDoxologies()
+        val spanish = appliedVernacular == VernacularLanguage.SPANISH
+        val lat: String; val ver: String
+        if (special != null) {
+            lat = special.lat?.removePrefix("*")?.trim() ?: return hour
+            ver = (if (spanish) officeTextsES[officeNorm(lat)] else null) ?: special.eng?.removePrefix("*")?.trim() ?: lat
+        } else {
+            val d = table.doxologies[name ?: return hour] ?: return hour
+            lat = d.lat; ver = if (spanish) d.es else d.eng
+        }
+        fun swap(text: String, dox: String): String {
+            val i = text.lastIndexOf("\n\n")
+            return if (i < 0) text else text.substring(0, i + 2) + dox
+        }
+        return hour.copy(parts = hour.parts.map { p ->
+            val l = p.lat
+            if (p.type != "hymn" || l == null || hymnKey(l) !in table.starred) p
+            else p.copy(lat = swap(l, lat), eng = p.eng?.let { swap(it, ver) })
+        })
+    }
+
     private val NAME_MARK = Regex("!?(\\s)r\\. N\\.")
 
     /**
      * Divinum Officium writes a name to be supplied as "r. N." (its marker
      * for a red N.); the hours print it as plain "N." ("Pontífice nostro
-     * N.", "blessed N. and all the Saints"). Last of all, so the Spanish
-     * overlay still finds the texts by their Latin as DO has it.
+     * N.", "blessed N. and all the Saints"), and it brackets a vowel elided
+     * in singing ("Cum Patr[e], et almo Spíritu"), which the hymns print
+     * plain. Last of all, so the Spanish overlay still finds the texts by
+     * their Latin as DO has it.
      */
     private fun stripNameMarks(hour: Hour): Hour {
         fun f(t: String?): String? = if (t != null && t.contains("r. N.")) NAME_MARK.replace(t, "$1N.") else t
-        if (hour.parts.none { p -> listOf(p.lat, p.eng, p.latR, p.engR).any { it?.contains("r. N.") == true } }) return hour
-        return hour.copy(parts = hour.parts.map { p -> p.copy(lat = f(p.lat), eng = f(p.eng), latR = f(p.latR), engR = f(p.engR)) })
+        fun elided(p: Hour.Part) = p.type == "hymn" && p.lat?.contains('[') == true
+        if (hour.parts.none { p -> elided(p) || listOf(p.lat, p.eng, p.latR, p.engR).any { it?.contains("r. N.") == true } }) return hour
+        return hour.copy(parts = hour.parts.map { p ->
+            val lat = if (elided(p)) ELISION.replace(p.lat!!, "$1") else p.lat
+            p.copy(lat = f(lat), eng = f(p.eng), latR = f(p.latR), engR = f(p.engR))
+        })
     }
+    private val ELISION = Regex("\\[(\\p{L}{1,2})\\]")
 
     private val LESSON_SLOT = Regex("^(lectio|responsory)([1-9])$")
 
@@ -2003,4 +2054,19 @@ data class OfficeLessonText(val lat: String, val eng: String, val ref: String? =
 data class OfficeLessons(
     val texts: List<OfficeLessonText> = emptyList(),
     val days: Map<String, Map<String, List<List<Int>>>> = emptyMap(),
+)
+
+/** One doxology of Psalterium/Doxologies.txt in the three languages. */
+@Serializable
+data class OfficeDoxology(val lat: String, val eng: String, val es: String)
+
+/**
+ * The hymns whose last stanza the older books change (by first line, as
+ * ContentStore.hymnKey writes it) and the doxologies by DO's names.
+ * Built by scripts/office_qa/build_office_doxologies.py.
+ */
+@Serializable
+data class OfficeDoxologies(
+    val starred: Set<String> = emptySet(),
+    val doxologies: Map<String, OfficeDoxology> = emptyMap(),
 )
