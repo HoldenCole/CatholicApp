@@ -73,7 +73,8 @@ def check(name, data):
             if k not in src or len(v["lines_fr"]) != len(src[k]["lines"]):
                 errs.append(f"{k}: lines differ from the source")
     elif name in ("confession_examen_fr.json", "confession_guides_fr.json", "mysteries_fr.json",
-                  "stations_fr.json", "hours_fr.json", "daily_psalm_fr.json"):
+                  "stations_fr.json", "hours_fr.json", "daily_psalm_fr.json",
+                  "reference_fr.json", "saints_fr.json", "courses_fr.json", "ui_strings_fr.json"):
         # the same shape as the Spanish overlay, which the Spanish validator ties to the source
         es = load(ROOT / "spanish-translation" / name.replace("_fr.json", "_es.json"))
         def shape(x):
