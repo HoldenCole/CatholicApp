@@ -15,6 +15,10 @@ import java.time.LocalDate
  *
  *   OFFICE_JSON_DIR=/tmp/appqa OFFICE_JSON_START=2025-11-30 \
  *   OFFICE_JSON_END=2026-11-28 gradle :app:testDebugUnitTest --tests '*OfficeJsonDump*'
+ *
+ * OFFICE_JSON_LANG=es dumps the Spanish office. OFFICE_JSON_FULL=1 adds every other field of a part (the vernacular
+ * side, the intoned-antiphon flag) and the day's Mass proper: the Android
+ * half of the iOS/Android parity diff (scripts/office_qa/ios_parity).
  */
 class OfficeJsonDump {
 
@@ -34,8 +38,12 @@ class OfficeJsonDump {
         val rites = (System.getenv("OFFICE_JSON_RITES") ?: "1962,1955,pre1955").split(",")
             .map { r -> MissalRite.entries.first { it.rawValue == r } }
         val hours = listOf("matutinum", "laudes", "prima", "tertia", "sexta", "nona", "vesperae", "completorium")
+        val full = System.getenv("OFFICE_JSON_FULL") == "1"
 
         ContentStore.initFromDirectory(assets)
+        if (System.getenv("OFFICE_JSON_LANG") == "es") {
+            ContentStore.applyVernacular(com.lampstandhq.introibo.storage.settings.VernacularLanguage.SPANISH)
+        }
         var d = start
         while (!d.isAfter(end)) {
             for (rite in rites) {
@@ -51,15 +59,36 @@ class OfficeJsonDump {
                             "v1" to p.v1Lat, "r1" to p.r1Lat, "v2" to p.v2Lat, "r2" to p.r2Lat,
                             "ant" to p.antiphonLat,
                             "verses" to p.verses?.map { it.lat },
-                        ).filterValues { it != null }
+                        ).let { base ->
+                            if (!full) base else base + mapOf(
+                                "title" to p.title, "eng" to p.eng, "engR" to p.engR,
+                                "v1e" to p.v1Eng, "r1e" to p.r1Eng, "v2e" to p.v2Eng, "r2e" to p.r2Eng,
+                                "ante" to p.antiphonEng, "engBody" to p.engBody,
+                                "versesE" to p.verses?.map { it.eng },
+                                "intoned" to p.antiphonIntoned, "season" to p.season,
+                            )
+                        }.filterValues { it != null }
                     }
+                }
+                val mass = if (!full) null else ContentStore.properForDate(d, rite)?.let { m ->
+                    fun t(x: com.lampstandhq.introibo.data.model.ProperText?) = x?.let { mapOf("lat" to it.lat, "eng" to it.eng) }
+                    mapOf(
+                        "slug" to m.slug, "title" to m.title, "rank" to m.rank, "color" to m.color,
+                        "introit" to t(m.introit), "collect" to t(m.collect),
+                        "epistle" to mapOf("ref" to m.epistle.ref, "lat" to m.epistle.lat, "eng" to m.epistle.eng),
+                        "gradual" to t(m.gradual), "alleluia" to t(m.alleluia), "tract" to t(m.tract), "sequence" to t(m.sequence),
+                        "gospel" to mapOf("ref" to m.gospel.ref, "lat" to m.gospel.lat, "eng" to m.gospel.eng),
+                        "offertory" to t(m.offertory), "secret" to t(m.secret),
+                        "communion" to t(m.communion), "postcommunion" to t(m.postcommunion),
+                        "preface" to m.preface, "glor" to m.glorOverride, "credo" to m.credoOverride,
+                    ).filterValues { it != null }
                 }
                 val doc = mapOf(
                     "date" to d.toString(), "rite" to rite.rawValue,
                     "ordo" to ordo?.let { mapOf("name" to it.name, "winner" to it.winner, "winnerKey" to it.winnerKey,
                         "rank" to it.rank, "season" to it.season, "commemoration" to it.commemoration) },
                     "hours" to hoursJson,
-                )
+                ).let { if (mass != null) it + ("mass" to mass) else it }
                 out.writeText(json.encodeToString(kotlinx.serialization.json.JsonElement.serializer(), toJson(doc)))
             }
             d = d.plusDays(1)

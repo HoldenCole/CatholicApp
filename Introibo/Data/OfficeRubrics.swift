@@ -737,7 +737,9 @@ final class OfficeRubrics {
             key.hasPrefix("versum_") || key.hasPrefix("nocturn_") ||
             key == "completorium.antiphon" || key.hasPrefix("completorium.psalm") ||
             key == "completorium.hymn" || key == "completorium.capitulum" || key == "completorium.responsory" ||
-            key == "completorium.canticle"
+            key == "completorium.canticle" ||
+            // DO scripts (rendered by the rubrics, never as raw text)
+            key.hasPrefix("special_") || key == "initial" || key == "conclusio" || key.hasPrefix("oratio_mortuorum")
     }
 
     func officeFor(_ ordo: OrdoEntry, _ date: LDate, _ rite: MissalRite) -> Office {

@@ -1049,7 +1049,7 @@
         "eng": "℣. The Lord be with you. ℟. And with thy spirit."
       },
       {
-        "lat": "(After the Epistle) ℟. Deo grátias.",
+        "lat": "(Post Epístolam) ℟. Deo grátias.",
         "eng": "(After the Epistle) ℟. Thanks be to God."
       },
       {
@@ -1057,7 +1057,7 @@
         "eng": "℣. The continuation of the holy Gospel according to N. ℟. Glory be to Thee, O Lord."
       },
       {
-        "lat": "(After the Gospel) ℟. Laus tibi, Christe.",
+        "lat": "(Post Evangélium) ℟. Laus tibi, Christe.",
         "eng": "(After the Gospel) ℟. Praise be to Thee, O Christ."
       },
       {
@@ -2038,7 +2038,7 @@
       },
       {
         "lat": "Ne proícias me a fácie tua, et Spíritum Sanctum tuum ne áuferas a me.",
-        "eng": "Cast me not away from Thy face, and take not Thy Holy Spirit from me."
+        "eng": "Cast me not away from Thy face, and take not Thy Holy Ghost from me."
       },
       {
         "lat": "Redde mihi lætítiam salutáris tui, et spíritu principáli confírma me.",
@@ -2162,7 +2162,7 @@
       },
       {
         "lat": "Deo Patri sit glória, et Fílio, qui a mórtuis surréxit, ac Paráclito, in sæculórum sǽcula. Amen.",
-        "eng": "Praise be to Thee, Father and Son, and Holy Spirit, with them one; and may the Son on us bestow the gifts that from the Spirit flow. Amen."
+        "eng": "Praise be to Thee, Father and Son, and Holy Ghost, with them one; and may the Son on us bestow the gifts that from the Spirit flow. Amen."
       }
     ],
     "occasions": [
@@ -2696,7 +2696,7 @@
       },
       {
         "lat": "Spíritus Sancte, Deus,",
-        "eng": "God the Holy Spirit,"
+        "eng": "God the Holy Ghost,"
       },
       {
         "lat": "℟. miserére nobis.",
@@ -3080,7 +3080,7 @@
       },
       {
         "lat": "Per advéntum Spíritus Sancti Parácliti, líbera nos, Dómine.",
-        "eng": "Through the coming of the Holy Spirit, the Paraclete, deliver us, O Lord."
+        "eng": "Through the coming of the Holy Ghost, the Paraclete, deliver us, O Lord."
       },
       {
         "lat": "In die judícii, líbera nos, Dómine.",
@@ -3412,7 +3412,7 @@
       },
       {
         "lat": "Ure igne Sancti Spíritus renes nostros et cor nostrum, Dómine: ut tibi casto córpore serviámus, et mundo corde placeámus.",
-        "eng": "Inflame our hearts and our desires, O Lord, with the fire of the Holy Spirit, so that we may serve thee with a chaste body, and please thee with a pure heart."
+        "eng": "Inflame our hearts and our desires, O Lord, with the fire of the Holy Ghost, so that we may serve thee with a chaste body, and please thee with a pure heart."
       },
       {
         "lat": "Fidélium, Deus, ómnium Cónditor et Redémptor, animábus famulórum famularúmque tuárum remissiónem cunctórum tríbue peccatórum: ut indulgéntiam, quam semper optavérunt, piis supplicatiónibus consequántur.",
@@ -4127,7 +4127,7 @@
     "lines": [
       {
         "lat": "Veni, Sancte Spíritus, et emítte cǽlitus lucis tuæ rádium.",
-        "eng": "Come, Holy Spirit, send forth from heaven the ray of Thy light."
+        "eng": "Come, Holy Ghost, send forth from heaven the ray of Thy light."
       },
       {
         "lat": "Veni, pater páuperum, veni, dator múnerum, veni, lumen córdium.",
@@ -4204,7 +4204,7 @@
       },
       {
         "lat": "Benedíctus Sanctus Spíritus, Paráclitus.",
-        "eng": "Blessed be the Holy Spirit, the Paraclete."
+        "eng": "Blessed be the Holy Ghost, the Paraclete."
       },
       {
         "lat": "Benedícta excélsa Mater Dei, María sanctíssima.",
@@ -4269,7 +4269,7 @@
       },
       {
         "lat": "Spíritus Sancte, Deus, miserére nobis.",
-        "eng": "God the Holy Spirit, have mercy on us."
+        "eng": "God the Holy Ghost, have mercy on us."
       },
       {
         "lat": "Sancta Trínitas, unus Deus, miserére nobis.",
@@ -4497,6 +4497,7 @@
       }
     ],
     "occasions": [
+      "Marian",
       "Litanies"
     ]
   },
@@ -5044,7 +5045,7 @@
         "eng": "Saint Joseph, pray for us."
       },
       {
-        "lat": "Proles David ínclita, ora pro nobis.",
+        "lat": "Proles David ínclyta, ora pro nobis.",
         "eng": "Renowned offspring of David, pray for us."
       },
       {
@@ -5060,7 +5061,7 @@
         "eng": "Chaste guardian of the Virgin, pray for us."
       },
       {
-        "lat": "Fílii Dei nutrítie, ora pro nobis.",
+        "lat": "Fílii Dei nutrície, ora pro nobis.",
         "eng": "Foster-father of the Son of God, pray for us."
       },
       {
@@ -5170,7 +5171,7 @@
     "title": "Litaníæ Humilitátis",
     "eng": "Litany of Humility",
     "category": "Devotiónes",
-    "note": "Composed by Rafael Cardinal Merry del Val (1865–1930), Secretary of State to St. Pius X, who recited it daily after Mass. For private devotion.",
+    "note": "Composed by Rafael Cardinal Merry del Val (1865–1930), Secretary of State to St. Pius X, who recited it daily after Mass. For private devotion. It has no official Latin text; the Latin given here renders the customary form.",
     "occasions": [
       "Litanies",
       "In Temptation",
@@ -5280,7 +5281,7 @@
     "title": "Litaníæ de Sancto Spíritu",
     "eng": "Litany of the Holy Ghost",
     "category": "Devotiónes",
-    "note": "For private devotion (not among the six litanies approved for public recitation). Fitting for the novena between the Ascension and Pentecost, for Whitsuntide, and before any undertaking that needs the light of the Holy Ghost.",
+    "note": "For private devotion (not among the six litanies approved for public recitation). Fitting for the novena between the Ascension and Pentecost, for Whitsuntide, and before any undertaking that needs the light of the Holy Ghost. It has no official Latin text; the Latin given here renders the form customary in prayer books.",
     "occasions": [
       "Litanies"
     ],
@@ -5571,7 +5572,7 @@
         "eng": "Clean oblation, have mercy on us."
       },
       {
-        "lat": "Agnus absque mácula, miserére nobis.",
+        "lat": "Agne absque mácula, miserére nobis.",
         "eng": "Lamb without spot, have mercy on us."
       },
       {
@@ -5627,7 +5628,7 @@
         "eng": "Heavenly antidote, by which we are preserved from sin, have mercy on us."
       },
       {
-        "lat": "Stupéndum supra ómnia mirácula, miserére nobis.",
+        "lat": "Stupéndum supra ómnia miráculum, miserére nobis.",
         "eng": "Most stupendous of all miracles, have mercy on us."
       },
       {
@@ -5809,7 +5810,7 @@
     "title": "Litaníæ pro Fidélibus Defúnctis",
     "eng": "Litany for the Faithful Departed",
     "category": "Devotiónes",
-    "note": "For private devotion. Traditionally prayed throughout November, the month of the Holy Souls, on All Souls' Day (November 2), at a death or its anniversary, and after visiting a cemetery.",
+    "note": "For private devotion. Traditionally prayed throughout November, the month of the Holy Souls, on All Souls' Day (November 2), at a death or its anniversary, and after visiting a cemetery. It has no official text; this form follows the pattern of the Litany of the Saints.",
     "occasions": [
       "Litanies",
       "For the Departed"
@@ -5868,11 +5869,11 @@
         "eng": "St. Michael, pray for them."
       },
       {
-        "lat": "Omnes sancti Ángeli et Archángeli, ora pro eis.",
+        "lat": "Omnes sancti Ángeli et Archángeli, oráte pro eis.",
         "eng": "All ye holy Angels and Archangels, pray for them."
       },
       {
-        "lat": "Omnes sancti beatórum Spirítuum órdines, ora pro eis.",
+        "lat": "Omnes sancti beatórum Spirítuum órdines, oráte pro eis.",
         "eng": "All ye holy orders of blessed Spirits, pray for them."
       },
       {
@@ -5884,7 +5885,7 @@
         "eng": "St. Joseph, pray for them."
       },
       {
-        "lat": "Omnes sancti Patriárchæ et Prophétæ, ora pro eis.",
+        "lat": "Omnes sancti Patriárchæ et Prophétæ, oráte pro eis.",
         "eng": "All ye holy Patriarchs and Prophets, pray for them."
       },
       {
@@ -5900,7 +5901,7 @@
         "eng": "St. John, pray for them."
       },
       {
-        "lat": "Omnes sancti Apóstoli et Evangelístæ, ora pro eis.",
+        "lat": "Omnes sancti Apóstoli et Evangelístæ, oráte pro eis.",
         "eng": "All ye holy Apostles and Evangelists, pray for them."
       },
       {
@@ -5912,7 +5913,7 @@
         "eng": "St. Lawrence, pray for them."
       },
       {
-        "lat": "Omnes sancti Mártyres, ora pro eis.",
+        "lat": "Omnes sancti Mártyres, oráte pro eis.",
         "eng": "All ye holy Martyrs, pray for them."
       },
       {
@@ -5924,7 +5925,7 @@
         "eng": "St. Augustine, pray for them."
       },
       {
-        "lat": "Omnes sancti Pontífices et Confessóres, ora pro eis.",
+        "lat": "Omnes sancti Pontífices et Confessóres, oráte pro eis.",
         "eng": "All ye holy Bishops and Confessors, pray for them."
       },
       {
@@ -5936,7 +5937,7 @@
         "eng": "St. Francis, pray for them."
       },
       {
-        "lat": "Omnes sancti Mónachi et Eremítæ, ora pro eis.",
+        "lat": "Omnes sancti Mónachi et Eremítæ, oráte pro eis.",
         "eng": "All ye holy Monks and Hermits, pray for them."
       },
       {
@@ -5952,7 +5953,7 @@
         "eng": "St. Barbara, pray for them."
       },
       {
-        "lat": "Omnes sanctæ Vírgines et Víduæ, ora pro eis.",
+        "lat": "Omnes sanctæ Vírgines et Víduæ, oráte pro eis.",
         "eng": "All ye holy Virgins and Widows, pray for them."
       },
       {
@@ -5964,8 +5965,8 @@
         "eng": "Be merciful, spare them, O Lord."
       },
       {
-        "lat": "Propítius esto, exáudi eos, Dómine.",
-        "eng": "Be merciful, graciously hear them, O Lord."
+        "lat": "Propítius esto, exáudi nos, Dómine.",
+        "eng": "Be merciful, graciously hear us, O Lord."
       },
       {
         "lat": "Propítius esto, líbera eos, Dómine.",
@@ -6048,7 +6049,7 @@
         "eng": "That Thou wouldst vouchsafe to deliver the souls of all who rest in cemeteries, we beseech Thee, hear us."
       },
       {
-        "lat": "Ut ánimas eórum, qui nullam habent spiritálem memóriam, liberáre dignéris, te rogámus, audi nos.",
+        "lat": "Ut ánimas eórum, quorum nulla fit memória, liberáre dignéris, te rogámus, audi nos.",
         "eng": "That Thou wouldst vouchsafe to deliver the souls of those who have none to remember them, we beseech Thee, hear us."
       },
       {
@@ -6132,7 +6133,7 @@
         "eng": "I adore Thee, my God, and I love Thee with all my heart. I give Thee thanks for having created me, redeemed me, made me a Christian, and preserved me this day. Pardon me the evil I have done today, and if I have done any good, accept it. Keep me while I sleep and deliver me from all danger. May Thy grace be always with me and with all whom I love. Amen."
       },
       {
-        "lat": "Hic fiat brevis exámen consciéntiæ.",
+        "lat": "Hic fiat breve exámen consciéntiæ.",
         "eng": "Here make a brief examination of conscience."
       },
       {
