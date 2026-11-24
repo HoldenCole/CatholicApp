@@ -15,7 +15,7 @@
    {
     "eng_fr": "Au long du jour",
     "practices_fr": [
-     {"t_fr": "Réciter le Rosaire en entier", "d_fr": "Padre Pio l’appelait « l’arme ». Récitez-en au moins cinq dizaines chaque jour."},
+     {"t_fr": "Réciter le Rosaire en entier", "d_fr": "Récitez-en au moins cinq dizaines chaque jour."},
      {"t_fr": "Lecture spirituelle", "d_fr": "Lisez pendant quinze minutes l’Imitation de Jésus-Christ, la vie des saints ou saint Jean de la Croix."},
      {"t_fr": "Visite au Saint-Sacrement", "d_fr": "Faites dans la journée une visite au Saint-Sacrement, même brève. Padre Pio disait que Jésus, au tabernacle, nous attend avec une patience et un amour infinis."}
     ]
@@ -46,7 +46,7 @@
  "therese": {
   "name_fr": "Sainte Thérèse de Lisieux",
   "title_fr": "Docteur de l’Église · La Petite Fleur",
-  "quote_fr": "Je n’ai d’autre moyen de te prouver mon amour, que de jeter des fleurs, c’est-à-dire de ne laisser échapper aucun petit sacrifice, aucun regard, aucune parole, de profiter de toutes les plus petites choses et de les faire par amour.",
+  "quote_fr": "Je n’ai pas d’autre moyen pour vous prouver mon amour que de jeter des fleurs : c’est-à-dire de ne laisser échapper aucun petit sacrifice, aucun regard, aucune parole, de profiter des moindres actions et de les faire par amour.",
   "sections_fr": [
    {
     "eng_fr": "Matin",
@@ -104,7 +104,7 @@
     "eng_fr": "Au long du jour",
     "practices_fr": [
      {"t_fr": "Étudier la théologie (1 heure)", "d_fr": "Lisez lentement la Somme, l’Écriture ou les Pères de l’Église. L’étude est une forme de prière."},
-     {"t_fr": "Réciter le Rosaire", "d_fr": "Thomas aimait le Rosaire pour sa simplicité : « une méditation quotidienne sur les mystères de l’Incarnation »."},
+     {"t_fr": "Réciter le Rosaire", "d_fr": "Cinq dizaines chaque jour : une méditation sur les mystères de l’Incarnation."},
      {"t_fr": "Visite au Saint-Sacrement", "d_fr": "Faites une visite au Saint-Sacrement pour adorer le Christ réellement présent. Saint Thomas a composé le Tantum ergo et l’Adoro te devote ; que sa dévotion eucharistique inspire la vôtre."}
     ]
    },
@@ -126,7 +126,7 @@
    {
     "title_fr": "Adoro te devote",
     "eng_fr": "Je vous adore pieusement, ô Dieu caché,\nqui sous ces espèces vous dérobez à nos regards :\nmon cœur tout entier se soumet à vous,\net, dans la contemplation de votre présence, mon être tout entier s’anéantit.\n\nLa vue, le toucher, le goût sont ici en défaut,\net l’ouïe seule assure ma foi ;\nje crois tout ce qu’a dit le Fils de Dieu :\nrien de plus vrai que la parole de la vérité même.\n\nSur la croix, la divinité seule était cachée ;\nici c’est l’humanité même qui se rend invisible :\nje crois et je confesse l’une et l’autre,\net je demande ce que demandait le larron pénitent.\n\nJe ne vois pas vos plaies comme les vit Thomas ;\nnéanmoins je confesse que vous êtes mon Dieu :\nfaites que ma foi en vous aille toujours croissant,\nqu’en vous j’espère, que toujours je vous aime.\n\nÔ mémorial de la mort du Seigneur,\npain vivant qui donne la vie à l’homme,\ndonnez à mon âme de vivre de vous,\net de goûter toujours votre ineffable douceur.\n\nSeigneur Jésus, pélican rempli de tendresse,\npurifiez mes souillures par votre sang\ndont une seule goutte\npeut effacer les péchés du monde entier.\n\nJésus, que maintenant je ne vois qu’à travers un voile,\ndaignez étancher l’ardente soif de mon âme ;\nfaites qu’un jour contemplant à découvert votre visage,\nje jouisse éternellement de la vue de votre gloire.\nAinsi soit-il.",
-    "note_fr": "Composé par saint Thomas d’Aquin pour la fête du Saint-Sacrement (la Fête-Dieu). Traduction française en prose."
+    "note_fr": "Attribué à saint Thomas d’Aquin ; écrit pour la dévotion privée devant le Saint-Sacrement. Traduction française en prose."
    }
   ]
  },
@@ -236,7 +236,7 @@
     "practices_fr": [
      {"t_fr": "Sanctifier son travail", "d_fr": "Travaillez bien, pour l’amour de Dieu. Faites de chaque tâche une prière. C’est cela, l’Opus Dei : « l’Œuvre de Dieu »."},
      {"t_fr": "Réciter l’Angélus", "d_fr": "À midi, interrompez ce que vous faites et récitez l’Angélus. Cette brève interruption sanctifie le milieu de la journée de travail et honore l’Incarnation."},
-     {"t_fr": "Réciter le Rosaire", "d_fr": "Cinq dizaines chaque jour. « Le Rosaire est l’arme la plus puissante pour vaincre Satan. »"},
+     {"t_fr": "Réciter le Rosaire", "d_fr": "Cinq dizaines chaque jour."},
      {"t_fr": "Visite au Saint-Sacrement", "d_fr": "Une brève visite au milieu du travail du jour, ne serait-ce qu’une minute."}
     ]
    },
@@ -265,7 +265,7 @@
  "desales": {
   "name_fr": "Saint François de Sales",
   "title_fr": "Docteur de l’Église · Évêque de Genève",
-  "quote_fr": "Rien n’est si fort que la douceur ; rien n’est si doux que la force véritable.",
+  "quote_fr": "Ne prévenez point les accidents de cette vie par appréhension, ains prévenez-les par une parfaite espérance, qu’à mesure qu’ils arriveront, Dieu, à qui vous êtes, vous délivrera.",
   "sections_fr": [
    {
     "eng_fr": "Matin",
@@ -279,8 +279,8 @@
     "eng_fr": "Au long du jour",
     "practices_fr": [
      {"t_fr": "Bouquets spirituels", "d_fr": "Cueillez au long de la journée de « petits bouquets » de pensées dévotes. Revenez-y souvent."},
-     {"t_fr": "Pratiquer la douceur", "d_fr": "Par-dessus tout, soyez doux : avec les autres, avec vous-même, avec les circonstances. « Rien n’est si fort que la douceur. »"},
-     {"t_fr": "Réciter le Rosaire", "d_fr": "François aimait le Rosaire comme une prière de famille : lente, affectueuse, méditative."}
+     {"t_fr": "Pratiquer la douceur", "d_fr": "Par-dessus tout, soyez doux : avec les autres, avec vous-même, avec les circonstances."},
+     {"t_fr": "Réciter le Rosaire", "d_fr": "Récitez-le lentement, avec affection, en méditant."}
     ]
    },
    {

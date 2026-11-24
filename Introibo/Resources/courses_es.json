@@ -41,7 +41,7 @@
   "sections_es": [
    {
     "label_es": "Las reglas clave",
-    "html_es": "<p><strong>C</strong> — fuerte (k) ante a, o, u o consonante (<em>cantáre</em> = can-TA-re).<br><strong>C + e/i/ae</strong> — suave, como la «ch» española (<em>caelum</em> = CHE-lum, <em>Dómine</em> = DÓ-mi-ne).<br><strong>G + e/i</strong> — suave, como la «gi» italiana, cercana a la «y» de <em>inyectar</em> (<em>regina</em> = re-YI-na); nunca la «j» áspera del español.<br><strong>Gn</strong> — «ñ» (<em>Agnus</em> = A-ñus).<br><strong>Sc + e/i</strong> — «sh» inglesa (<em>suscipe</em> = SU-shi-pe).<br><strong>Ti + vocal</strong> — «tsi» (<em>gratia</em> = GRA-tsi-a).<br><strong>J</strong> — como «y» (<em>Jesus</em> = YE-sus). <strong>H</strong> — muda.</p>"
+    "html_es": "<p><strong>C</strong> — fuerte (k) ante a, o, u o consonante (<em>cantáre</em> = can-TA-re).<br><strong>C + e/i/ae</strong> — suave, como la «ch» española (<em>caelum</em> = CHE-lum, <em>pacem</em> = PA-chem).<br><strong>G + e/i</strong> — suave, como la «gi» italiana, cercana a la «y» de <em>inyectar</em> (<em>regina</em> = re-YI-na); nunca la «j» áspera del español.<br><strong>Gn</strong> — «ñ» (<em>Agnus</em> = A-ñus).<br><strong>Sc + e/i</strong> — «sh» inglesa (<em>suscipe</em> = SU-shi-pe).<br><strong>Ti + vocal</strong> — «tsi» (<em>gratia</em> = GRA-tsi-a).<br><strong>J</strong> — como «y» (<em>Jesus</em> = YE-sus). <strong>H</strong> — muda.</p>"
    },
    {
     "label_es": "Mnemotecnia",
@@ -102,7 +102,7 @@
   "sections_es": [
    {
     "label_es": "Primera declinación (-a)",
-    "html_es": "<p>Los sustantivos de la primera declinación suelen ser femeninos y terminan en <strong>-a</strong> en el nominativo: <em>María, grátia, vita, gloria, córona</em>. Las terminaciones de los casos siguen un patrón previsible.</p>"
+    "html_es": "<p>Los sustantivos de la primera declinación suelen ser femeninos y terminan en <strong>-a</strong> en el nominativo: <em>María, grátia, vita, gloria, coróna</em>. Las terminaciones de los casos siguen un patrón previsible.</p>"
    },
    {
     "label_es": "María (f.); 1.ª declinación"
@@ -207,7 +207,7 @@
  },
  "ave": {
   "title_es": "Domina el Ave María",
-  "intro_es": "El Avemaría es la oración más rezada del Rosario: 50 veces en cada rosario, cientos de veces en una vida. Vamos a desglosarla frase a frase hasta conocer cada palabra.",
+  "intro_es": "El Avemaría es la oración más rezada del Rosario: diez veces en cada decena, cientos de veces en una vida. Vamos a desglosarla frase a frase hasta conocer cada palabra.",
   "sections_es": [
    {
     "label_es": "El origen",

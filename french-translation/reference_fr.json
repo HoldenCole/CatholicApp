@@ -2,17 +2,17 @@
  "cal-advent": {
   "title_fr": "Avent",
   "summary_fr": "Le temps liturgique de préparation à la Nativité de Notre-Seigneur Jésus-Christ. Il commence quatre dimanches avant Noël et s’achève à la Vigile de Noël. Un temps d’attente joyeuse, de préparation pénitentielle et de renouveau spirituel.",
-  "history_fr": "L’observance de l’Avent remonte au moins au IVe siècle. Le concile de Tours (567) prescrivit un jeûne trois fois par semaine, de la fête de saint Martin (11 novembre) jusqu’à Noël.",
+  "history_fr": "Le plus ancien témoignage de ce temps est le jeûne d’avant Noël que saint Perpet, évêque de Tours (461–490), institua à partir de la fête de saint Martin (11 novembre). Le concile de Mâcon (581) étendit cette coutume aux autres Églises franques.",
   "practice_fr": "Prière, jeûne et aumône plus assidus. Assistez aux Messes Rorate, célébrées de grand matin à la lueur des cierges. La couronne de l’Avent, avec ses quatre bougies, marque le passage des semaines.",
   "notes_fr": "On porte des ornements violets. Le Gloria est omis. L’orgue se tait, sauf pour soutenir le chant. Le troisième dimanche, Gaudete, permet les ornements roses.",
   "scripture_eng_fr": "Une vierge concevra, et elle enfantera un fils, auquel on donnera le nom d’Emmanuel."
  },
  "cal-christmas": {
   "title_fr": "Temps de Noël",
-  "summary_fr": "Le temps qui célèbre la naissance de Notre-Seigneur, de la Vigile de Noël (24 décembre) au 2 février (la Chandeleur, Purification de la Sainte Vierge). Douze jours de fête qui culminent à l’Épiphanie.",
+  "summary_fr": "Le temps qui célèbre la naissance de Notre-Seigneur, des premières Vêpres de Noël (24 décembre) au 13 janvier : le temps de Noël jusqu’au 5 janvier, puis le temps de l’Épiphanie. Douze jours de fête qui culminent à l’Épiphanie.",
   "history_fr": "La fête de la Nativité fut fixée au 25 décembre dès le IVe siècle, supplantant la fête païenne du Sol Invictus. L’octave de Noël comprend les saints Innocents (28 décembre), saint Étienne (26 décembre) et saint Jean (27 décembre).",
-  "practice_fr": "Les fidèles chantent des noëls, dressent la crèche de la Nativité, assistent à la Messe de minuit et gardent dans la joie l’octave de Noël. Les ornements de Noël se portent jusqu’à la Chandeleur.",
-  "notes_fr": "Ornements blancs pendant tout ce temps. Le Gloria et le Te Deum reviennent. L’antienne mariale Alma Redemptoris Mater se chante à Complies.",
+  "practice_fr": "Les fidèles chantent des noëls, dressent la crèche de la Nativité, assistent à la Messe de minuit et gardent dans la joie l’octave de Noël.",
+  "notes_fr": "Ornements blancs pendant tout ce temps. Le Gloria et le Te Deum reviennent. L’antienne mariale Alma Redemptoris Mater se chante à Complies jusqu’à la Chandeleur (2 février).",
   "scripture_eng_fr": "Il vous est né aujourd’hui un Sauveur, qui est le Christ Seigneur."
  },
  "cal-lent": {
@@ -35,8 +35,8 @@
   "title_fr": "Temps pascal",
   "summary_fr": "Les cinquante jours qui vont du dimanche de Pâques à la Pentecôte, pendant lesquels l’Église célèbre la Résurrection de Notre-Seigneur. L’Alléluia est rétabli et chanté à maintes reprises ; le cierge pascal brûle à toutes les Messes.",
   "history_fr": "Le Temps pascal est plus ancien que le Carême et remonte aux premiers jours de l’Église. L’octave de Pâques était considérée comme un seul et même jour de joie.",
-  "practice_fr": "Recevez la sainte Communion (le devoir pascal oblige à communier au moins une fois entre le mercredi des Cendres et le dimanche de la Trinité). Saluez-vous les uns les autres par ces mots : « Le Christ est ressuscité ; il est vraiment ressuscité. »",
-  "notes_fr": "Ornements blancs pendant tout ce temps. L’Alléluia est ajouté aux antiennes. L’antienne mariale est le Regina Caeli. La Pentecôte clôt ce temps avec des ornements rouges.",
+  "practice_fr": "Recevez la sainte Communion (le devoir pascal oblige à communier au moins une fois l’an, au temps de Pâques : d’après le Code de 1917, du dimanche des Rameaux au dimanche in Albis, délai qui varie selon les lieux). Saluez-vous les uns les autres par ces mots : « Le Christ est ressuscité ; il est vraiment ressuscité. »",
+  "notes_fr": "Ornements blancs pendant tout ce temps. L’Alléluia est ajouté aux antiennes. L’antienne mariale est le Regina Caeli. Ce temps s’achève avec la Pentecôte et son octave, en ornements rouges.",
   "scripture_eng_fr": "Il n’est point ici, car il est ressuscité, comme il l’avait dit."
  },
  "cal-ordinary": {
@@ -102,7 +102,7 @@
  "mass-penance": {
   "title_fr": "La Pénitence (Confession)",
   "summary_fr": "Le sacrement par lequel les péchés commis après le Baptême sont remis par l’absolution d’un prêtre qui agit en la personne du Christ. On l’appelle aussi Confession (à cause de l’aveu des péchés) et Réconciliation (à cause du rétablissement de l’amitié avec Dieu). Le Christ donna ce pouvoir aux Apôtres le dimanche de Pâques : « Ceux à qui vous remettrez les péchés, ils leur seront remis » (Jn 20, 23).",
-  "history_fr": "Dans l’Église primitive, une pénitence publique était imposée pour les péchés graves, parfois durant des années. Dès le VIe siècle, les moines irlandais développèrent la confession privée telle que nous la connaissons aujourd’hui et en répandirent la pratique à travers l’Europe. Le IVe concile du Latran (1215) exigea la confession annuelle de ceux qui sont en état de péché mortel. Le concile de Trente définit les éléments essentiels du sacrement : la contrition, la confession, la satisfaction et l’absolution.",
+  "history_fr": "Dans l’Église primitive, une pénitence publique était imposée pour les péchés graves, parfois durant des années. Dès le VIe siècle, les moines irlandais développèrent la confession privée telle que nous la connaissons aujourd’hui et en répandirent la pratique à travers l’Europe. Le IVe concile du Latran (1215) exigea de tous les fidèles parvenus à l’âge de discrétion qu’ils confessent leurs péchés au moins une fois l’an. Le concile de Trente définit les éléments essentiels du sacrement : la contrition, la confession, la satisfaction et l’absolution.",
   "practice_fr": "Comment faire une bonne confession : (1) Examinez votre conscience à l’aide des dix commandements (voyez l’examen de conscience dans cette application). (2) Regrettez vos péchés ; la contrition parfaite (regret inspiré par l’amour de Dieu) ou la contrition imparfaite (regret inspiré par la crainte du châtiment) suffit avec le sacrement. (3) Confessez au prêtre tous vos péchés mortels, selon leur espèce et leur nombre. Il est recommandé de confesser aussi les péchés véniels, bien que ce ne soit pas obligatoire. (4) Acceptez la pénitence imposée. (5) Récitez l’<link target=\"prayer:actusContr\">Acte de contrition</link>. (6) Recevez l’absolution. (7) Accomplissez votre pénitence sans tarder. Fréquence : la confession mensuelle est le minimum recommandé par les directeurs spirituels ; la confession hebdomadaire est l’idéal pour ceux qui recherchent la sainteté.",
   "notes_fr": "Le secret de la confession est absolu : un prêtre ne peut jamais révéler ce qui lui a été confessé, en aucune circonstance, pas même sous la menace de la mort. Telles ont été la loi et la pratique de l’Église depuis l’origine.",
   "scripture_eng_fr": "Recevez l’Esprit-Saint. Ceux à qui vous remettrez les péchés, ils leur seront remis ; et ceux à qui vous les retiendrez, ils leur seront retenus."
@@ -135,7 +135,7 @@
   "summary_fr": "L’oraison mentale est l’élévation silencieuse de l’esprit et du cœur vers Dieu, sans paroles fixées, pour le connaître, l’aimer et se résoudre à le servir. C’est un entretien intérieur avec Dieu, qui met en œuvre les facultés de la mémoire, de l’intelligence et de la volonté. Tous les saints insistent sur sa nécessité : « Celui qui ne pratique pas l’oraison mentale n’a pas besoin de démon pour l’emporter en enfer » (sainte Thérèse d’Avila).",
   "history_fr": "Les Pères du désert pratiquaient la prière intérieure dès le IIIe siècle. Saint Jean Cassien apporta leurs méthodes en Occident. Au XVIe siècle, saint Ignace de Loyola systématisa la méditation dans ses Exercices spirituels, et sainte Thérèse d’Avila en décrivit les étapes dans Le Château intérieur. Saint François de Sales la rendit accessible aux laïcs dans l’Introduction à la vie dévote. La méthode sulpicienne, élaborée pour la formation des séminaristes, reste largement en usage.",
   "practice_fr": "Comment faire oraison (méthode sulpicienne) : (1) Préparation (2-3 min) : mettez-vous en la présence de Dieu. Rappelez-vous qu’il vous voit, qu’il vous aime et qu’il est attentif à vous. Demandez la lumière du Saint-Esprit. (2) Lecture : lisez lentement un court passage de l’Écriture ou d’un livre spirituel. Arrêtez-vous lorsqu’une phrase vous frappe. (3) Méditation (10-15 min) : considérez la vérité que vous avez lue. Demandez-vous : que signifie-t-elle ? Que Dieu veut-il me faire comprendre ? Servez-vous de votre imagination pour vous placer dans la scène, s’il s’agit d’un passage de l’Évangile. (4) Affections : laissez votre cœur répondre par des actes d’amour, de reconnaissance, de regret, de confiance ou de demande. Parlez à Dieu librement. (5) Résolution : choisissez une chose concrète que vous ferez aujourd’hui en réponse. Qu’elle soit petite et précise. (6) Conclusion : remerciez Dieu. Demandez la grâce de tenir votre résolution. Récitez un Notre Père. Conseil : commencez par 15 minutes chaque jour. Le matin est le meilleur moment. Une église silencieuse ou un coin de votre chambre, avec un crucifix, vous y aidera.",
-  "notes_fr": "Si vous ne ressentez rien pendant l’oraison, ne vous découragez pas. La sécheresse est normale, et souvent un signe de progrès. Demeurez simplement devant Dieu dans la foi. « La prière n’est pas affaire de sentiment, mais de volonté » (saint Thomas d’Aquin). Soyez fidèle à votre rendez-vous avec Dieu, qu’il y ait ou non des consolations."
+  "notes_fr": "Si vous ne ressentez rien pendant l’oraison, ne vous découragez pas. La sécheresse est normale, et souvent un signe de progrès. Demeurez simplement devant Dieu dans la foi. Soyez fidèle à votre rendez-vous avec Dieu, qu’il y ait ou non des consolations."
  },
  "pray-contemplation": {
   "title_fr": "Contemplation",
@@ -190,7 +190,7 @@
  },
  "dev-first-saturdays": {
   "title_fr": "Les premiers samedis",
-  "summary_fr": "La dévotion réparatrice envers le Cœur Immaculé de Marie, pratiquée cinq premiers samedis consécutifs, demandée par Notre-Dame à Fatima en 1925 par l’intermédiaire de sœur Lucie.",
+  "summary_fr": "La dévotion réparatrice envers le Cœur Immaculé de Marie, pratiquée cinq premiers samedis consécutifs, demandée par Notre-Dame par l’intermédiaire de sœur Lucie, à Pontevedra, en 1925.",
   "history_fr": "Révélée à Pontevedra le 10 décembre 1925, en réponse aux blasphèmes et aux ingratitudes commis contre le Cœur Immaculé de Marie.",
   "practice_fr": "Cinq premiers samedis consécutifs : la confession (dans les huit jours), la communion, cinq dizaines du Rosaire et quinze minutes de méditation sur les mystères ; le tout offert en réparation au Cœur Immaculé.",
   "notes_fr": "Notre-Dame a promis d’assister à l’heure de la mort, avec toutes les grâces nécessaires au salut, ceux qui remplissent ces conditions."

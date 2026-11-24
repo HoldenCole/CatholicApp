@@ -2,17 +2,17 @@
  "cal-advent": {
   "title_es": "Adviento",
   "summary_es": "El tiempo litúrgico de preparación para la Natividad de Nuestro Señor Jesucristo. Comienza cuatro domingos antes de Navidad y termina en la Vigilia de Navidad. Un tiempo de gozosa expectación, preparación penitencial y renovación espiritual.",
-  "history_es": "La observancia del Adviento se remonta al menos al siglo IV. El Concilio de Tours (567) prescribió un ayuno tres veces por semana desde la fiesta de San Martín (11 de noviembre) hasta Navidad.",
+  "history_es": "El testimonio más antiguo de este tiempo es el ayuno antes de Navidad que San Perpetuo, Obispo de Tours (461–490), instituyó desde la fiesta de San Martín (11 de noviembre). El Concilio de Mâcon (581) extendió la costumbre a las demás iglesias francas.",
   "practice_es": "Más oración, ayuno y limosna. Asiste a las Misas de Rorate, celebradas de madrugada a la luz de las velas. La corona de Adviento, con sus cuatro velas, marca el paso de las semanas.",
   "notes_es": "Se usan ornamentos morados. Se omite el Gloria. El órgano calla, salvo para sostener el canto. El tercer domingo, Gaudete, permite ornamentos rosados.",
   "scripture_eng_es": "He aquí que la virgen concebirá y dará a luz un hijo, y su nombre será llamado Emmanuel."
  },
  "cal-christmas": {
   "title_es": "Tiempo de Navidad",
-  "summary_es": "El tiempo que celebra el nacimiento de Nuestro Señor, desde la Vigilia de Navidad (24 de diciembre) hasta el 2 de febrero (la Candelaria, la Purificación de Nuestra Señora). Doce días de fiesta que culminan en la Epifanía.",
+  "summary_es": "El tiempo que celebra el nacimiento de Nuestro Señor, desde las Primeras Vísperas de Navidad (24 de diciembre) hasta el 13 de enero: el tiempo de Navidad hasta el 5 de enero, y luego el tiempo de Epifanía. Doce días de fiesta que culminan en la Epifanía.",
   "history_es": "La fiesta de la Natividad quedó fijada el 25 de diciembre hacia el siglo IV, desplazando la fiesta pagana del Sol Invicto. La Octava de Navidad incluye los Santos Inocentes (28 de diciembre), San Esteban (26 de diciembre) y San Juan (27 de diciembre).",
-  "practice_es": "Los fieles cantan villancicos, montan el nacimiento (belén), asisten a la Misa de Medianoche y guardan con alegría la Octava de Navidad. Los ornamentos de Navidad se usan hasta la Candelaria.",
-  "notes_es": "Ornamentos blancos durante todo el tiempo. Vuelven el Gloria y el Te Deum. La antífona mariana Alma Redemptoris Mater se canta en Completas.",
+  "practice_es": "Los fieles cantan villancicos, montan el nacimiento (belén), asisten a la Misa de Medianoche y guardan con alegría la Octava de Navidad.",
+  "notes_es": "Ornamentos blancos durante todo el tiempo. Vuelven el Gloria y el Te Deum. La antífona mariana Alma Redemptoris Mater se canta en Completas hasta la Candelaria (2 de febrero).",
   "scripture_eng_es": "Hoy os ha nacido un Salvador, que es Cristo el Señor."
  },
  "cal-lent": {
@@ -35,8 +35,8 @@
   "title_es": "Tiempo Pascual",
   "summary_es": "Los cincuenta días desde el Domingo de Resurrección hasta Pentecostés, durante los cuales la Iglesia celebra la Resurrección de Nuestro Señor. Se restaura el Aleluya, cantado una y otra vez; el Cirio Pascual arde en todas las Misas.",
   "history_es": "El Tiempo Pascual es más antiguo que la Cuaresma y se remonta a los primeros días de la Iglesia. La Octava de Pascua se consideraba un solo día continuo de alegría.",
-  "practice_es": "Recibe la Sagrada Comunión (el precepto pascual obliga a comulgar al menos una vez entre el Miércoles de Ceniza y el Domingo de la Trinidad). Saludaos unos a otros con «Cristo ha resucitado; verdaderamente ha resucitado».",
-  "notes_es": "Ornamentos blancos durante todo el tiempo. Se añade el Aleluya a las antífonas. La antífona mariana es el Regina Caeli. Pentecostés cierra el tiempo con ornamentos rojos.",
+  "practice_es": "Recibe la Sagrada Comunión (el precepto pascual obliga a comulgar al menos una vez al año por Pascua: según el Código de 1917, desde el Domingo de Ramos hasta el Domingo in Albis, plazo que varía según los lugares). Saludaos unos a otros con «Cristo ha resucitado; verdaderamente ha resucitado».",
+  "notes_es": "Ornamentos blancos durante todo el tiempo. Se añade el Aleluya a las antífonas. La antífona mariana es el Regina Caeli. El tiempo se cierra con Pentecostés y su octava, con ornamentos rojos.",
   "scripture_eng_es": "No está aquí, porque ha resucitado, como dijo."
  },
  "cal-ordinary": {
@@ -102,7 +102,7 @@
  "mass-penance": {
   "title_es": "La Penitencia (Confesión)",
   "summary_es": "El sacramento por el cual los pecados cometidos después del Bautismo son perdonados mediante la absolución de un sacerdote que actúa en la persona de Cristo. Se llama también Confesión (por la declaración de los pecados) y Reconciliación (por la restauración de la amistad con Dios). Cristo dio este poder a los Apóstoles el Domingo de Resurrección: «A quienes perdonareis los pecados, les son perdonados» (Jn 20, 23).",
-  "history_es": "En la Iglesia primitiva se imponía penitencia pública por los pecados graves, a veces durante años. Hacia el siglo VI, los monjes irlandeses desarrollaron la confesión privada tal como hoy la conocemos, extendiendo la práctica por Europa. El IV Concilio de Letrán (1215) exigió la confesión anual a quienes estuvieran en pecado mortal. El Concilio de Trento definió los elementos esenciales del sacramento: contrición, confesión, satisfacción y absolución.",
+  "history_es": "En la Iglesia primitiva se imponía penitencia pública por los pecados graves, a veces durante años. Hacia el siglo VI, los monjes irlandeses desarrollaron la confesión privada tal como hoy la conocemos, extendiendo la práctica por Europa. El IV Concilio de Letrán (1215) exigió que todos los fieles llegados a la edad de la discreción confesaran sus pecados al menos una vez al año. El Concilio de Trento definió los elementos esenciales del sacramento: contrición, confesión, satisfacción y absolución.",
   "practice_es": "Cómo hacer una buena Confesión: (1) Examina tu conciencia con los Diez Mandamientos (ve el Examen en esta aplicación). (2) Arrepiéntete de tus pecados; la contrición perfecta (dolor por amor de Dios) o la imperfecta (dolor por temor del castigo) basta con el sacramento. (3) Confiesa al sacerdote todos los pecados mortales en especie y número. Los veniales, aunque no es obligatorio, se recomienda confesarlos. (4) Acepta la penitencia impuesta. (5) Reza el <link target=\"prayer:actusContr\">Acto de Contrición</link>. (6) Recibe la absolución. (7) Cumple tu penitencia sin demora. Frecuencia: la confesión mensual es el mínimo que recomiendan los directores espirituales; la semanal es ideal para quien busca la santidad.",
   "notes_es": "El sigilo de la Confesión es absoluto: un sacerdote jamás puede revelar lo confesado, bajo ninguna circunstancia, ni siquiera bajo amenaza de muerte. Así ha sido la ley y la práctica de la Iglesia desde el principio.",
   "scripture_eng_es": "Recibid el Espíritu Santo: a quienes perdonareis los pecados, les son perdonados; y a quienes se los retuviereis, les son retenidos."
@@ -135,7 +135,7 @@
   "summary_es": "La oración mental es la elevación silenciosa de la mente y del corazón a Dios, sin palabras fijas, para conocerle, amarle y resolverse a servirle. Es una conversación interior con Dios que emplea las facultades de la memoria, el entendimiento y la voluntad. Todos los santos insisten en su necesidad: «Quien no practica la oración mental no necesita demonio que lo lleve al infierno» (Santa Teresa de Ávila).",
   "history_es": "Los Padres del Desierto practicaban la oración interior desde el siglo III. San Juan Casiano trajo sus métodos a Occidente. En el siglo XVI, San Ignacio de Loyola sistematizó la meditación en sus Ejercicios Espirituales, y Santa Teresa de Ávila trazó sus grados en las Moradas. San Francisco de Sales la hizo accesible a los laicos en la Introducción a la Vida Devota. El método sulpiciano, desarrollado para la formación de los seminarios, sigue siendo muy usado.",
   "practice_es": "Cómo practicar la oración mental (método sulpiciano): (1) Preparación (2-3 min): ponte en la presencia de Dios. Recuerda que Él te ve, te ama y te atiende. Pide luz al Espíritu Santo. (2) Lectura: lee despacio un pasaje breve de la Escritura o de lectura espiritual. Detente cuando una frase te toque. (3) Meditación (10-15 min): considera la verdad leída. Pregúntate: ¿qué significa esto? ¿Qué quiere Dios que entienda? Usa la imaginación para situarte en la escena si es un pasaje del Evangelio. (4) Afectos: deja que el corazón responda: actos de amor, gratitud, dolor, confianza o petición. Habla con Dios libremente. (5) Resolución: elige una cosa concreta que harás hoy como respuesta. Que sea pequeña y específica. (6) Conclusión: da gracias a Dios. Pide la gracia de cumplir tu resolución. Reza un Padrenuestro. Consejo: empieza con 15 minutos diarios. La mañana es lo mejor. Ayuda una iglesia silenciosa o un rincón de tu cuarto, con un crucifijo.",
-  "notes_es": "Si no sientes nada durante la oración, no te desanimes. La sequedad es normal y a menudo señal de crecimiento. Permanece simplemente ante Dios en fe. «La oración no es cuestión de sentir, sino de querer» (Santo Tomás de Aquino). Cumple tu cita con Dios haya o no consuelo."
+  "notes_es": "Si no sientes nada durante la oración, no te desanimes. La sequedad es normal y a menudo señal de crecimiento. Permanece simplemente ante Dios en fe. Cumple tu cita con Dios haya o no consuelo."
  },
  "pray-contemplation": {
   "title_es": "Contemplación",
@@ -190,7 +190,7 @@
  },
  "dev-first-saturdays": {
   "title_es": "Los Primeros Sábados",
-  "summary_es": "La devoción de reparación al Inmaculado Corazón de María en cinco Primeros Sábados consecutivos, pedida por Nuestra Señora en Fátima en 1925 por medio de Sor Lucía.",
+  "summary_es": "La devoción de reparación al Inmaculado Corazón de María en cinco Primeros Sábados consecutivos, pedida por Nuestra Señora por medio de Sor Lucía en Pontevedra en 1925.",
   "history_es": "Revelada en Pontevedra el 10 de diciembre de 1925, como respuesta a las blasfemias e ingratitudes ofrecidas contra el Inmaculado Corazón de María.",
   "practice_es": "En cinco Primeros Sábados consecutivos: Confesión (dentro de los ocho días), Comunión, cinco decenas del Rosario y quince minutos de meditación de los misterios; todo ofrecido en reparación al Inmaculado Corazón.",
   "notes_es": "Nuestra Señora prometió asistir en la hora de la muerte, con todas las gracias necesarias para la salvación, a quienes cumplan estas condiciones."

@@ -5,7 +5,7 @@
     "latin": "Adventus Domini",
     "cat": "Calendarium",
     "summary": "The liturgical season of preparation for the Nativity of Our Lord Jesus Christ. It begins four Sundays before Christmas and ends at the Vigil of Christmas. A time of joyful expectation, penitential preparation, and spiritual renewal.",
-    "history": "The observance of Advent dates to at least the fourth century. The Council of Tours (567) prescribed a fast three times weekly from the feast of St. Martin (November 11) to Christmas.",
+    "history": "The earliest record of the season is the fast before Christmas that St. Perpetuus, Bishop of Tours (461–490), instituted from the feast of St. Martin (November 11). The Council of Mâcon (581) extended the custom to the other Frankish churches.",
     "practice": "Increased prayer, fasting, and almsgiving. Attend the Rorate Masses celebrated in the early morning by candlelight. The Advent wreath with its four candles marks the passing weeks.",
     "notes": "Violet vestments are worn. The Gloria is omitted. The organ is silent except to sustain singing. The third Sunday, Gaudete, permits rose vestments.",
     "scripture": {
@@ -19,10 +19,10 @@
     "title": "Christmastide",
     "latin": "Tempus Nativitatis",
     "cat": "Calendarium",
-    "summary": "The season celebrating the birth of Our Lord, from the Vigil of Christmas (December 24) through February 2 (Candlemas, the Purification of Our Lady). Twelve days of festival culminating in the Epiphany.",
+    "summary": "The season celebrating the birth of Our Lord, from First Vespers of Christmas (December 24) through January 13: the season of Christmas to January 5, then the season of the Epiphany. Twelve days of festival culminating in the Epiphany.",
     "history": "The feast of the Nativity was fixed on December 25 by the fourth century, displacing the pagan feast of Sol Invictus. The Octave of Christmas includes Holy Innocents (Dec 28), St. Stephen (Dec 26), and St. John (Dec 27).",
-    "practice": "The faithful sing carols, set up the Nativity scene (crèche), attend Midnight Mass, and keep the Christmas Octave with joy. Christmas vestments are worn through Candlemas.",
-    "notes": "White vestments throughout. The Gloria and Te Deum return. The Marian antiphon Alma Redemptoris Mater is sung at Compline.",
+    "practice": "The faithful sing carols, set up the Nativity scene (crèche), attend Midnight Mass, and keep the Christmas Octave with joy.",
+    "notes": "White vestments throughout. The Gloria and Te Deum return. The Marian antiphon Alma Redemptoris Mater is sung at Compline until Candlemas (February 2).",
     "scripture": {
       "ref": "Lk 2:11",
       "lat": "Natus est vobis hodie Salvator, qui est Christus Dominus.",
@@ -66,8 +66,8 @@
     "cat": "Calendarium",
     "summary": "The fifty days from Easter Sunday to Pentecost, during which the Church celebrates the Resurrection of Our Lord. The Alleluia is restored and sung repeatedly; the Paschal Candle burns at all Masses.",
     "history": "Eastertide is older than Lent, dating to the earliest days of the Church. The Octave of Easter was considered one continuous day of joy.",
-    "practice": "Receive Holy Communion (the Easter Duty obliges Communion at least once between Ash Wednesday and Trinity Sunday). Greet one another with 'Christ is risen; He is truly risen.'",
-    "notes": "White vestments throughout. Alleluia added to antiphons. The Marian antiphon is the Regina Caeli. Pentecost ends the season with red vestments.",
+    "practice": "Receive Holy Communion (the Easter Duty obliges Communion at least once a year at Easter time: under the 1917 Code from Palm Sunday to Low Sunday, a period that varies by place). Greet one another with 'Christ is risen; He is truly risen.'",
+    "notes": "White vestments throughout. Alleluia added to antiphons. The Marian antiphon is the Regina Caeli. The season closes with Pentecost and its octave, in red vestments.",
     "scripture": {
       "ref": "Mt 28:6",
       "lat": "Non est hic; surrexit enim, sicut dixit.",
@@ -188,7 +188,7 @@
     "latin": "Sacraméntum Pæniténtiæ",
     "cat": "Missa et Sacramenta",
     "summary": "The sacrament by which sins committed after Baptism are forgiven through the absolution of a priest who acts in the person of Christ. It is also called Confession (from the telling of sins) and Reconciliation (from the restoration of friendship with God). Christ gave this power to the Apostles on Easter Sunday: \"Whose sins you shall forgive, they are forgiven them\" (Jn 20:23).",
-    "history": "In the early Church, public penance was imposed for grave sins, sometimes lasting years. By the 6th century, Irish monks developed private confession as we know it today, spreading the practice across Europe. The Fourth Lateran Council (1215) required annual confession for those in mortal sin. The Council of Trent defined the sacrament's essential elements: contrition, confession, satisfaction, and absolution.",
+    "history": "In the early Church, public penance was imposed for grave sins, sometimes lasting years. By the 6th century, Irish monks developed private confession as we know it today, spreading the practice across Europe. The Fourth Lateran Council (1215) required all the faithful who have reached the age of discretion to confess their sins at least once a year. The Council of Trent defined the sacrament's essential elements: contrition, confession, satisfaction, and absolution.",
     "practice": "How to make a good Confession: (1) Examine your conscience using the Ten Commandments (see the Examen in this app). (2) Be sorry for your sins; perfect contrition (sorrow from love of God) or imperfect contrition (sorrow from fear of punishment) suffices with the sacrament. (3) Confess all mortal sins in kind and number to the priest. Venial sins, though not required, are recommended. (4) Accept the penance assigned. (5) Pray the <link target=\"prayer:actusContr\">Act of Contrition</link>. (6) Receive absolution. (7) Perform your penance promptly. Frequency: Monthly confession is the minimum recommended by spiritual directors; weekly is ideal for those seeking holiness.",
     "notes": "The seal of Confession is absolute: a priest may never reveal what is confessed, under any circumstances, even under threat of death. This has been the law and practice of the Church since the beginning.",
     "scripture": {
@@ -246,7 +246,7 @@
     "summary": "Mental prayer is the silent lifting of the mind and heart to God, without set words, to know Him, love Him, and resolve to serve Him. It is an interior conversation with God, using the faculties of memory, intellect, and will. Every saint insists on its necessity: \"He who does not practice mental prayer needs no devil to carry him to hell\" (St. Teresa of Avila).",
     "history": "The Desert Fathers practised interior prayer from the 3rd century. St. John Cassian brought their methods to the West. In the 16th century, St. Ignatius of Loyola systematised meditation in his Spiritual Exercises, and St. Teresa of Avila mapped its stages in The Interior Castle. St. Francis de Sales made it accessible to laypeople in Introduction to the Devout Life. The Sulpician method, developed for seminary formation, remains widely used.",
     "practice": "How to practise mental prayer (Sulpician method): (1) Preparation (2-3 min): Place yourself in God's presence. Recall that He sees you, loves you, and is attentive to you. Ask the Holy Spirit for light. (2) Reading: Read a short passage of Scripture or spiritual reading slowly. Stop when a phrase strikes you. (3) Meditation (10-15 min): Consider the truth you have read. Ask: What does this mean? What does God wish me to understand? Use your imagination to place yourself in the scene if it is a Gospel passage. (4) Affections: Let your heart respond: acts of love, gratitude, sorrow, trust, or petition. Speak to God freely. (5) Resolution: Choose one concrete thing you will do today in response. Make it small and specific. (6) Conclusion: Thank God. Ask for the grace to keep your resolution. Pray an Our Father. Tip: Start with 15 minutes daily. Morning is best. A quiet church or a corner of your room, with a crucifix, helps.",
-    "notes": "If you feel nothing during prayer, do not be discouraged. Dryness is normal and often a sign of growth. Simply remain before God in faith. \"Prayer is not a matter of feeling but of willing\" (St. Thomas Aquinas). Keep your appointment with God regardless of consolation.",
+    "notes": "If you feel nothing during prayer, do not be discouraged. Dryness is normal and often a sign of growth. Simply remain before God in faith. Keep your appointment with God regardless of consolation.",
     "scripture": null
   },
   {
@@ -339,7 +339,7 @@
     "title": "First Saturdays",
     "latin": "Sabbata Prima",
     "cat": "Devotiones",
-    "summary": "The devotion of reparation to the Immaculate Heart of Mary on five consecutive First Saturdays, requested by Our Lady at Fatima in 1925 through Sister Lucia.",
+    "summary": "The devotion of reparation to the Immaculate Heart of Mary on five consecutive First Saturdays, requested by Our Lady through Sister Lucia at Pontevedra in 1925.",
     "history": "Revealed at Pontevedra on December 10, 1925, as a response to the blasphemies and ingratitudes offered against the Immaculate Heart of Mary.",
     "practice": "On five consecutive First Saturdays: Confession (within eight days), Communion, five decades of the Rosary, and fifteen minutes of meditation on the mysteries; all offered in reparation to the Immaculate Heart.",
     "notes": "Our Lady promised to assist at the hour of death, with all the graces necessary for salvation, those who fulfill these conditions.",

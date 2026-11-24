@@ -29,7 +29,7 @@
         "practices": [
           {
             "t": "Pray the Full Rosary",
-            "d": "Padre Pio called it 'the weapon.' Pray at least five decades each day."
+            "d": "Pray at least five decades each day."
           },
           {
             "t": "Spiritual Reading",
@@ -189,7 +189,7 @@
           },
           {
             "t": "Pray the Rosary",
-            "d": "Thomas loved the Rosary for its simplicity; 'a daily meditation on the mysteries of the Incarnation.'"
+            "d": "Five decades each day: a meditation on the mysteries of the Incarnation."
           },
           {
             "t": "Visit to the Blessed Sacrament",
@@ -225,7 +225,7 @@
         "title": "Adoro Te Devote",
         "latin": "Adóro te devóte, latens Déitas,\nQuæ sub his figúris vere látitas:\nTibi se cor meum totum súbjicit,\nQuia, te contémplans, totum déficit.\n\nVisus, tactus, gustus in te fállitur,\nSed audítu solo tuto créditur:\nCredo, quidquid dixit Dei Fílius,\nNil hoc verbo Veritátis vérius.\n\nIn Cruce latébat sola Déitas,\nAt hic latet simul et humánitas;\nAmbo tamen credens atque cónfitens,\nPeto, quod petívit latro pænitens.\n\nPlagas, sicut Thomas, non intúeor,\nDeum tamen meum te confíteor:\nFac me tibi semper magis crédere,\nIn te spem habére, te dilígere.\n\nO memoriále mortis Dómini,\nPanis vivus, vitam præstans hómini,\nPræsta meæ menti de te vívere,\nEt te illi semper dulce sápere.\n\nPie pellicáne, Jesu Dómine,\nMe immúndum munda tuo Sánguine,\nCujus una stilla salvum fácere\nTotum mundum quit ab omni scélere.\n\nJesu, quem velátum nunc aspício,\nOro, fiat illud, quod tam sítio:\nUt, te reveláta cernens fácie,\nVisu sim beátus tuæ glóriæ.\nAmen.",
         "eng": "Godhead here in hiding, whom I do adore,\nMasked by these bare shadows, shape and nothing more,\nSee, Lord, at thy service low lies here a heart\nLost, all lost in wonder at the God thou art.\n\nSeeing, touching, tasting are in thee deceived:\nHow says trusty hearing? that shall be believed;\nWhat God's Son has told me, take for truth I do;\nTruth himself speaks truly or there's nothing true.\n\nOn the cross thy godhead made no sign to men,\nHere thy very manhood steals from human ken:\nBoth are my confession, both are my belief,\nAnd I pray the prayer of the dying thief.\n\nI am not like Thomas, wounds I cannot see,\nBut can plainly call thee Lord and God as he;\nLet me to a deeper faith daily nearer move,\nDaily make me harder hope and dearer love.\n\nO thou our reminder of Christ crucified,\nLiving Bread, the life of us for whom he died,\nLend this life to me then: feed and feast my mind,\nThere be thou the sweetness man was meant to find.\n\nBring the tender tale true of the Pelican;\nBathe me, Jesu Lord, in what thy bosom ran—\nBlood whereof a single drop has power to win\nAll the world forgiveness of its world of sin.\n\nJesu, whom I look at shrouded here below,\nI beseech thee send me what I thirst for so,\nSome day to gaze on thee face to face in light\nAnd be blest for ever with thy glory's sight.\nAmen.",
-        "note": "Composed by St. Thomas Aquinas for the feast of Corpus Christi. English translation by Gerard Manley Hopkins, S.J."
+        "note": "Attributed to St. Thomas Aquinas; written for private devotion before the Blessed Sacrament. English translation by Gerard Manley Hopkins, S.J."
       }
     ]
   },
@@ -423,7 +423,7 @@
           },
           {
             "t": "Pray the Rosary",
-            "d": "Five decades daily. 'The Rosary is the most powerful weapon to conquer Satan.'"
+            "d": "Five decades daily."
           },
           {
             "t": "Visit to the Blessed Sacrament",
@@ -467,7 +467,7 @@
     "slug": "desales",
     "name": "St. Francis de Sales",
     "title": "Doctor of the Church · Bishop of Geneva",
-    "quote": "Nothing is so strong as gentleness; nothing so gentle as real strength.",
+    "quote": "Do not look forward to the changes and chances of this life in fear; rather look to them with full hope that, as they arise, God, whose you are, will deliver you out of them.",
     "sections": [
       {
         "lat": "Mane",
@@ -497,11 +497,11 @@
           },
           {
             "t": "Practise Gentleness",
-            "d": "Above all, be gentle; with others, with yourself, with circumstances. 'Nothing is so strong as gentleness.'"
+            "d": "Above all, be gentle; with others, with yourself, with circumstances."
           },
           {
             "t": "Pray the Rosary",
-            "d": "Francis loved the Rosary as a family prayer; slow, affectionate, meditative."
+            "d": "Pray it slowly, affectionately, meditatively."
           }
         ]
       },

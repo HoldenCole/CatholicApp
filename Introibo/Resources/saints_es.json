@@ -15,7 +15,7 @@
    {
     "eng_es": "Durante el día",
     "practices_es": [
-     {"t_es": "Rezar el Rosario completo", "d_es": "El Padre Pío lo llamaba «el arma». Reza al menos cinco decenas cada día."},
+     {"t_es": "Rezar el Rosario completo", "d_es": "Reza al menos cinco decenas cada día."},
      {"t_es": "Lectura espiritual", "d_es": "Lee quince minutos de la Imitación de Cristo, de las vidas de los santos o de San Juan de la Cruz."},
      {"t_es": "Visita al Santísimo Sacramento", "d_es": "Haz una visita al Santísimo durante el día, aunque sea breve. El Padre Pío decía que Jesús en el sagrario nos espera con infinita paciencia y amor."}
     ]
@@ -104,7 +104,7 @@
     "eng_es": "Durante el día",
     "practices_es": [
      {"t_es": "Estudiar teología (1 hora)", "d_es": "Lee despacio la Suma, la Escritura o los Padres de la Iglesia. El estudio es una forma de oración."},
-     {"t_es": "Rezar el Rosario", "d_es": "Tomás amaba el Rosario por su sencillez: «una meditación diaria sobre los misterios de la Encarnación»."},
+     {"t_es": "Rezar el Rosario", "d_es": "Cinco decenas cada día: una meditación sobre los misterios de la Encarnación."},
      {"t_es": "Visita al Santísimo Sacramento", "d_es": "Haz una visita al Santísimo para adorar a Cristo verdaderamente presente. Santo Tomás compuso el Tantum Ergo y el Adoro Te Devote; deja que su devoción eucarística inspire la tuya."}
     ]
    },
@@ -126,7 +126,7 @@
    {
     "title_es": "Adoro Te Devote",
     "eng_es": "Te adoro con devoción, Dios escondido,\noculto verdaderamente bajo estas apariencias:\na Ti se somete mi corazón por completo,\npues al contemplarte, todo desfallece.\n\nLa vista, el tacto, el gusto se engañan ante Ti,\nmas solo con el oído se cree con seguridad:\ncreo cuanto dijo el Hijo de Dios;\nnada hay más verdadero que esta palabra de la Verdad.\n\nEn la Cruz se escondía solo la divinidad,\nmas aquí se esconde también la humanidad;\ncreyendo y confesando ambas,\npido lo que pidió el ladrón arrepentido.\n\nNo veo las llagas como las vio Tomás,\npero te confieso mi Dios:\nhaz que crea en Ti cada vez más,\nque en Ti espere y que te ame.\n\n¡Oh memorial de la muerte del Señor!\nPan vivo que das la vida al hombre:\nconcede a mi alma vivir de Ti,\ny que siempre saboree tu dulzura.\n\nSeñor Jesús, piadoso pelícano,\nlímpiame a mí, inmundo, con tu Sangre,\nde la que una sola gota puede salvar\nal mundo entero de todo pecado.\n\nJesús, a quien ahora veo velado,\nte ruego que se cumpla lo que tanto ansío:\nque al contemplarte con el rostro descubierto,\nsea yo bienaventurado viendo tu gloria.\nAmén.",
-    "note_es": "Compuesto por Santo Tomás de Aquino para la fiesta del Corpus Christi. Versión española tradicional."
+    "note_es": "Atribuido a Santo Tomás de Aquino; escrito para la devoción privada ante el Santísimo Sacramento. Versión española tradicional."
    }
   ]
  },
@@ -236,7 +236,7 @@
     "practices_es": [
      {"t_es": "Santificar el trabajo", "d_es": "Trabaja bien, por amor de Dios. Convierte cada tarea en oración. Esto es el Opus Dei: «la Obra de Dios»."},
      {"t_es": "Rezar el Ángelus", "d_es": "Al mediodía, interrumpe lo que estés haciendo y reza el Ángelus. Esta breve pausa santifica la mitad de la jornada de trabajo y honra la Encarnación."},
-     {"t_es": "Rezar el Rosario", "d_es": "Cinco decenas diarias. «El Rosario es el arma más poderosa para vencer a Satanás»."},
+     {"t_es": "Rezar el Rosario", "d_es": "Cinco decenas diarias."},
      {"t_es": "Visita al Santísimo Sacramento", "d_es": "Una breve visita en medio del trabajo del día, aunque sea de un minuto."}
     ]
    },
@@ -265,7 +265,7 @@
  "desales": {
   "name_es": "San Francisco de Sales",
   "title_es": "Doctor de la Iglesia · Obispo de Ginebra",
-  "quote_es": "Nada hay tan fuerte como la dulzura; nada tan dulce como la verdadera fortaleza.",
+  "quote_es": "No mires con temor los cambios y azares de esta vida; míralos más bien con plena esperanza de que, cuando lleguen, Dios, de quien eres, te librará de ellos.",
   "sections_es": [
    {
     "eng_es": "Mañana",
@@ -279,8 +279,8 @@
     "eng_es": "Durante el día",
     "practices_es": [
      {"t_es": "Ramilletes espirituales", "d_es": "Recoge a lo largo del día «ramilletes» de pensamientos devotos. Vuelve a ellos con frecuencia."},
-     {"t_es": "Practicar la dulzura", "d_es": "Sé dulce ante todo: con los demás, contigo mismo, con las circunstancias. «Nada hay tan fuerte como la dulzura»."},
-     {"t_es": "Rezar el Rosario", "d_es": "Francisco amaba el Rosario como oración de familia: lento, afectuoso, meditativo."}
+     {"t_es": "Practicar la dulzura", "d_es": "Sé dulce ante todo: con los demás, contigo mismo, con las circunstancias."},
+     {"t_es": "Rezar el Rosario", "d_es": "Rézalo despacio, con afecto, meditando."}
     ]
    },
    {
