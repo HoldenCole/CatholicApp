@@ -406,6 +406,20 @@ object ContentStore {
     /** The vernacular form of a piece of UI chrome; [en] when not covered. */
     fun uiString(key: String, en: String): String = uiStringsES[key] ?: en
 
+    /**
+     * True when a count of [n] takes the singular: 1 everywhere, and also 0
+     * in French ("0 prière").
+     */
+    fun isSingularCount(n: Int): Boolean =
+        n == 1 || (n == 0 && appliedVernacular == VernacularLanguage.FRENCH)
+
+    /**
+     * Count pattern for [n]: the `<key>.one` string when [n] takes the
+     * singular, otherwise [key]. Placeholders are left for the caller.
+     */
+    fun uiPlural(key: String, n: Int, one: String, other: String): String =
+        if (isSingularCount(n)) uiString("$key.one", one) else uiString(key, other)
+
     /** The vernacular whose overlay is currently applied to the store. */
     val currentVernacular: VernacularLanguage get() = appliedVernacular
 

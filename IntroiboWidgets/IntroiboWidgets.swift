@@ -577,8 +577,8 @@ struct LiturgicalDayWidget: Widget {
         StaticConfiguration(kind: kind, provider: DayProvider()) { entry in
             LiturgicalDayWidgetView(entry: entry)
         }
-        .configurationDisplayName("Today's Feast")
-        .description("The day of the liturgical calendar you are on — feast, season, and colour.")
+        .configurationDisplayName(WidgetConfigStore.chrome("widget.gallery.day.name", "Today's Feast"))
+        .description(WidgetConfigStore.chrome("widget.gallery.day.desc", "The day of the liturgical calendar you are on — feast, season, and colour."))
         .supportedFamilies([.systemSmall])
     }
 }
@@ -590,8 +590,8 @@ struct DailyReadingWidget: Widget {
         StaticConfiguration(kind: kind, provider: DayProvider()) { entry in
             DailyReadingWidgetView(entry: entry)
         }
-        .configurationDisplayName("Daily Reading")
-        .description("A quote from today's Mass propers — choose the text in the app's widget settings.")
+        .configurationDisplayName(WidgetConfigStore.chrome("widget.gallery.reading.name", "Daily Reading"))
+        .description(WidgetConfigStore.chrome("widget.gallery.reading.desc", "A quote from today's Mass propers — choose the text in the app's widget settings."))
         .supportedFamilies([.systemMedium, .systemLarge])
     }
 }
@@ -606,7 +606,7 @@ struct IntroiboWidget: Widget {
             IntroiboWidgetView(entry: entry)
         }
         .configurationDisplayName("Introibo")
-        .description("The current canonical hour, or your chosen prayer for this part of the day. Tap to pray.")
+        .description(WidgetConfigStore.chrome("widget.gallery.office.desc", "The current canonical hour, or your chosen prayer for this part of the day. Tap to pray."))
         .supportedFamilies([.systemSmall, .systemMedium, .accessoryRectangular])
     }
 }

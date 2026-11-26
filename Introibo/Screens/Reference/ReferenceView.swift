@@ -34,14 +34,14 @@ struct ReferenceView: View {
                     icon: "text.book.closed",
                     title: ContentStore.shared.uiString("reference.references", "References"),
                     latin: "Encyclopaedia",
-                    count: ContentStore.shared.uiString("reference.articles", "{0} articles", String(store.reference.count)),
+                    count: ContentStore.shared.uiPlural("reference.articles", store.reference.count, one: "{0} article", other: "{0} articles").replacingOccurrences(of: "{0}", with: String(store.reference.count)),
                     destination: AnyView(ReferenceListView())
                 )
                 sectionCard(
                     icon: "book.closed",
                     title: ContentStore.shared.uiString("reference.propers", "Propers"),
                     latin: "Propria Missae",
-                    count: ContentStore.shared.uiString("reference.formularies", "{0} formularies", String(store.allPropers.count)),
+                    count: ContentStore.shared.uiPlural("reference.formularies", store.allPropers.count, one: "{0} formulary", other: "{0} formularies").replacingOccurrences(of: "{0}", with: String(store.allPropers.count)),
                     destination: AnyView(PropersSearchView())
                 )
             }
@@ -315,7 +315,7 @@ struct TLMHistoryView: View {
     // (reference.history.N.title / .desc) by index.
     private var events: [(year: String, title: String, desc: String)] {
         Self.eventsEN.enumerated().map { i, e in
-            (e.year,
+            (ContentStore.shared.uiString("reference.history.\(i).year", e.year),
              ContentStore.shared.uiString("reference.history.\(i).title", e.title),
              ContentStore.shared.uiString("reference.history.\(i).desc", e.desc))
         }
@@ -325,15 +325,15 @@ struct TLMHistoryView: View {
         ("c. 100", "Apostolic Liturgy", "The Didache describes early Christian worship with prayers over bread and wine following the pattern established by the Apostles."),
         ("c. 225", "Apostolic Tradition", "Hippolytus of Rome records the earliest known Eucharistic Prayer, showing the Roman Canon already taking shape."),
         ("c. 380", "Latin Becomes Standard", "Pope Damasus I commissions the Vulgate Bible and Latin replaces Greek as the language of the Roman liturgy."),
-        ("590-604", "Pope St. Gregory the Great", "Reforms and codifies the Roman liturgy. The Canon of the Mass reaches essentially its final form. Gregorian Chant is organized."),
+        ("590–604", "Pope St. Gregory the Great", "Reforms and codifies the Roman liturgy. The Canon of the Mass reaches essentially its final form. Gregorian Chant is organized."),
         ("800", "Carolingian Standardisation", "Charlemagne mandates the Roman Rite throughout his empire, spreading the Gregorian liturgy across Western Europe."),
         ("1215", "Fourth Lateran Council", "Defines transubstantiation as dogma. Mandates annual confession and communion. The Mass is the centre of Catholic life."),
         ("1474", "First Printed Missal", "The Missale Romanum is among the first books printed, standardising the texts that had been transmitted in manuscripts."),
-        ("1545-1563", "Council of Trent", "Responds to the Protestant Reformation by affirming the sacrificial nature of the Mass and mandating liturgical reform."),
+        ("1545–1563", "Council of Trent", "Responds to the Protestant Reformation by affirming the sacrificial nature of the Mass and mandating liturgical reform."),
         ("1570", "Missal of Pius V", "Pope St. Pius V promulgates the Tridentine Missal, codifying the Roman Rite and establishing liturgical uniformity."),
         ("1604", "Clement VIII Revision", "Minor corrections to the Missale Romanum, refining rubrics without altering the substance of the rite."),
         ("1634", "Urban VIII Revision", "Further small revisions to hymns and rubrics. The Mass remains substantially unchanged for centuries."),
-        ("1911-1913", "Pius X Breviary Reform", "Reorganises the Divine Office psalmody. The Mass itself remains untouched."),
+        ("1911–1913", "Pius X Breviary Reform", "Reorganises the Divine Office psalmody. The Mass itself remains untouched."),
         ("1955", "Holy Week Reforms", "Pius XII reforms the Holy Week liturgy, the most significant change to the Mass since 1570."),
         ("1962", "The 1962 Missal", "Pope John XXIII issues the last edition of the Tridentine Missal, incorporating minor rubrical changes. This is the Missal used by traditional Catholics today."),
         ("1969", "Novus Ordo Missae", "Paul VI promulgates the new Mass. The traditional Mass is widely suppressed but never formally abrogated."),

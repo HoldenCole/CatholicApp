@@ -195,6 +195,18 @@ final class ContentStore {
         uiStringsES[key] ?? en
     }
 
+    /// True when a count of `n` takes the singular: 1 everywhere, and also 0
+    /// in French ("0 prière").
+    func isSingularCount(_ n: Int) -> Bool {
+        n == 1 || (n == 0 && vernacular == .french)
+    }
+
+    /// Count pattern for `n`: the `<key>.one` string when `n` takes the
+    /// singular, otherwise `key`. Placeholders are left for the caller.
+    func uiPlural(_ key: String, _ n: Int, one: String, other: String) -> String {
+        isSingularCount(n) ? uiString(key + ".one", one) : uiString(key, other)
+    }
+
     /// `pattern` with `{0}`, `{1}`… replaced in order.
     func uiString(_ key: String, _ en: String, _ args: String...) -> String {
         var out = uiString(key, en)

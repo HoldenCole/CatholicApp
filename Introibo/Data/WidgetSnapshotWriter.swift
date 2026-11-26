@@ -38,7 +38,10 @@ enum WidgetSnapshotWriter {
                         "widget.saints.only_sub", "widget.saints.all_sub",
                         "common.morning", "common.midday", "common.evening",
                         "widget.prayer.morning", "widget.prayer.angelus",
-                        "widget.prayer.contrition"]
+                        "widget.prayer.contrition",
+                        "widget.gallery.day.name", "widget.gallery.day.desc",
+                        "widget.gallery.reading.name", "widget.gallery.reading.desc",
+                        "widget.gallery.office.desc", "widget.gallery.saints.desc"]
             keys += (1...12).map { "calendar.month_abbrev.\($0)" }
             keys += (1...12).map { "calendar.month.\($0)" }
             keys += (0...6).map { "calendar.weekday.\($0)" }

@@ -915,7 +915,7 @@ private fun YearOverview(
                             Spacer(Modifier.width(6.dp))
                         }
                         Text(
-                            text = "${seg.dayCount} " + ContentStore.uiString("calendar.days", "days"),
+                            text = "${seg.dayCount} " + (if (ContentStore.isSingularCount(seg.dayCount)) ContentStore.uiString("calendar.day", "day") else ContentStore.uiString("calendar.days", "days")),
                             fontSize = scaledSp(10f),
                             color = colors.tertiaryText,
                         )

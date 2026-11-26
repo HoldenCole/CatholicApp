@@ -227,6 +227,18 @@ private fun VernacularPage(
                     ContentStore.applyVernacular(com.lampstandhq.introibo.storage.settings.VernacularLanguage.SPANISH)
                 }
             }
+            if (com.lampstandhq.introibo.storage.settings.VernacularLanguage.FRENCH in com.lampstandhq.introibo.storage.settings.VernacularLanguage.selectable) {
+                VernacularCard(
+                    title = "Français",
+                    desc = "Traductions et application en français.",
+                    selected = vernacular == com.lampstandhq.introibo.storage.settings.VernacularLanguage.FRENCH,
+                ) {
+                    scope.launch {
+                        settingsRepo.setVernacularLanguage(com.lampstandhq.introibo.storage.settings.VernacularLanguage.FRENCH)
+                        ContentStore.applyVernacular(com.lampstandhq.introibo.storage.settings.VernacularLanguage.FRENCH)
+                    }
+                }
+            }
         }
 
         Spacer(modifier = Modifier.height(40.dp))

@@ -146,6 +146,16 @@ struct OnboardingView: View {
                     ) {
                         chooseVernacular(.spanish)
                     }
+
+                    if VernacularLanguage.selectable.contains(.french) {
+                        selectionCard(
+                            title: "Fran\u{00E7}ais",
+                            description: "Traductions et application en fran\u{00E7}ais.",
+                            isSelected: selectedVernacular == VernacularLanguage.french.rawValue
+                        ) {
+                            chooseVernacular(.french)
+                        }
+                    }
                 }
                 .padding(.horizontal, 28)
                 .padding(.top, 8)

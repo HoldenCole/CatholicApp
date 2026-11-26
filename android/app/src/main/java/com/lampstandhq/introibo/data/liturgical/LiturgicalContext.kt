@@ -517,7 +517,7 @@ val LiturgicalContext.seasonalNote: String?
 
 /** "day" / "days" in the vernacular for the countdown notes. */
 private fun dayWord(n: Int): String =
-    if (n == 1) ContentStore.uiString("calendar.day", "day") else ContentStore.uiString("calendar.days", "days")
+    if (ContentStore.isSingularCount(n)) ContentStore.uiString("calendar.day", "day") else ContentStore.uiString("calendar.days", "days")
 
 val LiturgicalContext.isFirstFriday: Boolean
     get() {

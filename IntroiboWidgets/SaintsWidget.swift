@@ -146,7 +146,7 @@ struct SaintsWidget: Widget {
             SaintsWidgetView(entry: entry)
         }
         .configurationDisplayName("Sanctorale")
-        .description("Today's feast, your place in the season, and the saints ahead.")
+        .description(WidgetConfigStore.chrome("widget.gallery.saints.desc", "Today's feast, your place in the season, and the saints ahead."))
         .supportedFamilies([.systemMedium, .systemLarge])
     }
 }

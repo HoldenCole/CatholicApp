@@ -624,7 +624,7 @@ extension LiturgicalContext {
 
     /// "day" / "days" in the vernacular for the countdown notes.
     private func dayWord(_ n: Int) -> String {
-        n == 1 ? ContentStore.shared.uiString("calendar.day", "day")
+        ContentStore.shared.isSingularCount(n) ? ContentStore.shared.uiString("calendar.day", "day")
                : ContentStore.shared.uiString("calendar.days", "days")
     }
 

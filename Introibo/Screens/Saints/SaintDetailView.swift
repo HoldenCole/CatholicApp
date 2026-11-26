@@ -135,7 +135,7 @@ struct SaintDetailView: View {
                 .italic()
                 .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.tertiaryText)
             if streak > 0 {
-                Text(ContentStore.shared.uiString("saints.streak", "{0} day streak").replacingOccurrences(of: "{0}", with: "\(streak)"))
+                Text(ContentStore.shared.uiPlural("saints.streak", streak, one: "{0} day streak", other: "{0} day streak").replacingOccurrences(of: "{0}", with: "\(streak)"))
                     .appFont(.captionSm)
                     .foregroundStyle(Color.goldLeaf)
             }

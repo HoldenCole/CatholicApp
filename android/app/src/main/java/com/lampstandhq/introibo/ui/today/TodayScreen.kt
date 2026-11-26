@@ -811,7 +811,7 @@ private fun SaintCard(
                         color = colors.primaryText,
                     )
                     Text(
-                        text = ContentStore.uiString("today.practices", "{0} practices today").replace("{0}", "${totalPractices}"),
+                        text = ContentStore.uiPlural("today.practices", totalPractices, "{0} practice today", "{0} practices today").replace("{0}", "${totalPractices}"),
                         style = type.captionSm,
                         color = colors.secondaryText,
                     )
@@ -889,7 +889,7 @@ private fun PrayerRuleCard(
                 color = colors.primaryText,
             )
             Text(
-                text = if (progress >= 1f) ContentStore.uiString("today.prayer_rule.done", "All prayers complete") else ContentStore.uiString("today.prayer_rule.progress", "{done} of {total} prayers today").replace("{done}", "$done").replace("{total}", "$total"),
+                text = if (progress >= 1f) ContentStore.uiString("today.prayer_rule.done", "All prayers complete") else ContentStore.uiPlural("today.prayer_rule.progress", total, "{done} of {total} prayer today", "{done} of {total} prayers today").replace("{done}", "$done").replace("{total}", "$total"),
                 style = type.captionSm,
                 color = if (progress >= 1f) colors.goldLeaf else colors.secondaryText,
             )

@@ -485,7 +485,7 @@ private data class TimelineEvent(
 private val tlmHistoryEvents: List<TimelineEvent>
     get() = tlmHistoryEventsEN.mapIndexed { i, e ->
         TimelineEvent(
-            e.year,
+            ContentStore.uiString("reference.history.$i.year", e.year),
             ContentStore.uiString("reference.history.$i.title", e.title),
             ContentStore.uiString("reference.history.$i.desc", e.desc),
         )
@@ -800,7 +800,7 @@ private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
                 icon = Icons.Filled.MenuBook,
                 title = ContentStore.uiString("reference.references", "References"),
                 latin = "Encyclopaedia",
-                count = ContentStore.uiString("reference.articles", "{0} articles").replace("{0}", "${ContentStore.reference.size}"),
+                count = ContentStore.uiPlural("reference.articles", ContentStore.reference.size, "{0} article", "{0} articles").replace("{0}", "${ContentStore.reference.size}"),
                 onClick = { onSectionClick("References") },
                 modifier = Modifier.weight(1f),
             )
@@ -808,7 +808,7 @@ private fun SectionsGrid(onSectionClick: (String) -> Unit = {}) {
                 icon = Icons.Filled.Book,
                 title = ContentStore.uiString("reference.propers", "Propers"),
                 latin = "Propria Missae",
-                count = ContentStore.uiString("reference.formularies", "{0} formularies").replace("{0}", "${ContentStore.allPropers.size}"),
+                count = ContentStore.uiPlural("reference.formularies", ContentStore.allPropers.size, "{0} formulary", "{0} formularies").replace("{0}", "${ContentStore.allPropers.size}"),
                 onClick = { onSectionClick("Propers") },
                 modifier = Modifier.weight(1f),
             )

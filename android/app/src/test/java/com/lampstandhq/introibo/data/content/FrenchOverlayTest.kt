@@ -138,4 +138,19 @@ class FrenchOverlayTest {
         ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
         assertEquals(english, ContentStore.properForDate(adventSunday, MissalRite.RITE_1962)!!.collect!!.eng)
     }
+
+    @Test
+    fun countsTakeTheSingularAtZeroAndOneInFrench() {
+        french()
+        assertEquals("0 prière", ContentStore.uiPlural("prayers.count", 0, "{0} prayer", "{0} prayers").replace("{0}", "0"))
+        assertEquals("1 prière", ContentStore.uiPlural("prayers.count", 1, "{0} prayer", "{0} prayers").replace("{0}", "1"))
+        assertEquals("2 prières", ContentStore.uiPlural("prayers.count", 2, "{0} prayer", "{0} prayers").replace("{0}", "2"))
+        ContentStore.applyVernacular(VernacularLanguage.ENGLISH)
+        assertEquals("0 prayers", ContentStore.uiPlural("prayers.count", 0, "{0} prayer", "{0} prayers").replace("{0}", "0"))
+        assertEquals("1 prayer", ContentStore.uiPlural("prayers.count", 1, "{0} prayer", "{0} prayers").replace("{0}", "1"))
+        ContentStore.applyVernacular(VernacularLanguage.SPANISH)
+        assertEquals("0 oraciones", ContentStore.uiPlural("prayers.count", 0, "{0} prayer", "{0} prayers").replace("{0}", "0"))
+        assertEquals("1 oración", ContentStore.uiPlural("prayers.count", 1, "{0} prayer", "{0} prayers").replace("{0}", "1"))
+    }
+
 }

@@ -355,7 +355,7 @@ private fun LessonRow(course: Course, isMastered: Boolean, onClick: () -> Unit =
                 modifier = Modifier.padding(top = 4.dp),
             ) {
                 Text(
-                    text = ContentStore.uiString("learn.cards", "{0} cards").replace("{0}", "$cardCount"),
+                    text = ContentStore.uiPlural("learn.cards", cardCount, "{0} card", "{0} cards").replace("{0}", "$cardCount"),
                     style = type.captionSm,
                     color = colors.tertiaryText,
                 )

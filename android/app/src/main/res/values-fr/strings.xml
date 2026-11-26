@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shown by the launcher and widget picker, which follow the device
+     language rather than the in-app vernacular. -->
+<resources>
+    <!-- Launcher long-press shortcuts -->
+    <string name="shortcut_missal_short">Messe du jour</string>
+    <string name="shortcut_missal_long">Ouvrir le Propre de la Messe du jour</string>
+    <string name="shortcut_office_short">Office divin</string>
+    <string name="shortcut_office_long">Prier les heures canoniques</string>
+    <string name="shortcut_rosary_short">Rosaire</string>
+    <string name="shortcut_rosary_long">Réciter le saint Rosaire</string>
+
+    <!-- Home-screen widget -->
+    <string name="widget_description">L’heure canonique en cours, ou la prière choisie pour ce moment de la journée. Touchez pour prier.</string>
+    <string name="widget_tap_to_pray">Touchez pour prier</string>
+    <string name="widget_label_office">Office divin</string>
+    <string name="widget_label_morning">Matin</string>
+    <string name="widget_label_midday">Midi</string>
+    <string name="widget_label_evening">Soir</string>
+    <string name="widget_day_description">Le jour du calendrier liturgique où vous êtes : fête, temps et couleur.</string>
+    <string name="widget_reading_description">Une citation du Propre de la Messe du jour. Choisissez le texte dans les réglages du widget de l’application.</string>
+    <string name="widget_saints_description">La fête du jour, votre place dans le temps liturgique et les saints à venir.</string>
+</resources>

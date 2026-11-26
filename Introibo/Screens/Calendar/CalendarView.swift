@@ -448,7 +448,7 @@ private struct YearOverview: View {
                                 .padding(.vertical, 3)
                                 .background(Capsule().fill(Color.sanctuaryRed))
                         }
-                        Text("\(seg.dayCount) " + ContentStore.shared.uiString("calendar.days", "days"))
+                        Text("\(seg.dayCount) " + (ContentStore.shared.isSingularCount(seg.dayCount) ? ContentStore.shared.uiString("calendar.day", "day") : ContentStore.shared.uiString("calendar.days", "days")))
                             .appFont(.scaledSystem(10))
                             .foregroundStyle(Color.tertiaryText)
                     }

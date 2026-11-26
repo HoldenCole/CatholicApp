@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Introibo</string>
+    <string name="app_name" translatable="false">Introibo</string>
 
     <!-- Launcher long-press shortcuts -->
     <string name="shortcut_missal_short">Today\'s Mass</string>

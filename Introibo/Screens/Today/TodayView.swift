@@ -297,7 +297,7 @@ struct TodayView: View {
                             .appFont(.titleM)
                             .italic()
                             .foregroundStyle(Color.primaryText)
-                        Text(progress >= 1.0 ? ContentStore.shared.uiString("today.prayer_rule.done", "All prayers complete") : ContentStore.shared.uiString("today.prayer_rule.progress", "{done} of {total} prayers today").replacingOccurrences(of: "{done}", with: "\(done)").replacingOccurrences(of: "{total}", with: "\(total)"))
+                        Text(progress >= 1.0 ? ContentStore.shared.uiString("today.prayer_rule.done", "All prayers complete") : ContentStore.shared.uiPlural("today.prayer_rule.progress", total, one: "{done} of {total} prayer today", other: "{done} of {total} prayers today").replacingOccurrences(of: "{done}", with: "\(done)").replacingOccurrences(of: "{total}", with: "\(total)"))
                             .appFont(.captionSm)
                             .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                     }
@@ -595,7 +595,7 @@ struct TodayView: View {
                 }
 
                 if let lastDate = UserProgress.rosaryLastDate() {
-                    Text(ContentStore.shared.uiString("today.last_prayed", "Last prayed: {0}").replacingOccurrences(of: "{0}", with: "\(Self.dateFmt.string(from: lastDate))"))
+                    Text(ContentStore.shared.uiString("today.last_prayed", "Last prayed: {0}").replacingOccurrences(of: "{0}", with: VernacularDates.longDayMonth(lastDate)))
                         .appFont(.captionSm)
                         .foregroundStyle(Color.tertiaryText)
                         .padding(.top, 4)
@@ -658,11 +658,11 @@ struct TodayView: View {
                     .italic()
                     .foregroundStyle(Color.primaryText)
                 Text(progress >= 1.0 ? ContentStore.shared.uiString("today.practices.done", "All practices complete")
-                                     : ContentStore.shared.uiString("today.practices.progress", "{0} of {1} practices today", String(done), String(total)))
+                                     : ContentStore.shared.uiPlural("today.practices.progress", total, one: "{0} of {1} practice today", other: "{0} of {1} practices today").replacingOccurrences(of: "{0}", with: String(done)).replacingOccurrences(of: "{1}", with: String(total)))
                     .appFont(.captionSm)
                     .foregroundStyle(progress >= 1.0 ? Color.goldLeaf : Color.secondaryText)
                 if streak > 0 {
-                    Text(ContentStore.shared.uiString("saints.streak", "{0} day streak").replacingOccurrences(of: "{0}", with: "\(streak)"))
+                    Text(ContentStore.shared.uiPlural("saints.streak", streak, one: "{0} day streak", other: "{0} day streak").replacingOccurrences(of: "{0}", with: "\(streak)"))
                         .appFont(.captionSm)
                         .foregroundStyle(Color.goldLeaf)
                 }
@@ -720,12 +720,6 @@ struct TodayView: View {
         }
         .buttonStyle(.plain)
     }
-
-    private static let dateFmt: DateFormatter = {
-        let f = DateFormatter()
-        f.dateStyle = .medium
-        return f
-    }()
 
     // MARK: - Next obligation
 

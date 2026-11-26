@@ -811,7 +811,7 @@ private fun OccasionPrayerSheet(
                     modifier = Modifier.padding(top = 4.dp),
                 )
                 Text(
-                    text = ContentStore.uiString("prayers.count", "{0} prayers").replace("{0}", "${prayers.size}"),
+                    text = ContentStore.uiPlural("prayers.count", prayers.size, "{0} prayer", "{0} prayers").replace("{0}", "${prayers.size}"),
                     style = type.captionSm,
                     color = colors.secondaryText,
                 )
