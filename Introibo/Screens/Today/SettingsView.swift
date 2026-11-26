@@ -339,7 +339,7 @@ struct SettingsView: View {
         Section {
             Button { showTutorials = true } label: {
                 HStack {
-                    Label("Tutorials", systemImage: "questionmark.circle")
+                    Label(ContentStore.shared.uiString("settings.tutorials", "Tutorials"), systemImage: "questionmark.circle")
                         .foregroundStyle(Color.primaryText)
                     Spacer()
                     Text("\(FeatureTutorial.allCases.count)")
@@ -365,7 +365,7 @@ struct SettingsView: View {
                 })
             }
         } header: {
-            Text("Tutoriales")
+            Text(ContentStore.shared.uiString("settings.tutorials", "Tutorials"))
         }
     }
 

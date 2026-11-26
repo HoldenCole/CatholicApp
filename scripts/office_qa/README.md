@@ -170,7 +170,12 @@ column beside the Spanish. The whole procedure, the coverage and the
 provenance of DO's French are in `french-translation/README.md`.
 
 `OfficeJsonDump` takes `OFFICE_JSON_LANG=fr`; comparing its vernacular
-fields with an English dump of the same days shows what is still English.
+fields with an English and a Spanish dump of the same days shows what French
+still leaves in English (a field Spanish translates and French does not).
+For French the builder also writes `hours_parts_fr.json`, the overlay of
+the hour templates (`--do-root DO_ROOT` adds DO's Invitatory as a verse
+source). `ContentAuditDump` (Android unit test, `CONTENT_AUDIT_DIR`,
+`CONTENT_AUDIT_LANG`) does the same for everything outside the Office.
 
 `SpanishAuditDump` (Android unit test, runs only with `SPANISH_AUDIT_DIR`
 set; `SPANISH_AUDIT_RITES`, `SPANISH_AUDIT_START`/`_END` optional) applies

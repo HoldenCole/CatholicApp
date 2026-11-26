@@ -463,7 +463,7 @@ private fun DayDetail(
             horizontalArrangement = Arrangement.End,
         ) {
             val eng = day.englishName ?: title
-            val colourName = day.colour?.key?.replaceFirstChar { it.uppercase() } ?: ""
+            val colourName = day.colour?.let { colourLabel(it) } ?: ""
             val shareText = "${LongDateFormatter.format(day.date)}\n$title\n$eng\n$colourName · ${ctx.englishName}\n${penance.title} (${discipline.short})"
             val colourHexMap = mapOf("violet" to "#6A359A", "rose" to "#A04860", "white" to "#7A5A0E", "red" to "#8B1A1A", "green" to "#3A5D28", "black" to "#2A2521")
             var showMenu by remember { mutableStateOf(false) }
@@ -509,7 +509,7 @@ private fun DayDetail(
         }
 
         day.colour?.let { colour ->
-            InfoRow(ContentStore.uiString("calendar.colour", "Liturgical Colour"), colour.key.replaceFirstChar { it.uppercase() }, colour)
+            InfoRow(ContentStore.uiString("calendar.colour", "Liturgical Colour"), colourLabel(colour), colour)
             Spacer(Modifier.height(16.dp))
         }
         InfoRow(ContentStore.uiString("calendar.season_label", "Season"), ctx.englishName)
@@ -961,3 +961,7 @@ private fun YearOverview(
         }
     }
 }
+
+/** The colour's name in the vernacular ("White", "Blanco", "Blanc"). */
+private fun colourLabel(c: com.lampstandhq.introibo.data.liturgical.LiturgicalColour): String =
+    ContentStore.uiString("calendar.colour.${c.key}", c.key.replaceFirstChar { it.uppercase() })

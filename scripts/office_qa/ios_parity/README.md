@@ -28,7 +28,15 @@ day's Mass proper.
 sides compares that language's office and Mass; the harness applies a
 language the pickers do not offer yet straight to the store, as the Android
 test does.
-`OFFICE_JSON_RITES` narrows the rites. Zero differences is the bar; any
+`OFFICE_JSON_RITES` narrows the rites.
+
+Outside the Office and the Mass: with `CONTENT_AUDIT_OUT=file` the harness
+writes every string the store holds (prayers, Rosary, Stations, confession,
+the Ordinary, the saints, reference and course pages, the Martyrology, the
+feast names...), and the Android `ContentAuditDump` test (`CONTENT_AUDIT_DIR`,
+`CONTENT_AUDIT_LANG`) writes the same content; `diff_content.py ANDROID_DIR
+IOS_DIR fr` checks that a language puts the same strings in place of the
+English on both platforms. Zero differences is the bar; any
 difference is a bug in one of the mirrors (the first run found the Swift
 `ownedKey` missing the DO-script keys, which printed a raw script at Easter
 Sunday Vespers).

@@ -641,6 +641,117 @@ def main():
             del used[k]
             continue
         used[k] = e.replace("Descansed en paz", "Descansen en paz")
+    if LANG != "es":
+        # The hour templates the apps show as they are (the Office of the Dead,
+        # opened from its template, and the search index): a language without
+        # a hand-made hours_parts overlay gets one built from the same French,
+        # by Latin text, and its psalm verses from the psalter overlay.
+        ps_src = load(ASSETS / "psalter.json")
+        LABEL = re.compile(r"^\(?\d+[a-z]?:\d+[a-z]?\)?\s+")
+        # the Hebrew letters of Ps 118 and inline verse numbers: "(He)", "(3)", "(8a)"
+        inline = re.compile(r"\(\s*(?:\d+[a-z]?|[A-Z][a-z]{1,5})\s*\)\s*")
+        verse_ix = {}
+
+        def add_runs(halves):
+            for i in range(len(halves)):
+                for n in range(1, 5):
+                    run = halves[i:i + n]
+                    if len(run) < n or any(x is None for x, _ in run):
+                        break
+                    k = " ".join(x for x, _ in run)
+                    t = " ".join(y for _, y in run)
+                    t = t[:1].upper() + t[1:]
+                    verse_ix.setdefault(k, t.rstrip(" ,;:") + ("." if not t.rstrip()[-1:] in ".!?»" else ""))
+        # The Invitatory as DO prints it (Psalterium/Invitatorium.txt), its
+        # verses cut at DO's marks (+ * = ^ _ and the genuflexion rubric)
+        do_root = Path(sys.argv[sys.argv.index("--do-root") + 1]) if "--do-root" in sys.argv else None
+        if do_root:
+            inv = {}
+            for lang_dir in ("Latin", DO_NAME):
+                f = do_root / "web/www/horas" / lang_dir / "Psalterium/Invitatorium.txt"
+                inv[lang_dir] = [l[2:].strip() for l in f.read_text(encoding="utf-8").split("\n") if l.startswith("v. ")] if f.exists() else []
+            cut = re.compile(r"\s*(?:/:[^/]*:/|[+*=^_])\s*")
+            halves = []
+            for a, b in zip(inv["Latin"], inv[DO_NAME]):
+                aa, bb = [x for x in cut.split(a) if x.strip()], [x for x in cut.split(b) if x.strip()]
+                if len(aa) == len(bb):
+                    halves += [(fold(x), y.strip()) for x, y in zip(aa, bb)]
+                else:
+                    halves.append((None, None))
+            add_runs(halves)
+        for key, v in vload("psalter").items():
+            # whole verses, and runs of half-verses (the templates divide some
+            # psalms differently: the Invitatory, Ps 118's sections)
+            halves = []
+            for l, e in zip(ps_src.get(key, {}).get("lat", []), v.get("lines") or []):
+                lt, et = inline.sub("", LABEL.sub("", l)), inline.sub("", LABEL.sub("", e))
+                verse_ix.setdefault(fold(lt), re.sub(r"\s*\*\s*", " ", et).strip())
+                ll, ee = lt.split(" * "), et.split(" * ")
+                if len(ll) == len(ee):
+                    halves += [(fold(x), y.strip()) for x, y in zip(ll, ee)]
+                else:
+                    halves.append((None, None))
+            add_runs(halves)
+
+        # Matins lessons, from the lesson table's own column
+        lessons = load(ASSETS / "office_lessons.json")["texts"]
+        lp = ASSETS / f"office_lessons_{LANG}.json"
+        lesson_ix = {}
+        if lp.exists():
+            for t, v in zip(lessons, load(lp)):
+                if v:
+                    lesson_ix.setdefault(fold(t["lat"]), v)
+        SENT = re.compile(r"(?<=[.:;!?])\s+(?=[A-ZÆŒÁÉÍÓÚ])")
+
+        def vern(lat):
+            e = used.get(norm(lat)) or lookup(lat) or lesson_ix.get(fold(lat))
+            if e is None:
+                # a versicle and its Gloria Patri, a collect and its conclusion,
+                # printed as one paragraph: sentence by sentence, or nothing
+                bits = [b for b in SENT.split(lat.strip()) if b]
+                if len(bits) > 1:
+                    got = [used.get(norm(b)) or lookup(b) or lesson_ix.get(fold(b)) for b in bits]
+                    if all(got):
+                        e = " ".join(MARK_RE.sub("", g).strip() for g in got)
+            if e is None:
+                return None
+            if "\n" not in e and not MARK_RE.match(lat.strip()) and MARK_RE.match(e):
+                e = MARK_RE.sub("", e, count=1)
+            return e
+
+        FIELDS = (("lat", "eng"), ("latR", "engR"), ("v1Lat", "v1Eng"), ("r1Lat", "r1Eng"),
+                  ("v2Lat", "v2Eng"), ("r2Lat", "r2Eng"), ("antiphonLat", "antiphonEng"))
+        parts_out, hstats, hmiss = {}, Counter(), []
+        for h in load(ASSETS / "hours.json"):
+            m = {}
+            for i, p in enumerate(h.get("parts") or []):
+                o = {}
+                for lf, ef in FIELDS:
+                    if p.get(lf) and p.get(ef):
+                        e = vern(p[lf])
+                        hstats["texts" if e else "texts missing"] += 1
+                        if e:
+                            o[ef] = e
+                        elif len(hmiss) < 60:
+                            hmiss.append((h["slug"], i, lf, norm(p[lf])[:90]))
+                if p.get("verses"):
+                    vs = [verse_ix.get(fold(inline.sub("", v.get("lat") or ""))) or vern(v.get("lat") or "") for v in p["verses"]]
+                    hstats["verses"] += sum(1 for x in vs if x)
+                    hstats["verses missing"] += sum(1 for x in vs if not x)
+                    if any(vs):
+                        o["verses"] = vs
+                if o:
+                    m[str(i)] = o
+            if m:
+                parts_out[h["slug"]] = m
+        with open(ES / f"hours_parts_{LANG}.json", "w", encoding="utf-8") as f:
+            json.dump(parts_out, f, ensure_ascii=False, indent=1)
+            f.write("\n")
+        print(f"hours_parts_{LANG}.json:", dict(hstats))
+        if report:
+            for x in hmiss:
+                print("   missing template", *x, sep=" | ")
+
     out = ES / f"office_texts_{LANG}.json"
     with open(out, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(used.items())), f, ensure_ascii=False, indent=1)

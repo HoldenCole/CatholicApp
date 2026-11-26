@@ -92,6 +92,8 @@ def psalter(do):
     with psalter.json (DO's own psalm files in both languages)."""
     src = load(ASSETS / "psalter.json")
     base = Path(do) / "web/www/horas/Francais/Psalterium/Psalmorum"
+    fp = FR / "psalter_fixes_fr.json"
+    fixes = {k: v for k, v in (load(fp) if fp.exists() else {}).items() if not k.startswith("_")}
     out, stats = {}, Counter()
     for key, ps in src.items():
         f = base / ("Psalm" + key[len("psalm"):].upper() + ".txt")
@@ -102,6 +104,21 @@ def psalter(do):
             continue
         lines = [tidy(l) for l in f.read_text(encoding="utf-8").split("\n") if l.strip()]
         lat = ps["lat"]
+        # DO's file merges two half-verses into one line, or lacks a verse:
+        # psalter_fixes_fr.json gives those lines by Latin index
+        fx = fixes.get(key)
+        if fx and len(lines) == len(lat) - len(fx) + sum(1 for i in fx if int(i) > 0 and str(int(i) - 1) in fx):
+            out_lines, it = [], iter(lines)
+            for i in range(len(lat)):
+                if str(i) in fx:
+                    if not (i > 0 and str(i - 1) in fx):
+                        if i > 0 or str(i + 1) in fx:
+                            next(it, None)        # the merged DO line both fixes replace
+                    out_lines.append(fx[str(i)])
+                else:
+                    out_lines.append(next(it))
+            lines = out_lines
+            stats["fixed"] += 1
         if len(lines) != len(lat):
             stats["line count differs"] += 1
             continue

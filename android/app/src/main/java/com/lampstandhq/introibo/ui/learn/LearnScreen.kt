@@ -371,7 +371,7 @@ private fun LessonRow(course: Course, isMastered: Boolean, onClick: () -> Unit =
                             modifier = Modifier.size(10.dp),
                         )
                         Text(
-                            text = "Mastered",
+                            text = ContentStore.uiString("learn.mastered_badge", "Mastered"),
                             style = type.captionSm,
                             color = colors.goldLeaf,
                         )

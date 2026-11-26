@@ -100,7 +100,8 @@ fun NotificationScheduleSheet(
     var selectedHour by remember { mutableIntStateOf(8) }
     var selectedMinute by remember { mutableIntStateOf(0) }
 
-    val dayNames = listOf("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
+    // "Sun" · "Dom" · "Dim": the vernacular's weekday abbreviations
+    val dayNames = (0..6).map { com.lampstandhq.introibo.data.liturgical.LiturgicalNames.weekdayAbbrev(it).lowercase().replaceFirstChar { c -> c.uppercase() } }
 
     LaunchedEffect(scheduleId) {
         val existing = notifStore.schedule(scheduleId)
@@ -186,7 +187,7 @@ fun NotificationScheduleSheet(
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                SmallLabel(text = "Days", color = colors.sanctuaryRed)
+                SmallLabel(text = ContentStore.uiString("notif.days", "Days"), color = colors.sanctuaryRed)
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),

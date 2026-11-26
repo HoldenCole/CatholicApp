@@ -28,6 +28,38 @@ if let lang = VernacularLanguage.allCases.first(where: { $0.rawValue == langCode
     _ = store.linkGraph
 }
 
+// CONTENT_AUDIT_OUT=file: instead of the Office, every string the store holds
+// outside it (the prayers, the Rosary, the Stations, confession, the
+// Ordinary, the saints, reference and course pages, the Martyrology, the
+// feast names...), collection by collection, for the Android ContentAuditDump
+// to be compared with (scripts/office_qa/ios_parity/diff_content.py).
+if let out = env["CONTENT_AUDIT_OUT"] {
+    func strings(_ v: Any, into acc: inout [String]) {
+        if let s = v as? String { acc.append(s); return }
+        let m = Mirror(reflecting: v)
+        if m.displayStyle == .optional { if let c = m.children.first { strings(c.value, into: &acc) }; return }
+        if m.displayStyle == .dictionary {
+            for c in m.children { let kv = Mirror(reflecting: c.value).children.map { $0.value }; if kv.count == 2 { strings(kv[1], into: &acc) } }
+            return
+        }
+        for c in m.children { strings(c.value, into: &acc) }
+    }
+    let wanted = ["prayers", "rosaryPrayers", "mysterySets", "stations", "examen", "confessionGuides", "missal",
+                  "canonVariants", "marianAntiphons", "martyrology", "hours", "saints", "reference", "courses",
+                  "dailyPsalmES", "ordoNamesEn", "uiStringsES"]
+    var doc: [String: [String]] = [:]
+    for c in Mirror(reflecting: store).children {
+        guard let label = c.label?.replacingOccurrences(of: "_", with: ""), wanted.contains(label) else { continue }
+        var acc: [String] = []
+        strings(c.value, into: &acc)
+        doc[label] = acc.sorted()
+    }
+    let data = try! JSONSerialization.data(withJSONObject: doc, options: [.sortedKeys])
+    try! data.write(to: URL(fileURLWithPath: out))
+    print("content:", doc.mapValues { $0.count })
+    exit(0)
+}
+
 func put(_ d: inout [String: Any], _ k: String, _ v: Any?) { if let v { d[k] = v } }
 func partJSON(_ p: Hour.Part) -> [String: Any] {
     var d: [String: Any] = ["type": p.type]

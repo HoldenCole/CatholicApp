@@ -100,6 +100,24 @@ class FrenchOverlayTest {
     }
 
     @Test
+    fun theOfficeOfTheDeadAndTheCanticlesAreInFrench() {
+        french()
+        // the Office of the Dead opens from its template
+        val dead = ContentStore.hours.first { it.slug == "office-of-the-dead" }
+        val english = Regex("\\b(the|and|thy|thou|hath|unto)\\b", RegexOption.IGNORE_CASE)
+        val texts = dead.parts.flatMap { p -> listOfNotNull(p.eng, p.engR) + (p.verses?.map { it.eng } ?: emptyList()) }
+        assertTrue("${texts.count { english.containsMatchIn(it) }} English texts", texts.count { english.containsMatchIn(it) } < 15)
+        // the Benedictus at Lauds, verse for verse
+        val lauds = ContentStore.hourForDate("laudes", adventSunday, MissalRite.RITE_1962)!!
+        val benedictus = lauds.parts.first { it.type == "canticle" && it.verses?.firstOrNull()?.lat?.startsWith("Benedíctus") == true }
+        assertFalse(benedictus.verses!!.first().eng, english.containsMatchIn(benedictus.verses!!.joinToString(" ") { it.eng }))
+        // the headings the assembly gives in English
+        assertEquals("Verset", OfficeLabels.display("Versicle"))
+        assertEquals("Bénédiction avant la Léctio I", OfficeLabels.display("Blessing before Léctio I"))
+        assertEquals("Psalmus 50", OfficeLabels.display("Psalmus 50"))
+    }
+
+    @Test
     fun theCalendarNamesTheDayInFrench() {
         french()
         val name = ContentStore.ordoNameEnglish("Dominica I Adventus")!!

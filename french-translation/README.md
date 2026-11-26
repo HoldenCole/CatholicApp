@@ -70,6 +70,33 @@ reader as the Spanish ones were for a Spanish one — comparisons with
 French sounds and words, and every pronunciation respelled for French
 spelling ("DO-mi-nous", "PA-tèr").
 
+`hours_parts_fr.json` overlays the hour templates themselves (the Office
+of the Dead, which opens from its template; the Invitatory, the Benedictus,
+the Magnificat, the Nunc dimittis, the Te Deum and the Athanasian Creed,
+whose verses the assembled hours take from the templates; and the search
+index). `build_office_spanish.py --lang fr` writes it from the same French,
+by Latin text, with the psalm verses from `psalter_fr.json` and DO's
+Invitatory (`--do-root`). `psalter_fixes_fr.json` supplies the three psalm
+lines DO's French files merge or lack (Ps 21:25, 77:1, 84:9).
+
+## Matins lessons: not all of DO's French renders the Vulgate
+
+DO's credits name Fillion for the Old Testament and Crampon for the New,
+but its French Matins lessons are a patchwork. Sampling two lessons in
+every book shows Fillion/Crampon in most of the Pentateuch, Isaiah,
+Jeremiah, Lamentations, Tobit, Judith, Esther, the Maccabees and most of
+St Paul; Crampon's 1923 Old Testament, translated from the Hebrew and
+printing "Yahweh" where the Latin beside it says *Dóminus*, in Proverbs,
+Ezekiel and the minor prophets (80 lessons contain "Yahweh"); and a modern
+liturgical translation (the wording of the AELF lectionary, © AELF) in the
+Books of Kings, Job, Sirach, Ecclesiastes, Wisdom, the Catholic Epistles,
+Hebrews, the Apocalypse and others. By book, some 750 of the 1,882
+Scripture lessons (about 40 %) are in the latter two groups. The Office of
+the Dead's nine lessons from Job are the modern text in DO and are left in
+English in its template for that reason. Replacing these with Fillion's
+Vulgate translation (public domain; the whole Bible is at
+jesusmarie.free.fr, as PDFs) is the remaining fix.
+
 Working files that are **not** bundled: `office_texts_fixes_fr.json` (hand
 corrections and the few texts whose wording in the app differs from DO's,
 applied last by the builder), `office_lessons_missing_fr.json` and

@@ -67,6 +67,18 @@ def check(name, data):
             for k in v:
                 if not ((data.get(g) or {}).get(k) or {}).get("eng_fr"):
                     errs.append(f"{g}.{k}: missing")
+    elif name == "hours_parts_fr.json":
+        src = {h["slug"]: h for h in load(ASSETS / "hours.json")}
+        for slug, parts in data.items():
+            h = src.get(slug)
+            if h is None:
+                errs.append(f"{slug}: no such hour")
+                continue
+            for i, o in parts.items():
+                if not i.isdigit() or int(i) >= len(h["parts"]):
+                    errs.append(f"{slug}.{i}: no such part")
+                elif "verses" in o and len(o["verses"]) != len(h["parts"][int(i)].get("verses") or []):
+                    errs.append(f"{slug}.{i}: verse count differs")
     elif name == "rosary_prayers_fr.json":
         src = {p["slug"]: p for p in load(ASSETS / "rosary_prayers.json")}
         for k, v in data.items():

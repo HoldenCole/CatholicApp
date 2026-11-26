@@ -281,7 +281,7 @@ struct RosaryFlowView: View {
 
             // 10 Hail Marys
             for bead in 1...10 {
-                s.append(RosaryStep(label: "Ave María  ·  \(bead) of 10", latin: ave.0, english: ave.1, decade: dIdx, mystery: mystery, beadInDecade: bead))
+                s.append(RosaryStep(label: ContentStore.shared.uiString("rosary.bead_of", "Ave María  ·  {0} of 10").replacingOccurrences(of: "{0}", with: "\(bead)"), latin: ave.0, english: ave.1, decade: dIdx, mystery: mystery, beadInDecade: bead))
             }
 
             // Glory Be

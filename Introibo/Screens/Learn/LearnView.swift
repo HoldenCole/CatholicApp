@@ -175,7 +175,7 @@ struct LearnView: View {
                         HStack(spacing: 3) {
                             Image(systemName: "checkmark.seal.fill")
                                 .appFont(.scaledSystem(9))
-                            Text("Mastered")
+                            Text(ContentStore.shared.uiString("learn.mastered_badge", "Mastered"))
                                 .appFont(.captionSm)
                         }
                         .foregroundStyle(Color.goldLeaf)

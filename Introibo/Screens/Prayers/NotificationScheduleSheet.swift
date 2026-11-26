@@ -14,7 +14,8 @@ struct NotificationScheduleSheet: View {
     @State private var selectedTime = Calendar.current.date(from: DateComponents(hour: 8, minute: 0)) ?? Date()
     @State private var authStatus: UNAuthorizationStatus = .notDetermined
 
-    private let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    /// "Sun" · "Dom" · "Dim": the vernacular's weekday abbreviations.
+    private let dayNames = (0...6).map { LiturgicalNames.weekdayAbbrev($0).lowercased().capitalized }
 
     var body: some View {
         NavigationStack {
@@ -83,7 +84,7 @@ struct NotificationScheduleSheet: View {
 
     private var daysSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Days")
+            Text(ContentStore.shared.uiString("notif.days", "Days"))
                 .smallLabel(color: Color.sanctuaryRed)
 
             HStack(spacing: 8) {

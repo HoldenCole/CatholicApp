@@ -53,7 +53,7 @@ struct TutorialsListView: View {
             .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden)
             .background(Color.pageBackground.ignoresSafeArea())
-            .navigationTitle("Tutorials")
+            .navigationTitle(ContentStore.shared.uiString("settings.tutorials", "Tutorials"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

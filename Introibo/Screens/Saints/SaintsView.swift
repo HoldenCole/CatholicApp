@@ -41,7 +41,7 @@ struct SaintsView: View {
                     .foregroundStyle(Color.primaryText)
                 Spacer()
                 if isFollowed {
-                    Text("Following")
+                    Text(ContentStore.shared.uiString("saints.following", "Following"))
                         .smallLabel(color: Color.goldLeaf, tracking: 2)
                 }
             }

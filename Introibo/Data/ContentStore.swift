@@ -455,8 +455,10 @@ final class ContentStore {
         // Spanish flows into every assembled hour.
         if let es = loadOverlay("psalter", as: [String: PsalterES].self) {
             for (name, o) in es {
+                // aligned with the English, or with the Latin where the
+                // English joins verses the Latin divides (a few canticles)
                 if var entry = psalterTextData[name], let eng = entry["eng"],
-                   eng.count == o.lines.count {
+                   eng.count == o.lines.count || entry["lat"]?.count == o.lines.count {
                     entry["eng"] = o.lines
                     psalterTextData[name] = entry
                 }

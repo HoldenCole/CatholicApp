@@ -1,0 +1,14 @@
+{
+ "_comment": "Lines DO's French psalm files merge or lack: Latin line index -> French. 84:9 and 21:25 split DO's own line at the Latin division; 77:1 is missing from DO's file and is given in the same register.",
+ "psalm21": {
+  "24": "21:25 Que toute la race d’Israël Le craigne, * parce qu’Il n’a pas méprisé ni dédaigné la supplication du pauvre,",
+  "25": "21:25 Et qu’Il n’a point détourné de moi Son visage ; * mais qu’Il m’a exaucé lorsque je criais vers Lui."
+ },
+ "psalm77": {
+  "0": "77:1 Écoutez, mon peuple, ma loi ; * prêtez l’oreille aux paroles de ma bouche."
+ },
+ "psalm84": {
+  "7": "84:9 J’écouterai ce que dira au dedans de moi le Seigneur Dieu ; * car Il annoncera la paix pour Son peuple.",
+  "8": "84:9 Et pour Ses saints, * et pour ceux qui rentrent au fond de leur cœur."
+ }
+}

@@ -121,7 +121,7 @@ private fun SaintCard(
                 modifier = Modifier.weight(1f),
             )
             if (isFollowed) {
-                SmallLabel(text = "Following", color = colors.goldLeaf)
+                SmallLabel(text = ContentStore.uiString("saints.following", "Following"), color = colors.goldLeaf)
             }
         }
         Spacer(modifier = Modifier.height(8.dp))

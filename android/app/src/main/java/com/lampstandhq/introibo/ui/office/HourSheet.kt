@@ -400,7 +400,7 @@ private fun VrBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: "Versus", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Versus", color = colors.sanctuaryRed)
 
         val m = VersicleMarks.of(p)
         if (m.lat != null && m.eng != null) {
@@ -423,7 +423,7 @@ private fun HymnBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         // Decorated label
-        DecoratedLabel(text = p.label ?: "Hymnus")
+        DecoratedLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Hymnus")
 
         p.title?.let { title ->
             Text(
@@ -461,7 +461,7 @@ private fun SimpleBlock(p: Hour.Part, labelFallback: String, onLinkTap: (DeepLin
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: labelFallback, color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: labelFallback, color = colors.sanctuaryRed)
 
         p.ref?.let { ref ->
             Text(
@@ -534,7 +534,7 @@ private fun PsalmBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) {
         ) {
             GoldLine(modifier = Modifier.weight(1f))
             SmallLabel(
-                text = p.label ?: "Psalmus",
+                text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Psalmus",
                 color = colors.sanctuaryRed,
                 modifier = Modifier.padding(horizontal = 10.dp),
             )
@@ -565,7 +565,7 @@ private fun PaterInlineBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit =
     val type = IntroiboType.current
 
     Column {
-        SmallLabel(text = p.label ?: "Pater Noster", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Pater Noster", color = colors.sanctuaryRed)
         Spacer(modifier = Modifier.height(6.dp))
         val lat = p.lat ?: ""
         val eng = p.eng ?: ""
@@ -592,7 +592,7 @@ private fun ConfiteorBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {
     val colors = IntroiboTheme.colors
 
     Column {
-        SmallLabel(text = p.label ?: "Confíteor", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Confíteor", color = colors.sanctuaryRed)
         Spacer(modifier = Modifier.height(6.dp))
         val lat = p.lat ?: ""
         val eng = p.eng ?: ""
@@ -623,7 +623,7 @@ private fun ResponsoryBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = 
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: "Responsórium", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Responsórium", color = colors.sanctuaryRed)
 
         p.ref?.let { ref ->
             Text(text = ref, style = type.captionSm, color = colors.goldLeaf)
@@ -677,7 +677,7 @@ private fun ResponsoryBreveBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Un
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: "Resp. Breve", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Resp. Breve", color = colors.sanctuaryRed)
 
         if (p.lat != null && p.eng != null) {
             val latLines = p.lat.split("\n").filter { it.isNotBlank() }
@@ -759,7 +759,7 @@ private fun HeadingBlock(p: Hour.Part) {
                 .background(colors.sanctuaryRed.copy(alpha = 0.3f)),
         )
         Text(
-            text = p.label ?: "",
+            text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "",
             style = type.titleM.copy(fontStyle = FontStyle.Italic),
             color = colors.sanctuaryRed,
             maxLines = 1,
@@ -783,7 +783,7 @@ private fun ReadingBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {})
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: "Léctio", color = colors.goldLeaf)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Léctio", color = colors.goldLeaf)
 
         p.ref?.let { ref ->
             Text(text = ref, style = type.captionSm, color = colors.goldLeaf)
@@ -837,7 +837,7 @@ private fun CapitulumBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: "Capítulum", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Capítulum", color = colors.sanctuaryRed)
 
         p.ref?.let { ref ->
             Text(
@@ -883,7 +883,7 @@ private fun InvitatoryBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = 
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        SmallLabel(text = p.label ?: "Invitatorium", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Invitatorium", color = colors.sanctuaryRed)
 
         if (p.lat != null && p.eng != null) {
             Box(modifier = Modifier.padding(start = 10.dp)) {
@@ -917,7 +917,7 @@ private fun PrecesBlock(p: Hour.Part, onLinkTap: (DeepLinkTarget) -> Unit = {}) 
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        SmallLabel(text = p.label ?: "Preces", color = colors.sanctuaryRed)
+        SmallLabel(text = com.lampstandhq.introibo.data.content.OfficeLabels.display(p.label) ?: "Preces", color = colors.sanctuaryRed)
 
         // Verse-mode (intercession versicles and concluding versicles)
         p.verses?.let { verses ->

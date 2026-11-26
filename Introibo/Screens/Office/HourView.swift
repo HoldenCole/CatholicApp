@@ -204,7 +204,7 @@ struct HourView: View {
     private func vrBlock(_ p: Hour.Part) -> some View {
         let m = VersicleMarks.of(p)
         return VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Versus")
+            Text(OfficeLabels.display(p.label) ?? "Versus")
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = m.lat, let eng = m.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
@@ -221,7 +221,7 @@ struct HourView: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
-                Text(p.label ?? "Hymnus")
+                Text(OfficeLabels.display(p.label) ?? "Hymnus")
                     .smallLabel(color: Color.sanctuaryRed)
                     .lineLimit(2)
                     .minimumScaleFactor(0.7)
@@ -253,7 +253,7 @@ struct HourView: View {
 
     private func simpleBlock(_ p: Hour.Part, labelFallback: String) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? labelFallback)
+            Text(OfficeLabels.display(p.label) ?? labelFallback)
                 .smallLabel(color: Color.sanctuaryRed)
             if let ref = p.ref {
                 Text(ref)
@@ -299,7 +299,7 @@ struct HourView: View {
             }
             HStack(spacing: 10) {
                 Rectangle().fill(Color.goldLeaf.opacity(0.4)).frame(height: 0.5)
-                Text(p.label ?? "Psalmus")
+                Text(OfficeLabels.display(p.label) ?? "Psalmus")
                     .smallLabel(color: Color.sanctuaryRed)
                     .lineLimit(2)
                     .minimumScaleFactor(0.7)
@@ -326,7 +326,7 @@ struct HourView: View {
 
     private func pateInlineBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Pater Noster")
+            Text(OfficeLabels.display(p.label) ?? "Pater Noster")
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = p.lat, let eng = p.eng {
                 let latParts = lat.components(separatedBy: "\n\n")
@@ -347,7 +347,7 @@ struct HourView: View {
 
     private func confiteorBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Confíteor")
+            Text(OfficeLabels.display(p.label) ?? "Confíteor")
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = p.lat, let eng = p.eng {
                 let latParts = lat.components(separatedBy: "\n\n")
@@ -368,7 +368,7 @@ struct HourView: View {
 
     private func responsoryBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Respons\u{00f3}rium")
+            Text(OfficeLabels.display(p.label) ?? "Respons\u{00f3}rium")
                 .smallLabel(color: Color.sanctuaryRed)
             if let ref = p.ref {
                 Text(ref).appFont(.captionSm).foregroundStyle(Color.goldLeaf)
@@ -422,7 +422,7 @@ struct HourView: View {
     /// displayed in italic below the label.
     private func capitulumBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Cap\u{00ed}tulum")
+            Text(OfficeLabels.display(p.label) ?? "Cap\u{00ed}tulum")
                 .smallLabel(color: Color.sanctuaryRed)
             if let ref = p.ref {
                 Text(ref)
@@ -448,7 +448,7 @@ struct HourView: View {
     /// verse-based intercession versicles.
     private func precesBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Preces")
+            Text(OfficeLabels.display(p.label) ?? "Preces")
                 .smallLabel(color: Color.sanctuaryRed)
             if let verses = p.verses {
                 // Versicle-based preces (intercessions, concluding versicles)
@@ -480,7 +480,7 @@ struct HourView: View {
     /// lacks the expected structure.
     private func invitatoryBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(p.label ?? "Invitatorium")
+            Text(OfficeLabels.display(p.label) ?? "Invitatorium")
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = p.lat, let eng = p.eng {
                 BilingualLine(lat: lat, eng: eng, sideBySide: true)
@@ -500,7 +500,7 @@ struct HourView: View {
     /// with indented versicles.
     private func responsoryBreveBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Resp. Breve")
+            Text(OfficeLabels.display(p.label) ?? "Resp. Breve")
                 .smallLabel(color: Color.sanctuaryRed)
             if let lat = p.lat, let eng = p.eng {
                 let latLines = lat.components(separatedBy: "\n")
@@ -544,7 +544,7 @@ struct HourView: View {
     private func headingBlock(_ p: Hour.Part) -> some View {
         HStack(spacing: 10) {
             Rectangle().fill(Color.sanctuaryRed.opacity(0.3)).frame(height: 0.5)
-            Text(p.label ?? "")
+            Text(OfficeLabels.display(p.label) ?? "")
                 .appFont(.titleM)
                 .italic()
                 .foregroundStyle(Color.sanctuaryRed)
@@ -556,7 +556,7 @@ struct HourView: View {
 
     private func readingBlock(_ p: Hour.Part) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(p.label ?? "Léctio")
+            Text(OfficeLabels.display(p.label) ?? "Léctio")
                 .smallLabel(color: Color.goldLeaf)
             if let ref = p.ref {
                 Text(ref)

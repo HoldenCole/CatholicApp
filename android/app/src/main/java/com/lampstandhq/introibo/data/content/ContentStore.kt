@@ -524,7 +524,9 @@ object ContentStore {
                 psalterTextData = psalterTextData.mapValues { (name, entry) ->
                     val o = es[name] ?: return@mapValues entry
                     val eng = entry["eng"]
-                    if (eng != null && eng.size == o.lines.size) {
+                    // aligned with the English, or with the Latin where the
+                    // English joins verses the Latin divides (a few canticles)
+                    if (eng != null && (eng.size == o.lines.size || entry["lat"]?.size == o.lines.size)) {
                         entry + ("eng" to o.lines)
                     } else {
                         entry

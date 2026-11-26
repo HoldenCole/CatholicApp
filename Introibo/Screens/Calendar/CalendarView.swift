@@ -704,9 +704,14 @@ private struct DayDetailView: View {
         }
     }
 
+    /// The colour's name in the vernacular ("White", "Blanco", "Blanc").
+    static func colourLabel(_ c: LiturgicalColour) -> String {
+        ContentStore.shared.uiString("calendar.colour.\(c.rawValue)", c.rawValue.capitalized)
+    }
+
     private var shareText: String {
         let eng = day.englishName ?? title
-        let colour = day.colour?.rawValue.capitalized ?? ""
+        let colour = day.colour.map(Self.colourLabel) ?? ""
         let season = ctx.englishName
         let penance = ctx.penance.title
         let disc = discipline.short
@@ -775,7 +780,7 @@ private struct DayDetailView: View {
     private var detail: some View {
         VStack(alignment: .leading, spacing: 18) {
             if let colour = day.colour {
-                infoRow(label: ContentStore.shared.uiString("calendar.colour", "Liturgical Colour"), value: colour.rawValue.capitalized, swatch: colour)
+                infoRow(label: ContentStore.shared.uiString("calendar.colour", "Liturgical Colour"), value: Self.colourLabel(colour), swatch: colour)
             }
             infoRow(label: ContentStore.shared.uiString("calendar.season_label", "Season"), value: langMode == .latinOnly ? ctx.latinName : ctx.englishName)
 
