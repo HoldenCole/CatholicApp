@@ -59,6 +59,9 @@ def fold(t):
     t = unicodedata.normalize("NFD", t)
     t = "".join(c for c in t if unicodedata.category(c) != "Mn")
     t = t.lower().replace("æ", "ae").replace("œ", "oe").replace("j", "i").replace("v", "u")
+    # spellings the editions vary: cælis / cœlis, natalítia / natalícia
+    t = t.replace("oe", "ae")
+    t = re.sub(r"ci(?=[aeiou])", "ti", t)
     t = re.sub(r"[^a-z0-9 ]+", " ", t)
     return re.sub(r"\s+", " ", t).strip()
 
@@ -74,7 +77,8 @@ def tidy(t):
 
 
 ALLELUIA_ONLY = re.compile(r"^(?:[Aa]ll[eé]l[uú][ij]a[.,;]?\s*)+$")
-ALLELUIA_TAIL = re.compile(r"(?:[,.;:]?\s*[Aa]ll[eé]l[uú][ij]a\.?)+\s*$")
+# also the Paschal "(Allelúja, allelúja.)" the commons carry in brackets
+ALLELUIA_TAIL = re.compile(r"(?:\s*\((?=[Aa]ll))?(?:[,.;:]?\s*[Aa]ll[eé]l[uú][ij]a\.?)+\)?\s*$")
 
 
 def strip_alleluia(t):
@@ -170,6 +174,57 @@ PROPHETS = {
 
 
 # The few lines no DO file pairs: rubrics of the app's own data, by hand.
+# Saints' names the Commons' "N." takes that office_names_fr.json lacks
+# (Latin case form -> French), for by_template in missal().
+NAMES_EXTRA = {
+    "Sotéris": "Soter", "Cleti": "Clet", "Caii": "Caïus", "Marcellíni": "Marcellin",
+    "Telésphoro": "Télesphore", "Telésphori": "Télesphore", "Lúcio": "Luce", "Lúcii": "Luce",
+    "Anicéto": "Anicet", "Anicéti": "Anicet", "Joánne": "Jean", "Joánnis": "Jean",
+    "Maríæ": "Marie", "María": "Marie", "Stéphano": "Étienne", "Stéphani": "Étienne",
+    "Lino": "Lin", "Lini": "Lin", "Hygíni": "Hygin", "Maurus": "Maur", "Márii": "Marius",
+    "Andréæ Corsíni": "André Corsini", "Faustíni": "Faustin", "Jovítæ": "Jovite",
+    "Perpétuæ": "Perpétue", "Felicitátis": "Félicité", "Benedíctus": "Benoît",
+    "Isidórus": "Isidore", "Ansélmus": "Anselme", "Gregórius": "Grégoire",
+    "Bonifátii": "Boniface", "Eleuthérii": "Éleuthère", "Felícis": "Félix", "Felíce": "Félix",
+    "Gervásii": "Gervais", "Protásii": "Protais", "Leónis": "Léon", "Pii": "Pie", "Pio": "Pie",
+    "Symphorósæ": "Symphorose", "Xysti, Felicíssimi": "Sixte, Félicissime", "Agapíti": "Agapit",
+    "Cyríaci, Largi": "Cyriaque, Large", "Smarágdi": "Smaragde", "Cornélii": "Corneille",
+    "Cypriáni": "Cyprien", "Januárii": "Janvier", "Eustáchii": "Eustache", "Eustáchio": "Eustache",
+    "Remígio": "Remi", "Plácidi": "Placide", "Úrsulæ": "Ursule", "Evarísti": "Évariste",
+    "Cároli": "Charles", "Pontiáni": "Pontien", "Joánnis a Cruce": "Jean de la Croix",
+    "Sabbas": "Sabas", "Melchíadis": "Melchiade", "Melchíade": "Melchiade",
+    "Telésphorum": "Télesphore", "Hygínum": "Hygin", "Lúcium": "Luce", "Anicétum": "Anicet",
+    "Urbánum": "Urbain", "Urbáni": "Urbain", "Urbáno": "Urbain", "Eleuthérium": "Éleuthère",
+    "Joánnem": "Jean", "Felícem": "Félix", "Silvérium": "Silvère", "Pium": "Pie",
+    "Anaclétum": "Anaclet", "Stéphanum": "Étienne", "Zephyrínum": "Zéphyrin", "Linum": "Lin",
+    "Evarístum": "Évariste", "Martínum": "Martin", "Cleméntem": "Clément", "Melchíadem": "Melchiade",
+    "Leónem": "Léon", "Sotérem": "Soter", "Cajum": "Caïus", "Cletum": "Clet", "Marcellínum": "Marcellin",
+    "Eusébio": "Eusèbe", "Antónius": "Antoine", "Polycárpo": "Polycarpe", "Blásio": "Blaise",
+    "Romuáldus": "Romuald", "Petrus": "Pierre", "Petro": "Pierre", "Gregório": "Grégoire",
+    "Gervásio": "Gervais", "Protásio": "Protais", "Guliélmius": "Guillaume", "Januário": "Janvier",
+    "Hilárion": "Hilarion", "Vitále": "Vital", "Agrícola": "Agricola", "Canúto": "Canut",
+    "Emerentiánæ": "Émérentienne", "Emerentiána": "Émérentienne", "Dorótheæ": "Dorothée",
+    "Doróthea": "Dorothée", "Christínæ": "Christine", "Christína": "Christine",
+    "Timotheo": "Timothée", "Timothei": "Timothée", "Joánnes Chrysóstomus": "Jean Chrysostome",
+    "Joánnis Chrysóstomi": "Jean Chrysostome", "Francíscus": "François", "Francísci": "François",
+    "Francísco": "François", "Ignátio": "Ignace", "Andréa": "André", "Tito": "Tite",
+    "Simeóne": "Siméon", "Simeónis": "Siméon", "Thomas": "Thomas", "Thomæ": "Thomas",
+    "Patrício": "Patrice", "Toríbio": "Turibe", "Antoníno": "Antonin", "Bonifátio": "Boniface",
+    "Ubáldo": "Ubald", "Joánnis Baptístæ": "Jean-Baptiste", "Norbérto": "Norbert",
+    "Paulíno": "Paulin", "Symphorósa": "Symphorose", "Vincéntio": "Vincent", "Lauréntius": "Laurent",
+    "Lauréntio": "Laurent", "Libório": "Libère", "Libórii": "Libère", "Bernárdus": "Bernard",
+    "Bernárdi": "Bernard", "Philíppo": "Philippe", "Augustínus": "Augustin", "Augustíni": "Augustin",
+    "Nicoláo": "Nicolas", "Cypriáno": "Cyprien", "Justína": "Justine", "Plácido": "Placide",
+    "Brunóne": "Bruno", "Ursula": "Ursule", "Antónii Maríæ": "Antoine-Marie", "Matthǽi": "Matthieu",
+    "Matthíæ": "Matthias", "Jacóbi": "Jacques", "Sabínæ": "Sabine", "Bonaventúræ": "Bonaventure",
+    "Benedíctus": "Benoît", "Maurus": "Maur", "Fabiáno": "Fabien", "Fabiáni": "Fabien",
+    "Sebastiáno": "Sébastien", "Sebastiáni": "Sébastien", "Tryphóne": "Tryphon", "Respício": "Respice",
+    "Nympha": "Nymphe", "Dídaco": "Didace", "Carólo": "Charles", "Petrus Chrysólogus": "Pierre Chrysologue",
+    "Petri Chrysólogi": "Pierre Chrysologue",
+}
+
+UNNAMED = Counter()       # Latin names a Common's pattern caught but no French was found for
+
 HAND = {fold(k): v for k, v in {
     "!Sequentia dicitur usque ad Sabbatum in Albis inclusive.":
         "!La Séquence se dit jusqu’au Samedi in Albis inclusivement.",
@@ -206,7 +261,7 @@ def heading_fr(lat):
     return None
 
 
-def missal(dumps):
+def missal(dumps, do=None):
     dumps = Path(dumps)
     variants = {}          # folded Latin line -> Counter of the French lines DO pairs with it
     by_file = {}           # DO file ("tempora/adv1-0") -> {folded Latin line: French line}
@@ -292,6 +347,58 @@ def missal(dumps):
                                 and not re.match(r"^!\s*\d?\s?[A-Z][a-z]+\.?\s*\d+[:,]", a):
                             rubrics_fr.setdefault("!" + fold(a[1:]), "!" + tidy(b[1:]))
 
+    # DO's own rendering of each saint's collect, secret and postcommunion
+    # (dodump.pl missaprayers: the Common's text with the name filled in),
+    # which is what the corrected Latin of missal_sanctoral.json now is.
+    mp = dumps / "missaprayers_1962.json"
+    if mp.exists():
+        for f, secs in load(mp).items():
+            for sec in secs.values():
+                lat, fr = sec.get("lat"), sec.get("eng")
+                if not lat or not fr:
+                    continue
+                ll, fl = lines_of(lat, prayers, "lat"), lines_of(fr, prayers, "eng")
+                if len(ll) == len(fl):
+                    stats["rendered prayers paired"] += 1
+                    for a, b in zip(ll, fl):
+                        add(re.sub(r"^v\.\s*", "", a), re.sub(r"^v\.\s*", "", b), f.lower()[:-4])
+
+    # The Commons of the Saints: DO's Mass draws them from the Office's
+    # Commune files (horas/<lang>/Commune), which the dumps above do not
+    # carry; their sections are paired header by header.
+    if do:
+        def sections_of(path):
+            out, cur = {}, None
+            for l in path.read_text(encoding="utf-8", errors="replace").split("\n"):
+                m = re.match(r"^\[([^\]]+)\]\s*(\(.*\))?\s*$", l)
+                if m:
+                    cur = l.strip()
+                    out[cur] = []
+                elif cur:
+                    out[cur].append(l)
+            return {k: "\n".join(v) for k, v in out.items()}
+        www = Path(do) / "web/www/horas"
+        for lat_p in sorted((www / "Latin" / "Commune").glob("*.txt")):
+            fr_p = www / "Francais" / "Commune" / lat_p.name
+            if not fr_p.exists():
+                continue
+            ls, fs = sections_of(lat_p), sections_of(fr_p)
+            for head, lat in ls.items():
+                fr = fs.get(head)
+                if not fr or head.startswith(("[Rank", "[Rule", "[Officium", "[Name")):
+                    continue
+                ll, fl = lines_of(lat, prayers, "lat"), lines_of(fr, prayers, "eng")
+                if len(ll) != len(fl):
+                    drop = lambda xs: [x for x in xs if not re.match(r"^(\(.*\)|/:.*:/|#.*|@.*)$", x)]
+                    ll, fl = drop(ll), drop(fl)
+                if len(ll) != len(fl):
+                    stats["commune sections misaligned"] += 1
+                    continue
+                stats["commune sections paired"] += 1
+                for a, b in zip(ll, fl):
+                    if not a.startswith("@"):
+                        add(a, b, "commune/" + lat_p.stem.lower())
+
     # One French line per Latin line: DO's commonest pairing. A short line
     # ("eórum.") means different things in different places, so it is taken
     # only from the day's own file or when DO never pairs it otherwise.
@@ -301,6 +408,35 @@ def missal(dumps):
             linemap[k] = c.most_common(1)[0][0]
     print("missal: conflicting line pairs", sum(1 for c in variants.values() if len(c) > 1),
           "of which too short to trust", sum(1 for k, c in variants.items() if len(c) > 1 and len(k) < 25))
+
+    # The Commons' prayers carry "N." for the saint; the Masses that borrow
+    # them name the saint ("beáti Ignátii Mártyris"). Each such Latin line
+    # becomes a pattern, the name is read off the Mass's line and put in
+    # the French in place of its "N." (office_names_fr.json gives the
+    # French of every Latin case form, NAMES_EXTRA the few it lacks).
+    names_fr = {fold(k): v for k, v in load(FR / "office_names_fr.json").items()}
+    names_fr.update({fold(k): v for k, v in NAMES_EXTRA.items()})
+    templates = {}
+    for k in linemap:
+        if re.search(r"(^| )n( |$)", k) and len(k) >= 25:
+            words = k.split(" ")
+            rx = re.compile("^" + " ".join("(.+?)" if w == "n" else re.escape(w) for w in words) + "$")
+            templates.setdefault(" ".join(words[:2]), []).append((rx, linemap[k]))
+
+    def by_template(l):
+        fl = fold(l)
+        for rx, fr in templates.get(" ".join(fl.split(" ")[:2]), []):
+            m = rx.match(fl)
+            if not m:
+                continue
+            got = [names_fr.get(g) for g in m.groups()]
+            if None in got or fr.count("N.") != len(got):
+                UNNAMED.update(g for g, x in zip(m.groups(), got) if x is None)
+                continue
+            for g in got:
+                fr = re.sub(r"\bN\.", g, fr, count=1)
+            return fr
+        return None
 
     def files_for(key):
         """The DO files a missal key was imported from, most specific first."""
@@ -329,7 +465,7 @@ def missal(dumps):
                 if k in by_file.get(f, {}):
                     return by_file[f][k]
             return linemap.get(k)
-        f = heading_fr(l) or find(fold(l))    # one form for every title line
+        f = heading_fr(l) or find(fold(l)) or by_template(l)    # one form for every title line
         if f is None:
             base, n = strip_alleluia(l)
             b = find(fold(base)) if n else None
@@ -337,11 +473,12 @@ def missal(dumps):
                 f = b.rstrip(" ,;:")
                 if f[-1:] not in ".!?»":
                     f += "."
-                f += " " + ", ".join(["Alléluia"] + ["alléluia"] * (n - 1)) + "."
+                tail = ", ".join(["Alléluia"] + ["alléluia"] * (n - 1)) + "."
+                f += f" ({tail})" if l.rstrip().endswith(")") else " " + tail
         return f
 
     def translate(lat, key):
-        out = []
+        out, bad = [], []
         lines = lat.split("\n")
         for i, l in enumerate(lines):
             if not l.strip():
@@ -354,9 +491,13 @@ def missal(dumps):
                     and len(l.split()) == 1 and strip_alleluia(out[i - 2])[1]:
                 f = strip_alleluia(out[i - 2])[0].rstrip(" ,;:.!").split(" ")[-1] + "."
             if f is None:
-                return None, l
+                bad.append(l)
+                out.append(l)
+                continue
             m = re.match(r"^(V\.|R\.|℣\.|℟\.)\s*", l.strip())
             out.append((m.group(1) + " " if m else "") + f)
+        if bad:
+            return None, bad
         return "\n".join(out), None
 
     propers, readings = {}, {}
@@ -372,8 +513,8 @@ def missal(dumps):
                 fr, bad = translate(v["lat"], key)
                 if fr is None:
                     miss[field] += 1
-                    if len(examples) < 400:
-                        examples.append((key, field, bad[:110]))
+                    for b in bad:
+                        examples.append((key, field, b))
                     continue
                 cov[field] += 1
                 (readings if field in ("lectio", "evangelium") else propers).setdefault(key, {})[field] = fr
@@ -383,6 +524,8 @@ def missal(dumps):
     for f in sorted(set(cov) | set(miss)):
         print(f"  {f}: {cov[f]} in French, {miss[f]} left in English")
     if "--report" in sys.argv:
+        for n, c in UNNAMED.most_common():
+            print("   unnamed", n, c, sep=" | ")
         for e in examples:
             print("   missing", *e, sep=" | ")
 
@@ -598,7 +741,7 @@ def main():
     if "missal" in steps:
         if not dumps:
             sys.exit("--dumps DIR is needed for the missal")
-        missal(dumps)
+        missal(dumps, do)
     if "marian" in steps:
         marian(dumps)
     if "names" in steps:

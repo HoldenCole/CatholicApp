@@ -593,3 +593,18 @@ antiphons, invitatories, capitula and collects — so that the Spanish-mode
 Office shows no English over the year in any rite (checked by dumping
 every hour in Spanish mode and scanning for English). A rubric line the
 Latin itself opens with "!" keeps its Spanish in the builder.
+
+## The saints' Mass prayers after the Latin correction
+
+`scripts/fix_mass_prayers.py` put right the Latin and English of about 300
+collects, secrets and postcommunions of the saints (names filled in the
+wrong case or not at all, prayers taken from the wrong Mass of the Common,
+stray second collects). `scripts/fix_mass_prayers_es.py` then rebuilt the
+Spanish of exactly those prayers in `missal_propers_es.json` (and trimmed
+the popes' Office collects in `sanctoral_propers_es.json`) from the Spanish
+the Missal already gives the same Latin elsewhere, the same Common prayer
+with another saint's name, or, for some 40 Common prayers no Mass had in
+Spanish before, hand translations kept in the script (`HAND`), in the
+Missal's own wording. It runs on the Latin before and after:
+
+    python3 scripts/fix_mass_prayers_es.py --before <old missal_sanctoral.json> --do <DO checkout>

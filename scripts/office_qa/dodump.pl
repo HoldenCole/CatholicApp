@@ -141,6 +141,44 @@ if ($mode eq 'rules') {
       $out{"$dir/$f"} = \%ent if %ent;
     }
   }
+} elsif ($mode eq 'missaprayers') {
+  # The collect, secret and postcommunion of each saint's Mass as DO's
+  # missa/propers.pl oratio() makes them, without the commemorations: the
+  # feast's own text or its Common's, the "N." filled from [Name] (with
+  # its per-prayer forms, "Secreta=…"), and the Common of Supreme Pontiffs
+  # for the popes (papal_rule/papal_prayer).
+  $datafolder = "$DO/web/www/missa"; $missa = 1; $hora = '';
+  require "$DO/web/cgi-bin/horas/horascommon.pl";
+  opendir(my $dh, "$datafolder/Latin/Sancti"); my @files = grep { /\.txt$/ } readdir($dh); closedir($dh);
+  for my $f (sort @files) {
+    $winner = "Sancti/$f"; @dayname = ('', '', ''); %main::setupstring_caches_by_version = ();
+    if ($f =~ /^(\d\d)-(\d\d)/) { $month = $1 + 0; $day = $2 + 0; }
+    my %ent;
+    for my $lang ('Latin', $L2) {
+      my $s = setupstring($lang, "Sancti/$f") or next;
+      my %w = %$s;
+      my ($code) = (($w{Rule} || '') =~ /(?:vide|ex)\s+(C[0-9a-z]+(?:-\d+)?)/i);
+      my %c = $code ? %{setupstring($lang, subdirname('Commune', $version) . "$code.txt") || {}} : ();
+      for my $type ('Oratio', 'Secreta', 'Postcommunio') {
+        my $t = $w{$type};
+        $t = $c{$type} if !$t;
+        next unless $t;
+        if ($t =~ /N\./ && exists($w{Name})) {
+          my @name = split("\n", $w{Name});
+          @name = grep(/$type\=/, @name) unless $w{Name} !~ /$type\=/;
+          $name[0] =~ s/^.*?\=//;
+          # missa/propers.pl replaceNdot, with the name in hand
+          my $nm = $name[0]; $nm =~ s/[\r\n]//g;
+          if ($nm) { $t =~ s/N\. .*? N\./$nm/; $t =~ s/N\./$nm/; }
+        }
+        if ($version !~ /Trident/i && (my ($plural, $class, $name) = papal_rule($w{Rule}))) {
+          $t = papal_prayer($lang, $plural, $class, $name, $type);
+        }
+        $ent{$type}{$lang eq 'Latin' ? 'lat' : 'eng'} = $t;
+      }
+    }
+    $out{"Sancti/$f"} = \%ent if %ent;
+  }
 } elsif ($mode eq 'missa') {
   # The Mass: every section of every proper, with the second language beside
   # the Latin, and the Ordo's prayers and prefaces.
