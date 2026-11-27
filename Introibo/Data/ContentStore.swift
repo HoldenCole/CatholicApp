@@ -187,7 +187,7 @@ final class ContentStore {
     /// English for the Office texts no source of the hours carries in
     /// English (office_texts_en.json, Latin -> English; scripts/fix_english.py),
     /// applied only where a part has no English or shows its Latin.
-    private lazy var officeTextsEN: [String: String] = load("office_texts_en", as: [String: String].self) ?? [:]
+    @ObservationIgnored private lazy var officeTextsEN: [String: String] = load("office_texts_en", as: [String: String].self) ?? [:]
     /// The Spanish form of the propers' [Name] values (office_names_es.json).
     private var officeNamesES: [String: String] = [:]
 
