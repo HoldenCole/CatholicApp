@@ -5109,7 +5109,7 @@
     "type": "collect",
     "label": "Oratio",
     "lat": "Deus omípotens, cujus sérvitus summa et plena est felícitas: * concéde nobis, intercedénte beáto Hugóne, Abbáte, § in sanctitáte et justítia sine timóre tibi servíre.",
-    "eng": "Deus omípotens, cujus sérvitus summa et plena est felícitas: * concéde nobis, intercedénte beáto Hugóne, Abbáte, § in sanctitáte et justítia sine timóre tibi servíre."
+    "eng": "Almighty God, whose service is the highest and fullest happiness: grant us, through the intercession of blessed Hugh the Abbot, to serve Thee without fear in holiness and justice."
    }
   },
   "psalmi": {}
@@ -5668,7 +5668,7 @@
     "type": "antiphon",
     "label": "Antiphon",
     "lat": "Joseph, fili David, * noli timere accípere Mariam conjugem tuam; quod enim in ea natum est, de Spíritu Sancto est, allelúja.",
-    "eng": "Joseph fili David * noli timere accipere Mariam conjugem tuam: quod enim in ea natum est, de Spiritu sancto est, alleluia."
+    "eng": "Do not be afraid, Joseph, son of David, to take to you Mary your wife, for that which is begotten in her is of the Holy Spirit. (Alleluia.)"
    },
    "Ant 3": {
     "type": "antiphon",
@@ -5795,7 +5795,9 @@
     "type": "vr",
     "label": "Versicle",
     "lat": "℣. Dedísti mihi protectiónem salútis tuæ, allelúja.",
-    "latR": "℟. Et déxtera tua suscépit me, allelúja."
+    "latR": "℟. Et déxtera tua suscépit me, allelúja.",
+    "eng": "℣. Thou hast given me the shield of thy salvation, alleluia.",
+    "engR": "℟. And thy right hand hath holden me up, alleluia."
    },
    "Versum 3": {
     "type": "vr",
@@ -6984,23 +6986,23 @@
    "Ant Laudes": [
     {
      "ant": "Helena Constantini mater Jerusalem petiit, alleluja.",
-     "antEng": "Helena Constantini mater Jerusalem petiit, alleluja."
+     "antEng": "Helena, the mother of Constantine, went to Jerusalem, alleluia."
     },
     {
      "ant": "Tunc praecepit eos omnes igne cremari at illi timentes tradiderunt Judam, alleluja.",
-     "antEng": "Tunc praecepit eos omnes igne cremari at illi timentes tradiderunt Judam, alleluja."
+     "antEng": "Then she commanded them all to be burned with fire; but they, being afraid, delivered up Judas, alleluia."
     },
     {
      "ant": "Mors et vita apposita sunt tibi si non ostendas mihi crucem Christi, alleluja.",
-     "antEng": "Mors et vita apposita sunt tibi si non ostendas mihi crucem Christi, alleluja."
+     "antEng": "Death and life are set before thee: unless thou show me the Cross of Christ, alleluia."
     },
     {
      "ant": "Cumque ascendisset Judas de lacu perrexit ad locum ubi jacebat sancta crux, alleluja.",
-     "antEng": "Cumque ascendisset Judas de lacu perrexit ad locum ubi jacebat sancta crux, alleluja."
+     "antEng": "And when Judas had come up out of the pit, he went to the place where the holy Cross lay, alleluia."
     },
     {
      "ant": "Orabat Judas deus deus meus ostende mihi lignum sanctae crucis, alleluja.",
-     "antEng": "Orabat Judas deus deus meus ostende mihi lignum sanctae crucis, alleluja."
+     "antEng": "Judas prayed: O God, my God, show me the wood of the holy Cross, alleluia."
     }
    ],
    "Ant Matutinum": [
@@ -7065,23 +7067,23 @@
    "Ant Vespera": [
     {
      "ant": "Helena Constantini mater Jerusalem petiit, alleluja.",
-     "antEng": "Helena Constantini mater Jerusalem petiit, alleluja."
+     "antEng": "Helena, the mother of Constantine, went to Jerusalem, alleluia."
     },
     {
      "ant": "Tunc praecepit eos omnes igne cremari at illi timentes tradiderunt Judam, alleluja.",
-     "antEng": "Tunc praecepit eos omnes igne cremari at illi timentes tradiderunt Judam, alleluja."
+     "antEng": "Then she commanded them all to be burned with fire; but they, being afraid, delivered up Judas, alleluia."
     },
     {
      "ant": "Mors et vita apposita sunt tibi si non ostendas mihi crucem Christi, alleluja.",
-     "antEng": "Mors et vita apposita sunt tibi si non ostendas mihi crucem Christi, alleluja."
+     "antEng": "Death and life are set before thee: unless thou show me the Cross of Christ, alleluia."
     },
     {
      "ant": "Cumque ascendisset Judas de lacu perrexit ad locum ubi jacebat sancta crux, alleluja.",
-     "antEng": "Cumque ascendisset Judas de lacu perrexit ad locum ubi jacebat sancta crux, alleluja."
+     "antEng": "And when Judas had come up out of the pit, he went to the place where the holy Cross lay, alleluia."
     },
     {
      "ant": "Orabat Judas deus deus meus ostende mihi lignum sanctae crucis, alleluja.",
-     "antEng": "Orabat Judas deus deus meus ostende mihi lignum sanctae crucis, alleluja."
+     "antEng": "Judas prayed: O God, my God, show me the wood of the holy Cross, alleluia."
     }
    ]
   }
@@ -8608,7 +8610,7 @@
     "type": "collect",
     "label": "Oratio",
     "lat": "Deus, qui ob invictum beati Joannis sacramentale silentium, nova Ecclesiam tuam martyrii corona decorasti: da nobis, ejus intercessione et exemplo, linguam caute custodire; ac omnia potius mala, quam animæ detrimentum, in hoc sæculo tolerare.",
-    "eng": "Deus, qui ob invictum beati Joannis sacramentale silentium, nova Ecclesiam tuam martyrii corona decorasti: da nobis, ejus intercessione et exemplo, linguam caute custodire; ac omnia potius mala, quam animæ detrimentum, in hoc sæculo tolerare."
+    "eng": "O God, Who didst adorn Thy Church with a new crown of martyrdom for the unconquered sacramental silence of blessed John: grant us, by his intercession and example, to keep careful guard over our tongue, and to endure every evil in this world rather than harm to the soul."
    },
    "Rule": {
     "type": "rubric",
@@ -8768,7 +8770,7 @@
     "type": "collect",
     "label": "Oratio",
     "lat": "Deus, qui sanctæ Ritæ tantam grátiam conférre dignátus es, ut inimícos dilígeret et in corde ac fronte caritátis et passiónis tuæ signa portáret: da nobis, quǽsumus, ejus intercessióne et méritis; inimícis nostris sic párcere et passiónis tuæ dolóres contemplári, ut promíssa mítibus ac lugéntibus prǽmia consequámur:",
-    "eng": "Deus, qui sanctæ Ritæ tantam grátiam conférre dignátus es, ut inimícos dilígeret et in corde ac fronte caritátis et passiónis tuæ signa portáret: da nobis, quǽsumus, ejus intercessióne et méritis; inimícis nostris sic párcere et passiónis tuæ dolóres contemplári, ut promíssa mítibus ac lugéntibus prǽmia consequámur:"
+    "eng": "O God, who didst vouchsafe to bestow on Saint Rita such grace that she loved her enemies and bore in her heart and on her brow the signs of Thy charity and Passion: grant us, we beseech Thee, by her intercession and merits, so to spare our enemies and to contemplate the sorrows of Thy Passion, that we may obtain the rewards promised to the meek and to them that mourn:"
    },
    "Rule": {
     "type": "rubric",
@@ -14177,7 +14179,7 @@
     "type": "antiphon",
     "label": "Antiphon",
     "lat": "Sancta María, succurre míseris, juva pusillánimes, réfove flébiles, ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu: séntiant omnes tuum juvámen, quicúmque célebrant tuam  solémnem Commemoratiónem.",
-    "eng": "Sancta María, succurre míseris, juva pusillánimes, réfove flébiles, ora pro pópulo, intérveni pro clero, intercéde pro devóto femíneo sexu: séntiant omnes tuum juvámen, quicúmque célebrant tuam  solémnem Commemoratiónem."
+    "eng": "Holy Mary, succour the miserable, help the faint-hearted, comfort the sorrowful, pray for the people, plead for the clergy, intercede for all devout women: may all feel thy help who keep thy solemn Commemoration."
    },
    "Ant 2": {
     "type": "antiphon",
@@ -15442,7 +15444,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui te revélas párvulis,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui te revélas párvulis,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "Jesu, to thee our praise we pay,\nTo little ones revealed today,\nWith Father and Blest Spirit One\nUntil the ages' course is done.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -18823,7 +18826,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "Lord Jesu, slain for us, to thee\nEternal praise be given,\nWith Father, Spirit, One and Three,\nHere as it is in heaven.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -19627,7 +19631,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "Lord Jesu, slain for us, to thee\nEternal praise be given,\nWith Father, Spirit, One and Three,\nHere as it is in heaven.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -21924,7 +21929,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui sceptra mundi témperas,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui sceptra mundi témperas,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "All glory be, Jesu, to thee,\nThy scepter over all that be;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -22222,7 +22228,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui sceptra mundi témperas,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui sceptra mundi témperas,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "All glory be, Jesu, to thee,\nThy scepter over all that be;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -28653,7 +28660,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "Lord Jesu, slain for us, to thee\nEternal praise be given,\nWith Father, Spirit, One and Three,\nHere as it is in heaven.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -31125,7 +31133,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tuis obédiens\nQui factus es paréntibus,\nCum Patre summo ac Spíritu\nSemper tibi sit glória.\nAmen."
+    "lat": "Jesu, tuis obédiens\nQui factus es paréntibus,\nCum Patre summo ac Spíritu\nSemper tibi sit glória.\nAmen.",
+    "eng": "All praise to Thee, O Jesus,\nwho parents dost obey;\nPraise to the sovereign Father\nand Paraclete for aye.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -31559,7 +31568,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tuis obédiens\nQui factus es paréntibus,\nCum Patre summo ac Spíritu\nSemper tibi sit glória.\nAmen."
+    "lat": "Jesu, tuis obédiens\nQui factus es paréntibus,\nCum Patre summo ac Spíritu\nSemper tibi sit glória.\nAmen.",
+    "eng": "All praise to Thee, O Jesus,\nwho parents dost obey;\nPraise to the sovereign Father\nand Paraclete for aye.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -35703,7 +35713,7 @@
     "type": "antiphon",
     "label": "Antiphon",
     "lat": "Tristítia implévit * cor vestrum: et gáudium vestrum nemo tollet a vobis, allelúja, allelúja.",
-    "eng": "Tristítia implévit * cor vestrum: et gáudium vestrum nemo tollet a vobis, allelúja, allelúja."
+    "eng": "Sorrow hath filled * your heart: and your joy no man shall take from you, alleluia, alleluia."
    },
    "Ant 2": {
     "type": "antiphon",
@@ -39370,14 +39380,14 @@
     "label": "Hymn",
     "title": "En, ut supérba críminum",
     "lat": "En, ut supérba críminum\nEt sæva nostrórum cohors\nCor sauciávit ínnocens\nMeréntis haud tale Dei!\n\nVibrántis hastam mílitis\nPeccáta nostra dírigunt,\nFerrúmque diræ cúspidis\nMortále crimen ácuit.\n\nEx Corde scisso Ecclésia,\nChristo jugáta, náscitur:\nHoc óstium arcæ in látere est\nGenti ad salútem pósitum.\n\nEx hoc perénnis grátia,\nCeu septifórmis flúvius,\nStolas ut illic sórdidas\nLavémus Agni in sánguine.\n\nTurpe est redíre ad crímina,\nQuæ Cor beátum lácerent:\nSed æmulémur córdibus\nFlammas amóris índices.\n\nHoc Christe nobis, hoc Pater,\nHoc sancte dona Spiritus,\nQuibus potéstas, glória,\nRegnúmque in omne est sǽculum.\nAmen.",
-    "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nHoc Christe nobis, hoc Pater,\nHoc sancte dona Spiritus,\nQuibus potéstas, glória,\nRegnúmque in omne est sǽculum.\nAmen."
+    "eng": "Lo, how the savage crew\nOf our proud sins hath rent\nThe heart of our all-gracious God,\nThat heart so innocent.\n\nThe soldier's quivering lance\nOur guilt it was that drave,\nOur wicked deeds that to its point\nSuch cruel sharpness gave.\n\nO wounded heart, whence sprang\nThe Church, the Saviour's bride;\nThou door of our salvation's ark\nSet in its mystic side.\n\nThou holy fount, whence flows\nThe sacred sevenfold flood,\nWhere we our filthy robes may cleanse\nIn the Lamb's saving blood:\n\nBy sorrowful relapse,\nthee will we rend no more;\nBut like the flames, those types of love,\nStrive heavenward to soar.\n\nThis grant us, Christ, this grant us, Father,\nThis grant us, Holy Spirit,\nTo whom all worship shall be done,\nIn every time and place.\nAmen."
    },
    "Hymnus Vespera": {
     "type": "hymn",
     "label": "Hymn",
     "title": "Auctor beáte sǽculi",
     "lat": "Auctor beáte sǽculi,\nChriste, Redémptor ómnium,\nLumen Patris de lúmine,\nDeúsque verus de Deo.\n\nAmor coégit te tuus\nMortále corpus súmere,\nUt novus Adam rédderes,\nQuod vetus ille abstúlerat.\n\nIll[e] amor, almus ártifex\nTerræ marísqu[e], et síderum,\nErráta patrum míserans,\nEt nostra rumpens víncula.\n\nNon Corde discédat tuo\nVis ill[a] amóris íncliti:\nHoc fonte gentes háuriant\nRemissiónis grátiam.\n\nPercúss[um] ad hoc est láncea,\nPassúmqu[e] ad hoc est vúlnera:\nUt nos laváret sórdibus,\nUnda fluént[e], et sánguine.\n\nDecus Parénti, et Fílio,\nSanctóque sit Spirítui,\nQuibus potéstas, glória,\nRegnúmque in omne est sǽculum.\nAmen.",
-    "eng": "O Christ, the world's Creator bright,\nWho didst mankind from sin redeem,\nLight from the Father's glorious light,\nTrue God of God, in bliss supreme.\n\nThy love compelled thee to assume\nA mortal body, man to save;\nReversing the old Adam's doom;\nOur ransom the new Adam gave.\n\nThat love which gloriously framed all\nThe earth, the stars, and wondrous sea\nTook pity on our parents' fall,\nBroke all our bonds and set us free.\n\nO Saviour, let thy potent love\nFlow ever from thy bounteous heart;\nTo nations that pure fount above\nThe grace of pardon will impart.\n\nHis heart for this was opened wide,\nAnd wounded by the soldier's spear,\nThat freely from his sacred side\nMight flow the streams our souls to clear.\n\nDecus Parénti, et Fílio,\nSanctóque sit Spirítui,\nQuibus potéstas, glória,\nRegnúmque in omne est sǽculum.\nAmen."
+    "eng": "O Christ, the world's Creator bright,\nWho didst mankind from sin redeem,\nLight from the Father's glorious light,\nTrue God of God, in bliss supreme.\n\nThy love compelled thee to assume\nA mortal body, man to save;\nReversing the old Adam's doom;\nOur ransom the new Adam gave.\n\nThat love which gloriously framed all\nThe earth, the stars, and wondrous sea\nTook pity on our parents' fall,\nBroke all our bonds and set us free.\n\nO Saviour, let thy potent love\nFlow ever from thy bounteous heart;\nTo nations that pure fount above\nThe grace of pardon will impart.\n\nHis heart for this was opened wide,\nAnd wounded by the soldier's spear,\nThat freely from his sacred side\nMight flow the streams our souls to clear.\n\nGrant it, O Father, only Son,\nAnd Spirit, God of grace,\nTo whom all worship shall be done,\nIn every time and place.\nAmen."
    },
    "Invit": {
     "type": "antiphon",
@@ -39683,7 +39693,7 @@
     "label": "Capitulum",
     "lat": "Sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret: cui resístite fortes in fide, sciéntes eámdem passiónem ei, quæ in mundo est, vestræ fraternitáti fíeri.",
     "ref": "1 Pet 5:8-9",
-    "eng": "Sóbrii estóte, et vigiláte: quia adversárius vester diábolus tamquam leo rúgiens círcuit, quærens quem dévoret: cui resístite fortes in fide, sciéntes eámdem passiónem ei, quæ in mundo est, vestræ fraternitáti fíeri."
+    "eng": "Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour: whom resist ye, strong in faith, knowing that the same affliction befalls your brethren who are in the world."
    },
    "Commemoratio": {
     "type": "commemoration",
@@ -43833,7 +43843,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui passus es pro sérvulis,\nCum Patre et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "Lord Jesu, slain for us, to thee\nEternal praise be given,\nWith Father, Spirit, One and Three,\nHere as it is in heaven.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",
@@ -46439,7 +46450,8 @@
    },
    "Doxology": {
     "type": "rubric",
-    "lat": "Jesu, tibi sit glória,\nQui sceptra mundi témperas,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen."
+    "lat": "Jesu, tibi sit glória,\nQui sceptra mundi témperas,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.",
+    "eng": "All glory be, Jesu, to thee,\nThy scepter over all that be;\nAll glory, as is ever meet,\nTo Father and to Paraclete.\nAmen."
    },
    "Hymnus Laudes": {
     "type": "hymn",

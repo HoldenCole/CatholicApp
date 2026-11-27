@@ -73,6 +73,7 @@ def tidy(t):
     t = re.sub(r"\{:[^}]*:\}", "", t)
     # DO's French often leaves the alleluia in its Latin spelling
     t = re.sub(r"\b([Aa])llel[uú][ij]a\b", lambda m: m.group(1) + "lléluia", t)
+    t = re.sub(r"(?<!\.)\.\.$", ".", t.rstrip())     # DO's doubled full stop
     return re.sub(r"[ \t]{2,}", " ", t).strip()
 
 
@@ -230,6 +231,20 @@ HAND = {fold(k): v for k, v in {
         "!La Séquence se dit jusqu’au Samedi in Albis inclusivement.",
     "In Vigilia Paschali antiphona ad Offertorium non dicitur.":
         "À la Vigile pascale, on ne dit pas d’antienne à l’Offertoire.",
+    # fix_mass_prayers.PROPER (St Rita's from DO's French Office)
+    "Deus, qui sanctæ Ritæ tantam grátiam conférre dignátus es, ut inimícos dilígeret et in corde ac fronte caritátis et passiónis tuæ signa portáret: da nobis, quǽsumus, ejus intercessióne et méritis; inimícis nostris sic párcere et passiónis tuæ dolóres contemplári, ut promíssa mítibus ac lugéntibus prǽmia consequámur:":
+        "Dieu, qui avez daigné accorder à sainte Rita une telle grâce qu’elle a aimé ses ennemis et porté dans son cœur et sur son front les signes de votre charité et de votre passion : accordez-nous, nous vous en prions, par son intercession et ses mérites, de pardonner ainsi à nos ennemis et de contempler les douleurs de votre Passion, afin que nous obtenions les récompenses promises aux doux et à ceux qui pleurent :",
+    "Súscipe, Dómine, múnera, quæ in ejus tibi sollemnitáte deférimus: cujus nos confídimus patrocínio liberári.":
+        "Recevez, Seigneur, les offrandes que nous vous présentons en la solennité de celui par le patronage duquel nous espérons être exempts de tout péril.",
+    "Múnera tibi, Dómine, dicáta sanctífica: et, intercedénte beáto Joánne Apóstolo tuo, per éadem nos placátus inténde.":
+        "Sanctifiez, Seigneur, les dons qui vous sont consacrés et, par l’intercession du bienheureux Jean, votre Apôtre, regardez-nous favorablement à cause d’eux.",
+    # lines the import's nearest match gave another verse's French
+    "V. Qui ad justítiam erúdiunt multos quasi stellæ in perpétuas æternitátes. Allelúja.":
+        "V. Ceux qui en auront instruit plusieurs dans la justice luiront comme des étoiles dans des éternités sans fin. Alléluia.",
+    "V. Amávit eum Dóminus et ornávit eum: stolam glóriæ índuit eum. Allelúja.":
+        "V. Le Seigneur l’a aimé et l’a orné. Il l’a revêtu d’une robe de gloire. Alléluia.",
+    "Hóstias, quǽsumus, Dómine, placátus assúme: quas et pro renatórum expiatióne peccáti deférimus, et pro acceleratióne cœléstis auxílii.":
+        "Daignez, Seigneur, accueillir favorablement ce sacrifice que nous vous offrons pour expier les péchés de ceux qui viennent de naître à une vie nouvelle, et pour hâter les secours du ciel.",
 }.items()}
 
 

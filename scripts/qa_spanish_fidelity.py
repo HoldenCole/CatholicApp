@@ -47,45 +47,6 @@ R = ROOT / "Introibo" / "Resources"
 
 # Known-intentional flags: (check, file, key-prefix)
 ALLOWLIST = [
-    # Readings whose Latin was corrected (scripts/fix_mass_parts.py) to a
-    # pericope no other Mass has in Spanish: the Torres Amat text could not
-    # be fetched from this environment, so the English stands until it is
-    # (README: "The saints' Mass parts after the Latin correction").
-    ("MISSING", "missal_sanctoral", "01-15cc.lectio"),
-    ("MISSING", "missal_sanctoral", "01-15cc.evangelium"),
-    ("MISSING", "missal_sanctoral", "01-17.lectio"),
-    ("MISSING", "missal_sanctoral", "01-24.evangelium"),
-    ("MISSING", "missal_sanctoral", "02-07.lectio"),
-    ("MISSING", "missal_sanctoral", "02-07.evangelium"),
-    ("MISSING", "missal_sanctoral", "02-12.evangelium"),
-    ("MISSING", "missal_sanctoral", "02-18.lectio"),
-    ("MISSING", "missal_sanctoral", "02-18.evangelium"),
-    ("MISSING", "missal_sanctoral", "03-18.lectio"),
-    ("MISSING", "missal_sanctoral", "03-19.lectio"),
-    ("MISSING", "missal_sanctoral", "03-19t.lectio"),
-    ("MISSING", "missal_sanctoral", "03-21.lectio"),
-    ("MISSING", "missal_sanctoral", "03-21.evangelium"),
-    ("MISSING", "missal_sanctoral", "04-13.evangelium"),
-    ("MISSING", "missal_sanctoral", "05-04.lectio"),
-    ("MISSING", "missal_sanctoral", "05-09.lectio"),
-    ("MISSING", "missal_sanctoral", "05-20.evangelium"),
-    ("MISSING", "missal_sanctoral", "06-25.lectio"),
-    ("MISSING", "missal_sanctoral", "06-25.evangelium"),
-    ("MISSING", "missal_sanctoral", "07-04oct.evangelium"),
-    ("MISSING", "missal_sanctoral", "07-17.evangelium"),
-    ("MISSING", "missal_sanctoral", "08-20.lectio"),
-    ("MISSING", "missal_sanctoral", "09-09n.lectio"),
-    ("MISSING", "missal_sanctoral", "09-09n.evangelium"),
-    ("MISSING", "missal_sanctoral", "10-08.lectio"),
-    ("MISSING", "missal_sanctoral", "10-10.lectio"),
-    ("MISSING", "missal_sanctoral", "10-10.evangelium"),
-    ("MISSING", "missal_sanctoral", "10-21.lectio"),
-    ("MISSING", "missal_sanctoral", "10-21.evangelium"),
-    ("MISSING", "missal_sanctoral", "11-26.lectio"),
-    ("MISSING", "missal_sanctoral", "11-26.evangelium"),
-    ("MISSING", "missal_sanctoral", "12-05.lectio"),
-    ("MISSING", "missal_sanctoral", "12-05.evangelium"),
-    ("MISSING", "missal_tempora", "epi5-0.lectio"),
     # Holy Saturday's collect: no sourced Spanish (Divinum Officium's own
     # Spanish tree leaves it in Latin); the English stands until one is.
     ("MISSING", "temporal", "quad6-6r.oratio_3"),

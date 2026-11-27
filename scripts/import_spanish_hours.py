@@ -68,6 +68,7 @@ def clean_line(l):
     l = re.sub(r"\{:[^}]*:\}", " ", l)        # {:H-...:} anchor tags
     l = re.sub(r";;.*$", "", l)               # trailing ";;N" metadata
     l = MARKER.sub("", l.strip())
+    l = re.sub(r"^=\s+", "", l)               # DO Espanol's "= " before an antiphon
     l = re.sub(r"^\d+\s+", "", l)             # leading verse numbers
     l = l.replace("+++", "").replace("++", "").replace("+", "")
     l = re.sub(r"[$&]\S+.*$", "", l)          # macro invocations

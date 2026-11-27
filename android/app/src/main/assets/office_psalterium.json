@@ -66,8 +66,8 @@
    "label": "Versicle",
    "lat": "℣. Emítte Agnum, Dómine, dominatórem terræ.",
    "latR": "℟. De Petra desérti ad montem fília Sion.",
-   "eng": "℣. Emítte Agnum, Dómine, dominatórem terræ.",
-   "engR": "℟. De Petra desérti ad montem fília Sion."
+   "eng": "℣. Send forth, O Lord, the Lamb, the ruler of the earth.",
+   "engR": "℟. From Petra of the desert to the mount of the daughter of Sion."
   },
   "Adv Versum 2": {
    "type": "vr",
@@ -97,8 +97,8 @@
    "label": "Versicle",
    "lat": "℣. Ascéndo ad Patrem meum et Patrem vestrum, allelúja.",
    "latR": "℟. Deum meum et Deum vestrum, allelúja.",
-   "eng": "℣. Ascéndo ad Patrem meum et Patrem vestrum, allelúja.",
-   "engR": "℟. Deum meum et Deum vestrum, allelúja."
+   "eng": "℣. I ascend to my Father and to your Father, alleluia.",
+   "engR": "℟. To my God and your God, alleluia."
   },
   "Dominica Ant 2": {
    "type": "antiphon",
@@ -124,8 +124,8 @@
    "label": "Versicle",
    "lat": "℣. Excélsus super omnes gentes Dóminus.",
    "latR": "℟. Et super calos glória ejus.",
-   "eng": "℣. Excélsus super omnes gentes Dóminus.",
-   "engR": "℟. Et super calos glória ejus."
+   "eng": "℣. The Lord is high above all nations.",
+   "engR": "℟. And His glory above the heavens."
   },
   "Dominica Versum 2": {
    "type": "vr",
@@ -174,8 +174,8 @@
    "label": "Versicle",
    "lat": "℣. Fiat misericórdia tua, Dómine, super nos.",
    "latR": "℟. Quemádmodum sperávimus in te.",
-   "eng": "℣. Fiat misericórdia tua, Dómine, super nos.",
-   "engR": "℟. Quemádmodum sperávimus in te."
+   "eng": "℣. Let Thy mercy, O Lord, be upon us.",
+   "engR": "℟. As we have hoped in Thee."
   },
   "Feria Versum 2": {
    "type": "vr",
@@ -234,13 +234,13 @@
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Salútem * ex inimícis nostris, et de manu ómnium, qui nos odérunt, líbera nos, Dómine.",
-   "eng": "Salútem * ex inimícis nostris, et de manu ómnium, qui nos odérunt, líbera nos, Dómine."
+   "eng": "Salvation * from our enemies, and from the hand of all that hate us: deliver us, O Lord."
   },
   "Feria3C Ant 3": {
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Respexísti * humilitátem meam Dómine Deus meus.",
-   "eng": "Respexísti * humilitátem meam Dómine Deus meus."
+   "eng": "Thou hast regarded * my lowliness, O Lord my God."
   },
   "Feria4 Ant 2": {
    "type": "antiphon",
@@ -258,7 +258,7 @@
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Quia fecit * mihi Dóminus magna qui potens est, et sanctum nomen ejus.",
-   "eng": "Quia fecit * mihi Dóminus magna qui potens est, et sanctum nomen ejus."
+   "eng": "He that is mighty, even the Lord, hath done to me great things; and Holy is His Name."
   },
   "Feria5 Ant 2": {
    "type": "antiphon",
@@ -276,7 +276,7 @@
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Ad dandam sciéntiam * plebi tuæ, Dómine, in remissiónem peccatórum eórum.",
-   "eng": "Ad dandam sciéntiam * plebi tuæ, Dómine, in remissiónem peccatórum eórum."
+   "eng": "To give knowledge * of salvation to Thy people, O Lord, unto the remission of their sins."
   },
   "Feria6 Ant 2": {
    "type": "antiphon",
@@ -312,7 +312,7 @@
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "In viam pacis * dírige nos Dómine.",
-   "eng": "In viam pacis * dírige nos Dómine."
+   "eng": "Into the way of peace * direct us, O Lord."
   },
   "Hymnus Adv Laudes": {
    "type": "hymn",
@@ -480,8 +480,8 @@
    "label": "Versicle",
    "lat": "℣. Puer natus est nobis.",
    "latR": "℟. Et fílius datus est nobis.",
-   "eng": "℣. Puer natus est nobis.",
-   "engR": "℟. Et fílius datus est nobis."
+   "eng": "℣. A Child is born to us.",
+   "engR": "℟. And a Son is given to us."
   },
   "Pasch Laudes": {
    "type": "capitulum",
@@ -526,8 +526,8 @@
    "label": "Versicle",
    "lat": "℣. Emítte Spíritum tuum, et creabúntur, allelúja.",
    "latR": "℟. Et renovábis fáciem terræ, allelúja.",
-   "eng": "℣. Emítte Spíritum tuum, et creabúntur, allelúja.",
-   "engR": "℟. Et renovábis fáciem terræ, allelúja."
+   "eng": "℣. Send forth Thy Spirit, and they shall be created, alleluia.",
+   "engR": "℟. And Thou shalt renew the face of the earth, alleluia."
   },
   "Preces feriales Laudes": {
    "type": "script",
@@ -553,8 +553,8 @@
    "label": "Versicle",
    "lat": "℣. In mánibus portábunt te.",
    "latR": "℟. Ne forte offéndas ad lápidem pedem tuum.",
-   "eng": "℣. In mánibus portábunt te.",
-   "engR": "℟. Ne forte offéndas ad lápidem pedem tuum."
+   "eng": "℣. In their hands they shall bear thee up.",
+   "engR": "℟. Lest thou dash thy foot against a stone."
   },
   "Quad Versum 2": {
    "type": "vr",
@@ -591,8 +591,8 @@
    "label": "Versicle",
    "lat": "℣. Inténde ánimæ meæ, et líbera eam.",
    "latR": "℟. Propter inimícos meos éripe me.",
-   "eng": "℣. Inténde ánimæ meæ, et líbera eam.",
-   "engR": "℟. Propter inimícos meos éripe me."
+   "eng": "℣. Attend to my soul, and deliver it.",
+   "engR": "℟. Save me because of my enemies."
   },
   "Quad5 Versum 2": {
    "type": "vr",
@@ -622,8 +622,8 @@
    "label": "Versicle",
    "lat": "℣. Excélsus super omnes gentes Dóminus.",
    "latR": "℟. Et super celos glória ejus.",
-   "eng": "℣. Excélsus super omnes gentes Dóminus.",
-   "engR": "℟. Et super celos glória ejus."
+   "eng": "℣. The Lord is high above all nations.",
+   "engR": "℟. And His glory above the heavens."
   },
   "Suffragium BMV": {
    "type": "script",
@@ -641,7 +641,7 @@
    "type": "script",
    "label": "Suffragium BMV AntL",
    "lat": "!De Beata Maria\nAnt. Sancta Dei Génitrix, Virgo semper María, intercéde pro nobis ad Dóminum Deum nostrum. (Allelúja, allelúja.)",
-   "eng": "!Commemoration of the Blessed Virgin Mary. \nAnt. Sancta Dei Génitrix, Virgo semper María, intercéde pro nobis ad Dóminum Deum nostrum. (Allelúja, allelúja.)"
+   "eng": "!Commemoration of the Blessed Virgin Mary. \nAnt. Holy Mother of God, Mary ever Virgin, intercede for us with the Lord our God. (Alleluia, alleluia.)"
   },
   "Suffragium ConclusioBMV": {
    "type": "script",
@@ -689,13 +689,13 @@
    "type": "script",
    "label": "Suffragium DeSSPN",
    "lat": "!De SS. Benedicto, Bernardo et Roberto\nAnt. Córpora Sanctórum in pace sepúlta sunt, et vivent nómina eórum in ætérnum. (Allelúja, allelúja.)\n_\nV. Beáti quos elegísti, Dómine. (Allelúja.)\nR. Habitábunt in átriis tuis. (Allelúja.)\n_\n$Oremus  \nv. Præsta, quǽsumus, omnípotens Deus: * ut qui sanctórum tuórum Benedícti, Bernárdi et Robérti commemoratiónem cólimus, † eórum étiam virtútes imitémur.",
-   "eng": "!De SS. Benedicto, Bernardo et Roberto\nAnt. Córpora Sanctórum in pace sepúlta sunt, et vivent nómina eórum in ætérnum. (Allelúja, allelúja.)\n_\nV. Beáti quos elegísti, Dómine. (Allelúja.)\nR. Habitábunt in átriis tuis. (Allelúja.)\n_\n$Oremus  \nv. Præsta, quǽsumus, omnípotens Deus: * ut qui sanctórum tuórum Benedícti, Bernárdi et Robérti commemoratiónem cólimus, † eórum étiam virtútes imitémur."
+   "eng": "!De SS. Benedicto, Bernardo et Roberto\nAnt. The bodies of the Saints are buried in peace, and their names shall live for evermore. (Alleluia, alleluia.)\n_\nV. Blessed are they whom Thou hast chosen, O Lord. (Alleluia.)\nR. They shall dwell in Thy courts. (Alleluia.)\n_\n$Oremus  \nGrant, we beseech Thee, almighty God, that we who keep the commemoration of Thy Saints Benedict, Bernard and Robert may also imitate their virtues."
   },
   "Suffragium DeSSPNV": {
    "type": "script",
    "label": "Suffragium DeSSPNV",
    "lat": "!De SS. Benedicto, Bernardo et Roberto\nAnt. Sancti per fidem vicérunt regna, operáti sunt justítiam, adépti sunt, repromissiónes. (Allelúja, allelúja.)\n_\nV. Beáti quos elegísti, Dómine. (Allelúja.)\nR. Habitábunt in átriis tuis. (Allelúja.)\n_\n$Oremus  \nv. Præsta, quǽsumus, omnípotens Deus: * ut qui sanctórum tuórum Benedícti, Bernárdi et Robérti commemoratiónem cólimus, † eórum étiam virtútes imitémur.",
-   "eng": "!De SS. Benedicto, Bernardo et Roberto\nAnt. Sancti per fidem vicérunt regna, operáti sunt justítiam, adépti sunt, repromissiónes. (Allelúja, allelúja.)\n_\nV. Beáti quos elegísti, Dómine. (Allelúja.)\nR. Habitábunt in átriis tuis. (Allelúja.)\n_\n$Oremus  \nv. Præsta, quǽsumus, omnípotens Deus: * ut qui sanctórum tuórum Benedícti, Bernárdi et Robérti commemoratiónem cólimus, † eórum étiam virtútes imitémur."
+   "eng": "!De SS. Benedicto, Bernardo et Roberto\nAnt. The Saints by faith conquered kingdoms, wrought justice, obtained promises. (Alleluia, alleluia.)\n_\nV. Blessed are they whom Thou hast chosen, O Lord. (Alleluia.)\nR. They shall dwell in Thy courts. (Alleluia.)\n_\n$Oremus  \nGrant, we beseech Thee, almighty God, that we who keep the commemoration of Thy Saints Benedict, Bernard and Robert may also imitate their virtues."
   },
   "Suffragium Divino": {
    "type": "script",
@@ -725,7 +725,7 @@
    "type": "script",
    "label": "Suffragium PaschaleV",
    "lat": "Ant. Crucem sanctam súbiit, qui inférnum confrégit; accínctus est poténtia, surréxit die tértia, allelúja.\n_\nV. Dícite in natiónibus, allelúja.\nR. Quia Dóminus regnávit a ligno, allelúja.\n_\n$Oremus\nv. Deus qui pro nobis Fílium tuum Crucis patíbulum subíre voluísti, ut inimíci a nobis expélleres potestátem: concéde nobis fámulis tuis; ut resurrectiónis grátiam consequámur.\n$Per eumdem",
-   "eng": "Ant. Crucem sanctam súbiit, qui inférnum confrégit; accínctus est poténtia, surréxit die tértia, allelúja.\n_\nV. Say among the heathen, Alleluia \nR. That the Lord reigneth from the tree, Alleluia\n_\n$Oremus\nv. O God, who didst send thy Son to suffer death for us upon the Cross, that thou mightest deliver us from the power of the enemy grant unto us thy servants to be made partakers of his Resurrection. \n$Per eumdem"
+   "eng": "Ant. Jesus, our triumphant Head,   on the cross' Transom dread, the hands of power and mercy spread, that broke the prison of the dead. Alleluia.\n_\nV. Say among the heathen, Alleluia \nR. That the Lord reigneth from the tree, Alleluia\n_\n$Oremus\nv. O God, who didst send thy Son to suffer death for us upon the Cross, that thou mightest deliver us from the power of the enemy grant unto us thy servants to be made partakers of his Resurrection. \n$Per eumdem"
   },
   "Versum et Oratio BMV": {
    "type": "vr",
@@ -766,37 +766,37 @@
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Allelúja. Ascéndens Christus in altum, allelúja, captívam duxit captivitátem, allelúja, allelúja.",
-   "eng": "Allelúja. Ascéndens Christus in altum, allelúja, captívam duxit captivitátem, allelúja, allelúja."
+   "eng": "Alleluia. Christ ascending on high, alleluia, led captivity captive, alleluia, alleluia."
   },
   "Ant 4 Pasch": {
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Allelúja. Resurréxit Dóminus, allelúja: sicut dixit vobis, allelúja, allelúja.",
-   "eng": "Allelúja. Resurréxit Dóminus, allelúja: sicut dixit vobis, allelúja, allelúja."
+   "eng": "Alleluia. The Lord is risen, alleluia: as He said unto you, alleluia, alleluia."
   },
   "Ant 4 Pent": {
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Allelúja. Spíritus Paráclitus, allelúja, docébit vos ómnia, allelúja, allelúja.",
-   "eng": "Allelúja. Spíritus Paráclitus, allelúja, docébit vos ómnia, allelúja, allelúja."
+   "eng": "Alleluia. The Spirit, the Paraclete, alleluia, will teach you all things, alleluia, alleluia."
   },
   "Ant 4 Quad": {
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Evígila super nos, * ætérne Salvátor, ne nos apprehéndat cállidus tentátor, quia tu nobis factus es sempitérnus adjútor.",
-   "eng": "Evígila super nos, * ætérne Salvátor, ne nos apprehéndat cállidus tentátor, quia tu nobis factus es sempitérnus adjútor."
+   "eng": "Watch over us, * eternal Saviour, lest the crafty tempter seize upon us, for Thou hast been made our everlasting helper."
   },
   "Ant 4 Quad3": {
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "Média vita in morte sumus: quem quǽrimus adjutórem, nisi te, Dómine, qui pro peccátis nostris juste irásceris? * Sancte Deus, Sancte fortis, Sancte et miséricors Salvátor, amáræ morti ne tradas nos.",
-   "eng": "Média vita in morte sumus: quem quǽrimus adjutórem, nisi te, Dómine, qui pro peccátis nostris juste irásceris? * Sancte Deus, Sancte fortis, Sancte et miséricors Salvátor, amáræ morti ne tradas nos."
+   "eng": "In the midst of life we are in death: whom do we seek for a helper but Thee, O Lord, who for our sins art justly angered? * Holy God, holy mighty One, holy and merciful Saviour, deliver us not to bitter death."
   },
   "Ant 4 Quad5": {
    "type": "antiphon",
    "label": "Antiphon",
    "lat": "O Rex glorióse inter Sanctos tuos, qui semper es laudábilis et tamen ineffábilis: tu in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos Deus noster: ut in die judícii nos collocáre dignéris inter Sanctos et Eléctos tuos, Rex benedícte.",
-   "eng": "O Rex glorióse inter Sanctos tuos, qui semper es laudábilis et tamen ineffábilis: tu in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos Deus noster: ut in die judícii nos collocáre dignéris inter Sanctos et Eléctos tuos, Rex benedícte."
+   "eng": "O glorious King among Thy Saints, who art ever to be praised and yet art beyond all utterance: Thou, O Lord, art among us, and Thy holy name is called upon us: forsake us not, O our God, that in the day of judgement Thou mayest vouchsafe to place us among Thy Saints and Thine Elect, O blessed King."
   },
   "Completorium": {
    "type": "capitulum",
@@ -859,14 +859,14 @@
    "label": "Hymn",
    "title": "Christe, qui lux es et dies",
    "lat": "Christe, qui lux es et dies,\nNoctis tenébras détegis,\nLucísque lumen créderis,\nLumen beátum prǽdicans.\n\nPrecámur sancte Dómine,\ndefénde nos in hac nocte:\nSit nobis in te réquies,\nQuiétam noctem tríbue.\n\nNe gravis somnus írruat,\nNec hostis nos subrípiat,\nNec caro illi conséntiens\nNos tibi reos státuat.\n\nOculi somnum cápiant,\nCor ad te semper vígilet:\nDéxtera tua prótegat\nFámulos, qui te díligunt.\n\nDefénsor noster áspice,\nInsidiántes réprime,\nGubérna tuos fámulos,\nQuos Sánguine mercátus es.\n\nMeménto nostri, Dómine,\nIn gravi isto córpore:\nQui es defénsor ánimæ,\nAdésto nobis, Dómine.\n\nPræsta Pater omnípotens,\nPer Jesum Christum Dóminum,\nQui tecum in perpétuum\nRegnat cum Sancto Spíritu.\nAmen.",
-   "eng": "Christe, qui lux es et dies,\nNoctis tenébras détegis,\nLucísque lumen créderis,\nLumen beátum prǽdicans.\n\nPrecámur sancte Dómine,\ndefénde nos in hac nocte:\nSit nobis in te réquies,\nQuiétam noctem tríbue.\n\nNe gravis somnus írruat,\nNec hostis nos subrípiat,\nNec caro illi conséntiens\nNos tibi reos státuat.\n\nOculi somnum cápiant,\nCor ad te semper vígilet:\nDéxtera tua prótegat\nFámulos, qui te díligunt.\n\nDefénsor noster áspice,\nInsidiántes réprime,\nGubérna tuos fámulos,\nQuos Sánguine mercátus es.\n\nMeménto nostri, Dómine,\nIn gravi isto córpore:\nQui es defénsor ánimæ,\nAdésto nobis, Dómine.\n\nPræsta Pater omnípotens,\nPer Jesum Christum Dóminum,\nQui tecum in perpétuum\nRegnat cum Sancto Spíritu.\nAmen."
+   "eng": "O Christ, who art the light and day,\nThou drivest night and gloom away;\nO Light of light, whose word doth show\nThe light of heaven to us below.\n\nAll-holy Lord, we pray to Thee,\nDefend us in this night, and be\nOur rest in Thee, and grant\nA quiet night to us, Thy saints.\n\nLet no deep sleep come over us,\nNor the enemy steal upon us,\nNor the flesh, consenting to him,\nMake us guilty before Thee.\n\nLet our eyes take their sleep,\nOur heart keep watch for Thee always:\nMay Thy right hand protect\nThy servants who love Thee.\n\nLook on us, our Defender,\nHold back them that lie in wait,\nGuide Thy servants,\nWhom Thou hast bought with Thy Blood.\n\nRemember us, O Lord,\nIn this heavy body:\nThou who art the soul's defender,\nBe with us, O Lord.\n\nGrant this, almighty Father,\nThrough Jesus Christ our Lord,\nWho with Thee for evermore\nReigneth with the Holy Ghost.\nAmen."
   },
   "Hymnus Completorium Quad5": {
    "type": "hymn",
    "label": "Hymn",
    "title": "Christe, qui lux es et dies",
    "lat": "Christe, qui lux es et dies,\nNoctis tenébras détegis,\nLucísque lumen créderis,\nLumen beátum prǽdicans.\n\nPrecámur sancte Dómine,\ndefénde nos in hac nocte:\nSit nobis in te réquies,\nQuiétam noctem tríbue.\n\nNe gravis somnus írruat,\nNec hostis nos subrípiat,\nNec caro illi conséntiens\nNos tibi reos státuat.\n\nOculi somnum cápiant,\nCor ad te semper vígilet:\nDéxtera tua prótegat\nFámulos, qui te díligunt.\n\nDefénsor noster áspice,\nInsidiántes réprime,\nGubérna tuos fámulos,\nQuos Sánguine mercátus es.\n\nMeménto nostri, Dómine,\nIn gravi isto córpore:\nQui es defénsor ánimæ,\nAdésto nobis, Dómine.\n\nPræsta Pater omnípotens,\nPer Jesum Christum Dóminum,\nQui tecum in perpétuum\nRegnat cum Sancto Spíritu.\nAmen.",
-   "eng": "Christe, qui lux es et dies,\nNoctis tenébras détegis,\nLucísque lumen créderis,\nLumen beátum prǽdicans.\n\nPrecámur sancte Dómine,\ndefénde nos in hac nocte:\nSit nobis in te réquies,\nQuiétam noctem tríbue.\n\nNe gravis somnus írruat,\nNec hostis nos subrípiat,\nNec caro illi conséntiens\nNos tibi reos státuat.\n\nOculi somnum cápiant,\nCor ad te semper vígilet:\nDéxtera tua prótegat\nFámulos, qui te díligunt.\n\nDefénsor noster áspice,\nInsidiántes réprime,\nGubérna tuos fámulos,\nQuos Sánguine mercátus es.\n\nMeménto nostri, Dómine,\nIn gravi isto córpore:\nQui es defénsor ánimæ,\nAdésto nobis, Dómine.\n\nPræsta Pater omnípotens,\nPer Jesum Christum Dóminum,\nQui tecum in perpétuum\nRegnat cum Sancto Spíritu.\nAmen."
+   "eng": "O Christ, who art the light and day,\nThou drivest night and gloom away;\nO Light of light, whose word doth show\nThe light of heaven to us below.\n\nAll-holy Lord, we pray to Thee,\nDefend us in this night, and be\nOur rest in Thee, and grant\nA quiet night to us, Thy saints.\n\nLet no deep sleep come over us,\nNor the enemy steal upon us,\nNor the flesh, consenting to him,\nMake us guilty before Thee.\n\nLet our eyes take their sleep,\nOur heart keep watch for Thee always:\nMay Thy right hand protect\nThy servants who love Thee.\n\nLook on us, our Defender,\nHold back them that lie in wait,\nGuide Thy servants,\nWhom Thou hast bought with Thy Blood.\n\nRemember us, O Lord,\nIn this heavy body:\nThou who art the soul's defender,\nBe with us, O Lord.\n\nGrant this, almighty Father,\nThrough Jesus Christ our Lord,\nWho with Thee for evermore\nReigneth with the Holy Ghost.\nAmen."
   },
   "Hymnus Nona": {
    "type": "hymn",
@@ -1411,16 +1411,16 @@
    "label": "Versicle",
    "lat": "℣. Dóminus in Sion magnus.",
    "latR": "℟. Et excélsus super omnes pópulos.",
-   "eng": "℣. Dóminus in Sion magnus.",
-   "engR": "℟. Et excélsus super omnes pópulos."
+   "eng": "℣. The Lord is great in Sion.",
+   "engR": "℟. And high above all peoples."
   },
   "Nocturn 2 Versum Sabbato": {
    "type": "vr",
    "label": "Versicle",
    "lat": "℣. Misit verbum suum, et sanávit eos.",
    "latR": "℟. Et erípuit eos de interitiónibus eórum.",
-   "eng": "℣. Misit verbum suum, et sanávit eos.",
-   "engR": "℟. Et erípuit eos de interitiónibus eórum."
+   "eng": "℣. He sent His word, and healed them.",
+   "engR": "℟. And delivered them from their destructions."
   },
   "Prima Adv": {
    "type": "capitulum",
@@ -1868,7 +1868,7 @@
    "type": "prayer",
    "label": "Ave Maria Parvum",
    "lat": "V. Ave María, grátia plena; Dóminus tecum:  \nR. Benedícta tu in muliéribus, et benedíctus fructus ventris tui.",
-   "eng": "V. Ave María, grátia plena; Dóminus tecum:  \nR. Benedícta tu in muliéribus, et benedíctus fructus ventris tui."
+   "eng": "V. Hail Mary, full of grace,   The Lord is with thee.\nR. Blessed art thou   among women, and blessed is the fruit of thy womb."
   },
   "Prayer Benedicamus Domino": {
    "type": "prayer",
@@ -1904,7 +1904,7 @@
    "type": "prayer",
    "label": "Conclusio cisterciensis",
    "lat": "Ant. Spíritus sanctus in te descéndet, María, ne tímeas, habébis in útero Fílium Dei.\n_\nV. Ecce ancílla Dómini.\nR. Fiat mihi secúndum verbum tuum.\n_\n$Oremus\nv. Lætífica, et ádjuva nos, omnípotens et miséricors Deus, Domínicæ Conceptiónis gáudia recoléntes, et pia Dei Génitrix Virgo semper María (in cujus veneratióne hæc commemorámus) in cunctis necessitátibus nostris grátiam sancti Spíritus nobis ímpetret, et levámen. Per eúmdem Christum Dóminum nostrum.\n$Amen",
-   "eng": "Ant. Spíritus sanctus in te descéndet, María, ne tímeas, habébis in útero Fílium Dei.\n_\nV. Ecce ancílla Dómini.\nR. Fiat mihi secúndum verbum tuum.\n_\n$Oremus\nv. Lætífica, et ádjuva nos, omnípotens et miséricors Deus, Domínicæ Conceptiónis gáudia recoléntes, et pia Dei Génitrix Virgo semper María (in cujus veneratióne hæc commemorámus) in cunctis necessitátibus nostris grátiam sancti Spíritus nobis ímpetret, et levámen. Per eúmdem Christum Dóminum nostrum.\n$Amen"
+   "eng": "Ant. The Holy Ghost shall come upon thee, Mary: fear not, thou shalt bear in thy womb the Son of God.\n_\nV. Behold the handmaid of the Lord.\nR. Be it done unto me according to thy word.\n_\n$Oremus\nGladden and help us, almighty and merciful God, who keep the joys of the Lord's Conception; and may the loving Mother of God, Mary ever Virgin, in whose honour we make this commemoration, obtain for us in all our needs the grace of the Holy Spirit and relief. Through the same Christ our Lord.\n$Amen"
   },
   "Prayer Confiteor": {
    "type": "prayer",
@@ -2006,7 +2006,7 @@
    "type": "prayer",
    "label": "Dulce nomen",
    "lat": "V. Dulce nomen Dómini nostri Jesu Christi, et beatíssimæ Matris ejus, sit benedíctum in sæcula sæculórum. \nR. Amen.",
-   "eng": "V. Dulce nomen Dómini nostri Jesu Christi, et beatíssimæ Matris ejus, sit benedíctum in sæcula sæculórum. \nR. Amen."
+   "eng": "V. May the sweet name of our Lord Jesus Christ, and of His most blessed Mother, be blessed for ever and ever.\nR. Amen."
   },
   "Prayer Fidelium animae": {
    "type": "prayer",
@@ -2174,7 +2174,7 @@
    "type": "prayer",
    "label": "Quorum animae",
    "lat": "V. Quorum ánimæ piis ádmodum reverendórum patrum ac religiosórum fratrum suffrágiis commendántur!",
-   "eng": "V. Quorum ánimæ piis ádmodum reverendórum patrum ac religiosórum fratrum suffrágiis commendántur!"
+   "eng": "V. Whose souls are commended to the devout prayers of the very reverend fathers and religious brethren!"
   },
   "Prayer Requiem": {
    "type": "prayer",

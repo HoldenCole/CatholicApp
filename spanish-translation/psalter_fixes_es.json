@@ -1,5 +1,16 @@
 {
  "psalm52": {
   "0": "52:1 Dijo en su corazón el insensato: * No hay Dios."
+ },
+ "psalm117": {
+  "0": "117:1 Alabad al Señor, porque es tan bueno; * porque hace brillar eternamente su misericordia.",
+  "1": "117:2 Diga ahora Israel que el Señor es bueno, * y que es eterna su misericordia.",
+  "2": "117:3 Diga ahora la casa de Aarón, * que es eterna la misericordia del Señor.",
+  "3": "117:4 Digan ahora también los que temen al Señor, * que su misericordia es eterna."
+ },
+ "psalm89": {
+  "3": "89:4 Porque mil años son ante tus ojos * como el día de ayer que ya pasó,",
+  "4": "89:5 y como una de las vigilias de la noche. * Una nada son todos los años que vive.",
+  "5": "89:6 Dura un día como el heno; florece por la mañana, y se pasa; * por la tarde inclina la cabeza, se deshoja, y se seca."
  }
 }

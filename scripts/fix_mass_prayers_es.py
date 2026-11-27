@@ -166,8 +166,18 @@ HAND = {
     "(sed feria 7 nisi rubrica 1955 nisi rubrica 196)": "(sed feria 7 nisi rubrica 1955 nisi rubrica 196)",
 }
 
-# Whole fields: St Praxedes's Gradual (the Missal's Spanish of Ps 44).
+# Whole fields: St Praxedes's Gradual (the Missal's Spanish of Ps 44);
+# the Spanish of fix_mass_prayers.PROPER (St Agapitus's from DO Espanol).
 FIELD_HAND = {
+    ("05-22n", "oratio"): "Oh Dios, que te dignaste conceder a santa Rita tanta gracia, que amase a sus enemigos y llevase "
+                          "en el corazón y en la frente las señales de tu caridad y de tu pasión: concédenos, te rogamos, "
+                          "por su intercesión y méritos, que de tal modo perdonemos a nuestros enemigos y contemplemos los "
+                          "dolores de tu pasión, que alcancemos los premios prometidos a los mansos y a los que lloran.\n"
+                          "Tú que vives y reinas con Dios Padre en la unidad del Espíritu Santo, y eres Dios por todos los siglos de los siglos. Amén.",
+    ("08-18r", "secreta"): "Recibe, Señor, los presentes que te traemos en la solemnidad de este santo, por cuyo patrocinio confiamos ser libertados.\n"
+                           "Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén.",
+    ("05-06", "secreta"): "Santifica, Señor, los dones a ti dedicados: y, por la intercesión de tu santo Apóstol Juan, míranos aplacado por ellos.\n"
+                          "Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo, Dios, por todos los siglos de los siglos. Amén.",
     ("07-21", "graduale"): "Amaste la justicia y aborreciste la iniquidad.\n"
                            "V. Por eso te ungió Dios, tu Dios, con óleo de alegría. Aleluya, aleluya.\n"
                            "V. Con tu gallardía y tu hermosura avanza, marcha prósperamente y reina. Aleluya.",

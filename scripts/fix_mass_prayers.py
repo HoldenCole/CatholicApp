@@ -110,6 +110,40 @@ GRADUALE_0721 = {
     "ref": "Ps 44:8; 44:5",
 }
 
+# Prayers DO's 1962 Mass gets wrong, kept in their proper form: St Rita's
+# own Collect (DO's Mass falls back on the Confessor's of C5, "N." and
+# "his"; DO's Office, horas Sancti/05-22n, has hers), St Agapitus's Secret
+# (DO's Latin points at C6, a Virgin Martyr's, where every DO vernacular
+# has "on his festival") and St John before the Latin Gate's (C2-1's
+# "Martyr and Bishop", the name put to the Apostle as the Missal does).
+PROPER = {
+    ("05-22n", "oratio"): (
+        "Deus, qui sanctæ Ritæ tantam grátiam conférre dignátus es, ut inimícos dilígeret et in corde ac fronte "
+        "caritátis et passiónis tuæ signa portáret: da nobis, quǽsumus, ejus intercessióne et méritis; inimícis "
+        "nostris sic párcere et passiónis tuæ dolóres contemplári, ut promíssa mítibus ac lugéntibus prǽmia consequámur:\n"
+        "Qui vivis et regnas cum Deo Patre, in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+        "O God, who didst vouchsafe to bestow on Saint Rita such grace that she loved her enemies and bore in her "
+        "heart and on her brow the marks of thy charity and Passion: grant us, we beseech thee, by her intercession "
+        "and merits, so to forgive our enemies and to contemplate the sorrows of thy Passion, that we may obtain the "
+        "rewards promised to the meek and to them that mourn:\n"
+        "Who livest and reignest with God the Father, in the unity of the Holy Ghost, God, world without end. Amen."),
+    ("08-18r", "secreta"): (
+        "Súscipe, Dómine, múnera, quæ in ejus tibi sollemnitáte deférimus: cujus nos confídimus patrocínio liberári.\n"
+        "Per Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, "
+        "per ómnia sǽcula sæculórum. Amen.",
+        "Accept, O Lord, the gifts we bring on his festival by whose spiritual protection we hope to be saved.\n"
+        "Through our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, "
+        "God, world without end. Amen."),
+    ("05-06", "secreta"): (
+        "Múnera tibi, Dómine, dicáta sanctífica: et, intercedénte beáto Joánne Apóstolo tuo, per éadem nos placátus inténde.\n"
+        "Per Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, "
+        "per ómnia sǽcula sæculórum. Amen.",
+        "Sanctify the offerings dedicated to You, O Lord, and through the intercession of blessed John, Your Apostle, "
+        "look upon us with mercy because of them.\n"
+        "Through our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, "
+        "God, world without end. Amen."),
+}
+
 
 def nfc(s):
     return unicodedata.normalize("NFC", s or "")
@@ -233,6 +267,8 @@ def main():
             v["lat"] = "\n".join(a + c + new_rest)
             v["eng"] = "\n".join(ae + ce + new_reste)
 
+    for (key, f), (lat, eng) in PROPER.items():
+        app[key][f]["lat"], app[key][f]["eng"] = lat, eng
     for (key, f), (lat, eng) in FILL.items():
         v = app[key][f]
         for old, new in lat:

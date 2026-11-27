@@ -184,6 +184,10 @@ final class ContentStore {
     /// Spanish for the Office texts Divinum Officium's rubrics assemble, keyed
     /// by the normalised Latin (office_texts_es.json); empty in English.
     private var officeTextsES: [String: String] = [:]
+    /// English for the Office texts no source of the hours carries in
+    /// English (office_texts_en.json, Latin -> English; scripts/fix_english.py),
+    /// applied only where a part has no English or shows its Latin.
+    private lazy var officeTextsEN: [String: String] = load("office_texts_en", as: [String: String].self) ?? [:]
     /// The Spanish form of the propers' [Name] values (office_names_es.json).
     private var officeNamesES: [String: String] = [:]
 
@@ -1143,7 +1147,7 @@ final class ContentStore {
         // — after the commemorations and every other layer, before the Spanish.
         assembled.parts = OfficeFrame.apply(assembled.parts, OfficeFrame.Ctx(hourSlug: template.slug, rite: rite, dow: ctx.dayOfWeek, office: resolution?.office,
             lessons: resolution?.lessons ?? 3, nocturns: resolution?.nocturns ?? 1, special: resolution?.special != nil, template: template))
-        return stripNameMarks(applyDoxology(applyOfficeSpanish(assembled), resolution, LDate.from(date), ctx.dayOfWeek, rite))
+        return stripNameMarks(applyDoxology(applyOfficeSpanish(applyOfficeEnglishGaps(assembled)), resolution, LDate.from(date), ctx.dayOfWeek, rite))
     }
 
     /// The key of office_texts_es.json: NFC, <br>/~ as spaces, whitespace collapsed.
@@ -1151,6 +1155,40 @@ final class ContentStore {
         t.precomposedStringWithCanonicalMapping
             .rreplace("<br\\s*/?>", " ").replacingOccurrences(of: "~", with: " ").replacingOccurrences(of: "\u{00a0}", with: " ")
             .rreplace("\\s+", " ").trimmed
+    }
+
+    /// English where an hour's part has none, or only its Latin.
+    private func applyOfficeEnglishGaps(_ hour: Hour) -> Hour {
+        let texts = officeTextsEN
+        if texts.isEmpty { return hour }
+        func missing(_ lat: String?, _ eng: String?) -> Bool {
+            guard let lat, !lat.trimmed.isEmpty else { return false }
+            guard let eng, !eng.trimmed.isEmpty else { return true }
+            return Self.officeNorm(eng) == Self.officeNorm(lat)
+        }
+        func en(_ lat: String?) -> String? { lat.flatMap { texts[Self.officeNorm($0)] } }
+        var h = hour
+        h.parts = hour.parts.map { p in
+            let e = missing(p.lat, p.eng) ? en(p.lat) : nil
+            let eR = missing(p.latR, p.engR) ? en(p.latR) : nil
+            let eA = missing(p.antiphonLat, p.antiphonEng) ? en(p.antiphonLat) : nil
+            var verses = p.verses
+            var hitVerse = false
+            if let vs = p.verses {
+                verses = vs.map { v in
+                    if missing(v.lat, v.eng), let ev = en(v.lat) { hitVerse = true; var nv = v; nv.eng = ev; return nv }
+                    return v
+                }
+            }
+            if e == nil && eR == nil && eA == nil && !hitVerse { return p }
+            var n = p
+            if let e { n.eng = e }
+            if let eR { n.engR = eR }
+            if let eA { n.antiphonEng = eA }
+            if hitVerse { n.verses = verses }
+            return n
+        }
+        return h
     }
 
     /// The Spanish of every Latin text of the hour that the overlay knows

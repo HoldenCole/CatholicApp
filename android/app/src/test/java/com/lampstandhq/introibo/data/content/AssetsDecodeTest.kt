@@ -119,6 +119,7 @@ class AssetsDecodeTest {
         check("ordo_1955.json", { decode<Map<String, OrdoEntry>>("ordo_1955.json") }) { it.isNotEmpty() }
         check("ordo_pre1955.json", { decode<Map<String, OrdoEntry>>("ordo_pre1955.json") }) { it.isNotEmpty() }
         check("office_texts_es.json", { decode<Map<String, String>>("office_texts_es.json") }) { it.isNotEmpty() }
+        check("office_texts_en.json", { decode<Map<String, String>>("office_texts_en.json") }) { it.isNotEmpty() }
         check("office_names_es.json", { decode<Map<String, String>>("office_names_es.json") }) { it.isNotEmpty() }
         check("office_conclusions.json", { decode<OfficeConclusions>("office_conclusions.json") }) { it.collects.size > 400 }
         check("office_doxologies.json", { decode<OfficeDoxologies>("office_doxologies.json") }) {

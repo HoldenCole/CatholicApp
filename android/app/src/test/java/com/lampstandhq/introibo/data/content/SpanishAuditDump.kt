@@ -34,7 +34,9 @@ class SpanishAuditDump {
         val rites = (System.getenv("SPANISH_AUDIT_RITES") ?: "1962").split(",").map { r -> MissalRite.entries.first { it.rawValue == r } }
         val hours = listOf("matutinum", "laudes", "prima", "tertia", "sexta", "nona", "vesperae", "completorium")
         ContentStore.initFromDirectory(assets)
-        ContentStore.applyVernacular(VernacularLanguage.SPANISH)
+        // SPANISH_AUDIT_LANG=en dumps the same in English, for comparison
+        val lang = VernacularLanguage.entries.first { it.rawValue == (System.getenv("SPANISH_AUDIT_LANG") ?: "es") }
+        ContentStore.applyVernacular(lang)
         var d = start
         while (!d.isAfter(end)) {
             for (rite in rites) {

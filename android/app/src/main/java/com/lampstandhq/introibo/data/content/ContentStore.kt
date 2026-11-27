@@ -169,6 +169,10 @@ object ContentStore {
     /** Spanish for the Office texts Divinum Officium's rubrics assemble, keyed by
      *  the normalised Latin (spanish-translation/office_texts_es.json); empty in English. */
     private var officeTextsES: Map<String, String> = emptyMap()
+    /** English for the Office texts no source of the hours carries in
+     *  English (office_texts_en.json, Latin -> English; scripts/fix_english.py),
+     *  applied only where a part has no English or shows its Latin. */
+    private var officeTextsEN: Map<String, String>? = null
     /** The Spanish form of the propers' [Name] values (office_names_es.json). */
     private var officeNamesES: Map<String, String> = emptyMap()
     internal var officePsalteriumData: OfficePsalterium = OfficePsalterium()
@@ -1608,7 +1612,7 @@ object ContentStore {
         // — after the commemorations and every other layer, before the Spanish.
         assembled = assembled.copy(parts = OfficeFrame.apply(assembled.parts, OfficeFrame.Ctx(template.slug, rite, ctx.dayOfWeek, resolution?.office,
             resolution?.lessons ?: 3, resolution?.nocturns ?: 1, resolution?.special != null, template)))
-        return stripNameMarks(applyDoxology(applyOfficeSpanish(assembled), resolution, date, ctx.dayOfWeek, rite))
+        return stripNameMarks(applyDoxology(applyOfficeSpanish(applyOfficeEnglishGaps(assembled)), resolution, date, ctx.dayOfWeek, rite))
     }
 
     /** The rubrics engine's Spanish lookups: the templated collects and
@@ -1623,6 +1627,29 @@ object ContentStore {
         java.text.Normalizer.normalize(t, java.text.Normalizer.Form.NFC)
             .replace(Regex("<br\\s*/?>"), " ").replace("~", " ").replace('\u00a0', ' ')
             .replace(Regex("\\s+"), " ").trim()
+
+    /** English where an hour's part has none, or only its Latin. */
+    private fun applyOfficeEnglishGaps(hour: Hour): Hour {
+        val texts = officeTextsEN
+            ?: (try { load<Map<String, String>>("office_texts_en.json") } catch (_: Exception) { null } ?: emptyMap())
+                .also { officeTextsEN = it }
+        if (texts.isEmpty()) return hour
+        fun missing(lat: String?, eng: String?): Boolean =
+            !lat.isNullOrBlank() && (eng.isNullOrBlank() || officeNorm(eng) == officeNorm(lat))
+        fun en(lat: String?): String? = lat?.let { texts[officeNorm(it)] }
+        return hour.copy(parts = hour.parts.map { p ->
+            val e = if (missing(p.lat, p.eng)) en(p.lat) else null
+            val eR = if (missing(p.latR, p.engR)) en(p.latR) else null
+            val eA = if (missing(p.antiphonLat, p.antiphonEng)) en(p.antiphonLat) else null
+            val vs = p.verses?.let { list ->
+                var hit = false
+                val out = list.map { v -> (if (missing(v.lat, v.eng)) en(v.lat) else null)?.let { hit = true; v.copy(eng = it) } ?: v }
+                if (hit) out else null
+            }
+            if (e == null && eR == null && eA == null && vs == null) p
+            else p.copy(eng = e ?: p.eng, engR = eR ?: p.engR, antiphonEng = eA ?: p.antiphonEng, verses = vs ?: p.verses)
+        })
+    }
 
     /** The Spanish of every Latin text of the hour that the overlay knows
      *  (the parts the rubrics assemble carry English from Divinum Officium). */

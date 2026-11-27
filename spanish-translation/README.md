@@ -619,12 +619,18 @@ Gradual 148 Masses lacked, and the seasonal Gradual forms (`gradualeP`,
 `scripts/fix_mass_parts_es.py` rebuilt their Spanish:
 
 - readings (`missal_readings_es.json`): the Torres Amat Spanish of another
-  Mass with the same Latin reading or the same reference; 35 readings whose
-  pericope no other Mass has stay in English until the Torres Amat text can
-  be supplied (they are allow-listed in `qa_spanish_fidelity.py`):
-  Matt 19:27-29, Luke 14:26-33, Jas 1:12-18, 1 Tim 5:3-10, Isa 58:6-10,
-  Luke 10:29-37, Col 3:12-17, and (own Vulgate translation, as for the
-  other deuterocanonical pericopes) Ecclus 45:1-6 and 39:6-14;
+  Mass with the same Latin reading or the same reference. The 35 readings
+  whose pericope no other Mass had in full are Torres Amat too: Col 3:12-17
+  (the Holy Family's), Luke 14:26-33 and 10:29-37 and Isa 58:6-10 cut from
+  the longer readings of 14 June, the 12th Sunday after Pentecost and the
+  Friday and Saturday after Ash Wednesday, and Matt 19:27-29, Jas 1:13-16
+  and 1 Tim 5:3-10 read off the 1823-25 edition's scans on archive.org
+  (`sagrada-biblia-torres-amat-completa`, checked against the page images),
+  Ecclus 45:1-6 and 39:6-14 from its digital text of Ecclesiasticus
+  (`p.-torres-amat-libro-del-eclesiastico`). As the Missal does, the
+  lessons open on the Latin's words ("Amado de Dios…", "El justo…"),
+  Isaiah's questions are put as the Latin's commands, and Matthew 19:29
+  keeps the Latin's "o madre", which the 1823 printing leaves out;
 - chants (`missal_propers_es.json`): line by line from the Missal's own
   Spanish of the same Latin (before or after the correction), the Office's
   Spanish of the same antiphon, or DO's Spanish of the same part where its
