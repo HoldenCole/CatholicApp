@@ -210,6 +210,7 @@ fun CourseDetailScreen(
 private fun SectionView(s: Course.Section) {
     when (s.type) {
         "cards" -> CardsSection(s)
+        "table" -> TableSection(s)
         else -> TextSection(s)
     }
 }
@@ -233,6 +234,63 @@ private fun TextSection(s: Course.Section) {
                 color = colors.primaryText,
                 lineHeight = type.body.fontSize * 1.25f,
             )
+        }
+    }
+}
+
+/**
+ * A paradigm (a declension, a conjugation): the first row is the header,
+ * each following row one form, Latin in the middle column. Ruled like the
+ * flash cards.
+ */
+@Composable
+private fun TableSection(s: Course.Section) {
+    val colors = IntroiboTheme.colors
+    val type = IntroiboType.current
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        s.label?.let { label ->
+            SmallLabel(text = label, color = colors.sanctuaryRed)
+        }
+        s.html?.let { html ->
+            Text(text = plainText(html), style = type.body, color = colors.primaryText)
+        }
+        val rows = s.rows.orEmpty()
+        if (rows.isNotEmpty()) {
+            Column(modifier = Modifier.fillMaxWidth().border(0.5.dp, colors.frameLine)) {
+                rows.forEachIndexed { r, row ->
+                    if (r > 0) {
+                        Box(modifier = Modifier.fillMaxWidth().height(0.5.dp).background(colors.frameLine))
+                    }
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 10.dp, vertical = 8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    ) {
+                        row.forEachIndexed { c, cell ->
+                            Text(
+                                text = cell,
+                                style = when {
+                                    r == 0 -> type.captionSm
+                                    c == 1 -> type.body
+                                    c == 0 -> type.bodySm
+                                    else -> type.bodySm.copy(fontStyle = FontStyle.Italic)
+                                },
+                                color = when {
+                                    r == 0 -> colors.sanctuaryRed
+                                    c == 1 -> colors.primaryText
+                                    else -> colors.secondaryText
+                                },
+                                modifier = Modifier.weight(if (c == row.lastIndex) 1.6f else 1f),
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 }

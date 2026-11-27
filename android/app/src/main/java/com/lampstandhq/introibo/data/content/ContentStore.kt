@@ -336,6 +336,7 @@ object ContentStore {
             val html_es: String? = null,
             val note_es: String? = null,
             val items_es: List<CardES>? = null,
+            val rows_es: List<List<String>>? = null,
         )
 
         @kotlinx.serialization.Serializable
@@ -754,6 +755,11 @@ object ContentStore {
                                     label = if (sec.label != null) se.label_es ?: sec.label else sec.label,
                                     html = if (sec.html != null) se.html_es ?: sec.html else sec.html,
                                     note = if (sec.note != null) se.note_es ?: sec.note else sec.note,
+                                    // a table's cells, where the overlay has the same shape
+                                    rows = if (sec.rows != null && se.rows_es != null &&
+                                        se.rows_es.size == sec.rows.size &&
+                                        se.rows_es.indices.all { r -> se.rows_es[r].size == sec.rows[r].size }
+                                    ) se.rows_es else sec.rows,
                                     items = if (sec.items != null && se.items_es != null &&
                                         se.items_es.size == sec.items.size
                                     ) {

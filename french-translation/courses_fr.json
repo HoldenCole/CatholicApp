@@ -105,14 +105,30 @@
     "html_fr": "<p>Les noms de la première déclinaison sont le plus souvent féminins et se terminent par <strong>-a</strong> au nominatif : <em>María, grátia, vita, gloria, coróna</em>. Les terminaisons des cas suivent un modèle prévisible.</p>"
    },
    {
-    "label_fr": "María (f.) — 1re déclinaison"
+    "label_fr": "María (f.) — 1re déclinaison",
+    "rows_fr": [
+     ["Cas", "Singulier", "Français"],
+     ["Nom", "María", "Marie (sujet)"],
+     ["Gen", "Maríæ", "de Marie"],
+     ["Dat", "Maríæ", "à/pour Marie"],
+     ["Acc", "Maríam", "Marie (objet)"],
+     ["Abl", "María", "par/avec Marie"]
+    ]
    },
    {
     "label_fr": "Deuxième déclinaison (-us / -um)",
     "html_fr": "<p>Les noms de la deuxième déclinaison sont le plus souvent masculins (en -us) ou neutres (en -um) : <em>Dóminus, Christus, Iesus, verbum, sæculum</em>.</p>"
    },
    {
-    "label_fr": "Dóminus (m.) — 2e déclinaison"
+    "label_fr": "Dóminus (m.) — 2e déclinaison",
+    "rows_fr": [
+     ["Cas", "Singulier", "Français"],
+     ["Nom", "Dóminus", "le Seigneur (sujet)"],
+     ["Gen", "Dómini", "du Seigneur"],
+     ["Dat", "Dómino", "au/pour le Seigneur"],
+     ["Acc", "Dóminum", "le Seigneur (objet)"],
+     ["Abl", "Dómino", "par/avec le Seigneur"]
+    ]
    },
    {
     "label_fr": "Regardez la terminaison",
@@ -151,7 +167,16 @@
     "html_fr": "<p>Les verbes latins se classent d’après la voyelle de leur radical :</p><p><strong>I :</strong> -āre (<em>laudáre</em>, louer)<br><strong>II :</strong> -ēre (<em>vidére</em>, voir)<br><strong>III :</strong> -ere (<em>dúcere</em>, conduire)<br><strong>IV :</strong> -īre (<em>audíre</em>, entendre)</p>"
    },
    {
-    "label_fr": "Laudáre — 1re conjugaison (présent)"
+    "label_fr": "Laudáre — 1re conjugaison (présent)",
+    "rows_fr": [
+     ["Personne", "Latin", "Français"],
+     ["Je", "laudo", "je loue"],
+     ["Tu", "laudas", "tu loues"],
+     ["Il/Elle", "laudat", "il loue"],
+     ["Nous", "laudámus", "nous louons"],
+     ["Vous", "laudátis", "vous louez"],
+     ["Ils/Elles", "laudant", "ils louent"]
+    ]
    },
    {
     "label_fr": "Les terminaisons sont la clé",

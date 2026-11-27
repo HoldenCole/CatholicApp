@@ -19,6 +19,7 @@ struct Course: Identifiable, Decodable, Hashable {
         var html: String?        // present for lesson/tip/summary/phrase/table
         var note: String?        // present for cards
         var items: [Card]?       // present for cards
+        var rows: [[String]]?    // present for table: a header row, then one row per form
 
         struct Card: Decodable, Hashable {
             let lat: String?

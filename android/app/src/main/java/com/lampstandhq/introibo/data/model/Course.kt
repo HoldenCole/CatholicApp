@@ -21,6 +21,7 @@ data class Course(
         val html: String? = null,    // present for lesson/tip/summary/phrase/table
         val note: String? = null,    // present for cards
         val items: List<Card>? = null, // present for cards
+        val rows: List<List<String>>? = null, // present for table: a header row, then one row per form
     ) {
         @Serializable
         data class Card(

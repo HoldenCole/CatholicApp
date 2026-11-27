@@ -105,14 +105,30 @@
     "html_es": "<p>Los sustantivos de la primera declinación suelen ser femeninos y terminan en <strong>-a</strong> en el nominativo: <em>María, grátia, vita, gloria, coróna</em>. Las terminaciones de los casos siguen un patrón previsible.</p>"
    },
    {
-    "label_es": "María (f.); 1.ª declinación"
+    "label_es": "María (f.); 1.ª declinación",
+    "rows_es": [
+     ["Caso", "Singular", "Español"],
+     ["Nom", "María", "María (sujeto)"],
+     ["Gen", "Maríæ", "de María"],
+     ["Dat", "Maríæ", "a/para María"],
+     ["Acc", "Maríam", "a María (objeto)"],
+     ["Abl", "María", "por/con María"]
+    ]
    },
    {
     "label_es": "Segunda declinación (-us / -um)",
     "html_es": "<p>Los sustantivos de la segunda declinación suelen ser masculinos (en -us) o neutros (en -um): <em>Dóminus, Christus, Iesus, verbum, sæculum</em>.</p>"
    },
    {
-    "label_es": "Dóminus (m.); 2.ª declinación"
+    "label_es": "Dóminus (m.); 2.ª declinación",
+    "rows_es": [
+     ["Caso", "Singular", "Español"],
+     ["Nom", "Dóminus", "el Señor (sujeto)"],
+     ["Gen", "Dómini", "del Señor"],
+     ["Dat", "Dómino", "al/para el Señor"],
+     ["Acc", "Dóminum", "al Señor (objeto)"],
+     ["Abl", "Dómino", "por/con el Señor"]
+    ]
    },
    {
     "label_es": "Fíjate en la terminación",
@@ -151,7 +167,16 @@
     "html_es": "<p>Los verbos latinos se agrupan por la vocal de su tema:</p><p><strong>I:</strong> -āre (<em>laudáre</em>; alabar)<br><strong>II:</strong> -ēre (<em>vidére</em>; ver)<br><strong>III:</strong> -ere (<em>dúcere</em>; guiar)<br><strong>IV:</strong> -īre (<em>audíre</em>; oír)</p>"
    },
    {
-    "label_es": "Laudáre; 1.ª conjugación (presente)"
+    "label_es": "Laudáre; 1.ª conjugación (presente)",
+    "rows_es": [
+     ["Persona", "Latín", "Español"],
+     ["Yo", "laudo", "yo alabo"],
+     ["Tú", "laudas", "tú alabas"],
+     ["Él/Ella", "laudat", "él alaba"],
+     ["Nosotros", "laudámus", "nosotros alabamos"],
+     ["Vosotros", "laudátis", "vosotros alabáis"],
+     ["Ellos", "laudant", "ellos alaban"]
+    ]
    },
    {
     "label_es": "Las terminaciones son la clave",

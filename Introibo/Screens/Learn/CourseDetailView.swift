@@ -92,6 +92,8 @@ struct CourseDetailView: View {
         switch s.type {
         case "cards":
             cardsSection(s)
+        case "table":
+            tableSection(s)
         default:
             textSection(s)
         }
@@ -111,6 +113,56 @@ struct CourseDetailView: View {
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    /// A paradigm (a declension, a conjugation): the first row is the
+    /// header, each following row one form, Latin in the middle column.
+    private func tableSection(_ s: Course.Section) -> some View {
+        let rows = s.rows ?? []
+        return VStack(alignment: .leading, spacing: 10) {
+            if let label = s.label {
+                Text(label)
+                    .smallLabel(color: Color.sanctuaryRed)
+            }
+            if let html = s.html {
+                Text(plainText(from: html))
+                    .appFont(.body)
+                    .foregroundStyle(Color.primaryText)
+            }
+            if !rows.isEmpty {
+                VStack(spacing: 0) {
+                    ForEach(Array(rows.enumerated()), id: \.offset) { r, row in
+                        HStack(alignment: .firstTextBaseline, spacing: 10) {
+                            ForEach(Array(row.enumerated()), id: \.offset) { c, cell in
+                                tableCell(cell, row: r, column: c)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .layoutPriority(c == row.count - 1 ? 1 : 0)
+                            }
+                        }
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 8)
+                        if r < rows.count - 1 {
+                            Rectangle().fill(Color.frameLine).frame(height: 0.5)
+                        }
+                    }
+                }
+                .overlay(Rectangle().stroke(Color.frameLine, lineWidth: 0.5))
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    @ViewBuilder
+    private func tableCell(_ text: String, row: Int, column: Int) -> some View {
+        if row == 0 {
+            Text(text).smallLabel(color: Color.sanctuaryRed)
+        } else if column == 1 {
+            Text(text).appFont(.body).foregroundStyle(Color.primaryText)
+        } else if column == 0 {
+            Text(text).appFont(.bodySm).foregroundStyle(Color.secondaryText)
+        } else {
+            Text(text).appFont(.bodySm).italic().foregroundStyle(Color.secondaryText)
+        }
     }
 
     private func cardsSection(_ s: Course.Section) -> some View {

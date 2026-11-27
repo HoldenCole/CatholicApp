@@ -300,6 +300,7 @@ final class ContentStore {
             let html_es: String?
             let note_es: String?
             let items_es: [CardES]?
+            let rows_es: [[String]]?
         }
         struct CardES: Decodable {
             let eng_es: String?
@@ -688,6 +689,9 @@ final class ContentStore {
                         if m.sections[i].label != nil, let t = se.label_es { m.sections[i].label = t }
                         if m.sections[i].html != nil, let t = se.html_es { m.sections[i].html = t }
                         if m.sections[i].note != nil, let t = se.note_es { m.sections[i].note = t }
+                        // a table's cells, where the overlay has the same shape
+                        if let rows = m.sections[i].rows, let t = se.rows_es, t.count == rows.count,
+                           zip(t, rows).allSatisfy({ $0.count == $1.count }) { m.sections[i].rows = t }
                         if var items = m.sections[i].items, let ie = se.items_es,
                            ie.count == items.count {
                             for j in items.indices {
