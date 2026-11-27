@@ -16,9 +16,10 @@ data class MissalProperEntry(
     val secreta: ProperText? = null,
     val communio: ProperText? = null,
     val postcommunio: ProperText? = null,
-    // Optional propers using DO's Latin field names. Currently absent from
-    // missal_tempora.json / missal_sanctoral.json but threaded so that any
-    // future data additions surface in the rendered MassProper.
+    // DO's seasonal forms of the Gradual: gradualeP in Paschaltide, tractus
+    // from Septuagesima to Holy Saturday (each with its Gradual verses, as
+    // DO's getitem() takes it in place of [Graduale]).
+    val gradualeP: ProperText? = null,
     val alleluia: ProperText? = null,
     val tractus: ProperText? = null,
     val sequentia: ProperText? = null,
@@ -55,6 +56,17 @@ data class MissalProperEntry(
         }
 
         val latinTitle = officium ?: key
+        val season = ordo?.season
+        val paschal = season == "easter"
+        // The Gradual the season takes (DO's getitem): the Paschal form in
+        // Eastertide, the Tract from Septuagesima, otherwise the Gradual.
+        val gradualForSeason = when {
+            paschal && gradualeP != null -> gradualeP
+            (season == "lent" || season == "pre-lent") && tractus != null -> tractus
+            else -> graduale
+        }
+        val lenten = season == "lent" || season == "pre-lent"
+        val a: (ProperText) -> ProperText = { seasonalAlleluia(it, paschal, lenten) }
 
         return MassProper(
             slug = key,
@@ -63,17 +75,17 @@ data class MissalProperEntry(
             rank = legacyRank,
             color = ordo?.color ?: "",
             season = ordo?.season,
-            introit = intro,
+            introit = a(intro),
             collect = collect,
             epistle = ProperReading(ref = ep.ref ?: "", lat = ep.lat, eng = ep.eng),
-            gradual = graduale,
+            gradual = gradualForSeason?.let(a),
             alleluia = alleluia,
-            tract = tractus,
+            tract = null,
             sequence = sequentia,
             gospel = ProperReading(ref = gosp.ref ?: "", lat = gosp.lat, eng = gosp.eng),
-            offertory = off,
+            offertory = a(off),
             secret = sec,
-            communion = comm,
+            communion = a(comm),
             postcommunion = postcomm,
             preface = translatePrefaceCode(rule?.preface),
             glorOverride = rule?.gloria,
@@ -82,6 +94,33 @@ data class MissalProperEntry(
     }
 
     companion object {
+        /** The bracketed alleluias of the Commons, "(Allelúja, allelúja.)":
+         *  said in Paschaltide (the brackets dropped), left out otherwise, as
+         *  DO's getitem() does. Latin, English, Spanish and French forms. */
+        private val bracketedAlleluia = Regex("""\s*\(((?:Al+[eé]l[uú][ij]a|Aleluya)[^()]*)\)""", RegexOption.IGNORE_CASE)
+
+        fun paschalAlleluia(text: String, paschal: Boolean): String =
+            if (paschal) bracketedAlleluia.replace(text) { " " + it.groupValues[1] }
+            else bracketedAlleluia.replace(text, "")
+
+        /** A chant's closing alleluia ("… eórum, allelúja."), left out from
+         *  Septuagesima to Holy Saturday as DO's "(sed post Septuagesimam
+         *  dicitur)" does. A line that is nothing but alleluias stays. */
+        private val closingAlleluia = Regex(
+            """[,;:.]?\s*(?:(?:Al+[eé]l[uú][ij]a|Aleluya)[,.]?\s*)+$""", RegexOption.IGNORE_CASE)
+        private val onlyAlleluia = Regex(
+            """^\s*(?:V\.\s*)?(?:(?:Al+[eé]l[uú][ij]a|Aleluya)[,.]?\s*)+$""", RegexOption.IGNORE_CASE)
+
+        fun lentenAlleluia(text: String): String = text.split("\n").joinToString("\n") { line ->
+            if (onlyAlleluia.matches(line) || !closingAlleluia.containsMatchIn(line)) line
+            else closingAlleluia.replace(line, "").trimEnd().let { if (it.endsWith(".") || it.endsWith("!") || it.endsWith("?")) it else "$it." }
+        }
+
+        fun seasonalAlleluia(p: ProperText, paschal: Boolean, lenten: Boolean): ProperText {
+            fun t(x: String): String = paschalAlleluia(x, paschal).let { if (lenten) lentenAlleluia(it) else it }
+            return p.copy(lat = t(p.lat), eng = t(p.eng))
+        }
+
         /** Translates DivinumOfficium preface codes to slug suffixes in missal.json. */
         fun translatePrefaceCode(code: String?): String? {
             if (code.isNullOrEmpty()) return null

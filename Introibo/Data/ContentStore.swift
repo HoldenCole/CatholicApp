@@ -419,6 +419,8 @@ final class ContentStore {
                         case "introitus":    entry.introitus?.eng = text
                         case "oratio":       entry.oratio?.eng = text
                         case "graduale":     entry.graduale?.eng = text
+                        case "gradualeP":    entry.gradualeP?.eng = text
+                        case "tractus":      entry.tractus?.eng = text
                         case "offertorium":  entry.offertorium?.eng = text
                         case "secreta":      entry.secreta?.eng = text
                         case "communio":     entry.communio?.eng = text

@@ -608,3 +608,27 @@ Spanish before, hand translations kept in the script (`HAND`), in the
 Missal's own wording. It runs on the Latin before and after:
 
     python3 scripts/fix_mass_prayers_es.py --before <old missal_sanctoral.json> --do <DO checkout>
+
+## The other Mass parts after the Latin correction
+
+`scripts/fix_mass_parts.py` put right some 600 Introits, Lessons, Graduals,
+Gospels, Offertories and Communions of the saints (taken from the wrong
+Mass of the Common, cut short, or holding rubric debris), added the
+Gradual 148 Masses lacked, and the seasonal Gradual forms (`gradualeP`,
+`tractus`) where the feast can fall in that season.
+`scripts/fix_mass_parts_es.py` rebuilt their Spanish:
+
+- readings (`missal_readings_es.json`): the Torres Amat Spanish of another
+  Mass with the same Latin reading or the same reference; 35 readings whose
+  pericope no other Mass has stay in English until the Torres Amat text can
+  be supplied (they are allow-listed in `qa_spanish_fidelity.py`):
+  Matt 19:27-29, Luke 14:26-33, Jas 1:12-18, 1 Tim 5:3-10, Isa 58:6-10,
+  Luke 10:29-37, Col 3:12-17, and (own Vulgate translation, as for the
+  other deuterocanonical pericopes) Ecclus 45:1-6 and 39:6-14;
+- chants (`missal_propers_es.json`): line by line from the Missal's own
+  Spanish of the same Latin (before or after the correction), the Office's
+  Spanish of the same antiphon, or DO's Spanish of the same part where its
+  lines match (rejected if it falls back to English or drops an alleluia),
+  and nine hand translations kept in the script (`FIELD_HAND`).
+
+The Latin spelling "Allelúja" left in 14 Spanish fields was set right.

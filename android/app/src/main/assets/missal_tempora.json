@@ -659,7 +659,7 @@
       "eng": "O Lord Jesus Christ, You Who while subject to Mary and Joseph, hallowed family life with virtues beyond description, grant us by their combined intercession, that, having been taught by the example of the Holy Family, we may attain unto their everlasting companionship.\nWho livest and reignest with God the Father, in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "lectio": {
-      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Colossénses\nFratres: Indúite vos sicut elécti Dei, sancti et dilécti, víscera misericórdiæ, benignitátem, humilitátem, modéstiam, patiéntiam: supportántes ínvicem, et donántes vobismetípsis, si quis advérsus áliquem habet querélam: sicut et Dóminus donávit vobis, ita et vos. Super ómnia autem hæc caritátem habéte, quod est vínculum perfectiónis: et pax Christi exsúltet in córdibus vestris, in qua et vocáti estis in uno córpore: et grati estóte. Verbum Christi hábitet in vobis abundánter, in omni sapiéntia, docéntes et commonéntes vosmetípsos psalmis, hymnis et cánticis spirituálibus, in grátia cantántes in córdibus vestris Deo. Omne, quodcúmque fácitis in verbo aut in ópere, ómnia in nómine Dómini Jesu Christi, grátias agéntes Deo et Patri per ipsum.",
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Colossénses\nFratres: Indúite vos sicut elécti Dei, sancti et dilécti, víscera misericórdiæ, benignitátem, humilitátem, modéstiam, patiéntiam: supportántes ínvicem, et donántes vobismetípsis, si quis advérsus áliquem habet querélam: sicut et Dóminus donávit vobis, ita et vos. Super ómnia autem hæc caritátem habéte, quod est vínculum perfectiónis: et pax Christi exsúltet in córdibus vestris, in qua et vocáti estis in uno córpore: et grati estóte. Verbum Christi hábitet in vobis abundánter, in omni sapiéntia, docéntes et commonéntes vosmetípsos psalmis, hymnis et cánticis spirituálibus, in grátia cantántes in córdibus vestris Deo. Omne, quodcúmque fácitis in verbo aut in ópere, ómnia in nómine Dómini Jesu Christi, grátias agéntes Deo et Patri per Jesum Christum, Dóminum nostrum.",
       "eng": "Lesson from the letter of St. Paul the Apostle to the Colossians\nBrethren: Put on, as God’s chosen ones, holy and beloved, a heart of mercy, kindness, humility, meekness, patience. Bear with one another and forgive one another, if anyone has a grievance against any other; even as the Lord has forgiven you, so also do you forgive. But above all these things have charity, which is the bond of perfection. And may the peace of Christ reign in your hearts; unto that peace, indeed, you were called in one body. Show yourselves thankful. Let the word of Christ dwell in you abundantly: in all wisdom teach and admonish one another by psalms, hymns and spiritual songs, singing in your hearts to God by His grace. Whatever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God the Father through Jesus Christ our Lord.",
       "ref": "Col 3:12-17"
     },
@@ -820,7 +820,12 @@
   },
   "epi2-0tt": {
     "officium": "De Dominica II post Epiphaniam",
-    "rank": 2
+    "rank": 2,
+    "graduale": {
+      "lat": "Misit Dóminus verbum suum, et sanávit eos: et erípuit eos de intéritu eórum.\nV. Confiteántur Dómino misericórdiæ ejus: et mirabília ejus fíliis hóminum. Allelúja, allelúja.\nLaudáte Dóminum, omnes Angeli ejus: laudáte eum, omnes virtútes ejus. Allelúja.",
+      "eng": "The Lord sent forth His word to heal them and to snatch them from destruction.\nV. Let them give thanks to the Lord for His kindness and His wondrous deeds to the children of men. Alleluia, alleluia.\nPraise the Lord, all you His angels, praise Him, all you His hosts. Alleluia.",
+      "ref": "Ps 106:20-21"
+    }
   },
   "epi2-1": {
     "officium": "Feria II infra Hebdomadam II post Epiphaniam",
@@ -899,7 +904,12 @@
   },
   "epi3-0tt": {
     "officium": "De Dominica III post Epiphaniam",
-    "rank": 1
+    "rank": 1,
+    "graduale": {
+      "lat": "Timébunt gentes nomen tuum, Dómine, et omnes reges terræ glóriam tuam.\nV. Quóniam ædificávit Dóminus Sion, et vidébitur in majestáte sua. Allelúja, allelúja.\nDóminus regnávit, exsúltet terra: læténtur ínsulæ multæ. Allelúja.",
+      "eng": "The nations shall revere Your name, O Lord, and all the kings of the earth Your glory.\nV. For the Lord has rebuilt Sion, and He shall appear in His glory. Alleluia, alleluia.\nThe Lord is King; let the earth rejoice; let the many isles be glad. Alleluia.",
+      "ref": "Ps 101:16-17"
+    }
   },
   "epi3-1": {
     "officium": "Feria II infra Hebdomadam III post Epiphaniam",
@@ -974,7 +984,12 @@
   },
   "epi4-0tt": {
     "officium": "De Dominica IV post Epiphaniam",
-    "rank": 1
+    "rank": 1,
+    "graduale": {
+      "lat": "Timébunt gentes nomen tuum, Dómine, et omnes reges terræ glóriam tuam.\nV. Quóniam ædificávit Dóminus Sion, et vidébitur in majestáte sua. Allelúja, allelúja.\nDóminus regnávit, exsúltet terra: læténtur ínsulæ multæ. Allelúja.",
+      "eng": "The nations shall revere Your name, O Lord, and all the kings of the earth Your glory.\nV. For the Lord has rebuilt Sion, and He shall appear in His glory. Alleluia, alleluia.\nThe Lord is King; let the earth rejoice; let the many isles be glad.  Alleluia.",
+      "ref": "Ps 101:16-17"
+    }
   },
   "epi4-1": {
     "officium": "Feria Secunda infra Hebdomadam IV post Epiiphaniam",
@@ -1017,8 +1032,9 @@
       "eng": "O Lord, we beseech You to keep Your household continually under Your mercy: that as it leans only upon the hope of Your heavenly grace, so it may always be protected by Your mighty power.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "lectio": {
-      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Colossénses\nFratres: Indúite vos sicut elécti Dei, sancti et dilécti, víscera misericórdiæ, benignitátem, humilitátem, modéstiam, patiéntiam: supportántes ínvicem, et donántes vobismetípsis, si quis advérsus áliquem habet querélam: sicut et Dóminus donávit vobis, ita et vos. Super ómnia autem hæc caritátem habéte, quod est vínculum perfectiónis: et pax Christi exsúltet in córdibus vestris, in qua et vocáti estis in uno córpore: et grati estóte. Verbum Christi hábitet in vobis abundánter, in omni sapiéntia, docéntes et commonéntes vosmetípsos psalmis, hymnis et cánticis spirituálibus, in grátia cantántes in córdibus vestris Deo. Omne, quodcúmque fácitis in verbo aut in ópere, ómnia in nómine Dómini Jesu Christi, grátias agéntes Deo et Patri per ipsum.",
-      "eng": "Lesson from the letter of St. Paul the Apostle to the Colossians\nBrethren: Put on, as God’s chosen ones, holy and beloved, a heart of mercy, kindness, humility, meekness, patience. Bear with one another and forgive one another, if anyone has a grievance against any other; even as the Lord has forgiven you, so also do you forgive. But above all these things have charity, which is the bond of perfection. And may the peace of Christ reign in your hearts; unto that peace, indeed, you were called in one body. Show yourselves thankful. Let the word of Christ dwell in you abundantly: in all wisdom teach and admonish one another by psalms, hymns and spiritual songs, singing in your hearts to God by His grace. Whatever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God the Father through Jesus Christ our Lord."
+      "lat": "Léctio Epístolæ beáti Pauli Apóstoli ad Colossénses\nFratres: Indúite vos sicut elécti Dei, sancti et dilécti, víscera misericórdiæ, benignitátem, humilitátem, modéstiam, patiéntiam: supportántes ínvicem, et donántes vobismetípsis, si quis advérsus áliquem habet querélam: sicut et Dóminus donávit vobis, ita et vos. Super ómnia autem hæc caritátem habéte, quod est vínculum perfectiónis: et pax Christi exsúltet in córdibus vestris, in qua et vocáti estis in uno córpore: et grati estóte. Verbum Christi hábitet in vobis abundánter, in omni sapiéntia, docéntes et commonéntes vosmetípsos psalmis, hymnis et cánticis spirituálibus, in grátia cantántes in córdibus vestris Deo. Omne, quodcúmque fácitis in verbo aut in ópere, ómnia in nómine Dómini Jesu Christi, grátias agéntes Deo et Patri per Jesum Christum, Dóminum nostrum.",
+      "eng": "Lesson from the letter of St. Paul the Apostle to the Colossians\nBrethren: Put on, as God’s chosen ones, holy and beloved, a heart of mercy, kindness, humility, meekness, patience. Bear with one another and forgive one another, if anyone has a grievance against any other; even as the Lord has forgiven you, so also do you forgive. But above all these things have charity, which is the bond of perfection. And may the peace of Christ reign in your hearts; unto that peace, indeed, you were called in one body. Show yourselves thankful. Let the word of Christ dwell in you abundantly: in all wisdom teach and admonish one another by psalms, hymns and spiritual songs, singing in your hearts to God by His grace. Whatever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God the Father through Jesus Christ our Lord.",
+      "ref": "Col 3:12-17"
     },
     "graduale": {
       "lat": "Timébunt gentes nomen tuum, Dómine, et omnes reges terræ glóriam tuam.\nV. Quóniam ædificávit Dóminus Sion, et vidébitur in majestáte sua. Allelúja, allelúja.\nV. Dóminus regnávit, exsúltet terra: læténtur ínsulæ multæ. Allelúja.",
@@ -1050,7 +1066,12 @@
   },
   "epi5-0tt": {
     "officium": "De Dominica V post Epiphaniam",
-    "rank": 1
+    "rank": 1,
+    "graduale": {
+      "lat": "Timébunt gentes nomen tuum, Dómine, et omnes reges terræ glóriam tuam.\nV. Quóniam ædificávit Dóminus Sion, et vidébitur in majestáte sua. Allelúja, allelúja.\nV. Dóminus regnávit, exsúltet terra: læténtur ínsulæ multæ. Allelúja.",
+      "eng": "The Gentiles shall fear Your name, O Lord, and all the kings of the earth Your glory.\nV. For the Lord has built up Sion, and He shall be seen in His glory. Alleluia, alleluia.\nV. The Lord has reigned, let the earth rejoice: let many islands be glad. Alleluia.",
+      "ref": "Ps 101:16-17"
+    }
   },
   "epi5-1": {
     "officium": "Feria II infra Hebdomadam V post Epiphaniam",
@@ -1126,7 +1147,12 @@
   },
   "epi6-0tt": {
     "officium": "De Dominica VI post Epiphaniam",
-    "rank": 1
+    "rank": 1,
+    "graduale": {
+      "lat": "Timébunt gentes nomen tuum, Dómine, et omnes reges terræ glóriam tuam.\nV. Quóniam ædificávit Dóminus Sion, et vidébitur in majestáte sua. Allelúja, allelúja.\nV. Dóminus regnávit, exsúltet terra: læténtur ínsulæ multæ. Allelúja.",
+      "eng": "The Gentiles shall fear Your name, O Lord, and all the kings of the earth Your glory.\nV. For the Lord has built up Sion, and He shall be seen in His glory. Alleluia, alleluia.\nV. The Lord has reigned, let the earth rejoice: let many islands be glad. Alleluia.",
+      "ref": "Ps 101:16-17"
+    }
   },
   "epi6-1": {
     "officium": "Feria II infra Hebdomadam VI post Epiphaniam",
@@ -1307,7 +1333,12 @@
   },
   "nat29": {
     "officium": "Die V infra Octavam Nativitatis",
-    "rank": 2
+    "rank": 2,
+    "graduale": {
+      "lat": "Vidérunt omnes fines terræ salutare Dei nostri: jubiláte Deo, omnis terra.\nV. Notum fecit Dominus salutare suum: ante conspéctum géntium revelávit justitiam suam. Allelúja, allelúja.\nV. Dies sanctificátus illúxit nobis: veníte, gentes, et adoráte Dóminum: quia hódie descéndit lux magna super terram. Allelúja.",
+      "eng": "All the ends of the earth have seen the salvation by our God. Sing joyfully to God, all you lands.\nV. The Lord has made His salvation known: in the sight of the nations He has revealed His justice. Alleluia, alleluia.\nV. A sanctified day has shone upon us; come, you nations, and adore the Lord: for this day a great light has descended upon the earth. Alleluia.",
+      "ref": "Ps 97:3; 97:2"
+    }
   },
   "nat30": {
     "officium": "Die VI infra Octavam Nativitatis",
@@ -1359,7 +1390,12 @@
   },
   "nat31": {
     "officium": "Die VII infra Octavam Nativitatis",
-    "rank": 2
+    "rank": 2,
+    "graduale": {
+      "lat": "Vidérunt omnes fines terræ salutare Dei nostri: jubiláte Deo, omnis terra.\nV. Notum fecit Dominus salutare suum: ante conspéctum géntium revelávit justitiam suam. Allelúja, allelúja.\nV. Dies sanctificátus illúxit nobis: veníte, gentes, et adoráte Dóminum: quia hódie descéndit lux magna super terram. Allelúja.",
+      "eng": "All the ends of the earth have seen the salvation by our God. Sing joyfully to God, all you lands.\nV. The Lord has made His salvation known: in the sight of the nations He has revealed His justice. Alleluia, alleluia.\nV. A sanctified day has shone upon us; come, you nations, and adore the Lord: for this day a great light has descended upon the earth. Alleluia.",
+      "ref": "Ps 97:3; 97:2"
+    }
   },
   "pasc0-0": {
     "officium": "Dominica Resurrectionis",
@@ -1411,7 +1447,7 @@
       "eng": "Pour forth upon us, O Lord, the spirit of Thy love, that, by Thy loving kindness, Thou mayest make to be of one mind those whom Thou hast satisfied with the Paschal Sacraments. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen. eiusdem"
     },
     "sequentia": {
-      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.\n!Sequentia dicitur usque ad Sabbatum in Albis inclusive.",
+      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.",
       "eng": "Christians! to the Paschal Victim offer your thankful praises.\nThe Lamb the sheep redeemeth: Christ, who only is sinless, reconcileth sinners to the Father.\nDeath and life contended in that conflict stupendous: the Prince of Life, who died, deathless reigneth.\nSpeak, Mary, declaring what thou sawest wayfaring.\n“The tomb of Christ who now liveth: and likewise the glory of the Risen.\nBright Angels attesting, the shroud and napkin resting.\nYea, Christ my hope is arisen: to Galilee He goeth before you.”\nWe know that Christ is risen, henceforth ever living: Have mercy, Victor King, pardon giving. Amen. Alleluia."
     }
   },
@@ -1464,7 +1500,7 @@
       "eng": "Pour forth upon us, O Lord, the spirit of Thy love, that, by Thy loving kindness, Thou mayest make to be of one mind those whom Thou hast satisfied with the Paschal Sacraments.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen. eiusdem"
     },
     "sequentia": {
-      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.\n!Sequentia dicitur usque ad Sabbatum in Albis inclusive.",
+      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.",
       "eng": "Christians! to the Paschal Victim offer your thankful praises.\nThe Lamb the sheep redeemeth: Christ, who only is sinless, reconcileth sinners to the Father.\nDeath and life contended in that conflict stupendous: the Prince of Life, who died, deathless reigneth.\nSpeak, Mary, declaring what thou sawest wayfaring.\n“The tomb of Christ who now liveth: and likewise the glory of the Risen.\nBright Angels attesting, the shroud and napkin resting.\nYea, Christ my hope is arisen: to Galilee He goeth before you.”\nWe know that Christ is risen, henceforth ever living: Have mercy, Victor King, pardon giving. Amen. Alleluia."
     }
   },
@@ -1517,7 +1553,7 @@
       "eng": "Grant, we beseech thee, Almighty God, that the grace of the paschal sacrament which we have received may ever abide in our souls.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "sequentia": {
-      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.\n!Sequentia dicitur usque ad Sabbatum in Albis inclusive.",
+      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.",
       "eng": "Christians! to the Paschal Victim offer your thankful praises.\nThe Lamb the sheep redeemeth: Christ, who only is sinless, reconcileth sinners to the Father.\nDeath and life contended in that conflict stupendous: the Prince of Life, who died, deathless reigneth.\nSpeak, Mary, declaring what thou sawest wayfaring.\n“The tomb of Christ who now liveth: and likewise the glory of the Risen.\nBright Angels attesting, the shroud and napkin resting.\nYea, Christ my hope is arisen: to Galilee He goeth before you.”\nWe know that Christ is risen, henceforth ever living: Have mercy, Victor King, pardon giving. Amen. Alleluia."
     }
   },
@@ -1619,7 +1655,7 @@
       "eng": "O Lord, we beseech Thee, that we, reverently receiving thy Sacrament, may be cleansed from all our former defilement, and become a new creature in Thee.\nWho livest and reignest with God the Father, in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "sequentia": {
-      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.\n!Sequentia dicitur usque ad Sabbatum in Albis inclusive.",
+      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.",
       "eng": "Christians! to the Paschal Victim offer your thankful praises.\nThe Lamb the sheep redeemeth: Christ, who only is sinless, reconcileth sinners to the Father.\nDeath and life contended in that conflict stupendous: the Prince of Life, who died, deathless reigneth.\nSpeak, Mary, declaring what thou sawest wayfaring.\n“The tomb of Christ who now liveth: and likewise the glory of the Risen.\nBright Angels attesting, the shroud and napkin resting.\nYea, Christ my hope is arisen: to Galilee He goeth before you.”\nWe know that Christ is risen, henceforth ever living: Have mercy, Victor King, pardon giving. Amen. Alleluia."
     }
   },
@@ -1720,7 +1756,7 @@
       "eng": "O Lord, hear our prayers; that the holy channels of our redemption may obtain us help in this our present life, and secure us eternal joys.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "sequentia": {
-      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.\n!Sequentia dicitur usque ad Sabbatum in Albis inclusive.",
+      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.",
       "eng": "Christians! to the Paschal Victim offer your thankful praises.\nThe Lamb the sheep redeemeth: Christ, who only is sinless, reconcileth sinners to the Father.\nDeath and life contended in that conflict stupendous: the Prince of Life, who died, deathless reigneth.\nSpeak, Mary, declaring what thou sawest wayfaring.\n“The tomb of Christ who now liveth: and likewise the glory of the Risen.\nBright Angels attesting, the shroud and napkin resting.\nYea, Christ my hope is arisen: to Galilee He goeth before you.”\nWe know that Christ is risen, henceforth ever living: Have mercy, Victor King, pardon giving. Amen. Alleluia."
     }
   },
@@ -1821,7 +1857,7 @@
       "eng": "O Lord, we beseech thee, behold thy people, and as thou hast decided to quicken them with the mysteries of eternity, mercifully free them from the sins committed in time.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "sequentia": {
-      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.\n!Sequentia dicitur usque ad Sabbatum in Albis inclusive.",
+      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.",
       "eng": "Christians! to the Paschal Victim offer your thankful praises.\nThe Lamb the sheep redeemeth: Christ, who only is sinless, reconcileth sinners to the Father.\nDeath and life contended in that conflict stupendous: the Prince of Life, who died, deathless reigneth.\nSpeak, Mary, declaring what thou sawest wayfaring.\n“The tomb of Christ who now liveth: and likewise the glory of the Risen.\nBright Angels attesting, the shroud and napkin resting.\nYea, Christ my hope is arisen: to Galilee He goeth before you.”\nWe know that Christ is risen, henceforth ever living: Have mercy, Victor King, pardon giving. Amen. Alleluia."
     }
   },
@@ -1922,7 +1958,7 @@
       "eng": "Invigorated by the gift of redemption, we beseech thee, O Lord, that by this means of eternal salvation, the true faith may prosper evermore. \nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
     },
     "sequentia": {
-      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.\n!Sequentia dicitur usque ad Sabbatum in Albis inclusive.",
+      "lat": "Víctimæ pascháli laudes ímmolent Christiáni.\nAgnus rédemit oves: Christus ínnocens Patri reconciliávit peccatóres.\nMors et vita duéllo conflixére mirándo: dux vitæ mórtuus regnat vivus.\nDic nobis, María, quid vidísti in via?\nSepúlcrum Christi vivéntis et glóriam vidi resurgéntis.\nAngélicos testes, sudárium et vestes.\nSurréxit Christus, spes mea: præcédet vos in Galilǽam.\nScimus Christum surrexísse a mórtuis vere: tu nobis, victor Rex, miserére. Amen. Allelúja.",
       "eng": "Christians! to the Paschal Victim offer your thankful praises.\nThe Lamb the sheep redeemeth: Christ, who only is sinless, reconcileth sinners to the Father.\nDeath and life contended in that conflict stupendous: the Prince of Life, who died, deathless reigneth.\nSpeak, Mary, declaring what thou sawest wayfaring.\n“The tomb of Christ who now liveth: and likewise the glory of the Risen.\nBright Angels attesting, the shroud and napkin resting.\nYea, Christ my hope is arisen: to Galilee He goeth before you.”\nWe know that Christ is risen, henceforth ever living: Have mercy, Victor King, pardon giving. Amen. Alleluia."
     }
   },
@@ -2906,7 +2942,7 @@
       "ref": "Joannes 17:1-11"
     },
     "offertorium": {
-      "lat": "Benedícite, gentes, Dóminum, Deum nostrum, et obaudíte vocem laudis ejus: qui pósuit ánimam meam ad vitam, et non dedit commovéri pedes meos: benedíctus Dóminus, qui non amóvit deprecatiónem meam et misericórdiam suam a me, allelúja.\n\n[Secreta Mariæ](sed non rubrica 1960)\nTua, Dómine, propitiatióne, et beátæ Maríæ semper Vírginis intercessióne, ad perpétuam atque præséntem hæc oblátio nobis profíciat prosperitátem et pacem.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
+      "lat": "Benedícite, gentes, Dóminum, Deum nostrum, et obaudíte vocem laudis ejus: qui pósuit ánimam meam ad vitam, et non dedit commovéri pedes meos: benedíctus Dóminus, qui non amóvit deprecatiónem meam et misericórdiam suam a me, allelúja.",
       "eng": "Bless the Lord our God, you peoples, loudly sound His praise; He has given life to my soul, and has not let my feet slip. Blessed be the Lord, Who refused me not my prayer, or His kindness. Alleluia.",
       "ref": "Ps 65:8-9; 65:20"
     },
@@ -2980,6 +3016,11 @@
     "rank": 2,
     "rule": {
       "gloria": true
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja.\nAscéndit Deus in jubilatióne, et Dóminus in voce tubæ. Allelúja.\nV. Dóminus in Sina in sancto, ascéndens in altum, captívam duxit captivitátem. Allelúja.",
+      "eng": "Allelúja, allelúja.\nGod is ascended with jubilee, and the Lord with the sound of trumpet. Allelúja.\nV. The Lord is in Sinai, in the holy place. Thou hast ascended on high, thou hast led captivity captive. Allelúja.",
+      "ref": "Ps 46:6"
     }
   },
   "pasc5-6": {
@@ -3023,6 +3064,11 @@
     "postcommunio": {
       "lat": "Præsta nobis, quǽsumus, omnípotens et miséricors Deus: ut, quæ visibílibus mystériis suménda percépimus, invisíbili consequámur efféctu.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Grant us, we beseech thee, almighty and merciful God, that what we have taken and received in visible mysteries, may profit us by its invisible effects.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja.\nAscéndit Deus in jubilatióne, et Dóminus in voce tubæ. Allelúja.\nV. Dóminus in Sina in sancto, ascéndens in altum, captívam duxit captivitátem. Allelúja.",
+      "eng": "Allelúja, allelúja.\nGod is ascended with jubilee, and the Lord with the sound of trumpet. Allelúja.\nV. The Lord is in Sinai, in the holy place. Thou hast ascended on high, thou hast led captivity captive. Allelúja.",
+      "ref": "Ps 46:6"
     }
   },
   "pasc5-6t": {
@@ -3123,6 +3169,11 @@
     "postcommunio": {
       "lat": "Præsta nobis, quǽsumus, omnípotens et miséricors Deus: ut, quæ visibílibus mystériis suménda percépimus, invisíbili consequámur efféctu.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Grant us, we beseech thee, almighty and merciful God, that what we have taken and received in visible mysteries, may profit us by its invisible effects.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja.\nAscéndit Deus in jubilatióne, et Dóminus in voce tubæ. Allelúja.\nV. Dóminus in Sina in sancto, ascéndens in altum, captívam duxit captivitátem. Allelúja.",
+      "eng": "Allelúja, allelúja.\nGod is ascended with jubilee, and the Lord with the sound of trumpet. Allelúja.\nV. The Lord is in Sinai, in the holy place. Thou hast ascended on high, thou hast led captivity captive. Allelúja.",
+      "ref": "Ps 46:6"
     }
   },
   "pasc6-2": {
@@ -3166,6 +3217,11 @@
     "postcommunio": {
       "lat": "Præsta nobis, quǽsumus, omnípotens et miséricors Deus: ut, quæ visibílibus mystériis suménda percépimus, invisíbili consequámur efféctu.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Grant us, we beseech thee, almighty and merciful God, that what we have taken and received in visible mysteries, may profit us by its invisible effects.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja.\nAscéndit Deus in jubilatióne, et Dóminus in voce tubæ. Allelúja.\nV. Dóminus in Sina in sancto, ascéndens in altum, captívam duxit captivitátem. Allelúja.",
+      "eng": "Allelúja, allelúja.\nGod is ascended with jubilee, and the Lord with the sound of trumpet. Allelúja.\nV. The Lord is in Sinai, in the holy place. Thou hast ascended on high, thou hast led captivity captive. Allelúja.",
+      "ref": "Ps 46:6"
     }
   },
   "pasc6-2t": {
@@ -3216,6 +3272,11 @@
     "postcommunio": {
       "lat": "Præsta nobis, quǽsumus, omnípotens et miséricors Deus: ut, quæ visibílibus mystériis suménda percépimus, invisíbili consequámur efféctu.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Grant us, we beseech thee, almighty and merciful God, that what we have taken and received in visible mysteries, may profit us by its invisible effects.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja.\nAscéndit Deus in jubilatióne, et Dóminus in voce tubæ. Allelúja.\nV. Dóminus in Sina in sancto, ascéndens in altum, captívam duxit captivitátem. Allelúja.",
+      "eng": "Allelúja, allelúja.\nGod is ascended with jubilee, and the Lord with the sound of trumpet. Allelúja.\nV. The Lord is in Sinai, in the holy place. Thou hast ascended on high, thou hast led captivity captive. Allelúja.",
+      "ref": "Ps 46:6"
     }
   },
   "pasc6-4": {
@@ -3259,6 +3320,11 @@
     "postcommunio": {
       "lat": "Præsta nobis, quǽsumus, omnípotens et miséricors Deus: ut, quæ visibílibus mystériis suménda percépimus, invisíbili consequámur efféctu.\nPer Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. Amen.",
       "eng": "Grant us, we beseech thee, almighty and merciful God, that what we have taken and received in visible mysteries, may profit us by its invisible effects.\nThrough our Lord Jesus Christ, Thy Son, Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen."
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja.\nAscéndit Deus in jubilatióne, et Dóminus in voce tubæ. Allelúja.\nV. Dóminus in Sina in sancto, ascéndens in altum, captívam duxit captivitátem. Allelúja.",
+      "eng": "Allelúja, allelúja.\nGod is ascended with jubilee, and the Lord with the sound of trumpet. Allelúja.\nV. The Lord is in Sinai, in the holy place. Thou hast ascended on high, thou hast led captivity captive. Allelúja.",
+      "ref": "Ps 46:6"
     }
   },
   "pasc6-4r": {
@@ -3266,6 +3332,11 @@
     "rank": 1,
     "rule": {
       "gloria": true
+    },
+    "graduale": {
+      "lat": "Allelúja, allelúja.\nAscéndit Deus in jubilatióne, et Dóminus in voce tubæ. Allelúja.\nV. Dóminus in Sina in sancto, ascéndens in altum, captívam duxit captivitátem. Allelúja.",
+      "eng": "Allelúja, allelúja.\nGod is ascended with jubilee, and the Lord with the sound of trumpet. Allelúja.\nV. The Lord is in Sinai, in the holy place. Thou hast ascended on high, thou hast led captivity captive. Allelúja.",
+      "ref": "Ps 46:6"
     }
   },
   "pasc6-4t": {
@@ -6100,7 +6171,12 @@
   },
   "pent23-0tt": {
     "officium": "De Dominica XXIII post Pentecosten",
-    "rank": 1
+    "rank": 1,
+    "graduale": {
+      "lat": "Liberásti nos, Dómine, ex affligéntibus nos: et eos, qui nos odérunt, confudísti.\nV. In Deo laudábimur tota die, et in nómine tuo confitébimur in sǽcula. Allelúja, allelúja.\nDe profúndis clamávi ad te, Dómine: Dómine, exáudi oratiónem meam. Allelúja.",
+      "eng": "You saved us, O Lord, from our foes, and those who hated us You put to shame.\nV. In God we gloried day by day; Your name we praised always. Alleluia, alleluia.\nOut of the depths I have cried to thee, O Lord: Lord, hear my prayer.\nAlleluia.",
+      "ref": "Ps 43:8-9"
+    }
   },
   "pent23-1": {
     "officium": "Feria Secunda infra Hebdomadam XXIII post Octavam Pentecostes",
@@ -8809,7 +8885,7 @@
     },
     "graduale": {
       "lat": "Tóllite hóstias, et introíte in átria ejus: adoráte Dóminum in aula sancta ejus\nRevelávit Dóminus condénsa: et in templo ejus omnes dicent glóriam.",
-      "eng": "Bring gifts and enter His courts; worship the Lord in His holy court.\nV. Ps 28:9 The Lord strips the forests, and in His temple all say, Glory!",
+      "eng": "Bring gifts and enter His courts; worship the Lord in His holy court.\nV. The Lord strips the forests, and in His temple all say, Glory!",
       "ref": "Ps 95:8-9"
     },
     "evangelium": {
@@ -9247,6 +9323,11 @@
     "rule": {
       "gloria": true,
       "commune": "Tempora/quad6-4m2"
+    },
+    "graduale": {
+      "lat": "Christus factus est pro nobis obédiens usque ad mortem, mortem autem crucis.\nV. Propter quod et Deus exaltávit illum: et dedit illi nomen, quod est super omne nomen.",
+      "eng": "Christ became obedient for us unto death, even to the death of the cross.\nV. For which cause God also exalted Him and hath given Him a Name which is above all names.",
+      "ref": "Phil 2:8-9"
     }
   },
   "quad6-4m1": {

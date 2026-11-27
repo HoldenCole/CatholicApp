@@ -490,6 +490,8 @@ object ContentStore {
                             introitus = fields["introitus"]?.let { entry.introitus?.copy(eng = it) } ?: entry.introitus,
                             oratio = fields["oratio"]?.let { entry.oratio?.copy(eng = it) } ?: entry.oratio,
                             graduale = fields["graduale"]?.let { entry.graduale?.copy(eng = it) } ?: entry.graduale,
+                            gradualeP = fields["gradualeP"]?.let { entry.gradualeP?.copy(eng = it) } ?: entry.gradualeP,
+                            tractus = fields["tractus"]?.let { entry.tractus?.copy(eng = it) } ?: entry.tractus,
                             offertorium = fields["offertorium"]?.let { entry.offertorium?.copy(eng = it) } ?: entry.offertorium,
                             secreta = fields["secreta"]?.let { entry.secreta?.copy(eng = it) } ?: entry.secreta,
                             communio = fields["communio"]?.let { entry.communio?.copy(eng = it) } ?: entry.communio,

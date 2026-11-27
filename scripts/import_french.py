@@ -350,10 +350,13 @@ def missal(dumps, do=None):
     # DO's own rendering of each saint's collect, secret and postcommunion
     # (dodump.pl missaprayers: the Common's text with the name filled in),
     # which is what the corrected Latin of missal_sanctoral.json now is.
-    mp = dumps / "missaprayers_1962.json"
-    if mp.exists():
+    for mp in (dumps / "missaprayers_1962.json", dumps / "missaparts_1962.json"):
+        if not mp.exists():
+            continue
         for f, secs in load(mp).items():
             for sec in secs.values():
+                if not isinstance(sec, dict):
+                    continue
                 lat, fr = sec.get("lat"), sec.get("eng")
                 if not lat or not fr:
                     continue
@@ -416,6 +419,7 @@ def missal(dumps, do=None):
     # French of every Latin case form, NAMES_EXTRA the few it lacks).
     names_fr = {fold(k): v for k, v in load(FR / "office_names_fr.json").items()}
     names_fr.update({fold(k): v for k, v in NAMES_EXTRA.items()})
+    names_fr["n"] = "N."          # a Common's own prayer keeps its "N."
     templates = {}
     for k in linemap:
         if re.search(r"(^| )n( |$)", k) and len(k) >= 25:
@@ -503,14 +507,70 @@ def missal(dumps, do=None):
     propers, readings = {}, {}
     cov, miss = Counter(), Counter()
     examples = []
+    # Whole sections, for a part whose lines DO divides otherwise (the
+    # Dies iræ in stanzas, Good Friday's chants): DO's French of a section
+    # whose Latin has the same words, taken entire. Each language is shown
+    # as its own block, so the French need not follow the Latin line for line.
+    def section_words(t, side):
+        ls = [re.sub(r"^[vV]\.\s*", "", x) for x in lines_of(t, prayers, side) if x != "_"]
+        if ls and re.match(r"^(L[eé]ctio|Lesson|Lecture|Sequ[eé]ntia|Suite|In[ií]tium|Commencement)\b", ls[0]):
+            ls = ls[1:]
+        return fold(" ".join(ls))
+    whole = {}
+    sources = [dumps / f"missa_{r}.json" for r in RITES] + [dumps / "missaparts_1962.json"]
+    for src in sources:
+        if not src.exists():
+            continue
+        for f, secs in load(src).items():
+            for sec in secs.values():
+                if isinstance(sec, dict) and sec.get("lat") and sec.get("eng") and sec["lat"] != sec["eng"]:
+                    fr_lines = [tidy(MARK_RE.sub("", x)) for x in lines_of(sec["eng"], prayers, "eng") if x != "_" and not x.startswith(("$", "&", "@"))]
+                    if fr_lines:
+                        whole.setdefault(section_words(sec["lat"], "lat"), "\n".join(fr_lines))
+    # The Requiem: DO's Latin Mass of the dead sits in the Office's Common
+    # (horas/Latin/Commune/C9), its French in missa/Francais/Votive.
+    if do:
+        www = Path(do) / "web/www"
+        def secs_of(path):
+            out, cur = {}, None
+            for l in path.read_text(encoding="utf-8", errors="replace").split("\n"):
+                m = re.match(r"^\[([^\]]+)\]\s*$", l.strip())
+                if m:
+                    cur = m.group(1).strip()
+                    out[cur] = []
+                elif cur:
+                    out[cur].append(l)
+            return {k: "\n".join(v) for k, v in out.items()}
+        lat_c9 = www / "horas/Latin/Commune/C9.txt"
+        fr_def = www / "missa/Francais/Votive/Defunctorum.txt"
+        if lat_c9.exists() and fr_def.exists():
+            ls, fs = secs_of(lat_c9), secs_of(fr_def)
+            for name in ("Introitus", "Graduale", "Tractus", "Sequentia", "Offertorium", "Communio"):
+                if ls.get(name) and fs.get(name):
+                    fr_lines = [tidy(MARK_RE.sub("", x)) for x in lines_of(fs[name], prayers, "eng") if x != "_" and not x.startswith(("$", "&", "@"))]
+                    whole.setdefault(section_words(ls[name], "lat"), "\n".join(fr_lines))
+
     for name in ("missal_tempora.json", "missal_sanctoral.json"):
         for key, entry in load(ASSETS / name).items():
-            for field in ("introitus", "oratio", "lectio", "graduale", "sequentia", "evangelium",
-                          "offertorium", "secreta", "communio", "postcommunio"):
+            for field in ("introitus", "oratio", "lectio", "graduale", "gradualeP", "tractus", "sequentia",
+                          "evangelium", "offertorium", "secreta", "communio", "postcommunio"):
                 v = entry.get(field)
                 if not isinstance(v, dict) or not v.get("lat"):
                     continue
                 fr, bad = translate(v["lat"], key)
+                if fr is None:
+                    w = section_words(v["lat"], "lat")
+                    if w in whole:
+                        fr = re.sub(r"(?m)^[vV]\.\s*", "", whole[w]) if not re.search(r"(?m)^V\.", v["lat"]) else whole[w]
+                        fl, ll = fr.split("\n"), v["lat"].split("\n")
+                        if len(fl) > len(ll):
+                            # the reading's body in one line, as the Latin has it
+                            fl = fl[:len(ll) - 1] + [" ".join(fl[len(ll) - 1:])]
+                        if len(fl) == len(ll) or field == "sequentia":
+                            fr = "\n".join(fl)
+                            stats["whole sections"] += 1
+                        else:
+                            fr = None
                 if fr is None:
                     miss[field] += 1
                     for b in bad:

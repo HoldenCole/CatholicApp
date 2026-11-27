@@ -13,11 +13,12 @@ struct MissalProperEntry: Decodable {
     var secreta: ProperText?
     var communio: ProperText?
     var postcommunio: ProperText?
-    // Optional propers using DO's Latin field names. Currently absent from
-    // missal_tempora.json / missal_sanctoral.json but threaded so that any
-    // future data additions surface in the rendered MassProper.
+    // DO's seasonal forms of the Gradual: gradualeP in Paschaltide, tractus
+    // from Septuagesima to Holy Saturday (each with its Gradual verses, as
+    // DO's getitem() takes it in place of [Graduale]).
+    var gradualeP: ProperText?
     let alleluia: ProperText?
-    let tractus: ProperText?
+    var tractus: ProperText?
     var sequentia: ProperText?
 
     struct MissalRule: Decodable {
@@ -48,6 +49,16 @@ struct MissalProperEntry: Decodable {
         else { legacyRank = 5 }                   // ferial / commemoration
 
         let latinTitle = officium ?? key
+        let season = ordo?.season
+        let paschal = season == "easter"
+        // The Gradual the season takes (DO's getitem): the Paschal form in
+        // Eastertide, the Tract from Septuagesima, otherwise the Gradual.
+        let gradualForSeason: ProperText?
+        if paschal, let p = gradualeP { gradualForSeason = p }
+        else if season == "lent" || season == "pre-lent", let t = tractus { gradualForSeason = t }
+        else { gradualForSeason = graduale }
+        let lenten = season == "lent" || season == "pre-lent"
+        let a: (ProperText) -> ProperText = { Self.seasonalAlleluia($0, paschal: paschal, lenten: lenten) }
 
         return MassProper(
             slug: key,
@@ -56,22 +67,61 @@ struct MissalProperEntry: Decodable {
             rank: legacyRank,
             color: ordo?.color ?? "",
             season: ordo?.season,
-            introit: intro,
+            introit: a(intro),
             collect: collect,
             epistle: ProperReading(ref: epistle.ref ?? "", lat: epistle.lat, eng: epistle.eng),
-            gradual: graduale,
+            gradual: gradualForSeason.map(a),
             alleluia: alleluia,
-            tract: tractus,
+            tract: nil,
             sequence: sequentia,
             gospel: ProperReading(ref: gospel.ref ?? "", lat: gospel.lat, eng: gospel.eng),
-            offertory: off,
+            offertory: a(off),
             secret: sec,
-            communion: comm,
+            communion: a(comm),
             postcommunion: postcomm,
             preface: Self.translatePrefaceCode(rule?.preface),
             glorOverride: rule?.gloria,
             credoOverride: rule?.credo
         )
+    }
+
+    /// The bracketed alleluias of the Commons, "(Allelúja, allelúja.)": said
+    /// in Paschaltide (the brackets dropped), left out otherwise, as DO's
+    /// getitem() does. Latin, English, Spanish and French forms.
+    private static let bracketedAlleluia = try! NSRegularExpression(
+        pattern: #"\s*\(((?:Al+[eé]l[uú][ij]a|Aleluya)[^()]*)\)"#, options: [.caseInsensitive])
+
+    static func paschalAlleluia(_ text: String, paschal: Bool) -> String {
+        let range = NSRange(text.startIndex..., in: text)
+        return bracketedAlleluia.stringByReplacingMatches(in: text, range: range,
+                                                          withTemplate: paschal ? " $1" : "")
+    }
+
+    /// A chant's closing alleluia ("… eórum, allelúja."), left out from
+    /// Septuagesima to Holy Saturday as DO's "(sed post Septuagesimam
+    /// dicitur)" does. A line that is nothing but alleluias stays.
+    private static let closingAlleluia = try! NSRegularExpression(
+        pattern: #"[,;:.]?\s*(?:(?:Al+[eé]l[uú][ij]a|Aleluya)[,.]?\s*)+$"#, options: [.caseInsensitive])
+    private static let onlyAlleluia = try! NSRegularExpression(
+        pattern: #"^\s*(?:V\.\s*)?(?:(?:Al+[eé]l[uú][ij]a|Aleluya)[,.]?\s*)+$"#, options: [.caseInsensitive])
+
+    static func lentenAlleluia(_ text: String) -> String {
+        text.components(separatedBy: "\n").map { line -> String in
+            let r = NSRange(line.startIndex..., in: line)
+            if onlyAlleluia.firstMatch(in: line, range: r) != nil { return line }
+            guard closingAlleluia.firstMatch(in: line, range: r) != nil else { return line }
+            let cut = closingAlleluia.stringByReplacingMatches(in: line, range: r, withTemplate: "")
+            let kept = cut.trimmingCharacters(in: .whitespaces)
+            return [".", "!", "?"].contains(where: { kept.hasSuffix($0) }) ? kept : kept + "."
+        }.joined(separator: "\n")
+    }
+
+    static func seasonalAlleluia(_ p: ProperText, paschal: Bool, lenten: Bool) -> ProperText {
+        func t(_ x: String) -> String {
+            let y = paschalAlleluia(x, paschal: paschal)
+            return lenten ? lentenAlleluia(y) : y
+        }
+        return ProperText(lat: t(p.lat), eng: t(p.eng), ref: p.ref)
     }
 
     /// Translates DivinumOfficium preface codes to the slug suffix used by missal.json.

@@ -46,7 +46,8 @@ def check(name, data):
                 lat = ((src.get(k) or {}).get(f) or {}).get("lat")
                 if lat is None:
                     errs.append(f"{k}.{f}: no such field")
-                elif len(text.split("\n")) != len(lat.split("\n")):
+                elif len(text.split("\n")) != len(lat.split("\n")) and f != "sequentia":
+                    # (a Sequence's French may keep DO's stanzas whole)
                     errs.append(f"{k}.{f}: line count differs from the Latin")
     elif name == "office_lessons_fr.json":
         n = len(load(ASSETS / "office_lessons.json")["texts"])

@@ -158,7 +158,7 @@ def validate_missal_propers():
         return
     tempora = json.load(open(SRC / "missal_tempora.json"))
     sanctoral = json.load(open(SRC / "missal_sanctoral.json"))
-    allowed = {"introitus", "oratio", "graduale", "alleluia", "tractus",
+    allowed = {"introitus", "oratio", "graduale", "gradualeP", "alleluia", "tractus",
                "sequentia", "offertorium", "secreta", "communio",
                "postcommunio"}
     es = json.load(open(path))

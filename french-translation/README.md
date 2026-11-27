@@ -21,7 +21,7 @@ matched to the app's data by its Latin. Nothing was machine-translated.
 | `office_texts_fr.json` | Latin → French for the Office texts both apps assemble (antiphons, chapters, hymns, versicles, responsories, collects, blessings, preces) | 99.6 % of the vernacular fields of a year's Office in the three rites (what is left is the Martyrology at Prime and 25 texts) |
 | `office_lessons_fr.json` (written straight into the asset folders) | Matins lessons and responsories, aligned with `office_lessons.json` | 4,709 of 4,717 texts |
 | `psalter_fr.json` | The psalms and canticles, verse for verse | 166 of 202 (the rest: 26 newer canticles DO has no French for, 10 with a different verse division) |
-| `missal_propers_fr.json` | Mass antiphons, orations, sequences | with the readings (`missal_readings_fr.json`), 5,055 of the Missal's 5,181 fields (97.6 %) |
+| `missal_propers_fr.json` | Mass antiphons, orations, sequences | with the readings (`missal_readings_fr.json`), 5,369 of the Missal's 5,459 fields (98.4 %) |
 | `missal_readings_fr.json` | Epistles and Gospels (title lines in the hand missals' form, by rule) | ≈ 93 % of fields |
 | `missal_fr.json` | The Ordinary of the Mass: 173 of its 179 lines are DO's French (Ordo, Prefationes, Prayers); 4 complete a DO text, 2 are placeholders; the section headings and the app's own rubrics are translated by hand | complete |
 | `canon_variants_fr.json` | The proper Communicantes and Hanc igitur | complete, all from DO |
@@ -141,15 +141,13 @@ site with the same name as this app.
 ## Not yet in French (hand translation, later tranches)
 
 The 159 calendar titles and 8 lessons listed in the
-`*_missing_fr.json` files, and 126 Mass fields (run
+`*_missing_fr.json` files, and 90 Mass fields (run
 `import_french.py --dumps … missal --report`, which lists every Latin line
-without French). They are, roughly: Holy Week's own texts (the Good Friday
-Improperia and Trisagion, Holy Thursday), the Dies iræ of All Souls, a few
-feasts DO's French does not have (Our Lady of Guadalupe, St Peter Claver,
-St Isidore the Farmer, St Sigismund…), lines the app splits differently
-from DO (St Matthew's Gospel), and some fields whose Latin carries
-import debris (rubric lines in the Gospel of 14 August, "[ ]" in the
-Introit of 9 November) that should be cleaned on the Latin side first.
+without French). They are, roughly: Holy Week's own texts (the Passions,
+the Chrism Mass, Good Friday, Holy Saturday), a few feasts DO's French does
+not have (Our Lady of Guadalupe, St Peter Claver, St Isidore the Farmer, St
+Sigismund…), and Common prayers whose French DO gives only for other
+saints' names.
 
 How the Mass French is matched (`import_french.py missal`): DO's French and
 Latin Mass files are paired line by line; DO's Commons (horas/*/Commune,
@@ -169,6 +167,18 @@ not at all, taken secrets and postcommunions from the wrong Mass of the
 Common, and appended stray second collects; each now reads as DO renders it
 for the 1962 Missal, with the few names DO itself leaves in the wrong case
 corrected by hand.
+
+The other proper parts (Introit, Lesson, Gradual, Gospel, Offertory,
+Communion, Sequence) were then checked the same way against DO's
+`missaparts` rendering (`scripts/fix_mass_parts.py`): some 600 had been
+taken from the wrong Mass of the Common or cut short, 148 Masses lacked
+their Gradual, and the seasonal forms of the Gradual (`gradualeP` in
+Paschaltide, `tractus` from Septuagesima) are now carried where the feast
+can fall in that season and chosen by the Mass as DO does. The French
+import reads both new fields, DO's rendered parts, the Requiem's Latin
+(horas Commune C9) against its French (missa Votive/Defunctorum), and,
+for a part DO divides into other lines, the French of a section with the
+same Latin words taken whole.
 
 `missal_fr.json` and `canon_variants_fr.json` were aligned by hand against
 DO's Ordo files (which are not line-aligned with the Latin) and are edited

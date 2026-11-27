@@ -179,6 +179,44 @@ if ($mode eq 'rules') {
     }
     $out{"Sancti/$f"} = \%ent if %ent;
   }
+} elsif ($mode eq 'missaparts') {
+  # Every proper part of each Mass (Sancti and Tempora) as missa/propers.pl
+  # getitem() finds it: the file's own section, else its Common's ("vide
+  # C…" / "ex C…" in [Rule]), with "N." filled from [Name]. The seasonal
+  # forms are kept apart (Graduale, GradualeP for Paschaltide, Tractus
+  # from Septuagesima); the bracketed Paschal alleluias are left in.
+  $datafolder = "$DO/web/www/missa"; $missa = 1; $hora = '';
+  require "$DO/web/cgi-bin/horas/horascommon.pl";
+  for my $dir ('Sancti', 'Tempora') {
+    opendir(my $dh, "$datafolder/Latin/$dir"); my @files = grep { /\.txt$/ } readdir($dh); closedir($dh);
+    for my $f (sort @files) {
+      $winner = "$dir/$f"; @dayname = ('', '', ''); %main::setupstring_caches_by_version = ();
+      if ($dir eq 'Sancti' && $f =~ /^(\d\d)-(\d\d)/) { $month = $1 + 0; $day = $2 + 0; } else { $month = 1; $day = 1; }
+      if ($dir eq 'Tempora' && $f =~ /^([A-Za-z]+\d*)/) { $dayname[0] = $1; }
+      my %ent;
+      for my $lang ('Latin', $L2) {
+        my $s = setupstring($lang, "$dir/$f") or next;
+        my %w = %$s;
+        my ($code) = (($w{Rule} || '') =~ /(?:vide|ex)\s+(C[0-9a-z]+(?:-\d+)?)/i);
+        my %c = $code ? %{setupstring($lang, subdirname('Commune', $version) . "$code.txt") || {}} : ();
+        for my $type ('Introitus', 'Lectio', 'Graduale', 'GradualeP', 'Tractus', 'Evangelium', 'Offertorium', 'Communio', 'Sequentia') {
+          my $t = $w{$type};
+          $t = $c{$type} if !$t && $type !~ /Sequentia/;
+          next unless $t;
+          if ($t =~ /N\./ && exists($w{Name})) {
+            my @name = split("\n", $w{Name});
+            @name = grep(/$type\=/, @name) unless $w{Name} !~ /$type\=/;
+            $name[0] =~ s/^.*?\=//;
+            my $nm = $name[0]; $nm =~ s/[\r\n]//g;
+            if ($nm) { $t =~ s/N\. .*? N\./$nm/; $t =~ s/N\./$nm/; }
+          }
+          $ent{$type}{$lang eq 'Latin' ? 'lat' : 'eng'} = $t;
+        }
+        $ent{code} = $code if $code && $lang eq 'Latin';
+      }
+      $out{"$dir/$f"} = \%ent if %ent;
+    }
+  }
 } elsif ($mode eq 'missa') {
   # The Mass: every section of every proper, with the second language beside
   # the Latin, and the Ordo's prayers and prefaces.
