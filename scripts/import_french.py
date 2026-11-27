@@ -593,6 +593,13 @@ def missal(dumps, do=None):
                     continue
                 cov[field] += 1
                 (readings if field in ("lectio", "evangelium") else propers).setdefault(key, {})[field] = fr
+    # whole fields DO has no line-for-line French for (Holy Week, a few
+    # saints): composed from DO's French or translated, kept by hand
+    fx = FR / "missal_fixes_fr.json"
+    if fx.exists():
+        for key, fields in load(fx).items():
+            for field, text in fields.items():
+                (readings if field in ("lectio", "evangelium") else propers).setdefault(key, {})[field] = text
     dump(propers, "missal_propers_fr.json")
     dump(readings, "missal_readings_fr.json")
     print("missal: line pairs", len(linemap), dict(stats))

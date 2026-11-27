@@ -40,7 +40,8 @@ SEASONAL = {"gradualeP": "GradualeP", "tractus": "Tractus"}
 
 # DO's line breaks inside a sentence: (key, part) -> the start of the line
 # that belongs to the line before it.
-JOIN = {("04-14", "tractus"): "Deus ante sǽcula"}
+JOIN = {("04-14", "tractus"): "Deus ante sǽcula",
+        **{(k, "graduale"): "iniquitátum nostrárum antiquárum" for k in ("quad3-5", "quad3-5t", "quad4-3", "quad4-3t")}}
 
 # Near-identical parts where DO's has words the app's lacks.
 NEAR_TAKE = {("epi1-0", "lectio"), ("epi5-0", "lectio"), ("06-02", "introitus")}
