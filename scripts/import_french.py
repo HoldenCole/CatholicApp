@@ -727,6 +727,15 @@ def names(do):
             out[k] = f
         else:
             missing.append(k)
+    # titles DO's French lacks or leaves in Latin, in the file's own style
+    # (french-translation/ordo_names_fixes_fr.json, kept by hand)
+    fx = FR / "ordo_names_fixes_fr.json"
+    if fx.exists():
+        for k, v in load(fx).items():
+            if k in src:
+                out[k] = v
+                if k in missing:
+                    missing.remove(k)
     dump(out, "ordo_names_fr.json")
     dump(saints, "office_names_fr.json")
     dump(sorted(missing), "ordo_names_missing_fr.json")

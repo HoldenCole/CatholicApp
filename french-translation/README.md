@@ -26,7 +26,7 @@ matched to the app's data by its Latin. Nothing was machine-translated.
 | `missal_fr.json` | The Ordinary of the Mass: 173 of its 179 lines are DO's French (Ordo, Prefationes, Prayers); 4 complete a DO text, 2 are placeholders; the section headings and the app's own rubrics are translated by hand | complete |
 | `canon_variants_fr.json` | The proper Communicantes and Hanc igitur | complete, all from DO |
 | `marian_antiphons_fr.json` | The four final antiphons with versicle and collect | complete |
-| `ordo_names_fr.json` | Calendar titles (feast and feria names) | 1,025 of 1,184 |
+| `ordo_names_fr.json` | Calendar titles (feast and feria names) | all 1,184: 1,013 from DO, 171 (what DO lacks or left in Latin) in `ordo_names_fixes_fr.json` |
 | `office_names_fr.json` | Saints' names for the "N." of the common collects | every name DO carries |
 | `office_doxologies.json` (`fr` field, in the asset folders) | The seasonal hymn doxologies | 6 of 7 |
 
@@ -100,7 +100,7 @@ jesusmarie.free.fr, as PDFs) is the remaining fix.
 Working files that are **not** bundled: `office_texts_fixes_fr.json` (hand
 corrections and the few texts whose wording in the app differs from DO's,
 applied last by the builder), `office_lessons_missing_fr.json` and
-`ordo_names_missing_fr.json` (what DO's French lacks — the to-do list for
+`ordo_names_missing_fr.json` (what DO's French lacks and the fixes file does not cover — empty now; the to-do list for
 hand translation).
 
 ## Provenance — read before releasing French
