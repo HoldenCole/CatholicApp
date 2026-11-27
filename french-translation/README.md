@@ -18,10 +18,10 @@ matched to the app's data by its Latin. Nothing was machine-translated.
 
 | File | Content | Coverage |
 |---|---|---|
-| `office_texts_fr.json` | Latin → French for the Office texts both apps assemble (antiphons, chapters, hymns, versicles, responsories, collects, blessings, preces) | 99.6 % of the vernacular fields of a year's Office in the three rites (what is left is the Martyrology at Prime and 25 texts) |
+| `office_texts_fr.json` | Latin → French for the Office texts both apps assemble (antiphons, chapters, hymns, versicles, responsories, collects, blessings, preces) | every text of a year's Office in the three rites (the last 26 — Pange lingua, O quot undis, octave lessons, two collects — added by hand in `office_texts_fixes_fr.json`, from DO's French or translated from the Latin) |
 | `office_lessons_fr.json` (written straight into the asset folders) | Matins lessons and responsories, aligned with `office_lessons.json` | 4,709 of 4,717 texts |
 | `psalter_fr.json` | The psalms and canticles, verse for verse | 166 of 202 (the rest: 26 newer canticles DO has no French for, 10 with a different verse division) |
-| `missal_propers_fr.json` | Mass antiphons, orations, sequences | with the readings (`missal_readings_fr.json`), 5,369 of the Missal's 5,459 fields (98.4 %) |
+| `missal_propers_fr.json` | Mass antiphons, orations, sequences | with the readings (`missal_readings_fr.json`), every field a year's Mass shows in the three rites; the 35 DO's French has no line-for-line text for (Holy Week, a few saints' prayers) are in `missal_fixes_fr.json`, composed from DO's French or translated from the Latin (St Luke 22:1-38), and laid over the import |
 | `missal_readings_fr.json` | Epistles and Gospels (title lines in the hand missals' form, by rule) | ≈ 93 % of fields |
 | `missal_fr.json` | The Ordinary of the Mass: 173 of its 179 lines are DO's French (Ordo, Prefationes, Prayers); 4 complete a DO text, 2 are placeholders; the section headings and the app's own rubrics are translated by hand | complete |
 | `canon_variants_fr.json` | The proper Communicantes and Hanc igitur | complete, all from DO |
