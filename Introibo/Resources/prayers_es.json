@@ -549,7 +549,7 @@
   },
   "te-deum": {
     "title_es": "Te Deum",
-    "note_es": null,
+    "note_es": "Antiguo himno de acción de gracias, que se canta en Maitines en las fiestas.",
     "lines_es": [
       "A ti, oh Dios, te alabamos: a ti, Señor, te confesamos.",
       "A ti, eterno Padre, te venera toda la tierra.",
@@ -584,7 +584,7 @@
   },
   "magnificat": {
     "title_es": "Magníficat",
-    "note_es": null,
+    "note_es": "El Cántico de la Santísima Virgen María (Lucas 1, 46-55), que se canta en Vísperas.",
     "lines_es": [
       "Engrandece mi alma al Señor,",
       "y mi espíritu se llena de gozo en Dios, mi Salvador.",
@@ -602,7 +602,7 @@
   },
   "benedictus": {
     "title_es": "Benedíctus",
-    "note_es": null,
+    "note_es": "El Cántico de Zacarías (Lucas 1, 68-79), que se canta en Laudes.",
     "lines_es": [
       "Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su pueblo,",
       "y nos ha suscitado una fuerza de salvación en la casa de David, su siervo,",
@@ -622,7 +622,7 @@
   },
   "nunc-dimittis": {
     "title_es": "Nunc Dimíttis",
-    "note_es": null,
+    "note_es": "El Cántico de Simeón (Lucas 2, 29-32), que se canta en Completas.",
     "lines_es": [
       "Ahora, Señor, según tu palabra, puedes dejar a tu siervo irse en paz,",
       "porque mis ojos han visto a tu Salvador,",
@@ -634,7 +634,7 @@
   },
   "alma-redemptoris": {
     "title_es": "Madre del Redentor",
-    "note_es": null,
+    "note_es": "Antífona mariana desde el Adviento hasta la Purificación.",
     "lines_es": [
       "Madre del Redentor, que permaneces puerta abierta del cielo",
       "y estrella del mar: socorre al que cae",
@@ -652,7 +652,7 @@
   },
   "ave-regina-caelorum": {
     "title_es": "Salve, Reina de los cielos",
-    "note_es": null,
+    "note_es": "Antífona mariana desde la Purificación hasta la Semana Santa.",
     "lines_es": [
       "Salve, Reina de los cielos,",
       "salve, Señora de los ángeles:",
@@ -669,7 +669,7 @@
   },
   "o-salutaris-hostia": {
     "title_es": "Oh Hostia de salvación",
-    "note_es": null,
+    "note_es": "Se canta en la exposición del Santísimo Sacramento.",
     "lines_es": [
       "Oh Hostia de salvación,",
       "que abres la puerta del cielo:",
@@ -683,7 +683,7 @@
   },
   "ave-verum-corpus": {
     "title_es": "Ave Verum Corpus",
-    "note_es": null,
+    "note_es": "Himno eucarístico en honor del Santísimo Sacramento.",
     "lines_es": [
       "Salve, Cuerpo verdadero, nacido",
       "de la Virgen María:",
@@ -699,14 +699,14 @@
   },
   "o-sacrum-convivium": {
     "title_es": "Oh Sagrado Banquete",
-    "note_es": null,
+    "note_es": "Antífona eucarística de la fiesta del Corpus Christi (Santo Tomás de Aquino).",
     "lines_es": [
       "¡Oh sagrado banquete, en que Cristo es recibido, se renueva la memoria de su Pasión, el alma se llena de gracia y se nos da la prenda de la gloria futura! Aleluya."
     ]
   },
   "veni-sancte-spiritus": {
     "title_es": "Ven, Espíritu Santo",
-    "note_es": null,
+    "note_es": "La Secuencia de oro, que se canta en Pentecostés.",
     "lines_es": [
       "Ven, Espíritu Santo, y envía desde el cielo un rayo de tu luz.",
       "Ven, padre de los pobres; ven, dador de los dones; ven, luz de los corazones.",
@@ -722,7 +722,7 @@
   },
   "laudes-divinae": {
     "title_es": "Alabanzas de desagravio",
-    "note_es": null,
+    "note_es": "Se dicen en reparación, sobre todo después de la Bendición con el Santísimo.",
     "lines_es": [
       "Bendito sea Dios.",
       "Bendito sea su santo Nombre.",
@@ -742,98 +742,98 @@
   },
   "pio-prayer-after-holy-communion": {
     "title_es": "Oración después de la Sagrada Comunión",
-    "note_es": null,
+    "note_es": "Compuesta por San Pío de Pietrelcina, se reza después de recibir la Sagrada Comunión.",
     "lines_es": [
       "Quédate con nosotros, Señor, porque atardece. Quédate con nosotros y sé nuestro consuelo. Quédate con nosotros, oh Sol que no conoce ocaso."
     ]
   },
   "pio-prayer-for-the-five-wounds": {
     "title_es": "Oración a las cinco llagas",
-    "note_es": null,
+    "note_es": "El Padre Pío llevó los estigmas durante cincuenta años.",
     "lines_es": [
       "Oh Señor Jesucristo, que consentiste que fueran clavados tus sagrados pies y manos: concédeme amarte con todas mis fuerzas y hallar en tus llagas mi refugio y mi paz. Amén."
     ]
   },
   "therese-act-of-oblation-to-merciful-love": {
     "title_es": "Acto de ofrenda al Amor misericordioso",
-    "note_es": null,
+    "note_es": "Santa Teresita hizo esta ofrenda el 9 de junio de 1895, fiesta de la Santísima Trinidad.",
     "lines_es": [
       "Oh Dios mío, Trinidad Bienaventurada: deseo amarte y hacerte amar, trabajar por la gloria de la santa Iglesia salvando las almas en la tierra y librando a las que sufren en el Purgatorio. Te ofrezco todos los méritos de los santos, con mis propios méritos y los que tu bondad infinita ha puesto en mis manos. Amén."
     ]
   },
   "therese-prayer-of-confidence": {
     "title_es": "Oración de confianza",
-    "note_es": null,
+    "note_es": "De los últimos escritos de Santa Teresita.",
     "lines_es": [
       "Dios mío, te doy gracias por todas las gracias que me has concedido, especialmente por haberme purificado en el crisol del sufrimiento. En el último día te contemplaré con alegría, llevando el cetro de la Cruz. Puesto que te dignaste darme esta Cruz preciosa, espero parecerme a ti en el cielo y ver brillar en mi cuerpo glorificado las sagradas llagas de tu Pasión. Amén."
     ]
   },
   "aquinas-prayer-before-study": {
     "title_es": "Oración antes del estudio",
-    "note_es": null,
+    "note_es": "Santo Tomás la rezaba antes de cada tiempo de estudio.",
     "lines_es": [
       "Oh Creador inefable, que de los tesoros de tu sabiduría estableciste tres jerarquías de Ángeles y las ordenaste maravillosamente sobre los cielos: concédeme entendimiento. Amén."
     ]
   },
   "benedict-prayer-for-a-happy-death": {
     "title_es": "Oración por una buena muerte",
-    "note_es": null,
+    "note_es": "San Benito murió de pie, sostenido por sus monjes, con los brazos alzados en oración.",
     "lines_es": [
       "Oh Señor, Dios mío, no me entregues en manos del enemigo, sino hazme victorioso en la hora de mi muerte."
     ]
   },
   "benedict-the-medal-prayer": {
     "title_es": "Oración de la medalla",
-    "note_es": null,
+    "note_es": "Inscrita en la medalla de San Benito, poderoso sacramental.",
     "lines_es": [
       "Sea la santa Cruz mi luz. No sea el dragón mi guía. Apártate, Satanás. No me tientes jamás con vanidades. Es malo lo que ofreces. Bebe tú tu propio veneno."
     ]
   },
   "teresa-bookmark-prayer": {
     "title_es": "Nada te turbe",
-    "note_es": null,
+    "note_es": "Hallada en el breviario de Santa Teresa después de su muerte. Escrita originalmente en castellano.",
     "lines_es": [
       "Nada te turbe, nada te espante. Todo se pasa. Dios no se muda. La paciencia todo lo alcanza. Quien a Dios tiene nada le falta. Sólo Dios basta."
     ]
   },
   "teresa-prayer-of-self-offering": {
     "title_es": "Oración de entrega",
-    "note_es": null,
+    "note_es": "De los escritos de Santa Teresa de Jesús.",
     "lines_es": [
       "Tuya soy, Señor: para ti nací. ¿Qué quieres de mí? Dame riqueza o pobreza, consuelo o desconsuelo, alegría o tristeza. Pues eres mi Rey, ¿qué mandas hacer de mí? Habla, Señor, que tu sierva escucha. Amén."
     ]
   },
   "escriva-prayer-for-sanctifying-work": {
     "title_es": "Oración para santificar el trabajo",
-    "note_es": null,
+    "note_es": "Inspirada en el espíritu del Opus Dei: la santificación de la vida ordinaria.",
     "lines_es": [
       "Señor, concédeme la gracia de ver mi trabajo ordinario como materia de mi santificación. Ayúdame a convertir cada tarea, cada conversación, cada momento de este día en oración, para que al terminarlo pueda ofrecértelo todo como algo digno de tu amor. Amén."
     ]
   },
   "escriva-prayer-to-the-guardian-angels": {
     "title_es": "Oración a los Ángeles Custodios",
-    "note_es": null,
+    "note_es": "San Josemaría tuvo una gran devoción a los Ángeles Custodios.",
     "lines_es": [
       "Santos Ángeles Custodios de los que tengo a mi cargo: ayudadme a tener siempre presente que Dios me ve, y a servirle en ellos con fidelidad y amor. Defendedme del maligno y llevadme por los caminos de la paz. Amén."
     ]
   },
   "desales-prayer-of-gentle-trust": {
     "title_es": "Oración de dulce confianza",
-    "note_es": null,
+    "note_es": "Adaptada de las cartas de San Francisco de Sales.",
     "lines_es": [
       "No mires con temor los cambios y azares de esta vida; míralos más bien con plena esperanza de que, cuando lleguen, Dios, de quien eres, te librará de ellos. Él te ha guardado hasta ahora: tente firme de su mano, y te conducirá seguro a través de todas las cosas. Amén."
     ]
   },
   "desales-prayer-for-a-devout-life": {
     "title_es": "Oración por una vida devota",
-    "note_es": null,
+    "note_es": "Inspirada en la Introducción a la vida devota.",
     "lines_es": [
       "Dios mío, te entrego toda mi voluntad. Deseo comenzar este día para tu honra y gloria. Te ofrezco todas las acciones de esta jornada, y te pido la gracia de no hacer nada contrario a tu voluntad. Ilumina mi entendimiento, fortalece mi voluntad, purifica mi corazón y santifica mi alma. Amén."
     ]
   },
   "litaniae-lauretanae": {
     "title_es": "Letanías Lauretanas",
-    "note_es": null,
+    "note_es": "La Letanía de la Santísima Virgen María.",
     "lines_es": [
       "Señor, ten piedad.",
       "Cristo, ten piedad.",
@@ -903,7 +903,7 @@
   },
   "litaniaeSanctorum": {
     "title_es": "Letanías de los Santos",
-    "note_es": null,
+    "note_es": "La antigua súplica que invoca a los Santos. Prescrita por el Ritual Romano para la Vigilia Pascual, la Vigilia de Pentecostés, las Letanías Mayores del día de San Marcos (25 de abril), las Letanías Menores de las Rogativas antes de la Ascensión, y en tiempos de calamidad pública o de penitencia. Fuente: Breviarium Romanum.",
     "lines_es": [
       "V. Señor, ten piedad.",
       "R. Cristo, ten piedad.",
