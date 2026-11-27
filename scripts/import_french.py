@@ -145,6 +145,12 @@ def psalter(do):
         lines = fixed
         out[key] = {"lines": lines}
         stats["ok"] += 1
+    # the canticles DO has no French (or no line-for-line French) for
+    cp = FR / "psalter_canticles_fixes_fr.json"
+    for key, v in (load(cp) if cp.exists() else {}).items():
+        if key in src and not key.startswith("_") and len(v["lines"]) == len(src[key]["lat"]):
+            out[key] = v
+            stats["hand"] += 1
     dump(out, "psalter_fr.json")
     print("psalter:", dict(stats), "of", len(src))
 
