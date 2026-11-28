@@ -16,7 +16,12 @@ scripts/reading_fixes.json:
    "key": "<day>.<field>", "lang": ..., "text": ...}
       one proper (or Mass reading: missal_sanctoral / missal_tempora);
   {"where": "*", "lang": "en", "sub": [old, new]}
-      a typo, replaced wherever it stands in the English readings.
+      a typo, replaced wherever it stands in the English readings;
+  {"where": "sanctoral_propers" | ..., "key": "<day>.<field>", "drop": true}
+      a field that is not a text at all (Divinum Officium's file header
+      and rules dumped into a responsory, or a lesson DO itself gives only
+      as "first words ... last words"): removed from the Latin and every
+      translation, so the Office takes the part from the Common it names.
 
 lang "lat" corrects the Latin itself (a sentence printed twice, the next
 lesson run on). Spanish propers and Mass readings are written to the
@@ -111,8 +116,17 @@ def main():
         for i, text in latin_fixes:   # last, so the vernacular fixes still find the old Latin
             put(lessons[i], "lat", text, f"{d.name} lesson {i} lat")
 
+        for f in fixes:   # fields that are not texts
+            if not f.get("drop"):
+                continue
+            day, field = f["key"].split(".", 1)
+            entry = doc(d / (f["where"] + ".json")).get(day) or {}
+            if field in entry:
+                del entry[field]
+                changed.append(f"{d.name} {f['key']} dropped")
+
         for f in fixes:
-            if f["where"] in ("lesson", "*") or f["lang"] not in ("en", "lat"):
+            if f.get("drop") or f["where"] in ("lesson", "*") or f["lang"] not in ("en", "lat"):
                 continue
             day, field = f["key"].split(".", 1)
             if f["where"] == "mass":
@@ -144,6 +158,14 @@ def main():
 
     # Spanish propers and Mass readings, in the staging files
     for f in fixes:
+        if f.get("drop"):
+            day, field = f["key"].split(".", 1)
+            p = ES / (f["where"] + "_es.json")
+            entry = (doc(p).get(day) or {}) if p.exists() else {}
+            if field in entry:
+                del entry[field]
+                changed.append(f"es {f['key']} dropped")
+            continue
         if f["lang"] != "es" or f["where"] == "lesson":
             continue
         day, field = f["key"].split(".", 1)
@@ -158,7 +180,7 @@ def main():
 
     # French Mass readings: the importer's fixes file, and its output
     for f in fixes:
-        if f["lang"] != "fr" or f["where"] != "mass":
+        if f.get("drop") or f["lang"] != "fr" or f["where"] != "mass":
             continue
         day, field = f["key"].split(".", 1)
         put(doc(FR / "missal_fixes_fr.json").setdefault(day, {}), field, f["text"], f"fr fixes {f['key']}")

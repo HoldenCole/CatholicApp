@@ -1891,11 +1891,6 @@
     }
   },
   "01-12t": {
-    "versum_1": {
-      "lat": "In Epiphania Domini\nPsalmi Dominica\nAntiphonas horas\nOmit ad Matutinum Incipit Invitatorium Hymnus\nDoxology=Epi\n9 lectiones\nPsalm5 Vespera=116\nPsalm5 Vespera3=113\nFestum Domini\nv. Crudélis Heródes, Deum\nRegem veníre quid times?\nNon éripit mortália,\nQui regna dat cæléstia.\nIbant magi, quam víderant,\nStellam sequéntes prǽviam:\nLumen requírunt lúmine:\nDeum faténtur múnere.\nLavácra puri gúrgitis\nCæléstis Agnus áttigit:\nPeccáta, quæ non détulit,\nNos abluéndo sústulit.\nNovum genus poténtiæ:\nAquæ rubéscunt hýdriæ,\nVinúmque jussa fúndere,\nMutávit unda oríginem.\n* Jesu, tibi sit glória,\nQui apparuísti géntibus,\nCum Patre, et almo Spíritu,\nIn sempitérna sǽcula.\nAmen.\nV. Reges Tharsis et ínsulæ múnera ófferent.\nR. Reges Arabum et Saba dona addúcent.",
-      "type": "vr",
-      "variationKey": "versum_1"
-    },
     "versum_commemoratio": {
       "lat": "V. Omnes de Saba vénient, allelúja.\nR. Aurum et thus deferéntes, allelúja.",
       "eng": "V. All they from Saba shall come. Alleluia.\nR. They shall bring gold and incense. Alleluia.",
@@ -13395,11 +13390,6 @@
     }
   },
   "05-13n": {
-    "comment": {
-      "lat": "Lectio93 chosen in light of Ecclesia Dei's decree of April 5th, 2017.",
-      "type": "vr",
-      "variationKey": "comment"
-    },
     "lectio93": {
       "lat": "Léctio sancti Evangélii secúndum Joánnem\nIn illo témpore: Stabant juxta crucem Jesu Mater ejus, et soror Matris ejus María Cléophæ, et María Magdaléne. Et réliqua.\nHomilía sancti Robérti Bellarmíno Epíscopi\nOnus et jugum impósitum a Dómino sancto Joánni, ut Vírginis Matris curam géreret, vere fuit jugum suáve et onus leve. Quis enim non libentíssime cohabitáret Matri illi, quæ Verbum incarnátum in útero novem ménsibus portávit, et illi totos trigínta annos devotíssime dulcissiméque cohabitávit? Quis non invídeat dilécto Dómini, qui in abséntia Fílii Dei præséntiam obtínuit Matris Dei? Sed, nisi fallor, póssumus et nos a benignitáte Verbi nostri causa incarnáti et ex dilectióne nímia nostri causa crucifíxi, précibus impetráre, ut dicat et nobis: Ecce Mater tua; et Matri suæ de nobis dicat: Ecce fílius tuus.",
       "type": "reading",
@@ -19224,12 +19214,6 @@
       "type": "antiphon",
       "variationKey": "ant_1",
       "eng": "Apostle Peter * and Paul Doctor of Gentiles, they taught us to your Law O Lord\nGlorious princes of the Earth * as in this life you were honored together, you are not separated by death."
-    },
-    "oratio": {
-      "lat": "SS. Apostolorum Petri et Pauli\n\n\nex C1;\n9 lectiones\nPsalmi Dominica\nAntiphonas horas\nnor commemoratio\nPsalm5 Vespera=116\nPsalm5 Vespera3=138\nPetrus et Joánnes * ascendébant in templum ad horam oratiónis nonam.\nArgéntum et aurum * non est mihi: quod autem hábeo, hoc tibi do.\nDixit Angelus ad Petrum: * Circúmda tibi vestiméntum tuum, et séquere me.\nMisit Dóminus * Angelum suum, et liberávit me de manu Heródis, allelúja.\nTu es Petrus, * et super hanc petram ædificábo Ecclésiam meam.",
-      "type": "collect",
-      "variationKey": "oratio",
-      "eng": ""
     },
     "versum_2": {
       "lat": "V. In omnem terram exívit sonus eórum.\nR. Et in fines orbis terræ verba eórum.",
@@ -26497,12 +26481,6 @@
       "variationKey": "lectio6",
       "eng": "Eve, who had said yea to the proposals of the serpent, was condemned to the pains of travail and the punishment of death, and found her place in the bowels of the Netherworld. But this truly blessed being who had inclined her ears to the word of God, whose womb had been filled by the action of the Holy Ghost, who, as soon as she heard the spiritual salutation of the archangel, had conceived the Son of God without any sexual pleasure or carnal knowledge by a man, who had brought forth her Offspring without any the least pang, who had hallowed herself altogether for the service of God how was death ever to feed upon her? how was the grave ever to eat her up? how was corruption to break into that body into which Life had been welcomed? For her there was a straight, smooth, and easy way to heaven. For if Christ, Who is the Life and the Truth, hath said Where I am, there shall also My servant be how much more shall not rather His mother be with Him?"
     },
-    "lectio7": {
-      "lat": "Léctio sancti Evangélii secúndum Lucam\nIn illo témpore: Intravit Jesus in quoddam castellum: et mulier quædam, Martha nomine, excepit illum in domum suam. Et réliqua.\nDe Homilia sancti Augustíni Epíscopi\nQuid autem putamus nos reprebensum esse ministerium Marthæ ... uni instet scientiæ.",
-      "type": "reading",
-      "variationKey": "lectio7",
-      "eng": "From the Holy Gospel according to Luke\nAt that time: Jesus entered into a certain town: and a certain woman named Martha received him into her house. And so on.\nFrom a Homily of St. Augustine, Bishop\nQuid autem putamus nos reprehensum esse ministerium Marthæ ... uni instet scientiæ."
-    },
     "lectio8": {
       "lat": "Si melior pars est, cur non omnes … sed multa ab uno.",
       "type": "reading",
@@ -26598,11 +26576,6 @@
       "eng": "From the Song of Songs\n How beautiful art thou, my love, how beautiful art thou! thy eyes are doves' eyes, besides what is hid within. thy hair is as flocks of goats, which Come up from mount Galaad.\n2 thy teeth as flocks of sheep, that are shorn which come up from the washing, all with twins, and there is none barren among them.\n3 thy lips are as a scarlet lace: and thy speech sweet. thy cheeks are as a piece of a pomegranate, besides that which lieth hid within.\n4 thy neck, is as the tower of David, which is built with bulwarks: a thousand bucklers hang upon it, all the armour of valiant men.",
       "type": "reading",
       "variationKey": "lectio1"
-    },
-    "responsory1": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory1"
     },
     "lectio2": {
       "lat": "7 Tota pulchra es, amíca mea, et mácula non est in te.\n8 Veni de Líbano, sponsa mea: veni de Líbano, veni, coronáberis: de cápite Amana, de vértice Sanir et Hermon, de cubílibus leónum, de móntibus pardórum.\n9 Vulnerásti cor meum, soror mea, sponsa; vulnerásti cor meum in uno oculórum tuórum, et in uno crine colli tui.\n10 Quam pulchræ sunt mammæ tuæ, soror mea sponsa! pulchrióra sunt úbera tua vino, et odor unguentórum tuórum super ómnia arómata.",
@@ -26717,16 +26690,6 @@
       "type": "responsory",
       "variationKey": "responsory6",
       "eng": "R. Blessed art thou, O Virgin Mary, who hast carried the Lord, the Maker of the world.\n* Thou hast borne Him Who created thee, and thou abidest a virgin for ever.\nV. Hail, Mary, full of grace, the Lord is with thee.\n* Thou hast borne Him Who created thee, and thou abidest a virgin for ever.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n* Thou hast borne Him Who created thee, and thou abidest a virgin for ever.\nFrom the Holy Gospel according to Luke\nAt that time: Elisabeth was filled with the Holy Ghost: and she spoke out with a loud voice, and said, Blessed art thou among women. And so on.\nA Homily by St. Peter Damian the Bishop\nO Virgin Mother of God, at whose beauty the sun and the moon stand in awe, come to the aid of them that unceasingly call upon thee, O Lady. Turn thou unto us, o turn thou unto us, O Sulamitess, turn thou unto us, o turn thou unto us that we may behold thee, O blessed, yea more than blessed Maid, turn thou unto us in thy power. He that is mighty hath magnified thee, and hath given thee all power in heaven and in earth. Nothing is impossible to thee, to whom it is possible to shew the most desolate souls the hope of happiness. For how can that Power ignore thy power, when it received its fleshly origin from thy flesh? Thou standest before that golden altar of reconciliation, not only asking, but commanding, as mistress rather than handmaid. Let thy nature move thee, because the more power thou art, the more merciful must thou needs be. For it doth surely redound to the glory of power, to be unwilling to exact vengeance for wrong. Look upon us through love; I know, O Lady, that thou art the most blessed and that thou lovest with an unconquerable love them that in thee and through thee, thy Son and thy God hath loved with a great love. Who knoweth how many times thou didst turn away the anger of the Judge when the virtue of justice went forth from the presence of God.\nFrom the Holy Gospel according to Luke\nIn that time Jesus entered into a certain town: and a certain woman named Martha, received him into her house. And so on.\nHomily by St. Augustine, Bishop (of Hippo.)\nBene Martha circa corporalem Domini, quid dicam, necessitatem, an voluntatem? ministrebat carni mortali. Sed quis erat in carne mortali? In principio erat Verbum, et Verbum erat apud Deum, et Deus erat Verbum. Ecce quod Maria audiebat. Verbum caro factum est, et habitavit in nobis. Ecce Martha cui ministrabat. Ergo Maria meliorem partem elegit, quae non auferetur ab ea. Hoc enim elegit, quod semper manebit, ideo non auferetur ab ea."
-    },
-    "responsory7": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory7"
-    },
-    "responsory8": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory8"
     }
   },
   "08-18r": {
@@ -26781,11 +26744,6 @@
       "eng": "8 I adjure you, O daughters of Jerusalem, if you find my beloved, that you tell him that I languish with love.\n9 What manner of one is thy beloved of the beloved, O thou most beautiful among women? what manner of one is thy beloved of the beloved, that thou hast so adjured us?\n10 My beloved is white and ruddy, chosen out of thousands.\n11 His head is as the finest gold: his locks as branches of palm trees, black as a raven.\n12 His eyes as doves upon brooks of waters, which are washed with milk, and sit beside the plentiful streams.",
       "type": "reading",
       "variationKey": "lectio1"
-    },
-    "responsory1": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory1"
     },
     "lectio2": {
       "lat": "1 (Sponsa) Dilectus meus descendit in hortum suum ad areolam aromatum, ut pascatur in hortis, et lilia colligat.\n2 Ego dilecto meo, et dilectus meus mihi, qui pascitur inter lilia.\n3 (Sponsus) Pulchra es, amica mea; suavis, et decora sicut Jerúsalem; terribilis ut castrorum acies ordinata.\n4 Averte oculos tuos a me, quia ipsi me avolare fecerunt. Capilli tui sicut grex caprarum quæ apparuerunt de Galaad.\n5 Dentes tui sicut grex ovium quæ ascenderunt de lavacro: omnes gemellis fœtibus, et sterilis non est in eis.",
@@ -26853,21 +26811,11 @@
       "type": "reading",
       "variationKey": "lectio7"
     },
-    "responsory7": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory7"
-    },
     "lectio8": {
       "lat": "Videtis ergo, carissimi, et quantum arbitror, jam intelligitis in his duabus mulieribus, quæ ambse fuerunt Domino gratæ, ambæ amabiles, ambæ discipulæ: videtis ergo, et magnum aliquid intelligitis, quicumque intelligitis, quod audire et scire debetis étiam qui non intelligitis, in his duabus mulieribus duas vitas esse figuratas, præsentem et futuram, laboriosam et quietam, ærumnosam et beatam, temporalem et ætérnam.",
       "eng": "Ye see then, my dearly beloved brethren, and, as I think, ye now understand that in these two women, who were both well-pleasing in the sight of the Lord, both lovely, both disciples, ye see, I say, and whosoever ye be that understand, ye understand something great, which ye also that do not understand ought to hear and know, that in these two women there were figured two lives, that which now is, and that which is to come, the toilful and the restful, the sorrowing and the blessed, the temporal and the eternal.",
       "type": "reading",
       "variationKey": "lectio8"
-    },
-    "responsory8": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory8"
     },
     "lectio9": {
       "lat": "Duæ sunt vitæ: de illis vos copiosius cogitate. Quid habeat hæc vita, non dico mala, non iniqua, non nefaria, non luxuriosa, non impia; sed laboriosa, et ærumnis plena, timoribus castigata, tentationibus sollicita: hanc ipsam innocentem vitam dico, qualem decebat habere Martham. Hanc ergo, quantum potestis, inspicite: et de hac, ut dixi, copiosius quam loquimur, cogitate. Vita vero iniqua deerat ab illa domo, nec cum Martha erat, nec cum Maria: et si aliquando fuit, Domino intrante fugit.",
@@ -27007,33 +26955,11 @@
       "variationKey": "responsory5",
       "eng": "R. All generations shall call me blessed.\n* For He that is mighty, even the Lord, hath done to me great things; and Holy is His Name.\nV. And his mercy is on them that fear Him, from generation to generation.\n* For He that is mighty, even the Lord, hath done to me great things; and Holy is His Name.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n* For He that is mighty, even the Lord, hath done to me great things; and Holy is His Name."
     },
-    "lectio6": {
-      "lat": "Christi generatiónem et Maríæ assumptiónem quis enarrábit? Quantum enim grátiæ in terris adépta est præ céteris, tantum et in cælis óbtinet glóriæ singuláris.~\nQuod si oculus non vidit nec auris audivit, nec in cor hominis ascendit, que preparauit deus diligentibus se, quod páparuit gignen ti se, et quod omnibus est certum diligenti pre omnibus quis loquatur? Felix plane Maria, et multiplciter felix, sine cum excipit salvatorem, sine cum salvatore suscipitur, utroque mira dignitas, virginitas matris; utrobique amplecteda dignatio majestatis.",
-      "eng": "Sweet indeed were the kisses which the Suckling, Whom His Mother had praised while yet He lay hid in her virginal womb, pressed upon her lips. But shall we not believe that sweeter were those which she received from Him in blessed welcome, when He was sitting at the right hand of His Father, and she went up to the throne of His glory, singing the marriage-song and saying Let Him kiss me with the kisses of His mouth? (Cant. i. 2.) Who shall declare the generation of Christ or the Assumption of Mary So much as she found grace on earth more than others, so much more excellent than that of others is the glory which she hath in heaven.",
-      "type": "reading",
-      "variationKey": "lectio6"
-    },
     "responsory6": {
       "lat": "R. Beáta es, Virgo María, quæ Dóminum portásti, Creatórem mundi:\n* Genuísti qui te fecit, et in ætérnum pérmanes Virgo.\nV. Ave, María, grátia plena; Dóminus tecum.\nR. Genuísti qui te fecit, et in ætérnum pérmanes Virgo.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.\nR. Genuísti qui te fecit, et in ætérnum pérmanes Virgo.",
       "type": "responsory",
       "variationKey": "responsory6",
       "eng": "R. Blessed art thou, O Virgin Mary, who hast carried the Lord, the Maker of the world.\n* Thou hast borne Him Who created thee, and thou abidest a virgin for ever.\nV. Hail, Mary, full of grace, the Lord is with thee.\n* Thou hast borne Him Who created thee, and thou abidest a virgin for ever.\nGlory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n* Thou hast borne Him Who created thee, and thou abidest a virgin for ever."
-    },
-    "lectio7": {
-      "lat": "De Homilia S. Augustini episcopi\nRemanserunt ergo in illa domo... debet otiosa.",
-      "type": "reading",
-      "variationKey": "lectio7",
-      "eng": "From a Homily of St. Augustine, Bishop\nRemanserunt ergo in illa domo... debet otiosa."
-    },
-    "lectio8": {
-      "lat": "Erant ergo in illa ... statis auditis.",
-      "type": "reading",
-      "variationKey": "lectio8"
-    },
-    "lectio9": {
-      "lat": "In quantum autem hoc ... dat deus.",
-      "type": "reading",
-      "variationKey": "lectio9"
     }
   },
   "08-22": {
@@ -27119,11 +27045,6 @@
       "type": "reading",
       "variationKey": "lectio1"
     },
-    "responsory1": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory1"
-    },
     "lectio2": {
       "lat": "7 Aquæ multæ non potuerunt extinguere caritatem, nec flumina obruent illam. Si dederit homo omnem substantiam domus suæ pro dilectione, quasi nihil despiciet eam.\n8 Soror nostra parva, et ubera non habet; quid faciemus sorori nostræ in die quando alloquenda est?\n9 Si murus est, ædificemus super eum propugnacula argentea; si ostium est, compingamus illud tabulis cedrinis.",
       "eng": "7 Many waters cannot quench charity, neither can the floods drown it: if a man should give all the substance of his house for love, he shall despise it as nothing.\n8 Our sister is little, and hath no breasts. What shall we do to our sister in the day when she is to be spoken to?\n9 If she be a wall: let us build upon it bulwarks of silver: if she be a door, let us join it together with boards or cedar",
@@ -27195,11 +27116,6 @@
       "eng": "Met the Saviour then enter into that house. Let Him oftentimes resort to that home cleansed by the repentant Lazarus, adorned by Martha, and hallowed by Mary to inward contemplation. But perchance some curious enquirer will ask why in the passage now read from the Gospel there is no mention made of Lazarus. I opine that it was to avoid anything which could mar the perfection of this house as a figure (of the womb of Mary.) The Holy Spirit willing to set forth a maidenly dwelling, hath been meetly silent touching repentance, which implieth the thought of evil. Let not this house be spoken of as ever having had any defilement for the broom of Lazarus to seek.",
       "type": "reading",
       "variationKey": "lectio8"
-    },
-    "responsory8": {
-      "lat": "In Assumptione Beatæ Mariæ Virginis\nex C11;\n9 lectiones\nPsalmi Dominica\nAntiphonas Horas\nDoxology=Nat\nAssúmpta est María in cælum: * gaudent Angeli, laudántes benedícunt Dóminum.\nMaría Virgo assúmpta est * ad æthéreum thálamum, in quo Rex regum stelláto sedet sólio.\nIn odórem * unguentórum tuórum cúrrimus: adolescéntulæ dilexérunt te nimis.\nBenedícta * fília tu a Dómino: quia per te fructum vitæ communicávimus.\nPulchra es * et decóra, fília Jerúsalem, terríbilis ut castrórum ácies ordináta.",
-      "type": "responsory",
-      "variationKey": "responsory8"
     }
   },
   "08-23": {

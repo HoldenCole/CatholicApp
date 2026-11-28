@@ -693,6 +693,118 @@
  },
  {
   "where": "sanctoral_propers",
+  "key": "01-12t.versum_1",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with the Vespers hymn, stored as the versicle"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "05-13n.comment",
+  "lang": "*",
+  "drop": true,
+  "why": "an editor's note in Divinum Officium's file, not a liturgical text"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "07-02oct.oratio",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with antiphons, stored as the collect"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-16bmv.lectio7",
+  "lang": "*",
+  "drop": true,
+  "why": "the homily is given only as 'first words ... last words' in Divinum Officium itself"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-18bmv.responsory1",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-18bmv.responsory7",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-18bmv.responsory8",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-19bmv.responsory1",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-19bmv.responsory7",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-19bmv.responsory8",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-21bmv.lectio6",
+  "lang": "*",
+  "drop": true,
+  "why": "Latin garbled in Divinum Officium's own file past the first sentence; its English and Spanish were another lesson's"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-21bmv.lectio7",
+  "lang": "*",
+  "drop": true,
+  "why": "given only as 'first words ... last words' in Divinum Officium itself"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-21bmv.lectio8",
+  "lang": "*",
+  "drop": true,
+  "why": "given only as 'first words ... last words' in Divinum Officium itself"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-21bmv.lectio9",
+  "lang": "*",
+  "drop": true,
+  "why": "given only as 'first words ... last words' in Divinum Officium itself"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-22t.responsory1",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
+  "key": "08-22t.responsory8",
+  "lang": "*",
+  "drop": true,
+  "why": "Divinum Officium's file header and rules, with another part's antiphons, stored as this part"
+ },
+ {
+  "where": "sanctoral_propers",
   "key": "05-01c.lectio8",
   "lang": "en",
   "text": "Thus since we are behoven to believe that what each of the Evangelists said was true, Matthew as well as Luke; and therefore that one of them nameth the father who begat, and the other, the father who adopted, Joseph; we naturally suppose that the Evangelist, who nameth the adoptive father, was he who abstaineth from using the term beget. Matthew beginneth (i. 2) Abraham begat Isaac; and Isaac begat Jacob, and so on, always with the use of this word begat, till he cometh to: and Jacob begat Joseph. By the word which he useth he doth sufficiently indicate that the genealogy which he is giving is that of him who begat. Luke saith Joseph was the son of Heli, not Joseph was begotten of Heli; but even if he had said the latter, it would not have troubled this interpretation of ours, that one Evangelist nameth the natural, and the other the adoptive father of Joseph. It is not an outrageous thing to say that one who adopteth another hath begotten him, albeit he hath done it, not carnally, but by love. Even so hath God given to us the power to become His sons, albeit He hath not begotten us of His Own Nature and Substance, as He hath His Only - Begotten Son, but only reckoneth us, in His love, among His children.",
